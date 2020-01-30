@@ -32,7 +32,7 @@ Beam Builder by revolt_randy, Jambay.
    Create five types of beams.
 Gears by Michel J. Anders (varkenvarken).
    Create gear and worm type mesh.
-Gemstones by Pontiac, Fourmadmen, Dreampainter, Dominic Kroper, (dommetysk).
+Gemstones Pontiac, Fourmadmen, Dreampainter, Dominic Kroper, (dommetysk).
    Create three types of diamond shapes.
 Honeycomb by Kayo Phoenix.
    Create a honeycomb patterned mesh.

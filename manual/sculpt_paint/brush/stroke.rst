@@ -70,12 +70,12 @@ Adjust Strength for Spacing
 
 Dash Ratio
    Ratio of samples in a cycle that the brush is enabled.
-   This is useful to create dashed lines in texture paint or stitches in sculpt mode.
+   This is useful to create dashed lines in texture paint or stitches in Sculpt Mode.
    Available for the *Space*, *Line*, and *Curve* stroke methods.
 
 Dash Length
    Length of a dash cycle measured in stroke samples.
-   This is useful to create dashed lines in texture paint or stitches in sculpt mode.
+   This is useful to create dashed lines in texture paint or stitches in Sculpt Mode.
    Available for the *Space*, *Line*, and *Curve* stroke methods.
 
 Jitter

@@ -42,8 +42,8 @@ Optix AI Denoising
    are selected in the :ref:`System Preferences <editors_preferences_cycles>`.
 
    This denoiser is less suited for animations, because it is not temporarily stable,
-   but is considerably faster than the other denoising options and therefore
-   especially useful to denoise previews or final single-frame images with high quality.
+   but is considerably faster than the other denoising options and
+   therefore especially useful to denoise previews or final single-frame images with high quality.
 
    Input Passes
       Controls which :ref:`passes <render-cycles-passes>` the OptiX AI denoiser should use as input,
@@ -57,16 +57,16 @@ Radius
    Higher values are smoother, but might lose detail and are slower.
 
    Setting the radius too high is generally not advisable. It increases denoising time a lot and,
-   while the result might be smoother, it is not more accurate
-   since there isn't any additional info coming out of the renderer.
-   Beyond a radius of ~15, the additional rendering time is probably better spent on increasing the amount of samples.
+   while the result might be smoother, it is not more accurate since there isn't any additional info
+   coming out of the renderer. Beyond a radius of around 15, the additional rendering time is probably better
+   spent on increasing the amount of samples.
 Strength
    Controls how different the area around a neighbor pixel can look compared
    to the center pixel before it's no longer used for denoising.
    Lower values preserve more detail, but aren't as smooth.
 Feature Strength
    Controls removal of noisy and redundant image feature passes before the actual denoising.
-   This is required in some cases like DoF or Motion Blur to avoid splotchy results,
+   This is required in some cases like :abbr:`DoF (Depth of Field)` or Motion Blur to avoid splotchy results,
    but might cause fine texture/geometrical detail to be lost.
    Lower values preserve more detail, but aren't as smooth.
 Relative Filter

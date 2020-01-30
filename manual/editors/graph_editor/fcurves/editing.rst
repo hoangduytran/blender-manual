@@ -12,7 +12,7 @@ Transform
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Key --> Transform`
 
-A F-Curve can be edited by transforming the locations of the keyframes.
+An F-curve can be edited by transforming the locations of the keyframes.
 
 Move, Rotate, Scale
    Like other elements in Blender, keyframes can be
@@ -78,15 +78,15 @@ Mirror
 Selected keyframes can be mirrored over different properties using the *Mirror Keys* tool.
 
 By Times Over Current Frame
-   Mirror horizontally over the *Playhead*.
+   Mirror horizontally over the playhead.
 By Values over Cursor Value
-   Mirror vertically over the *2D Cursor*.
+   Mirror vertically over the 2D cursor.
 By Times over Time 0
    Mirror horizontally over frame 0.
 By Values over Value 0
    Mirror vertically over value 0.
 By Times over First Selected Marker
-   Mirror horizontally over the first selected *Marker*.
+   Mirror horizontally over the first selected marker.
 
 
 .. _bpy.ops.graph.keyframe_insert:
@@ -123,14 +123,14 @@ Bake Sound to F-Curves
 
 The *Bake Sound to F-Curves* operator takes a sound file and uses its sound wave to create the animation data.
 
-Lowest frequency
+Lowest Frequency
    Cutoff frequency of a high-pass filter that is applied to the audio data.
-Highest frequency
+Highest Frequency
    Cutoff frequency of a low-pass filter that is applied to the audio data.
-Attack time
+Attack Time
    Value for the hull curve calculation that tells how fast the hull curve can rise.
    The lower the value the steeper it can rise.
-Release time
+Release Time
    Value for the hull curve calculation that tells how fast the hull curve can fall.
    The lower the value the steeper it can fall.
 Threshold
@@ -176,8 +176,8 @@ Todo.
 
 .. _bpy.ops.graph.delete:
 
-Delete Keyframs
-===============
+Delete Keyframes
+================
 
 Todo.
 
@@ -217,7 +217,7 @@ Decimate
    :Menu:      :menuselection:`Key --> Decimate (Ratio)`
    :Menu:      :menuselection:`Key --> Decimate (Allowed Change)`
 
-The *Decimate* operator simplifies a F-Curve by removing
+The *Decimate* operator simplifies an F-curve by removing
 keyframes that influence the curve shape the least.
 
 Mode
@@ -227,7 +227,7 @@ Mode
       Deletes a defined percentage of keyframes,
       the amount of keyframes to delete is define by the *Remove* property.
    Error Margin
-      Deletes keyframes which only allowing the F-Curve to change by a defined amount.
+      Deletes keyframes which only allowing the F-curve to change by a defined amount.
       The amount of change is controlled by the *Max Error Margin*
       which controls how much the new decimated curve is allowed to deviate from the original.
 
@@ -268,12 +268,12 @@ Clean Channels
 
 Acts like the *Clean Keyframes* operator but will also delete the channel itself if it is only left with
 a single keyframe containing the default property value and
-it's not being used by any generative f-curve modifiers or drivers.
+it's not being used by any generative F-curve modifiers or drivers.
 
 .. note::
 
    The modified curve left after the *Clean* tool is run is not the same as the original,
-   so this tool is better used before doing custom editing of f-curves and after initial keyframe insertion,
+   so this tool is better used before doing custom editing of F-curves and after initial keyframe insertion,
    to get rid of any unwanted keyframes inserted while doing mass keyframe insertion
    (by selecting all bones and pressing :kbd:`I` for instance).
 

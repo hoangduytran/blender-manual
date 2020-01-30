@@ -128,7 +128,7 @@ Pose
    Smooth Iterations
       Controls the smoothness of the falloff of the deformation.
    Pose IK Segments
-      Controls how many :doc:`IK bones </animation/armatures/posing/bone_constraints/inverse_kinematics/index>`
+      Controls how many :ref:`IK bones <bone-constraints-inverse-kinematics>`
       are going to be created for posing.
 
 Nudge

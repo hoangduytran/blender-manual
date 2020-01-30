@@ -39,7 +39,7 @@ If the *Remove Shape Key Objects* option is checked, the selected curve objects 
 and only the target is kept.
 
 There are some options to align the closed (cyclic spline) target and the shape-key curves.
-Also it's possible to match individual parts from a multi-part (multi-spline) of target
+Also it's possible to match individual parts from a multipart (multiple splines) of target
 and shape key curves (e.g. a text object converted into a curve) based on various criteria.
 
 For smoother transition, you can subdivide the segments of one of the curves in the selection group.

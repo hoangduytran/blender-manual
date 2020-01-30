@@ -24,7 +24,7 @@ NVIDIA
 ------
 
 :abbr:`CUDA (Compute Unified Device Architecture)` and Optix
-are supported for GPU rendering with *NVIDIA* graphics cards.
+are supported for GPU rendering with NVIDIA graphics cards.
 
 
 CUDA
@@ -52,7 +52,7 @@ AMD
 ---
 
 :abbr:`OpenCL (Open Computing Language)`
-is supported for GPU rendering with *AMD* graphics cards.
+is supported for GPU rendering with AMD graphics cards.
 Blender supports graphics cards with :abbr:`GCN (Graphics Core Next)` generation 2 and above.
 To make sure your GPU is supported,
 see the `list of GCN generations <https://en.wikipedia.org/wiki/Graphics_Core_Next#Iterations>`__

@@ -10,7 +10,7 @@ The latest version of POV-Ray 3.7 can be found at the `project site <http://www.
 
 
 Features
---------
+========
 
 Some key features of the exporter include:
 
@@ -536,7 +536,7 @@ Emulation is attempted from Blender for:
 - Specular and diffuse toon (no edges yet)
 - Phong and Cook Torrance (both the same)
 - Blinn (not perfectly matched)
-- Ward iso
+- Ward isotropic
 - Fresnel and Minnaert, started but not finished yet
 
 .. tip:: Glass Like Materials

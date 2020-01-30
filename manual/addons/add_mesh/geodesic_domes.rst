@@ -19,7 +19,7 @@ Introduction by Brendon Murphy (Blender 2.6/7 series)
 - By editing the parameters, you can create many simple or complex mesh shapes.
 - Create an equal-sided pyramid, a soccer ball, a wine glass and more.
 - Limited only by your imagination (and some cool math limitations).
-- Create complex mesh deformations with the superformular parameters.
+- Create complex mesh deformations with the superformula parameters.
 - In the next section we will cover the menu types and how to use the parameters to "design" your mesh.
 
 
@@ -44,7 +44,7 @@ For now, let's look at the Object Types and their parameters:
 Objects
    There are six Object types you can create by default.
    Using the parameters you can build upon these objects to create more object types.
-   Object Types have unique parameter sets and share the Superformular parameters (described below).
+   Object Types have unique parameter sets and share the Superformula parameters (described below).
 
 
 Geodesic Object Class Types
@@ -144,10 +144,10 @@ Hubs
 This section allows you to place an object at the vertex on a mesh.
 
 
-Superformular Menu
-==================
+Superformula Menu
+=================
 
-The super formular settings add a variety of settings such as pinching, twisting, inflate and
+The superformula settings add a variety of settings such as pinching, twisting, inflate and
 more complex edit types.
 
 
