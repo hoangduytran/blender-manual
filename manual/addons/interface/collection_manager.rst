@@ -3,10 +3,11 @@
 Collection Manager
 ******************
 
-.. figure:: /images/addons_interface_collection_manager.png
-   :align: center
+This add-on adds new functionality for the management of collections via a pop-up in the 3D Viewport.
+It also offers a simple display and modification of the relationship of objects with collections.
 
-This add-on adds new functionality for the management of collections via the 3D Viewport.
+.. figure:: /images/addons_interface_collection-manager_popup.png
+   :align: center
 
 
 Activation
@@ -19,72 +20,65 @@ Activation
 Description
 ===========
 
-Features:
----------
+Use :kbd:`M` call up the main Collection Manager pop-up in the 3D View when in Object Mode.
 
-- Interactive treeview display of collections in an auto-sized popup window in the 3D View.
-- View Layer integration and management.
-- Add, rename, and remove collections and sub-collections.
-- Active collection is synced to treeview selection.
-- Simple display and modification of the relationship of objects with collections.
-- Restriction Toggle state with advanced manipulation.
-- Filtering display of collections (filter by name, filter by selected objects).
-- Phantom Mode – All visibility changes made in this mode will be discarded when it’s disabled.
+View Layer
+   Render
+      Enable/disable rendering of this view layer with this checkbox.
+   View Layer
+      :ref:`ui-data-block` of the current view layer.
 
+Filter (funnel icon)
+   Choose which restriction toggles are shown in the interface.
+Global Restrictions (checkbox, cursor, eye, screen, camera icons)
+   See the Outliner page for information about :ref:`Restrictions <editors-outliner-restriction-columns>`.
 
-Shortcuts: (3D View -> Object Mode only)
-----------------------------------------
+   - :kbd:`LMB` - Enable the restrictions for all collections. Click again to restore the previous state.
+   - :kbd:`Shift-LMB` - Invert the restriction state on all collections.
 
-:kbd:`M` - Call up the the main Collection Manager window
+Tree View
+   Shows the collections within the current selected scene.
+   The active collection is synced to tree view selection.
 
-- **Expansion Operator**
+   Expansion (small triangle icon)
+      - :kbd:`LMB` -- Expand/collapse children.
+      - :kbd:`Shift-LMB` -- Expand/collapse children and descendants.
+   Name
+      Double :kbd:`LMB`-click to rename the collection.
 
-  - :kbd:`LMB` - Expand/Collapse children.
-  - :kbd:`Shift-LMB` - Expand/Collapse children and descendants.
+   Set Object (box icon)
+      - :kbd:`LMB` -- Move object(s) to collection.
+      - :kbd:`Shift-LMB` -- Add/Remove object(s) to/from collection.
 
-- **Set Object Operator**
+   Local Restrictions (checkbox, cursor, eye, screen, camera icons)
+      - :kbd:`LMB` -- Toggle collection restriction on/off.
+      - :kbd:`Shift-LMB` -- Isolate the collection's restriction, preserving parents if need be.
+        Click again to restore the previous state.
+      - :kbd:`Ctrl-LMB` -- Toggles the restrictions of the collection and it's children on/off.
 
-  - :kbd:`LMB` - Move object(s) to collection.
-  - :kbd:`Shift-LMB` - Add/Remove object(s) to/from collection.
+   Remove ``X``
+      Remove the collection.
 
-- **Local RTOs**
+   Filtering
+      By Name (box icon)
+         A text field to filter collections by name.
+      Invert (magnifying glass icon)
+         Invert filtering (inverts the collections shown in the tree view so that what is shown is hidden
+         and what was hidden is shown).
+      By Selected (box icon)
+         Filter collections by selected objects (show only collections that contain the selected objects).
 
-  - :kbd:`LMB` - Toggle collection RTO on/off
-  - :kbd:`Shift-LMB` - Isolate the collection's RTO, preserving parents if need be. Click again to restore the previous state.
-  - :kbd:`Ctrl-LMB` - Toggles the RTOs of the collection and it's children on/off.
+Add Collection/ Add Subcollection
+   Self-explanatory.
 
-- **Global RTOs**
+Phantom Mode
+   All visibility changes made in this mode will be discarded when it’s disabled.
 
-  - :kbd:`LMB` - Enable the RTO for all collections. Click again to restore the previous state.
-  - :kbd:`Shift-LMB` - Invert the RTO's state on all collections.
+   Enabling Phantom Mode saves the current state of your restrictions and
+   allows you to edit them without fear of losing your current state.
+   When finished, disabling Phantom Mode will restore the saved state.
 
-
-Other Functions:
-----------------
-
-- **View layer options (from left to right)**
-
-  - Enable/Disable rendering of this view layer.
-  - Select a view layer.
-  - Current view layer name (click to edit).
-  - Add a new view layer.
-  - Delete the view layer.
-
-- **Filter displayed RTOs**
-
-  - choose which RTOs are shown in the UI
-
-- **Filtering (from left to right)**
-
-  - Invert filtering (inverts the collections shown above so that what is shown is hidden and what was hidden is shown)
-  - Filter collections by selected objects (show only collections that contain the selected objects)
-
-- **Phantom Mode**
-
-  - Enabling Phantom Mode saves the current state of your RTOs and allows you to edit them without fear of losing your current state.  When finished, disabling Phantom Mode will restore the saved state.  **Note:** You will be unable to edit anything other than the collections' RTOs while in Phantom Mode.
-
-.. figure:: /images/addons_interface_collection_manager_anatomy.png
-   :align: center
+   Note: You will be unable to edit anything other than the collections' restrictions while in Phantom Mode.
 
 .. admonition:: Reference
    :class: refbox
