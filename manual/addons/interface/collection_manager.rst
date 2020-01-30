@@ -33,8 +33,8 @@ Filter (funnel icon)
 Global Restrictions (checkbox, cursor, eye, screen, camera icons)
    See the Outliner page for information about :ref:`Restrictions <editors-outliner-restriction-columns>`.
 
-   - :kbd:`LMB` - Enable the restrictions for all collections. Click again to restore the previous state.
-   - :kbd:`Shift-LMB` - Invert the restriction state on all collections.
+   - :kbd:`LMB` -- Enable the restrictions for all collections. Click again to restore the previous state.
+   - :kbd:`Shift-LMB` -- Invert the restriction state on all collections.
 
 Tree View
    Shows the collections within the current selected scene.
@@ -68,7 +68,7 @@ Tree View
       By Selected (box icon)
          Filter collections by selected objects (show only collections that contain the selected objects).
 
-Add Collection/ Add Subcollection
+Add Collection, Add Subcollection
    Self-explanatory.
 
 Phantom Mode
