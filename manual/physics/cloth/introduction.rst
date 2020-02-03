@@ -75,3 +75,35 @@ A general process for working with cloth is to:
 .. tip::
 
    To avoid unstable simulation, ensure that the cloth object does not penetrate any of the deflection objects.
+
+
+.. _physics-cloth-introduction-springs:
+
+Springs
+=======
+
+Internally, cloth physics is simulated with virtual springs that connect the vertices of a mesh.
+There are four types of springs that control how cloth bends.
+These four types are defined below and illustrated in the following image:
+
+.. figure:: /images/physics_cloth_introduction_springs.png
+   :align: center
+
+   Illustration of cloth springs; tension springs (blue),
+   compression springs (red), shear springs (cyan),
+   and angular bending springs (green).
+
+Tension Springs
+   Control the stiffness of the cloth.
+Compression Springs
+   Control the amount of force required to collapse or compress the cloth.
+Shear Springs
+   Similar to compression springs but control angular deformation.
+Angular Bending Springs
+   Control how resilient the cloth is to folding or crumpling.
+
+All four of these spring types can be controlled independently in the
+:doc:`/physics/cloth/settings/physical_properties` panel.
+While these settings control surface springs, optionally,
+internal springs can be used for 3D meshes and behave similarly to
+:doc:`Soft Bodies </physics/soft_body/index>`
