@@ -3,50 +3,35 @@
 Introduction
 ************
 
-Cloth simulation is one of the hardest aspects of CG,
-because it is a deceptively simple real-world item that is taken for granted,
-yet actually has very complex internal and environmental interactions.
-After years of development,
-Blender has a very robust cloth simulator that is used to make clothing, flags, banners,
-and so on. Cloth interacts with and is affected by other moving objects,
+Cloth simulation is one of the hardest aspects of computer graphics,
+it is a deceptively simple real-world item that is taken for granted,
+however, it actually has very complex internal and environmental interactions.
+Cloth is commonly modeled as 2D mesh to simulate real world objects such as fabrics, flags, banners.
+However, cloth can also be used to model 3D objects such as teddy bears, pillows, balloons, or balls.
+
+Cloth interacts with and is affected by other moving objects,
 the wind and other forces, as well as a general aerodynamic model,
 all of which is under your control.
 
 .. list-table::
 
    * - .. figure:: /images/physics_cloth_introduction_example1.jpg
-          :width: 200px
 
           Cloth example.
 
      - .. figure:: /images/physics_cloth_introduction_oncarved-wood.jpg
-          :width: 200px
 
           Cloth on carved wooden men (made by motorsep).
 
      - .. figure:: /images/physics_cloth_introduction_example2.jpg
-          :width: 200px
 
           Cloth example.
 
-A piece of cloth is any mesh, open or enclosed, that has been designated as cloth.
-The *Cloth* panels are located in the *Physics* tab and consist of three panels of options.
-Cloth is either an open or closed mesh and is mass-less, in that all cloth is assumed to have the same density,
-or mass per square unit.
-
-Cloth is commonly modeled as a mesh grid primitive, or a cube, but can also be, for example, a teddy bear.
-However, Blender's :doc:`soft body system </physics/soft_body/index>` provides better simulation of closed meshes;
-Cloth is a specialized simulation of fabrics.
-
-Once the object is designated as Cloth, a Cloth :doc:`modifier </modeling/modifiers/index>`
-will be added to the object's modifier stack automatically. As a :doc:`modifier </modeling/modifiers/index>`
-then, it can interact with other modifiers, such as *Armature* and *Smooth*. In these cases,
+Once Cloth physics have been added to a mesh, a Cloth :doc:`modifier </modeling/modifiers/index>`
+will be added to the object's modifier stack automatically. As a modifier then,
+it can interact with other modifiers, such as *Armature* and *Smooth*. In these cases,
 the ultimate shape of the mesh is computed in accordance with the order of the modifier stack.
 For example, you should smooth the cloth *after* the modifier computes the shape of the cloth.
-
-So you edit the Cloth settings in two places: use the Physics buttons to edit
-the properties of the cloth and use the Modifier stack to edit
-the Modifier properties related to display and interaction with other modifiers.
 
 You can *Apply* the Cloth Modifier to freeze, or lock in,
 the shape of the mesh at that frame, which removes the modifier. For example,
@@ -89,4 +74,4 @@ A general process for working with cloth is to:
 
 .. tip::
 
-   To avoid unstable simulation, ensure that the cloth object does not penetrate any of the deflection objects,
+   To avoid unstable simulation, ensure that the cloth object does not penetrate any of the deflection objects.
