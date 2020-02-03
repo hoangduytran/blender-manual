@@ -78,6 +78,12 @@ such as balloons or balls that are filled with some sort of fluid.
 This fluid can be seen either as a gas or a liquid however, both are generalized as "fluids".
 Cloth pressure can be enabled by toggling the checkbox in the *Pressure* panel header.
 
+.. note::
+
+   Non manifold meshes will work with cloth pressure however,
+   pressure will escape out of the mesh holes and cause drifting or propulsion forces.
+   One way to get around this is by using the *Vertex Group* to exclude the non manifold portions of the mesh.
+
 Pressure
    The uniform pressure that is constantly applied to the mesh.
    This value can be negative to simulate implosions
@@ -94,7 +100,7 @@ Custom Volume
 Factor
    Scalar control over the overall pressure.
 Vertex Group
-   Cloth pressure can be controlled via a doc:`Vertex Group </modeling/meshes/properties/vertex_groups/index>`
+   Cloth pressure can be controlled via a :doc:`Vertex Group </modeling/meshes/properties/vertex_groups/index>`
    to specify which the portions of the mesh to apply pressure.
    Zero weight means no pressure while a weight of one means full pressure.
 
