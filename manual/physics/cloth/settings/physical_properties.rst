@@ -22,11 +22,6 @@ Bending Model
 Stiffness
 =========
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Panel:     :menuselection:`Physics --> Cloth --> Physical Properties --> Stiffness`
-
 Tension
    How much the material resists stretching.
 Compression
@@ -42,11 +37,6 @@ Bending
 Damping
 =======
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Panel:     :menuselection:`Physics --> Cloth --> Physical Properties --> Damping`
-
 Tension
    Amount of damping in stretching behavior.
 Compression
@@ -59,6 +49,44 @@ Bending
    Amount of damping in bending behavior.
 
 
+.. _bpy.types.ClothSettings.internal_spring:
+.. _bpy.types.ClothSettings.internal_tension:
+.. _bpy.types.ClothSettings.internal_compression:
+.. _bpy.types.ClothSettings.vertex_group_intern:
+
+Internal Springs
+================
+
+As stated in the introduction, cloth physics are simulated through :ref:`physics-cloth-introduction-springs`
+connecting vertices on the surface of a mesh.
+However, these springs only interact on the surface and only apply to 2D surfaces.
+3D or *Internal Springs* can be used to make a mesh behave similarly to a
+:doc:`Soft Body </physics/soft_body/index>`.
+Internal springs can be enabled by toggling the checkbox in the *Internal Springs* panel header.
+
+Max Spring Creation Length
+   The maximum length an internal spring can have during creation.
+   If the distance between internal points is greater than this,
+   no internal spring will be created between these points.
+   A length of zero means that there is no length limit
+Max Creation Diversion
+   The maximum angle that is allowed to use to connect the internal points can diverge from the vertex normal.
+Check Surface Normals
+   Requires the points the internal springs connect to have opposite normal directions.
+Tension
+   How much the material resists stretching.
+Compression
+   How much the material resists compression.
+Vertex Group
+   The *Tension* and *Compression* of internal springs can be controlled via a
+   :doc:`Vertex Group </modeling/meshes/properties/vertex_groups/index>`
+   to specify which the portions of the mesh have internal springs or the spring strength.
+Max Tension
+   Maximum tension stiffness value.
+Max Compression
+   Maximum Compression stiffness value.
+
+
 .. _bpy.types.ClothSettings.use_pressure:
 .. _bpy.types.ClothSettings.use_pressure_volume:
 .. _bpy.types.ClothSettings.target_volume:
@@ -67,11 +95,6 @@ Bending
 
 Pressure
 ========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Panel:     :menuselection:`Physics --> Cloth --> Physical Properties --> Damping`
 
 Cloth pressure allows the simulation of soft shelled objects
 such as balloons or balls that are filled with some sort of fluid.
