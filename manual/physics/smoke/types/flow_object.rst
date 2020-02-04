@@ -58,15 +58,15 @@ Source
    Mesh
       Create smoke/fire directly from the object's mesh.
 
-         Surface
-            Maximum distance in voxels from the surface of the mesh in which smoke is created (see :term:`voxel`).
-            Since this setting uses voxels to determine distance,
-            results will vary depending on the domain's resolution.
+      Surface
+         Maximum distance in voxels from the surface of the mesh in which smoke is created (see :term:`voxel`).
+         Since this setting uses voxels to determine distance,
+         results will vary depending on the domain's resolution.
 
-         Volume
-            Amount of smoke to emit inside the emitter mesh, where 0 is none and 1 is
-            Note that emitting smoke based on volume may have unpredictable results
-            if your mesh is :term:`non-manifold`.
+      Volume
+         Amount of smoke to emit inside the emitter mesh, where 0 is none and 1 is
+         Note that emitting smoke based on volume may have unpredictable results
+         if your mesh is :term:`non-manifold`.
 
    Particle System
       Create smoke/fire from a particle system on the flow object. Note that only *Emitter* type particle systems

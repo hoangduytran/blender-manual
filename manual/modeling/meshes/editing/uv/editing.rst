@@ -285,7 +285,7 @@ Merge UVs by Distance
 
    :Mode:      View mode
    :Panel:     :menuselection:`Toolbar --> Tools --> UV Tools --> Merge UVs by Distance`
-   :Menu:      :menuselection:`UVs --> Weld/Align --> Merge UVs by Distance`,
+   :Menu:      :menuselection:`UVs --> Weld/Align --> Merge UVs by Distance`
 
 The *Merge UVs by Distance* tool will merge selected UVs within the specified *Margin*.
 
