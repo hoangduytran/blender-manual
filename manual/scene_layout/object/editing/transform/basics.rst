@@ -111,7 +111,7 @@ Scale Cage
    :class: refbox
 
    :Mode:      Object and Edit Modes
-   :Menu:      :menuselection:`Toolbar --> Scale --> Scale Cage`
+   :Tool:      :menuselection:`Toolbar --> Scale --> Scale Cage`
 
 The *Scale Cage* tool is a bounding box around the object(s) which scales objects from a particular point or axis.
 The tool works by selecting a scale point and dragging inwards or outwards to adjust the scale accordingly.

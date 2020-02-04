@@ -16,7 +16,7 @@ Translation, Rotation, Scale
    :class: refbox
 
    :Mode:      Edit Mode
-   :Panel:     :menuselection:`Toolbar --> Tools --> Transform`
+   :Tool:      :menuselection:`Toolbar --> Tools --> Transform`
    :Menu:      :menuselection:`Grease Pencil --> Transform --> Move, Rotate, Scale, ...`
    :Hotkey:    :kbd:`G`, :kbd:`R`, :kbd:`S`
 
@@ -43,7 +43,7 @@ Tools
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Grease Pencil --> Transform`
-   :Panel:     :menuselection:`Toolbar --> Bend/Shear`
+   :Tool:      :menuselection:`Toolbar --> Bend/Shear`
 
 The *Bend*, *Shear*, *To Sphere*, *Extrude* and *Shrink Fatten* transform tools are described
 in the :doc:`Editing tools </grease_pencil/modes/edit/tools>` section.

@@ -8,7 +8,7 @@ Line Tool
    :class: refbox
 
    :Mode:      Draw Mode
-   :Panel:     :menuselection:`Toolbar --> Tools --> Draw Tools --> Line`
+   :Tool:      :menuselection:`Toolbar --> Tools --> Draw Tools --> Line`
 
 The Line tool create straight lines.
 
