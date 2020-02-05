@@ -153,30 +153,6 @@ Smoke Color
    Color of smoke created by burnt fuel.
 
 
-Adaptive Domain
-===============
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Type:      Domain
-   :Panel:     :menuselection:`Physics --> Smoke --> Adaptive Domain`
-
-When enabled, the domain will adaptively shrink to best fit the smoke,
-saving computation time by leaving voxels without smoke out of the simulation.
-Unless the *Additional* option is used, the adaptive domain will not exceed the bounds of the original domain.
-
-Additional
-   Number of voxels to add around the outside of the domain.
-Margin
-   Amount of extra space to leave around smoke, measured in voxels.
-   With very fast-moving smoke larger margins may be required to prevent the smoke from being cut off
-   by the adaptive boundary, but note this will increase the number of voxels which need to be computed.
-Threshold
-   Smallest amount of smoke a voxel can contain before it is considered empty
-   and the adaptive domain is allowed to cut it out of the simulation.
-
-
 .. _smoke-high-resolution:
 
 High Resolution
