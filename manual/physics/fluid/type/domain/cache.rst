@@ -1,3 +1,4 @@
+.. _bpy.types.FluidDomainSettings.cache:
 
 *****
 Cache
@@ -94,6 +95,8 @@ Bake All, Free All
 
    Once the similation has been baked, the cache can be deleted by pressing *Free All*.
 
+
+.. _bpy.types.FluidDomainSettings.export_manta_script:
 
 Advanced
 ========
