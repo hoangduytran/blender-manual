@@ -1,3 +1,4 @@
+.. _bpy.types.FluidFlowSettings:
 
 ****
 Flow
@@ -12,10 +13,49 @@ Settings
 Todo.
 
 
+.. _bpy.types.FluidFlowSettings.flow_source:
+.. _bpy.types.FluidFlowSettings.use_plane_init:
+.. _bpy.types.FluidFlowSettings.surface_distance:
+.. _bpy.types.FluidFlowSettings.volume_density:
+.. _bpy.types.FluidFlowSettings.particle_system:
+.. _bpy.types.FluidFlowSettings.use_particle_size:
+.. _bpy.types.FluidFlowSettings.particle_size:
+
 Flow Source
 -----------
 
-Todo.
+Flow Source
+   This setting defines the method used to emit fluid.
+
+   Mesh
+      Create smoke/fire directly from the object's mesh.
+
+      Is Planar
+         Todo.
+
+      Surface Emission
+         Maximum distance in voxels from the surface of the mesh in which fluid is created (see :term:`voxel`).
+         Since this setting uses voxels to determine distance,
+         results will vary depending on the domain's resolution.
+
+      Volume Emission
+         Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is
+         Note that emitting fluid based on volume may have unpredictable results
+         if your mesh is :term:`non-manifold`.
+
+   Particle System :guilabel:`Fire or Smoke Only`:
+      Create smoke/fire from a particle system on the flow object.
+      Note that only *Emitter* type particle systems can add smoke.
+      See :doc:`Particles </physics/particles/introduction>` for information on how to create a particle system.
+
+      With this option selected, there is a box to select a particle system and one additional setting, *Set Size*.
+
+         Set Size
+            When this setting is enabled, it allows the *Size* setting to define
+            the maximum distance in voxels at which particles can emit smoke,
+            similar to the *Surface Emission* setting for mesh sources.
+
+            When disabled, particles will fill the nearest :term:`voxel` with smoke.
 
 
 .. _bpy.types.FluidFlowSettings.use_initial_velocity:

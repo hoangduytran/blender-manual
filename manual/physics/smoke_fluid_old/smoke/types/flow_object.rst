@@ -49,40 +49,6 @@ Outflow
    Remove smoke and fire. Note that the shape of the outflow will use the object's :term:`bounding box`.
 
 
-Flow Source
------------
-
-Source
-   This setting defines the method used to emit smoke and fire.
-
-   Mesh
-      Create smoke/fire directly from the object's mesh.
-
-      Surface
-         Maximum distance in voxels from the surface of the mesh in which smoke is created (see :term:`voxel`).
-         Since this setting uses voxels to determine distance,
-         results will vary depending on the domain's resolution.
-
-      Volume
-         Amount of smoke to emit inside the emitter mesh, where 0 is none and 1 is
-         Note that emitting smoke based on volume may have unpredictable results
-         if your mesh is :term:`non-manifold`.
-
-   Particle System
-      Create smoke/fire from a particle system on the flow object. Note that only *Emitter* type particle systems
-      can add smoke.
-      See :doc:`Particles </physics/particles/introduction>` for information on how to create a particle system.
-
-      With this option selected, there is a box to select a particle system and one additional setting, *Set Size*.
-
-         Set Size
-            When this setting is enabled, it allows the *Size* setting to define
-            the maximum distance in voxels at which particles can emit smoke,
-            similar to the *Surface* setting for mesh sources.
-
-            When disabled, particles will fill the nearest :term:`voxel` with smoke.
-
-
 Initial Values
 --------------
 
