@@ -144,6 +144,5 @@ divisions generally appear smaller in real-world scale
 
 .. figure:: /images/physics_smoke_types_domain_note-on-resolution.jpg
    :align: center
-   :width: 550px
 
 High *Domain Division* simulations tend to appear larger in real-world scale, with many smaller details.

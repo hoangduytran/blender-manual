@@ -131,37 +131,3 @@ Sampling Subframes
 Vertex Group
    When set, use the specified :doc:`Vertex Group </modeling/meshes/properties/vertex_groups/vertex_groups>`
    to control where smoke is emitted.
-
-
-Texture
-=======
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Type:      Flow
-   :Panel:     :menuselection:`Physics --> Smoke Flow --> Texture`
-
-.. TODO2.8:
-   .. figure:: /images/physics_smoke_types_flow-object_advanced.png
-      :align: right
-
-When using a mesh as the *Flow Source*, you can use these settings to control where on
-the mesh smoke can be emitted from. These settings have no effect on outflow objects.
-
-Use Texture
-   When enabled, use the specified texture to control where smoke is emitted.
-
-.. container:: lead
-
-   .. clear
-
-
-Example
-=======
-
-These settings are useful for effects like this:
-
-.. figure:: /images/physics_smoke_types_flow-object_texture-usecase.jpg
-   :align: center
-   :width: 500px
