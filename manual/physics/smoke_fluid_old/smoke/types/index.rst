@@ -9,4 +9,3 @@
 
    domain.rst
    flow_object.rst
-   collision.rst
