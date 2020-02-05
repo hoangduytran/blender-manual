@@ -82,15 +82,6 @@ Source
 
             When disabled, particles will fill the nearest :term:`voxel` with smoke.
 
-Initial Velocity
-   When enabled, smoke will inherit the momentum of the flow source.
-
-   Source
-      Multiplier for inherited velocity. A value of 1 will emit smoke moving at the same speed as the source.
-   Normal
-      When using a mesh source,
-      this option controls how much velocity smoke is given along the source's :term:`normal`.
-
 
 Initial Values
 --------------
