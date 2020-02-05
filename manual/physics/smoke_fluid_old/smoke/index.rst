@@ -11,4 +11,3 @@
    introduction.rst
    types/index.rst
    material.rst
-   baking.rst

@@ -143,21 +143,6 @@ Offset
    Time offset when reading backed cache.
 
 
-Bake
-====
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Panel:     :menuselection:`Physics --> Fluid --> Bake`
-   :Type:      Domain
-
-Bake Directory
-   For baking options see :doc:`Baking </physics/fluid/baking>`.
-Bake button
-   For baking options, see :doc:`Baking </physics/fluid/baking>`.
-
-
 Fluid World
 ===========
 

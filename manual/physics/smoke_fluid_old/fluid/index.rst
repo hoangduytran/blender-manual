@@ -14,5 +14,4 @@
 
    introduction.rst
    types/index.rst
-   baking.rst
    appendix.rst
