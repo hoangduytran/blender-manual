@@ -222,20 +222,3 @@ divisions generally appear smaller in real-world scale
    :width: 550px
 
 High *Domain Division* simulations tend to appear larger in real-world scale, with many smaller details.
-
-
-Collections
-===========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Type:      Domain
-   :Panel:     :menuselection:`Properties --> Physics --> Collections`
-
-Flow
-   If set, only objects in the specified :doc:`Collection </scene_layout/collections/collections>`
-   will be allowed to act as flow objects in this domain.
-Collision
-   If set, only objects in the specified :doc:`Collection </scene_layout/collections/collections>`
-   will be allowed to act as collision objects in this domain.
