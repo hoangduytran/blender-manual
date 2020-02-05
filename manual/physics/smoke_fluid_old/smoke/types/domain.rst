@@ -78,57 +78,6 @@ Empty space
    Value under which voxels are considered to be empty.
 
 
-Behavior
-========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Panel:     :menuselection:`Physics --> Smoke --> Behavior`
-   :Type:      Domain
-
-Density
-   Controls how much smoke is affected by density.
-
-   - Values above 0 will cause the smoke to rise (simulating smoke which is lighter than ambient air).
-   - Values below 0 will cause smoke to sink (simulating smoke which is heavier than ambient air).
-
-.. _smoke-domain-temp-diff:
-
-Temperature Difference
-   The *Temperature Difference* setting controls how much smoke is affected by temperature.
-
-   The effect this setting has on smoke depends on
-   the per flow object :ref:`Temperature Difference <smoke-flow-temp-diff>`:
-
-   - Values above 0 will result in the smoke rising when the flow object *Temperature Difference* is
-     set to a positive value, and smoke sinking when the flow object *Temperature Difference* is
-     set to a negative value.
-   - Values below 0 will result in the opposite of positive values, i.e.
-     smoke emitted from flow objects with a positive *Temperature Difference* will sink,
-     and smoke from flow objects with a negative *Temperature Difference* will rise.
-
-   Note that smoke from multiple flow objects with different temperatures
-   will mix and warm up/cool down until an equilibrium is reached.
-
-Vorticity
-   Controls the amount of turbulence in the smoke. Higher values will make lots of small swirls,
-   while lower values make smoother shapes.
-
-   .. figure:: /images/physics_smoke_types_domain_vorticity.jpg
-      :width: 400px
-
-      Comparison of different amounts of vorticity. The domain on the left has a vorticity of 3,
-      while the domain on the right has a vorticity of 0.01.
-
-Dissolve
-   Allow smoke to dissipate over time.
-Time
-   Speed of smoke's dissipation in frames.
-Slow
-   Dissolve smoke in a logarithmic fashion. Dissolves quickly at first, but lingers longer.
-
-
 Smoke Flames
 ============
 
