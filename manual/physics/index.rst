@@ -12,8 +12,7 @@
    cloth/index.rst
    soft_body/index.rst
    particles/index.rst
-   fluid/index.rst
-   smoke/index.rst
+   smoke_fluid_old/index.rst
    dynamic_paint/index.rst
    forces/index.rst
    collision.rst
