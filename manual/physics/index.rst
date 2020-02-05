@@ -11,9 +11,11 @@
    rigid_body/index.rst
    cloth/index.rst
    soft_body/index.rst
+   fluid/index.rst
    particles/index.rst
-   smoke_fluid_old/index.rst
    dynamic_paint/index.rst
    forces/index.rst
    collision.rst
    baking.rst
+
+   smoke_fluid_old/index.rst
