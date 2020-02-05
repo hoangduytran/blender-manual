@@ -71,10 +71,35 @@ Slow
    Dissolve smoke in a logarithmic fashion. Dissolves quickly at first, but lingers longer.
 
 
+.. _bpy.types.FluidDomainSettings.burning_rate:
+.. _bpy.types.FluidDomainSettings.flame_smoke:
+.. _bpy.types.FluidDomainSettings.flame_vorticity:
+.. _bpy.types.FluidDomainSettings.flame_max_temp:
+.. _bpy.types.FluidDomainSettings.flame_ignition:
+.. _bpy.types.FluidDomainSettings.flame_smoke_color:
+
 Fire
 ====
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
+
+   :Type:      Domain
+   :Panel:     :menuselection:`Physics --> Smoke --> Flames`
+
+Reaction Speed
+   How fast fuel burns. Larger values result in smaller flames (fuel burns before it can go very far),
+   smaller values result in larger flames (fuel has time to flow farther before being fully consumed).
+Flame Smoke
+   Amount of extra smoke created automatically to simulate burnt fuel.
+Vorticity
+   Additional vorticity for flames.
+Temperature Maximum
+   Maximum temperature of flames.
+Minimum
+   Minimum temperature of flames.
+Flame Color
+   Color of flame created by burnt fuel.
 
 
 Liquid

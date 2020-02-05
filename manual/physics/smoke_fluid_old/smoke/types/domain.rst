@@ -78,30 +78,6 @@ Empty space
    Value under which voxels are considered to be empty.
 
 
-Smoke Flames
-============
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Type:      Domain
-   :Panel:     :menuselection:`Physics --> Smoke --> Flames`
-
-Reaction Speed
-   How fast fuel burns. Larger values result in smaller flames (fuel burns before it can go very far),
-   smaller values result in larger flames (fuel has time to flow farther before being fully consumed).
-Smoke
-   Amount of extra smoke created automatically to simulate burnt fuel.
-Vorticity
-   Additional vorticity for flames.
-Temperature Ignition
-   Minimum temperature of flames.
-Maximum
-   Maximum temperature of flames.
-Smoke Color
-   Color of smoke created by burnt fuel.
-
-
 .. _smoke-high-resolution:
 
 High Resolution
