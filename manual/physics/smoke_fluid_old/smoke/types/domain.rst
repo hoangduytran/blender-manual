@@ -106,11 +106,6 @@ Strength
 
       From left to right, the domains' high resolution strengths are set to 0, 2, and 6.
 
-.. tip::
-
-   The visibility of high resolution smoke in the viewport can be toggled in the render
-   :ref:`Simplify options <render-cycles-simplify-viewport>`.
-
 
 Note on Divisions and High Resolution
 -------------------------------------
