@@ -1,9 +1,47 @@
+.. _bpy.types.FluidDomainSettings.resolution_max:
+.. _bpy.types.FluidDomainSettings.time_scale:
 
 ********
 Settings
 ********
 
-Todo
+.. admonition:: Reference
+   :class: refbox
+
+   :Panel:     :menuselection:`Physics --> Fluid --> Settings`
+   :Type:      Domain
+
+The domain object contains the entire simulation. Fluid simulations cannot leave the domain,
+it will either collide with the edge or disappear, depending on the domain's settings.
+
+Keep in mind that large domains require higher resolutions and longer bake times.
+You will want to make it just large enough that the simulation will fit inside it,
+but not so large that it takes too long to compute the simulation.
+
+To create a domain, add a cube and transform it until it encloses the area where you want fluid.
+Translation, rotation, and scaling are all allowed. To turn it into a fluid domain, click *Fluid*
+in :menuselection:`Properties --> Physics`, then select *Domain* as the fluid *Type*.
+
+.. note::
+
+   You *can* use other shapes of mesh objects as domain objects,
+   but the fluid simulator will use the shape's :term:`bounding box` as the domain bounds.
+   In other words, the actual shape of the domain will still be rectangular.
+
+Resolution Divisions
+   The fluid domain is subdivided into many "cells" called voxels (see :term:`voxel`)
+   which make up "pixels" of fluid. This setting controls the number of subdivisions in the domain.
+   Higher numbers of subdivisions are one way of creating higher resolution fluids.
+
+   Since the resolution is defined in terms of "subdivisions",
+   larger domains will need more divisions to get an equivalent resolution to a small domain.
+   To help with this, the *Resolution Divisions* can be previewed with a small cube
+   shown in the 3D Viewport, to show the size of these divisions.
+
+Time Scale
+   Controls the speed of the simulation. Low values result in a "slow motion" simulation,
+   while higher values can be used to advance the simulation faster
+   (useful for generating fluids for use in still renders).
 
 
 .. _bpy.types.FluidDomainSettings.use_collision_border:

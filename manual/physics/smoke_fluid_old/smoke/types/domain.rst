@@ -1,68 +1,11 @@
-.. _bpy.types.SmokeDomainSettings:
 
 ************
 Smoke Domain
 ************
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Panel:     :menuselection:`Physics --> Smoke`
-   :Type:      Domain
-
-The domain object contains the entire simulation. Smoke and fire cannot leave the domain,
-it will either collide with the edge or disappear, depending on the domain's settings.
-
-Keep in mind that large domains require higher resolutions and longer bake times.
-You will want to make it just large enough that the simulation will fit inside it,
-but not so large that it takes too long to compute the simulation.
-
-To create a domain, add a cube :menuselection:`Add --> Mesh --> Cube`, :kbd:`Shift-A`
-and transform it until it encloses the area where you want smoke. Translation, rotation,
-and scaling are all allowed. To turn it into a smoke domain, click *Smoke*
-in :menuselection:`Properties --> Physics`, then select *Domain* as the *Smoke Type*.
-
-.. note::
-
-   You *can* use other shapes of mesh objects as domain objects,
-   but the smoke simulator will use the shape's :term:`bounding box`
-   as the domain bounds. In other words, the actual shape of the domain will still be rectangular.
-
-.. TODO2.8:
-   .. figure:: /images/physics_smoke_types_domain_settings.png
-      :align: right
-
-      *Smoke Domain* options.
-
-
-Settings
-========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Panel:     :menuselection:`Physics --> Smoke --> Settings`
-   :Type:      Domain
-
 .. _smoke-resolution:
 
-Resolution
-   The smoke domain is subdivided into many "cells" called voxels (see :term:`voxel`)
-   which make up "pixels" of smoke. This setting controls the number of subdivisions in the domain.
-   Higher numbers of subdivisions are one way of creating higher resolution smoke (see `High Resolution`_).
-
-   Since the resolution is defined in terms of *subdivisions*,
-   larger domains will need more divisions to get an equivalent resolution to a small domain.
-
-   Also see `Note on Divisions and High Resolution`_.
-
-Time Scale
-   Controls the speed of the simulation. Low values result in a "slow motion" simulation,
-   while higher values can be used to advance the simulation faster
-   (useful for generating smoke for use in still renders).
-
-Empty space
-   Value under which voxels are considered to be empty.
+.. seealso:: Also see `Note on Divisions and High Resolution`_.
 
 
 .. _smoke-high-resolution:
