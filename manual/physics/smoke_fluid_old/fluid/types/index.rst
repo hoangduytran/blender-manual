@@ -8,9 +8,7 @@
 .. toctree::
    :maxdepth: 2
 
-   introduction.rst
    domain.rst
    fluid_object.rst
    flow.rst
    particle.rst
-   control.rst
