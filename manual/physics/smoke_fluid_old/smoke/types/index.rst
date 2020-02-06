@@ -8,4 +8,3 @@
    :maxdepth: 2
 
    domain.rst
-   flow_object.rst

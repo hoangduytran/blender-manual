@@ -35,9 +35,12 @@ Buoyancy Density
    - Values above 0 will cause the smoke to rise (simulating smoke which is lighter than ambient air).
    - Values below 0 will cause smoke to sink (simulating smoke which is heavier than ambient air).
 
+.. _smoke-domain-heat:
+
 Heat
    Controls how much smoke is affected by temperature.
-   The effect this setting has on smoke depends on the per flow object *Initial Temperature*:
+   The effect this setting has on smoke depends on the per flow object
+   :ref:`Initial Temperature <physics-fluid-flow-init-temp>`:
 
    - Values above 0 will result in the smoke rising when the flow object *Initial Temperature* is
      set to a positive value, and smoke sinking when the flow object *Initial Temperature* is
