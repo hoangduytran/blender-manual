@@ -8,3 +8,4 @@
 
    introduction.rst
    type/index.rst
+   material.rst
