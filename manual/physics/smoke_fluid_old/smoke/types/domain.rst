@@ -61,19 +61,6 @@ Time Scale
    while higher values can be used to advance the simulation faster
    (useful for generating smoke for use in still renders).
 
-Border Collisions
-   Controls which sides of the domain will allow smoke "through" the domain,
-   making it disappear without influencing the rest of the simulation,
-   and which sides will deflect smoke as if colliding with
-   a :doc:`Collision Object </physics/smoke/types/collision>`.
-
-   Vertically Open
-      Smoke disappears when it hits the top or bottom of the domain, but collides with the walls.
-   Open
-      Smoke disappears when it hits any side of the domain.
-   Collide All
-      Smoke collides with all sides of the domain.
-
 Empty space
    Value under which voxels are considered to be empty.
 

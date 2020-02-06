@@ -6,10 +6,14 @@ Settings
 Todo
 
 
+.. _bpy.types.FluidDomainSettings.use_collision_border:
+
 Border Collisions
 =================
 
-Todo.
+Controls which sides of the domain will allow fluid "through" the domain,
+making it disappear without influencing the rest of the simulation,
+and which sides will deflect fluids.
 
 
 .. _bpy.types.FluidDomainSettings.alpha:
