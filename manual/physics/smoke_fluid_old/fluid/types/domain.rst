@@ -34,19 +34,6 @@ This object will be *replaced* by the fluid during the simulation.
 Settings
 ========
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Panel:     :menuselection:`Physics --> Fluid --> Settings`
-   :Type:      Domain
-
-.. TODO2.8:
-   .. figure:: /images/physics_fluid_types_domain_panels.png
-
-      Fluid Domain settings.
-
-Simulation Threads:
-   Override number of threads for the simulation, 0 is automatic.
 Resolution
    Render resolution
       The granularity at which the actual fluid simulation is performed.
@@ -101,69 +88,12 @@ Display
    After you have baked a domain, it is displayed (usually) in the Blender window as the preview mesh.
    To see the size and scope of the original domain box, select *Geometry* in the left selector.
 
-Time
-   Start
-      It is the simulation start time (in seconds).
-
-      This option makes the simulation computation in Blender start later in the simulation.
-      The domain deformations and fluid flow prior to the start time are not saved.
-
-      For example, if you wanted the fluid to appear to already have been flowing
-      for 4 seconds before the actual first frame of data, you would enter 4.0 here.
-   End
-      It is the simulation ending time (in seconds).
-
-   .. tip:: Start and end times have nothing to do with how many frames are baked
-
-      If you set *Start* time to 3.0, and *End* time to 4.0, you will simulate 1 second of fluid motion.
-      That one second of fluid motion will be spread across however-many frames are set in
-      :menuselection:`Render --> Dimensions`.
-
-      This means, for example, that if you have Blender set to make 250 frames at 25 fps, the fluid
-      will look like it had already been flowing for 3 seconds at the start of the simulation,
-      *but* will play in slow motion (one-tenth normal speed),
-      since the 1 second fluid simulation plays out over the course of 10 video seconds.
-      To correct this, change the end time to 13.0 (3.0 + 10.0) to match the 250 frames at 25 fps.
-      Now, the simulation will be real-time,
-      since you set 10 seconds of fluid motion to simulate over 10 seconds of animation.
-      Having these controls in effect gives you a "speed control" over the simulation.
-
 Speed
    Fluid motion rate. The speed option can be animated to slow down or speed up time.
-Generate Speed Vectors
-   If this button is clicked, no speed vectors will be exported.
-   So by default, speed vectors are generated and stored on disk.
-   They can be used to compute image-based motion blur with the compositing nodes.
 Reverse Frames
    The simulation is calculated backward.
 Offset
    Time offset when reading backed cache.
-
-
-Fluid World
-===========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Type:      Domain
-   :Panel:     :menuselection:`Physics --> Fluid --> World`
-
-.. TODO2.8:
-   .. figure:: /images/physics_fluid_types_domain_world.png
-
-      The Fluid World panel.
-
-Scene Size Meters
-   Size of the domain object in the real world in meters.
-   If you want to create a mug of coffee, this might be 10 cm (0.1 meters), while a swimming pool might be 10m.
-   The size set here is for the longest side of the domain bounding box.
-Optimization
-   How many adaptive grid levels to be used during simulation.
-   Setting this to -1 will perform automatic selection.
-Compressibility
-   If you have problems with large standing fluid regions at a high resolution,
-   it might help to reduce this number (note that this will increase computation times).
 
 
 Fluid Viscosity
@@ -233,113 +163,3 @@ Viscosity Presets
       especially sugar-laden fluids like chocolate syrup and honey, depend highly on temperature and concentration.
       Oil viscosity varies by SAE rating.
       Glass at room temperature is basically a solid, but glass at 1500 degrees Celsius flows (nearly) like water.
-
-..
-   There's still some things that are not correct in this table, I think.
-   Let me put as clear as I can:
-   *The dynamic viscosity international unit is the Pascal-seconds (Pa.s).
-   There are also Poise (P = 0.1 Pa.s), and centiPoise (cP = 0.001 Pa.s).
-   *The kinematic viscosity international unit is in m^2.s^-1.
-   *The density international unit is in kg.m^-3.
-   Which implies that a Pascal corresponds to 1 kg.m^-1.s^-2,
-   or else you cannot divide Pa.s by kg.m^-3 to obtain m^2.s^-1 !
-   ::
-   So if I take the kinematics values given below,
-   and try to get the corresponding dynamic values, I have:
-   *water: density: about 1000 (kg.m^-3); kinematic viscosity: 1×10^-6 (m^2.s^-1)
-   --> dynamic viscosity is 1000 × 1×10^-6 = 1×10^-3 Pa.s, hence 1 cP.
-   --> COHERENT
-   *Oil:   density: more or less like water, so about 1000; Kinematic viscosity: 5×10^-5
-   --> dynamic viscosity is 1000 × 5×10^-5 = 1×10^-2 Pa.s, hence 50 cP, and not 500 cP
-   --> NOT COHERENT, unless Oil SAE 50 is ten times heavier than water!
-   *Honey: density: about 1250 (kg.m^-3); kinematic viscosity: 2×10^-3
-   --> dynamic viscosity is 1250 × 2×10^-3 = 2.5 Pa.s, hence 2500 cP, and not 1×10^4 cP
-   --> NOT COHERENT, unless honey is five times heavier than water!
-   *And so on, chocolate syrup density should be of 1×10^4 kg.m^-3 (ten times water density),
-   ketchup density should be of 1×10^3 kg.m^-3 (same as water density, coherent I think),
-   melting glass density should be of 1×10^12 kg.m^-3
-   (a thousand million times water density, it's more like black hole!)
-  ::
-   So, either the values in the tables are wrong (one way or the other),
-   or the law to pass from dynamic viscosity to kinematic viscosity is just a "trick",
-   an approximation, only working with fluids around water viscosity...
-  ::
-   Do not know, I am not a physicist, but there definitively something wrong here,
-   so if someone who knows better about this matter could check and correct it, it would be nice!
-   --Mont29, 2009/08
-
-
-Fluid Boundary
-==============
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Type:      Domain
-   :Panel:     :menuselection:`Physics --> Fluid --> Boundary`
-
-.. TODO2.8:
-   .. figure:: /images/physics_fluid_types_domain_boundary-panel.png
-
-      The Fluid Boundary panel.
-
-This box has all the slip and surface options.
-
-Type
-   The stickiness of the surface of the obstacle,
-   to determine the "tacky surface (Surface Adhesion)."
-   In the real world, and the tackiness and fluid,
-   the granularity of the object surface, tack, determined by the elasticity.
-
-   No Slip
-      Fluid will stick to snugly (speed 0).
-   Free Slip
-      Fluid will move on the object (0 normal direction of speed).
-   Partial Slip
-      It is a two intermediate. It is almost *No slip*, 1 in the *Free* exactly the same in 0.
-Amount
-   Amount of mixing between no and free slip. 0 is no slip, 1 is free slip.
-Surface Smoothing
-   Amount of smoothing to be applied to the fluid surface.
-   1.0 is standard, 0 is off, while larger values increase the amount of smoothing.
-Subdivisions
-   Allows the creation of high-res surface meshes directly during the simulation
-   (as opposed to doing it afterwards like a Subdivision Surface Modifier).
-   A value of 1 means no subdivision, and each increase results in one further subdivision of each fluid voxel.
-   The resulting meshes thus quickly become large, and can require large amounts of disk space.
-   Be careful in combination with large smoothing values --
-   this can lead to long computation times due to the surface mesh generation.
-Remove Air Bubbles
-   Enable the possibility to remove the "air bubble" around submerged collision object.
-
-
-Fluid Particles
-===============
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Type:      Domain
-   :Panel:     :menuselection:`Physics --> Fluid --> Particles`
-
-.. TODO2.8:
-   .. figure:: /images/physics_fluid_types_domain_particles.png
-
-      The Fluid Particles panel.
-
-Here you can add particles to the fluid simulated, to enhance the visual effect.
-
-Tracer Particles
-   Number of tracer particles to be put into the fluid at the beginning of the simulation.
-   To display them create another object with the *Particle* fluid type,
-   explained below, that uses the same bake directory as the domain.
-
-Generate Particles
-   Controls the amount of fluid particles to create (0=off, 1=normal, >1=more).
-   To use it, you have to have a surface subdivision value of at least 2.
-
-.. figure:: /images/physics_fluid_types_domain_particals.jpg
-
-   An example of Particles effects.
-
-   Left: Simulated without; Right: With particles and subdivision enabled.
