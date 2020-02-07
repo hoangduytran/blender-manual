@@ -1,6 +1,4 @@
 
-.. _fluid-simulation-types-index:
-
 ###############
   Fluid Types
 ###############
@@ -10,5 +8,4 @@
 
    domain.rst
    fluid_object.rst
-   flow.rst
    particle.rst

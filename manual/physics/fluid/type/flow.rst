@@ -46,12 +46,15 @@ Flow Behavior
    Todo.
 
    Inflow
-      Todo.
+      This object will put fluid into the simulation, like a water tap or base of a fire.
 
       Use Inflow
          Todo.
    Outflow
-      Remove smoke and fire. Note that the shape of the outflow will use the object's :term:`bounding box`.
+      Any fluid that enters the :term:`bounding box` of this object will be removed from the domain
+      (think of a drain or a black hole). This can be useful in combination with an inflow to prevent
+      the whole domain from filling up. Outflow objects can be animated and the area where the fluid
+      disappears will follow the object as it moves around.
    Geometry
       Todo.
 
