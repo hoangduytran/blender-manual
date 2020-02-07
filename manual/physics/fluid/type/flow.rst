@@ -56,7 +56,10 @@ Flow Behavior
       the whole domain from filling up. Outflow objects can be animated and the area where the fluid
       disappears will follow the object as it moves around.
    Geometry
-      Todo.
+      All regions of this object that are inside the domain bounding box will be used as
+      actual fluid in the simulation. You can place more than one fluid object inside the domain.
+      Also make sure the surface normals are pointing outwards or else they will not simulate properly.
+      In contrast to domain objects, the actual mesh geometry is used for fluid objects.
 
 Sampling Substeps
    Number of subframes used to reduce gaps in emission of smoke from fast-moving sources.
