@@ -30,7 +30,7 @@ textures representing the density, heat, and velocity of other fluids or suspend
 
    Example of smoke simulation.
 
-Gases/Smoke are emitted inside of a :doc:`Domain </physics/smoke/types/domain>`
+Gases/Smoke are emitted inside of a :doc:`Domain </physics/fluid/type/domain/index>`
 from a mesh object or particle system.
 Smoke movement is controlled by airflow inside the domain,
 which can be influenced by :doc:`Effector objects </physics/fluid/type/effector>`.
@@ -41,13 +41,13 @@ Airflow inside the domain can affect other physics simulations via the *Smoke Fl
 Workflow
 ========
 
-At least a :doc:`Domain </physics/smoke/types/domain>` object and
-one :doc:`Flow object </physics/smoke/types/flow_object>`
+At least a :doc:`Domain object </physics/fluid/type/domain/index>` and
+one :doc:`Flow object </physics/fluid/type/flow>`
 are required to create a fluid simulation.
 
-#. Create a :doc:`Domain Object </physics/fluid/type/index>`
+#. Create a :doc:`Domain object </physics/fluid/type/domain/index>`
    that defines the bounds of the simulation volume.
-#. Set up :doc:`Flow objects </physics/smoke/types/flow_object>` which will emit fluid.
+#. Set up :doc:`Flow objects </physics/fluid/type/flow>` which will emit fluid.
 #. Set up :doc:`Effector objects </physics/fluid/type/effector>`
    to make the fluid interact with objects in the scene.
 #. Assign a :doc:`material </physics/fluid/material>` to the domain object.

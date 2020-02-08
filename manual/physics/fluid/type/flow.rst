@@ -4,8 +4,7 @@
 Flow
 ****
 
-Fluid *Flow* types are used to add or remove fluid
-to a :doc:`Smoke Domain </physics/smoke/types/domain>` object.
+Fluid *Flow* types are used to add or remove fluid to a domain object.
 Flow objects should be contained within the domain's :term:`bounding box` in order to work.
 
 To define any mesh object as a *Flow* object, add Fluid physics by clicking *Fluid*
