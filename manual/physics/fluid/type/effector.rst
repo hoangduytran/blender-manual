@@ -50,6 +50,8 @@ Effector Type
             Todo.
 
 Is Planar
-   Todo.
+   Tells the fluid solver that the effector object is either
+   a single dimension i.e. a plane or the mesh is :term:`non-manifold`.
+   This ensures that the fluid simulator will give the most accurate results for these types of meshes. 
 Surface Thickness
    Todo.

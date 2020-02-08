@@ -33,13 +33,15 @@ Flow Type
       Emit liquid.
 
 Flow Behavior
-   Todo.
+   Controls if the Flow object either adds (*Inflow*), removes (*Outflow*),
+   or turn the mesh itself into fluid (*Geometry*).
 
    Inflow
       This object will put fluid into the simulation, like a water tap or base of a fire.
 
       Use Inflow
-         Todo.
+         Enables or disables the flow of fluid, this property is useful for animations
+         to selectively enable and disable when fluid is being added to the domain.
    Outflow
       Any fluid that enters the :term:`bounding box` of this object will be removed from the domain
       (think of a drain or a black hole). This can be useful in combination with an inflow to prevent
@@ -111,13 +113,13 @@ Flow Source
       Create smoke/fire directly from the object's mesh.
 
       Is Planar
-         Todo.
-
+         Tells the fluid solver that the flow object is either
+         a single dimension i.e. a plane or the mesh is :term:`non-manifold`.
+         This ensures that the fluid simulator will give the most accurate results for these types of meshes.
       Surface Emission
          Maximum distance in voxels from the surface of the mesh in which fluid is created (see :term:`voxel`).
          Since this setting uses voxels to determine distance,
          results will vary depending on the domain's resolution.
-
       Volume Emission
          Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is
          Note that emitting fluid based on volume may have unpredictable results
@@ -176,7 +178,7 @@ Texture
 Mapping
    Todo.
 Size
-   Todo.
+   Overall texture scale.
 Offset
    Todo.
 
