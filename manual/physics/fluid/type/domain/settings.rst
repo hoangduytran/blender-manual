@@ -1,5 +1,11 @@
+.. _bpy.types.FluidDomainSettings.domain_type:
 .. _bpy.types.FluidDomainSettings.resolution_max:
 .. _bpy.types.FluidDomainSettings.time_scale:
+.. _bpy.types.FluidDomainSettings.cfl_condition:
+.. _bpy.types.FluidDomainSettings.use_adaptive_timesteps:
+.. _bpy.types.FluidDomainSettings.timesteps_max:
+.. _bpy.types.FluidDomainSettings.timesteps_min:
+.. _bpy.types.FluidDomainSettings.gravity:
 
 ********
 Settings

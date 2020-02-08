@@ -1,3 +1,8 @@
+.. _bpy.ops.fluid.preset:
+.. _bpy.types.FluidDomainSettings.viscosity_base:
+.. _bpy.types.FluidDomainSettings.viscosity_exponent:
+.. _bpy.types.FluidDomainSettings.domain_size:
+.. _bpy.types.FluidDomainSettings.surface_tension:
 
 *********
 Diffusion

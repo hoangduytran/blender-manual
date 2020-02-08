@@ -1,4 +1,3 @@
-.. _bpy.types.FluidFlowSettings:
 
 ****
 Flow
@@ -12,15 +11,7 @@ in :menuselection:`Properties --> Physics`. Then select *Flow* as the fluid *Typ
 Now you should have a default fluid flow source object.
 
 
-.. _bpy.types.FluidFlowSettings.flow_type:
-.. _bpy.types.FluidFlowSettings.flow_behavior:
-.. _bpy.types.FluidFlowSettings.subframes:
-.. _bpy.types.FluidFlowSettings.smoke_color:
-.. _bpy.types.FluidFlowSettings.use_absolute:
-.. _bpy.types.FluidFlowSettings.temperature:
-.. _bpy.types.FluidFlowSettings.density:
-.. _bpy.types.FluidFlowSettings.fuel_amount:
-.. _bpy.types.FluidFlowSettings.density_vertex_group:
+.. _bpy.types.FluidFlowSettings:
 
 Settings
 ========

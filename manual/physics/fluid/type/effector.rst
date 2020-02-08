@@ -16,6 +16,8 @@ Then select *Effector* as the fluid *Type*
    :doc:`controlled </physics/fluid/type/domain/field_weights>` per domain object.
 
 
+.. _bpy.types.FluidEffectorSettings:
+
 Settings
 ========
 
