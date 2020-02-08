@@ -65,23 +65,23 @@ Data File Format
       - "shadow" (the shadows of the volume computed for viewport rendering)
       - "texture coordinates" (used for turbulence)
 
-      Compression
-         Method of data compression.
-
-         Zip
-            Efficient but slower compression method.
-         Blosc
-            Multi-threaded compression with about the same quality and size as ``Zip``.
-         None
-            Do not compress the data.
-
-      Data Depth
-         Bit depth for writing all scalar (including vectors), lower values reduce the file size of the cache.
-
-         Float (Half)
-            Half float (16 bit data). Gives less data with the benefit of smaller file sizes.
-         Float (Full)
-            Full float (32 bit data). Gives more data at the cost of larger file sizes.
+      .. Compression
+      ..    Method of data compression.
+      ..
+      ..    Zip
+      ..       Efficient but slower compression method.
+      ..    Blosc
+      ..       Multi-threaded compression with about the same quality and size as ``Zip``.
+      ..    None
+      ..       Do not compress the data.
+      ..
+      .. Data Depth
+      ..    Bit depth for writing all scalar (including vectors), lower values reduce the file size of the cache.
+      ..
+      ..    Float (Half)
+      ..       Half float (16 bit data). Gives less data with the benefit of smaller file sizes.
+      ..    Float (Full)
+      ..       Full float (32 bit data). Gives more data at the cost of larger file sizes.
 
 Particle File Format :guilabel:`Liquids Only`
    File format that the cache data is to be stored.
