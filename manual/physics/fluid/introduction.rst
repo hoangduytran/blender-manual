@@ -3,6 +3,20 @@
 Introduction
 ************
 
+Liquid Simulations
+==================
+
+Fluid physics are used to simulate physical properties of liquids especially water.
+While creating a scene in Blender, certain objects can be marked to participate in the fluid simulation.
+These can include but not limited to, being a fluid or as an obstacle.
+For a fluid simulation you have to have a domain to define the space that the simulation takes up.
+In the domain settings you will be able to define the global simulation parameters (such as viscosity and gravity).
+
+.. figure:: /images/physics_fluid_introduction_example.jpg
+
+   Example of a fluid simulation.
+
+
 Gas Simulations
 ===============
 

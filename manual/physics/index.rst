@@ -17,5 +17,3 @@
    forces/index.rst
    collision.rst
    baking.rst
-
-   smoke_fluid_old/index.rst
