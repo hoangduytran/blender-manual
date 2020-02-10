@@ -24,8 +24,7 @@ Properties
 ==========
 
 Image Data-Block
-   Image data-block used as the image source. Currently not all images supported by Blender can be used by Cycles.
-   In particular, generated, packed images or animations are not supported currently.
+   Image data-block used as the image source.
 Color Space
    Type of data that the image contains, either Color or Non-Color Data.
    For most color textures the default of Color should be used, but in case of e.g. a bump or alpha map,
