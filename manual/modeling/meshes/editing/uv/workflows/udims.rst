@@ -6,8 +6,8 @@ UDIMs
 Using UV maps can have one disadvantage, they consist of one texture for the entire mesh.
 Most of the time this is sufficient but the disadvantage is that the texture is one resolution for the entire mesh.
 This causes issues if you have a very large mesh with geometry of different importance.
-When using a singular texture, it might have not enough resolution to cover larger UV islands
-while being efficient for smaller, less important islands.
+When using a singular texture, the resolution might be too low to cover larger UV islands
+while being inefficient for smaller, less important islands.
 
 UDIM offers a solution to this by being able to spread UV islands across several different textures.
 UDIM which stands for U DIMension is based on a tile system
