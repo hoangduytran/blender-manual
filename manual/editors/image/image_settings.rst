@@ -109,6 +109,8 @@ Tiled
    This option creates the first ``1001`` tile; more tiles can be added later in the *UDIM Tiles* panel.
 
 
+.. _editors-image-image-settings-common:
+
 Common Options
 --------------
 
