@@ -643,6 +643,18 @@ All this is much more simple to illustrate with examples:
 Known Issues
 ============
 
+
+Dense Meshes
+------------
+
+Selecting dense meshes with X-Ray disabled, has a limitation where dense meshes may not have all the elements selected.
+
+When selecting regions with Box, Circle and Lasso select, vertices may overlap each other causing
+some vertices not to be selected.
+
+This is a limitation with the current selection method, you may workaround this by zooming in or enabling X-Ray.
+
+
 N-Gons in Face Select Mode
 --------------------------
 
