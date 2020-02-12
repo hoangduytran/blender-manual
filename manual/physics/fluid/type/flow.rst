@@ -153,7 +153,7 @@ Normal
    When using a *Geometry Flow Source*,
    this option controls how much velocity fluid is given along the source's :term:`normal`.
 Initial X, Y, Z
-   Todo.
+   Controls how much velocity is given in a particular axis.
 
 
 .. _bpy.types.FluidFlowSettings.use_texture:
@@ -173,13 +173,13 @@ When enabled, use the specified texture and settings to control where on
 the mesh smoke or fire can be emitted from. These settings have no effect on *Outflow Flow Behavior*.
 
 Texture
-   Todo.
+   A :ref:`ui-data-id` Selector to choose the :doc:`Texture </render/materials/legacy_textures/index>`.
 Mapping
-   Todo.
+   Controls whether to use :ref:`Generated UVs <properties-texture-space>`, or tradition UV mapping.
 Size
    Overall texture scale.
 Offset
-   Todo.
+   Translates the texture along the z-axis.
 
 .. figure:: /images/physics_smoke_types_flow-object_texture-usecase.jpg
    :align: center
