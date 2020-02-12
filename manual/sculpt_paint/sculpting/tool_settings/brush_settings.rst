@@ -90,7 +90,9 @@ Sculpt Plane
 Original Normal
    When locked it keeps using the normal of the surface where stroke was initiated,
    instead of the surface normal currently under the cursor.
-
+Original Plane
+   When locked keep using the plane origin of surface where stroke was initiated,
+   instead of the surface plane currently under the cursor.
 Accumulate
    Causes stroke dabs to accumulate on top of each other.
 Front Faces Only
