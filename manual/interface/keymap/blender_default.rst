@@ -166,20 +166,24 @@ Pie Menu on Drag
    :kbd:`AccentGrave`
       :tap: First person :ref:`Fly/walk mode <3dview-fly-walk>`.
       :drag: View axis pie menu.
-
-Tilde Action
-
-   Navigate
-      Navigation pie menu.
-
-      *Use this on systems without a numeric keypad.*
-   Gizmos
-      Transform gizmos pie menu.
-
-      *Use this for quickly switching between transform gizmos.*
-
 Extra Shading Pie Menu Items
    Show additional items in the shading menu (:kbd:`Z` key).
+
+Tilde Action
+   Navigate
+      Navigation pie menu, useful on systems without a numeric keypad.
+   Gizmos
+      Transform gizmos pie menu, useful for quickly switching between transform gizmos.
+Middle Mouse Action
+   Orbit
+      Rotates the view around a pivot point, :kbd:`Shift-MMB` is used for panning the view.
+   Pan
+      Shifts the view towards the mouse, :kbd:`Shift-MMB` is used for orbiting the view.
+Alt Middle Mouse Drag Action
+   Relative
+      Set the view axis where each mouse direction maps to an axis relative to the current orientation.
+   Absolute
+      Set the view axis where each mouse direction always maps to the same axis.
 
 
 Platform Specific Keys
