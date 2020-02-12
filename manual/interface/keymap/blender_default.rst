@@ -106,11 +106,28 @@ These keys are shared across editors such as the 3D Viewport, UV and Graph edito
      - Walk/Fly Mode.
 
 
+Platform Specific Keys
+======================
+
+macOS
+-----
+
+The :kbd:`Cmd` key can be used instead of :kbd:`Ctrl` on macOS
+for all but a few exceptions which conflict with the operating system.
+
+List of additional macOS specific keys:
+
+.. list-table::
+  :widths: 10 90
+
+  * - :kbd:`Cmd-Comma`
+    - Preferences.
+
+
 .. _keymap-blender_default-prefs:
 
 Preferences
 ===========
-
 
 .. _keymap-blender_default-prefs-select_with:
 
@@ -184,21 +201,3 @@ Alt Middle Mouse Drag Action
       Set the view axis where each mouse direction maps to an axis relative to the current orientation.
    Absolute
       Set the view axis where each mouse direction always maps to the same axis.
-
-
-Platform Specific Keys
-======================
-
-macOS
------
-
-The :kbd:`Cmd` key can be used instead of :kbd:`Ctrl` on macOS
-for all but a few exceptions which conflict with the operating system.
-
-List of additional macOS specific keys:
-
-.. list-table::
-   :widths: 10 90
-
-   * - :kbd:`Cmd-Comma`
-     - Preferences.
