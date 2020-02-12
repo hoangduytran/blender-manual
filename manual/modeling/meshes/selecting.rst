@@ -643,11 +643,11 @@ All this is much more simple to illustrate with examples:
 Known Issues
 ============
 
-
 Dense Meshes
 ------------
 
-Selecting dense meshes with X-Ray disabled, has a limitation where dense meshes may not have all the elements selected.
+Selecting dense meshes with X-Ray disabled, has a limitation where dense meshes may not have
+all the elements selected.
 
 When selecting regions with Box, Circle and Lasso select, vertices may overlap each other causing
 some vertices not to be selected.
@@ -662,7 +662,7 @@ N-Gons in Face Select Mode
 
    N-gon face having its center dot inside another face.
 
-As already noted, in X-Ray and wire-frame mode faces are marked with a dot in the middle.
+As already noted, in X-Ray and Wireframe mode faces are marked with a dot in the middle.
 With n-gons that can lead in certain cases to a confusing display.
 The example shows the center dot of the U-shaped n-gon being inside of the oblong face inside the "U".
 It is not easy to say which dot belongs to which face (the orange dot in the image is the object origin).

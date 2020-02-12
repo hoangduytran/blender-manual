@@ -147,7 +147,7 @@ Compress File
    .. note::
 
       While compression is useful for distributing files online
-      and saving disk space for large projects it has drawbacks too.
+      and saving drive space for large projects it has drawbacks too.
 
       This option may slow down Blender when you quit,
       or under normal operation when Blender is saving your backup files.

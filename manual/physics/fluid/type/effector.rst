@@ -3,15 +3,15 @@
 Effector
 ********
 
-Effector objects are used to deflect fluids and influence the of fluid flow.
+Effector objects are used to deflect fluids and influence of the fluid flow.
 To define any mesh object as an effector object,
-add fluid physics by clicking *Fluid* in :menuselection:`Properties --> Physics`.
-Then select *Effector* as the fluid *Type*
+add fluid physics by clicking *Fluid* in the :menuselection:`Properties --> Physics` tab.
+Then select *Effector* as the fluid *Type*.
 
 .. tip::
 
    :doc:`Force Fields </physics/forces/force_fields/index>`
-   (such as wind or vortex) are supported, like most physics systems.
+   (such as wind or vortex) are supported, like in most physics systems.
    The influence individual force types have can be
    :doc:`controlled </physics/fluid/type/domain/field_weights>` per domain object.
 
@@ -50,8 +50,7 @@ Effector Type
             Todo.
 
 Is Planar
-   Tells the fluid solver that the effector object is either
-   a single dimension i.e. a plane or the mesh is :term:`non-manifold`.
-   This ensures that the fluid simulator will give the most accurate results for these types of meshes. 
+   Defines the effector as either a single dimension object i.e. a plane or the mesh is :term:`non-manifold`.
+   This ensures that the fluid simulator will give the most accurate results for these types of meshes.
 Surface Thickness
    Todo.

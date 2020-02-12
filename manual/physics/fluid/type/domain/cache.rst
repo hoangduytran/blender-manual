@@ -40,7 +40,7 @@ End
    .. note::
 
       The simulation is only calculated for positive frames
-      in between the *Start* and *End* frames of the *Cache* panel, whether you bake or not.
+      between the *Start* and *End* frames of the *Cache* panel, whether you bake or not.
       So if you want a simulation that is longer than the default frame range you have to change the *End* frame.
 
 Data File Format
@@ -93,7 +93,7 @@ Bake All, Free All
    except the progress will be displayed in the status bar.
    Pressing :kbd:`Esc` or the "X" button next to the status bar will abort the simulation.
 
-   Once the similation has been baked, the cache can be deleted by pressing *Free All*.
+   Once the simulation has been baked, the cache can be deleted by pressing *Free All*.
 
 
 .. _bpy.types.FluidDomainSettings.export_manta_script:

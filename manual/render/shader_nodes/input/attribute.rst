@@ -34,11 +34,12 @@ Name
       Gives the color of the smoke inside the :doc:`Fluid Domain </physics/fluid/type/domain/index>`.
       The color and vector outputs are the same. The Factor output is an average of the channels.
    Temperature
-      Gives a scalar defining the temperature of the volume. Values in the range 0..1 map to 0..1000 kelvin.
+      Gives a scalar defining the temperature of the volume. Values in the range 0 - 1 map to 0 - 1000 kelvin.
       This may be used to render physically-based fire with the Blackbody or Principled Volume shaders.
       All three outputs are the same.
    Flame
-      Gives a scalar defining the density of any fire inside the :doc:`Fluid Domain </physics/fluid/type/domain/index>`.
+      Gives a scalar defining the density of any fire inside
+      the :doc:`Fluid Domain </physics/fluid/type/domain/index>`.
       All three outputs are the same.
    Ocean Foam
       Gives a scalar defining where foam might appear when using

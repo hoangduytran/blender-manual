@@ -21,11 +21,10 @@ Viscosity Presets
    at a certain speed.
 
    For manual entry, please note that the normal real-world viscosity (the so-called dynamic viscosity)
-   is measured in Pascal-seconds (Pa.s), or in Poise units (P, equal to 0.1 Pa.s, pronounced *pwaz*,
-   from the Frenchman Jean-Louis Poiseuille, who discovered the laws on "the laminar flow of viscous fluids"),
-   and commonly centiPoise units (cP, equal to 0.001 Pa.s, *sentipwaz*).
+   is measured in Pascal-seconds (Pa.s), or in Poise units (P, equal to 0.1 Pa.s),
+   and commonly centiPoise units (cP, equal to 0.001 Pa.s).
    Blender, on the other hand, uses the kinematic viscosity
-   (which is dynamic viscosity in Pa.s, divided by the density in kg.m\ :sup:`-3`, unit m\ :sup:`2`.s\ :sup:`-1`).
+   which is dynamic viscosity in Pa.s, divided by the density in kg.m\ :sup:`-3`, unit m\ :sup:`2`.s\ :sup:`-1`.
    The table below gives some examples of fluids together with their dynamic and kinematic viscosities.
 
    .. list-table::
@@ -80,4 +79,5 @@ Real World Size
    If you want to create a mug of coffee, this might be 10 cm (0.1 meters), while a swimming pool might be 10m.
    The size set here defines the longest side of the domain bounding box.
 
-Surface Tension Todo.
+Surface Tension
+   Todo.

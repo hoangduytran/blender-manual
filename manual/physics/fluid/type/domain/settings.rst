@@ -20,13 +20,14 @@ Settings
 The domain object contains the entire simulation. Fluid simulations cannot leave the domain,
 it will either collide with the edge or disappear, depending on the domain's settings.
 
-Keep in mind that large domains require higher resolutions and longer bake times.
+Keep in mind that large domains need higher resolutions and longer bake times.
 You will want to make it just large enough that the simulation will fit inside it,
 but not so large that it takes too long to compute the simulation.
 
-To create a domain, add a cube and transform it until it encloses the area where you want fluid.
-Translation, rotation, and scaling are all allowed. To turn it into a fluid domain, click *Fluid*
-in :menuselection:`Properties --> Physics`, then select *Domain* as the fluid *Type*.
+To create a domain, add a cube and transform it until it encloses the area where you want
+the simulation to take place. Translation, rotation, and scaling are all allowed.
+To turn it into a fluid domain, click *Fluid* in the :menuselection:`Properties --> Physics` tab,
+then select *Domain* as the fluid *Type*.
 
 .. note::
 
@@ -36,12 +37,12 @@ in :menuselection:`Properties --> Physics`, then select *Domain* as the fluid *T
 
 Domain Type
    A fluid domain can control either liquid or gas flows. Liquid domains take all liquid flow
-   objects that intersect with the domain into consideration. Gas domains look for all
-   intersecting *Smoke*, *Fire*, and *Smoke + Fire* flow objects. It is not possible to change 
+   objects that intersect with the domain into consideration. Gas domains consider all
+   intersecting *Smoke*, *Fire*, and *Smoke + Fire* flow objects. It is not possible to change
    the domain type dynamically.
 
 Resolution Divisions
-   The fluid domain is subdivided into many "cells" called voxels (see :term:`voxel`)
+   The fluid domain is subdivided into many "cells" called :term:`voxels <voxel>`
    which make up "pixels" of fluid. This setting controls the number of subdivisions in the domain.
    Higher numbers of subdivisions are one way of creating higher resolution fluids.
 
@@ -57,30 +58,30 @@ Time Scale
 
 CFL Number
    Determines the maximum velocity per grid cell and is measured in grid cells per time step.
-   Fluid is only allowed to move up to this velocity in one time step. If this value is
+   Fluid is only allowed to move up to this velocity in one time step. If this threshold is
    exceeded the solver will subdivide the simulation step.
 
-   In general, greater CFL numbers will minimize the number of simulation steps and the 
-   computation time. However, it will yield less physical behavior for fast fluid flows.
-   Smaller CFL numbers result in more simulation steps per frame, longer simulation times 
+   In general, greater CFL (Courant–Friedrichs–Lewy) numbers will minimize the number of simulation steps
+   and the computation time. Yet it will yield less physically accurate behavior for fast fluid flows.
+   Smaller CFL numbers result in more simulation steps per frame, longer simulation times
    but more accurate behavior at high velocities (e.g. fast fluid flow colliding
    with obstacle).
 
 Use Adaptive Time Steps
    Lets the solver automatically decide when to perform multiple simulation steps per frame.
-   It takes into account the maximum and minimum number of timesteps, the current 
-   *Frame Rate*, and the *Time Scale*.
+   It takes into account the maximum and minimum number of time steps,
+   the current *Frame Rate*, and the *Time Scale*.
 
-Timesteps Maximum
-   Maximum number of allowed time steps per frame. If needed, the solver will divide a simulation
-   steps in up to this number of substeps.
+   Timesteps Maximum
+      Maximum number of allowed time steps per frame. If needed, the solver will divide
+      a simulation step up to this number of substeps.
 
-Timesteps Minimum
-   Minimum number of allowed time steps per frame. The solver will always perform at least this
-   number of simulation steps per frame.
+   Timesteps Minimum
+      Minimum number of allowed time steps per frame. The solver will always perform at least
+      this number of simulation steps per frame.
 
 Gravity
-   By default the fluid solver will use the global scene gravity. This behavior can be disabled 
+   By default the fluid solver will use the global scene gravity. This behavior can be disabled
    in the scene settings. Disabling the global gravity will enable the fluid gravity options.
 
 
@@ -100,7 +101,7 @@ Border Collisions
    :Panel:     :menuselection:`Physics --> Fluid --> Settings --> Border Collisions`
    :Type:      Domain (Gas)
 
-Controls which sides of the domain will allow fluid "through" the domain,
+Controls which sides of the domain will allow fluid to "pass through" the domain,
 making it disappear without influencing the rest of the simulation,
 and which sides will deflect fluids.
 
@@ -134,8 +135,8 @@ Buoyancy Heat
    - Values above 0 will result in the smoke rising when the flow object *Initial Temperature* is
      set to a positive value, and smoke sinking when the flow object *Initial Temperature* is
      set to a negative value.
-   - Values below 0 will result in the opposite of positive values, i.e.
-     smoke emitted from flow objects with a positive *Initial Temperature* will sink,
+   - Values below 0 will result in the opposite of positive values,
+     i.e. smoke emitted from flow objects with a positive *Initial Temperature* will sink,
      and smoke from flow objects with a negative *Initial Temperature* will rise.
 
    Note that smoke from multiple flow objects with different temperatures
@@ -189,7 +190,7 @@ Reaction Speed
 Flame Smoke
    Amount of extra smoke created automatically to simulate burnt fuel.
 Vorticity
-   Additional vorticity for flames.
+   Extra vorticity for flames.
 Temperature Maximum
    Maximum temperature of flames. Larger values result in faster rising flames.
 Minimum
@@ -218,10 +219,10 @@ Liquid
    :Type:      Domain
    :Panel:     :menuselection:`Physics --> Fluid --> Settings --> Liquid`
 
-Liquid settings control the behavior of the particles which the simulation consists of. Enabling the
-liquid checkbox will automatically create a particle system for the simulation. This particle system
-visualizes the flow of the simulation. Visualizing the liquid particles is optional. The fluid
-simulation will make use of all the fields without an attached particle system too.
+Liquid settings control the behavior of the particles which the simulation consists of.
+Enabling the liquid checkbox will automatically create a particle system for the simulation.
+This particle system visualizes the flow of the simulation. Visualizing the liquid particles is optional.
+The fluid simulation will make use of all the fields without an attached particle system too.
 
 .. note::
 
@@ -231,26 +232,26 @@ Simulation Method
    Determines the particle simulation method. Currently, FLIP is the only option to choose from.
 
 FLIP Ratio
-   How much FLIP velocity to use when updating liquid particle velocities. A value of 1.0 will result
-   in a completely FLIP based simulation. Completely FLIP based simulations produce more chaotic
-   splashes and are preferable when simulating greater quantities of liquid. When using smaller values
-   the behavior will be less turbulent and splashes are more subtle. This is optimal when simulating
-   scenes where the liquid is supposed to be on a small scale.
+   How much FLIP velocity to use when updating liquid particle velocities. A value of 1.0
+   will result in a completely FLIP based simulation. Completely FLIP based simulations
+   produce more chaotic splashes and are preferable when simulating greater quantities of liquid.
+   When using smaller values the behavior will be less turbulent and splashes are more subtle.
+   This is optimal when simulating scenes where the liquid is supposed to be on a small scale.
 
 Particle Radius
    The radius of one liquid particle in grid cells units. This value describes how much area is covered
-   by a particle and thus determines how much area around it can be considered as liquid. A greater
-   radius will let particles cover more area. This will result in more grids cell being tagged as liquid
-   instead of just being empty.
+   by a particle and thus determines how much area around it can be considered as liquid.
+   A greater radius will let particles cover more area. This will result in more grids cell being tagged
+   as liquid instead of just being empty.
 
-   Whenever the simulation appears to leak or gain volume in an undesired, unphysical way it is a good
-   idea to adjust this value. That is, when liquid seems to disappear this value needs to be increased.
-   The inverse applies when too much liquid is being produced. 
+   Whenever the simulation appears to leak or gain volume in an undesired, non physically accurate way it is
+   a good idea to adjust this value. That is, when liquid seems to disappear this value needs to be increased.
+   The inverse applies when too much liquid is being produced.
 
 Particles Maximum
    The maximum number of liquid particles per grid cell. During a simulation the number of liquid
-   particles in a cell can fluctuate: Particles can flow into other cells or can get deleted if they
-   move outside the narrow band. Resampling will add new particles considering this maximum.
+   particles in a cell can fluctuate: Particles can flow into other cells or can get deleted
+   if they move outside the narrow band. Resampling will add new particles considering this maximum.
 
    This value sets the upper threshold of particles per cell. It is also a good way to estimate how
    many particles there can be in your simulation (one needs to take grid resolution into account too).
@@ -258,41 +259,36 @@ Particles Maximum
 
 Particles Minimum
    The minimum number of liquid particles per grid cell. Similarly to the maximum particle threshold,
-   this value ensures that there are at least a certain amount of particles per cell. 
+   this value ensures that there are at least a certain amount of particles per cell.
 
 Particle Sampling
-   Factor that is used when sampling particles. A higher value will sample more particles. Note that
-   particle resampling occurs at every simulation step.
+   Factor that is used when sampling particles. A higher value will sample more particles.
+   Note that particle resampling occurs at every simulation step.
 
 Narrow Band Width
-   Controls the width in grid cell units of the narrow band that liquid particles are allowed to flow
-   in. A high value will result in a thicker band and can result in an inflow region completely filled
+   Controls the width in grid cell units of the narrow band that liquid particles are allowed to flow in.
+   A high value will result in a thicker band and can result in an inflow region completely filled
    with particles. Unless the goal of the simulation is to visualize the liquid particles it is
    recommended to not increase the band width significantly as more particles slow down the simulation.
 
    In some situations increasing this value can help create volume when the simulation appears to leak.
    In all other cases it is best to keep the narrow band as thin as possible since the liquid surface
-   contains most details and simulating particles inside the liquid is not an optimal use of computing
-   resources.
+   contains most details and simulating particles inside the liquid is not an optimal use of computing resources.
 
 Particle Randomness
-   New particles are sampled with some randomness attached to their position. This field controls this
-   randomness. Higher values will sample the liquid particles more randomly in inflow regions. With a
-   value of 0.0 all new particles will be sampled uniformly inside their corresponding grid cells.
+   New particles are sampled with some randomness attached to their position. This field
+   controls this randomness. Higher values will sample the liquid particles more randomly in
+   inflow regions. With a value of 0.0 all new particles will be sampled uniformly inside
+   their corresponding grid cells.
 
-   When trying to create laminar inflows (little randomness) or more turbulent flows (greater
-   randomness) this value can be useful.
+   When trying to create laminar inflows (little randomness) or more turbulent flows
+   (greater randomness) this value can be useful.
 
 Fractional Obstacles
-   Enables finer resolution in fluid / obstacle regions (second order obstacles). This option reduces
-   the "stepping effect" that results when an obstacles lies inclined inside the domain. It also makes
-   liquid flow more smoothely over an obstacle.
+   Enables finer resolution in fluid / obstacle regions (second order obstacles).
+   This option reduces the "stepping effect" that results when an obstacles lies inclined inside the domain.
+   It also makes liquid flow more smoothly over an obstacle.
 
 Obstacle-Fluid Threshold
-   Value to control the smootheness of the fractional obstacle option. Smaller value reduce the
-   "stepping effect" but may result particles sticking to the obstacle.
-
-
-
-
-
+   Value to control the smoothness of the fractional obstacle option. Smaller value reduce
+   the "stepping effect" but may result particles sticking to the obstacle.

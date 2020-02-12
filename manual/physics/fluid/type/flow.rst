@@ -7,7 +7,7 @@ Fluid *Flow* types are used to add or remove fluid to a domain object.
 Flow objects should be contained within the domain's :term:`bounding box` in order to work.
 
 To define any mesh object as a *Flow* object, add Fluid physics by clicking *Fluid*
-in :menuselection:`Properties --> Physics`. Then select *Flow* as the fluid *Type*.
+in the :menuselection:`Properties --> Physics` tab. Then select *Flow* as the fluid *Type*.
 Now you should have a default fluid flow source object.
 
 
@@ -37,20 +37,20 @@ Flow Behavior
    or turn the mesh itself into fluid (*Geometry*).
 
    Inflow
-      This object will put fluid into the simulation, like a water tap or base of a fire.
+      This object will emit fluid into the simulation, like a water tap or base of a fire.
 
       Use Inflow
          Enables or disables the flow of fluid, this property is useful for animations
          to selectively enable and disable when fluid is being added to the domain.
    Outflow
-      Any fluid that enters the :term:`bounding box` of this object will be removed from the domain
-      (think of a drain or a black hole). This can be useful in combination with an inflow to prevent
-      the whole domain from filling up. Outflow objects can be animated and the area where the fluid
-      disappears will follow the object as it moves around.
+      Any fluid that enters the :term:`bounding box` of this object will be removed from
+      the domain (think of a drain or a black hole). This can be useful in combination with
+      an inflow to prevent the whole domain from filling up. Outflow objects can be animated
+      and the area where the fluid disappears will follow the object as it moves around.
    Geometry
       All regions of this object that are inside the domain bounding box will be used as
       actual fluid in the simulation. You can place more than one fluid object inside the domain.
-      Also make sure the surface normals are pointing outwards or else they will not simulate properly.
+      Also make sure that the surface normals are pointing outwards or else they will not simulate properly.
       In contrast to domain objects, the actual mesh geometry is used for fluid objects.
 
 Sampling Substeps
@@ -62,7 +62,7 @@ Sampling Substeps
       The object on the left uses 0 subframes, while the one on the right uses 6.
 
 Smoke Color
-   Color of emitted smoke. When smoke of different colors are mixed they will blend together,
+   The color of emitted smoke. When smoke of different colors are mixed they will blend together,
    eventually settling into a new combined color.
 
    .. figure:: /images/physics_smoke_types_flow-object_color-blending.jpg
@@ -110,23 +110,22 @@ Flow Source
    This setting defines the method used to emit fluid.
 
    Mesh
-      Create smoke/fire directly from the object's mesh.
+      Emit smoke/fire directly from the object's mesh.
 
       Is Planar
-         Tells the fluid solver that the flow object is either
-         a single dimension i.e. a plane or the mesh is :term:`non-manifold`.
+         Defines the effector as either a single dimension object i.e. a plane or the mesh is :term:`non-manifold`.
          This ensures that the fluid simulator will give the most accurate results for these types of meshes.
       Surface Emission
-         Maximum distance in voxels from the surface of the mesh in which fluid is created (see :term:`voxel`).
-         Since this setting uses voxels to determine distance,
+         Maximum distance in :term:`voxels <voxel>` from the surface of the mesh in which fluid is emitted.
+         Since this setting uses voxels to determine the distance,
          results will vary depending on the domain's resolution.
       Volume Emission
-         Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is
+         Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is the full amount.
          Note that emitting fluid based on volume may have unpredictable results
          if your mesh is :term:`non-manifold`.
 
    Particle System :guilabel:`Fire or Smoke Only`:
-      Create smoke/fire from a particle system on the flow object.
+      Emit smoke/fire from a particle system on the flow object.
       Note that only *Emitter* type particle systems can add smoke.
       See :doc:`Particles </physics/particles/introduction>` for information on how to create a particle system.
 
@@ -146,10 +145,10 @@ Flow Source
 Initial Velocity
 ----------------
 
-When enabled, fluid will inherit the momentum of the flow source.
+When enabled, the fluid will inherit the momentum of the flow source.
 
 Source
-   Multiplier for inherited velocity. A value of 1 will emit fluid moving at the same speed as the source.
+   Factor for the inherited velocity. A value of 1 will emit fluid moving at the same speed as the source.
 Normal
    When using a *Geometry Flow Source*,
    this option controls how much velocity fluid is given along the source's :term:`normal`.

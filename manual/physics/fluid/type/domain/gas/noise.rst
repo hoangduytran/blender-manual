@@ -11,20 +11,20 @@ Noise
    :Panel:     :menuselection:`Physics --> Smoke --> High Resolution`
 
 Adding noise to the gas simulation creates a finer detailed looking simulation
-while using a relatively low *Resolution Divisions*.
-This allows animators to set up a low resolution simulation quickly
-and later add details without changing the overall fluid motion.
+while using a relatively low *Resolution Divisions*. This allows animators to quickly set up
+a low resolution simulation and later add details without changing the overall fluid motion.
 
 .. note::
 
-   Fluid noise is an implementation of `Turbulence for Fluid Simulation
+   Fluid noise is an implementation of
+   `Turbulence for Fluid Simulation
    <https://web.archive.org/web/20140911163550/https://graphics.ethz.ch/research/physics_animation_fabrication/simulation/turb.php>`__.
 
 
 Upres Factor
    Factor by which to enhance the resolution of the noise.
 Strength
-   Strength of noise.
+   Strength of the noise.
 
    .. figure:: /images/physics_smoke_types_domain_high-resolution-strength.jpg
       :width: 400px
@@ -41,7 +41,7 @@ Smoke Noise vs. High Resolution Divisions
 =========================================
 
 *Upres Factor* and *Resolution Divisions* are not equivalent.
-By using different combinations of these resolution settings, you can obtain a variety of different styles of smoke.
+By using different combinations of these resolution settings, you can get a variety of different styles of smoke.
 
 .. figure:: /images/physics_smoke_types_domain_high-resolution-comparison.jpg
    :align: center
@@ -49,9 +49,9 @@ By using different combinations of these resolution settings, you can obtain a v
    Comparison between a domain with 24 *Resolution Divisions* and 4 *Upres Factor* (left),
    and a domain with 100 *Resolution Divisions* and 1 *Upres Factor* division (right).
 
-Low division simulations with lots of *Upres Factor*
-divisions generally appear smaller in real-world scale, with many smaller details.
-(larger flames, etc.) and can be used to achieve pyroclastic plumes such as this:
+Low division simulations with lots of *Upres Factor* divisions generally appear
+smaller in real-world scale, with many smaller details (larger flames, etc.).
+They can be used to create pyroclastic plumes such as in the following image:
 
 .. figure:: /images/physics_smoke_types_domain_note-on-resolution.jpg
    :align: center

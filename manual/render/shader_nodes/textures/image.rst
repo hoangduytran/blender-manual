@@ -23,9 +23,9 @@ Vector
 Properties
 ==========
 
-Image Data-Block
+Image
    Image data-block used as the image source.
-   Additional settings can be found in :menuselection:`Sidebar --> Item --> Properties`:
+   More settings can be found in :menuselection:`Sidebar --> Item --> Properties`:
    These include options to control the alpha channel along with addition options for the color space.
    These addition options are documented with the rest of
    :ref:`Common Image Settings <editors-image-image-settings-common>`.
