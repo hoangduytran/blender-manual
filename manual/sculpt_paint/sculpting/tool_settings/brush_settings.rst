@@ -75,6 +75,8 @@ Plane Trim
 Advanced
 ========
 
+Topology Automasking
+   Affects only vertices connected to the active vertex under the brush.
 Sculpt Plane
    Use this menu to set the plane in which the sculpting takes place.
    In other words, the primary direction that the vertices will move.
