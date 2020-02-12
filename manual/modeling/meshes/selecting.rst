@@ -662,9 +662,7 @@ N-Gons in Face Select Mode
 
    N-gon face having its center dot inside another face.
 
-As already known, faces are marked with a little square dot in the middle of the face.
+As already noted, in X-Ray and wire-frame mode faces are marked with a dot in the middle.
 With n-gons that can lead in certain cases to a confusing display.
 The example shows the center dot of the U-shaped n-gon being inside of the oblong face inside the "U".
 It is not easy to say which dot belongs to which face (the orange dot in the image is the object origin).
-Luckily, you do not need to care much, because to select a face, you do not have to click the center dot,
-but the face itself.
