@@ -15,7 +15,7 @@ Mesh Options
 .. _bpy.types.Mesh.use_mirror_z:
 
 Mirror
-========
+======
 
 The *Mirror* option of the *Mesh Options* panel allows you to transform vertices symmetrically
 according to the chosen axis. When you transform an element (vertex, edge or face),
