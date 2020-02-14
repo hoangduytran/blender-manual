@@ -77,8 +77,8 @@ Changing Tools
 Pressing :kbd:`Alt` opens a tool prompt, shown in the :doc:`Status Bar </interface/window_system/status_bar>`,
 for changing the active tool, pressing :kbd:`Alt` again closes the prompt.
 
-Tools can be changed by pressing the appropriate icon or by pressing
-:kbd:`Alt` then pressing the hotkey assigned to the desired tool.
+Tools can be changed by pressing the appropriate icon or by pressing :kbd:`Alt`
+then pressing the hotkey assigned to the desired tool.
 
 
 Fallback Tool

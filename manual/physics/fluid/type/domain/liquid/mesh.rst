@@ -15,7 +15,7 @@ Mesh
 Todo.
 
 Use Speed Vectors
-   If this checkbox is enabled, speed vectors are generated and stored on drive,
+   If this checkbox is enabled, speed vectors are generated and stored on drive.
    They can be used to compute image-based motion blur with the compositing nodes.
 
 Bake Mesh, Free Mesh

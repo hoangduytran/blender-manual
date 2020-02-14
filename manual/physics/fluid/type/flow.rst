@@ -173,13 +173,13 @@ When enabled, use the specified texture and settings to control where on
 the mesh smoke or fire can be emitted from. These settings have no effect on *Outflow Flow Behavior*.
 
 Texture
-   A :ref:`ui-data-id` Selector to choose the :doc:`Texture </render/materials/legacy_textures/index>`.
+   A :ref:`ui-data-id` selector to choose the :doc:`Texture </render/materials/legacy_textures/index>`.
 Mapping
-   Controls whether to use :ref:`Generated UVs <properties-texture-space>`, or tradition UV mapping.
+   Controls whether to use :ref:`Generated UVs <properties-texture-space>` or manual UV mapping.
 Size
    Overall texture scale.
 Offset
-   Translates the texture along the z-axis.
+   Translates the texture along the Z axis.
 
 .. figure:: /images/physics_smoke_types_flow-object_texture-usecase.jpg
    :align: center

@@ -25,8 +25,8 @@ Grease Pencil draw tools:
 :ref:`Cutter <tool-grease-pencil-draw-cutter>`
    Cut strokes in between others.
 
-:ref:`Eyedropper <tool-grease-pencil-draw-eyedropper>`
-   Eyedropper to create new materials based off existing colors.
+:ref:`Eyedropper <ui-eyedropper>`
+   Eyedropper to create new materials based of colors in the interface.
 
 :ref:`Line <tool-grease-pencil-draw-line>`
    Draw straight lines.

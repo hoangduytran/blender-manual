@@ -118,10 +118,10 @@ for all but a few exceptions which conflict with the operating system.
 List of additional macOS specific keys:
 
 .. list-table::
-  :widths: 10 90
+   :widths: 10 90
 
-  * - :kbd:`Cmd-Comma`
-    - Preferences.
+   * - :kbd:`Cmd-Comma`
+     - Preferences.
 
 
 .. _keymap-blender_default-prefs:

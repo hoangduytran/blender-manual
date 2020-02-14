@@ -70,7 +70,7 @@ Normals
 UV
    Mapped UV coordinates, used to represent where on a mesh a texture gets mapped too.
    This is represented through the red and green channels of the image,
-   the blue channel is encoded with a value of 1 but does not mean anything.
+   the blue channel is encoded with a constant value of 1 but does not hold any information.
 Emit
    Bakes Emission, or the Glow color of a material.
 Environment

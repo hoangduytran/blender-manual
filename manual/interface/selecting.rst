@@ -22,10 +22,9 @@ Tweak
 
    :Hotkey:    :kbd:`LMB`
 
-Clicking on an item selects it,
-using modifier keys you can perform other operations.
-Holding the selection and moving the mouse on interactive items such has objects in the
-3D Viewport or Keyframes in an animation editor will general move the item with the mouse.
+Clicking on an item selects it, using modifier keys you can perform other operations.
+Holding the selection and moving the mouse on interactive items such has objects in the 3D Viewport
+or keyframes in an animation editor will general move the item with the mouse.
 
 
 .. _tool-select-box:
