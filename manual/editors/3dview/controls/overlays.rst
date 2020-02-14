@@ -293,6 +293,9 @@ Fade 3D Objects
 Fade Layers
    Decrease the opacity of all the layers in the object other than the active one.
    The opacity factor can be controlled with the slider.
+
+   Fade Grease Pencil Objects
+      Fades all Grease Pencil Objects, except the active object.
 Edit Lines
    Show edit lines when editing strokes.
 Show Edit Lines only in multiframe
