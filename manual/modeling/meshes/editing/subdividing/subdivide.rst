@@ -37,7 +37,7 @@ This process follows a few rules, depending on the settings:
     Then, the "middle" edge is subdivided, affecting its new "sub-quad" as described above for only one edge.
 - When a face of a :term:`quad` is selected, the face is subdivided into four smaller quads.
 - When a face of an :term:`n-gon` is selected,
-  the individual edges will be subdivided and they will stay the same.
+  the individual edges will be subdivided and the face will remain unsubdivided.
 
 
 
