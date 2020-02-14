@@ -225,26 +225,26 @@ Version/Revision Milestones
    Cycles gets volume and SSS support on the GPU, pie menus are added and tooltips greatly improved,
    the Intersection modeling tool is added, new Sun Beam node for the Compositor, Freestyle now works with
    Cycles, texture painting workflow is improved, and more than 220 bug fixes.
-`2.73 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.73>`__ -- January 2015:
+`2.73 <https://www.blender.org/download/releases/2-73/>`__ -- January 2015:
    Cycles gets improved volumetric support, major upgrade to Grease Pencil,
    Windows gets Input Method Editors (IMEs)
    and general improvements to painting, Freestyle, Sequencer and add-ons.
-`2.74 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.74>`__ -- March 2015:
+`2.74 <https://www.blender.org/download/releases/2-74/>`__ -- March 2015:
    Support for custom normals, viewport compositing and improvements to hair dynamics.
-`2.75 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.75>`__ -- July 2015:
+`2.75 <https://www.blender.org/download/releases/2-75/>`__ -- July 2015:
    Integrated stereo/multi-view pipeline, Corrective Smooth modifier and new developmental dependency graph.
-`2.76 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.76>`__ -- November 2015:
+`2.76 <https://www.blender.org/download/releases/2-76/>`__ -- November 2015:
    Pixar OpenSubdiv support, Viewport and File Browser performance boost,
    node auto-offset, and a text effect strip for the Sequencer.
-`2.77 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.77>`__ -- March 2016:
+`2.77 <https://www.blender.org/download/releases/2-77/>`__ -- March 2016:
    OpenVDB support for caching of smoke/volumetric simulations, improved Cycles subsurface scattering,
    Grease Pencil stroke sculpting and improved workflow,
    and reworked library handling to manage missing and deleted data-blocks.
-`2.78 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.78>`__ -- September 2016:
+`2.78 <https://www.blender.org/download/releases/2-78/>`__ -- September 2016:
    Cycles support for spherical stereo images for VR,
    Grease Pencil works more similar to other 2D drawing softwares,
    Alembic import and export support, and improvements to Bendy Bones for easier and simpler rigging.
-`2.79 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.79>`__ -- September 2017:
+`2.79 <https://www.blender.org/download/releases/2-79/>`__ -- September 2017:
    New Cycles features: Denoising, Shadow catcher, and new Principled shader.
    Other improvements were made to Grease Pencil and Alembic. Support was also added for application templates.
 
