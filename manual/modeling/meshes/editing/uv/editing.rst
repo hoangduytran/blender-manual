@@ -350,7 +350,7 @@ Export UV Layout
    :Mode:      View mode
    :Menu:      :menuselection:`UVs --> Export UV Layout`
 
-This is an :doc:`add-on </addons/import_export/io_mesh_uv_layout>` activated by default.
+This is an :doc:`add-on </addons/import_export/mesh_uv_layout>` activated by default.
 
 
 3D View
