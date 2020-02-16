@@ -1,9 +1,9 @@
 
-***********
-Blend Files
-***********
+*****************
+Opening & Saving 
+*****************
 
-Saving and opening blend-file are usually done using the :doc:`File Browser </editors/file_browser>`.
+Opening and saving blend-file are usually done using the :doc:`File Browser </editors/file_browser>`.
 
 .. tip::
 

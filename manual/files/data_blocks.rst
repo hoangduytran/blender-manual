@@ -297,7 +297,7 @@ For reference, here is a table of data-blocks types stored in blend-files.
      - |none|
      - | Particle settings.
        | Used by particle systems.
-   * - :doc:`Light Probe </render/eevee/lightprobes/introduction>`
+   * - :doc:`Light Probe </render/eevee/light_probes/introduction>`
      - |tick|
      - |none|
      - | Help achieve complex real-time lighting in Eevee.
