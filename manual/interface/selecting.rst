@@ -83,8 +83,8 @@ Select Circle
    :Hotkey:    :kbd:`C`
 
 *Circle Select* :kbd:`C` allows you to select multiple items within a circular area.
-Move your mouse over any items within the circular area (shown with a dotted
-circle) while holding :kbd:`LMB` to select those items. Alternatively, use
+Move your mouse over any items within the circular area (shown with a dotted circle)
+while holding :kbd:`LMB` to select those items. Alternatively, use
 :kbd:`MMB` to deselect them. When you're done selecting, press :kbd:`RMB` or
 :kbd:`Esc`. To change the diameter of the circle, scroll with the :kbd:`Wheel`
 or use the :kbd:`NumpadPlus` and :kbd:`NumpadMinus` keys.
@@ -118,9 +118,9 @@ Select Lasso
 
    :Hotkey:    :kbd:`Ctrl-RMB`
 
-*Lasso Select* is used to create a free-form selection. Simply hold
-:kbd:`Ctrl-RMB` while drawing a dotted line around the items you want to
-select. The shape you draw will be automatically closed by connecting a line
+*Lasso Select* is used to create a free-form selection. Simply hold :kbd:`Ctrl-RMB`
+while drawing a dotted line around the items you want to select.
+The shape you draw will be automatically closed by connecting a line
 from the current position back to the starting point.
 
 *Lasso Select* adds to the previous selection. For deselection, use :kbd:`Shift-Ctrl-RMB`.

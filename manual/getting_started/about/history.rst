@@ -242,7 +242,7 @@ Version/Revision Milestones
    and reworked library handling to manage missing and deleted data-blocks.
 `2.78 <https://www.blender.org/download/releases/2-78/>`__ -- September 2016:
    Cycles support for spherical stereo images for VR,
-   Grease Pencil works more similar to other 2D drawing softwares,
+   Grease Pencil works more similar to other 2D drawing software,
    Alembic import and export support, and improvements to Bendy Bones for easier and simpler rigging.
 `2.79 <https://www.blender.org/download/releases/2-79/>`__ -- September 2017:
    New Cycles features: Denoising, Shadow catcher, and new Principled shader.
@@ -253,13 +253,13 @@ Version/Revision Milestones
 
 `2.80 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.80>`__ -- July 2019:
    A totally redesigned UI for easier navigation; improved viewport, gizmos, and tools.
-   With Eevee a new physically based realtime render engine was created.
+   With Eevee a new physically based real-time render engine was created.
    The Grease Pencil got a big overhaul and is now a full 2D drawing and animation system.
    Replacing the old layers, collections are a powerful way to organize objects.
    Other improvements: Cycles, Modeling, Animation, Import/Export, Dependency Graph.
 `2.80 <https://www.blender.org/download/releases/2-81/>`__ -- November 2019:
    Revamped sculpting tools, Cycles OptiX accelerated rendering, denoising,
-   many EEVEE improvements, library overides, UI improvements and much more.
+   many Eevee improvements, library overrides, UI improvements and much more.
 `2.80 <https://www.blender.org/download/releases/2-82/>`__ -- February 2020:
-   UDIM and USD support, MantaFlow for fluids and smoke simulation,
+   UDIM and USD support, Mantaflow for fluids and smoke simulation,
    AI denoising, Grease Pencil improvements, and much more.

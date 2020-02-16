@@ -295,10 +295,10 @@ Fade Layers
    The opacity factor can be controlled with the slider.
 
    Fade Grease Pencil Objects
-      Fades all Grease Pencil Objects, except the active object.
+      Fades all Grease Pencil objects, except the active object.
 Edit Lines
    Show edit lines when editing strokes.
-Show Edit Lines only in multiframe
+Show Edit Lines only in Multiframe
    Only show edit lines while in multiframe edition.
 Vertex Opacity
    Opacity for edit vertices (points).
