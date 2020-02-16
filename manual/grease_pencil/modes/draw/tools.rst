@@ -4,7 +4,7 @@
 Drawing Tools
 *************
 
-.. figure:: /images/grease-pencil_modes_draw_toolbar_tools.png
+.. figure:: /images/grease-pencil_modes_draw_tools_toolbar-tools.png
    :align: right
 
 Grease Pencil draw tools:

@@ -292,22 +292,22 @@ Cursor
 
 .. list-table::
 
-   * - .. figure:: /images/grease-pencil_modes_edit_stroke_menu_reproject-strokes-1.png
+   * - .. figure:: /images/grease-pencil_modes_edit_grease-pencil-menu_reproject-strokes-1.png
           :width: 200px
 
           Original drawing from the front view.
 
-     - .. figure:: /images/grease-pencil_modes_edit_stroke_menu_reproject-strokes-2.png
+     - .. figure:: /images/grease-pencil_modes_edit_grease-pencil-menu_reproject-strokes-2.png
           :width: 200px
 
           Original drawing in the 3D Viewport.
 
-     - .. figure:: /images/grease-pencil_modes_edit_stroke_menu_reproject-strokes-3.png
+     - .. figure:: /images/grease-pencil_modes_edit_grease-pencil-menu_reproject-strokes-3.png
           :width: 200px
 
           Strokes reprojected onto the front plane to fix strokes misalignment.
 
-     - .. figure:: /images/grease-pencil_modes_edit_stroke_menu_reproject-strokes-1.png
+     - .. figure:: /images/grease-pencil_modes_edit_grease-pencil-menu_reproject-strokes-1.png
           :width: 200px
 
           Drawing after reprojection operation from the front view.
