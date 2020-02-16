@@ -454,7 +454,7 @@ All boundary edges can be selected by performing a second loop select action on 
 This can be useful for selecting boundaries for meshes that include triangles and n-gons,
 where loop select would not otherwise select the full boundary.
 
-.. figure:: /images/modeling_meshes_selecting_edge-boundary_loops.png
+.. figure:: /images/modeling_meshes_selecting_edge-boundary-loops.png
 
    The second loop select action is shown on the right.
 

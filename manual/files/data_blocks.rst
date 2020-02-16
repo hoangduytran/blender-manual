@@ -418,7 +418,7 @@ Min
 Max
    The maximum value the custom property can take.
 
-.. figure:: /images/files_data-blocks_edit_color.png
+.. figure:: /images/files_data-blocks_edit-color.png
    :align: right
 
    Custom Property settings for a color with alpha.
