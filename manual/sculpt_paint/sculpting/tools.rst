@@ -40,7 +40,7 @@ Inflate :kbd:`I`
 
 Blob
    Pushes mesh outward or inward into a spherical shape with settings to
-   control the amount of pinching at the edge of the sphere.
+   control the amount of magnification at the edge of the sphere.
 
 Crease :kbd:`Shift-C`
    Creates sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.
@@ -90,7 +90,7 @@ Multiplane Scrape
       Displays a preview of the two scrape planes
       and the angle they form instead of the cursor while performing the stroke.
 
-Pinch/Magnify :kbd:`P`
+Pinch :kbd:`P`
    Pulls vertices towards the center of the brush.
    The inverse setting is *Magnify*, in which vertices are pushed away from the center of the brush.
 
@@ -104,9 +104,9 @@ Grab :kbd:`G`
 Snake Hook :kbd:`K`
    Pulls vertices along with the movement of the brush to create long, snake-like forms.
 
-   Pinch
+   Magnify
       The *Snake Hook* brush tends to loose volume along the stroke,
-      with pinch > 0.5 it's possible to sculpt shapes without loosing volume.
+      with *Magnify* value greater than 0.5 it's possible to sculpt shapes without loosing volume.
    Rake
       A factor to support moving the mesh with rotation following the cursor's motion.
 
