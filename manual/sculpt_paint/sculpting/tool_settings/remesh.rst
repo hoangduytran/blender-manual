@@ -36,7 +36,9 @@ Voxel Size
       to match the denseness of polygons after the remesh operation.
 
 Adaptivity
-   Todo 2.81.
+   Reduces the final face count by simplifying geometry where detail is not needed.
+   This introduce triangulation to faces that do not require as much detail.
+   Note, an *Adaptivity* value greater than zero disables *Fix Poles*.
 Fix Poles
    Todo 2.81.
 Smooth Normals
