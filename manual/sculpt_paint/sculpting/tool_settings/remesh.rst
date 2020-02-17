@@ -51,10 +51,11 @@ Preserve Paint Mask
 Voxel Remesh
    Todo 2.81.
 
-.. note::
+.. note:: Limitations:
 
-   Remeshing only works on the original mesh data and
-   ignores generated geometry from modifiers, shape keys, rigging, etc.
+   - Remeshing only works on the original mesh data and
+     ignores generated geometry from modifiers, shape keys, rigging, etc.
+   - Remeshing will not work with the :doc:`/modeling/modifiers/generate/multiresolution>`
 
 .. seealso::
 

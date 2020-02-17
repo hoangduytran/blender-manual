@@ -36,10 +36,11 @@ Remeshing can either add or remove the amount of topology depending on a defined
 This technique is especially useful for :doc:`sculpting </sculpt_paint/sculpting/index>`,
 to generate better topology after blocking out the initial shape.
 
-.. note::
+.. note:: Limitations:
 
-   Remeshing only works on the original mesh data and
-   ignores generated geometry from modifiers, shape keys, rigging, etc.
+   - Remeshing only works on the original mesh data and
+     ignores generated geometry from modifiers, shape keys, rigging, etc.
+   - Remeshing will not work with the :doc:`/modeling/modifiers/generate/multiresolution>`
 
 .. seealso::
 
