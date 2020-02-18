@@ -7,7 +7,7 @@ Brush Settings
    :class: refbox
 
    :Mode:      Sculpt Mode
-   :Panel:      :menuselection:`Sidebar --> Tool --> Brush Settings`
+   :Panel:     :menuselection:`Sidebar --> Tool --> Brush Settings`
 
 Radius
    This option controls the radius of the brush, measured in pixels.

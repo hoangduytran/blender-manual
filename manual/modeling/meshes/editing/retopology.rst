@@ -40,7 +40,7 @@ to generate better topology after blocking out the initial shape.
 
    - Remeshing only works on the original mesh data and
      ignores generated geometry from modifiers, shape keys, rigging, etc.
-   - Remeshing will not work with the :doc:`/modeling/modifiers/generate/multiresolution>`
+   - Remeshing will not work with the :doc:`/modeling/modifiers/generate/multiresolution`.
 
 .. seealso::
 
@@ -67,7 +67,7 @@ Voxel Size
 
 Adaptivity
    Reduces the final face count by simplifying geometry where detail is not needed.
-   This introduce triangulation to faces that do not require as much detail.
+   This introduce triangulation to faces that do not need as much detail.
    Note, an *Adaptivity* value greater than zero disables *Fix Poles*.
 Fix Poles
    Todo 2.81.

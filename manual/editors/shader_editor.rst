@@ -1,7 +1,7 @@
 
-#################
-  Shader Editor
-#################
+*************
+Shader Editor
+*************
 
 The Shader Editor is used to edit materials which are used for :doc:`rendering </render/index>`.
 Materials used by Cycles and Eevee are defined using a node tree.

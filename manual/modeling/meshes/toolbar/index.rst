@@ -47,7 +47,7 @@ Mesh Edit Mode tools:
    :ref:`Bisect <tool-mesh-bisect>`
       Bisect the mesh.
 
-:ref:`Knife <tool-mesh-poly-build>`
+:ref:`Poly Build <tool-mesh-poly-build>`
    Create geometry by adding vertices one by one.
 
 :ref:`Spin <tool-mesh-spin>`
