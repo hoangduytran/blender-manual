@@ -17,7 +17,7 @@ Activation
 Interface
 =========
 
-.. figure:: /images/addons_add_mesh_discombobulator_ui.jpg
+.. figure:: /images/addons_add-mesh_discombobulator_ui.jpg
    :align: right
    :width: 310px
 

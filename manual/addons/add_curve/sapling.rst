@@ -17,7 +17,7 @@ Activation
 Interface
 =========
 
-.. figure:: /images/addons_add_curve_sapling.jpg
+.. figure:: /images/addons_add-curve_sapling_example.jpg
    :align: center
    :width: 640px
 
