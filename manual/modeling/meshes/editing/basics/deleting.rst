@@ -7,7 +7,6 @@ Deleting & Dissolving
    :class: refbox
 
    :Mode:      Edit Mode
-   :Tool:      :menuselection:`Toolbar --> Tools --> Mesh Tools --> Remove: Delete`
    :Menu:      :menuselection:`Mesh --> Delete`
 
 These tools can be used to remove components.

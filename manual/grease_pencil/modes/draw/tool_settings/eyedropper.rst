@@ -8,7 +8,7 @@ Eyedropper
    :class: refbox
 
    :Mode:      Draw Mode
-   :Tool:      :menuselection:`Toolbar --> Tools --> Draw Tools --> Eyedropper`
+   :Tool:      :menuselection:`Toolbar --> Eyedropper`
 
 The Eyedropper tool is used to create materials based off existing colors.
 
