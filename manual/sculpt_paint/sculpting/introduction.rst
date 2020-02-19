@@ -10,6 +10,10 @@ an area of the model is altered using a brush.
 In other words, instead of selecting a group of vertices,
 Sculpt Mode manipulates geometry in the brush region of influence.
 
+.. figure:: /images/sculpt_paint_sculpting_introduction.jpg
+
+   Sculpting Mode Example.
+
 
 Sculpt Mode
 ===========
@@ -23,14 +27,6 @@ A red circle will appear and follow the location of the cursor in the 3D View.
 .. note::
 
    To have a predictable brush behavior, apply the scale of your mesh.
-
-.. figure:: /images/sculpt-paint_sculpting_introduction_mode-selector.png
-
-   3D View Mode selector: Sculpt Mode.
-
-.. figure:: /images/sculpt-paint_sculpting_introduction_brush-circle.png
-
-   The cursor in Sculpt Mode.
 
 
 The Brush
