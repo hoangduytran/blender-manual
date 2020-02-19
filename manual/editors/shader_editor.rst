@@ -7,7 +7,7 @@ The Shader Editor is used to edit materials which are used for :doc:`rendering <
 Materials used by Cycles and Eevee are defined using a node tree.
 Therefore, the main window of the Shader editor is a :doc:`node editor </interface/controls/nodes/index>`.
 
-.. figure:: /images/editors_shader-editor_introduction_main.png
+.. figure:: /images/editors_shader-editor_main.png
 
    Shader Editor with the default material node tree.
 

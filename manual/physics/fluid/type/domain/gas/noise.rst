@@ -53,5 +53,5 @@ Low division simulations with lots of *Upres Factor* divisions generally appear
 smaller in real-world scale, with many smaller details (larger flames, etc.).
 They can be used to create pyroclastic plumes such as in the following image:
 
-.. figure:: /images/physics_smoke_types_domain_note-on-resolution.jpg
+.. figure:: /images/physics_fluid_type_domain_gas_noise_note-on-resolution.jpg
    :align: center

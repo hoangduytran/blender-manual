@@ -26,7 +26,7 @@ It simulates the fluid movement of air and generates animated :term:`voxel`
 textures representing the density, heat, and velocity of other fluids or suspended particles
 (e.g. smoke) which can be used for rendering.
 
-.. figure:: /images/physics_smoke_types_domain_note-on-resolution.jpg
+.. figure:: /images/physics_fluid_type_domain_gas_noise_note-on-resolution.jpg
 
    Example of a smoke simulation.
 

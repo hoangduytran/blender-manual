@@ -47,7 +47,7 @@ If the points belong to different curves, these are joined by a segment to becom
 
           Two curves before.
 
-     - .. figure:: /images/modeling_curves_editing_introduction_make-segment.png
+     - .. figure:: /images/modeling_curves_editing_curve_make-segment.png
 
           Curve after joining.
 

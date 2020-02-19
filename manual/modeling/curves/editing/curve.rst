@@ -287,7 +287,7 @@ Dissolve Vertices :kbd:`Ctrl-X`
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_curves_editing_introduction_make-segment.png
+   * - .. figure:: /images/modeling_curves_editing_curve_make-segment.png
 
           Before deleting.
 
