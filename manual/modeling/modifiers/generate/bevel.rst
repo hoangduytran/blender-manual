@@ -215,7 +215,7 @@ Intersection Method
              Cutoff intersection method with a center face.
 
 Custom Profile
-   .. figure:: /images/modeling_modifiers_generate_bevel_widget.png
+   .. figure:: /images/modeling_modifiers_generate_bevel_profile-widget.png
       :align: right
       :width: 300px
 
