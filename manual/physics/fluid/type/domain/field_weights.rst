@@ -21,7 +21,7 @@ All
 
 The other settings determine how much influence individual force field types have.
 
-.. figure:: /images/physics_smoke_types_domain_force-field-demo.jpg
+.. figure:: /images/physics_fluid_type_domain_field-weights_force-field-demo.jpg
    :align: center
 
    Fluid with a wind force field.

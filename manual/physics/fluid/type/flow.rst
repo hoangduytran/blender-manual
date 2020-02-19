@@ -56,7 +56,7 @@ Flow Behavior
 Sampling Substeps
    Number of subframes used to reduce gaps in emission of smoke from fast-moving sources.
 
-   .. figure:: /images/physics_smoke_types_flow-object_subframes.jpg
+   .. figure:: /images/physics_fluid_type_flow_subframes.jpg
 
       Example showing two fast-moving sources.
       The object on the left uses 0 subframes, while the one on the right uses 6.
@@ -65,7 +65,7 @@ Smoke Color
    The color of emitted smoke. When smoke of different colors are mixed they will blend together,
    eventually settling into a new combined color.
 
-   .. figure:: /images/physics_smoke_types_flow-object_color-blending.jpg
+   .. figure:: /images/physics_fluid_type_flow_color-blending.jpg
 
       Color blending example.
 
@@ -85,7 +85,7 @@ Fuel
    Amount of "fuel" being burned per second. Larger values result in larger flames,
    smaller values result in smaller flames:
 
-   .. figure:: /images/physics_smoke_types_flow-object_flame-rate.jpg
+   .. figure:: /images/physics_fluid_type_flow_flame-rate.jpg
 
       Example showing two fire sources.
       The object on the left has a *Flame Rate* of 5, while the one on the right has 0.3.
@@ -181,7 +181,7 @@ Size
 Offset
    Translates the texture along the Z axis.
 
-.. figure:: /images/physics_smoke_types_flow-object_texture-usecase.jpg
+.. figure:: /images/physics_fluid_type_flow_texture-usecase.jpg
    :align: center
 
    Example of using a texture to control smoke flow.

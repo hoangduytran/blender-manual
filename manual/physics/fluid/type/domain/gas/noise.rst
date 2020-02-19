@@ -26,7 +26,7 @@ Upres Factor
 Strength
    Strength of the noise.
 
-   .. figure:: /images/physics_smoke_types_domain_high-resolution-strength.jpg
+   .. figure:: /images/physics_fluid_type_domain_gas_noise_high-resolution-strength.jpg
       :width: 400px
 
       From left to right, the domains' high resolution strengths are set to 0, 2, and 6.
@@ -43,7 +43,7 @@ Smoke Noise vs. High Resolution Divisions
 *Upres Factor* and *Resolution Divisions* are not equivalent.
 By using different combinations of these resolution settings, you can get a variety of different styles of smoke.
 
-.. figure:: /images/physics_smoke_types_domain_high-resolution-comparison.jpg
+.. figure:: /images/physics_fluid_type_domain_gas_noise_high-resolution-comparison.jpg
    :align: center
 
    Comparison between a domain with 24 *Resolution Divisions* and 4 *Upres Factor* (left),

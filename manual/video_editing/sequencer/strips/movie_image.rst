@@ -17,7 +17,7 @@ e.g. in the Audio-Video Interleaved format (``*.avi`` file).
 Example
 =======
 
-.. figure:: /images/sequencer_sequencer_strips_movie-image_example.png
+.. figure:: /images/video-editing_sequencer_strips_movie-image_example.png
 
    Imported movie strip with audio track underneath.
 

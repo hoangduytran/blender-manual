@@ -66,7 +66,7 @@ In geometry, a normal is a direction or line that is perpendicular to something,
 typically a triangle or surface but can also be relative to a line,
 a tangent line for a point on a curve, or a tangent plane for a point on a surface.
 
-.. figure:: /images/modeling_meshes_editing_normals_viewport.png
+.. figure:: /images/modeling_meshes_structure_viewport.png
    :width: 350px
 
    A visualization of the face normals of a torus.
@@ -87,7 +87,7 @@ Properties
 
    :Panel:     :menuselection:`Properties editor --> Object Data --> Normals`
 
-.. figure:: /images/modeling_meshes_editing_normals_normals-panel.png
+.. figure:: /images/modeling_meshes_structure_normals-panel.png
 
    Normals panel.
 
@@ -102,7 +102,7 @@ Auto Smooth
    Angle
       Angle number field.
 
-.. figure:: /images/modeling_meshes_editing_normals_example-auto-smooth.png
+.. figure:: /images/modeling_meshes_structure_example-auto-smooth.png
    :width: 250px
 
    Example mesh with *Auto Smooth* enabled.

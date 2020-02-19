@@ -96,7 +96,7 @@ Settings
 
    :Panel:     :menuselection:`Properties editor --> Render --> Color Management`
 
-.. figure:: /images/render_post-process_color-management_panel.png
+.. figure:: /images/render_color-management_panel.png
 
    Render settings for color management.
 

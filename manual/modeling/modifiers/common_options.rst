@@ -13,7 +13,7 @@ In particular, many offer ways to precisely mask and weight their effect on a ve
 Vertex Group
 ============
 
-.. figure:: /images/modeling_modifiers_generic_vertex-group.png
+.. figure:: /images/modeling_modifiers_common-options_vertex-group.png
    :align: right
 
    Typical modifier Vertex Group options.
@@ -43,7 +43,7 @@ Invert (double arrow icon)
 Texture
 =======
 
-.. figure:: /images/modeling_modifiers_generic_texture.png
+.. figure:: /images/modeling_modifiers_common-options_texture.png
    :align: right
 
    Typical modifier Texture options.

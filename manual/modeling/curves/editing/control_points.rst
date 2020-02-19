@@ -43,7 +43,7 @@ If the points belong to different curves, these are joined by a segment to becom
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_curves_editing_introduction_two-curves.png
+   * - .. figure:: /images/modeling_curves_editing_control-points_two-curves.png
 
           Two curves before.
 
@@ -72,7 +72,7 @@ This setting controls how the normals (visualized as arrows)
 twist around each control point -- so it is only relevant with 3D curves!
 The tilt will be interpolated from point to point (you can check it with the normals).
 
-.. figure:: /images/modeling_curves_properties_introduction_extrude-mean-tilt.png
+.. figure:: /images/modeling_curves_editing_control-points_extrude-mean-tilt.png
    :align: center
    :width: 50%
 
@@ -151,15 +151,15 @@ For Bézier curves, this smoothing operation reduces the distance between
 the selected control point(s) and their neighbors,
 while keeping the neighbors anchored. Does not effect control point tangents.
 
-.. figure:: /images/modeling_curves_editing_introduction_smoothing-1.png
+.. figure:: /images/modeling_curves_editing_control-points_smoothing-1.png
 
    Original, unsmoothed Curve.
 
-.. figure:: /images/modeling_curves_editing_introduction_smoothing-2.png
+.. figure:: /images/modeling_curves_editing_control-points_smoothing-2.png
 
    Entire curve smoothed over 20 times by holding :kbd:`Shift-R` to repeat last step.
 
-.. figure:: /images/modeling_curves_editing_introduction_smoothing-3.png
+.. figure:: /images/modeling_curves_editing_control-points_smoothing-3.png
 
    Only three control points in the center smoothed over 20 times.
 

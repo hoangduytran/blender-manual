@@ -146,7 +146,7 @@ Vorticity
    Controls the amount of turbulence in the smoke. Higher values will make lots of small swirls,
    while lower values make smoother shapes.
 
-   .. figure:: /images/physics_smoke_types_domain_vorticity.jpg
+   .. figure:: /images/physics_fluid_type_domain_settings_vorticity.jpg
       :align: center
 
       Comparison of different amounts of vorticity. The domain on the left has a vorticity of 3,
