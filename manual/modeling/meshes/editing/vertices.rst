@@ -65,6 +65,8 @@ UVs
    if existing, will be corrected to avoid image distortion.
 
 
+.. _bpy.ops.mesh.remove_doubles:
+
 Merge by Distance
 -----------------
 
