@@ -3,7 +3,7 @@
 Options
 *******
 
-.. figure:: /images/sculpt-paint_weight-paint_options_options-panel.png
+.. figure:: /images/sculpt-paint_weight-paint_tool-settings_options_panel.png
    :align: right
 
    Paint options.

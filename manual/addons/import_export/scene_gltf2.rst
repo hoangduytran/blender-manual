@@ -562,7 +562,7 @@ Skinning
 Export skinning (armature) data.
 
 Include All Bone Influences
-   Allow 4 joint vertex influences. Models may appear incorrectly in many viewers.
+   Allow less than 4 joint vertex influences. Models may appear incorrectly in many viewers.
 
 
 Contributing
