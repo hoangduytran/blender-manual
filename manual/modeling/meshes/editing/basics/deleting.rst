@@ -12,6 +12,8 @@ Deleting & Dissolving
 These tools can be used to remove components.
 
 
+.. _bpy.ops.mesh.delete:
+
 Delete
 ======
 
@@ -34,6 +36,8 @@ Only Faces
    Removes faces, but edges within the face selection are retained.
 
 
+.. _bpy.ops.mesh.dissolve:
+
 Dissolve
 ========
 
@@ -45,6 +49,8 @@ Removes selected geometry, but without creating holes, effectively turning the s
 Dissolve works slightly different based on if you have edges, faces or vertices selected.
 You can add detail where you need it, or quickly remove it where you do not.
 
+
+.. _bpy.ops.mesh.dissolve_verts:
 
 Dissolve Vertices
 -----------------
@@ -76,6 +82,9 @@ Examples
    \4) Face Split: On/Off, Tear Boundaries: On.
 
 
+
+.. _bpy.ops.mesh.dissolve_edges:
+
 Dissolve Edges
 --------------
 
@@ -90,7 +99,7 @@ Removes edges sharing two faces (joining those faces).
 The options are the same as for the `Dissolve Vertices`_ tool.
 
 
-.. _modeling-mesh-deleting-dissolve-faces:
+.. _bpy.ops.mesh.dissolve_faces:
 
 Dissolve Faces
 --------------
@@ -121,8 +130,16 @@ This is a convenient shortcut that dissolves
 based on the current selection mode (vertex, edge, face).
 
 
+.. _bpy.ops.mesh.dissolve_limited:
+
 Limited Dissolve
 ================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Mesh --> Delete --> Limited Dissolve`
 
 This tool can simplify your mesh by dissolving vertices and edges separating flat regions.
 
@@ -145,6 +162,8 @@ All Boundaries
 Delimit
    Prevent faces from joining when they don't share certain properties (material for e.g.).
 
+
+.. _bpy.ops.mesh.edge_collapse:
 
 Edge Collapse
 =============
@@ -173,15 +192,17 @@ removing the face loop it ran through.
           Edge ring collapsed.
 
 
-Edge Loop
-=========
+.. _bpy.ops.mesh.delete_edgeloop:
+
+Edge Loops
+==========
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Edit Mode (Vertex or Edge select modes)
-   :Menu:      :menuselection:`Mesh --> Delete --> Edge Loop`
-   :Hotkey:    :kbd:`X` or :kbd:`Delete`, :menuselection:`Edge Loop`
+   :Menu:      :menuselection:`Mesh --> Delete --> Edge Loops`
+   :Hotkey:    :kbd:`X` or :kbd:`Delete`, :menuselection:`Edge Loops`
 
 *Edge Loop* allows you to delete a selected edge loop if it is between two other edge loops.
 This will create one face loop where two previously existed.
