@@ -10,7 +10,7 @@ Vertex Tools
    :Menu:      :menuselection:`Vertex`
    :Hotkey:    :kbd:`Ctrl-V`
 
-This page covers many of the tools in the :menuselection:`Vertex` menu.
+This page covers many of the tools in the *Vertex* menu.
 These are tools that work primarily on vertex selections, however,
 some also work with edge or face selections.
 

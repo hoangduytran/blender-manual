@@ -20,7 +20,7 @@ Header
 Use Nodes
    The Use Nodes setting is mostly a legacy setting and should always be checked for materials.
 Slot
-   The :menuselection:`Slot` menu can be used to select
+   The *Slot* menu can be used to select
    the active :ref:`material slot <material-slots>` on the active object.
    The material selector to the right of it can change the material that is in the selected slot.
 Pin (pin icon)

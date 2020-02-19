@@ -60,7 +60,7 @@ Min/Max Taper
 Repeat Protrusions
    This button creates extra levels of protrusions built on top of the first set of protrusions.
    It's important not to set this too high as it may take time to compute.
-   Note also that repeating protrusions is based off face normals and
+   Note also that repeating protrusions is based on face normals and
    will create protrusions on all faces created in the previous iteration.
 
 
