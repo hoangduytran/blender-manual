@@ -1,4 +1,4 @@
-.. _bpy.types.FluidDomainSettings.noise:
+.. _bpy.types.FluidDomainSettings.use_noise:
 
 *****
 Noise
@@ -8,50 +8,100 @@ Noise
    :class: refbox
 
    :Type:      Domain
-   :Panel:     :menuselection:`Physics --> Smoke --> High Resolution`
+   :Panel:     :menuselection:`Physics --> Fluid --> Noise`
 
-Adding noise to the gas simulation creates a finer detailed looking simulation
-while using a relatively low *Resolution Divisions*. This allows animators to quickly set up
-a low resolution simulation and later add details without changing the overall fluid motion.
+Adding noise to the gas simulation creates a finer detailed looking simulation on top of the base.
+This makes it possible to add more details to gases (i.e. fire and / or smoke) without changing the
+overall fluid motion.
 
-.. note::
+.. seealso::
+   Fluid noise is an implementation of `Wavelet Turbulence for Fluid Simulation
+   <http://www.cs.cornell.edu/~tedkim/WTURB/>`__.
 
-   Fluid noise is an implementation of
-   `Turbulence for Fluid Simulation
-   <https://web.archive.org/web/20140911163550/https://graphics.ethz.ch/research/physics_animation_fabrication/simulation/turb.php>`__.
+Besides unlocking parts ff the UI, enabling *Noise* lets the cache know which simulation data to read.
+If, for example, *Noise* is enabled but there is no noise simulation data to read it will show an empty
+domain. The checkbox does not reset the cache and can be used to switch the view between base resolution
+and noise view.
 
+.. _bpy.types.FluidDomainSettings.noise_scale:
 
 Upres Factor
-   Factor by which to enhance the resolution of the noise.
+   Factor by which to enhance the resolution of the noise. The scaling factor is coupled to the
+   :ref:`Resolution Divisions<bpy.types.FluidDomainSettings.resolution_max>`.
+
+.. _bpy.types.FluidDomainSettings.noise_type:
+
+Method
+   The method used to create the noise. "Wavelet" turbulence is currently the only method available.
+
+.. _bpy.types.FluidDomainSettings.noise_strength:
+
 Strength
-   Strength of the noise.
+   Strength of the noise. Higher values result in more turbulent vortices.
 
-   .. figure:: /images/physics_fluid_type_domain_gas_noise_high-resolution-strength.jpg
-      :width: 400px
-
-      From left to right, the domains' high resolution strengths are set to 0, 2, and 6.
+.. _bpy.types.FluidDomainSettings.noise_pos_scale:
 
 Scale
-   Todo.
+   Scale of the noise. Greater values result in larger vortices.
+
+.. _bpy.types.FluidDomainSettings.noise_time_anim:
+
 Time
-   Todo.
+   Animation time of the noise. This value has an influence on where the noise field is evaluated.
+   It can be used as a seed to give wavelet noise a slightly different look in two domains that are
+   otherwise the same.
+
+   .. list-table:: Smoke plume with varying animation time. While the fluid motion of all four smoke
+      plumes are alike each example has a unique look.
+
+      * - .. figure:: /images/physics_smoke_noise_timeanim_0.1.png
+
+             Animation Time: 0.1
+
+        - .. figure:: /images/physics_smoke_noise_timeanim_1.0.png
+
+             Animation Time: 1.0
+
+      * - .. figure:: /images/physics_smoke_noise_timeanim_2.5.png
+
+             Animation Time: 2.5
+
+        - .. figure:: /images/physics_smoke_noise_timeanim_10.0.png
+
+             Animation Time: 10.0
+
+.. note::
+   *Resolution Divisions* and *Upres Factor* are not equivalent.
+   By using different combinations of these resolution settings, you can obtain a variety of different
+   styles of smoke.
+
+   .. list-table:: Comparison of fire simulations with and without noise at the same grid
+      resolution.
+
+      * - .. figure:: /images/physics_smoke_comparison_noise_baseres_01.png
+
+             Resolution Division: 200, without noise
+
+        - .. figure:: /images/physics_smoke_comparison_noise_baseres_02.png
+
+             Resolution Divisions: 100, Noise scale: 2.
+
+   Low division simulations with lots of *Upres Factor* divisions generally appear smaller in
+   real-world scale and can be used to achieve pyroclastic plumes such as this:
+
+   .. figure:: /images/physics_smoke_note_resolution.jpg
+      :align: center
+
+.. _bpy.ops.fluid.bake_noise:
+.. _bpy.ops.fluid.free_noise:
+
+Bake Noise, Free Noise
+   This option is only available when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>`
+   cache type.
+
+   The progress will be displayed in the status bar. Pressing the :kbd:`Esc` button will pause the simulation.
+
+   Once the simulation has been baked, the cache can be deleted by pressing *Free Noise*. It is possible
+   to pause / resume a *Bake Noise* job. 
 
 
-Smoke Noise vs. High Resolution Divisions
-=========================================
-
-*Upres Factor* and *Resolution Divisions* are not equivalent.
-By using different combinations of these resolution settings, you can get a variety of different styles of smoke.
-
-.. figure:: /images/physics_fluid_type_domain_gas_noise_high-resolution-comparison.jpg
-   :align: center
-
-   Comparison between a domain with 24 *Resolution Divisions* and 4 *Upres Factor* (left),
-   and a domain with 100 *Resolution Divisions* and 1 *Upres Factor* division (right).
-
-Low division simulations with lots of *Upres Factor* divisions generally appear
-smaller in real-world scale, with many smaller details (larger flames, etc.).
-They can be used to create pyroclastic plumes such as in the following image:
-
-.. figure:: /images/physics_fluid_type_domain_gas_noise_note-on-resolution.jpg
-   :align: center
