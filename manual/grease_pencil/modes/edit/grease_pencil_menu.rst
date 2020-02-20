@@ -16,7 +16,7 @@ Translation, Rotation, Scale
    :class: refbox
 
    :Mode:      Edit Mode
-   :Tool:      :menuselection:`Toolbar -->  Move, Rotate, Scale`
+   :Tool:      :menuselection:`Toolbar --> Move, Rotate, Scale`
    :Menu:      :menuselection:`Grease Pencil --> Transform --> Move, Rotate, Scale`
    :Hotkey:    :kbd:`G`, :kbd:`R`, :kbd:`S`
 

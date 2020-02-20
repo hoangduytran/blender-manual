@@ -20,7 +20,7 @@ at the location of every vertex of the parent object.
 Align to Vertex Normal
    Rotates all instanced objects according to the corresponding vertex normals of the parent mesh.
 
-   To change the axis of direction of the instanced  objects, select the child object and
+   To change the axis of direction of the instanced objects, select the child object and
    in the :menuselection:`Object --> Relations Extras` panel change the *Tracking Axes*.
 
 There are actually two approaches to modeling using instanced Verts.

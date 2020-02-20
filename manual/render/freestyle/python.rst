@@ -240,6 +240,7 @@ the following base classes for more information on the user-scriptable construct
 
 .. seealso::
 
-   Predicates, functions, chaining iterators, and stroke shaders can be defined by inheriting
-   base classes and overriding appropriate methods. See :mod:`Freestyle python module
-   <blender_api:freestyle>` for more information on the user-scriptable constructs.
+   Predicates, functions, chaining iterators, and stroke shaders can be defined by
+   inheriting base classes and overriding appropriate methods.
+   See :mod:`Freestyle python module <blender_api:freestyle>` for more information
+   on the user-scriptable constructs.

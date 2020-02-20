@@ -247,7 +247,7 @@ Vertex Slide
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Slide  Vertices`
+   :Menu:      :menuselection:`Vertex --> Slide Vertices`
    :Hotkey:    :kbd:`Shift-V`
 
 Vertex Slide will transform a vertex along one of its adjacent edges.

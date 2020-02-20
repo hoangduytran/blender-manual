@@ -9,7 +9,7 @@ PDB (``.pdb``) and XYZ files (``.xyz``) (`Import PDB/XYZ`_). The add-on reads th
 all atoms in the PDB/XYZ file and represents the atoms as balls in the Blender world.
 Also the sticks, which are described in PDB files only, can be shown if the sticks are listed in the PDB file.
 For the import, many options can be chosen, which allow representing the atoms and sticks in different ways.
-With help of several tools  in the `Atomic Blender Utilities panel`_, the atomic structures can be modified
+With help of several tools in the `Atomic Blender Utilities panel`_, the atomic structures can be modified
 after the import. Note that the coordinates of selected atomic structures in the Blender 3D world
 can also be exported into PDB/XYZ files.
 

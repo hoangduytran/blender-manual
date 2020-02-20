@@ -27,7 +27,7 @@ Located in the :menuselection:`Properties editor --> World --> Sun Position pane
 Usage
 =====
 
-This add-on has two distinct modes of operation:  the `Normal Mode`_ allows you to
+This add-on has two distinct modes of operation: the `Normal Mode`_ allows you to
 animate the Sun realistically, while the `Sun + HDRI Texture Mode`_ is useful for
 synchronizing a sun light to an HDRI texture.
 
