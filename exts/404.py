@@ -51,7 +51,11 @@ def read_versions():
 
 
 def gen_htaccess(lang, version):
-    text = "ErrorDocument 404 /manual/{0}/{1}/404.html\n".format(lang, version)
+    text = """
+ErrorDocument 404 /manual/{0}/{1}/404.html
+RedirectMatch \"^/manual/{0}/{1}/addons/import_export/io_(.*)\" \"/manual/{0}/{1}/addons/import_export/$1\"
+""".format(lang, version)
+
     write_htaccess(text)
 
 
