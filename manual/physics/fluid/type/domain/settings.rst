@@ -52,7 +52,7 @@ Resolution Divisions
 Time Scale
    Controls the speed of the simulation. Low values result in a "slow motion" simulation,
    while higher values can be used to advance the simulation faster
-   (useful for generating fluids for use in still renders).
+   (good for generating fluids to be used in still renders).
 
 .. _bpy.types.FluidDomainSettings.cfl_condition:
 
@@ -143,8 +143,8 @@ Buoyancy Heat
      i.e. smoke emitted from flow objects with a positive *Initial Temperature* will sink,
      and smoke from flow objects with a negative *Initial Temperature* will rise.
 
-   Note that smoke from multiple flow objects with different temperatures will mix and warm up / cool
-   down until an equilibrium is reached.
+   Note that smoke from multiple flow objects with different temperatures will mix and warm up or
+   cool down until an equilibrium is reached.
 
 .. _bpy.types.FluidDomainSettings.vorticity:
 
@@ -205,8 +205,8 @@ Flame Smoke
 .. _bpy.types.FluidDomainSettings.flame_vorticity:
 
 Vorticity
-   Vorticity for flames in addition to the global fluid 
-   :ref:`Vorticity <bpy.types.FluidDomainSettings.vorticity>`
+   Vorticity for flames in addition to the global fluid
+   :ref:`Vorticity <bpy.types.FluidDomainSettings.vorticity>`.
 
 .. _bpy.types.FluidDomainSettings.flame_max_temp:
 
@@ -312,13 +312,13 @@ Narrow Band Width
 .. _bpy.types.FluidDomainSettings.particle_randomness:
 
 Particle Randomness
-   New particles are sampled with some randomness attached to their position. This field
-   controls this randomness. Higher values will sample the liquid particles more randomly in
-   inflow regions. With a value of 0.0 all new particles will be sampled uniformly inside
+   New particles are sampled with some randomness attached to their position.
+   This field controls this randomness. Higher values will sample the liquid particles more
+   randomly in inflow regions. With a value of 0.0 all new particles will be sampled uniformly inside
    their corresponding grid cells.
 
-   When trying to create laminar inflows (little randomness) or more turbulent flows
-   (greater randomness) this value can be useful.
+   When trying to create a laminar inflow (with little randomness) or more turbulent flows
+   (with greater randomness) this value can be useful.
 
 .. _bpy.types.FluidDomainSettings.use_fractions:
 
@@ -337,14 +337,12 @@ Obstacle-Fluid Threshold
 .. _bpy.ops.fluid.free_data:
 
 Bake Data, Free Data
-   This option is only available when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>`
-   cache type. *Bake Data* simulates and stores the the base of the fluid simulation on disk.
-   Both gas and liquid simulations can add refinements on top of this (e.g. gas simulations can add
-   noise, liquid simulations can add a mesh and / or secondary particles).
+   This option is only available when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>` cache type.
+   *Bake Data* simulates and stores the base of the fluid simulation on drive.
+   Both gas and liquid simulations can add refinements on top of this
+   (e.g. gas simulations can add noise, liquid simulations can add a mesh or secondary particles or both).
 
-   The progress will be displayed in the status bar. Pressing the :kbd:`Esc` button will pause the simulation.
+   The progress will be displayed in the status bar. Pressing :kbd:`Esc` will pause the simulation.
 
-   Once the simulation has been baked, the cache can be deleted by pressing *Free Data*. It is possible
-   to pause / resume a *Bake All* job. 
-
-
+   Once the simulation has been baked, the cache can be deleted by pressing *Free Data*.
+   It is possible to pause or resume a *Bake All* process.

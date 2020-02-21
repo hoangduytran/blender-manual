@@ -61,7 +61,7 @@ Voxel Size
    The resolution or the amount of detail the remeshed mesh will have.
    The value is used to define the size, in object space, of the :term:`Voxel`.
    These voxels are assembled around the mesh and are used to determine the new geometry.
-   For example a value of 0.5m will create topological patches that are about 0.5m
+   For example a value of 0.5 m will create topological patches that are about 0.5 m
    (assuming *Preserve Volume* is enabled).
    Lower values preserve finer details but will result in a mesh with a much more dense topology.
 

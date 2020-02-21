@@ -11,7 +11,6 @@ Poly Build
    :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Poly Build`
 
-
 The *Poly Build* tool uses many built operators in an interactive way to add, delete, or move geometry.
 This is extremely useful for retopology.
 
@@ -20,16 +19,17 @@ Options
 =======
 
 Create Quads
-   Automatically split edges in triangles to maintain quad topology.
+   Automatically split edges in triangles to maintain the quad topology.
 
 
 Usage
 =====
 
 Add Geometry :kbd:`Ctrl-LMB`
-   Vertices or faces can be created by moving the cursor close to an element and using the hotkey
-   to add a vertex or face. The tool first tries to create a face, however,
-   if not enough geometry exists to create a face it will try to extrude a vertex to the cursor.
+   Vertices or faces can be created by moving the cursor close to
+   an element and using the hotkey to add a vertex or face.
+   The tool first tries to create a face, however, if not enough geometry
+   exists to create a face it will try to extrude a vertex to the cursor.
    When creating a face, the face can be previewed by holding :kbd:`Ctrl`.
 Delete Mesh Elements :kbd:`Shift-LMB`
    Vertices, edges, and faces will be deleted by hovering over the element and using the hotkey.

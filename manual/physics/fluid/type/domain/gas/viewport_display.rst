@@ -11,11 +11,11 @@ Thickness
 .. _bpy.types.FluidDomainSettings.slice_method:
 
 Slicing
-   How to slice the volume for viewport rendering
+   How to slice the volume for viewport rendering.
 
    View
       Slice the volume parallel to the view plane.
-   
+
    Axis
       Slice the volume parallel to the major axis.
 
@@ -34,14 +34,8 @@ Axis
    Auto
       Adjust slice direction according to the view direction.
 
-   X
-      Slice along the X axis.
-
-   Y
-      Slice along the Y axis.
-
-   Z
-      Slice along the Z axis.
+   X/Y/Z
+      Slice along the X/Y/Z axis.
 
 .. _bpy.types.FluidDomainSettings.slice_depth:
 
@@ -57,22 +51,24 @@ Slice Per Voxel
 
 Interpolation
    Interpolation method to use for the visualization of the fluid grid.
-      
+
       Linear
          Linear interpolation between voxels. Gives good smoothness and speed.
 
       Cubic
          Cubic interpolation between voxels. Gives smoothed high quality interpolation, but is slower.
 
+
 .. _bpy.types.FluidDomainSettings.use_color_ramp:
 
 Color Mapping
 =============
 
-Use a specific color map for the visualization of the simulation field. This comes in handy during 
-debugging or when making more advanced adjustments to the simulation. For instance, if the actual
-color of a fire simulation is barely visible in the viewport then changing the color profile can help
-to see the real size of the flame.
+Use a specific color map for the visualization of the simulation field.
+This comes in handy during debugging or when making more advanced
+adjustments to the simulation. For instance, if the actual color of
+a fire simulation is barely visible in the viewport then changing
+the color profile can help to see the real size of the flame.
 
 .. _bpy.types.FluidDomainSettings.coba_field:
 
@@ -88,6 +84,7 @@ Field
         - .. figure:: /images/physics_smoke_comparison_colormapping_02.png
 
              Slice view of "fire" grid with color mapping.
+
 
 .. _bpy.types.FluidDomainSettings.show_velocity:
 
@@ -109,5 +106,3 @@ Display As
 
 Scale
    Scale the velocity vectors by this size in the viewport.
-
-

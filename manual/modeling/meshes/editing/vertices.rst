@@ -11,8 +11,8 @@ Vertex Tools
    :Hotkey:    :kbd:`Ctrl-V`
 
 This page covers many of the tools in the *Vertex* menu.
-These are tools that work primarily on vertex selections, however,
-some also work with edge or face selections.
+These are tools that work primarily on vertex selections
+but some also work with edge or face selections.
 
 
 .. _vertex-merging:

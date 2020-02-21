@@ -89,9 +89,8 @@ Smoke Color
 .. _bpy.types.FluidFlowSettings.use_absolute:
 
 Absolute Density
-   If this checkbox is enabled, the emitter will only produce more smoke / fire if there is space for
-   it in the emitter region. Otherwise, if the checkbox is disabled, smoke / fire will always be
-   produced and add up.
+   If this checkbox is enabled, the emitter will only produce more smoke or fire if there is space for
+   it in the emitter region. Otherwise smoke or fire will always be produced and add up.
 
 .. _bpy.types.FluidFlowSettings.temperature:
 
@@ -162,21 +161,19 @@ Flow Source
    .. _bpy.types.FluidFlowSettings.particle_system:
 
    Particle System :guilabel:`Fire or Smoke Only`:
-      Create smoke / fire from a particle system on the flow object.
+      Create smoke or fire from a particle system on the flow object.
+      which can be select with a :ref:`ui-data-id`.
 
       Note that only *Emitter* type particle systems can add smoke.
-      See :doc:`Particles </physics/particles/introduction>` for information on how to create a
-      particle system.
+      See :doc:`Particles </physics/particles/introduction>` for information on
+      how to create a particle system.
 
-      With this option selected, there is a box to select a particle system and one additional
-      setting, *Set Size*.
+      Set Size
+         When this setting is enabled, it allows the *Size* setting to define the maximum distance in voxels
+         at which particles can emit smoke, similar to the *Surface Emission* setting for mesh sources.
 
-         Set Size
-            When this setting is enabled, it allows the *Size* setting to define the maximum distance
-            in voxels at which particles can emit smoke, similar to the *Surface Emission* setting for
-            mesh sources.
+         When disabled, particles will fill the nearest :term:`voxel` with smoke.
 
-            When disabled, particles will fill the nearest :term:`voxel` with smoke.
 
 .. _bpy.types.FluidFlowSettings.use_initial_velocity:
 
@@ -199,8 +196,8 @@ Normal
 .. _bpy.types.FluidFlowSettings.velocity_coord:
 
 Initial X, Y, Z
-   Initial velocity along X, Y, Z coordinates. Can be used in addition to initial velocity along
-   :ref:`Normal <bpy.types.FluidFlowSettings.velocity_normal>`.
+   Initial velocity along X, Y, Z coordinates. Can be used in addition to the initial velocity along
+   the :ref:`Normal <bpy.types.FluidFlowSettings.velocity_normal>`.
 
 .. _bpy.types.FluidFlowSettings.use_texture:
 
@@ -235,5 +232,3 @@ Size
 
 Offset
    Translates the texture along the Z axis.
-
-

@@ -832,7 +832,7 @@ This page lists definitions for terms used in Blender and this manual.
       of the particular color model, are combined evenly.
 
       A white point is defined by a set of CIE illuminates which correspond to a color temperature.
-      For example, D65 corresponds to 6500K light, D70 corresponding to 7000K and so on.
+      For example, D65 corresponds to 6500 K light, D70 corresponding to 7000 K and so on.
 
    World Space
       A 3D coordinate system that originates at a point at the origin of the world.

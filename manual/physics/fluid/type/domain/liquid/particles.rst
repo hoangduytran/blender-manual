@@ -22,6 +22,7 @@ Bubbles
    move below the liquid surface.
 
 .. note::
+
    Enabling a secondary particle type will also create a particle system for that type of particles.
    Disabling a particle type will delete this particle system including its settings.
 
@@ -29,7 +30,7 @@ Bubbles
 
 Combined Export
    Select particle types that should go into the same particle system. This option has no effect
-   on the outcome of the simulation. It only changes the way particle systems are allocated in the 
+   on the outcome of the simulation. It only changes the way particle systems are allocated in the
    particle settings.
 
 .. _bpy.types.FluidDomainSettings.particle_scale:
@@ -54,38 +55,38 @@ Wave Crest Potential Minimum
 .. _bpy.types.FluidDomainSettings.sndparticle_potential_max_trappedair:
 
 Trapped Air Potential Maximum
-   Upper clamping threshold for marking fluid cells where air is trapped. A higher value results in less
-   marked cells.
+   Upper clamping threshold for marking fluid cells where air is trapped.
+   A higher value results in less marked cells.
 
 .. _bpy.types.FluidDomainSettings.sndparticle_potential_min_trappedair:
 
 Trapped Air Potential Minimum
-   Lower clamping threshold for marking fluid cells where air is trapped. A lower value results in more
-   marked cells).
+   Lower clamping threshold for marking fluid cells where air is trapped.
+   A lower value results in more marked cells.
 
 .. _bpy.types.FluidDomainSettings.sndparticle_potential_max_energy:
 
 Kinetic Energy Potential Maximum
-   Upper clamping threshold for marking fluid cells where air is trapped. A higher value results in less
-   marked cells.
+   Upper clamping threshold for marking fluid cells where air is trapped.
+   A higher value results in less marked cells.
 
 .. _bpy.types.FluidDomainSettings.sndparticle_potential_min_energy:
 
 Kinetic Energy Potential Minimum
-   Lower clamping threshold that indicates the fluid speed where cells start to emit particles. A lower
+   Lower clamping threshold that indicates the fluid speed where cells start to emit particles.
+   A lower
    values result in generally more particles.
 
 .. _bpy.types.FluidDomainSettings.sndparticle_potential_radius:
 
 Potential Radius
-   Radius to compute potential for each cell. Higher values are slower but create smoother potential
-   grids.
+   Radius to compute potential for each cell. Higher values are slower but create smoother potential grids.
 
 .. _bpy.types.FluidDomainSettings.sndparticle_update_radius:
 
 Particle Update Radius
-   Radius to compute position update for each particle. Higher values are slower but particles move
-   less chaotic.
+   Radius to compute position update for each particle.
+   Higher values are slower but particles move less chaotic.
 
 .. _bpy.types.FluidDomainSettings.sndparticle_sampling_wavecrest:
 
@@ -131,12 +132,9 @@ Particles in Boundary
 .. _bpy.ops.fluid.free_particles:
 
 Bake Particles, Free Particles
-   This option is only avaible when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>`
-   cache type.
+   This option is only available when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>` cache type.
 
-   The progress will be displayed in the status bar. Pressing the :kbd:`Esc` button will pause the simulation.
+   The progress will be displayed in the status bar. Pressing :kbd:`Esc` will pause the simulation.
 
-   Once the simulation has been baked, the cache can be deleted by pressing *Free Particles*. It is possible
-   to pause / resume a *Bake Particles* job. 
-
-
+   Once the simulation has been baked, the cache can be deleted by pressing *Free Particles*.
+   It is possible to pause or resume a *Bake Particles* process.

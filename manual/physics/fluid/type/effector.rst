@@ -14,6 +14,7 @@ Then select *Effector* as the fluid *Type*.
    The influence individual force types have can be
    :doc:`controlled </physics/fluid/type/domain/field_weights>` per domain object.
 
+
 .. _bpy.types.FluidEffectorSettings:
 
 Settings
@@ -29,17 +30,17 @@ Settings
 
 Effector Type
    Collision
-      Objects of this type will collide with fluid.       
+      Objects of this type will collide with fluid.
 
    Guide
-      The velocity of objects of this type will be used when baking the guiding. Fluid guiding objects
-      should therefore move and have some velocity.
+      The velocity of objects of this type will be used when baking the guiding.
+      So fluid guiding objects should move and have some velocity.
 
       .. _bpy.types.FluidEffectorSettings.velocity_factor:
 
       Velocity Factor
-         Multiply the guiding object velocities by this factor. This is useful when working with multiple
-         guiding objects and some of them should have higher / smaller velocities.
+         Multiply the guiding object velocities by this factor. This is useful when working with
+         multiple guiding objects and some of them should have higher or smaller velocities.
 
       .. _bpy.types.FluidEffectorSettings.guide_mode:
 
@@ -50,7 +51,7 @@ Effector Type
          Maximize
             The guiding object will compare the existing velocity in the global velocity field with
             its own velocity. If its absolute value is greater than the absolute value in the velocity
-            field the guiding velocity will be kept. 
+            field the guiding velocity will be kept.
 
          Minimize
             A guiding object will compare the existing velocity in the global velocity field with its
@@ -58,9 +59,10 @@ Effector Type
             field the guiding velocity will be kept.
 
          Override
-            The most intuitive option. A guiding object will always write its own current velocity
-            into the global guiding velocity field. Values in the velocity field from a previous
-            frame or guiding object will be overridden.
+            The most intuitive option. A guiding object will always
+            write its own current velocity into the global guiding velocity field.
+            Values in the velocity field from a previous frame or guiding object
+            will be overridden.
 
          Averaged
             A guiding object will write the average of its own current velocity and the existing
@@ -78,6 +80,4 @@ Is Planar
 .. _bpy.types.FluidEffectorSettings.surface_distance:
 
 Surface Thickness
-   Additional area around the effector that will be considered as an effector. 
-
-
+   Additional area around the effector that will be considered as an effector.

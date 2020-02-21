@@ -234,17 +234,17 @@ Shape Keys
    * - .. figure:: /images/animation_drivers_workflow-examples_chained-shape-keys-basis.png
           :width: 200px
 
-          Basis
+          Basis.
 
      - .. figure:: /images/animation_drivers_workflow-examples_chained-shape-keys-key1.png
           :width: 200px
 
-          Key 1: top faces moved up by 1m
+          Key 1: top faces moved up by 1 m.
 
      - .. figure:: /images/animation_drivers_workflow-examples_chained-shape-keys-key2.png
           :width: 200px
 
-          Key 2: inner top moved up by 1m
+          Key 2: inner top moved up by 1 m.
 
 
 Drivers

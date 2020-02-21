@@ -32,7 +32,7 @@ textures representing the density, heat, and velocity of other fluids or suspend
 
    Example of a fire simulation.
 
-Gases / smoke are emitted inside of a :doc:`Domain </physics/fluid/type/domain/index>`
+Gases or smoke are emitted inside of a :doc:`Domain </physics/fluid/type/domain/index>`
 from a mesh object or particle system.
 The smoke movement is controlled by airflow inside the domain, which can be influenced by
 :doc:`Effector </physics/fluid/type/effector>` objects. Smoke will also be affected by the scene's
@@ -58,8 +58,8 @@ one :doc:`Flow </physics/fluid/type/flow>` object are required to create a fluid
 .. note::
 
    There is a :ref:`Quick Fluid and Quick Smoke <bpy.ops.object.quick>` tools
-   which will automatically create a domain object with a basic liquid/smoke/fire material.
+   which will automatically create a domain object with a basic material.
    There is a *Quick Liquid* and *Quick Smoke* which will automatically create a domain object with
-   a basic liquid or smoke & fire material.
+   a basic liquid or smoke and fire material.
 
 

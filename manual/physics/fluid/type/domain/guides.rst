@@ -23,8 +23,9 @@ therefore recommended to only enable *Guides* when there is a clear intention to
 simulation.
 
 .. seealso::
-   Fluid guiding is an implementation of `Primal-Dual Optimization for Fluids
-   <https://ge.in.tum.de/publications/2017-cgf-eckert/>`__.
+
+   Fluid guiding is an implementation of
+   `Primal-Dual Optimization for Fluids <https://ge.in.tum.de/publications/2017-cgf-eckert/>`__.
 
 .. _bpy.types.FluidDomainSettings.guide_alpha:
 
@@ -49,10 +50,10 @@ Velocity Factor
 
 Velocity Source
    Guiding velocities can either come from objects that move inside the domain or from other fluid
-   domains. 
+   domains.
 
    Effector
-      All effector objects inside the domain will be considered for the global guiding velocity grid. 
+      All effector objects inside the domain will be considered for the global guiding velocity grid.
       Once effector objects have been baked it is not possible to change the fluid domain resolution
       anymore.
 
@@ -72,14 +73,12 @@ Guide parent
 .. _bpy.ops.fluid.free_guides:
 
 Bake Guides, Free Guides
-   This option is only available when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>`
-   cache type and when using *Effector* as the
-   :ref:`Velocity Source<bpy.types.FluidDomainSettings.guide_source>`. *Bake Guides* writes vertex
-   velocities of effector objects to disk. It is meant to be used before baking the fluid simulation.
+   This option is only available when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>` cache type
+   and when using *Effector* as the :ref:`Velocity Source<bpy.types.FluidDomainSettings.guide_source>`.
+   *Bake Guides* writes vertex velocities of effector objects to drive.
+   It is meant to be used before baking the fluid simulation.
 
-   The progress will be displayed in the status bar. Pressing the :kbd:`Esc` button will pause the simulation.
+   The progress will be displayed in the status bar. Pressing :kbd:`Esc` will pause the simulation.
 
-   Once the simulation has been baked, the cache can be deleted by pressing *Free Guides*. It is possible
-   to pause / resume a *Bake Guides* job.
-
-
+   Once the simulation has been baked, the cache can be deleted by pressing *Free Guides*.
+   It is possible to pause or resume a *Bake Guides* process.
