@@ -104,4 +104,4 @@ Bake Noise, Free Noise
    The progress will be displayed in the status bar. Pressing :kbd:`Esc` will pause the simulation.
 
    Once the simulation has been baked, the cache can be deleted by pressing *Free Noise*.
-   It is possible to pause or resume a *Bake Noise* progress.
+   It is possible to pause or resume a *Bake Noise* process.

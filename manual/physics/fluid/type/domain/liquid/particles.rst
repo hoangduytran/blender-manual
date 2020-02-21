@@ -30,8 +30,8 @@ Bubbles
 
 Combined Export
    Select particle types that should go into the same particle system. This option has no effect
-   on the outcome of the simulation. It only changes the way particle systems are allocated in the
-   particle settings.
+   on the outcome of the simulation. It only changes the way particle systems are allocated in
+   the particle settings.
 
 .. _bpy.types.FluidDomainSettings.particle_scale:
 

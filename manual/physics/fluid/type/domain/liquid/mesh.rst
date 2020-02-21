@@ -141,7 +141,7 @@ Bake Mesh, Free Mesh
    This option is only available when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>`
    cache type.
 
-   The progress will be displayed in the status bar. Pressing :kbd:`Esc` button will abort the simulation.
+   The progress will be displayed in the status bar. Pressing :kbd:`Esc` will abort the simulation.
 
    Once the simulation has been baked, the cache can be deleted by pressing *Free Mesh*.
    It is possible to pause or resume a *Bake Mesh* process.
