@@ -28,7 +28,6 @@ allows you to select a module from the list of loaded style modules.
    A screen capture of a style module ``cartoon.py`` loaded in the Text Editor (left),
    as well as Freestyle options in the Python Scripting mode in the View Layers buttons (right).
 
-
 Freestyle for Blender comes with a number of Python style modules that can serve as a starting
 point of your own style module writing. See also the section of the Freestyle Python API in
 the Blender Python API reference manual for the full detail of style module constructs.
@@ -187,7 +186,6 @@ The sorting operator ``Operators.sort()`` arranges the stacking order of active 
 It takes as argument a binary predicate used as a "smaller than" operator to order two 1D elements. ::
 
    Operators.sort(Length2DBP1D())
-
 
 In this code example, the sorting uses the ``Length2DBP1D`` binary predicate to sort
 the ``Interface1D`` objects in the ascending order in terms of 2D length.

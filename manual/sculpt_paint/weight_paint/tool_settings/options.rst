@@ -8,7 +8,7 @@ Options
 
    Paint options.
 
-The weight paint options change the overall brush behavior:
+The weight paint options change the overall brush behavior.
 
 Auto Normalize
    Ensures that all deforming vertex groups add up to one while painting.

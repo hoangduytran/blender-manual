@@ -220,7 +220,6 @@ Inner Miter :kbd:`I`
 
              Arc inner miter.
 
-
 Spread
    The value used to spread extra vertices apart for *Outer* and *Inner Miters*.
 

@@ -9,6 +9,7 @@ Scopes
 
    Scopes in the image editor.
 
+
 Histogram
 =========
 

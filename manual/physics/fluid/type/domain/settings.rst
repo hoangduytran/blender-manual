@@ -112,6 +112,7 @@ Border Collisions
 Controls which sides of the domain will allow fluid "pass through" the domain, making it disappear
 without influencing the rest of the simulation, and which sides will deflect fluids.
 
+
 Smoke
 =====
 
@@ -222,6 +223,7 @@ Minimum
 
 Flame Color
    Color of flame created by burnt fuel.
+
 
 .. _bpy.types.FluidDomainSettings.use_flip_particles:
 

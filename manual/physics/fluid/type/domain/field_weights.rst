@@ -20,5 +20,3 @@ All
    Overall influence of all force fields.
 
 The other settings determine how much influence individual force field types have.
-
-

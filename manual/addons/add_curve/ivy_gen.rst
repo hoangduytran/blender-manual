@@ -27,7 +27,6 @@ Interface
    :align: right
    :width: 220px
 
-
 Located in the :menuselection:`3D View --> Sidebar --> Create tab`.
 
 Located in the :menuselection:`3D View --> Operator`.

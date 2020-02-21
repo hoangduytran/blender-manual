@@ -61,7 +61,6 @@ Instructions
 - You can view each camera pressing the screen icon and also add camera markers using the arrow icon.
   (Useful for setting up camera switching during animations.)
 
-
 As all stored definitions are saved in the blend-file, you can save the file and
 the next time you use it, the stored views or point of view will be ready.
 

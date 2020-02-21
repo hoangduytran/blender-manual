@@ -10,6 +10,7 @@ To define any mesh object as a *Flow* object, add Fluid physics by clicking *Flu
 :menuselection:`Properties --> Physics`. Then select *Flow* as the fluid *Type*. Now you should have
 a default fluid flow source object.
 
+
 .. _bpy.types.FluidFlowSettings:
 
 Settings
@@ -125,6 +126,7 @@ Vertex Group
    When set, use the specified :doc:`Vertex Group </modeling/meshes/properties/vertex_groups/vertex_groups>`
    to control where smoke is emitted.
 
+
 .. _bpy.types.FluidFlowSettings.use_particle_size:
 
 Flow Source
@@ -198,6 +200,7 @@ Normal
 Initial X, Y, Z
    Initial velocity along X, Y, Z coordinates. Can be used in addition to the initial velocity along
    the :ref:`Normal <bpy.types.FluidFlowSettings.velocity_normal>`.
+
 
 .. _bpy.types.FluidFlowSettings.use_texture:
 

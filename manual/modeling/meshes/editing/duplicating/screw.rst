@@ -103,7 +103,6 @@ and at the place where you clicked to start performing the operation
 
    Error message when clicking in the Screw Tool with an incorrect or bad selection.
 
-
 You may have as many profiles as you like (like circles, squares, and so on)
 -- Note that, not all vertices in a profile need to be in the same plane,
 even if this is the most common case. You may also have other, more complex,

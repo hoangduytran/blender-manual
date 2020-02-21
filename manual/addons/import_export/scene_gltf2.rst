@@ -532,7 +532,6 @@ Animation
 
 Exports active actions and NLA tracks as glTF animations.
 
-
 Limit to Playback Range
    Clips animations to selected playback range.
 Sampling Rate

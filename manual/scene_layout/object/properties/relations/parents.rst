@@ -161,7 +161,6 @@ when it is assigned to the new parent "EmptyB";
 
    The Object (Keep Transform) parent method.
 
-
 If you want to follow along with the above description here is the blend-file used to describe
 *Object (Keep Transform)* parenting method:
 

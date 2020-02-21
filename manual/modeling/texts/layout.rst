@@ -112,7 +112,6 @@ inside each frame word-wrapped.
 It flows between frames when a lower-numbered frame cannot fit any more text.
 If the last frame is reached, text overflows out of it (by default, see options below).
 
-
 .. figure:: /images/modeling_texts_layout_frame-upperpanel-area.png
 
    Text Boxes panel.

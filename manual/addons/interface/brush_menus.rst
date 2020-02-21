@@ -3,6 +3,8 @@
 Dynamic Brush Menus
 *******************
 
+Provides access to commonly used settings and tools for painting/sculpting.
+
 
 Activation
 ==========
@@ -13,9 +15,6 @@ Activation
 
 Description
 ===========
-
-Provides access to commonly used settings and tools for painting/sculpting.
-
 
 .. rubric:: Features of Note:
 

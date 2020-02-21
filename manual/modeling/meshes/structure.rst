@@ -233,6 +233,7 @@ For a detailed description of how to work with loops in Blender, see:
    Poles are vertices that are connected to either three, five, or more edges. Accordingly,
    vertices connected to exactly one, two or four edges are not poles.
 
+
 .. _modeling-mesh-structure-edge-loops:
 
 .. rubric:: Edge Loops

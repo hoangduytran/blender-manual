@@ -8,7 +8,6 @@ Introduction
 
    :Panel:     :menuselection:`Properties --> Modifiers`
 
-
 Grease Pencil has their own set of Modifiers.
 Modifiers are automatic operations that affect an object in a non-destructive way.
 With modifiers, you can perform many effects automatically that would otherwise be

@@ -116,6 +116,7 @@ Bake All, Free All
    Once the simulation has been baked, the cache can be deleted by pressing *Free All*.
    It is not possible to pause or resume a *Bake All* process as only the most essential cache files are stored on drive.
 
+
 .. _bpy.types.FluidDomainSettings.export_manta_script:
 
 Advanced

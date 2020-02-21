@@ -66,7 +66,6 @@ Pan Orbit Zoom Roll
 
 This panel provides incremental "User Screen View Perspective" navigation in the Sidebar.
 
-
 .. figure:: /images/addons_3d-view_3d-navigation_panel2.jpg
    :align: right
    :width: 220px

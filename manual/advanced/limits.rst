@@ -15,10 +15,8 @@ Space
 =====
 
 While object positions, vertex locations are not clamped, larger values become increasingly imprecise.
-
 To get an idea of the precision you can work with using different scales.
-
-Here's a table of scales and their associated accuracy.
+Here's a table of scales and their associated accuracy:
 
 .. # Python script used to generate the values below
    import ctypes
@@ -60,7 +58,7 @@ Time
       print(":%d fps: %d hours, %d minutes." %
             (fps, seconds // 3600, seconds % 3600 // 60))
 
-The maximum number of frames for each scene is currently 1,048,574, and allows for continuous shots for durations of:
+The maximum number of frames for each scene is currently 1,048,574, and allows for continuous shots for a duration of:
 
 :24 fps: 12 hours, 8 minutes.
 :25 fps: 11 hours, 39 minutes.
@@ -77,13 +75,12 @@ Text Fields
 ===========
 
 Fixed strings are used internally, and while it is not useful to list all limits, here are some common limits.
+*Used for data-block names, modifiers, vertex groups, UV layers...*
 
 :directory: 767
 :file-name: 255
 :file-path: 1023
 :identifier: 63
-
-*Used for data-block names, modifiers, vertex groups, UV layers...*
 
 .. note::
 

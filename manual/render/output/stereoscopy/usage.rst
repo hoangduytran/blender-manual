@@ -322,9 +322,8 @@ Compositor
 
 The Compositor works smoothly with multi-view images.
 The compositing of a view is completed before the remaining views start to be composited.
-The pipeline is the same as the single-view workflow, with the difference that you can use Images,
-Movies or Image Sequences in any of the supported multi-view formats.
-
+The pipeline is the same as the single-view workflow, with the difference that you can use images,
+movies or image sequences in any of the supported multi-view formats.
 
 .. figure:: /images/render_output_stereoscopy_usage_compositor.png
 

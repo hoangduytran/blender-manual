@@ -82,7 +82,6 @@ Examples
    \4) Face Split: On/Off, Tear Boundaries: On.
 
 
-
 .. _bpy.ops.mesh.dissolve_edges:
 
 Dissolve Edges

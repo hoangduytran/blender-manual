@@ -61,5 +61,3 @@ one :doc:`Flow </physics/fluid/type/flow>` object are required to create a fluid
    which will automatically create a domain object with a basic material.
    There is a *Quick Liquid* and *Quick Smoke* which will automatically create a domain object with
    a basic liquid or smoke and fire material.
-
-

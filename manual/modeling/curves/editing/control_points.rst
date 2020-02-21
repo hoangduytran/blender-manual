@@ -54,6 +54,7 @@ If the points belong to different curves, these are joined by a segment to becom
 Note that you can only join curves of the same type (i.e. Bézier with Bézier, NURBS with NURBS)
 Additionally, you can close a curve by toggling cyclic.
 
+
 .. _bpy.ops.transform.tilt:
 .. _modeling-curve-tilt:
 
