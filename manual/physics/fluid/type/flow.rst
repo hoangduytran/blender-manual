@@ -69,11 +69,11 @@ Sampling Substeps
 
    .. list-table:: Comparison of smoke inflow quickly rising upwards at different sub-step rates.
 
-      * - .. figure:: /images/physics_smoke_substep_off.png
+      * - .. figure:: /images/physics_fluid_type_flow_substep-off.png
 
              Sampling sub-steps: 0.
 
-        - .. figure:: /images/physics_smoke_substep_on.png
+        - .. figure:: /images/physics_fluid_type_flow_substep-on.png
 
              Sampling sub-steps: 3.
 
@@ -111,11 +111,11 @@ Fuel
 
    .. list-table:: Comparison of flames with varying fuel rates.
 
-      * - .. figure:: /images/physics_smoke_fuelrate_0.5.png
+      * - .. figure:: /images/physics_fluid_type_flow_fuelrate-0-5.png
 
              Fuel: 0.5.
 
-        - .. figure:: /images/physics_smoke_fuelrate_1.0.png
+        - .. figure:: /images/physics_fluid_type_flow_fuelrate-1-0.png
 
              Fuel: 1.0.
 

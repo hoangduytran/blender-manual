@@ -77,11 +77,11 @@ Field
 
    .. list-table:: Comparison of a fire simulation with and without color mapping.
 
-      * - .. figure:: /images/physics_smoke_comparison_colormapping_01.png
+      * - .. figure:: /images/physics_fluid_type_domain_gas_viewport-display_colormapping-1.png
 
              Slice view of "fire" grid without color mapping.
 
-        - .. figure:: /images/physics_smoke_comparison_colormapping_02.png
+        - .. figure:: /images/physics_fluid_type_domain_gas_viewport-display_colormapping-2.png
 
              Slice view of "fire" grid with color mapping.
 

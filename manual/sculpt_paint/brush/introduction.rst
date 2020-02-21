@@ -3,7 +3,7 @@
 Introduction
 ************
 
-.. figure:: /images/sculpt-paint_sculpting_introduction_brush-circle.png
+.. figure:: /images/sculpt-paint_brush_introduction_brush-circle.png
    :align: center
 
    Brush cursor.

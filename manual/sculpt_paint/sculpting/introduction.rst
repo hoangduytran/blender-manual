@@ -10,7 +10,7 @@ an area of the model is altered using a brush.
 In other words, instead of selecting a group of vertices,
 Sculpt Mode manipulates geometry in the brush region of influence.
 
-.. figure:: /images/sculpt_paint_sculpting_introduction.jpg
+.. figure:: /images/sculpt-paint_sculpting_introduction_example.jpg
 
    Sculpting Mode Example.
 

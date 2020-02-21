@@ -47,11 +47,11 @@ Use Speed Vectors
 
    .. list-table:: Comparison of a liquid splash with and without motion blur (rendered with Cycles).
 
-      * - .. figure:: /images/physics_liquid_motionblur_on.png
+      * - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_motionblur-on.png
 
              Motion blur enabled.
 
-        - .. figure:: /images/physics_liquid_motionblur_off.png
+        - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_motionblur-off.png
 
              Motion blur disabled.
 
@@ -75,7 +75,7 @@ Smoothing Negative
    High values will preserve details, however, the mesh outline will become more ragged
    (e.g. a single mesh particle will become less rounded and have more flat sides).
 
-   .. figure:: /images/physics_liquid_mesh_smoothing_comparison.png
+   .. figure:: /images/physics_fluid_type_domain_liquid_mesh_smoothing-comparison.png
       :align: center
 
       Comparison of a liquid drop hitting a surface (viewed from top) with varying smoothing values.
@@ -98,39 +98,39 @@ Concavity Lower
    .. list-table:: Crown splash with varying upper and lower concavity settings. Note that setting
       the concavity values to the same value produces a very granular mesh.
 
-      * - .. figure:: /images/physics_liquid_mesh_concavity_01.png
+      * - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-01.png
 
              Upper: 1.0, Lower: 0.0.
 
-        - .. figure:: /images/physics_liquid_mesh_concavity_02.png
+        - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-02.png
 
              Upper: 1.0, Lower: 0.5.
 
-        - .. figure:: /images/physics_liquid_mesh_concavity_03.png
+        - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-03.png
 
              Upper: 1.0, Lower: 1.0.
 
-      * - .. figure:: /images/physics_liquid_mesh_concavity_04.png
+      * - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-04.png
 
              Upper: 1.5, Lower: 0.0.
 
-        - .. figure:: /images/physics_liquid_mesh_concavity_05.png
+        - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-05.png
 
              Upper: 1.5, Lower: 0.5.
 
-        - .. figure:: /images/physics_liquid_mesh_concavity_06.png
+        - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-06.png
 
              Upper: 1.5, Lower: 1.0.
 
-      * - .. figure:: /images/physics_liquid_mesh_concavity_07.png
+      * - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-07.png
 
              Upper: 2.0, Lower: 0.0.
 
-        - .. figure:: /images/physics_liquid_mesh_concavity_08.png
+        - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-08.png
 
              Upper: 2.0, Lower: 0.5.
 
-        - .. figure:: /images/physics_liquid_mesh_concavity_09.png
+        - .. figure:: /images/physics_fluid_type_domain_liquid_mesh_concavity-09.png
 
              Upper: 2.0, Lower: 1.0.
 

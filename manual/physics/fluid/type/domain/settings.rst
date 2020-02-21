@@ -154,11 +154,11 @@ Vorticity
 
    .. list-table:: Comparison of different amounts of vorticity.
 
-      * - .. figure:: /images/physics_smoke_domain_vorticity_off.png
+      * - .. figure:: /images/physics_fluid_type_domain_settings_vorticity-off.png
 
              Domain with a vorticity of 0.0.
 
-        - .. figure:: /images/physics_smoke_domain_vorticity_on.png
+        - .. figure:: /images/physics_fluid_type_domain_settings_vorticity-on.png
 
              Domain with a vorticity of 0.2.
 

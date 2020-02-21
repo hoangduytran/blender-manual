@@ -12,7 +12,7 @@ For a fluid simulation you have to have a domain to define the space that the si
 In the domain settings you will be able to define the global simulation parameters (such as viscosity
 and gravity).
 
-.. figure:: /images/physics_liquid_introduction.png
+.. figure:: /images/physics_fluid_introduction_liquid-example.png
    :align: center
 
    Example of a liquid simulation.
@@ -27,7 +27,7 @@ It simulates the fluid movement of air and generates animated :term:`voxel`
 textures representing the density, heat, and velocity of other fluids or suspended particles
 (e.g. smoke) which can be used for rendering.
 
-.. figure:: /images/physics_smoke_introduction.png
+.. figure:: /images/physics_fluid_introduction_fire-example.png
    :align: center
 
    Example of a fire simulation.

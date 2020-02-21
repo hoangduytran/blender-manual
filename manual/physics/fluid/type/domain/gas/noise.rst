@@ -56,19 +56,19 @@ Time
    .. list-table:: Smoke plume with varying animation time. While the fluid motion of all four smoke
       plumes are alike each example has a unique look.
 
-      * - .. figure:: /images/physics_smoke_noise_timeanim_0.1.png
+      * - .. figure:: /images/physics_fluid_type_domain_gas_noise_timeanim-0-1.png
 
              Animation Time: 0.1
 
-        - .. figure:: /images/physics_smoke_noise_timeanim_1.0.png
+        - .. figure:: /images/physics_fluid_type_domain_gas_noise_timeanim-1-0.png
 
              Animation Time: 1.0
 
-      * - .. figure:: /images/physics_smoke_noise_timeanim_2.5.png
+      * - .. figure:: /images/physics_fluid_type_domain_gas_noise_timeanim-2-5.png
 
              Animation Time: 2.5
 
-        - .. figure:: /images/physics_smoke_noise_timeanim_10.0.png
+        - .. figure:: /images/physics_fluid_type_domain_gas_noise_timeanim-10-0.png
 
              Animation Time: 10.0
 
@@ -81,18 +81,18 @@ Time
    .. list-table:: Comparison of fire simulations with and without noise at the same grid
       resolution.
 
-      * - .. figure:: /images/physics_smoke_comparison_noise_baseres_01.png
+      * - .. figure:: /images/physics_fluid_type_domain_gas_noise_base-res-1.png
 
              Resolution Division: 200, without noise
 
-        - .. figure:: /images/physics_smoke_comparison_noise_baseres_02.png
+        - .. figure:: /images/physics_fluid_type_domain_gas_noise_base-res-2.png
 
              Resolution Divisions: 100, Noise scale: 2.
 
    Low division simulations with lots of *Upres Factor* divisions generally appear smaller in
    real-world scale and can be used to achieve pyroclastic plumes such as in the following image:
 
-   .. figure:: /images/physics_smoke_note_resolution.jpg
+   .. figure:: /images/physics_fluid_type_domain_gas_noise_note-resolution.jpg
       :align: center
 
 .. _bpy.ops.fluid.bake_noise:
