@@ -15,7 +15,7 @@ Rotation is permitted about the Z axis of the object hosting the Physics constra
 Adjusting the position and rotation of the object hosting the constraint allows you to
 control the anchor and axis of the hinge.
 
-The Hinge is the only one-axis rotational constraint that uses the Z axis instead of the X axis.
+The Hinge is the only single-axis rotational constraint that uses the Z axis instead of the X axis.
 If something is wrong with your hinge, check your other constraints to see if this might be the problem.
 
 .. TODO2.8:

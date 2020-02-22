@@ -43,7 +43,6 @@ Here's a table of scales and their associated accuracy:
 .. hint::
 
    For a rough rule of thumb, values within -5,000/+5,000 are typically reliable (range of 10,000).
-
    Internally *single precision* floating point calculations are used.
 
 
@@ -58,7 +57,7 @@ Time
       print(":%d fps: %d hours, %d minutes." %
             (fps, seconds // 3600, seconds % 3600 // 60))
 
-The maximum number of frames for each scene is currently 1,048,574, and allows for continuous shots for a duration of:
+The maximum number of frames for each scene is currently 1,048,574, and allows for continuous shots for durations of:
 
 :24 fps: 12 hours, 8 minutes.
 :25 fps: 11 hours, 39 minutes.

@@ -70,7 +70,7 @@ Animation Options
 Draw Mode
 ---------
 
-In *Draw Mode* there are two option related to the animation workflow that you can use.
+In Draw Mode there are two option related to the animation workflow that you can use.
 
 .. figure:: /images/grease-pencil_animation_introduction_drawing-options.png
 
