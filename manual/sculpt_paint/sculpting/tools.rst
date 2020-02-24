@@ -101,6 +101,14 @@ Grab :kbd:`G`
    The effect is similar to moving a group of vertices in Edit Mode with Proportional Editing enabled,
    except that *Grab* can make use of other Sculpt Mode options (like textures and symmetry).
 
+   Grab Active Vertex
+      Snaps the maximum strength of the brush to the highlighted active vertex,
+      making it easier to manipulate low poly models or meshes with subdivision surfaces.
+
+      Enabling *Grab Active Vertex* also enables a dynamic mesh preview which
+      generates a preview of vertices connected to om the active vertex.
+      This helps to visualize the real geometry that is being manipulating while sculpting with active modifiers.
+
 Snake Hook :kbd:`K`
    Pulls vertices along with the movement of the brush to create long, snake-like forms.
 
