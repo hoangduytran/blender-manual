@@ -38,6 +38,7 @@ Hide Masked
 
 
 .. _sculpt-mask-menu:
+.. _bpy.ops.paint.mask:
 
 Mask
 ====
@@ -54,6 +55,13 @@ Brush
 
 In order to edit the mask, select the *Mask Brush* from the Brush panel.
 
+
+.. _bpy.ops.paint.mask_flood_fill:
+.. _bpy.ops.paint.mask_lasso_gesture:
+.. _bpy.ops.sculpt.mask_filter:
+.. _bpy.ops.sculpt.mask_expand:
+.. _bpy.ops.mesh.paint_mask_slice:
+.. _bpy.ops.sculpt.dirty_mask:
 
 Editing
 -------
@@ -76,6 +84,20 @@ Lasso Mask :kbd:`Shift-Ctrl-LMB`
 
       To clear the mask of areas with the *Lasso Mask* tool, first invert the mask,
       apply the *Lasso Mask*, and then invert the mask back.
+
+Mask Extract
+   Creates a duplicate mesh object based on masked geometry.
+
+   Threshold
+      Minimum mask value to consider the vertex valid to extract a face from the original mesh.
+   Add Boundary Loop
+      It can extract the paint mask creating a boundary loop in the geometry, making it ready for adding a subdivision surface modifier.
+   Smooth Iterations
+      Smooth iterations applied to the extracted mesh.
+   Project to Sculpt
+      Project the extracted mesh on to the original sculpt object.
+   Extract as Solid
+      Adds a :doc:`Solidify Modifier </modeling/modifiers/generate/solidify>` to the newly created mesh object.
 
 Mask Slice
    Removes the masked vertices from the mesh.
