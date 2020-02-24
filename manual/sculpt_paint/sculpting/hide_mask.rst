@@ -101,13 +101,20 @@ Mask Filters
    Auto Iteration Count
       Use a automatic number of iterations based on the number of vertices of the sculpt.
 
+Expand Mask by Topology :kbd:`Shift-A`
+   Creates a mask radiating outwards from the active vertex in a uniform manner.
+
+Expand Mask by Curvature :kbd:`Shift-Alt-A`
+   Creates a mask radiating outwards from the active vertex while following the curvature of the mesh.
+
 Mask Extract
    Creates a duplicate mesh object based on masked geometry.
 
    Threshold
       Minimum mask value to consider the vertex valid to extract a face from the original mesh.
    Add Boundary Loop
-      It can extract the paint mask creating a boundary loop in the geometry, making it ready for adding a subdivision surface modifier.
+      Creates and extra boundary loop on the edges of the geometry,
+      making it ready for adding a subdivision surface modifier later.
    Smooth Iterations
       Smooth iterations applied to the extracted mesh.
    Project to Sculpt
