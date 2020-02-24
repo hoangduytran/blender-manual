@@ -20,7 +20,6 @@ Todo 2.81.
 
 .. _bpy.types.Mesh.remesh:
 .. _bpy.ops.object.voxel_remesh:
-.. _bpy.ops.object.quadriflow_remesh:
 
 Remeshing
 =========
@@ -82,25 +81,44 @@ Voxel Remesh
    Todo 2.81.
 
 
+.. _bpy.ops.object.quadriflow_remesh:
+
 Quad
 ----
 
+The Quad remesh uses the Quadriflow algorithm to create a :term:`quad`
+based mesh with few poles and edge loops following the curvature of the surface.
+This method is relatively slow but generates higher quality for final topology.
+
+.. warning::
+
+   Performing *Quadriflow Remesh* will lose all mesh object data layers associated with the original mesh.
+
 Quadriflow Remesh
-   Todo 2.81.
+   Opens a popup window used to set parameters for the remesh operation.
 Use Paint Symmetry
-   Todo 2.81.
+   Generates a symmetrical mesh using the :doc:`paint symmetry </sculpt_paint/brush/symmetry>` options.
 Preserve Sharp
-   Todo 2.81.
+   Tells the algorithm to try to preserve sharp features of the mesh.
+   Enabling this could make the operator slower depending on the complexity of the mesh.
 Preserve Mesh Boundary
-   Todo 2.81.
+   Tells the algorithm to try to preserve the original volume of the mesh.
+   Enabling this could make the operator slower depending on the complexity of the mesh.
 Use Mesh Curvature
-   Todo 2.81.
+   Take the mesh curvature into account when remeshing.
 Preserve Paint Mask
-   Todo 2.81.
+   Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
 Smooth Normals
    Applies the :ref:`Smooth Normals <bpy.ops.object.shade_smooth>` operator to the resulting mesh.
-
 Modes
-   Todo 2.81.
-Number of Faces
-   Todo 2.81.
+   How to specify the amount of detail for the new mesh.
+
+   Ratio
+      Specify target number of faces relative to the current mesh.
+   Edge Length
+      Input target edge length in the new mesh.
+   Faces
+      Input target number of faces in the new mesh.
+Seed
+   Random :term:`seed` to use with the solver;
+   different seeds will cause the remesher to come up with different quad layouts on the mesh
