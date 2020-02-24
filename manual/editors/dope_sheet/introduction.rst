@@ -209,7 +209,7 @@ Make Markers Local
    Available in :doc:`Action </editors/dope_sheet/action>` and :doc:`Shape Key </editors/dope_sheet/shape_key>` modes.
    Converts selected scene markers in pose markers, assigning them to the active action.
 
-For more information and the description of the other marker tools
+For more information and the description of the other marker tools,
 see :ref:`Editing Markers <animation-markers-editing>`.
 
 
