@@ -28,11 +28,11 @@ Hiding is shared between Edit Mode and Sculpt Mode
 
 Show All :kbd:`Alt-H`
    Reveal all hidden parts.
+Show Bounding Box :kbd:`Shift-H`
+   To reveal a hidden part of a mesh inside the selection.
 Hide Bounding Box :kbd:`H`
    To hide a part of a mesh inside the selection.
    This works similar to :ref:`Box Select <tool-select-box>` tool.
-Show Bounding Box :kbd:`Shift-H`
-   To reveal a hidden part of a mesh inside the selection.
 Hide Masked
    Hides all masked vertices.
 
@@ -110,6 +110,9 @@ Mask Slice
       Create a new object from the masked geometry.
 
 
+.. _bpy.types.Sculpt.show_mask:
+.. _bpy.types.View3DOverlay.sculpt_mode_mask_opacity:
+
 Displaying
 ----------
 
@@ -123,6 +126,7 @@ The mask display can be toggled as a :doc:`viewport overlay </editors/3dview/con
 In the overlay popover, the opacity of the mask overlay can be adjusted to make it more or less visible on the mesh.
 
 
+.. _bpy.ops.mesh.customdata_mask_clear:
 .. _sculpt_mask_clear-data:
 
 Clearing Mask Data
