@@ -46,7 +46,7 @@ Crease :kbd:`Shift-C`
    Creates sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.
 
 Smooth :kbd:`S`
-   As the name suggests, eliminates irregularities in the area of the mesh within the brush's
+   Eliminates irregularities in the area of the mesh within the brush's
    influence by smoothing the positions of the vertices.
 
 Flatten :kbd:`Shift-T`
@@ -164,12 +164,33 @@ Mask :kbd:`M`
          Pressing :kbd:`Shift` with the mask brush active will toggle the mask smoothing mode.
 
 Mesh Filter
-   Todo
+   Applies a deformation to all vertices in the mesh at the same time.
+   To use this tool, simply click and drag away from the object to have a positive effect
+   and click and drag towards the mesh to have a negative effect.
 
    Filter Type
+      Smooth
+         Eliminates irregularities of the mesh by making the positions of the vertices more uniform.
+         This filter works similar to the *Smooth Brush*.
+      Scale
+         Increases the size of the mesh.
+         This filter works similar to the :ref:`Scale Transform <bpy.ops.transform.scale>`.
+      Inflate
+         Displaces vertices uniformly along their normal.
+         This filter works similar to the *Inflate Brush*.
+      Sphere
+         Morphs the mesh to progressively look more like a sphere.
+         This filter works similar to the :ref:`To Sphere Transform <bpy.ops.transform.tosphere>`.
+      Random
+         Randomly moves vertices along the vertex normal.
+         This filter works similar to the :ref:`Randomize Transform <bpy.ops.object.randomize_transform>`.
       Relax
          Tries to create an even distribution of quads without deforming the volume of the mesh.
-         This works the same as the *Relax* mode of the *Slide Relax* brush.
+         This filter works the same as the *Relax* mode of the *Slide Relax* brush.
+   Strength
+      The amount of effect the filter has on the mesh.
+   Deformation Axis
+      Apply the deformation only on the selected axis.
 
 :ref:`Annotate <tool-annotate>`
    Draw free-hand annotation.
