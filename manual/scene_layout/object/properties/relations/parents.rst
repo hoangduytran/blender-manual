@@ -231,6 +231,13 @@ shows the position of the cube and armature before the bone is moved in Edit Mod
 moved and switched back into Pose Mode.
 Notice that the child object does not move to the new location of the pose bone.
 
+.. note::
+
+   When using :kbd:`Ctrl-P` to set parents, choosing "Bone" or "Bone Relative"
+   will respectively clear and set the bone's "Relative Parenting" option. Since
+   "Relative Parenting" is an option that is set per bone, this influences all
+   child objects of that bone at once.
+
 
 Vertex Parent
 =============
