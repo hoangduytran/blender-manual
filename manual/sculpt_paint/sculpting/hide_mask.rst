@@ -66,7 +66,8 @@ In order to edit the mask, select the *Mask Brush* from the Brush panel.
 Editing
 -------
 
-Masks can be edited across the entire model:
+Masks can be edited across the entire model.
+Using :kbd:`A` opens a pie menu to choose different operations.
 
 Invert Mask :kbd:`Ctrl-I`
    Inverts an existing mask.
@@ -84,6 +85,21 @@ Lasso Mask :kbd:`Shift-Ctrl-LMB`
 
       To clear the mask of areas with the *Lasso Mask* tool, first invert the mask,
       apply the *Lasso Mask*, and then invert the mask back.
+
+Mask Filters
+   Mask filters are operations that are applied to the whole paint mask.
+
+   Type
+      Smooth/Sharpen Mask
+         Modifies the crispness of the mask edge.
+      Grow/Shrink Mask
+         Modifies the size of the mask.
+      Increase/Decrease Contrast
+         Modifies the contrast of the mask.
+   Iterations
+      The number of times that the filter is going to be applied
+   Auto Iteration Count
+      Use a automatic number of iterations based on the number of vertices of the sculpt.
 
 Mask Extract
    Creates a duplicate mesh object based on masked geometry.
@@ -108,6 +124,9 @@ Mask Slice
       Fills concave holes with geometry that might have resulted from the *Mask Slice* operation.
    Slice to New Object
       Create a new object from the masked geometry.
+
+Dirty Mask
+   Generates a mask based on the geometry cavity and pointiness.
 
 
 .. _bpy.types.Sculpt.show_mask:
