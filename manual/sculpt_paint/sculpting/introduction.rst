@@ -60,11 +60,10 @@ Set Pivot
 ---------
 
 .. admonition:: Reference
-:class: refbox
+   :class: refbox
 
-:Mode:      Sculpt Mode
-:Menu:      :menuselection:`Sculpt --> Set Pivot`
-
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Sculpt --> Set Pivot`
 
 Origin
    Sets the pivot to the origin of the sculpt

@@ -205,7 +205,7 @@ Mesh Filter
          This filter works similar to the *Smooth Brush*.
       Scale
          Increases the size of the mesh.
-         This filter works similar to the :ref:`Scale Transform <bpy.ops.transform.scale>`.
+         This filter works similar to the :ref:`Scale Transform <bpy.ops.transform.resize>`.
       Inflate
          Displaces vertices uniformly along their normal.
          This filter works similar to the *Inflate Brush*.
