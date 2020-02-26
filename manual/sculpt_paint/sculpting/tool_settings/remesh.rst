@@ -40,16 +40,17 @@ Adaptivity
    This introduce triangulation to faces that do not need as much detail.
    Note, an *Adaptivity* value greater than zero disables *Fix Poles*.
 Fix Poles
-   Todo 2.81.
+   Tries to produce less :term:`Poles` at the cost of some performance to produce a better topological flow.
 Smooth Normals
    Applies the :ref:`Smooth Normals <bpy.ops.object.shade_smooth>` operator to the resulting mesh.
-
 Preserve Volume
-   Todo 2.81.
+   Tells the algorithm to try to preserve the original volume of the mesh.
+   Enabling this could make the operator slower depending on the complexity of the mesh.
 Preserve Paint Mask
-   Todo 2.81.
+   Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
 Voxel Remesh
-   Todo 2.81.
+   Performs the remeshing operation to create a new manifold mesh based on the volume of the current mesh.
+   Performing this will lose all mesh object data layers associated with the original mesh.
 
 .. note:: Limitations:
 
