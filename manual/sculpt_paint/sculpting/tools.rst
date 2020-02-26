@@ -223,6 +223,18 @@ Mesh Filter
    Deformation Axis
       Apply the deformation only on the selected axis.
 
+Move
+   Translation tool.
+
+Rotate
+   Rotation tool.
+
+Scale
+   Scale tool.
+
+Transform
+   Tool to adjust the objects translation, rotations and scale.
+
 :ref:`Annotate <tool-annotate>`
    Draw free-hand annotation.
 
