@@ -83,6 +83,12 @@ Anchors Vertex Group
    The weight of each vertex does not affect the behavior of the modifier,
    the method only takes into account vertices with weight greater than 0.
 
+   Invert ``<->``
+      Inverts the influence of the selected vertex group, meaning that the group
+      now represents vertices that will not be deformed by the modifier.
+
+      The setting reverses the weight values of the group.
+
 Bind
    The *Bind* button is what tells the *Laplacian Deform* modifier to actually capture the geometry details
    of the object, so that altering the anchor vertices actually alters the shape of the deformed object.

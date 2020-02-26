@@ -36,8 +36,12 @@ Vertex Group
       will be lost by all modifiers using it (their field will turn red),
       and you'll have to select the proper group again in all of them.
 
-Invert (double arrow icon)
-   Invert the influence of the vertex group. Only available in some modifiers.
+   Invert ``<->``
+      Inverts the influence of the selected vertex group, meaning that the group
+      now represents vertices that will not be deformed by the modifier.
+
+      The setting reverses the weight values of the group.
+      Only available in some modifiers.
 
 
 Texture
