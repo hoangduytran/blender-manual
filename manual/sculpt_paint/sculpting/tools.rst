@@ -95,7 +95,7 @@ Pinch :kbd:`P`
    The inverse setting is *Magnify*, in which vertices are pushed away from the center of the brush.
 
 Grab :kbd:`G`
-   Used to drag a group of points around. Unlike the other brushes,
+   Used to drag a group of vertices around. Unlike the other brushes,
    *Grab* does not modify different points as the brush is dragged across the model.
    Instead, *Grab* selects a group of vertices on mouse-down, and pulls them to follow the mouse.
    The effect is similar to moving a group of vertices in Edit Mode with Proportional Editing enabled,
@@ -108,6 +108,29 @@ Grab :kbd:`G`
       Enabling *Grab Active Vertex* also enables a dynamic mesh preview which
       generates a preview of vertices connected to om the active vertex.
       This helps to visualize the real geometry that is being manipulating while sculpting with active modifiers.
+
+Elastic Deform
+   Used to simulate realistic deformations such as grabbing or twisting of :term:`Elastic` objects.
+   For example, this tool works great for modeling the shape of flesh like objects such as humans or animals.
+   When pressing :kbd:`Ctrl`, the brush deforms vertices along the normal of the active vertex.
+
+   Deformation
+      The surface alteration that is used in the brush.
+
+      Grab
+         Used to drag a group of vertices around.
+      Bi-scale Grab
+         Similar to *Grab* but the falloff is more localized to the center of the brush.
+      Tri-scale Grab
+         Similar to *Bi-scale Grab* but the falloff is more localized to the center of the brush.
+      Scale
+         Displaces vertices away from the active vertex.
+      Twist
+         Vertices are rotated around the active vertex.
+
+   Volume Preservation
+      Poisson ratio for elastic deformation.
+      Higher values preserve volume more, but also lead to more bulging.
 
 Snake Hook :kbd:`K`
    Pulls vertices along with the movement of the brush to create long, snake-like forms.

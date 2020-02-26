@@ -269,6 +269,13 @@ This page lists definitions for terms used in Blender and this manual.
    Edge Ring
       Path of all :term:`edges <edge>` along a :term:`face loop` that share two faces belonging to that loop.
 
+   Elastic
+      Objects that are able to spontaneously return to their original shape
+      after all outside forces are removed from the object.
+
+   Elasticity
+      The amount a material is elastic versus inelastic.
+
    Empty
       An :term:`Object` without any :term:`Vertices`, :term:`Edges <Edge>` or :term:`Faces <Face>`.
 
