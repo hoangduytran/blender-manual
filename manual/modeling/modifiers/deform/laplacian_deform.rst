@@ -78,7 +78,7 @@ Repeat
 
              Repeat: 10.
 
-Anchors Vertex Group
+Anchors Weights
    The group of vertices that the user will use to transform the model.
    The weight of each vertex does not affect the behavior of the modifier,
    the method only takes into account vertices with weight greater than 0.
