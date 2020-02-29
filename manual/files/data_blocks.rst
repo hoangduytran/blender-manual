@@ -19,7 +19,7 @@ which features a common set of basic features, properties and behaviors.
 Some common characteristics:
 
 - They are the primary contents of the blend-file.
-- They can reference to each other, for reuse and instancing.
+- They can reference each other, for reuse and instancing.
   (Child/parent, object/object-data, materials/images, in modifiers or constraints too...)
 - Their names are unique within a blend-file, for a given type.
 - They can be added/removed/edited/duplicated.
@@ -32,7 +32,7 @@ When doing more complex projects, managing data-blocks becomes more important,
 especially when inter-linking blend-files.
 The main editor for that is the :doc:`Outliner </editors/outliner>`.
 
-Not every data in Blender is a data-block,
+Not all data in Blender is a data-block,
 bones, sequence strips or vertex groups e.g. are not,
 they belong to armature, scene and mesh types respectively.
 
@@ -79,9 +79,8 @@ Examples where sharing data is common:
 - Sharing animated actions between objects,
   for example to make all the lights dim together.
 
-You can also share data-blocks between files, see:
-
-- :doc:`linked libraries </files/linked_libraries/index>`.
+You can also share data-blocks between files, see
+:doc:`linked libraries </files/linked_libraries/index>`.
 
 
 .. _data-system-datablock-make-single-user:
