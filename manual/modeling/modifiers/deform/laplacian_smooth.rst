@@ -363,7 +363,7 @@ Vertex Group
         - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_camel-vertex3.jpg
              :width: 130px
 
-    Invert ``<->``
+   Invert ``<->``
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

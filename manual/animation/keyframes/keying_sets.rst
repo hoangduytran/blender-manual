@@ -135,6 +135,8 @@ This will add the properties to the active keying set, or to a new keying set if
 Hover the mouse over the properties, then press :kbd:`K`, to add *Add All to Keying Set*.
 
 
+.. _whole-character-keying-set:
+
 Whole Character Keying Set
 ==========================
 
