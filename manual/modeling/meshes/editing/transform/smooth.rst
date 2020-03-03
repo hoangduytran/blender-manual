@@ -53,19 +53,19 @@ Axes
    is a non-destructive alternative to the Smooth tool.
 
 
-Laplacian Smooth
+Smooth Laplacian
 ================
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Context Menu --> Laplacian Smooth`
+   :Menu:      :menuselection:`Context Menu --> Smooth Laplacian`
 
-See the :doc:`Laplacian Smooth Modifier </modeling/modifiers/deform/laplacian_smooth>` for details.
+See the :doc:`Smooth Laplacian Modifier </modeling/modifiers/deform/laplacian_smooth>` for details.
 
-Laplacian smooth uses an alternative smoothing algorithm that better preserves larger details and
-this way the overall shape of the mesh. Laplacian smooth exists as a mesh operation and
+Smooth Laplacian uses an alternative smoothing algorithm that better preserves larger details and
+this way the overall shape of the mesh. Smooth Laplacian exists as a mesh operation and
 as a non-destructive modifier.
 
 .. note:: Real Smoothing versus Shading Smoothing
