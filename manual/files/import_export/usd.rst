@@ -24,7 +24,7 @@ This means that the following meshes can be exported:
   bouncing (but not cracking) objects.
 - Arbitrarily animated meshes; here the topology does change.
   An example is the result of a fluid simulation, where splashes of fluid can break off the main body.
-- Metaballs; these are exported as animated meshes.
+- Metaballs are exported as animated meshes.
 
 .. figure:: /images/files_import-export_usd_example.png
 

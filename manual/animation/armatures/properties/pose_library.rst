@@ -26,12 +26,13 @@ Pose Libraries
    A :ref:`List view <ui-list-view>` of poses for the active Pose Library.
 
    Add ``+``
-      If a pose is added, a :ref:`pose marker <marker-pose-add>` is created. The
-      :ref:`Whole Character keying set <whole-character-keying-set>` is used to
-      determine which bones to key. If any bones are selected, only keyframes
-      for those bones are added, otherwise all bones in the keying set are
-      keyed. Bones that are ignored by the *Whole Character* keying set are
-      always ignored, regardless of their selection state.
+      If a pose is added, a :ref:`pose marker <marker-pose-add>` is created.
+
+      The :ref:`Whole Character keying set <whole-character-keying-set>` is used to
+      determine which bones to key. If any bones are selected, only keyframes for
+      those bones are added, otherwise all bones in the keying set are keyed.
+      Bones that are ignored by the *Whole Character* keying set are always ignored,
+      regardless of their selection state.
 
       Add New
          Adds a new pose to the active Pose Library with the current pose of the armature.

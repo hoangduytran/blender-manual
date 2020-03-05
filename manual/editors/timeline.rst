@@ -232,8 +232,8 @@ Show Seconds :kbd:`Ctrl-T`
    frames (based on the FPS) or as seconds.
 Sync Visible Range
    It synchronizes the horizontal panning and scale of the current editor
-   with the other editors (Graph, Dope Sheet, NLA, Sequencer) when this option is set.
-   That way you always have these editors showing an identical section of frames.
+   with the other editors (Graph, Dope Sheet, NLA and Sequencer) when this option is set.
+   That way you always have these editors showing the same section of frames.
 Show Markers
    Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
    and markers operators are not available in this editor.

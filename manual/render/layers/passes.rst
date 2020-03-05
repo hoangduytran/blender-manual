@@ -194,6 +194,7 @@ Eevee
 Passes can be used to split rendered images into colors and light to edit them individually,
 and also to extract data such as depth or normals.
 
+
 Lighting Passes
 ---------------
 
@@ -236,11 +237,13 @@ Mist
 Normal
    Surface normal used for shading.
 
+
 Effect Passes
 -------------
 
 Bloom
    The influence of the Bloom effect.
+
 
 Combining
 ---------
@@ -251,9 +254,9 @@ The passes can be combined to produce the final image as follows:
 
 .. note:: Limitations:
 
-   * Alpha blended materials are not rendered in render passes except the combined pass.
-     Use the **Alpha Clip** or **Alpha Hashed** as :ref:`Blending Mode <bpy.types.Material.blend_method>`
+   - Alpha blended materials are not rendered in render passes except the combined pass.
+     Use the *Alpha Clip* or *Alpha Hashed* as :ref:`Blending Mode <bpy.types.Material.blend_method>`
      to render transparent materials in render passes.
-   * Depth of field is not rendered in render passes except the combined pass. It is
-     possible to add the depth of field back in the compositor using the 
-     :ref:`Defocus node<bpy.types.CompositorNodeDefocus>`.
+   - Depth of field is not rendered in render passes except the combined pass.
+     It is possible to add the depth of field back in the Compositor using
+     the :ref:`Defocus node <bpy.types.CompositorNodeDefocus>`.

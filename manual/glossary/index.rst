@@ -277,7 +277,7 @@ This page lists definitions for terms used in Blender and this manual.
       The amount a material is elastic versus inelastic.
 
    Empty
-      An :term:`Object` without any :term:`Vertices`, :term:`Edges <Edge>` or :term:`Faces <Face>`.
+      An :term:`object` without any :term:`vertices`, :term:`edges <edge>` or :term:`faces <face>`.
 
    Euler
    Euler Rotation

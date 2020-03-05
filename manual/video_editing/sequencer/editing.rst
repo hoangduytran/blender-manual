@@ -263,16 +263,7 @@ Context Menu
 ============
 
 You can activate context menu by clicking :kbd:`RMB` in the Sequencer's timeline.
-
-In this menu you can quickly access some common tools such as:
-
-- Copy and paste strips
-- Split, delete and duplicate strips
-- Slip strip contents
-- Snap to playhead
-- Set Preview Range to Strips
-- Remove and insert gaps
-- Lock or mute strips
+In this menu you can quickly access some commonly used tools.
 
 
 Fades

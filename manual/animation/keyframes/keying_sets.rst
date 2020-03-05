@@ -141,15 +141,10 @@ Whole Character Keying Set
 ==========================
 
 The built-in *Whole Character* keying set is made to keyframe all properties
-that are likely to get animated in a character rig. It is is also implicitly
-used by Blender's :doc:`Pose Library system </animation/armatures/properties/pose_library>`.
+that are likely to get animated in a character rig. It is also implicitly used by
+the :doc:`Pose Library system </animation/armatures/properties/pose_library>`.
 
-In order to determine which bones to add keys for, and which bones to skip, the
-keying set uses the bone names. The following bone name prefixes will be skipped:
+In order to determine which bones to add keys for, and which bones to skip,
+the keying set uses the bone names. The following bone name prefixes will be skipped:
 
-- `DEF`
-- `GEO`
-- `MCH`
-- `ORG`
-- `COR`
-- `VIS`
+"COR", "DEF", "GEO", "MCH", "ORG", "VIS"

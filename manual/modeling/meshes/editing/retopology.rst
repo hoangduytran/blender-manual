@@ -69,7 +69,7 @@ Adaptivity
    This introduce triangulation to faces that do not need as much detail.
    Note, an *Adaptivity* value greater than zero disables *Fix Poles*.
 Fix Poles
-   Tries to produce less :term:`Poles <Pole>` at the cost of some performance to produce a better topological flow.
+   Tries to produce less :term:`poles <pole>` at the cost of some performance to produce a better topological flow.
 Smooth Normals
    Applies the :ref:`Smooth Normals <bpy.ops.object.shade_smooth>` operator to the resulting mesh.
 Preserve Volume
@@ -90,16 +90,16 @@ Quad
 
 The Quad remesh uses the Quadriflow algorithm to create a :term:`quad`
 based mesh with few poles and edge loops following the curvature of the surface.
-This method is relatively slow but generates higher quality for final topology.
+This method is relatively slow but generates a higher quality output for final topology.
 
 .. warning::
 
    Performing *Quadriflow Remesh* will lose all mesh object data layers associated with the original mesh.
 
 Quadriflow Remesh
-   Opens a popup window used to set parameters for the remesh operation.
+   Opens a pop-up used to set parameters for the remesh operation.
 Use Paint Symmetry
-   Generates a symmetrical mesh using the :doc:`paint symmetry </sculpt_paint/brush/symmetry>` options.
+   Generates a symmetrical mesh using the :doc:`Paint Symmetry </sculpt_paint/brush/symmetry>` options.
 Preserve Sharp
    Tells the algorithm to try to preserve sharp features of the mesh.
    Enabling this could make the operator slower depending on the complexity of the mesh.
@@ -109,7 +109,7 @@ Preserve Mesh Boundary
 Use Mesh Curvature
    Take the mesh curvature into account when remeshing.
 Preserve Paint Mask
-   Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
+   Reprojects the :ref:`Paint Mask <sculpt-mask-menu>` onto the new mesh.
 Smooth Normals
    Applies the :ref:`Smooth Normals <bpy.ops.object.shade_smooth>` operator to the resulting mesh.
 Modes
@@ -123,4 +123,4 @@ Modes
       Input target number of faces in the new mesh.
 Seed
    Random :term:`seed` to use with the solver;
-   different seeds will cause the remesher to come up with different quad layouts on the mesh
+   different seeds will cause the remesher to generate different quad layouts on the mesh.
