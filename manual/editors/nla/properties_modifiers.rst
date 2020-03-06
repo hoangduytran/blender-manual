@@ -108,9 +108,9 @@ Frame Start/End
    The boundaries of the strip itself. Note that this will stretch the duration of the Action,
    it will not cause greater or fewer keyframes from the Actions to play (see below for that option).
 Extrapolation
-   See :ref:`bpy.types.AnimData.action_extrapolation`.
+   See :ref:`Extrapolation <bpy.types.AnimData.action_extrapolation>`.
 Blending
-   See :ref:`bpy.types.AnimData.action_blend_type`.
+   See :ref:`Blending <bpy.types.AnimData.action_blend_type>`.
 Blend In
    Set the frame that represents when this strip will have full influence.
 Out
