@@ -4,14 +4,11 @@
 Strips
 ******
 
-Types
-=====
-
 There are four kinds of strips: Action, Transition, Sound clip and Meta.
 
 
 Action Strips
--------------
+=============
 
 An Action Strip is a container of keyframe data of an action.
 Any action used by the NLA first must be turned into an Action strip.
@@ -20,7 +17,7 @@ Alternatively, you can go to :menuselection:`Add --> Action Strip`.
 
 
 Transition Strips
------------------
+=================
 
 Transitions interpolate between Actions. They must be placed in between other strips.
 Select two or more strips on the same track,
@@ -32,14 +29,14 @@ and go to :menuselection:`Add --> Transition`.
 
 
 Sound Clip Strips
------------------
+=================
 
 Controls when a speaker plays a sound clip.
 :menuselection:`Add --> Sound Clip`.
 
 
 Meta Strips
------------
+===========
 
 Meta strips group strips together as a whole, so you can move them as one.
 If you find yourself moving a lot of strips together, you can group them into a Meta strip.
