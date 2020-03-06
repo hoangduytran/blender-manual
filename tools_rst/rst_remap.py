@@ -166,23 +166,28 @@ def remap_finish(base_path):
     os.remove(filepath_remap)
 
 
-def remap_finish_rst(base_path, remap_rst_src, remap_rst_dst):
-
+def _src_dst_map(remap_src, remap_dst):
     # Store: {source: dest}, without path prefix or extension, e.g:
     # /path/to/docs/manual/interface/introduction.rst, becomes...
     #                     /interface/introduction
     src_dst_map = {}
 
-    for file_hash, file_rstpath_src in remap_rst_src.items():
-        file_rstpath_dst = remap_rst_dst.get(file_hash)
-        if file_rstpath_dst is None:
+    for file_hash, file_path_src in remap_src.items():
+        file_path_dst = remap_dst.get(file_hash)
+        if file_path_dst is None:
             # shouldn't happen often.
-            print("warning: source '%s.rst' not found!" % file_rstpath_src[1:])
-            file_rstpath_dst = file_rstpath_src
+            print("warning: source '%s' not found!" % file_path_src[1:])
+            file_path_dst = file_path_src
 
-        src_dst_map[file_rstpath_src] = file_rstpath_dst
-        if file_rstpath_src.endswith("/index") and file_rstpath_src != "/index":
-            src_dst_map[file_rstpath_src[:-6]] = file_rstpath_dst[:-6]
+        src_dst_map[file_path_src] = file_path_dst
+        if file_path_src.endswith("/index") and file_path_src != "/index":
+            src_dst_map[file_path_src[:-6]] = file_path_dst[:-6]
+
+    return src_dst_map
+
+
+def remap_finish_rst(base_path, remap_rst_src, remap_rst_dst):
+    src_dst_map = _src_dst_map(remap_rst_src, remap_rst_dst)
 
     # now remap the doc links
     import rst_helpers
@@ -251,20 +256,7 @@ def remap_finish_rst(base_path, remap_rst_src, remap_rst_dst):
 
 
 def remap_finish_image(base_path, remap_image_src, remap_image_dst):
-
-    # Store: {source: dest}, without path prefix, e.g:
-    # /path/to/docs/manual/images/my_image.jpg, becomes...
-    #                     /images/my_image.jpg
-    src_dst_map = {}
-
-    for file_hash, file_imagepath_src in remap_image_src.items():
-        file_imagepath_dst = remap_image_dst.get(file_hash)
-        if file_imagepath_dst is None:
-            # shouldn't happen often.
-            print("warning: source '%s' not found!" % file_imagepath_src[1:])
-            file_imagepath_dst = file_imagepath_src
-
-        src_dst_map[file_imagepath_src] = file_imagepath_dst
+    src_dst_map = _src_dst_map(remap_image_src, remap_image_dst)
 
     # now remap the doc links
     import rst_helpers
