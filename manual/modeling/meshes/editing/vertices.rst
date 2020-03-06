@@ -15,13 +15,230 @@ These are tools that work primarily on vertex selections
 but some also work with edge or face selections.
 
 
+Extrude Vertices
+================
+
+Todo.
+
+
+Bevel Vertices
+==============
+
+Todo.
+
+
+New Edge/Face from Vertices
+===========================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> New Edge/Face from Vertices`
+   :Hotkey:    :kbd:`F`
+
+It will create an edge or some faces, depending on your selection.
+
+See also :doc:`Creating Geometry </modeling/meshes/editing/basics/make_face_edge>`.
+
+
+.. _tool-mesh-rip_region:
+
+Rip Vertices
+============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> Rip Vertices`
+   :Hotkey:    :kbd:`V`
+
+Rip creates a "hole" in the mesh by making a copy of selected vertices and edges,
+still linked to the neighboring non-selected vertices,
+so that the new edges are borders of the faces on one side, and the old ones,
+borders of the faces on the other side of the rip.
+
+
+Examples
+--------
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-before.png
+          :width: 260px
+
+          Selected vertex.
+
+     - .. figure:: /images/modeling_meshes_editing_vertices_rip-after.png
+          :width: 260px
+
+          Hole created after using rip on vertex.
+
+   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-before.png
+          :width: 260px
+
+          Edges selected.
+
+     - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-after.png
+          :width: 260px
+
+          Result of rip with edge selection.
+
+   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-complexselection-before.png
+          :width: 260px
+
+          A complex selection of vertices.
+
+     - .. figure:: /images/modeling_meshes_editing_vertices_rip-complexselection-after.png
+          :width: 260px
+
+          Result of rip operation.
+
+
+Limitations
+-----------
+
+Rip will only work when edges and/or vertices are selected.
+Using the tool when a face is selected (explicitly or implicitly), will return an error
+message *"Cannot perform ripping with faces selected this way"*.
+If your selection includes some edges or vertices that are not "between" two faces :term:`manifold`,
+it will also fail with the message *"No proper selection or faces include"*.
+
+
+Rip Vertices and Fill
+=====================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> Rip Vertices and Fill`
+   :Hotkey:    :kbd:`Alt-V`
+
+Rip fill works the same as the Rip tool above, but instead of leaving a hole,
+it fills in the gap with geometry.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-before.png
+          :width: 260px
+
+          Edges selected.
+
+     - .. figure:: /images/modeling_meshes_editing_vertices_rip-fill-result.png
+          :width: 260px
+
+          Result of rip fill.
+
+
+.. _tool-mesh-rip_edge:
+
+Rip Vertices and Extend
+=======================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> Rip Vertices and Extend`
+   :Hotkey:    :kbd:`Alt-D`
+
+This tool takes any number of selected vertices and duplicate-drags them along the closest edge to the mouse,
+When extending an edge loop, it extends the vertices at the endpoints of the loop.
+The behavior is similar to the *Extrude* tool, but it creates an n-gon.
+
+It helps to easily add details to existing edges.
+
+
+.. _bpy.ops.transform.vert_slide:
+.. _tool-mesh-vertex-slide:
+
+Slide Vertices
+==============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> Slide Vertices`
+   :Hotkey:    :kbd:`Shift-V`
+
+Vertex Slide will transform a vertex along one of its adjacent edges.
+Use :kbd:`Shift-V` to activate tool.
+The nearest selected vertex to the mouse cursor will be the control one.
+Move the mouse along the direction of the desired edge to specify the vertex position.
+Then press :kbd:`LMB` to confirm the transformation.
+
+Even :kbd:`E`
+   By default, the offset value of the vertices is a percentage of the edges length along which they move.
+   When Even mode is active, the vertices are shifted by an absolute value.
+Flipped :kbd:`F`
+   When Flipped is active, vertices move the same distance from adjacent vertices,
+   instead of moving from their original position.
+Clamp :kbd:`Alt` or :kbd:`C`
+   Toggle clamping the slide within the edge extents.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide1.png
+          :width: 200px
+
+          Selected vertex.
+
+     - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide2.png
+          :width: 200px
+
+          Positioning vertex interactively.
+
+     - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide3.png
+          :width: 200px
+
+          Repositioned vertex.
+
+
+Smooth Vertices
+===============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> Smooth Vertices`,
+               :menuselection:`Context Menu --> Smooth`
+
+This will apply the :doc:`Smooth Tool </modeling/meshes/editing/transform/smooth>` once.
+
+
+.. _modeling-meshes-editing-vertices-shape-keys:
+
+Blend From Shape
+================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> Blend From Shape` and
+               :menuselection:`Vertex --> Shape Propagate`
+
+These are options regarding :doc:`shape keys </animation/shape_keys/index>`.
+
+Blend From Shape
+   Blend in the shape from a shape key.
+
+
+Propagate to Shapes
+===================
+
+Shape Propagate
+   Apply selected vertex locations to all other shape keys.
+
+
 .. _vertex-merging:
 
-Merging
-=======
-
-Merging Vertices
-----------------
+Merge Vertices
+==============
 
 .. admonition:: Reference
    :class: refbox
@@ -65,293 +282,22 @@ UVs
    if existing, will be corrected to avoid image distortion.
 
 
-.. _bpy.ops.mesh.remove_doubles:
+By Distance
+-----------
 
-Merge by Distance
------------------
+Todo.
 
-.. admonition:: Reference
-   :class: refbox
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Merge by Distance`,
-               :menuselection:`Context Menu --> Merge by Distance`
-
-Merge by Distance is a useful tool to simplify a mesh by merging the selected vertices that
-are closer than a specified distance to each other.
-An alternative way to simplify a mesh is to use the :doc:`Decimate Modifier </modeling/modifiers/generate/decimate>`.
-
-Merge Distance
-   Sets the distance threshold for merging vertices.
-Unselected
-   Allows vertices in the selection to be merged with unselected vertices.
-   When disabled, selected vertices will only be merged with other selected ones.
-
-
-Separating
-==========
-
-.. _tool-mesh-rip_region:
-
-Rip Region
-----------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Rip Vertices`
-   :Hotkey:    :kbd:`V`
-
-Rip creates a "hole" in the mesh by making a copy of selected vertices and edges,
-still linked to the neighboring non-selected vertices,
-so that the new edges are borders of the faces on one side, and the old ones,
-borders of the faces on the other side of the rip.
-
-
-Examples
-^^^^^^^^
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-before.png
-          :width: 260px
-
-          Selected vertex.
-
-     - .. figure:: /images/modeling_meshes_editing_vertices_rip-after.png
-          :width: 260px
-
-          Hole created after using rip on vertex.
-
-   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-before.png
-          :width: 260px
-
-          Edges selected.
-
-     - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-after.png
-          :width: 260px
-
-          Result of rip with edge selection.
-
-   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-complexselection-before.png
-          :width: 260px
-
-          A complex selection of vertices.
-
-     - .. figure:: /images/modeling_meshes_editing_vertices_rip-complexselection-after.png
-          :width: 260px
-
-          Result of rip operation.
-
-
-Limitations
-^^^^^^^^^^^
-
-Rip will only work when edges and/or vertices are selected.
-Using the tool when a face is selected (explicitly or implicitly), will return an error
-message *"Cannot perform ripping with faces selected this way"*.
-If your selection includes some edges or vertices that are not "between" two faces :term:`manifold`,
-it will also fail with the message *"No proper selection or faces include"*.
-
-
-Rip Vertices and Fill
----------------------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Rip Vertices and Fill`
-   :Hotkey:    :kbd:`Alt-V`
-
-Rip fill works the same as the Rip tool above, but instead of leaving a hole,
-it fills in the gap with geometry.
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-before.png
-          :width: 260px
-
-          Edges selected.
-
-     - .. figure:: /images/modeling_meshes_editing_vertices_rip-fill-result.png
-          :width: 260px
-
-          Result of rip fill.
-
-
-Split
------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Split`
-   :Hotkey:    :kbd:`Y`
-
-Splits (disconnects) the selection from the rest of the mesh.
-The border edge to any non-selected elements are duplicated.
-
-Note that the "copy" is left exactly at the same position as the original, so you must move it
-:kbd:`G` to see it clearly...
-
-
-.. _tool-mesh-rip_edge:
-
-Rip Edge
---------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Rip Vertices and Extend`
-   :Hotkey:    :kbd:`Alt-D`
-
-This tool takes any number of selected vertices and duplicate-drags them along the closest edge to the mouse,
-When extending an edge loop, it extends the vertices at the endpoints of the loop.
-The behavior is similar to the *Extrude* tool, but it creates an n-gon.
-
-It helps to easily add details to existing edges.
-
-
-Separate
---------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Separate`
-   :Hotkey:    :kbd:`P`
-
-The Separate tool will `Split`_ mesh elements into another mesh object.
-
-Selection
-   Separates the selected elements.
-By Material
-   Separates fragments based on the materials assigned to the different faces.
-By loose parts
-   Creates one object for every independent (disconnected) fragment of the original mesh.
-
-
-.. _bpy.ops.transform.vert_slide:
-.. _tool-mesh-vertex-slide:
-
-Vertex Slide
-============
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Slide Vertices`
-   :Hotkey:    :kbd:`Shift-V`
-
-Vertex Slide will transform a vertex along one of its adjacent edges.
-Use :kbd:`Shift-V` to activate tool.
-The nearest selected vertex to the mouse cursor will be the control one.
-Move the mouse along the direction of the desired edge to specify the vertex position.
-Then press :kbd:`LMB` to confirm the transformation.
-
-Even :kbd:`E`
-   By default, the offset value of the vertices is a percentage of the edges length along which they move.
-   When Even mode is active, the vertices are shifted by an absolute value.
-Flipped :kbd:`F`
-   When Flipped is active, vertices move the same distance from adjacent vertices,
-   instead of moving from their original position.
-Clamp :kbd:`Alt` or :kbd:`C`
-   Toggle clamping the slide within the edge extents.
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide1.png
-          :width: 200px
-
-          Selected vertex.
-
-     - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide2.png
-          :width: 200px
-
-          Positioning vertex interactively.
-
-     - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide3.png
-          :width: 200px
-
-          Repositioned vertex.
-
-
-Smooth Vertex
+Vertex Groups
 =============
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Smooth Vertices`,
-               :menuselection:`Context Menu --> Smooth`
-
-This will apply the :doc:`Smooth Tool </modeling/meshes/editing/transform/smooth>` once.
-
-
-Convex Hull
-===========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Convex Hull`
-
-The Convex Hull operator takes a point cloud as input and outputs a convex hull surrounding those vertices.
-If the input contains edges or faces that lie on the convex hull, they can be used in the output as well.
-This operator can be used as a bridge tool as well.
-
-.. figure:: /images/modeling_meshes_editing_vertices_convex-hull.png
-
-   Input mesh, point cloud, and Convex Hull result.
-
-Delete Unused
-   Removes vertices, edges, and faces that were selected, but not used as part of the hull.
-   Note that vertices and edges that are used
-   by other edges and faces not part of the selection will not be deleted.
-
-Use Existing Faces
-   Where possible, use existing input faces that lie on the hull.
-   This allows the convex hull output to contain n-gons rather than triangles
-   (or quads if the *Join Triangles* option is enabled).
-
-Make Holes
-   Delete edges and faces in the hull that were part of the input too.
-   Useful in cases like bridging to delete faces between the existing mesh and the convex hull.
-
-Join Triangles
-   Joins adjacent triangles into quads.
-   Has all the same properties as the *Tris to Quads* operator (angle limit, compare UVs, etc.).
-Max Face Angle, Max Shape Angle, Compare
-   See :ref:`mesh-faces-tristoquads`.
-
-
-Make Vertex Parent
-==================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Make Vertex Parent`
-   :Hotkey:    :kbd:`Ctrl-P`
-
-This will parent the other selected object(s) to the vertices/edges/faces selected,
-as described :doc:`here </scene_layout/object/properties/relations/parents>`.
+Todo.
 
 
 .. _bpy.ops.object.hook_add_selob:
 
-Add Hook
-========
+Hooks
+=====
 
 .. admonition:: Reference
    :class: refbox
@@ -393,21 +339,15 @@ Recenter Hook
    It's equivalent to the *Recenter* button of the specific Hook Modifier (chosen from the hook list).
 
 
-.. _modeling-meshes-editing-vertices-shape-keys:
-
-Blend From Shape, Propagate Shapes
-==================================
+Make Vertex Parent
+==================
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Blend From Shape` and
-               :menuselection:`Vertex --> Shape Propagate`
+   :Menu:      :menuselection:`Vertex --> Make Vertex Parent`
+   :Hotkey:    :kbd:`Ctrl-P`
 
-These are options regarding :doc:`shape keys </animation/shape_keys/index>`.
-
-Shape Propagate
-   Apply selected vertex locations to all other shape keys.
-Blend From Shape
-   Blend in the shape from a shape key.
+This will parent the other selected object(s) to the vertices/edges/faces selected,
+as described :doc:`here </scene_layout/object/properties/relations/parents>`.

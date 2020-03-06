@@ -13,222 +13,28 @@ Face Tools
 These are tools that manipulate faces.
 
 
-.. _modeling-meshes-editing-fill:
+Extrude Faces
+=============
 
-Fill
-====
+Todo.
 
-.. admonition:: Reference
-   :class: refbox
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Fill`
-   :Hotkey:    :kbd:`Alt-F`
+Extrude Faces Along Normal
+==========================
 
-The *Fill* option will create *triangular* faces from any group of selected edges
-or vertices, as long as they form one or more complete perimeters.
+Todo.
 
-Beauty
-   Arrange the new triangles nicely.
 
-.. figure:: /images/modeling_meshes_editing_faces_fill.png
-   :width: 300px
+Extrude Individual Faces
+========================
 
-   Filled using fill.
+Todo.
 
-Note, unlike creating n-gons, *Fill* supports holes.
 
-.. list-table::
+Inset Faces
+===========
 
-   * - .. figure:: /images/modeling_meshes_editing_faces_holes.png
-          :width: 320px
-
-          A closed perimeter of edges with holes.
-
-     - .. figure:: /images/modeling_meshes_editing_faces_holes-filled.png
-          :width: 320px
-
-          Filled using fill.
-
-
-Beautify Faces
---------------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Beautify Faces`
-
-*Beautify Faces* works only on selected existing faces.
-It rearrange selected triangles to obtain more "balanced" ones (i.e. less long thin triangles).
-
-Max Angle
-   An angle delimiter option to limit edge rotation to flat surfaces.
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_faces_beauty-fill-before.png
-          :width: 320px
-
-          Text converted to a mesh.
-
-     - .. figure:: /images/modeling_meshes_editing_faces_beauty-fill-after.png
-          :width: 320px
-
-          Result of Beautify Faces.
-
-
-.. _modeling-meshes-editing-grid-fill:
-
-Grid Fill
----------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Grid Fill`
-
-*Grid Fill* uses a pair of connected edge loops or a single, closed edge loop to fill in a grid
-that follows the surrounding geometry.
-
-The best predictable result can be achieved if you select two opposite edge loops
-with an equal number of vertices. When a single, closed edge loop is selected,
-the Span/Offset options allows you to adjust the way two opposite edge loops
-are detected from one closed edge loop.
-
-Span
-   Specifies the number of columns in the grid.
-Offset
-   Defines the vertex that is considered to be the corner of the grid,
-   by default, it's the active vertex. The Offset allows you to rotate the grid lines.
-Simple Blending
-   Use a simple interpolation algorithm to generate grid vertices from boundary loops,
-   which doesn't attempt to maintain the shape,
-   useful for flat surfaces or times when keeping the shape gives odd results.
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_faces_grid-fill-surface-before.png
-          :width: 320px
-
-          Input.
-
-     - .. figure:: /images/modeling_meshes_editing_faces_grid-fill-surface-after.png
-          :width: 320px
-
-          Grid Fill result.
-
-
-Solidify
-========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Solidify Faces`
-
-This takes a selection of faces and solidifies them by extruding them
-uniformly to give volume to a :term:`non-manifold` surface.
-This is also available as a :doc:`Modifier </modeling/modifiers/generate/solidify>`.
-After using the tool, you can set the offset distance in the :ref:`ui-undo-redo-adjust-last-operation` panel.
-
-Thickness
-   Amount to offset the newly created surface.
-   Positive values offset the surface inward relative to the normals direction.
-   Negative values offset outward.
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_faces_solidify-before.png
-          :width: 200px
-
-          Mesh before solidify operation.
-
-     - .. figure:: /images/modeling_meshes_editing_faces_solidify-after.png
-          :width: 200px
-
-          Solidify with a positive thickness.
-
-     - .. figure:: /images/modeling_meshes_editing_faces_solidify-after2.png
-          :width: 200px
-
-          Solidify with a negative thickness.
-
-
-Intersect
-=========
-
-Intersect (Knife)
------------------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Intersect (Knife)`
-
-The Intersect tool lets you cut intersections into geometry.
-It is a bit like Boolean Tool, but, does not calculate interior/exterior.
-Faces are split along the intersections, leaving new edges selected.
-
-Source
-   Selected/Unselected
-      Operate between the selected and unselected geometry.
-   Self Intersect
-      Operate on the overlapping geometry of the mesh.
-Separate Mode
-   All
-      Splits the geometry at the new edge.
-   Cut
-      Keep each side of the intersection separate without splitting the faces in half.
-   Merge
-      Merge all the geometry from the intersection.
-Merge Threshold
-   See Intersect (Boolean).
-
-
-Intersect (Boolean)
--------------------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Intersect (Boolean)`
-
-Performs boolean operations with the selection on the unselected geometry.
-While the :doc:`/modeling/modifiers/generate/booleans` is useful for non-destructive edits,
-access to booleans with a tool in Edit Mode can be useful to quickly perform edits.
-
-Boolean
-   Difference, Union, Intersect
-Swap
-   Changes the order of the operation.
-Merge Threshold
-   Tolerance for close faces to be considered touching,
-   It may be useful to increase this when some intersections aren't detected that should be and
-   when extra geometry is being created because edges aren't detected as overlapping.
-
-   .. warning::
-
-      A threshold approaching size of faces may cause very slow calculation,
-      in general keep this value small.
-
-
-Wireframe
-=========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Wire frame`
-
-The Wireframe tool makes a wireframe from faces by turning edges into wireframe tubes,
-similar to the :doc:`/modeling/modifiers/generate/wireframe`.
+Todo.
 
 
 Poke Faces
@@ -339,6 +145,221 @@ Compare Materials
    this is not limited to quads.
 
 
+Solidify Faces
+==============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Face --> Solidify Faces`
+
+This takes a selection of faces and solidifies them by extruding them
+uniformly to give volume to a :term:`non-manifold` surface.
+This is also available as a :doc:`Modifier </modeling/modifiers/generate/solidify>`.
+After using the tool, you can set the offset distance in the :ref:`ui-undo-redo-adjust-last-operation` panel.
+
+Thickness
+   Amount to offset the newly created surface.
+   Positive values offset the surface inward relative to the normals direction.
+   Negative values offset outward.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_faces_solidify-before.png
+          :width: 200px
+
+          Mesh before solidify operation.
+
+     - .. figure:: /images/modeling_meshes_editing_faces_solidify-after.png
+          :width: 200px
+
+          Solidify with a positive thickness.
+
+     - .. figure:: /images/modeling_meshes_editing_faces_solidify-after2.png
+          :width: 200px
+
+          Solidify with a negative thickness.
+
+
+Wireframe
+=========
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Face --> Wire frame`
+
+The Wireframe tool makes a wireframe from faces by turning edges into wireframe tubes,
+similar to the :doc:`/modeling/modifiers/generate/wireframe`.
+
+
+.. _modeling-meshes-editing-fill:
+
+Fill
+====
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Face --> Fill`
+   :Hotkey:    :kbd:`Alt-F`
+
+The *Fill* option will create *triangular* faces from any group of selected edges
+or vertices, as long as they form one or more complete perimeters.
+
+Beauty
+   Arrange the new triangles nicely.
+
+.. figure:: /images/modeling_meshes_editing_faces_fill.png
+   :width: 300px
+
+   Filled using fill.
+
+Note, unlike creating n-gons, *Fill* supports holes.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_faces_holes.png
+          :width: 320px
+
+          A closed perimeter of edges with holes.
+
+     - .. figure:: /images/modeling_meshes_editing_faces_holes-filled.png
+          :width: 320px
+
+          Filled using fill.
+
+
+.. _modeling-meshes-editing-grid-fill:
+
+Grid Fill
+=========
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Face --> Grid Fill`
+
+*Grid Fill* uses a pair of connected edge loops or a single, closed edge loop to fill in a grid
+that follows the surrounding geometry.
+
+The best predictable result can be achieved if you select two opposite edge loops
+with an equal number of vertices. When a single, closed edge loop is selected,
+the Span/Offset options allows you to adjust the way two opposite edge loops
+are detected from one closed edge loop.
+
+Span
+   Specifies the number of columns in the grid.
+Offset
+   Defines the vertex that is considered to be the corner of the grid,
+   by default, it's the active vertex. The Offset allows you to rotate the grid lines.
+Simple Blending
+   Use a simple interpolation algorithm to generate grid vertices from boundary loops,
+   which doesn't attempt to maintain the shape,
+   useful for flat surfaces or times when keeping the shape gives odd results.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_faces_grid-fill-surface-before.png
+          :width: 320px
+
+          Input.
+
+     - .. figure:: /images/modeling_meshes_editing_faces_grid-fill-surface-after.png
+          :width: 320px
+
+          Grid Fill result.
+
+
+Beautify Faces
+==============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Face --> Beautify Faces`
+
+*Beautify Faces* works only on selected existing faces.
+It rearrange selected triangles to obtain more "balanced" ones (i.e. less long thin triangles).
+
+Max Angle
+   An angle delimiter option to limit edge rotation to flat surfaces.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_faces_beauty-fill-before.png
+          :width: 320px
+
+          Text converted to a mesh.
+
+     - .. figure:: /images/modeling_meshes_editing_faces_beauty-fill-after.png
+          :width: 320px
+
+          Result of Beautify Faces.
+
+
+Intersect (Knife)
+=================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Face --> Intersect (Knife)`
+
+The Intersect tool lets you cut intersections into geometry.
+It is a bit like Boolean Tool, but, does not calculate interior/exterior.
+Faces are split along the intersections, leaving new edges selected.
+
+Source
+   Selected/Unselected
+      Operate between the selected and unselected geometry.
+   Self Intersect
+      Operate on the overlapping geometry of the mesh.
+Separate Mode
+   All
+      Splits the geometry at the new edge.
+   Cut
+      Keep each side of the intersection separate without splitting the faces in half.
+   Merge
+      Merge all the geometry from the intersection.
+Merge Threshold
+   See Intersect (Boolean).
+
+
+Intersect (Boolean)
+===================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Face --> Intersect (Boolean)`
+
+Performs boolean operations with the selection on the unselected geometry.
+While the :doc:`/modeling/modifiers/generate/booleans` is useful for non-destructive edits,
+access to booleans with a tool in Edit Mode can be useful to quickly perform edits.
+
+Boolean
+   Difference, Union, Intersect
+Swap
+   Changes the order of the operation.
+Merge Threshold
+   Tolerance for close faces to be considered touching,
+   It may be useful to increase this when some intersections aren't detected that should be and
+   when extra geometry is being created because edges aren't detected as overlapping.
+
+   .. warning::
+
+      A threshold approaching size of faces may cause very slow calculation,
+      in general keep this value small.
+
+
 Weld Edges into Faces
 =====================
 
@@ -352,45 +373,28 @@ A tool to split selected faces by loose wire edges.
 This can be used in a similar way to the Knife tool, but the edges are manually setup first.
 
 
-Rotate Edges
+Shade Smooth
 ============
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Rotate Edge CW`
-
-This tool functions the same edge rotation in edge mode.
-It works on the shared edge between two faces and rotates that edge if the edge was selected.
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_faces_rotate-edge-face-mode1.png
-          :width: 320px
-
-          Two adjacent faces selected.
-
-     - .. figure:: /images/modeling_meshes_editing_faces_rotate-edge-face-mode2.png
-          :width: 320px
-
-          Selected edge rotated.
-
-See :ref:`Rotate Edge <modeling-meshes-editing-edges-rotate>` for more information.
+Todo.
 
 
-Rotate & Reverse
-================
+Shade Flat
+==========
 
-Rotate/Reverse UVs
-   See :ref:`uv-image-rotate-reverse-uvs`.
+Todo.
+
+
+Face Data
+=========
+
 Rotate Colors
    Rotates the Vertex Colors inside faces either clockwise or counterclockwise.
 Reverse Colors
    Flips the direction of Vertex Colors inside the selected faces.
-
-
-Normals
--------
-
-See :ref:`Editing Normals <modeling-meshes-editing-normals-editing>` for more information.
+Rotate/Reverse UVs
+   See :ref:`uv-image-rotate-reverse-uvs`.
+Mark Freestyle Face
+   Todo.
+Clear Freestyle Face
+   Todo.

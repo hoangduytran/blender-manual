@@ -127,3 +127,26 @@ This tool collapses / removes geometry which you typically will not want.
 - Edges with no length.
 - Faces with no areas (faces on a point or thin faces).
 - Face corners with no area.
+
+
+.. _bpy.ops.mesh.remove_doubles:
+
+Merge by Distance
+=================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> Merge by Distance`,
+               :menuselection:`Context Menu --> Merge by Distance`
+
+Merge by Distance is a useful tool to simplify a mesh by merging the selected vertices that
+are closer than a specified distance to each other.
+An alternative way to simplify a mesh is to use the :doc:`Decimate Modifier </modeling/modifiers/generate/decimate>`.
+
+Merge Distance
+   Sets the distance threshold for merging vertices.
+Unselected
+   Allows vertices in the selection to be merged with unselected vertices.
+   When disabled, selected vertices will only be merged with other selected ones.
