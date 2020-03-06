@@ -3,47 +3,21 @@
 Editing
 *******
 
-Start Tweaking Strips Action
-============================
+Transform
+=========
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Menu:      :menuselection:`Edit --> Start Tweaking Strips Action`
-   :Hotkey:    :kbd:`Tab`
-
-The contents of Action strips can be edited, but you must be in *Tweak Mode* to do so.
-The keyframes of the action can then be edited in the Dope Sheet.
-
-.. list-table::
-
-   * - .. figure:: /images/editors_nla_strips_nla-mode.png
-          :width: 320px
-
-          Strip in NLA mode.
-
-     - .. figure:: /images/editors_nla_strips_edit-mode.png
-          :width: 320px
-
-          Strip in Tweak mode.
-
-When you finished editing the strip, simply go to :menuselection:`Edit --> Tweaking Strips Action`
-or press :kbd:`Tab`.
+Todo.
 
 
-Start Editing Stashed Action
-============================
+.. _bpy.ops.nla.snap:
 
-.. admonition:: Reference
-   :class: refbox
+Snap
+====
 
-   :Menu:      :menuselection:`Edit --> Start Editing Stashed Action`
-   :Hotkey:    :kbd:`Shift-Tab`
+Todo.
 
-It will enter and exit Tweak Mode as usual, but will also make sure that the action can be edited in isolation
-(by flagging the NLA track that the action strip comes from as being "solo").
-This is useful for editing stashed actions, without the rest of the NLA Stack interfering.
 
+.. _bpy.ops.nla.duplicate:
 
 Duplicate
 =========
@@ -79,6 +53,64 @@ the original will turn to red.
    Linked duplicated strip being edited.
 
 
+.. _bpy.ops.nla.split:
+
+Split Strips
+============
+
+Todo.
+
+
+.. _bpy.ops.nla.delete:
+
+Delete Strips
+=============
+
+Todo.
+
+
+.. _bpy.ops.nla.tracks_delete:
+
+Delete Tracks
+=============
+
+Todo.
+
+
+.. _bpy.ops.nla.mute_toggle:
+
+Toggle Muting
+=============
+
+Todo.
+
+
+.. _bpy.ops.nla.apply_scale:
+
+Apply Scale
+===========
+
+Todo.
+
+
+.. _bpy.ops.nla.clear_scale:
+
+Clear Scale
+===========
+
+Todo.
+
+
+.. _bpy.ops.nla.action_sync_length:
+
+Sync Action Length
+==================
+
+Todo.
+
+
+.. _bpy.ops.nla.make_single_user:
+
 Make Single User
 ================
 
@@ -93,3 +125,87 @@ This tool ensures that none of the selected strips use an action which is also u
 .. note::
 
    This does not recursively go inside meta strips.
+
+
+.. _bpy.ops.nla.swap:
+
+Swap Strips
+===========
+
+Todo.
+
+
+.. _bpy.ops.nla.move_up:
+
+Move Strips Up
+==============
+
+Todo.
+
+
+.. _bpy.ops.nla.move_down:
+
+Move Strips Down
+================
+
+Todo.
+
+
+.. _bpy.ops.anim.channels_move:
+
+Track Ordering
+==============
+
+Todo.
+
+
+.. _bpy.ops.anim.channels_clean_empty:
+
+Remove Empty Animation Data
+===========================
+
+Todo.
+
+
+.. _bpy.ops.nla.tweakmode_enter:
+
+Start Editing Stashed Action
+============================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Edit --> Start Editing Stashed Action`
+   :Hotkey:    :kbd:`Shift-Tab`
+
+It will enter and exit Tweak Mode as usual, but will also make sure that the action can be edited in isolation
+(by flagging the NLA track that the action strip comes from as being "solo").
+This is useful for editing stashed actions, without the rest of the NLA Stack interfering.
+
+
+Start Tweaking Strips Action
+============================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Edit --> Start Tweaking Strips Action`
+   :Hotkey:    :kbd:`Tab`
+
+The contents of Action strips can be edited, but you must be in *Tweak Mode* to do so.
+The keyframes of the action can then be edited in the Dope Sheet.
+
+.. list-table::
+
+   * - .. figure:: /images/editors_nla_strips_nla-mode.png
+          :width: 320px
+
+          Strip in NLA mode.
+
+     - .. figure:: /images/editors_nla_strips_edit-mode.png
+          :width: 320px
+
+          Strip in Tweak mode.
+
+When you finished editing the strip, simply go to :menuselection:`Edit --> Tweaking Strips Action`
+or press :kbd:`Tab`.
