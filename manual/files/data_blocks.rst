@@ -409,7 +409,7 @@ Default Value
 
    .. warning::
 
-      Default values are used as the basis of :ref:`NLA blending <nla-blend-modes>`,
+      Default values are used as the basis of :ref:`NLA blending <bpy.types.AnimData.action_blend_type>`,
       and a nonsensical default (e.g. 0 for a property used for scaling) on a property intended for
       being keyframed is likely to cause issues.
 Min

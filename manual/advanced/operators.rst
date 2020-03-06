@@ -14,7 +14,6 @@ Operator Cheat Sheet
    :Menu:      :menuselection:`Help --> Operator Cheat Sheet`
    :Context:   Enable :ref:`Developer Extras <prefs-interface-dev-extras>`
 
-
 Creates a text file in the Text Editor that gives a list of all operators
 and their default values in Python syntax, along with the generated docs.
 This is a good way to get an overview of all Blender's operators.
