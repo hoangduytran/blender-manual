@@ -8,6 +8,7 @@
 
    introduction.rst
    basics/index.rst
+   mesh/index.rst
    vertices.rst
    edges.rst
    faces.rst
@@ -17,7 +18,6 @@
    duplicating/index.rst
    subdividing/index.rst
    cleanup.rst
-   misc.rst
    data_transfer.rst
    mesh_options.rst
    retopology.rst
