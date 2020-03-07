@@ -10,7 +10,7 @@
    basics/index.rst
    mesh/index.rst
    vertices.rst
-   edges.rst
+   edge/index.rst
    faces.rst
    uv/index.rst
    duplicating/index.rst

@@ -8,7 +8,7 @@ The *Bevel* modifier bevels the edges of the mesh it is applied to,
 with some control of how and where the bevel is applied to the mesh.
 
 It is a non-destructive alternative to
-the :doc:`Bevel Operation </modeling/meshes/editing/subdividing/bevel>` in Edit Mode.
+the :doc:`Bevel Operation </modeling/meshes/editing/edge/bevel>` in Edit Mode.
 
 .. list-table:: Side views of a cube.
    :align: center
@@ -87,7 +87,7 @@ Limit Method
    Weight
       Use each edge's bevel weight to determine the width of the bevel.
       When the bevel weight is 0.0, no bevel is applied.
-      See :doc:`here </modeling/meshes/editing/edges>` about adjusting bevel weights.
+      See :doc:`here </modeling/meshes/editing/edge/edge_data>` about adjusting bevel weights.
    Vertex Group
       Use weights from a vertex group to determine the width of the bevel.
       When the vertex weight is 0.0, no bevel is applied.

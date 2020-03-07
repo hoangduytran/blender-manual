@@ -1,8 +1,8 @@
 .. _tool-mesh-bevel:
 
-*****
-Bevel
-*****
+***********
+Bevel Edges
+***********
 
 .. admonition:: Reference
    :class: refbox

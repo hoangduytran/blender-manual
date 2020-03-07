@@ -1,7 +1,7 @@
 
-**************
-Make Edge/Face
-**************
+***************************
+New Edge/Face from Vertices
+***************************
 
 .. admonition:: Reference
    :class: refbox
