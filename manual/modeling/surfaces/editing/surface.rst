@@ -72,7 +72,7 @@ Spin
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Surface --> Spin`
 
-This tool is a bit similar to its :doc:`mesh counterpart </modeling/meshes/editing/duplicating/spin>`
+This tool is a bit similar to its :doc:`mesh counterpart </modeling/meshes/editing/tools/spin>`
 but with less control and options (in fact, there is none!).
 
 It only works on selected "surfaces" made of *one U row* (and not with one V row),

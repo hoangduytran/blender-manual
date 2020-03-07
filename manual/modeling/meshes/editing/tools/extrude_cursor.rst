@@ -1,15 +1,8 @@
-
-***************
-Adding Geometry
-***************
-
-In Blender, for modeling, you have several ways of adding mesh elements.
-
-
 .. _tool-mesh-extrude_cursor:
 
-Duplicate or Extrude to Cursor
-==============================
+*****************
+Extrude to Cursor
+*****************
 
 .. admonition:: Reference
    :class: refbox
@@ -18,10 +11,6 @@ Duplicate or Extrude to Cursor
    :Hotkey:    :kbd:`Ctrl-LMB`
 
 Interactively places new vertices with :kbd:`Ctrl-LMB` at the mouse cursor position.
-
-
-Creating Vertices
------------------
 
 The most basic element, a vertex, can be added with a :kbd:`Ctrl-LMB` click
 when no other vertices are selected.
@@ -43,7 +32,7 @@ and will continuously create and connect new vertices if you continue repeating 
 
 
 Creating Faces
---------------
+==============
 
 .. ToDo:
    This goes into too much detail about Ctrl-LMB for a simple introduction.
@@ -83,8 +72,3 @@ which is explained in the :doc:`Extrude </modeling/meshes/editing/duplicating/ex
    being vertices, edges and faces with the :kbd:`Ctrl-LMB`, are viewport dependent.
    This means, once you change your viewport, for example, from top to left, bottom or right,
    the extrusion direction will also follow your viewport and align the extrusions with your planar view.
-
-.. seealso::
-
-   - :doc:`/modeling/meshes/editing/basics/make_face_edge`
-   - :doc:`Duplicate tools </modeling/meshes/editing/duplicating/index>`
