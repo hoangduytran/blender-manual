@@ -9,7 +9,7 @@
    introduction.rst
    basics/index.rst
    mesh/index.rst
-   vertices.rst
+   vertex/index.rst
    edge/index.rst
    faces.rst
    uv/index.rst
