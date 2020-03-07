@@ -58,27 +58,6 @@ Note that the "copy" is left exactly at the same position as the original, so yo
 :kbd:`G` to see it clearly...
 
 
-Separate
-========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Separate`
-   :Hotkey:    :kbd:`P`
-
-The Separate tool will `Split`_ mesh elements into another mesh object.
-
-Selection
-   Separates the selected elements.
-By Material
-   Separates fragments based on the materials assigned to the different faces.
-By loose parts
-   Creates one object for every independent (disconnected) fragment of the original mesh.
-
-
-
 .. _mesh-edit-sort-elements:
 
 Sort Elements
@@ -145,12 +124,12 @@ though there are several different ways to do this.
 
    Suzanne dissected neatly.
 
-Selected
-   This option separates the selection to a new object.
-All Loose Parts
-   Separates the mesh in its unconnected parts.
+Selection
+   Separates the selected elements.
 By Material
-   Creates separate mesh objects for each material.
+   Separates fragments based on the materials assigned to the different faces.
+By Loose Parts
+   Creates one object for every independent (disconnected) fragment of the original mesh.
 
 .. seealso::
 
