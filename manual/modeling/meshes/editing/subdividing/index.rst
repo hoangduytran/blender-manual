@@ -9,5 +9,4 @@
    subdivide.rst
    loop.rst
    knife.rst
-   bisect.rst
    bevel.rst

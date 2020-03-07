@@ -32,7 +32,7 @@ Transform Snapping
 ------------------
 
 Basic move, rotate and scale transformations for selected points/strokes.
-See :doc:`Move, Rotate, Scale Basics </modeling/meshes/editing/transform/basic.rst>` for more information.
+See :doc:`Move, Rotate, Scale Basics </modeling/meshes/editing/mesh/transform/basic>` for more information.
 
 
 Tools
