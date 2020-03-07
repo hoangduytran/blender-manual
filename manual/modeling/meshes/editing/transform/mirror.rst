@@ -86,16 +86,3 @@ Transformation Orientations
 :doc:`Transformation Orientations </scene_layout/object/editing/transform/control/orientations>`
 are found on the 3D View header, next to the *Widget* buttons.
 They decide which coordinate system will rule the mirroring.
-
-
-Mirror Vertex Group
-===================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Weights --> Mirror`
-
-Mirrors the vertex group weights.
-See :ref:`Mirror Vertex Group <bpy.ops.object.vertex_group_mirror>` for more information.
