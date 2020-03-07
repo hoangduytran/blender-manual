@@ -6,6 +6,7 @@
 .. toctree::
    :maxdepth: 2
 
+   transform/index.rst
    mirror.rst
    duplicate.rst
    split.rst

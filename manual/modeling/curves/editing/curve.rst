@@ -24,7 +24,7 @@ Move, Rotate, Scale
    :doc:`Basic Transformations </scene_layout/object/editing/transform/introduction>`.
 To Sphere, Shear, Warp, Bend, Push/Pull, Warp, Randomize
    The transform tools are described in
-   the :doc:`Transformations </modeling/meshes/editing/transform/index>` sections.
+   the :doc:`Transformations </modeling/meshes/editing/mesh/transform/index>` sections.
 Move/Scale Texture Space
    Like other objects, curves have textures spaces which can be
    :ref:`edited <properties-texture-space-editing>`.
