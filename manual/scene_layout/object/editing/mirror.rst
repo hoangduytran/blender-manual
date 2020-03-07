@@ -37,7 +37,7 @@ The image :ref:`Mirroring a Selection <fig-mesh-duplicating-mirror-selection>`
 shows the results of this action after a mesh element has been duplicated.
 
 In Mesh mode, you can mirror the selection on the currently selected
-:doc:`Transform Orientations </scene_layout/object/editing/transform/control/orientations>`
+:doc:`Transform Orientations </editors/3dview/controls/orientation>`
 by pressing the appropriate axis key a second time. For example,
 if the Transform Orientation is set to *Normal*, pressing:
 :kbd:`Ctrl-M`, followed by :kbd:`X` and then :kbd:`X` again

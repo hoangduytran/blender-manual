@@ -95,7 +95,7 @@ This will duplicate that data-block and assign the newly created copy to that us
 .. note::
 
    Objects have a set of more advanced actions to become single-user,
-   see :doc:`their documentation </scene_layout/object/editing/duplication>`.
+   see :ref:`their documentation <bpy.ops.object.make_single_user>`.
 
 
 Removing Data-Blocks

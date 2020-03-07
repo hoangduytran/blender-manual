@@ -114,7 +114,7 @@ Seams
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Mark/Clear Seam`
 
-See :doc:`/modeling/meshes/editing/uv/unwrapping/seams`.
+See :doc:`/modeling/meshes/uv/unwrapping/seams`.
 
 
 .. _bpy.ops.uv.pack_islands:

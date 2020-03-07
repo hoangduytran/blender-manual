@@ -83,6 +83,6 @@ and the axis of transformation is X.
 Transformation Orientations
 ===========================
 
-:doc:`Transformation Orientations </scene_layout/object/editing/transform/control/orientations>`
+:doc:`Transformation Orientations </editors/3dview/controls/orientation>`
 are found on the 3D View header, next to the *Widget* buttons.
 They decide which coordinate system will rule the mirroring.

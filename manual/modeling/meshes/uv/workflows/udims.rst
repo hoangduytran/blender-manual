@@ -34,7 +34,7 @@ Then create the desired textures to match how many textures you want.
 
 After this it is the same process of moving UVs to the appropriate tile
 and scaling and managing them like any other UV map.
-See :doc:`/modeling/meshes/editing/uv/workflows/layout` for information on laying out UVs.
+See :doc:`/modeling/meshes/uv/workflows/layout` for information on laying out UVs.
 
 When the UVs are correctly set up across the multiple UV islands it is time to add proper textures the UDIM array.
 Currently, existing textures cannot be be added to a tile,

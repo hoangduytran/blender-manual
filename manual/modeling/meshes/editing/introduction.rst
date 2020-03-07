@@ -16,7 +16,7 @@ as well as individual shortcut keys.
    :doc:`axis locking </scene_layout/object/editing/transform/control/axis_locking>` possibilities,
    and some of them do not take into account
    the :doc:`pivot point </scene_layout/object/editing/transform/control/pivot_point/index>` and/or
-   :doc:`transform orientation </scene_layout/object/editing/transform/control/orientations>`
+   :doc:`transform orientation </editors/3dview/controls/orientation>`
    either.
 
 These transform tools are available

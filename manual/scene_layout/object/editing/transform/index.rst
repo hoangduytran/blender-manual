@@ -12,3 +12,4 @@
    control/index.rst
    randomize.rst
    align_objects.rst
+   align_transform_orientation.rst

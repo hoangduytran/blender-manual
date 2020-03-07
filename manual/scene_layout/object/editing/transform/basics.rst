@@ -167,7 +167,7 @@ Constrain Axis
 
    X, Y, Z
 Orientation
-   Shows the :doc:`Orientations </scene_layout/object/editing/transform/control/orientations>`
+   Shows the :doc:`Orientations </editors/3dview/controls/orientation>`
    of the constraint axes.
 Proportional Editing, Falloff, Size
    Activates/deactivates *Proportional Editing* and configures the *Falloff* type and *Size* of

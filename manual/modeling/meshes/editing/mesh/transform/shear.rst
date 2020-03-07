@@ -36,7 +36,7 @@ Axis
 Axis Ortho
    Defines the other axis of the imaginary shearing plane.
 Orientation
-   See :doc:`Transform Orientations </scene_layout/object/editing/transform/control/orientations>`.
+   See :doc:`Transform Orientations </editors/3dview/controls/orientation>`.
 Proportional Editing
    See :doc:`Proportional Editing </scene_layout/object/editing/transform/control/proportional_edit>`.
 
