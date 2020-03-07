@@ -13,6 +13,5 @@
    edge/index.rst
    face/index.rst
    uv/index.rst
-   duplicating/index.rst
    mesh_options.rst
-   misc.rst
+   misc/index.rst

@@ -63,8 +63,7 @@ it will be automatically unchecked.
 
 If you have three or more vertices selected, and :kbd:`Ctrl-LMB` click,
 you will also create planar faces, but along the vertices selected, following the direction of the cursor.
-This operation is similar to an extrude operation,
-which is explained in the :doc:`Extrude </modeling/meshes/editing/duplicating/extrude>` page.
+This operation is similar to an extrude operation.
 
 .. tip::
 

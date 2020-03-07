@@ -40,7 +40,7 @@ Moving Vertices :kbd:`LMB`
    using to hotkey to grab and move the vertex to the desired location.
    The vertex you are trying to move will be highlighted in blue while hovering over it.
 Extruding Edges :kbd:`LMB`
-   Edges can be :doc:`extruded </modeling/meshes/editing/duplicating/extrude>`
+   Edges can be :doc:`extruded </modeling/meshes/editing/edge/extrude_edges>`
    by moving the cursor close to an edge and using the hotkey to extrude the edge to the desired location.
    The edge you are trying to extrude will be highlighted in blue while hovering over it.
 
