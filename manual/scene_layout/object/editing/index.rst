@@ -9,8 +9,9 @@
 
    transform/index.rst
    mirror.rst
-   apply.rst
    clear.rst
+   apply.rst
+   snap.rst
    duplicate.rst
    duplicate_linked.rst
    join.rst

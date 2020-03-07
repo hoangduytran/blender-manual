@@ -1,65 +1,8 @@
+.. _transform-snap:
 
 ********
 Snapping
 ********
-
-There are two types of snap operations that you can use in Blender. The first type snaps your
-selection or cursor to a given point while the second type is used during transformations
-(move, rotate, scale) and snaps your selection to elements within the scene.
-
-
-.. _bpy.ops.view3d.snap:
-
-Snap Menu
-=========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Object, Edit, and Pose Mode
-   :Menu:      :menuselection:`Object/Object type --> Snap`
-   :Hotkey:    :kbd:`Shift-S`
-
-The *Snap* menu (also available from the 3D header in both *Object Mode* and *Edit Mode*
-:menuselection:`Object --> Snap` and :menuselection:`Mesh --> Snap`).
-This menu provides a number of options to move the cursor or your selection to a defined point
-(the cursor, selection or the grid).
-
-Selection to Grid
-   Snaps the currently selected object(s) to the nearest grid point.
-Selection to Cursor
-   Moves each one of the currently selected object(s) to the cursor location.
-Selection to Cursor (Offset)
-   Places the selection at the position of the 3D cursor.
-   If there are multiple objects selected, they are not moved individually at the cursor position;
-   instead, they are centered around the 3D cursor, maintaining their relative distances.
-Selection to Active
-   Moves the selection to the origin of the active object.
-
-Cursor to Selected
-   Places the cursor to the center of the current selection, unless see below.
-Cursor to Center
-   Places the cursor to the origin of the world (location 0, 0, 0).
-Cursor to Grid
-   Places the cursor to the nearest grid point.
-Cursor to Active
-   Places the cursor to the origin of the *active* (last selected) object.
-
-The *Cursor to Selected* option is also affected by the current :ref:`pivot-point-index`. For example:
-
-- With the *Bounding Box Center* pivot point active,
-  the *Cursor to Selected* option will snap the 3D cursor to
-  the center of the bounding box surrounding the objects' origins.
-- When the *Median Point* pivot point is selected,
-  *Cursor to Selected* will snap the 3D cursor to
-  the :doc:`median </scene_layout/object/editing/transform/control/pivot_point/median_point>` of the object
-  origins.
-
-
-.. _transform-snap:
-
-Transform Snapping
-==================
 
 .. admonition:: Reference
    :class: refbox
@@ -79,7 +22,7 @@ a transformation is available by toggling the magnet icon in the 3D View's heade
 .. _transform-snap-element:
 
 Snap Element
-------------
+============
 
 .. admonition:: Reference
    :class: refbox
@@ -128,7 +71,7 @@ Edge Perpendicular
 
 
 Snap Target
------------
+===========
 
 .. admonition:: Reference
    :class: refbox
@@ -168,7 +111,7 @@ Closest
 .. _bpy.types.ToolSettings.use_snap_backface_culling:
 
 Additional Snap Options
------------------------
+=======================
 
 .. figure:: /images/scene-layout_object_editing_transform_control_snap_options.png
 
@@ -198,11 +141,7 @@ Affect
 
 
 Multiple Snap Targets
-^^^^^^^^^^^^^^^^^^^^^
-
-.. figure:: /images/scene-layout_object_editing_transform_control_snap_target-multiple.png
-
-   Multiple snapping targets.
+---------------------
 
 Once transforming a selection with Snapping on (not just when holding :kbd:`Ctrl`),
 you can press :kbd:`A` to mark the current snapping point, then proceed to mark as many other
@@ -210,3 +149,7 @@ snapping points as you wish and the selection will be snapped to the average loc
 the marked points.
 
 Marking a point more than once will give it more weight in the averaged location.
+
+.. figure:: /images/scene-layout_object_editing_transform_control_snap_target-multiple.png
+
+Multiple snapping targets.
