@@ -10,6 +10,8 @@
    mirror.rst
    duplicate.rst
    split.rst
+   bisect.rst
+   knife_project.rst
    convex_hull.rst
    symmetrize.rst
    snap_symmetry.rst

@@ -16,5 +16,4 @@
    duplicating/index.rst
    subdividing/index.rst
    mesh_options.rst
-   retopology.rst
    misc.rst

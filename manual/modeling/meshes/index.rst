@@ -16,3 +16,4 @@
    editing/index.rst
    properties/index.rst
    mesh_analysis.rst
+   retopology.rst
