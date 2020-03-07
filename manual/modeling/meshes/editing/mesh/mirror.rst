@@ -38,14 +38,14 @@ choose one transformation orientation and then one axis on it.
 Pivot Point
 ===========
 
-:doc:`Pivot points </scene_layout/object/editing/transform/control/pivot_point/index>` must be set first.
+:doc:`Pivot points </editors/3dview/controls/pivot_point/index>` must be set first.
 Pivot points will become the center of symmetry.
 If the widget is turned on it will always show where the pivot point is.
 
 In Fig. :ref:`fig-mesh-deform-mirror-origins` the pivot point default to
 median point of the selection of vertices in *Edit Mode*.
 This is a special case of the *Edit Mode* as explained on
-the :doc:`pivot point page </scene_layout/object/editing/transform/control/pivot_point/index>`.
+the :doc:`pivot point page </editors/3dview/controls/pivot_point/index>`.
 
 .. _fig-mesh-deform-mirror-origins:
 

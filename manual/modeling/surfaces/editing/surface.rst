@@ -56,7 +56,7 @@ Snap
    :Menu:      :menuselection:`Curve --> Snap`
    :Hotkey:    :kbd:`Shift-S`
 
-:doc:`Mesh snapping </scene_layout/object/editing/transform/control/snap>`
+:doc:`Mesh snapping </editors/3dview/controls/snapping>`
 also works with control points, except for within itself (other components of the active spline).
 Snapping works with 2D surfaces but points will be constrained to the local XY axes.
 

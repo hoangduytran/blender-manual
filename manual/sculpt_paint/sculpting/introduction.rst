@@ -51,7 +51,7 @@ This is because the basic move, scale, rotate transforms are also possible in Sc
 
 .. seealso::
 
-   :doc:`Object and Edit Mode Pivot </scene_layout/object/editing/transform/control/pivot_point/index>`
+   :doc:`Object and Edit Mode Pivot </editors/3dview/controls/pivot_point/index>`
 
 
 .. _bpy.ops.sculpt.set_pivot_position:

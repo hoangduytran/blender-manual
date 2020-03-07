@@ -24,7 +24,7 @@ Like other elements in Blender, points and strokes can be
 moved :kbd:`G`, rotated :kbd:`R` or scaled :kbd:`S` as described in
 the :doc:`Basic Transformations </scene_layout/object/editing/transform/introduction>` section.
 When in *Edit Mode*,
-:doc:`Proportional Editing </scene_layout/object/editing/transform/control/proportional_edit>`
+:doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`
 is also available for the transformation actions.
 
 
@@ -73,7 +73,7 @@ Snap
    :Menu:      :menuselection:`Grease Pencil --> Snap`
    :Hotkey:    :kbd:`Shift-S`
 
-:doc:`Mesh snapping </scene_layout/object/editing/transform/control/snap>`
+:doc:`Mesh snapping </editors/3dview/controls/snapping>`
 also works with Grease Pencil components.
 
 

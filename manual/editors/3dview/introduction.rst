@@ -50,12 +50,12 @@ Transform Orientations
 Pivot Point
    Used to change the reference point (or :term:`pivot point`) used by many mesh manipulation tools.
 
-   Read more about :doc:`Pivot Points </scene_layout/object/editing/transform/control/pivot_point/index>`.
+   Read more about :doc:`Pivot Points </editors/3dview/controls/pivot_point/index>`.
 Snapping
-   Controls the :doc:`snapping tools </scene_layout/object/editing/transform/control/snap>`
+   Controls the :doc:`snapping tools </editors/3dview/controls/snapping>`
    that help with transforming and modeling objects.
 Proportional Edit
-   :doc:`Proportional Edit </scene_layout/object/editing/transform/control/proportional_edit>`.
+   :doc:`Proportional Edit </editors/3dview/controls/proportional_editing>`.
 
 
 Display & Shading

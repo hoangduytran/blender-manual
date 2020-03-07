@@ -78,7 +78,7 @@ Snap
    :Menu:      :menuselection:`Curve --> Snap`
    :Hotkey:    :kbd:`Shift-S`
 
-:doc:`Mesh snapping </scene_layout/object/editing/transform/control/snap>`
+:doc:`Mesh snapping </editors/3dview/controls/snapping>`
 also works with curve components.
 Both control points and their handles will be affected by snapping,
 except for within itself (other components of the active curve).

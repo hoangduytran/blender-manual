@@ -16,7 +16,7 @@ Shear
 Shearing is a form of movement where parallel surfaces move past one another. During this transform,
 movement of the selected elements will occur along the horizontal axis of the current view.
 The axis location will be defined by
-the :doc:`Pivot Point </scene_layout/object/editing/transform/control/pivot_point/index>`.
+the :doc:`Pivot Point </editors/3dview/controls/pivot_point/index>`.
 Everything that is "above" this axis will move (Shear)
 in the same direction as your mouse pointer (but always parallel to the horizontal axis).
 Everything that is "below" the horizontal axis will move in the opposite direction.
@@ -38,7 +38,7 @@ Axis Ortho
 Orientation
    See :doc:`Transform Orientations </editors/3dview/controls/orientation>`.
 Proportional Editing
-   See :doc:`Proportional Editing </scene_layout/object/editing/transform/control/proportional_edit>`.
+   See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
 
 .. warning::
 
@@ -57,7 +57,7 @@ See below for the result of using *Shear* on a number of different elements.
 
 The three frames of the image above show the effects of shearing
 on the selected vertices when the pivot point is altered.
-In middle frame, the :doc:`Pivot Point </scene_layout/object/editing/transform/control/pivot_point/index>`
+In middle frame, the :doc:`Pivot Point </editors/3dview/controls/pivot_point/index>`
 is set to *Median Point*
 and the mouse was moved to the left during the transform.
 In right frame, the *Pivot Point* is set to the 3D cursor
