@@ -15,5 +15,6 @@
    selecting.rst
    editing/index.rst
    properties/index.rst
+   uv/index.rst
    mesh_analysis.rst
    retopology.rst

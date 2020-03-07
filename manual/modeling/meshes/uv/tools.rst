@@ -36,9 +36,9 @@ Transform
    Annotate Eraser
       Erase previous drawn annotations.
 
-:doc:`Grab </modeling/meshes/editing/uv/uv_sculpt>`
+:doc:`Grab </modeling/meshes/uv/uv_sculpt>`
    The Grab brush moves UVs around.
-:doc:`Relax </modeling/meshes/editing/uv/uv_sculpt>`
+:doc:`Relax </modeling/meshes/uv/uv_sculpt>`
    The Relax brush makes UVs more evenly distributed.
    The algorithm relies on space, not stretch minimization,
    so most probably a minimize stretch will have to be run for optimal results.
@@ -49,6 +49,6 @@ Transform
       There are two relax algorithms:
 
       Laplacian, HC
-:doc:`Pinch </modeling/meshes/editing/uv/uv_sculpt>`
+:doc:`Pinch </modeling/meshes/uv/uv_sculpt>`
    The Pinch brush moves UVs toward the brush's center.
    The pinch brush can be inverted by pressing :kbd:`Ctrl-LMB`.

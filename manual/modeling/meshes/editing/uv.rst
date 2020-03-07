@@ -42,7 +42,7 @@ Unwrap
 
    Result of unwrapping Suzanne.
 
-Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/editing/uv/unwrapping/seams>`.
+Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/uv/unwrapping/seams>`.
 Useful for organic shapes.
 
 Begin by selecting all faces to be unwrapped in the 3D View. With our faces selected,
@@ -213,7 +213,7 @@ Cube Projection
 Cube Projection maps the mesh onto the faces of a cube, which is then unfolded.
 It projects the mesh onto six separate planes, creating six UV islands.
 In the UV editor, these will appear overlapped, but can be moved.
-See :doc:`Editing UVs </modeling/meshes/editing/uv/editing>`.
+See :doc:`Editing UVs </modeling/meshes/uv/editing>`.
 
 
 Options

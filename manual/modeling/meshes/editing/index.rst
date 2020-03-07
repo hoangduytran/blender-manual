@@ -12,6 +12,6 @@
    vertex/index.rst
    edge/index.rst
    face/index.rst
-   uv/index.rst
+   uv.rst
    mesh_options.rst
    misc/index.rst
