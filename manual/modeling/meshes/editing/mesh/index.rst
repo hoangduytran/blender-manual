@@ -6,7 +6,14 @@
 .. toctree::
    :maxdepth: 2
 
+   mirror.rst
+   duplicate.rst
    split.rst
    convex_hull.rst
+   symmetrize.rst
+   snap_symmetry.rst
+   normals.rst
    sort_elements.rst
    separate.rst
+   cleanup.rst
+   delete.rst

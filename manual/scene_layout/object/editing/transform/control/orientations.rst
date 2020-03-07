@@ -54,7 +54,7 @@ Local
 
 Normal
    The Z axis of the gizmo will match
-   the :doc:`Normal </modeling/meshes/editing/normals>` of the selected element.
+   the :doc:`Normal </modeling/meshes/editing/mesh/normals>` of the selected element.
    If multiple elements are selected, it will orient towards the average of those normals.
 
    In *Object Mode*, this is equivalent to *Local* orientation.

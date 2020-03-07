@@ -6,7 +6,7 @@
 .. toctree::
    :maxdepth: 1
 
-   mirror.rst
+   basic.rst
    shrink-fatten.rst
    push_pull.rst
    shear.rst

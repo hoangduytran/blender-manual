@@ -32,7 +32,7 @@ Transform Snapping
 ------------------
 
 Basic move, rotate and scale transformations for selected points/strokes.
-See :doc:`Move, Rotate, Scale Basics </modeling/meshes/editing/basics/move_rotate_scale>` for more information.
+See :doc:`Move, Rotate, Scale Basics </modeling/meshes/editing/transform/basic.rst>` for more information.
 
 
 Tools
@@ -60,7 +60,7 @@ Mirror
    :Hotkey:    :kbd:`Ctrl-M`
 
 The *Mirror* tool is also available, behaving exactly the same as with
-:doc:`mesh vertices </modeling/meshes/editing/transform/mirror>`.
+:doc:`mesh vertices </modeling/meshes/editing/mesh/mirror>`.
 
 
 Snap

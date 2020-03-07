@@ -145,7 +145,7 @@ Harden Normals :kbd:`H`
    This will keep the surrounding faces flat (if they were before),
    with the bevel faces shading smoothly into them. For this effect to work,
    custom split normals need to be enabled, which requires Auto Smooth to be enabled
-   (see :doc:`Normals </modeling/meshes/editing/normals>`).
+   (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
    As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.
 
 Face Strength Mode

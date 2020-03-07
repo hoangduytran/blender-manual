@@ -35,5 +35,5 @@ Threshold
 
 .. seealso::
 
-   See :doc:`Mirror </modeling/meshes/editing/transform/mirror>`
+   See :doc:`Mirror </modeling/meshes/editing/mesh/mirror>`
    for information on mirroring, which allows you to flip geometry across an axis.

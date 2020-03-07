@@ -65,7 +65,7 @@ Mirror
    :Hotkey:    :kbd:`Ctrl-M`
 
 The *Mirror* tool is also available, behaving exactly as with
-:doc:`mesh vertices </modeling/meshes/editing/transform/mirror>`.
+:doc:`mesh vertices </modeling/meshes/editing/mesh/mirror>`.
 
 
 Snap

@@ -74,7 +74,7 @@ Harden Normals
    This will keep the surrounding faces flat (if they were before),
    with the bevel faces shading smoothly into them. For this effect to work,
    you need custom normals data, which requires *Auto Smooth* option to be enabled
-   (see :doc:`Normals </modeling/meshes/editing/normals>`).
+   (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
 
 Limit Method
    Used to control where a bevel is applied to the mesh.
