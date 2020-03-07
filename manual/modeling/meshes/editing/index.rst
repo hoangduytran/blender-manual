@@ -13,7 +13,6 @@
    edges.rst
    faces.rst
    uv/index.rst
-   transform/index.rst
    duplicating/index.rst
    subdividing/index.rst
    data_transfer.rst
