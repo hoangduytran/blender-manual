@@ -151,19 +151,3 @@ Use after creation
 Overwrite previous
    If the new orientation is given an existing name, a suffix will be added to it to avoid overwriting the old one,
    unless *Overwrite previous* is checked, in which case it will be overwritten.
-
-
-.. _bpy.ops.transform.transform:
-
-Align to Transform Orientation
-==============================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Object and Edit Modes
-   :Menu:      :menuselection:`Object --> Transform --> Align to Transform Orientation`
-
-Aligns (rotates) the selected objects so that their local orientation matches the active transform orientation
-in the Transform orientation panel or the *Orientation* selection
-in the Transform :ref:`ui-undo-redo-adjust-last-operation` panels.

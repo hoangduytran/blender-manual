@@ -13,7 +13,6 @@ Transform controls can be used to modify and control the effects of the availabl
    axis_locking.rst
    precision.rst
    snap.rst
-   orientations.rst
    pivot_point/index.rst
    proportional_edit.rst
    options.rst
