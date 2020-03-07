@@ -6,7 +6,12 @@
 .. toctree::
    :maxdepth: 2
 
-   introduction.rst
    transform/index.rst
-   duplication.rst
+   duplicate.rst
+   duplicate_linked.rst
+   join.rst
    relations.rst
+   make_links.rst
+   convert.rst
+   show_hide.rst
+   delete.rst
