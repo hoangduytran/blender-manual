@@ -10,5 +10,4 @@
    loop.rst
    knife.rst
    bisect.rst
-   vertex_connect.rst
    bevel.rst
