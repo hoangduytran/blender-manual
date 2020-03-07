@@ -233,10 +233,10 @@ Notice that the child object does not move to the new location of the pose bone.
 
 .. note::
 
-   When using :kbd:`Ctrl-P` to set parents, choosing *Bone* or *Bone Relative*
-   will respectively clear and set the bone's *Relative Parenting* option.
-   Since *Relative Parenting* is an option that is set per bone, this influences
-   all child objects of that bone at once.
+   When using :kbd:`Ctrl-P` to set parents, choosing "Bone" or "Bone Relative"
+   will respectively clear and set the bone's "Relative Parenting" option. Since
+   "Relative Parenting" is an option that is set per bone, this influences all
+   child objects of that bone at once.
 
 
 Vertex Parent
@@ -252,7 +252,7 @@ Vertex Parent from Edit Mode
 ----------------------------
 
 In *Object Mode*, select the child/children and then the parent object.
-Enter *Edit Mode* and on the parent object select either one vertex
+:kbd:`Tab` into *Edit Mode* and on the parent object select either one vertex
 that defines a single point, or select three vertices that define an area
 (the three vertices do not have to form a complete face;
 they can be any three vertices of the parent object),
