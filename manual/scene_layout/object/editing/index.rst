@@ -5,8 +5,11 @@
 
 .. toctree::
    :maxdepth: 2
+   :titlesonly:
 
    transform/index.rst
+   apply.rst
+   clear.rst
    duplicate.rst
    duplicate_linked.rst
    join.rst

@@ -1,47 +1,7 @@
 
-*************
-Clear & Apply
-*************
-
-.. _bpy.ops.object.*clear:
-
-Clear
-=====
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Clear --> Clear Location / Clear Scale / Clear Rotation / Clear Origin`
-   :Hotkey:    :kbd:`Alt-G`, :kbd:`Alt-S`, :kbd:`Alt-R`
-
-Clearing transforms simply resets the transform values.
-The objects location and rotation values return to 0, and the scale returns to 1.
-
-Clear Location :kbd:`Alt-G`
-   Clear (reset) the location of the selection.
-   This will move the selection back to the coordinates (0, 0, 0).
-Clear Scale :kbd:`Alt-S`
-   Clear (reset) the scale of the selection.
-   This will resize the selection back to the size it was when created.
-Clear Rotation :kbd:`Alt-R`
-   Clear (reset) the rotation of the selection.
-   This will set the rotation of the selection to 0 degrees in each plane.
-Clear Origin
-   Clears (resets) the offset of the child objects origin.
-   This will cause child objects to move to the origin of the parent.
-
-
-Options
--------
-
-Clear Delta
-   Clear the :ref:`delta transform <transform-delta>` in addition to clearing the primary transforms.
-   (Appears in the :ref:`ui-undo-redo-adjust-last-operation` panel.)
-
-
+*****
 Apply
-=====
+*****
 
 These operations lets you apply several transformations to the selected objects.
 The object transformation coordinates are transferred to the object data.
@@ -51,7 +11,7 @@ If the objects have hierarchical descendants, it also applies those transformati
 .. _bpy.ops.object.transform_apply:
 
 Apply Object Transformations
-----------------------------
+============================
 
 .. admonition:: Reference
    :class: refbox
@@ -78,7 +38,7 @@ the combination of transformations to apply.
 
 
 Options
-^^^^^^^
+-------
 
 Location
    Apply (set) the location of the selection.
@@ -104,7 +64,7 @@ Apply Properties
 .. _bpy.ops.object.anim_transforms_to_deltas:
 
 Transforms to Deltas
---------------------
+====================
 
 .. admonition:: Reference
    :class: refbox
@@ -127,7 +87,7 @@ Animated Transform to Deltas
 
 
 Options
-^^^^^^^
+-------
 
 Reset Values
    Clear primary transform values after transferring to deltas.
@@ -136,7 +96,7 @@ Reset Values
 .. _bpy.ops.object.visual_transform_apply:
 
 Visual Transform
-----------------
+================
 
 .. admonition:: Reference
    :class: refbox
@@ -149,7 +109,7 @@ Apply (set) the result of a constraint and apply this back to the object's locat
 
 
 Visual Geometry as Mesh
------------------------
+=======================
 
 .. admonition:: Reference
    :class: refbox
@@ -167,7 +127,7 @@ For details, see the :ref:`object-convert-to` mesh.
 .. _bpy.ops.object.duplicates_make_real:
 
 Make Instances Real
--------------------
+===================
 
 .. admonition:: Reference
    :class: refbox
@@ -190,7 +150,7 @@ In the end, each instance becomes a real object.
 
 
 Options
-^^^^^^^
+-------
 
 By default, new objects will be added to the same collection as the one containing their instancer,
 without keeping any hierarchy relationships. This behavior can be altered with the following options.

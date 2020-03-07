@@ -12,4 +12,3 @@
    control/index.rst
    tools.rst
    mirror.rst
-   clear_apply.rst
