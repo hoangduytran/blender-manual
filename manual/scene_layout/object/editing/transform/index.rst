@@ -10,5 +10,5 @@
    introduction.rst
    basics.rst
    control/index.rst
-   tools.rst
-   mirror.rst
+   randomize.rst
+   align_objects.rst
