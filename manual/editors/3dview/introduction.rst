@@ -62,19 +62,19 @@ Display & Shading
 -----------------
 
 Object Type Visibility
-   Change the :doc:`Object Type Visibility </editors/3dview/controls/visibility>`
+   Change the :doc:`Object Type Visibility </editors/3dview/display/visibility>`
    and selectability of objects in the 3D View.
 Viewport Gizmos
-   Change the way how :doc:`gizmos </editors/3dview/controls/gizmo>` are
+   Change the way how :doc:`gizmos </editors/3dview/display/gizmo>` are
    displayed in the 3D View.
 X-Ray
    Show the whole scene transparent. This is a shortcut to
    the :ref:`X-ray <3dview-shading-xray>` option inside the shading control.
 Viewport Overlays
-   Change the way how :doc:`overlays </editors/3dview/controls/overlays>` are
+   Change the way how :doc:`overlays </editors/3dview/display/overlays>` are
    displayed in the 3D View.
 Viewport Shading
-   Change the :doc:`shading </editors/3dview/controls/shading>` of the 3D View.
+   Change the :doc:`shading </editors/3dview/display/shading>` of the 3D View.
 
 
 Toolbar Region

@@ -148,7 +148,7 @@ Displaying
    :Mode:      Sculpt Mode
    :Popover:   :menuselection:`Viewport Overlays -- Sculpt --> Mask`
 
-The mask display can be toggled as a :doc:`viewport overlay </editors/3dview/controls/overlays>`.
+The mask display can be toggled as a :doc:`viewport overlay </editors/3dview/display/overlays>`.
 In the overlay popover, the opacity of the mask overlay can be adjusted to make it more or less visible on the mesh.
 
 
