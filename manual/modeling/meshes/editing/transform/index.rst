@@ -7,9 +7,9 @@
    :maxdepth: 1
 
    basic.rst
-   shrink-fatten.rst
-   push_pull.rst
-   shear.rst
    to_sphere.rst
-   warp.rst
+   shear.rst
    bend.rst
+   push_pull.rst
+   warp.rst
+   shrink-fatten.rst
