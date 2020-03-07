@@ -1,7 +1,18 @@
 
-*************
-Data Transfer
-*************
+*********
+Relations
+*********
+
+.. _bpy.ops.object.data_transfer:
+
+Transfer Mesh Data
+==================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Object --> Relations --> Transfer Mesh Data`
 
 The *Data Transfer* tool transfers several types of data from one mesh to another.
 Data types include vertex groups, UV maps, vertex colors, custom normals...
@@ -9,18 +20,6 @@ Data types include vertex groups, UV maps, vertex colors, custom normals...
 Transfer works by generating a mapping between source mesh's items (vertices, edges, etc.)
 and destination ones, either on a one-to-one basis, or mapping several source items
 to a single destination one by interpolated mapping.
-
-
-.. _bpy.ops.object.data_transfer:
-
-Data
-====
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Relations --> Transfer Mesh Data`
 
 Transfers data layer(s) from active to selected meshes.
 
@@ -171,8 +170,8 @@ Mix Factor
 
 .. _bpy.ops.object.datalayout_transfer:
 
-Data Layout
-===========
+Transfer Mesh Data Layout
+=========================
 
 .. admonition:: Reference
    :class: refbox

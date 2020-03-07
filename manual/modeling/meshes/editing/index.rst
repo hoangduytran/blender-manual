@@ -15,7 +15,6 @@
    uv/index.rst
    duplicating/index.rst
    subdividing/index.rst
-   data_transfer.rst
    mesh_options.rst
    retopology.rst
    misc.rst

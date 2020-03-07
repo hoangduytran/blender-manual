@@ -9,3 +9,4 @@
    introduction.rst
    transform/index.rst
    duplication.rst
+   relations.rst
