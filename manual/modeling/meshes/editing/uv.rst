@@ -1,8 +1,7 @@
-..    TODO/Review: {{review|im=additional examples}}.
 
-*************
-Mapping Types
-*************
+********
+UV Tools
+********
 
 .. admonition:: Reference
    :class: refbox

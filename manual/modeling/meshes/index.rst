@@ -9,9 +9,9 @@
    :maxdepth: 2
 
    introduction.rst
-   toolbar/index.rst
    structure.rst
    primitives.rst
+   tools/index.rst
    selecting.rst
    editing/index.rst
    properties/index.rst

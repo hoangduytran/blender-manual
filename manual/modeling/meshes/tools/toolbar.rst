@@ -1,4 +1,3 @@
-
 .. _mesh-toolbar-index:
 
 *******

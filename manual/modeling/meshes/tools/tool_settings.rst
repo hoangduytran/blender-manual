@@ -1,7 +1,10 @@
 
-************
-Mesh Options
-************
+*************
+Tool Settings
+*************
+
+Options
+=======
 
 .. admonition:: Reference
    :class: refbox
@@ -15,7 +18,7 @@ Mesh Options
 .. _bpy.types.Mesh.use_mirror_z:
 
 Mirror
-======
+------
 
 The *Mirror* option of the *Mesh Options* panel allows you to transform
 vertices symmetrically according to the chosen axis. When you transform
@@ -34,7 +37,7 @@ the chosen axis.
 .. _bpy.types.Mesh.use_mirror_topology:
 
 Topology Mirror
-===============
+---------------
 
 .. note::
 
@@ -57,7 +60,7 @@ The effect of this is that mirrored vertices can be non-symmetrical and yet stil
 
 
 Example
--------
+^^^^^^^
 
 For an example of how to use *Topology Mirror* open up a new Blender scene,
 then delete the default cube and add a Monkey object to the 3D View.
@@ -73,7 +76,7 @@ then delete the default cube and add a Monkey object to the 3D View.
 
 
 Auto Merge
-==========
+----------
 
 .. admonition:: Reference
    :class: refbox
