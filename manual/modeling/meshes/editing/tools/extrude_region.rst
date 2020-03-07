@@ -1,10 +1,16 @@
-.. _bpy.ops.view3d.edit_mesh_extrude:
-.. _bpy.ops.mesh.extrude_region:
-.. (todo rewrite) Extrude Edges and Vertices Only needs a rewrite.
+.. _tool-mesh-extrude_region:
 
-*******
-Extrude
-*******
+**************
+Extrude Region
+**************
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Tool:      :menuselection:`Toolbar --> Extrude Region`
+   :Menu:      :menuselection:`Mesh --> Extrude --> Extrude Region`
+   :Hotkey:    :kbd:`E`
 
 Extrusion tools duplicate vertices, while keeping the new geometry connected with the original vertices.
 Vertices are turned into edges and edges will form faces.
@@ -32,23 +38,6 @@ see :doc:`/scene_layout/object/editing/transform/control/axis_locking`.
 
 The extrude tools differentiate in how the new geometry is connected in itself.
 
-Flip Normals
-   Reverses the :term:`normal's <normal>` direction for any resulting geometry.
-
-
-.. _tool-mesh-extrude_region:
-
-Extrude Region
-==============
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Tool:      :menuselection:`Toolbar --> Extrude Region`
-   :Menu:      :menuselection:`Mesh --> Extrude --> Extrude Region`
-   :Hotkey:    :kbd:`E`
-
 Only the border loop gets extruded.
 The inner region of the selection gets moved unchanged with the extrusion.
 
@@ -71,7 +60,7 @@ The inner region of the selection gets moved unchanged with the extrusion.
 
 
 Details
--------
+=======
 
 Although the process is quite intuitive,
 the principles behind *Extrude* are fairly elaborate as discussed below:
@@ -93,59 +82,3 @@ the principles behind *Extrude* are fairly elaborate as discussed below:
   are duplicated and a new face is created between the new edge and the original one.
 - Single selected vertices which do not belong to selected edges
   are duplicated and a new edge is created between the two.
-
-
-.. _tool-mesh-extrude_individual:
-
-Extrude Individual
-==================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Tool:      :menuselection:`Toolbar --> Extrude Region --> Extrude Individual`
-   :Menu:      :menuselection:`Mesh --> Extrude --> Individual Faces`
-   :Hotkey:    :kbd:`Alt-E`
-
-*Extrude Individual* allows you to extrude a selection of multiple faces as individuals, instead of as a region.
-The faces are extruded along their own normals, rather than their average.
-This has several consequences: first, "internal" edges
-(i.e. edges between two selected faces) are no longer deleted (the original faces are).
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-multi.png
-          :width: 200px
-
-          Selection of multiple faces.
-
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-multi-region.png
-          :width: 200px
-
-          Extruded using extrude region.
-
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-multi-individual.png
-          :width: 200px
-
-          Extruded using Extrude Individual.
-
-
-Extrude Repeat Mesh
-===================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Operator Search --> Extrude Repeat Mesh`
-
-This tool has to be called from :doc:`/interface/controls/templates/operator_search`.
-If the selection is not manifold it's extruded the specified number of times, else
-it behaves similar to the :doc:`/modeling/modifiers/generate/array`.
-The extrusion is aligned along the Z axis of the view.
-
-Offset
-   Distance between the instances.
-Steps
-   Number of instances.
