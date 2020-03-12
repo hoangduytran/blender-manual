@@ -19,17 +19,19 @@ Options
 
    Opacity Modifier.
 
-Factor
-   Controls the Opacity (Alpha) value of the stroke points.
+Uniform Opacity
+   When enabled, makes the Opacity equal for the entire strokes.
 
+   Strength
+      Absolute Opacity for the stroke points.
+
+Opacity Factor
+   Controls the Opacity value of the stroke points.
    A value of 1.0 respect the original alpha value of the points,
    a shift less than 1.0 make the points more transparent than originally,
    and a shift greater than 1.0 make the points more opaque than originally.
 
    Sets value to 2.0 makes the points alpha fully opaque.
-
-Create Materials
-   When applied, the modifier will create a new material that will keep the color transformation.
 
 Mode
    The color transformation will be applied on the stroke and/or the fill color.
