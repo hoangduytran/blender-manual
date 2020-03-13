@@ -6,7 +6,7 @@ Add Camera Rigs
 .. figure:: /images/addons_camera_camera-rigs_ui.png
    :align: center
 
-This script was designed to add some extended functionality to a camera by creating control rig
+This script was designed to add some extended functionality to a camera by creating control rigs
 with custom shapes and UI to easily access the cameras settings from the 3D View.
 
 
@@ -20,24 +20,27 @@ Activation
 Description
 ===========
 
-After activating the add-on, it will place two menu items in the :menuselection:`Add --> Camera` menu.
-They are Dolly Rig and Crane Rig.
+After activating the add-on, it will place three menu items in the :menuselection:`Add --> Camera` menu.
+They are Dolly Rig, Crane Rig and 2D Camera Rig.
 
-Both rigs are very similar except the "Crane Rig" has two extra adjustable bones (Arm Height and Arm Length)
+The first two rigs are very similar except the "Crane Rig" has two extra adjustable bones (Arm Height and Arm Length)
 to make it easier to achieve a cinematic crane shot.
+
+The 2D Camera Rig is mostly useful for 2D shots, when the camera is static and
+the action happens in front of it (like a theatre stage).
 
 
 Usage
 =====
 
-Add a :menuselection:`Add --> Camera --> Dolly Camera Rig or Crane Camera Rig`.
+Add a :menuselection:`Add --> Camera --> Dolly Camera Rig, Crane Camera Rig or 2D Camera Rig`.
 This will build the rig at the cursor location, add a new camera, making it the new active scene camera.
 
 When the Rig is selected, the camera properties will be displayed in the Sidebar.
 
 
-Rigs
-====
+3D Rigs (Dolly and Crane)
+=========================
 
 Root bone
    This is the parent of the entire rig.
@@ -48,12 +51,58 @@ Aim bone
    You can also tilt the camera by rotating the aim on the Y axis.
 
 
+2D Rig
+======
+
+This rig is mainly designed to function like a rostrum camera, aiming at one direction. With it, you can frame the
+action by moving two of the corners of the camera, instead of moving and rotating it. It produces smooth movements that
+would be very hard to achieve without it, by using complex drivers to calculate the appropriate camera settings.
+
+The following video shows a comparison of an animated camera movement
+without (top) and with (bottom) the help of the rig.
+As you can see in the lower left corner, you can achieve a smoother camera movement, without the frame moving around.
+
+.. vimeo:: 280727941
+   :width: 800px
+
+
+Root bone
+   This is the parent of the entire rig.
+   It is the only bone that you should rotate to aim approximately at the action.
+Left_corner and Right_corner bones
+   These are the most important bones in this rig.
+   You can move them to quickly set and animate a framing.
+   The camera will adjust its parameters to adapt to this framing (focal length, rotation / shift).
+   They should always be at the same height (Y axis in the camera’s coordinate system).
+Camera bone
+   You can move the camera around, and it will compensate its settings to frame the two corners.
+   For instance, if you leave the corners fixed on both sides of the subject and move the camera forward,
+   you will achieve an efficient dolly zoom effect.
+
+
+Modes
+-----
+
+There are two modes of operation for the 2D rig: Rotation and Shift.
+You can switch between the two modes in the add-on’s UI_.
+
+Rotation is the default mode, and will rotate the camera to aim at and keep the corners in its frame.
+Shift mode, on the other hand, uses the Shift properties on the Camera to achieve a cropping effect instead of a pan.
+
+
+Limitations
+-----------
+
+- When moving the corners too far to the side in rotation mode, perspective makes the rig much less accurate.
+- Rotation mode is unsupported for orthographic cameras
+
+
 Widgets
 =======
 
 When the rig(s) are built, the add-on will create a collection for all the custom bone shapes
-called (named ``WDGTS_camera``). When the custom shapes (widgets) are built
-they will use the prefix ``WDGTS_camera``. If you have more than one rig in the scene,
+called (named ``Widgets``). When the custom shapes (widgets) are built
+they will use the prefix ``WGT-``. If you have more than one rig in the scene,
 it will use the same widgets in the same collection rather than duplicating them.
 The default collection name and the widget prefix can be set in the preferences of the add-on.
 (This will not change the name of any existing widgets or collection,
@@ -99,6 +148,10 @@ Crane Rig Height, Arm Length
    By default, both the height and the arm length are at 1 unit in size.
    These values only show in the UI when a crane rig is selected, they are also animatable.
 
+Rotation/Shift
+   The Rotation/Shift slider lets you switch between Rotation and Shift Modes_ for the 2D Camera rig. You can also choose
+   an intermediate value to have a bit of both.
+
 
 Multiple Cameras
 ================
@@ -118,24 +171,19 @@ When pressed, it will add a marker to the Timeline and bind it to the camera con
 Go to another frame, select a different camera rig and press it again.
 Now you have two markers and when you scrub the time line you will see the active camera switch accordingly.
 (repeat this process as many times as needed)
-This markers can then also be dragged around in the time to change the frame in which they will switch.
+These markers can then also be dragged around in the timeline to change the frame at which they will switch.
 
 
 Troubleshooting
 ===============
 
-If the Aim tracking is not functioning check that you have "Auto Run Python Scripts" enabled in the Preferences
-:menuselection:`Preferences --> Save & Load --> Auto Run Python Scripts`.
-
-If the UI stops working, perhaps you have parented an object to the rig?
-At the moment If you parent an object to the rig with a name
-that precedes the camera name alphabetically, the UI can't load.
-E.g. The Default camera name for the Dolly is "Dolly Camera". If you parent an object called "E" it will work.
-But an object called "A" will fail.
+If the Aim tracking or 2D rig are not functioning, check that you have "Auto Run Python Scripts" enabled in the
+Preferences :menuselection:`Preferences --> Save & Load --> Auto Run Python Scripts`.
 
 .. seealso::
 
-   The `Author's Github Repository <https://github.com/waylow/add_camera_rigs>`__.
+   - The `author's Github Repository <https://github.com/waylow/add_camera_rigs>`__
+   - A `blog post <http://lacuisine.tech/blog/2018/07/19/2d-camera-rig/>`__ explaining the 2D rig by its authors
 
 
 .. admonition:: Reference
@@ -145,7 +193,7 @@ But an object called "A" will fail.
    :Description: Adds a camera rig with a UI.
    :Location: :menuselection:`3D View --> Add --> Camera`
    :File: camera_dolly_crane_rigs.py
-   :Author: Wayne Dixon, Brian Raschko, Kris Wittig
+   :Author: Wayne Dixon, Brian Raschko, Kris Wittig, Damien Picard, Flavio Perez
    :Maintainer: to do
    :License: GPL
    :Support Level: Community
