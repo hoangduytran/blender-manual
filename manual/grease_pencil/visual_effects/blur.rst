@@ -15,17 +15,20 @@ Options
 
    Blur Visual Effect.
 
-Factor
-   Control the blur scale in pixels on the X and Z axis.
+Use Depth of Field
+   When enabled, the blur effect uses the focal plane distance of the actual camera to calculate the object bluriness.
+   Only available in camera view.
 
-   X, Z
+Size
+   Control the blur scale in pixels on the X and Y axis.
+
+   X, Y
+
+Rotation
+   Control the Rotation of the bluriness.
 
 Samples
    Number of Blur samples (0 disabled the blur effect).
-
-Lock Focal Plane
-   When enabled, the blur effect uses the focal plane distance of the actual camera
-   to simulate a depth of field effect. Only available in camera view.
 
 
 Example
