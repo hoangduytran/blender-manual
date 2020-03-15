@@ -10,7 +10,7 @@ Intersect (Knife)
    :Menu:      :menuselection:`Face --> Intersect (Knife)`
 
 The Intersect tool lets you cut intersections into geometry.
-It is a bit like Boolean Tool, but, does not calculate interior/exterior.
+It is a bit like the Boolean tool, but, does not calculate interior/exterior geometry.
 Faces are split along the intersections, leaving new edges selected.
 
 Source

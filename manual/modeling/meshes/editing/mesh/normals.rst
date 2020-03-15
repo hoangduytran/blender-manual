@@ -105,7 +105,7 @@ Another way to affect normals is to set a *Face Strength* on the faces of the mo
 The Face Strength can be either *Weak*, *Medium*, or *Strong*.
 The idea is that the :doc:`/modeling/modifiers/modify/weighted_normal` can
 be set to pay attention to the Face Strength as follows:
-when combining the normals that meet at a vertex, only the faces
+When combining the normals that meet at a vertex, only the faces
 with the strongest Face Strength will contribute to the final value.
 
 For example, if three faces meet at a vertex and have the face weights weak, medium, and strong,
@@ -202,7 +202,7 @@ A target is set by the keys:
 - The pivot :kbd:`L`
 - The object origin :kbd:`O`
 - The cursor (set at this click) :kbd:`Ctrl-LMB`
-- A mesh item selection (set by this click) :kbd:`Ctrl-RMB`.
+- A mesh item selection (set by this click) :kbd:`Ctrl-RMB`
 
 Mode
    The tool operation can be modified; if one of the following keys has been previously pressed:

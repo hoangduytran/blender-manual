@@ -573,8 +573,8 @@ This page lists definitions for terms used in Blender and this manual.
       ambient is a global constant.
 
    Pivot Point
-      The pivot point is the point in space around which all rotations,
-      scalings and mirror transformations are centered.
+      The pivot point is the point in space around which all
+      rotation, scaling and mirror transformations are centered.
 
       See also the :doc:`Pivot Point </editors/3dview/controls/pivot_point/index>` docs.
 

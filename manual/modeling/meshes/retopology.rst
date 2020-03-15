@@ -82,7 +82,6 @@ Voxel Remesh
    Performing this will lose all mesh object data layers associated with the original mesh.
 
 
-
 .. _bpy.ops.object.quadriflow_remesh:
 
 Quad

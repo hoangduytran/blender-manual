@@ -34,7 +34,7 @@ Selected
 Randomize
    Randomizes indices of selected elements (*without* affecting those of unselected ones).
    The seed option allows you to get another randomization --
-   the same seed over the same mesh/set of selected elements will always give the same result!
+   the same seed over the same mesh or set of selected elements will always give the same result!
 Reverse
    Simply reverse the order of the selected elements.
 

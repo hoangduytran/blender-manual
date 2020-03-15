@@ -95,9 +95,9 @@ Pinch :kbd:`P`
    The inverse setting is *Magnify*, in which vertices are pushed away from the center of the brush.
 
 Grab :kbd:`G`
-   Used to drag a group of vertices around. Unlike the other brushes,
-   *Grab* does not modify different points as the brush is dragged across the model.
-   Instead, *Grab* selects a group of vertices on mouse-down, and pulls them to follow the mouse.
+   Used to drag a group of vertices around. *Grab* selects a group of vertices on mouse-down,
+   and pulls them to follow the mouse. And unlike other brushes,
+   *Grab* does not move different vertices as the brush is dragged across the model.
    The effect is like moving a group of vertices in Edit Mode with Proportional Editing enabled,
    except that *Grab* can make use of other Sculpt Mode options (like textures and symmetry).
 

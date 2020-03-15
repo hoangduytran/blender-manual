@@ -139,7 +139,7 @@ Shading
 
 Hidden Wire
    Show only front-facing wireframes.
-   This is useful for a re-topology workflow.
+   This is useful for a retopology workflow.
 
    .. tip::
 

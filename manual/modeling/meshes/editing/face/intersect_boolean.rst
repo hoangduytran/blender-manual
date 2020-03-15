@@ -9,9 +9,9 @@ Intersect (Boolean)
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Face --> Intersect (Boolean)`
 
-Performs boolean operations with the selection on the unselected geometry.
+Performs Boolean operations with the selection on the unselected geometry.
 While the :doc:`/modeling/modifiers/generate/booleans` is useful for non-destructive edits,
-access to booleans with a tool in Edit Mode can be useful to quickly perform edits.
+access to these operations with a tool in Edit Mode can be useful to quickly perform edits.
 
 Boolean
    Difference, Union, Intersect
@@ -24,5 +24,5 @@ Merge Threshold
 
    .. warning::
 
-      A threshold approaching size of faces may cause very slow calculation,
+      A threshold approaching the size of faces may cause very slow calculation,
       in general keep this value small.

@@ -1,6 +1,6 @@
 
 ********
-Clean up
+Clean Up
 ********
 
 These tools are to help cleanup degenerate geometry and fill in missing areas of a mesh.
@@ -84,8 +84,8 @@ Split Non-Planar Faces
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Mesh --> Clean up --> Split Non-Planar Faces`
 
-This tool avoids ambiguous areas of geometry by splitting non-flat faces when they are bent
-beyond a given limit.
+This tool avoids ambiguous areas of geometry by splitting non-flat faces when they are bent beyond
+a given limit.
 
 
 Split Concave Faces
