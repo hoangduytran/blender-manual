@@ -10,6 +10,7 @@
    :maxdepth: 2
 
    introduction.rst
+   toolbar.rst
    tools.rst
    tool_settings/index.rst
    adaptive.rst
