@@ -3,6 +3,9 @@
 Masks
 ******
 
+Layers List
+===========
+
 .. figure:: /images/grease-pencil_properties_layers-mask_panel.png
    :align: right
 
@@ -25,6 +28,10 @@ the layer becomes prepared to be masked by other layer/s.
    :align: right
 
    Masks List View.
+
+
+Masks List
+===========
 
 The layer/s that will act as mask of the current layer could be added 
 to the Mask :ref:`List view <ui-list-view>`.
