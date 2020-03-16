@@ -43,27 +43,16 @@ Next to the layer name there are four icons buttons that control common properti
 .. _bpy.types.GPencilLayer.use_solo_mode:
 
 Mask (mask icon)
-   When the mask is enabled, all the layers below the current one function as a single mask.
-   This mask hide any pixel in the current layer outside the mask created by the underlying layers.
+   Toggle the :doc:`Masks </grease_pencil/properties/masks>` visibility in the layer.
 
-   .. list-table::
-
-      * - .. figure:: /images/grease-pencil_properties_layers_mask-off.png
-
-             Red stroke on top layer without mask.
-
-        - .. figure:: /images/grease-pencil_properties_layers_mask-on.png
-
-             Red stroke on top layer with mask activated.
-
-Lock (padlock icon)
-   Toggle layer from being editable.
+Onion Skinning (onion skin icon)
+   Toggle the use the layer for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
 
 Viewport/Render Visibility (eye icon)
    Toggle layer visibility in the viewport and in render.
 
-Onion Skinning (onion skin icon)
-   Toggle the use the layer for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
+Lock (padlock icon)
+   Toggle layer from being editable.
 
 .. _bpy.types.GPencilLayer.blend_mode:
 .. _bpy.types.GPencilLayer.opacity:
@@ -75,6 +64,9 @@ Blend
 
 Opacity
    Used to set the opacity of the layer.
+
+Use Lights
+   When enabled, the layer is affected by lights.
 
 
 Specials
@@ -115,6 +107,12 @@ Lock (padlock icon)
 Visibility (screen icon)
    Toggle whether the active layer is the only one that can be edited and is visible.
 
+
+Masks
+======
+
+in a :ref:`List view <ui-list-view>` of layers affected by a layer mask.
+See :doc:`Masks </grease_pencil/properties/masks>` for more information.
 
 Adjustments
 ===========
