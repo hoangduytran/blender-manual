@@ -4,11 +4,8 @@
 Editing Tools
 *************
 
-Grease Pencil edit tools:
-
-.. note::
-
-   Some :ref:`Object Mode <object-toolbar-index>` are also present.
+.. figure:: /images/grease-pencil_modes_edit_tools.png
+   :align: right
 
 :ref:`Select <tool-select-tweak>`
    Select or moved.
@@ -37,3 +34,16 @@ Shear :kbd:`Shift-Ctrl-Alt-S`
 
 To Sphere :kbd:`Shift-Alt-S`
    Move selected points outward in a spherical shape around the selected strokes' center.
+
+Transform Fill
+   Change the Translation, Rotation and scale of strokes fill.
+
+:ref:`Annotate <tool-annotate>`
+   Draw free-hand annotation.
+
+   Annotate Line
+      Draw straight line annotation.
+   Annotate Polygon
+      Draw a polygon annotation.
+   Annotate Eraser
+      Erase previous drawn annotations.

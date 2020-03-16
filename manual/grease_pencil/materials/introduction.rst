@@ -4,10 +4,13 @@ Introduction
 ************
 
 Materials control the appearance of the Grease Pencil object.
-They define the color and texture of the strokes and filled areas.
+They define the base color and texture of the strokes and filled areas.
 
 There is always only one active material in the list (the selected one).
 When you draw, the new strokes use the active material.
+
+You can overrides the base material color using the tools in :doc:`Vertex Mode </grease_pencil/modes/vertex_paint/introduction>`
+or the Draw and Tint tool in Draw mode.
 
 The material always remains linked to the strokes, this means that any change in a material will change
 the look of already drawn strokes.
