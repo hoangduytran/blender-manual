@@ -16,6 +16,7 @@
    symmetrize.rst
    snap_symmetry.rst
    normals.rst
+   shading.rst
    sort_elements.rst
    separate.rst
    cleanup.rst
