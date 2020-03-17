@@ -26,7 +26,7 @@ Cursor
    Cut strokes in between others.
 
 :ref:`Eyedropper <tool-grease-pencil-draw-eyedropper>`
-   Eyedropper to create new materials based on sampled colors in the 3D Viewport.
+   Eyedropper to create new materials or palette color based on sampled colors in the 3D Viewport.
 
 :ref:`Line <tool-grease-pencil-draw-line>`
    Draw straight lines.

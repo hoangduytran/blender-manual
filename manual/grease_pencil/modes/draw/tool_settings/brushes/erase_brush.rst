@@ -29,15 +29,23 @@ Brush
    Add Brush
       When you add a brush, the new brush is a clone of the current one.
 
-   Custom Icon
-      Allows definition of a custom brush icon.
+   Brush Specials
 
-      Image Path
-         Defines the path to the image to use as custom icon.
+      Reset Brush
+        Reset current brush to default parameters.
+
+      Reset All Brushes
+         Reset all brushes to their default parameters.
+
+      Custom Icon
+         Allows definition of a custom brush icon.
+
+         Image Path
+            Defines the path to the image to use as custom icon.
 
 .. note::
 
-   In order to save in a blend-user a custom brush, tick Fake User.
+   In order to save in a blend-user a custom brush, enable *Fake User*.
 
 
 Brush Settings

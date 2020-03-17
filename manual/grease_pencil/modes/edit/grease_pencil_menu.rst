@@ -76,6 +76,17 @@ Snap
 :doc:`Mesh snapping </editors/3dview/controls/snapping>`
 also works with Grease Pencil components.
 
+Active Layer
+============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode, Draw Mode
+   :Menu:      :menuselection:`Grease Pencil --> Active Layer`
+   :Hotkey:    :kbd:`Y`
+
+Select the active layer.
 
 Animation
 =========
@@ -85,6 +96,7 @@ Animation
 
    :Mode:      Edit Mode, Draw Mode
    :Menu:      :menuselection:`Grease Pencil --> Animation`
+   :Hotkey:    :kbd:`I`
 
 The stroke animation tools are described
 in the :doc:`Animation </grease_pencil/animation/tools>` section.
