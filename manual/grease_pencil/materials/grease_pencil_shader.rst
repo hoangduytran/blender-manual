@@ -19,8 +19,8 @@ determined by closed lines (by connecting the lines start and end points).
 
 .. note::
 
-   The shader is not yet a BSDF capable shader to interact with Blender lights
-   and can only be setting up on the Material Properties panel (it is not a shader node).
+   The shader is not yet a BSDF capable shader and can only be setting up 
+   on the Material Properties panel (it is not a shader node).
 
 
 Properties
@@ -60,7 +60,7 @@ Style
       Use a solid color.
 
       Color
-         The color of the stroke.
+         The base color of the stroke.
 
    Texture
       Use an image texture.
@@ -145,7 +145,7 @@ Style
       Use solid color.
 
       Color
-         The color of the fill.
+         The base color of the fill.
 
    Gradient
       Use a color gradient.

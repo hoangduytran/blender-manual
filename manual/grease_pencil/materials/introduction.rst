@@ -75,6 +75,23 @@ Lock All
 Unlock All
    Unlocks edition of all the materials in the list.
 
+Lock Unselected
+   Locks all materials not used in the selected strokes.
+
+Lock Unused
+   Locks and hide all unused materials.
+
+Remove Unused slots
+   Remove all unused materials.
+
+Merge Similar
+   Combines similar materials in the list and replace the strokes that use the one of the merged materials with the new one.
+
+Convert Materials to Vertex Color
+   Only keeps necessary materials and convert all materials base color to vertex color.
+
+Extract Palette from Vertex Color
+   Add all used vertex color to a new Color Palette. See :ref:`ui-color-palette`.
 
 Lock and Visibility General Controls
 ------------------------------------
