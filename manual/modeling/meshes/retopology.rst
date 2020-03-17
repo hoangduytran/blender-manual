@@ -105,8 +105,8 @@ Preserve Sharp
 Preserve Mesh Boundary
    Tells the algorithm to try to preserve the original volume of the mesh.
    Enabling this could make the operator slower depending on the complexity of the mesh.
-Use Mesh Curvature
-   Take the mesh curvature into account when remeshing.
+.. Use Mesh Curvature
+..    Take the mesh curvature into account when remeshing.
 Preserve Paint Mask
    Reprojects the :ref:`Paint Mask <sculpt-mask-menu>` onto the new mesh.
 Smooth Normals
