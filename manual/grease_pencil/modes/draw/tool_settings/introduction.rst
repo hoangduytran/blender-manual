@@ -24,4 +24,34 @@ Material
       The final appearance of the strokes is a combination of the brush and material used,
       binding the material to the brush gives more control and avoids a lack of coordination between the two.
 
+Color toggle
+-------------
+
+Material
+^^^^^^^^
+   Use the stroke/fill base color material
+
+Vertex color
+^^^^^^^^^^^^
+   Use Vertex color
+
+   Color Picker
+      The color of the brush. See :ref:`ui-color-picker`.
+
+   Color Palette
+      Active Color Palette. See :ref:`ui-color-palette`.
+
+   Mode
+      Stroke
+         Only paint over strokes.
+
+      Fill
+         Only paint over fill areas.
+
+      Both
+         Paint over strokes and fill areas.
+
+   Mix Factor
+      Mixing factor between the selected color and the base material color
+
 .. TODO 2.8: Sample comparison between brushes and the same brushes with material applied.
