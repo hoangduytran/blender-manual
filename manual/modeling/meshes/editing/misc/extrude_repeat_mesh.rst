@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.extrude_repeat:
 
 *******************
 Extrude Repeat Mesh

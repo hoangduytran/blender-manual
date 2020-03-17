@@ -345,6 +345,8 @@ This is an :doc:`add-on </addons/import_export/mesh_uv_layout>` activated by def
 3D View
 =======
 
+.. _bpy.ops.mesh.uvs_rotate:
+.. _bpy.ops.mesh.uvs_reverse:
 .. _uv-image-rotate-reverse-uvs:
 
 Face Mirror & Rotate UVs

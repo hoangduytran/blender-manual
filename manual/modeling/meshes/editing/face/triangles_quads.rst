@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.tris_convert_to_quads:
 .. _mesh-faces-tristoquads:
 
 ******************

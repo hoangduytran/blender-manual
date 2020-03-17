@@ -1,3 +1,4 @@
+.. _bpy.ops.object.hook:
 .. _bpy.ops.object.hook_add_selob:
 
 *****

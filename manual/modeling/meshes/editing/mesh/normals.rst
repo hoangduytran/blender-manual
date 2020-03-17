@@ -1,5 +1,4 @@
 .. _modeling-meshes-editing-normals-editing:
-.. _bpy.ops.mesh.normals_tools:
 
 *******
 Normals
@@ -96,8 +95,6 @@ in the same way by selecting edges and picking the *Shade Flat* from the *Face M
    faceted faces in the same object.
 
 
-.. _bpy.ops.mesh.flip_normals:
-
 Face Strength
 -------------
 
@@ -112,8 +109,12 @@ For example, if three faces meet at a vertex and have the face weights weak, med
 then only the normal associated with the strong face will be used to set the final result.
 
 
+.. _bpy.ops.mesh.normals_tools:
+
 Tools
 =====
+
+.. _bpy.ops.mesh.flip_normals:
 
 Flip Direction
 --------------
@@ -310,6 +311,8 @@ Reset Vectors
 
 Put normals back the to default calculation of the normals.
 
+
+.. _bpy.ops.mesh.mod_weighted_strength:
 
 Select by Face Strength
 -----------------------

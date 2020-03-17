@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.sort_elements:
 .. _mesh-edit-sort-elements:
 
 *************

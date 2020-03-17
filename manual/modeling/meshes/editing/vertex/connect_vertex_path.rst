@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.vert_connect_path:
 
 *******************
 Connect Vertex Path

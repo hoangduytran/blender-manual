@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.edge_face_add:
 
 ***************************
 New Edge/Face from Vertices

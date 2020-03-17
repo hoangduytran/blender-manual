@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.intersect:
 
 *****************
 Intersect (Knife)

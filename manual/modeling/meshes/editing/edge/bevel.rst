@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.bevel:
 .. _tool-mesh-bevel:
 
 ***********

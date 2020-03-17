@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.vertices_smooth_laplacian:
 
 ****************
 Laplacian Smooth

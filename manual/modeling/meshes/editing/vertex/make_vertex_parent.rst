@@ -1,3 +1,4 @@
+.. _bpy.ops.object.vertex_parent_set:
 
 ******************
 Make Vertex Parent

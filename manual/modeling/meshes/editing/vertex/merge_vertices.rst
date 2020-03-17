@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.merge:
 .. _vertex-merging:
 
 **************
