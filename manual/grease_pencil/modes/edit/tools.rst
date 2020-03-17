@@ -20,6 +20,22 @@ Editing Tools
 Cursor
    Change the location of the 3D Cursor.
 
+Move
+   Translation tool.
+
+Rotate
+   Rotation tool.
+
+Scale
+   Scale tool.
+
+   :ref:`Scale Cage <tool-scale-cage>`
+      Change the scale of an object by controlling its cage.
+
+Transform
+   Tool to adjust the objects translation, rotations and scale.
+
+
 Extrude :kbd:`E`
    Extrusion tools duplicate points, while keeping the new geometry connected with the original points.
 
@@ -32,8 +48,8 @@ Bend :kbd:`Shift-W`
 Shear :kbd:`Shift-Ctrl-Alt-S`
    Shear selected points along the horizontal or vertical screen axis.
 
-To Sphere :kbd:`Shift-Alt-S`
-   Move selected points outward in a spherical shape around the selected strokes' center.
+   To Sphere :kbd:`Shift-Alt-S`
+      Move selected points outward in a spherical shape around the selected strokes' center.
 
 Transform Fill
    Change the Translation, Rotation and scale of strokes fill.
@@ -47,3 +63,4 @@ Transform Fill
       Draw a polygon annotation.
    Annotate Eraser
       Erase previous drawn annotations.
+>>>>>>> .r6365
