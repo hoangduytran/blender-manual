@@ -11,8 +11,6 @@ See :doc:`Brush </grease_pencil/modes/sculpting/tool_settings/brush>` for more i
 .. figure:: /images/grease-pencil_modes_sculpting_tools_brushes.png
    :align: right
 
-   3D View Mode selector: Sculpt Mode.
-
 Smooth
    Eliminates irregularities in the area of the drawing
    within the brush's influence by smoothing the positions of the points.
