@@ -10,6 +10,7 @@
    :maxdepth: 2
 
    introduction.rst
+   object.rst
    structure.rst
    primitives.rst
    selecting.rst

@@ -19,3 +19,7 @@ Selectable
 .. seealso::
 
    Cycles has additional :ref:`Visibility properties <render-cycles-object-settings-visibility>`.
+
+.. seealso::
+
+   Grease Pencil objects have additional :ref:`Visibility properties <grease_pencil-object-visibility>`.
