@@ -13,5 +13,4 @@
 
    introduction.rst
    selecting_editing.rst
-   layout.rst
    properties.rst
