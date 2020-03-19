@@ -19,9 +19,9 @@
 .. |division| unicode:: U+000F7
 .. |plusminus| unicode:: U+000B1
 
-*******************
-Selecting & Editing
-*******************
+*******
+Editing
+*******
 
 Editing text is quite different from other object types in Blender, and happens mainly in two areas.
 First, the 3D View, where you type your text, and have a few shortcuts, e.g. for applying
@@ -29,44 +29,8 @@ styles (see :ref:`modeling-text-character`) -- note however, that most Blender h
 in Edit Mode do not exist for texts. The second place is the Properties editor, especially the *Font* tab.
 
 
-Selecting & Cursor
-==================
-
-.. figure:: /images/modeling_texts_selecting-editing_cursor.png
-   :width: 340px
-
-   Text in Edit mode.
-
-In Edit Mode, your text has a white cursor, and as in any text editor,
-it determines where new chars will be inserted.
-
-Next/Previous Character :kbd:`Left`/ :kbd:`Right`
-   You can move the cursor with the arrow keys.
-Next/Previous Word :kbd:`Ctrl-Left`/ :kbd:`Ctrl-Right`
-   To move the cursor on a word's boundary.
-Line Begin/End :kbd:`Home`/ :kbd:`End`
-    Move the cursor to the beginning and end of a line respectively.
-Next/Previous Line :kbd:`Up`/ :kbd:`Down`
-   To jump between lines.
-Next/Previous Page :kbd:`PageUp`/ :kbd:`PageDown`
-   To jump back/forward ten lines at a time.
-
-Hold :kbd:`Shift` while using the arrow keys to select a part of the text.
-You can use it to specify different materials, the normal/bold/italic style...
-
-
-Editing
-=======
-
-Controls
---------
-
-Delete all text :kbd:`Ctrl-Backspace`
-   Completely erase or delete all text.
-
-
-Operators
----------
+Text
+====
 
 .. admonition:: Reference
    :class: refbox
@@ -80,8 +44,6 @@ The menu of the 3D View header offers few options. You have no transform nor mir
 To leave edit mode use :kbd:`Tab` as it does not insert a tab character in the text,
 but rather enters and exits Edit Mode, as with other object types.
 
-Undo / Redo
-   Todo.
 Cut :kbd:`Ctrl-X`
    To cut and copy text to the buffer, use the shortcut or the matching entry in the *Edit* menu.
 Copy :kbd:`Ctrl-C`
@@ -89,7 +51,10 @@ Copy :kbd:`Ctrl-C`
 Paste :kbd:`Ctrl-V`
    To paste text from the buffer, use the shortcut or the matching entry in the *Edit* menu.
 Paste File
-   Todo.
+   Inserts text from and external text file.
+   This will bring up a :doc:`File Browser </editors/file_browser>` for navigating to a valid UTF-8 file.
+   As usual, be careful that the file does not have too many characters,
+   as interactive response will slow down.
 Select All :kbd:`Ctrl-A`
    Selects the full text string.
 To Uppercase
@@ -98,32 +63,53 @@ To Lowercase
    Changes the case of the selected text to lowercase.
 Special Characters
    This is a limited character map to insert characters which aren't available from the keyboard.
-   Many other special characters can be "composed", see `Accent Characters`_ below.
+   Many other special characters can be "composed", see `Accent Characters`_.
    If you need others, you will have to copy-paste them from an external editor or character map program.
 
    .. note::
 
       The text buffer is in sync with the desktop clipboard.
       But if it is used within Blender the text formatting will be copied as well.
-      For other ways of inserting a text, see `Inserting Text`_ below.
+      For other ways of inserting a text, see `Inserting Text`_.
+
+
+Font
+====
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`3D View --> Font`
+
+Toggle Bold, Italics, Underline, Small Caps
+   To apply the *Bold* / *Italics* / *Underline* / *Small Caps* attribute to a set of characters,
+   you either turn on the related setting prior to typing characters,
+   or select some existing text, and then toggle desired style from the menu.
+
+   .. warning::
+
+      Blender's *Bold* and *Italic* buttons do not work the same way as in other applications,
+      as they also serve as placeholders for you to load up other fonts manually,
 
 
 .. _bpy.ops.font.text_paste_from_file:
 
 Inserting Text
---------------
+==============
 
 You can insert text in two ways: from the internal text buffer
 (as described above), or from a text file.
 
-To load text from a text file, use the :menuselection:`Text --> Paste File` tool.
-This will bring up a :doc:`File Browser </editors/file_browser>` for navigating to a valid UTF-8 file.
-As usual, be careful that the file does not have too many characters,
-as interactive response will slow down.
+Using an existing text data-block, you can convert it to an object from the Text editor's header,
+select :menuselection:`Edit --> Text to 3D Object`,
+*One Object* or *One Object per Line* depending on your needs.
+
+It is also possible to paste from the clipboard or a file from the *Edit* menu, while editing 3D text.
 
 
 Accent Characters
-^^^^^^^^^^^^^^^^^
+-----------------
 
 Many special characters (such as accented chars, which are not directly available on your keyboard)
 can be "composed" using a combination of two other characters. To do so,
@@ -158,42 +144,8 @@ Some examples are given below:
    - |plusminus|: ``-``, :kbd:`Alt-Backspace`, ``+``
 
 
-Font
-----
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`3D View --> Font`
-   :Panel:     :menuselection:`Properties --> Text --> Font`
-
-To apply the *Bold* / *Italics* / *Underline* / *Small Caps* attribute to a set of characters,
-you either turn on the related setting prior to typing characters,
-or highlight (select) some existing text, and then toggle desired style from the menu.
-
-.. warning::
-
-   Blender's *Bold* and *Italic* buttons do not work the same way as in other applications,
-   as they also serve as placeholders for you to load up other fonts manually,
-   see `Loading and Changing Fonts`_ below.
-
-
-Converting Text Objects
------------------------
-
-Converting to Text Object
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Using an existing text data-block, you can convert it to an object from the Text editor's header,
-select :menuselection:`Edit --> Text to 3D Object`,
-*One Object* or *One Object per Line* depending on your needs.
-
-It is also possible to paste from the clipboard or a file from the *Edit* menu, while editing 3D text.
-
-
 Converting to a Mesh or Curve
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=============================
 
 In Object Mode, it is possible to convert a text object to a mesh or curve one, see :ref:`object-convert-to`.
 
@@ -205,7 +157,7 @@ In Object Mode, it is possible to convert a text object to a mesh or curve one, 
 
 
 Assigning Materials
--------------------
+===================
 
 .. admonition:: Reference
    :class: refbox
