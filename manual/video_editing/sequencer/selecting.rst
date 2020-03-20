@@ -21,6 +21,10 @@ Invert :kbd:`Ctrl-I`
 Box Select :kbd:`B`
    Click and drag a rectangular lasso around a region of strips in your Sequence workspace.
    Selects strips all intersecting this rectangle.
+Box Select (Include Handles) :kbd:`Ctrl-B`
+   Works the same as *Box Select* however, it selects only the strip's handles,
+   if just one handle is selected moving the strip after selecting will change the strip's length.
+   If both handles are selected the strip will move and behave the exact same as *Box Select*.
 Playhead
    Select strips laying left or right to playhead position.
 Handle
