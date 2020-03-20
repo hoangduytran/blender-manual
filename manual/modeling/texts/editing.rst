@@ -29,6 +29,8 @@ styles (see :ref:`modeling-text-character`) -- note however, that most Blender h
 in Edit Mode do not exist for texts. The second place is the Properties editor, especially the *Font* tab.
 
 
+.. _bpy.ops.font.text_paste_from_file:
+
 Text
 ====
 
@@ -73,6 +75,9 @@ Special Characters
       For other ways of inserting a text, see `Inserting Text`_.
 
 
+.. _bpy.ops.font.style_toggle:
+.. _bpy.ops.font.change_spacing:
+
 Font
 ====
 
@@ -92,8 +97,16 @@ Toggle Bold, Italics, Underline, Small Caps
       Blender's *Bold* and *Italic* buttons do not work the same way as in other applications,
       as they also serve as placeholders for you to load up other fonts manually,
 
+Kerning
+   Font kerning is the space between individual characters.
 
-.. _bpy.ops.font.text_paste_from_file:
+   Decrease Kerning :kbd:`Alt-Left-Arrow`
+      Decreases the spacing between the characters on either side of the cursor.
+   Increase Kerning :kbd:`Alt-Right-Arrow`
+      Increase the spacing between the characters on either side of the cursor.
+   Reset Kerning
+      Sets the spacing between the characters on either side of the cursor to their initial value.
+
 
 Inserting Text
 ==============
@@ -153,7 +166,8 @@ In Object Mode, it is possible to convert a text object to a mesh or curve one, 
 
    The topology of the result is usually a bit messy,
    so it may be useful to use a *Limited Dissolve* deletion,
-   or apply a :doc:`Remesh modifier </modeling/modifiers/generate/remesh>` at a low threshold, to clean up your mesh.
+   or apply a :doc:`Remesh modifier </modeling/modifiers/generate/remesh>`
+   at a low threshold, to clean up your mesh.
 
 
 Assigning Materials
