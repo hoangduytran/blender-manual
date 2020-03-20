@@ -72,14 +72,6 @@ The image is displayed regardless of the 3D display mode.
 
 Empty Displays settings can be accessed from :menuselection:`Properties --> Object Data --> Empty` panel.
 
-Use Alpha
-   Use alpha blending instead of alpha-test
-   (blends with the background but can have depth sorting artifacts).
-
-Opacity
-   Fade the image to make it transparent
-   (uses the object *Color*'s alpha component).
-
 Offset X, Y
    Offset the image origin
    (where 1.0 represents the width/height of the image).
@@ -122,6 +114,19 @@ Display Perspective
 
 Display Only Axis Aligned
    Only displays the image contents when the view is aligned with the object's local axis.
+
+
+.. _bpy.types.Object.use_empty_image_alpha:
+
+Transparency
+^^^^^^^^^^^^
+
+Use alpha blending instead of alpha-test
+(blends with the background but can have depth sorting artifacts).
+
+Opacity
+   Fade the image to make it transparent
+   (uses the object *Color*'s alpha component).
 
 
 Editing
