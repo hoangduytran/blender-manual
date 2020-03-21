@@ -39,15 +39,14 @@ Show
    The following three buttons toggle display options:
    line numbers, word-wrap text and syntax highlighting.
 
-Register
-   Registers the current text data-block as a module on loading (the text name must end with ``.py``).
-   Read more about the registration of Python modules in
-   `API documentation <https://docs.blender.org/api/current/info_overview.html#registration>`__.
-
 .. _editors-text-run-script:
 
-Run Script / Script Node Update
+Run Script (Play Icon)
    Executes the text as a Python script :kbd:`Alt-P`. See `Template Menu`_.
+Script Node Update (Refresh Icon)
+   When an `OSL-file <https://github.com/imageworks/OpenShadingLanguage>`__
+   is opened, this updates the :ref:`Shader Script Node <bpy.types.ShaderNodeScript>`
+   with new options and sockets from the script.
 
 
 View Menu
