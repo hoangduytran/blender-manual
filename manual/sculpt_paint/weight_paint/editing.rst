@@ -459,6 +459,11 @@ Locks
 
 Vertex Groups can be locked to prevent undesired edits to a particular vertex group.
 
+.. tip::
+
+   Bones that belong to a locked vertex group are displayed in red the 3D Viewport.
+
+
 Lock all
    Locks all vertex groups.
 Unlock All
