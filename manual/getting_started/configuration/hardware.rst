@@ -99,6 +99,81 @@ as well as provide additional controls such as pressure sensitivity.
    try to place the mouse pointer in the Blender window and then unplug/replug your graphic tablet. This might help.
 
 
+.. _hardware-head-mounted-displays:
+
+Head-Mounted Displays (Virtual Reality)
+---------------------------------------
+
+:abbr:`HMDs (Head-mounted displays)` make it possible to place users in an interactive, virtual environment. Attached
+to the head, they track head movements to project a seemingly surrounding world onto small screens in front of the
+user's eyes. If the system works well, they experience the virtual environment as if they were really inside of it.
+
+Supported Platforms
+^^^^^^^^^^^^^^^^^^^
+
+Virtual reality support in Blender is implemented through the multi-platform OpenXR standard. This standard is new and
+therefore support for it is still limited.
+
+.. list-table:: OpenXR compatible platforms.
+   :header-rows: 1
+
+   * - Platform
+     - Operating System
+     - Notes
+   * - `Windows Mixed Reality <https://www.microsoft.com/windows/windows-mixed-reality>`__
+     - Windows
+     - Requires the Windows 10 May 2019 Update (1903)
+   * - `Oculus Rift <https://www.oculus.com/>`__
+     - Windows
+     - `Prototype Release <https://developer.oculus.com/blog/prototype-openxr-for-oculus/>`__
+   * - `Monado <https://monado.dev/>`__
+     - GNU/Linux
+     - *Not* recommended for general use yet
+
+Getting started
+^^^^^^^^^^^^^^^
+
+The following paragraphs describe how an HMD can be set up for usage with the `supported platforms`_. If this is not
+done, Blender will report an error when trying to start a virtual reality session.
+
+Windows Mixed Reality
+"""""""""""""""""""""
+
+To investigate if a PC meets the requirements to run Windows Mixed Reality, Microsoft offers the `Windows Mixed Reality
+PC Check <https://www.microsoft.com/en-us/p/windows-mixed-reality-pc-check/9nzvl19n7cnc>`__ application.
+
+* Make sure the Windows 10 May 2019 Update (1903) is installed.
+* If the system meets all requirements, the Mixed Reality Portal should already be installed. It is also `available in
+  the Microsoft Store <https://www.microsoft.com/en-us/p/mixed-reality-portal/9ng1h8b3zc7m>`__. On first use it will
+  guide through some setup steps.
+* Launch the Mixed Reality Portal. Click the *...* button in the lower left corner. In the menu it opens, also click the
+  *Set up OpenXR* button. Windows Mixed Reality is now ready to be used with OpenXR.
+* Inside Blender, the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` needs to be enabled to
+  access virtual reality features.
+
+For more information, refer to Windows' `getting started guide for Windows Mixed Reality and OpenXR
+<https://docs.microsoft.com/windows/mixed-reality/openxr#getting-started-with-openxr-for-windows-mixed-reality-headsets>`__.
+
+Oculus Rift
+"""""""""""
+
+Oculus only provides prototype OpenXR support. To use it, Blender has to be started in a special way, as described below.
+
+* Download and install the `Oculus Rift software <https://www.oculus.com/setup/>`__.
+* Start Blender by double clicking the ``blender_oculus`` script inside the installation directory. It will open a
+  command-line window with further information.
+* Inside Blender, the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` needs to be enabled to
+  access virtual reality features.
+
+Monado
+""""""
+
+At its current state, Monado is not ready for wide end-user testing. It has to be compiled from the source code, which
+in this case is not recommended for people with little experience int compiling software. Follow its `Getting Started
+guides <https://gitlab.freedesktop.org/monado/monado/-/blob/master/README.md>`__ to do so nevertheless.
+Inside Blender, the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` needs to be enabled to
+access virtual reality features.
+
 .. _hardware-ndof:
 
 NDOF (3D Mouse)
