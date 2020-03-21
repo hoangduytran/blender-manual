@@ -443,3 +443,37 @@ Accuracy
 
    Note that if it does not change, then there are no nonzero bone weights
    that are changed to make it closer to the intended distance.
+
+
+.. _bpy.ops.object.vertex_group_lock:
+
+Locks
+=====
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode and Weight Paint Mode
+   :Menu:      :menuselection:`Weights -- Locks`
+   :Hotkey:    :kbd:`K`
+
+Vertex Groups can be locked to prevent undesired edits to a particular vertex group.
+
+Lock all
+   Locks all vertex groups.
+Unlock All
+   Unlocks all vertex groups.
+Lock Selected
+   Looks selected vertex groups.
+Unlock selected
+   Unlocks selected vertex group.
+Lock Unselected
+   Locks unselected vertext groups
+Unlock Unselected
+   Unlocks Unselected vertex groups.
+Lock Only Selected
+   Lock selected and unlock selected vertex groups
+Lock Only Unselected
+   Unlock selected and lock unselected vertex groups.
+Invert Locks
+   Inverts the locks on all vertext groups.
