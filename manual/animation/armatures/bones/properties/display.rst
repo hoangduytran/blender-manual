@@ -1,3 +1,4 @@
+.. _bpy.types.Bone.hide:
 
 **********************
 Viewport Display Panel
@@ -18,31 +19,30 @@ Display panel lets you customize the look of your bones taking the shape of anot
 
 Hide
    Hides the selected bone.
-Wireframe
-   When enabled, bone is displayed in wireframe mode regardless of the viewport display mode.
-   Useful for non-obstructive custom bone chains.
 
+
+.. _bpy.types.PoseBone.custom_shape:
+.. _bpy.types.Bone.show_wire:
 
 Custom Shape
 ============
 
 Blender allows you to give to each bone of an armature a specific shape
-(in *Object Mode* and *Pose Mode*), using another object as "template".
+(in *Object Mode* and *PAose Mode*), using another object as "template".
 In order to be visible the *Shapes* checkbox has to be enabled
 (:menuselection:`Armature --> Viewport Display` panel).
 
-
-Options
--------
-
-Custom Shape
+Custom Object
    Object that defines the custom shape of the selected bone.
-Bone Size
-   Option not to use bones length, so that changes in Edit Mode don't resize the custom shape.
+Override Transform
+   Bone that defines the display transform of the custom shape.
 Scale
    Additional scaling factor to apply to the custom shape.
-Custom Shape Transform
-   Bone that defines the display transform of the custom shape.
+Scale to Bone Length
+   Option not to use bones length, so that changes in Edit Mode don't resize the custom shape.
+Wireframe
+   When enabled, bone is displayed in wireframe mode regardless of the viewport display mode.
+   Useful for non-obstructive custom bone chains.
 
 
 Workflow
