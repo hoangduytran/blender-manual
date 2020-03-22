@@ -45,6 +45,8 @@ Similar to the *Draw* brush, but includes settings to adjust the plane on which 
 It behaves like a combination of the *Flatten* and *Draw* brushes.
 
 
+.. _bpy.types.Brush.tip_roundness:
+
 Clay Strips
 ===========
 
@@ -55,6 +57,11 @@ Clay Strips
    :Tool:      :menuselection:`Toolbar --> Clay Strips`
 
 Similar to the *Clay* brush, but it uses a cube to define the brush area of influence rather than a sphere.
+
+Tip Roundness
+   Factor to control how round the brush is, a value of zero will make the brush square.
+   Note, the :doc:`Brush Falloff </sculpt_paint/brush/falloff>`
+   is only applied to the rounded portions of the brush.
 
 
 Layer
@@ -482,7 +489,6 @@ Rotate
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Rotate`
-
 
 Rotation tool.
 
