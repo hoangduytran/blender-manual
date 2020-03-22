@@ -94,6 +94,15 @@ Operation
    Maximum
       The entrywise maximum from A and B.
 
+   Sine
+      The `Sine <https://en.wikipedia.org/wiki/Sine>`__ of A.
+
+   Cosine
+      The `Cosine <https://en.wikipedia.org/wiki/Trigonometric_functions>`__ of A.
+
+   Tangent
+      The `Tangent <https://en.wikipedia.org/wiki/Trigonometric_functions>`__ of A.
+
 
 Outputs
 =======
