@@ -92,9 +92,12 @@ Lighting
          The rotation of the environment on the Z axis.
       Strength
          Light intensity of the environment.
-      Background
-         The opacity level of a very blurred version of the HDRI will be rendered as
-         background in the 3D View.
+      World Opacity
+         The opacity level of the HDRI will be rendered as background in the 3D Viewport.
+      Blur
+         Factor to unfocus the *HDRI Environment*,
+         note that this does not change the diffusion of the lighting,
+         only the appearance of the colors.
 
 Render Pass
    Instead of the combined render, show another render pass.
