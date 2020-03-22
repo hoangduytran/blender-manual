@@ -3,14 +3,6 @@
 File Browser
 ************
 
-.. figure:: /images/editors_file-browser_editor.png
-
-   The File Browser.
-
-
-Introduction
-============
-
 The File Browser is used in all the file-related operations. These include:
 
 - Opening and saving blend-files.
@@ -35,6 +27,10 @@ The main purpose of this is to be able to drag-and-drop media files:
 
 - Images into the :ref:`editors-3dview-index` (to set as background or apply as material texture).
 - Media files into the :ref:`editors-sequencer-index`.
+
+.. figure:: /images/editors_file-browser_editor.png
+
+   The File Browser.
 
 
 Header
