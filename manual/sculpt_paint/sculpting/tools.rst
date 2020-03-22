@@ -511,23 +511,3 @@ Transform
 
 
 Tool to adjust the objects translation, rotations and scale.
-
-
-Annotate
-========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Sculpt Mode
-   :Tool:      :menuselection:`Toolbar --> Annotate`
-
-:ref:`Annotate <tool-annotate>`
-   Draw free-hand annotation.
-
-   Annotate Line
-      Draw straight line annotation.
-   Annotate Polygon
-      Draw a polygon annotation.
-   Annotate Eraser
-      Erase previous drawn annotations.
