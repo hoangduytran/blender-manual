@@ -240,8 +240,8 @@ File Management
 
 Delete Files :kbd:`Delete`, :kbd:`X`
    Delete the currently selected files.
-Rename :kbd:`Ctrl-LMB`
-   Can be used on a file or directory to rename it.
+Rename :kbd:`F2`
+   Change the name for the currently selected file or directory.
 
 .. warning::
 
