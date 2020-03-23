@@ -46,6 +46,8 @@ Outputs
 
 Value
    Output random value.
+Color
+   Output random color.
 
 
 .. _shader-white-noise-notes:
