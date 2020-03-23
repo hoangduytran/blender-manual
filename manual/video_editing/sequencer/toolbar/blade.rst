@@ -11,7 +11,7 @@ Blade
    :Hotkey:    :kbd:`Shift-K`
    
 Soft
-   This cuts the strip in two at the location pf click.
+   This cuts the strip in two at the location of click.
    This will result in two strips which use the same source, fitting the original strip's timing and length.
 Hard
    Like *Soft Blade*, it cuts a strip in two distinct strips;
