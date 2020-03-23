@@ -70,6 +70,9 @@ Operation
    Normalize
       The result of normalizing A.
 
+   Wrap
+      `Wrap <https://en.wikipedia.org/wiki/Rounding>`__.
+
    Snap
       The result of rounding A to the largest integer multiple of B less than or equal A.
 
