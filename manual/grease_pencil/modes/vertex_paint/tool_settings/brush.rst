@@ -1,5 +1,4 @@
 
-
 **************
 Brush Settings
 **************
@@ -31,15 +30,14 @@ Strength
 Mode
    Stroke
       Only paint over strokes.
-
    Fill
      Only paint over fill areas.
-
    Both
       Paint over strokes and fill areas.
 
 Cursor
    See the global brush settings for :doc:`Cursor </sculpt_paint/brush/cursor>` settings.
+
 
 Color Picker
 ============
@@ -48,14 +46,16 @@ The color of the brush. See :ref:`ui-color-picker`.
 
 .. note::
 
-   Note that Vertex Paint works in sRGB :term:`space <Color Space>`, and
-   the RGB representation of the same colors will be different between the paint
-   tools and the materials that are in linear space.
+   Note that Vertex Paint works in sRGB :term:`space <Color Space>`
+   and the RGB representation of the same colors will be different between
+   the paint tools and the materials that are in linear space.
+
 
 Color Palette
 =============
 
 The active Color Palette. See :ref:`ui-color-palette`.
+
 
 Falloff
 =======

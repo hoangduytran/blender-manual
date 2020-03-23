@@ -21,16 +21,14 @@ Mode
    Luminance
       The glow light illuminates the entire object.
 
+      Threshold
+         Limits the colors affected by the glow light. (A value of 1 means no colors affected.)
+
    Color
       The glow light only affect a single color.
 
-
-Color
-   When Color Mode is selected, allows to select a single color to apply the glow light.
-
-Threshold
-   When Luminance Mode is selected, limits the colors affected by the glow light.
-   (A value of 1 means no colors affected.)
+      Select Color
+         Allows to select a single color to apply the glow light.
 
 Glow Color
    Defines the glow color.

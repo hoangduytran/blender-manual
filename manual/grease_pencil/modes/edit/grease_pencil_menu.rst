@@ -76,6 +76,7 @@ Snap
 :doc:`Mesh snapping </editors/3dview/controls/snapping>`
 also works with Grease Pencil components.
 
+
 Active Layer
 ============
 
@@ -87,6 +88,7 @@ Active Layer
    :Hotkey:    :kbd:`Y`
 
 Select the active layer.
+
 
 Animation
 =========

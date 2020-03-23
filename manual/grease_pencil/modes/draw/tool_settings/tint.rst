@@ -1,8 +1,8 @@
 .. _tool-grease-pencil-draw-tint:
 
-**********
+*********
 Tint Tool
-**********
+*********
 
 .. admonition:: Reference
    :class: refbox
@@ -16,19 +16,20 @@ The Tint tool allows you to paint onto strokes point mixing the material base co
 Usage
 =====
 
-Selecting a Brush, Color and Mode
-----------------------------------
+Selecting a Brush, Color & Mode
+-------------------------------
 
 In the Tool Settings select the brush, color and mode to use with the tool.
 
 You can configure the brush main settings exposed on the Tool Settings for convenience.
-For the Vertex Paint brushes configuration and settings see:
+For the vertex paint brushes configuration and settings see
 :doc:`Vertex Paint Brush </grease_pencil/modes/vertex_paint/tool_settings/brush>`.
 
 :kbd:`Ctrl-LMB` erase the vertex color.
 
+
 Painting
----------
+--------
 
 Click and hold :kbd:`LMB` or use the pen tip to paint onto the stroke points.
 
@@ -42,4 +43,3 @@ Click and hold :kbd:`LMB` or use the pen tip to paint onto the stroke points.
 
      - .. figure:: /images/grease-pencil_modes_draw_tool-settings_tint_paint-03.png
           :width: 200px
-

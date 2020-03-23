@@ -19,7 +19,7 @@ determined by closed lines (by connecting the lines start and end points).
 
 .. note::
 
-   The shader is not yet a BSDF capable shader and can only be setting up 
+   The shader is not yet a BSDF capable shader and can only be setting up
    on the Material Properties panel (it is not a shader node).
 
 

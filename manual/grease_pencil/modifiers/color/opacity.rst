@@ -20,13 +20,13 @@ Options
    Opacity Modifier.
 
 Uniform Opacity
-   When enabled, makes the Opacity equal for the entire strokes.
+   When enabled, makes the opacity equal for the entire strokes.
 
    Strength
-      Absolute Opacity for the stroke points.
+      Absolute opacity for the stroke points.
 
 Opacity Factor
-   Controls the Opacity value of the stroke points.
+   Controls the opacity value of the stroke points.
    A value of 1.0 respect the original alpha value of the points,
    a shift less than 1.0 make the points more transparent than originally,
    and a shift greater than 1.0 make the points more opaque than originally.
@@ -48,7 +48,7 @@ See :ref:`grease-pencil-modifier-influence-filters`.
 Example
 =======
 
-.. list-table:: Factor Opacity samples.
+.. list-table:: Opacity Factor samples.
 
    * - .. figure:: /images/grease-pencil_modifiers_color_opacity_factor-03.png
           :width: 200px

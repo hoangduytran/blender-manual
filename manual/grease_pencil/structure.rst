@@ -21,7 +21,7 @@ as its location, thickness, alpha, weight and UV rotation for textures.
 
 .. note::
 
-   Point (Grease Pencil) and Vertex (Meshes) are equivalent names.
+   Point (Grease Pencil) and Vertex (meshes) are equivalent names.
 
 
 Edit Lines

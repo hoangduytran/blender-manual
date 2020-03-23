@@ -9,8 +9,9 @@ They define the base color and texture of the strokes and filled areas.
 There is always only one active material in the list (the selected one).
 When you draw, the new strokes use the active material.
 
-You can overrides the base material color using the tools in :doc:`Vertex Mode </grease_pencil/modes/vertex_paint/introduction>`
-or the Draw and Tint tool in Draw mode.
+You can overrides the base material color using the tools in
+:doc:`Vertex Mode </grease_pencil/modes/vertex_paint/introduction>`
+or the Draw and Tint tool in Draw Mode.
 
 The material always remains linked to the strokes, this means that any change in a material will change
 the look of already drawn strokes.
@@ -20,7 +21,7 @@ the look of already drawn strokes.
    Same stroke linked to different materials.
 
 
-Setting up Materials
+Setting Up Materials
 ====================
 
 Grease Pencil materials can be created in the :doc:`Material properties </editors/properties_editor>`
@@ -85,7 +86,8 @@ Remove Unused slots
    Remove all unused materials.
 
 Merge Similar
-   Combines similar materials in the list and replace the strokes that use the one of the merged materials with the new one.
+   Combines similar materials in the list and replace the strokes that use the one of
+   the merged materials with the new one.
 
 Convert Materials to Vertex Color
    Only keeps necessary materials and convert all materials base color to vertex color.
@@ -93,8 +95,9 @@ Convert Materials to Vertex Color
 Extract Palette from Vertex Color
    Add all used vertex color to a new Color Palette. See :ref:`ui-color-palette`.
 
-Lock and Visibility General Controls
-------------------------------------
+
+Lock & Visibility General Controls
+----------------------------------
 
 Lock (padlock icon)
    Toggle whether the active material is the only one that can be edited.

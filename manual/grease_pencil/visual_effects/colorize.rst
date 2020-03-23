@@ -26,7 +26,7 @@ Mode
       Converts to a posterize image with high contrast and brightness.
 
       Low Color
-         Primary color. 
+         Primary color.
 
       High Color
          Secondary color.

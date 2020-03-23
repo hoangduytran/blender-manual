@@ -16,6 +16,7 @@ Options
 
    Tint Modifier.
 
+
 Uniform
 -------
 
@@ -30,6 +31,7 @@ Strength
 
    A shift greater than 1.0 will make the points alpha less transparent than originally (2.0 is fully opaque).
 
+
 Gradient
 --------
 
@@ -37,11 +39,11 @@ Colors
    Defines the tint gradient color for mixing with the original vertex color.
 
 Object
-   An :ref:`ui-data-id` to select an object (usually an empty),
+   A :ref:`ui-data-id` to select an object (usually an empty),
    which position and rotation will be used to define the center of the effect.
 
 Radius
-   Defines the maxiumum distance of the effect.
+   Defines the maximum distance of the effect.
 
 Strength
    Controls the amount for the color mixing.
@@ -81,20 +83,19 @@ Example
 
           Strength: 1.0 (fully tinted).
 
-
 .. list-table:: Tint gradient color sample.
 
    * - .. figure:: /images/grease-pencil_modifiers_color_tint_gradient-01.png
           :width: 200px
 
-          Radius: 1 - Strength: 1.
+          Radius: 1, Strength: 1.
 
      - .. figure:: /images/grease-pencil_modifiers_color_tint_gradient-02.png
           :width: 200px
 
-          Radius: 5 - Strength: 1.
+          Radius: 5, Strength: 1.
 
      - .. figure:: /images/grease-pencil_modifiers_color_tint_gradient-03.png
           :width: 200px
 
-          Radius: 10 - Strength: 1.
+          Radius: 10, Strength: 1.

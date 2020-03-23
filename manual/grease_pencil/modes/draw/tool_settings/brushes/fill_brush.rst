@@ -28,12 +28,11 @@ Brush
       When you add a brush, the new brush is a clone of the current one.
 
    Brush Specials
-
       Reset Brush
-        Reset current brush to default parameters.
+         Reset current brush to default settings.
 
       Reset All Brushes
-         Reset all brushes to their default parameters.
+         Reset all brushes to their default settings.
 
       Custom Icon
          Allows definition of a custom brush icon.
@@ -43,7 +42,7 @@ Brush
 
 .. note::
 
-   In order to save in a blend-user a custom brush, enable *Fake User*.
+   In order to save a custom brush in a blend-user, enable *Fake User*.
 
 
 Brush Settings

@@ -320,8 +320,9 @@ Switch Direction
 Reverse the direction of the points in the selected strokes
 (i.e. the start point will become the end one, and vice versa).
 
+
 Scale Stroke Thickness
-=======================
+======================
 
 .. admonition:: Reference
    :class: refbox
@@ -332,8 +333,8 @@ Scale Stroke Thickness
 When enabled, scales the stroke thickness during scale transformations.
 
 
-Reset Fill Tranform
-===================
+Reset Fill Transform
+====================
 
 .. admonition:: Reference
    :class: refbox

@@ -1,5 +1,4 @@
 
-
 ******************
 Vertex Paint Tools
 ******************
@@ -33,4 +32,3 @@ Replace
       Draw a polygon annotation.
    Annotate Eraser
       Erase previous drawn annotations.
-
