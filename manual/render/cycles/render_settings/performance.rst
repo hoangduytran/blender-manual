@@ -73,13 +73,17 @@ Persistent Images
    performing other tasks in Blender.
 
 
+.. _render_cycles_settings_perfomance_viewport:
+
 Viewport
 ========
 
-Start Resolution
+Pixel Size
+   Option to control the resolution for viewport rendering.
+   Allows you to speed up viewport rendering, which is especially useful for displays with high DPI.
+
+Start Pixels
    Resolution to start rendering preview at, progressively increase it to the full viewport size.
 
-Viewport Resolution
-   Pixel Size
-      Option to control the resolution for viewport rendering.
-      Allows you to speed up viewport rendering, which is especially useful for displays with high DPI.
+Denoising Start Sample
+   Sample to start :ref:`denoising <render-cycles-settings-viewport-denoising>` at.
