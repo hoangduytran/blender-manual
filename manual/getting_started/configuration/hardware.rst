@@ -99,17 +99,31 @@ as well as provide additional controls such as pressure sensitivity.
    try to place the mouse pointer in the Blender window and then unplug/replug your graphic tablet. This might help.
 
 
+.. _hardware-ndof:
+
+NDOF (3D Mouse)
+---------------
+
+3D mice or :abbr:`NDOF (N-Degrees of Freedom)` devices are hardware that you can use to navigate a scene in Blender.
+Currently only devices made by 3Dconnexion are supported.
+These devices allow you to explore a scene, as well as :ref:`Fly/Walk modes <3dview-fly-walk>`.
+
+.. seealso::
+
+   See :doc:`Input Preference </editors/preferences/input>` for more information on configuring peripherals.
+
 .. _hardware-head-mounted-displays:
 
+
 Head-Mounted Displays (Virtual Reality)
----------------------------------------
+=======================================
 
 :abbr:`HMDs (Head-mounted displays)` make it possible to place users in an interactive, virtual environment. Attached
 to the head, they track head movements to project a seemingly surrounding world onto small screens in front of the
 user's eyes. If the system works well, they experience the virtual environment as if they were really inside of it.
 
 Supported Platforms
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Virtual reality support in Blender is implemented through the multi-platform OpenXR standard. This standard is new and
 therefore support for it is still limited.
@@ -131,13 +145,13 @@ therefore support for it is still limited.
      - *Not* recommended for general use yet
 
 Getting started
-^^^^^^^^^^^^^^^
+---------------
 
 The following paragraphs describe how an HMD can be set up for usage with the `supported platforms`_. If this is not
 done, Blender will report an error when trying to start a virtual reality session.
 
 Windows Mixed Reality
-"""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^
 
 To investigate if a PC meets the requirements to run Windows Mixed Reality, Microsoft offers the `Windows Mixed Reality
 PC Check <https://www.microsoft.com/en-us/p/windows-mixed-reality-pc-check/9nzvl19n7cnc>`__ application.
@@ -155,7 +169,7 @@ For more information, refer to Windows' `getting started guide for Windows Mixed
 <https://docs.microsoft.com/windows/mixed-reality/openxr#getting-started-with-openxr-for-windows-mixed-reality-headsets>`__.
 
 Oculus Rift
-"""""""""""
+^^^^^^^^^^^
 
 Oculus only provides prototype OpenXR support. To use it, Blender has to be started in a special way, as described below.
 
@@ -166,23 +180,10 @@ Oculus only provides prototype OpenXR support. To use it, Blender has to be star
   access virtual reality features.
 
 Monado
-""""""
+^^^^^^
 
 At its current state, Monado is not ready for wide end-user testing. It has to be compiled from the source code, which
 in this case is not recommended for people with little experience int compiling software. Follow its `Getting Started
 guides <https://gitlab.freedesktop.org/monado/monado/-/blob/master/README.md>`__ to do so nevertheless.
 Inside Blender, the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` needs to be enabled to
 access virtual reality features.
-
-.. _hardware-ndof:
-
-NDOF (3D Mouse)
----------------
-
-3D mice or :abbr:`NDOF (N-Degrees of Freedom)` devices are hardware that you can use to navigate a scene in Blender.
-Currently only devices made by 3Dconnexion are supported.
-These devices allow you to explore a scene, as well as :ref:`Fly/Walk modes <3dview-fly-walk>`.
-
-.. seealso::
-
-   See :doc:`Input Preference </editors/preferences/input>` for more information on configuring peripherals.
