@@ -76,12 +76,6 @@ Persistent Images
 Viewport
 ========
 
-Viewport BVH Type
-   Dynamic BVH
-      Objects can be transformed, added and deleted interactively, at the cost of slower renders.
-   Static BVH
-      Object modifications require a complete :term:`BVH` rebuild which reduces interactivity but renders faster.
-
 Start Resolution
    Resolution to start rendering preview at, progressively increase it to the full viewport size.
 
