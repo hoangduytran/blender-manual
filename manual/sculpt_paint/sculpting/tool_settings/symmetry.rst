@@ -30,5 +30,6 @@ Tile Offset
 Direction
    Determines which direction the model will be symmetrized.
 Symmetrize
-   Uses direction orientation to symmetrize. Since Dyntopo adds details dynamically
-   it may happen that the model goes asymmetric, so this a good tool for that.
+   Uses direction orientation to symmetrize. Since Dyntopo adds
+   details dynamically it may happen that the model goes asymmetric,
+   so this a good tool for that.

@@ -28,7 +28,6 @@ Detail Size/Percentage, Resolution :kbd:`Shift-D`
       by clicking the pipette icon next to the detail setting and then clicking on the area.
 
 Refine Method
-   Method will be used to tell how topology is handled.
    Setting the option will determine which of the methods will be used when altering the topology.
 
    Subdivide Edges
@@ -52,9 +51,9 @@ Detailing
       The Detail is based on the percentage of a single unit.
    Brush Detail
       Giving more control over the topology, with this method you can create topology
-      based on the brush size. You can increase and lower topology by simply resizing
-      the brush itself. The detail size is based the size of the brush itself, where
-      100% will create topology the size of the brush ring itself.
+      based on the brush size. You can increase and lower topology by resizing the brush itself.
+      The detail size is based the size of the brush itself,
+      where full detail will create topology the size of the brush radius itself.
 
 Smooth Shading
    Toggles whether mesh faces are smooth or flat-shaded.

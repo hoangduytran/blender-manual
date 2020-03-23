@@ -441,7 +441,7 @@ Mesh Filter
    :Tool:      :menuselection:`Toolbar --> Mesh Filter`
 
 Applies a deformation to all vertices in the mesh at the same time.
-To use this tool, simply click and drag away from the object to have a positive effect
+To use this tool, click and drag away from the object to have a positive effect
 and click and drag towards the mesh to have a negative effect.
 
 Filter Type
@@ -502,7 +502,6 @@ Scale
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Scale`
 
-
 Scale tool.
 
 
@@ -513,7 +512,6 @@ Transform
    :class: refbox
 
    :Mode:      Sculpt Mode
-   :Tool:      :menuselection:`Toolbar --> Tranform`
-
+   :Tool:      :menuselection:`Toolbar --> Transform`
 
 Tool to adjust the objects translation, rotations and scale.

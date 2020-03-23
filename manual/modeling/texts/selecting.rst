@@ -18,7 +18,7 @@ Next/Previous Character :kbd:`Left`/ :kbd:`Right`
 Next/Previous Word :kbd:`Ctrl-Left`/ :kbd:`Ctrl-Right`
    To move the cursor on a word's boundary.
 Line Begin/End :kbd:`Home`/ :kbd:`End`
-    Move the cursor to the beginning and end of a line respectively.
+   Move the cursor to the beginning and end of a line respectively.
 Next/Previous Line :kbd:`Up`/ :kbd:`Down`
    To jump between lines.
 Next/Previous Page :kbd:`PageUp`/ :kbd:`PageDown`

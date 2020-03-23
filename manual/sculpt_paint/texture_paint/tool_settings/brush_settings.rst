@@ -96,7 +96,7 @@ Move (up/down arrow icon)
    Moves the selected color up/down one position.
 
 Sort
-   Sort Colors by HUE, Saturation, Value, Luminance.
+   Sort Colors by Hue, Saturation, Value, Luminance.
 
 Color List
    Each color that belongs to the palette is presented in a list.

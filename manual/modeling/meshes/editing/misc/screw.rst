@@ -273,17 +273,17 @@ changed the angular vector of the height you have given to Blender to the opposi
 
           Flipped to Clockwise direction.
 
-It is also important to note that this vector is related to the same height vector axis used
-for the extrusion and you have created a parallel line with the Z axis, so,
-the sensibility of this vector is in practical sense reactive only to negative and positive values
-because it is aligned with the extrusion axis. Blender will clamp the positive and negative to
-its maximum values to make the extrusion follow a direction,
-even if the profile starts reverted. The same rule applies to other global axes when creating
-the object for the *Screw* tool; this means if you create your object using the Top View
-with a straight parallel line following another axis (for the Top View, the Y axis),
-the vector that gives the height for extrusion will also change abruptly from negative to positive
-and vice versa to give the extrusion a direction, and you will have to tweak
-the corresponding axis accordingly to achieve the clockwise and counterclockwise effect.
+It is also important to note that this vector is related to the same height vector axis used for
+the extrusion and you have created a parallel line with the Z axis, so, the sensibility of
+this vector is in practical sense reactive only to negative and positive values because
+it is aligned with the extrusion axis. Blender will clamp the positive and negative to
+its maximum values to make the extrusion follow a direction, even if the profile starts reverted.
+The same rule applies to other global axes when creating the object for the *Screw* tool; this means
+if you create your object using the Top View with a straight parallel line following another axis
+(for the Top View, the Y axis), the vector that gives the height for extrusion will also
+change abruptly from negative to positive and vice versa to give the extrusion a direction,
+and you will have to tweak the corresponding axis accordingly to achieve the clockwise
+and counterclockwise effect.
 
 .. note:: Vectors that are not Parallel with Blender Axis
 

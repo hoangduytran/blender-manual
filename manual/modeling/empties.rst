@@ -91,7 +91,7 @@ Depth
       it can be useful to set the depth to *Front*, with a low *Opacity*.
 
 Side
-   :Both: Display both the front & back of the empty.
+   :Both: Display both the front and back of the empty.
    :Front: Only display the front of the image.
    :Back: Only display the back of the image.
 
@@ -149,7 +149,7 @@ Properties
 ==========
 
 Display As
-   The `Primitive`_ empty type to display in the 3D Viewport.
+   The `Primitives`_ empty type to display in the 3D Viewport.
 
 Size
    Controls the size of the empties visualization. This does not change its scale, but functions as an offset.

@@ -24,7 +24,6 @@ Pin Goal Strength
    you will need to bake one extra frame past the last frame which you will be rendering.
 
 
-
 Collisions
 ==========
 
@@ -34,7 +33,7 @@ Quality
 Distance
    The distance another object must get to the cloth for
    the simulation to repel the cloth out of the way.
-   Smaller values might give errors but gives some speed-up while
+   Smaller values might cause errors but provide some speed-up while
    larger will give unrealistic results if too large and can be slow.
    It is best to find a good in between value.
 Impulse Clamping
@@ -43,7 +42,6 @@ Impulse Clamping
 Collision Collection
    Only objects that are a part of this :doc:`Collection </scene_layout/collections/index>`
    can collide with the cloth. Note that these objects must also have Collision physics enabled.
-
 
 
 Structure

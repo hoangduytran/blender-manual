@@ -41,11 +41,11 @@ Show
 
 .. _editors-text-run-script:
 
-Run Script (Play Icon)
+Run Script (play icon)
    Executes the text as a Python script :kbd:`Alt-P`. See `Template Menu`_.
-Script Node Update (Refresh Icon)
+Script Node Update (refresh icon)
    When an `OSL-file <https://github.com/imageworks/OpenShadingLanguage>`__
-   is opened, this updates the :ref:`Shader Script Node <bpy.types.ShaderNodeScript>`
+   is opened, this updates the :ref:`Shader Script <bpy.types.ShaderNodeScript>` node
    with new options and sockets from the script.
 
 

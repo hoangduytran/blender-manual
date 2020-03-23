@@ -15,7 +15,7 @@ Diffusion
 
 Liquid diffusion defines the physical properties of a liquid
 and in turn define how a liquid interacts with its environment.
-the main factors of diffusion are the *Viscosity* and *Surface Tension*.
+The main factors of diffusion are the *Viscosity* and *Surface Tension*.
 These properties can be adjusted to create virtual liquids that behave like water,
 oil, honey, or any other liquid. A couple presets exist to change the diffusion
 for different substances are predefined and can be changed in the preset menu.

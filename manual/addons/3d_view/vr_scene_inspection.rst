@@ -3,12 +3,13 @@
 VR Scene Inspection
 *******************
 
-The :abbr:`VR (Virtual Reality)` Scene Inspection add-on exposes and extends the native virtual reality features of
-Blender in the user interface. The feature set is limited to scene inspection use-cases. More advanced use-cases may
-be enabled through further developments inside of Blender.
+The :abbr:`VR (Virtual Reality)` Scene Inspection add-on exposes and extends
+the native virtual reality features of Blender in the user interface.
+The feature set is limited to scene inspection use cases.
+More advanced use-cases may be enabled through further development inside of Blender.
 
-VR support in Blender is based on the OpenXR specification and requires some set up steps. These are explained in the
-:ref:`Head-mounted displays<hardware-head-mounted-displays>` section.
+VR support in Blender is based on the OpenXR specification and requires some set up steps.
+These are explained in the :ref:`Head-Mounted Displays (HMD) <hardware-head-mounted-displays>` section.
 
 
 Activation
@@ -32,11 +33,11 @@ VR Session
 ----------
 
 Start VR Session
-   Attempt to establish a connection to the OpenXR platform to share the viewport with an :ref:`HMD
-   <hardware-head-mounted-displays>`.
+   Try to set up a connection to the OpenXR platform to share the viewport with
+   an :ref:`HMD <hardware-head-mounted-displays>`.
 Positional Tracking
-   Only track rotational changes of the head, do not allow the HMD to affect the location of the viewer in virtual
-   space.
+   Only track rotational changes of the head, do not allow the HMD to affect the location of
+   the viewer in virtual space.
 
 
 View
@@ -55,29 +56,31 @@ Landmarks
 
 Landmarks are used to store reusable base poses (position and rotation) for the viewer in the virtual space.
 
-Landmark :ref:`List view <ui-list-view>`.
+Landmark
+   A :ref:`list view <ui-list-view>`.
+
    Selected Landmark
-      Defines which landmark's settings are shown below the list. Changing the selected landmark does not have an
-      influence on the VR view.
-   Star Icon
+      Defines which landmark's settings are shown below the list.
+      Changing the selected landmark does not have an influence on the VR view.
+   Activate (star icon)
       Activates a landmark, making it change the base pose of the VR view.
    Add ``+``
-      Create a landmark
+      Create a landmark.
    Remove ``-``
-      Deletes the selected landmark
+      Deletes the selected landmark.
 Type
    Scene Camera
       Follow the :ref:`scene's active camera<scene-camera>` to define the base pose of the viewer.
    Custom Camera
       Set an arbitrary camera to define the base pose of the viewer.
 
-   
+
 Viewport Feedback
 -----------------
 
 Show VR Camera
-   Draw an indicator of the current VR viewer pose (location and rotation in the virtual space) in the current 3D
-   Viewport.
+   Draw an indicator of the current VR viewer pose (location and rotation in the virtual space)
+   in the current 3D Viewport.
 Mirror VR Session
    Make the current 3D Viewport follow the perspective of the VR view.
 

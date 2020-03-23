@@ -8,8 +8,8 @@ Debug
 
    :Panel:     :menuselection:`Render --> Performance`
 
-These settings are are mainly useful to developers and can be accessed
-by setting the :ref:`Debug Value <bpy.ops.wm.debug_menu>` to ``256``.
+These settings are mainly useful to developers and can be accessed
+by setting the :ref:`Debug Value <bpy.ops.wm.debug_menu>` to 256.
 
 Viewport BVH Type
    Dynamic BVH

@@ -1,8 +1,12 @@
+
+*******
+Shading
+*******
+
 .. _bpy.ops.object.shade_smooth:
 
-************
 Shade Smooth
-************
+============
 
 .. admonition:: Reference
    :class: refbox
@@ -31,9 +35,8 @@ to that shown in the first image above.
 
 .. _bpy.ops.object.shade_flat:
 
-**********
 Shade Flat
-**********
+==========
 
 .. admonition:: Reference
    :class: refbox
@@ -45,7 +48,8 @@ As seen in the previous sections, polygons are central to Blender.
 Most objects are represented by polygons and truly curved objects
 are often approximated by polygon meshes. When rendering images,
 you may notice that these polygons appear as a series of small, flat faces.
-Sometimes this is a desirable effect, but usually we want our objects to look nice and smooth.
+Sometimes this is a desirable effect for hard surfaces,
+but for organic surfaces you usually want your objects to look smooth.
 
 .. list-table:: Example mesh flat (left) and smooth-shaded (right).
    `Sample blend-file <https://wiki.blender.org/wiki/File:25-manual-meshsmooth-example.blend>`__.

@@ -28,7 +28,7 @@ Custom Shape
 ============
 
 Blender allows you to give to each bone of an armature a specific shape
-(in *Object Mode* and *PAose Mode*), using another object as "template".
+(in *Object Mode* and *Pose Mode*), using another object as "template".
 In order to be visible the *Shapes* checkbox has to be enabled
 (:menuselection:`Armature --> Viewport Display` panel).
 

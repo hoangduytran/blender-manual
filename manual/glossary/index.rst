@@ -109,7 +109,7 @@ This page lists definitions for terms used in Blender and this manual.
    Bit Depth
       The exponent value (with base two) for how many colors can be represented within a single color channel.
       A higher bit depth will allow more possible colors, reducing banding, and increasing precision.
-      However, a higher bit depth will increase memory usage exponentially.
+      Yet a higher bit depth will increase memory usage exponentially.
 
    BVH
    Bounding Volume Hierarchy

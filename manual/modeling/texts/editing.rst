@@ -43,7 +43,7 @@ Text
 Editing text objects is similar to using a standard text editor but is not as
 full-featured and has some differences.
 The menu of the 3D View header offers few options. You have no transform nor mirror tools, and so on.
-To leave edit mode use :kbd:`Tab` as it does not insert a tab character in the text,
+To leave Edit Mode use :kbd:`Tab` as it does not insert a tab character in the text,
 but rather enters and exits Edit Mode, as with other object types.
 
 Cut :kbd:`Ctrl-X`
@@ -88,14 +88,14 @@ Font
    :Menu:      :menuselection:`3D View --> Font`
 
 Toggle Bold, Italics, Underline, Small Caps
-   To apply the *Bold* / *Italics* / *Underline* / *Small Caps* attribute to a set of characters,
+   To apply the *Bold*, *Italics*, *Underline* or *Small Caps* attribute to a set of characters,
    you either turn on the related setting prior to typing characters,
-   or select some existing text, and then toggle desired style from the menu.
+   or select existing text, and then toggle desired style from the menu.
 
    .. warning::
 
       Blender's *Bold* and *Italic* buttons do not work the same way as in other applications,
-      as they also serve as placeholders for you to load up other fonts manually,
+      as they also serve as placeholders for you to load up other fonts manually.
 
 Kerning
    Font kerning is the space between individual characters.

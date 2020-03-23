@@ -61,6 +61,6 @@ Factor
 Examples
 ========
 
-.. figure:: /images/render_shader-nodes_textures_wave_example
+.. figure:: /images/render_shader-nodes_textures_wave_example.png
 
    Wave Texture.

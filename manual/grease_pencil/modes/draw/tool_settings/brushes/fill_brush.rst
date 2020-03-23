@@ -29,7 +29,7 @@ Brush
 
    Brush Specials
       Reset Brush
-         Reset current brush to default settings.
+         Reset the current brush to its default settings.
 
       Reset All Brushes
          Reset all brushes to their default settings.

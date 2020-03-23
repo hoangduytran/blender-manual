@@ -43,8 +43,8 @@ View Map Cache
 
 As Render Pass
    Freestyle lines will not immediately be visible on top of the render image.
-   Instead, freestyle lines are rendered as a :doc:`Render Pass </render/layers/passes>`
-   which can be composited with the rendered image with an alpha over node.
+   Instead, Freestyle lines are rendered as a :doc:`Render Pass </render/layers/passes>`
+   which can be composited with the rendered image with an Alpha Over node.
 
 Face Smoothness
    Takes *Smooth Shading* into account for edges calculation.

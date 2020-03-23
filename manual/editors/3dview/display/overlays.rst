@@ -294,11 +294,11 @@ Fade Objects
    while drawing over complex scenes.
 
    Fade Grease Pencil Objects
-      Incude or exclude Grease Pencil objects.
+      Include or exclude Grease Pencil objects.
 Edit Lines
    Show edit lines when editing strokes.
 Only in Multiframe
-   Show edit lines only when using multiframe editon.
+   Show edit lines only when using multiframe edition.
 Stroke Direction
    Toggles the display of the strokes start point (green) and end point (red) to visualize the line direction.
 Material Name

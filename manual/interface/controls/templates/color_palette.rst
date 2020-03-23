@@ -1,8 +1,8 @@
 .. _ui-color-palette:
 
-**************
+*************
 Color Palette
-**************
+*************
 
 .. figure:: /images/interface_controls_templates_color-palette.png
    :align: right
@@ -24,14 +24,15 @@ Move (up/down arrow icon)
    Moves the selected color up/down one position.
 
 Sort
-   Sort Colors by HUE, Saturation, Value, Luminance.
+   Sort Colors by Hue, Saturation, Value, Luminance.
 
 Color List
    Each color that belongs to the palette is presented in a list.
    Clicking on a color will change the brush's primary *Color* to that color.
 
+
 Shortcuts
----------
+=========
 
 - :kbd:`Ctrl-LMB` open the color picker to change color. See :ref:`ui-color-picker`.
 - :kbd:`Backspace` reset the value.
