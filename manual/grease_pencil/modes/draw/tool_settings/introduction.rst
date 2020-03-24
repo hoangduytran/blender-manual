@@ -55,10 +55,8 @@ Mode
    Fill
       Only paint over fill areas.
 
-   Both
+   Stroke and Fill
       Paint over strokes and fill areas.
 
 Mix Factor
    Mixing factor between the selected color and the base material color.
-
-.. TODO 2.8: Sample comparison between brushes and the same brushes with material applied.

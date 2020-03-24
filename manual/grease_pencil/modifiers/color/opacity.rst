@@ -36,7 +36,7 @@ Opacity Factor
 Mode
    The color transformation will be applied on the stroke and/or the fill color.
 
-   Both, Stroke, Fill
+   Stroke and Fill, Stroke, Fill
 
 
 Influence Filters

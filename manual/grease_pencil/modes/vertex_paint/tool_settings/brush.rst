@@ -32,7 +32,7 @@ Mode
       Only paint over strokes.
    Fill
      Only paint over fill areas.
-   Both
+   Stroke and Fill
       Paint over strokes and fill areas.
 
 Cursor
