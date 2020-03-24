@@ -13,4 +13,5 @@
    normal_map.rst
    curves.rst
    vector_displacement.rst
+   vector_rotate.rst
    transform.rst
