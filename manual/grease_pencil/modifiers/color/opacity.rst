@@ -19,6 +19,12 @@ Options
 
    Opacity Modifier.
 
+Mode
+   The color transformation will be applied on the stroke/fill color or stroke Hardeness.
+   When Hardeness is selected the opacity affect the stroke transparency (alpha) from the center to the border.
+
+   Stroke and Fill, Stroke, Fill, Hardeness
+
 Uniform Opacity
    When enabled, makes the opacity equal for the entire strokes.
 
@@ -32,11 +38,6 @@ Opacity Factor
    and a shift greater than 1.0 make the points more opaque than originally.
 
    Sets value to 2.0 makes the points alpha fully opaque.
-
-Mode
-   The color transformation will be applied on the stroke and/or the fill color.
-
-   Stroke and Fill, Stroke, Fill
 
 
 Influence Filters
