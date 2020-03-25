@@ -327,6 +327,8 @@ Similar to the *Nudge* brush, this one flattens the mesh in the brush area,
 while moving it in the direction of the brush stroke.
 
 
+.. _bpy.types.Brush.use_pose_ik_anchored:
+
 Pose
 ====
 
@@ -351,6 +353,8 @@ Smooth Iterations
 Pose IK Segments
    Controls how many :ref:`IK bones <bone-constraints-inverse-kinematics>`
    are going to be created for posing.
+Keep Anchor Point
+   Keeps the position of the last segment in the IK chain fixed
 
 
 Nudge
