@@ -123,7 +123,7 @@ Only Selected Keyframes Handles
    Only shows the handles for the currently selected curves.
 View All :kbd:`Home`
    Reset viewable area to show all keyframes.
-View Selected :kbd:`NumpadPeriod`
+Frame Selected :kbd:`NumpadPeriod`
    Reset viewable area to show selected keyframes.
 View Frame :kbd:`Numpad0`
    Centers the area to the Playhead.

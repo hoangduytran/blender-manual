@@ -104,7 +104,7 @@ File Types
    Filters files by categories, like folders, blend-files, images, etc.
 Data-Block Types
    When appending or linking, you can also filter by data-block categories, like scenes, animations, materials, etc.
-Search field
+Search field :kbd:`Ctrl-F`
    Filter items by name.
    The wildcard ``*`` will match anything, e.g. ``bl*er`` will match both ``blender`` and ``blogger``.
    There is always an implicit wildcard at start and end of the search string,
