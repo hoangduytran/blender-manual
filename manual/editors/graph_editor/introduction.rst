@@ -248,32 +248,27 @@ Sidebar Region
 The panels in the *Sidebar region*.
 
 
+.. _bpy.types.SpaceGraphEditor.show_cursor:
+.. _graph_editor-view-properties:
+
 View Tab
 --------
 
-.. (Todo) duplicated here: \editors\graph_editor\fcurves\properties.rst
-
-View Properties Panel
----------------------
-
 .. figure:: /images/editors_graph-editor_fcurves_properties_view-panel.png
+   :align: right
 
-   View Properties panel.
+   View Tab.
 
 Show Cursor
-   Show the vertical *Cursor*.
-Cursor from Selection
-   Set the *2D cursor* to the center of the selected keyframes.
-Cursor X
-   *Playhead* X position.
+   Toggles the visibility of the :ref:`2D Cursor <graph_editor-2d-cursor>`.
+Cursor X, Y
+   Moves the cursor to the specified frame (X value) and value (Y value).
+Cursor to Selection
+   Places the *2D Cursor* at the midpoint of the selected keyframes.
 
-   To Keys
-      Snap selected keyframes to the *Playhead*.
-Cursor Y
-   Vertical *Cursor* Y position.
+.. seealso::
 
-   To Keys
-      Snap selected keyframes to the *Cursor*.
+   Graph Editor's :ref:`graph-view-menu`.
 
 
 Further Tabs
