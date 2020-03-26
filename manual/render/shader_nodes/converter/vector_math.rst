@@ -111,7 +111,7 @@ Outputs
 =======
 
 The output of the node is dynamic. It is either a vector or a scalar depending on the operator.
-For instance, the *Length* operator have a scalar output while the *Add* operator have a vector output.
+For instance, the *Length* operator has a scalar output while the *Add* operator has a vector output.
 
 Vector
    Output vector.

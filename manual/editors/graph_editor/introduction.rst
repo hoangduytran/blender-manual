@@ -125,7 +125,7 @@ View All :kbd:`Home`
    Reset viewable area to show all keyframes.
 Frame Selected :kbd:`NumpadPeriod`
    Reset viewable area to show selected keyframes.
-View Frame :kbd:`Numpad0`
+Go to Current Frame :kbd:`Numpad0`
    Centers the area to the Playhead.
 
 .. seealso::

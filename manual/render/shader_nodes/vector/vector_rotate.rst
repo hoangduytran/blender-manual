@@ -37,7 +37,7 @@ Type
       Rotates the vector about the *Center* and defined by the *Rotation*
       input vector to control the amount of rotation on each axis.
 Invert
-   Inverts the angle.
+   Inverts the rotation angle.
 
 
 Outputs
