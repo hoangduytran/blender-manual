@@ -1,3 +1,6 @@
+.. _bpy.types.Brush.pose_offset:
+.. _bpy.types.Brush.pose_smooth_iterations:
+.. _bpy.types.Brush.pose_ik_segments:
 .. _bpy.types.Brush.use_pose_ik_anchored:
 
 ****

@@ -1,3 +1,6 @@
+.. _bpy.types.Brush.height:
+.. _bpy.types.Brush.use_persistent:
+.. _bpy.ops.sculpt.set_persistent_base:
 
 *****
 Layer
@@ -16,6 +19,8 @@ This brush does not draw on top of itself; a brush stroke intersects itself.
 Releasing the mouse button and starting a new stroke
 will reset the depth and paint on top of the previous stroke.
 
+Height
+   Todo.
 Persistent
    You can keep sculpting on the same layer between strokes when this is on.
 Set Persistent Base

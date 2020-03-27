@@ -1,3 +1,5 @@
+.. _bpy.types.Brush.crease_pinch_factor:
+.. _bpy.types.Brush.rake_factor:
 
 **********
 Snake Hook

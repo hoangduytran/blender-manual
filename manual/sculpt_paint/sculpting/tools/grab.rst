@@ -1,3 +1,4 @@
+.. _bpy.types.Brush.use_grab_active_vertex:
 
 ****
 Grab

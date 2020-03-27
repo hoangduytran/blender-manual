@@ -1,3 +1,4 @@
+.. _bpy.types.Brush.mask_tool:
 
 ****
 Mask

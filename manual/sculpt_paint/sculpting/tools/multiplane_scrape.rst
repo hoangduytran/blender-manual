@@ -1,3 +1,6 @@
+.. _bpy.types.Brush.multiplane_scrape_angle:
+.. _bpy.types.Brush.use_multiplane_scrape_dynamic:
+.. _bpy.types.Brush.show_multiplane_scrape_planes_preview:
 
 *****************
 Multiplane Scrape

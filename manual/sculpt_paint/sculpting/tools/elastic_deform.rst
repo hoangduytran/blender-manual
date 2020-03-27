@@ -1,3 +1,5 @@
+.. _bpy.types.Brush.elastic_deform_type:
+.. _bpy.types.Brush.elastic_deform_volume_preservation:
 
 **************
 Elastic Deform
