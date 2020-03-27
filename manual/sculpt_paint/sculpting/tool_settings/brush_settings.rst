@@ -83,7 +83,7 @@ Plane Trim
 Advanced
 ========
 
-Topology Automasking
+Topology Auto-masking
    Affects only vertices connected to the active vertex under the brush.
    This can be used for isolating disconnected meshes, masking cavities,
    mesh boundary edges, or creating topological falloffs.

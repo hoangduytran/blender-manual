@@ -11,7 +11,7 @@
 
    introduction.rst
    toolbar.rst
-   tools.rst
+   tools/index.rst
    tool_settings/index.rst
    adaptive.rst
    editing.rst
