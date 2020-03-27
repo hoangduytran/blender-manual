@@ -1,4 +1,5 @@
 .. _bpy.types.Brush.normal_radius_factor:
+.. _bpy.types.Brush.hardness:
 .. _bpy.types.Brush.auto_smooth_factor:
 
 **************
@@ -57,6 +58,8 @@ Normal Radius
    the normal i.e. take the average of multiple normals. This influences the brush orientation;
    increasing this value causes the brush to follow a smooth version of the mesh,
    while a small value causes the brush to closely follow the contours of the mesh.
+Hardness
+   How close the brush falloff starts from the edge of the brush.
 Autosmooth
    Sets the amount of smoothing to be applied to each stroke.
 Topology
