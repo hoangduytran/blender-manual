@@ -66,7 +66,7 @@ Usually, we can mitigate this issue by:
 - Taking the absolute value of the seed. In computing, zero may be positive or negative,
   so taking the absolute values unifies the zero into a single value.
 
-.. list-table:: Different Musgrave types with the same parameters.
+.. list-table::
 
    * - .. figure:: /images/render_shader-nodes_textures_white-noise_issue.png
 
