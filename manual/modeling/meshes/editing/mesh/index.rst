@@ -9,6 +9,7 @@
    transform/index.rst
    mirror.rst
    duplicate.rst
+   extrude.rst
    split.rst
    bisect.rst
    knife_project.rst
