@@ -9,7 +9,7 @@ Creating Vertex Groups
 .. figure:: /images/modeling_meshes_properties_vertex-groups_assigning-vertex-group_empty.png
    :align: right
 
-   Empty Vertex Group panel.
+   Empty Vertex Groups panel.
 
 Vertex groups are maintained within the *Mesh* tab (1) in the Properties Editor.
 As long as no vertex groups are defined (the default for new mesh objects),
@@ -55,7 +55,7 @@ Active Group
    This is indicated by setting the background of the panel entry
    to a light blue color. If you have two or more groups in the list,
    then you can change the active group by :kbd:`LMB` on
-   the corresponding entry in the Vertex Group panel.
+   the corresponding entry in the Vertex Groups panel.
 
 
 Deleting Vertex Groups
@@ -177,4 +177,4 @@ Finding Ungrouped Vertices
 You can find ungrouped vertices as follows:
 
 - Press :kbd:`A` once or twice to unselect all vertices.
-- In the header of the 3D View: Navigate to :menuselection:`Select --> Ungrouped Vertices`.
+- In the header of the 3D View, navigate to :menuselection:`Select --> Ungrouped Vertices`.
