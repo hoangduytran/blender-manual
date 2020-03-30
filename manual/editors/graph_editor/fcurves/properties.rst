@@ -70,10 +70,12 @@ Handle Smoothing
       *Auto Clamped* by default, and only switch to *Automatic* handles in places where this
       is desired behavior. This effect can also be reduced by adding in-between keys.
 
-   Considering the upsides and downsides of each mode, *Continuous Acceleration* should be
-   better suited for limited animation, which uses a small number of interpolated keys with
-   minimal manual polish. In case of highly polished high key rate animation, the benefits of
-   smoothing may not outweigh the workflow disruption from more extensive change propagation.
+      .. tip::
+
+         Considering the upsides and downsides of each mode, *Continuous Acceleration* should be
+         better suited for limited animation, which uses a small number of interpolated keys with
+         minimal manual polish. In case of highly polished high key rate animation, the benefits of
+         smoothing may not outweigh the workflow disruption from more extensive change propagation.
 
 
 Active Keyframe

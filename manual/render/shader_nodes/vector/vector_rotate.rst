@@ -9,7 +9,6 @@ Vector Rotate Node
 
    Vector Rotate Node.
 
-
 The *Vector Rotate Node* provides the ability to rotate a vector around a center point.
 
 
@@ -53,4 +52,4 @@ Examples
 .. figure:: /images/render_shader-nodes_vector_vector-rotate_example.png
    :align: right
 
-   Vector Rotate Node Example.
+   Vector Rotate node example.
