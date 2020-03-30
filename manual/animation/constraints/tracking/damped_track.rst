@@ -13,12 +13,11 @@ objects or bones. It is important to note that the constraint aligns the origin'
 target's origin point. This is more easily explained with the figure below. In each case the objects
 are set as Damped Track to +X.
 
-.. figure:: /images/damped-track-axis.png
+.. figure:: /images/animation_constraints_damped_track_axis.png
    :align: center
 
    A: Object verticies aligned along axis origin.
    B: Object vertices aligned away from origin.
-
 
 
 Options

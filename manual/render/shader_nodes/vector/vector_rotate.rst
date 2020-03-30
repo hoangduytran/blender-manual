@@ -4,7 +4,7 @@
 Vector Rotate Node
 ******************
 
-.. figure:: /image/render_shader-nodes_vector_vector-rotate.png
+.. figure:: /images/render_shader-nodes_vector_vector-rotate.png
    :align: right
 
    Vector Rotate Node.
@@ -50,7 +50,7 @@ Vector
 Examples
 ========
 
-.. figure:: /image/render_shader-nodes_vector_vector-rotate_example.png
+.. figure:: /images/render_shader-nodes_vector_vector-rotate_example.png
    :align: right
 
-   Vector Rotate Node Example .
+   Vector Rotate Node Example.
