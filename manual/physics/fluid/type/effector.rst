@@ -71,7 +71,7 @@ Effector Type
 .. _bpy.types.FluidEffectorSettings.subframes:
 
 Effector Substeps
-   Number of sub-steps used to reduce gaps in collision of fluid from fast-moving effectors.
+   Number of substeps used to reduce gaps in collision of fluid from fast-moving effectors.
 
 .. _bpy.types.FluidEffectorSettings.surface_distance:
 
@@ -81,8 +81,9 @@ Surface Thickness
 .. _bpy.types.FluidEffectorSettings.use_effector:
 
 Use Effector
-   Enables or disables the effector object affect on the fluid, this property is useful
-   for animations to selectively enable and disable when the effector affects the fluid.
+   Enables or disables the effector object effect on the fluid,
+   this property is useful for animations to selectively enable and disable
+   when the effector affects the fluid.
 
 .. _bpy.types.FluidEffectorSettings.use_plane_init:
 

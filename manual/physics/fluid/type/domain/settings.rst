@@ -277,13 +277,13 @@ Particle Radius
 
 Sampling
    Factor that is used when sampling particles. A higher value will sample more particles.
-   Note that particle resampling occurs at every simulation step.
+   Note that particle resampling occurs at every single simulation step.
 
 .. _bpy.types.FluidDomainSettings.particle_randomness:
 
 Randomness
-   New particles are sampled with some randomness attached to their position.
-   This field controls this randomness. Higher values will sample the liquid particles more
+   New particles are sampled with some randomness attached to their position
+   which can be controlled by this field. Higher values will sample the liquid particles more
    randomly in inflow regions. With a value of 0.0 all new particles will be sampled uniformly inside
    their corresponding grid cells.
 

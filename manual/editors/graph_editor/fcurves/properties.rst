@@ -22,9 +22,9 @@ Channel Name
 RNA Path
    RNA Path to property.
 RNA Array Index
-   Index to the specific property affected by F-Curve if applicable.
+   Index to the specific property affected by F-curve if applicable.
 Display Color
-   The method used to determine the color of the F-Curve shown in the Graph Editor.
+   The method used to determine the color of the F-curve shown in the Graph editor.
 
    Auto Rainbow
       Increment the hue of the F-curve color based on the channel index.

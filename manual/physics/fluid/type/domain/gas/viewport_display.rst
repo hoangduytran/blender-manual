@@ -13,11 +13,11 @@ Thickness
 Interpolation
    Interpolation method to use for the visualization of the fluid grid.
 
-      Linear
-         Linear interpolation between voxels. Gives good smoothness and speed.
+   Linear
+      Linear interpolation between voxels. Gives good smoothness and speed.
 
-      Cubic
-         Cubic interpolation between voxels. Gives smoothed high quality interpolation, but is slower.
+   Cubic
+      Cubic interpolation between voxels. Gives smoothed high quality interpolation, but is slower.
 
 .. _bpy.types.FluidDomainSettings.slice_method:
 

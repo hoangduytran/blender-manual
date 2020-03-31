@@ -24,7 +24,6 @@ and there in the *Vertex Groups* panel.
 .. _bpy.ops.object.vertex_group_copy_to_selected:
 .. _bpy.ops.object.vertex_group_remove_from:
 .. _bpy.ops.object.vertex_group_remove:
-.. _bpy.ops.object.vertex_group_lock:
 .. _bpy.ops.object.vertex_group_move:
 
 Active Vertex Group
