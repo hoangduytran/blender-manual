@@ -164,15 +164,15 @@ Delimit
 
 .. _bpy.ops.mesh.edge_collapse:
 
-Collapse Regions
-================
+Collapse Edges & Faces
+======================
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Delete --> Collapse Regions`
-   :Hotkey:    :kbd:`X`, :menuselection:`Collapse Regions`
+   :Menu:      :menuselection:`Mesh --> Delete --> Collapse Edges & Faces`
+   :Hotkey:    :kbd:`X`, :menuselection:`Collapse Edges & Faces`
 
 Collapse each isolated edge & face region into single vertices,
 with support for face data such as UV's and vertex colors.
