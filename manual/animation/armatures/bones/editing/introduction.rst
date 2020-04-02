@@ -30,3 +30,23 @@ Thus you should in general be sure that your armature is definitive before start
 
    Please note that some tools work on bones' joints, while others work on bones themselves.
    Be careful not to get confused.
+
+
+Add Menu
+========
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Add`
+   :Hotkey:    :kbd:`Shift-A`
+
+In the 3D View, :kbd:`Shift-A` to add a new bone to your armature.
+
+This bone will be:
+
+- Of one unit of length.
+- Oriented towards the global Z axis.
+- With its root placed at the 3D cursor position.
+- With no relationship with any other bone of the armature.
