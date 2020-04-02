@@ -371,54 +371,6 @@ Dissolve
 Todo 2.76.
 
 
-Merge Bones
-===========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Armature --> Merge Bones`
-   :Hotkey:    :kbd:`Alt-M`
-
-You can merge together several selected bones, as long as they form a chain.
-Each sub-chain formed by the selected bones will give one bone,
-whose root will be the root of the root bone, and whose tip will be the tip of the tip bone.
-
-Confirm by clicking on :menuselection:`Merge Selected Bones --> Within Chains`.
-
-If another (non-selected) chain origins from inside of the merged chain of bones,
-it will be parented to the resultant merged bone. If they were connected,
-it will be connected to the new bone.
-
-Here is a strange subtlety (see Fig. :ref:`fig-rig-bone-merge`): even though connected
-(the root bone of the unmerged chain has no root sphere),
-the bones are not visually connected. This will be done as soon as you edit one bone,
-differently depending in which chain is the edited bone
-(compare the bottom two images of the example to understand this better).
-
-.. _fig-rig-bone-merge:
-
-.. list-table:: Merge example.
-
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_merge-1.png
-
-          An armature with a selected chain, and a single selected bone, just before merging.
-
-     - .. figure:: /images/animation_armatures_bones_editing_bones_merge-2.png
-
-          Bones Bone, Bone.001 and Bone.002 have been merged in Bone.006,
-          whereas Bone.005 was not modified. Note Bone.003, connected to Bone.006 but not yet "really" connected.
-
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_merge-3.png
-
-          Bone.004 has been rotated, and hence the tip of Bone.006 was moved to the root of Bone.003.
-
-     - .. figure:: /images/animation_armatures_bones_editing_bones_merge-4.png
-
-          The tip of Bone.006 has been moved, and hence the root of Bone.003 was moved to the tip of Bone.006.
-
-
 Subdivide
 =========
 
