@@ -52,6 +52,8 @@ This bone will be:
 - With no relationship with any other bone of the armature.
 
 
+.. _animation_armatures_bones_locking:
+
 Locking Bones
 =============
 
