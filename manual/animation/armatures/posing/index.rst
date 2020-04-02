@@ -12,4 +12,5 @@
    introduction.rst
    selecting.rst
    editing.rst
+   tool_settings.rst
    bone_constraints/index.rst

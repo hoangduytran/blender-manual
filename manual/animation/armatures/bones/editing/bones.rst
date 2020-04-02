@@ -424,7 +424,7 @@ you only really lock its tip. With unconnected bones, the locking is effective o
 X-Axis Mirror
 =============
 
-See :ref:`X-Axis Mirror Pose Mode <armature-posing-x-mirror>`.
+See :ref:`X-Axis Mirror Pose Mode <bpy.types.Pose.use_mirror_x>`.
 
 
 Separate Bones
