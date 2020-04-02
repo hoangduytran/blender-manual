@@ -11,8 +11,14 @@
    introduction.rst
    transform.rst
    bone_roll.rst
+   extrude.rst
+   duplicate.rst
+   fill_between_joints.rst
+   split.rst
+   separate_bones.rst
+   subdivide.rst
    switch_direction.rst
-   bones.rst
    naming.rst
    parenting.rst
    properties.rst
+   delete.rst

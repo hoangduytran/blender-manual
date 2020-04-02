@@ -50,3 +50,22 @@ This bone will be:
 - Oriented towards the global Z axis.
 - With its root placed at the 3D cursor position.
 - With no relationship with any other bone of the armature.
+
+
+Locking Bones
+=============
+
+You can prevent a bone from being transformed in *Edit Mode* in several ways:
+
+.. The active bone can be locked clicking on *Lock*
+   in the *Transform* panel (:kbd:`N` in a 3D View);
+
+- All bones can be locked clicking on the *Lock* checkbox
+  of their Transform panel in the *Bones* tab;
+- Press :kbd:`Shift-W` :menuselection:`Toggle Bone Options --> Locked`
+- Select :menuselection:`Armature --> Bone Settings --> Toggle a Setting`.
+
+*If the root of a locked bone is connected to the tip of an unlocked bone, it will not be locked*,
+i.e. you will be able to move it to your liking.
+This means that in a chain of connected bones, when you lock one bone,
+you only really lock its tip. With unconnected bones, the locking is effective on both joints of the bone.
