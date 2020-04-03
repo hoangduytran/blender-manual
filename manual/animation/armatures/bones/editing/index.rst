@@ -18,7 +18,9 @@
    separate_bones.rst
    subdivide.rst
    switch_direction.rst
+   symmetrize.rst
    naming.rst
+   change_layers.rst
    parenting.rst
    properties.rst
    delete.rst

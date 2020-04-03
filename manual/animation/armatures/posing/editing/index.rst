@@ -12,4 +12,5 @@
    in_betweens.rst
    propagate.rst
    copy_paste.rst
+   flip_quats.rst
    show_hide.rst
