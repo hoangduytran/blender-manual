@@ -23,15 +23,56 @@ This is a good way to get an overview of all Blender's operators.
    `Blender's API documentation <https://docs.blender.org/api/current/>`__
 
 
-.. _bpy.ops.wm.debug_menu:
 
-Debug Menu
-==========
+System Operators
+================
+
+.. _bpy.ops.script.reload:
+
+Reload Scrips
+-------------
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      All Modes
+   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Reload Scrips`
+   :Hotkey:    :kbd:`Ctrl-Alt-T`
+
+Reloads all scripts found in scripts data folder;
+resetting any modifications that have been made in the Text Editor.
+
+
+.. _bpy.ops.wm.memory_statistics:
+
+Memory Statistics
+-----------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      ``--debug-memory``
+   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Memory Statistics`
+
+This operator which can be found by searching "Memory Statistics" from
+the :doc:`Operator Search </interface/controls/templates/operator_search>`
+will print useful information about memory objects, their size and user count.
+
+.. important::
+
+   To fully use this operator run Blender from the console with ``--debug-memory``.
+
+
+.. _bpy.ops.wm.debug_menu:
+
+Debug Menu
+----------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      All Modes
+   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Debug Menu`
    :Hotkey:    :kbd:`Ctrl-Alt-D`
 
 This operator brings up a menu to set Blender into a certain debug mode.
@@ -52,34 +93,31 @@ for a description of what each value does.
 .. _bpy.ops.wm.redraw_timer:
 
 Redraw Timer
-============
+------------
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      All Modes
+   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Redraw Timer`
    :Hotkey:    :kbd:`Ctrl-Alt-T`
 
-This operator brings up a menu with a list of tests to benchmark UI render times along with undo/redo functions.
+This operator brings up a menu with a list of tests
+to benchmark UI render times along with undo/redo functions.
 
 
-.. _bpy.ops.wm.memory_statistics:
+.. _bpy.ops.screen.spacedata_cleanup:
 
-Memory Statistics
-=================
+Clean-up Space-data
+-------------------
 
 .. admonition:: Reference
    :class: refbox
 
-   :Mode:      ``--debug-memory``
+   :Mode:      All Modes
+   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Clean-up Space-data`
 
-This operator which can be found by searching "Memory Statistics" from
-the :doc:`Operator Search </interface/controls/templates/operator_search>`
-will print useful information about memory objects, their size and user count.
-
-.. important::
-
-   To fully use this operator run Blender from the console with ``--debug-memory``.
+Removes unused settings for invisible editors.
 
 
 .. _bpy.ops.wm.dependency_relations:
