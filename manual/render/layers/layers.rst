@@ -1,5 +1,5 @@
-.. _bpy.types.SceneRenderLayer:
-.. _bpy.types.RenderLayer:
+.. _bpy.ops.scene.view_layer:
+.. _bpy.types.ViewLayer:
 .. _render-layers:
 
 ***********
@@ -25,8 +25,24 @@ View Layers
 
 In the top of the screen there is a list of all the View Layers in the active scene.
 
+.. _bpy.types.ViewLayer.name:
+
+Name
+   The name of the active view layer, double click to edit the name.
+
+.. _bpy.ops.scene.view_layer_add:
+
 Add View Layer
    Will add a new view layer to the active scene.
+
+   New
+      Adds a new view layer.
+   Copy Settings
+      Adds a new view layer with all the settings of current view layer.
+   Blank
+      Adds a new view layer with all collections disabled.
+
+.. _bpy.ops.scene.view_layer_remove:
 
 Remove View Layer
    Will remove the selected view layer from the active scene.
