@@ -45,7 +45,7 @@ Group Remove
    Removes vertices with a final weight below *Remove Threshold* from the vertex group.
 
 Falloff Type
-   Type of mapping:
+   Type of mapping, the falloff can be inverted with the `<-->` button.
 
    Linear
       No mapping.

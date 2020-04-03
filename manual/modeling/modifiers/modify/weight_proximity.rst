@@ -64,7 +64,7 @@ Highest
    *Lowest* can be set above *Highest* to reverse the mapping.
 
 Falloff Type
-   Type of mapping:
+   Type of mapping, the falloff can be inverted with the `<-->` button.
 
    Linear
       No mapping.
