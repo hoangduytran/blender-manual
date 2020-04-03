@@ -94,6 +94,16 @@ Gravity
    By default the fluid solver will use the global scene gravity. This behavior can be disabled
    in the scene settings. Disabling the global gravity will enable the fluid gravity options.
 
+.. _bpy.types.FluidDomainSettings.clipping:
+
+Empty Space :guilabel:`Gas Only`
+   Value under which voxels are considered empty space to optimize rendering.
+
+.. _bpy.types.FluidDomainSettings.delete_in_obstacle:
+
+Delete In Obstacle
+   Remover any volume of fluid that intersects with an obstacle inside the domain.
+
 
 .. _bpy.types.FluidDomainSettings.use_collision_border_front:
 .. _bpy.types.FluidDomainSettings.use_collision_border_back:

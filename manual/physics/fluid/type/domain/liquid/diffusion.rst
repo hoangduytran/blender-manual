@@ -2,6 +2,7 @@
 .. |kg.m-3| replace:: kg.m\ :sup:`-3`
 
 .. _bpy.ops.fluid.preset:
+.. _bpy.types.FluidDomainSettings.use_diffusion:
 
 *********
 Diffusion
@@ -19,6 +20,7 @@ The main factors of diffusion are the *Viscosity* and *Surface Tension*.
 These properties can be adjusted to create virtual liquids that behave like water,
 oil, honey, or any other liquid. A couple presets exist to change the diffusion
 for different substances are predefined and can be changed in the preset menu.
+Fluid Diffusion settings can be enabled/disabled in the panel header.
 
 Viscosity
    The viscosity refers to the "thickness" of the fluid and actually the force needed to
