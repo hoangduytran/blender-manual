@@ -172,6 +172,7 @@ Freestyle
 
 
 .. _bpy.types.ViewLayer.material_override:
+.. _bpy.types.ViewLayer.samples:
 
 Override
 --------
