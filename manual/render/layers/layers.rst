@@ -147,20 +147,31 @@ Exclude
    however, sometimes it is useful to leave out some object influence for a particular render layer.
 
 
+.. _bpy.types.ViewLayer.use_sky:
+.. _bpy.types.ViewLayer.use_ao:
+.. _bpy.types.ViewLayer.use_solid:
+.. _bpy.types.ViewLayer.use_strand:
+.. _bpy.types.ViewLayer.use_volumes:
+.. _bpy.types.ViewLayer.use_freestyle:
+
 Filter
 ------
 
-Use Environment
+Environment
    Disables rendering the *Environment* render pass in the final render.
-Use Ambient Occlusion
+Ambient Occlusion
    Disables rendering the *Ambient Occlusion* render pass in the final render.
-Use Surfaces
+Surfaces
    Disables rendering object materials in the final render.
-Use Hair
+Hair
    Disables rendering hair strands in the final render.
-Use Freestyle
+Volume
+   Disables rendering :doc:`Volumes </modeling/volumes/index>` in the final render.
+Freestyle
    Disables freestyle rendering in the final render.
 
+
+.. _bpy.types.ViewLayer.material_override:
 
 Override
 --------
