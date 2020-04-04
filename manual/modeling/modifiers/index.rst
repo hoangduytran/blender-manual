@@ -92,5 +92,5 @@ Simulate
    /physics/fluid/index.rst
    simulate/ocean.rst
    simulate/particle_instance.rst
-   /physics/particles.rst
+   /physics/particles/index.rst
    /physics/soft_body/index.rst
