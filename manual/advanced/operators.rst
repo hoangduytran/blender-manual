@@ -118,22 +118,3 @@ Clean-up Space-data
    :Menu:      :menuselection: `Topbar  --> Blender --> System --> Clean-up Space-data`
 
 Removes unused settings for invisible editors.
-
-
-.. _bpy.ops.wm.dependency_relations:
-
-Dependency Relations
-====================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      ``--debug-depsgraph``
-
-This operator which can be found by searching "Dependency Relations" from
-the :doc:`Operator Search </interface/controls/templates/operator_search>`
-will print the relations for every scene and object in the blend-file.
-
-.. important::
-
-   This operator will only work if Blender is started from the console with ``--debug-depsgraph``.
