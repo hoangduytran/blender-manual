@@ -89,25 +89,28 @@ Density
    Todo.
 
 
+.. _bpy.types.VolumeRender:
+
 Render
 ======
 
 .. _bpy.types.VolumeRender.space:
 
 Space
-   Todo.
+   Specifies how volume density and step size are computed relative either to the object or world.
 
    Object
-      Todo.
+      Keeps volume *Density* and *Detail* the same regardless of object scale.
    World
-      Todo.
+      Specify *Step Size* and *Density* in world space.
 
 .. _bpy.types.VolumeRender.step_size:
 
 Step Size :guilabel:`Cycles Only`
-   Todo.
+   Distance between volume samples. Higher values render more detail at the cost of performance.
+   If set to zero, the step size is automatically determined based on voxel size.
 
 .. _bpy.types.VolumeRender.clipping:
 
 Clipping :guilabel:`Cycles Only`
-   Todo.
+   Value under which voxels are considered empty space to optimize rendering.
