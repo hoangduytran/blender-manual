@@ -38,13 +38,17 @@ Metaball
 Text
    :doc:`Text Objects </modeling/texts/introduction>`
    create a two-dimensional representation of a string of characters.
+Volume
+   :doc:`Volume Objects </modeling/volumes/introduction>`
+   are containers for OpenVDB files that can be load files
+   from other software or Blender's :doc:`Fluid Simulator </physics/fluid/index>`.
 Grease Pencil
    :doc:`Grease Pencil Objects </grease_pencil/primitives>` are objects
    created by painting strokes.
 
 Armature
    :doc:`Armatures </animation/armatures/index>` are used for rigging 3D models
-   in order to make them poseable and animateable.
+   in order to make them poseable and animatable.
 Lattice
    :doc:`Lattices </animation/lattice>` are non-renderable wireframes,
    commonly used for taking additional control over other objects
