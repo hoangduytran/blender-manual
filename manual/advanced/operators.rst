@@ -29,14 +29,14 @@ System Operators
 
 .. _bpy.ops.script.reload:
 
-Reload Scrips
+Reload Scripts
 -------------
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Reload Scrips`
+   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Reload Scripts`
    :Hotkey:    :kbd:`Ctrl-Alt-T`
 
 Reloads all scripts found in scripts data folder;
