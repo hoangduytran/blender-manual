@@ -42,6 +42,8 @@ Shortest Rotation
    Avoids rolling the bone over 90 degrees from its current value.
 
 
+.. _tool-bone-role:
+
 Set Bone Roll
 =============
 

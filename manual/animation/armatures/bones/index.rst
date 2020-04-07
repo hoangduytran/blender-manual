@@ -10,7 +10,7 @@
 
    introduction.rst
    structure.rst
-   tool_settings.rst
+   tools/index.rst
    selecting.rst
    editing/index.rst
    properties/index.rst
