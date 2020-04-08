@@ -23,24 +23,23 @@ This is a good way to get an overview of all Blender's operators.
    `Blender's API documentation <https://docs.blender.org/api/current/>`__
 
 
-
 System Operators
 ================
 
 .. _bpy.ops.script.reload:
 
 Reload Scripts
--------------
+--------------
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Reload Scripts`
+   :Menu:      :menuselection:`Topbar --> Blender --> System --> Reload Scripts`
    :Hotkey:    :kbd:`Ctrl-Alt-T`
 
-Reloads all scripts found in scripts data folder;
-resetting any modifications that have been made in the Text Editor.
+Reloads all scripts found in the scripts data folder;
+any changes that have been made in the Text Editor will be lost!
 
 
 .. _bpy.ops.wm.memory_statistics:
@@ -52,10 +51,10 @@ Memory Statistics
    :class: refbox
 
    :Mode:      ``--debug-memory``
-   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Memory Statistics`
+   :Menu:      :menuselection:`Topbar --> Blender --> System --> Memory Statistics`
 
-This operator which can be found by searching "Memory Statistics" from
-the :doc:`Operator Search </interface/controls/templates/operator_search>`
+This operator which can be found by searching "Memory Statistics"
+with the :doc:`Operator Search </interface/controls/templates/operator_search>`
 will print useful information about memory objects, their size and user count.
 
 .. important::
@@ -72,7 +71,7 @@ Debug Menu
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Debug Menu`
+   :Menu:      :menuselection:`Topbar --> Blender --> System --> Debug Menu`
    :Hotkey:    :kbd:`Ctrl-Alt-D`
 
 This operator brings up a menu to set Blender into a certain debug mode.
@@ -99,7 +98,7 @@ Redraw Timer
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Redraw Timer`
+   :Menu:      :menuselection:`Topbar --> Blender --> System --> Redraw Timer`
    :Hotkey:    :kbd:`Ctrl-Alt-T`
 
 This operator brings up a menu with a list of tests
@@ -115,6 +114,6 @@ Clean-up Space-data
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection: `Topbar  --> Blender --> System --> Clean-up Space-data`
+   :Menu:      :menuselection:`Topbar --> Blender --> System --> Clean-up Space-data`
 
 Removes unused settings for invisible editors.

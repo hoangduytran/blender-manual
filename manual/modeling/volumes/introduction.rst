@@ -5,4 +5,4 @@ Introduction
 
 .. figure:: /images/modeling_volumes_introduction.png
 
-   WDAS cloud dataset rendered in wireframe, Workbench, and Cycles.
+   :abbr:`WDAS (Walt Disney Animation Studios)` cloud data set rendered in wireframe, Workbench, and Cycles.

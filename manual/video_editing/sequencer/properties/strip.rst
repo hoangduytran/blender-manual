@@ -32,8 +32,8 @@ Blend
    Mode of blending strip with lower channels.
 Opacity
    Set the opacity (alpha) of the strip.
-   This value, when animated and with the :menuselection:`View --> Show F-Curves` option turned on, 
-   it's drawn on the strip as a dark section that follows the animation curve.
+   This value, when animated and with the :menuselection:`View --> Show F-Curves` option turned on,
+   is drawn on the strip as a dark section that follows the animation curve.
 
 
 Transform
@@ -79,8 +79,8 @@ Sound
 
 Volume
    The volume of the sound.
-   This value, when animated and with the :menuselection:`View --> Show F-Curves` option turned on, 
-   it's drawn on the strip as a dark section that follows the animation curve. 
+   This value, when animated and with the :menuselection:`View --> Show F-Curves` option turned on,
+   is drawn on the strip as a dark section that follows the animation curve.
    The value is also reflected in the waveform.
 Pitch
    Coefficient of playback speed.

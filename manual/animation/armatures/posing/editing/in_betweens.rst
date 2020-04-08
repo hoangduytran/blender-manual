@@ -13,11 +13,11 @@ There are several tools for editing poses in an animation.
 There are also in *Pose Mode* a bunch of armature-specific editing options/tools,
 like :ref:`auto-bones naming <armature-editing-naming-bones>`,
 :ref:`properties switching/enabling/disabling <armature-bone-properties>`, etc.,
-that we already described in the armature editing pages. See the links above...
+that were already described in the armature editing pages. See the links above...
 
 
 Push Pose from Breakdown
-------------------------
+========================
 
 .. admonition:: Reference
    :class: refbox
@@ -31,7 +31,7 @@ Push Pose from Breakdown
 
 
 Push Pose from Rest
--------------------
+===================
 
 .. admonition:: Reference
    :class: refbox
@@ -44,7 +44,7 @@ Only one keyframe is needed for this tool unlike two for the other.
 
 
 Relax Pose to Breakdown
------------------------
+=======================
 
 .. admonition:: Reference
    :class: refbox
@@ -61,7 +61,7 @@ with smaller and smaller steps as it comes near it.
 
 
 Relax Pose to Rest
-------------------
+==================
 
 .. admonition:: Reference
    :class: refbox
@@ -74,7 +74,7 @@ Only one keyframe is needed for this tool unlike two for the other.
 
 
 Breakdowner
------------
+===========
 
 .. admonition:: Reference
    :class: refbox

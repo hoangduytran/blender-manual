@@ -10,7 +10,7 @@ Introduction
       Pose Tools.
 
 In *Pose Mode*, bones behave like objects. So the transform actions
-(move/rotate/scale, etc.) are very similar to the same ones in Object Mode
+(move, rotate, scale, etc.) are very similar to the same ones in Object Mode
 (all available ones are regrouped in the :menuselection:`Pose --> Transform` submenu). However,
 there are some important specificities:
 
@@ -25,17 +25,16 @@ there are some important specificities:
 Basic Posing
 ============
 
-As previously noted,
-bones' transformations are performed based on the *Rest Position* of the armature,
-which is its state as defined in *Edit Mode*. This means that in rest position,
-in *Pose Mode*, each bone has a scale of 1.0, and null rotation and position
-(as you can see it in the *Transform* panel, in the 3D Views).
+As previously noted, bones' transformations are performed based on the *Rest Position* of
+the armature, which is its state as defined in *Edit Mode*. This means that in
+rest position, in *Pose Mode*, each bone has a scale of 1.0, and null rotation
+and position (as you can see it in the *Transform* panel, in the 3D Views).
 
 .. TODO2.8 Maybe update the images (color & style)
 
 .. figure:: /images/animation_armatures_posing_editing_local-rotation.png
 
-   An example of locally-Y-axis locked rotation, with two bones selected.
+   An example of a rotation locked to the local Y axis, with two bones selected.
 
    Note that the two green lines materializing the axes are centered on the armature's center,
    and not each bone's root...
@@ -53,7 +52,7 @@ you are supposed to have one or more objects skinned on it! And obviously,
 when you transform a bone in *Pose Mode*,
 its related objects or object's shape is moved/deformed accordingly, in real-time.
 Unfortunately, if you have a complex rig set-up and/or a heavy skin object,
-this might produce lag, and make interactive editing very painful.
-If you experience such troubles, try enabling the *Delay Deform* button of
-the *Armature* panel the skin objects will only be updated once you validate
+this might produce lag during interactive editing.
+If you experience such troubles, try enabling the *Delay Deform* button in
+the *Armature* panel the skin objects will only be updated once you confirm
 the transform operation.

@@ -39,7 +39,7 @@ Method
    Single
       Perform a single slice of the domain object.
 
-.. _bpy.types.FluidDomainSettings.slice_axis:
+      .. _bpy.types.FluidDomainSettings.slice_axis:
 
       Axis
          Auto
@@ -48,7 +48,7 @@ Method
          X/Y/Z
             Slice along the X/Y/Z axis.
 
-.. _bpy.types.FluidDomainSettings.slice_depth:
+      .. _bpy.types.FluidDomainSettings.slice_depth:
 
       Position
          Position of the slice relative to the length of the respective domain side.

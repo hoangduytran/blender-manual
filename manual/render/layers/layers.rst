@@ -168,7 +168,7 @@ Hair
 Volume
    Disables rendering :doc:`Volumes </modeling/volumes/index>` in the final render.
 Freestyle
-   Disables freestyle rendering in the final render.
+   Disables Freestyle rendering in the final render.
 
 
 .. _bpy.types.ViewLayer.material_override:

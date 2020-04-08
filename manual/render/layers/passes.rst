@@ -34,7 +34,7 @@ Z
       When depth values need to be blended in case of motion blur or :term:`Depth of Field`, use the mist pass.
 
 Mist
-   Distance to visible surfaces, mapped to the 0.0-1.0 range.
+   Distance to visible surfaces, mapped to the 0.0 - 1.0 range.
    When enabled, settings are in :ref:`World tab <render-cycles-integrator-world-mist>`.
    This pass can be used in compositing to fade out objects that are farther away.
 
@@ -45,8 +45,8 @@ Vector
    giving the motion towards the next and previous frame position in pixel space.
 UV
    Mapped UV coordinates, used to represent where on a mesh a texture gets mapped too.
-   This is represented through the red and green channels of the image,
-   the blue channel is encoded with a constant value of 1 but does not hold any information.
+   This is represented through the red and green channels of the image.
+   The blue channel is encoded with a constant value of 1 but does not hold any information.
 Object Index
    Creates a mask of the object that can be later read by
    the :doc:`ID Mask Node </compositing/types/converter/id_mask>` in the Compositor.

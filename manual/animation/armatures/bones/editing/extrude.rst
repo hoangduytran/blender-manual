@@ -51,7 +51,7 @@ But once you have enabled :ref:`bpy.types.Armature.use_mirror_x` editing option,
 each extruded tip will produce *two new bones*, having the same name except for the "_L"/ "_R" suffix
 (for left/right, see the :ref:`naming conventions <armature-editing-naming-conventions>`).
 The "_L" bone behaves like the single one produced by the default extrusion --
-you can move/rotate/scale it exactly the same way.
+you can move, rotate or scale it exactly the same way.
 The "_R" bone is its mirror counterpart (along the armature's local X axis),
 see Fig. :ref:`fig-rig-bone-mirror`.
 
@@ -148,8 +148,9 @@ If the active element is a *connected root*:
 - The new bone **is** parented and connected to the parent of the bone owning the active root
   (check the Outliner in Fig. :ref:`fig-rig-bone-connected-root`).
 
-This should be obvious because if the active element is a connected root then the active
-element will be also the tip of the parent bone, so it is the same as the second case.
+This should be obvious because if the active element is a connected root
+then the active element will be also the tip of the parent bone,
+so it is the same as the second case.
 
 As the tip of the new bone becomes the active element,
 you can repeat these :kbd:`Ctrl-RMB` clicks several times,

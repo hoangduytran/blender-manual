@@ -14,19 +14,19 @@ Object Types
 New objects can be created with the *Add* menu in the 3D View's header.
 
 :doc:`Mesh </modeling/meshes/introduction>`
-   Objects composed of Polygonal Faces, Edges and/or Vertices,
+   Objects composed of vertices, edges and polygonal faces
    and can be edited extensively with Blender's mesh editing tools.
    See :doc:`Mesh Primitives </modeling/meshes/primitives>`.
 :doc:`Curve </modeling/curves/introduction>`
    Mathematically defined objects which can be manipulated with control handles
-   or control points (instead of vertices), to manage their length and curvature.
+   or control points (instead of vertices), to edit their length and curvature.
    See :doc:`Curves Primitives </modeling/curves/primitives>`.
 :doc:`Surface </modeling/surfaces/introduction>`
    Mathematically defined patches that are manipulated with control points.
    These are useful for simple rounded forms and organic landscapes.
    See :doc:`Surfaces Primitives </modeling/surfaces/primitives>`.
 :doc:`Metaball </modeling/metas/introduction>`
-   Objects formed by a mathematical function (with no control points or vertices)
+   Objects formed by a mathematical function (with no vertices or control points)
    defining the 3D volume in which the object exists. Meta objects have a liquid-like quality
    where when two or more metaballs are brought together,
    they merge by smoothly rounding out the connection, appearing as one unified object.
@@ -40,9 +40,9 @@ New objects can be created with the *Add* menu in the 3D View's header.
    Objects created by painting strokes.
 
 :doc:`Armature </animation/armatures/index>`
-   Used for rigging 3D models in order to make them poseable and animatable.
+   Used for rigging 3D models to make them poseable and animatable.
 :doc:`Lattice </animation/lattice>`
-   Non-renderable wireframes commonly used for taking additional control over other objects
+   Non-renderable wireframes commonly used for the deformation of other objects
    with help of the :doc:`Lattice Modifier </modeling/modifiers/deform/lattice>`.
 
 :doc:`Empty </modeling/empties>`
@@ -77,11 +77,11 @@ New objects can be created with the *Add* menu in the 3D View's header.
 Common Options
 ==============
 
-You can change the options of the object in the
-:ref:`ui-undo-redo-adjust-last-operation` panel just after creating it:
+You can change the options of the object in the :ref:`ui-undo-redo-adjust-last-operation` panel
+just after creating it:
 
 Type
-   Some objects let you change their type after creation with a selector.
+   You can change the type of some objects after their creation with a selector.
 Radius/Size
    Sets the starting size.
 

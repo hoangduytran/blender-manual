@@ -342,7 +342,7 @@ Fractional Obstacles
    This option reduces the "stepping effect" that results when an obstacles lies inclined inside the domain.
    It also makes liquid flow more smoothly over an obstacle.
 
-.. _bpy.types.FluidDomainSettings.fractions_threshold:
+   .. _bpy.types.FluidDomainSettings.fractions_threshold:
 
    Obstacle-Fluid Threshold
       Value to control the smoothness of the fractional obstacle option. Smaller value reduce

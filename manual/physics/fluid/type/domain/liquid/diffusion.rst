@@ -67,12 +67,12 @@ Viscosity
    To simplify the input of these numbers, the viscosity is changed by entering values
    in scientific notation by entering a base value and the exponent of that number.
 
-.. _bpy.types.FluidDomainSettings.viscosity_base:
+   .. _bpy.types.FluidDomainSettings.viscosity_base:
 
    Base
       The base of the viscosity value (e.g. 1.002 in the case of water (20 °C)).
 
-.. _bpy.types.FluidDomainSettings.viscosity_exponent:
+   .. _bpy.types.FluidDomainSettings.viscosity_exponent:
 
    Exponent
       The exponent of the viscosity value that will be multiplied by 10\ :sup:`-6`

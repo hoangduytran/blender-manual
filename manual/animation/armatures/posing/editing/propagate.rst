@@ -16,7 +16,7 @@ It automates the process of copying and pasting.
 
 
 Options
--------
+=======
 
 Termination Mode
    Modes which determine how it decides when to stop overwriting keyframes.
