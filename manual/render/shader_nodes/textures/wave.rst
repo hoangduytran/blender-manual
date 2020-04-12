@@ -26,6 +26,8 @@ Detail
    Amount of distortion noise detail.
 Detail Scale
    Scale of distortion noise.
+Roughness
+   Blend between a smoother noise pattern, and rougher with sharper peaks.
 Phase Offset
    Position of the wave along the *Bands Direction*.
    This can be used as an input for an additional control over distortion.
