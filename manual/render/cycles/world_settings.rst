@@ -144,8 +144,8 @@ Volume
 
 Sampling Method
    Distance
-      If you have got a pretty dense volume that is lit from far away
-      then *Distance* sampling is usually more efficient.
+      For dense volumes lit from far away *Distance* sampling is usually more efficient.
+      World volumes usually should use not this setting.
    Equiangular
       If you have got a light inside or near the volume then *equiangular* sampling is better.
    Multiple Importance
@@ -155,14 +155,18 @@ Interpolation
    Interpolation method to use for the volume.
 
    Linear
-      Good smoothness and speed.
+      Simple interpolation which gives good results for thin volumes.
    Cubic
-      Smoothed high-quality interpolation, but slower.
+      Smoothed high-quality interpolation needed for more dense volumes, but slower.
 
 Homogeneous Volume
    Assume volume has the same density everywhere (not using any textures), for faster rendering.
-   For example absorption in a glass object would typically not have any textures,
-   and so the renderer can be set to avoid taking small steps to sample the volume shader.
+   Usually this is automatically determined by the renderer.
+   This settings provides a manual control for cases where it is not detected.
+
+Step Size
+   Distance between volume shader samples for world volume shaders.
+   See :doc:`Volume Render Settings </render/cycles/render_settings/volumes>` for more information.
 
 
 Ray Visibility
