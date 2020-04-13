@@ -19,78 +19,183 @@ The *Math Node* performs math operations.
 Inputs
 ======
 
-Value
-   First numerical value. The trigonometric functions accept values in radians.
+The inputs of the node are dynamic. Some inputs are only available in certain operations.
+For instance, the *Addend* input is only available in the *Multiply Add* operator.
 
 Value
-   Second numerical value.
-   This value is **not** used in functions that accept only one parameter
-   like the trigonometric functions, Round and Absolute.
+   Input Value. Trigonometric functions read this value as radians.
 
+Addend
+   Input Addend.
+
+Base
+   Input Base.
+
+Exponent
+   Input Exponent.
+
+Epsilon
+   Input Epsilon.
+
+Distance
+   Input Distance.
+
+Min
+   Input Minimum.
+
+Max
+   Input Maximum.
+
+Increment
+   Input Increment.
+
+Scale
+   Input Scale.
+
+Degrees
+   Input Degrees.
+
+Radians
+   Input Radians.
 
 Properties
 ==========
 
 Operation
-   Mathematical operation to use; see below for a list of supported operations:
+   The mathematical operator to be applied to the input values:
 
-   .. hlist::
-      :columns: 4
+   **Functions**
 
-      - **Functions**
-      - `Add <https://en.wikipedia.org/wiki/Addition>`__
-      - `Subtract <https://en.wikipedia.org/wiki/Subtraction>`__
-      - `Multiply <https://en.wikipedia.org/wiki/Multiplication>`__
-      - `Divide <https://en.wikipedia.org/wiki/Division_(mathematics)>`__
-      - `Multiply Add <https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation>`__
-      - `Power <https://en.wikipedia.org/wiki/Exponential_function>`__
-      - `Logarithm <https://en.wikipedia.org/wiki/Logarithm>`__
-      - `Square Root <https://en.wikipedia.org/wiki/Square_root>`__
-      - `Inverse Square Root <https://en.wikipedia.org/wiki/Square_root>`__
-      - `Absolute <https://en.wikipedia.org/wiki/Absolute_value>`__
-      - `Exponent <https://en.wikipedia.org/wiki/E_(mathematical_constant)>`__
+      Add
+         The sum of the two values.
 
-      - **Comparison**
-      - `Minimum <https://en.wikipedia.org/wiki/Maxima_and_minima>`__
-      - `Maximum <https://en.wikipedia.org/wiki/Maxima_and_minima>`__
-      - `Less Than <https://en.wikipedia.org/wiki/Inequality_(mathematics)>`__
-      - `Greater Than <https://en.wikipedia.org/wiki/Inequality_(mathematics)>`__
-      - `Sign <https://en.wikipedia.org/wiki/Sign_function>`__
-      - `Compare <https://en.wikipedia.org/wiki/Comparison_function>`__
-      - `Smooth Minimum <https://en.wikipedia.org/wiki/Smooth_maximum>`__
-      - `Smooth Maximum <https://en.wikipedia.org/wiki/Smooth_maximum>`__
-      - ..
-      - ..
-      - ..
+      Subtract
+         The difference between the two values.
 
-      - **Rounding**
-      - `Round <https://en.wikipedia.org/wiki/Round_function>`__
-      - `Floor <https://en.wikipedia.org/wiki/Floor_and_ceiling_functions>`__
-      - `Ceil <https://en.wikipedia.org/wiki/Floor_and_ceiling_functions>`__
-      - `Truncate <https://en.wikipedia.org/wiki/Truncation>`__
-      - `Fraction <https://en.wikipedia.org/wiki/Rational_function>`__
-      - `Modulo <https://en.wikipedia.org/wiki/Modulo_operation>`__
-      - `Snap <https://en.wikipedia.org/wiki/Rounding>`__
-      - `Wrap <https://en.wikipedia.org/wiki/Rounding>`__
-      - `Pingpong <https://en.wikipedia.org/wiki/Rounding>`__
-      - ..
-      - ..
+      Multiply
+         The product of the two values.
 
-      - **Conversion**
-      - `To Radians <https://en.wikipedia.org/wiki/Radian#Conversion_between_radians_and_degrees>`__
-      - `To Degrees <https://en.wikipedia.org/wiki/Radian#Conversion_between_radians_and_degrees>`__
-      - ..
-      - ..
-      - ..
-      - ..
-      - ..
-      - ..
-      - ..
-      - ..
-      - ..
+      Divide
+         The division of the first value by the second value.
+
+      Multiply Add
+         The sum of the product of the two values with *Addend*.
+
+      Power
+         The *Base* raised to the power of *Exponent*.
+
+      Logarithm
+         The log of value with a *Base* as its base.
+
+      Square Root
+         The square root of the value.
+
+      Inverse Square Root
+         One divided by the square root of the value.
+
+      Absolute
+         The input value is read with without regard to its sign. This turns negative values into positive values. 
+
+      Exponent
+         Raises `eulers constant <https://en.wikipedia.org/wiki/E_(mathematical_constant)>`__ to the power of the value.
+
+   **Comparison**
+
+      Minimum
+         The output is the smallest input value.
+
+      Maximum
+         The output is the largest input value.
+
+      Less Than
+         The output is 1.0 if the first value is smaller than the second value. Otherwise the output is 0.0.
+
+      Greater Than
+         The output is 1.0 if the first value is larger than the second value. Otherwise the output is 0.0.
+
+      Sign
+         Extracts the sign of the input value. All positive numbers will output 1.0. All negative numbers will output -1.0. And 0.0 will output 0.0.
+
+      Compare
+         The output is 1.0 if the difference between the two input values is less than or equal to *Epsilon*.
+
+      Smooth Minimum
+         `Smooth Minimum <https://en.wikipedia.org/wiki/Smooth_maximum>`__.
+
+      Smooth Maximum
+          `Smooth Maximum <https://en.wikipedia.org/wiki/Smooth_maximum>`__.
+
+   **Rounding**
+
+      Round
+         Round the input value to the nearest integer.
+
+      Floor
+         Rounds the input value down to the nearest integer.
+
+      Ceil
+         Rounds the input value up to the nearest integer.
+
+      Truncate
+         Removes the digits following the decimal point of the input value.
+
+      Fraction
+         `Fraction <https://en.wikipedia.org/wiki/Rational_function>`__.
+
+      Modulo
+         The output is the remainder once the first value is divided by the second value.
+
+      Wrap
+         The output is a value between *Min* and *Max* based on the absolute difference between the input value and the nearest integer multiple of *Max* less than the value.
+
+      Snap
+         Round the input value to down to the nearest integer multiple of *Increment*.
+
+      Ping-pong
+         The output value is moved between 0.0 and the *Scale* based on the input value.
+
+   **Trigonometric**
+
+      Sine
+         The `Sine <en.wikipedia.org/wiki/Sine>`__ of the input value.
+
+      Cosine
+         The `Cosine <https://en.wikipedia.org/wiki/Trigonometric_functions>`__ of the input value.
+
+      Tangent
+         The `Tangent <https://en.wikipedia.org/wiki/Trigonometric_functions>`__ of the input value. 
+
+      Arcsine
+         The `Arcsine <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value. 
+
+      Arccosine
+         The `Arccosine <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value. 
+
+      Arctangent
+         The `Arctangent <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value. 
+
+      Arctan2
+         The output is the `Inverse Tangent <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the first value divided by the second value measured in radians. 
+
+      Hyperbolic Sine
+         The `Hyperbolic Sine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value. 
+
+      Hyperbolic Consine
+         The `Hyperbolic Consine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value. 
+
+      Hyperbolic Tangent
+         The `Hyperbolic Tangent <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value. 
+
+   **Conversion**
+
+      To Radians
+         Converts the input from degrees to radians.
+
+      To Degrees
+         Converts the input from radians to degrees.
 
 Clamp
-   Limits the output to the range (0 to 1). See :term:`clamp`.
+   Limits the output to the range (0.0 to 1.0). See :term:`clamp`.
 
 
 Outputs
