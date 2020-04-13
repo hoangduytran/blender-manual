@@ -123,17 +123,16 @@ File Browser
 Translation
 ===========
 
-Blender supports a wide range of languages, enabling this checkbox will enable Blender to
-support International Fonts. International fonts can be loaded for the User Interface and
-used instead of the font bundled with Blender by default.
+Language
+   The language used for translating the user interface.
+   The list is broken up into categories determining how complete the translations are.
 
-This will also enable options for translating the User Interface
-through a list of languages and tips for Blender tools which appear
-whenever the mouse pointer hovers over a tool button.
-
-Blender supports I18N for internationalization.
-For more Information on how to load International fonts,
-see: :doc:`Editing Texts </modeling/texts/editing>` page.
+Tooltips
+   Translates the descriptions when hovering over UI elements.
+Interface
+   Translates all labels in menus, buttons, and panels.
+New Data
+   Translates the names of new data-blocks.
 
 
 Text Rendering
