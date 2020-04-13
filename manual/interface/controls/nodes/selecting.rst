@@ -9,8 +9,10 @@ Box Select
 Lasso Select
    :kbd:`Ctrl-Alt-LMB` click and drag starts a lasso selection.
 
-(De)select All
+Select All
    :kbd:`A`
+Deselect All
+   :kbd:`Alt-A`
 Inverse
    :kbd:`Ctrl-I`
 Select Linked From

@@ -16,7 +16,7 @@ Annotate Line
    Click and drag to create a line.
 Annotate Polygon
    Click multiple times to create multiple connected lines.
-   The current polygon is finished when :kbd:`Esc` or :kbd:`RMB` is pressed.
+   The current polygon is finished when :kbd:`Esc` is pressed.
 Annotate Eraser
    Click and drag to remove lines drawn previously.
 
@@ -54,11 +54,11 @@ Placement
    The *Placement* option determines where the line is drawn in 3D space.
 
    3D Cursor
-      Draw on an imaginary plane that goes through the 3D cursor.
+      Draw on an imaginary plane that goes through the 3D cursor and is aligned to your view.
    View
       Draw in screen space instead of in 3D space.
       That means, that the line will stay on the same position in the screen,
-      even when e.g. the camera rotates.
+      even when the camera moves or rotates.
    Surface
       Project the line on the surface under the mouse.
 

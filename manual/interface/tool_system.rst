@@ -50,16 +50,11 @@ Pop-Up Toolbar
 .. admonition:: Reference
    :class: refbox
 
-   :Hotkey:    :kbd:`Spacebar`
+   :Hotkey:    :kbd:`Shift-Spacebar`
 
-Keyboard tool switching is not enabled by default. To enable it,
-set the Keymap preferences :ref:`Spacebar Action <keymap-blender_default-spacebar_action>`
-to *Tools*, and then you'll be able use :kbd:`Spacebar`
-like a modifier key (similar to pressing :kbd:`Ctrl` or :kbd:`Shift`).
+Pressing :kbd:`Shift-Space` will open a tool bar at the location of your cursor. Pressing the letters displayed beside the tool or clicking on the tool will then select that tool.
 
-:kbd:`Spacebar T` for Transform, :kbd:`Spacebar D` for Annotate,
-:kbd:`Spacebar M` for measure, etc.
-
+Alternativly, you can map this action to :kbd:`Spacebar` in the user preferences. See :ref:`Spacebar Action <keymap-blender_default-spacebar_action>`.
 
 Quick Favorites
 ===============

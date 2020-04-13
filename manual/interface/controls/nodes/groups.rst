@@ -143,9 +143,9 @@ Ungroup
 
    :Mode:      All Modes
    :Menu:      :menuselection:`Group --> Ungroup`
-   :Hotkey:    :kbd:`Alt-G`
+   :Hotkey:    :kbd:`Ctrl-Alt-G`
 
-The :kbd:`Alt-G` tool removes the group and places the individual nodes into your editor workspace.
+The :kbd:`Ctrl-Alt-G` tool removes the group and places the individual nodes into your editor workspace.
 No internal connections are lost, and now you can thread internal nodes to other nodes in your workspace.
 
 Separate :kbd:`P`
@@ -164,12 +164,12 @@ Group Insert
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection:`Group --> Group Insert`
+   :Menu:      :menuselection:`Node --> Group Insert`
 
 .. move node into selected group
 
 Selecting a set of nodes, ending with the destination group node,
-and pressing :menuselection:`Group --> Group Insert` will move those nodes into that group.
+and pressing :menuselection:`Node --> Group Insert` will move those nodes into that group.
 The moved nodes are collected into a group of their own to preserve their connection context,
 having their own group input and output nodes.
 The group's existing input and output nodes are updated with new sockets, if any, from the new nodes.

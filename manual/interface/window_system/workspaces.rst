@@ -18,6 +18,8 @@ different workspaces within the same file.
 Controls
 ========
 
+.. _workspaces-controls:
+
 Tabs
    Click on the tabs titles to switch between the workspaces.
    To cycle between workspaces use :kbd:`Ctrl-PageUp` and :kbd:`Ctrl-PageDown`.
@@ -63,7 +65,7 @@ Blender also has several other workspaces added by default:
 Additional Workspaces
 ---------------------
 
-Blender as a couple additional Workspaces to choose from when adding a new Workspace:
+Blender has a couple additional Workspaces to choose from when adding a new Workspace:
 
 
 .. rubric:: 2D Animation

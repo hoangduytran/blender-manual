@@ -22,11 +22,11 @@ Switching/Cycling
 -----------------
 
 Vertical tabs can be switched with :kbd:`Ctrl-Wheel` from anywhere in
-the region, and horizontal tabs with mouse cursor over tab headings.
+the editor.
 
 You can also cycle through tabs with :kbd:`Ctrl-Tab` and
 :kbd:`Shift-Ctrl-Tab`, or press down :kbd:`LMB` and move mouse over
-tab header icons.
+tab header icons. (Workspace tabs do not use this keymap. See :ref:`Workspace controls <workspaces-controls>`.)
 
 .. container:: lead
 
@@ -48,7 +48,7 @@ Panels
    A panel is highlighted in yellow and a sub-panel in red.
 
 The smallest organizational unit in the user interface is a panel.
-*Panel header* is always visible, and it shows the title for the panel.
+*Panel header* are always visible. They show the title for the panel.
 Panels may also include sub-panels.
 
 
@@ -71,7 +71,7 @@ Position
 
 You can change the position of a panel within its region by clicking
 and dragging it with the :kbd:`LMB` on the grip widget (\:\:\:\:)
-located in the Panel Header on the right side.
+located in on the right side of the Panel Header.
 
 
 Pinning
@@ -81,8 +81,7 @@ Sometimes it is desirable to view panels from different tabs at the same time.
 This has been solved by making panels pinnable.
 
 A pinned panel remains visible regardless of which tab has been selected.
-You can pin a panel by clicking on the pin icon in its header.
-Panels that do not have a pin icon can also be pinned by :kbd:`RMB` and selecting *Pin*,
+You can pin a panel by :RMB: and selecting *Pin*,
 alternatively you use :kbd:`Shift-LMB` on the panel to also pin it.
 
 
