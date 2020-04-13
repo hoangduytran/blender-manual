@@ -11,6 +11,7 @@
 
    :Mode:      Object Mode and Edit Mode
    :Header:    |pivot-icon| :menuselection:`Pivot Point`
+   :Hotkey:    :kbd:`Period`
 
 When rotating or scaling an object or group of vertices/edges/faces,
 you may want to shift the :term:`pivot point` to make it easier to manipulate an object.

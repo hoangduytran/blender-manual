@@ -16,27 +16,28 @@ For example, it is possible to pan and zoom in the Image editor.
    see the :doc:`Keyboard and Mouse </getting_started/configuration/hardware>`
    page of the manual to learn how to use them with Blender.
 
+.. _navigation-gizmo:
 
 Navigation Gizmo
 ================
 
+.. figure:: /images/editors_3dview_navigate_navigation_gizmo.png
+   :align: right
+
+   Navigation Gizmo.
+
 The navigation gizmo can be found in the top right of the editor.
-The four buttons (listed from left to right) do the following:
+The four buttons (listed from top to bottom) do the following:
 
-- :doc:`Toggles the Projection </editors/3dview/navigate/projections>`
-- :doc:`Toggles the Camera View </editors/3dview/navigate/camera_view>`
-- `Pans the 3D Viewport <Panning>`_
 - `Zooms the 3D Viewport <Zooming>`_
+- `Pans the 3D Viewport <Panning>`_
+- :doc:`Toggles the Camera View </editors/3dview/navigate/camera_view>`
+- :doc:`Toggles the Projection </editors/3dview/navigate/projections>`
 
-The `Orbit`_ gizmo on the far right can be used to rotate around 3D Viewport.
+The `Orbit`_ gizmo at the top can be used to rotate around the 3D Viewport.
 Hovering over the gizmo and dragging with :kbd:`LMB` will orbit the view.
 Clicking any of the axis labels will :doc:`Align </editors/3dview/navigate/align>` to that view.
 Clicking the same axis again switches to the opposite side of that same axis.
-
-.. figure:: /images/editors_3dview_navigate_navigation_gizmo.png
-   :align: center
-
-   Navigation Gizmo.
 
 
 Orbit
@@ -61,7 +62,7 @@ to rotate the scene around the global Z axis from your current point of view.
 Finally :kbd:`Numpad9` switches to the opposite side of the view.
 
 Alternatively, if the *Emulate 3 button mouse* option is select in the *Preferences*
-you can press and hold :kbd:`Alt` while dragging :kbd:`RMB` in the viewport's area.
+you can press and hold :kbd:`Alt` while dragging :kbd:`LMB` in the viewport's area.
 
 .. note:: Hotkeys
 
@@ -102,7 +103,7 @@ Moves the view up, down, left and right.
 To pan the view, hold down :kbd:`Shift` and drag :kbd:`MMB` in the 3D View.
 For discrete steps, use the hotkeys :kbd:`Ctrl-Numpad8`, :kbd:`Ctrl-Numpad2`,
 :kbd:`Ctrl-Numpad4` and :kbd:`Ctrl-Numpad6` as with orbiting
-(note: you can replace :kbd:`Ctrl` by :kbd:`Shift`).
+(note: you can replace :kbd:`Ctrl` with :kbd:`Shift`).
 
 For those without a middle mouse button,
 you can hold :kbd:`Shift-Alt` while dragging with :kbd:`LMB`.
@@ -122,9 +123,7 @@ Zooming
 
 Moves the camera forwards and backwards.
 You can zoom in and out by holding down :kbd:`Ctrl` and dragging :kbd:`MMB`.
-The hotkeys are :kbd:`NumpadPlus` and :kbd:`NumpadMinus`.
-The :menuselection:`View --> Navigation` submenu holds these functions too as well.
-Refer to the 3D View's *View* menu image above for more information.
+To zoom in with discrete steps, use the hotkeys :kbd:`NumpadPlus` and :kbd:`NumpadMinus`.
 If you have a wheel mouse, you can zoom by rotating the :kbd:`Wheel`.
 
 .. hint:: If You Get Lost

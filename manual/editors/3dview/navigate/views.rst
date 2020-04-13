@@ -50,10 +50,6 @@ from the *View Menu* or using the shortcut :kbd:`NumpadSlash`.
       Local view bypasses layers, using only the selected objects when entering local view.
       Although new objects may be added while in local view.
 
-      It's also possible to send objects out of local view,
-      using :menuselection:`Object --> Move Objects out of Local View`,
-      which can be useful to further isolate a selection.
-
 .. tip::
 
    Accidentally pressing :kbd:`NumpadSlash` can happen rather often if you are new to Blender,
@@ -87,8 +83,7 @@ Quad View
    :class: refbox
 
    :Mode:      All modes
-   :Menu:      :menuselection:`View --> Toggle Quad View`
-   :Panel:     :menuselection:`Sidebar region --> Display --> Toggle Quad View`
+   :Menu:      :menuselection:`View --> Area --> Toggle Quad View`
    :Hotkey:    :kbd:`Ctrl-Alt-Q`
 
 Toggling Quad View will split the 3D View into four views:
@@ -110,11 +105,11 @@ In this arrangement, you can zoom and pan each view independently but you cannot
 Options
 -------
 
-These options can be found in :menuselection:`Sidebar region --> Display`.
+These options can be found in :menuselection:`Sidebar region --> Quad View`.
 
 Lock
    If you want to be able to rotate each view, you can uncheck the *Locked* option.
 Box
-   Syncs the view position between side views.
+   Syncs the view position between side views. (Requires *Lock* to be enabled).
 Clip
-   Clip objects based on what is visible in other side views.
+   Clip objects based on what is visible in other side views. (Requires *Box* to be enabled).

@@ -44,12 +44,6 @@ the Cycles Renderer.
 Settings
 ========
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Editor:    Topbar
-   :Menu:      :menuselection:`Render --> Viewport Render Options`
-
 For the most part, *Viewport Render* uses the current viewport settings.
 Some settings are located in the render panel of the render engine
 that is used to render the view.

@@ -100,7 +100,9 @@ Shortcuts
   - :kbd:`WheelDown` or :kbd:`NumpadMinus` to accelerate the movement backward.
 
     So if the view is already moving forward,
-    :kbd:`WheelDown`, :kbd:`NumpadMinus` will eventually stop it and then move it backward, etc.
+    :kbd:`WheelDown`, :kbd:`NumpadMinus` will eventually stop it and then move it backward, etc. 
+
+    Arrow keys or :kbd:`W`, :kbd:`A`, :kbd:`S`, :kbd:`D` can also be used to adjust the acceleration and direction of the camera's movement.
 - :kbd:`MMB` Drag to pan the view.
 
   In this case the view can move laterally on its local axis at the moment you drag the mouse.
@@ -111,5 +113,5 @@ Shortcuts
   this allows you to fly past an object, keeping it centered in the view,
   even as you fly away from it.
 
-When you are happy with the new view, click :kbd:`LMB` to confirm.
+When you are happy with the new view, click :kbd:`LMB` or press :kbd:`Spacebar` to confirm.
 In case you want to go back from where you started, press :kbd:`Esc` or :kbd:`RMB`, as usual.

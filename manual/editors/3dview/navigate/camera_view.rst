@@ -44,7 +44,7 @@ Setting the Active Camera
    :class: refbox
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`View --> Cameras --> Set Active Camera`
+   :Menu:      :menuselection:`View --> Cameras --> Set Active Object as Camera`
    :Hotkey:    :kbd:`Ctrl-Numpad0`
 
 .. figure:: /images/editors_3dview_navigate_camera-view_cameras.png

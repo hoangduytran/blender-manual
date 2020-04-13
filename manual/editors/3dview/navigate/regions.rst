@@ -15,7 +15,7 @@ View Clipping Region
    :class: refbox
 
    :Mode:      All modes
-   :Menu:      :menuselection:`View --> View Region --> Clipping Region...`
+   :Menu:      :menuselection:`View --> View Regions --> Clipping Region...`
    :Hotkey:    :kbd:`Alt-B`
 
 Allows you to define a clipping region to limit the 3D View display to a portion of 3D space.
@@ -78,8 +78,8 @@ Render Region
    :class: refbox
 
    :Mode:      All modes
-   :Menu:      :menuselection:`View --> View Region --> Render Region...`
-               :menuselection:`View --> View Region --> Clear Render Region`
+   :Menu:      :menuselection:`View --> View Regions --> Render Region...`
+               :menuselection:`View --> View Regions --> Clear Render Region`
    :Hotkey:    Mark: :kbd:`Ctrl-B`
                Clear: :kbd:`Ctrl-Alt-B`
 
@@ -101,3 +101,5 @@ This can be very useful for reducing render times for quick previews on an area 
    You can also use this region in a final render by setting a render region
    from within the :doc:`Camera View </editors/3dview/navigate/camera_view>` and
    enabling :ref:`region <render-output-dimensions-region>` in the Dimensions panel.
+   This setting is enabled by default, so also check here if you don't want to use the
+   region in the final render.

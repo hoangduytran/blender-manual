@@ -12,7 +12,7 @@ The object types that can be changed are:
 - Curve
 - Surface
 - Meta
-- Font
+- Text
 - Grease Pencil
 - Armature
 - Lattice

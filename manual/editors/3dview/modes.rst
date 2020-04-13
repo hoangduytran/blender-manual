@@ -105,7 +105,7 @@ or want to animate multiple characters at once.
 
 - To use edit multiple objects at once, simply select multiple objects and enter the mode.
 - The Outliner can also be used to add/remove objects while you are in a mode,
-  by setting or clearing the mode from the context menu, or :kbd:`Shift-LMB` clicking on the objects data icon.
+  by setting or clearing the mode from the context menu, or :kbd:`Ctrl-LMB` clicking on the objects data icon.
 - Only the active object will be used to display properties such as shape keys, UV layers, etc.
 - Selecting any element from an object will set this as the active object.
 - There are limits to the kinds of operations that can run on multiple objects.
