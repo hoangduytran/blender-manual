@@ -73,9 +73,9 @@ View Lock
 ^^^^^^^^^
 
 Lock to Object
-   Lock to Object lets you define an object in the *Object* Data ID as the center of the view.
-   In that case, the view can be rotated around or zoomed towards that central object,
-   but not while, unless you move that itself object
+   A :ref:`ui-data-id` that defines an object as the center of the view.
+   In this case, the view can be rotated around or zoomed towards that central object,
+   but not while you move the object itself
    (this option is not available in a camera view).
 
 Lock to 3D Cursor

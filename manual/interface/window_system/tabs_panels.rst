@@ -81,7 +81,8 @@ Sometimes it is desirable to view panels from different tabs at the same time.
 This has been solved by making panels pinnable.
 
 A pinned panel remains visible regardless of which tab has been selected.
-You can pin a panel by :RMB: and selecting *Pin*,
+You can pin a panel by clicking on the pin icon in its header.
+Panels that do not have a pin icon can also be pinned by :RMB: and selecting *Pin*,
 alternatively you use :kbd:`Shift-LMB` on the panel to also pin it.
 
 
