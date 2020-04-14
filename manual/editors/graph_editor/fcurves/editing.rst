@@ -19,7 +19,11 @@ Move, Rotate, Scale
    moved, rotated, or scaled as described in
    :doc:`Basic Transformations </scene_layout/object/editing/transform/introduction>`.
 Extend
-   Todo.
+   Moves keyframes relative to the Playhead.
+   If the mouse is to the left of the Playhead,
+   this operator only affects the selected keyframes that are to the left of the Playhead.
+   On the contrary, if the mouse is to the right of the Playhead,
+   this operator only affects the selected keyframes that are to the right of the Playhead.
 
 .. tip::
 
