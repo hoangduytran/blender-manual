@@ -19,18 +19,20 @@ Box Select Pinned
    Use the box lasso to select only pinned UV coordinates :kbd:`Ctrl-B`.
 Circle Select
    See :ref:`tool-select-circle`.
-Select/Deselect All
-   Selects or deselects all UV coordinates :kbd:`A`.
+Select All
+   Selects all UV coordinates :kbd:`A`.
+Select None
+   Deselects all UV coordinate :kbd:`Alt-A`.
 Inverse
    Inverts the current selection :kbd:`Ctrl-I`.
+   This works similarly to the tools in 3D View.
+More/Less :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
+   Expands/Contracts the selection to/from the adjacent elements of the selection type.
 Select Pinned
    Selects all pinned UVs :kbd:`Shift-P`.
    See Pinning.
 Select Linked
    This operator selects all UVs that are connected to currently selected UVs :kbd:`Ctrl-L`.
-   This works similarly to the tools in 3D View.
-More/Less :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
-   Expands/Contracts the selection to/from the adjacent elements of the selection type.
 Select Split :kbd:`Y`
    Cuts apart the selected UVs from the map. Only those UVs which belong to
    fully selected faces remain selected. As the name implies, this is particularly useful to

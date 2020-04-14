@@ -98,17 +98,25 @@ Insert Keyframes
    :class: refbox
 
    :Menu:      :menuselection:`Key --> Insert Keyframes`
-   :Hotkey:    :kbd:`Ctrl-LMB`, :kbd:`Shift-Ctrl-LMB`
+   :Hotkey:    :kbd:`Ctrl-RMB`, :kbd:`Shift-Ctrl-RMB`
 
-:kbd:`Ctrl-LMB` inserts a keyframe to the active F-curve at the mouse position.
+:kbd:`Ctrl-RMB` inserts a keyframe to the active F-curve at the mouse position.
 The newly added keyframes will be selected, making it easier to quickly tweak the newly added keyframes.
-All previously selected keyframes are kept selected by using :kbd:`Shift-Ctrl-LMB`.
+All previously selected keyframes are kept selected by using :kbd:`Shift-Ctrl-RMB`.
 
 
 Add F-Curve Modifier
 ====================
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Key --> Add F-Curve Modifer`
+   :Hotkey:    :kbd:`Shift-Ctrl-M`
+
+:kbd:`Shift-Ctrl-M` Opens the menu allowing you to add modifers to the active F-Curve.
+Settings for the modifer can be found in in the sidebar under the *Modifiers* tab.
+See :doc:`/editors/graph_editor/fcurves/modifiers` for information on each modifier.
 
 
 .. _bpy.ops.graph.sound_bake:
@@ -154,8 +162,13 @@ Square
 Jump to Keyframe
 ================
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
 
+   :Menu:      :menuselection:`Key --> Jump to keyframes`
+   :Hotkey:    :kbd:`Ctrl-G`
+
+:kbd:`Ctrl-G` places the 2D cursor at the centre of selected keyframes.
 
 .. _bpy.ops.graph.copy:
 .. _bpy.ops.graph.paste:
@@ -163,7 +176,36 @@ Todo.
 Copy/Paste
 ==========
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Key --> Copy Keyframes`, :menuselection:`Key --> Paste Keyframes`
+   :Hotkey:    :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
+
+Use :kbd:`Ctrl-C` to copy selected keyframes and :kbd:`Ctrl-V` to paste the previously copied keyframes.
+During during the paste action, the *last operator* panel provides some options in how the paste is applied.
+
+Offset
+   No offset
+      Pastes the keyframes in the location they were copied from.
+   Frame relative
+      Pastes the keyframe relative to the *playhead* position based on the locations 
+      of the keyframes relative to the play head when they were copied.
+   Frame start
+      Pastes the keyframes with the first keyframe of the copied set placed at the *playhead*.
+   Frame end
+      Pastes the keyframes with the last keyframe of the copied set placed at the *playhead*.
+Type
+   Mix
+      Intergrates the pasted keyframes in with existing keyframes only overwriting keyframes that share a frame.
+   Overwrite All
+      Removes all previous keyframes and replaces it with pasted keyframes. 
+   Overwrite Range
+      TODO
+   Overwrite Entire Range
+      TODO
+Flipped
+   TODO
 
 
 .. _bpy.ops.graph.duplicate_move:
@@ -171,15 +213,27 @@ Todo.
 Duplicate
 =========
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
 
+   :Menu:      :menuselection:`Key --> Duplicate`
+   :Hotkey:    :kbd:`Shift-D`
+
+:kbd:`Shift-D` duplicates selected keyframes and allows you to reposition them by shifing 
+the mouse then clicking :kbd:`LMB`. Pressing :kbd:`Esc` or :kbd:`RMB` can be used to cancel the operation.
 
 .. _bpy.ops.graph.delete:
 
 Delete Keyframes
 ================
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Key --> Delete Keyframes`
+   :Hotkey:    :kbd:`X`, :kbd:`Del`
+
+Pressing :kbd:`X` or :kbd:`Del` opens the menu allowing you to delete the selected keyframes.
 
 
 .. _bpy.ops.graph.handle_type:
@@ -187,7 +241,14 @@ Todo.
 Handle Type
 ===========
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Key --> Handle Types`
+   :Hotkey:    :kbd:`V`
+
+:kbd:`V` opens a menu allowing you to control the handle type of the selected keyframes.
+See :ref:`editors-graph-fcurves-settings-handles` for explainations on each type.
 
 
 .. _bpy.ops.graph.interpolation_type:
@@ -195,15 +256,28 @@ Todo.
 Interpolation Mode
 ==================
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
 
+   :Menu:      :menuselection:`Key --> Interpolation Mode`
+   :Hotkey:    :kbd:`T`
+
+:kbd:`T` opens a menu allowing you to control the interpolation mode between the selected keyframes.
+See :ref:`editors-graph-fcurves-settings-interpolation` for explainations on each mode.
 
 .. _bpy.ops.graph.easing_type:
 
 Easing Mode
 ===========
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Key --> Easing Mode`
+   :Hotkey:    :kbd:`Ctrl-E`
+
+:kbd:`Ctrl-E` opens a menu allowing you to control the easing mode of the selected keyframes.
+See :ref:`editors-graph-fcurves-settings-easing` for explainations on each mode.
 
 
 .. _bpy.ops.graph.decimate:
@@ -314,7 +388,7 @@ Sample Keyframes
    :class: refbox
 
    :Menu:      :menuselection:`Key --> Sample Keyframes`
-   :Hotkey:    :kbd:`Shift-O`
+   :Hotkey:    :kbd:`Shift-Alt-O`
 
 Sampling a set of keyframes replaces interpolated values with a new keyframe for each frame.
 

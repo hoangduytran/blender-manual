@@ -25,6 +25,8 @@ Update Automatically
    Update the view in multiple areas.
 Show Metadata
    Displays the Metadata if they were set in the render tab's :doc:`/render/output/metadata` panel.
+Display Texture Paint UVs
+   Toggles UVs in Paint Mode.
 View Zoom In/Out :kbd:`Wheel`
    Adjusts the Zoom level.
 Fractional Zoom

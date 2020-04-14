@@ -4,9 +4,9 @@ Navigating
 **********
 
 The UV Editor has a 2D cursor. Its position can be changed by :kbd:`LMB`
-clicking in the UV editor. You can also manually adjust its position in the Sidebar region.
-The range by default is from 0 to 256 starting from the lower left corner.
-By enabling :ref:`Pixel Coordinates <bpy.types.SpaceUVEditor.show_pixel_coords>`, the range changes from 0 to 1.
+clicking in the UV editor while the cursor tool is active. You can also manually adjust its position in the Sidebar region.
+The range by default is ranges from 0.0 to 1.0 starting from the lower left corner.
+By enabling :ref:`Pixel Coordinates <bpy.types.SpaceUVEditor.show_pixel_coords>`, the coridinates match the pixels in your image with 0,0 in the located in the lower left corner.
 
 
 2D View
@@ -25,11 +25,5 @@ Also see :doc:`/editors/image/navigating` in the Image editor.
 
 UV Local View
    Displays only the UV faces that are assigned to the currently displayed image.
-
-   .. (TODO2.8) BI only? ^^^
-Display Other Objects
-   Displays the UVs of selected objects (Object Mode) in the background.
-Display Texture Paint UVs
-   Hides the UVs in Paint Mode.
-Frame Selected
+Frame Selected :kbd:`NumpadPeriod`
    Change view so that all selected UV vertices are visible.
