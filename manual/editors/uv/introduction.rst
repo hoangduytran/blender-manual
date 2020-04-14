@@ -161,5 +161,5 @@ Annotations
    See :doc:`/interface/annotate_tool`.
 
 UDIM Grid
-   Allow you to control the grid shape of your UDIM tiles. See :doc:`/modeling/meshes/uv/workflows/udims`.
+   Allows you to control the grid shape of your UDIM tiles. See :doc:`/modeling/meshes/uv/workflows/udims`.
 

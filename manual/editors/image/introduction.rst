@@ -119,7 +119,7 @@ Slot
    Empty slots appear as blank grids in the Image editor.
    Use the :kbd:`J` and :kbd:`Alt-J` to cycle forwards and backwards through saved renders.
    Alternatively you can use the number keys :kbd:`1`, :kbd:`2`, :kbd:`3`, etc, to select the slot with the corresponding number.
-   A slot can be renamed by double clicking its name in the image panel on the sidebar.
+   A slot can be renamed by double clicking its name in the image panel in the *Sidebar*.
 View Layer
    If you are using :doc:`View Layers </render/layers/index>`,
    use this menu to select which layer is displayed.

@@ -168,7 +168,7 @@ Jump to Keyframe
    :Menu:      :menuselection:`Key --> Jump to keyframes`
    :Hotkey:    :kbd:`Ctrl-G`
 
-:kbd:`Ctrl-G` places the 2D cursor at the centre of selected keyframes.
+:kbd:`Ctrl-G` places the 2D cursor at the center of the selected keyframes.
 
 .. _bpy.ops.graph.copy:
 .. _bpy.ops.graph.paste:
@@ -177,20 +177,19 @@ Copy/Paste
 ==========
 
 .. admonition:: Reference
-   :class: refbox
 
    :Menu:      :menuselection:`Key --> Copy Keyframes`, :menuselection:`Key --> Paste Keyframes`
    :Hotkey:    :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
 
 Use :kbd:`Ctrl-C` to copy selected keyframes and :kbd:`Ctrl-V` to paste the previously copied keyframes.
-During during the paste action, the *last operator* panel provides some options in how the paste is applied.
+During the paste action, the *last operator* panel provides some options in how the paste is applied.
 
 Offset
    No offset
       Pastes the keyframes in the location they were copied from.
    Frame relative
       Pastes the keyframe relative to the *playhead* position based on the locations 
-      of the keyframes relative to the play head when they were copied.
+      of the keyframes relative to the *playhead* when they were copied.
    Frame start
       Pastes the keyframes with the first keyframe of the copied set placed at the *playhead*.
    Frame end
@@ -199,7 +198,7 @@ Type
    Mix
       Intergrates the pasted keyframes in with existing keyframes only overwriting keyframes that share a frame.
    Overwrite All
-      Removes all previous keyframes and replaces it with pasted keyframes. 
+      Removes all previous keyframes and replaces it with the pasted keyframes. 
    Overwrite Range
       TODO
    Overwrite Entire Range
@@ -219,7 +218,7 @@ Duplicate
    :Menu:      :menuselection:`Key --> Duplicate`
    :Hotkey:    :kbd:`Shift-D`
 
-:kbd:`Shift-D` duplicates selected keyframes and allows you to reposition them by shifing 
+:kbd:`Shift-D` duplicates the selected keyframes and allows you to reposition them by shifing 
 the mouse then clicking :kbd:`LMB`. Pressing :kbd:`Esc` or :kbd:`RMB` can be used to cancel the operation.
 
 .. _bpy.ops.graph.delete:

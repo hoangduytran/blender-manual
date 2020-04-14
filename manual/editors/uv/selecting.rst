@@ -25,7 +25,6 @@ Select None
    Deselects all UV coordinate :kbd:`Alt-A`.
 Inverse
    Inverts the current selection :kbd:`Ctrl-I`.
-   This works similarly to the tools in 3D View.
 More/Less :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
    Expands/Contracts the selection to/from the adjacent elements of the selection type.
 Select Pinned
@@ -33,6 +32,7 @@ Select Pinned
    See Pinning.
 Select Linked
    This operator selects all UVs that are connected to currently selected UVs :kbd:`Ctrl-L`.
+   This works similarly to the tools in 3D View.
 Select Split :kbd:`Y`
    Cuts apart the selected UVs from the map. Only those UVs which belong to
    fully selected faces remain selected. As the name implies, this is particularly useful to
