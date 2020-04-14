@@ -144,8 +144,8 @@ Volume
 
 Sampling Method
    Distance
-      For dense volumes lit from far away *Distance* sampling is usually more efficient.
-      World volumes usually should use not this setting.
+      For dense volumes lit from far away *Distance* sampling is more efficient in most cases.
+      Usually this shouldn't be used for World volumes.
    Equiangular
       If you have got a light inside or near the volume then *equiangular* sampling is better.
    Multiple Importance

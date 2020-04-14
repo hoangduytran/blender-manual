@@ -83,27 +83,27 @@ Examples
 
    * - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-global-1.png
 
-         Default cube with Global transform orientation selected.
+          Default cube with Global transform orientation selected.
 
      - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-global-2.png
 
-        Rotated cube with Global orientation, gizmo has not changed.
+          Rotated cube with Global orientation, gizmo has not changed.
 
      - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-local.png
 
-        Local orientation, gizmo matches to the object's rotation.
+          Local orientation, gizmo matches to the object's rotation.
 
    * - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-normal.png
 
-         Normal orientation, in Edit Mode.
+          Normal orientation, in Edit Mode.
 
      - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-gimbal.png
 
-         Gimbal transform orientation.
+          Gimbal transform orientation.
 
      - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-view.png
 
-         View transform orientation.
+          View transform orientation.
 
 
 Custom Orientations

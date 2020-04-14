@@ -110,6 +110,6 @@ These options can be found in :menuselection:`Sidebar region --> Quad View`.
 Lock
    If you want to be able to rotate each view, you can uncheck the *Locked* option.
 Box
-   Syncs the view position between side views. (Requires *Lock* to be enabled).
+   Syncs the view position between side views. (Requires *Lock* to be enabled.)
 Clip
-   Clip objects based on what is visible in other side views. (Requires *Box* to be enabled).
+   Clip objects based on what is visible in other side views. (Requires *Box* to be enabled.)

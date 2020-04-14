@@ -86,6 +86,7 @@ Set the Active Group
 As soon as you select any of the Vertex Group Names in the Weight table,
 the referenced vertex group becomes the new active group.
 
+
 Display Weights in Edit Mode
 ----------------------------
 
@@ -96,7 +97,7 @@ Display Weights in Edit Mode
 
 When you are in Edit Mode, you can make the weights of the active group visible on the mesh:
 
-Select the *Viewport Overlays* panel from the top of the 3D viewport.
+Select the *Viewport Overlays* popover from the header of the 3D Viewport.
 And there enable the *Vertex Group Weights* option.
 Now you can see the weights of the active vertex group displayed on the mesh surface.
 

@@ -11,27 +11,25 @@ and the shortcuts listed below:
 Menu
 ====
 
-Box Select
+Box Select :kbd:`B`
    Click and drag to box select UV coordinates.
-   Alternatively, use :kbd:`B` to start box selection.
-   See :ref:`tool-select-box`.
-Box Select Pinned
-   Use the box lasso to select only pinned UV coordinates :kbd:`Ctrl-B`.
+   Alternatively, use :kbd:`B` to start :ref:`box selection <tool-select-box>`.
+Box Select Pinned :kbd:`Ctrl-B`
+   Use the box lasso to select only pinned UV coordinates.
 Circle Select
    See :ref:`tool-select-circle`.
-Select All
-   Selects all UV coordinates :kbd:`A`.
-Select None
-   Deselects all UV coordinate :kbd:`Alt-A`.
-Inverse
-   Inverts the current selection :kbd:`Ctrl-I`.
+Select All :kbd:`A`
+   Selects all UV coordinates.
+Select None :kbd:`Alt-A`
+   Deselects all UV coordinate.
+Inverse :kbd:`Ctrl-I`
+   Inverts the current selection.
 More/Less :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
    Expands/Contracts the selection to/from the adjacent elements of the selection type.
-Select Pinned
-   Selects all pinned UVs :kbd:`Shift-P`.
-   See Pinning.
-Select Linked
-   This operator selects all UVs that are connected to currently selected UVs :kbd:`Ctrl-L`.
+Select Pinned :kbd:`Shift-P`
+   Selects all :ref:`pinned <bpy.ops.uv.pin>` UVs.
+Select Linked :kbd:`Ctrl-L`
+   This operator selects all UVs that are connected to currently selected UVs.
    This works similarly to the tools in 3D View.
 Select Split :kbd:`Y`
    Cuts apart the selected UVs from the map. Only those UVs which belong to

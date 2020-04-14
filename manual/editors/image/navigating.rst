@@ -24,11 +24,11 @@ Region Controls
 Update Automatically
    Update the view in multiple areas.
 Show Metadata
-   Displays the Metadata if they were set in the render tab's :doc:`/render/output/metadata` panel.
+   Displays the metadata if they were set in the render tab's :doc:`/render/output/metadata` panel.
 Display Texture Paint UVs
    Toggles UVs in Paint Mode.
 View Zoom In/Out :kbd:`Wheel`
-   Adjusts the Zoom level.
+   Adjusts the zoom level.
 Fractional Zoom
    - Zoom 1:8 :kbd:`Numpad8`
    - Zoom 1:4 :kbd:`Numpad4`

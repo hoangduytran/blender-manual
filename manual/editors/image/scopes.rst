@@ -44,7 +44,7 @@ Waveform Opacity
 Waveform Mode
    Luma
       ToDo.
-   YCbCR
+   YCbCr
       ToDo.
    Parade
       The RGB channels are shown side-by-side.

@@ -60,9 +60,8 @@ Single Selection
 ----------------
 
 When one single element is selected it becomes automatically active. In the image below,
-you can see that when it is transformed its vertices move, with the consequence that any
-adjacent element which shares one or more vertices with the active element is also
-transformed.
+you can see that when it is transformed its vertices move, with the consequence that
+any adjacent element which shares one or more vertices with the active element is also transformed.
 
 .. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_active-element_edit-mode-single.png
    :align: center
@@ -73,7 +72,7 @@ Let us review each case:
 
 - *Faces* have their pivot point where the median of their vertices is.
 - *Edges* have their pivot point on their middle since this is always where the median of an edge is.
-- A single *Vertex* has no dimensions at all so it cannot show any transformation
+- A single *vertex* has no dimensions at all so it cannot show any transformation
   (except translation, which is not affected by the pivot point).
 
 
@@ -89,7 +88,7 @@ In the image below, the selected elements have been rotated.
 
    Edit Mode and multiple selections.
 
-- For *Faces* the transformation occurs around the median of the vertices of the selected face.
+- For *faces* the transformation occurs around the median of the vertices of the selected face.
 - *Edges* also keep the same behavior with their pivot point at their median.
-- There is a case for *Vertices* this time: the active Vertex is where the pivot point resides.
+- There is a case for *vertices* this time: the active vertex is where the pivot point resides.
   All other vertices are transformed relative to it.

@@ -77,7 +77,7 @@ Image
    Unpack
       Unpack the image to a drive.
    Extract Palette
-      Extracts a :ref:`Color Palette <ui-color-palette>` from the image for use by other tools. 
+      Extracts a :ref:`Color Palette <ui-color-palette>` from the image for use by other tools.
    Generate Grease Pencil
       Creates a :doc:`Grease Pencil </grease_pencil/index>` object using the currently selected image as a source.
 
@@ -114,12 +114,13 @@ When a rendered image is displayed in the Image Editor,
 several new menu items become available.
 
 Slot
-   You can save successive renders into the render buffer by selecting a new slot before rendering.
-   If an image has been rendered to a slot, it can be viewed by selecting that slot.
-   Empty slots appear as blank grids in the Image editor.
+   You can save successive renders into the render buffer by selecting a new slot
+   before rendering. If an image has been rendered to a slot, it can be viewed by
+   selecting that slot. Empty slots appear as blank grids in the Image editor.
    Use the :kbd:`J` and :kbd:`Alt-J` to cycle forwards and backwards through saved renders.
-   Alternatively you can use the number keys :kbd:`1`, :kbd:`2`, :kbd:`3`, etc, to select the slot with the corresponding number.
-   A slot can be renamed by double clicking its name in the image panel in the *Sidebar*.
+   Alternatively you can use the number keys :kbd:`1`, :kbd:`2`, :kbd:`3`, etc,
+   to select the slot with the corresponding number. A slot can be renamed by
+   double clicking its name in the Image panel in the Sidebar.
 View Layer
    If you are using :doc:`View Layers </render/layers/index>`,
    use this menu to select which layer is displayed.
@@ -136,7 +137,7 @@ In the dropdown menu on the right, the displayed channels can be selected.
 Color and Alpha
    Replaces transparent pixels with background checkerboard, denoting the alpha channel.
 Color
-   Display the colored image, without alpha channel. (The alpha will appear black)
+   Display the colored image, without alpha channel.
 Alpha
    Displays the Alpha channel a grayscale image. White areas are opaque, black areas have an alpha of 0.
 Z-Buffer
@@ -163,4 +164,4 @@ Image
 View Tab
    Controls display options, see :doc:`/editors/image/view_tab`.
 Scopes
-   Displays scopes containing information about the image. See :doc:`Scopes </editors/image/scopes>`.
+   Displays :doc:`scopes </editors/image/scopes>` visualizing information about the image.

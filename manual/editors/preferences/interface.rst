@@ -124,7 +124,7 @@ Translation
 ===========
 
 Language
-   The language used for translating the user interface.
+   The language used for translating the user interface (UI).
    The list is broken up into categories determining how complete the translations are.
 
 Tooltips

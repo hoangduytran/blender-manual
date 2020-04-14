@@ -75,5 +75,3 @@ Step Rate
    This is typically used to reduce the step size for procedural shaders that add more detail
    with procedural textures, when it is not captured by the default step size.
    See :doc:`Volume Render Settings </render/cycles/render_settings/volumes>` for more information.
-
-

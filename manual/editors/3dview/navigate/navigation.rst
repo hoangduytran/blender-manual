@@ -16,6 +16,7 @@ For example, it is possible to pan and zoom in the Image editor.
    see the :doc:`Keyboard and Mouse </getting_started/configuration/hardware>`
    page of the manual to learn how to use them with Blender.
 
+
 .. _navigation-gizmo:
 
 Navigation Gizmo
@@ -61,7 +62,7 @@ or use :kbd:`Numpad4` and :kbd:`Numpad6`
 to rotate the scene around the global Z axis from your current point of view.
 Finally :kbd:`Numpad9` switches to the opposite side of the view.
 
-Alternatively, if the *Emulate 3 button mouse* option is select in the *Preferences*
+Or if the *Emulate 3 button mouse* option is select in the Preferences
 you can press and hold :kbd:`Alt` while dragging :kbd:`LMB` in the viewport's area.
 
 .. note:: Hotkeys
@@ -105,8 +106,7 @@ For discrete steps, use the hotkeys :kbd:`Ctrl-Numpad8`, :kbd:`Ctrl-Numpad2`,
 :kbd:`Ctrl-Numpad4` and :kbd:`Ctrl-Numpad6` as with orbiting
 (note: you can replace :kbd:`Ctrl` with :kbd:`Shift`).
 
-For those without a middle mouse button,
-you can hold :kbd:`Shift-Alt` while dragging with :kbd:`LMB`.
+If your input device has no middle button, you can hold :kbd:`Shift-Alt` while dragging with :kbd:`LMB`.
 
 
 .. _editors_3dview_navigation_zoom:

@@ -39,10 +39,10 @@ Group Name
    The group name can be changed by double-clicking :kbd:`LMB` on the name itself.
    Then you can edit the name as you like.
 
-Arrow Icon
-   When the little arrow icon in the left lower corner is clicked, a new
-   row opens up where you can enter a search term. This becomes handy when
-   the number of vertex groups gets big.
+Filter (arrow icon)
+   When the little arrow icon in the left lower corner is clicked, a new row opens up
+   where you can enter a search term. This becomes handy when the number of
+   vertex groups gets big.
 
 Drag Handle
    If you have a large number of vertex groups and you want to see more
@@ -53,7 +53,7 @@ Active Group
    When a vertex group is created,
    then it is also automatically marked as the *Active Group*.
    This is indicated by setting the background of the panel entry
-   to a light grey color. If you have two or more groups in the list,
+   to a light gray color. If you have two or more groups in the list,
    then you can change the active group by :kbd:`LMB` on
    the corresponding entry in the Vertex Groups panel.
 
@@ -154,7 +154,7 @@ Using Groups for Selecting/Deselecting
 
 You can quickly select all assigned vertices of a group:
 
-- (optionally) press :kbd:`Alt-A` to deselect all vertices.
+- (Optionally) press :kbd:`Alt-A` to deselect all vertices.
 - Select the group from the group list (make it the active group).
 - When you now :kbd:`LMB` click the *Select* button,
   then the vertices assigned to the active group will be selected and highlighted in the 3D View.
@@ -177,4 +177,4 @@ Finding Ungrouped Vertices
 You can find ungrouped vertices as follows:
 
 - Press :kbd:`Alt-A` to deselect all vertices.
-- In the header of the 3D View, navigate to :menuselection:`Select --> Select All By Trait --> Ungrouped Verts`.
+- In the header of the 3D View, navigate to :menuselection:`Select --> Select All by Trait --> Ungrouped Verts`.

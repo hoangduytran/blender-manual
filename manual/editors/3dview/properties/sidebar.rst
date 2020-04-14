@@ -85,7 +85,8 @@ Lock to 3D Cursor
 .. _3dview-lock-camera-to-view:
 
 Lock Camera to View
-   When in camera view, all changes in the view (pans, rotations, zooms) will affect the active camera. The camera frame will be outlined with a red dashed line.
+   When in camera view, all changes in the view (pans, rotations, zooms) will affect the active camera.
+   The camera frame will be outlined with a red dashed line.
 
 
 3D Cursor

@@ -157,9 +157,7 @@ Display
    Control 2D cursor location.
 
 Annotations
-   Options for the annotation tool.
-   See :doc:`/interface/annotate_tool`.
+   Options for the :doc:`annotation tool </interface/annotate_tool>`.
 
 UDIM Grid
-   Allows you to control the grid shape of your UDIM tiles. See :doc:`/modeling/meshes/uv/workflows/udims`.
-
+   Allows you to control the grid shape of your doc:`UDIM </modeling/meshes/uv/workflows/udims>` tiles.

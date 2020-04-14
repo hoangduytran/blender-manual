@@ -106,7 +106,7 @@ Noise Threshold
    Setting it to exactly 0 lets Cycles guess an automatic value for it based on the total sample count.
 
 Min Samples
-   The minimum number of samples a pixel receives before adaptive sampling kicks in.
+   The minimum number of samples a pixel receives before adaptive sampling is applied.
    When set to 0 (default), it is automatically set to the square root of the total (max) sample count.
 
 

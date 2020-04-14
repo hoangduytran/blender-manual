@@ -15,10 +15,10 @@ different workspaces within the same file.
    Workspaces are located at the Topbar.
 
 
+.. _workspaces-controls:
+
 Controls
 ========
-
-.. _workspaces-controls:
 
 Tabs
    Click on the tabs titles to switch between the workspaces.

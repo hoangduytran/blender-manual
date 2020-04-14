@@ -135,8 +135,7 @@ To hide a region resize it down to nothing.
 A hidden region leaves a little arrow sign.
 :kbd:`LMB` on this icon to make the region reappear.
 
-
-.. list-table:: Hiding and showing a sidebar.
+.. list-table:: Hiding and showing the Sidebar.
 
    * - .. figure:: /images/interface_window-system_regions_sidebar-hide.png
 

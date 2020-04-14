@@ -18,8 +18,7 @@ Annotate Polygon
    Click multiple times to create multiple connected lines.
    The current polygon is finished when :kbd:`Esc` is pressed.
 Annotate Eraser
-   Click and drag to remove lines drawn previously.
-
+   Click and drag to remove lines.
    The eraser has a *Radius* setting found in :menuselection:`Tool Settings --> Eraser`.
 
 

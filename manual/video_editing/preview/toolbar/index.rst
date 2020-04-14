@@ -1,7 +1,7 @@
 
-*******
-Toolbar
-*******
+###########
+  Toolbar
+###########
 
 Sample
    Used to sample a pixel's color from anywhere within Blender.

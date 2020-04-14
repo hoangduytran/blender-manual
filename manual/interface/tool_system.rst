@@ -52,9 +52,18 @@ Pop-Up Toolbar
 
    :Hotkey:    :kbd:`Shift-Spacebar`
 
-Pressing :kbd:`Shift-Space` will open a tool bar at the location of your cursor. Pressing the letters displayed beside the tool or clicking on the tool will then select that tool.
+You can switch tools with a toolbar that will pop up at the location of your cursor
+after pressing :kbd:`Shift-Spacebar`.
+The shortcuts for selecting the tools are displayed on the right.
 
-Alternativly, you can map this action to :kbd:`Spacebar` in the user preferences. See :ref:`Spacebar Action <keymap-blender_default-spacebar_action>`.
+Alternatively, you can map this action to :kbd:`Spacebar` in the Preferences.
+Then you'll be able use :kbd:`Spacebar`
+like a modifier key (similar to pressing :kbd:`Ctrl` or :kbd:`Shift`).
+
+:kbd:`Spacebar T` for Transform, :kbd:`Spacebar D` for Annotate,
+:kbd:`Spacebar M` for measure, etc.
+See :ref:`Spacebar Action <keymap-blender_default-spacebar_action>`.
+
 
 Quick Favorites
 ===============

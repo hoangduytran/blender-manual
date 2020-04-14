@@ -58,14 +58,14 @@ Degrees
 Radians
    Input Radians.
 
+
 Properties
 ==========
 
 Operation
    The mathematical operator to be applied to the input values:
 
-   **Functions**
-
+   Functions
       Add
          The sum of the two values.
 
@@ -94,13 +94,13 @@ Operation
          One divided by the square root of the value.
 
       Absolute
-         The input value is read with without regard to its sign. This turns negative values into positive values. 
+         The input value is read with without regard to its sign. This turns negative values into positive values.
 
       Exponent
-         Raises `eulers constant <https://en.wikipedia.org/wiki/E_(mathematical_constant)>`__ to the power of the value.
+         Raises `Euler's number <https://en.wikipedia.org/wiki/E_(mathematical_constant)>`__ to
+         the power of the value.
 
-   **Comparison**
-
+   Comparison
       Minimum
          The output is the smallest input value.
 
@@ -114,7 +114,8 @@ Operation
          The output is 1.0 if the first value is larger than the second value. Otherwise the output is 0.0.
 
       Sign
-         Extracts the sign of the input value. All positive numbers will output 1.0. All negative numbers will output -1.0. And 0.0 will output 0.0.
+         Extracts the sign of the input value. All positive numbers
+         will output 1.0. All negative numbers will output -1.0. And 0.0 will output 0.0.
 
       Compare
          The output is 1.0 if the difference between the two input values is less than or equal to *Epsilon*.
@@ -123,10 +124,9 @@ Operation
          `Smooth Minimum <https://en.wikipedia.org/wiki/Smooth_maximum>`__.
 
       Smooth Maximum
-          `Smooth Maximum <https://en.wikipedia.org/wiki/Smooth_maximum>`__.
+         `Smooth Maximum <https://en.wikipedia.org/wiki/Smooth_maximum>`__.
 
-   **Rounding**
-
+   Rounding
       Round
          Round the input value to the nearest integer.
 
@@ -146,7 +146,8 @@ Operation
          The output is the remainder once the first value is divided by the second value.
 
       Wrap
-         The output is a value between *Min* and *Max* based on the absolute difference between the input value and the nearest integer multiple of *Max* less than the value.
+         The output is a value between *Min* and *Max* based on the absolute difference between
+         the input value and the nearest integer multiple of *Max* less than the value.
 
       Snap
          Round the input value to down to the nearest integer multiple of *Increment*.
@@ -154,8 +155,7 @@ Operation
       Ping-pong
          The output value is moved between 0.0 and the *Scale* based on the input value.
 
-   **Trigonometric**
-
+   Trigonometric
       Sine
          The `Sine <en.wikipedia.org/wiki/Sine>`__ of the input value.
 
@@ -163,31 +163,32 @@ Operation
          The `Cosine <https://en.wikipedia.org/wiki/Trigonometric_functions>`__ of the input value.
 
       Tangent
-         The `Tangent <https://en.wikipedia.org/wiki/Trigonometric_functions>`__ of the input value. 
+         The `Tangent <https://en.wikipedia.org/wiki/Trigonometric_functions>`__ of the input value.
 
       Arcsine
-         The `Arcsine <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value. 
+         The `Arcsine <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value.
 
       Arccosine
-         The `Arccosine <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value. 
+         The `Arccosine <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value.
 
       Arctangent
-         The `Arctangent <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value. 
+         The `Arctangent <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value.
 
       Arctan2
-         The output is the `Inverse Tangent <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the first value divided by the second value measured in radians. 
+         The output is the `Inverse Tangent
+         <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of
+         the first value divided by the second value measured in radians.
 
       Hyperbolic Sine
-         The `Hyperbolic Sine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value. 
+         The `Hyperbolic Sine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value.
 
       Hyperbolic Consine
-         The `Hyperbolic Consine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value. 
+         The `Hyperbolic Consine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value.
 
       Hyperbolic Tangent
-         The `Hyperbolic Tangent <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value. 
+         The `Hyperbolic Tangent <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value.
 
-   **Conversion**
-
+   Conversion
       To Radians
          Converts the input from degrees to radians.
 
