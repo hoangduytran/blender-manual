@@ -8,6 +8,7 @@ Screw
    :class: refbox
 
    :Mode:      Edit Mode
+   :Menu:      :menuselection:`Edge --> Screw`
 
 The *Screw* tool combines a repetitive *Spin* with a translation,
 to generate a screw-like, or spiral-shaped, object. Use this tool to create screws, springs,
@@ -45,8 +46,7 @@ Usage
 =====
 
 This tool works only with meshes.
-In *Edit Mode*, the button for the *Screw* tool operation is located in the *Mesh Tools* panel,
-:menuselection:`Toolbar --> Mesh Tools --> Add: Screw`.
+In *Edit Mode*, the *Screw* tool operation can be found by navigating to :menuselection:`Edge --> Screw` in the header of the 3D viewport.
 To use this tool, you need to create at least one open profile or line to be used as a vector for the height,
 and an angular vector to specify a direction.
 
@@ -123,9 +123,9 @@ Options
 
 This tool is an interactive and modal tool, and only works in *Edit Mode*.
 
-Once you click in the *Screw* tool in the Mesh Tools panel,
-Blender will enter in the *Screw* interactive mode, and the :ref:`ui-undo-redo-adjust-last-operation` panel
-at the end of the Mesh Tools panel will be replaced so you can adjust the values explained below.
+Once you select the *Screw* tool,
+Blender will enter the *Screw* interactive mode, and the :ref:`ui-undo-redo-adjust-last-operation` panel
+in the 3D viewport will be replaced so you can adjust the values explained below.
 
 Once you perform any other operation,
 Blender leaves the interactive mode and accepts all of the values. Because it is modal,
@@ -206,7 +206,7 @@ The Spring Example
 #. Change the view from *User Orthographic* to *Front Orthographic*, using the shortcut :kbd:`Numpad1`.
    You will see the X (red) and Z (blue) coordinate lines.
 #. In case you have moved the cursor by clicking anywhere in the screen, again place the cursor at the Center,
-   using the shortcut :kbd:`Shift-S` choosing *Cursor to Center* or the Transform panel,
+   using the shortcut :kbd:`Shift-S` choosing *Cursor to World Origin* or the Transform panel,
    placing the cursor at (0, 0, 0) typing directly into the Cursor 3D Location.
 #. Add a circle using shortcut :kbd:`Shift-A` :menuselection:`--> Mesh --> Circle`.
 #. Rotate this circle using the shortcut :kbd:`R X 9 0` and :kbd:`Return`.
@@ -220,7 +220,7 @@ The Spring Example
    (See the Fig. :ref:`fig-mesh-screw-circle`.)
 #. You will have to scale the circle using the shortcut :kbd:`S Period 5`, then :kbd:`Return`.
 #. Now enter *Edit Mode* using shortcut :kbd:`Tab`.
-#. Deselect all vertices using the shortcut :kbd:`A`.
+#. Deselect all vertices using the shortcut :kbd:`Alt-A`.
 
 The following steps explain how to create a height vector:
 
@@ -236,10 +236,10 @@ The following steps explain how to create a height vector:
    You have created two vertices and an edge, which Blender will use as the first height and angle vector.
 #. Now, in the Transform panel, in the median, clicking in the Global coordinates,
    for the XYZ coordinates, put (-2, 0, -1).
-#. :kbd:`RMB` click on the other vertex,
+#. :kbd:`LMB` click on the other vertex,
    and again, set its XYZ coordinates to (-2, 0, 1).
    This will create a straight vertical line with 2 units of height.
-#. Deselect and select everything again with the shortcut :kbd:`A`.
+#. Select everything again with the shortcut :kbd:`A`.
    (See Fig. :ref:`fig-mesh-screw-profile`.)
 #. Again, place the cursor at the center. (Repeat step 2.)
 #. At this point, you can save this blend-file to recycle
@@ -337,11 +337,11 @@ so the spindles of the screw (which are defined by the turns value)
 will assembly perfectly with each other.
 
 #. Open Blender and click on *File* located in the header of the Info editor again,
-   choose *Open Recent* and the file you saved for this exercise.
+   choose *Open Recent* and select the file you saved for this exercise.
    All of the things will be placed exactly the way you saved before.
    Choose the last saved blend-file; in the last exercise,
    you gave it the name "screw spring example.blend".
-#. Press the shortcut :kbd:`A` to deselect all vertices.
+#. Press the shortcut :kbd:`Alt-A` to deselect all vertices.
 #. Press the shortcut :kbd:`B`, and Blender will change the cursor; you are now in box selection mode.
 #. Open a box that selects all of the circle vertices except
    the two vertices you used to create the height of the extrusions in the last example.
@@ -355,7 +355,7 @@ will assembly perfectly with each other.
    click with :kbd:`LMB` on *File* --
    it is in the header of the Info editor (at the top left side), and choose *Save as*.
    You can name it e.g. "screw hardware example.blend".
-#. Press the shortcut :kbd:`A` twice to deselect and select all vertices again.
+#. Press the shortcut :kbd:`A` to select all the vertices again.
 #. Now press Screw.
 #. Change Steps and Turns as you like.
    Fig. :ref:`fig-mesh-screw-generated-mesh` shows you an example of the results.
