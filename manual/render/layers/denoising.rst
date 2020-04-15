@@ -43,7 +43,7 @@ Optix AI Denoising
    *Optix AI Denoising* can be enabled when one or more compatible Optix GPUs
    are selected in the :ref:`System Preferences <editors_preferences_cycles>`.
 
-   This denoiser is less suited for animations, because it is not temporarily stable,
+   This denoiser is less suited for animations, because it is not temporally stable,
    but is considerably faster than the other denoising options and
    therefore especially useful to denoise previews or final single-frame images with high quality.
 
