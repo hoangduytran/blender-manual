@@ -11,6 +11,7 @@
    duplicate.rst
    extrude.rst
    split.rst
+   separate.rst
    bisect.rst
    knife_project.rst
    convex_hull.rst
@@ -19,6 +20,5 @@
    normals.rst
    shading.rst
    sort_elements.rst
-   separate.rst
    cleanup.rst
    delete.rst
