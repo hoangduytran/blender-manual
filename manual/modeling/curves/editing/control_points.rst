@@ -20,9 +20,6 @@ Extrudes points by duplicating the selected points, which then can be moved.
 If the selection is an end point, a new point will be connected to the selected point,
 else a new unconnected point is created.
 
-.. Mode
-.. (todo) looks like a bug, internal parameter?
-
 
 .. _bpy.ops.curve.make_segment:
 .. _modeling-curves-make-segment:
