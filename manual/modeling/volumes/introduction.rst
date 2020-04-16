@@ -21,7 +21,7 @@ Rendering
 =========
 
 Rendering volumes works the same as rendering smoke simulations. By default,
-the :doc:`Principled Volume shader <render/shader_nodes/shader/volume_principled>`
+the :doc:`Principled Volume shader </render/shader_nodes/shader/volume_principled>`
 is used for rendering volume objects. It will use grids named ``density``,
 ``color`` and ``temperature`` by default. If these are not available,
 another grid name must be chosen in the shader nodes.
