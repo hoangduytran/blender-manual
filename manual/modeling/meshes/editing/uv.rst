@@ -25,11 +25,6 @@ The simpler projection methods use formulas that map 3D space onto 2D space,
 by interpolating the position of points toward a point/axis/plane through a surface.
 The more advanced methods can be used with more complex models, and have more specific uses.
 
-.. (todo move)? split in basic/advanced -- if more content added. old wiki:
-.. Basic: Cube, Cylinder, Sphere Projection; Project from View
-   Based on the fundamental geometry of the object, and how it is being viewed,
-.. Advanced: Unwrap; Smart UV Project; Lightmap Pack; Follow Active Quads
-
 
 .. _bpy.ops.uv.unwrap:
 
