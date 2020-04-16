@@ -45,9 +45,9 @@ in Fig. :ref:`fig-mesh-screw-wood` and Fig. :ref:`fig-mesh-screw-spring`.
 Usage
 =====
 
-This tool works only with meshes.
-In *Edit Mode*, the *Screw* tool operation can be found by navigating to :menuselection:`Edge --> Screw` in the header of the 3D viewport.
-To use this tool, you need to create at least one open profile or line to be used as a vector for the height,
+This tool works only with meshes. In *Edit Mode*, the *Screw* tool operation can be found by
+navigating to :menuselection:`Edge --> Screw` in the header of the 3D Viewport. To use this tool,
+you need to create at least one open profile or line to be used as a vector for the height,
 and an angular vector to specify a direction.
 
 The *Screw* tool uses two points given by the open line to create an initial vector to calculate the height
@@ -125,7 +125,7 @@ This tool is an interactive and modal tool, and only works in *Edit Mode*.
 
 Once you select the *Screw* tool,
 Blender will enter the *Screw* interactive mode, and the :ref:`ui-undo-redo-adjust-last-operation` panel
-in the 3D viewport will be replaced so you can adjust the values explained below.
+in the 3D Viewport will be replaced so you can adjust the values explained below.
 
 Once you perform any other operation,
 Blender leaves the interactive mode and accepts all of the values. Because it is modal,
@@ -242,7 +242,7 @@ The following steps explain how to create a height vector:
 #. Select everything again with the shortcut :kbd:`A`.
    (See Fig. :ref:`fig-mesh-screw-profile`.)
 #. Again, place the cursor at the center. (Repeat step 2.)
-#. At this point, you can save this blend-file to recycle
+#. At this point, you can save this blend-file to reuse
    the Spring for another exercise; :kbd:`LMB` click on *File*,
    located in the header of the Info editor, (at the top left side), and choose *Save as*.
    You can name it e.g. "screw spring example.blend".

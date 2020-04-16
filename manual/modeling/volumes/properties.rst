@@ -18,29 +18,29 @@ OpenVDB File
 .. _bpy.types.Volume.filepath:
 
 File Path
-   Volume sample file used by the Volume data-block.
+   Volume sample file used by the volume data-block.
 
 .. _bpy.types.Volume.is_sequence:
 
 Sequence
-   Loads the OpenVDB-file as an amination loading separate files for individual frames.
+   Loads the OpenVDB-file as an animation loading separate files for individual frames.
 
 .. _bpy.types.Volume.frame_duration:
 
    Frames
       Number of frames of the sequence to use.
 
-.. _bpy.types.Volume.frame_start:
+   .. _bpy.types.Volume.frame_start:
 
    Start
       Global starting frame of the sequence, assuming the first frame has a 1 in the file name.
 
-.. _bpy.types.Volume.frame_offset:
+   .. _bpy.types.Volume.frame_offset:
 
    Offset
       Offset the number of the frame to use in the animation.
 
-.. _bpy.types.Volume.sequence_mode:
+   .. _bpy.types.Volume.sequence_mode:
 
    Mode
       Todo
@@ -52,7 +52,7 @@ Sequence
       Repeat
          Cycles the frames in the sequence; restarting at frame one.
       Ping-Pong
-         Repeats the frames, reversing the playback direction every other cycle.
+         Repeats the frames, reversing the playback direction on every other cycle.
 
 
 .. _bpy.types.VolumeDisplay:
@@ -63,8 +63,8 @@ Viewport Display
 .. _bpy.types.VolumeDisplay.wireframe_type:
 
 Wireframe
-   Method used to represent volumes in :ref:`wireframe shading mode <3dview-shading-rendered>`.
-   For heavy volume datasets, it can be useful to set the object to always display as wireframe.
+   Method used to represent volumes in :ref:`wireframe <3dview-shading-rendered>` shading mode.
+   For heavy volume data sets, it can be useful to set the object to always display as wireframe.
    This way the 3D Viewport remains responsive but the volume still appears in the final render.
 
    None
@@ -84,7 +84,7 @@ Detail
    Course
       Display one box or point for each intermediate tree node.
    Fine
-      Display a box or point for each leaf node containing 8x8 voxels.
+      Display a box or point for each leaf node containing 8×8 voxels.
 
 .. _bpy.types.VolumeDisplay.density:
 

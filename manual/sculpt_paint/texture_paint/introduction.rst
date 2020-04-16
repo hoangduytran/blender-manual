@@ -34,18 +34,17 @@ However, each UV texture only has one image.
 *Texture Paint* works in both a 3D View and the Image Editor.
 In the 3D View in Texture Paint Mode, you paint directly on the mesh by projecting onto the UVs.
 
-.. note:: Square Power of Two
+.. tip:: Square Power of Two
 
-   *Texture Paint* is very fast and responsive when working in the 3D View and
-   when your image is sized as a square where the side lengths are a power of
-   two, e.g. 256×256, 512×512, 1024×1024, etc.
+   *Texture Paint* is fast and responsive when working in the 3D View and
+   when your image is sized as a square where the side lengths are a power of two,
+   e.g. 256×256, 512×512, 1024×1024, etc.
 
 
 Getting Started
 ===============
 
-Before texture painting the object being painted on must first be
-:doc:`unwrapped </modeling/meshes/uv/unwrapping/introduction>`.
+The object to be painted on must first be :doc:`unwrapped </modeling/meshes/uv/unwrapping/introduction>`.
 UVs can be added traditionally, with standard :doc:`Unwrapping Tools </modeling/meshes/editing/uv>`,
 or by adding :ref:`Simple UVs <bpy.ops.paint.add_simple_uvs>` in Texture Paint mode.
 
@@ -53,19 +52,18 @@ or by adding :ref:`Simple UVs <bpy.ops.paint.add_simple_uvs>` in Texture Paint m
 
    When no UV layers can be detected, Blender will display a warning message.
 
-
 Once you have unwrapped your model to a UV map, you can begin the texturing process.
 To use texture paint you may do any of the following:
 
-- Activate the Texture Paint workspace. Here the 3D View has the Texture Paint
-  Mode enabled and the Image Editor is already switched to Paint mode.
+- Activate the Texture Paint workspace. Here the 3D View has the Texture Paint Mode enabled
+  and the Image Editor is already switched to Paint mode.
 - In the 3D View, select Texture Paint Mode from the mode selector in the header,
   and you can paint directly onto the mesh.
 - In the Image Editor, switch the mode to Paint (shown to the right).
 
 .. figure:: /images/sculpt-paint_texture-paint_introduction_paint-mode.png
 
-   Enabling paint mode.
+   Enabling Paint mode.
 
 Once you enable Texture Painting, your mouse becomes a brush.
 As soon as you enable Texture Painting or switch to Texture Paint Mode,
@@ -73,7 +71,7 @@ different tools become available in the Toolbar.
 
 In the Image Editor, you paint on a flat canvas that is wrapped around the mesh using UV coordinates.
 Any changes made in the Image Editor show up immediately in the 3D View, and vice versa.
-To work with the UV layout (for example, to move coordinates) you must go back to "View" mode.
+To work with the UV layout (for example, to move coordinates) you must go back to View mode.
 
 A full complement of brushes and colors can be selected from the Sidebar region in the Image Editor.
 Brush changes made in either panel are immediately reflected in the other panel.

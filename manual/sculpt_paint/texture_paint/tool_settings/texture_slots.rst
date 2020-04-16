@@ -21,12 +21,12 @@ Mode
    Material
       This mode tries to detect the slots from the materials of the mesh.
 
-      For the Cycles renderer, all textures (*Image Texture* node) on the material's node tree
-      are added on the slots tab.
+      For the Cycles renderer, all textures (*Image Texture* node) in the material's node tree
+      are added in the slots tab.
 
-      Active Paint Paint Texture Index
+      Active Paint Texture Index
          A :ref:`List view <ui-list-view>` of slots.
-         To activate a certain slot to use it for paint a just :kbd:`LMB` click on it.
+         Activate a certain slot to use it for painting by :kbd:`LMB` click on it.
 
    Single Image
       You can just select an existing image and painting will use the active UV layer for painting.
