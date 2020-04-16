@@ -8,17 +8,8 @@ UV Tools
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Tool:      :menuselection:`Toolbar --> Shading/UVs --> UVs --> UV Mapping: Unwrap`
-   :Menu:      :menuselection:`Mesh --> UV Unwrap`
+   :Menu:      :menuselection:`Header --> UV`
    :Hotkey:    :kbd:`U`
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Editor:    UV Editor
-   :Mode:      View mode
-   :Menu:      :menuselection:`UVs --> Unwrap`
-   :Hotkey:    :kbd:`E`
 
 Blender offers several ways of mapping UVs.
 The simpler projection methods use formulas that map 3D space onto 2D space,
@@ -31,10 +22,13 @@ The more advanced methods can be used with more complex models, and have more sp
 Unwrap
 ======
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_unwrap-example.png
-   :width: 420px
+.. admonition:: Reference
+   :class: refbox
 
-   Result of unwrapping Suzanne.
+   :Editor:    3D View or UV Editor
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Unwrap`
+   :Hotkey:    :kbd:`U`
 
 Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/uv/unwrapping/seams>`.
 Useful for organic shapes.
@@ -44,7 +38,12 @@ it is now time to unwrap them.
 In the 3D View, select :menuselection:`Mesh --> UV Unwrap --> Unwrap` or
 :kbd:`U` and select Unwrap.
 
-You can also do this from the UV Editor with :menuselection:`UVs --> Unwrap` or :kbd:`E`.
+.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_unwrap-example.png
+   :width: 420px
+
+   Result of unwrapping Suzanne.
+
+You can also do this from the UV Editor with :menuselection:`UVs --> Unwrap` or :kbd:`U`.
 This method will unwrap all faces and reset previous work.
 The UVs menu will appear in the UV Editor after unwrapping has been performed once.
 
@@ -90,13 +89,15 @@ Margin
 Smart UV Project
 ================
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_smart-project.png
-   :width: 670px
+.. admonition:: Reference
+   :class: refbox
 
-   Smart UV project on a cube.
+   :Editor:    3D View
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Smart UV Project`
+   :Hotkey:    :kbd:`U`
 
-Smart UV Project, (previously called the Archimapper)
-cuts the mesh based on an angle threshold (angular changes in your mesh).
+Smart UV Project, cuts the mesh based on an angle threshold (angular changes in your mesh).
 This gives you fine control over how automatic seams are be created.
 It is good method for simple and complex geometric forms,
 such as mechanical objects or architecture.
@@ -105,10 +106,15 @@ This algorithm examines the shape of your object,
 the faces selected and their relation to one another,
 and creates a UV map based on this information and settings that you supply.
 
-In the example to the right,
+In the example to the below,
 the Smart Mapper mapped all of the faces of a cube to a neat arrangement of three sides on top,
 three sides on the bottom, for all six sides of the cube to fit squarely,
 just like the faces of the cube.
+
+.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_smart-project.png
+   :width: 670px
+
+   Smart UV project on a cube.
 
 For more complex mechanical objects, this tool can quickly and easily create
 a regular and straightforward UV layout for you.
@@ -133,6 +139,14 @@ Area Weight
 
 Lightmap Pack
 =============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    3D View
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Lightmap Pack`
+   :Hotkey:    :kbd:`U`
 
 Lightmap Pack takes each of a mesh's faces, or selected faces,
 and packs them into the UV bounds. Lightmaps are used primarily in realtime rendering,
@@ -176,6 +190,14 @@ Margin
 Follow Active Quads
 ===================
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    3D View
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Follow Active Quads`
+   :Hotkey:    :kbd:`U`
+
 The Follow Active Quads tool takes the selected faces and lays them out
 by following continuous face loops, even if the mesh face is irregularly-shaped.
 Note that it does not respect the image size,
@@ -204,6 +226,14 @@ Edge Length Mode
 
 Cube Projection
 ===============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    3D View
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Cube Projection`
+   :Hotkey:    :kbd:`U`
 
 Cube Projection maps the mesh onto the faces of a cube, which is then unfolded.
 It projects the mesh onto six separate planes, creating six UV islands.
@@ -240,16 +270,25 @@ Scale to Bounds
 Cylinder and Sphere Projection
 ==============================
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_sphere-projection.png
-   :width: 420px
+.. admonition:: Reference
+   :class: refbox
 
-   Using an equirectangular image with a Sphere Projection.
+   :Editor:    3D View
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Sphere Projection`
+               :menuselection:`UVs --> Cylinder Projection`
+   :Hotkey:    :kbd:`U`
 
 Cylindrical and Spherical mappings have the same options. The difference is that
 a cylindrical mapping projects the UVs on a plane toward the cylinder shape,
 while a spherical map takes into account the sphere's curvature,
 and each latitude line becomes evenly spaced.
 Useful for spherical shapes, like eyes, planets, etc.
+
+.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_sphere-projection.png
+   :width: 420px
+
+   Using an equirectangular image with a Sphere Projection.
 
 Normally, to unwrap a cylinder (tube) as if you slit it lengthwise and folded it flat,
 Blender wants the view to be vertical, with the tube standing "up".
@@ -294,6 +333,14 @@ Radius
 Project from View
 =================
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    3D View
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Project from View`
+   :Hotkey:    :kbd:`U`
+
 Project from View takes the current view in the 3D View and flattens the mesh as it appears.
 Use this option if you are using a picture of a real object as a UV Texture for an object that
 you have modeled. You will get stretching in areas where the model recedes away from you.
@@ -311,6 +358,14 @@ Orthographic
 Project from View (Bounds)
 ==========================
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    3D View
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Project from View (Bounds)`
+   :Hotkey:    :kbd:`U`
+
 Similar to `Project from View`_,
 but with *Scale to Bounds* and *Correct Aspect* activated.
 
@@ -319,6 +374,14 @@ but with *Scale to Bounds* and *Correct Aspect* activated.
 
 Reset
 =====
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    3D View
+   :Mode:      Edit mode
+   :Menu:      :menuselection:`UVs --> Reset`
+   :Hotkey:    :kbd:`U`
 
 Reset UVs maps each face to fill the UV grid, giving each face the same mapping.
 
