@@ -213,7 +213,7 @@ to move them, and confirm the move with :kbd:`LMB` or :kbd:`Return`
 Or drag them with the :kbd:`LMB`.
 
 By default, you move the markers in one-frame steps, but if you hold :kbd:`Ctrl`,
-the markers will move in steps corresponding to one second (according to the scene's *FPS*).
+the markers will move in steps corresponding to 1 second (according to the scene's *FPS*).
 
 
 .. _bpy.types.SpaceDopeSheetEditor.show_pose_markers:
@@ -224,11 +224,11 @@ Show Pose Markers
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    Dopesheet
+   :Editor:    Dope Sheet
    :Mode:      Action Editor or Shape Keys Editor mode
    :Menu:      :menuselection:`Marker --> Show Pose Markers`
 
-Shows markers belonging to the active action instead of Scene markers.
+Shows markers belonging to the active action instead of scene markers.
 
 
 Make Markers Local

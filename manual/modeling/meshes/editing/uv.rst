@@ -33,19 +33,17 @@ Unwrap
 Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/uv/unwrapping/seams>`.
 Useful for organic shapes.
 
-Begin by selecting all faces to be unwrapped in the 3D Viewport. With our faces selected,
-it is now time to unwrap them.
+Begin by selecting all faces you want to unwrap.
 In the 3D Viewport, select :menuselection:`Mesh --> UV Unwrap --> Unwrap` or
 :kbd:`U` and select Unwrap.
+You can also do this from the UV Editor with :menuselection:`UVs --> Unwrap` or :kbd:`U`.
+This method will unwrap all faces and reset previous work.
+The UVs menu will appear in the UV Editor after unwrapping has been performed once.
 
 .. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_unwrap-example.png
    :width: 420px
 
    Result of unwrapping Suzanne.
-
-You can also do this from the UV Editor with :menuselection:`UVs --> Unwrap` or :kbd:`U`.
-This method will unwrap all faces and reset previous work.
-The UVs menu will appear in the UV Editor after unwrapping has been performed once.
 
 This tool unwraps the faces of the object to provide
 the "best fit" scenario based on how the faces are connected and will fit within the image,
@@ -106,7 +104,7 @@ This algorithm examines the shape of your object,
 the faces selected and their relation to one another,
 and creates a UV map based on this information and settings that you supply.
 
-In the example to the below,
+In the example below,
 the Smart Mapper mapped all of the faces of a cube to a neat arrangement of three sides on top,
 three sides on the bottom, for all six sides of the cube to fit squarely,
 just like the faces of the cube.
@@ -267,8 +265,8 @@ Scale to Bounds
 .. _bpy.ops.uv.cylinder_project:
 .. _bpy.ops.uv.sphere_project:
 
-Cylinder and Sphere Projection
-==============================
+Cylinder & Sphere Projection
+============================
 
 .. admonition:: Reference
    :class: refbox
@@ -385,7 +383,7 @@ Reset
 
 Reset UVs maps each face to fill the UV grid, giving each face the same mapping.
 
-If we were to use an image that was tileable,
-the surface would be covered in a smooth repetition of that image,
+If you want to use an image that is tileable,
+the surface will be covered in a smooth repetition of that image,
 with the image skewed to fit the shape of each individual face.
 Use this unwrapping option to reset the map and undo any unwrapping (go back to the start).

@@ -152,7 +152,7 @@ Style
       Base Color
          The primary color.
 
-      Secondary color
+      Secondary Color
          The secondary color.
 
       Blend

@@ -3,7 +3,7 @@
 Auto Mirror
 ***********
 
-This Add-on makes it easy to quickly cut and mirror mesh objects.
+This add-on makes it easy to quickly cut and mirror mesh objects.
 
 
 Activation

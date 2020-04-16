@@ -27,7 +27,7 @@ Interface
 Overview
 --------
 
-Located in the :menuselection:`3D Viewport --> Sidebar --> View tab`
+Located in the :menuselection:`3D Viewport --> Sidebar --> View tab`.
 The MeasureIt Tools panel is described below.
 
 To view the measures you need to press the *Show* button.

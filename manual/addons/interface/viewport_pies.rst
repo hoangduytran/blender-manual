@@ -67,7 +67,7 @@ View Numpad :kbd:`Q`
 
    :Category:  Interface
    :Description: Individual and optional pie menu activation.
-   :Location: 3D Viewportport
+   :Location: 3D Viewport
    :File: space_view3d_pie_menus folder
    :Author: meta-androcto
    :Maintainer: meta-androcto

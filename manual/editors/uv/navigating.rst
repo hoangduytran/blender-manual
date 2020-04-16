@@ -10,8 +10,8 @@ By enabling :ref:`Pixel Coordinates <bpy.types.SpaceUVEditor.show_pixel_coords>`
 the coordinates match the pixels in your image with 0,0 in the located in the lower left corner.
 
 
-2D View
-=======
+2D Viewport
+===========
 
 Panning can be done by clicking the :kbd:`MMB` and dragging.
 

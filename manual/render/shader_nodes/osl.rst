@@ -12,6 +12,7 @@ there is no support for running OSL code on the GPU.
 
 To enable it, select *Open Shading Language* as the shading system in the render settings.
 
+
 .. _bpy.types.ShaderNodeScript:
 
 Script Node

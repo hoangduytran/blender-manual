@@ -34,7 +34,7 @@ However, each UV texture only has one image.
 *Texture Paint* works in both a 3D Viewport and the Image Editor.
 In the 3D Viewport in Texture Paint Mode, you paint directly on the mesh by projecting onto the UVs.
 
-.. tip:: Square Power of Two
+.. tip:: Memory Optimization
 
    *Texture Paint* is fast and responsive when working in the 3D Viewport and
    when your image is sized as a square where the side lengths are a power of two,

@@ -141,7 +141,7 @@ UV Vertex
    Transform Properties :doc:`Selecting UVs </modeling/meshes/uv/editing>`.
 
 UDIM Grid
-   Allows you to control the grid shape of your :doc:`UDIM </modeling/meshes/uv/workflows/udims>` tiles.
+   Allows you to control the grid size of :doc:`UDIM </modeling/meshes/uv/workflows/udims>` tiles.
 
 
 Tool Tab

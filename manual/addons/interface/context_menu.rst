@@ -6,7 +6,7 @@ Dynamic Context Menu
 .. figure:: /images/addons_interface_context-menu_ui.jpg
    :align: right
 
-Dynamic Context Menu provides access to many of the menus found in the 3D View header.
+Dynamic Context Menu provides access to many of the menus found in the 3D Viewport's header.
 It also packs a few features of its own, such as the Cursor menu.
 Access Operator Search, Tools, Animation, Quick Favorites, Modifiers, Collections and more.
 It is context sensitive for the 3D Viewport's modes and object sensitive based on object selected in Edit Mode.

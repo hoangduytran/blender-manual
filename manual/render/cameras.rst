@@ -337,8 +337,9 @@ Viewport Display
    Camera view displaying safe areas, sensor and name.
 
 Size
-   Size of the camera visualization in the 3D Viewport. This setting has **no** effect on the render output of a camera.
-   The camera visualization can also be scaled using the standard Scale :kbd:`S` transform key.
+   Size of the camera visualization in the 3D Viewport. This setting has **no** effect on
+   the render output of a camera. The camera visualization can also be scaled using
+   the standard Scale :kbd:`S` transform key.
 Limits
    Shows a line which indicates *Start* and *End Clipping* values.
 Mist

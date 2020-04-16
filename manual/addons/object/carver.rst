@@ -111,7 +111,7 @@ Brush Type :kbd:`T`
 
    :Category:  Object
    :Description: Multiple tools to carve or to create objects.
-   :Location: 3D Viewportport :kbd:`Shift-Ctrl-X`
+   :Location: 3D Viewport :kbd:`Shift-Ctrl-X`
    :File: object_carver folder
    :Author: Pixivore, Cedric LEPILLER, Ted Milker, Clarkx
    :License: GPL
