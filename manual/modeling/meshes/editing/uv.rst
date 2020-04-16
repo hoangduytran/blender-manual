@@ -185,12 +185,13 @@ so you may have to scale them all down a bit to fit the image area.
 Options
 -------
 
-Edge Length Mode:
-
-Even
-   Space all UVs evenly.
-Length
-   Average space UVs edge length of each loop.
+Edge Length Mode
+   Even
+      Space all UVs evenly.
+   Length
+      Todo.
+   Length Average
+      Average space UVs edge length of each loop.
 
 .. note::
 
