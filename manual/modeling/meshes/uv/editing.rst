@@ -1,4 +1,3 @@
-..    TODO/Review: {{review|im=old screenshot: Need to update}}.
 
 *******
 Editing
@@ -26,7 +25,8 @@ Transforms
 .. admonition:: Reference
    :class: refbox
 
-   :Mode:      Edit Mode and Mask Mode
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Move, Rotate, Scale, Transform`
    :Menu:      :menuselection:`UVs --> Transform`
 
@@ -53,7 +53,8 @@ UV Options
 .. admonition:: Reference
    :class: refbox
 
-   :Mode:      Edit Mode and Mask Mode
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs`
 
 Live Unwrap
@@ -83,6 +84,7 @@ Pin & Unpin
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Pin/Unpin`
    :Hotkey:    :kbd:`P`, :kbd:`Alt-P`
@@ -111,6 +113,7 @@ Seams
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Mark/Clear Seam`
 
@@ -126,6 +129,7 @@ Pack Islands
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Pack Islands`
    :Hotkey:    :kbd:`Ctrl-P`
@@ -145,6 +149,7 @@ Average Island Scale
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Average Island Scale`
    :Hotkey:    :kbd:`Ctrl-A`
@@ -161,6 +166,7 @@ Minimize Stretch
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Minimize Stretch`
    :Hotkey:    :kbd:`Ctrl-V`
@@ -176,6 +182,7 @@ Stitch
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Stitch`
    :Hotkey:    :kbd:`V`
@@ -191,6 +198,7 @@ Copy Mirrored UV Coordinates
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Copy Mirrored UV Coordinates`
 
@@ -209,6 +217,7 @@ Mirror
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Mirror`
    :Hotkey:    :kbd:`Ctrl-M`
@@ -228,6 +237,7 @@ Snap
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Snap`
    :Hotkey:    :kbd:`Shift-S`
@@ -259,6 +269,7 @@ Weld
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Weld/Align --> Weld`
    :Hotkey:    :kbd:`W`
@@ -274,6 +285,7 @@ Merge UVs by Distance
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Weld/Align --> Merge UVs by Distance`
 
@@ -288,6 +300,7 @@ Straighten/Align
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Weld/Align --> Straighten/Align`
    :Hotkey:    :kbd:`W`
@@ -306,6 +319,7 @@ Proportional Editing
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Header:    :menuselection:`Proportional Editing`
    :Menu:      :menuselection:`UVs --> Proportional Editing`
@@ -322,6 +336,7 @@ Show/Hide Faces
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Show/Hide Faces`
 
@@ -336,6 +351,7 @@ Export UV Layout
 .. admonition:: Reference
    :class: refbox
 
+   :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Export UV Layout`
 

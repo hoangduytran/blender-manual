@@ -26,7 +26,7 @@ Unwrap
    :class: refbox
 
    :Editor:    3D View or UV Editor
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Unwrap`
    :Hotkey:    :kbd:`U`
 
@@ -93,7 +93,7 @@ Smart UV Project
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Smart UV Project`
    :Hotkey:    :kbd:`U`
 
@@ -144,7 +144,7 @@ Lightmap Pack
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Lightmap Pack`
    :Hotkey:    :kbd:`U`
 
@@ -194,7 +194,7 @@ Follow Active Quads
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Follow Active Quads`
    :Hotkey:    :kbd:`U`
 
@@ -231,7 +231,7 @@ Cube Projection
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Cube Projection`
    :Hotkey:    :kbd:`U`
 
@@ -274,7 +274,7 @@ Cylinder and Sphere Projection
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Sphere Projection`
                :menuselection:`UVs --> Cylinder Projection`
    :Hotkey:    :kbd:`U`
@@ -337,7 +337,7 @@ Project from View
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Project from View`
    :Hotkey:    :kbd:`U`
 
@@ -362,7 +362,7 @@ Project from View (Bounds)
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Project from View (Bounds)`
    :Hotkey:    :kbd:`U`
 
@@ -379,7 +379,7 @@ Reset
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Reset`
    :Hotkey:    :kbd:`U`
 
