@@ -67,7 +67,7 @@ Smooth View
    (Top/Side/Front/Camera...). Reduce to zero to remove the animation.
 Rotation Angle
    Rotation step size in degrees, when :kbd:`Numpad4`, :kbd:`Numpad6`, :kbd:`Numpad8`,
-   or :kbd:`Numpad2` are used to rotate the 3D View.
+   or :kbd:`Numpad2` are used to rotate the 3D Viewport.
 
 
 Zoom

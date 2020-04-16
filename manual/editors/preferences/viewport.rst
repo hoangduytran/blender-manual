@@ -12,9 +12,9 @@ Display
 =======
 
 Object Info
-   Display the active Object name and frame number at the bottom left of the 3D View.
+   Display the active Object name and frame number at the bottom left of the 3D Viewport.
 View Name
-   Display the name and type of the current view in the top left corner of the 3D View.
+   Display the name and type of the current view in the top left corner of the 3D Viewport.
    For example: "User Perspective" or "Top Orthographic".
 Playback FPS
    Show the frames per second screen refresh rate while an animation is played back.
@@ -74,7 +74,7 @@ Anisotropic Filtering
    Sets the level of anisotropic filtering.
    This improves the quality of textures that are rendered at the cost of performance.
 Clip Alpha
-   Clip alpha below this threshold in the 3D View.
+   Clip alpha below this threshold in the 3D Viewport.
    Note that, the default is set to a low value to prevent issues on some GPU's.
 Image Display Method
    Method to render images; the following options are supported:

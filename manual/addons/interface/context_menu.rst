@@ -9,7 +9,7 @@ Dynamic Context Menu
 Dynamic Context Menu provides access to many of the menus found in the 3D View header.
 It also packs a few features of its own, such as the Cursor menu.
 Access Operator Search, Tools, Animation, Quick Favorites, Modifiers, Collections and more.
-It is context sensitive for the 3D View's modes and object sensitive based on object selected in Edit Mode.
+It is context sensitive for the 3D Viewport's modes and object sensitive based on object selected in Edit Mode.
 This add-on pairs well with the :doc:`/addons/interface/brush_menus`.
 
 
@@ -34,7 +34,7 @@ Activation
 
    :Category:  Interface
    :Description: Object and mode context sensitive pop-up menu.
-   :Location: 3D View :kbd:`Spacebar`
+   :Location: 3D Viewport :kbd:`Spacebar`
    :File: space_view3d_spacebar_menu folder
    :Author: meta-androcto
    :Maintainer: meta-androcto

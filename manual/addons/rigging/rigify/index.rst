@@ -37,8 +37,8 @@ Development
 
    :Category:  Rigging
    :Description: Automatic rigging from building-block components.
-   :Location: :menuselection:`Properties --> Armature, Bone`, :menuselection:`3D View --> Tools panel`,
-              :menuselection:`3D View --> Add menu --> Armature`
+   :Location: :menuselection:`Properties --> Armature, Bone`, :menuselection:`3D Viewport --> Tools panel`,
+              :menuselection:`3D Viewport --> Add menu --> Armature`
    :File: rigify folder
    :Author: Nathan Vegdahl, Lucio Rossi, Ivan Cappiello, Alexander Gavrilov
    :License: GPL

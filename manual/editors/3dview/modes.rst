@@ -17,7 +17,7 @@ the default *Object Mode* (like cameras, lights, etc.).
 Each mode is designed to edit an aspect of the selected object.
 See Tab. :ref:`tab-view3d-modes` below for details.
 
-You set the current mode in the *Mode* selector of 3D View header
+You set the current mode in the *Mode* selector of 3D Viewport header
 (see Fig. :ref:`fig-view3d-mode-select`).
 
 .. container:: lead
@@ -27,7 +27,7 @@ You set the current mode in the *Mode* selector of 3D View header
 Modes can affect many things in Blender:
 
 - They can modify the panels and/or controls available in some Properties editor tabs.
-- They can modify the behavior of the whole editor, like e.g. the UV Editor and 3D View.
+- They can modify the behavior of the whole editor, like e.g. the UV Editor and 3D Viewport.
 - They can modify the available header tools (menus and/or menu entries, as well as other controls...).
   For example, in the 3D Viewport, the *Object* menu in Object Mode changes to a *Mesh* menu in Edit Mode
   (with an active mesh object!), and a *Paint* menu in Vertex Paint Mode...

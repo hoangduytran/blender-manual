@@ -24,7 +24,7 @@ Editing
 *******
 
 Editing text is quite different from other object types in Blender, and happens mainly in two areas.
-First, the 3D View, where you type your text, and have a few shortcuts, e.g. for applying
+First, the 3D Viewport, where you type your text, and have a few shortcuts, e.g. for applying
 styles (see :ref:`modeling-text-character`) -- note however, that most Blender hotkeys you know
 in Edit Mode do not exist for texts. The second place is the Properties editor, especially the *Font* tab.
 
@@ -44,7 +44,7 @@ Text
 
 Editing text objects is similar to using a standard text editor but is not as
 full-featured and has some differences.
-The menu of the 3D View header offers few options. You have no transform nor mirror tools, and so on.
+The menu of the 3D Viewport header offers few options. You have no transform nor mirror tools, and so on.
 To leave Edit Mode use :kbd:`Tab` as it does not insert a tab character in the text,
 but rather enters and exits Edit Mode, as with other object types.
 

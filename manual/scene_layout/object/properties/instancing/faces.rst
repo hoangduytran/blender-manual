@@ -60,7 +60,7 @@ select *Faces*. The sphere is instanced, one for each face of the cube.
    So, if several objects are parented to the cube, they will all be instanced once for each face on the cube.
    If the cube is subdivided, every child will be instanced for each face on the cube.
 
-Both the parent object and original are displayed as editable "templates" in 3D View,
+Both the parent object and original are displayed as editable "templates" in 3D Viewport,
 but neither is rendered.
 
 

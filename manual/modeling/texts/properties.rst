@@ -106,10 +106,10 @@ found in the *Font* panel.
 
 Bold
    Toggled with the *Bold* button before typing.
-   Text can also be set to **bold** by selecting it then using the *Bold* entry in the *Text* menu of the 3D View.
+   Text can also be set to **bold** by selecting it then using the *Bold* entry in the *Text* menu of the 3D Viewport.
 Italics
    Toggled with the *Italic* button before typing.
-   Text can also be set to *italic* by selecting it then using the *Italic* entry in the *Text* menu of the 3D View.
+   Text can also be set to *italic* by selecting it then using the *Italic* entry in the *Text* menu of the 3D Viewport.
 Underline
    Enables underlining, as controlled by the :ref:`underline settings <modeling-text-character-underline>` below.
 Small Caps

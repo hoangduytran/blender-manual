@@ -26,7 +26,7 @@ Editor
 There are up to four virtual light sources.
 
 The Light icons allow the user to enable or disable individual lights.
-At least one of the four lights must remain enabled for the 3D View.
+At least one of the four lights must remain enabled for the 3D Viewport.
 The lights are equal, except for their direction and color.
 You can control the direction of the lights, as well as their diffuse and specular colors.
 

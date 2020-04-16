@@ -115,11 +115,11 @@ Sync Mode
       :figwidth: 109px
       :align: right
 
-      3D View red FPS.
+      3D Viewport red FPS.
 
       60:54.75
 
-   When you play an animation, the frame rate is displayed at the top left of the 3D View.
+   When you play an animation, the frame rate is displayed at the top left of the 3D Viewport.
    If the scene is detailed and playback is slower than the set
    *Frame Rate* (see :ref:`render-tab-dimensions`),
    these options are used to synchronize the playback.
@@ -146,7 +146,7 @@ Follow Playhead
 Active Editor Only
    While playing, updates the Timeline, if *Animation Editors* and *All 3D Viewports* disabled.
 All 3D Viewports
-   While playing, updates the 3D View and the Timeline.
+   While playing, updates the 3D Viewport and the Timeline.
 Animation Editors
    While playing, updates the Timeline, Dope Sheet, Graph Editor, Video Sequencer.
 Property Editors
@@ -347,10 +347,10 @@ Auto Keyframe
       Timeline Auto Keyframe.
 
    The record button enables *Auto Keyframe*:
-   It will add and/or replace existing keyframes for the active object when you transform it in the 3D View.
+   It will add and/or replace existing keyframes for the active object when you transform it in the 3D Viewport.
 
    For example, when enabled, first set the *Playhead* to the desired frame,
-   then move an object in the 3D View, or set a new value for a property in the UI.
+   then move an object in the 3D Viewport, or set a new value for a property in the UI.
 
    When you set a new value for the properties,
    Blender will add keyframes on the current frame for the transform properties.

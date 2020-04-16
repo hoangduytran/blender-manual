@@ -81,7 +81,7 @@ Spot Shape
    .. figure:: /images/render_lights_light-object_terms-BI.png
       :width: 610px
 
-      Changing the Spot options also changes the appearance of the spotlight as displayed in the 3D View.
+      Changing the Spot options also changes the appearance of the spotlight as displayed in the 3D Viewport.
 
 Size
    The size of the outer cone of a *Spot*,
@@ -128,7 +128,7 @@ Blend
    whereas the spotlight edges are soft.
    If you want other items to cast soft shadows within the *Spot* area, you will need to alter other shadow settings.
 Show Cone
-   Displays a transparent cone in 3D View to visualize which objects are contained in it.
+   Displays a transparent cone in 3D Viewport to visualize which objects are contained in it.
 
 
 .. _light-type-area:
@@ -178,7 +178,7 @@ Sun Light
 =========
 
 A sun light provides light of constant intensity emitted in a single direction from infinitely far away.
-A sun light can be very handy for a uniform clear daylight open-space illumination. In the 3D View,
+A sun light can be very handy for a uniform clear daylight open-space illumination. In the 3D Viewport,
 the *Sun* light is represented by an encircled black dot with rays emitting from it,
 plus a dashed line indicating the direction of the light.
 

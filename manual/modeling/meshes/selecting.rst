@@ -18,7 +18,7 @@ Select Mode Header Buttons
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`3D View Header --> Select Mode`
+   :Menu:      :menuselection:`3D Viewport Header --> Select Mode`
    :Hotkey:    :kbd:`1`, :kbd:`2`, :kbd:`3`
                (:kbd:`Shift`
                `Multiple Selection Modes`_,

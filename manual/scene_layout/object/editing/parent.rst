@@ -45,7 +45,7 @@ Moving, rotating or scaling the parent will also usually transform the child/chi
 Yet transforming the child/children of the parent will not affect the parent.
 In other words, the direction of influence is from parent to child and not child to parent.
 
-In general when using :kbd:`Ctrl-P` or :menuselection:`3D View Header --> Object --> Parent`
+In general when using :kbd:`Ctrl-P` or :menuselection:`3D Viewport Header --> Object --> Parent`
 to parent objects, the child objects can only have one parent object.
 If a child object already has a parent object and you give it another parent then
 Blender will remove the previous parent relationship.

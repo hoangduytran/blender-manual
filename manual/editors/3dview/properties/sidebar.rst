@@ -22,11 +22,11 @@ View
 View Panel
 ----------
 
-The *View* panel lets you set other settings regarding the 3D View.
+The *View* panel lets you set other settings regarding the 3D Viewport.
 You can show it with the :menuselection:`View --> View Properties...` menu entry.
 
 Focal Length
-   Control the focal length of the 3D View camera in millimeters,
+   Control the focal length of the 3D Viewport camera in millimeters,
    unlike a :doc:`rendering camera </render/cameras>`.
 
 .. _3dview-view-clip:

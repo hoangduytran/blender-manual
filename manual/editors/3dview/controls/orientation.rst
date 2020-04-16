@@ -30,7 +30,7 @@ But if you press :kbd:`X` a second time it will constrain to your *Transform Ori
 
    Transform Orientations selector.
 
-The Orientations options can be set through the *Transform Orientation* selector in a 3D View header.
+The Orientations options can be set through the *Transform Orientation* selector in a 3D Viewport header.
 
 In addition to the five preset options,
 you can define your own custom orientation (see `Custom Orientations`_ below).
@@ -124,7 +124,7 @@ use the *Normal* orientation of the selection.
 
    Transform Orientations panel.
 
-The *Transform Orientations* panel, found in the header of the 3D View,
+The *Transform Orientations* panel, found in the header of the 3D Viewport,
 can be used to manage transform orientations: selecting the active orientation,
 adding ("+" icon), deleting ("X" icon) and rename custom orientations.
 

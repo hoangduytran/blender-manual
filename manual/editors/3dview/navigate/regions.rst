@@ -18,11 +18,11 @@ View Clipping Region
    :Menu:      :menuselection:`View --> View Regions --> Clipping Region...`
    :Hotkey:    :kbd:`Alt-B`
 
-Allows you to define a clipping region to limit the 3D View display to a portion of 3D space.
+Allows you to define a clipping region to limit the 3D Viewport display to a portion of 3D space.
 It can assist in the process of working with complex models and scenes.
 
 Once activated, you have to draw a rectangle with the mouse,
-in the wanted 3D View. It becomes a clipping volume of four planes:
+in the wanted 3D Viewport. It becomes a clipping volume of four planes:
 
 - A right-angled `parallelepiped <https://en.wikipedia.org/wiki/Parallelepiped>`__
   (of infinite length) if your view is orthographic.
@@ -84,7 +84,7 @@ Render Region
                Clear: :kbd:`Ctrl-Alt-B`
 
 When using :ref:`rendered shading <view3d-viewport-shading>` mode,
-it can be quite slow to render the entire 3D View. To fix this,
+it can be quite slow to render the entire 3D Viewport. To fix this,
 you can define a subregion to render just a portion of the viewport
 instead of the entire viewport.
 This can be very useful for reducing render times for quick previews on an area of interest.

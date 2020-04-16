@@ -4,9 +4,9 @@ Viewport Overlays
 *****************
 
 Using the Viewport Overlays pop-over settings for the overlays can be configured.
-There is a switch to turn off all overlays for the 3D View.
+There is a switch to turn off all overlays for the 3D Viewport.
 
-The options that are visible in the pop-over depend on the mode that the 3D View is in.
+The options that are visible in the pop-over depend on the mode that the 3D Viewport is in.
 
 
 Object Mode

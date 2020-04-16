@@ -47,7 +47,7 @@ Onion Skin
 3D Editor
 ---------
 
-When creating new annotations in the 3D View, there is one tool setting.
+When creating new annotations in the 3D Viewport, there is one tool setting.
 
 Placement
    The *Placement* option determines where the line is drawn in 3D space.

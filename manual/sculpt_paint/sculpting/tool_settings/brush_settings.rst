@@ -34,7 +34,7 @@ Strength
    This setting is not available for *Grab*, *Snake Hook*, or *Rotate*.
 
    You can change the brush strength interactively by pressing :kbd:`Shift-F`
-   in the 3D View and then moving the brush and then :kbd:`LMB`.
+   in the 3D Viewport and then moving the brush and then :kbd:`LMB`.
    You can enter the size numerically also while in :kbd:`Shift-F` sizing.
 
    Strength Pressure
@@ -95,7 +95,7 @@ Sculpt Plane
       The movement takes place in the direction of average normal for all active vertices within the brush area.
       Essentially, this means that the direction is dependent on the surface beneath the brush.
    View Plane
-      Sculpting in the plane of the current 3D View.
+      Sculpting in the plane of the current 3D Viewport.
    X, Y, Z Plane
       The movement takes place in the positive direction of one of the global axes.
 

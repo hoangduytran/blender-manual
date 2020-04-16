@@ -116,9 +116,9 @@ NDOF
 ====
 
 Pan Sensitivity
-   The overall sensitivity for panning in the 3D View.
+   The overall sensitivity for panning in the 3D Viewport.
 Orbit Sensitivity
-   The overall sensitivity for orbiting in the 3D View.
+   The overall sensitivity for orbiting in the 3D Viewport.
 Deadzone
    The threshold for the amount of movement needed from
    the device's rest position for Blender to interrupt that movement.

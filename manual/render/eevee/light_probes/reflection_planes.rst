@@ -80,4 +80,4 @@ Arrow Size
    Size of the arrow showing the reflection plane normal.
 
 Show Preview Plane
-   Show the captured reflected image onto a fully reflective plane in the 3D View.
+   Show the captured reflected image onto a fully reflective plane in the 3D Viewport.

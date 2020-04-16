@@ -58,7 +58,7 @@ If the vector is created with only two vertices at the *same* XYZ location
 Having at least one vector line,
 you can add other closed support profiles that will follow this vector during the extrusions (see `Limitations`_).
 The direction of the extrusions is calculated by two determinant factors,
-the point of view in Global Space and the position of the cursor in the 3D View using Global coordinates.
+the point of view in Global Space and the position of the cursor in the 3D Viewport using Global coordinates.
 The profile and the vector must be fully selected in *Edit Mode* before you click the *Screw* button
 (see `Limitations`_).
 When you have the vector for the open profile and the other closed profiles selected, click the *Screw* button.
@@ -162,8 +162,8 @@ Continuous operations without changing the selection will repeat the operation c
 Center
    These number fields specify the center of the spin. When the tool is called for the first time,
    it will copy the XYZ location (global coordinates)
-   of the cursor presently in the 3D View to start the operation.
-   You can specify the cursor coordinates using the Transform panel in 3D View,
+   of the cursor presently in the 3D Viewport to start the operation.
+   You can specify the cursor coordinates using the Transform panel in 3D Viewport,
    and typing in the 3D Cursor Location coordinates. You can adjust these coordinates interactively and
    specify another place for the spin center during the interactive session.
    (See Fig. :ref:`fig-mesh-screw-interactive-panel`.)

@@ -85,7 +85,7 @@ Phantom Mode
 
    :Category:  Interface
    :Description: Collection management system.
-   :Location: 3D Viewport
+   :Location: 3D Viewportport
    :File: collection_manager folder
    :Author: imaginer (Ryan Inch)
    :Maintainer: imaginer

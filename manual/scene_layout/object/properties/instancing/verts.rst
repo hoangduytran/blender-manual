@@ -73,7 +73,7 @@ Now, the circle is the parent of the monkey; if you move the circle, the monkey 
 With only the circle selected, enable *Instancing Verts*;
 a monkey head should be placed at every vertex of the circle.
 
-The original monkey head at the center and the parent mesh are still shown in the 3D View but
+The original monkey head at the center and the parent mesh are still shown in the 3D Viewport but
 neither will be rendered. If the placement and rotation of your monkey head are odd,
 you might need to clear its rotation :kbd:`Alt-R`, scale :kbd:`Alt-S`,
 location :kbd:`Alt-G`, and origin :kbd:`Alt-O`.

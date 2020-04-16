@@ -24,7 +24,7 @@ Applying transform values essentially resets the values of object's location, ro
 while visually keeping the object data in-place.
 The object origin point is moved to the global origin, the rotation is cleared and scale values are set to 1.
 
-For simple cases you won't notice any difference the 3D View or rendered output,
+For simple cases you won't notice any difference the 3D Viewport or rendered output,
 yet modifiers and constraints may depend on object transformation.
 
 .. warning:: Armature Objects

@@ -15,7 +15,7 @@ Blender uses a right-angled "Cartesian" coordinate system with the Z axis pointi
 :Y axis: Front / Back
 :Z axis: Top / Bottom
 
-You can select the viewing direction for a 3D View with the *View* menu entries,
+You can select the viewing direction for a 3D Viewport with the *View* menu entries,
 :ref:`Navigation Gizmo <navigation-gizmo>`, or by pressing the hotkeys.
 
 These operators change the view to be aligned with the specified global axes:

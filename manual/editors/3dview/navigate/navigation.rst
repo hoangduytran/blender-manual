@@ -101,7 +101,7 @@ Panning
                :kbd:`Ctrl-Numpad6`, :kbd:`Ctrl-Numpad8`
 
 Moves the view up, down, left and right.
-To pan the view, hold down :kbd:`Shift` and drag :kbd:`MMB` in the 3D View.
+To pan the view, hold down :kbd:`Shift` and drag :kbd:`MMB` in the 3D Viewport.
 For discrete steps, use the hotkeys :kbd:`Ctrl-Numpad8`, :kbd:`Ctrl-Numpad2`,
 :kbd:`Ctrl-Numpad4` and :kbd:`Ctrl-Numpad6` as with orbiting
 (note: you can replace :kbd:`Ctrl` with :kbd:`Shift`).
@@ -147,7 +147,7 @@ Zoom Region
    :Hotkey:    :kbd:`Shift-B`
 
 The *Zoom Region* tool allows you to specify a rectangular region and zoom in
-so that the region fills the 3D View.
+so that the region fills the 3D Viewport.
 
 You can access this through via the shortcut :kbd:`Shift-B`,
 then :kbd:`LMB` click and drag a rectangle to zoom into.

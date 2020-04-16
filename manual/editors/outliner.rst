@@ -48,8 +48,8 @@ Clicking in empty space below the list of data-blocks will deselect all.
 .. note::
 
    By default, selecting data-blocks in the Outliner will select the respective objects,
-   bones, and sequences in the 3D View and Sequencer.
-   Selections in the 3D View and Sequencer will be synced to each Outliner.
+   bones, and sequences in the 3D Viewport and Sequencer.
+   Selections in the 3D Viewport and Sequencer will be synced to each Outliner.
    To disable selection syncing, turn off the toggle in the `filter`_ popover.
 
 Children of a data-block can also be selected by clicking the icon that is displayed to
@@ -244,7 +244,7 @@ The other options can be enabled in the *Restriction Toggles* option in the Outl
 - Holding :kbd:`Ctrl` isolates the object or collection, so they are the only ones with its value set.
 
 Visibility (eye icon)
-   Toggles the visibility of the object in the 3D View.
+   Toggles the visibility of the object in the 3D Viewport.
 Enable Collection (checkbox)
    Exclude the collection from the view layer.
    This is not really a restriction column. It is shown besides the collection icon.
@@ -315,7 +315,7 @@ Sort Alphabetically
    Sort the entries alphabetically.
 
 Sync Selection
-   Sync Outliner selection to and from the :doc:`3D View </editors/3dview/index>` and
+   Sync Outliner selection to and from the :doc:`3D Viewport </editors/3dview/index>` and
    :doc:`Sequencer </video_editing/index>` editors. Disable to manage collections, object
    relations, and scene data without changing the selection state. Selection syncing is
    only available in Scenes, View Layer, and Sequence display modes.
@@ -336,8 +336,8 @@ Object State
    Invisible
       List only the objects not visible in the viewports.
    Selected
-      Lists the object(s) that are currently selected in the 3D View.
-      See :doc:`selecting in the 3D View </scene_layout/object/selecting>` for more information.
+      Lists the object(s) that are currently selected in the 3D Viewport.
+      See :doc:`selecting in the 3D Viewport </scene_layout/object/selecting>` for more information.
    Active
       Lists only the active (often last selected) object.
 Object Contents

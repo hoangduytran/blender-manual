@@ -63,10 +63,10 @@ Display
 =======
 
 Cubemap Size
-   Display the Reflection Cubemaps present in the cache directly in the 3D View.
+   Display the Reflection Cubemaps present in the cache directly in the 3D Viewport.
 
 Irradiance Size
-   Display the Irradiance Samples present in the cache in the 3D View.
+   Display the Irradiance Samples present in the cache in the 3D Viewport.
 
 .. note::
 

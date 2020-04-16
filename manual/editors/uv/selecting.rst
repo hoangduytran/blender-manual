@@ -30,7 +30,7 @@ Select Pinned :kbd:`Shift-P`
    Selects all :ref:`pinned <bpy.ops.uv.pin>` UVs.
 Select Linked :kbd:`Ctrl-L`
    This operator selects all UVs that are connected to currently selected UVs.
-   This works similarly to the tools in 3D View.
+   This works similarly to the tools in 3D Viewport.
 Select Split :kbd:`Y`
    Cuts apart the selected UVs from the map. Only those UVs which belong to
    fully selected faces remain selected. As the name implies, this is particularly useful to
@@ -44,7 +44,7 @@ Header
 
 Sync Selection
    Turning on the *Sync Selection* button causes selection of components
-   in the 3D View to sync with their corresponding elements in the UV editor.
+   in the 3D Viewport to sync with their corresponding elements in the UV editor.
    If off only the selected faces are displayed in the UV editor.
    These two modes have very different results when transforming components in the UV editor.
 

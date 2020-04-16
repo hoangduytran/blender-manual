@@ -25,7 +25,7 @@ These previously mentioned settings get removed/renamed and the following settin
 .. rubric:: Preview
 
 Levels
-   The levels of subdivision to see in the 3D View,
+   The levels of subdivision to see in the 3D Viewport,
    this works the same as the *View* setting on the original *Subdivision Modifier*.
 
 

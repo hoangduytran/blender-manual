@@ -16,7 +16,7 @@ the coordinates match the pixels in your image with 0,0 in the located in the lo
 Panning can be done by clicking the :kbd:`MMB` and dragging.
 
 Zooming can be done by scrolling :kbd:`Wheel` up or down.
-Also, as in the 3D View, you can use :kbd:`NumpadPlus` or :kbd:`NumpadMinus` to zoom.
+Also, as in the 3D Viewport, you can use :kbd:`NumpadPlus` or :kbd:`NumpadMinus` to zoom.
 
 
 View Menu

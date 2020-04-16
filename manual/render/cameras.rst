@@ -85,7 +85,7 @@ Orthographic
 
       Note that this is effectively the only setting which applies to orthographic perspective.
       Since parallel lines do not converge in orthographic mode (no vanishing points),
-      the lens shift settings are equivalent to translating the camera in the 3D View.
+      the lens shift settings are equivalent to translating the camera in the 3D Viewport.
 
       .. figure:: /images/render_cameras_orthographic.svg
          :align: center
@@ -139,7 +139,7 @@ Clip Start and End
 
    .. seealso::
 
-      - :doc:`3D View clipping </editors/3dview/properties/sidebar>`
+      - :doc:`3D Viewport clipping </editors/3dview/properties/sidebar>`
 
 
 .. _bpy.types.CameraDOFSettings:
@@ -171,7 +171,7 @@ Focal Distance
    .. hint::
 
       Hover the mouse over the *Distance* property and press :kbd:`E` to use a special *Depth Picker*.
-      Then click on a point in the 3D View to sample the distance from that point to the camera.
+      Then click on a point in the 3D Viewport to sample the distance from that point to the camera.
 
 
 Aperture
@@ -337,7 +337,7 @@ Viewport Display
    Camera view displaying safe areas, sensor and name.
 
 Size
-   Size of the camera visualization in the 3D View. This setting has **no** effect on the render output of a camera.
+   Size of the camera visualization in the 3D Viewport. This setting has **no** effect on the render output of a camera.
    The camera visualization can also be scaled using the standard Scale :kbd:`S` transform key.
 Limits
    Shows a line which indicates *Start* and *End Clipping* values.

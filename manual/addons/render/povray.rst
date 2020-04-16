@@ -689,7 +689,7 @@ The Add menu in the 3D View allows you to add POV-Ray specific objects in additi
 
 They are mathematically defined shapes as opposed to meshes.
 The sphere, torus, cylinder or cone side will always be round and smooth when rendered,
-no matter how close you get, and regardless of their appearance in the 3D View, which is only a proxy.
+no matter how close you get, and regardless of their appearance in the 3D Viewport, which is only a proxy.
 
 These objects are the type of objects that get created when you import a POV-Ray file,
 so that ideally, you could "exchange" data back and forth between POV-Ray and Blender.
@@ -698,7 +698,7 @@ so that ideally, you could "exchange" data back and forth between POV-Ray and Bl
 Infinite Plane
 ^^^^^^^^^^^^^^
 
-The rendered plane is actually infinite, but represented by a proxy in the 3D View,
+The rendered plane is actually infinite, but represented by a proxy in the 3D Viewport,
 which is just very big, but still finite.
 Please report if you would rather have a different default scale.
 

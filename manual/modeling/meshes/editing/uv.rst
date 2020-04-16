@@ -25,7 +25,7 @@ Unwrap
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    3D View or UV Editor
+   :Editor:    3D Viewport or UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs --> Unwrap`
    :Hotkey:    :kbd:`U`
@@ -33,9 +33,9 @@ Unwrap
 Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/uv/unwrapping/seams>`.
 Useful for organic shapes.
 
-Begin by selecting all faces to be unwrapped in the 3D View. With our faces selected,
+Begin by selecting all faces to be unwrapped in the 3D Viewport. With our faces selected,
 it is now time to unwrap them.
-In the 3D View, select :menuselection:`Mesh --> UV Unwrap --> Unwrap` or
+In the 3D Viewport, select :menuselection:`Mesh --> UV Unwrap --> Unwrap` or
 :kbd:`U` and select Unwrap.
 
 .. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_unwrap-example.png
@@ -58,7 +58,7 @@ Options
 -------
 
 Blender has two ways of calculating the unwrapping.
-They can be selected in the tool setting in the tool panel in the 3D View.
+They can be selected in the tool setting in the tool panel in the 3D Viewport.
 
 Angle Based
    This method gives a good 2D representation of a mesh.
@@ -341,7 +341,7 @@ Project from View
    :Menu:      :menuselection:`UVs --> Project from View`
    :Hotkey:    :kbd:`U`
 
-Project from View takes the current view in the 3D View and flattens the mesh as it appears.
+Project from View takes the current view in the 3D Viewport and flattens the mesh as it appears.
 Use this option if you are using a picture of a real object as a UV Texture for an object that
 you have modeled. You will get stretching in areas where the model recedes away from you.
 

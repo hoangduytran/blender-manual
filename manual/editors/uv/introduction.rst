@@ -122,9 +122,9 @@ UVs
    Contains tools for :doc:`Unwrapping Meshes </modeling/meshes/uv/unwrapping/index>`
    and :doc:`Editing UVs </modeling/meshes/uv/editing>`.
 Pivot
-   Similar to working with pivot points in the 3D View.
+   Similar to working with pivot points in the 3D Viewport.
 UV Snapping
-   Similar to Snapping in the 3D View.
+   Similar to Snapping in the 3D Viewport.
 Proportional Editing
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
 Active UV Texture Map Selector

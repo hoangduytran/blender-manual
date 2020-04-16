@@ -15,7 +15,7 @@ Individual Origins
 In Object Mode
 ==============
 
-The origin of an object is shown in the 3D View by a small orange circle.
+The origin of an object is shown in the 3D Viewport by a small orange circle.
 It tells Blender the relative position of that object in 3D space.
 
 The origin does not have to be located in the center of the geometry (e.g. mesh).

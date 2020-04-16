@@ -86,7 +86,7 @@ Options
 
    Proportional Editing tool.
 
-The *Proportional Editing* mode menu is on the 3D View header.
+The *Proportional Editing* mode menu is on the 3D Viewport header.
 
 Disable :kbd:`O`, :kbd:`Alt-O`
    Proportional Editing is Off, only selected vertices will be affected.

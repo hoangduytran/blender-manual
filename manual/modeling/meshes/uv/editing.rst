@@ -325,7 +325,7 @@ Proportional Editing
    :Menu:      :menuselection:`UVs --> Proportional Editing`
    :Hotkey:    :kbd:`O`
 
-Proportional Editing is available in UV editing. The controls are the same as in the 3D View.
+Proportional Editing is available in UV editing. The controls are the same as in the 3D Viewport.
 See :doc:`Proportional Editing in 3D </editors/3dview/controls/proportional_editing>`
 for a full reference.
 
@@ -377,7 +377,7 @@ Face Mirror & Rotate UVs
 
 The orientation of the UV texture is defined by each face.
 If the image is, for example, upside down or laying on its side,
-use the :menuselection:`Face --> Rotate UVs` (in the 3D View in Face Select mode)
+use the :menuselection:`Face --> Rotate UVs` (in the 3D Viewport in Face Select mode)
 menu to rotate the UVs per face in 90-degree turns.
 
 The :menuselection:`Face --> Reverse UVs` tool mirrors the UVs per face,

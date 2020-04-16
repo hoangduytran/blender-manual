@@ -101,7 +101,7 @@ These keys are shared across editors such as the 3D Viewport, UV and Graph edito
    * - :kbd:`1` - :kbd:`3`
      - Edit mesh vertex/edge/face toggle (:kbd:`Shift` extends, :kbd:`Ctrl` expands).
    * - :kbd:`AccentGrave`
-     - 3D View navigation pie menu.
+     - 3D Viewport navigation pie menu.
    * - :kbd:`Ctrl-AccentGrave`
      - Toggle gizmos.
    * - :kbd:`Shift-AccentGrave`

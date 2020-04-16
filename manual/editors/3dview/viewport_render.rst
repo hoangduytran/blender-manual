@@ -9,7 +9,7 @@ This allows you to inspect your animatic
 (for object movements, alternate angles, etc.).
 
 This can also be used to preview your animations --
-in the event your scene is too complex for your system to play back in real-time in the 3D View.
+in the event your scene is too complex for your system to play back in real-time in the 3D Viewport.
 
 You can use *Viewport Render* to render both images and animations.
 

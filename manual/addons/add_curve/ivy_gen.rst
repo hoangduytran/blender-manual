@@ -27,11 +27,11 @@ Interface
    :align: right
    :width: 220px
 
-Located in the :menuselection:`3D View --> Sidebar --> Create tab`.
+Located in the :menuselection:`3D Viewport --> Sidebar --> Create tab`.
 
-Located in the :menuselection:`3D View --> Operator`.
+Located in the :menuselection:`3D Viewport --> Operator`.
 
-The Update Ivy operator is separate from the main menu and appears in the 3D View.
+The Update Ivy operator is separate from the main menu and appears in the 3D Viewport.
 You can adjust settings in the panel and press the *Update* button to update parameters.
 
 

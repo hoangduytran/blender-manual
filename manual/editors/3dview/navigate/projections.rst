@@ -11,7 +11,7 @@ Projections
    :Hotkey:    :kbd:`Numpad5`
 
 This operator changes the projection of the viewport camera.
-Each 3D View supports two different types of projection.
+Each 3D Viewport supports two different types of projection.
 These are demonstrated in the Fig. below.
 
 .. list-table::
@@ -40,7 +40,7 @@ Options
 
 To change toggle between the two projections for the 3D Viewport, select
 :menuselection:`View --> Perspective/Orthographic` or use the shortcut
-:kbd:`Numpad5`. Changing the projection for a 3D View does not affect
+:kbd:`Numpad5`. Changing the projection for a 3D Viewport does not affect
 the way the scene will be rendered. Rendering is in perspective by default.
 If you need to create an orthographic rendering, select the camera, go to
 the Camera tab and press the *Orthographic* button in the *Lens* panel.

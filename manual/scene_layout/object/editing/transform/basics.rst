@@ -17,7 +17,7 @@ Move
 
 In Object Mode, the move option lets you move objects.
 Translation means changing location of objects. It also lets you move any elements
-that make up the object within the 3D space of the active 3D View.
+that make up the object within the 3D space of the active 3D Viewport.
 
 Pressing :kbd:`G` activates "Move" transformation mode. The selected object
 or element then moves freely according to the mouse pointer's location and camera.
@@ -155,7 +155,7 @@ reset the object or element to its original state.
 Adjust Last Operation
 ---------------------
 
-In the case of the 3D View, there is the possibility to tweak the operation once
+In the case of the 3D Viewport, there is the possibility to tweak the operation once
 accepted, using the specific :ref:`ui-undo-redo-adjust-last-operation` panel corresponding to the tool.
 
 Value

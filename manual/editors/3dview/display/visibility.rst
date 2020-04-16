@@ -4,7 +4,7 @@ Object Type Visibility
 **********************
 
 In the Object Type Visibility pop-over the visibility and selectability per type of object can be specified.
-This will limit the visibility and selectability per 3D View.
+This will limit the visibility and selectability per 3D Viewport.
 
 The object types that can be changed are:
 
