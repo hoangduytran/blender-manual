@@ -65,7 +65,7 @@ def gen_htaccess(app, lang, version):
 
 def read_htaccess():
     current_dir = os.path.abspath(os.path.dirname(__file__))
-    ht_fn = os.path.normpath(os.path.join(current_dir, "..", ".htaccess"))
+    ht_fn = os.path.normpath(os.path.join(current_dir, "..", "resources", ".htaccess"))
 
     try:
         with open(ht_fn, "r", encoding="utf-8") as f:
