@@ -32,7 +32,7 @@ def html_page_context(app, pagename, templatename, context, doctree):
             logger = logging.getLogger(__name__)
             logger.error('context override')
 
-        gen_htaccess(context['language'], version_tag)
+        gen_htaccess(app, context['language'], version_tag)
 
 
 def read_versions():
@@ -50,18 +50,38 @@ def read_versions():
         return None
 
 
-def gen_htaccess(lang, version):
-    text = """
-ErrorDocument 404 /manual/{0}/{1}/404.html
-RedirectMatch \"^/manual/{0}/{1}/addons/import_export/io_(.*)\" \"/manual/{0}/{1}/addons/import_export/$1\"
-""".format(lang, version)
+def gen_htaccess(app, lang, version):
+    text = read_htaccess()
+    if text:
+        text = text.format(lang=lang, version=version)
+        try:
+            build_dir = app.outdir
+        except AttributeError as err:
+            logger = logging.getLogger(__name__)
+            logger.warning("404.py: Sphinx API change: {1}".format(err))
+        else:
+            write_htaccess(build_dir, text)
 
-    write_htaccess(text)
 
-
-def write_htaccess(text):
+def read_htaccess():
     current_dir = os.path.abspath(os.path.dirname(__file__))
     ht_fn = os.path.normpath(os.path.join(current_dir, "..", ".htaccess"))
+
+    try:
+        with open(ht_fn, "r", encoding="utf-8") as f:
+            text = f.read()
+
+    except (IOError, OSError) as err:
+        logger = logging.getLogger(__name__)
+        logger.warning("{0}: cannot read: {1}".format(ht_fn, err))
+        return None
+    else:
+        return text
+
+
+def write_htaccess(build_dir, text):
+    current_dir = os.path.abspath(os.path.dirname(__file__))
+    ht_fn = os.path.normpath(os.path.join(current_dir, "..", build_dir, ".htaccess"))
 
     try:
         with open(ht_fn, "w", encoding="utf-8") as f:
