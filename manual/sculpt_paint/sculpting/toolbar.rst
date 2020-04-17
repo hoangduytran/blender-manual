@@ -6,81 +6,81 @@ Toolbar
 .. figure:: /images/sculpt-paint_sculpting_tools_brushes.png
    :align: right
 
-Draw
+:doc:`/sculpt_paint/sculpting/tools/draw`
    Moves vertices inward or outward based on the average normal.
 
-Draw Sharp
+:doc:`/sculpt_paint/sculpting/tools/draw_sharp`
    Move vertices inward or outward based the original coordinates
    and uses the *Sharper* :doc:`Falloff </sculpt_paint/brush/falloff>`.
 
-Clay
+:doc:`/sculpt_paint/sculpting/tools/clay`
    Similar to the *Draw* brush, but includes settings to adjust the plane on which the brush acts.
 
-Clay Strips
+:doc:`/sculpt_paint/sculpting/tools/clay_strips`
    The same as the *Clay* brush, but it uses a cube to define the brush area of influence rather than a sphere.
 
-Layer
+:doc:`/sculpt_paint/sculpting/tools/layer`
    Moves all vertices an exact height creating a flat layer.
 
-Inflate
+:doc:`/sculpt_paint/sculpting/tools/inflate`
    Displaces the mesh in the direction of the vertex normals.
 
-Blob
+:doc:`/sculpt_paint/sculpting/tools/blob`
    Pushes mesh outward or inward into a spherical shape.
 
-Crease
+:doc:`/sculpt_paint/sculpting/tools/crease`
    Creates sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.
 
-Smooth
+:doc:`/sculpt_paint/sculpting/tools/smooth`
    Eliminates irregularities in the mesh by averaging the positions of the vertices.
 
-Flatten
+:doc:`/sculpt_paint/sculpting/tools/flatten`
    Smooths vertices to a flay plain by finding an average height and moves vertices towards that height.
 
-Fill
+:doc:`/sculpt_paint/sculpting/tools/fill`
    Brings vertices below the brush plane upwards.
 
-Scrape
+:doc:`/sculpt_paint/sculpting/tools/scrape`
    Brings vertices above the plane downwards.
 
-Multiplane Scrape
+:doc:`/sculpt_paint/sculpting/tools/multiplane_scrape`
    Scrapes the mesh with two angled planes at the same time, producing a sharp edge between them.
 
-Pinch :kbd:`P`
+:doc:`/sculpt_paint/sculpting/tools/pinch`
    Pulls vertices towards the center of the brush.
 
-Grab
+:doc:`/sculpt_paint/sculpting/tools/grab`
    Selects a group of vertices and pulls them to follow the mouse.
 
-Elastic Deform
+:doc:`/sculpt_paint/sculpting/tools/elastic_deform`
    Used to simulate realistic deformations such as grabbing or twisting of :term:`elastic` objects.
 
-Snake Hook :kbd:`K`
+:doc:`/sculpt_paint/sculpting/tools/snake_hook`
    Pulls vertices along with the movement of the brush to create long, snake-like forms.
 
-Thumb
+:doc:`/sculpt_paint/sculpting/tools/thumb`
    Flattens the mesh in the brush area, while moving it in the direction of the brush stroke.
 
-Pose
-   This brush is used to pose a model simulating an armature-like deformation.
+:doc:`/sculpt_paint/sculpting/tools/pose`
+   This brush is used to pose a model simulating an armature-like deformations.
 
-Nudge
+:doc:`/sculpt_paint/sculpting/tools/nudge`
    Moves vertices in the direction of the brush stroke.
 
-Rotate
+:doc:`/sculpt_paint/sculpting/tools/rotate`
    Rotates vertices within the brush in the direction the cursor is moved.
 
-Slide Relax
+:doc:`/sculpt_paint/sculpting/tools/slide_relax`
    This brush slides the topology of the mesh in the direction of the stroke
    without changing the geometrical shape of the mesh.
 
-Simplify
+:doc:`/sculpt_paint/sculpting/tools/simplify`
    Cleans up geometry by collapsing short edges.
 
-Mask
+:doc:`/sculpt_paint/sculpting/tools/mask`
    Lets you select mesh parts to be unaffected by other brushes by painting vertex colors.
 
-Mesh Filter
+:doc:`/sculpt_paint/sculpting/tools/mesh_filter`
    Applies a deformation to all vertices in the mesh at the same time.
 
 Move
