@@ -40,7 +40,7 @@ Selecting and Activating
    Selected data-blocks with the Cube active.
 
 Selection is done with :kbd:`LMB` (and/or the `context menu`_, see below) on the row of
-a data-block outside the name/icon area. Single selections will also activate the data-block.
+a data-block. Single selections will also activate the data-block.
 The rows of selected data-blocks are highlighted blue, with the active data-block highlighted in a lighter blue.
 
 Clicking in empty space below the list of data-blocks will deselect all.
@@ -222,7 +222,7 @@ Show Active :kbd:`Period`
 Show Hierarchy :kbd:`Home`
    To collapse all levels of the tree.
 Show/Hide One Level :kbd:`NumpadPlus`/ :kbd:`NumpadMinus`
-   Expand one level down in the tree :kbd:`NumpadPlus` and :kbd:`NumpadMinus` to collapse.
+   Expand one level down in the tree or collapse one level using the keyboard shortcuts.
 
 .. note::
 

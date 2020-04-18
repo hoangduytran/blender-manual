@@ -95,9 +95,6 @@ Motion Threshold
       Unlike the click/drag distinction, this is used to detect small movements
       for example, picking selection cycles through elements near the cursor.
       Once the cursor moves past this threshold, selection stops cycling and picks the closest item.
-Double Click Speed
-   The time in ms for a double-click to be recognized.
-
 
 Tablet
 ======

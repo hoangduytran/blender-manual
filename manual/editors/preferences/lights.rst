@@ -13,7 +13,7 @@ Lights
 Studio Lights
 =============
 
-*Studio Lights* are used to illuminate 3D viewport during *Solid View* and will not be rendered.
+*Studio Lights* are used to illuminate the 3D viewport during *Solid View* and will not be rendered.
 
 Unlike lights in the scene, the lighting direction follows the viewport orientation.
 

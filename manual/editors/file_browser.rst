@@ -51,12 +51,13 @@ Navigation icon buttons
 Create Directory :kbd:`I`
    Will ask you to confirm and create a new directory inside current one,
    scroll to it in the main view, and let you enter its name.
-Display type
+Display mode
    Controls how files are displayed.
 
-   - *Short List* only shows file names.
-   - *Long List* adds date/time and size information.
+   - *Vertical List* displays files and folders in a vertical list.
+   - *Horizontal List*  displays files and folders in a horizontal list.
    - *Thumbnails* shows :ref:`previews <file_browser-previews>`.
+  
 Sorting
    Sorts items by one of the four proposed methods (alphabetically, by types, by dates, or by size):
 Show hidden :kbd:`H`

@@ -81,15 +81,17 @@ Excluded Paths
 
 File Browser
 ============
+.. figure:: /images/editors_preferences_save-load_filter.png
+   :align: right
+
+   File extension filter.
 
 Filter File Extensions
    By activating this, the file region in the File Browser will only show appropriate files
    (i.e. blend-files when loading a complete Blender setting).
    The selection of file types may be changed in the file region.
 
-   .. figure:: /images/editors_preferences_save-load_filter.png
 
-      File extension filter.
 
 Hide Dot File/Data-blocks
    Hide file which start with ``.`` on File Browsers and ID selector.
@@ -104,5 +106,3 @@ Hide Recent Locations
    which displays recently accessed folders.
 Hide System Bookmarks
    Hide System Bookmarks in the *File Browser*.
-Show Thumbnails
-   Default to the thumbnail view of files when using the :doc:`File Browser </editors/file_browser>`.
