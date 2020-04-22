@@ -70,8 +70,8 @@ You can use the widget by dragging one of the three colored axes with :kbd:`LMB`
 The transformation will be locked to the clicked axis.
 
 Dragging the small white circle allows free transformation.
-In case of the rotation gizmo this starts a :ref:`trackball rotation <view3d-transform-trackball>`.
-The rotation gizmo contains another big outer white circle to activate free transformation.
+In case of the rotation gizmo a highlighted circle will apear when you hover your mouse over the object.
+This will activate :ref:`trackball rotation <view3d-transform-trackball>`.
 
 Releasing the mouse confirms the operation (*confirm on release*).
 

@@ -9,12 +9,12 @@ Make Link
    :class: refbox
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Make Link...`
+   :Menu:      :menuselection:`Object --> Make Links`
    :Hotkey:    :kbd:`Ctrl-L`
 
 Links objects between scenes or data-blocks of the active object to all selected objects.
 In some case (i.e. Object Data, Modifier) the target objects must be
-of the same type than the active one or capable of receiving the data.
+of the same type as the active one or capable of receiving the data.
 If targets already have some data linked to them, it will be unlinked first.
 
 Objects to Scene

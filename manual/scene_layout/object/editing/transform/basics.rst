@@ -67,7 +67,7 @@ The angle of rotation is displayed in the footer (at the upper left corner) of t
 Trackball Rotation
 ------------------
 
-A free rotation mode. Press :kbd:`R R` to enable Trackball rotation.
+A free rotation mode. Press :kbd:`R` twice to enable Trackball rotation.
 
 
 .. _bpy.ops.transform.resize:
@@ -148,7 +148,7 @@ reset the object or element to its original state.
 
 .. seealso::
 
-   Using combination of shortcuts gives you more control over your
+   Using a combination of shortcuts gives you more control over your
    transformation. See :doc:`Transform Control </scene_layout/object/editing/transform/control/index>`.
 
 
@@ -172,15 +172,6 @@ Orientation
 Proportional Editing, Falloff, Size
    Activates/deactivates *Proportional Editing* and configures the *Falloff* type and *Size* of
    the :doc:`/editors/3dview/controls/proportional_editing` tool.
-
-.. _modeling_transform_edit-texture-space:
-
-Edit Texture Space :kbd:`Shift-T`:kbd:`Shift-Alt-T`
-   This checkbox lets you apply the transformation on the :ref:`Texture Space <properties-texture-space>`,
-   instead of the object or element itself. Only available in translation and scale.
-   This option is also available via the shortcuts, :kbd:`Shift-T` (move) and :kbd:`Shift-Alt-T` (scale).
-Confirm on Release
-   Shows if either the operation was drag-and-release or move-and-confirm.
 
 
 Workflow

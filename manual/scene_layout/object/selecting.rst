@@ -37,49 +37,6 @@ hold :kbd:`Alt`, while confirming.
 Select Menu
 ===========
 
-All :kbd:`A`
-   Select all.
-None :kbd:`Alt-A`
-   Select none.
-Inverse :kbd:`Ctrl-I`
-   Selects all the geometry that is not selected, and deselect currently selected components.
-
-------------------------
-
-:ref:`Box Select <tool-select-box>` :kbd:`B`
-   Interactive box selection.
-:ref:`Circle Select <tool-select-circle>` :kbd:`C`
-   Interactive circle selection.
-
-------------------------
-
-`Select All by Type`_
-   Select objects based on their type.
-`Select Active Camera`_
-   Select the viewport's active camera.
-`Mirror Selection`_
-   Select mirrored objects based on their name.
-`Select Random`_
-   Selects a random object, based on a percentage value.
-
-------------------------
-
-`Select More/Less`_
-   Select objects based on their parent child relationships.
-
-------------------------
-
-`Select Grouped`_
-   Select objects based on matching properties to the active object.
-`Select Linked`_
-   Select objects sharing data with the active object.
-`Select Pattern`_
-   Select objects by pattern matching their name.
-
-
-Selection Tools
-===============
-
 .. _bpy.ops.object.select_all:
 
 Select All
@@ -120,39 +77,14 @@ Invert Selection
 
 Toggle the selection state of all visible objects.
 
+------------------------
 
-.. _bpy.ops.object.select_random:
+:ref:`Box Select <tool-select-box>` :kbd:`B`
+   Interactive box selection.
+:ref:`Circle Select <tool-select-circle>` :kbd:`C`
+   Interactive circle selection.
 
-Select Random
--------------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Object and Edit Modes
-   :Menu:      :menuselection:`Select --> Select Random`
-
-Randomly selects unselected objects based on percentage probability.
-The percentage can be modified in the *Adjust Last Operation* panel.
-It is important to note that the percentage represents the likelihood of
-an unselected object being selected and not the percentage amount of objects
-that will be selected.
-
-
-.. _bpy.ops.object.select_mirror:
-
-Mirror Selection
-----------------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      All Modes
-   :Menu:      :menuselection:`Select --> Mirror Selection`
-
-Select the Mirror objects of the selected object,
-based on their names, e.g. "sword.L" and "sword.R".
-
+------------------------
 
 .. _bpy.ops.object.select_by_type:
 
@@ -184,6 +116,39 @@ Select Active Camera
 
 Selects the active camera, this can be used in a complicated scene to easily find the active camera.
 
+.. _bpy.ops.object.select_mirror:
+
+Mirror Selection
+----------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      All Modes
+   :Menu:      :menuselection:`Select --> Mirror Selection`
+
+Select the Mirror objects of the selected object,
+based on their names, e.g. "sword.L" and "sword.R".
+
+.. _bpy.ops.object.select_random:
+
+Select Random
+-------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Object and Edit Modes
+   :Menu:      :menuselection:`Select --> Select Random`
+
+Randomly selects unselected objects based on percentage probability.
+The percentage can be modified in the *Adjust Last Operation* panel.
+It is important to note that the percentage represents the likelihood of
+an unselected object being selected and not the percentage amount of objects
+that will be selected.
+
+
+------------------------
 
 .. _bpy.ops.object.select_more:
 .. _bpy.ops.object.select_less:
@@ -214,6 +179,7 @@ Extend Parent
 Extend Child
    Extends the selection to the immediate children of the currently selected objects.
 
+------------------------
 
 .. _bpy.ops.object.select_grouped:
 

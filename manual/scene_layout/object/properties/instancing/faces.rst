@@ -23,7 +23,7 @@ This tool creates the parent object (instancer) with faces where the objects wer
 then it uses *Instancing Faces* to put instances at the location of every created face.
 
 You can go back from *Instancing Faces* to multiple linked objects using
-:menuselection:`Object --> Apply --> Make Instances Real`, :kbd:`Shift-Ctrl-A`.
+:menuselection:`Object --> Apply --> Make Instances Real`, :kbd:`Ctrl-A`.
 
 .. seealso:: Example blend-file
 
@@ -36,7 +36,7 @@ Basic Usage
 
 In this example we will use a UV sphere with an extruded "north pole" as our base object and
 a cube as our parent mesh. To parent the sphere to the cube, in *Object Mode*,
-first :kbd:`RMB` select the sphere, then :kbd:`Shift-RMB` select the cube
+first :kbd:`LMB` select the sphere, then :kbd:`Shift-LMB` select the cube
 (order is very important here), and finally :kbd:`Ctrl-P` to parent.
 
 .. list-table::

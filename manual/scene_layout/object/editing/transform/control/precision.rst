@@ -52,10 +52,8 @@ Press :kbd:`G`, :kbd:`R` or :kbd:`S` and then hold either :kbd:`Ctrl`,
 With the Transform Gizmo
 ------------------------
 
-Hold :kbd:`Ctrl`, :kbd:`Shift` or :kbd:`Shift-Ctrl` and click on the appropriate
-gizmo handle. Then move the mouse in the desired direction.
-The reverse action will also work i.e. clicking the gizmo handle and
-then holding the shortcut key for precision control.
+Select the gizmo handle then while moving the mouse hold :kbd:`Ctrl`, :kbd:`Shift` or :kbd:`Shift-Ctrl`
+to activate precision control or snapping.
 
 .. seealso::
 

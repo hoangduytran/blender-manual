@@ -64,7 +64,7 @@ our parent mesh.
           Instanced monkeys on Verts.
 
 First, in *Object Mode*,
-select the base object and :kbd:`Shift-RMB` to add the circle to the selection
+select the base object and :kbd:`Shift-LMB` to add the circle to the selection
 (order is very important here),
 and :kbd:`Ctrl-P` or :menuselection:`Object --> Parent --> Object`
 to parent the base object to the circle.
@@ -76,7 +76,7 @@ a monkey head should be placed at every vertex of the circle.
 The original monkey head at the center and the parent mesh are still shown in the 3D Viewport but
 neither will be rendered. If the placement and rotation of your monkey head are odd,
 you might need to clear its rotation :kbd:`Alt-R`, scale :kbd:`Alt-S`,
-location :kbd:`Alt-G`, and origin :kbd:`Alt-O`.
+location :kbd:`Alt-G`, and origin :menuselection:`Object --> Clear --> Origin`.
 
 
 Rearranging
@@ -100,7 +100,7 @@ enabling *Align to Vertex Normal* in the *Instancing* panel.
 This will rotate all base objects according to the vertex normals of the parent mesh.
 
 To change the orientation of the instanced objects, select the base object and
-in the :menuselection:`Object --> Relations extras` panel change the *Tracking Axes*.
+in the :menuselection:`Object --> Relations` panel change the *Tracking Axes*.
 
 .. list-table:: Output of various orientations.
 
@@ -160,7 +160,7 @@ was adapted to the vertex normals of the parent mesh
 As in the previous example, the shape and proportions of the arrangement can now be tweaked.
 
 To turn all instanced geometry into real objects, simply select the icosphere and
-:menuselection:`Object --> Apply --> Make Instances Real`, :kbd:`Shift-Ctrl-A`.
+:menuselection:`Object --> Apply --> Make Instances Real`, :kbd:`Ctrl-A`.
 To make the icosphere and the tentacle a single object,
 make sure they are all selected and go to :menuselection:`Object --> Join`, :kbd:`Ctrl-J`.
 
