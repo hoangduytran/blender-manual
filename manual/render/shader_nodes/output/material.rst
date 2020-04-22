@@ -35,7 +35,9 @@ Displacement
 Properties
 ==========
 
-This node has no properties.
+Target Render Engine
+   An option to select which render engine the input materials are used for.
+
 
 
 Outputs
