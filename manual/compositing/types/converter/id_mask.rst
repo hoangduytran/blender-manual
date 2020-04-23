@@ -37,11 +37,6 @@ Alpha
    The mask is white where the object is and black where it is not.
    If the object is transparent, the alpha mask represent that with gray values.
 
-.. note::
-
-   In Blender Internal if a transparent object is in front of another,
-   the mask will not reflect partial visibility of the object behind.
-
 
 Setup
 =====

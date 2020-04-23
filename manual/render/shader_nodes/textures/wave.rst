@@ -21,7 +21,7 @@ Vector
 Scale
    Overall texture scale.
 Distortion
-   Amount of distortion of the wave (similar to the Marble texture in Blender Internal).
+   Amount of distortion of the wave.
 Detail
    Amount of distortion noise detail.
 Detail Scale

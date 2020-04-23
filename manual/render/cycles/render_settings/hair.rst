@@ -10,7 +10,7 @@ Hair
 
 These are global settings that apply to all instances of hair systems.
 The resolution of the strands is controlled by the step values in particle settings.
-Each hair system uses the material identified in the particle settings in the same way as Blender Internal.
+Each hair system uses the material identified in the particle settings.
 
 Use Hair
    Enables rendering of hair particle systems.
