@@ -36,8 +36,8 @@ Remove from Collection :kbd:`Ctrl-Alt-G`
    Remove the selected objects from a collection.
    If the object belongs to more one collection a pop-up lets you select the collection and
    an option to remove it from all collections.
-Remove from All Unlinked Collections :kbd:`Shift-Ctrl-Alt-G`
-   Remove the selected objects from all collections not used in a scene.
+Remove from All Collections :kbd:`Shift-Ctrl-Alt-G`
+   Remove the selected objects from all collections.
 Add Selected to Active Collection :kbd:`Shift-Ctrl-G`
    Adds the selected objects to the collections to which the active object belongs.
 Remove Selected from Active Collection :kbd:`Shift-Alt-G`
