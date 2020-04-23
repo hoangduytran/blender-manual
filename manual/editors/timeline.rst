@@ -57,6 +57,7 @@ Playhead
 The *Playhead* is the blue vertical line with the current frame number at the top.
 
 .. figure:: /images/editors_timeline_cursor.png
+   :align: right
 
    Playhead.
 
@@ -116,8 +117,6 @@ Sync Mode
       :align: right
 
       3D Viewport red FPS.
-
-      60:54.75
 
    When you play an animation, the frame rate is displayed at the top left of the 3D Viewport.
    If the scene is detailed and playback is slower than the set
