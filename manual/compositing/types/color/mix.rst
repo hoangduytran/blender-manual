@@ -90,6 +90,10 @@ Difference
 Darken
    With the colors set here, it's like looking at the world through rose-colored glasses.
 
+.. note::
+
+   Only add, subtract, multiply and divide are suitable for :term:`Scene Referenced` images.
+
 
 Contrast Enhancement
 --------------------
