@@ -10,6 +10,7 @@
    mirror.rst
    duplicate.rst
    extrude.rst
+   merge.rst
    split.rst
    separate.rst
    bisect.rst

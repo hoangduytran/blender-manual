@@ -1,9 +1,9 @@
 .. _bpy.ops.mesh.merge:
 .. _vertex-merging:
 
-**************
-Merge Vertices
-**************
+*****
+Merge
+*****
 
 .. admonition:: Reference
    :class: refbox
