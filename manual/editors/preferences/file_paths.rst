@@ -50,7 +50,7 @@ Scripts
 
    .. note::
 
-      Blender will need to be restarted for all changes to the users scripts to take effect.
+      You have to restart Blender for all changes to the users scripts to take effect.
 
 Sounds
    Default location to browse for sound files.

@@ -76,11 +76,11 @@ Texture Time Out
    Garbage Collection Rate
       Number of seconds between each run of the GL texture garbage collector.
 VBO Time Out
-   Time since last access of a GL Vertex buffer object in seconds after which it is freed
+   Time since last access of a GL vertex buffer object (VBO) in seconds after which it is freed
    (set to 0 to keep VBO allocated).
 
    Garbage Collection Rate
-      Number of seconds between each run of the GL Vertex buffer object garbage collector.
+      Number of seconds between each run of the GL vertex buffer object garbage collector.
 
 
 .. _prefs-system-sound:
@@ -107,8 +107,7 @@ Audio Device
       Used for 3D source support by speaker objects.
 
 Channels
-   Sets the audio channel count. Available options are:
-   *Mono*, *Stereo*, *4 Channels*, *5.1 Surround*, *7.1 Surround*.
+   Sets the audio channel count.
 Mixing Buffer
    Sets the number of samples used by the audio mixing buffer.
    Higher buffer sizes can cause latency issues,

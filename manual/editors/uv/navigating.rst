@@ -7,7 +7,7 @@ The UV Editor has a 2D cursor. Its position can be changed by :kbd:`LMB` clickin
 while the cursor tool is active. You can also manually adjust its position in the Sidebar region.
 The range by default is ranges from 0.0 to 1.0 starting from the lower left corner.
 By enabling :ref:`Pixel Coordinates <bpy.types.SpaceUVEditor.show_pixel_coords>`,
-the coordinates match the pixels in your image with 0,0 in the located in the lower left corner.
+the coordinates match the pixels in your image with XY(0, 0) located in the lower left corner.
 
 
 2D Viewport

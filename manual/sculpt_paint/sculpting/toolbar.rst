@@ -20,7 +20,7 @@ Toolbar
    The same as the *Clay* brush, but it uses a cube to define the brush area of influence rather than a sphere.
 
 :doc:`/sculpt_paint/sculpting/tools/layer`
-   Moves all vertices an exact height creating a flat layer.
+   Moves all vertices to an exact height creating a flat layer.
 
 :doc:`/sculpt_paint/sculpting/tools/inflate`
    Displaces the mesh in the direction of the vertex normals.
@@ -35,7 +35,7 @@ Toolbar
    Eliminates irregularities in the mesh by averaging the positions of the vertices.
 
 :doc:`/sculpt_paint/sculpting/tools/flatten`
-   Smooths vertices to a flay plain by finding an average height and moves vertices towards that height.
+   Smooths vertices to a flat plain by finding an average height and moves vertices towards that height.
 
 :doc:`/sculpt_paint/sculpting/tools/fill`
    Brings vertices below the brush plane upwards.

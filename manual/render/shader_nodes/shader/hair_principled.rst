@@ -19,8 +19,8 @@ easy-to-use shader for rendering hair and fur.
 
    Realistic hair should have a minimum of variance between each strand.
    The shader allows for this by specifying two values, *Random Color*
-   and *Random Roughness*, which remap the specified Melanin/Roughness
-   values to the range :math:`Color/Roughness \pm Randomization\%`.
+   and *Random Roughness*, which remap the specified Melanin/Roughness values to
+   the range :math:`Color/Roughness \pm Randomization\%`.
 
 
 Inputs
@@ -200,7 +200,7 @@ Color Parametrization
       The quantity is specified in the *Melanin* input, and the ratio between them in *Melanin Redness*.
       Increasing concentrations darken the hair (the following are with *Melanin Redness* :math:`1`):
 
-      - White (Melanin :math:`0`),
+      - White (Melanin :math:`0`)
       - Blonde (Melanin :math:`0.25`)
       - Reddish (Melanin :math:`0.5`)
       - Brown (Melanin :math:`0.75`)
@@ -209,11 +209,10 @@ Color Parametrization
       Additionally, the *Tint* inputs allows to dye the hair with the desired color.
 
    Absorption coefficient
-      Specifies the attenuation coefficient :math:`\sigma_{a}`, as applied by the
-      `Beer-Lambert law
+      Specifies the attenuation coefficient :math:`\sigma_{a}`, as applied by the `Beer-Lambert law
       <https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law#Expression_with_attenuation_coefficient>`__.
-      This mode is intended mainly for technical users who want to use
-      coefficients from the literature without any sort of conversion.
+      This mode is intended mainly for technical users who want to use coefficients from the literature
+      without any sort of conversion.
 
 
 Outputs

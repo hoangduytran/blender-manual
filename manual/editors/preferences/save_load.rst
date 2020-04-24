@@ -81,12 +81,11 @@ Excluded Paths
 
 File Browser
 ============
+
 Filter File Extensions
    By activating this, the file region in the File Browser will only show appropriate files
    (i.e. blend-files when loading a complete Blender setting).
    The selection of file types may be changed in the file region.
-
-
 
 Hide Dot File/Data-blocks
    Hide file which start with ``.`` on File Browsers and ID selector.

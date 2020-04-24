@@ -41,8 +41,9 @@ Text
 Run Script (play icon)
    Executes the text as a Python script :kbd:`Alt-P`. See `Template Menu`_.
 Show
-   The following three buttons toggle display options:
-   line numbers, word-wrap text and syntax highlighting.
+   Toggle display options.
+
+   Line Numbers, Word Wrap, Syntax Highlighting
 Script Node Update (refresh icon)
    When an `OSL-file <https://github.com/imageworks/OpenShadingLanguage>`__
    is opened, this updates the :ref:`Shader Script <bpy.types.ShaderNodeScript>` node

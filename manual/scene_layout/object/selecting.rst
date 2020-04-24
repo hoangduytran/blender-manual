@@ -59,7 +59,7 @@ Deselect All
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection:`Select --> None`,
+   :Menu:      :menuselection:`Select --> None`
    :Hotkey:    :kbd:`Alt-A`
 
 Deselect all objects, but the active object stays the same.
@@ -72,19 +72,37 @@ Invert Selection
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection:`Select --> Invert`,
+   :Menu:      :menuselection:`Select --> Invert`
    :Hotkey:    :kbd:`Ctrl-I`
 
 Toggle the selection state of all visible objects.
 
-------------------------
 
-:ref:`Box Select <tool-select-box>` :kbd:`B`
-   Interactive box selection.
-:ref:`Circle Select <tool-select-circle>` :kbd:`C`
-   Interactive circle selection.
+Box Select
+------------
 
-------------------------
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      All Modes
+   :Menu:      :menuselection:`Select --> Box Select`
+   :Hotkey:    :kbd:`B`
+
+Interactive :ref:`box selection <tool-select-box>`.
+
+
+Circle Select
+---------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      All Modes
+   :Menu:      :menuselection:`Select --> Circle Select`
+   :Hotkey:    :kbd:`C`
+
+Interactive :ref:`circle selection <tool-select-circle>`.
+
 
 .. _bpy.ops.object.select_by_type:
 
@@ -114,7 +132,8 @@ Select Active Camera
    :Mode:      Object Mode
    :Menu:      :menuselection:`Select --> Select Active Camera`
 
-Selects the active camera, this can be used in a complicated scene to easily find the active camera.
+Selects the active camera, this is especially handy in complex scene.
+
 
 .. _bpy.ops.object.select_mirror:
 
@@ -130,6 +149,7 @@ Mirror Selection
 Select the Mirror objects of the selected object,
 based on their names, e.g. "sword.L" and "sword.R".
 
+
 .. _bpy.ops.object.select_random:
 
 Select Random
@@ -143,12 +163,10 @@ Select Random
 
 Randomly selects unselected objects based on percentage probability.
 The percentage can be modified in the *Adjust Last Operation* panel.
-It is important to note that the percentage represents the likelihood of
+It is important to note that the percentage is the likelihood of
 an unselected object being selected and not the percentage amount of objects
 that will be selected.
 
-
-------------------------
 
 .. _bpy.ops.object.select_more:
 .. _bpy.ops.object.select_less:
@@ -179,7 +197,6 @@ Extend Parent
 Extend Child
    Extends the selection to the immediate children of the currently selected objects.
 
-------------------------
 
 .. _bpy.ops.object.select_grouped:
 

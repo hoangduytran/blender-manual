@@ -15,7 +15,7 @@ Make Link
 Links objects between scenes or data-blocks of the active object to all selected objects.
 In some case (i.e. Object Data, Modifier) the target objects must be
 of the same type as the active one or capable of receiving the data.
-If targets already have some data linked to them, it will be unlinked first.
+If targets already have data linked to them, it will be unlinked first.
 
 Objects to Scene
    Links the selected objects into a different scene than the current one.

@@ -7,7 +7,7 @@ Relations
 *********
 
 Parent
-   The object the the selected object is parented too.
+   The object the selected object is parented too.
 Parent Type
    The type of parenting used. See :doc:`parenting </scene_layout/object/editing/parent>`
    for information on the different types.
@@ -21,4 +21,4 @@ Up Axis
 
 Pass Index
    Defines the index the object will have in the Object Index render pass. See :doc:`passes </render/layers/passes>`
-   and :doc:`ID mask </compositing/types/converter/id_mask>` for more informaiton.
+   and :doc:`ID mask </compositing/types/converter/id_mask>` for more information.

@@ -57,7 +57,7 @@ is stored in a hidden parent inverse matrix. By using that, the location, rotati
 scale properties of the child can continue to be effectively interpreted in world space,
 as long as the parent doesn't move.
 
-For parenting without assigning the matrix, select the "without inverse" option in the :kbd:`Ctrl-P` pop-up menu.
+For parenting without assigning the matrix, select the *Without Inverse* option in the :kbd:`Ctrl-P` pop-up menu.
 This creates an alternative parent-child-relationship where child object's properties are
 evaluated in the parent's coordinate system. This is the better choice for CAD purposes,
 for example.
@@ -234,6 +234,7 @@ Notice that the child object does not move to the new location of the pose bone.
    will respectively clear and set the bone's "Relative Parenting" option.
    Since "Relative Parenting" is an option that is set per bone, this influences
    all child objects of that bone at once.
+
 
 Vertex Parent
 =============

@@ -63,9 +63,8 @@ our parent mesh.
 
           Instanced monkeys on Verts.
 
-First, in *Object Mode*,
-select the base object and :kbd:`Shift-LMB` to add the circle to the selection
-(order is very important here),
+First, in *Object Mode*, select the base object
+and :kbd:`Shift-LMB` to add the circle to the selection (order is very important here),
 and :kbd:`Ctrl-P` or :menuselection:`Object --> Parent --> Object`
 to parent the base object to the circle.
 Now, the circle is the parent of the monkey; if you move the circle, the monkey will follow it.
@@ -159,7 +158,7 @@ was adapted to the vertex normals of the parent mesh
 
 As in the previous example, the shape and proportions of the arrangement can now be tweaked.
 
-To turn all instanced geometry into real objects, simply select the icosphere and
+To turn all instanced geometry into real objects, select the icosphere and
 :menuselection:`Object --> Apply --> Make Instances Real`, :kbd:`Ctrl-A`.
 To make the icosphere and the tentacle a single object,
 make sure they are all selected and go to :menuselection:`Object --> Join`, :kbd:`Ctrl-J`.

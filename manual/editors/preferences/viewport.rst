@@ -51,7 +51,7 @@ Viewport Anti-Aliasing
 Overlay Smooth Wires
    Display overlays with smooth wire, without this wires will be rendered aliased.
 
-   Some users prefer to disable this and *Edit-Mode Smooth Wires* for increased visibility,
+   To increase the visibility you can disable this and *Edit-Mode Smooth Wires*,
    since edges do not blend into other shaded regions.
 
 Edit-Mode Smooth Wires
