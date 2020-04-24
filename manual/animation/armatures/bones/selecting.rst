@@ -190,4 +190,19 @@ Shape
 Select Pattern
 ==============
 
-Todo.
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Select --> Select Pattern...`
+
+Selects all bones whose name matches a given pattern.
+Supported wild-cards: \* matches everything, ? matches any single character,
+[abc] matches characters in "abc", and [!abc] match any character not in "abc".
+As an example \*house\* matches any name that contains "house",
+while floor\* matches any name starting with "floor".
+
+Case Sensitive
+   The matching can be chosen to be case sensitive or not.
+Extend
+   When *Extend* checkbox is checked the selection is extended instead of generating a new one.
