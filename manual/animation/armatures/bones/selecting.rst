@@ -141,6 +141,34 @@ Less :kbd:`Ctrl-NumpadMinus`
    Contrast the selection, deselect bones at the boundaries of each selection region.
 
 
+Linked
+======
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Linked`
+   :Hotkey:    :kbd:`Ctrl-L`
+
+Selects all the bones in the chain which the active (last selected) bone belongs to.
+
+All Forks
+   Selects all bones connected to the active bone even if the branch off from the current bone.
+
+.. list-table:: Linked bones selection.
+
+   * - .. figure:: /images/animation_armatures_bones_selecting_single-bone.png
+          :width: 320px
+
+          A single selected bone.
+
+     - .. figure:: /images/animation_armatures_bones_selecting_whole-chain.png
+          :width: 320px
+
+          Its whole chain selected with :kbd:`L`.
+
+
 Parent/Child
 ============
 

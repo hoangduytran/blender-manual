@@ -31,8 +31,15 @@ Todo.
 Linked
 ======
 
-You can select at once all the bones in the chain which the active (last selected)
-bone belongs to by using the *linked selection* tool, :kbd:`L`.
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Linked`
+   :Hotkey:    :kbd:`L`
+
+
+Selects all the bones in the chain which the active (last selected) bone belongs to.
 
 .. list-table:: Linked bones selection.
 
