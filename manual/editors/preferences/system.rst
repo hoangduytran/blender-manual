@@ -57,18 +57,10 @@ Global Undo
 
    :doc:`Read more about Undo and Redo options </interface/undo_redo>`.
 
-Sequencer Cache Limit
-   Upper limit of the Sequencer's memory cache (in megabytes).
-   For an optimal Clip editor and Sequencer performance, high values are recommended.
+
 Console Scroll-back Lines
    The number of lines, buffered in memory of the console window.
    Useful for debugging purposes and command-line rendering.
-Disk Cache Directory
-   TODO
-Disk Cache Limit
-   TODO
-Disk Cache Compression Level
-   TODO
 Texture Time Out
    Time since last access of a GL texture in seconds, after which it is freed.
    Set this to 0 to keep textures allocated.
@@ -81,6 +73,32 @@ VBO Time Out
 
    Garbage Collection Rate
       Number of seconds between each run of the GL vertex buffer object garbage collector.
+
+
+.. _prefs-system-video-sequencer:
+
+Video Sequencer
+===============
+
+Memory Cache Limit
+   Upper limit of the Video Sequencer and Movie Clip Editor memory cache (in megabytes).
+   For an optimal Clip editor and Sequencer performance, high values are recommended.
+Use Disk Cache
+   Writes cached strips to disk which can store a lot more than
+   To use Disk Cache, this option must be enabled,
+   the *Disk Cache Directory* and *Disk Cache Limit*, and then save or reopen existing blend-file.
+Disk Cache Directory
+   The location on disk to store the cache.
+Disk Cache Limit
+   Upper limit of the Video Sequencer's disk cache (in gigabytes), setting to zero disables disk cache.
+Disk Cache Compression Level
+   The level of compression to compress image in the disk cache.
+   This has a trade off between saving disk space and requiring more processing
+   The more compression used requires faster disk write/read speeds and more CPU usage.
+
+.. seealso::
+
+   :doc:`Strip Proxy and Cache properties </video_editing/sequencer/properties/proxy_cache>`.
 
 
 .. _prefs-system-sound:
