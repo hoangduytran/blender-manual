@@ -38,8 +38,10 @@ Linked
    :Menu:      :menuselection:`Select --> Linked`
    :Hotkey:    :kbd:`L`
 
-
 Selects all the bones in the chain which the active (last selected) bone belongs to.
+
+All Forks
+   Selects all bones connected to the active bone even if the branch off from the current bone.
 
 .. list-table:: Linked bones selection.
 
