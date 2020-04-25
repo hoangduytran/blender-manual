@@ -9,9 +9,9 @@ Merge
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Merge...`,
+   :Menu:      :menuselection:`Mesh --> Merge`,
                :menuselection:`Context Menu --> Merge`
-   :Hotkey:    :kbd:`Alt-M`
+   :Hotkey:    :kbd:`M`
 
 This tool allows you to merge all selected vertices to a unique one, dissolving all others.
 You can choose the location of the remaining vertex in the menu this tool pops up before executing:

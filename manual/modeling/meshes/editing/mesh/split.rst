@@ -4,6 +4,14 @@
 Split
 *****
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Mesh --> Split`
+   :Hotkey:    :kbd:`Alt-M`
+
+
 Selection
 =========
 
