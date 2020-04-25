@@ -55,3 +55,29 @@ a hole will be created, and the selected edges will be duplicated to form the bo
           :width: 320px
 
           Adjacent face moved to reveal hole left by split.
+
+
+Faces & Edges by Vertices
+=========================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Mesh --> Split --> Faces by Edges`
+
+*Faces & Edges by Vertices* is similar to *Faces by Edges* except
+that but splits the vertices of the adjacent connecting edge also.
+This has the same functionality as manually ripping all faces and edges away from a vertex.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_edges_edge-split2-before.png
+          :width: 320px
+
+          Before.
+
+     - .. figure:: /images/modeling_meshes_editing_edges_edge-split2-after.png
+          :width: 320px
+
+          After (also moving edges away).
