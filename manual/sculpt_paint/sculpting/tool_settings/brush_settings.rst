@@ -80,13 +80,25 @@ Plane Trim
    the trim distance are ignored during sculpting.
 
 
+.. _sculpt-tool-settings-brush-settings-advanced:
+
 Advanced
 ========
 
-Topology Auto-masking
-   Affects only vertices connected to the active vertex under the brush.
-   This can be used for isolating disconnected meshes, masking cavities,
+Topology Auto-Masking
+   Setting per each brush, affects only vertices connected to the active vertex under the brush.
+   This can be used for isolating disconnected meshes, face sets, masking cavities,
    mesh boundary edges, or creating topological falloffs.
+Face Sets Auto-Masking
+   Affect only vertices that share face sets with active vertex.
+Mesh Boundary Auto-Masking
+   Does not affect non manifold boundary edges.
+Face Sets Boundary Auto-Masking
+   Does not sffect vertices which belong to a face set boundary.
+
+Propagation Steps
+   The distance where *Mesh Boundary Auto-Masking* is going to protect vertices from the fully masked edge.
+
 Sculpt Plane
    Use this menu to set the plane in which the sculpting takes place.
    In other words, the primary direction that the vertices will move.
