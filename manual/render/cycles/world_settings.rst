@@ -47,12 +47,8 @@ Mist Pass
 
    :Panel:     :menuselection:`World --> Mist Pass`
 
-.. figure:: /images/render_cycles_world-settings_mist-example1-BI.jpg
-
-   Mist example (`blend-file <https://wiki.blender.org/wiki/File:25-Manual-World-Mist-Example1.blend>`__).
-
 Mist can greatly enhance the illusion of depth in your rendering. To create mist,
-Blender generates a render layer ranging between 0.0 and 1.0 
+Blender generates a render layer with a depth map ranging between 0.0 and 1.0
 that can be used in the compositor to generate a mist effect.
 
 Start
@@ -76,6 +72,10 @@ Falloff
 
    A visualization can be activated in the :menuselection:`Camera --> Viewport Display` panel.
 
+.. figure:: /images/render_cycles_world-settings_mist-example1-BI.jpg
+
+   Mist example (`blend-file <https://wiki.blender.org/wiki/File:25-Manual-World-Mist-Example1.blend>`__).
+
 
 .. _render-cycles-integrator-world-settings:
 
@@ -92,7 +92,7 @@ Surface
 -------
 
 Sampling
-   Controls the sampling method for the world material. Selecting Auto or Manual enables 
+   Controls the sampling method for the world material. Selecting Auto or Manual enables
    *Multiple Importance Sampling* while None disables it. *Multiple Importance Sampling*
    informs Cycles to sample the background texture such that lighter parts are favored,
    creating an importance map. It will produce less noise in the render in trade of artifacts (fireflies).
@@ -150,6 +150,10 @@ Homogeneous Volume
    Assume volume has the same density everywhere (not using any textures), for faster rendering.
    Usually this is automatically determined by the renderer.
    This settings provides a manual control for cases where it is not detected.
+
+Step Size
+   Distance between volume shader samples for world volume shaders.
+   See :doc:`Volume Render Settings </render/cycles/render_settings/volumes>` for more information.
 
 
 Ray Visibility
