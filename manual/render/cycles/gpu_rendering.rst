@@ -100,7 +100,7 @@ Why does a scene that renders on the CPU not render on the GPU?
 There maybe be multiple causes,
 but the most common is that there is not enough memory on your graphics card.
 Typically while using GPU rendering the GPU can only use the amount of memory that is on the GPU.
-This is usually much smaller then the amount of system memory that the CPU uses.
+This is usually much smaller than the amount of system memory that the CPU uses.
 In the case that the GPU runs out of memory Blender will automatically try to also use system and GPU memory.
 This has a performance impact but it is usually still faster than using CPU rendering.
 This feature does not work on OpenCL rendering.
