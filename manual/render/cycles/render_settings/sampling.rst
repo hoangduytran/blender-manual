@@ -45,7 +45,8 @@ Render
    When using *Branched Path Tracing*, this changes the *AA Samples*
    which are multiplied by the `Sub Samples`_ and improve anti-aliasing.
 Viewport
-   Number of samples for viewport rendering.
+   Number of samples for viewport rendering. Setting this value to zero
+   allows the viewport to sample indefinitely. 
 
 .. _render-cycles-settings-viewport-denoising:
 
@@ -117,9 +118,8 @@ Seed
    Seed value for integrator to get different noise patterns.
 
    Animate Seed (clock icon)
-      This button, which can be found on the right side of the *Seed* value,
-      can be used to give different seed values. It is a good idea to enable this
-      when making animation because in the real world each frame has a different noise pattern.
+      Changes the seed for each frame. It is a good idea to enable this
+      when making animations because in the real world each frame has a different noise pattern.
 
 Pattern
    Random sampling pattern used by the integrator.

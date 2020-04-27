@@ -76,6 +76,9 @@ Viewport Display
 
    :Panel:     :menuselection:`Object Data --> Viewport Display`
 
+Influence
+   Show the influence bounds in the 3D Viewport.
+
 Arrow Size
    Size of the arrow showing the reflection plane normal.
 

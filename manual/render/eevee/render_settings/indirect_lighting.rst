@@ -56,7 +56,7 @@ Clamp Glossy
    Clamp pixel intensity to reduce noise inside glossy reflections from reflection cubemaps (0 is disabled).
 
 Filter Quality
-   Takes more samples during cubemap filtering to remove artifacts. For now, only has an effect on cubemaps.
+   Takes more samples during cubemap filtering to remove artifacts. For now, this only has an effect on cubemaps.
 
 
 Display

@@ -22,7 +22,7 @@ For this, all the other settings are the same except the *View* and *Render* set
 These previously mentioned settings get removed/renamed and the following settings are added:
 
 
-.. rubric:: Preview
+.. rubric:: Viewport
 
 Levels
    The levels of subdivision to see in the 3D Viewport,

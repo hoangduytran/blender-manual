@@ -31,15 +31,14 @@ Soft Shadows
 Light Threshold
    In order to avoid costly setup time, this distance is first computed
    automatically based on a light threshold. The distance is computed
-   at the light origin and using the inverse square falloff. The setting
-   can be found inside the :menuselection:`Render Settings panel --> Shadow tab`.
+   at the light origin using the inverse square falloff.
 
    This light threshold does not take the light shape into account and may not
    suit every case. That is why we provide a per-light override where you can
    just set the cut off distance
    (:menuselection:`Properties --> Object Data --> Light --> Custom Distance`).
 
-   The influence distance is also used as shadow far clip distance, which might affect how shadows looks.
+   The influence distance is also used as shadow far clip distance, which might affect how shadows look.
    This influence distance does not concern sun lights that still have a far clip distance.
 
    .. seealso::

@@ -101,14 +101,6 @@ the world's diffuse lighting will be used to shade it.
    - You can fix bad samples by adding a smaller grid near the problematic area.
 
 
-Resolution
-==========
-
-Spatial resolution for Irradiance Volumes is determined per probe.
-The local volume is divided into a regular grid of the specified dimensions.
-One irradiance sample will be computed for each cell in this grid.
-
-
 Viewport Display
 ================
 

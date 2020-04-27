@@ -15,6 +15,16 @@ Each hair system uses the material identified in the particle settings.
 Use Hair
    Enables rendering of hair particle systems.
 
+Shape
+   Thick
+      Cylindrical segments between two points.
+
+      Cull back-faces
+         Excludes strands emitted from the mesh backfacing the camera.
+
+   Ribbons
+      Are flat planes following the strand direction facing the camera.
+
 Primitive
    Triangles
       Uses a triangle mesh.
@@ -32,12 +42,4 @@ Primitive
          The interpolated path is subdivided to give points to connect.
          The parameter subdivisions sets the number of divisions used.
 
-Shape
-   Thick
-      Cylindrical segments between two points.
 
-      Cull back-faces
-         Excludes strands emitted from the mesh backfacing the camera.
-
-   Ribbons
-      Are flat planes following the strand direction facing the camera.

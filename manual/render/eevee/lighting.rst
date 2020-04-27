@@ -6,7 +6,7 @@ Light Settings
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties --> Light` and :menuselection:`Shader Editor --> Sidebar --> Settings`
+   :Panel:     :menuselection:`Properties --> Light` and :menuselection:`Shader Editor --> Sidebar --> Options`
 
 Next to lighting from the background and any object with an emission shader,
 lights are another way to add light into the scene.
@@ -106,7 +106,7 @@ Fade
 
 Max Distance
    Distance away from the view origin (or camera origin if in camera view) to cover by the cascade.
-   If the view far clip distance is lower than Max Distance, the lowest of the two will be used.
+   If the view far clip distance is lower than Max Distance, the view far clip distance will be used.
    Only works in perspective view.
 
 Distribution
