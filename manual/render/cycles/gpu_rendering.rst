@@ -101,7 +101,7 @@ There maybe be multiple causes,
 but the most common is that there is not enough memory on your graphics card.
 Typically while using GPU rendering the GPU can only use the amount of memory that is on the GPU.
 This is usually much smaller than the amount of system memory the CPU can access.
-With CUDA devives, if the GPU memory is full Blender will automatically try to use system memory.
+With CUDA and Optix devices, if the GPU memory is full Blender will automatically try to use system memory.
 This has a performance impact, but will usually still result in a faster render than using CPU rendering.
 This feature does not work for OpenCL rendering.
 
