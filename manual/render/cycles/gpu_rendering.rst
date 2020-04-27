@@ -103,7 +103,7 @@ Typically while using GPU rendering the GPU can only use the amount of memory th
 This is usually much smaller than the amount of system memory the CPU can access.
 With CUDA devives, if the GPU memory is full Blender will automatically try to use system memory.
 This has a performance impact, but will usually still result in a faster render than using CPU rendering.
-This feature does not work on OpenCL or Optix rendering.
+This feature does not work for OpenCL rendering.
 
 
 Can multiple GPUs be used for rendering?
@@ -116,6 +116,14 @@ Would multiple GPUs increase available memory?
 ----------------------------------------------
 
 No, each GPU can only access its own memory.
+
+What renders faster, Nvidia or AMD, CUDA, Optix or OpenCL?
+----------------------------------------------------------
+
+This varies depending on the hardware used. Different technologies also have different compute times
+depending on the scene tested. For the most up to date information on the performance of differerent devices,
+browse the `Blender Opendata <https://opendata.blender.org/>`__ resource.
+ 
 
 
 Error Messages
@@ -187,7 +195,8 @@ This usually means there is not enough memory to store the scene for use by the 
 
 .. note::
 
-   One way to reduce memory usage is by using smaller resolution for texture.
+   One way to reduce memory usage is by using smaller resolution textures.
+   For example, 8k, 4k, 2k, and 1k image textures take up respectively 256MB, 64MB, 16MB and 4MB of memory.
 
 
 The Nvidia OpenGL driver lost connection with the display driver
