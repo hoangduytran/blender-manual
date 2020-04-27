@@ -20,6 +20,9 @@ Common
 :doc:`Light settings </render/lights/light_object>` for all renderers.
 
 
+.. _bpy.types.Light.use_custom_distance:
+.. _bpy.types.Light.cutoff_distance:
+
 Eevee
 =====
 
@@ -28,6 +31,9 @@ Specular
    Setting this to anything but 1.0 will yield non-photorealistic result.
 Custom Distance
    If enabled uses *Distance* as the custom attenuation distance instead of global light threshold.
+   In order to avoid costly setup time, this distance is first computed
+   automatically based on a light threshold. The distance is computed
+   at the light origin and using the inverse square falloff.
 
    Distance
       Specifies where light influence will be set to 0.
