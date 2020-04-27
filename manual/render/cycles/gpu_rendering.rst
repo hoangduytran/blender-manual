@@ -100,10 +100,10 @@ Why does a scene that renders on the CPU not render on the GPU?
 There maybe be multiple causes,
 but the most common is that there is not enough memory on your graphics card.
 Typically while using GPU rendering the GPU can only use the amount of memory that is on the GPU.
-This is usually much smaller than the amount of system memory that the CPU uses.
-In the case that the GPU runs out of memory Blender will automatically try to also use system and GPU memory.
-This has a performance impact but it is usually still faster than using CPU rendering.
-This feature does not work on OpenCL rendering.
+This is usually much smaller than the amount of system memory the CPU can access.
+With CUDA devives, if the GPU memory is full Blender will automatically try to use system memory.
+This has a performance impact, but will usually still result in a faster render than using CPU rendering.
+This feature does not work on OpenCL or Optix rendering.
 
 
 Can multiple GPUs be used for rendering?
@@ -116,14 +116,6 @@ Would multiple GPUs increase available memory?
 ----------------------------------------------
 
 No, each GPU can only access its own memory.
-
-
-What renders faster, Nvidia or AMD, CUDA or OpenCL?
----------------------------------------------------
-
-Currently Nvidia with CUDA is rendering fastest, but this really depends on the hardware you buy.
-Currently, CUDA and OpenCL are about the same in the newest mid-range GPUs.
-However, CUDA is fastest in the respect of high-end GPUs.
 
 
 Error Messages
@@ -191,14 +183,11 @@ Normally users do not need to install the CUDA toolkit as Blender comes with pre
 CUDA Error: Out of memory
 -------------------------
 
-This usually means there is not enough memory to store the scene on the GPU.
-We can currently only render scenes that fit in graphics card memory,
-and this is usually smaller than that of the CPU. See above for more details.
+This usually means there is not enough memory to store the scene for use by the GPU.
 
 .. note::
 
-   One way to reduce memory usage is by using smaller resolutions for textures.
-   For example, 8k, 4k, 2k, and 1k image textures take up respectively 256MB, 64MB, 16MB and 4MB of memory.
+   One way to reduce memory usage is by using smaller resolution for texture.
 
 
 The Nvidia OpenGL driver lost connection with the display driver
