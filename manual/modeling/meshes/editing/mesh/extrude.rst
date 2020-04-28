@@ -62,3 +62,9 @@ Steps
    Number of instances.
 Scale Offset
    Multiplication factor to increase/decrecrease the offset.
+
+
+Spin
+====
+
+See :doc:`/modeling/meshes/tools/spin`.
