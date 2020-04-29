@@ -40,9 +40,10 @@ Thickness
    Higher values will stretch the reflections and add flickering. Lower values may make the ray miss surfaces.
 
 Edge Fading
-   Smoothly fade out the reflected and refracted pixels if they are close to a screen edge. The unit is in screen percentage.
+   Smoothly fade out the reflected and refracted pixels if they are close to a screen edge.
+   The unit is in screen percentage.
 
 Clamp
-   Clamp the reflected color intensity to remove noise and fireflies.
+   Clamp the reflected color intensity to remove noise and :term:`Fireflies`.
 
 .. seealso:: :ref:`Limitations <eevee-limitations-reflections>`.

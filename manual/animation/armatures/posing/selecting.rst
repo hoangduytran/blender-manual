@@ -4,8 +4,7 @@ Selecting
 *********
 
 Selection in *Pose Mode* is very similar to the one in :doc:`Edit Mode </animation/armatures/bones/selecting>`,
-with a few specificities:
-
+with a few deviations:
 You can only select *whole bones* in *Pose Mode*, not roots/tips...
 
 
@@ -53,7 +52,7 @@ All Forks
      - .. figure:: /images/animation_armatures_bones_selecting_whole-chain.png
           :width: 320px
 
-          Its whole chain selected with :kbd:`L`.
+          Its whole chain selected with Linked.
 
 
 Select More/Less

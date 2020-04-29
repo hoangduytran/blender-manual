@@ -108,7 +108,7 @@ Absorption coefficient
 Roughness
    Specify how much the glints are smoothed in the direction of the hair shaft.
    Too low values will smoothen the hair to the point of looking almost metallic,
-   making glints look like fireflies; while setting it too high will result in a Lambertian look.
+   making glints look like :term:`Fireflies`; while setting it too high will result in a Lambertian look.
 
 .. figure:: /images/render_shader-nodes_shader_hair-principled_demo-roughness.jpg
    :align: center

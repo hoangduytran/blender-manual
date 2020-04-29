@@ -61,7 +61,7 @@ Offset X, Y, Z
 Steps
    Number of instances.
 Scale Offset
-   Multiplication factor to increase/decrecrease the offset.
+   Multiplication factor to increase or decrease the offset.
 
 
 Spin

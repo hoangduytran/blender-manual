@@ -46,7 +46,7 @@ Render
    which are multiplied by the `Sub Samples`_ and improve anti-aliasing.
 Viewport
    Number of samples for viewport rendering. Setting this value to zero
-   allows the viewport to sample indefinitely. 
+   enables indefinite sampling of the viewport.
 
 .. _render-cycles-settings-viewport-denoising:
 
@@ -119,7 +119,7 @@ Seed
 
    Animate Seed (clock icon)
       Changes the seed for each frame. It is a good idea to enable this
-      when making animations because in the real world each frame has a different noise pattern.
+      when rendering animations because a varying noise pattern is less noticeable.
 
 Pattern
    Random sampling pattern used by the integrator.

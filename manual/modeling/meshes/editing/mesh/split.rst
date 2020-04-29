@@ -41,8 +41,8 @@ Faces by Edges
    :Menu:      :menuselection:`Mesh --> Split --> Faces by Edges`
 
 *Faces by Edges* is similar to the *Rip* tool. When two or more touching interior edges,
-or a border edge is selected when using *Faces by Edges*,
-a hole will be created, and the selected edges will be duplicated to form the border of the hole.
+or a border edge is selected, a hole will be created,
+and the selected edges will be duplicated to form the border of the hole.
 
 .. list-table::
 
@@ -64,10 +64,10 @@ Faces & Edges by Vertices
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Split --> Faces by Edges`
+   :Menu:      :menuselection:`Mesh --> Split --> Faces & Edges by Vertices`
 
-*Faces & Edges by Vertices* is similar to *Faces by Edges* except
-that but splits the vertices of the adjacent connecting edge also.
+*Faces & Edges by Vertices* is similar to *Faces by Edges* except that
+it also splits the vertices of the adjacent connecting edges.
 This has the same functionality as manually ripping all faces and edges away from a vertex.
 
 .. list-table::

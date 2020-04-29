@@ -56,7 +56,7 @@ Clip Start/End
       See :ref:`Troubleshooting Depth Buffer Glitches <troubleshooting-depth>` for more information.
 
 Use Local Camera
-   Use a local camera in this view, rather then the scene's active camera.
+   Use a local camera in this view, rather than the scene's active camera.
 
 Local Camera
    Active camera used in this view to override the (global) scene camera.

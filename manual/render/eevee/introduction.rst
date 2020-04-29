@@ -14,7 +14,7 @@ Eevee can be used interactively in the 3D Viewport but also produce high quality
 Eevee materials are created using the same shader nodes as Cycles, making it easy to render existing scenes.
 For Cycles users, this makes Eevee work great for previewing materials in realtime.
 
-Unlike Cycles, Eevee is not a raytraced render engine.
+Unlike Cycles, Eevee is not a raytrace render engine.
 Instead of computing each ray of light, Eevee uses a process called rasterization.
 Rasterization estimates the way light interacts with objects and materials using numerous algorithms.
 While Eevee is designed to use :abbr:`PBR (Physically Based Rendering)` principles,

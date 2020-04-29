@@ -33,7 +33,7 @@ Some key features of the exporter include:
 
 .. rubric:: POV-Ray 3.7 features
 
-Volumetrics and media (scattering/absorbtion), blurry reflections (uberPOV), ghosting for motion blur (uberPOV),
+Volumetrics and media (scattering/absorption), blurry reflections (uberPOV), ghosting for motion blur (uberPOV),
 micropolygon displacement (HGPOV), etc.
 
 

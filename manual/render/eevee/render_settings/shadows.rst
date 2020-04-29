@@ -32,10 +32,10 @@ Light Threshold
    The minimum amount of light for a light to contribute for lighting.
    This light threshold does not take the light shape into account and may not suit every case.
    That is why Blender provides a :ref:`per-light override <bpy.types.Light.cutoff_distance>`
-   where you can just set the cut off distance
+   where you can just set the cut off distance.
 
    The influence distance is also used as shadow far clip distance, which might affect how shadows looks.
-   This influence distance does not concern sun lights that still have a far clip distance.
+   This influence distance does not affect sun lights that still have a far clip distance.
 
    .. seealso::
 

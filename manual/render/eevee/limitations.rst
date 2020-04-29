@@ -108,6 +108,7 @@ Screen Space Reflections
 - Screen Space Reflections will reflect transparent objects and objects using Screen Space Refraction
   but without accurate positioning due to the one layer depth buffer.
 
+
 .. _eevee-limitations-refraction:
 
 Screen Space Refraction

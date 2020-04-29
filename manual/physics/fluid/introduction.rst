@@ -57,5 +57,5 @@ one :doc:`Flow </physics/fluid/type/flow>` object are required to create a fluid
 
 .. note::
 
-   There are :ref:`*Quick Liquid* and *Quick Smoke* <bpy.ops.object.quick>` tools 
+   There are :ref:`Quick Liquid and Quick Smoke <bpy.ops.object.quick>` tools
    which will automatically create a domain object with a basic liquid or smoke and fire material.

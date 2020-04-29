@@ -49,7 +49,7 @@ Mist Pass
 
 Mist can greatly enhance the illusion of depth in your rendering. To create mist,
 Blender generates a render layer with a depth map ranging between 0.0 and 1.0
-that can be used in the compositor to generate a mist effect.
+that can be used in the Compositor to generate a mist effect.
 
 Start
    The distance from the camera at which the mist starts to fade in.
@@ -94,13 +94,13 @@ Surface
 Sampling
    Controls the sampling method for the world material. Selecting Auto or Manual enables
    *Multiple Importance Sampling* while None disables it. *Multiple Importance Sampling*
-   informs Cycles to sample the background texture such that lighter parts are favored,
-   creating an importance map. It will produce less noise in the render in trade of artifacts (fireflies).
-   It is almost always a good idea to enable this when using an image texture to light the scene,
+   is a method to sample the background texture such that lighter parts are favored,
+   creating an importance map. It will produce less noise in the render in trade of artifacts (:term:`Fireflies`).
+   Enable this when using an image texture with small area lights (like the sun),
    otherwise noise can take a long time to converge.
 
    Below is a comparison between *Multiple Importance Sample* off and on.
-   Both images are rendered for 25 seconds (Off: 1500 samples, On: 1000 samples).
+   Both images are rendered for 25 seconds (Off: 1,500 samples, On: 1,000 samples).
 
    .. list-table::
 

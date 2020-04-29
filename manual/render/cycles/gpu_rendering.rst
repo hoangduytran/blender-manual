@@ -117,13 +117,14 @@ Would multiple GPUs increase available memory?
 
 No, each GPU can only access its own memory.
 
+
 What renders faster, Nvidia or AMD, CUDA, Optix or OpenCL?
 ----------------------------------------------------------
 
 This varies depending on the hardware used. Different technologies also have different compute times
-depending on the scene tested. For the most up to date information on the performance of differerent devices,
-browse the `Blender Opendata <https://opendata.blender.org/>`__ resource.
- 
+depending on the scene tested. For the most up to date information on the performance of different devices,
+browse the `Blender Open Data <https://opendata.blender.org/>`__ resource.
+
 
 
 Error Messages

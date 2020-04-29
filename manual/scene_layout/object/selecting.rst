@@ -79,7 +79,7 @@ Toggle the selection state of all visible objects.
 
 
 Box Select
-------------
+----------
 
 .. admonition:: Reference
    :class: refbox
@@ -92,7 +92,7 @@ Interactive :ref:`box selection <tool-select-box>`.
 
 
 Circle Select
----------------
+-------------
 
 .. admonition:: Reference
    :class: refbox

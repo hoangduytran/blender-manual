@@ -75,5 +75,5 @@ ShaderFX
    Shows Grease Pencil visual effects.
 Layer Tinting
    Shows layers tint overrides.
-Antialiasing
+Anti-Aliasing
    TODO.

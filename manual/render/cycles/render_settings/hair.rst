@@ -23,7 +23,7 @@ Shape
          Excludes strands emitted from the mesh backfacing the camera.
 
    Ribbons
-      Are flat planes following the strand direction facing the camera.
+      These are flat planes following the strand direction facing the camera.
 
 Primitive
    Triangles

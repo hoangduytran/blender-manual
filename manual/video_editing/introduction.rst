@@ -45,13 +45,13 @@ It is possible to create multiple instances of any view type in single workspace
 Performance
 ===========
 
-Play back performance can be improved through several ways.
+Playback performance can be improved through several ways.
 The biggest impact on performance is to allow the Video Sequencer to cache the playback.
 There are two levels of cache, the first is a RAM cache,
 this is enabled by default but can be increased based on the amount of RAM available.
 The next level of cache is a disk cache which stores cached strips on disk.
-A disk cache can generally cache more than a RAM cache however, it can be slower.
-Both of these cache options can be configured in the :ref:`User Preferences <prefs-system-sound>`.
+A disk cache can generally cache more than a RAM cache, but it can be slower.
+Both of these cache options can be configured in the :ref:`Preferences <prefs-system-sound>`.
 
 Another way to improve performance is by using :ref:`Strip Proxies <bpy.types.SequenceProxy>`
 These are used to cache images or movies in a file that is easier to playback

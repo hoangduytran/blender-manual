@@ -68,7 +68,7 @@ Show Backside
 
 
 Shadow Mode
-==================
+===========
 
 Type of shadows used for a transparent surface.
 Eevee does not support colored shadow maps.

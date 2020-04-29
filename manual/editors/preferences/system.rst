@@ -85,7 +85,7 @@ Memory Cache Limit
    For an optimal Clip editor and Sequencer performance, high values are recommended.
 Use Disk Cache
    Writes cached strips to disk which can store a lot more than
-   To use Disk Cache, this option must be enabled,
+   to use Disk Cache, this option must be enabled,
    the *Disk Cache Directory* and *Disk Cache Limit*, and then save or reopen existing blend-file.
 Disk Cache Directory
    The location on disk to store the cache.
@@ -93,7 +93,7 @@ Disk Cache Limit
    Upper limit of the Video Sequencer's disk cache (in gigabytes), setting to zero disables disk cache.
 Disk Cache Compression Level
    The level of compression to compress image in the disk cache.
-   This has a trade off between saving disk space and requiring more processing
+   This has a trade off between saving disk space and requiring more processing.
    The more compression used requires faster disk write/read speeds and more CPU usage.
 
 .. seealso::

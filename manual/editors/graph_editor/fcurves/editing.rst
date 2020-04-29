@@ -115,7 +115,7 @@ Add F-Curve Modifier
 .. admonition:: Reference
    :class: refbox
 
-   :Menu:      :menuselection:`Key --> Add F-Curve Modifer`
+   :Menu:      :menuselection:`Key --> Add F-Curve Modifier`
    :Hotkey:    :kbd:`Shift-Ctrl-M`
 
 Opens a pop-up allowing you to add modifiers to the active F-curve.

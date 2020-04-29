@@ -85,16 +85,17 @@ Plane Trim
 Advanced
 ========
 
-Topology Auto-Masking
-   Setting per each brush, affects only vertices connected to the active vertex under the brush.
-   This can be used for isolating disconnected meshes, face sets, masking cavities,
-   mesh boundary edges, or creating topological falloffs.
-Face Sets Auto-Masking
-   Affect only vertices that share face sets with active vertex.
-Mesh Boundary Auto-Masking
-   Does not affect non manifold boundary edges.
-Face Sets Boundary Auto-Masking
-   Does not sffect vertices which belong to a face set boundary.
+Auto-Masking
+   Topology
+      Setting per each brush, affects only vertices connected to the active vertex under the brush.
+      This can be used for isolating disconnected meshes, face sets, masking cavities,
+      mesh boundary edges, or creating topological falloffs.
+   Face Sets
+      Affect only vertices that share face sets with active vertex.
+   Mesh Boundary
+      Does not affect non manifold boundary edges.
+   Face Sets Boundary
+      Does not affect vertices which belong to a face set boundary.
 
 Propagation Steps
    The distance where *Mesh Boundary Auto-Masking* is going to protect vertices from the fully masked edge.
@@ -111,16 +112,17 @@ Sculpt Plane
    X, Y, Z Plane
       The movement takes place in the positive direction of one of the global axes.
 
-Original Normal
-   When locked it keeps using the normal of the surface where stroke was initiated,
-   instead of the surface normal currently under the cursor.
-Original Plane
-   When locked keep using the plane origin of surface where stroke was initiated,
-   instead of the surface plane currently under the cursor.
-Accumulate
-   Causes stroke dabs to accumulate on top of each other.
-Front Faces Only
-   When enabled, the brush only affects vertices that are facing the viewer.
+Use Original
+   Normal
+      When locked it keeps using the normal of the surface where stroke was initiated,
+      instead of the surface normal currently under the cursor.
+   Plane
+      When locked keep using the plane origin of surface where stroke was initiated,
+      instead of the surface plane currently under the cursor.
+   Accumulate
+      Causes stroke dabs to accumulate on top of each other.
+   Front Faces Only
+      When enabled, the brush only affects vertices that are facing the viewer.
 
 .. toctree::
    :hidden:

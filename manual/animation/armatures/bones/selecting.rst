@@ -166,7 +166,7 @@ All Forks
      - .. figure:: /images/animation_armatures_bones_selecting_whole-chain.png
           :width: 320px
 
-          Its whole chain selected with :kbd:`L`.
+          Its whole chain selected with Linked.
 
 
 Parent/Child
