@@ -60,10 +60,10 @@ All collections that an object has been assigned to are listed in the Properties
 :menuselection:`Object tab --> Collections panel`.
 
 Add to Collection
-   Adds the selected objects from a collection.
+   Adds the selected object to a collection.
    A pop-up lets you specify the collection to add to.
 New ``+``
-   Creates a new collection and adds the selected object(s) to it.
+   Creates a new collection and adds the selected object to it.
 Name
    To rename a collection, simply click in the collections name field.
 Remove ``X``
