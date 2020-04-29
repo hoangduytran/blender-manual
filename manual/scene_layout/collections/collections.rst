@@ -24,7 +24,7 @@ Collections Menu
    :Hotkey:    :kbd:`M`, :kbd:`Shift-M`, :kbd:`Ctrl-G`, etc.
 
 Move to Collection :kbd:`M`
-   Move selected objects to a collection.
+   Move selected objects to an existing or new collection. 
 Link to Collection :kbd:`Shift-M`
    Link selected objects to a collection.
    A new collection can be created in the pop-up.
@@ -32,6 +32,7 @@ Create New Collection :kbd:`Ctrl-G`
    Creates a new collection and adds the selected object(s) to it.
    The name of the new collection can be specified in
    the *Create New Collection* :ref:`ui-undo-redo-adjust-last-operation` panel.
+   This collection is not added to the current scene.
 Remove from Collection :kbd:`Ctrl-Alt-G`
    Remove the selected objects from a collection. If the object belongs to more than one collection,
    a pop-up lets you select the collection and an option to remove it from all collections.
