@@ -105,7 +105,7 @@ Operation
          Outputs the smallest of the input values.
 
       Maximum
-         Outputs the largest of two input value.
+         Outputs the largest of two input values.
 
       Less Than
          Outputs 1.0 if the first value is smaller than the second value. Otherwise the output is 0.0.
