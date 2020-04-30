@@ -54,6 +54,7 @@ with the following channels of information:
 - Baked Ambient Occlusion
 - Normal Map
 - Emissive
+- Clearcoat (requires ``KHR_materials_clearcoat``)
 
 .. figure:: /images/addons_import-export_scene-gltf2_material-channels.jpg
 
@@ -579,5 +580,5 @@ the `glTF-Blender-IO repository <https://github.com/KhronosGroup/glTF-Blender-IO
 where you can file bug reports, submit feature requests, or contribute code.
 
 Discussion and development of the glTF 2.0 format itself takes place on
-the Khronos Group `glTF Github repository <https://github.com/KhronosGroup/glTF>`__,
+the Khronos Group `glTF GitHub repository <https://github.com/KhronosGroup/glTF>`__,
 and feedback there is welcome.
