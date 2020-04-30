@@ -102,23 +102,23 @@ Operation
 
    Comparison
       Minimum
-         The output is the smallest input value.
+         Outputs the smallest of the input values.
 
       Maximum
-         The output is the largest input value.
+         Outputs the largest of two input value.
 
       Less Than
-         The output is 1.0 if the first value is smaller than the second value. Otherwise the output is 0.0.
+         Outputs 1.0 if the first value is smaller than the second value. Otherwise the output is 0.0.
 
       Greater Than
-         The output is 1.0 if the first value is larger than the second value. Otherwise the output is 0.0.
+         Outputs 1.0 if the first value is larger than the second value. Otherwise the output is 0.0.
 
       Sign
          Extracts the sign of the input value. All positive numbers
          will output 1.0. All negative numbers will output -1.0. And 0.0 will output 0.0.
 
       Compare
-         The output is 1.0 if the difference between the two input values is less than or equal to *Epsilon*.
+         Outputs 1.0 if the difference between the two input values is less than or equal to *Epsilon*.
 
       Smooth Minimum
          `Smooth Minimum <https://en.wikipedia.org/wiki/Smooth_maximum>`__.
@@ -137,16 +137,16 @@ Operation
          Rounds the input value up to the nearest integer.
 
       Truncate
-         Removes the digits following the decimal point of the input value.
+         Outputs the interger part of the *value*.
 
       Fraction
          `Fraction <https://en.wikipedia.org/wiki/Rational_function>`__.
 
       Modulo
-         The output is the remainder once the first value is divided by the second value.
+         Outputs the remainder once the first value is divided by the second value.
 
       Wrap
-         The output is a value between *Min* and *Max* based on the absolute difference between
+         Outputs a value between *Min* and *Max* based on the absolute difference between
          the input value and the nearest integer multiple of *Max* less than the value.
 
       Snap
@@ -175,7 +175,7 @@ Operation
          The `Arctangent <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value.
 
       Arctan2
-         The output is the `Inverse Tangent
+         Outputs the `Inverse Tangent
          <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of
          the first value divided by the second value measured in radians.
 
