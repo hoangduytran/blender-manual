@@ -32,7 +32,7 @@ Create New Collection :kbd:`Ctrl-G`
    Creates a new collection and adds the selected object(s) to it.
    The name of the new collection can be specified in
    the *Create New Collection* :ref:`ui-undo-redo-adjust-last-operation` panel.
-   This collection is not added to the current scene.
+   This collection is not linked to the active scene.
 Remove from Collection :kbd:`Ctrl-Alt-G`
    Remove the selected objects from a collection. If the object belongs to more than one collection,
    a pop-up lets you select the collection and an option to remove it from all collections.
