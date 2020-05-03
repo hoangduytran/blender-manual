@@ -8,7 +8,7 @@ It defines which portion of a scene is visible in the rendered image.
 
 Cameras are invisible in renders, so they do not have any material or texture settings.
 However, they do have *Object* and *Editing* setting panels available
-which are displayed when a camera is the selected (active!) object.
+which are displayed when a camera is the active object.
 
 .. seealso::
 
@@ -134,8 +134,8 @@ Clip Start and End
 
    .. tip::
 
-      When *Limits* in the *Display* panel is enabled,
-      the clip bounds will be visible as two yellow connected dots on the camera line of sight.
+      When *Limits* in the *Viewport Display* panel is enabled,
+      the clip bounds will be visible as two yellow connected dots on the cameras line of sight.
 
    .. seealso::
 
@@ -162,8 +162,6 @@ or by using the distance between the camera and a chosen object:
 
 Focus Object
    Choose an object which will determine the focal point. Linking an object will deactivate the distance parameter.
-   Typically this is used to give precise control over the position of the focal point,
-   and also allows it to be animated or constrained to another object.
 Focal Distance
    Sets the distance to the focal point when no *Focus Object* is specified.
    If *Limits* are enabled, a yellow cross is shown on the camera line of sight at this distance.

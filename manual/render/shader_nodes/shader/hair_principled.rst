@@ -4,13 +4,14 @@
 Principled Hair BSDF
 ********************
 
-:guilabel:`Cycles Only`
-
 .. figure:: /images/render_shader-nodes_shader_hair-principled_node-melaninconcentration.png
    :figwidth: 30 %
    :align: right
-
+   
    Principled Hair BSDF under Melanin concentration.
+   
+:guilabel:`Cycles Only`
+
 
 The *Principled Hair* :abbr:`BSDF (Bidirectional scattering distribution function)` is a physically-based,
 easy-to-use shader for rendering hair and fur.

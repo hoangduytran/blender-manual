@@ -13,7 +13,7 @@ Common Settings
 ===============
 
 Type
-   Defines the light shape.
+   Defines the type of light.
 Color
    Color tint of the emitted light.
 
@@ -52,7 +52,7 @@ Power
    Power of the light in Watts. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
 
-Size
+Radius
    When larger than zero, light will be emitted from a spherical surfaces with the specified radius.
    Lights with larger size have softer shadows and specular highlights.
 
@@ -70,7 +70,7 @@ Power
    Power of the light in Watts. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
 
-Size
+Radius
    When larger than zero, light will be emitted from a spherical surfaces with the specified radius.
    Lights with larger size have softer shadows and specular highlights.
 

@@ -8,6 +8,8 @@ Anisotropic BSDF
    :align: right
 
    Anisotropic BSDF.
+   
+:guilabel:`Cycles Only`
 
 The *Anisotropic* :abbr:`BSDF (Bidirectional scattering distribution function)`
 is used to add a glossy reflection, with separate control over U and V direction roughness.

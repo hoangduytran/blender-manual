@@ -51,6 +51,9 @@ Paste Material
 
 Copy Material to Selected
    Copy the same material assignment from the active to other selected objects.
+   
+Remove Unused Slots
+   Removes all material slots not assigned to the object.
 
 
 Data-Block
@@ -131,7 +134,6 @@ of the :ref:`active object <object-active>`.
 Very useful if you need to set a large number of objects to the same material;
 just select all of them,
 then the object that has the desired material, and :kbd:`Ctrl-L` links them to that "parent".
-(See Tip on Linking Data in Creating about data linking.)
 
 
 Deleting a Material
@@ -168,15 +170,12 @@ you use the Material Slots options in the Materials header panel.
 The workflow for applying a second material to some faces of an object covered by
 a base material is as follows:
 
-#. In Object Mode, apply the base material to the whole object.
-#. Create/select the second material (the whole object will change to this new material).
-#. In the Active Material list, reselect the base material.
-#. Go into Edit Mode and Face Select (a new list appears above
+#. In Object Mode, create a base material.
+#. Go into Edit Mode and Face Select (a new list will appear below
    the Active Material list with *Assign*/*Select*/*Deselect* buttons).
 #. Select the face/faces to be colored with the second material.
-#. In the Object Material Slots list, click the ``+`` button to create a new slot, and while this is still active,
-   click on the second material in the Available Materials list.
-#. Click the *Assign* button, and the second material will appear on the selected object faces.
+#. In the Object Material Slots list, click the ``+`` button to create a new slot or select an existing material.
+#. Click the *Assign* button, and the material will appear on the selected object faces.
 
 You can also make this new material a copy of an existing material by adding the data-block:
 

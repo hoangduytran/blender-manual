@@ -10,7 +10,7 @@ Volume rendering is used to render various effects that cannot be represented by
 - Meshes can also be used to create such shapes by removing the default surface shader
   and using a volume shader with the mesh shape defining the volume bounds
   and textures defining the volume density.
-- Mist is created by with a volume shader for the world,
+- Mist is created with a volume shader for the world,
   or with a large mesh object encompassing the scene.
 - Absorption in glass is simulated by combining a glass surface shader with refraction
   and a volume absorption shader for the interior of the object.
