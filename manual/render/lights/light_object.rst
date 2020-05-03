@@ -31,7 +31,7 @@ Renderer Settings
 Point Light
 ===========
 
-.. figure:: /images/render_lights_light-object_viewport-BI.png
+.. figure:: /images/render_lights_light-object_viewport.png
    :align: right
    :width: 260px
 
@@ -78,7 +78,7 @@ Radius
 Spot Shape
 ----------
 
-   .. figure:: /images/render_lights_light-object_terms-BI.png
+   .. figure:: /images/render_lights_light-object_terms.png
       :width: 610px
 
       Changing the Spot options also changes the appearance of the spotlight as displayed in the 3D Viewport.
@@ -92,10 +92,10 @@ Size
    .. list-table::
       Changing the spot *Size* option.
 
-      * - .. figure:: /images/render_lights_light-object_size45-BI.png
+      * - .. figure:: /images/render_lights_light-object_size45.png
              :width: 320px
 
-        - .. figure:: /images/render_lights_light-object_size60-BI.png
+        - .. figure:: /images/render_lights_light-object_size60.png
              :width: 320px
 
 Blend
@@ -119,7 +119,7 @@ Blend
    *Blend* and *Size* only control the *Spot* light cone's aperture and softness ("radial" falloff);
    they do not control the shadow's softness as shown below.
 
-   .. figure:: /images/render_lights_light-object_shadow-spotlight-BI.png
+   .. figure:: /images/render_lights_light-object_shadow-spotlight.png
       :width: 400px
 
       Render showing the soft edge spotlighted area and the sharp/hard object shadow.
