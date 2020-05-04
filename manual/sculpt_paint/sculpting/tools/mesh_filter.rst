@@ -32,7 +32,21 @@ Filter Type
    Relax
       Tries to create an even distribution of quads without deforming the volume of the mesh.
       This filter works the same as the *Relax* mode of the *Slide Relax* brush.
+   Surface Smooth
+      Eliminates irregularities of the mesh by making the positions
+      of the vertices more uniform while preserving the volume of the object.
+
+      Shape Preservation
+         How much of the original shape is preserved when smoothing.
+      Per Vertex Displacement
+         How much the position of each individual vertex influences the final result.
+
 Strength
    The amount of effect the filter has on the mesh.
+
 Deformation Axis
    Apply the deformation only on the selected axis.
+
+Use Face Sets
+   Only applies the mesh filter to the vertices assigned to the :ref:`Face Set <sculpting-editing-facesets>`
+   that is under the mouse.
