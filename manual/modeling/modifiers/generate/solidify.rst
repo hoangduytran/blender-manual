@@ -26,6 +26,15 @@ Mode Independent Properties
 
 Thickness
    The depth to be solidified.
+
+   .. important::
+
+      The modifier thickness is calculated using local vertex coordinates. If the object has non-uniform scale,
+      the thickness will vary on different sides of the object.
+
+      To fix this, either :ref:`Apply <bpy.ops.object.transform_apply>`
+      or :ref:`Clear <bpy.ops.object.*clear>` the scale.
+
 Offset
    A value between (-1 to 1) to locate the solidified output inside or outside the original mesh.
    The inside and outside is determined by the face normals.
@@ -172,13 +181,8 @@ Boundary Shape
    Flat
       Adjusts the boundary of a planar opening to be a flat (like a cut sphere).
 
-.. important::
-
-   The modifier thickness is calculated using local vertex coordinates. If the object has non-uniform scale,
-   the thickness will vary on different sides of the object.
-
-   To fix this, either :ref:`Apply <bpy.ops.object.transform_apply>`
-   or :ref:`Clear <bpy.ops.object.*clear>` the scale.
+Merge Threshold
+   Distance within which degenerated geometry is merged.
 
 
 Known Limitations
