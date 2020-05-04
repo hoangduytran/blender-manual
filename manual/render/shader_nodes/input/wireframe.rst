@@ -39,4 +39,6 @@ Factor
 Examples
 ========
 
-Todo <2.8 add.
+.. figure:: /images/render_shader-nodes_input_wireframe_example.jpg
+
+   Using the wireframe node to showcase the topology of a mesh.
