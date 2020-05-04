@@ -59,6 +59,9 @@ Vertex Group
       - On 0.5 , vertices with zero weight will be half as thick as those with full weight.
       - On 1.0 , the weights are ignored and the *Thickness* value is used for every vertex.
 
+Bevel Convex
+   Edge :ref:`bevel weight <modeling-edges-bevel-weight>` to be added to outside edges.
+
 Offset
    A value between (-1 to 1) to locate the solidified output inside or outside the original mesh.
    The inside and outside is determined by the face normals.
