@@ -35,10 +35,6 @@ Thickness
       To fix this, either :ref:`Apply <bpy.ops.object.transform_apply>`
       or :ref:`Clear <bpy.ops.object.*clear>` the scale.
 
-Offset
-   A value between (-1 to 1) to locate the solidified output inside or outside the original mesh.
-   The inside and outside is determined by the face normals.
-   Set to 0.0, the solidified output will be centered on the original mesh.
 Clamp
    A value between (0 to 2) to clamp offsets to avoid self-intersection.
    The amount is determined by the length of the shortest adjacent edge.
@@ -62,6 +58,11 @@ Vertex Group
       - On 0.0 , vertices with zero weight will have no thickness at all (creates duplicate vertices).
       - On 0.5 , vertices with zero weight will be half as thick as those with full weight.
       - On 1.0 , the weights are ignored and the *Thickness* value is used for every vertex.
+
+Offset
+   A value between (-1 to 1) to locate the solidified output inside or outside the original mesh.
+   The inside and outside is determined by the face normals.
+   Set to 0.0, the solidified output will be centered on the original mesh.
 
 Flip Normals
    Reverse the normals of all geometry (both the inner and outer surfaces).
