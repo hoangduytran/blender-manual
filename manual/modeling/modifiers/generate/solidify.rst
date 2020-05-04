@@ -181,6 +181,10 @@ Boundary Shape
    Flat
       Adjusts the boundary of a planar opening to be a flat (like a cut sphere).
 
+Flat Faces
+   Make faces use the minimal vertex weight assigned to their vertices ensures
+   new faces remain parallel to their original ones, slow, disable when not needed.
+
 Merge Threshold
    Distance within which degenerated geometry is merged.
 
