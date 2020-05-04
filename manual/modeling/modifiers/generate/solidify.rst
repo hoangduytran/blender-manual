@@ -82,6 +82,15 @@ Material Index Offset
    Rim
       Similarly, you can give another material to the rim faces.
 
+Shell Vertex Group
+   Vertex group that the generated shell geometry will be weighted to.
+   This allows you to use other modifiers to only affect the shell geometry
+   by using a that modifier's vertex group influence control.
+Rim Vertex Group
+   Vertex group that the generated rim geometry will be weighted to.
+   This allows you to use other modifiers to only affect the rim geometry
+   by using a that modifier's vertex group influence control.
+
 
 Simple Mode
 -----------
