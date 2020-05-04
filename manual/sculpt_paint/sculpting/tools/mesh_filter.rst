@@ -40,6 +40,14 @@ Filter Type
          How much of the original shape is preserved when smoothing.
       Per Vertex Displacement
          How much the position of each individual vertex influences the final result.
+   Sharpen
+      Sharpens and smooths the mesh based on its curvature,
+      resulting in pinching hard edges and polishing flat surfaces.
+      It fixes most of the artifacts of the voxel remesher and those produced when
+      sculpting hard surfaces and stylized models with creasing and flattening brushes.
+
+      Smooth Ratio
+         How much smoothing is applied to polished surfaces.
 
 Strength
    The amount of effect the filter has on the mesh.
