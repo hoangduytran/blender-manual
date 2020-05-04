@@ -1,4 +1,3 @@
-.. |node-icon| image:: /images/render_materials_assignment_node-icon-BI.png
 
 **********
 Assignment
@@ -51,7 +50,7 @@ Paste Material
 
 Copy Material to Selected
    Copy the same material assignment from the active to other selected objects.
-   
+
 Remove Unused Slots
    Removes all material slots not assigned to the object.
 
@@ -84,9 +83,6 @@ Data-block Links
    Short explanation: If connected to the object, you can have several instances of the same Object Data using
    different materials. If linked to mesh data, you cannot.
    See :doc:`Data System </files/introduction>` for more information.
-
-.. |material-icon| image:: /images/interface_controls_nodes_introduction_icons-material.png
-   :width: 1.0em
 
 
 Edit Mode
