@@ -173,12 +173,10 @@ a base material is as follows:
 #. In the Object Material Slots list, click the ``+`` button to create a new slot or select an existing material.
 #. Click the *Assign* button, and the material will appear on the selected object faces.
 
-.. This section was hidden from the documentation as I was unable to reporduce it in Blender 2.83. 
-   However the information may still be useful if someone could update it.
-   You can also make this new material a copy of an existing material by adding the data-block:
 
-.. Select the object, get the material, :kbd:`RMB` and Copy data to clipboard.
-   When you have renamed the material, click "Link: Data" to link to the existing material.
-   Proceed to assign faces as required.
-   N.b: If you change the material on the original object, the new object color changes too.
-   
+You can also make this new material a copy of an existing material by adding the data-block:
+
+Select the object, get the material, :kbd:`RMB` and Copy data to clipboard.
+When you have renamed the material, click "Link: Data" to link to the existing material.
+Proceed to assign faces as required.
+N.b: If you change the material on the original object, the new object color changes too. 
