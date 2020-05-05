@@ -172,11 +172,3 @@ a base material is as follows:
 #. Select the face/faces to be colored with the second material.
 #. In the Object Material Slots list, click the ``+`` button to create a new slot or select an existing material.
 #. Click the *Assign* button, and the material will appear on the selected object faces.
-
-
-You can also make this new material a copy of an existing material by adding the data-block:
-
-Select the object, get the material, :kbd:`RMB` and Copy data to clipboard.
-When you have renamed the material, click "Link: Data" to link to the existing material.
-Proceed to assign faces as required.
-N.b: If you change the material on the original object, the new object color changes too. 
