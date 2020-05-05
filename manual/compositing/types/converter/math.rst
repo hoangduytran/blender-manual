@@ -137,7 +137,7 @@ Operation
          Rounds the input value up to the nearest integer.
 
       Truncate
-         Outputs the interger part of the *value*.
+         Outputs the integer part of the *value*.
 
       Fraction
          `Fraction <https://en.wikipedia.org/wiki/Rational_function>`__.
@@ -175,9 +175,8 @@ Operation
          The `Arctangent <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of the input value.
 
       Arctan2
-         Outputs the `Inverse Tangent
-         <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__ of
-         the first value divided by the second value measured in radians.
+         Outputs the `Inverse Tangent <https://en.wikipedia.org/wiki/Inverse_trigonometric_functions>`__
+         of the first value divided by the second value measured in radians.
 
       Hyperbolic Sine
          The `Hyperbolic Sine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value.

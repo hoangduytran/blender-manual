@@ -90,8 +90,8 @@ Lock Camera to View
 
 .. hint::
 
-   This will moves the camera's parent which can be useful with camera rigs,
-   use the :ref:`Camera Parent Lock <prefs-camera-parent-lock>` preference to change this behavior.
+   This will move the camera's parent which can be useful with camera rigs.
+   Use the :ref:`Camera Parent Lock <prefs-camera-parent-lock>` preference to change this behavior.
 
 
 3D Cursor

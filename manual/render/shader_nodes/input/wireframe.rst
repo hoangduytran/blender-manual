@@ -9,9 +9,9 @@ Wireframe Node
 
    Wireframe Node.
 
-The *Wireframe node* is used to retrieve the edges of an object as it appears to Cycles.
+The Wireframe node is used to retrieve the edges of an object as it appears to Cycles.
 As meshes are triangulated before being processed by Cycles,
-topology will always appear triangulated when viewed with the *Wireframe node*.
+topology will always appear triangulated when viewed with the Wireframe node.
 
 
 Inputs
@@ -41,4 +41,4 @@ Examples
 
 .. figure:: /images/render_shader-nodes_input_wireframe_example.jpg
 
-   Using the wireframe node to showcase the topology of a mesh.
+   Using the Wireframe node to showcase the topology of a mesh.

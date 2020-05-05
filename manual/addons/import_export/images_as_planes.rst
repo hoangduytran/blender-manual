@@ -35,7 +35,7 @@ Relative Path
    Link to the image file using a :ref:`relative file path <files-blend-relative_paths>`.
 
 Force Reload
-   Reloads the image file into Blender if it is already added as an image Data Block.
+   Reloads the image file into Blender if it is already added as an image data-block.
 
 Animate Image Sequences
    Import sequentially numbers images as an animated image sequence instead of separate planes.
@@ -45,7 +45,7 @@ Compositing Nodes
 -----------------
 
 Setup Corner Pin
-   Builds a compositing setup to reference this image using a corner pin node.
+   Builds a compositing setup to reference this image using a Corner Pin node.
 
 
 Material Settings

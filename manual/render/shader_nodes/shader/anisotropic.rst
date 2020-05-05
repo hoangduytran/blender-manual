@@ -8,7 +8,7 @@ Anisotropic BSDF
    :align: right
 
    Anisotropic BSDF.
-   
+
 :guilabel:`Cycles Only`
 
 The *Anisotropic* :abbr:`BSDF (Bidirectional scattering distribution function)`

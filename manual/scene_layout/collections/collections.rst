@@ -24,7 +24,7 @@ Collections Menu
    :Hotkey:    :kbd:`M`, :kbd:`Shift-M`, :kbd:`Ctrl-G`, etc.
 
 Move to Collection :kbd:`M`
-   Move selected objects to an existing or new collection. 
+   Move selected objects to an existing or new collection.
 Link to Collection :kbd:`Shift-M`
    Link selected objects to a collection.
    A new collection can be created in the pop-up.

@@ -75,11 +75,11 @@ Bake Action
    :Mode:      Object and Pose Modes
    :Menu:      :menuselection:`Object/Pose --> Animation --> Bake Action...`
 
-The final motion of objects/bones depends not only on the keyframed animation,
-but also on any active FCurve modifiers, drivers, and constraints. The *Bake
-Action* tool visits all scene frames. On each frame, it computes the final
-animation of the selected objects/bones with all those modifiers, drivers, and
-constraints applied, and keyframes the result.
+The final motion of objects or bones depends not only on the keyframed animation,
+but also on any active F-curve modifiers, drivers, and constraints.
+On each frame of all the scene's frames, the *Bake Action* tool computes
+the final animation of the selected objects or bones with all those
+modifiers, drivers, and constraints applied, and keyframes the result.
 
 This can be useful for adding deviation to a cyclic action like a :term:`walk
 cycle`, or to create a keyframe animation created from drivers or constraints.

@@ -27,7 +27,7 @@ Rotation Origins
    Topology
       Sets the rotation origin automatically using the topology and shape of the mesh as a guide.
    Face Sets
-      Creates a pose segment per :ref:`Face Set <sculpting-editing-facesets>`, starting from the active Face Set.
+      Creates a pose segment per :ref:`Face Set <sculpting-editing-facesets>`, starting from the active face set.
 
 Pose Origin Offset
    Offset of the pose origin in relation to the brush radius.

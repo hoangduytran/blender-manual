@@ -28,7 +28,7 @@ In Front
 Color
    The color to render the object in when object color needs to be rendered.
    The alpha channel can be used to render the object transparent.
-   
+
 
 .. _properties-material-viewport-display:
 

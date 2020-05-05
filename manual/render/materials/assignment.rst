@@ -168,7 +168,7 @@ a base material is as follows:
 
 #. In Object Mode, create a base material.
 #. Go into Edit Mode and Face Select (a new list will appear below
-   the Active Material list with *Assign*/*Select*/*Deselect* buttons).
-#. Select the face/faces to be colored with the second material.
+   the Active Material list with *Assign*, *Select*, *Deselect* buttons).
+#. Select the faces to be colored with the second material.
 #. In the Object Material Slots list, click the ``+`` button to create a new slot or select an existing material.
 #. Click the *Assign* button, and the material will appear on the selected object faces.

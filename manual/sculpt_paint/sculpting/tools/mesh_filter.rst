@@ -38,7 +38,7 @@ Filter Type
 
       Shape Preservation
          How much of the original shape is preserved when smoothing.
-      Per Vertex Displacement
+      Per-Vertex Displacement
          How much the position of each individual vertex influences the final result.
    Sharpen
       Sharpens and smooths the mesh based on its curvature,

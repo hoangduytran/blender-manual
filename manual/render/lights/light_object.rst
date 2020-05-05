@@ -78,10 +78,10 @@ Radius
 Spot Shape
 ----------
 
-   .. figure:: /images/render_lights_light-object_terms.png
-      :width: 610px
+.. figure:: /images/render_lights_light-object_terms.png
+   :width: 610px
 
-      Changing the Spot options also changes the appearance of the spotlight as displayed in the 3D Viewport.
+   Changing the Spot options also changes the appearance of the spotlight as displayed in the 3D Viewport.
 
 Size
    The size of the outer cone of a *Spot*,
@@ -89,8 +89,7 @@ Size
    This slider in fact controls the angle at the top of the lighting cone,
    and can be between (1.0 to 180.0).
 
-   .. list-table::
-      Changing the spot *Size* option.
+   .. list-table:: Changing the spot *Size* option.
 
       * - .. figure:: /images/render_lights_light-object_size45.png
              :width: 320px

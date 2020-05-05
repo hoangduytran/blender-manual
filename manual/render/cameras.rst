@@ -7,8 +7,8 @@ A camera is an object that provides a means of rendering images from Blender.
 It defines which portion of a scene is visible in the rendered image.
 
 Cameras are invisible in renders, so they do not have any material or texture settings.
-However, they do have *Object* and *Editing* setting panels available
-which are displayed when a camera is the active object.
+However, they do have *Object* and *Editing* setting panels available which are displayed
+when a camera is the active object.
 
 .. seealso::
 
@@ -135,7 +135,7 @@ Clip Start and End
    .. tip::
 
       When *Limits* in the *Viewport Display* panel is enabled,
-      the clip bounds will be visible as two yellow connected dots on the cameras line of sight.
+      the clip bounds will be visible as two yellow connected dots on the camera's line of sight.
 
    .. seealso::
 

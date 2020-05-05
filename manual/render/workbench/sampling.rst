@@ -26,7 +26,7 @@ Single Pass Anti-Aliasing
 Multisample
    The scene will be rendered multiple times with a slight offset.
    The anti-aliasing will be gathered from the multiple renders.
-   The number of samples are predefine so it uses the best distribution of the samples.
+   The number of samples are predefined so it uses the best distribution of the samples.
 
    5, 8, 11, 16, 32
 

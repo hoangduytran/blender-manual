@@ -29,8 +29,8 @@ Thickness
 
    .. important::
 
-      The modifier thickness is calculated using local vertex coordinates. If the object has non-uniform scale,
-      the thickness will vary on different sides of the object.
+      The modifier thickness is calculated using local vertex coordinates.
+      If the object has a non-uniform scale, the thickness will vary on different sides of the object.
 
       To fix this, either :ref:`Apply <bpy.ops.object.transform_apply>`
       or :ref:`Clear <bpy.ops.object.*clear>` the scale.
@@ -100,9 +100,7 @@ Shell Vertex Group
    This allows you to use other modifiers to only affect the shell geometry
    by using a that modifier's vertex group influence control.
 Rim Vertex Group
-   Vertex group that the generated rim geometry will be weighted to.
-   This allows you to use other modifiers to only affect the rim geometry
-   by using a that modifier's vertex group influence control.
+   Same as *Shell Vertex Group* , but for the generated rim geometry.
 
 
 Simple Mode
@@ -186,8 +184,8 @@ Boundary Shape
       Adjusts the boundary of a planar opening to be a flat (like a cut sphere).
 
 Flat Faces
-   Make faces use the minimal vertex weight assigned to their vertices ensures
-   new faces remain parallel to their original ones, slow, disable when not needed.
+   Make faces use the minimal vertex weight assigned to their vertices to ensure that
+   new faces remain parallel to their original ones. This is slow, so disable it when it is not needed.
 
 Merge Threshold
    Distance within which degenerated geometry is merged.

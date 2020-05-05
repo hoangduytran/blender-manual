@@ -8,7 +8,7 @@ Velvet BSDF
    :align: right
 
    Velvet BSDF.
-   
+
 :guilabel:`Cycles Only`
 
 The *Velvet* :abbr:`BSDF (Bidirectional scattering distribution function)`

@@ -67,7 +67,7 @@ Flow Behavior
 
 Use Flow
    Enables or disables the flow of fluid, this property is useful for animations to selectively enable and
-   disable when fluid is being added to or removed from the domain. 
+   disable when fluid is being added to or removed from the domain.
 
 .. _bpy.types.FluidFlowSettings.subframes:
 
@@ -163,7 +163,7 @@ Flow Source
 
       Volume Emission :guilabel:`Fire or Smoke Only`:
          Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is the full amount.
-         Note that emitting fluid based on volume may have unpredictable results
+         Note that emitting fluid based on volume can have unpredictable results
          if your mesh is :term:`non-manifold`.
 
    .. _bpy.types.FluidFlowSettings.particle_system:
@@ -198,10 +198,11 @@ Source
 .. _bpy.types.FluidFlowSettings.velocity_normal:
 
 Normal
-   This option controls how much velocity fluid is given along a face :term:`normal`. Note that initial velocities
-   will always be applied along all face normals. With a closed flow source mesh fluid will therefore always be emitted
-   in more than one direction. In order to set initial velocities along only one direction all normals need to point in
-   the same direction. This is can be achieved when using a plane as the flow object.
+   This option controls how much velocity fluid is given along a face :term:`normal`.
+   Note that, initial velocities will always be applied along all face normals.
+   Thus with a closed flow source mesh, fluid will always be emitted in more than one direction.
+   To set initial velocities along only one direction all normals need to point in the same direction.
+   This is can be achieved when using a plane as the flow object.
 
 .. _bpy.types.FluidFlowSettings.velocity_coord:
 

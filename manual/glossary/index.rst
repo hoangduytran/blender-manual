@@ -314,7 +314,7 @@ This page lists definitions for terms used in Blender and this manual.
       The area in which objects are visible to the camera. Also see :term:`Focal Length <focal length>`.
 
    Fireflies
-      Fireflies are rendering artifact encountered with path tracing resulting from
+      Rendering artifacts encountered with path tracing resulting from
       improbable samples that contribute very high values to pixels.
 
    Focal Length
