@@ -35,7 +35,7 @@ Mode
 
       Adaptivity
          Reduces the final face count by simplifying geometry where detail is not needed.
-         This introduce triangulation to faces that do not need as much detail
+         This introduce triangulation to faces that do not need as much detail.
       Smooth Shading
          Outputs faces with :ref:`Smooth Shading <bpy.ops.object.shade_smooth>` instead of flat shading.
 

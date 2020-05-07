@@ -119,7 +119,7 @@ File Region
 File Path
    Text field for the current folder path.
    :kbd:`Tab` will auto-complete an existing path.
-   If you type a non existing directory path, you will be prompted to create that new directory.
+   If you type a non-existing directory path, you will be prompted to create that new directory.
 File Name
    Text field to edit the file name and extension.
    When saving, if the background is red, a file with same name already exists in the folder.
@@ -198,7 +198,7 @@ Parent Directory :kbd:`P`
 File Drop
 ^^^^^^^^^
 
-You can also drag & drop a file or directory from your local file explorer into the Blender File Browser.
+You can also drag & drop a file or directory from your file manager into the Blender File Browser.
 This will relocate it to the directory of the dropped file, and the file will be selected.
 
 

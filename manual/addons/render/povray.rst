@@ -558,7 +558,7 @@ Texture Channels
 ^^^^^^^^^^^^^^^^
 
 Texture influences currently exported are: Alpha, Diffuse, Bump, Specular, Mirror (uses same channel as specular).
-(No other channel because of POV-Ray non uniform syntax for them.)
+(No other channel because of POV-Ray non-uniform syntax for them.)
 
 
 Custom Gamma

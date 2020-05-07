@@ -100,7 +100,7 @@ Shell Vertex Group
    This allows you to use other modifiers to only affect the shell geometry
    by using a that modifier's vertex group influence control.
 Rim Vertex Group
-   Same as *Shell Vertex Group* , but for the generated rim geometry.
+   Same as *Shell Vertex Group*, but for the generated rim geometry.
 
 
 Simple Mode

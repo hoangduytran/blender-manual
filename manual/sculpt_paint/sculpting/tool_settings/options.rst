@@ -27,7 +27,7 @@ Auto-Masking
    Face Sets
       Affect only vertices that share face sets with active vertex.
    Mesh Boundary
-      Does not affect non manifold boundary edges.
+      Does not affect non-manifold boundary edges.
    Face Sets Boundary
       Does not affect vertices which belong to a face set boundary.
 
