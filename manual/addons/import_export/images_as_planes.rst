@@ -7,7 +7,8 @@ Images as Planes
    :class: refbox
 
    :Category:  Import-Export
-   :Menu:      :menuselection:`File --> Import/Export --> FBX (.fbx)`
+   :Menu:      :menuselection:`File --> Import --> Images as Planes`,
+               :menuselection:`3D Viewport --> Add --> Image --> Images as Planes`
 
 This add-on imports images and creates planes with them as textures.
 At the moment the naming for objects, materials, textures and meshes
