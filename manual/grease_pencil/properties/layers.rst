@@ -26,8 +26,8 @@ See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more informatio
 
 .. tip::
 
-   Sometimes the layers that your are not working on could be a distraction,
-   you can activate *Fade Layers* in overlays to control the opacity of the non active layers.
+   Sometimes the layers you are not working on can be a distraction.
+   Activate *Fade Layers* in overlays to control the opacity of the non-active layers.
    See :doc:`Overlays </editors/3dview/display/overlays>` for more information.
 
 .. _bpy.types.GPencilLayer.mask_layer:
