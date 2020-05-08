@@ -106,7 +106,7 @@ Visibility (screen icon)
 
 
 Masks
-======
+=====
 
 In a :ref:`List view <ui-list-view>` of layers affected by a layer mask.
 See :doc:`Masks </grease_pencil/properties/masks>` for more information.

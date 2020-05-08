@@ -87,9 +87,9 @@ Toggle Bold, Italics, Underline, Small Caps
 Kerning
    Font kerning is the space between individual characters.
 
-   Decrease Kerning :kbd:`Alt-Left-Arrow`
+   Decrease Kerning :kbd:`Alt-Left`
       Decreases the spacing between the characters on either side of the cursor.
-   Increase Kerning :kbd:`Alt-Right-Arrow`
+   Increase Kerning :kbd:`Alt-Right`
       Increase the spacing between the characters on either side of the cursor.
    Reset Kerning
       Sets the spacing between the characters on either side of the cursor to their initial value.
