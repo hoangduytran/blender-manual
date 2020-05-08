@@ -34,7 +34,7 @@ if "%1" == "help" (
 	echo.- gettext              to make PO message catalogs
 	echo.- epub                 to make an epub
 	echo.- epub3                to make an epub3
-   echo.- readme               to make a 'readme.html' file
+	echo.- readme               to make a 'readme.html' file
 	echo.- clean                to delete all old build files
 	echo.
 	echo.Translations
@@ -160,12 +160,12 @@ if "%1" == "translations" (
 )
 
 if "%1" == "check_links" (
-    %SPHINXBUILD% -b linkcheck %ALLSPHINXOPTS% %BUILDDIR%/linkcheck
-    if errorlevel 1 exit /b 1
-    echo.
-    echo.Link check complete; look for any errors in the above output ^
+	%SPHINXBUILD% -b linkcheck %ALLSPHINXOPTS% %BUILDDIR%/linkcheck
+	if errorlevel 1 exit /b 1
+	echo.
+	echo.Link check complete; look for any errors in the above output ^
 or in %BUILDDIR%/linkcheck/output.txt.
-    goto end
+	goto end
 )
 
 if "%1" == "check_syntax" (
@@ -179,10 +179,10 @@ if "%1" == "update_po" (
 	REM Check if SVN is in path
 	where /q svn
 	IF ERRORLEVEL 1 (
-    	ECHO SVN is missing. Ensure it is installed and placed in your PATH.
-    	GOTO EOF
+		ECHO SVN is missing. Ensure it is installed and placed in your PATH.
+		GOTO EOF
 	) ELSE (
-    GOTO CHECK_LOCALE
+	GOTO CHECK_LOCALE
 	)
 
 	REM Check if locale exists
