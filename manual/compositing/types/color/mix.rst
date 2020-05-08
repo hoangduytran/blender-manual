@@ -73,7 +73,7 @@ Subtract
    Taking Blue away from Purple leaves Red. Use this to desaturate an image.
    Taking away yellow makes an image bluer and more depressing.
 Multiply
-   Black (0.00) times anything leaves black. Anything times White (1.00) is itself.
+   Black (0.0) times anything leaves black. Anything times White (1.0) is itself.
    Use this to mask out garbage, or to colorize a black-and-white image.
 Hue
    Shows you how much of a color is in an image,

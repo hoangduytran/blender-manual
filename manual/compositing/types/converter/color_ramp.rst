@@ -53,8 +53,6 @@ The example map below shows how to use the Color Ramp node to do this:
 
 In the map above, a black-and-white swirl image, which is lacking an alpha channel,
 is fed into the Color Ramp node as a *Factor*.
-(Technically, we should have converted the image to a value using the RGB to BW node,
-but hey, this works just as well since we are using a BW image as input.)
 
 We have set the Color Ramp node to a purely transparent color on the left end of the spectrum,
 and a fully Red color on the right. As seen in the viewer,
@@ -77,7 +75,7 @@ This example compositing map takes a boring BW image and makes it a flaming swir
    :width: 600px
 
 In this example, we have mapped the shades of gray in the input image to three colors, blue,
-yellow, and red, all fully opaque (Alpha of 1.00). Where the image is black,
+yellow, and red, all fully opaque (Alpha of 1.0). Where the image is black,
 Color Ramp substitutes blue, the currently selected color. Where it is some shade of gray,
 Color Ramp chooses a corresponding color from the spectrum (bluish, yellow, to reddish).
 Where the image is fully white, Color Ramp chooses red.

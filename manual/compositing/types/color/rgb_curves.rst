@@ -42,15 +42,17 @@ Properties
 ==========
 
 Tone
-   .. TODO2.8
 
    Standard
+      TODO 2.8
 
    Film like
+      TODO 2.8
+      
 Channel
    Clicking on one of the channels displays the curve for each.
 
-   C (Combined RGB), R (Red), G (Green), B (Blue), L (Luminance)
+   C (Combined RGB), R (Red), G (Green), B (Blue)
 Curve
    A Bézier curve that varies the input levels (X axis) to produce an output level (Y axis).
    For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
