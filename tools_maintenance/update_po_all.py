@@ -104,6 +104,7 @@ def run_multiprocess(cmd_list, job_total=1):
 # -----------------------------------------------------------------------------
 # Setup Global State
 
+
 PYTHON_BIN = sys.executable
 if USE_MULTI_PROCESS:
     CPU_COUNT = multiprocessing.cpu_count()
@@ -119,6 +120,9 @@ os.chdir(ROOT_DIR)
 LOCALE_BUILD_DIR = os.path.join(ROOT_DIR, "build", "locale")
 
 LOCALE_DIR = os.path.join(ROOT_DIR, "locale")
+
+# When we cannot use portable API's.
+IS_WIN32 = (os.name == "nt")
 
 
 # -----------------------------------------------------------------------------
@@ -243,9 +247,6 @@ def main():
     # Print Commit Messages
     #
     # Use space prefix as shell's (bash/zsh/fish) uses this as a hint not to store in the users history.
-
-    revision = "Unknown"
-
     revision = re.findall(
         r"^Revision:\s([\d]+)",
         run_output(["svn", "info", ROOT_DIR]).decode('utf8'),
@@ -253,8 +254,19 @@ def main():
     )
     revision = revision[0] if revision else "Unknown"
 
+    # Note that when 'has_complete_locale_checkout == True' we _could_ commit all languages at once,
+    # however this can cause commits that are so large, they take a long time and risk hanging.
+    # So commit every language on it's own.
+
     for svn_dir in svn_dirs_all:
-        print("  svn ci " + shlex.quote(svn_dir) + " -m \"Update r" + revision + "\"")
+        # 'shlex.quote' causes path separator to be converted to forward slashes,
+        # causing the command to fail.
+        if IS_WIN32:
+            svn_dir = "\"{:s}\"".format(svn_dir)
+        else:
+            svn_dir = shlex.quote(svn_dir)
+
+        print("  svn ci {:s} -m \"Update r{:s}\"".format(svn_dir, revision))
 
 
 if __name__ == "__main__":
