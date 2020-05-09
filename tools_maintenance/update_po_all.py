@@ -262,12 +262,9 @@ def main():
         # 'shlex.quote' causes path separator to be converted to forward slashes,
         # causing the command to fail.
         if IS_WIN32:
-            svn_dir = "\"{:s}\"".format(svn_dir)
+            print("  " + subprocess.list2cmdline(["svn", "ci", svn_dir, "-m", "Update r" + revision]))
         else:
-            svn_dir = shlex.quote(svn_dir)
-
-        print("  svn ci {:s} -m \"Update r{:s}\"".format(svn_dir, revision))
-
+            print("  svn ci {:s} -m \"Update r{:s}\"".format(shlex.quote(svn_dir), revision))
 
 if __name__ == "__main__":
     main()
