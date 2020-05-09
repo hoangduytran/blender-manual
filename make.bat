@@ -176,55 +176,7 @@ if "%1" == "check_syntax" (
 )
 
 if "%1" == "update_po" (
-	REM Check if SVN is in path
-	where /q svn
-	IF ERRORLEVEL 1 (
-		ECHO SVN is missing. Ensure it is installed and placed in your PATH.
-		GOTO EOF
-	) ELSE (
-	GOTO CHECK_LOCALE
-	)
-
-	REM Check if locale exists
-	:CHECK_LOCALE
-	IF NOT EXIST %cd%/locale GOTO MISSING_LOCALE
-
-	REM Update the locale dir:
-	cd locale
-	svn cleanup .
-	svn up .
-	cd ../
-
-	REM Remove POT files:
-	IF EXIST %BUILDDIR%/locale (
-		RMDIR /s /q %BUILDDIR%\locale
-	)
-
-	REM Create POT files:
-	%SPHINXBUILD% -t builder_html -b gettext %ALLSPHINXOPTS% %BUILDDIR%/locale
-	if errorlevel 1 exit /b 1
-	echo.
-	echo.Build finished. The message catalogs are in %BUILDDIR%/locale.
-
-	REM Create PO files:
-	cd manual
-	sphinx-intl update -p ../%BUILDDIR%/locale
-	cd ../
-
-	cd locale
-	svn --force --depth infinity add .
-	cd ../
-
-	python tools_rst/rst_check_locale.py > update_po.log
-	type update_po.log
-	DEL update_po.log
-
-	echo. cd locale
-	echo. svn ci -m "Update PO"
-	goto EOF
-
-	:MISSING_LOCALE
-	echo. Locale directory not found... Aborting.
+	python tools_maintenance/update_po_all.py
 	goto EOF
 )
 
