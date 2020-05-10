@@ -7,7 +7,7 @@ Relations
 *********
 
 Parent
-   The object the selected object is parented too.
+   The object the selected object is parented to.
 Parent Type
    The type of parenting used. See :doc:`parenting </scene_layout/object/editing/parent>`
    for information on the different types.
