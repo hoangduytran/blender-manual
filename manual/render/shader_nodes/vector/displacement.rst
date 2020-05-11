@@ -11,7 +11,7 @@ Displacement Node
 
 The *Displacement* node is used to displace the surface along the surface normal,
 to add more detail to the geometry. Both procedural textures and baked displacement maps
-may be used.
+can be used.
 
 For best results the mesh must be subdivided finely to bring out the detail
 in the displacement texture.

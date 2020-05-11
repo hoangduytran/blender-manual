@@ -71,24 +71,24 @@ Spatial Size
    to tweak the apparent size in your scene.
 
 Spectrum
-   Used to choose the wave specta model to use.
-   Wave specta are used to describe how energy moves through the waves at different frequencies.
+   Used to choose the wave spectrum model to use.
+   Wave spectra are used to describe how energy moves through the waves at different frequencies.
    Energy travels through waves differently depending on the depth of the water and the wind speed.
 
    Turbulent Ocean
       Use for turbulent seas with foam (Phillips).
    Established Ocean
       Use for a large area, established ocean where the ocean would extend for miles
-      with wind blowing for days allowing the waves to reach a point of equilibrum (Pierson-Moskowitz method).
+      with wind blowing for days allowing the waves to reach a point of equilibrium (Pierson-Moskowitz method).
    Established Ocean (Sharp Peaks)
-      Similar to regular *Established Ocean* however, waves will continue
-      to grow with time creating sharper peaks ('JONSWAP' and Pierson-Moskowitz method).
+      Similar to regular *Established Ocean* however, waves will continue to grow with time
+      creating sharper peaks (:abbr:`JONSWAP (JOint North Sea WAve Project)` and Pierson-Moskowitz method).
       An extra parameter is used to define the sharpness of these peaks.
    Shallow Water
       Use for shallow water with depths less than about 10 meters which makes it great
-      for small lakes and ponds without heavy wind ('JONSWAP' and 'TMA' -- Texel-Marsen-Arsloe methods).
+      for small lakes and ponds without heavy wind (JONSWAP and TMA -- Texel-Marsen-Arsloe methods).
 
-   .. list-table:: Examples of different spectrums, settings adjusted for each.
+   .. list-table:: Examples of different spectra, settings adjusted for each.
 
       * - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra_turbulent.png
 
@@ -107,8 +107,8 @@ Spectrum
              Shallow Water.
 
 Sharpness Peak
-   An artificial factor to control how sharp the peaks of the waves are in the
-   *Established Ocean (Sharp Peaks)* and *Shallow Water* spectrum models.
+   An artificial factor to control how sharp the peaks of the waves are in
+   the *Established Ocean (Sharp Peaks)* and *Shallow Water* spectrum models.
 
 Fetch
    Distance from a lee shore, called the fetch, or the distance over which the wind blows with constant velocity.

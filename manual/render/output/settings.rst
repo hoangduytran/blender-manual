@@ -44,7 +44,7 @@ Render Region
 
    .. note::
 
-      This disables the *Save Buffers* option in the *Performance* tab.
+      This disables the *Save Buffers* option in the Performance panel.
 
    Crop Render Region
       Crops the rendered image to the size of the render region,

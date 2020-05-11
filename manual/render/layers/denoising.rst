@@ -89,7 +89,7 @@ If denoising fails to produce good results, more samples or clamping will often 
 - Denoising cannot be used for baking yet.
 - For animation denoising can be used, however it still requires high sample counts for good results.
   With low sample counts, low frequency (blurry) noise can be visible in animation frames,
-  even if it is not immediately apparent in still images.
+  even if it not becomes immediately apparent in still images.
 - When using GPU rendering, the denoising (non Optix) process may use a significant amount of VRAM.
   If the GPU runs out of memory but renders fine without denoising, try reducing the tile size.
 

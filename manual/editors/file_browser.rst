@@ -198,8 +198,8 @@ Parent Directory :kbd:`P`
 File Drop
 ^^^^^^^^^
 
-You can also drag & drop a file or directory from your file manager into the Blender File Browser.
-This will relocate it to the directory of the dropped file, and the file will be selected.
+You can also drag and drop a file or directory from your file manager into the Blender File Browser.
+This will move it to the directory of the dropped file, and the file will be selected.
 
 
 Selection

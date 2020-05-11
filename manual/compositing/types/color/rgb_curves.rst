@@ -24,7 +24,7 @@ Factor
    Controls the amount of influence the node exerts on the output image.
 Image
    Standard image input.
-Black Level :guilabel: `Compositor Only`
+Black Level :guilabel:`Compositor Only`
    Defines the input color that is (linear) mapped to black.
 White Level
    Defines the input color that is (linear) mapped to white.
@@ -47,7 +47,7 @@ Tone
 
    Film like
       TODO 2.8
-      
+
 Channel
    Clicking on one of the channels displays the curve for each.
 
