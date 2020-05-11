@@ -176,7 +176,7 @@ if "%1" == "check_syntax" (
 )
 
 if "%1" == "update_po" (
-	python tools_maintenance/update_po_all.py
+	python tools_maintenance/update_po.py
 	goto EOF
 )
 
