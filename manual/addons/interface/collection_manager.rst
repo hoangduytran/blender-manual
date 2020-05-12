@@ -125,9 +125,11 @@ Add Collection, Add Subcollection
 Phantom Mode
    All visibility changes made in this mode will be discarded when it's disabled.
 
-   Enabling Phantom Mode saves the current state of your restrictions and
-   allows you to edit them without fear of losing your current state.
+   Enabling Phantom Mode saves the current state of the restrictions and
+   allows you to edit them without fear of losing their current state.
    When finished, disabling Phantom Mode will restore the saved state.
+
+   Note: You will be unable to edit anything other than the restrictions while in Phantom Mode.
 
 
 QCD
@@ -161,7 +163,7 @@ The state of each slots is shown with a combination of the following indicators:
 - :kbd:`LMB` -- View single slot excluding all others.
 - :kbd:`Shift-LMB` -- Add/remove slot to/from view.
 - :kbd:`Ctrl-LMB` -- Move selected objects to slot.
-- :kbd:`Ctrl-Shift-LMB` -- Add/remove selected objects to/from slot.
+- :kbd:`Shift-Ctrl-LMB` -- Add/remove selected objects to/from slot.
 
 
 Move Widget
