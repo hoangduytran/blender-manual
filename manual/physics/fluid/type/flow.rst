@@ -207,7 +207,7 @@ Normal
 .. _bpy.types.FluidFlowSettings.velocity_coord:
 
 Initial X, Y, Z
-   Initial velocity along X, Y, Z coordinates. Can be used in addition to the initial velocity along
+   Initial velocity along X, Y, Z coordinates in world space. Can be used in addition to the initial velocity along
    the :ref:`Normal <bpy.types.FluidFlowSettings.velocity_normal>`.
 
 
