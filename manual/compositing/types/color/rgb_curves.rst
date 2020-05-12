@@ -26,7 +26,7 @@ Image
    Standard image input.
 Black Level :guilabel:`Compositor Only`
    Defines the input color that is (linear) mapped to black.
-White Level
+White Level :guilabel:`Compositor Only`
    Defines the input color that is (linear) mapped to white.
 
 .. container:: lead
