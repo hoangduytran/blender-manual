@@ -63,7 +63,7 @@ You can change the mood of an image:
 - To convey a flashback or memory, the image may be softened.
 - To convey hatred and frustration, add a red tinge or enhance the red.
 - A startling event may be sharpened and contrast-enhanced.
-- A convey a happy feeling add yellow (equal parts red and green, no blue).
+- To convey a happy feeling add yellow (equal parts red and green, no blue).
 - Dust and airborne dirt are often added as a cloud texture over the image to give a little more realism.
 
 
