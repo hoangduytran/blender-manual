@@ -26,7 +26,7 @@ Properties
 
 Index
    Selection of the previously specified index.
-Anti-Aliased
+Anti-Aliasing
    This post-process function refines the mask. See :term:`anti-aliasing`.
 
 

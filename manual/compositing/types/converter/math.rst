@@ -242,7 +242,7 @@ Using Sine Function to Pulsate
 This example has a *Time* node putting out a linear sequence from 0 to 1 over the course of 101 frames.
 At frame 25, the output value is 0.25.
 That value is multiplied by 2 × pi (6.28) and converted to 1.0 by the Sine function,
-since we all know that :math:`sin(2 × pi/ 4) = sin(pi/ 2) = +1.0`.
+since :math:`sin(2 × pi/ 4) = sin(pi/ 2) = +1.0`.
 
 Since the sine function can put out values between (-1.0 to 1.0),
 the *Map Value* node scales that to 0.0 to 1.0 by taking the input (-1 to 1), adding 1

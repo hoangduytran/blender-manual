@@ -44,7 +44,7 @@ Use Alpha
    When deactivated, the default, the icon background is a light gray.
    The alpha channel of the base image is always used.
 Clamp
-   Limit the highest color value to not exceed 1.
+   Limit the output value between 0.0 and 1.0.
 
 
 Outputs
