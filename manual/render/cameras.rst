@@ -1,3 +1,6 @@
+.. _bpy.types.Camera:
+.. _bpy.ops.camera:
+.. _cameras-index:
 
 *******
 Cameras
