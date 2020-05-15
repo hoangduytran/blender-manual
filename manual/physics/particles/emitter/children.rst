@@ -8,7 +8,7 @@ Children
 
    :Panel:     :menuselection:`Particle System --> Children`
 
-*Children* are *Hair* or *Emitter* particles originating from individual particles of hair strands.
+*Children* are *Hair* or *Emitter* particles originating from individual particles.
 They make it possible to work primarily with a relatively low amount of Parent particles,
 for whom the physics are calculated. The children are then aligned to their parents.
 Without recalculating the physics the number and visualization of the children can be changed.
