@@ -157,6 +157,8 @@ Extra
 
    :Panel:     :menuselection:`Particle System --> Render --> Extra`
 
+.. _bpy.types.ParticleSettings.use_parent_particles:
+
 Parents Particles
    Render also parent particles if child particles are used.
    Children have a lot of different deformation options,

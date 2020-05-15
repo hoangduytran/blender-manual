@@ -8,7 +8,7 @@ Children
 
    :Panel:     :menuselection:`Particle System --> Children`
 
-*Children* are *Hair* and *Keyed* particles assigned subparticles.
+*Children* are *Hair* or *Emitter* particles originating from individual particles of hair strands.
 They make it possible to work primarily with a relatively low amount of Parent particles,
 for whom the physics are calculated. The children are then aligned to their parents.
 Without recalculating the physics the number and visualization of the children can be changed.
@@ -20,9 +20,9 @@ However, children from particles follow their parents better, e.g.
 if you have a soft body animation and do not want the hair to penetrate the emitting mesh.
 But see also our manual page about :doc:`Hair </physics/particles/hair/index>`.
 
-If you turn on children the parents are no longer rendered
-(which makes sense because the shape of the children may be quite different from that of their parents).
-If you want to see the parents additionally turn on the *Parents* button in the *Visualization* panel.
+If you turn on children the parents are no longer rendered, to render the parents enable
+:ref:`Parent Particles <bpy.types.ParticleSettings.use_parent_particles>`. By default, parent particles
+are not rendered because the shape of the children may be quite different from that of their parents.
 
 Children carry the same material as their parents and are colored according to the exact
 place from where they are emitted (so all children may have different color or other attributes).
@@ -170,7 +170,7 @@ Simple
 ======
 
 Size
-   Only for *Emitter*. A multiplier for children size.
+   A multiplier for children size.
 Random Size
    Random variation to the size of child particles.
 
@@ -193,7 +193,11 @@ Long Hair
 Parting
 -------
 
-TODO.
+Parting
+   Creates parting in the children based on parent strands.
+
+Min/Max
+   The minimum/maximum root to tip angle (tip disance/root distance for long hair).
 
 
 Example
