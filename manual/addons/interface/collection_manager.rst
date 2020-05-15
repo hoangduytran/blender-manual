@@ -38,11 +38,14 @@ View Layer
 Expand All Items
    Toggle all collections expanded or collapsed. Only enabled when you have subcollections.
 
-Re-enumerate QCD Slots
+Renumber QCD Slots
    Shown only if QCD is enabled in the preferences.
 
-   - :kbd:`LMB` -- Re-enumerate QCD slots in a breadth first pattern starting from the slot designated 1.
-   - :kbd:`Alt-LMB` -- Re-enumerate from the first top-level collection.
+   - :kbd:`LMB` -- Renumber the QCD slots from the root (the slot designated 1)
+     down to the bottom, for each depth level
+     (`breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`_).
+   - :kbd:`Alt-LMB` -- Renumber from the first top-level collection in a
+     `breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`_ pattern.
 
 Filter (funnel icon)
    Choose which restriction toggles are shown in the interface.
@@ -134,7 +137,7 @@ Phantom Mode
 
 QCD
 ---
- 
+
 The Quick Content Display system provides a way to rapidly interact with
 collections by allowing you to designate up to 20 collections as QCD slots.
 You can then interact with these slots by using hotkeys or the widget
@@ -224,7 +227,7 @@ QCD Move Widget:
          Opacity of the icons for selected (but not active) objects and unselected objects.
 
          .. note::
-         
+
             The values for icon alpha are not overrides and always affect the QCD Move Widget.
 
 .. admonition:: Reference
