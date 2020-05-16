@@ -76,7 +76,7 @@ if two strips were rendered or shot under different lighting conditions but are 
 Chroma Vectorscope
 ==================
 
-Use this mode judge the quality of the color-distribution and saturation, you can also view a U/V scatter-plot.
+Use this mode to judge the quality of the color-distribution and saturation, you can also view a U/V scatter-plot.
 
 The picture is converted to YUV-format. The U and V values represent the angle of the color.
 For pixel of the picture, one point is plotted in the display at the U and V value position.
@@ -100,7 +100,7 @@ they might not when shown on the big screen TV.
 
 This mode is good for:
 
-- If you picture looks very moody or desaturated you might want to take a look at the U/V plot.
+- If your picture looks very moody or desaturated you might want to take a look at the U/V plot.
   You will most likely see all pixels building a crowd at the origin.
   If you add saturation using the *Saturation* slider in the Filter panel or any modifiers that change color,
   you can see in the U/V plot if you distort the color.
