@@ -208,7 +208,7 @@ Debug Options
 ``--debug-depsgraph-pretty``
    Enable colors for dependency graph debug messages.
 ``--debug-gpu``
-   Enable gpu debug context and information for OpenGL 4.3+.
+   Enable GPU debug context and information for OpenGL 4.3+.
 ``--debug-gpumem``
    Enable GPU memory stats in status bar.
 ``--debug-gpu-shaders``
@@ -225,7 +225,7 @@ Debug Options
 ``--debug-all``
    Enable all debug messages.
 ``--debug-io``
-   Enable debug messages for I/O (collada, ...).
+   Enable debug messages for I/O (Collada, ...).
 
 ``--debug-fpe``
    Enable floating point exceptions.
@@ -288,37 +288,37 @@ Other Options
 Argument Parsing
 ================
 
-   Arguments must be separated by white space, eg:
+Arguments must be separated by white space, eg:
 
-   .. code-block:: sh
+.. code-block:: sh
 
-      blender -ba test.blend
+   blender -ba test.blend
 
-   ...will exit since ``-ba`` is an unknown argument.
+...will exit since ``-ba`` is an unknown argument.
 
 
 Argument Order
 ==============
 
-   Arguments are executed in the order they are given. eg:
+Arguments are executed in the order they are given. eg:
 
-   .. code-block:: sh
+.. code-block:: sh
 
-      blender --background test.blend --render-frame 1 --render-output '/tmp'
+   blender --background test.blend --render-frame 1 --render-output '/tmp'
 
-   ...will not render to ``/tmp`` because ``--render-frame 1`` renders before the output path is set.
+...will not render to ``/tmp`` because ``--render-frame 1`` renders before the output path is set.
 
-   .. code-block:: sh
+.. code-block:: sh
 
-      blender --background --render-output /tmp test.blend --render-frame 1
+   blender --background --render-output /tmp test.blend --render-frame 1
 
-   ...will not render to ``/tmp`` because loading the blend-file overwrites the render output that was set.
+...will not render to ``/tmp`` because loading the blend-file overwrites the render output that was set.
 
-   .. code-block:: sh
+.. code-block:: sh
 
-      blender --background test.blend --render-output /tmp --render-frame 1
+   blender --background test.blend --render-output /tmp --render-frame 1
 
-   ...works as expected.
+...works as expected.
 
 
 Environment Variables

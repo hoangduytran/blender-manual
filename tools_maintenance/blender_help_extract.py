@@ -204,7 +204,7 @@ def text_extract_help(text, args, static_strings):
         args_used.add((arg_short, arg_long))
 
         # replacement table
-        arg_text = re.sub("\"\s*STRINGIFY_ARG\s*\(([a-zA-Z0-9_]+)\)\"", r"``\1``", arg_text)
+        arg_text = re.sub(r"\"\s*STRINGIFY_ARG\s*\(([a-zA-Z0-9_]+)\)\"", r"``\1``", arg_text)
         arg_text = arg_text.replace('" STRINGIFY(BLENDER_MAX_THREADS) "', "64")
         arg_text = arg_text.replace('" STRINGIFY(BLENDER_STARTUP_FILE) "', "startup.blend")
         arg_text = arg_text.replace('" PY_ENABLE_AUTO', '\"')
@@ -218,13 +218,29 @@ def text_extract_help(text, args, static_strings):
         text_rst.append(arg_text + "\n")
 
 
+    ind_re = None
     for l in body:
         if l.startswith("printf"):
             l = eval(l[7:].strip("();"), other_vars)
             if l.lstrip() == l and l.strip("\n").endswith(":"):
+                # create rst heading
                 l = l.strip(":\n")
-                l = "\n\n" + l + "\n" + len(l) * '=' + "\n\n"
+                l = "\n\n" + l + "\n" + len(l) * "=" + "\n\n"
+                ind_re = None
             else:
+                # unindent to the previous min indent
+                for _ in range(2):
+                    if ind_re is None:
+                        ind_re = r"\A\t{0,}"
+                    ind_m = re.match(ind_re, l)
+                    if ind_m:
+                        ind_re = r"\A\t{" + str(ind_m.end(0)) + r"}"
+                        l = re.sub(ind_re, '', l)
+                        break
+                    else:
+                        # indent is less than before
+                        ind_re = None
+
                 l = l.replace("\t", "   ")
 
             text_rst.append(l)
