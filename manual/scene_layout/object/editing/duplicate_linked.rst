@@ -18,6 +18,14 @@ all linked copies are modified. Transform properties (object data-blocks) still 
 not links, so you still can rotate, scale, and move freely without affecting the other copies.
 Reference the :ref:`Duplicate Example <expl-object-link-duplicate>` for the discussions below.
 
+
+If the original object was animated, the duplicate will link to the same
+:ref:`Action <bpy.types.Action>`. This means that, even though each object has
+separate transform properties, they will be set to the same values by the
+animation system. If this is not desired, make the action a single-user copy in
+the :ref:`Action or NLA Editor <working-with-actions>`.
+
+
 Linked
    In the *Duplicate Objects* :ref:`ui-undo-redo-adjust-last-operation` panel the *Linked* checkbox is checked
    unlike with *Duplicate*.
