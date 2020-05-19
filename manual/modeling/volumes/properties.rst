@@ -112,7 +112,7 @@ Space
 .. _bpy.types.VolumeRender.step_size:
 
 Step Size :guilabel:`Cycles Only`
-   Distance between volume samples. Higher values render more detail at the cost of performance.
+   Distance between volume samples. Lower values render more detail at the cost of performance.
    If set to zero, the step size is automatically determined based on voxel size.
 
 .. _bpy.types.VolumeRender.clipping:
