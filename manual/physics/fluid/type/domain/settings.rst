@@ -69,6 +69,11 @@ CFL Number
    but more accurate behavior at high velocities (e.g. fast fluid flow colliding
    with obstacle).
 
+.. note::
+
+   When lowering the *CFL* number it is recommended to increase the maximum number of timesteps.
+   Similarly, when increasing the *CFL* number the minimum number of timesteps should be adjusted.
+
 .. _bpy.types.FluidDomainSettings.use_adaptive_timesteps:
 
 Use Adaptive Time Steps
