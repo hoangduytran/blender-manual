@@ -51,6 +51,12 @@ Theme
    Choose between a light or dark theme for Blender.
    Themes can be customized more in the :doc:`Preferences </editors/preferences/themes>`.
 
+Load Previous Version Settings
+   Copies preferences and startup files from the previous version of Blender then loads them.
+   
+   Settings need to be imported from previous versions because each version of Blender stores its configuration files in separate folders. Refer to the :doc:`/advanced/blender_directory_layout` page for the location of Blenders configuration files.
+
+
 There are two areas where Blender's defaults are stored:
 
 Preferences

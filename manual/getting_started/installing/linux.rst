@@ -7,6 +7,22 @@ Check the :doc:`Downloading Blender </getting_started/installing/index>`
 page to find the minimum requirements and where to get Blender (if you have not done so yet).
 
 
+Install from blender.org
+========================
+
+Download the Linux version for your architecture and uncompress the file to the desired location
+(e.g. ``~/software`` or ``/usr/local``).
+
+Blender can now be launched by double-clicking the executable.
+
+When using this method of installation, it is possible to have multiple versions of Blender installed.
+
+For ease of access, you can configure your system by adding a menu entry or shortcut for Blender.
+You may also associate blend-files with Blender so that when selected from the file browser,
+they will automatically open in Blender.
+These settings are typically found in conjunction with the Window Manager settings. (Gnome or KDE.)
+
+
 Install from Package Manager
 ============================
 
@@ -21,20 +37,6 @@ For example, some distributions do not build Blender with CUDA support, for lice
 
 If there is a specific package for your distribution, you may choose what is preferable and most convenient,
 otherwise, there is nothing wrong with the official binary on `blender.org <https://www.blender.org/download/>`__.
-
-
-Install from blender.org
-========================
-
-Download the Linux version for your architecture and uncompress the file to the desired location
-(e.g. ``~/software`` or ``/usr/local``).
-
-Blender can now be launched by double-clicking the executable.
-
-For ease of access, you can configure your system by adding a menu entry or shortcut for Blender.
-You may also associate blend-files with Blender so that when selected from the file browser,
-they will automatically open in Blender.
-These settings are typically found in conjunction with the Window Manager settings. (Gnome or KDE.)
 
 
 Running from the Terminal
@@ -61,3 +63,31 @@ Gnome
 KDE
    :menuselection:`System Settings --> Window Management --> Window Behavior --> Window Actions`,
    Switch from 'Alt' to 'Meta' key.
+
+
+Updating on Linux
+=================
+
+On Linux there are various ways of updating Blender. This section covers the most common approaches.
+
+
+Updating from blender.org
+-------------------------
+
+When a update for Blender is released, it can be downloaded directly 
+from the `Blender website <https://blender.org/download/>`__
+and installed using the steps described in the section `Install from blender.org`_.
+
+
+Updating with a Package Manager
+-------------------------------
+
+Many Linux distributions have packages for Blender available, which can be installed using the distribution's package manager. After installation, Blender can be updated using the same steps as updating any other application.
+
+
+After updating
+--------------
+
+After updating and opening Blender, you'll be prompted with the *Quick Set Up* window. 
+To import your settings from the previous versions of Blender, select the *Load Previous Version Settings* button
+or refer to the :doc:`/getting_started/configuration/defaults` page for information on the other settings.

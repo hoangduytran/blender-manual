@@ -6,14 +6,14 @@ Installing on Windows
 Check the :doc:`Downloading Blender </getting_started/installing/index>`
 page to find the minimum requirements and where to get Blender (if you have not done so yet).
 
-Download the zip-file or msi-file.
+Download the zip-file or Windows Installer File.
 
 
-Install from MSI
-================
+Install from Windows Installer File
+===================================
 
-The msi-file will run an installer to choose where to place Blender
-and to configure Windows to have an entry on the menu and to open blend-files with Blender.
+The Windows installer when run will let you choose where to place Blender
+and configure Windows to have an entry to the start menu and to open blend-files with Blender.
 Administrator rights are needed to install Blender on your system.
 
 
@@ -35,3 +35,51 @@ from the :doc:`Command Line </advanced/command_line/arguments>`.
    To keep all configuration files and installed add-ons in the executable folder,
    create a folder named ``config`` in the :ref:`LOCAL directory <blender-directory-layout>`
    of the unzipped folder.
+
+
+Install from Microsoft Store
+============================
+
+Blender can be installed from the Microsoft Store by searching for Blender in the Microsoft Store
+and installing it.
+
+Blender can now be launched from the Windows Start menu.
+
+Updating on Windows
+===================
+
+On Windows there are various ways of updating Blender. This section covers the most common approaches.
+
+
+Updating from Windows Installer File
+------------------------------------
+
+When a update for Blender is released, it can be downloaded directly
+from the `Blender website <https://blender.org/download/>`__.
+The Windows installer can then be run to install the updated version of Blender.
+To remove a previously installed version of Blender, 
+use Windows settings or control panel to uninstall the desired version.
+
+
+Updating from Zip
+-----------------
+
+When a update for Blender is released, it can be downloaded directly
+from the `Blender website <https://blender.org/download/>`__
+and extracted to the desired folder, where you can double click the executable to run Blender. 
+For more information on creating a portable version of Blender, see the section `Install from Zip`_.
+
+
+Updating from the Microsoft Store
+---------------------------------
+
+When an update for Blender is available on the Microsoft Store, it will be downloaded
+and installed automatically.
+
+
+After updating
+--------------
+
+After updating and opening Blender, you'll be prompted with the *Quick Set Up* window. 
+To import your settings from the previous versions of Blender, select the *Load Previous Version Settings* button
+or refer to the :doc:`/getting_started/configuration/defaults` page for information on the other settings.

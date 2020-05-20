@@ -10,21 +10,12 @@ page to find the minimum requirements and where to get Blender (if you have not 
 Install from DMG
 ================
 
-Stable releases of Blender for macOS are distributed on disk images (dmg-files).
+Blender for macOS are distributed on disk images (dmg-files).
 To mount the disk image double-click on the dmg-file.
 Then drag ``Blender.app`` into the Applications folder.
 
-.. TODO. The first time that user launch Blender
-   a security warning message is displayed
-   and some actions are required of the user:
-
-   https://support.apple.com/en-us/HT202491
-
-
-Install from Zip
-================
-
-After downloading Blender for macOS, uncompress the file and drag ``Blender.app`` into the Applications folder.
+Depending on the Security and Privacy preferences of your Mac,
+before opening Blender for the first time, macOS will request your approval.
 
 .. tip:: How to Make a Portable Installation
 
@@ -32,3 +23,26 @@ After downloading Blender for macOS, uncompress the file and drag ``Blender.app`
    create a folder named ``config`` in the :ref:`LOCAL directory <blender-directory-layout>`.
 
    .. parsed-literal:: ./Blender.app/Contents/Resources/|BLENDER_VERSION|/config/
+
+
+Updating on macOS
+=================
+
+On macOS there are various ways of updating Blender. This section covers the most common approach.
+
+
+Updating with DMG
+-----------------
+
+When a update for Blender is released, it can be downloaded directly
+from the `Blender website <https://blender.org/download/>`__.
+Install the new version by overwriting the current ``Blender.app`` in the Applications folder.
+You can rename ``Blender.app`` or place it in different folders to have more than one version at a time.
+
+
+After updating
+--------------
+
+After updating and opening Blender, you'll be prompted with the *Quick Set Up* window. 
+To import your settings from the previous verions of Blender, select the *Load Previous Verion Settings* button
+or refer to the :doc:`/getting_started/configuration/defaults` page for information on the other settings.

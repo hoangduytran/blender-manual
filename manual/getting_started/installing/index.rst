@@ -47,7 +47,12 @@ the latter provides the newest features, as they are developed, at the cost of s
    - It can be freely customized.
 
 The procedure for installing a binary, either the latest stable release or a daily build, is the same.
-Follow the steps for your operative system:
+Follow the steps for your operating system.
+
+.. note::
+
+   Blender doesn't have a built in updating system. This means you will need to update Blender yourself
+   by following the upgrade steps described in the sections below.
 
 .. toctree::
    :maxdepth: 1
