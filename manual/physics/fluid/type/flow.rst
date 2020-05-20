@@ -47,10 +47,6 @@ Flow Behavior
    Inflow
       This object will emit fluid into the simulation, like a water tap or base of a fire.
 
-      Use Inflow
-         Enables or disables the flow of fluid, this property is useful for animations
-         to selectively enable and disable when fluid is being added to the domain.
-
    Outflow
       Any fluid that enters the :term:`bounding box` of this object will be removed from
       the domain (think of a drain or a black hole). This can be useful in combination with
