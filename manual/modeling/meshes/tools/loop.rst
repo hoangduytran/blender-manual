@@ -25,23 +25,20 @@ Usage
 The tool is interactive and has two steps:
 
 
-Pre-Visualizing the Cut
-^^^^^^^^^^^^^^^^^^^^^^^
+#. Pre-Visualizing the Cut
 
-After the tool is activated, move the cursor over a desired edge.
-The cut to be made is marked with a magenta colored line as you move the mouse over the various edges.
-The to be created edge loop stops at the poles (tris and n-gons) where the existing face loop terminates.
+   After the tool is activated, move the cursor over a desired edge.
+   The cut to be made is marked with a magenta colored line as you move the mouse over the various edges.
+   The to be created edge loop stops at the poles (tris and n-gons) where the existing face loop terminates.
 
+#. Sliding the new Edge Loop
 
-Sliding the new Edge Loop
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Once an edge is chosen via :kbd:`LMB`,
-you can move the mouse along the edge to determine where the new edge loop will be placed.
-This is identical to the :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>`.
-Clicking :kbd:`LMB` again confirms and makes the cut at the pre-visualized location,
-or clicking :kbd:`RMB` forces the cut to exactly 50%.
-This step is skipped when using multiple edge loops (see below).
+   Once an edge is chosen via :kbd:`LMB`,
+   you can move the mouse along the edge to determine where the new edge loop will be placed.
+   This is identical to the :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>`.
+   Clicking :kbd:`LMB` again confirms and makes the cut at the pre-visualized location,
+   or clicking :kbd:`RMB` forces the cut to exactly 50%.
+   This step is skipped when using multiple edge loops (see below).
 
 .. list-table::
 
@@ -64,11 +61,7 @@ This step is skipped when using multiple edge loops (see below).
 Options
 -------
 
-The options are available while the tool is in use, and later in the :ref:`ui-undo-redo-adjust-last-operation` panel.
-
-
-Loop Cut
-^^^^^^^^
+These options are available while the tool is in use, and later in the :ref:`ui-undo-redo-adjust-last-operation` panel.
 
 Number of Cuts :kbd:`Wheel` or :kbd:`PageUp` / :kbd:`PageDown`
    After activating the tool, but before confirming initial loop location,
@@ -115,11 +108,8 @@ Smoothness :kbd:`Alt-Wheel`
 
 Falloff
    Falloff type for *Smoothness*, changes the shape of the profile.
-
-
-Edge Slide
-^^^^^^^^^^
-
+Factor
+   Position of the edge loop relative to the surrounding edge loops.
 Even :kbd:`E`
    Only available for single edge loops.
    This matches the shape of the edge loop to one of the adjacent edge loops.
@@ -127,21 +117,3 @@ Even :kbd:`E`
 Flip :kbd:`F`
    When Even is enabled, this flips the target edge loop to match.
    (See :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>` for details.)
-
-
-Offset Edge Loop Cut
-====================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Tool:      :menuselection:`Toolbar --> Edge Slide`
-   :Hotkey:    :kbd:`Shift-Ctrl-R`
-
-Add two edge loops on either side of selected loops.
-
-Cap Endpoint
-   Extends the loop by creating triangles at endpoints.
-Edge Slide
-   See :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>`.

@@ -64,8 +64,8 @@ Transform
 :ref:`Loop Cut <tool-mesh-loop_cut>`
    Create a loop cut along the mesh.
 
-   Loop Cut And Slide
-      Create a loop cut along the mesh and slide it along edges.
+   :ref:`Offset Edge Loop Cut <bpy.ops.mesh.offset_edge_loops_slide>`
+      Add two edge loops on either side of selected loops.
 
 :ref:`Knife <tool-mesh-knife>`
    Create a knife cut in the mesh. Press enter to confirm the cut.
