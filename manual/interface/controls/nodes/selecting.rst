@@ -21,7 +21,7 @@ Select Linked To :kbd:`Shift-L`
    Expand the selection to nodes which are linked to the outputs of the currently selected nodes.
 Select Grouped :kbd:`Shift-G`
    Selects similar nodes to the active node
-   by their :doc:`properties </interface/controls/nodes/properties>`.
+   by their :doc:`properties </interface/controls/nodes/sidebar>`.
 
    Type
       The node type. e.g. all Math nodes.

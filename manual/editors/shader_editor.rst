@@ -29,8 +29,11 @@ Pin (pin icon)
    even when another object or material is selected elsewhere.
 
 
-Options
+Sidebar
 =======
+
+Options
+-------
 
 The Options panel in the Sidebar region contains the same :doc:`settings </render/materials/settings>`
 that are also available in the Material tab in the Properties editor.

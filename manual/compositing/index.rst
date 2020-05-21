@@ -9,7 +9,7 @@
    :maxdepth: 2
 
    introduction.rst
-   properties.rst
+   sidebar.rst
 
 
 Node Types

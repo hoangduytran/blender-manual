@@ -13,7 +13,7 @@
    selecting.rst
    arranging.rst
    editing.rst
-   properties.rst
+   sidebar.rst
    groups.rst
    frame.rst
    reroute.rst

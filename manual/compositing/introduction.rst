@@ -30,8 +30,8 @@ optionally merge it with other images, and finally, save it.
 Getting Started
 ===============
 
-Access the *Compositor* and activate nodes for compositing by clicking the *Use Nodes* checkbox
-(see :doc:`/compositing/properties`).
+Access the *Compositor* and activate nodes for compositing by clicking the *Use Nodes* checkbox in the header
+(see :doc:`/interface/controls/nodes/introduction`).
 
 .. note::
 

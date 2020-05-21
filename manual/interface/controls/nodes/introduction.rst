@@ -61,7 +61,7 @@ Use Nodes
 Use Pinned
    When enabled, the editor will retain the material or texture, even when the user selects a different object.
    A node tree can then be edited independent of the object selection in the 3D Viewport.
-Go to Parent button
+Parent Node Tree
    This button allows you go to parent node tree e.g. leaving a group.
 Snapping
    Change options for snapping node positions to achieve a cleaner node tree layout.
@@ -76,7 +76,8 @@ The *Toolbar* contains a set of tools that can be used in the node editor.
 Sidebar
 -------
 
-The *Sidebar* region contains properties for the current selected node as well as node editor specific settings.
+The :doc:`Sidebar </interface/controls/nodes/sidebar>` region contains properties for
+the current selected node as well as node editor specific settings.
 
 
 Navigating
