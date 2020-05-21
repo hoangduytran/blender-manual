@@ -223,11 +223,11 @@ See :doc:`F-Curve </editors/graph_editor/fcurves/index>`.
 Filters
 ^^^^^^^
 
-Only Selected
+Only Show Selected
    Only include keyframes related to the selected objects and data.
-Display Hidden
+Show Hidden
    Include keyframes from objects or bones that are not visible.
-Show Errors
+Only Show Errors
    Only include curves and drivers that are disabled or have errors.
    Useful for debugging.
 
