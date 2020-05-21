@@ -62,7 +62,7 @@ Menu
    :Mode:      Pose Mode
    :Menu:      :menuselection:`Pose --> Pose Library`
 
-- Browse Poses. :kbd:`Ctrl-L`.
+- Browse Poses. :kbd:`Alt-L`.
 - Add Pose. :kbd:`Shift-L`.
 - Rename Pose. :kbd:`Shift-Ctrl-L`.
-- Remove Pose. :kbd:`Alt-L`.
+- Remove Pose. :kbd:`Shift-Alt-L`.
