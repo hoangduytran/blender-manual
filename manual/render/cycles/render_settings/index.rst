@@ -6,6 +6,7 @@
 .. toctree::
    :maxdepth: 2
 
+   grease_pencil.rst
    sampling.rst
    light_paths.rst
    volumes.rst
