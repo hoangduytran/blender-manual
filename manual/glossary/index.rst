@@ -57,6 +57,10 @@ This page lists definitions for terms used in Blender and this manual.
          be emitting light, but also letting through all light from objects behind it.
          On converting to straight alpha, this effect is lost.
 
+      Channel Packed
+         A separate image map is stored for each color and alpha channel.
+         Channel packing is commonly used by game engines to save memory and to optimize memory access.
+
    Ambient Light
       The light that comes from the surrounding environment as a whole.
 
