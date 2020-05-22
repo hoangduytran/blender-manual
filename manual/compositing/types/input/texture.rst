@@ -25,9 +25,9 @@ Properties
 ==========
 
 Texture
-   The texture could be selected from a list of textures available in the current blend-file or link in textures.
-   The textures themselves can not be edited in the Compositor, but in the
-   :doc:`Texture Node Editor </editors/texture_node/index>`.
+   The texture can be selected from a list of textures available in the current blend-file or linked-in textures.
+   The textures themselves can not be edited in the Compositor,
+   but in the :doc:`Texture Node Editor </editors/texture_node/index>`.
 
 
 Outputs

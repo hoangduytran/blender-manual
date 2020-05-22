@@ -43,7 +43,7 @@ Crop Region Values
 
    The terminology (*Left*, *Right*, *Up*, *Down*) can be misunderstood easily.
    First, the numbers do not represent the amount of cropping,
-   e.g. *Left* is set 50 and *Right* to 50 does not mean that you will be
+   e.g. *Left* is set to 50 and *Right* to 50 does not mean that you will be
    cropping the image for 50 pixels on both the left and right side.
    In fact, it will result in zero-sized image because you are cropping from pixel 50 to pixel 50.
    So, the numbers defines a position in the input image.

@@ -10,7 +10,6 @@ Alpha Over Node
    Alpha Over Node.
 
 The *Alpha Over* node is used to layer images on top of one another.
-
 Where the foreground image pixels have an alpha greater than 0, it will be overlaid over the background image.
 
 
@@ -60,7 +59,10 @@ Image
 Examples
 ========
 
-In the map below, *Color Ramp* node is used to add an alpha channel to the black-and-white swirl image.
+Overlay
+-------
+
+In the node tree below, *Color Ramp* node is used to add an alpha channel to the black-and-white swirl image.
 Then *Alpha Over* node is used to overlay it on top of another image.
 
 .. figure:: /images/compositing_types_converter_color-ramp_create-alpha-mask.png
@@ -68,10 +70,14 @@ Then *Alpha Over* node is used to overlay it on top of another image.
 
    Assembling a composite image using Alpha Over.
 
-In the next example, we use the *Factor* control to make a "Fade In" effect.
+
+Fade In
+-------
+
+In the next example, the *Factor* is used to make a "Fade In" effect.
 This effect can be animated by adding a *Time* node to feed the *Factor* socket as shown below.
-In this example, over the course of 30 frames, the *Time* node makes the *Alpha Over* node produce
-a picture that starts with the pure background image, and title slowly bleeds through the background.
+Over the course of 30 frames, the *Alpha Over* node outputs a image that
+starts with the pure background image, and the title slowly appearing.
 
 .. figure:: /images/compositing_types_color_alpha-over_example.png
    :width: 600px

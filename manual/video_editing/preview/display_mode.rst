@@ -3,7 +3,7 @@
 Display Mode
 ************
 
-The are different display modes available, each having a specific purpose.
+There are different display modes available, each having a specific purpose.
 
 
 Image Preview

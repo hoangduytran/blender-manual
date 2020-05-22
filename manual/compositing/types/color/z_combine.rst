@@ -59,11 +59,11 @@ Examples
    Choosing closest pixels.
 
 In the example above, the render output from two scenes are mixed using the Z Combine node,
-one from a sphere of size 1.30, and the other a cube of size 1.00.
+one from a sphere of size 1.3, and the other a cube of size 1.0.
 The sphere and square are located at the same place. The cube is tipped forward,
 so the corner in the center is closer to the camera than the sphere surface;
 so Z Combine chooses to use the cube's pixels. But the sphere is slightly larger
-(a size of 1.30 versus 1.00), so it does not fit totally inside the cube. At some point,
+(a size of 1.3 versus 1.0), so it does not fit totally inside the cube. At some point,
 as the cube's sides recede back away from the camera, the sphere's sides are closer.
 When this happens, Z Combine uses the sphere's pixels to form the resulting picture.
 

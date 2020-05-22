@@ -71,8 +71,8 @@ CFL Number
 
 .. note::
 
-   When lowering the *CFL* number it is recommended to increase the maximum number of timesteps.
-   Similarly, when increasing the *CFL* number the minimum number of timesteps should be adjusted.
+   When lowering the *CFL* number it is recommended to increase the maximum number of time steps.
+   Similarly, when increasing the *CFL* number the minimum number of time steps should be adjusted.
 
 .. _bpy.types.FluidDomainSettings.use_adaptive_timesteps:
 

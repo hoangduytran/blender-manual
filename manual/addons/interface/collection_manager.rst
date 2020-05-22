@@ -43,9 +43,9 @@ Renumber QCD Slots
 
    - :kbd:`LMB` -- Renumber the QCD slots from the root (the slot designated 1)
      down to the bottom, for each depth level
-     (`breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`_).
-   - :kbd:`Alt-LMB` -- Renumber from the first top-level collection in a
-     `breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`_ pattern.
+     (`breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`__).
+   - :kbd:`Alt-LMB` -- Renumber from the first top-level collection in
+     a `breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`__ pattern.
 
 Filter (funnel icon)
    Choose which restriction toggles are shown in the interface.

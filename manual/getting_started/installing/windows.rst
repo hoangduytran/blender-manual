@@ -45,6 +45,7 @@ and installing it.
 
 Blender can now be launched from the Windows Start menu.
 
+
 Updating on Windows
 ===================
 
@@ -54,19 +55,19 @@ On Windows there are various ways of updating Blender. This section covers the m
 Updating from Windows Installer File
 ------------------------------------
 
-When a update for Blender is released, it can be downloaded directly
+When an update for Blender is released, it can be downloaded directly
 from the `Blender website <https://blender.org/download/>`__.
 The Windows installer can then be run to install the updated version of Blender.
-To remove a previously installed version of Blender, 
+To remove a previously installed version of Blender,
 use Windows settings or control panel to uninstall the desired version.
 
 
 Updating from Zip
 -----------------
 
-When a update for Blender is released, it can be downloaded directly
+When an update for Blender is released, it can be downloaded directly
 from the `Blender website <https://blender.org/download/>`__
-and extracted to the desired folder, where you can double click the executable to run Blender. 
+and extracted to the desired folder, where you can double click the executable to run Blender.
 For more information on creating a portable version of Blender, see the section `Install from Zip`_.
 
 
@@ -77,9 +78,7 @@ When an update for Blender is available on the Microsoft Store, it will be downl
 and installed automatically.
 
 
-After updating
---------------
+.. seealso::
 
-After updating and opening Blender, you'll be prompted with the *Quick Set Up* window. 
-To import your settings from the previous versions of Blender, select the *Load Previous Version Settings* button
-or refer to the :doc:`/getting_started/configuration/defaults` page for information on the other settings.
+   The Splash screen :doc:`/getting_started/configuration/defaults` page for information
+   about import settings from previous Blender versions and on other quick settings.

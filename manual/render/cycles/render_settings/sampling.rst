@@ -35,7 +35,7 @@ Integrator
       This makes each sample slower, but will reduce noise,
       especially in scenes dominated by direct or one-bounce lighting.
       To get the same number of diffuse samples as in the path tracing integrator,
-      note that e.g. 250 path tracing samples = 10 AA Samples x 25 diffuse samples.
+      note that e.g. 250 path tracing samples = 10 AA Samples × 25 diffuse samples.
       The Sampling panel shows this total number of samples.
 
 Render

@@ -4,16 +4,16 @@
   Input Nodes
 ###############
 
-Input nodes produce information from some source.
-For instance, an input could be:
+Input nodes produce information from a data source.
+For instance, an input can be:
 
 - Taken directly from the active camera in a selected scene.
-- A ``JPG``, ``PNG``, etc. file as a static picture.
+- A static image.
 - A movie clip (such as an image sequence or video).
 - A color or value.
 
-These nodes generate the information that feeds other nodes.
-As such, they have no input-connectors; only outputs.
+These nodes generate the information that is passed to other nodes.
+As such, they have no input sockets; only outputs.
 
 .. toctree::
    :maxdepth: 1

@@ -144,7 +144,7 @@ Pyproj
    `this post <http://blenderartists.org/forum/showthread.php?323358-DXF-Importer&p=2664492&viewfull=1#post2664492>`__
    on Blender Artists.
 
-   Pyproj is a python wrapper to the PROJ library, a well known C library used to
+   Pyproj is a Python wrapper to the PROJ library, a well known C library used to
    convert coordinates between different coordinate systems.
    Open source GIS libraries such as PROJ are used directly or indirectly by many authorities and
    therefore can be considered to be well maintained.

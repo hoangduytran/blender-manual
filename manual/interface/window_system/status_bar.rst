@@ -4,7 +4,7 @@ Status Bar
 **********
 
 The Status Bar is located at the bottom of the Blender window and displays contextual information such as
-keyboard shortcuts, result or warning message and statistic information.
+keyboard shortcuts, result or warning message and statistical information.
 The Status Bar can be hidden by disabling *Show Status Bar* in Window menu or by dragging from the top edge down.
 
 .. figure:: /images/interface_window-system_status-bar_ui.png
@@ -15,8 +15,8 @@ The Status Bar can be hidden by disabling *Show Status Bar* in Window menu or by
 Keymap Information
 ==================
 
-The left of the Status Bar displays tool keymaps and mouse button functions.
-In editors with a toolbar, pressing :kbd:`Alt` shows the hotkey to change to a desired tool.
+The left side of the Status Bar displays mouse button shortcuts and the keymap of the active tool.
+In editors with a Toolbar, pressing :kbd:`Alt` shows the hotkeys to change to a desired tool.
 
 .. figure:: /images/interface_window-system_status-bar_ui_left.png
    :align: center
@@ -31,21 +31,20 @@ The middle of the Status Bar displays information about in progress operations.
    :align: center
 
 Running Task
-   The currently running task progress is showh when a computation is being performed.
-   For example, when rendering or baking,
-   hovering the mouse pointer over this region will display time estimate.
-   When a cross 'X' is shown, you can cancel the computation by clicking it.
+   The progress of the currently running task is show when a computation is being performed
+   for example rendering, baking or playback.
+   Hovering the mouse pointer over the progress bar will display a time estimate.
+   The task can be aborted by clicking the cancel button (``X`` icon).
 Report Message
-   Blender operation results or warnings.
-   Click this text label to show the full message in the
-   :doc:`Info Editor </editors/info_editor>`.
-   Examples are video playback and saving file.
+   Blender operation results or warnings, such as after a saving file.
+   They disappears after a short time.
+   Click this label to show the full message in the :doc:`Info Editor </editors/info_editor>`.
 
 
 Resource Information
 ====================
 
-The right of the Status Bar displays information about the Blender instance.
+The right side of the Status Bar displays information about the Blender instance.
 
 .. figure:: /images/interface_window-system_status-bar_ui_right.png
    :align: center
@@ -55,12 +54,13 @@ Collection
 Active Object
    Name of the active selected object.
 Geometry
-   Displays information about the current loaded scene depending on the mode and object type
+   Displays information about the current scene depending on the mode and object type.
    This can be the number of vertices, faces, triangles (Tris) or bones.
 Objects
-   Number of objects presented in this format "Objects m/n" reads "m objects are selected from a total of n".
-Mem
-   Estimated Blender RAM consumption. On a single-instance single-machine scenario,
-   this RAM estimate provides a measure against hardware limit of the machine.
+   Number of the selected objects and the total count.
+Memory
+   The "Mem" label shows an estimate of Blender's RAM consumption.
+   In a single-instance single-machine scenario, this estimate provides a measurement against
+   the hardware limit of the machine.
 Blender version
-   The version of Blender that is currently in execution context.
+   The version of Blender that is currently run.

@@ -37,8 +37,8 @@ Image
 .. note::
 
    This is not, and is not intended to be,
-   a general-purpose solution to the problem of compositing an image that does not contain Alpha information.
-   You might wish to use "Chroma Keying" or "Difference Keying" (as discussed elsewhere) if you can.
+   a general-purpose solution to the problem of compositing an image that does not contain alpha information.
+   You might wish to use "chroma keying" or "difference keying" (as discussed elsewhere) if you can.
    This node is most often used (with a suitable input being provided by means of the socket)
    in those troublesome cases when you *cannot*, for some reason, use those techniques directly.
 
@@ -53,7 +53,7 @@ To transition the audience from one scene or shot to another,
 a common technique is to "fade to black". As its name implies,
 the scene fades to a black screen. You can also "fade to white" or whatever color you wish,
 but black is a good neutral color that is easy on the eyes and intellectually "resets" the viewer's mind.
-The node map below shows how to do this using the Set Alpha node.
+The node tree below shows how to do this using the Set Alpha node.
 
 .. figure:: /images/compositing_types_converter_set-alpha_fade-to-black.png
 
@@ -70,8 +70,8 @@ set which goes from 0.0 to 1.0 over 60 frames, or completely transparent to comp
 Think of alpha as a multiplier for how vivid you can see that pixel.
 These two images are combined by the Alpha Over node completely (a *Factor* of 1.0)
 to produce the composite image. The Set Alpha node will thus, depending on the frame being rendered,
-produce a black image that has some degree of transparency.
-Setup and Animate, and you have an image sequence that fades to black over a 2-second period.
+produce a black image that has some amount of transparency.
+Setup and animate, and you have an image sequence that fades to black over a two-second period.
 
 .. note:: No Scene Information Used
 
@@ -109,9 +109,9 @@ Colorizing a BW Image
    Using Set Alpha to colorize an image.
 
 In the example above, notice how the blue tinge of the render input colors the swirl.
-You can use the Set Alpha node's color field with this kind of node map to add a consistent color to a BW image.
+You can use the Set Alpha node's color field with this kind of node tree to add a consistent color to a BW image.
 
-In the example map to the right,
+In the example tree to the right,
 use the *Alpha* value of the Set Alpha node to give a desired degree of colorization.
 Thread the input image and the Set Alpha node into an Alpha Over node to colorize
 any black-and-white image in this manner.

@@ -98,7 +98,7 @@ Darken
 Contrast Enhancement
 --------------------
 
-Here is a small map showing the effects of two other common uses for the RGB Curve:
+Here is a small node tree showing the effects of two other common uses for the RGB Curve:
 *Darken* and *Contrast Enhancement*.
 You can see the effect each curve has independently,
 and the combined effect when they are *mixed* equally.
@@ -170,8 +170,8 @@ Decoding an Image for your Watermark
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you see an image that you think might be yours,
-use the node map below to compare it to your stock image (pre-watermarked original).
-In this map, the Mix node is set to Difference,
+use the node tree below to compare it to your stock image (pre-watermarked original).
+In this tree, the Mix node is set to Difference,
 and the Map Value node amplifies any difference. The result is routed to a viewer,
 and you can see how the original mark clearly stands out.
 
@@ -182,7 +182,7 @@ and you can see how the original mark clearly stands out.
 
 Various image compression algorithms lose some of the original; the difference shows as noise.
 Experiment with different compression settings and marks to see which works best for you by
-having the encoding map in one scene, and the decoding map in another.
+having the encoding node group in one scene, and the decoding group in another.
 Use them while changing Blender's image format settings,
 reloading the watermarked image after saving, to get an acceptable result.
 In the example above, the mark was clearly visible all the way up to ``JPEG`` compression of 50%.

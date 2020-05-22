@@ -139,7 +139,7 @@ Sequencer
    If *Compositing* is also enabled, the Scene strip will be the output of the Compositor.
 Compositing
    Renders the output from the compositing node setup,
-   and then pumps all images through the Composite node map,
+   and then pumps all images through the Composite node tree,
    displaying the image fed to the Composite Output node.
 
 

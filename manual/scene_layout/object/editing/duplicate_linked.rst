@@ -16,15 +16,12 @@ this is called a deep link. This will create a new object with **all** of its da
 the original object. If you modify one of the linked objects in *Edit Mode*,
 all linked copies are modified. Transform properties (object data-blocks) still remain copies,
 not links, so you still can rotate, scale, and move freely without affecting the other copies.
-Reference the :ref:`Duplicate Example <expl-object-link-duplicate>` for the discussions below.
+Reference the `Examples`_ for the discussions below.
 
-
-If the original object was animated, the duplicate will link to the same
-:ref:`Action <bpy.types.Action>`. This means that, even though each object has
-separate transform properties, they will be set to the same values by the
-animation system. If this is not desired, make the action a single-user copy in
-the :ref:`Action or NLA Editor <working-with-actions>`.
-
+If the original object was animated, the duplicate will link to the same :ref:`Action <bpy.types.Action>`.
+This means that, even though each object has separate transform properties,
+they will be set to the same values by the animation system.
+If this is not desired, make the action a single-user copy in the :ref:`Action or NLA Editor <actions-workflow>`.
 
 Linked
    In the *Duplicate Objects* :ref:`ui-undo-redo-adjust-last-operation` panel the *Linked* checkbox is checked
@@ -40,8 +37,6 @@ Linked
 
    :ref:`bpy.ops.object.make_single_user` for unlinking data-blocks.
 
-
-.. _expl-object-link-duplicate:
 
 Examples
 ========

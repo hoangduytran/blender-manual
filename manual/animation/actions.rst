@@ -16,7 +16,7 @@ So when you animate an object by changing its location with keyframes,
 the animation is saved to the Action.
 
 Each property has a channel which it is recorded to, for example,
-Cube.location.x is recorded to Channel X Location.
+``Cube.location.x`` is recorded to Channel X Location.
 The *X location* and *Y location* properties can be shared across multiple objects,
 if all objects have *X location* and *Y location* properties beneath them.
 
@@ -40,7 +40,7 @@ Keyframes
 .. The hierarchy is created with the RNA data paths,
 
 
-.. _`working-with-actions`:
+.. _actions-workflow:
 
 Working with Actions
 ====================
@@ -83,5 +83,5 @@ On each frame of all the scene's frames, the *Bake Action* tool computes
 the final animation of the selected objects or bones with all those
 modifiers, drivers, and constraints applied, and keyframes the result.
 
-This can be useful for adding deviation to a cyclic action like a :term:`walk
-cycle`, or to create a keyframe animation created from drivers or constraints.
+This can be useful for adding deviation to a cyclic action like a :term:`walk cycle`,
+or to create a keyframe animation created from drivers or constraints.

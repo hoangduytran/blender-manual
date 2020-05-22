@@ -282,7 +282,7 @@ Other Options
 ``--debug-ghost``
    Enable debug messages for event handling.
 ``--verbose`` ``<verbose>``
-   Set logging verbosity level for debug messages which support it.
+   Set the logging verbosity level for debug messages that support it.
 
 
 Argument Parsing

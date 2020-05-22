@@ -30,7 +30,7 @@ or by clicking on the *Backdrop* button in the header.
 Channels
    The color channels to display of the backdrop image.
 Zoom
-   Sets the size backdrop image.
+   Sets the size of the backdrop image.
 Offset
    Change the screen space position of the backdrop.
 Move :kbd:`Alt-MMB`

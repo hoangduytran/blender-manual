@@ -61,7 +61,8 @@ The tool is interactive and has two steps:
 Options
 -------
 
-These options are available while the tool is in use, and later in the :ref:`ui-undo-redo-adjust-last-operation` panel.
+These options are available while the tool is in use, and later in
+the :ref:`ui-undo-redo-adjust-last-operation` panel.
 
 Number of Cuts :kbd:`Wheel` or :kbd:`PageUp` / :kbd:`PageDown`
    After activating the tool, but before confirming initial loop location,

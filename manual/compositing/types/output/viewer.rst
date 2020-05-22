@@ -10,10 +10,10 @@ Viewer Node
    Viewer Node.
 
 The *Viewer* node is a temporary, in-process viewer.
-It could be plug in anywhere to inspect an image or value map in your node tree.
+It can be plug in anywhere to inspect an image or value map in your node tree.
 
 Select a view node with :kbd:`LMB` to switch between multiple viewer nodes.
-It is possible to automatically plug any other node into a Viewer node 
+It is possible to automatically plug any other node into a Viewer node
 by pressing :kbd:`Shift-Ctrl-LMB` on it.
 
 

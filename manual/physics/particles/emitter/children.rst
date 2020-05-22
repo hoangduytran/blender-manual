@@ -11,26 +11,11 @@ Children
 *Children* are *Hair* or *Emitter* particles originating from individual particles.
 They make it possible to work primarily with a relatively low amount of Parent particles,
 for whom the physics are calculated. The children are then aligned to their parents.
-Without recalculating the physics the number and visualization of the children can be changed.
+The number and visualization of the children can be changed without a recalculation of the physics.
 
-Children can be emitted from particles or from faces (with some different options).
-Emission from *Faces* has some advantages, especially the distribution is more even on each face
-(which makes it better suitable for fur and the like).
-However, children from particles follow their parents better, e.g.
-if you have a soft body animation and do not want the hair to penetrate the emitting mesh.
-But see also our manual page about :doc:`Hair </physics/particles/hair/index>`.
-
-If you turn on children the parents are no longer rendered, to render the parents enable
+If you activate children the parents are no longer rendered, this can be enable in the Render panel
 :ref:`Parent Particles <bpy.types.ParticleSettings.use_parent_particles>`. By default, parent particles
-are not rendered because the shape of the children may be quite different from that of their parents.
-
-Children carry the same material as their parents and are colored according to the exact
-place from where they are emitted (so all children may have different color or other attributes).
-
-The possible options depend from the type of particle system,
-and if you work with *Children from faces* or *Children from particles*.
-We do not show every possible combination,
-only the settings for a *Hair* particle system.
+are not rendered because the shape of the children can be quite different from that of their parents.
 
 
 Common Options
@@ -197,7 +182,7 @@ Parting
    Creates parting in the children based on parent strands.
 
 Min/Max
-   The minimum/maximum root to tip angle (tip disance/root distance for long hair).
+   The minimum/maximum root to tip angle (tip distance/root distance for long hair).
 
 
 Example

@@ -51,7 +51,7 @@ Follow the steps for your operating system.
 
 .. note::
 
-   Blender doesn't have a built in updating system. This means you will need to update Blender yourself
+   Blender doesn't have a built-in updating system. This means you will need to update Blender yourself
    by following the upgrade steps described in the sections below.
 
 .. toctree::

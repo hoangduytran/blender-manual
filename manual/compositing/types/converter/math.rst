@@ -181,8 +181,8 @@ Operation
       Hyperbolic Sine
          The `Hyperbolic Sine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value.
 
-      Hyperbolic Consine
-         The `Hyperbolic Consine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value.
+      Hyperbolic Cosine
+         The `Hyperbolic Cosine <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value.
 
       Hyperbolic Tangent
          The `Hyperbolic Tangent <https://en.wikipedia.org/wiki/Hyperbolic_functions>`__ of the input value.

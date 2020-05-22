@@ -40,9 +40,7 @@ Install the new version by overwriting the current ``Blender.app`` in the Applic
 You can rename ``Blender.app`` or place it in different folders to have more than one version at a time.
 
 
-After updating
---------------
+.. seealso::
 
-After updating and opening Blender, you'll be prompted with the *Quick Set Up* window. 
-To import your settings from the previous verions of Blender, select the *Load Previous Verion Settings* button
-or refer to the :doc:`/getting_started/configuration/defaults` page for information on the other settings.
+   The Splash screen :doc:`/getting_started/configuration/defaults` page for information
+   about import settings from previous Blender versions and on other quick settings.

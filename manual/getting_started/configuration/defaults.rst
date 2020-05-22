@@ -1,9 +1,8 @@
+.. _splash-quick-start:
 
 ********
 Defaults
 ********
-
-.. _splash-quick-start:
 
 When you start Blender for the first time, the interactive region of the :doc:`Splash Screen </interface/splash>`
 is replaced with a couple of initial preferences to configure how you interact inside Blender.
@@ -52,10 +51,11 @@ Theme
    Themes can be customized more in the :doc:`Preferences </editors/preferences/themes>`.
 
 Load Previous Version Settings
-   Copies preferences and startup files from the previous version of Blender then loads them.
-   
-   Settings need to be imported from previous versions because each version of Blender stores its configuration files in separate folders. Refer to the :doc:`/advanced/blender_directory_layout` page for the location of Blenders configuration files.
+   Copies preferences and startup files from the previous version of Blender and then loads them.
 
+   The settings need to be imported from previous versions because the configuration files of each Blender version
+   are stored in separate folders. Refer to the :doc:`/advanced/blender_directory_layout` page
+   for the location of these folders.
 
 There are two areas where Blender's defaults are stored:
 

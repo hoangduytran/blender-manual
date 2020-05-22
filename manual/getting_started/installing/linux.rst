@@ -74,7 +74,7 @@ On Linux there are various ways of updating Blender. This section covers the mos
 Updating from blender.org
 -------------------------
 
-When a update for Blender is released, it can be downloaded directly 
+When an update for Blender is released, it can be downloaded directly
 from the `Blender website <https://blender.org/download/>`__
 and installed using the steps described in the section `Install from blender.org`_.
 
@@ -82,12 +82,12 @@ and installed using the steps described in the section `Install from blender.org
 Updating with a Package Manager
 -------------------------------
 
-Many Linux distributions have packages for Blender available, which can be installed using the distribution's package manager. After installation, Blender can be updated using the same steps as updating any other application.
+Many Linux distributions have packages for Blender available, which can be installed
+using the distribution's package manager. After installation,
+Blender can be updated using the same steps as updating any other application.
 
 
-After updating
---------------
+.. seealso::
 
-After updating and opening Blender, you'll be prompted with the *Quick Set Up* window. 
-To import your settings from the previous versions of Blender, select the *Load Previous Version Settings* button
-or refer to the :doc:`/getting_started/configuration/defaults` page for information on the other settings.
+   The Splash screen :doc:`/getting_started/configuration/defaults` page for information
+   about import settings from previous Blender versions and on other quick settings.

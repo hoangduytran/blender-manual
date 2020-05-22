@@ -261,4 +261,4 @@ In its *Thumbnail* display mode, the File Browser supports many types of preview
 - Blend-files
 - Internal :doc:`Data-blocks </files/data_blocks>`
 
-See :doc:`Blend-files Previews </files/blend/previews>` for how to manage blender data previews.
+See :doc:`Blend-files Previews </files/blend/previews>` for how to manage Blender data previews.
