@@ -72,7 +72,10 @@ Toolbar
 
 :doc:`/sculpt_paint/sculpting/tools/slide_relax`
    This brush slides the topology of the mesh in the direction of the stroke
-   without changing the geometrical shape of the mesh.
+   without changing the geometrical shape of the mes
+
+:doc:`/sculpt_paint/sculpting/tools/slide_relax`
+   Simulates cloth that can be sculpted.
 
 :doc:`/sculpt_paint/sculpting/tools/simplify`
    Cleans up geometry by collapsing short edges.

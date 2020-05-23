@@ -29,6 +29,7 @@
    nudge.rst
    rotate.rst
    slide_relax.rst
+   cloth.rst
    simplify.rst
    mask.rst
    mesh_filter.rst

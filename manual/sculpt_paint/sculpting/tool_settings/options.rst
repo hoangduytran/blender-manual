@@ -41,6 +41,9 @@ Auto-Masking
    See the :ref:`Display <sculpt-paint-brush-display>` options.
 
 
+.. _bpy.types.Sculpt.gravity_object:
+.. _bpy.types.Sculpt.gravity:
+
 Gravity
 =======
 
