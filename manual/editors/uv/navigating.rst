@@ -24,7 +24,5 @@ View Menu
 
 Also see :doc:`/editors/image/navigating` in the Image editor.
 
-UV Local View
-   Displays only the UV faces that are assigned to the currently displayed image.
 Frame Selected :kbd:`NumpadPeriod`
    Change view so that all selected UV vertices are visible.
