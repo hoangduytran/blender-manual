@@ -50,8 +50,8 @@ Image
    Standard image output.
 
 
-Examples
-========
+Example
+=======
 
 .. figure:: /images/compositing_types_filter_bilateral-blur_example-1.png
    :width: 600px
@@ -67,42 +67,6 @@ Examples
           Render result.
 
      - .. figure:: /images/compositing_types_filter_bilateral-blur_example-1-composite.jpg
-          :width: 320px
-
-          Composite.
-
-.. figure:: /images/compositing_types_filter_bilateral-blur_example-2.png
-   :width: 600px
-
-   Bilateral faked blurry refraction and smoothed ray-traced soft shadow.
-   `blend-file example <https://en.blender.org/uploads/e/e4/Bilateral_blur_example_02.blend>`__
-
-.. list-table::
-
-   * - .. figure:: /images/compositing_types_filter_bilateral-blur_example-2-render.jpg
-          :width: 320px
-
-          Render result.
-
-     - .. figure:: /images/compositing_types_filter_bilateral-blur_example-2-composite.jpg
-          :width: 320px
-
-          Composite.
-
-.. figure:: /images/compositing_types_filter_bilateral-blur_example-3.png
-   :width: 600px
-
-   Bilateral smoothed buffered shadow.
-   `blend-file example <https://en.blender.org/uploads/b/ba/Bilateral_blur_example_03.blend>`__
-
-.. list-table::
-
-   * - .. figure:: /images/compositing_types_filter_bilateral-blur_example-3-render.jpg
-          :width: 320px
-
-          Render result.
-
-     - .. figure:: /images/compositing_types_filter_bilateral-blur_example-3-composite.jpg
           :width: 320px
 
           Composite.

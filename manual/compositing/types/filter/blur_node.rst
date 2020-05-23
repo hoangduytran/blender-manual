@@ -19,7 +19,7 @@ Image
    Standard image input.
 Size
    The optional Size input will be multiplied with the X and Y blur radius values.
-   It accepts also a value image, to control the blur radius with a mask.
+   It also accepts a value image, to control the blur radius with a mask.
    The values should be mapped between (0 to 1) for an optimal effect.
 
 

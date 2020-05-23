@@ -29,7 +29,7 @@ or by clicking on the *Backdrop* button in the header.
 
 Channels
    The color channels to display of the backdrop image.
-Zoom
+Zoom :kbd:`Alt-V` :kbd:`V`
    Sets the size of the backdrop image.
 Offset
    Change the screen space position of the backdrop.

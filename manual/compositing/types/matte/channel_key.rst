@@ -34,7 +34,7 @@ Color Space
 Channel
    This button selects the channel, defined by the Color Space, to use to determine the matte.
 Algorithm
-   Max., Single
+   Max, Single
 Limit
    It is possible to have a separation between the two values to allow for a gradient of
    transparency between foreground and background objects.

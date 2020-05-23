@@ -31,10 +31,10 @@ Properties
 Bokeh Type
    The number of iris blades of the virtual camera's diaphragm.
 
-   Disk (to emulate a perfect circle) or Triangle (3 blades), Square (4 blades),
+   Disk (to emulate a perfect circle), Triangle (3 blades), Square (4 blades),
    Pentagon (5 blades), Hexagon (6 blades), Heptagon (7 blades) or Octagon (8 blades).
 Angle
-   This button is deactivated, if the Bokeh Type is set to Disk.
+   This slider is deactivated, if the Bokeh Type is set to Disk.
    It can be used to add a rotation offset to the Bokeh shape.
    The value is the angle in degrees.
 Gamma Correction
@@ -44,7 +44,7 @@ F-Stop
    It simulates the aperture *f* of a real lens' iris, without modifying the luminosity of the picture.
    The default value 128 is assumed to be infinity:
    everything is in perfect focus. Half the value will double the amount of blur.
-   This button is deactivated, if *No Z-buffer* is enabled.
+   This slider is deactivated, if *No Z-buffer* is enabled.
 Max Blur
    This value limits the amount of blur by setting a maximum blur radius.
    Could be used to optimize the performance.
@@ -139,8 +139,6 @@ Hints
 Preview
    In general, use preview mode, change parameters to your liking,
    only then disable preview mode for the final render.
-   This node is computationally intensive, so watch your console window,
-   and it will give you status as it computes each render scan line.
 Edge Artifacts
    For minimum artifacts, try to setup your scene such that differences in distances between two objects that may
    visibly overlap at some point are not too large.
