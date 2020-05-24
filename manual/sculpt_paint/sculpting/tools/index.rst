@@ -32,5 +32,6 @@
    cloth.rst
    simplify.rst
    mask.rst
+   draw_facesets.rst
    mesh_filter.rst
    transforms.rst
