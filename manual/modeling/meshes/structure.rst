@@ -59,6 +59,8 @@ quadrangles "deform well" and are therefore preferred for animation and subdivis
    - `When should N-gons be used, and when shouldn't they? <https://blender.stackexchange.com/questions/89>`__
 
 
+.. _modeling-meshes-structure-normals:
+
 Normals
 =======
 
