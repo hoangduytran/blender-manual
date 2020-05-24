@@ -32,6 +32,9 @@ Filter Type
    Relax
       Tries to create an even distribution of quads without deforming the volume of the mesh.
       This filter works the same as the *Relax* mode of the *Slide Relax* brush.
+   Relax Face Sets
+      Smooth the edges of :ref`Face Sets <sculpting-editing-facesets>`,
+      this will remove the jagged lines visible after drawing or creating a Face Set.
    Surface Smooth
       Eliminates irregularities of the mesh by making the positions
       of the vertices more uniform while preserving the volume of the object.
