@@ -24,3 +24,20 @@ Please ask an administrator if you think something should be renamed/moved.
 .. note::
 
    This script also works for image file names.
+
+
+Release Checklist
+=================
+
+- Increase the ``conf.py: blender_version`` variable.
+- Increase the ``dev`` version in ``resources/versions.json`` and
+  add the former version as a past release.
+- Update the splash image: ``interface_splash_current.png``.
+- Note down the revision numbers below.
+
+
+Archive Versions
+----------------
+
+- Update ``resources/versions.json`` for the future release before building an archive version
+  so that the 404 page gets a static version.
