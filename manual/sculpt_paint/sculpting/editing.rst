@@ -74,6 +74,18 @@ Face Set From Visible
 Creates a new Face Set from all visible geometry.
 
 
+Face Set From Edit Mode Selection
+---------------------------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Face Sets --> Randomize Colors`
+
+Creates a new Face Set corresponding to the Edit Mode face selection.
+
+
 .. _bpy.ops.sculpt.face_sets_init:
 
 Init Face Sets
