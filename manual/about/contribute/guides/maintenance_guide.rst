@@ -33,11 +33,10 @@ Release Checklist
 - Increase the ``dev`` version in ``resources/versions.json`` and
   add the former version as a past release.
 - Update the splash image: ``interface_splash_current.png``.
-- Note down the revision numbers below.
 
 
 Archive Versions
 ----------------
 
-- Update ``resources/versions.json`` for the future release before building an archive version
+- Update ``resources/versions.json`` for the future release *before* building an archive version
   so that the 404 page gets a static version.

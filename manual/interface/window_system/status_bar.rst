@@ -36,7 +36,7 @@ Running Task
    Hovering the mouse pointer over the progress bar will display a time estimate.
    The task can be aborted by clicking the cancel button (``X`` icon).
 Report Message
-   Blender operation results or warnings, such as after a saving file.
+   Blender operation results or warnings, such as after saving a file.
    They disappears after a short time.
    Click this label to show the full message in the :doc:`Info Editor </editors/info_editor>`.
 

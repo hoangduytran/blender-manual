@@ -47,7 +47,7 @@ F-Stop
    This slider is deactivated, if *No Z-buffer* is enabled.
 Max Blur
    This value limits the amount of blur by setting a maximum blur radius.
-   Could be used to optimize the performance.
+   Can be used to optimize the performance.
    The default value of 0 means no limit.
 Threshold
    Some artifacts, like edge bleed, may occur, if the blur difference between pixels is large.

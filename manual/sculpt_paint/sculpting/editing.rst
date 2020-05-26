@@ -43,45 +43,45 @@ See :doc:`/sculpt_paint/sculpting/hide_mask`.
 Face Sets
 =========
 
-Face Sets are another way to control the visibility state of the mesh in sculpt mode.
+Face Sets are another way to control the visibility state of the mesh in Sculpt Mode.
 They are designed to work in modes where brushes are the primary way of interaction and they provide
 much more control when working with meshes with complex shapes and overlapping surfaces.
 Geometry can be assigned to a Face Set and each Face Set is represented as a different color in the 3D Viewport.
 A pie menu to edit Face Sets can be accessed with :kbd:`W`.
 
 
-Face Set From Masked
+Face Set from Masked
 --------------------
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Randomize Colors`
+   :Menu:      :menuselection:`Face Sets --> Face Set from Masked`
 
 Creates a new Face Set from :ref:`Masked Geometry <sculpt-mask-menu>`.
 
 
-Face Set From Visible
+Face Set from Visible
 ---------------------
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Randomize Colors`
+   :Menu:      :menuselection:`Face Sets --> Face Set from Visible`
 
 Creates a new Face Set from all visible geometry.
 
 
-Face Set From Edit Mode Selection
+Face Set from Edit Mode Selection
 ---------------------------------
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Randomize Colors`
+   :Menu:      :menuselection:`Face Sets --> Face Set from Edit Mode Selection`
 
 Creates a new Face Set corresponding to the Edit Mode face selection.
 
@@ -103,7 +103,7 @@ Mode
    The mesh data attribute used to define the boundaries for the Face Sets.
 
    By Loose Parts
-      Creates a new Face Set per discontinuous portion of mesh.
+      Creates a new Face Set per discontinuous part of the mesh.
    By Materials
       Creates a Face Set per :ref:`Material Slot <material-slots>`.
    By Normals
@@ -130,7 +130,7 @@ Invert Visible Face Sets
    :class: refbox
 
    :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Randomize Colors`
+   :Menu:      :menuselection:`Face Sets --> Invert Visible Face Sets`
 
 Hides all geometry that is part of a Face Set and makes all hidden geometry that is part of a face set visible.
 
@@ -142,7 +142,7 @@ Show All Face Sets
    :class: refbox
 
    :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Randomize Colors`
+   :Menu:      :menuselection:`Face Sets --> Show All Face Sets`
 
 Shows all hidden geometry that is part of a Face Set.
 

@@ -43,24 +43,23 @@ Stroke Method :kbd:`E`
       The line dabs are separated by *Spacing*, similar to space strokes.
       With :kbd:`Alt` the line stroke is constrained to 45 degree increments.
    Curve
-      Defines the stroke curve with a bezier curve (dabs are separated according to *Spacing*).
+      Defines the stroke curve with a Bézier curve (dabs are separated according to *Spacing*).
       Use :kbd:`Ctrl-RMB` to create the initial control point of the curve.
 
       Paint Curves
          Stroke Curves are reusable and can be stored and selected by using the :ref:`ui-data-block` menu.
       Add Points
          You can define additional curve control points by using :kbd:`Ctrl-RMB`.
-         The handles can define by dragging the mouse before releasing the mouse button.
-         In regards the the stroke direction,
-         the stroke flows in the direction of the first control point to the second control point.
+         The handles can be defined by dragging the mouse.
+         The stroke flows in the direction of the first control point to the second control point.
          If another control point is added after the second control point,
-         but instead extends from the first control point in a different direction,
-         it then becomes the initial control point,
-         and the stroke still flows from the direction from the first to the second.
+         instead of extending it from the first control point in a different direction,
+         it will become the initial control point,
+         and thus the stroke still flows in the direction of the first to the second.
       Transforming Points
-         The control points and handles can be dragged around with :kbd:`LMB`.
-         To ensure the handles of a control point are symmetrical,
-         drag them around using :kbd:`Shift-LMB`.
+         The control points and handles can be dragged with :kbd:`LMB`.
+         To make sure that the handles of a control point are symmetrical,
+         drag them using :kbd:`Shift-LMB`.
          A few transform operators are supported such as moving, scaling and rotating.
       Selection
          The handles can be selected individually by using :kbd:`RMB`,

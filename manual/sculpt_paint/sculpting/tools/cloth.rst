@@ -13,14 +13,14 @@ The Cloth brush uses a simplified :doc:`Cloth Solver </physics/cloth/index>`
 to simulate cloth physics on the mesh under the brush.
 :ref:`Masked <sculpt-mask-menu>` vertices are :doc:`pinned </physics/cloth/settings/shape>` in the simulation,
 and it applies the sculpt :ref:`gravity <bpy.types.Sculpt.gravity>` directly in the solver.
-Note, using a relatively small brush makes the solver's calculations much easier,
-larger brush size might be too slow to get a usable brush.
+Note, using a relatively small brush makes the solver's calculations much faster,
+larger brush sizes might be too slow to get a usable brush.
 
 Simulation Limit
    The Factor added relative to the size of the radius to limit the cloth simulation effects.
 Simulation Falloff
    The area to apply deformation falloff to the effects of the simulation.
-   This parameter is a factor of the *Simulation Limit* and is shown as a dashed line around the cursor.
+   This setting is a factor of the *Simulation Limit* and is shown as a dashed line around the cursor.
 
 Deformation
    The type of cloth deformation that is used by the brush.

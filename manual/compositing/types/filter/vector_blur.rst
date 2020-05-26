@@ -45,7 +45,7 @@ Speed
       Especially when the camera itself moves,
       the vector mask can become the entire image.
 Curved
-   Interpolates motion between frames using a quadratic bezier function rather than a linear function. 
+   Interpolates motion between frames using a quadratic bezier function rather than a linear function.
 
 
 Outputs

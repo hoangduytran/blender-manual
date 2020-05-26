@@ -15,7 +15,7 @@ creating the name giving effect based on the image brightness alone.
 Sun Beams is a 2D effect for simulating the effect of bright light getting scattered in a medium
 `(Crepuscular Rays) <https://en.wikipedia.org/wiki/Crepuscular_rays>`__.
 This phenomenon can be created by renderers, but full volumetric lighting is
-a rather arduous approach and takes a long of render time.
+a rather arduous approach and takes a long time to render.
 
 
 Inputs

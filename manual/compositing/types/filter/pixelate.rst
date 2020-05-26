@@ -39,7 +39,7 @@ Example
 Open an image you would like to pixelate using an Image node.
 Add two Scale nodes between the input and output :menuselection:`Add --> Distort --> Scale`.
 Change the values of X and Y to 0.2 in the first scale box and to 5 in the second.
-The composited image will appear unchanged.Now add a Pixelate node between the two Scale nodes.
-The result will be a pixelated image. 
+The composited image will appear unchanged. Now add a Pixelate node between the two Scale nodes.
+The result will be a pixelated image.
 
 .. figure:: /images/compositing_types_filter_pixelate_example.png

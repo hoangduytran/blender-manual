@@ -20,12 +20,12 @@ Auto Normalize
    further normalizing weights should not affect animation at all.
 
    This option works most intuitively when used to maintain normalization while
-   painting on top of weights that are already normalized with some other tool.
+   painting on top of weights that are already normalized with another tool.
 Lock-Relative
    Displays bone-deforming groups as if all locked deform groups were deleted,
    and the remaining ones were re-normalized.
    This is intended for use when balancing weights within a group of bones while all other bones are locked.
-   This option also allows temporarily viewing of non-normalized weights as if they were normalized,
+   With this option you can also temporarily view non-normalized weights as if they were normalized,
    without actually changing the values.
 Multi-Paint
    Paint on all selected vertex groups simultaneously, in a way that preserves their relative influence.

@@ -78,7 +78,7 @@ Preserve Volume
 Preserve Paint Mask
    Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
 Preserve Face Sets
-   Re-projects :ref:`Face Sets <sculpting-editing-facesets>` onto the new mesh.
+   Reprojects :ref:`Face Sets <sculpting-editing-facesets>` onto the new mesh.
 Voxel Remesh
    Performs the remeshing operation to create a new manifold mesh based on the volume of the current mesh.
    Performing this will lose all mesh object data layers associated with the original mesh.

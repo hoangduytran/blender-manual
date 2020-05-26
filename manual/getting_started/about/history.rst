@@ -264,5 +264,5 @@ Version/Revision Milestones
    UDIM and USD support, Mantaflow for fluids and smoke simulation,
    AI denoising, Grease Pencil improvements, and much more.
 `2.83 <https://www.blender.org/download/releases/2-83/>`__ -- June 2020:
-   3D Viewport virtual reality scene inspection, New Volume object, adaptive Cycles sampling,
+   3D Viewport virtual reality scene inspection, new volume object type, Cycles adaptive sampling,
    Cycles viewport denoising, sculpting improvements, and much more.

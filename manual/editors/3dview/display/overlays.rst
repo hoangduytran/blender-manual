@@ -228,9 +228,11 @@ Sculpt Mode
 ===========
 
 Mask
-   Show :ref:`Masks <sculpt-mask-menu>` as overlays on an object. The opacity of the overlay can be controlled.
+   Show :ref:`Masks <sculpt-mask-menu>` as overlays on an object. The opacity of the overlay can be adjusted.
 Face Sets
-   Show :ref:`Face Sets <sculpting-editing-facesets>` as overlays on an object. The opacity of the overlay can be controlled.
+   Show :ref:`Face Sets <sculpting-editing-facesets>` as overlays on an object.
+   The opacity of the overlay can be adjusted.
+
 
 Vertex Paint
 ============

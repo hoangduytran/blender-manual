@@ -37,9 +37,7 @@ Import Options
 --------------
 
 Relative Path
-   You can link to the image file with a relative path (starting from the location of the blend file)
-   or an absolute path (starting from the root of the file system). Enable the checkbox to link to
-   the image file using a :ref:`relative file path <files-blend-relative_paths>`.
+   Link to the image file using a :ref:`relative file path <files-blend-relative_paths>`.
 
 Force Reload
    Reloads the image file into Blender if it is already added as an image data-block.
