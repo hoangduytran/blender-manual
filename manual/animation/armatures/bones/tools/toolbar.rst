@@ -56,10 +56,10 @@ Bone Size
       Todo.
 
 Extrude
-   Todo.
+   Creates a new bone connected to the last selected joint.
 
    Extrude to Cursor
-      Todo.
+      Creates a new bone going from the last selected joint to the mouse position.
 
 Shear
    Todo.
