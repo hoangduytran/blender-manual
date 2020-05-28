@@ -6,7 +6,7 @@ Masks
 Layers List
 ===========
 
-.. figure:: /images/grease-pencil_properties_layers-mask_panel.png
+.. figure:: /images/grease-pencil_properties_masks_layers-panel.png
    :align: right
 
    Layer list with masked layers.
@@ -52,17 +52,17 @@ Example
 
 .. list-table:: Mask (green circle) samples.
 
-   * - .. figure:: /images/grease-pencil_properties_mask-01.png
+   * - .. figure:: /images/grease-pencil_properties_masks_example-01.png
           :width: 200px
 
           Original image (Blend: Regular, Opacity: 1).
 
-     - .. figure:: /images/grease-pencil_properties_mask-02.png
+     - .. figure:: /images/grease-pencil_properties_masks_example-02.png
           :width: 200px
 
           Blend: Hard Light, Opacity: 1.
 
-     - .. figure:: /images/grease-pencil_properties_mask-03.png
+     - .. figure:: /images/grease-pencil_properties_masks_example-03.png
           :width: 200px
 
           Blend: Regular, Opacity: 1.

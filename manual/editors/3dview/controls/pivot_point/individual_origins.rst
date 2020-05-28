@@ -33,12 +33,12 @@ while the blue rectangle has its origin located in the center of the mesh.
 When the Pivot Point is set to *Individual Origins*,
 the origin of each object remains in place while the object rotates or scales around it.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_individual-origins_objects-rotate.png
+.. figure:: /images/editors_3dview_controls_pivot-point_individual-origins_objects-rotate.png
    :align: center
 
    Rotation around Individual Origins (middle) compared to the Median Point (right).
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_individual-origins_objects-scale.png
+.. figure:: /images/editors_3dview_controls_pivot-point_individual-origins_objects-scale.png
    :align: center
 
    Scaling around Individual Origins (middle) compared to the Median Point (right).
@@ -47,12 +47,12 @@ the origin of each object remains in place while the object rotates or scales ar
 In Edit Mode
 ============
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_individual-origins_rotation-faces.png
+.. figure:: /images/editors_3dview_controls_pivot-point_individual-origins_rotation-faces.png
    :align: center
 
    Rotation of individual faces around Individual Origins (middle) and the Median Point (right).
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_individual-origins_scale-individual-faces.png
+.. figure:: /images/editors_3dview_controls_pivot-point_individual-origins_scale-individual-faces.png
    :align: center
 
    Scaling with non-touching faces around Individual Origins (middle) and the Median Point (right).

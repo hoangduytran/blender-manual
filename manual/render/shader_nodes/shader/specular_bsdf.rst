@@ -5,7 +5,7 @@
 Specular BSDF
 *************
 
-.. figure:: /images/render_shader-nodes_shader_specular_node.png
+.. figure:: /images/render_shader-nodes_shader_specular-bsdf_node.png
    :align: right
 
    Specular BSDF.

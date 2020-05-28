@@ -29,7 +29,7 @@ because not all data-blocks are shared; some of them are "hard copied"!
 Examples
 ========
 
-.. figure:: /images/scene-layout_object_editing_duplication_example.png
+.. figure:: /images/scene-layout_object_editing_duplicate_example.png
 
    The Cube object was duplicated.
 

@@ -16,7 +16,7 @@ It is oriented parallel to the world axes. In this mode the pivot point lies at 
 You can set the pivot point to *Bounding Box* with :kbd:`Comma` or via the menu in the editor's header.
 The image below shows how the object's bounding box size is determined by the size of the object.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_bounding-box-center_demo.png
+.. figure:: /images/editors_3dview_controls_pivot-point_bounding-box-center_demo.png
    :align: center
 
    Relationship between an object and its bounding box.
@@ -39,7 +39,7 @@ while the blue rectangle has its origin located in the center of the mesh.
 
 When a single object is selected, the rotation takes place around its origin.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_bounding-box-center_object-mode.png
+.. figure:: /images/editors_3dview_controls_pivot-point_bounding-box-center_object-mode.png
    :align: center
 
    Shows the location of the bounding box (left) pivot point compared to the median point (right).
@@ -56,13 +56,13 @@ This time it is the geometry that is enclosed in the bounding box.
 The bounding box in *Edit Mode* takes no account of the object(s) origins,
 only the center of the selected vertices.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_bounding-box-center_edit-mode-rotation.png
+.. figure:: /images/editors_3dview_controls_pivot-point_bounding-box-center_edit-mode-rotation.png
    :align: center
 
    The effects of rotation in different mesh selection modes when the bounding box is set as the pivot point.
    The pivot point is shown by a yellow circle.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_bounding-box-center_median-point.png
+.. figure:: /images/editors_3dview_controls_pivot-point_bounding-box-center_median-point.png
    :align: center
 
    The bounding box center compared to the median point.

@@ -24,7 +24,7 @@ Example
 The image below shows the difference when rotating an object
 around the median point (left) and around the 3D cursor (right).
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_3d-cursor_example.png
+.. figure:: /images/editors_3dview_controls_pivot-point_3d-cursor_example.png
    :align: center
 
    Rotation around the 3D cursor compared to the median point.

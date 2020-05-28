@@ -26,7 +26,7 @@ For example, when you press :kbd:`X`, during the execution of the operation,
 it will constrain the transformation to the *Global* X axis.
 But if you press :kbd:`X` a second time it will constrain to your *Transform Orientation*\ 's X axis.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_orientations_menu.png
+.. figure:: /images/editors_3dview_controls_orientation_menu.png
 
    Transform Orientations selector.
 
@@ -81,27 +81,27 @@ Examples
 
 .. list-table:: Cube with the rotation gizmo active in multiple transform orientations.
 
-   * - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-global-1.png
+   * - .. figure:: /images/editors_3dview_controls_orientation_manipulator-global-1.png
 
           Default cube with Global transform orientation selected.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-global-2.png
+     - .. figure:: /images/editors_3dview_controls_orientation_manipulator-global-2.png
 
           Rotated cube with Global orientation, gizmo has not changed.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-local.png
+     - .. figure:: /images/editors_3dview_controls_orientation_manipulator-local.png
 
           Local orientation, gizmo matches to the object's rotation.
 
-   * - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-normal.png
+   * - .. figure:: /images/editors_3dview_controls_orientation_manipulator-normal.png
 
           Normal orientation, in Edit Mode.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-gimbal.png
+     - .. figure:: /images/editors_3dview_controls_orientation_manipulator-gimbal.png
 
           Gimbal transform orientation.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_orientations_manipulator-view.png
+     - .. figure:: /images/editors_3dview_controls_orientation_manipulator-view.png
 
           View transform orientation.
 
@@ -120,7 +120,7 @@ Custom transform orientations defined from objects use the *Local* orientation o
 whereas those defined from selected mesh elements (vertices, edges, faces)
 use the *Normal* orientation of the selection.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_orientations_custom.png
+.. figure:: /images/editors_3dview_controls_orientation_custom.png
 
    Transform Orientations panel.
 
@@ -139,7 +139,7 @@ Create Orientation
 To create a custom orientation, select the object or mesh element(s) and
 click the "+" button on the *Transform Orientations* panel.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_orientations_custom-name.png
+.. figure:: /images/editors_3dview_controls_orientation_custom-name.png
 
    Create Orientation :ref:`ui-undo-redo-adjust-last-operation` panel.
 

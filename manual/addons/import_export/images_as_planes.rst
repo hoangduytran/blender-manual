@@ -10,7 +10,7 @@ Images as Planes
    :Menu:      :menuselection:`File --> Import --> Images as Planes`,
                :menuselection:`3D Viewport --> Add --> Image --> Images as Planes`
 
-.. figure:: /images/addons_import-export_images_as_planes_panel.png
+.. figure:: /images/addons_import-export_images-as-planes_panel.png
    :align: right
    :width: 200px
 

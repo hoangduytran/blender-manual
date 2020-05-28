@@ -48,7 +48,7 @@ Now, when any strip is tweaked, the others will change too.
 If a strip other than the original is tweaked,
 the original will turn to red.
 
-.. figure:: /images/editors_nla_strips_linked-strip-edit.png
+.. figure:: /images/editors_nla_editing_linked-strip-edit.png
 
    Linked duplicated strip being edited.
 
@@ -210,12 +210,12 @@ The keyframes of the action can then be edited in the Dope Sheet.
 
 .. list-table::
 
-   * - .. figure:: /images/editors_nla_strips_nla-mode.png
+   * - .. figure:: /images/editors_nla_editing_nla-mode.png
           :width: 320px
 
           Strip in NLA mode.
 
-     - .. figure:: /images/editors_nla_strips_edit-mode.png
+     - .. figure:: /images/editors_nla_editing_mode.png
           :width: 320px
 
           Strip in Tweak mode.

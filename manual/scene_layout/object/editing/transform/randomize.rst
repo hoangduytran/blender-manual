@@ -10,7 +10,7 @@ Randomize
    :Mode:      Object Mode and Edit Mode
    :Menu:      :menuselection:`Object --> Transform --> Randomize Transform`
 
-.. figure:: /images/scene-layout_object_editing_transform_tools_randomize.png
+.. figure:: /images/scene-layout_object_editing_transform_randomize_panel.png
    :figwidth: 180px
    :align: right
 

@@ -14,7 +14,7 @@ Snapping
 The ability to snap objects and mesh element to various types of scene elements during
 a transformation is available by toggling the magnet icon in the 3D Viewport's header buttons.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_snap_header-magnet-icon.png
+.. figure:: /images/editors_3dview_controls_snapping_header-magnet-icon.png
 
    Magnet icon in the 3D Viewport header (blue when enabled).
 
@@ -31,7 +31,7 @@ Snap Element
    :Header:    :menuselection:`Snapping --> Snap to`
    :Hotkey:    :kbd:`Shift-Ctrl-Tab`
 
-.. figure:: /images/scene-layout_object_editing_transform_control_snap_element-menu.png
+.. figure:: /images/editors_3dview_controls_snapping_element-menu.png
    :align: right
 
    Snap Element menu.
@@ -95,15 +95,15 @@ Closest
 
 .. list-table::
 
-   * - .. figure:: /images/scene-layout_object_editing_transform_control_snap_target-closest.png
+   * - .. figure:: /images/editors_3dview_controls_snapping_target-closest.png
 
           Closest.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_snap_target-active.png
+     - .. figure:: /images/editors_3dview_controls_snapping_target-active.png
 
           Active.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_snap_target-median.png
+     - .. figure:: /images/editors_3dview_controls_snapping_target-median.png
 
           Median.
 
@@ -113,7 +113,7 @@ Closest
 Additional Snap Options
 =======================
 
-.. figure:: /images/scene-layout_object_editing_transform_control_snap_options.png
+.. figure:: /images/editors_3dview_controls_snapping_options.png
 
 As seen by the yellow highlighted areas in the image above, besides the snap target,
 additional controls are available to alter snap behavior. These options vary between mode
@@ -150,6 +150,6 @@ the marked points.
 
 Marking a point more than once will give it more weight in the averaged location.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_snap_target-multiple.png
+.. figure:: /images/editors_3dview_controls_snapping_target-multiple.png
 
 Multiple snapping targets.

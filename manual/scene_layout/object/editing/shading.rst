@@ -54,8 +54,8 @@ but for organic surfaces you usually want your objects to look smooth.
 .. list-table:: Example mesh flat (left) and smooth-shaded (right).
    `Sample blend-file <https://wiki.blender.org/wiki/File:25-manual-meshsmooth-example.blend>`__.
 
-   * - .. figure:: /images/modeling_meshes_editing_normals_example-flat.png
+   * - .. figure:: /images/scene-layout_object_editing_shading_example-flat.png
           :width: 200px
 
-     - .. figure:: /images/modeling_meshes_editing_normals_example-smooth.png
+     - .. figure:: /images/scene-layout_object_editing_shading_example-smooth.png
           :width: 200px

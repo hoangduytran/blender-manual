@@ -17,7 +17,7 @@ When rotating or scaling an object or group of vertices, edges, or faces,
 you may want to move the :term:`pivot point` to make it easier to manipulate an object.
 Using this selector in the header of any 3D Viewport, you can change the location of the pivot point.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_index_popover.png
+.. figure:: /images/editors_3dview_controls_pivot-point_index_popover.png
 
 
 Pivot Types

@@ -41,7 +41,7 @@ Linked
 Examples
 ========
 
-.. figure:: /images/scene-layout_object_editing_duplication_linked-example.png
+.. figure:: /images/scene-layout_object_editing_duplicate-linked_example.png
 
    The Cube object was linked duplicated.
 

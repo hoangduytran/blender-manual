@@ -35,7 +35,7 @@ In *Object Mode* the tool works on entire objects rather than individual mesh co
 In the image below, the right cylinder is scaled along the Z axis.
 When the *Proportional Editing* is enabled, the adjacent cylinders are also within the tool's radius of influence.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_object-mode.png
+.. figure:: /images/editors_3dview_controls_proportional-editing_object-mode.png
 
    Proportional Editing in Object Mode.
 
@@ -58,7 +58,7 @@ When you face situations like this the Proportional Editing tool
 can be used to smoothly deform the surface of the model.
 This is done by the tool's automatic modification of unselected vertices within a given range.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_edit-mode.png
+.. figure:: /images/editors_3dview_controls_proportional-editing_mode.png
    :align: center
 
    Proportional Editing in Edit Mode.
@@ -72,7 +72,7 @@ the mouse wheel :kbd:`WheelUp`, :kbd:`WheelDown` or
 :kbd:`PageUp`, :kbd:`PageDown` respectively. As you change the radius,
 the points surrounding your selection will adjust their positions accordingly.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_influence.png
+.. figure:: /images/editors_3dview_controls_proportional-editing_influence.png
    :align: center
 
    Influence circle.
@@ -81,7 +81,7 @@ the points surrounding your selection will adjust their positions accordingly.
 Options
 -------
 
-.. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_tool.png
+.. figure:: /images/editors_3dview_controls_proportional-editing_tool.png
    :width: 250px
 
    Proportional Editing tool.
@@ -95,7 +95,7 @@ Enable :kbd:`O`, :kbd:`Alt-O`
 Projected from View
    Depth along the view is ignored when applying the radius.
 
-   .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_2d-compare.png
+   .. figure:: /images/editors_3dview_controls_proportional-editing_2d-compare.png
       :width: 560px
 
       The difference between regular and Projected (2D) proportional option (right).
@@ -116,42 +116,42 @@ Falloff
 
 .. list-table::
 
-   * - .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_falloff-constant.png
+   * - .. figure:: /images/editors_3dview_controls_proportional-editing_falloff-constant.png
           :width: 320px
 
           Constant, No Falloff.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_falloff-random.png
+     - .. figure:: /images/editors_3dview_controls_proportional-editing_falloff-random.png
           :width: 320px
 
           Random Falloff.
 
-   * - .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_falloff-linear.png
+   * - .. figure:: /images/editors_3dview_controls_proportional-editing_falloff-linear.png
           :width: 320px
 
           Linear Falloff.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_falloff-sharp.png
+     - .. figure:: /images/editors_3dview_controls_proportional-editing_falloff-sharp.png
           :width: 320px
 
           Sharp Falloff.
 
-   * - .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_falloff-root.png
+   * - .. figure:: /images/editors_3dview_controls_proportional-editing_falloff-root.png
           :width: 320px
 
           Root Falloff.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_falloff-sphere.png
+     - .. figure:: /images/editors_3dview_controls_proportional-editing_falloff-sphere.png
           :width: 320px
 
           Sphere Falloff.
 
-   * - .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_falloff-smooth.png
+   * - .. figure:: /images/editors_3dview_controls_proportional-editing_falloff-smooth.png
           :width: 320px
 
           Smooth Falloff.
 
-     - .. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_falloff-inverse-square.png
+     - .. figure:: /images/editors_3dview_controls_proportional-editing_falloff-inverse-square.png
           :width: 320px
 
           Inverse Square Falloff.
@@ -164,7 +164,7 @@ The image below shows the final render of the low-poly landscape
 obtained by moving up the vertices of the triangulated grid
 with enabled *Proportional Editing*.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_proportional-edit_landscape.jpg
+.. figure:: /images/editors_3dview_controls_proportional-editing_landscape.jpg
    :width: 620px
 
    A landscape obtained via Proportional Editing.
