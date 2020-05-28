@@ -176,16 +176,14 @@ Usage Guides
 Videos
 ======
 
-Videos from YouTube\ :sup:`™` and Vimeo\ :sup:`™` can be embedded using::
+Videos from YouTube\ :sup:`™` can be embedded using::
 
    .. youtube:: ID
 
-   .. vimeo:: ID
 
 The ``ID`` is found in the video's URL, e.g:
 
-- The ID for ``https://www.youtube.com/watch?v=Ge2Kwy5EGE0`` is ``Ge2Kwy5EGE0``
-- The ID for ``https://vimeo.com/15837189`` is ``15837189``
+The ID for ``https://www.youtube.com/watch?v=Ge2Kwy5EGE0`` is ``Ge2Kwy5EGE0``
 
 
 Usage Guides
