@@ -43,7 +43,7 @@ Sequence
    .. _bpy.types.Volume.sequence_mode:
 
    Mode
-      Todo
+      Controls what happens when the volume sequence has reached the end frame.
 
       Clip
          Hides frames outside the specified frame range.
