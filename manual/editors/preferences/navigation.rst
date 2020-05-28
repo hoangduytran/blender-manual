@@ -31,7 +31,7 @@ Orbit Sensitivity
    Adjusts the reactivity/speed of orbiting in the 3D Viewport.
    This setting works differently depending on what *Orbit Method* is used:
 
-   - Turntable: *Orbit Sensitivity* control the amount
+   - Turntable: *Orbit Sensitivity* controls the amount
      of rotation per-pixel to control how fast the 3D Viewport rotates.
    - Trackball: *Orbit Sensitivity* as a simple factor for how fast the 3D Viewport rotates.
 
@@ -80,7 +80,7 @@ Zoom Method
    Scale
       *Scale* zooming depends on where you first click in the view.
       To zoom out, move the cursor to the area center.
-      To zoom in, move the cursor away from the areas center.
+      To zoom in, move the cursor away from the area center.
    Continue
       The *Continue* zooming option allows you to control the speed
       (and not the value) of zooming by moving away from the initial cursor position.
@@ -155,6 +155,6 @@ Gravity
 Simulates the effect of gravity when walking.
 
 View Height
-   The distance from the ground floor to the camera when walking
+   The distance from the ground floor to the camera when walking.
 Jump Height
    The maximum height of a jump.

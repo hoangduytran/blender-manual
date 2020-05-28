@@ -204,7 +204,7 @@ Type
    Mix
       Integrates the pasted keyframes in with existing keyframes only overwriting keyframes that share a frame.
    Overwrite All
-      Removes all previous keyframes and replaces it with the pasted keyframes.
+      Removes all previous keyframes and replaces them with the pasted keyframes.
    Overwrite Range
       TODO
    Overwrite Entire Range

@@ -21,7 +21,7 @@ Backdrop
 
    Backdrop panel.
 
-The backdrop is a the output of a Viewer node in the background of the Compositor.
+The backdrop is the output of a Viewer node in the background of the Compositor.
 For example, when :kbd:`Shift-Ctrl-LMB` on an Image node, it displays a preview of the image,
 or on a Mix node, will show the result of the mixing.
 You can toggle the backdrop by clicking the checkbox in the *Backdrop* panel title
@@ -59,7 +59,7 @@ Performance
 
    Performance panel.
 
-This panel help you to tweak the performance of the Compositor.
+This panel helps you tweak the performance of the Compositor.
 
 Render
    Sets the quality when doing the final render.
