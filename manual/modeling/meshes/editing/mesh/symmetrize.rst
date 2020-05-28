@@ -24,12 +24,12 @@ Threshold
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_mesh_symmetrize_symmetrize1.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_symmetrize_example-1.png
           :width: 320px
 
           Mesh before Symmetrize.
 
-     - .. figure:: /images/modeling_meshes_editing_mesh_symmetrize_symmetrize2.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_symmetrize_example-2.png
           :width: 320px
 
           Mesh after Symmetrize.

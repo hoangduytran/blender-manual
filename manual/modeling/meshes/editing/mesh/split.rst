@@ -46,12 +46,12 @@ and the selected edges will be duplicated to form the border of the hole.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_mesh_split_edge-split-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_split_edges-before.png
           :width: 320px
 
           Selected edges.
 
-     - .. figure:: /images/modeling_meshes_editing_mesh_split_edge-split-after.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_split_edges-after.png
           :width: 320px
 
           Adjacent face moved to reveal hole left by split.
@@ -72,12 +72,12 @@ This has the same functionality as manually ripping all faces and edges away fro
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_mesh_split_edge-split2-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_split_faces-before.png
           :width: 320px
 
           Before.
 
-     - .. figure:: /images/modeling_meshes_editing_mesh_split_edge-split2-after.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_split_faces-after.png
           :width: 320px
 
           After (also moving edges away).

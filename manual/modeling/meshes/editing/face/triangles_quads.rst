@@ -29,12 +29,12 @@ which means some triangles could remain.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_face_triangles-quads_tris-to-quad-before.png
+   * - .. figure:: /images/modeling_meshes_editing_face_triangles-quads_before.png
           :width: 320px
 
           Before converting tris to quads.
 
-     - .. figure:: /images/modeling_meshes_editing_face_triangles-quads_tris-to-quad-after.png
+     - .. figure:: /images/modeling_meshes_editing_face_triangles-quads_after.png
           :width: 320px
 
           After converting tris to quads.

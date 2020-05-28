@@ -46,12 +46,12 @@ Isolated Edges
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_vertex_make-face-edge_simple-before.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_make-face-edge_edge-simple-before.png
           :width: 200px
 
           Before.
 
-     - .. figure:: /images/modeling_meshes_editing_vertex_make-face-edge_simple-after.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_make-face-edge_edge-simple-after.png
           :width: 200px
 
           After.
