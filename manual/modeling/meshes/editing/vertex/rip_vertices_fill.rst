@@ -20,7 +20,7 @@ it fills in the gap with geometry.
 
           Edges selected.
 
-     - .. figure:: /images/modeling_meshes_editing_vertices_rip-fill-result.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_rip-vertices-fill_result.png
           :width: 260px
 
           Result of rip fill.

@@ -31,17 +31,17 @@ so no additional vertex will be created (besides the first one).
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_knife_line-before.png
+   * - .. figure:: /images/modeling_meshes_tools_knife_line-before.png
           :width: 200px
 
           Mesh before knife cut.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_knife_line-active.png
+     - .. figure:: /images/modeling_meshes_tools_knife_line-active.png
           :width: 200px
 
           Knife cut active.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_knife_line-after.png
+     - .. figure:: /images/modeling_meshes_tools_knife_line-after.png
           :width: 200px
 
           After confirming knife cut.
@@ -60,12 +60,12 @@ New cut :kbd:`E`
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_knife_multiple-before.png
+   * - .. figure:: /images/modeling_meshes_tools_knife_multiple-before.png
           :width: 320px
 
           Creating multiple cuts.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_knife_multiple-after.png
+     - .. figure:: /images/modeling_meshes_tools_knife_multiple-after.png
           :width: 320px
 
           Result of starting new cuts while in the tool.
@@ -88,12 +88,12 @@ Draw a continuous line: :kbd:`LMB` drag.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_knife_angle-before.png
+   * - .. figure:: /images/modeling_meshes_tools_knife_angle-before.png
           :width: 320px
 
           Constraining cut angle.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_knife_angle-after.png
+     - .. figure:: /images/modeling_meshes_tools_knife_angle-after.png
           :width: 320px
 
           Result of constraining cut angle.

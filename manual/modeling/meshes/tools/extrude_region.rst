@@ -17,12 +17,12 @@ Vertices are turned into edges and edges will form faces.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_vert.png
+   * - .. figure:: /images/modeling_meshes_tools_extrude-region_vert.png
           :width: 320px
 
           Single vertex extruded.
 
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_edge.png
+     - .. figure:: /images/modeling_meshes_tools_extrude-region_edge.png
           :width: 320px
 
           Single edge extruded.
@@ -43,17 +43,17 @@ The inner region of the selection gets moved unchanged with the extrusion.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-before.png
+   * - .. figure:: /images/modeling_meshes_tools_extrude-region_face-before.png
           :width: 200px
 
           Selected face.
 
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-after.png
+     - .. figure:: /images/modeling_meshes_tools_extrude-region_face-after.png
           :width: 200px
 
           During extrude.
 
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-after-zaxis.png
+     - .. figure:: /images/modeling_meshes_tools_extrude-region_face-after-zaxis.png
           :width: 200px
 
           Set to Z axis.

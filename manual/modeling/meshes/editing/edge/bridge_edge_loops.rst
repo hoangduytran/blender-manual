@@ -47,12 +47,12 @@ Simple example showing two closed edge loops.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edges_bridge-simple-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_simple-before.png
           :width: 320px
 
           Input.
 
-     - .. figure:: /images/modeling_meshes_editing_edges_bridge-simple-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_simple-after.png
           :width: 320px
 
           Bridge result.
@@ -61,12 +61,12 @@ Example of the Bridge tool between edge loops with different numbers of vertices
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edges_bridge-uneven-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_uneven-before.png
           :width: 320px
 
           Input.
 
-     - .. figure:: /images/modeling_meshes_editing_edges_bridge-uneven-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_uneven-after.png
           :width: 320px
 
           Bridge result.
@@ -75,12 +75,12 @@ Example using the Bridge tool to cut holes in face selections and connect them.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edges_bridge-faces-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_faces-before.png
           :width: 320px
 
           Input.
 
-     - .. figure:: /images/modeling_meshes_editing_edges_bridge-faces-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_faces-after.png
           :width: 320px
 
           Bridge result.
@@ -89,12 +89,12 @@ Example showing how Bridge tool can detect multiple loops and connect them in on
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edges_bridge-multi-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_multi-before.png
           :width: 320px
 
           Input.
 
-     - .. figure:: /images/modeling_meshes_editing_edges_bridge-multi-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_multi-after.png
           :width: 320px
 
           Bridge result.
@@ -103,12 +103,12 @@ Example of the subdivision option and surface blending with UVs.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edges_bridge-advanced-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_advanced-before.png
           :width: 320px
 
           Input.
 
-     - .. figure:: /images/modeling_meshes_editing_edges_bridge-advanced-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bridge-edge-loops_advanced-after.png
           :width: 320px
 
           Bridge result.

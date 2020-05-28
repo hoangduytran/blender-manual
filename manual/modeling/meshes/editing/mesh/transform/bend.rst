@@ -13,17 +13,17 @@ Bend
 
 .. list-table:: Bend Transform with Clamp on and off.
 
-   * - .. figure:: /images/modeling_meshes_editing_transform_bend_example-clamp-1.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_transform_bend_example-clamp-1.png
           :width: 320px
 
           Before.
 
-     - .. figure:: /images/modeling_meshes_editing_transform_bend_example-clamp-2.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_transform_bend_example-clamp-2.png
           :width: 320px
 
           Clamp on.
 
-     - .. figure:: /images/modeling_meshes_editing_transform_bend_example-clamp-3.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_transform_bend_example-clamp-3.png
           :width: 320px
 
           Clamp off.
@@ -67,6 +67,6 @@ Clamp
 
    You can turn the bend angle through multiple rotations potentially forming a spiral shape.
 
-.. figure:: /images/modeling_meshes_editing_transform_bend_example-usage.png
+.. figure:: /images/modeling_meshes_editing_mesh_transform_bend_example-usage.png
 
    Bend Transform example.

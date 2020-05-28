@@ -22,17 +22,17 @@ Thickness
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_faces_solidify-before.png
+   * - .. figure:: /images/modeling_meshes_editing_face_solidify-faces_solidify-before.png
           :width: 200px
 
           Mesh before solidify operation.
 
-     - .. figure:: /images/modeling_meshes_editing_faces_solidify-after.png
+     - .. figure:: /images/modeling_meshes_editing_face_solidify-faces_solidify-after.png
           :width: 200px
 
           Solidify with a positive thickness.
 
-     - .. figure:: /images/modeling_meshes_editing_faces_solidify-after2.png
+     - .. figure:: /images/modeling_meshes_editing_face_solidify-faces_solidify-after2.png
           :width: 200px
 
           Solidify with a negative thickness.

@@ -17,7 +17,7 @@ At some point, you will come to a time when you need to cut parts away from a me
 To separate an object, the vertices (or faces) must be selected and then separated,
 though there are several different ways to do this.
 
-.. figure:: /images/modeling_meshes_editing_misc_separate-example.png
+.. figure:: /images/modeling_meshes_editing_mesh_separate_example.png
 
    Suzanne dissected neatly.
 

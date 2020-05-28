@@ -53,17 +53,17 @@ Smoothness
 
    .. list-table::
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_smooth-before.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_smooth-before.png
              :width: 200px
 
              Mesh before subdividing.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_smooth-none.png
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_smooth-none.png
              :width: 200px
 
              Subdivided with no smoothing.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_smooth-after.png
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_smooth-after.png
              :width: 200px
 
              Subdivided with smoothing of 1.
@@ -92,17 +92,17 @@ Corner Cut Type
 
    .. list-table::
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan2.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-fan2.png
              :width: 200px
 
              Fan cut type.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert.png
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert.png
              :width: 200px
 
              Inner vertices cut type.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path.png
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path.png
              :width: 200px
 
              Path cut type.
@@ -112,17 +112,17 @@ Fractal
 
    .. list-table::
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_fractal-before.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_fractal-before.png
              :width: 200px
 
              Plane before subdivision.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_fractal-none.png
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_fractal-none.png
              :width: 200px
 
              Regular subdivision.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_fractal-after1.png
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_fractal-after1.png
              :width: 200px
 
              Same mesh with fractal added.
@@ -130,7 +130,7 @@ Fractal
 Along Normal
    Causes the vertices to move along their normals, instead of random directions.
 
-   .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_fractal-along-normal.png
+   .. figure:: /images/modeling_meshes_editing_edge_subdivide_fractal-along-normal.png
       :width: 200px
 
       Along normal set to 1.
@@ -138,7 +138,7 @@ Along Normal
 Random Seed
    Changes the random seed of the *Fractal* noise function, producing a different result for each seed value.
 
-   .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_fractal-after2.png
+   .. figure:: /images/modeling_meshes_editing_edge_subdivide_fractal-after2.png
       :width: 200px
 
       Same mesh with a different seed value.
@@ -150,7 +150,7 @@ Examples
 Below are several examples illustrating the various possibilities of the *Subdivide*
 and *Subdivide Multi* tools. Note the selection after subdivision.
 
-.. figure:: /images/modeling_meshes_editing_subdividing_subdivide_before.png
+.. figure:: /images/modeling_meshes_editing_edge_subdivide_before.png
    :width: 300px
 
    The sample mesh.
@@ -161,12 +161,12 @@ One Edge
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_one-edge.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_one-edge.png
           :width: 250px
 
           One Edge.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_one-edge-tri.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_one-edge-tri.png
           :width: 250px
 
           Quad/Tri Mode.
@@ -177,10 +177,10 @@ Two Tri Edges
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-tri.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-tri.png
           :width: 250px
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-tri-tri.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-tri-tri.png
           :width: 250px
 
           Quad/Tri Mode.
@@ -191,10 +191,10 @@ Two Opposite Quad Edges
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-opposite.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-opposite.png
           :width: 250px
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-opposite-tri.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-opposite-tri.png
           :width: 250px
 
           Quad/Tri Mode.
@@ -205,36 +205,36 @@ Two Adjacent Quad Edges
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan2.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-fan2.png
           :width: 250px
 
           Fan cut type.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-fan.png
           :width: 250px
 
           Quad/Tri Mode.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert.png
           :width: 250px
 
           Inner vertices cut type.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert-tri.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert-tri.png
           :width: 250px
 
           Quad/Tri Mode.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path.png
           :width: 250px
 
           Path cut type.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path-tri.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path-tri.png
           :width: 250px
 
           Quad/Tri Mode.
@@ -245,10 +245,10 @@ Three Edges
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_three-edges.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges.png
           :width: 250px
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri2.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri2.png
           :width: 250px
 
           Quad/Tri Mode.
@@ -259,10 +259,10 @@ Tri
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri.png
           :width: 250px
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri-tri.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri-tri.png
           :width: 250px
 
           Quad/Tri Mode.
@@ -273,10 +273,10 @@ Quad/Four Edges
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_four-edges.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_four-edges.png
           :width: 250px
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_four-edges-tri.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_four-edges-tri.png
           :width: 250px
 
           Quad/Tri Mode.
@@ -287,12 +287,12 @@ Multiple Cuts
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_tri-multi.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_tri-multi.png
           :width: 250px
 
           Tri with two cuts.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_subdivide_quad-multi.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_quad-multi.png
           :width: 250px
 
           Quad with two cuts.

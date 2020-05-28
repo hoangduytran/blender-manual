@@ -29,17 +29,17 @@ Clamp :kbd:`Alt` or :kbd:`C`
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide1.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_slide-vertices_vertex-slide1.png
           :width: 200px
 
           Selected vertex.
 
-     - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide2.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_slide-vertices_vertex-slide2.png
           :width: 200px
 
           Positioning vertex interactively.
 
-     - .. figure:: /images/modeling_meshes_editing_vertices_vertex-slide3.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_slide-vertices_vertex-slide3.png
           :width: 200px
 
           Repositioned vertex.

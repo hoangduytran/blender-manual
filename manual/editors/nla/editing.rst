@@ -215,7 +215,7 @@ The keyframes of the action can then be edited in the Dope Sheet.
 
           Strip in NLA mode.
 
-     - .. figure:: /images/editors_nla_editing_mode.png
+     - .. figure:: /images/editors_nla_editing_edit-mode.png
           :width: 320px
 
           Strip in Tweak mode.

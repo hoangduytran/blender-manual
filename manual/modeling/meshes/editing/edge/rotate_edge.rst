@@ -18,24 +18,24 @@ The tool operates on selected edges or the shared edge between selected faces.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_faces_rotate-edge-face-mode1.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_rotate-edge_face-mode1.png
           :width: 320px
 
           Two adjacent faces selected.
 
-     - .. figure:: /images/modeling_meshes_editing_faces_rotate-edge-face-mode2.png
+     - .. figure:: /images/modeling_meshes_editing_edge_rotate-edge_face-mode2.png
           :width: 320px
 
           Selected edge rotated.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edges_edge-flip-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_rotate-edge_flip-before.png
           :width: 320px
 
           Selected edge.
 
-     - .. figure:: /images/modeling_meshes_editing_edges_edge-flip-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_rotate-edge_flip-after.png
           :width: 320px
 
           Edge, rotated CW.

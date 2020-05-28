@@ -31,12 +31,12 @@ Center
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_basics_symmetry_snap-to-symmetry-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_snap-symmetry_snap-to-symmetry-before.png
           :width: 320px
 
           Before Snap to Symmetry.
 
-     - .. figure:: /images/modeling_meshes_editing_basics_symmetry_snap-to-symmetry-after.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_snap-symmetry_snap-to-symmetry-after.png
           :width: 320px
 
           After Snap to Symmetry.

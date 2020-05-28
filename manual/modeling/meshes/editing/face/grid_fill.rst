@@ -31,12 +31,12 @@ Simple Blending
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_faces_grid-fill-surface-before.png
+   * - .. figure:: /images/modeling_meshes_editing_face_grid-fill_surface-before.png
           :width: 320px
 
           Input.
 
-     - .. figure:: /images/modeling_meshes_editing_faces_grid-fill-surface-after.png
+     - .. figure:: /images/modeling_meshes_editing_face_grid-fill_surface-after.png
           :width: 320px
 
           Grid Fill result.

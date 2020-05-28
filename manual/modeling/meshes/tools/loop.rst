@@ -42,17 +42,17 @@ The tool is interactive and has two steps:
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_loop_before.png
+   * - .. figure:: /images/modeling_meshes_tools_loop_before.png
           :width: 200px
 
           Mesh before inserting edge loop.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_loop_preview.png
+     - .. figure:: /images/modeling_meshes_tools_loop_preview.png
           :width: 200px
 
           Preview of edge loop location.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_loop_placement.png
+     - .. figure:: /images/modeling_meshes_tools_loop_placement.png
           :width: 200px
 
           Interactive placement of edge loop between adjacent loops.
@@ -76,12 +76,12 @@ Number of Cuts :kbd:`Wheel` or :kbd:`PageUp` / :kbd:`PageDown`
 
    .. list-table::
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_loop_multicut.png
+      * - .. figure:: /images/modeling_meshes_tools_loop_multicut.png
              :width: 250px
 
              Preview of multiple edge loops.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_loop_multicut-after.png
+        - .. figure:: /images/modeling_meshes_tools_loop_multicut-after.png
              :width: 250px
 
              Result of using multiple cuts.
@@ -97,12 +97,12 @@ Smoothness :kbd:`Alt-Wheel`
 
    .. list-table::
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_loop_unsmooth.png
+      * - .. figure:: /images/modeling_meshes_tools_loop_unsmooth.png
              :width: 250px
 
              Added edge loops without smoothing.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_loop_smooth.png
+        - .. figure:: /images/modeling_meshes_tools_loop_smooth.png
              :width: 250px
 
              Same edge loops, but with smoothing value.

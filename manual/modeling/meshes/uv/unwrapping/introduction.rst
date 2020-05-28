@@ -41,7 +41,7 @@ These are described more fully in the next sections.
 Getting Started
 ===============
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_introduction_screenlayout.png
+.. figure:: /images/modeling_meshes_uv_unwrapping_introduction_screenlayout.png
    :width: 620px
 
    UV Editing screen layout.

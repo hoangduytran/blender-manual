@@ -15,17 +15,17 @@ It can be used on many faces at once.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_vertex-connect_before.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_connect-vertex-pairs_before.png
           :width: 180px
 
           Vertices before connecting.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_vertex-connect_after.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_connect-vertex-pairs_after.png
           :width: 180px
 
           After connecting vertices.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_vertex-connect_after-faces.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_connect-vertex-pairs_after-faces.png
           :width: 180px
 
           Resulting face pair.

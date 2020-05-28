@@ -26,7 +26,7 @@ the blunt edges on objects catch the light and change the shading around the edg
 This gives a solid, realistic look,
 as opposed to un-beveled objects which can look too perfect.
 
-.. figure:: /images/modeling_meshes_editing_subdividing_bevel_cubes.jpg
+.. figure:: /images/modeling_meshes_editing_edge_bevel_cubes.jpg
 
    Cubes with and without bevel.
 
@@ -49,17 +49,17 @@ and scroll the :kbd:`Wheel` to increase or decrease the number of segments (see 
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_example-1.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_bevel_example-1.png
           :width: 320px
 
           Selected edge before beveling.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_example-2.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bevel_example-2.png
           :width: 320px
 
           Result of bevel (one segment).
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_example-3.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bevel_example-3.png
           :width: 320px
 
           Result of bevel (vertex only).
@@ -104,7 +104,7 @@ Segments :kbd:`S`
    Alternatively, you can manually enter a segment number value while using the tool,
    or in the Mesh Tool options panel after using the tool.
 
-   .. figure:: /images/modeling_meshes_editing_subdividing_bevel_example-4.png
+   .. figure:: /images/modeling_meshes_editing_edge_bevel_example-4.png
       :width: 320px
 
       Bevel with four segments.
@@ -302,17 +302,17 @@ Examples
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_example-5.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_bevel_example-5.png
           :width: 320px
 
           Result of beveling multiple edges.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_example-6.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bevel_example-6.png
           :width: 320px
 
           Another example of beveling multiple edges.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_example-7.png
+     - .. figure:: /images/modeling_meshes_editing_edge_bevel_example-7.png
           :width: 320px
 
           An example using Profile=0.150.

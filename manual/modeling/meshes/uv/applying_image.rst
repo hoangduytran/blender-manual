@@ -34,7 +34,7 @@ The proper way and the quick way:
 Use UV Coordinates
 ------------------
 
-.. figure:: /images/modeling_meshes_editing_uv_applying-image_coords.png
+.. figure:: /images/modeling_meshes_uv_applying-image_coords.png
 
    A texture setup to map using its UV coordinates.
 
@@ -68,12 +68,12 @@ you do **not** want any stretching (unless you want the cloth to look like spand
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_uv_applying-image_test-grid-uvs.png
+   * - .. figure:: /images/modeling_meshes_uv_applying-image_test-grid-uvs.png
           :width: 320px
 
           The test grid applied to the UVs.
 
-     - .. figure:: /images/modeling_meshes_editing_uv_applying-image_test-grid-geometry.png
+     - .. figure:: /images/modeling_meshes_uv_applying-image_test-grid-geometry.png
           :width: 320px
 
           A preview of the texture on the geometry.

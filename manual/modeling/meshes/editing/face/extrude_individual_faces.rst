@@ -20,17 +20,17 @@ This has several consequences: first, "internal" edges
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-multi.png
+   * - .. figure:: /images/modeling_meshes_editing_face_extrude-individual-faces_multi.png
           :width: 200px
 
           Selection of multiple faces.
 
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-multi-region.png
+     - .. figure:: /images/modeling_meshes_editing_face_extrude-individual-faces_multi-region.png
           :width: 200px
 
           Extruded using extrude region.
 
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_face-multi-individual.png
+     - .. figure:: /images/modeling_meshes_editing_face_extrude-individual-faces_multi-individual.png
           :width: 200px
 
           Extruded using Extrude Individual.

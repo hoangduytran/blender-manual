@@ -32,32 +32,32 @@ Examples
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_knife_project-text-before.jpg
+   * - .. figure:: /images/modeling_meshes_editing_mesh_knife-project_text-before.jpg
           :width: 320px
 
           Before projecting from a text object.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_knife_project-text-after.jpg
+     - .. figure:: /images/modeling_meshes_editing_mesh_knife-project_text-after.jpg
           :width: 320px
 
           Resulting knife projection.
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_knife_project-mesh-before.jpg
+   * - .. figure:: /images/modeling_meshes_editing_mesh_knife-project_mesh-before.jpg
           :width: 320px
 
           Before projecting from a mesh object.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_knife_project-mesh-after.jpg
+     - .. figure:: /images/modeling_meshes_editing_mesh_knife-project_mesh-after.jpg
           :width: 320px
 
           Resulting knife projection (extruded after).
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_knife_project-curve-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_knife-project_curve-before.png
           :width: 320px
 
           Before projecting from a 3D curve object.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_knife_project-curve-after.jpg
+     - .. figure:: /images/modeling_meshes_editing_mesh_knife-project_curve-after.jpg
           :width: 320px
 
           Resulting knife projection (extruded after).

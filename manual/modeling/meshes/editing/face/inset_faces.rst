@@ -23,12 +23,12 @@ You may also adjust the depth of the inset during the modal operation by holding
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_duplicating_inset_before.png
+   * - .. figure:: /images/modeling_meshes_editing_face_inset-faces_before.png
           :width: 320px
 
           Selection to inset.
 
-     - .. figure:: /images/modeling_meshes_editing_duplicating_inset_after.png
+     - .. figure:: /images/modeling_meshes_editing_face_inset-faces_after.png
           :width: 320px
 
           Selection with inset.
@@ -37,7 +37,7 @@ You may also adjust the depth of the inset during the modal operation by holding
 Options
 =======
 
-.. figure:: /images/modeling_meshes_editing_duplicating_inset_options.png
+.. figure:: /images/modeling_meshes_editing_face_inset-faces_options.png
    :align: right
 
    Inset operator options.

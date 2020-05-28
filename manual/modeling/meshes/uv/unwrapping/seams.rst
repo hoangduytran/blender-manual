@@ -14,7 +14,7 @@ Think of this method as peeling an orange or skinning an animal.
 You make a series of cuts in the skin, then peel it off. You could then flatten it out,
 applying some amount of stretching. These cuts are the same as seams.
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_seams_simple.png
+.. figure:: /images/modeling_meshes_uv_unwrapping_seams_simple.png
 
    Simple seam on a cylinder.
 
@@ -54,7 +54,7 @@ Marking Seams
    :Mode:      View mode
    :Menu:      :menuselection:`UVs --> Mark/Clear Seam`
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_seams_suzanne.png
+.. figure:: /images/modeling_meshes_uv_unwrapping_seams_suzanne.png
    :width: 250px
 
    Seamed Suzanne.

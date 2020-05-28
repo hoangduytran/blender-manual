@@ -26,7 +26,7 @@ and will continuously create and connect new vertices if you continue repeating 
 
 .. _fig-mesh-basics-add-one:
 
-.. figure:: /images/modeling_meshes_editing_basics_adding_vertex.png
+.. figure:: /images/modeling_meshes_tools_extrude-cursor_vertex.png
 
    Adding vertices one by one.
 
@@ -38,7 +38,7 @@ Creating Faces
    This goes into too much detail about Ctrl-LMB for a simple introduction.
    Such information should have its own page ~ ideasman42.
 
-.. figure:: /images/modeling_meshes_editing_basics_adding_quad.png
+.. figure:: /images/modeling_meshes_tools_extrude-cursor_quad.png
 
    Quad from an Edge with source automatically rotated.
 

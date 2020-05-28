@@ -8,7 +8,7 @@ UVs & Texture Space
 UV Maps
 =======
 
-.. figure:: /images/modeling_meshes_editing_uv_uv-texture-spaces_uv-maps.png
+.. figure:: /images/modeling_meshes_uv_uv-texture-spaces_uv-maps.png
 
    The UV Maps panel in the Mesh tab.
 

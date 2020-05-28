@@ -14,7 +14,7 @@ The Convex Hull operator takes a point cloud as input and outputs a convex hull 
 If the input contains edges or faces that lie on the convex hull, they can be used in the output as well.
 This operator can be used as a bridge tool as well.
 
-.. figure:: /images/modeling_meshes_editing_vertices_convex-hull.png
+.. figure:: /images/modeling_meshes_editing_mesh_convex-hull_example.png
 
    Input mesh, point cloud, and Convex Hull result.
 

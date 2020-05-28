@@ -21,7 +21,7 @@ Everything that is "above" this axis will move (shear)
 in the same direction as your mouse pointer (but always parallel to the horizontal axis).
 Everything that is "below" the horizontal axis will move in the opposite direction.
 
-.. figure:: /images/modeling_meshes_editing_transform_shear_operator-panel.png
+.. figure:: /images/modeling_meshes_editing_mesh_transform_shear_operator-panel.png
 
    Shear Offset Factor.
 
@@ -51,7 +51,7 @@ Usage
 
 See below for the result of using *Shear* on a number of different elements.
 
-.. figure:: /images/modeling_meshes_editing_transform_shear_mesh.png
+.. figure:: /images/modeling_meshes_editing_mesh_transform_shear_mesh.png
 
    The effects of a Shear transform with different Pivot Points.
 
@@ -71,6 +71,6 @@ the selected vertices are moved to the right as they are below the horizontal ax
    directly proportional to the distance from the horizontal axis.
    i.e. the further it is away from the axis, the greater the movement.
 
-.. figure:: /images/modeling_meshes_editing_transform_shear_objects.png
+.. figure:: /images/modeling_meshes_editing_mesh_transform_shear_objects.png
 
    The effects of a Shear transform on objects with different Pivot Points.

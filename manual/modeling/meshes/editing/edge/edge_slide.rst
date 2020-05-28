@@ -40,12 +40,12 @@ between their original position and the adjacent edge loop, regardless of the ed
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edges_edge-slide-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_edge-slide_before.png
           :width: 320px
 
           Selected edge loop.
 
-     - .. figure:: /images/modeling_meshes_editing_edges_edge-slide-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_edge-slide_after.png
           :width: 320px
 
           Repositioned edge loop.
@@ -67,12 +67,12 @@ use the :kbd:`Alt-Wheel` to scroll to a different edge.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edges_edge-slide-even.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_edge-slide_even.png
           :width: 320px
 
           Even Mode enabled.
 
-     - .. figure:: /images/modeling_meshes_editing_edges_edge-slide-even-flip.png
+     - .. figure:: /images/modeling_meshes_editing_edge_edge-slide_even-flip.png
           :width: 320px
 
           Even Mode with Flip enabled.

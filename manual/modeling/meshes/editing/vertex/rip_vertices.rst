@@ -23,12 +23,12 @@ Examples
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-before.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_rip-vertices_before.png
           :width: 260px
 
           Selected vertex.
 
-     - .. figure:: /images/modeling_meshes_editing_vertices_rip-after.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_rip-vertices_after.png
           :width: 260px
 
           Hole created after using rip on vertex.
@@ -38,17 +38,17 @@ Examples
 
           Edges selected.
 
-     - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-after.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_rip-vertices_edges-after.png
           :width: 260px
 
           Result of rip with edge selection.
 
-   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-complexselection-before.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_rip-vertices_complexselection-before.png
           :width: 260px
 
           A complex selection of vertices.
 
-     - .. figure:: /images/modeling_meshes_editing_vertices_rip-complexselection-after.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_rip-vertices_complexselection-after.png
           :width: 260px
 
           Result of rip operation.

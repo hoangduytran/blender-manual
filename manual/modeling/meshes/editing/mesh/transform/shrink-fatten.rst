@@ -24,17 +24,17 @@ Offset Even :kbd:`S`, :kbd:`Alt`
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_transform_shrink-fatten_before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_transform_shrink-fatten_before.png
           :width: 200px
 
           Mesh before shrink/flatten.
 
-     - .. figure:: /images/modeling_meshes_editing_transform_shrink-fatten_inflate-positive.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_transform_shrink-fatten_inflate-positive.png
           :width: 200px
 
           Inflated using a positive value.
 
-     - .. figure:: /images/modeling_meshes_editing_transform_shrink-fatten_inflate-negative.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_transform_shrink-fatten_inflate-negative.png
           :width: 200px
 
           Shrunk using a negative value.

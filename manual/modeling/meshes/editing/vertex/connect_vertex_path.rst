@@ -17,11 +17,11 @@ a bit like the Knife tool; but this is limited to straight cuts across connected
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_vertex-connect_pair-before.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_connect-vertex-path_pair-before.png
 
           Two disconnected vertices.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_vertex-connect_pair-after.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_connect-vertex-path_pair-after.png
 
           Result of connecting.
 
@@ -30,11 +30,11 @@ When many vertices are selected, faces will be split by their selected vertices.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_subdividing_vertex-connect_multi-before.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_connect-vertex-path_multi-before.png
 
           Before.
 
-     - .. figure:: /images/modeling_meshes_editing_subdividing_vertex-connect_multi-after.png
+     - .. figure:: /images/modeling_meshes_editing_vertex_connect-vertex-path_multi-after.png
 
           After.
 

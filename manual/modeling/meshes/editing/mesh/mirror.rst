@@ -51,12 +51,12 @@ the :doc:`pivot point page </editors/3dview/controls/pivot_point/index>`.
 
 .. list-table:: Mirror around the individual origins.
 
-   * - .. figure:: /images/modeling_meshes_editing_transform_mirror_cursor-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-before.png
           :width: 320px
 
           Mesh before mirror.
 
-     - .. figure:: /images/modeling_meshes_editing_transform_mirror_individual-after.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_mirror_individual-after.png
           :width: 320px
 
           Mesh after mirrored along X axis.
@@ -69,12 +69,12 @@ and the axis of transformation is X.
 
 .. list-table:: Mirror around the 3D Cursor.
 
-   * - .. figure:: /images/modeling_meshes_editing_transform_mirror_cursor-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-before.png
           :width: 320px
 
           Mesh before mirror.
 
-     - .. figure:: /images/modeling_meshes_editing_transform_mirror_cursor-after.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-after.png
           :width: 320px
 
           Mesh after mirrored along X axis using the 3D cursor as a pivot point.

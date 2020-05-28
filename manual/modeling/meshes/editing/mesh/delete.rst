@@ -74,7 +74,7 @@ Tear Boundaries
 Examples
 ^^^^^^^^
 
-.. figure:: /images/modeling_meshes_editing_basics_deleting_dissolve-examples.png
+.. figure:: /images/modeling_meshes_editing_mesh_delete_dissolve-examples.png
 
    \1) Original mesh.
    \2) Face Split: Off, Tear Boundaries: Off.
@@ -144,12 +144,12 @@ This tool can simplify your mesh by dissolving vertices and edges separating fla
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_basics_deleting_limited-dissolve-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_delete_limited-dissolve-before.png
           :width: 320px
 
           Original mesh.
 
-     - .. figure:: /images/modeling_meshes_editing_basics_deleting_limited-dissolve-after.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_delete_limited-dissolve-after.png
           :width: 320px
 
           Result of Limited Dissolve.
@@ -182,12 +182,12 @@ removing the face loop it ran through.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_basics_deleting_collapse-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_delete_collapse-before.png
           :width: 320px
 
           Selected edge ring.
 
-     - .. figure:: /images/modeling_meshes_editing_basics_deleting_collapse-after.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_delete_collapse-after.png
           :width: 320px
 
           Edge ring collapsed.
@@ -235,12 +235,12 @@ there would be an empty band of deleted faces all the way around the sphere inst
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_basics_deleting_edge-loop-before.png
+   * - .. figure:: /images/modeling_meshes_editing_mesh_delete_edge-loop-before.png
           :width: 320px
 
           Selected edge loop.
 
-     - .. figure:: /images/modeling_meshes_editing_basics_deleting_edge-loop-after.png
+     - .. figure:: /images/modeling_meshes_editing_mesh_delete_edge-loop-after.png
           :width: 320px
 
           Edge loop deleted.

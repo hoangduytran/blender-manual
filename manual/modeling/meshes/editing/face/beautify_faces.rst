@@ -18,12 +18,12 @@ Max Angle
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_faces_beauty-fill-before.png
+   * - .. figure:: /images/modeling_meshes_editing_face_beautify-faces_fill-before.png
           :width: 320px
 
           Text converted to a mesh.
 
-     - .. figure:: /images/modeling_meshes_editing_faces_beauty-fill-after.png
+     - .. figure:: /images/modeling_meshes_editing_face_beautify-faces_fill-after.png
           :width: 320px
 
           Result of Beautify Faces.

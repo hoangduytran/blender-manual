@@ -178,6 +178,6 @@ on different characters.
 You can assign indices either as you type, or after by selecting blocks of text and
 clicking on the *Assign* button in the *Materials* panel.
 
-.. figure:: /images/modeling_texts_selecting-editing_material-index-example.png
+.. figure:: /images/modeling_texts_editing_material-index-example.png
 
    Red Green Blue text example.
