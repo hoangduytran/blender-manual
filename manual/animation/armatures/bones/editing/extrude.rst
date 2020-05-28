@@ -20,11 +20,11 @@ so you can place them to your liking. See Fig. :ref:`fig-rig-bones-extrusion`.
 
 .. list-table:: Extrusion example.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_extrusion-1.png
+   * - .. figure:: /images/animation_armatures_bones_editing_extrude_example-1.png
 
           An armature with three selected tips.
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_extrusion-2.png
+     - .. figure:: /images/animation_armatures_bones_editing_extrude_example-2.png
 
           The three extruded bones.
 
@@ -37,11 +37,11 @@ extrusion along a global or local axis.
 
 .. list-table:: Mirror extrusion example.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_mirror-extrusion-1.png
+   * - .. figure:: /images/animation_armatures_bones_editing_extrude_mirror-1.png
 
           A single selected bone's tip.
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_mirror-extrusion-2.png
+     - .. figure:: /images/animation_armatures_bones_editing_extrude_mirror-2.png
 
           The two mirror-extruded bones.
 
@@ -89,7 +89,7 @@ The position of the root and the parenting of the new bone depends on the active
 
 .. TODO2.8 Update images (includes outliner)
 
-.. figure:: /images/animation_armatures_bones_editing_bones_mouse-clicks-1.png
+.. figure:: /images/animation_armatures_bones_editing_extrude_mouse-clicks-1.png
    :width: 300px
 
    Ctrl-clicking when the active element is a bone.
@@ -104,7 +104,7 @@ If the active element is a *bone*:
 
 .. _fig-rig-bone-active-tip:
 
-.. figure:: /images/animation_armatures_bones_editing_bones_mouse-clicks-2.png
+.. figure:: /images/animation_armatures_bones_editing_extrude_mouse-clicks-2.png
    :width: 300px
 
    Ctrl-clicking when the active element is a tip.
@@ -120,7 +120,7 @@ If the active element is a *tip*:
 
 .. _fig-rig-bone-disconnected-tip:
 
-.. figure:: /images/animation_armatures_bones_editing_bones_mouse-clicks-3.png
+.. figure:: /images/animation_armatures_bones_editing_extrude_mouse-clicks-3.png
    :width: 300px
 
    Ctrl-clicking when the active element is a disconnected root.
@@ -137,7 +137,7 @@ And hence the new bone will **not** be connected to any bone.
 
 .. _fig-rig-bone-connected-root:
 
-.. figure:: /images/animation_armatures_bones_editing_bones_mouse-clicks-4.png
+.. figure:: /images/animation_armatures_bones_editing_extrude_mouse-clicks-4.png
    :width: 300px
 
    Ctrl-clicking when the active element is a connected root.

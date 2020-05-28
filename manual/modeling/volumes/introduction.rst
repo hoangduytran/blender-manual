@@ -12,7 +12,7 @@ Volume objects can be created from the Add menu in the 3D Viewport,
 or by dragging and dropping vdb-files into Blender.
 For animations, a frame sequence of OpenVDB files can be imported.
 
-.. figure:: /images/modeling_volumes_introduction.png
+.. figure:: /images/modeling_volumes_introduction_example.png
 
    :abbr:`WDAS (Walt Disney Animation Studios)` cloud data set rendered in wireframe, Workbench, and Cycles.
 

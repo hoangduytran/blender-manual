@@ -66,17 +66,17 @@ will increase or decrease the amount of points in the final arc.
 
 .. list-table::
 
-   * - .. figure:: /images/grease-pencil_modes_draw_tool-settings_arc_01.png
+   * - .. figure:: /images/grease-pencil_modes_draw_tool-settings_arc_example-01.png
           :width: 200px
 
           click and dragging the start point.
 
-     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_arc_02.png
+     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_arc_example-02.png
           :width: 200px
 
           Tweaking arc with the manipulator.
 
-     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_arc_03.png
+     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_arc_example-03.png
           :width: 200px
 
           The arc after confirming.

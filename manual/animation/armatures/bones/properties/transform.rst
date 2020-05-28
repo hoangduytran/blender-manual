@@ -12,11 +12,11 @@ Transform
 .. TODO2.8
    .. list-table::
 
-      * - .. figure:: /images/animation_armatures_bones_properties_introduction_transform-panel-edit.png
+      * - .. figure:: /images/animation_armatures_bones_properties_transform_panel-edit.png
 
              The Transform panel (Edit Mode).
 
-        - .. figure:: /images/animation_armatures_bones_properties_introduction_transform-panel-pose.png
+        - .. figure:: /images/animation_armatures_bones_properties_transform_panel-pose.png
 
              The Transform panel (Pose Mode).
 

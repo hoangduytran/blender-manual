@@ -4,7 +4,7 @@
 Color Palette
 *************
 
-.. figure:: /images/interface_controls_templates_color-palette.png
+.. figure:: /images/interface_controls_templates_color-palette_ui.png
    :align: right
 
    Color Palette.

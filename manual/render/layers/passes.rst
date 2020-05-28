@@ -254,7 +254,7 @@ Combining
 
 The passes can be combined to produce the final image as follows:
 
-.. figure:: /images/render_layers_passes_eevee_combine.svg
+.. figure:: /images/render_layers_passes_eevee-combine.svg
 
 .. note:: Limitations:
 

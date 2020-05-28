@@ -3,7 +3,7 @@
 In-Betweens
 ***********
 
-.. figure:: /images/animation_armatures_posing_editing_inbetweens-tools.png
+.. figure:: /images/animation_armatures_posing_editing_in-betweens_tools.png
    :align: right
 
    In-Betweens Tools.

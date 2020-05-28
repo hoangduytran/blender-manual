@@ -22,17 +22,17 @@ will be deleted until another intersecting stroke is found.
 
 .. list-table::
 
-   * - .. figure:: /images/grease-pencil_modes_draw_tool-settings_cutter_01.png
+   * - .. figure:: /images/grease-pencil_modes_draw_tool-settings_cutter_example-01.png
           :width: 200px
 
           Original drawing.
 
-     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_cutter_02.png
+     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_cutter_example-02.png
           :width: 200px
 
           Lasso Selecting the strokes to be cut.
 
-     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_cutter_03.png
+     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_cutter_example-03.png
           :width: 200px
 
           Final result.

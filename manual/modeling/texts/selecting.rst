@@ -5,7 +5,7 @@
 Selecting
 *********
 
-.. figure:: /images/modeling_texts_selecting-editing_cursor.png
+.. figure:: /images/modeling_texts_selecting_cursor.png
    :width: 340px
 
    Text in Edit mode.

@@ -4,7 +4,7 @@
 IES Texture Node
 ****************
 
-.. figure:: /images/render_shader-nodes_textures_ies_texture_node.png
+.. figure:: /images/render_shader-nodes_textures_ies_node.png
    :align: right
 
    Gradient Texture Node.
@@ -44,6 +44,6 @@ Factor
 Examples
 ========
 
-.. figure:: /images/render_shader-nodes_textures_ies_texture.jpg
+.. figure:: /images/render_shader-nodes_textures_ies_example.jpg
 
    Lights with different IES profiles.

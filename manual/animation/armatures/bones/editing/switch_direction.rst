@@ -21,11 +21,11 @@ but in "reversed order". See the Fig. :ref:`fig-rig-properties-switch`.
 
 .. list-table:: Switching example.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_transform_switch-direction-1.png
+   * - .. figure:: /images/animation_armatures_bones_editing_switch-direction_example-1.png
 
           An armature with one selected bone, and one selected chain of three bones, just before switching.
 
-     - .. figure:: /images/animation_armatures_bones_editing_transform_switch-direction-2.png
+     - .. figure:: /images/animation_armatures_bones_editing_switch-direction_example-2.png
 
           The selected bones have been switched. Bone.005 is no more connected nor parented to anything.
           The chain of switched bones still exists, but reversed (now Bone.002 is its root, and Bone is its tip).

@@ -23,11 +23,11 @@ If you have one root and one tip selected, the new bone:
 
 .. list-table:: Fill between a tip and a root.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_fill-joints-1.png
+   * - .. figure:: /images/animation_armatures_bones_editing_fill-between-joints_example-1.png
 
           Active tip on the left.
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_fill-joints-2.png
+     - .. figure:: /images/animation_armatures_bones_editing_fill-between-joints_example-2.png
 
           Active tip on the right.
 
@@ -41,11 +41,11 @@ If you have two tips selected, the new bone:
 
 .. list-table:: Fill between tips.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_fill-joints-3.png
+   * - .. figure:: /images/animation_armatures_bones_editing_fill-between-joints_example-3.png
 
           3D cursor on the left.
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_fill-joints-4.png
+     - .. figure:: /images/animation_armatures_bones_editing_fill-between-joints_example-4.png
 
           3D cursor on the right.
 
@@ -65,11 +65,11 @@ that the new bone's root moves to the tip of the parent bone.
 
 .. list-table:: Fill between roots.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_fill-joints-5.png
+   * - .. figure:: /images/animation_armatures_bones_editing_fill-between-joints_example-5.png
 
           Before UI update (3D cursor on the left).
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_fill-joints-6.png
+     - .. figure:: /images/animation_armatures_bones_editing_fill-between-joints_example-6.png
 
           After UI update, correct visualization.
 
@@ -80,11 +80,11 @@ joint to the 3D cursor position, and it will not parent it to any bone in the ar
 
 .. list-table:: Fill with only one bone joint selected.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_fill-joints-7.png
+   * - .. figure:: /images/animation_armatures_bones_editing_fill-between-joints_example-7.png
 
           Fill with only one tip selected.
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_fill-joints-8.png
+     - .. figure:: /images/animation_armatures_bones_editing_fill-between-joints_example-8.png
 
           Fill with only one root selected.
 

@@ -4,7 +4,7 @@
 Vector Rotate Node
 ******************
 
-.. figure:: /images/render_shader-nodes_vector_vector-rotate.png
+.. figure:: /images/render_shader-nodes_vector_vector-rotate_node.png
    :align: right
 
    Vector Rotate Node.

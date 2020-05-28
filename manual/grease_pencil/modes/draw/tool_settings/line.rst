@@ -66,17 +66,17 @@ will increase or decrease the amount of points in the final line.
 
 .. list-table::
 
-   * - .. figure:: /images/grease-pencil_modes_draw_tool-settings_line_01.png
+   * - .. figure:: /images/grease-pencil_modes_draw_tool-settings_line_example-01.png
           :width: 200px
 
           click and dragging the start point.
 
-     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_line_02.png
+     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_line_example-02.png
           :width: 200px
 
           Moving start and end points with manipulators.
 
-     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_line_03.png
+     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_line_example-03.png
           :width: 200px
 
           The line after confirming.

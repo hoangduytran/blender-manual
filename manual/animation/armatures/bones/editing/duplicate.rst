@@ -31,11 +31,11 @@ its copy will be parented, but **not** connected to the unselected bone
 
 .. list-table:: Duplication example.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_duplication-1.png
+   * - .. figure:: /images/animation_armatures_bones_editing_duplicate_example-1.png
 
           An armature with three selected bones and a selected single root.
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_duplication-2.png
+     - .. figure:: /images/animation_armatures_bones_editing_duplicate_example-2.png
 
           The three duplicated bones. Note that the selected chain is preserved in the copy,
           and that Bone.006 is parented but not connected to Bone.001, as indicated by the black dashed line.

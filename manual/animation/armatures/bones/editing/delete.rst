@@ -23,11 +23,11 @@ to avoid deforming the whole armature.
 
 .. list-table:: Deletion example.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_deletion-1.png
+   * - .. figure:: /images/animation_armatures_bones_editing_delete_example-1.png
 
           An armature with two selected bones, just before deletion.
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_deletion-2.png
+     - .. figure:: /images/animation_armatures_bones_editing_delete_example-2.png
 
           The two bones have been deleted. Note that Bone.002,
           previously connected to the deleted Bone.001, is now parented but not connected to Bone.

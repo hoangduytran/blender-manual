@@ -66,17 +66,17 @@ the amount of points in the final curve.
 
 .. list-table::
 
-   * - .. figure:: /images/grease-pencil_modes_draw_tool-settings_curve_01.png
+   * - .. figure:: /images/grease-pencil_modes_draw_tool-settings_curve_example-01.png
           :width: 200px
 
           click and dragging the start point.
 
-     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_curve_02.png
+     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_curve_example-02.png
           :width: 200px
 
           Tweaking curve with the manipulators.
 
-     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_curve_03.png
+     - .. figure:: /images/grease-pencil_modes_draw_tool-settings_curve_example-03.png
           :width: 200px
 
           The curve after confirming.

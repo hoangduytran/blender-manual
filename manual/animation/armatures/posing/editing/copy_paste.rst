@@ -1,4 +1,4 @@
-.. |copy-paste| image:: /images/animation_armatures_posing_editing_copy-paste.png
+.. |copy-paste| image:: /images/animation_armatures_posing_editing_copy-paste_buttons.png
 
 ***************
 Copy/Paste Pose
@@ -44,36 +44,36 @@ Here are important points:
 
 .. list-table::
 
-   * - .. figure:: /images/animation_armatures_posing_editing_copy-paste-pose-examples-1.png
+   * - .. figure:: /images/animation_armatures_posing_editing_copy-paste_examples-1.png
 
           The rest position of the original armature.
 
-     - .. figure:: /images/animation_armatures_posing_editing_copy-paste-pose-examples-2.png
+     - .. figure:: /images/animation_armatures_posing_editing_copy-paste_examples-2.png
 
           The rest position of the destination armature.
 
 .. list-table:: Examples of pose copy/paste.
 
-   * - .. figure:: /images/animation_armatures_posing_editing_copy-paste-pose-examples-3.png
+   * - .. figure:: /images/animation_armatures_posing_editing_copy-paste_examples-3.png
 
           The first copied pose (note that only two bones are selected and hence copied).
 
-     - .. figure:: /images/animation_armatures_posing_editing_copy-paste-pose-examples-4.png
+     - .. figure:: /images/animation_armatures_posing_editing_copy-paste_examples-4.png
 
           The pose pasted on the destination armature.
 
-     - .. figure:: /images/animation_armatures_posing_editing_copy-paste-pose-examples-5.png
+     - .. figure:: /images/animation_armatures_posing_editing_copy-paste_examples-5.png
 
           The pose mirror-pasted on the destination armature.
 
-   * - .. figure:: /images/animation_armatures_posing_editing_copy-paste-pose-examples-6.png
+   * - .. figure:: /images/animation_armatures_posing_editing_copy-paste_examples-6.png
 
           The same pose as above is copied, but this time with all bones selected.
 
-     - .. figure:: /images/animation_armatures_posing_editing_copy-paste-pose-examples-7.png
+     - .. figure:: /images/animation_armatures_posing_editing_copy-paste_examples-7.png
 
           The pose pasted on the destination armature.
 
-     - .. figure:: /images/animation_armatures_posing_editing_copy-paste-pose-examples-8.png
+     - .. figure:: /images/animation_armatures_posing_editing_copy-paste_examples-8.png
 
           The pose mirror-pasted on the destination armature.

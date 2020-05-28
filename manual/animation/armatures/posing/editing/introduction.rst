@@ -4,7 +4,7 @@ Introduction
 ************
 
 .. TODO2.8
-   .. figure:: /images/animation_armatures_posing_editing_tools.png
+   .. figure:: /images/animation_armatures_posing_editing_introduction_tools.png
       :align: right
 
       Pose Tools.
@@ -32,7 +32,7 @@ and position (as you can see it in the *Transform* panel, in the 3D Views).
 
 .. TODO2.8 Maybe update the images (color & style)
 
-.. figure:: /images/animation_armatures_posing_editing_local-rotation.png
+.. figure:: /images/animation_armatures_posing_editing_introduction_local-rotation.png
 
    An example of a rotation locked to the local Y axis, with two bones selected.
 

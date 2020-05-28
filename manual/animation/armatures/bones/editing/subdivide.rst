@@ -22,10 +22,10 @@ Number of Cuts
 
 .. list-table:: Subdivision example.
 
-   * - .. figure:: /images/animation_armatures_bones_editing_bones_subdivision-1.png
+   * - .. figure:: /images/animation_armatures_bones_editing_subdivide_example-1.png
 
           An armature with one selected bone, just before multi-subdivision.
 
-     - .. figure:: /images/animation_armatures_bones_editing_bones_subdivision-2.png
+     - .. figure:: /images/animation_armatures_bones_editing_subdivide_example-2.png
 
           The selected bone has been "cut" two times, giving three sub-bones.

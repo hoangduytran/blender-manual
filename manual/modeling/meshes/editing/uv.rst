@@ -40,7 +40,7 @@ You can also do this from the UV Editor with :menuselection:`UVs --> Unwrap` or 
 This method will unwrap all faces and reset previous work.
 The UVs menu will appear in the UV Editor after unwrapping has been performed once.
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_unwrap-example.png
+.. figure:: /images/modeling_meshes_editing_uv_unwrap-example.png
    :width: 420px
 
    Result of unwrapping Suzanne.
@@ -109,7 +109,7 @@ the Smart Mapper mapped all of the faces of a cube to a neat arrangement of thre
 three sides on the bottom, for all six sides of the cube to fit squarely,
 just like the faces of the cube.
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_smart-project.png
+.. figure:: /images/modeling_meshes_editing_uv_smart-project.png
    :width: 670px
 
    Smart UV project on a cube.
@@ -283,7 +283,7 @@ while a spherical map takes into account the sphere's curvature,
 and each latitude line becomes evenly spaced.
 Useful for spherical shapes, like eyes, planets, etc.
 
-.. figure:: /images/modeling_meshes_editing_uv_unwrapping_mapping-types_sphere-projection.png
+.. figure:: /images/modeling_meshes_editing_uv_sphere-projection.png
    :width: 420px
 
    Using an equirectangular image with a Sphere Projection.

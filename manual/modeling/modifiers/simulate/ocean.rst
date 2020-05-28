@@ -90,19 +90,19 @@ Spectrum
 
    .. list-table:: Examples of different spectra, settings adjusted for each.
 
-      * - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra_turbulent.png
+      * - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra-turbulent.png
 
              Turbulent Ocean.
 
-        - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra_established.png
+        - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra-established.png
 
              Established Ocean.
 
-      * - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra_established-peaks.png
+      * - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra-established-peaks.png
 
              Established Ocean (Sharp Peaks).
 
-        - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra_shallow-water.png
+        - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra-shallow-water.png
 
              Shallow Water.
 

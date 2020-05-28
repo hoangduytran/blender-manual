@@ -18,7 +18,7 @@ Keymap Information
 The left side of the Status Bar displays mouse button shortcuts and the keymap of the active tool.
 In editors with a Toolbar, pressing :kbd:`Alt` shows the hotkeys to change to a desired tool.
 
-.. figure:: /images/interface_window-system_status-bar_ui_left.png
+.. figure:: /images/interface_window-system_status-bar_ui-left.png
    :align: center
 
 
@@ -27,7 +27,7 @@ Status Messages
 
 The middle of the Status Bar displays information about in progress operations.
 
-.. figure:: /images/interface_window-system_status-bar_ui_center.png
+.. figure:: /images/interface_window-system_status-bar_ui-center.png
    :align: center
 
 Running Task
@@ -46,7 +46,7 @@ Resource Information
 
 The right side of the Status Bar displays information about the Blender instance.
 
-.. figure:: /images/interface_window-system_status-bar_ui_right.png
+.. figure:: /images/interface_window-system_status-bar_ui-right.png
    :align: center
 
 Collection

@@ -4,7 +4,7 @@
 Editing Tools
 *************
 
-.. figure:: /images/grease-pencil_modes_edit_tools.png
+.. figure:: /images/grease-pencil_modes_edit_tools_toolbar.png
    :align: right
 
 :ref:`Select <tool-select-tweak>`
