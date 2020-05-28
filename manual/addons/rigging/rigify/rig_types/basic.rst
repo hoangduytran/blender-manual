@@ -19,9 +19,9 @@ Useful as a utility rig type for custom rigs.
 
 Requirement: A chain of at least two connected bones.
 
-Control (boolean)
+Control (Boolean)
    When enabled control bones and widgets will be created.
-Deform (boolean)
+Deform (Boolean)
    When enabled deform bones will be created.
 
 
@@ -101,11 +101,11 @@ Relink Constraints
 Single-bone rig type that simply copies the bone. Useful as utility rig type for
 adding custom features or specific deform bones to your rigs.
 
-Control (boolean)
+Control (Boolean)
    When enabled a control bone and widget will be created.
-Widget (boolean)
+Widget (Boolean)
    When enabled a circle widget will be created in replacement to the standard.
-Deform (boolean)
+Deform (Boolean)
    When enabled a deform bone will be created.
 Relink Constraints
    Works the same as in the `basic.raw_copy`_ rig.

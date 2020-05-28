@@ -20,7 +20,7 @@ Description
 
 - Pop-ups to pick colors and edit curves.
 - A brush menu that supports user created brushes.
-- Sliders included at the top of sub-menus like Radius, Strength, and Weight to allow for precise adjustment.
+- Sliders included at the top of submenus like Radius, Strength, and Weight to allow for precise adjustment.
 - Fast creation of UV maps and Texture Paint Slots in Texture Paint Mode if they are not already present.
 - Integrates well with the :doc:`Dynamic Context Menu </addons/interface/context_menu>` add-on.
 

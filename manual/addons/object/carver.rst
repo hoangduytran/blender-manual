@@ -3,7 +3,7 @@
 Carver
 ******
 
-Cut and boolean objects directly in the 3D Viewport.
+Cut and Boolean objects directly in the 3D Viewport.
 
 
 Activation

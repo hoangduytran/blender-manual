@@ -120,7 +120,7 @@ auto-complete feature in action.
 
 .. figure:: /images/editors_python-console_completion.png
 
-You will notice that a list of sub-modules inside of ``bpy`` appear. These modules encapsulate all
+You will notice that a list of submodules inside of ``bpy`` appear. These modules encapsulate all
 that we can do with Blender Python API and are very powerful tools.
 
 Lets list all the contents of ``bpy.app`` module.

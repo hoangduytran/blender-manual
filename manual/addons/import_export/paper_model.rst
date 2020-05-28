@@ -190,7 +190,7 @@ Create UV map
 Document Settings
 ^^^^^^^^^^^^^^^^^
 
-Settings closely related to the format of the output document are in the Document Settings sub-panel.
+Settings closely related to the format of the output document are in the Document Settings subpanel.
 
 Format
    First selector switches between PDF and SVG document formats.
@@ -252,7 +252,7 @@ Images
 Colors and Style
 ^^^^^^^^^^^^^^^^
 
-Options related to the drawing style are packed in the *Colors and Style* sub-panel.
+Options related to the drawing style are packed in the *Colors and Style* subpanel.
 They should be quite self-explanatory.
 
 

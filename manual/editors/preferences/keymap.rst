@@ -77,7 +77,7 @@ The Keymap editor lets you change the default hotkeys. You can change keymaps fo
 #. Change hotkeys as you want. Just click on the shortcut input and enter the new shortcut.
 
 Active
-   Un-check to disable this keymap item.
+   Uncheck to disable this keymap item.
 Map Type
    Keyboard
       Single hotkey or key combination.

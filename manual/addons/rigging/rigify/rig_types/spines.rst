@@ -16,13 +16,13 @@ Requirement: A chain of at least three connected bones (base system).
 
 Pivot position (integer)
    Defines the pivot position for torso and hips.
-Head (boolean)
+Head (Boolean)
    When checked neck and head systems will be added to your spine rig.
 
    Neck Position (integer)
       Defines the bone where the neck system starts. The last bone will always be the head system.
       If neck position is the last bone of the chain, then only the head system will be created ignoring the neck.
-Tail (boolean)
+Tail (Boolean)
    When checked tail system will be added to your spine rig.
 
    Tail Position (integer)

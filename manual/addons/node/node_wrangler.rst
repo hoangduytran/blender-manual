@@ -304,7 +304,7 @@ Copy labels all selected nodes based on various criteria.
 Labels can be copied from labels (names) of active node :kbd:`Shift-V`,
 or from names (labels) of nodes that are linked to selected ones or
 from the names of sockets that the selected nodes are linked to.
-All options will be revealed in sub-menu after hitting :kbd:`Shift-C`.
+All options will be revealed in submenu after hitting :kbd:`Shift-C`.
 
 
 Clear Label

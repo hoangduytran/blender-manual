@@ -21,7 +21,7 @@ Building the Manual
 - See the `installing </manual/about/contribute/install/>`__
   page for building the manual.
 - See the `contribute </manual/about/contribute/>`__
-  page for an explanation on the full work-flow and other tips.
+  page for an explanation on the full workflow and other tips.
 
 .. seealso::
 

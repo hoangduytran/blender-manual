@@ -63,7 +63,7 @@ Key Bindings for Pop-Ups
 ------------------------
 
 Menus and panels can be assigned key shortcuts,
-even if they're only accessible from sub-menus elsewhere.
+even if they're only accessible from submenus elsewhere.
 
 Open a Pop-up Menu (``wm.call_menu``)
    Open any menu on key press.
@@ -80,7 +80,7 @@ To find the ``name`` of a menu,
 enable the preference :menuselection:`Interface --> Display --> Python Tooltips`.
 
 Then hover the cursor over the popover button or menu item.
-For sub-menus you will need to use the back arrow to prevent the sub-menu from opening and gaining focus.
+For submenus you will need to use the back arrow to prevent the submenu from opening and gaining focus.
 
 
 Key Bindings for Properties
@@ -94,7 +94,7 @@ Operators for adjusting properties begin with ``wm.context_``.
 
 Some of these include:
 
-- ``wm.context_toggle`` toggle a boolean property.
+- ``wm.context_toggle`` toggle a Boolean property.
 - ``wm.context_cycle_enum`` cycle an :abbr:`enum (enumeration)` property forwards or backwards.
 - ``wm.context_menu_enum`` show a pop-up menu for an enum property.
 - ``wm.context_pie_enum`` show a pie menu for an enum property.
@@ -108,7 +108,7 @@ Each of these operators has a ``data_path`` setting to reference the property to
 
 To find the ``data_path``, basic Python knowledge is needed.
 
-For example, you can use the Python Console to access a boolean property you wish to map to a key::
+For example, you can use the Python Console to access a Boolean property you wish to map to a key::
 
    bpy.context.object.show_name
 

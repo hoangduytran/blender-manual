@@ -386,24 +386,24 @@ Property Value
    This does two things: first it sets the current value of the custom property, and
    second, it defines the data type of the property.
 
-   Custom properties can be of the following types: Integers, Floats, Strings, Booleans,
-   or short vectors of Integers or Floats.
+   Custom properties can be of the following types: Integers, floats, strings, Boolean values,
+   or short vectors of integers or floats.
 
    See the table below for a list of examples for each:
 
-   :Integers: 1, 2, 3, 4,
-   :Floats: 3.141, 5.0, 6.125,
-   :Strings: any text,
-   :Booleans: ``True``, ``False``
-   :Vectors: ``[1, 2, 3]``, ``[1.0, 2.0, 3.0]``
+   :Integer: 1, 2, 3, 4,
+   :Float: 3.141, 5.0, 6.125,
+   :String: any text,
+   :Boolean: ``True``, ``False``
+   :Vector: ``[1, 2, 3]``, ``[1.0, 2.0, 3.0]``
 
    .. note::
 
-      Booleans are handled very similar to integers and only work
+      Boolean values are handled very similar to integers and only work
       when using Min/Max values that are integers and that are no more than 1 apart.
 
-      At this point, the booleans will still look like integers but behave like
-      booleans having one lower, off, value and a higher, on, value.
+      At this point, the Boolean values will still look like integers but behave like
+      a Boolean having one lower, off, value and a higher, on, value.
 Default Value
    This sets the default value of the property used by the Reset to Default Value operator.
 

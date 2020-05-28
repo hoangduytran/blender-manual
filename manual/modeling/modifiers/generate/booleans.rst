@@ -6,7 +6,7 @@ Boolean Modifier
 
 The *Boolean* modifier performs operations on meshes that are otherwise too complex
 to achieve with as few steps by editing meshes manually. It uses one of
-the three available boolean operations to create a single mesh out of two mesh objects:
+the three available Boolean operations to create a single mesh out of two mesh objects:
 
 .. figure:: /images/modeling_modifiers_generate_booleans_union-intersect-difference-examples.png
 
@@ -44,7 +44,7 @@ Operations
 ----------
 
 Operation
-   Which boolean operation will be used.
+   Which Boolean operation will be used.
 
    Difference
       The target mesh is subtracted from the modified mesh (everything *outside* of the target mesh is kept).

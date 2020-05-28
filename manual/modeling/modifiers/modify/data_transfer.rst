@@ -54,11 +54,11 @@ Mix Mode
    Above Threshold
       Only replaces destination value if it's above given threshold *Mix Factor*.
       How that threshold is interpreted depends on the data type,
-      note that for boolean values this option fakes a logical AND.
+      note that for Boolean values this option fakes a logical AND.
    Below Threshold
       Only replaces destination value if it's below given threshold *Mix Factor*.
       How that threshold is interpreted depends on the data type,
-      note that for boolean values this option fakes a logical OR.
+      note that for Boolean values this option fakes a logical OR.
    Mix, Add, Subtract, Multiply
       Apply that operation, using mix factor to control how much of source or destination value to use.
       Only available for a few types (vertex groups, vertex colors).

@@ -149,7 +149,7 @@ Version/Revision Milestones
    Shrinkwrap modifier, and Python editing improvements.
    This contained the results `Project Apricot <https://apricot.blender.org/>`__.
 `2.49 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.49>`__ -- June 2009:
-   Node-based textures, armature sketching (called Etch-a-Ton), boolean mesh operation improvements,
+   Node-based textures, armature sketching (called Etch-a-Ton), Boolean mesh operation improvements,
    JPEG2000 support, projection painting for direct transfer of images to models, and
    a significant Python script catalog. GE enhancements included video textures, where you can play movies in-game,
    upgrades to the Bullet physics engine, dome (fisheye) rendering, and more API GE calls made available.
@@ -181,7 +181,7 @@ Version/Revision Milestones
    with mesh contact/approximation, the Ocean modifier to simulate ocean and foam, new add-ons, bug fixes,
    and more extensions added for the Python API.
 `2.62 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.62>`__ -- February 2012:
-   The `Carve library <https://code.google.com/archive/p/carve/>`__ was added to improve boolean operations,
+   The `Carve library <https://code.google.com/archive/p/carve/>`__ was added to improve Boolean operations,
    support for object tracking was added, the Remesh modifier was added, many improvements in the GE,
    matrices and vectors in the Python API were improved, plus new add-ons, and many bug fixes.
 `2.63 <https://wiki.blender.org/wiki/Reference/Release_Notes/2.63>`__ -- April 2012:

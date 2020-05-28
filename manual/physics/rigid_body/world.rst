@@ -62,7 +62,7 @@ Rigid Body Cache
 
    :Panel:     :menuselection:`Scene --> Rigid Body World --> Cache`
 
-The *Cache* sub-panel specifies the frame range in which the simulation is active.
+The *Cache* subpanel specifies the frame range in which the simulation is active.
 Can be used to bake the simulation.
 
 Start/End

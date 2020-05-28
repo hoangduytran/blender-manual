@@ -502,7 +502,7 @@ This page lists definitions for terms used in Blender and this manual.
       Non-Manifold meshes essentially define geometry which cannot exist in the real world.
       This kind of geometry is not suitable for several types of operations,
       especially those where knowing the volume (inside/outside) of the object is important
-      (refraction, fluids, booleans, or 3D printing, to name a few).
+      (refraction, fluids, Boolean operations, or 3D printing, to name a few).
       A non-manifold mesh is a mesh in which the structure of
       a non-overlapped surface (based on its connected faces) will not determine
       the inside or the outside of a volume based on its normals, defining

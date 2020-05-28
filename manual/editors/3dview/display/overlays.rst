@@ -112,15 +112,15 @@ The next options are available when in Edit Mesh Mode.
 Edges
    Highlighted selected and partially selected edges.
 
-   *Only affects vertex and face selection mode (as edges are always highlighted in edge-selection mode).*
+   *Only affects vertex and face select mode (as edges are always highlighted in edge select mode).*
 Faces
    Highlight faces using a face overlay that applies to both selected and unselected faces.
 
    *Affects all selection modes.*
 Center
-   Show face-center points in solid shading modes.
+   Show face center points in solid shading modes.
 
-   *Only affects face-select mode.*
+   *Only affects face select mode.*
 Creases
    Display edges marked with a crease
    for the :doc:`Subdivision Surface Modifier </modeling/modifiers/generate/subdivision_surface>`.

@@ -22,7 +22,7 @@ Before going through the tutorial you should...
 
 - Be familiar with the basics of working in Blender.
 - Know how to run a script in Blender's Text editor.
-- Have an understanding of Python primitive types (int, boolean, string, list, tuple, dictionary, and set).
+- Have an understanding of Python primitive types (integer, Boolean, string, list, tuple, dictionary, and set).
 - Be familiar with the concept of Python modules.
 - Have a basic understanding of classes (object orientation) in Python.
 
@@ -367,7 +367,7 @@ Operator Property
 ^^^^^^^^^^^^^^^^^
 
 There are a variety of property types that are used for tool settings, common property types include:
-int, float, vector, color, boolean and string.
+int, float, vector, color, Boolean and string.
 
 These properties are handled differently to typical Python class attributes
 because Blender needs to display them in the interface,
