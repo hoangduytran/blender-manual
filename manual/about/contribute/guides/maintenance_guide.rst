@@ -26,6 +26,8 @@ Please ask an administrator if you think something should be renamed/moved.
    This script also works for image file names.
 
 
+.. _about-contribute-guides-release:
+
 Release Checklist
 =================
 
