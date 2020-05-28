@@ -10,7 +10,7 @@ On the other hand, they also have some limitations in rendering complex scenes, 
 and issues with interactivity when using the same graphics card for display and rendering.
 
 To enable GPU rendering, go into the :menuselection:`Preferences --> System --> Cycles Render Devices`,
-and select either *CUDA*, *Optix* or *OpenCL*. Next, you must configure each scene to use GPU rendering in
+and select either *CUDA*, *OptiX* or *OpenCL*. Next, you must configure each scene to use GPU rendering in
 :menuselection:`Properties --> Render --> Device`.
 
 
@@ -23,7 +23,7 @@ Blender supports different technologies to render on the GPU depending on the pa
 Nvidia
 ------
 
-:abbr:`CUDA (Compute Unified Device Architecture)` and Optix
+:abbr:`CUDA (Compute Unified Device Architecture)` and OptiX
 are supported for GPU rendering with Nvidia graphics cards.
 
 
@@ -39,13 +39,13 @@ CUDA GPU rendering is supported on Windows, macOS, and Linux.
 
 .. _render-cycles-gpu-optix:
 
-Optix
+OptiX
 ^^^^^
 
-For RTX graphics cards with hardware ray tracing support (e.g. Turing), Optix can be used for better performance.
-Optix support is still experimental and does not yet support all features, see below for details.
+For RTX graphics cards with hardware ray tracing support (e.g. Turing), OptiX can be used for better performance.
+OptiX support is still experimental and does not yet support all features, see below for details.
 
-Optix requires Geforce or Quadro RTX graphics card with recent Nvidia drivers, and is supported on Windows and Linux.
+OptiX requires Geforce or Quadro RTX graphics card with recent Nvidia drivers, and is supported on Windows and Linux.
 
 
 AMD
@@ -69,13 +69,12 @@ CUDA and OpenCL rendering supports all the same features as CPU rendering, excep
 - Open Shading Language.
 - Advanced volume light sampling to reduce noise.
 
-Optix support is experimental and does not yet support the following features:
+OptiX support is experimental and does not yet support the following features:
 
 - Baking
 - Branched Path Tracing
 - Ambient Occlusion and Bevel shader nodes
 - Combined CPU + GPU rendering
-- Using CPU memory for bigger scenes
 
 
 Frequently Asked Questions
@@ -101,7 +100,7 @@ There maybe be multiple causes,
 but the most common is that there is not enough memory on your graphics card.
 Typically while using GPU rendering the GPU can only use the amount of memory that is on the GPU.
 This is usually much smaller than the amount of system memory the CPU can access.
-With CUDA and Optix devices, if the GPU memory is full Blender will automatically try to use system memory.
+With CUDA and OptiX devices, if the GPU memory is full Blender will automatically try to use system memory.
 This has a performance impact, but will usually still result in a faster render than using CPU rendering.
 This feature does not work for OpenCL rendering.
 
@@ -118,7 +117,7 @@ Would multiple GPUs increase available memory?
 No, each GPU can only access its own memory.
 
 
-What renders faster, Nvidia or AMD, CUDA, Optix or OpenCL?
+What renders faster, Nvidia or AMD, CUDA, OptiX or OpenCL?
 ----------------------------------------------------------
 
 This varies depending on the hardware used. Different technologies also have different compute times
