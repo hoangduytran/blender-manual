@@ -67,6 +67,10 @@ Visibility Collection
       This is only a filtering option.
       That means that if an object is not visible at render time it won't be visible during the probe render.
 
+   .. note::
+
+      Due to a limitation, dupli-objects cannot be hidden by using this option.
+
 
 Viewport Display
 ================
