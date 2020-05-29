@@ -8,4 +8,3 @@
    :maxdepth: 2
 
    contribute/index.rst
-   license.rst

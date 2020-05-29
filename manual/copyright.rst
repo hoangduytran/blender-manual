@@ -1,3 +1,4 @@
+:orphan:
 
 *******
 License
@@ -38,7 +39,6 @@ However, others can change and improve your text in order to keep the manual con
 
 If you have questions about the license, feel free to contact the Blender Foundation:
 foundation (at) blender (dot) org
-
 
 Previous versions of the Blender Manual are made available under
 a `Open Content License <https://web.archive.org/web/19981206111937/http://www.opencontent.org/opl.shtml>`__
