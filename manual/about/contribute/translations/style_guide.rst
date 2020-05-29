@@ -8,7 +8,7 @@ This page covers conventions concerning the translations.
 .. note::
 
    - We expect our readers to use the English version of Blender, not a translated one.
-   - The translations are licensed under the same :doc:`/about/license` as the original.
+   - The translations are licensed under the same :doc:`/copyright` as the original.
 
 
 Should I Translate\.\.\. ?
