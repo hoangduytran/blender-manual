@@ -218,8 +218,8 @@ html_static_path = ["../resources/theme"]
 
 def setup(app):
     if html_theme == "sphinx_rtd_theme":
-        app.add_stylesheet("css/theme_overrides.css")
-        app.add_javascript("js/version_switch.js")
+        app.add_css_file("css/theme_overrides.css")
+        app.add_js_file("js/version_switch.js")
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
