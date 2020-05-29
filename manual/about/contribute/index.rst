@@ -1,8 +1,8 @@
-.. _about-user-contribute:
+:orphan:
 
-##############
-  Contribute
-##############
+############################
+  Contribute Documentation
+############################
 
 The Blender Manual is a community driven effort to which anyone can contribute.
 Whether you like to fix a tiny spelling mistake or rewrite an entire chapter,
@@ -12,9 +12,6 @@ If you find an error in the documentation, please `report the problem
 <https://developer.blender.org/maniphest/task/edit/form/default/?project=PHID-PROJ-c4nvvrxuczix2326vlti>`__
 
 Get involved in discussions through the any of the project `Contacts`_
-
-
-.. _about-getting-started:
 
 Getting Started
 ===============
@@ -51,8 +48,6 @@ Translations
    translations/contribute.rst
    translations/style_guide.rst
 
-
-.. _contribute-contact:
 
 Contacts
 ========
