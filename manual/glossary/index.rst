@@ -72,7 +72,7 @@ This page lists definitions for terms used in Blender and this manual.
    Animation
       Simulation of motion.
 
-   Anti-aliasing
+   Anti-Aliasing
       Is the technique of minimizing :term:`aliasing`, by e.g. rendering multiple samples per pixel.
 
    Armature

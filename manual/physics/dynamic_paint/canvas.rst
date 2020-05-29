@@ -44,8 +44,8 @@ Quality
       You can adjust the output image dimensions for the *Image Sequences* surface type.
       For example using 256 will lead to 256×256 image output.
       Doubling the resolution will likely quadruple the baking time and vice versa.
-   Anti-aliasing
-      :term:`Anti-aliasing` to smooth paint edges using a 5× multisampling method.
+   Anti-Aliasing
+      :term:`Anti-Aliasing` to smooth paint edges using a 5× multisampling method.
 Frames
    Start, End
       Defines surface processing start and end frame.

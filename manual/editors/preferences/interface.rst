@@ -138,7 +138,7 @@ New Data
 Text Rendering
 ==============
 
-Anti-aliasing
+Anti-Aliasing
    Enable interface text anti-aliasing.
    When disabled, texts are rendered using straight text rendering (filling only absolute pixels).
 Hinting
