@@ -254,7 +254,7 @@ The panels in the *Sidebar region*.
 View Tab
 --------
 
-.. figure:: /images/editors_graph-editor_fcurves_properties_view-panel.png
+.. figure:: /images/editors_graph-editor_introduction_view-panel.png
    :align: right
 
    View Tab.

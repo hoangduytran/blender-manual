@@ -4,7 +4,7 @@
 Curve Widget
 ************
 
-.. figure:: /images/interface_controls_templates_curve_curve.png
+.. figure:: /images/interface_controls_templates_curve_ui.png
    :align: right
 
    Curve widget.

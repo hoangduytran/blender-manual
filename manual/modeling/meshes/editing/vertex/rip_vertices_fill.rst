@@ -15,7 +15,7 @@ it fills in the gap with geometry.
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-before.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_rip-vertices_edges-before.png
           :width: 260px
 
           Edges selected.

@@ -24,17 +24,17 @@ Axes
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_transform_smooth_mesh-before.png
+   * - .. figure:: /images/modeling_modifiers_deform_smooth_mesh-before.png
           :width: 200px
 
           Mesh before smoothing.
 
-     - .. figure:: /images/modeling_meshes_editing_transform_smooth_mesh-one-iteration.png
+     - .. figure:: /images/modeling_modifiers_deform_smooth_mesh-one-iteration.png
           :width: 200px
 
           Mesh after one smoothing iteration.
 
-     - .. figure:: /images/modeling_meshes_editing_transform_smooth_mesh-ten-iterations.png
+     - .. figure:: /images/modeling_modifiers_deform_smooth_mesh-ten-iterations.png
           :width: 200px
 
           Mesh after ten smoothing iterations.

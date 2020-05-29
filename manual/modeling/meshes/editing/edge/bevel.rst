@@ -188,17 +188,17 @@ Outer Miter :kbd:`O`
 
    .. list-table::
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-2.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-2.png
              :width: 320px
 
              Sharp outer miter.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-3.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-3.png
              :width: 320px
 
              Patch outer miter.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-4.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-4.png
              :width: 320px
 
              Arc outer miter.
@@ -211,12 +211,12 @@ Inner Miter :kbd:`I`
 
    .. list-table::
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-5.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-5.png
              :width: 200px
 
              Sharp inner miter.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-6.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-6.png
              :width: 200px
 
              Arc inner miter.
@@ -245,17 +245,17 @@ Intersection Method :kbd:`N`
 
    .. list-table:: Intersection method options.
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_vmesh-1.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_vmesh-1.png
              :width: 200px
 
              Grid fill intersection method.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_vmesh-2.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_vmesh-2.png
              :width: 200px
 
              Three way cutoff intersection where the inner vertices are merged.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_vmesh-3.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_vmesh-3.png
              :width: 200px
 
              Cutoff intersection method with a center face.

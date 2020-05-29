@@ -232,7 +232,7 @@ Bone IK Panel
 This panel is used to control how the *Pose Bones* work in the IK chain.
 
 .. TODO2.8
-   .. figure:: /images/animation_armatures_bones_properties_introduction_inverse-kinematics-panel.png
+   .. figure:: /images/animation_armatures_bones_properties_inverse-kinematics_panel.png
 
       The bone IK panel.
 

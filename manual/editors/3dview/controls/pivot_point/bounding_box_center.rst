@@ -1,4 +1,4 @@
-.. |pivot-icon| image:: /images/scene-layout_object_editing_transform_control_pivot-point_menu.png
+.. |pivot-icon| image:: /images/editors_3dview_controls_pivot-point_menu.png
 
 *******************
 Bounding Box Center
@@ -29,7 +29,7 @@ In *Object Mode*, transformation takes place relative to the location of the obj
 (indicated by the yellow circle), and the size of objects is not taken into account.
 The image below shows the results of using the *Bounding Box* as the pivot point in some situations.
 
-.. figure:: /images/scene-layout_object_editing_transform_control_pivot-point_individual-origins_rotation-around-center.png
+.. figure:: /images/editors_3dview_controls_pivot-point_individual-origins_rotation-around-center.png
    :align: center
 
    Single object rotation.

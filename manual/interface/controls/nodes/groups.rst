@@ -7,7 +7,7 @@
 Node Groups
 ***********
 
-.. figure:: /images/interface_controls_nodes_groups_node-group-example.png
+.. figure:: /images/interface_controls_nodes_groups_example.png
    :align: right
 
    Example of a node group.

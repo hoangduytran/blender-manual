@@ -160,23 +160,23 @@ Miter Patterns
 
    .. list-table:: Diagrams of the miter patterns.
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-2.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-2.png
 
              Sharp outer miter.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-3.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-3.png
 
              Patch outer miter.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-4.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-4.png
 
              Arc outer miter.
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-5.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-5.png
 
              Sharp inner miter.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_miter-6.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-6.png
 
              Arc inner miter.
 
@@ -205,17 +205,17 @@ Intersection Method
 
    .. list-table:: Intersection method options.
 
-      * - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_vmesh-1.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_vmesh-1.png
              :width: 200px
 
              Grid fill intersection method.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_vmesh-2.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_vmesh-2.png
              :width: 200px
 
              Three way cutoff intersection where the inner vertices are merged.
 
-        - .. figure:: /images/modeling_meshes_editing_subdividing_bevel_vmesh-3.png
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_vmesh-3.png
              :width: 200px
 
              Cutoff intersection method with a center face.

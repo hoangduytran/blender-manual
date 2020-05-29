@@ -36,6 +36,6 @@ See below for the result of using *Push/Pull* on a number of different elements.
 
    Random objects being pushed together.
 
-.. figure:: /images/modeling_meshes_editing_mesh_transform_push-pull_vertices-push-pull.png
+.. figure:: /images/modeling_meshes_editing_mesh_transform_push-pull_vertices.png
 
    Push (middle) vertices around the 3D cursor compared to Scale (right).

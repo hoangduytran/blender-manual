@@ -10,7 +10,7 @@ Color stops are similar to a mark indicating where exactly the chosen color shou
 The interval from each of the stops, added to the ramp, is a result of the color interpolation and
 chosen interpolation method.
 
-.. figure:: /images/interface_controls_templates_color-ramp_color-ramp.png
+.. figure:: /images/interface_controls_templates_color-ramp_ui.png
 
    Color ramp.
 

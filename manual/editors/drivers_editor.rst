@@ -149,7 +149,7 @@ See :doc:`F-Curve Modifiers </editors/graph_editor/fcurves/modifiers>`.
 View Properties Panel
 ---------------------
 
-.. figure:: /images/editors_graph-editor_fcurves_properties_view-panel.png
+.. figure:: /images/editors_graph-editor_introduction_view-panel.png
 
    View Properties panel.
 

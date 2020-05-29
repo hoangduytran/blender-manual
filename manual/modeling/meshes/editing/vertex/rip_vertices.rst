@@ -33,7 +33,7 @@ Examples
 
           Hole created after using rip on vertex.
 
-   * - .. figure:: /images/modeling_meshes_editing_vertices_rip-edges-before.png
+   * - .. figure:: /images/modeling_meshes_editing_vertex_rip-vertices_edges-before.png
           :width: 260px
 
           Edges selected.

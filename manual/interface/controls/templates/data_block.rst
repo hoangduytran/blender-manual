@@ -8,7 +8,7 @@ A set of menu buttons used to link :doc:`/files/data_blocks` to
 each other. If data-blocks are linked the data will be updated across
 all of the :term:`data users <Data User>` when edited.
 
-.. figure:: /images/interface_controls_templates_data-block_data-block.png
+.. figure:: /images/interface_controls_templates_data-block_menu.png
    :align: right
 
    A data-block menu with a search field.

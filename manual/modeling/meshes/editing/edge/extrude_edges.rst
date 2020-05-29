@@ -23,22 +23,22 @@ To force a vertex or edge selection to extrude as a vertex or edge, respectively
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_verts-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_verts-before.png
           :width: 320px
 
           Vertex selected.
 
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_verts-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_verts-after.png
           :width: 320px
 
           Vertices Only extrude.
 
-   * - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_edges-before.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_before.png
           :width: 320px
 
           Edge selected.
 
-     - .. figure:: /images/modeling_meshes_editing_duplicating_extrude_edges-after.png
+     - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_after.png
           :width: 320px
 
           Edge Only extrude.

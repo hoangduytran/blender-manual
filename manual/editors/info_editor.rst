@@ -7,7 +7,7 @@ The Info editor logs executed operators, warnings and error messages.
 Logged reports can be selected by clicking on them.
 To select multiple reports, hold down :kbd:`Shift-LMB`.
 
-.. figure:: /images/editors_info-editor_info-editor.png
+.. figure:: /images/editors_info-editor_ui.png
 
    Info Editor.
 

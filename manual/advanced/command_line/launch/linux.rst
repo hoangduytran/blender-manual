@@ -37,6 +37,6 @@ Many desktop environments support the ability to "Run in terminal".
 This screenshot shows Blender started from a Linux Terminal and
 the resulting text output written to it:
 
-.. figure:: /images/advanced_command-line_launch_linux_linux.png
+.. figure:: /images/advanced_command-line_launch_linux_console.png
 
    Starting Blender from a Linux terminal window.
