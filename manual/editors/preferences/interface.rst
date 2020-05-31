@@ -98,7 +98,7 @@ When performing certain operations, Blender will open a new window.
 The behavior of these operations can be configured here.
 
 Render In
-   When rendering, the user interface can be do any of:
+   When rendering, the user interface can do any of:
 
    Keep User Interface
       The user interface does not change and the render is computed in the background.
@@ -110,7 +110,7 @@ Render In
       A new Image editor is opened as a regularly sized temporary window.
 
 File Browser
-   When opening files from the computer, the user interface can be do any of:
+   When opening files from the computer, the user interface can do any of:
 
    Full Screen
       A new File Browser editor is opened as a temporary window in full screen mode.

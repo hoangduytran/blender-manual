@@ -133,8 +133,8 @@ Text Editing
 - :kbd:`Left`, :kbd:`Right` -- Move the cursor a single character.
 - :kbd:`Ctrl-Left`, :kbd:`Ctrl-Right` -- Move the cursor an entire word.
 - :kbd:`Backspace`, :kbd:`Delete` -- Delete characters.
-- :kbd:`Ctrl-Backspace`, :kbd:`Ctrl-Delete` -- Deletes words.
-- :kbd:`Shift` -- While holding the key and moving the cursor selects.
+- :kbd:`Ctrl-Backspace`, :kbd:`Ctrl-Delete` -- Delete words.
+- :kbd:`Shift` -- Select while holding the key and moving the cursor.
 - :kbd:`Ctrl-A` -- Select all text.
 - :kbd:`Ctrl-C` -- Copy the selected text.
 - :kbd:`Ctrl-X` -- Cut the selected text.
@@ -144,8 +144,8 @@ Text Editing
 Confirm and Cancel
 ==================
 
-- :kbd:`Esc`, :kbd:`RMB` -- Cancels.
-- :kbd:`Return`, :kbd:`LMB` -- Confirms.
+- :kbd:`Esc`, :kbd:`RMB` -- Cancel.
+- :kbd:`Return`, :kbd:`LMB` -- Confirm.
 
 .. (todo?) deactivation: Some controls can be disabled, in Blender deactivated controls are still editable.
    That can be due to the current state or context. In that case, they appear in a lighter color.
