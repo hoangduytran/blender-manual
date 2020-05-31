@@ -113,7 +113,7 @@ Blender
    This section shows you the Blender version, details about the build configuration,
    and the path in which Blender is running.
 Python
-   The Python version you are using, showing the paths of the Python programming language paths.
+   The Python version you are using, showing the paths of the Python programming language.
 Directories
    Paths used for scripts, data files, presets and temporary files.
 
