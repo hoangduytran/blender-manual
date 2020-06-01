@@ -125,7 +125,6 @@ depending on the scene tested. For the most up to date information on the perfor
 browse the `Blender Open Data <https://opendata.blender.org/>`__ resource.
 
 
-
 Error Messages
 ==============
 

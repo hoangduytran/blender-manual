@@ -193,7 +193,6 @@ This is an example ``__init__.py`` file which defines defaults for an app templa
                        space.shading.use_scene_lights = True
 
 
-
    def register():
        print("Registering to Change Defaults")
        bpy.app.handlers.load_factory_preferences_post.append(load_handler_for_preferences)

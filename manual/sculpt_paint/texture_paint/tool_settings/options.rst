@@ -22,7 +22,6 @@ Backface Culling
    See the :ref:`Brush Display <sculpt-paint-brush-display>` options.
 
 
-
 .. _bpy.types.ImagePaint.screen_grab_size:
 .. _bpy.ops.image.project:
 

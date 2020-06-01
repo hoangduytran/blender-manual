@@ -75,7 +75,6 @@ Cursor
    Align the transformation axes to the 3D cursor.
 
 
-
 Examples
 --------
 

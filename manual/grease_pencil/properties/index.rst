@@ -12,4 +12,4 @@
    masks.rst
    onion_skinning.rst
    strokes.rst
-   display.rst   
+   display.rst
