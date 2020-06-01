@@ -219,7 +219,7 @@ See :doc:`/getting_started/help`.
 Workspaces
 ==========
 
-These set of tabs are used to select the current :doc:`Workspace </interface/window_system/workspaces>`;
+These sets of tabs are used to select the current :doc:`Workspace </interface/window_system/workspaces>`;
 which are essentially predefined window layouts.
 
 

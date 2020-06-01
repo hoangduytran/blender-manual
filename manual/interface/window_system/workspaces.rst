@@ -45,7 +45,7 @@ and contains the following :doc:`/editors/index`:
 .. figure:: /images/interface_window-system_workspaces_layout.png
    :align: center
 
-   Blender's Layout Workspace with four editors.
+   Blender's Workspace Layout with four editors.
 
    3D Viewport (yellow), Outliner (green), Properties editor (blue) and Timeline (red).
 

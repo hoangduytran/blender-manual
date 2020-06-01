@@ -75,7 +75,7 @@ moves to the right created the illusion of depth as Bambi moved through the fore
 .. note:: Valid Input
 
    Z Input Sockets do not accept fixed values; they must get a vector set (see Map Value node).
-   Image Input Sockets will not accept a color since it does not have UV coordinates.
+   Image Input Sockets will not accept a color since they do not have UV coordinates.
 
 .. figure:: /images/compositing_types_color_z-combine_example-2.png
    :width: 700px
