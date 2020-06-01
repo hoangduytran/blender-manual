@@ -9,7 +9,7 @@ import re
 # using primitive regex parsing.
 #
 # e.g:
-# python tools_maintanance/blender_help_extract.py /src/blender/source/creator/creator_args.c manual/advanced/command_line/arguments.rst
+# python tools_maintenance/blender_help_extract.py /src/blender/source/creator/creator_args.c manual/advanced/command_line/arguments.rst
 
 
 def text_remove_comments(text):
@@ -195,7 +195,7 @@ def text_extract_help(text, args, static_strings):
 
     # execute the code!
     other_vars = {
-        "BLEND_VERSION_STRING_FMT": "Blender |BLENDER_VERSION| ",
+        "BKE_blender_version_string": lambda: "|BLENDER_VERSION|",
     }
 
 
@@ -221,7 +221,10 @@ def text_extract_help(text, args, static_strings):
     ind_re = None
     for l in body:
         if l.startswith("printf"):
-            l = eval(l[7:].strip("();"), other_vars)
+            l = eval(l.replace("printf(", "").replace(");", ""), other_vars)
+            if type(l) is tuple:
+                # Run the C-style string format.
+                l = l[0] % l[1:]
             if l.lstrip() == l and l.strip("\n").endswith(":"):
                 # create rst heading
                 l = l.strip(":\n")

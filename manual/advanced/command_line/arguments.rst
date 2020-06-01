@@ -11,7 +11,8 @@ Command Line Arguments
 **********************
 
 
-Blender |BLENDER_VERSION| Usage: blender [args ...] [file] [args ...]
+Blender |BLENDER_VERSION|
+Usage: blender [args ...] [file] [args ...]
 
 
 Render Options
@@ -138,7 +139,7 @@ Python Options
    Set the exit-code in [0..255] to exit if a Python exception is raised
    (only for scripts executed from the command line), zero disables.
 ``--python-use-system-env``
-   Allow Python to use system environment variables such as ``PYTHONPATH``.
+   Allow Python to use system environment variables such as ``PYTHONPATH`` and the user site-packages directory.
 ``--addons`` ``<addon(s)>``
    Comma separated list of add-ons (no spaces).
 
@@ -241,7 +242,7 @@ Misc Options
 ``--app-template`` ``<template>``
    Set the application template (matching the directory name), use ``default`` for none.
 ``--factory-startup``
-   Skip reading the startup.blend in the user's home directory.
+   Skip reading the startup.blend in the users home directory.
 ``--disable-library-override``
    Disable Library Override features in the UI.
 ``--enable-event-simulate``
