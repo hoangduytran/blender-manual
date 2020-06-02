@@ -96,6 +96,7 @@ Motion Threshold
       for example, picking selection cycles through elements near the cursor.
       Once the cursor moves past this threshold, selection stops cycling and picks the closest item.
 
+
 Tablet
 ======
 
@@ -109,8 +110,14 @@ Softness
    Controls how the softness of the low pressure response onset using a gamma curve.
 
 
+.. _editors_preferences_input_ndof:
+
 NDOF
 ====
+
+These preferences control how a :ref:`NDOF device <hardware-ndof>` interacts with the 3D Viewport.
+These preferences can also be accessed using the :kbd:`NDOF-Menu` button on the NDOF device
+to open a popup menu to adjust the settings directly from the 3D Viewport.
 
 Pan Sensitivity
    The overall sensitivity for panning in the 3D Viewport.
@@ -120,7 +127,7 @@ Deadzone
    The threshold for the amount of movement needed from
    the device's rest position for Blender to interrupt that movement.
 
-NDOF View Navigate
+Navigation
    Navigation style for the viewport.
 
    Free
@@ -128,10 +135,28 @@ NDOF View Navigate
    Orbit
       Orbit about the view center.
 
-NDOF View Rotation
+Rotation
    Rotation style for the viewport.
 
    Turntable
       Rotates the view keeping the horizon horizontal.
    Trackball
       Is less restrictive, allowing any orientation.
+
+Show Navigation Guide
+   Display the center and axis during rotation.
+Invert Zoom
+   Zoom using opposite direction.
+Swap Y and Z Axes
+   Pan using up/down on the NDOF devices instead of forward/backwards.
+Invert Axis Pan
+   Reverses the panning axis on the selected axes.
+Orbit
+   Reverses the orbit axis on the selected axes.
+Fly/Walk
+   Settings to control how the NDOF device is used while using :ref:`Walk/Fly Navigation <>`.
+
+   Lock Horizon
+      Keeps the horizontal axis level file flying.
+   Helicopter Mode
+      Moves the 3D Viewport up or down when moving the NDOF device up/down.

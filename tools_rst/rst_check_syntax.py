@@ -147,6 +147,8 @@ def compile_valid_kbd():
         r"(?:(?:L|M|R)MB)|",
         # Stylus
         r"(?:Pen|Eraser)",
+        # NDOF
+        r"(?:NDOF(Menu|Plus|Minus|Fit|Left|Right|Top|Bottom|Front)?)|",
         r")?$",
     ))
 

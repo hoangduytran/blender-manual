@@ -106,7 +106,11 @@ NDOF (3D Mouse)
 
 3D mice or :abbr:`NDOF (N-Degrees of Freedom)` devices are hardware that you can use to navigate a scene in Blender.
 Currently only devices made by 3Dconnexion are supported.
-These devices allow you to explore a scene, as well as :ref:`Fly/Walk modes <3dview-fly-walk>`.
+These devices allow you to explore a scene, as well as making :ref:`Fly/Walk Navigation <3dview-fly-walk>` easier.
+Settings to control how the NDOF device interacts with the 3D Viewport
+can be configured in the :ref:`User Preference <editors_preferences_input_ndof>`.
+These settings can also be accessed using the :kbd:`NDOF-Menu` button on the NDOF device
+to open a popup menu to adjust the settings directly from the 3D Viewport.
 
 .. seealso::
 
