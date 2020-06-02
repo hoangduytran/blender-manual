@@ -19,7 +19,7 @@ Description
 Bridge
 ------
 
-There are two main ways to use the Bridge tool, both of which are illustrated in the image below.
+There are two main ways to use the Bridge tool.
 The first method is to select two groups of faces and then run the tool.
 The second method is to select two (closed) loops of edges.
 Both methods can be mixed and you can even Bridge multiple groups at the same time.
