@@ -44,10 +44,12 @@ Type
 
    Final
       This mode bakes the cache considering all selected settings at once. The bake operator for this
-      type can be found in the cache panel.
+      type can be found in the cache panel. It is not possible to resume a bake job as only the most
+      important data is being written to disk. Caches will generally be smaller in size though.
 
    Replay
-      The cache is baked as the simulation is being played in the viewport.
+      The cache is baked as the simulation is being played in the viewport. It is possible to resume
+      bake jobs when using this type.
 
 .. _bpy.types.FluidDomainSettings.cache_frame_start:
 
