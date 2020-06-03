@@ -114,6 +114,7 @@ def compile_valid_kbd():
     regular_as_mod = True
 
     pattern_str = ''.join((
+        # Keyboard
         # Modifier
         r"^(Shift(?:\-|\Z))?(Ctrl(?:\-|\Z))?(Alt(?:\-|\Z))?((?:Cmd|OSKey)(?:\-|\Z))?",
 
@@ -139,16 +140,21 @@ def compile_valid_kbd():
         r")(?:\-|\Z))",
         r"{0,2}" if regular_as_mod else r"?",
 
-        # Mouse
+        # Pointing Devices
         r"(",
+        # Mouse
         # Wheel
         r"(?:Wheel(Up|Down|In|Out)?)|",
         # Buttons
         r"(?:(?:L|M|R)MB)|",
         # Stylus
-        r"(?:Pen|Eraser)",
+        r"(?:Pen|Eraser)|",
         # NDOF
-        r"(?:NDOF(Menu|Plus|Minus|Fit|Left|Right|Top|Bottom|Front)?)|",
+        r"(?:NDOF(?:",
+        '|'.join((
+            "Menu", "Fit", "Plus", "Minus",
+            "Left", "Right", "Top", "Bottom", "Front", "Back",
+        )), r"))",
         r")?$",
     ))
 

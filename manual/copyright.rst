@@ -9,12 +9,11 @@ the `GNU General Public License <http://www.gnu.org/copyleft/gpl.html>`__.
 More info
 `blender.org/about/license <https://www.blender.org/about/license/>`__.
 
-Except where otherwise noted,
-the content of the Blender Manual is available under a
-`Creative Commons Attribution-ShareAlike 4.0 International License
-<https://creativecommons.org/licenses/by-sa/4.0/>`__
-or any later version. Excluded from the CC-BY-SA are also the used logos,
-trademarks, icons, source code and Python scripts.
+Except where otherwise noted, the content of the Blender Manual is available under
+a `Creative Commons Attribution-ShareAlike 4.0 International License
+<https://creativecommons.org/licenses/by-sa/4.0/>`__ or any later version.
+Excluded from the CC-BY-SA are also the used logos, trademarks, icons, source code
+and Python scripts.
 
 Please attribute the "Blender Documentation Team" and
 include a hyperlink (online) or URL (in print) to manual.

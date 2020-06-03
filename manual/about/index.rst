@@ -24,11 +24,11 @@ The following guides lead you through the process.
 .. toctree::
    :maxdepth: 1
 
-   contribute/release_cycle.rst
    contribute/install/index.rst
    contribute/build/index.rst
    contribute/editing.rst
    contribute/patch_commit.rst
+   contribute/release_cycle.rst
 
 
 Guidelines

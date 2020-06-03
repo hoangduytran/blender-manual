@@ -23,8 +23,8 @@ Blender supports different technologies to render on the GPU depending on the pa
 Nvidia
 ------
 
-:abbr:`CUDA (Compute Unified Device Architecture)` and OptiX
-are supported for GPU rendering with Nvidia graphics cards.
+:abbr:`CUDA (Compute Unified Device Architecture)` and OptiX are supported
+for GPU rendering with Nvidia graphics cards.
 
 
 CUDA
@@ -97,7 +97,7 @@ Why does a scene that renders on the CPU not render on the GPU?
 ---------------------------------------------------------------
 
 There maybe be multiple causes,
-but the most common is that there is not enough memory on your graphics card.
+but the most common one is that there is not enough memory on your graphics card.
 Typically while using GPU rendering the GPU can only use the amount of memory that is on the GPU.
 This is usually much smaller than the amount of system memory the CPU can access.
 With CUDA and OptiX devices, if the GPU memory is full Blender will automatically try to use system memory.

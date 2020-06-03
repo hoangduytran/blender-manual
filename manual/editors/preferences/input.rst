@@ -116,8 +116,8 @@ NDOF
 ====
 
 These preferences control how a :ref:`NDOF device <hardware-ndof>` interacts with the 3D Viewport.
-These preferences can also be accessed using the :kbd:`NDOF-Menu` button on the NDOF device
-to open a popup menu to adjust the settings directly from the 3D Viewport.
+These preferences can also be accessed using the :kbd:`NDOFMenu` button on the NDOF device
+to open a pop-up menu to adjust the settings directly from the 3D Viewport.
 
 Pan Sensitivity
    The overall sensitivity for panning in the 3D Viewport.
@@ -144,7 +144,7 @@ Rotation
       Is less restrictive, allowing any orientation.
 
 Show Navigation Guide
-   Display the center and axis during rotation.
+   Display the pivot point and axis during rotation.
 Invert Zoom
    Zoom using opposite direction.
 Swap Y and Z Axes
@@ -154,7 +154,7 @@ Invert Axis Pan
 Orbit
    Reverses the orbit axis on the selected axes.
 Fly/Walk
-   Settings to control how the NDOF device is used while using :ref:`Walk/Fly Navigation <>`.
+   Settings to control how the NDOF device is used while using :ref:`Walk/Fly Navigation <3dview-fly-walk>`.
 
    Lock Horizon
       Keeps the horizontal axis level file flying.

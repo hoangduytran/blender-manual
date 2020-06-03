@@ -39,17 +39,18 @@ Type
 
    Modular
       In this mode the cache is baked step by step. The bake operators for this type can be found in
-      the other panels within the domain settings. It is possible to cancel and resume bake jobs when
-      using this type.
+      the other panels within the domain settings. It is possible to cancel and resume a bake process
+      when using this type.
 
    Final
-      This mode bakes the cache considering all selected settings at once. The bake operator for this
-      type can be found in the cache panel. It is not possible to resume a bake job as only the most
-      important data is being written to disk. Caches will generally be smaller in size though.
+      This mode bakes the cache considering all selected settings at once.
+      The bake operator for this type can be found in the cache panel.
+      It is *not* possible to resume a bake process as only the most important data is being written to drive.
+      Caches will generally be smaller in size though.
 
    Replay
-      The cache is baked as the simulation is being played in the viewport. It is possible to resume
-      bake jobs when using this type.
+      The cache is baked as the simulation is being played in the viewport.
+      It is possible to resume baking when using this type.
 
 .. _bpy.types.FluidDomainSettings.cache_frame_start:
 

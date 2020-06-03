@@ -25,7 +25,7 @@ File Path
 Sequence
    Loads the OpenVDB-file as an animation loading separate files for individual frames.
 
-.. _bpy.types.Volume.frame_duration:
+   .. _bpy.types.Volume.frame_duration:
 
    Frames
       Number of frames of the sequence to use.
@@ -43,7 +43,7 @@ Sequence
    .. _bpy.types.Volume.sequence_mode:
 
    Mode
-      Controls what happens when the volume sequence has reached the end frame.
+      Animation setting of the volume sequence before the start frame and after the end frame.
 
       Clip
          Hides frames outside the specified frame range.
