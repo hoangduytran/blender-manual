@@ -11,7 +11,7 @@ your help with the Blender manual is most welcome!
 If you find an error in the documentation, please `report the problem
 <https://developer.blender.org/maniphest/task/edit/form/default/?project=PHID-PROJ-c4nvvrxuczix2326vlti>`__.
 
-Get involved in discussions through the any of the project `Contacts`_.
+Get involved in discussions through any of the project `Contacts`_.
 
 
 Getting Started
@@ -22,11 +22,11 @@ The following guides lead you through the process.
 .. toctree::
    :maxdepth: 1
 
-   release_cycle.rst
    install/index.rst
    build/index.rst
    editing.rst
    patch_commit.rst
+   release_cycle.rst
 
 
 Guidelines
