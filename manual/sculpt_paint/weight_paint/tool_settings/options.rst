@@ -10,6 +10,8 @@ Options
 
 The weight paint options change the overall brush behavior.
 
+.. _weight-painting-auto-normalize:
+
 Auto Normalize
    Ensures that all deforming vertex groups add up to one while painting.
    When this option is turned off, then all weights of a vertex can have any value between 0 and 1.
