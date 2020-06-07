@@ -88,11 +88,11 @@ Limitations & Workarounds
 There are restrictions on the type of edge selections that can be operated upon.
 Invalid selections are:
 
-Loop crosses itself
+Loop Crosses Itself
    This means that the tool could not find any suitable faces that were adjacent to the selected edge(s).
    An example that shows this is selecting two edges that share the same face.
    A face cannot be adjacent to itself.
-Multiple edge loops
+Multiple Edge Loops
    The selected edges are not in the same edge loop, which means they do not have a common edge.
    You can minimize this error by always selecting edges end-to-end or in a "chain".
    If you select multiple edges just make sure they are connected.

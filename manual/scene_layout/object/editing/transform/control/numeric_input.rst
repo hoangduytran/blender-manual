@@ -49,7 +49,7 @@ Reset :kbd:`Backspace`
    Hitting :kbd:`Backspace` after having deleted all leading chars
    will first reset the edited value to initial state, and on second press,
    the whole number editing will be canceled, going back to usual transform with mouse.
-Next/previous Component :kbd:`Tab`, :kbd:`Ctrl-Tab`
+Next/Previous Component :kbd:`Tab`, :kbd:`Ctrl-Tab`
    To enter numeric values for multiple axes, use :kbd:`Tab` or :kbd:`Ctrl-Tab`.
    E.g. To move an object, one unit on all three axes press: :kbd:`G 1`
    and :kbd:`Tab 1` and :kbd:`Tab 1`.

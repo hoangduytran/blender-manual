@@ -31,7 +31,7 @@ This node has no properties.
 Outputs
 =======
 
-BSDF output
+BSDF
    Standard shader output.
 
 

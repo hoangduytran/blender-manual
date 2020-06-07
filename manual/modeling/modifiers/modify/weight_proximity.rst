@@ -34,7 +34,7 @@ Vertex Group
 Target Object
    The object from which to compute distances.
 
-Proximity mode
+Proximity Mode
    Object Distance
       Use the distance between the modified mesh object and the target object as
       weight for all vertices in the affected vertex group.

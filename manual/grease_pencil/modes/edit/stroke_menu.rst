@@ -30,7 +30,7 @@ Smooth
 Repeat
    Number of times to repeat the procedure.
 
-Selected points
+Selected Points
    When enabled, limits the effect to only the selected points within the stroke.
 
 Position
@@ -230,7 +230,7 @@ Type
    Toggle
       Close or Open selected strokes as required.
 
-Create geometry
+Create Geometry
    When enabled, points are added for closing the strokes.
    If disabled, the operator act the same as *Toggle Cyclic*.
 

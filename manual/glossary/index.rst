@@ -571,7 +571,7 @@ This page lists definitions for terms used in Blender and this manual.
    Parenting
       Creating a :term:`Parent`-:term:`Child` relationship between two :term:`objects <Object>`.
 
-   Particle system
+   Particle System
       Technique that simulates certain kinds of fuzzy phenomena,
       which are otherwise very hard to reproduce with conventional rendering techniques.
       Common examples include fire, explosions, smoke, sparks, falling leaves, clouds, fog, snow, dust,

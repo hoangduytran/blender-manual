@@ -33,7 +33,7 @@ Scale
 Properties
 ==========
 
-Vector type
+Vector Type
    The node applies the transformation differently depending on the semantic type of the input vector.
 
    Point

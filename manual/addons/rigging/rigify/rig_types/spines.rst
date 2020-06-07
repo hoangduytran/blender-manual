@@ -14,7 +14,7 @@ your bone chain and user defined options.
 
 Requirement: A chain of at least three connected bones (base system).
 
-Pivot position (integer)
+Pivot Position (integer)
    Defines the pivot position for torso and hips.
 Head (Boolean)
    When checked neck and head systems will be added to your spine rig.

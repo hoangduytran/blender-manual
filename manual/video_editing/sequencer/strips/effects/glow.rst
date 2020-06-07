@@ -27,7 +27,7 @@ Blur Distance
    The size of the blur.
 Quality
    Improves the quality of the glow by giving smoother results but will be slower.
-Only boost
+Only Boost
    This checkbox allows you to only show/use
    the "modified" version of the image, without the base one.
 

@@ -62,5 +62,5 @@ Memory
    The "Mem" label shows an estimate of Blender's RAM consumption.
    In a single-instance single-machine scenario, this estimate provides a measurement against
    the hardware limit of the machine.
-Blender version
+Blender Version
    The version of Blender that is currently run.

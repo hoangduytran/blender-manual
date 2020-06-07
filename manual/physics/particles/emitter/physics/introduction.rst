@@ -23,7 +23,7 @@ Random Size
    Give the particles a random size variation.
 Mass
    Specify the mass of the particles.
-Multiply mass with particle size
+Multiply Mass with Particle Size
    Causes larger particles to have larger masses.
 
 

@@ -55,7 +55,7 @@ Contacts
 
 `Project Page <https://developer.blender.org/project/profile/53/>`__.
    An overview of the documentation project.
-`Mailing list <https://lists.blender.org/mailman/listinfo/bf-docboard>`__
+`Mailing List <https://lists.blender.org/mailman/listinfo/bf-docboard>`__
    A mailing list for discussing ideas, and keeping track of progress.
 `Devtalk <https://devtalk.blender.org/c/documentation/12>`__
    A forum based discussions on writing and translating documentation.

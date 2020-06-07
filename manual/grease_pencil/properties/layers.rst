@@ -84,7 +84,7 @@ Lock All
 Unlock All
    Unlocks edition of all the layers in the list.
 
-Autolock inactive layer
+Autolock Inactive Layer
    Locks automatically the edition of every layer in the list except the active one.
    This way you avoid to make unwanted changes in other layers without the need to lock them every time.
 

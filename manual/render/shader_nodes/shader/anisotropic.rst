@@ -49,7 +49,7 @@ Distribution
 Outputs
 =======
 
-BSDF output
+BSDF
    Standard shader output.
 
 

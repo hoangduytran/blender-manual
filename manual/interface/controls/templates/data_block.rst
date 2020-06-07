@@ -25,7 +25,7 @@ Type
 Name
    Displays the internal name of the linked Data-Block, which can be edited as a regular text field.
    If a name is already assigned, Blender will add a digit to the name like ".001".
-User count
+User Count
    Displays the number of :term:`data users <Data User>` of the data.
    Clicking on user count button will make it a single-user copy,
    with it linked only to the active object/object's data.
@@ -36,11 +36,11 @@ Make Local (chain icon)
    Todo <2.79.
 New/Add (files icon)
    Creates a new data-block or duplicates the current data-block and applies it.
-Open file (folder icon)
+Open File (folder icon)
    Opens the :doc:`File Browser </editors/file_browser>`.
-Unpack file (bin icon)
+Unpack File (bin icon)
    :ref:`Unpack <pack-unpack-data>` the file packed into the current blend-file to external ones.
-Unlink data-block ``X``
+Unlink Data-block ``X``
    Clears the link. :kbd:`Shift-LMB` to set the users to zero
    allowing the data to be fully deleted from the blend-file.
 

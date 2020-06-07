@@ -59,7 +59,7 @@ Length
    Maximum number of frames that the build effect can run for.
    (Unless another Grease Pencil keyframe occurs before this time has elapsed.)
 
-Restrict Frame range
+Restrict Frame Range
    If enabled, only modify strokes during the specified frame range.
 
    Start/End

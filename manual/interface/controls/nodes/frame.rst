@@ -16,7 +16,7 @@ Properties
 .. figure:: /images/interface_controls_nodes_frame_properties.png
    :align: right
 
-Label size
+Label Size
    Font size of the label. For example, for subordinate frames to have smaller titles.
 Shrink
    Once a node is placed in the Frame, the Frame shrinks around it so as to remove wasted space.

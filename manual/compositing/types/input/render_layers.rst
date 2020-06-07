@@ -30,7 +30,7 @@ Scene
       To use composited footage from another scene, it has to be rendered into a multi-layer frameset
       (e.g. ``OpenEXR``) as an intermediate file store and then imported with Image input node again.
 
-Render layer
+Render Layer
    A list of available :doc:`Render Layers </render/layers/index>`.
    The render button is a short hand to re-render the active scene.
 
@@ -44,7 +44,7 @@ Alpha
    Alpha channel.
 
 
-.. rubric:: Render passes sockets
+.. rubric:: Render Passes Sockets
 
 Depending on the Render passes that are enabled, other sockets are available.
 See :doc:`render passes </render/layers/passes>`.

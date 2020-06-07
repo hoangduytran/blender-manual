@@ -36,8 +36,8 @@ The main purpose of this is to be able to drag-and-drop media files:
 Header
 ======
 
-Navigation icon buttons
-   Tools for navigation of files.
+Navigation
+   Icon buttons for navigation of files.
 
    Left Arrow :kbd:`Backspace`, :kbd:`Alt-Left`
       Move to previous folder (in navigation history).
@@ -60,14 +60,14 @@ Display Mode
 
 Sorting
    Sorts items by one of the four proposed methods (alphabetically, by types, by dates, or by size):
-Show hidden :kbd:`H`
+Show Hidden :kbd:`H`
    Shows hidden files (starting with a ``.``).
 
 
 View Menu
 ---------
 
-Display size
+Display Size
    The size of the thumbnails, or the width of the columns.
 Recursion
    The number of directory levels to show at once in a flat way.
@@ -105,7 +105,7 @@ File Types
    Filters files by categories, like folders, blend-files, images, etc.
 Data-Block Types
    When appending or linking, you can also filter by data-block categories, like scenes, animations, materials, etc.
-Search field :kbd:`Ctrl-F`
+Search :kbd:`Ctrl-F`
    Filter items by name.
    The wildcard ``*`` will match anything, e.g. ``bl*er`` will match both ``blender`` and ``blogger``.
    There is always an implicit wildcard at start and end of the search string,

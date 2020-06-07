@@ -49,7 +49,7 @@ Before/After
 Display
 =======
 
-View in render
+View in Render
    Show the onion skinning in final render image e.g. for a motion blur effect.
 
 Fade

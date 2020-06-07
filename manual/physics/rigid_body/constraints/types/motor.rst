@@ -31,7 +31,7 @@ Without proper alignment, the motor will appear to have no effect
 Options
 =======
 
-Linear motor/Angular motor
+Linear Motor/Angular Motor
    Enable
       Enable linear or angular motor respectively.
 

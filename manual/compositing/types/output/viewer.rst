@@ -26,7 +26,7 @@ See :doc:`Composite Node </compositing/types/output/composite>`.
 Properties
 ==========
 
-Tile order
+Tile Order
    The tile order can be defined for the backdrop image, using the *Tile order* field in the properties of
    the Viewer node (*Properties* panel in Sidebar region, with the Viewer node selected):
 

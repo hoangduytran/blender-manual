@@ -45,7 +45,7 @@ Repeat
 Factor
    The amount of the smoothness to apply.
 
-Selected points
+Selected Points
    When enabled, limits the effect to only the selected points within the stroke.
 
 Position

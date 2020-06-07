@@ -66,7 +66,7 @@ Velocity Source
 
 .. _bpy.types.FluidDomainSettings.guide_parent:
 
-Guide parent
+Guide Parent
    When using *Domain* as the velocity source, this field serves to select the guiding domain object.
 
 .. _bpy.ops.fluid.bake_guides:

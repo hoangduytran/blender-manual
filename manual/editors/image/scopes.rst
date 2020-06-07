@@ -29,7 +29,7 @@ RGB
    Shows the :abbr:`RGB (Red, Green, Blue)` channels stacked on top of each other.
 R/G/B/A
    Depending on the channel you choose the scope will show the appropriate channel.
-Show line
+Show Line
    Displays lines rather than filled shapes.
 
 

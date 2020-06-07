@@ -15,7 +15,7 @@ The *ID Mask Node* can be used to access an alpha mask per object or per materia
 Inputs
 ======
 
-ID value
+ID Value
    Input for the *Object Index* or *Material Index* render pass.
    Which is an output of the :doc:`Render Layers node </compositing/types/input/render_layers>` or
    the :doc:`Image node </compositing/types/input/render_layers>` with a multi-layer format.

@@ -50,11 +50,11 @@ so no additional vertex will be created (besides the first one).
 Options
 =======
 
-Knife selection :kbd:`Shift-K`
+Knife Selection :kbd:`Shift-K`
    Activates the knife with another set of options so only selected faces are cut and
    *Cut through* is on by default.
 
-New cut :kbd:`E`
+New Cut :kbd:`E`
    Begins a new cut. This allows you to define multiple distinct cut lines.
    If multiple cuts have been defined, they are recognized as new snapping points.
 
@@ -70,19 +70,19 @@ New cut :kbd:`E`
 
           Result of starting new cuts while in the tool.
 
-Midpoint snap :kbd:`Ctrl`
+Midpoint Snap :kbd:`Ctrl`
    Hold to snap the cursor to the midpoint of edges,
    meaning that all cuts will be performed at the exact center of each cut edge.
-Ignore snap :kbd:`Shift`
+Ignore Snap :kbd:`Shift`
    Hold to make the tool ignore snapping,
    unlike the default where mouse cursor snaps to near edges.
-Cut through: :kbd:`Z`
+Cut Through: :kbd:`Z`
    Allow the Cut tool to cut through to obscured faces, instead of only the visible ones.
-Angle constrain :kbd:`C`
+Angle Constrain :kbd:`C`
    Constrains the cut to 45 degree increments.
-Close loop: double-click :kbd:`LMB`
+Close Loop double-click :kbd:`LMB`
    This is a quick way to close the loop you are currently cutting.
-Draw a continuous line: :kbd:`LMB` drag.
+Draw a Continuous Line :kbd:`LMB` drag.
    So you can draw a free-hand line over a surface,
    points will be created at edge intersections.
 

@@ -154,7 +154,7 @@ Operator Presets
 Major Segments
    Number of segments for the main ring of the torus.
    If you think of a torus as a "spin" operation around an axis, this is how many steps are in the spin.
-Minor segments
+Minor Segments
    Number of segments for the minor ring of the torus.
    This is the number of vertices of each circular segment.
 

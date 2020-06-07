@@ -42,8 +42,8 @@ Properties
 
 Variable Size
    Allows a variable blur radius, if the Size input is an image.
-Max blur
-   Max blur is intended to act as an optimization tool by
+Max Blur
+   Max Blur is intended to act as an optimization tool by
    limiting the number of pixels across which the blur is calculated.
 
 

@@ -306,8 +306,6 @@ Stroke Direction
    Toggles the display of the strokes start point (green) and end point (red) to visualize the line direction.
 Material Name
    Show material name next to the linked stroke.
-Show Edit Lines only in Multiframe
-   Only show edit lines while in multiframe edition.
 Vertex Opacity
    Opacity for edit vertices (points).
 Vertex Paint Opacity

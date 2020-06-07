@@ -104,7 +104,7 @@ Tint
 
    Tint, using Melanin 0.1 and the corresponding RGB values.
 
-Absorption coefficient
+Absorption Coefficient
    Attenuation coefficient :math:`\sigma`.
 Roughness
    Specify how much the glints are smoothed in the direction of the hair shaft.

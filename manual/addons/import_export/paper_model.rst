@@ -180,7 +180,7 @@ Model Scale
 
    By default, this value is set so that even the biggest island fits onto the page.
    If set to one, the real model will have the same dimensions as the virtual one.
-Create UV map
+Create UV Map
    Has a similar effect as the similar named option of the *Unfold* tool, but not the same.
    It will create a new UV map that exactly reflects the placement of all the model's islands.
    Unfortunately, islands from all pages are placed on top of each other,

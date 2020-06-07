@@ -34,5 +34,5 @@ Activate Same Type Previous/Next :kbd:`Shift-]`/:kbd:`Shift-[`
 Find Node :kbd:`Ctrl-F`
    To search for a node. On selecting a node, it activates the node and makes sure the node is visible.
 
-Select multiple
+Select Multiple
    :kbd:`Shift-LMB` or :kbd:`Shift-RMB` used for multiple node selection.

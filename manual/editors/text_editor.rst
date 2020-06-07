@@ -28,7 +28,7 @@ More options become available when a text file is created or opened.
 
    Text header with a text loaded.
 
-Editor type
+Editor Type
    The standard editor selection button.
 Menus
    Editor's menus.

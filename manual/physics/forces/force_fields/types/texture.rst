@@ -25,7 +25,7 @@ Options
 
       UI for a Texture force field.
 
-Texture mode
+Texture Mode
    This sets the way a force vector is derived from the texture.
 
    RGB

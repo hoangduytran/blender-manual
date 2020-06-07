@@ -28,9 +28,9 @@ Image
 Properties
 ==========
 
-Source width, height
+Source Width, Height
    Source point of the rays as a factor of the image dimensions.
-Ray length
+Ray Length
    Length of the rays as a factor of the image size.
 
 

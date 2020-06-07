@@ -78,7 +78,7 @@ Resolution
    Multiplier for fill resolution.
    Higher values gives better fill boundary accuracy but slower time for calculations.
 
-Ignore Transparent strokes
+Ignore Transparent Strokes
    When enabled, strokes with transparency does not take into account on fill boundary calculations.
 
    Threshold

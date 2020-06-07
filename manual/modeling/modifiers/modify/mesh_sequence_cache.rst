@@ -25,7 +25,7 @@ Cache File
 
    File Path
       Path to Alembic file.
-Is sequence
+Is Sequence
    Whether or not the cache is separated in a series of files.
 Override Frame
    Whether to use a custom frame for looking up data in the cache file,

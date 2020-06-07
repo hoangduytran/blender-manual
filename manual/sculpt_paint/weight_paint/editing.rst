@@ -454,7 +454,7 @@ Locks
    :class: refbox
 
    :Mode:      Edit Mode and Weight Paint Mode
-   :Menu:      :menuselection:`Weights -- Locks`
+   :Menu:      :menuselection:`Weights --> Locks`
    :Hotkey:    :kbd:`K`
 
 Vertex groups can be locked to prevent undesired edits to a particular vertex group.
@@ -463,13 +463,13 @@ Vertex groups can be locked to prevent undesired edits to a particular vertex gr
 
    Bones that belong to a locked vertex group are displayed in red the 3D Viewport.
 
-Lock all
+Lock All
    Locks all vertex groups.
 Unlock All
    Unlocks all vertex groups.
 Lock Selected
    Looks selected vertex groups.
-Unlock selected
+Unlock Selected
    Unlocks selected vertex group.
 Lock Unselected
    Locks unselected vertex groups.

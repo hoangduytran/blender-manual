@@ -72,7 +72,7 @@ Merged Objects
    By Layer and DXF Type
       The second not only differentiates between Blender data types but also DXF types,
       such as ``LWPOLYLINE`` and ``POLYLINE``.
-   By Layer and closed no-bulge polygons
+   By Layer and Closed No-bulge Polygons
       Closed polylines with no bulge, that is no curved edges, can be merged to one single mesh.
       This makes sense when the DXF polylines have an extrusion and/or an elevation attribute
       which basically describes a location/rotation/scale transformation.
@@ -82,7 +82,7 @@ Merged Objects
       with one instanced-face object instead of with one object for each time the block needs to be inserted.
       Unfortunately this works only for block inserts that are uniformly scaled.
       Non-uniformly scaled block inserts are being imported as defined in *Blocks As*.
-Combine ``LINE`` entities to polygons
+Combine ``LINE`` Entities to Polygons
    Separated lines in DXF might be merged to one consecutive Blender poly curve.
    Similar to *Remove Doubles* but for curves.
 

@@ -69,7 +69,7 @@ Include Armatures
       You now can just select your objects, then in the exporter enable
       *Include Armatures* then the armature data is also exported.
 
-Include Shape keys
+Include Shape Keys
    This option also includes the application of shape keys!
    So now you can export your meshes with the current shape key configuration baked in.
 

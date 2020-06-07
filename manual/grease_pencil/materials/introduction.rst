@@ -82,7 +82,7 @@ Lock Unselected
 Lock Unused
    Locks and hide all unused materials.
 
-Remove Unused slots
+Remove Unused Slots
    Remove all unused materials.
 
 Merge Similar

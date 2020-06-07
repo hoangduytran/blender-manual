@@ -32,7 +32,7 @@ Use Falloff
    When enabled, use Strength falloff for the brush.
    Brush Strength decays with the distance from the center of the brush.
 
-Sculpt strokes
+Sculpt Strokes
    Filters the effect of the brush over the strokes.
    Applies to *Smooth* and *Randomize* brushes only.
 

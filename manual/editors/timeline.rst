@@ -1,10 +1,11 @@
-.. |first| unicode:: U+023EE
-.. |last|  unicode:: U+023ED
+.. |first| unicode:: U+02759 U+023F4
+.. |last|  unicode:: U+023F5 U+02759
 .. |rewind| unicode:: U+025C0
 .. |play|   unicode:: U+025B6
-.. |previous| unicode:: U+023EA U+0FE0E
-.. |next|     unicode:: U+023E9 U+0FE0E
+.. |previous| unicode:: U+025C6 U+023F4
+.. |next|     unicode:: U+023F5 U+025C6
 .. |pause| unicode:: U+023F8
+.. |record| unicode:: U+023FA
 
 .. _bpy.types.SpaceTimeline:
 .. _bpy.ops.time:
@@ -299,9 +300,9 @@ These buttons are used to set, play, rewind, the *Playhead*.
 
    Transport controls.
 
-Jump to start (|first|) :kbd:`Shift-Left`
+Jump to Start (|first|) :kbd:`Shift-Left`
    This sets the cursor to the start of frame range.
-Jump to previous keyframe (|previous|) :kbd:`Down`
+Jump to Previous Keyframe (|previous|) :kbd:`Down`
    This sets the cursor to the previous keyframe.
 Rewind (|rewind|) :kbd:`Shift-Ctrl-Spacebar`
    This plays the animation sequence in reverse.
@@ -309,9 +310,9 @@ Rewind (|rewind|) :kbd:`Shift-Ctrl-Spacebar`
 Play (|play|) :kbd:`Spacebar`
    This plays the animation sequence.
    When playing the play buttons switch to a pause button.
-Jump to next keyframe (|next|) :kbd:`Up`
+Jump to Next Keyframe (|next|) :kbd:`Up`
    This sets the cursor to the next keyframe.
-Jump to end (|last|) :kbd:`Shift-Right`
+Jump to End (|last|) :kbd:`Shift-Right`
    This sets the cursor to the end of frame range.
 Pause (|pause|) :kbd:`Spacebar`
    This stops the animation.
@@ -339,7 +340,7 @@ End Frame
 Keyframe Control
 ^^^^^^^^^^^^^^^^
 
-Auto Keyframe
+Auto Keyframe (|record|) 
    .. figure:: /images/editors_timeline_keyframes-auto.png
       :align: right
 

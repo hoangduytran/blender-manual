@@ -60,7 +60,7 @@ Sorting
 
 You can sort the order of your strokes, allowing the lines to stack in the order given.
 
-Sort key
+Sort Key
    A sort key is used to determine the stacking order of lines.
 
    Distance from camera

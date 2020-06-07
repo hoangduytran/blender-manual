@@ -28,7 +28,7 @@ Tiles
 Tile Order
    Order of rendering tiles. This does not significantly affect the performance.
 
-Tile size X/Y
+Tile Size X/Y
    The size of the tiles for rendering.
 
    Depending on what device you are using for rendering, different tile sizes can give faster renders.

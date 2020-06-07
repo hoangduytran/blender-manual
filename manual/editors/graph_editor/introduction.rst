@@ -179,7 +179,7 @@ Show Only Errors
    Only include curves and drivers that are disabled or have errors.
    Useful for debugging.
 
-Filter popover (funnel icon)
+Filter (funnel icon)
    Only include curves with keywords contained in the search field.
 
    Multi-Word

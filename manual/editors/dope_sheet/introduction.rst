@@ -110,9 +110,9 @@ Select/Deselect All
    - To select all keys, press :kbd:`A`.
    - To deselect all keys, press :kbd:`Alt-A`.
    - To inverse the selection, press :kbd:`Ctrl-I`.
-Select all to the right or left
-   Hold :kbd:`Shift-Ctrl` and click on either side of the Playhead.
-   You can also use :kbd:`]` and :kbd:`[`.
+Before/After Current Frame :kbd:`[`, :kbd:`]`
+   Select all to the right or left.
+   Or hold :kbd:`Shift-Ctrl` and click on either side of the Playhead.
 
 See the Select menu for a full list of selection tools.
 

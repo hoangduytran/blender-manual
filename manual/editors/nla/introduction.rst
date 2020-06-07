@@ -143,7 +143,7 @@ Start Tweaking Strips Actions :kbd:`Tab`
 Add
 ---
 
-Add Action strip :kbd:`Shift-A`
+Add Action Strip :kbd:`Shift-A`
    Add an NLA-strip referencing an Action to the active track.
 Add Transition :kbd:`Shift-T`
    Add an NLA-strip to create a transition between a selection of two adjacent NLA-strips.
