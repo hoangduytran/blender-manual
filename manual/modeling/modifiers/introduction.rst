@@ -45,6 +45,7 @@ Interface
 .. _fig-modifiers-panel-layout:
 
 .. figure:: /images/modeling_modifiers_introduction_panel-layout.png
+   :align: right
 
    Panel layout (Subdivision Surface as an example).
 
@@ -60,12 +61,7 @@ Type
 Name
    Every modifier has a unique name per object. Two modifiers on one object must have unique names,
    but two modifiers on different objects can have the same name. The default name is based on the modifier type.
-Render (camera icon)
-   Toggle visibility of the modifier's effect in the render.
-Show in Viewport (screen icon)
-   Toggle visibility of the modifier's effect in the 3D Viewport.
-Show in Edit Mode (vertices-square icon)
-   Display the modified geometry in Edit mode, as well as the original geometry which you can edit.
+
 Show on Cage (vertices-triangle icon) -- Meshes only
    Depends on the previous setting, if enabled, the modified geometry can also be edited directly,
    instead of the original one.
@@ -75,6 +71,17 @@ Show on Cage (vertices-triangle icon) -- Meshes only
       While it shows edited items in their final, modified positions, you are still actually editing original data.
       This can lead to weird and unpredictable effects with some tools,
       and should be disabled whenever you need to perform complex or precise editing on the mesh.
+Show in Edit Mode (vertices-square icon)
+   Display the modified geometry in Edit mode, as well as the original geometry which you can edit.
+Show in Viewport (screen icon)
+   Toggle visibility of the modifier's effect in the 3D Viewport.
+Render (camera icon)
+   Toggle visibility of the modifier's effect in the render.
+
+   .. note::
+
+      The *Square*, *Triangle* and *Surface* icons may not be available,
+      depending on the type of object and modifier.
 
 Apply On Spline Points (point surface icon) -- Curves, surfaces and texts only
    Apply the whole modifier stack up to and including that one on the curve or surface control points,
@@ -85,36 +92,31 @@ Apply On Spline Points (point surface icon) -- Curves, surfaces and texts only
       By default, curves, texts and surfaces are always converted to mesh-like geometry
       before that the modifier stack is evaluated on them.
 
-Move (up/down arrow icon)
-   Move the modifier up/down in the stack.
-Delete (``X`` icon)
-   Delete the modifier.
+Specials
+   Apply
+      Makes the modifier "real": converts the object's geometry to match the applied modifier's results,
+      and deletes the modifier.
 
-.. note::
+      .. warning::
 
-   The *Square*, *Triangle* and *Surface* icons may not be available, depending on the type of object and modifier.
+         Applying a modifier that is not first in the stack will ignore the stack order
+         (it will be applied as if it was the first one), and may produce undesired results.
+   Apply as Shape Key
+      Stores the result of that modifier in a new relative :doc:`shape key </animation/shape_keys/introduction>`.
+      This is only available with modifiers that do not affect the topology (typically, *Deform* modifiers only).
 
-Below the header are three buttons:
+      .. note::
 
-Apply
-   Makes the modifier "real": converts the object's geometry to match the applied modifier's results,
-   and deletes the modifier.
-Apply as Shape Key
-   Stores the result of that modifier in a new relative :doc:`shape key </animation/shape_keys/introduction>`.
-   This is only available with modifiers that do not affect the topology (typically, *Deform* modifiers only).
+         Even though it should work with any geometry type that supports shape keys,
+         currently it will only work with meshes.
+   Duplicate
+      Creates a duplicate of the modifier just below current one in the stack.
+   Delete
+      Delete the modifier.
 
-   .. note::
-
-      Even though it should work with any geometry type that supports shape keys,
-      currently it will only work with meshes.
-
-Copy
-   Creates a duplicate of the modifier just below current one in the stack.
-
-.. warning::
-
-   Applying a modifier that is not first in the stack will ignore the stack order
-   (it will be applied as if it was the first one), and may produce undesired results.
+Move ``::::``
+   Move the modifier up/down in the :ref:`stack <modifier-stack>`,
+   changing the evaluation order of the modifiers.
 
 Below this header, all of the options unique to each modifier will be displayed.
 
