@@ -48,7 +48,7 @@ Stabilization Type
    Scale
       Compensates any scale changes relative to center of rotation.
 
-Tracks For Stabilization
+Tracks for Stabilization
    Location
       List of tracks to be used to compensate for camera jumps, or location movement.
 

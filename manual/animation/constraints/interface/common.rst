@@ -90,7 +90,7 @@ Local Space
    Only transformations to the object itself are taken into account.
    Transformations to the object's parent are **not** taken into account.
 
-Local With Parent (bones only)
+Local with Parent (bones only)
    The bone properties are evaluated relative to its rest pose location and orientation, thus
    including both its own transformations and those caused by a possible parent relationship
    (i.e. the chain's transformations above the bone).

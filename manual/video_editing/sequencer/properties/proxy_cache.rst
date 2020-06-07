@@ -25,7 +25,7 @@ Cache Composite
    Cache intermediate composited images, for faster tweaking of stacked strips at the cost of memory usage.
 Cache Final
    Cache final image for each frame.
-Recycle Up To Cost
+Recycle Up to Cost
    Only frames with cost lower than this value will be recycled.
 
    Each stored image has a cost assigned.

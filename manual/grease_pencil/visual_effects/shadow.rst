@@ -43,7 +43,7 @@ Blur
    Samples
       Number of blur samples (0 disabled the blur effect).
 
-Use Object As Pivot
+Use Object as Pivot
    When enabled, an *Object* is used by the shadow as the center of rotation.
 
    Object

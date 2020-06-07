@@ -30,7 +30,7 @@ Mode
 Opacity
    Control the opacity of the ghost frames.
 
-Filter By Type
+Filter by Type
    Filters what type of frames to show in the Onion Skinning range.
 
 .. _Keyframes-range:

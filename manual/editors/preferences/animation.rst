@@ -25,7 +25,7 @@ TimeCode Style
    Format of Time Codes displayed when not displaying timing in terms of frames.
    The format uses '+' as a separator for sub-second frame numbers,
    with left and right truncation of the timecode as necessary.
-Zoom To Frame Type
+Zoom to Frame Type
    Defines what time range (around the cursor) will be displayed
    when the *View Frame* :kbd:`Numpad0` is performed.
 

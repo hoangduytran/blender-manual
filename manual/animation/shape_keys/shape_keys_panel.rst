@@ -36,7 +36,7 @@ Active Shape Key Index
       mixing the shape key stack into the result visible in the 3D Viewport.
 
    Specials
-      New Shape From Mix
+      New Shape from Mix
          Add a new shape key with the current deformed shape of the object.
          This differs from the ``+`` button of the list, as that one always copies
          the Basis shape independently of the current mix.

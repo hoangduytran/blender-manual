@@ -72,7 +72,7 @@ Import Subdivision Surface
    Todo.
 Import User Properties
    TODO.
-Import Enums As Strings
+Import Enums as Strings
    TODO.
 Image Search
    TODO.

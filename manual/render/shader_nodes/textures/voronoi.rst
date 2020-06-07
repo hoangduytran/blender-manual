@@ -180,7 +180,7 @@ Feature
 
                 Position.
 
-   Distance To Edge
+   Distance to Edge
       Compute and return the distance to the edges of the Voronoi cells.
 
       .. list-table::

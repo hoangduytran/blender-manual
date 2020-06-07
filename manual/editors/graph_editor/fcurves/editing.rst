@@ -81,7 +81,7 @@ Mirror
 
 Selected keyframes can be mirrored over different properties using the *Mirror Keys* tool.
 
-By Times Over Current Frame
+By Times over Current Frame
    Mirror horizontally over the playhead.
 By Values over Cursor Value
    Mirror vertically over the 2D cursor.

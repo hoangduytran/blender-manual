@@ -55,7 +55,7 @@ Method
 
 .. _bpy.types.FluidDomainSettings.slice_per_voxel:
 
-Slice Per Voxel
+Slice per Voxel
    Determines how many slices per voxel should be generated.
 
 

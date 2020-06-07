@@ -46,7 +46,7 @@ Split Impulse
    (lowers the simulation stability a little so use only when necessary).
    Limits the force with which objects are separated on collision, generally produces nicer
    results, but makes the simulation less stable (especially when stacking many objects).
-Steps Per Second
+Steps per Second
    Number of simulation steps made per second (higher values are more accurate but slower).
    This only influences the accuracy and not the speed of the simulation.
 Solver Iterations
@@ -81,7 +81,7 @@ Bake All Dynamics
    Bake all physics.
 Free All Bakes
    Free all baked caches of all objects in the current scene.
-Update All To Frame
+Update All to Frame
    Update cache to current frame.
 
 If you have not saved the blend-file, the cache is created in memory,

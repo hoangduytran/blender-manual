@@ -133,7 +133,7 @@ Preferences
 
 .. _keymap-blender_default-prefs-select_with:
 
-Select With Mouse Button
+Select with Mouse Button
    Controls which mouse button, either right or left, is used to select items in Blender.
    If *Left* is selected the :kbd:`RMB` will be a context sensitive menu,
    if *Right* is selected the :kbd:`LMB` will place the 3D Cursor.

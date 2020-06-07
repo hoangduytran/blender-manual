@@ -122,8 +122,8 @@ Camera Data
 Geometry
    Pointiness is not supported.
 
-Random Per Island
-   Random Per island is not supported.
+Random per Island
+   Random per Island is not supported.
 
 Attribute
    Defaults to active UV layer. Only "density", "color", "flame" and "temperature" built-in attributes are supported.

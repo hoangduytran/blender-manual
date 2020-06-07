@@ -48,7 +48,7 @@ Landscape Tools
 
 Mesh Displace
    Displace selected mesh vertices along normal or X, Y, Z direction.
-Weight From Slope
+Weight from Slope
    Generates a weighted vertex group slope map based on the Z normal value.
 Landscape Eroder
    Apply various kinds of erosion to an A.N.T. Landscape grid,

@@ -144,7 +144,7 @@ Free Bake
 
 .. _calc-physics-bake-to-frame:
 
-Calculate To Frame
+Calculate to Frame
    Bake only up to the current frame. Limited by *End* frame set in the cache settings.
 Current Cache to Bake
    Store any temporarily cached simulation data as a bake.
@@ -162,7 +162,7 @@ Free All Bakes
    Free bakes of all physics systems in the scene, even those of different types.
 
    See :ref:`Free Bake <free-physics-bake>`.
-Update All To Frame
+Update All to Frame
    Bake all physics systems in the scene to the current frame.
 
    See :ref:`Calculate To Frame <calc-physics-bake-to-frame>`.
