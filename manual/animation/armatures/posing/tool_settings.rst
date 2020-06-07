@@ -15,7 +15,7 @@ Auto IK
    :class: refbox
 
    :Mode:      Pose Mode
-   :Panel:     :menuselection:`Sidebar region --> Tool --> Pose Options`
+   :Panel:     :menuselection:`Sidebar --> Tool --> Pose Options --> Auto IK`
 
 The auto IK option in the Sidebar enables a temporary IK constraint when posing bones.
 The chain acts from the tip of the selected bone to root of the upper-most parent bone.
@@ -32,7 +32,7 @@ X-Axis Mirror
    :class: refbox
 
    :Mode:      Edit and Pose Mode
-   :Panel:     :menuselection:`Sidebar region --> Tool --> Options --> X-Axis Mirror`
+   :Panel:     :menuselection:`Sidebar --> Tool --> Options --> X-Axis Mirror`
 
 This option enables automatic mirroring of editing actions along the X axis.
 You can enable this option in the :menuselection:`Tool tab --> Options panel`,
@@ -53,7 +53,7 @@ Relative Mirror
    :class: refbox
 
    :Mode:      Edit and Pose Mode
-   :Panel:     :menuselection:`Sidebar region --> Tool --> Options --> Relative Mirror`
+   :Panel:     :menuselection:`Sidebar --> Tool --> Options --> Relative Mirror`
 
 Accounts for any relative transformations when using *X-Axis Mirror*.
 

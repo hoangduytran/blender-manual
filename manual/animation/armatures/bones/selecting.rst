@@ -120,7 +120,7 @@ Mirror
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select`
+   :Menu:      :menuselection:`Select --> Mirror`
    :Hotkey:    :kbd:`Shift-Ctrl-M`
 
 Flip the selection from one side to another.
@@ -133,7 +133,7 @@ More/Less
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select`
+   :Menu:      :menuselection:`Select --> More/Less`
 
 More :kbd:`Ctrl-NumpadPlus`
    Expand the current selection to the connected bones.

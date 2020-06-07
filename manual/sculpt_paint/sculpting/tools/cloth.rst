@@ -7,7 +7,7 @@ Cloth
    :class: refbox
 
    :Mode:      Sculpt Mode
-   :Tool:      :menuselection:`Toolbar --> Sculpt`
+   :Tool:      :menuselection:`Toolbar --> Cloth`
 
 The Cloth brush uses a simplified :doc:`Cloth Solver </physics/cloth/index>`
 to simulate cloth physics on the mesh under the brush.

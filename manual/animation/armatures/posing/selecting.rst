@@ -15,7 +15,7 @@ Flip Active
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select`
+   :Menu:      :menuselection:`Select --> Flip Active`
    :Hotkey:    :kbd:`Shift-Ctrl-M`
 
 Flip the selection from one side to another.

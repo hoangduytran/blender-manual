@@ -11,8 +11,8 @@ However, after editing the armature, or when using :term:`Euler rotation`,
 you may want to set the bone roll.
 
 
-Recalculate Bone Roll
-=====================
+Recalculate
+===========
 
 .. admonition:: Reference
    :class: refbox
@@ -44,8 +44,8 @@ Shortest Rotation
 
 .. _tool-bone-role:
 
-Set Bone Roll
-=============
+Set
+===
 
 .. admonition:: Reference
    :class: refbox

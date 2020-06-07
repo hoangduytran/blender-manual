@@ -65,8 +65,8 @@ The frame number label over the strip displays the end frame of the strip.
    for example, you can at the same time move a strip, shorten two others, and extend a forth one.
 
 
-Move/Extend from Frame
-======================
+Move/Extend from Playhead
+=========================
 
 .. admonition:: Reference
    :class: refbox
@@ -81,8 +81,8 @@ All selected strip handles to the "mouse side" of the current frame indicator wi
 so you can change the duration of the current frame.
 
 
-Slip Strip Content
-==================
+Slip Strip Contents
+===================
 
 .. admonition:: Reference
    :class: refbox
@@ -93,8 +93,8 @@ Slip Strip Content
 The Slip tool allows you to change the position of the contents of a strip without moving the strip itself.
 
 
-Snap Strips
-===========
+Snap Strips to Playhead
+=======================
 
 .. admonition:: Reference
    :class: refbox
@@ -109,19 +109,8 @@ you can get to fractional parts of a second by zooming the display;
 you can get all the way down to an individual frame.
 
 
-Set Frame Range
-===============
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Menu:      :menuselection:`Strip --> Transform --> Set Preview Range to Strips`
-
-Sets the frame range of preview to the range of the selected strips.
-
-
-Clear Strips Offsets
-====================
+Clear Strips Offset
+===================
 
 .. admonition:: Reference
    :class: refbox
@@ -145,8 +134,8 @@ Duplicate a strip to make an unlinked copy;
 drag it to a time and channel, and drop it by :kbd:`LMB` click.
 
 
-Delete Strips
-=============
+Delete
+======
 
 .. admonition:: Reference
    :class: refbox

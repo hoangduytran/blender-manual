@@ -1,7 +1,7 @@
 
-*********************
-Editing Vertex Colors
-*********************
+*******
+Editing
+*******
 
 .. admonition:: Reference
    :class: refbox

@@ -51,6 +51,8 @@ Range
       Allows you to define a temporary preview range to use for animation playback
       (this is the same thing as the *Playback Range* option of
       the :ref:`Timeline editor header <animation-editors-timeline-headercontrols>`).
+   Set Preview Range to Strips
+      Sets the frame range of preview to the range of the selected strips.
    Clear Preview Range :kbd:`Alt-P`
       Clears preview range.
    Set Start Frame :kbd:`Ctrl-Home`

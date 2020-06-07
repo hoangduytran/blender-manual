@@ -167,8 +167,8 @@ Duplicate Marker to Scene
 Duplicates the selected markers into another scene.
 
 
-Deleting Markers
-----------------
+Delete Marker
+-------------
 
 .. admonition:: Reference
    :class: refbox
@@ -258,8 +258,8 @@ Moves the playhead to the next/previous marker relative to the current playhead 
 
 .. _marker-bind-camera:
 
-Bind Camera to Marker
-=====================
+Bind Camera to Markers
+======================
 
 .. admonition:: Reference
    :class: refbox

@@ -7,8 +7,8 @@ Parenting
    :class: refbox
 
    :Mode:      Edit Mode
-   :Panel:     :menuselection:`Properties editor --> Bones --> Relations`
    :Menu:      :menuselection:`Armature --> Parent`
+   :Panel:     :menuselection:`Properties editor --> Bones --> Relations`
    :Hotkey:    :kbd:`Ctrl-P`, :kbd:`Alt-P`
 
 You can edit the relationships between bones (and hence create/modify the chains of bones)

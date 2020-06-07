@@ -1,7 +1,7 @@
 
-***************
-Editing Weights
-***************
+*******
+Editing
+*******
 
 .. admonition:: Reference
    :class: refbox

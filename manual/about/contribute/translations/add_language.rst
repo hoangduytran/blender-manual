@@ -33,7 +33,7 @@ Other platforms might vary slightly but should be mainly the same.
    where the instance of ``Makefile`` resides.
 
 
-Trying the Make Process to Create HTML Files In English
+Trying the Make Process to Create HTML Files in English
 =======================================================
 
 #. Ensure the previous instance of ``build`` directory is removed, if any exists::

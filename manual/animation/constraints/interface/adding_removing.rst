@@ -35,7 +35,7 @@ Add Constraint (with Targets)
    :class: refbox
 
    :Mode:      Object Mode and Pose Mode
-   :Menu:      :menuselection:`Object --> Constraint --> Add constraint (with Targets)`
+   :Menu:      :menuselection:`Object --> Constraint --> Add Constraint (with Targets)`
 
 Adds a constraint to the active object.
 The type of constraint must be chosen from a pop-up menu,
@@ -51,8 +51,8 @@ provided that armature is in Pose Mode.
 
 .. _bpy.ops.object.constraints_copy:
 
-Copy Constraints to Selected
-----------------------------
+Copy Constraints to Selected Objects
+------------------------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -65,8 +65,8 @@ Copies the active object Constraints to the rest of the selected objects.
 
 .. _bpy.ops.object.constraints_clear:
 
-Clear Constraints
------------------
+Clear Object Constraints
+------------------------
 
 .. admonition:: Reference
    :class: refbox

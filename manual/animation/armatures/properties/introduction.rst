@@ -3,12 +3,6 @@
 Introduction
 ************
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      All Modes
-   :Panel:     :menuselection:`Properties editor --> Armature`
-
 The *Armature* tab in Properties editor contains various panels gathering the armature settings.
 
 .. TODO2.8
