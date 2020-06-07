@@ -24,6 +24,11 @@ Texture
    The name of the texture from which the displacement for each vertex is derived.
    If this field is empty, the modifier defaults to 1.0 (white).
 
+   Coordinates
+      The texture coordinate system to use when retrieving values from the texture for each vertex.
+
+      See :ref:`common masking options <modifiers-common-options-masking>` for a complete reference.
+
 Direction
    The direction along which to displace the vertices.
    Can be one of the following:
@@ -41,20 +46,13 @@ Direction
 Space
    With a direction set to X, Y, Z, or XYZ the modifier can either displace along local or global axes.
 
-Texture Coordinates
-   The texture coordinate system to use when retrieving values from the texture for each vertex.
+Strength
+   The strength of the displacement. After offsetting by the *Midlevel* value,
+   the displacement will be multiplied by the *Strength* value to give the final vertex offset.
 
-   See :ref:`common masking options <modifiers-common-options-masking>` for a complete reference.
+   :math:`vertex_offset = displacement × Strength`
 
-Vertex Group
-   The name of a vertex group which is used to control the influence of the modifier.
-   If left empty, the modifier affects all vertices equally.
-
-   Invert ``<->``
-      Inverts the influence of the selected vertex group, meaning that the group
-      now represents vertices that will not be deformed by the modifier.
-
-      The setting reverses the weight values of the group.
+   A negative strength can be used to invert the effect of the modifier.
 
 Midlevel
    The texture value which will be treated as no displacement by the modifier.
@@ -66,13 +64,15 @@ Midlevel
    Recall that color/luminosity values are typically between (0.0 to 1.0) in Blender,
    and not between (0 to 255).
 
-Strength
-   The strength of the displacement. After offsetting by the *Midlevel* value,
-   the displacement will be multiplied by the *Strength* value to give the final vertex offset.
+Vertex Group
+   The name of a vertex group which is used to control the influence of the modifier.
+   If left empty, the modifier affects all vertices equally.
 
-   :math:`vertex_offset = displacement × Strength`
+   Invert ``<->``
+      Inverts the influence of the selected vertex group, meaning that the group
+      now represents vertices that will not be deformed by the modifier.
 
-   A negative strength can be used to invert the effect of the modifier.
+      The setting reverses the weight values of the group.
 
 
 Example

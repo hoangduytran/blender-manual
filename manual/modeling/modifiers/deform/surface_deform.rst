@@ -21,6 +21,17 @@ Options
 
 Target
    The object to which to bind (this setting is unavailable after binding).
+
+   .. warning:: Target Mesh Validity
+
+      While there are no restrictions with regard to the modified mesh,
+      the target object's mesh has a few constraints, which if not followed, will prevent a successful binding:
+
+      - It must **not** contain edges with more than two faces.
+      - It must **not** contain concave faces.
+      - It must **not** contain overlapping vertices (doubles).
+      - It must **not** contain faces with collinear edges.
+
 Interpolation Falloff
    How much a vertex bound to one face of the target will be affected by the surrounding faces
    (this setting is unavailable after binding).
@@ -31,6 +42,9 @@ Interpolation Falloff
       While lower values result in smoother deformations,
       they may also introduce slight artifacts.
 
+Strength
+   The overall amount of influence the modifier has on deforming the mesh.
+
 Vertex Group
    Allows you to define the influence per vertex.
 
@@ -40,13 +54,11 @@ Vertex Group
 
       The setting reverses the weight values of the group.
 
-Strength
-   The overall amount of influence the modifier has on deforming the mesh.
-
 Bind
    Bind the current state of the modified mesh to the current state of the target mesh,
    such that any later change in the target mesh will deform the modified mesh as well.
    Note that until the bind has been executed, this modifier will have no effect at all.
+
 Unbind
    Once the mesh is bound, the *Bind* button changes to *Unbind*.
    Executing this frees the modified mesh from the target, and resets it to its original shape.
@@ -65,16 +77,6 @@ Unbind
    the more likely it is to get undesirable artifacts.
    This is an inherent characteristic of surface binding in general,
    so it is recommended to have reasonably well matching meshes, in order to get a good bind.
-
-.. warning:: Target Mesh Validity
-
-   While there are no restrictions with regard to the modified mesh,
-   the target object's mesh has a few constraints, which if not followed, will prevent a successful binding:
-
-   - It must **not** contain edges with more than two faces.
-   - It must **not** contain concave faces.
-   - It must **not** contain overlapping vertices (doubles).
-   - It must **not** contain faces with collinear edges.
 
 
 Example

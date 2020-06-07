@@ -124,10 +124,8 @@ Mode
       If the factor is negative, then the mesh is squashed in the deformed axis,
       thicker at the origin and thinner at the borders.
 
-Vertex Group
-   The name of the vertex group that indicates whether
-   and how much each vertex is influenced by the deformation.
-   The amount of influence is determined by the weight in the Weight Paint map.
+Angle (Twist & Bend)/Factor (Taper & Stretch)
+   The total amount of deformation. Can be negative to reverse the deformation.
 
 Axis, Origin
    The name of an object that defines the origin and axis of deformation (usually an empty).
@@ -137,14 +135,20 @@ Axis, Origin
    - Moved to control the origin of the deformation.
    - Scaled to change the deformation factor.
 
-Angle (Twist & Bend)/Factor (Taper & Stretch)
-   The total amount of deformation. Can be negative to reverse the deformation.
+
+Restrictions
+------------
 
 Limits
    You to can set the lower and upper limits of the deformation.
    The upper limit cannot be lower than the lower one. These limits are mapped on the Deform axis.
 
-Lock X/Y/Z (Twist, Taper and Stretch modes only)
+Lock (Twist, Taper and Stretch modes only)
    These controls whether the coordinates along the two other axes are allowed to change or not.
    E.g. if you *Stretch* your object along its Z axis,
    it is possible to squash along the X axis only, by locking the Y one.
+
+Vertex Group
+   The name of the vertex group that indicates whether
+   and how much each vertex is influenced by the deformation.
+   The amount of influence is determined by the weight in the Weight Paint map.

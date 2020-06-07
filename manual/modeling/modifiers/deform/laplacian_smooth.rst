@@ -14,6 +14,12 @@ preserving desirable geometry as well as the shape of the original model.
 
 This modifier is based on a curvature flow *Laplace Beltrami* operator in a diffusion equation.
 
+.. hint::
+
+   Meshes with a great number of vertices, more than ten thousand (10,000),
+   may take several minutes for processing. You can use small portions of the mesh for testing
+   before executing the modifier on the entire model.
+
 
 Options
 =======
@@ -101,7 +107,52 @@ Repeat
 
              Repeat: 10.
 
-Factor
+Axis
+   Toggle buttons to enable/disable deforming vertices in the X, Y and/or Z axes directions.
+
+   .. list-table::
+
+      * - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_cube-axis.png
+             :width: 130px
+
+             X, Y, Z: Unselected.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_cube-axis-xyz.jpg
+             :width: 130px
+
+             X, Y, Z: Selected.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_cube-axis-xy.jpg
+             :width: 130px
+
+             X, Z: Selected.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_cube-axis-x.png
+             :width: 130px
+
+             X: Selected.
+
+      * - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-axis.png
+             :width: 130px
+
+             X, Y, Z: Unselected.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-axis-xyz.jpg
+             :width: 130px
+
+             X, Y, Z: Selected.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-axis-xy.jpg
+             :width: 130px
+
+             X, Z: Selected.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-axis-x.png
+             :width: 130px
+
+             X: Selected.
+
+Lambda Factor
    Controls the amount of displacement of every vertex along the flow curvature.
 
    - Using a small *Factor*, you can remove noise from the shape without affecting desirable geometry.
@@ -171,7 +222,7 @@ Factor
 
              Factor: -300.0.
 
-Border
+Lambda Border
    Since there is no way to calculate the curvature flow on border edges, they must be controlled separately.
    Border edges are smoothed using a much simpler method, using this property to control the influence.
 
@@ -244,51 +295,6 @@ Border
 
              Border: -200.0.
 
-Axis X/Y/Z
-   Toggle buttons to enable/disable deforming vertices in the X, Y and/or Z axes directions.
-
-   .. list-table::
-
-      * - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_cube-axis.png
-             :width: 130px
-
-             X, Y, Z: Unselected.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_cube-axis-xyz.jpg
-             :width: 130px
-
-             X, Y, Z: Selected.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_cube-axis-xy.jpg
-             :width: 130px
-
-             X, Z: Selected.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_cube-axis-x.png
-             :width: 130px
-
-             X: Selected.
-
-      * - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-axis.png
-             :width: 130px
-
-             X, Y, Z: Unselected.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-axis-xyz.jpg
-             :width: 130px
-
-             X, Y, Z: Selected.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-axis-xy.jpg
-             :width: 130px
-
-             X, Z: Selected.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-axis-x.png
-             :width: 130px
-
-             X: Selected.
-
 Preserve Volume
    The smoothing process can produce shrinkage.
    That is significant for large *Factor* or large *Repeat* values.
@@ -315,6 +321,32 @@ Preserve Volume
              :width: 130px
 
              On.
+
+
+Normalized
+   When enabled, the results will depend on face sizes. When disabled, geometry spikes may occur.
+
+   .. list-table::
+
+      * - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_monkey-normalized0.jpg
+             :width: 130px
+
+             Original Geometry.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_monkey-normalized1.jpg
+             :width: 130px
+
+             On.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_monkey-normalized2.jpg
+             :width: 130px
+
+             Off.
+
+        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_monkey-normalized3.jpg
+             :width: 130px
+
+             Off, High Factor.
 
 Vertex Group
    A vertex group name, to constrain the effect to a group of vertices only.
@@ -368,37 +400,6 @@ Vertex Group
       now represents vertices that will not be deformed by the modifier.
 
       The setting reverses the weight values of the group.
-
-Normalized
-   When enabled, the results will depend on face sizes. When disabled, geometry spikes may occur.
-
-   .. list-table::
-
-      * - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_monkey-normalized0.jpg
-             :width: 130px
-
-             Original Geometry.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_monkey-normalized1.jpg
-             :width: 130px
-
-             On.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_monkey-normalized2.jpg
-             :width: 130px
-
-             Off.
-
-        - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_monkey-normalized3.jpg
-             :width: 130px
-
-             Off, High Factor.
-
-.. hint::
-
-   Meshes with a great number of vertices, more than ten thousand (10,000),
-   may take several minutes for processing. You can use small portions of the mesh for testing
-   before executing the modifier on the entire model.
 
 
 Examples

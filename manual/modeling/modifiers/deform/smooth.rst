@@ -21,7 +21,7 @@ Options
 
    The Smooth modifier.
 
-Axis X/Y/Z
+Axis
    Enable/disable the modifier in the X, Y and/or Z axes directions.
 
 Factor

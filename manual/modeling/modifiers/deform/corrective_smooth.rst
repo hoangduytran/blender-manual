@@ -55,10 +55,13 @@ Smooth Type
 Vertex Group
    If set, restrict the effect to the only vertices in that vertex group.
    This allows for selective, real-time smoothing, by painting vertex weights.
+
 Only Smooth
    This option is included to preview the smoothing used, before correction is applied.
+
 Pin Boundaries
    Prevent boundary vertices from smoothing.
+
 Rest Source
    Select the source for reference vertex positions that defines the undeformed state.
 

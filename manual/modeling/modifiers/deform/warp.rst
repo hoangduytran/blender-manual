@@ -28,12 +28,18 @@ Options
 
    The Warp modifier.
 
-From
+Object From
    The object defining the origin transformation of the warp.
-To
+
+Object To
    The object defining the destination transformation of the warp.
+
 Preserve Volume
    Enables volume preservation when rotating one of the transforms.
+
+Strength
+   Sets how strong the effect is.
+
 Vertex Group
    The name of a vertex group which is used to control the influence of the modifier.
    If left empty, the modifier affects all vertices equally.
@@ -43,14 +49,23 @@ Vertex Group
       now represents vertices that will not be deformed by the modifier.
 
       The setting reverses the weight values of the group.
-Strength
-   Sets how strong the effect is.
-Radius
-   Sets the distance from the transforms that can be warped by the transform handles.
+
+
+Falloff
+-------
+
 Falloff Type
    Sets the way the strength of the warp change as it goes from the center of the transform to the *Radius* value.
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`
    for descriptions of the falloff types.
+
+Radius
+   Sets the distance from the transforms that can be warped by the transform handles.
+
+
+Texture
+-------
+
 Texture
    You can finely control which vertices are affected by the warp,
    and to what extent, using a texture.

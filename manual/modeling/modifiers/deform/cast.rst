@@ -31,11 +31,13 @@ Options
 
    The Cast modifier.
 
-Cast Type
+Shape
    Menu to choose target shape of the projection: *Sphere*, *Cylinder* or *Cuboid*.
-Axis X/Y/Z
+
+Axis
    Toggle buttons to enable/disable the modifier in the X, Y, Z axes directions
    (X and Y only for *Cylinder* cast type, since the Z axis remains unaffected).
+
 Factor
    The factor to control blending between original and cast vertex positions.
 
@@ -47,11 +49,14 @@ Factor
 Radius
    If non-zero, this radius defines a sphere of influence.
    Vertices outside it are not affected by the modifier.
+
 Size
    Alternative size for the projected shape. If zero,
    it is defined by the initial shape and the control object, if any.
+
 From Radius
    If activated, calculate *Size* from *Radius*, for smoother results.
+
 Vertex Group
    If set, restrict the effect to the only vertices in that vertex group.
    This allows selective, real-time casting, by painting vertex weights.
@@ -61,7 +66,8 @@ Vertex Group
       now represents vertices that will not be deformed by the modifier.
 
       The setting reverses the weight values of the group.
-Control Object
+
+Object
    The name of an object to control the effect.
    The location of this object's origin defines the center of the projection.
    Also, its size and rotation transform the projected vertices.

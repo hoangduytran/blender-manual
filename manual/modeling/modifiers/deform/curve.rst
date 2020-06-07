@@ -40,8 +40,14 @@ Options
 
    The Curve modifier.
 
-Object
+Curve Object
    The name of the curve object that will affect the deformed object.
+
+Deformation Axis
+   This is the axis that the curve deforms along.
+
+   X/Y/Z/-X/-Y/-Z
+
 Vertex Group
    If set, restrict the effect to the only vertices in that vertex group.
 
@@ -50,10 +56,6 @@ Vertex Group
       now represents vertices that will not be deformed by the modifier.
 
       The setting reverses the weight values of the group.
-Deformation Axis
-   This is the axis that the curve deforms along.
-
-   X/Y/Z/-X/-Y/-Z
 
 
 Example
