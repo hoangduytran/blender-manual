@@ -221,10 +221,10 @@ Close
 Close or open strokes by connecting the last and first point.
 
 Type
-   Close all
+   Close All
       Close all open selected strokes.
 
-   Open all
+   Open All
       Open all closed selected strokes.
 
    Toggle
@@ -249,16 +249,16 @@ Toggle Cyclic
 Toggles between an open stroke and closed stroke (cyclic).
 
 Type
-   Close all
+   Close All
       Close all open selected strokes.
 
-   Open all
+   Open All
       Open all closed selected strokes.
 
    Toggle
       Close or Open selected strokes as required.
 
-   Create geometry
+   Create Geometry
       When enabled, points are added for closing the strokes like when using the *Close* tool.
       If disabled, the stroke is close without any actual geometry.
 

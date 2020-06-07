@@ -19,7 +19,7 @@ Shape
    Thick
       Cylindrical segments between two points.
 
-      Cull back-faces
+      Cull Back-Faces
          Excludes strands emitted from the mesh backfacing the camera.
 
    Ribbons

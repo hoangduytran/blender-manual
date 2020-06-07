@@ -40,15 +40,15 @@ Default Weight B
 Mix Mode
    How the vertex group weights are affected by the other vertex group's weights.
 
-   Replace weights
+   Replace
       Replaces affected weights with the second group's weights.
-   Add to weights
+   Add
       Adds the values of *Group B* to *Group A*.
-   Subtract from weights
+   Subtract
       Subtracts the values of *Group B* from *Group A*.
-   Multiply weights
+   Multiply
       Multiplies the values of *Group B* with *Group A*.
-   Divide weights
+   Divide
       Divides the values of *Group A* by *Group B*.
    Difference
       Subtracts the smaller of the two values from the larger.
@@ -58,15 +58,15 @@ Mix Mode
 Mix Set
    Choose which vertices will be affected.
 
-   All vertices
+   All
       Affects all vertices, disregarding the vertex groups content.
-   Vertices from group A
+   Vertex group A
       Affects only vertices belonging to the affected vertex group.
-   Vertices from group B
+   Vertex group B
       Affects only vertices belonging to the second vertex group.
-   Vertices from one group
+   Vertex group A or B
       Affects only vertices belonging to at least one of the vertex groups.
-   Vertices from both groups
+   Vertex group A and B
       Affects only vertices belonging to both vertex groups.
 
    .. important::

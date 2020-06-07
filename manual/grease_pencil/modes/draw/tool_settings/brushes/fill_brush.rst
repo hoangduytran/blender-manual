@@ -71,7 +71,7 @@ Boundary
       Use only the thickness of the strokes (ignore edit lines).
    Line
       Use only the edit lines (ignore strokes).
-   Show lines (grid icon)
+   Show Lines (grid icon)
       Toggle show help lines to see the fill boundary.
 
 Resolution

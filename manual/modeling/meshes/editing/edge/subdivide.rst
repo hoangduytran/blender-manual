@@ -77,7 +77,7 @@ Corner Cut Type
    Fan
       The quad is subdivided in a fan of four triangles,
       the common vertex being the one opposite to the selected edges.
-   Inner vertices
+   Inner Vertices
       The selected edges are subdivided, then an edge is created between
       the two new vertices, creating a small triangle.
       This edge is also subdivided,
@@ -100,7 +100,7 @@ Corner Cut Type
         - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert.png
              :width: 200px
 
-             Inner vertices cut type.
+             Inner Vertices cut type.
 
         - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path.png
              :width: 200px

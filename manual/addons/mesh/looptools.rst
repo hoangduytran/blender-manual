@@ -143,7 +143,7 @@ Any selection is considered acceptable input for the flatten tool.
 Plane
    The method used to calculate the plane on which the input is flattened.
 
-   Best fit
+   Best Fit
       Calculates a plane so that on average the vertices will have to be moved the least to be flattened.
    Normal
       Is identical to scaling the input to zero on local Z when the orientation is set to normal (so :kbd:`G Z Z 0`).

@@ -39,7 +39,7 @@ Display As
 
              Envelope bone display.
 
-   Octahedral bone
+   Octahedral
       This is the default visualization, well suited for most of editing tasks. It materializes:
 
       - The bone root ("big" joint) and tip ("small" joint).
@@ -51,7 +51,7 @@ Display As
 
          Note the 40° rolled Bone.001 bone.
 
-   Stick bone
+   Stick
       This is the simplest and most non-intrusive visualization.
       It just materializes bones by sticks of constant (and small) thickness,
       so it gives you no information about root and tip, nor bone size or roll angle.
@@ -61,7 +61,7 @@ Display As
 
          Note that Bone.001 roll angle is not visible (except by its XZ axes).
 
-   B-Bone bone
+   B-Bone
       This visualization shows the curves of "smooth" multi-segmented bones;
       see the :doc:`/animation/armatures/bones/properties/bendy_bones` for details.
 
@@ -77,14 +77,14 @@ Display As
 
                 The same armature in Object Mode.
 
-   Envelope bone
+   Envelope
       This visualization materializes the bone deformation influence.
       More on this in the :ref:`bone page <armature-bone-influence>`.
 
       .. figure:: /images/animation_armatures_bones_structure_envelope-pose-mode.png
          :width: 300px
 
-   Wire bone
+   Wire
       This simplest visualization shows the curves of "smooth" multi-segmented bones.
 
       .. list-table::

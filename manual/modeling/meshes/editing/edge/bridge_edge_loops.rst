@@ -18,7 +18,7 @@ Connect Loops
       Loops connected with open ends.
    Closed Loop
       Tries to connect to a circular loop (where the start and end are merged).
-   Loop pairs
+   Loop Pairs
       Connects each even count of loops individually.
 Merge
    Merges edge loops rather than creating a new face.

@@ -191,14 +191,14 @@ During the paste action, the :ref:`ui-undo-redo-adjust-last-operation` panel pro
 how the paste is applied.
 
 Offset
-   No offset
+   No Offset
       Pastes the keyframes in the location they were copied from.
-   Frame relative
+   Frame Relative
       Pastes the keyframe relative to the Playhead position based on the locations of
       the keyframes relative to the Playhead when they were copied.
-   Frame start
+   Frame Start
       Pastes the keyframes with the first keyframe of the copied set placed at the Playhead.
-   Frame end
+   Frame End
       Pastes the keyframes with the last keyframe of the copied set placed at the Playhead.
 Type
    Mix

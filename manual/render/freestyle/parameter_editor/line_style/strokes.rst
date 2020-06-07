@@ -63,9 +63,9 @@ You can sort the order of your strokes, allowing the lines to stack in the order
 Sort Key
    A sort key is used to determine the stacking order of lines.
 
-   Distance from camera
+   Distance from Camera
       Lines closer to the camera lie on top of further lines.
-   2D length
+   2D Length
       Longer lines lie on top of shorter lines.
    Projected X, Y
       Sort by the projected X or Y value in the image coordinate system.

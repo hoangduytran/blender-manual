@@ -53,12 +53,12 @@ Normals
    Normal Space
       Normals can be baked in different spaces:
 
-      Object space
+      Object Space
          Normals in object coordinates, independent of object transformation, but dependent on deformation.
-      Tangent space
+      Tangent Space
          Normals in tangent space coordinates, independent of object transformation and deformation.
-         This is the default, and the right choice in most cases, since then the normal map can be used for animated
-         objects too.
+         This is the default, and the right choice in most cases, since then the normal map can be used for
+         animated objects too.
    Normal Swizzle
       Axis to bake into the red, green and blue channel.
 

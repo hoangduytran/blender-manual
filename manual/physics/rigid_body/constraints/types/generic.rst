@@ -25,17 +25,19 @@ Options
 =======
 
 Limits
-   X Axis/Y Axis/Z axis
-      Enables/disables limit translation on X, Y or Z axis respectively.
+   Angular
+      X Axis, Y Axis, Z Axis
+         Enables/disables limit translation on X, Y or Z axis respectively.
 
-      Lower
-         Lower limit of translation for X, Y or Z axis respectively.
-      Upper
-         Upper limit of translation for X, Y or Z axis respectively.
-   X Angle/Y Angle/Z Angle
-      Enables/disables limit rotation around X, Y or Z axis respectively.
+         Lower
+            Lower limit of translation for X, Y or Z axis respectively.
+         Upper
+            Upper limit of translation for X, Y or Z axis respectively.
+   Linear
+      X Angle, Y Angle, Z Angle
+         Enables/disables limit rotation around X, Y or Z axis respectively.
 
-      Lower
-         Lower limit of rotation for X, Y or Z axis respectively.
-      Upper
-         Upper limit of rotation for X, Y or Z axis respectively.
+         Lower
+            Lower limit of rotation for X, Y or Z axis respectively.
+         Upper
+            Upper limit of rotation for X, Y or Z axis respectively.

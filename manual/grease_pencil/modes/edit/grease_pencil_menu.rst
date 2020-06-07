@@ -272,7 +272,7 @@ See :doc:`Fill tool </grease_pencil/modes/draw/tool_settings/fill>` for more inf
 Mode
    Active Frame Only
       Removes boundary strokes from the current frame.
-   All frames
+   All Frames
       Removes boundary strokes from all frames.
 
 

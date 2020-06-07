@@ -42,7 +42,7 @@ Stroke
    Strokes will stick on other strokes.
 
    Target
-      All points
+      All Points
          All the points of the new stroke sticks to other strokes.
 
       End Points

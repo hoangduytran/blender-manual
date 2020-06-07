@@ -35,7 +35,7 @@ Displacement Method
       Mesh vertices will be displaced before rendering, modifying the actual mesh.
       This gives the best quality results, if the mesh is finely subdivided.
       As a result, this method is also the most memory intensive.
-   Bump only
+   Bump Only
       When executing the surface shader, a modified surface normal is used instead of the true normal.
       This is a less memory intensive alternative to actual displacement, but only an approximation.
       Surface silhouettes will not be accurate and there will be no self-shadowing of the displacement.
