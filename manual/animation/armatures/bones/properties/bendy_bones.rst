@@ -171,9 +171,11 @@ Start, End Handle Type
       Calculations are done according to the *Absolute* handle type below.
    Absolute
       The Bézier handle is controlled by the **position** of the head (tail) of the handle bone
-      relative to the head (tail) of the current bone. If the handle is also a B-Bone,
-      additional processing is applied to further smooth the transition, assuming that
-      the bones in effect form a chain.
+      relative to the head (tail) of the current bone.
+      Note that for this to work, there must be a non-zero distance between these bones.
+      If the handle is also a B-Bone, additional processing is applied to
+      further smooth the transition, assuming that the bones in effect form a
+      chain.
    Relative
       The Bézier handle is controlled by the **offset** of the head (tail) of the handle bone from its rest pose.
       The use of this type is not recommended due to numerical stability issues near zero offset.
