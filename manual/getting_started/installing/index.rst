@@ -47,7 +47,7 @@ the latter provides the newest features, as they are developed, at the cost of s
    - It can be freely customized.
 
 The procedure for installing a binary, either the latest stable release or a daily build, is the same.
-Follow the steps for your operating system.
+Follow the steps for your platform.
 
 .. note::
 
@@ -60,3 +60,4 @@ Follow the steps for your operating system.
    linux.rst
    macos.rst
    windows.rst
+   steam.rst
