@@ -20,16 +20,7 @@ The splash screen will disappear revealing the default screen.
 To reopen the splash screen click on the Blender icon in the Topbar and select *Splash Screen*.
 
 Information Region
-   The upper part of the splash screen contains the splash image with a lot of key information overlaid.
-
-   Title
-      Besides the Blender icon and text, it shows the Blender version. e.g. the current version is |BLENDER_VERSION|.
-   Date
-      At the top-right corner, you can see the date of when Blender was compiled.
-   Hash
-      The Git Hash. This can be useful to give to support personnel, when diagnosing a problem.
-   Branch
-      Optional branch name.
+   The upper part of the splash screen contains the splash image with the Blender version in the top right
 Interactive Region
    The interactive region is the bottom half of the splash screen.
 
