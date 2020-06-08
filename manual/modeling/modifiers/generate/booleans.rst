@@ -40,9 +40,6 @@ Options
    The Boolean modifier.
 
 
-Operations
-----------
-
 Operation
    Which Boolean operation will be used.
 

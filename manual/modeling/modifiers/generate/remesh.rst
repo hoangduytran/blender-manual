@@ -46,11 +46,7 @@ Octree Depth
 Scale
    The result can be tweaked further by this, lower values effectively decrease the output resolution.
 
-Smooth Shading
-   Output faces with smooth shading rather than flat shading.
-   The smooth/flat shading of the input faces is not preserved.
-
-Remove Disconnected Pieces
+Remove Disconnected
    Filter out small disconnected pieces of the output.
 
    Thin parts of the input mesh can become lose, and generate small isolated bits of mesh.
@@ -58,6 +54,10 @@ Remove Disconnected Pieces
 
    Threshold
       Use this to control how small a disconnected component must be to be removed.
+
+Smooth Shading
+   Output faces with smooth shading rather than flat shading.
+   The smooth/flat shading of the input faces is not preserved.
 
 .. note::
 

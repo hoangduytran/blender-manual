@@ -17,12 +17,14 @@ or simply remove unnecessary vertices and edges.
 Unlike the majority of existing modifiers, this one does not allow
 you to visualize your changes in Edit Mode.
 
+The modifier displays the number of remaining faces as a result of the *Decimate* modifier.
+
 
 Options
 =======
 
-Decimate Type
--------------
+Mode
+----
 
 Collapse
 ^^^^^^^^
@@ -52,15 +54,17 @@ Ratio
 
       This is only true if the *Triangulate* option is disabled.
 
+Symmetry
+   Maintains symmetry on a single axis.
+
+Triangulate
+   Keeps any resulting triangulated geometry from the decimation process.
+
 Vertex Group
    A vertex group that controls what parts of the mesh are decimated.
 
    Factor
       The amount of influence the *Vertex Group* has on the decimation.
-Triangulate
-   Keeps any resulting triangulated geometry from the decimation process.
-Symmetry
-   Maintains symmetry on a single axis.
 
 
 Un-Subdivide
@@ -94,10 +98,6 @@ It reduces details on forms comprised of mainly flat surfaces.
 Angle Limit
    Dissolve geometry which form angles (between surfaces) higher than this setting.
 
-All Boundaries
-   When enabled, all vertices along the boundaries of faces are dissolved.
-   This can give nicer results when using a high *Angle Limit*.
-
 Delimit
    Prevent dissolving geometry in certain places.
 
@@ -108,9 +108,6 @@ Delimit
    Seam
       Does not dissolve edges marked as seams.
 
-
-Further Options
----------------
-
-Face Count
-   This label shows the number of remaining faces as a result of applying the *Decimate* modifier.
+All Boundaries
+   When enabled, all vertices along the boundaries of faces are dissolved.
+   This can give nicer results when using a high *Angle Limit*.

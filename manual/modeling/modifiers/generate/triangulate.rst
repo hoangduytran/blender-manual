@@ -38,18 +38,18 @@ Quad Method
    Shortest Diagonal
       Split the quads based on the diagonal distance between their vertices.
 
-N-gon Method
+Polygon Method
    Beauty
       Arrange the new triangles nicely, slower method.
    Clip
       Split the polygons using an ear-clipping algorithm
       (gives similar results to the tessellation used for the viewport rendering).
 
-Keep Normals
-   When using :ref:`custom normals <modeling_meshes_normals_custom>`,
-   try to preserve the same shading as before triangulation.
-
 Minimum Vertices
    Minimum number of vertices a face must have to be triangulated.
    For example, setting this value to 5, will prevent triangulation of :term:`quads <quad>`
    and only triangulate :term:`N-gons <N-gon>`.
+
+Keep Normals
+   When using :ref:`custom normals <modeling_meshes_normals_custom>`,
+   try to preserve the same shading as before triangulation.

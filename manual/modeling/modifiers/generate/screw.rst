@@ -23,6 +23,15 @@ Options
 
    The Screw modifier.
 
+Angle
+   Degrees for a single helix revolution.
+
+Screw
+   Offsets the revolution along its axis.
+
+Iterations
+   Number of revolutions.
+
 Axis
    The axis along which the helix will be built.
 
@@ -35,27 +44,32 @@ Axis Object
    Object Screw
       Use the distance from the *Axis Object* to define the height of one helix iteration.
 
-Angle
-   Degrees for a single helix revolution.
-Steps
-   Number of steps used for a single revolution displayed in the 3D Viewport. Beware of setting this higher than
-   *Render Steps*, which is the value used for rendering.
-Render Steps
+
+Steps Viewport
+   Number of steps used for a single revolution displayed in the 3D Viewport.
+Render
    As above, but used during render time. Increase to improve quality.
-Smooth Shading
-   Output faces with smooth shading rather than flat shading.
-   The smooth/flat shading of the input geometry is not preserved.
-Calculate Order
-   Order of edges is calculated to avoid problems with normals and shading. Only needed for meshes, not curves.
-Flip
-   Flip normals direction.
-Iterations
-   Number of revolutions.
-Stretch U/V
-   Stretch the UV coordinates from (0.0 to 1.0) when UVs are present.
-Merge Vertices
+
+Merge
    Merge vertices that lie on the axis of rotation.
    Use this to close off end points with a triangle fan.
 
    Merge Distance
       Vertices under this distance to the axis are merged.
+
+Stretch UVs
+   Stretch the UV coordinates from (0.0 to 1.0) when UVs are present.
+
+
+Normals
+-------
+
+Smooth Shading
+   Output faces with smooth shading rather than flat shading.
+   The smooth/flat shading of the input geometry is not preserved.
+
+Calculate Order
+   Order of edges is calculated to avoid problems with normals and shading. Only needed for meshes, not curves.
+
+Flip
+   Flip normals direction.

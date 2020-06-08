@@ -20,18 +20,24 @@ Options
 
 Start
    The start frame of the building process.
+
 Length
    The number of frames over which to rebuild the object.
 
+Reversed
+   The modifier will operate in reverse, essentially allowing it to be used as a "deconstruction" effect.
+   This is useful for making a set of instancing objects gradually disappear.
+
+
 Randomize
-   Randomizes the order in which the faces are built.
+---------
+
+Randomizes the order in which the faces are built.
+
 Seed
    The random seed.
    Changing this value gives a different "random" order when *Randomize* is checked.
    This order is always the same for a given seed/mesh set.
-Reversed
-   The modifier will operate in reverse, essentially allowing it to be used as a "deconstruction" effect.
-   This is useful for making a set of instancing objects gradually disappear.
 
 
 Example

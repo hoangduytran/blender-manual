@@ -35,7 +35,7 @@ Mode
 
             - .. figure:: /images/modeling_modifiers_generate_mask_panel-armature.png
 
-Inverse
+Invert
    Normally, vertices belonging to the selected vertex group (or group associated with the active pose bone)
    will be shown. The *Invert* toggle allows you to reverse this behavior, instead only showing vertices
    which do not belong to the vertex group.

@@ -39,28 +39,12 @@ Mirror Object
    (instead of using the ones from the modified object).
 
    You can animate it to animate the mirror effect.
-Vertex Groups
-   Try to mirror existing vertex groups.
-
-   A very nice feature, but one that has very specific prerequisites:
-
-   - The vertex groups you want to mirror must be named following the usual left/right pattern
-     (i.e. suffixed by something like ".R", ".right", ".L", etc.).
-   - The mirror side vertex group must already exist (it will not be created automatically).
-     It must also be completely empty (no vertices assigned to it).
-
-Merge
-   Where a vertex is in the same place (within the *Merge Limit* distance) as its mirror
-   it will be merged with the mirrored vertex.
-Merge Limit
-   The maximum distance between a vertex and its mirror copy at which they are merged together
-   (being snapped on the mirror plane). Needs *Merge* to be enabled.
 
 Clipping
    Prevents vertices from moving through the mirror plane(s) while the user is transforming them in Edit Mode.
 
-   If it is enabled but vertices are beyond the mirror plane and outside of the *Merge Limit*,
-   the vertices will not be merged. But as soon as the vertices are within *Merge Limit*
+   If it is enabled but vertices are beyond the mirror plane and outside of the *Merge Distance*,
+   the vertices will not be merged. But as soon as the vertices are within *Merge Distance*
    they are snapped together and cannot be moved beyond the mirror plane.
 
    .. note::
@@ -68,6 +52,18 @@ Clipping
       Vertices on the mirror plane will be unable to move away from the mirror plane
       as long as *Clipping* is enabled.
       You must disable it to be able to move the vertices along the mirror axis again.
+
+Merge
+   Where a vertex is in the same place (within the *Merge Distance* distance) as its mirror
+   it will be merged with the mirrored vertex.
+
+   Merge Distance
+      The maximum distance between a vertex and its mirror copy at which they are merged together
+      (being snapped on the mirror plane). Needs *Merge* to be enabled.
+
+
+Data
+----
 
 Flip UV
    With this option you can mirror the UV texture coordinates across the middle of the image.
@@ -80,6 +76,19 @@ UV Offsets
 
    It's useful for baking (as overlapping UVs can cause artifacts to appear in the baked map),
    so the UVs can be moved outside the image and not used for baking, but still be used for display.
+
+Vertex Groups
+   Try to mirror existing vertex groups.
+
+   A very nice feature, but one that has very specific prerequisites:
+
+   - The vertex groups you want to mirror must be named following the usual left/right pattern
+     (i.e. suffixed by something like ".R", ".right", ".L", etc.).
+   - The mirror side vertex group must already exist (it will not be created automatically).
+     It must also be completely empty (no vertices assigned to it).
+
+Flip UDIM
+   Mirror the texture coordinates around each tile center.
 
 
 Hints

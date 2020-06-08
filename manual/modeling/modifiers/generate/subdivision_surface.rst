@@ -53,11 +53,8 @@ Type
       (the same as the :ref:`Subdivide <bpy.ops.mesh.subdivide>` operator, in Edit Mode).
       Can be used, for example, to increase base mesh resolution when using displacement maps.
 
-Subdivisions
-   Recursively adds more geometry.
-
-   The right combination of these settings will allow you to keep a fast and lightweight approximation of your model
-   when interacting with it in the 3D Viewport, but use a higher quality version when rendering.
+Levels Viewport/Render
+   The number of subdivision levels shown in the 3D Viewport or the final render.
 
    .. warning::
 
@@ -65,38 +62,40 @@ Subdivisions
       (both system RAM, and video memory for display).
       Blender could potentially crash or hang if you do not have enough available memory.
 
-   Render
-      The number of subdivision levels shown in renders.
-   Viewport
-      The number of subdivision levels shown in the 3D Viewport.
-   Quality
-      How precisely the vertices are positioned
-      (relatively to their theoretical position of an infinitely subdivided mesh),
-      can be lowered to get a better performance.
-
-      Using higher values does not necessarily mean real improvement in quality,
-      ideal results might be reached well before the maximum *Quality* value.
-
    .. tip::
+
+      The right combination of these settings will allow you to keep a fast and lightweight approximation of your model
+      when interacting with it in the 3D Viewport, but use a higher quality version when rendering.
 
       Be careful not to set the *Viewport* subdivisions higher than the *Render* subdivisions,
       this would mean that in the 3D Viewport the quality will be higher than the rendered.
 
-Options
-   UV Smooth
-      How to handle UVs during subdivision.
+Optimal Display
+   When rendering the wireframe of this object, the wires of the new subdivided edges will be skipped
+   (only displays the edges of the original geometry).
 
-      Smooth, keep corners
-         UV islands are smoothed, but their boundary remain sharp.
-      Sharp
-         UV remain unchanged.
 
-   Optimal Display
-      When rendering the wireframe of this object, the wires of the new subdivided edges will be skipped
-      (only displays the edges of the original geometry).
+Advanced
+--------
 
-   Use Creases
-      Use the `Weighted Edge Creases`_ values stored in edges to control how smooth they are made.
+Quality
+   How precisely the vertices are positioned
+   (relatively to their theoretical position of an infinitely subdivided mesh),
+   can be lowered to get a better performance.
+
+   Using higher values does not necessarily mean real improvement in quality,
+   ideal results might be reached well before the maximum *Quality* value.
+
+UV Smooth
+   How to handle UVs during subdivision.
+
+   Smooth, keep corners
+      UV islands are smoothed, but their boundary remain sharp.
+   Sharp
+      UV remain unchanged.
+
+Use Creases
+   Use the `Weighted Edge Creases`_ values stored in edges to control how smooth they are made.
 
 
 Keyboard Shortcuts

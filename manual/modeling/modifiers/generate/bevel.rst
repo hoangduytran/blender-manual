@@ -33,6 +33,25 @@ Options
 
    The Bevel modifier.
 
+
+Width Type
+   Declares how *Width* will be interpreted to determine the amount of bevel.
+
+   .. figure:: /images/modeling_modifiers_generate_bevel_width-methods.png
+      :align: right
+      :width: 240
+
+      Width methods.
+
+   Offset
+      Value is interpreted as the distance from the original edge to the edge of the beveled face.
+   Width
+      Value is interpreted as the distance between the two new edges formed by the bevel.
+   Depth
+      Value is the perpendicular distance from the new bevel face to original edge.
+   Percent
+      Similar to *Offset* but the value is interpreted as a percentage of the adjacent edge length.
+
 Width
    The size of the bevel effect. See *Width Method* below.
 
@@ -43,38 +62,17 @@ Width
 
 Segments
    The number of edge loops added along the bevel's face.
-Profile
-   The shape of the bevel, from concave to convex. It has no effect if *Segments* is less than 2.
-Material
-   The index of the material slot to use for the bevel.
-   When set to -1, the material of the nearest original face will be used.
-Only Vertices
-   When enabled, only the areas near vertices are beveled, the edges remain unchanged.
+
+Affect
+   Edges
+      Bevels both edges and vertices.
+   Vertices
+      Only the areas near vertices are beveled, the edges remain unchanged.
 
    .. figure:: /images/modeling_modifiers_generate_bevel_cubes-vertices-only.png
       :width: 350px
 
-      Three cubes with 0.1, 0.3 and 0.5 bevel widths, with *Only Vertices* option enabled.
-
-Clamp Overlap
-   Limits the width of each beveled edge so that edges cannot cause
-   overlapping intersections with other geometry.
-Loop Slide
-   If there are unbeveled edges along with beveled edges into a vertex,
-   the bevel tries to slide along those edges when possible.
-   Turning the option off can lead to more even bevel widths.
-Mark Seams
-   If a seam edge crosses a non-seam one and you bevel all of them,
-   this option will maintain the expected propagation of seams.
-Mark Sharp
-   Similar to Mark Seams, but for sharp edges.
-Harden Normals
-   When enabled, the per-vertex face normals of the bevel faces are adjusted to
-   match the surrounding faces, and the normals of the surrounding faces are not affected.
-   This will keep the surrounding faces flat (if they were before),
-   with the bevel faces shading smoothly into them. For this effect to work,
-   you need custom normals data, which requires *Auto Smooth* option to be enabled
-   (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
+      Three cubes with 0.1, 0.3 and 0.5 bevel widths, with *Vertices* option selected.
 
 Limit Method
    Used to control where a bevel is applied to the mesh.
@@ -100,43 +98,58 @@ Limit Method
 
          The setting reverses the weight values of the group.
 
-Width Method
-   Declares how *Width* will be interpreted to determine the amount of bevel.
 
-   .. figure:: /images/modeling_modifiers_generate_bevel_width-methods.png
-      :align: right
-      :width: 240
+Profile
+-------
 
-      Width methods.
+Shape
+   The shape of the bevel, from concave to convex. It has no effect if *Segments* is less than 2.
 
-   Offset
-      Value is interpreted as the distance from the original edge to the edge of the beveled face.
-   Width
-      Value is interpreted as the distance between the two new edges formed by the bevel.
-   Depth
-      Value is the perpendicular distance from the new bevel face to original edge.
-   Percent
-      Similar to *Offset* but the value is interpreted as a percentage of the adjacent edge length.
 
-Set Face Strength Mode
-   Set *Face Strength* on the faces involved in the bevel, according to the mode specified here.
-   This can be used in conjunction with a following
-   :doc:`Weighted Normals </modeling/modifiers/modify/weighted_normal>` modifier
-   (with the *Face Influence* option checked).
+Custom Profile
+^^^^^^^^^^^^^^
 
-   None
-      Do not set face strength.
-   New
-      Set the face strength of new faces along edges to *Medium*,
-      and the face strength of new faces at vertices to *Weak*.
-   Affected
-      In addition to those set for the *New* case,
-      also set the faces adjacent to new faces to have strength *Strong*.
-   All
-      In addition to those set for the *Affected* case,
-      also set all the rest of the faces of the model to have strength *Strong*.
+.. figure:: /images/modeling_modifiers_generate_bevel_profile-widget.png
+   :align: right
+   :width: 300px
 
-Miter Patterns
+   The custom profile widget.
+
+This widget allows the creation of a user-defined profile with more complexity than
+with the single profile parameter. The modal tool allows toggling the custom profile,
+but the shape of the profile is only editable in the options panel after the operation is confirmed.
+
+The profile starts at the bottom right of the widget and ends at the top left, as if it
+were between two edges meeting at a right angle. Control points are created in the widget and
+then the path is sampled with the number of segments from the bevel modifier.
+
+Presets
+   The *Support Loops* and *Steps* presets are built dynamically depending on the number of segments in the bevel.
+   If the number of segments is changed, the preset will have to be re-applied.
+
+Reverse Path
+   The *Reverse* button flips the orientation of the profile for all beveled edges.
+Clipping
+   The *Clipping* toggle allows control points to be moved beyond the initial boundary,
+   allowing the bevel to add volume to the mesh rather than just removing it.
+
+.. note::
+
+   The *Profile* slider is still useful when miters are enabled because
+   it still controls the shape of the miter profiles.
+
+Sampling
+   Samples will first be added to each control point, then if there are enough samples,
+   they will be divided evenly between the edges. The *Sample Straight Edges* option toggles whether
+   the samples are added to edges with sharp control points on either side. If there aren't enough samples
+   to give each edge the same number of samples, they will just be added to the most curved edges,
+   so it is recommended to use at least as many segments as there are control points.
+
+
+Geometry
+--------
+
+Miter Inner/Outer
    A *miter* is formed when two beveled edges meet at an angle.
    On the side where the angle is greater than 180 degrees, if any, it is called an *outer miter*.
    If it is less than 180 degrees, then it is called an *inner miter*.
@@ -185,7 +198,7 @@ Miter Patterns
 Spread
    The value used to spread extra vertices apart for non-sharp miters.
 
-Intersection Method
+Intersections
    When more than two beveled edges meet at a vertex, a mesh is created as a way to complete the intersection
    between the generated geometry. This option controls the method used to create that mesh.
 
@@ -220,39 +233,51 @@ Intersection Method
 
              Cutoff intersection method with a center face.
 
-Custom Profile
-   .. figure:: /images/modeling_modifiers_generate_bevel_profile-widget.png
-      :align: right
-      :width: 300px
+Clamp Overlap
+   Limits the width of each beveled edge so that edges cannot cause
+   overlapping intersections with other geometry.
+Loop Slide
+   If there are unbeveled edges along with beveled edges into a vertex,
+   the bevel tries to slide along those edges when possible.
+   Turning the option off can lead to more even bevel widths.
 
-      The custom profile widget.
 
-   This widget allows the creation of a user-defined profile with more complexity than
-   with the single profile parameter. The modal tool allows toggling the custom profile,
-   but the shape of the profile is only editable in the options panel after the operation is confirmed.
+Shading
+-------
 
-   The profile starts at the bottom right of the widget and ends at the top left, as if it
-   were between two edges meeting at a right angle. Control points are created in the widget and
-   then the path is sampled with the number of segments from the bevel modifier.
+Harden Normals
+   When enabled, the per-vertex face normals of the bevel faces are adjusted to
+   match the surrounding faces, and the normals of the surrounding faces are not affected.
+   This will keep the surrounding faces flat (if they were before),
+   with the bevel faces shading smoothly into them. For this effect to work,
+   you need custom normals data, which requires *Auto Smooth* option to be enabled
+   (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
 
-   Presets
-      The *Support Loops* and *Steps* presets are built dynamically depending on the number of segments in the bevel.
-      If the number of segments is changed, the preset will have to be re-applied.
-   Reverse
-      The *Reverse* button flips the orientation of the profile for all beveled edges.
-   Clipping
-      The *Clipping* toggle allows control points to be moved beyond the initial boundary,
-      allowing the bevel to add volume to the mesh rather than just removing it.
+Mark
+   Seam
+      If a seam edge crosses a non-seam one and you bevel all of them,
+      this option will maintain the expected propagation of seams.
+   Sharp
+      Similar to Mark Seams, but for sharp edges.
 
-   .. note::
+Material Index
+   The index of the material slot to use for the bevel.
+   When set to -1, the material of the nearest original face will be used.
 
-      The *Profile* slider is still useful when miters are enabled because
-      it still controls the shape of the miter profiles.
+Face Strength
+   Set *Face Strength* on the faces involved in the bevel, according to the mode specified here.
+   This can be used in conjunction with a following
+   :doc:`Weighted Normals </modeling/modifiers/modify/weighted_normal>` modifier
+   (with the *Face Influence* option checked).
 
-   Sampling
-
-      Samples will first be added to each control point, then if there are enough samples,
-      they will be divided evenly between the edges. The *Sample Straight Edges* option toggles whether
-      the samples are added to edges with sharp control points on either side. If there aren't enough samples
-      to give each edge the same number of samples, they will just be added to the most curved edges,
-      so it is recommended to use at least as many segments as there are control points.
+   None
+      Do not set face strength.
+   New
+      Set the face strength of new faces along edges to *Medium*,
+      and the face strength of new faces at vertices to *Weak*.
+   Affected
+      In addition to those set for the *New* case,
+      also set the faces adjacent to new faces to have strength *Strong*.
+   All
+      In addition to those set for the *Affected* case,
+      also set all the rest of the faces of the model to have strength *Strong*.

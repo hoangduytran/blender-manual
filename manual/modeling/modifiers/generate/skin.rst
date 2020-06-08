@@ -30,11 +30,7 @@ Branch Smoothing
    This setting relaxes the surface around these points,
    with the side effect of shrinking it.
 
-Smooth Shading
-   Output faces with smooth shading rather than flat shading.
-   The smooth/flat shading of the input geometry is not preserved.
-
-Symmetry Axes X/Y/Z
+Symmetry
    These checkboxes are used to keep the output topology symmetrical in their respective axes.
    In other words, using it avoids merging triangles across an axis unless the triangles form a symmetric quad.
 
@@ -44,31 +40,45 @@ Symmetry Axes X/Y/Z
       For that, the :doc:`Mirror </modeling/modifiers/generate/mirror>` modifier should be used,
       typically placed above the Skin one.
 
+Smooth Shading
+   Output faces with smooth shading rather than flat shading.
+   The smooth/flat shading of the input geometry is not preserved.
+
+Create Armature
+   Create an armature on top of the object. Each edge becomes a bone.
+
+   .. note::
+
+      If the root vertex has more than one adjacent edge,
+      an extra bone will be created to serve as the root.
+
+   This tool does the following:
+
+   #. A new armature object is added with bones matching the input mesh.
+      The active selection is switched to the new armature.
+   #. Weight groups are added to the input mesh. The Skin modifier propagates these weights to the output as well.
+   #. An :doc:`Armature </modeling/modifiers/deform/armature>` modifier is added directly below the Skin one.
+      Note that the Armature modifier is being applied after
+      the Skin one because it should only deform the output,
+      whereas if it were above, it might change the resulting topology.
 
 Add Skin Data
--------------
+   This modifier uses a :ref:`custom set of data <modeling-modifiers-generate-skin-data>` in the mesh,
+   that is generated automatically when you add the modifier the first time.
 
-This modifier uses a :ref:`custom set of data <modeling-modifiers-generate-skin-data>` in the mesh,
-that is generated automatically when you add the modifier the first time.
-
-However, you may remove that data, or loose it some way or the other. That operator will generate it again.
-
-
-Selected Vertices
------------------
-
-Those operators modify the original mesh 'control data' for the Skin modifier. They help manage its behavior.
+   However, you may remove that data, or loose it some way or the other. That operator will generate it again.
 
 Mark/Clear Loose
    By default, a branch vertex (vertex with three or more connected edges)
    will generate extra edge loops along adjacent edges in order to keep the output tight.
    Branches can be made loose by clicking *Mark Loose*, which will allow the output to stretch between
    all adjacent vertices. This can be disabled again by clicking *Clear Loose*.
+
 Mark Root
    Marking a vertex as root causes that vertex to be used for calculating rotations for connected limbs.
    Root vertices also affect the armature output, they will be used as the origin for the root bones.
 
-   ..
+   .. todo
       Not true anymore:
       Roots are shown in the *3D View* with a red dashed circle around the vertex.
 
@@ -78,27 +88,6 @@ Mark Root
 
 Equalize Radii
    Makes the skin radii of selected vertices equal on each axis.
-
-
-Create Armature
----------------
-
-Create an armature on top of the object. Each edge becomes a bone.
-
-.. note::
-
-   If the root vertex has more than one adjacent edge,
-   an extra bone will be created to serve as the root.
-
-This tool does the following:
-
-#. A new armature object is added with bones matching the input mesh.
-   The active selection is switched to the new armature.
-#. Weight groups are added to the input mesh. The Skin modifier propagates these weights to the output as well.
-#. An :doc:`Armature </modeling/modifiers/deform/armature>` modifier is added directly below the Skin one.
-   Note that the Armature modifier is being applied after
-   the Skin one because it should only deform the output,
-   whereas if it were above, it might change the resulting topology.
 
 
 .. _modeling-modifiers-generate-skin-data:
