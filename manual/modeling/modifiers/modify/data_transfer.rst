@@ -17,6 +17,10 @@ to a single destination one, using interpolation.
    Transferring normals between objects,
    `see example blend-file <https://en.blender.org/uploads/a/ad/Data_Transfer_Normal_Torus.blend>`__.
 
+.. seealso::
+
+   :doc:`Data Transfer Operator </scene_layout/object/editing/relations>`
+
 
 Options
 =======
@@ -26,25 +30,12 @@ Options
 
    Data Transfer Modifier.
 
-Source Object
+Source
    Mesh object to copy data from.
 
    If the button to the right of the field is unset, both the source and the destination geometry
    is considered in global space when generating the mapping, otherwise they are evaluated
    in local space (i.e. as if both object's origins were at the same place).
-
-Max Distance
-   When the "pressure stylus" icon button to the right is enabled,
-   this is the maximum distance between source and destination to get a successful mapping.
-   If a destination item cannot find a source one within that range, then it will get no transferred data.
-
-   This allows to transfer a small sub-detailed mesh onto a more complete one
-   (e.g. from a "hand" mesh towards a "full body" one).
-
-Ray Radius
-   For ray-casting-based mapping methods, the radius of the cast rays.
-   Especially important for 1D and 2D items (i.e. vertices and edges),
-   without some width there would be nearly no ray-casting matches...
 
 Mix Mode
    Controls how destination data are affected:
@@ -195,6 +186,19 @@ Interpolated Mappings
          This is a sampling process. Several rays are cast from the whole destination's face (along its own normal),
          and if enough of them hit a source's face, all hit source faces' data are interpolated into destination one.
 
-.. seealso::
 
-   :doc:`Data Transfer Operator </scene_layout/object/editing/relations>`
+Topology Mapping
+----------------
+
+Max Distance
+   When the "pressure stylus" icon button to the right is enabled,
+   this is the maximum distance between source and destination to get a successful mapping.
+   If a destination item cannot find a source one within that range, then it will get no transferred data.
+
+   This allows to transfer a small sub-detailed mesh onto a more complete one
+   (e.g. from a "hand" mesh towards a "full body" one).
+
+Ray Radius
+   For ray-casting-based mapping methods, the radius of the cast rays.
+   Especially important for 1D and 2D items (i.e. vertices and edges),
+   without some width there would be nearly no ray-casting matches...

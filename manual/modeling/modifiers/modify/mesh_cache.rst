@@ -10,6 +10,11 @@ played back, deforming the mesh.
 This works in a similar way to :doc:`shape keys </animation/shape_keys/introduction>`,
 but is aimed at playing back external files and is often used for interchange between applications.
 
+.. tip::
+
+   Both MDD and PC2 depend on the vertex order on the mesh remaining unchanged.
+   This is a limitation of this method, so take care not to add/remove/reorder vertices once this modifier is used.
+
 
 Options
 =======
@@ -21,12 +26,9 @@ Options
 
 Format
    The input file format (currently ``.mdd`` and ``.pc2`` are supported).
+
 File Path
    Path to the cache file.
-
-
-Evaluation
-----------
 
 Influence
    Factor to adjust the influence of the modifier's deformation, useful for blending in/out from the cache data.
@@ -46,8 +48,8 @@ Interpolation
    Use linear when the frames in the cache file do not match up exactly with the frames in the blend-file.
 
 
-Time Mapping
-------------
+Time Remapping
+--------------
 
 Time Mode
    Select how time is calculated.
@@ -85,10 +87,6 @@ Axis Mapping
 
 Forward/Up Axis
    The axis for forward and up used in the source file.
+
 Flip Axis
    In rare cases you may also need to flip the coordinates on an axis.
-
-.. tip::
-
-   Both MDD and PC2 depend on the vertex order on the mesh remaining unchanged.
-   This is a limitation of this method, so take care not to add/remove/reorder vertices once this modifier is used.

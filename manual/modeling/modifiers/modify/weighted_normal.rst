@@ -38,18 +38,12 @@ Weight
    a bit like a contrast setting for a picture.
 
    A value of 50 means all faces are weighted uniformly.
-
    More than 50 means faces with higher area or angles are given even more weight (more "contrast").
-
    Less than 50 means faces with higher area or angles are given lesser weights (less "contrast").
 
 Threshold
    A weight-rounding threshold which means that, if two angles or areas differ by less than that threshold,
    they will get equal weights.
-
-Vertex Group
-   If a vertex group is specified, the modifier will only affect those vertices.
-   The "arrow" button to its right will invert the selection (only affect the vertices *not* in the vertex group).
 
 Keep Sharp
    Preserve :ref:`sharp edges <modeling_meshes_normals_sharp_edge>`,
@@ -62,3 +56,7 @@ Face Influence
 
    For example, if three faces meet at a vertex and have the face weights weak, medium, and strong,
    then only the normal associated with the strong face will be used to set the final result.
+
+Vertex Group
+   If a vertex group is specified, the modifier will only affect those vertices.
+   The "arrow" button to its right will invert the selection (only affect the vertices *not* in the vertex group).

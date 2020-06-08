@@ -29,16 +29,19 @@ Options
 UV Map
    Which UV map to modify. Defaults to the active rendering layer.
 
+Aspect X/Y
+   Modifies the image's aspect ration. Only apply when a camera is used as projector object.
+Scale X/Y
+   Scales the image. Only apply when a camera is used as projector object.
+
 Projectors
    Up to ten projector objects are supported.
    Each face will choose the closest and aligned projector with its surface normal.
    Projections emit from the negative Z axis (i.e. straight down a camera or light).
    If the projector is a camera, the projection will adhere to its perspective/orthographic setting.
-Objects
-   Specify the projector object(s).
 
-Aspect X/Y and Scale X/Y
-   These allow simple manipulation of the image. Only apply when a camera is used as projector object.
+Object
+   Specify the projector object(s).
 
 
 Usage
@@ -54,7 +57,7 @@ that the modifier targets is added to the object's material.
 
 
 ..
-   Comment: think that is no more relevant for 2.80?
+   Comment: think that is no more relevant for 2.80? (Todo)
 ..
    Perspective Cameras
    -------------------

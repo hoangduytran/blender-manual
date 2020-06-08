@@ -36,36 +36,45 @@ Options
 
 Vertex Group
    The vertex group to affect.
+
 Default Weight
    The default weight to assign to all vertices not in the given vertex group.
 
 Group Add
    Adds vertices with a final weight over *Add Threshold* to the vertex group.
+
 Group Remove
    Removes vertices with a final weight below *Remove Threshold* from the vertex group.
 
-Falloff
-   Falloff Type
-      Type of mapping.
+Normalize Weights
+   Todo.
 
-      Linear
-         No mapping.
-      Custom Curve
-         Allows the user to manually define the mapping using a curve.
-      Sharp, Smooth, Root and Sphere
-         These are classical mapping functions, from spikiest to roundest.
-      Random
-         Uses a random value for each vertex.
-      Median Step
-         Creates binary weights (0.0 or 1.0), with 0.5 as cutting value.
-   Invert ``<-->``
-      Inverts the falloff.
+
+Falloff
+-------
+
+Falloff Type
+   Type of mapping.
+
+   Linear
+      No mapping.
+   Custom Curve
+      Allows the user to manually define the mapping using a curve.
+   Sharp, Smooth, Root and Sphere
+      These are classical mapping functions, from spikiest to roundest.
+   Random
+      Uses a random value for each vertex.
+   Median Step
+      Creates binary weights (0.0 or 1.0), with 0.5 as cutting value.
+
+Invert ``<-->``
+   Inverts the falloff.
 
 
 .. _modeling-modifiers-weight-edit-influence-mask-options:
 
-Influence/Mask Options
-----------------------
+Influence
+---------
 
 Those settings are the same for the three *Vertex Weight* modifiers.
 
