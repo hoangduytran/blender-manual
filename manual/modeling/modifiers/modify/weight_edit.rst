@@ -47,7 +47,8 @@ Group Remove
    Removes vertices with a final weight below *Remove Threshold* from the vertex group.
 
 Normalize Weights
-   Todo.
+   Scale the weights in the vertex group to the keep the relative weight
+   but the lowest and highest values follow the full [0,1] range.
 
 
 Falloff

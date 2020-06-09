@@ -63,6 +63,10 @@ Highest
 
    *Lowest* can be set above *Highest* to reverse the mapping.
 
+Normalize Weights
+   Scale the weights in the vertex group to the keep the relative weight
+   but the lowest and highest values follow the full [0,1] range.
+
 
 Falloff
 -------
