@@ -49,7 +49,7 @@ Zoom :kbd:`Wheel`
    Zoom in and out with the mouse wheel.
 Scale View :kbd:`Ctrl-MMB`
    Scale the view vertically or horizontally.
-View All (Frame) :kbd:`Home`
+Frame All (Frame) :kbd:`Home`
    Fit the curve in the available space.
 
 In addition, you can also use the scrollbars to pan and zoom the view.

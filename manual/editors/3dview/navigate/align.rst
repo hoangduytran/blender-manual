@@ -54,7 +54,7 @@ Align Active Camera to View :kbd:`Ctrl-Alt-Numpad0`
 Align Active Camera to Selected
    Points the active camera toward the selected object; based on the direction of the current viewpoint.
 
-Center Cursor and View All :kbd:`Shift-C`
+Center Cursor and Frame All :kbd:`Shift-C`
    Moves the cursor back to the origin and zooms in/out so that you can see everything in your scene.
 Center View to Cursor
    Centers view to 3D cursor.

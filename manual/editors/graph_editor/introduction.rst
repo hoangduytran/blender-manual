@@ -121,7 +121,7 @@ Only Selected Curve Keyframes
    Only shows the keyframes markers on the selected curves.
 Only Selected Keyframes Handles
    Only shows the handles for the currently selected curves.
-View All :kbd:`Home`
+Frame All :kbd:`Home`
    Reset viewable area to show all keyframes.
 Frame Selected :kbd:`NumpadPeriod`
    Reset viewable area to show selected keyframes.

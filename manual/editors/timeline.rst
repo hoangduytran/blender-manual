@@ -250,7 +250,7 @@ Cache
 
       Timeline Cache.
 
-View All :kbd:`Home`
+Frame All :kbd:`Home`
    Maximize the area based on the Animation Range.
 Go to Current Frame :kbd:`Numpad0`
    Centers the Timeline to the Playhead.
