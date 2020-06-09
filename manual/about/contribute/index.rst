@@ -27,6 +27,7 @@ The following guides lead you through the process.
    editing.rst
    patch_commit.rst
    release_cycle.rst
+   todo_list.rst
 
 
 Guidelines

@@ -13,7 +13,7 @@ BioVision Motion Capture (BVH)
 Usage
 =====
 
-TODO.
+.. todo:: |TODO|
 
 
 Properties
@@ -23,7 +23,7 @@ Import
 ------
 
 Target
-   TODO.
+   .. todo:: |TODO|
 
 
 Transform
@@ -32,7 +32,7 @@ Transform
 Scale
    Factor to increase the physical size of the BVH.
 Rotation
-   TODO.
+   .. todo:: |TODO|
 Forward / Up
    Since many applications use a different axis for pointing upwards, these are axis conversion for these settings,
    Forward and up axes -- By mapping these to different axes you can convert rotations

@@ -29,6 +29,7 @@ The following guides lead you through the process.
    contribute/editing.rst
    contribute/patch_commit.rst
    contribute/release_cycle.rst
+   contribute/todo_list.rst
 
 
 Guidelines
