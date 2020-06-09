@@ -76,7 +76,7 @@ Relative Filter
    decide which to keep based on the total amount of information in the features.
    This can help to reduce artifacts, but might cause detail loss around edges.
 Passes
-   You can choose to selectively choose which
+   You can selectively choose which
    :doc:`Render Passes </render/layers/passes>` you want to denoise.
 
 

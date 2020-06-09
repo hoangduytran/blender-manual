@@ -68,7 +68,7 @@ Homogeneous Volume
    For example absorption in a glass object would typically not have any textures,
    and so the renderer can be set to avoid taking small steps to sample the volume shader.
    Usually this is automatically determined by the renderer.
-   This settings provides a manual control for cases where it is not detected.
+   This setting provides a manual control for cases where it is not detected.
 
 Step Rate
    Adjust distance between volume shader samples for volume shaders.

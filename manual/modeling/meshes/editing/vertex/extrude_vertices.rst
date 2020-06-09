@@ -36,9 +36,9 @@ To force a vertex or edge selection to extrude as a vertex or edge, respectively
    * - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_before.png
           :width: 320px
 
-          Edge selected.
+          Edges selected.
 
      - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_after.png
           :width: 320px
 
-          Edge Only extrude.
+          Edges Only extrude.

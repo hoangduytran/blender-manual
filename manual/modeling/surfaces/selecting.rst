@@ -4,7 +4,7 @@ Selecting
 *********
 
 This page discusses specific selecting tools for surface objects in Edit Mode.
-The Surface Edit more also uses the general select tools used which are described
+The Surface Edit also uses the general select tools used which are described
 in the :doc:`interface section </interface/selecting>`.
 
 Surface selection in *Edit Mode* is very similar to
@@ -29,7 +29,7 @@ All :kbd:`A`
 None :kbd:`Alt-A`
    Select none.
 Inverse :kbd:`Ctrl-I`
-   Selects all the geometry that are not selected, and deselect currently selected components.
+   Selects all the geometry that is not selected, and deselect currently selected components.
 
 ------------------------
 

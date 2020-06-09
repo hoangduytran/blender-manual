@@ -243,7 +243,7 @@ Vertices
    Of course, when only one point remains, there is no more visible curve,
    and when all points are deleted, the curve itself is deleted.
 Segment
-   Deletes the segment that connects the selected control points and disconnecting them.
+   Deletes the segment that connects the selected control points and disconnects them.
 Dissolve Vertices :kbd:`Ctrl-X`
    This feature only works for :doc:`Curves </modeling/curves/index>`.
 

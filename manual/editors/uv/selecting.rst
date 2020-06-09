@@ -82,7 +82,7 @@ Sticky Selection Mode
 Sync Selection On
 ^^^^^^^^^^^^^^^^^
 
-When selecting UVs or Edges, it behave like *Shared Vertex* mode above.
+When selecting UVs or Edges, it behaves like *Shared Vertex* mode above.
 When selecting Faces, it behaves as in *Disabled Stick Selection* above.
 
 - Vertex
