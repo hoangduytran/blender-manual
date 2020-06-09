@@ -75,7 +75,7 @@ Zoom
 
 Zoom Method
    Choose your preferred style of zooming in and out,
-   when using interactive view zoom.
+   when using interactive zoom.
 
    Scale
       *Scale* zooming depends on where you first click in the view.

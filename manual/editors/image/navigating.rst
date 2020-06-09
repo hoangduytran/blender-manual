@@ -27,7 +27,7 @@ Show Metadata
    Displays the metadata if they were set in the render tab's :doc:`/render/output/metadata` panel.
 Display Texture Paint UVs
    Toggles UVs in Paint Mode.
-View Zoom In/Out :kbd:`Wheel`
+Zoom In/Out :kbd:`Wheel`
    Adjusts the zoom level.
 Fractional Zoom
    - Zoom 1:8 :kbd:`Numpad8`
