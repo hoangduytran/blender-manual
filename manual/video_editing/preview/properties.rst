@@ -14,13 +14,13 @@ A list of metadata of the displayed image.
    By default images are processed by alpha over blending.
 
 
-Scene Preview/Render
-====================
+Scene Strip Display
+===================
 
 It allows you to control how the images of :doc:`Scene Strips </video_editing/sequencer/strips/scene>`
 are displayed in the preview.
 
-Preview Shading
+Shading
    Method for rendering the viewport.
    See the 3D Viewport's :ref:`view3d-viewport-shading` options.
 Override Scene Settings
