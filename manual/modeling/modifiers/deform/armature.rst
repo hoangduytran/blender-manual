@@ -33,7 +33,7 @@ Vertex Group
    Only meaningful when having at least two of these modifiers on the same object,
    with *Multi Modifier* activated.
 
-   Invert ("double arrow" icon)
+   Invert ``<->``
       Inverts the influence set by the vertex group defined in previous setting
       (i.e. reverses the weight values of this group).
 
@@ -110,27 +110,27 @@ Bind to
       (i.e. bones deform vertices in their neighborhood).
 
       .. list-table:: Example of skinning methods.
-
+   
          * - .. figure:: /images/modeling_modifiers_deform_armature_vertex-groups-skinning-1.png
-               :width: 320px
-
-               The weights of the "arm" vertex group.
-
+                :width: 320px
+   
+                The weights of the "arm" vertex group.
+   
            - .. figure:: /images/modeling_modifiers_deform_armature_vertex-groups-skinning-2.png
-               :width: 320px
-
-               The weights of the "forearm" vertex group.
-
+                :width: 320px
+   
+                The weights of the "forearm" vertex group.
+   
          * - .. figure:: /images/modeling_modifiers_deform_armature_vertex-groups-skinning-3.png
-               :width: 320px
-
-               The result when posing the armature.
-
+                :width: 320px
+   
+                The result when posing the armature.
+   
            - .. figure:: /images/modeling_modifiers_deform_armature_vertex-groups-skinning-4.png
-               :width: 320px
-
-               The same pose, but using envelopes method rather that vertex groups.
-
+                :width: 320px
+   
+                The same pose, but using envelopes method rather that vertex groups.
+   
       .. tip::
 
          When envelopes are disabled, Blender uses the set of existing vertex group names to

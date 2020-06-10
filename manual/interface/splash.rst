@@ -20,7 +20,7 @@ The splash screen will disappear revealing the default screen.
 To reopen the splash screen click on the Blender icon in the Topbar and select *Splash Screen*.
 
 Information Region
-   The upper part of the splash screen contains the splash image with the Blender version in the top right
+   The upper part of the splash screen contains the splash image with the Blender version in the top right.
 Interactive Region
    The interactive region is the bottom half of the splash screen.
 

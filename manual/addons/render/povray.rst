@@ -667,7 +667,7 @@ instead of numbers called ``colors.inc``, so the previous example could also be 
        pigment{
            brick color White*0.99  // color mortar
            color rgb< 0.75, 0.5, 0.30>*0.75  // color brick
-           brick_size <0.25, 0.0525, 0.125> // format in x ,y and z- direction
+           brick_size <0.25, 0.0525, 0.125> // format in x, y and z- direction
            mortar 0.01                      // size of the mortar
            scale 3
        } // end of pigment

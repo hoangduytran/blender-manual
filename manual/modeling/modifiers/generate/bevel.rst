@@ -35,7 +35,7 @@ Options
 
 
 Width Type
-   Declares how *Width* will be interpreted to determine the amount of bevel.
+   Defines how *Width* will be interpreted to determine the amount of bevel.
 
    .. figure:: /images/modeling_modifiers_generate_bevel_width-methods.png
       :align: right

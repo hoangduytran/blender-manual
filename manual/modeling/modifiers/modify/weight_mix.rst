@@ -77,9 +77,8 @@ Mix Mode
       Adds the values together, then divides by 2.
 
 Normalize Weights
-   Scale the weights in the vertex group to the keep the relative weight
-   but the lowest and highest values follow the full [0,1] range.
-
+   Scale the weights in the vertex group to keep the relative weight
+   but the lowest and highest values follow the full 0 - 1 range.
 
 
 Influence

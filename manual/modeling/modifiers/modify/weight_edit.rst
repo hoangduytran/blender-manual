@@ -47,8 +47,8 @@ Group Remove
    Removes vertices with a final weight below *Remove Threshold* from the vertex group.
 
 Normalize Weights
-   Scale the weights in the vertex group to the keep the relative weight
-   but the lowest and highest values follow the full [0,1] range.
+   Scale the weights in the vertex group to keep the relative weight
+   but the lowest and highest values follow the full 0 - 1 range.
 
 
 Falloff
@@ -60,7 +60,7 @@ Falloff Type
    Linear
       No mapping.
    Custom Curve
-      Allows the user to manually define the mapping using a curve.
+      Allows you to manually define the mapping using a curve.
    Sharp, Smooth, Root and Sphere
       These are classical mapping functions, from spikiest to roundest.
    Random

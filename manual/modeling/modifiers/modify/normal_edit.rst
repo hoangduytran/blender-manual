@@ -47,23 +47,23 @@ Mix
 Mix Mode
    How to affect existing normals with newly generated ones.
 
-   Note that the *Multiply* option is **not** a cross product, but a mere component-by-component multiplication.
+   Note that the *Multiply* option is **not** a cross product, but a faster component-by-component multiplication.
 
 Mix Factor
    How much of the generated normals get mixed into existing ones.
 
 Vertex Group
-   Allows per-item fine control of the mix factor. The vertex group influence can be inverted by using the small
-   "arrow" button to the right.
+   Allows per-item fine control of the mix factor. The vertex group influence can be inverted by using
+   the arrow button to the right.
 
 Max Angle
    Forbids new generated normals to have an angle to the original normal above that given threshold.
    This is useful to prevent extreme changes, that can even lead to inverting the front/back sides of a face,
-   and consequently to ugly shading artifacts.
+   and consequently to shading artifacts.
 
    Lock Polygon Normals (padlock icon)
       Prevents flipping (reversing front/back sides) of polygons which normal does not match anymore
-      the side to which point its corners' custom normals. Can also help avoiding shading issues.
+      the side to which point its corners' custom normals. Can also help to avoid shading issues.
 
 
 Offset

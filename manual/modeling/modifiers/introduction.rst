@@ -69,10 +69,10 @@ Show on Cage (vertices-triangle icon) -- Meshes only
    .. warning::
 
       While it shows edited items in their final, modified positions, you are still actually editing original data.
-      This can lead to weird and unpredictable effects with some tools,
+      This can lead to strong and unpredictable effects with some tools,
       and should be disabled whenever you need to perform complex or precise editing on the mesh.
 Show in Edit Mode (vertices-square icon)
-   Display the modified geometry in Edit mode, as well as the original geometry which you can edit.
+   Display the modified geometry in Edit Mode, as well as the original geometry which you can edit.
 Show in Viewport (screen icon)
    Toggle visibility of the modifier's effect in the 3D Viewport.
 Render (camera icon)

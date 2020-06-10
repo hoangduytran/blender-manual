@@ -5,8 +5,8 @@ Editing
 
 .. _bpy.ops.anim.keyframe_insert:
 
-Insert Keyframes
-================
+Insert Keyframe
+===============
 
 .. admonition:: Reference
    :class: refbox

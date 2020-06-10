@@ -14,28 +14,29 @@ App Menu
 Splash Screen
    Open the :ref:`splash`.
 About Blender
-  Opens a menu displaying information about Blender.
-     Version
-        The Blender version.
-     Date
-        Date when Blender was compiled.
-     Hash
-        The Git Hash of the build. This can be useful to give to support personal
-        when diagnosing a problem.
-     Branch
-        Optional branch name.
-     Release Notes
-         Open the latest release notes.
-     Credits
-        Open credits website.
-     License
-        Open License website.
-     Blender Website
-        Open main Blender website.
-     Blender Store
-        Open the Blender store.
-     Development Fund
-        Open the developer fund website.
+   Opens a menu displaying information about Blender.
+
+   Version
+      The Blender version.
+   Date
+      Date when Blender was compiled.
+   Hash
+      The Git Hash of the build. This can be useful to give to
+      support personal when diagnosing a problem.
+   Branch
+      Optional branch name.
+   Release Notes
+       Open the latest release notes.
+   Credits
+      Open credits website.
+   License
+      Open License website.
+   Blender Website
+      Open main Blender website.
+   Blender Store
+      Open the Blender store.
+   Development Fund
+      Open the developer fund website.
 Install Application Template
    Install a new :ref:`application template <app_templates>`.
 

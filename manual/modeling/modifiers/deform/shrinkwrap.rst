@@ -102,7 +102,7 @@ Axis
 
 Negative/Positive
    This allows you to select the allowed direction(s) of the shrink along the selected axis.
-   If both options are enabled, the modifier tries both ways and selects the closest hit.
+   If both options are enabled, both ways are evaluated and the closest hit is selected.
 
 Face Cull
    Allows you to prevent any projection over the "front side"

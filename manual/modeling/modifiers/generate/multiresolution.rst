@@ -72,7 +72,7 @@ Advanced
 
 Quality
    How precisely the vertices are positioned (relatively to their theoretical position),
-   can be lowered to get a better performance when working on heavy meshes.
+   can be lowered to get a better performance when working on high-poly meshes.
 
 UV Smooth
    How to handle UVs during subdivision.

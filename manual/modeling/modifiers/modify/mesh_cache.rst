@@ -13,7 +13,8 @@ but is aimed at playing back external files and is often used for interchange be
 .. tip::
 
    Both MDD and PC2 depend on the vertex order on the mesh remaining unchanged.
-   This is a limitation of this method, so take care not to add/remove/reorder vertices once this modifier is used.
+   This is a limitation of this method, so take care not to add, remove or reorder vertices
+   once this modifier is used.
 
 
 Options

@@ -35,7 +35,8 @@ Replace Original
 
 Thickness
    Even
-      Maintain thickness by adjusting for sharp corners. Sometimes improves quality but also increases computation time.
+      Maintain thickness by adjusting for sharp corners.
+      Sometimes improves quality but also increases computation time.
    Relative
       Determines the edge thickness by the length of the edge. Longer edges will be thicker.
 
@@ -56,6 +57,7 @@ Material Offset
    Wireframe thickness is an approximation. While *Even Thickness* should yield good results in many cases,
    skinny faces can cause ugly spikes. In this case you can either reduce the extreme angles in the geometry
    or disable the *Even Thickness* option.
+
 
 Vertex Group
 ------------

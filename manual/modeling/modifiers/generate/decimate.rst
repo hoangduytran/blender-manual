@@ -110,4 +110,4 @@ Delimit
 
 All Boundaries
    When enabled, all vertices along the boundaries of faces are dissolved.
-   This can give nicer results when using a high *Angle Limit*.
+   This can give better results when using a high *Angle Limit*.

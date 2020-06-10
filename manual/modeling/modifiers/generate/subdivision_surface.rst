@@ -58,17 +58,17 @@ Levels Viewport/Render
 
    .. warning::
 
-      Higher levels of subdivisions results in more vertices, which means more memory will be occupied
+      Higher levels of subdivisions results in more vertices, which means higher memory consumption
       (both system RAM, and video memory for display).
-      Blender could potentially crash or hang if you do not have enough available memory.
+      This can cause Blender to hang or crash if not enough memory is available.
 
    .. tip::
 
-      The right combination of these settings will allow you to keep a fast and lightweight approximation of your model
-      when interacting with it in the 3D Viewport, but use a higher quality version when rendering.
+      The right combination of these settings will allow you to keep a fast and lightweight approximation of
+      your model when interacting with it in the 3D Viewport, but use a higher quality version when rendering.
 
       Be careful not to set the *Viewport* subdivisions higher than the *Render* subdivisions,
-      this would mean that in the 3D Viewport the quality will be higher than the rendered.
+      this would mean that the quality in the 3D Viewport will be higher than the rendered.
 
 Optimal Display
    When rendering the wireframe of this object, the wires of the new subdivided edges will be skipped

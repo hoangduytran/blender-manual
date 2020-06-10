@@ -129,8 +129,8 @@ and to what extent, using a texture.
 See :ref:`common masking options <modifiers-common-options-masking>` for a complete reference.
 
 
-Technical Details and Hints
-===========================
+Technical Details & Hints
+=========================
 
 The relationship of the above values is described here:
 

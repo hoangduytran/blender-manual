@@ -38,10 +38,10 @@ Mirror Object
    which position and rotation will be used to define mirror planes
    (instead of using the ones from the modified object).
 
-   You can animate it to animate the mirror effect.
+   You can animate it to move the mirror axis.
 
 Clipping
-   Prevents vertices from moving through the mirror plane(s) while the user is transforming them in Edit Mode.
+   Prevents vertices from moving through the mirror plane(s) when you transform them in Edit Mode.
 
    If it is enabled but vertices are beyond the mirror plane and outside of the *Merge Distance*,
    the vertices will not be merged. But as soon as the vertices are within *Merge Distance*
@@ -54,7 +54,7 @@ Clipping
       You must disable it to be able to move the vertices along the mirror axis again.
 
 Merge
-   Where a vertex is in the same place (within the *Merge Distance* distance) as its mirror
+   Where a vertex is in the same place (within the *Merge Distance*) as its mirror
    it will be merged with the mirrored vertex.
 
    Merge Distance
@@ -78,12 +78,10 @@ UV Offsets
    so the UVs can be moved outside the image and not used for baking, but still be used for display.
 
 Vertex Groups
-   Try to mirror existing vertex groups.
-
-   A very nice feature, but one that has very specific prerequisites:
+   Try to mirror existing vertex groups, with the following specific prerequisites:
 
    - The vertex groups you want to mirror must be named following the usual left/right pattern
-     (i.e. suffixed by something like ".R", ".right", ".L", etc.).
+     (i.e. with suffixes like ".R", ".right", ".L", etc.).
    - The mirror side vertex group must already exist (it will not be created automatically).
      It must also be completely empty (no vertices assigned to it).
 

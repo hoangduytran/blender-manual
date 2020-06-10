@@ -32,10 +32,12 @@ Mode
          will not be able to solidify the boundary between those. This happens if the normals
          are not recalculated or for example on one-sided surfaces like a Möbius strip.
    Complex
-      This is a new solidify algorithm which can handle every geometric situation to guarantee a manifold output geometry.
-      This algorithm is able to solidify shapes like Möbius strips, Klein bottles, architectural wall layouts and many more
-      which the standard implementation isn't able to do. If the special cases are not present it is recommended to
-      choose *Simple Mode* because the extra logic makes this algorithm much slower.
+      This is a solidify algorithm which can handle every geometric situation
+      to guarantee a manifold output geometry. This algorithm is able to
+      solidify shapes like Möbius strips, Klein bottles, architectural wall layouts
+      and many more which the *Simple Mode* isn't able to do.
+      If the special cases are not present it is recommended to choose *Simple*
+      because the extra logic makes this algorithm much slower.
 
       .. note::
 
@@ -44,7 +46,7 @@ Mode
          work with the :doc:`Subdivision Surface </modeling/modifiers/generate/subdivision_surface>` modifier.
 
 Thickness Mode :guilabel:`Complex Mode`
-   Choose the kind of thickness handling (thickness solver)
+   Choose the kind of thickness handling (thickness solver).
 
    .. figure:: /images/modeling_modifiers_generate_solidify_thickness-mode.png
 
@@ -57,8 +59,8 @@ Thickness Mode :guilabel:`Complex Mode`
       This is similar to *Simple Mode* with *Even Thickness* and *High Quality Normals*.
       It adjusts for sharp corners, but may not always work when more than three faces come together.
    Constraints
-      This is a more advanced model to try to always get the perfect thickness everywhere.
-      For up to three faces it is always guaranteed to find a perfect solution.
+      This is a more advanced model to try to always get the optimal thickness everywhere.
+      For up to three faces it is always guaranteed to find a optimal solution.
 
 Boundary :guilabel:`Complex Mode`
    Choose the kind of boundary that suits the model the most.
@@ -122,8 +124,8 @@ Vertex Group
       - On 1.0 , the weights are ignored and the *Thickness* value is used for every vertex.
 
    Flat Faces :guilabel:`Complex Mode`
-      Make faces use the minimal vertex weight assigned to their vertices to ensure that
-      new faces remain parallel to their original ones. This is slow, so disable it when it is not needed.
+      Use the minimal vertex weight assigned to the vertices of a face to make sure that
+      new faces stays parallel to their original ones. This is slow, so disable it when it is not needed.
 
 
 Normals

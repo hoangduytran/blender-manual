@@ -76,8 +76,7 @@ Select Grouped
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Grouped --> Layer`
-               :menuselection:`Select --> Grouped --> Material`
+   :Menu:      :menuselection:`Select --> Grouped`
    :Hotkey:    :kbd:`Shift-G`
 
 Layer
@@ -95,7 +94,7 @@ Select Vertex Color
    :class: refbox
 
    :Mode:      Vertex Paint Mode
-   :Menu:      :menuselection:`Select --> First/Last`
+   :Menu:      :menuselection:`Select --> Vertex Color`
 
 Selects all points with a similar vertex color as the current selection.
 

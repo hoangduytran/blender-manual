@@ -80,7 +80,7 @@ Mark Root
 
    .. todo
       Not true anymore:
-      Roots are shown in the *3D View* with a red dashed circle around the vertex.
+      Roots are shown in the *3D Viewport* with a red dashed circle around the vertex.
 
    Each set of connected vertices should have one root node
    (one is selected by default if you do not assign any manually).
