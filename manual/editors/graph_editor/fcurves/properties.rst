@@ -96,7 +96,7 @@ Key Value
    Set the value for the active keyframe.
 Frame
    Set the frame for the active keyframe.
-Left/Right Handle X/Y
+Left/Right Handle Frame/Value
    Set the position of the left/right interpolation handle for the active keyframe.
 
    Type
