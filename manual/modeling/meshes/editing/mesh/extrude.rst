@@ -50,7 +50,7 @@ Extrude Repeat
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Extrude --> Extrude Array`
+   :Menu:      :menuselection:`Mesh --> Extrude --> Extrude Repeat`
 
 This tool behaves similar to the :doc:`/modeling/modifiers/generate/array`,
 by extruding the selection along the Z axis of the view.

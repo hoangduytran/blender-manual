@@ -7,32 +7,31 @@ Primitives
    :class: refbox
 
    :Mode:      Object Mode and Edit Mode
-   :Tool:      :menuselection:`Toolbar --> Create --> Add Primitive/Metaball`
-   :Menu:      :menuselection:`Add --> Meta`
+   :Menu:      :menuselection:`Add --> Metaball`
    :Hotkey:    :kbd:`Shift-A`
 
-There are five predefined meta "primitives" (or configurations)
-available in the :menuselection:`Add --> Meta` submenu:
+There are five predefined metaball "primitives" (or configurations)
+available in the :menuselection:`Add --> Metaball` submenu:
 
 .. figure:: /images/modeling_metas_primitives_all-five.png
    :width: 620px
 
-   The five Meta primitives.
+   The five Metaball primitives.
 
 
 Options
 =======
 
 Primitive
-   Meta Ball
+   Ball
       Adds a meta with a point underlying structure.
-   Meta Capsule
+   Capsule
       Adds a meta with a line segment underlying structure.
-   Meta Plane
+   Plane
       Adds a meta with a planar underlying structure.
-   Meta Ellipsoid
+   Ellipsoid
       Adds a meta with an ellipsoidal underlying structure.
-   Meta Cube
+   Cube
       Adds a meta with a volumetric cubic underlying structure.
 
    .. seealso::

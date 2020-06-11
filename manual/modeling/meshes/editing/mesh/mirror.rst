@@ -7,7 +7,7 @@ Mirror
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Mirror --> Desired Axis`
+   :Menu:      :menuselection:`Mesh --> Mirror`
    :Hotkey:    :kbd:`Ctrl-M`
 
 The Mirror tool mirrors a selection across a selected axis.

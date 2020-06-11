@@ -140,7 +140,7 @@ Action Clip
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Sidebar region --> Animations --> Active Clip`
+   :Panel:     :menuselection:`Sidebar region --> Animations --> Action Clip`
 
 .. figure:: /images/editors_nla_properties-modifiers_action-clip-panel.png
 

@@ -8,8 +8,8 @@ loaded from another blend-file.
 You can build libraries of common content and share them across multiple referencing files.
 
 
-Append and Link
-===============
+Append & Link
+=============
 
 .. admonition:: Reference
    :class: refbox

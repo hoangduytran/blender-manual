@@ -8,7 +8,7 @@ Subdivide Edge-Ring
    :class: refbox
 
    :Mode:      Edit Mode
-   :Panel:     :menuselection:`Mesh --> Edges --> Subdivide Edge-Ring`
+   :Panel:     :menuselection:`Edge --> Subdivide Edge-Ring`
 
 Take an edge ring, and subdivide with interpolation options.
 

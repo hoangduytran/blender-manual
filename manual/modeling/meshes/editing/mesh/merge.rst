@@ -31,7 +31,6 @@ At Cursor
 Collapse
    Every island of selected vertices (connected by selected edges) will merge on its own median center,
    leaving one vertex per island.
-   It is also available via the :menuselection:`Mesh --> Edges --> Collapse` menu.
 
 Merging vertices of course also deletes some edges and faces. But Blender will do everything
 it can to preserve edges and faces only partly involved in the reunion.

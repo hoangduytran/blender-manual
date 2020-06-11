@@ -6,8 +6,8 @@ Loop Subdivide
 
 .. _tool-mesh-loop_cut:
 
-Loop Cut and Slide
-==================
+Loop Cut
+========
 
 .. admonition:: Reference
    :class: refbox

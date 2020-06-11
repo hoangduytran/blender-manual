@@ -8,7 +8,7 @@ Wireframe
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Wire frame`
+   :Menu:      :menuselection:`Face --> Wire Frame`
 
 The Wireframe tool makes a wireframe from faces by turning edges into wireframe tubes,
 similar to the :doc:`/modeling/modifiers/generate/wireframe`.

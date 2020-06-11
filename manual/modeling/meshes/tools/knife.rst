@@ -1,9 +1,9 @@
 .. _bpy.ops.mesh.knife:
 .. _tool-mesh-knife:
 
-**********
-Knife Tool
-**********
+*****
+Knife
+*****
 
 .. admonition:: Reference
    :class: refbox

@@ -23,8 +23,8 @@ Some tools may be available in more than one mode while others may be unique to 
 Edit Mode
 ---------
 
-Edit mode is the main mode where modeling takes place.
-Edit mode is used to edit the following types of objects:
+Edit Mode is the main mode where modeling takes place.
+Edit Mode is used to edit the following types of objects:
 
 - Meshes
 - Curves

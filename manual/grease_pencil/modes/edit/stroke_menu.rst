@@ -340,6 +340,6 @@ Reset Fill Transform
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Stroke --> Reset Fill Tranform`
+   :Menu:      :menuselection:`Stroke --> Reset Fill Transform`
 
 Reset all fill translation, scaling and rotations in the selected strokes.

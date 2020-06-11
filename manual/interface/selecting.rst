@@ -30,7 +30,7 @@ or keyframes in an animation editor will general move the item with the mouse.
 .. _tool-select-box:
 .. _bpy.ops.*.select_box:
 
-Select Box
+Box Select
 ----------
 
 .. admonition:: Reference
@@ -73,7 +73,7 @@ For deselecting items, use :kbd:`MMB`, or :kbd:`Shift-LMB`.
 .. _bpy.ops.*.select_circle:
 .. _tool-select-circle:
 
-Select Circle
+Circle Select
 -------------
 
 .. admonition:: Reference
@@ -110,7 +110,7 @@ or use the :kbd:`NumpadPlus` and :kbd:`NumpadMinus` keys.
 .. _bpy.ops.*.select_lasso:
 .. _tool-select-lasso:
 
-Select Lasso
+Lasso Select
 ------------
 
 .. admonition:: Reference

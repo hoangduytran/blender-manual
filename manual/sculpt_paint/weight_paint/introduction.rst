@@ -93,7 +93,7 @@ Vertex group locking
 
    In locations affected by more than two bones this allows more precise tweaking and re-balancing of
    weights by temporarily focusing on a subset of bones. This can also be aided by
-   the :ref:`LockRelative <weight-painting-auto-normalize>` option, which displays weights as
+   the :ref:`Lock Relative <weight-painting-auto-normalize>` option, which displays weights as
    if re-normalized with the locked groups deleted, thus making it appear as if the locked groups didn't even exist.
 
 Multi-Paint

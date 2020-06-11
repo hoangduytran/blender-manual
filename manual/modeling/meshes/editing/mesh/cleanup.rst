@@ -111,8 +111,8 @@ by splitting the concave into two or more convex faces.
 
 .. _bpy.ops.mesh.delete_loose:
 
-Delete Loose Geometry
-=====================
+Delete Loose
+============
 
 .. admonition:: Reference
    :class: refbox

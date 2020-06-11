@@ -105,7 +105,7 @@ These keys are shared across editors such as the 3D Viewport, UV and Graph edito
    * - :kbd:`Ctrl-AccentGrave`
      - Toggle gizmos.
    * - :kbd:`Shift-AccentGrave`
-     - Walk/Fly Mode.
+     - Walk/Fly Navigation.
 
 
 Platform Specific Keys
@@ -199,7 +199,7 @@ Pie Menu on Drag
       :tap: Toggles wireframe view.
       :drag: Display mode pie menu.
    :kbd:`AccentGrave`
-      :tap: First person :ref:`Fly/walk mode <3dview-fly-walk>`.
+      :tap: First person :ref:`Fly/walk Navigation <3dview-fly-walk>`.
       :drag: View axis pie menu.
 Extra Shading Pie Menu Items
    Show additional items in the shading menu (:kbd:`Z` key).

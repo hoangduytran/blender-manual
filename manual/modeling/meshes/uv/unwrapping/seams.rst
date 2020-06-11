@@ -36,16 +36,16 @@ The workflow is the following:
 
 .. _bpy.ops.uv.mark_seam:
 
-Marking Seams
-=============
+Mark Seam
+=========
 
 .. admonition:: Reference
    :class: refbox
 
    :Editor:    3D View
-   :Mode:      Edit mode
-   :Tool:      :menuselection:`Toolbar --> Shading/UV --> UVs --> UV Mapping: Mark/Clear Seam`
-   :Menu:      :menuselection:`Mesh --> Edges --> Mark/Clear Seam`
+   :Mode:      Edit Mode
+   :Tool:      :menuselection:`UVs --> Mark/Clear Seam`
+   :Menu:      :menuselection:`Edge --> Mark/Clear Seam`
 
 .. admonition:: Reference
    :class: refbox
@@ -101,14 +101,14 @@ the right side of the face will match the left, etc.
 
 .. _bpy.ops.uv.seams_from_islands:
 
-Mark Seams from Island
-----------------------
+Seams from Islands
+------------------
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      View mode
-   :Menu:      :menuselection:`UVs --> Seams from Island`
+   :Menu:      :menuselection:`UVs --> Seams from Islands`
 
 Adds seams at the boundaries of existing UV islands.
 This is useful when modifying the UVs of already unwrapped meshes.

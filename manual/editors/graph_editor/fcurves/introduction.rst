@@ -203,8 +203,8 @@ Ease In Out
 
 .. _editors-graph-fcurves-settings-extrapolation:
 
-Extrapolation
--------------
+Extrapolation Mode
+------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -239,8 +239,8 @@ are located in the :doc:`F-Curve Modifiers </editors/graph_editor/fcurves/modifi
 
 .. _editors-graph-fcurves-settings-handles:
 
-Handle Types
-------------
+Handle Type
+-----------
 
 .. admonition:: Reference
    :class: refbox

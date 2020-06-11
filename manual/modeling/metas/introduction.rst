@@ -3,14 +3,7 @@
 Introduction
 ************
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Object or Edit Modes
-   :Menu:      :menuselection:`Add --> Meta`
-   :Hotkey:    :kbd:`Shift-A`
-
-*Meta* objects are *implicit surfaces*,
+Metaball objects (short meta) are *implicit surfaces*,
 meaning that they are *not explicitly* defined by vertices (as meshes are)
 or control points (as surfaces are): they exist *procedurally*.
 Meta objects are literally mathematical formulas that are calculated on-the-fly by Blender.
@@ -47,7 +40,7 @@ In Object Mode, the calculated mesh is shown, along with a black "selection ring
 .. figure:: /images/modeling_metas_introduction_influence-selection.png
    :width: 450px
 
-   Meta Ball in Edit mode.
+   Meta Ball in Edit Mode.
 
 In Edit Mode (Fig. :ref:`fig-meta-ball-example`), a meta is displayed as a mesh
 (either shaded or as black wireframe, but without any vertex of course),

@@ -9,8 +9,8 @@ Transform
 Strokes can be edited by transforming the locations of points.
 
 
-Translation, Rotation, Scale
-----------------------------
+Move, Rotate & Scale
+--------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -167,7 +167,7 @@ Copy the selected points/strokes to the clipboard.
 
 .. _bpy.ops.gpencil.paste:
 
-Paste / Paste by Layer
+Paste & Paste by Layer
 ======================
 
 .. admonition:: Reference

@@ -109,7 +109,7 @@ while remaining in camera view. Controls are exactly the same as when normally m
 
 .. seealso::
 
-   :ref:`Fly/Walk Mode <3dview-fly-walk>` for first person navigation that moves the active camera too.
+   :ref:`Fly/Walk Navigation <3dview-fly-walk>` for first person navigation that moves the active camera too.
 
 
 Roll, Pan, Dolly, and Track

@@ -40,7 +40,7 @@ Text
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`3D Viewport --> Edit`
+   :Menu:      :menuselection:`3D Viewport --> Text`
 
 Editing text objects is similar to using a standard text editor but is not as
 full-featured and has some differences.

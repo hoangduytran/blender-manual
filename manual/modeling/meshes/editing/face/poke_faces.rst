@@ -8,7 +8,7 @@ Poke Faces
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Faces --> Poke Face`
+   :Menu:      :menuselection:`Faces --> Poke Faces`
 
 Splits each selected faces into a triangle fan,
 creating a new center vertex and triangles between the original face edges

@@ -98,7 +98,7 @@ Editing Vertex Groups
 
 When you switch either to Edit Mode or to Weight Paint Mode, vertex weights can be edited.
 The same operations are available in the 3D Views
-:menuselection:`Mesh --> Vertices --> Vertex Groups` menu or :kbd:`Ctrl-G`.
+:menuselection:`Vertex --> Vertex Groups` menu or :kbd:`Ctrl-G`.
 
 Assign
    To assign the selected vertices to the active group with the weight as defined in the *Weight* (see below).

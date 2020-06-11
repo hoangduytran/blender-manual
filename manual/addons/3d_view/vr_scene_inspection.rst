@@ -6,7 +6,7 @@ VR Scene Inspection
 The :abbr:`VR (Virtual Reality)` Scene Inspection add-on exposes and extends
 the native virtual reality features of Blender in the user interface.
 The feature set is limited to scene inspection use cases.
-More advanced use-cases may be enabled through further development inside of Blender.
+More advanced use cases may be enabled through further development inside of Blender.
 
 VR support in Blender is based on the OpenXR specification and requires some set up steps.
 These are explained in the :ref:`Head-Mounted Displays (HMD) <hardware-head-mounted-displays>` section.

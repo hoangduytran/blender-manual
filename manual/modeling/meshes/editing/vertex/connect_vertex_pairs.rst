@@ -8,7 +8,7 @@ Connect Vertex Pairs
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Vertices --> Connect Vertices`
+   :Menu:      :menuselection:`Vertex --> Connect Vertex Pairs`
 
 This tool connects selected vertices by creating edges between them and splitting the face.
 It can be used on many faces at once.

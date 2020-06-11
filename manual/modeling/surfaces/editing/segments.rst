@@ -3,8 +3,8 @@
 Segments
 ********
 
-Subdivision
-===========
+Subdivide
+=========
 
 .. admonition:: Reference
    :class: refbox

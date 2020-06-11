@@ -110,27 +110,27 @@ Bind to
       (i.e. bones deform vertices in their neighborhood).
 
       .. list-table:: Example of skinning methods.
-   
+
          * - .. figure:: /images/modeling_modifiers_deform_armature_vertex-groups-skinning-1.png
                 :width: 320px
-   
+
                 The weights of the "arm" vertex group.
-   
+
            - .. figure:: /images/modeling_modifiers_deform_armature_vertex-groups-skinning-2.png
                 :width: 320px
-   
+
                 The weights of the "forearm" vertex group.
-   
+
          * - .. figure:: /images/modeling_modifiers_deform_armature_vertex-groups-skinning-3.png
                 :width: 320px
-   
+
                 The result when posing the armature.
-   
+
            - .. figure:: /images/modeling_modifiers_deform_armature_vertex-groups-skinning-4.png
                 :width: 320px
-   
+
                 The same pose, but using envelopes method rather that vertex groups.
-   
+
       .. tip::
 
          When envelopes are disabled, Blender uses the set of existing vertex group names to

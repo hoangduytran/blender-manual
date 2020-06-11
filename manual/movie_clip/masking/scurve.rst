@@ -33,7 +33,8 @@ Primitives
 .. admonition:: Reference
    :class: refbox
 
-   :Tool:      :menuselection:`Toolbar --> Mask --> Add`
+   :Mode:      Mask Mode
+   :Tool:      :menuselection:`Add`
    :Hotkey:    :kbd:`Shift-A`
 
 There are two primitives available: a Bézier Circle and a Square with vector handles.

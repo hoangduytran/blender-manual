@@ -34,8 +34,7 @@ Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/uv/unwr
 Useful for organic shapes.
 
 Begin by selecting all faces you want to unwrap.
-In the 3D Viewport, select :menuselection:`Mesh --> UV Unwrap --> Unwrap` or
-:kbd:`U` and select Unwrap.
+In the 3D Viewport, select :menuselection:`UV --> Unwrap` or :kbd:`U` and select Unwrap.
 You can also do this from the UV Editor with :menuselection:`UVs --> Unwrap` or :kbd:`U`.
 This method will unwrap all faces and reset previous work.
 The UVs menu will appear in the UV Editor after unwrapping has been performed once.

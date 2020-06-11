@@ -16,8 +16,8 @@ A new system, more powerful and flexible, is currently being implemented:
 :doc:`Library Overrides </files/linked_libraries/library_overrides>`.
 
 
-Proxy Objects
-=============
+Make Proxy
+==========
 
 .. admonition:: Reference
    :class: refbox

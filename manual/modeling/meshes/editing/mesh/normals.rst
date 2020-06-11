@@ -21,8 +21,8 @@ Normals
 
 .. _bpy.ops.mesh.flip_normals:
 
-Flip Direction
-==============
+Flip
+====
 
 .. admonition:: Reference
    :class: refbox
@@ -38,8 +38,8 @@ as only the selected faces are flipped.
 
 .. _bpy.ops.mesh.normals_make_consistent:
 
-Recalculate Normals
-===================
+Recalculate
+===========
 
 .. admonition:: Reference
    :class: refbox
@@ -58,7 +58,7 @@ For example, with a *Grid* primitive, recalculating normals does not have a mean
 
 .. _bpy.ops.mesh.set_normals_from_faces:
 
-Set From Faces
+Set from Faces
 ==============
 
 .. admonition:: Reference

@@ -19,8 +19,8 @@ or as large as an entire image. You probably want to make major adjustments firs
 and then tweak the layout.
 
 
-Transforms
-==========
+Transform
+=========
 
 .. admonition:: Reference
    :class: refbox
@@ -107,8 +107,8 @@ with Live Unwrap on, dragging pinned UVs will interactively unwrap the model.
 This helps with fitting a UV island to a certain shape or region.
 
 
-Seams
-=====
+Mark/Clear Seams
+================
 
 .. admonition:: Reference
    :class: refbox
@@ -365,7 +365,7 @@ This is an :doc:`add-on </addons/import_export/mesh_uv_layout>` activated by def
 .. _bpy.ops.mesh.uvs_reverse:
 .. _uv-image-rotate-reverse-uvs:
 
-Face Mirror & Rotate UVs
+Rotate UVs & Reverse UVs
 ------------------------
 
 .. admonition:: Reference
@@ -373,7 +373,7 @@ Face Mirror & Rotate UVs
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Face --> Rotate UVs/Reverse UVs`
+   :Menu:      :menuselection:`Face --> Face Data --> Rotate UVs/Reverse UVs`
 
 The orientation of the UV texture is defined by each face.
 If the image is, for example, upside down or laying on its side,

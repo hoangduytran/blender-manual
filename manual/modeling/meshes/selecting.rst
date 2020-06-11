@@ -20,8 +20,7 @@ Select Mode Header Buttons
    :Mode:      Edit Mode
    :Menu:      :menuselection:`3D Viewport Header --> Select Mode`
    :Hotkey:    :kbd:`1`, :kbd:`2`, :kbd:`3`
-               (:kbd:`Shift`
-               `Multiple Selection Modes`_,
+               (:kbd:`Shift` `Multiple Selection Modes`_,
                :kbd:`Ctrl` `Expand/Contract Selection`_).
 
 .. figure:: /images/modeling_meshes_selecting_mode-buttons.png
@@ -495,8 +494,8 @@ selects a *Face Loop* since selecting opposite edges of a face implicitly select
 the entire face.
 
 
-Edge Ring
----------
+Edge Rings
+----------
 
 .. admonition:: Reference
    :class: refbox

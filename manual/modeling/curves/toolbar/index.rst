@@ -4,7 +4,7 @@
 Toolbar
 *******
 
-Curve Edit mode tools:
+Curve Edit Mode tools:
 
 :ref:`Select <tool-select-tweak>`
    Select or move.

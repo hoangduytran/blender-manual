@@ -8,7 +8,7 @@ Selecting
 .. figure:: /images/modeling_texts_selecting_cursor.png
    :width: 340px
 
-   Text in Edit mode.
+   Text in Edit Mode.
 
 In Edit Mode, your text has a white cursor, and as in any text editor,
 it determines where new chars will be inserted.

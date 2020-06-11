@@ -10,7 +10,7 @@ Shrink Fatten
 
    :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Shrink/Fatten`
-   :Menu:      :menuselection:`Mesh --> Transform --> Shrink/Fatten`
+   :Menu:      :menuselection:`Mesh --> Transform --> Shrink Fatten`
    :Hotkey:    :kbd:`Alt-S`
 
 This tool moved selected vertices/edges/faces along their own normal

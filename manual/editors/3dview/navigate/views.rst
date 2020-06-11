@@ -10,8 +10,8 @@ These views can change how the overall 3D Viewport looks or how you interact wit
 .. _bpy.ops.view3d.localview:
 .. _editors-3dview-navigate-views-local:
 
-View Global/Local
-=================
+Local View
+==========
 
 .. admonition:: Reference
    :class: refbox

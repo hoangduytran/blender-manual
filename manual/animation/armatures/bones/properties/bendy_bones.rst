@@ -57,7 +57,7 @@ Rest Pose
 The initial shape of a B-Bone can be defined in Edit Mode as a rest pose of that bone.
 This is useful for curved facial features like curved eyebrows or mouths.
 
-B-Bones have two sets of the Bendy Bone properties -- one for Edit mode (i.e. the Rest Pose/Base Rig) and
+B-Bones have two sets of the Bendy Bone properties -- one for Edit Mode (i.e. the Rest Pose/Base Rig) and
 another for Pose Mode -- adding together their values to get the final transforms.
 
 

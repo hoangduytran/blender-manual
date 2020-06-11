@@ -163,8 +163,8 @@ Square
 
 .. _bpy.ops.graph.frame_jump:
 
-Jump to Keyframe
-================
+Jump to Keyframes
+=================
 
 .. admonition:: Reference
    :class: refbox
@@ -249,7 +249,7 @@ Handle Type
 .. admonition:: Reference
    :class: refbox
 
-   :Menu:      :menuselection:`Key --> Handle Types`
+   :Menu:      :menuselection:`Key --> Handle Type`
    :Hotkey:    :kbd:`V`
 
 Sets the :ref:`handle type <editors-graph-fcurves-settings-handles>` of the selected keyframes.

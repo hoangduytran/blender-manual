@@ -26,8 +26,8 @@ Because of its mathematical nature, CSG uses little memory, but requires lots of
    The Wikipedia page about `metaballs <https://en.wikipedia.org/wiki/Metaballs>`__.
 
 
-Underlying Structure
-====================
+Type
+====
 
 .. admonition:: Reference
    :class: refbox

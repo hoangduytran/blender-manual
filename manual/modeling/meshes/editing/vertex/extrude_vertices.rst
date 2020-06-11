@@ -8,7 +8,8 @@ Extrude Vertices
    :class: refbox
 
    :Mode:      Edit Mode, Vertex and Edge
-   :Menu:      :menuselection:`Mesh --> Extrude --> Extrude Edges/Vertices Only`
+   :Menu:      :menuselection:`Vertex --> Extrude Vertices`,
+               :menuselection:`Edge --> Extrude Edges`
    :Hotkey:    :kbd:`Alt-E`
 
 If vertices are selected while doing an extrude, but they do not form an edge or face,
@@ -19,7 +20,7 @@ When a selection of vertices forms an edge or face,
 it will extrude as if the edge was selected. Likewise for edges that form a face.
 
 To force a vertex or edge selection to extrude as a vertex or edge, respectively, use
-:kbd:`Alt-E` to access the Extrude *Edges Only* and *Vertices Only*.
+:kbd:`Alt-E` to access the Extrude *Extrude Edges* and *Extrude Vertices*.
 
 .. list-table::
 
@@ -31,7 +32,7 @@ To force a vertex or edge selection to extrude as a vertex or edge, respectively
      - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_verts-after.png
           :width: 320px
 
-          Vertices Only extrude.
+          Vertices extrude.
 
    * - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_before.png
           :width: 320px
@@ -41,4 +42,4 @@ To force a vertex or edge selection to extrude as a vertex or edge, respectively
      - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_after.png
           :width: 320px
 
-          Edges Only extrude.
+          Edges extrude.

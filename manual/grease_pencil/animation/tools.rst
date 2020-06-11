@@ -12,8 +12,8 @@ Insert Blank Keyframe
    :class: refbox
 
    :Mode:      Draw Mode, Edit Mode, Sculpt Mode
-   :Menu:      :menuselection:`Stroke --> Animation --> Insert Blank Frame (Active Layer)`
-               :menuselection:`Stroke --> Animation --> Insert Blank Frame (All Layers)`
+   :Menu:      :menuselection:`Stroke --> Animation --> Insert Blank Keyframe (Active Layer)`
+               :menuselection:`Stroke --> Animation --> Insert Blank Keyframe (All Layers)`
    :Hotkey:    :kbd:`Shift-I`
 
 Active Layer

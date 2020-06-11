@@ -8,7 +8,7 @@ Connect Vertex Path
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Vertices --> Connect Vertex Path`
+   :Menu:      :menuselection:`Vertex --> Connect Vertex Path`
    :Hotkey:    :kbd:`J`
 
 This tool connects vertices in the order they are selected, splitting the faces between them.

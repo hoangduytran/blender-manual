@@ -10,7 +10,7 @@ Inset Faces
 
    :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Inset Faces`
-   :Menu:      :menuselection:`Mesh --> Faces --> Inset Faces`
+   :Menu:      :menuselection:`Face --> Inset Faces`
    :Hotkey:    :kbd:`I`
 
 This tool takes the currently selected faces and creates an inset of them,

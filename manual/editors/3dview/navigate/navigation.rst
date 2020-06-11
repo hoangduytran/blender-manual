@@ -89,8 +89,8 @@ Roll
 Rotate the viewport camera around its local Z axis in 15° discrete steps.
 
 
-Panning
-=======
+Pan
+===
 
 .. admonition:: Reference
    :class: refbox
@@ -111,8 +111,8 @@ If your input device has no middle button, you can hold :kbd:`Shift-Alt` while d
 
 .. _editors_3dview_navigation_zoom:
 
-Zooming
-=======
+Zoom
+====
 
 .. admonition:: Reference
    :class: refbox
