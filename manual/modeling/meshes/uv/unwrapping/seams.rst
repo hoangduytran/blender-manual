@@ -44,7 +44,7 @@ Mark Seam
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Tool:      :menuselection:`UVs --> Mark/Clear Seam`
+   :Tool:      :menuselection:`UV --> Mark/Clear Seam`
    :Menu:      :menuselection:`Edge --> Mark/Clear Seam`
 
 .. admonition:: Reference
@@ -52,7 +52,7 @@ Mark Seam
 
    :Editor:    UV Editor
    :Mode:      View mode
-   :Menu:      :menuselection:`UVs --> Mark/Clear Seam`
+   :Menu:      :menuselection:`UV --> Mark/Clear Seam`
 
 .. figure:: /images/modeling_meshes_uv_unwrapping_seams_suzanne.png
    :width: 250px
@@ -108,7 +108,7 @@ Seams from Islands
    :class: refbox
 
    :Mode:      View mode
-   :Menu:      :menuselection:`UVs --> Seams from Islands`
+   :Menu:      :menuselection:`UV --> Seams from Islands`
 
 Adds seams at the boundaries of existing UV islands.
 This is useful when modifying the UVs of already unwrapped meshes.

@@ -39,8 +39,8 @@ Select Menu
 
 .. _bpy.ops.object.select_all:
 
-Select All
-----------
+All
+---
 
 .. admonition:: Reference
    :class: refbox
@@ -52,8 +52,8 @@ Select All
 Select all selectable objects.
 
 
-Deselect All
-------------
+None
+----
 
 .. admonition:: Reference
    :class: refbox
@@ -65,8 +65,8 @@ Deselect All
 Deselect all objects, but the active object stays the same.
 
 
-Invert Selection
-----------------
+Invert
+------
 
 .. admonition:: Reference
    :class: refbox

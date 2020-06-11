@@ -7,7 +7,7 @@ Light Paths
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Render --> Light Path`
+   :Panel:     :menuselection:`Render --> Light Paths`
 
 
 .. _cycles-bounces:

@@ -1,9 +1,9 @@
 .. _data-system-linked-libraries-make-link:
 .. _bpy.ops.object.make_links:
 
-*********
-Make Link
-*********
+**********
+Make Links
+**********
 
 .. admonition:: Reference
    :class: refbox

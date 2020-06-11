@@ -10,8 +10,8 @@ If the objects have hierarchical descendants, it also applies those transformati
 
 .. _bpy.ops.object.transform_apply:
 
-Apply Object Transformations
-============================
+Transforms
+==========
 
 .. admonition:: Reference
    :class: refbox
@@ -70,7 +70,7 @@ Transforms to Deltas
    :class: refbox
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Apply --> Location / Rotation / Scale`
+   :Menu:      :menuselection:`Object --> Apply --> Location / Rotation / Scale to Deltas`
    :Hotkey:    :kbd:`Ctrl-A`
 
 Converts primary object transformations to :ref:`delta transforms <transform-delta>`,

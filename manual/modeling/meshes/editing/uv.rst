@@ -27,7 +27,7 @@ Unwrap
 
    :Editor:    3D Viewport or UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Unwrap`
+   :Menu:      :menuselection:`UV --> Unwrap`
    :Hotkey:    :kbd:`U`
 
 Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/uv/unwrapping/seams>`.
@@ -35,7 +35,7 @@ Useful for organic shapes.
 
 Begin by selecting all faces you want to unwrap.
 In the 3D Viewport, select :menuselection:`UV --> Unwrap` or :kbd:`U` and select Unwrap.
-You can also do this from the UV Editor with :menuselection:`UVs --> Unwrap` or :kbd:`U`.
+You can also do this from the UV Editor with :menuselection:`UV --> Unwrap` or :kbd:`U`.
 This method will unwrap all faces and reset previous work.
 The UVs menu will appear in the UV Editor after unwrapping has been performed once.
 
@@ -91,7 +91,7 @@ Smart UV Project
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Smart UV Project`
+   :Menu:      :menuselection:`UV --> Smart UV Project`
    :Hotkey:    :kbd:`U`
 
 Smart UV Project, cuts the mesh based on an angle threshold (angular changes in your mesh).
@@ -142,7 +142,7 @@ Lightmap Pack
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Lightmap Pack`
+   :Menu:      :menuselection:`UV --> Lightmap Pack`
    :Hotkey:    :kbd:`U`
 
 Lightmap Pack takes each of a mesh's faces, or selected faces,
@@ -192,7 +192,7 @@ Follow Active Quads
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Follow Active Quads`
+   :Menu:      :menuselection:`UV --> Follow Active Quads`
    :Hotkey:    :kbd:`U`
 
 The Follow Active Quads tool takes the selected faces and lays them out
@@ -229,7 +229,7 @@ Cube Projection
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Cube Projection`
+   :Menu:      :menuselection:`UV --> Cube Projection`
    :Hotkey:    :kbd:`U`
 
 Cube Projection maps the mesh onto the faces of a cube, which is then unfolded.
@@ -272,8 +272,8 @@ Cylinder & Sphere Projection
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Sphere Projection`
-               :menuselection:`UVs --> Cylinder Projection`
+   :Menu:      :menuselection:`UV --> Sphere Projection`
+               :menuselection:`UV --> Cylinder Projection`
    :Hotkey:    :kbd:`U`
 
 Cylindrical and Spherical mappings have the same options. The difference is that
@@ -335,7 +335,7 @@ Project from View
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Project from View`
+   :Menu:      :menuselection:`UV --> Project from View`
    :Hotkey:    :kbd:`U`
 
 Project from View takes the current view in the 3D Viewport and flattens the mesh as it appears.
@@ -360,7 +360,7 @@ Project from View (Bounds)
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Project from View (Bounds)`
+   :Menu:      :menuselection:`UV --> Project from View (Bounds)`
    :Hotkey:    :kbd:`U`
 
 Similar to `Project from View`_,
@@ -377,7 +377,7 @@ Reset
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Reset`
+   :Menu:      :menuselection:`UV --> Reset`
    :Hotkey:    :kbd:`U`
 
 Reset UVs maps each face to fill the UV grid, giving each face the same mapping.

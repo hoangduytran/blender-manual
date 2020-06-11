@@ -28,7 +28,7 @@ Transform
    :Editor:    UV Editor
    :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Move, Rotate, Scale, Transform`
-   :Menu:      :menuselection:`UVs --> Transform`
+   :Menu:      :menuselection:`UV --> Transform`
 
 - Move :kbd:`G`
 - Rotate :kbd:`R`
@@ -86,7 +86,7 @@ Pin & Unpin
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Pin/Unpin`
+   :Menu:      :menuselection:`UV --> Pin/Unpin`
    :Hotkey:    :kbd:`P`, :kbd:`Alt-P`
 
 You can pin UVs so they do not move between multiple unwrap operations.
@@ -115,7 +115,7 @@ Mark/Clear Seams
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Mark/Clear Seam`
+   :Menu:      :menuselection:`UV --> Mark/Clear Seam`
 
 See :doc:`/modeling/meshes/uv/unwrapping/seams`.
 
@@ -131,7 +131,7 @@ Pack Islands
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Pack Islands`
+   :Menu:      :menuselection:`UV --> Pack Islands`
    :Hotkey:    :kbd:`Ctrl-P`
 
 The *Pack Islands* tool generates an optimized UV layout with non-overlapping islands
@@ -151,7 +151,7 @@ Average Island Scale
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Average Island Scale`
+   :Menu:      :menuselection:`UV --> Average Island Scale`
    :Hotkey:    :kbd:`Ctrl-A`
 
 Using the *Average Island Scale* tool, will scale each
@@ -168,7 +168,7 @@ Minimize Stretch
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Minimize Stretch`
+   :Menu:      :menuselection:`UV --> Minimize Stretch`
    :Hotkey:    :kbd:`Ctrl-V`
 
 The *Minimize Stretch* tool, reduces UV stretch by minimizing angles. This essentially relaxes the UVs.
@@ -184,7 +184,7 @@ Stitch
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Stitch`
+   :Menu:      :menuselection:`UV --> Stitch`
    :Hotkey:    :kbd:`V`
 
 The *Stitch* tool, will join selected UVs that share vertices.
@@ -200,7 +200,7 @@ Copy Mirrored UV Coordinates
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Copy Mirrored UV Coordinates`
+   :Menu:      :menuselection:`UV --> Copy Mirrored UV Coordinates`
 
 Copies UVs from one side of the mirrored mesh to the other.
 Affects only selected vertices (on both sides).
@@ -219,7 +219,7 @@ Mirror
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Mirror`
+   :Menu:      :menuselection:`UV --> Mirror`
    :Hotkey:    :kbd:`Ctrl-M`
 
 UVs can be mirrored on the Y axis or the X axis:
@@ -239,7 +239,7 @@ Snap
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Snap`
+   :Menu:      :menuselection:`UV --> Snap`
    :Hotkey:    :kbd:`Shift-S`
 
 Snapping in the UV Editor is similar to
@@ -271,7 +271,7 @@ Weld
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Weld/Align --> Weld`
+   :Menu:      :menuselection:`UV --> Weld/Align --> Weld`
    :Hotkey:    :kbd:`W`
 
 The *Weld* tool will move selected UVs to their average position.
@@ -287,7 +287,7 @@ Merge UVs by Distance
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Weld/Align --> Merge UVs by Distance`
+   :Menu:      :menuselection:`UV --> Weld/Align --> Merge UVs by Distance`
 
 The *Merge UVs by Distance* tool will merge selected UVs within the specified *Margin*.
 
@@ -302,7 +302,7 @@ Straighten/Align
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Weld/Align --> Straighten/Align`
+   :Menu:      :menuselection:`UV --> Weld/Align --> Straighten/Align`
    :Hotkey:    :kbd:`W`
 
 Straighten
@@ -322,7 +322,7 @@ Proportional Editing
    :Editor:    UV Editor
    :Mode:      Edit Mode
    :Header:    :menuselection:`Proportional Editing`
-   :Menu:      :menuselection:`UVs --> Proportional Editing`
+   :Menu:      :menuselection:`UV --> Proportional Editing`
    :Hotkey:    :kbd:`O`
 
 Proportional Editing is available in UV editing. The controls are the same as in the 3D Viewport.
@@ -338,7 +338,7 @@ Show/Hide Faces
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Show/Hide Faces`
+   :Menu:      :menuselection:`UV --> Show/Hide Faces`
 
 - Reveal Hidden :kbd:`Alt-H`
 - Hide Select :kbd:`H`
@@ -353,7 +353,7 @@ Export UV Layout
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs --> Export UV Layout`
+   :Menu:      :menuselection:`UV --> Export UV Layout`
 
 This is an :doc:`add-on </addons/import_export/mesh_uv_layout>` activated by default.
 

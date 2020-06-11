@@ -134,6 +134,7 @@ Brush
    :class: refbox
 
    :Mode:      Particle Edit Mode
+   :Tool:      :menuselection:`Toolbar`
 
 With the buttons you can select the type of "Comb" utility you want to use.
 

@@ -1,8 +1,8 @@
 .. _bpy.ops.object.duplicate_move_linked:
 
-*****************
-Linked Duplicates
-*****************
+****************
+Duplicate Linked
+****************
 
 .. admonition:: Reference
    :class: refbox
