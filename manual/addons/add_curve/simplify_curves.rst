@@ -9,8 +9,8 @@ The higher the *Distance Error* threshold is set the more control points are rem
 
 The Simplify F-Curves tool works the same way, but on selected F-curves.
 
-Merge by Distance tool glues nearby points on a single Bézier curve.
-In fact it is an analogue of the usual *Remove Doubles* on a mesh, but for curves.
+*Merge by Distance* tool glues nearby points on a single Bézier curve.
+In fact it is an analogue of the usual *Merge by Distance* on a mesh, but for curves.
 Unlike the mesh one, it does not connect the points from different parts of the curves,
 even if they are on the ends of the two curves.
 To glue such points, you must first connect them with *Make Segment*.
@@ -29,8 +29,8 @@ Interface
 The *Merge By Distance* and *Curve Simplify* buttons are located in
 the :menuselection:`3D Viewport --> Curve Context Menu` in curve Edit Mode.
 
-The *Simplify F-Curves* buttons are located in
-the :menuselection:`Dope Sheet --> Action --> Graph Editors --> Channel menu`.
+The *Simplify F-Curves* operator can be accessed by enabling :ref:`Developer Extras <prefs-interface-dev-extras>`
+and using the :ref:`bpy.ops.wm.search_menu` to search for "Simplify F-Curves" in the Dope Sheet or Graph Editor.
 
 
 .. admonition:: Reference
