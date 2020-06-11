@@ -417,6 +417,7 @@ The method used for adding a menu item is to append a draw function into an exis
        self.layout.operator(ObjectCursorArray.bl_idname)
 
    def register():
+       bpy.utils.register_class(ObjectCursorArray)
        bpy.types.VIEW3D_MT_object.append(menu_func)
 
 For docs on extending menus, see: :class:`blender_api:bpy.types.Menu`.
