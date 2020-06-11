@@ -32,6 +32,19 @@ Editor Type
    The standard editor selection button.
 Menus
    Editor's menus.
+
+.. _bpy.ops.text.resolve_conflict:
+
+Resolve Conflict
+   Resolves modified file conflicts when an external text file is updated from another program.
+
+   Reload from disk
+      Opens the file from disk again, overriding any local changes.
+   Make text internal
+      Converts the external text data-block into an internal one.
+   Ignore
+      Hides the warning message until the external text file is modified externally again.
+
 Text
    A :ref:`data-block menu <ui-data-block>` to select a text or to create a new one.
    After that the header will change.
@@ -128,7 +141,7 @@ Move Line(s) Down :kbd:`Shift-Ctrl-Down`
    Swaps the current/selected line(s) with the below.
 Find & Replace :kbd:`Ctrl-F`
    Shows the *Find & Replace* panel in the Sidebar.
-Find Next :kbd:`Ctrl-G`
+Find & Set Selection :kbd:`Ctrl-G`
    Finds the next instance of the selected text.
 Jump To :kbd:`Ctrl-J`
    Shows a pop-up, which lets you select a line number where to move the cursor to.
@@ -204,6 +217,68 @@ Pressing :kbd:`RMB` opens the context menu.
    The Text editor is handy also when you want to share your blend-files with others.
    The Text editor can be used to write in a ``README`` text explaining the contents of your blend-file.
    Be sure to keep it visible when saving!
+
+
+Sidebar
+=======
+
+Find & Replace
+--------------
+
+.. _bpy.types.SpaceTextEditor.find_text:
+.. _bpy.ops.text.find:
+
+Find Text :kbd:`Ctrl-F`
+   Searches for instances of a string that occur after the cursor.
+   Using the eyedropper icon will search for the currently selected string
+   and sets the selection to the found string.
+   *Find Next* searches for the next instance of the string.
+
+.. _bpy.types.SpaceTextEditor.replace_text:
+.. _.. _bpy.ops.text.replace:
+
+Replace Text :kbd:`Ctrl-H`
+   Searches for the string specified in *Find Text* and replaces it with the new string.
+   Using the eyedropper icon will replace the search results with the currently selected string
+   and sets the selection to that string.
+   *Replace* searches for the next instance of the string and replaces it.
+
+.. _bpy.types.SpaceTextEditor.use_match_case:
+.. _bpy.types.SpaceTextEditor.use_find_wrap:
+.. _bpy.types.SpaceTextEditor.use_find_all:
+
+Case
+   Search string is sensitive to uppercase and lowercase letters.
+Wrap
+   Search again from the start of the file when reaching the end.
+All
+   Search in all text data-blocks instead of only the active one.
+
+
+Properties
+----------
+
+.. _bpy.types.SpaceTextEditor.show_margin:
+.. _bpy.types.SpaceTextEditor.margin_column:
+
+Margin
+   Shows a right margin to help keep line length at a reasonable length when scripting.
+   The width of the margin is specified in *Margin Column*.
+
+.. _bpy.types.SpaceTextEditor.font_size:
+
+Font Size :kbd:`Ctrl-WheelUp`
+   The size of the font used to display text.
+
+.. _bpy.types.SpaceTextEditor.tab_width:
+
+Tab Width
+   The number of character spaces to display tab characters with.
+
+.. _bpy.types.Text.indentation:
+
+Indentation
+   Use *Tabs* or *Spaces* for indentations.
 
 
 Footer
