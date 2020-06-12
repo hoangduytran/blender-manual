@@ -8,7 +8,7 @@ Grease Pencil Shader
 
    Shader panel with only Stroke component activated.
 
-The Grease Pencil shader create a material that can work
+The Grease Pencil shader creates a material that can work
 with strokes and/or filled areas of a Grease Pencil object.
 
 Stroke and fill components has it own section panel and
