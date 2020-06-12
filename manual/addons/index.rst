@@ -5,7 +5,7 @@
 
 .. important::
 
-   This is work In progress.
+   This is work in progress.
 
    Documentation might be outdated and on some pages images, videos, and links aren't added yet.
 

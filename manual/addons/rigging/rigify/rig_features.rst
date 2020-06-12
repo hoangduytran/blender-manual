@@ -60,7 +60,7 @@ Pole Vector Type Switch
       If pole vector switch is set to 1 (standard pole), then this value defines the pole's parenting.
       If Pole Following is set to 1 then the pole vector will be parented to the limb,
       if set to 0 will instead follow the root. This properties also depends on the IK follow control.
-      When The general IK follow is set to 0, then the pole vector following will have no effect.
+      When the general IK follow is set to 0, then the pole vector following will have no effect.
 
 IK Auto-Stretching
    Slider (0=No stretching, 1=Full Stretch)

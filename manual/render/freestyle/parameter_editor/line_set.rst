@@ -206,7 +206,7 @@ Both Faces
 
    * - .. figure:: /images/render_freestyle_parameter-editor_line-set_face-marks-example-5.png
 
-          Exclusive, One face.
+          Exclusive, One Face.
 
      - .. figure:: /images/render_freestyle_parameter-editor_line-set_face-marks-example-6.png
 

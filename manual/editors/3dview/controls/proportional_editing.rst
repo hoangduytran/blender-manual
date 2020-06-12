@@ -89,7 +89,7 @@ Options
 The *Proportional Editing* mode menu is on the 3D Viewport header.
 
 Disable :kbd:`O`, :kbd:`Alt-O`
-   Proportional Editing is Off, only selected vertices will be affected.
+   Proportional Editing is off, only selected vertices will be affected.
 Enable :kbd:`O`, :kbd:`Alt-O`
    Vertices other than the selected vertex are affected, within a defined radius.
 Projected from View

@@ -124,7 +124,7 @@ Shift
 .. _camera-clipping:
 
 Clip Start and End
-   The interval in which objects are directly visible,
+   The interval in which objects are directly visible.
    Any objects outside this range still influence the image indirectly,
    as further light bounces are not clipped.
 

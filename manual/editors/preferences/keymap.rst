@@ -91,7 +91,7 @@ Map Type
       Use this function by entering a text.
    Timer
       Used to control actions based on a time period.
-      e.g. By default, *Animation Step* uses "Timer 0", *Smooth View* uses "Timer 1".
+      E.g. by default, *Animation Step* uses "Timer 0", *Smooth View* uses "Timer 1".
 Operator ID Name
    The identifier for the operator to call.
 

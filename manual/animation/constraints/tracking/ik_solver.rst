@@ -68,14 +68,14 @@ IK Type
       Position/Rotation Locking
          Allows to obtain various effect by not constraining the coordinates along certain axis.
 
-            Axis Reference
-               Specifies how to compute the axis coordinates.
+         Axis Reference
+            Specifies how to compute the axis coordinates.
 
-               Bone
-                  The coordinates are the position and orientation of the target relative to the bone.
-               Target
-                  The opposite of *Bone*, the coordinates are the position and
-                  orientation of the tip of the bone relative to the target.
+            Bone
+               The coordinates are the position and orientation of the target relative to the bone.
+            Target
+               The opposite of *Bone*, the coordinates are the position and
+               orientation of the tip of the bone relative to the target.
    Distance
       Specify that the end effector will stay inside, at, or outside a sphere centered on the target object.
 

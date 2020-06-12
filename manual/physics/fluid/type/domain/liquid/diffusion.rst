@@ -32,7 +32,7 @@ Viscosity
 
    Blender, on the other hand, uses the kinematic viscosity which is dynamic viscosity in Pa.s,
    divided by the density in |kg.m-3|, unit |m2.s-1|. So for example,
-   The viscosity of water at room temperature is 1.002 cP, or 0.001002 Pa.s; the density of water is
+   the viscosity of water at room temperature is 1.002 cP, or 0.001002 Pa.s; the density of water is
    about 1000 |kg.m-3|, which gives a kinematic viscosity of 0.000001002 |m2.s-1| --
    so the entry would be 1.002 times 10 to the minus six (1.002×10\ :sup:`-6` in scientific notation).
 

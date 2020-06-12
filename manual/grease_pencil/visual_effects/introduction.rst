@@ -21,8 +21,8 @@ like blurring, pixelation, wave distortion, among others.
 .. note::
 
    Visual Effects best fit for quick viewport visualization. You can use it for final renders
-   but If you want more precision with effects
-   it is still recommended to use the :doc:`Compositor </compositing/introduction>`.
+   but if you want more precision with effects it is still recommended to use
+   the :doc:`Compositor </compositing/introduction>`.
 
 
 Interface

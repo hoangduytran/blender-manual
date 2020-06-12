@@ -12,7 +12,7 @@ Rip Vertices and Extend
    :Menu:      :menuselection:`Vertex --> Rip Vertices and Extend`
    :Hotkey:    :kbd:`Alt-D`
 
-This tool takes any number of selected vertices and duplicate-drags them along the closest edge to the mouse,
+This tool takes any number of selected vertices and duplicate-drags them along the closest edge to the mouse.
 When extending an edge loop, it extends the vertices at the endpoints of the loop.
 The behavior is similar to the *Extrude* tool, but it creates an n-gon.
 

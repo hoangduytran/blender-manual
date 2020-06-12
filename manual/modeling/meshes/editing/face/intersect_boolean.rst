@@ -19,7 +19,7 @@ Boolean
 Swap
    Changes the order of the operation.
 Merge Threshold
-   Tolerance for close faces to be considered touching,
+   Tolerance for close faces to be considered touching.
    It may be useful to increase this when some intersections aren't detected that should be and
    when extra geometry is being created because edges aren't detected as overlapping.
 

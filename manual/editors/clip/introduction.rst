@@ -67,7 +67,7 @@ Clip Display
    Grayscale Preview (B/W)
       Shows the whole frame gray-scale.
    Mute (eye icon) :kbd:`M`
-      Changes displaying on movie frame itself with black square,
+      Shows black frames in the preview instead of the movie clip.
       It helps to find tracks which are tracked inaccurately or which were not tracked at all.
    Render Undistorted
       Applies the *Lens Distortion* settings to the viewport image in order to display the footage undistorted.

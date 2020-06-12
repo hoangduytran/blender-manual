@@ -460,9 +460,10 @@ this allows you to have multiple keys accessing the same operator with different
 .. note::
 
    While :kbd:`Shift-Ctrl-T` is not a default Blender key shortcut,
-   it is hard to make sure add-ons will not overwrite each other's keymaps,
-   At least take care when assigning keys that they do not
-   conflict with important functionality within Blender.
+   it is hard to make sure add-ons will not overwrite each other's keymaps.
+   Thus at least take care when assigning keys that they do not
+   conflict with important functionality of Blender
+   (see also :doc:`/addons/development/is_key_free`).
 
 For API documentation on the functions listed above, see:
 

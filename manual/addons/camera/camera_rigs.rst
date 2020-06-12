@@ -179,7 +179,7 @@ This uses Blender's built-in camera binding tool to a Timeline marker.
 When pressed, it will add a marker to the Timeline and bind it to the camera controlled by the selected rig.
 Go to another frame, select a different camera rig and press it again.
 Now you have two markers and when you scrub the time line you will see the active camera switch accordingly.
-(repeat this process as many times as needed)
+(Repeat this process as many times as needed).
 These markers can then also be dragged around in the timeline to change the frame at which they will switch.
 
 

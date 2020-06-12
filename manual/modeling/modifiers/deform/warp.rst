@@ -77,7 +77,7 @@ Usage
 =====
 
 The *Warp* modifier can be awkward to use sometimes, and its use case is rather small,
-But there are a few still. For example, it can be used to have
+but there are a few still. For example, it can be used to have
 an interactive :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`
 that can be used for animations.
 

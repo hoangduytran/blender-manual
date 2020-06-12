@@ -17,8 +17,8 @@ As the first step in preparing a node shader for execution,
 Cycles expands all node groups, as if using the Ungroup tool,
 and discards UI only features like frames and reroute nodes.
 
-After that, it applies some obvious transformations
-For example, it can (the list is not exhaustive):
+After that, it applies some obvious transformations,
+for example, it can (the list is not exhaustive):
 
 - Replace the following nodes with the constant result of their evaluation,
   if all their inputs are determined to be constant:

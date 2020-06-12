@@ -61,7 +61,7 @@ Portable Configuration
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Once you setup a ``demo.py`` you may want to move it to a different system.
-In this case the paths might not match up, In this case,
+In this case the paths might not match up, if so
 update the ``search_path`` variable to point to the path on the new system.
 You can also set the ``search_path`` to use the directory of the current blend-file::
 
