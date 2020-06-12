@@ -97,7 +97,8 @@ Pressure
 
 Cloth pressure allows the simulation of soft-shelled objects
 such as balloons or balls that are filled with some sort of fluid.
-This fluid can be seen either as a gas or a liquid however, both are generalized as "fluids".
+This fluid is modelled as a gas; to emulate an incompressible liquid set
+*Pressure Scale* as high as possible without breaking the simulation.
 Cloth pressure can be enabled by toggling the checkbox in the *Pressure* panel header.
 
 .. note::
@@ -108,19 +109,38 @@ Cloth pressure can be enabled by toggling the checkbox in the *Pressure* panel h
 
 Pressure
    The uniform pressure that is constantly applied to the mesh.
-   This value can be negative to simulate implosions
-   or any other case where an object has outside pressure pushing inwards.
+   This value is specified in units of *Pressure Scale*, and can be
+   negative to simulate implosions or any other case where an object
+   has outside pressure pushing inwards.
 
 Custom Volume
-   Use the *Target Volume* parameter as the initial volume for the cloth.
-   This avoids having to use the *Pressure* to first inflate the object.
+   Use the *Target Volume* parameter as the initial volume for the cloth,
+   instead of computing it from the mesh itself.
 
    Target Volume
       The mesh volume where the inner/outer pressure will be the same.
-      If set to zero the volume will not contribute to the total pressure.
+      If set to zero, changes in the volume of the object will not affect pressure.
 
-Factor
-   Scalar control over the overall pressure.
+Pressure Scale
+   Ambient pressure (in kPa) that exists both inside and outside the object,
+   balancing out when the volume matches the target. Increasing the value
+   makes the object resist changes in volume more strongly.
+
+Fluid Density
+   Specifies the density of the fluid contained inside the object (in kg/liter = 1000*kg/m^3, use 1
+   for water), used to generate a hydrostatic pressure gradient that simulates the weight of the fluid.
+   If the value is negative, it instead models buoyancy from a surrounding fluid.
+
+   This feature does not actually simulate the fluid, so while it helps to achieve more realistic
+   object shapes at rest, it cannot faithfully represent effects of fluid dynamics. It can
+   also be used to give more weight to a soft body like object with heavy and sufficiently
+   flexible filling, even if it is not a fluid as such.
+
+   This option does nothing to preserve the volume of the object, and should be used
+   together with *Pressure Scale* if that is desired. Fluid density times object size
+   times 50 is a good start value for *Scale* that should ensure no more than 10%
+   volume change if the object doesn't experience higher acceleration than standard gravity.
+
 Vertex Group
    Cloth pressure can be controlled via a :doc:`Vertex Group </modeling/meshes/properties/vertex_groups/index>`
    to specify which the portions of the mesh to apply pressure.
