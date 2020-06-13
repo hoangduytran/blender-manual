@@ -108,7 +108,7 @@ Data-Block Types
 Search :kbd:`Ctrl-F`
    Filter items by name.
    The wildcard ``*`` will match anything, e.g. ``bl*er`` will match both ``blender`` and ``blogger``.
-   There is always an implicit wildcard at start and end of the search string,
+   There is always an implicit wildcard at start and end of the search text,
    so ``blender`` will also match ``test_blender_file.blend``.
    This field can also be used to filter some specific file extension (e.g. ``.png`` will list all PNG files).
 

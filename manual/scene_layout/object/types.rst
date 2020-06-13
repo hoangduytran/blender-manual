@@ -32,7 +32,7 @@ New objects can be created with the *Add* menu in the 3D Viewport's header.
    they merge by smoothly rounding out the connection, appearing as one unified object.
    See :doc:`Meta Primitives </modeling/metas/primitives>`.
 :doc:`Text </modeling/texts/introduction>`
-   Create a two-dimensional representation of a string of characters.
+   Create a two-dimensional representation of a text.
 :doc:`Volume </modeling/volumes/introduction>`
    Container for OpenVDB files that can be load files
    from other software or Blender's :doc:`Fluid Simulator </physics/fluid/index>`.

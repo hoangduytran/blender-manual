@@ -66,17 +66,17 @@ to change the data names further.
 Find/Replace
 ^^^^^^^^^^^^
 
-*Find/Replace* searches for a particular string in the names and optionally replaces it with a new string.
+*Find/Replace* searches for a particular text in the names and optionally replaces it with a new text.
 
 Find
-   The string of text to look for in names.
+   The text to search for in names.
 Replace
-   The string of text to replace for in matching names found from the *Find* string.
+   The text to replace for in matching names found from the *Find* text.
 Regular Expressions
    Enables the use of `Regular Expressions <https://en.wikipedia.org/wiki/Regular_expression>`__
-   which are a powerful way to tailor the *Find*/*Replace* strings.
+   which are a powerful way to tailor the *Find*/*Replace* texts.
 Case Sensitive
-   Search results must match the *Find* string's case exactly.
+   Search results must match the *Find* text's case exactly.
 
 
 Set Name

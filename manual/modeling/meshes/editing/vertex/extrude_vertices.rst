@@ -12,7 +12,7 @@ Extrude Vertices
    :Hotkey:    :kbd:`Alt-E`
 
 Extrude vertices as a individual vertices, use :kbd:`Alt-E` to access *Extrude Vertices*.
- 
+
 .. list-table::
 
    * - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_verts-before.png

@@ -38,9 +38,9 @@ Menus
 Resolve Conflict
    Resolves modified file conflicts when an external text file is updated from another program.
 
-   Reload from disk
-      Opens the file from disk again, overriding any local changes.
-   Make text internal
+   Reload from Disk
+      Opens the file from drive again, overriding any local changes.
+   Make Text Internal
       Converts the external text data-block into an internal one.
    Ignore
       Hides the warning message until the external text file is modified externally again.
@@ -229,26 +229,25 @@ Find & Replace
 .. _bpy.ops.text.find:
 
 Find Text :kbd:`Ctrl-F`
-   Searches for instances of a string that occur after the cursor.
-   Using the eyedropper icon will search for the currently selected string
-   and sets the selection to the found string.
-   *Find Next* searches for the next instance of the string.
+   Searches for instances of a text that occur after the cursor.
+   Using the eyedropper icon will search for the currently selected text
+   and sets the selection to the match.
+   *Find Next* searches for the next instance of the text.
 
 .. _bpy.types.SpaceTextEditor.replace_text:
-.. _.. _bpy.ops.text.replace:
+.. _bpy.ops.text.replace:
 
 Replace Text :kbd:`Ctrl-H`
-   Searches for the string specified in *Find Text* and replaces it with the new string.
-   Using the eyedropper icon will replace the search results with the currently selected string
-   and sets the selection to that string.
-   *Replace* searches for the next instance of the string and replaces it.
+   Searches for the text specified in *Find Text* and replaces it with the new text.
+   Using the eyedropper icon will set the currently selected text as the replace text.
+   *Replace* searches for the next match and replaces it.
 
 .. _bpy.types.SpaceTextEditor.use_match_case:
 .. _bpy.types.SpaceTextEditor.use_find_wrap:
 .. _bpy.types.SpaceTextEditor.use_find_all:
 
 Case
-   Search string is sensitive to uppercase and lowercase letters.
+   Search is sensitive to upper-case and lower-case letters.
 Wrap
    Search again from the start of the file when reaching the end.
 All

@@ -184,7 +184,7 @@ Filter (funnel icon)
 
    Multi-Word
       Fuzzy/Multi-Word name filtering matches word snippets/partial words,
-      instead of having to match everything. It breaks down the search string based on white-space placement.
+      instead of having to match everything. It breaks down the search text based on white-space placement.
       e.g. "lo ro" will filter all location and rotation, while "lc rt" will *not* work.
 
    Type Filter
