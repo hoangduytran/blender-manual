@@ -22,7 +22,7 @@ Before going through the tutorial you should...
 
 - Be familiar with the basics of working in Blender.
 - Know how to run a script in Blender's Text editor.
-- Have an understanding of Python primitive types (integer, Boolean, string, list, tuple, dictionary, and set).
+- Have an understanding of Python primitive types (integer, boolean, string, list, tuple, dictionary, and set).
 - Be familiar with the concept of Python modules.
 - Have a basic understanding of classes (object orientation) in Python.
 
