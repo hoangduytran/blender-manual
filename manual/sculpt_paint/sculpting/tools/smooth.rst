@@ -26,8 +26,19 @@ Deformation
       Smooths the surface of the mesh, while preserving the volume.
 
       Shape Preservation
-         How much of the original shape is preserved when smoothing.
+         How much of the original shape is preserved when smoothing. Increasing the value
+         reduces the effect of having multiple iterations on the strength of smoothing.
+
       Per-Vertex Displacement
          How much the position of each individual vertex influences the final result.
+         Increasing the value reduces the overall strength of smoothing.
+
       Iterations
          Number of smoothing iterations per brush step.
+
+      .. note::
+         This method works by applying regular smoothing, computing the difference
+         between the original (blended between start of iteration and fully original
+         based on *Shape Preservation*) and the smoothed mesh, smoothing these offsets,
+         pushing vertices back using the smoothed offsets, and finally blending in
+         the original mesh based on *Per-Vertex Displacement*.
