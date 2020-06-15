@@ -15,8 +15,8 @@ Blender should now be available in the *Library* tab of the Steam client.
 
    When installing Blender from Steam on Linux and Windows, the ``.blend`` filename extension will not
    be automatically associated with Blender. To associate blend-files with Blender, see the processes
-   described on the :doc:`Linux </manual/getting_started/installing/linux>` and
-   :doc:`Windows </manual/getting_started/installing/windows>` installation pages.
+   described on the :doc:`Linux </getting_started/installing/linux>` and
+   :doc:`Windows </getting_started/installing/windows>` installation pages.
 
 
 Updating with Steam
