@@ -1,6 +1,5 @@
 .. _bpy.types.TintGpencilModifier:
 
-
 *************
 Tint Modifier
 *************
