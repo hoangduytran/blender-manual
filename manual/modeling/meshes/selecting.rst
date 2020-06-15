@@ -222,7 +222,7 @@ Select Loops
       Select connected edges.
    `Face Loops`_
       Select connected faces.
-   `Edge Ring`_
+   `Edge Rings`_
       Select connected edge ring.
 
 ------------------------

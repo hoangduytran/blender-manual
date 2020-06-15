@@ -96,7 +96,7 @@ Skin Mesh Data
 ==============
 
 That modifier needs a set of specific data in the original mesh to work properly.
-This data allows to define the root vertices of each tree, which ones are loose (see `Selected Vertices`_ above),
+This data allows to define the root vertices of each tree, which ones are loose,
 and the size (radius) of the skin at each vertex. The radii of input vertices can be individually
 scaled in Edit Mode with the :doc:`/modeling/meshes/editing/mesh/transform/skin_resize`.
 
