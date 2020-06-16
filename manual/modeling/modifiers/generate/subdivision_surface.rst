@@ -28,7 +28,7 @@ You can see the difference between the two in the grid image below.
 
 .. note::
 
-   This modifier now uses
+   This modifier uses
    the `OpenSubdiv library <http://graphics.pixar.com/opensubdiv/docs/intro.html>`__ as a backend.
 
 
@@ -85,6 +85,11 @@ Quality
 
    Using higher values does not necessarily mean real improvement in quality,
    ideal results might be reached well before the maximum *Quality* value.
+
+   .. note::
+
+      This value can have an affect on how accurate :ref:`Edge Creases <modifiers-generate-subsurf-creases>` can be.
+      Using a higher *Quality* value will allow for a wider range of crease values to work accurately.
 
 UV Smooth
    How to handle UVs during subdivision.
