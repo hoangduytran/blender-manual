@@ -29,4 +29,4 @@ Types
    types/boid.rst
    types/turbulence.rst
    types/drag.rst
-   types/smoke_flow.rst
+   types/fluid_flow.rst

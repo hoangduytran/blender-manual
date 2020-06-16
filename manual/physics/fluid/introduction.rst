@@ -38,7 +38,7 @@ The smoke movement is controlled by airflow inside the domain, which can be infl
 :doc:`Effector </physics/fluid/type/effector>` objects. Smoke will also be affected by the scene's
 gravity and :doc:`force fields </physics/forces/force_fields/index>`.
 Airflow inside the domain can affect other physics simulations via the
-:doc:`Fluid Flow </physics/forces/force_fields/types/smoke_flow>` force field.
+:doc:`Fluid Flow </physics/forces/force_fields/types/fluid_flow>` force field.
 
 
 Workflow
