@@ -132,6 +132,8 @@ This method doesn't support the *Snap Mode* setting.
 
 .. container:: lead
 
+   .. clear
+
 
 Target Normal Project
 ---------------------
