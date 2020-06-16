@@ -25,8 +25,11 @@ Box Select (Include Handles) :kbd:`Ctrl-B`
    Works the same as *Box Select* but it selects only the strip's handles,
    if just one handle is selected moving the strip after selecting will change the strip's length.
    If both handles are selected the strip will move and behave the exact same as *Box Select*.
-Playhead
-   Select strips laying left or right to the playhead's position.
+Side of Frame
+   Overlap :kbd:`Equals`
+      Select strips laying on the current frame.
+   Left/Right :kbd:`[`/:kbd:`]`
+      Select strips laying left or right to the current frame.
 Handle
    Select left, right or both handles of selected strips.
 

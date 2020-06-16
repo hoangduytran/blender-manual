@@ -278,3 +278,15 @@ From Playhead
    Fade from the playhead to the end of overlapping sequences.
 To Playhead
    Fade from the start of sequences under the playhead to the current frame.
+
+
+Insert Gaps
+===========
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Context Menu --> Insert Gaps`
+   :Hotkey:    :kbd:`Ctrl-Backspace`
+
+.. todo:: |todo|
