@@ -92,6 +92,10 @@ Offset
    The inside and outside is determined by the face normals.
    Set to 0.0, the solidified output will be centered on the original mesh.
 
+Even Thickness :guilabel:`Simple Mode`
+   Maintain thickness by adjusting for sharp corners.
+   Sometimes improves quality but also increases computation time.
+
 Merge Threshold :guilabel:`Complex Mode`
    Distance within which degenerated geometry is merged.
 
@@ -136,10 +140,6 @@ Flip Normals
 
 High Quality Normals :guilabel:`Simple Mode`
    Normals are calculated to produce a more even thickness.
-   Sometimes improves quality but also increases computation time.
-
-Even Thickness :guilabel:`Simple Mode`
-   Maintain thickness by adjusting for sharp corners.
    Sometimes improves quality but also increases computation time.
 
 
