@@ -10,4 +10,3 @@
    surface.rst
    control_points.rst
    segments.rst
-   other.rst
