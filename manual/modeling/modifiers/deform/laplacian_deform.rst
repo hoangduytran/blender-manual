@@ -102,7 +102,7 @@ Error Messages
 ==============
 
 Vertex group *group_name* is not valid
-   This message is displayed when a user deletes the vertex group or changes its the name.
+   This message is displayed when a user deletes the vertex group or changes its name.
 Vertices changed from X to Y
    This message is displayed when a user adds or deletes vertices to/from the mesh.
 Edges changed from X to Y
