@@ -14,10 +14,71 @@ Read more about using the :ref:`ui-curve-widget`.
    Brush curve example.
 
 Curve Preset
-   Todo.
+   Custom
+      The user can choose how the strength of the falloff is determined from the center of the brush
+      to the borders by manually manipulating the control points within the Curve Widget.
+   Custom Presets
+      - Smooth
+      - Sphere
+      - Root
+      - Sharp
+      - Linear
+      - Constant
 
+      .. list-table:: Custom Preset types.
+
+         * - .. figure:: /images/sculpt-paint_brush_falloff_custom-smooth.png
+
+                Smooth.
+
+           - .. figure:: /images/sculpt-paint_brush_falloff_custom-sphere.png
+
+                Sphere.
+
+           - .. figure:: /images/sculpt-paint_brush_falloff_custom-root.png
+
+                Root.
+
+         * - .. figure:: /images/sculpt-paint_brush_falloff_custom-sharp.png
+
+                Sharp.
+
+           - .. figure:: /images/sculpt-paint_brush_falloff_custom-linear.png
+
+                Linear.
+
+           - .. figure:: /images/sculpt-paint_brush_falloff_custom-constant.png
+
+                Constant.
+
+   Smooth
+      The center strength, the border strength, and the falloff transition between them are evenly distributed.
    Smoother
-      Similar to *Smooth* but produces a flat surface at the brush center.
+      Similar to *Smooth* but produces a wider center point of the brush before tapering off.
+   Sphere
+      The strength of the brush is predominately at its strongest
+      with a steep falloff near the border of the brush.
+   Root
+      Similar to a Sphere but the center is a more concentrated point.
+   Sharp
+      The center of the brush is the strongest point
+      then exponentially tapers off to a lower strength, creating a fine point.
+   Linear
+      With the center being the strongest,
+      the strength will consistently weaken as it reaches the border of the brush.
+   Sharper
+      Similar to *Sharp* but the center point is more condensed.
+   Inverse square
+      A hybrid between *Smooth* and *Sphere*.
+   Constant
+      The strength of the brush remains unified across the entire brush.
+      This will create a sharp edge at the border of the brush.
+
+   .. figure:: /images/sculpt-paint_brush_falloff_demo.png
+
+      (From Left to Right) Smooth, Smoother, Sphere, Root,
+      Sharp, Linear, Sharper, Inverse square, Constant.
+
 
 Falloff Shape
    Sphere
