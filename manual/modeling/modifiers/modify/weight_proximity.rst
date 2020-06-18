@@ -76,8 +76,6 @@ Type
 
    Linear
       No mapping.
-   Custom Curve
-      Allows you to manually define the mapping using a curve.
    Sharp, Smooth, Root and Sphere
       These are classical mapping functions, from spikiest to roundest.
    Random
