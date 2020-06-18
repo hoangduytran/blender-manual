@@ -19,11 +19,21 @@ Dirty Vertex Colors
    Blur Iterations
       Number of times to blur the colors (higher blurs more).
    Highlight Angle
-      Less than 90 limits the angle used in the tonal range.
+      Clamps the angle for convex areas of the mesh.
+      Lower values increase the contrast but can result in clamping.
+      90 means flat, 180 means infinitely pointed.
    Dirt Angle
-      Less than 90 limits the angle used in the tonal range.
+      Clamps the angle for concave areas of the mesh.
+      Higher values increase the contrast but can result in clamping.
+      90 means flat, 0 means infinitely deep.
    Dirt Only
       When active it won't calculate cleans for convex areas.
+   Normalize
+      Choose optimal contrast by effectively lowering
+      *Highlight Angle* and increasing *Dirt Angle* automatically.
+      Disabling *Normalize* allows getting consistent results across multiple
+      objects.
+
 Vertex Color from Weight
    Converts the active weight into grayscale vertex colors.
 Invert
