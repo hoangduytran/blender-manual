@@ -49,7 +49,7 @@ Add Camera Marker
 Instructions
 ============
 
-- First Activate the user interface and storage by pressing *Initialize*.
+- First activate the user interface and storage by pressing *Initialize*.
 - With the *View* button active, Zoom, move or rotate the camera into a position you like.
   (Useful setting up camera locations and modeling specific areas of a mesh.)
 - Or with the *POV* button active, change the user perspective or local views.

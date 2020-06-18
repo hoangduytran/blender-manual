@@ -16,7 +16,7 @@ Activation
 Interface
 =========
 
-Located in the :menuselection:`3D Viewport --> Sidebar --> View tab`
+Located in the :menuselection:`3D Viewport --> Sidebar --> View tab`.
 This add-on is split over two panels.
 
 
