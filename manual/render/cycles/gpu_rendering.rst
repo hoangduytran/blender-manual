@@ -32,7 +32,7 @@ CUDA
 
 CUDA requires graphics cards with compute capability 3.0 and higher.
 To make sure your GPU is supported,
-see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus>`__
+see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
 with the compute capabilities and supported graphics cards.
 CUDA GPU rendering is supported on Windows, macOS, and Linux.
 
@@ -42,7 +42,10 @@ CUDA GPU rendering is supported on Windows, macOS, and Linux.
 OptiX
 ^^^^^
 
-For RTX graphics cards with hardware ray tracing support (e.g. Turing), OptiX can be used for better performance.
+OptiX requires graphics cards with compute capability 5.0 and higher.
+To make sure your GPU is supported,
+see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
+Optix works best on RTX graphics cards with hardware ray tracing support (e.g. Turing and above).
 OptiX support is still experimental and does not yet support all features, see below for details.
 
 OptiX requires Geforce or Quadro RTX graphics card with recent Nvidia drivers, and is supported on Windows and Linux.
