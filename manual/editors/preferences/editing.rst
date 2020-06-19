@@ -50,6 +50,9 @@ Align To
       New objects align to the 3D cursor's orientation.
 Enter Edit Mode
    If selected, Edit Mode is automatically activated when you create a new object.
+Instance Empty Size
+   The display size for empties when a new 
+   :doc:`collection instance </scene_layout/object/properties/instancing/collection>` is created. 
 
 
 .. _prefs-editing-duplicate-data:
