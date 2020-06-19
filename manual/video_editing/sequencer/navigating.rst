@@ -21,6 +21,8 @@ As usual, the View Menu controls the editor's view settings.
 
 Sidebar :kbd:`N`
    Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
+Toolbar :kbd:`T`
+   Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
 Adjust Last Operation
    Displays a popup panel to alter properties of the last
    completed operation see :ref:`ui-undo-redo-adjust-last-operation`.

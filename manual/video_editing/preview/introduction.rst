@@ -21,6 +21,8 @@ View Menu
 
 Sidebar :kbd:`N`
    Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
+Toolbar :kbd:`T`
+   Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
 Fit Preview in Window :kbd:`Home`
    Resize the preview so that it fits in the window.
 Zoom :kbd:`Shift-B`
