@@ -43,7 +43,7 @@ Name
       All three outputs are the same.
    Ocean Foam
       Gives a scalar defining where foam might appear when using
-      an :doc:`Ocean Modifier </modeling/modifiers/simulate/ocean>`.
+      an :doc:`Ocean Modifier </modeling/modifiers/physics/ocean>`.
       This depends on the name you give this property.
 
    .. seealso::

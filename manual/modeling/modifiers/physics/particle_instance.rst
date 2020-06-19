@@ -21,7 +21,7 @@ do not return the expected results.
 Options
 =======
 
-.. figure:: /images/modeling_modifiers_simulate_particle-instance_panel.png
+.. figure:: /images/modeling_modifiers_physics_particle-instance_panel.png
    :align: right
 
    The Particle Instance modifier.
@@ -153,7 +153,7 @@ Value Layer
 Examples
 ========
 
-.. figure:: /images/modeling_modifiers_simulate_particle-instance_split-plane.jpg
+.. figure:: /images/modeling_modifiers_physics_particle-instance_split-plane.jpg
    :width: 600px
    :align: center
 
@@ -166,7 +166,7 @@ In the case shown the *Particle Instance* modifiers are added to a sphere and a 
 See `example blend-file
 <https://en.blender.org/uploads/4/48/Manual_-_Modifiers_-_Particle_Instance_Modifiers_-_Split_Plane.blend>`__.
 
-.. figure:: /images/modeling_modifiers_simulate_particle-instance_create-along-paths.jpg
+.. figure:: /images/modeling_modifiers_physics_particle-instance_create-along-paths.jpg
    :width: 600px
    :align: center
 

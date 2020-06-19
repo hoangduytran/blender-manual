@@ -52,6 +52,6 @@ With Cycles you can render hair with specialized hair BSDFs
 :doc:`/render/shader_nodes/shader/hair_principled`.
 
 Hair can also be used as a basis for
-the :doc:`Particle Instance Modifier </modeling/modifiers/simulate/particle_instance>`,
+the :doc:`Particle Instance Modifier </modeling/modifiers/physics/particle_instance>`,
 which allows you to have a mesh be deformed along the curves,
 which is useful for thicker strands, or things like grass, or feathers, which may have a more specific look.

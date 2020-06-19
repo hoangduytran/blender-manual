@@ -33,7 +33,7 @@ showing a cube with a particle system and *Explode* modifier.
 Options
 =======
 
-.. figure:: /images/modeling_modifiers_simulate_explode_panel.png
+.. figure:: /images/modeling_modifiers_physics_explode_panel.png
    :align: right
 
    The Explode modifier, with a Particle System above it.

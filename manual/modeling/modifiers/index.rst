@@ -79,8 +79,8 @@ Deform
    deform/wave.rst
 
 
-Simulate
-========
+Physics
+=======
 
 .. toctree::
    :maxdepth: 1
@@ -88,9 +88,9 @@ Simulate
    /physics/cloth/index.rst
    /physics/collision.rst
    /physics/dynamic_paint/index.rst
-   simulate/explode.rst
+   physics/explode.rst
    /physics/fluid/index.rst
-   simulate/ocean.rst
-   simulate/particle_instance.rst
+   physics/ocean.rst
+   physics/particle_instance.rst
    /physics/particles/index.rst
    /physics/soft_body/index.rst

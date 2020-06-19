@@ -15,7 +15,7 @@ It is a port from the open source `Houdini Ocean Toolkit
 Options
 =======
 
-.. figure:: /images/modeling_modifiers_simulate_ocean_panel.png
+.. figure:: /images/modeling_modifiers_physics_ocean_panel.png
    :align: right
 
    The Ocean modifier.
@@ -90,19 +90,19 @@ Spectrum
 
    .. list-table:: Examples of different spectra, settings adjusted for each.
 
-      * - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra-turbulent.png
+      * - .. figure:: /images/modeling_modifiers_physics_ocean_spectra-turbulent.png
 
              Turbulent Ocean.
 
-        - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra-established.png
+        - .. figure:: /images/modeling_modifiers_physics_ocean_spectra-established.png
 
              Established Ocean.
 
-      * - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra-established-peaks.png
+      * - .. figure:: /images/modeling_modifiers_physics_ocean_spectra-established-peaks.png
 
              Established Ocean (Sharp Peaks).
 
-        - .. figure:: /images/modeling_modifiers_simulate_ocean_spectra-shallow-water.png
+        - .. figure:: /images/modeling_modifiers_physics_ocean_spectra-shallow-water.png
 
              Shallow Water.
 
@@ -155,7 +155,7 @@ Wind Velocity
 Simulation Data Generation Options
 ----------------------------------
 
-.. figure:: /images/modeling_modifiers_simulate_ocean_foam-layer-name.png
+.. figure:: /images/modeling_modifiers_physics_ocean_foam-layer-name.png
    :width: 640px
    :align: center
 
