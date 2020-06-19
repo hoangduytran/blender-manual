@@ -37,8 +37,8 @@ Deformation
          Number of smoothing iterations per brush step.
 
       .. note::
-         This method works by applying regular smoothing, computing the difference
-         between the original (blended between start of iteration and fully original
-         based on *Shape Preservation*) and the smoothed mesh, smoothing these offsets,
-         pushing vertices back using the smoothed offsets, and finally blending in
-         the original mesh based on *Per-Vertex Displacement*.
+
+         This method works by applying regular smoothing, computing the difference between
+         the original (blended between start of iteration and fully original based on *Shape Preservation*)
+         and the smoothed mesh, smoothing these offsets, pushing vertices back using the smoothed offsets,
+         and finally blending in the original mesh based on *Per-Vertex Displacement*.

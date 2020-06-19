@@ -135,7 +135,7 @@ Playhead
 The playhead is the blue vertical line with the current frame number at the top.
 It can be set or moved to a new position by pressing or holding :kbd:`LMB`
 in scrubbing area at the top of the timeline.
-You can move the playhead in increments by pressing :kbd:`Left` or :kbd:`Right`, or by using :kbd:`Alt-MouseWheel`.
+You can move the playhead in increments by pressing :kbd:`Left` or :kbd:`Right`, or by using :kbd:`Alt-Wheel`.
 You can also jump to the beginning or end frame by pressing :kbd:`Shift-Left` or :kbd:`Shift-Right`.
 As you do, the image for that frame is displayed in the Preview region.
 

@@ -29,7 +29,7 @@ Cyclic
 .. _bpy.types.CurvePaintSettings:
 
 Stroke Options
---------------
+==============
 
 .. admonition:: Reference
    :class: refbox

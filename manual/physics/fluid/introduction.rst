@@ -32,13 +32,12 @@ textures representing the density, heat, and velocity of other fluids or suspend
 
    Example of a fire simulation.
 
-Gases or smoke are emitted inside of a :doc:`Domain </physics/fluid/type/domain/index>`
-from a mesh object or particle system.
-The smoke movement is controlled by airflow inside the domain, which can be influenced by
-:doc:`Effector </physics/fluid/type/effector>` objects. Smoke will also be affected by the scene's
-gravity and :doc:`force fields </physics/forces/force_fields/index>`.
-Airflow inside the domain can affect other physics simulations via the
-:doc:`Fluid Flow </physics/forces/force_fields/types/fluid_flow>` force field.
+Gases or smoke are emitted inside of a :doc:`Domain </physics/fluid/type/domain/index>` from
+a mesh object or particle system. The smoke movement is controlled by airflow inside the domain,
+which can be influenced by :doc:`Effector </physics/fluid/type/effector>` objects.
+Smoke will also be affected by the scene's gravity and :doc:`force fields </physics/forces/force_fields/index>`.
+Airflow inside the domain can affect other physics simulations
+via the :doc:`Fluid Flow </physics/forces/force_fields/types/fluid_flow>` force field.
 
 
 Workflow

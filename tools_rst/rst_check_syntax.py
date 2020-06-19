@@ -127,7 +127,7 @@ def compile_valid_kbd():
         # Named
         '|'.join((
             "Comma", "Period", "Slash", "Backslash",
-            "Plus", "Equals" "Minus", "AccentGrave",
+            "Equals", "Minus", "AccentGrave",
             # Editing
             "Tab", "Backspace", "Delete", "Return", "Spacebar",
             # Navigation
@@ -138,7 +138,7 @@ def compile_valid_kbd():
         r"(?:Numpad(?:[0-9]|Plus|Minus|Delete|Slash|Period|Asterisk))|",
         # Function
         r"(?:F[1-9]|F1[0-2])",
-        r")(?:\[\]\-|\Z))",
+        r")(?:\-|\Z))",
         r"{0,2}" if regular_as_mod else r"?",
 
         # Pointing Devices

@@ -134,7 +134,7 @@ Fluid Density
    If the value is negative, it instead models buoyancy from a surrounding fluid.
 
    The fluid is not actually simulated, so while the setting helps to achieve
-   a more plausible object shapes at rest, it cannot create realistic fluid dynamics effects.
+   a more plausible object shapes at rest, it cannot create realistic fluid dynamic effects.
    It can also be used to give more weight to a soft body like object with heavy and
    sufficiently flexible filling, even if it is not a fluid by itself.
 

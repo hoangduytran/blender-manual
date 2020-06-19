@@ -12,7 +12,7 @@ For this modifier to have any visible effect, there needs to be a particle syste
 That particle system will control how the mesh is exploded.
 
 Both the number of emitted particles and number of faces determine how granular the *Explode* modifier is.
-More faces and more particles will mean more individual pieces.
+More of each faces and particles will mean more individual pieces.
 
 .. Broken link to the demo video...
    Here is
@@ -66,12 +66,12 @@ Particle UV
 
    The V value is set to a constant 0.5 value.
 
-   This allows e.g. to make the color of a fragment (face) vary during it 'explosion' phase,
-   by using a texture with a gradient of colors along its *U* axis.
+   You can for example vary the color of a fragment (face) during the explosion phase,
+   by using a texture with a color gradient along its *U* axis.
 
 Cut Edges
    Split the mesh in pieces based on location of emitted particles, instead of using existing faces.
-   This will typically give a splitting that appears more random.
+   This will typically results in a splitting that appears more random.
 
 Unborn
    Show faces when their attached particles are unborn.

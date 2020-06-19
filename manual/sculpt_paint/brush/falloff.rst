@@ -56,7 +56,7 @@ Curve Preset
    Smoother
       Similar to *Smooth* but produces a wider center point of the brush before tapering off.
    Sphere
-      The strength of the brush is predominately at its strongest
+      The strength of the brush is predominately at its strongest point
       with a steep falloff near the border of the brush.
    Root
       Similar to a Sphere but the center is a more concentrated point.

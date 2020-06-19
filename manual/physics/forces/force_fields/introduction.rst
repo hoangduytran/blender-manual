@@ -140,8 +140,8 @@ Power
 Min Distance
    The distance from the object's origin, up to where the force field is effective with full strength.
    If you have a falloff of 0 this parameter will have no effect,
-   because the field is effective with full strength up to *Max Distance* (or the infinity).
+   because the field is effective with full strength up to *Max Distance* (or infinite).
    Shown by an additional circle around the object.
 Max Distance
-   Makes the force field affect other objects only within a specified maximum radius
+   Specifies the maximum radius in which the force field affect other objects within
    (shown by an additional circle around the object).

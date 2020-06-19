@@ -40,7 +40,7 @@ Geometry
 
 Time
    The time at which the ocean surface is being evaluated.
-   To make an animated ocean, you will need to :ref:`animate <bpy.ops.anim.keyframe_insert>` this value.
+   To create an animated ocean, you will need to :ref:`animate <bpy.ops.anim.keyframe_insert>` this value.
    The speed that the time value is changing will determine the speed of the wave animation.
 Depth
    The constant depth of the ocean floor under the simulated area.
@@ -163,16 +163,16 @@ Simulation Data Generation Options
 
 By default, the simulator only generates displacement data,
 since it takes the least amount of work and gives the fastest feedback.
-Additional simulation data can be generated for rendering as well.
+Extra simulation data can be generated for rendering as well.
 
 Generate Normals
-   Simulates additional normal map data.
+   Simulates extra normal map data.
 
    This can be used by the Ocean texture, when mapped to Normals,
    as a bump map, and enables generating normal map image sequences when baking.
 
 Generate Foam
-   Simulates additional foam data.
+   Simulates extra foam data.
 
    This can be retrieved by the Ocean texture for use in texturing (perhaps as a mask),
    and enables generating foam map image sequences when baking.
@@ -192,9 +192,9 @@ Baking
 
 Rather than simulating the ocean data live, it can be baked to files in a given directory.
 When a simulation is baked, the simulator engine is completely bypassed,
-and the modifier/texture retrieves all information from the baked files.
+and all information for the modifier or texture is retrieved from the baked files.
 
-Baking can be advantageous for a few reasons:
+Baking has the following advantages:
 
 - It is faster to use the stored data rather than re-calculating it.
 - It allows rendering of ocean data in external renderers.
