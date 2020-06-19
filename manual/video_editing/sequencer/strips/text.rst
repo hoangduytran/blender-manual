@@ -20,6 +20,10 @@ Options
 Text
    The actual text displayed.
 
+Wrap Width
+   Wraps the text by the percentage of the frame width,
+   setting this to zero disables word wrapping.
+
 
 Style
 -----
@@ -39,11 +43,8 @@ Layout
 
 Location X/Y
    Positions the text on the X, Y axis.
-Alignment X/Y
-   Horizontal (X) or vertical (Y) alignment of the text relative to the location.
-Wrap Width
-   Wraps the text by the percentage of the frame width,
-   setting this to zero disables word wrapping.
+Anchor X/Y
+   Horizontal (X) or vertical (Y) anchor point of the text relative to the location.
 
 
 Example

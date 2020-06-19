@@ -43,7 +43,7 @@ Channel
 Linked
    All :kbd:`Ctrl-L` / Less :kbd:`Ctrl-NumpadMinus` / More :kbd:`Ctrl-NumpadPlus`
       Selects strips, that are placed next to each other without any gaps.
-Select Grouped :kbd:`Shift-G`
+Grouped :kbd:`Shift-G`
    Selects strips according to their relation with other strips.
 
    Type
