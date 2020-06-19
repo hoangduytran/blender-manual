@@ -17,5 +17,14 @@ We recommend to always use the official drivers.
 
 .. include:: ../common/laptops.rst
    :start-line: 1
+
+Compatibility
+=============
+
+In some cases Blender may crash on startup. Running Blender in compatibility mode 
+can help in fixing this issue. To enable compatibility mode, :kbd:`RMB` the Blender executable
+and select :menuselection:`Properties --> Compatibility` and enable 
+:menuselection:`Run this program in compatibility mode`. Select :menuselection:`Apply` to confirm the changes.
+
 .. include:: ../common/other.rst
    :start-line: 1

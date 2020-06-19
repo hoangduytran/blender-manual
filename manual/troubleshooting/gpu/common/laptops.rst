@@ -9,4 +9,5 @@ One slower onboard GPU (typically Intel) and one faster dedicated GPU for a bett
 For the best performance the dedicated GPU should be used for Blender.
 Which GPU to use for which application can be configured in your graphics driver settings.
 
-If there is a graphics glitch specific to the onboard GPU, then using the dedicated GPU can also help avoid that.
+If there is a graphics glitch or crash specific to the onboard GPU, then using the dedicated GPU can help avoid that.
+Or vice versa, if the dedicated GPU causes issues, then using the onboard graphics can help avoid that.
