@@ -109,6 +109,9 @@ Affect Rotation
    Influence the rotation of particles.
 Absorption
    Force gets absorbed by collision objects.
+Wind Factor
+   Specifies how much the force is reduced when acting parallel to a surface, e.g. cloth.
+   If set to 1, only the normal component of the force is taken into account.
 
 
 Falloff
@@ -131,14 +134,14 @@ Z Direction
    The force can be set to apply only in the direction of the positive Z axis, negative Z axis, or both.
 Power
    How the power of the force field changes with the distance from the force field.
-   If *r* is the distance from the origin of the object, the force changes with 1/*r*\ :sup:`power`.
-   A falloff of 2 changes the force field with 1/*r*\ :sup:`2`,
-   which is the falloff of gravitational pull.
-Max Distance
-   Makes the force field affect other objects only within a specified maximum radius
-   (shown by an additional circle around the object).
+   If *r* is the distance from the origin of the object, the force changes with 1/(*r* - *min* + 1)\ :sup:`power`.
+   A falloff of 2 changes the force field with 1/(*r* - *min* + 1)\ :sup:`2`,
+   which is similar to the falloff of gravitational pull.
 Min Distance
    The distance from the object's origin, up to where the force field is effective with full strength.
    If you have a falloff of 0 this parameter will have no effect,
    because the field is effective with full strength up to *Max Distance* (or the infinity).
    Shown by an additional circle around the object.
+Max Distance
+   Makes the force field affect other objects only within a specified maximum radius
+   (shown by an additional circle around the object).
