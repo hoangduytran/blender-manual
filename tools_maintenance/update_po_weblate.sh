@@ -76,12 +76,20 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-# Make ordered list of Sphinx templates based on the directory structure of rst files in the source directory.
+# Make ordered list of Sphinx templates based on table of contents in index.html
+# This requires having run `make html` in the docs repo and copied the main
+# `index.html` over next to this script.
 if [ "$make_templates_list" = true ]; then
   echo "=== Making ordered list of Sphinx templates based on table of contents ==="
-  find $SOURCE_DIR -type f -name "*.rst" > templates_list.txt
-  sed -i 's|.rst|.pot|g' templates_list.txt
-  sed -i "s|$SOURCE_DIR/||g" templates_list.txt
+  if [ ! -f "templates_list.html" ]; then
+    echo "'templates_list.html' file is missing, build it with 'make docs' and copy it here."
+    exit 1
+  fi
+  # The strings we are interested in are of the form:
+  # <li class="toctree-l1"><a class="reference internal" href="about/index.html">About</a><ul>
+  toc=$(grep "<li class=\"toctree-.*href=\".*.html\">.*" index.html)
+  templates=$(echo "$toc" | sed -e 's@^.*href="\(.*\)\.html".*@\1.pot@' | awk '!x[$0]++')
+  echo -e "index.pot\n$templates" > templates_list.txt
 fi
 
 # Generate/Update Sphinx template from rst files

@@ -247,6 +247,7 @@ html_extra_path = ["../resources/versions.json"]
 # template names.
 html_additional_pages = {
     '404': '404.html',
+    'templates_list': 'templates_list.html',
 }
 
 # If false, no module index is generated.
