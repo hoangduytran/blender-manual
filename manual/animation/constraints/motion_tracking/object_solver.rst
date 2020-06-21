@@ -37,7 +37,7 @@ Active Clip
 Object
    Select a tracked object to receive transform data from.
 Camera
-   Select the camera to which the motion is parented to (if active empty scene camera is used).
+   Select the camera to which the motion is parented to (if empty, active scene camera is used).
 Set Inverse
    Moves the origin of the object to the origin of the camera.
 Clear Inverse
