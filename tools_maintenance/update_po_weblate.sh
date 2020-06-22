@@ -76,9 +76,9 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-# Make ordered list of Sphinx templates based on table of contents in index.html
+# Make ordered list of Sphinx templates based on table of contents in templates_list.html
 # This requires having run `make html` in the docs repo and copied the main
-# `index.html` over next to this script.
+# `templates_list.html` over next to this script.
 if [ "$make_templates_list" = true ]; then
   echo "=== Making ordered list of Sphinx templates based on table of contents ==="
   if [ ! -f "templates_list.html" ]; then
@@ -87,7 +87,7 @@ if [ "$make_templates_list" = true ]; then
   fi
   # The strings we are interested in are of the form:
   # <li class="toctree-l1"><a class="reference internal" href="about/index.html">About</a><ul>
-  toc=$(grep "<li class=\"toctree-.*href=\".*.html\">.*" index.html)
+  toc=$(grep "<li class=\"toctree-.*href=\".*.html\">.*" templates_list.html)
   templates=$(echo "$toc" | sed -e 's@^.*href="\(.*\)\.html".*@\1.pot@' | awk '!x[$0]++')
   echo -e "index.pot\n$templates" > templates_list.txt
 fi
