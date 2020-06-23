@@ -3,6 +3,7 @@
 ***********
 Motion Blur
 ***********
+
 The Motion Blur effect in EEVEE is a combination of two techniques.
 
 First, it uses a fast post-process vector blur using a vector motion pass.
@@ -10,9 +11,9 @@ This blurs the image between 3 time steps using pixel velocity.
 This technique is fast and produce clean gradients but have issues at objects
 borders or if the motion is locally too complex (too many vector variation in small areas).
 
-This technique uses random sampling and the noise amount is proportional to the sample count found in 
+This technique uses random sampling and the noise amount is proportional to the sample count found in
 :menuselection:`Properties --> Render --> Sampling --> Render Samples`.
-The screenspace limit of this technique can be tweaked using :menuselection:`Max Blur`.
+The screenspace limit of this technique can be tweaked using *Max Blur*.
 
 .. note::
 
@@ -29,10 +30,9 @@ On top of that, EEVEE splits the render into multiple timesteps and accumulates 
 which is known as Accumulation Motion Blur.
 This technique is precise but requires many steps for clean gradients.
 This is used in combination with the post-process blur to handle the inter-step gaps.
-Each step corresponds to a full scene re-evaluation and can add a lot of overhead to the rendertime.
+Each step corresponds to a full scene re-evaluation and can add a lot of overhead to the render time.
 Adding more steps also allows to reduce the maximum blur parameters as the post-process blur will need
 to cover less distance.
-
 
 .. note::
 
@@ -84,16 +84,17 @@ Shutter
    Time (in frames) taken between shutter open and close.
 
 Background Separation
-   Used by the post-process blur to avoid blurring background over foreground. Lower values will reduce background bleeding onto foreground elements.
+   Used by the post-process blur to avoid blurring background over foreground.
+   Lower values will reduce background bleeding onto foreground elements.
 
 Max Blur
-   Maximum blur distance a pixel can spread over. A value of 0 will disable the post-process blur and only use the
-   accumulation blur.
+   Maximum blur distance a pixel can spread over.
+   A value of 0 will disable the post-process blur and only use the accumulation blur.
 
-.. note::
+   .. note::
 
-   High maximum blur values may also reduce the quality.
+      High maximum blur values may also reduce the quality.
 
-Motion steps
-   This controls the number of steps used by the accumulation blur and thus its accuracy. More steps means longer
-   render time. 
+Steps
+   This controls the number of steps used by the accumulation blur and thus its accuracy.
+   More steps means longer render time.
