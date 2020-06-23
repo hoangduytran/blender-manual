@@ -3,8 +3,13 @@
 Editing
 *******
 
+Transform
+=========
+
+.. _bpy.ops.transform.seq_slide:
+
 Move
-====
+----
 
 .. admonition:: Reference
    :class: refbox
@@ -30,7 +35,7 @@ Currently it is possible to move only one strip by dragging.
 
 
 Start Frame Offset
-------------------
+^^^^^^^^^^^^^^^^^^
 
 The *start frame offset* for that strip could be selected by clicking :kbd:`LMB` on the left arrow of the strip;
 holding it down (or pressing :kbd:`G` and then moving the mouse left/right)
@@ -45,7 +50,7 @@ The frame number label under the strip displays the start frame of the strip.
 
 
 End Frame
----------
+^^^^^^^^^
 
 The *end frame* of the strip could be selected by clicking :kbd:`LMB` on the right arrow of the strip;
 holding it down (or pressing :kbd:`G`) and then moving the mouse changes the ending frame within the strip.
@@ -66,7 +71,7 @@ The frame number label over the strip displays the end frame of the strip.
 
 
 Move/Extend from Playhead
-=========================
+-------------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -81,8 +86,10 @@ All selected strip handles to the "mouse side" of the current frame indicator wi
 so you can change the duration of the current frame.
 
 
+.. _bpy.ops.sequencer.slip:
+
 Slip Strip Contents
-===================
+-------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -93,8 +100,10 @@ Slip Strip Contents
 The Slip tool allows you to change the position of the contents of a strip without moving the strip itself.
 
 
+.. _bpy.ops.sequencer.snap:
+
 Snap Strips to Playhead
-=======================
+-----------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -109,8 +118,10 @@ you can get to fractional parts of a second by zooming the display;
 you can get all the way down to an individual frame.
 
 
+.. _bpy.ops.sequencer.offset_clear:
+
 Clear Strips Offset
-===================
+-------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -121,46 +132,53 @@ Clear Strips Offset
 To reset the (soft) start/end frame handles.
 
 
-Duplicate Strips
-================
+.. _bpy.ops.sequencer.swap:
+
+Swap Strips
+-----------
 
 .. admonition:: Reference
    :class: refbox
 
-   :Menu:      :menuselection:`Strip --> Duplicate Strips`
-   :Hotkey:    :kbd:`Shift-D`
+   :Menu:      :menuselection:`Strip --> Transform --> Swap Strips`
 
-Duplicate a strip to make an unlinked copy;
-drag it to a time and channel, and drop it by :kbd:`LMB` click.
-
-
-Delete
-======
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Menu:      :menuselection:`Strip --> Delete`
-   :Hotkey:    :kbd:`Delete` / :kbd:`X`
-
-Delete the selected strip(s).
+Left :kbd:`Alt-Left-Arrow`
+   Swaps the active strip with the strip to the left.
+Right :kbd:`Alt-Right-Arrow`
+   Swaps the active strip with the strip to the right.
 
 
-Separate Images
-===============
+.. _bpy.ops.sequencer.gap_remove:
+
+Remove Gaps
+-----------
 
 .. admonition:: Reference
    :class: refbox
 
-   :Menu:      :menuselection:`Strip --> Separate Images`
-   :Hotkey:    :kbd:`Y`
+   :Menu:      :menuselection:`Strip --> Transform --> Insert Gaps`
+   :Hotkey:    :kbd:`Backspace`
 
-For images sequence only -- Converts the strip into multiple strips, one strip for each frame.
-Useful for slide shows and other cases where you want to bring in a set on non-continuous images.
+Remove blank frames between the current frame and the first strip to the right,
+independent of selection or locked state of strips.
 
-Length
-   You have to specify the duration you want the resulting strips will be.
 
+.. _bpy.ops.sequencer.gap_insert:
+
+Insert Gaps
+-----------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Transform --> Insert Gaps`
+   :Hotkey:    :kbd:`Ctrl-Backspace`
+
+Insert blank frames between the current frame and the first strips to the right,
+independent of selection or locked state of strips.
+
+
+.. _bpy.ops.sequencer.split:
 
 Split
 =====
@@ -201,30 +219,115 @@ number fields in the *Strip Info* panel.
    replacing the current strip with each.
 
 
-Mute
-====
+.. _bpy.ops.sequencer.duplicate_move:
 
-Mute/Unmute Strips :kbd:`H`, :kbd:`Alt-H`
-   Mute or unmute the selected strips.
-Mute/Unmute Deselected Strips :kbd:`Shift-H`, :kbd:`Ctrl-Alt-H`
-   Mute or unmute all strips but the selected.
+Duplicate Strips
+================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Duplicate Strips`
+   :Hotkey:    :kbd:`Shift-D`
+
+Duplicate a strip to make an unlinked copy;
+drag it to a time and channel, and drop it by :kbd:`LMB` click.
+
+
+.. _bpy.ops.sequencer.delete:
+
+Delete
+======
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Delete`
+   :Hotkey:    :kbd:`Delete` / :kbd:`X`
+
+Delete the selected strip(s).
+
+
+Separate Images
+===============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Separate Images`
+   :Hotkey:    :kbd:`Y`
+
+For images sequence only -- Converts the strip into multiple strips, one strip for each frame.
+Useful for slide shows and other cases where you want to bring in a set on non-continuous images.
+
+Length
+   You have to specify the duration you want the resulting strips will be.
+
+
+Movie Strip
+===========
+
+.. _bpy.ops.sequencer.rendersize:
+
+Set Render Size
+---------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Set Render Size`
+
+Sets the render resolution and aspect to match the strip's resolution.
+
+
+.. _bpy.ops.sequencer.deinterlace_selected_movies:
+
+Deinterlace Movies
+------------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Deinterlace Movies`
+
+Converts interlaced video into progressive video.
 
 
 .. _sequencer-edit-change:
 
-Change
-======
+Effect Strip
+============
 
-The Change sequence operator modifies the file path or effect inputs/type on active strip.
+.. _bpy.ops.sequencer.change_effect_input:
 
-Effect
-   Switch the effects on a selected Effect strip.
-Path/Files
-   Changes the source file contained in a selected strip.
+Change Effect Input
+-------------------
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Effect Strip --> Change Effect Type`
+
+Swaps which strips are the input for the effect strip.
+
+
+.. _bpy.ops.sequencer.change_effect_type:
+
+Change Effect Type
+------------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Effect Strip --> Change Effect Type`
+
+Switch the effects on a selected Effect strip.
+
+
+.. _bpy.ops.sequencer.reassign_inputs:
 
 Reassign Inputs
-===============
+---------------
 
 .. admonition:: Reference
    :class: refbox
@@ -236,16 +339,60 @@ This tool can be used to assign (reconnect) effect strips in a different way.
 Just select three arbitrary strips and press :kbd:`R`.
 If you don't create a cycle, those will be connected to a new effect chain.
 
-The Strip menu contains additional tools for working with strips:
 
-- Insert/Remove Gap
-- Deinterlace Movies
-- Set Render Size
-- Reload Strips
-- Swap Inputs
-- Lock Strips
-- Unlock Strips
-- Swap Strips
+.. _bpy.ops.sequencer.swap_inputs:
+
+Swap Inputs
+-----------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Menu:      :menuselection:`Strip --> Effect Strip --> Swap Inputs`
+   :Hotkey:    :kbd:`Alt-S`
+
+Swaps the first two inputs for the effect strip.
+
+
+Lock/Mute
+=========
+
+.. _bpy.ops.sequencer.lock:
+.. _bpy.ops.sequencer.unlock:
+
+Lock Strips :kbd:`Shift-L`
+   Disables the strip from being transformed.
+Unlock Strips :kbd:`Shift-Alt-L`
+   Enables disabled strips allowing them to be transormed.
+
+.. _bpy.ops.sequencer.mute:
+.. _bpy.ops.sequencer.unmute:
+
+Mute/Unmute Strips :kbd:`H`, :kbd:`Alt-H`
+   Mute or unmute the selected strips.
+Mute/Unmute Deselected Strips :kbd:`Shift-H`, :kbd:`Ctrl-Alt-H`
+   Mute or unmute all strips but the selected.
+
+
+Inputs
+======
+
+.. _bpy.ops.sequencer.reload:
+
+Reload Strips :kbd:`Alt-R`
+   Reloads the strips from their external saved location.
+Reload Strips and Adjust Length :kbd:`Shift-Alt-R`
+   Reloads the strips from their external saved location and readjusts the strip duration.
+
+.. _bpy.ops.sequencer.change_path:
+
+Change Path/Files
+   Changes the source file contained in a selected strip.
+
+.. _bpy.ops.sequencer.swap_data:
+
+Swap Data
+   Swaps 2 sequence strips.
 
 
 Context Menu
@@ -278,15 +425,3 @@ From Playhead
    Fade from the playhead to the end of overlapping sequences.
 To Playhead
    Fade from the start of sequences under the playhead to the current frame.
-
-
-Insert Gaps
-===========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Menu:      :menuselection:`Context Menu --> Insert Gaps`
-   :Hotkey:    :kbd:`Ctrl-Backspace`
-
-.. todo:: |todo|
