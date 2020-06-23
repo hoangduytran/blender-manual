@@ -141,16 +141,17 @@ This standard is new and therefore support for it is still limited.
      - Notes
    * - `Monado <https://monado.dev/>`__
      - GNU/Linux
-     - *Not* recommended for general use yet
-   * - `Oculus Rift <https://www.oculus.com/>`__
+     - *Not* recommended for general use yet.
+   * - `Oculus <https://www.oculus.com/>`__ (Rift and Quest)
      - Windows
-     - `Prototype Release <https://developer.oculus.com/blog/prototype-openxr-for-oculus/>`__
+     - `Prototype Release <https://developer.oculus.com/blog/prototype-openxr-for-oculus/>`__,
+       Oculus Link required for Quest.
    * - `SteamVR <https://www.steamvr.com/>`__
      - Windows, GNU/Linux
-     - `Developer Preview <https://store.steampowered.com/newshub/app/250820/view/2396425843528787269>`__
+     - `Developer Preview <https://store.steampowered.com/newshub/app/250820/view/2396425843528787269>`_.
    * - `Windows Mixed Reality <https://www.microsoft.com/windows/windows-mixed-reality>`__
      - Windows
-     - Requires the Windows 10 May 2019 Update (1903)
+     - Requires Windows 10 May 2019 Update (1903).
 
 
 Getting Started
@@ -160,11 +161,10 @@ The following subsections describe how an HMD can be set up for usage with the `
 If this is not done, Blender will report an error when trying to start a virtual reality session.
 
 
-Oculus Rift
-^^^^^^^^^^^
+Oculus
+^^^^^^
 
-Oculus only provides prototype OpenXR support. To use it, Blender has to be started in
-a special way, as described below.
+Oculus provides prototype OpenXR support. To use it, Blender has to be started in a special way, as described below.
 
 - Download and install the `Oculus Rift software <https://www.oculus.com/setup/>`__.
 - Start Blender by double clicking the ``blender_oculus`` script inside the installation directory.
