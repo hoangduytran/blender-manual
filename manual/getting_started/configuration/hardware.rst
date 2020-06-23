@@ -139,15 +139,18 @@ This standard is new and therefore support for it is still limited.
    * - Platform
      - Operating System
      - Notes
-   * - `Windows Mixed Reality <https://www.microsoft.com/windows/windows-mixed-reality>`__
-     - Windows
-     - Requires the Windows 10 May 2019 Update (1903)
-   * - `Oculus Rift <https://www.oculus.com/>`__
-     - Windows
-     - `Prototype Release <https://developer.oculus.com/blog/prototype-openxr-for-oculus/>`__
    * - `Monado <https://monado.dev/>`__
      - GNU/Linux
      - *Not* recommended for general use yet
+   * - `Oculus Rift <https://www.oculus.com/>`__
+     - Windows
+     - `Prototype Release <https://developer.oculus.com/blog/prototype-openxr-for-oculus/>`__
+   * - `SteamVR <https://www.steamvr.com/>`__
+     - Windows, GNU/Linux
+     - `Developer Preview <https://store.steampowered.com/newshub/app/250820/view/2396425843528787269>`__
+   * - `Windows Mixed Reality <https://www.microsoft.com/windows/windows-mixed-reality>`__
+     - Windows
+     - Requires the Windows 10 May 2019 Update (1903)
 
 
 Getting Started
@@ -155,6 +158,28 @@ Getting Started
 
 The following subsections describe how an HMD can be set up for usage with the `supported platforms`_.
 If this is not done, Blender will report an error when trying to start a virtual reality session.
+
+
+Oculus Rift
+^^^^^^^^^^^
+
+Oculus only provides prototype OpenXR support. To use it, Blender has to be started in
+a special way, as described below.
+
+- Download and install the `Oculus Rift software <https://www.oculus.com/setup/>`__.
+- Start Blender by double clicking the ``blender_oculus`` script inside the installation directory.
+  It will open a command-line window with further information.
+- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
+
+
+SteamVR
+^^^^^^^
+
+OpenXR support in SteamVR is a developer preview. It requires SteamVR beta features.
+
+- `Enable SteamVR beta updates <https://www.vive.com/us/support/vive/category_howto/optin-to-steamvr-beta.html>`__.
+- Launch SteamVR. It should show a prompt for making SteamVR the default OpenXR runtime. Click ``Set as default``.
+- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
 
 
 Windows Mixed Reality
@@ -168,24 +193,13 @@ application.
 - If the system meets all requirements, the Mixed Reality Portal should already be installed.
   It is also available in
   the `Microsoft Store <https://www.microsoft.com/en-us/p/mixed-reality-portal/9ng1h8b3zc7m>`__.
-  On first use it will guide through some setup steps.
 - Launch the Mixed Reality Portal. Click the menu button ``...`` in the lower left corner.
-  In the menu it opens, select the *Set up OpenXR*. Windows Mixed Reality is now ready to be used with OpenXR.
+  In the menu it opens, select the *Set up OpenXR*.
+- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
 
 For more information, refer to Windows'
 `Getting Started Guide for Windows Mixed Reality and OpenXR
 <https://docs.microsoft.com/windows/mixed-reality/openxr#getting-started-with-openxr-for-windows-mixed-reality-headsets>`__.
-
-
-Oculus Rift
-^^^^^^^^^^^
-
-Oculus only provides prototype OpenXR support. To use it, Blender has to be started in
-a special way, as described below.
-
-- Download and install the `Oculus Rift software <https://www.oculus.com/setup/>`__.
-- Start Blender by double clicking the ``blender_oculus`` script inside the installation directory.
-  It will open a command-line window with further information.
 
 
 Monado
@@ -199,10 +213,3 @@ for Debian based distributions. For others it has to be compiled from source,
 which in this case is not recommended for people with little experience in compiling software.
 Follow the `Getting Started Guides <https://gitlab.freedesktop.org/monado/monado/-/blob/master/README.md>`__
 from Monado to do so nevertheless.
-
-
-Completing the Setup
---------------------
-
-Inside Blender, the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>`
-needs to be enabled to access virtual reality features.
