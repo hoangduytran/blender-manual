@@ -11,7 +11,6 @@ Hair
 These are global settings that apply to all instances of hair systems.
 The resolution of the strands is controlled by the step values in particle settings.
 Each hair system uses the material identified in the particle settings.
-Rendering of hair particle systems can be toggled in the panel's header.
 
 Shape
    Rounded Ribbons
