@@ -62,9 +62,9 @@ Example
      - .. figure:: /images/grease-pencil_visual-effects_colorize_duotone.png
           :width: 200px
 
-          Mode: duotone.
+          Mode: Duotone.
 
      - .. figure:: /images/grease-pencil_visual-effects_colorize_transparent.png
           :width: 200px
 
-          Mode: transparent.
+          Mode: Transparent.

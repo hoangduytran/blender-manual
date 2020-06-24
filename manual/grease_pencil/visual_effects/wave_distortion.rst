@@ -15,7 +15,7 @@ Options
 
    Wave Distortion Effect.
 
-Direction
+Orientation
    Sets horizontal or vertical direction for the waves.
 
 Amplitude

@@ -33,16 +33,14 @@ Mode
 Glow Color
    Defines the glow color.
 
-Blend
+Blend Mode
    The mask blending operation to perform. See :term:`Color Blend Modes`.
 
 Opacity
    Control the Opacity of the glow over the object.
 
-Size
+Size X, Y
    Control the glow scale in pixels on the X and Y axis.
-
-   X, Y
 
 Rotation
    Control the Rotation of the glow.

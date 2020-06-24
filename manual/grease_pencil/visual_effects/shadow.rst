@@ -18,51 +18,49 @@ Options
 
    Shadow Visual Effect.
 
-Offset
-   Control the shadow displacement in pixels on the X and Z axis.
-
-   X, Z
-
 Shadow Color
    Defines the shadow color.
 
-Scale
-   Control the size of the shadow on the X and Z axis.
+Offset X, Y
+   Control the shadow displacement in pixels on the X and Z axis.
 
-   X, Z
+Scale X, Y
+   Control the size of the shadow on the X and Z axis.
 
 Rotation
    Sets the shadow rotation around the Grease Pencil object center
    or another object when *Use Object As Pivot* is enabled.
 
-Blur
-   Control the blur scale in pixels on the X and Z axis.
-
-   X, Z
-
-   Samples
-      Number of blur samples (0 disabled the blur effect).
-
-Use Object as Pivot
+Object Pivot
    When enabled, an *Object* is used by the shadow as the center of rotation.
 
-   Object
-      Sets the object to use as the pivot point for the shadow.
 
-Use Wave Effect
-   When enabled, apply a wave distortion to the shadow.
+Blur
+----
 
-   Direction
-      Sets horizontal or vertical direction for the waves.
+Blur X, Y
+   Control the blur scale in pixels on the X and Z axis.
 
-   Amplitude
-      Controls the strength and the depth of the wave.
+Samples
+   Number of blur samples (0 disabled the blur effect).
 
-   Period
-      Controls the wave period. The time it takes to complete one cycle.
 
-   Phase
-      Shifts the wave pattern over the shadow.
+Wave Effect
+-----------
+
+When enabled, apply a wave distortion to the shadow.
+
+Orientation
+   Sets horizontal or vertical direction for the waves.
+
+Amplitude
+   Controls the strength and the depth of the wave.
+
+Period
+   Controls the wave period. The time it takes to complete one cycle.
+
+Phase
+   Shifts the wave pattern over the shadow.
 
 
 Example

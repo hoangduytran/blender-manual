@@ -20,27 +20,27 @@ Options
 
    Rim Visual Effect.
 
-Offset
-   Control the color mask displacement in pixels on the X and Z axis.
-
-   X, Z
-
 Rim Color
    Defines the rim light color.
 
 Mask Color
    Defines a color to keep unaltered.
 
-Blend
+Blend Mode
    The mask blending operation to perform. See :term:`Color Blend Modes`.
 
+Offset X, Y
+   Control the color mask displacement in pixels on the X and Z axis.
+
+
 Blur
+----
+
+Blur X, Y
    Control the blur scale in pixels on the X and Z axis.
 
-   X, Z
-
-   Samples
-      Number of blur samples (0 disabled the blur effect).
+Samples
+   Number of blur samples (0 disabled the blur effect).
 
 
 Example

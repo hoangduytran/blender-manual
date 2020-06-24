@@ -15,7 +15,7 @@ Options
 
    Pixelate Visual Effect.
 
-Size
+Size X, Y
    Horizontal and vertical size of the final pixels to apply.
 
 
