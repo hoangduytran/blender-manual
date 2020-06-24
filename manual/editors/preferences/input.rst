@@ -44,7 +44,7 @@ Emulate 3 Button Mouse
       - Detaching node links.
       - Moving the Compositor background image.
 
-      Some touchpads support three-finger tap for middle mouse,
+      Some touchpads support three-finger tap for middle mouse button,
       which may be an alternative to using this option.
 
    Modifier *(unsupported on Microsoft Windows)*

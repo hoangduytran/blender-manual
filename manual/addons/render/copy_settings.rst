@@ -6,7 +6,7 @@ Copy Render Settings
 This is a simple tool that adds in the Render properties a new panel with a big *Copy Render Settings* button,
 and some options to control what to copy, and to which scenes...
 
-I wrote it as I often have tenth of scenes all edited/gathered in a single "main" scene sequence.
+I wrote it as I often have tens of scenes all edited/gathered in a single "main" scene sequence.
 When I want to make preview renders of that main scene,
 I had to manually set all other scenes' preview scale -- long and boring.
 And even worse, I often forgot to put them back to full resolution before final rendering!

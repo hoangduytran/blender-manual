@@ -287,7 +287,7 @@ The Timeline header controls.
 
    Timeline header controls.
 
-   \1. Popovers for Playback and Keying, 2. Transport Controls, 3.Frame Controls
+   \1. Popovers for Playback and Keying, 2. Transport Controls, 3. Frame Controls
 
 
 Transport Controls
