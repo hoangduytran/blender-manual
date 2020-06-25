@@ -73,10 +73,27 @@ So you will only need to add a new camera if you are making cuts between them.
 See :ref:`Animating Cameras <marker-bind-camera>`.
 
 
+.. _bpy.ops.view3d.view_center_camera:
+
+Frame Camera Bounds
+===================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      All Modes
+   :Menu:      :menuselection:`View --> Cameras --> Frame Camera Bounds`
+   :Hotkey:    :kbd:`Home`
+
+Centers the camera view inside the 3D Viewport's screen area
+and resizes the view to fit within the area's bounds.
+
+
 Camera Navigation
 =================
 
-There are several different ways to navigate and position the camera in your scene, some of them are explained below.
+There are several different ways to navigate and position the camera in your scene,
+some of them are explained below.
 
 Zooming in and out is possible in this view, but to change the viewpoint,
 you have to move or rotate the camera.
@@ -125,9 +142,9 @@ Roll
    Press :kbd:`R` to enter object rotation mode. The default will be to rotate the camera in its local Z axis
    (the axis orthogonal to the camera view), which is the definition of a camera "roll".
 Vertical Pan or Pitch
-   This is just a rotation along the local X axis. Press :kbd:`R` to enter object rotation mode, then :kbd:`X` twice
-   (the first press selects the *global* axis, pressing the same letter a second time selects the *local* axis --
-   this works with any axis;
+   This is just a rotation along the local X axis. Press :kbd:`R` to enter object rotation mode,
+   then :kbd:`X` twice (the first press selects the *global* axis,
+   pressing the same letter a second time selects the *local* axis -- this works with any axis;
    see the :doc:`axis locking page </scene_layout/object/editing/transform/control/axis_locking>`).
 Horizontal Pan or Yaw
    This corresponds to a rotation around the camera's local Y axis.
