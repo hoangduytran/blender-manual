@@ -1,7 +1,9 @@
 
-*******
-Regions
-*******
+************
+View Regions
+************
+
+.. _bpy.ops.view3d.clip_border:
 
 Clipping Region
 ===============

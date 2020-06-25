@@ -1,7 +1,7 @@
 
-***********
-Projections
-***********
+************************
+Perspective/Orthographic
+************************
 
 .. admonition:: Reference
    :class: refbox
