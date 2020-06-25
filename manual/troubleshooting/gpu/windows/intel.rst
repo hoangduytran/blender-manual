@@ -26,7 +26,7 @@ In some cases Blender may crash on startup. Running Blender in compatibility mod
 can help in fixing this issue. To enable compatibility mode, :kbd:`RMB` on
 the Blender executable and select :menuselection:`Properties --> Compatibility`
 and enable :menuselection:`Run this program in compatibility mode`.
-Confirm the changes with *Apply* .
+Confirm the changes with *Apply*.
 
 .. include:: ../common/other.rst
    :start-line: 1

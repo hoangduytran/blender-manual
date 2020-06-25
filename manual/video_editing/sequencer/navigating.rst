@@ -24,7 +24,7 @@ Sidebar :kbd:`N`
 Toolbar :kbd:`T`
    Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
 Adjust Last Operation
-   Displays a popup panel to alter properties of the last
+   Displays a pop-up panel to alter properties of the last
    completed operation see :ref:`ui-undo-redo-adjust-last-operation`.
 Preview as Backdrop
    Displays the current frame in the background of the main view like in the Compositor.

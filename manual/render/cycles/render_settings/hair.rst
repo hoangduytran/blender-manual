@@ -18,7 +18,7 @@ Shape
       Hair curves are subdivided with a fixed number of specified subdivisions.
 
       Curve Subdivisions
-         Number of subdivisions used in Cardinal curve intersection (power of 2).
+         Number of subdivisions used in cardinal curve intersection (power of 2).
 
    3D Curves
       Render hair as 3D curve, for accurate results when viewing hair close up.

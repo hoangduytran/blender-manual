@@ -26,8 +26,8 @@ Blender supports various types of input devices:
 
 .. note::
 
-   If you are missing an input device such as a mouse or numpad Blender
-   can change its :doc:`keymap </interface/keymap/blender_default>` to emulate these devices.
+   If you are missing an input device such as a mouse or numpad you can change
+   Blender's :doc:`keymap </interface/keymap/blender_default>` to emulate these devices.
    Settings to enable this can be found in the :doc:`Input Preferences </editors/preferences/input>`.
 
 
@@ -208,11 +208,13 @@ Monado
 Monado is a :doc:`free and open source </getting_started/about/license>` XR platform for Linux.
 It is not yet ready for production usage and should only be used for testing purposes.
 
-Packages are availalbe for the following distributions:
+Packages are available for the following distributions:
 
-- ubuntu (`Eoan, Focal <https://launchpad.net/~monado-xr/+archive/ubuntu/monado>`__) 
-- Debian (`bullseye <https://packages.debian.org/bullseye/libopenxr1-monado>`__, `sid <https://packages.debian.org/sid/libopenxr1-monado>`__) 
+- Ubuntu (`Eoan, Focal <https://launchpad.net/~monado-xr/+archive/ubuntu/monado>`__)
+- Debian (`bullseye <https://packages.debian.org/bullseye/libopenxr1-monado>`__,
+  `sid <https://packages.debian.org/sid/libopenxr1-monado>`__)
 
-For other systems, it has to be compiled from source, which in this case is not recommended for people with little
-experience in compiling software. Follow the `Getting Started Guides <https://gitlab.freedesktop.org/monado/monado/-/blob/master/README.md>`__
+For other systems, it has to be compiled from source, which in this case is not
+recommended for people with little experience in compiling software.
+Follow the `Getting Started Guides <https://gitlab.freedesktop.org/monado/monado/-/blob/master/README.md>`__
 from Monado to do so nevertheless.

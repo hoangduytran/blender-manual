@@ -133,9 +133,7 @@ Roll, Pan, Dolly, and Track
 ---------------------------
 
 To perform these camera moves, the camera must first be *selected* so transform operations apply to it.
-
 The following actions also assume that you are in camera view.
-
 Having done so, you can now manipulate the camera using the same tools that are used to transform any object:
 
 Roll

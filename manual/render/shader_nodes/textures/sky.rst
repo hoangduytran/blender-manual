@@ -29,11 +29,13 @@ Sky Type
    Sky model to use.
 
    Preetham
-      Based on the 1999 `paper <https://www2.cs.duke.edu/courses/cps124/spring08/assign/07_papers/p91-preetham.pdf>`__ by Preetham
+      Based on the 1999 `paper <https://doi.org/10.1145/311535.311545>`__ by Preetham et al.
    Hosek/Wilkie
-      Based on the 2012 `paper <https://cgg.mff.cuni.cz/projects/SkylightModelling/>`__ by Hosek and Wilkie
+      Based on the 2012 `paper <https://cgg.mff.cuni.cz/projects/SkylightModelling/>`__ by Hosek and Wilkie.
    Nishita
-      Improved version of the 1993 `model <https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky/simulating-colors-of-the-sky>`__ by Nishita
+      Improved version of the 1993
+      `model <https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky/simulating-colors-of-the-sky>`__
+      by Nishita et al.
 
 Sun Direction
    Sun direction vector.
@@ -102,3 +104,7 @@ Examples
    :width: 200px
 
    Example of Sky Texture.
+
+.. seealso:: 
+
+   :doc:`/addon/lighting/sun_position` add-on

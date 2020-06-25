@@ -193,7 +193,7 @@ Calculation Type
 
 Ball Size
    Fraction of the length of attached edges.
-   The edge length is computed based on the choosen algorithm.
+   The edge length is computed based on the chosen algorithm.
    This setting is the factor that is multiplied by the spring length.
    It is a spherical distance (radius) within which, if another vertex of the same mesh enters,
    the vertex starts to deflect in order to avoid a self-collision.

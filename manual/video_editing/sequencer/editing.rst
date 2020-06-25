@@ -37,28 +37,28 @@ Currently it is possible to move only one strip by dragging.
 Start Frame Offset
 ^^^^^^^^^^^^^^^^^^
 
-The *start frame offset* for that strip could be selected by clicking :kbd:`LMB` on the left arrow of the strip;
+The *Start Frame Offset* for that strip can be selected by clicking :kbd:`LMB` on the left handle of the strip;
 holding it down (or pressing :kbd:`G` and then moving the mouse left/right)
 changes the start frame within the strip by the number of frames you move it.
 The frame number label under the strip displays the start frame of the strip.
 
-- If you have a 20-image sequence strip, and drag the left arrow to the right by 10 frames,
+- If you have a 20-image sequence strip, and drag the left handle to the right by 10 frames,
   the strip will start at image 11 (images 1 to 10 will be skipped).
   Use this to clip off a roll-up or undesired lead-in.
-- Dragging the left arrow left will create a lead-in (copies) of the first frame for as many frames as you drag it.
+- Dragging the left handle left will create a lead-in (copies) of the first frame for as many frames as you drag it.
   Use this when you want some frames for a transition at the start of the clip.
 
 
 End Frame
 ^^^^^^^^^
 
-The *end frame* of the strip could be selected by clicking :kbd:`LMB` on the right arrow of the strip;
+The *End Frame* of the strip could be selected by clicking :kbd:`LMB` on the right handle of the strip;
 holding it down (or pressing :kbd:`G`) and then moving the mouse changes the ending frame within the strip.
 The frame number label over the strip displays the end frame of the strip.
 
-- Dragging the right arrow to the left shortens the clip;
+- Dragging the right handle to the left shortens the clip;
   any original images at the tail are ignored. Use this to quickly clip off a roll-down.
-- Dragging the right arrow to the right extends the clip.
+- Dragging the right handle to the right extends the clip.
   For movies and images sequences, more of the animation is used until exhausted.
   Extending a clip beyond its length will render as a copy of the last image.
   Use this for transitions out of this clip.
@@ -142,9 +142,9 @@ Swap Strips
 
    :Menu:      :menuselection:`Strip --> Transform --> Swap Strips`
 
-Left :kbd:`Alt-Left-Arrow`
+Left :kbd:`Alt-Left`
    Swaps the active strip with the strip to the left.
-Right :kbd:`Alt-Right-Arrow`
+Right :kbd:`Alt-Right`
    Swaps the active strip with the strip to the right.
 
 
@@ -243,7 +243,7 @@ Delete
    :class: refbox
 
    :Menu:      :menuselection:`Strip --> Delete`
-   :Hotkey:    :kbd:`Delete` / :kbd:`X`
+   :Hotkey:    :kbd:`Delete`, :kbd:`X`
 
 Delete the selected strip(s).
 
@@ -336,7 +336,7 @@ Reassign Inputs
    :Hotkey:    :kbd:`R`
 
 This tool can be used to assign (reconnect) effect strips in a different way.
-Just select three arbitrary strips and press :kbd:`R`.
+Select three arbitrary strips and press :kbd:`R`.
 If you don't create a cycle, those will be connected to a new effect chain.
 
 
@@ -363,7 +363,7 @@ Lock/Mute
 Lock Strips :kbd:`Shift-L`
    Disables the strip from being transformed.
 Unlock Strips :kbd:`Shift-Alt-L`
-   Enables disabled strips allowing them to be transormed.
+   Enables disabled strips allowing them to be transformed.
 
 .. _bpy.ops.sequencer.mute:
 .. _bpy.ops.sequencer.unmute:
@@ -382,7 +382,7 @@ Inputs
 Reload Strips :kbd:`Alt-R`
    Reloads the strips from their external saved location.
 Reload Strips and Adjust Length :kbd:`Shift-Alt-R`
-   Reloads the strips from their external saved location and readjusts the strip duration.
+   Reloads the strips from their external saved location and re-adjusts the strip duration.
 
 .. _bpy.ops.sequencer.change_path:
 
@@ -392,7 +392,7 @@ Change Path/Files
 .. _bpy.ops.sequencer.swap_data:
 
 Swap Data
-   Swaps 2 sequence strips.
+   Swaps two sequence strips.
 
 
 Context Menu

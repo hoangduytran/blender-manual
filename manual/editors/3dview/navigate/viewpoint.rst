@@ -19,7 +19,7 @@ These operators change the view to be aligned with the specified global axes:
 :Front: :kbd:`Numpad1`
 :Right: :kbd:`Numpad3`
 
-Holding :kbd:`Ctrl` shows the other side of the same axis.
+Holding :kbd:`Ctrl` shows the other side of the same axis:
 
 :Bottom: :kbd:`Ctrl-Numpad7`
 :Back: :kbd:`Ctrl-Numpad1`

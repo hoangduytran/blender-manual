@@ -15,7 +15,7 @@ Toggle Local View
    :Menu:      :menuselection:`View --> Local View --> Toggle Local View`
    :Hotkey:    :kbd:`NumpadSlash`, :kbd:`Slash`
 
-Global view shows all of the 3D objects in the scene. Local view isolates the selected object or
+Global view shows all 3D objects in the scene. Local view isolates the selected object or
 objects, so that they are the only ones visible in the viewport. This is useful for working on
 objects that are obscured by other ones, or to speed up the viewport performance in heavy scenes.
 Local view is contextual meaning that is can be set per 3D Viewport.
@@ -44,7 +44,7 @@ from the *View Menu* or using the shortcut :kbd:`NumpadSlash`.
       Instead, each view has an independent cursor location.
    Layers
       Local view bypasses layers, using only the selected objects when entering local view.
-      Although new objects may be added while in local view.
+      Although new objects can be added while in local view.
 
 .. tip::
 

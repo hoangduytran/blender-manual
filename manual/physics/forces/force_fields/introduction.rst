@@ -143,5 +143,5 @@ Min Distance
    because the field is effective with full strength up to *Max Distance* (or infinite).
    Shown by an additional circle around the object.
 Max Distance
-   Specifies the maximum radius in which the force field affect other objects within
+   Specifies the maximum radius in which the force field affects other objects
    (shown by an additional circle around the object).
