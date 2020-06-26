@@ -103,3 +103,31 @@ Steps
    deformation motion blur correctly. Deformation blur should be disabled for such objects.
 
    Common examples of this are animated Booleans, Deformation before Edge Split, Remesh, Skin or Decimate modifiers.
+
+
+Shading
+=======
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Panel:     :menuselection:`Properties --> Object Properties --> Shading`
+
+Shadow Terminator Offset
+   Pushes the shadow terminator (the line that divides the light and dark) towards the light
+   to hide artifacts on low poly geometry such as the ones below:
+
+   .. list-table::
+
+      * - .. figure:: /images/render_cycles_properties_object_shading_terminator_1.jpg
+
+             Shadow Terminator Artifacts.
+
+        - .. figure:: /images/render_cycles_properties_object_shading_terminator_2.jpg
+
+             Result of using an offset of 0.15.
+
+   .. note::
+
+      This property artificially alters the scene's lighting
+      and is not energy conserving and consequently not physically accurate.
