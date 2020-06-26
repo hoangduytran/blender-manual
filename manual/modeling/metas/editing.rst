@@ -16,7 +16,7 @@ Active Element
    :class: refbox
 
    :Mode:      Edit Mode
-   :Panel:     :menuselection:`Properties editor --> Metaball --> Active Element`
+   :Panel:     :menuselection:`Properties --> Metaball --> Active Element`
 
 .. figure:: /images/modeling_metas_properties_active-element-panel.png
    :align: right

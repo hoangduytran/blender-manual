@@ -85,7 +85,7 @@ Affected Scenes:
 
    :Category:  Render
    :Description: Allows to copy a selection of render settings from current scene to others.
-   :Location: :menuselection:`Properties editor --> Render tab`
+   :Location: :menuselection:`Properties --> Render tab`
    :File: render_copy_settings folder
    :Author: Bastien Montagne
    :License: GPL

@@ -28,7 +28,7 @@ Add-ons Preferences
 Interface
 =========
 
-Located in the :menuselection:`Properties editor --> Materials --> Material Library VX`.
+Located in the :menuselection:`Properties --> Materials --> Material Library VX`.
 
 .. figure:: /images/addons_materials_material-library_ui.jpg
    :align: right

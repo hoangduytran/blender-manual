@@ -27,7 +27,7 @@ This modifier needs a second object to be the target (the second operand) of the
 .. tip::
 
    If you have marked your objects to show the edges
-   (in :menuselection:`Properties Editor --> Object --> Viewport Display`, enable *Wireframe*),
+   (in :menuselection:`Properties --> Object Properties --> Viewport Display`, enable *Wireframe*),
    you will see the edge creation process while you are moving your objects around. Depending on your mesh topology,
    you can also enable X-Ray and Transparency and see the topology being created in real-time.
 

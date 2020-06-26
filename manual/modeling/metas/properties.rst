@@ -7,7 +7,7 @@ Properties
    :class: refbox
 
    :Mode:      Object and Edit Mode
-   :Panel:     :menuselection:`Properties editor --> Metaball`
+   :Panel:     :menuselection:`Properties --> Metaball`
 
 All *Meta* objects of a same :ref:`family <meta-ball-object-families>` in a scene interact with each other.
 The settings in the *Metaball* section apply to all meta objects of the active family.

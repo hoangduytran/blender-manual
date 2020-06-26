@@ -8,7 +8,7 @@ Paper Model
 
    :Category:  Import-Export
    :Menu:      :menuselection:`File --> Export --> Paper Model (.pdf/.svg)`
-   :Panel:     :menuselection:`Properties editor --> Mesh --> Paper Model Islands`
+   :Panel:     :menuselection:`Properties --> Mesh --> Paper Model Islands`
    :Menu:      :menuselection:`Mesh --> Unfold`
 
 This add-on generates a flat net of a given mesh.
@@ -28,7 +28,7 @@ All relevant settings are in the bottom left corner.
 These are described in more detail below.
 
 If you are unhappy with the generated net, you can edit it manually.
-For this, you have to execute the *Unfold* tool first (available Mesh tab in the Properties editor).
+For this, you have to execute the *Unfold* tool first (available Mesh tab in the Properties).
 Edges that will be cut in order to flatten the mesh must be marked as Edit Mode seams.
 You can use *Clear Seam* and *Mark Seam* tools to organize them as you wish,
 or use the helper button *Clear All Seams* in Object Mode to start from scratch.

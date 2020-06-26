@@ -6,7 +6,7 @@ Introduction
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> View Layer --> Freestyle Line Style`
+   :Panel:     :menuselection:`Properties --> View Layer --> Freestyle Line Style`
 
 In Freestyle, the line style settings define the appearance of a line set using five main aspects:
 Stroke, Color, Alpha, Thickness, Geometry and Texture with each on a separate tab.

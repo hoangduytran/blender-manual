@@ -57,7 +57,7 @@ Collections Panel
 
    Collections panel.
 
-All collections that an object has been assigned to are listed in the Properties editor
+All collections that an object has been assigned to are listed in the Properties
 :menuselection:`Object tab --> Collections panel`.
 
 Add to Collection

@@ -95,11 +95,11 @@ Edit Mode Matching (Advanced)
 
 Some basic armature display setup is suggested before entering bone Edit Mode.
 
-With the meta-rig selected, go in the Properties editor and click on the Object tab.
+With the meta-rig selected, go in the Properties and click on the Object tab.
 Scroll down to the display panel and enable X-ray and under *Maximum Draw Type* selector select *Wire*.
 This way the bones will always be drawn in wireframe on top of your geometry.
 
-Then, always in the Properties editor click on the Armatures tab and under display check the *Axis* checkbox.
+Then, always in the Properties click on the Armatures tab and under display check the *Axis* checkbox.
 This way you the bones rotation axes will be displayed during the edit process.
 
 For more detailed information on armature display modes please refer to

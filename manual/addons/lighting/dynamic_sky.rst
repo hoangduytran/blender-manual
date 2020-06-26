@@ -35,7 +35,7 @@ Instructions
 ============
 
 #. In the :menuselection:`3D Viewport --> Sidebar --> Create tab` press the *Create* button to run the script.
-#. Open the :menuselection:`Properties editor --> World tab` and
+#. Open the :menuselection:`Properties --> World tab` and
    choose ``Dynamic_1`` in the World data-block menu.
 #. Back in the Sidebar panel you will have new settings to adjust your sky.
    You can also adjust the world settings in the Shader editor.

@@ -39,7 +39,7 @@ and contains the following :doc:`/editors/index`:
 
 - 3D Viewport on top left.
 - Outliner on top right.
-- Properties editor on bottom right.
+- Properties on bottom right.
 - Timeline on bottom left.
 
 .. figure:: /images/interface_window-system_workspaces_layout.png
@@ -47,7 +47,7 @@ and contains the following :doc:`/editors/index`:
 
    Blender's 'Layout' Workspace with four editors.
 
-   3D Viewport (yellow), Outliner (green), Properties editor (blue) and Timeline (red).
+   3D Viewport (yellow), Outliner (green), Properties (blue) and Timeline (red).
 
 Blender also has several other workspaces added by default:
 

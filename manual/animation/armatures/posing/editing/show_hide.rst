@@ -7,7 +7,7 @@ Show/Hide
    :class: refbox
 
    :Mode:      All Modes
-   :Panel:     :menuselection:`Properties editor --> Bone --> Viewport Display`
+   :Panel:     :menuselection:`Properties --> Bone --> Viewport Display`
    :Menu:      :menuselection:`... --> Show/Hide`
 
 You do not have to use bone layers to show/hide some bones. As with objects,

@@ -1,21 +1,21 @@
 .. _bpy.types.SpaceProperties:
 
 *****************
-Properties Editor
+Properties
 *****************
 
 .. figure:: /images/editors_properties-editor_interface.png
    :align: right
 
-   The Properties editor, with *Object* properties shown.
+   The Properties, with *Object* properties shown.
 
-The Properties editor shows and allows editing of many active data, including the active scene and object.
+The Properties shows and allows editing of many active data, including the active scene and object.
 
 
 Tabs
 ====
 
-The Properties editor has several categories, which can be chosen via tabs (the icons column to its left).
+The Properties has several categories, which can be chosen via tabs (the icons column to its left).
 Each tab regroups properties and settings of a data type, and is documented in its own manual sections, linked below.
 
 
@@ -108,7 +108,7 @@ Header
 
 .. figure:: /images/editors_properties-editor_top.png
 
-   The header of the Properties editor.
+   The header of the Properties.
 
 In the header of this editor, a list of icons and text items shows the owner of the properties being edited,
 together with some dependency context if needed.

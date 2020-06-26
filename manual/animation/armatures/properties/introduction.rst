@@ -3,12 +3,12 @@
 Introduction
 ************
 
-The *Armature* tab in Properties editor contains various panels gathering the armature settings.
+The *Armature* tab in Properties contains various panels gathering the armature settings.
 
 .. TODO2.8
    .. figure:: /images/animation_armatures_properties_introduction_properties-editor.png
 
-      The Armature tab in the Properties editor.
+      The Armature tab in the Properties.
 
 
 Motion Paths

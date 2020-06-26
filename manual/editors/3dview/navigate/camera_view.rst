@@ -55,7 +55,7 @@ Setting the Active Camera
 
 This sets the current active object as the active camera & switches to the camera view.
 
-The active camera can also be set in the *Scene* tab of the *Properties Editor*.
+The active camera can also be set in the *Scene* tab of the *Properties*.
 
 .. note::
 

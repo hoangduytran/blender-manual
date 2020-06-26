@@ -31,13 +31,13 @@ Physics Menu
 ============
 
 Also you can create *Rigid Body Constraint* on one of the two constrained objects with
-*Rigid Body Constraint* button of the *Physics* tab in the Properties editor.
+*Rigid Body Constraint* button of the *Physics* tab in the Properties.
 This constraint is dependent on the object location and rotation on which it was created.
 This way, there are no empty object created for the constraint.
 The role of the empty object is put on this object.
 The constrained object can be then set as *Passive* type for better driving the constrain.
 
-Additional parameters appear in the *Rigid Body Constraint* panel of the *Physics* tab in the Properties editor
+Additional parameters appear in the *Rigid Body Constraint* panel of the *Physics* tab in the Properties
 for the selected empty object or the one of the two constrained objects with the created constraint.
 
 

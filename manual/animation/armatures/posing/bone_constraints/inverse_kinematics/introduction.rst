@@ -66,7 +66,7 @@ Armature IK Panel
    :class: refbox
 
    :Mode:      Pose Mode
-   :Panel:     :menuselection:`Properties editor --> Armature --> Inverse Kinematics`
+   :Panel:     :menuselection:`Properties --> Armature --> Inverse Kinematics`
 
 This panel is used to select the IK Solver type for the armature: *Standard* or *iTaSC*.
 Most the time people will use the *Standard* IK solver.
@@ -227,7 +227,7 @@ Bone IK Panel
    :class: refbox
 
    :Mode:      Pose Mode
-   :Panel:     :menuselection:`Properties editor --> Bone --> Inverse Kinematics`
+   :Panel:     :menuselection:`Properties --> Bone --> Inverse Kinematics`
 
 This panel is used to control how the *Pose Bones* work in the IK chain.
 

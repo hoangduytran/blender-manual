@@ -11,7 +11,7 @@ Tabs
    :figwidth: 300px
 
    Top: Horizontal Tab header in the Topbar.
-   Bottom: Vertical Tab header shows tab icons in the Properties Editor.
+   Bottom: Vertical Tab header shows tab icons in the Properties.
 
 Tabs are used to control overlapping sections in the user interface.
 Contents of only one Tab is visible at a time.
@@ -41,7 +41,7 @@ Panels
    :align: right
    :figwidth: 200px
 
-   Panels in Properties editor.
+   Panels in Properties.
 
    A panel is highlighted in yellow and a subpanel in red.
 

@@ -7,7 +7,7 @@ Faces
    :class: refbox
 
    :Mode:      Object Mode
-   :Panel:     :menuselection:`Properties --> Object --> Instancing`
+   :Panel:     :menuselection:`Properties --> Object Properties --> Instancing`
 
 *Instancing Faces* is the capability to replicate an object on each face of a parent object.
 One of the best ways to explain this is through an example illustration.
@@ -23,7 +23,7 @@ This tool creates the parent object (instancer) with faces where the objects wer
 then it uses *Instancing Faces* to put instances at the location of every created face.
 
 You can go back from *Instancing Faces* to multiple linked objects using
-:menuselection:`Object --> Apply --> Make Instances Real`, :kbd:`Ctrl-A`.
+:ref:`bpy.ops.object.duplicates_make_real`.
 
 .. seealso:: Example blend-file
 
@@ -51,7 +51,7 @@ first :kbd:`LMB` select the sphere, then :kbd:`Shift-LMB` select the cube
 
           Instancing Faces applied to the cube.
 
-Next, in the :menuselection:`Properties --> Object --> Instancing`,
+Next, in the :menuselection:`Properties --> Object Properties --> Instancing`,
 select *Faces*. The sphere is instanced, one for each face of the cube.
 
 .. note:: Inherited properties

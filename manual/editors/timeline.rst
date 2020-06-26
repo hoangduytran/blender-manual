@@ -360,4 +360,4 @@ Auto Keyframe (|record|)
    .. note::
 
       Note that *Auto Keyframe* only works for transform properties (objects and bones),
-      in the 3D Views (i.e. you can't use it e.g. to animate the colors of a material in the Properties editor...).
+      in the 3D Views (i.e. you can't use it e.g. to animate the colors of a material in the Properties...).

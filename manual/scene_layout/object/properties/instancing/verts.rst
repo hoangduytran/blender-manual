@@ -7,7 +7,7 @@ Verts
    :class: refbox
 
    :Mode:      Object Mode
-   :Panel:     :menuselection:`Object --> Instancing`
+   :Panel:     :menuselection:`Properties --> Object Properties --> Instancing`
 
 *Instance Verts* allows you to replicate child objects
 at the location of every vertex of the parent object.
@@ -20,8 +20,8 @@ at the location of every vertex of the parent object.
 Align to Vertex Normal
    Rotates all instanced objects according to the corresponding vertex normals of the parent mesh.
 
-   To change the axis of direction of the instanced objects, select the child object and
-   in the :menuselection:`Object --> Relations Extras` panel change the *Tracking Axes*.
+   To change the axis of direction of the instanced objects,
+   select the child object and change the :ref:`Tracking Axis <bpy.types.Object.track_axis>`.
 
 There are actually two approaches to modeling using instanced Verts.
 They can be used as an arranging tool,
@@ -98,8 +98,8 @@ The orientation of the base objects can be controlled by
 enabling *Align to Vertex Normal* in the *Instancing* panel.
 This will rotate all base objects according to the vertex normals of the parent mesh.
 
-To change the orientation of the instanced objects, select the base object and
-in the :menuselection:`Object --> Relations` panel change the *Tracking Axes*.
+To change the orientation of the instanced objects,
+select the base object and change the :ref:`Tracking Axis <bpy.types.Object.track_axis>`.
 
 .. list-table:: Output of various orientations.
 
@@ -125,7 +125,8 @@ in the :menuselection:`Object --> Relations` panel change the *Tracking Axes*.
 
 .. note::
 
-   The axes of an object can be made visible in the :menuselection:`Object --> Display` panel.
+   The axes of an object can be made visible in th
+   :menuselection:`Properties --> Object Properties --> Viewport Display` panel.
    To display the vertex normals of the parent mesh, enter *Edit Mode* and
    enable this visualization in the :menuselection:`Display & Shading --> Viewport Overlays --> Normals`
    where you can also resize the displayed normals as necessary.
@@ -158,8 +159,8 @@ was adapted to the vertex normals of the parent mesh
 
 As in the previous example, the shape and proportions of the arrangement can now be tweaked.
 
-To turn all instanced geometry into real objects, select the icosphere and
-:menuselection:`Object --> Apply --> Make Instances Real`, :kbd:`Ctrl-A`.
+To turn all instanced geometry into real objects,
+select the icosphere and :ref:`bpy.ops.object.duplicates_make_real`.
 To make the icosphere and the tentacle a single object,
 make sure they are all selected and go to :menuselection:`Object --> Join`, :kbd:`Ctrl-J`.
 

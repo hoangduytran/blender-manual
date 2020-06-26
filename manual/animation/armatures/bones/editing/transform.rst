@@ -51,7 +51,7 @@ And as usual, with connected bones, you scale at the same time the radius
 of the parent's tip and of the children's roots.
 
 You can also alter the bone radius by selecting the tail or head of the bone you wish to alter,
-then navigate to :menuselection:`Properties Editor --> Bone --> Deform --> Radius Section`
+then navigate to :menuselection:`Properties --> Bone --> Deform --> Radius Section`
 and entering new values for the *Tail* and *Head* number fields.
 
 .. list-table:: Bone Scale and Scale Radius comparison.
@@ -91,7 +91,7 @@ You can alter the size of the Bone Envelope volume by clicking on the body of th
 :kbd:`Ctrl-Alt-S` then drag your mouse left or right and the Bone Envelope volume will alter accordingly.
 
 You can also alter the Bone Envelope volume by selecting the Bone you wish to alter and
-then navigate to :menuselection:`Properties Editor --> Bone --> Deform --> Envelope --> Distance`
+then navigate to :menuselection:`Properties --> Bone --> Deform --> Envelope --> Distance`
 then enter a new value into it.
 
 Altering the Bone Envelope volume does not alter the size of the bone just the range

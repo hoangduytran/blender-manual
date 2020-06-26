@@ -94,7 +94,7 @@ Settings
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Render --> Color Management`
+   :Panel:     :menuselection:`Properties --> Render --> Color Management`
 
 .. figure:: /images/render_color-management_panel.png
 

@@ -7,7 +7,7 @@ Bone Groups
    :class: refbox
 
    :Mode:      Pose Mode
-   :Panel:     :menuselection:`Properties editor --> Armature --> Bone Groups`
+   :Panel:     :menuselection:`Properties --> Armature --> Bone Groups`
    :Menu:      :menuselection:`Pose --> Bone Groups --> ...`
 
 .. TODO2.8

@@ -107,5 +107,5 @@ Properties
 Tools can have their own settings, which are available from multiple places:
 
 - The :menuselection:`Sidebar --> Tools --> Active Tool` panel.
-- The *Active Tool* tab in the Properties editor.
+- The *Active Tool* tab in the Properties.
 - The *Tool Settings* region.

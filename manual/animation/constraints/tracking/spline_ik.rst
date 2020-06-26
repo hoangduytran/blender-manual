@@ -15,7 +15,7 @@ To set up *Spline IK*, it is necessary to have a chain of
 connected bones and a curve to constrain these bones to:
 
 - With the last bone in the chain selected,
-  add a *Spline IK* constraint from the *Bone Constraints* tab in the *Properties Editor*.
+  add a *Spline IK* constraint from the *Bone Constraints* tab in the *Properties*.
 - Set the 'Chain Length' setting to the number of bones in the chain
   (starting from and including the selected bone)
   that should be influenced by the curve.

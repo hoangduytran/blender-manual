@@ -87,7 +87,7 @@ Properties
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Object Data --> Normals`
+   :Panel:     :menuselection:`Properties --> Object Data --> Normals`
 
 .. figure:: /images/modeling_meshes_structure_normals-panel.png
 

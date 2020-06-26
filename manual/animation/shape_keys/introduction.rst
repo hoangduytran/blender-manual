@@ -23,7 +23,7 @@ Workflow
 ========
 
 Shape keys are authored in the :doc:`Shape Keys panel </animation/shape_keys/shape_keys_panel>`
-which is accessed in the Object Data tab of the Properties editor (e.g. the Mesh tab for mesh objects).
+which is accessed in the Object Data tab of the Properties (e.g. the Mesh tab for mesh objects).
 
 A shape key is modified by first selecting a shape key in the panel,
 and then moving the object's vertices to a new position in the 3D Viewport.

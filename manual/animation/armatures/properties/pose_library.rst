@@ -8,7 +8,7 @@ Pose Library Panel
    :class: refbox
 
    :Mode:      All Modes
-   :Panel:     :menuselection:`Properties editor --> Object --> Pose Library`
+   :Panel:     :menuselection:`Properties --> Object Properties --> Pose Library`
 
 .. TODO2.8
    .. figure:: /images/animation_armatures_properties_pose-library_panel.png

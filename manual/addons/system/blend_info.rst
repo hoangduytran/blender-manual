@@ -16,7 +16,7 @@ Activation
 Interface
 =========
 
-Located in the :menuselection:`Properties editor --> Scene --> Blend Info panel`.
+Located in the :menuselection:`Properties --> Scene --> Blend Info panel`.
 
 
 Description

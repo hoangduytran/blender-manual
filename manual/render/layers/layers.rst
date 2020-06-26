@@ -58,7 +58,7 @@ View Layer Panel
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Scene --> View Layer`
+   :Panel:     :menuselection:`Properties --> Scene --> View Layer`
 
 .. figure:: /images/render_layers_layers_panel.png
 

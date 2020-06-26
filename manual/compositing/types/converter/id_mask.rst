@@ -42,7 +42,7 @@ Setup
 =====
 
 An index can be specify for any object or material in the scene.
-The Object Index can be set in Properties Editor :menuselection:`Object --> Relations --> Pass Index`
+The Object Index can be set in :menuselection:`Properties --> Object Properties --> Relations --> Pass Index`
 and :menuselection:`Material --> Settings --> Pass Index` for the Material Index.
 To be accessible after rendering, *Object Index* or *Material Index* render pass has to be enabled.
 

@@ -34,13 +34,13 @@ Outputs
 Location
    Location of the object in world space.
 Color
-   Object color, same as *Color* in the :menuselection:`Properties Editor --> Object --> Viewport Display`.
+   Object color, same as *Color* in the :menuselection:`Properties --> Object Properties --> Viewport Display`.
 Object Index
    Object pass index, same as *Pass Index*
-   in the :menuselection:`Properties Editor --> Object --> Relations`.
+   in the :menuselection:`Properties --> Object Properties --> Relations`.
 Material Index
    Material pass index, same as *Pass Index*
-   in the :menuselection:`Properties Editor --> Material --> Settings`.
+   in the :menuselection:`Properties --> Material --> Settings`.
 Random
    Random number unique to a single object instance.
 

@@ -13,7 +13,7 @@ Scene
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Scene --> Scene`
+   :Panel:     :menuselection:`Properties --> Scene --> Scene`
 
 .. _scene-camera:
 
@@ -53,7 +53,7 @@ Units
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Scene --> Units`
+   :Panel:     :menuselection:`Properties --> Scene --> Units`
 
 Unit System
    None
@@ -164,7 +164,7 @@ Gravity
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Scene --> Gravity`
+   :Panel:     :menuselection:`Properties --> Scene --> Gravity`
 
 Options to control global gravity used for physics effects.
 
@@ -177,7 +177,7 @@ Keying Sets
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Scene --> Keying Sets`
+   :Panel:     :menuselection:`Properties --> Scene --> Keying Sets`
 
 See :doc:`/animation/keyframes/keying_sets`.
 
@@ -194,7 +194,7 @@ Audio
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Scene --> Audio`
+   :Panel:     :menuselection:`Properties --> Scene --> Audio`
 
 Options to control global audio settings.
 
@@ -243,7 +243,7 @@ Rigid Body World
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Scene --> Rigid Body World`
+   :Panel:     :menuselection:`Properties --> Scene --> Rigid Body World`
 
 The *Rigid Body World* is a group of rigid body objects,
 which holds settings that apply to all rigid bodies in this simulation.

@@ -45,7 +45,7 @@ but probably some rectangular ones on the edges, disable *Consistent Tiles*.
 
    :Category:  Render
    :Description: Estimate and set the tile size that will render the fastest.
-   :Location: :menuselection:`Properties editor --> Render --> Performance`
+   :Location: :menuselection:`Properties --> Render --> Performance`
    :File: render_auto_tile_size.py
    :Author: Greg Zaal
    :License: GPL

@@ -11,7 +11,7 @@ Visibility
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Object --> Visibility`
+   :Panel:     :menuselection:`Object Properties --> Visibility`
 
 .. seealso::
 
@@ -84,12 +84,12 @@ Motion Blur
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Object --> Motion Blur`
+   :Panel:     :menuselection:`Properties --> Object Properties --> Motion Blur`
 
 Each object has its own motion blur settings along with
 the :doc:`Scene Level Motion Blur </render/cycles/render_settings/motion_blur>`
 These settings can be found
-in the Object Properties tab of the Properties editor.
+in the Object Properties tab of the Properties.
 
 Deformation
    Enables motion blur for deformed meshes such as animated characters, including hair.

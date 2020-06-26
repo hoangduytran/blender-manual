@@ -59,7 +59,7 @@ Joining
    :width: 250px
    :figwidth: 250px
 
-   The Properties Editor is being joined to the Outliner.
+   The Properties is being joined to the Outliner.
 
 Dragging from an area corner **outward** will *join* two areas.
 The area that will be closed gets a dark overlaid arrow.

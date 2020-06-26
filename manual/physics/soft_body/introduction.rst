@@ -60,7 +60,7 @@ Soft body simulation works for all objects that have vertices or control points
 (meshes, curves, surfaces, and lattices).
 
 To add a soft body simulation to an object,
-go to the *Physics* tab (bouncing ball icon) in the Properties editor
+go to the *Physics* tab (bouncing ball icon) in the Properties
 and activate the *Soft Body* button.
 For a reference of all the settings see :doc:`this page </physics/soft_body/settings>`.
 
@@ -77,7 +77,7 @@ You can interact in real-time with the simulation,
 e.g. by moving collision objects or shaking a soft body object.
 
 You can then select the soft body object while running the simulation and *Apply*
-the modifier in the *Modifiers* tab of the Properties editor.
+the modifier in the *Modifiers* tab of the Properties.
 This makes the deformation permanent.
 
 

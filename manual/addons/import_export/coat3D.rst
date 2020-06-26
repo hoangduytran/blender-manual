@@ -7,7 +7,7 @@
    :class: refbox
 
    :Category:  Import-Export
-   :Panel:     :menuselection:`Properties editor --> Scene --> 3D-Coat Settings`
+   :Panel:     :menuselection:`Properties --> Scene --> 3D-Coat Settings`
 
 3D-Coat is a sculpting/painting program. With this 3D-Coat/Blender applink add-on you can exchange
 objects and textures between these two programs.

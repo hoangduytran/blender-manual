@@ -33,7 +33,7 @@ When parenting it will create empty :doc:`vertex groups </modeling/meshes/proper
 on the child objects (if they do not already exist) for and named after each deforming bone in the armature.
 The newly created vertex groups will be empty. This means they will not have any weights assigned.
 Vertex groups will only be created for bones which are setup as deforming
-(:menuselection:`Properties Editor --> Bone --> Deform Panel`).
+(:menuselection:`Properties --> Bone --> Deform Panel`).
 
 You can then manually select the vertices and assign them to a particular vertex group of your
 choosing to have bones in the armature influence them.

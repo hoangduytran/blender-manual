@@ -34,7 +34,7 @@ Simulate
    the modifiers stack whenever a *Particle System* or *Physics* simulation is enabled. Their only role is to define
    the position in the modifier stack from which is taken the base data for the simulation they represent.
    As such, they typically have no attributes, and are controlled by settings exposed in
-   separate sections of the :doc:`Properties editor </editors/properties_editor>`.
+   separate sections of the :doc:`Properties </editors/properties_editor>`.
 
 
 .. _bpy.types.Modifier.show:

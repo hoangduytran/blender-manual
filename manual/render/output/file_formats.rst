@@ -40,7 +40,7 @@ Encoding Panel
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties editor --> Output --> Encoding`
+   :Panel:     :menuselection:`Properties --> Output --> Encoding`
 
 .. figure:: /images/render_output_file-formats_video-encoding-panel.png
 

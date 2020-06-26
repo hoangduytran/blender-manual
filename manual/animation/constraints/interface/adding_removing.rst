@@ -13,7 +13,7 @@ Tab
    :class: refbox
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Properties Editor --> Constraint tab`
+   :Menu:      :menuselection:`Properties --> Constraint tab`
 
 To add a constraint click on the *Add Object Constraint* menu in the Constraints tab.
 

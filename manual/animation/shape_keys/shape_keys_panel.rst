@@ -11,7 +11,7 @@ Shape Keys Panel
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    Properties editor
+   :Editor:    Properties
    :Mode:      All modes
    :Panel:     :menuselection:`Object Data --> Shape Keys`
 

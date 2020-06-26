@@ -70,7 +70,7 @@ Font
    :class: refbox
 
    :Mode:      All Modes
-   :Panel:     :menuselection:`Properties editor --> Font --> Font`
+   :Panel:     :menuselection:`Properties --> Font --> Font`
 
 Blender comes with a *built-in* font by default that is displayed in
 each of the four font style data-block menus.
@@ -190,7 +190,7 @@ Paragraph
    :class: refbox
 
    :Mode:      All
-   :Panel:     :menuselection:`Properties editor --> Font --> Paragraph`
+   :Panel:     :menuselection:`Properties --> Font --> Paragraph`
 
 The *Paragraph* Panel has settings for the alignment and spacing of text.
 
@@ -275,7 +275,7 @@ Text Boxes
    :class: refbox
 
    :Mode:      All
-   :Panel:     :menuselection:`Properties editor --> Font --> Text Boxes`
+   :Panel:     :menuselection:`Properties --> Font --> Text Boxes`
 
 Text boxes (or frames) allow you to distribute the text among rectangular areas within a single text object.
 An arbitrary number of freely positionable and re-sizable text frames are allowed per text object.

@@ -14,7 +14,7 @@ Vertex Groups Panel
 
    The Vertex Group panel.
 
-Vertex groups are maintained within the *Object Data* Properties Editor, in the *Vertex Groups* panel.
+Vertex groups are maintained within the *Object Data* Properties, in the *Vertex Groups* panel.
 
 .. _bpy.ops.object.vertex_group_add:
 .. _bpy.ops.object.vertex_group_sort:

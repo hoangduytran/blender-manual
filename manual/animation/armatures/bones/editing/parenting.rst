@@ -8,11 +8,11 @@ Parenting
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Armature --> Parent`
-   :Panel:     :menuselection:`Properties editor --> Bones --> Relations`
+   :Panel:     :menuselection:`Properties --> Bones --> Relations`
    :Hotkey:    :kbd:`Ctrl-P`, :kbd:`Alt-P`
 
 You can edit the relationships between bones (and hence create/modify the chains of bones)
-both from the 3D Views and the Properties editor. Whatever method you prefer,
+both from the 3D Views and the Properties. Whatever method you prefer,
 it's always a matter of deciding, for each bone, if it has to be parented to another one,
 and if so, if it should be connected to it.
 
@@ -32,7 +32,7 @@ If you select only one non-parented bone, you will get the *Need selected bone(s
    With this method, the newly-children bones will not be scaled nor rotated --
    they will just be moved if you choose to connect them to their parent's tip.
 
-In the *Properties editor*, Bones tab, for each selected bone,
+In the *Properties*, Bones tab, for each selected bone,
 you can select its parent in the *Parent* data ID to the upper right corner of its Relations panel.
 If you want them to be connected, just enable the checkbox to the right of the list.
 
@@ -68,7 +68,7 @@ To disconnect and/or free bones, you can:
   (or :menuselection:`Armature --> Parent --> Clear Parent...`).
   In the small *Clear Parent* menu that pops up, choose *Clear Parent* to completely free all selected bones,
   or *Disconnect Bone* if you just want to break their connections.
-- In the Properties editor, *Bones* tab, for each selected bone, you can select no parent
+- In the Properties, *Bones* tab, for each selected bone, you can select no parent
   in the *Parent* data ID of its Relations panel, to free it completely.
   If you just want to disconnect it from its parent, disable the *Connected* checkbox.
 

@@ -245,12 +245,12 @@ Shape
    Choose the shape in the first selector.
 Material
    Choose one of the materials in the second selector. The materials are only examples,
-   further refinements can be done in the Materials tab of the Properties editor.
+   further refinements can be done in the Materials tab of the Properties.
 Special
    Here, you can choose an object with a special shape, material, etc.
    Such objects are quite nice to represent defects in atomic structures.
    When choosing such a special object, you cannot anymore separately choose
-   the shape and material from above. In the Objects and Materials tabs of the Properties editor
+   the shape and material from above. In the Objects and Materials tabs of the Properties
    further changes can be done.
 
 Replace
@@ -287,9 +287,10 @@ They appear in the Outliner and carry the suffix ``_sep``.
 
 .. hint:: Converting All Atoms of a Instancing Verts Structure to Real Independent Objects
 
-   Do the following: Select the whole atomic structure with the mouse.
-   Go to objects :menuselection:`Object --> Apply --> Make Instances Real`.
-   With this you produce real independent objects! In the Outliner delete the remaining instancing verts structures,
+   Do the following: Select the whole atomic structure
+   with the mouse then use :ref:`bpy.ops.object.duplicates_make_real`.
+   With this you produce real independent objects!
+   In the Outliner delete the remaining instancing verts structures,
    named like "Carbon", "Hydrogen", etc.
 
 

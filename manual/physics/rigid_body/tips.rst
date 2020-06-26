@@ -4,7 +4,7 @@ Tips
 ****
 
 As with all physics-enabled objects, pay close attention to the *Animated* checkbox
-in the *Rigid Body* panel of the *Physics* tab in the Properties editor.
+in the *Rigid Body* panel of the *Physics* tab in the Properties.
 A common mistake is to use keyframe animation on a *Passive* physics
 object without checking the *Animated* box. The object will move,
 but the physics engine will behave as if the *Passive* is still in its starting place, leading to disappointment.

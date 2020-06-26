@@ -8,16 +8,16 @@ Motion Paths
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    3D Viewport, Properties editor
+   :Editor:    3D Viewport, Properties
    :Mode:      Object Mode
-   :Panel:     :menuselection:`Properties editor --> Object --> Motion Paths`
+   :Panel:     :menuselection:`Properties --> Object Properties--> Motion Paths`
 
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    3D Viewport, Properties editor
+   :Editor:    3D Viewport, Properties
    :Mode:      Pose Mode
-   :Panel:     :menuselection:`Properties editor --> Armature --> Motion Paths`
+   :Panel:     :menuselection:`Properties --> Armature --> Motion Paths`
    :Menu:      :menuselection:`Pose --> Motion Paths`
 
 .. figure:: /images/animation_motion-paths_example-object.png

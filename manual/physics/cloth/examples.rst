@@ -56,7 +56,7 @@ The typical workflow for pinning:
 #. Add vertices to be pinned to this vertex group and give these vertices non-zero weights
    (you probably want weight = 1).
    For example the belt area of the tunic would be in the vertex group and have weight one.
-#. Designate the clothing objects as "cloth" in the Physics tab of the Properties editor.
+#. Designate the clothing objects as "cloth" in the Physics tab of the Properties.
    Make sure the Cloth Modifier is below the Armature Modifier in the modifier stack.
 #. In the cloth Shape panel select the vertex group.
 #. Add :doc:`collision physics </physics/collision>` to the character's mesh.

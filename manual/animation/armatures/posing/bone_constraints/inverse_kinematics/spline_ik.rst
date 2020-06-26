@@ -32,7 +32,7 @@ it is necessary to have a chain of connected bones and a curve to constrain thes
 
 #. With the last bone in the chain selected,
    add a :doc:`Spline IK </animation/constraints/tracking/spline_ik>`
-   Constraint from the Bone Constraints tab in the Properties Editor.
+   Constraint from the Bone Constraints tab in the Properties.
 #. Set the *Chain Length* setting to the number of bones in the chain
    (starting from and including the selected bone) that should be influenced by the curve.
 #. Finally, set the *Target* field to the curve that should control the curve.

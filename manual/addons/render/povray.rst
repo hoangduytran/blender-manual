@@ -52,7 +52,7 @@ Quick Start
 -----------
 
 #. Choose POV-Ray 3.7 from render engine selector. Then you can render as usual with the *Render* button.
-#. The image will be rendered according to parameters set in the Properties editor.
+#. The image will be rendered according to parameters set in the Properties.
 
 Main global render settings for instance can be changed in the Render tab.
 But there are also properties for environment, material (textures), object, etc. all accessible in other tabs

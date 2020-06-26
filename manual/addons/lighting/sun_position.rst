@@ -21,7 +21,7 @@ Activation
 Interface
 =========
 
-Located in the :menuselection:`Properties editor --> World --> Sun Position panel`.
+Located in the :menuselection:`Properties --> World --> Sun Position panel`.
 
 
 Usage
@@ -181,7 +181,7 @@ The preferences for the add-on make some features optional, so you can hide thos
 
    :Category:  Lighting
    :Description: Show Sun position with objects and/or sky texture.
-   :Location: :menuselection:`Properties editor --> World --> Sun Position panel`
+   :Location: :menuselection:`Properties --> World --> Sun Position panel`
    :File: sun_position folder
    :Author: Michael Martin (xaire)
    :Maintainer: Damien Picard (pioverfour)

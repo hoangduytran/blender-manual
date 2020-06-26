@@ -5,7 +5,7 @@
 
 There are currently three ways in Blender to procedurally instantiate (or duplicate)
 objects directly from other objects.
-These options are located in the :menuselection:`Object --> Instancing` panel.
+These options are located in the :menuselection:`Properties --> Object Properties --> Instancing` panel.
 
 .. note::
 

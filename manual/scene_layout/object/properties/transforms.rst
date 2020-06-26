@@ -11,8 +11,8 @@ Transform
    :class: refbox
 
    :Mode:      Object Mode
-   :Panel:     :menuselection:`Object --> Transform`
-   :Panel:     :menuselection:`Sidebar region --> Transform`
+   :Panel:     :menuselection:`Properties --> Object Properties --> Transform`
+   :Panel:     :menuselection:`3D Viewport --> Sidebar --> Transform`
 
 The *Transform* panel in the Sidebar region allows you to view and
 manually/numerically control the position, rotation, and other properties of an object, in *Object Mode*.
@@ -87,7 +87,7 @@ Delta Transforms
 ================
 
 Delta Transforms are simply transformations that are applied on top of the transforms described above.
-They can be found in the :menuselection:`Properties Editor --> Object --> Delta Transforms`.
+They can be found in the :menuselection:`Properties --> Object Properties --> Delta Transforms`.
 
 Delta Transforms are particularly useful in animations. For example,
 you can animate an object with the primary transforms then move them around with Delta Transforms.

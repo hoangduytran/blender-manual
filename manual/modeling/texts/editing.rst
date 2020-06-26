@@ -26,7 +26,7 @@ Editing
 Editing text is quite different from other object types in Blender, and happens mainly in two areas.
 First, the 3D Viewport, where you type your text, and have a few shortcuts, e.g. for applying
 styles (see :ref:`modeling-text-character`) -- note however, that most Blender hotkeys you know
-in Edit Mode do not exist for texts. The second place is the Properties editor, especially the *Font* tab.
+in Edit Mode do not exist for texts. The second place is the Properties, especially the *Font* tab.
 
 
 .. _bpy.ops.font.text_paste_from_file:
@@ -170,7 +170,7 @@ Assigning Materials
    :class: refbox
 
    :Mode:      Edit
-   :Panel:     :menuselection:`Properties editor --> Materials`
+   :Panel:     :menuselection:`Properties --> Materials`
 
 Each character can have a different *Material index* in order to have different materials
 on different characters.

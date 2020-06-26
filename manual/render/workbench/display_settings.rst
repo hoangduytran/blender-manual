@@ -3,7 +3,7 @@
 Viewport Display
 ****************
 
-The Workbench engine does not work with shader trees. In various tabs of the Properties editor
+The Workbench engine does not work with shader trees. In various tabs of the Properties
 are Viewport Display panels where settings can be adjusted that the Workbench engine uses.
 
 

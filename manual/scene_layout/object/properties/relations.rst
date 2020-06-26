@@ -12,7 +12,7 @@ Parent Type
    The type of parenting used. See :doc:`parenting </scene_layout/object/editing/parent>`
    for information on the different types.
 
-Axis
+Tracking Axis
    Axis that points in the "forward" direction.
    Applies to *Instance Verts* when *Align to Vertex Normal* is enabled.
 Up Axis

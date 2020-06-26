@@ -20,7 +20,7 @@ To modify automatically assigned weights, jump into the middle of the process wh
 #. Create an armature.
 #. Create a mesh that will be deformed when the armature's bone(s) move.
 #. With the mesh selected, create an *Armature* modifier for your mesh
-   (located in the Properties editor, *Modifiers* tab).
+   (located in the Properties, *Modifiers* tab).
    Enter the name of the armature.
 
 Pick up here for modifying automatically assigned weights.
@@ -43,7 +43,7 @@ You can only select one bone at a time in this mode (so :kbd:`Shift-LMB` clickin
 
    If the mesh skins the bones, you will not be able to see the bones because
    the mesh is painted. If so, turn on *X-Ray* view
-   (:menuselection:`Properties Editor --> Armature tab`).
+   (:menuselection:`Properties --> Armature tab`).
 
 If you paint on the mesh, a vertex group is created for the bone.
 If you paint on vertices outside the group, the painted vertices are
@@ -74,4 +74,4 @@ so that the proper weights are achieved while using the actual number of particl
 Use this to make portions of your mesh hairier than others by weight painting a vertex group,
 and then calling out the name of the vertex group
 in the :doc:`Vertex Groups </physics/particles/emitter/vertex_groups>` panel
-:menuselection:`Properties editor --> Particles tab`.
+:menuselection:`Properties --> Particles tab`.

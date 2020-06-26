@@ -364,7 +364,7 @@ Only certain data supports custom properties:
 - Sequence strips.
 
 To add a custom property, search for the *Custom Properties* panel,
-found at the bottom of most :doc:`Properties Editor </editors/properties_editor>` or Sidebar region, and hit *Add*.
+found at the bottom of most :doc:`Properties </editors/properties_editor>` or Sidebar region, and hit *Add*.
 
 
 Editing Properties

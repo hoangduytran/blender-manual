@@ -23,7 +23,7 @@ Interface
 
 Located in the 3D Viewport :kbd:`Shift-Q` hotkey.
 
-Located in the :menuselection:`Properties editor --> Materials --> Specials`.
+Located in the :menuselection:`Properties --> Materials --> Specials`.
 
 .. figure:: /images/addons_materials_material-utils_example.jpg
    :align: right

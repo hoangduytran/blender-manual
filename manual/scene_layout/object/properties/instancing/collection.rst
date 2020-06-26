@@ -7,7 +7,7 @@ Collection
    :class: refbox
 
    :Mode:      Object Mode
-   :Panel:     :menuselection:`Object --> Instancing --> Collection`
+   :Panel:     :menuselection:`Properties --> Object Properties --> Instancing --> Collection`
 
 *Instance Collections* allows you to create an instance of a collection for each instance of another object.
 Collections may contain animations, objects with physics simulations and even other nested collections.
@@ -41,7 +41,7 @@ Making an Instanced Collection Real
 ===================================
 
 If you want to make further edits on an instanced collection select the *Instance Collection*.
-Then call the :menuselection:`Object --> Apply --> Make Instances Real` tool to convert
+Then call :ref:`bpy.ops.object.duplicates_make_real` to convert
 the collection into regular objects that can be transformed and animated normally.
 
 .. note::

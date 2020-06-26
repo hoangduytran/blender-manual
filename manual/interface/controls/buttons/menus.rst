@@ -132,7 +132,7 @@ Copy As New Driver
    to extend an existing driver with a new input variable.
 Copy To Selected
    Copies the property value to the selected object's corresponding property.
-   A use case is if the Properties editor context is pinned.
+   A use case is if the Properties context is pinned.
 Assign Shortcut
    Lets you define a keyboard or mouse shortcut for an operation.
    To define the shortcut you must first move the mouse cursor over the button that pops up,

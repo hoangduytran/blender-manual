@@ -36,6 +36,6 @@ Options
 -------
 
 The Options panel in the Sidebar region contains the same :doc:`settings </render/materials/settings>`
-that are also available in the Material tab in the Properties editor.
+that are also available in the Material tab in the Properties.
 They differ depending on the selected render engine.
 The settings are duplicated to make it possible to edit the entire material from the shader editor.

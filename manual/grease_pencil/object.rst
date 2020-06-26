@@ -11,7 +11,7 @@ Visibility
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Object --> Visibility`
+   :Panel:     :menuselection:`Object Properties --> Visibility`
 
 .. seealso::
 

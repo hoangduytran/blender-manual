@@ -9,7 +9,7 @@ They represent common character features, like the spine, limbs, fingers etc.
 .. note::
 
    The list of available rig types appears in the Bone properties tab when the bone is selected in Pose Mode.
-   Scroll down the Properties editor to find Rigify Type panel.
+   Scroll down the Properties to find Rigify Type panel.
 
 This documents rig types that are bundled with Rigify.
 
