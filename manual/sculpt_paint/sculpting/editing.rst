@@ -9,7 +9,7 @@ Sculpt
 .. _bpy.ops.sculpt.set_pivot_position:
 
 Set Pivot
-   Like Object and Edit Mode, Sculpt Mode also has a :term:`pivot point`.
+   Like Object and Edit Mode, Sculpt Mode also has a :term:`Pivot Point`.
    This is because the basic move, scale, rotate transforms are also possible in Sculpt Mode.
 
    Origin

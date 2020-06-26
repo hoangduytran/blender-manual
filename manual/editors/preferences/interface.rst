@@ -74,7 +74,7 @@ Navigation Controls
 .. _prefs-interface-color-picker-type:
 
 Color Picker Type
-   Choose which type of :term:`color space` you prefer. It will show when clicking :kbd:`LMB` on any color field.
+   Choose which type of :term:`Color Space` you prefer. It will show when clicking :kbd:`LMB` on any color field.
 
    See the different color picker types at the :doc:`Color picker </interface/controls/templates/color_picker>` page.
 Header Position

@@ -68,7 +68,7 @@ Fill Type
    Triangle Fan
       Fill with triangular faces which share a vertex in the middle.
    N-gon
-      Fill with a single :term:`n-gon`.
+      Fill with a single :term:`N-gon`.
    Nothing
       Do not fill. Creates only the outer ring of vertices.
 

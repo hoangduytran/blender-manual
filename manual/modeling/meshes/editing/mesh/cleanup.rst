@@ -105,7 +105,7 @@ Split Concave Faces
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Mesh --> Clean up --> Split Concave Faces`
 
-This tool can be used to convert any :term:`concave face` to convex
+This tool can be used to convert any :term:`Concave Face` to convex
 by splitting the concave into two or more convex faces.
 
 

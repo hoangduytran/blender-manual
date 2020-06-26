@@ -44,7 +44,7 @@ Perspective
    and parallel lines (such as the rails on a railroad) will appear to converge as they get farther away.
 
    Focal Length/Field of View
-      The :term:`focal length` controls the amount of zoom, i.e.
+      The :term:`Focal Length` controls the amount of zoom, i.e.
       the amount of the scene which is visible all at once.
       Longer focal lengths result in a smaller :abbr:`FOV (Field of View)` (more zoom),
       while short focal lengths allow you to see more of the scene at once
@@ -222,13 +222,13 @@ Safe Areas
 Safe areas are guides used to position elements to ensure that
 the most important parts of the content can be seen across all screens.
 
-Different screens have varying amounts of :term:`overscan` (especially older TV sets).
+Different screens have varying amounts of :term:`Overscan` (especially older TV sets).
 That means that not all content will be visible to all viewers,
 since parts of the image surrounding the edges are not shown.
 To work around this problem TV producers defined two areas where content is guaranteed to be shown:
 action safe and title safe.
 
-Modern LCD/plasma screens with purely digital signals have no :term:`overscan`,
+Modern LCD/plasma screens with purely digital signals have no :term:`Overscan`,
 yet safe areas are still considered best practice and may be legally required for broadcast.
 
 In Blender, safe areas can be set from the Camera and Sequencer views.

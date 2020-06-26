@@ -38,7 +38,7 @@ Located in the :menuselection:`Properties --> Materials --> Material Library VX`
 Instructions
 ============
 
-It's advisable to add a :term:`fake user` to your materials and
+It's advisable to add a :term:`Fake User` to your materials and
 to save your blend-file before use.
 
 New Library ``+``

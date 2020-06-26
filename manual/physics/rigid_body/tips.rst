@@ -14,7 +14,7 @@ Animation
 =========
 
 The most common trick is to
-:term:`keyframe` animate the location or rotation of an *Active* physics object as well as
+:term:`Keyframe` animate the location or rotation of an *Active* physics object as well as
 the *Animated* checkbox.
 When the curve on the *Animated* property switches to disabled, the physics engine takes over
 using the object's last known location, rotation and velocities.

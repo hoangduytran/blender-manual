@@ -88,8 +88,8 @@ Use Effector
 .. _bpy.types.FluidEffectorSettings.use_plane_init:
 
 Is Planar
-   Defines the effector as either a single dimension object i.e. a plane or the mesh is :term:`non-manifold`.
+   Defines the effector as either a single dimension object i.e. a plane or the mesh is :term:`Non-manifold`.
    This ensures that the fluid simulator will give the most accurate results for these types of meshes.
 
-   A :term:`manifold` mesh can also be declared as planar. The fluid solver will then ignore the volume
+   A :term:`Manifold` mesh can also be declared as planar. The fluid solver will then ignore the volume
    inside the mesh and just emit fluid from the mesh sides.

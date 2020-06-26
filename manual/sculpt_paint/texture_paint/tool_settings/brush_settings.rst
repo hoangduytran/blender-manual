@@ -116,7 +116,7 @@ Accumulate
 Affect Alpha
    When this is disabled, it locks (prevents changes to) the alpha channel while painting (3D only).
 Anti-Aliasing :guilabel:`2D Painting Only`
-   Toggles :term:`anti-aliasing` around the brush,
+   Toggles :term:`Anti-Aliasing` around the brush,
    this is useful if you are working with pixel art or low resolution textures.
 
 .. toctree::

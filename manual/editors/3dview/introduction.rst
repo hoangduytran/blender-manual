@@ -48,7 +48,7 @@ Transform Controls
 Transform Orientations
    Use to select and modify the active :doc:`Transform Orientations </editors/3dview/controls/orientation>`.
 Pivot Point
-   Used to change the reference point (or :term:`pivot point`) used by many mesh manipulation tools.
+   Used to change the reference point (or :term:`Pivot Point`) used by many mesh manipulation tools.
 
    Read more about :doc:`Pivot Points </editors/3dview/controls/pivot_point/index>`.
 Snapping

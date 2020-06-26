@@ -26,7 +26,7 @@ Workflow
 Scene Linear Color Space
 ------------------------
 
-For correct results, different :term:`color spaces <color space>`
+For correct results, different :term:`Color Spaces <Color Space>`
 are needed for rendering, display and storage of images.
 Rendering and compositing is best done in *scene linear* color space,
 which corresponds more closely to nature, and makes computations more physically accurate.
@@ -203,7 +203,7 @@ OpenColorIO Configuration
 
 Blender comes with a standard OpenColorIO configuration that
 contains a number of useful display devices and view transforms.
-The reference linear :term:`color space` used is the linear color space
+The reference linear :term:`Color Space` used is the linear color space
 with Rec. 709 chromaticities and D65 white point.
 
 However, OpenColorIO was also designed to give a consistent user experience across

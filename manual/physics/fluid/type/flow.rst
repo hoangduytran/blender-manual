@@ -4,7 +4,7 @@ Flow
 ****
 
 Fluid *Flow* types are used to add or remove fluid to a domain object. Flow objects should be
-contained within the domain's :term:`bounding box` in order to work.
+contained within the domain's :term:`Bounding Box` in order to work.
 
 To define any mesh object as a *Flow* object, add Fluid physics by clicking *Fluid* in
 :menuselection:`Properties --> Physics`. Then select *Flow* as the fluid *Type*. Now you should have
@@ -48,7 +48,7 @@ Flow Behavior
       This object will emit fluid into the simulation, like a water tap or base of a fire.
 
    Outflow
-      Any fluid that enters the :term:`bounding box` of this object will be removed from
+      Any fluid that enters the :term:`Bounding Box` of this object will be removed from
       the domain (think of a drain or a black hole). This can be useful in combination with
       an inflow to prevent the whole domain from filling up. Outflow objects can be animated
       and the area where the fluid disappears will follow the object as it moves around.
@@ -145,13 +145,13 @@ Flow Source
       .. _bpy.types.FluidFlowSettings.use_plane_init:
 
       Is Planar
-         Defines the effector as either a single dimension object i.e. a plane or the mesh is :term:`non-manifold`.
+         Defines the effector as either a single dimension object i.e. a plane or the mesh is :term:`Non-manifold`.
          This ensures that the fluid simulator will give the most accurate results for these types of meshes.
 
       .. _bpy.types.FluidFlowSettings.surface_distance:
 
       Surface Emission
-         Maximum distance in :term:`voxels <voxel>` from the surface of the mesh in which fluid is emitted.
+         Maximum distance in :term:`Voxels <Voxel>` from the surface of the mesh in which fluid is emitted.
          Since this setting uses voxels to determine the distance,
          results will vary depending on the domain's resolution.
 
@@ -160,7 +160,7 @@ Flow Source
       Volume Emission :guilabel:`Fire or Smoke Only`:
          Amount of fluid to emit inside the emitter mesh, where 0 is none and 1 is the full amount.
          Note that emitting fluid based on volume can have unpredictable results
-         if your mesh is :term:`non-manifold`.
+         if your mesh is :term:`Non-manifold`.
 
    .. _bpy.types.FluidFlowSettings.particle_system:
 
@@ -176,7 +176,7 @@ Flow Source
          When this setting is enabled, it allows the *Size* setting to define the maximum distance in voxels
          at which particles can emit smoke, similar to the *Surface Emission* setting for mesh sources.
 
-         When disabled, particles will fill the nearest :term:`voxel` with smoke.
+         When disabled, particles will fill the nearest :term:`Voxel` with smoke.
 
 
 .. _bpy.types.FluidFlowSettings.use_initial_velocity:
@@ -194,7 +194,7 @@ Source
 .. _bpy.types.FluidFlowSettings.velocity_normal:
 
 Normal
-   This option controls how much velocity fluid is given along a face :term:`normal`.
+   This option controls how much velocity fluid is given along a face :term:`Normal`.
    Note that, initial velocities will always be applied along all face normals.
    Thus with a closed flow source mesh, fluid will always be emitted in more than one direction.
    To set initial velocities along only one direction all normals need to point in the same direction.

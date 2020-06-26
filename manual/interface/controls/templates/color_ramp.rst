@@ -39,7 +39,7 @@ Specials ``v``
    Reset Color Ramp
       Resets the color ramp to its default state.
 Color Mode
-   Selection of the :term:`color space` used for interpolation.
+   Selection of the :term:`Color Space` used for interpolation.
 
    RGB
       Blends color by mixing each color channel and combining.

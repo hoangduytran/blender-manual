@@ -107,7 +107,7 @@ Pack UV Islands
    See the :ref:`pack islands operator <editors-uv-editing-layout-pack_islands>`
    that works with the same principle for more information.
 Normals
-   When enabled, an object's :term:`normals <normal>` are exported.
+   When enabled, an object's :term:`Normals <Normal>` are exported.
    See `Custom Split Normals of Meshes`_ below for more information.
 Vertex Colors
    When enabled, exports vertex colors.

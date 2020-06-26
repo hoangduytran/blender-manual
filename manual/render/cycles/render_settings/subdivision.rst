@@ -17,9 +17,9 @@ Subdivision
 These settings are used to control :doc:`Adaptive Subdivision </render/cycles/object_settings/adaptive_subdiv>`.
 
 Render
-   Size of :term:`micropolygons` in pixels.
+   Size of :term:`Micropolygons` in pixels.
 Viewport
-   Size of :term:`micropolygons` in pixels while preview rendering.
+   Size of :term:`Micropolygons` in pixels while preview rendering.
 
 .. _bpy.types.CyclesRenderSettings.offscreen_dicing_scale:
 
@@ -32,7 +32,7 @@ Offscreen Scale
 .. _bpy.types.CyclesRenderSettings.max_subdivisions:
 
 Max Subdivisions
-   Stop subdividing when this level is reached even if the dicing rate would produce finer :term:`tessellation`.
+   Stop subdividing when this level is reached even if the dicing rate would produce finer :term:`Tessellation`.
 
 .. _bpy.types.CyclesRenderSettings.dicing_camera:
 

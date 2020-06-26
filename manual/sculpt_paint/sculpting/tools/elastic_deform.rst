@@ -11,7 +11,7 @@ Elastic Deform
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Elastic Deform`
 
-Used to simulate realistic deformations such as grabbing or twisting of :term:`elastic` objects.
+Used to simulate realistic deformations such as grabbing or twisting of :term:`Elastic` objects.
 For example, this tool works great for modeling the shape of flesh like objects such as humans or animals.
 When pressing :kbd:`Ctrl`, the brush deforms vertices along the normal of the active vertex.
 

@@ -47,7 +47,7 @@ Quality
 =======
 
 Viewport Anti-Aliasing
-   Control the :term:`anti-aliasing` for higher quality rendering.
+   Control the :term:`Anti-Aliasing` for higher quality rendering.
 Overlay Smooth Wires
    Display overlays with smooth wire, without this wires will be rendered aliased.
 

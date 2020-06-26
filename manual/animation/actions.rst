@@ -83,5 +83,5 @@ On each frame of all the scene's frames, the *Bake Action* tool computes
 the final animation of the selected objects or bones with all those
 modifiers, drivers, and constraints applied, and keyframes the result.
 
-This can be useful for adding deviation to a cyclic action like a :term:`walk cycle`,
+This can be useful for adding deviation to a cyclic action like a :term:`Walk Cycle`,
 or to create a keyframe animation created from drivers or constraints.

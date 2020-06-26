@@ -10,7 +10,7 @@ Holdout
    Holdout Shader.
 
 The *Holdout* shader node is used to create a "hole" in the image with zero alpha
-transparency, which is useful for compositing (see :term:`alpha channel`).
+transparency, which is useful for compositing (see :term:`Alpha Channel`).
 
 Note that the holdout shader can only create alpha when
 :menuselection:`Properties --> Render --> Film --> Transparent` is enabled.

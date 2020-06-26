@@ -25,7 +25,7 @@ Modify
    however, they usually do not directly affect the geometry of the object,
    but some other data, such as vertex groups.
 Generate
-   These are constructive/destructive tools that will affect the whole :term:`topology` of the mesh.
+   These are constructive/destructive tools that will affect the whole :term:`Topology` of the mesh.
    They can change the general appearance of the object, or add new geometry to it...
 Deform
    Unlike *Generate* ones above, these only change the shape of an object, without altering its topology.

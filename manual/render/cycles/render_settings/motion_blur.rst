@@ -33,7 +33,7 @@ Shutter
    For example, shutter time 1.0 blurs over the length of 1 frame.
 
 Rolling Shutter
-   Creates a :term:`rolling shutter` effect.
+   Creates a :term:`Rolling Shutter` effect.
 
    None
       No rolling shutter effect.

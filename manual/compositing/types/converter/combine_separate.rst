@@ -14,7 +14,7 @@ All of these nodes do essentially the same thing:
 - Combine: Re/combine an image from its composite color channels.
 
 These nodes can be used to manipulate each color channel independently.
-Each type is differentiated in the applied :term:`color space`.
+Each type is differentiated in the applied :term:`Color Space`.
 
 In compositing and texture context each node supports the Alpha channel.
 In the texture context only RGB color space is available.

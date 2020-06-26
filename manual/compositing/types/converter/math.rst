@@ -195,7 +195,7 @@ Operation
          Converts the input from radians to degrees.
 
 Clamp
-   Limits the output to the range (0.0 to 1.0). See :term:`clamp`.
+   Limits the output to the range (0.0 to 1.0). See :term:`Clamp`.
 
 
 Outputs

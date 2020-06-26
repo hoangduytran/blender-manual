@@ -53,7 +53,7 @@ Toolbar
    Selects a group of vertices and pulls them to follow the mouse.
 
 :doc:`/sculpt_paint/sculpting/tools/elastic_deform`
-   Used to simulate realistic deformations such as grabbing or twisting of :term:`elastic` objects.
+   Used to simulate realistic deformations such as grabbing or twisting of :term:`Elastic` objects.
 
 :doc:`/sculpt_paint/sculpting/tools/snake_hook`
    Pulls vertices along with the movement of the brush to create long, snake-like forms.

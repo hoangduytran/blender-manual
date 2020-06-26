@@ -47,7 +47,7 @@ Polygon Method
 
 Minimum Vertices
    Minimum number of vertices a face must have to be triangulated.
-   For example, setting this value to 5, will prevent triangulation of :term:`quads <quad>`
+   For example, setting this value to 5, will prevent triangulation of :term:`Quads <Quad>`
    and only triangulate :term:`N-gons <N-gon>`.
 
 Keep Normals

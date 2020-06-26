@@ -70,7 +70,7 @@ Wireframe
    None
       The volume is not displayed in wireframe mode.
    Bounds
-      Displays the volume as :term:`bounding box` for the entire volume grid.
+      Displays the volume as :term:`Bounding Box` for the entire volume grid.
    Boxes
       Displays a bounding boxes for nodes in the volume tree.
    Points

@@ -27,7 +27,7 @@ Properties
 Index
    Selection of the previously specified index.
 Anti-Aliasing
-   This post-processing filter smooths the mask edges. See :term:`anti-aliasing`.
+   This post-processing filter smooths the mask edges. See :term:`Anti-Aliasing`.
 
 
 Outputs

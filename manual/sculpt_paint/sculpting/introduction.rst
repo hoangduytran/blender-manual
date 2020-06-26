@@ -35,7 +35,7 @@ Sculpt Mode uses a similar brush to the other :doc:`painting modes </sculpt_pain
 but it is slightly more advanced. All the normal brush controls still apply,
 and it functions exactly the same, yet the brush for sculpting is displayed in 3D.
 This means that the brush will follow the contours of the mesh and the radius is displayed
-by orienting the brush to match the meshes :term:`normal`.
+by orienting the brush to match the meshes :term:`Normal`.
 How closely the cursor follows the curvature of the mesh can be changed in
 the :doc:`Brush Settings </sculpt_paint/sculpting/tool_settings/brush_settings>`.
 

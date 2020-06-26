@@ -17,8 +17,8 @@ This modifier needs a second object to be the target (the second operand) of the
 
 .. warning::
 
-   Only :term:`manifold` meshes are guaranteed to give proper results,
-   other cases (especially "opened" meshes, :term:`non-manifold` but without any self-intersections)
+   Only :term:`Manifold` meshes are guaranteed to give proper results,
+   other cases (especially "opened" meshes, :term:`Non-manifold` but without any self-intersections)
    will usually work well, but might give odd glitches and artifacts in some cases.
 
    You should also avoid any co-planar faces (or co-linear edges) between both operands,

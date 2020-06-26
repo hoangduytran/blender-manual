@@ -44,7 +44,7 @@ Texture Space
    :Mode:      All Modes
    :Panel:     :menuselection:`Properties --> Object Data --> Texture Space`
 
-These are settings of the :term:`texture space` used by generated texture mapping.
+These are settings of the :term:`Texture Space` used by generated texture mapping.
 The visualization of the texture space can be activated in the :doc:`/scene_layout/object/properties/display`.
 
 Auto Texture Space

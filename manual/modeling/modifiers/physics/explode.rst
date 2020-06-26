@@ -60,7 +60,7 @@ Vertex Group
       (which would happen if the faces had a weight value of 0).
 
 Particle UV
-   If set, the U value of the coordinates in that :term:`UV map` will be overwritten
+   If set, the U value of the coordinates in that :term:`UV Map` will be overwritten
    with the age of the particle attached to the matching mesh face
    (in proportion, from 0 for not yet born particles, to 1 for dead ones).
 

@@ -50,7 +50,7 @@ This section is intended to introduce the workflow.
 Roll Control
 ------------
 
-To control the :term:`roll` of the Spline IK chain,
+To control the :term:`Roll` of the Spline IK chain,
 the standard methods of rotating the bones in the chain along their local Y axes still apply.
 For example, start at the farthest bone and simply rotate the bones in the chain around their
 local Y axes to adjust the roll of the chain from that point onward.

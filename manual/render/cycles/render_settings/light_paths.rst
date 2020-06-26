@@ -73,7 +73,7 @@ Clamp Indirect
 Caustics
 --------
 
-A common source of noise is :term:`caustics`.
+A common source of noise is :term:`Caustics`.
 
 .. _render-cycles-integrator-no-caustics:
 

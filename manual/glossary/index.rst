@@ -65,7 +65,7 @@ This page lists definitions for terms used in Blender and this manual.
       The light that comes from the surrounding environment as a whole.
 
    Ambient Occlusion
-      A ratio of how much :term:`ambient light` a surface point would be likely to receive.
+      A ratio of how much :term:`Ambient Light` a surface point would be likely to receive.
       If a surface point is under a foot or table,
       it will end up much darker than the top of someone's head or the tabletop.
 
@@ -73,10 +73,10 @@ This page lists definitions for terms used in Blender and this manual.
       Simulation of motion.
 
    Anti-Aliasing
-      Is the technique of minimizing :term:`aliasing`, by e.g. rendering multiple samples per pixel.
+      Is the technique of minimizing :term:`Aliasing`, by e.g. rendering multiple samples per pixel.
 
    Armature
-      An :term:`Object` consisting of :term:`bones <bone>`. Used to :term:`rig` characters, props, etc.
+      An :term:`Object` consisting of :term:`Bones <Bone>`. Used to :term:`Rig` characters, props, etc.
 
    Axis
       A reference line which defines coordinates along one cardinal direction in n-dimensional space.
@@ -134,7 +134,7 @@ This page lists definitions for terms used in Blender and this manual.
       An :term:`Object` that is affected by its :term:`Parent`.
 
    Chromaticities
-      The coordinates of the :term:`primaries` on the CIE 1931 xy chromaticity diagram.
+      The coordinates of the :term:`Primaries` on the CIE 1931 xy chromaticity diagram.
 
    Chroma
    Chrominance
@@ -172,12 +172,12 @@ This page lists definitions for terms used in Blender and this manual.
       A coordinate system in which a vector represent a color value.
       By doing so, the color space defines three things:
 
-      - The exact color of each of the :term:`primaries`
+      - The exact color of each of the :term:`Primaries`
       - The :term:`White Point`
       - A transfer function
 
       sRGB
-         A color space that uses the Rec .709 :term:`primaries` and white point but,
+         A color space that uses the Rec .709 :term:`Primaries` and white point but,
          with a slightly different transfer function.
       HSV
          Three values often considered as more intuitive (human perception) than the RGB system.
@@ -207,17 +207,17 @@ This page lists definitions for terms used in Blender and this manual.
       on Wikipedia.
 
    Constraint
-      A way of controlling one :term:`object` with data from another.
+      A way of controlling one :term:`Object` with data from another.
 
    Convex Face
       Face where, if lines were drawn from each vertex to every other vertex,
-      all lines would remain in the face. Opposite of a :term:`concave face`.
+      all lines would remain in the face. Opposite of a :term:`Concave Face`.
 
    Coplanar
       Refers to any set of elements that are all aligned to the same 2D plane in 3D space.
 
    Crease
-      Property of an :term:`edge`. Used to define the sharpness of edges in :term:`subdivision surface` meshes.
+      Property of an :term:`Edge`. Used to define the sharpness of edges in :term:`Subdivision Surface` meshes.
 
    Curve
       A type of object defined in terms of a line interpolated between Control Vertices.
@@ -231,7 +231,7 @@ This page lists definitions for terms used in Blender and this manual.
       linked data (data owned and controlled by another Blender object).
 
    DOF
-   Depth Of Field
+   Depth of Field
       The distance in front of and behind the subject which appears to be in focus. For any given lens setting,
       there is only one distance at which a subject is precisely in focus, but focus falls off gradually on either
       side of that distance, so there is a region in which the blurring is tolerable. This region is greater behind
@@ -269,14 +269,14 @@ This page lists definitions for terms used in Blender and this manual.
       When rendering is complete, the buffers are switched.
 
    Edge
-      Straight segment (line) that connects two :term:`vertices <vertex>`, and can be part of a :term:`face`.
+      Straight segment (line) that connects two :term:`Vertices <Vertex>`, and can be part of a :term:`Face`.
 
    Edge Loop
-      Chain of :term:`edges <edge>` belonging to consecutive :term:`quads <quad>`.
+      Chain of :term:`Edges <Edge>` belonging to consecutive :term:`Quads <Quad>`.
       An edge loop ends at a pole or a boundary. Otherwise, it is cyclic.
 
    Edge Ring
-      Path of all :term:`edges <edge>` along a :term:`face loop` that share two faces belonging to that loop.
+      Path of all :term:`Edges <Edge>` along a :term:`Face Loop` that share two faces belonging to that loop.
 
    Elastic
       Objects that are able to spontaneously return to their original shape
@@ -286,7 +286,7 @@ This page lists definitions for terms used in Blender and this manual.
       The amount a material is elastic versus inelastic.
 
    Empty
-      An :term:`object` without any :term:`vertices`, :term:`edges <edge>` or :term:`faces <face>`.
+      An :term:`Object` without any :term:`Vertices`, :term:`Edges <Edge>` or :term:`Faces <Face>`.
 
    Euler
    Euler Rotation
@@ -296,14 +296,14 @@ This page lists definitions for terms used in Blender and this manual.
       around *Local Z* using the *Rotate* tool in the 3D Viewport, followed by *Local Y* and then *Local X*.
 
    Face
-      Mesh element that defines a piece of surface. It consists of three or more :term:`edges <edge>`.
+      Mesh element that defines a piece of surface. It consists of three or more :term:`Edges <Edge>`.
 
    Face Loop
-      Chain of consecutive :term:`quads <quad>`. A face loop stops at a :term:`triangle` or :term:`N-gon`
+      Chain of consecutive :term:`Quads <Quad>`. A face loop stops at a :term:`Triangle` or :term:`N-gon`
       (which do not belong to the loop), or at a boundary. Otherwise, it is cyclic.
 
    Face Normal
-      The normalized vector perpendicular to the plane that a :term:`face` lies in. Each face has its own normal.
+      The normalized vector perpendicular to the plane that a :term:`Face` lies in. Each face has its own normal.
 
    Fake User
       A special :term:`Data User`, a program construct that is
@@ -315,7 +315,7 @@ This page lists definitions for terms used in Blender and this manual.
       A curve that holds the animation values of a specific property.
 
    Field of View
-      The area in which objects are visible to the camera. Also see :term:`Focal Length <focal length>`.
+      The area in which objects are visible to the camera. Also see :term:`Focal Length <Focal Length>`.
 
    Fireflies
       Rendering artifacts encountered with path tracing resulting from
@@ -323,7 +323,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    Focal Length
       The distance required by a lens to focus collimated light.
-      Defines the magnification power of a lens. Also see :term:`Field of View <field of view>`.
+      Defines the magnification power of a lens. Also see :term:`Field of View <Field of View>`.
 
    Frame Types
       In video compression, a frame can be compressed by several different algorithms.
@@ -352,13 +352,13 @@ This page lists definitions for terms used in Blender and this manual.
 
    Gimbal Lock
       The limitation where axes of rotation can become aligned,
-      losing the ability to rotate on an axis (typically associated with :term:`Euler rotation`).
+      losing the ability to rotate on an axis (typically associated with :term:`Euler Rotation`).
 
       - See also `Gimbal lock <https://en.wikipedia.org/wiki/Gimbal_lock>`__ on Wikipedia.
       - See also `Gimbal lock <https://blender.stackexchange.com/questions/469>`__ on Stack Exchange.
 
    Global Illumination
-      A superset of :term:`radiosity` and ray tracing. The goal is to compute all possible light interactions
+      A superset of :term:`Radiosity` and ray tracing. The goal is to compute all possible light interactions
       in a given scene, and thus, obtain a truly photorealistic image.
       All combinations of diffuse and specular reflections and transmissions must be accounted for.
       Effects such as color bleeding and caustics must be included in a global illumination simulation.
@@ -384,14 +384,14 @@ This page lists definitions for terms used in Blender and this manual.
       See also `HDRI <https://en.wikipedia.org/wiki/HDRI>`__ on Wikipedia.
 
    IOR
-   Index Of Refraction
+   Index of Refraction
       A property of transparent materials.
       When a light ray travels through the same volume it follows a straight path.
       However, if it passes from one transparent volume to another, it bends.
       The angle by which the ray is bent can be determined by the IOR of the materials of both volumes.
 
    Interpolation
-      The process of calculating new data between points of known value, like :term:`keyframes <keyframe>`.
+      The process of calculating new data between points of known value, like :term:`Keyframes <Keyframe>`.
 
    Inverse Kinematics
       The process of determining the movement of interconnected segments of a body or model.
@@ -431,7 +431,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    Manifold
       Manifold meshes, also called *water-tight* meshes, define a *closed non-self-intersecting volume*
-      (see also :term:`non-manifold`). A manifold mesh is a mesh in which the structure of the connected
+      (see also :term:`Non-manifold`). A manifold mesh is a mesh in which the structure of the connected
       faces in a closed volume will always point the normals (and there surfaces) to the outside
       or to the inside of the mesh without any overlaps. If you recalculate those normals,
       they will always point at a predictable direction (To the outside or to the inside of the volume).
@@ -450,7 +450,7 @@ This page lists definitions for terms used in Blender and this manual.
       or it is used as a mix factor when applying :term:`Color Blend Modes`.
 
    Mesh
-      Type of object consisting of :term:`vertices <vertex>`, :term:`edges <edge>` and :term:`faces <face>`.
+      Type of object consisting of :term:`Vertices <Vertex>`, :term:`Edges <Edge>` and :term:`Faces <Face>`.
 
    Micropolygons
       A polygon roughly the size of a pixel or smaller.
@@ -483,10 +483,10 @@ This page lists definitions for terms used in Blender and this manual.
       Simulating motion blur makes computer animation appear more realistic.
 
    Multisampling
-      Rendering multiple samples per pixel, for :term:`anti-aliasing`.
+      Rendering multiple samples per pixel, for :term:`Anti-Aliasing`.
 
    N-gon
-      A :term:`face` that contains more than four :term:`vertices <vertex>`.
+      A :term:`Face` that contains more than four :term:`Vertices <Vertex>`.
 
    NDOF
    3D Mouse
@@ -527,12 +527,12 @@ This page lists definitions for terms used in Blender and this manual.
       The normalized vector perpendicular to a surface.
 
       Normals can be assigned to vertices,
-      faces and modulated across a surface using :term:`normal mapping`.
+      faces and modulated across a surface using :term:`Normal Mapping`.
 
       See also `Normals <https://en.wikipedia.org/wiki/Normal_(geometry)>`__ on Wikipedia.
 
    Normal Mapping
-      Is similar to :term:`Bump mapping`, but instead of the image being a grayscale heightmap,
+      Is similar to :term:`Bump Mapping`, but instead of the image being a grayscale heightmap,
       the colors define in which direction the normal should be shifted,
       the three color channels being mapped to the three directions X, Y and Z.
       This allows more detail and control over the effect.
@@ -594,18 +594,18 @@ This page lists definitions for terms used in Blender and this manual.
    Pixel
       The smallest unit of information in a 2D raster image,
       representing a single color made up of red, green, and blue channels.
-      If the image has an :term:`alpha channel`, the pixel will contain a corresponding fourth channel.
+      If the image has an :term:`Alpha Channel`, the pixel will contain a corresponding fourth channel.
 
    Pole
       :term:`Vertex` where three, five, or more edges meet.
       A vertex connected to one, two, or four edges is not a pole.
 
    Pose Mode
-      Used for :term:`posing`, :term:`keyframing`, :term:`weight painting`,
-      :term:`constraining <Constraint>` and :term:`parenting` the :term:`bones <Bone>` of an :term:`armature`.
+      Used for :term:`Posing`, :term:`Keyframing`, :term:`Weight Painting`,
+      :term:`Constraining <Constraint>` and :term:`Parenting` the :term:`Bones <Bone>` of an :term:`Armature`.
 
    Posing
-      Moving, Rotating and Scaling the :term:`bones <Bone>` of an :term:`armature`
+      Moving, Rotating and Scaling the :term:`Bones <Bone>` of an :term:`Armature`
       to achieve an aesthetically pleasing pose for a character.
 
    Premultiplied Alpha
@@ -613,7 +613,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    Primaries
       In color theory, primaries (often known as primary colors) are the abstract lights,
-      using an absolute model, that make up a :term:`color space`.
+      using an absolute model, that make up a :term:`Color Space`.
 
    Primitive
       A basic object that can be used as a basis for modeling more complicated objects.
@@ -649,12 +649,12 @@ This page lists definitions for terms used in Blender and this manual.
    Quad
    Quadrilateral
    Quadrangle
-      :term:`Face` that contains exactly four :term:`vertices <vertex>`.
+      :term:`Face` that contains exactly four :term:`Vertices <Vertex>`.
 
    Quaternion
    Quaternion Rotation
       Rotation method where rotations are defined by four values (X, Y, Z, and W).
-      X, Y, and Z also define an :term:`axis`, and W an angle,
+      X, Y, and Z also define an :term:`Axis`, and W an angle,
       but it is quite different from :term:`Axis Angle`.
 
       Quaternion values can be interpreted geometrically as defining a point on a unit
@@ -687,7 +687,7 @@ This page lists definitions for terms used in Blender and this manual.
    Ray Tracing
       Rendering technique that works by tracing the path taken by a ray of light through the scene,
       and calculating reflection, refraction, or absorption of the ray whenever it intersects
-      an object in the world. More accurate than :term:`scanline`, but much slower.
+      an object in the world. More accurate than :term:`Scanline`, but much slower.
 
    Real User
       A Blender object, which is a :term:`Data User`.
@@ -695,7 +695,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    Refraction
       The change in direction of a wave due to a change in velocity.
-      It happens when waves travel from a medium with a given :term:`index of refraction`
+      It happens when waves travel from a medium with a given :term:`Index of Refraction`
       to a medium with another. At the boundary between the media, the wave changes direction;
       its wavelength increases or decreases but frequency remains constant.
 
@@ -726,7 +726,7 @@ This page lists definitions for terms used in Blender and this manual.
       This may also be known as a :term:`Glossy Map`.
 
    Scanline
-      Rendering technique. Much faster than :term:`ray tracing`,
+      Rendering technique. Much faster than :term:`Ray Tracing`,
       but allows fewer effects, such as reflections, refractions, motion blur and focal blur.
 
    Scene Referenced
@@ -739,7 +739,7 @@ This page lists definitions for terms used in Blender and this manual.
       based on its angle to lights and its distance from lights to create a photorealistic effect.
 
    Smoothing
-      Defines how :term:`faces <face>` are shaded. Faces can be either solid (faces are rendered flat)
+      Defines how :term:`Faces <Face>` are shaded. Faces can be either solid (faces are rendered flat)
       or smooth (faces are smoothed by interpolating the normal on every point of the face).
 
    Specular Light
@@ -808,13 +808,13 @@ This page lists definitions for terms used in Blender and this manual.
 
    Topology
       The arrangement of *Vertices*, *Edges*, and *Faces* which define the shape of a mesh.
-      See :term:`vertex`, :term:`edge`, and :term:`face`.
+      See :term:`Vertex`, :term:`Edge`, and :term:`Face`.
 
    Transforms
       The combined idea of location, rotation, and scale.
 
    Triangle
-      :term:`Face` with exactly three :term:`vertices <vertex>`.
+      :term:`Face` with exactly three :term:`Vertices <Vertex>`.
 
    User
       See :term:`Data User`
@@ -828,15 +828,15 @@ This page lists definitions for terms used in Blender and this manual.
    Vertex
    Vertices
       A point in 3D space containing a location. It may also have a defined color.
-      Vertices are the terminating points of :term:`edges <edge>`.
+      Vertices are the terminating points of :term:`Edges <Edge>`.
 
    Vertex Group
-      Collection of :term:`vertices <vertex>`.
+      Collection of :term:`Vertices <Vertex>`.
       Vertex groups are useful for limiting operations to specific areas of a mesh.
 
    Voxel
       A cubic 3D equivalent to the square 2D pixel.
-      The name is a combination of the terms "Volumetric" and ":term:`Pixel <pixel>`".
+      The name is a combination of the terms "Volumetric" and ":term:`Pixel <Pixel>`".
       Used to store smoke and fire data from physics simulations.
 
    Walk Cycle
@@ -845,7 +845,7 @@ This page lists definitions for terms used in Blender and this manual.
       and the rest of the functions are animated.
 
    Weight Painting
-      Assigning :term:`vertices` to a :term:`vertex group` with a weight of 0.0 - 1.0.
+      Assigning :term:`Vertices` to a :term:`Vertex Group` with a weight of 0.0 - 1.0.
 
    White Point
       A reference value for white light defined by what happens when all the primaries,

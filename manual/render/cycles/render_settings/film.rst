@@ -17,7 +17,7 @@ Exposure
 Pixel Filter
 ============
 
-Due to limited resolution of images and computer screens, pixel filters are needed to avoid :term:`aliasing`.
+Due to limited resolution of images and computer screens, pixel filters are needed to avoid :term:`Aliasing`.
 This is achieved by slightly blurring the image to soften edges.
 
 Type

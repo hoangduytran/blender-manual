@@ -23,7 +23,7 @@ Gas Simulations
 
 Gas or smoke simulations are a subset of the fluids system, and can be used for simulating collections
 of airborne solids, liquid particulates and gases, such as those that make up smoke.
-It simulates the fluid movement of air and generates animated :term:`voxel`
+It simulates the fluid movement of air and generates animated :term:`Voxel`
 textures representing the density, heat, and velocity of other fluids or suspended particles
 (e.g. smoke) which can be used for rendering.
 

@@ -24,7 +24,7 @@ then select *Domain* as the fluid *Type*.
 .. note::
 
    You *can* use other shapes of mesh objects as domain objects,
-   but the fluid simulator will use the shape's :term:`bounding box` as the domain bounds.
+   but the fluid simulator will use the shape's :term:`Bounding Box` as the domain bounds.
    In other words, the actual shape of the domain will still be rectangular.
 
 .. _bpy.types.FluidDomainSettings.domain_type:
@@ -38,7 +38,7 @@ Domain Type
 .. _bpy.types.FluidDomainSettings.resolution_max:
 
 Resolution Divisions
-   The fluid domain is subdivided into many "cells" called :term:`voxels <voxel>`
+   The fluid domain is subdivided into many "cells" called :term:`Voxels <Voxel>`
    which make up "pixels" of fluid. This setting controls the number of subdivisions in the domain.
    Higher numbers of subdivisions are one way of creating higher resolution fluids.
 

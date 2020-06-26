@@ -122,7 +122,7 @@ Cage
 
       When the base mesh extruded does not give good results,
       you can create a copy of the base mesh and modify it to use as a *Cage*.
-      Both meshes need to have the same :term:`topology` (number of faces and face order).
+      Both meshes need to have the same :term:`Topology` (number of faces and face order).
 
 
 Output

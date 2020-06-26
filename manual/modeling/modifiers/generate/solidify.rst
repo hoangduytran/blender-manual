@@ -110,7 +110,7 @@ Rim
 
    .. note::
 
-      *Fill* and *Only Rim* only make a difference on :term:`non-manifold` objects,
+      *Fill* and *Only Rim* only make a difference on :term:`Non-manifold` objects,
       since the rims are generated from the borders of the original geometry.
 
 Vertex Group

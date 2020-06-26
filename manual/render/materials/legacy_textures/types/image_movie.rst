@@ -181,7 +181,7 @@ Interpolation
              Enlarged Image texture with *Interpolation*.
 
 MIP Map
-   :term:`Mip-maps <mip-map>` are precalculated, smaller, filtered textures for a certain size.
+   :term:`Mip-maps <Mip-map>` are precalculated, smaller, filtered textures for a certain size.
    A series of pictures is generated, each half the size of the former one.
    This optimizes the filtering process. By default, this option is enabled and speeds up rendering.
    When this option is off,

@@ -91,7 +91,7 @@ Outputs
 =======
 
 Image
-   Processed image with the *Matte* applied to the images' :term:`alpha channel`.
+   Processed image with the *Matte* applied to the images' :term:`Alpha Channel`.
 Matte
    Output matte to use for checking the quality of the key, or to manually apply
    using a :doc:`Set Alpha Node </compositing/types/converter/set_alpha>` or

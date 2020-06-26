@@ -11,7 +11,7 @@ Solidify Faces
    :Menu:      :menuselection:`Face --> Solidify Faces`
 
 This takes a selection of faces and solidifies them by extruding them
-uniformly to give volume to a :term:`non-manifold` surface.
+uniformly to give volume to a :term:`Non-manifold` surface.
 This is also available as a :doc:`Modifier </modeling/modifiers/generate/solidify>`.
 After using the tool, you can set the offset distance in the :ref:`ui-undo-redo-adjust-last-operation` panel.
 

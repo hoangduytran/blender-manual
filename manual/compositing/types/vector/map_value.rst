@@ -29,7 +29,7 @@ Size
 Use Minimum, Maximum
    Enable this to activate their related operation.
 Min, Max
-   Defines a range between minimum and maximum to :term:`clamp` the input value to.
+   Defines a range between minimum and maximum to :term:`Clamp` the input value to.
 
 
 Outputs

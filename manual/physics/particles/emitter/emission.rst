@@ -69,7 +69,7 @@ Emit From
 
       .. tip::
 
-         Your mesh must be :term:`manifold` to emit particles from the volume.
+         Your mesh must be :term:`Manifold` to emit particles from the volume.
          Some modifiers like the Edge Split Modifier break up the surface,
          in which case volume emission will not work correctly!
 

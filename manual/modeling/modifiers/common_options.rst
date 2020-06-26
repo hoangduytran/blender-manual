@@ -76,7 +76,7 @@ Texture Coordinates
       Take texture coordinates from face UV coordinates.
 
       UV Map
-         The :term:`UV map` from which to take texture coordinates.
+         The :term:`UV Map` from which to take texture coordinates.
          If the object has no UV coordinates, it falls back to the *Local* coordinate system.
          If this field is blank, but there is a UV map available
          (e.g. just after adding the first UV map to the mesh), the currently active UV map will be used.

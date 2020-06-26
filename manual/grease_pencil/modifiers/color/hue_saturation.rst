@@ -16,7 +16,7 @@ Options
    Hue/Saturation Modifier.
 
 Color
-   Defines the object output color in the HSV :term:`color space`.
+   Defines the object output color in the HSV :term:`Color Space`.
 
    H, S, V
 

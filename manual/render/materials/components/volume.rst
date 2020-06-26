@@ -84,7 +84,7 @@ rather than passing straight through.
 Mesh Volumes
 ============
 
-Meshes used for volume render should be closed and :term:`manifold`.
+Meshes used for volume render should be closed and :term:`Manifold`.
 That means that there should be no holes in the mesh.
 Each edge must be connected to exactly two faces
 such that there are no holes or T-shaped faces

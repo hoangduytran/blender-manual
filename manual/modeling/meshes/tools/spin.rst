@@ -40,7 +40,7 @@ Auto Merge
    Automatically merges the first a last duplicates,
    if they make a full revolution which results in overlapping geometry.
 Flip Normals
-   Reverses the :term:`normal's <normal>` direction for any resulting geometry.
+   Reverses the :term:`Normal's <Normal>` direction for any resulting geometry.
 Center
    Specifies the center of the spin. By default it uses the cursor position.
 Axis

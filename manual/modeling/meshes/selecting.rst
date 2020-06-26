@@ -283,7 +283,7 @@ Select All by Trait
 .. _mesh-select-non-manifold:
 
 Non-Manifold
-   Selects the :term:`non-manifold` geometry of a mesh.
+   Selects the :term:`Non-manifold` geometry of a mesh.
    This entry is available when editing a mesh, in Vertex and Edge selection modes only.
 
    Extend

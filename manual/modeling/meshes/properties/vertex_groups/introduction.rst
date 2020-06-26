@@ -9,7 +9,7 @@ Introduction
    The Vertex Groups panel.
 
 Vertex groups are mainly used to tag the vertices belonging
-to parts of a mesh object or :term:`lattice`. Think of the legs of a chair or
+to parts of a mesh object or :term:`Lattice`. Think of the legs of a chair or
 the hinges of a door, or hands, arms, limbs, head, feet, etc. of a character.
 In addition you can assign different weight values
 (in the range 0 to 1) to the vertices within a vertex group.
