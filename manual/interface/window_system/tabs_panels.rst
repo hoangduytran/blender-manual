@@ -61,6 +61,8 @@ while a collapsed panel is shown with a right-arrow (►).
 - Pressing :kbd:`A` expands/collapses the panel under the mouse pointer.
 - A :kbd:`Ctrl-LMB` click on the header of a specific panel will collapse
   all other panels and make this the only expanded one.
+- A :kbd:`Ctrl-LMB` click on the header of a specific panel that contains subpanels
+  will expand / collaps all subpanels.
 - Dragging with :kbd:`LMB` over the headers will expand or collapse many at once.
 
 
