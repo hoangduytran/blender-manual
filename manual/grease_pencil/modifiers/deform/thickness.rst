@@ -25,7 +25,7 @@ Thickness Factor
    Value to add or subtract to the actual points thickness.
 
 
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.

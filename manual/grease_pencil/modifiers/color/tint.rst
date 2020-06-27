@@ -16,11 +16,10 @@ Options
    Tint Modifier.
 
 
-Uniform
--------
+Mode
+   The color transformation will be applied on the stroke and/or the fill color.
 
-Color
-   Defines the tint color for mixing with the original color.
+   Stroke and Fill, Stroke, Fill
 
 Strength
    Controls the amount for the color mixing.
@@ -30,34 +29,23 @@ Strength
 
    A shift greater than 1.0 will make the points alpha less transparent than originally (2.0 is fully opaque).
 
-
-Gradient
---------
-
-Colors
-   Defines the tint gradient color for mixing with the original vertex color.
-
-Object
-   A :ref:`ui-data-id` to select an object (usually an empty),
-   which position and rotation will be used to define the center of the effect.
-
-Radius
-   Defines the maximum distance of the effect.
-
-Strength
-   Controls the amount for the color mixing.
-
-   A value of 0 respect the original strokes vertex color,
-   a value of 1.0 totally replace the original color with the tint color.
-
-Mode
-   The color transformation will be applied on the stroke and/or the fill color.
-
-   Stroke and Fill, Stroke, Fill
+Tint Type
+   Uniform
+      Color
+         Defines the tint color for mixing with the original color.
+   Gradient
+      Color Ramp
+         Defines the tint gradient color for mixing with the original vertex color.
+         For controls see :ref:`ui-color-ramp-widget`.
+      Object
+         A :ref:`ui-data-id` to select an object (usually an empty),
+         which position and rotation will be used to define the center of the effect.
+      Radius
+         Defines the maximum distance of the effect.
 
 
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.
 

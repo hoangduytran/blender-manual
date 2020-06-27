@@ -25,13 +25,13 @@ Axis
    You can select more than one of these axes. And will then get more mirrored copies.
    With one axis you get a single mirror, with two axes four mirrors, and with all three axes eight mirrors.
 
-Mirror Object
+Object
    An :ref:`ui-data-id` to select an object (usually an empty),
    which position and rotation will be used to define mirror planes
    (instead of using the ones from the modified object).
 
 
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.

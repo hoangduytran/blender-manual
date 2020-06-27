@@ -31,20 +31,23 @@ Thickness
 UV
    Strength of the noise effect over the point UV rotation.
 
-Random Value
-   When enabled, the noise uses a random value over time.
-
-   Step
-      Number of frames before using a new random value.
-
-   Seed
-      :term:`Seed` used by the pseudo-random number generator.
-
 Noise Scale
    Control the noise frequency scale.
 
 
-Influence Filters
------------------
+Randomize
+---------
+
+When enabled, the noise uses a random value over time.
+
+Step
+   Number of frames before using a new random value.
+
+Seed
+   :term:`Seed` used by the pseudo-random number generator.
+
+
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.

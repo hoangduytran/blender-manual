@@ -23,8 +23,8 @@ Options
 Object
    The name of the object to hook points to.
 
-Radius
-   The size of the hooks influence.
+Vertex Group
+   Restricts the effect only to a vertex group.
 
 Strength
    Adjust this hooks influence on the stroke points, were (0.0 to 1.0) (no change to fully follow the hook).
@@ -37,13 +37,16 @@ Falloff Type
    This can be used to adjust the kind of curve that the hook has on the stroke points.
    You can also define a custom curve to get a much higher level of control.
 
+Radius
+   The size of the hooks influence.
+
 Uniform Falloff
    This setting is useful when using hooks on scaled objects,
    especially in cases where non-uniform scale would stretch the result of the hook.
 
 
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.
 
@@ -56,7 +59,7 @@ See :ref:`grease-pencil-modifier-influence-filters`.
 
 
 Example
--------
+=======
 
 .. figure:: /images/grease-pencil_modifiers_deform_hook_sample.png
 

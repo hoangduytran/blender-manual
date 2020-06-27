@@ -24,20 +24,22 @@ Distance
 Offset
    Control the offset position (inner or outer) for duplicate strokes.
 
-Enable Fade
-   When activated, the duplicate strokes fades out using their opacity or thickness.
+Fade
+----
 
-   Center
-      Control the initial position for the fading.
+When activated, the duplicate strokes fades out using their opacity or thickness.
 
-   Thickness
-      Fade influence on strokes thickness.
+Center
+   Control the initial position for the fading.
 
-   Opacity
-      Fade influence on strokes opacity.
+Thickness
+   Fade influence on strokes thickness.
+
+Opacity
+   Fade influence on strokes opacity.
 
 
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.

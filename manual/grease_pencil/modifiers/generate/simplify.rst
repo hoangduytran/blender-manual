@@ -49,8 +49,8 @@ Mode
          Sets the distance threshold for merging points.
 
 
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.
 

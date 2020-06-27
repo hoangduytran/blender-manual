@@ -38,20 +38,23 @@ Mode
 Frame Offset
    Number of frames to offset the original keyframes.
 
-Frame Scale
+Scale
    Evaluation time (in seconds).
-
-Custom Range
-   When enabled, uses a custom range of frames.
-
-   Start/End Frame
-      Sets the range start and end frames.
 
 Keep Loop
    Moves end frame to the animation start to keep animation in a loop.
 
 
-Influence Filters
------------------
+Custom Range
+------------
+
+When enabled, uses a custom range of frames.
+
+Frame Start/End
+   Sets the range start and end frames.
+
+
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.

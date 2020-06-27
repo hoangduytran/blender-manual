@@ -32,38 +32,34 @@ Mode
          Align End
             All stroke end at the same time (i.e. shorter strokes start later).
 
-
 Transition
-----------
+   Determines the animation type to build the strokes.
 
-Determines the animation type to build the strokes.
-
-Grow
-   Shows points in the order they occur in each stroke, from first to last stroke.
-   (Simulating lines being drawn.)
-Shrink
-   Hide points from the end of each stroke to the start, from last to first stroke.
-   (Simulating lines being erased.)
-Fade
-   Hide points in the order they occur in each stroke, from first to last stroke.
-   (Simulating ink fading or vanishing after getting drawn.)
-
-
-Frame Range
------------
+   Grow
+      Shows points in the order they occur in each stroke, from first to last stroke.
+      (Simulating lines being drawn.)
+   Shrink
+      Hide points from the end of each stroke to the start, from last to first stroke.
+      (Simulating lines being erased.)
+   Fade
+      Hide points in the order they occur in each stroke, from first to last stroke.
+      (Simulating ink fading or vanishing after getting drawn.)
 
 Start Delay
    Number of frames after each Grease Pencil keyframe before the modifier has any effects.
 
-Length
+Frames
    Maximum number of frames that the build effect can run for.
    (Unless another Grease Pencil keyframe occurs before this time has elapsed.)
 
-Restrict Frame Range
-   If enabled, only modify strokes during the specified frame range.
 
-   Start/End
-      Determines the start and end frame for the build effect.
+Custom Range
+------------
+
+If enabled, only modify strokes during the specified frame range.
+
+Start/End
+   Determines the start and end frame for the build effect.
 
 
 Influence Filters

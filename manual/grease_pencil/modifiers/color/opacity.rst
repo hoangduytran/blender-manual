@@ -39,8 +39,8 @@ Opacity Factor
    Sets value to 2.0 makes the points alpha fully opaque.
 
 
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.
 

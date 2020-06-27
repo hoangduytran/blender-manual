@@ -17,13 +17,6 @@ Options
 
    Smooth Modifier.
 
-Factor
-   Strength of the smooth effect.
-
-Repeat
-   The number of smoothing iterations, equivalent to executing the Smooth tool multiple times.
-   High values can reduce the animation performance (FPS).
-
 Affect
    Combination of stroke/points properties that will be affected by the smooth factor.
 
@@ -36,8 +29,15 @@ Affect
    UV
       Smooth affect the point UV rotation.
 
+Factor
+   Strength of the smooth effect.
 
-Influence Filters
------------------
+Repeat
+   The number of smoothing iterations, equivalent to executing the Smooth tool multiple times.
+   High values can reduce the animation performance (FPS).
+
+
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.

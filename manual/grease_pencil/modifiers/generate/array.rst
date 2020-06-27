@@ -24,46 +24,48 @@ Options
 Count
    Total number of copies.
 
+Material Override
+   Index of the material to use on duplicated strokes (0 use strokes original materials).
 
-Offset
-------
-
-Constant Offset
-   Adds a constant translation component to the duplicate object's offset.
-   X, Y and Z constant components can be specified.
-
-   X, Y, Z
 
 Relative Offset
+---------------
+
+Factor X, Y, Z
    Adds a translation equal to the object's bounding box size along each axis,
    multiplied by a scaling factor, to the offset. X, Y and Z scaling factors can be specified.
 
-   X, Y, Z
+
+Constant Offset
+---------------
+
+Factor X, Y, Z
+   Adds a constant translation component to the duplicate object's offset.
+   X, Y and Z constant components can be specified.
+
 
 Object Offset
+-------------
+
+Distance X, Y, Z
    Adds a transformation taken from an object (relative to the current object) to the offset.
    It is good practice to use an empty object centered or near to the initial object.
 
-Random Offset
+
+Randomize
+---------
+
+Offset X, Y, Z
    Add random offset values to the copies.
 
-   X, Y, Z
-
-Random Rotation
+Rotation X, Y, Z
    Add random rotation values to the copies.
 
-   X, Y, Z
-
-Random Scale
+Scale X, Y, Z
    Add random scale values to the copies.
-
-   X, Y, Z
 
 Seed
    Seed used by the pseudo-random number generator.
-
-Material Override
-   Index of the material to use on duplicated strokes (0 use strokes original materials).
 
 .. note::
 
@@ -72,7 +74,7 @@ Material Override
    See :doc:`Depth Order </grease_pencil/properties/strokes>` for more information.
 
 
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.

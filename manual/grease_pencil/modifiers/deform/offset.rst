@@ -16,23 +16,17 @@ Options
 
    Offset Modifier.
 
-Location
+Location X, Y, Z
    Sets strokes location offset from its object origin.
 
-   X, Y, Z
-
-Rotation
+Rotation X, Y, Z
    Sets strokes rotation.
 
-   X, Y, Z
-
-Scale
+Scale X, Y, Z
    Sets strokes scale.
 
-   X, Y, Z
 
-
-Influence Filters
------------------
+Influence
+---------
 
 See :ref:`grease-pencil-modifier-influence-filters`.
