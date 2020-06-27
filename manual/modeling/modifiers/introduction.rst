@@ -111,8 +111,9 @@ Specials
          currently it will only work with meshes.
    Duplicate
       Creates a duplicate of the modifier just below current one in the stack.
-   Delete
-      Delete the modifier.
+
+Delete
+   Delete the modifier.
 
 Move ``::::``
    Move the modifier up/down in the :ref:`stack <modifier-stack>`,
