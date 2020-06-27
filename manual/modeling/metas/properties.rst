@@ -75,7 +75,7 @@ located in the *Update* buttons group of the *Metaball* panel:
 Always
    Fully display the meta during transformations.
 Half
-   During transformations, display the meta at half its *Wiresize* resolution.
+   During transformations, display the meta at half its *Viewport* resolution.
 Fast
    Do not display meta during transformations.
 Never

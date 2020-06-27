@@ -10,7 +10,7 @@ Motion Paths
 
    :Editor:    3D Viewport, Properties
    :Mode:      Object Mode
-   :Panel:     :menuselection:`Properties --> Object Properties--> Motion Paths`
+   :Panel:     :menuselection:`Properties --> Object Properties --> Motion Paths`
 
 .. admonition:: Reference
    :class: refbox

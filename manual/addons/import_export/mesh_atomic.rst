@@ -285,7 +285,7 @@ After having chosen the type of object, use button *Separate Atoms* to separate 
 the atoms are then single, new objects, which can be manipulated in any way.
 They appear in the Outliner and carry the suffix ``_sep``.
 
-.. hint:: Converting All Atoms of a Instancing Verts Structure to Real Independent Objects
+.. hint:: Converting All Atoms of an Instancing Verts Structure to Real Independent Objects
 
    Do the following: Select the whole atomic structure
    with the mouse then use :ref:`bpy.ops.object.duplicates_make_real`.

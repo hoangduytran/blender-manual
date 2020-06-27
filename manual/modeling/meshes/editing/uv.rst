@@ -294,7 +294,7 @@ However, you can set the axis on which the calculation is done manually.
 This same idea works for the sphere mapping:
 
 Recall the opening cartographer's approaching to mapping the world? Well,
-you can achieve the same here when unwrapping a sphere from different perspectives. Normally,
+you can achieve the same here when unwrapping a sphere from different points of view. Normally,
 to unwrap a sphere, view the sphere with the poles at the top and bottom. After unwrapping,
 Blender will give you an equirectangular projection;
 the point at the equator facing you will be in the middle of the image.

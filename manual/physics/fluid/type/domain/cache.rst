@@ -45,7 +45,7 @@ Type
       the domain settings (e.g. the bake tool for the mesh can be found in the Mesh panel).
 
    All
-      The cache will be baked with a single invocation. All selected settings will be considered during this bake.
+      The cache will be baked with a single tool. All selected settings will be considered during this bake.
       The bake tool for this type can be found in the Cache panel.
 
 .. _bpy.types.FluidDomainSettings.cache_frame_start:
@@ -67,7 +67,7 @@ End
 .. _bpy.types.FluidDomainSettings.use_resumable_cache:
 
 Use Resumable Cache
-   Extra data will be saved so that you can be resumed baking after pausing. Since more data will be written
+   Extra data will be saved so that you can resumed baking after pausing. Since more data will be written
    to drive it is recommended to avoid enabling this option when baking at high resolutions.
 
 .. _bpy.types.FluidDomainSettings.cache_data_format:

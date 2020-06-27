@@ -24,6 +24,7 @@ Distance
 Offset
    Control the offset position (inner or outer) for duplicate strokes.
 
+
 Fade
 ----
 

@@ -17,7 +17,7 @@ gathered during rendering to get rid of noise, while preserving visual detail as
 
 To use the option, enable it in the render layers tab of the Properties.
 On rendering, it will denoise tile by tile once all the surrounding tiles are finished rendering.
-The default settings fit a wide range of scenes, but the user can tweak individual settings
+The default settings fit a wide range of scenes, but you can tweak individual settings
 to control the trade-off between a noise-free image, image details, and calculation time.
 
 .. seealso::

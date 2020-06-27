@@ -25,7 +25,7 @@ Slot
    The material selector to the right of it can change the material that is in the selected slot.
 Pin (pin icon)
    The pin button will keep the current material selection fixed.
-   When a material is pinned, it will remain visible in the shader editor
+   When a material is pinned, it will remain visible in the Shader editor
    even when another object or material is selected elsewhere.
 
 
@@ -38,4 +38,4 @@ Options
 The Options panel in the Sidebar region contains the same :doc:`settings </render/materials/settings>`
 that are also available in the Material tab in the Properties.
 They differ depending on the selected render engine.
-The settings are duplicated to make it possible to edit the entire material from the shader editor.
+The settings are duplicated to make it possible to edit the entire material from the Shader editor.

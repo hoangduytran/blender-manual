@@ -533,7 +533,7 @@ One is based on edges during computation and the other is based on faces.
    This is because none of those faces had all its (four) edges selected,
    just two of them.
 
-   Instead of selecting the missing edges manually or by using :kbd:`Shift-Alt-` twice,
+   Instead of selecting the missing edges manually or by using :kbd:`Shift-Alt-LMB` twice,
    it is easier to first switch to Vertex Select Mode, which will kind of "flood" the selection.
    A subsequent switch to Face Select Mode will then properly select the faces.
 

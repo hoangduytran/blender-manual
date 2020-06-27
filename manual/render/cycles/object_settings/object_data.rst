@@ -115,7 +115,7 @@ Shading
 
 Shadow Terminator Offset
    Pushes the shadow terminator (the line that divides the light and dark) towards the light
-   to hide artifacts on low poly geometry such as the ones below:
+   to hide artifacts on low-poly geometry such as the ones below:
 
    .. list-table::
 

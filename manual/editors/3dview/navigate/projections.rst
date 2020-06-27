@@ -47,5 +47,5 @@ the Camera tab and press the *Orthographic* button in the *Lens* panel.
 
 .. seealso::
 
-   - :ref:`Render perspectives <camera-lens-type>`
+   - :ref:`Render perspective <camera-lens-type>`
    - :term:`Camera Projections <Projection>`
