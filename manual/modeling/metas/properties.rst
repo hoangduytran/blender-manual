@@ -73,7 +73,7 @@ While transforming metas (move, scale, etc.), you have four "modes" of visualiza
 located in the *Update* buttons group of the *Metaball* panel:
 
 Always
-   fully display the meta during transformations.
+   Fully display the meta during transformations.
 Half
    During transformations, display the meta at half its *Wiresize* resolution.
 Fast
