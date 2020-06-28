@@ -54,7 +54,7 @@ Crop Region Values
 
    Thirdly, the terms *Up* and *Down* are ambiguous and suggest an action; e.g. "Crop down".
    The values, however, are not amounts but positions.
-   The term *Down* should be interpreted as "Bottom" and *Up* as top.
+   The term *Down* should be interpreted as "Bottom" and *Up* as "Top".
 
 
 Outputs

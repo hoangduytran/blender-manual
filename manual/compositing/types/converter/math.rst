@@ -85,7 +85,7 @@ Operation
          The *Base* raised to the power of *Exponent*.
 
       Logarithm
-         The log of value with a *Base* as its base.
+         The log of the value with a *Base* as its base.
 
       Square Root
          The square root of the value.
