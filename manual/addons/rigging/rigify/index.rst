@@ -25,6 +25,15 @@ Customization
    rig_types/index.rst
 
 
+Extensions
+==========
+
+.. toctree::
+   :maxdepth: 1
+
+   feature_sets.rst
+
+
 Development
 ===========
 
