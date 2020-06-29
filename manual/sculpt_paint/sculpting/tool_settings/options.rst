@@ -10,8 +10,6 @@ Options
    :Tool:      :menuselection:`Toolbar --> Options`
 
 Display
-   Threaded Sculpt
-      Takes advantage of multiple CPU processors to improve the sculpting performance.
    Fast Navigate
       For multiresolution models, shows low resolution while navigating in the viewport.
    Delay Viewport Updated
