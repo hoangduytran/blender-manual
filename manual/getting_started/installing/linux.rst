@@ -39,6 +39,18 @@ If there is a specific package for your distribution, you may choose what is pre
 otherwise, there is nothing wrong with the official binary on `blender.org <https://www.blender.org/download/>`__.
 
 
+Install from Snap
+=================
+
+`Snap <https://snapcraft.io/>`__ is a universal package manager designed to work across a range of distributions.
+Assuming snap is already installed, Blender can be installed through snap with::
+
+   snap install blender
+
+Installing from this method has a benefit that updates to Blender are automatically installed.
+Blender from Snap should have a more consitent distribution then individual package managers.
+
+
 Running from the Terminal
 =========================
 
