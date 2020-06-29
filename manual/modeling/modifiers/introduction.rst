@@ -93,7 +93,7 @@ Apply On Spline Points (point surface icon) -- Curves, surfaces and texts only
       before that the modifier stack is evaluated on them.
 
 Specials
-   Apply
+   Apply :kbd:`Ctrl-A`
       Makes the modifier "real": converts the object's geometry to match the applied modifier's results,
       and deletes the modifier.
 
@@ -109,10 +109,10 @@ Specials
 
          Even though it should work with any geometry type that supports shape keys,
          currently it will only work with meshes.
-   Duplicate
+   Duplicate :kbd:`Shift-D`
       Creates a duplicate of the modifier just below current one in the stack.
 
-Delete
+Delete :kbd:`X`, :kbd:`Delete`
    Delete the modifier.
 
 Move ``::::``
