@@ -15,8 +15,8 @@ Rotation
       Particles rotation settings.
 
 These parameters specify how the individual particles are rotated during their travel.
-To visualize the rotation of a particle you should choose visualization type *Axis*
-in the Visualization panel and increase the *Display Size*.
+To visualize the rotation of a particle, display particles as *Axis*
+in the :doc:`/physics/particles/emitter/display` panel.
 
 Orientation Axis
    Sets the initial rotation of the particle by aligning the X axis in the direction of:
