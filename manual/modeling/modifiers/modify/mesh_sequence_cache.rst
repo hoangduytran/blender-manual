@@ -23,24 +23,22 @@ Options
 Cache File
    Data-block menu to select the Alembic file.
 
-   File Path
-      Path to Alembic file.
+File Path
+   Path to Alembic file.
 
-Is Sequence
+Sequence
    Whether or not the cache is separated in a series of files.
 
 Override Frame
    Whether to use a custom frame for looking up data in the cache file,
    instead of using the current scene frame.
 
-   Frame
-      The time to use for looking up the data in the cache file,
-      or to determine which to use in a file sequence.
+   The *Frame* value is the time to use for looking up the data in the cache file,
+   or to determine which to use in a file sequence.
 
-Manual Transform Scale
-   Value by which to enlarge or shrink the object with respect to the world's origin.
-   (Only applicable through
-   a :doc:`Transform Cache Constraint </animation/constraints/transform/transform_cache>`.)
+Frame Offset
+   Subtracted from the current frame to use for looking up the data in the cache file,
+   or to determine which file to use in a file sequence.
 
 Object Path
    The path to the Alembic object inside the archive.
