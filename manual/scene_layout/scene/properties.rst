@@ -185,8 +185,10 @@ See :doc:`/animation/keyframes/keying_sets`.
 .. move to audio rendering?
 
 .. _data-scenes-audio:
-.. _bpy.ops.sound.bake_animation:
 .. _bpy.types.Scene.audio_volume:
+.. _bpy.types.Scene.audio_distance_model:
+.. _bpy.types.Scene.audio_doppler_speed:
+.. _bpy.types.Scene.audio_doppler_factor:
 
 Audio
 =====
@@ -197,9 +199,12 @@ Audio
    :Panel:     :menuselection:`Properties --> Scene --> Audio`
 
 Options to control global audio settings.
+To control how sounds plays back from within Blender, see the audio settings
+in the :ref:`Preferences <prefs-system-sound>`.
 
 Volume
    Volume for the scene.
+
 Distance Model
    Changes how the sound attenuation is calculated based on the distance.
    Most physically correct is the *Inverse* model,
@@ -208,30 +213,14 @@ Distance Model
    that means if the distance is smaller than the reference distance, the volume is always 100%.
    For an exact description of each option
    see the `OpenAL documentation <https://www.openal.org/documentation/>`__.
-
-.. _bpy.types.FFmpegSettings.audio_mixrate:
-.. _bpy.types.FFmpegSettings.audio_channels:
-
-Format Settings
-   These settings, along with the settings found
-   in the :ref:`Encoding Panel <render-output-video-encoding-panel>`
-   change how sound is exported while rendering.
-
-   To control how sounds plays back from within Blender, see the audio settings
-   in the :ref:`Preferences <prefs-system-sound>`.
-
-   Audio Channels
-      Sets the audio channel count. Available options are:
-      *Mono*, *Stereo*, *4 Channels*, *5.1 Surround*, *7.1 Surround*.
-   Sample Rate
-      Sets the audio `sampling rate <https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate>`__.
-
 Doppler Speed
    Speed of the sound for the Doppler effect calculations.
    The typical value is 343.3 m/s in air, in water for example this value is around 1560 m/s.
 Doppler Factor
    Controls how strong the Doppler effect is.
    You can exaggerate or attenuate the change of pitch, but physically correct is a factor of 1.0.
+
+.. _bpy.ops.sound.bake_animation:
 
 Update Animation Cache
    Updates the audio animation cache. This is useful if you start noticing artifact in the audio.

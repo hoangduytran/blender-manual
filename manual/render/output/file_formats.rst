@@ -131,9 +131,19 @@ Packet Size
 Audio
 ^^^^^
 
+These settings change how sound is exported while rendering.
+
+To control how sounds plays back from within Blender, see the audio settings
+in the :ref:`Preferences <prefs-system-sound>`.
+
 Audio Codec
    Audio format to use. For a list of all available options, see
    :doc:`video formats </files/media/video_formats>`.
+Audio Channels
+   Sets the audio channel count. Available options are:
+   *Mono*, *Stereo*, *4 Channels*, *5.1 Surround*, *7.1 Surround*.
+Sample Rate
+   Sets the audio `sampling rate <https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate>`__.
 Bitrate
    For each codec, you can control the bit rate (quality) of the sound in the movie.
    Higher bit rates are bigger files that stream worse but sound better.
