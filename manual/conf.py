@@ -109,7 +109,7 @@ author = 'Blender Documentation Team'
 # The short X.Y version.
 version = blender_version
 # The full version, including alpha/beta/rc tags.
-release = "alpha"
+release = " ".join((blender_version, "alpha"))
 
 del blender_version
 
@@ -159,7 +159,7 @@ highlight_language = 'python3'
 #keep_warnings = False
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-if release != "release":
+if not release.endswith("release"):
     todo_include_todos = True
 
 # todo_link_only = True

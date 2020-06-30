@@ -1,13 +1,7 @@
-(function() {//switch: v.b0i
+(function() {//switch: v1.1
 "use strict";
 
-var debug_versions = { //@
-	"latest": "Latest",
-	"dev": "Developmental"
-};
-
 var all_versions = "";
-
 var all_langs = {
 	"en": "English",
 	"de": "Deutsch",
@@ -29,9 +23,9 @@ var all_langs = {
 var Drop=function(){
 function Drop(id){
 	this.isOpen=false;
-	this.label = "";
-	if(id === "version-dropdown") {this.type = true;}else{this.type = false;}
-	if(id === "version-dropdown") {this.listlabel = "Versions";} else {this.listlabel = "Language";}
+	this.type = (id === "version-dropdown");
+	this.listlabel = this.type ? "Versions" : "Language";
+	this.label = this.listlabel;
 	this.$btn = $('#' + id);
 	this.$list = this.$btn.next();
 	this.sel = null;
@@ -63,22 +57,21 @@ loadVL: function(that) {
 	})
 	.fail( function() {
 		console.log("Version Switch Error: versions.json could not be loaded.");
-		all_versions = debug_versions; //@
-		that.afterload(); //@
 		that.$btn.addClass("disabled");
 		return false;
 	});
 },
 afterload: function() {
 	var release = DOCUMENTATION_OPTIONS.VERSION;
-	//release = 2.79; //@
+	const m = release.match(/\d\.\d+/g);
+	if (m) {release = m[0];}
 	var lang = DOCUMENTATION_OPTIONS.LANGUAGE;
-	if(lang === "None" || lang === undefined) {lang = "en";}
+	if(!lang || lang === "None" || lang === "") {lang = "en";}
 
-	this.warn_old(release, all_versions.current);
+	this.warn_old(release, all_versions);
 
 	var version = this.get_named(release);
-	if(this.type) {this.label = all_versions[version];}else{this.label = all_langs[lang];}
+	this.label = this.type ? all_versions[version] : all_langs[lang];
 	var list = this.build_list(version, lang);
 
 	this.$list.children(":first-child").remove();
@@ -91,26 +84,33 @@ afterload: function() {
 	this.$btn.on("mousedown", function(e){that.btnhandler(); e.preventDefault()});
 	this.$btn.on("keypress", function(e){ if(that.keybtnfilter(e)){that.btnhandler();} });
 },
-warn_old: function(release, current) {
-  if (release < current) {
-    var currentURL = window.location.pathname.replace(release, current);
-    var warning = $(
-        '<div class="admonition warning"> ' +
-        '<p class="first admonition-title">Note</p> ' +
-        '<p class="last"> ' +
-        'You are not using the most up to date version of the documentation. ' +
-        '<a href="#"></a> is the newest version.' +
-        '</p>' +
-        '</div>');
+warn_old: function(release, all_versions) {
+	var current = all_versions.dev
+	if (!current) {
+		console.log("Version Switch Error: no 'dev' in version.json.")
+		return;
+	}
+	const m = current.match(/\d\.\d+/g);
+	if (m) {current = parseFloat(m[0]);}
+	if (release < current) {
+		var currentURL = window.location.pathname.replace(release, current);
+		var warning = $(
+			'<div class="admonition warning"> ' +
+			'<p class="first admonition-title">Note</p> ' +
+			'<p class="last"> ' +
+			'You are not using the most up to date version of the documentation. ' +
+			'<a href="#"></a> is the newest version.' +
+			'</p>' +
+			'</div>');
 
-    warning
-      .find('a')
-      .attr('href', currentURL)
-      .text(current);
+		warning
+			.find('a')
+			.attr('href', currentURL)
+			.text(current);
 
-    var body = $("div.body");
-    if (!body.length) {body = $("div.document");}
-    body.prepend(warning);
+		var body = $("div.body");
+		if (!body.length) {body = $("div.document");}
+		body.prepend(warning);
 	}
 },
 build_list: function(v, l) {
@@ -149,7 +149,7 @@ get_named: function(v) {
 	$.each(all_versions, function(ix, title) {
 		if (ix === "dev" || ix === "latest") {
 			var m = title.match(/\d\.\d[\w\d\.]*/)[0];
-			if (parseFloat(m) == v) {
+			if (parseFloat(m) === v) {
 				v = ix;
 				return false;
 			}
@@ -158,7 +158,7 @@ get_named: function(v) {
 	return v;
 },
 listtoggle: function(speed) {
-	var d = !this.isOpen;
+	var wasClose = !this.isOpen;
 	var that=this;
 	if(!this.isOpen) {
 		this.$btn.addClass("version-btn-open");
@@ -190,7 +190,7 @@ listtoggle: function(speed) {
 		this.isOpen = false;
 	}
 
-	if(d) {
+	if(wasClose) {
 		if(document.activeElement !== null && document.activeElement !== document && document.activeElement !== document.body) {
 			var $nw = this.listEnter(this.$btn);
 			$nw.attr("tabindex", 0);
@@ -295,10 +295,8 @@ return Drop}();
 
 $(document).ready(function() {
 	var lang = DOCUMENTATION_OPTIONS.LANGUAGE;
-	if(lang === "None") {lang = "en";}
-	if(lang === undefined) {lang = $("#lang-dropdown").html().trim(); DOCUMENTATION_OPTIONS.LANGUAGE = lang;} //@
-	var n =  all_langs[lang];
-	if(n) {$("#lang-dropdown").html(n);}
+	if(!lang || lang === "None") {lang = "en";}
+	if(all_langs.hasOwnProperty(lang)) {$("#lang-dropdown").html(all_langs[lang]);}
 	var lng_drop=new Drop("version-dropdown");
 	var vsn_drop=new Drop("lang-dropdown");
 });
