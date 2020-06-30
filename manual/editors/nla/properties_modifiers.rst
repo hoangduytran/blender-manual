@@ -104,34 +104,44 @@ Active Strip
 
    Active Strip panel.
 
-Frame Start/End
+Frame Start, End
    The boundaries of the strip itself. Note that this will stretch the duration of the Action,
    it will not cause greater or fewer keyframes from the Actions to play (see below for that option).
+
 Extrapolation
    See :ref:`Extrapolation <bpy.types.AnimData.action_extrapolation>`.
+
 Blending
    See :ref:`Blending <bpy.types.AnimData.action_blend_type>`.
-Blend In
-   Set the frame that represents when this strip will have full influence.
-Out
-   Set the last frame of this strip's full influence.
+
+Blend In, Out
+   The first and last frame that represents when this strip will have full influence.
+
 Auto Blend In/Out
    Creates a ramp starting at the overlap of the strips. The first strip has full control,
    and it ramps linearly giving the second strip full control by the end of the overlapping time period.
 
-Reversed
-   Cause this strip to be played completely backwards.
-Cyclic Strip Time
-   Cycle the animated time within the action start and end.
+Playback
+   Reversed
+      Cause this strip to be played completely backwards.
+   Cyclic Strip Time
+      Cycle the animated time within the action start and end.
+
 
 Animated Influence
-   Enabling alteration of the degree of influence this strip has as a keyframable value.
-   If influence isn't animated, the strips will fade linearly, during the overlap.
+^^^^^^^^^^^^^^^^^^
 
-   These can be found in the Dope Sheet or Graph Editors under the *NLA Control Curves* and
-   look like group channels. They appear before all the groups/F-curves for that channel.
+Enabling alteration of the degree of influence this strip has as a keyframable value.
+If influence isn't animated, the strips will fade linearly, during the overlap.
+
+These can be found in the Dope Sheet or Graph Editors under the *NLA Control Curves* and
+look like group channels. They appear before all the groups/F-curves for that channel.
+
+
 Animated Strip Time
-   Same as *Animated Influence*, but with *Strip Time*.
+^^^^^^^^^^^^^^^^^^^
+
+Same as *Animated Influence*, but with *Strip Time*.
 
 
 Action Clip
@@ -151,7 +161,8 @@ This represents the 'object data' of the strip. Much like the transform values o
 Action
    A reference to the Action contained within the strip.
    Can be changed to replace the current strip's value with another Action.
-Frame Start/End
+
+Frame Start, End
    How much of the Action to use.
 
    For instance, it is common to set the first and last keyframe of an Action to be the same keyframes.
@@ -167,9 +178,7 @@ Frame Start/End
 Sync Length
    Causes the *Start* and *End Frames*, above, to be reset to
    the first and last keyframed frames of the Action.
-
-   Now
-      Causes the *Start* and *End Frames*, above, to be reset
+   The *Now* button causes the *Start* and *End Frames*, above, to be reset
       to the first and last keyframed frames of the Action.
 
 Playback Scale
