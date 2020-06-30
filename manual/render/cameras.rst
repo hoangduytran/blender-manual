@@ -169,22 +169,7 @@ Focal Distance
    Sets the distance to the focal point when no *Focus Object* is specified.
    If *Limits* are enabled, a yellow cross is shown on the camera line of sight at this distance.
 
-   .. hint::   Names
-      Displays the name of each bone.
-   Axes
-      When enabled, the (local) axes of each bone are displayed (only relevant for *Edit Mode* and *Pose Mode*).
-   Shapes
-      When enabled, the default standard bone shape is replaced,
-      in *Object Mode* and *Pose Mode*, by the shape of a chosen object
-      (see :doc:`Shaped Bones </animation/armatures/bones/properties/display>` for details).
-   Group Colors
-      Use the Bone Group colors to color the bone.
-      For more details see :doc:`Bone Groups </animation/armatures/properties/bone_groups>`.
-   In Front
-      When enabled, the bones of the armature will always be shown on top of the solid objects
-      (meshes, surfaces, ...) -- i.e. they will always be visible and selectable
-      (this is the same option as the one found in the *Display* panel of the *Object data* tab).
-      Very us
+   .. hint::
 
       Hover the mouse over the *Distance* property and press :kbd:`E` to use a special *Depth Picker*.
       Then click on a point in the 3D Viewport to sample the distance from that point to the camera.
@@ -324,7 +309,7 @@ Background Source
 
             To build a proxy, the :ref:`Movie Clip Editor Proxy settings <clip-editor-proxy>` have to be used.
             Otherwise the proxy settings here have no effect.
-  
+
 Alpha
    Controls the transparency of the background image.
 Depth

@@ -46,9 +46,9 @@ See Common Settings above.
 Culling
 =======
 
-Use Camera Cull
+Camera Cull
    Automatically culls objects based on the camera frustum defined by the *Margin*.
-Use Distance Cull
+Distance Cull
    Automatically culls objects based on their distance from the active camera.
    This is set via the *Distance* property.
 
