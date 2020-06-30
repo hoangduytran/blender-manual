@@ -12,6 +12,7 @@ to generate the proxy clip and it will be available after Blender makes it.
 
 
 .. _bpy.types.MovieClipProxy:
+.. _clip-editor-proxy:
 
 Proxy
 =====

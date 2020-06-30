@@ -295,6 +295,21 @@ Background Source
       Use an external image, image sequence, video file or generated texture.
    Movie Clip
       Use one of the Movie Clip data-blocks.
+
+      Active Clip
+         Follow the scene's :ref:`active clip <scene-active-clip>`.
+      Color Space
+         The color space the image or video file uses within Blender.
+      Render Undistorted
+         Draw the background image using undistorted proxies when available.
+      Proxy Render Size
+         Select between full (non-proxy) display or a proxy size to draw the background image.
+
+         .. seealso::
+
+            To build a proxy, the :ref:`Movie Clip Editor Proxy settings <clip-editor-proxy>` have to be used.
+            Otherwise the proxy settings here have no effect.
+  
 Alpha
    Controls the transparency of the background image.
 Depth
