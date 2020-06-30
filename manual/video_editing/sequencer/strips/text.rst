@@ -35,7 +35,7 @@ Size
 Color
    The text color.
 Shadow
-   Creates a shadow under the text.
+   Creates a shadow of the specified color under the text.
 
 
 Layout
