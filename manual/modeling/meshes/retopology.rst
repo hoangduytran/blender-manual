@@ -68,17 +68,22 @@ Adaptivity
    Reduces the final face count by simplifying geometry where detail is not needed.
    This introduce triangulation to faces that do not need as much detail.
    Note, an *Adaptivity* value greater than zero disables *Fix Poles*.
+
 Fix Poles
    Tries to produce less :term:`Poles <Pole>` at the cost of some performance to produce a better topological flow.
+
 Smooth Normals
    Applies the :ref:`Smooth Normals <bpy.ops.object.shade_smooth>` operator to the resulting mesh.
-Preserve Volume
-   Tells the algorithm to try to preserve the original volume of the mesh.
-   Enabling this could make the operator slower depending on the complexity of the mesh.
-Preserve Paint Mask
-   Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
-Preserve Face Sets
-   Reprojects :ref:`Face Sets <sculpting-editing-facesets>` onto the new mesh.
+
+Preserve
+   Volume
+      Tells the algorithm to try to preserve the original volume of the mesh.
+      Enabling this could make the operator slower depending on the complexity of the mesh.
+   Paint Mask
+      Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
+   Face Sets
+      Reprojects :ref:`Face Sets <sculpting-editing-facesets>` onto the new mesh.
+
 Voxel Remesh
    Performs the remeshing operation to create a new manifold mesh based on the volume of the current mesh.
    Performing this will lose all mesh object data layers associated with the original mesh.
@@ -99,11 +104,14 @@ This method is relatively slow but generates a higher quality output for final t
 
 Quadriflow Remesh
    Opens a pop-up used to set parameters for the remesh operation.
+
 Use Paint Symmetry
    Generates a symmetrical mesh using the :doc:`Paint Symmetry </sculpt_paint/brush/symmetry>` options.
+
 Preserve Sharp
    Tells the algorithm to try to preserve sharp features of the mesh.
    Enabling this could make the operator slower depending on the complexity of the mesh.
+
 Preserve Mesh Boundary
    Tells the algorithm to try to preserve the original volume of the mesh.
    Enabling this could make the operator slower depending on the complexity of the mesh.
@@ -113,9 +121,11 @@ Preserve Mesh Boundary
 
 Preserve Paint Mask
    Reprojects the :ref:`Paint Mask <sculpt-mask-menu>` onto the new mesh.
+
 Smooth Normals
    Applies the :ref:`Smooth Normals <bpy.ops.object.shade_smooth>` operator to the resulting mesh.
-Modes
+
+Mode
    How to specify the amount of detail for the new mesh.
 
    Ratio
@@ -124,6 +134,7 @@ Modes
       Input target edge length in the new mesh.
    Faces
       Input target number of faces in the new mesh.
+
 Seed
    Random :term:`Seed` to use with the solver;
    different seeds will cause the remesher to generate different quad layouts on the mesh.

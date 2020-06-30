@@ -47,23 +47,21 @@ Visual Keying
    When an object is using constraints, the object property value does not actually change.
    *Visual Keying* will add keyframes to the object property,
    with a value based on the visual transformation from the constraint.
+
 Only Insert Needed
    This will only insert keyframes if the value of the property is different.
 
-
 Auto-Keyframing
----------------
+   Show Warning
+      Displays a warning at the top right of the *3D View*, when moving objects, if *Auto Keyframe* is on.
+   Only Insert Available
+      This will only add keyframes to channels of F-curves that already exist.
+   Enable in New Scenes
+      Enables *Auto Keyframe* by default for new scenes.
 
-Enable in New Scenes
-   Enables *Auto Keyframe* by default for new scenes.
-Show Warning
-   Displays a warning at the top right of the *3D View*, when moving objects, if *Auto Keyframe* is on.
-Only Insert Available
-   This will only add keyframes to channels of F-curves that already exist.
+   .. seealso::
 
-.. seealso::
-
-   Learn more about :ref:`Auto-Keyframing <animation-editors-timeline-autokeyframe>`.
+      Learn more about :ref:`Auto-Keyframing <animation-editors-timeline-autokeyframe>`.
 
 
 F-Curves

@@ -11,21 +11,24 @@ Viewport
 Display
 =======
 
-Object Info
-   Display the active Object name and frame number at the top left of the 3D Viewport.
-View Name
-   Display the name and type of the current view in the top left corner of the 3D Viewport.
-   For example: "User Perspective" or "Top Orthographic".
-Playback FPS
-   Show the frames per second screen refresh rate while an animation is played back.
-   It appears in the top left of the 3D Viewport, displaying red if the frame rate set cannot be reached.
+Show
+   Object Info
+      Display the active Object name and frame number at the top left of the 3D Viewport.
+   View Name
+      Display the name and type of the current view in the top left corner of the 3D Viewport.
+      For example: "User Perspective" or "Top Orthographic".
+   Playback FPS
+      Show the frames per second screen refresh rate while an animation is played back.
+      It appears in the top left of the 3D Viewport, displaying red if the frame rate set cannot be reached.
 
 .. _prefs-viewport-gizmo-size:
 
 Gizmo Size
    Diameter of the gizmo.
+
 HDRI Preview Size
    Diameter of the HDRI sphere overlay.
+
 3D Viewport Axis
    Interactive Navigation
       Display the axis as an interactive gizmo.
@@ -48,14 +51,14 @@ Quality
 
 Viewport Anti-Aliasing
    Control the :term:`Anti-Aliasing` for higher quality rendering.
-Overlay Smooth Wires
-   Display overlays with smooth wire, without this wires will be rendered aliased.
 
-   To increase the visibility you can disable this and *Edit-Mode Smooth Wires*,
-   since edges do not blend into other shaded regions.
-
-Edit-Mode Smooth Wires
-   Display smooth wire in Edit Mode, without this wires will be rendered aliased.
+Smooth Wires
+   Overlay
+      Display overlays with smooth wire, without this wires will be rendered aliased.
+      To increase the visibility you can disable this and *Edit Mode*,
+      since edges do not blend into other shaded regions.
+   Edit Mode
+      Display smooth wire in Edit Mode, without this wires will be rendered aliased.
 
 
 Textures

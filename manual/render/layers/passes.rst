@@ -25,44 +25,50 @@ and also to extract data such as depth or normals.
 Data
 ----
 
-Z
-   Distance to any visible surfaces.
+Include
+   Combined
+      The final combination of render passes with everything included.
+   Z
+      Distance to any visible surfaces.
 
-   .. note::
+      .. note::
 
-      The Z pass only uses one sample.
-      When depth values need to be blended in case of motion blur or :term:`Depth of Field`, use the mist pass.
+         The Z pass only uses one sample.
+         When depth values need to be blended in case of motion blur or :term:`Depth of Field`, use the mist pass.
+   Mist
+      Distance to visible surfaces, mapped to the 0.0 - 1.0 range.
+      When enabled, settings are in :ref:`World tab <render-cycles-integrator-world-mist>`.
+      This pass can be used in compositing to fade out objects that are farther away.
+   Normal
+      Surface normal used for shading.
+   Vector
+      Motion vectors for the Vector Blur node. The four components consist of 2D vectors
+      giving the motion towards the next and previous frame position in pixel space.
+   UV
+      Mapped UV coordinates, used to represent where on a mesh a texture gets mapped too.
+      This is represented through the red and green channels of the image.
+      The blue channel is encoded with a constant value of 1 but does not hold any information.
+   Denoising Data
+      Passes needed by the denoiser, for performing animation denoising in a second pass
+      after rendering the entire animation. For still image denoising as part of
+      the render process these are not needed.
+      This also includes a render pass of the original combined pass before denoising.
 
-Mist
-   Distance to visible surfaces, mapped to the 0.0 - 1.0 range.
-   When enabled, settings are in :ref:`World tab <render-cycles-integrator-world-mist>`.
-   This pass can be used in compositing to fade out objects that are farther away.
+   .. note:: The Z, Object Index and Material Index passes are not anti-aliased.
 
-Normal
-   Surface normal used for shading.
-Vector
-   Motion vectors for the Vector Blur node. The four components consist of 2D vectors
-   giving the motion towards the next and previous frame position in pixel space.
-UV
-   Mapped UV coordinates, used to represent where on a mesh a texture gets mapped too.
-   This is represented through the red and green channels of the image.
-   The blue channel is encoded with a constant value of 1 but does not hold any information.
-Object Index
-   Creates a mask of the object that can be later read by
-   the :doc:`ID Mask Node </compositing/types/converter/id_mask>` in the Compositor.
-Material Index
-   Creates a mask of the material that can be later read by
-   the :doc:`ID Mask Node </compositing/types/converter/id_mask>` in the Compositor.
-Denoising Data
-   Passes needed by the denoiser, for performing animation denoising in a second pass
-   after rendering the entire animation. For still image denoising as part of
-   the render process these are not needed.
-Render Time
-   Render time in milliseconds per sample and pixel.
-Sample Count
-   Number of samples/camera rays per pixel.
+Indexes
+   Object Index
+      Creates a mask of the object that can be later read by
+      the :doc:`ID Mask Node </compositing/types/converter/id_mask>` in the Compositor.
+   Material Index
+      Creates a mask of the material that can be later read by
+      the :doc:`ID Mask Node </compositing/types/converter/id_mask>` in the Compositor.
 
-.. note:: The Z, Object Index and Material Index passes are not anti-aliased.
+Debug
+   Render Time
+      Render time in milliseconds per sample and pixel.
+   Sample Count
+      Number of samples/camera rays per pixel.
 
 Alpha Threshold
    Z, Index, normal, UV and vector passes are
@@ -74,37 +80,43 @@ Alpha Threshold
 Light
 -----
 
-Combined
-   The final combination of render passes with everything included.
-Noisy Image
-   If denoising is enabled, the original combined pass before denoising.
+Diffuse
+   Direct
+      Direct lighting from diffuse and subsurface BSDFs.
+      We define direct lighting as coming from lights, emitting surfaces,
+      the background, or ambient occlusion after a single reflection or transmission off a surface.
+      BSDF color is not included in this pass.
+   Indirect
+      Indirect lighting from diffuse and subsurface BSDFs. We define indirect lighting as coming from lights,
+      emitting surfaces or the background after more than one reflection or transmission off a surface.
+      BSDF color is not included in this pass.
+   Color
+      Color weights of diffuse and subsurface BSDFs. These weights are the color input socket for BSDF nodes,
+      modified by any Mix and Add Shader nodes.
 
-Diffuse Direct
-   Direct lighting from diffuse and subsurface BSDFs.
-   We define direct lighting as coming from lights, emitting surfaces,
-   the background, or ambient occlusion after a single reflection or transmission off a surface.
-   BSDF color is not included in this pass.
-Diffuse Indirect
-   Indirect lighting from diffuse and subsurface BSDFs. We define indirect lighting as coming from lights,
-   emitting surfaces or the background after more than one reflection or transmission off a surface.
-   BSDF color is not included in this pass.
-Diffuse Color
-   Color weights of diffuse and subsurface BSDFs. These weights are the color input socket for BSDF nodes,
-   modified by any Mix and Add Shader nodes.
-Glossy Direct, Indirect, Color
-   Same as above, but for glossy BSDFs.
-Transmission Direct, Indirect, Color
-   Same as above, but for transmission BSDFs.
-Emission
-   Emission from directly visible surfaces.
-Environment
-   Emission from the directly visible background. When the film is set to transparent,
-   this can be used to get the environment color and composite it back in.
-Shadow
-   Shadows from light objects. Mostly useful for compositing objects with shadows into existing footage.
-Ambient Occlusion
-   Ambient occlusion from directly visible surfaces. BSDF color or AO factor is not included; i.e.
-   it gives a 'normalized' value between 0 and 1.
+Glossy
+   Direct, Indirect, Color
+      Same as above, but for glossy BSDFs.
+
+Transmission
+   Direct, Indirect, Color
+      Same as above, but for transmission BSDFs.
+
+Volume
+   Direct, Indirect
+      Same as above, but for volumetric BSDFs.
+
+Other
+   Emission
+      Emission from directly visible surfaces.
+   Environment
+      Emission from the directly visible background. When the film is set to transparent,
+      this can be used to get the environment color and composite it back in.
+   Shadow
+      Shadows from light objects. Mostly useful for compositing objects with shadows into existing footage.
+   Ambient Occlusion
+      Ambient occlusion from directly visible surfaces. BSDF color or AO factor is not included; i.e.
+      it gives a 'normalized' value between 0 and 1.
 
 .. note::
 
@@ -133,13 +145,14 @@ or another compositor with Cryptomatte support to create masks for specified obj
 Unlike the Material and Object Index passes, the objects to isolate are selected in compositing,
 and mattes will be anti-aliased and take into account effects like motion blur and transparency.
 
-Object
-   Render cryptomatte object pass, for isolating objects in compositing.
-Material
-   Render cryptomatte material pass, for isolating materials in compositing.
-Asset
-   Render cryptomatte asset pass, for isolating groups of objects with the same
-   :doc:`parent </scene_layout/object/editing/parent>` in compositing.
+Include
+   Object
+      Render cryptomatte object pass, for isolating objects in compositing.
+   Material
+      Render cryptomatte material pass, for isolating materials in compositing.
+   Asset
+      Render cryptomatte asset pass, for isolating groups of objects with the same
+      :doc:`parent </scene_layout/object/editing/parent>` in compositing.
 
 Levels
    Sets how many unique objects can be distinguished per pixel.
@@ -199,51 +212,57 @@ Passes can be used to split rendered images into colors and light to edit them i
 and also to extract data such as depth or normals.
 
 
-Lighting Passes
----------------
+Data
+----
 
-Combined
-   The final combination of render passes with everything included.
-Diffuse Light
-   Direct lighting from diffuse BSDFs. We define lighting as coming from lights,
-   the background, or ambient occlusion off a surface.
-   BSDF color is not included in this pass.
-Diffuse Color
-   Color weights of diffuse BSDFs. These weights are the color input socket for BSDF nodes,
-   modified by any Mix and Add Shader nodes.
-Specular Light, Color
-   Same as above, but for specular BSDFs.
-Emission
-   Emission from directly visible surfaces.
-Environment
-   Emission from the directly visible background. When the film is set to transparent,
-   this can be used to get the environment color and composite it back in.
-Shadow
-   Shadows from light objects. Mostly useful for compositing objects with shadow into existing footage.
-Ambient Occlusion
-   Ambient occlusion from directly visible surfaces. BSDF color or AO factor is not included; i.e.
-   it gives a 'normalized' value between 0 and 1.
-Volume Transmittance
-   The transmittance pass from volume objects or world.
-Volume Scattering
-   The scattering pass from volume objects or world.
+Include
+   Combined
+      The final combination of render passes with everything included.
+   Z
+      Distance to any visible surfaces.
+   Mist
+      Distance to visible surfaces, mapped to the 0.0 - 1.0 range.
+   Normal
+      Surface normal used for shading.
 
 
-Data Passes
------------
+Light
+-----
 
-Z
-   Distance to any visible surfaces.
+Diffuse
+   Light
+      Direct lighting from diffuse BSDFs. We define lighting as coming from lights,
+      the background, or ambient occlusion off a surface.
+      BSDF color is not included in this pass.
+   Color
+      Color weights of diffuse BSDFs. These weights are the color input socket for BSDF nodes,
+      modified by any Mix and Add Shader nodes.
 
-Mist
-   Distance to visible surfaces, mapped to the 0.0 - 1.0 range.
+Specular
+   Light, Color
+      Same as above, but for specular BSDFs.
 
-Normal
-   Surface normal used for shading.
+Volume
+   Transmittance
+      The transmittance pass from volume objects or world.
+   Scattering
+      The scattering pass from volume objects or world.
+
+Other
+   Emission
+      Emission from directly visible surfaces.
+   Environment
+      Emission from the directly visible background. When the film is set to transparent,
+      this can be used to get the environment color and composite it back in.
+   Shadow
+      Shadows from light objects. Mostly useful for compositing objects with shadow into existing footage.
+   Ambient Occlusion
+      Ambient occlusion from directly visible surfaces. BSDF color or AO factor is not included; i.e.
+      it gives a 'normalized' value between 0 and 1.
 
 
-Effect Passes
--------------
+Effects
+-------
 
 Bloom
    The influence of the Bloom effect.

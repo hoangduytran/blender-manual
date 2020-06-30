@@ -15,18 +15,14 @@ Display
 Resolution Scale
    Adjusts the size of fonts and buttons relative to the automatically detected DPI.
    During typical usage, you may prefer to use zoom which is available in many parts of Blender interface.
+
 Line Width
    Scale of lines and points in the interface e.g. button outlines, edges and vertex points in the 3D Viewport.
 
    Thin, Auto, Thick
+
 Splash Screen
    Display the :ref:`splash` when starting Blender.
-Tooltips
-   When enabled, a tooltip will appear when your mouse pointer is over a control.
-   This tip explains the function of what is under the pointer,
-   gives the associated hotkey (if any).
-Python Tooltips
-   Displays a property's Python information below the tooltip.
 
 .. _prefs-interface-dev-extras:
 
@@ -50,6 +46,14 @@ Developer Extras
       Experimental Tab
          Work in progress features can be enabled here which are currently being tested.
 
+Tooltips
+   Tooltips
+      When enabled, a tooltip will appear when your mouse pointer is over a control.
+      This tip explains the function of what is under the pointer,
+      gives the associated hotkey (if any).
+   Python Tooltips
+      Displays a property's Python information below the tooltip.
+
 
 Editors
 =======
@@ -58,10 +62,12 @@ Region Overlap
    This makes regions overlap the viewport.
    It means that the *Toolbar* and *Sidebar* regions,
    will be displayed overlapping the 3D Viewport.
+
 Corner Splitting
    Split & join by dragging from the corners.
 
    When disabled, you can use the context menu for area separators to perform these operations.
+
 Navigation Controls
    Show navigation controls at top right of the window.
 
@@ -77,11 +83,13 @@ Color Picker Type
    Choose which type of :term:`Color Space` you prefer. It will show when clicking :kbd:`LMB` on any color field.
 
    See the different color picker types at the :doc:`Color picker </interface/controls/templates/color_picker>` page.
+
 Header Position
    The default header position.
 
    Using default uses top for most window types and the positions saved in the file.
    Otherwise you can choose to force top/bottom header alignment.
+
 Factor Display Type
    How factor value types are displayed in the user interface.
 
@@ -127,12 +135,13 @@ Language
    The language used for translating the user interface (UI).
    The list is broken up into categories determining how complete the translations are.
 
-Tooltips
-   Translates the descriptions when hovering over UI elements.
-Interface
-   Translates all labels in menus, buttons, and panels.
-New Data
-   Translates the names of new data-blocks.
+Affect
+   Tooltips
+      Translates the descriptions when hovering over UI elements.
+   Interface
+      Translates all labels in menus, buttons, and panels.
+   New Data
+      Translates the names of new data-blocks.
 
 
 Text Rendering

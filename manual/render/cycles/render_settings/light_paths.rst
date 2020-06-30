@@ -75,14 +75,10 @@ Caustics
 
 A common source of noise is :term:`Caustics`.
 
-.. _render-cycles-integrator-no-caustics:
+.. seealso::
 
-Reflective Caustics
-   While in principle path tracing supports rendering of caustics with a sufficient number of samples,
-   in practice it may be inefficient to the point that there is just too much noise.
-   This option can be unchecked, to disable reflective caustics.
-Refractive Caustics
-   The same as above, but for refractive caustics.
+   See :ref:`Reducing Noise <render-cycles-reducing-noise-clamp-samples>`
+   for examples of the clamp settings in use.
 
 .. _render-cycles-integrator-filter-glossy:
 
@@ -101,7 +97,12 @@ Filter Glossy
    Often this blurring will hardly be noticeable, because it is blurred by the material anyway,
    but there are also cases where this will lead to a loss of detail in lighting.
 
-.. seealso::
+.. _render-cycles-integrator-no-caustics:
 
-   See :ref:`Reducing Noise <render-cycles-reducing-noise-clamp-samples>`
-   for examples of the clamp settings in use.
+Caustics
+   Reflective
+      While in principle path tracing supports rendering of caustics with a sufficient number of samples,
+      in practice it may be inefficient to the point that there is just too much noise.
+      This option can be unchecked, to disable reflective caustics.
+   Refractive
+      The same as above, but for refractive caustics.

@@ -99,19 +99,20 @@ Display As
 
                 The same armature in Edit Mode.
 
-Names
-   Displays the name of each bone.
-Axes
-   When enabled, the (local) axes of each bone are displayed (only relevant for *Edit Mode* and *Pose Mode*).
-Shapes
-   When enabled, the default standard bone shape is replaced,
-   in *Object Mode* and *Pose Mode*, by the shape of a chosen object
-   (see :doc:`Shaped Bones </animation/armatures/bones/properties/display>` for details).
-Group Colors
-   Use the Bone Group colors to color the bone.
-   For more details see :doc:`Bone Groups </animation/armatures/properties/bone_groups>`.
-In Front
-   When enabled, the bones of the armature will always be shown on top of the solid objects
-   (meshes, surfaces, ...) -- i.e. they will always be visible and selectable
-   (this is the same option as the one found in the *Display* panel of the *Object data* tab).
-   Very useful when not in *Wireframe* mode.
+Show
+   Names
+      Displays the name of each bone.
+   Axes
+      When enabled, the (local) axes of each bone are displayed (only relevant for *Edit Mode* and *Pose Mode*).
+   Shapes
+      When enabled, the default standard bone shape is replaced,
+      in *Object Mode* and *Pose Mode*, by the shape of a chosen object
+      (see :doc:`Shaped Bones </animation/armatures/bones/properties/display>` for details).
+   Group Colors
+      Use the Bone Group colors to color the bone.
+      For more details see :doc:`Bone Groups </animation/armatures/properties/bone_groups>`.
+   In Front
+      When enabled, the bones of the armature will always be shown on top of the solid objects
+      (meshes, surfaces, ...) -- i.e. they will always be visible and selectable
+      (this is the same option as the one found in the *Display* panel of the *Object data* tab).
+      Very useful when not in *Wireframe* mode.

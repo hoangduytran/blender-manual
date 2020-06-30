@@ -44,17 +44,22 @@ Adaptivity
    Reduces the final face count by simplifying geometry where detail is not needed.
    This introduce triangulation to faces that do not need as much detail.
    Note, an *Adaptivity* value greater than zero disables *Fix Poles*.
+
 Fix Poles
    Tries to produce less :term:`poles <Pole>` at the cost of some performance to produce a better topological flow.
+
 Smooth Normals
    Applies the :ref:`Smooth Normals <bpy.ops.object.shade_smooth>` operator to the resulting mesh.
-Preserve Volume
-   Tells the algorithm to try to preserve the original volume of the mesh.
-   Enabling this could make the operator slower depending on the complexity of the mesh.
-Preserve Paint Mask
-   Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
-Preserve Face Sets
-   Reprojects :ref:`Face Sets <sculpting-editing-facesets>` onto the new mesh.
+
+Preserve
+   Volume
+      Tells the algorithm to try to preserve the original volume of the mesh.
+      Enabling this could make the operator slower depending on the complexity of the mesh.
+   Paint Mask
+      Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
+   Face Sets
+      Reprojects :ref:`Face Sets <sculpting-editing-facesets>` onto the new mesh.
+
 Voxel Remesh
    Performs the remeshing operation to create a new manifold mesh based on the volume of the current mesh.
    Performing this will lose all mesh object data layers associated with the original mesh.

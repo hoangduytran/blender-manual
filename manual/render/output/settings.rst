@@ -17,15 +17,16 @@ Dimensions Panel
 
    Dimensions panel.
 
-Render Presets
-   Common format presets for TVs and screens.
-Resolution
-   X/Y
+Several render presets exist with common resolution and frame rates
+for TVs and screens can be selected in the panel header.
+
+Resolution X, Y
       The number of pixels horizontally and vertically in the image.
    Percentage
       Slider to reduce or increase the size of the rendered image relative to the X/Y values above.
       This is useful for small test renders that have the same proportions as the final image.
-Aspect Ratio
+
+Aspect X, Y
    Older televisions may have non-square pixels,
    so this can be used to control the shape of the pixels along the respective axis.
    This will *pre-distort* the images which will look stretched on a computer screen,
@@ -46,17 +47,25 @@ Render Region
 
       This disables the *Save Buffers* option in the Performance panel.
 
-   Crop Render Region
-      Crops the rendered image to the size of the render region,
-      instead of rendering a transparent background around it.
-Frame Range
+Crop to Render Region
+   Crops the rendered image to the size of the render region,
+   instead of rendering a transparent background around it.
+
+Frame Start, End
    Set the *Start* and *End* frames for :doc:`Rendering Animations </render/output/animation>`.
-   *Step* controls the number of frames to advance by for each frame in the timeline.
+
+Step
+   Controls the number of frames to advance by for each frame in the timeline.
+
 Frame Rate
    For an :doc:`Animation </render/output/animation>`
    the frame rate is how many frames will be displayed per second.
+
+
 Time Remapping
-   Use to remap the length of an animation.
+--------------
+
+Use to remap the length of an animation.
 
 
 .. _render-tab-output:
@@ -86,26 +95,32 @@ File Path
 
    This setting expands :ref:`files-blend-relative_paths`
    where a ``//`` prefix represents the directory of the current blend-file.
-Overwrite
-   Overwrite existing files when rendering.
-Placeholders
-   Create empty placeholder frames while rendering.
-File Extensions
-   Adds the correct file extensions per file type to the output files.
-Cache Result
-   Saves the rendered image and passes to a multi-layer EXR file in temporary location on your hard drive.
-   This allows the Compositor to read these to improve the performance, especially for heavy compositing.
+
+Saving
+   File Extensions
+      Adds the correct file extensions per file type to the output files.
+   Cache Result
+      Saves the rendered image and passes to a multi-layer EXR file in temporary location on your hard drive.
+      This allows the Compositor to read these to improve the performance, especially for heavy compositing.
+
 File Format
    Choose the file format to save to. Based on which format is used,
    other options such as channels, bit depth and compression level are available.
 
    For rendering out to images see: :ref:`saving images <bpy.types.ImageFormatSettings>`,
    for rendering to videos see :doc:`rendering to videos </render/output/file_formats>`.
+
 Color Mode
    Choose the color format to save the image to.
    Note that *RGBA* will not be available for all image formats.
 
    BW, RGB, RGBA
+
+Image Sequence
+   Overwrite
+      Overwrite existing files when rendering.
+   Placeholders
+      Create empty placeholder frames while rendering.
 
 .. hint:: Primitive Render Farm
 
@@ -133,29 +148,25 @@ The Post Processing panel is used to control different options used to process y
 
    Post Processing panel.
 
-Sequencer
-   Renders the output of the Video Sequence editor, instead of the view from the 3D scene's active camera.
-   If the sequence contains scene strips, these will also be rendered as part of the pipeline.
-   If *Compositing* is also enabled, the Scene strip will be the output of the Compositor.
-Compositing
-   Renders the output from the compositing node setup,
-   and then pumps all images through the Composite node tree,
-   displaying the image fed to the Composite Output node.
+Pipeline
+   Sequencer
+      Renders the output of the Video Sequence editor, instead of the view from the 3D scene's active camera.
+      If the sequence contains scene strips, these will also be rendered as part of the pipeline.
+      If *Compositing* is also enabled, the Scene strip will be the output of the Compositor.
+   Compositing
+      Renders the output from the compositing node setup,
+      and then pumps all images through the Composite node tree,
+      displaying the image fed to the Composite Output node.
 
+Dither
+   Dithering is a technique for blurring pixels to prevent banding that is seen in areas of
+   gradients, where stair-stepping appears between colors.
+   Banding artifacts are more noticeable when gradients are longer, or less steep.
+   Dithering was developed for graphics with low bit depths,
+   meaning they had a limited range of possible colors.
 
-Dithering
-=========
-
-Dithering is a technique for blurring pixels to prevent banding that is seen in areas of
-gradients, where stair-stepping appears between colors.
-Banding artifacts are more noticeable when gradients are longer, or less steep.
-Dithering was developed for graphics with low bit depths,
-meaning they had a limited range of possible colors.
-
-Dithering works by taking pixel values and comparing them with a threshold and
-neighboring pixels then does calculations to generate the appropriate color.
-Dithering creates the perceived effect of a larger color palette by creating a sort of visual color mixing.
-For example, if you take a grid and distribute red and yellow pixels evenly across it,
-the image would appear to be orange.
-
-The *Dither* value ranges from 0 to 2.
+   Dithering works by taking pixel values and comparing them with a threshold and
+   neighboring pixels then does calculations to generate the appropriate color.
+   Dithering creates the perceived effect of a larger color palette by creating a sort of visual color mixing.
+   For example, if you take a grid and distribute red and yellow pixels evenly across it,
+   the image would appear to be orange.

@@ -47,19 +47,19 @@ Ambient Occlusion
 
 Shadow
    Bakes shadows and lighting.
-Normals
+Normal
    Bakes normals to an RGB image.
 
-   Normal Space
+   Space
       Normals can be baked in different spaces:
 
-      Object Space
+      Object
          Normals in object coordinates, independent of object transformation, but dependent on deformation.
-      Tangent Space
+      Tangent
          Normals in tangent space coordinates, independent of object transformation and deformation.
          This is the default, and the right choice in most cases, since then the normal map can be used for
          animated objects too.
-   Normal Swizzle
+   Swizzle R, G, B
       Axis to bake into the red, green and blue channel.
 
    For materials the same spaces can be chosen in the image texture options
@@ -87,12 +87,11 @@ Diffuse, Glossy, Transmission
 Selected to Active
 ------------------
 
-Select to Active
-   Bake shading on the surface of selected objects to the active object.
-   The rays are cast from the low-poly object inwards towards the high-poly object.
-   If the high-poly object is not entirely involved by the low-poly object, you can tweak the rays start point with
-   *Ray Distance* or *Cage Extrusion* (depending on whether or not you are using cage).
-   For even more control you can use a *Cage Object*.
+Bake shading on the surface of selected objects to the active object.
+The rays are cast from the low-poly object inwards towards the high-poly object.
+If the high-poly object is not entirely involved by the low-poly object, you can tweak the rays start point with
+*Ray Distance* or *Cage Extrusion* (depending on whether or not you are using cage).
+For even more control you can use a *Cage Object*.
 
 .. note:: Memory Usage
 
@@ -107,16 +106,15 @@ Cage
    (by adjusting the ray distance) or manually (by specifying an object to use).
    When not using a cage the rays will conform to the mesh normals. This produces glitches on the edges,
    but it is a preferable method when baking into planes to avoid the need of adding extra loops around the edges.
-Ray Distance
-   Distance to use for the inward ray cast when using selected to active.
-   Ray distance is only available when not using *Cage*.
+
+   Cage Object
+      Object to use as cage instead of calculating the cage from the active object with the *Cage Extrusion*.
+
 Cage Extrusion
    Distance to use for the inward ray cast when using *Selected to Active* and *Cage*.
    The inward rays are casted from a version of the active object with disabled Edge Split Modifiers.
    Hard splits (e.g. when the Edge Split Modifier is applied) should be avoided because they will lead to non-smooth
    normals around the edges.
-Cage
-   Object to use as cage instead of calculating the cage from the active object with the *Cage Extrusion*.
 
    .. note::
 
@@ -124,11 +122,15 @@ Cage
       you can create a copy of the base mesh and modify it to use as a *Cage*.
       Both meshes need to have the same :term:`Topology` (number of faces and face order).
 
+Max Ray Distance
+   Distance to use for the inward ray cast when using selected to active.
+   Ray distance is only available when not using *Cage*.
+
 
 Output
 ------
 
 Margin
    Baked result is extended this many pixels beyond the border of each UV "island", to soften seams in the texture.
-Clear
+Clear Image
    If selected, clears the image before baking render.

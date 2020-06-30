@@ -90,12 +90,9 @@ This option affects interactive operations only
 If the exact spot where a vertex is moved contains more than one vertex,
 then the merge will be performed between the moved vertex and one of those.
 
-Auto Merge
-   Enables the Auto Merge feature.
+Split Edges & Faces
+   Detects the intersection of each transformed edge, creating a new vertex in place
+   and sectioning the edge and the face if any.
 
-   Split Edges & Faces
-      Detects the intersection of each transformed edge, creating a new vertex in place
-      and sectioning the edge and the face if any.
-
-   Threshold
-      Defines the maximum distance between vertices that are merged by the *Auto Merge*.
+Threshold
+   Defines the maximum distance between vertices that are merged by the *Auto Merge*.

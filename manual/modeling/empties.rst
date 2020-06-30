@@ -103,19 +103,18 @@ Side
       both the front and back,
       so two empty images can be set only to show when viewed from the correct side.
 
-Display Orthographic
-   Show in orthographic view.
+Show in
+   Orthographic
+      Show in orthographic view.
+   Perspective
+      Show in perspective view.
 
-Display Perspective
-   Show in perspective view.
+      .. hint::
 
-   .. hint::
-
-      It's often useful to disable this so reference images don't
-      *get in the way* when viewing a model.
-
-Display Only Axis Aligned
-   Only displays the image contents when the view is aligned with the object's local axis.
+         It's often useful to disable this so reference images don't
+         *get in the way* when viewing a model.
+   Only Axis Aligned
+      Only displays the image contents when the view is aligned with the object's local axis.
 
 
 .. _bpy.types.Object.use_empty_image_alpha:

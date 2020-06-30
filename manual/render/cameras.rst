@@ -169,7 +169,22 @@ Focal Distance
    Sets the distance to the focal point when no *Focus Object* is specified.
    If *Limits* are enabled, a yellow cross is shown on the camera line of sight at this distance.
 
-   .. hint::
+   .. hint::   Names
+      Displays the name of each bone.
+   Axes
+      When enabled, the (local) axes of each bone are displayed (only relevant for *Edit Mode* and *Pose Mode*).
+   Shapes
+      When enabled, the default standard bone shape is replaced,
+      in *Object Mode* and *Pose Mode*, by the shape of a chosen object
+      (see :doc:`Shaped Bones </animation/armatures/bones/properties/display>` for details).
+   Group Colors
+      Use the Bone Group colors to color the bone.
+      For more details see :doc:`Bone Groups </animation/armatures/properties/bone_groups>`.
+   In Front
+      When enabled, the bones of the armature will always be shown on top of the solid objects
+      (meshes, surfaces, ...) -- i.e. they will always be visible and selectable
+      (this is the same option as the one found in the *Display* panel of the *Object data* tab).
+      Very us
 
       Hover the mouse over the *Distance* property and press :kbd:`E` to use a special *Depth Picker*.
       Then click on a point in the 3D Viewport to sample the distance from that point to the camera.
@@ -334,10 +349,11 @@ Rotation
    Rotates the image around its center.
 Scale
    Scales the image up or down from its center.
-Flip Horizontally
-   Swaps the image around, such that the left side is now on the right, and the right now on the left.
-Flip Vertically
-   Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top.
+Flip
+   X
+      Swaps the image around, such that the left side is now on the right, and the right now on the left.
+   Y
+      Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top.
 
 
 .. _bpy.types.Camera.show:
@@ -356,26 +372,19 @@ Size
    Size of the camera visualization in the 3D Viewport. This setting has **no** effect on
    the render output of a camera. The camera visualization can also be scaled using
    the standard Scale :kbd:`S` transform key.
-Limits
-   Shows a line which indicates *Start* and *End Clipping* values.
-Mist
-   Toggles viewing of the mist limits on and off.
-   The limits are shown as two connected white dots on the camera line of sight.
-   The mist limits and other options are set in the *World* panel,
-   in the :ref:`Mist section <render-cycles-integrator-world-mist>`.
-Sensor
-   Displays a dotted frame in camera view.
-Name
-   Toggle name display on and off in camera view.
 
-
-Passepartout
-^^^^^^^^^^^^
-
-This option darkens the area outside of the camera's field of view.
-
-Alpha
-   Controls the transparency of the passepartout mask.
+Show
+   Limits
+      Shows a line which indicates *Start* and *End Clipping* values.
+   Mist
+      Toggles viewing of the mist limits on and off.
+      The limits are shown as two connected white dots on the camera line of sight.
+      The mist limits and other options are set in the *World* panel,
+      in the :ref:`Mist section <render-cycles-integrator-world-mist>`.
+   Sensor
+      Displays a dotted frame in camera view.
+   Name
+      Toggle name display on and off in camera view.
 
 
 .. _bpy.types.Camera.show_composition:
@@ -385,21 +394,39 @@ Composition Guides
 
 *Composition Guides* enable overlays onto the camera display that can help when framing a shot.
 
-Center
-   Adds lines dividing the frame in half vertically and horizontally.
-Center Diagonal
-   Adds lines connecting opposite corners.
 Thirds
    Adds lines dividing the frame in thirds vertically and horizontally.
-Golden Ratio
-   Divides the width and height into Golden proportions (about 0.618 of the size from all sides of the frame).
-Golden Triangle A
-   Displays a diagonal line from the lower left to upper right corners,
-   then adds perpendicular lines that pass through the top left and bottom right corners.
-Golden Triangle B
-   Same as A, but with the opposite corners.
-Harmonious Triangle A
-   Displays a diagonal line from the lower left to upper right corners,
-   then lines from the top left and bottom right corners to 0.618 the lengths of the opposite side.
-Harmonious Triangle B
-   Same as A, but with the opposite corners.
+
+Center
+   Center
+      Adds lines dividing the frame in half vertically and horizontally.
+   Diagonal
+      Adds lines connecting opposite corners.
+
+Golden
+   Ratio
+      Divides the width and height into Golden proportions (about 0.618 of the size from all sides of the frame).
+   Triangle A
+      Displays a diagonal line from the lower left to upper right corners,
+      then adds perpendicular lines that pass through the top left and bottom right corners.
+   Triangle B
+      Same as A, but with the opposite corners.
+
+Harmony
+   Triangle A
+      Displays a diagonal line from the lower left to upper right corners,
+      then lines from the top left and bottom right corners to 0.618 the lengths of the opposite side.
+   Triangle B
+      Same as A, but with the opposite corners.
+
+
+.. _bpy.types.Camera.show_passepartout:
+.. _bpy.types.Camera.passepartout_alpha:
+
+Passepartout
+^^^^^^^^^^^^
+
+This option darkens the area outside of the camera's field of view.
+
+Alpha
+   Controls the transparency of the passepartout mask.

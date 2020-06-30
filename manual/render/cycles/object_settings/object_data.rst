@@ -18,17 +18,20 @@ Visibility
    There are several other :doc:`general visibility </scene_layout/object/properties/visibility>` properties.
 
 
-Shadow Catcher
---------------
+Mask
+   Shadow Catcher
+      Enables the object to only receive shadow rays.
+      It is to be noted that shadow catcher objects will interact with other CG objects via indirect light interaction.
+      This feature makes it really easy to combine :abbr:`CGI (Computer-Generated Imagery)` elements
+      into a real-world footage.
 
-Enables the object to only receive shadow rays.
-It is to be noted that shadow catcher objects will interact with other CG objects via indirect light interaction.
-This feature makes it really easy to combine :abbr:`CGI (Computer-Generated Imagery)` elements
-into a real-world footage.
+      .. figure:: /images/render_cycles_object-settings_object-data_shadow-catcher.jpg
 
-.. figure:: /images/render_cycles_object-settings_object-data_shadow-catcher.jpg
+         Example of the shadow catcher. Note how the material of the plane can still be viewed in the spheres.
 
-   Example of the shadow catcher. Note how the material of the plane can still be viewed in the spheres.
+   Holdout
+      Render pbjects as a holdout or matte, creating a hole in the image with zero :term:`Alpha`,
+      to fill out in :doc:`compositing </compositing/index>` with real footage or another render.
 
 
 .. _cycles-ray-visibility:
@@ -37,7 +40,15 @@ into a real-world footage.
 Ray Visibility
 --------------
 
-Objects can be set to be invisible to particular ray types:
+Objects can be set to be invisible to particular ray types.
+This can be used, for example, to make an emitting mesh invisible to camera rays.
+For instancers, visibility is inherited; if the parent object is hidden for some ray types,
+the children will be hidden for these too.
+
+In terms of performance, using these options is more efficient that using a shader node setup
+that achieves the same effect.
+Objects invisible to a certain ray will be skipped in ray traversal already,
+leading to fewer rays cast and shaders executed.
 
 Camera
    Makes the object visible in camera rays.
@@ -51,15 +62,6 @@ Volume Scatter
    Makes the object visible in transmission rays.
 Shadow
    Enables the object to cast shadows.
-
-This can be used, for example, to make an emitting mesh invisible to camera rays.
-For instancers, visibility is inherited; if the parent object is hidden for some ray types,
-the children will be hidden for these too.
-
-In terms of performance, using these options is more efficient that using a shader node setup
-that achieves the same effect.
-Objects invisible to a certain ray will be skipped in ray traversal already,
-leading to fewer rays cast and shaders executed.
 
 
 Culling
@@ -91,18 +93,19 @@ the :doc:`Scene Level Motion Blur </render/cycles/render_settings/motion_blur>`
 These settings can be found
 in the Object Properties tab of the Properties.
 
-Deformation
-   Enables motion blur for deformed meshes such as animated characters, including hair.
 Steps
    Controls accuracy of deformation motion blur, more steps gives more memory usage.
    The actual number of time steps is :math:`2^{steps -1}`.
 
-.. warning::
+Deformation
+   Enables motion blur for deformed meshes such as animated characters, including hair.
 
-   An object modifier setup that changes mesh topology over time can not render
-   deformation motion blur correctly. Deformation blur should be disabled for such objects.
+   .. warning::
 
-   Common examples of this are animated Booleans, Deformation before Edge Split, Remesh, Skin or Decimate modifiers.
+      An object modifier setup that changes mesh topology over time can not render
+      deformation motion blur correctly. Deformation blur should be disabled for such objects.
+
+      Common examples of this are animated Booleans, Deformation before Edge Split, Remesh, Skin or Decimate modifiers.
 
 
 Shading

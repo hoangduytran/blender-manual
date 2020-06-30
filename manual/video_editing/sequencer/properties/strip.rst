@@ -40,15 +40,21 @@ Transform
 ---------
 
 Mirror X
-   Mirrors the image along the X axis (left to right).
-Mirror Y
-   Mirrors the image along the Y axis (top to bottom).
-Image Offset
-   Used to move the frames along the X and Y axis.
-   Additionally it disables the auto-scaling of the image.
-Image Crop
-   Used to crop the source image, use *Top*, *Left*,
-   *Bottom*, and *Right* to control which part of the image is cropped.
+   Mirrors the image along the X axis (left to right) or the Y axis (top to bottom).
+
+
+Offset
+^^^^^^
+
+Used to move the frames along the X and Y axis.
+Additionally it disables the auto-scaling of the image.
+
+
+Crop
+^^^^
+
+Used to crop the source image, use *Top*, *Left*,
+*Bottom*, and *Right* to control which part of the image is cropped.
 
 
 Video

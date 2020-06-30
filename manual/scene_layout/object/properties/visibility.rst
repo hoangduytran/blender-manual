@@ -5,12 +5,14 @@ Visibility
 
 The Visibility panel controls how objects are interacted with in the viewport and in the final render.
 
-Show in Viewports
-   The object will be displayed in the 3D Viewport.
-Show in Renders
-   The object is able to be in the final render, note that it will still be visible in rendered shading view.
 Selectable
    The object is able to be selected in the 3D Viewport.
+
+Show in
+   Viewports
+      The object will be displayed in the 3D Viewport.
+   Renders
+      The object is able to be in the final render, note that it will still be visible in rendered shading view.
 
 .. note::
 

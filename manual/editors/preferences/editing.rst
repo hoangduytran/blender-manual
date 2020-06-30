@@ -15,7 +15,7 @@ Objects
 New Objects
 -----------
 
-Link Materials To
+Link Materials to
    To understand this option properly, you need to understand how Blender works with Objects.
    Almost everything in Blender is organized in a hierarchy of data-blocks.
    A data-block can be thought of as containers for certain pieces of information. For example,
@@ -41,7 +41,7 @@ Link Materials To
 
       :doc:`Read more about Blender's Data System </files/index>`.
 
-Align To
+Align to
    World
       New objects align with world coordinates.
    View
@@ -113,12 +113,13 @@ For detailed information see the :doc:`Color ramps </interface/controls/template
 Grease Pencil
 =============
 
-Manhattan Distance
-   The minimum number of pixels the mouse should have moved either
-   horizontally or vertically before the movement is recorded.
-   Decreasing this should work better for curvy lines.
-Euclidean Distance
-   The minimum distance that mouse has to travel before movement is recorded.
+Distance
+   Manhattan
+      The minimum number of pixels the mouse should have moved either
+      horizontally or vertically before the movement is recorded.
+      Decreasing this should work better for curvy lines.
+   Euclidean
+      The minimum distance that mouse has to travel before movement is recorded.
 
 .. seealso::
 

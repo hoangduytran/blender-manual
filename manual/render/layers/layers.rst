@@ -68,6 +68,7 @@ The Layer Panel shows the settings of the active View Layer.
 
 Use for Rendering
    The active view layer will be used during rendering.
+
 Render Single Layer
    Only render the active view layer.
 
@@ -157,18 +158,19 @@ Exclude
 Filter
 ------
 
-Environment
-   Disables rendering the *Environment* render pass in the final render.
-Ambient Occlusion
-   Disables rendering the *Ambient Occlusion* render pass in the final render.
-Surfaces
-   Disables rendering object materials in the final render.
-Hair
-   Disables rendering hair strands in the final render.
-Volume
-   Disables rendering :doc:`Volumes </modeling/volumes/index>` in the final render.
-Freestyle
-   Disables Freestyle rendering in the final render.
+Include
+   Environment
+      Disables rendering the *Environment* render pass in the final render.
+   Ambient Occlusion
+      Disables rendering the *Ambient Occlusion* render pass in the final render.
+   Surfaces
+      Disables rendering object materials in the final render.
+   Hair
+      Disables rendering hair strands in the final render.
+   Volume
+      Disables rendering :doc:`Volumes </modeling/volumes/index>` in the final render.
+   Freestyle
+      Disables Freestyle rendering in the final render.
 
 
 .. _bpy.types.ViewLayer.material_override:

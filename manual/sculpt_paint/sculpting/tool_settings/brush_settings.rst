@@ -119,10 +119,12 @@ Use Original
    Plane
       When locked keep using the plane origin of surface where stroke was initiated,
       instead of the surface plane currently under the cursor.
-   Accumulate
-      Causes stroke dabs to accumulate on top of each other.
-   Front Faces Only
-      When enabled, the brush only affects vertices that are facing the viewer.
+
+Accumulate
+   Causes stroke dabs to accumulate on top of each other.
+
+Front Faces Only
+   When enabled, the brush only affects vertices that are facing the viewer.
 
 .. toctree::
    :hidden:

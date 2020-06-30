@@ -55,12 +55,9 @@ Clip Start/End
 
       See :ref:`Troubleshooting Depth Buffer Glitches <troubleshooting-depth>` for more information.
 
-Use Local Camera
-   Use a local camera in this view, rather than the scene's active camera.
-
 Local Camera
-   Active camera used in this view to override the (global) scene camera.
-   The option is available only when *Use Local Camera* toggle enabled.
+   Use a local camera in this view, selected from the object selector,
+   rather than the scene's (global) active camera.
 
 Render Region
    Use a Render Region when not looking through a camera.
@@ -78,15 +75,15 @@ Lock to Object
    but not while you move the object itself
    (this option is not available in a camera view).
 
-Lock to 3D Cursor
-   Lock the center of the view to the position of the 3D cursor.
-   It is only available when *Lock to Object* is not active.
-
 .. _3dview-lock-camera-to-view:
 
-Lock Camera to View
-   When in camera view, all changes in the view (pans, rotations, zooms) will affect the active camera.
-   The camera frame will be outlined with a red dashed line.
+Lock
+   To 3D Cursor
+      Lock the center of the view to the position of the 3D cursor.
+      It is only available when *Lock to Object* is not active.
+   Camera to View
+      When in camera view, all changes in the view (pans, rotations, zooms) will affect the active camera.
+      The camera frame will be outlined with a red dashed line.
 
 .. hint::
 

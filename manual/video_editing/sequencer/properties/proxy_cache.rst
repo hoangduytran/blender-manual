@@ -3,8 +3,8 @@
 Proxy & Cache Settings
 **********************
 
-Cache Settings Panel
-====================
+Cache Settings
+==============
 
 .. admonition:: Reference
    :class: refbox
@@ -17,14 +17,16 @@ Cache capacity can be set in :doc:`System tab </editors/preferences/system>` of 
 
 In this panel you can set up types of images that will be cached for all strips.
 
-Cache Raw
-   Cache raw images read from drive, for faster tweaking of strip parameters at the cost of memory usage.
-Cache Preprocessed
-   Cache preprocessed images, for faster tweaking of effects at the cost of memory usage.
-Cache Composite
-   Cache intermediate composited images, for faster tweaking of stacked strips at the cost of memory usage.
-Cache Final
-   Cache final image for each frame.
+Cache
+   Raw
+      Cache raw images read from drive, for faster tweaking of strip parameters at the cost of memory usage.
+   Pre-processed
+      Cache preprocessed images, for faster tweaking of effects at the cost of memory usage.
+   Composite
+      Cache intermediate composited images, for faster tweaking of stacked strips at the cost of memory usage.
+   Final
+      Cache final image for each frame.
+
 Recycle Up to Cost
    Only frames with cost lower than this value will be recycled.
 
@@ -35,8 +37,8 @@ Recycle Up to Cost
    Maximum image cost is limited to arbitrary value of 10.
 
 
-Strip Cache Panel
-=================
+Strip Cache
+===========
 
 .. admonition:: Reference
    :class: refbox
@@ -57,8 +59,8 @@ Cache Composite
    Cache intermediate composited images, for faster tweaking of stacked strips at the cost of memory usage.
 
 
-Proxy Settings Panel
-====================
+Proxy Settings
+==============
 
 .. admonition:: Reference
    :class: refbox
@@ -78,6 +80,7 @@ Storage
 
 Set Selected Strip Proxies
    Set proxy size and overwrite flag for all selected strips.
+
 Rebuild Proxy and Timecode Indices
    Generates Proxies and Timecodes for all selected strips,
    same as doing :menuselection:`Strip --> Rebuild Proxy and Timecode indices`.
@@ -108,44 +111,43 @@ Once all proxies are built, they will be ready to use.
 In order to use proxies, you have to select matching :ref:`Proxy Render Size <proxy-render-size>`
 in Sequencer preview Sidebar panel.
 
-Proxy Custom Directory
-   By default, all generated proxy images are storing to
-   the ``<path of original footage>/BL_proxy/<clip name>`` folder,
-   but this location can be set by hand using this option.
-Proxy Custom File
-   Allows you to use pre-existing proxies.
-Size
+Custom Proxy
+   Directory
+      By default, all generated proxy images are storing to
+      the ``<path of original footage>/BL_proxy/<clip name>`` folder,
+      but this location can be set by hand using this option.
+   File
+      Allows you to use pre-existing proxies.
+
+Resolutions
    Buttons to control how big the proxies are.
    The available options are 25%, 50%, 75%, 100 percent of original strip size.
+
 Overwrite
    Saves over any existing proxies in the proxy storage directory.
-Quality
+
+Build JPEG QualityA
    Defines the quality of the JPEG images used for proxies.
+
 Timecode Index
-   See `Timecode`_.
+   When you are working with footage directly copied from a camera without pre-processing it,
+   there might be bunch of artifacts, mostly due to seeking a given frame in sequence.
+   This happens because such footage usually does not have correct frame rate values in their headers.
+   This issue can still arise when the source clip has the same frame rate as the scene settings.
+   In order for Blender to correctly calculate frames and frame rate there are two possible solutions:
 
+   #. Preprocess your video with e.g. MEncoder to repair the file header and insert the correct keyframes.
+   #. Use Proxy/Timecode option in Blender.
 
-Timecode
---------
+   The following timecodes are supported:
 
-When you are working with footage directly copied from a camera without pre-processing it,
-there might be bunch of artifacts, mostly due to seeking a given frame in sequence.
-This happens because such footage usually does not have correct frame rate values in their headers.
-This issue can still arise when the source clip has the same frame rate as the scene settings.
-In order for Blender to correctly calculate frames and frame rate there are two possible solutions:
+   - No TC in use -- do not use any timecode
+   - Record Run
+   - Free Run
+   - Free Run (rec date)
+   - Record Run No Gaps
 
-#. Preprocess your video with e.g. MEncoder to repair the file header and insert the correct keyframes.
-#. Use Proxy/Timecode option in Blender.
+   .. note::
 
-The following timecodes are supported:
-
-- No TC in use -- do not use any timecode
-- Record Run
-- Free Run
-- Free Run (rec date)
-- Record Run No Gaps
-
-.. note::
-
-   Record Run is the timecode which usually is best to use, but if the clip's file is totally damaged,
-   *Record Run No Gaps* will be the only chance of getting acceptable result.
+      Record Run is the timecode which usually is best to use, but if the clip's file is totally damaged,
+      *Record Run No Gaps* will be the only chance of getting acceptable result.

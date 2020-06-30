@@ -90,25 +90,33 @@ Shape
       Uses every vertex in the mesh object as an effector point.
    Curve
       The force field acts along a curve object.
+
 Strength
    The strength of the field effect.
    This can be positive or negative to change the direction that the force operates in.
    A force field's strength is scaled with the force object's scale,
    allowing you to scale up and down the scene, keeping the same effects.
+
 Flow
    If non-zero, the effective force depends on the particle velocity.
    The value defines how quickly the effector force (acceleration)
    will be converted into the constant "air flow" velocity.
+
 Noise Amount
    Adds noise to the strength of the force.
+
 Seed
    Changes the seed of the random noise.
-Affect Location
-   Influence the location of particles.
-Affect Rotation
-   Influence the rotation of particles.
+
+Affect
+   Location
+      Influence the location of particles.
+   Rotation
+      Influence the rotation of particles.
+
 Absorption
    Force gets absorbed by collision objects.
+
 Wind Factor
    Specifies how much the force is reduced when acting parallel to a surface, e.g. cloth.
    If set to 1, only the normal component of the force is taken into account.
@@ -132,16 +140,19 @@ Shape
 
 Z Direction
    The force can be set to apply only in the direction of the positive Z axis, negative Z axis, or both.
+
 Power
    How the power of the force field changes with the distance from the force field.
    If *r* is the distance from the origin of the object, the force changes with 1/(*r* - *min* + 1)\ :sup:`power`.
    A falloff of 2 changes the force field with 1/(*r* - *min* + 1)\ :sup:`2`,
    which is similar to the falloff of gravitational pull.
+
 Min Distance
    The distance from the object's origin, up to where the force field is effective with full strength.
    If you have a falloff of 0 this parameter will have no effect,
    because the field is effective with full strength up to *Max Distance* (or infinite).
    Shown by an additional circle around the object.
+
 Max Distance
    Specifies the maximum radius in which the force field affects other objects
    (shown by an additional circle around the object).

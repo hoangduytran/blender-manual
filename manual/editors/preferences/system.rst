@@ -39,8 +39,10 @@ Memory & Limits
 
 Undo Steps
    Number of Undo steps available.
+
 Undo Memory Limit
    Maximum memory usage in Mb (0 is unlimited).
+
 Global Undo
    This enables Blender to save actions done when you are **not** in *Edit Mode*.
    For example, duplicating objects, changing panel settings or switching between modes.
@@ -61,12 +63,14 @@ Global Undo
 Console Scroll-back Lines
    The number of lines, buffered in memory of the console window.
    Useful for debugging purposes and command-line rendering.
+
 Texture Time Out
    Time since last access of a GL texture in seconds, after which it is freed.
    Set this to 0 to keep textures allocated.
 
    Garbage Collection Rate
       Number of seconds between each run of the GL texture garbage collector.
+
 VBO Time Out
    Time since last access of a GL vertex buffer object (VBO) in seconds after which it is freed
    (set to 0 to keep VBO allocated).

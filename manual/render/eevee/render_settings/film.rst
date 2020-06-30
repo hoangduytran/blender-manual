@@ -13,13 +13,9 @@ Filter Size
 Transparent
    Render the background transparent, for compositing the image over another background after rendering.
 
-
 .. _bpy.types.SceneEEVEE.use_overscan:
 
 Overscan
-========
-
-Size
    Percentage of the render size to add to the internal render buffer.
    This will have a serious impact on performance but can fix
    render glitches around the perimeter of the rendered image.

@@ -98,11 +98,8 @@ Properties
 .. _bpy.types.Mesh.auto_smooth_angle:
 
 Auto Smooth
-   Edges where an angle between the faces is smaller than specified in the *Angle* button will be smoothed,
+   Edges where an angle between the faces is smaller than specified in the *Angle* field will be smoothed,
    when shading of these parts of the mesh is set to smooth. This is an easier way to combine smooth and sharp edges.
-
-   Angle
-      Angle number field.
 
 .. figure:: /images/modeling_meshes_structure_example-auto-smooth.png
    :width: 250px
@@ -155,7 +152,7 @@ Enabling Custom Split Normals
 
 Enables custom split normals.
 
-Also, any of the custom normal editing tools (see below) will, as a convenience,
+Also, any of the custom nmodeling_modeling_meshes_editing_normals_propertiesmeshes_editing_normals_propertiesormal editing tools (see below) will, as a convenience,
 enable custom normals if they are not already enabled.
 
 .. note::
