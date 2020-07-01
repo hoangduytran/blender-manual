@@ -177,8 +177,9 @@ Frame Start, End
 Sync Length
    Causes the *Start* and *End Frames*, above, to be reset to
    the first and last keyframed frames of the Action.
+Now
    The *Now* button causes the *Start* and *End Frames*, above, to be reset
-      to the first and last keyframed frames of the Action.
+   to the first and last keyframed frames of the Action.
 
 Playback Scale
    Stretches strip, another way of increasing the *Strip Extents: End Frame*, above.

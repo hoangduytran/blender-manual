@@ -308,7 +308,7 @@ Background Source
          .. seealso::
 
             To build a proxy, the :ref:`Movie Clip Editor Proxy settings <clip-editor-proxy>` have to be used.
-            Otherwise the proxy settings have no effect here.
+            Otherwise the proxy settings here have no effect.
 
 Alpha
    Controls the transparency of the background image.

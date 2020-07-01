@@ -29,7 +29,7 @@ Mask
          Example of the shadow catcher. Note how the material of the plane can still be viewed in the spheres.
 
    Holdout
-      Render objects as a holdout or matte, creating a hole in the image with zero :term:`Alpha`,
+      Render objects as a holdout or matte, creating a hole in the image with zero :term:`Alpha <Alpha Channel>`,
       to fill out in :doc:`compositing </compositing/index>` with real footage or another render.
 
 

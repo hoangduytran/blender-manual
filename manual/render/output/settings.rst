@@ -21,7 +21,8 @@ Several render presets exist with common resolution and frame rates
 for TVs and screens can be selected in the panel header.
 
 Resolution X, Y
-      The number of pixels horizontally and vertically in the image.
+   The number of pixels horizontally and vertically in the image.
+
    Percentage
       Slider to reduce or increase the size of the rendered image relative to the X/Y values above.
       This is useful for small test renders that have the same proportions as the final image.

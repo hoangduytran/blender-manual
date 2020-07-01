@@ -149,7 +149,7 @@ get_named: function(v) {
 	$.each(all_versions, function(ix, title) {
 		if (ix === "dev" || ix === "latest") {
 			var m = title.match(/\d\.\d[\w\d\.]*/)[0];
-			if (parseFloat(m) === v) {
+			if (parseFloat(m) == v) {
 				v = ix;
 				return false;
 			}
