@@ -27,10 +27,11 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+
 Extrapolate
-   By default, the *min* and *max* values bound the input and output values;
+   By default, the *Min* and *Max* values bound the input and output values;
    all values outside these ranges are clipped to them.
-   When you enable this button, the *min* and *max* values are no longer strict limits,
+   When you enable this button, the *Min* and *Max* values are no longer strict limits,
    but rather "markers" defining a proportional (linear) mapping between input and corresponding output values.
    Let us illustrate that with two graphs Fig. :ref:`fig-constraints-transformation-extrapolate`.
    In these pictures, the input range (in abscissa) is set to (1.0 to 4.0),
@@ -42,14 +43,15 @@ Extrapolate
    .. list-table:: The Extrapolate principles.
 
       * - .. figure:: /images/animation_constraints_transform_transformation_extrapolate-1.png
-             :width: 300px
 
              Extrapolate disabled: the output values are bounded inside the (1.0 to 2.0) range.
 
         - .. figure:: /images/animation_constraints_transform_transformation_extrapolate-2.png
-             :width: 300px
 
              Extrapolate enabled: the output values are "free" to proportionally follow the input ones.
+
+Target, Owner
+   Standard conversion between spaces.
 
 
 Source
@@ -57,10 +59,9 @@ Source
 
 It contains the input (from target) settings.
 
-Map From
+Loc, Rot, Scale
    The radio buttons allow you to select which type of property to use.
 
-   Location, Rotation, and Scale
 Mode (Rotation)
    Allows specifying the type of rotation input to use, including different :term:`Euler` orders,
    :term:`Quaternion`, and other :ref:`Rotation Channel Modes <drivers-variables-rotation-modes>`.
@@ -68,14 +69,19 @@ Mode (Rotation)
 
    In the *Quaternion* mode the channels are converted to weighted angles in the same way as
    the swing angles of the :ref:`Swing and X/Y/Z Twist <drivers-variables-rotation-modes>` modes.
-From
+
+X/Y/Z Min, Max
    Independently for each axis (X, Y, and Z) the min and max number fields control
    the lower and upper bounds of the input value range.
    Note that if a min value is higher than its corresponding max value,
    the constraint behaves as if it had the same value as the max one.
 
-Source to Destination Mapping
-   The three *Axis Mapping* selectors allow you to select which input axis to map to,
+
+Mapping
+-------
+
+Source Axis X, Y, Z
+   The three axis selectors allow you to select which input axis to map to,
    respectively (from top to bottom), the X, Y and Z output (owner) axes.
 
 
@@ -84,18 +90,21 @@ Destination
 
 It contains the output (to owner) settings.
 
-Map To
+Loc, Rot, Scale
    The three radio buttons allow you to select which type of property to control.
 
    Location, Rotation, and Scale
+
 Order (Rotation)
    For rotation, allows specifying which :term:`Euler` order to use during evaluation
    of the constraint. Defaults to using the order of the constraint owner.
-To
-   The *min* and *max* number fields control the lower and upper bounds of the output value range,
+
+X/Y/Z Min, Max
+   The *Min* and *Max* number fields control the lower and upper bounds of the output value range,
    independently for each mapped axis.
    Note that if a min value is higher than its corresponding max value,
    the constraint behaves as if it had the same value as the max one.
+
 Mix
    Specifies how the result of the constraint is combined with the existing transformation.
    The set of available choices varies based on the type of transformation.
@@ -112,8 +121,6 @@ Mix
    After Original (Rotation)
       The new rotation is added after the existing rotation, as if it was applied to
       a child of the constraint owner.
-Space
-   Standard conversion between spaces.
 
 .. note::
 
@@ -131,5 +138,9 @@ Space
      whatever the real values are, the constraint will always take their absolute values (i.e. invert negative ones).
    - When a *min* value is higher than its corresponding *max* one,
      both are considered equal to the *max* one. This implies you cannot create "reversed" mappings...
+
+
+Example
+=======
 
 .. vimeo:: 171275353

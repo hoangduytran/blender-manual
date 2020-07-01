@@ -40,18 +40,18 @@ Options
 
 Limit X, Y, Z
    These buttons enable the rotation limit around respectively the X, Y and Z axes of the owner,
-   in the chosen *Space*.
+   in the chosen *Owner Space*.
    The *Min* and *Max* number fields to their right control the value of
    their lower and upper boundaries, respectively.
 
-   Note that:
+   .. note::
 
-   - If a min value is higher than its corresponding max value,
-     the constraint behaves as if it had the same value as the max one.
-   - Unlike the :doc:`Limit Location constraint </animation/constraints/transform/limit_location>`,
-     you cannot enable separately lower or upper limits...
+      - If a min value is higher than its corresponding max value,
+        the constraint behaves as if it had the same value as the max one.
+      - Unlike the :doc:`Limit Location constraint </animation/constraints/transform/limit_location>`,
+        you cannot enable separately lower or upper limits...
 
-For Transform
+Affect Transform
    We saw that by default, even though visually constrained, the owner can still have rotations out of bounds
    (as shown by the *Transform* panel).
    Well, when you enable this button, this is no more possible --
@@ -59,7 +59,11 @@ For Transform
    Note however, that the constraint does not directly modifies the rotation values:
    you have to rotate one way or the other its owner, for this to take effect...
 
-Convert
+Owner Space
    This constraint allows you to choose in which space evaluate its owner's transform properties.
+
+
+Example
+=======
 
 .. vimeo:: 171115852

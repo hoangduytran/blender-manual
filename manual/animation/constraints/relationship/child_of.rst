@@ -36,11 +36,14 @@ Options
 Target
    The target object that this object will act as a child of.
    :ref:`ui-data-id` used to select the constraint's target, and is not functional (red state) when it has none.
-Location X, Y, Z
+
+Location
    Each of these buttons will make the parent affect or not affect the location along the corresponding axis.
-Rotation X, Y, Z
+
+Rotation
    Each of these buttons will make the parent affect or not affect the rotation around the corresponding axis.
-Scale X, Y, Z
+
+Scale
    Each of these buttons will make the parent affect or not affect the scale along the corresponding axis.
 
 Set Inverse
@@ -55,7 +58,7 @@ Clear Inverse
 
 
 Tips
-----
+====
 
 When creating a new parent relationship using this constraint, it is usually necessary to
 click on the *Set Inverse* button after assigning the parent. As noted above,

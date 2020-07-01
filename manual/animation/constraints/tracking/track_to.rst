@@ -34,23 +34,31 @@ Options
 
       Track To panel.
 
-Targets
+Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
-To
+
+Track Axis
    The tracking local axis, i.e. the owner's axis to point at the target.
    The negative options force the relevant axis to point away from the target.
+
 Up
    The "upward-most" local axis, i.e. the owner's axis to be aligned (as much as possible)
    with the global Z axis (or target Z axis, when the *Target* button is enabled).
+
 Target Z
    By default, the owner's *Up* axis is (as much as possible) aligned with the global Z axis,
    during the tracking rotations. When this button is enabled, the *Up* axis will be (as much as possible)
    aligned with the target's local Z axis?
-Space
+
+Target, Owner
    Standard conversion between spaces.
 
 .. warning::
 
-   If you choose the same axis for *To* and *Up*, the constraint will not be functional anymore (red state).
+   If you choose the same axis for *Tracking Axis* and *Up*, the constraint will not be functional anymore (red state).
+
+
+Example
+=======
 
 .. vimeo:: 171283522

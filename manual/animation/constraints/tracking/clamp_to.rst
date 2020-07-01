@@ -54,6 +54,7 @@ Target
    The Target: field must be a curve object type. If this :ref:`ui-data-id` field is not filled in
    then it will be highlighted in red indicating that this constraint does not have all the information
    it needs to carry out its task and will therefore be ignored on the constraint stack.
+
 Main Axis
    This button group controls which global axis (X, Y or Z) is the main direction of the path.
    When clamping the object to the target curve, it will not be moved significantly on this axis.
@@ -63,11 +64,16 @@ Main Axis
    it will be the Z axis because the main direction of the launch path is up.
    The default *Auto* option chooses the axis which the curve is longest in (or X if they are equal).
    This is usually the best option.
+
 Cyclic
    By default, once the object has reached one end of its target curve, it will be constrained there.
    When the *Cyclic* option is enabled, as soon as it reaches one end of the curve,
    it is instantaneously moved to its other end.
    This is of course primarily designed for closed curves (circles & co),
    as this allows your owner to go around it over and over.
+
+
+Example
+=======
 
 .. vimeo:: 171276763

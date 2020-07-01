@@ -22,11 +22,11 @@ Order
    Allows specifying which :term:`Euler` order to use during the copy operation.
    Defaults to the order of the owner.
 
-X, Y, Z
+Axis
    These buttons control which axes are constrained.
 
-   Invert
-      The *Invert* buttons invert their respective rotation values.
+Invert
+   Invert their respective corresponding axis coordinates.
 
 Mix
    Specifies how the new rotation is combined with the existing rotation.
@@ -46,7 +46,11 @@ Mix
       to be similar to the *Before Original* behavior, but does not work correctly
       with multiple axis rotations, and is thus deprecated.
 
-Space
+Target, Owner
    Standard conversion between spaces.
+
+
+Example
+=======
 
 .. vimeo:: 171073854

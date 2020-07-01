@@ -31,8 +31,7 @@ Which axis does what is up to you!
 If you have trouble understanding the buttons of this constraint, read the tooltips,
 they are pretty good. If you do not know where your object's axes are,
 enable *Axis* in :menuselection:`Properties --> Armature --> Viewport Display`.
-Or, if you are working with bones, turn on the *Axes* button
-in the *Armature* menu's *Display* panel.
+Or, if you are working with bones, turn on the *Axes* in the armature's *Viewport Display* panel.
 
 This constraint was designed to work cooperatively with the *Track To* constraint.
 If you set the axes buttons right for these two constraints,
@@ -52,15 +51,21 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
-To
+
+Track Axis
    The tracking local axis, i.e. the owner's axis to point at the target.
    The negative options force the relevant axis to point away from the target.
-Lock
+
+Locked Axis
    The locked local axis, i.e. the owner's axis which cannot be re-oriented to track the target.
 
 .. important::
 
-   If you choose the same axis for *To* and *Lock*, the constraint will no
-   longer be functional (red state).
+   If you choose the same axis for *Tracking Axis* and *Locked axis*,
+   the constraint will no longer be functional (red state).
+
+
+Example
+=======
 
 .. vimeo:: 171280773

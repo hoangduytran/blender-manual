@@ -82,25 +82,35 @@ Options
 Target
    :ref:`ui-data-id` used to select the constraint's target, which *must* be a curve object,
    and is not functional (red state) when it has none.
-Animate Path
-   Adds an F-curve with options for the start and end frame. ToDo: from above.
-Curve Radius
-   Objects scaled by the curve radius. See :doc:`Curve Editing </modeling/curves/properties/geometry>`.
-Fixed Position
-   Object will stay locked to a single point somewhere along the length of the curve regardless of time.
+
 Offset
    The number of frames to offset from the "animation" defined by the path (by default, from frame 1).
+
+Forward Axis
+   The axis of the object that has to be aligned with the forward direction of the path
+   (i.e. tangent to the curve at the owner's position).
+
+Up Axis
+   The axis of the object that has to be aligned (as much as possible) with the world Z axis.
+   In fact, with this option activated, the behavior of the owner shares some properties with
+   the one caused by a :doc:`Locked Track constraint </animation/constraints/tracking/locked_track>`,
+   with the path as "axle", and the world Z axis as "magnet".
+
+Fixed Position
+   Object will stay locked to a single point somewhere along the length of the curve regardless of time.
+
+Curve Radius
+   Objects scaled by the curve radius. See :doc:`Curve Editing </modeling/curves/properties/geometry>`.
+
 Follow Curve
    If this option is not activated, the owner's rotation is not modified by the curve; otherwise,
-   it is affected depending on the following options:
+   it is affected depending on the Forward and Up Axes.
 
-   Forward
-      The axis of the object that has to be aligned with the forward direction of the path
-      (i.e. tangent to the curve at the owner's position).
-   Up
-      The axis of the object that has to be aligned (as much as possible) with the world Z axis.
-      In fact, with this option activated, the behavior of the owner shares some properties with
-      the one caused by a :doc:`Locked Track constraint </animation/constraints/tracking/locked_track>`,
-      with the path as "axle", and the world Z axis as "magnet".
+Animate Path
+   Adds an F-curve with options for the start and end frame. ToDo: from above.
+
+
+Example
+=======
 
 .. vimeo:: 171554266

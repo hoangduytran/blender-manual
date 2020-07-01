@@ -31,11 +31,12 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
-Rest Length
+
+Original Length
    This number field sets the rest distance between the owner and its target, i.e.
    the distance at which there is no deformation (stretching) of the owner.
 
-   Reset
+   Reset Original Length ``X``
       When clicked, this small button will recalculate the *Rest Length* value,
       so that it corresponds to the actual distance between the owner and its target
       (i.e. the distance before this constraint is applied).
@@ -46,14 +47,18 @@ Volume Variation
    This number field controls the amount of "volume" variation exponentially to the stretching amount.
    Note that the 0.0 value is not allowed, if you want to disable the volume feature,
    use the *None* button (see below).
-Volume Min/Max
+
+Volume Min, Max
    Limits for the volume preservation to a minimum and maximum scaling each by a *Bulge* factor.
+
 Smooth
    Smoothness factor to make limits less visible.
-Volume
+
+Maintain Volume
    These buttons control which of the X and/or Z axes should be affected (scaled up/down)
    to preserve the virtual volume while stretching along the Y axis.
    If you enable the *none* button, the volumetric features are disabled.
+
 Rotation
    Specifies how the owner should be rotated to track the target with its Y axis.
 
@@ -64,5 +69,9 @@ Rotation
    Swing
       The constraint uses a single :term:`Swing` rotation, equivalent to
       the :doc:`Damped Track constraint </animation/constraints/tracking/damped_track>`.
+
+
+Example
+=======
 
 .. vimeo:: 171283118

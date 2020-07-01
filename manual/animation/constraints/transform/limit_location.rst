@@ -37,19 +37,19 @@ Options
 
       Limit Location panel.
 
-Minimum X, Minimum Y, Minimum Z
+Minimum X, Y, Z
    These buttons enable the lower boundary for the location of the owner's origin along,
    respectively, the X, Y and Z axes of the chosen *Space*.
    The number field below them controls the value of their limit.
    Note that if a min value is higher than its corresponding max value,
    the constraint behaves as if it had the same value as the max one.
 
-Maximum X, Maximum Y, Maximum Z
+Maximum X, Y, Z
    These buttons enable the upper boundary for the location of the owner's origin along,
    respectively, the X, Y and Z axes of the chosen *Space*.
    Same options as above.
 
-For Transform
+Affect Transform
    We saw that by default, even though visually constrained,
    the owner can still have coordinates out of bounds (as shown by the *Transform* panel).
    Well, when you enable this button, this is no longer possible --
@@ -57,7 +57,11 @@ For Transform
    Note however, that the constraint does not directly modify the coordinates:
    you have to select its owner one way or another for this to take effect...
 
-Convert
+Owner Space
    This constraint allows you to choose in which space to evaluate its owner's transform properties.
+
+
+Example
+=======
 
 .. vimeo:: 171115770

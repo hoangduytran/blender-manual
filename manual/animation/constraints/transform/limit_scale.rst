@@ -56,14 +56,19 @@ Minimum/Maximum X, Y, Z
       If a min value is higher than its corresponding max value,
       the constraint behaves as if it had the same value as the max one.
 
-For Transform
+Affect Transform
    We saw that by default, even though visually constrained, and except for the negative values,
    the owner can still have scales out of bounds (as shown by the *Transform* panel).
    Well, when you enable this button, this is no longer possible,
    the owner transform properties are also limited by the constraint.
    Note however, that the constraint does not directly modify the scale values:
    you have to scale its owner one way or another for this to take effect.
-Convert
+
+Owner Space
    This constraint allows you to choose in which space to evaluate its owner's transform properties.
+
+
+Example
+=======
 
 .. vimeo:: 171275278

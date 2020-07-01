@@ -43,45 +43,9 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
-Bone
-   When target is an armature object, use this field to select the target bone.
-Transform Channel
-   This selector controls which transform property
-   (location, rotation or scale along/around one of its axes) from the target to use as "action driver".
-Target Space
-   This constraint allows you to choose in which space to evaluate its target's transform properties.
-To Action
-   Select the name of the action you want to use.
 
-   .. warning::
-
-      Even though it might not be in red state (UI refresh problems...),
-      this constraint is obviously not functional when this field does not contain a valid action.
-
-Object Action
-   Bones **only**, when enabled,
-   this option will make the constrained bone use the "object" part of the linked action,
-   instead of the "same-named pose" part. This allows you to apply the action of an object to a bone.
-
-Target Range Min/Max
-   The lower and upper bounds of the driving transform property value.
-
-   .. warning::
-
-      Unfortunately, here again we find the constraint's limitations:
-
-      - When using a rotation property as "driver",
-        these values are "mapped back" to the (-180.0 to 180.0) range.
-      - When using a scale property as "driver", these values are limited to null or positive values.
-
-Action Range Start/End
-   The starting and ending frames of the action to be mapped.
-
-   .. note::
-
-      - These values must be strictly positive.
-      - By default, both values are set to 0, which disables the mapping
-        (i.e. the owner just gets the properties defined at frame 0 of the linked action...).
+   Bone
+      When target is an armature object, use this field to select the target bone.
 
 Mix
    Specifies how the keyframed transformation from the action is combined with the existing transformation.
@@ -100,6 +64,54 @@ Mix
       The action transformation is added after the existing transformation, as if it was
       applied locally to an imaginary child of the constraint owner with ordinary parenting.
       This mode can create shear and is thus not recommended for use.
+
+
+Target
+------
+
+Channel
+   This selector controls which transform property
+   (location, rotation or scale along/around one of its axes) from the target to use as "action driver".
+
+Target Space
+   This constraint allows you to choose in which space to evaluate its target's transform properties.
+
+Range Min, Max
+   The lower and upper bounds of the driving transform property value.
+
+   .. warning::
+
+      Unfortunately, here again we find the constraint's limitations:
+
+      - When using a rotation property as "driver",
+        these values are "mapped back" to the (-180.0 to 180.0) range.
+      - When using a scale property as "driver", these values are limited to null or positive values.
+
+
+Action
+------
+
+Action
+   Select the name of the action you want to use.
+
+   .. warning::
+
+      Even though it might not be in red state (UI refresh problems...),
+      this constraint is obviously not functional when this field does not contain a valid action.
+
+Object Action
+   Bones **only**, when enabled,
+   this option will make the constrained bone use the "object" part of the linked action,
+   instead of the "same-named pose" part. This allows you to apply the action of an object to a bone.
+
+Frame Start, End
+   The starting and ending frames of the action to be mapped.
+
+   .. note::
+
+      - These values must be strictly positive.
+      - By default, both values are set to 0, which disables the mapping
+        (i.e. the owner just gets the properties defined at frame 0 of the linked action...).
 
 
 Notes
@@ -124,5 +136,9 @@ Notes
   (to affect all the keyed bones in the action at once) will not work...
 - Note also that you can use the :doc:`pose library feature </animation/armatures/properties/pose_library>` to
   create/edit a *Pose* action data-block... just remember that in this situation, there is one pose per frame!
+
+
+Example
+=======
 
 .. vimeo:: 171554048

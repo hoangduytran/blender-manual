@@ -23,15 +23,14 @@ Options
 
       Floor panel.
 
-Targets
+Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
-Use Rotation
-   Forces the constraint to take the target's rotation into account.
-   This allows you to have a "floor" plane of any orientation you like, not just the global XY, XZ and YZ ones...
+
 Offset
    Allows you to offset the "floor" plane from the target's origin,
    by the given number of units. Use it e.g.
    to account for the distance from a foot bone to the surface of the foot's mesh.
+
 Max/Min
    Controls which plane will be the "floor".
    The names of the buttons correspond, indeed, to the *normal* to this plane
@@ -42,7 +41,16 @@ Max/Min
    but also a side of it which is forbidden to the owner,
    you can choose which side by enabling either the positive or negative normal axis...
    e.g. by default Z, the owner is stuck in the positive Z coordinates.
-Space
+
+Use Rotation
+   Forces the constraint to take the target's rotation into account.
+   This allows you to have a "floor" plane of any orientation you like, not just the global XY, XZ and YZ ones...
+
+Target/Owner
    Standard conversion between spaces.
+
+
+Example
+=======
 
 .. vimeo:: 171554207

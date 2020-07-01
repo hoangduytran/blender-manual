@@ -1,8 +1,8 @@
 .. _bpy.types.KinematicConstraint:
 
-********************
-IK Solver Constraint
-********************
+*****************************
+Inverse Kinematics Constraint
+*****************************
 
 The *Inverse Kinematics* constraint implements the *inverse kinematics* armature
 posing technique. Hence, it is only available for bones.
@@ -31,24 +31,31 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the an armature.
+
 Pole Target
    Object for pole rotation.
+
 Iterations
    Maximum number of solving iterations.
+
 Chain Length
    How many bones are included in the IK effect. Set to 0 to include all bones.
 
-   Use Tail
-      Include bone's tail as last element in chain.
-   Stretch
-      Enable IK stretching.
-Weight
-   Position
-      For Tree-IK: Weight of position control for this target.
-   Rotations
-      Chain follows rotation of target.
+Use Tail
+   Include bone's tail as last element in chain.
+
+Stretch
+   Enable IK stretching.
+
+Weight Position
+   For Tree-IK: Weight of position control for this target.
+
+Rotation
+   Chain follows rotation of target.
+
 Target
    Disable for targetless IK.
+
 Rotation
    Chain follows rotation of target.
 
@@ -93,5 +100,9 @@ IK Type
 .. note::
 
    The *Influence* parameter is not implemented if *Pole Target* is used.
+
+
+Example
+=======
 
 .. vimeo:: 171279647

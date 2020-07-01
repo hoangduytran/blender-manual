@@ -7,6 +7,11 @@ Maintain Volume Constraint
 The *Maintain Volume* constraint limits the volume of a mesh or
 a bone to a given ratio of its original volume.
 
+.. seealso::
+
+   `Harkyman on the development of the Maintain Volume constraint
+   <http://www.harkyman.com/2010/03/16/maintaining-bone-volume-a-new-constraint/>`__.
+
 
 Options
 =======
@@ -16,10 +21,6 @@ Options
 
       Maintain Volume Constraint.
 
-Free
-   The free-scaling axis of the object.
-
-   X, Y, Z
 Mode
    Specifies how the constraint handles scaling of the non-free axes.
 
@@ -32,14 +33,18 @@ Mode
    Single Axis
       This mode maintains the volume only when the object is scaled just on its free axis.
       Any additional non-free axis scaling is passed through.
+
+Free Axis
+   The free-scaling axis of the object.
+
 Volume
    The bone's rest volume.
-Space
+
+Owner Space
    This constraint allows you to choose in which space to evaluate its owner's transform properties.
 
-.. seealso::
 
-   `Harkyman on the development of the Maintain Volume constraint
-   <http://www.harkyman.com/2010/03/16/maintaining-bone-volume-a-new-constraint/>`__.
+Example
+=======
 
 .. vimeo:: 171275315

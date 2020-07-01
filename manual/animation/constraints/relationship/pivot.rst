@@ -19,11 +19,20 @@ Options
 
 Target
    :ref:`ui-data-id` for the selection of the object to be used as a pivot point.
-Pivot Offset
+
+Use Relative Offset
+   Offset will be an absolute point in space instead of relative to the target.
+
+Pivot Point X, Y, Z
    Offset of pivot from target.
-Pivot When
-   Always, Z Rot, Y Rot...
-      Todo.
+
+Rotation Range
+   Rotation range on which pivoting should occur.
+
+   Always
+      Use the pivot point in every rotation.
+   -X, -Y, -Z, X, Y, Z Rot
+      Use the pivot point in the corresponding direction around the corresponding axis.
 
 
 Example

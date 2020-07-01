@@ -27,7 +27,7 @@ Target
    :ref:`ui-data-id` used to select the constraints target,
    and is not functional (red state) when it has none.
 
-X, Y, Z
+Axis
    These buttons control which axes of the target scale are copied.
 
 Power
@@ -44,7 +44,7 @@ Offset
 Additive
    Uses addition instead of multiplication in the implementation of the *Offset* option.
 
-Space
+Target, Owner
    Standard conversion between spaces.
 
 .. note::
@@ -58,5 +58,9 @@ Space
 
    To copy scale from one axis of the target to all axes of the owner,
    disable other axes, enable *Make Uniform*, and set *Power* to 3.
+
+
+Example
+=======
 
 .. vimeo:: 171077617

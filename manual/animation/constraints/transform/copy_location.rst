@@ -24,17 +24,17 @@ Options
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
 
-X, Y, Z
+Axis
    These buttons control which axes are constrained.
 
-   Invert
-      The *Invert* buttons invert their respective preceding coordinates.
+Invert
+   Invert their respective corresponding axis coordinates.
 
 Offset
    When enabled, this control allows the owner to be moved (using its current transform properties),
    relative to its target's position.
 
-Space
+Target, Owner
    Standard conversion between spaces.
 
 

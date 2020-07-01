@@ -17,6 +17,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+
 Mix
    Specifies how the copied transformation is combined with the existing transformation.
 
@@ -32,7 +33,12 @@ Mix
       applied locally to an imaginary child of the constraint owner. Scale is handled like
       in the :ref:`Aligned Inherit Scale <bone-relations-inherit-settings>` mode of bones
       to avoid creating shear.
-Space
+
+Target, Owner
    Standard conversion between spaces.
+
+
+Example
+=======
 
 .. vimeo:: 171108888

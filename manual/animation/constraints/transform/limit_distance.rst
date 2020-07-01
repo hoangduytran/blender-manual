@@ -29,12 +29,14 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraint's target, and is not functional (red state) when it has none.
+
 Distance
    This number field sets the limit distance, i.e. the radius of the constraining sphere.
-Reset Distance
-   When clicked, this small button will reset the *Distance* value,
-   so that it corresponds to the actual distance between the owner and its target
-   (i.e. the distance before this constraint is applied).
+
+   Reset Distance ``X``
+      When clicked, this small button will reset the *Distance* value,
+      so that it corresponds to the actual distance between the owner and its target
+      (i.e. the distance before this constraint is applied).
 
 Clamp Region
    The *Limit Mode* select menu allows you to choose how to use the sphere
@@ -47,8 +49,15 @@ Clamp Region
    Surface
       The owner is constrained *on the surface* of the sphere.
 
-For Transform
+Affect Transform
    Transform operators will take the constraint into account to immediately restrict
    the resulting transform property values.
+
+Target, Owner
+   Standard conversion between spaces.
+
+
+Example
+=======
 
 .. vimeo:: 171109014

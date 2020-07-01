@@ -42,13 +42,15 @@ Target
    :ref:`ui-data-id` used to select the target curve.
 
 
-Spline Fitting
---------------
+Fitting
+-------
 
 Chain Length
    How many bones are included in the chain.
+
 Even Division
    Ignore the relative length of the bones when fitting to the curve.
+
 Chain Offset
    Retain the offset of the root joint from the start point of the curve.
 
@@ -59,6 +61,7 @@ Chain Scaling
 Use Curve Radius
    Average radius of the endpoints is used to tweak the X and Z
    scaling of the bones, on top of the X and Z scale mode.
+
 Y Scale Mode
    Specifies how the length of a bone is scaled when it is fitted to the curve,
    in addition to the effects of target curve object scale and curvature.
@@ -69,6 +72,7 @@ Y Scale Mode
       The bones are stretched to cover the entire length of the curve.
    Bone Original
       The original Y axis scale of the bone is used.
+
 XZ Scale Mode
    Scaling that a bone undergoes in the other two directions.
 
@@ -80,6 +84,7 @@ XZ Scale Mode
       Scale of the X and Z axes is the inverse of the Y scale.
    Volume Preservation
       Similar to the :ref:`Stretch To <constraints-stretch-to-volume-preservation>` constraint.
+
 Use Original Scale
    Specifies that *Inverse Scale* or *Volume Preservation* should be applied on top of
    the original scaling of the bones, like in the Stretch To constraint.
@@ -88,5 +93,9 @@ Use Original Scale
 
    This subject is seen in-depth in the
    :doc:`Armature Posing section </animation/armatures/posing/bone_constraints/inverse_kinematics/spline_ik>`.
+
+
+Example
+=======
 
 .. vimeo:: 171282278
