@@ -87,7 +87,7 @@ afterload: function() {
 warn_old: function(release, all_versions) {
 	var current = all_versions.dev
 	if (!current) {
-		console.log("Version Switch Error: no 'dev' in version.json.")
+		console.log("Version Switch Error: no 'dev' in version.json.");
 		return;
 	}
 	const m = current.match(/\d\.\d+/g);

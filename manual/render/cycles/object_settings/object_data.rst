@@ -20,17 +20,16 @@ Visibility
 
 Mask
    Shadow Catcher
-      Enables the object to only receive shadow rays.
-      It is to be noted that shadow catcher objects will interact with other CG objects via indirect light interaction.
-      This feature makes it really easy to combine :abbr:`CGI (Computer-Generated Imagery)` elements
-      into a real-world footage.
+      Enables the object to only receive shadow rays. It is to be noted that,
+      shadow catcher objects will interact with other CG objects via indirect light interaction.
+      This simplifies compositing :abbr:`CGI (Computer-Generated Imagery)` elements into real-world footage.
 
       .. figure:: /images/render_cycles_object-settings_object-data_shadow-catcher.jpg
 
          Example of the shadow catcher. Note how the material of the plane can still be viewed in the spheres.
 
    Holdout
-      Render pbjects as a holdout or matte, creating a hole in the image with zero :term:`Alpha`,
+      Render objects as a holdout or matte, creating a hole in the image with zero :term:`Alpha`,
       to fill out in :doc:`compositing </compositing/index>` with real footage or another render.
 
 
@@ -42,13 +41,13 @@ Ray Visibility
 
 Objects can be set to be invisible to particular ray types.
 This can be used, for example, to make an emitting mesh invisible to camera rays.
-For instancers, visibility is inherited; if the parent object is hidden for some ray types,
+For instanced objects, visibility is inherited; if the parent object is hidden for some ray types,
 the children will be hidden for these too.
 
 In terms of performance, using these options is more efficient that using a shader node setup
 that achieves the same effect.
 Objects invisible to a certain ray will be skipped in ray traversal already,
-leading to fewer rays cast and shaders executed.
+leading to fewer ray casts and shader executions.
 
 Camera
    Makes the object visible in camera rays.
@@ -94,7 +93,7 @@ These settings can be found
 in the Object Properties tab of the Properties.
 
 Steps
-   Controls accuracy of deformation motion blur, more steps gives more memory usage.
+   Controls accuracy of deformation motion blur, more steps uses more memory.
    The actual number of time steps is :math:`2^{steps -1}`.
 
 Deformation
@@ -104,8 +103,8 @@ Deformation
 
       An object modifier setup that changes mesh topology over time can not render
       deformation motion blur correctly. Deformation blur should be disabled for such objects.
-
-      Common examples of this are animated Booleans, Deformation before Edge Split, Remesh, Skin or Decimate modifiers.
+      Common examples of this are animated Booleans, Deformation
+      before Edge Split, Remesh, Skin or Decimate modifiers.
 
 
 Shading

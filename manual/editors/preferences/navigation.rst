@@ -57,7 +57,7 @@ Natural Trackpad Direction
 Auto
    Perspective
       When enabled, the view switches to perspective when orbiting the view,
-      setting axis views (Top/Side/Front/Back ... etc), sets the view to orthographic.
+      setting axis views (Top, Side, Front, Back, etc.), sets the view to orthographic.
 
       When disabled, orthographic/perspective mode needs to be changed manually.
    Auto Depth

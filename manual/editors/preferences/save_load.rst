@@ -14,8 +14,8 @@ Blend Files
 
 Save
    Save Prompt
-      Asks for confirmation before closing or opening a new
-      blend-file if the current file has unsaved changes
+      Asks for confirmation before closing or opening a new blend-file
+      if the current file has unsaved changes.
    Save Preview Images
       Previews of images and materials in the :doc:`File Browser </editors/file_browser>`
       are created on demand. To save these previews into your blend-file,
@@ -24,7 +24,7 @@ Save
 Default to
    Relative Paths
       Default value for :ref:`Relative Paths <files-blend-relative_paths>` when loading external files
-      such as images, sounds & linked libraries.
+      such as images, sounds, and linked libraries.
    Compress File
       Default value for :ref:`Compress file <files-blend-compress>` when saving blend files.
    Load UI
@@ -94,7 +94,7 @@ Filter File Extensions
    The selection of file types may be changed in the file region.
 
 Hide
-   Dot File & Datablocks
+   Dot File & Data-blocks
       Hide file which start with ``.`` on File Browsers and ID selector.
 
       .. hint::

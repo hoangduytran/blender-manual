@@ -57,10 +57,8 @@ Includes a custom note.
 .. hint::
 
    It can be useful to use the *Note* field if you are setting up a render farm.
-
    Since you can script any information you like into it,
    such as an identifier for the render node or the job number.
-
    For details on stamping arbitrary values,
    see: `this page <https://blender.stackexchange.com/questions/26643>`__.
 

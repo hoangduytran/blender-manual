@@ -107,4 +107,4 @@ Examples
 
 .. seealso:: 
 
-   :doc:`/addon/lighting/sun_position` add-on
+   :doc:`/addons/lighting/sun_position` add-on

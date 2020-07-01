@@ -62,9 +62,9 @@ Integer (lime green)
 String (dark gray)
    Used to pass a string value.
 Object (dark red)
-   Used to pass an object datablock.
+   Used to pass an object data-block.
 Image (dark green)
-   Used to pass an image datablock.
+   Used to pass an image data-block.
 
 
 Inputs

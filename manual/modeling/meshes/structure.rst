@@ -151,8 +151,7 @@ Enabling Custom Split Normals
    :Menu:      :menuselection:`Mesh --> Normals --> Split`
 
 Enables custom split normals.
-
-Also, any of the custom nmodeling_modeling_meshes_editing_normals_propertiesmeshes_editing_normals_propertiesormal editing tools (see below) will, as a convenience,
+Also, any of the custom normal editing tools (see below) will, as a convenience,
 enable custom normals if they are not already enabled.
 
 .. note::

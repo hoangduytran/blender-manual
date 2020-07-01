@@ -50,7 +50,7 @@ Tooltips
    Tooltips
       When enabled, a tooltip will appear when your mouse pointer is over a control.
       This tip explains the function of what is under the pointer,
-      gives the associated hotkey (if any).
+      shows the associated hotkey (if any).
    Python Tooltips
       Displays a property's Python information below the tooltip.
 
@@ -59,18 +59,15 @@ Editors
 =======
 
 Region Overlap
-   This makes regions overlap the viewport.
-   It means that the *Toolbar* and *Sidebar* regions,
-   will be displayed overlapping the 3D Viewport.
+   This makes regions overlap the viewport. It means that the *Toolbar* and *Sidebar* regions,
+   will be displayed overlapping the main area.
 
 Corner Splitting
-   Split & join by dragging from the corners.
-
+   Split and join by dragging from the corners.
    When disabled, you can use the context menu for area separators to perform these operations.
 
 Navigation Controls
-   Show navigation controls at top right of the window.
-
+   Show navigation controls at top right of the area.
    This impacts the 3D Viewport as well as image spaces.
 
    .. note::
@@ -86,8 +83,7 @@ Color Picker Type
 
 Header Position
    The default header position.
-
-   Using default uses top for most window types and the positions saved in the file.
+   Using default uses top for most editor types and the positions saved in the file.
    Otherwise you can choose to force top/bottom header alignment.
 
 Factor Display Type

@@ -45,7 +45,7 @@ Phase
 Randomize Phase
    Adds a random variation to the *Phase*.
 Dynamic
-   If Dynamic is enabled, only initializes particles to the choosen rotation and angular velocity and
+   If Dynamic is enabled, only initializes particles to the chosen rotation and angular velocity and
    let the physics simulation handle the rest.
    Particles then change their angular velocity if they collide with other objects
    (like in the real world due to friction between the colliding surfaces).

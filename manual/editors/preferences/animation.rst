@@ -53,7 +53,7 @@ Only Insert Needed
 
 Auto-Keyframing
    Show Warning
-      Displays a warning at the top right of the *3D View*, when moving objects, if *Auto Keyframe* is on.
+      Displays a warning at the top right of the *3D Viewport*, when moving objects, if *Auto Keyframe* is on.
    Only Insert Available
       This will only add keyframes to channels of F-curves that already exist.
    Enable in New Scenes

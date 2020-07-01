@@ -36,7 +36,7 @@ or not include some features of Blender.
 For example, some distributions do not build Blender with CUDA support, for licensing reasons.
 
 If there is a specific package for your distribution, you may choose what is preferable and most convenient,
-otherwise, there is nothing wrong with the official binary on `blender.org <https://www.blender.org/download/>`__.
+otherwise, the official binary is available on `blender.org <https://www.blender.org/download/>`__.
 
 
 Install from Snap
@@ -48,7 +48,7 @@ Assuming snap is already installed, Blender can be installed through snap with::
    snap install blender
 
 Installing from this method has a benefit that updates to Blender are automatically installed.
-Blender from Snap should have a more consitent distribution then individual package managers.
+Blender from Snap should have a more consistent distribution then individual package managers.
 
 
 Running from the Terminal

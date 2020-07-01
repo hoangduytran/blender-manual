@@ -201,7 +201,7 @@ Audio
    :Panel:     :menuselection:`Properties --> Scene --> Audio`
 
 Options to control global audio settings.
-To control how sounds plays back from within Blender, see the audio settings
+To control how sounds is played back from within Blender, see the audio settings
 in the :ref:`Preferences <prefs-system-sound>`.
 
 Volume
