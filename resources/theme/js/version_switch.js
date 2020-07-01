@@ -36,11 +36,11 @@ Drop.prototype={
 beforeInit: function() {
 	var that=this;
 	this.$btn.on("click", function(e){that.init();e.preventDefault();e.stopPropagation();});
-	this.$btn.on("keypress", function(e) { if(that.keybtnfilter(e)){that.init();e.preventDefault();e.stopPropagation();} });
+	this.$btn.on("keydown", function(e) { if(that.keybtnfilter(e)){that.init();e.preventDefault();e.stopPropagation();} });
 },
 init: function() {
 	this.$btn.off("click");
-	this.$btn.off("keypress");
+	this.$btn.off("keydown");
 
 	if(all_versions === "") {
 		this.$btn.addClass("wait");
@@ -77,12 +77,12 @@ afterload: function() {
 	this.$list.children(":first-child").remove();
 	this.$list.append(list);
 	var that = this;
-	this.$list.on("keypress", function(e) {that.keymove(e);});
+	this.$list.on("keydown", function(e) {that.keymove(e);});
 
 	this.$btn.removeClass("wait");
 	this.btnhandler();
 	this.$btn.on("mousedown", function(e){that.btnhandler(); e.preventDefault()});
-	this.$btn.on("keypress", function(e){ if(that.keybtnfilter(e)){that.btnhandler();} });
+	this.$btn.on("keydown", function(e){ if(that.keybtnfilter(e)){that.btnhandler();} });
 },
 warn_old: function(release, all_versions) {
 	var current = all_versions.dev
