@@ -50,7 +50,7 @@ so no additional vertex will be created (besides the first one).
 Options
 =======
 
-Knife Selection :kbd:`Shift-K`
+Knife Selection :kbd:`K`
    Activates the knife with another set of options so only selected faces are cut and
    *Cut through* is on by default.
 
