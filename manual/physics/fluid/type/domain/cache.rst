@@ -51,18 +51,24 @@ Type
 .. _bpy.types.FluidDomainSettings.cache_frame_start:
 
 Start
-   Frame on which to start the simulation.
+   Frame on which to start the simulation. This is the first frame that will be baked.
 
 .. _bpy.types.FluidDomainSettings.cache_frame_end:
 
 End
-   Frame on which to stop the simulation.
+   Frame on which to stop the simulation. This is the last frame that will be baked.
 
    .. note::
 
       The simulation is only calculated for positive frames between the *Start* and *End* frames
       of the *Cache* panel. So if you want a simulation that is longer than the default frame range
       you have to change the *End* frame.
+
+.. _bpy.types.FluidDomainSettings.cache_frame_offset:
+
+Offset
+   Frame offset that is used when loading the simulation from the cache.
+   It is not considered when baking the simulation, only when loading it.
 
 .. _bpy.types.FluidDomainSettings.use_resumable_cache:
 
