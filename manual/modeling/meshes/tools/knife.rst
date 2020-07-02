@@ -10,7 +10,7 @@ Knife
 
    :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Knife`
-   :Hotkey:    :kbd:`K` or :kbd:`Shift-K`
+   :Hotkey:    :kbd:`K`
 
 The Knife tool can be used to interactively subdivide (cut up)
 geometry by drawing lines or closed loops to create holes.
@@ -18,9 +18,6 @@ geometry by drawing lines or closed loops to create holes.
 
 Usage
 =====
-
-Drawing the Cut Line
---------------------
 
 When using *Knife*, the cursor changes to an icon of a scalpel
 and the header changes to display options for the tool.
@@ -32,80 +29,84 @@ so no additional vertex will be created (besides the first one).
 .. list-table::
 
    * - .. figure:: /images/modeling_meshes_tools_knife_line-before.png
-          :width: 200px
 
           Mesh before knife cut.
 
      - .. figure:: /images/modeling_meshes_tools_knife_line-active.png
-          :width: 200px
 
           Knife cut active.
 
      - .. figure:: /images/modeling_meshes_tools_knife_line-after.png
-          :width: 200px
 
           After confirming knife cut.
 
 
-Options
-=======
+Tool Settings
+=============
 
-Knife Selection :kbd:`K`
-   Activates the knife with another set of options so only selected faces are cut and
-   *Cut through* is on by default.
+Occlude Geometry
+   Only cut geometry visible on screen.
+
+Only Selected
+   Only cuts through selected geometry.
+
+
+Controls
+========
+
+Confirm kbd:`LMB` or :kbd:`Return`
+   Confirms the cut.
+   :kbd:`Return` will leave selected every edge except the new edges created from the cut.
+
+Cancel
+   Cancels the tool.
+
+Draw a Continuous Line :kbd:`LMB` drag.
+   So you can draw a free-hand line over a surface,
+   points will be created at edge intersections.
+
+Close Loop double-click :kbd:`LMB`
+   This is a quick way to close the loop you are currently cutting.
 
 New Cut :kbd:`E`
    Begins a new cut. This allows you to define multiple distinct cut lines.
    If multiple cuts have been defined, they are recognized as new snapping points.
 
-.. list-table::
+   .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_tools_knife_multiple-before.png
-          :width: 320px
+      * - .. figure:: /images/modeling_meshes_tools_knife_multiple-before.png
 
-          Creating multiple cuts.
+             Creating multiple cuts.
 
-     - .. figure:: /images/modeling_meshes_tools_knife_multiple-after.png
-          :width: 320px
+        - .. figure:: /images/modeling_meshes_tools_knife_multiple-after.png
 
-          Result of starting new cuts while in the tool.
+             Result of starting new cuts while in the tool.
 
 Midpoint Snap :kbd:`Ctrl`
    Hold to snap the cursor to the midpoint of edges,
    meaning that all cuts will be performed at the exact center of each cut edge.
+
 Ignore Snap :kbd:`Shift`
    Hold to make the tool ignore snapping,
    unlike the default where mouse cursor snaps to near edges.
+
 Cut Through: :kbd:`Z`
    Allow the Cut tool to cut through to obscured faces, instead of only the visible ones.
+
 Angle Constrain :kbd:`C`
    Constrains the cut to 45 degree increments.
-Close Loop double-click :kbd:`LMB`
-   This is a quick way to close the loop you are currently cutting.
-Draw a Continuous Line :kbd:`LMB` drag.
-   So you can draw a free-hand line over a surface,
-   points will be created at edge intersections.
 
-.. list-table::
+   .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_tools_knife_angle-before.png
-          :width: 320px
+      * - .. figure:: /images/modeling_meshes_tools_knife_angle-before.png
+             :width: 320px
 
-          Constraining cut angle.
+             Constraining cut angle.
 
-     - .. figure:: /images/modeling_meshes_tools_knife_angle-after.png
-          :width: 320px
+        - .. figure:: /images/modeling_meshes_tools_knife_angle-after.png
+             :width: 320px
 
-          Result of constraining cut angle.
-
-
-Confirming & Selection
-======================
-
-Pressing :kbd:`Esc` or :kbd:`RMB` at any time cancels the tool,
-and pressing :kbd:`LMB` or :kbd:`Return` confirms the cut, with the following options:
-
-:kbd:`Return` will leave selected every edge except the new edges created from the cut.
+             Result of constraining cut angle.
 
 
 Known Limitations
