@@ -28,52 +28,34 @@ Options
 
 Object
    The target object which has a particle system associated with it.
+
 Particle System
    Which particle system from the target *Object* to apply this modifier to.
 
+Create Instances
+   Regular
+      When enabled, the modifier will use the regular (parents) particles
+      to duplicate the mesh of the modified object.
+   Children
+      When enabled, the modifier will use the :doc:`children </physics/particles/emitter/children>` particles
+      to duplicate the mesh of the modified object.
+   Size
+      Scale the instanced copies of the mesh by the particle size attribute.
+      When this is disabled, all the copies appear the same size as the origin.
 
-Create From
------------
+      See the particle system's :doc:`Render </physics/particles/emitter/render>`
+      and :doc:`Children </physics/particles/emitter/children>` panels for particle's size options.
 
-Normal
-   When enabled, the modifier will use the regular (parents) particles
-   to duplicate the mesh of the modified object.
-Children
-   When enabled, the modifier will use the :doc:`children </physics/particles/emitter/children>` particles
-   to duplicate the mesh of the modified object.
-Size
-   Scale the instanced copies of the mesh by the particle size attribute.
-   When this is disabled, all the copies appear the same size as the origin.
-
-   See the particle system's :doc:`Render </physics/particles/emitter/render>`
-   and :doc:`Children </physics/particles/emitter/children>` panels for particle's size options.
-
-
-Show Particles When
--------------------
-
-Unborn
-   When enabled, the modifier will use the unborn particles
-   to duplicate the mesh of the modified object.
-Alive
-   When enabled, the modifier will use the alive particles
-   to duplicate the mesh of the modified object.
-Dead
-   When enabled, the modifier will use the dead particles
-   to duplicate the mesh of the modified object.
-
-
-Further Options
----------------
-
-Space
-   World, Local
-      Use :term:`World Space`, or :term:`Local Space` of the target object (that the particle system is assigned to).
-
-      - World space means that the locations of the copies of the modified mesh will depend
-        on the location of the modified object **and** of the target object.
-      - Local space means that the locations of the copies of the modified mesh will depend
-        only on the location of the modified object.
+Show
+   Unborn
+      When enabled, the modifier will use the unborn particles
+      to duplicate the mesh of the modified object.
+   Alive
+      When enabled, the modifier will use the alive particles
+      to duplicate the mesh of the modified object.
+   Dead
+      When enabled, the modifier will use the dead particles
+      to duplicate the mesh of the modified object.
 
 Amount
    The proportion of particles to be used.
@@ -90,63 +72,72 @@ Amount
       (e.g. with 100 particles in the target system, and an *Amount* value of ``0.1``,
       it can generate either up to 15 or 5 instances, instead of the 10 expected).
 
-   Offset
-      A relative offset in the range of particles used for instantiation.
-      Allows you to avoid overlapping of the used particles,
-      when the same particle system is used in multiple modifier instances.
+Offset
+   A relative offset in the range of particles used for instantiation.
+   Allows you to avoid overlapping of the used particles,
+   when the same particle system is used in multiple modifier instances.
 
-      .. tip::
+   .. tip::
 
-         If you want to fully avoid overlaps, your *Offset* value must be at least as high as your *Amount* value.
+      If you want to fully avoid overlaps, your *Offset* value must be at least as high as your *Amount* value.
 
-Rotation Axis X/Y/Z
+Coordinate Space
+   World, Local
+      Use :term:`World Space`, or :term:`Local Space` of the target object (that the particle system is assigned to).
+
+      - World space means that the locations of the copies of the modified mesh will depend
+        on the location of the modified object **and** of the target object.
+      - Local space means that the locations of the copies of the modified mesh will depend
+        only on the location of the modified object.
+
+Axis
    Specify which axis of the modified object to use as pole axis to apply
    the rotation from the instantiated particles.
 
 
-Using Paths
------------
+Create Along Paths
+------------------
 
 By default, the instances are placed depending on the particles position in the current frame.
-By enabling this option, you can select the position along the particles path regardless of the current frame.
+By enabling *Create Along Paths*, the instance of the modified object follows
+deforms its shape along the particle path (or the hair strand).
+This allows you to select the position along the particles path regardless of the current frame.
 
-You can adjust the particles' path (using the *Path* visualization type)
-on the :doc:`Render </physics/particles/emitter/render>` panel of the *Particle System* tab.
+.. tip::
+
+   You can adjust the particles' path (using the *Path* visualization type)
+   on the :doc:`Render </physics/particles/emitter/render>` panel of the *Particle System* tab.
 
 .. note::
 
    The particle system must be :doc:`baked </physics/baking>`, except for *Hair* type or *Keyed* physics.
 
-Create Along Paths
-   This option tries to make the instance of the modified object to follow,
-   to deform its shape along the particle path (or the hair strand).
-Keep Shape
-   Enabling this prevents the instance from being deformed,
-   and places it on the path according to the *Position* value.
 Position
    Specify what percentage of the path that the instance fills,
    or the position on the path if the *Keep Shape* option is enabled.
-
-   Random
-      Adds randomness to the *Position* value of each instance.
+Random
+   Adds randomness to the *Position* value of each instance.
 
 Rotation
    Specifies the rotation around the path.
+Random
+   Adds randomness to the *Rotation* value of each instance.
 
-   Random
-      Adds randomness to the *Rotation* value of each instance.
+Keep Shape
+   Enabling this prevents the instance from being deformed,
+   and places it on the path according to the *Position* value.
 
 
-Custom Data Layers
-------------------
+Layers
+------
 
 With these fields you can select the vertex color layers,
 which will be filled with colors based on the particles information.
 These vertex color layers can be used, for example, in a shader to add variance to a material.
 
-Index Layer
+Index
    A vertex color layer for values based on the particles index.
-Value Layer
+Value
    A vertex color layer for random per-particle values.
 
 
@@ -154,7 +145,6 @@ Examples
 ========
 
 .. figure:: /images/modeling_modifiers_physics_particle-instance_split-plane.jpg
-   :width: 600px
    :align: center
 
    Particle Instance modifier example.
@@ -167,7 +157,6 @@ See `example blend-file
 <https://en.blender.org/uploads/4/48/Manual_-_Modifiers_-_Particle_Instance_Modifiers_-_Split_Plane.blend>`__.
 
 .. figure:: /images/modeling_modifiers_physics_particle-instance_create-along-paths.jpg
-   :width: 600px
    :align: center
 
    Create Along Path example.

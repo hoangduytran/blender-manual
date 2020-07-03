@@ -38,6 +38,31 @@ Options
 
    The Explode modifier, with a Particle System above it.
 
+Particle UV
+   If set, the U value of the coordinates in that :term:`UV Map` will be overwritten
+   with the age of the particle attached to the matching mesh face
+   (in proportion, from 0 for not yet born particles, to 1 for dead ones).
+
+   The V value is set to a constant 0.5 value.
+
+   You can for example vary the color of a fragment (face) during the explosion phase,
+   by using a texture with a color gradient along its *U* axis.
+
+Show
+   Unborn
+      Show faces when their attached particles are unborn.
+   Alive
+      Show faces when their attached particles are alive.
+   Dead
+      Show faces when their attached particles are dead.
+
+Cut Edges
+   Split the mesh in pieces based on location of emitted particles, instead of using existing faces.
+   This will typically results in a splitting that appears more random.
+
+Size
+   Scale each face using the size of its attached particle, once that particle is alive.
+
 Vertex Group
    Vertices in this group may not be affected by the *Explode* modifier.
    Vertices with full weight are not affected at all,
@@ -52,35 +77,12 @@ Vertex Group
 
       The setting reverses the weight values of the group.
 
-   Protect
-      Clean vertex group edges. Depending on the weights assigned to that vertex group,
-      either completely protect those faces from being affected by the *Explode* modifier
-      (which would happen if the faces had a weight value of 1),
-      or completely remove protection from those faces
-      (which would happen if the faces had a weight value of 0).
-
-Particle UV
-   If set, the U value of the coordinates in that :term:`UV Map` will be overwritten
-   with the age of the particle attached to the matching mesh face
-   (in proportion, from 0 for not yet born particles, to 1 for dead ones).
-
-   The V value is set to a constant 0.5 value.
-
-   You can for example vary the color of a fragment (face) during the explosion phase,
-   by using a texture with a color gradient along its *U* axis.
-
-Cut Edges
-   Split the mesh in pieces based on location of emitted particles, instead of using existing faces.
-   This will typically results in a splitting that appears more random.
-
-Unborn
-   Show faces when their attached particles are unborn.
-Alive
-   Show faces when their attached particles are alive.
-Dead
-   Show faces when their attached particles are dead.
-Size
-   Scale each face using the size of its attached particle, once that particle is alive.
+Protect
+   Clean vertex group edges. Depending on the weights assigned to that vertex group,
+   either completely protect those faces from being affected by the *Explode* modifier
+   (which would happen if the faces had a weight value of 1),
+   or completely remove protection from those faces
+   (which would happen if the faces had a weight value of 0).
 
 Refresh
    Refresh data in the *Explode* modifier.
