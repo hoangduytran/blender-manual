@@ -9,12 +9,10 @@ Keying Sets
 
    The Active Keying Sets data ID in the Timeline.
 
-.. (alt) Keying Sets are a set of keyframe channels.
 
-Keying Sets are a collection of properties.
-They are used to record multiple properties at the same time.
-
-Now when you press :kbd:`I` in the 3D Viewport,
+Keying Sets are a collection of animated properties that are used to animate
+and keyframe multiple properties at the same time.
+For example, using Keying Sets you can press :kbd:`I` in the 3D Viewport,
 Blender will add keyframes for all the properties in the active keying set.
 
 There are some built-in Keying Sets and,
@@ -46,20 +44,25 @@ Active Keying Set
    Add ``+``
       Adds an empty Keying Set.
 
-
-Properties
-----------
-
 Description
    A short description of the keying set.
+
 Export to File
    Export Keying Set to a Python script ``File.py``.
    To re-add the keying set from the ``File.py``, open then run the ``File.py`` from the Text Editor.
 
-Keyframing Settings (General Override)
+
+Keyframing Settings
+-------------------
+
+General Override
    These options control all properties in the Keying Set.
    Note that the same settings in *Preferences* override these settings if enabled.
 
+Active Set Override
+   These options control individual properties in the Keying Set.
+
+Common Settings
    Only Needed
       Only insert keyframes where they are needed in the relevant F-curves.
    Visual Keying
@@ -83,39 +86,26 @@ This panel is used to add properties to the active Keying Set.
 
    The Active Keying Set panel.
 
-Active Keying Set Paths
+Paths
    A collection of paths in a :ref:`List View <ui-list-view>` each with a *Data Path* to a property
    to add to the active Keying Set.
 
    Add ``+``
       Adds an empty path.
 
+Target ID-Block
+   Set the ID Type and the *Object IDs* Data Path for the property.
 
-Properties
-----------
+Data Path
+   Set the rest of the Data Path for the property.
 
-Target
-   ID-Block
-      Set the ID Type and the *Object IDs* Data Path for the property.
-   Data Path
-      Set the rest of the Data Path for the property.
-   Array All Items
-      Use *All Items* from the Data Path or select the array index for a specific property.
+Array All Items
+   Use *All Items* from the Data Path or select the array index for a specific property.
 
 F-Curve Grouping
    This controls what group to add the channels to.
 
    Keying Set Name, None, Named Group
-
-Keyframing Settings (Active Set Override)
-   These options control individual properties in the Keying Set.
-
-   Only Needed
-      Only insert keyframes where they are needed in the relevant F-curves.
-   Visual Keying
-      Insert keyframes based on the visual transformation.
-   XYZ to RGB
-      For new F-curves, set the colors to RGB for the property set, Location XYZ for example.
 
 
 Adding Properties
