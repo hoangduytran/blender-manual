@@ -59,7 +59,7 @@ Source
 
 It contains the input (from target) settings.
 
-Loc, Rot, Scale
+Location, Rotation, Scale
    The radio buttons allow you to select which type of property to use.
 
 Mode (Rotation)
@@ -90,10 +90,8 @@ Destination
 
 It contains the output (to owner) settings.
 
-Loc, Rot, Scale
+Location, Rotation, Scale
    The three radio buttons allow you to select which type of property to control.
-
-   Location, Rotation, and Scale
 
 Order (Rotation)
    For rotation, allows specifying which :term:`Euler` order to use during evaluation

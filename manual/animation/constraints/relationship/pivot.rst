@@ -31,7 +31,7 @@ Rotation Range
 
    Always
       Use the pivot point in every rotation.
-   -X, -Y, -Z, X, Y, Z Rot
+   -X/-Y/-Z/X/Y/Z Rotation
       Use the pivot point in the corresponding direction around the corresponding axis.
 
 
