@@ -31,6 +31,11 @@ Add
    you can adjust the marker position by moving the mouse and
    using the track preview widget to control how accurately the marker is placed.
 
+Delete
+   Delete all selected tracks.
+
+.. _bpy.ops.clip.detect_features:
+
 Detect Features
    Detects all possible features on the current frame and places markers at these features.
    This operator does not take into account other frames,
@@ -41,13 +46,18 @@ Detect Features
    There are several properties for this operator:
 
    Placement
-      Used to control where to place markers. By default, they will be added through the whole frame,
-      but you can also outline some areas with interesting features with Grease Pencil
-      and place markers only inside the outlined area.
-      That is how the "Inside Grease Pencil" placement variant works.
-      You can also outline areas of no interest (like trees, humans and so)
-      and place markers outside of these areas.
-      That is how the "Outside Grease Pencil" placement variant works.
+      Controls where to place markers.
+
+      Whole Frame
+         Places markers throughout the whole frame.
+      Inside Annotated Area
+         Places markers inside the area outlined with the :ref:`tool-annotate`.
+         This can be used to outline some areas with interesting features
+         and place markers only inside the outlined area.
+      Outside Annotated Area
+         Places markers outside the area outlined with the :ref:`tool-annotate`.
+         This can be used to outline areas of no interest (like trees, humans, ect...)
+         and place markers outside of these areas.
    Margin
       Controls the distance from the image boundary for created markers.
       If markers are placed too close to the image boundary,
@@ -63,9 +73,6 @@ Detect Features
       Defines the minimal distance between placed markers.
       It is needed to prevent markers from being placed too close to each other
       (such placement can confuse the camera solver).
-
-Delete
-   Delete all selected tracks.
 
 
 .. _clip-tracking-settings:
@@ -87,7 +94,7 @@ Motion Model
    Defines which possible motions tracking feature has. This option should be set depending on
    which motion a particular feature has and it will make tracking most accurate for such a motion.
 
-   Location only, Location+Rotation, Location+Scale, Location+Rotation+Scale, Affine
+   Location, Location & Rotation, Location & Scale, Location, Rotation & Scale, Affine
 
    Perspective
       Is usually used to track a planar feature,

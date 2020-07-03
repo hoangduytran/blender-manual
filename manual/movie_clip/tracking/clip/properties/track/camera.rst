@@ -42,7 +42,7 @@ Coefficients
    Currently these values can be tweaked by hand only (there are no calibration tools yet)
    using tools available in Distortion mode.
    Basically, just tweak K1 until solving is most accurate for the known focal length
-   (but also take grid and Grease Pencil into account to prevent "impossible" distortion).
+   (but also take grid and annotations into account to prevent "impossible" distortion).
 
    The coefficients of the division model work independent from each other and
    positive values will give a barrel distortion.
