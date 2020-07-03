@@ -85,7 +85,7 @@ the spin will happen immediately. Fig. :ref:`fig-mesh-spin-profile` shows the re
 
 
 Angle
-=====
+-----
 
 .. _fig-mesh-spin-profile:
 
@@ -103,7 +103,7 @@ Angle
 
 
 Duplicate
-=========
+---------
 
 .. list-table::
 
@@ -115,11 +115,11 @@ Duplicate
      - .. figure:: /images/modeling_meshes_tools_spin_dubli.png
           :width: 320px
 
-          Result of Dupli enabled.
+          Result of *Duplicate* enabled.
 
 
 Merge Duplicates
-================
+----------------
 
 .. _fig-mesh-screw-duplicate:
 
@@ -154,7 +154,7 @@ Or, worse, too many vertices will have been merged.
 
 
 Recalculate Normals
-===================
+-------------------
 
 All that remains now is to recalculate the normals to the outside by selecting all vertices,
 pressing :kbd:`Ctrl-N` and validating *Recalculate Normals Outside* in the pop-up menu.

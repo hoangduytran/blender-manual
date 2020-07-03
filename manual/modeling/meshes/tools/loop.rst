@@ -20,10 +20,9 @@ Loop Cut
 
 
 Usage
------
+=====
 
 The tool is interactive and has two steps:
-
 
 #. Pre-Visualizing the Cut
 
@@ -58,8 +57,20 @@ The tool is interactive and has two steps:
           Interactive placement of edge loop between adjacent loops.
 
 
+Tool Settings
+=============
+
+Number of Cuts :kbd:`Wheel` or :kbd:`PageUp` / :kbd:`PageDown`
+   Increases and decreases the number of cuts to create.
+   These cuts are uniformly distributed in the original face loop,
+   and you will *not* be able to control their positions.
+
+Correct UVs
+   Corrects the corresponding UV coordinates, if these exist, to avoid image distortions.
+
+
 Options
--------
+=======
 
 These options are available while the tool is in use, and later in
 the :ref:`ui-undo-redo-adjust-last-operation` panel.
@@ -98,23 +109,30 @@ Smoothness :kbd:`Alt-Wheel`
    .. list-table::
 
       * - .. figure:: /images/modeling_meshes_tools_loop_unsmooth.png
-             :width: 250px
 
              Added edge loops without smoothing.
 
         - .. figure:: /images/modeling_meshes_tools_loop_smooth.png
-             :width: 250px
 
              Same edge loops, but with smoothing value.
 
 Falloff
    Falloff type for *Smoothness*, changes the shape of the profile.
+
 Factor
    Position of the edge loop relative to the surrounding edge loops.
+
 Even :kbd:`E`
    Only available for single edge loops.
    This matches the shape of the edge loop to one of the adjacent edge loops.
    (See :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>` for details.)
+
 Flip :kbd:`F`
    When Even is enabled, this flips the target edge loop to match.
    (See :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>` for details.)
+
+Clamp
+   Clamp within the edge extents.
+
+Correct UVs
+   Corrects the corresponding UV coordinates, if these exist, to avoid image distortions.

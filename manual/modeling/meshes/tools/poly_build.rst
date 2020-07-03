@@ -15,15 +15,15 @@ The *Poly Build* tool uses many built operators in an interactive way to add, de
 This is extremely useful for retopology.
 
 
-Options
-=======
+Tool Settings
+=============
 
 Create Quads
    Automatically split edges in triangles to maintain the quad topology.
 
 
-Usage
-=====
+Controls
+========
 
 Add Geometry :kbd:`Ctrl-LMB`
    Vertices or faces can be created by moving the cursor close to

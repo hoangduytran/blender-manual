@@ -34,10 +34,6 @@ and will continuously create and connect new vertices if you continue repeating 
 Creating Faces
 ==============
 
-.. ToDo:
-   This goes into too much detail about Ctrl-LMB for a simple introduction.
-   Such information should have its own page ~ ideasman42.
-
 .. figure:: /images/modeling_meshes_tools_extrude-cursor_quad.png
 
    Quad from an Edge with source automatically rotated.
