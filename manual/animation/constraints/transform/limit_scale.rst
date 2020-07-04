@@ -57,11 +57,11 @@ Minimum/Maximum X, Y, Z
       the constraint behaves as if it had the same value as the max one.
 
 Affect Transform
-   We saw that by default, even though visually constrained, and except for the negative values,
+   As pointed out before by default, even though visually constrained, and except for the negative values,
    the owner can still have scales out of bounds (as shown by the *Transform* panel).
-   Well, when you enable this button, this is no longer possible,
+   When you enable this checkbox, this is no longer possible,
    the owner transform properties are also limited by the constraint.
-   Note however, that the constraint does not directly modify the scale values:
+   However note that, the constraint does not directly modify the scale values:
    you have to scale its owner one way or another for this to take effect.
 
 Owner Space

@@ -59,8 +59,8 @@ Chain Scaling
 -------------
 
 Use Curve Radius
-   Average radius of the endpoints is used to tweak the X and Z
-   scaling of the bones, on top of the X and Z scale mode.
+   Average radius of the endpoints is used to tweak the X and Z scaling of
+   the bones, on top of the X and Z scale mode.
 
 Y Scale Mode
    Specifies how the length of a bone is scaled when it is fitted to the curve,
@@ -91,8 +91,8 @@ Use Original Scale
 
 .. seealso::
 
-   This subject is seen in-depth in the
-   :doc:`Armature Posing section </animation/armatures/posing/bone_constraints/inverse_kinematics/spline_ik>`.
+   This subject is seen in-depth in
+   the :doc:`Armature Posing section </animation/armatures/posing/bone_constraints/inverse_kinematics/spline_ik>`.
 
 
 Example

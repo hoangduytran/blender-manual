@@ -72,5 +72,4 @@ Remove Button ``X``
 
 Weight
    Weight associated with the bone, equivalent to vertex groups in the modifier.
-
    This value can be animated.

@@ -56,7 +56,7 @@ Detect Features
          and place markers only inside the outlined area.
       Outside Annotated Area
          Places markers outside the area outlined with the :ref:`tool-annotate`.
-         This can be used to outline areas of no interest (like trees, humans, ect...)
+         This can be used to outline areas of no interest (like trees, humans, etc.)
          and place markers outside of these areas.
    Margin
       Controls the distance from the image boundary for created markers.

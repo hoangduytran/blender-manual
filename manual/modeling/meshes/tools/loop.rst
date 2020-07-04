@@ -60,6 +60,6 @@ Correct UVs
 Options
 =======
 
-After the modal tool is run the
-:ref:`Loop Cut and Slide Options <modeling-meshes-editing-edge-loopcut-slide-options>`
+After the modal tool is run
+the :ref:`Loop Cut and Slide Options <modeling-meshes-editing-edge-loopcut-slide-options>`.
 These options are available in the :ref:`ui-undo-redo-adjust-last-operation` panel.

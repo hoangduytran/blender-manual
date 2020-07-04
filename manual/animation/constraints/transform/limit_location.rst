@@ -50,11 +50,11 @@ Maximum X, Y, Z
    Same options as above.
 
 Affect Transform
-   We saw that by default, even though visually constrained,
+   As pointed out before by default, even though visually constrained,
    the owner can still have coordinates out of bounds (as shown by the *Transform* panel).
-   Well, when you enable this button, this is no longer possible --
+   Well, when you enable this checkbox, this is no longer possible --
    the owner's transform properties are also limited by the constraint.
-   Note however, that the constraint does not directly modify the coordinates:
+   However note that, the constraint does not directly modify the coordinates:
    you have to select its owner one way or another for this to take effect...
 
 Owner Space

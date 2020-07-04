@@ -54,7 +54,7 @@ Only Selected
 Controls
 ========
 
-Confirm kbd:`LMB` or :kbd:`Return`
+Confirm :kbd:`LMB` or :kbd:`Return`
    Confirms the cut.
    :kbd:`Return` will leave selected every edge except the new edges created from the cut.
 

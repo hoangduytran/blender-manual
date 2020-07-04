@@ -21,7 +21,7 @@ Icon
    The constraint type icon.
 
 Name
-   Give the constraint a meaningful name in this text field, something that describes its intent.
+   Give the constraint a meaningful name in this text field, which describes its purpose.
    Meaningful names help you and your team members understand what each constraint is supposed to do.
 
    The *red* background is a warning that the constraint is not yet functional.

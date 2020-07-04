@@ -50,10 +50,10 @@ Options
       Clamp To panel.
 
 Target
-   The Target: field indicates which curve object the Clamp To constraint will track along.
-   The Target: field must be a curve object type. If this :ref:`ui-data-id` field is not filled in
-   then it will be highlighted in red indicating that this constraint does not have all the information
-   it needs to carry out its task and will therefore be ignored on the constraint stack.
+   The target :ref:`ui-data-id` indicates which curve object the Clamp To constraint will track along.
+   The target must be a curve object type. If this data ID is not filled in it will be highlighted in red.
+   This indicates that this constraint does not has all necessary information to function
+   and will therefore be ignored on the constraint stack.
 
 Main Axis
    This button group controls which global axis (X, Y or Z) is the main direction of the path.
@@ -69,7 +69,7 @@ Cyclic
    By default, once the object has reached one end of its target curve, it will be constrained there.
    When the *Cyclic* option is enabled, as soon as it reaches one end of the curve,
    it is instantaneously moved to its other end.
-   This is of course primarily designed for closed curves (circles & co),
+   This is of course primarily designed for closed curves (e.g. circles),
    as this allows your owner to go around it over and over.
 
 

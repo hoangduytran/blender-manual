@@ -72,7 +72,6 @@ Random Seed
 
 Generate Normals
    Simulates extra normal map data.
-
    This can be used by the Ocean texture, when mapped to Normals,
    as a bump map, and enables generating normal map image sequences when baking.
 
@@ -83,7 +82,6 @@ Waves
 Scale
    An overall scale control for the amplitude of the waves.
    It approximates the height or depth of the waves above or below zero.
-
    Rather than just scaling the ocean object in Z, it scales all aspects of the simulation,
    displacement in X and Y, and corresponding foam and normals too.
 
@@ -102,7 +100,6 @@ Wind Velocity
 Alignment
    The directionality of the wave shapes due to wind.
    At a value of 0, the wind and waves are randomly, uniformly oriented.
-
    With higher *Alignment* values, the wind is blowing in a more constant direction,
    making the waves appear more compressed and aligned to a single direction.
 

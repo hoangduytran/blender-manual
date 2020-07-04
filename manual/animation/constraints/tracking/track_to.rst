@@ -55,7 +55,8 @@ Target, Owner
 
 .. warning::
 
-   If you choose the same axis for *Tracking Axis* and *Up*, the constraint will not be functional anymore (red state).
+   If you choose the same axis for *Tracking Axis* and *Up*,
+   the constraint will not be functional anymore (red state).
 
 
 Example

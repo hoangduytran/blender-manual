@@ -9,17 +9,14 @@ Keying Sets
 
    The Active Keying Sets data ID in the Timeline.
 
-
-Keying Sets are a collection of animated properties that are used to animate
+Keying sets are a collection of animated properties that are used to animate
 and keyframe multiple properties at the same time.
-For example, using Keying Sets you can press :kbd:`I` in the 3D Viewport,
+For example, using keying sets you can press :kbd:`I` in the 3D Viewport,
 Blender will add keyframes for all the properties in the active keying set.
-
-There are some built-in Keying Sets and,
-also custom Keying Sets called *Absolute Keying Sets*.
-
-To select and use a Keying Set, set the *Active Keying Set*
-in the :ref:`Keying popover <timeline-keying>` in the Timeline Header,
+There are some built-in keying sets and,
+also custom keying sets called *Absolute Keying Sets*.
+To select and use a keying set, set the *Active Keying Set*
+in the :ref:`Keying popover <timeline-keying>` in the Timeline header,
 or the Keying Set panel, or press :kbd:`Shift-Ctrl-Alt-I` in the 3D Viewport.
 
 
@@ -39,16 +36,16 @@ This panel is used to add, select, manage *Absolute Keying Sets*.
    The Keying Set panel.
 
 Active Keying Set
-   The :ref:`List View <ui-list-view>` of Keying Sets in the active Scene.
+   The :ref:`List View <ui-list-view>` of keying sets in the active scene.
 
    Add ``+``
-      Adds an empty Keying Set.
+      Adds an empty keying set.
 
 Description
    A short description of the keying set.
 
 Export to File
-   Export Keying Set to a Python script ``File.py``.
+   Export keying set to a Python script ``File.py``.
    To re-add the keying set from the ``File.py``, open then run the ``File.py`` from the Text Editor.
 
 
@@ -56,11 +53,11 @@ Keyframing Settings
 -------------------
 
 General Override
-   These options control all properties in the Keying Set.
+   These options control all properties in the keying set.
    Note that the same settings in *Preferences* override these settings if enabled.
 
 Active Set Override
-   These options control individual properties in the Keying Set.
+   These options control individual properties in the keying set.
 
 Common Settings
    Only Needed
@@ -80,7 +77,7 @@ Active Keying Set Panel
    :Editor:    Properties
    :Panel:     :menuselection:`Scene --> Active Keying Set`
 
-This panel is used to add properties to the active Keying Set.
+This panel is used to add properties to the active keying set.
 
 .. figure:: /images/animation_keyframes_keying-sets_scene-active-keying-set-panel.png
 
@@ -88,13 +85,13 @@ This panel is used to add properties to the active Keying Set.
 
 Paths
    A collection of paths in a :ref:`List View <ui-list-view>` each with a *Data Path* to a property
-   to add to the active Keying Set.
+   to add to the active keying set.
 
    Add ``+``
       Adds an empty path.
 
 Target ID-Block
-   Set the ID Type and the *Object IDs* Data Path for the property.
+   Set the ID Type and the *Object IDs* data path for the property.
 
 Data Path
    Set the rest of the Data Path for the property.
