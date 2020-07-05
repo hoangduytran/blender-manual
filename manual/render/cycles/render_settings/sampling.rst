@@ -43,7 +43,7 @@ Render
    the solution becomes less noisy and more accurate.
 
    When using *Branched Path Tracing*, this changes the *AA Samples*
-   which are multiplied by the `Sub Samples`_ and improve anti-aliasing.
+   which are multiplied by the `Sub Samples`_ and improve :term:`Anti-aliasing`.
 Viewport
    Number of samples for viewport rendering. Setting this value to zero
    enables indefinite sampling of the viewport.
