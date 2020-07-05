@@ -22,8 +22,30 @@ Color
    Color of the hair.
 Offset
    Controls the way the light is rotated (angular shift) for the reflection/transmission.
+
+   .. figure:: /images/render_shader-nodes_shader_hair-bsdf_reflect-offset.png
+      :align: center
+
+      Reflection Offset.
+
+   .. figure:: /images/render_shader-nodes_shader_hair-bsdf_trans-offset.png
+      :align: center
+
+      Transmission Offset.
+
 Roughness U/V
    Controls the roughness in the direction light is skewed, and perpendicular to it.
+
+   .. list-table::
+
+      * - .. figure:: /images/render_shader-nodes_shader_hair-bsdf_reflect-roughness-uv.png
+
+             Reflection Roughness.
+
+        - .. figure:: /images/render_shader-nodes_shader_hair-bsdf_trans-roughness-uv.png
+
+             Transmission Roughness.
+
 Tangent
    Input tangent.
 
@@ -40,15 +62,15 @@ Component
    Transmission
       The light that passes through the hair and comes out the other side.
 
+   .. figure:: /images/render_shader-nodes_shader_hair-bsdf_mix-node.png
+      :align: center
+
+      With Mix Node: 0 = Full Reflection, 1 = Full Transmission.
+
+
 
 Outputs
 =======
 
 BSDF
    Standard shader output.
-
-
-Examples
-========
-
-Todo <2.8 add.
