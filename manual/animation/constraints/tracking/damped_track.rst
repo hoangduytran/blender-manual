@@ -30,6 +30,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraint's target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Track Axis
    Once the owner object has had a Damped Track constraint applied to it,
@@ -38,6 +39,10 @@ Track Axis
    the Target object along the selected axis direction.
 
    -X, -Y, -Z, X, Y, Z
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

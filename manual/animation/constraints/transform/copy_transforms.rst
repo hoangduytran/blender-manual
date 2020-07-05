@@ -17,6 +17,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Mix
    Specifies how the copied transformation is combined with the existing transformation.
@@ -34,8 +35,13 @@ Mix
       in the :ref:`Aligned Inherit Scale <bone-relations-inherit-settings>` mode of bones
       to avoid creating shear.
 
-Target, Owner
+Target/Owner
    Standard conversion between spaces.
+   See :ref:`common constraintant properties <rigging-constraints-interface-common-space>` for more information.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

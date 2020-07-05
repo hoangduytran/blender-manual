@@ -19,6 +19,7 @@ Options
 
 Target
    :ref:`ui-data-id` for the selection of the object to be used as a pivot point.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Use Relative Offset
    Offset will be an absolute point in space instead of relative to the target.
@@ -33,6 +34,10 @@ Rotation Range
       Use the pivot point in every rotation.
    -X/-Y/-Z/X/Y/Z Rotation
       Use the pivot point in the corresponding direction around the corresponding axis.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

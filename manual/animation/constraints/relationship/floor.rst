@@ -25,6 +25,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Offset
    Allows you to offset the "floor" plane from the target's origin,
@@ -48,6 +49,11 @@ Use Rotation
 
 Target/Owner
    Standard conversion between spaces.
+   See :ref:`common constraintant properties <rigging-constraints-interface-common-space>` for more information.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

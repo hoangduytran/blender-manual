@@ -51,6 +51,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Track Axis
    The tracking local axis, i.e. the owner's axis to point at the target.
@@ -63,6 +64,10 @@ Locked Axis
 
    If you choose the same axis for *Tracking Axis* and *Locked axis*,
    the constraint will no longer be functional (red state).
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

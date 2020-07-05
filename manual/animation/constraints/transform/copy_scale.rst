@@ -24,8 +24,8 @@ Options
       Copy Scale panel.
 
 Target
-   :ref:`ui-data-id` used to select the constraints target,
-   and is not functional (red state) when it has none.
+   :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Axis
    These buttons control which axes of the target scale are copied.
@@ -44,8 +44,13 @@ Offset
 Additive
    Uses addition instead of multiplication in the implementation of the *Offset* option.
 
-Target, Owner
+Target/Owner
    Standard conversion between spaces.
+   See :ref:`common constraintant properties <rigging-constraints-interface-common-space>` for more information.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 .. note::
 

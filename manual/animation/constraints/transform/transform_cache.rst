@@ -42,3 +42,7 @@ Manual Scale
 
 Object Path
    The path to the Alembic object inside the archive.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.

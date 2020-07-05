@@ -51,9 +51,8 @@ Options
 
 Target
    The target :ref:`ui-data-id` indicates which curve object the Clamp To constraint will track along.
-   The target must be a curve object type. If this data ID is not filled in it will be highlighted in red.
-   This indicates that this constraint does not has all necessary information to function
-   and will therefore be ignored on the constraint stack.
+   The target must be a curve object type.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Main Axis
    This button group controls which global axis (X, Y or Z) is the main direction of the path.
@@ -71,6 +70,10 @@ Cyclic
    it is instantaneously moved to its other end.
    This is of course primarily designed for closed curves (e.g. circles),
    as this allows your owner to go around it over and over.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

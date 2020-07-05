@@ -36,6 +36,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Track Axis
    The tracking local axis, i.e. the owner's axis to point at the target.
@@ -50,8 +51,13 @@ Target Z
    during the tracking rotations. When this button is enabled, the *Up* axis will be (as much as possible)
    aligned with the target's local Z axis?
 
-Target, Owner
+Target/Owner
    Standard conversion between spaces.
+   See :ref:`common constraintant properties <rigging-constraints-interface-common-space>` for more information.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 .. warning::
 

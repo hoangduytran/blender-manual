@@ -43,9 +43,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
-
-   Bone
-      When target is an armature object, use this field to select the target bone.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Mix
    Specifies how the keyframed transformation from the action is combined with the existing transformation.
@@ -64,6 +62,10 @@ Mix
       The action transformation is added after the existing transformation, as if it was
       applied locally to an imaginary child of the constraint owner with ordinary parenting.
       This mode can create shear and is thus not recommended for use.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Target

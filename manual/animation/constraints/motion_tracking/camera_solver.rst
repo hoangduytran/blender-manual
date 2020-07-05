@@ -31,3 +31,7 @@ Active Clip
 
 Constraint to F-Curve
    Applies the constraint, creating Keyframes for the transforms.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.

@@ -29,6 +29,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraint's target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Distance
    This number field sets the limit distance, i.e. the radius of the constraining sphere.
@@ -53,8 +54,13 @@ Affect Transform
    Transform operators will take the constraint into account to immediately restrict
    the resulting transform property values.
 
-Target, Owner
+Target/Owner
    Standard conversion between spaces.
+   See :ref:`common constraintant properties <rigging-constraints-interface-common-space>` for more information.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

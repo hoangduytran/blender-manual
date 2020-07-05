@@ -17,6 +17,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Order
    Allows specifying which :term:`Euler` order to use during the copy operation.
@@ -46,8 +47,13 @@ Mix
       to be similar to the *Before Original* behavior, but does not work correctly
       with multiple axis rotations, and is thus deprecated.
 
-Target, Owner
+Target/Owner
    Standard conversion between spaces.
+   See :ref:`common constraintant properties <rigging-constraints-interface-common-space>` for more information.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

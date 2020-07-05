@@ -35,6 +35,10 @@ Depth Object
 Constraint to F-Curve
    Creates F-curves for the object that copies the movement caused by the constraint.
 
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
+
 
 Example
 =======

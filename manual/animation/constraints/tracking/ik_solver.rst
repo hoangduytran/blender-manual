@@ -31,6 +31,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the an armature.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Pole Target
    Object for pole rotation.
@@ -58,6 +59,10 @@ Target
 
 Rotation
    Chain follows rotation of target.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 iTaSC Solver

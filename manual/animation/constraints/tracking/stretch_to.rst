@@ -31,6 +31,7 @@ Options
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Original Length
    This number field sets the rest distance between the owner and its target, i.e.
@@ -69,6 +70,10 @@ Rotation
    Swing
       The constraint uses a single :term:`Swing` rotation, equivalent to
       the :doc:`Damped Track constraint </animation/constraints/tracking/damped_track>`.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example

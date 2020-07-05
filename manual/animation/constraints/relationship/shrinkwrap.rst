@@ -26,9 +26,14 @@ Options
 Target
    :ref:`ui-data-id` used to select the constraint's target, which *must* be a mesh object,
    and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Distance
    This number field controls the offset of the owner from the shrunk computed position on the target's surface.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Mode

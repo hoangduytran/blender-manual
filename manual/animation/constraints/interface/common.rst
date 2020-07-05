@@ -36,6 +36,10 @@ Some constraints have a button next to the slider
 that enables using the curved shape of :ref:`Bendy Bones <bendy-bones>`.
 
 
+.. _rigging-constraints-interface-common-space:
+.. _bpy.types.constraint.owner_space:
+.. _bpy.types.constraint.target_space:
+
 Space
 =====
 
@@ -102,8 +106,7 @@ Pose Space (bones only)
    *Pose Space* will have the same effect as *World Space*.
 
 
-.. _rigging-constraints-influence:
-.. _bpy.types.Constraint.influence:
+.. _bpy.types.constraint.influence:
 
 Influence
 =========
@@ -115,8 +118,8 @@ The influence slider determines how much the constraint will affect the constrai
 An influence of 0.0 will have no effect.
 An influence of 1.0 will have the full effect.
 
-Values between (0.0 and 1.0) will have a partial effect, but be careful. These partial effects can
-be difficult to control,
+Values between (0.0 and 1.0) will have a partial effect, but be careful.
+These partial effects can be difficult to control,
 especially as the :doc:`constraint stack </animation/constraints/interface/stack>` grows in complexity.
 
 The influence value is animatable, allowing constraints to be turned off, or partially on as needed.

@@ -36,6 +36,7 @@ Options
 Target
    The target object that this object will act as a child of.
    :ref:`ui-data-id` used to select the constraint's target, and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Location
    Each of these buttons will make the parent affect or not affect the location along the corresponding axis.
@@ -55,6 +56,10 @@ Set Inverse
 Clear Inverse
    This button reverses (cancels) the effects of the above one,
    restoring the owner/child to its default state regarding its target/parent.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Tips

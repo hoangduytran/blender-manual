@@ -53,6 +53,10 @@ Add Target Bone
 Normalize Weights
    This button normalizes all weight values in the target list so that they add up to 1.0.
 
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
+
 
 Bones
 -----
@@ -61,8 +65,8 @@ This specifies the list of bones used by the constraint to deform its owner.
 Each target bone has the following input fields and controls:
 
 Target
-   Unlike the modifier, the constraint can use bones coming from
-   different armatures at the same time.
+   Unlike the modifier, the constraint can use bones coming from different armatures at the same time.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Sub-target
    Name of the target bone.
@@ -72,4 +76,3 @@ Remove Button ``X``
 
 Weight
    Weight associated with the bone, equivalent to vertex groups in the modifier.
-   This value can be animated.

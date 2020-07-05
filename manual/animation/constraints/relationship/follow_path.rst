@@ -1,5 +1,3 @@
-..    TODO/Review: {{review|im=examples}}.
-
 .. _bpy.types.FollowPathConstraint:
 
 **********************
@@ -82,6 +80,7 @@ Options
 Target
    :ref:`ui-data-id` used to select the constraint's target, which *must* be a curve object,
    and is not functional (red state) when it has none.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
 Offset
    The number of frames to offset from the "animation" defined by the path (by default, from frame 1).
@@ -108,6 +107,10 @@ Follow Curve
 
 Animate Path
    Adds an F-curve with options for the start and end frame. ToDo: from above.
+
+Influence
+   Controls the percentage of affect the constraint has on the object.
+   See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
 Example
