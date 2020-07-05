@@ -241,6 +241,7 @@ Replace Text :kbd:`Ctrl-H`
    Searches for the text specified in *Find Text* and replaces it with the new text.
    Using the eyedropper icon will set the currently selected text as the replace text.
    *Replace* searches for the next match and replaces it.
+   *Replace All* searches for the match and replaces all occurrences of the match with the new text.
 
 .. _bpy.types.SpaceTextEditor.use_match_case:
 .. _bpy.types.SpaceTextEditor.use_find_wrap:
