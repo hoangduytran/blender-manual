@@ -6,7 +6,7 @@ Warp Modifier
 
 The *Warp* modifier can be used to warp parts of a mesh to a new location in
 a very flexible way, by using two objects to select the "from" and "to" regions,
-with options for using a curve falloff, texture and/or vertex group.
+with options for using a falloff curve, texture and/or vertex group.
 
 .. figure:: /images/modeling_modifiers_deform_warp_example.png
    :align: center

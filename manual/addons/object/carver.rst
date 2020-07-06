@@ -52,7 +52,7 @@ Tool Type :kbd:`Spacebar`
    To change the tool.
 
    Rectangle
-      The *Rectangle* tool, Click, move and then click again to confirm the operation.
+      The *Rectangle* tool. Click, move and then click again to confirm the operation.
    Line
       The *Line* tool to polygonal cuts. It also allows you to bisect one or more objects.
       Click to the start point, move to the desired end point and then press :kbd:`Spacebar` to confirm the cutting.

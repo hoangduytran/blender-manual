@@ -140,7 +140,7 @@ Restrictions
 ------------
 
 Limits
-   You to can set the lower and upper limits of the deformation.
+   You can set the lower and upper limits of the deformation.
    The upper limit cannot be lower than the lower one. These limits are mapped on the Deform axis.
 
 Lock (Twist, Taper and Stretch modes only)
