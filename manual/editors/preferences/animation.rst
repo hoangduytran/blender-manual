@@ -17,8 +17,7 @@ Timeline
 These settings control things in the :doc:`Timeline </editors/timeline>`.
 
 Allow Negative Frame
-   Playhead can be set to negative frames with mouse or keyboard.
-   When using *Use Preview Range*, this also allows playback.
+   Playback and animations can occur during negative frame ranges.
 Minimum Grid Spacing
    The minimum number of pixels between grid lines.
 TimeCode Style

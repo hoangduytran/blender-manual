@@ -137,7 +137,7 @@ Strip Offset Start/End
 
 Hold Offset Start/End
    Offset of the uncut strip content.
-Playhead
+Current Frame
    Position of the Playhead relative to the start of the active strip.
 
 

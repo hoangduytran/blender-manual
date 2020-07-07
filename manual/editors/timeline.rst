@@ -137,9 +137,9 @@ Mute Audio
    Mute the sound from any audio source.
 Subframes
    Display and allow changing the current scene sub-frame.
-Limit Playhead to Frame Range
+Limit Playback to Frame Range
    Don't allow selecting frames outside of the playback range using the mouse.
-Follow Playhead
+Follow Current Frame
    Animation editors can be setup to always follow the time indicator as animation is being played back.
    Following will be done when animating and changing frame.
    When the cursor reaches the end of the screen, the next range of frames of the same width will be displayed.
@@ -340,7 +340,7 @@ End Frame
 Keyframe Control
 ^^^^^^^^^^^^^^^^
 
-Auto Keyframe (|record|) 
+Auto Keyframe (|record|)
    .. figure:: /images/editors_timeline_keyframes-auto.png
       :align: right
 
@@ -349,7 +349,7 @@ Auto Keyframe (|record|)
    The record button enables *Auto Keyframe*:
    It will add and/or replace existing keyframes for the active object when you transform it in the 3D Viewport.
 
-   For example, when enabled, first set the *Playhead* to the desired frame,
+   For example, when enabled, first set the Playhead to the desired frame,
    then move an object in the 3D Viewport, or set a new value for a property in the UI.
 
    When you set a new value for the properties,

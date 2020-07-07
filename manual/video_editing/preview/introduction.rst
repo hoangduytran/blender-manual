@@ -39,7 +39,7 @@ Show Metadata
 Show Annotations
    Displays :doc:`Annotations </interface/annotate_tool>` in the preview region.
 Sequence Render Image
-   Render image at playhead position.
+   Render the an image at the current frame.
 Sequence Render Animation
    Render timeline from Preview Start to Preview End Frame to a Video file or series of images.
 

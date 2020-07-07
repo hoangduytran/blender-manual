@@ -37,7 +37,7 @@ Zoom :kbd:`Shift-B`
 Navigation
    Play Animation :kbd:`Spacebar`
       Start or stop playback of animation. This will start playback in all editors.
-   Go to Playhead :kbd:`Numpad0`
+   Go to Current Frame :kbd:`Numpad0`
       Scrolls the timeline so the current frame is in the center.
    Jump to Previous Strip :kbd:`PageDown`
       Current frame will jump to beginning of strip.
@@ -92,7 +92,7 @@ Waveform Displaying
    Global option to either display the waveform, or the strip info,
    or use the individual :ref:`strip option <sequencer-sound-waveform>`.
 Sequence Render Image
-   Render image at playhead position.
+   Render an image of the current frame.
 Sequence Render Animation
    Render timeline from Preview Start to Preview End Frame to a Video file or series of images.
 Export Subtitles

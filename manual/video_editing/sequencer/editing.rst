@@ -70,13 +70,13 @@ The frame number label over the strip displays the end frame of the strip.
    for example, you can at the same time move a strip, shorten two others, and extend a forth one.
 
 
-Move/Extend from Playhead
--------------------------
+Move/Extend from Current Frame
+------------------------------
 
 .. admonition:: Reference
    :class: refbox
 
-   :Menu:      :menuselection:`Strip --> Transform --> Move/Extend From Playhead`
+   :Menu:      :menuselection:`Strip --> Transform --> Move/Extend from Current Frame`
    :Hotkey:    :kbd:`E`
 
 With a number of strips selected, pressing :kbd:`E` lets you interactively extend the strips.
@@ -102,20 +102,16 @@ The Slip tool allows you to change the position of the contents of a strip witho
 
 .. _bpy.ops.sequencer.snap:
 
-Snap Strips to Playhead
------------------------
+Snap Strips to the Current Frame
+--------------------------------
 
 .. admonition:: Reference
    :class: refbox
 
-   :Menu:      :menuselection:`Strip --> Transform --> Snap Strips to Playhead`
+   :Menu:      :menuselection:`Strip --> Transform --> Snap Strips to the Current Frame`
    :Hotkey:    :kbd:`Shift-S`
 
-Position your playhead (vertical blue line) to the time you want.
-Snap to current frame to start a strip exactly at the beginning of the frame.
-If your Time display is in seconds,
-you can get to fractional parts of a second by zooming the display;
-you can get all the way down to an individual frame.
+Moves the strip or control point to the current frame.
 
 
 .. _bpy.ops.sequencer.offset_clear:
@@ -421,7 +417,7 @@ Fade In
    Fade in selected strips.
 Fade Out
    Fade out selected strips.
-From Playhead
-   Fade from the playhead to the end of overlapping sequences.
-To Playhead
-   Fade from the start of sequences under the playhead to the current frame.
+From Current Frame
+   Fade from the current frame to the end of overlapping sequences.
+To Current Frame
+   Fade from the start of sequences under the Playhead to the current frame.
