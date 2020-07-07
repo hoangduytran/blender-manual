@@ -28,6 +28,9 @@ Rotation Origins
       Sets the rotation origin automatically using the topology and shape of the mesh as a guide.
    Face Sets
       Creates a pose segment per :ref:`Face Set <sculpting-editing-facesets>`, starting from the active face set.
+   Face Sets FK
+      Simulates an :term:`Forward Kinematic` deformation using the
+      ref:`Face Set <sculpting-editing-facesets>` under the cursor as control.
 
 Pose Origin Offset
    Offset of the pose origin in relation to the brush radius.
