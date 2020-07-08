@@ -111,6 +111,8 @@ Specials
          currently it will only work with meshes.
    Duplicate :kbd:`Shift-D`
       Creates a duplicate of the modifier just below current one in the stack.
+   Move to First/Last
+      Moves the modifier to the first or last position in the modifier stack.
 
 Delete :kbd:`X`, :kbd:`Delete`
    Delete the modifier.
