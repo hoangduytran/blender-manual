@@ -95,27 +95,6 @@ Amount Type :kbd:`M`
    For vertex-only bevels, the Offset and Depth types measure from the original vertex,
    and the Width type is measured from a new vertex to the center of the new face (as half the amount).
 
-Segments :kbd:`S`
-   The number of segments in the bevel can be defined by
-   scrolling the mouse :kbd:`Wheel` to increase or decrease this value.
-   The greater the number of segments, the smoother the bevel.
-   Or press :kbd:`S` to change the number with mouse movements, as well as numeric input.
-
-   Alternatively, you can manually enter a segment number value while using the tool,
-   or in the Mesh Tool options panel after using the tool.
-
-   .. figure:: /images/modeling_meshes_editing_edge_bevel_example-4.png
-      :width: 320px
-
-      Bevel with four segments.
-
-Profile :kbd:`P`
-   This is a number between 0 and 1 that controls the shape of the profile (side view of a beveled edge).
-   The default value, 0.5, gives a circular arc (if the faces meet at right angles).
-   Values less than that give a flatter profile, with 0.25 being exactly flat,
-   and values less than that giving a concave bevel. Values more than 0.5 give a more convex profile.
-   Similarly as *Segments* it can be set with mouse movements and numeric input after toggling :kbd:`P`.
-
 Vertex Only :kbd:`V`
    When selected, the tool is in "vertex only" mode, and only vertices will be beveled.
 
@@ -135,11 +114,6 @@ Mark Seams :kbd:`U`
 Mark Sharp :kbd:`K`
    Similar to Mark Seams, but for sharp edges.
 
-Material
-   The *Material* number specifies which material should be assigned to the new faces created by the *Bevel* tool.
-   With the default, -1, the material is inherited from the closest existing face ("closest" can be a bit ambiguous).
-   Otherwise, the number is the slot index of the material to use for all newly created faces.
-
 Harden Normals :kbd:`H`
    When enabled, the per-vertex face normals of the bevel faces are adjusted to
    match the surrounding faces, and the normals of the surrounding faces are not affected.
@@ -148,6 +122,90 @@ Harden Normals :kbd:`H`
    custom split normals need to be enabled, which requires Auto Smooth to be enabled
    (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
    As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.
+
+Segments :kbd:`S`
+   The number of segments in the bevel can be defined by
+   scrolling the mouse :kbd:`Wheel` to increase or decrease this value.
+   The greater the number of segments, the smoother the bevel.
+   Or press :kbd:`S` to change the number with mouse movements, as well as numeric input.
+
+   Alternatively, you can manually enter a segment number value while using the tool,
+   or in the Mesh Tool options panel after using the tool.
+
+   .. figure:: /images/modeling_meshes_editing_edge_bevel_example-4.png
+      :width: 320px
+
+      Bevel with four segments.
+
+Shape :kbd:`P`
+   This is a number between 0 and 1 that controls the shape of the profile (side view of a beveled edge).
+   The default value, 0.5, gives a circular arc (if the faces meet at right angles).
+   Values less than that give a flatter profile, with 0.25 being exactly flat,
+   and values less than that giving a concave bevel. Values more than 0.5 give a more convex profile.
+   Similarly as *Segments* it can be set with mouse movements and numeric input after toggling :kbd:`P`.
+
+Material
+   The *Material* number specifies which material should be assigned to the new faces created by the *Bevel* tool.
+   With the default, -1, the material is inherited from the closest existing face ("closest" can be a bit ambiguous).
+   Otherwise, the number is the slot index of the material to use for all newly created faces.
+
+Miter Type
+   Outer :kbd:`O`
+      A *miter* is formed when two beveled edges meet at an angle.
+      On the side where the angle is greater than 180 degrees, if any, it is called an *outer miter*.
+      This option specifies the pattern that Blender uses at an outer miter.
+
+      Sharp
+         Edges meet at a sharp point, with no extra vertices introduced on the edges.
+      Patch
+         Edges meet at a sharp point but in addition, two extra vertices are introduced near the point
+         so that the edges and faces at the vertex may be less pinched together than
+         what occurs in the *Sharp* case.
+         The *Spread* slider controls how far the new vertices are from the meeting point.
+      Arc
+         Two vertices are introduced near the meeting point, and a curved arc joins them together.
+         The *Spread* slider controls how far the new vertices are from the meeting point.
+         The *Profile* slider controls the shape of the arc.
+
+      The current choices are shown in this diagram, where the outer miter is along the horizontal surface.
+
+      .. list-table::
+
+         * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-2.png
+                :width: 320px
+
+                Sharp outer miter.
+
+           - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-3.png
+                :width: 320px
+
+                Patch outer miter.
+
+           - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-4.png
+                :width: 320px
+
+                Arc outer miter.
+
+   Inner :kbd:`I`
+      An *Inner Miter* is formed when the angle between two beveled edges is less than 180 degrees.
+      This option specifies the pattern Blender uses at an inner miter.
+      The options are the same as for Outer Miter, except that *Patch* makes no sense and is therefore omitted.
+      Inner miters are shown in the following diagram, where two inner miters are on the vertical surfaces.
+
+      .. list-table::
+
+         * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-5.png
+                :width: 200px
+
+                Sharp inner miter.
+
+           - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-6.png
+                :width: 200px
+
+                Arc inner miter.
+
+Spread
+   The value used to spread extra vertices apart for *Outer* and *Inner Miters*.
 
 Face Strength Mode
    Set *Face Strength* on the faces involved in the bevel, according to the specified mode.
@@ -167,64 +225,7 @@ Face Strength Mode
       In addition to those set for the *Affected* option,
       also set all the rest of the faces of the model to have strength *Strong*.
 
-Outer Miter :kbd:`O`
-   A *miter* is formed when two beveled edges meet at an angle.
-   On the side where the angle is greater than 180 degrees, if any, it is called an *outer miter*.
-   This option specifies the pattern that Blender uses at an outer miter.
-
-   Sharp
-      Edges meet at a sharp point, with no extra vertices introduced on the edges.
-   Patch
-      Edges meet at a sharp point but in addition, two extra vertices are introduced near the point
-      so that the edges and faces at the vertex may be less pinched together than
-      what occurs in the *Sharp* case.
-      The *Spread* slider controls how far the new vertices are from the meeting point.
-   Arc
-      Two vertices are introduced near the meeting point, and a curved arc joins them together.
-      The *Spread* slider controls how far the new vertices are from the meeting point.
-      The *Profile* slider controls the shape of the arc.
-
-   The current choices are shown in this diagram, where the outer miter is along the horizontal surface.
-
-   .. list-table::
-
-      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-2.png
-             :width: 320px
-
-             Sharp outer miter.
-
-        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-3.png
-             :width: 320px
-
-             Patch outer miter.
-
-        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-4.png
-             :width: 320px
-
-             Arc outer miter.
-
-Inner Miter :kbd:`I`
-   An *Inner Miter* is formed when the angle between two beveled edges is less than 180 degrees.
-   This option specifies the pattern Blender uses at an inner miter.
-   The options are the same as for Outer Miter, except that *Patch* makes no sense and is therefore omitted.
-   Inner miters are shown in the following diagram, where two inner miters are on the vertical surfaces.
-
-   .. list-table::
-
-      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-5.png
-             :width: 200px
-
-             Sharp inner miter.
-
-        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-6.png
-             :width: 200px
-
-             Arc inner miter.
-
-Spread
-   The value used to spread extra vertices apart for *Outer* and *Inner Miters*.
-
-Intersection Method :kbd:`N`
+Intersection Type :kbd:`N`
    When more than two beveled edges meet at a vertex, a mesh is created as
    a way to complete the intersection between the generated geometry.
    This option controls the method used to create that mesh.
@@ -260,41 +261,45 @@ Intersection Method :kbd:`N`
 
              Cutoff intersection method with a center face.
 
-Custom Profile :kbd:`Z`
-   .. figure:: /images/modeling_modifiers_generate_bevel_profile-widget.png
-      :align: right
-      :width: 300px
+Profile Type  :kbd:`Z`
+   Superellipse
+      Creates a bevel with a uniform concave or convex curve.
 
-      The custom profile widget.
+   Custom
+      .. figure:: /images/modeling_modifiers_generate_bevel_profile-widget.png
+         :align: right
+         :width: 300px
 
-   This widget allows the creation of a user-defined profile with more complexity than
-   with the single profile parameter. The modal tool allows toggling the custom profile,
-   but the shape of the profile is only editable in the options panel after the operation is confirmed.
+         The custom profile widget.
 
-   The profile starts at the bottom right of the widget and ends at the top left, as if it
-   were between two edges meeting at a right angle. Control points are created in the widget and
-   then the path is sampled with the number of segments from the bevel modifier.
+      This widget allows the creation of a user-defined profile with more complexity than
+      with the single profile parameter. The modal tool allows toggling the custom profile,
+      but the shape of the profile is only editable in the options panel after the operation is confirmed.
 
-   Presets
-      The *Support Loops* and *Steps* presets are built dynamically depending on the number of segments in the bevel.
-      If the number of segments is changed, the preset will have to be re-applied.
-   Reverse
-      The *Reverse* button flips the orientation of the profile for all beveled edges.
-   Clipping
-      The *Clipping* toggle allows control points to be moved beyond the initial boundary,
-      allowing the bevel to add volume to the mesh rather than just removing it.
+      The profile starts at the bottom right of the widget and ends at the top left, as if it
+      were between two edges meeting at a right angle. Control points are created in the widget and
+      then the path is sampled with the number of segments from the bevel modifier.
 
-   .. note::
+      Presets
+         The *Support Loops* and *Steps* presets are built dynamically depending on the number of segments in the bevel.
+         If the number of segments is changed, the preset will have to be re-applied.
+      Reverse
+         The *Reverse* button flips the orientation of the profile for all beveled edges.
+      Clipping
+         The *Clipping* toggle allows control points to be moved beyond the initial boundary,
+         allowing the bevel to add volume to the mesh rather than just removing it.
 
-      The *Profile* slider is still useful when miters are enabled
-      because it still controls the shape of the miter profiles.
+      .. note::
 
-   Sampling
-      Samples will first be added to each control point, then if there are enough samples,
-      they will be divided evenly between the edges. The *Sample Straight Edges* option toggles whether
-      the samples are added to edges with sharp control points on either side. If there aren't enough samples
-      to give each edge the same number of samples, they will just be added to the most curved edges,
-      so it is recommended to use at least as many segments as there are control points.
+         The *Profile* slider is still useful when miters are enabled
+         because it still controls the shape of the miter profiles.
+
+      Sampling
+         Samples will first be added to each control point, then if there are enough samples,
+         they will be divided evenly between the edges. The *Sample Straight Edges* option toggles whether
+         the samples are added to edges with sharp control points on either side. If there aren't enough samples
+         to give each edge the same number of samples, they will just be added to the most curved edges,
+         so it is recommended to use at least as many segments as there are control points.
 
 
 Examples

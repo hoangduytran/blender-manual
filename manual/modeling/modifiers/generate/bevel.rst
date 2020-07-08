@@ -102,6 +102,11 @@ Limit Method
 Profile
 -------
 
+Superellipse
+^^^^^^^^^^^^
+
+Creates a bevel with a uniform concave or convex curve.
+
 Shape
    The shape of the bevel, from concave to convex. It has no effect if *Segments* is less than 2.
 
@@ -114,6 +119,9 @@ Custom Profile
    :width: 300px
 
    The custom profile widget.
+
+Miter Shape
+   The shape of the miter patterns, from concave to convex. It has no effect if *Segments* is less than 2.
 
 This widget allows the creation of a user-defined profile with more complexity than
 with the single profile parameter. The modal tool allows toggling the custom profile,
