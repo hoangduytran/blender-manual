@@ -99,8 +99,6 @@ the right side of the face will match the left, etc.
    using different approaches in different areas of your mesh.
 
 
-.. _bpy.ops.uv.seams_from_islands:
-
 Seams from Islands
 ------------------
 

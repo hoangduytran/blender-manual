@@ -43,37 +43,121 @@ Transformations can be locked to an axis by pressing :kbd:`X` or :kbd:`Y` after 
 Also, holding the :kbd:`MMB` will constrain movement to the X or Y axis.
 
 
-.. _bpy.types.SpaceUVEditor.use_live_unwrap:
-.. _bpy.types.SpaceUVEditor.pixel_snap_mode:
-.. _bpy.types.SpaceUVEditor.lock_bounds:
-
-UV Options
-==========
+Mirror
+======
 
 .. admonition:: Reference
    :class: refbox
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UVs`
+   :Menu:      :menuselection:`UV --> Mirror`
+   :Hotkey:    :kbd:`Ctrl-M`
 
-Live Unwrap
-   Continuously unwraps the selected UV islands while transforming pinned vertices.
+UVs can be mirrored on the Y axis or the X axis:
 
-.. Todo. There are two different Live Unwrap, one in Edit Mode and other in UV Editor.
+- Mirror X
+- Mirror Y
 
-   If *Live Unwrap* is checked, every time an edge has its seam property changed,
-   UV unwrap is automatically re-calculated.
+You can also use the hotkey :kbd:`Ctrl-M`, then enter :kbd:`X` or :kbd:`Y`,
+or hold the :kbd:`MMB` and drag in the mirror direction.
 
-Snap to Pixels
-   Disabled
-      UVs will not be snapped.
-   Corner
-      Will force the UVs to snap to the corners of the nearest pixels of an image if loaded.
-   Center
-      Will force the UVs to snap to the center of the nearest pixels of an image if loaded.
-Constraining to Image Bounds
-   Turning on *Constrain to Image Bounds* will prevent UVs from being moved outside the 0 to 1 UV range.
+
+Copy Mirrored UV Coordinates
+----------------------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Copy Mirrored UV Coordinates`
+
+Copies UVs from one side of the mirrored mesh to the other.
+Affects only selected vertices (on both sides).
+
+Axis Direction
+   Positive/Negative
+Precision
+   Tolerance for finding vertex duplicates.
+
+
+.. _bpy.ops.uv.snap_selected:
+.. _bpy.ops.uv.snap_cursor:
+
+Snap
+====
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Snap`
+   :Hotkey:    :kbd:`Shift-S`
+
+Snapping in the UV Editor is similar to
+:doc:`Snapping in 3D </editors/3dview/controls/snapping>`.
+For the snap to pixel options to work an image has to be loaded.
+
+Selected to Pixels
+   Moves selection to nearest pixel. See also *Snap to pixel* above.
+Selected to Cursor
+   Moves selection to 2D cursor location.
+Selected to Cursor (Offset)
+   Moves selection center to 2D cursor location, while preserving the offset of the vertices from the center.
+Selected to Adjacent Unselected
+   Moves selection to adjacent unselected element.
+
+Cursor to Pixels
+   Snaps the cursor to the nearest pixels.
+Cursor to Selected
+   Moves the Cursor to the center of the selection.
+
+
+.. _bpy.ops.uv.weld:
+
+Merge
+=====
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Merge`
+   :Hotkey:    :kbd:`M`
+
+At Center
+   Moves selected UVs to their average position.
+At Cursor
+   Moves selection UVs to 2D cursor location.
+
+.. _bpy.ops.uv.remove_doubles:
+
+By Distance
+   Merges selected UVs within the specified *Merge Distance*.
+
+
+.. _bpy.ops.uv.select_split:
+
+Split
+=====
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Split`
+   :Hotkey:    :kbd:`Alt-M`
+
+Selection :kbd:`Y`
+   Splits (disconnects) the selection from the rest of the UV.
+   The border edge to any non-selected elements are duplicated.
+
+   Note that the "copy" is left exactly at the same position as the original,
+   so you must move it to see it clearly.
 
 
 .. _bpy.ops.uv.pin:
@@ -118,6 +202,21 @@ Mark/Clear Seams
    :Menu:      :menuselection:`UV --> Mark/Clear Seam`
 
 See :doc:`/modeling/meshes/uv/unwrapping/seams`.
+
+
+.. _bpy.ops.uv.seams_from_islands:
+
+Seams from Islands
+==================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      View mode
+   :Menu:      :menuselection:`UV --> Seams from Islands`
+
+Adds seams at the boundaries of existing UV islands.
+This is useful when modifying the UVs of already unwrapped meshes.
 
 
 .. _bpy.ops.uv.pack_islands:
@@ -192,118 +291,18 @@ You set the tool to limit stitching by distance in the :ref:`ui-undo-redo-adjust
 by activating *Use Limit* and adjusting the *Limit Distance*.
 
 
-Copy Mirrored UV Coordinates
-============================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Editor:    UV Editor
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Copy Mirrored UV Coordinates`
-
-Copies UVs from one side of the mirrored mesh to the other.
-Affects only selected vertices (on both sides).
-
-Axis Direction
-   Positive/Negative
-Precision
-   Tolerance for finding vertex duplicates.
-
-
-Mirror
-======
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Editor:    UV Editor
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Mirror`
-   :Hotkey:    :kbd:`Ctrl-M`
-
-UVs can be mirrored on the Y axis or the X axis:
-
-- Mirror X
-- Mirror Y
-
-You can also use the hotkey :kbd:`Ctrl-M`, then enter :kbd:`X` or :kbd:`Y`,
-or hold the :kbd:`MMB` and drag in the mirror direction.
-
-
-Snap
-====
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Editor:    UV Editor
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Snap`
-   :Hotkey:    :kbd:`Shift-S`
-
-Snapping in the UV Editor is similar to
-:doc:`Snapping in 3D </editors/3dview/controls/snapping>`.
-For the snap to pixel options to work an image has to be loaded.
-
-Selected to Pixels
-   Moves selection to nearest pixel. See also *Snap to pixel* above.
-Selected to Cursor
-   Moves selection to 2D cursor location.
-Selected to Cursor (Offset)
-   Moves selection center to 2D cursor location, while preserving the offset of the vertices from the center.
-Selected to Adjacent Unselected
-   Moves selection to adjacent unselected element.
-
-Cursor to Pixels
-   Snaps the cursor to the nearest pixels.
-Cursor to Selected
-   Moves the Cursor to the center of the selection.
-
-
-.. _bpy.ops.uv.weld:
-
-Weld
-====
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Editor:    UV Editor
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Weld/Align --> Weld`
-   :Hotkey:    :kbd:`W`
-
-The *Weld* tool will move selected UVs to their average position.
-
-
-.. _bpy.ops.uv.remove_doubles:
-
-Merge UVs by Distance
-=====================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Editor:    UV Editor
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Weld/Align --> Merge UVs by Distance`
-
-The *Merge UVs by Distance* tool will merge selected UVs within the specified *Margin*.
-
-
 .. _bpy.ops.uv.align:
 
-Straighten/Align
-================
+Align
+=====
 
 .. admonition:: Reference
    :class: refbox
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Weld/Align --> Straighten/Align`
-   :Hotkey:    :kbd:`W`
+   :Menu:      :menuselection:`UV --> Weld/Align --> Align`
+   :Hotkey:    :kbd:`Shift-W`
 
 Straighten
    Auto, X, Y
@@ -311,23 +310,6 @@ Align
    Will line up the selected UVs on the X axis, Y axis, or automatically chosen axis.
 
    Auto, X, Y
-
-
-Proportional Editing
-====================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Editor:    UV Editor
-   :Mode:      Edit Mode
-   :Header:    :menuselection:`Proportional Editing`
-   :Menu:      :menuselection:`UV --> Proportional Editing`
-   :Hotkey:    :kbd:`O`
-
-Proportional Editing is available in UV editing. The controls are the same as in the 3D Viewport.
-See :doc:`Proportional Editing in 3D </editors/3dview/controls/proportional_editing>`
-for a full reference.
 
 
 Show/Hide Faces
@@ -356,6 +338,56 @@ Export UV Layout
    :Menu:      :menuselection:`UV --> Export UV Layout`
 
 This is an :doc:`add-on </addons/import_export/mesh_uv_layout>` activated by default.
+
+
+Proportional Editing
+====================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Header:    :menuselection:`Proportional Editing`
+   :Menu:      :menuselection:`UV --> Proportional Editing`
+   :Hotkey:    :kbd:`O`
+
+Proportional Editing is available in UV editing. The controls are the same as in the 3D Viewport.
+See :doc:`Proportional Editing in 3D </editors/3dview/controls/proportional_editing>`
+for a full reference.
+
+
+.. _bpy.types.SpaceUVEditor.use_live_unwrap:
+.. _bpy.types.SpaceUVEditor.pixel_snap_mode:
+.. _bpy.types.SpaceUVEditor.lock_bounds:
+
+UV Options
+==========
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UVs`
+
+Live Unwrap
+   Continuously unwraps the selected UV islands while transforming pinned vertices.
+
+.. Todo. There are two different Live Unwrap, one in Edit Mode and other in UV Editor.
+
+   If *Live Unwrap* is checked, every time an edge has its seam property changed,
+   UV unwrap is automatically re-calculated.
+
+Snap to Pixels
+   Disabled
+      UVs will not be snapped.
+   Corner
+      Will force the UVs to snap to the corners of the nearest pixels of an image if loaded.
+   Center
+      Will force the UVs to snap to the center of the nearest pixels of an image if loaded.
+Constraining to Image Bounds
+   Turning on *Constrain to Image Bounds* will prevent UVs from being moved outside the 0 to 1 UV range.
 
 
 3D View
