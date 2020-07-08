@@ -3,7 +3,7 @@
 Sampling
 ********
 
-The quality of the renders can be adjusted by changing the :term:`Anti-aliasing` method.
+The quality of the renders can be adjusted by changing the :term:`Anti-Aliasing` method.
 A different one can be selected for the 3D Viewport, Viewport rendering and
 for final rendering.
 

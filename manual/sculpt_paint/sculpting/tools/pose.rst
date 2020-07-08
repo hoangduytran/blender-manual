@@ -29,7 +29,7 @@ Rotation Origins
    Face Sets
       Creates a pose segment per :ref:`Face Set <sculpting-editing-facesets>`, starting from the active face set.
    Face Sets FK
-      Simulates an :term:`Forward Kinematic` deformation using the
+      Simulates an :term:`Forward Kinematics` deformation using the
       ref:`Face Set <sculpting-editing-facesets>` under the cursor as control.
 
 Pose Origin Offset

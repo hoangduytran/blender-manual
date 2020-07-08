@@ -12,7 +12,7 @@ I had to manually set all other scenes' preview scale -- long and boring.
 And even worse, I often forgot to put them back to full resolution before final rendering!
 
 So, with this add-on, I just have to set the preview scale in the main scene,
-enable or disable :term:`Anti-aliasing`, and hit *Copy Render Settings*!
+enable or disable :term:`Anti-Aliasing`, and hit *Copy Render Settings*!
 
 
 Activation

@@ -144,7 +144,7 @@ Text Rendering
 ==============
 
 Anti-Aliasing
-   Enable interface text :term:`Anti-aliasing`.
+   Enable interface text :term:`Anti-Aliasing`.
    When disabled, texts are rendered using straight text rendering (filling only absolute pixels).
 Hinting
    Adjust `font hinting <https://en.wikipedia.org/wiki/Font_hinting>`__,

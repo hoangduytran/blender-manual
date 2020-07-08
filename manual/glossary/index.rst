@@ -473,7 +473,7 @@ This page lists definitions for terms used in Blender and this manual.
    Mip-mapping
       'MIP' is an acronym of the Latin phrase 'multum in parvo', meaning 'much in little'.
       Mip-maps are progressively lower resolution representations of an image,
-      generally reduced by half squared interpolations using :term:`Anti-aliasing`.
+      generally reduced by half squared interpolations using :term:`Anti-Aliasing`.
       Mip-mapping is the process used to calculate lower resolutions of
       the same image, reducing memory usage to help speed visualization, but increasing
       memory usage for calculations and allocation. Mip-mapping is also a process

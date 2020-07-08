@@ -114,7 +114,7 @@ Show Markers
    Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
    and markers operators are not available in this editor.
 Use High Quality Display
-   Display F-curves using :term:`Anti-aliasing` and other fancy effects (disable for a better performance).
+   Display F-curves using :term:`Anti-Aliasing` and other fancy effects (disable for a better performance).
 Show Handles :kbd:`Ctrl-H`
    Toggles the display of a curve's handles in the curve view.
 Only Selected Curve Keyframes
