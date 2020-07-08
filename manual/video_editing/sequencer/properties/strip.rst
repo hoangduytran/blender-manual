@@ -101,7 +101,7 @@ Pan
 
 Display Waveform
    Display an approximate waveform of the sound file inside of the sound strip.
-   The waveform reflects strip volume and it's animation using :doc:`keyframes </animation/keyframes/introduction>`.
+   The waveform reflects strip volume and its animation using :doc:`keyframes </animation/keyframes/introduction>`.
 Mono
    Mixdown all audio channels into a single one.
 

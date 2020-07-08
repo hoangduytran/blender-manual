@@ -3,7 +3,7 @@
 Introduction
 ************
 
-Sculpting and painting uses :doc:`brushes </sculpt_paint/brush/index>` to paint directly on meshes.
+Sculpting and painting use :doc:`brushes </sculpt_paint/brush/index>` to paint directly on meshes.
 There are several :doc:`modes </editors/3dview/modes>` that use this.
 
 - :doc:`Sculpting </sculpt_paint/sculpting/introduction>`:
