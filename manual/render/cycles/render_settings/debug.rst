@@ -11,6 +11,10 @@ Debug
 These settings are mainly useful to developers and can be accessed
 by setting the :ref:`Debug Value <bpy.ops.wm.debug_menu>` to 256.
 
+OptiX Flags
+   Native OptiX Curve Primitive
+      Use OptiX curves API for hair instead of custom implementation.
+
 Viewport BVH Type
    Dynamic BVH
       Objects can be transformed, added and deleted interactively, at the cost of slower renders.
