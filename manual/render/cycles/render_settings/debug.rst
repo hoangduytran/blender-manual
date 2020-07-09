@@ -9,7 +9,7 @@ Debug
    :Panel:     :menuselection:`Render --> Performance`
 
 These settings are mainly useful to developers and can be accessed
-by setting the :ref:`Debug Value <bpy.ops.wm.debug_menu>` to 256.
+by enabling the :doc:`Cycles Debug </editors/preferences/experimental>`.
 
 OptiX Flags
    Native OptiX Curve Primitive
