@@ -168,7 +168,7 @@ Insert Gaps
    :class: refbox
 
    :Menu:      :menuselection:`Strip --> Transform --> Insert Gaps`
-   :Hotkey:    :kbd:`Ctrl-Backspace`
+   :Hotkey:    :kbd:`Equals`
 
 Insert blank frames between the current frame and the first strips to the right,
 independent of selection or locked state of strips.

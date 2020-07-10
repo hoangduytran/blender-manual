@@ -26,8 +26,6 @@ Box Select (Include Handles) :kbd:`Ctrl-B`
    if just one handle is selected moving the strip after selecting will change the strip's length.
    If both handles are selected the strip will move and behave the exact same as *Box Select*.
 Side of Frame
-   Overlap :kbd:`Equals`
-      Select strips laying on the current frame.
    Left/Right :kbd:`[`/:kbd:`]`
       Select strips laying left or right to the current frame.
 Handle
@@ -35,8 +33,7 @@ Handle
 
    .. note::
 
-      Select with this method
-      when you want to change the timing of a cut.
+      Select with this method when you want to change the timing of a cut.
 
 Channel
    Select strips in the same channel laying left or right to active strip.
