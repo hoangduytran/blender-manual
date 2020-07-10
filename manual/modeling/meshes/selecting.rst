@@ -391,9 +391,6 @@ Edge Selection Mode:
 Face Selection Mode:
    Material
       Selects all faces that use the same material as those already selected.
-   Image
-      Selects all faces that use the same UV texture as those already selected
-      (see :ref:`UV texturing <editors-uv-index>` pages).
    Area
       Selects all faces that have a similar area as those already selected.
    Polygon Sides
@@ -405,8 +402,12 @@ Face Selection Mode:
       This is a way to select faces that have the same orientation (angle).
    Co-planar
       Selects all faces that are (nearly) in the same plane as those selected.
-
-.. (todo) check type: Image in Cycles
+   Flat/Smooth
+      Selects all face with similar :doc:`face shading </modeling/meshes/editing/face/shading>`.
+   Face-Map
+      Selects all faces belonging to a :ref:`Face-Map <bpy.types.FaceMaps>`.
+   Freestyle Face Marks
+      Selects all faces with similar :ref:`Freestyle Face Marks <bpy.ops.mesh.mark_freestyle_face>`
 
 
 .. _modeling-meshes-selecting-edge-loops:

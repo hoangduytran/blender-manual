@@ -4,8 +4,6 @@
 Sky Texture Node
 ****************
 
-:guilabel:`Cycles Only`
-
 .. figure:: /images/render_shader-nodes_textures_sky_node.png
    :align: right
 
@@ -105,6 +103,6 @@ Examples
 
    Example of Sky Texture.
 
-.. seealso:: 
+.. seealso::
 
    :doc:`/addons/lighting/sun_position` add-on
