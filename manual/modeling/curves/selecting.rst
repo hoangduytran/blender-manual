@@ -12,7 +12,7 @@ Mainly this is, because there is only one selectable element type, the control p
 (no select mode needed here...). These points are a bit more complex than simple vertices,
 however, especially for Bézier curves, as there is the central vertex, and its two handles...
 
-The basic tools are the same as with :doc:`meshes </modeling/meshes/selecting>`,
+The basic tools are the same as with :doc:`meshes </modeling/meshes/selecting/index>`,
 so you can select a simple control point with the :kbd:`LMB`,
 add to current selection with :kbd:`Shift-LMB`, Box Select :kbd:`B`, and so on.
 

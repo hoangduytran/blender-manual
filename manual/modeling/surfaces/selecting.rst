@@ -9,7 +9,7 @@ in the :doc:`interface section </interface/selecting>`.
 
 Surface selection in *Edit Mode* is very similar to
 :doc:`NURBS curve selection </modeling/curves/selecting>`.
-The basic tools are the same as with :doc:`meshes </modeling/meshes/selecting>`,
+The basic tools are the same as with :doc:`meshes </modeling/meshes/selecting/index>`,
 so you can select a simple control point with an :kbd:`LMB`-click,
 add to current selection with :kbd:`Shift-LMB` clicks, Border Select, and so on.
 
@@ -20,9 +20,8 @@ Select Menu
 The *Select* menu (in the 3D Viewport header) is even simpler than for curves...
 
 All these options have the same meaning and behavior as in
-:doc:`Object Mode </scene_layout/object/selecting>`
-(and the specificities of *Box Select* in *Edit Mode* have already been discussed in
-:doc:`the mesh section </modeling/meshes/selecting>`).
+:doc:`Object Mode </scene_layout/object/selecting>` and mesh
+:doc:`Edit Mode </modeling/meshes/selecting/index>`).
 
 All :kbd:`A`
    Select all.

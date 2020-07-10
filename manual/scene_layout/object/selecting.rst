@@ -158,7 +158,7 @@ Select Random
 .. admonition:: Reference
    :class: refbox
 
-   :Mode:      Object and Edit Modes
+   :Mode:      Object Mode
    :Menu:      :menuselection:`Select --> Select Random`
 
 Randomly selects unselected objects based on percentage probability.

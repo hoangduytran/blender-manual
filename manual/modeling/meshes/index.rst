@@ -12,7 +12,7 @@
    structure.rst
    primitives.rst
    tools/index.rst
-   selecting.rst
+   selecting/index.rst
    editing/index.rst
    properties/index.rst
    uv/index.rst
