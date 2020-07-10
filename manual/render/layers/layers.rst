@@ -152,8 +152,6 @@ Exclude
 .. _bpy.types.ViewLayer.use_ao:
 .. _bpy.types.ViewLayer.use_solid:
 .. _bpy.types.ViewLayer.use_strand:
-.. _bpy.types.ViewLayer.use_volumes:
-.. _bpy.types.ViewLayer.use_freestyle:
 
 Filter
 ------
@@ -169,8 +167,6 @@ Include
       Disables rendering hair strands in the final render.
    Volume
       Disables rendering :doc:`Volumes </modeling/volumes/index>` in the final render.
-   Freestyle
-      Disables Freestyle rendering in the final render.
 
 
 .. _bpy.types.ViewLayer.material_override:

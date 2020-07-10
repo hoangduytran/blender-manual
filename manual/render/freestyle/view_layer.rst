@@ -1,3 +1,4 @@
+.. _bpy.types.ViewLayer.use_freestyle:
 .. _bpy.types.FreestyleSettings:
 
 *********************
@@ -10,6 +11,7 @@ View Layer Properties
    :Panel:     :menuselection:`Properties --> View Layer --> Freestyle`
 
 There is only one view map per view layer. It controls the edge detection parameters.
+Freestyle can be enabled/disabled per View Layer by toggling the checkbox in the panel header.
 
 .. figure:: /images/render_freestyle_view-layer_freestyle-panel.png
    :align: center
