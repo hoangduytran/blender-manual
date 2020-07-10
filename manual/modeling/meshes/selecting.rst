@@ -184,7 +184,7 @@ Inverse :kbd:`Ctrl-I`
 
 Select Random
    Selects a random group of vertices, edges, or faces, based on a percentage value.
-:ref:`Checker Deselect <modeling-selecting-checker_deselect>`
+:ref:`Checker Deselect <bpy.ops.mesh.select_nth>`
    Deselect alternate elements relative to the active item.
 
 ------------------------
@@ -248,7 +248,7 @@ Mirror Selection :kbd:`Shift-Ctrl-M`
 Selection Tools
 ===============
 
-.. _modeling-selecting-checker_deselect:
+.. _bpy.ops.mesh.select_nth:
 
 Checker Deselect
 ----------------
@@ -280,7 +280,7 @@ Offset
 Select All by Trait
 -------------------
 
-.. _mesh-select-non-manifold:
+.. _bpy.ops.mesh.select_non_manifold:
 
 Non-Manifold
    Selects the :term:`Non-manifold` geometry of a mesh.
@@ -300,23 +300,34 @@ Non-Manifold
       Selects vertices that belong to *wire* and *multiple face* edges, isolated vertices,
       and vertices that belong to non-adjoining faces.
 
+.. _bpy.ops.mesh.select_loose:
+
 Loose Geometry
    This selection depends on the currently selected `Selection Modes`_;
    In vertex and edge selection mode it selects all vertices or edges that do not form
    part of a face. In face selection mode it selects all faces that do not share edges with
    other faces.
 
+.. _bpy.ops.mesh.select_interior_faces:
+
 Interior Faces
    Selects faces where all edges have more than two faces.
+
+.. _bpy.ops.mesh.select_face_by_sides:
+
 Faces by Sides
    Selects all faces that have a specified number of edges.
 
 ------------------------
 
+.. _bpy.ops.mesh.select_ungrouped:
+
 Ungrouped Vertices
    Selects all vertices which are not part of
    a :doc:`vertex group </modeling/meshes/properties/vertex_groups/index>`.
 
+
+.. _bpy.ops.mesh.select_linked:
 
 Select Linked
 -------------
@@ -340,6 +351,9 @@ using the :kbd:`L` shortcut to select or :kbd:`Shift-L` to deselect linked.
 
 This works differently in that it uses the geometry under the cursor instead of the existing selection.
 
+
+.. _bpy.ops.mesh.select_similar:
+.. _bpy.ops.mesh.select_similar_region:
 
 Select Similar
 --------------
@@ -410,7 +424,7 @@ Face Selection Mode:
       Selects all faces with similar :ref:`Freestyle Face Marks <bpy.ops.mesh.mark_freestyle_face>`
 
 
-.. _modeling-meshes-selecting-edge-loops:
+.. _bpy.ops.mesh.loop_multi_select:
 
 Edge Loops
 ----------
@@ -539,6 +553,8 @@ One is based on edges during computation and the other is based on faces.
    A subsequent switch to Face Select Mode will then properly select the faces.
 
 
+.. _bpy.ops.mesh.shortest_path_select:
+
 Shortest Path
 -------------
 
@@ -592,6 +608,8 @@ Checker Deselect Options
       Offset from the starting point.
 
 
+.. _bpy.ops.mesh.loop_to_region:
+
 Loop Inner-Region
 -----------------
 
@@ -618,6 +636,8 @@ then all connected edges on the mesh will be considered inside the loop.
 
    This tool handles "holes" just fine as well.
 
+
+.. _bpy.ops.mesh.region_to_loop:
 
 Boundary Loop
 -------------

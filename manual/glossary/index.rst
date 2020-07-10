@@ -532,7 +532,7 @@ This page lists definitions for terms used in Blender and this manual.
       - Edges connected to three or more faces (interior faces).
       - Vertices belonging to faces that are not adjoining (e.g. two cones sharing the vertex at the apex).
 
-      See also: :ref:`Select Non-Manifold <mesh-select-non-manifold>` tool.
+      See also: :ref:`Select Non-Manifold <bpy.ops.mesh.select_non_manifold>` tool.
 
       .. TODO: Images would be useful here.
 

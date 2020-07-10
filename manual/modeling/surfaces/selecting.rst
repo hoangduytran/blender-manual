@@ -161,7 +161,7 @@ Select Control Point Row
    :Hotkey:    :kbd:`Shift-R`
 
 This option works a bit like
-:ref:`edge loop selection <modeling-meshes-selecting-edge-loops>` for meshes,
+:ref:`edge loop selection <bpy.ops.mesh.loop_multi_select>` for meshes,
 inasmuch it selects a whole :ref:`row <modeling-surfaces-rows-grids>` of control points,
 based on the active (the last selected) one. The first time you press :kbd:`Shift-R`,
 the V row passing through (containing) the active point will be added to the *current* selection.
