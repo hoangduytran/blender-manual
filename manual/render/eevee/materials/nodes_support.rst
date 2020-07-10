@@ -203,9 +203,6 @@ Displacement/Vector Displacement
 :abbr:`IES (Illuminating Engineering Society)` Texture
    Not supported.
 
-Sky Texture
-   Not supported.
-
 Image Texture
    Smart Interpolation always uses Cubic interpolation.
    Artifact present using Tube or Sphere projection with linear interpolation.
