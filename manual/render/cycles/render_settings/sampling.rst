@@ -48,22 +48,6 @@ Viewport
    Number of samples for viewport rendering. Setting this value to zero
    enables indefinite sampling of the viewport.
 
-.. _render-cycles-settings-viewport-denoising:
-
-Viewport Denoising
-   Removes noise while previewing scenes in *Rendered* mode in the 3D Viewport.
-   Denoising can also be enabled for the final render in the
-   :ref:`View Layer Properties <render-layers-denoising-optix>`.
-   The sample value which denoising can be applied on to can be configured in the
-   :ref:`Viewport Performance <render_cycles_settings_perfomance_viewport>` properties.
-
-   None
-      Do not denoise the 3D Viewport.
-   OptiX AI-Accelerated
-      Uses an artificial intelligence algorithm to remove noise from renders.
-      It is based on the :ref:`render-cycles-gpu-optix` acceleration engine
-      and therefore has the same GPU requirements as rendering with Optix.
-
 
 Sub Samples
 ===========
@@ -109,6 +93,46 @@ Noise Threshold
 Min Samples
    The minimum number of samples a pixel receives before adaptive sampling is applied.
    When set to 0 (default), it is automatically set to the square root of the total (max) sample count.
+
+
+.. _render-cycles-settings-viewport-denoising:
+
+Denoising
+=========
+
+Denoising removes noise while previewing scenes in *Rendered* mode in the 3D Viewport or for final renders.
+
+Render
+   Denoising for the final render can be enabled or disabled for with the checkbox.
+
+   NLM
+      Uses `non-local means <https://en.wikipedia.org/wiki/Non-local_means>`__ to denoise the image.
+      Addition properties for this denoising method can be set in the
+      :ref:`View Layer Properties <render-layers-denoising-optix>`.
+   OpenImageDenoise
+      Uses Intel's `Open Image Denoise <https://openimagedenoise.github.io/>`__,
+      an AI denoiser which runs on the CPU.
+   OptiX
+      Uses an artificial intelligence algorithm to remove noise from renders.
+      It is based on the :ref:`render-cycles-gpu-optix` acceleration engine
+      and therefore has the same GPU requirements as rendering with Optix.
+
+Viewport
+   Denoising for the *Rendered* mode in the 3D Viewport can be enabled or disabled for with the checkbox.
+
+   Automatic
+      Uses the faster available denoiser for 3D Viewport rendering
+      (*OptiX* if available, otherwise *OpenImageDenoise*).
+   OpenImageDenoise
+      Uses Intel's `Open Image Denoise <https://openimagedenoise.github.io/>`__,
+      an AI denoiser which runs on the CPU.
+   OptiX
+      Uses an artificial intelligence algorithm to remove noise from renders.
+      It is based on the :ref:`render-cycles-gpu-optix` acceleration engine
+      and therefore has the same GPU requirements as rendering with Optix.
+
+Start Sample
+   Sample to start :ref:`denoising <render-cycles-settings-viewport-denoising>` in the 3D Viewport.
 
 
 Advanced

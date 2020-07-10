@@ -84,6 +84,3 @@ Pixel Size
 
 Start Pixels
    Resolution to start rendering preview at, progressively increase it to the full viewport size.
-
-Denoising Start Sample
-   Sample to start :ref:`denoising <render-cycles-settings-viewport-denoising>` at.
