@@ -60,8 +60,8 @@ Influence
    See :ref:`common constraint properties <bpy.types.constraint.influence>` for more information.
 
 
-Source
-------
+Map From
+--------
 
 It contains the input (from target) settings.
 
@@ -83,16 +83,8 @@ X/Y/Z Min, Max
    the constraint behaves as if it had the same value as the max one.
 
 
-Mapping
--------
-
-Source Axis X, Y, Z
-   The three axis selectors allow you to select which input axis to map to,
-   respectively (from top to bottom), the X, Y and Z output (owner) axes.
-
-
-Destination
------------
+Map To
+------
 
 It contains the output (to owner) settings.
 
@@ -103,7 +95,11 @@ Order (Rotation)
    For rotation, allows specifying which :term:`Euler` order to use during evaluation
    of the constraint. Defaults to using the order of the constraint owner.
 
-X/Y/Z Min, Max
+X/Y/Z Source Axis
+   The three axis selectors allow you to select which input axis to map to,
+   respectively (from top to bottom), the X, Y and Z output (owner) axes.
+
+Min, Max
    The *Min* and *Max* number fields control the lower and upper bounds of the output value range,
    independently for each mapped axis.
    Note that if a min value is higher than its corresponding max value,
