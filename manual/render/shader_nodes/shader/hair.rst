@@ -65,7 +65,7 @@ Component
    .. figure:: /images/render_shader-nodes_shader_hair-bsdf_mix-node.png
       :align: center
 
-      With Mix Node: 0 = Full Reflection, 1 = Full Transmission.
+      With Mix node: 0 is full Reflection, 1 is full Transmission.
 
 
 

@@ -72,7 +72,7 @@ Collision Collection
 Self-Collisions
 ---------------
 
-Real cloth cannot penetrate itself, so you normally want the cloth not to self-collide.
+Real cloth cannot penetrate itself, so you normally want the cloth to self-collide.
 Enable this to tell the cloth object that it should not penetrate itself.
 This adds to the simulation's compute time, but provides more realistic results.
 

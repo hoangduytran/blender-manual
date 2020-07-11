@@ -41,7 +41,7 @@ Edge Selection Mode:
       Selects all edges that have the same *Bevel Weight* as those already selected.
    Seam
       Selects all edges that have the same *Seam* state as those already selected.
-      *Seam* is a true/false setting used in :ref:`UV texturing <editors-uv-index>`.
+      *Seam* is a mark used in :ref:`UV texturing <editors-uv-index>`.
    Sharpness
       Selects all edges that have the same *Sharp* state as those already selected.
       *Sharp* is a mark used by the :doc:`Edge Split Modifier </modeling/modifiers/generate/edge_split>`.
@@ -65,7 +65,7 @@ Face Selection Mode:
    Face-Map
       Selects all faces belonging to a :ref:`Face-Map <bpy.types.FaceMaps>`.
    Freestyle Face Marks
-      Selects all faces with similar :ref:`Freestyle Face Marks <bpy.ops.mesh.mark_freestyle_face>`
+      Selects all faces with similar :ref:`Freestyle Face Marks <bpy.ops.mesh.mark_freestyle_face>`.
 
 
 .. _bpy.ops.mesh.select_similar_region:

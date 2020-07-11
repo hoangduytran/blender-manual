@@ -19,9 +19,8 @@ Select Menu
 
 The *Select* menu (in the 3D Viewport header) is even simpler than for curves...
 
-All these options have the same meaning and behavior as in
-:doc:`Object Mode </scene_layout/object/selecting>` and mesh
-:doc:`Edit Mode </modeling/meshes/selecting/index>`).
+All these options have the same meaning and behavior as in :doc:`Object Mode </scene_layout/object/selecting>`
+and mesh :doc:`Edit Mode </modeling/meshes/selecting/index>`.
 
 All :kbd:`A`
    Select all.

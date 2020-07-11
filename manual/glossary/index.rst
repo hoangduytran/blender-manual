@@ -325,16 +325,16 @@ This page lists definitions for terms used in Blender and this manual.
       The distance required by a lens to focus collimated light.
       Defines the magnification power of a lens. Also see :term:`Field of View <Field of View>`.
 
+   FK
    Forward Kinematics
-      The process of determining the movement of interconnected segments or bones
-      of a body or model in the order from the parent bones to the child bones.
-      Using forward kinematics on a hierarchically structured object,
-      you can move the upper arm then the lower arm and hand go along with the movement.
-      Without Forward kinematics the lower arm and hand would discontent
-      from upper arm and would move independently in space.
+      The process of determining the movement of interconnected segments or bones of
+      a body or model in the order from the parent bones to the child bones.
+      Using forward kinematics on a hierarchically structured object, you can move
+      the upper arm then the lower arm and hand go along with the movement.
+      Without forward kinematics the lower arm and hand would discontent from
+      upper arm and would move independently in space.
 
       See also :term:`Inverse Kinematics`.
-
 
    Frame Types
       In video compression, a frame can be compressed by several different algorithms.
@@ -404,17 +404,19 @@ This page lists definitions for terms used in Blender and this manual.
    Interpolation
       The process of calculating new data between points of known value, like :term:`Keyframes <Keyframe>`.
 
+   IK
    Inverse Kinematics
-      The process of determining the movement of interconnected segments or bones
-      of a body or model in the order from the child bones to the parent bones.
-      Using inverse kinematics on a hierarchically structured object,
-      you can move the hand then the upper and lower arm will automatically follow that movement.
-      Without Inverse kinematics the hand would come off the model and would move independently in space.
+      The process of determining the movement of interconnected segments or bones of
+      a body or model in the order from the child bones to the parent bones.
+      Using inverse kinematics on a hierarchically structured object, you can move
+      the hand then the upper and lower arm will automatically follow that movement.
+      Without inverse kinematics the hand would come off the model
+      and would move independently in space.
 
       See also :term:`Forward Kinematics`.
 
    Keyframe
-      A frame in an animated sequence drawn or otherwise constructed directly by the user.
+      A frame in an animated sequence drawn or otherwise constructed directly by the animator.
       In classical animation, when all frames were drawn by animators,
       the senior artist would draw these frames, leaving the "in between" frames to an apprentice.
       Now, the animator creates only the first and last frames of a simple sequence (keyframes);

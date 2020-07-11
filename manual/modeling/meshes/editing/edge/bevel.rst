@@ -161,10 +161,10 @@ Miter Type
          Edges meet at a sharp point but in addition, two extra vertices are introduced near the point
          so that the edges and faces at the vertex may be less pinched together than
          what occurs in the *Sharp* case.
-         The *Spread* slider controls how far the new vertices are from the meeting point.
+         The *Spread* slider controls how far the new vertices are from the intersection.
       Arc
-         Two vertices are introduced near the meeting point, and a curved arc joins them together.
-         The *Spread* slider controls how far the new vertices are from the meeting point.
+         Two vertices are introduced near the intersection, and a curved arc joins them together.
+         The *Spread* slider controls how far the new vertices are from the intersection.
          The *Profile* slider controls the shape of the arc.
 
       The current choices are shown in this diagram, where the outer miter is along the horizontal surface.
@@ -261,7 +261,7 @@ Intersection Type :kbd:`N`
 
              Cutoff intersection method with a center face.
 
-Profile Type  :kbd:`Z`
+Profile Type :kbd:`Z`
    Superellipse
       Creates a bevel with a uniform concave or convex curve.
 
@@ -277,12 +277,13 @@ Profile Type  :kbd:`Z`
       but the shape of the profile is only editable in the options panel after the operation is confirmed.
 
       The profile starts at the bottom right of the widget and ends at the top left, as if it
-      were between two edges meeting at a right angle. Control points are created in the widget and
+      were between two edges intersecting at a right angle. Control points are created in the widget and
       then the path is sampled with the number of segments from the bevel modifier.
 
       Presets
-         The *Support Loops* and *Steps* presets are built dynamically depending on the number of segments in the bevel.
-         If the number of segments is changed, the preset will have to be re-applied.
+         The *Support Loops* and *Steps* presets are built dynamically depending on
+         the number of segments in the bevel. If the number of segments is changed,
+         the preset will have to be re-applied.
       Reverse
          The *Reverse* button flips the orientation of the profile for all beveled edges.
       Clipping
@@ -298,8 +299,8 @@ Profile Type  :kbd:`Z`
          Samples will first be added to each control point, then if there are enough samples,
          they will be divided evenly between the edges. The *Sample Straight Edges* option toggles whether
          the samples are added to edges with sharp control points on either side. If there aren't enough samples
-         to give each edge the same number of samples, they will just be added to the most curved edges,
-         so it is recommended to use at least as many segments as there are control points.
+         to give each edge the same number of samples, they will just be added to the most curved edges.
+         So it is recommended to use at least as many segments as there are control points.
 
 
 Examples

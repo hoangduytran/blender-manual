@@ -11,4 +11,4 @@ Debugging
 =========
 
 Cycles Debug
-   Makes the Cycle's rendering :doc:`Debug Panel </render/cycles/render_settings/debug>` visible.
+   Show the Cycle's rendering :doc:`Debug Panel </render/cycles/render_settings/debug>`.

@@ -43,16 +43,16 @@ Render
    the solution becomes less noisy and more accurate.
 
    When using *Branched Path Tracing*, this changes the *AA Samples*
-   which are multiplied by the `Sub Samples`_ and improve :term:`Anti-Aliasing`.
+   which are multiplied by the `Subsamples`_ and improve :term:`Anti-Aliasing`.
 Viewport
    Number of samples for viewport rendering. Setting this value to zero
    enables indefinite sampling of the viewport.
 
 
-Sub Samples
-===========
+Subsamples
+==========
 
-The panel is visible only when using *Branched Path Tracing*.
+The subpanel is only shown when using *Branched Path Tracing*.
 
 Diffuse
    Number of diffuse bounce samples to take for each AA sample.
@@ -73,15 +73,15 @@ Volume
 Adaptive Sampling
 =================
 
-With *adaptive sampling* Cycles automatically reduces the number of samples in areas that have little noise,
+With adaptive sampling Cycles automatically reduces the number of samples in areas that have little noise,
 for faster rendering and more even noise distribution.
 For example hair on a character may need many samples, but the background may need very few.
 
 By default, the threshold to stop sampling pixels is adapted to the number of AA samples.
 This reduces overall render time, and particularly after denoising the result will be almost indistinguishable.
 
-*Adaptive sampling* also makes it possible to render images with a target amount of noise.
-This is done by settings the Noise Threshold, typical values are in the range from 0.1 to 0.001.
+With adaptive sampling it is also possible to render images with a target amount of noise.
+This is done by settings the *Noise Threshold*, typical values are in the range from 0.1 to 0.001.
 Then render samples can then be set to a high value,
 and the renderer will automatically choose the appropriate amount of samples.
 
@@ -106,10 +106,10 @@ Render
    Denoising for the final render can be enabled or disabled for with the checkbox.
 
    NLM
-      Uses `non-local means <https://en.wikipedia.org/wiki/Non-local_means>`__ to denoise the image.
-      Addition properties for this denoising method can be set in the
-      :ref:`View Layer Properties <render-layers-denoising-optix>`.
-   OpenImageDenoise
+      Uses `non-local means <https://en.wikipedia.org/wiki/Non-local_means>`__ to
+      denoise the image. Addition properties for this denoising method can be set in
+      the :ref:`View Layer Properties <render-layers-denoising-optix>`.
+   Open Image Denoise
       Uses Intel's `Open Image Denoise <https://openimagedenoise.github.io/>`__,
       an AI denoiser which runs on the CPU.
    OptiX

@@ -4,7 +4,7 @@ Sampling
 ********
 
 The quality of the renders can be adjusted by changing the :term:`Anti-Aliasing` method.
-A different one can be selected for the 3D Viewport, Viewport rendering and
+A different one can be selected for the 3D Viewport, viewport rendering and
 for final rendering.
 
 The setting for the 3D Viewport is a user preference to specify the anti-aliasing method

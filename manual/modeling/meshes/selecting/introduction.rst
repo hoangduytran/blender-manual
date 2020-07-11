@@ -33,17 +33,14 @@ You can enter the different modes by selecting one of the three buttons in the h
 
 Vertices
    In this mode vertices are shown as points.
-
    Selected vertices are displayed in orange, unselected vertices in black,
    and the active or last selected vertex in white.
 Edges
    In this mode the vertices are not shown.
-
    Instead the selected edges are displayed in orange,
    unselected edges black, and the active or last selected edge in white.
 Faces
    In this mode the faces are displayed with a selection point in the middle which is used for selecting a face.
-
    Selected faces and their selection point are displayed in orange,
    unselected faces are displayed in black, and the active or last selected face is highlighted in white.
 
@@ -52,8 +49,8 @@ When using these buttons, you can make use of modifier keys, see: `Switching Sel
 Almost all tools are available in all three mesh selection modes.
 So you can *Rotate*, *Scale*, *Extrude*, etc. in all modes.
 Of course rotating and scaling a *single* vertex will not do anything useful
-(*without* setting the pivot point to another location),
-so some tools are more or less applicable in some modes.
+(*without* setting the pivot point to another location), so some tools
+are more or less applicable in some modes.
 
 See Fig. :ref:`fig-mesh-select-intro-selection-modes` for examples of the different modes.
 
@@ -63,8 +60,8 @@ Multiple Selection Modes
 
 By holding :kbd:`Shift-LMB` when selecting a selection mode,
 you can enable multiple *Selection Modes* at once.
-This allows you to quickly select Vertices/Edges/Faces,
-without first having to switch modes.
+This allows you to quickly select vertices, edges, or faces,
+without first having to switch mode.
 
 .. _fig-mesh-select-intro-selection-modes:
 
@@ -94,8 +91,8 @@ without first having to switch modes.
 Switching Select Mode
 ---------------------
 
-When switching modes in an "ascendant" way (i.e. from simpler to more complex), from
-*Vertices* to *Edges* and from *Edges* to *Faces*,
+When switching modes in an "ascendant" way (i.e. from simpler to more complex),
+from *Vertices* to *Edges* and from *Edges* to *Faces*,
 the selected parts will still be selected if they form a complete element in the new mode.
 
 For example, if all four edges in a face are selected,
@@ -125,7 +122,6 @@ Expand/Contract Selection
 By holding :kbd:`Ctrl` when selecting a higher selection mode,
 all elements touching the current selection will be added,
 even if the selection does not form a complete higher element.
-
 Or contracting the selection when switching to a lower mode.
 
 .. list-table::
@@ -145,9 +141,7 @@ X-Ray
 =====
 
 The :ref:`x-ray <3dview-shading-xray>` setting is not just for shading, it impacts selection too.
-
-When enabled, selection isn't occluded by the objects geometry
-(as if the object was solid).
+When enabled, selection isn't occluded by the objects geometry (as if the object was solid).
 
 .. list-table::
 
@@ -210,7 +204,7 @@ Select More/Less
    Less :kbd:`Ctrl-NumpadMinus`
       Contracts the selection from the adjacent elements of the selection type.
    Next Active :kbd:`Shift-Ctrl-NumpadPlus`
-      This uses selection history to select the next vertex/edge/face based on surrounding topology.
+      This uses selection history to select the next vertex, edge, or face based on surrounding topology.
    Previous Active :kbd:`Shift-Ctrl-NumpadMinus`
       Select previous just removes the last selected element.
 
@@ -252,10 +246,8 @@ Dense Meshes
 
 Selecting dense meshes with X-Ray disabled, has a limitation where dense meshes may not have
 all the elements selected.
-
 When selecting regions with Box, Circle and Lasso select, vertices may overlap each other causing
 some vertices not to be selected.
-
 This is a limitation with the current selection method, you may workaround this by zooming in or enabling X-Ray.
 
 
@@ -269,4 +261,4 @@ N-Gons in Face Select Mode
 As already noted, in X-Ray and Wireframe mode faces are marked with a dot in the middle.
 With n-gons that can lead in certain cases to a confusing display.
 The example shows the center dot of the U-shaped n-gon being inside of the oblong face inside the "U".
-It is not easy to say which dot belongs to which face (the orange dot in the image is the object origin).
+It is not easy to identify which dot belongs to which face (the orange dot in the image is the object origin).

@@ -62,7 +62,7 @@ Locked Axis
 
 .. important::
 
-   If you choose the same axis for *Tracking Axis* and *Locked axis*,
+   If you choose the same axis for *Tracking Axis* and *Locked Axis*,
    the constraint will no longer be functional (red state).
 
 Influence

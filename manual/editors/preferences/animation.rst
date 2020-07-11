@@ -20,8 +20,8 @@ Allow Negative Frame
    Playback and animations can occur during negative frame ranges.
 Minimum Grid Spacing
    The minimum number of pixels between grid lines.
-TimeCode Style
-   Format of Time Codes displayed when not displaying timing in terms of frames.
+Timecode Style
+   Format of timecodes displayed when not displaying timing in terms of frames.
    The format uses '+' as a separator for sub-second frame numbers,
    with left and right truncation of the timecode as necessary.
 Zoom to Frame Type

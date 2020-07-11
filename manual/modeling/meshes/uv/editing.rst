@@ -390,8 +390,8 @@ Constraining to Image Bounds
    Turning on *Constrain to Image Bounds* will prevent UVs from being moved outside the 0 to 1 UV range.
 
 
-3D View
-=======
+3D Viewport
+===========
 
 .. _bpy.ops.mesh.uvs_rotate:
 .. _bpy.ops.mesh.uvs_reverse:

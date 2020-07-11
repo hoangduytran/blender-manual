@@ -153,7 +153,7 @@ so the graphics card driver relies on giving correct results.
 
 Possible Solutions:
 
-Disable term:`Multisampling`
+Disable :term:`Multisampling`
    This is by far the most common cause of selection issues.
 
    There are known problems with some graphics cards when using multisampling.

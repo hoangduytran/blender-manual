@@ -18,13 +18,11 @@ Linked
 Select geometry connected to already selected elements.
 This is often useful when a mesh has disconnected, overlapping parts,
 where isolating it any other way would be tedious.
-
 To give more control, you can also enable delimiters in the :ref:`ui-undo-redo-adjust-last-operation` panel,
 so the selection is constrained by seams, sharp edges, materials or UV islands.
 
 With *Pick Linked* you can also select connected geometry directly under the cursor,
 using the :kbd:`L` shortcut to select or :kbd:`Shift-L` to deselect linked.
-
 This works differently in that it uses the geometry under the cursor instead of the existing selection.
 
 
@@ -45,23 +43,23 @@ Shortest Path
    Select a face or vertex path with :kbd:`Ctrl-LMB`.
 
 Selects all geometry along the shortest path from
-the active vertex/edge/face to the one which was selected.
+the active vertex, edge, or face to the one which was selected.
 
 Edge Tag (in Edge select mode only)
    This select button indicates what should be done when selecting a vertex path with :kbd:`Ctrl-LMB`:
 
-      Select
-         Just selects all the edges in the path.
-      Tag Seam
-         Marks all edges in the path as seams for UV unwrapping.
-      Tag Sharp
-         Marks all edges in the path as sharp for the Edge Split Modifier.
-      Tag Crease
-         Marks all edges in the path as creases for the Subdivision Surface Modifier, with weight 1.0.
-      Tag Bevel
-         Gives bevel weight 1.0 (for the Bevel Modifier) to all edges in the path.
-      Tag Freestyle Edge Mark
-         Marks all edges in the path Freestyle feature edges.
+   Select
+      Just selects all the edges in the path.
+   Tag Seam
+      Marks all edges in the path as seams for UV unwrapping.
+   Tag Sharp
+      Marks all edges in the path as sharp for the Edge Split Modifier.
+   Tag Crease
+      Marks all edges in the path as creases for the Subdivision Surface Modifier, with weight 1.0.
+   Tag Bevel
+      Gives bevel weight 1.0 (for the Bevel Modifier) to all edges in the path.
+   Tag Freestyle Edge Mark
+      Marks all edges in the path as Freestyle edges.
 
 Face Stepping
    Supports diagonal paths for vertices and faces, and

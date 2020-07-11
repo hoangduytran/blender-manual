@@ -175,7 +175,7 @@ Select Boundary Loop
    :Menu:      :menuselection:`Select --> Select Loops --> Select Boundary Loop`
 
 *Select Boundary Loop* does the opposite of *Select Loop Inner-Region*,
-based on all regions currently selected, it selects only the edges at the border(contour) of these islands.
+based on all regions currently selected, it selects only the edges at the border (contour) of these islands.
 It can operate in any select mode, but when in *Face* mode it will switch to *Edge* select mode after running.
 
 All this is much more simple to illustrate with examples:

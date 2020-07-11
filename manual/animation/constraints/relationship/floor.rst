@@ -49,7 +49,7 @@ Use Rotation
 
 Target/Owner
    Standard conversion between spaces.
-   See :ref:`common constraintant properties <rigging-constraints-interface-common-space>` for more information.
+   See :ref:`common constraint properties <rigging-constraints-interface-common-space>` for more information.
 
 Influence
    Controls the percentage of affect the constraint has on the object.
