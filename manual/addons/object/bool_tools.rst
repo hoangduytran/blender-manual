@@ -26,13 +26,13 @@ Just select the objects that you want to be a brush,
 select an object to set it as active and click in one of those operations:
 
 Auto Boolean
-   Union :kbd:`Ctrl-NumpadPlus`
-      Add the selected objects to the active object.
-   Difference :kbd:`Ctrl-NumpadMinus`
+   Difference :kbd:`Shift-Ctrl-NumpadMinus`
       Remove the objects to the active.
-   Intersection :kbd:`Ctrl-NumpadAsterisk`
+   Union :kbd:`Shift-Ctrl-NumpadPlus`
+      Add the selected objects to the active object.
+   Intersection :kbd:`Shift-Ctrl-NumpadAsterisk`
       Apply a intersect operation between the selected objects and the active.
-   Slice :kbd:`Ctrl-NumpadSlash`
+   Slice :kbd:`Shift-Ctrl-NumpadSlash`
       Todo.
 
 .. todo check if operators still there.
@@ -45,19 +45,19 @@ Auto Boolean
       In the *Brush Viewer* you can select, exclude or remove a brush that is applied to this canvas
       (the object that keeps the result of the Boolean operation).
 
-   Apply Mesh
+   All Brushes to Mesh
       Allows you to apply all the brushes to the object and convert it to a final mesh.
       (Be aware that it's a destructive process, you will lost all the interactive stuff,
       but with that you will free the process and will get it as a simple mesh.)
 
 Brush Boolean
-   Union :kbd:`Shift-Ctrl-NumpadPlus`
-      Apply direct Union to an object.
-   Difference :kbd:`Shift-Ctrl-NumpadMinus`
+   Difference :kbd:`Ctrl-NumpadMinus`
       Apply direct Difference to an object.
-   Intersection :kbd:`Shift-Ctrl-NumpadAsterisk`
+   Union :kbd:`Ctrl-NumpadPlus`
+      Apply direct Union to an object.
+   Intersection :kbd:`Ctrl-NumpadAsterisk`
       Apply direct Intersection to an object.
-   Slice :kbd:`Shift-Ctrl-NumpadSlash`
+   Slice :kbd:`Ctrl-NumpadSlash`
       Todo.
 
 
