@@ -1,5 +1,7 @@
 .. _bpy.types.CompositorNodeMixRGB:
-.. Editors Note: This page gets copied into :doc:`</render/cycles/nodes/types/color/mix>`
+.. Editors Note: This page gets copied into:
+.. - :doc:`</render/cycles/nodes/types/color/mix>`
+.. - :doc:`</physics/simulation/nodes/color/mix_rgb>`
 
 .. --- copy below this line ---
 

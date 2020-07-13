@@ -1,5 +1,7 @@
 .. _bpy.types.CompositorNodeGamma:
-.. Editors Note: This page gets copied into :doc:`</render/cycles/nodes/types/color/gamma>`
+.. Editors Note: This page gets copied into:
+.. - :doc:`</render/cycles/nodes/types/color/gamma>`
+.. - :doc:`</physics/simulation/nodes/color/gamma>`
 
 .. --- copy below this line ---
 

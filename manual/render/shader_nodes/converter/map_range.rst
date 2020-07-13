@@ -1,4 +1,8 @@
 .. _bpy.types.ShaderNodeMapRange:
+.. Editors Note: This page gets copied into:
+.. - :doc:`</physics/simulation/nodes/converter/map_range>`
+
+.. --- copy below this line ---
 
 **************
 Map Range Node

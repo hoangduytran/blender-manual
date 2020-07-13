@@ -1,4 +1,8 @@
 .. _bpy.types.ShaderNodeClamp:
+.. Editors Note: This page gets copied into:
+.. - :doc:`</physics/simulation/nodes/converter/clamp>`
+
+.. --- copy below this line ---
 
 **********
 Clamp Node

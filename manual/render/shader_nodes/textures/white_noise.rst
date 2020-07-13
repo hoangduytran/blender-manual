@@ -1,4 +1,8 @@
 .. _bpy.types.ShaderNodeTexWhiteNoise:
+.. Editors Note: This page gets copied into:
+.. - :doc:`</physics/simulation/nodes/noise/white_noise>`
+
+.. --- copy below this line ---
 
 ************************
 White Noise Texture Node

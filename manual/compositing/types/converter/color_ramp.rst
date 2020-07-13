@@ -1,4 +1,6 @@
-.. Editors Note: This page gets copied into :doc:`</render/cycles/nodes/types/converter/color_ramp>`
+.. Editors Note: This page gets copied into:
+.. - :doc:`</render/cycles/nodes/types/converter/color_ramp>`
+.. - :doc:`</physics/simulation/nodes/converter/color_ramp>`
 
 ***************
 Color Ramp Node
