@@ -13,6 +13,10 @@ To enable GPU rendering, go into the :menuselection:`Preferences --> System --> 
 and select either *CUDA*, *OptiX* or *OpenCL*. Next, you must configure each scene to use GPU rendering in
 :menuselection:`Properties --> Render --> Device`.
 
+.. note::
+
+   GPU rendering is only supported on Windows and Linux; macOS is currently not supported.
+
 
 Supported Hardware
 ==================
@@ -34,7 +38,6 @@ CUDA requires graphics cards with compute capability 3.0 and higher.
 To make sure your GPU is supported,
 see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
 with the compute capabilities and supported graphics cards.
-CUDA GPU rendering is supported on Windows, macOS, and Linux.
 
 
 .. _render-cycles-gpu-optix:
@@ -48,7 +51,7 @@ see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#c
 OptiX works best on RTX graphics cards with hardware ray tracing support (e.g. Turing and above).
 OptiX support is still experimental and does not yet support all features, see below for details.
 
-OptiX requires Geforce or Quadro RTX graphics card with recent Nvidia drivers, and is supported on Windows and Linux.
+OptiX requires Geforce or Quadro RTX graphics card with recent Nvidia drivers.
 
 
 AMD
@@ -60,8 +63,6 @@ Blender supports graphics cards with :abbr:`GCN (Graphics Core Next)` generation
 To make sure your GPU is supported,
 see the `list of GCN generations <https://en.wikipedia.org/wiki/Graphics_Core_Next#Iterations>`__
 with the GCN generation and supported graphics cards.
-
-AMD OpenCL GPU rendering is supported on Windows and Linux, but not on macOS.
 
 
 Supported Features and Limitations
