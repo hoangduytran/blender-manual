@@ -21,8 +21,13 @@ Inputs
 
 Strength
    Strength of the normal mapping effect.
+
+   .. figure:: /images/render_shader-nodes_vector_normal-map_strength.jpg
+
+      Strength = 0, 0.5, 1, 2 (from left to right).
+
 Color
-   RGB color that encodes the normal in the specified space.
+   RGB color that encodes the normal map in the specified space.
 
 
 Properties
@@ -45,7 +50,10 @@ Normal
    Normal that can be used as an input to BSDF nodes.
 
 
-Examples
-========
+Example
+=======
 
-Todo <2.8 add.
+.. figure:: /images/render_shader-nodes_vector_normal-map_example.jpg
+   :align: center
+
+   The Normal Map Strength is set to 1.
