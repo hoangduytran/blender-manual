@@ -22,12 +22,11 @@ Options
 
    Normal Edit Modifier.
 
-Mode
-   Radial
-      Aligns normals with the ``(origin, vertex_coordinates)`` vector, in other words all normals seems to radiate
-      from the given center point, as if they were emitted from an ellipsoid surface.
-   Directional
-      Makes all normals point (converge) towards a given target object.
+Radial
+   Aligns normals with the ``(origin, vertex_coordinates)`` vector, in other words all normals seems to radiate
+   from the given center point, as if they were emitted from an ellipsoid surface.
+Directional
+   Makes all normals point (converge) towards a given target object.
 
 Target
    Uses this object's origin as reference point when generating normals.

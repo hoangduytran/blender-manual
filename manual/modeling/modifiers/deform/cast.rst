@@ -54,7 +54,7 @@ Size
    Alternative size for the projected shape. If zero,
    it is defined by the initial shape and the control object, if any.
 
-From Radius
+Size from Radius
    If activated, calculate *Size* from *Radius*, for smoother results.
 
 Vertex Group

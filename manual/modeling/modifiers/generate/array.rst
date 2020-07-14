@@ -35,18 +35,6 @@ Fit Type
    Fixed Count
       Generates the number of copies specified in *Count*.
 
-Start Cap / End Cap
-   This allows either endpoints of the array to have a different mesh subsisted.
-
-   For the *start*: as if it was in position -1, i.e. one "array step" before the first "regular" array copy.
-   For the *end*: as if it was in position *n* + 1, i.e. one "array step" after the last "regular" array copy.
-
-   When *Merge* is activated, and the *cap* vertices are within the *Distance* threshold, they will be merged.
-
-   .. note::
-
-      The start/end cap objects currently do not support the *First and Last Copies* option.
-
 .. note::
 
    - Both *Fit Curve* and *Fit Length* use the local coordinate system size of the base object, which means that
@@ -119,6 +107,22 @@ UVs
 
 Offset U/V
    Shifts UVs of each new duplicate by a settable amount.
+
+
+Caps
+----
+
+Cap Start, End
+   This allows either endpoints of the array to have a different mesh subsisted.
+
+   For the *start*: as if it was in position -1, i.e. one "array step" before the first "regular" array copy.
+   For the *end*: as if it was in position *n* + 1, i.e. one "array step" after the last "regular" array copy.
+
+   When *Merge* is activated, and the *cap* vertices are within the *Distance* threshold, they will be merged.
+
+   .. note::
+
+      The start/end cap objects currently do not support the *First and Last Copies* option.
 
 
 Hints

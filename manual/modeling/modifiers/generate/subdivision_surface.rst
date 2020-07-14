@@ -40,20 +40,17 @@ Options
 
    The Subdivision Surface modifier.
 
-Type
-   This toggle button allows you to choose the subdivision algorithm:
+Catmull-Clark
+   The default option, subdivides and smooths the surfaces.
+   According to its `Wikipedia page <https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__,
+   the "arbitrary-looking formula was chosen by Catmull and Clark based on the aesthetic appearance of
+   the resulting surfaces rather than on a mathematical derivation."
+Simple
+   Only subdivides the surfaces, without any smoothing
+   (the same as the :ref:`Subdivide <bpy.ops.mesh.subdivide>` operator, in Edit Mode).
+   Can be used, for example, to increase base mesh resolution when using displacement maps.
 
-   Catmull-Clark
-      The default option, subdivides and smooths the surfaces.
-      According to its `Wikipedia page <https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__,
-      the "arbitrary-looking formula was chosen by Catmull and Clark based on the aesthetic appearance of
-      the resulting surfaces rather than on a mathematical derivation."
-   Simple
-      Only subdivides the surfaces, without any smoothing
-      (the same as the :ref:`Subdivide <bpy.ops.mesh.subdivide>` operator, in Edit Mode).
-      Can be used, for example, to increase base mesh resolution when using displacement maps.
-
-Levels Viewport/Render
+Levels Viewport, Render
    The number of subdivision levels shown in the 3D Viewport or the final render.
 
    .. warning::

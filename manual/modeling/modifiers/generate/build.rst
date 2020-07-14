@@ -18,7 +18,7 @@ Options
 
    The Build modifier.
 
-Start
+Start Frame
    The start frame of the building process.
 
 Length
