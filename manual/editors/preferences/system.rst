@@ -25,13 +25,21 @@ for more information see the :doc:`GPU Rendering </render/cycles/gpu_rendering>`
 
 None
    When set to *None* or when the only option is *None*:
-   the CPU will be used as the computing device for the Cycles Renderer.
+   the CPU will be used as the computing device for Cycles.
 CUDA
    If the system has a compatible Nvidia CUDA device, it will show up an option for rendering with Cycles.
 OptiX
    If the system has a compatible Nvidia OptiX device, it will show up an option for rendering with Cycles.
 OpenCL
    If the system has a compatible AMD OpenCL device, it will show up an option for rendering with Cycles.
+
+.. _prefs-system-cycles-distributive-memory:
+
+Distribute Memory Across Devices
+   Allocates resources across multiple GPUs rather than duplicating data,
+   effectively making more room for larger scenes. Note that in order for this option to be available,
+   the GPUs must be connected together with a high bandwidth communication protocol.
+   Currently only NVLink on Nvidia GPUs is supported.
 
 
 Memory & Limits
