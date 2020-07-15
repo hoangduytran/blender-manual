@@ -123,6 +123,21 @@ Threshold
    The minimum value to consider a certain attribute a boundary when creating the Face Sets.
 
 
+.. _bpy.ops.sculpt.face_set_edit:
+
+Grow/Shrink Face Sets
+---------------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Face Sets --> Grow/Shrink Face Sets`
+   :Hotkey:    :kbd:`Ctrl-W`, :kbd:`Ctrl-Alt-W`
+
+Expands or contracts the area of face set under the cursor by adding/removing surrounding faces.
+
+
 Invert Visible Face Sets
 ------------------------
 
