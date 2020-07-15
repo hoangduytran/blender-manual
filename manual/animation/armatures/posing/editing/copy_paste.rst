@@ -1,4 +1,6 @@
 .. |copy-paste| image:: /images/animation_armatures_posing_editing_copy-paste_buttons.png
+.. _bpy.ops.pose.copy:
+.. _bpy.ops.pose.paste:
 
 ***************
 Copy/Paste Pose
@@ -11,8 +13,8 @@ Copy/Paste Pose
    :Menu:      :menuselection:`Pose --> Copy Pose`,
                :menuselection:`Pose --> Paste Pose`,
                :menuselection:`Pose --> Paste Pose Flipped`
-   :Hotkey:    :kbd:`Ctrl-C`
-               :kbd:`Ctrl-V`
+   :Hotkey:    :kbd:`Ctrl-C`,
+               :kbd:`Ctrl-V`,
                :kbd:`Shift-Ctrl-V`
 
 Blender allows you to copy and paste a pose, either through the *Pose* menu, or

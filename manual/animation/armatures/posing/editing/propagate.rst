@@ -1,3 +1,4 @@
+.. _bpy.ops.pose.propagate:
 
 *********
 Propagate
@@ -13,10 +14,6 @@ Propagate
 The Propagate tool copies the pose of the selected bones on the current frame over
 to the keyframes delimited by the *Termination Mode*.
 It automates the process of copying and pasting.
-
-
-Options
-=======
 
 Termination Mode
    Modes which determine how it decides when to stop overwriting keyframes.

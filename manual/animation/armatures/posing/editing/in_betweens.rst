@@ -16,6 +16,38 @@ like :ref:`auto-bones naming <armature-editing-naming-bones>`,
 that were already described in the armature editing pages. See the links above...
 
 
+.. _bpy.ops.pose.push_rest:
+
+Push Pose from Rest Pose
+========================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Pose Mode
+   :Menu:      :menuselection:`Pose --> In-Betweens --> Push Pose from Rest Pose`
+
+Similar to *Push Pose from Breakdown* but interpolates the pose to the rest position instead.
+Only one keyframe is needed for this tool unlike two for the other.
+
+
+.. _bpy.ops.pose.relax_rest:
+
+Relax Pose to Rest Pose
+=======================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Pose Mode
+   :Menu:      :menuselection:`Pose --> In-Betweens --> Relax Pose to Rest Pose`
+
+Similar to *Relax Pose to Breakdown* but works to bring the pose back to the rest position instead.
+Only one keyframe is needed for this tool unlike two for the other.
+
+
+.. _bpy.ops.pose.push:
+
 Push Pose from Breakdown
 ========================
 
@@ -30,18 +62,7 @@ Push Pose from Breakdown
 *Push Pose* interpolates the current pose by making it closer to the next keyframed position.
 
 
-Push Pose from Rest
-===================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Pose Mode
-   :Menu:      :menuselection:`Pose --> In-Betweens --> Push Pose from Rest`
-
-Similar to *Push Pose from Breakdown* but interpolates the pose to the rest position instead.
-Only one keyframe is needed for this tool unlike two for the other.
-
+.. _bpy.ops.pose.relax:
 
 Relax Pose to Breakdown
 =======================
@@ -60,21 +81,10 @@ using this tool will progressively "bring it back" to its "keyed position",
 with smaller and smaller steps as it comes near it.
 
 
-Relax Pose to Rest
-==================
+.. _bpy.ops.pose.breakdown:
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Pose Mode
-   :Menu:      :menuselection:`Pose --> In-Betweens --> Relax Pose to Rest`
-
-Similar to *Relax Pose to Breakdown* but works to bring the pose back to the rest position instead.
-Only one keyframe is needed for this tool unlike two for the other.
-
-
-Breakdowner
-===========
+Pose Breakdowner
+================
 
 .. admonition:: Reference
    :class: refbox
