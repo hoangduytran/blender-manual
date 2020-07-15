@@ -4,9 +4,6 @@
 Particle Simulation Node
 ************************
 
-Todo.
-
-
 Inputs
 ======
 
