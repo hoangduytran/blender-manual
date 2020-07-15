@@ -53,16 +53,19 @@ Sun Disc
    Enable/Disable sun disc lighting.
 
 Sun Size
-   Diameter of the sun disc in degrees.
+   Angular diameter of the sun disc (in degrees).
+
+Sun Intensity
+   Multiplier for sun disc lighting.
 
 Sun Elevation
-   Rotation of the sun from the horizon line.
+   Rotation of the sun from the horizon (in degrees).
 
 Sun Rotation
-   Rotation of the sun around the Z axis.
+   Rotation of the sun around the zenith (in degrees).
 
 Altitude
-   Height from sea level to the space in meters.
+   Height from sea level to the space (in km).
 
 Air
    Density of air molecules.
