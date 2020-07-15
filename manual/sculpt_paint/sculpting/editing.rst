@@ -27,6 +27,9 @@ Set Pivot
 
          :doc:`Object and Edit Mode Pivot </editors/3dview/controls/pivot_point/index>`
 
+
+.. _bpy.ops.sculpt.optimize:
+
 Rebuild BVH
    Recalculates the :term:`BVH` used by :doc:`/sculpt_paint/sculpting/tool_settings/dyntopo`
    which can improve performance which might degrade over time while using Dyntopo.
@@ -49,6 +52,8 @@ much more control when working with meshes with complex shapes and overlapping s
 Geometry can be assigned to a Face Set and each Face Set is represented as a different color in the 3D Viewport.
 A pie menu to edit Face Sets can be accessed with :kbd:`W`.
 
+
+.. _bpy.ops.sculpt.face_sets_create:
 
 Face Set from Masked
 --------------------
@@ -138,6 +143,8 @@ Grow/Shrink Face Sets
 Expands or contracts the area of face set under the cursor by adding/removing surrounding faces.
 
 
+.. _bpy.ops.sculpt.face_set_change_visibility:
+
 Invert Visible Face Sets
 ------------------------
 
@@ -161,6 +168,8 @@ Show All Face Sets
 
 Shows all hidden geometry that is part of a Face Set.
 
+
+.. _bpy.ops.sculpt.face_sets_randomize_colors:
 
 Randomize Colors
 ----------------
