@@ -242,9 +242,7 @@ Misc Options
 ``--app-template`` ``<template>``
    Set the application template (matching the directory name), use ``default`` for none.
 ``--factory-startup``
-   Skip reading the startup.blend in the user's home directory.
-``--disable-library-override``
-   Disable Library Override features in the UI.
+   Skip reading the startup.blend in the users home directory.
 ``--enable-event-simulate``
    Enable event simulation testing feature ``bpy.types.Window.event_simulate``.
 
@@ -334,4 +332,3 @@ Environment Variables
 :TEMP:                     Store temporary files here.
 :TMP: or $TMPDIR           Store temporary files here.
 :SDL_AUDIODRIVER:          LibSDL audio driver - alsa, esd, dma.
-:PYTHONHOME:               Path to the Python directory, eg. /usr/lib/python.
