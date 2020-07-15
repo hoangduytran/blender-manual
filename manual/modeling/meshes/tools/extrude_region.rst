@@ -1,3 +1,4 @@
+.. _bpy.ops.mesh.extrude_region:
 .. _tool-mesh-extrude_region:
 
 **************
