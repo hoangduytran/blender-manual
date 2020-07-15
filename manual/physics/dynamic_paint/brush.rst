@@ -106,11 +106,23 @@ Object Center
 Particle System
    Brush influence is defined by particles from a selected particle system.
 
-   Particle Effect: Solid Radius
-      ToDo 2.62.
+   .. figure:: /images/physics_dynamic-paint_solid_smooth_radius.png
+      :align: right
+
+   Effect Solid Radius
+       Defines the distance, inside which paint is solid color.
+
    Use Particle Radius
-      Smooth Radius
-         ToDo 2.62.
+       Uses the settings in the particle panel to determine solid radius size. Solid Radius size disabled while Particle Radius enabled.
+
+   Smooth Radius
+     An additional radius outside Solid Radius to add a smooth falloff.\
+
+     If you set "Smooth Radius" to zero, particle will be painted as a solid sphere.
+     If you set "Solid Radius" to zero, it gets painted as a smooth halo.
+
+     .. figure:: /images/physics_dynamic-paint_solid_smooth_radius_values.jpg
+        :align: center
 
    .. figure:: /images/physics_dynamic-paint_brush_source-particle-system.png
 
@@ -121,7 +133,8 @@ Common Options
 --------------
 
 Paint Distance
-   ToDo 2.62.
+   The maximum distance to mesh surface to affect paint.
+
 Project
    Projects brush to the canvas from a defined direction.
    Basically this can be considered as "direction aligned" proximity.
@@ -129,8 +142,14 @@ Project
    .. figure:: /images/physics_dynamic-paint_brush_source-project.png
 
       The Project option enabled. See how brush only affects canvas in normal direction.
+
 Falloff
-   Falloff type can be "Smooth", "Sharp" or tweaked with a color ramp.
+   Sharp
+     Paints solid paint within the defined distance.
+   Smooth
+     Makes paint to linearly fade out until becoming completely invisible when it reaches the maximum distance.
+   Color Ramp
+     Allows you to manually make a custom falloff behavior.
 
 
 Velocity
