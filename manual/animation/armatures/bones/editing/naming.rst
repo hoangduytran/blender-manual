@@ -7,13 +7,10 @@ Naming
 .. admonition:: Reference
    :class: refbox
 
-   :Mode:      Edit Mode
-   :Panel:     :menuselection:`Sidebar region --> Item`,
-               :menuselection:`Bones tab --> Bones panel`
+   :Mode:      All Modes
+   :Panel:     :menuselection:`Properties --> Bone Properties`
 
-You can rename your bones, either using the *name* field of the *Item*
-panel in the 3D Views, for the active bone,
-or using the *name* field in each bone of the *Bones* tab in *Edit Mode*.
+You can rename your bones, either using the *Name* field in the *Bones Properties* or through the outliner.
 It is also possible to rename by double-clicking bones in the Outliner.
 
 Blender also provides you some tools that take advantage of bones named in a left/right
@@ -38,9 +35,10 @@ This will enable you to use some tools that will probably save you time and effo
 
    An example of left/right bone naming in a simple rig.
 
-#. First you should give your bones meaningful base-names, like "leg", "arm", "finger", "back", "foot", etc.
-#. If you have a bone that has a copy on the other side (a pair), like an arm,
-   give it one of the following separators:
+#. First you should give your bones meaningful base-names,
+   like "leg", "arm", "finger", "back", "foot", etc.
+#. If you have a bone that has a copy on the other side (a pair),
+   like an arm, give it one of the following separators:
 
    - Left/right separators can be either the second position
      "L\ **_**\ calfbone" or last-but-one "calfbone\ **.**\R".
@@ -63,27 +61,11 @@ This will enable you to use some tools that will probably save you time and effo
 
 #. Before Blender handles an armature for mirroring or flipping,
    it first removes the number extension, e.g. ".001".
-#. You can copy a bone named "bla.L" and flip it over using :menuselection:`Armature --> Names --> Flip Names`.
+#. You can copy a bone named "bla.L" and flip it over using :ref:`bpy.ops.armature.flip_names`.
    Blender will name the copy "bla.L.001" and flipping the name will give you "bla.R".
 
 
-Flip Name
-=========
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Armature --> Names --> Flip Name`
-
-You can flip left/right markers (see above) in selected bone names,
-using :menuselection:`Armature --> Names --> Flip Name`.
-This can be useful if you have constructed half of a symmetrical rig
-(marked for a left or right side) and duplicated and mirrored it,
-and want to update the names for the new side.
-Blender will swap text in bone names according to the above naming conventions,
-and remove number extensions if possible.
-
+.. _bpy.ops.armature.autoside_names:
 
 AutoName
 ========
@@ -112,3 +94,22 @@ AutoName Top/Bottom
    Will add the ".Top" suffix to all bones with a *positive* Z coordinate root,
    and the ".Bot" suffix to all bones with a *negative* Z coordinate root.
    The same as with *AutoName Left-Right* goes for 0.0 Z coordinate bones...
+
+
+.. _bpy.ops.armature.flip_names:
+
+Flip Names
+==========
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Armature --> Names --> Flip Names`
+
+You can flip left/right markers (see above) in selected bone names.
+This can be useful if you have constructed half of a symmetrical rig
+(marked for a left or right side) and duplicated and mirrored it,
+and want to update the names for the new side.
+Blender will swap text in bone names according to the above naming conventions,
+and remove number extensions if possible.
