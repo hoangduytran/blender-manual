@@ -36,7 +36,6 @@ The extrusion can be limited to a single axis by specifying an axis;
 see :doc:`/scene_layout/object/editing/transform/control/axis_locking`.
 
 The extrude tools differentiate in how the new geometry is connected in itself.
-
 Only the border loop gets extruded.
 The inner region of the selection gets moved unchanged with the extrusion.
 

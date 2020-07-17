@@ -10,12 +10,11 @@ Naming
    :Mode:      All Modes
    :Panel:     :menuselection:`Properties --> Bone Properties`
 
-You can rename your bones, either using the *Name* field in the *Bones Properties* or through the outliner.
+You can rename your bones, either using the *Name* field in the *Bones Properties*.
 It is also possible to rename by double-clicking bones in the Outliner.
 
 Blender also provides you some tools that take advantage of bones named in a left/right
 symmetry fashion, and others that automatically name the bones of an armature.
-Let us look at this in detail.
 
 
 .. _armature-editing-naming-conventions:

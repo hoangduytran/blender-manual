@@ -13,7 +13,7 @@ Apply
 
 Pose as Rest Pose
    Conversely, you may define the current pose as the new rest pose
-   (i.e. "apply" current transformations to the *Edit Mode*), When you do so,
+   (i.e. "apply" current transformations to the *Edit Mode*). When you do so,
    the skinned objects/geometry is **also** reset to its default,
    undeformed state, which generally means you will have to skin it again.
 

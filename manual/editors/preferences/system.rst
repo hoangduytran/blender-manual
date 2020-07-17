@@ -37,7 +37,7 @@ OpenCL
 
 Distribute Memory Across Devices
    Allocates resources across multiple GPUs rather than duplicating data,
-   effectively making more room for larger scenes. Note that in order for this option to be available,
+   effectively freeing up space for larger scenes. Note that in order for this option to be available,
    the GPUs must be connected together with a high bandwidth communication protocol.
    Currently only NVLink on Nvidia GPUs is supported.
 

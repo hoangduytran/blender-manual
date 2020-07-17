@@ -104,7 +104,7 @@ Denoising removes noise while previewing scenes in *Rendered* mode in the 3D Vie
 
 Render
    Denoising for the final render can be enabled or disabled for with the checkbox.
-   For denoising the image after rendering with the :doc:`Denoising node </compositing/types/filter/denoise.rst>`,
+   For denoising the image after rendering with the :doc:`Denoising node </compositing/types/filter/denoise>`,
    denoising data render :ref:`passes <render-cycles-passes>` also adapt to the selected denoiser.
 
    NLM

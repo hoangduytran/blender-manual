@@ -120,7 +120,7 @@ Would multiple GPUs increase available memory?
 ----------------------------------------------
 
 Typically, no, each GPU can only access its own memory, however, some GPUs can share their memory.
-This is can be enabled with :ref:`Distribute Memory Across Devices <prefs-system-cycles-distributive-memory>`.
+This is can be enabled with :ref:`Distributed Memory Across Devices <prefs-system-cycles-distributive-memory>`.
 
 
 What renders faster, Nvidia or AMD, CUDA, OptiX or OpenCL?

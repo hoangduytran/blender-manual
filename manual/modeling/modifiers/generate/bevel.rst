@@ -33,7 +33,6 @@ Options
 
    The Bevel modifier.
 
-
 Edges
    Bevels both edges and vertices.
 Vertices

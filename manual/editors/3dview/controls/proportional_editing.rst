@@ -8,7 +8,7 @@ Proportional Editing
 .. admonition:: Reference
    :class: refbox
 
-   :Mode:      Object & Edit Mode
+   :Mode:      Object and Edit Mode
    :Header:    Via the |prop-edit-icon| icon in the header.
    :Hotkey:    :kbd:`O`
 
@@ -16,7 +16,7 @@ Proportional Editing
    :align: right
    :width: 250px
 
-   Proportional Editing pop over.
+   Proportional Editing popover.
 
 Proportional Edit is a way of transforming selected elements (such as vertices)
 while having that transformation affect other nearby elements. For example,

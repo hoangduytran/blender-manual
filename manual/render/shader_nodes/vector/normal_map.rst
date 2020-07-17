@@ -24,7 +24,7 @@ Strength
 
    .. figure:: /images/render_shader-nodes_vector_normal-map_strength.jpg
 
-      Strength = 0, 0.5, 1, 2 (from left to right).
+      Strength is set to 0, 0.5, 1, 2 (from left to right).
 
 Color
    RGB color that encodes the normal map in the specified space.

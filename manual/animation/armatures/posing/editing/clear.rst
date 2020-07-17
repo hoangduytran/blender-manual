@@ -26,9 +26,9 @@ Location, Rotation, Scale :kbd:`Alt-G`, :kbd:`Alt-R`, :kbd:`Alt-S`
    Clears individual transforms.
 
    Note that in *Envelope* visualization, :kbd:`Alt-S` does not clear the scale,
-   but rather scales the *Distance* influence area of the selected bones
-   (also available through the :menuselection:`Pose --> Scale Envelope Distance` menu entry,
-   which is only effective in *Envelope* visualization, even though it is always available...).
+   but rather scales the *Distance* influence area of the selected bones.
+   (This is also available through the :menuselection:`Pose --> Scale Envelope Distance` menu entry,
+   which is only effective in *Envelope* visualization, even though it is always available...)
 
 .. _bpy.ops.pose.user_transforms_clear:
 

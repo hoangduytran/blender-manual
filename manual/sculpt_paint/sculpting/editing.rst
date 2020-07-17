@@ -140,7 +140,7 @@ Grow/Shrink Face Sets
    :Menu:      :menuselection:`Face Sets --> Grow/Shrink Face Sets`
    :Hotkey:    :kbd:`Ctrl-W`, :kbd:`Ctrl-Alt-W`
 
-Expands or contracts the area of face set under the cursor by adding/removing surrounding faces.
+Expands or contracts the area of face set under the cursor by adding or removing surrounding faces.
 
 
 .. _bpy.ops.sculpt.face_set_change_visibility:
