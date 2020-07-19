@@ -200,7 +200,7 @@ and all information for the modifier or texture is retrieved from the baked file
 
 Baking has the following advantages:
 
-- It is faster to use the stored data rather than re-calculating it.
+- It is faster to use the stored data rather than recalculating it.
 - It allows rendering of ocean data in external renderers.
 - It enables more advanced foam maps.
 

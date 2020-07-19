@@ -116,17 +116,17 @@ Toggle Free/Align
 
 .. _bpy.ops.curve.normals_make_consistent:
 
-Recalc Normals
-==============
+Recalculate Handles
+===================
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Curve --> Control Points --> Recalc Normals`
+   :Menu:      :menuselection:`Curve --> Control Points --> Recalculate Handles`
    :Hotkey:    :kbd:`Shift-N`
 
-The *Recalc Normals* operator rotates the selected control point's handle to be tangential to the curve.
+The *Recalculate Handles* operator rotates the selected control point's handle to be tangential to the curve.
 This can be used to make curves smoother and more consistent looking.
 
 Length

@@ -377,7 +377,7 @@ Live Unwrap
 .. Todo. There are two different Live Unwrap, one in Edit Mode and other in UV Editor.
 
    If *Live Unwrap* is checked, every time an edge has its seam property changed,
-   UV unwrap is automatically re-calculated.
+   UV unwrap is automatically recalculated.
 
 Snap to Pixels
    Disabled
