@@ -1,3 +1,4 @@
+.. _bpy.types.View3DOverlay:
 
 *****************
 Viewport Overlays
@@ -32,7 +33,18 @@ Subdivision
    The number of subdivisions between grid lines.
 
 Text Info
-   Show text overlay.
+   Shows information such as the :doc:`View Perspective </editors/3dview/navigate/projections>`, playback FPS,
+   current frame number, and the name of the active :doc:`Collection </scene_layout/collections/index>` and Object.
+
+Statistics
+   Show information about the amount of objects and geometry.
+
+   Objects
+      Number of the selected objects and the total count.
+   Geometry
+      Displays information about the current scene depending on the mode and object type.
+      This can be the number of vertices, faces, triangles, or bones.
+
 HDRI Preview
    Show two spheres, one glossy and one diffuse,
    to preview HDRIs used in *Material Preview* and *Rendered* shading modes.

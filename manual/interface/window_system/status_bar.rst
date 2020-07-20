@@ -45,22 +45,25 @@ Resource Information
 ====================
 
 The right side of the Status Bar displays information about the Blender instance.
+These can individually shown or hidden by :kbd:`RMB` on the Status Bar area.
 
 .. figure:: /images/interface_window-system_status-bar_ui-right.png
    :align: center
 
-Collection
-   Name of the active :doc:`Collection </scene_layout/collections/index>`.
-Active Object
-   Name of the active selected object.
-Geometry
-   Displays information about the current scene depending on the mode and object type.
-   This can be the number of vertices, faces, triangles (Tris) or bones.
-Objects
-   Number of the selected objects and the total count.
-Memory
-   The "Mem" label shows an estimate of Blender's RAM consumption.
-   In a single-instance single-machine scenario, this estimate provides a measurement against
-   the hardware limit of the machine.
+Scene Statistics
+  Collection
+     Name of the active :doc:`Collection </scene_layout/collections/index>`.
+  Active Object
+     Name of the active selected object.
+  Geometry
+     Displays information about the current scene depending on the mode and object type.
+     This can be the number of vertices, faces, triangles, or bones.
+  Objects
+     Number of the selected objects and the total count.
+
+System Memory
+   Estimate of Blender's RAM consumption. In a single-instance single-machine scenario,
+   this estimate provides a measurement against the hardware limit of the machine.
+
 Blender Version
    The version of Blender that is currently run.

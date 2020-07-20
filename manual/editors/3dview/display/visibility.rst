@@ -1,3 +1,5 @@
+.. _bpy.types.SpaceView3D.show_object_viewport:
+.. _bpy.types.SpaceView3D.show_object_select:
 
 **********************
 Object Type Visibility

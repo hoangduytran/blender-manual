@@ -1,3 +1,4 @@
+.. _bpy.types.SpaceView3D.show:
 
 ###########
   Display
