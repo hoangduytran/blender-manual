@@ -91,6 +91,8 @@ Amount Type :kbd:`M`
       The perpendicular distance from the original edge to the bevel face.
    Percent
       The percentage of the length of adjacent edges that the new edges slide.
+   Absolute
+      The absolute distance along adjacent edges of the beveled edge.
 
    For vertex-only bevels, the Offset and Depth types measure from the original vertex,
    and the Width type is measured from a new vertex to the center of the new face (as half the amount).

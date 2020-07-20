@@ -60,6 +60,8 @@ Width Type
       Value is the perpendicular distance from the new bevel face to original edge.
    Percent
       Similar to *Offset* but the value is interpreted as a percentage of the adjacent edge length.
+   Absolute
+      The absolute distance along adjacent edges of the beveled edge.
 
 Width
    The size of the bevel effect. See *Width Method* below.
