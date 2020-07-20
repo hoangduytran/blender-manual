@@ -50,18 +50,28 @@ Optimal Display
 Operations
 ----------
 
-Subdivide
-   Adds another level of subdivision.
-Delete Higher
-   Deletes all subdivision levels that are higher than the current one.
+Unsubdivide
+   Rebuild a lower subdivision level of the current base mesh.
+
 Reshape
    Copies vertex coordinates from another mesh.
 
    To use it, first select a different mesh object with matching topology and vertex indices,
    then :kbd:`Shift` select the object you wish to copy vertex coordinates to, and click *Reshape*.
 
+Subdivide
+   Adds another level of subdivision.
+
+Delete Higher
+   Deletes all subdivision levels that are higher than the current one.
+
 Apply Base
    Modifies the original unsubdivided mesh to match the form of the subdivided mesh.
+
+Rebuild Subdivisions
+   Rebuilds all possible subdivisions levels to generate a lower resolution base mesh.
+   This is used to create an optimized multi resolution version of a pre-existing sculpt.
+   This option is only available when no subdivision level have been created through the modifier.
 
 Save External
    Saves displacements to an external ``.btx`` file.
