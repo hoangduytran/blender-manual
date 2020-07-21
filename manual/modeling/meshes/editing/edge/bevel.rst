@@ -77,15 +77,15 @@ Amount Type :kbd:`M`
    Selects how the *Amount* value controls the size of the bevel. According to the selection, the amount is:
 
    Offset
-      The distance of a new edge from the original.
+      The distance from the new edge to the original.
    Width
-      The width of the bevel face.
-   Depth
-      The perpendicular distance from the original edge to the bevel face.
+      The distance between the two new edges formed by the bevel (or the edges on either side of the bevel if there
+      is more than one segment.
    Percent
       The percentage of the length of adjacent edges that the new edges slide.
    Absolute
-      The absolute distance along adjacent edges of the beveled edge.
+      The exact distance along edges adjacent to the beveled edge. A difference from **Offset** is visible when the
+      unbeveled edges attached to beveled edges meet at an angle besides a right angle.
 
    For vertex-only bevels, the Offset and Depth types measure from the original vertex,
    and the Width type is measured from a new vertex to the center of the new face (as half the amount).
