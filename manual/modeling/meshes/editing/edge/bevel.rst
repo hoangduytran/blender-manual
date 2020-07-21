@@ -73,13 +73,6 @@ and scroll the :kbd:`Wheel` to increase or decrease the number of segments (see 
 Options
 =======
 
-Amount :kbd:`A`
-   You can change the bevel amount by moving the mouse towards and away from the object,
-   a bit like with transform tools.
-   The exact meaning of the value depends on the *Amount Type* option (see below).
-   As usual, the scaling can be controlled to a finer degree by holding :kbd:`Shift` to scale in 0.001 steps.
-   :kbd:`LMB` finalizes the operation, :kbd:`RMB` or :kbd:`Esc` aborts the action.
-
 Amount Type :kbd:`M`
    Selects how the *Amount* value controls the size of the bevel. According to the selection, the amount is:
 
@@ -97,33 +90,12 @@ Amount Type :kbd:`M`
    For vertex-only bevels, the Offset and Depth types measure from the original vertex,
    and the Width type is measured from a new vertex to the center of the new face (as half the amount).
 
-Vertex Only :kbd:`V`
-   When selected, the tool is in "vertex only" mode, and only vertices will be beveled.
-
-Clamp Overlap :kbd:`C`
-   Limits the width of each beveled edge so that edges cannot cause
-   overlapping intersections with other geometry.
-
-Loop Slide
-   If there are un-beveled edges along with beveled edges into a vertex,
-   the bevel tries to slide along those edges when possible.
-   Turning the option off can lead to more even bevel widths.
-
-Mark Seams :kbd:`U`
-   If a seam edge crosses a non-seam one and you bevel all of them,
-   this option will maintain the expected propagation of seams.
-
-Mark Sharp :kbd:`K`
-   Similar to Mark Seams, but for sharp edges.
-
-Harden Normals :kbd:`H`
-   When enabled, the per-vertex face normals of the bevel faces are adjusted to
-   match the surrounding faces, and the normals of the surrounding faces are not affected.
-   This will keep the surrounding faces flat (if they were before),
-   with the bevel faces shading smoothly into them. For this effect to work,
-   custom split normals need to be enabled, which requires Auto Smooth to be enabled
-   (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
-   As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.
+Amount :kbd:`A`
+   You can change the bevel amount by moving the mouse towards and away from the object,
+   a bit like with transform tools.
+   The exact meaning of the value depends on the *Amount Type* option (see below).
+   As usual, the scaling can be controlled to a finer degree by holding :kbd:`Shift` to scale in 0.001 steps.
+   :kbd:`LMB` finalizes the operation, :kbd:`RMB` or :kbd:`Esc` aborts the action.
 
 Segments :kbd:`S`
    The number of segments in the bevel can be defined by
@@ -146,10 +118,38 @@ Shape :kbd:`P`
    and values less than that giving a concave bevel. Values more than 0.5 give a more convex profile.
    Similarly as *Segments* it can be set with mouse movements and numeric input after toggling :kbd:`P`.
 
-Material
+Material Index
    The *Material* number specifies which material should be assigned to the new faces created by the *Bevel* tool.
    With the default, -1, the material is inherited from the closest existing face ("closest" can be a bit ambiguous).
    Otherwise, the number is the slot index of the material to use for all newly created faces.
+
+Harden Normals :kbd:`H`
+   When enabled, the per-vertex face normals of the bevel faces are adjusted to
+   match the surrounding faces, and the normals of the surrounding faces are not affected.
+   This will keep the surrounding faces flat (if they were before),
+   with the bevel faces shading smoothly into them. For this effect to work,
+   custom split normals need to be enabled, which requires Auto Smooth to be enabled
+   (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
+   As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.
+
+Vertex Only :kbd:`V`
+   When selected, the tool is in "vertex only" mode, and only vertices will be beveled.
+
+Clamp Overlap :kbd:`C`
+   Limits the width of each beveled edge so that edges cannot cause
+   overlapping intersections with other geometry.
+
+Loop Slide
+   If there are un-beveled edges along with beveled edges into a vertex,
+   the bevel tries to slide along those edges when possible.
+   Turning the option off can lead to more even bevel widths.
+
+Mark Seams :kbd:`U`
+   If a seam edge crosses a non-seam one and you bevel all of them,
+   this option will maintain the expected propagation of seams.
+
+Mark Sharp :kbd:`K`
+   Similar to Mark Seams, but for sharp edges.
 
 Miter Type
    Outer :kbd:`O`
