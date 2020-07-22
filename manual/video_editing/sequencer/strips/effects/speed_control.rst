@@ -19,6 +19,7 @@ Options
 Stretch to Input Strip Length
    Automatically calculates the *Speed Factor* based on the length of the input strip.
    So if you make a strip 1/2 the original size the sequence will play back at 2 times the speed.
+
 Use as Speed
    Calculates the scale value based on a *Speed Factor*.
 
@@ -29,6 +30,7 @@ Use as Speed
    Speed Factor
       Multiplies the current speed of the sequence by this value.
       So, a value of 0.5 will make the sequence half as fast while 2 would make the sequence twice as fast.
+
 Frame Number
    Specifies a frame to remap the current frame to,
    for example, setting this value to 50 displays the 50th frame.
@@ -37,8 +39,12 @@ Frame Number
    Scale to Length
       Maps the frame range on a 0-1 scale. For example, using this and a *Frame Number*
       of 0.5 will select the frame halfway through the sequence.
+
 Multiply Speed
    A multiplier applied after all other calculations.
+
+Frame Interpolation
+   Crossfades between frames to reduce stutter when the speed is slower than the original framerate.
 
 
 Examples
