@@ -32,10 +32,14 @@ Focal Length
    It can be set in millimeters or pixels.
 
 Distortion Model
+   Mathematical function to convert distorted to undistorted coordinates.
+
    Polynomial
       Polynomial radial distortion.
    Division
       It defines high distortions, which makes this model suitable much better for cameras with fisheye lenses.
+   Nuke
+      Distortion model used in `Nuke <https://www.foundry.com/products/nuke>`__.
 
 Coefficients
    Coefficients are used to compensate for lens distortion when the movie was shot.
