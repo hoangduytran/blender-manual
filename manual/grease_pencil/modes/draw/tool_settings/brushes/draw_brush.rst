@@ -59,6 +59,8 @@ Radius
 
    Use Pressure (pressure sensitivity icon)
       Uses stylus pressure to control how strong the effect is.
+      The gradient of the pressure can be customized using the
+      :doc:`curve widget </interface/controls/templates/curve>`.
 
 Strength
    Control the stroke transparency (alpha).
@@ -70,6 +72,8 @@ Strength
 
    Use Pressure (pressure sensitivity icon)
       Uses stylus pressure to control how strong the effect is.
+      The gradient of the pressure can be customized using the
+      :doc:`curve widget </interface/controls/templates/curve>`.
 
 
 Advanced
@@ -142,17 +146,23 @@ Randomize
 Adds randomness to the position of the points along the stroke.
 You can toggle the use of Randomize using the checkbox in the section panel header.
 
-Pressure
+Radius
    The amount of randomness to apply using the pressure of the input device.
 Strength
    The amount of randomness to apply to the stroke strength value (alpha).
 UV
    The amount of randomness to apply to the UV rotation.
+
+Hue, Saturation, Value
+   Randomizes the hue, saturation, and value of the stroke's :ref:`Color <grease-pencil-draw-color>`.
+
 Jitter
    The amount of jittering to add to the stroke.
 
    Use Pressure (pressure sensitivity icon)
       Uses the stylus pressure to control how strong the effect is.
+      The gradient of the pressure can be customized using the
+      :doc:`curve widget </interface/controls/templates/curve>`.
 
 
 .. _grease-pencil-draw-brushes-stabilizer:
@@ -171,19 +181,6 @@ Radius
 Factor
    A smooth factor, where higher values result in smoother strokes but the drawing sensation
    feels like as if you were pulling the stroke.
-
-Curves
-------
-
-For more precise control on some strokes properties you can use
-a :doc:`curve widget </interface/controls/templates/curve>`.
-
-Sensitivity
-   Controls the sensitivity of the input device.
-Strength
-   Controls the stroke strength (alpha).
-Jitter
-   Controls the jitter amount on the stroke.
 
 
 Cursor
