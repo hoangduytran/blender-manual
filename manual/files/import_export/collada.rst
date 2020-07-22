@@ -289,7 +289,7 @@ Blender materials are exported with the following mapping:
 - Lambert
 
 For bone nodes which are leaf nodes in the armature tree,
-or if a bone has more than one children a Blender profile for tip with an ``<extra>`` tag,
+or if a bone has more than one child, a Blender profile for tip with an ``<extra>`` tag,
 is added for those joint nodes. To correctly derive the bone-to-tail location on re-import.
 
 .. note:: Important Things to Remember
