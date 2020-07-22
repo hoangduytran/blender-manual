@@ -11,8 +11,8 @@ Bevel Edges
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Edge --> Bevel Edges`
    :Hotkey:    :kbd:`Ctrl-B`
-   :Menu:      :menuselection:`Vertex --> Bevel Vertices` (vertex-only)
-   :Hotkey:    :kbd:`Shift-Ctrl-B` (vertex-only)
+   :Menu:      :menuselection:`Vertex --> Bevel Vertices` (vertex bevel)
+   :Hotkey:    :kbd:`Shift-Ctrl-B` (vertex bevel)
 
 The *Bevel* tool allows you to create chamfered or rounded corners on geometry.
 A bevel is an effect that smooths out edges and corners.
@@ -73,6 +73,12 @@ and scroll the :kbd:`Wheel` to increase or decrease the number of segments (see 
 Options
 =======
 
+Affect :kbd:`V`
+   Vertices
+      Only the areas near vertices are beveled, the edges remain unchanged.
+   Edges
+      Bevel the edges, creating intersections at vertices.
+
 Amount Type :kbd:`M`
    Selects how the *Amount* value controls the size of the bevel. According to the selection, the amount is:
 
@@ -131,9 +137,6 @@ Harden Normals :kbd:`H`
    custom split normals need to be enabled, which requires Auto Smooth to be enabled
    (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
    As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.
-
-Vertex Only :kbd:`V`
-   When selected, the tool is in "vertex only" mode, and only vertices will be beveled.
 
 Clamp Overlap :kbd:`C`
    Limits the width of each beveled edge so that edges cannot cause

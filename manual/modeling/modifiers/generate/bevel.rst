@@ -33,10 +33,11 @@ Options
 
    The Bevel modifier.
 
-Edges
-   Bevels both edges and vertices.
-Vertices
-   Only the areas near vertices are beveled, the edges remain unchanged.
+Affect
+   Vertices
+      Only the areas near vertices are beveled, the edges remain unchanged.
+   Edges
+      Bevel the edges, creating intersections at vertices.
 
    .. figure:: /images/modeling_modifiers_generate_bevel_cubes-vertices-only.png
       :width: 350px
