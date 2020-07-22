@@ -25,7 +25,7 @@ Unwrap
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    3D Viewport or UV Editor
+   :Editor:    3D Viewport and UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Unwrap`
    :Hotkey:    :kbd:`U`
@@ -375,7 +375,7 @@ Reset
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    3D View
+   :Editor:    3D Viewport and UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Reset`
    :Hotkey:    :kbd:`U`
