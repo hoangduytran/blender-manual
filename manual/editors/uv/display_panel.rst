@@ -13,28 +13,42 @@ You can set the editors display options in this panel.
 
 Aspect Ratio
    Display Aspect for this image. Does not affect rendering.
+
 Repeat Image
    Duplicate the image until it is repeated to fill the main view.
+
 Pixel Coordinates
    Display UV coordinates in pixels rather than from 0.0 to 1.0
 
+
+.. _bpy.types.SpaceUVEditor.uv_opacity:
+
 Overlays
-   Display As
-      Outline
-         Display white edges with black outline.
-      Dash
-         Display dashed black-white edges.
-      Black
-         Display black edges.
-      White
-         Display white edges.
-   Faces
-      Display faces over the image.
-   Smooth
-      Makes edges appear anti-aliased.
-   Modified
-      Show results of modifiers in the UV display.
-   Stretching
-      Shows how much of a difference there is between UV coordinates and 3D coordinates.
-      Blue means low distortion, while Red means high distortion.
-      Choose to display the distortion of *Angles* or the *Area*.
+========
+
+Display As
+   Outline
+      Display white edges with black outline.
+   Dash
+      Display dashed black-white edges.
+   Black
+      Display black edges.
+   White
+      Display white edges.
+
+Faces
+   Display faces over the image.
+
+Smooth
+   Makes edges appear anti-aliased.
+
+Modified
+   Show results of modifiers in the UV display.
+
+UV Opacity
+   Opacity of the above UV overlays.
+
+Stretching
+   Shows how much of a difference there is between UV coordinates and 3D coordinates.
+   Blue means low distortion, while Red means high distortion.
+   Choose to display the distortion of *Angles* or the *Area*.

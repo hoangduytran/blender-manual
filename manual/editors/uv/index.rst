@@ -1,3 +1,4 @@
+.. _bpy.types.SpaceUVEditor:
 .. _editors-uv-index:
 
 #############
