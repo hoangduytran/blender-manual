@@ -229,9 +229,9 @@ Expression
    A text field where you can enter an arbitrary Python expression that refers to
    *Driver Variables* by their names.
 
-   The expression has access to a set of standard constants and math functions provided
-   in the *Driver Namespace*. For an example of adding a custom function to the namespace,
-   see the :ref:`driver namespace example <driver-namespace>`.
+   The expression has access to a set of standard constants and math functions from ``math``,
+   ``bl_math`` and other modules, provided in the *Driver Namespace*. For an example of adding
+   a custom function to the namespace, see the :ref:`driver namespace example <driver-namespace>`.
 
    For performance reasons it is best to use the `Simple Expressions`_ subset as much as possible.
 
@@ -266,11 +266,13 @@ Operators
    ``+``, ``-``, ``*``, ``/``,
    ``==``, ``!=``, ``<``, ``<=``, ``>``, ``>=``,
    ``and``, ``or``, ``not``, conditional operator/ ternary if
-Functions
+Standard Functions
    ``min``, ``max``, ``radians``, ``degrees``,
-   ``abs``, ``fabs``, ``floor``, ``ceil``, ``trunc``, ``int``,
+   ``abs``, ``fabs``, ``floor``, ``ceil``, ``trunc``, ``round``, ``int``,
    ``sin``, ``cos``, ``tan``, ``asin``, ``acos``, ``atan``, ``atan2``,
    ``exp``, ``log``, ``sqrt``, ``pow``, ``fmod``
+Blender Provided Functions
+   ``lerp``, ``clamp``, ``smoothstep``
 
 Simple expressions are evaluated even when Python script execution is disabled.
 
