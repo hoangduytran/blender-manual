@@ -43,6 +43,15 @@ Onion Skin
    See the Grease Pencil documentation for an explanation of
    :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
 
+Stabilize Stroke
+   Helps to reduce jitter of the strokes while drawing by delaying and correcting the location of points.
+
+   Radius
+      Minimum distance from the last point before the stroke continues.
+   Factor
+      A smooth factor, where higher values result in smoother strokes
+      but the drawing sensation feels like as if you were pulling the stroke.
+
 
 3D Editor
 ---------
