@@ -85,4 +85,15 @@ Checker Deselect Options
 Linked Flat Faces
 =================
 
-.. todo:: |todo|
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Linked --> Linked`
+   
+Selects all connected faces with a similar enough, angle. 
+
+.. figure:: /images/modeling_meshes_selecting_flat-faces.png
+
+   
+Looking at the image above, when at least one face is selected (seen on the left), *Linked Flat Faces* will select all connecting faces that lie on the same or similar plane (seen on the middle image). If the corners are smoothed, those faces are no longer lined up with the selected faces. At this point, increasing the *Sharpness* value in the tool options could include the smoothed faces.

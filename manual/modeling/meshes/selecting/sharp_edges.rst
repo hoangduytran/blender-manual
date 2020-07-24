@@ -3,4 +3,13 @@
 Select Sharp Edges
 ******************
 
-.. todo:: |todo|
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Sharp Edges`
+
+Selects edges whose faces intersect at an acute angle. This can be useful to find hard edges in a mesh.
+
+Sharpness
+   Determines how sharp of an angle an edge needs to be in order for it to be selected. Anything with a higher degree than specified in the tool options will therefore be selected.
