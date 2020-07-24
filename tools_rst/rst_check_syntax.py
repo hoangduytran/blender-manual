@@ -118,10 +118,11 @@ def compile_valid_kbd():
         # Modifier
         r"^(Shift(?:\-|\Z))?(Ctrl(?:\-|\Z))?(Alt(?:\-|\Z))?((?:Cmd|OSKey)(?:\-|\Z))?",
 
-        # Alphanumeric
         # Note, shifted keys such as '!?:<>"' should not be included.
         r"((?:",
+        # Alphanumeric
         r"[A-Z0-9]|",
+        # Symbols
         r"[=\[\];']|",
 
         # Named

@@ -56,15 +56,15 @@ Width Type
    Offset
       The distance from the new edge to the original.
    Width
-      The distance between the two new edges formed by the bevel (or the edges on either side of the bevel if there
-      is more than one segment.
+      The distance between the two new edges formed by the bevel
+      (or the edges on either side of the bevel if there is more than one segment).
    Depth
       Value is the perpendicular distance from the new bevel face to original edge.
    Percent
       The percentage of the length of adjacent edge length that the new edges slide along.
    Absolute
-      The exact distance along edges adjacent to the beveled edge. A difference from **Offset** is visible when the
-      unbeveled edges attached to beveled edges meet at an angle besides a right angle.
+      The exact distance along edges adjacent to the beveled edge. A difference from **Offset** is visible
+      when the unbeveled edges attached to beveled edges meet at an angle besides a right angle.
 
 Width
    The size of the bevel effect. See *Width Method* below.

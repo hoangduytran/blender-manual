@@ -59,8 +59,8 @@ Radius
 
    Use Pressure (pressure sensitivity icon)
       Uses stylus pressure to control how strong the effect is.
-      The gradient of the pressure can be customized using the
-      :doc:`curve widget </interface/controls/templates/curve>`.
+      The gradient of the pressure can be customized using
+      the :doc:`curve widget </interface/controls/templates/curve>`.
 
 Strength
    Control the stroke transparency (alpha).
@@ -72,8 +72,8 @@ Strength
 
    Use Pressure (pressure sensitivity icon)
       Uses stylus pressure to control how strong the effect is.
-      The gradient of the pressure can be customized using the
-      :doc:`curve widget </interface/controls/templates/curve>`.
+      The gradient of the pressure can be customized using
+      the :doc:`curve widget </interface/controls/templates/curve>`.
 
 
 Advanced
@@ -154,15 +154,15 @@ UV
    The amount of randomness to apply to the UV rotation.
 
 Hue, Saturation, Value
-   Randomizes the hue, saturation, and value of the stroke's :ref:`Color <grease-pencil-draw-color>`.
+   Randomizes the hue, saturation, and value of the stroke's base color.
 
 Jitter
    The amount of jittering to add to the stroke.
 
    Use Pressure (pressure sensitivity icon)
       Uses the stylus pressure to control how strong the effect is.
-      The gradient of the pressure can be customized using the
-      :doc:`curve widget </interface/controls/templates/curve>`.
+      The gradient of the pressure can be customized using
+      the :doc:`curve widget </interface/controls/templates/curve>`.
 
 
 .. _grease-pencil-draw-brushes-stabilizer:

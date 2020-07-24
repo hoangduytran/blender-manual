@@ -85,16 +85,16 @@ Amount Type :kbd:`M`
    Offset
       The distance from the new edge to the original.
    Width
-      The distance between the two new edges formed by the bevel (or the edges on either side of the bevel if there
-      is more than one segment.
+      The distance between the two new edges formed by the bevel
+      (or the edges on either side of the bevel if there is more than one segment).
    Percent
       The percentage of the length of adjacent edges that the new edges slide.
    Absolute
-      The exact distance along edges adjacent to the beveled edge. A difference from **Offset** is visible when the
-      unbeveled edges attached to beveled edges meet at an angle besides a right angle.
+      The exact distance along edges adjacent to the beveled edge. A difference from **Offset** is visible
+      when the unbeveled edges attached to beveled edges meet at an angle besides a right angle.
 
-   For vertex-only bevels, the Offset and Depth types measure from the original vertex,
-   and the Width type is measured from a new vertex to the center of the new face (as half the amount).
+   For vertex-only bevels, the Offset and Depth types measure from the original vertex.
+   The Width type is measured from a new vertex to the center of the new face (as half the amount).
 
 Amount :kbd:`A`
    You can change the bevel amount by moving the mouse towards and away from the object,
@@ -125,7 +125,7 @@ Shape :kbd:`P`
    Similarly as *Segments* it can be set with mouse movements and numeric input after toggling :kbd:`P`.
 
 Material Index
-   The *Material* number specifies which material should be assigned to the new faces created by the *Bevel* tool.
+   The *Material* number specifies which material is assigned to the new faces created by the *Bevel* tool.
    With the default, -1, the material is inherited from the closest existing face ("closest" can be a bit ambiguous).
    Otherwise, the number is the slot index of the material to use for all newly created faces.
 

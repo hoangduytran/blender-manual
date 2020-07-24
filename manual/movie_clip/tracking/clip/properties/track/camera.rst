@@ -39,7 +39,7 @@ Distortion Model
    Division
       It defines high distortions, which makes this model suitable much better for cameras with fisheye lenses.
    Nuke
-      Distortion model used in `Nuke <https://www.foundry.com/products/nuke>`__.
+      Distortion model used by the Nuke compositor.
 
 Coefficients
    Coefficients are used to compensate for lens distortion when the movie was shot.

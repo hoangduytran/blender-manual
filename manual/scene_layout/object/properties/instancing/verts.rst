@@ -125,10 +125,11 @@ select the base object and change the :ref:`Tracking Axis <bpy.types.Object.trac
 
 .. note::
 
-   The axes of an object can be made visible in the
-   :menuselection:`Properties --> Object Properties --> Viewport Display` panel.
-   To display the vertex normals of the parent mesh, enter *Edit Mode* and
-   enable this visualization in the :menuselection:`Display & Shading --> Viewport Overlays --> Normals`
+   The axes of an object can be made visible in
+   the :menuselection:`Properties --> Object Properties --> Viewport Display` panel.
+   To display the vertex normals of the parent mesh,
+   enter *Edit Mode* and enable this visualization in
+   the :menuselection:`Display & Shading --> Viewport Overlays --> Normals`
    where you can also resize the displayed normals as necessary.
 
 

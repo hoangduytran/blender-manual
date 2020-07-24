@@ -44,7 +44,7 @@ Multiply Speed
    A multiplier applied after all other calculations.
 
 Frame Interpolation
-   Crossfades between frames to reduce stutter when the speed is slower than the original framerate.
+   Crossfades between frames to reduce screen tearing when the speed is slower than the original frame rate.
 
 
 Examples

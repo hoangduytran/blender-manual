@@ -51,15 +51,15 @@ These can individually shown or hidden by :kbd:`RMB` on the Status Bar area.
    :align: center
 
 Scene Statistics
-  Collection
-     Name of the active :doc:`Collection </scene_layout/collections/index>`.
-  Active Object
-     Name of the active selected object.
-  Geometry
-     Displays information about the current scene depending on the mode and object type.
-     This can be the number of vertices, faces, triangles, or bones.
-  Objects
-     Number of the selected objects and the total count.
+   Collection
+      Name of the active :doc:`Collection </scene_layout/collections/index>`.
+   Active Object
+      Name of the active selected object.
+   Geometry
+      Displays information about the current scene depending on the mode and object type.
+      This can be the number of vertices, faces, triangles, or bones.
+   Objects
+      Number of the selected objects and the total count.
 
 System Memory
    Estimate of Blender's RAM consumption. In a single-instance single-machine scenario,

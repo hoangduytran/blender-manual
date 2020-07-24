@@ -33,8 +33,9 @@ Subdivision
    The number of subdivisions between grid lines.
 
 Text Info
-   Shows information such as the :doc:`View Perspective </editors/3dview/navigate/projections>`, playback FPS,
-   current frame number, and the name of the active :doc:`Collection </scene_layout/collections/index>` and Object.
+   Shows information such as the :doc:`View Perspective </editors/3dview/navigate/projections>`,
+   playback :abbr:`FPS (Frames Per Second)`, current frame number,
+   and the name of the active :doc:`Collection </scene_layout/collections/index>` and Object.
 
 Statistics
    Show information about the amount of objects and geometry.
@@ -302,7 +303,7 @@ Onion Skin
 Canvas
    Display a grid over Grease Pencil drawing plane.
    The opacity of the grid can be controlled with the slider.
-   Using the *Canvas X-Ray* option allows other objects such as objects to be drawn behind the canvas grid.
+   When using the *Canvas X-Ray* option objects are drawn behind the canvas grid.
 Fade Layers
    Decrease the opacity of all the layers in the object other than the active one.
    The opacity factor can be controlled with the slider.
