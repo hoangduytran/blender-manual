@@ -25,6 +25,8 @@ Material
       binding the material to the brush gives more control and avoids a lack of coordination between the two.
 
 
+.. _grease-pencil-draw-color:
+
 Color
 -----
 
