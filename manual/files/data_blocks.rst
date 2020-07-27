@@ -382,6 +382,7 @@ Custom properties can be edited using the panel available for data types that su
 
 Property Name
    The name of the custom property.
+
 Property Value
    This does two things: first it sets the current value of the custom property, and
    second, it defines the data type of the property.
@@ -404,6 +405,7 @@ Property Value
 
       At this point, the Boolean values will still look like integers but behave like
       a Boolean having one lower, off, value and a higher, on, value.
+
 Default Value
    This sets the default value of the property used by the Reset to Default Value operator.
 
@@ -412,26 +414,29 @@ Default Value
       Default values are used as the basis of :ref:`NLA blending <bpy.types.AnimData.action_blend_type>`,
       and a nonsensical default (e.g. 0 for a property used for scaling) on a property intended for
       being keyframed is likely to cause issues.
-Min
-   The minimum value the custom property can take.
-Max
-   The maximum value the custom property can take.
+
+Min, Max
+   The minimum/maximum value the custom property can take.
 
 .. figure:: /images/files_data-blocks_edit-color.png
    :align: right
 
    Custom Property settings for a color with alpha.
 
+Is Library Overridable
+   Allow the property to be :doc:`overridden </files/linked_libraries/library_overrides>`
+   when the Data-Block is linked.
+
 Use Soft Limits
    Enables limits that the *Property Value* slider can be adjusted to
    without having to input the value numerically.
 
-   Soft Min
-      The minimum value for the soft limit.
-   Soft Max
-      The maximum value for the soft limit.
+Soft Min, Max
+   The minimum/maximum value for the soft limit.
+
 Tooltip
    Allows you to write a custom :doc:`Tooltip </getting_started/help>` for your property.
+
 Subtype
    For vector properties, specifies the kind of data the property contains,
    which affects how it appears in the :abbr:`UI (User Interface)`. Most useful for color properties.
