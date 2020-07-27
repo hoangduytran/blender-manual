@@ -36,7 +36,7 @@ Mute (eye icon)
    Disabling means you can enable the constraint at a later time with the settings intact.
    Disabling is similar to setting the :ref:`Influence <bpy.types.constraint.influence>` to 0.0.
 
-Delete ``X``
+Delete ``X`` :kbd:`X`, :kbd:`Delete`
    Delete the constraint from the stack.
    The settings will be lost.
    The constraint will no longer affect the final outcome of the stack.
