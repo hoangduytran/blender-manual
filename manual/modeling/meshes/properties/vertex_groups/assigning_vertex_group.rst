@@ -177,4 +177,5 @@ Finding Ungrouped Vertices
 You can find ungrouped vertices as follows:
 
 - Press :kbd:`Alt-A` to deselect all vertices.
-- In the header of the 3D Viewport, navigate to :menuselection:`Select --> Select All by Trait --> Ungrouped Verts`.
+- In the header of the 3D Viewport, navigate to
+  :menuselection:`Select --> Select All by Trait --> Ungrouped Vertices`.

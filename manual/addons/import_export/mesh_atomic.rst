@@ -119,9 +119,9 @@ Type
    Option *Color* means that the stick is divided into two parts,
    showing the colors of the respective two atoms which it connects.
 
-   Instancing Verts
-      The sticks of one element are put into one instancing verts structure and the sticks appear as cylinders.
-      The instancing verts structure makes the displaying and loading of many sticks relatively fast
+   Instancing Vertices
+      The sticks of one element are put into one instancing vertices structure and the sticks appear as cylinders.
+      The instancing vertices structure makes the displaying and loading of many sticks relatively fast
       (`Separate Atoms`_ for more info). Options *Unit* is the length of a unit (a small cylinder):
       several of such units are put together forming actually the stick (cylinder).
       The longer the unit length is the less is the number of such units and
@@ -232,7 +232,7 @@ The scale factor determines, how strong the change of diameter will be.
 By using the Outliner, one can apply these operators on only a selection of sticks
 (e.g. only the sticks of the hydrogen atoms). Note that changes only apply
 if the sticks are individual objects, e.g. single cylinders or if the sticks are described
-in instancing verts structures.
+in instancing vertices structures.
 
 
 Change Atom Shape
@@ -256,7 +256,7 @@ Special
 Replace
    After all, push the *Replace* button. The shape and/or material of all
    selected atoms are then changed. This option works for objects and
-   instancing verts object structures.
+   instancing vertices object structures.
 
 Default
    If you want to have the default values (NURBS spheres and specific element
@@ -267,8 +267,8 @@ Separate Atoms
 --------------
 
 When structures are imported via the PDB or XYZ importer, the atoms are put
-into a so-called instancing verts structure, somewhat into 'groups' of elements
-(e.g. all hydrogen atoms form one instancing verts structure). In the Edit Mode of Blender,
+into a so-called instancing vertices structure, somewhat into 'groups' of elements
+(e.g. all hydrogen atoms form one instancing vertices structure). In the Edit Mode of Blender,
 single atoms can be deleted or displaced by modifying the position of the vertices.
 However, they are always a part of the structure and are not independent objects.
 Sometimes one would like to mark a single atom or replace an atom by something different:
@@ -285,12 +285,12 @@ After having chosen the type of object, use button *Separate Atoms* to separate 
 the atoms are then single, new objects, which can be manipulated in any way.
 They appear in the Outliner and carry the suffix ``_sep``.
 
-.. hint:: Converting All Atoms of an Instancing Verts Structure to Real Independent Objects
+.. hint:: Converting All Atoms of an Instancing Vertices Structure to Real Independent Objects
 
    Do the following: Select the whole atomic structure
    with the mouse then use :ref:`bpy.ops.object.duplicates_make_real`.
    With this you produce real independent objects!
-   In the Outliner delete the remaining instancing verts structures,
+   In the Outliner delete the remaining instancing vertices structures,
    named like "Carbon", "Hydrogen", etc.
 
 

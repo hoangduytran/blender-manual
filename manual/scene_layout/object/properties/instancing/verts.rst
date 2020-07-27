@@ -1,7 +1,7 @@
 
-*****
-Verts
-*****
+********
+Vertices
+********
 
 .. admonition:: Reference
    :class: refbox
@@ -9,7 +9,7 @@ Verts
    :Mode:      Object Mode
    :Panel:     :menuselection:`Properties --> Object Properties --> Instancing`
 
-*Instance Verts* allows you to replicate child objects
+*Instance Vertices* allows you to replicate child objects
 at the location of every vertex of the parent object.
 
 .. note::
@@ -23,7 +23,7 @@ Align to Vertex Normal
    To change the axis of direction of the instanced objects,
    select the child object and change the :ref:`Tracking Axis <bpy.types.Object.track_axis>`.
 
-There are actually two approaches to modeling using instanced Verts.
+There are actually two approaches to modeling using instanced vertices.
 They can be used as an arranging tool,
 allowing to model geometrical arrangements of objects (e.g. the columns of a Greek temple,
 the trees in a garden, an army of robot soldiers, the desks in a classroom).
@@ -42,8 +42,8 @@ The second approach is to use them to model an object starting from a single par
 Usage
 =====
 
-Instanced Verts as an Arranging Tool
-------------------------------------
+Instanced Vertices as an Arranging Tool
+---------------------------------------
 
 All you need is a base object (e.g. the *tree* or the *column*)
 and a pattern mesh with its vertices following the pattern you have in mind. In this section,
@@ -61,7 +61,7 @@ our parent mesh.
      - .. figure:: /images/scene-layout_object_properties_instancing_verts_monkey-after.png
           :width: 320px
 
-          Instanced monkeys on Verts.
+          Instanced monkeys on Vertices.
 
 First, in *Object Mode*, select the base object
 and :kbd:`Shift-LMB` to add the circle to the selection (order is very important here),
@@ -69,7 +69,7 @@ and :kbd:`Ctrl-P` or :menuselection:`Object --> Parent --> Object`
 to parent the base object to the circle.
 Now, the circle is the parent of the monkey; if you move the circle, the monkey will follow it.
 
-With only the circle selected, enable *Instancing Verts*;
+With only the circle selected, enable *Instancing Vertices*;
 a monkey head should be placed at every vertex of the circle.
 
 The original monkey head at the center and the parent mesh are still shown in the 3D Viewport but
@@ -133,10 +133,10 @@ select the base object and change the :ref:`Tracking Axis <bpy.types.Object.trac
    where you can also resize the displayed normals as necessary.
 
 
-Instanced Verts as a Modeling Tool
-----------------------------------
+Instanced Vertices as a Modeling Tool
+-------------------------------------
 
-Very interesting models can be made using *Instancing Verts* and a standard primitive.
+Very interesting models can be made using *Instancing Vertices* and a standard primitive.
 In this example, a simple tentacle was made by extruding a cube a couple of times.
 The tentacle object was then parented to an icosphere.
 With *Align to Vertex Normal* enabled for the parent mesh (the icosphere),
