@@ -205,8 +205,8 @@ Camera Presets
 .. _render-camera-sensor-size:
 
 Sensor Size
-   This setting is an alternative way to control the focal length,
-   it is useful to match the camera in Blender to a physical camera and lens combination,
+   This setting is an alternative way to control the field of view, as opposed to modifying the focal length.
+   It is useful to match a camera in Blender to a physical camera and lens combination,
    e.g. for :doc:`motion tracking </movie_clip/index>`.
 Sensor Fit
    Option to control which dimension (vertical or horizontal) along which field of view angle fits.
