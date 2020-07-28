@@ -291,18 +291,22 @@ Sometimes you may have drawn strokes unintentionally in different locations in t
 but they look right from a certain plane or from the camera view.
 You can use Reproject Strokes to flatten all the selected strokes from a certain viewpoint.
 
-Front
-   Reproject selected strokes onto the front plane (XZ).
-Side
-   Reproject selected strokes onto the side plane (YZ).
-Top
-   Reproject selected strokes onto the top plane (XY).
-View
-   Reproject selected strokes onto the current view.
-Surface
-   Reproject selected strokes onto the mesh surfaces.
-Cursor
-   Reproject selected strokes onto 3D cursor rotation.
+Reprojected type
+   Front
+      Reproject selected strokes onto the front plane (XZ).
+   Side
+      Reproject selected strokes onto the side plane (YZ).
+   Top
+      Reproject selected strokes onto the top plane (XY).
+   View
+      Reproject selected strokes onto the current view.
+   Surface
+      Reproject selected strokes onto the mesh surfaces.
+   Cursor
+      Reproject selected strokes onto 3D cursor rotation.
+
+Keep Original
+   Maintains the original strokes after applying the operator.
 
 .. list-table::
 

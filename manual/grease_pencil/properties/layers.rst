@@ -4,14 +4,22 @@
 2D Layers
 *********
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      All Modes
+   :Panel:     :menuselection:`Object Data tab --> Layers`
+   :Hotkey:    :kbd:`Y`
+
+
+Layers List
+===========
+
 .. figure:: /images/grease-pencil_properties_layers_panel.png
    :align: right
 
    Grease Pencil Layers panel.
 
-
-Layers List
-===========
 
 Grease Pencil objects each have a list of 2D layers for grouping and arranging strokes
 in a :ref:`List view <ui-list-view>`. Any stroke can only belong to a single 2D layer.

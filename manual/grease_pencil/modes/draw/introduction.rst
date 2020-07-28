@@ -93,4 +93,6 @@ Add Weight Data
    See :doc:`Weight Paint Mode </grease_pencil/modes/weight_paint/introduction>` for more information.
 
 Additive Drawing
-   When creating new frames, the strokes from the previous/active frame are include as a basis for the new one.
+   When creating new frames adding strokes with drawing tools, the strokes from the previous/active frame are include as a basis for the new one.
+   When erasing existing strokes using Additive Drawing a new keyframe will be added.
+

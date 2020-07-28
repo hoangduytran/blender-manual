@@ -105,3 +105,44 @@ A breakdown keyframe will be added on every frame between the previous and next 
    The *Interpolate* and *Sequence* tools work better when the strokes in the previous and next keyframes
    have the same amount of points. For example when there are duplicated strokes on different keyframes
    only with different location, rotation or scale.
+
+
+Bake Mesh to Grease Pencil
+==========================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    3D View
+   :Mode:      Object and Pose Modes
+   :Menu:      :menuselection:`Object --> Animation --> Bake Mesh to Grease Pencil...`
+
+Converts each frame of a mesh animation witihin a selected frame range to a Grease Pencil object keyframed strokes, the *Bake Action* tool computes
+the final animation of the selected objects with all those modifiers, drivers, and constraints applied, and keyframes the result.
+
+Start Frame
+   Start frame for the baking process.
+End Frame
+   End frame for the baking process.
+Frame Step
+   Frame Steps for the baking process
+Thickness
+   Strokes thickness.
+Threshold Angle
+   Threshold value that determine the strokes end.
+Stroke Offset
+   Sets offset to separate strokes from filled strokes.
+Only Seam Edges
+   Convert only edges marked as seam.
+Export faces
+   Convert faces as filled strokes.
+Target Object
+   Select the target Grease Pencil object for the baked animation or a new one if there is nothing yet.
+Target Frame
+   Target destination frame for the baked animation.
+Reproject Type
+   Sets the reprojection type to use for the converted strokes.
+
+
+
+

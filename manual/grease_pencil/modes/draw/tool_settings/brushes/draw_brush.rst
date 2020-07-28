@@ -148,16 +148,53 @@ You can toggle the use of Randomize using the checkbox in the section panel head
 
 Radius
    The amount of randomness to apply using the pressure of the input device.
+   
+   Stroke Random (stroke icon)
+      Use randomness only at stroke level.
+
+   Use Pressure (pressure sensitivity icon)
+      Uses the stylus pressure to control how strong the effect is.
+      The gradient of the pressure can be customized using
+      the :doc:`curve widget </interface/controls/templates/curve>`.
+
 Strength
    The amount of randomness to apply to the stroke strength value (alpha).
+   
+   Stroke Random (stroke icon)
+      Use randomness only at stroke level.
+
+   Use Pressure (pressure sensitivity icon)
+      Uses the stylus pressure to control how strong the effect is.
+      The gradient of the pressure can be customized using
+      the :doc:`curve widget </interface/controls/templates/curve>`.
+
 UV
    The amount of randomness to apply to the UV rotation.
+   
+   Stroke Random (stroke icon)
+      Use randomness only at stroke level.
+
+   Use Pressure (pressure sensitivity icon)
+      Uses the stylus pressure to control how strong the effect is.
+      The gradient of the pressure can be customized using
+      the :doc:`curve widget </interface/controls/templates/curve>`.
 
 Hue, Saturation, Value
    Randomizes the hue, saturation, and value of the stroke's base color.
+   
+   Stroke Random (stroke icon)
+      Use randomness only at stroke level.
+
+   Use Pressure (pressure sensitivity icon)
+      Uses the stylus pressure to control how strong the effect is.
+      The gradient of the pressure can be customized using
+      the :doc:`curve widget </interface/controls/templates/curve>`.
 
 Jitter
    The amount of jittering to add to the stroke.
+
+   Stroke Random (stroke icon)
+      Use randomness only at stroke level.
 
    Use Pressure (pressure sensitivity icon)
       Uses the stylus pressure to control how strong the effect is.

@@ -14,6 +14,7 @@ Annotate
    Draw free-hand strokes in the main window.
 Annotate Line
    Click and drag to create a line.
+   Optionally, you can select the arrow style for the start and end of the line.
 Annotate Polygon
    Click multiple times to create multiple connected lines.
    The current polygon is finished when :kbd:`Esc` is pressed.
@@ -51,6 +52,7 @@ Stabilize Stroke
    Factor
       A smooth factor, where higher values result in smoother strokes
       but the drawing sensation feels like as if you were pulling the stroke.
+
 
 
 3D Editor

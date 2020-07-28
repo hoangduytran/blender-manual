@@ -21,11 +21,11 @@ Options
 Shadow Color
    Defines the shadow color.
 
-Offset X, Z
-   Control the shadow displacement in pixels on the X and Z axis.
+Offset X, Y
+   Control the shadow displacement in pixels on the X and Y axis.
 
-Scale X, Z
-   Control the size of the shadow on the X and Z axis.
+Scale X, Y
+   Control the size of the shadow on the X and Y axis.
 
 Rotation
    Sets the shadow rotation around the Grease Pencil object center

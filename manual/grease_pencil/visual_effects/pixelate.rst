@@ -18,6 +18,9 @@ Options
 Size X, Y
    Horizontal and vertical size of the final pixels to apply.
 
+Antialiasing
+   Applies anti-aliasing effect to the resulting pixels.
+
 
 Example
 =======
