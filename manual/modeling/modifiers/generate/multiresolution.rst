@@ -35,10 +35,11 @@ Type
       `Catmull-Clark <https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__
       subdivision surface algorithm.
 
-Levels Sculpt
-   Set the level of subdivisions to use in Sculpt Mode.
-Viewport
+
+Levels Viewport
    Set the level of subdivisions to show in Object Mode.
+Sculpt
+   Set the level of subdivisions to use in Sculpt Mode.
 Render
    Set the level of subdivisions to show when rendering.
 
@@ -47,17 +48,11 @@ Optimal Display
    (only displays the edges of the original geometry).
 
 
-Operations
-----------
+Subdivisions
+------------
 
 Unsubdivide
    Rebuild a lower subdivision level of the current base mesh.
-
-Reshape
-   Copies vertex coordinates from another mesh.
-
-   To use it, first select a different mesh object with matching topology and vertex indices,
-   then :kbd:`Shift` select the object you wish to copy vertex coordinates to, and click *Reshape*.
 
 Subdivide
    Adds another level of subdivision.
@@ -65,8 +60,22 @@ Subdivide
 Delete Higher
    Deletes all subdivision levels that are higher than the current one.
 
+
+Shape
+-----
+
+Reshape
+   Copies vertex coordinates from another mesh.
+
+   To use it, first select a different mesh object with matching topology and vertex indices,
+   then :kbd:`Shift` select the object you wish to copy vertex coordinates to, and click *Reshape*.
+
 Apply Base
    Modifies the original unsubdivided mesh to match the form of the subdivided mesh.
+
+
+Generate
+--------
 
 Rebuild Subdivisions
    Rebuilds all possible subdivisions levels to generate a lower resolution base mesh.
