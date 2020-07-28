@@ -15,6 +15,9 @@ Options
 
    Blur Visual Effect.
 
+Samples
+   Number of blur samples (0 disabled the blur effect).
+
 Use Depth of Field
    When enabled, the blur effect uses the focal plane distance of the actual camera to
    calculate the object blurriness. Only available in camera view.
@@ -26,9 +29,6 @@ Size
 
 Rotation
    Control the Rotation of the blurriness.
-
-Samples
-   Number of blur samples (0 disabled the blur effect).
 
 
 Example

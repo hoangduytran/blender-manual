@@ -29,14 +29,14 @@ Mask Color
 Blend Mode
    The mask blending operation to perform. See :term:`Color Blend Modes`.
 
-Offset X, Y
+Offset X, Z
    Control the color mask displacement in pixels on the X and Z axis.
 
 
 Blur
 ----
 
-Blur X, Y
+Blur X, Z
    Control the blur scale in pixels on the X and Z axis.
 
 Samples

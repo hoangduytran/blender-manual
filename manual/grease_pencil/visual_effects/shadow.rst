@@ -21,10 +21,10 @@ Options
 Shadow Color
    Defines the shadow color.
 
-Offset X, Y
+Offset X, Z
    Control the shadow displacement in pixels on the X and Z axis.
 
-Scale X, Y
+Scale X, Z
    Control the size of the shadow on the X and Z axis.
 
 Rotation
@@ -38,7 +38,7 @@ Object Pivot
 Blur
 ----
 
-Blur X, Y
+Blur X, Z
    Control the blur scale in pixels on the X and Z axis.
 
 Samples

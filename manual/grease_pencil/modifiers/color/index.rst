@@ -8,4 +8,5 @@
 
    hue_saturation.rst
    opacity.rst
+   texture_mapping.rst
    tint.rst
