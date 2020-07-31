@@ -62,4 +62,3 @@ Only Seam Edges
    Convert only edges marked as seam.
 Export faces
    Convert faces as filled strokes.
-

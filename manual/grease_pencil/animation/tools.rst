@@ -107,6 +107,8 @@ A breakdown keyframe will be added on every frame between the previous and next 
    only with different location, rotation or scale.
 
 
+.. _bpy.ops.gpencil.mesh_bake:
+
 Bake Mesh to Grease Pencil
 ==========================
 
@@ -142,7 +144,3 @@ Target Frame
    Target destination frame for the baked animation.
 Reproject Type
    Sets the reprojection type to use for the converted strokes.
-
-
-
-
