@@ -35,7 +35,6 @@ Type
       `Catmull-Clark <https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__
       subdivision surface algorithm.
 
-
 Levels Viewport
    Set the level of subdivisions to show in Object Mode.
 Sculpt

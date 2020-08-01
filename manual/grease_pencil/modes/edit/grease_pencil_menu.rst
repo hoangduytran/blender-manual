@@ -291,7 +291,7 @@ Sometimes you may have drawn strokes unintentionally in different locations in t
 but they look right from a certain plane or from the camera view.
 You can use Reproject Strokes to flatten all the selected strokes from a certain viewpoint.
 
-Reprojected type
+Reprojected Type
    Front
       Reproject selected strokes onto the front plane (XZ).
    Side
@@ -306,7 +306,7 @@ Reprojected type
       Reproject selected strokes onto 3D cursor rotation.
 
 Keep Original
-   Maintains the original strokes after applying the operator.
+   Maintains the original strokes after applying the tool.
 
 .. list-table::
 

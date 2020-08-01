@@ -91,12 +91,15 @@ Linked Flat Faces
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Select --> Select Linked --> Linked`
 
-Selects all connected faces with a similar enough, angle.
+Selects all connected faces with a similar angle.
+
+Sharpness
+   Todo.
 
 .. figure:: /images/modeling_meshes_selecting_flat-faces.png
-   
-Looking at the image above, when at least one face is selected (seen on the left),
+
+Looking at the image above, when at least one face is selected (as seen on the left),
 *Linked Flat Faces* will select all connecting faces that lie
-on the same or similar plane (seen on the middle image).
+on the same or similar plane (as shown in the middle image).
 If the corners are smoothed, those faces are no longer lined up with the selected faces.
 At this point, increasing the *Sharpness* value in the tool options could include the smoothed faces.

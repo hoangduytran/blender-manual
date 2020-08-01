@@ -1,4 +1,4 @@
-.. _bpy.types.OpacityGpencilModifier:
+.. _bpy.types.TextureGpencilModifier:
 
 ************************
 Texture Mapping Modifier
@@ -37,7 +37,7 @@ Mode
    Fill
       Fill Rotation
          Sets the texture angle.
-      
+
       Offset
          Moves the texture origin.
 
@@ -45,7 +45,6 @@ Mode
 
       Scale
          Factor for the texture scale.
-
 
 
 Influence

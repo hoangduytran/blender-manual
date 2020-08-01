@@ -119,15 +119,14 @@ Bake Mesh to Grease Pencil
    :Mode:      Object and Pose Modes
    :Menu:      :menuselection:`Object --> Animation --> Bake Mesh to Grease Pencil...`
 
-Converts each frame of a mesh animation witihin a selected frame range to a Grease Pencil object keyframed strokes, the *Bake Action* tool computes
-the final animation of the selected objects with all those modifiers, drivers, and constraints applied, and keyframes the result.
+Converts each frame of a mesh animation within a selected frame range to
+a Grease Pencil object keyframed strokes. The *Bake Action* tool computes the final animation of
+the selected objects with all those modifiers, drivers, and constraints applied, and keyframes the result.
 
-Start Frame
-   Start frame for the baking process.
-End Frame
-   End frame for the baking process.
+Start Frame, End Frame
+   Start/End frame for the baking process.
 Frame Step
-   Frame Steps for the baking process
+   Frame steps for the baking process
 Thickness
    Strokes thickness.
 Threshold Angle
@@ -136,7 +135,7 @@ Stroke Offset
    Sets offset to separate strokes from filled strokes.
 Only Seam Edges
    Convert only edges marked as seam.
-Export faces
+Export Faces
    Convert faces as filled strokes.
 Target Object
    Select the target Grease Pencil object for the baked animation or a new one if there is nothing yet.

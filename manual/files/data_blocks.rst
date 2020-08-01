@@ -425,7 +425,7 @@ Min, Max
 
 Is Library Overridable
    Allow the property to be :doc:`overridden </files/linked_libraries/library_overrides>`
-   when the Data-Block is linked.
+   when the data-block is linked.
 
 Use Soft Limits
    Enables limits that the *Property Value* slider can be adjusted to
@@ -438,7 +438,7 @@ Tooltip
    Allows you to write a custom :doc:`Tooltip </getting_started/help>` for your property.
 
 Subtype
-   For vector properties, specifies the kind of data the property contains,
+   For vector properties, specifies the type of data the property contains,
    which affects how it appears in the :abbr:`UI (User Interface)`. Most useful for color properties.
 
 

@@ -34,7 +34,7 @@ Falloff
 -------
 
 Type
-   This can be used to adjust the kind of curve that the hook has on the stroke points.
+   This can be used to adjust the type of curve for the Strength attenuation.
    You can also define a custom curve to get a much higher level of control.
 
 Radius

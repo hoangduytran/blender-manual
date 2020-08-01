@@ -50,7 +50,7 @@ See :ref:`Modifiers Interface <bpy.types.Modifier.show>` for more information.
    Grease Pencil strokes, unlike meshes, still can not be edited directly in the place.
 
 
-..  _grease-pencil-modifier-influence-filters:
+.. _grease-pencil-modifier-influence-filters:
 
 Influence Filters
 -----------------

@@ -11,7 +11,7 @@ The annotation tool can be activated in the Toolbar on the left side.
 It has a couple of sub-tools listed below.
 
 Annotate
-   Draw free-hand strokes in the main window.
+   Draw free-hand strokes in the main area.
 Annotate Line
    Click and drag to create a line.
    Optionally, you can select the arrow style for the start and end of the line.

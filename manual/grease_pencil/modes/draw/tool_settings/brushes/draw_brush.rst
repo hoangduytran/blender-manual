@@ -148,7 +148,7 @@ You can toggle the use of Randomize using the checkbox in the section panel head
 
 Radius
    The amount of randomness to apply using the pressure of the input device.
-   
+
    Stroke Random (stroke icon)
       Use randomness only at stroke level.
 
@@ -159,7 +159,7 @@ Radius
 
 Strength
    The amount of randomness to apply to the stroke strength value (alpha).
-   
+
    Stroke Random (stroke icon)
       Use randomness only at stroke level.
 
@@ -170,7 +170,7 @@ Strength
 
 UV
    The amount of randomness to apply to the UV rotation.
-   
+
    Stroke Random (stroke icon)
       Use randomness only at stroke level.
 
@@ -180,8 +180,8 @@ UV
       the :doc:`curve widget </interface/controls/templates/curve>`.
 
 Hue, Saturation, Value
-   Randomizes the hue, saturation, and value of the stroke's base color.
-   
+   Randomizes the hue, saturation, and value of the stroke's :ref:`Color <grease-pencil-draw-color>`.
+
    Stroke Random (stroke icon)
       Use randomness only at stroke level.
 

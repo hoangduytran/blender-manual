@@ -35,7 +35,7 @@ Note that it also keeps the faces and volumes created by closed and extruded cur
 
 
 Grease Pencil from Curve/Mesh
-==============================
+=============================
 
 .. admonition:: Reference
    :class: refbox
@@ -43,8 +43,10 @@ Grease Pencil from Curve/Mesh
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Convert to --> Grease Pencil from Curve/Mesh`
 
-Converts the selected curve/mesh to a Grease Pencil object with strokes matching the curve/mesh; basic materials are also add.
-When multiple curves/meshes are selected, they are all converted into the same Grease Pencil object.
+Converts the selected curve/mesh to a Grease Pencil object
+with strokes matching the curve/mesh; basic materials are also add.
+When multiple curves/meshes are selected, they are all converted into
+the same Grease Pencil object.
 
 
 Options
@@ -60,5 +62,5 @@ Stroke Offset
    Sets offset to separate strokes from filled strokes.
 Only Seam Edges
    Convert only edges marked as seam.
-Export faces
+Export Faces
    Convert faces as filled strokes.
