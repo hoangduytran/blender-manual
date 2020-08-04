@@ -26,16 +26,18 @@ Usage
 Here are some common steps for using the *Measure* tool:
 
 #. Activate the *Measure* tool from the Toolbar.
-#. Click and drag in the viewport to define the initial start and end point for the ruler or protractor.
-   You can add multiple measurements in the viewport.
-#. Click on either end of the ruler to move it. You can always navigate (pan, zoom, ...)
-   or change the view (orthogonal, perspective) in the viewport to have better access to the ruler.
+#. Click and drag in the viewport to define the initial start and end point for the ruler.
+   You can add multiple rulers in the viewport.
+#. Click on either end of the ruler to select it and move the endpoints.
 
    - Holding :kbd:`Ctrl` while moving enables snap to edges and vertices.
-     More precise measurements are possible this way.
      A small circle appears when the end point is snapped to a vertex or edge.
+     This way you can place the endpoints more accurately.
    - Holding :kbd:`Shift` while moving lets you measure the distance between faces.
      This works well only with parallel faces, e.g. walls.
+
+   You can always navigate (pan, zoom, ...)
+   or change the view (orthogonal, perspective) in the viewport to have better access to the ruler.
 
 #. Click on the midpoint of a created ruler to convert it to a protractor.
    Move this midpoint to set the vertex of the angle.
@@ -48,7 +50,7 @@ Here are some common steps for using the *Measure* tool:
 
 All measurements are hidden when another tool is selected.
 They are shown when the *Measure* tool is selected again.
-Yet you can be do editing operations while the ruler is active.
+Yet you can do editing operations while the ruler is active.
 For example, you can edit the rotation or dimension of the selected object in the Sidebar.
 The measurement values do not appear in the Render output.
 
@@ -58,5 +60,5 @@ or angle (degrees, radians) will update the measurements.
 
 .. tip::
 
-   There is also a *Measurement* setting in the *Viewport Overlays* panel.
-   Edge length, edge angle, face area and face angle can be displayed in Edit Mode through this setting.
+   In Edit Mode only, there is also a *Measurement* setting in the *Viewport Overlays* panel.
+   Edge length, edge angle, face area and face angle can be displayed through this setting.
