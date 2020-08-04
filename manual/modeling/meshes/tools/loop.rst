@@ -26,7 +26,7 @@ The tool is interactive and has two steps:
    The cut to be made is marked with a magenta colored line as you move the mouse over the various edges.
    The to be created edge loop stops at the poles (tris and n-gons) where the existing face loop terminates.
 
-#. Preform the Cut
+#. Perform the Cut
 
    Once the desired location of the new edge loop is found, the edge loop can be created via :kbd:`LMB`.
 

@@ -126,7 +126,7 @@ Resolutions
 Overwrite
    Saves over any existing proxies in the proxy storage directory.
 
-Build JPEG QualityA
+Build JPEG Quality
    Defines the quality of the JPEG images used for proxies.
 
 Timecode Index

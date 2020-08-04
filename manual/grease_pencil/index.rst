@@ -33,3 +33,4 @@ Modes
    modes/edit/index.rst
    modes/vertex_paint/index.rst
    modes/weight_paint/index.rst
+   modes/object/index.rst

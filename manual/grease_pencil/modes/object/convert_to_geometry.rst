@@ -8,13 +8,13 @@ Convert to Geometry
    :class: refbox
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Convert to --> Path, BÃ©zier Curve, Polygon Curve`
+   :Menu:      :menuselection:`Object --> Convert to --> Path, Bézier Curve, Polygon Curve`
 
 In the 3D Viewport, sketches on the active layer can be converted to geometry,
 based on the current view settings, by transforming the points recorded when drawing
 (which make up the strokes) into 3D space. Currently, all points will be used,
 so it may be necessary to simplify or subdivide parts of the created geometry for standard use.
-Sketches can currently be converted into curves in object mode.
+Sketches can currently be converted into curves in Object Mode.
 
 
 Options
@@ -25,10 +25,10 @@ Type
 
    Path
       Create NURBS 3D curves of order 2 (i.e. behaving like polylines).
-   BÃ©zier Curve
-      Create BÃ©zier curves, with free "aligned" handles (i.e. also behaving like polylines).
+   Bézier Curve
+      Create Bézier curves, with free "aligned" handles (i.e. also behaving like polylines).
    Polygon Curve
-      BÃ©zier Curve with straight line segments (auto handles).
+      Bézier curve with straight line segments (auto handles).
 
    .. note:: Converting to Mesh
 
@@ -36,16 +36,9 @@ Type
       simply choose *NURBS* first, and then convert the created curve to a mesh.
 
 Normalize Weight
-   Will scale weights value so that they fit tightly into the (0.0 to 1.0) range.
-
-   All this means is that with a pressure tablet,
-   you can directly control the radius and weight of the created curve,
-   which can affect e.g. the width of an extrusion,
-   or the size of an object through a *Follow Path* Constraint or *Curve* Modifier!
-
+   Will scale weights value so that they fit into the (0.0 to 1.0) range.
 Link Strokes
-   Will create a single spline, i.e. curve element. (enabled by default)
-   from all strokes in active Grease pencil layer.
+   Will create a single spline, i.e. curve element, from all strokes in active Grease Pencil layer.
    This is especially useful if you want to use the curve as a path.
    All the strokes are linked in the curve by "zero weights/radii" sections.
 
@@ -53,17 +46,14 @@ Link Strokes
 Timing
 ------
 
-Grease pencil stores "dynamic" data, i.e. how fast strokes are drawn.
-When converting to curve, this data can be used to create an *Evaluate Time* F-Curve
+Grease Pencil stores "dynamic" data, i.e. how fast strokes are drawn.
+When converting to curve, this data can be used to create an *Evaluate Time* F-curve
 (in other words, a path animation), that can be used
 e.g. to control another object's position along that curve
 (*Follow Path* constraint, or, through a driver, *Curve* modifier).
 So this allows you to reproduce your drawing movements.
 
-.. important::
-
-   All those "timing" options need *Link Stroke* to be enabled,
-   otherwise they would not make much sense!
+*Link Strokes* has to be enabled for all timing options. 
 
 Timing Mode
    This control lets you choose how timing data is used.
@@ -77,22 +67,21 @@ Timing Mode
       (i.e. time between strokes drawing).
    Custom Gaps
       The path animation will reflect to original timing, but the "gaps" will get custom values.
-      This is especially useful if you have very large pauses between some of your strokes,
-      and would rather like to have "reasonable" ones!
+      This is especially useful if you want to shorten large pauses between some strokes.
 
 Frame Range
    The "length" of the created path animation, in frames. In other words, the highest value of *Evaluation Time*.
 Start Frame
    The starting frame of the path animation.
 Realtime
-   When enabled, the path animation will last exactly the same duration it took you do draw the strokes.
+   When enabled, the path animation will last exactly the same duration it has taken you to draw the strokes.
 End Frame
    When *Realtime* is disabled, this defines the end frame of the path animation.
-   This means that the drawing timing will be scaled up or down to fit into the specified range.
+   This means that the drawing timing will be adjusted to fit into the specified range.
 Gap Duration
-   *Custom Gaps* only. The average duration (in frames) of each gap between actual strokes.
-   Please note that the value entered here will only be exact if *Realtime* is enabled,
-   otherwise it will be scaled, exactly as the actual strokes' timing is!
+   *Custom Gaps* only. The average duration (in frames) of each gap between strokes.
+   Please note that, the value will only be exact if *Realtime* is enabled,
+   otherwise it will be scaled, exactly as the strokes' timing is.
 
 
 Example

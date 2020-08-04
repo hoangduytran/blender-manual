@@ -331,7 +331,7 @@ This page lists definitions for terms used in Blender and this manual.
       a body or model in the order from the parent bones to the child bones.
       Using forward kinematics on a hierarchically structured object, you can move
       the upper arm then the lower arm and hand go along with the movement.
-      Without forward kinematics the lower arm and hand would discontent from
+      Without forward kinematics the lower arm and hand would disconnect from
       upper arm and would move independently in space.
 
       See also :term:`Inverse Kinematics`.

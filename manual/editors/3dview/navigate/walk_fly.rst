@@ -61,7 +61,7 @@ Shortcuts
   (offset by the *Camera Height* value set in the :doc:`Preferences </editors/preferences/index>`).
 - Jump :kbd:`V` -- only available if *Gravity* is on.
 - Move up and down :kbd:`Q`, :kbd:`E` -- only available if *Gravity* off.
-- Toogle *Gravity* :kbd:`Tab`.
+- Toggle *Gravity* :kbd:`Tab`.
 - Change the movement speed:
 
   - :kbd:`WheelUp` or :kbd:`NumpadPlus` to increase the movement speed for this open session.

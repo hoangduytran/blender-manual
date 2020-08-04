@@ -34,4 +34,4 @@ Example
 
 .. figure:: /images/modeling_meshes_selecting_mirror_axis-xz-extend.png
 
-   (From left to right) Initial selection, mirrored along X and Z axes, with Extend.
+   (From left to right) initial selection, mirrored along X and Z axes, with Extend.
