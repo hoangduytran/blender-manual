@@ -18,6 +18,7 @@ larger brush sizes might be too slow to get a usable brush.
 
 Simulation Limit
    The Factor added relative to the size of the radius to limit the cloth simulation effects.
+
 Simulation Falloff
    The area to apply deformation falloff to the effects of the simulation.
    This setting is a factor of the *Simulation Limit* and is shown as a dashed line around the cursor.
@@ -41,6 +42,7 @@ Deformation
       Simulates picking up and moving the cloth.
    Expand
       Simulates stretching the cloth out.
+
 Force Falloff
    Shape used in the brush to apply force to the cloth.
 
@@ -51,5 +53,6 @@ Force Falloff
 
 Cloth Mass
    Mass of each simulation particle.
+
 Cloth Damping
    How much the applied forces are propagated through the cloth.

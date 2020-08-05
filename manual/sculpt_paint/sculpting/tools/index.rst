@@ -34,4 +34,5 @@
    mask.rst
    draw_facesets.rst
    mesh_filter.rst
+   cloth_filter.rst
    transforms.rst

@@ -86,6 +86,9 @@ Toolbar
 :doc:`/sculpt_paint/sculpting/tools/mesh_filter`
    Applies a deformation to all vertices in the mesh at the same time.
 
+:doc:`/sculpt_paint/sculpting/tools/cloth_filter`
+   Applies a cloth simulation to all vertices in the mesh at the same time.
+
 Move
    Translation tool.
 
