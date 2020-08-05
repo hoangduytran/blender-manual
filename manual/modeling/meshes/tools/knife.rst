@@ -47,7 +47,7 @@ Tool Settings
 Occlude Geometry
    Only cut geometry visible on screen.
 
-Only Selected
+Only Selected :kbd:`Shift-K`
    Only cuts through selected geometry.
 
 
