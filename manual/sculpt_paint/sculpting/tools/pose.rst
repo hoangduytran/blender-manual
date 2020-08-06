@@ -4,6 +4,8 @@
 .. _bpy.types.Brush.pose_smooth_iterations:
 .. _bpy.types.Brush.pose_ik_segments:
 .. _bpy.types.Brush.use_pose_ik_anchored:
+.. _bpy.types.Brush.use_connected_only:
+.. _bpy.types.Brush.disconnected_distance_max:
 
 ****
 Pose
@@ -60,3 +62,11 @@ Pose IK Segments
 
 Keep Anchor Point
    Keeps the position of the last segment in the IK chain fixed.
+
+Connected Only
+   Causes the brush to only affect topologically connected elements.
+   Disabling this can have an impact on performance; when disabled,
+   keeping the *Max Element Distance* as low as possible will help counteract the performance impact.
+
+Max Element Distance
+   Maximum distance to search for disconnected loose parts in the mesh.
