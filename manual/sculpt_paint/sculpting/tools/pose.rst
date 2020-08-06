@@ -1,3 +1,4 @@
+.. _bpy.types.Brush.pose_deform_type:
 .. _bpy.types.Brush.pose_origin_type:
 .. _bpy.types.Brush.pose_offset:
 .. _bpy.types.Brush.pose_smooth_iterations:
@@ -14,12 +15,22 @@ Pose
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Pose`
 
-This brush is used to pose a model simulating an armature-like deformation.
-The pivot point for rotation is calculated automatically based
-on the radius of the brush and the topology of the model.
-When pressing :kbd:`Ctrl`, the pose brush applies a twist rotation
-to the posing segments instead of using the rotation or an IK deformation.
-The falloff of the rotation across multiple segments is controlled by the brush falloff curve.
+This brush is used to pose a model simulating an armature-like deformations.
+Several different deformation modes can be used to preform
+IK deformations or altering and moving the proportions of the mesh.
+The falloff of the deformation across multiple segments is controlled by the brush falloff curve.
+
+Deformation
+   Deformation type that is used by the brush.
+
+   Rotate/Twist
+      Rotates segments around a pivot point that is calculated automatically based
+      on the radius of the brush and the topology of the model.
+      When pressing :kbd:`Ctrl`, the brush applies a twist rotation
+      to the posing segments instead of using the rotation or an IK deformation.
+   Scale/Translate
+      Alters the proportions of the of the mesh, using the segment's origin as a pivot.
+      While holding :kbd:`Ctrl` the brush moves the entire segment.
 
 Rotation Origins
    Method to set the rotation origins for the segments of the brush.
