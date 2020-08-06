@@ -31,6 +31,10 @@ Deformation
    Scale/Translate
       Alters the proportions of the of the mesh, using the segment's origin as a pivot.
       While holding :kbd:`Ctrl` the brush moves the entire segment.
+   Squash/Stretch
+      Works similar to *Scale/Translate* however, it applies different
+      scale values along different axes to achieve the stretching affect.
+      The pivot point for this mode is calculated by using the local space aligned to the segment.
 
 Rotation Origins
    Method to set the rotation origins for the segments of the brush.
