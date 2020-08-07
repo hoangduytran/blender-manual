@@ -16,14 +16,22 @@ The *Path Animation* settings can be used to determine how child objects move al
 
    Path Animation panel.
 
+.. _bpy.types.Curve.path_duration:
+
 Frames
    The number of frames that are needed to traverse the path,
    defining the maximum value for the *Evaluation Time* setting.
+
+.. _bpy.types.Curve.eval_time:
+
 Evaluation Time
    Parametric position along the length of the curve that object following it should be at
    (the position is evaluated by dividing by the *Path Length* value).
    By default, it is linked to the global frame number,
    but could be keyframed to give more control over the path animation.
+
+.. _bpy.types.Curve.use_path_follow:
+
 Follow
    Make the curve path children rotate along the curvature of the path.
 

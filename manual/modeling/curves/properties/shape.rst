@@ -8,11 +8,14 @@ Shape
 
    Shape panel.
 
+.. _bpy.types.Curve.dimensions:
+
 Dimensions
    By default, new curves are set to be 3D, which means that control points can be placed anywhere in 3D space.
    Curves can also be set to 2D which constrain the control points to the curve's local XY axis.
 
 .. _bpy.types.Curve.resolution_u:
+.. _bpy.types.Curve.render_resolution_u:
 
 Resolution Preview/Render U
    The *resolution* property defines the number of points that are computed between every pair of control points.
@@ -31,6 +34,8 @@ Resolution Preview/Render U
 
              Curves with a resolution of 12.
 
+.. _bpy.types.Curve.twist_mode:
+
 Twist Method
    A 3D curve has control points that are not located on the curve's local XY plane.
    This gives the curve a twist which can affect the curve normals.
@@ -47,9 +52,13 @@ Twist Method
 
              Curves with a twist of Tangent.
 
+.. _bpy.types.Curve.twist_smooth:
+
 Smooth
    Interactively removes twists from the curve. This is useful if a curve has noticeable "kinks"
    from over twisting; which can be possible when converting meshes to curves.
+
+.. _bpy.types.Curve.fill_mode:
 
 Fill Mode
    Fill determines the way a curve is displayed when it is beveled (see below for details on Beveling).
@@ -65,18 +74,27 @@ Fill Mode
 
              Curves with a fill of Full.
 
+.. _bpy.types.Curve.use_fill_deform:
+
 Fill Deformed
    Fills the curve after applying all modification that might deform the curve (i.e. shape keys and modifiers).
 
 .. _curve-shape-path-curve-deform:
+.. _bpy.types.Curve.use_radius:
 
 Radius
    Causes the deformed object to be scaled by the set curve radius.
    Utilized when using a curve as a path or when using the :doc:`/modeling/modifiers/deform/curve`.
+
+.. _bpy.types.Curve.use_stretch:
+
 Stretch
    The *Stretch* curve option allows you to let the mesh object stretch, or squeeze, over the entire curve.
    To get the expected result, use this together with the *Bounds Clamp* option.
    Utilized when using the :doc:`/modeling/modifiers/deform/curve`.
+
+.. _bpy.types.Curve.use_deform_bounds:
+
 Bounds Clamp
    When this option is enabled, the object and mesh offset along the deformation axis is ignored.
    This can be useful with the *Stretch* option or when using a negative axis.

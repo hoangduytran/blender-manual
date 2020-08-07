@@ -8,6 +8,8 @@ Geometry
 
    Geometry panel.
 
+.. _bpy.types.Curve.offset:
+
 Offset
    Moves the extrusion parallel to the curve normals.
 
@@ -15,6 +17,8 @@ Offset
       :width: 50%
 
       Bézier Circle -1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.
+
+.. _bpy.types.Curve.extrude:
 
 Extrude
    Will extrude the curve along both the positive and negative local Z axes.
@@ -32,6 +36,8 @@ Extrude
              :width: 320px
 
              Extruded by 0.5 (Object Mode).
+
+.. _bpy.types.Curve.taper_object:
 
 Taper Object
    The taper curve is evaluated along the local X axis,
@@ -57,6 +63,8 @@ Taper Object
      you want the relative height of the *Taper Object*
      Taper curve at both ends to be the same, so that the cyclic point
      (the place where the endpoint of the curve connects to the beginning) is a smooth transition.
+
+.. _bpy.types.Curve.use_map_taper:
 
 Map Taper
    For curves using a Taper Object and with modifications to the *Start/End Bevel Factor*
@@ -102,6 +110,8 @@ Resolution
 
              A Curve with different resolutions applied (Resolution = 12).
 
+.. _bpy.types.Curve.bevel_object:
+
 Object
    Controls the cross section of the extruded curve.
    The Bevel Object can only be another curve both 2D or 3D, and opened or closed.
@@ -119,8 +129,13 @@ Object
 
              A curve with the Bevel Object as a Bézier circle.
 
+.. _bpy.types.Curve.use_fill_caps:
+
 Fill Caps
    Seals the ends of a beveled curve.
+
+.. _bpy.types.Curve.bevel_factor_start:
+.. _bpy.types.Curve.bevel_factor_end:
 
 Bevel Start/End
    These options determine where to start/end the Bevel operation on the curve.
@@ -142,6 +157,9 @@ Bevel Start/End
              :width: 320px
 
              A curve with a 0.6 End Bevel Factor.
+
+.. _bpy.types.Curve.bevel_factor_mapping_start:
+.. _bpy.types.Curve.bevel_factor_mapping_end:
 
 Bevel Mapping Start/End
    Allows to control the relation between bevel factors (number between 0 and 1) and
