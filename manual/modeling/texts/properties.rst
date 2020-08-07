@@ -56,7 +56,7 @@ please refer to those for details.
 
 .. note::
 
-   :ref:`Bevel <modeling-curve-bevel>` is applied to the curves defining the letters,
+   :ref:`Bevel <bpy.types.Curve.bevel>` is applied to the curves defining the letters,
    which means that usually it will follow their outlines
    (there will be two parallel beveled curves, and not a single one, as one might expect).
 

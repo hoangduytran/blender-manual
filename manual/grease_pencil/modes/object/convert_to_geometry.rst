@@ -35,8 +35,18 @@ Type
       If you want to convert your sketch to a mesh,
       simply choose *NURBS* first, and then convert the created curve to a mesh.
 
+Bevel Depth
+   The :ref:`Bevel Depth <bpy.types.Curve.bevel_depth>` to use for the converted curve object.
+
+Bevel Resolution
+   The :ref:`Bevel Resolution <bpy.types.Curve.bevel_resolution>` to use for the converted curve object.
+
 Normalize Weight
    Will scale weights value so that they fit into the (0.0 to 1.0) range.
+
+Radius Factor
+   Multiplier for the points' radii (set from the stroke's width).
+
 Link Strokes
    Will create a single spline, i.e. curve element, from all strokes in active Grease Pencil layer.
    This is especially useful if you want to use the curve as a path.
@@ -53,7 +63,7 @@ e.g. to control another object's position along that curve
 (*Follow Path* constraint, or, through a driver, *Curve* modifier).
 So this allows you to reproduce your drawing movements.
 
-*Link Strokes* has to be enabled for all timing options. 
+*Link Strokes* has to be enabled for all timing options.
 
 Timing Mode
    This control lets you choose how timing data is used.

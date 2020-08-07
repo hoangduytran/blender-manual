@@ -63,10 +63,12 @@ Map Taper
    the *Map Taper* option will apply the taper to the beveled part of the curve (not the whole curve).
 
 
-.. _modeling-curve-bevel:
+.. _bpy.types.Curve.bevel:
 
 Bevel
 =====
+
+.. _bpy.types.Curve.bevel_depth:
 
 Depth
    Changes the size of the bevel.
@@ -82,6 +84,8 @@ Depth
              :width: 320px
 
              A Curve with different Bevel depths applied (Bevel = 0.25).
+
+.. _bpy.types.Curve.bevel_resolution:
 
 Resolution
    Alters the smoothness of the bevel.
