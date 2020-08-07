@@ -99,6 +99,9 @@ UV Smooth
 Use Creases
    Use the `Weighted Edge Creases`_ values stored in edges to control how smooth they are made.
 
+Use Custom Normals
+   Interpolates existing :ref:`modeling_meshes_normals_custom` to resulting mesh.
+
 
 Keyboard Shortcuts
 ==================

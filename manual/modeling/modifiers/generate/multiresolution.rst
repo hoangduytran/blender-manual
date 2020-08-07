@@ -99,3 +99,6 @@ UV Smooth
       UV islands are smoothed, but their boundary remain sharp.
    Sharp
       UV remain unchanged.
+
+Use Custom Normals
+   Interpolates existing :ref:`modeling_meshes_normals_custom` to resulting mesh.
