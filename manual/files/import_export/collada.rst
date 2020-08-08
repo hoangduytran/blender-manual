@@ -19,8 +19,7 @@ Collada Exporter
    :align: right
 
 
-Operator Presets
-----------------
+.. rubric:: Operator Presets
 
 There are two operator presets (see top of Operator panel) for Second Life (SL) users:
 
@@ -34,23 +33,13 @@ Special Notes for Second Life users:
 - Scale and Rotation must be applied before the export!
 
 
-Export Data Options
--------------------
-
-Apply Modifiers
-   All active modifiers will be applied in a non-destructive way.
-   That is, the modifiers will be applied to copies of the meshes.
-   Thus you no longer need to apply your modifiers before exporting.
-   That is now done automatically in the background.
-
-   .. hint::
-
-      Some modifiers provide a preview mode and a render mode with different mesh settings.
-      The module now support both modes when applying the modifiers.
+Main
+----
 
 Selection Only
    When *Selection Only* is enabled, then only the selected objects will be exported.
    Otherwise the entire scene is exported with all visible and all invisible objects.
+
 Include Children
    When this option is enabled then all children of the selected objects
    will also be exported regardless of their selection state.
@@ -74,14 +63,18 @@ Include Shape Keys
    So now you can export your meshes with the current shape key configuration baked in.
 
 
+Global Orientation
+^^^^^^^^^^^^^^^^^^
+
+Todo.
+
+
 Texture Options
----------------
+^^^^^^^^^^^^^^^
 
 Only Selected UV Map
    When your mesh contains multiple UV layers, then Blender exports all layers by default.
    This option allows you to only export the active (selected) UV layer.
-Include Textures
-   Blender supports two ways to add textures to your objects.
 Copy
    When you export images either material based image textures,
    then the exporter creates absolute file references in the export file.
@@ -90,8 +83,43 @@ Copy
    place the copies besides the export file. In that case the file references are made relative.
 
 
+Geom
+----
+
+Export Data Options
+^^^^^^^^^^^^^^^^^^^
+
+Triangulate
+   The mesh can be triangulated on-the-fly. The triangulation is based on the same function
+   which is used in the *Triangulate Faces* tool for triangulating the current selection of faces.
+   For full control over the triangulation you can do this manually before exporting.
+   However this option allows to do the triangulation only for the exported data.
+   The mesh itself is not affected.
+
+Apply Modifiers
+   All active modifiers will be applied in a non-destructive way.
+   That is, the modifiers will be applied to copies of the meshes.
+
+   .. hint::
+
+      Some modifiers provide a preview mode and a render mode with different mesh settings.
+      The module now support both modes when applying the modifiers.
+
+Transform
+   Collada supports two types of transformation matrix specifications.
+   Either as ``<Matrix>`` or as a set of transformation decompositions (for move, rotate and scale).
+   Note that the exporter will not strictly follow this option setting,
+   but will rather take it as a hint to use the option if ever possible.
+   This is so because some of the exported data types have specific rules
+   about how the transformation matrix has to be exported.
+   This is ongoing development and a less ambiguous method may be provided in the future.
+
+
+Arm
+---
+
 Armature Options
-----------------
+^^^^^^^^^^^^^^^^
 
 Deform Bones Only
    When this option is enabled, then the exporter strips all non-deforming bones
@@ -99,6 +127,7 @@ Deform Bones Only
    which are not actually part of the character skeleton. For example you can now export
    the Avastar rig with this option enabled. The resulting exported rig is compatible to Second Life.
    But please note the restrictions further below.
+
 Export to SL/OpenSim
    This option is very special. In fact some issues with bone orientation are calculated
    differently when this option is enabled. This is only relevant for rigged meshes.
@@ -109,34 +138,29 @@ Export to SL/OpenSim
    For static meshes it just does nothing at all.
 
 
-Collada Options
----------------
+Anim
+----
 
-Triangulate
-   The mesh can be triangulated on-the-fly. The triangulation is based on the same function
-   which is used in the *Triangulate Faces* tool for triangulating the current selection of faces.
-   For full control over the triangulation you can do this manually before exporting.
-   However this option allows to do the triangulation only for the exported data.
-   The mesh itself is not affected.
+Extra
+-----
+
+Collada Options
+^^^^^^^^^^^^^^^
+
 Use Object Instances
    In Blender you can reuse the same mesh for multiple objects.
    This is named "object instantiation". When you enable this option,
    then Blender will propagate object instantiation to the Collada file.
+
 Use Blender Profile
    Collada can be extended with tool specific data (profiles) Blender has its own (not official) profile
    that allows to export rig information into the Collada file, that can later be used to reconstruct
    the rig should it ever be necessary to import a dae file back into Blender.
-Transformation Type
-   Collada supports two types of transformation matrix specifications.
-   Either as ``<Matrix>`` or as a set of transformation decompositions (for move, rotate and scale).
-   Note that the exporter will not strictly follow this option setting,
-   but will rather take it as a hint to use the option if ever possible.
-   This is so because some of the exported data types have specific rules
-   about how the transformation matrix has to be exported.
-   This is ongoing development and a less ambiguous method may be provided in the future.
+
 Sort by Object Name
    The export order of data is bound to internal object order and it can not be influenced in a reliable way.
    This option ensures that the Geometry nodes and the Object nodes are both exported in alphabetical order.
+
 Keep Bind Info
    When a rig is imported to Blender, then the rig's bind pose will be used as Blender's rest pose.
    So all Matrix information of the original rest pose is lost.
@@ -160,9 +184,17 @@ Collada Importer
 The Collada importer is mostly driven by the imported data.
 There is one option for controlling the import units:
 
+
+Import Data Options
+-------------------
+
 Import Units
    If not enabled the imported data will be rescaled according to the currently used unit system.
    If this option is enabled, then Blender will adjust itself to the unit system as provided by the Collada file.
+
+Armature Options
+----------------
+
 Fix Leaf Bones
    Collada only records "joints" which is mostly similar to Blender's bone heads.
    But when you import a Collada file then the bone ends are not defined.
@@ -173,6 +205,7 @@ Fix Leaf Bones
    When the *Fix Leaf Bones* option is enabled then Blender tries to guess where the bone end
    of unconnected bones would best be placed. If the option is disabled,
    then the bone ends are placed at an offset along the Y axis. That is why bones often point towards the Y axis.
+
 Find Bone Chains
    When a bone has multiple children, then it is not defined which (if any)
    of the children should be connected to the bone. When the *Find Bone Chains* option is enabled,
@@ -181,9 +214,13 @@ Find Bone Chains
 
    If the option is disabled, then children will only be connected to parents,
    if the parent has only one child. But see the *Auto Connect* option below.
+
 Auto Connect
    When this option is enabled, then children will automatically
    be connected to their parents, if the parent has only one child.
+
+-------
+
 Keep Bind Info
    When this option is enabled, then the importer creates two custom properties for each bone:
 

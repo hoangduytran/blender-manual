@@ -79,7 +79,7 @@ Affect :kbd:`V`
    Edges
       Bevel the edges, creating intersections at vertices.
 
-Amount Type :kbd:`M`
+Width Type :kbd:`M`
    Selects how the *Amount* value controls the size of the bevel. According to the selection, the amount is:
 
    Offset
@@ -96,7 +96,7 @@ Amount Type :kbd:`M`
    For vertex-only bevels, the Offset and Depth types measure from the original vertex.
    The Width type is measured from a new vertex to the center of the new face (as half the amount).
 
-Amount :kbd:`A`
+Width :kbd:`A`
    You can change the bevel amount by moving the mouse towards and away from the object,
    a bit like with transform tools.
    The exact meaning of the value depends on the *Amount Type* option (see below).
@@ -147,88 +147,69 @@ Loop Slide
    the bevel tries to slide along those edges when possible.
    Turning the option off can lead to more even bevel widths.
 
-Mark Seams :kbd:`U`
-   If a seam edge crosses a non-seam one and you bevel all of them,
-   this option will maintain the expected propagation of seams.
+Mark
+   Seams :kbd:`U`
+      If a seam edge crosses a non-seam one and you bevel all of them,
+      this option will maintain the expected propagation of seams.
+   Sharp :kbd:`K`
+      Similar to Mark Seams, but for sharp edges.
 
-Mark Sharp :kbd:`K`
-   Similar to Mark Seams, but for sharp edges.
+Miter Outer :kbd:`O`
+   A *miter* is formed when two beveled edges meet at an angle.
+   On the side where the angle is greater than 180 degrees, if any, it is called an *outer miter*.
+   This option specifies the pattern that Blender uses at an outer miter.
 
-Miter Type
-   Outer :kbd:`O`
-      A *miter* is formed when two beveled edges meet at an angle.
-      On the side where the angle is greater than 180 degrees, if any, it is called an *outer miter*.
-      This option specifies the pattern that Blender uses at an outer miter.
+   Sharp
+      Edges meet at a sharp point, with no extra vertices introduced on the edges.
+   Patch
+      Edges meet at a sharp point but in addition, two extra vertices are introduced near the point
+      so that the edges and faces at the vertex may be less pinched together than
+      what occurs in the *Sharp* case.
+      The *Spread* slider controls how far the new vertices are from the intersection.
+   Arc
+      Two vertices are introduced near the intersection, and a curved arc joins them together.
+      The *Spread* slider controls how far the new vertices are from the intersection.
+      The *Profile* slider controls the shape of the arc.
 
-      Sharp
-         Edges meet at a sharp point, with no extra vertices introduced on the edges.
-      Patch
-         Edges meet at a sharp point but in addition, two extra vertices are introduced near the point
-         so that the edges and faces at the vertex may be less pinched together than
-         what occurs in the *Sharp* case.
-         The *Spread* slider controls how far the new vertices are from the intersection.
-      Arc
-         Two vertices are introduced near the intersection, and a curved arc joins them together.
-         The *Spread* slider controls how far the new vertices are from the intersection.
-         The *Profile* slider controls the shape of the arc.
+   The current choices are shown in this diagram, where the outer miter is along the horizontal surface.
 
-      The current choices are shown in this diagram, where the outer miter is along the horizontal surface.
+   .. list-table::
 
-      .. list-table::
+      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-2.png
+             :width: 320px
 
-         * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-2.png
-                :width: 320px
+             Sharp outer miter.
 
-                Sharp outer miter.
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-3.png
+             :width: 320px
 
-           - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-3.png
-                :width: 320px
+             Patch outer miter.
 
-                Patch outer miter.
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-4.png
+             :width: 320px
 
-           - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-4.png
-                :width: 320px
+             Arc outer miter.
 
-                Arc outer miter.
+Inner :kbd:`I`
+   An *Inner Miter* is formed when the angle between two beveled edges is less than 180 degrees.
+   This option specifies the pattern Blender uses at an inner miter.
+   The options are the same as for Outer Miter, except that *Patch* makes no sense and is therefore omitted.
+   Inner miters are shown in the following diagram, where two inner miters are on the vertical surfaces.
 
-   Inner :kbd:`I`
-      An *Inner Miter* is formed when the angle between two beveled edges is less than 180 degrees.
-      This option specifies the pattern Blender uses at an inner miter.
-      The options are the same as for Outer Miter, except that *Patch* makes no sense and is therefore omitted.
-      Inner miters are shown in the following diagram, where two inner miters are on the vertical surfaces.
+   .. list-table::
 
-      .. list-table::
+      * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-5.png
+             :width: 200px
 
-         * - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-5.png
-                :width: 200px
+             Sharp inner miter.
 
-                Sharp inner miter.
+        - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-6.png
+             :width: 200px
 
-           - .. figure:: /images/modeling_meshes_editing_edge_bevel_miter-6.png
-                :width: 200px
-
-                Arc inner miter.
+             Arc inner miter.
 
 Spread
    The value used to spread extra vertices apart for *Outer* and *Inner Miters*.
-
-Face Strength Mode
-   Set *Face Strength* on the faces involved in the bevel, according to the specified mode.
-   This can be used in conjunction with
-   a :doc:`Weight Normals Modifier </modeling/modifiers/modify/weighted_normal>`
-   (with the *Face Influence* option checked).
-
-   None
-      Do not set face strength.
-   New
-      Set the face strength of new faces along edges to *Medium*,
-      and the face strength of new faces at vertices to *Weak*.
-   Affected
-      In addition to those set for the *New* case,
-      also set the faces adjacent to new faces to have strength *Strong*.
-   All
-      In addition to those set for the *Affected* option,
-      also set all the rest of the faces of the model to have strength *Strong*.
 
 Intersection Type :kbd:`N`
    When more than two beveled edges meet at a vertex, a mesh is created as
@@ -265,6 +246,24 @@ Intersection Type :kbd:`N`
              :width: 200px
 
              Cutoff intersection method with a center face.
+
+Face Strength
+   Set *Face Strength* on the faces involved in the bevel, according to the specified mode.
+   This can be used in conjunction with
+   a :doc:`Weight Normals Modifier </modeling/modifiers/modify/weighted_normal>`
+   (with the *Face Influence* option checked).
+
+   None
+      Do not set face strength.
+   New
+      Set the face strength of new faces along edges to *Medium*,
+      and the face strength of new faces at vertices to *Weak*.
+   Affected
+      In addition to those set for the *New* case,
+      also set the faces adjacent to new faces to have strength *Strong*.
+   All
+      In addition to those set for the *Affected* option,
+      also set all the rest of the faces of the model to have strength *Strong*.
 
 Profile Type :kbd:`Z`
    Superellipse

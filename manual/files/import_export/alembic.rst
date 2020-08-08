@@ -58,17 +58,18 @@ Scale
 Scene Options
 -------------
 
-Start Frame and End Frame
+Frame Start, End
    Sets the frame range to export to Alembic. This defaults to the current scene frame range.
+
 Sub-frame Sampling
    These options control the sub-frame sampling of animations.
 
-   Transform Samples
+   Samples Transform
       Transform Samples sets the number of times per frame at which animated transformations
       are sampled and written to Alembic.
-   Geometry Samples
+   Geometry
       Geometry Samples sets the same, but then for animated geometry.
-   Shutter Open/Close
+   Shutter Open, Close
       Shutter Open/Close define the interval [open, close] over which those samples are taken.
       The valid range is -1 to 1, where -1 indicates the previous frame,
       0 indicates the current frame, and 1 indicates the next frame.
@@ -78,16 +79,19 @@ Sub-frame Sampling
       Shutter Open at -0.25 and Shutter Close at 0.25.
       This mimics a "180 degree" shutter, opening 90 degrees before the frame
       and closing 90 degrees after the frame.
-Selected Objects Only
-   When enabled, exports only the selected objects. When disabled, all objects are exported.
-Renderable Objects Only
-   This is useful to, for example, avoid exporting custom bone shapes.
-Visible Objects Only
-   Limits the export to scene collections that are currently visible.
+
 Flatten Hierarchy
    When disabled, parent/child relations between objects are exported too. Any parent object that
    is not exported itself, but with children that *are* exported, is replaced by an empty.
    When enabled, parent/child relations are not exported, and transformations are all written in world coordinates.
+
+Only
+   Selected Objects
+      When enabled, exports only the selected objects. When disabled, all objects are exported.
+   Renderable Objects
+      This is useful to, for example, avoid exporting custom bone shapes.
+   Visible Objects
+      Limits the export to scene collections that are currently visible.
 
 
 Object Options
@@ -101,14 +105,17 @@ Object Options
 UVs
    When enabled, UV maps are exported. Although the Alembic standard only supports a single UV
    map, Blender exports all UV maps in a way that should be readable by other software.
+
 Pack UV Islands
    Generates an optimized UV layout with non-overlapping islands
    that tries to efficiently fill the :term:`Texture Space`.
    See the :ref:`pack islands operator <editors-uv-editing-layout-pack_islands>`
    that works with the same principle for more information.
+
 Normals
    When enabled, an object's :term:`Normals <Normal>` are exported.
    See `Custom Split Normals of Meshes`_ below for more information.
+
 Vertex Colors
    When enabled, exports vertex colors.
 
@@ -118,12 +125,15 @@ Vertex Colors
 
 Face Sets
    Exports the material names per face. The material data is not exported but only material names.
-Use Subdivision Schema
-   Writes polygonal meshes using the "SubD" Alembic schema, rather than the "PolyMesh" schema.
-   This tells the program opening the file to apply its form of a non-destructive subdivision.
-Apply Subdivision Surface
-   Applies any :doc:`Subdivision Surface modifiers </modeling/modifiers/generate/subdivision_surface>`
-   before writing to Alembic.
+
+Subdivisions
+   Apply
+      Applies any :doc:`Subdivision Surface modifiers </modeling/modifiers/generate/subdivision_surface>`
+      before writing to Alembic.
+   Use Schema
+      Writes polygonal meshes using the "SubD" Alembic schema, rather than the "PolyMesh" schema.
+      This tells the program opening the file to apply its form of a non-destructive subdivision.
+
 Triangulate
    Triangulates the mesh before writing to Alembic.
    For more detail on the specific option see the
