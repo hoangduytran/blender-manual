@@ -284,20 +284,40 @@ Profile Type :kbd:`Z`
       were between two edges intersecting at a right angle. Control points are created in the widget and
       then the path is sampled with the number of segments from the bevel modifier.
 
+      .. note::
+
+         The *Profile* slider is still useful when miters are enabled
+         because it still controls the shape of the miter profiles.
+
       Presets
          The *Support Loops* and *Steps* presets are built dynamically depending on
          the number of segments in the bevel. If the number of segments is changed,
          the preset will have to be re-applied.
+
       Reverse
          The *Reverse* button flips the orientation of the profile for all beveled edges.
       Clipping
          The *Clipping* toggle allows control points to be moved beyond the initial boundary,
          allowing the bevel to add volume to the mesh rather than just removing it.
 
-      .. note::
+      Control Points
+         Handle Type
+            Determines how the curve path is interpolated at the selected control point.
 
-         The *Profile* slider is still useful when miters are enabled
-         because it still controls the shape of the miter profiles.
+            Auto Handle
+               Automatic handles clamped to prevent overshoots and
+               changes in the curve direction between control points (S-shapes).
+            Vector Handle
+               Creates automatic linear interpolation between control points.
+            Free Handle
+               The handles can be moved completely independently, and thus can result in a sharp change of direction.
+            Aligned Free Handles
+               The two handles of the curve point are locked together to always point in exactly opposite directions.
+               This results in a curve that is always smooth at the control point.
+         X, Y
+            The X and Y coordinates for the control point.
+         Delete Points
+            Removes the control point from the curve widget.
 
       Sampling
          Samples will first be added to each control point, then if there are enough samples,
