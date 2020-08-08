@@ -1,5 +1,3 @@
-.. TODO fix release notes use of words "now", "new"
-.. TODO fix "bone end" naming convention
 
 *******
 Collada
@@ -18,7 +16,6 @@ Collada Exporter
 .. figure:: /images/files_import-export_collada_export.png
    :align: right
 
-
 .. rubric:: Operator Presets
 
 There are two operator presets (see top of Operator panel) for Second Life (SL) users:
@@ -26,11 +23,13 @@ There are two operator presets (see top of Operator panel) for Second Life (SL) 
 - *Second Life Static* -- is good for exporting static meshes.
 - *Second Life Rigged* -- is good for exporting the SL default character.
 
-Special Notes for Second Life users:
+.. note::
 
-- Please use the Operator presets. All other export settings will not work for Second Life.
-- The character orientation needs to be such that the character looks towards positive X.
-- Scale and Rotation must be applied before the export!
+   Special Notes for Second Life users:
+
+   - Please use the Operator presets. All other export settings will not work for Second Life.
+   - The character orientation needs to be such that the character looks towards positive X.
+   - Scale and Rotation must be applied before the export!
 
 
 Main
@@ -46,8 +45,8 @@ Include Children
 
    .. hint::
 
-      You now can select **only** an armature, then in the exporter enable
-      *Include Children* then all rigged meshes attached to the armature will also be exported.
+      You can select only an armature, then using this option,
+      all rigged meshes attached to the armature will also be exported.
 
 Include Armatures
    When this option is enabled, then all armatures related to the selected objects
@@ -55,12 +54,12 @@ Include Armatures
 
    .. hint::
 
-      You now can just select your objects, then in the exporter enable
-      *Include Armatures* then the armature data is also exported.
+      You can select only the objects, then in the exporter enable
+      this option to export the armature data also.
 
 Include Shape Keys
-   This option also includes the application of shape keys!
-   So now you can export your meshes with the current shape key configuration baked in.
+   Includes the application of shape keys by exporting meshes
+   with the current shape key configuration baked in.
 
 
 Global Orientation
@@ -100,10 +99,9 @@ Apply Modifiers
    All active modifiers will be applied in a non-destructive way.
    That is, the modifiers will be applied to copies of the meshes.
 
-   .. hint::
-
-      Some modifiers provide a preview mode and a render mode with different mesh settings.
-      The module now support both modes when applying the modifiers.
+   Resolution
+      Controls whether to apply the 3D Viewport resolution or the render resolution
+      for modifiers that provide a preview mode and a render mode.
 
 Transform
    Collada supports two types of transformation matrix specifications.
@@ -122,20 +120,18 @@ Armature Options
 ^^^^^^^^^^^^^^^^
 
 Deform Bones Only
-   When this option is enabled, then the exporter strips all non-deforming bones
-   from the exported armatures. This option is useful when your armatures contain control bones
-   which are not actually part of the character skeleton. For example you can now export
-   the Avastar rig with this option enabled. The resulting exported rig is compatible to Second Life.
+   When this option is enabled, then the exporter strips all non-deforming bones from the exported armatures.
+   This option is useful when your armatures contain control bones
+   which are not actually part of the character skeleton.
+   For example you can export the Avastar rig with this option enabled.
+   The resulting exported rig is compatible with Second Life.
    But please note the restrictions further below.
 
 Export to SL/OpenSim
-   This option is very special. In fact some issues with bone orientation are calculated
-   differently when this option is enabled. This is only relevant for rigged meshes.
-   This option might be replaced by something more meaningful in the future
-   (and will be still compatible to Second Life).
+   When this option is enabled, some issues with bone orientation are calculated differently
+   and is designed to be used to export to Second Life or OpenSim.
 
-   This option is only important when you want to export rigged meshes.
-   For static meshes it just does nothing at all.
+   This is only relevant for rigged meshes, for static meshes it just does nothing at all.
 
 
 Anim
@@ -162,10 +158,10 @@ Sort by Object Name
    This option ensures that the Geometry nodes and the Object nodes are both exported in alphabetical order.
 
 Keep Bind Info
-   When a rig is imported to Blender, then the rig's bind pose will be used as Blender's rest pose.
+   When a rig is imported to Blender, the rig's bind pose will be used as Blender's rest pose.
    So all Matrix information of the original rest pose is lost.
    But in some cases you may want to preserve the original rig information.
-   The new option *Keep Bind Info* checks each bone for having two arrays:
+   This option checks each bone for having two arrays:
 
    - ``rest_mat`` -- an array of 16 floats which represent the bone's original rest-pose matrix.
    - ``bind_mat`` -- an array of 16 floats which represent the bone's original bind-pose matrix.
@@ -192,19 +188,21 @@ Import Units
    If not enabled the imported data will be rescaled according to the currently used unit system.
    If this option is enabled, then Blender will adjust itself to the unit system as provided by the Collada file.
 
+
 Armature Options
 ----------------
 
 Fix Leaf Bones
    Collada only records "joints" which is mostly similar to Blender's bone heads.
-   But when you import a Collada file then the bone ends are not defined.
+   But when you import a Collada file then the bone head/tail are not defined.
    This does not matter for connected bones where the bone parent only has one child.
    In that case the parent bone's end location is adjusted to the child's joint position.
    But especially for unconnected bones and for bones with more than one child we get an issue.
 
-   When the *Fix Leaf Bones* option is enabled then Blender tries to guess where the bone end
-   of unconnected bones would best be placed. If the option is disabled,
-   then the bone ends are placed at an offset along the Y axis. That is why bones often point towards the Y axis.
+   When the *Fix Leaf Bones* option is enabled then Blender tries to guess
+   where the bone head/tail of unconnected bones would best be placed.
+   If the option is disabled, then the bone head/tail are placed at an offset along the Y axis.
+   hat is why bones often point towards the Y axis.
 
 Find Bone Chains
    When a bone has multiple children, then it is not defined which (if any)
@@ -275,16 +273,6 @@ The entire Light struct from Blender will be exported through this profile,
 with the exception of light curve falloff.
 
 
-Material & Effect
------------------
-
-Export
-^^^^^^
-
-Since Blender 2.57 some changes to export of effects have been made.
-Most notably ``<lambert>`` is exported if and only if specularity is 0.
-
-
 Animation
 ---------
 
@@ -292,7 +280,7 @@ Export & Import
 ^^^^^^^^^^^^^^^
 
 - Support for object (mesh, camera, light) transform animations. Only Euler rotations,
-  which is the default option for Objects, can be exported for now.
+  which is the default option for Objects, can be exported.
   For armature bone animations Euler and quaternion rotation types are supported.
 - Import and export of animations for the following parameters are supported:
 
@@ -313,17 +301,6 @@ Export & Import
     (Selecting only the Mesh and bones is not strictly necessary.
     Selecting and export only selected will give smaller dae.)
   - `Demonstration video <http://www.youtube.com/watch?v=GTlmmd13J1w>`__
-
-
-Nodes
------
-
-On import parent transformations for ``<instance_node>``\ s is properly propagated to child node instances.
-Blender materials are exported with the following mapping:
-
-- Phong
-- Blinn
-- Lambert
 
 For bone nodes which are leaf nodes in the armature tree,
 or if a bone has more than one child, a Blender profile for tip with an ``<extra>`` tag,
