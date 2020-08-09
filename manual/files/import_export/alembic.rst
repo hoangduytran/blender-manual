@@ -103,8 +103,8 @@ Object Options
    Object options.
 
 UVs
-   When enabled, UV maps are exported. Although the Alembic standard only supports a single UV
-   map, Blender exports all UV maps in a way that should be readable by other software.
+   When enabled, UV maps are exported. Although the Alembic standard only supports
+   a single UV map, Blender exports all UV maps in a way that should be readable by other software.
 
 Pack UV Islands
    Generates an optimized UV layout with non-overlapping islands
@@ -132,12 +132,12 @@ Subdivisions
       before writing to Alembic.
    Use Schema
       Writes polygonal meshes using the "SubD" Alembic schema, rather than the "PolyMesh" schema.
-      This tells the program opening the file to apply its form of a non-destructive subdivision.
+      This sets a import option for the program, with which the file is opened,
+      to apply its form of a non-destructive subdivision.
 
 Triangulate
-   Triangulates the mesh before writing to Alembic.
-   For more detail on the specific option see the
-   :doc:`Triangulate modifier </modeling/modifiers/generate/triangulate>`.
+   Triangulates the mesh before writing to Alembic. For more detail on the specific option see
+   the :doc:`Triangulate modifier </modeling/modifiers/generate/triangulate>`.
 
 
 Particle Systems

@@ -60,5 +60,5 @@ or angle (degrees, radians) will update the measurements.
 
 .. tip::
 
-   In Edit Mode only, there is also a *Measurement* setting in the *Viewport Overlays* panel.
+   In Edit Mode only, there is also a *Measurement* setting in the *Viewport Overlays* popover.
    Edge length, edge angle, face area and face angle can be displayed through this setting.

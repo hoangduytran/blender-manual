@@ -26,9 +26,9 @@ Extrapolation
 
    Hold
       Affects both sides of the strip. This should only be set on the very first strip.
-      When the order of strips changes (for example by dragging them in the NLA
-      editor), a strip that is marked as *Hold* and is no longer the very first
-      strip will automatically be set to *Hold Forward* by Blender.
+      When the order of strips changes (for example by dragging them in the NLA editor),
+      a strip that is marked as *Hold* is no longer the very first strip
+      will automatically be set to *Hold Forward* by Blender.
    Hold Forward
       Affects the region after the clip, only. This can be set on any strip.
    Nothing

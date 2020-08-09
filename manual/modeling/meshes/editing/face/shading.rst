@@ -32,7 +32,6 @@ Using interpolated vertex normals, the mesh faces will blur at the edges and app
 Shade Flat
 ==========
 
-
 .. admonition:: Reference
    :class: refbox
 

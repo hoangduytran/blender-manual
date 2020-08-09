@@ -17,8 +17,8 @@ Pose
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Pose`
 
-This brush is used to pose a model simulating an armature-like deformations.
-Several different deformation modes can be used to preform
+This brush is used to pose a model simulating armature-like deformations.
+Several different deformation modes can be used to perform
 IK deformations or altering and moving the proportions of the mesh.
 The falloff of the deformation across multiple segments is controlled by the brush falloff curve.
 
@@ -31,12 +31,13 @@ Deformation
       When pressing :kbd:`Ctrl`, the brush applies a twist rotation
       to the posing segments instead of using the rotation or an IK deformation.
    Scale/Translate
-      Alters the proportions of the of the mesh, using the segment's origin as a pivot.
+      Alters the proportions of the mesh, using the origin of the segment as a pivot.
       While holding :kbd:`Ctrl` the brush moves the entire segment.
    Squash/Stretch
       Works similar to *Scale/Translate* however, it applies different
-      scale values along different axes to achieve the stretching affect.
-      The pivot point for this mode is calculated by using the local space aligned to the segment.
+      scale values along different axes to achieve the stretching effect.
+      The pivot point for this mode is calculated by using the local space
+      aligned to the segment.
 
 Rotation Origins
    Method to set the rotation origins for the segments of the brush.

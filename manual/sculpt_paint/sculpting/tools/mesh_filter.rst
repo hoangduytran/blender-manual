@@ -58,7 +58,7 @@ Strength
 
 Deformation Axis
    Apply the deformation only on the selected axis.
-   
+
 Use Face Sets
-   Only applies the mesh filter to the vertices assigned to the
-   :ref:`Face Set <sculpting-editing-facesets>` that is under the mouse.
+   Only applies the mesh filter to the vertices assigned to the :ref:`Face Set <sculpting-editing-facesets>`
+   that is under the mouse.

@@ -16,9 +16,10 @@ Collada Exporter
 .. figure:: /images/files_import-export_collada_export.png
    :align: right
 
+
 .. rubric:: Operator Presets
 
-There are two operator presets (see top of Operator panel) for Second Life (SL) users:
+There are two operator presets (see top of the Sidebar) for Second Life (SL) users:
 
 - *Second Life Static* -- is good for exporting static meshes.
 - *Second Life Rigged* -- is good for exporting the SL default character.
@@ -82,8 +83,8 @@ Copy
    place the copies besides the export file. In that case the file references are made relative.
 
 
-Geom
-----
+Geometry
+--------
 
 Export Data Options
 ^^^^^^^^^^^^^^^^^^^
@@ -92,8 +93,8 @@ Triangulate
    The mesh can be triangulated on-the-fly. The triangulation is based on the same function
    which is used in the *Triangulate Faces* tool for triangulating the current selection of faces.
    For full control over the triangulation you can do this manually before exporting.
-   However this option allows to do the triangulation only for the exported data.
-   The mesh itself is not affected.
+   However, this option allows to apply the triangulation only on the exported data;
+   the mesh itself is not affected.
 
 Apply Modifiers
    All active modifiers will be applied in a non-destructive way.
@@ -113,8 +114,8 @@ Transform
    This is ongoing development and a less ambiguous method may be provided in the future.
 
 
-Arm
----
+Armature
+--------
 
 Armature Options
 ^^^^^^^^^^^^^^^^
@@ -134,8 +135,8 @@ Export to SL/OpenSim
    This is only relevant for rigged meshes, for static meshes it just does nothing at all.
 
 
-Anim
-----
+Animation
+---------
 
 Extra
 -----
@@ -149,9 +150,9 @@ Use Object Instances
    then Blender will propagate object instantiation to the Collada file.
 
 Use Blender Profile
-   Collada can be extended with tool specific data (profiles) Blender has its own (not official) profile
-   that allows to export rig information into the Collada file, that can later be used to reconstruct
-   the rig should it ever be necessary to import a dae file back into Blender.
+   Collada can be extended with tool specific data (profiles). Blender has its own (unofficial) profile
+   that allows to export rig information into the Collada file. Later It can be used to reconstruct the rig
+   when it should ever be necessary to import a dae file back into Blender.
 
 Sort by Object Name
    The export order of data is bound to internal object order and it can not be influenced in a reliable way.
@@ -197,12 +198,12 @@ Fix Leaf Bones
    But when you import a Collada file then the bone head/tail are not defined.
    This does not matter for connected bones where the bone parent only has one child.
    In that case the parent bone's end location is adjusted to the child's joint position.
-   But especially for unconnected bones and for bones with more than one child we get an issue.
+   But especially for unconnected bones and for bones with more than one child a problem arises.
 
    When the *Fix Leaf Bones* option is enabled then Blender tries to guess
    where the bone head/tail of unconnected bones would best be placed.
    If the option is disabled, then the bone head/tail are placed at an offset along the Y axis.
-   hat is why bones often point towards the Y axis.
+   That is why bones often point towards the Y axis.
 
 Find Bone Chains
    When a bone has multiple children, then it is not defined which (if any)

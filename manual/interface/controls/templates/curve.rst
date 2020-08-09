@@ -52,6 +52,7 @@ Specials ``v``
 
    Handle Options
       Controls how the control points affect the curve shape.
+      It determines the interpolation of the curve segment at the selected control point.
 
       Vector Handle
          Vector handles create straight lines;
@@ -60,6 +61,11 @@ Specials ``v``
          Automatic handles that create smooth curves.
       Auto Clamped Handle
          Automatic handles that create smooth curves, which prevents overshoot.
+      Free Handle
+         The handles can be moved completely independently, and thus can result in a sharp change of direction.
+      Aligned Free Handles
+         The two handles of the curve point are locked together to always point in exactly opposite directions.
+         This results in a curve that is always smooth at the control point.
 
       .. list-table::
 
