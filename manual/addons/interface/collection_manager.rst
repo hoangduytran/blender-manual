@@ -27,7 +27,7 @@ Description
 Pop-up
 ------
 
-Use :kbd:`M` to call up the main Collection Manager pop-up in the 3D Viewport when in Object Mode.
+Use :kbd:`M` to call up the main Collection Manager pop-up in the 3D Viewport when in Object Mode. It can also be found in the Object->Collection menu.
 
 View Layer
    Render
@@ -41,14 +41,27 @@ Expand All Items
 Renumber QCD Slots
    Shown only if QCD is enabled in the preferences.
 
-   - :kbd:`LMB` -- Renumber the QCD slots from the root (the slot designated 1)
+   - :kbd:`LMB` -- Renumber the QCD slots from the root slot (the slot designated 1)
      down to the bottom, for each depth level
      (`breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`__).
    - :kbd:`Alt-LMB` -- Renumber from the first top-level collection in
      a `breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`__ pattern.
+   - :kbd:`Ctrl-LMB` -- Switch the renumber pattern to linear.  This pattern will renumber straight down the list regardless of hierarchy.
+   - :kbd:`Shift-LMB` -- Constrain renumbering to the branch under the root slot.
 
-Filter (funnel icon)
-   Choose which restriction toggles are shown in the interface.
+   .. note::
+
+      All options can be combined with each other.
+
+Specials
+   Remove Empty Collections
+      Remove all collections that have no subcollections or objects.
+
+   Purge All Collections Without Objects
+      Remove all collections that have no objects regardless of whether they have subcollections
+
+Display Options (funnel icon)
+   Choose which restriction toggles are shown in the interface and whether the restriction toggles are aligned to the right in the tree view.
 
 Scene Collection
    Set Active Collection
@@ -134,6 +147,9 @@ Phantom Mode
 
    Note: You will be unable to edit anything other than the restrictions while in Phantom Mode.
 
+Apply Phantom Mode (checkbox icon)
+   Applies all changes made to RTOs while in Phantom Mode and exits the mode.
+
 
 QCD
 ---
@@ -172,7 +188,8 @@ The state of each slots is shown with a combination of the following indicators:
 Move Widget
 ^^^^^^^^^^^
 
-Use :kbd:`V` to call up the Move widget in the 3D Viewport when in Object Mode.
+Use :kbd:`V` to call up the Move widget in the 3D Viewport when in Object Mode.  It can also be found in the Object->Collection menu.
+
 The Move Widget shares its layout and indicators with the 3D Viewport header widget.
 
 
