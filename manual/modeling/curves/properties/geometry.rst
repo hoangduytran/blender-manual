@@ -113,21 +113,31 @@ Resolution
 .. _bpy.types.Curve.bevel_object:
 
 Object
-   Controls the cross section of the extruded curve.
-   The Bevel Object can only be another curve both 2D or 3D, and opened or closed.
-   Editing the handles and control points of the Bevel Object will cause the original Object to change shape.
+   Here you can specify a curve Object (opened or closed) which will be extruded along your curve.
+   If your Object's :ref:`shape <bpy.types.Curve.dimensions>` is 3D,
+   then before extrusion it will be projected to its local XY plane, then the extrusion will take place.
+   You can check out how the projected Object looks by switching its shape to 2D.
+   Editing the handles and control points of the Object will interactively change the extruded shape.
+
+   .. warning::
+
+      Make sure the shape you want to extrude along the curve is in your Object's local XY plane.
+      If it is in the local XZ or YZ plane, it will be reduced to a line when it is projected to the local XY plane.
+      Because of this, the extruded shape will be a flat plane.
+      An easy way to avoid this problem is to switch your Object to 2D.
+      If its shape still looks the way you want it then the extrusion will likely work, as well.
 
    .. list-table::
 
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel-object.png
              :width: 320px
 
-             A curve with the Bevel Object as a Bézier curve.
+             A curve with a Bézier curve as the Bevel Object.
 
         - .. figure:: /images/modeling_curves_properties_geometry_extrude-bevel-object.png
              :width: 320px
 
-             A curve with the Bevel Object as a Bézier circle.
+             A curve with a Bézier circle as the Bevel Object.
 
 .. _bpy.types.Curve.use_fill_caps:
 
