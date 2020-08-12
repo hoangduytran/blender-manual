@@ -13,6 +13,25 @@ Options
    :Panel:     :menuselection:`Sidebar --> Tool tab --> Options panel`
 
 
+Transform
+---------
+
+.. _bpy.types.ToolSettings.use_transform_correct_face_attributes:
+
+Correct Face Attributes
+   Adjust geometry attributes like :doc:`UVs </modeling/meshes/uv/index>`
+   and :doc:`Vertex Colors </sculpt_paint/vertex_paint/index>` while transforming.
+
+.. _bpy.types.ToolSettings.use_transform_correct_keep_connected:
+
+Keep Connected
+   Merge attributes connected to the same vertex while using *Correct Face Attributes*.
+
+   .. tip::
+
+      Keeping UV's connected is useful for organic modeling, but bad for architectural modeling.
+
+
 .. _bpy.types.Mesh.use_mirror_x:
 .. _bpy.types.Mesh.use_mirror_y:
 .. _bpy.types.Mesh.use_mirror_z:
@@ -32,7 +51,6 @@ it will be transformed accordingly, through a symmetry along the chosen axis.
    it's easier and simpler to use the :doc:`Mirror Modifier </modeling/modifiers/generate/mirror>`.
 
 
-.. _modeling_meshes_editing_topology-mirror:
 .. _bpy.types.Mesh.use_mirror_topology:
 
 Topology Mirror

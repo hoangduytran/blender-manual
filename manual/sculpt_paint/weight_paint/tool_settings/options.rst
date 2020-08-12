@@ -69,7 +69,7 @@ X Mirror
    The convention for armatures/bones apply here as well.
 Topology Mirror
    Use topology-based mirroring, for when both sides of a mesh have matching mirrored topology.
-   See :ref:`here <modeling_meshes_editing_topology-mirror>` for more information.
+   See :ref:`here <bpy.types.Mesh.use_mirror_topology>` for more information.
 
 
 .. seealso::

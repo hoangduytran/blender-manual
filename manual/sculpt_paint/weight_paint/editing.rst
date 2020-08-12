@@ -118,7 +118,7 @@ All Groups
    Operate on all vertex groups, instead of the active one.
 Topology Mirror
    Mirror for meshes which are not 100% symmetric (approximate mirror).
-   See :ref:`here <modeling_meshes_editing_topology-mirror>` for more information.
+   See :ref:`here <bpy.types.Mesh.use_mirror_topology>` for more information.
 
 .. tip:: Mirror to Opposite Bone
 
