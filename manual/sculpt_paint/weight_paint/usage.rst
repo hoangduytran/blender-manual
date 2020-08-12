@@ -28,8 +28,8 @@ Pick up here for modifying automatically assigned weights.
 #. Select the armature in 3D Viewport, and bring the armature to *Pose Mode*
    with :kbd:`Ctrl-Tab`, or the 3D Viewport header mode selector.
 #. Select a desired bone in the armature.
-#. Select your mesh with :kbd:`RMB` and change immediately to *Weight Paint
-   Mode*. The mesh will be colored according to the weight (degree)
+#. Select your mesh with :kbd:`LMB` and change immediately to *Weight Paint Mode*.
+   The mesh will be colored according to the weight (degree)
    that the selected bone movement affects the mesh. Initially, it will be all blue (no effect).
 #. Weight paint to your heart's content. The mesh around the bone itself should
    be red (generally) and fade out through the rainbow to blue for vertices
