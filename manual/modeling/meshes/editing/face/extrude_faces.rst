@@ -55,3 +55,15 @@ The inner region of the selection gets moved unchanged with the extrusion.
           :width: 200px
 
           Set to Z axis.
+
+Flip Normals
+   Only the *Normals* of the new faces created from the extrusion will be flipped.
+
+Proportional Editing
+   The extruded face will affect nearby geometry.
+   See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>` for a full reference.
+
+   .. note::
+
+   Even with the *Proportional Size* set to minimum (.001),
+   it will extrude the selected face as well as the new geometry and they will be layered on top of each other.
