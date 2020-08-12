@@ -140,7 +140,14 @@ Coverage
 Spray
 ^^^^^
 
-Todo.
+Generate map of spray direction as a vertex color channel.
+This map can be used to define the velocities for spray particles.
+
+Spray Map
+   Name of the vertex color layer used for the spray direction map.
+
+Invert
+   Inverts the spray direction map
 
 
 Spectrum
