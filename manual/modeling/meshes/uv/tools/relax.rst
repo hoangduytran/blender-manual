@@ -1,48 +1,38 @@
-.. _bpy.types.ToolSettings.use_uv_sculpt:
 
-************
-UV Sculpting
-************
+*****
+Relax
+*****
 
 .. admonition:: Reference
    :class: refbox
 
    :Mode:      Edit Mode
-   :Tool:      :menuselection:`Toolbar --> Grab`,
-   :Tool:      :menuselection:`Toolbar --> Relax`,
-   :Tool:      :menuselection:`Toolbar --> Pinch`
-   :Panel:     :menuselection:`Sidebar --> Tool --> Brushes`
+   :Tool:      :menuselection:`Toolbar --> Relax`
 
-The sculpting tools allow you to grab, pinch and smooth UVs, just like for meshes in Sculpt Mode.
-It can be activated with selecting either the *Grab*, *Relax*, or *Pinch* tool in the Toolbar.
+The Relax brush makes UVs more evenly distributed.
+The algorithm relies on space, not stretch minimization,
+so most probably a minimize stretch will have to be run for optimal results.
+However it is great to use after stitching islands,
+or when unwrap produces cluttered results to smooth the distribution of UVs.
 
+Relaxation Method
+   There are two relax algorithms:
+
+   Laplacian, HC
+
+
+Tool Settings
+=============
 
 Brushes
-=======
+-------
 
 Brushes
    The :ref:`ui-data-block` to select a preset brush type or a custom brush.
 
-   Grab
-      The Grab brush moves UVs around.
-   Relax
-      The Relax brush makes UVs more evenly distributed.
-      The algorithm relies on space, not stretch minimization,
-      so most probably a minimize stretch will have to be run for optimal results.
-      However it is great to use after stitching islands,
-      or when unwrap produces cluttered results to smooth the distribution of UVs.
-
-      Relaxation Method
-         There are two relax algorithms:
-
-         Laplacian, HC
-   Pinch
-      The Pinch brush moves UVs toward the brush's center.
-      The pinch brush can be inverted by pressing :kbd:`Ctrl-LMB`.
-
 
 Brush Settings
-==============
+--------------
 
 Radius
    This option controls the radius of the brush, measured in pixels.
@@ -64,6 +54,11 @@ Strength
    Use Unified Strength
       Use the same brush *Strength* across all brushes.
 
+Relaxation Method
+   There are two relax algorithms:
+
+   Laplacian, HC
+
 .. note::
 
    All brushes use the :doc:`Airbrush Stroke Method </sculpt_paint/brush/stroke>`;
@@ -71,14 +66,14 @@ Strength
 
 
 Falloff
--------
+^^^^^^^
 
 The Falloff allows you to control the *Strength* falloff of the brush.
 See :doc:`Painting Falloff </sculpt_paint/brush/falloff>` for more information.
 
 
 Options
-=======
+-------
 
 .. admonition:: Reference
    :class: refbox
