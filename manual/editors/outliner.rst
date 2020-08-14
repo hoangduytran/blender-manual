@@ -244,24 +244,32 @@ The other options can be enabled in the *Restriction Toggles* option in the Outl
 - Holding :kbd:`Ctrl` isolates the object or collection, so they are the only ones with its value set.
 
 Visibility (eye icon)
-   Toggles the visibility of the object in the 3D Viewport.
-Enable Collection (checkbox)
+   Toggles the visibility of the object or collection in the 3D Viewport. This
+   is a file-local setting, and does not get imported when this datablock is
+   linked into another blend file.
+   Objects hidden this way are still part of the :doc:`View Layer </scene_layout/view_layers/index>`
+   and evaluated, so they still affect playback performance.
+Enable Collection (checkbox, collection only)
    Exclude the collection from the view layer.
-   This is not really a restriction column. It is shown besides the collection icon.
+   This option is shown in front of the collection icon, it is not part of the
+   restrictions column.
 
 .. note::
 
-   The following options need to first be enabled in the Outliner filter.
+   The following options are hidden by default and need to be enabled in the
+   Outliner Filter before they can be used.
 
 Selectability (mouse cursor icon)
    This is useful for if you have placed something in the scene
    and do not want to accidentally select it when working on something else.
-Rendering (camera icon)
-   This will still keep the object visible in the scene, but it will be ignored by the renderer.
-   Usually used by support objects that help modeling and animation yet do not belong in the final images.
 Global Viewport Visibility (screen icon)
    This will still render the object/collection, but it will be ignored by all the viewports.
    Often used for collections with high-poly objects that need to be instanced in other files.
+   Objects hidden this way are no longer part of the :doc:`View Layer </scene_layout/view_layers/index>`,
+   not evaluated, and so they do not affect playback performance.
+Rendering (camera icon)
+   This will still keep the object visible in the scene, but it will be ignored by the renderer.
+   Usually used by support objects that help modeling and animation yet do not belong in the final images.
 Holdout (collection only)
    Mask out objects in collection from view layer -- *Cycles only*.
 Indirect Only (collection only)
