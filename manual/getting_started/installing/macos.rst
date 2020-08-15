@@ -35,7 +35,7 @@ Updating with DMG
 -----------------
 
 When a update for Blender is released, it can be downloaded directly
-from the `Blender website <https://blender.org/download/>`__.
+from the `Blender website <https://www.blender.org/download/>`__.
 Install the new version by overwriting the current ``Blender.app`` in the Applications folder.
 You can rename ``Blender.app`` or place it in different folders to have more than one version at a time.
 

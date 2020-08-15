@@ -81,14 +81,14 @@ The same links can also be found in the :ref:`splash`.
 
 ------------------------
 
-`User Communities <https://www.blender.org/support/user-community>`__
+`User Communities <https://www.blender.org/community/>`__
    Lists of many different community sites and support venues.
 `Developer Community <https://devtalk.blender.org>`__
    Blender's developer forum.
 
 ------------------------
 
-`Python API Reference <https://www.blender.org/api/blender_python_api_current>`__
+`Python API Reference <https://docs.blender.org/api/blender_python_api_current/>`__
    Python application programming interface (API)
 
 ------------------------

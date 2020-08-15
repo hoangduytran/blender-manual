@@ -163,15 +163,15 @@ Profile Type :kbd:`Z`
 
    .. list-table:: Bevel with Custom Profile On.
 
-		  * - .. figure:: /images/modeling_meshes_editing_vertex_bevel-vertices_customA.png
-			  	   :width: 300px
+        * - .. figure:: /images/modeling_meshes_editing_vertex_bevel-vertices_customA.png
+                 :width: 300px
 
-				     Edge Bevel.
+                 Edge Bevel.
 
-		    - .. figure:: /images/modeling_meshes_editing_vertex_bevel-vertices_customB.png
-				     :width: 300px
+          - .. figure:: /images/modeling_meshes_editing_vertex_bevel-vertices_customB.png
+                 :width: 300px
 
-				     Vertex Bevel.
+                 Vertex Bevel.
 
 .. seealso::
 

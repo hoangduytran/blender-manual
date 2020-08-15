@@ -451,5 +451,5 @@ with the constraints that keys can only be strings,
 and values can only be strings, numbers, arrays of such, or nested properties.
 
 See the `API documentation
-<https://www.blender.org/api/blender_python_api_current/info_quickstart.html#custom-properties>`__
+<https://docs.blender.org/api/blender_python_api_current/info_quickstart.html#custom-properties>`__
 for details.

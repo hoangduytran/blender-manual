@@ -22,9 +22,9 @@ Links that are useful while writing scripts:
 
 - `Python.org <https://www.python.org/>`__
   -- General information about Python.
-- `Blender Python API <https://www.blender.org/api/current/>`__
+- `Blender Python API <https://docs.blender.org/api/current/>`__
   -- Official API documentation. Use this for referencing while writing scripts.
-- `API Introduction <https://www.blender.org/api/current/info_quickstart.html>`__
+- `API Introduction <https://docs.blender.org/api/current/info_quickstart.html>`__
   -- A short introduction to get you started with the API. Contains examples.
 
 Links that deal with distributing your scripts:

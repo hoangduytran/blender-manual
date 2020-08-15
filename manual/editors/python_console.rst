@@ -226,5 +226,5 @@ bpy.ops
 The tool system is built around the concept of operators.
 Operators are typically executed from buttons or menus but can be called directly from Python too.
 
-See the `bpy.ops <https://www.blender.org/api/current/bpy.ops.html>`__
+See the `bpy.ops <https://docs.blender.org/api/current/bpy.ops.html>`__
 API documentation for a list of all operators.

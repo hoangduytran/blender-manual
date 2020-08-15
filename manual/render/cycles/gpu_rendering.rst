@@ -64,7 +64,8 @@ To make sure your GPU is supported,
 see the `list of GCN generations <https://en.wikipedia.org/wiki/Graphics_Core_Next#Iterations>`__
 with the GCN generation and supported graphics cards.
 
-On Windows and Linux, the latest Pro drivers should be installed from the `AMD website <https://www.amd.com/en/support>`__.
+On Windows and Linux, the latest Pro drivers should be installed from
+the `AMD website <https://www.amd.com/en/support>`__.
 
 
 Supported Features and Limitations
@@ -188,7 +189,7 @@ In this case Blender may try to dynamically build a kernel for your graphics car
 In this case you can:
 
 #. Check if the latest Blender version
-   (official or `experimental builds <https://builder.blender.org/download/experimental/>`__)
+   (official or `experimental builds <https://builder.blender.org/download/>`__)
    supports your graphics card.
 #. If you build Blender yourself, try to download and install a newer CUDA developer toolkit.
 

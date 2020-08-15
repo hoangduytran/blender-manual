@@ -593,5 +593,5 @@ Here are some sites you might like to check on after completing this tutorial.
   *Great info for those who are still learning Python.*
 - `Blender Development (Wiki) <https://wiki.blender.org>`__ --
   *Blender Development, general information and helpful links.*
-- `DevTalk <https://devtalk.blender.org/c/python>`__ --
+- `DevTalk <https://devtalk.blender.org/tag/python>`__ --
   *Forum where people ask Python development questions.*

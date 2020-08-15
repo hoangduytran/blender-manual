@@ -5,7 +5,7 @@
 
 Blender is released approximately every three months.
 You can keep up to date with the latest changes through
-the `release notes <https://www.blender.org/features/releases/>`__.
+the `release notes <https://www.blender.org/download/releases/>`__.
 
 
 Support Requirements

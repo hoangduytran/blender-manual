@@ -87,7 +87,7 @@ Updating from blender.org
 -------------------------
 
 When an update for Blender is released, it can be downloaded directly
-from the `Blender website <https://blender.org/download/>`__
+from the `Blender website <https://www.blender.org/download/>`__
 and installed using the steps described in the section `Install from blender.org`_.
 
 

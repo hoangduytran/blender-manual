@@ -56,7 +56,7 @@ Updating from Windows Installer File
 ------------------------------------
 
 When an update for Blender is released, it can be downloaded directly
-from the `Blender website <https://blender.org/download/>`__.
+from the `Blender website <https://www.blender.org/download/>`__.
 The Windows installer can then be run to install the updated version of Blender.
 To remove a previously installed version of Blender,
 use Windows settings or control panel to uninstall the desired version.
@@ -66,7 +66,7 @@ Updating from Zip
 -----------------
 
 When an update for Blender is released, it can be downloaded directly
-from the `Blender website <https://blender.org/download/>`__
+from the `Blender website <https://www.blender.org/download/>`__
 and extracted to the desired folder, where you can double click the executable to run Blender.
 For more information on creating a portable version of Blender, see the section `Install from Zip`_.
 

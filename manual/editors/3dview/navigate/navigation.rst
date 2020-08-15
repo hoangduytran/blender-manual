@@ -30,8 +30,8 @@ Navigation Gizmo
 The navigation gizmo can be found in the top right of the editor.
 The four buttons (listed from top to bottom) do the following:
 
-- `Zooms the 3D Viewport <Zooming>`_
-- `Pans the 3D Viewport <Panning>`_
+- `Zooms the 3D Viewport <Zoom>`_
+- `Pans the 3D Viewport <Pan>`_
 - :doc:`Toggles the Camera View </editors/3dview/navigate/camera_view>`
 - :doc:`Toggles the Projection </editors/3dview/navigate/projections>`
 

@@ -286,7 +286,7 @@ To split up a continuous range of values between 0 and 1 to certain set of value
 the following function is used: :math:`round(x × n - 0.5) / (n - 1)`,
 where "n" is the number of possible output values, and "x" is the input pixel color.
 `Read more about this function
-<https://en.blender.org/index.php/Doc:2.4/Manual/Composite_Nodes/Types/Convertor#Quantize.2FRestrict_Color_Selection>`__.
+<https://archive.blender.org/wiki/index.php/Doc:2.4/Manual/Composite_Nodes/Types/Convertor/#Quantize.2FRestrict_Color_Selection>`__.
 
 To implement this function in Blender, consider the node setup above.
 We string the Math nodes into a function that takes each color (values from 0 to 1),
