@@ -13,9 +13,9 @@ Bevel Vertices
    :Menu:      :menuselection:`Vertex --> Bevel Edges` (edge bevel)
    :Hotkey:    :kbd:`Ctrl-B` (edge bevel)
 
-The *Bevel Vertices* tool works only on selected vertices. In "vertex only" mode,
-the *Bevel Vertices* tool works on selected vertices but the option to switch to *Bevel Edges* is available.
-The *Bevel* tool itself rounds off edges or corners of a mesh at the point of the selected vertices.
+The *Bevel* tool rounds off edges or corners of a mesh at the point of the selected vertices.
+In "vertex only" mode, the *Bevel Vertices* tool works on selected vertices
+but the option to switch to *Bevel Edges* is available.
 By doing so, more vertices are added in order to smooth out profiles with a specified number of *segments*
 (see the options below for details about the bevel algorithm).
 
@@ -24,10 +24,9 @@ By doing so, more vertices are added in order to smooth out profiles with a spec
 
    Cubes with and without bevel.
 
-
 .. note::
 
-   With the Vertex Only function active, some of the other options available will not work.
+   With the Vertex Only option active, some of the other options available will not work.
    However, they will work with :doc:`Bevel Edges </modeling/meshes/editing/edge/bevel>`.
 
 
@@ -42,10 +41,8 @@ Affect :kbd:`V`
 
 Offset :kbd:`A`
    You can change the bevel amount by moving the mouse towards and away from the object,
-   a bit like with transform tools.
+   like with transform tools.
    The exact meaning of the value depends on the *Amount Type* option (see below).
-   As usual, the scaling can be controlled to a finer degree by holding :kbd:`Shift` to scale in 0.001 steps.
-   :kbd:`LMB` finalizes the operation, :kbd:`RMB` or :kbd:`Esc` aborts the action.
 
 Amount Type :kbd:`M`
    Selects how the *Amount* value controls the size of the bevel. According to the selection, the amount is:
@@ -53,11 +50,12 @@ Amount Type :kbd:`M`
    Offset
       The relative distance from the new edge to the original.
    Width
-      The distance between the two new edges formed by the bevel (or the edges on either side of the bevel if there is more than one segment.
+      The distance between the two new edges formed by the bevel
+      (or the edges on either side of the bevel if there is more than one segment).
    Depth
       The perpendicular distance from the original edge to the bevel face.
    Percent
-      The percentage of the length of adjacent edges that the new edges slide along.
+      The percentage of the length of adjacent edges that the new edges is slided along.
    Absolute
       The exact distance along edges adjacent to the beveled edge.
       A difference from *Offset* is visible when the unbeveled edges
@@ -97,7 +95,7 @@ Harden Normals :kbd:`H`
    match the surrounding faces, and the normals of the surrounding faces are not affected.
    This will keep the surrounding faces flat (if they were before),
    with the bevel faces shading smoothly into them. For this effect to work,
-   custom split normals need to be enabled, which requires Auto Smooth to be enabled
+   custom split normals need to be enabled, which requires *Auto Smooth* to be enabled
    (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
    As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.
 
@@ -148,11 +146,7 @@ Profile Type :kbd:`Z`
       Presets
          The *Support Loops* and *Steps* presets are built dynamically depending on the number
          of segments in the bevel. If the number of segments is changed, the preset will have to be re-applied.
-   Reverse
-      The *Reverse* button flips the orientation of the profile for all beveled edges.
-   Clipping
-      The *Clipping* toggle allows control points to be moved beyond the initial boundary,
-      allowing the bevel to add volume to the mesh rather than just removing it.
+
    Sampling
       Samples will first be added to each control point, then if there are enough samples,
       they will be divided evenly between the edges. The *Sample Straight Edges* option toggles
@@ -161,17 +155,17 @@ Profile Type :kbd:`Z`
       they will just be added to the most curved edges.
       So it is recommended to use at least as many segments as there are control points.
 
-   .. list-table:: Bevel with Custom Profile On.
+   .. list-table:: Bevel with Custom Profile on.
 
-        * - .. figure:: /images/modeling_meshes_editing_vertex_bevel-vertices_customA.png
-                 :width: 300px
+      * - .. figure:: /images/modeling_meshes_editing_vertex_bevel-vertices_customA.png
+             :width: 300px
 
-                 Edge Bevel.
+             Edge Bevel.
 
-          - .. figure:: /images/modeling_meshes_editing_vertex_bevel-vertices_customB.png
-                 :width: 300px
+        - .. figure:: /images/modeling_meshes_editing_vertex_bevel-vertices_customB.png
+             :width: 300px
 
-                 Vertex Bevel.
+             Vertex Bevel.
 
 .. seealso::
 

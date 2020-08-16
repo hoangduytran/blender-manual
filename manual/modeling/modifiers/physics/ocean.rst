@@ -147,7 +147,7 @@ Spray Map
    Name of the vertex color layer used for the spray direction map.
 
 Invert
-   Inverts the spray direction map
+   Inverts the spray direction map.
 
 
 Spectrum

@@ -27,7 +27,8 @@ Description
 Pop-up
 ------
 
-Use :kbd:`M` to call up the main Collection Manager pop-up in the 3D Viewport when in Object Mode. It can also be found in the Object->Collection menu.
+Use :kbd:`M` to call up the main Collection Manager pop-up in the 3D Viewport when in Object Mode.
+It can also be found in the :menuselection:`Object --> Collection` menu.
 
 View Layer
    Render
@@ -46,10 +47,11 @@ Renumber QCD Slots
      (`breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`__).
    - :kbd:`Alt-LMB` -- Renumber from the first top-level collection in
      a `breadth first search <https://en.wikipedia.org/wiki/Breadth-first_search>`__ pattern.
-   - :kbd:`Ctrl-LMB` -- Switch the renumber pattern to linear.  This pattern will renumber straight down the list regardless of hierarchy.
+   - :kbd:`Ctrl-LMB` -- Switch the renumber pattern to linear.
+     This pattern will renumber straight down the list regardless of hierarchy.
    - :kbd:`Shift-LMB` -- Constrain renumbering to the branch under the root slot.
 
-   .. note::
+   .. hint::
 
       All options can be combined with each other.
 
@@ -58,10 +60,12 @@ Specials
       Remove all collections that have no subcollections or objects.
 
    Purge All Collections Without Objects
-      Remove all collections that have no objects regardless of whether they have subcollections
+      Remove all collections that have no objects regardless of whether they have subcollections.
 
 Display Options (funnel icon)
-   Choose which restriction toggles are shown in the interface and whether the restriction toggles are aligned to the right in the tree view.
+   Choose which restriction toggles are shown in the interface
+   and whether the restriction toggles are aligned to the right in
+   the tree view.
 
 Scene Collection
    Set Active Collection
@@ -188,7 +192,8 @@ The state of each slots is shown with a combination of the following indicators:
 Move Widget
 ^^^^^^^^^^^
 
-Use :kbd:`V` to call up the Move widget in the 3D Viewport when in Object Mode.  It can also be found in the Object->Collection menu.
+Use :kbd:`V` to call up the Move widget in the 3D Viewport when in Object Mode.
+It can also be found in the :menuselection:`Object -> Collection` menu.
 
 The Move Widget shares its layout and indicators with the 3D Viewport header widget.
 

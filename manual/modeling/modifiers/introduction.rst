@@ -110,10 +110,10 @@ Specials
 
          Even though it should work with any geometry type that supports shape keys,
          currently it will only work with meshes.
-  Save as Shape Key
-    Stores the result of that modifier in a new relative :doc:`shape key </animation/shape_keys/introduction>`
-    and keeps the modifier in the modifier stack.
-    This is only available with modifiers that do not affect the topology (typically, *Deform* modifiers only).
+   Save as Shape Key
+      Stores the result of that modifier in a new relative :doc:`shape key </animation/shape_keys/introduction>`
+      and keeps the modifier in the modifier stack.
+      This is only available with modifiers that do not affect the topology (typically, *Deform* modifiers only).
    Duplicate :kbd:`Shift-D`
       Creates a duplicate of the modifier just below current one in the stack.
    Move to First/Last

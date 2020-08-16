@@ -29,7 +29,7 @@ Keep Connected
 
    .. tip::
 
-      Keeping UV's connected is useful for organic modeling, but bad for architectural modeling.
+      Keeping UVs connected is useful for organic modeling, but not for architectural modeling.
 
 
 .. _bpy.types.Mesh.use_mirror_x:

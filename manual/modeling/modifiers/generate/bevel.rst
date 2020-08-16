@@ -128,7 +128,7 @@ Miter Shape
 
    .. note::
 
-      The *Profile* slider stays active when miters are enabled
+      The *Miter Shape* slider stays active when miters are enabled
       because it still controls the shape of the miter profiles.
 
 This widget allows the creation of a user-defined profile with more complexity than

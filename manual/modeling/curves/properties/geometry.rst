@@ -86,12 +86,12 @@ Depth
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel-depth.png
              :width: 320px
 
-             A Curve with different Bevel depths applied (Bevel = 0.05).
+             A curve with different Bevel depths applied (Bevel = 0.05).
 
         - .. figure:: /images/modeling_curves_properties_geometry_bevel.png
              :width: 320px
 
-             A Curve with different Bevel depths applied (Bevel = 0.25).
+             A curve with different Bevel depths applied (Bevel = 0.25).
 
 .. _bpy.types.Curve.bevel_resolution:
 
@@ -103,29 +103,26 @@ Resolution
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel-resolution.png
              :width: 320px
 
-             A Curve with different resolutions applied (Resolution = 1).
+             A curve with different resolutions applied (Resolution of 1).
 
         - .. figure:: /images/modeling_curves_properties_geometry_bevel.png
              :width: 320px
 
-             A Curve with different resolutions applied (Resolution = 12).
+             A curve with different resolutions applied (Resolution of 12).
 
 .. _bpy.types.Curve.bevel_object:
 
 Object
-   Here you can specify a curve Object (opened or closed) which will be extruded along your curve.
-   If your Object's :ref:`shape <bpy.types.Curve.dimensions>` is 3D,
-   then before extrusion it will be projected to its local XY plane, then the extrusion will take place.
-   You can check out how the projected Object looks by switching its shape to 2D.
-   Editing the handles and control points of the Object will interactively change the extruded shape.
+   Here you can specify a curve object (opened or closed) which will be extruded along the curve.
+   If your object's :ref:`shape <bpy.types.Curve.dimensions>` is 3D,
+   it will be projected to its local XY plane before the extrusion.
+   You can check how the projected Object looks like by switching its shape to 2D.
 
-   .. warning::
+   .. important::
 
-      Make sure the shape you want to extrude along the curve is in your Object's local XY plane.
+      Make sure the shape you want to extrude is in the Object's local XY plane.
       If it is in the local XZ or YZ plane, it will be reduced to a line when it is projected to the local XY plane.
       Because of this, the extruded shape will be a flat plane.
-      An easy way to avoid this problem is to switch your Object to 2D.
-      If its shape still looks the way you want it then the extrusion will likely work, as well.
 
    .. list-table::
 

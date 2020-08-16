@@ -1,5 +1,5 @@
-.. _bpy.ops.mesh.extrude_region:
-.. _bpy.ops.view3d.edit_mesh_extrude_move_normal:
+.. _bpy.ops.mesh.extrude_indiv:
+.. _bpy.ops.view3d.edit_mesh_extrude_individual_move:
 
 *************
 Extrude Faces
@@ -65,5 +65,5 @@ Proportional Editing
 
    .. note::
 
-   Even with the *Proportional Size* set to minimum (.001),
-   it will extrude the selected face as well as the new geometry and they will be layered on top of each other.
+      Even with the *Proportional Size* set to it's minimum,
+      it will extrude the selected face as well as the new geometry and they will be layered on top of each other.

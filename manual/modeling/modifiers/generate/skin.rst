@@ -118,9 +118,8 @@ External Links
   <http://www.blendernation.com/2011/03/11/skin-modifier-development/>`__ --
   An early demonstration of the Skin Modifier by Nicholas Bishop (March 2011).
 - Ji, Zhongping; Liu, Ligang; Wang, Yigang (2010).
-  `B-Mesh: A Fast Modeling System for Base Meshes of 3D Articulated Shapes
-  <http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/>`__,
+  B-Mesh: A Fast Modeling System for Base Meshes of 3D Articulated Shapes,
   Computer Graphics Forum 29(7), pp. 2169-2178. -- The work this modifier is based on
-  (`direct link to PDF <http://www.math.zju.edu.cn/ligangliu/cagd/projects/bmesh/paper/bmesh.pdf>`__).
+  (`DOI 10.1111/j.1467-8659.2010.01805.x <https://doi.org/10.1111/j.1467-8659.2010.01805.x>`__).
 - `Related thread on Blender artists
   <http://blenderartists.org/forum/showthread.php?209551-B-mesh-modeling-tools-papers-better-than-zsfere>`__.
