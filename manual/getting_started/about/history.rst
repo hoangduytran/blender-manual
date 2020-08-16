@@ -58,7 +58,7 @@ With an enthusiastic group of volunteers, among them several ex-NaN employees,
 a fundraising campaign was launched to "Free Blender".
 To everyone's surprise and delight the campaign reached the €100,000 goal in only seven short weeks.
 On Sunday, October 13, 2002, Blender was released to the world
-under the terms of the `GNU GPL <https://www.gnu.org/licenses/gpl>`__.
+under the terms of the `GNU GPL <https://www.gnu.org/licenses/gpl.html>`__.
 Blender development continues to this day, driven by a team of dedicated volunteers
 from around the world led by Blender's original creator, Ton Roosendaal.
 
@@ -157,7 +157,7 @@ Version/Revision Milestones
 
 .. rubric:: Blender 2.5x -- The Recode!
 
-`2.5x <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.50>`__ -- From 2009 to August 2011:
+`2.5x <https://www.blender.org/download/releases/#25-series-2009-2011>`__ -- From 2009 to August 2011:
    This series released four `pre-version <https://archive.blender.org/development/release-logs/blender-256-beta>`__
    (from Alpha 0 in November 2009 to Beta in July 2010) and
    three stable versions (from 2.57 - April 2011 to 2.59 - August 2011).

@@ -40,9 +40,7 @@ See `Examples`_ at the end of this page.
 
 .. seealso:: Forum
 
-   - Please, use
-     the `Blender Artists forum <https://blenderartists.org/t/atomic-blender-pdb-xyz-for-blender-2-8-and-higher/>`__
-     for comments and questions.
+   - Please, use the `Blender Artists forum <https://blenderartists.org/t/1197801>`__ for comments and questions.
    - There also is the possibility to ask questions on
      `Stack Exchange <https://blender.stackexchange.com/>`__. However,
      note that some of the developers (like Blendphys) don't have enough credits,
