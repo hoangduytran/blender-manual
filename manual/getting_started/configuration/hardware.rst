@@ -144,7 +144,7 @@ This standard is new and therefore support for it is still limited.
      - *Not* recommended for general use yet.
    * - `Oculus <https://www.oculus.com/>`__ (Rift and Quest)
      - Windows
-     - `Prototype Release <https://developer.oculus.com/blog/prototype-openxr-for-oculus/>`__,
+     - `Prototype Release <https://developer.oculus.com/blog/openxr-for-oculus/>`__,
        Oculus Link required for Quest.
    * - `SteamVR <https://www.steamvr.com/>`__
      - Windows, GNU/Linux
@@ -198,8 +198,7 @@ application.
 - Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
 
 For more information, refer to Windows'
-`Getting Started Guide for Windows Mixed Reality and OpenXR
-<https://docs.microsoft.com/windows/mixed-reality/openxr#getting-started-with-openxr-for-windows-mixed-reality-headsets>`__.
+`Getting Started Guide for OpenXR <https://docs.microsoft.com/en-us/windows/mixed-reality/openxr-getting-started>`__.
 
 
 Monado

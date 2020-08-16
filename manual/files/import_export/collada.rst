@@ -301,7 +301,7 @@ Export & Import
   - Select the mesh and the deform bones. Then export to Collada while checking only selected option.
     (Selecting only the Mesh and bones is not strictly necessary.
     Selecting and export only selected will give smaller dae.)
-  - `Demonstration video <http://www.youtube.com/watch?v=GTlmmd13J1w>`__
+  - `Demonstration video <https://www.youtube.com/watch?v=GTlmmd13J1w>`__
 
 For bone nodes which are leaf nodes in the armature tree,
 or if a bone has more than one child, a Blender profile for tip with an ``<extra>`` tag,

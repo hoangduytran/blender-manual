@@ -52,8 +52,8 @@ Limit X, Y, Z
         you cannot enable separately lower or upper limits...
 
 Affect Transform
-   As pointed out before by default, even though visually constrained, the owner can still have rotations out of bounds
-   (as shown by the *Transform* panel).
+   As pointed out before by default, even though visually constrained,
+   the owner can still have rotations out of bounds (as shown by the *Transform* panel).
    When you enable this checkbox, this is no more possible --
    the owner transform properties are also limited by the constraint.
    However note that, the constraint does not directly modifies the rotation values:

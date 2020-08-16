@@ -69,10 +69,11 @@ Headings
 Text Styling
 ============
 
-See the `overview on ReStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`__
+See the `overview on ReStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__
 for more information on how to style the various elements of the documentation and
 on how to add lists, tables, pictures and code blocks.
-The `Sphinx reference <http://www.sphinx-doc.org/en/stable/markup/>`__ provides more insight additional constructs.
+The `Sphinx reference <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`__ provides
+more insight additional constructs.
 
 The following are useful markups for text styling::
 
@@ -282,7 +283,7 @@ Further Reading
 
 To learn more about reStructuredText, see:
 
-`Sphinx RST Primer <http://www.sphinx-doc.org/en/stable/rest.html>`__
+`Sphinx RST Primer <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__
    Good basic introduction.
-`Docutils reStructuredText Reference <http://docutils.sourceforge.net/rst.html>`__
+`Docutils reStructuredText Reference <https://docutils.sourceforge.io/rst.html>`__
    Links to reference and user documentation.

@@ -58,7 +58,7 @@ With an enthusiastic group of volunteers, among them several ex-NaN employees,
 a fundraising campaign was launched to "Free Blender".
 To everyone's surprise and delight the campaign reached the €100,000 goal in only seven short weeks.
 On Sunday, October 13, 2002, Blender was released to the world
-under the terms of the `GNU GPL <https://www.gnu.org/copyleft/gpl>`__.
+under the terms of the `GNU GPL <https://www.gnu.org/licenses/gpl>`__.
 Blender development continues to this day, driven by a team of dedicated volunteers
 from around the world led by Blender's original creator, Ton Roosendaal.
 

@@ -33,7 +33,7 @@ Interpolation
    Usually, the same as used in
    :menuselection:`Movie Clip Editor --> Properties --> Stabilization --> 2D Stabilization --> Interpolate`.
    For technical details on their difference,
-   `see this <http://www.mathworks.com/help/vision/ug/interpolation-methods.html>`__.
+   `see this <https://www.mathworks.com/help/vision/ug/interpolation-methods.html>`__.
    But for most purposes, default of Bilinear should suffice.
 
 Invert

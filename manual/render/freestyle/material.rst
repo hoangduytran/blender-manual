@@ -16,4 +16,4 @@ Priority
 .. seealso::
 
    A use case of the line color priority is detailed in a Freestyle development
-   `blog article <http://freestyleintegration.wordpress.com/2014/07/07/line-color-priority/>`__.
+   `blog article <https://freestyleintegration.wordpress.com/2014/07/07/line-color-priority/>`__.

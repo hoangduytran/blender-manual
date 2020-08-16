@@ -112,7 +112,7 @@ Render
       denoise the image. Addition properties for this denoising method can be set in
       the :ref:`View Layer Properties <render-layers-denoising-optix>`.
    Open Image Denoise
-      Uses Intel's `Open Image Denoise <https://openimagedenoise.github.io/>`__,
+      Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
       an AI denoiser which runs on the CPU.
    OptiX
       Uses an artificial intelligence algorithm to remove noise from renders.
@@ -126,7 +126,7 @@ Viewport
       Uses the faster available denoiser for 3D Viewport rendering
       (*OptiX* if available, otherwise *OpenImageDenoise*).
    OpenImageDenoise
-      Uses Intel's `Open Image Denoise <https://openimagedenoise.github.io/>`__,
+      Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
       an AI denoiser which runs on the CPU.
    OptiX
       Uses an artificial intelligence algorithm to remove noise from renders.

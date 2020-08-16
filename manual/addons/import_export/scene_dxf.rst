@@ -135,13 +135,13 @@ Best practice is to know the coordinate system for your specific DXF file and
 enter this information in the DXF importer interface as follows:
 
 Pyproj
-   Installation: Download (`Windows <https://code.google.com/p/pyproj/downloads/list>`__,
+   Installation: Download (`Windows <https://github.com/pyproj4/pyproj>`__,
    `macOS <http://www.ia.arch.ethz.ch/wp-content/uploads/2013/11/pyproj.zip>`__) Pyproj and copy it to your
 
    .. parsed-literal:: AppData/ApplicationSupport Folder/Blender/|BLENDER_VERSION|/scripts/modules/.
 
    In case you need to compile your own binary refer to
-   `this post <http://blenderartists.org/forum/showthread.php?323358-DXF-Importer&p=2664492&viewfull=1#post2664492>`__
+   `this post <https://blenderartists.org/forum/showthread.php?323358-DXF-Importer&p=2664492&viewfull=1#post2664492>`__
    on Blender Artists.
 
    Pyproj is a Python wrapper to the PROJ library, a well known C library used to

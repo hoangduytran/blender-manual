@@ -98,7 +98,7 @@ Examples
 ========
 
 Below is an example render by
-`The Pixelary <http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-tested>`__.
+`The Pixelary <https://blog.thepixelary.com/post/160451378592/denoising-in-cycles-tested>`__.
 
 .. list-table::
 

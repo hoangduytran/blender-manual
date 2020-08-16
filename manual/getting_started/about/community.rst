@@ -8,7 +8,7 @@ considerably helped Blender's adoption by the community.
 A large, stable, and active community of users has gathered around Blender since 1998.
 The community showed its support for Blender in 2002 when they helped raise
 €100,000 in seven weeks to enable Blender to go Open Source under
-the `GNU GPL License <https://www.gnu.org/copyleft/gpl.html>`__.
+the `GNU GPL License <https://www.gnu.org/licenses/gpl>`__.
 
 
 Independent Sites
@@ -17,7 +17,7 @@ Independent Sites
 There are `several independent websites <https://www.blender.org/community/>`__
 such as forums, blogs, news, and tutorial sites dedicated to Blender.
 
-One of the largest community forums is `Blender Artists <http://blenderartists.org/forum/>`__,
+One of the largest community forums is `Blender Artists <https://blenderartists.org/>`__,
 where Blender users gather to show off their creations,
 get feedback, ask and offer help and, in general, discuss Blender.
 

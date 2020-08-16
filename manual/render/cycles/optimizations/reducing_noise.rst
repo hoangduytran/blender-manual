@@ -294,7 +294,7 @@ To use this enable :doc:`Denoising </render/layers/denoising>`
 in the *Render Layers* tab of the Properties.
 
 Below is an example render by
-`The Pixelary <http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-tested>`__.
+`The Pixelary <https://blog.thepixelary.com/post/160451378592/denoising-in-cycles-tested>`__.
 
 .. list-table::
 

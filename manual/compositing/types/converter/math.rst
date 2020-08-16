@@ -157,7 +157,7 @@ Operation
 
    Trigonometric
       Sine
-         The `Sine <en.wikipedia.org/wiki/Sine>`__ of the input value.
+         The `Sine <https://en.wikipedia.org/wiki/Sine>`__ of the input value.
 
       Cosine
          The `Cosine <https://en.wikipedia.org/wiki/Trigonometric_functions>`__ of the input value.

@@ -285,4 +285,4 @@ expression in select few is OK.
    - :ref:`Extending Blender with Python <scripting-index>`.
 
    - `Python <https://www.python.org>`__ and its `documentation <https://docs.python.org/>`__.
-   - `functions.wolfram.com <http://functions.wolfram.com/>`__.
+   - `functions.wolfram.com <https://functions.wolfram.com/>`__.

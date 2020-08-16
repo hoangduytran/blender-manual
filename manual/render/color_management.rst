@@ -15,7 +15,7 @@ and to make artistic changes like exposure and color grading.
 
    Different views and exposures of the same render.
 
-Blender's color management is based on the `OpenColorIO <http://opencolorio.org/>`__ library.
+Blender's color management is based on the `OpenColorIO <https://opencolorio.org/>`__ library.
 By using the same OpenColorIO configuration in multiple applications,
 the same color spaces and transforms will be available for consistent results.
 
@@ -207,11 +207,11 @@ The reference linear :term:`Color Space` used is the linear color space
 with Rec. 709 chromaticities and D65 white point.
 
 However, OpenColorIO was also designed to give a consistent user experience across
-`multiple applications <http://opencolorio.org/CompatibleSoftware.html>`__,
+`multiple applications <https://opencolorio.org/#supported_apps>`__,
 and for this, a single shared configuration file can be used.
 Blender will use the standard OCIO environment variable to read an OpenColorIO configuration
 other than the default Blender one. More information about how to set up such a workflow
-can be found on the `OpenColorIO website <http://opencolorio.org/>`__.
+can be found on the `OpenColorIO website <https://opencolorio.org/>`__.
 
 Blender currently use the following color space rules:
 
@@ -238,5 +238,5 @@ The standard Blender configuration includes support for saving and loading image
 (`code and documentation <https://github.com/ampas/aces-dev>`__) color spaces.
 However, the ACES gamut is larger than the Rec. 709 gamut,
 so for best results, an ACES specific configuration file should be used.
-OpenColorIO provides an `ACES configuration <http://opencolorio.org/configurations/index.html>`__ file,
+OpenColorIO provides an `ACES configuration <https://opencolorio.readthedocs.io/en/latest/configurations/_index.html>`__ file,
 though it may need a few more tweaks to be usable in production.

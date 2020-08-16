@@ -46,7 +46,7 @@ Technical Details
 =================
 
 The method used is described on
-the `Straight Skeleton <http://en.wikipedia.org/wiki/Straight_skeleton>`__ Wikipedia page.
+the `Straight Skeleton <https://en.wikipedia.org/wiki/Straight_skeleton>`__ Wikipedia page.
 Consider this starting polygonal region:
 
 As the edges move inward at a constant speed, two kinds of events can happen.

@@ -86,12 +86,12 @@ Depth
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel-depth.png
              :width: 320px
 
-             A curve with different Bevel depths applied (Bevel = 0.05).
+             A curve with different Bevel depths applied (Depth of 0.05).
 
         - .. figure:: /images/modeling_curves_properties_geometry_bevel.png
              :width: 320px
 
-             A curve with different Bevel depths applied (Bevel = 0.25).
+             A curve with different Bevel depths applied (Depth of 0.25).
 
 .. _bpy.types.Curve.bevel_resolution:
 

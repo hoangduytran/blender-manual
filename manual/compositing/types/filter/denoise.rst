@@ -13,7 +13,7 @@ The Denoise node is used to denoise renders from :doc:`Cycles </render/cycles/in
 and other ray tracing renderers. This helps to significantly reduce render time by
 rendering with fewer samples.
 
-It is uses `Open Image Denoise <https://openimagedenoise.github.io/>`__,
+It is uses `Open Image Denoise <https://www.openimagedenoise.org/>`__,
 which transforms noisy images into clean images with machine learning.
 
 

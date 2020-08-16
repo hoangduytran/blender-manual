@@ -787,7 +787,7 @@ so you won't see any polygons no matter how close you zoom.
 
 .. seealso::
 
-   More details on `POV-Ray Wiki <http://wiki.povray.org/content/Reference:Lathe More details on POV-Ray Wiki>`__.
+   More details on `POV-Ray Wiki <http://wiki.povray.org/content/Reference:Lathe>`__.
 
 
 Prism

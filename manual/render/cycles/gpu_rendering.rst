@@ -61,7 +61,7 @@ AMD
 is supported for GPU rendering with AMD graphics cards.
 Blender supports graphics cards with :abbr:`GCN (Graphics Core Next)` generation 2 and above.
 To make sure your GPU is supported,
-see the `list of GCN generations <https://en.wikipedia.org/wiki/Graphics_Core_Next#Iterations>`__
+see the `list of GCN generations <https://en.wikipedia.org/wiki/Graphics_Core_Next#Generations>`__
 with the GCN generation and supported graphics cards.
 
 On Windows and Linux, the latest Pro drivers should be installed from
@@ -218,7 +218,7 @@ but the only real solution is to use separate graphics cards for display and ren
 
 Another solution can be to increase the time-out,
 although this will make the user interface less responsive when rendering heavy scenes.
-`Learn More Here <https://msdn.microsoft.com/en-us/Library/Windows/Hardware/ff570087%28v=vs.85%29.aspx>`__.
+`Learn More Here <https://docs.microsoft.com/en-us/windows-hardware/drivers/display/timeout-detection-and-recovery>`__.
 
 
 CUDA error: Unknown error in cuCtxSynchronize()
