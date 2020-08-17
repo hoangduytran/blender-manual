@@ -187,6 +187,8 @@ View Layer
       Disables/Enables the collection from the view layer.
 
 
+.. _bpy.ops.outliner.id_operation:
+
 ID Data Menu
 ------------
 
@@ -198,6 +200,11 @@ Make Single User
    This feature is not yet implemented.
 Delete
    Deletes the selected data-block.
+Add Library Override
+   Add a local :doc:`override </files/linked_libraries/library_overrides>` of this linked data-block.
+Add Library Override Hierarchy
+   Add a local :doc:`override </files/linked_libraries/library_overrides>` of this linked data-block,
+   and its hierarchy of dependencies.
 Remap Users
    Remap Users of a data-block to another one (of same type of course).
    This means you can e.g. replace all usages of a material or texture by another one.
