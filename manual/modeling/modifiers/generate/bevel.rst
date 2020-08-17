@@ -29,7 +29,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_generate_bevel_panel.png
    :align: right
-   :width: 275px
+   :width: 300px
 
    The Bevel modifier.
 
@@ -40,7 +40,7 @@ Affect
       Bevel the edges, creating intersections at vertices.
 
    .. figure:: /images/modeling_modifiers_generate_bevel_cubes-vertices-only.png
-      :width: 350px
+      :width: 325px
 
       Three cubes with 0.1, 0.3 and 0.5 bevel widths, with *Vertices* option selected.
 
@@ -48,10 +48,8 @@ Width Type
    Defines how *Width* will be interpreted to determine the amount of bevel.
 
    .. figure:: /images/modeling_modifiers_generate_bevel_width-methods.png
-      :align: right
+      :align: center
       :width: 240
-
-      Width methods.
 
    Offset
       The distance from the new edge to the original.

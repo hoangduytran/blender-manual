@@ -27,6 +27,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_modify_data-transfer_panel.png
    :align: right
+   :width: 300px
 
    Data Transfer Modifier.
 

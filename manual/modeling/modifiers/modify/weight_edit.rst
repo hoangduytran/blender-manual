@@ -31,6 +31,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_modify_weight-edit_panel.png
    :align: right
+   :width: 300px
 
    The Vertex Weight Edit modifier panel.
 

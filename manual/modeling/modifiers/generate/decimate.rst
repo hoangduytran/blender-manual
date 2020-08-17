@@ -31,6 +31,7 @@ Collapse
 
 .. figure:: /images/modeling_modifiers_generate_decimate_panel-collapse.png
    :align: right
+   :width: 300px
 
    The Decimate modifier in Collapse mode.
 
@@ -72,6 +73,7 @@ Un-Subdivide
 
 .. figure:: /images/modeling_modifiers_generate_decimate_panel-un-subdivide.png
    :align: right
+   :width: 300px
 
    The Decimate modifier in Un-Subdivide mode.
 
@@ -90,6 +92,7 @@ Planar
 
 .. figure:: /images/modeling_modifiers_generate_decimate_panel-planar.png
    :align: right
+   :width: 300px
 
    The Decimate modifier in Planar mode.
 

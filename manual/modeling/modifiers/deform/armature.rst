@@ -20,6 +20,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_armature_panel.png
    :align: right
+   :width: 300px
 
    The Armature modifier.
 

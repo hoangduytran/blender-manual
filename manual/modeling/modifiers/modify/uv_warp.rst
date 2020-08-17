@@ -15,7 +15,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_modify_uv-warp_panel.png
    :align: right
-
+   :width: 300px
 
 UV Layer
    Which UV map to modify; if not set it defaults to the active rendering layer.

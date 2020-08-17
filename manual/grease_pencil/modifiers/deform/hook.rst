@@ -17,6 +17,7 @@ Options
 
 .. figure:: /images/grease-pencil_modifiers_deform_hook_panel.png
    :align: right
+   :width: 300px
 
    The Hook modifier.
 

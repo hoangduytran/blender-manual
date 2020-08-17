@@ -24,6 +24,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_modify_weight-mix_panel.png
    :align: right
+   :width: 300px
 
    The Vertex Weight Mix modifier panel.
 

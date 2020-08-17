@@ -26,6 +26,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_panel.png
    :align: right
+   :width: 300px
 
    The Smooth Laplacian modifier.
 

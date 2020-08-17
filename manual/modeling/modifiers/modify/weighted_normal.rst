@@ -18,6 +18,10 @@ and custom normals.
 Options
 =======
 
+.. figure:: /images/modeling_modifiers_physics_weighted-normal_panel.png
+   :align: right
+   :width: 300px
+
 Weighting Mode
    The normals around a vertex will be combined to create a custom (per face corner) normal
    using various weights for each. The *Weighting Mode* defines how to compute the weights.

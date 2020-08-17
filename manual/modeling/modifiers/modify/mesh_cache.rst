@@ -22,6 +22,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_modify_mesh-cache_panel.png
    :align: right
+   :width: 300px
 
    Mesh Cache Modifier.
 

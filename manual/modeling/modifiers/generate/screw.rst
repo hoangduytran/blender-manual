@@ -20,6 +20,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_generate_screw_panel.png
    :align: right
+   :width: 300px
 
    The Screw modifier.
 

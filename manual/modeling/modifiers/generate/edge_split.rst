@@ -36,6 +36,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_generate_edge-split_panel.png
    :align: right
+   :width: 300px
 
    The Edge Split modifier.
 

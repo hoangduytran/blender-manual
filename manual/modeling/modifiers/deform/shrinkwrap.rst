@@ -20,6 +20,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_shrinkwrap_nearest-surface-point.png
    :align: right
+   :width: 300px
 
    The Shrinkwrap modifier in Nearest Surface Point mode.
 
@@ -81,6 +82,7 @@ Project
 
 .. figure:: /images/modeling_modifiers_deform_shrinkwrap_project.png
    :align: right
+   :width: 300px
 
    Project mode.
 
@@ -123,6 +125,7 @@ Nearest Vertex
 
 .. figure:: /images/modeling_modifiers_deform_shrinkwrap_nearest-vertex.png
    :align: right
+   :width: 300px
 
    Nearest Vertex mode.
 
@@ -140,6 +143,7 @@ Target Normal Project
 
 .. figure:: /images/modeling_modifiers_deform_shrinkwrap_normal-project.png
    :align: right
+   :width: 300px
 
    Target Normal Project mode.
 

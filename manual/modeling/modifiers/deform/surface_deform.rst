@@ -16,6 +16,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_surface-deform_panel.png
    :align: right
+   :width: 300px
 
    The Surface Deform modifier.
 

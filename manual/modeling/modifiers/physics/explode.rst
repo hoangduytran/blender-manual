@@ -35,6 +35,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_physics_explode_panel.png
    :align: right
+   :width: 300px
 
    The Explode modifier, with a Particle System above it.
 

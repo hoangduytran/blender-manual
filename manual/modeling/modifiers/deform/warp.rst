@@ -24,6 +24,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_warp_panel.png
    :align: right
+   :width: 300px
 
    The Warp modifier.
 

@@ -21,6 +21,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_generate_skin_panel.png
    :align: right
+   :width: 300px
 
    The Skin modifier.
 

@@ -20,6 +20,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_lattice_panel.png
    :align: right
+   :width: 300px
 
    The Lattice modifier.
 

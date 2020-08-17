@@ -37,6 +37,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_curve_panel.png
    :align: right
+   :width: 300px
 
    The Curve modifier.
 

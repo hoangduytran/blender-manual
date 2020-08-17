@@ -19,6 +19,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_modify_normal-edit_panel.png
    :align: right
+   :width: 300px
 
    Normal Edit Modifier.
 

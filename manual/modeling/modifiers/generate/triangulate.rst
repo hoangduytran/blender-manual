@@ -25,6 +25,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_generate_triangulate_panel.png
    :align: right
+   :width: 300px
 
    The Triangulate modifier.
 

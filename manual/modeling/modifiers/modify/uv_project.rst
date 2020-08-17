@@ -23,6 +23,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_modify_uv-project_panel.png
    :align: right
+   :width: 300px
 
    The UV Project modifier.
 

@@ -25,6 +25,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_laplacian-deform_panel.png
    :align: right
+   :width: 300px
 
    The Laplacian Deform modifier.
 

@@ -32,6 +32,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_deform_wave_panel.png
    :align: right
+   :width: 300px
 
    The Wave modifier.
 

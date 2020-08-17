@@ -37,6 +37,7 @@ Options
 
 .. figure:: /images/modeling_modifiers_generate_subdivision-surface_panel.png
    :align: right
+   :width: 300px
 
    The Subdivision Surface modifier.
 
