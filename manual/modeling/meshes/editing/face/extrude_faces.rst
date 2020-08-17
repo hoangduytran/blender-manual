@@ -59,6 +59,13 @@ The inner region of the selection gets moved unchanged with the extrusion.
 Flip Normals
    Only the *Normals* of the new faces created from the extrusion will be flipped.
 
+Dissolve Orthogonal Edges
+   Removes and connects edges whose faces form a flat surface and intersect new edges.
+
+Orientation
+   Aligns the transformation axes to a specified orientation constraint.
+   See :doc:`Transform Orientations </editors/3dview/controls/orientation>` for more information.
+
 Proportional Editing
    The extruded face will affect nearby geometry.
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>` for a full reference.
