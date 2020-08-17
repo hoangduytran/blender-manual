@@ -36,6 +36,9 @@ Transform
    Annotate Eraser
       Erase previous drawn annotations.
 
+:doc:`Rip </modeling/meshes/uv/tools/rip>`
+   The Rip tool separates UV faces from each other.
+
 :doc:`Grab </modeling/meshes/uv/tools/grab>`
    The Grab tool moves UVs around.
 :doc:`Relax </modeling/meshes/uv/tools/relax>`
