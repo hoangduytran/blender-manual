@@ -17,6 +17,7 @@ Types
    :maxdepth: 1
 
    extrude_region.rst
+   extrude_manifold.rst
    extrude_cursor.rst
    loop.rst
    knife.rst

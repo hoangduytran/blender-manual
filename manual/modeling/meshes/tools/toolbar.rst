@@ -50,7 +50,9 @@ Transform
 :ref:`Extrude Region <tool-mesh-extrude_region>`
    Extrude the selected region together freely or along an axis.
 
-   Extrude Along Normals
+   :doc:`Extrude Manifold </modeling/meshes/tools/extrude_manifold>`
+      Extrudes region and dissolves overlapping geometry.
+   :doc:`Extrude Along Normals </modeling/meshes/editing/face/extrude_faces_normal>`
       Extrude Region along their local normal.
    :ref:`Extrude Individual <tool-mesh-extrude_individual>`
       Extrude each individual element along their local normal.
