@@ -29,6 +29,8 @@ Splash Screen
 Developer Extras
    Show settings and menu items which are intended to help developers, this includes:
 
+   Operator Search
+      See :doc:`Interface Searching </interface/controls/templates/operator_search>`.
    Button Context Menu
       Online Python Reference
          To open the Python reference manual.
