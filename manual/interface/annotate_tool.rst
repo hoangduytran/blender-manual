@@ -1,3 +1,4 @@
+.. _bpy.types.ToolSettings.annotation:
 .. _tool-annotate:
 
 *************
@@ -12,12 +13,19 @@ It has a couple of sub-tools listed below.
 
 Annotate
    Draw free-hand strokes in the main area.
+
 Annotate Line
    Click and drag to create a line.
    Optionally, you can select the arrow style for the start and end of the line.
+
 Annotate Polygon
    Click multiple times to create multiple connected lines.
    The current polygon is finished when :kbd:`Esc` is pressed.
+
+   Style Start, End
+      The decoration to use at the beginning or end of the line segment.
+      This can be used for example to create arrows to point out specific details in a scene.
+
 Annotate Eraser
    Click and drag to remove lines.
    The eraser has a *Radius* setting found in :menuselection:`Tool Settings --> Eraser`.
