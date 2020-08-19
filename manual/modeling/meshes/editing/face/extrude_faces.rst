@@ -1,5 +1,6 @@
 .. _bpy.ops.mesh.extrude_indiv:
 .. _bpy.ops.view3d.edit_mesh_extrude_individual_move:
+.. _bpy.ops.view3d.edit_mesh_extrude_move_normal:
 
 *************
 Extrude Faces

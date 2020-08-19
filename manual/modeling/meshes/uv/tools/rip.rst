@@ -27,4 +27,4 @@ The components are ripped in the direction of the mouse pointer position.
 
 .. seealso::
 
-   Mesh editing :doc:`Rip <bpy.ops.mesh.rip_move>` operation.
+   Mesh editing :ref:`Rip <bpy.ops.mesh.rip_move>` operation.
