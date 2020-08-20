@@ -3,24 +3,32 @@
 Freestyle SVG Exporter
 **********************
 
-.. admonition:: Reference
-   :class: refbox
-
-   :Category:  Render
-   :Panel:     :menuselection:`Properties --> Render --> Freestyle SVG Export`
-
-SVG exporting for Freestyle is available through an add-on.
+This add-on can export your :ref:`Freestyle Renders <bpy.types.Freestyle>` into an SVG file.
+It can fill contours with their material color and can also export SVG animations.
 
 .. figure:: /images/addons_render_render-freestyle-svg_suzanne.svg
    :align: center
 
    An example of an SVG result produced by the Freestyle SVG Exporter.
 
-This add-on can be enabled via :menuselection:`Preferences --> Add-ons --> Render --> Freestyle SVG Exporter`.
-The GUI for the exporter should now be visible in the render tab of the Properties.
-The exported ``.svg`` file is written to the default output path
-:menuselection:`Properties --> Output --> Output`.
+Activation
+==========
 
+This add-on can be enabled via :menuselection:`Preferences --> Add-ons --> Render --> Freestyle SVG Exporter`.
+The GUI for the exporter should now be visible as a new Panel in the Render tab.
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Category:  Render
+   :Panel:     :menuselection:`Properties --> Render --> Freestyle SVG Export`
+
+Usage
+=====
+
+Activate :doc:`Freestyle rendering </render/freestyle/introduction>` and then render your scene with F12.
+Your render will be displayed, and in the background the SVG version will be saved to the default output path
+:menuselection:`Properties --> Output --> Output`.
 
 Options
 =======
