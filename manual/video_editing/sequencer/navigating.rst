@@ -28,12 +28,14 @@ Adjust Last Operation
    completed operation. See :ref:`ui-undo-redo-adjust-last-operation`.
 Preview as Backdrop
    Displays the current frame in the background of the main view like in the Compositor.
+
 Frame Selected :kbd:`NumpadPeriod`
    Zooms in the display to fit only the selected strips.
 Frame All :kbd:`Home`
    Zooms the display to show all strips.
 Zoom :kbd:`Shift-B`
    Click and drag to draw a rectangle and zoom to this rectangle.
+
 Navigation
    Play Animation :kbd:`Spacebar`
       Start or stop playback of animation. This will start playback in all editors.
@@ -75,6 +77,10 @@ Refresh All
    to call for a refresh of the rendered image (since the movement may not affect the rendered image).
    If an image or video, used as a strip, is changed by some application outside of Blender,
    Blender has no real way of being notified from your operating system.
+
+Sync Visible Range
+   Synchronize the visible range with other time based editors.
+
 Show Seconds :kbd:`Ctrl-T`
    Shows seconds instead of frames on the time axis.
 Show Offsets
@@ -84,21 +90,26 @@ Show F-Curves
 Show Markers
    Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
    and markers operators are not available in this editor.
-Cache
+Show Cache
    Show :doc:`Cache </video_editing/sequencer/properties/proxy_cache>`
-      Show all enabled types;
-      Final Images, Raw Images, Preprocessed Images, Composite Images
-Waveform Displaying
+   Show all enabled types;
+   Final Images, Raw Images, Preprocessed Images, Composite Images
+Show Waveforms
    Global option to either display the waveform, or the strip info,
    or use the individual :ref:`strip option <sequencer-sound-waveform>`.
+
 Sequence Render Image
    Render an image of the current frame.
 Sequence Render Animation
    Render timeline from Preview Start to Preview End Frame to a Video file or series of images.
+
 Export Subtitles
    Exports :doc:`Text strips </video_editing/sequencer/strips/text>`,
    which can act as subtitles, to a `SubRip <https://en.wikipedia.org/wiki/SubRip>`__ file (``.srt``).
    The exported file contains all Text strips in the video sequence.
+
+Toggle Sequencer/Preview :kbd:`Ctrl-Tab`
+   Switch the editor display type between Sequencer and Preview.
 
 
 Markers Menu

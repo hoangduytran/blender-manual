@@ -23,12 +23,14 @@ Sidebar :kbd:`N`
    Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
 Toolbar :kbd:`T`
    Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
+
 Fit Preview in Window :kbd:`Home`
    Resize the preview so that it fits in the window.
 Zoom :kbd:`Shift-B`
    Click and drag to draw a rectangle and zoom to this rectangle.
 Fractional Zoom
    Resize the preview in steps from 1:8 to 8:1.
+A
 Show Frame Overlay
    Displays the :ref:`Frame Overlay <bpy.types.SequenceEditor.show_overlay>`,
    to compare the current frame to a reference frame.
@@ -38,6 +40,7 @@ Show Metadata
    Display Image metadata in the preview area.
 Show Annotations
    Displays :doc:`Annotations </interface/annotate_tool>` in the preview region.
+
 Sequence Render Image
    Render the an image at the current frame.
 Sequence Render Animation
@@ -49,6 +52,9 @@ Export Subtitles
    Exports :doc:`Text strips </video_editing/sequencer/strips/text>`,
    which can act as subtitles, to a `SubRip <https://en.wikipedia.org/wiki/SubRip>`__ file (``.srt``).
    The exported file contains all Text strips in the video sequence.
+
+Toggle Sequencer/Preview :kbd:`Ctrl-Tab`
+   Switch the editor display type between Sequencer and Preview.
 
 
 Display Mode
