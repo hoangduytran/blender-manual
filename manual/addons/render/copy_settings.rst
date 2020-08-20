@@ -69,7 +69,7 @@ Presets
 Affected Scenes:
    Filter Scene
       You can type in this text field a regex (using Python syntax), and only scene
-      which name matches this regex will be available. Quite useful when you have tenths of scenes in a file...
+      which name matches this regex will be available. Quite useful when you have tens of scenes in a file...
 
       E.g. if you only want to copy some of your current render settings to scenes
       having "rabbit" in their name, type ``.*rabbit.*`` in this field.

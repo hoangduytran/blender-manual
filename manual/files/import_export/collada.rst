@@ -282,7 +282,7 @@ Export & Import
 
 - Support for object (mesh, camera, light) transform animations. Only Euler rotations,
   which is the default option for Objects, can be exported.
-  For armature bone animations Euler and quaternion rotation types are supported.
+  For armature bone animations, Euler and quaternion rotation types are supported.
 - Import and export of animations for the following parameters are supported:
 
   - Light
