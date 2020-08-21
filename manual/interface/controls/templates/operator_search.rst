@@ -46,7 +46,7 @@ Operator Search
 
 When :ref:`Developer Extras <prefs-interface-dev-extras>`
 the Operator Search can be accessed from the Edit menu in the Topbar.
-This search menu search all operators withen Blender even if they are not exposed in a menu.
+This search menu search all operators within Blender even if they are not exposed in a menu.
 This is useful for Python developers for testing purposes.
 Blender might also include a few advanced operators that are not
 exposed in a menu and can only be accessed via this search menu.
