@@ -57,7 +57,7 @@ Keep Original
 Thickness
    Strokes thickness.
 Threshold Angle
-   Threshold value that determine the strokes end.
+   Threshold value that determines the strokes end.
 Stroke Offset
    Sets offset to separate strokes from filled strokes.
 Only Seam Edges

@@ -13,7 +13,7 @@ They make it possible to work primarily with a relatively low amount of Parent p
 for whom the physics are calculated. The children are then aligned to their parents.
 The number and visualization of the children can be changed without a recalculation of the physics.
 
-If you activate children the parents are no longer rendered, this can be enable in the Render panel
+If you activate children, the parents are no longer rendered. This can be enabled in the Render panel
 :ref:`Parent Particles <bpy.types.ParticleSettings.use_parent_particles>`. By default, parent particles
 are not rendered because the shape of the children can be quite different from that of their parents.
 

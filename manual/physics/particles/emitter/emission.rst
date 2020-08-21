@@ -12,7 +12,7 @@ The *Emitter* system works just like its name says: it emits/produces particles 
 In such a system, particles are emitted from the selected object from the *Start*
 frame to the *End* frame and have a certain lifespan.
 These particles are rendered default as :ref:`Halos <particle-halo>`,
-but you may also render these kind of particles as objects
+but you may also render this kind of particles as objects
 (depending on the particle system's render settings,
 see :doc:`Visualization </physics/particles/emitter/render>`).
 
