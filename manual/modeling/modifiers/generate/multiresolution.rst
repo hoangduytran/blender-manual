@@ -43,7 +43,12 @@ Subdivisions
 ------------
 
 Subdivide
-   Adds another level of subdivision.
+   Creates a new level of subdivision using the subdivision type specified by *Subdivision Type* (see below).
+
+Simple
+   Creates a new level of subdivision using a simple interpolation by subdividing edges without any smoothing.
+Linear
+   Creates a new level of subdivision using linear interpolation of the current sculpted displacement.
 
 Unsubdivide
    Rebuild a lower subdivision level of the current base mesh.
