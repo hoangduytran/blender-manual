@@ -21,6 +21,7 @@ At the left of the editor, the available options are grouped into sections.
    Blender Preferences window.
 
 
+.. _bpy.ops.preferences.copy_prev:
 .. _prefs-menu:
 
 Managing Preferences

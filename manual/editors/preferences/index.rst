@@ -1,5 +1,6 @@
 .. _prefs-index:
 .. _bpy.types.Preferences:
+.. _bpy.ops.preferences:
 .. _bpy.types.SpacePreferences:
 
 ###############

@@ -1,3 +1,4 @@
+.. _bpy.ops.preferences.studiolight:
 
 ******
 Lights

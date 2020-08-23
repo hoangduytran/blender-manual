@@ -15,6 +15,8 @@ The keymap editor lets you adjust your keymap via:
    Blender Preferences Keymap section.
 
 
+.. _bpy.ops.preferences.keyconfig:
+
 Preset Management
 =================
 
@@ -37,6 +39,8 @@ Export
 Filtering
 ---------
 
+.. _bpy.types.SpacePreferences.filter_type:
+
 Filter Type
    Name
       Search the keymap item by the operator name it runs.
@@ -46,6 +50,9 @@ Filter Type
       .. hint::
 
          You could for example search with ``Ctrl Shift C`` for keymap items that use all these keys.
+
+.. _bpy.types.SpacePreferences.filter_text:
+
 Search
    The text to search (leave blank to disable).
 
@@ -59,6 +66,8 @@ without having to manually adjust individual keymap items which can cause proble
 See the :ref:`default keymap preferences <keymap-blender_default-prefs>`
 for options available in the default keymap.
 
+
+.. _bpy.ops.preferences.keyitem:
 
 Editor
 ======

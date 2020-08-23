@@ -67,6 +67,7 @@ Timer
    The minimum is 1, and the Maximum is 60 (save every hour).
 
 
+.. _bpy.ops.preferences.autoexec:
 .. _prefs-auto-execution:
 
 Auto Run Python Scripts

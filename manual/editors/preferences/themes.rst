@@ -1,3 +1,5 @@
+.. _bpy.ops.preferences.theme_install:
+.. _bpy.ops.preferences.reset_default_theme:
 .. _bpy.types.Theme:
 
 ******
