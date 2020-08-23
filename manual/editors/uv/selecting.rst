@@ -75,6 +75,30 @@ Checker Deselect Options
    Offset
       Offset from the starting point.
 
+.. seealso::
+
+   Mesh edit :ref:`Select Shortest Path <bpy.ops.mesh.shortest_path_select>`.
+
+
+.. _bpy.opsuv.select_edge_ring:
+
+Select Edge Loops
+=================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Hotkey:    :kbd:`Alt-LMB`, or :kbd:`Shift-Alt-LMB` for modifying existing selection.
+
+Holding :kbd:`Alt` while selecting a UV component selects a loop of edges that are connected in
+a line end-to-end, passing through the edge under the mouse pointer.
+Holding :kbd:`Shift-Alt` while clicking adds to the current selection.
+
+.. seealso::
+
+   Mesh edit :ref:`Select Edge Loops <bpy.ops.mesh.loop_multi_select>`.
+
 
 Header
 ======
