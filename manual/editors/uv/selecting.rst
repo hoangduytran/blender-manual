@@ -28,15 +28,52 @@ More/Less :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
    Expands/Contracts the selection to/from the adjacent elements of the selection type.
 Select Pinned :kbd:`Shift-P`
    Selects all :ref:`pinned <bpy.ops.uv.pin>` UVs.
-Select Linked :kbd:`Ctrl-L`
-   This operator selects all UVs that are connected to currently selected UVs.
-   This works similarly to the tools in 3D Viewport.
+Select Linked
+   Linked :kbd:`Ctrl-L`
+      This operator selects all UVs that are connected to currently selected UVs.
+      This works similarly to the tools in 3D Viewport.
+   Shortest Path
+      Path between two selected elements.
 Select Split :kbd:`Y`
    Cuts apart the selected UVs from the map. Only those UVs which belong to
    fully selected faces remain selected. As the name implies, this is particularly useful to
    unlink faces and move them elsewhere. The hotkey is analogous to the mesh Split tool.
 Select Overlap
    Selects any UVs that are extended over other UVs while also selecting any underlying UVs.
+
+
+.. _bpy.ops.uv.shortest_path_select:
+
+Shortest Path
+=============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Linked --> Shortest Path`
+   :Hotkey:    :kbd:`Ctrl-LMB`
+
+Selects all UV components along the shortest path from
+the active component to the one which was selected.
+
+Face Stepping
+   Supports diagonal paths for vertices and faces, and
+   selects edge rings with edges.
+Topological Distance
+   Only takes into account the number of edges of the path and
+   not the length of the edges to calculate the distances.
+Fill Region :kbd:`Shift-Ctrl-LMB`
+   Selects all elements in the shortest paths from the active selection to the clicked area.
+Checker Deselect Options
+   Allows to quickly select alternate elements in a path.
+
+   Deselected
+      The number of deselected elements in the repetitive sequence.
+   Selected
+      The number of selected elements in the repetitive sequence.
+   Offset
+      Offset from the starting point.
 
 
 Header
