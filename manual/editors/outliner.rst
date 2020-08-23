@@ -205,6 +205,11 @@ Add Library Override
 Add Library Override Hierarchy
    Add a local :doc:`override </files/linked_libraries/library_overrides>` of this linked data-block,
    and its hierarchy of dependencies.
+Reset Library Override
+   Reset this local :doc:`override </files/linked_libraries/library_overrides>` to its linked values.
+Reset Library Override Hierarchy
+   Reset this local :doc:`override </files/linked_libraries/library_overrides>` to its linked values,
+   as well as its hierarchy of dependencies.
 Remap Users
    Remap Users of a data-block to another one (of same type of course).
    This means you can e.g. replace all usages of a material or texture by another one.
