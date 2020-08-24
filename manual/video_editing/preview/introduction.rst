@@ -25,12 +25,12 @@ Toolbar :kbd:`T`
    Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
 
 Fit Preview in Window :kbd:`Home`
-   Resize the preview so that it fits in the window.
+   Resize the preview so that it fits in the area.
 Zoom :kbd:`Shift-B`
    Click and drag to draw a rectangle and zoom to this rectangle.
 Fractional Zoom
    Resize the preview in steps from 1:8 to 8:1.
-A
+
 Show Frame Overlay
    Displays the :ref:`Frame Overlay <bpy.types.SequenceEditor.show_overlay>`,
    to compare the current frame to a reference frame.

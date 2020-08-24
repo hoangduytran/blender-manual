@@ -31,7 +31,7 @@ In Object/Edit Mode, the *Add Surface* menu, provides six different surface prim
 NURBS Curve
 ===========
 
-Adds an generic curve of 4 control pints forming an arc.
+Adds an generic curve of four control points forming an arc.
 
 
 NURBS Circle
@@ -44,13 +44,13 @@ Note, a circle :term:`NURBS` surface is never filled, unlike its "real" curve co
 NURBS Surface
 =============
 
-Adds a generic surface patch consisting of a 4x4 grid plane with the center grid slightly raised.
+Adds a generic surface patch consisting of a 4×4 grid plane with the center grid slightly raised.
 
 
 NURBS Cylinder
 ==============
 
-Adds add an open end cylinder, consisting of an extruded *NURBS Circle*.
+Adds an open end cylinder, consisting of an extruded *NURBS Circle*.
 
 
 NURBS Sphere

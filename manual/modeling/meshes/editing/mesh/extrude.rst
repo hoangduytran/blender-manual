@@ -32,7 +32,7 @@ See :ref:`tool-mesh-extrude_individual`.
 Extrude Manifold
 ================
 
-See :doc:`/modeling/meshes/tools/extrude_manifold`
+See :doc:`/modeling/meshes/tools/extrude_manifold`.
 
 
 Extrude Edges

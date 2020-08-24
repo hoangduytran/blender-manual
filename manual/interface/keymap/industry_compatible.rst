@@ -18,7 +18,7 @@ General
    * - :kbd:`RMB`
      - Context menu
    * - :kbd:`Tab`
-     - Operator Search.
+     - Menu Search.
    * - :kbd:`Shift-Tab`
      - Quick access (favorites)
    * - :kbd:`Ctrl-D`

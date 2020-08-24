@@ -44,7 +44,7 @@ Spacebar
       Opens the Toolbar underneath the cursor to quickly change the active tool.
       This option is good if doing a lot of modeling or rigging.
    Search
-      Opens up the :doc:`operator search </interface/controls/templates/operator_search>`.
+      Opens up the :doc:`Menu Search </interface/controls/templates/operator_search>`.
       This option is good for someone who is new to Blender and is unfamiliar with its menus and shortcuts.
 Theme
    Choose between a light or dark theme for Blender.

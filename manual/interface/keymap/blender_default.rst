@@ -33,7 +33,7 @@ Global Keys
    * - :kbd:`F2`
      - Rename active item.
    * - :kbd:`F3`
-     - Operator search.
+     - Menu Search.
    * - :kbd:`F4`
      - File context menu.
    * - :kbd:`F5` - :kbd:`F8`
@@ -151,7 +151,7 @@ Spacebar Action
       Opens the Toolbar underneath the cursor to quickly change the active tool.
       This option is good if you're doing a lot of modeling or rigging work.
    Search
-      Opens up the :doc:`operator search </interface/controls/templates/operator_search>`.
+      Opens up the :doc:`Menu Search </interface/controls/templates/operator_search>`.
       This option is good for someone who is new to Blender and is unfamiliar with the menus and shortcuts.
 
 Activate Gizmo Event

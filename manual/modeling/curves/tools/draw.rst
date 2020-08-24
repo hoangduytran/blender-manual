@@ -35,7 +35,7 @@ Type
 
       Method
          Refit
-            Incrementally re-fits the curve (gives best results).
+            Incrementally refits the curve (gives best results).
          Split
             Splits the curve until the tolerance is met (gives a better drawing performance).
 
@@ -53,7 +53,7 @@ Use Pressure
    Uses stylus pressure to control the radius of the curve.
 
 Depth
-   Controls where/how the curves are drawn.
+   Controls where and how the curves are drawn.
 
    Cursor
       Uses the depth under the cursor to draw curves.
@@ -89,7 +89,7 @@ Error
 
 Fit Method
    Refit
-      Incrementally re-fits the curve (gives best results).
+      Incrementally refits the curve (gives best results).
    Split
       Splits the curve until the tolerance is met (gives a better drawing performance).
 

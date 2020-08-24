@@ -58,7 +58,7 @@ The inner region of the selection gets moved unchanged with the extrusion.
           Set to Z axis.
 
 Flip Normals
-   Only the *Normals* of the new faces created from the extrusion will be flipped.
+   Only the *normals* of the new faces created from the extrusion will be flipped.
 
 Dissolve Orthogonal Edges
    Removes and connects edges whose faces form a flat surface and intersect new edges.

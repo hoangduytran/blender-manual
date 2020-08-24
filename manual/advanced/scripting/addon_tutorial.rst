@@ -187,8 +187,8 @@ However running the script won't move any objects. For this, you need to execute
 
    Operator Search menu.
 
-Do this by pressing :kbd:`F3` to bring up the operator search menu and type in
-"Move X by One" (the ``bl_label``), then :kbd:`Return`.
+Open the :ref:`Operator Search <bpy.ops.wm.search_operator>` menu
+and type in "Move X by One" (the ``bl_label``), then :kbd:`Return`.
 
 The objects should move as before.
 

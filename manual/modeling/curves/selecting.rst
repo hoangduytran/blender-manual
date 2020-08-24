@@ -223,7 +223,7 @@ Pick Shortest Path
    :class: refbox
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Operator Search --> Pick Shortest Path`
+   :Menu:      :menuselection:`Menu Search --> Pick Shortest Path`
    :Hotkey:    :kbd:`Ctrl-LMB`
 
 Selects the curve segments between two control points: the active and the one under the cursor.

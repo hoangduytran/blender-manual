@@ -11,11 +11,12 @@ It can fill contours with their material color and can also export SVG animation
 
    An example of an SVG result produced by the Freestyle SVG Exporter.
 
+
 Activation
 ==========
 
 This add-on can be enabled via :menuselection:`Preferences --> Add-ons --> Render --> Freestyle SVG Exporter`.
-The GUI for the exporter should now be visible as a new Panel in the Render tab.
+The interface for the exporter should now be visible as a new panel in the Render tab.
 
 .. admonition:: Reference
    :class: refbox
@@ -23,12 +24,14 @@ The GUI for the exporter should now be visible as a new Panel in the Render tab.
    :Category:  Render
    :Panel:     :menuselection:`Properties --> Render --> Freestyle SVG Export`
 
+
 Usage
 =====
 
-Activate :doc:`Freestyle rendering </render/freestyle/introduction>` and then render your scene with F12.
-Your render will be displayed, and in the background the SVG version will be saved to the default output path
+Activate :doc:`Freestyle rendering </render/freestyle/introduction>` and then render your scene with *Render Image*.
+Your render will be displayed, and the SVG version will be saved to the default output path
 :menuselection:`Properties --> Output --> Output`.
+
 
 Options
 =======

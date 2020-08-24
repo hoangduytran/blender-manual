@@ -148,8 +148,10 @@ Edit Menu
 
 Undo/Redo/History
    See :doc:`/interface/undo_redo`.
+Menu Search
+   Find a menu based on its name.
 Operator Search
-   Execute an operator based on its name.
+   Execute an operator based on its name (:ref:`Developer Extras <prefs-interface-dev-extras>` only).
 Rename Active Item
    Rename the active object or node;
    see :ref:`Rename tool <tools_rename-active>` for more information.
