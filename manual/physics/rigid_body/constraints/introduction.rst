@@ -4,7 +4,6 @@ Introduction
 ************
 
 :term:`Constraints <Constraint>` (also known as joints) for rigid bodies connect two rigid bodies.
-
 The physics constraints are meant to be attached to an :term:`Empty` object.
 The constraint then has fields which can be pointed at the two physics-enabled object
 which will be bound by the constraint.
@@ -44,30 +43,67 @@ for the selected empty object or the one of the two constrained objects with the
 Common Options
 ==============
 
-Rigid Body Constraint panel.
+.. admonition:: Reference
+   :class: refbox
+
+   :Panel:     :menuselection:`Physics --> Rigid Body Constraint`
+
+
+Settings
+--------
+
+.. _bpy.types.RigidBodyConstraint.enabled:
 
 Enabled
    Specifies whether the constraint is active during the simulation.
+
+.. _RigidBodyConstraint.disable_collisions:
+
 Disable Collisions
    Allows constrained objects to pass through one another.
-Object 1
-   First object to be constrained.
-Object 2
-   Second object to be constrained.
+
+.. _bpy.types.RigidBodyConstraint.RigidBodyConstraint.use_breaking:
+
 Breakable
    Allows constraint to break during simulation. Disabled for the *Motor* constraint.
    This can be used to simulate destruction.
 
-   Threshold
-      Impulse strength that needs to be reached before constraint breaks.
+.. _bpy.types.RigidBodyConstraint.breaking_threshold:
 
-Override Iterations
-   Allows to make constraints stronger (more iterations) or weaker (less iterations)
-   than specified in the rigid body world.
+Threshold
+   Impulse strength that needs to be reached before constraint breaks.
 
-   Iterations
-      Number of constraint solver iterations made per simulation step for this constraint.
+
+.. _bpy.types.RigidBodyConstraint.use_limit:
+.. _bpy.types.RigidBodyConstraint.limit:
 
 Limits
-   By using limits you can constrain objects even more by specifying a translation/rotation range on/around
-   respectively one axis (see below for each one individually). To lock one axis, set both limits to 0.
+------
+
+By using limits you can constrain objects even more by specifying a translation/rotation range on/around
+respectively one axis (see below for each one individually). To lock one axis, set both limits to 0.
+
+
+.. _bpy.types.RigidBodyConstraint.object1:
+.. _bpy.types.RigidBodyConstraint.object2:
+
+Objects
+-------
+
+First
+   First object to be constrained.
+Second
+   Second object to be constrained.
+
+
+.. _bpy.types.RigidBodyConstraint.use_override_solver_iterations:
+.. _bpy.types.RigidBodyConstraint.solver_iterations:
+
+Override Iterations
+-------------------
+
+Allows to make constraints stronger (more iterations) or weaker (less iterations)
+than specified in the rigid body world.
+
+Iterations
+   Number of constraint solver iterations made per simulation step for this constraint.
