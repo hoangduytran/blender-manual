@@ -26,11 +26,10 @@ Make Regular
 Properties
 ==========
 
-.. TODO2.8
-   .. figure:: /images/animation_lattice_panel.png
-      :align: right
+.. figure:: /images/animation_lattice_panel.png
+   :align: right
 
-      Lattice properties.
+   Lattice properties.
 
 Lattice
    A :ref:`ui-data-block`.
@@ -56,13 +55,12 @@ Vertex Group
 Usage
 =====
 
-.. TODO2.8 Maybe update the images (color & style)
-
-.. figure:: /images/animation_lattice_view.png
-
-   Lattice around the cube object in Object Mode.
-
 The lattice should be scaled and moved to fit around your object in Object Mode.
 Any scaling applied to the object in Edit Mode will result in the object deforming.
 This includes applying its scale with :kbd:`Ctrl-A` as this will achieve the same result as
 scaling the lattice in Edit Mode, and therefore the object.
+
+.. figure:: /images/animation_lattice_view.png
+   :align: center
+
+   Lattice around the cube object in Object Mode.
