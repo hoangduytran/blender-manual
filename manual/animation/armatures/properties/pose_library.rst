@@ -1,8 +1,7 @@
-.. _bpy.ops.poselib:
 
-******************
-Pose Library Panel
-******************
+************
+Pose Library
+************
 
 .. admonition:: Reference
    :class: refbox
@@ -10,24 +9,32 @@ Pose Library Panel
    :Mode:      All Modes
    :Panel:     :menuselection:`Properties --> Object Properties --> Pose Library`
 
-.. TODO2.8
-   .. figure:: /images/animation_armatures_properties_pose-library_panel.png
-      :align: right
+.. figure:: /images/animation_armatures_properties_pose-library_panel.png
+   :align: right
 
-      The Pose Library panel.
+   The Pose Library panel.
 
-The *Pose Library* panel is used to save, apply, and manage armature poses.
+The Pose Library is a way to store pose positions so the same position
+can be used again later in the animation or to store different rest poses.
 *Pose Libraries* are saved to :doc:`Actions </animation/actions>`.
 They are not generally used as actions, but can be converted to and from.
+The *Pose Library* panel is used to save, apply, and manage armature poses.
+
+.. seealso::
+
+   :doc:`Pose Library Editing </animation/armatures/posing/editing/pose_library>`.
+
 
 Action
    A :ref:`ui-data-block` for Actions or Pose Libraries.
+
+.. _bpy.types.ActionPoseMarkers.active_index:
+
 Pose Libraries
    A :ref:`List view <ui-list-view>` of poses for the active Pose Library.
 
    Add ``+``
       If a pose is added, a :ref:`pose marker <marker-pose-add>` is created.
-
       The :ref:`Whole Character keying set <whole-character-keying-set>` is used to
       determine which bones to key. If any bones are selected, only keyframes for
       those bones are added, otherwise all bones in the keying set are keyed.
@@ -41,28 +48,20 @@ Pose Libraries
          In contrast to *Add New* and *Replace Existing* which automatically allocate a pose to an action frame.
       Replace Existing
          Replace an existing pose in the active Pose Library with the current pose of the armature.
+
+.. _bpy.ops.poselib.apply_pose:
+
    Apply Pose (magnifying glass icon)
       Applies the active pose to the selected pose bones.
+
+.. _bpy.ops.poselib.action_sanitize:
+
    Sanitize Action (book icon)
       Makes an action suitable for use as a Pose Library.
       This is used to convert an Action to a Pose Library.
       A pose is added to the Pose Library for each frame with keyframes.
+
+.. _bpy.ops.poselib.pose_move:
+
    Move (up/down arrow icon)
       Moves the pose up/down in the list.
-
-
-.. TODO Move to pose editing.
-
-Menu
-====
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Pose Mode
-   :Menu:      :menuselection:`Pose --> Pose Library`
-
-- Browse Poses. :kbd:`Alt-L`.
-- Add Pose. :kbd:`Shift-L`.
-- Rename Pose. :kbd:`Shift-Ctrl-L`.
-- Remove Pose. :kbd:`Shift-Alt-L`.

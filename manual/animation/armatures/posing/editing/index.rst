@@ -12,5 +12,6 @@
    in_betweens.rst
    propagate.rst
    copy_paste.rst
+   pose_library.rst
    flip_quats.rst
    show_hide.rst
