@@ -6,7 +6,7 @@ Introduction
 Animating with Grease Pencil
 ============================
 
-The main goal of Grease Pencil is to offer a 2D animation tools full immersed in a 3D environment.
+The main goal of Grease Pencil is to offer a 2D animation tool full immersed in a 3D environment.
 
 .. figure:: /images/grease-pencil_animation_introduction_example.png
 
@@ -48,7 +48,7 @@ a new keyframe is added at the current frame on the active channel.
 
    The channels in the Dope Sheet correspond to the active 2D layer of the Grease Pencil object.
 
-Grease Pencil has its own mode in the Dope Sheet to works with keyframes.
+Grease Pencil has its own mode in the Dope Sheet to work with keyframes.
 See Grease Pencil mode in the :doc:`Dope Sheet </editors/dope_sheet/grease_pencil>`
 section for more information.
 

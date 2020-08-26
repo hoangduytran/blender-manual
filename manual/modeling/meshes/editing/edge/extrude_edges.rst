@@ -23,4 +23,4 @@ Extrude edges as individual edges, use :kbd:`Alt-E` to access the *Extrude Edges
      - .. figure:: /images/modeling_meshes_editing_edge_extrude-edges_after.png
           :width: 320px
 
-          Edge extrude.
+          Edge extruded.
