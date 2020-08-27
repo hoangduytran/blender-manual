@@ -23,10 +23,9 @@ In each case the objects are set as Damped Track to +X.
 Options
 =======
 
-.. TODO2.8
-   .. figure:: /images/animation_constraints_tracking_damped-track_panel.png
+.. figure:: /images/animation_constraints_tracking_damped-track_panel.png
 
-      Damped Track panel.
+   Damped Track panel.
 
 Target
    :ref:`ui-data-id` used to select the constraint's target, and is not functional (red state) when it has none.

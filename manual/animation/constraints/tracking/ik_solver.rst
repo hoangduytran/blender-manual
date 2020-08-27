@@ -24,10 +24,9 @@ the :ref:`Inverse Kinematics <bone-constraints-inverse-kinematics>` page, part o
 Options
 =======
 
-.. TODO2.8
-   .. figure:: /images/animation_constraints_tracking_ik-solver_panel.png
+.. figure:: /images/animation_constraints_tracking_ik-solver_panel.png
 
-      Inverse Kinematics panel.
+   Inverse Kinematics panel.
 
 Target
    :ref:`ui-data-id` used to select the an armature.

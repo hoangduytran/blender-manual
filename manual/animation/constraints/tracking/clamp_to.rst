@@ -44,10 +44,9 @@ However, the 0.5 curve time position can actually be anywhere within the boundin
 Options
 =======
 
-.. TODO2.8
-   .. figure:: /images/animation_constraints_tracking_clamp-to_panel.png
+.. figure:: /images/animation_constraints_tracking_clamp-to_panel.png
 
-      Clamp To panel.
+   Clamp To panel.
 
 Target
    The target :ref:`ui-data-id` indicates which curve object the Clamp To constraint will track along.

@@ -10,10 +10,9 @@ The *Copy Rotation* constraint forces its owner to match the rotation of its tar
 Options
 =======
 
-.. TODO2.8
-   .. figure:: /images/animation_constraints_transform_copy-rotation_panel.png
+.. figure:: /images/animation_constraints_transform_copy-rotation_panel.png
 
-      Copy Rotation panel.
+   Copy Rotation panel.
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.

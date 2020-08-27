@@ -16,10 +16,9 @@ a bone to a given ratio of its original volume.
 Options
 =======
 
-.. TODO2.8
-   .. figure:: /images/animation_constraints_transform_maintain-volume_panel.png
+.. figure:: /images/animation_constraints_transform_maintain-volume_panel.png
 
-      Maintain Volume Constraint.
+   Maintain Volume Constraint.
 
 Mode
    Specifies how the constraint handles scaling of the non-free axes.

@@ -17,6 +17,10 @@ the :doc:`Mesh Sequence Cache modifier </modeling/modifiers/modify/mesh_sequence
 Options
 =======
 
+.. figure:: /images/animation_constraints_transform_transform-cache_panel.png
+
+   Transform Cache Constraint.
+
 Cache File
    Data-block menu to select the Alembic file.
 

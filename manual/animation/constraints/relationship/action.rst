@@ -36,10 +36,9 @@ the owner will be as if in frame 50 of the linked action, etc.
 Options
 =======
 
-.. TODO2.8
-   .. figure:: /images/animation_constraints_relationship_action_panel.png
+.. figure:: /images/animation_constraints_relationship_action_panel.png
 
-      Action panel.
+   Action panel.
 
 Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
