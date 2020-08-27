@@ -3,13 +3,13 @@
 Introduction
 ************
 
-.. TODO2.8
-   .. figure:: /images/animation_armatures_posing_bone-constraints_introduction_tab.png
-      :align: right
-      :figwidth: 280px
+.. figure:: /images/animation_armatures_posing_bone-constraints_introduction_tab.png
+   :align: right
+   :figwidth: 280px
+   :width: 280px
 
-      The Constraints panel in Pose Mode,
-      with one Limit Rotation constraint applied to the active bone.
+   The Bone Constraints Properties in Pose Mode,
+   with an Inverse Kinematics constraint added to the active bone.
 
 As bones behave like objects in *Pose Mode*, they can also be constrained.
 This is why the *Constraints* tab is shown in both *Object Mode* and *Edit Mode*.

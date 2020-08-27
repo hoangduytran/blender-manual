@@ -9,10 +9,9 @@ Inverse Kinematics
    :Mode:      Pose Mode
    :Panel:     :menuselection:`Bone --> Inverse Kinematics`
 
-.. TODO2.8
-   .. figure:: /images/animation_armatures_bones_properties_inverse-kinematics_panel.png
+.. figure:: /images/animation_armatures_bones_properties_inverse-kinematics_panel.png
 
-      The Inverse Kinematics panel.
+   The Inverse Kinematics panel.
 
 This panel controls the way a bone or set of bones behave when linked in
 an :doc:`inverse kinematic </animation/armatures/posing/bone_constraints/inverse_kinematics/introduction>` chain.

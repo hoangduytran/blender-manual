@@ -3,10 +3,6 @@
   Object
 ##########
 
-.. important::
-
-   Work In Progress
-
 These add-ons relate to Object Mode and related tools.
 
 .. toctree::

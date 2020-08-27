@@ -9,10 +9,9 @@ Deform
    :Mode:      All Modes
    :Panel:     :menuselection:`Bone --> Deform`
 
-.. TODO2.8
-   .. figure:: /images/animation_armatures_bones_properties_deform_panel.png
+.. figure:: /images/animation_armatures_bones_properties_deform_panel.png
 
-      The Deform panel.
+   The Deform panel.
 
 In this panel you can set deformation options for each bone.
 
@@ -21,7 +20,7 @@ prevents the bone from deforming the geometry at all,
 overriding any weights that it might have been assigned before; It mutes its influence.
 
 It also excludes the active bone in the automatic weight calculation when the mesh is
-parented to the armature using the *Armature Deform* tool with the "With Automatic Weights" option.
+parented to the armature using the *Armature Deform* tool with the *With Automatic Weights* option.
 
 
 .. _armature-bones-envelope:

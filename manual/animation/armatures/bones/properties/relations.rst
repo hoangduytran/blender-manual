@@ -9,10 +9,9 @@ Relations
    :Mode:      All Modes
    :Panel:     :menuselection:`Bone --> Relations`
 
-.. TODO2.8
-   .. figure:: /images/animation_armatures_bones_properties_relations_panel.png
+.. figure:: /images/animation_armatures_bones_properties_relations_panel.png
 
-      Relations panel.
+   Relations panel.
 
 In this panel you can arrange sets of bones in different layers for easier manipulation.
 
@@ -44,11 +43,6 @@ Bone Group
    :class: refbox
 
    :Mode:      Pose Mode
-
-.. TODO2.8
-   .. figure:: /images/animation_armatures_bones_properties_relations_group-list.png
-
-      The Bone Group data ID.
 
 To assign a selected bone to a given bone group use the *Bone Group* data ID.
 
@@ -87,8 +81,6 @@ By default, children bones inherit:
 - Their parent rotation (i.e. they keep a constant rotation relatively to their parent).
 - Their parent scale, here again with their own offset.
 
-.. TODO2.8 Maybe update the images (color & style)
-
 .. list-table:: Examples of transforming parented/connected bones.
 
    * - .. figure:: /images/animation_armatures_bones_properties_relations_rest.png
@@ -108,11 +100,6 @@ By default, children bones inherit:
 
 Exactly like standard children objects. You can modify this behavior on a per-bone basis,
 using the Relations panel in the *Bones* tab:
-
-.. TODO2.8
-   .. figure:: /images/animation_armatures_bones_properties_relations_panel.png
-
-      Relations panel in Pose Mode.
 
 .. _bone-relations-inherit-settings:
 

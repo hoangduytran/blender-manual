@@ -9,10 +9,9 @@ Skeleton
    :Mode:      All Modes
    :Panel:     :menuselection:`Armature --> Skeleton`
 
-.. TODO2.8
-  .. figure:: /images/animation_armatures_properties_skeleton_panel.png
+.. figure:: /images/animation_armatures_properties_skeleton_panel.png
 
-              The Skeleton panel.
+   Skeleton panel.
 
 In this panel you can arrange sets of bones into different layers for easier manipulation.
 

@@ -3,10 +3,6 @@
   Mesh
 ########
 
-.. important::
-
-   Work In Progress
-
 These add-ons relate to edit mesh mode and related tools.
 
 .. toctree::

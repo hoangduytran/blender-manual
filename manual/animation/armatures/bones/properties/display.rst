@@ -10,10 +10,9 @@ Viewport Display
    :Mode:      Object and Pose Mode
    :Panel:     :menuselection:`Bone --> Viewport Display`
 
-.. TODO2.8
-   .. figure:: /images/animation_armatures_bones_properties_display_custom-shape-field.png
+.. figure:: /images/animation_armatures_bones_properties_display_custom-shape-field.png
 
-      The Display panel.
+   Viewport Display panel.
 
 Display panel lets you customize the look of your bones taking the shape of another existing object.
 
@@ -54,8 +53,6 @@ To assign a custom shape to a bone, you have to:
 #. Select the relevant bone by clicking on it.
 #. Go to the *Display* panel *Custom Shape* field and select the 3D object previously created in the scene;
    in this example we are using a cube and a cone. You can optionally set the *At* field to another bone.
-
-.. TODO2.8 Maybe update the images (color & style)
 
 .. figure:: /images/animation_armatures_bones_properties_display_custom-shape-example.png
 

@@ -3,10 +3,6 @@
   Render
 ##########
 
-.. important::
-
-   Work In Progress
-
 These add-ons relate to rendering, render engines and rendering tools.
 
 .. toctree::

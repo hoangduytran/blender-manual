@@ -278,8 +278,6 @@ IK locking is used to stop the forearm from bending,
 but the forearm can still be twisted manually by pressing :kbd:`R Y Y` in *Pose Mode*,
 or by using other constraints.
 
-.. TODO2.8 Maybe update the images (color & style)
-
 .. figure:: /images/animation_armatures_posing_bone-constraints_inverse-kinematics_introduction_example.png
    :align: center
 

@@ -3,10 +3,6 @@
   Materials
 #############
 
-.. important::
-
-   Work In Progress
-
 These add-ons relate to materials libraries and materials helpers.
 
 .. toctree::

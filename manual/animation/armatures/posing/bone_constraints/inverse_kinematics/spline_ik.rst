@@ -1,4 +1,3 @@
-..    TODO/Review: {{review|partial=X|text=Need example & img}}.
 
 *********
 Spline IK

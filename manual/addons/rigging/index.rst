@@ -3,11 +3,7 @@
   Rigging
 ###########
 
-.. important::
-
-   Work In Progress
-
-ToDo.
+These add-ons relate to rigging and armatures.
 
 .. toctree::
    :maxdepth: 1

@@ -49,10 +49,9 @@ For example, if you have an armature which consists of three bones named "BoneA"
 the armature, the cube will get three new vertex groups created on it called "BoneA",
 "BoneB" and "BoneC". Notice that each vertex group is empty.
 
-.. TODO2.8
-   .. figure:: /images/animation_armatures_skinning_parenting_bone-empty-groups.png
+.. figure:: /images/animation_armatures_skinning_parenting_bone-empty-groups.png
 
-      Cube in Edit Mode using Armature Deform with empty groups.
+   Cube in Edit Mode using Armature Deform with empty groups.
 
 
 With Automatic Weights
