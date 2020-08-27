@@ -53,4 +53,4 @@ It is also possible, in the source (library) blend-file, to protect some bone la
 This helps keeping complex rigs usage sensible, by only exposing some 'public' bone layers as editable by users.
 
 Set the *Protected Layers* in the source file using the *Skeleton* panel of the *Armatures* properties.
-See :ref:`Armature Layers <armature-layers>`.
+See :ref:`Armature Layers <bpy.types.Armature.layers>`.
