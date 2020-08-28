@@ -192,10 +192,10 @@ however, this should give a good idea of the problem:
   nothing happens, because Blender remains in move operation, which of course has no effect on a connected bone.
 
 So, when posing a chain of bones, you should always edit its elements from the root bone to the tip bone.
-This process is known as *forward kinematics* (FK).
+This process is known as :term:`Forward Kinematics` (FK).
 We will see in a :ref:`later page <bone-constraints-inverse-kinematics>`
-that Blender features another pose method,
-called *inverse kinematics* (IK), which allows you to pose a whole chain just by moving its tip.
+that Blender features another pose method, called :term:`Inverse Kinematics` (IK),
+which allows you to pose a whole chain just by moving its tip.
 
 .. note::
 
