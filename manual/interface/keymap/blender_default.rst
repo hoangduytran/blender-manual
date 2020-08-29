@@ -155,15 +155,18 @@ Spacebar Action
       This option is good for someone who is new to Blender and is unfamiliar with the menus and shortcuts.
 
 Activate Gizmo Event
-   TODO.
+   The activation event for gizmos that support drag motion.
 
    Press
-      TODO
+      Allows immediate activation, preventing click events being passed to the tool.
    Drag
-      Todo
+      Allows click events to pass through to the tool, adding a small delay.
 
 Select All Toggles
    Causes selection shortcut :kbd:`A` to deselect all when any selection exists.
+
+Alt Click Tool Prompt
+   Tapping :kbd:`Alt` shows a prompt in the Status Bar prompting a second keystroke to activate the tool.
 
 
 3D View
