@@ -1,5 +1,3 @@
-..    TODO/Review: {{review|im=needs examples}}.
-
 .. _bpy.types.MultiresModifier:
 
 ************************

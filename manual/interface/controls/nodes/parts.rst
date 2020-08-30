@@ -1,4 +1,3 @@
-.. (todo add) links
 .. _bpy.types.NodeSocket:
 .. _bpy.types.NodeTree:
 
