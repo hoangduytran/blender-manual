@@ -262,7 +262,7 @@ Auto-Step
    Helps the Solver figure out how much work it needs to do based on how fast things are moving.
 
 Error Limit
-   Rules the overall quality of the solution delivered. Default 0.1.
+   Rules the overall quality of the solution delivered.
    The most critical setting that defines how precise the solver should check for collisions.
    Start with a value that is half the average edge length.
    If there are visible errors, jitter, or over-exaggerated responses, decrease the value.
