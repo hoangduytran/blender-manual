@@ -25,10 +25,10 @@ you may build very complex animations while keeping great control and keeping th
 The option *Curve Follow* does not work for particles. Instead you have to set *Angular Velocity*
 (*Particle system* tab) to *Spin* and leave the rotation constant (i.e. do not turn on *Dynamic*).
 
-*Curve Guide*\ s affect all particles on the same layer, independently from their distance to the curve.
+A *Curve Guide* force affects all particles on the same layer, independently from their distance to the curve.
 If you have several guides in a layer,
 their fields add up to each other (the way you may have learned it in your physics course).
-But you can limit their influence radius by changing there *Minimum Distance* (see below).
+But you can limit their influence radius by changing the *Minimum Distance* (see below).
 
 .. note::
 
