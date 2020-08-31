@@ -23,7 +23,7 @@ import os
 # Not used directly by Sphinx, only used by this file.
 #
 
-blender_version = '2.90'
+blender_version = '2.91'
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
