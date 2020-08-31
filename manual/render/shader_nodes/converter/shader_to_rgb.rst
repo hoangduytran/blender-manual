@@ -28,6 +28,7 @@ noisy input may not convert to a smooth result.
    - Screen Space Reflection
    - Subsurface Scattering
 
+   Shader to RGB node doesn't give expected results in render passes.
 
 Inputs
 ======

@@ -285,3 +285,7 @@ The passes can be combined to produce the final image as follows:
    - Depth of field is not rendered in render passes except the combined pass.
      It is possible to add the depth of field back in the Compositor using
      the :ref:`Defocus node <bpy.types.CompositorNodeDefocus>`.
+   - EEVEE render passes hides part of the BSDF equation.
+     :doc:`Shader to RGB </render/shader_nodes/converter/shader_to_rgb>` is not supported as it needs
+     the full BSDF equation.
+
