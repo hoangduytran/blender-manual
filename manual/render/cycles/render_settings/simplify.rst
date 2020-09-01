@@ -55,12 +55,11 @@ Distance Cull
 
 .. _bpy.types.RenderSettings_simplify_gpencil:
 .. _bpy.types.RenderSettings_simplify_gpencil_onplay:
+.. _bpy.types.RenderSettings_simplify_gpencil_view_fill:
 .. _bpy.types.RenderSettings_simplify_gpencil_view_modifier:
 .. _bpy.types.RenderSettings_simplify_gpencil_shader_fx:
-.. _bpy.types.RenderSettings_simplify_gpencil_blend:
 .. _bpy.types.RenderSettings_simplify_gpencil_tint:
-.. _bpy.types.RenderSettings_simplify_gpencil_view_fill:
-.. _bpy.types.RenderSettings_simplify_gpencil_remove_lines:
+.. _bpy.types.RenderSettings.simplify_gpencil_antialiasing:
 
 Grease Pencil
 =============
@@ -70,10 +69,12 @@ Playback Only
 Fill
    Shows the fill component in Grease Pencil materials.
 Modifiers
-   Shows Grease Pencil modifiers.
-ShaderFX
-   Shows Grease Pencil visual effects.
+   Shows Grease Pencil :doc:`modifiers </grease_pencil/modifiers/index>`.
+Shader Effects
+   Shows Grease Pencil :doc:`visual effects </grease_pencil/modifiers/index>`.
 Layer Tinting
    Shows layers tint overrides.
 Anti-Aliasing
-   TODO.
+   Use :term:`Anti-Aliasing` to smooth stroke edges.
+   The amount of anti-aliasing can be adjusted by the
+   :ref:`Anti-Aliasing Threshold <bpy.types.SceneGpencil.antialias_threshold>`.
