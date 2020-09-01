@@ -163,7 +163,7 @@ then go into *Edit Mode* and activate the tool.
 Options
 -------
 
-Share Tex Space
+Share Texture Space
    This is useful if mapping more than one mesh.
    It attempts to fit all of the objects' faces in the UV bounds without overlapping.
 New UV Map

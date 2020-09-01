@@ -14,10 +14,10 @@ Parent Type
 
 Tracking Axis
    Axis that points in the "forward" direction.
-   Applies to *Instance Verts* when *Align to Vertex Normal* is enabled.
+   Applies to *Instance Vertices* when *Align to Vertex Normal* is enabled.
 Up Axis
    Axis that points in the "upward" direction.
-   Applies to *Instance Verts* when *Align to Vertex Normal* is enabled.
+   Applies to *Instance Vertices* when *Align to Vertex Normal* is enabled.
 
 Pass Index
    Defines the index the object will have in the Object Index render pass. See :doc:`passes </render/layers/passes>`

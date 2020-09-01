@@ -74,7 +74,7 @@ Buffer Groups
    Enables buffering of group nodes to increase the speed at the cost of more memory.
 Two Pass
    Use two pass execution during editing: the first pass calculates fast nodes, the second pass calculates all nodes.
-Viewer Border
+Viewer Region
    This allows to set an area of interest for the backdrop.
    Press :kbd:`Ctrl-B` and select a rectangular area in the preview
    which will become the next preview in the backdrop.

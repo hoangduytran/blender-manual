@@ -126,7 +126,7 @@ Whole Collection
 Pick Random
    The objects in the group are selected in a random order, and only one object is displayed in place of a particle.
    Please note that this mechanism fully replaces old Blender particles system using parentage
-   and *Instancing Verts* to replace particles with actual geometry.
+   and *Instancing Vertices* to replace particles with actual geometry.
    This method is fully deprecated and does not work anymore.
 Global Coordinates
    Use object's global coordinates for instancing.

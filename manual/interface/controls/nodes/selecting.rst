@@ -13,8 +13,8 @@ Select All :kbd:`A`
    Select all nodes.
 Deselect All :kbd:`Alt-A`
    Deselect all nodes.
-Inverse :kbd:`Ctrl-I`
-   Inverse the selection.
+Invert :kbd:`Ctrl-I`
+   Invert the selection.
 Select Linked From :kbd:`L`
    Expand the selection to nodes which are linked to the inputs of the currently selected nodes.
 Select Linked To :kbd:`Shift-L`
