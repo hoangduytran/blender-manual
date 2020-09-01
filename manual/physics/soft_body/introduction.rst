@@ -62,7 +62,7 @@ Soft body simulation works for all objects that have vertices or control points
 To add a soft body simulation to an object,
 go to the *Physics* tab (bouncing ball icon) in the Properties
 and activate the *Soft Body* button.
-For a reference of all the settings see :doc:`this page </physics/soft_body/settings>`.
+For a reference of all the settings see :doc:`this page </physics/soft_body/settings/index>`.
 
 You start a soft body simulation by playback animation with :kbd:`Alt-A`,
 and stop the simulation with :kbd:`Esc` or :kbd:`Alt-A`.

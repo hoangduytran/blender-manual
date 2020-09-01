@@ -18,7 +18,7 @@ Transform Orientations
 *Transform Orientations* affect the behavior of
 :doc:`Transformations </scene_layout/object/editing/transform/basics>`: *Location*, *Rotation*, and *Scale*.
 You will see an effect on
-the :doc:`Object Gizmo </scene_layout/object/editing/transform/control/gizmos>`
+the :doc:`Object Gizmo </editors/3dview/display/gizmo>`
 (the widget in the center of the selection), as well as on transformation constraints,
 :doc:`Axis Locking </scene_layout/object/editing/transform/control/axis_locking>`.
 

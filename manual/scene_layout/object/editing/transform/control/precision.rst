@@ -57,7 +57,7 @@ to activate precision control or snapping.
 
 .. seealso::
 
-   :doc:`Read more about the Transform Gizmo </scene_layout/object/editing/transform/control/gizmos>`.
+   :doc:`Read more about the Transform Gizmo </editors/3dview/display/gizmo>`.
 
 .. tip:: Combining with Other Controls
 

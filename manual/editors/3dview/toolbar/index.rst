@@ -13,7 +13,7 @@ Toolbar
 The Toolbar contains a list of tools.
 Links to each modes Toolbar are listed below.
 
-- :doc:`Object Mode </scene_layout/object/toolbar/index>`
+- :doc:`Object Mode </scene_layout/object/tools/toolbar>`
 
 
 Edit Modes
