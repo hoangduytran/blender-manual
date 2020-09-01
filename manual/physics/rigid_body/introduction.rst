@@ -14,7 +14,7 @@ animation constraints and drivers.
 Creating a Rigid Body
 =====================
 
-Right now only mesh objects can participate in the rigid body simulation.
+Only mesh objects can participate in the rigid body simulation.
 To create rigid bodies, either click on *Rigid Body* button in the *Physics* tab of
 the Properties or use the *Add Active*/*Add Passive* buttons in the *Physics* tab of the *Toolbar*.
 

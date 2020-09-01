@@ -66,16 +66,17 @@ Collisions
       Rigid Body Collisions panel.
 
 Shape
-   The Shape option determines the collision shape of the object.
-   These can be broken into categories, primitive shapes and mesh based shapes.
+   Determines the collision shape of the object;
+   these can be broken into two categories: primitive shapes and mesh based shapes.
 
-   Primitive shapes are best in terms of memory/performance but do not
+   Primitive shapes (*Box*, *Sphere*, *Capsule*, *Cylinder*, and *Cone*)
+   are best in terms of memory/performance but do not
    necessarily reflect the actual shape of the object.
    They are calculated based on the object's bounding box.
-   The center of gravity is always in the middle for now.
+   The center of gravity is always in the geometric center of the shape.
    Primitive shapes can be shown in the 3D Viewport by enabling :ref:`Bounds <bpy.types.Object.show_bounds>`.
 
-   Mesh based shapes are calculated based on the geometry of the object
+   Mesh based shapes (*Convex Hull* and *Mesh*) are calculated based on the geometry of the object
    so they are a better representation of the object.
    The center of gravity for these shapes is the object origin.
 

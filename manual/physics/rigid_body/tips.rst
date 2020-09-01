@@ -26,9 +26,7 @@ can be used to accomplish a wide variety of interesting results.
 
 Enabling a constraint during the physics simulation often has dramatic results
 as the physics engine tries to bring into alignment two objects which are often dramatically out of alignment.
-It is very common for the affected objects to build up enough kinetic energy to bounce themselves out of camera
-(and into orbit, although the physics engine is not yet capable of
-simulating a planet's gravity well, so scratch that).
+It is very common for the affected objects to build up enough kinetic energy to bounce themselves out of camera.
 
 Rigid body dynamics can be baking to normal keyframes with *Bake To Keyframes* button
 in the *Physics* tab of the *Toolbar*.
