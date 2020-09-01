@@ -35,6 +35,11 @@ While moving items, the amount of change along the X, Y, and Z axis is displayed
    Moving an object in Object Mode changes the object's origin.
    Moving the object's vertices/edges/faces in Edit Mode does not change the object's origin.
 
+.. seealso::
+
+   Using a combination of shortcuts gives you more control over your transformation.
+   See :doc:`Transform Control </scene_layout/object/editing/transform/control/index>`.
+
 
 Options
 -------
@@ -73,6 +78,11 @@ The angle of rotation is displayed in the header of the 3D Viewport.
 .. figure:: /images/scene-layout_object_editing_transform_basics_rotate-display-values.png
 
    Rotation values.
+
+.. seealso::
+
+   Using a combination of shortcuts gives you more control over your transformation.
+   See :doc:`Transform Control </scene_layout/object/editing/transform/control/index>`.
 
 
 Options
@@ -133,6 +143,11 @@ The amount of scaling will be displayed in the header of the 3D Viewport.
 
    Scale values.
 
+.. seealso::
+
+   Using a combination of shortcuts gives you more control over your transformation.
+   See :doc:`Transform Control </scene_layout/object/editing/transform/control/index>`.
+
 
 Options
 -------
@@ -147,41 +162,3 @@ Orientation
 Proportional Editing
    The extruded face will affect nearby geometry.
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>` for a full reference.
-
-
-Common Options
-==============
-
-There are multiple ways to transform an element which include:
-
-- The keyboard shortcut.
-- The menu in the header.
-- The :doc:`3D Transform Gizmos </editors/3dview/display/gizmo>`.
-- The :doc:`Transform panel </scene_layout/object/properties/transforms>`
-  in the Sidebar region or the Object tab.
-
-
-Confirm and Cancel
-------------------
-
-:kbd:`LMB` click to accept changes.
-
-To cancel the transformation press :kbd:`RMB` or :kbd:`Esc` instead. This will
-reset the object or element to its original state.
-
-.. seealso::
-
-   Using a combination of shortcuts gives you more control over your
-   transformation. See :doc:`Transform Control </scene_layout/object/editing/transform/control/index>`.
-
-
-Workflow
---------
-
-Using Keyboard Shortcuts
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. Use :kbd:`LMB` to select the elements you want to transform.
-#. Tap :kbd:`G`, or :kbd:`R`, or :kbd:`S` once to enter the transformation mode.
-#. Transform the elements by moving the mouse.
-#. :kbd:`LMB` click to accept changes.
