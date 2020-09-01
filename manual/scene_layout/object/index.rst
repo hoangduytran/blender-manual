@@ -15,4 +15,4 @@
    selecting.rst
    editing/index.rst
    properties/index.rst
-   toolbar/index.rst
+   tools/index.rst

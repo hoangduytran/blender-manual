@@ -11,4 +11,3 @@ Transform controls can be used to modify and control the effects of the availabl
    numeric_input.rst
    axis_locking.rst
    precision.rst
-   options.rst
