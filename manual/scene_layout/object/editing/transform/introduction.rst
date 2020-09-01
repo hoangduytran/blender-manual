@@ -10,12 +10,11 @@ Each object can be moved, rotated and scaled in *Object Mode*.
 However, not all of these transformations have an effect on all objects.
 For example, scaling a camera has no effect on the render dimensions.
 
-:doc:`Basic transformations </scene_layout/object/editing/transform/basics>`
-include:
+Basic transformations include:
 
-- Moving
-- Rotating
-- Scaling
+- :doc:`/scene_layout/object/editing/transform/move`
+- :doc:`/scene_layout/object/editing/transform/rotate`
+- :doc:`/scene_layout/object/editing/transform/scale`
 
 These three transforms are the three big ones. However, more advanced transformations can be found
 in the :doc:`Advanced Transformations </scene_layout/object/editing/transform/index>` section.

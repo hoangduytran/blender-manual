@@ -79,8 +79,7 @@ Editing
    :Menu:      :menuselection:`Object --> Transform --> Scale/Move Texture Space`
 
 To modify the texture space from the 3D Viewport, enable
-:ref:`Edit Texture Space <modeling_transform_edit-texture-space>`
-while :doc:`transforming </scene_layout/object/editing/transform/basics>` an object.
+:ref:`Edit Texture Space <modeling_transform_edit-texture-space>` while transforming an object.
 
 
 Accessing

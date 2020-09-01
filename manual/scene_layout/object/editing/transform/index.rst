@@ -8,8 +8,10 @@
    :maxdepth: 2
 
    introduction.rst
-   basics.rst
    control/index.rst
+   move.rst
+   rotate.rst
+   scale.rst
    texture_space.rst
    align_transform_orientation.rst
    randomize.rst
