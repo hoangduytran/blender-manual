@@ -9,7 +9,7 @@
    :maxdepth: 2
 
    introduction.rst
-   settings.rst
+   settings/index.rst
    forces/index.rst
    collision.rst
    examples.rst
