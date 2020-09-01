@@ -409,9 +409,5 @@ Harmony
 .. _bpy.types.Camera.passepartout_alpha:
 
 Passepartout
-^^^^^^^^^^^^
-
-This option darkens the area outside of the camera's field of view.
-
-Alpha
-   Controls the transparency of the passepartout mask.
+   This option darkens the area outside of the camera's field of view.
+   The opacity of the passepartout can be adjusted using the value slider.
