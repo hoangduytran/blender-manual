@@ -17,9 +17,9 @@ Mode
       Automatically chooses the amount of threads to match the number of logical processors on your computer.
 
    Fixed
-      Manually choose the amount of threads to use for rendering. This can be useful for example,
-      if you want to use your computer while rendering, you can set the property
-      to a thread count lower the amount of logical processors on your computer.
+      Manually choose the maximum number threads to use for rendering.
+      This can be useful for example, if you want to use your computer while rendering,
+      you can set the property to a thread count lower the amount of logical processors on your computer.
 
 
 Tiles
