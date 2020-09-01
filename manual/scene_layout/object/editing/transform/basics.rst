@@ -24,8 +24,7 @@ or element then moves freely according to the mouse pointer's location and camer
 
 To confirm the action, press :kbd:`LMB`.
 
-While Move is active, the amount of change in the X, Y, and Z coordinates
-is displayed in the footer (at the upper left corner) of the 3D Viewport.
+While moving items, the amount of change along the X, Y, and Z axis is displayed in the header of the 3D Viewport.
 
 .. figure:: /images/scene-layout_object_editing_transform_basics_grab-display-values.png
 
@@ -54,7 +53,7 @@ involves changing the orientation of elements (vertices, edges, faces, objects, 
 around one or more axes or
 the :doc:`Pivot Point </editors/3dview/controls/pivot_point/index>`.
 
-The angle of rotation is displayed in the footer (at the upper left corner) of the 3D Viewport.
+The angle of rotation is displayed in the header of the 3D Viewport.
 
 .. figure:: /images/scene-layout_object_editing_transform_basics_rotate-display-values.png
 
@@ -95,7 +94,7 @@ to the opposite side, the scale will continue in the negative direction and flip
    Basic scale usage. From left to right, the panels show: the original object,
    a scaled down object, a scaled up object and a scale-flipped object.
 
-The amount of scaling will be displayed in the footer of the 3D Viewport.
+The amount of scaling will be displayed in the header of the 3D Viewport.
 
 .. figure:: /images/scene-layout_object_editing_transform_basics_scale-display-values.png
 
