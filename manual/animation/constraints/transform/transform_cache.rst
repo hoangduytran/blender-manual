@@ -44,6 +44,18 @@ Frame Offset
 Manual Scale
    Value by which to enlarge or shrink the object with respect to the world's origin.
 
+Velocity Attribute
+   The name of the Alembic attribute used for generating motion blur data.
+   by default, this is `.velocities` which is standard for most Alembic files.
+
+Velocity Unit
+   Defines how the velocity vectors are interpreted with regard to time.
+
+   Frame
+      The velocity unit was encoded in frames and does not need to be scale by scene FPS.
+   Second
+      The velocity unit was encoded in seconds and needs to be scaled by the scene FPS (1 / FPS).
+
 Object Path
    The path to the Alembic object inside the archive.
 

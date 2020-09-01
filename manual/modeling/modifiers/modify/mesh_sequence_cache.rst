@@ -44,6 +44,18 @@ Frame Offset
    Subtracted from the current frame to use for looking up the data in the cache file,
    or to determine which file to use in a file sequence.
 
+Velocity Attribute
+   The name of the Alembic attribute used for generating motion blur data;
+   by default, this is `.velocities` which is standard for most Alembic files.
+
+Velocity Unit
+   Defines how the velocity vectors are interpreted with regard to time.
+
+   Frame
+      The velocity unit was encoded in frames and does not need to be scale by scene FPS.
+   Second
+      The velocity unit was encoded in seconds and needs to be scaled by the scene FPS (1 / FPS).
+
 Object Path
    The path to the Alembic object inside the archive.
 
@@ -52,3 +64,6 @@ Read Data
    polygons, UV maps and Vertex Color layers.
 
    Vertices, Faces, UV, Color
+
+Velocity Scale
+   Multiplier used to control the magnitude of the velocity vector for time effects such as motion blur.
