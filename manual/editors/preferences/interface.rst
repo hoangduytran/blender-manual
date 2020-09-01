@@ -84,9 +84,12 @@ Color Picker Type
    See the different color picker types at the :doc:`Color picker </interface/controls/templates/color_picker>` page.
 
 Header Position
-   The default header position.
-   Using default uses top for most editor types and the positions saved in the file.
-   Otherwise you can choose to force top/bottom header alignment.
+   The default header position when opening a new editor.
+
+   Keep Existing
+      Uses top for most editor types and the positions saved in the start up file.
+   Top/Bottom
+      Always positions the header at the top or the bottom of the editor.
 
 Factor Display Type
    How factor value types are displayed in the user interface.
