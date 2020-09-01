@@ -36,6 +36,21 @@ While moving items, the amount of change along the X, Y, and Z axis is displayed
    Moving the object's vertices/edges/faces in Edit Mode does not change the object's origin.
 
 
+Options
+-------
+
+Move X, Y, Z
+   The amount to move the selection on the respected axis.
+
+Orientation
+   Aligns the transformation axes to a specified orientation constraint.
+   See :doc:`Transform Orientations </editors/3dview/controls/orientation>` for more information.
+
+Proportional Editing
+   The extruded face will affect nearby geometry.
+   See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>` for a full reference.
+
+
 .. _bpy.ops.transform.rotate:
 
 Rotate
@@ -60,11 +75,29 @@ The angle of rotation is displayed in the header of the 3D Viewport.
    Rotation values.
 
 
+Options
+-------
+
+Angle
+   The amount of rotation.
+
+Axis
+   Used to constraint the transformation to one or more axes.
+
+Orientation
+   Aligns the transformation axes to a specified orientation constraint.
+   See :doc:`Transform Orientations </editors/3dview/controls/orientation>` for more information.
+
+Proportional Editing
+   The extruded face will affect nearby geometry.
+   See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>` for a full reference.
+
+
 .. _view3d-transform-trackball:
 .. _bpy.ops.transform.trackball:
 
 Trackball Rotation
-------------------
+==================
 
 A free rotation mode. Press :kbd:`R R` to enable Trackball rotation.
 
@@ -101,6 +134,21 @@ The amount of scaling will be displayed in the header of the 3D Viewport.
    Scale values.
 
 
+Options
+-------
+
+Scale X, Y, Z
+   The amount to resize the selection on the respected axis.
+
+Orientation
+   Aligns the transformation axes to a specified orientation constraint.
+   See :doc:`Transform Orientations </editors/3dview/controls/orientation>` for more information.
+
+Proportional Editing
+   The extruded face will affect nearby geometry.
+   See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>` for a full reference.
+
+
 Common Options
 ==============
 
@@ -125,28 +173,6 @@ reset the object or element to its original state.
 
    Using a combination of shortcuts gives you more control over your
    transformation. See :doc:`Transform Control </scene_layout/object/editing/transform/control/index>`.
-
-
-Adjust Last Operation
----------------------
-
-In the case of the 3D Viewport, there is the possibility to tweak the operation once
-accepted, using the specific :ref:`ui-undo-redo-adjust-last-operation` panel corresponding to the tool.
-
-Value
-   The amount of the transformation.
-
-   Vector, Angle
-Constrain Axis
-   Used to constraint the transformation to one or more axes.
-
-   X, Y, Z
-Orientation
-   Shows the :doc:`Orientations </editors/3dview/controls/orientation>`
-   of the constraint axes.
-Proportional Editing, Falloff, Size
-   Activates/deactivates *Proportional Editing* and configures the *Falloff* type and *Size* of
-   the :doc:`/editors/3dview/controls/proportional_editing` tool.
 
 
 Workflow
