@@ -250,8 +250,10 @@ Face Sets
 Vertex Paint
 ============
 
-Opacity
-   The opacity of the overlay.
+.. _bpy.types.View3DOverlay.vertex_paint_mode_opacity:
+
+Stencil Mask Opacity
+   Opacity of the vertex paint mode stencil mask overlay.
 Show Wire
    Use wireframe display in paint modes.
 
@@ -281,8 +283,10 @@ Show Wire
 Texture Paint
 =============
 
-Opacity
-   The opacity of the overlay.
+.. _bpy.types.View3DOverlay.texture_paint_mode_opacity:
+
+Stencil Mask Opacity
+   The opacity of the texture paint mode stencil mask overlay.
 
 
 Pose Mode
