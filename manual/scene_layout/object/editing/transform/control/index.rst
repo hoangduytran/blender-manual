@@ -8,7 +8,6 @@ Transform controls can be used to modify and control the effects of the availabl
 .. toctree::
    :maxdepth: 2
 
-   gizmos.rst
    numeric_input.rst
    axis_locking.rst
    precision.rst
