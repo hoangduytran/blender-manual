@@ -135,8 +135,6 @@ Waves
 This surface type produces simulated wave motion. Like displace,
 wave surface also uses brush intersection depth to define brush strength.
 
-You can use following settings to adjust the motion:
-
 Open Borders
    Allows waves to pass through mesh "edges" instead of reflecting from them.
 Timescale
