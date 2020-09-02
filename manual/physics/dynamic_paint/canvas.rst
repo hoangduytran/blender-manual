@@ -151,15 +151,11 @@ Damping
 Spring
    Adjusts the force that pulls water back to "zero level".
 Smoothness
-   (Todo)
-
-   .. (wip) It greatly helps getting rid of the "noise" that occurs
-      if you use a really steep objects (like cubes) as a brush.
-      The new default value is 1.0 which is just high enough to only get rid of the sharpest spikes,
-      so if you want a really smooth waves it's better to use higher values.
-
-      TOOLTIP: Limit maximum steepness of wave slope between simulation points.
-      Use higher values for smoother waves at expense of reduced detail.
+   Limits the maximum steepness of wave slope between simulation points.
+   This greatly helps getting rid of the "noise" that occurs
+   when using objects with sharp edges (like cubes) as a brush.
+   The default value should be enough to only get rid of the sharpest spikes,
+   so to get even smoother waves use s higher value at the expense of reduced detail.
 
 .. tip::
 
