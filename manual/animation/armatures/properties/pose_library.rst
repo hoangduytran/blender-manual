@@ -14,9 +14,9 @@ Pose Library
 
    The Pose Library panel.
 
-The Pose Library is a way to store pose positions so the same position
+The pose library is a way to store pose positions so the same position
 can be used again later in the animation or to store different rest poses.
-*Pose Libraries* are saved to :doc:`Actions </animation/actions>`.
+Pose libraries are saved to :doc:`Actions </animation/actions>`.
 They are not generally used as actions, but can be converted to and from.
 The *Pose Library* panel is used to save, apply, and manage armature poses.
 
@@ -26,12 +26,12 @@ The *Pose Library* panel is used to save, apply, and manage armature poses.
 
 
 Action
-   A :ref:`ui-data-block` for Actions or Pose Libraries.
+   A :ref:`ui-data-block` for Actions or pose libraries.
 
 .. _bpy.types.ActionPoseMarkers.active_index:
 
 Pose Libraries
-   A :ref:`List view <ui-list-view>` of poses for the active Pose Library.
+   A :ref:`List view <ui-list-view>` of poses for the active pose library.
 
    Add ``+``
       If a pose is added, a :ref:`pose marker <marker-pose-add>` is created.
@@ -42,26 +42,26 @@ Pose Libraries
       regardless of their selection state.
 
       Add New
-         Adds a new pose to the active Pose Library with the current pose of the armature.
+         Adds a new pose to the active pose library with the current pose of the armature.
       Add New (Current Frame).
-         Will add a pose to the Pose Library based on the current frame selected in the Timeline.
+         Will add a pose to the pose library based on the current frame selected in the Timeline.
          In contrast to *Add New* and *Replace Existing* which automatically allocate a pose to an action frame.
       Replace Existing
-         Replace an existing pose in the active Pose Library with the current pose of the armature.
+         Replace an existing pose in the active pose library with the current pose of the armature.
 
-.. _bpy.ops.poselib.apply_pose:
+   .. _bpy.ops.poselib.apply_pose:
 
    Apply Pose (magnifying glass icon)
       Applies the active pose to the selected pose bones.
 
-.. _bpy.ops.poselib.action_sanitize:
+   .. _bpy.ops.poselib.action_sanitize:
 
    Sanitize Action (book icon)
-      Makes an action suitable for use as a Pose Library.
-      This is used to convert an Action to a Pose Library.
-      A pose is added to the Pose Library for each frame with keyframes.
+      Makes an action suitable for use as a pose library.
+      This is used to convert an Action to a pose library.
+      A pose is added to the pose library for each frame with keyframes.
 
-.. _bpy.ops.poselib.pose_move:
+   .. _bpy.ops.poselib.pose_move:
 
    Move (up/down arrow icon)
       Moves the pose up/down in the list.

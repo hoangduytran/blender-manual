@@ -17,7 +17,7 @@ In this panel you can set deformation options for each bone.
 
 Toggling the checkbox in the panel header off,
 prevents the bone from deforming the geometry at all,
-overriding any weights that it might have been assigned before; It mutes its influence.
+overriding any weights that it might have been assigned before; it mutes its influence.
 
 It also excludes the active bone in the automatic weight calculation when the mesh is
 parented to the armature using the *Armature Deform* tool with the *With Automatic Weights* option.

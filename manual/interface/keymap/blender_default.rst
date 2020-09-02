@@ -169,8 +169,8 @@ Alt Click Tool Prompt
    Tapping :kbd:`Alt` shows a prompt in the Status Bar prompting a second keystroke to activate the tool.
 
 
-3D View
--------
+3D Viewport
+-----------
 
 Grave Accent / Tilde Action
    Navigate

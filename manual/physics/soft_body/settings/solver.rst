@@ -50,7 +50,7 @@ Estimate Matrix
 Helpers
 =======
 
-These settings allow you to control how Blender will react (deform) the soft body
+These settings control how the soft body will react (deform)
 once it either gets close to or actually intersects (cuts into) another collision object on the same layer.
 
 Choke

@@ -17,7 +17,7 @@ Used to control the physics of the rigid body simulation.
 This panel is available only for *Active* type of rigid bodies.
 
 Damping Translation
-      Amount of linear velocity that is lost over time.
+   Amount of linear velocity that is lost over time.
 
 Rotation
    Amount of angular velocity that is lost over time.
@@ -34,8 +34,8 @@ Start Deactivated
 
 Linear Velocity
    Specifies the linear deactivation velocity below which the rigid body
-   is deactivated and simulation stops simulating object.
+   is deactivated and the simulation stops simulating the object.
 
 Angular Velocity
    Specifies the angular deactivation velocity below which the rigid body
-   is deactivated and simulation stops simulating object.
+   is deactivated and the simulation stops simulating the object.

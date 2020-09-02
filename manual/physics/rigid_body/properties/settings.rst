@@ -15,8 +15,8 @@ Settings
 
 Mass
    Specifies how heavy the object is and "weights" irrespective of gravity.
-   There are predefined mass preset available with the *Calculate Mass* button
-   in the Physics tab of the Toolbar.
+   There are predefined mass preset available with *Calculate Mass*
+   in the :menuselection:`Object --> Rigid Body` menu.
 
    Calculate Mass
       Automatically calculate mass values for rigid body objects based on its volume.

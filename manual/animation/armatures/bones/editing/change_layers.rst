@@ -16,9 +16,9 @@ Change Armature Layers
 
 Each armature has 32 :ref:`Layers <bpy.types.Armature.layers>`
 to organize armatures by "regrouping" them into sets of bones.
-only bones in active layers will be visible/editable, but they will always be effective
+Only bones in active layers will be visible/editable, but they will always be effective
 (i.e. move objects or deform geometry), whether in an active layer or not.
-This operator changes which layers are visible in the 3D Viewport.
+This tool changes which layers are visible in the 3D Viewport.
 To show several layers at once, :kbd:`Shift-LMB` on the desired layers to view.
 To move bones to a given layer, use :ref:`bpy.ops.armature.bone_layers`.
 

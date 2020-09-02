@@ -29,7 +29,7 @@ Pose Position
 
 Armature Layers
    Each armature has 32 layers to organize armatures by "regrouping" them into sets of bones.
-   only bones in active layers will be visible/editable, but they will always be effective
+   Only bones in active layers will be visible/editable, but they will always be effective
    (i.e. move objects or deform geometry), whether in an active layer or not.
    This property changes which layers are visible in the 3D Viewport.
    To show several layers at once, :kbd:`Shift-LMB` on the desired layers to view.

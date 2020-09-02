@@ -10,9 +10,9 @@ Pose Library
    :Mode:      Pose Mode
    :Menu:      :menuselection:`Pose --> Pose Library`
 
-The Pose Library is a way to store pose positions so the same position
+The pose library is a way to store pose positions so the same position
 can be used again later in the animation or to store different rest poses.
-*Pose Libraries* are saved to :doc:`Actions </animation/actions>`.
+*Pose libraries* are saved to :doc:`Actions </animation/actions>`.
 They are not generally used as actions, but can be converted to and from.
 
 .. seealso::
@@ -35,7 +35,7 @@ Browse Poses
 Interactively browse poses in the 3D Viewport.
 After running the operator, cycle through poses using the :kbd:`Left` and :kbd:`Right` arrow keys.
 The name of the pose being previewed is displayed in the header region.
-After the desired pose is selected using :kbd:`Enter` or :kbd:`LMB` to make that the active pose;
+After the desired pose is selected using :kbd:`Return` or :kbd:`LMB` to make it the active pose;
 to cancel browsing, use :kbd:`Esc` or :kbd:`RMB`.
 
 Pose
@@ -62,12 +62,12 @@ Bones that are ignored by the *Whole Character* keying set are always ignored,
 regardless of their selection state.
 
 Add New
-   Adds a new pose to the active Pose Library with the current pose of the armature.
+   Adds a new pose to the active pose library with the current pose of the armature.
 Add New (Current Frame).
-   Will add a pose to the Pose Library based on the current frame selected in the Timeline.
+   Will add a pose to the pose library based on the current frame selected in the Timeline.
    In contrast to *Add New* and *Replace Existing* which automatically allocate a pose to an action frame.
 Replace Existing
-   Replace an existing pose in the active Pose Library with the current pose of the armature.
+   Replace an existing pose in the active pose library with the current pose of the armature.
 
 
 .. _bpy.ops.poselib.pose_rename:

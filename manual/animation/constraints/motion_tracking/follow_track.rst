@@ -4,8 +4,8 @@
 Follow Track Constraint
 ***********************
 
-By default the Follow Track constraint is making objects have the same position at a frame as the track has and
-the motion of this object happens on a single plane defined by the camera and the original position of the object.
+By default the Follow Track constraint is making objects have the same position at a frame as the track has.
+The motion of this object happens on a single plane defined by the camera and the original position of the object.
 
 
 Options

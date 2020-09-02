@@ -87,7 +87,7 @@ Header Position
    The default header position when opening a new editor.
 
    Keep Existing
-      Uses top for most editor types and the positions saved in the start up file.
+      Uses top for most editor types and the positions saved in the start-up file.
    Top/Bottom
       Always positions the header at the top or the bottom of the editor.
 

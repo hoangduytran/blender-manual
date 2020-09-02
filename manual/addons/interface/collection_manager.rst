@@ -252,12 +252,13 @@ QCD Move Widget:
 
             The values for icon alpha are not overrides and always affect the QCD Move Widget.
 
+
 Known Issues
 ============
 
 - Linked collections are not supported.
-
-- Two QCD slots can swap collections if the collections are under the same parent and you rename one collection with the name of the other, then undo the rename and redo the rename.
+- Two QCD slots can swap collections if the collections are under the same parent and
+  you rename one collection with the name of the other, then undo the rename and redo the rename.
 
 .. admonition:: Reference
    :class: refbox

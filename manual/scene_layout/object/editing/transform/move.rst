@@ -17,9 +17,7 @@ that make up the object within the 3D space of the active 3D Viewport.
 
 Pressing :kbd:`G` activates "Move" transformation mode. The selected object
 or element then moves freely according to the mouse pointer's location and camera.
-
 To confirm the action, press :kbd:`LMB`.
-
 While moving items, the amount of change along the X, Y, and Z axis is displayed in the header of the 3D Viewport.
 
 .. figure:: /images/scene-layout_object_editing_transform_basics_grab-display-values.png

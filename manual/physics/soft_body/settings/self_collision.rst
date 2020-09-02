@@ -36,6 +36,7 @@ Ball Size
    This setting is the factor that is multiplied by the spring length.
    It is a spherical distance (radius) within which, if another vertex of the same mesh enters,
    the vertex starts to deflect in order to avoid a self-collision.
+
    Set this value to the fractional distance between vertices that you want them to have their own "space".
    Too high of a value will include too many vertices at all times and slow down the calculation.
    Too low of a level will let other vertices get too close and thus possibly intersect because

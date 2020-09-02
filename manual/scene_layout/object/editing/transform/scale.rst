@@ -37,7 +37,7 @@ The amount of scaling will be displayed in the header of the 3D Viewport.
 
 
 Options
--------
+=======
 
 Scale X, Y, Z
    The amount to resize the selection on the respected axis.

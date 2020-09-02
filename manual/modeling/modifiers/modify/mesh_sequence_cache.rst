@@ -46,7 +46,7 @@ Frame Offset
 
 Velocity Attribute
    The name of the Alembic attribute used for generating motion blur data;
-   by default, this is `.velocities` which is standard for most Alembic files.
+   by default, this is ``.velocities`` which is standard for most Alembic files.
 
 Velocity Unit
    Defines how the velocity vectors are interpreted with regard to time.

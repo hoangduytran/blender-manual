@@ -14,19 +14,16 @@ Move, Rotate, Scale
 Once you have a selection of one or more elements, you can move :kbd:`G`,
 rotate :kbd:`R` or scale :kbd:`S` them, like many other things in Blender,
 as described in the :doc:`Manipulation in 3D Space </scene_layout/object/editing/transform/introduction>` section.
-
 To move, rotate and scale selected components, either use the *Move*, *Rotate*, and *Scale* buttons,
 the :doc:`transform gizmos </editors/3dview/display/gizmo>`,
 or the shortcuts: :kbd:`G`, :kbd:`R`, and :kbd:`S` respectively.
 
 After moving a selection, the options in the :ref:`ui-undo-redo-adjust-last-operation` panel allow you to
 fine-tune your changes, limit the effect to certain axes, turn Proportional Editing on and off, etc.
-
 Of course, when you move an element of a given type (e.g. an edge),
 you also modify the implicitly related elements of other kinds (e.g. vertices and faces).
 
 Pressing :kbd:`G` twice enters either *Edge Slide* or *Vertex Slide* tool depending on the selection.
-
 You also have in *Edit Mode* an extra option when using these basic manipulations:
 the :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
 

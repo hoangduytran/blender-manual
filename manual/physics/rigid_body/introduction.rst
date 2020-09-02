@@ -14,9 +14,16 @@ animation constraints and drivers.
 Creating a Rigid Body
 =====================
 
-Only mesh objects can participate in the rigid body simulation.
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      All Modes
+   :Panel:     :menuselection:`Properties --> Physics --> Rigid Body`
+   :Menu:      :menuselection:`Object --> Rigid Body`
+
+Only mesh objects can be part of a rigid body simulation.
 To create rigid bodies, either click on *Rigid Body* button in the *Physics* tab of
-the Properties or use the *Add Active*/*Add Passive* buttons in the *Physics* tab of the *Toolbar*.
+the Properties or use *Add Active*/*Add Passive* in the :menuselection:`Object --> Rigid Body` menu.
 
 There are two types of rigid body: active and passive. *Active* bodies are dynamically simulated, while *passive*
 bodies remain static. Both types can be driven by the animation system when using the *Animated* option.

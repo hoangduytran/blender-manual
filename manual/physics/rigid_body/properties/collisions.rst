@@ -18,7 +18,7 @@ Shape
    these can be broken into two categories: primitive shapes and mesh based shapes.
 
    Primitive shapes (*Box*, *Sphere*, *Capsule*, *Cylinder*, and *Cone*)
-   are best in terms of memory/performance but do not
+   are best in terms of memory and performance but do not
    necessarily reflect the actual shape of the object.
    They are calculated based on the object's bounding box.
    The center of gravity is always in the geometric center of the shape.

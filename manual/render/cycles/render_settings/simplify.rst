@@ -75,6 +75,5 @@ Shader Effects
 Layer Tinting
    Shows layers tint overrides.
 Anti-Aliasing
-   Use :term:`Anti-Aliasing` to smooth stroke edges.
-   The amount of anti-aliasing can be adjusted by the
-   :ref:`Anti-Aliasing Threshold <bpy.types.SceneGpencil.antialias_threshold>`.
+   Use :term:`Anti-Aliasing` to smooth stroke edges. The amount of anti-aliasing can be adjusted by
+   the :ref:`Anti-Aliasing Threshold <bpy.types.SceneGpencil.antialias_threshold>`.
