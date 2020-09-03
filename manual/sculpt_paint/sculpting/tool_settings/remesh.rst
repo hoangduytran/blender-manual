@@ -64,12 +64,14 @@ Voxel Remesh
    Performs the remeshing operation to create a new manifold mesh based on the volume of the current mesh.
    Performing this will lose all mesh object data layers associated with the original mesh.
 
-.. note:: Limitations:
-
-   - Remeshing only works on the original mesh data and
-     ignores generated geometry from modifiers, shape keys, rigging, etc.
-   - Remeshing will not work with the :doc:`/modeling/modifiers/generate/multiresolution`.
-
 .. seealso::
 
    :doc:`Remesh modifier </modeling/modifiers/generate/remesh>`
+
+
+Known Limitations
+=================
+
+- Remeshing only works on the original mesh data and
+  ignores generated geometry from modifiers, shape keys, rigging, etc.
+- Remeshing will not work with the :doc:`/modeling/modifiers/generate/multiresolution`.

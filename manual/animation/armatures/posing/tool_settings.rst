@@ -57,10 +57,12 @@ Relative Mirror
 
 Accounts for any relative transformations when using *X-Axis Mirror*.
 
-.. note:: Relative Mirror Limitation
-
-   This option is not supported with `Auto IK`_ enabled.
-
 .. seealso::
 
    :ref:`Naming bones <armature-editing-naming-bones>`.
+
+
+Known Limitations
+=================
+
+Relative Mirror is not supported with `Auto IK`_ enabled.

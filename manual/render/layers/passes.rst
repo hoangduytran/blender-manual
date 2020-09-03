@@ -277,15 +277,16 @@ The passes can be combined to produce the final image as follows:
 
 .. figure:: /images/render_layers_passes_eevee-combine.svg
 
-.. note:: Limitations:
 
-   - Alpha blended materials are not rendered in render passes except the combined pass.
-     Use the *Alpha Clip* or *Alpha Hashed* as :ref:`Blending Mode <bpy.types.Material.blend_method>`
-     to render transparent materials in render passes.
-   - Depth of field is not rendered in render passes except the combined pass.
-     It is possible to add the depth of field back in the Compositor using
-     the :ref:`Defocus node <bpy.types.CompositorNodeDefocus>`.
-   - Eevee render passes exclude parts of the BSDF equation.
-     :doc:`Shader to RGB </render/shader_nodes/converter/shader_to_rgb>` is not supported as it needs
-     the full BSDF equation.
+Known Limitations
+=================
 
+- Alpha blended materials are not rendered in render passes except the combined pass.
+  Use the *Alpha Clip* or *Alpha Hashed* as :ref:`Blending Mode <bpy.types.Material.blend_method>`
+  to render transparent materials in render passes.
+- Depth of field is not rendered in render passes except the combined pass.
+  It is possible to add the depth of field back in the Compositor using
+  the :ref:`Defocus node <bpy.types.CompositorNodeDefocus>`.
+- Eevee render passes exclude parts of the BSDF equation.
+  :doc:`Shader to RGB </render/shader_nodes/converter/shader_to_rgb>` is not supported as it needs
+  the full BSDF equation.
