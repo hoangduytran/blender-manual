@@ -93,6 +93,8 @@ Using Rig Types (Advanced)
    add a rig sample to your armature to see how it is supposed to be used.
 
 
+.. _bpy.ops.armature.rigify_add_bone_groups:
+
 Layers, Bone Groups & Selection Sets
 ====================================
 
