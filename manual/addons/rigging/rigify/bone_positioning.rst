@@ -47,7 +47,7 @@ Position the eye bones in the eye pivot point facing right **toward** the face o
    If your eye has a spherical shape you can define its pivot by entering Edit Mode and
    selecting two opposite vertices on the center meridian -- or the opposite poles -- and
    snapping the cursor to selection by pressing :menuselection:`Snap --> Cursor To Selected`.
-   If your eye is a complete sphere and its location it's not applied, than you can just use its center of mass.
+   If your eye is a complete sphere and its location it's not applied, then you can just use its center of mass.
 
 Finally position the teeth bones on your teeth geometry and the tongue bone chain as described in the figure.
 
