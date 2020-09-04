@@ -337,7 +337,12 @@ Export UV Layout
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Export UV Layout`
 
-This is an :doc:`add-on </addons/import_export/mesh_uv_layout>` activated by default.
+
+If you are using an external application, you need to know where on the mesh you are painting.
+
+.. note::
+
+   This is an :doc:`add-on </addons/import_export/mesh_uv_layout>` activated by default.
 
 
 Proportional Editing

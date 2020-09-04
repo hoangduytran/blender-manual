@@ -1,18 +1,9 @@
 
-*****************
-Applying Textures
-*****************
+*************
+Using UV Maps
+*************
 
 Sooner or later, you may want to use an image texture on your model.
-If you are using an external application, you need to know where on the mesh you are painting.
-You may also need to test your UV mapping with a test image.
-This section covers how to export an outline of your UV map,
-and how to load images into the UV editor.
-
-
-Applying Textures to UVs
-========================
-
 The UV Editor allows you to map textures directly to the mesh faces.
 The 3D Viewport shows you the object being textured.
 If you set the 3D Viewport into Textured viewport shading,
@@ -29,17 +20,13 @@ To create a Material, you have to click *Add New* Material in the Shading contex
 There are two ways to tell Blender to use the UV texture when rendering;
 the quick way and the proper way.
 
-
-Using UV Coordinates
---------------------
-
 The quick way is to use generated UV coordinates.
 Generated coordinates is used by default by all :doc:`Texture nodes </render/shader_nodes/textures/index>`,
 with the exception of Image textures that use UV coordinates by default.
 To use generated coordinates for images as well use the *Generated* output of the
 :doc:`Texture Coordinate node </render/shader_nodes/input/texture_coordinate>`
 
-The proper way is to use :doc:`UV Unwrapping </modeling/meshes/uv/unwrapping/index>`
+The proper way is to use :doc:`UV UnApplying Textureswrapping </modeling/meshes/uv/unwrapping/index>`
 to manually generate UV coordinates. To use UV Mapping,
 use the :doc:`Texture Coordinate node </render/shader_nodes/input/texture_coordinate>`
 (UV output) or the :doc:`UV Map node </render/shader_nodes/input/uv_map>`
@@ -63,6 +50,7 @@ Using the Test Grid
 If your image is a base uniform pattern and
 you want the application of that image to your model to look like cloth,
 you do **not** want any stretching (unless you want the cloth to look like spandex).
+You may also need to test your UV mapping with a test image:
 
 .. list-table::
 
