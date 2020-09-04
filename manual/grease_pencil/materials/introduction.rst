@@ -9,7 +9,7 @@ They define the base color and texture of the strokes and filled areas.
 There is always only one active material in the list (the selected one).
 When you draw, the new strokes use the active material.
 
-You can overrides the base material color using the tools in
+You can override the base material color using the tools in
 :doc:`Vertex Mode </grease_pencil/modes/vertex_paint/introduction>`
 or the Draw and Tint tool in Draw Mode.
 
@@ -88,7 +88,7 @@ Lock Unselected
    Locks all materials not used in the selected strokes.
 
 Lock Unused
-   Locks and hide all unused materials.
+   Locks and hides all unused materials.
 
 Remove Unused Slots
    Remove all unused materials.

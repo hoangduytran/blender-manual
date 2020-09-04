@@ -35,7 +35,7 @@ Selection Mask
    Sculpt Mode in Grease Pencil allows you to select points or strokes to restrict the effect
    of the sculpting tools to only a certain areas of your drawing.
 
-   You can use the selection tools in the Toolbar for a quick selections.
+   You can use the selection tools in the Toolbar for a quick selection.
 
    You can restrict sculpting only on the selected points or strokes with the Selection mode buttons.
 
