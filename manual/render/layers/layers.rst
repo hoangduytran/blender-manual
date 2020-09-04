@@ -106,23 +106,35 @@ Based on the render engine different options can be set.
 
    Collection/View layer settings
 
+.. _bpy.ops.outliner.collection_exclude_set:
+
 Disable from View Layer
    Remove this collection from the active view layer. Objects that are only in
    this collection will not be rendered for the active view layer.
+
+.. _bpy.ops.outliner.collection_exclude_clear:
 
 Enable in View Layer
    Add this collection to the active view layer. Objects inside the collection
    will be rendered with the active view layer.
 
+.. _bpy.ops.outliner.collection_indirect_only_set:
+
 Set Indirect Only
    Objects inside this collection will only contribute to the final image
    indirectly through shadows and reflections.
 
+.. _bpy.ops.outliner.collection_indirect_only_clear:
+
 Clear Indirect Only
    Clear the Set Indirect Only flag. Objects inside this collection will contribute normally to the final image.
 
+.. _bpy.ops.outliner.collection_holdout_set:
+
 Set Holdout
    Objects inside this collection will generate a holdout/mask in the active view layer.
+
+.. _bpy.ops.outliner.collection_holdout_clear:
 
 Clear Holdout
    Clear the Set Holdout flag.
