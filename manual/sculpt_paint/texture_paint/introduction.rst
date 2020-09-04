@@ -24,6 +24,7 @@ Since a UV texture is just a special-purpose image,
 you can also use any external paint program, like GIMP or Krita.
 
 .. figure:: /images/sculpt-paint_texture-paint_introduction_example.png
+   :align: right
    :width: 430px
 
    Texture painting in Blender.
