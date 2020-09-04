@@ -270,19 +270,33 @@ Enable Collection (checkbox, collection only)
    The following options are hidden by default and need to be enabled in
    the Outliner Filter before they can be used.
 
+.. _bpy.types.Collection.hide_select:
+
 Selectability (mouse cursor icon)
    This is useful for if you have placed something in the scene
    and do not want to accidentally select it when working on something else.
+
+.. _bpy.types.LayerCollection.hide_viewport:
+
 Global Viewport Visibility (screen icon)
    This will still render the object/collection, but it will be ignored by all the viewports.
    Often used for collections with high-poly objects that need to be instanced in other files.
    Objects hidden this way are no longer part of the :doc:`View Layer </scene_layout/view_layers/index>`,
    are not evaluated, and such do not negatively affect playback performance.
+
+.. _bpy.types.Object.hide_render:
+
 Rendering (camera icon)
    This will still keep the object visible in the scene, but it will be ignored by the renderer.
    Usually used by support objects that help modeling and animation yet do not belong in the final images.
+
+.. _bpy.types.LayerCollection.holdout:
+
 Holdout (collection only)
-   Mask out objects in collection from view layer -- *Cycles only*.
+   Mask out objects in collection from view layer.
+
+.. _bpy.types.LayerCollection.indirect_only:
+
 Indirect Only (collection only)
    Objects in these collections only contribute to indirect light -- *Cycles only*.
 
