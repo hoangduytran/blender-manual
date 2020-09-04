@@ -57,7 +57,7 @@ Render Options
    ``//render_`` becomes ``//render_####``, writing frames as ``//render_0001.png``
 ``-E``, ``--engine`` ``<engine>``
    Specify the render engine.
-   Use ``-E`` help to list available engines.
+   Use ``-E help`` to list available engines.
 ``-t``, ``--threads`` ``<threads>``
    Use amount of ``<threads>`` for rendering and other operations
    [1-64], 0 for systems processor count.
@@ -276,6 +276,10 @@ Other Options
 
 ``/?``
    Print this help text and exit (windows only).
+``--debug-depsgraph-uuid``
+   Enable debug messages from dependency graph related on graph construction.
+``--debug-exit-on-error``
+   Immediately exit when internal errors are detected.
 ``--debug-freestyle``
    Enable debug messages for Freestyle.
 ``--debug-ghost``
