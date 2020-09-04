@@ -98,13 +98,8 @@ Using Rig Types (Advanced)
 Layers, Bone Groups & Selection Sets
 ====================================
 
-Armature layers are usually used to isolate bones.
+:ref:`Armature Layers <bpy.types.Armature.layers>` are usually used to isolate bones.
 Rigify can take advantage of armature layer to generate extra features and the user interface for the final rig.
-Blender 2.79 can handle 32 separate layers for each armature.
-The armature layers are visualized under the armature tab. They are split in two separate groups of 16:
-The top row contains layers from 1 to 8 and from 9 to 16.
-The bottom row layers form 17 to 24 and form 25 to 32.
-
 Rigify layers are displayed in a vertical layout inside their own separate panel named Rigify Layer Names.
 
 - The first column shows the layer number.
