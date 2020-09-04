@@ -12,7 +12,7 @@ Action Strips
 
 An Action Strip is a container of keyframe data of an action.
 Any action used by the NLA first must be turned into an Action strip.
-This is done so by clicking the Push Down action button see above.
+This is done so by clicking the :ref:`Push Down Action <bpy.ops.nla.action_pushdown>` button see above.
 Alternatively, you can go to :menuselection:`Add --> Action Strip`.
 
 

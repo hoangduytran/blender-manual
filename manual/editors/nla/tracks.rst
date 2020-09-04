@@ -30,9 +30,9 @@ Action Track
 By default, the Action Editor automatically stores the keyframes you create through the 3D View
 by storing them into an action based on the name as the object you are working on.
 
-.. (alt) icon: downwards chevron
+.. _bpy.ops.nla.action_pushdown:
 
-Push Down
+Push Down Action (push down icon)
    Turns the active action into a new NLA strip at the top of the NLA stack.
 
    .. figure:: /images/editors_nla_tracks_push-down-button.png
