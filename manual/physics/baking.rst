@@ -6,7 +6,6 @@ Baking Physics Simulations
 **************************
 
 :term:`Baking` refers to the act of storing or caching the results of a calculation.
-
 The result of a simulation is automatically cached to memory when the animation is played,
 so that the next time it runs, it can be replayed more quickly by reading the results from the memory.
 
@@ -28,6 +27,10 @@ remains exactly the same every time.
    but not all have exactly the same settings available. All the settings are covered here,
    but individual physics types may not provide all these options.
 
+
+Options
+=======
+
 .. figure:: /images/physics_baking_multi-cache-interface.png
    :align: right
 
@@ -38,12 +41,8 @@ Caches List
    You can manage the caches with this :ref:`list view <ui-list-view>`.
    Double-click the cache entry to give it a name.
 
-
-Options
-=======
-
-Cache Name
-   Each cache can have a name. If this name is given, any disk cache will be
+   Each cache can have a name. Double-click the cache entry to give it a name.
+   If this name is given, any disk cache will be
    stored in files starting with that name. For example, a cache named 'MyCache'
    will be stored in ``MyCache_xxxxxx_yy.bphys``.
 
@@ -60,46 +59,44 @@ Cache Name
       As a result, an object with multiple physics systems that all have an unnamed cache will cause
       conflict and **can result in losing cache files**.
 
+External
+   Allows you to read the cache from a drive using a user-specified file path.
+
+   .. note::
+
+      The cache name in *Caches List* and the *Index*
+      has to exactly match the external cache files name in order to work.
+      The cache files name format is ``name_frame_index.bphys``.
+
+   Index
+      The index number of cache files. (The last two digits of the files name.)
+   Path
+      Select the directory path to the cache files.
+
 Disk Cache
    The cache of a baked simulation will be stored inside the blend-file when you save it.
    When *Disk Cache* is checked, Blender will save the cache separately to
    the drive in a folder named ``blendcache_[filename]`` alongside the blend-file.
    (The blend-file must be saved first.)
 
-   Use Library Path
-      Share the disk cache when the physics object is
-      :doc:`linked </files/linked_libraries/index>` into another blend-file.
+Use Library Path
+   Share the disk cache when the physics object is
+   :doc:`linked </files/linked_libraries/index>` into another blend-file.
 
-      When this option is enabled, linked versions of the object will reference the same disk cache.
-      Otherwise linked versions of the object will use independent caches.
+   When this option is enabled, linked versions of the object will reference the same disk cache.
+   Otherwise linked versions of the object will use independent caches.
 
-   Compression
-      The compression level for cache files. Some physics caches can be very large (such as smoke).
-      Blender can compress these caches in order to save space.
+Compression
+   The compression level for cache files. Some physics caches can be very large,
+   Blender can compress these caches in order to save space.
 
-      None
-         Do not compress the cache.
-      Light
-         Compression will optimize the speed of compressing/decompressing operations over file size.
-      Heavy
-         Compression will result in smaller cache files more than *Light*,
-         however, requires more CPU time to compress/decompress.
-
-External
-   Allows you to read the cache from a drive using a user-specified file path.
-
-   .. (wip) The Smoke Cache (is always Disk Cache) can also be written to an arbitrary directory.
-
-   .. note::
-
-      The cache name in *Caches List* and the *Index Number*
-      has to exactly match the external cache files name in order to work.
-      The cache files name format is ``name_frame_index.bphys``.
-
-   Index Number
-      The index number of cache files. (The last two digits of the files name.)
-   File Path
-      Select the directory path to the cache files.
+   None
+      Do not compress the cache.
+   Light
+      Compression will optimize the speed of compressing/decompressing operations over file size.
+   Heavy
+      Compression will result in smaller cache files more than *Light*,
+      however, requires more CPU time to compress/decompress.
 
 Start
    Frame on which to start the simulation.
