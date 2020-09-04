@@ -88,6 +88,8 @@ These limitations creates a few problems:
   This is why most effects have a thickness parameter to control how to consider potential intersected pixels.
 - Blended surfaces are not considered by these effects.
   They are not part of the depth prepass and do not appear in the depth buffer.
+- Objects that a part of :ref:`Holdout Collections <bpy.ops.outliner.collection_holdout_set>`
+  will not be rendered with screen space effects.
 
 
 .. _eevee-limitations-ao:
