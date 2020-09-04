@@ -26,25 +26,24 @@ So to render an image, you must:
 
 To create a Material, you have to click *Add New* Material in the Shading context.
 
-There are two ways to tell Blender to use the UV texture when rendering:
-The proper way and the quick way:
+There are two ways to tell Blender to use the UV texture when rendering;
+the quick way and the proper way.
 
 
-Use UV Coordinates
-------------------
+Using UV Coordinates
+--------------------
 
-.. figure:: /images/modeling_meshes_uv_applying-image_coords.png
+The quick way is to use generated UV coordinates.
+Generated coordinates is used by default by all :doc:`Texture nodes </render/shader_nodes/textures/index>`,
+with the exception of Image textures that use UV coordinates by default.
+To use generated coordinates for images as well use the *Generated* output of the
+:doc:`Texture Coordinate node </render/shader_nodes/input/texture_coordinate>`
 
-   A texture setup to map using its UV coordinates.
-
-In the Texture channel panel,
-Add a New Texture and define the texture as an image and load the image you want to use.
-In the Mapping section, choose UV from the Coordinates menu, and select the UV map to use.
-
-Make sure it is mapped to Color in the Influence section as well
-(it will be mapped to Color by default, and the UV texture is named "UVTex" by default).
-If the image has an alpha channel and you want to use it,
-click *Use Alpha* in the Map Image panel.
+The proper way is to use :doc:`UV Unwrapping </modeling/meshes/uv/unwrapping/index>`
+to manually generate UV coordinates. To use UV Mapping,
+use the :doc:`Texture Coordinate node </render/shader_nodes/input/texture_coordinate>`
+(UV output) or the :doc:`UV Map node </render/shader_nodes/input/uv_map>`
+and select the UV map to use, "UVMap" by default.
 
 Full details of using Image textures are on
 the :doc:`Image Textures </render/materials/legacy_textures/types/image_movie>` page.
