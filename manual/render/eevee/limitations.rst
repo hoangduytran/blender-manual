@@ -131,6 +131,14 @@ Subsurface Scattering
   leading to light leaking from surface to surface.
 
 
+Motion Blur
+===========
+
+:doc:`Motion Blur </render/eevee/render_settings/motion_blur>`
+is only available in final renders and is not shown in the 3D Viewport
+and thus :ref:`Viewport Renders <bpy.ops.render.opengl>`.
+
+
 .. _eevee-limitations-materials:
 
 Materials

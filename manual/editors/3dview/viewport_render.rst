@@ -72,6 +72,8 @@ enter the active camera view with :kbd:`Numpad0`.
 
 As with a normal render, you can abort it with :kbd:`Esc`.
 
+.. _bpy.ops.render.opengl:
+
 Render a Still Image
    To render a still image, use :menuselection:`3D Viewport --> View --> Viewport Render Image`.
 Render an Animation

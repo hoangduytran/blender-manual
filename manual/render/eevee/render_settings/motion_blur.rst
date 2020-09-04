@@ -9,6 +9,17 @@ Motion Blur
 
    :Panel:     :menuselection:`Render --> Motion Blur`
 
+Blender's animations are by default rendered as a sequence of *perfectly still* images.
+While great for stop-motion and time-lapses, this is unrealistic, since fast-moving
+objects do appear to be blurred in the direction of motion,
+both in a movie frame and in a photograph from a real-world camera.
+
+.. note::
+
+   Motion blur is only available in final renders and is not shown in the 3D Viewport
+   and thus :ref:`Viewport Renders <bpy.ops.render.opengl>`.
+
+
 Shutter
    Time (in frames) taken between shutter open and close.
 
@@ -17,8 +28,8 @@ Background Separation
    Lower values will reduce background bleeding onto foreground elements.
 
 Max Blur
-   Maximum blur distance a pixel can spread over. A value of 0 will disable the post-process blur
-   and only use the accumulation blur.
+   Maximum blur distance a pixel can spread over.
+   A value of 0 will disable the post-process blur and only use the accumulation blur.
 
    .. note::
 
