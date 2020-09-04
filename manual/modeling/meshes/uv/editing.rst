@@ -301,7 +301,7 @@ Align
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Weld/Align --> Align`
+   :Menu:      :menuselection:`UV --> Align`
    :Hotkey:    :kbd:`Shift-W`
 
 Straighten
