@@ -10,10 +10,15 @@ There are four kinds of strips: Action, Transition, Sound clip and Meta.
 Action Strips
 =============
 
-An Action Strip is a container of keyframe data of an action.
+Action Strips are a container of keyframe data of an action.
 Any action used by the NLA first must be turned into an Action strip.
 This is done so by clicking the :ref:`Push Down Action <bpy.ops.nla.action_pushdown>` button see above.
 Alternatively, you can go to :menuselection:`Add --> Action Strip`.
+
+.. note::
+
+   Action Strips only playback the keyframe data that fits into the length of the strip.
+   This includes any :doc:`modifiers </editors/graph_editor/fcurves/modifiers>` that might extend keyframe data.
 
 
 Transition Strips
