@@ -1,7 +1,7 @@
 
-**********
-AOV Output
-**********
+***************
+AOV Output Node
+***************
 
 :guilabel:`Cycles Only`
 
