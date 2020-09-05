@@ -13,52 +13,95 @@ Editing of mask splines happens in a way similar to editing Bézier curves or pa
    which will then keep updating the compositing result while editing.
 
 
-Control Points
-==============
-
-Add Vertex and Slide :kbd:`Ctrl-LMB`
-   :kbd:`Ctrl-LMB` is used to place new control points and define handle orientations by a continued mouse drag.
-   A :kbd:`Ctrl-LMB` double-click will also close the curve if the last point was selected.
 Transform
-   Existing control points can be moved with :kbd:`LMB` and
-   moved, scaled and rotated with the usual :kbd:`G`, :kbd:`S`, :kbd:`R` shortcuts.
-   The whole spline can be moved by dragging the center dot with :kbd:`LMB`.
-Toggle Cyclic :kbd:`Alt-C`
-   Toggle to create a closed curve or open it again.
-   Close the mask by joining the last control point to the first.
-Delete :kbd:`X`
-   Removes control points.
+=========
 
+.. admonition:: Reference
+   :class: refbox
 
-Curve Handles
-=============
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Transform`
 
-Slide Spline Curvature
-   :kbd:`LMB` click on curve and drag to move the handle.
-Set Handle Type :kbd:`V`
-   Set handle type for selected spline points.
-Recalculate Normals :kbd:`Ctrl-N`
-   Make normals (handle directions) consistent.
-Switch Direction
-   Switch Direction handle directions in/out.
+Existing control points can be moved with :kbd:`LMB` and
+moved, scaled and rotated with the usual :kbd:`G`, :kbd:`S`, :kbd:`R` shortcuts.
+The whole spline can be moved by dragging the center dot with :kbd:`LMB`.
 
-
-.. _mask-feather:
-
-Feather
-=======
-
-Add Feather Vertex and Slide :kbd:`Shift-LMB`
-   :kbd:`Shift-LMB` is used to define a feathering outline curve. To create an initial feather,
-   sliding from a spline control point outside or inside will create and position feather points.
-   After this :kbd:`Shift-LMB`
-   will insert new feather point and mouse sliding can be used to move them around.
 Scale Feather :kbd:`Alt-S`
    Will scale the feather size.
 
 
+Toggle Cyclic
+=============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Toggle Cyclic`
+   :Hotkey:    :kbd:`Alt-C`
+
+Toggle to create a closed curve or open it again.
+Close the mask by joining the last control point to the first.
+
+
+Set Handle Type
+===============
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Set Handle Type`
+   :Hotkey:    :kbd:`V`
+
+Set handle type for selected spline points.
+
+
+Recalculate Handles
+===================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Recalculate Handles`
+   :Hotkey:    :kbd:`Ctrl-N`
+
+Make normals (handle directions) consistent.
+
+
+Switch Direction
+================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Switch Direction`
+
+Switch Direction handle directions in/out.
+
+
+Copy Paste
+==========
+
+Todo.
+
+
+Parent
+======
+
+Todo.
+
+
 Animation
 =========
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Animation`
 
 Masks can be animated with the shape keying system.
 This can be useful when there are not enough good feature points to track in the footage,
@@ -80,6 +123,42 @@ Re-Key Points of Selected Shapes
 Show/Hide
 =========
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Show/Hide`
+
 - Hide Selected :kbd:`H`
 - Hide Unselected :kbd:`Shift-H`
 - Clear Restricted View :kbd:`Alt-H`
+
+
+Delete
+======
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Delete`
+   :Hotkey:    :kbd:`X`
+
+Removes control points.
+
+
+Miscellaneous
+=============
+
+Slide Spline Curvature
+   :kbd:`LMB` click on curve and drag to move the handle.
+
+Add Vertex and Slide :kbd:`Ctrl-LMB`
+   :kbd:`Ctrl-LMB` is used to place new control points and define handle orientations by a continued mouse drag.
+   A :kbd:`Ctrl-LMB` double-click will also close the curve if the last point was selected.
+
+Add Feather Vertex and Slide :kbd:`Shift-LMB`
+   :kbd:`Shift-LMB` is used to define a feathering outline curve. To create an initial feather,
+   sliding from a spline control point outside or inside will create and position feather points.
+   After this :kbd:`Shift-LMB`
+   will insert new feather point and mouse sliding can be used to move them around.
