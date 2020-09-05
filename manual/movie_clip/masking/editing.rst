@@ -1,24 +1,7 @@
 
-*******************
-Selecting & Editing
-*******************
-
-Selecting
-=========
-
-The usual selection tools are available:
-
-- Toggle Select All :kbd:`A`.
-- Box and Circle Select :kbd:`B`, :kbd:`C`.
-- Lasso Select :kbd:`Ctrl-Alt-LMB`.
-- Select Linked from selection :kbd:`Ctrl-L`.
-- Select Linked with mouse :kbd:`L`.
-
-- Select tracking marker :kbd:`Ctrl-RMB`.
-
-
+*******
 Editing
-=======
+*******
 
 The tools and panels available to edit masks are the same in both editors.
 Editing of mask splines happens in a way similar to editing Bézier curves or paths in GIMP or other curve editors.
@@ -31,7 +14,7 @@ Editing of mask splines happens in a way similar to editing Bézier curves or pa
 
 
 Control Points
---------------
+==============
 
 Add Vertex and Slide :kbd:`Ctrl-LMB`
    :kbd:`Ctrl-LMB` is used to place new control points and define handle orientations by a continued mouse drag.
@@ -48,7 +31,7 @@ Delete :kbd:`X`
 
 
 Curve Handles
--------------
+=============
 
 Slide Spline Curvature
    :kbd:`LMB` click on curve and drag to move the handle.
@@ -63,7 +46,7 @@ Switch Direction
 .. _mask-feather:
 
 Feather
--------
+=======
 
 Add Feather Vertex and Slide :kbd:`Shift-LMB`
    :kbd:`Shift-LMB` is used to define a feathering outline curve. To create an initial feather,
@@ -75,7 +58,7 @@ Scale Feather :kbd:`Alt-S`
 
 
 Animation
----------
+=========
 
 Masks can be animated with the shape keying system.
 This can be useful when there are not enough good feature points to track in the footage,
@@ -95,7 +78,7 @@ Re-Key Points of Selected Shapes
 
 
 Show/Hide
----------
+=========
 
 - Hide Selected :kbd:`H`
 - Hide Unselected :kbd:`Shift-H`
