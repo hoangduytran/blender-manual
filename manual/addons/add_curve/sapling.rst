@@ -136,7 +136,7 @@ Armature
 This sub menu contains the settings to add an armature to your tree.
 It's not recommended to use this function on highly complex trees as it may take time to compute.
 
-#. Turn of leaves and prune if you have them on.
+#. Turn off leaves and prune if you have them on.
 #. Press the *Use Armature* checkbox to add the armature to the tree.
 #. Adjust the armature levels and bone length to your liking.
 #. Do not pose the bones until you have finished the tree.
