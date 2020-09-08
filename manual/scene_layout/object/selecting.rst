@@ -113,12 +113,10 @@ Select All by Type
    :class: refbox
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Select --> Select All by Type...`
+   :Menu:      :menuselection:`Select --> Select All by Type`
 
 With this tool, it becomes possible to select objects of a certain type in one go.
-
-The types are Mesh, Curve, Surface, Meta, Font,
-Armature, Lattice, Empty, Camera, Light, Speaker.
+For a description of all object types see :doc:`Object Types </scene_layout/object/types>`
 
 
 .. _bpy.ops.object.select_camera:
