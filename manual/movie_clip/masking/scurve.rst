@@ -1,3 +1,4 @@
+.. _mask-feather:
 
 ********
 S-Curves

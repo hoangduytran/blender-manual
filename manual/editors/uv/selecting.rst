@@ -20,7 +20,7 @@ These two modes have very different results when transforming components in the 
 
 .. seealso::
 
-   :ref:`Selecting in the 3D Viewport </editors/3dview/selecting>`.
+   :doc:`Selecting in the 3D Viewport </editors/3dview/selecting>`.
 
 
 .. _bpy.types.ToolSettings.uv_select_mode:
