@@ -173,10 +173,18 @@ Only Neighbor Geometry
    Max Distance
       Maximum allowed distance between source and destination element (for non-topology mappings).
 
-.. (TODO) The below definition is confusing for users. Change?
-
 Ray Radius
-   Width of rays. Useful when ray casting against vertices or edges.
+   The starting ray radius to use when `Ray Casting <https://en.wikipedia.org/wiki/Ray_casting>`
+   against vertices or edges. When transferring data between meshes Blender performs a series of
+   ray casts to generate mappings. Blender starts with a ray with the radius defined here,
+   if that does not return a hit than the radius is progressively
+   increased until a positive hit or a limit is reached.
+   This property acts as an accuracy/performance control;
+   using a lower ray radius will be more accurate however,
+   might take longer if Blender has to progressively increase the limit.
+   Lower values will work better for dense meshes with lots of detail
+   while larger values are probably better suited for simple meshes.
+
 Mix Mode
    How to affect destination elements with source values.
 

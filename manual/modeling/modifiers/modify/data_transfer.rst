@@ -200,6 +200,13 @@ Max Distance
    (e.g. from a "hand" mesh towards a "full body" one).
 
 Ray Radius
-   For ray-casting-based mapping methods, the radius of the cast rays.
-   Especially important for 1D and 2D items (i.e. vertices and edges),
-   without some width there would be nearly no ray-casting matches...
+   The starting ray radius to use when `Ray Casting <https://en.wikipedia.org/wiki/Ray_casting>`
+   against vertices or edges. When transferring data between meshes Blender performs a series of
+   ray casts to generate mappings. Blender starts with a ray with the radius defined here,
+   if that does not return a hit than the radius is progressively
+   increased until a positive hit or a limit is reached.
+   This property acts as an accuracy/performance control;
+   using a lower ray radius will be more accurate however,
+   might take longer if Blender has to progressively increase the limit.
+   Lower values will work better for dense meshes with lots of detail
+   while larger values are probably better suited for simple meshes.
