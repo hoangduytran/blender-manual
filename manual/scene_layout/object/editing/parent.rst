@@ -64,6 +64,12 @@ for example.
 
 The matrix can also be cleared after parenting by using :ref:`Clear Parent Inverse <bpy.ops.object.parent_clear>`.
 
+.. note::
+
+   When setting the parent via the Object Properties panel, the Parent Inverse
+   matrix is always reset. This can cause an unexpected jump in the object's
+   position. To avoid this, use :kbd:`Ctrl-P` to set the new parent.
+
 
 Parent Types
 ------------
