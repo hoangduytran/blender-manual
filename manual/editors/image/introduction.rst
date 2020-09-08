@@ -27,12 +27,18 @@ Annotate
 Header
 ======
 
-Menus
------
+Mode
+   View
+      Displays Images.
+   Paint
+      :doc:`/sculpt_paint/texture_paint/index`.
+   Mask
+      :doc:`/movie_clip/masking/index`.
 
 View
    Tools for controlling how the content is displayed in the editor.
    See :doc:`/editors/image/navigating`.
+
 Image
    New
       Creates a new :ref:`image-generated` Image.
@@ -81,14 +87,9 @@ Image
    Generate Grease Pencil
       Creates a :doc:`Grease Pencil </grease_pencil/index>` object using the currently selected image as a source.
 
-
    .. important::
 
       Rendered images are not automatically saved, they have to be saved to drive manually.
-
-
-Controls
---------
 
 Image
    A :ref:`data-block menu <ui-data-block>` used for selecting images.
@@ -98,20 +99,9 @@ Image
 
       - Render Result
       - Viewer Node
-Modes
-   View
-      Displays Images.
-   Paint
-      :doc:`/sculpt_paint/texture_paint/index`.
-   Mask
-      :doc:`/movie_clip/masking/index`.
 
-
-Multi-Layer
-^^^^^^^^^^^
-
-When a rendered image is displayed in the Image Editor,
-several new menu items become available.
+Image Pin
+   Todo.
 
 Slot
    You can save successive renders into the render buffer by selecting a new slot
@@ -121,30 +111,29 @@ Slot
    Alternatively you can use the number keys :kbd:`1`, :kbd:`2`, :kbd:`3`, etc,
    to select the slot with the corresponding number. A slot can be renamed by
    double clicking its name in the Image panel in the Sidebar.
+
 View Layer
    If you are using :doc:`View Layers </render/layers/index>`,
    use this menu to select which layer is displayed.
+
 Render Pass
    If you are using :doc:`Render Passes </render/layers/passes>`,
    use this menu to select which pass is displayed.
 
-
 Display Channels
-^^^^^^^^^^^^^^^^
+   Select what color channels are displayed.
 
-In the dropdown menu on the right, the displayed channels can be selected.
-
-Color and Alpha
-   Replaces transparent pixels with background checkerboard, denoting the alpha channel.
-Color
-   Display the colored image, without alpha channel.
-Alpha
-   Displays the Alpha channel a grayscale image. White areas are opaque, black areas have an alpha of 0.
-Z-Buffer
-   Display the depth from the camera, from Clip Start to Clip End,
-   as specified in the :doc:`Camera settings </render/cameras>`.
-Red, Green, Blue
-   Single Color Channel visualized as a grayscale image.
+   Color and Alpha
+      Replaces transparent pixels with background checkerboard, denoting the alpha channel.
+   Color
+      Display the colored image, without alpha channel.
+   Alpha
+      Displays the Alpha channel a grayscale image. White areas are opaque, black areas have an alpha of 0.
+   Z-Buffer
+      Display the depth from the camera, from Clip Start to Clip End,
+      as specified in the :doc:`Camera settings </render/cameras>`.
+   Red, Green, Blue
+      Single Color Channel visualized as a grayscale image.
 
 
 Main View

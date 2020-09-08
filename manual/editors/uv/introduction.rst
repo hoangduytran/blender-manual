@@ -104,31 +104,67 @@ The header contains several menus and options for working with UVs.
 
 Sync Selection
    Keeps UV and mesh part selections in sync.
-Selection Modes
+
+Selection Mode
    - Vertex
    - Edge
    - Face
    - Island (Only available if *Sync Selection* is turned off)
+
 Sticky Selection Mode
    When *Sync Selection* is disabled, these options control how UVs are selected.
+
 View
    Tools for controlling how the content is displayed in the editor.
    See :doc:`/editors/uv/navigating`.
+
 Select
    Tools for :doc:`Selecting UVs </editors/uv/selecting>`.
+
 Image
    This contains options for :doc:`/editors/image/index`.
-UVs
+
+UV
    Contains tools for :doc:`Unwrapping Meshes </modeling/meshes/uv/unwrapping/index>`
    and :doc:`Editing UVs </modeling/meshes/uv/editing>`.
+
+Image
+   A :ref:`data-block menu <ui-data-block>` used for selecting images.
+   When an image has been loaded or created in the Image editor,
+   the Image panel appears in the *Sidebar region*.
+   See :doc:`/editors/image/image_settings`.
+
+Image Pin
+   Todo.
+
+Active UV Loop Layer
+   Select which UV map to use.
+
+Display Channels
+   Select what color channels are displayed.
+
+   Color and Alpha
+      Replaces transparent pixels with background checkerboard, denoting the alpha channel.
+   Color
+      Display the colored image, without alpha channel.
+   Alpha
+      Displays the Alpha channel a grayscale image. White areas are opaque, black areas have an alpha of 0.
+   Z-Buffer
+      Display the depth from the camera, from Clip Start to Clip End,
+      as specified in the :doc:`Camera settings </render/cameras>`.
+   Red, Green, Blue
+      Single Color Channel visualized as a grayscale image.
+
+
+Tool Settings
+-------------
+
 Pivot
    Similar to working with pivot points in the 3D Viewport.
 UV Snapping
    Similar to Snapping in the 3D Viewport.
 Proportional Editing
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
-Active UV Texture Map Selector
-   Select which UV texture to use.
 
 
 Sidebar Region
