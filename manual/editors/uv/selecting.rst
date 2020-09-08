@@ -18,6 +18,10 @@ in the 3D Viewport to sync with their corresponding elements in the UV editor.
 If off only the selected faces are displayed in the UV editor.
 These two modes have very different results when transforming components in the UV editor.
 
+.. seealso::
+
+   :ref:`Selecting in the 3D Viewport </editors/3dview/selecting>`.
+
 
 .. _bpy.types.ToolSettings.uv_select_mode:
 
