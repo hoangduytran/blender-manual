@@ -362,10 +362,6 @@ See :doc:`Proportional Editing in 3D </editors/3dview/controls/proportional_edit
 for a full reference.
 
 
-.. _bpy.types.SpaceUVEditor.use_live_unwrap:
-.. _bpy.types.SpaceUVEditor.pixel_snap_mode:
-.. _bpy.types.SpaceUVEditor.lock_bounds:
-
 UV Options
 ==========
 
@@ -376,13 +372,14 @@ UV Options
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UVs`
 
+.. _bpy.types.SpaceUVEditor.use_live_unwrap:
+
 Live Unwrap
    Continuously unwraps the selected UV islands while transforming pinned vertices.
+   Note, this is different than the :ref:`Live Unwrap <bpy.types.ToolSettings.use_edge_path_live_unwrap>`
+   option in the 3D Viewport.
 
-.. Todo. There are two different Live Unwrap, one in Edit Mode and other in UV Editor.
-
-   If *Live Unwrap* is checked, every time an edge has its seam property changed,
-   UV unwrap is automatically recalculated.
+.. _bpy.types.SpaceUVEditor.pixel_snap_mode:
 
 Snap to Pixels
    Disabled
@@ -391,6 +388,9 @@ Snap to Pixels
       Will force the UVs to snap to the corners of the nearest pixels of an image if loaded.
    Center
       Will force the UVs to snap to the center of the nearest pixels of an image if loaded.
+
+.. _bpy.types.SpaceUVEditor.lock_bounds:
+
 Constraining to Image Bounds
    Turning on *Constrain to Image Bounds* will prevent UVs from being moved outside the 0 to 1 UV range.
 

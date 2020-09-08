@@ -32,6 +32,17 @@ Keep Connected
       Keeping UVs connected is useful for organic modeling, but not for architectural modeling.
 
 
+UVs
+---
+
+.. _bpy.types.ToolSettings.use_edge_path_live_unwrap:
+
+Live Unwrap
+   Automatically recalculates UV wrappings every time an edge has its seam property changed.
+   Note, this is different than the :ref:`Live Unwrap <bpy.types.SpaceUVEditor.use_live_unwrap>`
+   option in the UV Editor.
+
+
 .. _bpy.types.Mesh.use_mirror_x:
 .. _bpy.types.Mesh.use_mirror_y:
 .. _bpy.types.Mesh.use_mirror_z:
