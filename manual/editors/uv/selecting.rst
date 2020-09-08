@@ -5,7 +5,69 @@ Selecting
 *********
 
 Selection tools are available in the *Select Menu* in the header,
-and the shortcuts listed below:
+and the shortcuts listed below.
+
+
+.. _bpy.types.ToolSettings.use_uv_select_sync:
+
+Sync Selection
+==============
+
+Turning on the *Sync Selection* button causes selection of components
+in the 3D Viewport to sync with their corresponding elements in the UV editor.
+If off only the selected faces are displayed in the UV editor.
+These two modes have very different results when transforming components in the UV editor.
+
+
+.. _bpy.types.ToolSettings.uv_select_mode:
+
+Selection Modes
+===============
+
+Select Modes dependent on the Sync Selection.
+
+
+Sync Selection Off
+------------------
+
+Vertex
+   Select individual vertices.
+Edge
+   Select edges.
+Face
+   Select faces.
+Island
+   Select contiguous groups of faces.
+
+
+Sync Selection On
+-----------------
+
+When selecting UVs or Edges, it behaves like the *Shared Vertex* option of the *Sticky Selection Mode*.
+When selecting Faces, it behaves like the *Disabled* option of the *Sticky Selection Mode*.
+
+Vertex
+   Select individual vertices.
+Edge
+   Select edges.
+Face
+   Select faces.
+
+
+.. _bpy.types.SpaceUVEditor.sticky_select_mode:
+
+Sticky Selection Mode
+=====================
+
+This selector lets you enable automatic additional selection.
+
+Shared Vertex
+   Selects UVs that share a mesh vertex, even if they are in different UV locations.
+Shared Location
+   Selects UVs that are in the same UV location and share a mesh vertex.
+Disabled
+   Disables Sticky Selection.
+   When you move a UV in this mode, each face owns its own UVs, allowing them to be separated.
 
 
 Menu
@@ -80,7 +142,7 @@ Checker Deselect Options
    Mesh edit :ref:`Select Shortest Path <bpy.ops.mesh.shortest_path_select>`.
 
 
-.. _bpy.opsuv.select_edge_ring:
+.. _bpy.ops.uv.select_edge_ring:
 
 Select Edge Loops
 =================
@@ -98,54 +160,3 @@ Holding :kbd:`Shift-Alt` while clicking adds to the current selection.
 .. seealso::
 
    Mesh edit :ref:`Select Edge Loops <bpy.ops.mesh.loop_multi_select>`.
-
-
-Header
-======
-
-Sync Selection
-   Turning on the *Sync Selection* button causes selection of components
-   in the 3D Viewport to sync with their corresponding elements in the UV editor.
-   If off only the selected faces are displayed in the UV editor.
-   These two modes have very different results when transforming components in the UV editor.
-
-
-Selection Modes
----------------
-
-Select Modes dependent on the Sync Selection.
-
-
-Sync Selection Off
-^^^^^^^^^^^^^^^^^^
-
-Vertex
-   Select individual vertices.
-Edge
-   Select edges.
-Face
-   Select faces.
-Island
-   Select contiguous groups of faces.
-
-Sticky Selection Mode
-   This selector lets you enable automatic additional selection.
-
-   Shared Vertex
-      Selects UVs that share a mesh vertex, even if they are in different UV locations.
-   Shared Location
-      Selects UVs that are in the same UV location and share a mesh vertex.
-   Disabled
-      Disables Sticky Selection.
-      When you move a UV in this mode, each face owns its own UVs, allowing them to be separated.
-
-
-Sync Selection On
-^^^^^^^^^^^^^^^^^
-
-When selecting UVs or Edges, it behaves like *Shared Vertex* mode above.
-When selecting Faces, it behaves as in *Disabled Stick Selection* above.
-
-- Vertex
-- Edge
-- Face
