@@ -103,16 +103,16 @@ Header
 The header contains several menus and options for working with UVs.
 
 Sync Selection
-   Keeps UV and mesh part selections in sync.
+   Syncs selection between the UV Editor and the 3D Viewport.
+   See :ref:`Sync Selection <bpy.types.ToolSettings.use_uv_select_sync>` for more details.
 
 Selection Mode
-   - Vertex
-   - Edge
-   - Face
-   - Island (Only available if *Sync Selection* is turned off)
+   The UV element type to select.
+   See :ref:`Selection Mode <bpy.types.ToolSettings.uv_select_mode>` for more details.
 
 Sticky Selection Mode
-   When *Sync Selection* is disabled, these options control how UVs are selected.
+   Option to automatically expand selection.
+   See :ref:`Sticky Selection Mode <bpy.types.SpaceUVEditor.sticky_select_mode>` for more details.
 
 View
    Tools for controlling how the content is displayed in the editor.
