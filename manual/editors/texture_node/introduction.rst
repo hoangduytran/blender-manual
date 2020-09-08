@@ -59,3 +59,12 @@ These named outputs could be used, when the material is defined with material no
 In this case, Texture Channels are probably not used. Instead, insert
 the texture nodes into the material node tree by using :menuselection:`Add --> Input --> Texture`.
 Inside the just added texture node the output to use can then be selected (e.g. *Diffuse* or *Normal*).
+
+
+Header
+======
+
+Pin (pin icon)
+   The pin button will keep the current texture selection fixed.
+   When a texture is pinned, it will remain visible in the Texture Editor
+   even when another object or simulation is selected elsewhere.
