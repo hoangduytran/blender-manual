@@ -122,7 +122,8 @@ Select
    Tools for :doc:`Selecting UVs </editors/uv/selecting>`.
 
 Image
-   This contains options for :doc:`/editors/image/index`.
+   Tools for opening and manipulating images.
+   See :doc:`/editors/image/editing`.
 
 UV
    Contains tools for :doc:`Unwrapping Meshes </modeling/meshes/uv/unwrapping/index>`

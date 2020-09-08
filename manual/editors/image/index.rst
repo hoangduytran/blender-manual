@@ -12,3 +12,4 @@
    view_tab.rst
    scopes.rst
    image_settings.rst
+   editing.rst
