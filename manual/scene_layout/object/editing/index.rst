@@ -16,7 +16,7 @@
    duplicate_linked.rst
    join.rst
    parent.rst
-   relations.rst
+   relations/index.rst
    make_links.rst
    shading.rst
    convert.rst

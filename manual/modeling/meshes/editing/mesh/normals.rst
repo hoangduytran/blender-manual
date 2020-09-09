@@ -14,8 +14,8 @@ Normals
    The :doc:`/modeling/modifiers/modify/weighted_normal` can be used to affect normals by various methods,
    including *Face Strength* (see below).
 
-   You can also copy normals from another mesh using Data Transfer
-   (:doc:`operator </scene_layout/object/editing/relations>`
+   You can also copy normals from another mesh using Mesh Data Transfer
+   (:doc:`operator </scene_layout/object/editing/relations/transfer_mesh_data>`
    or :doc:`modifier </modeling/modifiers/modify/data_transfer>`).
 
 

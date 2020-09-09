@@ -1,41 +1,8 @@
-
-*********
-Relations
-*********
-
-.. _bpy.ops.object.make_single_user:
-
-Make Single User
-================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Relations --> Make Single User`
-
-Makes the selected or all object data-blocks single users, that is, not shared
-(linked) between other objects in the blend-file.
-
-Additionally, it can also make single-user copies of its dependencies,
-like meshes, curves, materials, animations...
-
-Type
-   These actions work on the selected objects, or on all the objects of the scene.
-
-   All, Selected Objects
-Data-blocks
-   Lets you, in addition to the menu predefined selection, choose the type of data-blocks individually.
-
-   Object, Object Data, Materials, Textures, Object Animation
-
-.. seealso:: :ref:`data-system-datablock-make-single-user`
-
-
 .. _bpy.ops.object.data_transfer:
 
+******************
 Transfer Mesh Data
-==================
+******************
 
 .. admonition:: Reference
    :class: refbox
@@ -71,17 +38,17 @@ Vertex Mapping
 
 
 Vertex Mapping
---------------
+==============
 
 Topology
-^^^^^^^^
+--------
 
 The simplest option, expects both meshes to have identical number of items, and match them by order (indices).
 Useful e.g. between meshes that were identical copies, and got deformed differently.
 
 
 One-To-One Mappings
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Those always select only one source item for each destination one, often based on shortest distance.
 
@@ -123,7 +90,7 @@ Faces
 
 
 Interpolated Mappings
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 Those use several source items for each destination one, interpolating their data during the transfer.
 
@@ -156,7 +123,7 @@ Faces
 
 
 Further Options
----------------
+===============
 
 Auto Transform
    Automatically computes the transformation to get the best possible match between source and destination meshes.
@@ -203,46 +170,3 @@ Mix Mode
       Only available for a few types (vertex groups, vertex colors).
 Mix Factor
    How much of the transferred data gets mixed into existing one (not supported by all data types).
-
-
-.. _bpy.ops.object.datalayout_transfer:
-
-Transfer Mesh Data Layout
-=========================
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Relations --> Transfer Mesh Data Layout`
-
-Transfers layout of data layer(s) from active to selected meshes.
-
-Data Type
-   Which data to transfer.
-
-   .. figure:: /images/scene-layout_object_editing_relations_menu.png
-
-      Data types.
-
-Exact Match
-   Also Delete some data layers from destination if necessary, so that it matches the source exactly.
-Source Layers Selection
-   Which layers to transfer, in case of multi-layer types.
-
-   Active Layer
-      Only transfer the active data layer.
-   All Layers
-      Transfer all data layers.
-
-Destination Layers Matching
-   How to match source and destination layers.
-
-   By Name
-      Match target data layers to affect by name.
-   By Order
-      Match target data layers to affect by order (indices).
-
-.. seealso::
-
-   :doc:`Data Transfer Modifier </modeling/modifiers/modify/data_transfer>`
