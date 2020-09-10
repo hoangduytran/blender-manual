@@ -151,18 +151,16 @@ The overall dimensions can be defined by two methods.
 
 Operator Presets
    Torus preset settings for reuse. These presets are stored as scripts in the proper presets directory.
+
 Major Segments
    Number of segments for the main ring of the torus.
    If you think of a torus as a "spin" operation around an axis, this is how many steps are in the spin.
+
 Minor Segments
    Number of segments for the minor ring of the torus.
    This is the number of vertices of each circular segment.
 
-
-Torus Dimensions
-----------------
-
-Add Mode
+Dimensions Mode
    Change the way the torus is defined.
 
    Major/Minor, Exterior/Interior
