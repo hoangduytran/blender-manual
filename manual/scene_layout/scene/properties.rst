@@ -65,6 +65,7 @@ Unit System
       Use the metric unit system in this scene.
    Imperial
       Use the imperial unit system in this scene.
+
 Unit Scale
    Scale factor to use when converting between internal units and values displayed in the user interface.
    This can be changed when modeling at microscopic or astronomical scales.
@@ -78,11 +79,13 @@ Unit Scale
 Separate Units
    When using *Metric* or *Imperial*, display properties as multiple values.
    For example, ``2.285m`` will become ``2m 28.5cm``.
+
 Rotation
    Degrees
       Use degrees for angles in the user interface.
    Radians
       Use radians for angles in the user interface.
+
 Length
    Adaptive
       The unit used for a specific value depends on the magnitude of the value.
@@ -90,9 +93,14 @@ Length
       displayed as ``10km``.
    Meters/Centimeters/Feet/...
       A fixed unit that will be used for all lengths in the user interface.
+
 Mass
    See *Length*.
+
 Time
+   See *Length*.
+
+Temperature
    See *Length*.
 
 .. Normally we would avoid documenting long lists of values
