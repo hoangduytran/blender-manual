@@ -62,7 +62,7 @@ See :doc:`User Interface </interface/index>` for documentation on the general in
 .. toctree::
    :maxdepth: 1
 
-   outliner.rst
+   outliner/index.rst
    properties_editor.rst
    file_browser.rst
    preferences/index.rst
