@@ -26,8 +26,31 @@ Existing control points can be moved with :kbd:`LMB` and
 moved, scaled and rotated with the usual :kbd:`G`, :kbd:`S`, :kbd:`R` shortcuts.
 The whole spline can be moved by dragging the center dot with :kbd:`LMB`.
 
-Scale Feather :kbd:`Alt-S`
-   Will scale the feather size.
+
+Scale Feather
+-------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Transform --> Scale Feather`
+   :Hotkey:    :kbd:`Alt-S`
+
+
+Will scale the feather size.
+
+
+Clear Feather Weight
+====================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Mask Mode
+   :Menu:      :menuselection:`Mask --> Clear Feather Weight`
+
+Resets the feather weight to zero.
 
 
 Toggle Cyclic
