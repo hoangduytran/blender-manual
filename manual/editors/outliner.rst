@@ -48,8 +48,8 @@ Clicking in empty space below the list of data-blocks will deselect all.
 .. note::
 
    By default, selecting data-blocks in the Outliner will select the respective objects,
-   bones, and sequences in the 3D Viewport and Sequencer.
-   Selections in the 3D Viewport and Sequencer will be synced to each Outliner.
+   bones, and sequences in the 3D Viewport and Video Sequencer.
+   Selections in the 3D Viewport and Video Sequencer will be synced to each Outliner.
    To disable selection syncing, turn off the toggle in the `filter`_ popover.
 
 Children of a data-block can also be selected by clicking the icon that is displayed to
@@ -314,9 +314,8 @@ Scenes
    Shows *everything* the *Outliner* can display (in all scenes, all view layers, etc.).
 View Layer
    Shows all the collections and objects in the current view layer.
-Sequence
-   Lists :doc:`data-block </files/data_blocks>`
-   that are used by the :doc:`Sequencer </video_editing/index>`.
+Video Sequencer
+   Lists data, images and videos, that are used by the :doc:`Video Sequencer </video_editing/index>`.
 Blender File
    Lists all data in the current blend-file.
 Data API
@@ -349,9 +348,9 @@ Sort Alphabetically
 
 Sync Selection
    Sync Outliner selection to and from the :doc:`3D Viewport </editors/3dview/index>` and
-   :doc:`Sequencer </video_editing/index>` editors. Disable to manage collections, object
-   relations, and scene data without changing the selection state. Selection syncing is
-   only available in Scenes, View Layer, and Sequence display modes.
+   :doc:`Video Sequencer </video_editing/index>` editors. Disable to manage collections,
+   object relations, and scene data without changing the selection state.
+   Selection syncing is only available in Scenes, View Layer, and Video Sequencer display modes.
 
 Collections
    List the objects and collections under
