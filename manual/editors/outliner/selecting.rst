@@ -8,8 +8,8 @@ Selecting and Activating
 
    Selected data-blocks with the Cube active.
 
-Selection is done with :kbd:`LMB` (and/or the `context menu`_, see below) on the row of
-a data-block. Single selections will also activate the data-block.
+Selection is done with :kbd:`LMB` (and/or the :ref:`context menu<editors-outliner-editing-context_menu>`)
+on the row of a data-block. Single selections will also activate the data-block.
 The rows of selected data-blocks are highlighted blue, with the active data-block highlighted in a lighter blue.
 
 Clicking in empty space below the list of data-blocks will deselect all.
@@ -19,7 +19,8 @@ Clicking in empty space below the list of data-blocks will deselect all.
    By default, selecting data-blocks in the Outliner will select the respective objects,
    bones, and sequences in the 3D Viewport and Video Sequencer.
    Selections in the 3D Viewport and Video Sequencer will be synced to each Outliner.
-   To disable selection syncing, turn off the toggle in the `filter`_ popover.
+   To disable selection syncing, turn off the toggle in the
+   :ref:`filter <editors-outliner-interface-filter>` popover.
 
 Children of a data-block can also be selected by clicking the icon that is displayed to
 the right of the parent data-block's name.

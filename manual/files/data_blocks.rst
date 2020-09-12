@@ -25,12 +25,12 @@ Some common characteristics:
 - They can be added/removed/edited/duplicated.
 - They can be linked between files (only enabled for a limited set of data-blocks).
 - They can have their own animation data.
-- They can have :ref:`Custom Properties <files-data_blocks-custom-properties>`.
+- They can have `Custom Properties`_.
 
 User will typically interact with the higher level data types (objects, meshes, etc.).
 When doing more complex projects, managing data-blocks becomes more important,
 especially when inter-linking blend-files.
-The main editor for that is the :doc:`Outliner </editors/outliner>`.
+The main editor for that is the :doc:`Outliner </editors/outliner/index>`.
 
 Not all data in Blender is a data-block,
 bones, sequence strips or vertex groups e.g. are not,

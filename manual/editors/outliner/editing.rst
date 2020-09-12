@@ -3,6 +3,8 @@
 Editing
 *******
 
+.. _editors-outliner-editing-context_menu:
+
 Context Menu
 ============
 
@@ -17,7 +19,7 @@ Select, Select Hierarchy, Deselect
    Add object to current selection without making it the active one.
 
 
-.. _editors-outliner-collections:
+.. _editors-outliner-editing-collections:
 
 Collections
 -----------

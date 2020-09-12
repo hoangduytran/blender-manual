@@ -3,7 +3,7 @@
 Interface
 *********
 
-.. _editors-outliner-restriction-columns:
+.. _editors-outliner-interface-restriction_columns:
 
 Restriction Columns
 ===================
@@ -99,6 +99,7 @@ The `Filter`_ menu lets you toggle the following options:
 - Case Sensitive Matches Only
 - Complete Matches Only
 
+.. _editors-outliner-interface-filter:
 
 Filter
 ------

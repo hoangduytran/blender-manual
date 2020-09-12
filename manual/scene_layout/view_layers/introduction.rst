@@ -24,7 +24,7 @@ can use the same or different collections.
 Outliner
 ========
 
-You can edit the current *view layer* collections in the :doc:`Outliner </editors/outliner>`.
+You can edit the current *view layer* collections in the :ref:`Outliner <editors-outliner-editing-collections>`.
 
 .. figure:: /images/scene-layout_view-layers_introduction_outliner.png
 
@@ -34,4 +34,4 @@ There you can enable and disable collections, hide them temporarily, globally, a
 
 .. seealso::
 
-   Read more about :ref:`Collections in the Outliner <editors-outliner-collections>`.
+   Read more about :ref:`Collections in the Outliner <editors-outliner-editing-collections>`.

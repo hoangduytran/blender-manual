@@ -105,7 +105,7 @@ Lost in Space
 When navigating your scene, you may accidentally navigate away from your scene
 and find yourself with a blank viewport. There are two ways to fix this:
 
-#. Select an object in the :doc:`Outliner </editors/outliner>`,
+#. Select an object in the :doc:`Outliner </editors/outliner/index>`,
    then zoom to that object with :menuselection:`View --> Frame Selected` or :kbd:`NumpadPeriod`.
 #. Use :kbd:`Home` to fit all objects into the 3D Viewport.
 
