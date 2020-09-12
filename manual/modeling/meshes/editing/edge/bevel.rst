@@ -80,7 +80,7 @@ Affect :kbd:`V`
       Bevel the edges, creating intersections at vertices.
 
 Width Type :kbd:`M`
-   Selects how the *Amount* value controls the size of the bevel. According to the selection, the amount is:
+   Selects how the *Width* value controls the size of the bevel. According to the selection, the width is:
 
    Offset
       The distance from the new edge to the original.
@@ -94,12 +94,12 @@ Width Type :kbd:`M`
       when the unbeveled edges attached to beveled edges meet at an angle besides a right angle.
 
    For vertex-only bevels, the Offset and Depth types measure from the original vertex.
-   The Width type is measured from a new vertex to the center of the new face (as half the amount).
+   The Width type is measured from a new vertex to the center of the new face (as half the *Width*).
 
 Width :kbd:`A`
-   You can change the bevel amount by moving the mouse towards and away from the object,
+   You can change the bevel width by moving the mouse towards and away from the object,
    a bit like with transform tools.
-   The exact meaning of the value depends on the *Amount Type* option (see below).
+   The exact meaning of the value depends on the *Width Type* option (see above).
    As usual, the scaling can be controlled to a finer degree by holding :kbd:`Shift` to scale in 0.001 steps.
    :kbd:`LMB` finalizes the operation, :kbd:`RMB` or :kbd:`Esc` aborts the action.
 
