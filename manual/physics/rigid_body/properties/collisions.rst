@@ -47,6 +47,10 @@ Shape
    Mesh
       :term:`Mesh` consisting of triangles only, allowing for more detailed interactions than convex hulls.
       Allows to simulate concave objects, but is rather slow and unstable.
+   Compound Parent
+      Takes the collision shapes from the objects :doc:`children</scene_layout/object/editing/parent>`
+      and combines them. This makes it possible to create concave shapes from primitive shapes. This usually 
+      results in a faster simulation than the *Mesh* collision shape while also being generally more stable.
 
 Source
    Source of the mesh used to create the collision shape.
