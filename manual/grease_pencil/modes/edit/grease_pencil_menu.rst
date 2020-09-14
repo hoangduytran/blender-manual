@@ -232,6 +232,20 @@ Delete Loose Points
 Removes unconnected points.
 
 
+.. _bpy.ops.gpencil.frame_clean_duplicate:
+
+Delete Duplicate Frames
+-----------------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Delete Duplicated Frames`
+
+Removes any duplicated animation frames.
+
+
 .. _bpy.ops.gpencil.stroke_merge_by_distance:
 
 Merge by Distance
