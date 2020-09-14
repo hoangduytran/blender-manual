@@ -27,7 +27,7 @@ Lock (padlock icon)
 Action Track
 ============
 
-By default, the Action Editor automatically stores the keyframes you create through the 3D View
+By default, the Action Editor automatically stores the keyframes you create through the 3D Viewport
 by storing them into an action based on the name as the object you are working on.
 
 .. _bpy.ops.nla.action_pushdown:

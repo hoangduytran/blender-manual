@@ -47,7 +47,7 @@ On a crash, a file is written based on the name of the currently loaded blend-fi
 so ``test.blend`` will create a file called ``test.crash.txt``.
 
 Batch scripts are provided in Blender installation directory which may be run to obtain
-blender debug log and system info text files:
+the Blender debug log and system info text files:
 
 - ``blender_debug_log.cmd`` is used in most cases.
 - ``blender_debug_gpu.cmd`` and ``blender_debug_gpu_workaround.cmd`` log GPU-related errors.
@@ -60,8 +60,8 @@ The path to that file can be found at the end of ``blender_debug_log.txt`` file.
 macOS
 -----
 
-After crash, macOS Crash Reporter shows a window after some time, or next time Blender is opened. Copy
-the text in the crash report and save it in a text file. That file should be attached to the bug report.
+After crash, macOS Crash Reporter shows a window after some time, or next time Blender is opened.
+Copy the text in the crash report and save it in a text file. That file should be attached to the bug report.
 
 
 Linux

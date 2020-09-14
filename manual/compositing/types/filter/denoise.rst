@@ -21,7 +21,7 @@ Inputs
 ======
 
 Image
-   Noised image input.
+   Noisy image input.
 Normal
    Optional normal render pass to better preserve detail.
    For Cycles, it is recommended to use the Denoising Normal render pass,

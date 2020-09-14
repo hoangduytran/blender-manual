@@ -38,7 +38,7 @@ UVs
 .. _bpy.types.ToolSettings.use_edge_path_live_unwrap:
 
 Live Unwrap
-   Automatically recalculates UV wrappings every time an edge has its seam property changed.
+   Automatically recalculates the UV unwrapping every time an edge has its seam property changed.
    Note, this is different than the :ref:`Live Unwrap <bpy.types.SpaceUVEditor.use_live_unwrap>`
    option in the UV Editor.
 

@@ -116,7 +116,7 @@ Select All by Type
    :Menu:      :menuselection:`Select --> Select All by Type`
 
 With this tool, it becomes possible to select objects of a certain type in one go.
-For a description of all object types see :doc:`Object Types </scene_layout/object/types>`
+For a description of all object types see :doc:`Object Types </scene_layout/object/types>`.
 
 
 .. _bpy.ops.object.select_camera:

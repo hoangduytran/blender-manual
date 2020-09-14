@@ -337,7 +337,6 @@ Export UV Layout
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Export UV Layout`
 
-
 If you are using an external application, you need to know where on the mesh you are painting.
 
 .. note::

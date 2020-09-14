@@ -86,19 +86,21 @@ Flatten Hierarchy
    When enabled, parent/child relations are not exported, and transformations are all written in world coordinates.
 
 Custom Properties
-   When enabled (which it is by default), custom properties are exported to Alembic as well. The following custom property types are supported:
-   
-   - Numbers (`int`, `float`) and strings. These are exported as arrays of a
-     single element, so `47` will be exported as `[47]` to Alembic, and `"Agent"`
-     to `["Agent"]`. This matches the behaviour of many other DCCs.
-   
-   - Lists of numbers and strings. These are exported as-is, so `[327, 47]` is
-     exported as `[327, 47]`.
-   
+   When enabled (which it is by default), custom properties are exported to Alembic as well.
+   The following custom property types are supported:
+
+   - Numbers (``int``, ``float``) and strings. These are exported as arrays of
+     a single element, so ``47`` will be exported as ``[47]`` to Alembic,
+     and ``"Agent"`` to ``["Agent"]``. This matches the behaviour of
+     many other DCCs.
+
+   - Lists of numbers and strings. These are exported as-is, so ``[327, 47]`` is
+     exported as ``[327, 47]``.
+
    - Matrices and nested arrays of numbers. These are flattened into one long
-     list, so a 3x2 matrix of numbers will become a list of 6 numbers. Similarly,
-     nested lists `[[1, 2, 3], [4, 5], [6]]` will be exported as `[1, 2, 3, 4, 5, 6]`.
-   
+     list, so a 3×2 matrix of numbers will become a list of 6 numbers. Similarly,
+     nested lists ``[[1, 2, 3], [4, 5], [6]]`` will be exported as ``[1, 2, 3, 4, 5, 6]``.
+
    - Numbers can be animated as well.
 
 

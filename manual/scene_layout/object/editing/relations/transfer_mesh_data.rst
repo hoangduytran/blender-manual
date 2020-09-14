@@ -12,9 +12,8 @@ Transfer Mesh Data
 
 The *Data Transfer* tool transfers several types of data from one mesh to another.
 Data types include vertex groups, UV maps, vertex colors, custom normals...
-
-Transfer works by generating a mapping between source mesh's items (vertices, edges, etc.)
-and destination ones, either on a one-to-one basis, or mapping several source items
+Transfer works by generating a mapping between source mesh's elements (vertices, edges, etc.)
+and destination ones, either on a one-to-one basis, or mapping several source elements
 to a single destination one by interpolated mapping.
 
 Transfers data layer(s) from active to selected meshes.
@@ -43,14 +42,14 @@ Vertex Mapping
 Topology
 --------
 
-The simplest option, expects both meshes to have identical number of items, and match them by order (indices).
+The simplest option, expects both meshes to have identical number of elements, and match them by order (indices).
 Useful e.g. between meshes that were identical copies, and got deformed differently.
 
 
 One-To-One Mappings
 -------------------
 
-Those always select only one source item for each destination one, often based on shortest distance.
+Those always select only one source element for each destination one, often based on shortest distance.
 
 Vertices
    Nearest Vertex
@@ -71,7 +70,7 @@ Edges
    Nearest Face Edge
       Uses source's nearest edge of source's nearest face (using edge's midpoints).
 Face Corners
-   A face corner is not a real item by itself, it's some kind of split vertex attached to a specific face.
+   A face corner is not a real element by itself, it's some kind of split vertex attached to a specific face.
    Hence both vertex (location) and face (normal, ...) aspects are used to match them together.
 
    Nearest Corner and Best Matching Normal
@@ -92,7 +91,7 @@ Faces
 Interpolated Mappings
 ---------------------
 
-Those use several source items for each destination one, interpolating their data during the transfer.
+Those use several source elements for each destination one, interpolating their data during the transfer.
 
 Vertices
    Nearest Edge Interpolated
@@ -108,7 +107,7 @@ Edges
       (interpolating both edge's vertex normals), and if enough of them hit a source's edge,
       all hit source edges' data are interpolated into destination one.
 Face Corners
-   A face corner is not a real item by itself, it's some kind of split vertex attached to a specific face.
+   A face corner is not a real element by itself, it's some kind of split vertex attached to a specific face.
    Hence both vertex (location) and face (normal, ...) aspects are used to match them together.
 
    Nearest Face Interpolated
@@ -141,11 +140,12 @@ Only Neighbor Geometry
       Maximum allowed distance between source and destination element (for non-topology mappings).
 
 Ray Radius
-   The starting ray radius to use when `Ray Casting <https://en.wikipedia.org/wiki/Ray_casting>`
+   The starting ray radius to use when `Ray Casting <https://en.wikipedia.org/wiki/Ray_casting>`__
    against vertices or edges. When transferring data between meshes Blender performs a series of
    ray casts to generate mappings. Blender starts with a ray with the radius defined here,
-   if that does not return a hit than the radius is progressively
+   if that does not return a hit then the radius is progressively
    increased until a positive hit or a limit is reached.
+
    This property acts as an accuracy/performance control;
    using a lower ray radius will be more accurate however,
    might take longer if Blender has to progressively increase the limit.

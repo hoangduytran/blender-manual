@@ -44,8 +44,8 @@ Position the eye bones in the eye pivot point facing right **toward** the face o
 
 .. tip:: Eye Pivot
 
-   If your eye has a spherical shape you can define its pivot by entering Edit Mode and
-   selecting two opposite vertices on the center meridian -- or the opposite poles -- and
+   If your eye has a spherical shape you can define its pivot by entering Edit Mode.
+   Select two opposite vertices on the center meridian -- or the opposite poles -- and
    snapping the cursor to selection by pressing :menuselection:`Snap --> Cursor To Selected`.
    If your eye is a complete sphere and its location it's not applied, then you can just use its center of mass.
 

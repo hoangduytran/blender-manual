@@ -20,14 +20,14 @@ To create a Material, you have to click *Add New* Material in the Shading contex
 There are two ways to tell Blender to use the UV texture when rendering;
 the quick way and the proper way.
 
-The quick way is to use generated UV coordinates.
-Generated coordinates is used by default by all :doc:`Texture nodes </render/shader_nodes/textures/index>`,
+The quick way is to use generated UV coordinates. Generated coordinates is used by
+default by all :doc:`Texture nodes </render/shader_nodes/textures/index>`,
 with the exception of Image textures that use UV coordinates by default.
-To use generated coordinates for images as well use the *Generated* output of the
-:doc:`Texture Coordinate node </render/shader_nodes/input/texture_coordinate>`
+To use generated coordinates for images as well use the *Generated* output of
+the :doc:`Texture Coordinate node </render/shader_nodes/input/texture_coordinate>`.
 
-The proper way is to use :doc:`UV UnApplying Textureswrapping </modeling/meshes/uv/unwrapping/index>`
-to manually generate UV coordinates. To use UV Mapping,
+The proper way is to use :doc:`UV Unwrapping </modeling/meshes/uv/unwrapping/index>`
+to manually generate UV coordinates. To use UV mapping,
 use the :doc:`Texture Coordinate node </render/shader_nodes/input/texture_coordinate>`
 (UV output) or the :doc:`UV Map node </render/shader_nodes/input/uv_map>`
 and select the UV map to use, "UVMap" by default.

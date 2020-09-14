@@ -7,8 +7,8 @@ Data Transfer Modifier
 The Data Transfer modifier transfers several types of data from one mesh to another.
 Data types include vertex groups, UV maps, vertex colors, custom normals...
 
-Transfer works by generating a mapping between source mesh's items (vertices, edges, etc.)
-and destination ones, either on a one-to-one basis, or mapping several source items
+Transfer works by generating a mapping between source mesh's elements (vertices, edges, etc.)
+and destination ones, either on a one-to-one basis, or mapping several source elements
 to a single destination one, using interpolation.
 
 .. figure:: /images/modeling_modifiers_modify_data-transfer_normals-example.jpg
@@ -59,7 +59,7 @@ Mix Factor
    How much of the transferred data gets mixed into existing one (not supported by all data types).
 
 Vertex Group
-   Allows per-item fine control of the mix factor. Vertex group influence can be reverted using the small
+   Allows per-element fine control of the mix factor. Vertex group influence can be reverted using the small
    "arrow" button to the right.
 
 Generate Data Layers
@@ -70,11 +70,11 @@ Generate Data Layers
 Selection of Data to Transfer
 -----------------------------
 
-To keep the size of the modifier reasonable, the kind of items to be affected must be selected first
+To keep the size of the modifier reasonable, the kind of elements to be affected must be selected first
 (vertices, edges, face corners and/or faces).
 
 Mapping Type
-   How is generated the mapping between those source and destination items. Each type has its own options,
+   How is generated the mapping between those source and destination elements. Each type has its own options,
    see `Geometry Mapping`_ below for details.
 
 Data Types
@@ -112,11 +112,11 @@ gets a part of the source mesh assigned with functions as its data source.
 It is crucial to understand this topic well to get good results with this modifier.
 
 Topology
-   The simplest option, expects both meshes to have identical number of items, and match them by order (indices).
+   The simplest option, expects both meshes to have identical number of elements, and match them by order (indices).
    Useful e.g. between meshes that were identical copies, and got deformed differently.
 
 One-To-One Mappings
-   Those always select only one source item for each destination one, often based on shortest distance.
+   Those always select only one source element for each destination one, often based on shortest distance.
 
    Vertices
       Nearest Vertex
@@ -136,7 +136,7 @@ One-To-One Mappings
          Uses source's nearest edge of source's nearest face (using edge's midpoints).
 
    Face Corners
-      A face corner is not a real item by itself, it's some kind of split vertex attached to a specific face.
+      A face corner is not a real element by itself, it's some kind of split vertex attached to a specific face.
       Hence both vertex (location) and face (normal, ...) aspects are used to match them together.
 
       Nearest Corner and Best Matching Normal
@@ -155,7 +155,7 @@ One-To-One Mappings
          Uses source's face which normal is most similar with destination one.
 
 Interpolated Mappings
-   Those use several source items for each destination one, interpolating their data during the transfer.
+   Those use several source elements for each destination one, interpolating their data during the transfer.
 
    Vertices
       Nearest Edge Interpolated
@@ -173,7 +173,7 @@ Interpolated Mappings
          all hit source edges' data are interpolated into destination one.
 
    Face Corners
-      A face corner is not a real item by itself, it's some kind of split vertex attached to a specific face.
+      A face corner is not a real element by itself, it's some kind of split vertex attached to a specific face.
       Hence both vertex (location) and face (normal, ...) aspects are used to match them together.
 
       Nearest Face Interpolated
@@ -194,17 +194,18 @@ Topology Mapping
 Max Distance
    When the "pressure stylus" icon button to the right is enabled,
    this is the maximum distance between source and destination to get a successful mapping.
-   If a destination item cannot find a source one within that range, then it will get no transferred data.
+   If a destination element cannot find a source one within that range, then it will get no transferred data.
 
    This allows to transfer a small sub-detailed mesh onto a more complete one
    (e.g. from a "hand" mesh towards a "full body" one).
 
 Ray Radius
-   The starting ray radius to use when `Ray Casting <https://en.wikipedia.org/wiki/Ray_casting>`
+   The starting ray radius to use when `Ray Casting <https://en.wikipedia.org/wiki/Ray_casting>`__
    against vertices or edges. When transferring data between meshes Blender performs a series of
    ray casts to generate mappings. Blender starts with a ray with the radius defined here,
-   if that does not return a hit than the radius is progressively
+   if that does not return a hit then the radius is progressively
    increased until a positive hit or a limit is reached.
+
    This property acts as an accuracy/performance control;
    using a lower ray radius will be more accurate however,
    might take longer if Blender has to progressively increase the limit.

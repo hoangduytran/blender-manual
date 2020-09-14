@@ -127,7 +127,7 @@ Set Indirect Only
 .. _bpy.ops.outliner.collection_indirect_only_clear:
 
 Clear Indirect Only
-   Clear the Set Indirect Only flag. Objects inside this collection will contribute normally to the final image.
+   Clear the *Indirect Only* flag. Objects inside this collection will contribute normally to the final image.
 
 .. _bpy.ops.outliner.collection_holdout_set:
 

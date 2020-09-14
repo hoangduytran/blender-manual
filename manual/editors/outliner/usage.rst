@@ -27,7 +27,6 @@ To begin a drag and drop, :kbd:`LMB` click and drag from the name or icon of a d
 
 Objects can be moved to collections by dropping on the name or contents of a collection.
 To link an object to a collection, hold :kbd:`Ctrl` while dropping.
-
 To set parent-child relations between objects, drop an object onto another object
 while holding :kbd:`Shift`.
 

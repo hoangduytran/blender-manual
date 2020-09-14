@@ -37,7 +37,6 @@ Scale Feather
    :Menu:      :menuselection:`Mask --> Transform --> Scale Feather`
    :Hotkey:    :kbd:`Alt-S`
 
-
 Will scale the feather size.
 
 

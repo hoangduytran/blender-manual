@@ -1,7 +1,7 @@
 
-**************
-Editing Images
-**************
+*******
+Editing
+*******
 
 .. admonition:: Reference
    :class: refbox

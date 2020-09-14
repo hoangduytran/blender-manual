@@ -79,7 +79,7 @@ Scene Collection
       - :kbd:`Shift-LMB` -- Add/Remove object(s) to/from collection.
 
    Global Restrictions (checkbox, cursor, eye, screen, camera icons)
-      See the Outliner page for information about 
+      See the Outliner page for information about
       :ref:`Restrictions <editors-outliner-interface-restriction_columns>`.
 
       - :kbd:`LMB` -- Enable the restriction for all collections. Click again to restore the previous state.
