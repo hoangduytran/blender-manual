@@ -37,7 +37,7 @@ Voxel Size
    while holding :kbd:`Ctrl` adjusts the size linearly.
 
    Sample Voxel Size
-      Used to adjust the *Voxel Size* by picking and an area of the mesh
+      Used to adjust the *Voxel Size* by picking an area of the mesh
       to match the denseness of polygons after the remesh operation.
 
 Adaptivity

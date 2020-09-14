@@ -468,9 +468,9 @@ Lock All
 Unlock All
    Unlocks all vertex groups.
 Lock Selected
-   Looks selected vertex groups.
+   Locks selected vertex groups.
 Unlock Selected
-   Unlocks selected vertex group.
+   Unlocks selected vertex groups.
 Lock Unselected
    Locks unselected vertex groups.
 Unlock Unselected

@@ -80,7 +80,7 @@ Invert Mask :kbd:`Ctrl-I`
 Fill Mask
    Fills the whole mask with a value of 1.
 Clear Mask :kbd:`Alt-M`
-   Fills the mask with a value of 0. To completely remove the mask data see `Clear Sculpt-Mask Data`_.
+   Fills the mask with a value of 0. To completely remove the mask data, see `Clear Sculpt-Mask Data`_.
 Box Mask :kbd:`B`
    Works like the *Box Select* tool, it creates a rectangular mask region.
    Hold :kbd:`Shift` to clear the mask of the selected region.
@@ -170,5 +170,5 @@ Clear Sculpt-Mask Data
    :Mode:      Object/Edit Mode
    :Menu:      :menuselection:`Properties --> Object Data --> Geometry Data --> Clear Sculpt-Mask Data`
 
-Completely frees the mask data layer from the mesh, while not a huge benefit,
+Completely frees the mask data layer from the mesh. While not a huge benefit,
 this can speed-up sculpting if the mask is no longer being used.
