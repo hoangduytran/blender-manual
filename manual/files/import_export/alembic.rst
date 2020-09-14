@@ -48,7 +48,7 @@ Manual Transform
 .. figure:: /images/files_import-export_alembic_export-panel-scene-options.png
    :align: right
 
-   Alembic Export options.
+   Generic and Scene Alembic Export options.
 
 Scale
    This sets the global scale of the Alembic file. Keep it at the default value of 1.0 to use
