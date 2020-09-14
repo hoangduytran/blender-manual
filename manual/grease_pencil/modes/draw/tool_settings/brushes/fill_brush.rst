@@ -65,7 +65,7 @@ Advanced
 Boundary
    Sets the type of fill boundary limits calculation to perform.
 
-   Default
+   All
       Use the thickness of the strokes and the editing lines together.
    Stroke
       Use only the thickness of the strokes (ignore edit lines).
