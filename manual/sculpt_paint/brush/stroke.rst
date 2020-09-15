@@ -59,7 +59,7 @@ Stroke Method :kbd:`E`
       Transforming Points
          The control points and handles can be dragged with :kbd:`LMB`.
          To make sure that the handles of a control point are symmetrical,
-         drag them using :kbd:`Shift-LMB`.
+         drag them using :kbd:`Shift-RMB`.
          A few transform operators are supported such as moving, scaling and rotating.
       Selection
          The handles can be selected individually by using :kbd:`RMB`,
