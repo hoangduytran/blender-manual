@@ -18,17 +18,9 @@ Interpolation
 
    Cubic
       Cubic interpolation between voxels. Gives smoothed high quality interpolation, but is slower.
-
-.. _bpy.types.FluidDomainSettings.slice_method:
-
-Slicing
-   How to slice the volume for viewport rendering.
-
-   View
-      Slice the volume parallel to the view plane.
-
-   Axis
-      Slice the volume parallel to the major axis.
+   
+   Closest
+      No interpolation between voxels. Gives raw voxels.
 
 .. _bpy.types.FluidDomainSettings.axis_slice_method:
 
@@ -53,6 +45,11 @@ Method
       Position
          Position of the slice relative to the length of the respective domain side.
 
+      .. _bpy.types.FluidDomainSettings.show_gridlines:
+
+      Gridlines :guilabel:`Closest Interpolation Only`
+         Display gridlines to differentiate the underlying cells in the current slice of the fluid domain.
+
 .. _bpy.types.FluidDomainSettings.slice_per_voxel:
 
 Slice per Voxel
@@ -61,8 +58,8 @@ Slice per Voxel
 
 .. _bpy.types.FluidDomainSettings.use_color_ramp:
 
-Color Mapping
-=============
+Grid Display
+============
 
 Use a specific color map for the visualization of the simulation field.
 This comes in handy during debugging or when making more advanced
@@ -70,7 +67,7 @@ adjustments to the simulation. For instance, if the actual color of
 a fire simulation is barely visible in the viewport then changing
 the color profile can help to see the real size of the flame.
 
-.. _bpy.types.FluidDomainSettings.coba_field:
+.. _bpy.types.FluidDomainSettings.color_ramp_field:
 
 Field
    The simulation field used in the display options (e.g. density, fuel, heat).
@@ -85,24 +82,93 @@ Field
 
              Slice view of "fire" grid with color mapping.
 
+.. _bpy.types.FluidDomainSettings.color_ramp_field_scale:
+
+Scale
+   Scale the selected simulation field by this value.
+
 
 .. _bpy.types.FluidDomainSettings.show_velocity:
 
-Debug Velocity
+Vector Display
 ==============
 
-Visualization options for the velocity field.
+Visualization options for the vector fields.
 
 .. _bpy.types.FluidDomainSettings.vector_display_type:
 
 Display As
    Streamlines
-      Choose to display the velocity vectors as "Streamlines".
+      Choose to display the vectors as "Streamlines".
 
    Needle
-      Choose to display the velocity vectors as "Needles".
+      Choose to display the vectors as "Needles".
+
+   MAC Grid
+      Choose to display the vector field as "Marker-And-Cell Grid".
+
+      .. _bpy.types.FluidDomainSettings.vector_show_mac_x:
+
+      X
+         Show X component of the MAC grid.
+
+      .. _bpy.types.FluidDomainSettings.vector_show_mac_y:
+
+      Y
+         Show Y component of the MAC grid.
+
+      .. _bpy.types.FluidDomainSettings.vector_show_mac_z:
+
+      Z
+         Show Z component of the MAC grid.
+
+.. _bpy.types.FluidDomainSettings.vector_scale_with_magnitude:
+
+Magnitude :guilabel:`Streamlines or Needle Only`
+   Scale the display vectors by the magnitude of the vectors they represent.
+
+.. _bpy.types.FluidDomainSettings.vector_field:
+
+Field
+   The vector field represented by the display vectors. (e.g. fluid velocity, external forces)
 
 .. _bpy.types.FluidDomainSettings.vector_scale:
 
 Scale
-   Scale the velocity vectors by this size in the viewport.
+   Scale the vectors by this size in the viewport.
+
+
+Advanced :guilabel:`Gridlines Only`
+===================================
+
+Advanced coloring options for gridlines.
+
+.. _bpy.types.FluidDomainSettings.gridlines_color_field:
+
+Color Gridlines
+   Flags
+      Color gridlines with flags.
+
+   Highlight Range :guilabel:`Grid Display Only`
+      Highlight the cells with values of the displayed grid within the range.
+      Values between the *Lower Bound* and *Upper Bound* (inclusive) are considered to be within the range.
+
+      .. _bpy.types.FluidDomainSettings.gridlines_lower_bound:
+
+      Lower Bound
+         Lower bound of the highlighting range.
+
+      .. _bpy.types.FluidDomainSettings.gridlines_upper_bound:
+
+      Upper Bound
+         Upper bound of the highlighting range.
+      
+      .. _bpy.types.FluidDomainSettings.gridlines_range_color:
+
+      Color
+         Color used to highlight the cells.
+      
+      .. _bpy.types.FluidDomainSettings.gridlines_cell_filter:
+
+      Cell Type
+         Choose to highlight only a particular type of cells.

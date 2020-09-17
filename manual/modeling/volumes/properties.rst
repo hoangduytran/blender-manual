@@ -93,6 +93,43 @@ Density
    The density of the volume in the render is adjusted via
    :doc:`Volume Shading </render/shader_nodes/shader/volume_principled>`.
 
+.. _bpy.types.VolumeDisplay.interpolation_method:
+
+Interpolation
+   Interpolation method to use for the visualization of the fluid grid.
+
+   Linear
+      Linear interpolation between voxels. Gives good smoothness and speed.
+
+   Cubic
+      Cubic interpolation between voxels. Gives smoothed high quality interpolation, but is slower.
+   
+   Closest
+      No interpolation between voxels. Gives raw voxels.
+
+.. _bpy.types.VolumeDisplay.axis_slice_method:
+
+Method
+   Full
+      Slice the whole domain object.
+
+   Single
+      Perform a single slice of the domain object.
+
+      .. _bpy.types.VolumeDisplay.slice_axis:
+
+      Axis
+         Auto
+            Adjust slice direction according to the view direction.
+
+         X/Y/Z
+            Slice along the X/Y/Z axis.
+
+      .. _bpy.types.VolumeDisplay.slice_depth:
+
+      Position
+         Position of the slice relative to the length of the respective domain side.
+
 
 .. _bpy.types.VolumeRender:
 
