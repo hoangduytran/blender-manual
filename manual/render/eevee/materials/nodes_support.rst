@@ -56,11 +56,11 @@ Emission
    Treated as indirect lighting and will only show up in :abbr:`SSR (Screen Space Reflection)`\ s and Probes.
 
 Glass / Refraction BSDF
-   Does not refract lights. Does not support Beckmann and GGX Multiscatter distribution.
+   Does not refract lights. Does not support Beckmann distribution.
    See :ref:`Refraction limitations <eevee-limitations-refraction>`.
 
 Glossy BSDF
-   Does not support Beckmann, Ashikhmin-Shirley and GGX Multiscatter distribution.
+   Does not support Beckmann and Ashikhmin-Shirley distributions.
 
 Subsurface Scattering
    Random Walk sampling is not supported. Per color channel Radius is specified by the default socket value.
