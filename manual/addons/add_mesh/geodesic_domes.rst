@@ -123,7 +123,7 @@ Import Your Mesh
 ================
 
 You can import your own mesh into Geodesic Domes for use within the script.
-This is limited to the Faces, Struts and Hubs menu's.
+This is limited to the Faces, Struts and Hubs menus.
 
 
 Faces
