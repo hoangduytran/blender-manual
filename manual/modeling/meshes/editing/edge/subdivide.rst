@@ -248,7 +248,7 @@ Three Edges
    * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges.png
           :width: 250px
 
-     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri2.png
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri.png
           :width: 250px
 
           Quad/Tri Mode.
@@ -259,7 +259,7 @@ Tri
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri2.png
           :width: 250px
 
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri-tri.png
