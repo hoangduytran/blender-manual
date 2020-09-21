@@ -81,7 +81,7 @@ Wireframe
 Detail
    The amount of detail to display for *Boxes* or *Points* wireframe mode.
 
-   Course
+   Coarse
       Display one box or point for each intermediate tree node.
    Fine
       Display a box or point for each leaf node containing 8×8 voxels.
