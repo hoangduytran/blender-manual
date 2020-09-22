@@ -39,9 +39,6 @@ Display As
 Faces
    Display faces over the image.
 
-Smooth
-   Makes edges appear anti-aliased.
-
 Modified
    Show results of modifiers in the UV display.
 
