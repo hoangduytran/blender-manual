@@ -109,6 +109,9 @@ Transmission Roughness :guilabel:`Cycles Only`
    With **GGX** distribution controls roughness used for transmitted light.
 Emission
    Light emission from the surface, like the Emission shader.
+Emission Strength
+   Strength of the emitted light. A value of 1.0 will ensure that the object
+   in the image has the exact same color as the Color input, i.e. make it 'shadeless'.
 Alpha
    Controls the transparency of the surface, with 1.0 fully opaque.
    Usually linked to the Alpha output of an Image Texture node.
