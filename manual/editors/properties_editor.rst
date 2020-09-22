@@ -1,8 +1,8 @@
 .. _bpy.types.SpaceProperties:
 
-*****************
+**********
 Properties
-*****************
+**********
 
 .. figure:: /images/editors_properties-editor_interface.png
    :align: right
