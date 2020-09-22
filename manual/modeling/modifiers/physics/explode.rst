@@ -87,3 +87,15 @@ Protect
 
 Refresh
    Refresh data in the *Explode* modifier.
+
+
+Known Limitations
+=================
+
+Dynamic Vertex Weights
+----------------------
+
+This modifier uses the initial vertex weights.
+Modifiers that dynamically change weights will not influence the explosion as these values are only used once.
+
+.. Ref T77654
