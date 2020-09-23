@@ -141,44 +141,49 @@ Object
 Fill Caps
    Seals the ends of a beveled curve.
 
+
+Start & End Mapping
+===================
+
 .. _bpy.types.Curve.bevel_factor_start:
 .. _bpy.types.Curve.bevel_factor_end:
 
-Bevel Start/End
-   These options determine where to start/end the Bevel operation on the curve.
-   This allows to make a bevelled curve which is not fully covered with a bevel.
+Factor Start, End
+   These options determine where to start/end the geometry of the curve.
+   This allows to make a curve which is not fully covered with geometry.
 
-   Increasing the *Start Bevel Factor* to 0.5 will start beveling the curve 50% of the distance from the start
-   of the curve (in effect shortening the curve).
-   Decreasing the *End Bevel Factor* by 0.25 will start beveling the curve 25% of the distance from the end
-   of the curve (again, shortening the curve).
+   Increasing the start value to 0.5 will start the geometry at 50%
+   of the distance from the start of the curve (in effect shortening the curve).
+   Decreasing the end value by 0.25 will start the geometry at 25%
+   of the distance from the end of the curve (again, shortening the curve).
 
    .. list-table::
 
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel.png
              :width: 320px
 
-             A curve with no Bevel factor applied.
+             A curve with no *Factor Start, End*.
 
         - .. figure:: /images/modeling_curves_properties_geometry_bevel-start-end-factor.png
              :width: 320px
 
-             A curve with a 0.6 End Bevel Factor.
+             A curve with a 0.6 End factor.
 
 .. _bpy.types.Curve.bevel_factor_mapping_start:
 .. _bpy.types.Curve.bevel_factor_mapping_end:
 
-Bevel Mapping Start/End
-   Allows to control the relation between bevel factors (number between 0 and 1) and
-   the rendered start and end point of a beveled spline. Map the bevel factor:
+Mapping Start, End
+   Allows to control the relation between the *Factor Start, End* (number between 0 and 1)
+   and the rendered start and end point of the spline's geometry.
 
    Resolution
-      To the number of subdivisions of a spline (U resolution).
+      Maps the start & end factor to the number of subdivisions of a spline (U resolution).
    Segments
-      To the length of its segments. Mapping to segments treats the subdivisions in each segment of a curve as
-      if they would have all the same length.
+      Maps the start & end factor to the length of its segments.
+      Mapping to segments treats the subdivisions in each segment
+      of a curve as if they would have all the same length.
    Spline
-      The length of a spline.
+      Maps the start & end factor to the length of a spline.
 
 
 Examples
