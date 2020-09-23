@@ -64,8 +64,8 @@ Triangulate
 Vertex Group
    A vertex group that controls what parts of the mesh are decimated.
 
-   Factor
-      The amount of influence the *Vertex Group* has on the decimation.
+Factor
+   The amount of influence the *Vertex Group* has on the decimation.
 
 
 Un-Subdivide
