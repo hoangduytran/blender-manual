@@ -103,10 +103,12 @@ Width :kbd:`A`
    As usual, the scaling can be controlled to a finer degree by holding :kbd:`Shift` to scale in 0.001 steps.
    :kbd:`LMB` finalizes the operation, :kbd:`RMB` or :kbd:`Esc` aborts the action.
 
-.. note::
+   .. note::
 
-  When multiple edges are beveled at the same time, it is sometimes impossible to make the width match the above definition on all edges simultaneously. Bevel tries to compromise in such cases. Sometimes turning off Loop Slide (see below) can make it easier for Bevel to make the widths as specified.
-
+      When multiple edges are beveled at the same time,
+      it is sometimes impossible to make the width match the above definition on all edges simultaneously.
+      Bevel tries to compromise in such cases.
+      Sometimes turning off Loop Slide (see below) can make it easier for Bevel to make the widths as specified.
 
 Segments :kbd:`S`
    The number of segments in the bevel can be defined by
