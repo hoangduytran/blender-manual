@@ -285,7 +285,11 @@ def generate_preview_html():
         fw('<html>\n')
         fw('<body>\n')
 
-        fw('<table border = "1">\n')
+        fw('<table style="table-layout: fixed;width: 100%;" border="1">\n')
+        fw('  <tr>\n')
+        fw('    <td><h1>Old Images</h1></td>\n')
+        fw('    <td><h1>New Images</h1></td>\n')
+        fw('  </tr>\n')
 
         for filename in os.listdir(IMAGE_DIR_PREVIEW):
 
@@ -293,8 +297,8 @@ def generate_preview_html():
             file_new = os.path.relpath(os.path.join(IMAGE_DIR_PREVIEW, filename), ROOT_DIR)
 
             fw('  <tr>\n')
-            fw('    <td><img src="{:s}"></td>\n'.format(file_old))
-            fw('    <td><img src="{:s}"></td>\n'.format(file_new))
+            fw('    <td><img src="{:s}" style="width: 100%"></td>\n'.format(file_old))
+            fw('    <td><img src="{:s}" style="width: 100%"></td>\n'.format(file_new))
             fw('  </tr>\n')
 
         fw('</table>\n')
