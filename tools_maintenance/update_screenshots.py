@@ -158,6 +158,27 @@ def window_screenshot_to_filepath(*, window, filepath):
     )
     yield
 
+
+# ----------------------------------------------------------------------
+# Screenshot Helpers
+
+def crop(filepath, size_dst):
+    import imbuf
+
+    ibuf = imbuf.load(filepath)
+    size_src = ibuf.size
+    min = (
+        (size_src[0] // 2) - (size_dst[0] // 2) - 1,
+        (size_src[1] // 2) - (size_dst[1] // 2) - 1,
+    )
+    max = (
+        min[0] + size_dst[0],
+        min[1] + size_dst[1],
+    )
+    ibuf.crop(min=min, max=max)
+    imbuf.write(ibuf, filepath)
+
+
 # ----------------------------------------------------------------------
 # Screenshot Startup
 
@@ -214,21 +235,7 @@ def screenshot_splash_screen(window):
 
     yield from window_tap_key(window=window, type='ESC')
 
-    # Crop.
-    import imbuf
-    ibuf = imbuf.load(filepath)
-    size_dst = 520, 487
-    size_src = ibuf.size
-    min = (
-        (size_src[0] // 2) - (size_dst[0] // 2) - 1,
-        (size_src[1] // 2) - (size_dst[1] // 2) - 1,
-    )
-    max = (
-        min[0] + size_dst[0],
-        min[1] + size_dst[1],
-    )
-    ibuf.crop(min=min, max=max)
-    imbuf.write(ibuf, filepath)
+    crop(filepath, [520, 487])
 
 
 # ----------------------------------------------------------------------
