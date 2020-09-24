@@ -257,9 +257,15 @@ def screenshot_preferences(window):
             IMAGE_DIR_PREVIEW,
             "editors_preferences_section_" + section.lower().replace("_", "-") + ".png",
         )
+        if section == 'EXPERIMENTAL':
+          prefs.view.show_developer_ui = True
+
         setattr(prefs, "active_section", section)
 
         yield from window_screenshot_to_filepath(window=prefs_window, filepath=filepath)
+
+        if section == 'EXPERIMENTAL':
+          prefs.view.show_developer_ui = False
 
     bpy.ops.wm.window_close({"window": prefs_window})
 
