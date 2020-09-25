@@ -8,7 +8,7 @@ This category can be enabled by enabling :ref:`Developer Extras <prefs-interface
 
 .. figure:: /images/editors_preferences_section_experimental.png
 
-   Blender Preferences Animation section.
+   Blender Preferences Experimental section.
 
 
 Debugging
