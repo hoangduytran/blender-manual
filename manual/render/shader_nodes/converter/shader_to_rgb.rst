@@ -27,6 +27,7 @@ noisy input may not convert to a smooth result.
 
    - Screen Space Reflection
    - Subsurface Scattering
+   - Alpha Clip and Alpha Hashed blend modes
 
    Shader to RGB node doesn't give expected results in render passes.
 
