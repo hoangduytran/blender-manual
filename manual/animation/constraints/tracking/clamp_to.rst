@@ -1,3 +1,4 @@
+.. index:: Constraint; Clamp To Constraint
 .. _bpy.types.ClampToConstraint:
 
 *******************

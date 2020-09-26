@@ -1,5 +1,4 @@
-.. (TODO rewrite) Notes section is a mess.
-
+.. index:: Constraint; Action Constraint
 .. _bpy.types.ActionConstraint:
 
 *****************
@@ -15,10 +14,8 @@ the :doc:`Drivers </animation/drivers/index>`, except that the former uses a who
 (i.e. multiple F-curves of the same type), while the latter controls a single F-curve of their "owner"...
 
 Note that even if the constraint accepts the *Mesh* action type,
-only the *Object*,
-*Pose* and *Constraint* types are really working,
-as constraints can only affect objects' or bones' transform properties,
-and not meshes' shapes.
+only the *Object*, *Pose* and *Constraint* types are really working,
+as constraints can only affect objects' or bones' transform properties, and not meshes' shapes.
 Also note that only the object transformation (location, rotation, scale) is affected by the action,
 if the action contains keyframes for other properties they are ignored, as constraints do not influence those.
 
@@ -114,6 +111,8 @@ Frame Start, End
       - By default, both values are set to 0, which disables the mapping
         (i.e. the owner just gets the properties defined at frame 0 of the linked action...).
 
+
+.. (TODO rewrite) Notes section is a mess.
 
 Notes
 =====

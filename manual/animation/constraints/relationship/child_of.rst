@@ -1,3 +1,4 @@
+.. index:: Constraint; Child Of Constraint
 .. _bpy.types.ChildOfConstraint:
 
 *******************

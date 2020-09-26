@@ -1,3 +1,4 @@
+.. index:: Constraint; Shrinkwrap Constraint
 .. _bpy.types.ShrinkwrapConstraint:
 
 *********************

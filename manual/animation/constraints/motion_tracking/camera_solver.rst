@@ -1,3 +1,4 @@
+.. index:: Constraint; Camera Solver Constraint
 .. _bpy.types.CameraSolverConstraint:
 
 ************************

@@ -1,3 +1,4 @@
+.. index:: Constraint; Spline IK Constraint
 .. _bpy.types.SplineIKConstraint:
 
 ********************

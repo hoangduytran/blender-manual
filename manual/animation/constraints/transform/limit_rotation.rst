@@ -1,3 +1,4 @@
+.. index:: Constraint; Limit Rotation Constraint
 .. _bpy.types.LimitRotationConstraint:
 
 *************************

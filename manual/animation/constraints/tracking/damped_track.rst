@@ -1,3 +1,4 @@
+.. index:: Constraint; Damped Track Constraint
 .. _bpy.types.DampedTrackConstraint:
 
 ***********************

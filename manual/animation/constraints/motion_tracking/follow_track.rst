@@ -1,3 +1,4 @@
+.. index:: Constraint; Follow Track Constraint
 .. _bpy.types.FollowTrackConstraint:
 
 ***********************

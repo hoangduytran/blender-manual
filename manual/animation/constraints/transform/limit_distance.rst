@@ -1,3 +1,4 @@
+.. index:: Constraint; Limit Distance Constraint
 .. _bpy.types.LimitDistanceConstraint:
 
 *************************

@@ -1,3 +1,4 @@
+.. index:: Constraint; Copy Rotation Constraint
 .. _bpy.types.CopyRotationConstraint:
 
 ************************

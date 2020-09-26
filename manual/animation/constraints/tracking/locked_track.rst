@@ -1,3 +1,4 @@
+.. index:: Constraint; Locked Track Constraint
 .. _bpy.types.LockedTrackConstraint:
 
 ***********************

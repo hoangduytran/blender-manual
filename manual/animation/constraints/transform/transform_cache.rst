@@ -1,3 +1,4 @@
+.. index:: Constraint; Transform Cache Constraint
 .. _bpy.types.TransformCacheConstraint:
 
 **************************

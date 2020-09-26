@@ -1,3 +1,4 @@
+.. index:: Constraint; Copy Location Constraint
 .. _bpy.types.CopyLocationConstraint:
 
 ************************
