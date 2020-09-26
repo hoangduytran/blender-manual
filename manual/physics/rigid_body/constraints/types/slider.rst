@@ -1,7 +1,7 @@
 
-******
-Slider
-******
+*****************
+Slider Constraint
+*****************
 
 .. admonition:: Reference
    :class: refbox

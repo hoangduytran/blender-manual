@@ -1,7 +1,7 @@
 
-**************
-Generic Spring
-**************
+*************************
+Generic Spring Constraint
+*************************
 
 .. admonition:: Reference
    :class: refbox

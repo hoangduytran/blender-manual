@@ -1,7 +1,7 @@
 
-*****
-Hinge
-*****
+****************
+Hinge Constraint
+****************
 
 .. admonition:: Reference
    :class: refbox

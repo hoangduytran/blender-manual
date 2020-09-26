@@ -1,7 +1,7 @@
 
-*****
-Fixed
-*****
+****************
+Fixed Constraint
+****************
 
 .. admonition:: Reference
    :class: refbox

@@ -1,7 +1,7 @@
 
-*******
-Generic
-*******
+******************
+Generic Constraint
+******************
 
 .. admonition:: Reference
    :class: refbox

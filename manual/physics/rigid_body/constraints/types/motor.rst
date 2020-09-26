@@ -1,7 +1,7 @@
 
-*****
-Motor
-*****
+****************
+Motor Constraint
+****************
 
 .. admonition:: Reference
    :class: refbox

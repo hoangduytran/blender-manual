@@ -1,7 +1,7 @@
 
-******
-Piston
-******
+*****************
+Piston Constraint
+*****************
 
 .. admonition:: Reference
    :class: refbox

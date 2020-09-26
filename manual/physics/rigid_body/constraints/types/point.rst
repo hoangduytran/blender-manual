@@ -1,7 +1,7 @@
 
-*****
-Point
-*****
+****************
+Point Constraint
+****************
 
 .. admonition:: Reference
    :class: refbox
