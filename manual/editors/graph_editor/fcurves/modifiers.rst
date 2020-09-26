@@ -1,4 +1,5 @@
 .. index:: Modifiers; F-Curve Modifiers
+.. index:: F-Curve Modifiers
 
 .. _bpy.types.FCurveModifiers:
 .. _bpy.types.FModifier:
@@ -31,6 +32,7 @@ Click on the *Add Modifier* menu to select a modifier.
 Types of Modifiers
 ==================
 
+.. index:: F-Curve Modifiers; Generator Modifier
 .. _bpy.types.FModifierGenerator:
 
 Generator
@@ -54,6 +56,7 @@ Polynomial Order
       for more information on polynomials.
 
 
+.. index:: F-Curve Modifiers; Built-in Function Modifier
 .. _bpy.types.FModifierFunctionGenerator:
 
 Built-in Function
@@ -79,6 +82,7 @@ Value Offset
    Adjusts the Y offset.
 
 
+.. index:: F-Curve Modifiers; Envelope Modifier
 .. _bpy.types.FModifierEnvelope:
 .. _bpy.types.FModifierEnvelopeControlPoint:
 
@@ -106,6 +110,7 @@ Point
       Specifies the upper control point's position.
 
 
+.. index:: F-Curve Modifiers; Cycles Modifier
 .. _bpy.types.FModifierCycles:
 
 Cycles
@@ -140,6 +145,7 @@ This special case receives some additional support from other areas of Blender:
   the cycle into account when inserting new keyframes.
 
 
+.. index:: F-Curve Modifiers; Noise Modifier
 .. _bpy.types.FModifierNoise:
 
 Noise
@@ -171,6 +177,7 @@ Depth
    Adjusts how detailed the noise function is.
 
 
+.. index:: F-Curve Modifiers; Limits Modifier
 .. _bpy.types.FModifierLimits:
 
 Limits
@@ -184,6 +191,7 @@ Minimum, Maximum Y
    Truncates the curve values to a range.
 
 
+.. index:: F-Curve Modifiers; Stepped Interpolation Modifier
 .. _bpy.types.FModifierStepped:
 
 Stepped Interpolation
