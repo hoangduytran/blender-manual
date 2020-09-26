@@ -1,3 +1,4 @@
+.. index:: Force Fields; Charge
 
 ******
 Charge

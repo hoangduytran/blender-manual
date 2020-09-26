@@ -1,3 +1,4 @@
+.. index:: Force Fields; Lennard-Jones
 
 *************
 Lennard-Jones

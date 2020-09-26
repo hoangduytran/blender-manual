@@ -1,3 +1,4 @@
+.. index:: Force Fields; Wind
 
 ****
 Wind

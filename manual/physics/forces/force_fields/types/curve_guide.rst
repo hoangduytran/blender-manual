@@ -1,3 +1,4 @@
+.. index:: Force Fields; Curve Guide
 
 ***********
 Curve Guide
