@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Wireframe Modifier
 .. _bpy.types.WireframeModifier:
 
 ******************

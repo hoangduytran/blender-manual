@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; UV Project Modifier
 .. _bpy.types.UVProjectModifier:
 
 *******************

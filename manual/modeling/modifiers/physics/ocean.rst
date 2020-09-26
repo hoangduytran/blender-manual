@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Ocean Modifier
 .. _bpy.types.OceanModifier:
 
 **************

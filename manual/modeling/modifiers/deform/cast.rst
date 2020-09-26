@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Cast Modifier
 .. _bpy.types.CastModifier:
 
 *************

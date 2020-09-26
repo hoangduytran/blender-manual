@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Subdivision Surface Modifier
 .. _bpy.types.SubsurfModifier:
 
 ****************************

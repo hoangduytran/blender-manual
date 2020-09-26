@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Weighted Normal Modifier
 .. _bpy.types.WeightedNormalModifier:
 
 ************************

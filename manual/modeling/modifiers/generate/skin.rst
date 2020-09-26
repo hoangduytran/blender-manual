@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Skin Modifier
 .. _bpy.types.SkinModifier:
 
 *************

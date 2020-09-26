@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Vertex Weight Mix Modifier
 .. _bpy.types.VertexWeightMixModifier:
 
 **************************

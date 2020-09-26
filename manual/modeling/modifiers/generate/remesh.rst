@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Remesh Modifier
 .. _bpy.types.RemeshModifier:
 
 ***************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Warp Modifier
 .. _bpy.types.WarpModifier:
 
 *************

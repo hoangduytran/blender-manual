@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Laplacian Deform Modifier
 .. _bpy.types.LaplacianDeformModifier:
 
 *************************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Shrinkwrap Modifier
 .. _bpy.types.ShrinkwrapModifier:
 
 *******************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Smooth Laplacian Modifier
 .. _bpy.types.LaplacianSmoothModifier:
 
 *************************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Mesh Sequence Cache Modifier
 
 ****************************
 Mesh Sequence Cache Modifier

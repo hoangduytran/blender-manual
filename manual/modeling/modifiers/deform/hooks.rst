@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Hook Modifier
 .. _bpy.types.HookModifier:
 
 *************

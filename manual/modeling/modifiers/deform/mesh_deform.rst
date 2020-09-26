@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Mesh Deform Modifier
 .. _bpy.types.MeshDeformModifier:
 
 ********************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Array Modifier
 .. _bpy.types.ArrayModifier:
 
 **************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Multiresolution Modifier
 .. _bpy.types.MultiresModifier:
 
 ************************

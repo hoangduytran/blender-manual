@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Weld Modifier
 .. _bpy.types.WeldModifier:
 
 *************

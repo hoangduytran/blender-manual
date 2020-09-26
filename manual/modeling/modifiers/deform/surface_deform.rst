@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Surface Deform Modifier
 .. _bpy.types.SurfaceDeformModifier:
 
 ***********************

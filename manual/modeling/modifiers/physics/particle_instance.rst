@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Particle Instance Modifier
 .. _bpy.types.ParticleInstanceModifier:
 
 **************************

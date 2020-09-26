@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Smooth Corrective Modifier
 .. _bpy.types.CorrectiveSmoothModifier:
 
 **************************

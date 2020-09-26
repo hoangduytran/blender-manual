@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Data Transfer Modifier
 .. _bpy.types.DataTransferModifier:
 
 **********************

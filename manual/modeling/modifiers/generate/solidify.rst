@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Solidify Modifier
 .. _bpy.types.SolidifyModifier:
 
 *****************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Edge Split Modifier
 .. _bpy.types.EdgeSplitModifier:
 
 *******************

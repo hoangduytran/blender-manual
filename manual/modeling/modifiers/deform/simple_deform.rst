@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Simple Deform Modifier
 .. _bpy.types.SimpleDeformModifier:
 
 **********************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Explode Modifier
 .. _bpy.types.ExplodeModifier:
 
 ****************

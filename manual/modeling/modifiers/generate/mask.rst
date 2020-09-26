@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Mask Modifier
 .. _bpy.types.MaskModifier:
 
 *************

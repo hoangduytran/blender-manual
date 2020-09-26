@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Screw Modifier
 .. _bpy.types.ScrewModifier:
 
 **************

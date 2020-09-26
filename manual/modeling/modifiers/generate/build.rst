@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Build Modifier
 .. _bpy.types.BuildModifier:
 
 **************

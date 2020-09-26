@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Triangulate Modifier
 .. _bpy.types.TriangulateModifier:
 
 ********************

@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Bevel Modifier
 .. _bpy.types.BevelModifier:
 
 **************

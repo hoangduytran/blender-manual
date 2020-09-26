@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Displace Modifier
 .. _bpy.types.DisplaceModifier:
 
 *****************

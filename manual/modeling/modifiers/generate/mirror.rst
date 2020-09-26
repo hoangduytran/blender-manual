@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Mirror Modifier
 .. _bpy.types.MirrorModifier:
 
 ***************

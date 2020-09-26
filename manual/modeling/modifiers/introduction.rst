@@ -1,3 +1,5 @@
+.. index:: Modifiers; Modeling Modifiers
+.. index:: Modeling Modifiers
 
 ************
 Introduction

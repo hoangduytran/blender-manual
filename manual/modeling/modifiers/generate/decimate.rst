@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Decimate Modifier
 .. _bpy.types.DecimateModifier:
 
 *****************

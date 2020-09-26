@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Armature Modifier
 .. _bpy.types.ArmatureModifier:
 
 *****************

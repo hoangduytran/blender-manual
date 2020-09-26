@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Vertex Weight Edit Modifier
 .. _bpy.types.VertexWeightEditModifier:
 
 ***************************

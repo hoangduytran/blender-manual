@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; UV Warp Modifier
 .. _bpy.types.UVWarpModifier:
 
 ****************

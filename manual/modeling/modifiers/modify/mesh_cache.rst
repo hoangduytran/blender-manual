@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Mesh Cache Modifier
 .. _bpy.types.MeshCacheModifier:
 
 *******************

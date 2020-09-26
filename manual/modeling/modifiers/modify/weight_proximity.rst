@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Vertex Weight Proximity Modifier
 .. _bpy.types.VertexWeightProximityModifier:
 
 ********************************

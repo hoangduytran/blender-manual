@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Wave Modifier
 .. _bpy.types.WaveModifier:
 
 *************

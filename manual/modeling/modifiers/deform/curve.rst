@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Curve Modifier
 .. _bpy.types.CurveModifier:
 
 **************

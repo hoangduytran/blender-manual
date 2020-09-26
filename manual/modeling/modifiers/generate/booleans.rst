@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Boolean Modifier
 .. _bpy.types.BooleanModifier:
 
 ****************

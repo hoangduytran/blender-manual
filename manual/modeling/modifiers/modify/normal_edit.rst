@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Normal Edit Modifier
 .. _bpy.types.NormalEditModifier:
 
 ********************

@@ -1,5 +1,3 @@
-.. index:: Modifiers; Modeling Modifiers
-
 .. _modifiers-index:
 .. _bpy.types.Modifier:
 

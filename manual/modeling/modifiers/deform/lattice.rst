@@ -1,3 +1,4 @@
+.. index:: Modeling Modifiers; Lattice Modifier
 .. _bpy.types.LatticeModifier:
 
 ****************
