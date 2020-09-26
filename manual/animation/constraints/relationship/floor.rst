@@ -1,4 +1,4 @@
-.. index:: Constraint; Floor Constraint
+.. index:: Object Constraints; Floor Constraint
 .. _bpy.types.FloorConstraint:
 
 ****************

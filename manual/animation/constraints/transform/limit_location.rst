@@ -1,4 +1,4 @@
-.. index:: Constraint; Limit Location Constraint
+.. index:: Object Constraints; Limit Location Constraint
 .. _bpy.types.LimitLocationConstraint:
 
 *************************

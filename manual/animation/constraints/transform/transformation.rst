@@ -1,4 +1,4 @@
-.. index:: Constraint; Transformation Constraint
+.. index:: Object Constraints; Transformation Constraint
 .. _bpy.types.TransformConstraint:
 
 *************************

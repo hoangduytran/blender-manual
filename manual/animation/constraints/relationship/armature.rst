@@ -1,4 +1,4 @@
-.. index:: Constraint; Armature Constraint
+.. index:: Object Constraints; Armature Constraint
 .. _bpy.types.ArmatureConstraint:
 
 *******************

@@ -1,4 +1,4 @@
-.. index:: Constraint; Maintain Volume Constraint
+.. index:: Object Constraints; Maintain Volume Constraint
 .. _bpy.types.MaintainVolumeConstraint:
 
 **************************

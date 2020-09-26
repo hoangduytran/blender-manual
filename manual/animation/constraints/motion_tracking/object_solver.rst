@@ -1,4 +1,4 @@
-.. index:: Constraint; Object Solver Constraint
+.. index:: Object Constraints; Object Solver Constraint
 .. _bpy.types.ObjectSolverConstraint:
 
 ************************

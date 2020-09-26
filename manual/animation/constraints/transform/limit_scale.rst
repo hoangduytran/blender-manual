@@ -1,4 +1,4 @@
-.. index:: Constraint; Limit Scale Constraint
+.. index:: Object Constraints; Limit Scale Constraint
 .. _bpy.types.LimitScaleConstraint:
 
 **********************

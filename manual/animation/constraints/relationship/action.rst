@@ -1,4 +1,4 @@
-.. index:: Constraint; Action Constraint
+.. index:: Object Constraints; Action Constraint
 .. _bpy.types.ActionConstraint:
 
 *****************

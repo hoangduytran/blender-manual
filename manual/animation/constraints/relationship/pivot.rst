@@ -1,4 +1,4 @@
-.. index:: Constraint; Pivot Constraint
+.. index:: Object Constraints; Pivot Constraint
 .. _bpy.types.PivotConstraint:
 
 ****************

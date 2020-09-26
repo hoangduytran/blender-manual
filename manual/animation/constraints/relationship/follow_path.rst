@@ -1,4 +1,4 @@
-.. index:: Constraint; Follow Path Constraint
+.. index:: Object Constraints; Follow Path Constraint
 .. _bpy.types.FollowPathConstraint:
 
 **********************

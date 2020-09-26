@@ -1,4 +1,4 @@
-.. index:: Constraint; Inverse Kinematics Constraint
+.. index:: Object Constraints; Inverse Kinematics Constraint
 .. _bpy.types.KinematicConstraint:
 
 *****************************

@@ -1,4 +1,4 @@
-.. index:: Constraint; Stretch To Constraint
+.. index:: Object Constraints; Stretch To Constraint
 .. _bpy.types.StretchToConstraint:
 
 *********************

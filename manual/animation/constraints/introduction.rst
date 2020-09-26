@@ -1,3 +1,4 @@
+.. index:: Constraints; Object Constraints
 
 ************
 Introduction

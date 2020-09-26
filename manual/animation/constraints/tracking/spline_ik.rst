@@ -1,4 +1,4 @@
-.. index:: Constraint; Spline IK Constraint
+.. index:: Object Constraints; Spline IK Constraint
 .. _bpy.types.SplineIKConstraint:
 
 ********************
