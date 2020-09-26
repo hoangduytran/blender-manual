@@ -1,3 +1,4 @@
+.. index:: Constraint; Bone Constraints
 .. _bpy.types.PoseBoneConstraints:
 
 ####################
