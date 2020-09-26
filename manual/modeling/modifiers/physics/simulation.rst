@@ -1,6 +1,6 @@
-.. index:: Modeling Modifiers; Simulation Modifier
 :orphan:
 
+.. .. index:: Modeling Modifiers; Simulation Modifier
 .. _bpy.types.SimulationModifier:
 
 *******************
