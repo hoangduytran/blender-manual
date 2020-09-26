@@ -834,9 +834,6 @@ This page lists definitions for terms used in Blender and this manual.
    Triangle
       :term:`Face` with exactly three :term:`Vertices <Vertex>`.
 
-   User
-      See :term:`Data User`
-
    UV Map
       Defines a relation between the surface of a mesh and a 2D texture. In detail,
       each face of the mesh is mapped to a corresponding face on the texture.
@@ -851,9 +848,6 @@ This page lists definitions for terms used in Blender and this manual.
    Vertex Group
       Collection of :term:`Vertices <Vertex>`.
       Vertex groups are useful for limiting operations to specific areas of a mesh.
-
-   Visual Effects
-      Grease Pencil has a special set of viewport real-time visual effects that can be apply to the object.
 
    Voxel
       A cubic 3D equivalent to the square 2D pixel.
