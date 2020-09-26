@@ -1,3 +1,5 @@
+.. index:: Modifiers; Video Sequencer Modifiers
+
 .. _bpy.types.BrightContrastModifier:
 .. _bpy.types.ColorBalanceModifier:
 .. _bpy.types.CurvesModifier:

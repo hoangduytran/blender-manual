@@ -1,3 +1,5 @@
+.. index:: Modifiers; Grease Pencil Modifiers
+
 .. _bpy.ops.object.gpencil_modifier:
 
 #############

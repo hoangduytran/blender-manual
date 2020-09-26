@@ -492,6 +492,9 @@ This page lists definitions for terms used in Blender and this manual.
       See :ref:`render-cycles-reducing-noise-mis` and
       also `Importance sampling <https://en.wikipedia.org/wiki/Importance_sampling>`__ on Wikipedia.
 
+   Modifiers
+      A non destructive operation that is applied on top of some sort of data.
+
    Motion Blur
       The phenomenon that occurs when we perceive a rapidly moving object.
       The object appears to be blurred because of our persistence of vision.
@@ -848,6 +851,9 @@ This page lists definitions for terms used in Blender and this manual.
    Vertex Group
       Collection of :term:`Vertices <Vertex>`.
       Vertex groups are useful for limiting operations to specific areas of a mesh.
+
+   Visual Effects
+      Grease Pencil has a special set of viewport real-time visual effects that can be apply to the object.
 
    Voxel
       A cubic 3D equivalent to the square 2D pixel.

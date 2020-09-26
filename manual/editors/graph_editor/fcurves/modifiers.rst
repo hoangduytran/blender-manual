@@ -1,3 +1,4 @@
+.. index:: Modifiers; F-Curve Modifiers
 
 .. _bpy.types.FCurveModifiers:
 .. _bpy.types.FModifier:
