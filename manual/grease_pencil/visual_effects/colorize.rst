@@ -1,3 +1,4 @@
+.. index:: Visual Effects; Colorize Visual Effect
 .. _bpy.types.ShaderFxColorize:
 
 **********************

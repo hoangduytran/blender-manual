@@ -1,3 +1,4 @@
+.. index:: Visual Effects; Shadow Visual Effect
 .. _bpy.types.ShaderFxShadow:
 
 ********************

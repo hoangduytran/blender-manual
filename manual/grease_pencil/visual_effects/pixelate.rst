@@ -1,3 +1,4 @@
+.. index:: Visual Effects; Pixelate Visual Effect
 .. _bpy.types.ShaderFxPixelate:
 
 **********************

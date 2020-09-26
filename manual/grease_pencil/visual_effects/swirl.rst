@@ -1,3 +1,4 @@
+.. index:: Visual Effects; Swirl Visual Effect
 .. _bpy.types.ShaderFxSwirl:
 
 *******************

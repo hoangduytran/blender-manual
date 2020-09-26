@@ -1,3 +1,4 @@
+.. index:: Visual Effects; Wave Distortion Visual Effect
 .. _bpy.types.ShaderFxWave:
 
 *****************************

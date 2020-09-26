@@ -1,3 +1,4 @@
+.. index:: Visual Effects
 
 ************
 Introduction

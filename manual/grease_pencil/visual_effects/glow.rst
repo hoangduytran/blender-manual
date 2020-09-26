@@ -1,3 +1,4 @@
+.. index:: Visual Effects; Glow Visual Effect
 .. _bpy.types.ShaderFxGlow:
 
 ******************

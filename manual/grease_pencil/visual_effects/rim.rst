@@ -1,3 +1,4 @@
+.. index:: Visual Effects; Rim Visual Effect
 .. _bpy.types.ShaderFxRim:
 
 *****************
