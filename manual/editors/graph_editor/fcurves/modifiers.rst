@@ -35,8 +35,8 @@ Types of Modifiers
 .. index:: F-Curve Modifiers; Generator Modifier
 .. _bpy.types.FModifierGenerator:
 
-Generator
----------
+Generator Modifier
+------------------
 
 Generator creates a Factorized or Expanded Polynomial function.
 These are basic mathematical formulas that represent lines, parabolas,
@@ -59,8 +59,8 @@ Polynomial Order
 .. index:: F-Curve Modifiers; Built-in Function Modifier
 .. _bpy.types.FModifierFunctionGenerator:
 
-Built-in Function
------------------
+Built-in Function Modifier
+--------------------------
 
 These are additional formulas, each with the same options to control their shape.
 Consult mathematics reference for more detailed information on each function:
@@ -86,8 +86,8 @@ Value Offset
 .. _bpy.types.FModifierEnvelope:
 .. _bpy.types.FModifierEnvelopeControlPoint:
 
-Envelope
---------
+Envelope Modifier
+-----------------
 
 Allows you to adjust the overall shape of a curve with control points.
 
@@ -113,8 +113,8 @@ Point
 .. index:: F-Curve Modifiers; Cycles Modifier
 .. _bpy.types.FModifierCycles:
 
-Cycles
-------
+Cycles Modifier
+---------------
 
 Cycles allows you add cyclic motion to a curve that has two or more control points.
 The options can be set for before and after the curve.
@@ -148,8 +148,8 @@ This special case receives some additional support from other areas of Blender:
 .. index:: F-Curve Modifiers; Noise Modifier
 .. _bpy.types.FModifierNoise:
 
-Noise
------
+Noise Modifier
+--------------
 
 Modifies the curve with a noise formula.
 This is useful for creating subtle or extreme randomness to animated movements,
@@ -180,8 +180,8 @@ Depth
 .. index:: F-Curve Modifiers; Limits Modifier
 .. _bpy.types.FModifierLimits:
 
-Limits
-------
+Limits Modifier
+---------------
 
 Limit curve values to specified X and Y ranges.
 
@@ -194,8 +194,8 @@ Minimum, Maximum Y
 .. index:: F-Curve Modifiers; Stepped Interpolation Modifier
 .. _bpy.types.FModifierStepped:
 
-Stepped Interpolation
----------------------
+Stepped Interpolation Modifier
+------------------------------
 
 Gives the curve a stepped appearance by rounding values down within a certain range of frames.
 
