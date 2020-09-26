@@ -1,4 +1,4 @@
-.. index:: Visual Effects; Rim Visual Effect
+.. index:: Grease Pencil Visual Effects; Rim Visual Effect
 .. _bpy.types.ShaderFxRim:
 
 *****************

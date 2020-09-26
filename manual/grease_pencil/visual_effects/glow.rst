@@ -1,4 +1,4 @@
-.. index:: Visual Effects; Glow Visual Effect
+.. index:: Grease Pencil Visual Effects; Glow Visual Effect
 .. _bpy.types.ShaderFxGlow:
 
 ******************

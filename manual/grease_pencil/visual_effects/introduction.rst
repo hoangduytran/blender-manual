@@ -1,4 +1,4 @@
-.. index:: Visual Effects
+.. index:: Grease Pencil Visual Effects
 
 ************
 Introduction

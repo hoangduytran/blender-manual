@@ -1,4 +1,4 @@
-.. index:: Visual Effects; Flip Visual Effect
+.. index:: Grease Pencil Visual Effects; Flip Visual Effect
 .. _bpy.types.ShaderFxFlip:
 
 ******************

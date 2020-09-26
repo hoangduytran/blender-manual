@@ -1,4 +1,4 @@
-.. index:: Visual Effects; Wave Distortion Visual Effect
+.. index:: Grease Pencil Visual Effects; Wave Distortion Visual Effect
 .. _bpy.types.ShaderFxWave:
 
 *****************************

@@ -1,4 +1,4 @@
-.. index:: Visual Effects; Colorize Visual Effect
+.. index:: Grease Pencil Visual Effects; Colorize Visual Effect
 .. _bpy.types.ShaderFxColorize:
 
 **********************

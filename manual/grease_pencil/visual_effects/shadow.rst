@@ -1,4 +1,4 @@
-.. index:: Visual Effects; Shadow Visual Effect
+.. index:: Grease Pencil Visual Effects; Shadow Visual Effect
 .. _bpy.types.ShaderFxShadow:
 
 ********************

@@ -1,4 +1,4 @@
-.. index:: Visual Effects; Swirl Visual Effect
+.. index:: Grease Pencil Visual Effects; Swirl Visual Effect
 .. _bpy.types.ShaderFxSwirl:
 
 *******************

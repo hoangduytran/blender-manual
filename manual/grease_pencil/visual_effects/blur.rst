@@ -1,4 +1,4 @@
-.. index:: Visual Effects; Blur Visual Effect
+.. index:: Grease Pencil Visual Effects; Blur Visual Effect
 .. _bpy.types.ShaderFxBlur:
 
 ******************
