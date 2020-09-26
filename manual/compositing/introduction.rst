@@ -1,3 +1,4 @@
+.. index:: Nodes; Compositing Nodes
 
 ************
 Introduction
