@@ -1,4 +1,4 @@
-.. index:: Rigid Body Constraints: Point Constraint
+.. index:: Rigid Body Constraints; Point Constraint
 
 ****************
 Point Constraint

@@ -1,4 +1,4 @@
-.. index:: Rigid Body Constraints: Fixed Constraint
+.. index:: Rigid Body Constraints; Fixed Constraint
 
 ****************
 Fixed Constraint

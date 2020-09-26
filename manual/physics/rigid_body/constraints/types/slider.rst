@@ -1,4 +1,4 @@
-.. index:: Rigid Body Constraints: Slider Constraint
+.. index:: Rigid Body Constraints; Slider Constraint
 
 *****************
 Slider Constraint

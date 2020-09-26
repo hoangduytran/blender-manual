@@ -1,4 +1,4 @@
-.. index:: Rigid Body Constraints: Generic Spring Constraint
+.. index:: Rigid Body Constraints; Generic Spring Constraint
 
 *************************
 Generic Spring Constraint

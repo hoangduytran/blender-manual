@@ -1,4 +1,4 @@
-.. index:: Rigid Body Constraints: Piston Constraint
+.. index:: Rigid Body Constraints; Piston Constraint
 
 *****************
 Piston Constraint
