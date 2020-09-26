@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Subdivide Modifier
 .. _bpy.types.SubdivideGpencilModifier:
 
 ******************

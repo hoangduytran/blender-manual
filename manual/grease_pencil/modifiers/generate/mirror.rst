@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Mirror Modifier
 .. _bpy.types.MirrorGpencilModifier:
 
 ***************

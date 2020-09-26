@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Noise Modifier
 .. _bpy.types.NoisepencilModifier:
 
 **************

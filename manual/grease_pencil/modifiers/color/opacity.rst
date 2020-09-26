@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Opacity Modifier
 .. _bpy.types.OpacityGpencilModifier:
 
 ****************

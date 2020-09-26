@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Lattice Modifier
 .. _bpy.types.LatticeGpencilModifier:
 
 ****************

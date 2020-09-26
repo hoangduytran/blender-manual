@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Texture Mapping Modifier
 .. _bpy.types.TextureGpencilModifier:
 
 ************************

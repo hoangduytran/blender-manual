@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Tint Modifier
 .. _bpy.types.TintGpencilModifier:
 
 *************

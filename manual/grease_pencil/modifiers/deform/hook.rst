@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Hook Modifier
 .. _bpy.types.HookGpencilModifier:
 
 *************

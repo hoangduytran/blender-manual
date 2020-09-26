@@ -1,3 +1,4 @@
+.. index:: Grease Pencil Modifiers; Time Offset Modifier
 .. _bpy.types.TimeGpencilModifier:
 
 ********************

@@ -1,3 +1,5 @@
+.. index:: Grease Pencil Modifiers
+.. index:: Modifiers; Grease Pencil Modifiers
 
 ************
 Introduction
