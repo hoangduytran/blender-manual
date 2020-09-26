@@ -1,3 +1,4 @@
+.. index:: Rigid Body Constraints: Motor Constraint
 
 ****************
 Motor Constraint

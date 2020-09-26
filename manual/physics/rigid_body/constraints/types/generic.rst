@@ -1,3 +1,4 @@
+.. index:: Rigid Body Constraints: Generic Constraint
 
 ******************
 Generic Constraint

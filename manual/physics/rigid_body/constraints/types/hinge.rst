@@ -1,3 +1,4 @@
+.. index:: Rigid Body Constraints: Hinge Constraint
 
 ****************
 Hinge Constraint
