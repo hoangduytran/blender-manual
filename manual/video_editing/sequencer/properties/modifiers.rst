@@ -1,4 +1,5 @@
 .. index:: Modifiers; Video Sequencer Modifiers
+.. index:: Video Sequencer Modifiers
 
 .. _bpy.types.BrightContrastModifier:
 .. _bpy.types.ColorBalanceModifier:
@@ -62,32 +63,73 @@ Types
 
 Currently, the following modifiers are supported:
 
-Color Balance
-   Color balance adjustments, through Lift, Gamma, and Gain.
 
-   This modifier works the same as the :doc:`Color Balance Node </compositing/types/color/color_balance>`.
-Curves
-   Color and RGB curves.
+.. index:: Video Sequencer Modifiers; Color Balance Modifier
 
-   This modifier works the same as the :doc:`Curves Node </compositing/types/color/rgb_curves>`.
-Hue Correct
-   HSV multi points curves.
+Color Balance Modifier
+----------------------
 
-   This modifier works the same as the :doc:`Curves Node </compositing/types/color/hue_correct>`.
-Bright/Contrast
-   Adjusts the brightness and contrast of the modifier input.
-Mask
-   Use it for masking the other modifiers in the stack which are below.
+Color balance adjustments, through Lift, Gamma, and Gain.
 
-   For example, to correct the brightness only on a certain zone of the image,
-   you can filter the Bright/Contrast modifier by placing a Mask modifier,
-   just before it in the stack. You can choose to use a Mask created in the Mask editor,
-   or to use another strip as a mask (the image of this strip must have an alpha channel).
-   This mask will be applied on all the others modifiers below it in the stack.
-White Balance
-   Use it to adjust the white balance by choosing the color that should be white.
-Tone Map
-   Used to map one set of colors to another in order to approximate the appearance
-   of high dynamic range images in a medium that has a more limited dynamic range.
+This modifier works the same as the :doc:`Color Balance Node </compositing/types/color/color_balance>`.
 
-   This modifier works the same as the :doc:`Tone Map Node </compositing/types/color/tone_map>`.
+
+.. index:: Video Sequencer Modifiers; Curves Modifier
+
+Curves Modifier
+---------------
+
+Color and RGB curves.
+
+This modifier works the same as the :doc:`Curves Node </compositing/types/color/rgb_curves>`.
+
+
+.. index:: Video Sequencer Modifiers; Hue Correct Modifier
+
+Hue Correct Modifier
+--------------------
+
+HSV multi points curves.
+
+This modifier works the same as the :doc:`Curves Node </compositing/types/color/hue_correct>`.
+
+
+.. index:: Video Sequencer Modifiers; Bright/Contrast Modifier
+
+Bright/Contrast Modifier
+------------------------
+
+Adjusts the brightness and contrast of the modifier input.
+
+
+.. index:: Video Sequencer Modifiers; Mask Modifier
+
+Mask Modifier
+-------------
+
+Use it for masking the other modifiers in the stack which are below.
+
+For example, to correct the brightness only on a certain zone of the image,
+you can filter the Bright/Contrast modifier by placing a Mask modifier,
+just before it in the stack. You can choose to use a Mask created in the Mask editor,
+or to use another strip as a mask (the image of this strip must have an alpha channel).
+This mask will be applied on all the others modifiers below it in the stack.
+
+
+.. index:: Video Sequencer Modifiers; White Balance Modifier
+
+White Balance Modifier
+----------------------
+
+Use it to adjust the white balance by choosing the color that should be white.
+
+
+.. index:: Video Sequencer Modifiers; Tone Map Modifier
+
+Tone Map Modifier
+-----------------
+
+Used to map one set of colors to another in order to approximate the appearance
+of high dynamic range images in a medium that has a more limited dynamic range.
+
+This modifier works the same as the :doc:`Tone Map Node </compositing/types/color/tone_map>`.
