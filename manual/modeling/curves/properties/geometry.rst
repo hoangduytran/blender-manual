@@ -177,13 +177,13 @@ Mapping Start, End
    and the rendered start and end point of the spline's geometry.
 
    Resolution
-      Maps the start & end factor to the number of subdivisions of a spline (U resolution).
+      Maps the start and end factor to the number of subdivisions of a spline (U resolution).
    Segments
-      Maps the start & end factor to the length of its segments.
+      Maps the start and end factor to the length of its segments.
       Mapping to segments treats the subdivisions in each segment
       of a curve as if they would have all the same length.
    Spline
-      Maps the start & end factor to the length of a spline.
+      Maps the start and end factor to the length of a spline.
 
 
 Examples

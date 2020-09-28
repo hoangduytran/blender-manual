@@ -214,14 +214,14 @@ Wave Type
 
    Depth Change
       The brush create waves when the intersection depth with the surface is *changed* on that point.
-      If the brush remains still, it will not have any influence.
+      If the brush is not moved, it will have no effect.
 
-      Using a negative "Factor" with this type can create a nice looking waves for moving objects like ships.
+      Using a negative "Factor" with this type can create a nice looking "wake" for moving objects like ships.
    Obstacle
       Constantly affects surface whenever intersecting.
       Waves are also reflected off this brush type.
       However, due the nature of wave simulation algorithm this type creates
-      an unnatural "dent" in the surface if brush remains still.
+      an unnatural "dent" in the surface if the brush is not moved.
    Force
       Directly affects the velocity of wave motion.
       Therefore the effect is not one-to-one with brush intersection depth, yet the force strength depends on it.

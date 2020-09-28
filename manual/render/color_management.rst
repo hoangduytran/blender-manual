@@ -235,8 +235,7 @@ Blender currently use the following color space rules:
 The standard Blender configuration includes support for saving and loading images in
 `ACES <https://www.oscars.org/science-technology/sci-tech-projects/aces>`__
 (`code and documentation <https://github.com/ampas/aces-dev>`__) color spaces.
-However, the ACES gamut is larger than the Rec. 709 gamut,
-so for best results, an ACES specific configuration file should be used.
-OpenColorIO provides an
-`ACES configuration <https://opencolorio.readthedocs.io/en/latest/configurations/_index.html>`__ file,
+However, the ACES gamut is larger than the Rec. 709 gamut, so for best results,
+an ACES specific configuration file should be used. OpenColorIO provides
+an `ACES configuration <https://opencolorio.readthedocs.io/en/latest/configurations/_index.html>`__ file,
 though it may need a few more tweaks to be usable in production.

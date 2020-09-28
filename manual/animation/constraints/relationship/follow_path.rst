@@ -25,9 +25,9 @@ The owner is always evaluated in the global (world) space:
   Taking the same (1.0, 1.0, 0.0) offset as above,
   if the curve has a scale of (2.0, 1.0, 1.0),
   the owner will be offset two units along the X axis (and one along the Y one)...
-- When the *Follow Curve* option is enabled, its rotation is also offset to the one given by the curve
-  (i.e. if you want the Y axis of your object to be aligned with the curve's direction,
-  it must be in rest, non-constrained state, aligned with the global Y axis).
+- When the *Follow Curve* option is enabled, its rotation is also offset to the one given by the curve.
+  E.g. if you want the Y axis of your object to be aligned with the curve's direction,
+  it must be in rest, non-constrained state, aligned with the global Y axis.
   Here again, clearing your owner's rotation :kbd:`Alt-R` might be useful...
 
 The movement of the owner along the target curve/path may be controlled in two different ways:

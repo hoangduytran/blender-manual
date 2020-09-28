@@ -18,7 +18,7 @@ Interpolation
 
    Cubic
       Cubic interpolation between voxels. Gives smoothed high quality interpolation, but is slower.
-   
+
    Closest
       No interpolation between voxels. Gives raw voxels.
 
@@ -108,19 +108,11 @@ Display As
       Choose to display the vector field as "Marker-And-Cell Grid".
 
       .. _bpy.types.FluidDomainSettings.vector_show_mac_x:
-
-      X
-         Show X component of the MAC grid.
-
       .. _bpy.types.FluidDomainSettings.vector_show_mac_y:
-
-      Y
-         Show Y component of the MAC grid.
-
       .. _bpy.types.FluidDomainSettings.vector_show_mac_z:
 
-      Z
-         Show Z component of the MAC grid.
+      X/Y/Z
+         Show an individual X/Y/Z component of the MAC grid.
 
 .. _bpy.types.FluidDomainSettings.vector_scale_with_magnitude:
 
@@ -130,7 +122,7 @@ Magnitude :guilabel:`Streamlines or Needle Only`
 .. _bpy.types.FluidDomainSettings.vector_field:
 
 Field
-   The vector field represented by the display vectors. (e.g. fluid velocity, external forces)
+   The vector field represented by the display vectors (e.g. fluid velocity, external forces).
 
 .. _bpy.types.FluidDomainSettings.vector_scale:
 
@@ -162,12 +154,12 @@ Color Gridlines
 
       Upper Bound
          Upper bound of the highlighting range.
-      
+
       .. _bpy.types.FluidDomainSettings.gridlines_range_color:
 
       Color
          Color used to highlight the cells.
-      
+
       .. _bpy.types.FluidDomainSettings.gridlines_cell_filter:
 
       Cell Type

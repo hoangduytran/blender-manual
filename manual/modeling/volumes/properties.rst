@@ -103,7 +103,7 @@ Interpolation
 
    Cubic
       Cubic interpolation between voxels. Gives smoothed high quality interpolation, but is slower.
-   
+
    Closest
       No interpolation between voxels. Gives raw voxels.
 

@@ -493,7 +493,7 @@ This page lists definitions for terms used in Blender and this manual.
       also `Importance sampling <https://en.wikipedia.org/wiki/Importance_sampling>`__ on Wikipedia.
 
    Modifiers
-      A non destructive operation that is applied on top of some sort of data.
+      A non-destructive operation that is applied on top of some sort of data.
 
    Motion Blur
       The phenomenon that occurs when we perceive a rapidly moving object.

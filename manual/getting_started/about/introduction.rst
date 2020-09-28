@@ -7,7 +7,6 @@ Welcome to Blender! Blender is a free and open-source 3D creation suite.
 
 With Blender, you can create 3D visualizations such as
 still images, 3D animations, VFX shots, and video editing.
-
 It is well suited to individuals and small studios who
 benefit from its unified pipeline and responsive development process.
 
