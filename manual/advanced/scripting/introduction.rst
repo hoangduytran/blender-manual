@@ -85,14 +85,18 @@ See :doc:`/addons/index` for documentation on add-ons included with Blender.
 Scripts
 -------
 
-Apart from add-ons, there are also scripts you can use to extend Blender's functionality:
+Apart from add-ons, there are several other types of scripts that extend Blender's functionality:
 
-- Modules: Utility libraries for import into other scripts.
-- Presets: Settings for Blender's tools and key configurations.
-- Startup: These files are imported when starting Blender.
-  They define most of Blender's UI, as well as some additional core operators.
-- Custom scripts: In contrast to add-ons they are typically intended for one-time execution via
-  the :doc:`Text Editor </editors/text_editor>`.
+:Modules:
+   Utility libraries for import into other scripts.
+:Presets:
+   Settings for Blender's tools and key configurations.
+:Startup:
+   These files are imported when starting Blender.
+   They define most of Blender's UI, as well as some additional core operators.
+:Custom Scripts:
+   In contrast to add-ons they are typically intended for one-time execution via
+   the :doc:`Text Editor </editors/text_editor>`.
 
 
 Saving your own Scripts
