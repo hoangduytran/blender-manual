@@ -69,17 +69,19 @@ Extending Blender
 Add-ons
 -------
 
-Add-ons are scripts you can enable to gain extra functionality within Blender,
-they can be enabled from the Preferences.
+Add-ons are scripts that enable Blender to gain extra functionality,
+they can be enabled from the :doc:`Preferences </editors/preferences/addons>`.
 
-Outside of the Blender executable,
-there are literally hundreds of add-ons written by many people:
+Outside of the Blender executable, there are hundreds of add-ons written by many people:
 
 - Officially supported add-ons are bundled with Blender.
-- Other *Testing* add-ons are included in development builds but not official releases.
-  Many of them work reliably and are very useful but are not ensured to be stable for release.
+- Other *Testing* add-ons are included in `development builds <https://builder.blender.org/download/>`__
+  of Blender but not official releases.
+  Many of them work reliably and are very useful but are not yet ensured to be stable for release.
 
-See :doc:`/addons/index` for documentation on add-ons included with Blender.
+.. seealso::
+
+   See :doc:`/addons/index` for documentation on add-ons included with Blender.
 
 
 Scripts
