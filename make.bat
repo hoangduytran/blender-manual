@@ -7,8 +7,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=./manual
 set BUILDDIR=_build
-set ALLSPHINXOPTS=-j %Number_Of_Processors% %SPHINXOPTS% %SOURCEDIR%
-set I18NSPHINXOPTS=%SPHINXOPTS%
+set SPHINXOPTS=-j %Number_Of_Processors%
 
 REM Default to HTML
 if "%1" == "" (
@@ -83,7 +82,7 @@ if errorlevel 9009 (
 
 if "%1" == "html" (
 	:html
-	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
+	%SPHINXBUILD% -b html %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
@@ -94,7 +93,7 @@ if "%1" == "html" (
 )
 
 if "%1" == "singlehtml" (
-	%SPHINXBUILD% -b singlehtml %ALLSPHINXOPTS% %BUILDDIR%/singlehtml
+	%SPHINXBUILD% -b singlehtml %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/singlehtml
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/singlehtml.
@@ -112,7 +111,7 @@ if "%1" == "readme" (
 )
 
 if "%1" == "pdf" (
-	%SPHINXBUILD% -b latex %ALLSPHINXOPTS% %BUILDDIR%/latex
+	%SPHINXBUILD% -b latex %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/latex
 	cd %BUILDDIR%/latex
 	make all-pdf
 	cd %~dp0
@@ -122,7 +121,7 @@ if "%1" == "pdf" (
 )
 
 if "%1" == "gettext" (
-	%SPHINXBUILD% -t builder_html -b gettext %ALLSPHINXOPTS% %I18NSPHINXOPTS% %BUILDDIR%/locale
+	%SPHINXBUILD% -t builder_html -b gettext %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/locale
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The message catalogs are in %BUILDDIR%/locale.
@@ -130,7 +129,7 @@ if "%1" == "gettext" (
 )
 
 if "%1" == "epub" (
-	%SPHINXBUILD% -b epub %ALLSPHINXOPTS% %BUILDDIR%/epub
+	%SPHINXBUILD% -b epub %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/epub
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The epub file is in %BUILDDIR%/epub.
@@ -138,7 +137,7 @@ if "%1" == "epub" (
 )
 
 if "%1" == "epub3" (
-	%SPHINXBUILD% -b epub3 %ALLSPHINXOPTS% %BUILDDIR%/epub3
+	%SPHINXBUILD% -b epub3 %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/epub3
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The epub3 file is in %BUILDDIR%/epub3.
@@ -147,7 +146,7 @@ if "%1" == "epub3" (
 
 if "%1" == "translations" (
 	sphinx-intl build
-	%SPHINXBUILD% -b html -D language='%2' %ALLSPHINXOPTS% %BUILDDIR%/html
+	%SPHINXBUILD% -b html -D language='%2' %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/singlehtml.
@@ -157,7 +156,7 @@ if "%1" == "translations" (
 )
 
 if "%1" == "check_links" (
-	%SPHINXBUILD% -b linkcheck %ALLSPHINXOPTS% %BUILDDIR%/linkcheck
+	%SPHINXBUILD% -b linkcheck %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/linkcheck
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Link check complete; look for any errors in the above output ^
