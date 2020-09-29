@@ -43,7 +43,8 @@ AVI JPEG
 AVI Raw
    Audio-Video Interlaced (AVI) uncompressed frames.
 FFmpeg video
-   FFmpeg codec compression. Which codecs are available depends on the operating system and FFmpeg version.
+   Video encoding via the FFmpeg library. Which codecs are available depends on
+   the operating system and FFmpeg version.
    This options allows for a lot of different encodings, some presets are available
    (to the right of the *Encoding* subpanel) to help with getting started.
    This option is also the only one allowing to export audio.
