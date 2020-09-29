@@ -122,7 +122,7 @@ pdf: .FORCE
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
 
 readme: .FORCE
-	rst2html5 readme.rst > ./build/readme.html
+	rst2html5 readme.rst > $(BUILDDIR)/readme.html
 
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/readme.html."
 	@echo "To view, run:"
