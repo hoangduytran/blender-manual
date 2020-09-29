@@ -333,15 +333,6 @@ latex_elements = {
 % and is provided by amssymb. But it can not be boldened! (easily)
 \\newunicodechar{✗}{\\ding{55}}
 \\newunicodechar{✛}{\\ding{59}}
-
-\\usepackage{fontawesome}
-\\newunicodechar{⏮}{\\faFastBackward}
-\\newunicodechar{⏪}{\\faBackward}
-\\newunicodechar{▶}{\\faPlay}
-\\newunicodechar{⏩}{\\faForward}
-\\newunicodechar{⏭}{\\faFastForward}
-\\newunicodechar{⏸}{\\faPause}
-\\newunicodechar{◀}{\\reflectbox{▶}}
 ''',
 
 }
