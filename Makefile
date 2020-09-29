@@ -143,10 +143,6 @@ check_links:
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in $(BUILDDIR)/linkcheck/output.txt."
 
-clean:
-	@echo "Removing everything under '$(BUILDDIR)'..."
-	@rm -rf $(BUILDDIR)/*
-
 update_po:
 	@python3 ./tools_maintenance/update_po.py
 
