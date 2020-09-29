@@ -5,8 +5,9 @@ REM Command file for Sphinx documentation
 if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
-set BUILDDIR=build
-set ALLSPHINXOPTS=-j %Number_Of_Processors% %SPHINXOPTS% manual
+set SOURCEDIR=./manual
+set BUILDDIR=_build
+set ALLSPHINXOPTS=-j %Number_Of_Processors% %SPHINXOPTS% %SOURCEDIR%
 set I18NSPHINXOPTS=%SPHINXOPTS%
 
 REM Default to HTML

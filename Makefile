@@ -18,14 +18,15 @@ endif
 # ---------------
 
 
-SPHINXOPTS    = -j "$(NPROCS)"
-SPHINXBUILD   = sphinx-build
+SPHINXOPTS    ?= -j "$(NPROCS)"
+SPHINXBUILD   ?= sphinx-build
+SOURCEDIR     = ./manual
 BUILDDIR      = build
 
 # Internal variables.
-ALLSPHINXOPTS   = -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS) manual
+ALLSPHINXOPTS   = -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS)
 # the i18n builder cannot share the environment and doctrees with the others
-I18NSPHINXOPTS  = $(SPHINXOPTS) manual
+I18NSPHINXOPTS  = $(SPHINXOPTS)
 
 # full paths
 CHAPTERS_FULL:=$(filter %/, $(wildcard manual/*/))
@@ -88,7 +89,7 @@ $(CHAPTERS): $(.DEFAULT_GOAL)
 html: .FORCE .SPHINXBUILD_EXISTS
 	# './' (input), './html/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	$(SPHINXBUILD) -b html $(SPHINXOPTS) ./manual "$(BUILDDIR)/html"
+	$(SPHINXBUILD) -b html $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/html"
 
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/html/$(CONTENTS_HTML)"
@@ -98,12 +99,12 @@ html_server: .FORCE .SPHINXBUILD_EXISTS
 	# - Single thread because we run many builds at once.
 	# - Optimize to use less memory per-process.
 	PYTHONOPTIMIZE=2 \
-	$(SPHINXBUILD) -a -E -b html $(SPHINXOPTS) -j 1 ./manual "$(BUILDDIR)/html"
+	$(SPHINXBUILD) -a -E -b html $(SPHINXOPTS) -j 1 $(SOURCEDIR) "$(BUILDDIR)/html"
 
 epub: .FORCE .SPHINXBUILD_EXISTS
 	# './' (input), './epub/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	$(SPHINXBUILD) -b epub $(SPHINXOPTS) ./manual "$(BUILDDIR)/epub"
+	$(SPHINXBUILD) -b epub $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/epub"
 
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/epub/*.epub"
@@ -111,14 +112,14 @@ epub: .FORCE .SPHINXBUILD_EXISTS
 singlehtml: .FORCE .SPHINXBUILD_EXISTS
 	# './' (input), './html/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	$(SPHINXBUILD) -b singlehtml $(SPHINXOPTS) ./manual "$(BUILDDIR)/singlehtml"
+	$(SPHINXBUILD) -b singlehtml $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/singlehtml"
 
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/singlehtml/$(CONTENTS_HTML)"
 
 pdf: .FORCE
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	$(SPHINXBUILD) -b latex ./manual "$(BUILDDIR)/latex"
+	$(SPHINXBUILD) -b latex $(SOURCEDIR) "$(BUILDDIR)/latex"
 	make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
 
 	@echo "To view, run:"
@@ -169,7 +170,6 @@ gettext: .FORCE .SPHINXBUILD_EXISTS
 	$(SPHINXBUILD) -t builder_html -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
-
 
 
 # -----------------------------------------------------------------------------
