@@ -17,16 +17,12 @@ endif
 # End System Vars
 # ---------------
 
-
+# You can set these variables from the command line, and also
+# from the environment for the first two.
 SPHINXOPTS    ?= -j "$(NPROCS)"
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = ./manual
 BUILDDIR      = build
-
-# Internal variables.
-ALLSPHINXOPTS   = -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS)
-# the i18n builder cannot share the environment and doctrees with the others
-I18NSPHINXOPTS  = $(SPHINXOPTS)
 
 # full paths
 CHAPTERS_FULL:=$(filter %/, $(wildcard manual/*/))
@@ -167,7 +163,7 @@ report_po_progress: .FORCE
 	          `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.svn*' -printf 'locale/%f\n' | sort`
 
 gettext: .FORCE .SPHINXBUILD_EXISTS
-	$(SPHINXBUILD) -t builder_html -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
+	$(SPHINXBUILD) -t builder_html -b gettext $(SPHINXOPTS) $(BUILDDIR)/locale
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 
