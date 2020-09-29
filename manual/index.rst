@@ -17,24 +17,25 @@ the free and open source 3D creation suite.
 Getting Started
 ===============
 
-.. container:: tocdescr
+.. only:: builder_html and (not singlehtml)
 
-   .. container:: descr
+   .. container:: tocdescr
 
-      :doc:`/getting_started/about/index`
+      .. container:: descr
 
-   .. container:: descr
+         :doc:`/getting_started/about/index`
 
-      :doc:`/getting_started/installing/index`
+      .. container:: descr
 
-   .. container:: descr
+         :doc:`/getting_started/installing/index`
 
-      :doc:`/getting_started/configuration/index`
+      .. container:: descr
 
-   .. container:: descr
+         :doc:`/getting_started/configuration/index`
 
-      :doc:`/getting_started/help`
+      .. container:: descr
 
+         :doc:`/getting_started/help`
 
 Sections
 ========
