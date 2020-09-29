@@ -125,14 +125,14 @@ pdf: .FORCE
 	make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
 
 	@echo "To view, run:"
-	@echo "  "$(OPEN_CMD)" $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
+	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
 
 readme: .FORCE
 	rst2html5 readme.rst > ./build/readme.html
 
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/readme.html."
 	@echo "To view, run:"
-	@echo "  "$(OPEN_CMD)" $(shell pwd)"/$(BUILDDIR)/readme.html"
+	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/readme.html"
 
 check_syntax: .FORCE
 	- python3 tools_rst/rst_check_syntax.py --long --title --kbd > rst_check_syntax.log
