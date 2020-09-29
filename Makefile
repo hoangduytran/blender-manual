@@ -82,91 +82,92 @@ $(CHAPTERS): $(.DEFAULT_GOAL)
 # --------------------
 
 
-html: .FORCE .SPHINXBUILD_EXISTS
+html: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b html $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/html"
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/html/$(CONTENTS_HTML)"
 
-html_server: .FORCE .SPHINXBUILD_EXISTS
+html_server: .SPHINXBUILD_EXISTS
 	# - Single thread because we run many builds at once.
 	# - Optimize to use less memory per-process.
 	PYTHONOPTIMIZE=2 \
 	$(SPHINXBUILD) -a -E -b html $(SPHINXOPTS) -j 1 $(SOURCEDIR) "$(BUILDDIR)/html"
 
-epub: .FORCE .SPHINXBUILD_EXISTS
+epub: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b epub $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/epub"
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/epub/*.epub"
 
-singlehtml: .FORCE .SPHINXBUILD_EXISTS
+singlehtml: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b singlehtml $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/singlehtml"
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/singlehtml/$(CONTENTS_HTML)"
 
-latexpdf: .FORCE .SPHINXBUILD_EXISTS
+latexpdf: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b latex $(SOURCEDIR) "$(BUILDDIR)/latex"
 	@make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
 
-gettext: .FORCE .SPHINXBUILD_EXISTS
+gettext: .SPHINXBUILD_EXISTS
 	@$(SPHINXBUILD) -t builder_html -b gettext $(SPHINXOPTS) $(BUILDDIR)/locale
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 
-readme: .FORCE
+readme:
 	@rst2html5 readme.rst > $(BUILDDIR)/readme.html
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/readme.html."
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/readme.html"
 
-check_syntax: .FORCE
+check_syntax:
 	@python3 tools_rst/rst_check_syntax.py --long --title --kbd > rst_check_syntax.log
 	@echo "Lines:" `cat rst_check_syntax.log | wc -l`
 	@python3 tools/open_quickfix_in_editor.py rst_check_syntax.log
 	@rm rst_check_syntax.log
 
-check_structure: .FORCE
+check_structure:
 	@python3 tools_rst/rst_check_images.py
 	@python3 tools_rst/rst_check_locale.py
 
-check_spelling: .FORCE
+check_spelling:
 	@python3 tools_rst/rst_check_spelling.py
 
-check_links: .FORCE
+check_links:
 	$(SPHINXBUILD) -b linkcheck $(SOURCEDIR) $(BUILDDIR)/linkcheck
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in $(BUILDDIR)/linkcheck/output.txt."
 
-clean: .FORCE
+clean:
 	@echo "Removing everything under '$(BUILDDIR)'..."
 	@rm -rf $(BUILDDIR)/*
 
-update_po: .FORCE
+update_po:
 	@python3 ./tools_maintenance/update_po.py
 
-report_po_progress: .FORCE
+report_po_progress:
 	@python3 tools_report/report_translation_progress.py --quiet \
 	        `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.svn*' -printf 'locale/%f\n' | sort`
 
-
 # ----------------------
 # Help for build targets
+
 help:
 	@echo ""
-	@echo "Documentation"
-	@echo "============="
+	@echo "Sphinx"
+	@echo "======"
 	@echo ""
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@echo ""
+	@echo "Custom Targets"
+	@echo "=============="
 	@echo "Convenience targets provided for building docs"
-	@echo "- html                 to make standalone HTML files (default)"
-	@echo "- singlehtml           to make a single large HTML file"
-	@echo "- latexpdf             to make a PDF using LaTeX warning: this currently has some problems,"
-	@echo "                       though the PDF generates, there are various unresolved issues	"
+	@echo ""
 	@echo "- readme               to make a 'readme.html' file"
 	@echo "- clean                to delete all old build files"
 	@echo ""
@@ -174,14 +175,13 @@ help:
 	@$(foreach ch,$(CHAPTERS),echo "- "$(ch);)
 	@echo ""
 	@echo "Translations"
-	@echo "============"
+	@echo "------------"
 	@echo ""
-	@echo "- gettext              to make PO message catalogs"
 	@echo "- update_po            to update PO message catalogs"
 	@echo "- report_po_progress   to check the progress/fuzzy strings"
 	@echo ""
 	@echo "Checking"
-	@echo "========"
+	@echo "--------"
 	@echo ""
 	@echo "- check_structure      to check the structure of all .rst files"
 	@echo "- check_syntax         to check the syntax of all .rst files"
@@ -189,4 +189,10 @@ help:
 	@echo "- check_spelling       to check spelling for text in RST files"
 	@echo ""
 
-.FORCE:
+.PHONY: help Makefile
+
+# Catch-all target: route all unknown targets to Sphinx using the new
+# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+%: Makefile .SPHINXBUILD_EXISTS
+	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
+	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
