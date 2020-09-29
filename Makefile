@@ -138,11 +138,6 @@ check_structure: .FORCE
 	@python3 tools_rst/rst_check_images.py
 	@python3 tools_rst/rst_check_locale.py
 
-#	- python3 tools_rst/rst_check_structure.py --image > rst_check_structure.log
-#	- @echo "Lines:" `cat rst_check.log  | wc -l`
-#	- gvim --nofork -c "cfile rst_check_structure.log" -c "cope" -c "clast"
-#	- rm rst_check_structure.log
-
 check_spelling: .FORCE
 	- python3 tools_rst/rst_check_spelling.py
 
