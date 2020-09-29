@@ -83,60 +83,54 @@ $(CHAPTERS): $(.DEFAULT_GOAL)
 
 
 html: .FORCE .SPHINXBUILD_EXISTS
-	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
+	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b html $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/html"
-
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/html/$(CONTENTS_HTML)"
 
 html_server: .FORCE .SPHINXBUILD_EXISTS
-	# './' (input), './html/' (output)
 	# - Single thread because we run many builds at once.
 	# - Optimize to use less memory per-process.
 	PYTHONOPTIMIZE=2 \
 	$(SPHINXBUILD) -a -E -b html $(SPHINXOPTS) -j 1 $(SOURCEDIR) "$(BUILDDIR)/html"
 
 epub: .FORCE .SPHINXBUILD_EXISTS
-	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
+	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b epub $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/epub"
-
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/epub/*.epub"
 
 singlehtml: .FORCE .SPHINXBUILD_EXISTS
-	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
+	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b singlehtml $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/singlehtml"
-
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/singlehtml/$(CONTENTS_HTML)"
 
 pdf: .FORCE
-	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
+	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b latex $(SOURCEDIR) "$(BUILDDIR)/latex"
-	make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
-
+	@make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
 
 readme: .FORCE
-	rst2html5 readme.rst > $(BUILDDIR)/readme.html
-
+	@rst2html5 readme.rst > $(BUILDDIR)/readme.html
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/readme.html."
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/readme.html"
 
 check_syntax: .FORCE
-	- python3 tools_rst/rst_check_syntax.py --long --title --kbd > rst_check_syntax.log
-	- @echo "Lines:" `cat rst_check_syntax.log | wc -l`
-	- python3 tools/open_quickfix_in_editor.py rst_check_syntax.log
-	- rm rst_check_syntax.log
+	@python3 tools_rst/rst_check_syntax.py --long --title --kbd > rst_check_syntax.log
+	@echo "Lines:" `cat rst_check_syntax.log | wc -l`
+	@python3 tools/open_quickfix_in_editor.py rst_check_syntax.log
+	@rm rst_check_syntax.log
 
 check_structure: .FORCE
 	@python3 tools_rst/rst_check_images.py
 	@python3 tools_rst/rst_check_locale.py
 
 check_spelling: .FORCE
-	- python3 tools_rst/rst_check_spelling.py
+	@python3 tools_rst/rst_check_spelling.py
 
 check_links: .FORCE
 	$(SPHINXBUILD) -b linkcheck $(SOURCEDIR) $(BUILDDIR)/linkcheck
@@ -145,17 +139,18 @@ check_links: .FORCE
 	      "or in $(BUILDDIR)/linkcheck/output.txt."
 
 clean: .FORCE
-	rm -rf $(BUILDDIR)/*
+	@echo "Removing everything under '$(BUILDDIR)'..."
+	@rm -rf $(BUILDDIR)/*
 
 update_po: .FORCE
-	- python3 ./tools_maintenance/update_po.py
+	@python3 ./tools_maintenance/update_po.py
 
 report_po_progress: .FORCE
-	- python3 tools_report/report_translation_progress.py --quiet \
-	          `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.svn*' -printf 'locale/%f\n' | sort`
+	@python3 tools_report/report_translation_progress.py --quiet \
+	        `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.svn*' -printf 'locale/%f\n' | sort`
 
 gettext: .FORCE .SPHINXBUILD_EXISTS
-	$(SPHINXBUILD) -t builder_html -b gettext $(SPHINXOPTS) $(BUILDDIR)/locale
+	@$(SPHINXBUILD) -t builder_html -b gettext $(SPHINXOPTS) $(BUILDDIR)/locale
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 
