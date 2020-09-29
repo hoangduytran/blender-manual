@@ -32,6 +32,7 @@ different operating systems.
    - `PNG <https://en.wikipedia.org/wiki/Portable_Network_Graphics>`__
    - Quicktime
    - PNG TIFF Pixlet is not lossless, and may be only available on macOS.
+   - WebM/VP9 (although Blender will not import the alpha channel due to a `limitation of FFmpeg <https://trac.ffmpeg.org/ticket/8344>`__.
 
 Blender offers three ways to export videos, in the *File Format* selector of the *Output* properties:
 
