@@ -83,7 +83,6 @@ $(CHAPTERS): $(.DEFAULT_GOAL)
 
 
 html: .FORCE .SPHINXBUILD_EXISTS
-	# './' (input), './html/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b html $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/html"
 
@@ -98,7 +97,6 @@ html_server: .FORCE .SPHINXBUILD_EXISTS
 	$(SPHINXBUILD) -a -E -b html $(SPHINXOPTS) -j 1 $(SOURCEDIR) "$(BUILDDIR)/html"
 
 epub: .FORCE .SPHINXBUILD_EXISTS
-	# './' (input), './epub/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b epub $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/epub"
 
@@ -106,7 +104,6 @@ epub: .FORCE .SPHINXBUILD_EXISTS
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/epub/*.epub"
 
 singlehtml: .FORCE .SPHINXBUILD_EXISTS
-	# './' (input), './html/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b singlehtml $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/singlehtml"
 
