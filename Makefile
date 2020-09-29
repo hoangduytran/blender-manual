@@ -106,12 +106,17 @@ singlehtml: .FORCE .SPHINXBUILD_EXISTS
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/singlehtml/$(CONTENTS_HTML)"
 
-latexpdf: .FORCE
+latexpdf: .FORCE .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b latex $(SOURCEDIR) "$(BUILDDIR)/latex"
 	@make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
+
+gettext: .FORCE .SPHINXBUILD_EXISTS
+	@$(SPHINXBUILD) -t builder_html -b gettext $(SPHINXOPTS) $(BUILDDIR)/locale
+	@echo
+	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 
 readme: .FORCE
 	@rst2html5 readme.rst > $(BUILDDIR)/readme.html
@@ -149,13 +154,8 @@ report_po_progress: .FORCE
 	@python3 tools_report/report_translation_progress.py --quiet \
 	        `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.svn*' -printf 'locale/%f\n' | sort`
 
-gettext: .FORCE .SPHINXBUILD_EXISTS
-	@$(SPHINXBUILD) -t builder_html -b gettext $(SPHINXOPTS) $(BUILDDIR)/locale
-	@echo
-	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 
-
-# -----------------------------------------------------------------------------
+# ----------------------
 # Help for build targets
 help:
 	@echo ""
