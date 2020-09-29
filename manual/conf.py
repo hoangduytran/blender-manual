@@ -60,6 +60,7 @@ extensions = [
 if "latex" in sys.argv:
     # To convert gif's when making a PDF.
     extensions.append('sphinx.ext.imgconverter')
+    image_converter = "magick" 
 
 intersphinx_mapping = {'blender_api': ('https://docs.blender.org/api/' + blender_version + '/', None)}
 
