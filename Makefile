@@ -19,16 +19,13 @@ endif
 
 
 SPHINXOPTS    = -j "$(NPROCS)"
-PAPER         =
 SPHINXBUILD   = sphinx-build
 BUILDDIR      = build
 
 # Internal variables.
-PAPEROPT_a4     = -D latex_paper_size=a4
-PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d "$(BUILDDIR)/doctrees" $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) manual
+ALLSPHINXOPTS   = -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS) manual
 # the i18n builder cannot share the environment and doctrees with the others
-I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) manual
+I18NSPHINXOPTS  = $(SPHINXOPTS) manual
 
 # full paths
 CHAPTERS_FULL:=$(filter %/, $(wildcard manual/*/))
