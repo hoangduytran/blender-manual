@@ -137,12 +137,6 @@ check_structure:
 check_spelling:
 	@python3 tools_rst/rst_check_spelling.py
 
-check_links:
-	$(SPHINXBUILD) -b linkcheck $(SOURCEDIR) $(BUILDDIR)/linkcheck
-	@echo
-	@echo "Link check complete; look for any errors in the above output " \
-	      "or in $(BUILDDIR)/linkcheck/output.txt."
-
 update_po:
 	@python3 ./tools_maintenance/update_po.py
 
@@ -181,7 +175,6 @@ help:
 	@echo ""
 	@echo "- check_structure      to check the structure of all .rst files"
 	@echo "- check_syntax         to check the syntax of all .rst files"
-	@echo "- check_links          to check all external links for integrity"
 	@echo "- check_spelling       to check spelling for text in RST files"
 	@echo ""
 
