@@ -23,7 +23,7 @@ Building the Manual
 - See the `contribute </manual/about/contribute/>`__
   page for an explanation on the full workflow and other tips.
 
-.. seealso::
+.. note::
 
-   See :doc:`/manual/about/contribute/guides/maintenance_guide.rst`
+   See ``manual/about/contribute/guides/maintenance_guide.rst``
    for information on releasing new versions of the manual and old revisions.
