@@ -300,7 +300,7 @@ htmlhelp_basename = 'Blender Reference Manual'
 # -- Options for LaTeX output --------------------------------------------------
 # see https://github.com/sphinx-doc/sphinx/issues/3289
 
-latex_engine = 'xelatex'
+latex_engine = 'pdflatex'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
