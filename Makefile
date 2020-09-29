@@ -54,8 +54,8 @@ endif
 
 ifneq "$(findstring singlehtml, $(MAKECMDGOALS))" ""
 	.DEFAULT_GOAL := singlehtml
-else ifneq "$(findstring pdf, $(MAKECMDGOALS))" ""
-	.DEFAULT_GOAL := pdf
+else ifneq "$(findstring latexpdf, $(MAKECMDGOALS))" ""
+	.DEFAULT_GOAL := latexpdf
 else
 	.DEFAULT_GOAL := html
 endif
@@ -106,7 +106,7 @@ singlehtml: .FORCE .SPHINXBUILD_EXISTS
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/singlehtml/$(CONTENTS_HTML)"
 
-pdf: .FORCE
+latexpdf: .FORCE
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b latex $(SOURCEDIR) "$(BUILDDIR)/latex"
 	@make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
@@ -165,7 +165,7 @@ help:
 	@echo "Convenience targets provided for building docs"
 	@echo "- html                 to make standalone HTML files (default)"
 	@echo "- singlehtml           to make a single large HTML file"
-	@echo "- pdf                  to make a PDF using LaTeX warning: this currently has some problems,"
+	@echo "- latexpdf             to make a PDF using LaTeX warning: this currently has some problems,"
 	@echo "                       though the PDF generates, there are various unresolved issues	"
 	@echo "- readme               to make a 'readme.html' file"
 	@echo "- clean                to delete all old build files"

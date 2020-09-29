@@ -25,7 +25,7 @@ if "%1" == "help" (
 	echo.Convenience targets provided for building docs
 	echo.- html                 to make standalone HTML files ^(default^)
 	echo.- singlehtml           to make a single large HTML file
-	echo.- pdf                  to make a PDF using LaTeX warning: this currently has some problems,
+	echo.- latexpdf             to make a PDF using LaTeX warning: this currently has some problems,
 	echo.                       though the PDF generates, there are various unresolved issues
 	echo.- gettext              to make PO message catalogs
 	echo.- epub                 to make an epub
@@ -110,7 +110,7 @@ if "%1" == "readme" (
 	goto EOF
 )
 
-if "%1" == "pdf" (
+if "%1" == "latexpdf" (
 	%SPHINXBUILD% -b latex %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/latex
 	cd %BUILDDIR%/latex
 	make all-pdf
