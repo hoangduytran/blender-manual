@@ -91,7 +91,7 @@ Transform
       Randomize selected vertices.
 
 :ref:`Edge Slide <tool-mesh-edge_slide>`
-   Slide edge along a faces.
+   Slide edge along a face.
 
    :ref:`Vertex Slide <tool-mesh-vertex-slide>`
       Slide vertex along an edge.
