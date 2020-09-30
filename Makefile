@@ -90,10 +90,7 @@ html: .SPHINXBUILD_EXISTS
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/html/$(CONTENTS_HTML)"
 
 html_server: .SPHINXBUILD_EXISTS
-	# - Single thread because we run many builds at once.
-	# - Optimize to use less memory per-process.
-	PYTHONOPTIMIZE=2 \
-	$(SPHINXBUILD) -a -E -b html $(SPHINXOPTS) -j 1 $(SOURCEDIR) "$(BUILDDIR)/html"
+	$(SPHINXBUILD) -a -E -b html $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/html"
 
 latexpdf: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
