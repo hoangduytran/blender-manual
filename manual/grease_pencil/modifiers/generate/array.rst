@@ -70,7 +70,7 @@ Seed
 
 .. note::
 
-   The *Depth Order* is used in the Grease Pencil object has an influence on
+   The *Depth Order* used in the Grease Pencil object has an influence on
    the strokes visualization when using the Array modifier.
    See :doc:`Depth Order </grease_pencil/properties/strokes>` for more information.
 
