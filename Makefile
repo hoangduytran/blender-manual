@@ -84,7 +84,7 @@ $(CHAPTERS): $(.DEFAULT_GOAL)
 
 html: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	$(SPHINXBUILD) -b html $(SPHINXOPTS) $(SOURCEDIR) "$(BUILDDIR)/html"
+	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/html/$(CONTENTS_HTML)"
 
@@ -96,7 +96,7 @@ html_server: .SPHINXBUILD_EXISTS
 
 latexpdf: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	$(SPHINXBUILD) -b latex $(SOURCEDIR) "$(BUILDDIR)/latex"
+	$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 	@make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
