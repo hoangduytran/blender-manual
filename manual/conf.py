@@ -60,7 +60,7 @@ extensions = [
 if "latex" in sys.argv:
     # To convert gif's when making a PDF.
     extensions.append('sphinx.ext.imgconverter')
-    image_converter = "magick" 
+    image_converter = "magick"
 
 intersphinx_mapping = {'blender_api': ('https://docs.blender.org/api/' + blender_version + '/', None)}
 
@@ -301,7 +301,7 @@ htmlhelp_basename = 'Blender Reference Manual'
 # -- Options for LaTeX output --------------------------------------------------
 # see https://github.com/sphinx-doc/sphinx/issues/3289
 
-latex_engine = 'pdflatex'
+latex_engine = 'xelatex'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
@@ -330,10 +330,17 @@ latex_elements = {
 
 \\usepackage{pifont}
 \\newunicodechar{✔}{\\ding{52}}
-% nota bene Sphinx already replaced ✓ by \checkmark, which uses a math font
-% and is provided by amssymb. But it can not be boldened! (easily)
 \\newunicodechar{✗}{\\ding{55}}
 \\newunicodechar{✛}{\\ding{59}}
+
+\\usepackage{fontawesome}
+\\newunicodechar{⏮}{\\faFastBackward}
+\\newunicodechar{⏪}{\\faBackward}
+\\newunicodechar{▶}{\\faPlay}
+\\newunicodechar{⏩}{\\faForward}
+\\newunicodechar{⏭}{\\faFastForward}
+\\newunicodechar{⏸}{\\faPause}
+\\newunicodechar{◀}{\\reflectbox{▶}}
 ''',
 
 }
