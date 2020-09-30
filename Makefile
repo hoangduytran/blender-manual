@@ -20,6 +20,7 @@ endif
 # You can set these variables from the command line, and also
 # from the environment for the first two.
 SPHINXOPTS    ?= -j "$(NPROCS)"
+LATEXOPTS     ?= "-interaction nonstopmode"
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = ./manual
 BUILDDIR      = build
@@ -84,7 +85,7 @@ $(CHAPTERS): $(.DEFAULT_GOAL)
 
 html: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/html/$(CONTENTS_HTML)"
 
@@ -96,7 +97,7 @@ html_server: .SPHINXBUILD_EXISTS
 
 latexpdf: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+	$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
 	@echo "To view, run:"
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
@@ -164,7 +165,7 @@ help:
 .PHONY: help Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+# "make mode" option. $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
