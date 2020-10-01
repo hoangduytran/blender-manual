@@ -39,6 +39,11 @@ To make sure your GPU is supported,
 see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
 with the compute capabilities and supported graphics cards.
 
+.. note:: Unsupported Features:
+
+   - Open Shading Language.
+   - Advanced volume light sampling to reduce noise.
+
 
 .. _render-cycles-gpu-optix:
 
@@ -52,6 +57,15 @@ OptiX works best on RTX graphics cards with hardware ray tracing support (e.g. T
 OptiX support is still experimental and does not yet support all features, see below for details.
 
 OptiX requires Geforce or Quadro RTX graphics card with recent Nvidia drivers.
+
+.. note:: Unsupported Features:
+
+   - Open Shading Language.
+   - Advanced volume light sampling to reduce noise.
+   - Baking
+   - Branched Path Tracing
+   - Ambient Occlusion and Bevel shader nodes
+   - Combined CPU + GPU rendering
 
 
 AMD
@@ -67,21 +81,10 @@ with the GCN generation and supported graphics cards.
 On Windows and Linux, the latest Pro drivers should be installed from
 the `AMD website <https://www.amd.com/en/support>`__.
 
+.. note:: Unsupported Features:
 
-Supported Features and Limitations
-==================================
-
-CUDA and OpenCL rendering supports all the same features as CPU rendering, except two:
-
-- Open Shading Language.
-- Advanced volume light sampling to reduce noise.
-
-OptiX support is experimental and does not yet support the following features:
-
-- Baking
-- Branched Path Tracing
-- Ambient Occlusion and Bevel shader nodes
-- Combined CPU + GPU rendering
+   - Open Shading Language.
+   - Advanced volume light sampling to reduce noise.
 
 
 Frequently Asked Questions
