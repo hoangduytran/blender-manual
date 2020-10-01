@@ -172,15 +172,13 @@ Removes control points.
 Miscellaneous
 =============
 
-Slide Spline Curvature
-   :kbd:`LMB` click on curve and drag to move the handle.
+Slide Spline Curvature :kbd:`LMB`
+   Moves the curve and/or control points by clicking on them and dragging.
 
 Add Vertex and Slide :kbd:`Ctrl-LMB`
-   :kbd:`Ctrl-LMB` is used to place new control points and define handle orientations by a continued mouse drag.
-   A :kbd:`Ctrl-LMB` double-click will also close the curve if the last point was selected.
+   Insets new control points and defines handle orientations by a continued mouse drag.
+   If the last point was selected, double-click will also close the curve.
 
-Add Feather Vertex and Slide :kbd:`Shift-LMB`
-   :kbd:`Shift-LMB` is used to define a feathering outline curve. To create an initial feather,
-   sliding from a spline control point outside or inside will create and position feather points.
-   After this :kbd:`Shift-LMB`
-   will insert new feather point and mouse sliding can be used to move them around.
+Add Feather Vertex and Slide :kbd:`Ctrl-Shift-LMB`
+   Inserts new feather control points that can be transformed independently of the main spline curve.
+   If no father mask is in use this will create a basic feather mask to the curve.
