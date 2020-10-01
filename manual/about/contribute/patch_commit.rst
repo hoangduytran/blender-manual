@@ -34,9 +34,8 @@ In order to submit a patch, follow this process:
 #. Please check if the Documentation project is assigned in the tag's field in order to notify
    the team of your patch.
    You can also :ref:`contact <contribute-contact>` the team over the mailing list or :ref:`blender-chat`.
-#. They will review your patch and let you know about any changes you could make,
-   or commit the patch if it is accepted.
-
+#. They will review your patch and let you know about any changes you could make.
+   If there is no issue, your patch will be accepted and then committed by the team of your patch.
 .. note::
 
    If your patch includes changes to or additional images,
@@ -50,7 +49,7 @@ we cut out the middle man and give you direct access to edit the manual.
 Commit Directly
 ===============
 
-Instead of creating a patch file, committing will submit the change directly to our central repository.
+Once you are provided with the direct access to edit the manual, you can start commiting directly instead of creating a patch file. Doing this will submit the change directly to our central repository.
 
 All you need to do now is run::
 
