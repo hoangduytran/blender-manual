@@ -53,7 +53,8 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
-    '404'
+    '404',
+    'sphinx_panels'
 ]
 
 # Is there a better way to check for PDF building?
