@@ -17,6 +17,10 @@ This has a few different purposes, most commonly:
   as a base for texture painting or further edits.
 - Creating light maps to provide global illumination or speed up rendering in games.
 
+.. note::
+
+   Baking is not supported on :ref:`OptiX <render-cycles-gpu-optix>` GPU rendering.
+
 
 Setup
 =====
