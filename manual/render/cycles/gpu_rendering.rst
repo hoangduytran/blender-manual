@@ -175,13 +175,6 @@ attempts to use your GPU for rendering. Once the kernel is built successfully, y
 launch Blender as you normally would and the CUDA kernel will still be used for rendering.
 
 
-CUDA Error: Invalid kernel image
---------------------------------
-
-If you get this error on Windows 64-bit, be sure to use the 64-bit build of Blender,
-not the 32-bit version.
-
-
 CUDA Error: Kernel compilation failed
 -------------------------------------
 
