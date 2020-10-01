@@ -22,22 +22,16 @@ Transform
    :Mode:      Mask Mode
    :Menu:      :menuselection:`Mask --> Transform`
 
-Existing control points can be moved with :kbd:`LMB` and
-moved, scaled and rotated with the usual :kbd:`G`, :kbd:`S`, :kbd:`R` shortcuts.
-The whole spline can be moved by dragging the center dot with :kbd:`LMB`.
+:doc:`Move </scene_layout/object/editing/transform/move>` :kbd:`G`
+   Change the location of control points. Control points can also be moved with :kbd:`LMB`.
+   The whole spline can be moved by dragging the center dot with :kbd:`LMB`.
+:doc:`Rotate </scene_layout/object/editing/transform/rotate>` :kbd:`R`
+   Change the location of control points by rotating about a pivot point.
+:doc:`Scale </scene_layout/object/editing/transform/scale>` :kbd:`S`
+   Change the location of control points by expanding the distance between points.
 
-
-Scale Feather
--------------
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Mask Mode
-   :Menu:      :menuselection:`Mask --> Transform --> Scale Feather`
-   :Hotkey:    :kbd:`Alt-S`
-
-Will scale the feather size.
+Scale Feather :kbd:`Alt-S`
+   Will scale the feather size.
 
 
 Clear Feather Weight
