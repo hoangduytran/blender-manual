@@ -29,7 +29,7 @@ Inputs
 Base Color
    Diffuse surface color. For conductor materials (metals) it should be black.
 
-Specular Color
+Specular
    Amount of specular reflection. Specifies facing (along normal)
    reflectivity. Conductor materials (metals) can have colored specular reflection.
 
@@ -63,15 +63,15 @@ Transparency
 Normal
    Controls the normals of the base layers.
 
-Clearcoat
+Clear Coat
    Extra white specular layer on top of others.
    This is useful for materials like car paint and the like.
 
-Clearcoat Roughness:
-   Roughness of clearcoat specular.
+Clear Coat Roughness:
+   Roughness of clear coat specular.
 
-Clearcoat Normal
-   Controls the normals of the *Clearcoat* layer.
+Clear Coat Normal
+   Controls the normals of the *Clear Coat* layer.
 
 Ambient Occlusion
    Amount of occlusion to apply to indirect lighting. Usually a bake ambient occlusion map.
