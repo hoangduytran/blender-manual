@@ -30,6 +30,13 @@ Transform
 :doc:`Scale </scene_layout/object/editing/transform/scale>` :kbd:`S`
    Change the location of control points by expanding the distance between points.
 
+:doc:`To Sphere </modeling/meshes/editing/mesh/transform/to_sphere>` :kbd:`Shift-Alt-S`
+   Morphs the control points to the shape of a circle.
+:doc:`Shear </modeling/meshes/editing/mesh/transform/shear>` :kbd:`Shift-Ctrl-Alt-S`
+   Shifts control points along a defined axis so parallel control points move past one another.
+:doc:`Push/Pull </modeling/meshes/editing/mesh/transform/push_pull>`
+   Moves the control points closer together (Push) or further apart (Pull).
+
 Scale Feather :kbd:`Alt-S`
    Will scale the feather size.
 
