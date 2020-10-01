@@ -144,10 +144,13 @@ In case of problems, be sure to install the official graphics drivers from the N
 or through the package manager on Linux.
 
 
-Unsupported GNU version! gcc 4.7 and up are not supported!
-----------------------------------------------------------
+Unsupported GNU version
+-----------------------
 
-On Linux, depending on your GCC version you might get this error. There are two possible solutions:
+On Linux, depending on your GCC version you might get this error.
+See the `NVIDIA CUDA Installation Guide for Linux
+<https://docs.nvidia.com/cuda/archive/10.2/cuda-installation-guide-linux/index.html>`__
+For a list of supported GCC versions. There are two possible solutions to this error:
 
 Use an alternate compiler
    If you have an older GCC installed that is compatible with the installed CUDA toolkit version,
@@ -168,11 +171,11 @@ Remove compatibility checks
 
    ::
 
-      #error -- unsupported GNU version! gcc 4.7 and up are not supported!
+      #error -- unsupported GNU version! gcc x.x and up are not supported!
 
-This will allow Cycles to successfully compile the CUDA rendering kernel the first time it
-attempts to use your GPU for rendering. Once the kernel is built successfully, you can
-launch Blender as you normally would and the CUDA kernel will still be used for rendering.
+   This will allow Cycles to successfully compile the CUDA rendering kernel the first time it
+   attempts to use your GPU for rendering. Once the kernel is built successfully, you can
+   launch Blender as you normally would and the CUDA kernel will still be used for rendering.
 
 
 CUDA Error: Kernel compilation failed
