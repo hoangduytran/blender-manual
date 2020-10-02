@@ -1,3 +1,5 @@
+.. _bpy.types.PoseBone.rigify_type:
+.. _bpy.types.RigifyParameters:
 
 #############
   Rig Types
