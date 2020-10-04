@@ -61,4 +61,5 @@ Options
 =======
 
 After the modal tool is run
-the :ref:`Loop Cut and Slide Options <modeling-meshes-editing-edge-loopcut-slide-options>` are available in the :ref:`ui-undo-redo-adjust-last-operation` panel.
+the :ref:`Loop Cut and Slide Options <modeling-meshes-editing-edge-loopcut-slide-options>`
+are available in the :ref:`ui-undo-redo-adjust-last-operation` panel.

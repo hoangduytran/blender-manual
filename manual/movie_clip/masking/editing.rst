@@ -180,6 +180,6 @@ Add Vertex and Slide :kbd:`Ctrl-LMB`
    Insets new control points and defines handle orientations by a continued mouse drag.
    If the last point was selected, double-click will also close the curve.
 
-Add Feather Vertex and Slide :kbd:`Ctrl-Shift-LMB`
+Add Feather Vertex and Slide :kbd:`Shift-Ctrl-LMB`
    Inserts new feather control points that can be transformed independently of the main spline curve.
    If no father mask is in use this will create a basic feather mask to the curve.
