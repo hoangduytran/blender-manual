@@ -7,7 +7,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=./manual
 set BUILDDIR=build
-set SPHINXOPTS=-j %Number_Of_Processors%
+set SPHINXOPTS=-j auto
 
 REM Check if sphinx-build is available and fallback to Python version if any
 %SPHINXBUILD% 1>NUL 2>NUL
@@ -68,7 +68,7 @@ if "%1" == "help" (
 
 if "%1" == "html" (
 	:html
-	%SPHINXBUILD% -b html %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
+	%SPHINXBUILD% -j 8 -b html %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/html.

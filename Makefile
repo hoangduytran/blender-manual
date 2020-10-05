@@ -2,24 +2,12 @@
 # System Vars
 OS:=$(shell uname -s)
 
-# ------------------------------------------
-# Get the number of cores for threaded build
-ifndef NPROCS
-	NPROCS:=1
-	ifeq ($(OS), Linux)
-		NPROCS:=$(shell nproc)
-	endif
-	ifneq (,$(filter $(OS),Darwin FreeBSD NetBSD))
-		NPROCS:=$(shell sysctl -n hw.ncpu)
-	endif
-endif
-
 # End System Vars
 # ---------------
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS    ?= -j "$(NPROCS)"
+SPHINXOPTS    ?= -j auto
 LATEXOPTS     ?= "-interaction nonstopmode"
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = ./manual
