@@ -62,6 +62,7 @@ if "%1" == "help" (
 	echo.
 	echo.- check_structure      to check the structure of all .rst files
 	echo.- check_syntax         to check the syntax of all .rst files
+	echo.- check_spelling       to check spelling for text in RST files
 	goto EOF
 )
 
@@ -130,6 +131,12 @@ if "%1" == "report_po_progress" (
 	python tools_report/report_translation_progress.py locale/%2 --quiet
 	goto EOF
 
+)
+
+if "%1" == "check_spelling" (
+	echo. here
+	python tools_rst/rst_check_spelling.py
+	goto EOF
 )
 
 if "%1" == "check_structure" (
