@@ -116,9 +116,7 @@ or in %BUILDDIR%/linkcheck/output.txt.
 )
 
 if "%1" == "check_syntax" (
-	python tools/rst_check_syntax.py --kbd --long > rst_check_syntax.log
-	type rst_check_syntax.log
-	DEL rst_check_syntax.log
+	python tools_rst/rst_check_syntax.py --kbd --long
 	goto EOF
 )
 
@@ -129,20 +127,14 @@ if "%1" == "update_po" (
 
 if "%1" == "report_po_progress" (
 	IF NOT EXIST %cd%/locale GOTO MISSING_LOCALE
-	python tools_report/report_translation_progress.py locale/%2 --quiet > po_progress.log
-	type po_progress.log
-	DEL po_progress.log
+	python tools_report/report_translation_progress.py locale/%2 --quiet
 	goto EOF
 
 )
 
 if "%1" == "check_structure" (
-	python tools_rst/rst_check_images.py > rst_check_structure.log
-	type rst_check_structure.log
-
-	python tools_rst/rst_check_locale.py > rst_check_structure.log
-	type rst_check_structure.log
-	DEL rst_check_structure.log
+	python tools_rst/rst_check_images.py
+	python tools_rst/rst_check_locale.py
 	goto EOF
 
 ) else (
