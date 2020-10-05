@@ -164,14 +164,18 @@ directives.register_directive('seealso', directive_ignore)
 directives.register_directive('only', directive_ignore)
 directives.register_directive('hlist', directive_ignore)
 # directives.register_directive('glossary', directive_ignore)  # wash this data instead
+# Custom directives from extensions
+directives.register_directive('todo', directive_ignore)
 
 # Recursive ignore, take care!
 directives.register_directive('toctree', directive_ignore_recursive)
 directives.register_directive('code-block', directive_ignore_recursive)
-directives.register_directive('youtube', directive_ignore_recursive)
-directives.register_directive('vimeo', directive_ignore_recursive)
 directives.register_directive('highlight', directive_ignore_recursive)
 directives.register_directive('parsed-literal', directive_ignore_recursive)
+# Custom directives from extensions
+directives.register_directive('youtube', directive_ignore_recursive)
+directives.register_directive('vimeo', directive_ignore_recursive)
+directives.register_directive('todolist', directive_ignore_recursive)
 
 # workaround some bug? docutils won't load relative includes!
 directives.register_directive('include', directive_ignore_recursive)
