@@ -68,13 +68,12 @@ if "%1" == "help" (
 
 if "%1" == "html" (
 	:html
-	%SPHINXBUILD% -j 8 -b html %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
+	%SPHINXBUILD% -b html %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
 	echo.To view, run:
 	echo.  start %BUILDDIR%/html/index.html
-	pause
 	goto EOF
 )
 
