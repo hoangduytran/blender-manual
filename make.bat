@@ -29,7 +29,6 @@ if "%1" == "help" (
 	echo.                       though the PDF generates, there are various unresolved issues
 	echo.- gettext              to make PO message catalogs
 	echo.- epub                 to make an epub
-	echo.- epub3                to make an epub3
 	echo.- readme               to make a 'readme.html' file
 	echo.- clean                to delete all old build files
 	echo.
@@ -133,14 +132,6 @@ if "%1" == "epub" (
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The epub file is in %BUILDDIR%/epub.
-	goto EOF
-)
-
-if "%1" == "epub3" (
-	%SPHINXBUILD% -b epub3 %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/epub3
-	if errorlevel 1 exit /b 1
-	echo.
-	echo.Build finished. The epub3 file is in %BUILDDIR%/epub3.
 	goto EOF
 )
 
