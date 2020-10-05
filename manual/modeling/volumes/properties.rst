@@ -107,28 +107,27 @@ Interpolation
    Closest
       No interpolation between voxels. Gives raw voxels.
 
-.. _bpy.types.VolumeDisplay.axis_slice_method:
 
-Method
-   Full
-      Slice the whole domain object.
+.. _bpy.types.VolumeDisplay.use_slice:
 
-   Single
-      Perform a single slice of the domain object.
+Slice
+=====
 
-      .. _bpy.types.VolumeDisplay.slice_axis:
+Perform a single slice of the domain object.
 
-      Axis
-         Auto
-            Adjust slice direction according to the view direction.
+.. _bpy.types.VolumeDisplay.slice_axis:
 
-         X/Y/Z
-            Slice along the X/Y/Z axis.
+Axis
+   Auto
+      Adjust slice direction according to the view direction.
 
-      .. _bpy.types.VolumeDisplay.slice_depth:
+   X/Y/Z
+      Slice along the X/Y/Z axis.
 
-      Position
-         Position of the slice relative to the length of the respective domain side.
+.. _bpy.types.VolumeDisplay.slice_depth:
+
+Position
+   Position of the slice relative to the length of the respective domain side.
 
 
 .. _bpy.types.VolumeRender:

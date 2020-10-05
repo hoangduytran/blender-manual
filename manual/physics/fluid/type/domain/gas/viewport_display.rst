@@ -22,38 +22,37 @@ Interpolation
    Closest
       No interpolation between voxels. Gives raw voxels.
 
-.. _bpy.types.FluidDomainSettings.axis_slice_method:
-
-Method
-   Full
-      Slice the whole domain object.
-
-   Single
-      Perform a single slice of the domain object.
-
-      .. _bpy.types.FluidDomainSettings.slice_axis:
-
-      Axis
-         Auto
-            Adjust slice direction according to the view direction.
-
-         X/Y/Z
-            Slice along the X/Y/Z axis.
-
-      .. _bpy.types.FluidDomainSettings.slice_depth:
-
-      Position
-         Position of the slice relative to the length of the respective domain side.
-
-      .. _bpy.types.FluidDomainSettings.show_gridlines:
-
-      Gridlines :guilabel:`Closest Interpolation Only`
-         Display gridlines to differentiate the underlying cells in the current slice of the fluid domain.
-
 .. _bpy.types.FluidDomainSettings.slice_per_voxel:
 
 Slice per Voxel
    Determines how many slices per voxel should be generated.
+
+
+.. _bpy.types.FluidDomainSettings.use_slice:
+
+Slice
+=====
+
+Perform a single slice of the domain object.
+
+.. _bpy.types.FluidDomainSettings.slice_axis:
+
+Axis
+   Auto
+      Adjust slice direction according to the view direction.
+
+   X/Y/Z
+      Slice along the X/Y/Z axis.
+
+.. _bpy.types.FluidDomainSettings.slice_depth:
+
+Position
+   Position of the slice relative to the length of the respective domain side.
+
+.. _bpy.types.FluidDomainSettings.show_gridlines:
+
+Gridlines :guilabel:`Closest Interpolation Only`
+   Display gridlines to differentiate the underlying cells in the current slice of the fluid domain.
 
 
 .. _bpy.types.FluidDomainSettings.use_color_ramp:
