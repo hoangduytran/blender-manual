@@ -6,54 +6,8 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
 set SOURCEDIR=./manual
-set BUILDDIR=_build
+set BUILDDIR=build
 set SPHINXOPTS=-j %Number_Of_Processors%
-
-REM Default to HTML
-if "%1" == "" (
-	echo.No command given, defaulting to html.
-	echo.
-	goto html
-)
-
-if "%1" == "help" (
-	echo.Please use `make ^<target^>` where ^<target^> is one of
-	echo.
-	echo.Documentation
-	echo.=============
-	echo.
-	echo.Convenience targets provided for building docs
-	echo.- html                 to make standalone HTML files ^(default^)
-	echo.- singlehtml           to make a single large HTML file
-	echo.- latexpdf             to make a PDF using LaTeX warning: this currently has some problems,
-	echo.                       though the PDF generates, there are various unresolved issues
-	echo.- gettext              to make PO message catalogs
-	echo.- epub                 to make an epub
-	echo.- readme               to make a 'readme.html' file
-	echo.- clean                to delete all old build files
-	echo.
-	echo.Translations
-	echo.============
-	echo.
-	echo.- gettext              to make PO message catalogs
-	echo.- update_po            to update PO message catalogs
-	echo.- report_po_progress   to check the progress/fuzzy strings
-	echo.
-	echo.Checking
-	echo.========
-	echo.
-	echo.- check_structure      to check the structure of all .rst files
-	echo.- check_syntax         to check the syntax of all .rst files
-	echo.- check_links          to check all external links for integrity
-	goto EOF
-)
-
-if "%1" == "clean" (
-	for /d %%i in (%BUILDDIR%\*) do rmdir /q /s %%i
-	del /q /s %BUILDDIR%\*
-	goto EOF
-)
-
 
 REM Check if sphinx-build is available and fallback to Python version if any
 %SPHINXBUILD% 1>NUL 2>NUL
@@ -78,6 +32,38 @@ if errorlevel 9009 (
 
 :sphinx_ok
 
+REM Default to HTML
+if "%1" == "" (
+	goto html
+)
+
+if "%1" == "help" (
+	echo.
+	echo.Sphinx
+	echo.======
+	%SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
+	echo.
+	echo.Custom Targets
+	echo.==============
+	echo.Convenience targets provided for building docs
+	echo.
+	echo.- readme               to make a 'readme.html' file
+	echo.- clean                to delete all old build files
+	echo.
+	echo.Translations
+	echo.------------
+	echo.
+	echo.- gettext              to make PO message catalogs
+	echo.- update_po            to update PO message catalogs
+	echo.- report_po_progress   to check the progress/fuzzy strings
+	echo.
+	echo.Checking
+	echo.--------
+	echo.
+	echo.- check_structure      to check the structure of all .rst files
+	echo.- check_syntax         to check the syntax of all .rst files
+	goto EOF
+)
 
 if "%1" == "html" (
 	:html
@@ -91,24 +77,6 @@ if "%1" == "html" (
 	goto EOF
 )
 
-if "%1" == "singlehtml" (
-	%SPHINXBUILD% -b singlehtml %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/singlehtml
-	if errorlevel 1 exit /b 1
-	echo.
-	echo.Build finished. The HTML pages are in %BUILDDIR%/singlehtml.
-	echo.To view, run:
-	echo.  start %BUILDDIR%/singlehtml/index.html
-	goto EOF
-)
-
-if "%1" == "readme" (
-	rst2html5.py readme.rst > build/readme.html
-	echo.Build finished. The HTML page is in %BUILDDIR%/readme.html.
-	echo.To view, run:
-	echo.  start %BUILDDIR%/readme.html
-	goto EOF
-)
-
 if "%1" == "latexpdf" (
 	%SPHINXBUILD% -b latex %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/latex
 	cd %BUILDDIR%/latex
@@ -119,30 +87,22 @@ if "%1" == "latexpdf" (
 	goto EOF
 )
 
-if "%1" == "gettext" (
-	%SPHINXBUILD% -t builder_html -b gettext %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/locale
-	if errorlevel 1 exit /b 1
-	echo.
-	echo.Build finished. The message catalogs are in %BUILDDIR%/locale.
-	goto EOF
-)
-
-if "%1" == "epub" (
-	%SPHINXBUILD% -b epub %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/epub
-	if errorlevel 1 exit /b 1
-	echo.
-	echo.Build finished. The epub file is in %BUILDDIR%/epub.
-	goto EOF
-)
-
 if "%1" == "translations" (
 	sphinx-intl build
 	%SPHINXBUILD% -b html -D language='%2' %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
-	echo.Build finished. The HTML pages are in %BUILDDIR%/singlehtml.
+	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
 	echo.To view, run:
 	echo.  start %BUILDDIR%/html/index.html
+	goto EOF
+)
+
+if "%1" == "readme" (
+	rst2html5.py readme.rst > build/readme.html
+	echo.Build finished. The HTML page is in %BUILDDIR%/readme.html.
+	echo.To view, run:
+	echo.  start %BUILDDIR%/readme.html
 	goto EOF
 )
 
@@ -185,8 +145,8 @@ if "%1" == "check_structure" (
 	DEL rst_check_structure.log
 	goto EOF
 
-	) else (
-	echo.Command not found, type make help for a list of commands. Aborting...
+) else (
+	%SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 	goto EOF
 )
 
