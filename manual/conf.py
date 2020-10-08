@@ -205,6 +205,8 @@ if html_theme == "sphinx_rtd_theme":
         "canonical_url": "https://docs.blender.org/manual/en/latest/",
     }
 
+    extensions.append('sphinx_rtd_theme')
+
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
