@@ -107,7 +107,8 @@ has some additional options to further control its behaviour.
    end of the command line, following a double dash.
 
 ``--cycles-device CPU``
-   Override the device that is used to render frames. Currently supported options are ``CPU``, ``CUDA``, ``OPTIX`` and ``OPENCL``.
+   Override the device that is used to render frames.
+   Currently supported options are ``CPU``, ``CUDA``, ``OPTIX`` and ``OPENCL``.
    Additionally, you can use ``CUDA+CPU`` or ``OPENCL+CPU`` in order to use both CPU and GPU rendering.
 
 ``--cycles-print-stats``
