@@ -180,7 +180,7 @@ html_theme = "default"
 try:
     __import__("sphinx_rtd_theme")
     html_theme = "sphinx_rtd_theme"
-except ModuleNotFound:
+except ModuleNotFoundError:
     pass
 
 
