@@ -199,10 +199,10 @@ if html_theme == "sphinx_rtd_theme":
 
     # included in the title
     html_theme_options = {
-    "display_version": False,
-    "collapse_navigation": True,
-    "navigation_depth": -1,
-    "canonical_url": "https://docs.blender.org/manual/en/latest/",
+        "display_version": False,
+        "collapse_navigation": True,
+        "navigation_depth": -1,
+        "canonical_url": "https://docs.blender.org/manual/en/latest/",
     }
 
 
@@ -311,7 +311,7 @@ htmlhelp_basename = 'Blender Reference Manual'
 latex_engine = 'xelatex'
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
+    # The paper size ('letterpaper' or 'a4paper').
   'papersize': 'a4paper',
 
 # The font size ('10pt', '11pt' or '12pt').
@@ -322,8 +322,9 @@ latex_elements = {
   'sphinxsetup': 'hmargin=0.75in, vmargin=1in',
 
   'classoptions': ',openany,oneside',
-#  'babel': '\\usepackage[english]{babel}',
-# note that xelatex will use polyglossia by default, but if 'babel' key is redefined like above, it will use babel package.
+    #  'babel': '\\usepackage[english]{babel}',
+    # note that xelatex will use polyglossia by default,
+    # but if 'babel' key is redefined like above, it will use babel package.
 
     'fontpkg': r'''
 \setmainfont{DejaVu Serif}
@@ -357,8 +358,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'blender_manual.tex', 'Blender User Manual',
-   'Blender Community', 'manual'),
+    ('index', 'blender_manual.tex', 'Blender User Manual',
+     'Blender Community', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -407,8 +408,8 @@ man_show_urls = False
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Blender Reference Manual', 'Blender Manual Documentation',
-   'Blender Documentation Team', 'Blender Reference Manual'),
+    ('index', 'Blender Reference Manual', 'Blender Manual Documentation',
+     'Blender Documentation Team', 'Blender Reference Manual'),
 ]
 
 # Documents to append as an appendix to all manuals.
