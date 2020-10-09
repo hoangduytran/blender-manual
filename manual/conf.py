@@ -289,12 +289,6 @@ html_use_opensearch = 'https://docs.blender.org/manual/' + language + '/latest'
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 #html_file_suffix = None
 
-# Language to be used for generating the HTML full-text search index.
-# Sphinx supports the following languages:
-#   'da', 'de', 'en', 'es', 'fi', 'fr', 'h', 'it', 'ja'
-#   'nl', 'no', 'pt', 'ro', 'r', 'sv', 'tr', 'zh'
-html_search_language = 'en'
-
 # A dictionary with options for the search language support, empty by default.
 # 'ja' uses this config value.
 # 'zh' user can custom change `jieba` dictionary path.
