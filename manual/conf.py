@@ -194,8 +194,6 @@ html_theme_path = []
 
 if html_theme == "sphinx_rtd_theme":
     import sphinx_rtd_theme
-    html_theme_path.append(sphinx_rtd_theme.get_html_theme_path())
-    del sphinx_rtd_theme
 
     # included in the title
     html_theme_options = {
