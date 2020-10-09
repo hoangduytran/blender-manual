@@ -88,7 +88,6 @@ if "%1" == "latexpdf" (
 )
 
 if "%1" == "translations" (
-	sphinx-intl build
 	%SPHINXBUILD% -b html -D language='%2' %SPHINXOPTS% %O% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
