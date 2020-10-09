@@ -105,15 +105,6 @@ if "%1" == "readme" (
 	goto EOF
 )
 
-if "%1" == "check_links" (
-	%SPHINXBUILD% -b linkcheck %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/linkcheck
-	if errorlevel 1 exit /b 1
-	echo.
-	echo.Link check complete; look for any errors in the above output ^
-or in %BUILDDIR%/linkcheck/output.txt.
-	goto end
-)
-
 if "%1" == "check_syntax" (
 	python tools_rst/rst_check_syntax.py --kbd --long
 	goto EOF
