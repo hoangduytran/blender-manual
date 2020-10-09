@@ -53,7 +53,6 @@ if "%1" == "help" (
 	echo.Translations
 	echo.------------
 	echo.
-	echo.- gettext              to make PO message catalogs
 	echo.- update_po            to update PO message catalogs
 	echo.- report_po_progress   to check the progress/fuzzy strings
 	echo.
