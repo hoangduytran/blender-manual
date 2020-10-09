@@ -69,8 +69,6 @@ if "%1" == "html" (
 	:html
 	%SPHINXBUILD% -b html %SPHINXOPTS% %O% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
-	echo.
-	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
 	echo.To view, run:
 	echo.  start %BUILDDIR%/html/index.html
 	goto EOF
@@ -81,17 +79,14 @@ if "%1" == "latexpdf" (
 	cd %BUILDDIR%/latex
 	make all-pdf
 	cd %~dp0
-	echo.
-	echo.Build finished; the PDF files are in %BUILDDIR%/latex.
+	echo.To view, run:
+	echo.  start %BUILDDIR%/html/blender_manual.pdf
 	goto EOF
 )
 
 if "%1" == "translations" (
 	%SPHINXBUILD% -b html -D language='%2' %SPHINXOPTS% %O% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
-	echo.
-	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
-	echo.To view, run:
 	echo.  start %BUILDDIR%/html/index.html
 	goto EOF
 )
