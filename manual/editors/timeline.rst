@@ -198,7 +198,34 @@ Active Keying Set
 New Keyframe Type
    :ref:`keyframe-type` on insertion.
 
-Auto-Keyframing Mode
+
+.. Move to some content to animation?
+.. _animation-editors-timeline-autokeyframe:
+
+Auto Keying Popover
+^^^^^^^^^^^^^^^^^^^
+
+.. figure:: /images/editors_timeline_keyframes-auto.png
+   :align: right
+
+   Timeline Auto Keyframe.
+
+The record button (|record|) enables *Auto Keyframe*:
+It will add and/or replace existing keyframes for the active object when you transform it in the 3D Viewport.
+For example, when enabled, first set the Playhead to the desired frame,
+then move an object in the 3D Viewport, or set a new value for a property in the UI.
+
+When you set a new value for the properties,
+Blender will add keyframes on the current frame for the transform properties.
+Other use cases are :ref:`Fly/Walk Navigation <3dview-fly-walk>` to record the walk/flight path
+and :ref:`Lock Camera to View <3dview-lock-camera-to-view>` to record the navigation in camera view.
+
+.. note::
+
+   Note that *Auto Keyframe* only works for transform properties (objects and bones),
+   in the 3D Viewport (i.e. you can't use it e.g. to animate the colors of a material in the Properties...).
+
+Add & Replace / Replace
    This controls how the auto keyframe mode works.
    Only one mode can be used at a time.
 
@@ -207,8 +234,8 @@ Auto-Keyframing Mode
    Replace
       Only replace existing keyframes.
 
-Auto Keying Set (two keys icon)
-   When enabled *Auto Keyframe* will insert new keyframes for the properties in the active *Keying Set*.
+Only Active Keying Set
+   When enabled, new keyframes for properties will be inserted into the active *Keying Set*.
 
 Layered Recording
    Adds a new NLA Track and strip for every loop/pass made over the animation to allow non-destructive tweaking.
@@ -331,31 +358,3 @@ Start Frame
    The start frame of the animation/playback range.
 End Frame
    The end frame of the animation/playback range.
-
-
-.. Move to animation?
-.. _animation-editors-timeline-autokeyframe:
-
-Keyframe Control
-^^^^^^^^^^^^^^^^
-
-Auto Keyframe (|record|)
-   .. figure:: /images/editors_timeline_keyframes-auto.png
-      :align: right
-
-      Timeline Auto Keyframe.
-
-   The record button enables *Auto Keyframe*:
-   It will add and/or replace existing keyframes for the active object when you transform it in the 3D Viewport.
-   For example, when enabled, first set the Playhead to the desired frame,
-   then move an object in the 3D Viewport, or set a new value for a property in the UI.
-
-   When you set a new value for the properties,
-   Blender will add keyframes on the current frame for the transform properties.
-   Other use cases are :ref:`Fly/Walk Navigation <3dview-fly-walk>` to record the walk/flight path
-   and :ref:`Lock Camera to View <3dview-lock-camera-to-view>` to record the navigation in camera view.
-
-   .. note::
-
-      Note that *Auto Keyframe* only works for transform properties (objects and bones),
-      in the 3D Viewport (i.e. you can't use it e.g. to animate the colors of a material in the Properties...).
