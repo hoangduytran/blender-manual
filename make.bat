@@ -68,7 +68,7 @@ if "%1" == "help" (
 
 if "%1" == "html" (
 	:html
-	%SPHINXBUILD% -b html %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
+	%SPHINXBUILD% -b html %SPHINXOPTS% %O% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
@@ -78,7 +78,7 @@ if "%1" == "html" (
 )
 
 if "%1" == "latexpdf" (
-	%SPHINXBUILD% -b latex %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/latex
+	%SPHINXBUILD% -b latex %SPHINXOPTS% %O% %SOURCEDIR% %BUILDDIR%/latex
 	cd %BUILDDIR%/latex
 	make all-pdf
 	cd %~dp0
@@ -89,7 +89,7 @@ if "%1" == "latexpdf" (
 
 if "%1" == "translations" (
 	sphinx-intl build
-	%SPHINXBUILD% -b html -D language='%2' %SPHINXOPTS% %SOURCEDIR% %BUILDDIR%/html
+	%SPHINXBUILD% -b html -D language='%2' %SPHINXOPTS% %O% %SOURCEDIR% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
