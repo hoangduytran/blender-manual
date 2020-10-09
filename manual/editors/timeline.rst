@@ -112,54 +112,60 @@ Playback Popover
 
 The *Playback* popover contains options controlling the animation playback.
 
-Sync Mode
-   .. figure:: /images/editors_timeline_red-fps.png
-      :figwidth: 109px
-      :align: right
+Audio
+   Sync Mode
+      .. figure:: /images/editors_timeline_red-fps.png
+         :figwidth: 109px
+         :align: right
 
-      3D Viewport red FPS.
+         3D Viewport red FPS.
 
-   When you play an animation, the frame rate is displayed at the top left of the 3D Viewport.
-   If the scene is detailed and playback is slower than the set
-   *Frame Rate* (see :ref:`render-tab-dimensions`),
-   these options are used to synchronize the playback.
+      When you play an animation, the frame rate is displayed at the top left of the 3D Viewport.
+      If the scene is detailed and playback is slower than the set
+      *Frame Rate* (see :ref:`render-tab-dimensions`),
+      these options are used to synchronize the playback.
 
-   No Sync
-      Do not sync, play every frame.
-   Frame Dropping
-      Drop frames if playback is too slow.
-   AV-sync
-      (Audio/Video Synchronization). Sync to audio clock, dropping frames if playback is slow.
-Audio Scrubbing
-   If your animation has sound, this option plays bits of the sound wave
-   while you move the playhead with :kbd:`LMB` or keyboard arrows (like a moving playhead).
-Mute Audio
-   Mute the sound from any audio source.
-Subframes
-   Display and allow changing the current scene subframe.
-Limit Playback to Frame Range
-   Don't allow selecting frames outside of the playback range using the mouse.
-Follow Current Frame
-   Animation editors can be setup to always follow the time indicator as animation is being played back.
-   Following will be done when animating and changing frame:
-   When the cursor reaches the end of the screen, the next range of frames of the same width will be displayed.
-Active Editor Only
-   While playing, updates the Timeline, if *Animation Editors* and *All 3D Viewports* disabled.
-All 3D Viewports
-   While playing, updates the 3D Viewport and the Timeline.
-Animation Editors
-   While playing, updates the Timeline, Dope Sheet, Graph Editor, Video Sequencer.
-Property Editors
-   When the animation is playing, this will update the property values in the UI.
-Image Editors
-   The Image editor in Mask mode.
-Sequencer Editors
-   While playing, updates the Video Sequencer.
-Node Editors
-   While playing, updates the Node properties for the node editors.
-Clip Editors
-   While playing, updates the Movie Clip Editor.
+      No Sync
+         Do not sync, play every frame.
+      Frame Dropping
+         Drop frames if playback is too slow.
+      AV-sync
+         (Audio/Video Synchronization). Sync to audio clock, dropping frames if playback is slow.
+   Scrubbing
+      If your animation has sound, this option plays bits of the sound wave
+      while you move the playhead with :kbd:`LMB` or keyboard arrows (like a moving playhead).
+   Mute
+      Mute the sound from any audio source.
 
+Playback
+   Limit Playback to Frame Range
+      Don't allow selecting frames outside of the playback range using the mouse.
+   Follow Current Frame
+      Animation editors can be setup to always follow the time indicator as animation is being played back.
+      Following will be done when animating and changing frame:
+      When the cursor reaches the end of the screen, the next range of frames of the same width will be displayed.
+
+Play In
+   Active Editor
+      While playing, updates the Timeline, if *Animation Editors* and *All 3D Viewports* disabled.
+   3D Viewport
+      While playing, updates the 3D Viewport and the Timeline.
+   Animation Editors
+      While playing, updates the Timeline, Dope Sheet, Graph Editor, Video Sequencer.
+   Image Editor
+      The Image editor in Mask mode.
+   Properties Editor
+      When the animation is playing, this will update the property values in the UI.
+   Movie Clip Editor
+      While playing, updates the Movie Clip Editor.
+   Node Editors
+      While playing, updates the Node properties for the node editors.
+   Video Sequencer
+      While playing, updates the Video Sequencer.
+
+Show
+   Subframes
+      Display and allow changing the current scene subframe.
 
 .. _timeline-keying:
 
