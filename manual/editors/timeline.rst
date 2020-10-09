@@ -261,13 +261,6 @@ Frame All :kbd:`Home`
 Go to Current Frame :kbd:`Numpad0`
    Centers the Timeline to the Playhead.
 
-.. removed in 2.8
-
-Bind Camera to Markers :kbd:`Ctrl-B`
-   This is used to switch cameras during animation.
-   It binds the active camera to the selected markers.
-   First select a camera. Then select the marker(s). Then use the tool.
-
 
 Markers Menu
 ^^^^^^^^^^^^

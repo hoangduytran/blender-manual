@@ -256,7 +256,7 @@ Jump to Next/Previous Marker
 Moves the playhead to the next/previous marker relative to the current playhead position.
 
 
-.. _marker-bind-camera:
+.. _bpy.ops.marker.camera_bind:
 
 Bind Camera to Markers
 ======================

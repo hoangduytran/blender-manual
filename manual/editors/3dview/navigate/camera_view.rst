@@ -70,7 +70,7 @@ Animated Camera Switching
 By default a scene contains one camera. However, a scene can contain more than one camera,
 but only one of them will be used at a time.
 So you will only need to add a new camera if you are making cuts between them.
-See :ref:`Animating Cameras <marker-bind-camera>`.
+See :ref:`Animating Cameras <bpy.ops.marker.camera_bind>`.
 
 
 .. _bpy.ops.view3d.view_center_camera:
