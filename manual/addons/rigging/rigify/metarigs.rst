@@ -93,7 +93,6 @@ Using Rig Types (Advanced)
    add a rig sample to your armature to see how it is supposed to be used.
 
 
-.. _bpy.ops.Armature.rigify_add_bone_groups:
 .. _bpy.ops.Armature.rigify_apply_selection_colors:
 .. _bpy.ops.Armature.rigify_add_bone_groups:
 .. _bpy.types.Armature.rigify_colors_lock:
@@ -101,7 +100,6 @@ Using Rig Types (Advanced)
 .. _bpy.types.Armature.rigify_colors_index:
 .. _bpy.types.RigifySelectionColors:
 .. _bpy.types.RigifyArmatureLayer:
-
 
 Layers, Bone Groups & Selection Sets
 ====================================
