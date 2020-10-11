@@ -109,7 +109,7 @@ align the bone at the point where the heel just touches the ground floor.
 Fingers Bones
 =============
 
-Start by placing, finger by finger, all the knocks in place.
+Start by placing, finger by finger, all the knuckles in place.
 
 .. tip:: Fingers Placement
 
