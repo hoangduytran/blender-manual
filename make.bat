@@ -7,7 +7,8 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=./manual
 set BUILDDIR=build
-set SPHINXOPTS=-j auto
+set LANGUAGE=en
+set SPHINXOPTS=-j auto -D language='%LANGUAGE%'
 
 REM Check if sphinx-build is available and fallback to Python version if any
 %SPHINXBUILD% 1>NUL 2>NUL

@@ -66,18 +66,16 @@ however, any PO editor will do.
 Building with Translations
 ==========================
 
-.. note::
+Now you can build the manual with the translation applied
 
-   This is optional, translations are automatically built online, e.g:
-   https://docs.blender.org/manual/fr/dev/
+On Linux and macOS run::
 
-Now you can build the manual with the translation applied::
+   make -e LANGUAGE=fr
 
-   make -e SPHINXOPTS="-D language='fr'"
+On Windows run::
 
-If you are on Windows and do not have ``make``, run::
-
-   sphinx-build -b html -D language=fr ./manual ./build/html
+   set LANGUEAGE=fr
+   make html
 
 Now you will have a build of the manual with translations applied.
 
@@ -124,11 +122,6 @@ You should get a list of all the files with information about the number of empt
 For more options see::
 
    python tools_report/report_translation_progress.py --help
-
-.. seealso::
-
-   Instructions on this page are based on
-   `Sphinx Intl documentation <https://www.sphinx-doc.org/en/master/usage/advanced/intl.html>`__.
 
 
 Updating PO Files

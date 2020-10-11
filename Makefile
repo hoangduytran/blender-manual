@@ -7,11 +7,12 @@ OS:=$(shell uname -s)
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS    ?= -j auto
-LATEXOPTS     ?= "-interaction nonstopmode"
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = ./manual
 BUILDDIR      = build
+LANGUAGE      ?= en
+SPHINXOPTS    ?= -j auto -D language='$(LANGUAGE)'
+LATEXOPTS     ?= "-interaction nonstopmode"
 
 # full paths
 CHAPTERS_FULL:=$(filter %/, $(wildcard manual/*/))
