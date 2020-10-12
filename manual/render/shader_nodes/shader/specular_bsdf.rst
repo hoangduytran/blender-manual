@@ -41,9 +41,9 @@ Specular
 
       For example:
 
-      - water: ior = 1.33, specular = 0.25
-      - glass: ior = 1.5, specular = 0.5
-      - diamond: ior = 2.417, specular = 2.15
+      - water: ior = 1.33, specular = 0.02
+      - glass: ior = 1.5, specular = 0.04
+      - diamond: ior = 2.417, specular = 0.17
 
 Roughness
    Specifies microfacet roughness of the surface for diffuse and specular reflection.
