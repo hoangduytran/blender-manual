@@ -83,6 +83,30 @@ The *Outputs* are located on the top right side of the node,
 and can be connected to the input of nodes further down the node tree.
 
 
+Conversion
+----------
+
+Some socket types can be converted to other socket types either implicitly or explicitly.
+Implicit conversion can happen automatically without the need of a conversion node.
+For example, color and float sockets can both be placed into one another.
+Once a socket conversion is made data may be lost and cannot be retrieved later down the node tree.
+Implicit socket conversion can sometimes change the data units as well.
+For example, plugging a *Value* input node into an angle socket will default to use radians
+regardless of the scene :ref:`bpy.types.UnitSettings`.
+This happens because the value node has no unit while the angle input does.
+
+Valid conversions:
+
+- Color <--> vector -- in this case the using individual color channels to store the vector
+- Color <--> float -- color data is converted to its gray scale equivalent.
+- Color/float/vector --> Shader -- implicitly converts to color and gives the result of using an emission node.
+
+Explicit conversion requires the use of a conversion node for example the
+:doc:`/render/shader_nodes/converter/shader_to_rgb` node or the
+:doc:`/render/shader_nodes/converter/rgb_to_bw` node. The :doc:`/render/shader_nodes/converter/math`
+node also contains some functions to convert between degrees and radians.
+
+
 .. _bpy.types.NodeSetting:
 
 Properties
