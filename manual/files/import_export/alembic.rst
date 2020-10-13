@@ -85,6 +85,11 @@ Flatten Hierarchy
    is not exported itself, but with children that *are* exported, is replaced by an empty.
    When enabled, parent/child relations are not exported, and transformations are all written in world coordinates.
 
+Use Instancing
+   Exports data of :doc:`duplicated </scene_layout/object/editing/duplicate_linked>`
+   or :ref:`instanced </scene_layout/object/properties/instancing/index>` objects as Alembic instances;
+   speeds up the export and can be disabled for compatibility with other software.
+
 Custom Properties
    When enabled (which it is by default), custom properties are exported to Alembic as well.
    The following custom property types are supported:
