@@ -13,16 +13,20 @@ Toolbar
 The Toolbar contains a list of tools.
 Links to each modes Toolbar are listed below.
 
-- :doc:`Object Mode </scene_layout/object/tools/toolbar>`
+
+Object Mode
+===========
+
+:doc:`Object Mode </scene_layout/object/tools/toolbar>`
 
 
-Edit Modes
-==========
+Edit Mode
+=========
 
-- :ref:`Curve Edit Mode <curve-toolbar-index>`
 - :ref:`Mesh Edit Mode <mesh-toolbar-index>`
-- :ref:`Metaball Edit Mode <meta-toolbar-index>`
+- :ref:`Curve Edit Mode <curve-toolbar-index>`
 - :ref:`Surface Edit Mode <surface-toolbar-index>`
+- :ref:`Metaball Edit Mode <meta-toolbar-index>`
 
 
 Paint Modes
