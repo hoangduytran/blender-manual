@@ -42,12 +42,12 @@ Options
 
    The Boolean modifier.
 
-Difference
-   The target mesh is subtracted from the modified mesh (everything *outside* of the target mesh is kept).
-Union
-   The target mesh is added to the modified mesh.
 Intersect
    Opposite of *Difference* (everything *inside* of the target mesh is kept).
+Union
+   The target mesh is added to the modified mesh.
+Difference
+   The target mesh is subtracted from the modified mesh (everything *outside* of the target mesh is kept).
 
 Object
    The name of the target mesh object.

@@ -14,11 +14,13 @@ Performs Boolean operations with the selection on the unselected geometry.
 While the :doc:`/modeling/modifiers/generate/booleans` is useful for non-destructive edits,
 access to these operations with a tool in Edit Mode can be useful to quickly perform edits.
 
-Boolean
-   Difference, Union, Intersect
-
-Swap
-   Changes the order of the operation.
+Boolean Operation
+   Intersect
+      Opposite of *Difference* (everything *inside* of the target mesh is kept).
+   Union
+      The target mesh is added to the modified mesh.
+   Difference
+      The target mesh is subtracted from the modified mesh (everything *outside* of the target mesh is kept).
 
 Solver
    Algorithm used to calculate the boolean intersections.
@@ -41,3 +43,6 @@ Solver
       Uses a mathematically complex solver which offers the best results
       and has full support for overlapping geometry;
       however, this solver is much slower than the *Fast Solver*.
+
+Swap
+   Changes the order of the operations when using *Difference* to determine which side is kept.

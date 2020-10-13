@@ -15,10 +15,10 @@ It is a bit like the Boolean tool, but, does not calculate interior/exterior geo
 Faces are split along the intersections, leaving new edges selected.
 
 Source
-   Selected/Unselected
-      Operate between the selected and unselected geometry.
    Self Intersect
       Operate on the overlapping geometry of the mesh.
+   Selected/Unselected
+      Operate between the selected and unselected geometry.
 
 Separate Mode
    All
