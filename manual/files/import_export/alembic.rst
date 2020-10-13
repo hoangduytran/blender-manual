@@ -87,7 +87,7 @@ Flatten Hierarchy
 
 Use Instancing
    Exports data of :doc:`duplicated </scene_layout/object/editing/duplicate_linked>`
-   or :ref:`instanced </scene_layout/object/properties/instancing/index>` objects as Alembic instances;
+   or :doc:`instanced </scene_layout/object/properties/instancing/index>` objects as Alembic instances;
    speeds up the export and can be disabled for compatibility with other software.
 
 Custom Properties

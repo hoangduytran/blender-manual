@@ -3,8 +3,6 @@
 Clean Up
 ********
 
-.. _bpy.ops.object.vertex_group_clean:
-
 Clean Vertex Group Weights
 ==========================
 
@@ -16,8 +14,6 @@ Clean Vertex Group Weights
 
 Removes :doc:`Vertex Group </modeling/meshes/properties/vertex_groups/index>` assignments which are not required.
 
-
-.. _bpy.ops.object.vertex_group_limit_total:
 
 Limit Total Vertex Groups
 =========================
