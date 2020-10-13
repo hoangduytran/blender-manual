@@ -10,5 +10,6 @@
 
    introduction.rst
    navigating.rst
+   overlays.rst
    display_panel.rst
    selecting.rst

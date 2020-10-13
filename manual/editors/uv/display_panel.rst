@@ -19,33 +19,3 @@ Repeat Image
 
 Pixel Coordinates
    Display UV coordinates in pixels rather than from 0.0 to 1.0
-
-
-.. _bpy.types.SpaceUVEditor.uv_opacity:
-
-Overlays
-========
-
-Display As
-   Outline
-      Display white edges with black outline.
-   Dash
-      Display dashed black-white edges.
-   Black
-      Display black edges.
-   White
-      Display white edges.
-
-Faces
-   Display faces over the image.
-
-Modified
-   Show results of modifiers in the UV display.
-
-UV Opacity
-   Opacity of the above UV overlays.
-
-Stretching
-   Shows how much of a difference there is between UV coordinates and 3D coordinates.
-   Blue means low distortion, while Red means high distortion.
-   Choose to display the distortion of *Angles* or the *Area*.
