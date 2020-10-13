@@ -41,7 +41,7 @@ Orientations
 Global
    Align the transformation axes to world space.
 
-   The :doc:`Axis </editors/3dview/startup_scene>` in the top right corner of the viewport,
+   The :ref:`Navigation Gizmo <navigation-gizmo>` in the top right corner of the viewport,
    and the *Grid Floor*, shows the axes of world coordinate system.
 
 Local

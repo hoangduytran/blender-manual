@@ -40,7 +40,7 @@ Grid Floor
 
 
 Text Info
-=========
+---------
 
 The visibility and settings of the overlays can be set
 in the :doc:`Viewport Overlays </editors/3dview/display/overlays>` popover.
