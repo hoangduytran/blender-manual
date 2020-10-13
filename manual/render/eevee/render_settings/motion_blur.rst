@@ -19,6 +19,15 @@ both in a movie frame and in a photograph from a real-world camera.
    Motion blur is only available in final renders and is not shown in the 3D Viewport
    and thus :ref:`Viewport Renders <bpy.ops.render.opengl>`.
 
+Position
+   Controls at what point the shutter opens in relation to the current frame.
+
+   Start on Frame
+      Shutter is starting to open at the current frame.
+   Center on Frame
+      Shutter is fully opened at the current frame.
+   End on Frame
+      Shutter is fully closed at the current frame.
 
 Shutter
    Time (in frames) taken between shutter open and close.
