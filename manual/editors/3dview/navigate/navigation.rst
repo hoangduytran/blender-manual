@@ -51,6 +51,8 @@ Roll
 Rotate the viewport camera around its local Z axis in 15° discrete steps.
 
 
+.. _bpy.ops.view3d.view_pan:
+
 Pan
 ===
 
@@ -71,6 +73,7 @@ For discrete steps, use the hotkeys :kbd:`Ctrl-Numpad8`, :kbd:`Ctrl-Numpad2`,
 If your input device has no middle button, you can hold :kbd:`Shift-Alt` while dragging with :kbd:`LMB`.
 
 
+.. _bpy.ops.view3d.zoom:
 .. _editors_3dview_navigation_zoom:
 
 Zoom In/Out

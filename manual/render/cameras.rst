@@ -142,7 +142,7 @@ Clip Start and End
 
    .. seealso::
 
-      - :doc:`3D Viewport clipping </editors/3dview/properties/sidebar>`
+      - :doc:`3D Viewport clipping </editors/3dview/sidebar>`
 
 
 .. _bpy.types.CameraDOFSettings:

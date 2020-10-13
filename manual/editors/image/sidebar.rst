@@ -1,8 +1,60 @@
-.. (TODO add) images
 
-******
+*******
+Sidebar
+*******
+
+Tool
+====
+
+Displays the settings of the active tool.
+
+Image
+=====
+
+Image
+-----
+
+Tools for working with images, see :doc:`/editors/image/image_settings`.
+
+
+Metadata
+--------
+
+Lists image metadata.
+
+
+View Tab
+========
+
+.. _bpy.types.Image.display_aspect:
+.. _bpy.types.SpaceImageEditor.show_repeat:
+
+Display
+-------
+
+You can set the editors display options in this panel.
+
+.. figure:: /images/editors_image_view-tab_panel.png
+   :align: right
+
+   Display panel.
+
+Aspect Ratio
+   Display Aspect for this image. Does not affect rendering.
+Repeat Image
+   Duplicate the image until it is repeated to fill the main view.
+
+
+Annotations
+-----------
+
+Options for the annotation tool. See :doc:`/interface/annotate_tool`.
+
+
+.. (TODO add) images per type
+
 Scopes
-******
+======
 
 .. figure:: /images/editors_image_scopes_main.png
    :align: right
@@ -11,9 +63,7 @@ Scopes
 
 
 Histogram
-=========
-
-.. copied from the Sequencer.
+---------
 
 This mode displays a graph showing the distribution of color information in the pixels of
 the currently displayed image. The X axis represents values of pixel, from 0 to 1 (or 0 to 255),
@@ -34,7 +84,7 @@ Show Line
 
 
 Waveform
-========
+--------
 
 .. (TODO add) description of a Waveform maybe this should go in the glossary?
 
@@ -54,7 +104,7 @@ Waveform Mode
 
 
 Vectorscope
-===========
+-----------
 
 .. (TODO add) description of a Vectorscope maybe this should go in the glossary?
 
@@ -63,7 +113,7 @@ Vectorscope Opacity
 
 
 Sample Line
-===========
+-----------
 
 The *Sample Line* scope is the same as the `Histogram`_
 but allows you to get the sample data from a line.
@@ -73,7 +123,7 @@ Sample Line
 
 
 Scope Samples
-=============
+-------------
 
 Full Sample
    Sample every pixel.

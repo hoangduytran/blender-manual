@@ -166,35 +166,3 @@ UV Snapping
    Similar to Snapping in the 3D Viewport.
 Proportional Editing
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
-
-
-Sidebar Region
---------------
-
-Image Tab
-^^^^^^^^^
-
-UV Vertex
-   Transform Properties :doc:`Selecting UVs </modeling/meshes/uv/editing>`.
-
-UDIM Grid
-   Allows you to control the grid size of :doc:`UDIM </modeling/meshes/uv/workflows/udims>` tiles.
-
-
-Tool Tab
-^^^^^^^^
-
-Shows the settings for the active tool.
-
-
-View Tab
-^^^^^^^^
-
-Display
-   See :doc:`/editors/uv/display_panel`.
-
-2D Cursor
-   Control 2D cursor location.
-
-Annotations
-   Options for the :doc:`annotation tool </interface/annotate_tool>`.

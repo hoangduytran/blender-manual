@@ -61,7 +61,7 @@ The active camera can also be set in the *Scene* tab of the *Properties*.
 
    The active camera, as well as the layers, can be specific to a given view,
    or global (locked) to the whole scene.
-   See :doc:`Local Camera </editors/3dview/properties/sidebar>`.
+   See :doc:`Local Camera </editors/3dview/sidebar>`.
 
 
 Animated Camera Switching

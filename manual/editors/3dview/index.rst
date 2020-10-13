@@ -18,5 +18,5 @@
    controls/index.rst
    display/index.rst
    toolbar/index.rst
-   properties/index.rst
+   sidebar.rst
    viewport_render.rst

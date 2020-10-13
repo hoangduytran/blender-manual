@@ -93,16 +93,3 @@ Main View
 
 When :kbd:`LMB` / :kbd:`RMB` dragging mouse the color under the cursor is shown in the footer as well the cursor
 position and the color values in the RGBA, HSV and Luminance :term:`Color Space`.
-
-
-Sidebar Region
-==============
-
-Tool
-   Displays the settings of the active tool.
-Image
-   Tools for working with images, see :doc:`/editors/image/image_settings`.
-View Tab
-   Controls display options, see :doc:`/editors/image/view_tab`.
-Scopes
-   Displays :doc:`scopes </editors/image/scopes>` visualizing information about the image.

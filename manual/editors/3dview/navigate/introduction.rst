@@ -30,12 +30,12 @@ Navigation Gizmo
 The navigation gizmo can be found in the top right of the editor.
 The four buttons (listed from top to bottom) do the following:
 
-- `Zooms the 3D Viewport <Zoom>`_
-- `Pans the 3D Viewport <Pan>`_
+- :ref:`Zooms the 3D Viewport <editors_3dview_navigation_zoom>`
+- :ref:`Pans the 3D Viewport <bpy.ops.view3d.view_pan>`
 - :doc:`Toggles the Camera View </editors/3dview/navigate/camera_view>`
 - :doc:`Toggles the Projection </editors/3dview/navigate/projections>`
 
-The `Orbit`_ gizmo at the top can be used to rotate around the 3D Viewport.
+The :ref:`Orbit <bpy.ops.view3d.view_orbit>` gizmo at the top can be used to rotate around the 3D Viewport.
 Hovering over the gizmo and dragging with :kbd:`LMB` will orbit the view.
 Clicking any of the axis labels will :doc:`Align </editors/3dview/navigate/align>` to that view.
 Clicking the same axis again switches to the opposite side of that same axis.
