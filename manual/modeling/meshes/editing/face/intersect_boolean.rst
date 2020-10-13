@@ -1,4 +1,4 @@
-.. _bpy.ops.mesh.intersect_boolean():
+.. _bpy.ops.mesh.intersect_boolean:
 
 *******************
 Intersect (Boolean)
