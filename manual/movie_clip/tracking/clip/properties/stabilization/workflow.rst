@@ -29,7 +29,7 @@ For more practical examples, see
 Absolute Shape Keys
 ===================
 
-#. Add sequence of shape keys as described above for relative shape keys.
+#. Add a sequence of shape keys as described above for relative shape keys.
 #. Uncheck the *Relative* checkbox.
 #. Click the *Reset Timing* button.
 #. Switch to *Object Mode*.

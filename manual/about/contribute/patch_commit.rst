@@ -51,7 +51,7 @@ Commit Directly
 ===============
 
 Once you are provided with the direct access to edit the manual,
-you can start commiting directly instead of creating a patch file.
+you can start committing directly instead of creating a patch file.
 Doing this will submit the change directly to our central repository.
 
 All you need to do now is run::

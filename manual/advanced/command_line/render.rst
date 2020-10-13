@@ -92,19 +92,21 @@ Animation
 ``-t 2``
    Use only two threads.
 
+
 Cycles
 ------
 
-In addition to the options above, which apply to all render engines, Cycles
-has some additional options to further control its behaviour.
+In addition to the options above, which apply to all render engines,
+Cycles has additional options to further control its behavior.
 
 .. code-block:: sh
 
    blender -b file.blend -f 20 -- --cycles-device CPU
 
 .. note::
-   Unlike the generic options, the Cycles-specific ones must be passed on the
-   end of the command line, following a double dash.
+
+   Unlike the generic options, the Cycles-specific ones must be passed on
+   the end of the command line, following a double dash.
 
 ``--cycles-device CPU``
    Override the device that is used to render frames.

@@ -3,7 +3,7 @@
 Navigation
 **********
 
-.. bpy.ops.view3d.view_orbit:
+.. _bpy.ops.view3d.view_orbit:
 
 Orbit
 =====

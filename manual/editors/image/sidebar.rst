@@ -8,6 +8,7 @@ Tool
 
 Displays the settings of the active tool.
 
+
 Image
 =====
 

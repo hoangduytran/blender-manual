@@ -32,7 +32,8 @@ different operating systems.
    - `PNG <https://en.wikipedia.org/wiki/Portable_Network_Graphics>`__
    - Quicktime
    - PNG TIFF Pixlet is not lossless, and may be only available on macOS.
-   - WebM/VP9 (although Blender will not import the alpha channel due to a `limitation of FFmpeg <https://trac.ffmpeg.org/ticket/8344>`__.
+   - WebM/VP9 (although Blender will not import the alpha channel due to
+     a `limitation of FFmpeg <https://trac.ffmpeg.org/ticket/8344>`__).
 
 Blender offers three ways to export videos, in the *File Format* selector of the *Output* properties:
 
@@ -42,10 +43,10 @@ AVI JPEG
    JPEG compression is also the one used in the DV format used in digital camcorders.
 AVI Raw
    Audio-Video Interlaced (AVI) uncompressed frames.
-FFmpeg video
-   Video encoding via the FFmpeg library. Which codecs are available depends on
-   the operating system and FFmpeg version.
-   This options allows for a lot of different encodings, some presets are available
+FFmpeg Video
+   Video encoding via the FFmpeg library. Which codecs are available
+   depends on the operating system and FFmpeg version. This options allows
+   for a lot of different encodings, some presets are available
    (to the right of the *Encoding* subpanel) to help with getting started.
    This option is also the only one allowing to export audio.
 

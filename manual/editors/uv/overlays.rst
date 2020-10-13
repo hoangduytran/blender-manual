@@ -36,7 +36,7 @@ Display As
    Black
       Display black edges.
    White
-      Display white edges
+      Display white edges.
 
 Modified Edges
    Show results of modifiers in the UV display.

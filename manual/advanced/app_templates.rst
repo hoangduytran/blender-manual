@@ -81,11 +81,10 @@ See :ref:`blender-directory-layout` for details on script and configuration loca
 
 .. hint:: Troubleshooting Paths
 
-   When creating a application-template, you may run into issues where paths are not being found.
-
+   When creating a application template, you may run into issues where paths are not being found.
    To investigate this you can log output of all of Blender's path look-ups.
 
-   Example command line arguments that load Blender with a custom application-template
+   Example command line arguments that load Blender with a custom application template
    (replace ``my_app_template`` with the name of your own template):
 
    .. code-block:: sh

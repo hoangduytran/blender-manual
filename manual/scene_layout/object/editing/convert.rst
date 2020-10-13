@@ -16,7 +16,7 @@ Curve
 
 Converts the selected mesh, or text object to a curve object.
 For mesh objects, only edges belonging to no faces will be taken into account.
-The resulting curve will be a Poly curve type, but can be converted to have
+The resulting curve will be a poly curve type, but can be converted to have
 smooth segments as described in :ref:`curve-convert-type`.
 
 

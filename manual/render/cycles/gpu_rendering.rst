@@ -41,8 +41,8 @@ with the compute capabilities and supported graphics cards.
 
 .. note:: Unsupported Features:
 
-   - Open Shading Language.
-   - Advanced volume light sampling to reduce noise.
+   - Open Shading Language
+   - Advanced volume light sampling to reduce noise
 
 
 .. _render-cycles-gpu-optix:
@@ -60,12 +60,12 @@ OptiX requires Geforce or Quadro RTX graphics card with recent Nvidia drivers.
 
 .. note:: Unsupported Features:
 
-   - Open Shading Language.
-   - Advanced volume light sampling to reduce noise.
+   - Open Shading Language
+   - Advanced volume light sampling to reduce noise
    - Baking
    - Branched Path Tracing
    - Ambient Occlusion and Bevel shader nodes
-   - Combined CPU + GPU rendering
+   - Combined CPU and GPU rendering
 
 
 AMD
@@ -83,8 +83,8 @@ the `AMD website <https://www.amd.com/en/support>`__.
 
 .. note:: Unsupported Features:
 
-   - Open Shading Language.
-   - Advanced volume light sampling to reduce noise.
+   - Open Shading Language
+   - Advanced volume light sampling to reduce noise
 
 
 Frequently Asked Questions
@@ -148,9 +148,9 @@ Unsupported GNU version
 -----------------------
 
 On Linux, depending on your GCC version you might get this error.
-See the `NVIDIA CUDA Installation Guide for Linux
+See the `Nvidia CUDA Installation Guide for Linux
 <https://docs.nvidia.com/cuda/archive/10.2/cuda-installation-guide-linux/index.html>`__
-For a list of supported GCC versions. There are two possible solutions to this error:
+for a list of supported GCC versions. There are two possible solutions to this error:
 
 Use an alternate compiler
    If you have an older GCC installed that is compatible with the installed CUDA toolkit version,
@@ -167,9 +167,9 @@ Use an alternate compiler
 
 Remove compatibility checks
    If the above is unsuccessful, delete the following line in
-   ``/usr/local/cuda/include/host_config.h``
+   ``/usr/local/cuda/include/host_config.h``:
 
-   ::
+   .. code-block:: c
 
       #error -- unsupported GNU version! gcc x.x and up are not supported!
 
@@ -178,7 +178,7 @@ Remove compatibility checks
    launch Blender as you normally would and the CUDA kernel will still be used for rendering.
 
 
-CUDA Error: Kernel compilation failed
+CUDA Error: kernel compilation failed
 -------------------------------------
 
 This error may happen if you have a new Nvidia graphics card that is not yet supported by

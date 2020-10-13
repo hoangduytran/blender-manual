@@ -66,7 +66,7 @@ however, any PO editor will do.
 Building with Translations
 ==========================
 
-Now you can build the manual with the translation applied
+Now you can build the manual with the translation applied:
 
 On Linux and macOS run::
 
@@ -74,7 +74,7 @@ On Linux and macOS run::
 
 On Windows run::
 
-   set LANGUEAGE=fr
+   set LANGUAGE=fr
    make html
 
 Now you will have a build of the manual with translations applied.
