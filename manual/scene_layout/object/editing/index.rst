@@ -21,4 +21,5 @@
    shading.rst
    convert.rst
    show_hide.rst
+   cleanup.rst
    delete.rst
