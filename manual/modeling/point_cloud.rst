@@ -1,4 +1,5 @@
 :orphan:
+
 .. _bpy.ops.object.pointcloud:
 
 ***********
@@ -34,4 +35,4 @@ Editing
 =======
 
 Currently, not much can be done with Point Clouds; however,
-they can be :doc:`converted to/from meshes </scene_layout/object/editing/convert>.
+they can be :doc:`converted to/from meshes </scene_layout/object/editing/convert>`.
