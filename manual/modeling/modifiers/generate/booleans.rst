@@ -52,5 +52,19 @@ Intersect
 Object
    The name of the target mesh object.
 
-Overlap Threshold
-   Maximum distance between two faces to consider them as overlapping.
+Solver
+   Algorithm used to calculate the boolean intersections.
+
+   Fast
+      Uses a mathematically simple solver which offers the best performance;
+      however, this solver lacks support for overlapping geometry.
+
+      Overlap Threshold
+         Maximum distance between two faces to consider them as overlapping.
+         This helps solve the limitation of this solver,
+         if the boolean result seems unexpected try using the exact solver.
+
+   Exact
+      Uses a mathematically complex solver which offers the best results
+      and has full support for overlapping geometry;
+      however, this solver is much slower than the *Fast Solver*.
