@@ -11,6 +11,7 @@ These add-ons relate to Object Mode and related tools.
    bool_tools.rst
    carver.rst
    cell_fracture.rst
+   greasepencil_tools.rst
    color_rules.rst
    edit_linked_library.rst
    oscurart_tools.rst
