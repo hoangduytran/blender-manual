@@ -1,5 +1,3 @@
-.. _bpy.types.Sculpt.symmetrize_direction:
-.. _bpy.ops.sculpt.symmetrize:
 
 ********
 Symmetry
@@ -16,6 +14,8 @@ Mirror
    Note that if you want to alter the directions the axes point in,
    you must rotate the model in Edit Mode and not in Object Mode.
 
+.. _bpy.types.Sculpt.lock:
+
 Lock
    These three buttons allow you to block any modification/deformation
    of your model along selected local axes, while you are sculpting it.
@@ -27,6 +27,8 @@ Tiling
 Feather
    Reduces the strength of the stroke where it overlaps the planes of symmetry.
 
+.. _bpy.types.Sculpt.radial_symmetry:
+
 Radial X, Y, Z
    These settings allow for radial symmetry in the desired axes.
    The number determines how many times the stroke will be repeated
@@ -36,8 +38,12 @@ Tile Offset X, Y, Z
    The default tile size is set to one unit.
    The offset allows the option to alter the tile size along all three axes.
 
+.. _bpy.types.Sculpt.symmetrize_direction:
+
 Direction
    Determines which direction the model will be symmetrized.
+
+.. _bpy.ops.sculpt.symmetrize:
 
 Symmetrize
    Uses direction orientation to symmetrize. Since Dyntopo adds
