@@ -18,3 +18,8 @@ Radial X, Y, Z
    These settings allow for radial symmetry in the desired axes.
    The number determines how many times the stroke will be repeated
    within 360 degrees around the central axes.
+
+.. _bpy.types.Mesh.use_mirror_vertex_group_x:
+
+Vertex Groups X Symmetry
+   Mirror the :ref:`left/right <armature-editing-naming-conventions>` vertex groups when painting.
