@@ -177,11 +177,15 @@ Grave Accent / Tilde Action
       Navigation pie menu, useful on systems without a numeric keypad.
    Gizmos
       Transform gizmos pie menu, useful for quickly switching between transform gizmos.
+
 Middle Mouse Action
+   The action when :kbd:`MMB` dragging in the viewport, this also applies to trackpads.
+
    Orbit
       Rotates the view around a pivot point, :kbd:`Shift-MMB` is used for panning the view.
    Pan
       Shifts the view towards the mouse, :kbd:`Shift-MMB` is used for orbiting the view.
+
 Alt Middle Mouse Drag Action
    Relative
       Set the view axis where each mouse direction maps to an axis relative to the current orientation.
@@ -192,6 +196,7 @@ Alt Middle Mouse Drag Action
 
 Tab for Pie Menu
    Causes :kbd:`Tab` to open a pie menu (swaps :kbd:`Tab` and :kbd:`Ctrl-Tab`).
+
 Pie Menu on Drag
    This allows keys to have a secondary drag action.
 
@@ -204,5 +209,6 @@ Pie Menu on Drag
    :kbd:`AccentGrave`
       :tap: First person :ref:`Fly/walk Navigation <3dview-fly-walk>`.
       :drag: View axis pie menu.
+
 Extra Shading Pie Menu Items
    Show additional items in the shading menu (:kbd:`Z` key).
