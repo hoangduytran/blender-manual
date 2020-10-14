@@ -10,6 +10,6 @@
    /sculpt_paint/brush/brush.rst
    brush_settings.rst
    mask.rst
-   /sculpt_paint/brush/symmetry.rst
+   symmetry.rst
    options.rst
    tiling.rst

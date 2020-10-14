@@ -20,4 +20,3 @@ Brush Settings
    stroke.rst
    falloff.rst
    cursor.rst
-   symmetry.rst

@@ -8,7 +8,6 @@ Symmetry
 
    :Mode:      Vertex Paint Mode
    :Tool:      :menuselection:`Toolbar --> Tool --> Symmetry`
-   :Panel:     :menuselection:`Properties --> Tool --> Symmetry`
 
 Mirror
    Mirror the brush strokes across the selected local axes.
@@ -19,5 +18,3 @@ Radial X, Y, Z
    These settings allow for radial symmetry in the desired axes.
    The number determines how many times the stroke will be repeated
    within 360 degrees around the central axes.
-
-   Not available in Texture Painting.

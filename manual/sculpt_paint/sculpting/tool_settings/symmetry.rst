@@ -12,7 +12,9 @@ Symmetry
    :Tool:      :menuselection:`Toolbar --> Tool --> Symmetry`
 
 Mirror
-   See :doc:`/sculpt_paint/brush/symmetry`.
+   Mirror the brush strokes across the selected local axes.
+   Note that if you want to alter the directions the axes point in,
+   you must rotate the model in Edit Mode and not in Object Mode.
 
 Lock
    These three buttons allow you to block any modification/deformation
@@ -26,7 +28,9 @@ Feather
    Reduces the strength of the stroke where it overlaps the planes of symmetry.
 
 Radial X, Y, Z
-   See :doc:`/sculpt_paint/brush/symmetry`.
+   These settings allow for radial symmetry in the desired axes.
+   The number determines how many times the stroke will be repeated
+   within 360 degrees around the central axes.
 
 Tile Offset X, Y, Z
    The default tile size is set to one unit.
