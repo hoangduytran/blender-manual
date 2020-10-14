@@ -160,6 +160,31 @@ Selection :kbd:`Y`
    so you must move it to see it clearly.
 
 
+Unwrap
+======
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Unwrap`
+   :Hotkey:    :kbd:`U`
+
+Blender offers several ways of mapping UVs.
+The simpler projection methods use formulas that map 3D space onto 2D space,
+by interpolating the position of points toward a point/axis/plane through a surface.
+The more advanced methods can be used with more complex models, and have more specific uses.
+
+- :ref:`bpy.ops.uv.unwrap`
+- :ref:`bpy.ops.uv.smart_project`
+- :ref:`bpy.ops.uv.lightmap_pack`
+- :ref:`bpy.ops.uv.follow_active_quads`
+- :ref:`bpy.ops.uv.cube_project`
+- :ref:`bpy.ops.uv.cylinder_project`
+- :ref:`bpy.ops.uv.sphere_project`
+
+
 .. _bpy.ops.uv.pin:
 
 Pin & Unpin
