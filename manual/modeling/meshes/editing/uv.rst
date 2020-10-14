@@ -262,44 +262,22 @@ Scale to Bounds
 
 
 .. _bpy.ops.uv.cylinder_project:
-.. _bpy.ops.uv.sphere_project:
 
-Cylinder & Sphere Projection
-============================
+Cylinder Projection
+===================
 
 .. admonition:: Reference
    :class: refbox
 
    :Editor:    3D View
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Sphere Projection`
-               :menuselection:`UV --> Cylinder Projection`
+   :Menu:      :menuselection:`UV --> Cylinder Projection`
    :Hotkey:    :kbd:`U`
-
-Cylindrical and Spherical mappings have the same options. The difference is that
-a cylindrical mapping projects the UVs on a plane toward the cylinder shape,
-while a spherical map takes into account the sphere's curvature,
-and each latitude line becomes evenly spaced.
-Useful for spherical shapes, like eyes, planets, etc.
-
-.. figure:: /images/modeling_meshes_editing_uv_sphere-projection.png
-   :width: 420px
-
-   Using an equirectangular image with a Sphere Projection.
 
 Normally, to unwrap a cylinder (tube) as if you slit it lengthwise and folded it flat,
 Blender wants the view to be vertical, with the tube standing "up".
 Different views will project the tube onto the UV map differently, skewing the image if used.
 However, you can set the axis on which the calculation is done manually.
-This same idea works for the sphere mapping:
-
-Recall the opening cartographer's approaching to mapping the world? Well,
-you can achieve the same here when unwrapping a sphere from different points of view. Normally,
-to unwrap a sphere, view the sphere with the poles at the top and bottom. After unwrapping,
-Blender will give you an equirectangular projection;
-the point at the equator facing you will be in the middle of the image.
-A polar view will give a very different but common projection map. Using an equirectangular projection
-map of the earth as the UV image will give a good planet mapping onto the sphere.
 
 
 Options
@@ -323,6 +301,62 @@ Align
 
 Radius
    The radius of the cylinder to use.
+
+
+.. _bpy.ops.uv.sphere_project:
+
+Sphere Projection
+=================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    3D View
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Sphere Projection`
+   :Hotkey:    :kbd:`U`
+
+Spherical mappings is similar to cylinder but the difference is that
+a cylindrical mapping projects the UVs on a plane toward the cylinder shape,
+while a spherical map takes into account the sphere's curvature,
+and each latitude line becomes evenly spaced.
+*Sphere Projection* is useful for spherical shapes, like eyes, planets, etc.
+
+Recall the opening cartographer's approaching to mapping the world? Well,
+you can achieve the same here when unwrapping a sphere from different points of view.
+Normally, to unwrap a sphere, view the sphere with the poles at the top and bottom.
+After unwrapping, Blender will give you an equirectangular projection;
+the point at the equator facing you will be in the middle of the image.
+A polar view will give a very different but common projection map.
+Using an equirectangular projection map of the earth as the UV image
+will give a good planet mapping onto the sphere.
+
+.. figure:: /images/modeling_meshes_editing_uv_sphere-projection.png
+
+   Using an equirectangular image with a Sphere Projection.
+
+
+Options
+-------
+
+Direction
+   View on Poles
+      Use when viewing from the top (at a pole) by using an axis that is straight down from the view.
+   View on Equator
+      Use if view is looking at the equator, by using a vertical axis.
+   Align to Object
+      Uses the object's transform to calculate the axis.
+
+Align
+   Select which axis is up.
+
+   Polar ZX
+      Polar 0 is on the X axis.
+   Polar ZY
+      Polar 0 is on the Y axis.
+
+Radius
+   The radius of the sphere to use.
 
 
 .. _bpy.ops.uv.project_from_view:
