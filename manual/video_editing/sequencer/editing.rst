@@ -411,7 +411,7 @@ In case of visual strips the tools will animate the opacity or volume in case of
 
 Clear Fades
    Removes fade animation from selected sequences.
-Fade In And Out
+Fade In and Out
    Fade selected strips in and out.
 Fade In
    Fade in selected strips.

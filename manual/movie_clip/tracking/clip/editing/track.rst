@@ -132,7 +132,7 @@ Normalize
    Means patterns will be normalized by their average intensity while tracking,
    to make them invariant to illumination changes. An example where this is useful is a scene where
    a marker moves in the shadow of an object.
-Copy From Active Track
+Copy from Active Track
    Copies all settings from active track. Allows to ease creation of new tracks with the same setting.
 
 .. (alt) Previous frame: An image created from the current frame is sent as first image to the tracker.

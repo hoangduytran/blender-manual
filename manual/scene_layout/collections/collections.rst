@@ -72,7 +72,7 @@ Remove ``X``
    find the name of the collection from which you wish to remove the object,
    and click the ``X`` button to the right of the collection name.
 Specials
-   Unlink Collection, Select Collection, Set Offset From Cursor
+   Unlink Collection, Select Collection, Set Offset from Cursor
 Offset
    Applies a spatial offset of the instanced collections from the original object's origin.
 

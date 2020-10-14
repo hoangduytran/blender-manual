@@ -83,7 +83,7 @@ that allow the user to convert the active vertex color to vertex group and vice 
 Colors from Weight
 ^^^^^^^^^^^^^^^^^^
 
-Convert to
+Convert To
    Value Channel, Red Channel, Green Channel, Blue Channel, False Color
 Invert
    Invert the values read from vertex weight.

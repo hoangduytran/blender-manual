@@ -79,7 +79,7 @@ rotate them a bit to fit logically within the image area of the UV Editor.
 
 .. figure:: /images/modeling_meshes_uv_workflows_layout_combining-uv-maps-3.png
 
-   Unwrap ear only, using the *Project From View*.
+   Unwrap ear only, using *Project from View*.
 
 Once we are satisfied with the face, it is time to turn our attention to the ear. First, unselect
 the faces you were working with. Their UVs will disappear from the UV Editor, but they are still there,
