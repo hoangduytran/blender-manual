@@ -77,6 +77,11 @@ Style
       UV Factor
          The image size along the stroke.
 
+.. _bpy.types.MaterialGPencilStyle.use_stroke_holdout:
+
+Holdout
+   Removes the color from strokes underneath the current by using it as a mask.
+
 Alignment
    Defines how to align the *Dots* and *Squares* along the drawing path and with the object's rotation.
 
@@ -201,6 +206,11 @@ Style
 
       Clip Image
          When enabled, show one image instance only (do not repeat).
+
+.. _bpy.types.MaterialGPencilStyle.use_fill_holdout:
+
+Holdout
+   Removes the color from strokes underneath the current by using it as a mask.
 
 
 .. list-table:: Samples of different material fill styles.
