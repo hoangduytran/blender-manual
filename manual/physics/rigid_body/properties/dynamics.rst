@@ -30,7 +30,9 @@ Enable deactivation of resting rigid bodies. Allows object to be deactivated dur
 (improves the performance and stability, but can cause glitches).
 
 Start Deactivated
-   Starts objects deactivated. They are activated on collision with other objects.
+   The rigid body starts deactivated. It will be activated when in proximity of
+   moving active rigid body objects. The proximity check uses the objects
+   bounding box to determine if a moving object is close enough activate it.
 
 Linear Velocity
    Specifies the linear deactivation velocity below which the rigid body
