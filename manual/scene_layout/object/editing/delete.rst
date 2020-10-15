@@ -11,7 +11,13 @@ Delete
    :Menu:      :menuselection:`Object --> Delete`
    :Hotkey:    :kbd:`X` or :kbd:`Delete`
 
-The selected objects are deleted from the scene.
+Delete the selected objects from the current scene.
 
-Delete Globally
-   Delete the selected objects from all scenes.
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Object --> Delete Globally`
+   :Hotkey:    :kbd:`Shift-X` or :kbd:`Shift-Delete`
+
+Delete the selected objects from all scenes, and any other possible usages (like e.g. from a shading node).
