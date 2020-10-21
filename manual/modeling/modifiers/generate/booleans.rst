@@ -65,3 +65,7 @@ Solver
       Uses a mathematically complex solver which offers the best results
       and has full support for overlapping geometry;
       however, this solver is much slower than the *Fast Solver*.
+
+      Self
+         Correctly calculates cases when one or both operands have self-intersections,
+         this involves more calculations making it slower.

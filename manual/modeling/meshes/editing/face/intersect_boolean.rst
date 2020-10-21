@@ -46,3 +46,7 @@ Solver
 
 Swap
    Changes the order of the operations when using *Difference* to determine which side is kept.
+
+Self
+   Correctly calculates cases when one or both operands have self-intersections,
+   this involves more calculations making it slower.
