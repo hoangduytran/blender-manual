@@ -67,6 +67,14 @@ Flatten Handles
 
              After Flatten Handles.
 
+Cursor to Selected :kbd:`Ctrl-G`
+   Places the cursor at the midpoint between selected keyframes.
+
+.. _bpy.ops.graph.snap_cursor_value:
+
+Cursor Value to Selection
+   Places the cursor value on the average value of selected keyframes.
+
 
 .. _bpy.ops.graph.mirror:
 
