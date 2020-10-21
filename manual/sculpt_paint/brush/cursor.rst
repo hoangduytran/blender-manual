@@ -29,7 +29,7 @@ The cursor can be disabled by toggling the checkbox in the *Cursor* header.
 
 Cursor Color
    Set the color of the brush ring while performing an add/positive stroke.
-Inverse Cursor Color
+Inverse Color
    In some paint/sculpt modes the brush can be negative and subtract information from the paint target;
    these brushes can be given a separate color.
 
