@@ -91,12 +91,14 @@ Quality
       Using a higher *Quality* value will allow for a wider range of crease values to work accurately.
 
 UV Smooth
-   How to handle UVs during subdivision.
+   Controls how subdivision smoothing is applied to UVs.
 
-   Smooth, keep corners
-      UV islands are smoothed, but their boundary remain sharp.
-   Sharp
-      UV remain unchanged.
+   None
+      UVs remain unchanged.
+   Keep Corners
+      UV islands are smoothed, but their boundary remain unchanged.
+   All
+      UVs and their boundaries are smoothed.
 
 Use Creases
    Use the `Weighted Edge Creases`_ values stored in edges to control how smooth they are made.
