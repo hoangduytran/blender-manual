@@ -108,6 +108,10 @@ Delimit
       Does not dissolve edges on the borders of where different materials are assigned.
    Seam
       Does not dissolve edges marked as seams.
+   Sharp
+      Does not dissolve edges marked as sharp.
+   UVs
+      Does not dissolve edges that are part of a UV map.
 
 All Boundaries
    When enabled, all vertices along the boundaries of faces are dissolved.
