@@ -24,11 +24,8 @@ The modifier displays the number of remaining faces as a result of the *Decimate
 Options
 =======
 
-Mode
-----
-
 Collapse
-^^^^^^^^
+--------
 
 .. figure:: /images/modeling_modifiers_generate_decimate_panel-collapse.png
    :align: right
@@ -70,7 +67,7 @@ Factor
 
 
 Un-Subdivide
-^^^^^^^^^^^^
+------------
 
 .. figure:: /images/modeling_modifiers_generate_decimate_panel-un-subdivide.png
    :align: right
@@ -89,7 +86,7 @@ Iterations
 
 
 Planar
-^^^^^^
+------
 
 .. figure:: /images/modeling_modifiers_generate_decimate_panel-planar.png
    :align: right
