@@ -351,12 +351,20 @@ Narrow Band Width
 
 Fractional Obstacles
    Enables finer resolution in fluid / obstacle regions (second order obstacles).
-   This option reduces the "stepping effect" that results when an obstacles lies inclined inside the domain.
+   This option reduces the "stepping effect" that results when an obstacle lies inclined inside the domain.
    It also makes liquid flow more smoothly over an obstacle.
+
+   .. _bpy.types.FluidDomainSettings.fractions_distance:
+
+   Obstacle Distance
+      Determines how far apart fluid and obstacles are. This value can be used to achieve a more fluid motion over
+      inclined obstacles: Depending on the slope of the obstacle increasing this value can help liquid particles
+      flow better over an obstacle.
+      Setting this field to a negative value will let fluid move towards the inside of an obstacle.
 
    .. _bpy.types.FluidDomainSettings.fractions_threshold:
 
-   Obstacle-Fluid Threshold
+   Obstacle Threshold
       Value to control the smoothness of the fractional obstacle option. Smaller value reduce
       the "stepping effect" but may result particles sticking to the obstacle.
 
