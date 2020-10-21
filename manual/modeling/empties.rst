@@ -116,18 +116,11 @@ Show in
    Only Axis Aligned
       Only displays the image contents when the view is aligned with the object's local axis.
 
-
 .. _bpy.types.Object.use_empty_image_alpha:
 
 Transparency
-^^^^^^^^^^^^
-
-Use alpha blending instead of alpha-test
-(blends with the background but can have depth sorting artifacts).
-
-Opacity
-   Fade the image to make it transparent
-   (uses the object *Color*'s alpha component).
+   Blends the image with the background. The value slider adjusts the opacity of the image,
+   changing how much of the image is blended with the background.
 
 
 Editing
