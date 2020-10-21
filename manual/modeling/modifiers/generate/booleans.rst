@@ -22,9 +22,6 @@ This modifier needs a second object to be the target (the second operand) of the
    other cases (especially "opened" meshes, :term:`Non-manifold` but without any self-intersections)
    will usually work well, but might give odd glitches and artifacts in some cases.
 
-   You should also avoid any co-planar faces (or co-linear edges) between both operands,
-   those also tend to give issues currently.
-
 .. tip::
 
    If you have marked your objects to show the edges
