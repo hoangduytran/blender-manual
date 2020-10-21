@@ -1,3 +1,4 @@
+.. _bpy.types.Brush.cloth:
 
 *****
 Cloth
@@ -15,6 +16,19 @@ to simulate cloth physics on the mesh under the brush.
 and it applies the sculpt :ref:`gravity <bpy.types.Sculpt.gravity>` directly in the solver.
 Note, using a relatively small brush makes the solver's calculations much faster,
 larger brush sizes might be too slow to get a usable brush.
+
+.. _bpy.types.Brush.cloth_simulation_area_type:
+
+Simulation Area
+   Selects the part of the mesh that is going to be simulated when the stroke is active.
+   This can greatly affect performance depending on the complexity of the mesh.
+
+   Local
+      Simulates only a specific area around the brush limited by a fixed radius.
+   Global
+      Simulates the entire mesh.
+   Dynamic
+      The active simulation area moves with the brush while still being limited by a fixed radius.
 
 Simulation Limit
    The Factor added relative to the size of the radius to limit the cloth simulation effects.
