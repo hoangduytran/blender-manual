@@ -77,8 +77,13 @@ Optimal Display
 Advanced
 --------
 
+Use Limit Surface
+   Places vertices at the surface that would be produced with infinite
+   levels of subdivision (smoothest possible shape).
+
 Quality
-   How precisely the vertices are positioned
+   When *Use Limit Surface* is enabled this property controls
+   how precisely vertices are positioned on the limit surface.
    (relatively to their theoretical position of an infinitely subdivided mesh),
    can be lowered to get a better performance.
 
@@ -87,8 +92,8 @@ Quality
 
    .. note::
 
-      This value can have an affect on how accurate :ref:`Edge Creases <modifiers-generate-subsurf-creases>` can be.
-      Using a higher *Quality* value will allow for a wider range of crease values to work accurately.
+      This value can affect the accuracy of :ref:`Edge Creases <modifiers-generate-subsurf-creases>`;
+      using a higher *Quality* value will allow for a wider range of crease values to work accurately.
 
 UV Smooth
    Controls how subdivision smoothing is applied to UVs.
