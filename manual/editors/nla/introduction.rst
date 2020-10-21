@@ -81,13 +81,13 @@ Transform
    Scale :kbd:`S`
       Scale the selected NLA-strips.
 Snap
-   Current Frame
+   Selection to Current Frame
       Move the start of selected NLA-strips to the current frame.
-   Nearest Frame
+   Selection to Nearest Frame
       Move the start of the selected NLA-strips to the nearest frame.
-   Nearest Second
+   Selection to Nearest Second
       Move the start of the selected NLA-strips to the nearest second.
-   Nearest Marker
+   Selection to Nearest Marker
       Move the start of the selected NLA-strips to the nearest marker.
 
 Duplicate :kbd:`Shift-D`

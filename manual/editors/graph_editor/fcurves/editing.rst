@@ -44,15 +44,15 @@ Snap
 
 Keyframes can be snapped to different properties by using the *Snap Keys* tool.
 
-Current Frame
+Selection to Current Frame
    Snap the selected keyframes to the *Playhead*.
-Cursor Value
+Selection to Cursor Value
    Snap the selected keyframes to the *2D Cursor*.
-Nearest Frame
+Selection to Nearest Frame
    Snap the selected keyframes to their nearest frame individually.
-Nearest Second
+Selection to Nearest Second
    Snap the selected keyframes to their nearest second individually, based on the *FPS* of the scene.
-Nearest Marker
+Selection to Nearest Marker
    Snap the selected keyframes to their nearest marker individually.
 Flatten Handles
    Flatten the *Bézier* handles for the selected keyframes.
