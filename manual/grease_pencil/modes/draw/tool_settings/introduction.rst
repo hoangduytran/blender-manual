@@ -30,7 +30,8 @@ Material
 Color
 -----
 
-A toggle. Todo.
+Controls the source of the stroke color.
+The mode can be pinned to the brush by enabling the Pin icon in the Tool Settings header.
 
 
 Material
