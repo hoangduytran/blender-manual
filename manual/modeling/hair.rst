@@ -4,6 +4,14 @@
 Hair
 ****
 
+Hair type particle system can be used for strand-like objects,
+such as hair, fur, grass, quills, etc.
+
+.. figure:: /images/physics_particles_hair_introduction_example.jpg
+
+   Particle hair systems example. Used for the grass and fur.
+
+
 Properties
 ==========
 
