@@ -31,6 +31,8 @@ This means that the following meshes can be exported:
    Shot from `Spring <https://cloud.blender.org/p/spring/>`__ exported to USD and opened in USDView.
 
 
+.. _bpy.ops.wm.usd_export:
+
 Export Options
 ==============
 
@@ -40,6 +42,10 @@ Selection Only
    When checked, only selected objects are exported.
    Duplicated objects, for example collections that are instanced in the scene,
    are considered 'selected' when their duplicator is selected.
+
+Visible Only
+   Only exports objects that are not :doc:`hidden </scene_layout/object/editing/show_hide>`.
+   Invisible parents of exported objects are exported as empty transforms.
 
 Animation
    When checked, the entire scene frame range is exported.
