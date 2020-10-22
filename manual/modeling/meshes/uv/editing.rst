@@ -173,7 +173,7 @@ Unwrap
 
 Blender offers several ways of mapping UVs.
 The simpler projection methods use formulas that map 3D space onto 2D space,
-by interpolating the position of points toward a point/axis/plane through a surface.
+by interpolating the position of points toward a point, axis or plane through a surface.
 The more advanced methods can be used with more complex models, and have more specific uses.
 
 - :ref:`bpy.ops.uv.unwrap`

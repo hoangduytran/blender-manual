@@ -6,7 +6,7 @@ UV Tools
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    3D View
+   :Editor:    3D Viewport
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Header --> UV`
    :Hotkey:    :kbd:`U`
@@ -311,7 +311,7 @@ Sphere Projection
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    3D View
+   :Editor:    3D Viewport
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Sphere Projection`
    :Hotkey:    :kbd:`U`

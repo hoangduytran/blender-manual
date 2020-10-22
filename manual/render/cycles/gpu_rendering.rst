@@ -178,7 +178,7 @@ Remove compatibility checks
    launch Blender as you normally would and the CUDA kernel will still be used for rendering.
 
 
-CUDA Error: kernel compilation failed
+CUDA Error: Kernel compilation failed
 -------------------------------------
 
 This error may happen if you have a new Nvidia graphics card that is not yet supported by

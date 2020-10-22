@@ -39,7 +39,7 @@ Radius
 Color
    The color of each point.
 
-   :Type: Float COlor
+   :Type: Float Color
 
 Custom Attributes
    Custom attribute can be given to particles to hold a custom characteristic.
@@ -52,15 +52,15 @@ Custom Attributes
       :Float: Floating point value
       :Integer: 32-bit integer
       :Vector: 3D vector with floating point values
-      :Float Color: RGBA color with floating point precision.
-      :Byte Color: RGBA color with 8-bit precision.
-      :String: Text string.
+      :Float Color: RGBA color with floating point precision
+      :Byte Color: RGBA color with 8-bit precision
+      :String: Text string
 
    Domain
       The type of element the attribute is stored in.
 
-      :Point: The attribute is stored per hair point
-      :Curve: The attribute is stored per hair curve
+      :Point: The attribute is stored per hair point.
+      :Curve: The attribute is stored per hair curve.
 
 
 Custom Properties

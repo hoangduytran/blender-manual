@@ -6,10 +6,9 @@
 Point Cloud
 ***********
 
-Point Clouds are a special object type that is a container for data points in 3D Space.
-Each data point can have a set of `Attributes`_ but must at least have
-a `position` attribute to store the X, Y and Z coordinates of each point.
-Point Clouds can be used to represent photoscans and in the future can represent particles.
+Point Clouds are a special object type that is a container for points in 3D space.
+They can be used to represent 3D scans and in the future can represent particles.
+Each point can store data in a set of `Attributes`_.
 
 .. figure:: /images/modeling_point-cloud_example.png
 
@@ -43,7 +42,7 @@ Radius
 Color
    The color of each point.
 
-   :Type: Float COlor
+   :Type: Float Color
 
 Particle ID
    A unique identifier given to each particle.
@@ -66,9 +65,9 @@ Custom Attributes
       :Float: Floating point value
       :Integer: 32-bit integer
       :Vector: 3D vector with floating point values
-      :Float Color: RGBA color with floating point precision.
-      :Byte Color: RGBA color with 8-bit precision.
-      :String: Text string.
+      :Float Color: RGBA color with floating point precision
+      :Byte Color: RGBA color with 8-bit precision
+      :String: Text string
 
    Domain
       The type of element the attribute is stored in.
@@ -84,5 +83,5 @@ See the :ref:`Custom Properties <files-data_blocks-custom-properties>` page for 
 Editing
 =======
 
-Currently, not much can be done with Point Clouds; however,
+Currently, not much can be done with point clouds; however,
 they can be :doc:`converted to/from meshes </scene_layout/object/editing/convert>`.

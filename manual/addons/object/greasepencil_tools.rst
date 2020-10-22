@@ -35,7 +35,7 @@ Shortcuts available during deformation:
 - :kbd:`M` to toggle between Linear and Spline mode.
 - :kbd:`1-9` to set the subdivision level of the box.
 - :kbd:`Ctrl-Left`/ :kbd:`Ctrl-Right` to subdivide the box incrementally on the X axis and
-  :kbd:`Ctrl-Uo`/ :kbd:`Ctrl-Down` on the Y axis.
+  :kbd:`Ctrl-Up`/ :kbd:`Ctrl-Down` on the Y axis.
 
 
 Rotate Canvas
@@ -51,7 +51,7 @@ Straighten Stroke
 -----------------
 
 Straighten the stroke between first and last point.
-Influence can be tweaked in the redo panel (press :kbd:`F9` to pop-up the redo panel).
+Influence can be tweaked in the redo panel.
 
 The scopes for this tool are:
 

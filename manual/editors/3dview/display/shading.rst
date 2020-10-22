@@ -93,11 +93,11 @@ Lighting
          The environment map used to light the scene.
       Rotation
          The rotation of the environment on the Z axis.
-         
+
          World Space Lighting
-            makes the lighting rotation fixed and not follow the camera.
+            Makes the lighting rotation fixed and not follow the camera.
             Disabling this setting makes the lighting changes as the view is change
-            allowing materials to be used as matcaps for sculpting and painting.
+            allowing materials to be used as matCaps for sculpting and painting.
 
       Strength
          Light intensity of the environment.

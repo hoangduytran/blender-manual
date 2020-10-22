@@ -13,6 +13,10 @@ Delete
 
 Delete the selected objects from the current scene.
 
+
+Delete Globally
+===============
+
 .. admonition:: Reference
    :class: refbox
 

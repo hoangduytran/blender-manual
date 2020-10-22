@@ -83,9 +83,9 @@ Use Limit Surface
 
 Quality
    When *Use Limit Surface* is enabled this property controls
-   how precisely vertices are positioned on the limit surface.
-   (relatively to their theoretical position of an infinitely subdivided mesh),
-   can be lowered to get a better performance.
+   how precisely vertices are positioned on the limit surface
+   (relatively to their theoretical position of an infinitely subdivided mesh).
+   It can be lowered to get a better performance.
 
    Using higher values does not necessarily mean real improvement in quality,
    ideal results might be reached well before the maximum *Quality* value.

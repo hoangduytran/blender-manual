@@ -35,7 +35,6 @@ Radial X, Y, Z
    within 360 degrees around the central axes.
 
 Tile Offset X, Y, Z
-   The default tile size is set to one unit.
    The offset allows the option to alter the tile size along all three axes.
 
 .. _bpy.types.Sculpt.symmetrize_direction:
@@ -47,5 +46,5 @@ Direction
 
 Symmetrize
    Uses direction orientation to symmetrize. Since Dyntopo adds
-   details dynamically it may happen that the model goes asymmetric,
+   details dynamically it may happen that the model becomes asymmetric,
    so this a good tool for that.

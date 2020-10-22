@@ -32,8 +32,8 @@ See :doc:`Particle Cache </physics/particles/emitter/cache>` for details.
 .. note::
 
    You cannot change *Start* or *End* without clearing the bake simulation.
-   When the simulation has finished, you will notice you have the option to free the bake,
-   edit the bake and re-bake
+   When the simulation has finished, you will notice you have the option to free
+   the bake, edit the bake and re-bake
 
 
 Editing the Cached Simulation
