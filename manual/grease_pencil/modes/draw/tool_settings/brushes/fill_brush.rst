@@ -48,11 +48,15 @@ Brush
 Brush Settings
 --------------
 
+.. _bpy.types.BrushGpencilSettings.fill_leak:
+
 Leak Size
    Size in pixel to consider the leak as closed.
 
 Thickness
    The thickness radius of the boundary stroke in pixels.
+
+.. _bpy.types.BrushGpencilSettings.fill_simplify_level:
 
 Simplify
    Number of simplify steps to apply to the boundary line.
@@ -61,6 +65,8 @@ Simplify
 
 Advanced
 ^^^^^^^^
+
+.. _bpy.types.BrushGpencilSettings.fill_draw_mode:
 
 Boundary
    Sets the type of fill boundary limits calculation to perform.
@@ -74,15 +80,19 @@ Boundary
    Show Lines (grid icon)
       Toggle show help lines to see the fill boundary.
 
+.. _bpy.types.BrushGpencilSettings.fill_factor:
+
 Resolution
    Multiplier for fill resolution.
    Higher values gives better fill boundary accuracy but slower time for calculations.
 
-Ignore Transparent Strokes
+.. _bpy.types.BrushGpencilSettings.show_fill:
+.. _bpy.types.BrushGpencilSettings.fill_threshold:
+
+Ignore Transparent
    When enabled, strokes with transparency does not take into account on fill boundary calculations.
 
-   Threshold
-      Threshold value to consider a material transparent.
+   The value slider controls the threshold to consider a material transparent.
 
 
 Cursor
