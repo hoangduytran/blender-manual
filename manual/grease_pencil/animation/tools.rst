@@ -78,7 +78,7 @@ Interpolate
 
    :Mode:      Draw Mode, Edit Mode, Sculpt Mode
    :Menu:      :menuselection:`Stroke --> Animation --> Interpolate --> Interpolate`
-   :Hotkey:    :kbd:`Ctrl-Alt-E`
+   :Hotkey:    :kbd:`Ctrl-E`
 
 Interpolates strokes between the previous and next keyframe by adding a *single* keyframe.
 When you are on a frame between two keyframes and press :kbd:`Ctrl-Alt-E` a new breakdown keyframe

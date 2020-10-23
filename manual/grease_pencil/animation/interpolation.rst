@@ -13,13 +13,13 @@ to automatically add new breakdown keyframes.
 
    Interpolate panel.
 
-Interpolate
+Interpolate :kbd:`Ctrl-E`
    Interpolates strokes between the previous and next keyframe by adding a *single* keyframe.
    When you are on a frame between two keyframes and click the Interpolate button
    a new breakdown keyframe will be added. This way you define
    the final interpolation for the new stroke.
 
-Sequence
+Sequence :kbd:`Shift-Ctrl-E`
    Interpolate strokes between the previous and next keyframe by adding *multiple* keyframes.
    When you are on a frame between two keyframes and click the sequence button
    a breakdown keyframe will be added on every frame between the previous and next keyframe.
