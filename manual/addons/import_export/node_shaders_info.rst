@@ -17,6 +17,11 @@ Especially for exporting from Blender materials, the node system must follow som
    :doc:`FBX </addons/import_export/scene_fbx>`
    IO add-ons uses that method.
 
+.. tip::
+
+   The :doc:`glTF </addons/import_export/scene_gltf2>` format
+   uses a more detailed conversion to and from shader nodes.
+
 .. note::
 
    The wrapper is designed to be as symmetrical as possible
