@@ -36,7 +36,7 @@ Also you can create *Rigid Body Constraint* on one of the two constrained object
 This constraint is dependent on the object location and rotation on which it was created.
 This way, there are no empty object created for the constraint.
 The role of the empty object is put on this object.
-The constrained object can be then set as *Passive* type for better driving the constrain.
+The constrained object can be then be set as a *Passive* type for better driving of the constraint.
 
 Additional parameters appear in the *Rigid Body Constraint* panel of the *Physics* tab in the Properties
 for the selected empty object or the one of the two constrained objects with the created constraint.
@@ -73,7 +73,7 @@ Breakable
 .. _bpy.types.RigidBodyConstraint.breaking_threshold:
 
 Threshold
-   Impulse strength that needs to be reached before constraint breaks.
+   Impulse strength that needs to be reached before the constraint breaks.
 
 
 .. _bpy.types.RigidBodyConstraint.use_limit:
@@ -104,7 +104,7 @@ Second
 Override Iterations
 -------------------
 
-Allows to make constraints stronger (more iterations) or weaker (less iterations)
+Allows making constraints stronger (more iterations) or weaker (less iterations)
 than specified in the rigid body world.
 
 Iterations

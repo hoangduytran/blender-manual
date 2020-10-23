@@ -26,13 +26,13 @@ Rotation
 Deactivation
 ============
 
-Enable deactivation of resting rigid bodies. Allows object to be deactivated during the simulation
+Enable deactivation of resting rigid bodies. Allows the object to be deactivated during the simulation
 (improves the performance and stability, but can cause glitches).
 
 Start Deactivated
    The rigid body starts deactivated. It will be activated when in proximity of
-   moving active rigid body objects. The proximity check uses the objects
-   bounding box to determine if a moving object is close enough activate it.
+   moving active rigid body objects. The proximity check uses the object's
+   bounding box to determine if a moving object is close enough to activate it.
 
 Linear Velocity
    Specifies the linear deactivation velocity below which the rigid body

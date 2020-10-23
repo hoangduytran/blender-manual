@@ -42,13 +42,13 @@ Shape
       This points up the Z axis.
       The height is taken from the Z axis, while the radius is the larger of the X or Y axes.
    Convex Hull
-      A mesh-like surface encompassing (e.g. shrink-wrap over) all vertices (best results with fewer vertices).
-      A convex approximation of the object, has a good performance and stability.
+      A mesh-like surface encompassing (e.g. shrink-wrapped over) all vertices (best results with fewer vertices).
+      A convex approximation of the object, which has good performance and stability.
    Mesh
       :term:`Mesh` consisting of triangles only, allowing for more detailed interactions than convex hulls.
-      Allows to simulate concave objects, but is rather slow and unstable.
+      Allows simulating concave objects, but is rather slow and unstable.
    Compound Parent
-      Takes the collision shapes from the objects :doc:`children </scene_layout/object/editing/parent>`
+      Takes the collision shapes from the object's :doc:`children </scene_layout/object/editing/parent>`
       and combines them. This makes it possible to create concave shapes from primitive shapes.
       This usually results in a faster simulation than the *Mesh* collision shape
       while also being generally more stable.
@@ -100,7 +100,7 @@ The margin is *not embedded* for these shapes:
 - Passive Triangle Mesh: Can be set to 0 most of the time.
 
 Margin
-   Threshold of distance near surface where collisions are still considered (best results when non-zero).
+   Threshold of distance near the surface where collisions are still considered (best results when non-zero).
 
 
 Collections

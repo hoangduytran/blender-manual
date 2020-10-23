@@ -15,7 +15,7 @@ Settings
 
 Mass
    Specifies how heavy the object is and "weights" irrespective of gravity.
-   There are predefined mass preset available with *Calculate Mass*
+   There are predefined mass presets available with *Calculate Mass*
    in the :menuselection:`Object --> Rigid Body` menu.
 
    Calculate Mass
@@ -24,11 +24,11 @@ Mass
 
       .. note::
 
-         Also you can have *Custom* mass material type,
+         You can also have a *Custom* mass material type,
          which is achieved by setting a custom density value (kg/m\ :sup:`3`).
 
 Dynamic
-   Enables/disables rigid body simulation for object.
+   Enables/disables rigid body simulation for the object.
 
 Animated
-   Allows the rigid body additionally to be controlled by the animation system.
+   Allows the rigid body to additionally be controlled by the animation system.
