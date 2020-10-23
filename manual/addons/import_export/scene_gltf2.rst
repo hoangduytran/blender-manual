@@ -425,7 +425,7 @@ are supported directly by this add-on:
 Third-party glTF Extensions
 ---------------------------
 
-GIt is possible for Python developers to add Blender support for additional glTF extensions by writing their
+It is possible for Python developers to add Blender support for additional glTF extensions by writing their
 own third-party add-on, without modifying this glTF add-on. For more information, `see the example on GitHub
 <https://github.com/KhronosGroup/glTF-Blender-IO/tree/master/example-addons/example_gltf_extension>`__ and if needed,
 `register an extension prefix <https://github.com/KhronosGroup/glTF/blob/master/extensions/Prefixes.md>`__.
