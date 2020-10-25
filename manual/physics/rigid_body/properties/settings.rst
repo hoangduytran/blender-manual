@@ -19,7 +19,7 @@ Mass
    in the :menuselection:`Object --> Rigid Body` menu.
 
    Calculate Mass
-      Automatically calculate mass values for rigid body objects based on its volume.
+      Automatically calculate mass values for rigid body objects based on their volume.
       There are many useful presets available from the menu, listing real-world objects.
 
       .. note::
