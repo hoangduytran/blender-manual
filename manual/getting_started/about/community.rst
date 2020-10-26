@@ -67,7 +67,7 @@ You can join these channels:
   For getting answers from the community.
 - `#blender-coders <https://blender.chat/channel/blender-coders>`__
   For developers to discuss Blender development.
-- `#python <https://blender.chat/channel/today>`__
+- `#python <https://blender.chat/channel/python>`__
   For support for developers using the Python API.
 - `#docs <https://blender.chat/channel/docs>`__
   For discussion related to Blender's documentation.
