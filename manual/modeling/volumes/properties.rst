@@ -111,9 +111,9 @@ Interpolation
 .. _bpy.types.VolumeDisplay.use_slice:
 
 Slice
-=====
+-----
 
-Perform a single slice of the domain object.
+Renders only a single 2D section of the domain object.
 
 .. _bpy.types.VolumeDisplay.slice_axis:
 

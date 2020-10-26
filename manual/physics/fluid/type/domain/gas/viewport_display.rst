@@ -33,7 +33,7 @@ Slice per Voxel
 Slice
 =====
 
-Perform a single slice of the domain object.
+Renders only a single 2D section of the domain object.
 
 .. _bpy.types.FluidDomainSettings.slice_axis:
 
