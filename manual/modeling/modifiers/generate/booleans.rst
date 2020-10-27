@@ -14,7 +14,8 @@ the three available Boolean operations to create a single mesh out of two mesh o
    The Union, Intersection and Difference between a Cube and a UV Sphere,
    with the modifier applied to the sphere and using the cube as target.
 
-This modifier needs a second object to be the target (the second operand) of the operation.
+This modifier needs a second mesh object, or collection of mesh objects,
+to be the target (the second operand) of the operation.
 
 .. warning::
 
@@ -40,14 +41,32 @@ Options
    The Boolean modifier.
 
 Intersect
-   Opposite of *Difference* (everything *inside* of the target mesh is kept).
+   Everything inside both the target mesh and the modified mesh is kept.
+   If the target is a collection, then only the inside of *all* meshes is kept.
 Union
-   The target mesh is added to the modified mesh.
+   The target mesh or collection is added to the modified mesh,
+   removing any interior faces.
 Difference
-   The target mesh is subtracted from the modified mesh (everything *outside* of the target mesh is kept).
+   The target mesh, or collection of meshes, is subtracted from the modified mesh
+   (everything *outside* of the target mesh or collection is kept).
+
+Operand type
+   Choose the type of the operand (target).
+
+   Object
+      The target is a mesh object.
+
+   Collection
+      The target is a collection.
+      When the target is a collection and the Solver is Fast,
+      the Intersect operation is not allowed.
 
 Object
    The name of the target mesh object.
+
+Collection
+   The name of the target collection (may be empty if Solver is Exact,
+   which can be useful in combination with the Self option).
 
 Solver
    Algorithm used to calculate the boolean intersections.
