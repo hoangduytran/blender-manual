@@ -7,21 +7,61 @@ These functions help you reuse materials, objects and other :doc:`data-blocks </
 loaded from another blend-file.
 You can build libraries of common content and share them across multiple referencing files.
 
+Newly added collections types are available in :menuselection:`Add --> Collection Instance` in the 3D Viewport.
 
-Append & Link
-=============
+Look in the *Outliner*, with display mode set to *Blender File*, to see all your linked and appended data-blocks.
+
+
+.. _bpy.ops.wm.link:
+
+Link
+====
 
 .. admonition:: Reference
    :class: refbox
 
    :Editor:    Topbar
    :Mode:      All Modes
-   :Menu:      :menuselection:`File --> Append or Link`
-   :Hotkey:    :kbd:`F4`, :kbd:`A` or :kbd:`L`
+   :Menu:      :menuselection:`File --> Link`
 
 *Link* creates a reference to the data in the source file such that
 changes made there will be reflected in the referencing file the next time it is reloaded.
 But linked data is not editable (to some extent, see :ref:`object-proxy`).
+
+In the :doc:`File Browser </editors/file_browser>`,
+navigate to the external source blend-file and select the data-block you want to reuse.
+
+When you link an object, it will be placed in your scene at the 3D cursor position.
+Many other data types, cameras, curves, and materials for example,
+must be linked to an object before they become visible.
+
+
+Options
+-------
+
+Relative Path
+   See :ref:`files-blend-relative_paths`.
+Select
+   Makes the object *Active* after it is loaded.
+Active Collection
+   The object will be added to the active collection of the active view layer.
+   Otherwise, it will be added to a new collection in the active view layer.
+Instance Collections
+   This option instantiates the linked collection as an object, adding it to the active scene.
+   Otherwise, the linked collection is directly added to the active view layer.
+
+
+.. _bpy.ops.wm.append:
+
+Append
+======
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Editor:    Topbar
+   :Mode:      All Modes
+   :Menu:      :menuselection:`File --> Link`
 
 *Append* makes a full copy of the data into your blend-file, without keeping any reference to the original one.
 You can make further edits to your local copy of the data,
@@ -34,12 +74,17 @@ navigate to the external source blend-file and select the data-block you want to
 
    Blend-files can also be linked/appended by dragging and dropping blend-files into the Blender window.
 
+.. note::
+
+   Appending data you already have linked will add objects/collections to the scene,
+   but will keep them linked (and un-editable).
+
+   This is done so existing relationships with linked data remain intact.
+
 
 Options
 -------
 
-Relative Path
-   Available only when linking, see :ref:`files-blend-relative_paths`.
 Select
    Makes the object *Active* after it is loaded.
 Active Collection
@@ -52,21 +97,6 @@ Fake User
    Defines the appended data-block as :ref:`Protected <data-system-datablock-fake-user>`.
 Localize All
    Appends also all indirectly linked data, instead of linking them.
-
-When you link an object, it will be placed in your scene at the 3D cursor position.
-Many other data types, cameras, curves, and materials for example,
-must be linked to an object before they become visible.
-
-Newly added collections types are available in :menuselection:`Add --> Collection Instance` in the 3D Viewport.
-
-Look in the *Outliner*, with display mode set to *Blender File*, to see all your linked and appended data-blocks.
-
-.. note::
-
-   Appending data you already have linked will add objects/collections to the scene,
-   but will keep them linked (and un-editable).
-
-   This is done so existing relationships with linked data remain intact.
 
 
 .. _bpy.ops.outliner.lib_operation:
