@@ -24,3 +24,7 @@ Trim Mode
    Join
       Similar to *Union* but joins the mesh as separate geometry,
       without performing any boolean operations with existing geometry.
+
+Use Cursor for Depth
+   Use cursor location and radius for the dimensions and position of the trimming shape.
+   If not set, the tool uses the full depth of the object from the camera view.
