@@ -143,6 +143,22 @@ Grow/Shrink Face Sets
 Expands or contracts the area of face set under the cursor by adding or removing surrounding faces.
 
 
+.. _bpy.ops.mesh.face_set_extract:
+
+Extract Face Set
+----------------
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Face Sets --> Grow/Shrink Face Sets`
+
+Creates a new mesh based on the selected Face Set.
+Once the operator is initiated, hover over the Face Set and :kbd:`LMB` to create the new mesh.
+After the operator is finished the new mesh will be selected in Object Mode.
+
+
 .. _bpy.ops.sculpt.face_set_change_visibility:
 
 Invert Visible Face Sets
