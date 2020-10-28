@@ -87,7 +87,7 @@ def text_extract_args(text):
         s = match.group(2)
 
         # remove first 2 args
-        s = s.split(',', 2)[-1]
+        s = s.split(',', 1)[-1]
         # remove last 2 args
         s = s.rsplit(',', 2)[0]
 
