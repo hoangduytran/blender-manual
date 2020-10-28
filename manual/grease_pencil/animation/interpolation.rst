@@ -24,6 +24,8 @@ Sequence :kbd:`Shift-Ctrl-E`
    When you are on a frame between two keyframes and click the sequence button
    a breakdown keyframe will be added on every frame between the previous and next keyframe.
 
+   Step
+      The number of frames between generated interpolated frames.
    Type
       Interpolation method to use for the sequence.
 
