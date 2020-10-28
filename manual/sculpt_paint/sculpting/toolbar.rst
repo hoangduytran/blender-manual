@@ -83,6 +83,12 @@ Toolbar
 :doc:`/sculpt_paint/sculpting/tools/mask`
    Lets you select mesh parts to be unaffected by other brushes by painting vertex colors.
 
+:doc:`/sculpt_paint/sculpting/tools/box_trim`
+   Performs a boolean operation based on box select.
+
+   :doc:`/sculpt_paint/sculpting/tools/lasso_trim`
+      Performs a boolean operation based on lasso select.
+
 :doc:`/sculpt_paint/sculpting/tools/mesh_filter`
    Applies a deformation to all vertices in the mesh at the same time.
 

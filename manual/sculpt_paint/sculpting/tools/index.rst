@@ -33,6 +33,8 @@
    simplify.rst
    mask.rst
    draw_facesets.rst
+   box_trim.rst
+   lasso_trim.rst
    mesh_filter.rst
    cloth_filter.rst
    transforms.rst
