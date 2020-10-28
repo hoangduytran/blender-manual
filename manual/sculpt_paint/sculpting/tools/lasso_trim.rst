@@ -14,7 +14,8 @@ Adds or removes geometry using a boolean operation based on a :ref:`lasso select
 Trim Mode
    The operation to perform on the mesh; geometry can be either added or removed.
    When using the *Union* or *Join* mode the new geometry is assigned to a new
-   :ref:`Face Set <sculpting-editing-facesets>`.
+   :ref:`Face Set <sculpting-editing-facesets>`. When using *Difference* mode,
+   interior geometry is also added to a new Face Set.
 
    Difference
       Removes geometry in the shape of the selection filling any holes that are created in existing geometry.
