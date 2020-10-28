@@ -76,6 +76,9 @@ Map Taper
 Bevel
 =====
 
+Round
+-----
+
 .. _bpy.types.Curve.bevel_depth:
 
 Depth
@@ -110,6 +113,15 @@ Resolution
 
              A curve with different resolutions applied (Resolution of 12).
 
+.. _bpy.types.Curve.use_fill_caps:
+
+Fill Caps
+   Seals the ends of a beveled curve.
+
+
+Object
+------
+
 .. _bpy.types.Curve.bevel_object:
 
 Object
@@ -136,10 +148,40 @@ Object
 
              A curve with a Bézier circle as the Bevel Object.
 
-.. _bpy.types.Curve.use_fill_caps:
 
-Fill Caps
-   Seals the ends of a beveled curve.
+Profile
+-------
+
+.. figure:: /images/modeling_modifiers_generate_bevel_profile-widget.png
+   :align: right
+   :width: 300px
+
+   The custom profile widget.
+
+This widget allows the creation of a user-defined profile with more complexity than
+with the single profile parameter. The modal tool allows toggling the custom profile,
+but the shape of the profile is only editable in the options panel after the operation is confirmed.
+
+The profile starts at the bottom right of the widget and ends at the top left, as if it
+were between two edges intersecting at a right angle. Control points are created in the widget and
+then the path is sampled with the number of segments from the bevel modifier.
+
+.. note::
+
+   The *Profile* slider stays active when miters are enabled
+   because it still controls the shape of the miter profiles.
+
+Presets
+   The *Support Loops* and *Steps* presets are built dynamically depending on
+   the number of segments in the bevel. If the number of segments is changed,
+   the preset will have to be re-applied.
+
+Sampling
+   Samples will first be added to each control point, then if there are enough samples,
+   they will be divided evenly between the edges. The *Sample Straight Edges* option toggles whether
+   the samples are added to edges with sharp control points on either side. If there aren't enough samples
+   to give each edge the same number of samples, they will just be added to the most curved edges.
+   So it is recommended to use at least as many segments as there are control points.
 
 
 Start & End Mapping
