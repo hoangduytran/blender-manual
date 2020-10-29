@@ -62,3 +62,13 @@ Strength
 
 Deformation Axis
    Apply the deformation only on the selected axis.
+
+Orientation
+   :doc:`Orientation </editors/3dview/controls/orientation>` of the axis to limit the filter displacement.
+
+   Local
+      Use the local axis to limit the displacement.
+   World
+      Use the global axis to limit the displacement.
+   View
+      Use the view axis to limit the displacement.
