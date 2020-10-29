@@ -371,7 +371,6 @@ a.external {color:#656AE0;}
 .rst-content dl.field-list dt {
 	grid-column-start: 1;
 	grid-column-end: 2;
-	font-size: 90%;
 }
 .rst-content dl.field-list dt:after {
 	content: ":";
@@ -384,7 +383,6 @@ a.external {color:#656AE0;}
 	line-height: normal;
 }
 .rst-content dl.field-list dd > p {
-	font-size: 90%;
 	margin: 0 !important;
 }
 .refbox dl dt {font-weight: normal}
