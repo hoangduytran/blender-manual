@@ -1,7 +1,7 @@
 
-************
-Introduction
-************
+*************
+Link & Append
+*************
 
 These functions help you reuse materials, objects and other :doc:`data-blocks </files/data_blocks>`
 loaded from another blend-file.
