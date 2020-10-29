@@ -1,7 +1,3 @@
-.. _bpy.types.Brush.smooth_deform_type:
-.. _bpy.types.Brush.surface_smooth_shape_preservation:
-.. _bpy.types.Brush.surface_smooth_current_vertex:
-.. _bpy.types.Brush.surface_smooth_iterations:
 
 ******
 Smooth
@@ -21,6 +17,8 @@ influence by smoothing the positions of the vertices.
 Brush Settings
 ==============
 
+.. _bpy.types.Brush.smooth_deform_type:
+
 Deformation
    Deformation type that is used in the brush.
 
@@ -29,13 +27,19 @@ Deformation
    Surface
       Smooths the surface of the mesh, while preserving the volume.
 
+      .. _bpy.types.Brush.surface_smooth_shape_preservation:
+
       Shape Preservation
          How much of the original shape is preserved when smoothing. Increasing the value
          reduces the effect of having multiple iterations on the strength of smoothing.
 
+      .. _bpy.types.Brush.surface_smooth_current_vertex:
+
       Per-Vertex Displacement
          How much the position of each individual vertex influences the final result.
          Increasing the value reduces the overall strength of smoothing.
+
+      .. _bpy.types.Brush.surface_smooth_iterations:
 
       Iterations
          Number of smoothing iterations per brush step.

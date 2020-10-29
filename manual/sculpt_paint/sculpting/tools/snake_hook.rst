@@ -1,5 +1,3 @@
-.. _bpy.types.Brush.crease_pinch_factor:
-.. _bpy.types.Brush.rake_factor:
 
 **********
 Snake Hook
@@ -18,8 +16,13 @@ Pulls vertices along with the movement of the brush to create long, snake-like f
 Brush Settings
 ==============
 
+.. _bpy.types.Brush.crease_pinch_factor:
+
 Magnify
    The *Snake Hook* brush tends to loose volume along the stroke,
    with *Magnify* value greater than 0.5 it's possible to sculpt shapes without loosing volume.
+
+.. _bpy.types.Brush.rake_factor:
+
 Rake
    A factor to support moving the mesh with rotation following the cursor's motion.

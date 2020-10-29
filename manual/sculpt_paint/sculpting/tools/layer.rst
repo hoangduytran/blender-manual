@@ -1,6 +1,3 @@
-.. _bpy.types.Brush.height:
-.. _bpy.types.Brush.use_persistent:
-.. _bpy.ops.sculpt.set_persistent_base:
 
 *****
 Layer
@@ -23,9 +20,17 @@ will reset the depth and paint on top of the previous stroke.
 Brush Settings
 ==============
 
+.. _bpy.types.Brush.height:
+
 Height
    The amount of displacement for each layer.
+
+.. _bpy.types.Brush.use_persistent:
+
 Persistent
    You can keep sculpting on the same layer between strokes when this is on.
+
+.. _bpy.ops.sculpt.set_persistent_base:
+
 Set Persistent Base
    This button resets the base so that you can add another layer.

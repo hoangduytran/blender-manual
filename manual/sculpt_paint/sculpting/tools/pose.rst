@@ -1,11 +1,3 @@
-.. _bpy.types.Brush.pose_deform_type:
-.. _bpy.types.Brush.pose_origin_type:
-.. _bpy.types.Brush.pose_offset:
-.. _bpy.types.Brush.pose_smooth_iterations:
-.. _bpy.types.Brush.pose_ik_segments:
-.. _bpy.types.Brush.use_pose_ik_anchored:
-.. _bpy.types.Brush.use_connected_only:
-.. _bpy.types.Brush.disconnected_distance_max:
 
 ****
 Pose
@@ -35,6 +27,8 @@ Deformation Target
       Brush deforms the mesh by deforming the constraints of a
       :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`.
 
+.. _bpy.types.Brush.pose_deform_type:
+
 Deformation
    Deformation type that is used by the brush.
 
@@ -52,6 +46,8 @@ Deformation
       The pivot point for this mode is calculated by using the local space
       aligned to the segment.
 
+.. _bpy.types.Brush.pose_origin_type:
+
 Rotation Origins
    Method to set the rotation origins for the segments of the brush.
 
@@ -63,24 +59,36 @@ Rotation Origins
       Simulates an :term:`Forward Kinematics` deformation using the :ref:`Face Set <sculpting-editing-facesets>`
       under the cursor as control.
 
+.. _bpy.types.Brush.pose_offset:
+
 Pose Origin Offset
    Offset of the pose origin in relation to the brush radius.
    This is useful to manipulate areas with a lot of complex shapes like fingers.
 
+.. _bpy.types.Brush.pose_smooth_iterations:
+
 Smooth Iterations
    Controls the smoothness of the falloff of the deformation.
+
+.. _bpy.types.Brush.pose_ik_segments:
 
 Pose IK Segments
    Controls how many :ref:`IK bones <bone-constraints-inverse-kinematics>`
    are going to be created for posing.
 
+.. _bpy.types.Brush.use_pose_ik_anchored:
+
 Keep Anchor Point
    Keeps the position of the last segment in the IK chain fixed.
+
+.. _bpy.types.Brush.use_connected_only:
 
 Connected Only
    Causes the brush to only affect topologically connected elements.
    Disabling this can have an impact on performance; when disabled,
    keeping the *Max Element Distance* as low as possible will help counteract the performance impact.
+
+.. _bpy.types.Brush.disconnected_distance_max:
 
 Max Element Distance
    Maximum distance to search for disconnected loose parts in the mesh.

@@ -1,4 +1,3 @@
-.. _bpy.types.Brush.use_grab_active_vertex:
 
 ****
 Grab
@@ -20,6 +19,8 @@ except that *Grab* can make use of other Sculpt Mode options (like textures and 
 
 Brush Settings
 ==============
+
+.. _bpy.types.Brush.use_grab_active_vertex:
 
 Grab Active Vertex
    Snaps the maximum strength of the brush to the highlighted active vertex,

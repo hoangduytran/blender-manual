@@ -1,4 +1,3 @@
-.. _bpy.types.Brush.tip_roundness:
 
 ***********
 Clay Strips
@@ -15,6 +14,8 @@ Similar to the *Clay* brush, but it uses a cube to define the brush area of infl
 
 Brush Settings
 ==============
+
+.. _bpy.types.Brush.tip_roundness:
 
 Tip Roundness
    Factor to control how round the brush is, a value of zero will make the brush square.

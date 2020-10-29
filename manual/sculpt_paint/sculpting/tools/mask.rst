@@ -1,4 +1,3 @@
-.. _bpy.types.Brush.mask_tool:
 
 ****
 Mask
@@ -19,6 +18,8 @@ See also the options of the :ref:`sculpt-mask-menu` menu.
 
 Brush Settings
 ==============
+
+.. _bpy.types.Brush.mask_tool:
 
 Mask Tool
    The mask brush has two modes:

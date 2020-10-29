@@ -1,5 +1,3 @@
-.. _bpy.types.Brush.elastic_deform_type:
-.. _bpy.types.Brush.elastic_deform_volume_preservation:
 
 **************
 Elastic Deform
@@ -19,6 +17,8 @@ When pressing :kbd:`Ctrl`, the brush deforms vertices along the normal of the ac
 Brush Settings
 ==============
 
+.. _bpy.types.Brush.elastic_deform_type:
+
 Deformation
    The surface alteration that is used in the brush.
 
@@ -32,6 +32,8 @@ Deformation
       Displaces vertices away from the active vertex.
    Twist
       Vertices are rotated around the active vertex.
+
+.. _bpy.types.Brush.elastic_deform_volume_preservation:
 
 Volume Preservation
    Poisson ratio for elastic deformation.

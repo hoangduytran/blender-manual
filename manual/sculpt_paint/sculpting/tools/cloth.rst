@@ -34,12 +34,18 @@ Simulation Area
    Dynamic
       The active simulation area moves with the brush while still being limited by a fixed radius.
 
+.. _bpy.types.Brush.cloth_sim_limit:
+
 Simulation Limit
    The Factor added relative to the size of the radius to limit the cloth simulation effects.
+
+.. _bpy.types.Brush.cloth_sim_falloff:
 
 Simulation Falloff
    The area to apply deformation falloff to the effects of the simulation.
    This setting is a factor of the *Simulation Limit* and is shown as a dashed line around the cursor.
+
+.. _bpy.types.Brush.cloth_deform_type:
 
 Deformation
    The type of cloth deformation that is used by the brush.
@@ -61,6 +67,8 @@ Deformation
    Expand
       Simulates stretching the cloth out.
 
+.. _bpy.types.Brush.cloth_force_falloff_type:
+
 Force Falloff
    Shape used in the brush to apply force to the cloth.
 
@@ -69,8 +77,12 @@ Force Falloff
    Plane
       Applies the force as a plane.
 
+.. _bpy.types.Brush.cloth_mass:
+
 Cloth Mass
    Mass of each simulation particle.
+
+.. _bpy.types.Brush.cloth_damping:
 
 Cloth Damping
    How much the applied forces are propagated through the cloth.
