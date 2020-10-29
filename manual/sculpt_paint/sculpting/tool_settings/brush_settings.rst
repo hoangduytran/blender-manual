@@ -1,6 +1,3 @@
-.. _bpy.types.Brush.normal_radius_factor:
-.. _bpy.types.Brush.hardness:
-.. _bpy.types.Brush.auto_smooth_factor:
 
 **************
 Brush Settings
@@ -53,15 +50,25 @@ Strength
 Direction :kbd:`Ctrl`
    Brush direction toggle, *Add* raises geometry towards the brush,
    *Subtract* lowers geometry away from the brush. This setting can be toggled with :kbd:`Ctrl` while sculpting.
+
+.. _bpy.types.Brush.normal_radius_factor:
+
 Normal Radius
    The ratio between the brush radius and the radius that is going to be used to sample
    the normal i.e. take the average of multiple normals. This influences the brush orientation;
    increasing this value causes the brush to follow a smooth version of the mesh,
    while a small value causes the brush to closely follow the contours of the mesh.
+
+.. _bpy.types.Brush.hardness:
+
 Hardness
    How close the brush falloff starts from the edge of the brush.
+
+.. _bpy.types.Brush.auto_smooth_factor:
+
 Autosmooth
    Sets the amount of smoothing to be applied to each stroke.
+
 Topology
    See :ref:`Dyntopo <bpy.types.Brush.topology_rake_factor>`.
 
@@ -71,9 +78,11 @@ Normal Weight :kbd:`Ctrl`
    E.g. *Grab* brush can be used to push a depression (hole) into the mesh when *Normal Weight* is set.
 
    Applies to *Grab* and *Snake Hook* brushes.
+
 Plane Offset
    Offset for planar brushes (Clay, Fill, Flatten, Scrape),
    shifts the plane that is found by averaging the faces above or below.
+
 Plane Trim
    Ability to limit the distance that planar brushes act.
    If trim is enabled vertices that are further away from the offset plane than

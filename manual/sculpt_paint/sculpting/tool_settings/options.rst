@@ -39,15 +39,17 @@ Auto-Masking
    See the :ref:`Display <sculpt-paint-brush-display>` options.
 
 
-.. _bpy.types.Sculpt.gravity_object:
-.. _bpy.types.Sculpt.gravity:
-
 Gravity
 =======
+
+.. _bpy.types.Sculpt.gravity:
 
 Factor
    Setting the factor allows you to add gravity to your brush strokes,
    giving it a draping effect.
+
+.. _bpy.types.Sculpt.gravity_object:
+
 Orientation
    Using another object, the gravity can be oriented to the set object's local Z axis,
    changing the direction of the gravity.

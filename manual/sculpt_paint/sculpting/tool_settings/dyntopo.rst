@@ -19,6 +19,10 @@ rather than just adding details onto a modeled base mesh.
 Dyntopo can be toggled with the checkbox in the header or with :kbd:`Ctrl-D`.
 With dynamic topology active, most brushes will subdivide the mesh during the stroke.
 
+.. _bpy.types.Sculpt.detail_size:
+.. _bpy.types.Sculpt.constant_detail_resolution:
+.. _bpy.types.Sculpt.detail_percent:
+
 Detail Size/Percentage, Resolution :kbd:`Shift-D`
    Each Detail Type's detail is set here. Depending on the Detail Type being used
    this property will rather show as a pixel count (px), or percentage.
@@ -26,6 +30,8 @@ Detail Size/Percentage, Resolution :kbd:`Shift-D`
    Sample Detail Size (pipette icon)
       With Constant Detail Size it is possible to sample the detail value of a certain mesh area
       by clicking the pipette icon next to the detail setting and then clicking on the area.
+
+.. _bpy.types.Sculpt.detail_refine_method:
 
 Refine Method
    Setting the option will determine which of the methods will be used when altering the topology.
@@ -39,6 +45,8 @@ Refine Method
    Subdivide Collapse
       This method combines the two methods, subdividing edges smaller than
       the detail size, and collapsing topology.
+
+.. _bpy.types.Sculpt.detail_type_method:
 
 Detailing
    Dyntopo uses three different detail methods to create dynamic detail to an object.
@@ -55,14 +63,17 @@ Detailing
       The detail size is based the size of the brush itself,
       where full detail will create topology the size of the brush radius itself.
 
-Smooth Shading
-   Toggles whether mesh faces are smooth or flat-shaded.
-   In dynamic-topology mode all faces have the same type of shading.
+.. _bpy.ops.sculpt.detail_flood_fill:
 
 Detail Flood Fill
    When using *Constant* or *Manual* *Detailing*, this option is made available,
    allowing you to fill the entire object with a uniform detail, based on the detail size.
 
+.. _bpy.types.Sculpt.use_smooth_shading:
+
+Smooth Shading
+   Toggles whether mesh faces are smooth or flat-shaded.
+   In dynamic-topology mode all faces have the same type of shading.
 
 .. _bpy.types.Brush.topology_rake_factor:
 
