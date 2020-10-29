@@ -61,7 +61,7 @@ input[type="number"], input[type="tel"], input[type="color"] {
 .refbox .field-list .field-name, .refbox .field-list .field-body {
 	padding: 0px;
 }
-.refbox .field-name {font-weight: normal}
+.refbox dl dt {font-weight: normal}
 
 /* Ugly 'red' literals. */
 .rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {
@@ -385,5 +385,4 @@ a.external {color:#656AE0;}
 .rst-content dl.field-list dd > p {
 	margin: 0 !important;
 }
-.refbox dl dt {font-weight: normal}
 /* End Sphinx 2.0 fixes */
