@@ -45,6 +45,12 @@ Simulation Falloff
    The area to apply deformation falloff to the effects of the simulation.
    This setting is a factor of the *Simulation Limit* and is shown as a dashed line around the cursor.
 
+.. _bpy.types.Brush.use_cloth_pin_simulation_boundary:
+
+Pin Simulation Boundary
+   Lock the position of the vertices in the simulation falloff area to avoid artifacts
+   and create a softer transition with with unaffected areas.
+
 .. _bpy.types.Brush.cloth_deform_type:
 
 Deformation
