@@ -14,5 +14,4 @@
    tools/index.rst
    tool_settings/index.rst
    adaptive.rst
-   editing.rst
-   hide_mask.rst
+   editing/index.rst

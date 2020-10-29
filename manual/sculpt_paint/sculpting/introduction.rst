@@ -37,3 +37,14 @@ the :doc:`Brush Settings </sculpt_paint/sculpting/tool_settings/brush_settings>`
 
 The brush can also change depending on the currently active :doc:`tool </sculpt_paint/sculpting/tools/index>`
 to better display how that tool works.
+
+Usage
+=====
+
+Limiting Brush Interactions
+---------------------------
+
+While sculpting, areas might be hidden behind parts of the mesh or they might be too close to other parts.
+To work through these, it is useful to isolate parts of a mesh to sculpt on.
+This can be done by either completely hiding parts of the mesh
+or by masking areas that can not be sculpted on.

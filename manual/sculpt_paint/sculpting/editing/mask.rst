@@ -1,47 +1,9 @@
-
-****************
-Hiding & Masking
-****************
-
-While sculpting, areas might be hidden behind parts of the mesh or they might be too close to other parts.
-To work through these, it is useful to isolate parts of a mesh to sculpt on.
-This can be done by either completely hiding parts of the mesh
-or by masking areas that can not be sculpted on.
-
-
-Hide
-====
-
-.. admonition:: Reference
-   :class: refbox
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Sculpt`
-
-Portions of the mesh can be hidden in Sculpt Mode to improve the viewport performance and
-to access parts of the mesh that would otherwise be difficult to access,
-because they are occluded by other parts.
-
-The hidden faces cannot be sculpted on.
-Hiding is shared between Edit Mode and Sculpt Mode
-(i.e. hiding/unhiding in one mode affects the other mode too).
-
-Show All :kbd:`Alt-H`
-   Reveal all hidden parts.
-Show Bounding Box :kbd:`Shift-H`
-   To reveal a hidden part of a mesh inside the selection.
-Hide Bounding Box :kbd:`H`
-   To hide a part of a mesh inside the selection.
-   This works similar to the :ref:`Box Select <tool-select-box>` tool.
-Hide Masked
-   Hides all masked vertices.
-
-
 .. _sculpt-mask-menu:
 .. _bpy.ops.paint.mask:
 
+****
 Mask
-====
+****
 
 Masking to control which areas of the mesh are influenced by sculpting.
 
@@ -51,7 +13,7 @@ Masking to control which areas of the mesh are influenced by sculpting.
 
 
 Brush
------
+=====
 
 To edit the mask, select the *Mask Brush* from the Brush panel.
 
@@ -64,7 +26,7 @@ To edit the mask, select the *Mask Brush* from the Brush panel.
 .. _bpy.ops.sculpt.dirty_mask:
 
 Editing
--------
+=======
 
 .. admonition:: Reference
    :class: refbox
@@ -146,7 +108,7 @@ Dirty Mask
 .. _bpy.types.View3DOverlay.sculpt_mode_mask_opacity:
 
 Display Settings
-----------------
+================
 
 .. admonition:: Reference
    :class: refbox
@@ -162,7 +124,7 @@ In the overlay popover, the opacity of the mask overlay can be adjusted to make 
 .. _sculpt_mask_clear-data:
 
 Clear Sculpt-Mask Data
-----------------------
+======================
 
 .. admonition:: Reference
    :class: refbox

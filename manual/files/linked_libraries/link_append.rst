@@ -151,7 +151,8 @@ but it will make those data-blocks fully editable, just like the ones directly c
 Options
 -------
 
-The operation available from the *Outliner*'s context menu has no options, and only affects the selected data-block.
+The operation available from the *Outliner*'s context menu has no options,
+and only affects the selected data-block.
 
 The operation available from the *3D View* only directly affects selected objects,
 but it can also make local the objects' dependencies:
