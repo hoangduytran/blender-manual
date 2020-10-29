@@ -14,10 +14,6 @@ Sculpt Mode manipulates geometry in the brush region of influence.
 
    Sculpting Mode Example.
 
-
-Sculpt Mode
-===========
-
 Sculpt Mode is selected from the mode menu of the 3D Viewport header.
 Once Sculpt Mode is activated, the Toolbar of the 3D Viewport will change to
 Sculpt Mode specific panels. A red circle will appear and
@@ -35,7 +31,7 @@ Sculpt Mode uses a similar brush to the other :doc:`painting modes </sculpt_pain
 but it is slightly more advanced. All the normal brush controls still apply,
 and it functions exactly the same, yet the brush for sculpting is displayed in 3D.
 This means that the brush will follow the contours of the mesh and the radius is displayed
-by orienting the brush to match the meshes :term:`Normal`.
+by orienting the brush to match the topology :term:`Normal`.
 How closely the cursor follows the curvature of the mesh can be changed in
 the :doc:`Brush Settings </sculpt_paint/sculpting/tool_settings/brush_settings>`.
 

@@ -62,7 +62,7 @@ Toolbar
    Flattens the mesh in the brush area, while moving it in the direction of the brush stroke.
 
 :doc:`/sculpt_paint/sculpting/tools/pose`
-   This brush is used to pose a model simulating an armature-like deformations.
+   Poses a model simulating an armature-like deformations.
 
 :doc:`/sculpt_paint/sculpting/tools/nudge`
    Moves vertices in the direction of the brush stroke.
@@ -71,8 +71,11 @@ Toolbar
    Rotates vertices within the brush in the direction the cursor is moved.
 
 :doc:`/sculpt_paint/sculpting/tools/slide_relax`
-   This brush slides the topology of the mesh in the direction of the stroke
+   Slides the topology of the mesh in the direction of the stroke
    without changing the geometrical shape of the mesh.
+
+:doc:`/sculpt_paint/sculpting/tools/boundary`
+   Transforms and deforms the mesh boundaries.
 
 :doc:`/sculpt_paint/sculpting/tools/cloth`
    Simulates cloth that can be sculpted.
