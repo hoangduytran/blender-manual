@@ -37,6 +37,16 @@ Filter Type
 Strength
    The amount of effect the filter has on the mesh.
 
+Orientation
+   :doc:`Orientation </editors/3dview/controls/orientation>` of the axis to limit the filter force.
+
+   Local
+      Use the Local axis to limit the force and set the gravity direction.
+   World
+      Use the World axis to limit the force and set the gravity direction.
+   View
+      Use the View axis to limit the force and set the gravity direction.
+
 Cloth Mass
    Mass of each simulation particle.
 
