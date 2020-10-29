@@ -15,6 +15,10 @@ Multiplane Scrape
 Scrapes the mesh with two angled planes at the same time, producing a sharp edge between them.
 This is useful for creating edges when sculpting hard surface objects.
 
+
+Brush Settings
+==============
+
 Plane Angle
    The angle between the two planes of the brush, pressing :kbd:`Ctrl` inverts the angle.
 

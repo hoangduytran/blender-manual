@@ -11,6 +11,10 @@ Box Trim
 
 Adds or removes geometry using a boolean operation based on a :ref:`box selection <tool-select-box>`.
 
+
+Tool Settings
+=============
+
 Trim Mode
    The operation to perform on the mesh; geometry can be either added or removed.
    When using the *Union* or *Join* mode the new geometry is assigned to a new

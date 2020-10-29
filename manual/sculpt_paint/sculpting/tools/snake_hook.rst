@@ -14,6 +14,10 @@ Snake Hook
 
 Pulls vertices along with the movement of the brush to create long, snake-like forms.
 
+
+Brush Settings
+==============
+
 Magnify
    The *Snake Hook* brush tends to loose volume along the stroke,
    with *Magnify* value greater than 0.5 it's possible to sculpt shapes without loosing volume.

@@ -18,6 +18,10 @@ Click and drag away from the object for a positive effect and towards for a nega
    Vertices can be "pinned" by :doc:`masking </sculpt_paint/sculpting/tools/mask>` vertices
    that should remain stationary, or by using :ref:`Face Sets <sculpting-editing-facesets>`.
 
+
+Brush Settings
+==============
+
 Filter Type
    Operation that is going to be applied to the mesh.
 

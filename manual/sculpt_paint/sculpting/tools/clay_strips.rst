@@ -12,6 +12,10 @@ Clay Strips
 
 Similar to the *Clay* brush, but it uses a cube to define the brush area of influence rather than a sphere.
 
+
+Brush Settings
+==============
+
 Tip Roundness
    Factor to control how round the brush is, a value of zero will make the brush square.
    Note, the :doc:`Brush Falloff </sculpt_paint/brush/falloff>`

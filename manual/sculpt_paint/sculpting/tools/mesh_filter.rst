@@ -13,6 +13,10 @@ Applies a deformation to all vertices in the mesh at the same time.
 To use this tool, click and drag away from the object to have a positive effect
 and click and drag towards the mesh to have a negative effect.
 
+
+Tool Settings
+=============
+
 Filter Type
    Smooth
       Eliminates irregularities of the mesh by making the positions of the vertices more uniform.

@@ -17,6 +17,10 @@ and pulls them to follow the mouse. And unlike other brushes,
 The effect is like moving a group of vertices in Edit Mode with Proportional Editing enabled,
 except that *Grab* can make use of other Sculpt Mode options (like textures and symmetry).
 
+
+Brush Settings
+==============
+
 Grab Active Vertex
    Snaps the maximum strength of the brush to the highlighted active vertex,
    making it easier to manipulate low poly models or meshes with subdivision surfaces.

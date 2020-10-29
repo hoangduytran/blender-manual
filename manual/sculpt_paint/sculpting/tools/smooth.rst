@@ -17,6 +17,10 @@ Smooth
 Eliminates irregularities in the area of the mesh within the brush's
 influence by smoothing the positions of the vertices.
 
+
+Brush Settings
+==============
+
 Deformation
    Deformation type that is used in the brush.
 

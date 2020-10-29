@@ -14,6 +14,10 @@ The brush does this while minimizing changes to the geometrical shape of the mes
 When pressing :kbd:`Shift`, the brush enters *Relax* mode
 which tries to create an even distribution of quads without deforming the volume of the mesh.
 
+
+Brush Settings
+==============
+
 .. _bpy.types.Brush.slide_deform_type:
 
 Deformation

@@ -11,6 +11,10 @@ Fill
 
 Works like the Flatten brush, but only brings vertices below the brush plane upwards.
 
+
+Brush Settings
+==============
+
 Area Radius
    Ratio between the brush radius and the radius that is going to be used to sample the area center.
 

@@ -17,6 +17,10 @@ and it applies the sculpt :ref:`gravity <bpy.types.Sculpt.gravity>` directly in 
 Note, using a relatively small brush makes the solver's calculations much faster,
 larger brush sizes might be too slow to get a usable brush.
 
+
+Brush Settings
+==============
+
 .. _bpy.types.Brush.cloth_simulation_area_type:
 
 Simulation Area

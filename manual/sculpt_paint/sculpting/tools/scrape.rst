@@ -11,6 +11,10 @@ Scrape
 
 The *Scrape* brush works like the *Flatten* brush, but only brings vertices above the plane downwards.
 
+
+Brush Settings
+==============
+
 Area Radius
    Ratio between the brush radius and the radius that is going to be used to sample the area center.
 

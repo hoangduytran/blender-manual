@@ -22,6 +22,10 @@ Several different deformation modes can be used to perform
 IK deformations or altering and moving the proportions of the mesh.
 The falloff of the deformation across multiple segments is controlled by the brush falloff curve.
 
+
+Brush Settings
+==============
+
 Deformation
    Deformation type that is used by the brush.
 

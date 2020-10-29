@@ -16,6 +16,10 @@ The mask values are shown as gray-scale.
 I.e. the darker a masked area is, the less effect sculpting on it will have.
 See also the options of the :ref:`sculpt-mask-menu` menu.
 
+
+Brush Settings
+==============
+
 Mask Tool
    The mask brush has two modes:
 
