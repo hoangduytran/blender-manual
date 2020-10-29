@@ -24,12 +24,21 @@ centered on the 3D cursor, and around the axis perpendicular to the working view
 - The position of the 3D cursor will be the center of the rotation.
 
 
+Tool Settings
+=============
+
+Steps
+   Specifies how many copies will be extruded along the "sweep".
+Axis
+   Specifies the axis to use as the pivot of the spin operation.
+
+
 Options
 =======
 
 Steps
    Specifies how many copies will be extruded along the "sweep".
-Duplicate
+Use Duplicates
    When enabled, will keep the original selected elements as separated islands in the mesh
    (i.e. unlinked to the result of the spin extrusion).
 Angle
@@ -39,9 +48,9 @@ Auto Merge
    if they make a full revolution which results in overlapping geometry.
 Flip Normals
    Reverses the :term:`Normal's <Normal>` direction for any resulting geometry.
-Center
+Center X, Y, Z
    Specifies the center of the spin. By default it uses the cursor position.
-Axis
+Axis X, Y, Z
    Specify the spin axis as a vector. By default it uses the view axis (viewport).
 
 
