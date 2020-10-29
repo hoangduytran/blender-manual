@@ -10,7 +10,6 @@ Extrude Region
 
    :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Extrude Region`
-   :Menu:      :menuselection:`Mesh --> Extrude --> Extrude Region`
    :Hotkey:    :kbd:`E`
 
 Extrusion tools duplicate vertices, while keeping the new geometry connected with the original vertices.
