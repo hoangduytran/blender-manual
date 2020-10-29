@@ -26,6 +26,15 @@ The falloff of the deformation across multiple segments is controlled by the bru
 Brush Settings
 ==============
 
+Deformation Target
+   How the deformation of the brush will affect the object.
+
+   Geometry
+      Brush deformation displaces the vertices of the mesh.
+   Cloth Simulation
+      Brush deforms the mesh by deforming the constraints of a
+      :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`.
+
 Deformation
    Deformation type that is used by the brush.
 

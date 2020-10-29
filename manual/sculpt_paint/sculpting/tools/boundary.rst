@@ -22,6 +22,15 @@ propagates the deformation using the brush :doc:`Falloff </sculpt_paint/brush/fa
 Brush Settings
 ==============
 
+Deformation Target
+   How the deformation of the brush will affect the object.
+
+   Geometry
+      Brush deformation displaces the vertices of the mesh.
+   Cloth Simulation
+      Brush deforms the mesh by deforming the constraints of a
+      :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`.
+
 .. _bpy.types.Brush.boundary_deform_type:
 
 Deformation
