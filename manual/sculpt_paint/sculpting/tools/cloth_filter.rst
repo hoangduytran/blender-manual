@@ -44,5 +44,5 @@ Cloth Damping
    How much the applied forces are propagated through the cloth.
 
 Use Face Sets
-   Only applies the mesh filter to the vertices assigned to the :ref:`Face Set <sculpting-editing-facesets>`
-   that is under the mouse.
+   Only applies the cloth forces to the vertices assigned to the :ref:`Face Set <sculpting-editing-facesets>`
+   that are under the mouse.
