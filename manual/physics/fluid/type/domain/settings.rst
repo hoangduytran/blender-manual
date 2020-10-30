@@ -265,11 +265,18 @@ The fluid simulation will make use of all the fields without an attached particl
 .. _bpy.types.FluidDomainSettings.simulation_method:
 
 Simulation Method
-   Determines the particle simulation method. Currently, FLIP is the only option to choose from.
+   Determines the liquid particle simulation method.
+
+   FLIP
+      Produces a very splashy simulation with lots of particles dispersed in the air.
+
+   APIC
+      Produces a very energetic but also more stable simulation.
+      Vortices within the liquid will be preserved better than with *FLIP*.
 
 .. _bpy.types.FluidDomainSettings.flip_ratio:
 
-FLIP Ratio
+FLIP Ratio :guilabel:`Simulation FLIP Only`:
    How much FLIP velocity to use when updating liquid particle velocities. A value of 1.0
    will result in a completely FLIP based simulation. Completely FLIP based simulations
    produce more chaotic splashes and are preferable when simulating greater quantities of liquid.
