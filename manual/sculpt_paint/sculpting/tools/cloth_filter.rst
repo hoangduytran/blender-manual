@@ -33,6 +33,11 @@ Filter Type
       Expands the cloth's dimensions.
    Pinch
       Pinches the cloth to the point were the cursor was when the filter started.
+   Scale
+      Scales the mesh as a :doc:`Soft Body </physics/soft_body/index>`
+      using the distance to the origin of the object as scale.
+      This creates filter produces folds in the surface.
+      The orientation of the folds can be controlled using the *Force Axis* and *Orientation*.
 
 Strength
    The amount of effect the filter has on the mesh.
