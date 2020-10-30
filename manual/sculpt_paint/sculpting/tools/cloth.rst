@@ -93,6 +93,12 @@ Cloth Mass
 Cloth Damping
    How much the applied forces are propagated through the cloth.
 
+.. _bpy.types.Brush.cloth_constraint_softbody_strength:
+
+Soft Body Plasticity
+   The amount the cloth preserves its original shape,
+   acting as a :doc:`Soft Body </physics/soft_body/index>`.
+
 .. _bpy.types.Brush.use_cloth_collision:
 
 Use Collisions
