@@ -92,3 +92,10 @@ Cloth Mass
 
 Cloth Damping
    How much the applied forces are propagated through the cloth.
+
+.. _bpy.types.Brush.use_cloth_collision:
+
+Use Collisions
+   Enables the detection of collisions with other objects during the simulation.
+   In order for the sculpt object to collide with objects,
+   the collision object must have :doc:`Collision Physics </physics/collision>`.

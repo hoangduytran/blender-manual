@@ -59,3 +59,8 @@ Cloth Damping
 Use Face Sets
    Only applies the cloth forces to the vertices assigned to the :ref:`Face Set <sculpting-editing-facesets>`
    that are under the mouse.
+
+Use Collisions
+   Enables the detection of collisions with other objects during the simulation.
+   In order for the sculpt object to collide with object,
+   the collision object must have :doc:`Collision Physics </physics/collision>`.
