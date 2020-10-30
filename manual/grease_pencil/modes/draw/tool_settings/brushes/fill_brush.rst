@@ -48,6 +48,16 @@ Brush
 Brush Settings
 --------------
 
+.. _bpy.types.BrushGpencilSettings.fill_direction:
+
+Direction :kbd:`Ctrl`
+   The portion of area to fill.
+
+   Normal
+      Fills the area inside the shape under the cursor.
+   Inverted
+      Fills the area outside the shape under the cursor.
+
 .. _bpy.types.BrushGpencilSettings.fill_leak:
 
 Leak Size
