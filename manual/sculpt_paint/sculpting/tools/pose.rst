@@ -76,6 +76,11 @@ Pose IK Segments
    Controls how many :ref:`IK bones <bone-constraints-inverse-kinematics>`
    are going to be created for posing.
 
+.. _bpy.types.Brush.use_pose_lock_rotation:
+
+Lock Rotation When Scaling
+   When using *Scale/Translate Deformation*, do not rotate the segment; only scaling is applied.
+
 .. _bpy.types.Brush.use_pose_ik_anchored:
 
 Keep Anchor Point
