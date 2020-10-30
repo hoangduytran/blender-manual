@@ -21,6 +21,16 @@ larger brush sizes might be too slow to get a usable brush.
 Brush Settings
 ==============
 
+Persistent
+   Allows the cloth brush to not accumulate deformation after each stroke.
+   This is convenient to always simulate the based on the same initial shape,
+   but applying different forces to it.
+
+   When disabled, deformations accumulate after each stroke.
+
+Set Persistent Base
+   Resets the base mesh so that you can add another layer of deformations.
+
 .. _bpy.types.Brush.cloth_simulation_area_type:
 
 Simulation Area
