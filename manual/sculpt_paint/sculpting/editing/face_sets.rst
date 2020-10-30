@@ -96,9 +96,10 @@ Grow/Shrink Face Sets
 
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Face Sets --> Grow/Shrink Face Sets`
+   :Tool:      :doc:`/sculpt_paint/sculpting/tools/edit_face_set`
    :Hotkey:    :kbd:`Ctrl-W`, :kbd:`Ctrl-Alt-W`
 
-Expands or contracts the area of face set under the cursor by adding or removing surrounding faces.
+Expands or contracts the Face Set under the cursor by adding or removing surrounding faces.
 
 
 .. _bpy.ops.mesh.face_set_extract:

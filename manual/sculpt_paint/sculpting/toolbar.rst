@@ -98,6 +98,9 @@ Toolbar
 :doc:`/sculpt_paint/sculpting/tools/cloth_filter`
    Applies a cloth simulation to all vertices in the mesh at the same time.
 
+:doc:`/sculpt_paint/sculpting/tools/edit_face_set`
+   Modifies the Face Set under the cursor.
+
 Move
    Translation tool.
 

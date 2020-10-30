@@ -38,4 +38,5 @@
    lasso_trim.rst
    mesh_filter.rst
    cloth_filter.rst
+   edit_face_set.rst
    transforms.rst
