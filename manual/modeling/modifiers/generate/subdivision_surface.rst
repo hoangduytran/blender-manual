@@ -114,7 +114,7 @@ Boundary Smooth
       Smooth boundaries, but corners are kept sharp
 
 Use Creases
-   Use the `Weighted Edge Creases`_ values stored in edges to control how smooth they are made.
+   Use the :ref:`modifiers-generate-subsurf-creases` values stored in edges to control how smooth they are made.
 
 Use Custom Normals
    Interpolates existing :ref:`modeling_meshes_normals_custom` of the resulting mesh.

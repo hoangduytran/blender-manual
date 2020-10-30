@@ -106,7 +106,7 @@ Quadriflow Remesh
    Opens a pop-up used to set parameters for the remesh operation.
 
 Use Paint Symmetry
-   Generates a symmetrical mesh using the :doc:`Paint Symmetry </sculpt_paint/brush/symmetry>` options.
+   Generates a symmetrical mesh using the :ref:`Mesh Symmetry <modeling_meshes_tools-settings_mirror>` options.
 
 Preserve Sharp
    Tells the algorithm to try to preserve sharp features of the mesh.

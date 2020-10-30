@@ -46,6 +46,7 @@ Live Unwrap
 .. _bpy.types.Mesh.use_mirror_x:
 .. _bpy.types.Mesh.use_mirror_y:
 .. _bpy.types.Mesh.use_mirror_z:
+.. _modeling_meshes_tools-settings_mirror:
 
 Mirror
 ------
