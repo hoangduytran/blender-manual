@@ -118,9 +118,10 @@ Each of the following files can be used for application templates but are option
 
    *(As noted previously, this is only used for a subset of preferences).*
 
-``splash.png``, ``splash_2x.png``
+``splash.png``
    Splash screen to override Blender's default artwork (not including header text).
-   Must be ``501x250`` and ``1002x500`` (used for HiDPI monitors).
+   Note, this image must be a ``1000x500`` image.
+
 ``__init__.py``
    A Python script which must contain ``register`` and ``unregister`` functions.
 
@@ -148,8 +149,8 @@ This has the following advantages:
 - Changes can be made to the startup or preferences, without having to distribute a blend-file.
 - Changes can be made dynamically.
 
-  You could for example -- configure the template to check the number of processors, operating system and memory,
-  then set values based on this.
+  You could for example -- configure the template to check the number of processors,
+  operating system and memory, then set values based on this.
 
 - You may enable add-ons associated with your template.
 
