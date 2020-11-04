@@ -43,6 +43,7 @@ Generate
    generate/decimate.rst
    generate/edge_split.rst
    generate/mask.rst
+   generate/mesh_to_volume.rst
    generate/mirror.rst
    generate/multiresolution.rst
    generate/remesh.rst
@@ -51,6 +52,7 @@ Generate
    generate/solidify.rst
    generate/subdivision_surface.rst
    generate/triangulate.rst
+   generate/volume_to_mesh.rst
    generate/weld.rst
    generate/wireframe.rst
 
@@ -75,6 +77,7 @@ Deform
    deform/corrective_smooth.rst
    deform/laplacian_smooth.rst
    deform/surface_deform.rst
+   deform/volume_displace.rst
    deform/warp.rst
    deform/wave.rst
 
