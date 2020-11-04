@@ -82,6 +82,11 @@ Deformation
       Simulates picking up and moving the cloth.
    Expand
       Simulates stretching the cloth out.
+   Snake Hook
+      Simulates moving the cloth without producing any artifacts in the surface
+      and create more natural looking folds than any of the other deformation modes.
+      This is accomplished by adjusting the strength of the deformation constraints per
+      brush step to avoid affecting the results of the simulation as much as possible. 
 
 .. _bpy.types.Brush.cloth_force_falloff_type:
 
