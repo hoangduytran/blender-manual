@@ -3,17 +3,6 @@
 Usage
 *****
 
-Toggling Interaction Modes
-==========================
-
-Selecting some data-blocks with :kbd:`LMB` will toggle into the relevant interaction mode.
-For example, selecting the mesh data of the cube will select the cube and enter *Edit Mode*.
-Selecting the data-block again will toggle back into *Object Mode*.
-
-If the data-block type supports multi-editing,
-you can use :kbd:`Ctrl` to add or remove objects from the Edit Mode.
-
-
 Relations Management
 ====================
 
