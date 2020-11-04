@@ -24,7 +24,7 @@ Random Seed
    The random seed is an offset to the randomized transformation.
    A different seed will produce a new result.
 Transform Delta
-   Randomize :ref:`Delta Transform <transform-delta>`
+   Randomize :ref:`Delta Transform <bpy.types.Object.delta>`
    values instead of regular transform.
 
 Randomize Location

@@ -73,7 +73,7 @@ Transforms to Deltas
    :Menu:      :menuselection:`Object --> Apply --> Location / Rotation / Scale to Deltas`
    :Hotkey:    :kbd:`Ctrl-A`
 
-Converts primary object transformations to :ref:`delta transforms <transform-delta>`,
+Converts primary object transformations to :ref:`delta transforms <bpy.types.Object.delta>`,
 any existing delta transforms will be included as well.
 
 - Location to Deltas

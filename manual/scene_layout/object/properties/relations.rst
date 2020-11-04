@@ -1,6 +1,3 @@
-.. _bpy.types.Object.track_axis:
-.. _bpy.types.Object.up_axis:
-.. _bpy.types.Object.use_extra:
 
 *********
 Relations
@@ -12,9 +9,14 @@ Parent Type
    The type of parenting used. See :doc:`parenting </scene_layout/object/editing/parent>`
    for information on the different types.
 
+.. _bpy.types.Object.track_axis:
+
 Tracking Axis
    Axis that points in the "forward" direction.
    Applies to *Instance Vertices* when *Align to Vertex Normal* is enabled.
+
+.. _bpy.types.Object.up_axis:
+
 Up Axis
    Axis that points in the "upward" direction.
    Applies to *Instance Vertices* when *Align to Vertex Normal* is enabled.

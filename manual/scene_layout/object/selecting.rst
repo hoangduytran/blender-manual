@@ -233,7 +233,7 @@ Object Hooks
 Pass
    Select objects assigned to the same :ref:`render pass <render-cycles-passes>`.
 Color
-   Select objects with same :ref:`Object Color <objects-display-object-color>`.
+   Select objects with same :ref:`Object Color <bpy.types.Object.color>`.
 Keying Set
    Select objects included in the active :doc:`Keying Set </animation/keyframes/keying_sets>`.
 Light Type

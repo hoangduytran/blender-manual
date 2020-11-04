@@ -1,7 +1,3 @@
-.. _bpy.types.Object.location:
-.. _bpy.types.Object.rotation:
-.. _bpy.types.Object.scale:
-.. _bpy.types.Object.dimensions:
 
 *********
 Transform
@@ -32,8 +28,13 @@ all its *vertices* and faces.
 
    Transform Properties.
 
+.. _bpy.types.Object.location:
+
 Location
    The object's origin location in global coordinates.
+
+.. _bpy.types.Object.rotation:
+
 Rotation
    The object's orientation, relative to the global axes and its own origin.
 
@@ -53,11 +54,16 @@ Rotation
       Quaternion
          X, Y, Z and W correspond to the :term:`Quaternion` components.
 
+.. _bpy.types.Object.scale:
+
 Scale
    The object's relative scale along the local axis
    (e.g. the *Scale X* value represents the scale along the local X axis).
    Each object (cube, sphere, etc.), when created, has a scale of one unit in each local direction.
    To make the object bigger or smaller, you scale it in the desired axis.
+
+.. _bpy.types.Object.dimensions:
+
 Dimensions
    The size of the object's bounding box
    (aligned with the local axes -- think of a cardboard box just big enough to hold the object).
@@ -81,13 +87,16 @@ Transform Properties Locking
 
 
 .. _bpy.types.Object.delta:
-.. _transform-delta:
 
 Delta Transforms
 ================
 
-Delta Transforms are simply transformations that are applied on top of the transforms described above.
-They can be found in the :menuselection:`Properties --> Object Properties --> Delta Transforms`.
+.. admonition:: Reference
+   :class: refbox
 
+   :Mode:      Object Mode
+   :Panel:     :menuselection:`Properties --> Object Properties --> Transform --> Delta Transforms`
+
+Delta Transforms are simply transformations that are applied on top of the transforms described above.
 Delta Transforms are particularly useful in animations. For example,
 you can animate an object with the primary transforms then move them around with Delta Transforms.

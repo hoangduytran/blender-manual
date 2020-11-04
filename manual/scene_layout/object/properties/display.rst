@@ -1,6 +1,3 @@
-.. _bpy.types.Object.show:
-.. _bpy.types.Object.display_type:
-.. _bpy.types.Object.color:
 
 ****************
 Viewport Display
@@ -11,6 +8,8 @@ Viewport Display
    Viewport Display panel.
 
 The *Viewport Display* panel is used to enable extra display options for the 3D Viewport.
+
+.. _bpy.types.Object.show:
 
 Show
    Name
@@ -28,11 +27,13 @@ Show
    In Front
       Makes the object display in front of others. (Unsupported for instanced objects.)
 
+.. _bpy.types.Object.display_type:
+
 Display As
    The shading mode to display in the 3D Viewport; this can be useful if you have
    a high-poly object that is slowing down the viewport.
 
-.. _objects-display-object-color:
+.. _bpy.types.Object.color:
 
 Color
    Allows to specify the object's color when using the Workbench renderer.

@@ -17,15 +17,18 @@ The other options can be enabled in the *Restriction Toggles* option in the Outl
 - Holding :kbd:`Shift` sets or unsets the value to all its child collections or objects.
 - Holding :kbd:`Ctrl` isolates the object or collection, so they are the only ones with its value set.
 
+.. _bpy.types.LayerCollection.exclude:
+
+Enable Collection (checkbox, collection only)
+   Exclude the collection from the view layer. This option is shown in front of
+   the collection icon, it is not part of the restrictions column.
+
 Visibility (eye icon)
    Toggles the visibility of the object or collection in the 3D Viewport.
    This is a file-local setting, and does not get imported when this data-block
    is linked into another blend-file. Objects hidden this way are still part of
    the :doc:`View Layer </scene_layout/view_layers/index>` and evaluated,
    so they still affect playback performance.
-Enable Collection (checkbox, collection only)
-   Exclude the collection from the view layer. This option is shown in front of
-   the collection icon, it is not part of the restrictions column.
 
 .. note::
 
