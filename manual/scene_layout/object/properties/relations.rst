@@ -3,6 +3,12 @@
 Relations
 *********
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Object Mode
+   :Panel:     :menuselection:`Properties --> Object Properties --> Relations`
+
 Parent
    The object the selected object is parented to.
 Parent Type

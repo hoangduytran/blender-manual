@@ -7,7 +7,7 @@ Visibility
    :class: refbox
 
    :Mode:      Object Mode
-   :Panel:     :menuselection:`Properties --> Object Properties --> Transform`
+   :Panel:     :menuselection:`Properties --> Object Properties --> Visibility`
 
 The Visibility panel controls how objects are interacted with in the viewport and in the final render.
 These visibility options can also be set in the :doc:`Outliner </editors/outliner/editing>`.

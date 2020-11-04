@@ -3,11 +3,18 @@
 Viewport Display
 ****************
 
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Object Mode
+   :Panel:     :menuselection:`Properties --> Object Properties --> Viewport Display`
+
+The *Viewport Display* panel is used to enable extra display options for the 3D Viewport.
+
 .. figure:: /images/scene-layout_object_properties_display_panel.png
 
    Viewport Display panel.
 
-The *Viewport Display* panel is used to enable extra display options for the 3D Viewport.
 
 .. _bpy.types.Object.show:
 
