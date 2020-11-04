@@ -58,6 +58,16 @@ Usually, an :doc:`Image Texture node </render/shader_nodes/textures/image>` mapp
 that the modifier targets is added to the object's material.
 
 
+Known Limitations
+=================
+
+Vertices Behind the Camera
+--------------------------
+
+When projecting geometry in a perspective view, vertices behind the camera are not properly mapped.
+
+You can workaround this by subdividing geometry so faces in front of the camera have UV's correctly mapped.
+
 ..
    Comment: think that is no more relevant for 2.80? (Todo)
 ..
