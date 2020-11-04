@@ -92,6 +92,9 @@ Toolbar
    :doc:`/sculpt_paint/sculpting/tools/lasso_trim`
       Performs a boolean operation based on lasso select.
 
+:doc:`/sculpt_paint/sculpting/tools/line_project`
+   Performs a boolean operation based on a line.
+
 :doc:`/sculpt_paint/sculpting/tools/mesh_filter`
    Applies a deformation to all vertices in the mesh at the same time.
 

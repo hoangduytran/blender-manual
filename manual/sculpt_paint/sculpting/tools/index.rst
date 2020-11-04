@@ -36,6 +36,7 @@
    draw_facesets.rst
    box_trim.rst
    lasso_trim.rst
+   line_project.rst
    mesh_filter.rst
    cloth_filter.rst
    edit_face_set.rst
