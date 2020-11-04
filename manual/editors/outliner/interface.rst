@@ -49,8 +49,6 @@ Global Viewport Visibility (screen icon)
    Objects hidden this way are no longer part of the :doc:`View Layer </scene_layout/view_layers/index>`,
    are not evaluated, and such do not negatively affect playback performance.
 
-.. _bpy.types.Object.hide_render:
-
 Rendering (camera icon)
    This will still keep the object visible in the scene, but it will be ignored by the renderer.
    Usually used by support objects that help modeling and animation yet do not belong in the final images.

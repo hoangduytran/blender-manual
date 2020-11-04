@@ -19,6 +19,13 @@ Each level can be expanded/collapsed by the small arrow to the left of its heade
 - Groups (green)
 - Channels (gray)
 
+.. _bpy.types.DopeSheet.use_filter_invert:
+.. _bpy.types.DopeSheet.filter_text:
+
+Name Filter
+   Only displays channels that match the search text.
+   Pressing the invert button displays all channels except the channels that match the search text.
+
 
 Controls
 --------
