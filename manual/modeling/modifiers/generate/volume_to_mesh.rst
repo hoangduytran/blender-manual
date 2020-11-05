@@ -11,6 +11,12 @@ Only scalar grids (such as the density grid) can be converted.
 Options
 =======
 
+.. figure:: /images/modeling_modifiers_generate_volume-to-mesh_panel.png
+   :align: right
+   :width: 300px
+
+   The Volume to Mesh modifier.
+
 Object
    The source volume object.
 

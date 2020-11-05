@@ -15,6 +15,12 @@ It uses the red, green and blue components of the texture to displace the volume
 Options
 =======
 
+.. figure:: /images/modeling_modifiers_deform_volume-displace_panel.png
+   :align: right
+   :width: 300px
+
+   The Volume Displace modifier.
+
 Texture
    The texture that is evaluated at every voxel to determine how far and in what direction to displace.
 

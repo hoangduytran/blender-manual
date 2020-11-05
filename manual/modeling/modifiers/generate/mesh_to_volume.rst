@@ -13,6 +13,12 @@ The new volume grid is called "density".
 Options
 =======
 
+.. figure:: /images/modeling_modifiers_generate_mesh-to-volume_panel.png
+   :align: right
+   :width: 300px
+
+   The Mesh to Volume modifier.
+
 Object
    The mesh object that determines where the volume data will be generated.
 
