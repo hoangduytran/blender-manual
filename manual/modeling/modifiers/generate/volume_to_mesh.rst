@@ -8,6 +8,10 @@ This modifier is the inverse of the *Mesh to Volume* modifier.
 It takes an existing volume object and converts one of its grids to a mesh.
 Only scalar grids (such as the density grid) can be converted.
 
+.. tip::
+
+   To copy and move the generated mesh separately from the volume object, use a :doc:`collection instance </scene_layout/object/properties/instancing/collection>`.
+
 Options
 =======
 
@@ -50,3 +54,11 @@ Adaptivity
 
 Smooth Shading
    Enables smooth shading on the generated mesh.
+
+Example
+=======
+
+.. figure:: /images/modeling_modifiers_generate_volume-to-mesh_example.png
+   :width: 500px
+
+   Converting a volume cloud to a mesh.

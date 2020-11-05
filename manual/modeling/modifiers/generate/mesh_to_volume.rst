@@ -9,6 +9,9 @@ All previously existing volume grids on the volume object are discarded.
 Therefore, this modifier is usually added to an empty volume object.
 The new volume grid is called "density".
 
+.. tip::
+
+   To copy and move the generated volume separately from the mesh object, use a :doc:`collection instance </scene_layout/object/properties/instancing/collection>`.
 
 Options
 =======
@@ -48,3 +51,11 @@ Resolution Mode
    Voxel Size
       This allows setting the exact voxel size that will be used.
       This is idea for rendering when the voxel size should not change between frames.
+
+Example
+=======
+
+.. figure:: /images/modeling_modifiers_generate_mesh-to-volume_example.png
+   :width: 500px
+
+   Converting Suzanne to a volume.
