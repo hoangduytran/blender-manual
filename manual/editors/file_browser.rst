@@ -124,7 +124,7 @@ File Name
    Text field to edit the file name and extension.
    When saving, if the background is red, a file with same name already exists in the folder.
    :kbd:`Tab` will auto-complete to existing names in the current directory.
-Increment Filename  ``-``, ``+``
+Increment Filename ``-``, ``+``
    Removes/Decreases or adds/increases a trailing number to your file name
    (used e.g. to store different versions of a file).
 Confirm :kbd:`Return`

@@ -4,21 +4,19 @@
 Parenting Objects
 *****************
 
+When modeling a complex object, such as a watch, you may choose to model the different parts as separate objects.
+To make all the parts move as one ("the watch"), you can designate one object as the *parent* of all the other parts.
+These other parts become its *children*, and any translation, rotation, or scale of the parent will also
+affects its children.
+
+Contrary to most biological lifeforms, each object or bone in Blender has at most one parent.
+If an object already has a parent object and you give it another parent then Blender will remove
+the previous parent relationship. When the plural "parents" is used in this chapter,
+it references the hierarchy of parents, so the parent, the grandparent, great grandparent,
+and so on, of an object.
+
+
 .. _bpy.ops.object.parent_set:
-
-When modeling a complex object, such as a watch, you may choose to model the
-different parts as separate objects. To make all the parts move as one ("the
-watch"), you can designate one object as the *parent* of all the other parts.
-These other parts become its *children*, and any translation, rotation, or scale
-of the parent will also affects its children.
-
-Contrary to most biological lifeforms, each Object or Bone in Blender has at
-most one parent. If an object already has a parent object and you give it
-another parent then Blender will remove the previous parent relationship. When
-the plural "parents" is used in this chapter, it references the hierarchy of
-parents, so the parent, the grandparent, great grandparent, and so on, of an
-object.
-
 
 Make Parent
 ===========
@@ -36,9 +34,8 @@ and press :kbd:`Ctrl-P`. The *Set Parent To* menu will pop up allowing
 you to select from one of several possible different parenting types.
 Selecting one of the entries in *Set Parent To* confirms,
 and the child/children to parent relationship is created.
-
-The selected objects will have their 'Parent' set to the :ref:`active object
-<object-active>`, and as a result will be *siblings*.
+The selected objects will have their 'parent' set to the :ref:`active object <object-active>`,
+and as a result will be 'siblings'.
 
 The *Set Parent To* pop-up menu is context-sensitive, which means
 the number of entries it displays can change depending on what objects are selected
@@ -54,22 +51,21 @@ In other words, the direction of influence is from parent to child and not child
 Parent Inverse
 --------------
 
-Blender can assign a parent without moving the child object. This is achieved
-via a hidden matrix called the *Parent Inverse* matrix, which sits between the
-:term:`transform <Transform>` of the parent and the child.
+Blender can assign a parent without moving the child object.
+This is achieved via a hidden matrix called the *Parent Inverse* matrix,
+which sits between the :term:`transform <Transform>` of the parent and the child.
 
 When objects are parented with :kbd:`Ctrl-P`, Parent Inverse matrix is updated.
 Depending on the choice in the Set Parent menu, the object's local location,
-rotation, and scale are also updated. For more details, see
-:ref:`Object Parent <object-parenting>`.
+rotation, and scale are also updated. For more details, see :ref:`Object Parent <object-parenting>`.
 
 The Parent Inverse matrix can be cleared by using :ref:`Clear Parent Inverse <bpy.ops.object.parent_clear>`.
 
 .. note::
 
-   When setting the parent via the Object Properties panel, the Parent Inverse
-   matrix is always reset. This can cause an unexpected jump in the object's
-   position. To avoid this, use :kbd:`Ctrl-P` to set the new parent.
+   When setting the parent via the Object Properties panel, the Parent Inverse matrix is always reset.
+   This can cause an unexpected jump in the object's position.
+   To avoid this, use :kbd:`Ctrl-P` to set the new parent.
 
 
 Parent Types
@@ -101,29 +97,27 @@ or activates a parent property i.e. *Follow Path*.
 Object Parent
 =============
 
-*Object Parent* is the most general form of parenting that Blender supports. It
-will take selected objects and make the :ref:`active object <object-active>` the
-parent object of all the selected objects. Each child object will inherit the
-transformations of the parent. The parent object can be of any type.
+*Object Parent* is the most general form of parenting that Blender supports.
+It will take selected objects and make the :ref:`active object <object-active>`
+the parent object of all the selected objects. Each child object will inherit
+the transformations of the parent. The parent object can be of any type.
 
 There are three operators that allow you to set an object parent. They differ in
 the way they compute the :ref:`Parent Inverse matrix <parent-inverse-matrix>`
 and the local :term:`transform <Transform>` of the object.
 
 Set Parent to Object
-   If the object has a pre-existing parent, that is cleared first. This moves
-   the object to its own location/rotation/scale, without its parent's
-   influence. Regardless of whether it had a parent before, Blender proceeds to
-   do the same as "Keep Transform" below.
+   If the object has a pre-existing parent, that is cleared first.
+   This moves the object to its own location, rotation and scale,
+   without its parent's influence. Regardless of whether it had a parent before,
+   Blender proceeds to do the same as "Keep Transform" below.
 Set Parent to Object (Keep Transform)
-   The object's current world transform (so its absolute location/rotation/scale
-   in the world) is computed. The new parent is set, and then the *Parent
-   Inverse* matrix is computed such that after setting the new parent the object
-   is still at its previous world transform.
+   The object's current world transform (so its absolute location, rotation and scale in the world) is computed.
+   The new parent is set, and then the *Parent Inverse* matrix is computed such that after setting 
+   the new parent the object is still at its previous world transform.
 Set Parent to Object (Without Inverse)
-   This sets the parent, and then resets the *Parent Inverse* matrix and the
-   object's local location. As a result, the object will move to the location of
-   the parent, but keep its rotation and scale.
+   This sets the parent, and then resets the *Parent Inverse* matrix and the object's local location.
+   As a result, the object will move to the location of the parent, but keep its rotation and scale.
 
 
 Example: Object (Keep Transform) Parent
@@ -132,9 +126,9 @@ Example: Object (Keep Transform) Parent
 *Object (Keep Transform) Parent* works in a very similar way to *Object Parent*. The major difference is in whether
 the child objects will keep any previous transformations applied to them from the previous parent object.
 
-Assume that we have a scene consisting of three objects,
-those being two empty objects named "EmptyA" and "EmptyB", and a Monkey object.
-Fig. :ref:`fig-view3d-parent-scene-no` shows the three objects with no parenting relationships active on them.
+Assume that we have a scene consisting of three objects, those being two empty objects named "EmptyA"
+and "EmptyB", and a Monkey object. Fig. :ref:`fig-view3d-parent-scene-no` shows the three objects with
+no parenting relationships active on them.
 
 .. _fig-view3d-parent-scene-no:
 

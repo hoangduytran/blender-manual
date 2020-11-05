@@ -50,7 +50,7 @@ Difference
    The target mesh, or collection of meshes, is subtracted from the modified mesh
    (everything *outside* of the target mesh or collection is kept).
 
-Operand type
+Operand Type
    Choose the type of the operand (target).
 
    Object

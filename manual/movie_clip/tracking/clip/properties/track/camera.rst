@@ -23,7 +23,7 @@ Optical Center
    but it can be different in some special cases. Check camera/lens specifications in such cases.
    To set the optical center to the center of image, there is a *Set Center* button below the sliders.
 
-   .. tip:: Optical Center also know as Principal Point in photogrammetry.
+   .. tip:: Optical Center also know as principal point in photogrammetry.
 
 
 Lens
@@ -46,7 +46,7 @@ Distortion Model
    Brown
       Brown-Conrady is one of most advanced mathematical lens distortion models.
       Used to model both radial and tangential distortion. Can use up to four
-      radial distortion coefficients: K1-K4 and up to two tangential distortion coefficients: P1 and P2.
+      radial distortion coefficients: K1 - K4 and up to two tangential distortion coefficients: P1 and P2.
 
 Coefficients
    Coefficients are used to compensate for lens distortion when the movie was shot.
@@ -55,26 +55,23 @@ Coefficients
    accurate for the known focal length (but also take grid and annotations into account
    to prevent "impossible" distortion).
 
-   Radial distortion coefficients (K1-K4)
-      The coefficients in lens distortion models work independent from each other
-      and positive values will give a barrel distortion. Negative values give pincushion distortion.
-      A mixture of both negative and positive coefficients allow define more complicated
-      mustache distortions or complex distortion, that is less common but not rare.
+   Radial Distortion Coefficients (K1 - K4)
+      The coefficients in lens distortion models work independent from each other.
+      Positive values will give a barrel distortion while negative values give a pincushion distortion.
+      With a mixture of both negative and positive coefficients you can define more complicated
+      mustache distortions or other complex distortions, that are less common but not rare.
 
       .. figure:: /images/movie_clip_tracking_clip_properties_track_camera_lens_distortion_k.png
 
-         Example of radial distortion for positive and negative K coefficients
+         Example of radial distortion for positive and negative K coefficients.
 
-   Tangential distortion coefficients (P1,P2)
-      Work independent and allow compensate situations when sensor is not perpendicular to a group of lens.
+   Tangential Distortion Coefficients (P1, P2)
+      Works independent and allow to compensate for situations when the sensor is not perpendicular to a group of lens.
+      The optical center (also called principal point) will be shifted (distorted) from the center of the sensor.
       P1 is used to compensate for sensor rotation in Z (vertical) axes,
       while P2 is for compensating sensor rotation in X (horizontal) axes.
-      Such distortions can be found in source from cameras with sensor stabilization system.
+      Such distortions can be found in sources from cameras with a sensor stabilization system.
 
       .. figure:: /images/movie_clip_tracking_clip_properties_track_camera_lens_distortions_p.png
 
-         Example of tangential distortion for P1, P2 coefficients
-
-Optical Center (Principal Point) is important value in camera lens distortion,
-it can be shifted (distorted) from sensor center in images from cameras with sensor stabilization.
-And using correct values can increase quality of clip undistortion results.
+         Example of tangential distortion for P coefficients.

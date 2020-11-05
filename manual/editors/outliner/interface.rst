@@ -6,12 +6,12 @@ Interface
 Object Mode
 ===========
 
-The far left of the Outliner contains a region to toggle the current :doc:`Object Mode </editors/3dview/modes>`
+The far left of the Outliner contains a region to toggle the current :doc:`Object Mode </editors/3dview/modes>`.
 When an object is in a mode other than Object Mode, the mode icon will be displayed in this region.
 Any other objects that are valid to be added or swapped into the current mode display a dot.
-Clicking the dot will swap that object with the current active object.
+Clicking the dot icon will swap that object with the current active object.
 For modes that support :ref:`3dview-multi-object-mode`,
-:kbd:`Ctrl-LMB` on the dot will add that object to the current mode.
+:kbd:`Ctrl-LMB` on the dot icon will add that object to the current mode.
 Clicking the mode icon next to the active object removes it or all other objects
 from the current mode depending if multiple object are in the same mode.
 

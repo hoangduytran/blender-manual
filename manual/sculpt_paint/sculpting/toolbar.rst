@@ -87,13 +87,13 @@ Toolbar
    Lets you select mesh parts to be unaffected by other brushes by painting vertex colors.
 
 :doc:`/sculpt_paint/sculpting/tools/box_trim`
-   Performs a boolean operation based on box select.
+   Performs a Boolean operation based on box select.
 
    :doc:`/sculpt_paint/sculpting/tools/lasso_trim`
-      Performs a boolean operation based on lasso select.
+      Performs a Boolean operation based on lasso select.
 
 :doc:`/sculpt_paint/sculpting/tools/line_project`
-   Performs a boolean operation based on a line.
+   Performs a Boolean operation based on a line.
 
 :doc:`/sculpt_paint/sculpting/tools/mesh_filter`
    Applies a deformation to all vertices in the mesh at the same time.
@@ -102,7 +102,7 @@ Toolbar
    Applies a cloth simulation to all vertices in the mesh at the same time.
 
 :doc:`/sculpt_paint/sculpting/tools/edit_face_set`
-   Modifies the Face Set under the cursor.
+   Modifies the face set under the cursor.
 
 Move
    Translation tool.

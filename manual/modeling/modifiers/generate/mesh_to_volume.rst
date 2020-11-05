@@ -6,12 +6,14 @@ Mesh to Volume Modifier
 
 The *Mesh to Volume* modifier uses a mesh to create a new volume grid.
 All previously existing volume grids on the volume object are discarded.
-Therefore, this modifier is usually added to an empty volume object.
+So this modifier is usually added to an empty volume object.
 The new volume grid is called "density".
 
 .. tip::
 
-   To copy and move the generated volume separately from the mesh object, use a :doc:`collection instance </scene_layout/object/properties/instancing/collection>`.
+   To copy and move the generated volume separately from the mesh object,
+   use a :doc:`collection instance </scene_layout/object/properties/instancing/collection>`.
+
 
 Options
 =======
@@ -29,15 +31,15 @@ Density
    Makes the generated volume appear denser or less dense when rendering.
 
 Fill Volume
-   This setting is only used when the mesh object actually encloses a volume.
-   If it is set, the entire enclosed volume will get a density greater than zero.
-   Otherwise, only the voxels close to the surface are initialized.
+   The entire enclosed volume or otherwise only the voxels close to the surface
+   will get a density greater than zero.
+   This setting is only used when the mesh object is :term:`Manifold`.
 
 Exterior Band Width
    The maximum distance of the included voxels to the surface on the outside of the mesh.
 
 Interior Band Width
-   The maximum distance of the included voxles to the surface on the inside of the mesh.
+   The maximum distance of the included voxels to the surface on the inside of the mesh.
    Activating *Fill Volume* is similar to increasing the interior band width to a high number.
 
 Resolution Mode
@@ -46,11 +48,12 @@ Resolution Mode
    Voxel Amount
       This allows setting an approximate number of voxels that will be used to represent mesh along its diagonal.
       When the dimensions of the mesh changes, the voxel size will change as well.
-      For final rendering of animations, it's better to specify the voxel size explitely to avoid artifacts.
+      For final rendering of animations, it's better to specify the voxel size explicitly to avoid artifacts.
 
    Voxel Size
       This allows setting the exact voxel size that will be used.
       This is idea for rendering when the voxel size should not change between frames.
+
 
 Example
 =======

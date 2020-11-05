@@ -65,8 +65,7 @@ Vertices Behind the Camera
 --------------------------
 
 When projecting geometry in a perspective view, vertices behind the camera are not properly mapped.
-
-You can workaround this by subdividing geometry so faces in front of the camera have UV's correctly mapped.
+You can workaround this by subdividing geometry so that faces in front of the camera have correctly mapped UVs.
 
 ..
    Comment: think that is no more relevant for 2.80? (Todo)

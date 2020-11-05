@@ -28,8 +28,8 @@ Deformation Target
    Geometry
       Brush deformation displaces the vertices of the mesh.
    Cloth Simulation
-      Brush deforms the mesh by deforming the constraints of a
-      :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`.
+      Brush deforms the mesh by deforming the constraints of
+      a :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`.
 
 .. _bpy.types.Brush.boundary_deform_type:
 
@@ -42,10 +42,10 @@ Deformation
       Moves/extends the mesh boundary in the local X direction.
    Inflate
       Works similar to the :doc:`Inflate </sculpt_paint/sculpting/tools/inflate>` tool but,
-      the vertices that are inflated are constrained to the the mesh boundary.
+      the vertices that are inflated are constrained to the mesh boundary.
    Grab
       Works similar to the :doc:`Grab </sculpt_paint/sculpting/tools/grab>` tool but,
-      the vertices that are grabbed are constrained to the the mesh boundary.
+      the vertices that are grabbed are constrained to the mesh boundary.
    Twist
       Rotates the active boundary around the local Z axis.
    Smooth
@@ -69,7 +69,7 @@ Boundary Origin Offset
    Loop
       Applies the brush falloff in a loop pattern.
    Loop and Invert
-      Applies the fallof radius in a loop pattern,
+      Applies the falloff radius in a loop pattern,
       inverting the displacement direction in each pattern repetition.
 
 

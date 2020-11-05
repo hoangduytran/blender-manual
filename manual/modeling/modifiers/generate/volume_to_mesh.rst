@@ -10,7 +10,9 @@ Only scalar grids (such as the density grid) can be converted.
 
 .. tip::
 
-   To copy and move the generated mesh separately from the volume object, use a :doc:`collection instance </scene_layout/object/properties/instancing/collection>`.
+   To copy and move the generated mesh separately from the volume object,
+   use a :doc:`collection instance </scene_layout/object/properties/instancing/collection>`.
+
 
 Options
 =======
@@ -32,22 +34,21 @@ Resolution Mode
    Mode for how the resolution of the final mesh is controlled.
 
    Grid
-      This makes the resolution dependend on the resolution of the grid that is converted.
+      This makes the resolution depended on the resolution of the grid that is converted.
       Higher resolution grids result in a higher resolution mesh.
       In many cases, that is the most efficient mode.
 
    Voxel Amount
       Specifies the approximate resolution of the final mesh.
-      The voxel size adapts to the size of the entire volume.
+      The voxel size is adapted to the size of the entire volume.
 
    Voxel Size
-       Use a fixed resolution that does not change when the volume changes.
+      Use a fixed resolution that does not change when the volume changes.
 
 Threshold
-   Voxels with a larger value are considered to be inside the mesh.
-   All other voxels are outside.
+   Voxels with a larger value are considered to be inside the mesh and all other voxels outside.
    The mesh will be generated on the boundary of inside and outside voxels.
-   This is sometimes also called the *iso value*.
+   This is sometimes also called the "iso value".
 
 Adaptivity
    This is similar to decimating the final to reduce resolution where it is not needed.
@@ -55,10 +56,11 @@ Adaptivity
 Smooth Shading
    Enables smooth shading on the generated mesh.
 
+
 Example
 =======
 
 .. figure:: /images/modeling_modifiers_generate_volume-to-mesh_example.png
    :width: 500px
 
-   Converting a volume cloud to a mesh.
+   Converting a cloud-shaped volume to a mesh.

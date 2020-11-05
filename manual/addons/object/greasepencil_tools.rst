@@ -51,7 +51,7 @@ Straighten Stroke
 -----------------
 
 Straighten the stroke between first and last point.
-Influence can be tweaked in the redo panel.
+The influence can be tweaked in the redo panel.
 
 The scopes for this tool are:
 

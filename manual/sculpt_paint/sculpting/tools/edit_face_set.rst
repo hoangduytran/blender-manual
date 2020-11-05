@@ -17,12 +17,12 @@ Tool Settings
 =============
 
 Mode
-   The operation to apply to the Face Set.
+   The operation to apply to the face set.
 
    Grow Face Set
-      Grows the Face Sets boundary by one face based on mesh topology.
+      Grows the face sets boundary by one face based on mesh topology.
    Shrink Face Set
-      Shrinks the Face Sets boundary by one face based on mesh topology.
+      Shrinks the face sets boundary by one face based on mesh topology.
 
 Modify Hidden
-   Apply the edit operation to hidden Face Sets
+   Apply the edit operation to hidden face sets.

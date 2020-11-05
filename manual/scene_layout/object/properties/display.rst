@@ -15,7 +15,6 @@ The *Viewport Display* panel is used to enable extra display options for the 3D 
 
    Viewport Display panel.
 
-
 .. _bpy.types.Object.show:
 
 Show

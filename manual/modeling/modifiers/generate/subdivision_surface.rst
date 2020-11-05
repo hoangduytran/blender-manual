@@ -106,12 +106,12 @@ UV Smooth
       UVs and their boundaries are smoothed.
 
 Boundary Smooth
-   Controls how open boundaries/corners are smoothed.
+   Controls how open boundaries (and corners) are smoothed.
 
    All
       Smooth boundaries, including corners.
    Keep Corners
-      Smooth boundaries, but corners are kept sharp
+      Smooth boundaries, but corners are kept sharp.
 
 Use Creases
    Use the :ref:`modifiers-generate-subsurf-creases` values stored in edges to control how smooth they are made.

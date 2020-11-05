@@ -38,6 +38,7 @@ the :doc:`Brush Settings </sculpt_paint/sculpting/tool_settings/brush_settings>`
 The brush can also change depending on the currently active :doc:`tool </sculpt_paint/sculpting/tools/index>`
 to better display how that tool works.
 
+
 Usage
 =====
 

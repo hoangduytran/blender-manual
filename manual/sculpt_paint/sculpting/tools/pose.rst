@@ -24,8 +24,8 @@ Deformation Target
    Geometry
       Brush deformation displaces the vertices of the mesh.
    Cloth Simulation
-      Brush deforms the mesh by deforming the constraints of a
-      :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`.
+      Brush deforms the mesh by deforming the constraints of
+      a :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`.
 
 .. _bpy.types.Brush.pose_deform_type:
 
@@ -78,7 +78,7 @@ Pose IK Segments
 
 .. _bpy.types.Brush.use_pose_lock_rotation:
 
-Lock Rotation When Scaling
+Lock Rotation when Scaling
    When using *Scale/Translate Deformation*, do not rotate the segment; only scaling is applied.
 
 .. _bpy.types.Brush.use_pose_ik_anchored:

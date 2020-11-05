@@ -36,6 +36,7 @@ Radial X, Y, Z
 
 Tile Offset X, Y, Z
    The offset allows the option to alter the tile size along all three axes.
+   The default tile size is set to one unit.
 
 .. _bpy.types.Sculpt.symmetrize_direction:
 

@@ -23,7 +23,7 @@ Selectable
 .. _bpy.types.Object.hide_viewport:
 .. _bpy.types.Object.hide_render:
 
-Show in
+Show In
    Viewports
       The object will be displayed in the 3D Viewport.
 

@@ -614,6 +614,9 @@ This page lists definitions for terms used in Blender and this manual.
       representing a single color made up of red, green, and blue channels.
       If the image has an :term:`Alpha Channel`, the pixel will contain a corresponding fourth channel.
 
+   Point Cloud
+      A list of points in 3D space.
+
    Pole
       :term:`Vertex` where three, five, or more edges meet.
       A vertex connected to one, two, or four edges is not a pole.

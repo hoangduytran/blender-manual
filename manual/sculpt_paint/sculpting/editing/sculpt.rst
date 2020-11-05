@@ -14,9 +14,7 @@ Show & Hide
 
 Portions of the mesh can be hidden in Sculpt Mode to improve the viewport performance and
 to access parts of the mesh that would otherwise be difficult to access,
-because they are occluded by other parts.
-
-The hidden faces cannot be sculpted on.
+because they are occluded by other parts. The hidden faces cannot be sculpted on.
 Hiding is shared between Edit Mode and Sculpt Mode
 (i.e. hiding/unhiding in one mode affects the other mode too).
 

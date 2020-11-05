@@ -104,11 +104,10 @@ Localize All
 Library Reload & Relocate
 =========================
 
-From the context menu of the library items in the *Outliner*'s *Blender File* view,
-you can reload and relocate a whole library.
-
 Reloading is useful if you changed something in the library blend-file and want to see those changes
 in your current blend-file without having to re-open it.
+You can reload and relocate a whole library
+from the context menu of the library items in the *Outliner*'s *Blender File* view,
 
 Relocating allows you to reload the library from a new file path.
 This can be used to either fix a broken linked library
@@ -133,7 +132,7 @@ Make Local
 .. admonition:: Reference
    :class: refbox
 
-   :Editor:    3D View
+   :Editor:    3D Viewport
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Relations --> Make Local...`
 
@@ -154,7 +153,7 @@ Options
 The operation available from the *Outliner*'s context menu has no options,
 and only affects the selected data-block.
 
-The operation available from the *3D View* only directly affects selected objects,
+The operation available from the *3D Viewport* only directly affects selected objects,
 but it can also make local the objects' dependencies:
 
 Type
@@ -182,7 +181,7 @@ Object Rigid Body Constraints
 
 When linking objects *directly* into a blend-file, the *Rigid Body* settings
 **will not** be linked in since they are associated with their scene's world.
-As an alternative, you could link in the entire scene and set it as a :ref:`Background Set <scene-background-set>`.
+As an alternative, you can link in the entire scene and set it as a :ref:`Background Set <scene-background-set>`.
 
 
 .. _files-linked_libraries-known_limitations-compression:
@@ -190,7 +189,7 @@ As an alternative, you could link in the entire scene and set it as a :ref:`Back
 Compression & Memory Use
 ------------------------
 
-Linking to blend files with compression enabled may significantly increase memory usage while loading files.
+Linking to blend-files with compression enabled may significantly increase memory usage while loading files.
 
 Reading data on demand isn't supported with compression
 *(this only impacts load time, once loaded there is no difference in memory use)*.

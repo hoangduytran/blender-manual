@@ -6,9 +6,8 @@
 Point Cloud
 ***********
 
-Point Clouds are a special object type that is a container for points in 3D space.
-They can be used to represent 3D scans and in the future can represent particles.
-Each point can store data in a set of `Attributes`_.
+:term:`Point clouds <Point Cloud>` can be used to represent 3D scans and
+in the future can represent particles. Each point can store data in a set of `Attributes`_.
 
 .. figure:: /images/modeling_point-cloud_example.png
 

@@ -49,11 +49,11 @@ Orientation
    :doc:`Orientation </editors/3dview/controls/orientation>` of the axis to limit the filter force.
 
    Local
-      Use the Local axis to limit the force and set the gravity direction.
+      Use the local axis to limit the force and set the gravity direction.
    World
-      Use the World axis to limit the force and set the gravity direction.
+      Use the world axis to limit the force and set the gravity direction.
    View
-      Use the View axis to limit the force and set the gravity direction.
+      Use the view axis to limit the force and set the gravity direction.
 
 Cloth Mass
    Mass of each simulation particle.
@@ -68,4 +68,4 @@ Use Face Sets
 Use Collisions
    Enables the detection of collisions with other objects during the simulation.
    In order for the sculpt object to collide with object,
-   the collision object must have :doc:`Collision Physics </physics/collision>`.
+   the collision object must have :doc:`Collision Physics </physics/collision>` activated.

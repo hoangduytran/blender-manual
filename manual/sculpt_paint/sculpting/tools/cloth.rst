@@ -59,7 +59,7 @@ Simulation Falloff
 
 Pin Simulation Boundary
    Lock the position of the vertices in the simulation falloff area to avoid artifacts
-   and create a softer transition with with unaffected areas.
+   and create a softer transition with unaffected areas.
 
 .. _bpy.types.Brush.cloth_deform_type:
 
@@ -84,9 +84,9 @@ Deformation
       Simulates stretching the cloth out.
    Snake Hook
       Simulates moving the cloth without producing any artifacts in the surface
-      and create more natural looking folds than any of the other deformation modes.
-      This is accomplished by adjusting the strength of the deformation constraints per
-      brush step to avoid affecting the results of the simulation as much as possible. 
+      and creates more natural looking folds than any of the other deformation modes.
+      This is accomplished by adjusting the strength of the deformation constraints per brush step
+      to avoid affecting the results of the simulation as much as possible.
 
 .. _bpy.types.Brush.cloth_force_falloff_type:
 
@@ -119,4 +119,4 @@ Soft Body Plasticity
 Use Collisions
    Enables the detection of collisions with other objects during the simulation.
    In order for the sculpt object to collide with objects,
-   the collision object must have :doc:`Collision Physics </physics/collision>`.
+   the collision object must have :doc:`Collision Physics </physics/collision>` activated.
