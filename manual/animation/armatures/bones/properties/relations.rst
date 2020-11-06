@@ -115,22 +115,17 @@ Inherit Scale
    Full
       The bone inherits all effects of parent scaling and shear.
    Fix Shear
-      Corrects the transformation inherited from the parent to remove shear caused by non-uniform
-      parent scaling and rotation. The process preserves the bone direction, length and volume, and
-      minimally affects roll on average.
+      Full parent effects are applied to the rest state of the child, after which any shear is
+      removed in a way that preserves the bone direction, length and volume, and minimally affects
+      roll on average. The result is combined with the local transformation of the child.
 
       If the inherited scale is non-uniform, this does not prevent shear from reappearing due to
       local rotation of the child bone, or of its children.
    Aligned
       Parent scaling is inherited as if the child was oriented the same as the parent, always
       applying parent X scale over child X scale, and so on.
-
-      This mode never causes shear and is natural for connected chains like limbs and tentacles.
    Average
       Inherits a uniform scaling factor that is the total change in the volume of the parent.
-
-      This effectively keeps the uniform part of the scaling of the parent, while removing squash
-      and stretch effects. Uniform scaling never causes shear.
    None
       Ignores all scaling and shear of the parent.
    None (Legacy)
@@ -143,6 +138,30 @@ So when you scale down a bone, all its descendants are by default scaled down ac
 However, if you disable one bone's *Inherit Scale* or *Inherit Rotation*
 property in this "family", this will break the scaling propagation,
 i.e. this bone *and all its descendants* will no longer be affected when you scale one of its ancestors.
+
+.. tip::
+   The various *Inherit Scale* options are provided as tools in avoiding shear that is caused
+   by non-uniform scaling combined with parenting and rotation. There is no obvious best way
+   to achieve that, so different options are useful for different situations.
+
+   None
+      Useful for gaining full control over the scaling of the child in order
+      to e.g. manually overwrite it with constraints.
+
+   Average
+      Useful to block squash & stretch propagation between sub-rigs, while
+      allowing uniform changes in the size and volume to pass through.
+
+   Aligned
+      Can be used within bone chains, e.g. tentacles, in order to propagate
+      lengthwise scaling as lengthwise, and sideways as sideways, no matter
+      how the tentacle bends. Similar to using *None* with
+      :doc:`Copy Scale </animation/constraints/transform/copy_scale>` from parent.
+
+   Fix Shear
+      May be useful at the base of an appendage in order to reallocate squash &
+      stretch between axes based on the difference in rest pose orientations of the
+      parent and child. It behaves closest to *Full* while suppressing shear.
 
 .. list-table:: Examples of transforming parented/connected bones with Inherit Rotation disabled.
 
