@@ -42,7 +42,7 @@ Rotation
 
    Rotation Mode
       Method for calculating rotations, additional information can be found
-      `here <https://archive.blender.org/wiki/index.php/User:Pepribal/Ref/Appendices/Rotation/>`__.
+      :doc:`here </advanced/appendices/rotations>`.
 
       Euler
          The gizmo handles are aligned to the :term:`Euler` axis,
