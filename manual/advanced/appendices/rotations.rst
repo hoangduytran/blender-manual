@@ -105,6 +105,8 @@ Quaternions are a number system extending the complex numbers. They represent a 
 components are called, in Blender, X, Y, Z and W.
 
 When rotating interactively in quaternion mode, the so called norm (length) of the quaternion will remain constant.
+By definition, the norm of a quaternion equals 1.0. When you select the quaternion mode in Blender, the XWZW
+components describe a 1.0 norm quaternion.
 
 .. note::
 
