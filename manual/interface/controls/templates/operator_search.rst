@@ -42,7 +42,7 @@ Operator Search
    :class: refbox
 
    :Mode:      All Modes
-   :Menu:      :menuselection:`Edit --> Menu Search`
+   :Menu:      :menuselection:`Edit --> Operator Search`
 
 When :ref:`Developer Extras <prefs-interface-dev-extras>` are activated
 the Operator Search can be accessed from the Edit menu in the Topbar.
