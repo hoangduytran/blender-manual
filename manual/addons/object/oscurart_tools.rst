@@ -26,7 +26,7 @@ Distribute Objects
 Remove Modifiers
    Remove all modifiers in the selected objects.
 Search and Select
-   Search and select objects by there name.
+   Search and select objects by their name.
 Shapes to Objects
    Create one object for each shape key. Good for exporting to other platforms.
 Apply LRT with Linked Meshes
