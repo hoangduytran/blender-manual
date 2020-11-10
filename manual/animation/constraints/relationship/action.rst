@@ -41,6 +41,15 @@ Target
    :ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none.
    See :ref:`common constraint properties <rigging-constraints-interface-common-target>` for more information.
 
+Evaluation Time
+   This property allows objects to be driven without a constraint target
+   by interpolating between the *Action Start* and *End* frames.
+   The relative position between the start and end frame can be controlled using the value slider.
+
+   This is very helpful for more complex rigging and mechanical rigs,
+   as it means the Action constraint can be controlled directly with a
+   :doc:`Driver </animation/drivers/index>` or :ref:`Custom Property <files-data_blocks-custom-properties>`.
+
 Mix
    Specifies how the keyframed transformation from the action is combined with the existing transformation.
 
