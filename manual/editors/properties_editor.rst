@@ -110,10 +110,23 @@ Header
 
    The header of the Properties.
 
-In the header of this editor, a list of icons and text items shows the owner of the properties being edited,
-together with some dependency context if needed.
-In the example above, the material "Material" is used by the active object "Cube".
+.. _bpy.types.SpaceProperties.search_filter:
 
-By toggling on the pin icon to the right, Blender can be told to display in that editor
-only the currently shown data-block's properties, disregarding further selection changes.
-Toggle off that pin to switch back to default behavior, showing active data-block's properties.
+Display Filter :kbd:`Ctrl-F`
+   Allows you to search for a property by a string,
+   results will be highlighted with there corresponding panel also highlighted and expanded.
+   The search also works across multiple `Tabs`_; graying out tabs with no search results.
+   You can initiate a search using :kbd:`Ctrl-F` or clear a search with :kbd:`Alt-F`.
+   This filter is useful if you do not remember where a property is within the Properties.
+
+Data Context
+   Just below the header is a list of icons and text items which show the owner of the properties being edited,
+   together with some dependency context if needed.
+   In the example above, the material "Material" is used by the active object "Cube".
+
+.. _bpy.ops.buttons.toggle_pin:
+
+Toggle Pin ID
+   By toggling on the pin icon to the right, Blender can be told to display in that editor
+   only the currently shown data-block's properties, disregarding further selection changes.
+   Toggle off that pin to switch back to default behavior, showing active data-block's properties.
