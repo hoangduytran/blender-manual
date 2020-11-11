@@ -31,6 +31,12 @@ Viewport
 
 See Common Settings above.
 
+.. _bpy.types.RenderSettings.simplify_volumes:
+
+Volume Resolution
+   Resolution percentage of :doc:`volume objects </modeling/volumes/index>` in viewport.
+   This mostly affects memory usage rather than computation times.
+
 
 Render
 ======
