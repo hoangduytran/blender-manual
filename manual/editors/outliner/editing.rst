@@ -104,6 +104,11 @@ View Layer
    Disable/Enable in View Layer
       Disables/Enables the collection from the view layer.
 
+.. _bpy.ops.outliner.collection_color_tag_set:
+
+Set Color Tag
+   Assigns or clears a collection's :ref:`color tag <scene_layout-collections-color-tagging>`
+   for the selected collection.
 
 .. _bpy.ops.outliner.id_operation:
 
