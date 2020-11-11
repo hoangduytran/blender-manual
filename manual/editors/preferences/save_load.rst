@@ -96,7 +96,7 @@ Filter File Extensions
 
 Hide
    Dot File & Data-blocks
-      Hide file which start with ``.`` on File Browsers and ID selector.
+      Hide files which start with ``.`` on File Browsers and ID selector.
 
       .. hint::
 

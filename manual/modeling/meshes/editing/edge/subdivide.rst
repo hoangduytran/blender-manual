@@ -290,7 +290,7 @@ Multiple Cuts
    * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_tri-multi.png
           :width: 250px
 
-          Tri with two cuts.
+          Triangle with two cuts.
 
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_quad-multi.png
           :width: 250px
