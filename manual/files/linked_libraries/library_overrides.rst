@@ -65,6 +65,22 @@ and override all those needed to allow posing/animation of a character.
    Otherwise, some won't be automatically overridden, and manual work will be needed to fix the override.
 
 
+.. _bpy.ops.object.convert_proxy_to_override:
+
+Converting Proxies to Library Override
+======================================
+
+.. admonition:: Reference
+   :class: refbox
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Object --> Relations --> Convert Proxy to Library Override`
+
+Converts older an :doc:`Proxy </files/linked_libraries/library_proxies>` to a local override.
+This operator is used to help convert older blend-files to the new override system.
+In the future, this conversion will likely happen automatically.
+
+
 Editing an Override
 ===================
 
