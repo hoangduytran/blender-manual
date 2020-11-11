@@ -98,5 +98,6 @@ Delta Transforms
    :Panel:     :menuselection:`Properties --> Object Properties --> Transform --> Delta Transforms`
 
 Delta Transforms are simply transformations that are applied on top of the transforms described above.
+
 Delta Transforms are particularly useful in animations. For example,
 you can animate an object with the primary transforms then move them around with Delta Transforms.

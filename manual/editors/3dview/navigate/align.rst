@@ -29,7 +29,6 @@ Center View to Cursor
    Centers view to 3D cursor.
 
 View Lock to Active
-
    Centers view to the last selected active object, overriding other view alignment settings.
 
 View Lock Clear
