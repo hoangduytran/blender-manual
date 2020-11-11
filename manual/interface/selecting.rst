@@ -45,6 +45,7 @@ Any item that lies even partially within this rectangle becomes selected.
 If any item that was last active appears in the selection it will become active.
 
 For deselecting items, use :kbd:`MMB`, or :kbd:`Shift-LMB`.
+To move the selection area hold :kbd:`Ctrl-Spacebar` while moving the cursor.
 
 .. list-table:: Box Select example.
 
@@ -124,6 +125,7 @@ The shape you draw will be automatically closed by connecting a line
 from the current position back to the starting point.
 
 *Lasso Select* adds to the previous selection. For deselection, use :kbd:`Shift-Ctrl-RMB`.
+To move the selection area hold :kbd:`Ctrl-Spacebar` while moving the cursor.
 
 .. list-table:: An example of using the *Lasso Select tool* in *Vertex Select Mode*.
 
