@@ -23,9 +23,8 @@ Grid
    Show grid in orthographic side view.
 Floor
    Show the ground plane.
-
-   X/Y/Z
-      Show the X and/or Y and/or Z axis line.
+Axis
+   Show the X and/or Y and/or Z axis line.
 
 Scale
    The distance between lines in the grid/floor.
@@ -77,11 +76,16 @@ Origin (All)
 Geometry
 --------
 
+.. _bpy.types.View3DOverlay.show_wireframes:
+.. _bpy.types.View3DOverlay.wireframe_threshold:
+
 Wireframe
    Displays the mesh's face edges, similar to :ref:`Wireframe Shading <3dview-shading-rendered>`
    but displays edges on top of existing shading.
    The value slider adjusts which edges to display by only displaying wires on prominent edges.
    Lower values hide edges with angles close to 180 degrees while a value of 1 shows shows all wires.
+
+.. _bpy.types.View3DOverlay.show_face_orientation:
 
 Face Orientation
    Show the face orientation overlay. In the face orientation overlay
@@ -89,6 +93,8 @@ Face Orientation
    All faces where the face normal points away from the camera are colored red.
    With this overlay, it is easy to detect the orientation of the face normals.
 
+
+.. _bpy.types.SpaceView3D.show_reconstruction:
 
 Motion Tracking
 ---------------

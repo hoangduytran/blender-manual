@@ -1,4 +1,5 @@
 .. index:: Modeling Modifiers; Volume Displace
+.. _bpy.types.VolumeDisplaceModifier:
 
 ************************
 Volume Displace Modifier
