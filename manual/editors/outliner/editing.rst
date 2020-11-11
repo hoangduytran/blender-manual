@@ -13,8 +13,12 @@ Depending on the type of the preselected data-block(s), you will have all or par
 
 Copy/Paste
    Copy/pastes selected data-blocks.
+
+.. _bpy.ops.outliner.delete:
+
 Delete
    Deletes the selected data-block.
+
 Select, Select Hierarchy, Deselect
    Add object to current selection without making it the active one.
 
@@ -32,32 +36,71 @@ They can include collections themselves and are fully recursive.
 
    Read more about :doc:`Collections </scene_layout/collections/index>`.
 
+.. _bpy.ops.outliner.collection_new:
+
 New
    Creates a new collection.
+
+.. _bpy.ops.outliner.collection_duplicate:
+
 Duplicate Collections
    Recursively duplicates the collection including all child collections, objects, and object data.
+
+.. _bpy.ops.outliner.collection_duplicate_linked:
+
 Duplicate Linked
    Duplicate entire hierarchy keeping content linked with original.
+
 Delete Hierarchy
    Deletes the collection and removes all its child objects or collections.
    It is important to note that this only deletes the collection,
    if child objects are part of another collection they will stay in the scene collection
    and their data-blocks will not be deleted from the blend-file.
+
+.. _bpy.ops.outliner.collection_instance:
+
 Instance to Scene
    Creates a new :doc:`collection instance </scene_layout/object/properties/instancing/collection>`.
+
 Visibility
+   Controls the collection's visibility in the 3D Viewport and the final render.
+
+   .. _bpy.ops.outliner.collection_isolate:
+
    Isolate
       Hides all collections except the selected collection and any parent collections (if any exist).
+
+   .. _bpy.ops.outliner.collection_show:
+   .. _bpy.ops.outliner.collection_hide:
+
    Show/Hide
       Shows/Hides the selected collection from the :doc:`View Layer </scene_layout/view_layers/index>`.
+
+   .. _bpy.ops.outliner.collection_show_inside:
+   .. _bpy.ops.outliner.collection_hide_inside:
+
    Show/Hide Inside
       Shows/Hides all items that are a member of the selected collection, include child collections,
       from the :doc:`View Layer </scene_layout/view_layers/index>`.
+
+   .. _bpy.ops.outliner.collection_enable:
+   .. _bpy.ops.outliner.collection_disable:
+
    Enable/Disable in Viewports
       Enables/disables drawing in the :doc:`View Layer </scene_layout/view_layers/index>`.
+
+   .. _bpy.ops.outliner.collection_enable_render:
+   .. _bpy.ops.outliner.collection_disable_render:
+
    Enable/Disable in Renders
       Enables/disables visibility of the collection in renders.
+
 View Layer
+   Controls the collection's interactions with the :doc:`View Layer </render/layers/layers>`.
+
+   .. _bpy.ops.outliner.collection_exclude_clear:
+   .. _bpy.ops.outliner.collection_exclude_set:
+
    Disable/Enable in View Layer
       Disables/Enables the collection from the view layer.
 
