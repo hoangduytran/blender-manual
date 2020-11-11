@@ -76,8 +76,8 @@ Origin (All)
 Geometry
 --------
 
-.. _bpy.types.View3DOverlay.show_wireframes:
 .. _bpy.types.View3DOverlay.wireframe_threshold:
+.. _bpy.types.View3DOverlay.show_wireframes:
 
 Wireframe
    Displays the mesh's face edges, similar to :ref:`Wireframe Shading <3dview-shading-rendered>`
@@ -92,6 +92,13 @@ Face Orientation
    all faces where the face normal points towards the camera are colored blue.
    All faces where the face normal points away from the camera are colored red.
    With this overlay, it is easy to detect the orientation of the face normals.
+
+.. _bpy.types.View3DOverlay.fade_inactive_alpha:
+.. _bpy.types.View3DOverlay.show_fade_inactive:
+
+Fade Inactive Geometry
+   Fade inactive geometry using the viewport background color.
+   The value slider controls the factor of the objects are blended with the background.
 
 
 .. _bpy.types.SpaceView3D.show_reconstruction:
