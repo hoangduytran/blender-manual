@@ -18,8 +18,6 @@ Color
    Color tint of the emitted light.
 
 
-.. _light-type-point:
-.. _bpy.types.PointLight:
 
 Renderer Settings
 =================
@@ -27,6 +25,8 @@ Renderer Settings
 - :doc:`Eevee specific settings </render/eevee/lighting>`
 - :doc:`Cycles specific settings </render/cycles/light_settings>`
 
+.. _light-type-point:
+.. _bpy.types.PointLight:
 
 Point Light
 ===========
@@ -54,7 +54,7 @@ Power
 
 Radius
    When larger than zero, light will be emitted from a spherical surfaces with the specified radius.
-   Lights with larger size have softer shadows and specular highlights.
+   Lights with larger size have softer shadows and specular highlights, and they will also appear dimmer because their power is distributed over a larger area.
 
 
 .. _light-type-spot:
@@ -188,8 +188,58 @@ plus a dashed line indicating the direction of the light.
    the location of a *Sun* light does not affect the rendered result.
 
 Strength
-   Strength of the lights in Watts per square meter.
+   Strength of the lights in Watts per square meter. Typical values are around 250 for an overcast day and 1000 or more for direct sunlight.
+   See more details at :ref:`Power of Lights <power-of-lights>`. 
 Angle
    The size of the sun light according to its
    `angular diameter <https://en.wikipedia.org/wiki/Angular_diameter#Use_in_astronomy>`__
    as seen from earth.
+
+.. _power-of-lights:
+
+Power of Lights
+===============
+
+The Power of Sun Lights is specified in Watts per square meter.
+
+The Power of Point Lights, Spot Lights, and Area Lights is specified in Watts.
+But this is not the electrical Watts that consumer light bulbs are rated at.
+It is `Radiant Flux or Radiant Power <https://en.wikipedia.org/wiki/Radiant_flux>`__ which is also measured in Watts.
+It is the energy radiated from the light in the form of visible light.
+
+If you want to set the Power to real world values, you have to convert the wattage of consumer bulbs or LED lights to radiant flux, but it is not a straightforward process.
+The wattage of bulbs means the electrical power required to power them.
+LED lights have a "watt equivalent" which is neither the electrical power they require nor the amount of light they put out.
+Some consumer lights specify `lumens or luminous flux <https://en.wikipedia.org/wiki/Lumen_(unit)>`__ which is the radiant flux weighted with the wavelengths perceived by the human eye.
+
+To save you from doing the conversion, here is a table of typical Power values for Point, Spot, and Area Lights.
+
+========================  =========   =====================
+Real world light          Power       Suggested Light Type
+========================  =========   =====================
+Candle                    0,05 W      Point
+800 lm LED bulb           2,1 W       Point
+1000 lm Light bulb        2,9 W       Point
+1500 lm PAR38 Floodlight  4W          Area, Disk
+2500 lm Fluorescent Tube  4,5 W       Area, Rectangle
+5000 lm Car headlight     22 W        Spot, size 125 deg.
+========================  =========   =====================
+
+And here is a table of typical Strength values for Sun Lights.
+
+============  =====================
+Sun type      Strength
+============  =====================
+Direct Sun    1000 W/m\ :sup:`2`
+Cloudy Sun    500 W/m\ :sup:`2`
+Overcast Sun  200 W/m\ :sup:`2`
+Moonlight     0,001 W/m\ :sup:`2`
+============  =====================
+
+These values will likely produce much brighter or dimmer lights than you would expect, because our eyes automatically adjust while a render engine does not.
+Therefore, to compensate, adjust the Exposure in :menuselection:`Render --> Film`.
+
+To get realistic results, remember to also set the light size and color to realistic values.
+The color of your lights will also influence how bright they seem.
+If you leave the power unchanged, a green light will seem the brightest, a red will seem darker and blue will seem the darkest. Therefore, you might want to manually compensate for these perceived differences.
+
