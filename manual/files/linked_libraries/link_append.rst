@@ -49,6 +49,8 @@ Active Collection
 Instance Collections
    This option instantiates the linked collection as an object, adding it to the active scene.
    Otherwise, the linked collection is directly added to the active view layer.
+Instance Object Data
+   Create instances for object data which are not referenced by any objects.
 
 
 .. _bpy.ops.wm.append:
@@ -93,6 +95,8 @@ Active Collection
 Instance Collections
    This option instantiates the linked collection as an object, adding it to the active scene.
    Otherwise, the linked collection is directly added to the active view layer.
+Instance Object Data
+   Create instances for object data which are not referenced by any objects.
 Fake User
    Defines the appended data-block as :ref:`Protected <data-system-datablock-fake-user>`.
 Localize All
