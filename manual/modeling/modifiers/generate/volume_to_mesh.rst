@@ -1,5 +1,5 @@
 .. index:: Modeling Modifiers; Volume to Mesh
-.. _bpy.types.MeshToVolumeModifier:
+.. _bpy.types.VolumeToMeshModifier:
 
 ***********************
 Volume to Mesh Modifier

@@ -43,8 +43,6 @@ Keymap
 Interface Controls
 ==================
 
-.. _bpy.ops.buttons:
-
 Buttons and Controls
 --------------------
 
