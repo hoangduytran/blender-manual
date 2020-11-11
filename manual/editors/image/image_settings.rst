@@ -31,6 +31,8 @@ Single Image
 Still image or a single frame.
 
 
+.. _image-sequence:
+
 Image Sequence
 ^^^^^^^^^^^^^^
 
