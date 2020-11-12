@@ -105,8 +105,8 @@ Quaternions are a number system extending the complex numbers. They represent a 
 components are called, in Blender, X, Y, Z and W.
 
 When rotating interactively in quaternion mode, the so called norm (length) of the quaternion will remain constant.
-By definition, the norm of a quaternion equals 1.0. When you select the quaternion mode in Blender, the XYZW
-components describe a 1.0 norm quaternion.
+By definition, the norm of a quaternion equals 1.0 (that's a **normalized** quaternion). When you select the
+quaternion mode in Blender, the XYZW components describe a normalized quaternion.
 
 .. note::
 
@@ -135,8 +135,10 @@ Once we have calculated the components of the normalized quaternion, the relatio
 is as follows:
 
 * X, Y and Z mean exactly the same as in axis-angle: they just define an axis around which the rotation takes place.
-* W can be used to retrieve the actual rotation around the defined angle. The following formula applies:
-  :math:`W = \cos(\frac{a}{2})`, where *a* is actually the rotation angle we are looking for. 
+* W can be used to retrieve the actual rotation around the defined angle. The following formula applies (provided
+  that the *quaternion is normalized*):
+  :math:`W = \cos(\frac{a}{2})`, where *a* is actually the rotation angle we are looking for. That is:
+  :math:`a = 2 \arccos{W}`.
 
 Other considerations
 ====================
