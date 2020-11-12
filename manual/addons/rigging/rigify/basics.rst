@@ -203,9 +203,11 @@ a Python script named ``rig_ui.py``.
 Library Linking
 ===============
 
-When linking a rig into another file, you generally want to create a group that includes the generated rig,
-the character mesh, and the "WGT-" objects. You do not need to include the meta-rig.
-You then link in the group, make a group instance, and make the rig proxy.
+When linking a rig into another file, you generally want to create a collection that includes the 
+generated rig and the character mesh, with another nested and hidden collection for the "WGT-" objects. 
+You do not need to include the meta-rig. You then link in the collection, and either run Make Proxy 
+and select the rig object, or run Make Library Override.
 
-You also need to separately link in the ``rig_ui.py`` text data-block.
-Otherwise the rig UI will not appear in the Sidebar.
+The ``rig_ui.py`` text data-block responsible for the rig UI will be automatically linked along with 
+the rig, you don't need to link it separately. However, the script will not run until you run it
+manually from the text editor or save and restart Blender.
