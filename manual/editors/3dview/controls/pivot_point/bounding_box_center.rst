@@ -42,10 +42,10 @@ When a single object is selected, the rotation takes place around its origin.
 .. figure:: /images/editors_3dview_controls_pivot-point_bounding-box-center_object-mode.png
    :align: center
 
-   Shows the location of the bounding box (left) pivot point compared to the median point (right).
+   Shows the location of the bounding box (right) pivot point compared to the median point (left).
 
 The image above (left) shows that when multiple objects are selected,
-the pivot point is calculated based on the bounding box of all the selected objects.
+the pivot point is calculated based on the location of all the selected objects.
 More precisely, the centers of objects are taken into account.
 
 

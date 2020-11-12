@@ -22,7 +22,7 @@ Example
 =======
 
 The image below shows the difference when rotating an object
-around the median point (left) and around the 3D cursor (right).
+around the median point (right) and around the 3D cursor (left).
 
 .. figure:: /images/editors_3dview_controls_pivot-point_3d-cursor_example.png
    :align: center
