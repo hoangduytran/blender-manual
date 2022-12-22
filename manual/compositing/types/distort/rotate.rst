@@ -29,7 +29,7 @@ Filter
 
    :Nearest: No interpolation, uses nearest neighboring pixel.
    :Bilinear: Simple interpolation between adjacent pixels.
-   :Bicubic: Highest quality interpolation.
+   :Bicubic: Highest quality interpolation. :guilabel:`CPU Compositor Only`
 
 
 Outputs

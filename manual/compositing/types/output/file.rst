@@ -10,6 +10,8 @@ File Output Node
    :align: right
    :alt: File Output Node.
 
+:guilabel:`CPU Compositor Only`
+
 This node writes out an image, for each frame range specified,
 to the filename entered, as part of a frameset sequence.
 

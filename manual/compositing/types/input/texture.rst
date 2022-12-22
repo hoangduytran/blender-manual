@@ -9,6 +9,8 @@ Texture Node
    :align: right
    :alt: Texture Node.
 
+:guilabel:`CPU Compositor Only`
+
 The Texture node makes 3D textures available to the Compositor.
 
 

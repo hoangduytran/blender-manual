@@ -9,6 +9,8 @@ Anti-Aliasing Node
    :align: right
    :alt: Anti-Aliasing Node.
 
+:guilabel:`CPU Compositor Only`
+
 The Anti-Aliasing node removes distortion artifacts around edges known as aliasing.
 
 

@@ -9,6 +9,8 @@ Map UV Node
    :align: right
    :alt: Map UV node.
 
+:guilabel:`CPU Compositor Only`
+
 With this node objects can be "re-textured" after they have been rendered.
 
 To apply a texture to individual enumerated objects

@@ -9,6 +9,8 @@ Mask Node
    :align: right
    :alt: Mask Node.
 
+:guilabel:`CPU Compositor Only`
+
 The Mask node can be used to select a :doc:`Mask data-block </movie_clip/masking/index>`.
 This node can be used with other nodes, for example to Invert, Multiply or Mix, or used as a factor input.
 

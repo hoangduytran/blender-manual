@@ -9,6 +9,8 @@ Color Space Node
    :align: right
    :alt: Color Space Node.
 
+:guilabel:`CPU Compositor Only`
+
 The *Color Space Node* converts images from one :term:`color spaces <Color Space>`.
 
 .. note::

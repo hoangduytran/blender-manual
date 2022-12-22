@@ -9,6 +9,8 @@ Z Combine Node
    :align: right
    :alt: Z Combine Node.
 
+:guilabel:`CPU Compositor Only`
+
 The Z Combine node combines two images based on their Z-depth maps.
 It overlays the images using the provided Z values to
 detect which parts of one image are in front of the other.

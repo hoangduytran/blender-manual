@@ -33,6 +33,10 @@ Wrapping
 
    None, X Axis, Y Axis, Both Axis
 
+.. note::
+
+   Individual axis wrapping is only supported in the CPU compositor.
+
 
 Outputs
 =======

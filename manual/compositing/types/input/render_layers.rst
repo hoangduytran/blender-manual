@@ -48,3 +48,9 @@ Alpha
 
 Depending on the Render passes that are enabled, other sockets are available.
 See :doc:`render passes </render/layers/passes>`.
+
+.. note::
+
+   In the viewport compositor, only the Image and Alpha outputs are supported, where the Image output
+   is the viewport pass and the Alpha output is the alpha channel of the viewport pass. The rest of
+   the passes return a zero value, a zero vector, or a transparent color depending on their type.

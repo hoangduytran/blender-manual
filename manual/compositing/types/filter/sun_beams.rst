@@ -9,6 +9,8 @@ Sun Beams Node
    :align: right
    :alt: Sun Beams Node.
 
+:guilabel:`CPU Compositor Only`
+
 The Sun Beams node provides a computationally cheap way of
 creating the name giving effect based on the image brightness alone.
 
