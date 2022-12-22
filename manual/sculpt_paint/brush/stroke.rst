@@ -3,10 +3,8 @@
 Stroke
 ******
 
-The stroke settings define the behavior of the sculpted/painted stroke.
-Any other brush behavior and effect is applied on top of the stroke.
-
 .. figure:: /images/sculpt-paint_brush_stroke_stroke-panel.png
+   :align: right
 
    Stroke panel.
 
@@ -20,9 +18,7 @@ Stroke Method :kbd:`E`
       .. clear
 
    :Dots:
-      Apply paint on each mouse move step. This is regardless of their distance to each other, 
-      and instead depends on the stroke speed. 
-      This means that a slower stroke will have more accumulative strength applied.
+      Apply paint on each mouse move step.
    :Drag Dot:
       Leaves only one dab on the canvas which can be placed by dragging.
    :Space:
@@ -37,11 +33,13 @@ Stroke Method :kbd:`E`
    :Airbrush:
       Flow of the brush continues as long as the mouse click is held (spray),
       determined by the *Rate* setting.
+      With other methods the brush only modifies the color when the brush changes its location.
+      This option is not available for the *Grab* sculpting brush.
 
       .. _bpy.types.Brush.rate:
 
       Rate
-         Interval for how frequent the brush is applied during the stroke.
+         Interval between paints for airbrush.
    :Anchored:
       Creates a single dab at the brush location.
       Clicking and dragging will resize the dab diameter.
@@ -66,26 +64,32 @@ Stroke Method :kbd:`E`
 
          .. _bpy.ops.paintcurve.new:
 
-      - **Add Points**
-         You can define additional curve control points by using :kbd:`Ctrl-RMB`.
-         The handles can be defined by dragging the mouse.
-         The stroke flows in the direction of the first control point to the second control point, and so on.
-      - **Transforming Points**
-         The control points and handles can be dragged with :kbd:`RMB` (In right click select with :kbd:`LMB`).
-         To make sure that the handles of a control point are symmetrical,
-         drag them using :kbd:`Shift-RMB`.
-         A few transform operators are supported such as moving(:kbd:`G`), rotating(:kbd:`R`) and scaling (:kbd:`S`).
+         - **Add Points:**
+           Use :kbd:`Ctrl-RMB` to create the initial control point of the curve.
+           You can define additional curve control points by using :kbd:`Ctrl-RMB`.
+           The handles can be defined by dragging the mouse.
+           The stroke flows in the direction of the first control point to the second control point.
+           If another control point is added after the second control point,
+           instead of extending it from the first control point in a different direction,
+           it will become the initial control point,
+           and thus the stroke still flows in the direction of the first to the second.
+
+         - **Transforming Points:**
+           The control points and handles can be dragged with :kbd:`LMB`.
+           To make sure that the handles of a control point are symmetrical,
+           drag them using :kbd:`Shift-RMB`.
+           A few transform operators are supported such as moving, scaling and rotating.
 
          .. _bpy.ops.paintcurve.select:
 
-      - **Selection**
-         The handles can be selected individually by using :kbd:`LMB` (In right click select with :kbd:`RMB`),
-         extend the selection by :kbd:`Shift-LMB` and deselect/select all by using :kbd:`A`.
+         - **Selection:**
+           The handles can be selected individually by using :kbd:`RMB`,
+           extend the selection by :kbd:`Shift-RMB` and deselect/select all by using :kbd:`A`.
 
          .. _bpy.ops.paintcurve.delete_point:
 
-      - **Delete Points :kbd:`X`**
-         To delete a curve point, use :kbd:`X`.
+         - **Delete Points :kbd:`X`:**
+           To delete a curve point, use :kbd:`X`.
 
       .. _bpy.ops.paintcurve.draw:
 
@@ -101,13 +105,13 @@ Spacing Distance :guilabel:`Sculpt Mode Only`
    :View:
       Calculates the brush spacing relative to the view.
    :Scene:
-      Calculates the brush spacing relative to all three dimensions of the scene using the stroke location.
-      This avoids artifacts when sculpting across curved surfaces and keeps the spacing much more consistent. 
+      Calculates the brush spacing relative to the scene using the stroke location.
+      This avoids artifacts when sculpting across curved surfaces.
 
 .. _bpy.types.Brush.use_space_attenuation:
 
 Adjust Strength for Spacing
-   Keep the brush strength consistent, even if the spacing changes.
+   Attenuate the brush strength according to spacing.
    Available for the *Space*, *Line*, and *Curve* stroke methods.
 
 .. _bpy.types.Brush.dash_ratio:
@@ -127,7 +131,7 @@ Dash Length
 .. _bpy.types.Brush.html#bpy.types.Brush.jitter:
 
 Jitter
-   Jitter the position of each step in the brush stroke.
+   Jitter the position of the brush while painting.
 
    .. _bpy.types.Brush.use_pressure_jitter:
 
@@ -141,9 +145,9 @@ Jitter Unit
    Controls how the brush *Jitter* is measured.
 
    :View:
-      The *Jitter* is relative to the view direction i.e. "screen space". 
+      The *Jitter* is measured based on how the cursor appears on the monitor i.e. "screen space".
    :Scene:
-      The *Jitter* is measured relative to all three dimensions of the scene.
+      The *Jitter* is measured based on real world units.
       The unit type and scaling can be configured in the :ref:`Scene Units <bpy.types.UnitSettings>`.
 
 .. _bpy.types.Paint.input_samples:
@@ -158,8 +162,9 @@ Stabilize Stroke
 ================
 
 *Stabilize Stroke* makes the stroke lag behind the cursor
-and creates a smoothed curve to the path of the cursor.
-This can be enabled pressing :kbd:`Shift S` or by clicking the checkbox found in the header.
+and applies a smoothed curve to the path of the cursor.
+This can be enabled temporary by holding :kbd:`Shift` while painting
+or permanently by clicking the checkbox found in the header.
 
 .. _bpy.types.Brush.smooth_stroke_radius:
 

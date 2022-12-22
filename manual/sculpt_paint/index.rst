@@ -11,7 +11,6 @@
 
    introduction.rst
    brush/index.rst
-   selection_visibility.rst
    navigation.rst
 
 

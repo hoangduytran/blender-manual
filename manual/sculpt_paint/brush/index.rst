@@ -16,8 +16,8 @@ Brush Settings
    :maxdepth: 1
 
    brush.rst
-   brush_settings.rst
    texture.rst
+   texture_mask.rst
    stroke.rst
    falloff.rst
    cursor.rst

@@ -3,20 +3,11 @@
 Toolbar
 *******
 
-The amount of tools in sculpt mode is very extensive. 
-This is an overview of all of them, categorized by their general functions.
-
-Add/Subtract Brushes
-====================
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_add_subt_brushes.png
+.. figure:: /images/sculpt-paint_sculpting_toolbar_brushes.png
    :align: right
 
-Recognizable by their blue icon and cursor. 
-These brushes generally push vertices outwards and inwards.
-
 :doc:`/sculpt_paint/sculpting/tools/draw`
-   Moves vertices outward or inward based on the average normal.
+   Moves vertices inward or outward based on the average normal.
 
 :doc:`/sculpt_paint/sculpting/tools/draw_sharp`
    Moves vertices inward or outward based the original coordinates
@@ -40,15 +31,6 @@ These brushes generally push vertices outwards and inwards.
 :doc:`/sculpt_paint/sculpting/tools/crease`
    Creates sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.
 
-Contrast Brushes
-================
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_contrast_brushes.png
-   :align: right
-
-Recognizable by their red icon and cursor. 
-These brushes generally flatten or heighten the contrast of the surface.
-
 :doc:`/sculpt_paint/sculpting/tools/smooth`
    Eliminates irregularities in the mesh by averaging the positions of the vertices.
 
@@ -63,15 +45,6 @@ These brushes generally flatten or heighten the contrast of the surface.
 
 :doc:`/sculpt_paint/sculpting/tools/multiplane_scrape`
    Scrapes the mesh with two angled planes at the same time, producing a sharp edge between them.
-
-Transform Brushes
-=================
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_transform_brushes.png
-   :align: right
-
-Recognizable by their yellow icon and cursor.
-These brushes generally move, pinch and magnify the mesh.
 
 :doc:`/sculpt_paint/sculpting/tools/pinch`
    Pulls vertices towards the center of the brush.
@@ -104,15 +77,6 @@ These brushes generally move, pinch and magnify the mesh.
 :doc:`/sculpt_paint/sculpting/tools/boundary`
    Transforms and deforms the mesh boundaries.
 
-General Brushes
-===============
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_general_brushes.png
-   :align: right
-
-No clear color assignment.
-These brushes are general purpose brushes or specific.
-
 :doc:`/sculpt_paint/sculpting/tools/cloth`
    Simulates cloth that can be sculpted.
 
@@ -131,28 +95,11 @@ These brushes are general purpose brushes or specific.
 :doc:`/sculpt_paint/sculpting/tools/multires_displacement_smear`
    Deforms displacement information applied on a Multiresolution modifier.
 
-Painting Brushes
-================
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_paint.png
-   :align: right
-
-Recognizable by their green icon.
-These brushes are used for painting color attributes within sculpt mode.
-
 :doc:`/sculpt_paint/sculpting/tools/paint`
    Paints on the active color attribute.
 
 :doc:`/sculpt_paint/sculpting/tools/smear`
    Smears the colors of the active color attribute.
-
-Gesture Tools
-=============
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_gestures.png
-   :align: right
-
-General gesture tools to apply an operation via box, lasso and line shapes.
 
 :doc:`/sculpt_paint/sculpting/tools/box_trim`
    Creates a mask based on box select.
@@ -178,14 +125,6 @@ General gesture tools to apply an operation via box, lasso and line shapes.
 :doc:`/sculpt_paint/sculpting/tools/line_project`
    Flattens the geometry along a drawn line.
 
-Filter Tools
-============
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_filters.png
-   :align: right
-
-Tools for applying effects on the entire unmasked and visible mesh.
-
 :doc:`/sculpt_paint/sculpting/tools/mesh_filter`
    Applies a deformation to all vertices in the mesh at the same time.
 
@@ -195,38 +134,22 @@ Tools for applying effects on the entire unmasked and visible mesh.
 :doc:`/sculpt_paint/sculpting/tools/color_filter`
    Changes the active color attribute on all vertices in the mesh at the same time.
 
-Single Click Tools
-==================
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_singleclick.png
-   :align: right
-
-Simpler tools that apply an operation on surfaces that are clicked on.
-
 :doc:`/sculpt_paint/sculpting/tools/edit_face_set`
    Modifies the face set under the cursor.
 
 :doc:`/sculpt_paint/sculpting/tools/mask_by_color`
    Creates a mask from the color attribute. Click on any color on the mesh to create a new mask.
 
-General Tools
-=============
-
-.. figure:: /images/sculpt-paint_sculpting_toolbar_general.png
-   :align: right
-
-General transform and annotate tools like in other modes.
-
-:doc:`Move </sculpt_paint/sculpting/tools/transforms>`
+Move
    Translation tool.
 
-:doc:`Rotate </sculpt_paint/sculpting/tools/transforms>`
+Rotate
    Rotation tool.
 
-:doc:`Scale </sculpt_paint/sculpting/tools/transforms>`
+Scale
    Scale tool.
 
-:doc:`Transform </sculpt_paint/sculpting/tools/transforms>`
+Transform
    Tool to adjust the objects translation, rotations and scale.
 
 :ref:`Annotate <tool-annotate-freehand>`

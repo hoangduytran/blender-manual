@@ -8,9 +8,19 @@ Remesh
    :Mode:      All Paint Modes
    :Header:    :menuselection:`Tool Settings --> Remesh`
    :Panel:     :menuselection:`Sidebar --> Tool --> Remesh`
-   :Shortcut:  :kbd:`Ctrl-R`
+   :Shortcut:  :kbd:`Ctrl-R` (Voxel), :kbd:`Ctrl-Alt-R` (Quadriflow)
 
-For a general explanation to remeshing, visit the :doc:`Introduction </sculpt_paint/sculpting/introduction/adaptive>`.
+Remeshing is a technique that automatically rebuilds the geometry with a more uniform topology.
+Remeshing can either add or remove the amount of topology depending on a defined resolution.
+This technique is especially useful for :doc:`sculpting </sculpt_paint/sculpting/index>`,
+to generate better topology after blocking out the initial shape.
+
+The Voxel Remesher uses an OpenVDB to generate a new manifold mesh from the current geometry.
+It produces a mesh with perfectly even distributed topology and
+it does not have any performance penalty once the new mesh is calculated.
+This makes the voxel remesher great for sculpting has it is possible to
+sculpt at a much higher level of detail than using other features
+like dyntopo which often adds more performance overhead.
 
 Voxel Size :kbd:`Shift-R`
    The resolution or the amount of detail the remeshed mesh will have.

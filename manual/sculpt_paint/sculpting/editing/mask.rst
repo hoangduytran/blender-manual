@@ -5,13 +5,21 @@
 Mask
 ****
 
-This page details the mask related hotkey operators and menu operators in sculpt mode.
-Other related information can also be found at the bottom of the page.
+Masking to control which areas of the mesh are influenced by sculpting.
+
+.. figure:: /images/sculpt-paint_sculpting_editing_mask_example.jpg
+
+   Black part is masked.
+
+
+Brush
+=====
+
+To edit the mask, select the *Mask Brush* from the Brush panel.
+
 
 Editing
-========
-
-.. a screenshot of the menu
+=======
 
 .. reference::
 
@@ -19,10 +27,9 @@ Editing
    :Menu:      :menuselection:`Mask`
    :Shortcut:  :kbd:`A`
 
-Masks can be edited across all visible faces.
-Using :kbd:`A` opens a pie menu to choose the most common operations.
+Masks can be edited across the entire model.
+Using :kbd:`A` opens a pie menu to choose different operations.
 
-.. _mask_invert:
 
 Invert Mask
 -----------
@@ -33,11 +40,8 @@ Invert Mask
    :Menu:      :menuselection:`Mask --> Invert Mask`
    :Shortcut:  :kbd:`Ctrl-I`
 
-Inverts the visible mask. 
-This is often useful because sometimes the masked vertices are the surfaces you want to sculpt/paint.
-In that case it is very useful to mask and then invert. 
+Inverts an existing mask.
 
-.. An example image of this workflow with lasso masking
 
 .. _bpy.ops.paint.mask_flood_fill:
 
@@ -49,10 +53,8 @@ Fill Mask
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Mask --> Fill Mask`
 
-Fully masks the entire visible geometry.
-Alternatively it is also common to invert unmasked geometry to achieve the same effect. 
+Fills the whole mask with a value of 1.
 
-.. _mask_clear:
 
 Clear Mask
 ----------
@@ -63,7 +65,7 @@ Clear Mask
    :Menu:      :menuselection:`Mask --> Clear Mask`
    :Shortcut:  :kbd:`Alt-M`
 
-Removes the mask on all visible vertices. To completely remove the mask data, see `Clear Sculpt-Mask Data`_.
+Fills the mask with a value of 0. To completely remove the mask data, see `Clear Sculpt-Mask Data`_.
 
 
 .. _bpy.ops.paint.mask_box_gesture:
@@ -77,8 +79,8 @@ Box Mask
    :Menu:      :menuselection:`Mask --> Box Mask`
    :Shortcut:  :kbd:`B`
 
-Works like the the :doc:`Box Mask </sculpt_paint/sculpting/tools/box_mask>` tool, it creates a rectangular mask region.
-Hold :kbd:`Shift` or press :kbd:`MMB` to clear the mask of the selected region.
+Works like the *Box Select* tool, it creates a rectangular mask region.
+Hold :kbd:`Shift` to clear the mask of the selected region.
 
 
 .. _bpy.ops.paint.mask_lasso_gesture:
@@ -92,13 +94,12 @@ Lasso Mask
    :Menu:      :menuselection:`Mask --> Lasso Mask`
    :Shortcut:  :kbd:`Shift-Ctrl-LMB`
 
-Can be used to create a free-form mask, similar to the :doc:`Lasso Mask </sculpt_paint/sculpting/tools/box_mask>` tool.
-This is very commonly used.
+Can be used to create a free-form mask, similar to the *Lasso Select* tool.
 
 .. tip::
 
-   To clear the mask of areas with the *Lasso Mask*, first invert the mask,
-   use *Lasso Mask*, and then invert the mask back.
+   To clear the mask of areas with the *Lasso Mask* tool, first invert the mask,
+   apply the *Lasso Mask*, and then invert the mask back.
 
 
 .. _bpy.ops.sculpt.mask_filter:
@@ -106,31 +107,26 @@ This is very commonly used.
 Mask Filters
 ------------
 
-.. needs visual examples
-
 .. reference::
 
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Mask --> Mask Filters`
 
-Mask filters are operations that are applied to the whole mask.
+Mask filters are operations that are applied to the whole paint mask.
 
 Type
    Smooth/Sharpen Mask
-      Changes the sharpness of the mask edge.
+      Changes the crispness of the mask edge.
    Grow/Shrink Mask
-      Further grow or shrink the mask along the surface of the mesh.
+      Changes the size of the mask.
    Increase/Decrease Contrast
       Changes the contrast of the mask.
 
-In the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>` panel there are further options.
-
 Iterations
-   The number of times the filter is applied.
+   The number of times that the filter is going to be applied.
 
 Auto Iteration Count
    Use an automatic number of iterations based on the number of vertices of the sculpt.
-   Disable this option to set the Iterations manually.
 
 
 .. _bpy.ops.sculpt.mask_expand:
@@ -138,10 +134,6 @@ Auto Iteration Count
 
 Expand Mask by Topology
 -----------------------
-
-.. needs visual examples
-
-.. everything below this still needs rewrites
 
 .. reference::
 
@@ -333,7 +325,6 @@ Per Loose Mask
 
 .. _bpy.types.Sculpt.show_mask:
 .. _bpy.types.View3DOverlay.sculpt_mode_mask_opacity:
-.. _Mask Display Settings:
 
 Display Settings
 ================

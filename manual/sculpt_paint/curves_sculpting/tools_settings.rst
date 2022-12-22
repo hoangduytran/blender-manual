@@ -3,8 +3,6 @@
 Common Settings
 ***************
 
-See more at :doc:`Brush Settings </sculpt_paint/brush/brush_settings>`
-
 Stroke
 ======
 
