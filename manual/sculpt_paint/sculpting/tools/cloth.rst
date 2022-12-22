@@ -9,12 +9,9 @@ Cloth
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Cloth`
 
-The Cloth brush uses a simplified :doc:`Cloth Solver </physics/cloth/index>`
-to simulate cloth physics on the mesh under the brush.
-:ref:`Masked <sculpt-mask-menu>` vertices are :doc:`pinned </physics/cloth/settings/shape>` in the simulation,
-and it applies the sculpt :ref:`gravity <bpy.types.Sculpt.gravity>` directly in the solver.
-Note, using a relatively small brush makes the solver's calculations much faster,
-larger brush sizes might be too slow to get a usable brush.
+This brush simulates cloth physics on the mesh under the brush cursor.
+Note, using a relatively small brush size makes the calculations much faster,
+while larger brush sizes might be too slow to get a usable brush.
 
 
 Brush Settings

@@ -10,13 +10,10 @@ Dyntopo
    :Panel:     :menuselection:`Sidebar --> Tool --> Dyntopo`
    :Shortcut:  :kbd:`Ctrl-D`
 
-Dynamic topology (aka dyntopo) is a dynamic tessellation sculpting method,
-adds and removes details on-the-fly, whereas regular sculpting only affects the shape of a mesh.
-This makes it possible to sculpt complex shapes out of a simple mesh,
-rather than just adding details onto a modeled base mesh.
-
-Dyntopo can be toggled with the checkbox in the header or with :kbd:`Ctrl-D`.
+Dynamic Topology (aka Dyntopo) can be toggled with the checkbox in the header or with :kbd:`Ctrl-D`.
 With dynamic topology active, most brushes will subdivide the mesh during the stroke.
+
+For a general explanation of dynamic topology, visit the :doc:`Introduction </sculpt_paint/sculpting/introduction/adaptive>`.
 
 .. _bpy.types.Sculpt.detail_size:
 .. _bpy.types.Sculpt.constant_detail_resolution:
@@ -74,19 +71,3 @@ Detail Flood Fill
 Smooth Shading
    Toggles whether mesh faces are smooth or flat-shaded.
    In dynamic-topology mode all faces have the same type of shading.
-
-
-.. _bpy.types.Brush.topology_rake_factor:
-
-.. rubric:: Topology Rake
-
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Panel:     :menuselection:`Tool Settings --> Brush --> Topology Rake`
-
-*Topology Rake* automatically aligns mesh edges to the brush direction
-to generate cleaner topology and define sharp features.
-*Topology Rake* can have a severe performance impact so it works best on low-poly meshes.
-
-.. figure:: /images/sculpt-paint_sculpting_tool-settings_dyntopo_topology-rake.jpg

@@ -56,8 +56,6 @@ Mesh Boundary
    Vertices that are part of open boundary edges are not affected.
    This also includes boundary edges to hidden faces.
 
-   .. _bpy.types.Brush.automasking_boundary_edges_propagation_steps:
-
    Propagation Steps
       Increases the soft gradient towards the auto-masked boundary edges.
       Each step iterates the distance one edge further.
@@ -73,25 +71,18 @@ Face Sets Boundary
 
 .. _bpy.types.Sculpt.use_automasking_cavity:
 
-Cavity
-   Vertices that are the peaks of the surface curvature are not affected.
-   While this auto-mask is primarily meant for painting,
+Cavity  
+   Vertices that are the peaks of the surface curvature are not affected. While this auto-mask is primarily meant for painting, 
    it can also be used for regular sculpting.
-
-   .. _bpy.types.Sculpt.automasking_cavity_factor:
 
    Factor
       The overall contrast of how strong the cavity is applied. The value of 0.5 is the default,
       but better results can also be achieved on 0.2 if a Custom Curve is used as well.
 
-   .. _bpy.types.Sculpt.automasking_cavity_blur_steps:
-
    Blur
       The number of times the cavity mask is blurred. A value of 0 will give the pure cavity auto-mask.
       Anything higher than 6 will likely have a less visible effect and decrease performance.
       Even though the value is capped to 10, it can be increased up to 25 if typing in the value.
-
-   .. _bpy.types.Sculpt.use_automasking_custom_cavity_curve:
 
    Custom Curve
       Use a custom curve to fine tweak the cavity auto-mask.
@@ -117,19 +108,13 @@ View Normal
    :doc:`Brush Setting </sculpt_paint/sculpting/tool_settings/brush_settings>`, to only affect visible geometry.
    The advantage of this auto-mask is that it has more options and works on sculpt mode as a whole.
 
-   .. _bpy.types.Sculpt.use_automasking_view_occlusion:
-
    Occlusion
       Change the View Normal behavior to only affect vertices that are not occluded by other faces.
       This setting is incompatible with the other Limit and Falloff sliders.
       It also causes a much slower performance.
 
-   .. _bpy.types.Sculpt.automasking_view_normal_limit:
-
    Limit
       Determines the range of angles that will be affected. 90 degrees encompasses all that is visible.
-
-   .. _bpy.types.Sculpt.automasking_view_normal_falloff:
 
    Falloff
       Extends the angular range of the Limit slider with a soft falloff gradient.
