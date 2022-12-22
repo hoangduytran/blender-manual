@@ -1,61 +1,75 @@
 .. _bpy.types.BrushTextureSlot:
 
-*******
-Texture
-*******
+***********************
+Texture & Texture Mask
+***********************
+
+This page covers both the Texture and Texture Mask panels.
+Add a Texture to the brush to control the color of the brush. 
+A Texture Mask is used to control the strength of the brush.
+Both the Texture and Texture Mask offer the same settings.
 
 .. figure:: /images/sculpt-paint_brush_texture_ui-example.jpg
    :width: 580px
 
-   Texture options and example.
-
-Use the texture data-block at the bottom of the paint panel to select a preloaded image or
-procedural texture to use as your brush pattern.
-
-Note that in order to use it, you must have a placeholder material defined,
-and that particular texture defined using the Material and Texture buttons.
-It is not necessary to have that material or texture applied to any mesh anywhere;
-it must only be defined.
-
-The example to the right shows the effects of painting with a Voronoi texture.
+   Example of the Texture panel and a textured brush in use.
 
 Texture
    In paint modes the texture is used as a color source,
    while for sculpting it is used to determine the strength of the brush.
 
-.. _bpy.types.BrushTextureSlot.map_mode:
+   Any image texture or procedural texture can be assigned in the texture and texture mask panels.
+   Textures can be further edited in the properties editor (Click the properties icon for quick access)
 
-Mapping
-   Sets the way the texture is applied to the brush stroke.
+.. tip::
+   It's recommended to load all needed images ahead of time as image textures into Blender.
+   Then they can be easily selected by clicking on the texture and picking it from the data-block popup.
+   Textures can also be `appended/linked` from other Blender files.
+
+.. _bpy.types.BrushTextureSlot.map_mode:
+.. _bpy.types.BrushTextureSlot.mask_map_mode:
+
+Mapping & Mask Mapping
+   How the texture is applied to the brush stroke.
+
+   .. tip:: 
+      It is recommended to set this to *Area Plane* or *View Plane* for the most common behavior.
+      Ideally match this setting with the :ref:`Sculpt Plane <bpy.types.Brush.sculpt_plane>` setting if in sculpt mode.
 
    :View Plane:
-      If *View Plane* is enabled, the current view angle is used to project the brush texture onto the model.
-      I.e. the texture follows the mouse, so it appears that the texture is being dragged across the model.
-      In 2D painting, the texture moves with the brush.
+      If *View Plane* is enabled, the current viewing angle is used to project the brush texture onto the model.
+      This is especially useful for projection painting.
+
    :Area Plane:
-      Projects the brush texture along the local surface normal,
-      which keeps the texture from stretching when sculpting on a portion of the mesh
-      that is at an extreme angle to the viewpoint.
+      Projects the brush texture along the local surface :term:`normal`,
+      which keeps the texture from stretching on steep angles.
+      This is an ideal default for most brushes.
+
    :Tiled:
-      The *Tile* option tiles the texture across the screen,
-      so moving the brush appears to move separately from the texture.
+      The *Tile* option repeats the texture across the screen,
+      so moving the brush will not change where the texture is applied.
       The *Tile* option is most useful with tileable images, rather than procedural textures.
+
    :3D:
       The *3D* option allows the brush to take full advantage of procedural textures.
       This mode uses vertex coordinates rather than the brush location to determine what area of the texture to use.
+
+      This option is not available for the Texture Mask.
+
    :Random:
-      Picks a random texture coordinate to sample from for each dab.
+      Picks a random texture coordinate to sample from for each step of the stroke.
    :Stencil:
-      Stencil mapping works by projecting the paint from the camera space on the mesh or canvas.
+      This is the ideal option for stamping textures for projection painting.
+      Stencil mapping works by projecting the texture from the camera space on the mesh or canvas.
       Painting is applied only inside the boundaries of the stencil.
       The stencil is displayed as a screen space overlay on the viewport.
-      To the transform the stencil texture and the stencil mask with additional :kbd:`Alt` pressed:
+      To transform the stencil texture use the following shortcuts (Hold :kbd:`Alt` for the Texture Mask):
 
       - Move :kbd:`RMB`
       - Scale :kbd:`Shift-RMB`
       - Rotate :kbd:`Ctrl-RMB`
 
-      When using stencil scaling, :kbd:`X` and :kbd:`Y` are used to constrain the scaling to one axis.
+      While using stencil scaling, :kbd:`X` and :kbd:`Y` are used to constrain the scaling to one axis.
       Pressing one of the buttons twice reverts to unconstrained scaling.
 
       .. _bpy.ops.brush.stencil_fit_image_aspect:
@@ -70,24 +84,34 @@ Mapping
       Reset Transform
          Restores the position of the stencil.
 
+.. _bpy.types.Brush.use_pressure_masking:
+
+Pressure Masking
+   Only available for the Texture Mask. It allows to clip the mask result based on pressure.
+
+   :Off: Disabled.
+   :Ramp: Fades out the mask effect on higher pressure.
+   :Cutoff: Expands the used values from the image based on stylus pressure.
+
 .. _bpy.types.BrushTextureSlot.angle:
 
 Angle :kbd:`Ctrl-F`
    This is the rotation angle of the texture brush.
    It can be changed interactively via :kbd:`Ctrl-F` in the 3D Viewport.
-   While in the interactive rotation you can enter a value numerically as well.
+   While rotating the angle via the hotkey you can enter a value numerically as well.
 
 .. _bpy.types.BrushTextureSlot.use_rake:
 
-Rake :kbd:`R`
-   Angle follows the direction of the brush stroke.
+Rake
+   Texture angle follows the direction of the brush stroke.
+   Useful for stamping textures repeatedly along the stroke.
    Not available with *3D*, *Tiled*, or *Stencil* Mapping types.
    The shortcut is not available in Sculpt mode.
 
 .. _bpy.types.BrushTextureSlot.use_random:
 
-Random :kbd:`R`
-   Angle is randomized per dab.
+Random
+   Angle is randomized on each step of the stroke.
    Not available with *3D*, *Tiled*, or *Stencil* Mapping types.
    The shortcut is not available in Sculpt mode.
 
@@ -109,4 +133,5 @@ Size X, Y, Z
 .. _bpy.types.Brush.texture_sample_bias:
 
 Sample Bias :guilabel:`Sculpt Mode`
-   Value added to texture samples.
+   Value added to texture samples. 
+   This can be used if the midlevel of a height map is not correct.

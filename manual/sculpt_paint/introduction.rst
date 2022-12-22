@@ -3,11 +3,11 @@
 Introduction
 ************
 
-Sculpting and painting use :doc:`brushes </sculpt_paint/brush/index>` to paint directly on meshes.
-There are several :doc:`modes </editors/3dview/modes>` that use this.
+Sculpting and painting offers a more freeform workflow of editing via :doc:`brushes </sculpt_paint/brush/index>`.
+There are several :doc:`modes </editors/3dview/modes>` to do this, each with their own purpose.
 
 - :doc:`Sculpting </sculpt_paint/sculpting/introduction>`:
-  Change the topology of the mesh.
+  Change and transform the topology of your mesh.
 - :doc:`Vertex Paint </sculpt_paint/vertex_paint/introduction>`:
   Change the color of vertices in the active Color Attribute.
 - :doc:`Weight Paint </sculpt_paint/weight_paint/introduction>`:

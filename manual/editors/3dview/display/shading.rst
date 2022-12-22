@@ -95,6 +95,8 @@ Lighting
 
       Custom MatCaps can be :ref:`loaded in the preferences <prefs-lights-matcaps>`.
 
+.. _viewport_shading_solid_color:
+
 Color
    The source to compute the color for objects in the viewport.
 

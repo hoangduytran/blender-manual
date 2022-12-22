@@ -4,12 +4,7 @@
 Face Sets
 *********
 
-Face sets are another way to control the visibility state of the mesh in Sculpt Mode.
-They are designed to work in modes where brushes are the primary way of interaction and they provide
-much more control when working with meshes with complex shapes and overlapping surfaces.
-Geometry can be assigned to a face set and each face set is represented as a different color in the 3D Viewport.
-A pie menu to edit face sets can be accessed with :kbd:`W`.
-
+This page details the face set related hotkey operators and menu operators in sculpt mode.
 
 .. _bpy.ops.sculpt.face_sets_create:
 
@@ -100,6 +95,7 @@ Grow/Shrink Face Sets
 
 Expands or contracts the face set under the cursor by adding or removing surrounding faces.
 
+.. _face_set_expand:
 
 Expand Face Set by Topology
 ===========================

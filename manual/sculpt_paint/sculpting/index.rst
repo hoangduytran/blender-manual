@@ -9,10 +9,9 @@
 .. toctree::
    :maxdepth: 2
 
-   introduction.rst
+   introduction/index.rst
    toolbar.rst
    tools/index.rst
    tool_settings/index.rst
    controls.rst
-   adaptive.rst
    editing/index.rst
