@@ -6,7 +6,7 @@ Navigation
 There are different preferences for navigating the 3D Viewport in Blender. 
 For painting and sculpting specific workflows it is recommended to use any of the following methods.
 
-Center View to Mouse :kbd:`Alt MMB Click`
+Center View to Mouse :kbd:`Alt MMB`
    Center the View on the surface directly under the mouse position.
    This way the rotation point of the viewport can be manually changed to any point you wish to orbit around.
 
