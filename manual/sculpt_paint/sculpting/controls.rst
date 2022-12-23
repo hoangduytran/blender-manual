@@ -72,8 +72,8 @@ Face Sets Boundary
 .. _bpy.types.Sculpt.use_automasking_cavity:
 
 Cavity  
-   Vertices that are the peaks of the surface curvature are not affected. While this auto-mask is primarily meant for painting, 
-   it can also be used for regular sculpting.
+   Vertices that are the peaks of the surface curvature are not affected. While this auto-mask is primarily meant for
+   painting, it can also be used for regular sculpting.
 
    Factor
       The overall contrast of how strong the cavity is applied. The value of 0.5 is the default,

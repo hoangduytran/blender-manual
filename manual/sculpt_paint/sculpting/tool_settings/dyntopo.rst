@@ -13,7 +13,8 @@ Dyntopo
 Dynamic Topology (aka Dyntopo) can be toggled with the checkbox in the header or with :kbd:`Ctrl-D`.
 With dynamic topology active, most brushes will subdivide the mesh during the stroke.
 
-For a general explanation of dynamic topology, visit the :doc:`Introduction </sculpt_paint/sculpting/introduction/adaptive>`.
+For a general explanation of dynamic topology, visit the
+:doc:`Introduction </sculpt_paint/sculpting/introduction/adaptive>`.
 
 .. _bpy.types.Sculpt.detail_size:
 .. _bpy.types.Sculpt.constant_detail_resolution:

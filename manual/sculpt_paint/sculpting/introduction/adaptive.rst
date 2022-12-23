@@ -46,9 +46,9 @@ sculpting method that automatically adds and removes topology under the brush.
 
 .. figure:: /images/sculpt-paint_sculpt_dyntopo_example.png
 
-Unlike the Voxel Remesher, this makes it possible to sculpt complex shapes without thinking about the resolution or topology.
-It also allows to define a different resolution wherever necessary.
-Much more complex base mesh sculpting is especially useful with this technique.
+Unlike the Voxel Remesher, this makes it possible to sculpt complex shapes without thinking about the resolution or
+topology. It also allows to define a different resolution wherever necessary. Much more complex base mesh sculpting
+is especially useful with this technique.
 
 The disadvantages of this technique are a slower performance and limited support for some sculpt mode features.
 Custom attributes like Color Attributes, UV Maps and Face Sets are also lost or corrupted when using Dyntopo.

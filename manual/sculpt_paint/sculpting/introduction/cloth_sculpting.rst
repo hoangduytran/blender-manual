@@ -24,4 +24,5 @@ The sculpt mode :ref:`gravity <bpy.types.Sculpt.gravity>` factor is also applied
 The main brushes and tools for this feature are the `Cloth Brush` and `Cloth Filter`, 
 but other transform brushes like `Pose` and `Boundary` also support cloth sculpting in the brush settings.
 
-A demo file for trying out the various brushes and tools is available `here <https://www.blender.org/download/demo-files/#sculpting>`_.
+A demo file for trying out the various brushes and tools is available
+`here <https://www.blender.org/download/demo-files/#sculpting>`_.

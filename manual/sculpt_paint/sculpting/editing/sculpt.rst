@@ -98,7 +98,8 @@ Switches Sculpt Mode from the :term:`Active` object to the object under the mous
 See :ref:`bpy.ops.object.transfer_mode` for more information.
 
 .. seealso::
-   For a more general introduction see :doc:`Working with Multiple Objects </sculpt_paint/sculpting/introduction/multiple_objects>`.
+   For a more general introduction see
+   :doc:`Working with Multiple Objects </sculpt_paint/sculpting/introduction/multiple_objects>`.
 
 
 .. _bpy.ops.sculpt.optimize:
