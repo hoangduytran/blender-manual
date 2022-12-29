@@ -10,8 +10,11 @@
 
    introduction.rst
    sidebar.rst
+   realtime_compositor.rst
 
 .. index:: Compositor Nodes
+
+.. _compositor-nodes:
 
 Node Types
 ==========

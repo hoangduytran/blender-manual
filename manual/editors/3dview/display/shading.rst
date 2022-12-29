@@ -236,10 +236,12 @@ Render Pass
    :doc:`render pass </render/layers/passes>`.
    Useful to analyze and debug geometry, materials and lighting.
 
+.. _viewport-compositing:
+
 Compositor
    Controls the enablement of the compositor in the viewport. If enabled, the scene compositor node
-   tree will be evaluated using the Realtime Compositor and the output will be displayed directly in
-   the viewport.
+   tree will be evaluated using the :ref:`Realtime Compositor <realtime-compositor>` and the output
+   will be displayed directly in the viewport.
 
    :Disabled: Always disabled.
    :Camera: Enabled only in camera view.
