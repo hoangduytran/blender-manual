@@ -435,19 +435,21 @@ Vertex groups can be locked to prevent undesired edits to a particular vertex gr
 
 Lock All
    Locks all vertex groups.
-Unlock All
-   Unlocks all vertex groups.
 Lock Selected
    Locks selected vertex groups.
-Unlock Selected
-   Unlocks selected vertex groups.
 Lock Unselected
    Locks unselected vertex groups.
-Unlock Unselected
-   Unlocks Unselected vertex groups.
 Lock Only Selected
    Lock selected and unlock selected vertex groups.
 Lock Only Unselected
    Unlock selected and lock unselected vertex groups.
+
+Unlock All
+   Unlocks all vertex groups.
+Unlock Selected
+   Unlocks selected vertex groups.
+Unlock Unselected
+   Unlocks Unselected vertex groups.
+
 Invert Locks
    Inverts the locks on all vertex groups.
