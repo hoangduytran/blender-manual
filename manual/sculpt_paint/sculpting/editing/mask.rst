@@ -77,7 +77,7 @@ Box Mask
    :Menu:      :menuselection:`Mask --> Box Mask`
    :Shortcut:  :kbd:`B`
 
-Works like the the :doc:`Box Mask </sculpt_paint/sculpting/tools/box_mask>` tool, it creates a rectangular mask
+Works like the :doc:`Box Mask </sculpt_paint/sculpting/tools/box_mask>` tool, it creates a rectangular mask
 region. Hold :kbd:`Shift` or press :kbd:`MMB` to clear the mask of the selected region.
 
 
