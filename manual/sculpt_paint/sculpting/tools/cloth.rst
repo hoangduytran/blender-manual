@@ -10,12 +10,28 @@ Cloth
    :Tool:      :menuselection:`Toolbar --> Cloth`
 
 This brush simulates cloth physics on the mesh under the brush cursor.
-Note, using a relatively small brush size makes the calculations much faster,
-while larger brush sizes might be too slow to get a usable brush.
+There are various deformation types and settings to customize the brush.
+
+It's also easy to sculpt the mesh with other brushes and tools
+in between using the cloth brushes.
+
+.. note::
+   Using a relatively small brush size makes the calculations much faster,
+   while larger brush sizes might be too slow to get a usable brush.
 
 
 Brush Settings
 ==============
+
+General
+*******
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 Persistent
    Allows the cloth brush to not accumulate deformation after each stroke.

@@ -9,29 +9,80 @@ Grab
    :Tool:      :menuselection:`Toolbar --> Grab`
    :Shortcut:  :kbd:`G`
 
-Used to drag a group of vertices around. *Grab* selects a group of vertices on mouse-down,
-and pulls them to follow the mouse. And unlike other brushes,
-*Grab* does not move different vertices as the brush is dragged across the model.
-The effect is like moving a group of vertices in Edit Mode with Proportional Editing enabled,
-except that *Grab* can make use of other Sculpt Mode options (like textures and symmetry).
+Drag geometry across the screen, following the cursor.
+*Grab* only moves the vertices that are under the brush radius at the start of the stroke.
+This is an essential sculpting brush to be used frequently to build shapes and adjust proportions.
+
+.. figure:: /images/sculpt-paint_sculpting_grab_example.jpg
+
+.. note::
+   The effect is similar to moving geometry in Edit Mode with Proportional Editing enabled,
+   except that *Grab* can make use of other Sculpt Mode options and brush settings.
 
 
 Brush Settings
 ==============
 
+General
+*******
+
+Radius
+   Pressure Sensitivity is not supported for this brush type. More info at :ref:`Radius`
+
+Strength
+   Pressure Sensitivity is not supported for this brush type. More info at :ref:`Strength`
+
+Normal Radius
+   For this brush, this setting is a purely visual change.
+   It does not alter the brush behavior. More info at :ref:`Normal Radius`
+
+Auto-Smooth
+   This setting is not supported. More info at :ref:`Auto-Smooth`
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
+
 .. _bpy.types.Brush.use_grab_active_vertex:
 
 Grab Active Vertex
-   Snaps the maximum strength of the brush to the highlighted active vertex,
-   making it easier to manipulate low-poly models or meshes with subdivision surfaces.
+   Applies the maximum strength of the brush to the highlighted active vertex,
+   making it easier to manipulate low-poly models or meshes with modifiers.
 
    Enabling this option also enables a dynamic mesh preview which
-   generates a preview of vertices connected to the active vertex.
-   This helps to visualize the real geometry that is being manipulating
+   overlays a white wireframe within the brush radius.
+   This helps to visualize the real base geometry that is being manipulated
    while sculpting with :doc:`Modifiers </modeling/modifiers/index>`.
+
+.. figure:: /images/sculpt-paint_sculpting_grab_active_vertex.jpg
 
 .. _bpy.types.Brush.use_grab_silhouette:
 
 Grab Silhouette
-   Attempts to preserves the object's silhouette shape.
-   The shape of the silhouette is determined by the orientation of the 3D Viewport.
+   Preserves the object's silhouette shape by only grabbing vertices on one side of the mesh curvature.
+   The shape of the silhouette is determined by the orientation of the 3D Viewport and the start of the stroke.
+
+.. figure:: /images/sculpt-paint_sculpting_grab_silhouette.jpg
+
+Note how in the image only the bottom side of the leg is pulled down, despite the size of the brush.
+
+.. tip::
+   This setting is also useful for grabbing a single side of a crease and pushing it further inwards, 
+   creating a more pinched crease. This can be easier to control than pinching or creasing the surface.
+
+
+Additional Workflows
+==============
+
+2D Grab Brush
+   If the :ref:`Falloff Shape` is set to *Projected*, the brush can grab infinitely deep into the viewport.
+   This is especially useful for make even broader changes to a sculpt.
+
+   .. figure:: /images/sculpt-paint_sculpting_grab_projected.jpg
+
+   The stroke can also be started outside of the mesh (like in empty 3D space)
+   and still grab the nearest vertices within the brush radius.
+   This can be useful when more broad control of grabbing is needed, especially on flat and tube meshes. 

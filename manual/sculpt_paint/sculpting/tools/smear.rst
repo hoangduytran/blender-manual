@@ -8,12 +8,22 @@ Smear
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Smear`
 
-Paints on the active color attribute.
+Smears the painted colors of the active color attribute.
 It takes the colors under the cursor, and blends them in the direction of your stroke.
 
 
 Brush Settings
 ==============
+
+General
+*******
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 Deformation
    :Drag: Smear colors along the direction of the stroke.

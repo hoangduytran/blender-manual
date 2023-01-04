@@ -8,12 +8,22 @@ Multiplane Scrape
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Multiplane Scrape`
 
-Scrapes the mesh with two angled planes at the same time, producing a sharp edge between them.
-This is useful for creating edges when sculpting hard surface objects.
+Scrapes the mesh with two angled planes at the same time, creating a sharp edge between them.
+This is useful for creating & polishing hard surface objects.
 
 
 Brush Settings
 ==============
+
+General
+*******
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 .. _bpy.types.Brush.multiplane_scrape_angle:
 
@@ -23,12 +33,12 @@ Plane Angle
 .. _bpy.types.Brush.use_multiplane_scrape_dynamic:
 
 Dynamic Mode
-   When enabled, the base angle is sampled from the mesh surface.
-   The *Plane Angle* controls how much the angle will increase when applying pen pressure.
+   When enabled, the angle is dynamically updated based on the surface under the brush.
+   The *Plane Angle* then controls how much the angle will increase when applying pen pressure.
    When pressing :kbd:`Ctrl`, it locks the plane angle to 0 degrees.
 
 .. _bpy.types.Brush.show_multiplane_scrape_planes_preview:
 
 Show Cursor Preview
-   Displays a preview of the two scrape planes
-   and the angle they form instead of the cursor while performing the stroke.
+   Displays a preview of the two planes
+   and the angle they form during the stroke.

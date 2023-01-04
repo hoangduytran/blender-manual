@@ -9,8 +9,24 @@ Flatten
    :Tool:      :menuselection:`Toolbar --> Flatten`
    :Shortcut:  :kbd:`Shift-T`
 
-The *Flatten* brush determines an "area plane"
-located by default at the average height above/below the vertices within the brush area.
-The vertices are then pulled towards this plane.
-The inverse of the *Flatten* brush is the *Contrast* brush
-which pushes vertices up or down away from the brush plane.
+Flatten or contrast surfaces by pulling and pushing them towards
+(or away from) a defined medium height.
+This medium height is determined via an area plane within the brush radius.
+
+This area plane height can be further defined in the brush settings.
+
+
+Brush Settings
+==============
+
+General
+*******
+
+Direction :kbd:`Ctrl`
+   Invert the direction to push surfaces away from the
+   :ref:`sculpt plane <bpy.types.Brush.sculpt_plane>`,
+   creating more surface contrast as a result.
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

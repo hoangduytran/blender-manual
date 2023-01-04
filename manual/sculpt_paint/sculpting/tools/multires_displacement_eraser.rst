@@ -10,7 +10,7 @@ Multires Displacement Eraser
 
 This brush deletes displacement information of
 the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,
-resetting the mesh to the subdivision limit surface.
+resetting the mesh to a regular subdivision surface result.
 
 This can be used to delete parts of the sculpt or to fix reprojection artifacts
 after applying a :doc:`Shrinkwrap Modifier </modeling/modifiers/deform/shrinkwrap>`.
@@ -18,3 +18,13 @@ after applying a :doc:`Shrinkwrap Modifier </modeling/modifiers/deform/shrinkwra
 .. tip::
 
    This brush works best after using :ref:`Apply Base <bpy.ops.object.multires_base_apply>`.
+
+Brush Settings
+==============
+
+General
+*******
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

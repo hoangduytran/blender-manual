@@ -8,5 +8,13 @@ Clay Thumb
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Clay Thumb`
 
-This brush simulates deforming clay with the finger, accumulating material during the stroke.
-It has a plane that tilts during the stroke in the front part of the brush to achieve this effect.
+Similar to the :doc:`Draw </sculpt_paint/sculpting/tools/clay>` brush.
+It imitates the effect of deforming clay with the finger, accumulating material during the stroke.
+The sculpt plane tilts during the stroke in the front part of the brush to achieve this effect.
+
+Brush Settings
+==============
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

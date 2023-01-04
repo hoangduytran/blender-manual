@@ -8,15 +8,34 @@ Clay Strips
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Clay Strips`
 
-Similar to the *Clay* brush, but it uses a cube to define the brush area of influence rather than a sphere.
+Similar to the :doc:`Draw </sculpt_paint/sculpting/tools/clay>` brush,
+but it uses a square tip shape instead of a round one.
 
+Clay Strips is very commonly used for aggressive building of volumes
+and more controlled and deliberate control over shapes on the surface.
+This brush alone can be used for a fast rough pass over the entire sculpt,
+with additional smoothing or polishing often required afterwards.
+
+This brush can be very versatile with varying stroke directions, repeated strokes
+and pen pressure to achieve various results.
+
+If used together with :ref:`Dyntopo <bpy.ops.sculpt.dynamic_topology_toggle>`
+it's easy to continuously build shapes, even in a single stroke.
 
 Brush Settings
 ==============
 
-.. _bpy.types.Brush.tip_roundness:
+General
+*******
+
+Normal Radius
+   Higher by default. This ensures that the brush does not change directions to sporadically during a stroke.
+   More info at :ref:`Normal Radius <bpy.types.Brush.normal_radius_factor>`
 
 Tip Roundness
-   Factor to control how round the brush is, a value of zero will make the brush square.
-   Note, the :doc:`Brush Falloff </sculpt_paint/brush/falloff>`
-   is only applied to the rounded portions of the brush.
+   Very low by default for a square shape for more deliberate shaping.
+   More info at :ref:`Tip Roundness <bpy.types.Brush.tip_roundness>`
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

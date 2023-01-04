@@ -1,8 +1,8 @@
 .. _bpy.types.BrushTextureSlot:
 
-***********************
+**********************
 Texture & Texture Mask
-***********************
+**********************
 
 This page covers both the Texture and Texture Mask panels.
 Add a Texture to the brush to control the color of the brush. 
@@ -34,8 +34,8 @@ Mapping & Mask Mapping
 
    .. tip:: 
       It is recommended to set this to *Area Plane* or *View Plane* for the most common behavior.
-      Ideally match this setting with the :ref:`Sculpt Plane <bpy.types.Brush.sculpt_plane>` setting if in sculpt
-      mode.
+      Ideally match this setting with the 
+      :ref:`Sculpt Plane <bpy.types.Brush.sculpt_plane>` setting if in sculpt mode.
 
    :View Plane:
       If *View Plane* is enabled, the current viewing angle is used to project the brush texture onto the model.

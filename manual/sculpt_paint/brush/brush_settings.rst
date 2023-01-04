@@ -2,12 +2,14 @@
 Brush Settings
 **************
 
-Each mode and brush has unique brush settings. 
+Each mode and brush has unique brush settings.
 But there is also a lot of overlap or similar settings.
 This page explains general and mode specific settings that are used across various brushes in more detail.
 
+.. _sculpt-tool-settings-brush-settings-general:
+
 General
-========
+=======
 
 Radius
    This option controls the size of the brush, measured in pixels.
@@ -32,12 +34,12 @@ Radius Unit :guilabel:`Sculpt Mode`
       This means that the brush radius stays consistent, independently from zooming in and out in the viewport.
       The unit type and scaling can be configured in the :ref:`Scene Units <bpy.types.UnitSettings>`.
 
-_`Strength`
+Strength
    For painting brushes the *Strength* defines the maximum effect of each brush stroke.
    For example, higher values cause a *Paint* brush to give each stroke a higher opacity.
-   The opacity is never stronger than the set *Strength*, 
+   The opacity is never stronger than the set *Strength*,
    no matter how often the same surface is painted during the same stroke.
-   
+
    For sculpting brushes on the other hand the *Strength* relates to how strong each step of the stroke is,
    resulting in a slower/faster buildup towards the full brush effect during the stroke.
 
@@ -52,7 +54,7 @@ _`Strength`
       Use the same brush *Strength* across all brushes.
 
 Blend
-   Set the way the color or value is applied over the targeted Color Attribute, Vertex Group or Image Texture. 
+   Set the way the color or value is applied over the targeted Color Attribute, Vertex Group or Image Texture.
    See :term:`Color Blend Modes`.
 
    - Add Alpha: makes the image more opaque where painted.
@@ -73,6 +75,8 @@ Weight :guilabel:`Weight Paint`
    Use :kbd:`Ctrl-LMB` to sample the weight value of clicked vertex.
    :kbd:`Shift-LMB` lets you select the group from which to sample from.
 
+.. _bpy.types.Brush.direction:
+
 Direction :kbd:`Ctrl` :guilabel:`Sculpt Mode`
    Brush direction toggle, *Add* raises geometry towards the brush,
    *Subtract* lowers geometry away from the brush. This setting can be toggled with :kbd:`Ctrl` while sculpting.
@@ -80,27 +84,40 @@ Direction :kbd:`Ctrl` :guilabel:`Sculpt Mode`
 .. _bpy.types.Brush.normal_radius_factor:
 
 Normal Radius :guilabel:`Sculpt Mode`
-   Determines the ratio of how much the brush radius is used to sample the normal direction of the sculpt plane of the brush. 
-   For example, a smaller *Normal Radius* will lead to 
-   The ratio between the brush radius and the radius that is going to be used to sample
-   the normal i.e. take the average of multiple normals. This influences the brush orientation;
-   increasing this value causes the brush to follow a smooth version of the mesh,
-   while a small value causes the brush to closely follow the contours of the mesh.
+   Determines the ratio of how much the brush radius is used to
+   sample the normal direction of the sculpt plane of the brush.
+   For example, a smaller *Normal Radius* will lead to drastic changes in the brush orientation,
+   like for following the contours of hard surface meshes more closely.
+   A large *Normal Radius* will lead to smoother changes in orientation,
+   like for building overall forms on organic sculptures.
+
+.. _bpy.types.Brush.area_radius_factor:
+
+Area Radius
+   The ratio between the brush radius and
+   the radius that is going to be used to sample the area plane depth.
 
 .. _bpy.types.Brush.hardness:
 
 Hardness :guilabel:`Sculpt Mode`
    How close the brush falloff starts from the edge of the brush.
 
+.. _bpy.types.Brush.tip_roundness:
+
+Tip Roundness
+   The factor to control how round the brush is. A value of zero will make the brush square.
+   Note, the :doc:`Brush Falloff </sculpt_paint/brush/falloff>`
+   is only applied to the rounded portions of the brush.
+
 .. _bpy.types.Brush.auto_smooth_factor:
 
-Autosmooth :guilabel:`Sculpt Mode`
+Auto-smooth :guilabel:`Sculpt Mode`
    Sets the amount of smoothing to be applied to each stroke.
 
 .. _bpy.types.Brush.topology_rake_factor:
 
 Topology Rake :guilabel:`Sculpt Mode`
-    The higher this setting is set, the more :doc:`Dyntopo </sculpt_paint/sculpting/tool_settings/dyntopo>` 
+    The higher this setting is set, the more :doc:`Dyntopo </sculpt_paint/sculpting/tool_settings/dyntopo>`
     aligns mesh edges to the brush direction while tessellating the surface.
     This generates cleaner edge flow to help define sharp features.
     *Topology Rake* can have a severe performance impact so it works best on low-poly meshes.
@@ -123,6 +140,21 @@ Plane Trim :guilabel:`Sculpt Mode`
    If trim is enabled vertices that are further away from the offset plane than
    the trim distance are ignored during sculpting.
 
+.. _bpy.types.Brush.crease_pinch_factor:
+
+Pinch/Magnify :guilabel:`Sculpt Mode`
+   Pushes the mesh towards/away from the brush center during the stroke.
+
+.. _bpy.types.Brush.deform_target:
+
+Deformation Target
+   How the deformation of the brush will affect the object.
+
+   Geometry
+      Deform the geometry directly.
+   Cloth Simulation
+      Deform the mesh while a :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`
+      is applied to it at the same time.
 
 .. _sculpt-tool-settings-brush-settings-advanced:
 

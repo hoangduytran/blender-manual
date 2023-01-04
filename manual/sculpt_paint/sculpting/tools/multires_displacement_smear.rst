@@ -12,9 +12,7 @@ This tool deforms displacement information of
 the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,
 moving the displaced vertices without affecting the base mesh.
 
-As the tool only modifies displacement values instead of base vertex values,
-the total displacement of the affected area does not change.
-Which means that this smearing effect can be used multiple times
+Smearing effect can be used multiple times
 over the same area without generating any artifacts in the topology.
 
 .. tip::
@@ -24,6 +22,16 @@ over the same area without generating any artifacts in the topology.
 
 Brush Settings
 ==============
+
+General
+*******
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 Deformation
    Deformation type that is used by the brush.

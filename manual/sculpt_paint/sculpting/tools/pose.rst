@@ -8,23 +8,31 @@ Pose
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Pose`
 
-This brush is used to pose a model simulating armature-like deformations.
-Several different deformation modes can be used to perform
-IK deformations or altering and moving the proportions of the mesh.
-The falloff of the deformation across multiple segments is controlled by the brush falloff curve.
+Deform a model simulating armature-like workflow.
+This can either be useful for posing a model without a rig,
+adjusting the proportions of a mesh or other fast deformations.
+
+The brush will automatically determine an origin point,
+indicated with a while line on the brush cursor.
+
+If the :ref:`Deformation Target <bpy.types.Brush.deform_target>`
+is changed, the brush can also be used for cloth sculpting.
 
 
 Brush Settings
 ==============
 
-Deformation Target
-   How the deformation of the brush will affect the object.
+General
+*******
 
-   Geometry
-      Brush deformation displaces the vertices of the mesh.
-   Cloth Simulation
-      Brush deforms the mesh by deforming the constraints of
-      a :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`.
+Only Radius and Auto-Masking has an impact on the brush behavior for this brush.
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 .. _bpy.types.Brush.pose_deform_type:
 
@@ -32,28 +40,26 @@ Deformation
    Deformation type that is used by the brush.
 
    Rotate/Twist
-      Rotates segments around a pivot point that is calculated automatically based
-      on the radius of the brush and the topology of the model.
+      Rotates the mesh around the pose origin.
       When pressing :kbd:`Ctrl`, the brush applies a twist rotation
-      to the posing segments instead of using the rotation or an IK deformation.
+      instead (and disables any IK segments that are used).
    Scale/Translate
-      Alters the proportions of the mesh, using the origin of the segment as a pivot.
-      While holding :kbd:`Ctrl` the brush moves the entire segment.
+      Scale the mesh based on the pose origin.
+      While holding :kbd:`Ctrl` the brush moves the mesh.
    Squash/Stretch
       Works similar to *Scale/Translate* however, it applies different
       scale values along different axes to achieve the stretching effect.
-      The pivot point for this mode is calculated by using the local space
-      aligned to the segment.
 
 .. _bpy.types.Brush.pose_origin_type:
 
 Rotation Origins
-   Method to set the rotation origins for the segments of the brush.
+   Method to set the rotation origin for the pose origin or individual IK segments.
 
    Topology
-      Sets the rotation origin automatically using the topology and shape of the mesh as a guide.
+      Sets the rotation origin automatically using the topology and shape of the mesh.
    Face Sets
       Creates a pose segment per :ref:`Face Set <sculpting-editing-facesets>`, starting from the active face set.
+      This can lead to the most accurate and desirable results.
    Face Sets FK
       Simulates a :term:`Forward Kinematics` deformation using the :ref:`Face Set <sculpting-editing-facesets>`
       under the cursor as control.
@@ -72,8 +78,11 @@ Smooth Iterations
 .. _bpy.types.Brush.pose_ik_segments:
 
 Pose IK Segments
-   Controls how many :ref:`IK bones <bone-constraints-inverse-kinematics>`
+   Controls how many :ref:`IK segments <bone-constraints-inverse-kinematics>`
    are going to be created for posing.
+   This can be seen by a divided white line on the cursor.
+   This is also useful for making curved deformations with the pose brush,
+   like hair clumps and tails.
 
 .. _bpy.types.Brush.use_pose_lock_rotation:
 
@@ -84,13 +93,20 @@ Lock Rotation when Scaling
 
 Keep Anchor Point
    Keeps the position of the last segment in the IK chain fixed.
+   If this is disabled, the mesh can be dragged around more freely,
+   creating snake like shapes.
 
 .. _bpy.types.Brush.use_connected_only:
 
 Connected Only
-   Causes the brush to only affect topologically connected elements.
-   Disabling this can have an impact on performance; when disabled,
-   keeping the *Max Element Distance* as low as possible will help counteract the performance impact.
+   The brush will only affect topologically connected elements.
+   Disabling this will allow deforming multiple disconnected meshes at the same time,
+   for example characters with clothing & shoes.
+
+   Disabling this setting can have a big impact on performance,
+   as neighboring elements will be merged internally.
+   Keeping the *Max Element Distance* as low as possible
+   will help counteract the performance impact.
 
 .. _bpy.types.Brush.disconnected_distance_max:
 

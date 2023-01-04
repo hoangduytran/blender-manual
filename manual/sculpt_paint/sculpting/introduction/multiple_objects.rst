@@ -9,9 +9,10 @@ many separate objects, it is recommended to use the shortcut :kbd:`Alt Q` while 
 
 .. figure:: /images/sculpt-paint_sculpt_multi_object_example.png
 
-The advantage of using multiple objects is that each can have its own origin and modifiers. Splitting the geometry
-among multiple objects can also improve the sculpt mode performance. Alternatively objects can also be
-:doc:`joined </scene_layout/object/editing/join>` so there is no need to switch objects.
+The advantage of using multiple objects is that each can have its own origin and modifiers.
+Splitting the geometry among multiple objects can also improve the sculpt mode performance.
+Alternatively objects can also be :doc:`joined </scene_layout/object/editing/join>`
+so there is no need to switch objects.
 
 .. figure:: /images/sculpt-paint_sculpt_joined_object_example.png
 

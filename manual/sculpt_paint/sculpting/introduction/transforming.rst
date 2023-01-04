@@ -1,13 +1,14 @@
 
-*************
+************
 Transforming
-*************
+************
 
-Transform tools to :doc:`move, rotate and scale </sculpt_paint/sculpting/tools/transforms>` are also available in
-Sculpt Mode, but with an important difference to other modes. Sculpt Mode uses its own pivot point, which can be
-manually positioned via :ref:`bpy.ops.sculpt.set_pivot_position` or automatically positioned with 
-:ref:`Mask Expand <bpy.ops.sculpt.mask_expand>`. This ensures that the pivot point can be more freely placed and 
-always moves with the transformed geometry.
+Transform tools to :doc:`move, rotate and scale </sculpt_paint/sculpting/tools/transforms>`
+are also available in Sculpt Mode, 
+but with an important difference to other modes. Sculpt Mode uses its own pivot point, 
+which can be manually positioned via :ref:`bpy.ops.sculpt.set_pivot_position` 
+or automatically positioned with :ref:`Mask Expand <bpy.ops.sculpt.mask_expand>`.
+This ensures that the pivot point can be more freely placed and always moves with the transformed geometry.
 
 .. tip:: 
    For even more control, assign a shortcut to the Set Pivot to “Surface” menu operator.

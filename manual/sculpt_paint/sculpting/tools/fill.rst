@@ -8,19 +8,25 @@ Fill
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Fill`
 
-Works like the Flatten brush, but only brings vertices below the brush plane upwards.
+Similar to the :doc:`Flatten <sculpt_paint/sculpting/tools/flatten>` brush,
+but only pushes surfaces upwards to the medium height.
 
+Although :kbd:`Ctrl` can be held to invert the effect to a Scrape brush,
+if *Invert to Scrape* is enabled.
+When disabled, the inverted direction will push surfaces away.
 
 Brush Settings
 ==============
 
-Area Radius
-   Ratio between the brush radius and the radius that is going to be used to sample the area center.
+General
+*******
 
-   Use Pressure (pressure sensitivity icon)
-      Uses stylus pressure to control how strong the effect is.
-      The gradient of the pressure can be customized using
-      the :doc:`curve widget </interface/controls/templates/curve>`.
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 Invert to Scrape
    When enabled, holding :kbd:`Ctrl` while sculpting

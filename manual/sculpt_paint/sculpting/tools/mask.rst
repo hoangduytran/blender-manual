@@ -9,14 +9,26 @@ Mask
    :Tool:      :menuselection:`Toolbar --> Mask`
    :Shortcut:  :kbd:`M`
 
-The Mask tool lets you paint a selection on parts of the mesh to be unaffected by other brushes.
-The mask values are shown as gray-scale.
-I.e. the darker a masked area is, the less effect sculpting on it will have.
-See also the options of the :ref:`sculpt-mask-menu` menu.
+Paint a selection on parts of the mesh to be unaffected by other brushes & tools.
+The mask values are shown as a gray-scale overlay.
+
+.. note::
+   More information in the
+   :doc:`Masking Introduction </sculpt_paint/sculpting/introduction/visibility_masking_face_sets>`.
 
 
 Brush Settings
 ==============
+
+General
+*******
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 .. _bpy.types.Brush.mask_tool:
 
@@ -26,4 +38,4 @@ Mask Tool
    Draw
       Mask drawing.
    Smooth :kbd:`Shift`
-      Pressing :kbd:`Shift` with the mask brush active will toggle the mask smoothing mode.
+      Holding :kbd:`Shift` will instead smooth existing masks.

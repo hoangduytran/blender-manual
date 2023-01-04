@@ -9,27 +9,43 @@ Layer
    :Tool:      :menuselection:`Toolbar --> Layer`
    :Shortcut:  :kbd:`L`
 
-This brush is similar to *Draw*, except that the height of the displacement layer is capped.
-This creates the appearance of a solid layer being drawn.
-This brush does not draw on top of itself; a brush stroke intersects itself.
-Releasing the mouse button and starting a new stroke
-will reset the depth and paint on top of the previous stroke.
+This brush is similar to :doc:`Draw </sculpt_paint/sculpting/tools/clay>`,
+except that the height capped.
+This creates the appearance of a flat layer.
+
+It is recommended to use the :ref:`Persistent <bpy.types.Brush.use_persistent>` setting
+and regularly :ref:`Set Persistent Base <bpy.ops.sculpt.set_persistent_base>`,
+so that multiple strokes to not add on top of each other.
 
 
 Brush Settings
 ==============
 
+General
+*******
+
+Hardness
+   Higher by default to ensure the profile of layers is more noticeable.
+   More info at :ref:`Hardness <bpy.types.Brush.hardness>`
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+Unique
+******
+
 .. _bpy.types.Brush.height:
 
 Height
-   The amount of displacement for each layer.
+   The fixed height of each stroke. This is measured using the :ref:`scene scale <bpy.types.UnitSettings.system>`,
+   so it is consistent no matter the amount of zoom or or object size.
 
 .. _bpy.types.Brush.use_persistent:
 
 Persistent
-   You can keep sculpting on the same layer between strokes when this is on.
+   This will ensure that multiple strokes use the same height, as if sculpting a single layer.
 
 .. _bpy.ops.sculpt.set_persistent_base:
 
 Set Persistent Base
-   This button resets the base so that you can add another layer.
+   This button resets a new base so that you can sculpt new layer.

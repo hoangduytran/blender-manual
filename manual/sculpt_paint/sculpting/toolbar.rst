@@ -16,29 +16,31 @@ Recognizable by their blue icon and cursor.
 These brushes generally push vertices outwards and inwards.
 
 :doc:`/sculpt_paint/sculpting/tools/draw`
-   Moves vertices outward or inward based on the average normal.
+   The standard brush for pushing vertices inwards and outwards from the surface direction.
 
 :doc:`/sculpt_paint/sculpting/tools/draw_sharp`
-   Moves vertices inward or outward based the original coordinates
-   and uses the *Sharper* :doc:`Falloff </sculpt_paint/brush/falloff>`.
+   Same as *Draw* but with a much sharper :doc:`Falloff </sculpt_paint/brush/falloff>`. 
+   Useful for creating creases and sharp angles.
 
 :doc:`/sculpt_paint/sculpting/tools/clay`
-   Similar to the *Draw* brush, but includes settings to adjust the plane on which the brush acts.
+   Similar to the *Draw* brush but with a flattening effect and subtle smoothing. 
+   Useful for polishing and building volumes.
 
 :doc:`/sculpt_paint/sculpting/tools/clay_strips`
-   The same as the *Clay* brush, but it uses a cube to define the brush area of influence rather than a sphere.
+   The same as the *Clay* brush, but more aggressive with a square falloff.
+   A common standard for building rough volumes.
 
 :doc:`/sculpt_paint/sculpting/tools/layer`
-   Moves all vertices to an exact height creating a flat layer.
+   Draw with a fixed height. Useful for adding flat layers to a surface.
 
 :doc:`/sculpt_paint/sculpting/tools/inflate`
-   Displaces the mesh in the direction of the vertex normals.
+   Moves the mesh in multiple direction. Useful for inflating or shrinking surfaces and volumes.
 
 :doc:`/sculpt_paint/sculpting/tools/blob`
-   Pushes mesh outward or inward into a spherical shape.
+   Magnifies the mesh as you draw. Useful for an additional inflation effect on the stroke.
 
 :doc:`/sculpt_paint/sculpting/tools/crease`
-   Creates sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.
+   Same as *Blob* but with a pinching effect. Useful for creating and polishing sharp creases.
 
 Contrast Brushes
 ================
@@ -50,16 +52,17 @@ Recognizable by their red icon and cursor.
 These brushes generally flatten or heighten the contrast of the surface.
 
 :doc:`/sculpt_paint/sculpting/tools/smooth`
-   Eliminates irregularities in the mesh by averaging the positions of the vertices.
+   Smooths out irregularities in the surface and shrinks volumes by averaging the vertices positions. 
+   An essential brush that is frequently used.
 
 :doc:`/sculpt_paint/sculpting/tools/flatten`
-   Smooths vertices to a flat plane by finding an average height and moves vertices towards that height.
+   Pushes vertices to an average height to create a flat plateau.
 
 :doc:`/sculpt_paint/sculpting/tools/fill`
-   Brings vertices below the brush plane upwards.
+   Pushes surfaces outwards. Useful for filling in holes and crevices.
 
 :doc:`/sculpt_paint/sculpting/tools/scrape`
-   Brings vertices above the plane downwards.
+   Pushes surfaces inwards. This is the most common brush for flattening meshes.
 
 :doc:`/sculpt_paint/sculpting/tools/multiplane_scrape`
    Scrapes the mesh with two angled planes at the same time, producing a sharp edge between them.
@@ -74,35 +77,37 @@ Recognizable by their yellow icon and cursor.
 These brushes generally move, pinch and magnify the mesh.
 
 :doc:`/sculpt_paint/sculpting/tools/pinch`
-   Pulls vertices towards the center of the brush.
+   Pulls vertices towards the center of the brush. Useful for polishing angles and creases.
 
 :doc:`/sculpt_paint/sculpting/tools/grab`
-   Selects a group of vertices and pulls them to follow the mouse.
+   Moves vertices along with the mouse. An essential brush for building shapes and adjusting proportions.
 
 :doc:`/sculpt_paint/sculpting/tools/elastic_deform`
    Used to simulate realistic deformations such as grabbing or twisting of :term:`Elastic` objects.
 
 :doc:`/sculpt_paint/sculpting/tools/snake_hook`
-   Pulls vertices along with the movement of the brush to create long, snake-like forms.
+   Pulls vertices along with the stroke to create long, snake-like forms.
 
 :doc:`/sculpt_paint/sculpting/tools/thumb`
-   Flattens the mesh in the brush area, while moving it in the direction of the brush stroke.
+   Same as *Grab* but moves vertices along the surface direction. Useful for preserving specific surfaces.
 
 :doc:`/sculpt_paint/sculpting/tools/pose`
-   Poses a model simulating an armature-like deformations.
+   Simulating an armature-like deformations. Useful for quick posing and transformations.
 
 :doc:`/sculpt_paint/sculpting/tools/nudge`
-   Moves vertices in the direction of the brush stroke.
+   Similar as *Thumb* but dynamically picks up vertices like the *Snake Hook*. 
+   Useful for nudging something along the mesh surface.
 
 :doc:`/sculpt_paint/sculpting/tools/rotate`
-   Rotates vertices within the brush in the direction the cursor is moved.
+   Rotates vertices within the brush in the direction mouse.
 
 :doc:`/sculpt_paint/sculpting/tools/slide_relax`
    Slides the topology of the mesh in the direction of the stroke
-   without changing the geometrical shape of the mesh.
+   while preserving the geometrical shape of the mesh.
+   Also useful for redistributing topology where it is needed.
 
 :doc:`/sculpt_paint/sculpting/tools/boundary`
-   Transforms and deforms the mesh boundaries.
+   Transform mesh boundaries specifically with various deformations.
 
 General Brushes
 ===============
@@ -114,7 +119,7 @@ No clear color assignment.
 These brushes are general purpose brushes or specific.
 
 :doc:`/sculpt_paint/sculpting/tools/cloth`
-   Simulates cloth that can be sculpted.
+   Simulates cloth to create folds and draping, which can be sculpted further.
 
 :doc:`/sculpt_paint/sculpting/tools/simplify`
    Cleans up geometry by collapsing short edges.
@@ -123,13 +128,13 @@ These brushes are general purpose brushes or specific.
    Paints a selection on parts of the mesh to be unaffected by other brushes.
 
 :doc:`/sculpt_paint/sculpting/tools/draw_facesets`
-   Paints a new Face Set with each stroke.
+   Paint new or extend existing face sets.
 
 :doc:`/sculpt_paint/sculpting/tools/multires_displacement_eraser`
-   Deletes displacement information applied on a Multiresolution modifier.
+   Remove displacement information on a Multiresolution modifier.
 
 :doc:`/sculpt_paint/sculpting/tools/multires_displacement_smear`
-   Deforms displacement information applied on a Multiresolution modifier.
+   Smear displacement information on a Multiresolution modifier.
 
 Painting Brushes
 ================
@@ -141,10 +146,10 @@ Recognizable by their green icon.
 These brushes are used for painting color attributes within sculpt mode.
 
 :doc:`/sculpt_paint/sculpting/tools/paint`
-   Paints on the active color attribute.
+   Paint on the vertices of your mesh via color attributes.
 
 :doc:`/sculpt_paint/sculpting/tools/smear`
-   Smears the colors of the active color attribute.
+   Smears the vertex colors via color attributes.
 
 Gesture Tools
 =============
@@ -155,28 +160,28 @@ Gesture Tools
 General gesture tools to apply an operation via box, lasso and line shapes.
 
 :doc:`/sculpt_paint/sculpting/tools/box_trim`
-   Creates a mask based on box select.
+   Create a mask via a box gesture.
 
-   :doc:`/sculpt_paint/sculpting/tools/lasso_trim`
-      Creates a mask based on lasso select.
+:doc:`/sculpt_paint/sculpting/tools/lasso_trim`
+   Create a mask via a lasso gesture.
 
-   :doc:`/sculpt_paint/sculpting/tools/line_mask`
-      Creates a mask based on a line.
+:doc:`/sculpt_paint/sculpting/tools/line_mask`
+   Create a mask via on one side of a drawn line.
 
 :doc:`/sculpt_paint/sculpting/tools/box_face_set`
-   Creates a face set based on box select.
+   Create a face set via a box gesture.
 
-   :doc:`/sculpt_paint/sculpting/tools/lasso_face_set`
-      Creates a face set based on lasso select.
+:doc:`/sculpt_paint/sculpting/tools/lasso_face_set`
+   Create a face set via a lasso gesture.
 
 :doc:`/sculpt_paint/sculpting/tools/box_trim`
-   Performs a Boolean operation based on box select.
+   Perform a Boolean operation via a box gesture.
 
-   :doc:`/sculpt_paint/sculpting/tools/lasso_trim`
-      Performs a Boolean operation based on lasso select.
+:doc:`/sculpt_paint/sculpting/tools/lasso_trim`
+   Perform a Boolean operation via a lasso gesture.
 
 :doc:`/sculpt_paint/sculpting/tools/line_project`
-   Flattens the geometry along a drawn line.
+   Flatten the geometry towards a drawn line.
 
 Filter Tools
 ============
@@ -187,13 +192,13 @@ Filter Tools
 Tools for applying effects on the entire unmasked and visible mesh.
 
 :doc:`/sculpt_paint/sculpting/tools/mesh_filter`
-   Applies a deformation to all vertices in the mesh at the same time.
+   Apply a deformation to all unmasked vertices.
 
 :doc:`/sculpt_paint/sculpting/tools/cloth_filter`
-   Applies a cloth simulation to all vertices in the mesh at the same time.
+   Applies a cloth simulation to all unmasked vertices.
 
 :doc:`/sculpt_paint/sculpting/tools/color_filter`
-   Changes the active color attribute on all vertices in the mesh at the same time.
+   Changes the active color attribute on all unmasked vertices.
 
 Single Click Tools
 ==================
@@ -207,7 +212,7 @@ Simpler tools that apply an operation on surfaces that are clicked on.
    Modifies the face set under the cursor.
 
 :doc:`/sculpt_paint/sculpting/tools/mask_by_color`
-   Creates a mask from the color attribute. Click on any color on the mesh to create a new mask.
+   Create a mask from any color from the color attribute by clicking on it.
 
 General Tools
 =============
@@ -227,7 +232,7 @@ General transform and annotate tools like in other modes.
    Scale tool.
 
 :doc:`Transform </sculpt_paint/sculpting/tools/transforms>`
-   Tool to adjust the objects translation, rotations and scale.
+   Adjust the objects translation, rotations and scale.
 
 :ref:`Annotate <tool-annotate-freehand>`
    Draw free-hand annotation.

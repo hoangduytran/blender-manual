@@ -9,38 +9,46 @@ Smooth
    :Tool:      :menuselection:`Toolbar --> Smooth`
    :Shortcut:  :kbd:`Shift-S`
 
-Eliminates irregularities in the area of the mesh within the brush's
-influence by smoothing the positions of the vertices.
-The inverse of this tool is to sharpen the details in a mesh
-by applying a Laplacian smooth in the opposite direction.
+Smooths the positions of the vertices to either polish surfaces or remove volume from larger shapes.
+Because this brush is so essential, it's always accessible by holding :kbd:`Shift` and sculpting.
 
+Also available as a :doc:`Mesh Filter </sculpt_paint/sculpting/tools/mesh_filter>`
+to smooth all unmasked areas at once.
 
 Brush Settings
 ==============
 
-Direction
-   The operation to apply to the mesh.
-   This setting can be toggled with :kbd:`Ctrl` while sculpting.
+General
+*******
+
+Direction :kbd:`Ctrl`
 
    Smooth
-      Smooths the surface of the mesh by decreasing the difference between creases and valleys.
+      Smooths the surface of the mesh.
    Enhance Details
-      Sharpens details on the surface of the mesh by intensifying the difference between creases and valleys.
+      Enhances details on the surface of the mesh by applying a smoothing operation in the opposite direction.
 
 .. _bpy.types.Brush.smooth_deform_type:
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 Deformation
    Deformation type that is used in the brush.
 
    Laplacian
-      Smooths the surface and the volume.
+      Smooths the surface and volumes. This is the default behavior.
    Surface
-      Smooths the surface of the mesh, while preserving the volume.
+      Smooths only the surface of the mesh, while preserving the volume.
 
       .. _bpy.types.Brush.surface_smooth_shape_preservation:
 
       Shape Preservation
-         How much of the original shape is preserved when smoothing. Increasing the value
+         How much of the original shape is preserved while smoothing. Increasing the value
          reduces the effect of having multiple iterations on the strength of smoothing.
 
       .. _bpy.types.Brush.surface_smooth_current_vertex:

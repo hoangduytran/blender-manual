@@ -9,36 +9,51 @@ Paint
    :Tool:      :menuselection:`Toolbar --> Paint`
 
 Paints on the active color attribute.
+Hold :kbd:`Shift` to blur painted colors instead.
+
+.. note::
+   More information in the
+   :doc:`Painting Introduction </sculpt_paint/sculpting/introduction/painting>`.
 
 Brush Settings
 ==============
 
-Color
-   Choose a primary and secondary color for painting. See :ref:`ui-color-picker`.
+General
+*******
 
-   Press :kbd:`S` on any part of the image to sample that color and set it as the brush color.
-   Hold :kbd:`Ctrl` while painting to temporally paint with the secondary color.
+Strength
+   This settings has a different effect on this brush.
+   Instead of defining the strength of each individual step in the stroke,
+   it determines the overall Opacity of the applied color.
 
-   Swap Colors (cycle icon)
-      Swaps the primary and secondary colors.
+   Use the *Flow* setting instead for faster increasing of strength.
 
-   Use Unified Color
-      Use the same brush color across all brushes.
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
-Blend Mode
-   Set the way the paint is applied over the underlying color. See :term:`Color Blend Modes`.
+Unique
+******
+
 Flow
-   Amount of paint that is applied per stroke sample. Used to create an accumulation effect.
+   Amount of paint that is applied per stroke sample.
+   Used to create fast/slow accumulation effect.
+
 Wet Mix
    Amount of paint that is picked from the surface into the brush color.
+   Can achieve the effect of a wet canvas.
+
 Wet Persistence
    Amount of wet paint that stays in the brush after applying paint to the surface.
+
 Wet Paint Radius
    Ratio between the brush radius and the radius that is going to be used to sample the color to blend in wet paint.
+
 Density
-   Amount of random elements that are going to be affected by this brush. Use this for a detailed airbrush effect.
-Tip Roundness
-   Roundness of the brush tip. The lower the value the more square the brush tip becomes.
-   A lower roundness also affects the hardness of the brush.
+   Amount of random elements that are going to be affected by this brush.
+   Use this for a more detailed airbrush effect.
+   This works best on a high resolution.
+
 Tip Scale X
    Scale of the brush tip in the X axis.
+   This is useful for a achieving a painting stroke like a marker or paint roller.

@@ -33,11 +33,11 @@ Masks
 .. figure:: /images/sculpt-paint_sculpting_editing_mask_example.jpg
 
 A mask is used to control which vertices of the mesh are influenced by sculpting and painting.
-The mask can for example be created/edited via the :doc:`Mask Brush </sculpt_paint/sculpting/tools/mask>`, 
+The mask can for example be created/edited via the :doc:`Mask Brush </sculpt_paint/sculpting/tools/mask>`,
 :doc:`Box Mask </sculpt_paint/sculpting/tools/box_mask>`,
-:doc:`Lasso Mask </sculpt_paint/sculpting/tools/lasso_mask>`, 
-:doc:`Line Mask </sculpt_paint/sculpting/tools/line_mask>` and
-:doc:`Mask by Color </sculpt_paint/sculpting/tools/mask_by_color>` tools.
+:doc:`Lasso Mask </sculpt_paint/sculpting/tools/lasso_mask>`,
+:doc:`Line Mask </sculpt_paint/sculpting/tools/line_mask>`
+and :doc:`Mask by Color </sculpt_paint/sculpting/tools/mask_by_color>` tools.
 
 Clear & Invert
 --------------
@@ -75,9 +75,11 @@ More options can be found in the :kbd:`W` pie menu.
 
 .. figure:: /images/sculpt-paint_sculpting_editing_face_set_pie.png
 
-Otherwise Face Sets can be created/edited with the :doc:`Draw Face Sets </sculpt_paint/sculpting/tools/draw_facesets>`
-brush, :doc:`Box Face Set </sculpt_paint/sculpting/tools/box_face_set>` and
-:doc:`Lasso Face Set </sculpt_paint/sculpting/tools/lasso_face_set>`. They can also be edited with the
+Otherwise Face Sets can be created/edited with the
+:doc:`Draw Face Sets </sculpt_paint/sculpting/tools/draw_facesets>` brush,
+:doc:`Box Face Set </sculpt_paint/sculpting/tools/box_face_set>` and
+:doc:`Lasso Face Set </sculpt_paint/sculpting/tools/lasso_face_set>`. 
+They can also be edited with the
 :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool.
 
 .. seealso::

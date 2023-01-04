@@ -5,9 +5,11 @@
 Multiresolution Modifier
 ************************
 
-The *Multiresolution* modifier (often shortened to "Multires") gives you the ability to subdivide a mesh similarly
-to the :doc:`Subdivision Surface </modeling/modifiers/generate/subdivision_surface>` modifier, but also allows you to
-edit the new subdivision levels in :doc:`Sculpt Mode </sculpt_paint/sculpting/introduction/adaptive>`.
+The *Multiresolution* modifier (often shortened to "Multires")
+gives you the ability to subdivide a mesh similarly
+to the :doc:`Subdivision Surface </modeling/modifiers/generate/subdivision_surface>` modifier,
+but also allows you to edit the new subdivision levels in
+:doc:`Sculpt Mode </sculpt_paint/sculpting/introduction/adaptive>`.
 
 .. note::
 

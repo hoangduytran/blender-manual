@@ -9,7 +9,7 @@ This page details the mask related hotkey operators and menu operators in sculpt
 Other related information can also be found at the bottom of the page.
 
 Editing
-========
+=======
 
 .. a screenshot of the menu
 
@@ -77,8 +77,9 @@ Box Mask
    :Menu:      :menuselection:`Mask --> Box Mask`
    :Shortcut:  :kbd:`B`
 
-Works like the :doc:`Box Mask </sculpt_paint/sculpting/tools/box_mask>` tool, it creates a rectangular mask
-region. Hold :kbd:`Shift` or press :kbd:`MMB` to clear the mask of the selected region.
+Works like the the :doc:`Box Mask </sculpt_paint/sculpting/tools/box_mask>` tool,
+it creates a rectangular mask region.
+Hold :kbd:`Shift` or press :kbd:`MMB` to clear the mask of the selected region.
 
 
 .. _bpy.ops.paint.mask_lasso_gesture:
@@ -92,8 +93,9 @@ Lasso Mask
    :Menu:      :menuselection:`Mask --> Lasso Mask`
    :Shortcut:  :kbd:`Shift-Ctrl-LMB`
 
-Can be used to create a free-form mask, similar to the :doc:`Lasso Mask </sculpt_paint/sculpting/tools/box_mask>`
-tool. This is very commonly used.
+Can be used to create a free-form mask, similar to the
+:doc:`Lasso Mask </sculpt_paint/sculpting/tools/box_mask>` tool.
+This is very commonly used.
 
 .. tip::
 

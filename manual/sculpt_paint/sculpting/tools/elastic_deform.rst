@@ -9,12 +9,22 @@ Elastic Deform
    :Tool:      :menuselection:`Toolbar --> Elastic Deform`
 
 Used to simulate realistic deformations such as grabbing or twisting of :term:`Elastic` objects.
-For example, this tool works great for modeling the shape of flesh like objects such as humans or animals.
+For example, this tool works great for modeling the shape of organic objects such as humans or animals.
 When pressing :kbd:`Ctrl`, the brush deforms vertices along the normal of the active vertex.
 
 
 Brush Settings
 ==============
+
+General
+*******
+
+.. note::
+   More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
+   and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
+Unique
+******
 
 .. _bpy.types.Brush.elastic_deform_type:
 
@@ -35,5 +45,5 @@ Deformation
 .. _bpy.types.Brush.elastic_deform_volume_preservation:
 
 Volume Preservation
-   Poisson ratio for elastic deformation.
-   Higher values preserve volume more, but also lead to more bulging.
+   Higher values preserve volumes more, but also lead to more bulging.
+   (This value determines the poisson ratio for elastic deformation)
