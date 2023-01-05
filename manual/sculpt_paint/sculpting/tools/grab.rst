@@ -79,10 +79,10 @@ Additional Workflows
 
 2D Grab Brush
    If the :ref:`Falloff Shape <bpy.types.Brush.falloff_shape>` is set to *Projected*, the brush can grab infinitely deep into the viewport.
-   This is especially useful for make even broader changes to a sculpt.
+   This is especially useful for much broader changes to a sculpt.
 
    .. figure:: /images/sculpt-paint_sculpting_grab_projected.jpg
 
    The stroke can also be started outside of the mesh (like in empty 3D space)
-   and still grab the nearest vertices within the brush radius.
-   This can be useful when more broad control of grabbing is needed, especially on flat and tube meshes.
+   and grab the vertices within the brush radius.
+   This can be useful for sculpting flat and tube-like meshes.
