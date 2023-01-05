@@ -27,7 +27,7 @@ General
 *******
 
 Radius
-   Pressure Sensitivity is not supported for this brush type. More info at :ref:`Radius <bpy.types.Brush.radius>`.
+   Pressure Sensitivity is not supported for this brush type. More info at :ref:`Radius <bpy.types.Brush.size>`.
 
 Strength
    Pressure Sensitivity is not supported for this brush type. More info at :ref:`Strength <bpy.types.Brush.strength>`.
