@@ -75,7 +75,7 @@ Note how in the image only the bottom side of the leg is pulled down, despite th
 
 
 Additional Workflows
-==============
+====================
 
 2D Grab Brush
    If the :ref:`Falloff Shape` is set to *Projected*, the brush can grab infinitely deep into the viewport.

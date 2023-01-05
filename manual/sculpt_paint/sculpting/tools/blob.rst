@@ -8,7 +8,7 @@ Blob
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Blob`
 
-Similar to :doc:`Draw <Draw </sculpt_paint/sculpting/tools/clay>`,
+Similar to :doc:`Draw </sculpt_paint/sculpting/tools/clay>`,
 but vertices are pushed outwards like an inverted pinching effect.
 This will lead to a more consistent spherical curvature and thickening of strokes.
 

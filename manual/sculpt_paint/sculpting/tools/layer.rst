@@ -31,6 +31,7 @@ Hardness
 .. note::
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
 Unique
 ******
 

@@ -8,7 +8,7 @@ Scrape
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Scrape`
 
-Similar to the :doc:`Flatten <sculpt_paint/sculpting/tools/flatten>` brush,
+Similar to the :doc:`Flatten </sculpt_paint/sculpting/tools/flatten>` brush,
 but only pushes surfaces downward to the medium height.
 
 Although :kbd:`Ctrl` can be held to invert the effect to a Fill brush,
