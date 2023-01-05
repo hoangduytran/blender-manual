@@ -11,6 +11,8 @@ This page explains general and mode specific settings that are used across vario
 General
 =======
 
+.. _bpy.types.Brush.size:
+
 Radius
    This option controls the size of the brush, measured in pixels.
    :kbd:`F` allows you to change the brush size interactively by
@@ -33,6 +35,8 @@ Radius Unit :guilabel:`Sculpt Mode`
       The *Radius* is measured based on real world units.
       This means that the brush radius stays consistent, independently from zooming in and out in the viewport.
       The unit type and scaling can be configured in the :ref:`Scene Units <bpy.types.UnitSettings>`.
+
+.. _bpy.types.Brush.strength:
 
 Strength
    For painting brushes the *Strength* defines the maximum effect of each brush stroke.

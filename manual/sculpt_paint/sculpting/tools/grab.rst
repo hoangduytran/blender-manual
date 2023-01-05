@@ -27,17 +27,17 @@ General
 *******
 
 Radius
-   Pressure Sensitivity is not supported for this brush type. More info at :ref:`Radius`
+   Pressure Sensitivity is not supported for this brush type. More info at :ref:`Radius <bpy.types.Brush.radius>`.
 
 Strength
-   Pressure Sensitivity is not supported for this brush type. More info at :ref:`Strength`
+   Pressure Sensitivity is not supported for this brush type. More info at :ref:`Strength <bpy.types.Brush.strength>`.
 
 Normal Radius
    For this brush, this setting is a purely visual change.
-   It does not alter the brush behavior. More info at :ref:`Normal Radius`
+   It does not alter the brush behavior. More info at :ref:`Normal Radius <bpy.types.Brush.normal_radius_factor>`.
 
 Auto-Smooth
-   This setting is not supported. More info at :ref:`Auto-Smooth`
+   This setting is not supported. More info at :ref:`Auto-Smooth <bpy.types.Brush.auto_smooth_factor>`.
 
 .. note::
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
@@ -70,7 +70,7 @@ Grab Silhouette
 Note how in the image only the bottom side of the leg is pulled down, despite the size of the brush.
 
 .. tip::
-   This setting is also useful for grabbing a single side of a crease and pushing it further inwards, 
+   This setting is also useful for grabbing a single side of a crease and pushing it further inwards,
    creating a more pinched crease. This can be easier to control than pinching or creasing the surface.
 
 
@@ -78,11 +78,11 @@ Additional Workflows
 ====================
 
 2D Grab Brush
-   If the :ref:`Falloff Shape` is set to *Projected*, the brush can grab infinitely deep into the viewport.
+   If the :ref:`Falloff Shape <bpy.types.Brush.falloff_shape>` is set to *Projected*, the brush can grab infinitely deep into the viewport.
    This is especially useful for make even broader changes to a sculpt.
 
    .. figure:: /images/sculpt-paint_sculpting_grab_projected.jpg
 
    The stroke can also be started outside of the mesh (like in empty 3D space)
    and still grab the nearest vertices within the brush radius.
-   This can be useful when more broad control of grabbing is needed, especially on flat and tube meshes. 
+   This can be useful when more broad control of grabbing is needed, especially on flat and tube meshes.
