@@ -69,15 +69,15 @@ Paths Type
 .. _bpy.types.AnimVizMotionPaths.range:
 
 Calculation Range
-   The range of the motion path. Only active when *Paths Type* is set to
-   *In Range*. Changing this option only takes effect when updating the path, via
+   The range of the motion path. Only active when *Paths Type* is set to
+   *In Range*. Changing this option only takes effect when updating the path, via
    the *Update Path* or *Update All Paths* buttons.
 
    :All Keys:
       Generate a motion path ranging from the first keyframe to the last. Only
       the keys of the active object / bone are considered.
    :Selected Keys:
-      Same as *All Keys* except that it ranges from the first to the last
+      Same as *All Keys* except that it ranges from the first to the last
       *selected* keyframe.
    :Scene Frame Range:
       Use the start & end frames of the scene, or the
