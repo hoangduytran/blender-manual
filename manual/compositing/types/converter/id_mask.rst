@@ -46,7 +46,8 @@ Setup
 An index can be specify for any object or material in the scene.
 The Object Index can be set in :menuselection:`Properties --> Object Properties --> Relations --> Pass Index`
 and :menuselection:`Material --> Settings --> Pass Index` for the Material Index.
-To be accessible after rendering, *Object Index* or *Material Index* render pass has to be enabled.
+To be accessible after rendering, the Render Engine must be Cycles,
+and *Object Index* or *Material Index* render pass has to be enabled.
 
 .. figure:: /images/compositing_types_converter_id-mask_relations-panel.png
 
