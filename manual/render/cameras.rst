@@ -424,3 +424,8 @@ Harmony
 Passepartout
    This option darkens the area outside of the camera's field of view.
    The opacity of the passepartout can be adjusted using the value slider.
+
+   .. tip::
+
+      If the Passepartput is fully opaque, Blender will make optimizations
+      to speed up the rendering of areas inside the camera view.
