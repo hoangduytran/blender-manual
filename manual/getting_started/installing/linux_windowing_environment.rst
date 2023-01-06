@@ -6,7 +6,7 @@ Linux Windowing Environment
 
 On Linux Blender supports both X11 and Wayland for official releases.
 
-When Wayland is detected, is is the preferred system, otherwise X11 will be used.
+When Wayland is detected, it is the preferred system, otherwise X11 will be used.
 
 .. hint::
 
