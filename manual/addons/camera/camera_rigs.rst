@@ -60,13 +60,6 @@ frame the action by moving two of the corners of the camera, instead of moving a
 movements that would be hard to achieve without it, by using complex drivers to calculate the appropriate camera
 settings.
 
-.. seealso::
-
-   `This video <https://vimeo.com/280727941>`__ shows a comparison
-   of an animated camera movement without (top) and with (bottom) the help of the rig.
-   As you can see in the lower left corner, you can achieve a smoother camera movement,
-   without the frame moving around.
-
 Root Bone
    This is the parent of the entire rig.
    It is the only bone that you should rotate to aim approximately at the action.
