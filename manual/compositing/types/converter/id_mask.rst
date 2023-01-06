@@ -13,6 +13,12 @@ ID Mask Node
 
 The *ID Mask Node* can be used to access an alpha mask per object or per material.
 
+.. seealso::
+
+   The ID Mask node is super superseded by the :doc:`/compositing/types/matte/cryptomatte`.
+   Cryptomatte is more feature complete and supported by Cycles and Eevee.
+   It is recommended to use this feature moving forward.
+
 
 Inputs
 ======
