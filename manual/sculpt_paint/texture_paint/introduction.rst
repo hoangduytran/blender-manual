@@ -60,9 +60,10 @@ To use texture paint you may do any of the following:
   and the Image Editor is already switched to Paint mode.
 - In the 3D Viewport, select Texture Paint Mode from the mode selector in the header,
   and you can paint directly onto the mesh.
-- In the Image Editor, switch the mode to Paint (shown to the right).
+- In the Image Editor, switch the mode to Paint (shown in the image to the right).
 
 .. figure:: /images/sculpt-paint_texture-paint_introduction_paint-mode.png
+   :align: right
 
    Enabling Paint mode.
 
