@@ -18,8 +18,9 @@ Gravity denoted g, measurement *m* × *s*\ :sup:`-2`.
 Gravity is applied in the same way to all physics systems.
 
 Gravity is practically the same around the entirety of planet *Earth*.
-For rendering scenes from the *Moon*, use a value six times smaller, i.e. 1.622 *m* × *s*\ :sup:`-2`.
-The planet *Mars* has a gravity value of 3.69.
+For rendering scenes on The Moon, use -1.622 *m* × *s*\ :sup:`-2` on the Z axis.
+Another popular gravity value might be for Mars which
+has a gravitation acceleration of -3.69 *m* × *s*\ :sup:`-2` on the Z Axis.
 
 .. note::
 
