@@ -79,10 +79,14 @@ but the entire set of weights is scaled up such that the highest weight value is
 Mirror
 ======
 
-The *Mirror Vertex Group* tool mirrors the weights from one side of a perfectly symmetrical mesh
-to the opposite side. Only mirroring along local X axis is supported.
+The *Mirror Vertex Group* tool mirrors the weights
+from one side of a perfectly symmetrical mesh to the opposite side.
 Those vertices that have no corresponding vertex on the other side will not be affected.
 But note, the weights are not transferred to the corresponding opposite bone weight group.
+
+.. note::
+
+   Mirroring only works when the object's rest pose is perfectly symmetrical across the X axis.
 
 .. figure:: /images/sculpt-paint_weight-paint_editing_mirror-example.png
 
