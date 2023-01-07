@@ -45,7 +45,7 @@ Face Sets
 
 .. tip::
 
-   If no topology or face set is visible under the curser at the start of the stroke,
+   If no topology or face set is visible under the cursor at the start of the stroke,
    the previously auto-masked area will be targeted.
    This is especially useful with the "Projected" falloff shape in the
    :doc:`Falloff Settings </sculpt_paint/brush/falloff>`.

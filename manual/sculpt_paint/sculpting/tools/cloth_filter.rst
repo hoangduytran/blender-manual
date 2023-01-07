@@ -31,7 +31,7 @@ Filter Type
    Expand
       Expands the cloth's dimensions.
    Pinch
-      Pinches the cloth to the point were the cursor was when the filter started.
+      Pinches the cloth to the point where the cursor was when the filter started.
    Scale
       Scales the mesh as a :doc:`Soft Body </physics/soft_body/index>`
       using the distance to the origin of the object as scale.
