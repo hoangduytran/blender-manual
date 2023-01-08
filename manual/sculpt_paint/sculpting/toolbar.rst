@@ -159,10 +159,10 @@ Gesture Tools
 
 General gesture tools to apply an operation via box, lasso and line shapes.
 
-:doc:`/sculpt_paint/sculpting/tools/box_trim`
+:doc:`/sculpt_paint/sculpting/tools/box_mask`
    Create a mask via a box gesture.
 
-:doc:`/sculpt_paint/sculpting/tools/lasso_trim`
+:doc:`/sculpt_paint/sculpting/tools/lasso_mask`
    Create a mask via a lasso gesture.
 
 :doc:`/sculpt_paint/sculpting/tools/line_mask`

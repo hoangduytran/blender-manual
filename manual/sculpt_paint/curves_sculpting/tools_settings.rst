@@ -3,7 +3,12 @@
 Common Settings
 ***************
 
-See more at :doc:`Brush Settings </sculpt_paint/brush/brush_settings>`
+Information on brush settings for every mode can be found in these pages:
+
+Brush
+=====
+
+See general and advanced :doc:`Brush </sculpt_paint/brush/brush_settings>` here.
 
 Stroke
 ======

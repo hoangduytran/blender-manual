@@ -7,9 +7,21 @@ Brush Settings
    :align: right
    :width: 200
 
-   Brush panel.
+   Brush settings panel.
 
-See more at :doc:`Brush Settings </sculpt_paint/brush/brush_settings>`
+Information on brush settings for every mode can be found in these pages:
+
+:doc:`Brush </sculpt_paint/brush/brush_settings>`
+   General and advanced settings.
+
+:doc:`Stroke </sculpt_paint/brush/stroke>`
+   Stroke methods and settings.
+
+:doc:`Falloff </sculpt_paint/brush/falloff>`
+   Falloff curves and settings.
+
+:doc:`Cursor </sculpt_paint/brush/cursor>`
+   Cursor and appearance settings.
 
 .. toctree::
    :hidden:
@@ -17,21 +29,3 @@ See more at :doc:`Brush Settings </sculpt_paint/brush/brush_settings>`
    Stroke </sculpt_paint/brush/stroke.rst>
    Falloff </sculpt_paint/brush/falloff.rst>
    Cursor </sculpt_paint/brush/cursor.rst>
-
-
-Stroke
-======
-
-See the global brush settings for :doc:`Stroke </sculpt_paint/brush/stroke>` settings.
-
-
-Falloff
-=======
-
-See the global brush settings for :doc:`Falloff </sculpt_paint/brush/falloff>` settings.
-
-
-Cursor
-======
-
-See the global brush settings for :doc:`Cursor </sculpt_paint/brush/cursor>` settings.
