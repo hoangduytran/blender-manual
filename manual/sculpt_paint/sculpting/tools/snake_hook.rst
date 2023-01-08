@@ -12,6 +12,9 @@ Snake Hook
 Pulls vertices along with the movement of the brush to create long, snake-like forms.
 During the stroke, geometry will be dynamically picked up & let go.
 
+When the *Rake* setting is used,
+the brush can also be used to rotate geometry via dragging.
+
 
 Brush Settings
 ==============

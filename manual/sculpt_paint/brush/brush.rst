@@ -27,17 +27,18 @@ Brushes
    Add Brush (Duplicate icon)
       When you add a brush, the new brush is a duplicate of the current one.
    Fake User (Shield icon)
-      Enabling this button will ensure that the brush will not be deleted, 
+      Enabling this button will ensure that the brush will not be deleted,
       even if it is not used by any tool.
    Unlink Data-Block (Cross icon)
-      Unassign the brush from the active tool. 
-      Hold :kbd:`Shift` to remove the brush from all users, 
+      Unassign the brush from the active tool.
+      Hold :kbd:`Shift` to remove the brush from all users,
       so it will be deleted upon reloading the file or purging orphan data.
 
    Brush Specials (Arrow button)
       Enabled Modes
-         Enable the brush to be used in different (even multiple) modes. 
-         For example, the brushes in Weight Paint and Vertex Paint mode are shared.
+         Enable the brush to be used in different (even multiple) modes.
+         For example, the exact same brushes are used in both Weight Paint
+         and Vertex Paint mode.
       Tool Selection
          Transfer the brush preset to be used by a different brush type.
       Reset Brush

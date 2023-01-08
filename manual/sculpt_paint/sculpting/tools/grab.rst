@@ -52,8 +52,7 @@ Grab Active Vertex
    Applies the maximum strength of the brush to the highlighted active vertex,
    making it easier to manipulate low-poly models or meshes with modifiers.
 
-   Enabling this option also enables a dynamic mesh preview which
-   overlays a white wireframe within the brush radius.
+   Enabling this option also enables a white wireframe overlay within the brush radius.
    This helps to visualize the real base geometry that is being manipulated
    while sculpting with :doc:`Modifiers </modeling/modifiers/index>`.
 
@@ -71,7 +70,7 @@ Note how in the image only the bottom side of the leg is pulled down, despite th
 
 .. tip::
    This setting is also useful for grabbing a single side of a crease and pushing it further inwards,
-   creating a more pinched crease. This can be easier to control than pinching or creasing the surface.
+   creating a more pinched crease.
 
 
 Additional Workflows
