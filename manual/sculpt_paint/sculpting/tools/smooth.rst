@@ -15,11 +15,21 @@ Because this brush is so essential, it's always accessible by holding :kbd:`Shif
 Also available as a :doc:`Mesh Filter </sculpt_paint/sculpting/tools/mesh_filter>`
 to smooth all unmasked areas at once.
 
+.. note::
+   The brush called *Smooth* will be used whenever holding :kbd:`Shift` and sculpting.
+   If the smoothing strength or behavior needs to be changed, switch to the *Smooth*
+   brush and adjust the settings there.
+
 Brush Settings
 ==============
 
 General
 *******
+
+Strength
+   The strength of the smoothing is relative to the density of the mesh.
+   If the resolution is increased on the sculpted mesh,
+   the strength of the smooth brush will be weaker than before and needs to be increased.
 
 Direction :kbd:`Ctrl`
 
@@ -38,7 +48,7 @@ Unique
 ******
 
 Deformation
-   Deformation type that is used in the brush.
+   There are two deformation types.
 
    Laplacian
       Smooths the surface and volumes. This is the default behavior.

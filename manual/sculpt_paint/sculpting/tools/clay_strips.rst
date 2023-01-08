@@ -8,14 +8,16 @@ Clay Strips
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Clay Strips`
 
-Similar to the :doc:`Draw </sculpt_paint/sculpting/tools/clay>` brush,
+Similar to the :doc:`Clay </sculpt_paint/sculpting/tools/clay>` brush,
 but it uses a square tip shape instead of a round one.
 
+Just like the *Clay* brush, it's useful for building and removing volumes
+and shapes like real clay, because it flattens details as you add/subtract from the surfaces.
+
 Clay Strips is very commonly used for aggressive building of volumes
-and more controlled and deliberate control over shapes on the surface.
+and deliberate control over shapes on the surface.
 This brush alone can be used for a fast rough pass over the entire sculpt,
 with additional smoothing or polishing often required afterwards.
-
 This brush can be very versatile with varying stroke directions, repeated strokes
 and pen pressure to achieve various results.
 
