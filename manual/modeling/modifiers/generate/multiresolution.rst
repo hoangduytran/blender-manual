@@ -15,8 +15,15 @@ but also allows you to edit the new subdivision levels in
 
    *Multiresolution* is the only modifier that cannot be repositioned in the stack after any modifier that will
    change geometry or other object data (i.e. all *Generate*, some *Modify* and some *Simulate* modifiers
-   cannot come before the *Multiresolution* one).
+   cannot come before the *Multiresolution*).
 
+Deform modifiers will be applied onto the Multires subdivision levels instead of the base mesh,
+if they come after the Multires.
+
+.. tip::
+   This is especially useful for re-projecting details from another sculpt
+   with a :doc:`Shrinkwrap modifier </modeling/modifiers/deform/shrinkwrap>`. For the best result make sure to use the
+   wrap method to *Project*, snap mode to *Above Surface* and enable *Negative*.
 
 Options
 =======
@@ -28,21 +35,21 @@ Options
    The Multiresolution modifier.
 
 Levels Viewport
-   Set the level of subdivisions to show in Object Mode.
+   Set the level of subdivisions to show in the viewport.
 Sculpt
-   Set the level of subdivisions to use in Sculpt Mode.
+   Set the level of subdivisions to use specifically in Sculpt Mode.
 Render
    Set the level of subdivisions to show when rendering.
 
 Sculpt Base Mesh
-   Makes sculpt-mode tools deform the base mesh instead of the displaced mesh,
-   while previewing the displacement of higher subdivision levels. This allows you to
-   see the propagation of strokes in real-time, which enables to use complex tools like
-   Cloth or Pose in much higher resolutions without surface noise and artifacts.
+   Deform the unsubdivided base mesh instead of the higher levels.
+   Meanwhile the set level will be previewed. This allows you to
+   make much broader changes in visual context to higher sculpted details
+   without creating surface noise and artifacts.
 
 Optimal Display
-   When rendering the wireframe of this object, the wires of the new subdivided edges will be skipped
-   (only displays the edges of the original geometry).
+   Only display the edges of the original geometry.
+   So when rendering the wireframe of this object, the wires of the subdivided edges will be skipped.
 
 
 Subdivisions
@@ -51,12 +58,15 @@ Subdivisions
 .. _bpy.ops.object.multires_subdivide:
 
 Subdivide
-   Creates a new level of subdivision using the type specified by *Subdivision Type* (see below).
+   Creates a smooth level of subdivision
+   (using the default Catmull-Clark algorithm).
 
 Simple
-   Creates a new level of subdivision using a simple interpolation by subdividing edges without any smoothing.
+   Creates a level of subdivision with un-smoothed base mesh edges
+   (using a simple interpolation by subdividing edges without any smoothing).
 Linear
-   Creates a new level of subdivision using linear interpolation of the current sculpted displacement.
+   Creates a completely un-smoothed level of subdivision
+   (using linear interpolation of the current sculpted displacement).
 
 .. _bpy.ops.object.multires_unsubdivide:
 
@@ -75,7 +85,7 @@ Shape
 .. _bpy.ops.object.multires_reshape:
 
 Reshape
-   Copies vertex coordinates from another mesh.
+   Copy the shape of another object onto the multires levels by copying its vertex coordinates.
 
    To use it, first select a different mesh object with matching topology and vertex indices,
    then :kbd:`Shift` select the object you wish to copy vertex coordinates to, and click *Reshape*.
