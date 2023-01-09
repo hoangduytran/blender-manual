@@ -50,7 +50,7 @@ Transition
    Shrink
       Hide points from the end of each stroke to the start, from last to first stroke.
       (Simulating lines being erased.)
-   Fade
+   Vanish
       Hide points in the order they occur in each stroke, from first to last stroke.
       (Simulating ink fading or vanishing after getting drawn.)
 
@@ -81,7 +81,7 @@ Fade
 ----
 
 Factor
-   Defines home much the stroke is fading in/out.
+   Defines how much the stroke is fading in/out.
 
 Thickness
    How much strength fading is applied to the stroke's thickness.
