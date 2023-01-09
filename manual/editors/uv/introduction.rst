@@ -153,7 +153,7 @@ Viewport Gizmos
 Display Channels
    Select what color channels are displayed.
 
-   :Color and Alpha:
+   :Color & Alpha:
       Replaces transparent pixels with background checkerboard, denoting the alpha channel.
    :Color:
       Display the colored image, without alpha channel.

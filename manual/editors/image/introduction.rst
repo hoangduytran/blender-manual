@@ -82,10 +82,12 @@ Viewport Gizmos
       Enable/disable the gizmos used to pan or zoom the 2D viewport,
       see :ref:`Navigation Gizmos <editors-image-navigate-gizmos>` for more information.
 
+.. _bpy.types.SpaceImageEditor.display_channels:
+
 Display Channels
    Select what color channels are displayed.
 
-   :Color and Alpha:
+   :Color & Alpha:
       Replaces transparent pixels with background checkerboard, denoting the alpha channel.
    :Color:
       Display the colored image, without alpha channel.

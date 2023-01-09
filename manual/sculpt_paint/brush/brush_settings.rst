@@ -70,7 +70,8 @@ Blend
    .. tip::
 
       In order to see the effects of the Erase and Add Alpha mix modes in the Image Editor,
-      you must enable the alpha channel display by clicking the Display Alpha or the Alpha-Only button.
+      the :ref:`Display Channels <bpy.types.SpaceImageEditor.display_channels>`
+      must be set to *Color & Alpha* or *Alpha*.
       Transparent (no alpha) areas will then show a checkered background.
 
 Weight :guilabel:`Weight Paint`

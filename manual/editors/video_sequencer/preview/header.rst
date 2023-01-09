@@ -66,7 +66,7 @@ See :doc:`/editors/video_sequencer/preview/display/display_mode`.
 Display Channels
 ================
 
-Color and Alpha
+Color & Alpha
    Display preview image with transparency over checkerboard pattern.
 Color
    Ignore transparency of preview image (fully transparent areas will be black).
