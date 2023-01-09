@@ -22,7 +22,7 @@ if they come after the Multires.
 
 .. tip::
    This is especially useful for re-projecting details from another sculpt
-   with a :doc:`Shrinkwrap modifier </modeling/modifiers/deform/shrinkwrap>`. For the best result make sure to use the
+   with a :doc:`Shrinkwrap modifier </modeling/modifiers/deform/shrinkwrap>`. For the best result make sure to set the
    wrap method to *Project*, snap mode to *Above Surface* and enable *Negative*.
 
 Options
