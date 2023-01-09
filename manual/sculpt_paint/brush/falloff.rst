@@ -92,7 +92,7 @@ Falloff Shape
 
 .. _bpy.types.ImagePaint.use_normal_falloff:
 
-Normal Falloff
+Front-Face Falloff
 ==============
 
 As faces point away from the view the brush strokes fade away to prevent harsh edges.
