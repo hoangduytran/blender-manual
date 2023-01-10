@@ -8,6 +8,7 @@ Mask
 This page details the mask related hotkey operators and menu operators in sculpt mode.
 Other related information can also be found at the bottom of the page.
 
+
 Editing
 =======
 
@@ -33,9 +34,9 @@ Invert Mask
    :Menu:      :menuselection:`Mask --> Invert Mask`
    :Shortcut:  :kbd:`Ctrl-I`
 
-Inverts the visible mask. 
+Inverts the visible mask.
 This is often useful because sometimes the masked vertices are the surfaces you want to sculpt/paint.
-In that case it is very useful to mask and then invert. 
+In that case it is very useful to mask and then invert.
 
 .. An example image of this workflow with lasso masking
 
@@ -50,7 +51,7 @@ Fill Mask
    :Menu:      :menuselection:`Mask --> Fill Mask`
 
 Fully masks the entire visible geometry.
-Alternatively it is also common to invert unmasked geometry to achieve the same effect. 
+Alternatively it is also common to invert unmasked geometry to achieve the same effect.
 
 .. _mask_clear:
 
@@ -113,16 +114,16 @@ Mask Filters
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Mask --> Mask Filters`
+   :Menu:      :menuselection:`Mask --> Smooth/Sharpen Mask, Grow/Shrink Mask, Increase/Decrease Contrast`
 
 Mask filters are operations that are applied to the whole mask.
 
 Type
-   Smooth/Sharpen Mask
+   :Smooth/Sharpen Mask:
       Changes the sharpness of the mask edge.
-   Grow/Shrink Mask
+   :Grow/Shrink Mask:
       Further grow or shrink the mask along the surface of the mesh.
-   Increase/Decrease Contrast
+   :Increase/Decrease Contrast:
       Changes the contrast of the mask.
 
 In the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>` panel there are further options.
