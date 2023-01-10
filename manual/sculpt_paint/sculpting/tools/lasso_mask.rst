@@ -12,7 +12,8 @@ Creates a new :doc:`Mask </sculpt_paint/sculpting/editing/mask>`
 based on a :ref:`lasso selection <tool-select-lasso>`.
 Hold :kbd:`Ctrl` to subtract from the mask instead.
 
-This tool is also accessible as a :ref:`shortcut operator <bpy.ops.paint.mask_box_gesture>` on :kbd:`Ctrl Shift LMB-Drag`.
+This tool is also accessible as a :ref:`shortcut operator <bpy.ops.paint.mask_box_gesture>` on
+:kbd:`Shift-Ctrl-LMB` drag.
 
 
 Tool Settings
