@@ -22,16 +22,17 @@ A limitation is that the brush does not remesh the sculpted surfaces
 with :ref:`Dyntopo <bpy.ops.sculpt.dynamic_topology_toggle>` enabled.
 Because of that, a better brush to use with Dyntopo can be :doc:`Crease </sculpt_paint/sculpting/tools/crease>`.
 
+
 Brush Settings
 ==============
 
 General
-*******
+-------
 
 Direction
-   On *Subtract* by default to carve in creases. More info at :ref:`Direction`
-   .. Add rna link
+   On *Subtract* by default to carve in creases. More info at :ref:`Direction <bpy.types.Brush.direction>`
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

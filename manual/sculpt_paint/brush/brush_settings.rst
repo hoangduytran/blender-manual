@@ -1,3 +1,4 @@
+
 **************
 Brush Settings
 **************
@@ -5,6 +6,7 @@ Brush Settings
 Each mode and brush has unique brush settings.
 But there is also a lot of overlap or similar settings.
 This page explains general and mode specific settings that are used across various brushes in more detail.
+
 
 .. _sculpt-tool-settings-brush-settings-general:
 

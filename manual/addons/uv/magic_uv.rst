@@ -732,7 +732,7 @@ Same Polygon Threshold
 Selection Method
    Specifies how to select the faces.
 Sync Mesh Selection
-   Select the mesh's faces as well as UV's faces.
+   Select the mesh's faces as well as UV faces.
 
 Zoom Selected UV
    Zoom to the selected UV in 3D Viewport.
