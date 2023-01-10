@@ -9,27 +9,20 @@ Line Mask
    :Tool:      :menuselection:`Toolbar --> Line Mask`
 
 This tool creates a :doc:`Mask </sculpt_paint/sculpting/editing/mask>`
-based on plan determined by the camera view and a drawn line.
-The masked region of the mesh is visualized by the shaded side of the line.
-
-
-Tool Settings
-=============
-
-Front Faces Only
-   Only creates a mask on the front side of faces.
-
-Limit to Segment
-   Apply the gesture action only to the area that is contained within
-   the segment without extending its effect to the entire line.
-
+across one side of a drawn line.
+The affected areas is visualized by the shaded side of the line.
 
 Usage
 =====
 
-#. Orient the 3D Viewport to define the local view plane to use for the mask.
-#. :kbd:`LMB` and hold while moving the cursor to define the line to pick a region of the view plane to mask.
+Use the tool by:
+
+#. Orient the 3D Viewport to define the direction in depth.
+#. :kbd:`LMB` and hold while moving the cursor to define direction of the line mask.
+#. Adjust the operation with extra *Controls* shortcuts.
 #. Release :kbd:`LMB` to confirm.
+
+Hold :kbd:`Ctrl` to subtract from the mask instead.
 
 
 Controls
@@ -40,4 +33,15 @@ Flip :kbd:`F`
 Snap :kbd:`Ctrl`
    Constrains the rotation of the line to 15 degree intervals.
 Move :kbd:`Ctrl-Spacebar`
-   Changes the location of the line.
+   Reposition the line.
+
+
+Tool Settings
+=============
+
+Front Faces Only
+   Only creates a mask on the faces that face towards the view.
+
+Limit to Segment
+   The affected area will not extend the length of the drawn line.
+   This helps defining a smaller area instead of extending the line infinitely long.

@@ -168,6 +168,9 @@ General gesture tools to apply an operation via box, lasso and line shapes.
 :doc:`/sculpt_paint/sculpting/tools/line_mask`
    Create a mask via on one side of a drawn line.
 
+Box Hide
+   Hides/Shows geometry via a box gesture.
+
 :doc:`/sculpt_paint/sculpting/tools/box_face_set`
    Create a face set via a box gesture.
 

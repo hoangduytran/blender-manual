@@ -16,4 +16,4 @@ Tool Settings
 =============
 
 Front Faces Only
-   Only draw face sets on the front side of faces.
+   Only creates a mask on the faces that face towards the view.
