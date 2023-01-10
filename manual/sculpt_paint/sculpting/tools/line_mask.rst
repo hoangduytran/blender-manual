@@ -10,7 +10,7 @@ Line Mask
 
 This tool creates a :doc:`Mask </sculpt_paint/sculpting/editing/mask>`
 across one side of a drawn line.
-The affected areas is visualized by the shaded side of the line.
+The affected area is visualized by the shaded side of the line.
 
 Usage
 =====
