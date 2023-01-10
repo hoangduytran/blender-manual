@@ -77,8 +77,8 @@ Additional Workflows
 ====================
 
 2D Grab Brush
-   If the :ref:`Falloff Shape <bpy.types.Brush.falloff_shape>` is set to *Projected*, the brush can grab infinitely deep into the viewport.
-   This is especially useful for much broader changes to a sculpt.
+   If the :ref:`Falloff Shape <bpy.types.Brush.falloff_shape>` is set to *Projected*, the brush can grab infinitely
+   deep into the viewport. This is especially useful for much broader changes to a sculpt.
 
    .. figure:: /images/sculpt-paint_sculpting_grab_projected.jpg
 
