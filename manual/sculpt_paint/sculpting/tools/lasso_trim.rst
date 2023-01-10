@@ -10,7 +10,7 @@ Lasso Trim
 
 Adds or removes geometry using a Boolean operation based on a :ref:`lasso selection <tool-select-lasso>`.
 This tool is especially useful for sketching an early base mesh for further
-sculpting with the :ref:`voxel remesher </sculpt_paint/sculpting/tool_settings/remesh>`.
+sculpting with the :doc:`voxel remesher </sculpt_paint/sculpting/tool_settings/remesh>`.
 
 .. add visual example of removing/adding geometry for a rough base.
 
