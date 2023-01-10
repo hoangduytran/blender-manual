@@ -30,15 +30,28 @@ which can be used to collapse the node. This can also be done with :kbd:`H`.
 Sockets
 =======
 
-.. figure:: /images/interface_controls_nodes_parts_sockets.png
-   :align: right
-
 Sockets are input and output values for the node.
 They appear as little colored circles on either side of the node.
 Unused sockets can be hidden with :kbd:`Ctrl-H`.
 
 Each socket is color-coded depending on what type of data it handles.
 
+.. figure:: /images/interface_controls_nodes_parts_sockets.png
+
+.. rubric:: Built-in
+
+Shader (bright green)
+   Used for shaders in :doc:`Cycles </render/cycles/index>` and :doc:`Eevee </render/eevee/index>`.
+Geometry (turquoise)
+   Used in :doc:`Geometry Nodes </modeling/geometry_nodes/index>`.
+
+.. rubric:: Data
+
+Boolean (pink)
+   Used to pass a true or false value.
+Color (yellow)
+   Indicates that the socket accepts/produces color information.
+   The colors may or may not have an alpha component depending on the node tree type.
 Float (gray)
    Indicates that the socket accepts/produces floating-point numbers.
    It can either be a single value or a so-called "value map".
@@ -46,23 +59,21 @@ Float (gray)
    If a single value is used as an input for a "value map" socket, all points of the map are set to this same value.
 Integer (lime green)
    Used to pass an integer value (a number without a fractional component).
-Boolean (pink)
-   Used to pass a true or false value.
 String (light blue)
    Used to pass a text value.
 Vector (dark blue)
    Indicates vector, coordinate and normal information.
-Color (yellow)
-   Indicates that the socket accepts/produces color information.
-   The colors may or may not have an alpha component depending on the node tree type.
-Shader (bright green)
-   Used for shaders in :doc:`Cycles </render/cycles/index>` and :doc:`Eevee </render/eevee/index>`.
-Geometry (turquoise)
-   Used in :doc:`Geometry Nodes </modeling/geometry_nodes/index>`.
-Object (orange)
-   Used to pass an object data-block.
+
+.. rubric:: Data-Blocks
+
 Collection (white)
    Used to pass a collection data-block.
+Object (orange)
+   Used to pass an object data-block.
+Material (salmon)
+   Used to pass an material data-block.
+Texture (pink)
+   Used to pass an texture data-block.
 Image (apricot)
    Used to pass an image data-block.
 
