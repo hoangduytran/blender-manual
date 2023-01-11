@@ -12,7 +12,7 @@ This brush deletes displacement information of
 the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,
 resetting the mesh to a regular subdivision surface result.
 
-This can be used to delete parts of the sculpt or to fix reprojection artifacts
+This can be used to reset parts of the sculpt or to fix reprojection artifacts
 after applying a :doc:`Shrinkwrap Modifier </modeling/modifiers/deform/shrinkwrap>`.
 
 .. tip::

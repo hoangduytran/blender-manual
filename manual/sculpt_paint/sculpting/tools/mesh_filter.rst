@@ -9,23 +9,28 @@ Mesh Filter
    :Tool:      :menuselection:`Toolbar --> Mesh Filter`
 
 Applies a deformation to all vertices in the mesh at the same time.
-To use this tool, click and drag away from the object to have a positive effect
-and click and drag towards the mesh to have a negative effect.
+Masking, auto-masking and visibility will be taken into account.
+
+To use this tool, click and drag away from left to right
+or from right to left for a negative effect.
 
 
 Tool Settings
 =============
 
 Filter Type
+   These are all of the available filter deformations.
+
    Smooth
-      Eliminates irregularities of the mesh by making the positions of the vertices more uniform.
-      This filter works similar to the *Smooth Brush*.
+      Smooths the positions of the vertices to either polish surfaces or remove volume from larger shapes.
+      Especially useful to fix most of the artifacts of the voxel remesher.
+      This filter works similar to the :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
    Scale
       Increases the size of the mesh.
       This filter works similar to the :ref:`Scale Transform <bpy.ops.transform.resize>`.
    Inflate
       Displaces vertices uniformly along their normal.
-      This filter works similar to the *Inflate Brush*.
+      This filter works similar to the :doc:`Inflate </sculpt_paint/sculpting/tools/inflate>` brush.
    Sphere
       Morphs the mesh progressively into a sphere.
       This filter works similar to the :ref:`To Sphere Transform <bpy.ops.transform.tosphere>`.
@@ -34,14 +39,17 @@ Filter Type
       This filter works similar to the :ref:`Randomize Transform <bpy.ops.object.randomize_transform>`.
    Relax
       Tries to create an even distribution of quads without deforming the volume of the mesh.
-      This filter works the same as the *Relax* mode of the *Slide Relax* brush.
+      This filter works the same as holding :kbd:`Shift` with the
+      :doc:`Slide Relax </sculpt_paint/sculpting/tools/slide_relax>` brush.
    Relax Face Sets
-      Smooths the edges of the face sets by modifying the underlying
-      topology so edges flow along the perimeter of the face sets.
       This will remove the jagged lines visible after drawing or creating a face set.
+      This filter works the same as holding :kbd:`Shift` with the
+      :doc:`Draw Face Set </sculpt_paint/sculpting/tools/draw_face_set>` brush.
    Surface Smooth
       Eliminates irregularities of the mesh by making the positions
       of the vertices more uniform while preserving the volume of the object.
+      This filter works similar to the *Surface* deformation type of the
+      :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
 
       Shape Preservation
          How much of the original shape is preserved when smoothing.
@@ -50,8 +58,8 @@ Filter Type
    Sharpen
       Sharpens and smooths the mesh based on its curvature,
       resulting in pinching hard edges and polishing flat surfaces.
-      It fixes most of the artifacts of the voxel remesher and those produced when
-      sculpting hard surfaces and stylized models with creasing and flattening brushes.
+      Especially useful when sculpting hard surfaces and stylized models\
+      with creasing and flattening brushes.
 
       Smooth Ratio
          How much smoothing is applied to polished surfaces.
@@ -64,11 +72,13 @@ Filter Type
    Enhance Details
       Increases the high frequency surface details of the mesh
       by intensifying the difference between creases and valleys.
+      This filter works similar to the inverted direction of the
+      :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
    Erase Displacement
       Deletes displacement information of
       the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,
-      resetting the mesh to the subdivision limit surface.
-      This can be used to delete parts of the sculpt or to fix reprojection artifacts
+      resetting the mesh to a regular subdivision surface result.
+      This can be used to reset parts of the sculpt or to fix reprojection artifacts
       after applying a :doc:`Shrinkwrap Modifier </modeling/modifiers/deform/shrinkwrap>`.
 
       Negative strokes will intensify the displacement details,
@@ -76,6 +86,7 @@ Filter Type
 
 Strength
    The amount of effect the filter has on the mesh.
+   At certain object scales it can be useful to change this value.
 
 Deformation Axis
    Apply the deformation only on the selected axis.

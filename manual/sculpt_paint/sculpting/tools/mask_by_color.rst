@@ -8,7 +8,7 @@ Mask by Color
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Mask by Color`
 
-Creates a mask from the color attribute. Click on any color on the mesh to create a new mask.
+Click on any color on the mesh to create a new mask (based on the active color attribute).
 
 
 Tool Settings

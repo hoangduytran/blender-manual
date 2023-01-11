@@ -8,9 +8,11 @@ Color Filter
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Color Filter`
 
-Changes the color attribute on all vertices in the mesh at the same time.
-To use this tool, click and drag away from the object to have a positive effect
-and click and drag towards the mesh to have a negative effect.
+Apply color corrections or effects on the active color attribute
+on all vertices in the mesh at the same time.
+
+To use this tool, click and drag away from left to right
+or from right to left for a negative effect.
 
 
 Tool Settings
