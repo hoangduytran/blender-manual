@@ -80,7 +80,7 @@ Mask
    This brush paints gray-scale values on the mask texture
    specified in the :doc:`Mask panel </sculpt_paint/texture_paint/tool_settings/mask>`.
    Any masked surfaces will not be affected by other paint brushes, similar to
-   :doc:`sculpt mode masking </sculpt_paint/sculpting/introduction/visibility_masking_face_sets>`
+   :doc:`sculpt mode masking </sculpt_paint/sculpting/introduction/visibility_masking_face_sets>`.
 
    Mask Value
       Mask weight, a value of zero means not masked, while one is completely masked.
@@ -88,5 +88,5 @@ Mask
 
    .. tip::
 
-      An simpler alternative is to use the face selection mask.
+      A simpler alternative is to use the face selection mask.
       See :ref:`Face Selection Masking <bpy.types.Mesh.use_paint_mask>` for details.

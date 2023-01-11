@@ -14,6 +14,10 @@ Mask
 Stencil Mask
 ============
 
+Specify an additional image texture that defines masked surfaces.
+Masked surfaces can be defined with the Mask brush
+and will not be affected by painting.
+
 The mask can be deactivated by the checkbox in the header.
 
 Stencil Image
