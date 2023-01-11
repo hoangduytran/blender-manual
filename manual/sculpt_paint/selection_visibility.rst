@@ -29,13 +29,16 @@ Details About Selecting
 
 The following standard selection operations are supported:
 
-- :kbd:`RMB` -- Single faces. Use :kbd:`Shift-RMB` to select multiple.
-- :kbd:`A` -- All faces, also to deselect.
+- :kbd:`Alt-LMB` -- Single faces. Use :kbd:`Shift-LMB` to select multiple.
+- :kbd:`A` -- All faces, :kbd:`A-A` to deselect.
 - :kbd:`B` -- Box selection.
 - :kbd:`C` -- Circle select with brush.
+- :kbd:`Ctrl-I` -- Invert selection.
+
+The following only work for face selection:
+
 - :kbd:`L` -- Pick linked (under the mouse cursor).
 - :kbd:`Ctrl-L` -- Select linked.
-- :kbd:`Ctrl-I` -- Invert selection.
 
 
 Vertex Selection Masking
@@ -72,7 +75,7 @@ tool to those faces, very similar to Vertex selection masking.
 
    Face Selection masking.
 
-.. The visual example needs to be updated. Ideally show hard edges on painted face corners. 
+.. The visual example needs to be updated. Ideally show hard edges on painted face corners.
 
 Hide/Unhide Faces
 -----------------
