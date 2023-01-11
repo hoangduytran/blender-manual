@@ -100,8 +100,8 @@ Eraser Radius
 
 .. _prefs-system-weight:
 
-Custom Weight Paint Range
-=========================
+Weight Paint
+============
 
 *Mesh skin weighting* is used to control how much a bone deforms the mesh of a character.
 To visualize and paint these weights, Blender uses a color ramp (from blue to green, and from yellow to red).

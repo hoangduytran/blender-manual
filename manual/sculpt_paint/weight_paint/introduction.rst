@@ -52,7 +52,7 @@ See :doc:`/sculpt_paint/weight_paint/tool_settings/options`.
 .. note::
 
    You can customize the colors in the weight gradient by enabling
-   :ref:`Custom Weight Paint Range <prefs-system-weight>` in the *System* tab
+   :ref:`Custom Weight Paint Range <prefs-system-weight>` in the *Editing* tab
    of the *Preferences*.
 
 
