@@ -62,7 +62,7 @@ Render Options
    Use ``-E help`` to list available engines.
 ``-t``, ``--threads`` ``<threads>``
    Use amount of ``<threads>`` for rendering and other operations
-   [1-64], 0 for systems processor count.
+   [1-1024], 0 for systems processor count.
 
 
 .. _command-line-args-format-options:
