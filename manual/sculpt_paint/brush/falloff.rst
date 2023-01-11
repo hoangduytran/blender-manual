@@ -90,14 +90,17 @@ Falloff Shape
       It can be used along the outline of a mesh to adjust its silhouette.
 
 
-.. _bpy.types.ImagePaint.use_normal_falloff:
 
 Front-Face Falloff
 ==================
 
 As faces point away from the view the brush strokes fade away to prevent harsh edges.
 
-.. _bpy.types.ImagePaint.normal_angle:
+.. _bpy.types.ImagePaint.use_normal_falloff:
+.. _bpy.types.Brush.use_frontface_falloff:
+Normal Falloff / Front-Face Falloff
+   If disabled, the normal of the surface has no effect on the falloff.
 
+.. _bpy.types.ImagePaint.normal_angle:
 Angle
    The angle at which the falloff begins.
