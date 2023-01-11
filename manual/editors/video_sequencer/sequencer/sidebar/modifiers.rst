@@ -41,15 +41,34 @@ Remove ``X``
    The cross is to delete the modifier from the stack.
 
 
-Input Mask Type
----------------
+Masking
+-------
 
-Strip
-   Use this to apply the modification on the whole image, or to use another strip's image (with alpha channel)
-   for masking the modifier (and only this modifier), by choosing it in the "Mask" select menu.
+Use it for masking the other modifiers in the stack which are below.
+
+For example, to correct the brightness only on a certain zone of the image,
+you can filter the Bright/Contrast modifier by placing a Mask modifier,
+just before it in the stack. You can choose to use a Mask created in the Mask editor,
+or to use another strip as a mask (the image of this strip must have an alpha channel).
+This mask will be applied on all the others modifiers below it in the stack.
+
+Mask Input Type
+   Type of input data used for mask.
+
+   :Strip:
+      Uses the grayscale representation of the image in a strip to affect the alpha of the current strip.
+   :Mask:
+      Use a mask data-block to affect the alpha of the current strip.
+
 Mask
-   This allows you to choose a Mask created in the Mask editor
-   which will limit the modification to the masked image's zones.
+   The Strip or Mask data-block to use as an input.
+
+Mask Time :guilabel:`Mask Input Only`
+   How the start frame of the mask is calculated.
+
+   :Relative: Mask animation is offset to the start of the strip.
+   :Absolute: Mask animation is in sync with scene frame.
+
 
 
 Types
@@ -132,13 +151,37 @@ This modifier works the same as the :doc:`Curves Node </compositing/types/color/
 Mask Modifier
 -------------
 
-Use it for masking the other modifiers in the stack which are below.
+The mask modifier is used to affect the :term:`Alpha Channel` of the current strip.
 
 For example, to correct the brightness only on a certain zone of the image,
 you can filter the Bright/Contrast modifier by placing a Mask modifier,
 just before it in the stack. You can choose to use a Mask created in the Mask editor,
 or to use another strip as a mask (the image of this strip must have an alpha channel).
 This mask will be applied on all the others modifiers below it in the stack.
+
+.. _bpy.types.SequenceModifier.input_mask_type:
+
+Mask Input Type
+   Type of input data used for mask.
+
+   :Strip:
+      Uses the grayscale representation of the image in a strip to affect the alpha of the current strip.
+   :Mask:
+      Use a mask data-block to affect the alpha of the current strip.
+
+.. _bpy.types.SequenceModifier.input_mask_id:
+.. _bpy.types.SequenceModifier.input_mask_strip:
+
+Mask
+   The Strip or Mask data-block to use as an input.
+
+.. _bpy.types.SequenceModifier.mask_time:
+
+Mask Time :guilabel:`Mask Input Only`
+   How the start frame of the mask is calculated.
+
+   :Relative: Mask animation is offset to the start of the strip.
+   :Absolute: Mask animation is in sync with scene frame.
 
 
 .. index:: Video Sequencer Modifiers; Tone Map Modifier
