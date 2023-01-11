@@ -20,8 +20,8 @@ Stroke Method :kbd:`E`
       .. clear
 
    :Dots:
-      Apply paint on each mouse move step. This is regardless of their distance to each other, 
-      and instead depends on the stroke speed. 
+      Apply paint on each mouse move step. This is regardless of their distance to each other,
+      and instead depends on the stroke speed.
       This means that a slower stroke will have more accumulative strength applied.
    :Drag Dot:
       Leaves only one dab on the canvas which can be placed by dragging.
@@ -141,7 +141,7 @@ Jitter Unit
    Controls how the brush *Jitter* is measured.
 
    :View:
-      The *Jitter* is relative to the view direction i.e. "screen space". 
+      The *Jitter* is relative to the view direction i.e. "screen space".
    :Scene:
       The *Jitter* is measured relative to all three dimensions of the scene.
       The unit type and scaling can be configured in the :ref:`Scene Units <bpy.types.UnitSettings>`.

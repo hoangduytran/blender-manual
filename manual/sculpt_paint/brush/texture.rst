@@ -32,9 +32,9 @@ Texture
 Mapping & Mask Mapping
    How the texture is applied to the brush stroke.
 
-   .. tip:: 
+   .. tip::
       It is recommended to set this to *Area Plane* or *View Plane* for the most common behavior.
-      Ideally match this setting with the 
+      Ideally match this setting with the
       :ref:`Sculpt Plane <bpy.types.Brush.sculpt_plane>` setting if in sculpt mode.
 
    :View Plane:
@@ -134,5 +134,5 @@ Size X, Y, Z
 .. _bpy.types.Brush.texture_sample_bias:
 
 Sample Bias :guilabel:`Sculpt Mode`
-   Value added to texture samples. 
+   Value added to texture samples.
    This can be used if the midlevel of a height map is not correct.
