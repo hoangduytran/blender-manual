@@ -49,9 +49,6 @@ Max Blur
    or if the motion is locally too complex;
    for example, if there are many vector variations in a small area.
 
-   This technique is fast and produce clean gradients but issues can occur at object borders
-   or if the motion is locally too complex (many vector variations in a small area).
-
    This technique uses random sampling and the noise amount is proportional to the sample count found in
    :menuselection:`Properties --> Render --> Sampling --> Render Samples`.
 
