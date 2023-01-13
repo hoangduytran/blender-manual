@@ -30,7 +30,7 @@ Details About Selecting
 The following standard selection operations are supported:
 
 - :kbd:`Alt-LMB` -- Single faces. Use :kbd:`Shift-LMB` to select multiple.
-- :kbd:`A` -- All faces, :kbd:`A-A` to deselect.
+- :kbd:`A` -- All faces, :kbd:`A A` to deselect.
 - :kbd:`B` -- Box selection.
 - :kbd:`C` -- Circle select with brush.
 - :kbd:`Ctrl-I` -- Invert selection.
