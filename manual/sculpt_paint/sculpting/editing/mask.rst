@@ -5,14 +5,9 @@
 Mask
 ****
 
-This page details the mask related hotkey operators and menu operators in sculpt mode.
-Other related information can also be found at the bottom of the page.
+This page details the mask related shortcut operators and menu operators in sculpt mode.
+Other related information to masks can also be found at the bottom of the page.
 
-
-Editing
-=======
-
-.. a screenshot of the menu
 
 .. reference::
 
@@ -26,51 +21,51 @@ Using :kbd:`A` opens a pie menu to choose the most common operations.
 .. _mask_invert:
 
 Invert Mask
------------
+===========
 
 .. reference::
 
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Mask --> Invert Mask`
-   :Shortcut:  :kbd:`Ctrl-I`
+   :Shortcut:  :kbd:`A`, :kbd:`Ctrl-I`
 
 Inverts the visible mask.
-This is often useful because sometimes the masked vertices are the surfaces you want to sculpt/paint.
-In that case it is very useful to mask and then invert.
-
-.. An example image of this workflow with lasso masking
+This is often useful when the masked vertices are the surfaces you want to sculpt/paint.
+In that case create a mask and then invert it.
 
 .. _bpy.ops.paint.mask_flood_fill:
 
 Fill Mask
----------
+=========
 
 .. reference::
 
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Mask --> Fill Mask`
 
-Fully masks the entire visible geometry.
-Alternatively it is also common to invert unmasked geometry to achieve the same effect.
+Fully masks the visible geometry.
+Alternatively it is common to clear and then invert a mask via :kbd:`A`
+to achieve the same effect.
 
 .. _mask_clear:
 
 Clear Mask
-----------
+==========
 
 .. reference::
 
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Mask --> Clear Mask`
-   :Shortcut:  :kbd:`Alt-M`
+   :Shortcut:  :kbd:`A`, :kbd:`Alt-M`
 
-Removes the mask on all visible vertices. To completely remove the mask data, see `Clear Sculpt-Mask Data`_.
+Removes the mask on all visible vertices.
+To completely remove the mask data, see `Clear Sculpt-Mask Data`_.
 
 
 .. _bpy.ops.paint.mask_box_gesture:
 
 Box Mask
---------
+========
 
 .. reference::
 
@@ -86,7 +81,7 @@ Hold :kbd:`Shift` or press :kbd:`MMB` to clear the mask of the selected region.
 .. _bpy.ops.paint.mask_lasso_gesture:
 
 Lasso Mask
-----------
+==========
 
 .. reference::
 
@@ -107,23 +102,25 @@ This is very commonly used.
 .. _bpy.ops.sculpt.mask_filter:
 
 Mask Filters
-------------
-
-.. needs visual examples
+============
 
 .. reference::
 
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Mask --> Smooth/Sharpen Mask, Grow/Shrink Mask, Increase/Decrease Contrast`
+   :Shortcut:  :kbd:`A`
 
-Mask filters are operations that are applied to the whole mask.
+Similarly to other :doc:`Filter Tools </sculpt_paint/sculpting/introduction/filters>`,
+mask filters are operations that are applied to the whole mask.
 
 Type
-   :Smooth/Sharpen Mask:
+   Smooth/Sharpen Mask
       Changes the sharpness of the mask edge.
-   :Grow/Shrink Mask:
+      Using this can be faster and more consistent than smoothing the mask
+      with the :doc:`Mask </sculpt_paint/sculpting/tools/mask>` brush.
+   Grow/Shrink Mask
       Further grow or shrink the mask along the surface of the mesh.
-   :Increase/Decrease Contrast:
+   Increase/Decrease Contrast
       Changes the contrast of the mask.
 
 In the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>` panel there are further options.
@@ -136,107 +133,16 @@ Auto Iteration Count
    Disable this option to set the Iterations manually.
 
 
-.. _bpy.ops.sculpt.mask_expand:
-.. _bpy.ops.sculpt.expand:
-
-Expand Mask by Topology
------------------------
-
-.. needs visual examples
-
-.. everything below this still needs rewrites
-
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Mask --> Expand Mask by Topology`
-   :Shortcut:  :kbd:`Shift-A`
-
-Creates a mask radiating outwards from the active vertex in a uniform manner.
-
-.. note::
-
-   This operator is meant to be used interactively through the shortcut.
-
-
-.. rubric:: Hotkeys
-
-:Invert: :kbd:`F`
-   Flips between expanding a positive mask (value of one) or a negative mask (value of zero).
-   In the case of face sets, this option flips between including areas inside the masked area
-   or areas outside the masked area.
-:Toggle Preserve State: :kbd:`E`
-   Accumulates the new mask on top of the previous one instead of replacing it.
-   For Face Sets, this creates Face Sets boundaries instead of replacing the existing Face Set.
-:Toggle Gradient: :kbd:`G`
-   Enables linear gradient, creates a linear gradient of values from the origin to the current active vertex.
-:Geodesic Recursive Step: :kbd:`R`
-   Generate a new :term:`Geodesic` falloff from the boundary of the enabled vertices of the current falloff.
-:Topology Recursive Step: :kbd:`Alt-R`
-   Generate a new topology flood fill falloff from the boundary of the enabled vertices of the current falloff.
-:Move Origin: :kbd:`Spacebar`
-   Moves the initial vertex used for calculating the falloff.
-:Geodesic Falloff: :kbd:`1`
-   Uses a falloff based on the :term:`Geodesic` distances from the edge boundary to the active vertex.
-:Topology Falloff: :kbd:`2`
-   Uses a falloff based on a flood fill using edges.
-:Diagonals Falloff: :kbd:`3`
-   Uses a falloff based on a flood fill using polygon diagonals and edges.
-:Spherical Falloff: :kbd:`4`
-   Uses a falloff based on the Euclidean distances from the edge boundary to the active vertex.
-:Snap Expanded to Face Sets: :kbd:`Ctrl`
-   Isolates the expanded region to the boundary of the face set under the cursor.
-:Loop Count Increase: :kbd:`W`
-   Increase the number of loops or iterations the operator is run;
-   using four loops will split the mask into four parts.
-:Loop Count Decrease: :kbd:`Q`
-   Decrease the number of loops or iterations the operator is run;
-   using four loops will split the mask into four parts.
-:Toggle Brush Gradient: :kbd:`B`
-   Similar to linear gradient but uses the current brush :doc:`Falloff </sculpt_paint/brush/falloff>`
-   to define the shape of the falloff.
-:Texture Distortion Increase: :kbd:`Y`
-   Increases the falloff distance when using a texture to distort the mask shape.
-:Texture Distortion Decrease: :kbd:`T`
-   Decreases the falloff distance when using a texture to distort the mask shape.
-
-
-Usage
-^^^^^
-
-.. rubric:: Textures
-
-Textures can be used to affect the "strength" of the mask.
-This feature can be combined with loops and recursion to create really unique looking masks.
-To enable textures, you first need to create/select a texture to use,
-this is done by in the Properties editor's :doc:`Texture Properties </render/materials/legacy_textures/index>`.
-Next select the texture in the :doc:`Texture </sculpt_paint/brush/texture>` Brush Settings,
-while there **make sure** to enable *3D* :ref:`Mapping <bpy.types.BrushTextureSlot.map_mode>`.
-Now, you can use :kbd:`Y` and :kbd:`T` to increase or decrease the affect the texture has on the edge of the mask.
-
-
-Expand Mask by Normals
-----------------------
-
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Mask --> Expand Mask by Normals`
-   :Shortcut:  :kbd:`Shift-Alt-A`
-
-Creates a mask radiating outwards from the active vertex while following the curvature of the mesh.
-This operator uses the same internal operator as :ref:`bpy.ops.sculpt.expand`
-meaning all the shortcuts and functionality works the same as that tool.
-
-.. note::
-
-   This operator is meant to be used interactively through the shortcut.
-
-
 .. _bpy.ops.mesh.paint_mask_extract:
 
+Expand Mask
+===========
+
+.. note::
+   More info on Mask Expand along Topology at the :ref:`Expand page <bpy.ops.sculpt.expand>`.
+
 Mask Extract
-------------
+============
 
 .. reference::
 
@@ -244,13 +150,14 @@ Mask Extract
    :Menu:      :menuselection:`Mask --> Mask Extract`
 
 Creates a duplicate mesh object based on masked geometry.
+The extracted geometry is also further processed by default for a cleaner result.
 
 Threshold
    Minimum mask value to consider the vertex valid to extract a face from the original mesh.
 
 Add Boundary Loop
    Creates and extra boundary loop on the edges of the geometry,
-   making it ready for adding a Subdivision Surface modifier later.
+   making it easier smooth the boundaries and apply additional modifiers.
 
 Smooth Iterations
    Smooth iterations applied to the extracted mesh.
@@ -265,7 +172,7 @@ Extract as Solid
 .. _bpy.ops.mesh.paint_mask_slice:
 
 Mask Slice
-----------
+==========
 
 .. reference::
 
@@ -287,12 +194,12 @@ Slice to New Object
 .. _bpy.ops.sculpt.dirty_mask:
 
 Mask From Cavity
-----------------
+================
 
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Mask --> Dirty Mask`
+   :Menu:      :menuselection:`Mask --> Mask from Cavity`
 
 Generates a mask based on the cavity of the surface. The settings of the operation can be changed
 in the :doc:`Adjust Last Operation </interface/undo_redo>` panel.
@@ -317,7 +224,7 @@ Custom Curve
 .. _bpy.ops.sculpt.mask_init:
 
 Random Mask
------------
+===========
 
 .. reference::
 

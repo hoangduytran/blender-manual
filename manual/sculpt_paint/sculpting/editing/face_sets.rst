@@ -60,7 +60,7 @@ Mode
       Creates a new face set per discontinuous part of the mesh.
    By Face Set Boundaries
       Creates a face set for each isolated face set.
-      This mode is useful for splitting the patterns created by `Expand Face Set by Topology`_
+      This mode is useful for splitting the patterns created by :ref:`Face Set Expand <face_set_expand>`
       into individual Face Sets for further editing.
    By Materials
       Creates a face set per :ref:`Material Slot <bpy.types.MaterialSlot>`.
@@ -95,45 +95,16 @@ Grow/Shrink Face Sets
 
 Expands or contracts the face set under the cursor by adding or removing surrounding faces.
 
-.. _face_set_expand:
-
-Expand Face Set by Topology
-===========================
-
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Expand Face Set by Topology`
-   :Shortcut:  :kbd:`Shift-W`
-
-Creates a face set radiating outwards from the active vertex in a uniform manner.
-This operator uses the same internal operator as :ref:`bpy.ops.sculpt.expand`
-meaning all the hotkeys and functionality works the same as that tool.
-
-.. note::
-
-   This operator is meant to be used interactively through the shortcut.
-
-
-Expand Active Face Set
-======================
-
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Expand Face Set by Topology`
-   :Shortcut:  :kbd:`Shift-Alt-W`
-
-Expands a face set by radiating outwards from the face set in a uniform manner.
-This operator uses the same internal operator as :ref:`bpy.ops.sculpt.expand`
-meaning all the hotkeys and functionality works the same as that tool.
-
-.. note::
-
-   This operator is meant to be used interactively through the shortcut.
-
 
 .. _bpy.ops.mesh.face_set_extract:
+
+
+Expand Face Set
+===============
+
+.. note::
+   More info on Face Set Expand at the :ref:`Expand page <bpy.ops.sculpt.expand>`.
+
 
 Extract Face Set
 ================
@@ -186,3 +157,19 @@ Randomize Colors
    :Menu:      :menuselection:`Face Sets --> Randomize Colors`
 
 Generates a new set of random colors to render the face sets in the 3D Viewport.
+
+
+.. _bpy.types.Sculpt.show_face_sets:
+.. _bpy.types.View3DOverlay.sculpt_mode_face_sets_opacity:
+
+
+Display Settings
+================
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Popover:   :menuselection:`Viewport Overlays -- Sculpt --> Face Sets`
+
+The face sets display can be toggled as a :doc:`viewport overlay </editors/3dview/display/overlays>`.
+In the overlay popover, the opacity of the face sets overlay can be adjusted to make it more or less visible on the mesh.

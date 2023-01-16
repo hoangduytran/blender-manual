@@ -22,5 +22,6 @@ This way much of the mesh can simultaneously be smoothed, colored or have some c
 
 .. seealso::
    More information at :doc:`Mesh Filter </sculpt_paint/sculpting/tools/mesh_filter>`,
-   :doc:`Cloth Filter </sculpt_paint/sculpting/tools/cloth_filter>`
-   and :doc:`Color Filter </sculpt_paint/sculpting/tools/color_filter>`.
+   :doc:`Cloth Filter </sculpt_paint/sculpting/tools/cloth_filter>`,
+   :doc:`Color Filter </sculpt_paint/sculpting/tools/color_filter>`
+   and :ref:`bpy.ops.sculpt.mask_filter`.

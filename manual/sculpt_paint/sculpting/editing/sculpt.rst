@@ -3,8 +3,6 @@
 Sculpt
 ******
 
-.. a screenshot of the menu.
-
 This page details the general hotkey operators and menu operators in sculpt mode.
 
 Show & Hide
@@ -12,7 +10,7 @@ Show & Hide
 
 Some very common hotkey operators to control the visibility based on face sets.
 These are not part of any menu and have to be used via the shortcuts.
-More visibility operators can be found in the :doc:`Face Sets Menu</sculpt_paint/sculpting/editing/face_sets>` 
+More visibility operators can be found in the :doc:`Face Sets Menu</sculpt_paint/sculpting/editing/face_sets>`
 and the Pie Menu shortcut :kbd:`W`. (Since visibility is often toggled via face sets.)
 
 Toggle Visibility :kbd:`H`
@@ -35,7 +33,7 @@ Hide Active Face Set :kbd:`Shift-H`
    :Menu:      :menuselection:`Sculpt`
 
 
-Show All :kbd:`Alt-H`
+Show All :kbd:`W`, :kbd:`Alt-H`
    Reveal all hidden faces.
 Show Bounding Box
    Draw a box to reveal hidden faces.
@@ -46,7 +44,7 @@ Hide Masked
    Hides all masked vertices.
 
 .. seealso::
-   For a more general introduction see 
+   For a more general introduction see
    :doc:`Visibility, Masking & Face Sets </sculpt_paint/sculpting/introduction/visibility_masking_face_sets>`.
 
 .. _bpy.ops.sculpt.set_pivot_position:
@@ -60,9 +58,9 @@ Set Pivot
    :Menu:      :menuselection:`Sculpt --> Set Pivot`
 
 Like Object and Edit Mode, Sculpt Mode also has a :term:`Pivot Point`.
-This is because the basic :doc:`move, rotate and scale </sculpt_paint/sculpting/tools/transforms>` 
+This is because the basic :doc:`move, rotate and scale </sculpt_paint/sculpting/tools/transforms>`
 transforms are also supported in Sculpt Mode.
-But the pivot point in Sculpt Mode is unique. It always moves together with the transformed mesh 
+But the pivot point in Sculpt Mode is unique. It always moves together with the transformed mesh
 and can be both manually & automatically placed.
 
 Origin

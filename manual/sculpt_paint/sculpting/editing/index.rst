@@ -9,3 +9,4 @@
    sculpt.rst
    mask.rst
    face_sets.rst
+   expand.rst
