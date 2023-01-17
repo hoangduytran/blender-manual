@@ -39,7 +39,7 @@ Convert to Particle System
 Select Menu
 ===========
 
-.. _bpy.ops.sculpt_curves.select_all:
+.. _bpy.ops.curves.select_all:
 
 All
    Select all control points or curves.
