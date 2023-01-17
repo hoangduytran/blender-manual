@@ -67,29 +67,34 @@ Automatically Set Transform Pivot
    .. figure:: /images/sculpt-paint_sculpting_expand_auto_pivot.png
 
 Pattern Creation
-   The different falloff types can be used for circular, triangular and squares patterns.
+   The different falloff types can be used for circular, triangular and square patterns.
    More loops can also be added/removed via :kbd:`W` & :kbd:`Q` to repeat the pattern across the mesh.
 
    .. figure:: /images/sculpt-paint_sculpting_expand_pattern1.png
+
+      An example of using expand with mirror options,
+      loops and a recursion to create wood carving patterns.
+
+   .. tip::
+      :doc:`Mirror options </sculpt_paint/sculpting/tool_settings/symmetry>`
+      can also be combined with the expansion.
 
    Linear gradients :kbd:`G` or brush falloff gradients :kbd:`B` will help to add slanted surfaces
    to the patterns.
 
    A "Recursions" with :kbd:`R` or :kbd:`Alt-R` will start
    a new expansion along the border of the current expansion.
-   Doing this multiple times, can help for advanced pattern creation
-   or for increasingly random patterns.
+   Doing this multiple times, can help for for increasingly random patterns
+   or advanced pattern creation.
 
    .. figure:: /images/sculpt-paint_sculpting_expand_pattern2.png
+
+      An example of using loops and gradients with multiple expanded masks.
 
    .. tip::
       Remember that Expand only affects visible geometry.
       So if a pattern should only be created on a part of the mesh,
       :doc:`hide </sculpt_paint/sculpting/editing/sculpt>` the other geometry first.
-
-   .. tip::
-      :doc:`Mirror options </sculpt_paint/sculpting/tool_settings/symmetry>`
-      can also be combined with the expansion.
 
    Use the :doc:`Mesh Filter </sculpt_paint/sculpting/tools/mesh_filter>`
    to deform the geometry and the :doc:`Color Filter </sculpt_paint/sculpting/tools/color_filter>`
