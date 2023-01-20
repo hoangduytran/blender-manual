@@ -29,8 +29,8 @@ Use Cache
    Optimize rendering by using cached scene data from the first line art modifier in the stack.
    This option has the disadvantage of certain settings becoming unavailable.
 
-   This option only available when you have more than one Line Art modifier
-   is the same modifier stack and the modifier is not the first Line Art modifier in the stack.
+   This option is only available when you have more than one Line Art modifier
+   in the same modifier stack and the modifier is not the first Line Art modifier in the stack.
 
 Source Type
    What type of geometry source should line art be generated from.
@@ -113,7 +113,7 @@ Crease
 .. _bpy.types.LineartGpencilModifier.use_intersection:
 
 Intersections
-   Generate stokes where lines intersect between faces.
+   Generate strokes where lines intersect between faces.
 
 .. _bpy.types.LineartGpencilModifier.use_material:
 
@@ -161,7 +161,7 @@ Light Object
 .. _bpy.types.LineartGpencilModifier.shadow_camera_size:
 
 Shadow Camera Size
-   This value represent the "Orthographic Scale" of an ortho camera.
+   This value represents the "Orthographic Scale" of an ortho camera.
    If the camera is put at the lamps position with this scale, it will represent the coverage of the shadow "camera".
 
 .. _bpy.types.LineartGpencilModifier.shadow_camera_near:
@@ -183,7 +183,7 @@ Geometry Processing
 
 Custom Camera
    Use custom camera instead of the active camera for calculating strokes.
-   Useful when baking multiple shots in different angle as well as for motion graphics effects.
+   Useful when baking multiple shots in different angles as well as for motion graphics effects.
 
 Overlapping Edges as Contour
    This option allows overlapping edges (e.g. from an Edge Split modifier or imported geometry where
