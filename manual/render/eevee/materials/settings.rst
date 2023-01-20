@@ -13,7 +13,7 @@ Material Settings
 Backface Culling
 ================
 
-Backface Culling hides the back side of faces in the final render.
+Backface Culling hides the back side of faces.
 
 
 .. _bpy.types.Material.blend_method:
@@ -35,7 +35,7 @@ Opaque
 
 Alpha Clip
    The previous color will be overwritten by the surface color,
-   but only if the alpha value is above the clip threshold.
+   but only if the alpha value is above the *Clip Threshold* value.
 
 Alpha Hashed
    The previous color will be overwritten by the surface color,
@@ -62,7 +62,7 @@ Only per-object sorting is available and is automatically done on all transparen
 
 .. _bpy.types.Material.show_transparent_back:
 
-Show Backside
+Show Backface
    If enabled, all transparent fragments will be rendered.
    If disabled, only the front-most surface fragments will be rendered.
    Disable this option to ensure correct appearance of transparency from any point of view.
@@ -70,7 +70,6 @@ Show Backside
    the order in which triangles are sorted is important.
 
 
-.. _bpy.types.Material.alpha_threshold:
 .. _bpy.types.Material.shadow_method:
 
 Shadow Mode
@@ -95,13 +94,21 @@ None
 Opaque
    The surface will cast shadows like an opaque surface.
 
-Clip
+Alpha Clip
    The surface will cast shadows like an opaque surface,
-   but only areas where the alpha value is above the clip threshold.
+   but only areas where the alpha value is above the *Clip Threshold* value.
 
-Hashed
+Alpha Hashed
    The surface will cast shadows like an opaque surface,
    but only areas where the alpha value is above a random threshold.
+
+
+.. _bpy.types.Material.alpha_threshold:
+
+Clip Threshold
+==============
+
+Threshold value for Alpha Clip mode in *Blend Mode* and *Shadow Mode*. 
 
 
 Screen Space Refraction
