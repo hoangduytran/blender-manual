@@ -17,6 +17,10 @@ Options
 
    Offset Modifier.
 
+
+General
+--------
+
 Location X, Y, Z
    Sets strokes location offset from its object origin.
 
@@ -27,23 +31,42 @@ Scale X, Y, Z
    Sets strokes scale.
 
 
-Randomize
----------
+Advanced
+--------
+
+Mode
+   Random
+      Add random values to the individual strokes offset.
+
+   Layer
+      Offset by layers.
+
+   Stroke
+      Offset by strokes (based on the stroke draw order).
+
+   Material
+      Offset by Materials.
 
 Offset X, Y, Z
-   Add random offset values to the strokes.
+   Sets individual element location offset.
 
 Rotation X, Y, Z
-   Add random rotation values to the strokes.
+   Sets individual element rotation.
 
 Scale X, Y, Z
-   Add random scale values to the strokes.
+   Sets individual element scale.
 
-Uniform Scale
+Uniform Scale (Random mode)
    Use the same random *Seed* for each scale axis in the strokes for a uniform scale.
 
-Seed
+Seed (Random mode)
    :term:`Seed` used by the pseudo-random number generator.
+
+Layer/Stroke/Material Step (For Layer, Stroke and Material mode)
+   The number of elements to be grouped and offset together.
+
+Layer/Stroke/Material Offset (For Layer, Stroke and Material mode)
+   Offset the element starting point.
 
 
 Influence

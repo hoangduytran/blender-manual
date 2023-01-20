@@ -388,7 +388,7 @@ Stroke Direction
 Material Name
    Show material name next to the selected strokes.
 Vertex Opacity
-   Opacity for vertices (points) and edit lines in Edit Mode.
+   Opacity for vertices (points) and edit lines in Edit and Sculpt Mode.
 Vertex Paint Opacity
    The opacity of the vertex color overlay in Vertex Paint Mode and Draw Mode.
    Note that in Draw Mode, vertex paint is only visible in the *Material Preview*
