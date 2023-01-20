@@ -71,9 +71,9 @@ Collection (white)
 Object (orange)
    Used to pass an object data-block.
 Material (salmon)
-   Used to pass an material data-block.
+   Used to pass a material data-block.
 Texture (pink)
-   Used to pass an texture data-block.
+   Used to pass a texture data-block.
 Image (apricot)
    Used to pass an image data-block.
 
