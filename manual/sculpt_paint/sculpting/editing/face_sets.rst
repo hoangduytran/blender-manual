@@ -172,4 +172,5 @@ Display Settings
    :Popover:   :menuselection:`Viewport Overlays -- Sculpt --> Face Sets`
 
 The face sets display can be toggled as a :doc:`viewport overlay </editors/3dview/display/overlays>`.
-In the overlay popover, the opacity of the face sets overlay can be adjusted to make it more or less visible on the mesh.
+In the overlay popover, the opacity of the face sets overlay can be adjusted to make it more or less visible on the
+mesh.

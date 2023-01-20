@@ -35,7 +35,7 @@ Usage
 
 Mask from A to B
    Start the operator and expand a mask from an origin to your mouse cursor distance.
-   Then confirm with :kbd:`LMB` or :kbd:`Enter`
+   Then confirm with :kbd:`LMB` or :kbd:`Return`
 
    By default the expansion will use a *Geodesic* falloff :kbd:`1`
    to create perfectly accurate distances along the surfaces.
@@ -222,8 +222,8 @@ Saving Masks
    :doc:`hide face sets </sculpt_paint/sculpting/editing/sculpt>`)
 
 Pivot Points for Pose Brush
-   When using the :doc:`Pose Brush </sculpt_paint/sculpting/tools/pose>` it is most predictable when using it with Face Sets
-   to define the face set boundaries as pivot point locations.
+   When using the :doc:`Pose Brush </sculpt_paint/sculpting/tools/pose>` it is most predictable when using it with
+   Face Sets to define the face set boundaries as pivot point locations.
    Face Sets can be expanded from a point or from a boundary between hidden face sets
    to create them quickly.
    Alternatively :ref:`Grow/Shrink Face Sets <bpy.ops.sculpt.face_set_edit>`
