@@ -44,7 +44,7 @@ Filter Type
    Relax Face Sets
       This will remove the jagged lines visible after drawing or creating a face set.
       This filter works the same as holding :kbd:`Shift` with the
-      :doc:`Draw Face Set </sculpt_paint/sculpting/tools/draw_face_set>` brush.
+      :doc:`Draw Face Set </sculpt_paint/sculpting/tools/draw_facesets>` brush.
    Surface Smooth
       Eliminates irregularities of the mesh by making the positions
       of the vertices more uniform while preserving the volume of the object.
