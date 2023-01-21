@@ -6,6 +6,9 @@ Storypencil
 Storypencil is an add-on that adds tools to help the storyboarding workflow using the video sequencer.
 It adds many features to help adding, editing and rendering linked scenes.
 
+.. figure:: /images/addons_sequencer_storypencil_panel.png
+   :align: right
+   :width: 285px
 
 Activation
 ==========
@@ -41,8 +44,7 @@ Edit
 ----
 
 Opens the linked source scene under the timeline cursor in the video sequencer.
-There are two modes for editing source scenes, you can control the behavior by toggling the checkbox
-"Open in new window" next to the button.
+There are two modes for editing source scenes, you can select the mode under Edit Scenes section in the Stoypencil panel.
 
 
 New Window mode
@@ -62,6 +64,9 @@ Storypencil will open the source scene switching to the proper Workspace at the 
 When you finish editing the source scene you can return to the video Sequencer using the Back button on the Dope Sheet
 header in the source scene Workspace.
 
+Stoypencil will also temporarily copy the audio from the video sequencer edit to the source scene. 
+This makes it easy to work on the scene with the audio in sync and without having to go back to the video sequencer each time.
+
 This method is best suited when using only one monitor.
 
 .. important::
@@ -79,6 +84,26 @@ Render all or only selected scene strips, depending on the Add-on Render Strips 
 Settings
 ========
 
+Edit Scenes
+-----------
+
+Mode
+   Set the mode to use while working with Storypencil
+
+Show Strip Range
+   When enabled, shows the IN/OUT range from the video sequencer in the scene dope sheet of the source scene. (Green and red lines)   
+
+Timeline Synchronization (New Window Mode)
+   When enabled, keeps the video sequencer and source scene timelines in sync.
+
+Audio Copy to Scene (Switch Mode)
+   Temporally copy the audio from the video sequencer to the source scene.
+
+Audio Ignore Muted Sound (Switch Mode)
+   When copy the audio ignore the muted audio strips.
+
+
+
 New Scenes
 ----------
 
@@ -91,9 +116,9 @@ Name Suffix
 Frames
    Duration in frames for the new Scene Strips.
 
-Base Scene
+Template Scene
    The Scene used as base for Scene Strips.
-   In this Base Scene you can setup cameras, Grease Pencil objects,
+   In this template Scene you can setup cameras, Grease Pencil objects,
    background objects, etc. to avoid start from scratch every time.
 
 Render Strips
