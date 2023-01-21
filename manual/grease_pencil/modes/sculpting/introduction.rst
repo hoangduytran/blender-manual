@@ -44,9 +44,41 @@ Multiframe
    You can activate multiframe edition with the Multiframe button next to the modes selector (faded lines icon).
    See :doc:`Multiframe </grease_pencil/multiframe>` for more information.
 
+Auto-Masking
+============
+
+.. figure:: /images/grease-pencil_modes_sculpting_introduction_auto-masking.png
+
+   Auto-Masking settings.
+
+These properties automatically mask geometry based on stroke, layers and materials under the cursor.
+It's an quick alternative to frequent manual masking.
+These masks are initialized on every new tool usage. They are also never visible as an overlay.
+
+These properties can be accessed via a :ref:`bpy.types.UIPieMenu` by pressing :kbd:`Shift-Alt-A`.
+
+All auto-masking modes can be combined, which makes the generated auto-mask more specific.
+For example it's possible to auto-mask strokes that use specific layer and material while excluding others.
+
+Strokes
+   Only strokes that are under the cursor when you started the tool are affected.
+
+Layers
+   Only strokes on the same layers that are under the cursor when you started the tool are affected.
+
+Materials
+   Only materials with the same material that are under the cursor when you started the tool are affected.
+
+Active Layer
+   Only the strokes on the active layer are affected.
+
+Active Material
+   Only the strokes with the active material are affected.
+
 
 Keyboard Shortcuts
 ==================
 
 - Invert stroke toggle :kbd:`Ctrl`
 - Change active material :kbd:`U`
+- Auto-masking :kbd:`Shift-Alt-A`
