@@ -42,15 +42,15 @@ Length
    The edges can shrink or be blown up. This value is given in percent,
    0 disables this function. 100% means no change, the body keeps 100% of its size.
 
-Collision Edge
-   Checks for edges of the soft body mesh colliding.
-
-Face
-   Checks for any portion of the face of the soft body mesh colliding (which is computationally intensive).
-   While *Face* enabled can solve collision errors, there does not seem to be any dampening settings for it.
-   So parts of the soft body object near a collision mesh tend to "jitter" as they bounce off and fall back,
-   even when there is no motion of any meshes. Edge collision has dampening, so that can be controlled,
-   but Deflection dampening value on a collision object does not seem to affect the face collision.
+Collision
+   Edge
+      Checks for edges of the soft body mesh colliding.
+   Face
+      Checks for any portion of the face of the soft body mesh colliding (which is computationally intensive).
+      While *Face* enabled can solve collision errors, there does not seem to be any dampening settings for it.
+      So parts of the soft body object near a collision mesh tend to "jitter" as they bounce off and fall back,
+      even when there is no motion of any meshes. Edge collision has dampening, so that can be controlled,
+      but Deflection dampening value on a collision object does not seem to affect the face collision.
 
 
 .. _physics-softbody-settings-aerodynamics:

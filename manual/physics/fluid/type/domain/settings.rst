@@ -235,8 +235,8 @@ Minimum
 
 .. _bpy.types.FluidDomainSettings.flame_smoke_color:
 
-Flame Color
-   Color of flame created by burnt fuel.
+Smoke Color
+   Color of smoke emitted from burning fuel.
 
 
 .. _bpy.types.FluidDomainSettings.use_flip_particles:
