@@ -3,6 +3,8 @@
 Simulation
 **********
 
+.. _bpy.types.SoftBodySettings.speed:
+
 Speed
    You can control the internal timing of the soft body system with this value.
    It sets the correlation between frame rate and tempo of the simulation.

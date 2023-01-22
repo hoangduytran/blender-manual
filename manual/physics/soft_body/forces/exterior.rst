@@ -93,7 +93,7 @@ Animating the vertices can be done in all the usual ways (F-Curves, armatures, p
 before the soft body simulation is applied. The "goal" is the desired end position for vertices.
 How a soft body tries to achieve this goal can be defined using stiffness forces and damping.
 
-See the :ref:`Soft Body Goal settings <physics-softbody-settings-goal>` for details.
+See the :doc:`Goal Settings </physics/soft_body/settings/goal>` for details.
 
 
 Goal Strength

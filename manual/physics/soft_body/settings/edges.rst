@@ -1,4 +1,4 @@
-.. _physics-softbody-settings-edges:
+.. _bpy.types.SoftBodySettings.use_edges:
 
 *****
 Edges
@@ -11,8 +11,12 @@ Edges
 Allow the edges in a mesh object to act like springs.
 See :doc:`interior forces </physics/soft_body/forces/interior>`.
 
+.. _bpy.types.SoftBodySettings.vertex_group_spring:
+
 Springs
    Use a specified vertex group for spring strength values.
+
+.. _bpy.types.SoftBodySettings.pull:
 
 Pull
    The spring stiffness for edges (how much the edges are allowed to stretch).
@@ -23,24 +27,37 @@ Pull
    The soft body simulation tends to get unstable if you use a value of 0.999,
    so you should lower this value a bit if that happens.
 
+.. _bpy.types.SoftBodySettings.push:
+
 Push
    How much the soft body resists being scrunched together, like a compression spring.
    Low values for fabric, high values for inflated objects and stiff material.
 
+.. _bpy.types.SoftBodySettings.damping:
+
 Damp
    The friction for edge springs. High values (max of 50) dampen the *Push*/*Pull* effect and calm down the cloth.
+
+.. _bpy.types.SoftBodySettings.plastic:
 
 Plasticity
    Permanent deformation of the object after a collision.
    The vertices take a new position without applying the modifier.
 
+.. _bpy.types.SoftBodySettings.bend:
+
 Bending
    This option creates virtual connections between a vertex and the vertices connected to its neighbors.
    This includes diagonal edges. Damping also applies to these connections.
 
+.. _bpy.types.SoftBodySettings.spring_length:
+
 Length
    The edges can shrink or be blown up. This value is given in percent,
    0 disables this function. 100% means no change, the body keeps 100% of its size.
+
+.. _bpy.types.SoftBodySettings.use_edge_collision:
+.. _bpy.types.SoftBodySettings.use_face_collision:
 
 Collision
    Edge
@@ -61,20 +78,29 @@ Aerodynamics
 Force from surrounding media.
 See :ref:`exterior forces <physics-softbody-forces-exterior-aerodynamics>` for details.
 
+.. _bpy.types.SoftBodySettings.aerodynamics_type:
+
 Type
-   Simple
+   :Simple:
       Edges receive a drag force from the surrounding media.
-   Lift Force
+   :Lift Force:
       Edges receive a lift force when passing through the surrounding media.
+
+.. _bpy.types.SoftBodySettings.aero:
+
 Factor
    How much aerodynamic force to use. Try a value of 30 at first.
 
+
+.. _bpy.types.SoftBodySettings.use_stiff_quads:
 
 Stiffness
 =========
 
 For quad faces, the diagonal edges are used as springs.
 This stops quad faces to collapse completely on collisions (what they would do otherwise).
+
+.. _bpy.types.SoftBodySettings.shear:
 
 Shear
    Stiffness of the virtual springs created for quad faces.

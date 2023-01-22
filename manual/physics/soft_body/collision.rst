@@ -110,4 +110,4 @@ Self-Collisions
 ===============
 
 For information on self-collision please refer to
-the :ref:`Self-Collision <physics-softbody-settings-self-collision>` settings.
+the :doc:`/physics/soft_body/settings/self_collision` settings.

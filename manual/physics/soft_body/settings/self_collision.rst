@@ -1,4 +1,4 @@
-.. _physics-softbody-settings-self-collision:
+.. _bpy.types.SoftBodySettings.use_self_collision:
 
 **************
 Self Collision
@@ -18,16 +18,20 @@ Vertices may not penetrate the balls of other vertices.
 If you want a good result you may have to adjust the size of these balls.
 Normally it works pretty well with the default options.
 
+.. _bpy.types.SoftBodySettings.collision_type:
+
 Calculation Type
-   Manual
+   :Manual:
       The *Ball Size* directly sets the ball size.
-   Average
+   :Average:
       The average length of all edges attached to the vertex is calculated and then multiplied
       with the *Ball Size* setting. Works well with evenly distributed vertices.
-   Minimal/Maximal
+   :Minimal/Maximal:
       The ball size is as large as the smallest/largest spring length of the vertex multiplied with the *Ball Size*.
-   Average Min Max
+   :Average Min Max:
       Size = ((Min + Max)/2) × *Ball Size*.
+
+.. _bpy.types.SoftBodySettings.ball_size:
 
 Ball Size
    Fraction of the length of attached edges.
@@ -41,9 +45,13 @@ Ball Size
    Too low of a level will let other vertices get too close and thus possibly intersect because
    there will not be enough time to slow them down.
 
+.. _bpy.types.SoftBodySettings.ball_stiff:
+
 Stiffness
    How elastic that ball of personal space is.
    A high stiffness means that the vertex reacts immediately to another vertex enters their space.
+
+.. _bpy.types.SoftBodySettings.ball_damp:
 
 Dampening
    How the vertex reacts.

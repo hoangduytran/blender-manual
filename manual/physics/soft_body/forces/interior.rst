@@ -57,7 +57,7 @@ Settings
 ========
 
 The characteristics of edges are set with the *Springs* and *Stiff Quads* properties in the *Soft Body Edges* panel.
-See the :ref:`Soft Body Edges settings <physics-softbody-settings-edges>` for details.
+See the :doc:`Soft Body Edges settings </physics/soft_body/settings/edges>` for details.
 
 
 Tips: Preventing Collapse
