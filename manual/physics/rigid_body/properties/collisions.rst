@@ -12,6 +12,8 @@ Collisions
 
       Rigid Body Collisions panel.
 
+.. _bpy.types.RigidBodyObject.collision_shape:
+
 Shape
    Determines the collision shape of the object;
    these can be broken into two categories: primitive shapes and mesh based shapes.
@@ -27,50 +29,58 @@ Shape
    so they are a better representation of the object.
    The center of gravity for these shapes is the object origin.
 
-   Box
+   :Box:
       Box-like shapes (e.g. cubes), including planes (e.g. ground planes).
       The size per axis is calculated from the bounding box.
-   Sphere
+   :Sphere:
       Sphere-like shapes. The radius is the largest axis of the bounding box.
-   Capsule
+   :Capsule:
       This points up the Z axis.
-   Cylinder
-      This points up the Z axis.
-      The height is taken from the Z axis, while the radius is the larger of the X or Y axes.
-   Cone
+   :Cylinder:
       This points up the Z axis.
       The height is taken from the Z axis, while the radius is the larger of the X or Y axes.
-   Convex Hull
+   :Cone:
+      This points up the Z axis.
+      The height is taken from the Z axis, while the radius is the larger of the X or Y axes.
+   :Convex Hull:
       A mesh-like surface encompassing (e.g. shrink-wrapped over) all vertices (best results with fewer vertices).
       A convex approximation of the object, which has good performance and stability.
-   Mesh
+   :Mesh:
       :term:`Mesh` consisting of triangles only, allowing for more detailed interactions than convex hulls.
       Allows simulating concave objects, but is rather slow and unstable.
-   Compound Parent
+   :Compound Parent:
       Takes the collision shapes from the object's :doc:`children </scene_layout/object/editing/parent>`
       and combines them. This makes it possible to create concave shapes from primitive shapes.
       This usually results in a faster simulation than the *Mesh* collision shape
       while also being generally more stable.
 
+.. _bpy.types.RigidBodyObject.mesh_source:
+
 Source
    Source of the mesh used to create the collision shape.
 
-   Base
+   :Base:
       The base mesh of the object.
-   Deform
+   :Deform:
       Includes any deformations added to the mesh (shape keys, deform modifiers).
-
-      Deforming
-         Mesh shapes can deform during simulation.
-   Final
+   :Final:
       Includes all deformations and modifiers.
+
+.. _bpy.types.RigidBodyObject.use_deform:
+
+Deforming
+   Mesh shapes can deform during simulation.
 
 
 Surface Response
 ================
 
+.. _bpy.types.RigidBodyObject.friction:
+
 Friction
    Resistance of object to movement. Specifies how much velocity is lost when objects collide with each other.
+
+.. _bpy.types.RigidBodyObject.restitution:
 
 Bounciness
    Tendency of object to bounce after colliding with another (0 to 1) (rigid to perfectly elastic).
@@ -98,9 +108,13 @@ The margin is *not embedded* for these shapes:
 - Active Triangle Mesh
 - Passive Triangle Mesh: Can be set to 0 most of the time.
 
+.. _bpy.types.RigidBodyObject.collision_margin:
+
 Margin
    Threshold of distance near the surface where collisions are still considered (best results when nonzero).
 
+
+.. _bpy.types.RigidBodyObject.collision_collections:
 
 Collections
 ===========
