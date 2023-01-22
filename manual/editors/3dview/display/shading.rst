@@ -252,7 +252,7 @@ Compositor
    Since it might be difficult to control the look of the viewport compositor due to changes in the
    aspect ratio, pan, and zoom of the viewport, one can limit the compositing space to the camera
    region by changing to :doc:`Camera View </editors/3dview/navigate/camera_view>` and setting
-   :doc:`Passepartout Alpha </editors/3dview/navigate/camera_view>` to 1, that is, make the areas
+   :ref:`Passepartout <bpy.types.Camera.passepartout_alpha>` to 1, that is, make the areas
    outside of the camera view completely opaque.
 
 
