@@ -48,3 +48,7 @@ Symmetrize
    Uses direction orientation to symmetrize. Since Dyntopo adds
    details dynamically it may happen that the model becomes asymmetric,
    so this a good tool for that.
+
+Merge Distance
+   A parameter of the *Symmetrize* operator to control
+   the distance within which symmetrical vertices are merged.
