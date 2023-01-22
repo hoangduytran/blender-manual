@@ -27,7 +27,7 @@ all of which is under your control.
 
           Cloth example.
 
-Once Cloth physics have been added to a mesh, a Cloth :doc:`modifier </modeling/modifiers/index>`
+Once Cloth physics have been added to a mesh, a :doc:`/modeling/modifiers/physics/cloth`
 will be added to the object's modifier stack. As a modifier then,
 it can interact with other modifiers, such as *Armature* and *Smooth*. In these cases,
 the ultimate shape of the mesh is computed in accordance with the order of the modifier stack.
