@@ -47,7 +47,7 @@ Enable overriding the cache defaults, when disabled, `Cache Settings`_ will be u
 Cache
    Raw
       Cache raw images read from drive, for faster tweaking of strip parameters at the cost of memory usage.
-   Pre-Processed
+   Preprocessed
       Cache preprocessed images, for faster tweaking of effects at the cost of memory usage.
    Composite
       Cache intermediate composited images, for faster tweaking of stacked strips at the cost of memory usage.

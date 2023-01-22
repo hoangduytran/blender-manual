@@ -55,7 +55,7 @@ Specials ``v``
          Vector handles create straight lines and sharp corners.
       Auto Handle
          Automatic handles that create smooth curves.
-      Auto Clamped Handle
+      Auto-Clamped Handle
          Automatic handles that create smooth curves while also preventing overshoot.
       Free Handle
          The handles can be moved completely independently, and thus can result in a sharp change of direction.

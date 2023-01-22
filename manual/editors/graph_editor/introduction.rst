@@ -107,7 +107,7 @@ Show Cursor
 Show Sliders
    A toggle option that shows the value sliders for the channels.
    See the Fig. :ref:`fig-dope-sheet-action`.
-AutoMerge Keyframes
+Auto-Merge Keyframes
    Automatically merge nearby keyframes.
 
 Show Markers
