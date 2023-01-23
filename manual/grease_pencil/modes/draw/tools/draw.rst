@@ -227,9 +227,6 @@ The cursor can be disabled by toggling the checkbox in the *Cursor* header.
 
 .. _bpy.types.BrushGpencilSettings.show_lasso:
 
-Display Cursor
-   Shows de brush size.
-
 Show Fill Color while Drawing
    Shows the brush linked material color in the viewport.
 

@@ -19,7 +19,7 @@ Options
 
 
 General
---------
+-------
 
 Location X, Y, Z
    Sets strokes location offset from its object origin.
@@ -35,17 +35,10 @@ Advanced
 --------
 
 Mode
-   Random
-      Add random values to the individual strokes offset.
-
-   Layer
-      Offset by layers.
-
-   Stroke
-      Offset by strokes (based on the stroke draw order).
-
-   Material
-      Offset by Materials.
+   :Random: Add random values to the individual strokes offset.
+   :Layer: Offset by layers.
+   :Stroke: Offset by strokes (based on the stroke draw order).
+   :Material: Offset by Materials.
 
 Offset X, Y, Z
    Sets individual element location offset.

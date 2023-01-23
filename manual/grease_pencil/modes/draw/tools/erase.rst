@@ -69,8 +69,11 @@ Affect Stroke Strength
 Affect Stroke Thickness
    The amount of deletion of the stroke thickness while erasing.
 
-Display Cursor
-   Shows the brush shape in the viewport.
+
+Cursor
+------
+
+The cursor can be disabled by toggling the checkbox in the *Cursor* header.
 
 
 Usage
