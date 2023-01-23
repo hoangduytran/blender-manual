@@ -94,10 +94,14 @@ Activate the menu item or hold the key combination,
 then draw a line across one or more links to delete them.
 
 .. note::
+
    The key combination is normally reserved for :doc:`Lasso Select </interface/selecting>`.
    In node editors, lasso selection is instead performed with :kbd:`Ctrl-Alt-LMB`.
 
-Detach Links :kbd:`Alt-D`, :kbd:`Alt-LMB` drag
+
+.. _bpy.ops.node.move_detach_links:
+
+Detach Links :kbd:`Alt-LMB` drag
    Use Detach Links to cut all the links attached to the selected nodes
    and move the nodes to a new location.
 
