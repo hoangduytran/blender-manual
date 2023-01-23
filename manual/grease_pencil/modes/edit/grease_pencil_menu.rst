@@ -280,9 +280,9 @@ Delete Duplicate Frames
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Delete Duplicated Frames`
+   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Delete Duplicate Frames`
 
-Removes any duplicated animation frames.
+Removes any duplicate keyframes.
 
 
 .. _bpy.ops.gpencil.reproject:
