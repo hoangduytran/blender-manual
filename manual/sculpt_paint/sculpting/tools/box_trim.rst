@@ -12,19 +12,33 @@ Adds or removes geometry based on a :ref:`box selection <tool-select-box>`.
 This tool is especially useful for sketching an early base mesh for further
 sculpting with the :doc:`voxel remesher </sculpt_paint/sculpting/tool_settings/remesh>`.
 
-.. add visual example of removing/adding geometry for a rough base.
+.. list-table::
+
+   * - .. figure:: /images/sculpt-paint_sculpt_trim_lasso_visual_example_a.png
+
+          Using Lasso Trim set to *Join*
+
+     - .. figure:: /images/sculpt-paint_sculpt_trim_lasso_visual_example_b.png
+
+          The symmetrized mesh.
+
+     - .. figure:: /images/sculpt-paint_sculpt_trim_lasso_visual_example_c.png
+
+          Sculpting with voxel remeshing.
 
 New geometry is assigned to a new :ref:`Face Set <sculpting-editing-facesets>`.
 When removing geometry, the new interior geometry along the selection will be assigned
 a new face set instead.
 
 .. note::
-   It is not recommended to use this tool on a mesh above 100k vertices.
+   It is not recommended to use this tool on a mesh above 100k vertices when using *Difference*
+   or *Union* as the Trim Mode.
    This tool is using a Boolean operation so it might take a long time to process.
    For higher resolution meshes it is recommended to instead use the
    :doc:`Line Project </sculpt_paint/sculpting/tools/line_project>` tool
    or the *Fair Positions* mode of the
-   :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool.
+   :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool to
+   trim geometry.
 
 
 Tool Settings
@@ -44,3 +58,9 @@ Trim Mode
 Use Cursor for Depth
    Use cursor location and radius for the dimensions and position of the trimming shape.
    If not set, the tool uses the full depth of the object from the camera view.
+
+Extrude mode
+   Fixed
+      Aligns new geometry orthogonally for 90 degree angles in depth.
+   Project
+      Aligns new geometry with the perspective of the current view for a tapered result.
