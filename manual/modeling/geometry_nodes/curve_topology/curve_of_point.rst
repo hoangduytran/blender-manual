@@ -10,7 +10,7 @@ Curve of Point Node
    :alt: Curve of Point node.
 
 The *Curve of Point* node retrieves the index of the curve a control point is part of.
-This node is conceptually similar to the :doc:`/modeling/geometry_nodes/mesh_topology/face_of_corner`.
+This node is conceptually similar to the :doc:`/modeling/geometry_nodes/mesh/topology/face_of_corner`.
 
 
 Inputs

@@ -60,7 +60,8 @@ So generally, if the node link is still accessible, the attribute it references 
 too. However, anonymous attributes cannot be connected to a completely separate geometry
 that was created from a different source. To transfer attributes between separate geometries,
 the :doc:`/modeling/geometry_nodes/geometry/sample_index` or other similar nodes like the
-:doc:`/modeling/geometry_nodes/mesh/sample_nearest_surface` can be used.
+:doc:`/modeling/geometry_nodes/mesh/operations/sample_nearest_surface` can be used.
+
 
 .. _attribute-data-types:
 
@@ -82,6 +83,7 @@ The above list is in the order of least to most "complex" (An integer can contai
 boolean, so it is more complicated). When joining separate geometries together, the more complex data
 type is preferred when there are matching names. This is particularly important when joining geometry
 with named attributes with the :doc:`/modeling/geometry_nodes/geometry/join_geometry`
+
 
 .. _attribute-domains:
 

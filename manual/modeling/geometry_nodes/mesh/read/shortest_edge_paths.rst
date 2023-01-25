@@ -25,13 +25,13 @@ The node is implemented with `Dijkstra's algorithm <https://en.wikipedia.org/wik
       :align: center
 
    The edge length is a natural input to the *Edge Cost*. It can be implemented with the
-   :doc:`/modeling/geometry_nodes/mesh/edge_vertices` and the
+   :doc:`/modeling/geometry_nodes/mesh/read/edge_vertices` and the
    :doc:`/modeling/geometry_nodes/vector/vector_math` set to the *Distance* operation.
 
 .. seealso::
 
-   This node can be used with the :doc:`/modeling/geometry_nodes/mesh/edge_paths_to_selection`
-   or the :doc:`/modeling/geometry_nodes/mesh/edge_paths_to_curves` to generate new geometry
+   This node can be used with the :doc:`/modeling/geometry_nodes/mesh/operations/edge_paths_to_selection`
+   or the :doc:`/modeling/geometry_nodes/mesh/operations/edge_paths_to_curves` to generate new geometry
    based on the paths.
 
 

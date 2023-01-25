@@ -73,7 +73,7 @@ Instance Processing
 
 Almost all nodes that process geometry do so by processing each unique
 geometry in their input's tree of instances separately. For example,
-if a :doc:`/modeling/geometry_nodes/mesh/subdivision_surface` was placed at
+if a :doc:`/modeling/geometry_nodes/mesh/operations/subdivision_surface` was placed at
 the end of the example above, it would only have to subdivide three meshes,
 rather than each instance of a mesh. Another important example is processing with
 the output of the :doc:`/modeling/geometry_nodes/text/string_to_curves`,

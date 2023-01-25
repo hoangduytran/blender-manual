@@ -13,8 +13,8 @@ The *Offset Point in Curve* node retrieves other points in the same curve as
 the input control point. This is like starting at a specific control point and
 walking along neighboring points toward the start or end of the curve.
 
-Conceptually the operation is similar to the 
-:doc:`/modeling/geometry_nodes/mesh_topology/offset_corner_in_face`,
+Conceptually the operation is similar to the
+:doc:`/modeling/geometry_nodes/mesh/topology/offset_corner_in_face`,
 but the point index doesn't wrap around to the other end of the curve unless it is cyclic.
 
 
@@ -23,7 +23,7 @@ Inputs
 
 Point Index
    The index of the input control point.
-   
+
    .. note::
       By default this uses the :doc:`index </modeling/geometry_nodes/input/input_index>`
       from the field context, which makes it important that the node is evaluated on

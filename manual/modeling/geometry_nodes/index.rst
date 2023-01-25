@@ -32,8 +32,6 @@ Node Types
    instances/index.rst
    material/index.rst
    mesh/index.rst
-   mesh_primitives/index.rst
-   mesh_topology/index.rst
    output/index.rst
    point/index.rst
    text/index.rst
@@ -41,5 +39,4 @@ Node Types
    utilities/index.rst
    vector/index.rst
    volume/index.rst
-   uv/index.rst
    group.rst

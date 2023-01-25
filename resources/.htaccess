@@ -1,7 +1,45 @@
 
 ErrorDocument 404 /manual/{lang}/{version}/404.html
+
 RedirectMatch "^/manual/{lang}/{version}/addons/import_export/io_(.*)" "/manual/{lang}/{version}/addons/import_export/$1"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_parameter.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/spline_parameter.html" 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/compare_floats.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/compare.html" 
 RedirectMatch "^/manual/{lang}/{version}/about/contribute/" "/manual/{lang}/{version}/contribute/$1"
 RedirectMatch "^/manual/{lang}/{version}/about/index.html" "/manual/{lang}/{version}/contribute/index.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_angle.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/edge_angle.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_neighbors.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/edge_neighbors.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_vertices.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/edge_vertices.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_area.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_area.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_neighbors.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_neighbors.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_set_boundaries.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_set_boundaries.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_is_planar.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_is_planar.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/is_shade_smooth.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_shade_smooth.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_island.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/mesh_island.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/shortest_edge_paths.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/shortest_edge_paths.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/vertex_neighbors.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/vertex_neighbors.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/set_shade_smooth.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/write/set_shade_smooth.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/dual_mesh.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/dual_mesh.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_paths_to_curves.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/edge_paths_to_curves.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_paths_to_selection.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/edge_paths_to_selection.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/extrude_mesh.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/extrude_mesh.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/flip_faces.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/flip_faces.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_boolean.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/mesh_boolean.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_to_curve.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/mesh_to_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_to_points.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/mesh_to_points.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_to_volume.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/mesh_to_volume.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/sample_nearest_surface.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/sample_nearest_surface.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/sample_uv_surface.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/sample_uv_surface.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/scale_elements.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/scale_elements.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/split_edges.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/split_edges.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/subdivide_mesh.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/subdivide_mesh.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/subdivision_surface.html" "manual/{lang}/{version}/modeling/geometry_nodes/operations/mesh/subdivision_surface.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/triangulate.html" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/triangulate.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh_primitives/" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/primitives/$1"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh_topology/" "manual/modeling/geometry_nodes/mesh/topology/$1"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/uv/" "manual/{lang}/{version}/modeling/geometry_nodes/mesh/uv/$1"

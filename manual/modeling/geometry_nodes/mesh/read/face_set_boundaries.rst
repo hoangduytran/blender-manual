@@ -41,5 +41,5 @@ Examples
 
 .. figure:: /images/modeling_geometry-nodes_face-set-boundaries_voronoi-seams.png
 
-Combined with the :doc:`UV Unwrap Node </modeling/geometry_nodes/uv/uv_unwrap>`,
+Combined with the :doc:`UV Unwrap Node </modeling/geometry_nodes/mesh/uv/uv_unwrap>`,
 this node is used to turn the face sets (right cube) into a UV map for a texture (left cube).

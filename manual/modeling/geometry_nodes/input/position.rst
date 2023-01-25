@@ -13,7 +13,7 @@ The *Position* node outputs a vector of each point of the geometry the node is c
 
 The node can work on geometry domains besides points. In that case, the position data will be
 automatically interpolated to the new domain. For example, when used as part of the input to
-the :doc:`/modeling/geometry_nodes/mesh/split_edges`, the position for each edge
+the :doc:`/modeling/geometry_nodes/mesh/operations/split_edges`, the position for each edge
 will be the average position of the edge's two vertices.
 
 For instances themselves, the output is the origin of each instance. However, if the node is for
