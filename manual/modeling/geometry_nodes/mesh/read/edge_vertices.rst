@@ -34,9 +34,9 @@ Outputs
 =======
 
 Vertex Index 1/2
-   The :doc:`index </modeling/geometry_nodes/input/input_index>` of the two vertices of the edge.
+   The :doc:`index </modeling/geometry_nodes/geometry/read/input_index>` of the two vertices of the edge.
 
 Position 1/2
-   The :doc:`position </modeling/geometry_nodes/input/position>` of each of the edge's vertices.
+   The :doc:`position </modeling/geometry_nodes/geometry/read/position>` of each of the edge's vertices.
    This output is for convenience, it is the same as using index output to retrieve the position from the
-   :doc:`/modeling/geometry_nodes/utilities/field_at_index`.
+   :doc:`/modeling/geometry_nodes/utilities/field/evaluate_at_index`.

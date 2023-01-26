@@ -1,6 +1,6 @@
 
 ###################
-  Mesh Read Nodes
+  Read Mesh Nodes
 ###################
 
 .. toctree::

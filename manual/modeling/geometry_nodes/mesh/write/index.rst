@@ -1,6 +1,6 @@
 
 ####################
-  Mesh Write Nodes
+  Write Mesh Nodes
 ####################
 
 .. toctree::

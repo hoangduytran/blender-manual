@@ -10,7 +10,7 @@ Points Node
    :alt: Points node.
 
 The *Points* node generate a point cloud with positions and radii defined by
-:doc:`fields </modeling/geometry_nodes/fields>`. 
+:doc:`fields </modeling/geometry_nodes/fields>`.
 
 
 Inputs
@@ -23,12 +23,12 @@ Position
    The position of each generated point.
 
 Radius
-   The :doc:`radius </modeling/geometry_nodes/input/radius>` of each point.
+   The :doc:`radius </modeling/geometry_nodes/geometry/read/radius>` of each point.
 
 .. note::
    Since the point cloud is created from scratch, the *Position* and *Radius* inputs can only depend on
-   the :doc:`index</modeling/geometry_nodes/input/input_index>` node. Regular input nodes like
-   the :doc:`position </modeling/geometry_nodes/input/position>` won't work. 
+   the :doc:`index</modeling/geometry_nodes/geometry/read/input_index>` node. Regular input nodes like
+   the :doc:`position </modeling/geometry_nodes/geometry/read/position>` won't work.
 
 
 Properties

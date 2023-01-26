@@ -29,14 +29,14 @@ Probability
 
 ID
    An ID to drive the random number generator seed. By default, this input uses the same value
-   as of the :doc:`/modeling/geometry_nodes/input/id`, which is the ``id`` attribute of the context
-   geometry if it exists, and otherwise the :doc:`index </modeling/geometry_nodes/input/input_index>`.
+   as of the :doc:`/modeling/geometry_nodes/geometry/read/id`, which is the ``id`` attribute of the context
+   geometry if it exists, and otherwise the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`.
 
    .. tip:: Single Random Value
 
       By default, the random value node generates a value for each unique index.
       If a single random value is desired, connect a single value
-      (such as an :doc:`/modeling/geometry_nodes/input/integer` ) to the ID input.
+      (such as an :doc:`/modeling/geometry_nodes/input/constant/integer` ) to the ID input.
 
 Seed
    A field to :term:`Seed` the random number generator. This can be used to generate

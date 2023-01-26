@@ -7,6 +7,81 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/compa
 RedirectMatch "^/manual/{lang}/{version}/about/contribute/" "/manual/{lang}/{version}/contribute/$1"
 RedirectMatch "^/manual/{lang}/{version}/about/index.html" "/manual/{lang}/{version}/contribute/index.html"
 
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/boolean.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/constant/boolean.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/color.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/constant/color.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/image_input.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/constant/image.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/integer.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/constant/integer.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/material.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/constant/material.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/string.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/constant/string.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/value.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/constant/value.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/vector.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/constant/vector.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/collection_info.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/scene/collection_info.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/image_info.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/scene/image_info.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/is_viewport.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/scene/is_viewport.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/object_info.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/scene/object_info.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/self_object.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/scene/self_object.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/scene_time.html" "/manual/{lang}/{version}/modeling/geometry_nodes/input/scene/scene_time.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/id.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/read/id.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/input_index.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/read/input_index.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/named_attribute.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/read/named_attribute.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/normal.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/read/normal.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/position.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/read/position.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/input/radius.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/read/radius.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/set_id.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/write/set_id.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/set_position.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/write/set_position.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/bounding_box.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/operations/bounding_box.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/convex_hull.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/operations/convex_hull.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/delete_geometry.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/operations/delete_geometry.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/duplicate_elements.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/operations/duplicate_elements.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/merge_by_distance.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/operations/merge_by_distance.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/transform_geometry.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/operations/transform_geometry.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/separate_components.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/operations/separate_components.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/separate_geometry.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/operations/separate_geometry.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/geometry_proximity.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample/geometry_proximity.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/raycast.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample/raycast.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample_index.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample/sample_index.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample_nearest.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample/sample_nearest.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_handle_position.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_handle_position.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_length.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_length.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_tangent.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_tangent.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_tilt.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_tilt.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/endpoint_selection.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/endpoint_selection.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/handle_type_selection.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/handle_type_selection.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/is_spline_cyclic.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/is_spline_cyclic.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/spline_length.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/spline_length.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/spline_parameter.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/spline_parameter.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/spline_resolution.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/spline_resolution.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_curve_normal.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_curve_normal.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_curve_radius.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_curve_radius.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_curve_tilt.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_curve_tilt.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_handle_positions.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_handle_positions.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_handle_type.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_handle_type.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_spline_cyclic.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_spline_cyclic.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_spline_resolution.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_spline_resolution.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_spline_type.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_spline_type.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_to_mesh.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/curve_to_mesh.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_to_points.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/curve_to_points.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/deform_curves_on_surface.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/deform_curves_on_surface.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/fill_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/fill_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/fillet_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/fillet_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/resample_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/resample_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/reverse_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/reverse_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/sample_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/sample_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/subdivide_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/subdivide_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/trim_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/trim_curve.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve_primitives/" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/primitives/$1"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve_topology/" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/topology/$1"
+
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_angle.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/edge_angle.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_neighbors.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/edge_neighbors.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_vertices.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/edge_vertices.html"
@@ -40,6 +115,28 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/triangulat
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh_primitives/" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/primitives/$1"
 
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh_topology/" "/manual/modeling/geometry_nodes/mesh/topology/$1"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh_topology/" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/topology/$1"
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/uv/" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/uv/$1"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/color/" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/color/$1"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/text/" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/text/$1"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/vector/" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/vector/$1"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field/accumulate_field.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/accumulate_field.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field_at_index.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field/evaluate_at_index.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/interpolate_domain.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field/evaluate_on_domain.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/boolean_math.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/boolean_math.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/clamp.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/clamp.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/compare.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/compare.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/float_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/float_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/float_to_integer.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/float_to_integer.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/map_range.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/map_range.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/math.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/mix.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/mix.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/align_euler_to_vector.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/align_euler_to_vector.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotate_euler.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/rotate_euler.html"

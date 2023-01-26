@@ -17,7 +17,7 @@ a name, but instead of referencing it with a name, it is retrieved whenever
 the socket is connected to the input of a node. Later on when evaluating the node tree,
 the attribute will be removed automatically if it is no longer used.
 
-This node is essential because field input nodes like the :doc:`/modeling/geometry_nodes/input/radius`
+This node is essential because field input nodes like the :doc:`/modeling/geometry_nodes/geometry/read/radius`
 work in the context of the node they are connected to. Meaning that in order to pass data like ``radius``
 to a geometry that doesn't have radius, an explicit node link with the output of this node must be used.
 
@@ -65,8 +65,8 @@ Examples
 
 Here, a noise texture is evaluated in along the path of the curve in one dimension
 and rendered with a shader. The capture node is required because the output of
-the :doc:`/modeling/geometry_nodes/curve/curve_to_mesh` does not have a "curve parameter",
-since it is a mesh and not a curve. So, the :doc:`/modeling/geometry_nodes/curve/spline_parameter`
+the :doc:`/modeling/geometry_nodes/curve/operations/curve_to_mesh` does not have a "curve parameter",
+since it is a mesh and not a curve. So, the :doc:`/modeling/geometry_nodes/curve/read/spline_parameter`
 must be evaluated while the geometry is still a curve.
 
 Internally, after the noise texture is evaluated on the curve,

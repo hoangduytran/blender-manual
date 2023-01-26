@@ -16,7 +16,7 @@ of a geometry node tree or even to lower the memory usage of the entire scene.
 
 Almost all attribute names can be removed. For certain :ref:`geometry-nodes_builtin-attributes`,
 removing it will mean that a default value will be used instead. For example, removing the
-:doc:`cyclic </modeling/geometry_nodes/curve/is_spline_cyclic>` attribute on curves means that
+:doc:`cyclic </modeling/geometry_nodes/curve/read/is_spline_cyclic>` attribute on curves means that
 all curves will be non-cyclic.
 
 

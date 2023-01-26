@@ -11,7 +11,7 @@ Volume Cube Node
 
 The *Volume Cube* generates a volume from scratch by evaluating an input field on every single
 voxel in a rectangular prism. The *Density* field defines the output volume grid's value at every
-voxel. The field can only depend on the :doc:`/modeling/geometry_nodes/input/position`.
+voxel. The field can only depend on the :doc:`/modeling/geometry_nodes/geometry/read/position`.
 
 
 Inputs
@@ -29,7 +29,7 @@ Min
    One corner of the rectangular prism in which to fill evaluate the field.
 
 Max
-   The other corner of the rectangular prism in which to fill evaluate the field. 
+   The other corner of the rectangular prism in which to fill evaluate the field.
 
 Resolution X,Y,Z
    The number of voxels to evaluate the field in on each axis.

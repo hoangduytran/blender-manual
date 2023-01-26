@@ -20,7 +20,7 @@ Corner Index
    The index of the face corner.
 
    .. note::
-      By default this uses the :doc:`index </modeling/geometry_nodes/input/input_index>`
+      By default this uses the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
       from the field context, which makes it important that the node is evaluated on
       the face corner domain.
 

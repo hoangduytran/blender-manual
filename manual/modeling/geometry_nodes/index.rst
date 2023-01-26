@@ -23,20 +23,39 @@ Node Types
    :maxdepth: 2
 
    attribute/index.rst
-   color/index.rst
-   curve/index.rst
-   curve_primitives/index.rst
-   curve_topology/index.rst
-   geometry/index.rst
    input/index.rst
-   instances/index.rst
-   material/index.rst
-   mesh/index.rst
    output/index.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 2
+
+   geometry/index.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 2
+
+   curve/index.rst
+   instances/index.rst
+   mesh/index.rst
    point/index.rst
-   text/index.rst
+   volume/index.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 2
+
+   material/index.rst
    texture/index.rst
    utilities/index.rst
-   vector/index.rst
-   volume/index.rst
+
+----
+
+.. toctree::
+   :maxdepth: 2
+
    group.rst

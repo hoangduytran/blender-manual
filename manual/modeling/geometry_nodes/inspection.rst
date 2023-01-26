@@ -105,7 +105,7 @@ Named Attributes Overlay
 The "Named Attributes" overlay allows displaying when a custom named attribute is used
 by a node or a node group. Named attributes can be used by the
 :doc:`/modeling/geometry_nodes/attribute/capture_attribute`, the
-:doc:`/modeling/geometry_nodes/input/named_attribute`, and the
+:doc:`/modeling/geometry_nodes/geometry/read/named_attribute`, and the
 :doc:`/modeling/geometry_nodes/attribute/remove_named_attribute`,
 and can be written to, read, or removed.
 

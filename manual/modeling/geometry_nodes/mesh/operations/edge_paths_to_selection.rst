@@ -15,7 +15,7 @@ of every visited edge.
 .. seealso::
 
    This node is meant to use the output of the :doc:`/modeling/geometry_nodes/mesh/read/shortest_edge_paths`.
-   It can be combined with the :doc:`/modeling/geometry_nodes/geometry/separate_geometry` to remove
+   It can be combined with the :doc:`/modeling/geometry_nodes/geometry/operations/separate_geometry` to remove
    any unused edges.
 
 

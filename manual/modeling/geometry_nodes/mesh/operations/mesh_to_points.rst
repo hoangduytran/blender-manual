@@ -23,7 +23,7 @@ Selection
 
 Position
    Positions of generated points. By default, this input is the same as
-   if the :doc:`/modeling/geometry_nodes/input/position` was connected.
+   if the :doc:`/modeling/geometry_nodes/geometry/read/position` was connected.
 
 Radius
    Radii of generated points.

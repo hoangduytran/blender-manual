@@ -18,7 +18,7 @@ operation upon completion, because the results may not be generally useful other
 
    The :ref:`bpy.ops.uv.unwrap` operator performs a similar operation in the UV editor.
    Unlike the Unwrap operator, the node doesn't perform aspect ratio correction,
-   because it is trivial to implement with a :doc:`/modeling/geometry_nodes/vector/vector_math`.
+   because it is trivial to implement with a :doc:`/modeling/geometry_nodes/utilities/vector/vector_math`.
 
 
 Inputs

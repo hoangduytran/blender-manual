@@ -6,20 +6,25 @@
 General purpose nodes for modifying data.
 
 .. toctree::
+   :maxdepth: 2
+
+   Color <color/index.rst>
+   Text <text/index.rst>
+   Vector <vector/index.rst>
+
+-----
+
+.. toctree::
+   :maxdepth: 2
+
+   Field <field/index.rst>
+   Math <math/index.rst>
+   Rotation <rotation/index.rst>
+
+-----
+
+.. toctree::
    :maxdepth: 1
 
-   accumulate_field.rst
-   align_euler_to_vector.rst
-   boolean_math.rst
-   clamp.rst
-   compare.rst
-   field_at_index.rst
-   float_curve.rst
-   float_to_integer.rst
-   interpolate_domain.rst
-   map_range.rst
-   math.rst
-   mix.rst
    random_value.rst
-   rotate_euler.rst
    switch.rst

@@ -11,9 +11,9 @@ Sample Nearest Surface Node
 
 The *Sample Nearest Surface* node finds values at the closest points on
 the surface of a source mesh geometry. Non-face attributes are interpolated
-across the surface. 
+across the surface.
 
-This node is similar to the :doc:`/modeling/geometry_nodes/geometry/geometry_proximity`,
+This node is similar to the :doc:`/modeling/geometry_nodes/geometry/sample/geometry_proximity`,
 but it gives the value of any attribute at the closest surface point, not just its position.
 
 .. warning::
@@ -32,7 +32,7 @@ Value
 
 Sample Position
    The position to start from when finding the closest location on the target mesh.
-   By default, this is the same as if the :doc:`/modeling/geometry_nodes/input/position` was connected.
+   By default, this is the same as if the :doc:`/modeling/geometry_nodes/geometry/read/position` was connected.
 
 
 Properties

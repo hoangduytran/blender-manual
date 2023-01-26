@@ -17,7 +17,7 @@ joined.
 The node can be used in combination with the *Pick Instances* option in the
 :doc:`/modeling/geometry_nodes/instances/instance_on_points`, as a way to pick
 between geometry generated in the node tree (as opposed to picking from separate
-instances from the :doc:`/modeling/geometry_nodes/input/collection_info`, for example).
+instances from the :doc:`/modeling/geometry_nodes/input/scene/collection_info`, for example).
 
 .. tip::
 

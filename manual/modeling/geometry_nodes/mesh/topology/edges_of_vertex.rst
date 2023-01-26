@@ -9,7 +9,7 @@ Edges of Vertex Node
    :align: right
    :alt: Edges of Vertex node.
 
-The *Edges of Vertex* node retrieves the edges connected to each vertex. Each vertex is connected 
+The *Edges of Vertex* node retrieves the edges connected to each vertex. Each vertex is connected
 to several edges. The node first collects a list of those edges, then sorts them based on the
 *Sort Weight* input. The *Total* output is the number of edges in that list, and the *Edge Index*
 output is one of those edges chosen with the *Sort Index* input.
@@ -24,7 +24,7 @@ Vertex Index
    The index of the input vertex.
 
    .. note::
-      By default this uses the :doc:`index </modeling/geometry_nodes/input/input_index>`
+      By default this uses the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
       from the field context, which makes it important that the node is evaluated on
       the vertex domain.
 

@@ -15,8 +15,8 @@ for every element (mesh vertices, faces, etc.).
    A field input to a node.
 
 For example, in the figure above, the field connected to the "Set Position" node
-depends on two inputs, :doc:`Position </modeling/geometry_nodes/input/position>` and
-:doc:`Index </modeling/geometry_nodes/input/input_index>`, and transforms them into
+depends on two inputs, :doc:`Position </modeling/geometry_nodes/geometry/read/position>` and
+:doc:`Index </modeling/geometry_nodes/geometry/read/input_index>`, and transforms them into
 a vector using a single instruction.
 
 
@@ -56,7 +56,7 @@ There are three possible socket shapes, each visualizing its "field status":
 
    Often it is desired to extract a single value from a field. While it doesn't
    make sense conceptually to simply change a field into a single value,
-   the :doc:`/modeling/geometry_nodes/geometry/sample_index` or the
+   the :doc:`/modeling/geometry_nodes/geometry/sample/sample_index` or the
    :doc:`/modeling/geometry_nodes/attribute/attribute_statistic` can
    be used to retrieve a single value from a field evaluated on a geometry.
 
@@ -64,6 +64,7 @@ When a connection is made between two node sockets that support
 fields the node connection will be drawn as a dashed line.
 If you make the mistake of connecting a non-field socket to a field socket,
 the connection will be drawn as a solid red line indicating that there is an error.
+
 
 .. _field-node-types:
 
@@ -87,7 +88,7 @@ Function Nodes
 
 Nodes with diamond socket inputs and outputs are field nodes, and resemble the instructions
 that will be evaluated by data flow nodes. Examples of function nodes are the math nodes
-and also more complex nodes like the :doc:`/modeling/geometry_nodes/geometry/geometry_proximity`.
+and also more complex nodes like the :doc:`/modeling/geometry_nodes/geometry/sample/geometry_proximity`.
 
 
 Input Nodes
@@ -96,13 +97,14 @@ Input Nodes
 Input nodes provide data to the field evaluation process. By themselves, they mean nothing; they
 must be evaluated within the context of a data flow node (geometry) to actually output a value.
 Examples of input nodes are the built-in attribute input nodes like
-:doc:`Position </modeling/geometry_nodes/input/position>` and
-:doc:`ID </modeling/geometry_nodes/input/id>`, but also selection nodes like
-:doc:`Endpoint Selection </modeling/geometry_nodes/curve/endpoint_selection>`.
+:doc:`Position </modeling/geometry_nodes/geometry/read/position>` and
+:doc:`ID </modeling/geometry_nodes/geometry/read/id>`, but also selection nodes like
+:doc:`Endpoint Selection </modeling/geometry_nodes/curve/read/endpoint_selection>`.
 
 Field inputs may also come from other nodes that process geometry like
 the :doc:`/modeling/geometry_nodes/point/distribute_points_on_faces`,
 in the form of :ref:`anonymous-attributes`.
+
 
 .. _field-context:
 
@@ -120,7 +122,7 @@ for every data flow node, potentially retrieving data from a different or change
 .. figure:: /images/modeling_geometry-nodes_fields_flow-1.png
    :align: center
 
-Here, the :doc:`Set Position </modeling/geometry_nodes/geometry/set_position>` node's
+Here, the :doc:`Set Position </modeling/geometry_nodes/geometry/write/set_position>` node's
 input field is evaluated once. To evaluate the field, the node traverses
 backwards to retrieve the inputs from the field input nodes.
 

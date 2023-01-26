@@ -59,7 +59,7 @@ automatically interpolated when the geometry changes with other nodes, except fo
 So generally, if the node link is still accessible, the attribute it references will be available
 too. However, anonymous attributes cannot be connected to a completely separate geometry
 that was created from a different source. To transfer attributes between separate geometries,
-the :doc:`/modeling/geometry_nodes/geometry/sample_index` or other similar nodes like the
+the :doc:`/modeling/geometry_nodes/geometry/sample/sample_index` or other similar nodes like the
 :doc:`/modeling/geometry_nodes/mesh/operations/sample_nearest_surface` can be used.
 
 
@@ -111,7 +111,7 @@ to determine the domains of attributes.
   only supported in geometry nodes.
 
 Attributes are automatically interpolated to other domains. For example, when the
-:doc:`/modeling/geometry_nodes/input/position` is connected to the selection input of
+:doc:`/modeling/geometry_nodes/geometry/read/position` is connected to the selection input of
 the :doc:`/modeling/geometry_nodes/material/set_material` node, the values are interpolated
 from the *Point* domain to the *Face* domain. Normally, domain conversions use simple averages
 for values, but *Boolean* data type attributes have special rules for interpolation:
@@ -222,8 +222,8 @@ Built-in attributes always exist, and cannot be removed. Their data type and dom
      - *Point*
      - Built-in attribute describing vertex or point locations, in the local space of a geometry.
        Any node that changes the location of points will adjust this attribute,
-       like the :doc:`/modeling/geometry_nodes/geometry/transform_geometry`
-       and the :doc:`/modeling/geometry_nodes/geometry/set_position`.
+       like the :doc:`/modeling/geometry_nodes/geometry/operations/transform_geometry`
+       and the :doc:`/modeling/geometry_nodes/geometry/write/set_position`.
 
    * - ``radius``
      - *Float*

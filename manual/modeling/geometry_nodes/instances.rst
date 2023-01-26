@@ -76,7 +76,7 @@ geometry in their input's tree of instances separately. For example,
 if a :doc:`/modeling/geometry_nodes/mesh/operations/subdivision_surface` was placed at
 the end of the example above, it would only have to subdivide three meshes,
 rather than each instance of a mesh. Another important example is processing with
-the output of the :doc:`/modeling/geometry_nodes/text/string_to_curves`,
+the output of the :doc:`/modeling/geometry_nodes/utilities/text/string_to_curves`,
 where each unique character only has to be processed once.
 
 This method can improve performance a lot, but it means that the result of an operation

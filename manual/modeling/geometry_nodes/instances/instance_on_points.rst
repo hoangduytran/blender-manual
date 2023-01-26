@@ -25,7 +25,7 @@ domain of the generated instances.
 .. note::
 
    To instance object types that do not contain geometry, like a light object, the
-   :doc:`/modeling/geometry_nodes/input/object_info` can be used. Other objects like
+   :doc:`/modeling/geometry_nodes/input/scene/object_info` can be used. Other objects like
    :doc:`Metaball </modeling/metas/introduction>` objects are not supported for instancing.
 
 Inputs
@@ -53,21 +53,21 @@ Instance
 Pick Instances
    If enabled, instead of adding the entire geometry from the *Instance* input on every point,
    choose an instance from the instance list of the geometry based on the *Instance Index* input.
-   This option is intended to be used with the :doc:`/modeling/geometry_nodes/input/collection_info`.
+   This option is intended to be used with the :doc:`/modeling/geometry_nodes/input/scene/collection_info`.
 
 Instance Index
    The selection of index for every selected point, only used when *Pick Instances* is true.
-   By default the point :doc:`ID </modeling/geometry_nodes/input/id>` is used,
-   or the :doc:`index </modeling/geometry_nodes/input/input_index>` if that doesn't exist.
+   By default the point :doc:`ID </modeling/geometry_nodes/geometry/read/id>` is used,
+   or the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>` if that doesn't exist.
    Negative values or values that are too large are wrapped around to the other end of
    the instance list.
 
 Rotation
    The :term:`Euler` rotation for every instance. This can use the rotation output of nodes like
    :doc:`Distribute Points on Faces </modeling/geometry_nodes/point/distribute_points_on_faces>`
-   and :doc:`Curve to Points </modeling/geometry_nodes/curve/curve_to_points>`. An Euler rotation
-   can also be created from a direction vector like the :doc:`normal </modeling/geometry_nodes/input/normal>`
-   with the :doc:`/modeling/geometry_nodes/utilities/align_euler_to_vector`.
+   and :doc:`Curve to Points </modeling/geometry_nodes/curve/operations/curve_to_points>`. An Euler rotation
+   can also be created from a direction vector like the :doc:`normal </modeling/geometry_nodes/geometry/read/normal>`
+   with the :doc:`/modeling/geometry_nodes/utilities/rotation/align_euler_to_vector`.
 
 Scale
    The size of each generated instance.

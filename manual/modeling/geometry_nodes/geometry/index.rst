@@ -6,27 +6,23 @@
 Nodes that can operate on different geometry types (volume, mesh).
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   bounding_box.rst
-   convex_hull.rst
-   delete_geometry.rst
-   duplicate_elements.rst
-   geometry_proximity.rst
-   geometry_to_instance.rst
-   join_geometry.rst
-   merge_by_distance.rst
-   raycast.rst
-   sample_index.rst
-   sample_nearest.rst
-   separate_components.rst
-   separate_geometry.rst
-   transform_geometry.rst
+   Read <read/index.rst>
+   Write <write/index.rst>
 
-----
+-----
+
+.. toctree::
+   :maxdepth: 2
+
+   Operations <operations/index.rst>
+   Sample <sample/index.rst>
+
+-----
 
 .. toctree::
    :maxdepth: 1
 
-   set_id.rst
-   set_position.rst
+   join_geometry.rst
+   geometry_to_instance.rst

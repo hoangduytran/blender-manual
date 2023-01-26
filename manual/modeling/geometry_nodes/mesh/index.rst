@@ -8,15 +8,15 @@ Nodes that only operate on meshes.
 .. toctree::
    :maxdepth: 2
 
-   read/index.rst
-   write/index.rst
+   Read <read/index.rst>
+   Write <write/index.rst>
 
 ----
 
 .. toctree::
    :maxdepth: 2
 
-   operations/index.rst
-   primitives/index.rst
-   topology/index.rst
-   uv/index.rst
+   Operations <operations/index.rst>
+   Primitives <primitives/index.rst>
+   Topology <topology/index.rst>
+   UV <uv/index.rst>

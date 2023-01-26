@@ -2,7 +2,7 @@
 .. _bpy.types.CompositorNodeMixRGB:
 .. Editors Note: This page gets copied into:
 .. - :doc:`</render/cycles/nodes/types/color/mix>`
-.. - :doc:`</modeling/geometry_nodes/color/mix_rgb>`
+.. - :doc:`</modeling/geometry_nodes/utilities/color/mix_rgb>`
 .. - :doc:`</render/shader_nodes/converter/mix>`
 .. - :doc:`</modeling/geometry_nodes/utilities/mix>`
 
@@ -42,7 +42,7 @@ Mix
    The Blend modes can be selected in the select menu.
    See :term:`Color Blend Modes` for details on each blending mode.
 
-   Add, Subtract, Multiply, Screen, Divide, Difference, Exclusion, 
+   Add, Subtract, Multiply, Screen, Divide, Difference, Exclusion,
    Darken, Lighten, Overlay, Color Dodge, Color Burn,
    Hue, Saturation, Value, Color, Soft Light, Linear Light
 

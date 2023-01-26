@@ -29,7 +29,7 @@ Selection
 
 Offset
    The amount to translate the new geometry on each axis. The default value of the "Offset" input
-   is the mesh's :doc:`normals </modeling/geometry_nodes/input/normal>`. To change the distance,
+   is the mesh's :doc:`normals </modeling/geometry_nodes/geometry/read/normal>`. To change the distance,
    the *Scale* input can be used. However, when an input is computed for this directly, the length
    of the input vectors is used.
 
@@ -37,7 +37,7 @@ Offset
 
       Because the default input is the mesh's normals, they may need to be calculated just for this node.
       If the extrusion is only in one direction anyway, a potential performance improvement is to connect
-      a :doc:`/modeling/geometry_nodes/input/vector` instead.
+      a :doc:`/modeling/geometry_nodes/input/constant/vector` instead.
 
 Scale
    The factor used to scale elements or groups of elements.
