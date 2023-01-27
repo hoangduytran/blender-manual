@@ -30,7 +30,7 @@ Distance Min
 
    .. _bpy.ops.sculpt_curves.min_distance_edit:
 
-   Edit Minimum Distance :kbd:`Shift-R`
+   Edit Minimum Distance :kbd:`R`
       Interactively sets the *Distance Min* value by displaying
       a graphic inside the brush cursor, giving a representation of the density.
 

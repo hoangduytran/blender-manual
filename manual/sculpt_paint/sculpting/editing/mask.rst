@@ -123,7 +123,8 @@ Type
    Increase/Decrease Contrast
       Changes the contrast of the mask.
 
-In the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>` panel there are further options.
+In the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>` panel there are further options
+to add iterations for a stronger effect.
 
 Iterations
    The number of times the filter is applied.
@@ -131,6 +132,10 @@ Iterations
 Auto Iteration Count
    Use an automatic number of iterations based on the number of vertices of the sculpt.
    Disable this option to set the Iterations manually.
+
+.. tip::
+   An alternative to Iterations is to use :ref:`Repeat Last <bpy.ops.screen.repeat_last>`
+   via the shortcut :kbd:`Shift-R`.
 
 
 .. _bpy.ops.mesh.paint_mask_extract:

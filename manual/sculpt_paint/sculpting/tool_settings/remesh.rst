@@ -12,7 +12,7 @@ Remesh
 
 For a general explanation to remeshing, visit the :doc:`Introduction </sculpt_paint/sculpting/introduction/adaptive>`.
 
-Voxel Size :kbd:`Shift-R`
+Voxel Size :kbd:`R`
    The resolution or the amount of detail the remeshed mesh will have.
    The value is used to define the size, in object space, of the :term:`Voxel`.
    These voxels are assembled around the mesh and are used to determine the new geometry.
@@ -20,7 +20,7 @@ Voxel Size :kbd:`Shift-R`
    (assuming *Preserve Volume* is enabled).
    Lower values preserve finer details but will result in a mesh with a much more dense topology.
 
-   The voxel size also be adjusted from the 3D Viewport using :kbd:`Shift-R`.
+   The voxel size also be adjusted from the 3D Viewport using :kbd:`R`.
    Using the shortcut displays an interactive grid overlay showing the resulting voxel size.
    Moving the mouse closer to center of the grid decreases the voxel size
    while moving away from the center increase the voxel size.

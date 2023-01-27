@@ -21,7 +21,7 @@ the :doc:`Introduction </sculpt_paint/sculpting/introduction/adaptive>`.
 .. _bpy.types.Sculpt.detail_percent:
 .. _bpy.ops.sculpt.dyntopo_detail_size_edit:
 
-Detail Size/Percentage, Resolution :kbd:`Shift-D`
+Detail Size/Percentage, Resolution :kbd:`R`
    Each Detail Type's detail is set here. Depending on the Detail Type being used
    this property will rather show as a pixel count (px), or percentage.
 
