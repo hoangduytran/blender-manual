@@ -12,10 +12,11 @@ The Simplify brush is specifically meant for use with
 :doc:`/sculpt_paint/sculpting/tool_settings/dyntopo`
 to remove/add detail in the mesh.
 
-This brush collapses short edges as defined by the Dyntopo's *Detail Size*
-regardless of the :ref:`Refine Method <bpy.types.Sculpt.detail_refine_method>`.
+This brush has no effect if dynamic topology is disabled.
 
-This brush has no effect if dynamic topology is not enabled.
+.. tip::
+   In combination with auto-smooth the brush can polish surfaces while it remeshes them.
+   On tube-like geometry it can also shrink and dissolve volumes completely.
 
 
 Brush Settings
