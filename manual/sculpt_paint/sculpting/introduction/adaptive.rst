@@ -27,6 +27,15 @@ Reaching high vertex counts should still be achievable with this technique, depe
    Make sure to fill any holes in the mesh before remeshing.
    Or avoid any holes in the mesh/volume that are larger than the defined voxel size.
 
+.. tip::
+   If in doubt, you can fill all holes in edit mode or by using the
+   :ref:`Mask Slice and Fill Holes <bpy.ops.mesh.paint_mask_slice>`
+   operation to fill all holes in the mesh. If nothing is masked, it only fills any holes.
+
+   ..
+      this is a useful workaround. But once the voxel remesher automatically checks for holes
+      or a dedicated Fill Holes operation is added, this tip should be removed.
+
 To more easily access this feature, use the shortcuts :kbd:`R` to define the resolution,
 and :kbd:`Ctrl-R` to execute the remeshing.
 

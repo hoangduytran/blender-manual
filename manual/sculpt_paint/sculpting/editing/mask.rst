@@ -192,6 +192,15 @@ Threshold
 Fill Holes
    Fills concave holes with geometry that might have resulted from the *Mask Slice* operation.
 
+   .. tip::
+      If nothing is masked, this operation can be used to just fill all holes.
+      Especially when using :doc:`Trim </sculpt_paint/sculpting/tools/lasso_trim>`
+      tools and the :doc:`Voxel Remesher </sculpt_paint/sculpting/tool_settings/remesh>`
+
+   ..
+      this is a useful workaround. But once the voxel remesher automatically checks for holes
+      or a dedicated Fill Holes operation is added, this tip should be removed.
+
 Slice to New Object
    Create a new object from the masked geometry.
 
