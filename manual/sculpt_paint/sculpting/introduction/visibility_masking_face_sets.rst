@@ -8,20 +8,20 @@ Visibility Control
 
 Parts of the mesh can be hidden in Sculpt Mode.
 Because hidden faces cannot be sculpted, hiding makes it easier to isolate what you want to work on.
-Hiding geometry als improves the viewport performance. 
+Hiding geometry also improves the viewport performance.
 
-Hiding is shared between all modes, except Object Mode 
+Hiding is shared between all modes, except Object Mode
 (i.e. hiding/showing of faces in one mode will hide the same faces in other modes too).
 
-Unlike :doc:`Selection Masking </sculpt_paint/selection_visibility>` in other painting modes, 
-Sculpt Mode primarily uses Masks and Face Sets to easily control the mesh visibility 
+Unlike :doc:`Selection Masking </sculpt_paint/selection_visibility>` in other painting modes,
+Sculpt Mode primarily uses Masks and Face Sets to easily control the mesh visibility
 and which faces can currently be edited.
 The exception is the :ref:`Clipping Region <clipping_region>`, which can be used in any mode.
 
 The most common shortcuts are :kbd:`H` to isolate the face set under the cursor (or show everything)
 and :kbd:`Shift-H` to hide the face set under the cursor.
 
-:ref:`Inverting the visibility <bpy.ops.sculpt.face_set_change_visibility>` and :ref:`showing all <sculpt_show_all>` 
+:ref:`Inverting the visibility <bpy.ops.sculpt.face_set_change_visibility>` and :ref:`showing all <sculpt_show_all>`
 is also available in the :kbd:`W` pie menu.
 
 .. seealso::
@@ -49,8 +49,8 @@ Masking is also conceptually inverted to selection
 (i.e. You **cannot** edit masked vertices. But you **can** edit selected vertices).
 
 Instead a mask is typically always added to the current mask with :kbd:`LMB` and subtracted with :kbd:`Ctrl-LMB`.
-So if you wish to edit the masked surfaces, you'll need to use the :ref:`Invert <mask_invert>` operator, 
-In the case of masking everything that is visible, 
+So if you wish to edit the masked surfaces, you'll need to use the :ref:`Invert <mask_invert>` operator,
+In the case of masking everything that is visible,
 the best workflow is to first :ref:`Clear <mask_clear>` and then :ref:`Invert <mask_invert>` the mask.
 
 Both these operators can be quickly accessed in the :kbd:`A` pie menu.
@@ -66,7 +66,7 @@ Face Sets
 
 .. figure:: /images/sculpt-paint_sculpting_editing_face_set_example.png
 
-Face Sets are used to group your mesh into differently colored faces, 
+Face Sets are used to group your mesh into differently colored faces,
 which can then be quickly hidden or shown like mentioned above.
 They can also be used for fast mask creation via the :ref:`Mask Expand <bpy.ops.sculpt.expand>`.
 :ref:`Face Set Expand <face_set_expand>` is also useful for creating, editing and joining face sets.
@@ -78,7 +78,7 @@ More options can be found in the :kbd:`W` pie menu.
 Otherwise Face Sets can be created/edited with the
 :doc:`Draw Face Sets </sculpt_paint/sculpting/tools/draw_facesets>` brush,
 :doc:`Box Face Set </sculpt_paint/sculpting/tools/box_face_set>` and
-:doc:`Lasso Face Set </sculpt_paint/sculpting/tools/lasso_face_set>`. 
+:doc:`Lasso Face Set </sculpt_paint/sculpting/tools/lasso_face_set>`.
 They can also be edited with the
 :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool.
 
@@ -89,7 +89,7 @@ They can also be edited with the
 Auto-Masking
 ============
 
-:doc:`Auto-Masking </sculpt_paint/sculpting/controls>` is also a fast way of only editing specific geometry 
+:doc:`Auto-Masking </sculpt_paint/sculpting/controls>` is also a fast way of only editing specific geometry
 without having to manually create a new mask or hide geometry.
 This feature is especially useful in combination with face sets.
 
@@ -98,7 +98,7 @@ This feature is especially useful in combination with face sets.
 Display Settings
 ================
 
-The mask and face sets display can be toggled and adjusted in the :ref:`Mask Display Settings`. 
+The mask and face sets display can be toggled and adjusted in the :ref:`Mask Display Settings`.
 
 .. figure:: /images/sculpt-paint_sculpting_viewport_overlays.png
 

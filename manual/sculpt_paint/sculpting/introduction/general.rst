@@ -17,10 +17,10 @@ or with the pie menu via :kbd:`Ctrl-Tab`.
 Once inside Sculpt Mode, the Toolbar and Tool Settings of the 3D Viewport will change to
 Sculpt Mode specific panels. The cursor will change to a circle, to indicate the size of the brush.
 
-.. note::
+.. warning::
 
-   It's very important to have predictable brush behavior, 
-   to :doc:`apply the scale </scene_layout/object/editing/apply>` of your mesh.
+   To have predictable brush behavior,
+   by :doc:`apply the scale </scene_layout/object/editing/apply>` of your mesh.
 
 The following pages will briefly explain the fundamental features and concepts of *Sculpt Mode*,
 including various links to other pages for more details.
