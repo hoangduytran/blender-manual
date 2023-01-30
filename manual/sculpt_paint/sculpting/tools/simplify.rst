@@ -12,7 +12,12 @@ The Simplify brush is specifically meant for use with
 :doc:`/sculpt_paint/sculpting/tool_settings/dyntopo`
 to remove/add detail in the mesh.
 
-This brush has no effect if dynamic topology is disabled.
+Even when the :ref:`Refine Method <bpy.types.Sculpt.detail_refine_method>`
+is set to *Subdivide Edges*, this brush is always able to collapse edges.
+This ensures that while focusing on adding detail to your sculpt, the *Simplify* brush
+can always be used to simplify and polish surfaces.
+
+This brush has no effect if Dyntopo is disabled.
 
 .. tip::
    In combination with auto-smooth the brush can polish surfaces while it remeshes them.
