@@ -41,7 +41,8 @@ Outputs
 =======
 
 Index
-   The :doc:`index </modeling/geometry_nodes/geometry/read/input_index>` of the closest geometry element of the chosen domain.
+   The :doc:`index </modeling/geometry_nodes/geometry/read/input_index>` of the closest geometry element of the
+   chosen domain.
 
 
 Examples

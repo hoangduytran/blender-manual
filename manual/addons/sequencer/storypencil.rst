@@ -44,7 +44,8 @@ Edit
 ----
 
 Opens the linked source scene under the timeline cursor in the video sequencer.
-There are two modes for editing source scenes, you can select the mode under Edit Scenes section in the Stoypencil panel.
+There are two modes for editing source scenes, you can select the mode under Edit Scenes section in the Stoypencil
+panel.
 
 
 New Window mode
@@ -65,7 +66,8 @@ When you finish editing the source scene you can return to the video Sequencer u
 header in the source scene Workspace.
 
 Stoypencil will also temporarily copy the audio from the video sequencer edit to the source scene. 
-This makes it easy to work on the scene with the audio in sync and without having to go back to the video sequencer each time.
+This makes it easy to work on the scene with the audio in sync and without having to go back to the video sequencer
+each time.
 
 This method is best suited when using only one monitor.
 
@@ -91,7 +93,8 @@ Mode
    Set the mode to use while working with Storypencil
 
 Show Strip Range
-   When enabled, shows the IN/OUT range from the video sequencer in the scene dope sheet of the source scene. (Green and red lines)   
+   When enabled, shows the IN/OUT range from the video sequencer in the scene dope sheet of the source scene. (Green
+   and red lines)   
 
 Timeline Synchronization (New Window Mode)
    When enabled, keeps the video sequencer and source scene timelines in sync.

@@ -11,7 +11,8 @@ Handle Type Selection Node
 
 Creates a selection based on the handle types of the control points.
 
-The handle type of each control point can be changed with the :doc:`/modeling/geometry_nodes/curve/write/set_handle_type`.
+The handle type of each control point can be changed with the
+:doc:`/modeling/geometry_nodes/curve/write/set_handle_type`.
 
 Inputs
 ======

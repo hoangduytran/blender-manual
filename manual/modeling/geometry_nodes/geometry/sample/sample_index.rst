@@ -14,8 +14,8 @@ The *Sample Index* node retrieves values from a source geometry at a specific in
 .. tip::
 
    If the *Geometry* used for the input is the same as the geometry from the :ref:`field context <field-context>`,
-   this node is equivalent to the :doc:`/modeling/geometry_nodes/utilities/field/evaluate_at_index`. Using that node is
-   usually preferable since avoiding the geometry socket makes the whole setup easier to use in other situations
+   this node is equivalent to the :doc:`/modeling/geometry_nodes/utilities/field/evaluate_at_index`. Using that node
+   is usually preferable since avoiding the geometry socket makes the whole setup easier to use in other situations
    and share.
 
 .. tip::
