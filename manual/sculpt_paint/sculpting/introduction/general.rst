@@ -20,7 +20,7 @@ Sculpt Mode specific panels. The cursor will change to a circle, to indicate the
 .. warning::
 
    To have predictable brush behavior,
-   by :doc:`apply the scale </scene_layout/object/editing/apply>` of your mesh.
+   make sure to :doc:`apply the scale </scene_layout/object/editing/apply>` of your mesh.
 
 The following pages will briefly explain the fundamental features and concepts of *Sculpt Mode*,
 including various links to other pages for more details.
