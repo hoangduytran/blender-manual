@@ -400,16 +400,10 @@ Type
       These special float arrays can be set in the *Subtype* selector.
    :Integer: A numeric value without any decimals e.g. 1, 2, 3, or 4.
    :Integer Array: A collection of multiple integer data types e.g. ``[1, 2, 3, 4]`` .
+   :Boolean: A data type that has two possible values e.g. ``True`` or ``False``.
+   :Boolean Array: A collection of boolean values  e.g. ``[True, False, True]``
    :String: A sequence of characters such as "Some Text".
    :Python: Edit a Python data type directly, used for unsupported data types.
-
-   .. note::
-
-      Boolean values must be handled as integers and only work
-      when using *Min*/*Max* values that are integers and that are no more than 1 apart.
-
-      At this point, the Boolean values will still look like integers but behave like
-      a Boolean having one lower, off, value and a higher, on, value.
 
 Array Length
    The number of elements in the array.
@@ -421,7 +415,8 @@ Property Name
    This name is also used to access the property via Python.
 
 Default Value
-   This sets the default value of the property used by the *Reset to Default Value* operator.
+   This sets the default value of the property used by the
+   :ref:`Reset to Default Value <bpy.ops.ui.reset_default_button>` operator.
 
    .. warning::
 
