@@ -263,6 +263,15 @@ Debug Options
    Set the logging verbosity level for debug messages that support it.
 
 
+.. _command-line-args-gpu-options:
+
+GPU Options
+===========
+
+``--gpu-backend``
+   Force to use a specific GPU backend. Valid options:
+
+
 .. _command-line-args-misc-options:
 
 Misc Options
@@ -311,8 +320,6 @@ Other Options
 
 ``--debug-freestyle``
    Enable debug messages for Freestyle.
-``--gpu-backend``
-   Force to use a specific GPU backend. Valid options:
 
 
 .. _command-line-args-argument-parsing:
