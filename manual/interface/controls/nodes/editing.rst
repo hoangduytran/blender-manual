@@ -210,6 +210,8 @@ Toggle Node Preview :kbd:`Shift-H`
    after that node's operation has been applied. This can also be toggled
    by clicking the material ball icon in the node header.
 
+   .. note:: This operator are only available in the :doc:`Compositor </compositing/index>`.
+
 .. _bpy.ops.node.hide_socket_toggle:
 
 Toggle Hidden Node Sockets :kbd:`Ctrl-H`
@@ -231,10 +233,10 @@ Collapse and Hide Unused Sockets
 Layers
 ======
 
-.. note:: These operators are only used in the :doc:`Compositor </compositing/index>`.
-
 Read Render Layers :kbd:`Ctrl-R`
    Reads all the current scene's render layers from cache, as needed.
    This can be used to save RAM while rendering because the render layers do not have to be saved in RAM.
    And also for recovering some information from a failed render.
    For this to work, :ref:`Cache Result <bpy.types.RenderSettings.use_render_cache>` must be enabled.
+
+   .. note:: This operator are only available in the :doc:`Compositor </compositing/index>`.
