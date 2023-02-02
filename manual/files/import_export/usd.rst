@@ -335,15 +335,9 @@ Create Collection
 Light Intensity Scale
    Scale for the intensity of imported lights.
 
-Material Name Collision
-   Behavior when the name of an imported material conflicts with an existing material.
 
-   :Make Unique: Import each USD material as a unique Blender material.
-   :Reference Existing: If a material with the same name already exists, reference that instead of importing.
-
-
-Experimental
-------------
+Materials
+---------
 
 Import USD Preview
    Convert USD Preview Surface shaders to Principled BSDF shader networks.
@@ -351,3 +345,9 @@ Import USD Preview
 Set Material Blend
    If the *Import USD Preview* option is enabled, the material blend method will automatically be set based on
    the ``opacity`` and ``opacityThreshold`` shader inputs, allowing for visualization of transparent objects.
+
+Material Name Collision
+   Behavior when the name of an imported material conflicts with an existing material.
+
+   :Make Unique: Import each USD material as a unique Blender material.
+   :Reference Existing: If a material with the same name already exists, reference that instead of importing.
