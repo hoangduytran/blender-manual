@@ -1,15 +1,15 @@
-.. index:: Geometry Nodes; Interpolate Domain
+.. index:: Geometry Nodes; Evaluate on Domain
 .. _bpy.types.GeometryNodeFieldOnDomain:
 
 ***********************
-Interpolate Domain Node
+Evaluate on Domain Node
 ***********************
 
 .. figure:: /images/node-types_GeometryNodeInterpolateDomain.png
    :align: right
-   :alt: Interpolate Domain Node.
+   :alt: Evaluate on Domain Node.
 
-The *Interpolate Domain* allows evaluating a field for a different :ref:`attribute domain <attribute-domains>`
+The *Evaluate on Domain* allows evaluating a field for a different :ref:`attribute domain <attribute-domains>`
 than the domain from the :ref:`field context <field-context>`. For example, the face index could be used instead
 of the face corner index, when setting the values of a :term:`UV Map`
 
@@ -32,6 +32,7 @@ of the face corner index, when setting the values of a :term:`UV Map`
    The method of retrieving data from another domain is somewhat similar to the
    :doc:`/modeling/geometry_nodes/utilities/field/evaluate_at_index`.
 
+
 Inputs
 ======
 
@@ -44,6 +45,7 @@ Properties
 
 Domain
    The :ref:`attribute domain <attribute-domains>` used for for evaluation of the *Value* input.
+
 
 Output
 ======

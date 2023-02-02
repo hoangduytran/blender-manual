@@ -1,15 +1,15 @@
-.. index:: Geometry Nodes; Field at Index
+.. index:: Geometry Nodes; Evaluate at Index
 .. _bpy.types.GeometryNodeFieldAtIndex:
 
-*******************
-Field at Index Node
-*******************
+**********************
+Evaluate at Index Node
+**********************
 
 .. figure:: /images/node-types_GeometryNodeFieldAtIndex.webp
    :align: right
-   :alt: Field at Index Node.
+   :alt: Evaluate at Index Node.
 
-The *Field at Index* node allows accessing data of other elements in the context geometry.
+The *Evaluate at Index* node allows accessing data of other elements in the context geometry.
 It is similar to the :doc:`/modeling/geometry_nodes/geometry/sample/sample_index`.
 The main difference is that this node does not require a geometry input, because the geometry
 from the :ref:`field context <field-context>` is used.
