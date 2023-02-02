@@ -58,7 +58,7 @@ Seed (Random mode)
 Layer/Stroke/Material Step (For Layer, Stroke and Material mode)
    The number of elements to be grouped and offset together.
 
-Layer/Stroke/Material Offset (For Layer, Stroke and Material mode)
+Offset (For Layer, Stroke and Material mode)
    Offset the element starting point.
 
 
