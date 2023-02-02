@@ -87,7 +87,7 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_neigh
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/edge_vertices.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/edge_vertices.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_area.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_area.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_neighbors.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_neighbors.html"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_set_boundaries.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_set_boundaries.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_set_boundaries.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_group_boundaries.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_is_planar.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_is_planar.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/is_shade_smooth.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_shade_smooth.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_island.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/mesh_island.html"

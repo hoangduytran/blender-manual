@@ -1,25 +1,26 @@
-.. index:: Geometry Nodes; Face Set Boundaries
+.. index:: Geometry Nodes; Face Group Boundaries
 .. _bpy.types.GeometryNodeMeshFaceSetBoundaries:
 
-************************
-Face Set Boundaries Node
-************************
+**************************
+Face Group Boundaries Node
+**************************
 
 .. figure:: /images/node-types_GeometryNodeMeshFaceSetBoundaries.png
    :align: right
-   :alt: Face Set Boundaries node.
+   :alt: Face Group Boundaries node.
 
-The *Face Set Boundaries Node* finds the edges which lie on the boundaries of 
-specified regions. These edges could be used to mark seams for UV unwrapping, 
+The *Face Group Boundaries Node* finds the edges which lie on the boundaries of
+specified regions. These edges could be used to mark seams for UV unwrapping,
 for example.
 
 
 Inputs
 ======
 
-Face Set
+Face Group ID
    Identifier for which group of faces this face belongs to. All contiguous faces
    with the same value are in the same region.
+
 
 Properties
 ==========
