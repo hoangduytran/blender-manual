@@ -47,20 +47,20 @@ Tool Settings
 Trim Mode
    Geometry can be either added or removed by choosing one of these modes.
 
-   Difference
+   :Difference:
       Removes geometry, filling any holes that are created.
-   Union
+   :Union:
       Creates a geometry and joins any intersections with existing geometry.
-   Join
+   :Join:
       Similar to *Union* but joins the mesh as separate geometry,
       without performing any Boolean operations with existing geometry.
+
+Extrude Mode
+   :Fixed:
+      Aligns new geometry orthogonally for 90 degree angles in depth.
+   :Project:
+      Aligns new geometry with the perspective of the current view for a tapered result.
 
 Use Cursor for Depth
    Use cursor location and radius for the dimensions and position of the trimming shape.
    If not set, the tool uses the full depth of the object from the camera view.
-
-Extrude mode
-   Fixed
-      Aligns new geometry orthogonally for 90 degree angles in depth.
-   Project
-      Aligns new geometry with the perspective of the current view for a tapered result.

@@ -13,7 +13,6 @@ The *Evaluate on Domain* allows evaluating a field for a different :ref:`attribu
 than the domain from the :ref:`field context <field-context>`. For example, the face index could be used instead
 of the face corner index, when setting the values of a :term:`UV Map`
 
-
 .. note::
 
    This node is not necessary to retrieve data from other attribute domains; that is done automatically.
