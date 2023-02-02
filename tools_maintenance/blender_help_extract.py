@@ -138,7 +138,7 @@ def text_extract_strings(text):
     ).replace(
         "STRINGIFY(BLENDER_STARTUP_FILE)", "\"startup.blend\""
     ).replace(
-        "STRINGIFY(BLENDER_MAX_THREADS)", "\"64\""
+        "STRINGIFY(BLENDER_MAX_THREADS)", "\"1024\""
     )
 
     def replacer(match):
