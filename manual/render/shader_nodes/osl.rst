@@ -14,9 +14,11 @@ To enable it, select *Open Shading Language* as the shading system in the render
 .. note::
    
    Some OSL features are not available when using the OptiX backend. Examples include: 
-   
-   - Images can not be loaded from inside a OSL script. An :doc:`/render/shader_nodes/textures/image`
-     must be used instead.
+
+   - Memory usage reductions offered by features like on-demand texture loading and
+     mip-mapping are not available.
+   - Texture lookups require OSL to be able to determine a constant image file path for each
+     texture call.
    - Some noise functions are not available. Examples include *Cell*, *Simplex*, and *Gabor*.
    - The :ref:`trace <render-shader-nodes-osl-trace>` function can't be used.
 
