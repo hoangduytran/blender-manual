@@ -74,7 +74,7 @@ Transmission
 .. _bpy.types.Object.visible_volume_scatter:
 
 Volume Scatter
-   Makes the object visible in transmission rays.
+   Makes the object visible in volumetric scatter rays.
 
 .. _bpy.types.Object.visible_shadow:
 
