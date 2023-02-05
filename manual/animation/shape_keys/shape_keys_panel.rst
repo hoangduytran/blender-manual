@@ -161,6 +161,13 @@ Vertex Group
 Relative To
    Select the shape key to deform from. This is called the *Reference Key* for that shape.
 
+.. note::
+
+   Rather than storing offsets directly, internally relative keys are stored as snapshots of the mesh shape.
+   The relative deformation offsets are computed by subtracting *Reference Key* from that snapshot.
+
+   Therefore, replacing the *Reference Key* has the effect of subtracting the difference between the new
+   and old reference from the relative deformation of the current key.
 
 Absolute Shape Keys
 ===================
