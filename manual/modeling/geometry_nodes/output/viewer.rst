@@ -13,8 +13,11 @@ The *Viewer* node allows viewing data from inside a geometry node group in the
 :doc:`Spreadsheet Editor </editors/spreadsheet>` and the 3D Viewport.
 
 Any geometry connected can be visualized in the viewport and its attribute values
-can be read in the spreadsheet. 
+can be read in the spreadsheet.
 
+
+Usage
+=====
 
 Activation and Deactivation
 ---------------------------
@@ -29,6 +32,7 @@ to activate and deactivate it.
 
 In the viewport, the *Show Viewer* option can turn off the viewer node visualization completely
 in order to see the final output of the object's evaluation instead.
+
 
 Attribute Visualization
 -----------------------
@@ -45,6 +49,7 @@ on curves. When necessary, the domain can be chosen manually.
 The attribute overlay opacity can be controlled with the *Viewer Node* setting in the overlays popover.
 
 The spreadsheet now only shows the "Viewer" column for the domain that is selected in the Viewer node.
+
 
 Pinning
 -------
