@@ -50,7 +50,7 @@ Structure
 
    :Panel:     :menuselection:`Particle System --> Hair Dynamics --> Structure`
 
-Mass
+Vertex Mass
    Value for the mass of the hair.
 Stiffness
    Controls the bending stiffness of the hair strands.

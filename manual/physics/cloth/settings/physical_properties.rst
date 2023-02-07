@@ -10,7 +10,7 @@ Physical Properties
 
 .. _bpy.types.ClothSettings.mass:
 
-Mass
+Vertex Mass
    The mass of the cloth material.
 
 .. _bpy.types.ClothSettings.air_damping:
