@@ -50,27 +50,27 @@ Increment
       If you want to snap to the viewport grid instead, you can enable *Absolute Grid Snap*
       (see below).
 Vertex
-   Snaps to the nearest vertex of a mesh object.
+   Snaps to the vertex that's closest to the mouse cursor.
 Edge
-   Snaps to the nearest point on the nearest edge.
+   Snaps to the edge that's closest to the mouse cursor.
 Face Project
-   Snaps to the face by projecting the current point on the nearest face.
-   This snap mode will snap geometry to both visible and occluded.
-   This snap mode is useful for retopologizing.
+   Snaps to the face that's under the mouse cursor.
 Face Nearest
-   Snaps to the nearest surface in world space.
-   This snap mode will only snap geometry to visible (non occluded) geometry.
+   Individually snaps each object (in Object Mode) or vertex (in Edit Mode) to the face that's closest
+   to its new location. This makes it possible to snap to occluded geometry.
 Volume
-   Snaps to regions within the volume of the first object found below the mouse cursor.
-   Unlike the other options, this option controls the depth
-   (i.e. Z coordinates in current view space) of the transformed element.
-   By toggling *Snap Peel Object* (see below),
-   target objects will be considered as a whole when determining the volume center.
+   Snaps the selection to a depth that's centered *inside* the object under the cursor.
+   This is useful for positioning an :doc:`Armature </animation/armatures/introduction>`
+   bone so it's centered inside a character's arm, for example; the other snapping options
+   would place it on the arm's surface instead.
+   
+   While Blender also has :doc:`Volume objects </modeling/volumes/introduction>`, this option
+   is not related to those.
 Edge Center
-   Snaps to the centerpoint of the nearest edge.
+   Snaps to the centerpoint of the edge that's closest to the mouse cursor.
 Edge Perpendicular
-   Snaps to a specific point on the nearest edge so that the line from the selection's
-   original location (indicated by a white cross) to its new location is perpendicular to that edge.
+   Snaps to a specific point on the edge so that the line from the selection's original location
+   (indicated by a white cross) to its new location is perpendicular to that edge.
 
 .. tip::
 
@@ -122,17 +122,13 @@ Closest
 Target Selection
 ================
 
-.. figure:: /images/editors_3dview_controls_snapping_options.png
-
-As seen in the yellow highlighted area in the image above, besides the snap target,
-additional controls are available to alter snap behavior. These options vary between mode
-(Object and Edit) as well as snap target. The available options are:
+Sets more detailed snapping options. The available options depend on the mode
+(Object/Edit) as well as the Snap To selection.
 
 .. _bpy.types.ToolSettings.use_snap_self:
 
-Include Active
-   Only available in Edit Mode.
-   Allows snapping mesh elements to other elements of the same mesh.
+Include Active :guilabel:`Edit Mode`
+   Snap to other mesh elements of the active object.
 
    This checkbox is ignored if
    :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`
@@ -141,22 +137,21 @@ Include Active
 .. _bpy.types.ToolSettings.use_snap_edit:
 
 Include Edited :guilabel:`Edit Mode`
-   Snap onto non-active objects in Edit Mode.
+   Snap to other objects that are also in Edit Mode.
 
 .. _bpy.types.ToolSettings.use_snap_nonedit:
 
 Include Non-Edited :guilabel:`Edit Mode`
-   Snap onto objects not in Edit Mode.
+   Snap to other objects that are not in Edit Mode.
 
 .. _bpy.types.ToolSettings.use_snap_selectable:
 
 Exclude Non-Selectable
-   Snap only onto objects that are selectable.
+   Snap only to objects that are selectable.
 
 .. _bpy.types.ToolSettings.use_snap_grid_absolute:
 
-Absolute Grid Snap
-   Only available if Snap To Increment is enabled.
+Absolute Grid Snap :guilabel:`Increment`
    Snaps to the grid, instead of snapping in increments relative to the current location.
 
 .. _bpy.types.ToolSettings.use_snap_backface_culling:
@@ -171,8 +166,7 @@ Align Rotation to Target
 
 .. _bpy.types.ToolSettings.use_snap_project:
 
-Project Individual Elements
-   Only available if Snap To Face is enabled.
+Project Individual Elements :guilabel:`Face Project`
    Rather than the default behavior where only the "Snap With" point gets snapped
    to the target and the rest of the selection follows along (maintaining the
    original shape), this option makes each object (in Object Mode) or vertex
@@ -189,19 +183,22 @@ Project Individual Elements
 .. _bpy.types.ToolSettings.use_snap_to_same_target:
 
 Snap to Same Target :guilabel:`Face Nearest`
-   Snap only to target that source was initially near.
+   Snap only to the object which the selection was nearest to before starting
+   the transformation.
 
 .. _bpy.types.ToolSettings.snap_face_nearest_steps:
 
-Face Nearest Steps :guilabel:`Face Nearest`
-   Number of steps to break transformation into for face nearest snapping.
-   This option is only available in Edit mode.
+Face Nearest Steps :guilabel:`Face Nearest` :guilabel:`Edit Mode`
+   Breaks the overall transformation into multiple steps, performing a snap each time.
+   This can give better results in certain cases.
 
 .. _bpy.types.ToolSettings.use_snap_peel_object:
 
-Snap Peel Object
-   Only available if Snap To Volume is enabled.
-   Consider objects as a whole when finding volume center.
+Snap Peel Object :guilabel:`Volume`
+   If the target object is composed of several disconnected mesh islands that
+   intersect each other, "Snap To Volume" will normally snap to the island which the
+   mouse is hovering over, ignoring the other islands. By enabling "Snap Peel Object,"
+   you can instead treat the target object as one connected whole.
 
 
 .. _bpy.types.ToolSettings.use_snap_translate:
