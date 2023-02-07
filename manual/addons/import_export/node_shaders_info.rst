@@ -28,7 +28,7 @@ Especially for exporting from Blender materials, the node system must follow som
 .. figure:: /images/addons_import-export_node-shaders-info_example.png
    :align: center
 
-   A typical setup of shader nodes that is can be exported.
+   A typical setup of shader nodes that can be exported.
 
 
 Supported Node Setup
