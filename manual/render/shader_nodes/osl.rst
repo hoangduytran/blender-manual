@@ -20,7 +20,9 @@ To enable it, select *Open Shading Language* as the shading system in the render
    - Texture lookups require OSL to be able to determine a constant image file path for each
      texture call.
    - Some noise functions are not available. Examples include *Cell*, *Simplex*, and *Gabor*.
-   - The :ref:`trace <render-shader-nodes-osl-trace>` function can't be used.
+   - The :ref:`trace <render-shader-nodes-osl-trace>` function is not functional. 
+     As a result of this, the :ref:`Ambient Occlusion <bpy.types.ShaderNodeAmbientOcclusion>`
+     and :ref:`Bevel <bpy.types.ShaderNodeBevel>` nodes do not work.
 
 
 .. _bpy.types.ShaderNodeScript:

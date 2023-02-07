@@ -22,12 +22,13 @@ The Bevel modifier is a faster option when it works, but sometimes fails on comp
 
 .. note::
 
-   The Bevel node will not produce a valid result on objects that are either a
-   :ref:`Caustic caster <bpy.types.CyclesObjectSettings.is_caustics_caster>` or
-   :ref:`Caustic receiver <bpy.types.CyclesObjectSettings.is_caustics_receiver>` while the scene contains
-   a active :ref:`Caustic caster <bpy.types.CyclesObjectSettings.is_caustics_caster>`,
-   :ref:`Caustic receiver <bpy.types.CyclesObjectSettings.is_caustics_receiver>`, and
-   :ref:`Shadow Caustic Light<bpy.types.CyclesLightSettings.is_caustics_light>`.
+    The Bevel node will not produce a valid result when:
+     - The object is either a :ref:`Caustic caster <bpy.types.CyclesObjectSettings.is_caustics_caster>`
+       or :ref:`Caustic receiver <bpy.types.CyclesObjectSettings.is_caustics_receiver>` while the scene
+       contains an active :ref:`Caustic caster <bpy.types.CyclesObjectSettings.is_caustics_caster>`,
+       :ref:`Caustic receiver <bpy.types.CyclesObjectSettings.is_caustics_receiver>`, and
+       :ref:`Shadow Caustic Light<bpy.types.CyclesLightSettings.is_caustics_light>`.
+     - :doc:`/render/shader_nodes/osl` is active while using the OptiX rendering backend.
 
 
 Inputs
