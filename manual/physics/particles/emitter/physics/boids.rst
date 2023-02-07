@@ -35,7 +35,7 @@ Movement
 Boids try to avoid objects with activated Collision.
 They try to reach goal objects, and fly from "predators" according to the *Boid Brain* settings.
 
-Boids can different physics depending on whether they are in the air,
+Boids can have different physics depending on whether they are in the air,
 or on land (on collision object).
 
 Allow Flight
