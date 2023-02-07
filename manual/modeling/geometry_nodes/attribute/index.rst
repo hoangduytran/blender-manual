@@ -9,6 +9,7 @@ Nodes for working with data stored per object element, e.g. vertex groups.
    :maxdepth: 1
 
    attribute_statistic.rst
+   blur_attribute.rst
    capture_attribute.rst
    domain_size.rst
    remove_named_attribute.rst
