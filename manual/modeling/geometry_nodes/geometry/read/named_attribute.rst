@@ -16,7 +16,8 @@ context of where it is connected (the :ref:`field-context`).
 Inputs
 ======
 
-This node has no inputs.
+Name
+   The name of the attribute to read.
 
 
 Properties
