@@ -48,7 +48,7 @@ N-gon Method
       Arrange the new triangles nicely, slower method.
    :Clip:
       Split n-gons using an ear-clipping algorithm
-      (gives similar results to the tessellation used for the viewport rendering).
+      (the same method of tessellation used for viewport display).
 
 
 Outputs

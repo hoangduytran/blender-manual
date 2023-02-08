@@ -47,7 +47,7 @@ N-gon Method
       Arrange the new triangles nicely, slower method.
    Clip
       Splits n-gons using an ear-clipping algorithm
-      (gives similar results to the tessellation used for the viewport rendering).
+      (the same method of tessellation used for viewport display).
 
 Minimum Vertices
    Minimum number of vertices a face must have to be triangulated.
