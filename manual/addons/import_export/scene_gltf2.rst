@@ -607,7 +607,7 @@ and may be used for any user-specific or application-specific purposes.
 
 
 Animations
-=========
+==========
 
 A glTF animation changes the transforms of objects or pose bones, or the values of shape keys.
 One animation can affect multiple objects, and there can be multiple animations in a glTF file.

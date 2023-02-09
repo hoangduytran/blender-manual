@@ -16,14 +16,16 @@ Meen of each step is mixing value of each primitive with neighbors.
 Weight of primitive is factor for multiplying all neighboards value before accumulate its as new primitive value.
 
 Blurring can work when values on primitives have explicit relations.
-Therefore, the attribute can only be affected on the :doc:`Meshes </modeling/meshes/introduction>` and :doc:`Curves </modeling/curves/introduction>` components.
+Therefore, the attribute can only be affected on the :doc:`Meshes </modeling/meshes/introduction>` and
+:doc:`Curves </modeling/curves/introduction>` components.
 
 Attribute domain expect same limitation as components.
 Explicit relation for correct blurring have Points, Edges, Faces of mesh, and Points of curve.
 
 .. note::
 
-   Face corner no implemented due to this type of primitive have a lot of possible relation that mean it can't be implemented in general correct.
+   Face corner no implemented due to this type of primitive have a lot of possible relation that mean it can't be
+   implemented in general correct.
 
 Defining domain of node inputs evaluating is based on context of node output evaluation.
 
@@ -42,8 +44,8 @@ Value
    The immediate value of each primitive to blur.
 
 Iterations
-   Number of repeats of mixing value with neighboards.
-   Each iteration is independent. Until one iteration is completed, its results are not used as a source for next blurring.
+   Number of repeats of mixing value with neighboards. Each iteration is independent. Until one iteration is
+   completed, its results are not used as a source for next blurring.
 
 Weight
    Weight of each primitive.

@@ -38,7 +38,7 @@ Lazy Connect
 
 .. reference::
 
-   :Shortcut:  :kbd:`Alt-RMB`-drag, :kbd:`Alt-Shift-RMB`-drag
+   :Shortcut:  :kbd:`Alt-RMB`-drag, :kbd:`Shift-Alt-RMB`-drag
 
 Connect two nodes without even clicking the sockets. Just drag the cursor from one node to another while
 holding :kbd:`Alt-RMB`.
@@ -52,7 +52,7 @@ to click on the nodes.
 It tries to connect the best-matched sockets possible, based on their names, types, and whether they are
 open or not.
 
-For a more precise connection, you can alternatively use :kbd:`Alt-Shift-RMB`. It brings up menus of
+For a more precise connection, you can alternatively use :kbd:`Shift-Alt-RMB`. It brings up menus of
 available inputs and outputs before connection, so you can select the exact sockets to connect.
 It's especially useful when working with a large node tree since you can make connections without
 frequently zooming in and out.
@@ -63,7 +63,7 @@ Lazy Mix
 
 .. reference::
 
-   :Shortcut:  :kbd:`Ctrl-Shift-RMB`-drag
+   :Shortcut:  :kbd:`Shift-Ctrl-RMB`-drag
 
 Connect the outputs of two nodes into an appropriate "mix" type of node. This is the "lazy" way of selecting
 nodes and executing the *Mix* function from `Merge with Automatic Type Detection`_.
@@ -91,8 +91,8 @@ types of outputs and the "mix" node are not compatible.
 
    Generally, the modifier part of the shortcut signifies the type of "mix" node you want to use (:kbd:`Ctrl`
    for automatic detection, :kbd:`Ctrl-Alt` for the Mix node, and :kbd:`Shift-Ctrl` for the Math node),
-   the non-modifier part signifies the mode of "mix" node you want to set (:kbd:`+` for add, :kbd:`-` for subtract,
-   :kbd:`/` for divide, and :kbd:`*` for multiply).
+   the non-modifier part signifies the mode of "mix" node you want to set (:kbd:`NumpadPlus` for add,
+   :kbd:`NumpadMinus` for subtract, :kbd:`NumpadSlash` for divide, and :kbd:`NumpadAsterisk` for multiply).
 
 
 Merge with Automatic Type Detection
@@ -415,10 +415,10 @@ Add Principled Texture Setup
 .. reference::
 
    :Menu:   :menuselection:`Node Wrangler --> Add Principled Setup`
-   :Shortcut:  :kbd:`Ctrl-Shift-T`
+   :Shortcut:  :kbd:`Shift-Ctrl-T`
 
 Add a principled texture setup from the selected texture files. Select a Principled BSDF node,
-select *Add Principled Setup* from the quick access menu (or press :kbd:`Ctrl-Shift-T`), and select texture files.
+select *Add Principled Setup* from the quick access menu (or press :kbd:`Shift-Ctrl-T`), and select texture files.
 It automates the process of adding Image Texture nodes, loading images, selecting the appropriate Color Space,
 and connecting their outputs to the Principled BSDF node.
 
