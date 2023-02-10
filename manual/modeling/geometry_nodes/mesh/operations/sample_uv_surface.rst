@@ -14,7 +14,7 @@ Internally the process is a "reverse UV lookup" from a location in 2D space. The
 finds the face that corresponds to each UV coordinate, and the location within that face.
 
 .. warning::
-   Because of the node's method of computatation, the UV map should not have any overlapping faces.
+   Because of the node's method of computation, the UV map should not have any overlapping faces.
    If the UV map is sampled at a location with no faces or overlapping faces, the node will
    output the default value for the data type, which is zeros for most types.
 

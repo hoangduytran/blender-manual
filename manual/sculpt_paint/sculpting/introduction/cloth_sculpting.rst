@@ -11,7 +11,7 @@ there are various tools directly in sculpt mode that offer a simplified
 
 This has various advantages but is especially useful for base mesh creation and larger clothing folds and draping.
 Detailing is possible, but the slower performance on high resolution meshes and simplified cloth physics
-might not lead to desireable results.
+might not lead to desirable results.
 
 The resolution of the topology is the mainly responsible for the size of the folds
 and detail level of the simulation. So an optimal and evenly distributed topology is important.

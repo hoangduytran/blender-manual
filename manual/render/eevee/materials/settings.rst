@@ -86,7 +86,7 @@ a larger Soft value on the shadow map.
    This option does not change the behavior of contact shadows which are traced using the depth buffer.
    If the material is writing to the depth buffer
    (in other words, if the blend mode is set to either *Opaque*, *Alpha Clip* or *Alpha Hashed*),
-   contact shadows will be casted by the surface material regardless of the *Transparent Shadow* type.
+   contact shadows will be cast by the surface material regardless of the *Transparent Shadow* type.
 
 None
    The surface will not cast any shadow.

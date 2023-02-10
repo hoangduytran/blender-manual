@@ -24,17 +24,17 @@ otherwise it works with the global axes for the view.
 Output: Sets the Distance, Angle, X, Y & Z input variables.
 
 Selection: in Edit Mode select two vertices with your mouse,
-the Active vertex is considered to be the centre of rotation, or fulcrum point.
+the Active vertex is considered to be the center of rotation, or fulcrum point.
 In Object Mode the Active object is similarly considered.
 
 **Example 1**: Set the Input variables to two vertices in Edit Mode in Front view,
-set ``Working Plane`` to Front, select the rotational vertex, select the centre vertex.
+set ``Working Plane`` to Front, select the rotational vertex, select the center vertex.
 The Distance variable is set to the apparent separation fo the two vertices in the front view,
 the Angle is set to the apparent angle relative to horizontal in the front view, the X, Y & Z
 inputs are set to the delta offset between the two vertices in the ``view`` axes.
 
 **Example 2**: Set the Input variables to two objects in Object Mode in Top view,
-set ``Working Plane`` to Top(X-Y), select the rotational object, select the centre object.
+set ``Working Plane`` to Top(X-Y), select the rotational object, select the center object.
 The Distance variable is set to the apparent separation of the two objects in the top view,
 the Angle is set to the apparent angle relative to horizontal in the top view, the X, Y & Z
 inputs are set to the delta offset between the two vertices in the ``view`` axes.
@@ -56,19 +56,19 @@ setting is irrelevant because the angle is calculated in 3D space.
 Output: Sets the Distance, Angle, X, Y & Z input variables.
 
 Selection: in Edit Mode select three vertices with your mouse,
-the Active vertex is considered to be the centre of rotation, or fulcrum point.
+the Active vertex is considered to be the center of rotation, or fulcrum point.
 In Object Mode the Active object is similarly considered.
 
 **Example 1**: Set the Input variables to three vertices in Edit Mode,
-select the two rotational vertices, select the centre vertex.
-The Distance variable is set to the real separation of the first vertex and centre vertex in the front view,
+select the two rotational vertices, select the center vertex.
+The Distance variable is set to the real separation of the first vertex and center vertex in the front view,
 the Angle is set to the real angle between the three vertices, X, Y & Z inputs
-are set to the delta offset between the first and centre vertices.
+are set to the delta offset between the first and center vertices.
 
 **Example 2**: Set the Input variables to three objects in Object Mode, select the two rotational objects,
-select the centre object. The Distance variable is set to the real separation of the first vertex
-and centre vertex in the front view, the Angle is set to the real angle between the three vertices,
-X, Y & Z inputs are set to the delta offset between the first and centre objects.
+select the center object. The Distance variable is set to the real separation of the first vertex
+and center vertex in the front view, the Angle is set to the real angle between the three vertices,
+X, Y & Z inputs are set to the delta offset between the first and center objects.
 
 
 Join 2 Vertices:
@@ -116,11 +116,11 @@ setting is irrelevant. This Tool works only in Edit Mode.
 Uses: ``Move/Rot`` Axis Selector.
 
 Selection: Select vertices to be moved, then select fulcrum vertex with SHIFT+Mouse,
-active vertex is considered the rotational centre.
+active vertex is considered the rotational center.
 
 **Example 1**: Taper the end of a cube in front view - 25 degrees,
 set Angle to -25 degrees (25 degrees clockwise), select all vertices to be tapered,
-SHIFT+Mouse select centre of rotation point vertex, set Move/Rot selector to ``RotY,MovX``,
+SHIFT+Mouse select center of rotation point vertex, set Move/Rot selector to ``RotY,MovX``,
 set Working Plane to Front(X-Z), click ``Taper``.
 
 The significance of ``RotY,MovX`` is that the Y axis is used as the rotation axis

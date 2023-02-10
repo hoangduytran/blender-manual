@@ -344,7 +344,7 @@ can be used to blur the transmission, like frosted glass.
 .. note::
 
    If you want to enable refraction on your model, ``KHR_materials_transmission`` must also
-   be used in addtion with ``KHR_materials_volume``. See the dedicated *Volume* part of
+   be used in addition with ``KHR_materials_volume``. See the dedicated *Volume* part of
    the documentation.
 
 .. warning::

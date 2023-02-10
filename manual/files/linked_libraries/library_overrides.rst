@@ -32,7 +32,7 @@ Library overrides supports:
 
 .. warning::
 
-   While in most cases library overrides data is preserved accross a loss of reference linked data
+   While in most cases library overrides data is preserved across a loss of reference linked data
    (if e.g. the library file becomes unavailable or is relocated), there are some exceptions.
 
    The main one is probably posed (but not animated) armature objects, when their Aramture obdata

@@ -18,7 +18,7 @@ when posing an armature, and not for general object animation.
    The "building blocks" of the pose library are actually implemented in Blender
    itself. The add-on only contains the user interface and the logic that
    determines what is stored in a pose asset. This was intentionally put into an
-   add-on, so that artists or studios who want to change the behaviour can do
+   add-on, so that artists or studios who want to change the behavior can do
    so with an add-on of their own.
 
 What is a Pose Asset?

@@ -85,7 +85,7 @@ Note! Only Edit and Object Modes are supported by PDT at present,
 Further, only Mesh Objects are supported, not Curves for now.
 
 Note! From Version 1.1.8, Menu widths will affect how the menus are arranged,
-with less items per row as the width decreases below a threshold set in the PDT Add-on's Preferences.
+with less items per row as the width decreases below a threshold set in the PDT add-on's Preferences.
 Here are two sample Images:
 
 .. figure:: /images/addons_pdt_op_1.png

@@ -207,7 +207,7 @@ Cage
 
 Cage Extrusion
    Distance to use for the inward ray cast when using *Selected to Active* and *Cage*.
-   The inward rays are casted from a version of the active object with disabled Edge Split Modifiers.
+   The inward rays are cast from a version of the active object with disabled Edge Split Modifiers.
    Hard splits (e.g. when the Edge Split Modifier is applied) should be avoided because they will lead to non-smooth
    normals around the edges.
 

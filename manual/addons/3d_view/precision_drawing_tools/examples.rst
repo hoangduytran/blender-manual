@@ -11,7 +11,7 @@ not approximately, taken from tracing a reference image.
 .. figure:: /images/addons_pdt_examples_1.png
    :width: 450px
 
-The draught angles on this half-casting are exactly 5 degrees,
+The draft angles on this half-casting are exactly 5 degrees,
 the length of sides between the radii are exactly to a dimension.
 All intersect points of faces have been placed accurately using PDT,
 not guessed from a zoomed in view. All fillets are exactly to a dimension and exactly in the right place.
@@ -33,7 +33,7 @@ This example has been executed from the PDT Command Line section.
 * Set Move Mode to ``Selected Entities.``
 * Place Vertex at 0,0,0 – Command **na,,**
 * Extrude 20 at 0 degrees – Command **ei20**, Working Plane set to ``Front(X-Z)``
-* Place Cursor at fillet radius centre. – Command **ci22.5,90**
+* Place Cursor at fillet radius center. – Command **ci22.5,90**
 * Spin 85 Degrees – Blender Spin -85 degrees
 * Extrude 50 at 85 degrees – Command **ei50,85**
 
@@ -66,7 +66,7 @@ This example has been executed from the PDT Command Line section.
 Then simply extrude the two front face corners level with the cursor
 in X and then selected vertices to make the faces with F key.
 
-This model is accurate to dimensions, draught angles and corner radii.
+This model is accurate to dimensions, draft angles and corner radii.
 All the command line inputs could be replaced by using the ``Operation``
 options and ``Command`` buttons instead.
 

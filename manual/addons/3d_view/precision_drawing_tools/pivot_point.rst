@@ -30,7 +30,7 @@ You can still use the PP location, whether you can see it, or not.
 The three inputs are; ``Size Factor`` ranging from 0.2 to 2 and will adjust the relative size
 of the PP, the PP is drawn relative to the 3D View scale. The next is the ``Width`` and this
 determines how bold the PP arms are ranging from 1 to 5. The last is the ``Alpha``
-and determines the translucency (Colour Alpha) of the PP, values range from 0.2 to 1.
+and determines the translucency (Color Alpha) of the PP, values range from 0.2 to 1.
 
 The next row shows the ``Pivot Location``, values can be entered here,
 or the boxes may be “scrubbed” and the PP will move as you do so.
@@ -43,7 +43,7 @@ you must have a selected Object.
 .. figure:: /images/addons_pdt_pivot_2.png
    :width: 450px
 
-Here the PP has been located on the weighted centre of the selected face.
+Here the PP has been located on the weighted center of the selected face.
 
 The next row has **Rotate** and **Angle**, To rotate selected geometry about the PP,
 first set the ``Angle`` and click ``Rotate``. Geometry is rotated about the View Plane
@@ -95,7 +95,7 @@ You can write the PP location to the **Object** using the ``PP Write`` button,
 these are stored in the form a ``Custom Property``, you will be required to confirm this,
 clicking OK on the popup accepts this operation, moving your cursor off the confirm dialogue
 cancels the operation. This facility allows you to store a PP location, easily readable,
-against each object, this could be, for example, the rotational centre of a hydraulic cylinder for example,
+against each object, this could be, for example, the rotational center of a hydraulic cylinder for example,
 where you do not want this location to also be the object origin point.
 
 You can then read back this information to place the PP using the ``PP Read`` button.

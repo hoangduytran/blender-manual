@@ -246,7 +246,7 @@ Blender currently use the following color space rules:
 ``color_picking``
    Defines the distribution of colors in color pickers. It is expected to
    be approximately perceptually linear, have the same gamut as the *scene_linear* color space,
-   map 0..1 values to 0..1 values in the scene linear color space for predictable editing of material albedos.
+   map 0..1 values to 0..1 values in the scene linear color space for predictable editing of materials' albedo.
 ``default_sequencer``
    Default color space for the Sequencer, *scene_linear* if not specified.
 ``default_byte``

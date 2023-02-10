@@ -61,7 +61,7 @@ Set angle, click ``Roll View`` icon (Roll), view rotates about its normal axis t
 Isometric View:
 ===============
 
-This button sets the view orientation to what a Draughtsman understands as a true Isometric view.
+This button sets the view orientation to what a Draftsman understands as a true Isometric view.
 This is achieved by rotating a ``Front`` view 45 degrees about its vertical axis, then 35.2644
 degrees about its horizontal axis. In the system this is achieved using an Absolute View Rotation of:
 

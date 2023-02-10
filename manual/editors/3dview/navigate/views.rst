@@ -44,7 +44,7 @@ Options
 .. _bpy.types.RegionView3D.lock_rotation:
 
 Lock Rotation
-   When disabed, makes it possible to orbit in the orthographic views as well
+   When disabled, makes it possible to orbit in the orthographic views as well
    (turning them into perspective views instead).
 
 .. _bpy.types.RegionView3D.show_sync_view:

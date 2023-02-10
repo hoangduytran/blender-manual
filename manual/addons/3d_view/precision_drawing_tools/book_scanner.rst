@@ -23,7 +23,7 @@ We will start with a component that has a hole in it so that process is explaine
 
 For this we will start with a single vertex object at 0,0,0 (You will need to load the "Extra Objects" Add-on).
 
-I placed all objects, apart from the wheels at the World Centre for ease,
+I placed all objects, apart from the wheels at the World Center for ease,
 so the start point for this component is 0.39,-0.32,-0.3.
 The first thing to do therefore is move this single vertex in Edit mode to that location.
 For this there are two choices:

@@ -38,7 +38,7 @@ Bevel
    This determines whether the curve should be shown with its full thickness or only the underlying curve.
    Disabled by default to permit rapid feedback on parameter changes.
 Bevel Resolution
-   Determines how smooth the outline of the bevelled curve is.
+   Determines how smooth the outline of the beveled curve is.
    The lower this value, the smaller the number of vertices but
    the resulting geometry will be coarser.
 Curve Resolution

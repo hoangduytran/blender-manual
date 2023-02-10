@@ -161,7 +161,7 @@ Compress
    .. hint::
 
       The used compression algorithm is Zstandard.
-      It is not unique to Blender so files can be compressed/decrompressed with external tools.
+      It is not unique to Blender so files can be compressed/decompressed with external tools.
 
    .. versionchanged:: 3.0
 

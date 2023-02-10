@@ -14,7 +14,7 @@ It is also commonly used for loading into 3D printing software.
 .. warning::
 
    Currently the script does not handle importing or exporting of normals
-   and does not handle endianness, there is nothing in the STL specification about it.
+   and does not handle endian-ness, there is nothing in the STL specification about it.
 
 
 Importing
