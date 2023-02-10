@@ -106,7 +106,7 @@ It will take selected objects and make the :ref:`active object <object-active>`
 the parent object of all the selected objects. Each child object will inherit
 the transformations of the parent. The parent object can be of any type.
 
-If the object has a pre-existing parent, that is cleared first.
+If the object has a preexisting parent, that is cleared first.
 This moves the object to its own location, rotation and scale,
 without its parent's influence.
 

@@ -56,7 +56,7 @@ Custom Proxy
       the ``<path of original footage>/BL_proxy/<clip name>`` folder,
       but this location can be set by hand using this option.
    File
-      Allows you to use pre-existing proxies.
+      Allows you to use preexisting proxies.
 
 Resolutions
    Buttons to control how big the proxies are.
@@ -69,7 +69,7 @@ Quality
    Defines the quality of the images used for proxies.
 
 Timecode Index
-   When you are working with footage directly copied from a camera without pre-processing it,
+   When you are working with footage directly copied from a camera without preprocessing it,
    there might be bunch of artifacts, mostly due to seeking a given frame in sequence.
    This happens because such footage usually does not have correct frame rate values in their headers.
    This issue can still arise when the source clip has the same frame rate as the scene settings.

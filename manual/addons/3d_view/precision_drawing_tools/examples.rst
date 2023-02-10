@@ -70,7 +70,7 @@ This model is accurate to dimensions, draft angles and corner radii.
 All the command line inputs could be replaced by using the ``Operation``
 options and ``Command`` buttons instead.
 
-Optionally, to improve topology, one could rationalise the top faces to this:
+Optionally, to improve topology, one could rationalize the top faces to this:
 
 .. figure:: /images/addons_pdt_examples_6.png
    :width: 450px

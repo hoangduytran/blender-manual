@@ -427,5 +427,5 @@ Passepartout
 
    .. tip::
 
-      If the Passepartput is fully opaque, Blender will make optimizations
+      If the Passepartout is fully opaque, Blender will make optimizations
       to speed up the rendering of areas inside the camera view.

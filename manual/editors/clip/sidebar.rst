@@ -38,7 +38,7 @@ Proxy Custom Directory
 Rebuild Proxy
    Regenerates proxy images for all sizes set above and regenerate all timecodes which can be used later.
 Timecode
-   When you are working with footage directly copied from a camera without pre-processing it,
+   When you are working with footage directly copied from a camera without preprocessing it,
    there might be bunch of artifacts, mostly due to seeking a given frame in sequence.
    This happens because such footage usually does not have correct frame rate values in their headers.
    This issue can still arise when the source clip has the same frame rate as the scene settings.

@@ -229,6 +229,6 @@ This is intended as a test mesh, similar to:
 .. note:: Add-ons
 
    In addition to the basic geometric primitives,
-   Blender has a number of script generated meshes to offer as pre-installed add-ons.
+   Blender has a number of script generated meshes to offer as preinstalled add-ons.
    These are available when enabled in the :doc:`Preferences </editors/preferences/addons>`
    (select the Category *Add Mesh*, then check any desired items).

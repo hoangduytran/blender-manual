@@ -303,7 +303,7 @@ Moving Keypoints or Particles
 - You may not duplicate or extrude keys or particles,
   but you can subdivide particles which adds new keypoints
   :menuselection:`Particle --> Subdivide`.
-- Alternatively you can rekey a particle
+- Alternatively you can re-key a particle
   :menuselection:`Particle --> Rekey`.
 
 How smoothly the hair and particle paths are displayed depends on the *Path Steps*

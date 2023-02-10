@@ -261,7 +261,7 @@ When the *Velvet BSDF* node is used in addition to Principled BSDF node, the ``K
 extension will be included in the export. The Sheen Color will be exported from Color socket of Vevlet node.
 Sheen Roughness will be exported from Sigma socket.
 
-If a Sheen Rougness Texture is used, glTF requires the values be written to the alpha (``A``) channel.
+If a Sheen Roughness Texture is used, glTF requires the values be written to the alpha (``A``) channel.
 
 .. figure:: /images/addons_import-export_scene-gltf2_material-sheen.png
 
@@ -434,7 +434,7 @@ If you want to check primitive by primitive, what are Variants used, you can go 
 The *glTF Material Variants* tab refers to the active material Slot and Material used by this slot.
 You can see every Variants that are using this material for the given Slot/Primitive.
 
-You can also assign material to Variants from this tab, but recommandation is to perform it from 3D View tab.
+You can also assign material to Variants from this tab, but recommendation is to perform it from 3D View tab.
 
 Double-Sided / Backface Culling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

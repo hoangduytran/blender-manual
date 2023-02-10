@@ -22,7 +22,7 @@ of the face corner index, when setting the values of a :term:`UV Map`
 
 .. tip::
 
-   It may be preferrable to use this node over the :doc:`/modeling/geometry_nodes/attribute/capture_attribute`,
+   It may be preferable to use this node over the :doc:`/modeling/geometry_nodes/attribute/capture_attribute`,
    since it allows using a specific attribute domain without requiring a geometry socket input,
    which allows creating more reusable node groups.
 

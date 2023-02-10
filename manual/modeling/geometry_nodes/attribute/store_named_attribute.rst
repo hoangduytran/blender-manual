@@ -17,7 +17,7 @@ cannot be changed.
 
 Compared with the :doc:`/modeling/geometry_nodes/attribute/capture_attribute`, this node basically
 does the same thing, but the attribute gets a name instead of an anonymous reference.
-For reusing the data in the same node tree, the *Capture Attribute* node might be preferrable
+For reusing the data in the same node tree, the *Capture Attribute* node might be preferable
 since it does not create the chance for name conflicts in the input geometry.
 
 .. note::

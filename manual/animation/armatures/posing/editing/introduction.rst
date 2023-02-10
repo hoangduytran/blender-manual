@@ -12,7 +12,7 @@ Introduction
 In *Pose Mode*, bones behave like objects. So the transform actions
 (move, rotate, scale, etc.) are very similar to the same ones in Object Mode
 (all available ones are regrouped in the :menuselection:`Pose --> Transform` submenu). However,
-there are some important specificities:
+there are some important specifics:
 
 - Bones' relationships are crucial (see :ref:`Bone Parenting <bpy.types.EditBone.parent>`).
 - The "transform center" of a given bone

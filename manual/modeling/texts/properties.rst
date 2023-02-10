@@ -273,7 +273,7 @@ Text Boxes
    :Panel:     :menuselection:`Properties --> Font --> Text Boxes`
 
 Text boxes (or frames) allow you to distribute the text among rectangular areas within a single text object.
-An arbitrary number of freely positionable and re-sizable text frames are allowed per text object.
+An arbitrary number of freely movable and re-sizable text frames are allowed per text object.
 
 The text flows continuously from the lowest-numbered frame to the highest-numbered frame with text
 inside each frame word-wrapped.

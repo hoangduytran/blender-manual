@@ -19,7 +19,7 @@ Finding Add-ons
 ===============
 
 Searching
-   Blender comes with some pre-installed Add-ons already, ready to be enabled.
+   Blender comes with some preinstalled Add-ons already, ready to be enabled.
    But you can also add your own, or any interesting ones you find on the web.
 Supported Level
    Blender's add-ons are split into two groups depending on who writes/supports them:

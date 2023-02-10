@@ -223,7 +223,7 @@ Changing material properties (of all atoms)
    For this, the material properties of the representative ball must be changed:
    in the outliner, switch on the visibility of the representative ball (here,
    *Sodium_ball*, see red arrow in figure). You can then select the ball and change the
-   material properties. After, make unvisible the representative ball, otherwise
+   material properties. After, make invisible the representative ball, otherwise
    it appears in the structure.
 
 Separate an atom

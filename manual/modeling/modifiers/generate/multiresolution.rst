@@ -103,7 +103,7 @@ Generate
 
 Rebuild Subdivisions
    Rebuilds all possible subdivisions levels to generate a lower resolution base mesh.
-   This is used to create an optimized multiresolution version of a pre-existing sculpt.
+   This is used to create an optimized multiresolution version of a preexisting sculpt.
    This option is only available when no subdivision level have been created through the modifier.
 
 .. _bpy.ops.object.multires_external_save:

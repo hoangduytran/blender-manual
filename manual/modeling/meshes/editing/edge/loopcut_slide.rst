@@ -80,7 +80,7 @@ Smoothness :kbd:`Alt-Wheel`
    Smoothing causes edge loops to be placed in an interpolated position, relative to the face it is added to,
    causing them to be shifted outwards or inwards by a given percentage,
    similar to the *Subdivide Smooth* tool. When not using smoothing,
-   new vertices for the new edge loop are placed exactly on the pre-existing edges.
+   new vertices for the new edge loop are placed exactly on the preexisting edges.
    This keeps subdivided faces flat, but can distort geometry,
    particularly when using :doc:`Subdivision Surfaces </modeling/modifiers/generate/subdivision_surface>`.
    Smoothing can help maintain the curvature of a surface once it is subdivided.

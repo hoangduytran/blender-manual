@@ -74,7 +74,7 @@ so that a blur value greater than one is used for objects outside the focal rang
 
    Z pass used.
 
-A manually created grayscale image can be used to define the sharp and blurry areas of a pre-existing image.
+A manually created grayscale image can be used to define the sharp and blurry areas of a preexisting image.
 Again, a Multiply Node can be used so that a blur value greater than one is used.
 
 .. figure:: /images/compositing_types_filter_bokeh-blur_example-2.png

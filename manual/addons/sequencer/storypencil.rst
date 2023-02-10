@@ -38,7 +38,7 @@ New
 ---
 
 Add a new Scene Strip to the active channel based on the Base Scene selected in the add-on settings.
-The name of the new Scene Strip will use the prefix and suffix stablished on the settings.
+The name of the new Scene Strip will use the prefix and suffix established on the settings.
 
 Edit
 ----
