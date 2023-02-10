@@ -9,7 +9,7 @@ The Menu For Parts library
    :width: 300px
 
 This module is in its infancy for releases up to and including 1.1.5 and is an attempt
-to organise a collection of parts, as objects, in a central repository.
+to organize a collection of parts, as objects, in a central repository.
 This library will consist of Objects, Collections and Materials.
 For now, these are placed in a holding blend file in Blender's:
 
@@ -107,7 +107,7 @@ a working blend file, then the materials assigned:
 .. figure:: /images/addons_pdt_library_3.png
    :width: 450px
 
-Each engine is modelled as a set of individual objects, organised as collections
+Each engine is modeled as a set of individual objects, organized as collections
 in the library blend file. All individual objects in each collection share a common
 origin point so they can be placed in the correct relative location.
 

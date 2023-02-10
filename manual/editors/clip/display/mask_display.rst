@@ -28,7 +28,7 @@ Overlay
       :Alpha Channel:
          Which displays the rasterized mask as a grayscale image.
       :Combined:
-         Displays both the clip along with the mask overlayed on top.
+         Displays both the clip along with the mask overlaid on top.
 
 .. _bpy.types.SpaceClipEditor.blend_factor:
 

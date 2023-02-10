@@ -8,7 +8,7 @@ In Blender, holes are generally dealt with by using boolean modifiers,
 or boolean operations in Edit mode.
 These result in many quad, or tri faces on what is essentially a flat surface.
 CAD Designers would traditionally want a flat complex face to be an Ngon,
-since Sub-Division modifiers would not be used for this type of modelling.
+since Sub-Division modifiers would not be used for this type of modeling.
 
 Alternative methods include using 2D curve surface, where any internal faces are treated as holes.
 The disadvantage of this system is that to include these in a vertex mesh they must first be converted to meshes,
@@ -46,7 +46,7 @@ but this will require Align tools in awkward rotational angles, something we hav
 The proviso on this is that you can never ``Apply`` the rotations used, but that is no hardship.
 
 Below is what this looks like if converted to a mesh,
-producing totally unsuitable topology for precision modelling, or even beveling:
+producing totally unsuitable topology for precision modeling, or even beveling:
 
 .. figure:: /images/addons_pdt_holes_3.png
    :width: 400px

@@ -13,7 +13,7 @@ Blur Attribute Node
 The *Blur Attribute* node is implementation of Blur effect for attributes based on geometry topology.
 
 Meen of each step is mixing value of each primitive with neighbors.
-Weight of primitive is factor for multiplying all neighboards value before accumulate its as new primitive value.
+Weight of primitive is factor for multiplying all neighbor's value before accumulate its as new primitive value.
 
 Blurring can work when values on primitives have explicit relations.
 Therefore, the attribute can only be affected on the :doc:`Meshes </modeling/meshes/introduction>` and
@@ -44,7 +44,7 @@ Value
    The immediate value of each primitive to blur.
 
 Iterations
-   Number of repeats of mixing value with neighboards. Each iteration is independent. Until one iteration is
+   Number of repeats of mixing value with neighbors. Each iteration is independent. Until one iteration is
    completed, its results are not used as a source for next blurring.
 
 Weight
@@ -62,7 +62,7 @@ Outputs
 =======
 
 Value
-   Values, mixed with neighboards defined number of times.
+   Values, mixed with neighbors defined number of times.
 
 
 Examples

@@ -56,7 +56,7 @@ Possible ways to achieve this are:
 - Muting shadow and midtone colors, which is a bit more flexible.
 - Masking for ultimate control.
 
-After generating the sun beams from such a light source image they can then be overlayed on the original image.
+After generating the sun beams from such a light source image they can then be overlaid on the original image.
 Usually, a simple "Add" Mix node is sufficient,
 and physically correct because the scattered light adds to the final result.
 

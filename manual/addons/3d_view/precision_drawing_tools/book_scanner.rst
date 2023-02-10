@@ -166,7 +166,7 @@ Edit new "End-L" Object and mirror all faces about X Axis.
 + Set 3D Cursor.
 + Select All Geometry.
 + Key CTRL+M.
-+ Key SHIFT+N to normalise faces.
++ Key SHIFT+N to normalize faces.
 
 You should now have two ends like this:
 

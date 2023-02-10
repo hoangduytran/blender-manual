@@ -73,7 +73,7 @@ Lacunarity
    meaning that each additional layer will have a scale that is the inverse of the value which shows on the button.
    i.e. Lacunarity = 2 --> Scale = 1/2 original.
 Octaves
-   Octave controls the number of times the original noise pattern is overlayed on itself and
+   Octave controls the number of times the original noise pattern is overlaid on itself and
    scaled/contrasted with the fractal dimension and lacunarity settings.
 Intensity
    Light intensity. Called *Offset* for *Hetero Terrain*.
