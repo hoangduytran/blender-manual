@@ -1,4 +1,4 @@
-.. _bpy.ops.mesh.bridge-edge-loops:
+.. _bpy.ops.mesh.bridge_edge_loops:
 .. _modeling-meshes-editing-bridge-edge-loops:
 
 *****************

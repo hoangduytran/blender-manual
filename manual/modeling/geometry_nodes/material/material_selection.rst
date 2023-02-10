@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Material Selection
-.. _bpy.types.GeometryNodeMaterial Selection:
+.. _bpy.types.GeometryNodeMaterialSelection:
 
 ***********************
 Material Selection Node

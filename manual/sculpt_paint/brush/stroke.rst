@@ -102,7 +102,7 @@ Spacing Distance :guilabel:`Sculpt Mode Only`
       Calculates the brush spacing relative to the view.
    :Scene:
       Calculates the brush spacing relative to all three dimensions of the scene using the stroke location.
-      This avoids artifacts when sculpting across curved surfaces and keeps the spacing much more consistent. 
+      This avoids artifacts when sculpting across curved surfaces and keeps the spacing much more consistent.
 
 .. _bpy.types.Brush.use_space_attenuation:
 
@@ -124,7 +124,7 @@ Dash Length
    This is useful to create dashed lines in texture paint or stitches in Sculpt Mode.
    Available for the *Space*, *Line*, and *Curve* stroke methods.
 
-.. _bpy.types.Brush.html#bpy.types.Brush.jitter:
+.. _bpy.types.Brush.jitter:
 
 Jitter
    Jitter the position of each step in the brush stroke.
