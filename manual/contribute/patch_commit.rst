@@ -26,9 +26,7 @@ In order to submit a patch, follow this process:
 
    If you have created or deleted files, you will need to run ``svn add /path/to/file``
    or ``svn rm /path/to/file`` before creating the diff. To see a list of affected files, run ``svn status``.
-#. `Upload the diff file here <https://developer.blender.org/differential/diff/create/>`__.
-   If you do not have an account already,
-   you can `register for one <https://developer.blender.org/auth/register/>`__.
+#. `Upload the diff file here <https://projects.blender.org/blender/documentation/issues/new>`__.
 #. After submitting the diff, you will be asked to "Create a new Revision"
    before you can add a title and description of your changes.
 #. Please check if the Documentation project is assigned in the tag's field in order to notify
@@ -55,28 +53,26 @@ we cut out the middle man and give you direct access to edit the manual.
 Commit Directly
 ===============
 
-Once you are provided with the direct access to edit the manual,
-you can start committing directly instead of creating a patch file.
-Doing this will submit the change directly to our central repository.
+Access to directly submit changes is limited to people with commit access to the SVN repository.
+Once you are provided with commit access you can start committing directly instead of creating a patch file.
 
-All you need to do now is run::
+You can make commits from your SVN client or using the SVN command line tool.
+The following command will create a commit and send it to the central repository::
 
    svn commit -m "This is what I did"
 
 If you leave out ``-m "message"``, you will be prompted to type the message in a text editor.
 
-Do not forget to always run ``svn update`` before committing.
+.. tip::
 
-Then you will be asked for your username and password
-(from ``developer.blender.org``) before the change is committed.
+   You should make sure you are always on the latest revision before committing.
+   You may not be able to commit directly if there are conflicting changes in the latest revision.
 
-.. note::
+   To avoid this run ``svn update`` before committing.
 
-   Make sure to use your username (case sensitive) and not your email.
+.. seealso::
 
-Your modified files are uploaded to the central repository for others to work with and continue collaborating.
-Commits are tracked in the repositories `Diffusion <https://developer.blender.org/diffusion/BM/>`__.
-Soon after your changes become visible in the online manual.
+   `Blender's SVN usage guide <https://wiki.blender.org/wiki/Tools/Subversion>`__
 
 
 Writing a Good Commit Message

@@ -2,7 +2,7 @@
 
 
    CHANGES TO THIS FILE MUST BE MADE IN BLENDER'S SOURCE CODE, SEE:
-   https://developer.blender.org/diffusion/B/browse/master/source/creator/creator_args.c
+   https://projects.blender.org/blender/blender/src/branch/main/source/creator/creator_args.c
 
 .. _command_line-args:
 

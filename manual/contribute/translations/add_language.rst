@@ -24,11 +24,11 @@ This will give you a foundation environment for:
 Below examples show the process to create a new set of files for French, language code ``fr``, on Linux platform.
 Other platforms might vary slightly but should be mainly the same.
 
-#. Goto ``https://developer.blender.org`` to create an account for yourself and
-   become a developer/translator for the Blender organization.
-#. Login the account and create a task with ``todo`` type, addressing an administrator in the *Subscribers* field,
-   requesting for a committer right in order to transfer changes to the central repository of the translation team.
-#. Open an instance of the console application, such as Gnome-Terminal emulator.
+#. `Create a Blender ID <https://id.blender.org/register/>` if you have not done so already
+#. Log into `projects.blender.org <https://projects.blender.org/>`__ and
+   `Create an Issue <https://projects.blender.org/blender/documentation/issues/new>`__
+   requesting for commit access in order to transfer changes to the central repository of the translation team.
+#. Open an instance of a console application.
 #. Change the current working directory to the directory of ``blender_docs``,
    where the instance of ``Makefile`` resides.
 

@@ -212,7 +212,8 @@ Handling Time
 Unlike Blender and many other applications and file formats, Alembic files don't have any concept of frames.
 Alembic works purely with time, and values that are sampled over time. For example,
 there is no way to distinguish 30 FPS with 2 samples per frame, and 60 FPS with 1 sample per frame.
-This has caused many developers to just `hard-coded 24 FPS <https://developer.blender.org/T55288#754358>`__
+This has caused many developers to just
+`hard-coded 24 FPS <https://projects.blender.org/blender/blender/issues/55288>`__
 when reading Alembic files.
 
 Blender uses the current scene frame rate to convert a frame number (in Blender) to a time

@@ -9,7 +9,8 @@ On this page French (``fr``) is used for examples. However, it can be replaced w
 So, be sure to change the ``/fr`` suffixes in this guide to the language you are translating!
 
 To see which languages are currently available, you can browse the repository:
-https://developer.blender.org/diffusion/BMT/browse/trunk/blender_docs/locale
+
+``https://svn.blender.org/svnroot/bf-manual-translations/trunk/blender_docs/locale/``
 
 .. note::
 

@@ -33,7 +33,7 @@ Links that deal with distributing your scripts:
   -- Information on how to share your scripts and get them included in the official Blender distribution.
 - `Creating Add-ons <https://wiki.blender.org/wiki/Process/Addons/Guidelines>`__
   -- Add-ons are used to encapsulate and distribute scripts.
-- `Add-ons project <https://developer.blender.org/project/profile/3/>`__
+- `Add-ons project <https://projects.blender.org/blender/blender-addons>`__
   -- Project to maintain a central repository of extensions to Blender.
 
 

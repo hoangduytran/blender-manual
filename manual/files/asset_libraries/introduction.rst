@@ -245,7 +245,7 @@ it is hard to reliably implement an undo system when manipulating other files.
 The rule does get in the way of mass-updating assets when they are stored in various blend-files.
 
 Since there is already tooling that can manipulate blend-files outside of Blender itself
-(see `Blender Asset Tracer <https://developer.blender.org/project/profile/79/>`__),
+(see `Blender Asset Tracer <https://projects.blender.org/blender/blender-asset-tracer>`__),
 it's possible to also create an external tool for doing such edits across blend-files.
 Such a tool might even be implemented via Blender's application templates system,
 or as an add-on; the rule above applies to Blender itself, not to its add-ons.

@@ -22,7 +22,7 @@ For example:
 .. parsed-literal::
 
    The |BLENDER_VER_MANUAL|_
-   by the `Blender Documentation Team <https://developer.blender.org/project/profile/53/>`__
+   by the `Blender Documentation Team <https://projects.blender.org/blender/documentation>`__
    is licensed under a |LICENSE|_.
 
 .. |BLENDER_VER_MANUAL| replace:: Blender |version| Manual

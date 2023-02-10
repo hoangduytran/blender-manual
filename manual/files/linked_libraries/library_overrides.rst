@@ -27,8 +27,8 @@ Library overrides supports:
 
 .. note::
 
-   There are known issues that have to be addressed. See Phabricator `main task of the project
-   <https://developer.blender.org/T73318>`__, for more details.
+   There are known issues that have to be addressed. See the `main task of the project
+   <https://projects.blender.org/blender/blender/issues/73318>`__, for more details.
 
 .. warning::
 
@@ -124,7 +124,7 @@ Create overrides from the selected data-blocks.
 Blender automatically create overrides for all required data-blocks to ensure that
 valid override hierarchies are created.
 
-Only overrides created from selected items will be user-editable. 
+Only overrides created from selected items will be user-editable.
 
 .. warning::
 

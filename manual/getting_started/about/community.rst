@@ -33,7 +33,7 @@ For studios and organizations there is `Enterprise support <https://www.blender.
 and for studios looking to add Blender to their pipeline, `Blender Studio <https://studio.blender.org/>`__
 contains documentation and training material around this topic.
 If you think you have found an issue with Blender, please
-`report a bug <https://developer.blender.org/maniphest/task/edit/form/1/>`__.
+`report a bug <https://projects.blender.org/blender/blender/issues/new?template=.gitea%2fissue_template%2fbug.yaml>`__.
 
 More details about support can be found on the `support page <https://www.blender.org/support/>`__.
 
@@ -44,7 +44,7 @@ Development
 Being open source, Blender welcomes development from volunteers.
 Communication between developers is done mostly through three platforms:
 
-- The `developer.blender.org <https://developer.blender.org/>`__ system
+- The `projects.blender.org <https://projects.blender.org/>`__ system
 - Various `mailing lists <https://lists.blender.org/mailman/listinfo>`__
 - Online Chat (see below)
 

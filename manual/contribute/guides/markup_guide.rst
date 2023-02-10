@@ -189,7 +189,7 @@ The ID for ``https://video.blender.org/videos/watch/47448bc1-0cc0-4bd1-b6c8-9115
 is ``47448bc1-0cc0-4bd1-b6c8-9115d8f7e08c``.
 
 To get a new video uploaded, contact
-a `Documentation Project Administrator <https://developer.blender.org/project/view/53/>`__ or
+a `Documentation Project Administrator <https://projects.blender.org/blender/documentation>`__ or
 include the uploaded video in your :doc:`Patch </contribute/patch_commit>` description.
 
 

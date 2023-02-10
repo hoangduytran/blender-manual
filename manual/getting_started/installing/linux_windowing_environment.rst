@@ -119,5 +119,5 @@ have been left out of this list.
 | :sup:`*1` In X11 fast cursor motion may exit the window bounds while the cursor is grabbed (transforming for e.g.).
 | :sup:`*2` Wayland doesn't support setting the window position & depth,
   as this is a design decision it's unlikely to be supported (see issues for
-  `position <https://developer.blender.org/T98928>`__ and
-  `depth <https://developer.blender.org/T102985>`__).
+  `position <https://projects.blender.org/blender/blender/issues/98928>`__ and
+  `depth <https://projects.blender.org/blender/blender/issues/102985>`__).

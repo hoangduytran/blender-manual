@@ -94,7 +94,7 @@ The same links can also be found in the :ref:`splash`.
 
 ----
 
-`Report a Bug <https://developer.blender.org/maniphest/task/edit/form/1/>`__
+`Report a Bug <https://projects.blender.org/blender/blender/issues/new?template=.gitea%2fissue_template%2fbug.yaml>`__
    The Blender Bug Tracker (registration needed).
 
 

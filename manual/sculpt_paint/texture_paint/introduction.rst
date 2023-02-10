@@ -164,4 +164,4 @@ normals pointing away from the view, painting may fail; to workaround disable
 the :ref:`Normal Falloff <bpy.types.ImagePaint.use_normal_falloff>` option in the stroke settings.
 
 Typically this happens when painting onto the side of a cube
-(see `Bug report T34665 <https://developer.blender.org/T34665>`__).
+(see `Blender bug #34665 <https://projects.blender.org/blender/blender/issues/34665>`__).

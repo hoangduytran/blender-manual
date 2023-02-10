@@ -1,4 +1,4 @@
-.. https://developer.blender.org/T46363
+.. https://projects.blender.org/blender/documentation/issues/46363
 .. left out: Mapping Coordinates
 
 .. _bpy.types.ParticleSettingsTextureSlot:
