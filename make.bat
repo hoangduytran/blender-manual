@@ -111,7 +111,6 @@ if "%1" == "report_po_progress" (
 )
 
 if "%1" == "check_spelling" (
-	echo  here
 	python tools_rst\rst_check_spelling.py
 	goto EOF
 )
