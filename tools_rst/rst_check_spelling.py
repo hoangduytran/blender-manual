@@ -64,8 +64,20 @@ def check_spelling_body(text):
         if w.startswith("<") and w.endswith(">"):
             continue
 
+        # skip character and name entities
+        if w.startswith("\\") or w.startswith("|"):
+            continue
+
         # now we've gotten rid of typical roles, strip other chars
         w = w.strip(":`()<>{}")
+
+        # skip python references
+        if w.startswith("bpy."):
+            continue
+
+        # skip document references and keyboard shortcuts
+        if w.startswith("doc:") or w.startswith("kbd:") or w.startswith("menuselection:") or w.startswith("ref:"):
+            continue
 
         w_ = w
         for w in w_.split("/"):
