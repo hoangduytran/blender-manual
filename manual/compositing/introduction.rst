@@ -105,4 +105,4 @@ If you might want to later arrange them front to back or create a depth of field
 use a format that supports a Z-depth channel (such as ``EXR``).
 
 To save a composition as a movie clip (all frames in a single file),
-use an ``AVI`` or ``Quicktime`` format, and use the *Animation* button and its settings.
+use an ``AVI`` or ``QuickTime`` format, and use the *Animation* button and its settings.

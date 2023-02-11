@@ -30,7 +30,7 @@ different operating systems.
 
    - `FFmpeg video codec #1 <https://en.wikipedia.org/wiki/FFV1>`__
    - `PNG <https://en.wikipedia.org/wiki/Portable_Network_Graphics>`__
-   - Quicktime
+   - QuickTime
    - PNG TIFF Pixlet is not lossless, and may be only available on macOS.
    - WebM/VP9 (although Blender will not import the alpha channel due to
      a `limitation of FFmpeg <https://trac.ffmpeg.org/ticket/8344>`__).
@@ -73,7 +73,7 @@ FFmpeg Containers
 `AVI <https://en.wikipedia.org/wiki/Audio_Video_Interleave>`__: ``.avi``
    A derivative of the Resource Interchange File Format (RIFF).
    One of the first and most widely used video container format.
-`Quicktime <https://en.wikipedia.org/wiki/.mov>`__: ``.mov``
+`QuickTime <https://en.wikipedia.org/wiki/.mov>`__: ``.mov``
    A multi-tracks format. QuickTime and MP4 container formats can use the same codecs.
    They are mostly interchangeable in a QuickTime-only environment.
    MP4, being an international standard, has more support.
