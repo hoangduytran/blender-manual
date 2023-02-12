@@ -35,7 +35,7 @@ Library overrides supports:
    While in most cases library overrides data is preserved across a loss of reference linked data
    (if e.g. the library file becomes unavailable or is relocated), there are some exceptions.
 
-   The main one is probably posed (but not animated) armature objects, when their Aramture obdata
+   The main one is probably posed (but not animated) armature objects, when their Armature obdata
    itself is not overridden. The Pose bones of an armature object are fully linked to the bones
    of its Armature obdata, if the later goes missing, the pose bones are definitively lost.
 
