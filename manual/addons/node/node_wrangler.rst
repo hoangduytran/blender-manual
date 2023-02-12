@@ -102,7 +102,7 @@ The automatic merge functions determine the type of "mix" node to use based on t
 it has a Color output, it will use the Mix node. It will use the Math node if both outputs are of Value type.
 Add Shader, Mix Shader, and Join Geometry nodes will also be used for specific cases.
 
-Modes 
+Modes
    Add :kbd:`Ctrl-=`, :kbd:`Ctrl-NumpadPlus`
       Merge into Mix or Math nodes, then set blend mode or math operation as Add. If the outputs are Shaders,
       it will use Add Shader node instead.
@@ -202,8 +202,9 @@ Change Mix Factor
 
 .. reference::
 
-   :Shortcut:  :kbd:`Alt-Left`, :kbd:`Shift-Alt-Left`, :kbd:`Alt-Right`, :kbd:`Shift-Alt-Right`,
-   :kbd:`Shift-Ctrl-Alt-Left`, :kbd:`Shift-Ctrl-Alt-0`, :kbd:`Shift-Ctrl-Alt-Right`, :kbd:`Shift-Ctrl-Alt-1`
+   :Shortcut:
+      :kbd:`Alt-Left`, :kbd:`Shift-Alt-Left`, :kbd:`Alt-Right`, :kbd:`Shift-Alt-Right`,
+      :kbd:`Shift-Ctrl-Alt-Left`, :kbd:`Shift-Ctrl-Alt-0`, :kbd:`Shift-Ctrl-Alt-Right`, :kbd:`Shift-Ctrl-Alt-1`
 
 Change the Factor value of the selected Mix and Mix Shader nodes with shortcuts.
 
