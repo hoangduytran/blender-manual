@@ -94,7 +94,7 @@ Kink
 
 .. warning::
 
-   This feature is broken in the current version, see T46776.
+   This feature is broken in the current version, see Bug Report #46776.
 
 .. _bpy.types.FieldSettings.guide_kink_type:
 

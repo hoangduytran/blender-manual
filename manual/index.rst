@@ -6,7 +6,7 @@
 Welcome to the manual for `Blender <https://www.blender.org>`__,
 the free and open source 3D creation suite.
 
-.. see T64071 for why we don't use ':download:'
+.. see #64071 for why we don't use ':download:'
 
 .. only:: builder_html
 
