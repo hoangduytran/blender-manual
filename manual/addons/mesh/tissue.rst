@@ -3,7 +3,6 @@
 Tissue
 ******
 
-
 .. figure:: /images/addons_mesh_tissue_cover.jpg
 
 Tissue is a collection of tools that facilitate the use of computational-design techniques inside Blender.
@@ -21,6 +20,7 @@ Activation
 - Open Blender and go to Preferences then the Add-ons tab.
 - Click Mesh then Tissue to enable the script.
 
+
 .. _tissue tools:
 
 Tissue Tools
@@ -35,6 +35,7 @@ Generators
 from input objects. They include **Tessellate**, **Dual Mesh** (a special
 Tessellate) and **Convert to Curve**. For all of them, a **Refresh** operator can be used in order to reload the
 changes from the input objects.
+
 
 Tessellate
 ----------
@@ -103,14 +104,14 @@ Smooth Shading
 Components
   Three different method can be used to assign the components.
 
-  Object
+  :Object:
     Repeat the same object on all the target faces.
 
-  Collection
+  :Collection:
     Assign the objects contained in a given Collection.
     The components can be assigned either randomly or according to a Vertex Group.
 
-  Materials
+  :Materials:
     Assign the components according to the name of the materials assigned to each face.
     If for a given material, there is no an object with the same name, then the face is not used.
 
@@ -119,15 +120,15 @@ Components
 
 Thickness
   Scale Mode
-    Constant
+    :Constant:
       Generate components with a fixed and uniform thickness in the normal direction.
-    Relative
+    :Relative:
       Generate components with a thickness proportional to the target face dimension.
       This will produce components with an aspect ration similar to the original Component
       object.
-    Scale
+    :Scale:
       control the scaling factor of the components' Thickness
-    Offset
+    :Offset:
       Allows to control the alignment of the components in relation to the Base object surface.
 
 Components Coordinates
@@ -301,7 +302,7 @@ Tissue Weight Tools
 Area
 ----
 
-Weight from Faces area (Automatic Bounds, Manual Bounds)
+Automatically assigns weight values based on the area of each face. (Automatic Bounds, Manual Bounds)
 
 .. figure:: /images/addons_mesh_tissue_weight-area.jpg
 
