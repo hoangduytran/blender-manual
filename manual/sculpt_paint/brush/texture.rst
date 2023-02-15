@@ -136,3 +136,12 @@ Size X, Y, Z
 Sample Bias :guilabel:`Sculpt Mode`
    Value added to texture samples.
    This can be used if the midlevel of a height map is not correct.
+
+.. _bpy.types.Brush.use_color_as_displacement:
+
+Vector Displacement :guilabel:`Sculpt Mode`
+   Use the color channels to displace geoemtry in 3 vectors.
+
+   .. note::
+      This is only supported for the :doc:`Draw </sculpt_paint/sculpting/tools/draw>` brush
+      with :ref:`Area Plane <bpy.types.BrushTextureSlot.map_mode>` mapping enabled.
