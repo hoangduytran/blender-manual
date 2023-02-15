@@ -7,7 +7,8 @@
 ##################
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :titlesonly:
 
    introduction.rst
    inspection.rst
@@ -20,7 +21,8 @@ Node Types
 ==========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :titlesonly:
 
    attribute/index.rst
    input/index.rst
@@ -29,14 +31,16 @@ Node Types
 -----
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :titlesonly:
 
    geometry/index.rst
 
 -----
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :titlesonly:
 
    curve/index.rst
    instances/index.rst
@@ -47,7 +51,8 @@ Node Types
 -----
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :titlesonly:
 
    material/index.rst
    texture/index.rst
@@ -56,6 +61,7 @@ Node Types
 ----
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :titlesonly:
 
    group.rst
