@@ -44,8 +44,51 @@ Rotate Canvas
 Perform a rotation of the view in free navigation or active camera in camera view.
 
 - Maintain :kbd:`Ctrl-Alt-MMB` to rotate view (customizable in add-on preferences).
-- Click and release immediately to reset view (free navigation only).
+- Click and release immediately to reset view.
 
+
+Layer Navigator
+----------------
+
+Continuous press on :kbd:`Y` shortcut call a customized layer popup with following features:
+
+- Active layer always pop under mouse when called.
+- Active layer is changed by hovering, without any click.
+- Layers can be reordered with simple drag'n'drop.
+- Layer opacity, hide and lock states can be tweaked in popup.
+- Placing mouse outside popup limits will fade inactive layers, useful to quickly inspect content.
+- The plus button on the right adds a new layer.
+
+Extra shortcuts are enabled while layer navigator is up:
+
+- :kbd:`H` toggle all hide.
+- :kbd:`L` toggle all lock.
+- :kbd:`T` toggle auto-lock.
+- :kbd:`X` toggle In Front value of the object.
+- :kbd:`RMB` or :kbd:`ESC` to reset original active layer.
+
+Layers box height, width, font size, and left-handed mode are customizable in add-on preferences.
+
+
+Timeline Scrub
+---------------
+
+Call a timeline popup at mouse position to scrub without leaving the 3D viewport.
+
+Default shortcut to call the timeline is :kbd:`Alt+MMB`.
+The shortcut enable the scrubbing when hovering timeline editors as well (dopesheet, sequencer, etc).
+
+Scene start/end and keyframes are represented with symbols on the timeline.
+
+While scrubbing, pressing :kbd:`Ctrl` key Snap time cursor on keyframes.
+
+There are several settings to customize visual aspect and behavior in addon preferences:
+
+- "Always Snap" checkbox invert the snapping behavior.
+- Special "Rolling" mode is available. It displays keyframes with a constant spacing, discarding timing data when scrubbing back and forth. This is useful for quick flipping between keyframes.
+- Filter to restrict the key display and snapping to Grease Pencil frames only.
+- Change shortcut and choose to propagate it to timeline editors
+- Customizable colors, frame spacing and amount of displayed informations.
 
 Straighten Stroke
 -----------------
