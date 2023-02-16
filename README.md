@@ -1,0 +1,82 @@
+# Preface
+
+**Note:**
+This repository is a temporary landing page for the Blender Documentation project.
+Blender Documentation is handled in a **SVN** repository.
+Below are instructions on how to contribute using the SVN repository.
+
+Bug reports an task are still handled in this repository.
+
+Patches can be submitted as a `.diff` file in a task for now until the documentation project has migrated to GIT.
+
+# Blender Documentation ([latest manual](https://docs.blender.org/manual/en/dev/))
+
+Welcome to the Blender User Documentation project.
+We are actively searching for contributors and documentation module owners.
+
+The Blender Manual is written using `reStructuredText` (RST)
+and is built with [Sphinx](http://www.sphinx-doc.org/en/stable/).
+
+If you want to start contributing or want to have a look at the manual,
+here we have some instructions:
+
+
+## How to build & edit the docs locally
+
+Before you start contributing it may be helpful to read the style guides
+which give instructions on how to write with RST and some goals of the manual.
+
+- [Markup Style Guide](https://docs.blender.org/manual/en/dev/contribute/guides/markup_guide.html)
+- [Writing Style Guide](https://docs.blender.org/manual/en/dev/contribute/guides/writing_guide.html)
+
+Now that you are familiar with the process, you can get setup,
+edit, and contribute your changes by following these links:
+
+- [Install](https://docs.blender.org/manual/en/dev/contribute/install/index.html)
+- [Build](https://docs.blender.org/manual/en/dev/contribute/build.html)
+- [Edit](https://docs.blender.org/manual/en/dev/contribute/editing.html)
+- [Build Again](https://docs.blender.org/manual/en/dev/contribute/build.html)
+- [Patch or Commit](https://docs.blender.org/manual/en/dev/contribute/patch_commit.html)
+
+**Note:**
+We realize this may be intimidating if you're not familiar with Subversion
+or making patches, you may also submit the modified file as an
+[Issue](https://projects.blender.org/blender/documentation/issues/new,
+or mail the bf-docboard mailing list.
+
+
+## Links
+
+- **Manual Docs**: [Contributing Guide](https://docs.blender.org/manual/en/dev/contribute/index.html) (the process for editing the manual).
+- **Source Files**: [Manual Repository](https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs/) (subversion repository).
+- **Mailing List**: [bf-docboard](http://lists.blender.org/mailman/listinfo/bf-docboard)
+- **Administrators**: @blendify @fsiddi
+
+
+## Documentation Team
+
+The coordination of the Blender Manual is run by a set of **Administrators**,
+which are responsible for managing the whole project and infrastructures (listed above).
+
+If you are interested in becoming a contributor, please contact us on the
+[bf-docboard](http://lists.blender.org/mailman/listinfo/bf-docboard) mailing list.
+
+
+# Translations
+
+For translations, we use Sphinx’s internationalization package.
+To get started see https://docs.blender.org/manual/en/dev/contribute/index.html#translations
+
+
+## Links
+
+**Source Files**: [Translation's Repository](https://svn.blender.org/svnroot/bf-manual-translations/trunk/blender_docs/locale/) (subversion repository).
+**Forum**: [Documentation category on Developer Talk](https://devtalk.blender.org/c/documentation)
+**Mailing List**: [bf-docboard](http://lists.blender.org/mailman/listinfo/bf-docboard)
+**Administrators**: @blendify , @fsiddi
+
+**Note:*
+If you are a new translator who wants to start translating a new language
+that is not listed below send and email to the
+[bf-docboard](http://lists.blender.org/mailman/listinfo/bf-docboard)
+and we would be glad to set it up for you.

@@ -50,8 +50,6 @@ if "%1" == "help" (
 	echo Convenience targets provided for building docs
 	echo.
 	echo - livehtml [default]   to auto build on file changes and host on localhost
-	echo - readme               to make a 'readme.html' file
-	echo - clean                to delete all old build files
 	echo.
 	echo Translations
 	echo ------------
@@ -82,14 +80,6 @@ if "%1" == "latexpdf" (
 	cd %~dp0
 	echo To view, run:
 	echo   start "%BUILDDIR%\html\blender_manual.pdf"
-	goto EOF
-)
-
-if "%1" == "readme" (
-	rst2html5.py readme.rst > "%BUILDDIR%\readme.html"
-	echo Build finished. The HTML page is in "%BUILDDIR%\readme.html".
-	echo To view, run:
-	echo   start "%BUILDDIR%\readme.html"
 	goto EOF
 )
 

@@ -58,7 +58,7 @@ Communication
 - `Mailing list <http://wiki.blender.org/index.php/Dev:Doc/Contact#Mailing_Lists>`__ -- Subscribe to
   the `bf-docboard <http://projects.blender.org/mailman/listinfo/bf-docboard>`__
   to communicate with others about the documentation project
-- `Bug tracker <https://developer.blender.org/tag/documentation>`__ -- Report bugs or
+- `Bug tracker <https://projects.blender.org/blender/documentation>`__ -- Report bugs or
   find projects you can work on to improve the documentation.
 
 

@@ -7,12 +7,8 @@ Custom Targets
 
 Convenience targets provided for building docs.
 
-- html (default)       to build the HTML web-site.
-- singlehtml           to build the HTML web-site as a single page.
-- livehtml             to auto build on file changes on host on localhost.
+- livehtml (default)   to auto build on file changes on host on localhost.
 - epubpdf              to convert an epub file to PDF.
-- readme               to make a 'readme.html' file.
-- clean                to delete all old build files.
 
 Translations
 ------------
@@ -58,11 +54,7 @@ endif
 # ----------------------
 
 
-ifneq "$(findstring singlehtml, $(MAKECMDGOALS))" ""
-	.DEFAULT_GOAL := singlehtml
-else ifneq "$(findstring latexpdf, $(MAKECMDGOALS))" ""
-	.DEFAULT_GOAL := latexpdf
-else ifneq ("$(shell which $(SPHINXAUTOBUILD) 2> /dev/null)", "")
+ifneq ("$(shell which $(SPHINXAUTOBUILD) 2> /dev/null)", "")
 	.DEFAULT_GOAL := livehtml
 else
 	.DEFAULT_GOAL := html
@@ -94,12 +86,6 @@ html: .SPHINXBUILD_EXISTS
 livehtml:
 	@$(SPHINXAUTOBUILD) --open-browser --delay 0 "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
 
-latexpdf: .SPHINXBUILD_EXISTS
-	@$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-	@make -C "$(BUILDDIR)/latex" LATEXOPTS="-interaction nonstopmode"
-	@echo "To view, run:"
-	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
-
 epubpdf: .SPHINXBUILD_EXISTS
 	@$(SPHINXBUILD) -M epub "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@ebook-convert $(BUILDDIR)/epub/*.epub blender_manual.pdf \
@@ -111,12 +97,6 @@ epubpdf: .SPHINXBUILD_EXISTS
 		--pdf-page-margin-right 50 \
 		--pdf-page-margin-top 50 \
 		--pdf-page-margin-bottom 50 \
-
-readme:
-	@rst2html5 readme.rst > $(BUILDDIR)/readme.html
-	@echo "Build finished. The HTML page is in $(BUILDDIR)/readme.html."
-	@echo "To view, run:"
-	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/readme.html"
 
 check_syntax:
 	@python3 tools_rst/rst_check_syntax.py --long --title --kbd > rst_check_syntax.log

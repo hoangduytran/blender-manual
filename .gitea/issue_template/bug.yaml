@@ -1,0 +1,21 @@
+name: Bug Report
+about: File a bug report
+labels:
+  - "type::Report"
+  - "status::Needs Triage"
+  - "priority::Normal"
+body:
+  - type: textarea
+    id: body
+    attributes:
+      label: "Description"
+      hide_label: true
+      value: |
+               **Page Information**
+               File: ``
+               Blender Version: ``
+               Documentation Language: ``
+               [Permanent Link]()
+
+               **Short description of error**
+               [Please fill out a short description of the error here]
