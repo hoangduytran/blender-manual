@@ -33,8 +33,9 @@ to displace geometry in three directions instead of just one.
 
    Example of a horn VDM brush being used on the monkey object.
 
-To use this feature, enable :ref:`Vector Displacement <bpy.types.Brush.use_color_as_displacement>` in the texture panel.
-All :ref:`stroke methods <bpy.types.Brush.stroke_method>` are supported, but the recommended behavior is *Anchored*.
+To use this feature, enable :ref:`Vector Displacement <bpy.types.Brush.use_color_as_displacement>` in the texture
+panel. All :ref:`stroke methods <bpy.types.Brush.stroke_method>` are supported, but the recommended behavior is
+*Anchored*.
 
 Ideal images for vector displacement are open EXR files
 with :doc:`color clamping </render/materials/legacy_textures/colors>` disabled.
