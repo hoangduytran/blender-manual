@@ -57,7 +57,7 @@ with the following channels of information:
 - Emissive
 
 Some additional material properties or types of materials can be expressed using glTF extensions.
-The complete list can be found in _Extensions_ part of this documentation.
+The complete list can be found in `Extensions`_ part of this documentation.
 
 .. figure:: /images/addons_import-export_scene-gltf2_material-channels.jpg
 
@@ -73,7 +73,7 @@ The glTF material system is different from Blender's own materials. When a glTF 
 the add-on will construct a set of Blender nodes to replicate each glTF material as closely as possible.
 
 The importer supports Metal/Rough PBR (core glTF), Spec/Gloss PBR (``KHR_materials_pbrSpecularGlossiness``)
-and some extension materials. The complete list can be found in _Extensions_ part of this documentation.
+and some extension materials. The complete list can be found in `Extensions`_ part of this documentation.
 
 .. tip::
 
@@ -660,7 +660,8 @@ Export
 You can export animations using different ways. How glTF animations are made from actions / NLA is controlled by
 the :menuselection:`Animation --> Mode` export option.
 
-.. rubric:: Actions (default)
+Actions (default)
+^^^^^^^^^^^^^^^^^
 
 An action will be exported if it is the active action on an object, or it is stashed to an NLA track
 (e.g. with the *Stash* or *Push Down* buttons in the :doc:`Action Editor </editors/dope_sheet/action>`).
@@ -680,12 +681,14 @@ This mode is usefull if you are exporting for game engine, with an animation lib
 Each action must be on its own NLA track.
 
 
-.. rubric:: Active Actions merged
+Active Actions merged
+^^^^^^^^^^^^^^^^^^^^^
 
 In this mode, the NLA organization is not used, and only one animation is exported using
 the active actions on all objects.
 
-.. rubric:: NLA Tracks
+NLA Tracks
+^^^^^^^^^^
 
 In this mode, each NLA Track will be export as an independant glTF animation.
 This mode is usefull if you are using Strip modifiers, or if you get multiple action on a same Track.
@@ -693,9 +696,10 @@ This mode is usefull if you are using Strip modifiers, or if you get multiple ac
 If you rename two tracks on two different objects to the same name, they will become part
 of the same glTF animation and will play together.
 
-.. rubric:: Scene
+Scene
+^^^^^
 
-Using _Scene_ option, animations will be exported as you can see them in viewport.
+Using `Scene`_ option, animations will be exported as you can see them in viewport.
 You can choose to export a single glTF animation, or each object separatly.
 
 .. note::
@@ -715,7 +719,7 @@ You can choose to export a single glTF animation, or each object separatly.
 
 .. note::
 
-   Only _Actions_ and _Active Actions merged_ mode can handle not sampled animations.
+   Only `Actions (default)`_ and `Active Actions merged`_ mode can handle not sampled animations.
 
 
 File Format Variations
