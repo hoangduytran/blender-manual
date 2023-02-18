@@ -24,7 +24,7 @@ Named Attributes
 
 Named attributes are created and used in other areas of Blender like shaders, painting, and UV mapping.
 In the :doc:`modifier panel </modeling/modifiers/generate/geometry_nodes>`, a named attribute can
-be used for input by clicking the icon to the left of the value button. The string input input
+be used for input by clicking the icon to the right of the value button. The string input input
 allows you to search and choose existing attributes from the modifier's input geometry.
 
 .. figure:: /images/modeling_geometry-nodes_attribute-reference_search.png
@@ -330,7 +330,7 @@ This operator found in the *Attributes* panel of the property editor can change 
 domain or data type of an attribute.
 
 Due to ongoing development in the area of attributes, many areas of Blender can not yet work with
-the generic (identified with a name, stored on any domain with any data type)attributes used by
+the generic (identified with a name, stored on any domain with any data type) attributes used by
 geometry nodes. That makes this operator an essential workaround in some cases where existing
 tools must be used with data generated from geometry nodes.
 

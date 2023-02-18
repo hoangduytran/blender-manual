@@ -8,14 +8,14 @@ that is used to color the surface of a mesh.
 The UV texture is mapped to the mesh through one or more UV maps.
 There are three ways to establish the image used by the UV texture:
 
+#. Use any image editing program to create an image. In the Image Editor,
+   select the UV texture and load the image. Blender will then use
+   that texture's UV map to transfer the colors to the faces of the mesh.
 #. Paint a flat image in the Image Editor onto the currently selected UV texture,
    using its UV map to transfer the colors to the faces of the mesh.
 #. Paint the mesh in the 3D Viewport, and let Blender use
    the currently selected UV map to update the UV texture
-   (see :ref:`Projection Painting <painting-texture-index>`).
-#. Use any image editing program to create an image. In the Image Editor,
-   select the UV texture and load the image. Blender will then use
-   that texture's UV map to transfer the colors to the faces of the mesh.
+   (as discussed below).
 
 Blender features a built-in paint mode called *Texture Paint* which is designed
 specifically to help you edit your UV textures and images quickly and
