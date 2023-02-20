@@ -24,7 +24,7 @@ Brush Settings
 VDM Displacement
 ================
 
-*Vector Dispalcement Maps* are supported for the *Draw* brush to insert complex & overhanging shapes.
+*Vector Displacement Maps* are supported for the *Draw* brush to insert complex & overhanging shapes.
 Unlike regular displacement, this uses all 3 color channels of the image
 to displace geometry in three directions instead of just one.
 
