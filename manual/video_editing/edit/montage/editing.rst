@@ -178,7 +178,7 @@ Insert Gaps
 .. reference::
 
    :Menu:      :menuselection:`Strip --> Transform --> Insert Gaps`
-   :Shortcut:  :kbd:`Shift-Equals`
+   :Shortcut:  :kbd:`Equals`
 
 Insert blank frames between the current frame and the first strips to the right,
 independent of selection or locked state of strips.
@@ -343,11 +343,6 @@ Delete
 
 Delete the selected strip(s).
 
-Delete Data
-   After removing the Strip, delete the associated data also.
-
-
-.. _bpy.ops.sequencer.images_separate:
 
 Separate Images
 ===============
@@ -454,9 +449,9 @@ Swaps the first two inputs for the effect strip.
 Lock/Unlock
 ===========
 
-Lock Strips :kbd:`Ctrl-H`
+Lock Strips :kbd:`Shift-L`
    Disables the strip from being transformed.
-Unlock Strips :kbd:`Ctrl-Alt-H`
+Unlock Strips :kbd:`Shift-Alt-L`
    Enables disabled strips allowing them to be transformed.
 
 
@@ -468,7 +463,7 @@ Mute/Unmute
 
 Mute/Unmute Strips :kbd:`H`, :kbd:`Alt-H`
    Mute or unmute the selected strips.
-Mute/Unmute Deselected Strips :kbd:`Shift-H`, :kbd:`Shift-Alt-H`
+Mute/Unmute Deselected Strips :kbd:`Shift-H`, :kbd:`Ctrl-Alt-H`
    Mute or unmute all strips but the selected.
 
 
@@ -491,19 +486,6 @@ Change Path/Files
 
 Swap Data
    Swaps two sequence strips.
-
-
-Change
-======
-
-.. reference::
-
-   :Shortcut:  :kbd:`C`
-
-.. _bpy.ops.sequencer.change_scene:
-
-Change Scene
-   Change the scene assigned to the selected strip.
 
 
 Context Menu
@@ -584,3 +566,39 @@ Ignore
 Current Frame
    Snap to Strips
       Snaps the Playhead to all strips.
+
+Retiming Tool
+=============
+.. reference::
+
+   :Tool:      :menuselection:`Toolbar --> Retime`
+.. figure:: /images/video-editing-retiming.png
+
+Strips can be sped up or, slowed down using retiming tool. When tool is activated, retiming controls can be used on active strip.
+
+.. note::
+
+   Retiming tool can not work with effect strips.
+   
+Adding Retiming Handles
+-----------------------
+When tool is activated, retiming handle is added at the end of the strip. This handle is not visible, but can be moved in a way similar to resizing the strip.
+Retiming handles are added by clicking on + button displayed on the strip next to current frame. This button is only visible when current frame intersects the strip.
+
+Moving Retiming Handles
+-----------------------
+Retiming handle can be moved by dragging it with mouse. The handle is mapped to particular frame of strip content, so moving handle effectively means moving a frame to new position.
+When handle is moved, all remaining handles to the right will be moved by same amount. Handels can not be moved past each other or start of the strip.
+
+.. note::
+
+   Only strip content is retimed, existing animation is not handled by the tool
+
+Removing Retiming Handles
+-----------------------
+Handle can be deleted by clicking on triangle. When handle is deleted, strip size will not change and speed will change to average between 2 affected sections.
+
+Retiming split strips
+-----------------------
+When strip is split, retming handle is created on both strip edges. If split happens on frame where there already is retiming handle, it is reused, so existing retiming is not affected. These retiming handles will be invisible and handle on left strip edge can not be moved.
+
