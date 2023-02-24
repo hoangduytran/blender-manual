@@ -6,6 +6,55 @@ Editing
 Transform
 =========
 
+Options
+-------
+
+Overlap Mode
+^^^^^^^^^^^^
+
+Overlap Mode defines the result of transforming a strip so that it overlaps another strip.
+
+Shuffle
+   The overlapping strip will be moved to the nearest free space so that it does not overlap.
+Overwrite
+   The overlapped strip will be overwritten, trimmed or split by the overlapping strip.
+Expand
+   All strips on the right side of (each) transformed will be shifted forward to accommodate
+   the overlapping strip.
+
+
+.. _bpy.types.ToolSettings.use_snap_sequencer:
+
+Snapping
+^^^^^^^^
+
+It is possible to enable snapping in the header of the VSE.
+The snapping behavior can be configured as follows:
+
+.. _bpy.types.SequencerToolSettings.snap_to_current_frame:
+.. _bpy.types.SequencerToolSettings.snap_to_hold_offset:
+
+Snap to
+   Current Frame
+      Snaps the transformed selection to the Playhead.
+   Hold Offset
+      Snaps the transformed selection to the :ref:`Hold Offset <sequencer-duration-hard>`.
+
+.. _bpy.types.SequencerToolSettings.snap_ignore_muted:
+.. _bpy.types.SequencerToolSettings.snap_ignore_sound:
+
+Ignore
+   Muted Strips
+      Muted Strips are not considered as snap targets.
+   Sound Strips
+      Sound Strips are not considered as snap targets.
+
+.. _bpy.types.SequencerToolSettings.use_snap_current_frame_to_strips:
+
+Current Frame
+   Snap to Strips
+      Snaps the Playhead to all strips.
+
 .. _bpy.ops.transform.seq_slide:
 
 Move
@@ -20,12 +69,7 @@ Pressing :kbd:`G` moves all the selected strip(s).
 Move your mouse horizontally (left/right) to change the strip's position in time.
 Move vertically (up/down) to change channels.
 
-Holding down :kbd:`Ctrl` while dragging snaps to the start and endpoints of other strips.
-The position of the mouse relative to the selection influences where the strips are snapped.
-If it is closer to the start of the selection, then the start frame of the selection gets snapped,
-else the end frame will get snapped.
-
-To "ripple edit" (make room for strips you drag) hold :kbd:`Alt` when placing a strip.
+Holding down :kbd:`Ctrl` while dragging enables or disables snapping.
 
 You can also lock the direction to time with :kbd:`X` or to change the strip's channel with :kbd:`Y`.
 
@@ -182,7 +226,6 @@ Insert Gaps
 
 Insert blank frames between the current frame and the first strips to the right,
 independent of selection or locked state of strips.
-
 
 Image Transform
 ===============
@@ -521,52 +564,6 @@ To Current Frame
 
 .. _bpy.types.SequencerToolSettings.overlap_mode:
 
-Overlap Mode
-============
-
-Overlap Mode defines the result of transforming a strip so that it overlaps another strip.
-
-Shuffle
-   The overlapping strip will be moved to the nearest free space so that it does not overlap.
-Overwrite
-   The overlapped strip will be overwritten, trimmed or split by the overlapping strip.
-Expand
-   All strips on the right side of (each) transformed will be shifted forward to accommodate
-   the overlapping strip.
-
-
-.. _bpy.types.ToolSettings.use_snap_sequencer:
-
-Snapping
-========
-
-It is possible to enable snapping in the header of the VSE.
-The snapping behavior can be configured as follows:
-
-.. _bpy.types.SequencerToolSettings.snap_to_current_frame:
-.. _bpy.types.SequencerToolSettings.snap_to_hold_offset:
-
-Snap to
-   Current Frame
-      Snaps the transformed selection to the Playhead.
-   Hold Offset
-      Snaps the transformed selection to the :ref:`Hold Offset <sequencer-duration-hard>`.
-
-.. _bpy.types.SequencerToolSettings.snap_ignore_muted:
-.. _bpy.types.SequencerToolSettings.snap_ignore_sound:
-
-Ignore
-   Muted Strips
-      Muted Strips are not considered as snap targets.
-   Sound Strips
-      Sound Strips are not considered as snap targets.
-
-.. _bpy.types.SequencerToolSettings.use_snap_current_frame_to_strips:
-
-Current Frame
-   Snap to Strips
-      Snaps the Playhead to all strips.
-
 Retiming Tool
 =============
 .. reference::
@@ -595,10 +592,9 @@ When handle is moved, all remaining handles to the right will be moved by same a
    Only strip content is retimed, existing animation is not handled by the tool
 
 Removing Retiming Handles
------------------------
+-------------------------
 Handle can be deleted by clicking on triangle. When handle is deleted, strip size will not change and speed will change to average between 2 affected sections.
 
 Retiming split strips
 -----------------------
 When strip is split, retming handle is created on both strip edges. If split happens on frame where there already is retiming handle, it is reused, so existing retiming is not affected. These retiming handles will be invisible and handle on left strip edge can not be moved.
-
