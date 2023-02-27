@@ -39,8 +39,8 @@ Main Region
 
 The main region of the File Browser acts similar to the file browser built into you operating system.
 The region contains an array of files, folders, or internal blend-file data in a grid or list of items.
-You can `navigate <Navigating>`_, `select <Selecting>`_,
-and `edit <Editing>`_ these items just as you would in your operating system's file browser.
+`Navigating`_, `selecting`_, and `editing`_ of these items works just as it would in your operating system's file
+browser.
 
 
 .. _file_browser-previews:

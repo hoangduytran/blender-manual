@@ -40,7 +40,7 @@ See `Examples`_ at the end of this page.
      `here <https://development.root-1.de/Atomic_Blender_PDB_XYZ_Remarks.php>`__.
    - Many molecules can be downloaded from the `RCSB site <https://www.rcsb.org/>`__ (go to 'Download').
    - A list of software that deals with PDB in different ways can be found on
-     the `RCSB site <https://www.rcsb.org/pages/thirdparty/molecular_graphics>`__. There also is
+     the `RCSB site <https://www.rcsb.org/docs/additional-resources/molecular-graphics-software>`__. There also is
      `Vesta <https://jp-minerals.org/vesta/en/>`__, `ASE <https://wiki.fysik.dtu.dk/ase/>`__ and all the
      `quantum chemical calculators <https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_software>`__
      used in research, which can create or even calculate atomic structures and store them in PDB/XYZ files.
@@ -409,12 +409,12 @@ Examples
    * - .. figure:: /images/addons_import-export_mesh-atomic_JPCC-2014.jpg
 
           Functionalized [5]helicene molecules on the NaCl(001) surface
-          (Clemens Barth et al. -- `Link to publication <https://doi.org/10.1021/jp501738c>`__).
+          (Clemens Barth et al. -- `Link to publication <https://pubs.acs.org/doi/10.1021/jp501738c>`__).
 
      - .. figure:: /images/addons_import-export_mesh-atomic_ESE-2017.jpeg
 
           Solar cell structure to underline the properties of silicon nanocrystals deposited by pulsed spray system
-          (Mickael Lozac'h et al. -- `Link to publication <https://doi.org/10.1002/ese3.174>`__).
+          (Mickael Lozac'h et al. -- `Link to publication <https://onlinelibrary.wiley.com/doi/10.1002/ese3.174>`__).
 
 `This video <https://www.youtube.com/watch?v=8WmCn5xGebs>`__
 was created by Sébastien Coget (responsible researcher: Frank Palmino)

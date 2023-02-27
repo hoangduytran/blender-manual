@@ -11,7 +11,8 @@ a bone to a given ratio of its original volume.
 .. seealso::
 
    `Harkyman on the development of the Maintain Volume constraint
-   <http://www.harkyman.com/2010/03/16/maintaining-bone-volume-a-new-constraint/>`__.
+   <https://web.archive.org/web/20220702025853/http://www.harkyman.com/2010/03/16/
+   maintaining-bone-volume-a-new-constraint/>`__.
 
 
 Options
