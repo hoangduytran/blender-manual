@@ -7,7 +7,7 @@ There are a number of principles to be aware of before you begin working with PD
 
 .. _latest-menus: https://github.com/Clockmender/Precision-Drawing-Tools/wiki/98-PDT-Latest-Release-Menus
 
-Be sure to check out `Latest Release Menus <latest-menus>`__ to see current layouts.
+Be sure to check out latest-menus_ to see current layouts.
 
 #. PDT is split into several sections and this list will grow as the add-on develops.
 #. PDT has a concept of a ``Working Plane`` that applies in all Operations,

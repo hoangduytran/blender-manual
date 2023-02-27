@@ -191,8 +191,8 @@ Instancing/Referencing
 Importing USD Files
 ===================
 
-`USD <https://graphics.pixar.com/usd/docs/index.html>`__ files typically represent the scene as
-a hierarchy of primitives, or `prims <https://graphics.pixar.com/usd/docs/USD-Glossary.html#USDGlossary-Prim>`__.
+`USD <https://graphics.pixar.com/usd/release/index.html>`__ files typically represent the scene as
+a hierarchy of primitives, or `prims <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Prim>`__.
 Individual prims contain data to describe scene entities, such as geometry, lights, cameras and transform hierarchies.
 Blender's USD importer converts USD prims to a hierarchy of Blender objects. Like the USD exporter,
 the importer does not yet handle more advanced USD concepts, such as layers and references.
@@ -235,7 +235,7 @@ The importer supports two types of animation:
   will be added to the imported Blender object.
 - **Animating geometry**: Animating mesh and curve geometry is supported by adding
   a :doc:`Mesh Sequence Cache </modeling/modifiers/modify/mesh_sequence_cache>` modifier to the imported data.
-  Geometry attribute (`USD Primvar <https://graphics.pixar.com/usd/docs/USD-Glossary.html#USDGlossary-Primvar>`__)
+  Geometry attribute (`USD Primvar <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Primvar>`__)
   animation is currently supported only for Color Attributes and UVs.
   Note that USD file sequences (i.e. a unique file per frame) are not yet supported.
 
@@ -249,7 +249,7 @@ If a Blender material with the same name already exists in the scene,
 the existing material will be assigned. Otherwise, a new material will be created.
 
 If the USD material has
-a `USD Preview Surface <https://graphics.pixar.com/usd/docs/UsdPreviewSurface-Proposal.html>`__ shader source,
+a `USD Preview Surface <https://graphics.pixar.com/usd/release/spec_usdpreviewsurface.html>`__ shader source,
 the :ref:`render-materials-settings-viewport-display` color, metallic, and roughness are set to
 the corresponding USD Preview Surface input values.
 
@@ -310,12 +310,12 @@ Import Instance Proxies
 
 Visible Primitives Only
    Do not import invisible USD primitives. Only applies to primitives with a non-animated
-   `visibility <https://graphics.pixar.com/usd/docs/USD-Glossary.html#USDGlossary-Visibility>`__ attribute.
+   `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
    Primitives with animated visibility will always be imported.
 
 Guide
    Include primitives with
-   `purpose <https://graphics.pixar.com/usd/docs/USD-Glossary.html#USDGlossary-Purpose>`__ ``guide``.
+   `purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__ ``guide``.
 
 Proxy
    Include primitives with purpose ``proxy``.

@@ -139,10 +139,10 @@ This standard is new and therefore support for it is still limited.
      - Notes
    * - `HTC Vive Cosmos`_
      - Windows
-     - `Developer Preview <https://forum.vive.com/topic/9046-vive-openxr-support-for-vive-cosmos/>`__
+     - `Developer Preview <https://forum.htc.com/topic/9046-vive-openxr-support-for-vive-cosmos/>`__
    * - `HTC Vive Focus 3`_
      - Windows
-     - `Developer Preview <https://forum.vive.com/topic/9876-focus-3-openxr-support-status/page/3/>`__
+     - `Developer Preview <https://forum.htc.com/topic/9876-focus-3-openxr-support-status/page/3/>`__
    * - `Monado`_
      - GNU/Linux
      - *Not* recommended for general use yet.
@@ -171,11 +171,11 @@ HTC Vive Cosmos
 ^^^^^^^^^^^^^^^
 
 The dedicated platform for
-the `HTC Vive Cosmos <https://www.vive.com/eu/product/vive-cosmos/overview/>`__
+the `HTC Vive Cosmos <https://www.vive.com/eu/product/#cosmos%20series>`__
 is currently targeted at developers and may lack features found in other platforms.
 
 - Follow the steps from
-  the `Vive Developer Forums <https://forum.vive.com/topic/9046-vive-openxr-support-for-vive-cosmos/>`__.
+  the `Vive Developer Forums <https://forum.htc.com/topic/9046-vive-openxr-support-for-vive-cosmos/>`__.
 - Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
 
 
@@ -187,7 +187,7 @@ the `HTC Vive Focus 3 <https://www.vive.com/eu/product/vive-focus3/overview/>`__
 is currently targeted at developers and may lack features found in other platforms.
 
 - Follow the steps from
-  the `Vive Developer Forums <https://forum.vive.com/topic/9876-focus-3-openxr-support-status/page/3/>`__.
+  the `Vive Developer Forums <https://forum.htc.com/topic/9876-focus-3-openxr-support-status/page/3/>`__.
 - Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
 
 
@@ -205,17 +205,18 @@ platform for Linux. It is not yet ready for production usage and should only be 
 
   For other systems, it has to be compiled from source, which in this case is not
   recommended for people with little experience in compiling software.
-  Follow the `Getting Started Guides <https://gitlab.freedesktop.org/monado/monado/-/blob/master/README.md>`__
+  Follow the `Getting Started Guides <https://gitlab.freedesktop.org/monado/monado/-/blob/main/README.md>`__
   from Monado to do so nevertheless.
 - Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
 
 
-Oculus
-^^^^^^
+Meta (formerly Oculus)
+^^^^^^^^^^^^^^^^^^^^^^
 
-`Oculus <https://www.oculus.com/>`__ provides full support for OpenXR as of the Oculus v31 Software Update.
+`Meta (formerly Oculus) <https://www.meta.com/quest/>`__ provides full support for OpenXR as of the Oculus v31
+Software Update.
 
-- Download and install the `Oculus Rift/Oculus Link software <https://www.oculus.com/setup/>`__.
+- Download and install the `Oculus Rift/Oculus Link software <https://www.meta.com/quest/setup/>`__.
 - Set Oculus as the active OpenXR runtime via the *General* tab in the Oculus App Settings.
 
 .. figure:: /images/getting-started_configuration_hardware_xr_runtime_oculus.jpg

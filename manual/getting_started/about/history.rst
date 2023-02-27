@@ -99,23 +99,23 @@ Version/Revision Milestones
    The second open source Blender release.
 2.28x -- July 2003:
    First of the 2.28x series.
-`2.30 <https://archive.blender.org/development/release-logs/blender-230/>`__ -- October 2003:
+`2.30 <https://archive.blender.org/www/development/release-logs/blender-230/>`__ -- October 2003:
    Preview release of the 2.3x UI makeover presented at the 2nd Blender Conference.
-`2.31 <https://archive.blender.org/development/release-logs/blender-231/>`__ -- December 2003:
+`2.31 <https://archive.blender.org/www/development/release-logs/blender-231/>`__ -- December 2003:
    Upgrade to stable 2.3x UI project.
-`2.32 <https://archive.blender.org/development/release-logs/blender-232/>`__ -- January 2004:
+`2.32 <https://archive.blender.org/www/development/release-logs/blender-232/>`__ -- January 2004:
    A major overhaul of internal rendering capabilities.
-`2.33 <https://archive.blender.org/development/release-logs/blender-233/>`__ -- April 2004:
+`2.33 <https://archive.blender.org/www/development/release-logs/blender-233/>`__ -- April 2004:
    Game Engine returns, ambient occlusion, new procedural textures.
-`2.34 <https://archive.blender.org/development/release-logs/blender-234/>`__ -- August 2004:
+`2.34 <https://archive.blender.org/www/development/release-logs/blender-234/>`__ -- August 2004:
    Particle interactions, LSCM UV mapping, functional YafRay integration, weighted creases in subdivision surfaces,
    ramp shaders, full OSA, and many (many) more.
-`2.35 <https://archive.blender.org/development/release-logs/blender-235a/>`__ -- November 2004:
+`2.35 <https://archive.blender.org/www/development/release-logs/blender-235a/>`__ -- November 2004:
    Another version full of improvements: object hooks, curve deforms and curve tapers,
    particle duplicators and much more.
-`2.36 <https://archive.blender.org/development/release-logs/blender-236/>`__ -- December 2004:
+`2.36 <https://archive.blender.org/www/development/release-logs/blender-236/>`__ -- December 2004:
    A stabilization version, much work behind the scenes, normal and displacement mapping improvements.
-`2.37 <https://archive.blender.org/development/release-logs/blender-237a/>`__ -- June 2005:
+`2.37 <https://archive.blender.org/www/development/release-logs/blender-237a/>`__ -- June 2005:
    Transformation tools and widgets, soft bodies, force fields, deflections,
    incremental subdivision surfaces, transparent shadows, and multi-threaded rendering.
 `2.40 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.40>`__ -- December 2005:
@@ -130,10 +130,10 @@ Version/Revision Milestones
    sculpting, retopology, multiple additional mattes, distort and filter nodes, modeling and
    animation improvements, better painting with multiple brushes, fluid particles,
    proxy objects, Sequencer rewrite, and post-production UV texturing.
-`2.44 <https://archive.blender.org/development/release-logs/blender-244/index.html>`__ -- May 2007:
+`2.44 <https://archive.blender.org/www/development/release-logs/blender-244/index.html>`__ -- May 2007:
    The big news, in addition to two new modifiers and re-awakening the 64-bit OS support, was the addition
    of subsurface scattering, which simulates light scattering beneath the surface of organic and soft objects.
-`2.45 <https://archive.blender.org/development/release-logs/blender-245/index.html>`__ -- September 2007:
+`2.45 <https://archive.blender.org/www/development/release-logs/blender-245/index.html>`__ -- September 2007:
    Serious bug fixes, with some performance issues addressed.
 `2.46 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.46>`__ -- May 2008:
    The Peach release was the result of a huge effort of over 70 developers providing enhancements to
@@ -144,7 +144,7 @@ Version/Revision Milestones
    It contained the results of `Project Peach <https://peach.blender.org/>`__.
 `2.47 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.47>`__ -- August 2008:
    Bugfix release.
-`2.48 <https://archive.blender.org/development/release-logs/blender-248/index.html>`__ -- October 2008:
+`2.48 <https://archive.blender.org/www/development/release-logs/blender-248/index.html>`__ -- October 2008:
    The Apricot release, cool GLSL shaders, lights and GE improvements, snap, sky simulator,
    Shrinkwrap modifier, and Python editing improvements.
    This contained the results `Project Apricot <https://apricot.blender.org/>`__.
@@ -158,7 +158,7 @@ Version/Revision Milestones
 .. rubric:: Blender 2.5x -- The Recode!
 
 `2.5x <https://www.blender.org/download/releases/#25-series-2009-2011>`__ -- From 2009 to August 2011:
-   This series released four `pre-version <https://archive.blender.org/development/release-logs/blender-256-beta>`__
+   This series released four `pre-version <https://archive.blender.org/www/development/release-logs/blender-256-beta>`__
    (from Alpha 0 in November 2009 to Beta in July 2010) and
    three stable versions (from 2.57 - April 2011 to 2.59 - August 2011).
    It was one of the most important development projects, with a total refactor of the software with new functions,
