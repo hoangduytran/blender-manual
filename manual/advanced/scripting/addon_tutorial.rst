@@ -598,7 +598,7 @@ Here are some sites you might like to check on after completing this tutorial.
 
 - `Blender/Python API Overview <https://docs.blender.org/api/current/info_overview.html>`__ --
   For more background details on Blender/Python integration.
-- `How to Think Like a Computer Scientist <https://runestone.academy/runestone/books/published/thinkcspy/index.html>`__ --
+- `How to Think Like a Computer Scientist <https://runestone.academy/ns/books/published/thinkcspy/index.html>`__ --
   Great info for those who are still learning Python.
 - `Blender Development (Wiki) <https://wiki.blender.org>`__ --
   Blender Development, general information and helpful links.

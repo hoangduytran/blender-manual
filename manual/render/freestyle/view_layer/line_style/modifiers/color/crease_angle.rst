@@ -22,4 +22,4 @@ Angle Min, Max
    :width: 50%
 
    Crease Angle modifier example by T.K.
-   (`blend-file <https://wiki.blender.org/uploads/b/b4/Render_freestyle_modifier_crease_angle.blend>`__).
+   (`blend-file <https://archive.blender.org/wiki/index.php/File:Render_freestyle_modifier_crease_angle.blend>`__).

@@ -330,7 +330,7 @@ Timeline Extra Info
 
 Display amount of frames left until Frame End, very handy especially when rendering an animation or OpenGL preview.
 
-Display current/end time in `SMPTE <http://en.wikipedia.org/wiki/SMPTE_timecode>`_.
+Display current/end time in `SMPTE <https://en.wikipedia.org/wiki/SMPTE_timecode>`_.
 
 Usage: Find it in the Timeline Editor's header.
 

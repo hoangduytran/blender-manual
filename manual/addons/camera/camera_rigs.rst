@@ -181,7 +181,7 @@ enabled in the Preferences :menuselection:`Preferences --> Save & Load --> Auto 
 .. seealso::
 
    - The `author's Github repository <https://github.com/waylow/add_camera_rigs>`__.
-   - A `blog post <http://lacuisine.tech/blog/2018/07/19/2d-camera-rig/>`__ explaining the 2D rig by its authors.
+   - A `blog post <https://lacuisine.tech/2d-camera-rig/>`__ explaining the 2D rig by its authors.
 
 
 .. reference::

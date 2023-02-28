@@ -31,7 +31,8 @@ Sky Type
       Based on the 2012 `paper <https://cgg.mff.cuni.cz/projects/SkylightModelling/>`__ by Hosek and Wilkie.
    :Nishita:
       Improved version of the 1993
-      `model <https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky/simulating-colors-of-the-sky>`__
+      `model <https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky/simulating-
+      colors-of-the-sky.html>`__
       by Nishita et al.
 
 Sun Direction

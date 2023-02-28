@@ -47,7 +47,7 @@ See `Examples`_ at the end of this page.
 
 .. seealso:: **Forum**
 
-   - Please, use the `Blender Artists forum <https://blenderartists.org/t/1197801>`__ for comments and questions or
+   - Please, use the `Blender Artists forum <https://blenderartists.org/t/atomic-blender-pdb-xyz-for-blender-2-8-and-higher/1197801>`__ for comments and questions or
      directly the `Blender chat <https://blender.chat/home>`__.
    - There also is the possibility to ask questions on
      `Stack Exchange <https://blender.stackexchange.com/>`__. However,

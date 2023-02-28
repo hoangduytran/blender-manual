@@ -33,9 +33,9 @@ such as Japanese big brush, cartoon, blueprint, and thickness-with-depth.
 
    * - .. figure:: /images/render_freestyle_introduction_example-3.png
 
-          A cartoon scene from `OHA Studio <http://oha-studios.com/>`__
+          A cartoon scene from `OHA Studio <https://oha-studios.com/>`__
           © Mechanimotion Entertainment.
-          (`blend-file <https://download.blender.org/demo/test/FreeStyle_demo_file.blend.zip>`__)
+          (`blend-file <https://download.blender.org/demo/test/freestyle_demo_file.blend.zip>`__)
 
      - .. figure:: /images/render_freestyle_introduction_example-4.png
 

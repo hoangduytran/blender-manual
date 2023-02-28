@@ -3,12 +3,10 @@
 The Blender Community
 *********************
 
-Being freely available from the start, even while it was closed source,
-considerably helped Blender's adoption by the community.
-A large, stable, and active community of users has gathered around Blender since 1998.
-The community showed its support for Blender in 2002 when they helped raise
-€100,000 in seven weeks to enable Blender to go Open Source under
-the `GNU GPL License <https://www.gnu.org/licenses/gpl.html>`__.
+Being freely available from the start, even while it was closed source, considerably helped Blender's adoption by the
+community. A large, stable, and active community of users has gathered around Blender since 1998. The community showed
+its support for Blender in 2002 when they helped raise €100,000 in seven weeks to enable Blender to go Open Source
+under the `GNU GPL License <https://www.gnu.org/licenses/gpl.html>`__.
 
 
 Independent Sites
@@ -27,7 +25,7 @@ Getting Support
 
 Blender's community is one of its greatest features, so apart from this user manual,
 there are many different ways to get support from other users, such as :ref:`blender-chat`,
-`Stack Exchange <https://blender.stackexchange.com/>`__, and `Reddit <https://reddit.com/r/blender/>`__.
+`Stack Exchange <https://blender.stackexchange.com/>`__, and `Reddit <https://www.reddit.com/r/blender/>`__.
 
 For studios and organizations there is `Enterprise support <https://www.blender.org/support/>`__,
 and for studios looking to add Blender to their pipeline, `Blender Studio <https://studio.blender.org/>`__
