@@ -15,15 +15,9 @@ That particle system will control how the mesh is exploded.
 Both the number of emitted particles and number of faces determine how granular the *Explode* modifier is.
 More of each faces and particles will mean more individual pieces.
 
-.. Broken link to the demo video...
-   Here is
-   a `demo video <https://wiki.blender.org/uploads/7/7b/Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.ogg>`__
-   showing a cube with a particle system and *Explode* modifier.
-   (`blend-file <https://archive.blender.org/wiki/index.php/File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__).
-
-Here is
-a `demo blend-file <https://archive.blender.org/wiki/index.php/File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__
-showing a cube with a particle system and *Explode* modifier.
+Here is a `demo video <https://archive.blender.org/wiki/index.php/File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_
+2.5.ogg/>`__ showing a cube with a particle system and *Explode* modifier. (`blend-file <https://archive.blender.org/
+wiki/index.php/File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__).
 
 .. note::
 
