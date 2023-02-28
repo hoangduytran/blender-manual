@@ -25,4 +25,4 @@ Phase
    :align: center
 
    Sinus Displacement modifier demo by T.K.
-   (`blend-file <https://wiki.blender.org/wiki/File:Toycar_Sinus.zip>`__).
+   (`blend-file <https://archive.blender.org/wiki/index.php/File:Toycar_Sinus.zip>`__).

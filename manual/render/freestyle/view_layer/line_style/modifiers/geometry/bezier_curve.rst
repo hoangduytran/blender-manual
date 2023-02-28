@@ -14,4 +14,4 @@ Error
    :align: center
 
    Bézier Curve modifier demo by T.K.
-   (`blend-file <https://wiki.blender.org/wiki/File:toycar_bezier.zip>`__).
+   (`blend-file <https://archive.blender.org/wiki/index.php/File:toycar_bezier.zip>`__).
