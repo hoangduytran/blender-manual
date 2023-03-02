@@ -1,5 +1,5 @@
 .. _bpy.types.LineStyle*Modifier_Material:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
    :doc:`</render/freestyle/view_layer/line_style/modifiers/alpha/material>`
    :doc:`</render/freestyle/view_layer/line_style/modifiers/thickness/material>`
 .. --- copy below this line ---

@@ -1,5 +1,5 @@
 .. _bpy.types.LineStyle*Modifier_DistanceFromObject:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
    :doc:`</render/freestyle/view_layer/line_style/modifiers/alpha/distance_from_object>`
    :doc:`</render/freestyle/view_layer/line_style/modifiers/thickness/distance_from_object>`
 .. --- copy below this line ---

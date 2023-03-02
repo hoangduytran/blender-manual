@@ -1,6 +1,6 @@
 .. index:: Compositor Nodes; Invert
 .. _bpy.types.CompositorNodeInvert:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
 .. - :doc:`</render/cycles/nodes/types/color/invert>`
 
 .. --- copy below this line ---

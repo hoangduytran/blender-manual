@@ -42,7 +42,7 @@ they belong to armature, scene and mesh types respectively.
 Data-Block Types
 ================
 
-.. EDITORS NOTE:
+.. Editor's Note:
    Mostly we want to avoid long lists of data -- but in this case,
    it is the only comprehensive list of data-blocks, and something which you cannot
    find directly just through looking at the interface.
@@ -64,7 +64,7 @@ Pack
    File Packing, supports file contents being packed into the blend-file
    (**not** applicable for most data-blocks which have no file reference).
 
-.. EDITORS NOTE:
+.. Editor's Note:
    For each data-block, we have 2 lines.
    1) a terse description.
    2) how its used.

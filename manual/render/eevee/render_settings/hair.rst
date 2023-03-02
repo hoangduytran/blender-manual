@@ -10,7 +10,7 @@ Curves
 .. _bpy.types.RenderSettings.hair_type:
 .. _bpy.types.RenderSettings.hair_subdiv:
 
-.. Editors Note: This part of this page gets copied into:
+.. Editor's Note: This part of this page gets copied into:
 .. - :doc:`</render/cycles/render_settings/hair>`
 
 .. --- copy below this line ---

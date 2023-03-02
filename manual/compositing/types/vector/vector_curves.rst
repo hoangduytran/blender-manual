@@ -1,6 +1,6 @@
 .. index:: Compositor Nodes; Vector Curves
 .. _bpy.types.CompositorNodeCurveVec:
-.. Editors Note: This page gets copied into :doc:`</render/cycles/nodes/types/vector/curves>`
+.. Editor's Note: This page gets copied into :doc:`</render/cycles/nodes/types/vector/curves>`
 
 .. --- copy below this line ---
 

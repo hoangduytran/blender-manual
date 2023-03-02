@@ -1,5 +1,5 @@
 .. _bpy.types.LineStyle*Modifier_CreaseAngle:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
    :doc:`</render/freestyle/view_layer/line_style/modifiers/alpha/crease_angle>`
    :doc:`</render/freestyle/view_layer/line_style/modifiers/thickness/crease_angle>`
 .. --- copy below this line ---

@@ -1,5 +1,5 @@
 .. _bpy.types.CompositorNodeGroup:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
    - :doc:`/editors/texture_node/types/groups`
    - :doc:`/modeling/geometry_nodes/group`
    - :doc:`/render/shader_nodes/groups`

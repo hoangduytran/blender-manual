@@ -1,5 +1,5 @@
 .. _bpy.types.LineStyleColorModifier_Tangent:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
    :doc:`</render/freestyle/view_layer/line_style/modifiers/alpha/tangent>`
    :doc:`</render/freestyle/view_layer/line_style/modifiers/thickness/tangent>`
 .. --- copy below this line ---

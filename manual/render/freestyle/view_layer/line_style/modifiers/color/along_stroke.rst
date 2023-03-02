@@ -1,5 +1,5 @@
 .. _bpy.types.LineStyle*Modifier_AlongStroke:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
    :doc:`</render/freestyle/view_layer/line_style/modifiers/alpha/along_stroke>`
    :doc:`</render/freestyle/view_layer/line_style/modifiers/thickness/along_stroke>`
 .. --- copy below this line ---

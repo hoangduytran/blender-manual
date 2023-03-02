@@ -1,7 +1,7 @@
 .. index:: Compositor Nodes; RGB Curves
 .. _bpy.types.CompositorNodeCurveRGB:
 
-.. Editors Note: This page gets copied into :doc:`</render/cycles/nodes/types/color/rgb_curves>`
+.. Editor's Note: This page gets copied into :doc:`</render/cycles/nodes/types/color/rgb_curves>`
 
 .. --- copy below this line ---
 

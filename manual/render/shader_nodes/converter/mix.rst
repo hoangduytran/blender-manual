@@ -1,5 +1,5 @@
 .. _bpy.types.ShaderNodeMix:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
 .. - :doc:`</modeling/geometry_nodes/utilities/mix>`
 
 .. --- copy below this line ---

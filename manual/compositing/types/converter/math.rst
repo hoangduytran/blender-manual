@@ -1,7 +1,7 @@
 .. index:: Compositor Nodes; Math
 .. _bpy.types.CompositorNodeMath:
 
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
 .. - :doc:`</render/cycles/nodes/types/converter/math>`
 .. - :doc:`</modeling/modifiers/nodes/utilities/math>`
 

@@ -4,7 +4,7 @@
 Markup Style Guide
 ******************
 
-.. Editors Note:
+.. Editor's Note:
    ::
    There are many detailed conventions, e.g:
    ::

@@ -1,5 +1,5 @@
 .. _bpy.types.LineStyle*Modifier_Curvature_3D:
-.. Editors Note: This page gets copied into:
+.. Editor's Note: This page gets copied into:
    :doc:`</render/freestyle/view_layer/line_style/modifiers/alpha/curvature_3d>`
    :doc:`</render/freestyle/view_layer/line_style/modifiers/thickness/curvature_3d>`
 .. --- copy below this line ---
