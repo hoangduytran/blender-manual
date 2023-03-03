@@ -146,7 +146,7 @@ This standard is new and therefore support for it is still limited.
    * - `Monado`_
      - GNU/Linux
      - *Not* recommended for general use yet.
-   * - `Oculus`_ (Rift and Quest)
+   * - `Meta (formerly Oculus)`_ (Rift and Quest)
      - Windows
      - Requires Oculus v31 Software Update. Oculus Link required for Quest.
    * - `SteamVR`_
