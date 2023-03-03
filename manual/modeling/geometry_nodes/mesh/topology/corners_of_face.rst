@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Corners of Face
-.. _bpy.types.GeometryCornersOfFace:
+.. _bpy.types.GeometryNodeCornersOfFace:
 
 ********************
 Corners of Face Node

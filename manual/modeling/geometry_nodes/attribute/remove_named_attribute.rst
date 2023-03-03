@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Remove Named Attribute
-.. _bpy.types.GeometryNodeRemoveNamedAttribute:
+.. _bpy.types.GeometryNodeRemoveAttribute:
 
 ***************************
 Remove Named Attribute Node

@@ -11,6 +11,12 @@
    delete_geometry.rst
    duplicate_elements.rst
    merge_by_distance.rst
+   transform_geometry.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
    separate_components.rst
    separate_geometry.rst
-   transform_geometry.rst

@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Image
-.. _bpy.types.GeometryNodeImageInput:
+.. _bpy.types.GeometryNodeInputImage:
 
 ***************
 Image Node

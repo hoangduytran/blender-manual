@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Named Attribute
-.. _bpy.types.GeometryNodeNamedAttribute:
+.. _bpy.types.GeometryNodeInputNamedAttribute:
 
 ********************
 Named Attribute Node

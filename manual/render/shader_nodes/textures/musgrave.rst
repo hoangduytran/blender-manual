@@ -1,4 +1,4 @@
-.. _bpy.ShaderNodeTexMusgrave:
+.. _bpy.types.ShaderNodeTexMusgrave:
 
 *********************
 Musgrave Texture Node

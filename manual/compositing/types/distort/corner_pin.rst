@@ -1,4 +1,5 @@
 .. index:: Compositor Nodes; Corner Pin
+.. _bpy.types.CompositorNodeCornerPin:
 
 ***************
 Corner Pin Node

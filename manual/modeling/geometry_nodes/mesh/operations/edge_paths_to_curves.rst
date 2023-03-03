@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Edge Paths to Curves
-.. _bpy.types.GeometryNodeInputEdgePathsToCurves:
+.. _bpy.types.GeometryNodeEdgePathsToCurves:
 
 *************************
 Edge Paths to Curves Node

@@ -288,15 +288,25 @@ Add an Attribute node with the selected attribute.
 Preview Node Output
 -------------------
 
-:guilabel:`Shader`
+:guilabel:`Shader` :guilabel:`Geometry Nodes`
 
 .. reference::
 
-   :Shortcut:  :kbd:`Shift-Ctrl-LMB`
+   :Shortcut:  :kbd:`Shift-Ctrl-LMB` for :guilabel:`Shader`, :kbd:`Shift-Alt-LMB` for :guilabel:`Geometry Nodes`
 
-Connect an output of the selected node to Material Output. This is handy when you want to preview shader
-from the middle of the node tree.
+Connect an output of the selected node to the final output of the node tree (the Material Output or World Output
+for Shader, the final Group Output for Geometry Nodes) to preview its output in the viewport.
 You can cycle through the available outputs by clicking it again while holding the modifier keys.
+
+.. seealso::
+   While in Shader, any output can be connected to the final output, in Geometry Nodes, only Geometry outputs
+   can be connected to the final output.
+   To preview other types of outputs in Geometry Nodes,
+   use its own :doc:`Viewer Node </modeling/geometry_nodes/output/viewer>`.
+
+.. seealso::
+   Also check out *Connect to Output*. It is a similar function but has different behaviors.
+   It also works in all node editors.
 
 
 Frame Selected
@@ -505,8 +515,9 @@ Connect to Output
    :Menu:   :menuselection:`Node Wrangler --> Connect to Output`
    :Shortcut:  :kbd:`O`
 
-Connect the output of the selected node to the final output of the node tree. (Composite in Compositor,
-Material Output or World Output in Shader, Group Output in Geometry Nodes, Output in Texture Nodes.)
+Connect the output of the selected node to the final output of the node tree (Composite in Compositor,
+Material Output or World Output in Shader, the final Group Output in Geometry Nodes, Output in Texture Nodes),
+or, if the node is inside a group, to the Group Output.
 
 
 Add Image Sequence

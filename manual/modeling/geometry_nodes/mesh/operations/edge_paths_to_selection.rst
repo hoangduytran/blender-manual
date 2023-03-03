@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Edge Paths to Selection
-.. _bpy.types.GeometryNodeInputEdgePathsToSelection:
+.. _bpy.types.GeometryNodeEdgePathsToSelection:
 
 ****************************
 Edge Paths to Selection Node
