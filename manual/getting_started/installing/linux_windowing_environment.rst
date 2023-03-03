@@ -66,10 +66,10 @@ Known Limitations
 -----------------
 
 NVidia GPU
-   Currently NVidia drivers don't fully support features needed for Wayland,
-   graphical glitches and flickering is a common problem, in some cases
+   Currently NVidia drivers don't fully support features needed for Wayland. Graphical glitches and flickering are 
+   common problems. In some cases, there can be 
    `crashes on startup <https://projects.blender.org/blender/blender/issues/103999>`__.
-   This is not specific to Blender so NVidia users may want to use X11 until driver support improves.
+   This is not specific to Blender, so NVidia users may want to use X11 until driver support improves.
 
 ----
 
