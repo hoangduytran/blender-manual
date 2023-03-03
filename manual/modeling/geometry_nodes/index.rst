@@ -65,3 +65,4 @@ Node Types
    :titlesonly:
 
    group.rst
+   hair/index.rst

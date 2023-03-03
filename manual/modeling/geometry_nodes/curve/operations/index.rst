@@ -13,6 +13,5 @@
    fillet_curve.rst
    resample_curve.rst
    reverse_curve.rst
-   sample_curve.rst
    subdivide_curve.rst
    trim_curve.rst

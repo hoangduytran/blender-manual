@@ -72,6 +72,7 @@ Extension
    :Repeat: Will repeat the image horizontally and vertically giving tiled-looking result.
    :Extend: Will extend the image by repeating pixels on its edges.
    :Clip: Clip to the original image size and set all the exterior pixels values to transparent black.
+   :Mirror: Repeatedly flip the image horizontally and vertically.
 
 Color Space
    Type of data that the image contains, either Color or Non-Color Data.

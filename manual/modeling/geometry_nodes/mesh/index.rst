@@ -9,6 +9,7 @@ Nodes that only operate on meshes.
    :maxdepth: 2
 
    Read <read/index.rst>
+   Sample <sample/index.rst>
    Write <write/index.rst>
 
 ----

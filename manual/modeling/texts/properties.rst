@@ -198,7 +198,7 @@ The *Paragraph* Panel has settings for the alignment and spacing of text.
 Alignment
 ---------
 
-Horizontal Alignment
+Horizontal
    :Left:
       Aligns text to the left of the frames when using them,
       else uses the origin of the text object as the starting point of the text (which grows to the right).
@@ -218,7 +218,10 @@ Horizontal Alignment
 
    .. note:: Both *Justify* and *Flush* only work within frames.
 
-Vertical Alignment
+Vertical
+   :Top:
+      - With text boxes, aligns the top of the text to the top of the frames.
+      - With no text box, aligns the top of the text to the origin of the object, and grows to the bottom.
    :Top Baseline:
       - With text boxes, aligns the 'top' baseline of the text to the top of the frames.
       - With no text box, aligns the actual baseline of the text to the origin of the object,
@@ -229,19 +232,16 @@ Vertical Alignment
          That difference of reference point in the first line
          depending on usage of boxes or not is indeed confusing.
 
-   :Top:
-      - With text boxes, aligns the top of the text to the top of the frames.
-      - With no text box, aligns the top of the text to the origin of the object, and grows to the bottom.
-   :Center:
+   :Middle:
       - With text boxes, centers the text in the frames.
       - With no text box, centers the text on the origin of the object,
         and grows in both top and bottom directions equally.
-   :Bottom:
-      - With text boxes, align the bottom of the text to the bottom of the frames.
-      - With no text box, align the bottom of the text to the origin of the object, and grows to the top.
    :Bottom Baseline:
       - With text boxes, aligns the baseline of the text to the bottom of the frames.
       - With no text box, aligns the baseline of the text to the origin of the object, and grows to the top.
+   :Bottom:
+      - With text boxes, align the bottom of the text to the bottom of the frames.
+      - With no text box, align the bottom of the text to the origin of the object, and grows to the top.
 
 
 Spacing

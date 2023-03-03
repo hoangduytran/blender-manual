@@ -71,8 +71,8 @@ Alignment
    :Flush: Aligns the text to the left and right with equal character spacing.
 
 Align Y
-   :Top Baseline: Aligns the text to the top baseline.
    :Top: Aligns the text to the top.
+   :Top Baseline: Aligns the text to the top baseline.
    :Middle: Aligns the text to the middle.
    :Bottom Baseline: Aligns the text to the bottom baseline.
    :Bottom: Aligns the text to the bottom.

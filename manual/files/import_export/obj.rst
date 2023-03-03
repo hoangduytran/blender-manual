@@ -161,6 +161,10 @@ Forward Axis, Up Axis
 Options
 ^^^^^^^
 
+Split By Object
+   Import each OBJ "object name" group (``o``) as a separate object.
+Split By Group
+   Import each OBJ "object name" group (``g``) as a separate object.
 Vertex Groups
    Import OBJ groups as vertex groups.
 Validate Meshes

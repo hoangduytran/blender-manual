@@ -60,7 +60,7 @@ So generally, if the node link is still accessible, the attribute it references 
 too. However, anonymous attributes cannot be connected to a completely separate geometry
 that was created from a different source. To transfer attributes between separate geometries,
 the :doc:`/modeling/geometry_nodes/geometry/sample/sample_index` or other similar nodes like the
-:doc:`/modeling/geometry_nodes/mesh/operations/sample_nearest_surface` can be used.
+:doc:`/modeling/geometry_nodes/mesh/sample/sample_nearest_surface` can be used.
 
 
 .. _attribute-data-types:

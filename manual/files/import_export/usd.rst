@@ -339,6 +339,10 @@ Light Intensity Scale
 Materials
 ---------
 
+Import All Materials
+   Also import materials that are not used by any geometry.
+   Note, when this option is false, materials referenced by geometry will still be imported.
+
 Import USD Preview
    Convert USD Preview Surface shaders to Principled BSDF shader networks.
 

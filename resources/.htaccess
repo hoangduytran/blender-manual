@@ -58,6 +58,8 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/spline_le
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/spline_parameter.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/spline_parameter.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/spline_resolution.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/spline_resolution.html"
 
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/sample_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/sample/sample_curve.html"
+
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_curve_normal.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_curve_normal.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_curve_radius.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_curve_radius.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/set_curve_tilt.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/write/set_curve_tilt.html"
@@ -74,7 +76,6 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/fill_curv
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/fillet_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/fillet_curve.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/resample_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/resample_curve.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/reverse_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/reverse_curve.html"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/sample_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/sample_curve.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/subdivide_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/subdivide_curve.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/trim_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/trim_curve.html"
 
@@ -94,6 +95,9 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_islan
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/shortest_edge_paths.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/shortest_edge_paths.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/vertex_neighbors.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/vertex_neighbors.html"
 
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/sample_nearest_surface.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/sample/sample_nearest_surface.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/sample_uv_surface.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/sample/sample_uv_surface.html"
+
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/set_shade_smooth.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/write/set_shade_smooth.html"
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/dual_mesh.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/dual_mesh.html"
@@ -105,8 +109,6 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_boole
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_to_curve.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/mesh_to_curve.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_to_points.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/mesh_to_points.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_to_volume.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/mesh_to_volume.html"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/sample_nearest_surface.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/sample_nearest_surface.html"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/sample_uv_surface.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/sample_uv_surface.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/scale_elements.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/scale_elements.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/split_edges.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/split_edges.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/subdivide_mesh.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/subdivide_mesh.html"
@@ -125,7 +127,7 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/text/" "/manual
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/vector/" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/vector/$1"
 
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field/accumulate_field.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/accumulate_field.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/accumulate_field.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field/accumulate_field.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field_at_index.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field/evaluate_at_index.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/interpolate_domain.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/field/evaluate_on_domain.html"
 
