@@ -4,7 +4,7 @@
 Set Hair Curve Profile
 **********************
 
-Sets the radius attribute of hair curves acoording to a profile shape.
+Sets the radius attribute of hair curves according to a profile shape.
 
 
 Inputs

@@ -36,6 +36,24 @@ Convert to Particle System
    :doc:`hair type particle system </physics/particles/hair/introduction>`.
 
 
+Selection Modes
+===============
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`3D Viewport Header --> Select Mode`
+   :Shortcut:  :kbd:`1`, :kbd:`2`
+
+Selection modes limits selection operators to certain curve domains.
+This feature is makes it easy to select whole segments at once, or to give more granular control over editing.
+
+:Control Points:
+   Allows selection of individual control points.
+:Curve:
+   Limits selection to whole curve segments.
+
+
 Select Menu
 ===========
 
@@ -65,3 +83,34 @@ Endpoints
 
 Grow
    Select points or curves which are close to already selected elements.
+
+
+Controls
+========
+
+Sculpt mode provides several properties that give advanced control of the tool's behavior.
+These options can be found in the right-hand side of the 3D Viewport's Header.
+
+.. _bpy.types.Curves.use_mirror_z:
+
+Mirror
+   Allows tools to affect curves symmetrically according to the chosen axis.
+
+.. _bpy.types.Curves.use_sculpt_collision:
+
+Use Sculpt Collision
+   Prevents the curve segments from passing through the :ref:`Surface Object <bpy.types.Curves.surface>`.
+
+
+Display
+=======
+
+Overlays
+--------
+
+.. _bpy.types.View3DOverlay.show_sculpt_curves_cage:
+.. _bpy.types.View3DOverlay.sculpt_curves_cage_opacity:
+
+Cage Opacity
+   Shows the original curves that are currently being edited
+   which is useful with when procedural deformations or child curves are used.

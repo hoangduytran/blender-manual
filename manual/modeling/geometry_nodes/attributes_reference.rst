@@ -337,9 +337,6 @@ tools must be used with data generated from geometry nodes.
 Mode
    :Generic:
       Interpolate and convert the attribute between the domains and data types described on this page.
-   :UV Map:
-      Create a :term:`UV Map` layer, editable in the UV editor. These would otherwise
-      be represented by a 2D vector attribute on the face corner domain.
    :Vertex Group:
       Create a :doc:`Vertex Group </modeling/meshes/properties/vertex_groups/index>`
       from the attribute, which corresponds to a float attribute on the point domain.
