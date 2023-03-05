@@ -54,7 +54,7 @@ Continuous press on :kbd:`Y` shortcut call a customized layer popup with followi
 
 - Active layer always pop under mouse when called.
 - Active layer is changed by hovering, without any click.
-- Layers can be reordered with simple drag'n'drop.
+- Layers can be reordered with simple drag-and-drop.
 - Layer opacity, hide and lock states can be tweaked in popup.
 - Placing mouse outside popup limits will fade inactive layers, useful to quickly inspect content.
 - The plus button on the right adds a new layer.
