@@ -28,7 +28,7 @@ Above Surface
    Blend shrinkwrap for points above the surface.
 
 Smoothing Steps
-   Amount of steps of smoothing applied after shwrinkwrap.
+   Amount of steps of smoothing applied after shrinkwrap.
 
 Lock Roots
    Lock the position of root points.

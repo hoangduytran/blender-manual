@@ -77,7 +77,7 @@ Boundary of each part of the net is rendered in solid lines.
 Sticking tabs have a grayish fill color to be distinguishable from other parts of the net.
 
 A label is written on a tab when its target edge might not be clear.
-Specifically, the label is omitted if the edge will be sticked to the same place as its both neighbors or
+Specifically, the label is omitted if the edge will be stuck to the same place as its both neighbors or
 if one of these is the target itself.
 The format of labels is ``island_abbreviation: edge_number``.
 Island abbreviation is written in square brackets under the corresponding island, before to its full-length name.
@@ -132,7 +132,7 @@ Once the *Unfold* tool is called, the model is split into flattened parts and
 these are presented in a list called *Islands* below.
 The list allows you to change the label of each island.
 If *Create Numbers* is enabled during export, abbreviations of these labels will be used to
-describe which tab should be sticked to which island.
+describe which tab should be stuck to which island.
 After running the *Unfold* tool, these island labels are recalculated so
 that as many faces as possible remain under the same label.
 
@@ -210,7 +210,7 @@ Create Tabs
    Controls if the sticking tabs are created at all.
    For example, uncheck this if you want to stick the model using tape.
 Create Numbers
-   Adds numbers to some edge pairs that are supposed to be sticked together.
+   Adds numbers to some edge pairs that are supposed to be stuck together.
    These numbers are excluded if the correct destination is easy to guess from the neighboring edges.
    In more complex models, they may overlap a lot with each other and with the net itself.
    Disabling this option may help solve such issues.

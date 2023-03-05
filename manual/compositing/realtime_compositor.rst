@@ -167,7 +167,7 @@ is assumed to be zero.
 
 The previous illustration is a representation of a real world example where one uses the :ref:`Alpha
 Over <bpy.types.CompositorNodeAlphaOver>` node to overlay a small logo on an image, as shown in the
-figure below. In that case, the operation domain covers the entirety of the viewport---as will later
+figure below. In that case, the operation domain covers the entirety of the viewport --- as will later
 be demonstrated, but the logo covers only a small area of it, so the rest of the area is assumed to
 be a zero transparent color, which is convenient for the use case.
 

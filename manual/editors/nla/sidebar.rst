@@ -14,7 +14,7 @@ Edited Action
 
    Edited Action panel.
 
-This pannel is available for actions that have not been ":ref:`Pushed Down <bpy.ops.nla.action_pushdown>`".
+This panel is available for actions that have not been ":ref:`Pushed Down <bpy.ops.nla.action_pushdown>`".
 
 Action
    A :ref:`Data-Block <ui-data-block>` menu that allows you to edit actions shown in the action track.

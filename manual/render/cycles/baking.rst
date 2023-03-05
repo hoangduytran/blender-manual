@@ -249,7 +249,7 @@ Margin
 ------
 
 When baking to images, by default a margin is generated around UV "islands".
-This is important to avoid discontinuities at UV seams, due to texture filtering and mipmapping.
+This is important to avoid discontinuities at UV seams, due to texture filtering and mip-mapping.
 
 .. _bpy.types.BakeSettings.margin_type:
 

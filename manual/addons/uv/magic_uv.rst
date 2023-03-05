@@ -86,7 +86,7 @@ Strategy
 #. Click check box *Copy/Paste UV* to show Copy/Paste UV menu.
 #. Select faces whose UV you want to copy.
 #. Click :menuselection:`Copy --> (Target UV Map)`.
-#. Select faces whoe UV you want to paste.
+#. Select faces whose UV you want to paste.
 #. Click :menuselection:`Paste --> (Target UV Map)``.
 
 

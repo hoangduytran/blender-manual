@@ -9,7 +9,7 @@ or edges hit an advancing concave corner. The algorithm tries to do the right th
 one or more new polygons may form at that point, and insetting can continue inside those new polygons.
 
 You can either inset a single polygon or you can treat groups of polygons connected together as a single region,
-forming a complicated polygon (that may include holes) to be insetted as a unit.
+forming a complicated polygon (that may include holes) to be inset as a unit.
 
 In addition to insetting, it is often useful to raise or lower the inset polygon (perpendicular to the inset plane),
 so a parameter to do that is included also.

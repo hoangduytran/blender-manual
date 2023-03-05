@@ -89,7 +89,7 @@ There are several settings to customize visual aspect and behavior in addon pref
   scrubbing back and forth. This is useful for quick flipping between keyframes.
 - Filter to restrict the key display and snapping to Grease Pencil frames only.
 - Change shortcut and choose to propagate it to timeline editors
-- Customizable colors, frame spacing and amount of displayed informations.
+- Customizable colors, frame spacing and amount of displayed information.
 
 Straighten Stroke
 -----------------

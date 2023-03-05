@@ -258,7 +258,7 @@ Sheen
 ^^^^^
 
 When the *Velvet BSDF* node is used in addition to Principled BSDF node, the ``KHR_materials_sheen`` glTF
-extension will be included in the export. The Sheen Color will be exported from Color socket of Vevlet node.
+extension will be included in the export. The Sheen Color will be exported from Color socket of Velvet node.
 Sheen Roughness will be exported from Sigma socket.
 
 If a Sheen Roughness Texture is used, glTF requires the values be written to the alpha (``A``) channel.
@@ -690,7 +690,7 @@ the active actions on all objects.
 NLA Tracks
 ^^^^^^^^^^
 
-In this mode, each NLA Track will be export as an independant glTF animation.
+In this mode, each NLA Track will be export as an independent glTF animation.
 This mode is useful if you are using Strip modifiers, or if you get multiple action on a same Track.
 
 If you rename two tracks on two different objects to the same name, they will become part
@@ -700,7 +700,7 @@ Scene
 ^^^^^
 
 Using `Scene`_ option, animations will be exported as you can see them in viewport.
-You can choose to export a single glTF animation, or each object separatly.
+You can choose to export a single glTF animation, or each object separately.
 
 .. note::
 
@@ -808,8 +808,8 @@ Format
    See: `File Format Variations`_.
 Keep Original
    For glTF Separate file format only. Keep original textures files if possible.
-   Warning: if you use more than one texture, where pbr standard requires only one,
-   only one texture will be used.This can lead to unexpected results
+   Warning: if you use more than one texture, where PBR standard requires only one,
+   only one texture will be used. This can lead to unexpected results
 Textures
    For glTF Separate file format only. Folder to place texture files in. Relative to the gltf-file.
 Copyright
@@ -876,7 +876,7 @@ Data - Material
 
 Materials
    Export full materials, only placeholders (all primitives but without materials),
-   or does not export materials. (In that last case, primitive are merged, lossing material slot information).
+   or does not export materials. (In that last case, primitive are merged, losing material slot information).
 Images
    Output format for images. PNG is lossless and generally preferred, but JPEG might be preferable for
    web applications due to the smaller file size.

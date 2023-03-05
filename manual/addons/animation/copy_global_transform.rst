@@ -9,7 +9,7 @@ When copying, the global (:term:`World Space`) transform is placed on the
 clipboard. This can then be pasted onto any object or bone, at the current frame
 or at another one.
 
-Since the tranfsorm is placed on the clipboard as text, you can even copy-paste
+Since the transform is placed on the clipboard as text, you can even copy-paste
 it into an instant messenger and send it to someone else.
 
 

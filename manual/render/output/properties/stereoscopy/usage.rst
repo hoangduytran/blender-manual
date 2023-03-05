@@ -174,7 +174,7 @@ Stereo 3D Camera
 When using the Stereo 3D scene view setup, a stereo pair is created
 on-the-fly and used for rendering and previsualization.
 For all the purposes this works as two cameras that share most parameters (focal length, clipping, ...).
-The stereo pair, however, is offsetted, and can have unique rotation and shift between itself.
+The stereo pair, however, is offset, and can have unique rotation and shift between itself.
 
 .. figure:: /images/render_output_properties_stereoscopy_usage_camera-stereoscopy-panel.png
 

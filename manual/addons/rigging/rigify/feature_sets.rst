@@ -3,7 +3,7 @@
 Feature Sets
 ************
 
-Rigify allows third party developers to implement sub-add-ons, called *Feature Sets*,
+Rigify allows third party developers to implement sub-addons, called *Feature Sets*,
 which can provide new :doc:`Meta-Rigs </addons/rigging/rigify/metarigs>` and
 :doc:`Rig Types </addons/rigging/rigify/rig_types/index>`. Similar to regular add-ons,
 they can be installed from zip-files through Rigify settings.

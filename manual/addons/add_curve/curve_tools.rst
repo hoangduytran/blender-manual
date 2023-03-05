@@ -51,7 +51,7 @@ Fillet/Chamfer
 Outline
    Create an outline around a selected curve object.
 Recursive Offset
-   Create an offsetted array.
+   Create an offset array.
 Separate Offset/Selected
    Separate the outline mesh from the original.
 

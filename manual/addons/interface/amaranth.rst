@@ -130,7 +130,7 @@ Add a set of nodes to create a vignette effect attached to the selected node.
 Vignette
    Adjust the size and position of the vignette with the Ellipse Mask's X/Y and width, height values.
 
-Usage: Find the templates in the Compositor's header, "Template" pulldown. Or hit :kbd:`W`.
+Usage: Find the templates in the Compositor's header, "Template" drop-down. Or hit :kbd:`W`.
 
 
 Nodes: XYZ Sliders for Normal Node

@@ -16,7 +16,7 @@ Factor
    Factor to blend overall effect.
 
 Feature Awareness
-   Use simeple feature awareness to keep feature definition.
+   Use simple feature awareness to keep feature definition.
 
 
 Properties

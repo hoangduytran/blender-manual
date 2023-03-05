@@ -35,7 +35,7 @@ Properties
 Mode
    The method for evaluation of the curve's normals
 
-   :Minumum Twist:
+   :Minimum Twist:
       The final normals are calculated to have the smallest twist around
       the curve tangent across the whole curve.
    :Z-Up:

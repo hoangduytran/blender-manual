@@ -54,7 +54,7 @@ Width Type :kbd:`M`
    :Depth:
       The perpendicular distance from the original edge to the bevel face.
    :Percent:
-      The percentage of the length of adjacent edges that the new edges is slided along.
+      The percentage of the length of adjacent edges that the new edges are slid along.
    :Absolute:
       The exact distance along edges adjacent to the beveled edge.
       A difference from *Offset* is visible when the unbeveled edges

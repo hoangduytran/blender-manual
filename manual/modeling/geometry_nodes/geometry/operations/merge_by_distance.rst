@@ -22,7 +22,7 @@ Geometry
 
 Selection
    Boolean field that is true for parts of the geometry to be deleted.
-   Unselected points will be completely unsed for the operation--
+   Unselected points will be completely unused for the operation--
    they will not be merged into other points, and no points will merge into them either.
 
    .. tip::

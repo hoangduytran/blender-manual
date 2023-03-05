@@ -106,8 +106,8 @@ Touchpad
 
    This panel is only available on Windows or macOS.
 
-Multitouch Gestures
-   Use multitouch gestures for navigation with touchpad, instead of scroll wheel emulation.
+Multi-touch Gestures
+   Use multi-touch gestures for navigation with touchpad, instead of scroll wheel emulation.
 
 
 Tablet

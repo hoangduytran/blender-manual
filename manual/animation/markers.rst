@@ -236,9 +236,9 @@ Convenient operators for selecting Marks; see :ref:`bpy.ops.marker.select` for m
 All :kbd:`A`
    Selects all Markers.
 None :kbd:`Ctrl-A`
-   Un-selects any already selected Markers.
+   Deselects any already selected Markers.
 Invert :kbd:`Ctrl-I`
-   Select all un-selected Markers and unselects all selected Markers.
+   Select all unselected Markers and deselects all selected Markers.
 
 .. _bpy.ops.marker.select_leftright:
 
