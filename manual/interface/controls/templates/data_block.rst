@@ -37,7 +37,7 @@ Fake User (shield icon)
    If a data-block has no :term:`real users <Real User>`, it'll normally be cleaned up
    (deleted) when saving the blend-file. To prevent this, you can give it a fake user;
    that way, it's guaranteed to "survive." Data-blocks with a fake user have an "F"
-   prefix in the dropdown list.
+   prefix in the drop-down list.
 
    The :doc:`Outliner </editors/outliner/introduction>` can show an overview of all data-blocks
    without real users in the blend-file. Simply change its Display Mode to Orphan Data.
@@ -67,7 +67,7 @@ Preview
 
    A Data-Block menu with preview.
 
-Some data-block menus have large preview images in their dropdown
+Some data-block menus have large preview images in their drop-down
 instead of just icons and names.
 
 .. container:: lead

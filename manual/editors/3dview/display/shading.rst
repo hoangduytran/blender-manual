@@ -16,7 +16,7 @@ Blender offers different shading modes for helping with different tasks.
 For example, Solid shading is well-suited for modeling, while Rendered
 is useful for setting up lighting.
 
-The radio buttons let you change the shading mode, while the dropdown button
+The radio buttons let you change the shading mode, while the drop-down button
 opens a popover with additional options described below.
 
 Pressing :kbd:`Z` opens a pie menu for changing the shading mode.

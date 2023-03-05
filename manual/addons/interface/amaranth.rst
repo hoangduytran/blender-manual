@@ -245,7 +245,7 @@ Debug
 List Missing Images
 -------------------
 
-Display a list of missing images (that is, images that can't be found) Under a collapsable list.
+Display a list of missing images (that is, images that can't be found) Under a collapsible list.
 
 Display the image name and its path, if the image is coming from a linked .blend, display the path to it.
 

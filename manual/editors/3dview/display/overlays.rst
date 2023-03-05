@@ -11,7 +11,7 @@ Viewport Overlays
    :Header:    |overlays-icon| :menuselection:`Overlays`
 
 Clicking the icon toggles all overlays in the 3D Viewport.
-The dropdown button displays a popover with more detailed settings,
+The drop-down button displays a popover with more detailed settings,
 which are described below.
 
 The available options depend on the mode that the 3D Viewport is in.

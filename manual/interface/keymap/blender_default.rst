@@ -50,8 +50,6 @@ Global Keys
      - Quick access (favorites).
    * - :kbd:`Ctrl-Spacebar`
      - Toggle Maximize Area.
-   * - :kbd:`Ctrl-Alt-Spacebar`
-     - Toggle Fullscreen Area.
    * - :kbd:`Ctrl-PageUp` / :kbd:`Ctrl-PageDown`
      - Next/previous Workspace.
    * - :kbd:`Spacebar`

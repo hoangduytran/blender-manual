@@ -677,7 +677,7 @@ of the same glTF animation and will play together.
 
 The importer organizes actions so they will be exported correctly with this mode.
 
-This mode is usefull if you are exporting for game engine, with an animation library of a character.
+This mode is useful if you are exporting for game engine, with an animation library of a character.
 Each action must be on its own NLA track.
 
 
@@ -691,7 +691,7 @@ NLA Tracks
 ^^^^^^^^^^
 
 In this mode, each NLA Track will be export as an independant glTF animation.
-This mode is usefull if you are using Strip modifiers, or if you get multiple action on a same Track.
+This mode is useful if you are using Strip modifiers, or if you get multiple action on a same Track.
 
 If you rename two tracks on two different objects to the same name, they will become part
 of the same glTF animation and will play together.
@@ -905,7 +905,7 @@ Export Deformation Bones only
    Export Deformation bones only, not other bones.
    Animation for deformation bones are baked.
 Flatten Bone Hierarchy
-   Usefull in case of non decomposible TRS matrix.
+   Useful in case of non-decomposable TRS matrix.
 
 Data - Skinning
 ^^^^^^^^^^^^^^^
@@ -952,7 +952,7 @@ Animation mode
 Shape Keys Animations
    Export Shape Keys Animation. Need Shape Keys to be exported (See `Data - Shape Keys`_)
 Bake All Objects Animations
-   Usefull when some objects are constrained without being animated themselves.
+   Useful when some objects are constrained without being animated themselves.
 
 
 Animation - Rest & Ranges
@@ -963,7 +963,7 @@ Use Current Frame as Object Rest Transformations
 Limit to Playback Range
    Clips animations to selected playback range.
 Set all glTF Animation starting at 0
-   Set all glTF Animation starting at 0. Can be usefull for looping animation
+   Set all glTF Animation starting at 0. Can be useful for looping animation
 Negative Frames
    When some frames are in negative range, slide or crop the animation.
 

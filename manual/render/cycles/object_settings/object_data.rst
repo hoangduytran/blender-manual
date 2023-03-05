@@ -213,7 +213,7 @@ to selectively speed up caustic rendering of objects in your scene.
    - :ref:`Filter Glossy <bpy.types.CyclesRenderSettings.blur_glossy>` settings are ignored when using
      MNEE for refractive caustics.
 
-   - MNEE Caustic rays can pass through up to 6 Caustic Caster surfaces between a Caustic Reciever and a
+   - MNEE Caustic rays can pass through up to 6 Caustic Caster surfaces between a Caustic Receiver and a
      Shadow Caustic light before the ray is terminated and caustics are ignored.
 
    - The :ref:`Ambient Occlusion <bpy.types.ShaderNodeAmbientOcclusion>` and

@@ -11,7 +11,7 @@ Viewport Gizmos
    :Header:    |gizmo-icon| :menuselection:`Gizmos`
 
 Clicking the icon toggles all gizmos in the 3D Viewport.
-The dropdown button displays a popover with more detailed settings,
+The drop-down button displays a popover with more detailed settings,
 which are described below.
 
 

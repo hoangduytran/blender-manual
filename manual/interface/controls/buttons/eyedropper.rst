@@ -22,7 +22,7 @@ Color Ramp
 
 Objects/Object-Data
    This is used with object buttons (such as parent, constraints or modifiers) to
-   select an object from the 3D Viewport or Outliner, rather than having to select it from a dropdown.
+   select an object from the 3D Viewport or Outliner, rather than having to select it from a drop-down.
 
 Camera Depth
    Number fields effecting distance can also use the eyedropper.
