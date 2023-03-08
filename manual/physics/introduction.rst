@@ -49,10 +49,10 @@ Hair Radius
 View Percentage
    Factor applied on the density for the viewport.
 Apply Hair Curves
-   Applies the modifier that uses the :doc:`/modeling/geometry_nodes/hair/generate_hair_curves` node group.
+   Applies the modifier that uses the :doc:`/modeling/geometry_nodes/hair/generation/generate_hair_curves` node group.
 Noise
    Deforms hair curves using a noise texture.
-   See the :doc:`/modeling/geometry_nodes/hair/hair_curves_noise` node group for more information.
+   See the :doc:`/modeling/geometry_nodes/hair/deformation/hair_curves_noise` node group for more information.
 Frizz
    Deforms hair curves using a random vector per point to frizz them.
-   See the :doc:`/modeling/geometry_nodes/hair/frizz_hair_curves` node group for more information.
+   See the :doc:`/modeling/geometry_nodes/hair/deformation/frizz_hair_curves` node group for more information.

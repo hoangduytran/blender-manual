@@ -65,4 +65,11 @@ Node Types
    :titlesonly:
 
    group.rst
+
+----
+
+.. toctree::
+   :maxdepth: 3
+   :titlesonly:
+
    hair/index.rst
