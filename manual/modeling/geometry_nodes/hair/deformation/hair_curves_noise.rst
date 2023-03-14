@@ -15,11 +15,11 @@ Inputs
 Cumulative Offset
    Apply offset cumulatively (previous points affect points after).
 
-Distance
-   Overall distance factor for the deformation.
-
 Factor
    Overall factor for the deformation.
+
+Distance
+   Overall distance factor for the deformation.
 
 Shape
    Shape of amount along each curve (0=constant, 0.5=linear).
