@@ -61,3 +61,15 @@ Internal Dependencies
 This panel displays information about all custom named attributes used by the node group.
 More information is available in the
 :ref:`geometry nodes inspection page <bpy.types.SpaceNodeOverlay.show_named_attributes>`.
+
+
+.. _bpy.ops.object.geometry_nodes_move_to_nodes:
+
+Move to Nodes Operator
+======================
+
+Creates a new geometry node tree and appends
+Move inputs and outputs from the modifier into a new node group.
+This action causes All *Output Attributes* to become *Internal Dependencies*
+and all "inputs" will become inputs of the newly created node group.
+
