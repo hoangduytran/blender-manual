@@ -166,52 +166,60 @@ Materials can be dragged onto the object that should use them.
 The use of pose assets is different, and is described in :doc:`/animation/armatures/posing/editing/pose_library`.
 
 There are several things that can happen when an asset is used,
-depending on the **Import Type** configuration of the Asset Browser:
+depending on the following configuration of the Asset Browser:
 
-Link
-   *Same as* :menuselection:`File --> Link...`
+.. _bpy.types.FileAssetSelectParams.import_type:
 
-   The asset will be linked to the current blend-file, and thus be read-only.
-   Later changes to the asset file will be reflected in all files that link it in.
+Import Method
+   Determines how data is managed when an asset is imported.
+   This option can be found in the center of the Asset Browser header.
 
-Append
-   *Same as* :menuselection:`File --> Append...`
+   :Follow Preferences:
+      Use the import method set in the Preferences.
+   :Link:
+      *Same as* :menuselection:`File --> Link...`
 
-   All of the asset and all its dependencies will be appended to the current file.
-   Dragging a material into the scene three times will result in three independent copies.
-   Dragging an object into the scene three times will also result in three independent copies.
+      The asset will be linked to the current blend-file, and thus be read-only.
+      Later changes to the asset file will be reflected in all files that link it in.
+   :Append:
+      *Same as* :menuselection:`File --> Append...`
 
-   "Dependencies" in this case means everything the asset refers to.
-   For an object, this can be its mesh and materials, but also other objects
-   used by modifiers, constraints, or drivers.
+      All of the asset and all its dependencies will be appended to the current file.
+      Dragging a material into the scene three times will result in three independent copies.
+      Dragging an object into the scene three times will also result in three independent copies.
 
-   Since the file now has its own copy of the asset, later changes to
-   the asset file will not be reflected in the file it's appended to.
+      "Dependencies" in this case means everything the asset refers to.
+      For an object, this can be its mesh and materials, but also other objects
+      used by modifiers, constraints, or drivers.
 
-Append (Reuse Data)
-   *Specific to the Asset Browser*.
+      Since the file now has its own copy of the asset, later changes to
+      the asset file will not be reflected in the file it's appended to.
+   :Append (Reuse Data):
+      *Specific to the Asset Browser*.
 
-   The first time an asset is used, it will be appended, including its dependencies,
-   just like described previously. However, Blender will keep track of where it originated,
-   and the next time the asset is used, as much data as possible will be reused.
-   Dragging a material into the scene three times will only load it once,
-   and just assign the same material three times.
-   Dragging an object into the scene three times will create three copies of the object,
-   but all copies will share their mesh data, materials, etc.
+      The first time an asset is used, it will be appended, including its dependencies,
+      just like described previously. However, Blender will keep track of where it originated,
+      and the next time the asset is used, as much data as possible will be reused.
+      Dragging a material into the scene three times will only load it once,
+      and just assign the same material three times.
+      Dragging an object into the scene three times will create three copies of the object,
+      but all copies will share their mesh data, materials, etc.
 
-   Since the file now has its own copy of the asset, later changes to
-   the asset file will not be reflected in the file it's appended to.
+      Since the file now has its own copy of the asset, later changes to
+      the asset file will not be reflected in the file it's appended to.
 
-Instancing Collections
-   *Mimics the Instance Collections option when* :ref:`appending from the file browser <bpy.ops.wm.append>`
+      .. tip::
 
-   Some asset types such as collections can be created as an instanced collection.
-   This is done by enabling the *Instance* option after dragging collection assets into the 3D Viewport.
-   By enabling this option an empty object is added that uses an instance of the collection.
-   If this option is disabled then the full collection hierarchy will be added to the scene.
+         **Instancing Collections**
 
-   Collection Assets from the current file will always be instanced.
+         *Mimics the Instance Collections option when* :ref:`appending from the file browser <bpy.ops.wm.append>`
 
+         Some asset types such as collections can be created as an instanced collection.
+         This is done by enabling the *Instance* option after dragging collection assets into the 3D Viewport.
+         By enabling this option an empty object is added that uses an instance of the collection.
+         If this option is disabled then the full collection hierarchy will be added to the scene.
+
+         Collection Assets from the current file will always be instanced.
 
 Note that all regular Blender operations are available after the asset has been added to the current file.
 For example, you could choose to link an object to the scene; this will also link its mesh and its materials.

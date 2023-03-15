@@ -57,6 +57,7 @@ Filter
 
    :Nearest: No interpolation, uses nearest neighboring pixel.
    :Bilinear: Simple interpolation between adjacent pixels.
+   :Subsampling (3x3): Use nearest with 3x3 :term:`subsamples <Anti-Aliasing>` during rendering.
 
 .. _bpy.types.SequenceTransform.offset:
 
@@ -164,6 +165,8 @@ Display Waveform
 Mono
    Mixdown all audio channels into a single one.
 
+
+.. _sequencer-strips-properties-time:
 
 Time
 ====
