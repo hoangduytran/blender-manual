@@ -73,3 +73,9 @@ Node Types
    :titlesonly:
 
    hair/index.rst
+
+
+.. tip::
+
+   :doc:`Asset Catalogs </files/asset_libraries/catalogs>`
+   that contain geometry node groups will also appear in the add menu.

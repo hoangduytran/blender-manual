@@ -14,8 +14,15 @@ Transform
 You can move the selected node(s) by simply clicking and dragging any empty part on them.
 Alternatively, you can press :kbd:`G`, move the mouse, and click :kbd:`LMB` to confirm.
 
-In general it is recommended to arrange your nodes within the view such that the data flows from
-left to right, top to bottom.
+Dragging a node on top of an existing link will intelligently insert the selected node into the link path.
+This generally works by using the first socket that matches the link type.
+The automatic node attachment feature can be toggled with :kbd:`Alt`.
+When a node is automatically attached the surrounding nodes
+will be shifted to the right or left depending on the :kbd:`T` toggle;
+see :ref:`editors-nodes-usage-auto-offset` for more information on this feature.
+
+In general it is recommended to arrange your nodes within the view
+such that the data flows from left to right, top to bottom.
 
 The width of a node can be changed by dragging its left or right border.
 

@@ -109,7 +109,7 @@ The path should point to the location of the asset library.
 
    Name and Location of asset libraries in the Preferences.
 
-To create a new asset library, just create an empty directory and add it to the list.
+To create a new asset library, just create an empty directory and add it to the :ref:`ui-list-view`.
 Any asset from any blend-file contained in that directory
 (or subdirectories thereof) will appear in the :doc:`/editors/asset_browser`.
 

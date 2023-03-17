@@ -32,6 +32,11 @@ Inputs
 Geometry
    Standard geometry input.
 
+Selection
+   A boolean field input for each element indicating whether to store the attribute value for the given index.
+   If the attribute does not exist, unselected parts are filled with zero values;
+   otherwise, only the selected parts are filled.
+
 Value
    The input field to evaluate.
 

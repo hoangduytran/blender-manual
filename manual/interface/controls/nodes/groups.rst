@@ -95,6 +95,14 @@ Min, Max
 Hide Value
    Hide the socket value even when the socket is not connected.
 
+.. _bpy.types.NodeSocketInterface.hide_in_modifier:
+
+Hide in Modifier
+   Don't show the input value in the geometry nodes modifier interface.
+   This allows the input to be used in the context of a node group but not as a modifier input.
+
+   This option is only available for geometry nodes and only for input sockets.
+
 
 .. _bpy.ops.node.tree_path_parent:
 .. _bpy.ops.node.group_edit:

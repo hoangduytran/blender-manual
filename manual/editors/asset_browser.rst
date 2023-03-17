@@ -22,6 +22,9 @@ expanded over multiple upcoming releases.
       Build on top of the Asset Browser.
 
 
+.. _bpy.ops.asset.catalog_undo:
+.. _bpy.ops.asset.catalog_redo:
+
 Interface
 =========
 
@@ -48,7 +51,7 @@ The Source List region can be used for navigating and `Using Assets`_.
 
 .. _bpy.types.FileAssetSelectParams.asset_library_ref:
 
-Library
+Asset Library
    Shows the active :doc:`asset library </files/asset_libraries/index>`,
    and allows switching between asset libraries.
    The library ":ref:`Current File <asset-library-current-file>`" is special,
@@ -67,9 +70,11 @@ Copy Asset Bundle to Library
 
 Catalog
    Tree view that shows the :doc:`catalogs </files/asset_libraries/catalogs>` of the active asset library.
+   Selecting a catalog limits shown assets to assets only from the selected library.
 
    Catalogs can be renamed by double clicking on there name.
    Catalogs can also be nested inside others by dragging and dropping one catalog into another.
+   The "All" catalogs is built-in asset library that contains all other asset libraries.
 
 Add-ons and features like the :doc:`/animation/armatures/posing/editing/pose_library`
 can show custom panels here.
@@ -163,6 +168,7 @@ Using Assets
 As a general rule, **an asset can be used by dragging it from the Asset Browser to the desired location**.
 Objects and worlds can be dragged from the Asset Browser into the scene,
 Materials can be dragged onto the object that should use them.
+Geometry nodes can also be dragged onto objects to add a :doc:`/modeling/modifiers/generate/geometry_nodes`.
 The use of pose assets is different, and is described in :doc:`/animation/armatures/posing/editing/pose_library`.
 
 There are several things that can happen when an asset is used,

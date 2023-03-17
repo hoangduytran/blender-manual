@@ -38,6 +38,18 @@ So, in the preceding example, selecting ``Characters/Ellie/Poses`` will also sho
 ``Characters/Ellie/Poses/Head`` and ``Characters/Ellie/Poses/Hands``.
 
 
+.. _bpy.ops.asset.catalog_new:
+
+Creating Catalogs
+=================
+
+New catalogs can be created in the :doc:`/editors/asset_browser`
+through :menuselection:`Header --> Catalog --> New Asset Catalog`.
+Once the catalog is created you can double :kbd:`LMB` on it's name in the
+*Source List* region of the editor to give the catalog a more descriptive name.
+Catalogs can also be created in this region by clicking the plus icon found at the top of the tree view.
+
+
 Assigning an Asset
 ==================
 
@@ -51,6 +63,19 @@ To assign assets to a catalog, just select and drag the assets on top of the cat
 
    You can assign an asset to the "Unassigned" catalog,
    this will remove it from any existing catalogs.
+
+
+.. _bpy.ops.asset.catalogs_save:
+
+Saving Catalogs
+===============
+
+Saving catalogs makes any edits to any catalogs permanent by writing the current set up to the asset library.
+Catalogs can be saved in the :doc:`/editors/asset_browser`
+through :menuselection:`Header --> Catalog --> Save Asset Catalog`.
+Once the catalog is created you can double :kbd:`LMB` on it's name
+Catalogs can also be saved in the *Source List* region of the editor
+by clicking the save icon found at the top of the tree view.
 
 
 Components of a Catalog
