@@ -64,10 +64,10 @@ Flare Opening
    Opening radius of the flare at the tip of the braid.
 
 Hair Tie
-   Object used for the hair tie instance.
+   Geometry used for the hair tie instance (priority).
 
 Hair Tie
-   Geometry used for the hair tie instance (priority).
+   Object used for the hair tie instance.
 
 Hair Tie Scale
    Scale of the hair tie instance.

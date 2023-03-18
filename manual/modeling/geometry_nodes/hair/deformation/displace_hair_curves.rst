@@ -25,11 +25,11 @@ Object Space
 Displace Vector
    Vector for displacement.
 
-Surface Object
-   Surface object used to sample the normal for displacement.
+Surface
+   Surface geometry used to sample the normal for displacement. This input takes priority over the corresponding object input, if used.
 
-Surface Geometry
-   Surface geometry used to sample the normal for displacement.
+Surface
+   Surface object used to sample the normal for displacement.
 
 Surface UV Map
    Surface UV map used to sample the normal for displacement.

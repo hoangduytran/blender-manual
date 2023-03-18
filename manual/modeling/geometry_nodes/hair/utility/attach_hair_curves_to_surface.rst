@@ -14,10 +14,10 @@ Geometry
    Input Geometry (may include other than curves).
 
 Surface
-   Surface Object to attach to (needs to have matching transforms).
+   Surface Geometry to attach hair curves to. This input takes priority over the corresponding object input, if used.
 
 Surface
-   Surface Geometry to attach hair curves to.
+   Surface Object to attach to (needs to have matching transforms).
 
 Surface UV Map
    Surface UV map used for attachment.

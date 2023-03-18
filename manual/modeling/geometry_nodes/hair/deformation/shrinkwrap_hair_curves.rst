@@ -14,7 +14,7 @@ Geometry
    Input Geometry (May include other than curves).
 
 Surface
-   Surface geometry used for shrinkwrap.
+   Surface geometry used for shrinkwrap. This input takes priority over the corresponding object input, if used.
 
 Surface
    Surface object used for shrinkwrap.

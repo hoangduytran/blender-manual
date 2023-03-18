@@ -11,7 +11,7 @@ Inputs
 ======
 
 Surface
-   Surface geometry for generation.
+   Surface geometry for generation. This input takes priority over the corresponding object input, if used.
 
 Surface
    Surface object for generation (Needs matching transforms).

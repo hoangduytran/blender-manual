@@ -10,12 +10,13 @@ Interpolates existing guide curves on a surface mesh.
 Inputs
 ======
 
-**Guide Curves**
+Geometry
+   Input Geometry (May include other than curves)
 
-Surface Geometry
-   Surface geometry for generation.
+Surface
+   Surface geometry for generation. This input takes priority over the corresponding object input, if used.
 
-Surface Object
+Surface
    Surface object for generation (Needs matching transforms).
 
 Surface UV Map
