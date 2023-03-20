@@ -62,3 +62,6 @@ Outputs
 =======
 
 **Geometry**
+
+Guide Index
+   Guide index map that was used for the operation.
