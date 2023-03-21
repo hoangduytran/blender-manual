@@ -68,8 +68,11 @@ More information is available in the
 Move to Nodes Operator
 ======================
 
-Creates a new geometry node tree and appends
-Move inputs and outputs from the modifier into a new node group.
-This action causes All *Output Attributes* to become *Internal Dependencies*
-and all "inputs" will become inputs of the newly created node group.
+Creates a new geometry node tree with the name of the current node tree with `.wrapper` appended to the name.
+This operation moves all inputs and outputs from the old modifier into a new node group.
+This action causes all *Output Attributes* to become *Internal Dependencies* utilizing the
+:doc:`/modeling/geometry_nodes/attribute/store_named_attribute`.
+All modifier "inputs" will then also become inputs of the newly created node group.
 
+This operator is useful to easily allow a node tree to be reused in other trees
+or to mark it as an :term:`Asset` to be reused in other projects.

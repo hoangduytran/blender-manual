@@ -71,3 +71,9 @@ Bottom
    A boolean attribute field with a selection of the faces on the bottom of the cone. If the *Fill Type*
    property is set to none, then this will be a selection of the bottom edges instead. If *Radius Bottom*
    is zero, this will be a selection of the bottom vertex.
+
+UV Map
+   A 2D vector representing the default X/Y coordinates of the :term:`UV Map` for the primitive's shape.
+   This can be connected to the :doc:`/modeling/geometry_nodes/attribute/store_named_attribute`,
+   to be used once the Geometry Nodes Modifier get applied.
+   The UV map must be stored on the face corner in order to be accessed.

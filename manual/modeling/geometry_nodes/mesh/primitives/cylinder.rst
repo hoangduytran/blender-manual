@@ -63,3 +63,9 @@ Side
 
 Bottom
    This is the same as the *Top* selection output, but on the bottom side of the geometry instead.
+
+UV Map
+   A 2D vector representing the default X/Y coordinates of the :term:`UV Map` for the primitive's shape.
+   This can be connected to the :doc:`/modeling/geometry_nodes/attribute/store_named_attribute`,
+   to be used once the Geometry Nodes Modifier get applied.
+   The UV map must be stored on the face corner in order to be accessed.

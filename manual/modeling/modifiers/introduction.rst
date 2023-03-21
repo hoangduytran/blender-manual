@@ -158,6 +158,12 @@ Extras
 
    Move to First/Last
       Moves the modifier to the first or last position in the modifier stack.
+   Move to Nodes
+      Converts the existing :doc:`/modeling/modifiers/generate/geometry_nodes`
+      node tree to a group node to be reused in other node trees.
+      See :ref:`bpy.ops.object.geometry_nodes_move_to_nodes` for more information.
+
+      This operator is only available for the Geometry Nodes Modifier.
 
 .. _bpy.ops.object.modifier_remove:
 
