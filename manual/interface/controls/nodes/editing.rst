@@ -33,19 +33,21 @@ and only affect the nodes' positions.
 Connecting Sockets
 ==================
 
-Interactively
--------------
-
 :kbd:`LMB`-click on a socket and drag. You will see a line coming out of it: this is called a *link*.
 Keep dragging and connect the link to an input socket of another node, then release the :kbd:`LMB`.
-While multiple links can route out of an output socket, only a single link can be attached to an input socket.
+
+While multiple links can route out of an output socket, typically a single link can be attached to an input socket,
+that is unless the input is a multi-socket input with looks like a pill shaped socket.
+
+To swap multiple links of a similar type, press and hold :kbd:`Alt` while moving a link.
+This feature also works when adding a new link into a pre-existing socket.
 
 To reposition the outgoing links of a node, rather than adding a new one,
 hold :kbd:`Ctrl` while dragging from an output socket.
 This works for single as well as for multiple outgoing links.
 
-Nodes that have no connections can be inserted on a link.
-Just move the node over the link and release when the link is highlighted.
+Nodes that have no connections can be inserted on a link
+by just move the node over the link and release when the link is highlighted.
 
 .. _bpy.ops.node.link_make:
 

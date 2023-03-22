@@ -204,6 +204,7 @@ The following USD data types can be imported as Blender objects:
 - Lights
 - Materials
 - Meshes
+- Primitive Shapes
 - Volume
 
 For more information on how the various data types are handled,
@@ -289,6 +290,9 @@ Meshes
 
 Volumes
    Import USD OpenVDB field assets.
+
+Primitives
+   Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
 
 Path Mask
    Import only the subset of the USD scene rooted at the given primitive.

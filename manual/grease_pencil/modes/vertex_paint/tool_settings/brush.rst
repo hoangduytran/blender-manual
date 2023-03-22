@@ -53,7 +53,7 @@ The color of the brush. See :ref:`ui-color-picker`.
 Color Palette
 =============
 
-The active Color Palette. See :ref:`ui-color-palette`.
+The active Color Palette. See :ref:`bpy.types.PaletteColor`.
 
 
 Falloff

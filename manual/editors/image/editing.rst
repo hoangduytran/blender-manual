@@ -234,7 +234,7 @@ Extract Palette
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Extract Palette`
 
-Extracts a :ref:`Color Palette <ui-color-palette>` from the image for use by other tools.
+Extracts a :ref:`Color Palette <bpy.types.PaletteColor>` from the image for use by other tools.
 
 
 .. _bpy.ops.gpencil.image_to_grease_pencil:

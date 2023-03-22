@@ -1,4 +1,5 @@
-.. _ui-color-palette:
+.. _bpy.ops.palette:
+.. _bpy.types.PaletteColor:
 
 *************
 Color Palette
@@ -25,6 +26,8 @@ Move (up/down arrow icon)
 
 Sort
    Sort Colors by Hue, Saturation, Value, Luminance.
+
+.. _bpy.types.PaletteColor.color:
 
 Color List
    Each color that belongs to the palette is presented in a list.

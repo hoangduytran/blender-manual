@@ -318,7 +318,7 @@ Similarly, if the data type of a vertex group attribute is changed from the init
 the attribute will no longer be a vertex group.
 
 
-.. _bpy.ops.object.attribute_convert:
+.. _bpy.ops.geometry.attribute_convert:
 
 Attribute Conversion Operator
 =============================

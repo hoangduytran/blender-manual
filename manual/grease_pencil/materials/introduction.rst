@@ -110,7 +110,7 @@ Convert Materials to Vertex Color
    Only keeps necessary materials and convert all materials base color to a Color Attribute.
 
 Extract Palette from Vertex Color
-   Add all used Color Attributes to a new Color Palette. See :ref:`ui-color-palette`.
+   Add all used Color Attributes to a new Color Palette. See :ref:`bpy.types.PaletteColor`.
 
 Copy Material to Selected
    Copy the active material to the selected Grease Pencil object.

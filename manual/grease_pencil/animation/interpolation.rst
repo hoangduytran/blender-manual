@@ -37,6 +37,8 @@ Layer
    Restrict the interpolation to Active or All layers.
 Only Selected :guilabel:`Edit Mode`
    When enabled, only selected strokes will be interpolated.
+Exclude Breakdowns
+   Exclude existing :ref:`Breakdowns keyframes <keyframe-type>` as interpolation extremes.
 Flip Mode
    Invert strokes start and end. Automatic will try to found the right mode for every stroke.
 Smooth

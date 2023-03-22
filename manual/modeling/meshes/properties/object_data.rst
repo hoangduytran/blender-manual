@@ -82,6 +82,23 @@ These are operators that are available in the menu to the right of the attribute
 Duplicate Color Attribute
    Creates a copy of the active color attribute in the list.
 
+.. _bpy.ops.geometry.color_attribute_convert:
+
+Convert Color Attribute
+   Changes how the color attribute is stored.
+
+   Domain
+      The associated part of the geometry that stores the attribute.
+      See :ref:`attribute-domains` for more information.
+
+      :Vertex: Color Attributes are stored per each vertex.
+      :Face Corner: Color Attributes are stored per each corner of a face.
+   Data Type
+      The data type to represent colors internally.
+
+      :Color: RGBA color with floating-point precision.
+      :Byte Color: RGBA color with 8-bit precision.
+
 
 .. _bpy.types.FaceMaps:
 .. _bpy.ops.object.face_map:

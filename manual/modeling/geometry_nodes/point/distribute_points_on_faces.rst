@@ -10,7 +10,7 @@ Distribute Points on Faces
    :alt: Distribute Points on Faces node.
 
 The *Distribute Points on Faces* node places points on the surface of the input geometry object.
-Point, corner and polygon attributes of the input geometry are transferred to the generated points.
+Point, corner, and polygon attributes of the input geometry are transferred to the generated points.
 That includes vertex weights and UV maps.
 Additionally, the node has *Normal* and *Rotation* outputs.
 
@@ -68,6 +68,13 @@ Distribution Method
       Distribute points randomly on the surface. This is the fastest distribution method.
    :Poisson Disk:
       Distribute points randomly on the surface while taking a minimum distance into account.
+
+Legacy Normal
+   By default, the node uses smooth and custom normals for the *Normal* and *Rotation* values .
+   An earlier version of this node only uses "true" normals,
+   this option brings back this behavior of only using "true" normals.
+
+   This option can only be available in the Sidebar.
 
 
 Outputs

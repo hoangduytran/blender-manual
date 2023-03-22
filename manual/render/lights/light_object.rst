@@ -11,6 +11,8 @@ Light Objects
 Common Settings
 ===============
 
+.. _bpy.types.Light.type:
+
 Type
    Defines the type of light.
 Color
@@ -24,7 +26,6 @@ Renderer Settings
 - :doc:`Cycles specific settings </render/cycles/light_settings>`
 
 
-.. _light-type-point:
 .. _bpy.types.PointLight:
 
 Point Light
@@ -47,9 +48,13 @@ Light intensity/energy decays based on (among other variables)
 distance from the point light to the object. In other words,
 surfaces that are further away will be rendered darker.
 
+.. _bpy.types.PointLight.energy:
+
 Power
    Power of the light in Watts. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
+
+.. _bpy.types.PointLight.shadow_soft_size:
 
 Radius
    When larger than zero, light will be emitted from a spherical surfaces with the specified radius.
@@ -57,7 +62,6 @@ Radius
    because their power is distributed over a larger area.
 
 
-.. _light-type-spot:
 .. _bpy.types.SpotLight:
 
 Spot Light
@@ -66,9 +70,13 @@ Spot Light
 A spot light emits a cone-shaped beam of light from the tip of the cone,
 in a given direction.
 
+.. _bpy.types.SpotLight.energy:
+
 Power
    Power of the light in Watts. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
+
+.. _bpy.types.SpotLight.shadow_soft_size:
 
 Radius
    When larger than zero, light will be emitted from a spherical surfaces with the specified radius.
@@ -83,6 +91,8 @@ Beam/Spot Shape
 
    Changing the spot options also changes the appearance of the spotlight as displayed in the 3D Viewport.
 
+.. _bpy.types.SpotLight.spot_size:
+
 Size
    The size of the outer cone of a spot,
    which largely controls the circular area a spot light covers.
@@ -96,6 +106,8 @@ Size
 
         - .. figure:: /images/render_lights_light-object_size60.png
              :width: 320px
+
+.. _bpy.types.SpotLight.spot_blend:
 
 Blend
    The *Blend* slider controls the inner cone of the spot.
@@ -126,11 +138,13 @@ Blend
    Notice in the picture above that the object's shadow is sharp as a result of the ray tracing,
    whereas the spotlight edges are soft.
    If you want other items to cast soft shadows within the spot area, you will need to alter other shadow settings.
+
+.. _bpy.types.SpotLight.show_cone:
+
 Show Cone
    Displays a transparent cone in 3D Viewport to visualize which objects are contained in it.
 
 
-.. _light-type-area:
 .. _bpy.types.AreaLight:
 
 Area Light
@@ -142,20 +156,24 @@ or a cloudy sky are just a few types of area light. The area light produces shad
 soft borders by sampling a light along a grid the size of which is defined by the user.
 This is in direct contrast to point-like artificial lights which produce sharp borders.
 
+.. _bpy.types.AreaLight.energy:
+
 Power
    Power of the light in Watts. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
 
+.. _bpy.types.AreaLight.shape:
+
 Shape
    Shape of the light.
 
-   Rectangle
+   :Rectangle:
       The shape of the light can be represented as a rectangle and changed with the "X" and "Y" values.
-   Square
+   :Square:
       The shape of the light can be represented as a square and changed with the *Size* property.
-   Disk
+   :Disk:
       The shape of the light can be represented as a disk and changed with the *Size* property.
-   Ellipse
+   :Ellipse:
       The shape of the light can be represented as an ellipse and changed with the X and Y values.
 
    .. tip::
@@ -166,11 +184,12 @@ Shape
       with proper ratio for *Size X* and *Size Y*. For the simulation of the light emitted by
       a TV screen, a vertical *Square* area light would be better in most cases.
 
+.. _bpy.types.AreaLight.size:
+
 Size / Size X / Size Y
    Dimensions for the *Square* or *Rectangle*.
 
 
-.. _light-type-sun:
 .. _bpy.types.SunLight:
 
 Sun Light
@@ -187,10 +206,15 @@ plus a dashed line indicating the direction of the light.
    but because the light is emitted from a location considered infinitely far away,
    the location of a sun light does not affect the rendered result.
 
+.. _bpy.types.SunLight.energy:
+
 Strength
    Strength of the lights in Watts per square meter. Typical values are
    around 250 for an overcast day and 1000 or more for direct sunlight.
    See more details at `Power of Lights`_.
+
+.. _bpy.types.SunLight.angle:
+
 Angle
    The size of the sun light according to its
    `angular diameter <https://en.wikipedia.org/wiki/Angular_diameter#Use_in_astronomy>`__
