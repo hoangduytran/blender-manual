@@ -62,12 +62,22 @@ Disable Wayland (forcing X11)
       WAYLAND_DISPLAY="" blender
 
 
+Environment Variables
+---------------------
+
+``XCURSOR_THEME``
+   The cursor theme to use (must refer to a locally installed cursor).
+
+``XCURSOR_SIZE``
+   The cursor size, defaults to 28, you may wish to increase the size on Hi-DPI displays.
+
+
 Known Limitations
 -----------------
 
 NVidia GPU
-   Currently NVidia drivers don't fully support features needed for Wayland. Graphical glitches and flickering are 
-   common problems. In some cases, there can be 
+   Currently NVidia drivers don't fully support features needed for Wayland. Graphical glitches and flickering are
+   common problems. In some cases, there can be
    `crashes on startup <https://projects.blender.org/blender/blender/issues/103999>`__.
    This is not specific to Blender, so NVidia users may want to use X11 until driver support improves.
 
