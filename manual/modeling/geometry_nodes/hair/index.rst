@@ -4,7 +4,7 @@
   Hair Nodes
 ##############
 
-Nodes for hair curves.
+Nodes focussed on generating or editing curves, typically used for hair.
 
 .. toctree::
    :maxdepth: 2

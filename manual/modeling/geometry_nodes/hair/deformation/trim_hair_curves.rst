@@ -11,7 +11,7 @@ Inputs
 ======
 
 Geometry
-   Input Geometry (May include other than curves).
+   Input Geometry (only curves will be affected).
 
 Scale Uniform
    Scale each curve uniformly to reach the target length.

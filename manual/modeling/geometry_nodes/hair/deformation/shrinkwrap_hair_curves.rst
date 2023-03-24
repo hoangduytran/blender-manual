@@ -11,7 +11,7 @@ Inputs
 ======
 
 Geometry
-   Input Geometry (May include other than curves).
+   Input Geometry (only curves will be affected).
 
 Surface
    Surface geometry used for shrinkwrap. This input takes priority over the corresponding object input, if used.

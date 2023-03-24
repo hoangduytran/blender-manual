@@ -11,7 +11,7 @@ Inputs
 ======
 
 Geometry
-   Input Geometry (May include other than curves).
+   Input Geometry (only curves will be affected).
 
 Amount
    Amount of duplicates per curve.

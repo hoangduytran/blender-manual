@@ -110,6 +110,7 @@ Shape Key Edit Mode (edit mode icon)
 Add Rest Position
    Creates an:abbr:`Attribute </modeling/geometry_nodes/attributes_reference>` in the vertex domain called
    ``rest_position`` which is a copy of the ``position`` attribute before shape keys and modifiers are evaluated.
+   Only mesh objects support this option.
 
 
 Relative Shape Keys

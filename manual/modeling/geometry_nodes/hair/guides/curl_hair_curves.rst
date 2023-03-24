@@ -13,7 +13,9 @@ Inputs
 **Geometry**
 
 Guide Index
-   Guide index map to be used. This input has priority.
+   Guide index map witch describes which curve to use as the center of each braid group.
+   If this input is provided, it priority over an existing map in the `guide_curve_index`
+   attribute, and the *Guide Distance* and *Guide Mask* attribute will be unused.
 
 Guide Distance
    Minimum distance between two guides for new guide map.
@@ -22,7 +24,9 @@ Guide Mask
    Mask for which curve are eligible to be selected as guides.
 
 Existing Guide Map
-   Use the existing guide map attribute if available.
+   Use the existing guide map attribute if available. If this is false, and the *Guide Index*
+   input isn't provided, the *Guide Distance* and *Guide Mask* input will be used to generate
+   a new :doc:`guide map </modeling/geometry_nodes/hair/guides/create_guide_index_map>` for this node.
 
 Factor
    Factor to blend overall effect.
@@ -65,3 +69,5 @@ Outputs
 
 Guide Index
    Guide index map that was used for the operation.
+   If a new guide map is created by this node, it will be stored for
+   this output.

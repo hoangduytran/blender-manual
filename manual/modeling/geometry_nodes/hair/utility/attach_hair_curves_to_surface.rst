@@ -11,7 +11,7 @@ Inputs
 ======
 
 Geometry
-   Input Geometry (may include other than curves).
+   Input Geometry (only curves will be affected).
 
 Surface
    Surface Geometry to attach hair curves to. This input takes priority over the corresponding object input, if used.
@@ -20,10 +20,17 @@ Surface
    Surface Object to attach to (needs to have matching transforms).
 
 Surface UV Map
-   Surface UV map used for attachment.
+   Surface UV map stored on the mesh used for finding curve attachment locations.
 
 Surface Rest Position
    Set the surface mesh into its rest position before attachment.
+
+   .. tip::
+      In a typical hair generation setup, this node or modifier will be
+      combined with the `/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
+      If that operation comes after this one, it makes sense to turn this option on so the
+      position used is the pre-deformed position consistent with the expectations for the
+      deformation's input.
 
 Sample Attachment UV
    Sample the surface UV map at the attachment point.

@@ -5,25 +5,33 @@ Interpolate Hair Curves
 ***********************
 
 Interpolates existing guide curves on a surface mesh.
-
+The `/modeling/geometry_nodes/hair/generation/duplicate_hair_curves` is a similar option with simpler
+behavior that may offer better performance.
 
 Inputs
 ======
 
 Geometry
-   Input Geometry (May include other than curves)
+   Input Geometry (only curves will be affected).
 
 Surface
-   Surface geometry for generation. This input takes priority over the corresponding object input, if used.
+   Surface geometry for generation. This input takes priority over the corresponding object input if both are provided.
 
 Surface
    Surface object for generation (Needs matching transforms).
 
 Surface UV Map
-   Surface UV map used for attachment.
+   Surface UV map stored on the mesh used for finding curve attachment locations.
 
 Surface Rest Position
    Set the surface mesh into its rest position before attachment.
+
+   .. tip::
+      In a typical hair generation setup, this node or modifier will be
+      combined with the `/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
+      If that operation comes after this one, it makes sense to turn this option on so the
+      position used is the pre-deformed position consistent with the expectations for the
+      deformation's input.
 
 Follow Surface Normal
    Align the interpolated curves to the surface normal.

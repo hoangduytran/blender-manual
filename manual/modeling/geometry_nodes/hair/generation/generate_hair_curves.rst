@@ -5,22 +5,32 @@ Generate Hair Curves
 ********************
 
 Generates new hair curves on a surface mesh.
+The curves are generated from scratch at point locations; if creating curves that depend on
+existing curves is desired, the `/modeling/geometry_nodes/hair/generation/interpolate_hair_curves`
+is a better choice.
 
 
 Inputs
 ======
 
 Surface
-   Surface geometry for generation. This input takes priority over the corresponding object input, if used.
+   Surface geometry for generation. This input takes priority over the corresponding object input if both are provided.
 
 Surface
-   Surface object for generation (Needs matching transforms).
+   Surface object for generation (The transforms of this object must match the modifier object).
 
 Surface UV Map
-   Surface UV map used for attachment.
+   Surface UV map stored on the mesh used for finding curve attachment locations.
 
 Surface Rest Position
    Set the surface mesh into its rest position before attachment.
+
+   .. tip::
+      In a typical hair generation setup, this node or modifier will be
+      combined with the `/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
+      If that operation comes after this one, it makes sense to turn this option on so the
+      position used is the pre-deformed position consistent with the expectations for the
+      deformation's input.
 
 Hair Length
    Length of the generated hair curves.
@@ -33,6 +43,7 @@ Control Points
 
 Poisson Disk Distribution
    Use poisson disk distribution method to keep a minimum distance.
+   See the :doc:`/modeling/geometry_nodes/point/distribute_points_on_faces` for more information.
 
 Density
    Surface density of generated hair curves.
@@ -42,6 +53,7 @@ Density Mask
 
 Mask Texture
    Discard points based on an mask texture after distribution.
+   The texture is sampled with the *Surface UV Map* input.
 
 Viewport Amount
    Factor applied on the density for the viewport.
@@ -59,9 +71,9 @@ This node has no properties.
 Outputs
 =======
 
-**Geometry**
+Geometry
 
-**Curves**
+Curves
 
 Surface Normal
    Normal direction of the surface mesh at the attachment point.

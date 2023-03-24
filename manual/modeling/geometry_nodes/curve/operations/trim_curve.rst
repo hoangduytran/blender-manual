@@ -29,11 +29,15 @@ NURBS splines will be transformed into poly splines in order to be trimmed.
    :doc:`/modeling/geometry_nodes/attribute/capture_attribute` could be used to avoid this,
    by saving the original normals to be used later.
 
+
 Inputs
 ======
 
 Curve
    Standard geometry input with a curve component.
+
+Selection
+   A boolean field input for each curve indicating whether it is trimmed or not.
 
 Start
    The factor or length used to determine where to start each output spline.

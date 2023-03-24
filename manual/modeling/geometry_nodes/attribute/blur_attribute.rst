@@ -1,40 +1,35 @@
 .. index:: Geometry Nodes; Blur Attribute
 .. _bpy.types.GeometryNodeBlurAttribute:
 
-************************
+*******************
 Blur Attribute Node
-************************
+*******************
 
 .. figure:: /images/node-types_GeometryNodeBlurAttribute.jpg
    :align: right
    :alt: Blur Attribute node.
    :width: 300px
 
-The *Blur Attribute* node is implementation of Blur effect for attributes based on geometry topology.
+The *Blur Attribute* node smooths attribute values between neighboring geometry elements.
 
-Meen of each step is mixing value of each primitive with neighbors.
-Weight of primitive is factor for multiplying all neighbor's value before accumulate its as new primitive value.
+The goal of each step is mixing values of each element with its neighbors.
+The weight for element is factor for multiplying all neighbor's values before accumulating them as new primitive value.
 
-Blurring can work when values on primitives have explicit relations.
+Blurring will only work with certain geometry types and :ref:`attribute domains <attribute-domains>`.
 Therefore, the attribute can only be affected on the :doc:`Meshes </modeling/meshes/introduction>` and
 :doc:`Curves </modeling/curves/introduction>` components.
 
-Attribute domain expect same limitation as components.
-Explicit relation for correct blurring have Points, Edges, Faces of mesh, and Points of curve.
+The domains this node works on is based on the :ref:`field context <field-context>` of the node's evaluation.
+Only domains with explicit relations with their neighbors will work with this node.
+Explicit relations for correct blurring are vertices, edges, and faces of meshes, and curve control points.
 
 .. note::
 
-   Face corner no implemented due to this type of primitive have a lot of possible relation that mean it can't be
-   implemented in general correct.
+   Blurring of face corner attributes is not handled by this node,
+   because the ideal behavior for mixing face corner values is not clear.
 
-Defining domain of node inputs evaluating is based on context of node output evaluation.
-
-For correct expected result available all :ref:`Attribute Type <attribute-data-types>` without boolean.
-The Boolean attribute type has mixing issues.
-
-.. tip::
-
-   You can avoid this limitation with using Int type.
+All :ref:`attribute data types <attribute-data-types>` are supported except 
+for boolean attributes.
 
 
 Inputs
@@ -44,8 +39,8 @@ Value
    The immediate value of each primitive to blur.
 
 Iterations
-   Number of repeats of mixing value with neighbors. Each iteration is independent. Until one iteration is
-   completed, its results are not used as a source for next blurring.
+   Number of repetitions of mixing value with neighbors. Each iteration is independent.
+   Until one iteration is completed, its results are not used as a source for next blurring.
 
 Weight
    Weight of each primitive.
@@ -74,5 +69,5 @@ Input is Mesh Plane. First :doc:`/modeling/geometry_nodes/mesh/operations/subdiv
 faces for capture color with :doc:`/modeling/geometry_nodes/utilities/random_value`
 used as hue in :doc:`/modeling/geometry_nodes/utilities/color/combine_color` on this.
 Now second :doc:`/modeling/geometry_nodes/mesh/operations/subdivide_mesh` split each face on a lot of new.
-Each one new duplicate original attribute.
-Blur Attribute node mixing all attributes for each faces. Due to this result so smooth.
+Each one new duplicates original attribute.
+Blur Attribute node mixes all attributes for each face. Due to this, the result is smoothed.

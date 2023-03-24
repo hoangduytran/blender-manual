@@ -9,6 +9,7 @@
    edge_angle.rst
    edge_neighbors.rst
    edge_vertices.rst
+   edges_to_face_groups.rst
    face_area.rst
    face_neighbors.rst
    face_group_boundaries.rst

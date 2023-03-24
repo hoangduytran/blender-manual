@@ -11,7 +11,7 @@ Inputs
 ======
 
 Geometry
-   Input Geometry (may include other than curves).
+   Input Geometry (only curves will be affected).
 
 Factor
    Factor to blend overall effect.

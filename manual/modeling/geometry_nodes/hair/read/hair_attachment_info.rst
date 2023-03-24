@@ -14,7 +14,7 @@ Surface Geometry
    Surface geometry of the curve attachment.
 
 Surface UV Map
-   Surface UV map used for attachment.
+   Surface UV map stored on the mesh used for finding curve attachment locations.
 
 
 Properties
