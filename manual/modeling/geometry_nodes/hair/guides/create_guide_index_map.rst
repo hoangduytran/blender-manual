@@ -4,10 +4,10 @@
 Create Guide Index Map
 **********************
 
-Creates an integer attribute named `guide_curve_index`that stores
+Creates an integer attribute named ``guide_curve_index`` that stores
 the nearest guide curve for every curve to its nearest guide via index.
 
-Other nodes in the *Guides* `Guides </modeling/geometry_nodes/hair/guides/index>`
+Other nodes in the :doc:`/modeling/geometry_nodes/hair/guides/index`
 category can generate guide maps themselves for convenience, but the behavior is
 always the same as this node.
 

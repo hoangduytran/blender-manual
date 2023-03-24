@@ -6,7 +6,7 @@ Generate Hair Curves
 
 Generates new hair curves on a surface mesh.
 The curves are generated from scratch at point locations; if creating curves that depend on
-existing curves is desired, the `/modeling/geometry_nodes/hair/generation/interpolate_hair_curves`
+existing curves is desired, the :doc:`/modeling/geometry_nodes/hair/generation/interpolate_hair_curves`
 is a better choice.
 
 
@@ -27,7 +27,7 @@ Surface Rest Position
 
    .. tip::
       In a typical hair generation setup, this node or modifier will be
-      combined with the `/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
+      combined with the :doc:`/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
       If that operation comes after this one, it makes sense to turn this option on so the
       position used is the pre-deformed position consistent with the expectations for the
       deformation's input.
@@ -71,9 +71,9 @@ This node has no properties.
 Outputs
 =======
 
-Geometry
+**Geometry**
 
-Curves
+**Curves**
 
 Surface Normal
    Normal direction of the surface mesh at the attachment point.

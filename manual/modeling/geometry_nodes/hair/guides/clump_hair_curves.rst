@@ -15,7 +15,7 @@ Geometry
 
 Guide Index
    Guide index map witch describes which curve to use as the center of each braid group.
-   If this input is provided, it priority over an existing map in the `guide_curve_index`
+   If this input is provided, it priority over an existing map in the ``guide_curve_index``
    attribute, and the *Guide Distance* and *Guide Mask* attribute will be unused.
 
 Guide Distance

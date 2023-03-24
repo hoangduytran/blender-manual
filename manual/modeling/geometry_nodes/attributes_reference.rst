@@ -307,7 +307,7 @@ However, the attributes might be expected by Blender to have a certain type.
      - Holds the position of points or vertices from before a geometry is deformed procedurally.
        Can be created automatically before :doc:`Shape Keys </animation/shape_keys/index>`and
        :doc:`modifiers </modeling/modifiers/introduction>` are evaluated with the
-       `Add Rest Position <bpy.types.Object.add_rest_position_attribute>` option.
+       :doc:`Add Rest Position <bpy.types.Object.add_rest_position_attribute>` option.
 
    * - ``surface_uv_coordinate``
      - *2D Vector*

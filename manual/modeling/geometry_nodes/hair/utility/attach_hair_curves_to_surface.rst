@@ -27,7 +27,7 @@ Surface Rest Position
 
    .. tip::
       In a typical hair generation setup, this node or modifier will be
-      combined with the `/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
+      combined with the :doc:`/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
       If that operation comes after this one, it makes sense to turn this option on so the
       position used is the pre-deformed position consistent with the expectations for the
       deformation's input.
