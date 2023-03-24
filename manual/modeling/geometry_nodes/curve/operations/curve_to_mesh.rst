@@ -13,7 +13,7 @@ The Curve to Mesh node converts all splines of a curve to a mesh.
 Optionally, a profile curve can be provided to give the curve a custom shape.
 
 The node transfers attributes to the result. Attributes that are built-in on meshes but not curves,
-like ``shade_smooth``, will be transferred to the correct domain as well.
+like ``sharp_face``, will be transferred to the correct domain as well.
 
 .. tip::
 
