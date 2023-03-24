@@ -24,7 +24,7 @@ Brush Settings
 ==============
 
 General
-*******
+-------
 
 Radius
    Pressure Sensitivity is not supported for this brush type. More info at :ref:`Radius <bpy.types.Brush.size>`.
@@ -40,11 +40,13 @@ Auto-Smooth
    This setting is not supported. More info at :ref:`Auto-Smooth <bpy.types.Brush.auto_smooth_factor>`.
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
+
 Unique
-******
+------
 
 .. _bpy.types.Brush.use_grab_active_vertex:
 
@@ -69,16 +71,18 @@ Grab Silhouette
 Note how in the image only the bottom side of the leg is pulled down, despite the size of the brush.
 
 .. tip::
-   This setting is also useful for grabbing a single side of a crease and pushing it further inwards,
-   creating a more pinched crease.
+
+   This setting is also useful for grabbing a single side of a crease
+   and pushing it further inwards, creating a more pinched crease.
 
 
 Additional Workflows
 ====================
 
 2D Grab Brush
-   If the :ref:`Falloff Shape <bpy.types.Brush.falloff_shape>` is set to *Projected*, the brush can grab infinitely
-   deep into the viewport. This is especially useful for much broader changes to a sculpt.
+   If the :ref:`Falloff Shape <bpy.types.Brush.falloff_shape>` is set to *Projected*,
+   the brush can grab infinitely deep into the viewport.
+   This is especially useful for much broader changes to a sculpt.
 
    .. figure:: /images/sculpt-paint_sculpting_grab_projected.jpg
 

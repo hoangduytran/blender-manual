@@ -18,24 +18,23 @@ Tool Settings
 Mode
    The operation to apply to the face set.
 
-   Grow Face Set
+   :Grow Face Set:
       Grows the face sets boundary by one face based on mesh topology.
       This is also available as a :ref:`shortcut operator <bpy.ops.sculpt.face_set_edit>`
       via :kbd:`Ctrl-W`.
-   Shrink Face Set
+   :Shrink Face Set:
       Shrinks the face sets boundary by one face based on mesh topology.
       This is also available as a :ref:`shortcut operator <bpy.ops.sculpt.face_set_edit>`
       via :kbd:`Ctrl-Alt-W`.
-   Delete Geometry
+   :Delete Geometry:
       Deletes the faces that are assigned to the face set.
-   Fair Positions
+   :Fair Positions:
       Creates a perfectly flat and smooth geometry patch from the face set.
       This is the ideal way to trim parts of your mesh
       if the vertex count is too high for other operations,
       or the vertex IDs must not be altered
       (Like when using :doc:`Multires </modeling/modifiers/generate/multiresolution>` sculpting).
-
-   Fair Tangency
+   :Fair Tangency:
       Creates a smooth as possible geometry patch from the face set
       by minimizing changes in vertex :term:`tangents <Tangent>`.
       This is ideal for creating smooth curved surfaces on complex topology,

@@ -24,11 +24,12 @@ and pen pressure to achieve various results.
 If used together with :ref:`Dyntopo <bpy.ops.sculpt.dynamic_topology_toggle>`
 it's easy to continuously build shapes, even in a single stroke.
 
+
 Brush Settings
 ==============
 
 General
-*******
+-------
 
 Normal Radius
    Higher by default. This ensures that the brush does not change directions to sporadically during a stroke.
@@ -39,5 +40,6 @@ Tip Roundness
    More info at :ref:`Tip Roundness <bpy.types.Brush.tip_roundness>`
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

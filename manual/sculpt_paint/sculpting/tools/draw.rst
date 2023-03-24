@@ -14,12 +14,15 @@ This is a very default behavior for sculpting and can be used in most cases.
 
 It is common to use this particular brush with heavy customization for creating many custom brushes.
 
+
 Brush Settings
 ==============
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
+
 
 VDM Displacement
 ================
@@ -41,6 +44,7 @@ Ideal images for vector displacement are open EXR files
 with :doc:`color clamping </render/materials/legacy_textures/colors>` disabled.
 
 .. note::
+
    This feature is only supported with Area Plane mapping.
 
 .. A demo file with examples, additional information and a premade baking setup can be found here.

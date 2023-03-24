@@ -12,14 +12,16 @@ Paints on the active color attribute.
 Hold :kbd:`Shift` to blur painted colors instead.
 
 .. note::
+
    More information in the
    :doc:`Painting Introduction </sculpt_paint/sculpting/introduction/painting>`.
+
 
 Brush Settings
 ==============
 
 General
-*******
+-------
 
 Strength
    This settings has a different effect on this brush.
@@ -29,11 +31,13 @@ Strength
    Use the *Flow* setting instead for faster increasing of strength.
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
+
 Unique
-******
+------
 
 Flow
    Amount of paint that is applied per stroke sample.

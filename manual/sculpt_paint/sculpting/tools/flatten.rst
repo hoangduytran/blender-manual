@@ -20,7 +20,7 @@ Brush Settings
 ==============
 
 General
-*******
+-------
 
 Direction :kbd:`Ctrl`
    Invert the direction to push surfaces away from the
@@ -28,5 +28,6 @@ Direction :kbd:`Ctrl`
    creating more surface contrast as a result.
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

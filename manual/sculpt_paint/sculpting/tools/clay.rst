@@ -20,11 +20,12 @@ because it flattens details as you add/subtract from the surfaces.
 If used together with :ref:`Dyntopo <bpy.ops.sculpt.dynamic_topology_toggle>`
 it's easy to continuously build shapes, even in a single stroke.
 
+
 Brush Settings
 ==============
 
 General
-*******
+-------
 
 Hardness
    Slightly higher by default. This makes the profile of the brush more noticeable.
@@ -38,5 +39,6 @@ Auto-Smooth
    More info at :ref:`Auto-Smooth <bpy.types.Brush.auto_smooth_factor>`
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

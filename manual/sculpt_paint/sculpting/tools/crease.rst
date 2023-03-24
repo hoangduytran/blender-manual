@@ -14,11 +14,12 @@ Create sharp indents or ridges by pushing or pulling the mesh, while pinching th
 Crease can also be used to sharpen and polish existing creases.
 Enable pressure sensitivity on Strength to regulate the add/subtract effect while pinching creases.
 
+
 Brush Settings
 ==============
 
 General
-*******
+-------
 
 Pinch
    Adds a consistent pinching effect to your stroke.
@@ -28,5 +29,6 @@ Pinch
    will behave like a :doc:`Pinch </sculpt_paint/sculpting/tools/pinch>` brush.
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.

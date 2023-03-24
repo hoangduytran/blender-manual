@@ -24,15 +24,11 @@ Brush Settings
 Filter Type
    Operation that is going to be applied to the mesh.
 
-   Gravity
-      Applies gravity to the simulation.
-   Inflate
-      Inflates the cloth.
-   Expand
-      Expands the cloth's dimensions.
-   Pinch
-      Pinches the cloth to the point where the cursor was when the filter started.
-   Scale
+   :Gravity: Applies gravity to the simulation.
+   :Inflate: Inflates the cloth.
+   :Expand: Expands the cloth's dimensions.
+   :Pinch: Pinches the cloth to the point where the cursor was when the filter started.
+   :Scale:
       Scales the mesh as a :doc:`Soft Body </physics/soft_body/index>`
       using the distance to the origin of the object as scale.
       This creates filter produces folds in the surface.
@@ -47,12 +43,9 @@ Force Axis
 Orientation
    :doc:`Orientation </editors/3dview/controls/orientation>` of the axis to limit the filter force.
 
-   Local
-      Use the local axis to limit the force and set the gravity direction.
-   World
-      Use the world axis to limit the force and set the gravity direction.
-   View
-      Use the view axis to limit the force and set the gravity direction.
+   :Local: Use the local axis to limit the force and set the gravity direction.
+   :World: Use the world axis to limit the force and set the gravity direction.
+   :View: Use the view axis to limit the force and set the gravity direction.
 
 Cloth Mass
    Mass of each simulation particle.

@@ -23,30 +23,32 @@ Brush Settings
 ==============
 
 General
-*******
+-------
 
 Only Radius and Auto-Masking has an impact on the brush behavior for this brush.
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
+
 Unique
-******
+------
 
 .. _bpy.types.Brush.pose_deform_type:
 
 Deformation
    Deformation type that is used by the brush.
 
-   Rotate/Twist
+   :Rotate/Twist:
       Rotates the mesh around the pose origin.
       When pressing :kbd:`Ctrl`, the brush applies a twist rotation
       instead (and disables any IK segments that are used).
-   Scale/Translate
+   :Scale/Translate:
       Scale the mesh based on the pose origin.
       While holding :kbd:`Ctrl` the brush moves the mesh.
-   Squash/Stretch
+   :Squash/Stretch:
       Works similar to *Scale/Translate* however, it applies different
       scale values along different axes to achieve the stretching effect.
 
@@ -55,12 +57,12 @@ Deformation
 Rotation Origins
    Method to set the rotation origin for the pose origin or individual IK segments.
 
-   Topology
+   :Topology:
       Sets the rotation origin automatically using the topology and shape of the mesh.
-   Face Sets
+   :Face Sets:
       Creates a pose segment per :ref:`Face Set <sculpting-editing-facesets>`, starting from the active face set.
       This can lead to the most accurate and desirable results.
-   Face Sets FK
+   :Face Sets FK:
       Simulates a :term:`Forward Kinematics` deformation using the :ref:`Face Set <sculpting-editing-facesets>`
       under the cursor as control.
 

@@ -15,18 +15,21 @@ Although :kbd:`Ctrl` can be held to invert the effect to a Scrape brush,
 if *Invert to Scrape* is enabled.
 When disabled, the inverted direction will push surfaces away.
 
+
 Brush Settings
 ==============
 
 General
-*******
+-------
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
+
 Unique
-******
+------
 
 Invert to Scrape
    When enabled, holding :kbd:`Ctrl` while sculpting

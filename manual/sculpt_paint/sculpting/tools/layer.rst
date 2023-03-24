@@ -22,18 +22,20 @@ Brush Settings
 ==============
 
 General
-*******
+-------
 
 Hardness
    Higher by default to ensure the profile of layers is more noticeable.
    More info at :ref:`Hardness <bpy.types.Brush.hardness>`
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
+
 Unique
-******
+------
 
 .. _bpy.types.Brush.height:
 

@@ -20,14 +20,16 @@ Brush Settings
 ==============
 
 General
-*******
+-------
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
+
 Unique
-******
+------
 
 Magnify
    Pulled geometry tends to lose volume along the stroke.
@@ -44,8 +46,8 @@ Rake
 Deformation
    Deformation type that is used by the brush.
 
-   Radius Falloff
+   :Radius Falloff:
       Applies the brush falloff to the tip of the brush.
-   Elastic
+   :Elastic:
       Modifies the entire mesh using an :term:`Elastic` deformation.
       More info in the :doc:`Elastic Deform </sculpt_paint/sculpting/tools/elastic_deform>` brush.

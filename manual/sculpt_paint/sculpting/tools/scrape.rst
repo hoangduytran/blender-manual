@@ -20,14 +20,16 @@ Brush Settings
 ==============
 
 General
-*******
+-------
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
+
 Unique
-******
+------
 
 Invert to Fill
    When enabled, holding :kbd:`Ctrl` while sculpting

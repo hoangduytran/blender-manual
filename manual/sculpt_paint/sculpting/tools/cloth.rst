@@ -16,6 +16,7 @@ It's also easy to sculpt the mesh with other brushes and tools
 in between using the cloth brushes.
 
 .. note::
+
    Using a relatively small brush size makes the calculations much faster,
    while larger brush sizes might be too slow to get a usable brush.
 
@@ -24,14 +25,16 @@ Brush Settings
 ==============
 
 General
-*******
+-------
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
+
 Unique
-******
+------
 
 Persistent
    Allows the cloth brush to not accumulate deformation after each stroke.
@@ -78,23 +81,23 @@ Pin Simulation Boundary
 Deformation
    The type of cloth deformation that is used by the brush.
 
-   Drag
+   :Drag:
       Simulates pulling the cloth to the cursor,
       similar to placing a finger on a table cloth and pulling.
-   Push
+   :Push:
       Simulates pushing the cloth away from the cursor,
       similar to placing a finger on a table cloth and pushing.
-   Pinch Point
+   :Pinch Point:
       Simulates pulling the cloth into a point.
-   Pinch Perpendicular
+   :Pinch Perpendicular:
       Simulates pulling the brush into a line.
-   Inflate
+   :Inflate:
       Simulates air being blown under the cloth so that the cloth lifts up.
-   Grab
+   :Grab:
       Simulates picking up and moving the cloth.
-   Expand
+   :Expand:
       Simulates stretching the cloth out.
-   Snake Hook
+   :Snake Hook:
       Simulates moving the cloth without producing any artifacts in the surface
       and creates more natural looking folds than any of the other deformation modes.
       This is accomplished by adjusting the strength of the deformation constraints per brush step
@@ -105,10 +108,8 @@ Deformation
 Force Falloff
    Shape used in the brush to apply force to the cloth.
 
-   Radial
-      Applies the force as a sphere.
-   Plane
-      Applies the force as a plane.
+   :Radial: Applies the force as a sphere.
+   :Plane: Applies the force as a plane.
 
 .. _bpy.types.Brush.cloth_mass:
 

@@ -21,31 +21,31 @@ Tool Settings
 Filter Type
    These are all of the available filter deformations.
 
-   Smooth
+   :Smooth:
       Smooths the positions of the vertices to either polish surfaces or remove volume from larger shapes.
       Especially useful to fix most of the artifacts of the voxel remesher.
       This filter works similar to the :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
-   Scale
+   :Scale:
       Increases the size of the mesh.
       This filter works similar to the :ref:`Scale Transform <bpy.ops.transform.resize>`.
-   Inflate
+   :Inflate:
       Displaces vertices uniformly along their normal.
       This filter works similar to the :doc:`Inflate </sculpt_paint/sculpting/tools/inflate>` brush.
-   Sphere
+   :Sphere:
       Morphs the mesh progressively into a sphere.
       This filter works similar to the :ref:`To Sphere Transform <bpy.ops.transform.tosphere>`.
-   Random
+   :Random:
       Randomly moves vertices along the vertex normal.
       This filter works similar to the :ref:`Randomize Transform <bpy.ops.object.randomize_transform>`.
-   Relax
+   :Relax:
       Tries to create an even distribution of quads without deforming the volume of the mesh.
       This filter works the same as holding :kbd:`Shift` with the
       :doc:`Slide Relax </sculpt_paint/sculpting/tools/slide_relax>` brush.
-   Relax Face Sets
+   :Relax Face Sets:
       This will remove the jagged lines visible after drawing or creating a face set.
       This filter works the same as holding :kbd:`Shift` with the
       :doc:`Draw Face Set </sculpt_paint/sculpting/tools/draw_facesets>` brush.
-   Surface Smooth
+   :Surface Smooth:
       Eliminates irregularities of the mesh by making the positions
       of the vertices more uniform while preserving the volume of the object.
       This filter works similar to the *Surface* deformation type of the
@@ -55,7 +55,7 @@ Filter Type
          How much of the original shape is preserved when smoothing.
       Per-Vertex Displacement
          How much the position of each individual vertex influences the final result.
-   Sharpen
+   :Sharpen:
       Sharpens and smooths the mesh based on its curvature,
       resulting in pinching hard edges and polishing flat surfaces.
       Especially useful when sculpting hard surfaces and stylized models 
@@ -69,12 +69,12 @@ Filter Type
       Curvature Smooth Iterations
          The number of times the smoothing operation is applied per brush step.
          Controls how much smooth the resulting shape is, ignoring high-frequency details.
-   Enhance Details
+   :Enhance Details:
       Increases the high frequency surface details of the mesh
       by intensifying the difference between creases and valleys.
       This filter works similar to the inverted direction of the
       :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
-   Erase Displacement
+   :Erase Displacement:
       Deletes displacement information of
       the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,
       resetting the mesh to a regular subdivision surface result.
@@ -94,9 +94,6 @@ Deformation Axis
 Orientation
    :doc:`Orientation </editors/3dview/controls/orientation>` of the axis to limit the filter displacement.
 
-   Local
-      Use the local axis to limit the displacement.
-   World
-      Use the global axis to limit the displacement.
-   View
-      Use the view axis to limit the displacement.
+   :Local: Use the local axis to limit the displacement.
+   :World: Use the global axis to limit the displacement.
+   :View: Use the view axis to limit the displacement.

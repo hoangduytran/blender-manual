@@ -32,13 +32,10 @@ a new face set instead.
 
 .. note::
    It is not recommended to use this tool on a mesh above 100k vertices when using *Difference*
-   or *Union* as the Trim Mode.
-   This tool is using a Boolean operation so it might take a long time to process.
+   or *Union* as the Trim Mode. This tool is using a Boolean operation so it might take a long time to process.
    For higher resolution meshes it is recommended to instead use the
-   :doc:`Line Project </sculpt_paint/sculpting/tools/line_project>` tool
-   or the *Fair Positions* mode of the
-   :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool to
-   trim geometry.
+   :doc:`Line Project </sculpt_paint/sculpting/tools/line_project>` tool or the *Fair Positions*
+   mode of the :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool to trim geometry.
 
 
 Tool Settings
