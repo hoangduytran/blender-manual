@@ -256,7 +256,8 @@ Built-in attributes always exist, and cannot be removed. Their data type and dom
    * - ``sharp_face``
      - *Boolean*
      - *Face*
-     - Attribute determining if a face should have sharp (rather than smooth) shading enabled in the viewport or a render.
+     - Attribute determining if a face should have sharp (rather than smooth) shading enabled
+       in the viewport or a render.
 
    * - ``resolution``
      - *Integer*
