@@ -98,6 +98,9 @@ This page lists definitions for terms used in Blender and this manual.
       Asset-related information, such as its :term:`catalog <Asset Catalog>`,
       description, author, preview, and tags. See :ref:`editing-asset-metadata`.
 
+   Attribute
+      A generic term to describe data stored per-element in a geometry data-block.
+
    Current File Asset Library
       Asset library that is not a directory on drive, but only reflects the assets in
       the current blend-file. This library is available regardless of the location of

@@ -51,6 +51,25 @@ Reverse UVs
 See :ref:`bpy.ops.mesh.uvs_reverse`.
 
 
+.. _bpy.ops.mesh.flip_quad_tessellation:
+
+Flip Quad Tessellation
+======================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Face --> Face Data --> Flip Quad Tessellation`
+
+Internally, all :term:`quads <Quad>` are :term:`Tessellated <Tessellation>` into 2 triangles,
+this operator swaps which way the quad is split into triangles.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_face_flip-tesselation_before.png
+     - .. figure:: /images/modeling_meshes_editing_face_flip-tesselation_after.png
+
+
 .. _bpy.ops.mesh.mark_freestyle_face:
 
 Mark Freestyle Face

@@ -115,6 +115,8 @@ Face Maps are currently not fully implemented in Blender and require add-ons to 
    `Auto Face Map Widgets add-on <https://projects.blender.org/blender/blender-addons-contrib/src/branch/main/object_facemap_auto>`__
 
 
+.. _bpy.types.AttributeGroup:
+
 Attributes
 ==========
 

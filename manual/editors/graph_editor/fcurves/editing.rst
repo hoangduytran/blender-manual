@@ -382,6 +382,23 @@ Blend
    any property to its default value without the need of keyframing.
 
 
+.. _bpy.ops.graph.ease:
+
+Ease
+----
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Slider Operators --> Ease`
+
+Aligns selected keyframes to follow an exponential path between the first and last keyframes.
+To use this operator, drag the mouse left or right to adjust the operator's *Blend* property.
+
+Blend
+   Changes the concavity of the curve. Values less than 0.5 cause keyframes to concave up,
+   values greater than 0.5 cause keyframes to concave down, a value of 0.5 results in a straight line.
+
+
 .. _bpy.ops.graph.clean:
 
 Clean Keyframes

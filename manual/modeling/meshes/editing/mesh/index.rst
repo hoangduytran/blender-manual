@@ -21,6 +21,7 @@
    snap_symmetry.rst
    normals.rst
    shading.rst
+   set_attribute.rst
    sort_elements.rst
    cleanup.rst
    delete.rst

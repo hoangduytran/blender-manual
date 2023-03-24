@@ -33,7 +33,7 @@ Controls
 On the headers, there are toggles to control channel's setting:
 
 Pin (pin icon)
-   Make the channel always visible regardless of the current selection (Graph editor only).
+   Make the channel always visible regardless of the current selection.
 Hide (eye icon)
    Hides the channel(s)/curve (Graph editor only).
 Modifiers (wrench icon)
