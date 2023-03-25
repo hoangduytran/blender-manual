@@ -204,12 +204,11 @@ Options
 -------
 
 Edge Length Mode
-   Even
-      Space all UVs evenly.
-   Length
-      Todo.
-   Length Average
-      Average space UVs edge length of each loop.
+   Method to space UV edge loops.
+
+   :Even: Space all UVs evenly.
+   :Length: Todo.
+   :Length Average: Average space UVs edge length of each loop.
 
 .. note::
 
@@ -241,13 +240,6 @@ Options
 
 Cube Size
    Set the size of the cube to be projected onto.
-
-
-Common
-^^^^^^
-
-The following settings are common for the Cube, Cylinder, and Sphere mappings:
-
 Correct Aspect
    Map UVs will take the images aspect ratio into consideration.
    If an image has already been mapped to the :term:`Texture Space` that is non-square,
@@ -281,23 +273,35 @@ Options
 -------
 
 Direction
-   View on Poles
+   :View on Poles:
       Use when viewing from the top (at a pole) by using an axis that is straight down from the view.
-   View on Equator
+   :View on Equator:
       Use if view is looking at the equator, by using a vertical axis.
-   Align to Object
+   :Align to Object:
       Uses the object's transform to calculate the axis.
-
 Align
-   Select which axis is up.
+   How to determine rotation around the pole.
 
-   Polar ZX
-      Polar 0 is on the X axis.
-   Polar ZY
-      Polar 0 is on the Y axis.
+   :Polar ZX: Polar 0 is on the X axis.
+   :Polar ZY: Polar 0 is on the Y axis.
+Pole
+   How to handle faces at the poles.
 
+   :Pinch: UVs are pinched at the poles.
+   :Fan: UVs are fanned at the poles.
+Preserve Seams
+   Separate projections by islands isolated by seams.
 Radius
    The radius of the cylinder to use.
+Correct Aspect
+   Map UVs will take the images aspect ratio into consideration.
+   If an image has already been mapped to the :term:`Texture Space` that is non-square,
+   the projection will take this into account and distort the mapping to appear correct.
+Clip to Bounds
+   Any UVs that lie outside the (0 to 1) range will be clipped to that range
+   by being moved to the UV space border it is closest to.
+Scale to Bounds
+   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
 
 
 .. _bpy.ops.uv.sphere_project:
@@ -336,23 +340,37 @@ Options
 -------
 
 Direction
-   View on Poles
-      Use when viewing from the top (at a pole) by using an axis that is straight down from the view.
-   View on Equator
-      Use if view is looking at the equator, by using a vertical axis.
-   Align to Object
-      Uses the object's transform to calculate the axis.
+   Direction of the sphere.
 
+   :View on Poles:
+      Use when viewing from the top (at a pole) by using an axis that is straight down from the view.
+   :View on Equator:
+      Use if view is looking at the equator, by using a vertical axis.
+   :Align to Object:
+      Uses the object's transform to calculate the axis.
 Align
    Select which axis is up.
 
-   Polar ZX
-      Polar 0 is on the X axis.
-   Polar ZY
-      Polar 0 is on the Y axis.
+   :Polar ZX: Polar 0 is on the X axis.
+   :Polar ZY: Polar 0 is on the Y axis.
+Pole
+   How to handle faces at the poles.
 
+   :Pinch: UVs are pinched at the poles.
+   :Fan: UVs are fanned at the poles.
+Preserve Seams
+   Separate projections by islands isolated by seams.
 Radius
    The radius of the sphere to use.
+Correct Aspect
+   Map UVs will take the images aspect ratio into consideration.
+   If an image has already been mapped to the :term:`Texture Space` that is non-square,
+   the projection will take this into account and distort the mapping to appear correct.
+Clip to Bounds
+   Any UVs that lie outside the (0 to 1) range will be clipped to that range
+   by being moved to the UV space border it is closest to.
+Scale to Bounds
+   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
 
 
 .. _bpy.ops.uv.project_from_view:
@@ -375,10 +393,17 @@ you have modeled. You will get stretching in areas where the model recedes away 
 Options
 -------
 
-See also `Common`_ options.
-
 Orthographic
    Apply an orthographic projection.
+Correct Aspect
+   Map UVs will take the images aspect ratio into consideration.
+   If an image has already been mapped to the :term:`Texture Space` that is non-square,
+   the projection will take this into account and distort the mapping to appear correct.
+Clip to Bounds
+   Any UVs that lie outside the (0 to 1) range will be clipped to that range
+   by being moved to the UV space border it is closest to.
+Scale to Bounds
+   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
 
 
 Project from View (Bounds)

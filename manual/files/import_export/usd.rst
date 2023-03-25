@@ -30,6 +30,12 @@ This means that the following meshes can be exported:
   An example is the result of a fluid simulation, where splashes of fluid can break off the main body.
 - Metaballs are exported as animated meshes.
 
+.. note::
+
+   To export the Blender scene as a `USDZ archive <https://openusd.org/release/spec_usdz.html>`__, set
+   the file extension of the output file to **.usdz**.  The exported USDZ package will be a zip archive
+   containing the USD and its texture file dependencies.
+
 .. figure:: /images/files_import-export_usd_example.png
 
    Shot from `Spring <https://studio.blender.org/films/spring/>`__ exported to USD and opened in USDView.
@@ -187,6 +193,11 @@ Instancing/Referencing
    The first copy of the mesh is written for real, and the following copies are referencing the first.
    Which mesh is considered 'the first' is chosen more or less arbitrarily.
 
+USDZ
+   Due to a current limitation in the USD library, UDIM textures cannot be include in the USDZ archive.
+   This limitation will likely be addressed in a future version of USD.
+   (See `USD pull request #2133 <https://github.com/PixarAnimationStudios/USD/pull/2133>`__.)
+
 
 Importing USD Files
 ===================
@@ -209,6 +220,12 @@ The following USD data types can be imported as Blender objects:
 
 For more information on how the various data types are handled,
 see the following descriptions of the `Import Options`_.
+
+.. note::
+
+   When importing a `USDZ archive <https://openusd.org/release/spec_usdz.html>`__, it is
+   important to carefully consider the `Import Textures <textures>`_ option to determine
+   whether and how to copy texture files from the zip archive.
 
 
 Xform and Scope Primitives
@@ -246,15 +263,16 @@ Materials
 
 If a USD mesh or geometry subset has a bound material, the importer will assign to
 the Blender object a material with the same name as the USD material.
-If a Blender material with the same name already exists in the scene,
-the existing material will be assigned. Otherwise, a new material will be created.
+If a Blender material with the same name already exists in the scene, the existing material may be used,
+depending on the :ref:`Material Name Collision <usd-material-name-collision>` option.
+Otherwise, a new material will be created.
 
 If the USD material has
 a `USD Preview Surface <https://graphics.pixar.com/usd/release/spec_usdpreviewsurface.html>`__ shader source,
 the :ref:`render-materials-settings-viewport-display` color, metallic, and roughness are set to
 the corresponding USD Preview Surface input values.
 
-There is also an experimental *Import USD Preview* option to convert USD Preview Surface shaders
+There is also an *Import USD Preview* option to convert USD Preview Surface shaders
 to Blender :doc:`Principled BSDF </render/shader_nodes/shader/principled>` shader nodes.
 This option can be lossy, as it does not yet handle converting all shader settings and types,
 but it can generate approximate visualizations of the materials.
@@ -283,7 +301,7 @@ Lights
    Import lights. Does not currently include USD dome, cylinder or geometry lights.
 
 Materials
-   Import materials. See also the experimental *Import USD Preview* option.
+   Import materials.
 
 Meshes
    Import meshes.
@@ -354,8 +372,36 @@ Set Material Blend
    If the *Import USD Preview* option is enabled, the material blend method will automatically be set based on
    the ``opacity`` and ``opacityThreshold`` shader inputs, allowing for visualization of transparent objects.
 
+.. _usd-material-name-collision:
+
 Material Name Collision
    Behavior when the name of an imported material conflicts with an existing material.
 
    :Make Unique: Import each USD material as a unique Blender material.
    :Reference Existing: If a material with the same name already exists, reference that instead of importing.
+
+
+Textures
+--------
+
+When importing a USDZ package, the following options specify whether and how texture asset dependencies
+of the USD should be copied from the zip archive so they can be loaded into Blender.
+
+Import Textures
+   Behavior when importing textures from a USDZ archive.
+
+   :None: Don't import textures. Note that, with this option, material textures may fail to be resolved in Blender.
+   :Packed: Import textures as packed data in the Blender file.
+   :Copy: Copy files to the directory specified in the `Textures Directory` option.
+
+Textures Directory
+   Path to the directory where imported textures will be copied, when the `Import Textures` mode is `Copy`.
+
+   Note that the default textures directory is the relative path `//textures`, which requires the
+   Blender file to have been saved before importing, so the relative path can be resolved.
+
+File Name Collision
+   Behavior when the name of an imported texture file conflicts with an existing file.
+
+   :Use Existing: If a file with the same name already exists, use that instead of copying.
+   :Overwrite: Overwrite existing files.

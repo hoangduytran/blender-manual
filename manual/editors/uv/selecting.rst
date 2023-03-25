@@ -121,8 +121,11 @@ Select Similar :kbd:`Shift-G`
 
       :Area: Selects faces with a similar area.
       :Area 3D: Selects faces with a similar area in world space coordinates.
-      :Polygon Sides: Selects faces with the same number of edges per face.
       :Material: Selects faces that have the same :doc:`Material </render/materials/index>`.
+      :Object:
+         Selects faces which have the same object. This is useful when multiple objects are in Edit mode at once.
+      :Polygon Sides: Selects faces with the same number of edges per face.
+      :Winding: Select faces which are facing the same as the current face i.e. upwards or downwards.
 
       Island Selection Mode:
 
