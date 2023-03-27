@@ -33,6 +33,12 @@ In future development, this node will be generalized so the setup is more flexib
 
 Parts of the internal operation are similar to the :doc:`/modeling/geometry_nodes/mesh/sample/sample_uv_surface`.
 
+.. warning::
+  
+  In order to achieve consistent deformation after the :doc:`/modeling/modifiers/generate/subdivision_surface`,
+  the *UV Smooth* option of the modifier should be set to *None*. Otherwise the surface UV map will
+  be subdivided in a way that may invalidate the curve UV attachement points stored in the
+  ``surface_uv_coordinate`` attribute.
 
 Inputs
 ======

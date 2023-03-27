@@ -6,6 +6,9 @@ Attach Hair Curves to Surface
 
 Attaches hair curves to a surface mesh.
 
+.. note::
+   This node/modifier will not function without the *Surface* geometry/object and *Surface UV Map* inputs.
+
 
 Inputs
 ======

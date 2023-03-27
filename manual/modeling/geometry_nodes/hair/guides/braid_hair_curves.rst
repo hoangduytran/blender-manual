@@ -27,6 +27,7 @@ Existing Guide Map
    Use the existing guide map attribute if available. If this is false, and the *Guide Index*
    input isn't provided, the *Guide Distance* and *Guide Mask* input will be used to generate
    a new :doc:`guide map </modeling/geometry_nodes/hair/guides/create_guide_index_map>` for this node.
+   Creating the guide map in a separate node or modifier gives more complete control over its creation.
 
 Factor
    Factor to blend overall effect.
@@ -51,6 +52,7 @@ Factor Max
 
 Frequency
    Frequency factor of the braids.
+   This input can vary for different points of the same curve.
 
 Thickness
    Thickness of each strand of hair.
@@ -97,4 +99,4 @@ Flare Parameter
    Parameter from 0 to 1 along the flare.
 
 Strand Index
-   Index of the strand within a braid that each curve belongs to.
+   Index of the group of hair in the braid that each hair curve belongs to.

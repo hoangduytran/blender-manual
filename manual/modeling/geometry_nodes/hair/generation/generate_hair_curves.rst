@@ -9,6 +9,9 @@ The curves are generated from scratch at point locations; if creating curves tha
 existing curves is desired, the :doc:`/modeling/geometry_nodes/hair/generation/interpolate_hair_curves`
 is a better choice.
 
+.. note::
+   This node/modifier will not function without the *Surface* geometry/object and *Surface UV Map* inputs.
+
 
 Inputs
 ======
@@ -53,7 +56,13 @@ Density Mask
 
 Mask Texture
    Discard points based on an mask texture after distribution.
-   The texture is sampled with the *Surface UV Map* input.
+   The image is sampled with the *Surface UV Map* input.
+
+   .. tip::
+      The accuracy of sampling the image doesn't depend on the density of the surface mesh's vertices
+      because it is sampled after the curve root points are generated, the accuracy . However, using
+      the *Density Mask* input instead can give better performance. Using them in combination can
+      give the benefits of both methods.
 
 Viewport Amount
    Factor applied on the density for the viewport.

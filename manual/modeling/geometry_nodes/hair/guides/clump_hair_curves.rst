@@ -28,6 +28,7 @@ Existing Guide Map
    Use the existing guide map attribute if available. If this is false, and the *Guide Index*
    input isn't provided, the *Guide Distance* and *Guide Mask* input will be used to generate
    a new :doc:`guide map </modeling/geometry_nodes/hair/guides/create_guide_index_map>` for this node.
+   Creating the guide map in a separate node or modifier gives more complete control over its creation.
 
 Factor
    Factor to blend overall effect.
