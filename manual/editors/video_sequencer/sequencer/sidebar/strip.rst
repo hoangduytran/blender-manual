@@ -124,12 +124,16 @@ Convert to Float
    Converts input to float data.
 
 
+.. _vse_sidebar_strip_sound:
+
 Sound
 =====
 
 .. reference::
 
    :Panel:     :menuselection:`Sidebar --> Strip --> Sound`
+
+Working with sound is documented further at :ref:`bpy.types.SoundSequence`.
 
 .. _bpy.types.SoundSequence.volume:
 
@@ -159,6 +163,8 @@ Pan
 Display Waveform
    Display an approximate waveform of the sound file inside of the Sound strip.
    The waveform reflects strip volume and its animation using :doc:`keyframes </animation/keyframes/introduction>`.
+
+   Clipping audio, i.e. values over 100% amplitude, will be shown in red in the waveform.
 
 .. _bpy.types.Sound.use_mono:
 

@@ -34,6 +34,22 @@ and Foley sound effects on channel 7.
    concerning audio playback behavior.
 
 
+Waveform
+========
+
+The waveform of the audio is shown depending on two options:
+
+Overlay
+   The Sequencer Overlay menu has options to show all strip waveforms, none of them, or to use the per-strip option described below.
+
+Strip
+   Each strip has an option 'Display Waveform'. It is only visible when the above overlay option is set to 'Use Strip Option'
+
+Clipping audio, i.e. values over 100% amplitude, will be shown in red in the waveform.
+
+More strip options are documented in :ref:`Sound Sidebar Panel <vse_sidebar_strip_sound>`.
+
+
 Animating Audio Track Properties
 ================================
 
