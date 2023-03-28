@@ -23,7 +23,8 @@ The *Wave Texture* node adds procedural bands or rings with noise distortion.
    The distortion built into the *Wave Texture Node* uses the *Color* output of the
    :doc:`Noise Texture Node </render/shader_nodes/textures/noise>`.
 
-   To replicate this, center its value range around zero, multiply it by a factor proportional to *Distortion*/*Scale* and add the result onto the texture coordinates.
+   To replicate this, center its value range around zero, multiply it by a factor proportional to
+   *Distortion*/*Scale* and add the result onto the texture coordinates.
    *Detail*, *Detail Scale* and *Roughness* of the *Wave Texture Node* correspond to the inputs on the
    :doc:`Noise Texture Node </render/shader_nodes/textures/noise>`.
 

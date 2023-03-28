@@ -18,7 +18,8 @@ Geometry
    Input Geometry (only curves will be affected).
 
 Surface
-   Surface geometry for generation. This input takes priority over the corresponding object input if both are provided.
+   Surface geometry for generation. This input takes priority over the corresponding object input if both are
+   provided.
 
 Surface
    Surface object for generation (Needs matching transforms).

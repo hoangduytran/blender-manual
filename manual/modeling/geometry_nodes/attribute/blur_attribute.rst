@@ -13,7 +13,8 @@ Blur Attribute Node
 The *Blur Attribute* node smooths attribute values between neighboring geometry elements.
 
 The goal of each step is mixing values of each element with its neighbors.
-The weight for element is factor for multiplying all neighbor's values before accumulating them as new primitive value.
+The weight for element is factor for multiplying all neighbor's values before accumulating them as new primitive
+value.
 
 Blurring will only work with certain geometry types and :ref:`attribute domains <attribute-domains>`.
 Therefore, the attribute can only be affected on the :doc:`Meshes </modeling/meshes/introduction>` and
