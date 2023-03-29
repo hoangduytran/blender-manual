@@ -127,3 +127,22 @@ There are two helpful reminders that a Clipping Region is used:
 
 #. The clipping region is drawn as a grey box in the 3D Viewport
 #. The Text Info overlay will state that the perspective is "Clipped"
+
+
+.. _bpy.ops.paint.vert_select_linked:
+
+Select Linked
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Linked --> Linked`
+   :Shortcut:  :kbd:`Ctrl-L`, :kbd:`Shift-L`
+
+Select geometry connected to already selected elements.
+This is often useful when a mesh has disconnected, overlapping parts,
+where isolating it any other way would be tedious.
+Pressing :kbd:`Shift-L` will deselect linked any linked elements.
+
+With :kbd:`L` you can also select connected geometry directly under the cursor.

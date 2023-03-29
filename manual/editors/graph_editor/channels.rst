@@ -194,6 +194,16 @@ Additional extrapolation methods (e.g. the *Cycles* modifier)
 are located in the :doc:`F-Curve Modifiers </editors/graph_editor/fcurves/modifiers>`.
 
 
+Add F-Curve Modifier
+--------------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Channel --> Add F-Curve Modifier
+
+Adds a :doc:`F-Curve Modifier </editors/graph_editor/fcurves/modifiers>` to the current channel.
+
+
 .. _bpy.ops.graph.hide:
 .. _bpy.ops.graph.reveal:
 

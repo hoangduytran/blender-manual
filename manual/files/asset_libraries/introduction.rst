@@ -201,6 +201,14 @@ Clear Asset (Set Fake User)
    and still be sure it is not lost when saving the blend-file.
 
 
+Bundled Assets
+==============
+
+Blender includes many assets out of the box, these are contained in the "Essentials" library.
+This library contains a catalog of hair node groups for use with geometry nodes.
+Read more about these node groups in the :doc:`Geometry Nodes </modeling/geometry_nodes/hair/index>` section.
+
+
 .. _asset-libraries-design-limitations:
 
 Design Limitations
