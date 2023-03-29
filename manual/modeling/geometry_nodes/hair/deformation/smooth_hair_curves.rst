@@ -6,6 +6,8 @@ Smooth Hair Curves
 
 Smoothes the shape of  hair curves.
 
+.. peertube:: 7fpUB2eRT6zjMyHRzJ2ZoJ
+
 
 Inputs
 ======

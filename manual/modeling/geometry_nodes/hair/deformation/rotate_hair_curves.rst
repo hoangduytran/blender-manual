@@ -6,6 +6,8 @@ Rotate Hair Curves
 
 Rotates each hair curve around an axis.
 
+.. peertube:: dLEJ6ZgP1t9ksxfB3zHrsj
+
 
 Inputs
 ======

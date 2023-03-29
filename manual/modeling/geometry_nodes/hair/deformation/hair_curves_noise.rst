@@ -6,6 +6,8 @@ Hair Curves Noise
 
 Deforms hair curves using a noise texture.
 
+.. peertube:: eWCeePgTsA75Q8QhKQ6Qh9
+
 
 Inputs
 ======

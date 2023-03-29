@@ -12,6 +12,8 @@ is a better choice.
 .. note::
    This node/modifier will not function without the *Surface* geometry/object and *Surface UV Map* inputs.
 
+.. peertube:: nkB43evNMakLmvuoExgKuF
+
 
 Inputs
 ======

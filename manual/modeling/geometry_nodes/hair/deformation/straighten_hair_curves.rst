@@ -6,6 +6,8 @@ Straighten Hair Curves
 
 Straightens hair curves between root and tip.
 
+.. peertube:: grmo32udHpGWz2TwdEp9GD
+
 
 Inputs
 ======

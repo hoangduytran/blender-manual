@@ -6,6 +6,8 @@ Trim Hair Curves
 
 Trims or scales hair curves to a certain length.
 
+.. peertube:: qfXRAqbL8MKus8YKMkUpE5
+
 
 Inputs
 ======

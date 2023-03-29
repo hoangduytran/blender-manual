@@ -6,6 +6,8 @@ Displace Hair Curves
 
 Displaces hair curves by a vector based on various options.
 
+.. peertube:: 8DP1hsJucDanf2s54P1qe3
+
 
 Inputs
 ======

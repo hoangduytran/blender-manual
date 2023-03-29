@@ -11,6 +11,8 @@ Other nodes in the :doc:`/modeling/geometry_nodes/hair/guides/index`
 category can generate guide maps themselves for convenience, but the behavior is
 always the same as this node.
 
+.. peertube:: cPLeMHSnPYidQmJezdhcyL
+
 
 Inputs
 ======

@@ -6,6 +6,8 @@ Redistribute Curve Points
 
 Redistributes existing control points evenly along each curve.
 
+.. peertube:: syFssvhthKJUo45B2dxw5W
+
 
 Inputs
 ======

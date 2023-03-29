@@ -6,6 +6,8 @@ Curl Hair Curves
 
 Deforms existing hair curves into curls using guide curves.
 
+.. peertube:: 3AcYeH2nqMzjEXFUNqTbj7
+
 
 Inputs
 ======

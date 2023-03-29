@@ -6,6 +6,8 @@ Braid Hair Curves
 
 Deforms existing hair curves into braids using guide curves.
 
+.. peertube:: wqJoqfqsWvT6msnD75RV2Q
+
 
 Inputs
 ======

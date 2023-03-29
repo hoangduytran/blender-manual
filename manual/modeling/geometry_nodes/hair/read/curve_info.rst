@@ -6,6 +6,8 @@ Curve Info
 
 Reads information about each curve.
 
+.. peertube:: 2tqKoeqhj6dbwMzHeEd9yQ
+
 
 Inputs
 ======

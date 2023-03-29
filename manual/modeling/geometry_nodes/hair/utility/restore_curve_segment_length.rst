@@ -6,6 +6,8 @@ Restore Curve Segment Length
 
 Restores the length of each curve segment using a previous state after deformation.
 
+.. peertube:: vCkQDxPe65KBTEHwfHUivN
+
 
 Inputs
 ======

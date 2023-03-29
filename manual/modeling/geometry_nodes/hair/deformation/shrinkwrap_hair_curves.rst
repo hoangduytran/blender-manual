@@ -6,6 +6,8 @@ Shrinkwrap Hair Curves
 
 Shrinkwraps hair curves to a mesh surface from below and optionally from above.
 
+.. peertube:: rA2Ytunkm2SorWhXeVQTWq
+
 
 Inputs
 ======

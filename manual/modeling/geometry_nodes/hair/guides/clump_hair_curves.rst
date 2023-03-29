@@ -6,6 +6,8 @@ Clump Hair Curves
 
 Clumps together existing hair curves using guide curves.
 
+.. peertube:: gnhg72C8JoNYmNy441QHgt
+
 
 Inputs
 ======

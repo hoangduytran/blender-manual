@@ -6,6 +6,7 @@ Blend Hair Curves
 
 Blends shape between multiple hair curves in a certain radius.
 
+.. peertube:: kegHEYG8URADfPpBZ4jRUo
 
 Inputs
 ======

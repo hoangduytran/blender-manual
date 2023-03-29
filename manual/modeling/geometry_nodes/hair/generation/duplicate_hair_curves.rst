@@ -6,6 +6,7 @@ Duplicate Hair Curves
 
 Duplicates hair curves a certain number of times within a radius.
 
+.. peertube:: es5bkTNvRwrvUFdjuK1UvB
 
 Inputs
 ======

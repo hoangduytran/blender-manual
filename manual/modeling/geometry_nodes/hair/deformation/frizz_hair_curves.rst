@@ -6,6 +6,8 @@ Frizz Hair Curves
 
 Deforms hair curves using a random vector per point to frizz them.
 
+.. peertube:: jdiMkR9aQnCm1QXc71Fz5h
+
 
 Inputs
 ======

@@ -6,6 +6,8 @@ Set Hair Curve Profile
 
 Sets the radius attribute of hair curves according to a profile shape.
 
+.. peertube:: gpQi2ZRQ3usV1FbQ9p3FHw
+
 
 Inputs
 ======

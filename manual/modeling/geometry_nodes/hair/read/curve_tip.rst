@@ -6,6 +6,8 @@ Curve Tip
 
 Reads information about each curve's tip point.
 
+.. peertube:: pcyUMH2SZ2DtwuDVF1bQio
+
 
 Inputs
 ======

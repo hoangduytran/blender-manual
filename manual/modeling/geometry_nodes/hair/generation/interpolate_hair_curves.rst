@@ -11,6 +11,8 @@ behavior that may offer better performance.
 .. note::
    This node/modifier will not function without the *Surface* geometry/object and *Surface UV Map* inputs.
 
+.. peertube:: 4dt7vp3qmry5MPZC3usxVb
+
 Inputs
 ======
 

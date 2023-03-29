@@ -6,6 +6,8 @@ Curve Root
 
 Reads information about each curve's root point.
 
+.. peertube:: mMFF7YU4uJ7SXtJR7BdV5Q
+
 
 Inputs
 ======
