@@ -197,6 +197,8 @@ Light Tree
    falloff, ray visibility, and complex shader node setups including textures.
    This can result in an increase in noise in some scenes that make use of these features.
 
+   Note, this feature is currently disabled for AMD GPUs on Windows, Linux and macOS.
+
 .. _bpy.types.CyclesRenderSettings.light_sampling_threshold:
 
 Light Threshold
