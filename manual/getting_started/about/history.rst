@@ -301,3 +301,6 @@ Version/Revision Milestones
 
 `3.4 <https://www.blender.org/download/releases/3-4/>`__ -- December 2022
    Cycles path guiding, sculpting auto masking improvements, even more geometry nodes, and UV Editing improvements.
+
+`3.5 <https://www.blender.org/download/releases/3-5/>`__ -- March 2023
+   New generative hair assets, vector displacement maps for sculpting, viewport compositor, and Cycle's light trees.

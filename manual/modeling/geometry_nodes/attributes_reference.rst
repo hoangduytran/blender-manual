@@ -84,6 +84,9 @@ boolean, so it is more complicated). When joining separate geometries together, 
 type is preferred when there are matching names. This is particularly important when joining geometry
 with named attributes with the :doc:`/modeling/geometry_nodes/geometry/join_geometry`
 
+To store 2D Vectors (UV maps) and Byte Colors the
+:doc:`/modeling/geometry_nodes/attribute/store_named_attribute` must be
+used because there are no sockets for those types.
 
 .. _attribute-domains:
 

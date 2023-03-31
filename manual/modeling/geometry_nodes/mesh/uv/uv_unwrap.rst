@@ -54,3 +54,10 @@ Output
 
 UV
    The generated UV coordinates between 0 and 1 for each face corner in the selected faces.
+
+.. note::
+
+   In order for Blender to recognize the created attribute as a UV map,
+   it must be created with the :doc:`/modeling/geometry_nodes/attribute/store_named_attribute`
+   on the :ref:`Face Corner <attribute-domains>` domain with the :ref:`2D Vector <attribute-data-types>` data type.
+   This is necessary because there is no 2D Vector socket type.

@@ -33,10 +33,10 @@ Useful for organic shapes.
 
 .. note::
 
-   The Unwrap operator is the only UV unwrapping operator that takes into account seams.
+   The Unwrap operator is the only UV unwrapping operator that takes seams into account.
 
-Begin by selecting all faces you want to unwrap.
-In the 3D Viewport, select :menuselection:`UV --> Unwrap` or :kbd:`U` and select Unwrap.
+Begin by selecting all the faces you want to unwrap.
+In the 3D Viewport, select :menuselection:`UV --> Unwrap` or :kbd:`U` and select :menuselection:`Unwrap`.
 You can also do this from the UV Editor with :menuselection:`UV --> Unwrap` or :kbd:`U`.
 This method will unwrap all faces and reset previous work.
 The UVs menu will appear in the UV Editor after unwrapping has been performed once.
@@ -62,8 +62,8 @@ They can be selected in the tool setting in the tool panel in the 3D Viewport.
 Angle Based
    This method gives a good 2D representation of a mesh.
 Conformal
-   Uses LSCM (Least Squares Conformal Mapping). This usually gives a less accurate UV mapping than Angle Based,
-   but works better for simpler objects.
+   Uses LSCM (Least Squares Conformal Mapping). This usually results in a less accurate UV mapping than Angle Based,
+   but performs better on simpler objects.
 
 Fill Holes
    Activating Fill Holes will prevent overlapping from occurring and better represent any holes in the UV regions.
@@ -95,13 +95,13 @@ Smart UV Project
    :Menu:      :menuselection:`UV --> Smart UV Project`
    :Shortcut:  :kbd:`U`
 
-Smart UV Project, cuts the mesh based on an angle threshold (angular changes in your mesh).
-This gives you fine control over how automatic seams are be created.
-It is good method for simple and complex geometric forms,
+Smart UV Project, cuts a mesh based on an angle threshold (angular changes in your mesh).
+This gives you fine control over how automatic seams are created.
+It is a good method for simple and complex geometric forms,
 such as mechanical objects or architecture.
 
 This algorithm examines the shape of your object,
-the faces selected and their relation to one another,
+the selected faces and their relation to one another,
 and creates a UV map based on this information and settings that you supply.
 
 In the example below,
@@ -121,13 +121,13 @@ a regular and straightforward UV layout for you.
 Options
 -------
 
-The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how a mesh is unwrapped:
 
 Angle Limit
    This controls how faces are grouped: a higher limit will lead to many small groups but less distortion,
    while a lower limit will create fewer groups at the expense of more distortion.
 Island Margin
-   This controls how closely the UV islands are packed together.
+   This controls how tightly the UV islands are packed together.
    A higher number will add more space between islands.
 Area Weight
    Weight projection's vector by faces with larger areas.
@@ -178,7 +178,7 @@ New Image
 Pack Quality
    Pre-packing before the more complex Box packing.
 Margin
-   This controls how closely the UV islands are packed together.
+   This controls how tightly the UV islands are packed together.
    A higher number will add more space between islands.
 
 
@@ -241,9 +241,9 @@ Options
 Cube Size
    Set the size of the cube to be projected onto.
 Correct Aspect
-   Map UVs will take the images aspect ratio into consideration.
+   Map UVs will take the image's aspect ratio into consideration.
    If an image has already been mapped to the :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correct.
+   the projection will take this into account and distort the mapping to appear correctly.
 Clip to Bounds
    Any UVs that lie outside the (0 to 1) range will be clipped to that range
    by being moved to the UV space border it is closest to.
@@ -294,9 +294,9 @@ Preserve Seams
 Radius
    The radius of the cylinder to use.
 Correct Aspect
-   Map UVs will take the images aspect ratio into consideration.
-   If an image has already been mapped to the :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correct.
+   Map UVs will take the image's aspect ratio into consideration.
+   If an image has already been mapped to a :term:`Texture Space` that is non-square,
+   the projection will take this into account and distort the mapping to appear correctly.
 Clip to Bounds
    Any UVs that lie outside the (0 to 1) range will be clipped to that range
    by being moved to the UV space border it is closest to.
@@ -316,7 +316,7 @@ Sphere Projection
    :Menu:      :menuselection:`UV --> Sphere Projection`
    :Shortcut:  :kbd:`U`
 
-Spherical mappings is similar to cylinder but the difference is that
+Spherical mapping is similar to cylinder but the difference is that
 a cylindrical mapping projects the UVs on a plane toward the cylinder shape,
 while a spherical map takes into account the sphere's curvature,
 and each latitude line becomes evenly spaced.
@@ -363,9 +363,9 @@ Preserve Seams
 Radius
    The radius of the sphere to use.
 Correct Aspect
-   Map UVs will take the images aspect ratio into consideration.
-   If an image has already been mapped to the :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correct.
+   Map UVs will take the image's aspect ratio into consideration.
+   If an image has already been mapped to a :term:`Texture Space` that is non-square,
+   the projection will take this into account and distort the mapping to appear correctly.
 Clip to Bounds
    Any UVs that lie outside the (0 to 1) range will be clipped to that range
    by being moved to the UV space border it is closest to.
@@ -396,9 +396,9 @@ Options
 Orthographic
    Apply an orthographic projection.
 Correct Aspect
-   Map UVs will take the images aspect ratio into consideration.
-   If an image has already been mapped to the :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correct.
+   Map UVs will take the image's aspect ratio into consideration.
+   If an image has already been mapped to a :term:`Texture Space` that is non-square,
+   the projection will take this into account and distort the mapping to appear correctly.
 Clip to Bounds
    Any UVs that lie outside the (0 to 1) range will be clipped to that range
    by being moved to the UV space border it is closest to.

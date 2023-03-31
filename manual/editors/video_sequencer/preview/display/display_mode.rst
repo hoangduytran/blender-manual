@@ -90,7 +90,7 @@ To help you understand what color is meant, a hexagram marking the extreme posit
 In other words, for the selected channel, this display shows the color space of the image inside a hexagon.
 Each point of the hexagon is a primary color: red, magenta, blue, cyan, green, and yellow.
 Black is at the center, and overall saturation is scaled as dots closer to the outside.
-The example to the right shows that the image has a lot of red (50% saturation)
+The example shown below as the second image has a lot of red (50% saturation)
 and small amount of blue, with no green.
 
 Always: remember to activate an additional control monitor of the end result.

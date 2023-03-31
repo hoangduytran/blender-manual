@@ -224,7 +224,7 @@ see the following descriptions of the `Import Options`_.
 .. note::
 
    When importing a `USDZ archive <https://openusd.org/release/spec_usdz.html>`__, it is
-   important to carefully consider the `Import Textures <textures>`_ option to determine
+   important to carefully consider the :ref:`Import Textures <usd-import-textures>` option to determine
    whether and how to copy texture files from the zip archive.
 
 
@@ -386,6 +386,8 @@ Textures
 
 When importing a USDZ package, the following options specify whether and how texture asset dependencies
 of the USD should be copied from the zip archive so they can be loaded into Blender.
+
+.. _usd-import-textures:
 
 Import Textures
    Behavior when importing textures from a USDZ archive.
