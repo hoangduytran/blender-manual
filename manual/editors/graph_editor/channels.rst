@@ -199,7 +199,7 @@ Add F-Curve Modifier
 
 .. reference::
 
-   :Menu:      :menuselection:`Channel --> Add F-Curve Modifier
+   :Menu:      :menuselection:`Channel --> Add F-Curve Modifier`
 
 Adds a :doc:`F-Curve Modifier </editors/graph_editor/fcurves/modifiers>` to the current channel.
 
