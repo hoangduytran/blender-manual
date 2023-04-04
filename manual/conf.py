@@ -48,12 +48,13 @@ release = blender_version
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'reference',
+    '404',
     'peertube',
-    'sphinx.ext.mathjax',
+    'reference',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.mathjax',
     'sphinx.ext.todo',
-    '404'
+    'sphinxcontrib.jquery',
 ]
 
 # Is there a better way to check for PDF building?
