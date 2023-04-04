@@ -11,7 +11,7 @@ for Blender (if you have not done so yet).
 Install from blender.org
 ========================
 
-Download the Linux version for your architecture and uncompress the file to the desired location
+Download the Linux version for your architecture and decompress the file to the desired location
 (e.g. ``~/software`` or ``/usr/local``).
 
 Blender can now be launched by double-clicking the executable.
