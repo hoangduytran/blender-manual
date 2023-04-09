@@ -1,0 +1,23 @@
+# Editors
+.vscode/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Varius extensions
+*.log
+*.tmp
+
+# Sphinx documentation
+build/
+
+# Translation repository
+locale/
+
+# Patchs
+*.orig
+*.rej
+*.diff
+*.patch
