@@ -209,6 +209,9 @@ Filter (funnel icon)
 
 Normalize
    Normalize curves so the maximum or minimum point equals 1.0 or -1.0.
+   When enabled, the view scales to fit the normalized curves and the outer range is darkened.
+
+   If a preview range is defined, keyframes within the range are normalized, while the rest is scaled proportionally.
 
    Auto
       Automatically recalculate curve normalization on every curve edit.
