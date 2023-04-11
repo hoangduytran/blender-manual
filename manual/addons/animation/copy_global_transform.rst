@@ -40,6 +40,11 @@ Paste
    Takes the copied global transform and applies it to the active Object or
    Bone. This is done by **adjusting its location, rotation, and scale properties**.
 
+Mirrored
+   Same as 'Paste' above, but then mirrored relative to some other object or
+   bone. This can be useful, for example, to copy the foot position of one foot
+   to the other. See :ref:`copy-global-transform-mirror-options` below.
+
 Paste to Selected Keys
    Paste as described above and additionally use auto-keying to update one or
    more frames. The key selection is used to tell Blender *which frames* this
@@ -50,6 +55,29 @@ Paste and Bake
    Almost the same as *Paste to Selected Keys*. Instead of only pasting on the
    selected keys, *Paste and Bake* will paste & auto-key on every frame between
    the first and last selected keys.
+
+.. _copy-global-transform-mirror-options:
+
+Mirror Options
+==============
+
+The copied transform can be mirrored relative to an object or a :term:`Bone`.
+This requires choosing that object or bone first.
+
+Armature + Bone
+   Choosing an :term:`Armature` object as mirror object will show the bone
+   selector. You can use that to pick the bone to use as mirror. This will
+   always use the named bone on that specific armature object.
+Bone Only
+   When you choose *no mirror object* at all, you can still choose a *bone
+   name*. This is used for mirroring against a bone in the *active armature*.
+   This can be useful to mirror bone transforms relative to the the 'chest' bone
+   of the active character.
+Object Only
+   This will just mirror relative to the chosen object.
+
+After pasting with 'Paste Mirrored', the mirror axes can be chosen in the
+:ref:`redo panel <bpy.ops.screen.redo_last>`.
 
 
 Limitations
