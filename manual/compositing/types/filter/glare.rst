@@ -39,7 +39,9 @@ Glare Type
       Looks similar to *Ghost*. However, it is much smaller in size
       and gives more of an atmospheric haze or "glow" around the image.
 
-      :guilabel:`CPU Compositor Only`
+      .. note::
+
+         Viewport compositing results will vary from CPU compositing due to different algorithms.
 
       Size
          Scale of the glow relative to the size of the original bright pixels.
