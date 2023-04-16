@@ -8,7 +8,10 @@ Magic Texture Node
    :align: right
    :alt: Magic Texture Node.
 
-The *Magic Texture* node is used to add a psychedelic color texture.
+The Magic Texture node is used to add a psychedelic color texture.
+It can be used for "Thin Film Interference" if you assign a *Reflection* Texture Coordinate
+to the Vector input and use a relatively high *Turbulence*.
+The RGB components are generated independently with a sine formula.
 
 
 Inputs

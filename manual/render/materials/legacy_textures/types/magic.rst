@@ -4,8 +4,9 @@
 Magic
 *****
 
-The magic texture is not frequently used. It can be used for "Thin Film Interference",
-if you set *Mapping* to *Reflection* and use a relatively high *Turbulence*.
+The Magic Texture node is used to add a psychedelic color texture.
+It can be used for "Thin Film Interference" if you set *Mapping*
+to *Reflection* and use a relatively high *Turbulence*.
 The RGB components are generated independently with a sine formula.
 
 .. figure:: /images/render_materials_legacy-textures_types_magic_panel.png
