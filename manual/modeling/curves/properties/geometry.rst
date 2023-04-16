@@ -224,9 +224,9 @@ Factor Start, End
    These options determine where to start/end the geometry of the curve.
    This allows to make a curve which is not fully covered with geometry.
 
-   Increasing the start value to 0.5 will start the geometry at 50%
+   A Start value to 0.5 will start the geometry at 50%
    of the distance from the start of the curve (in effect shortening the curve).
-   Decreasing the end value by 0.25 will start the geometry at 25%
+   An End value of 0.75 will start the geometry at 25%
    of the distance from the end of the curve (again, shortening the curve).
 
    .. list-table::
