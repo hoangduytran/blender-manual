@@ -232,6 +232,8 @@ Typical Workflow
    :doc:`Cryptomatte Node </compositing/types/matte/cryptomatte>`.
 
 
+.. _bpy.ops.scene.view_layer_add_aov:
+.. _bpy.ops.scene.view_layer_remove_aov:
 .. _bpy.types.AOV:
 
 Shader AOV
