@@ -169,12 +169,6 @@ Share Texture Space
 New UV Map
    If mapping multiple meshes, this option creates a new UV map for each mesh.
    See :ref:`uv-maps-panel`.
-New Image
-   Assigns new images for every mesh, but only one if *Shared Tex Space* is enabled.
-
-   Image Size
-      Set the size of the new image.
-
 Pack Quality
    Pre-packing before the more complex Box packing.
 Margin
