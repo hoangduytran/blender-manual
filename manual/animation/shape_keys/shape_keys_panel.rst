@@ -123,7 +123,7 @@ Relative Shape Keys
 
 See :ref:`animation-shapekeys-relative-vs-absolute`.
 
-With absolute shape keys, the value shown for each shape in the list represents
+With relative shape keys, the value shown for each shape in the list represents
 the current weight or influence of that shape in the current *Mix*.
 
 .. container:: lead
