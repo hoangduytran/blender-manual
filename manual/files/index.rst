@@ -9,6 +9,7 @@
    introduction.rst
    blend/index.rst
    data_blocks.rst
+   custom_properties.rst
    linked_libraries/index.rst
    asset_libraries/index.rst
    media/index.rst
