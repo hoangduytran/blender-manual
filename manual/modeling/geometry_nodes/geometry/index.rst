@@ -9,8 +9,8 @@ Nodes that can operate on different geometry types (volume, mesh).
    :maxdepth: 2
 
    Read <read/index.rst>
-   Write <write/index.rst>
    Sample <sample/index.rst>
+   Write <write/index.rst>
 
 -----
 
