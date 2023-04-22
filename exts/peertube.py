@@ -45,22 +45,12 @@ def visit_peertube_node(self, node):
         aspect = 16, 9
 
     div_style = {}
-    if (height is None) and (width is not None) and (width[1] == "%"):
-        div_style = {
-            "padding-bottom": "%f%%" % (width[0] * aspect[1] / aspect[0]),
-            "width": "%d%s" % width,
-            "position": "relative",
-        }
+    style = {}
+
+    if (height is None) and (width is None):
         style = {
-            "position": "absolute",
-            "top": "0",
-            "left": "0",
             "width": "100%",
-            "height": "100%",
-        }
-        attrs = {
-            "src": instance + "videos/embed/%s" % node["id"],
-            "style": css(style),
+            "aspect-ratio": "%d/%d" % (aspect[0], aspect[1]),
         }
     else:
         if width is None:
@@ -74,10 +64,10 @@ def visit_peertube_node(self, node):
             "width": "%d%s" % width,
             "height": "%d%s" % (height[0], height[1]),
         }
-        attrs = {
-            "src": instance + "videos/embed/%s" % node["id"],
-            "style": css(style),
-        }
+    attrs = {
+        "src": instance + "videos/embed/%s?peertubeLink=0&title=0&warningTitle=0" % node["id"],
+        "style": css(style),
+    }
     attrs["allowfullscreen"] = "true"
     div_attrs = {
         "CLASS": "peertube_wrapper",
