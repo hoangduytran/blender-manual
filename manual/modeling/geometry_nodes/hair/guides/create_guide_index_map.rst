@@ -30,7 +30,7 @@ Guide Mask
 
 Group ID
    ID to group together curves for guide map creation.
-   Curves will only chosoe a guide with the same ID value.
+   Curves will only choose a guide with the same ID value.
 
 
 Properties
