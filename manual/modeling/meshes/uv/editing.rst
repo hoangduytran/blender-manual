@@ -280,28 +280,62 @@ Pack Islands
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Pack Islands`
 
-The *Pack Islands* tool generates an optimized UV layout with non-overlapping islands
-that tries to efficiently fill the :term:`Texture Space`.
-
-First it will uniformly scale the selected islands,
-then individually translate each island so that they maximize the usage of the UV space.
+The *Pack Islands* tool can be used to optimize the UV layout by adjusting existing islands
+to efficiently fill the :term:`Texture Space`. Based on the options selected,
+the tool will scale, translate and rotate the islands,
+ensuring a specified margin exists between them to maximize the usage of the UV space.
 
  Pack To
-   The :doc:`UDIM </modeling/meshes/uv/workflows/udims>` grid to pack UV islands into.
+   Determines the final placement of UV islands after completing the packing operation.
 
-   :Closest UDIM: Pack islands to the UDIM closest to the center of the selection.
-   :Active UDIM: Pack islands to active UDIM image tile or, if no image is available, the UDIM grid tile where the 2D
-                 cursor is located.
+   :Closest UDIM: Pack islands to the :doc:`UDIM </modeling/meshes/uv/workflows/udims>` grid
+       nearest to the center of the selection.
+   :Active UDIM: Pack islands to the active UDIM image tile or, if no image is available,
+       the UDIM grid tile where the 2D cursor is located.
+   :Original bounding box: Find the original bounding box of the selection,
+     packs the islands, and then moves them back inside the original box.
+
  Rotate
-   Allow islands to be rotated as well as translated to maximize texture usage.
+   Allows the rotation of islands, as well as translation and scaling, to optimize texture usage.
+
+ Merge Overlapped
+   Before the main packing operation, overlapping islands are detected and temporarily combined.
+   During packing, the relative rotation and position of the merged islands are preserved.
+
  Margin Method
    The method to use when calculating the empty space between islands.
 
    :Scaled: Use scale of existing UVs to multiply margin. (The default from Blender 3.3 and later.)
    :Add: Simple method, just add the margin. (This is the default margin scale from Blender 2.8 and earlier.)
    :Fraction: Precisely specify the fraction of the UV unit square for margin. (Slower than other two methods.)
+
  Margin
    The scale for the empty space between islands.
+
+ Shape Method
+   The method to use when considering the shape of each island.
+
+   :Exact shape (Concave): Use the complete shape of the island, including filling any holes
+          or concave regions around the island.
+   :Boundary shape (Convex): Takes into account the boundary (Convex Hull) of the island.
+                 This method will not place islands inside holes.
+   :Bounding box: Uses the simple bounding box of the island.
+
+
+.. note::
+
+   The performance of the *Pack Islands* tool is heavily affected by the options selected,
+   and sometimes the options can combine in different ways to produce unexpectedly slower results.
+
+   The fastest results can be obtained by using the "Bounding Box" shape method and the "Add" margin method.
+
+   Although enabling the "Rotate" option slightly impacts performance, it will often enhance efficiency,
+   making it a good choice to always keep enabled.
+
+   However the "Fraction" margin method requires significantly more computation to find the exact scale.
+   For certain layouts, it may even take up to 10 times longer to complete then using the simpler "Add" or "Scaled" methods.
+
+   Similarly, the "Exact shape" and "Boundary shape" methods are much slower than the simple "Bounding Box" method.
 
 .. _bpy.ops.uv.average_islands_scale:
 
