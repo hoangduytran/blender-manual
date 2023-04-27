@@ -31,9 +31,6 @@ Unwrap
 Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/uv/unwrapping/seams>`.
 Useful for organic shapes.
 
-.. note::
-
-   The Unwrap operator is the only UV unwrapping operator that takes seams into account.
 
 Begin by selecting all the faces you want to unwrap.
 In the 3D Viewport, select :menuselection:`UV --> Unwrap` or :kbd:`U` and select :menuselection:`Unwrap`.
@@ -59,22 +56,28 @@ Options
 Blender has two ways of calculating the unwrapping.
 They can be selected in the tool setting in the tool panel in the 3D Viewport.
 
-Angle Based
-   This method gives a good 2D representation of a mesh.
-Conformal
-   Uses LSCM (Least Squares Conformal Mapping). This usually results in a less accurate UV mapping than Angle Based,
+Method
+ :Angle Based:
+   Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh.
+
+ :Conformal:
+   Uses Least Squares Conformal Mapping (LSCM). This usually results in a less accurate UV mapping than Angle Based,
    but performs better on simpler objects.
 
 Fill Holes
    Activating Fill Holes will prevent overlapping from occurring and better represent any holes in the UV regions.
+
 Correct Aspect
    Map UVs taking image aspect into account.
 
-Use Subdivision Surface Modifier
+Use Subdivision Surface
    Map UVs taking vertex position after Subdivision Surface Modifier into account.
 
+Margin Method
+   See :ref:`bpy.ops.uv.pack_islands` for a description of this option.
+
 Margin
-   Space between UV islands.
+   See :ref:`bpy.ops.uv.pack_islands` for a description of this parameter.
 
 .. tip::
 
@@ -126,6 +129,8 @@ The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how a mesh is
 Angle Limit
    This controls how faces are grouped: a higher limit will lead to many small groups but less distortion,
    while a lower limit will create fewer groups at the expense of more distortion.
+Margin Method
+   See :ref:`bpy.ops.uv.pack_islands` for a description of this option.
 Island Margin
    This controls how tightly the UV islands are packed together.
    A higher number will add more space between islands.
