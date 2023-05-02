@@ -54,6 +54,14 @@ Node Types
    :maxdepth: 3
    :titlesonly:
 
+   simulation/simulation_zone.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 3
+   :titlesonly:
+
    material/index.rst
    texture/index.rst
    utilities/index.rst
