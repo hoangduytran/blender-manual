@@ -39,7 +39,8 @@ Outputs
 =======
 
 Index
-   The :doc:`index </modeling/geometry_nodes/geometry/read/input_index>` of the closest element in the same geometry component.
+   The :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
+   of the closest element in the same geometry component.
 
 Has Neighbor
    This is true when the group of the element has at least two elements.

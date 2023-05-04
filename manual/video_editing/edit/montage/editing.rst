@@ -583,6 +583,7 @@ To Current Frame
 
 Retiming Tool
 =============
+
 .. reference::
 
    :Tool:      :menuselection:`Toolbar --> Retime`
@@ -594,15 +595,17 @@ active strip.
 .. note::
 
    Retiming tool will not work with effect strips.
-   
+
 Adding Retiming Handles
 -----------------------
+
 When tool is activated, retiming handle is added at the end of the strip. This handle is not visible, but can be moved
 in a way similar to resizing the strip. Retiming handles are added by clicking on + button displayed on the strip next
 to current frame. This button is only visible when current frame intersects the strip.
 
 Moving Retiming Handles
 -----------------------
+
 Retiming handle can be moved by dragging it with mouse. The handle is mapped to particular frame of strip content, so
 moving handle effectively means moving a frame to new position. When handle is moved, all remaining handles to the
 right will be moved by same amount. Handels can not be moved past each other or start of the strip.
@@ -613,11 +616,13 @@ right will be moved by same amount. Handels can not be moved past each other or 
 
 Removing Retiming Handles
 -------------------------
+
 Handle can be deleted by clicking on triangle. When handle is deleted, strip size will not change and speed will
 change to average between 2 affected sections.
 
 Retiming split strips
------------------------
+---------------------
+
 When strip is split, retming handle is created on both strip edges. If split happens on frame where there already is
 retiming handle, it is reused, so existing retiming is not affected. These retiming handles will be invisible and
 handle on left strip edge can not be moved.

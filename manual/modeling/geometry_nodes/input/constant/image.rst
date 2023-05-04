@@ -1,9 +1,9 @@
 .. index:: Geometry Nodes; Image
 .. _bpy.types.GeometryNodeInputImage:
 
-***************
+**********
 Image Node
-***************
+**********
 
 .. figure:: /images/node-types_GeometryNodeImage.jpg
    :align: right

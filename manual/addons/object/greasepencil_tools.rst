@@ -48,7 +48,7 @@ Perform a rotation of the view in free navigation or active camera in camera vie
 
 
 Layer Navigator
-----------------
+---------------
 
 Continuous press on :kbd:`Y` shortcut call a customized layer popup with following features:
 
@@ -71,7 +71,7 @@ Layers box height, width, font size, and left-handed mode are customizable in ad
 
 
 Timeline Scrub
----------------
+--------------
 
 Call a timeline popup at mouse position to scrub without leaving the 3D viewport.
 

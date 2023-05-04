@@ -42,7 +42,8 @@ This is also the place where sub-steps can be defined for a simulation.
 Baking
 ======
 
-The simulation is automatically cached during playback. The valid cache can be seen as a strong yellow line in the timeline editor.
+The simulation is automatically cached during playback.
+The valid cache can be seen as a strong yellow line in the timeline editor.
 This allows for animators to quickly inspect all the previous frames of a simulation.
 
 .. figure:: /images/modeling-geometry_nodes-simulation-baking_timeline.png
@@ -67,7 +68,8 @@ This allows for the simulation to be rendered in a non-sequential order.
 Examples
 ========
 
-Combined with the :doc:`/modeling/geometry_nodes/geometry/sample/index_of_nearest`, this can be used for a number of sphere-based simulations.
+Combined with the :doc:`/modeling/geometry_nodes/geometry/sample/index_of_nearest`,
+this can be used for a number of sphere-based simulations.
 
 .. figure:: /images/modeling-geometry_nodes-simulation-example.png
    :align: center

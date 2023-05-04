@@ -333,7 +333,8 @@ ensuring a specified margin exists between them to maximize the usage of the UV 
    making it a good choice to always keep enabled.
 
    However the "Fraction" margin method requires significantly more computation to find the exact scale.
-   For certain layouts, it may even take up to 10 times longer to complete then using the simpler "Add" or "Scaled" methods.
+   For certain layouts, it may even take up to 10 times longer to complete then using the simpler
+   "Add" or "Scaled" methods.
 
    Similarly, the "Exact shape" and "Boundary shape" methods are much slower than the simple "Bounding Box" method.
 
