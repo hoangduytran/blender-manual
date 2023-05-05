@@ -337,6 +337,11 @@ Channels
 Blend
 =====
 
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend`
+   :Shortcut:  :kbd:`D`
+
 .. _bpy.ops.graph.breakdown:
 
 Breakdown
