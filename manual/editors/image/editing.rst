@@ -33,19 +33,23 @@ Load image from a file.
 
 .. _bpy.ops.image.read_viewlayers:
 
-Open Cache Render
-=================
+Open Cached Render
+==================
 
 .. reference::
 
    :Mode:      All Modes
-   :Menu:      :menuselection:`Image --> Open Cache Render`
+   :Menu:      :menuselection:`Image --> Open Cached Render`
    :Shortcut:  :kbd:`Ctrl-R`
 
-Load the current scene's render layers from disk cache, if available.
-This can be used to save RAM while rendering because the render layers do not have to be saved in RAM.
-And also for recovering some information from a fail render.
-For this to work, :ref:`Cache Result <bpy.types.RenderSettings.use_render_cache>` must be enabled.
+Find the render cache file for the current scene and load it into the
+Render Result. This way, you can restore the last render from a previous
+Blender session and continue working in the Compositor without having to
+render the scene again.
+
+Note that Blender doesn't create these cache files by default. You
+have to enable :ref:`Cache Result <bpy.types.RenderSettings.use_render_cache>`
+in the scene's Output options and then render it at least once.
 
 
 .. _bpy.ops.image.replace:
@@ -58,7 +62,7 @@ Replace
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Replace`
 
-Replaces the current image throughout the blend-file with another image.
+Replace the current image by another.
 
 
 .. _bpy.ops.image.reload:
@@ -85,8 +89,8 @@ Edit Externally
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Edit Externally`
 
-Using the *Edit Externally* tool Blender will open an external image editor,
-as specified in the *Preferences* and load in the image to be edited.
+Open the image in the *Image Editor* program specified in the
+:doc:`File Paths Preferences </editors/preferences/file_paths>`.
 
 
 .. _bpy.ops.image.save:
@@ -100,11 +104,12 @@ Save
    :Menu:      :menuselection:`Image --> Save`
    :Shortcut:  :kbd:`Alt-S`
 
-Save the image, if the image is already a file.
+Save the image to its current path.
 
 .. important::
 
-   Rendered images are not automatically saved, they have to be saved to drive manually.
+   While animation renders are automatically saved, still renders are not.
+   These have to be saved manually.
 
 
 .. _bpy.ops.image.save_as:
@@ -118,7 +123,7 @@ Save As
    :Menu:      :menuselection:`Image --> Save As`
    :Shortcut:  :kbd:`Shift-Alt-S`
 
-Save the (rendered) image in a separate file of any type.
+Save the image to a separate file of any type.
 The image output settings can be configured and are the same as the
 :doc:`Render Output Properties </render/output/properties/output>`.
 
@@ -131,8 +136,8 @@ Save a Copy
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Save a Copy`
 
-Using *Save as Copy* will save the file to a specified name,
-but will keep the old one open in the Image editor.
+Save the file under a specified name,
+but keep the old one open in the Image editor.
 
 
 .. _bpy.ops.image.save_all_modified:
@@ -160,8 +165,8 @@ Invert
 
 Invert Image Colors
    Invert the colors of an image.
-Invert Channel
-   Red, Green, Blue, Alpha
+Invert Red/Green/Blue/Alpha Channel
+   Invert a single color channel.
 
 
 .. _bpy.ops.image.resize:
@@ -187,9 +192,7 @@ Flip
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Flip`
 
-This operator mirrors the image across a specified axis.
-Use this to alter the perspective of an image giving an alternative viewpoint;
-this can make an image more visually appealing or highlight some visual flaw.
+Mirror the image across an axis.
 
 Horizontally
    Mirrors the image so the left side becomes the right side.
@@ -207,7 +210,7 @@ Pack
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Pack`
 
-Packs the image into the blend-file.
+Pack the image into the blend-file.
 See :ref:`pack-unpack-data`.
 
 
@@ -234,7 +237,7 @@ Extract Palette
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Extract Palette`
 
-Extracts a :ref:`Color Palette <bpy.types.PaletteColor>` from the image for use by other tools.
+Extract a :ref:`Color Palette <bpy.types.PaletteColor>` from the image for use by painting tools.
 
 
 .. _bpy.ops.gpencil.image_to_grease_pencil:
@@ -247,4 +250,4 @@ Generate Grease Pencil
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Generate Grease Pencil`
 
-Creates a :doc:`Grease Pencil </grease_pencil/index>` object using the currently selected image as a source.
+Create a :doc:`Grease Pencil </grease_pencil/index>` object using the currently selected image as a source.

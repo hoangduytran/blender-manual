@@ -15,7 +15,7 @@ Image
 Image
 -----
 
-Tools for working with images, see :doc:`/editors/image/image_settings`.
+Tools for working with images. See :doc:`/editors/image/image_settings`.
 
 
 Metadata
@@ -24,8 +24,8 @@ Metadata
 Lists image metadata.
 
 
-View Tab
-========
+View
+====
 
 .. _bpy.types.Image.display_aspect:
 .. _bpy.types.SpaceImageEditor.show_repeat:
@@ -33,7 +33,7 @@ View Tab
 Display
 -------
 
-You can set the editors display options in this panel.
+You can set the editor's display options in this panel.
 
 .. figure:: /images/editors_image_sidebar_panel.png
    :align: right
@@ -41,9 +41,9 @@ You can set the editors display options in this panel.
    Display panel.
 
 Aspect Ratio
-   Display Aspect for this image. Does not affect rendering.
+   Display aspect for this image. Does not affect rendering.
 Repeat Image
-   Duplicate the image until it is repeated to fill the main view.
+   Tiles the image so it completely fills the editor.
 
 
 Annotations
@@ -51,8 +51,6 @@ Annotations
 
 Options for the annotation tool. See :doc:`/interface/annotate_tool`.
 
-
-.. (TODO add) images per type
 
 .. _editors-image-scopes:
 
@@ -62,26 +60,32 @@ Scopes
 .. figure:: /images/editors_image_sidebar_scopes.png
    :align: right
 
-   Scopes in the Image editor.
+   Scopes in the Image Editor.
 
+Displays different kinds of statistical information about the colors in the image.
+
+Note that the Scopes tab is not shown if the active object is in Edit Mode
+or Texture Paint Mode.
 
 Histogram
 ---------
 
-This mode displays a graph showing the distribution of color information in the pixels of
-the currently displayed image. The X axis represents values of pixel, from 0 to 1 (or 0 to 255),
-while the Y axis represents the number of pixels in that tonal range.
-A predominantly dark image would have most of its information toward the left side of the graph.
+Displays a graph of the color distribution in the image. For each color value
+(such as Luminance) on the X axis, it shows the number of pixels with that value
+on the Y axis.
+A predominantly dark image would have the highest values toward the left side of the graph.
 
 Use this mode to balance out the tonal range in an image.
 A well-balanced image should have a nice smooth distribution of color values.
 
+You can drag the mouse in the histogram to adjust its vertical zoom.
+
 Luma
-   Shows the luminosity of an image.
+   Shows a luminosity histogram.
 RGB
    Shows the :abbr:`RGB (Red, Green, Blue)` channels stacked on top of each other.
 R/G/B/A
-   Depending on the channel you choose the scope will show the appropriate channel.
+   Shows a single color channel.
 Show Line
    Displays lines rather than filled shapes.
 
@@ -89,27 +93,30 @@ Show Line
 Waveform
 --------
 
-.. (TODO add) description of a Waveform maybe this should go in the glossary?
+Plots the color distribution for each vertical line of pixels in the image.
+The X axis of the Waveform corresponds to the X axis of the image, while the Y axis
+represents the range of a color component such as Luminance. The brighter
+a specific point is, the more pixels in that vertical line have that color value.
 
 Waveform Opacity
    Opacity of the points.
 
 Waveform Mode
    Luma
-      ToDo.
+      Show a single Waveform plotting the luminosity distribution.
    YCbCr
-      ToDo.
+      Show the Y, Cb and Cr Waveforms side by side.
    Parade
-      The RGB channels are shown side-by-side.
+      Show the R, G and B Waveforms side by side.
    Red Green Blue
-      Shows the RGB channels overlaid as a "Full color" waveform.
-      It is useful for color grading.
+      Show the R, G and B Waveforms overlaid on top of each other.
 
 
 Vectorscope
 -----------
 
-.. (TODO add) description of a Vectorscope maybe this should go in the glossary?
+Shows the color distribution in a radial fashion. The angle represents the hue,
+while the distance from the center represents the saturation.
 
 Vectorscope Opacity
    Opacity of the points.
@@ -122,14 +129,14 @@ The *Sample Line* scope is the same as the `Histogram`_
 but allows you to get the sample data from a line.
 
 Sample Line
-   Used to draw a line to use to read the sample data from.
+   Used to draw a line to read the sample data from.
 
 
-Scope Samples
--------------
+Samples
+-------
 
 Full Sample
    Sample every pixel.
 
 Accuracy
-   Proportion of original image source pixel lines to sample.
+   Proportion of image pixels to sample if *Full Sample* is disabled.

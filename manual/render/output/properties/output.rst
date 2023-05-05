@@ -32,8 +32,13 @@ Saving
    .. _bpy.types.RenderSettings.use_render_cache:
 
    Cache Result
-      Saves the rendered image and passes to a multi-layer EXR file in temporary location on your hard drive.
-      This allows the Compositor to read these to improve the performance, especially for heavy compositing.
+      Saves the rendered view layers and their :doc:`passes </render/layers/passes>` to a multi-layer OpenEXR image.
+      The Compositor can then use this file to improve performance, especially for heavy compositing.
+      
+      The image is stored in the *Render Cache* folder as specified in the
+      :doc:`File Paths Preferences </editors/preferences/file_paths>`.
+      You can also load it back into the Image Editor's Render Result, even after closing
+      and reopening Blender; see :ref:`Open Cached Render <bpy.ops.image.read_viewlayers>`.
 
 .. _bpy.types.ImageFormatSettings.file_format:
 

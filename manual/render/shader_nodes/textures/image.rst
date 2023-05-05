@@ -8,26 +8,25 @@ Image Texture Node
    :align: right
    :alt: Image Texture Node.
 
-The *Image Texture* is used to add an image file as a texture.
+Used for applying an image as a texture.
 
 
 Inputs
 ======
 
 Vector
-   Texture coordinate for texture look-up. If this socket is left unconnected,
-   UV coordinates from the active UV render layer are used.
+   3D coordinate that's projected onto the 2D image using the selected *Projection* method.
+   The node then outputs the color and alpha at this projected point.
+
+   This slot is usually connected to an output of the :doc:`/render/shader_nodes/input/texture_coordinate`.
+   If left unconnected, the coordinate is taken from the object's active UV map (with Z = 0).
 
 
 Properties
 ==========
 
 Image
-   Image data-block used as the image source.
-   More settings can be found in :menuselection:`Sidebar --> Item --> Properties`:
-   These include options to control the alpha channel along with addition options for the color space.
-   These addition options are documented with the rest of
-   :ref:`Common Image Settings <editors-image-image-settings-common>`.
+   Image data-block to use.
 
 Interpolation
    Method to scale images up or down for rendering.
@@ -35,67 +34,114 @@ Interpolation
    .. same as in the Environment Texture node
 
    :Linear: Regular quality interpolation.
-   :Cubic: Smoother, better quality interpolation. For bump maps this should be used to get best results.
-   :Closest: No interpolation, use only closest pixel for rendering pixel art.
+   :Cubic: Smoother, better quality interpolation. Bump maps should use this for best results.
+   :Closest: No interpolation (nearest neighbor). Useful for rendering pixel art.
    :Smart: :guilabel:`Cycles Only`
       Only for Open Shading Language. Use cubic interpolation when scaling up and linear when scaling down,
-      for a better performance and sharpness.
+      for better performance and sharpness.
 
 Projection
-   Projection to use for mapping the textures.
+   How to project *Vector* onto the image for arriving at a color.
 
-   :Flat: Uses the XY coordinates for mapping.
+   :Flat:
+      Place the image in a unit square (stretching from (0, 0, 0) to (1, 1, 0))
+      and project the *Vector* vertically onto it. This projection is typically used in combination
+      with UV maps.
    :Box:
-      Maps the image to the six sides of a virtual box, based on the normal,
-      using XY, YZ and XZ coordinates depending on the side.
+      Place the image on each side of a unit cube (stretching from (0, 0, 0) to (1, 1, 1))
+      and project the *Vector* onto this cube, along the axis that's closest to the mesh normal.
+      This projection is commonly used in architectural models considering these have lots of
+      box-shaped objects.
 
       Blend
-         For Box mapping, the amount to blend between sides of the box,
-         to get rid of sharp transitions between the different sides.
-         Blending is useful to map a procedural-like image texture pattern seamlessly on a model.
-         0.0 gives no blending; higher values give a smoother transition.
+         Rather than projecting onto just one side (which creates sharp transitions), project onto
+         multiple sides and blend the results together. The higher the value, the more blending and
+         the smoother the result.
 
    :Sphere:
-      Sphere mapping is the best type for mapping a sphere,
-      and it is perfect for making planets and similar objects.
-      It is often very useful for creating organic objects.
+      Wrap the image around a sphere with origin (0.5, 0.5, 0.5), and project the *Vector* from
+      this origin onto this sphere. This projection is, of course, perfect for spherical objects
+      such as planets, and is also useful for organic objects.
    :Tube:
-      Maps the texture around an object like a label on a bottle.
-      The texture is therefore more stretched on the cylinder.
-      This mapping is of course very good for making the label on a bottle,
-      or assigning stickers to rounded objects. However,
-      this is not a cylindrical mapping so the ends of the cylinder are undefined.
+      Wrap the image around a cylinder with origin (0.5, 0.5, 0) and height 1, and project the
+      *Vector* horizontally from the central axis onto this cylinder. This projection is useful for
+      a label on a bottle, for example. However, it's not suited for the top or bottom side of objects.
+
+   .. list-table::
+      Projections demonstrated using "Object" texture coordinates
+
+      * - .. figure:: /images/render_shader-nodes_textures_image_projection-flat.png
+
+             Flat projection
+
+        - .. figure:: /images/render_shader-nodes_textures_image_projection-box.png
+
+             Box projection
+
+      * - .. figure:: /images/render_shader-nodes_textures_image_projection-sphere.png
+
+             Sphere projection
+
+        - .. figure:: /images/render_shader-nodes_textures_image_projection-tube.png
+
+             Tube projection
 
 Extension
-   Extension defines how the image is extrapolated past the original bounds:
+   How the image is extrapolated if *Vector* lies outside the regular (0, 0, 0) to (1, 1, 1) bounds:
 
-   :Repeat: Will repeat the image horizontally and vertically giving tiled-looking result.
-   :Extend: Will extend the image by repeating pixels on its edges.
+   :Repeat: Repeat the image horizontally and vertically (tiling).
+   :Extend: Extend the image by repeating the pixels on its edges.
    :Clip: Clip to the original image size and set all the exterior pixels values to transparent black.
    :Mirror: Repeatedly flip the image horizontally and vertically.
 
-Color Space
-   Type of data that the image contains, either Color or Non-Color Data.
-   For most color textures the default of Color should be used, but in case of e.g. a bump or alpha map,
-   the pixel values should be interpreted as Non-Color Data, to avoid doing any unwanted color space conversions.
+Source
+   Type of image (Single Image, Movie...). See :doc:`/editors/image/image_settings`.
 
-   The list of color spaces depends on the active :ref:`OCIO config <ocio-config>`.
-   The default supported color spaces are described in detail here:
-   :ref:`Default OpenColorIO Configuration <ocio-config-default-color-spaces>`
+Frames
+   How many frames of the Movie-type image (video) to play. Past this point, the video will be paused
+   (unless *Cyclic* is enabled).
+
+   If you want to play the whole video, you can click
+   :ref:`Match Movie Length <bpy.ops.image.match_movie_length>` in the Image Editor's Sidebar,
+   then copy the *Frames* from there to the node.
+
+Start Frame
+   Scene frame at which the video should start playing.
+
+Offset
+   Number of frames to offset the video to an earlier point in time.
+   (Put differently: how many frames at the start of the video to skip.)
+
+   .. hint::
+      Blender plays video textures at the scene framerate, not their original framerate,
+      meaning they'll be faster or slower than intended if these framerates don't match up.
+      You can put a :doc:`Driver </animation/drivers/introduction>` on the Offset to work
+      around this. Simply type the following into the field, replacing *StartFrame*,
+      *VideoFrameRate* and *SceneFrameRate* by their respective numbers:
+
+      #(frame - StartFrame) * (VideoFrameRate - SceneFrameRate) / SceneFrameRate
+
+Cyclic
+   Start over after the last frame to create a continuous loop.
+
+Auto Refresh
+   Update the video texture in the 3D Viewport when moving through the timeline.
+
+Color Space
+   The :term:`Color Space` the image file was saved in.
+   See :ref:`Image Settings <bpy.types.ColorManagedInputColorspaceSettings.name>` for details.
 
 Alpha
-   If the source file has an Alpha (transparency) channel, you can choose how the alpha channel is encoded in
-   the image.
-
-   :term:`Straight Alpha` or :term:`Premultiplied Alpha`
+   How the image uses its :term:`Alpha Channel`.
+   See :ref:`Image Settings <bpy.types.Image.alpha_mode>` for details.
 
 
 Outputs
 =======
 
 Color
-   RGB color from image. If the image has alpha, the color is premultiplied with alpha if the Alpha output is used,
-   and unpremultiplied or straight if the Alpha output is not used.
+   RGB color from image. If the image has transparency, the color is premultiplied if the Alpha output is used,
+   and unpremultiplied (straight) otherwise.
 Alpha
    Alpha channel from image.
 
