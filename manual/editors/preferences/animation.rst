@@ -85,3 +85,7 @@ XYZ to RGB
    is the same as the color for the X, Y, and Z axis.
 Show Group Colors
    Display groups and channels with colors matching their corresponding groups.
+Only Selected Curve Keyframes
+   Only shows the keyframes markers on the selected curves.
+Use High Quality Display
+   Display F-Curves using :term:`Anti-Aliasing` and other effects (disable for a better performance).

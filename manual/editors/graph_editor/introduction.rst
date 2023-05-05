@@ -114,9 +114,6 @@ Show Markers
    Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
    and markers operators are not available in this editor.
 
-Use High Quality Display
-   Display F-Curves using :term:`Anti-Aliasing` and other effects (disable for a better performance).
-
 .. _bpy.types.SpaceGraphEditor.show_extrapolation:
 
 Show Extrapolation
