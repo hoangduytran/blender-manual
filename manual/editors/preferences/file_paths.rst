@@ -149,6 +149,9 @@ Import Method
       Since the file now has its own copy of the asset, later changes to
       the asset file will not be reflected in the file it's appended to.
 
+Relative Path
+   Use relative path when linking assets from this asset library.
+
 
 Known Limitations
 =================
