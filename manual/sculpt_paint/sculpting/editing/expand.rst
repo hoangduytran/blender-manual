@@ -61,7 +61,7 @@ Fill Face Sets
 
 Automatically Set Transform Pivot
    While using any Transform tool, the pivot point
-   will automatically snap the the border of an Expand result.
+   will automatically snap the border of an Expand result.
    This way areas (Like limbs) can be masked and then immediately rotated or otherwise transformed.
 
    .. figure:: /images/sculpt-paint_sculpting_expand_auto_pivot.png
