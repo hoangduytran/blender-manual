@@ -109,15 +109,34 @@ Precision
 
 Subtype
    Specifies the type of data the property contains, which affects how it appears in the user interface.
-   In order for this property to appear the *Property Value* must be a vector of floats.
-   For either of the color subtypes to work the *Property Value* must be a vector
-   with three or four values depending on the availability of an :term:`Alpha Channel`.
+   This option is only available for float properties and has different options for regular floats and float arrays.
+   Note, the unit often depends on the :ref:`Scene Units <bpy.types.UnitSettings>`.
+
+   For regular floats:
+
+   :Plane Data: Data values do not have any special behavior.
+   :Pixel: A measure digital image resolution.
+   :Percentage: The displayed value is a percentage, typically you will want the Min and Max values to be 0 and 100.
+   :Factor: A percentage between an upper and lower bound which typical have a numerical significance.
+   :Angle: A measure between intersecting lines.
+   :Time: Time specified in seconds.
+   :Distance: Measure of space between items.
+   :Power: Work as a factor of time, measured in watts. This is used in Blender to measure light intensity.
+   :Temperature: Intensity of heat present.
+
+   For float arrays:
 
    :Plane Data: Data values do not have any special behavior.
    :Linear Color: Color in linear color space.
    :Gamma-Corrected Color: Color in gamma corrected color space.
    :Euler Angles: :term:`Euler Rotation` angles.
    :Quaternion Angles: :term:`Quaternion Rotation` angles.
+
+   .. note::
+
+      For either of the color subtypes to work as expected the *Property Value* must be a vector
+      with three or four values depending on the availability of an :term:`Alpha Channel`.
+
 
 Description
    Allows you to write a custom :doc:`Tooltip </getting_started/help>` for your property.
