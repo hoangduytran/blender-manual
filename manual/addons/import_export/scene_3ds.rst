@@ -7,7 +7,7 @@ Autodesk 3DS
 
    :Category: Import-Export
    :Menu: :menuselection:`File --> Import/Export --> 3D Studio (.3ds)`
-   :Version: 3.2.4
+   :Version: 2.3.4
    :Blender: 3.6
    :Authors: Bob Holcomb, Campbell Barton, Sebastian Schrand
    :Maintainer: Sebastian Sille (NRGSille)
@@ -97,7 +97,7 @@ The material definitions wich Blender can use are the following:
 - 3ds Diffuse Color -> blender Base Color
 - 3ds Specular Color -> blender Specular Color
 - 3ds Ambient Color -> blender Emission Color
-- 3ds Mat Shiness -> blender Roughness inverted
+- 3ds Mat Shininess -> blender Roughness inverted
 - 3ds Mat Shin2 -> blender Specular Intensity
 - 3ds Mat Shin3 -> blender Metallic
 - 3ds Mat Opacity -> blender Alpha inverted
@@ -105,14 +105,14 @@ The material definitions wich Blender can use are the following:
 - 3ds Self Illum PCT -> blender Emission Strength
 
 Each 3ds material can include different texture mappings,
-wich are all imported to Blender material nodes including texture coordinates.
-Shiness maps to roughness and opacity to the alpha channel,
-they must be color inverted afterwards to match with Blender definition. 
+which are all imported to Blender material nodes including texture coordinates.
+Shininess maps to roughness and opacity to the alpha channel,
+they must be color inverted afterwards to match with Blender definition.
 he material mappings are defined as following:
 
 - 3ds Diffuse Map -> blender Base Color Texture
 - 3ds Specular Map -> blender Specular Texture
-- 3ds Shiness Map -> blender Roughness Texture
+- 3ds Shininess Map -> blender Roughness Texture
 - 3ds Reflection Map -> blender Metallic Texture
 - 3ds Opacity Map -> blender Alpha Texture
 - 3ds Self Illum Map -> blender Emission Texture
