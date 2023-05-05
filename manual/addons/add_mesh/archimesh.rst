@@ -10,7 +10,8 @@ This tool is specially designed to generate architecture elements, like:
 - Windows
 - Kitchen cabinets
 - Shelves
-- Columns stairs
+- Columns
+- Stairs
 - Tile roofs
 - Books
 - Lamps
