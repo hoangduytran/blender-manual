@@ -41,6 +41,7 @@ Axis Locking
 Transformations can be locked to an axis by pressing :kbd:`X` or :kbd:`Y` after one of the transform tools.
 Also, holding the :kbd:`MMB` will constrain movement to the X or Y axis.
 
+
 Randomize
 =========
 
@@ -140,6 +141,7 @@ Cursor to Selected
    Moves the Cursor to the center of the selection.
 Cursor to Origin
    Places the cursor to the location (0, 0, 0).
+
 
 .. _bpy.ops.uv.weld:
 
@@ -315,12 +317,12 @@ ensuring a specified margin exists between them to maximize the usage of the UV 
  Shape Method
    The method to use when considering the shape of each island.
 
-   :Exact shape (Concave): Use the complete shape of the island, including filling any holes
-          or concave regions around the island.
-   :Boundary shape (Convex): Takes into account the boundary (Convex Hull) of the island.
-                 This method will not place islands inside holes.
+   :Exact shape (Concave):
+      Use the complete shape of the island, including filling any holes or concave regions around the island.
+   :Boundary shape (Convex):
+      Takes into account the boundary (Convex Hull) of the island.
+      This method will not place islands inside holes.
    :Bounding box: Uses the simple bounding box of the island.
-
 
 .. note::
 
@@ -337,6 +339,7 @@ ensuring a specified margin exists between them to maximize the usage of the UV 
    "Add" or "Scaled" methods.
 
    Similarly, the "Exact shape" and "Boundary shape" methods are much slower than the simple "Bounding Box" method.
+
 
 .. _bpy.ops.uv.average_islands_scale:
 
@@ -384,6 +387,7 @@ Blend
 Iterations
    More iterations result in smoother UVs, but take longer to process.
 
+
 .. _bpy.ops.uv.stitch:
 
 Stitch
@@ -427,6 +431,7 @@ Axis
    :Align Y: Move *V* co-ordinates to the midpoint of the selection.
    :Align Auto: Choose between *Align X* or *Align Y* automatically.
 
+
 .. _bpy.ops.uv.align_rotation:
 
 Align Rotation
@@ -469,6 +474,7 @@ or down in the V axis, whatever is closest to the current orientation of the UV 
 By comparison, in the *Geometry* method, the alignment will always be pointing up in the V axis,
 ignoring any previous orientation.
 
+
 .. _bpy.ops.uv.copy:
 
 Copy UVs
@@ -486,6 +492,7 @@ for later use with the *Paste UVs* tool.
 .. note::
 
    The *Copy UVs* tool currently uses an internal clipboard which is not shared between instances of blender.
+
 
 .. _bpy.ops.uv.paste:
 
@@ -507,6 +514,7 @@ For example, if a triangle attached to a quad attached to a quad is in the clipb
 
 For best results, you may want to use the Rip tool, or :menuselection:`UV > Split > Selection`, prior to using
 *Paste UVs*.
+
 
 .. _bpy.ops.uv.hide:
 .. _bpy.ops.uv.reveal:
