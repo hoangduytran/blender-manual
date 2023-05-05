@@ -6,7 +6,7 @@ Introduction
 .. figure:: /images/render_materials_legacy-textures_introduction_menu.png
    :width: 230px
 
-   The Texture Type list in the Texture panel of the Texture buttons. (Non-procedural textures darkened out.)
+   The Texture Type list in the Texture panel of the Texture buttons.
 
 Procedural textures are textures that are defined mathematically.
 They are generally relatively simple to use,
