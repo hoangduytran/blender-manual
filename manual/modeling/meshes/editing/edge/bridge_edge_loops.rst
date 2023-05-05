@@ -32,7 +32,7 @@ Profile Factor
    How much intermediary new edges are shrunk/expanded.
 Profile Shape
    The shape of the new edges.
-   See the :ref:`Proportional Editing <3dview-transform-control-proportional-edit-falloff>` page
+   See the :ref:`Proportional Editing <bpy.types.ToolSettings.proportional_edit_falloff>` page
    for a description of each option.
 
 

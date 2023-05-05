@@ -38,11 +38,13 @@ Enable :kbd:`O`
    Vertices other than the selected vertex are affected, within a defined radius.
 
 
-Influence
----------
+.. _bpy.types.ToolSettings.proportional_distance:
+
+Proportional Size
+-----------------
 
 You can increase or decrease the radius of the tool's influence during a transform operation
-with :kbd:`WheelUp`, :kbd:`WheelDown` or :kbd:`PageUp`, :kbd:`PageDown` respectively.
+from the Proportional Editing popover or with :kbd:`WheelUp`/:kbd:`WheelDown`, or :kbd:`PageUp`/:kbd:`PageDown` respectively.
 As you change the radius, the points surrounding your selection will adjust their positions accordingly.
 
 .. figure:: /images/editors_3dview_controls_proportional-editing_influence.png
@@ -52,7 +54,6 @@ As you change the radius, the points surrounding your selection will adjust thei
 
 
 .. _bpy.types.ToolSettings.proportional_edit_falloff:
-.. _3dview-transform-control-proportional-edit-falloff:
 
 Falloff
 -------
