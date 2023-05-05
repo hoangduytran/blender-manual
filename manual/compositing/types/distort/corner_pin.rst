@@ -9,8 +9,6 @@ Corner Pin Node
    :align: right
    :alt: Corner Pin Node.
 
-:guilabel:`CPU Compositor Only`
-
 The Corner Pin node uses explicit corner values for a plane warp transformation.
 It works like the :doc:`Plane Track Deform </compositing/types/distort/plane_track_deform>` node,
 but without using "plane track" data from the Movie Clip Editor.
