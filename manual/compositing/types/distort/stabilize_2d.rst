@@ -9,8 +9,6 @@ Stabilize 2D Node
    :align: right
    :alt: Stabilize 2D Node.
 
-:guilabel:`CPU Compositor Only`
-
 Stabilizes the footage according to the settings set in
 :menuselection:`Movie Clip Editor --> Properties --> Stabilization --> 2D Stabilization`.
 For more information,
