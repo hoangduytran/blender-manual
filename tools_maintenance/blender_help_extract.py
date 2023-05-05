@@ -28,6 +28,11 @@ def text_remove_comments(text):
     return re.sub(pattern, replacer, text)
 
 
+def text_remove_preprocess(text):
+    lines = text.split("\n")
+    non_comment_lines = [line for line in lines if not line.strip().startswith("#")]
+    return "\n".join(non_comment_lines)
+
 def text_join_lines(text):
     lines = text.split("\n")
     lines_out = [[]]
@@ -350,6 +355,7 @@ def main():
         text = f.read()
 
     text = text_remove_comments(text)
+    text = text_remove_preprocess(text)
     # join ',\n' - function args split across lines.
     text = text_join_lines(text)
     # expand CB macros

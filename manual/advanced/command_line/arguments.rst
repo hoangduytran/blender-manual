@@ -239,6 +239,8 @@ Debug Options
    Enable workarounds for typical GPU issues and disable all GPU extensions.
 ``--debug-gpu-disable-ssbo``
    Disable usage of shader storage buffer objects.
+``--debug-gpu-renderdoc``
+   Enable Renderdoc integration for GPU frame grabbing and debugging.
 ``--debug-wm``
    Enable debug messages for the window manager, shows all operators in search, shows keymap errors.
 ``--debug-xr``
@@ -269,7 +271,7 @@ GPU Options
 ===========
 
 ``--gpu-backend``
-   Force to use a specific GPU backend. Valid options:
+   Force to use a specific GPU backend. Valid options: ``vulkan``,  ``metal``,  ``opengl``.
 
 
 .. _command-line-args-misc-options:
