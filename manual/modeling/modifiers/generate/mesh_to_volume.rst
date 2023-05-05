@@ -31,14 +31,6 @@ Object
 Density
    Makes the generated volume appear denser or less dense when rendering.
 
-Fill Volume
-   The entire enclosed volume or otherwise only the voxels close to the surface
-   will get a density greater than zero.
-   This setting is only used when the mesh object is :term:`Manifold`.
-
-Exterior Band Width
-   The maximum distance of the included voxels to the surface on the outside of the mesh.
-
 Interior Band Width
    The maximum distance of the included voxels to the surface on the inside of the mesh.
    Activating *Fill Volume* is similar to increasing the interior band width to a high number.
@@ -46,12 +38,11 @@ Interior Band Width
 Resolution Mode
    Mode for how the voxel size is specified.
 
-   Voxel Amount
+   :Voxel Amount:
       This allows setting an approximate number of voxels that will be used to represent mesh along its diagonal.
       When the dimensions of the mesh changes, the voxel size will change as well.
       For final rendering of animations, it's better to specify the voxel size explicitly to avoid artifacts.
-
-   Voxel Size
+   :Voxel Size:
       This allows setting the exact voxel size that will be used.
       This is idea for rendering when the voxel size should not change between frames.
 
