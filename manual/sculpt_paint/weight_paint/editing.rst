@@ -392,34 +392,6 @@ Limit
    Maximum number of weights allowed on each vertex.
 
 
-.. _bpy.ops.object.vertex_group_fix:
-
-Fix Deforms
-===========
-
-The *Fix deforms* tool is used to modify an object's nonzero weights so its deformed
-vertices are at a new defined distance. This is helpful to fix deformations
-because when complex models are deformed to their extreme poses,
-they are often visibly bumpy, jagged, or otherwise incorrectly deformed.
-Using this tool, you can smooth over the deformation.
-
-To use the tool, select the vertices that you would like to move,
-either in Edit Mode or by using the vertex selection/mask.
-The operator can now be used and altered with these options:
-
-Distance
-   The distance to move to.
-Strength
-   The distance moved can be changed by this factor.
-Accuracy
-   Changes the amount weights are altered with each iteration: lower values are slower.
-
-.. note::
-
-   Note that if it does not change, then there are no nonzero bone weights
-   that are changed to make it closer to the intended distance.
-
-
 .. _bpy.ops.object.vertex_group_lock:
 
 Locks
