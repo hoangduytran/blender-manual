@@ -33,7 +33,6 @@ Density
 
 Interior Band Width
    The maximum distance of the included voxels to the surface on the inside of the mesh.
-   Activating *Fill Volume* is similar to increasing the interior band width to a high number.
 
 Resolution Mode
    Mode for how the voxel size is specified.
