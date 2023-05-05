@@ -142,3 +142,5 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/mix.h
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/align_euler_to_vector.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/align_euler_to_vector.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotate_euler.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/rotate_euler.html"
+
+RedirectMatch "^/manual/{lang}/{version}/editors/graph_editor/channels.html" "/manual/{lang}/{version}/editors/graph_editor/channels/index.html"

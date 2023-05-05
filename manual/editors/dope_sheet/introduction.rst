@@ -148,7 +148,7 @@ Channels Region
 
    The Action editor's channels region.
 
-See :doc:`/editors/graph_editor/channels`.
+See :doc:`/editors/graph_editor/channels/index`.
 
 
 Header

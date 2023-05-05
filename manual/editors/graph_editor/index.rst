@@ -1,4 +1,3 @@
-.. _editors-graph-index:
 .. _bpy.types.SpaceGraphEditor:
 .. _bpy.ops.graph:
 
@@ -10,5 +9,5 @@
    :maxdepth: 2
 
    introduction.rst
-   channels.rst
+   channels/index.rst
    fcurves/index.rst
