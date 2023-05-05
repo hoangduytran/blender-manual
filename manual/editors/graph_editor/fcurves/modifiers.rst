@@ -18,8 +18,22 @@ Like object modifiers, F-Curve modifiers are evaluated from the top down.
 In other words, the top modifier is calculated first and consequent modifiers are calculated in order.
 Modifiers can be moved by dragging the modifier box from the top right.
 
-Modifiers can be muted or hidden by toggling the checkbox in the modifier's panel header.
-They can be removed using the delete button in the modifier's panel header.
+
+Interface
+=========
+
+.. _bpy.types.FModifier.name:
+
+Name
+   By default modifiers are named by their function, however, the name can be changed by double clicking the name.
+
+.. _bpy.types.FModifier.mute:
+
+Mute
+   Modifiers can be muted or hidden by toggling the checkbox in the modifier's panel header.
+
+Delete
+   Modifiers can be removed using the delete button in the modifier's panel header.
 
 
 Adding a Modifier
