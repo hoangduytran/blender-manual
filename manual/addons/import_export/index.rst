@@ -16,6 +16,7 @@
    mesh_atomic.rst
    anim_bvh.rst
    scene_dxf.rst
+   scene_3ds.rst
    anim_camera.rst
    paper_model.rst
    pc2.rst
