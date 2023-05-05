@@ -194,14 +194,19 @@ Additional extrapolation methods (e.g. the *Cycles* modifier)
 are located in the :doc:`F-Curve Modifiers </editors/graph_editor/fcurves/modifiers>`.
 
 
+.. _bpy.ops.graph.fmodifier_add:
+
 Add F-Curve Modifier
 --------------------
 
 .. reference::
 
    :Menu:      :menuselection:`Channel --> Add F-Curve Modifier`
+   :Shortcut:  :kbd:`Shift-Ctrl-M`
 
-Adds a :doc:`F-Curve Modifier </editors/graph_editor/fcurves/modifiers>` to the current channel.
+Opens a pop-up allowing you to add modifiers to the active F-Curve.
+Settings for the :doc:`modifier </editors/graph_editor/fcurves/modifiers>` can be found in
+the :menuselection:`Sidebar --> Modifiers` tab.
 
 
 .. _bpy.ops.graph.hide:
@@ -255,3 +260,77 @@ Revive Disabled F-Curves
    :Menu:      :menuselection:`Channel --> Revive Disabled F-Curves`
 
 Clears "disabled" tag from all F-Curves to get broken F-Curves working again.
+
+
+.. _bpy.ops.graph.bake:
+
+Bake Curve
+==========
+
+.. reference::
+
+   :Menu:      :menuselection:`Channel --> Bake Curve`
+   :Shortcut:  :kbd:`Alt-C`
+
+Baking a curve replaces it with a set of sampled points, and removes the ability to edit the curve.
+
+
+.. _bpy.ops.graph.unbake:
+
+Un-Bake Curve
+=============
+
+.. reference::
+
+   :Menu:      :menuselection:`Channel --> Un-Bake Curve`
+
+Unbaking a curve replaces the baked curve with an unbaked curve, adding the ability to edit it.
+
+
+.. _bpy.ops.graph.sound_bake:
+
+Bake Sound to F-Curves
+======================
+
+.. reference::
+
+   :Menu:      :menuselection:`Channel --> Bake Sound to F-Curves`
+
+The *Bake Sound to F-Curves* operator takes a sound file and uses its sound wave to create the animation data.
+
+Lowest Frequency
+   Cutoff frequency of a high-pass filter that is applied to the audio data.
+Highest Frequency
+   Cutoff frequency of a low-pass filter that is applied to the audio data.
+Attack Time
+   Value for the hull curve calculation that tells how fast the hull curve can rise.
+   The lower the value the steeper it can rise.
+Release Time
+   Value for the hull curve calculation that tells how fast the hull curve can fall.
+   The lower the value the steeper it can fall.
+Threshold
+   Minimum amplitude value needed to influence the hull curve.
+
+Accumulate
+   Only the positive differences of the hull curve amplitudes are summarized to produce the output.
+Additive
+   The amplitudes of the hull curve are summarized. If *Accumulate* is enabled,
+   both positive and negative differences are accumulated.
+Square
+   Gives the output as a square curve.
+   Negative values always result in -1, and positive ones in 1.
+
+   Square Threshold
+      All values lower than this threshold result in 0.
+
+
+.. _bpy.ops.graph.euler_filter:
+
+Discontinuity (Euler) Filter
+============================
+
+.. reference::
+
+   :Menu:      :menuselection:`Channel --> Discontinuity (Euler) Filter`
+
+Todo.
