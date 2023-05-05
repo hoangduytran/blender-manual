@@ -23,18 +23,18 @@ Changes the computing device the :doc:`Cycles </render/cycles/index>` render eng
 Cycles can use either the CPU or certain GPUs to render images,
 for more information see the :doc:`GPU Rendering </render/cycles/gpu_rendering>` page.
 
-None
+:None:
    When set to *None* or when the only option is *None*:
    the CPU will be used as the computing device for Cycles.
-CUDA
+:CUDA:
    If the system has a compatible Nvidia CUDA device, it will be available as an option for rendering with Cycles.
-OptiX
+:OptiX:
    If the system has a compatible Nvidia OptiX device, it will be available as an option for rendering with Cycles.
-HIP
+:HIP:
    If the system has a compatible AMD HIP device, it will be available as an option for rendering with Cycles.
-oneAPI
+:oneAPI:
    If the system has a compatible Intel oneAPI device, it will be available as an option for rendering with Cycles.
-Metal
+:Metal:
    If the system has a compatible Apple Metal device, it will be available as an option for rendering with Cycles.
 
 .. _prefs-system-cycles-distributive-memory:
@@ -43,12 +43,19 @@ Distribute Memory Across Devices
    Allocates resources across multiple GPUs rather than duplicating data,
    effectively freeing up space for larger scenes. Note that in order for this option to be available,
    the GPUs must be connected together with a high bandwidth communication protocol.
+
    Currently only NVLink on Nvidia GPUs is supported.
 
 MetalRT (Experimental)
    MetalRT for ray tracing uses less memory for scenes which use curves extensively,
    and can give better performance in specific cases.
-   However this support is experimental and some scenes may render incorrectly.
+   This feature is experimental and some scenes may render incorrectly.
+
+HIP RT (Experimental)
+   Speeds up rendering by enabling AMD hardware ray tracing on RDNA2 and above, with shader fallback on older cards.
+   This feature is experimental and some scenes may render incorrectly.
+
+   This feature is only available when using a *HIP* render device.
 
 
 Operating System Settings
