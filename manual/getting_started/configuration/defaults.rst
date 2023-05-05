@@ -70,7 +70,7 @@ Startup File
 Saving Defaults
 ===============
 
-The user preferences are automatically saved when changed.
+The preferences are automatically saved when changed.
 
 Changing the default startup file can be done via
 :menuselection:`File --> Defaults --> Save Startup File`.

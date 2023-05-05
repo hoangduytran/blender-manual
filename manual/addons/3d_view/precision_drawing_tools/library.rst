@@ -46,7 +46,7 @@ Parts Library File:
 ===================
 
 The Parts Libraries can be located wherever you want them on your system. The location of your file,
-a normal Blender blend file, is set in the PDT Add-on Preference (User Preferences => Add-ons Tab):
+a normal Blender blend file, is set in the PDT Add-on Preference (:menuselection:`Preferences --> Add-ons`):
 
 .. figure:: /images/addons_pdt_library_4.png
    :width: 450px

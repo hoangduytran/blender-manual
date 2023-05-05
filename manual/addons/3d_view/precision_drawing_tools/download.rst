@@ -4,7 +4,7 @@ Download & Install
 ******************
 
 Precision Drawing Tools (PDT) now ships with Blender.
-In this case you need only enable the Add-on in User Preferences.
+In this case you need only enable the Add-on in the Add-on Preferences.
 
 However, the latest releases can be found on our GitHub.
 

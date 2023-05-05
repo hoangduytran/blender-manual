@@ -34,4 +34,4 @@ also originate internally from within the Blender code or from external sources 
    it is likely that an error will occur, and this message will not appear.
 
 ``Read prefs: {DIR}/userpref.blend``
-   The user preferences use this path.
+   The preferences use this path.
