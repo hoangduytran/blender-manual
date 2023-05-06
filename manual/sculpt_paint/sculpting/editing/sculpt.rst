@@ -5,6 +5,7 @@ Sculpt
 
 This page details the general hotkey operators and menu operators in sculpt mode.
 
+
 Show & Hide
 ===========
 
@@ -12,6 +13,8 @@ Some very common hotkey operators to control the visibility based on face sets.
 These are not part of any menu and have to be used via the shortcuts.
 More visibility operators can be found in the :doc:`Face Sets Menu</sculpt_paint/sculpting/editing/face_sets>`
 and the Pie Menu shortcut :kbd:`W`. (Since visibility is often toggled via face sets.)
+
+.. _bpy.ops.sculpt.face_set_change_visibility:
 
 Toggle Visibility :kbd:`H`
    Hide all face sets except the active one (under the cursor).
@@ -21,6 +24,7 @@ Hide Active Face Set :kbd:`Shift-H`
    Hide the face set under the cursor. Press :kbd:`H` afterwards to show everything.
 
 .. note::
+
    These two shortcuts are inverted compared to other modes, to make the operators more convenient to access.
    Toggling the Visibility is far more often used. If this behavior is undesired it's recommended
    to change the keymap in the preferences.
@@ -31,7 +35,6 @@ Hide Active Face Set :kbd:`Shift-H`
 
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Sculpt`
-
 
 Show All :kbd:`W`, :kbd:`Alt-H`
    Reveal all hidden faces.
@@ -44,8 +47,10 @@ Hide Masked
    Hides all masked vertices.
 
 .. seealso::
+
    For a more general introduction see
    :doc:`Visibility, Masking & Face Sets </sculpt_paint/sculpting/introduction/visibility_masking_face_sets>`.
+
 
 .. _bpy.ops.sculpt.set_pivot_position:
 
@@ -76,10 +81,12 @@ Surface
    Sets the pivot position to the surface under the cursor.
 
 .. tip::
+
    For more convenient placement of the pivot point it's recommended to assign a shortcut to either
    *Surface* or *Active Vertex*.
 
 .. seealso::
+
    For a more general introduction see :doc:`Transforming </sculpt_paint/sculpting/introduction/transforming>`.
 
 
@@ -114,4 +121,5 @@ Recalculates the :term:`BVH` used by :doc:`/sculpt_paint/sculpting/tool_settings
 to improve performance, which might degrade over time while using Dyntopo.
 
 .. seealso::
+
    For a more general introduction see :doc:`Adaptive Resolution </sculpt_paint/sculpting/introduction/adaptive>`.
