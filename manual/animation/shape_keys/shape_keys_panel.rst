@@ -108,7 +108,7 @@ Shape Key Edit Mode (edit mode icon)
 .. _bpy.types.Object.add_rest_position_attribute:
 
 Add Rest Position
-   Creates an:abbr:`Attribute </modeling/geometry_nodes/attributes_reference>` in the vertex domain called
+   Creates an :doc:`Attribute </modeling/geometry_nodes/attributes_reference>` in the vertex domain called
    ``rest_position`` which is a copy of the ``position`` attribute before shape keys and modifiers are evaluated.
    Only mesh objects support this option.
 
