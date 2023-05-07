@@ -7,7 +7,7 @@ Introduction
 
 .. note::
 
-   The texture node system is legacy and will be replaced soon by a new system.
+   The texture node system is legacy and expected to be replaced by a new system.
    Due to this, the manual is not up to date with the latest version of Blender.
 
 Blender includes a node-based texture generation system, which enables textures
