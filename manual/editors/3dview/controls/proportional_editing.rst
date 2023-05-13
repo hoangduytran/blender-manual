@@ -44,8 +44,9 @@ Proportional Size
 -----------------
 
 You can increase or decrease the radius of the tool's influence during a transform operation
-from the Proportional Editing popover or with :kbd:`WheelUp`/:kbd:`WheelDown`, or :kbd:`PageUp`/:kbd:`PageDown` respectively.
-As you change the radius, the points surrounding your selection will adjust their positions accordingly.
+from the Proportional Editing popover or with :kbd:`WheelUp`/:kbd:`WheelDown`, or :kbd:`PageUp`/:kbd:`PageDown`
+respectively. As you change the radius, the points surrounding your selection will adjust their positions
+accordingly.
 
 .. figure:: /images/editors_3dview_controls_proportional-editing_influence.png
    :align: center
