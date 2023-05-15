@@ -30,7 +30,7 @@ edit, and contribute your changes by following these links:
 **Note:**
 We realize this may be intimidating if you're not familiar with Git
 or making patches, you may also submit the modified file as an
-[Issue](https://projects.blender.org/blender/documentation/issues/new,
+[Issue](https://projects.blender.org/blender/blender-manual/issues/new),
 or mail the bf-docboard mailing list.
 
 
@@ -54,7 +54,7 @@ If you are interested in becoming a contributor, please contact us on the
 # Translations
 
 For translations, we use Sphinx’s internationalization package.
-To get started see https://docs.blender.org/manual/en/dev/contribute/index.html#translations
+To get started see the [contribution guide for translations](https://docs.blender.org/manual/en/dev/contribute/index.html#translations).
 
 
 ## Links
