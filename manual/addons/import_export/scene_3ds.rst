@@ -94,30 +94,37 @@ both can be read by the importer and will be converted to blender values.
 The exporter uses the integer values, since this is used from 3ds version 3 and above.
 The material definitions wich Blender can use are the following:
 
-- 3ds Diffuse Color -> blender Base Color
-- 3ds Specular Color -> blender Specular Color
-- 3ds Ambient Color -> blender Emission Color
-- 3ds Mat Shininess -> blender Roughness inverted
-- 3ds Mat Shin2 -> blender Specular Intensity
-- 3ds Mat Shin3 -> blender Metallic
-- 3ds Mat Opacity -> blender Alpha inverted
-- 3ds Mat Bump PCT -> blender Normalmap Strength
-- 3ds Self Illum PCT -> blender Emission Strength
+- 3ds Diffuse Color <-> blender Base Color
+- 3ds Specular Color <-> blender Specular Color
+- 3ds Ambient Color <-> blender Emission Color
+- 3ds Mat Shininess <-> blender Roughness inverted
+- 3ds Mat Shin2 <-> blender Specular Intensity
+- 3ds Mat Shin3 <-> blender Metallic
+- 3ds Mat Opacity <-> blender Alpha inverted
+- 3ds Mat Bump PCT <-> blender Normalmap Strength
+- 3ds Self Illum PCT <-> blender Emission Strength
+
+
+Textures
+--------
 
 Each 3ds material can include different texture mappings,
 which are all imported to Blender material nodes including texture coordinates.
+The 3ds exporter basically takes the images and coordinates,
+wich are directly connected to the Principled BSDF shader,
+if an image is connected to a colormix shader, it will exported as secondary texture.
 Shininess maps to roughness and opacity to the alpha channel,
 they must be color inverted afterwards to match with Blender definition.
-he material mappings are defined as following:
+The material mappings are defined as following:
 
-- 3ds Diffuse Map -> blender Base Color Texture
-- 3ds Specular Map -> blender Specular Texture
-- 3ds Shininess Map -> blender Roughness Texture
-- 3ds Reflection Map -> blender Metallic Texture
-- 3ds Opacity Map -> blender Alpha Texture
-- 3ds Self Illum Map -> blender Emission Texture
-- 3ds Bump Map -> blender Normal Map (tangent space)
-- 3ds Tex2 Map -> blender Color Texture (connect to mixshader)
+- 3ds Diffuse Map <-> blender Base Color Texture
+- 3ds Specular Map <-> blender Specular Texture
+- 3ds Shininess Map <-> blender Roughness Texture
+- 3ds Reflection Map <-> blender Metallic Texture
+- 3ds Opacity Map <-> blender Alpha Texture
+- 3ds Self Illum Map <-> blender Emission Texture
+- 3ds Bump Map <-> blender Normal Map (tangent space)
+- 3ds Tex2 Map <-> blender Color Texture (connect to mixshader)
 
 .. figure:: /images/addons_io_3ds_material-nodes.jpg
 
@@ -136,6 +143,9 @@ Meshes are made of triangles only, no quads are supported,
 3ds Studio uses edge visibilty flags to hide and show edges, many 3ds files use them to mark the quads.
 The Blender 3ds importer and exporter will use those flags to mark edges sharp,
 this can be used to convert the triangles back to quads.
+The importer can read the smoothchunk and shades a face smooth if it belongs to a smoothgroup,
+the exporter creates a smooth chunk if the mesh contains any smooth faces.
+3ds only supports one pair of UV coordinates per vertex. If any vertex has more UVs, it will be dublicated.
 
 
 Ambient
