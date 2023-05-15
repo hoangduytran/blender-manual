@@ -20,15 +20,18 @@ For the appropriate system, run the command in a terminal:
 
 Debian/Ubuntu::
 
-      sudo apt-get install python3 python3-pip git
+   sudo apt-get install python3 python3-pip git git-lfs
+   git lfs install --skip-repo
 
 Redhat/Fedora::
 
-      sudo yum install python python-pip git
+   sudo yum install python python-pip git git-lfs
+   git lfs install --skip-repo
 
 Arch Linux::
 
-      sudo pacman -S python python-pip git
+   sudo pacman -S python python-pip git git-lfs
+   git lfs install --skip-repo
 
 
 Downloading the Repository
@@ -37,7 +40,6 @@ Downloading the Repository
 Simply check out the Blender Manual's repository using::
 
    cd ~
-   git lfs install
    git clone https://projects.blender.org/blender/blender-manual.git
 
 The repository will now be downloaded which may take a few minutes depending on your internet connection.

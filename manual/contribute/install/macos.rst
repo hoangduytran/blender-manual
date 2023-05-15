@@ -21,10 +21,15 @@ Installing Dependencies
 
 Install those packages or make sure you have them in your system.
 
-- `Python <https://www.python.org/>`__
 - `PIP <https://pip.pypa.io/en/latest/installing/>`__
 - `Git <https://git-scm.com/download/mac>`__
+- `Git LFS <https://git-lfs.com>`__
 
+When using `Homebrew <https://brew.sh>`__, run the following commands in the terminal::
+
+   python3 -m ensurepip
+   brew install git git-lfs
+   git lfs install
 
 Downloading the Repository
 ==========================
@@ -32,7 +37,6 @@ Downloading the Repository
 Simply check out the Blender Manual's repository using::
 
    cd ~
-   git lfs install
    git clone https://projects.blender.org/blender/blender-manual.git
 
 The repository will now be downloaded which may take a few minutes depending on your internet connection.

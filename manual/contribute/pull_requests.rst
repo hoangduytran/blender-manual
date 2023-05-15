@@ -34,7 +34,6 @@ Fork
    Click *SSH* to see the correct URL, and then add it like this::
 
       git remote add me git@projects.blender.org:<USERNAME>/blender-manual.git
-      git submodule sync
 
 .. note::
 
