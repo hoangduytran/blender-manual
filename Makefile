@@ -115,7 +115,7 @@ update_po:
 
 report_po_progress:
 	@python3 tools_report/report_translation_progress.py --quiet \
-	         `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.svn*' -printf 'locale/%f\n' | sort`
+	         `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.git*' -printf 'locale/%f\n' | sort`
 
 # ----------------------
 # Help for build targets

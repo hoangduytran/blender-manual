@@ -27,8 +27,15 @@ The following guides lead you through the process.
    install/index.rst
    build.rst
    editing.rst
-   patch_commit.rst
-   release_cycle.rst
+   pull_requests.rst
+
+
+Where to help
+=============
+
+.. toctree::
+   :maxdepth: 1
+
    todo_list.rst
 
 
@@ -40,8 +47,10 @@ Guidelines
 
    guides/writing_guide.rst
    guides/markup_guide.rst
+   guides/commit_guide.rst
    guides/templates.rst
    guides/maintenance_guide.rst
+   release_cycle.rst
 
 
 Translations

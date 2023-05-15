@@ -18,7 +18,7 @@ Update
 
 Firstly, make sure that your local copy of the manual is up to date with the online repository using::
 
-   svn update
+   git pull --rebase
 
 
 Writing

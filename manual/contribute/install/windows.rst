@@ -7,7 +7,7 @@ Installation on Windows
 This guide covers the following topics:
 
 #. `Installing Python`_ (used to "convert" the source files to HTML)
-#. `Installing SVN and Downloading the Repository`_
+#. `Installing Git and Downloading the Repository`_
 #. `Setting up the Build Environment`_
 
 
@@ -26,32 +26,35 @@ Installing Python
    All other settings can remain as set by default.
 
 
-Installing SVN and Downloading the Repository
+Installing Git and Downloading the Repository
 =============================================
 
-In this guide, we will use TortoiseSVN though any Subversion client will do.
+In this guide, we will use the official Git client, though any Git client will do.
 
-#. Download `TortoiseSVN <https://tortoisesvn.net/downloads.html>`__ for Windows.
-#. Install TortoiseSVN with the installation wizard. When choosing which features will be installed,
-   it is recommended that you enable *command line client tools* to give you access to SVN from the command line
-   (there is no harm in doing this, and it may be helpful if you ever run into any trouble).
-#. Once the installation has finished,
-   create a new folder that will contain everything related to the Blender Manual.
-   In this guide, we will use ``C:\blender_docs``.
-#. Open the new folder, right-click and choose *SVN Checkout...* from the context menu.
-#. In the *URL of repository* field, enter: ``https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs``.
-#. In the *Checkout directory* field, enter: ``C:\blender_docs``.
-#. Click *OK* -- the repository will now be downloaded
-   which may take a few minutes depending on your internet connection.
+#. Download `Git <hhttps://git-scm.com/download/win>`__ for Windows.
+#. Simply check out the Blender Manual's repository using::
+
+      cd ~
+      git lfs install
+      git clone https://projects.blender.org/blender/blender-manual.git
+
+#. The repository will now be downloaded which may take a few minutes depending on your internet connection.
+
+.. note::
+
+   This process can be completed using a graphical Git client,
+   in that case you will just use the repository address in the URL field provided by your client::
+
+      https://projects.blender.org/blender/blender-manual.git
 
 
 Setting up the Build Environment
 ================================
 
 - Open a Command Prompt. (Run as Administrator)
-- Enter the ``blender_docs`` folder which was just added by the SVN checkout::
+- Enter the ``blender-manual`` folder which was just added by the SVN checkout::
 
-     cd C:\blender_docs
+     cd C:\blender-manual
 
 - Inside that folder is a file called ``requirements.txt`` which contains a list of all the dependencies we need.
   Install all the dependencies using Python's ``pip`` command::

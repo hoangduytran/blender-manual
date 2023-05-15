@@ -81,7 +81,7 @@ def rst_files_report(img_refs):
 
     print_title("List of unused images:")
     for fn in sorted(img_files_set - img_refs_set):
-        print(" svn rm --force manual/images/%s" % fn)
+        print(" git rm manual/images/%s" % fn)
 
     print_title("List of missing images:")
     for fn in sorted(img_refs_set - img_files_set):

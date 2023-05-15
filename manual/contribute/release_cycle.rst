@@ -29,11 +29,11 @@ Switching Branches
 
 To switch to the release branch use::
 
-   svn switch https://svn.blender.org/svnroot/bf-manual/branches/blender-{VERSION}-release/blender_docs/
+   git checkout blender-v{VERSION}-release
 
 To switch back to the development branch use::
 
-   svn switch https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs/
+   git checkout main
 
 
 Updating Branches
@@ -42,8 +42,7 @@ Updating Branches
 To merge changes from the release branch to the development branch,
 first switch to the development branch and use::
 
-   svn merge https://svn.blender.org/svnroot/bf-manual/branches/blender-{VERSION}-release/blender_docs/
-   svn ci -m "Merge branch 'blender-{VERSION}-release'"
+   git merge blender-v{VERSION}-release
 
 
 Bcon Phases

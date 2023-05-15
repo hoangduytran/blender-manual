@@ -6,7 +6,7 @@ Building the Manual
 
 Converting the RST-files into pretty HTML pages is simple.
 
-Open a terminal or Command Prompt in the ``~/blender_docs`` directory and simply run::
+Open a terminal or Command Prompt in the ``~/blender-manual`` directory and simply run::
 
    make
 
@@ -24,7 +24,7 @@ and refresh the HTML pages as necessary.
 
 .. note::
 
-   The converted pages can also be viewed manually by browsing the build directory: ``~/blender_docs/build/html``.
+   The converted pages can also be viewed manually by browsing the build directory: ``~/blender-manual/build/html``.
    For example to open the home page, open ``build/html/index.html`` to read the manual.
 
 The building process may take several minutes the first time (or after any major changes),

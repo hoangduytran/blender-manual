@@ -10,7 +10,7 @@ So, be sure to change the ``/fr`` suffixes in this guide to the language you are
 
 To see which languages are currently available, you can browse the repository:
 
-``https://svn.blender.org/svnroot/bf-manual-translations/trunk/blender_docs/locale/``
+``https://projects.blender.org/blender/blender-manual-translations``
 
 .. note::
 
@@ -27,13 +27,13 @@ Language Files
 
 From the directory containing your checkout of the manual run::
 
-   svn checkout https://svn.blender.org/svnroot/bf-manual-translations/trunk/blender_docs/locale/fr locale/fr
+   git clone https://projects.blender.org/blender/blender-manual-translations.git locale
 
 This will create a ``locale/fr`` subdirectory.
 
 You should have a directory layout like this::
 
-   blender_docs
+   blender-manual
       |- locale/
       |  |- fr/
       |  |  |- LC_MESSAGES/
@@ -41,10 +41,8 @@ You should have a directory layout like this::
 
 .. note::
 
-   When running subversion from the command line (such as updating or committing),
-   you will need to change directory to ``locale/fr`` first.
-
-   Otherwise you will get a warning: ``'locale' is not under version control``
+   When running Git from the command line (such as updating or committing),
+   you will need to change directory to ``locale`` first rather then the ``blender-manual`` directory.
 
 
 A PO Editor
@@ -94,7 +92,7 @@ Once in your editor you will see a list of texts, each of these items represent 
 You may need to adjust your editor to sort the list in a way that makes sense for example "by source".
 
 You can now select an untranslated string and your editor will have an input box to add the translation.
-The modified ``.po`` files can now submitted as a patch or committed back to SVN.
+The modified ``.po`` files can now submitted as a patch or committed back to the repository.
 
 .. tip::
 
@@ -102,10 +100,41 @@ The modified ``.po`` files can now submitted as a patch or committed back to SVN
    These errors will be displayed as warnings while building the manual.
 
 
-Commit Translation Files
-========================
+Submitting Translations
+=======================
 
-See :ref:`Submit Patches <contribute-patch_submit>`.
+Translators who have been given commit access can commit to the
+main repository without needing to fork the repository.
+
+See :doc:`/contribute/guides/commit_guide` if this applies to you.
+
+
+Fork Translation Repository
+---------------------------
+
+#. Go to Blender repository and click the Fork button.
+#. Confirm the fork with the default settings.
+#. Now you will have to add your personal fork as a remote in your local git repository.
+   Click *SSH* to see the correct URL, and then add it like this::
+
+      git remote add me git@projects.blender.org:<USERNAME>/blender-manual-translations.git
+      git submodule sync
+
+.. note::
+
+   In order to push to the fork repository, you need an SSH key.
+   If you don't already have the file ``~/.ssh/id_rsa.pub``,
+   there's a simple command to generate such keys which works on Linux, macOS, and in Git Bash on Windows::
+
+      ssh-keygen
+
+   This command will generate a private key id_rsa and a public key id_rsa.pub in ``~/.ssh``.
+   The private key must never be shown or sent to anyone else to avoid compromising your account,
+   but the public key is safe to share.
+
+   The contents of ``~/.ssh/id_rsa.pub`` can be copied and pasted into
+   the `account settings on projects.blender.org <https://projects.blender.org/user/settings/keys>`__,
+   after clicking "Add Key". Any name for the SSH key is ok.
 
 
 Maintenance
@@ -144,7 +173,7 @@ However, if you need to update the files yourself, it can be done as follows::
 
    make update_po
 
-The updated templates can then be committed to svn.
+The updated templates can then be committed to the repository.
 
 .. seealso::
 

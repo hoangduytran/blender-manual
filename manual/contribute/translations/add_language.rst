@@ -29,7 +29,7 @@ Other platforms might vary slightly but should be mainly the same.
    `Create an Issue <https://projects.blender.org/blender/documentation/issues/new>`__
    requesting for commit access in order to transfer changes to the central repository of the translation team.
 #. Open an instance of a console application.
-#. Change the current working directory to the directory of ``blender_docs``,
+#. Change the current working directory to the directory of ``blender-manual``,
    where the instance of ``Makefile`` resides.
 
 
@@ -48,49 +48,26 @@ Trying the Make Process to Create HTML Files in English
 
       make html
 
-#. After this, you can actually view the created html files locally following the prompted instruction, such as::
-
-      xdg-open <path to your English manual>/blender_docs/build/html/index.html
+#. After this, you can actually view the created html files locally
+   by opening the ``blender-manual/build/html/index.html`` file.
 
 
 Creating the Language Entry in the HTML Menu
 ============================================
 
 #. Create an entry for the language in the html menu by opening file ``./resources/theme/js/version_switch.js``
-   (assuming you are at the ``blender_docs`` subdirectory).
+   (assuming you are at the ``blender-manual`` subdirectory).
 #. Find the table for the languages in ``var all_langs = {..};``.
 #. Enter the entry: ``"fr": "Fran&ccedil;ais",``, (``"fr": "Français"``).
    (Notice the Unicode characters.)
-#. To find out about changes in the local repository::
+#. Commit the updated file::
 
-      svn status
+      git add ./resources/theme/js/version_switch.js
+      git commit -m "HTML: Add French to language menu"
 
-#. Enter your password::
+#. Push your changes to the upstream repository::
 
-      svn commit --username <your username> -m "your comment"
-
-#. Bring your local repository up to the most recent version of changes, including the one you have just done::
-
-      svn update .
-
-
-Setting the Local Configuration File
-====================================
-
-#. Open a text editor to enter the following texts,
-   change the language code to whatever the language you will be translating:
-
-   .. code-block:: python
-      :linenos:
-
-      language = 'fr'
-      locale_dirs = ['locale/']
-      gettext_compact = True
-
-#. Save this file as ``conf.py`` in the ``blender_docs`` directory, where ``Makefile`` resides.
-#. Tells ``svn`` to ignore this file when performing operations by executing this shell command::
-
-      svn propset svn:ignore conf.py .
+      git push
 
 
 Generating the Set of Files for the Target Language
@@ -98,44 +75,37 @@ Generating the Set of Files for the Target Language
 
 #. Check out the current translation repository using the command::
 
-      svn checkout https://svn.blender.org/svnroot/bf-manual-translations/trunk/blender_docs/locale
+      git clone https://projects.blender.org/blender/blender-manual-translations.git locale
 
    This will download all language sets available in the repository into the ``locale`` directory of your drive.
-   You can go to the ``locale`` directory to see the hidden subdirectory ``.svn`` within it,
+   You can go to the ``locale`` directory to see the hidden subdirectory ``.git`` within it,
    together with directories of languages.
    You'll need to add your own set of files for the language you are trying to translating to.
 
-#. From the ``blender_docs`` directory to generate a set of files for ``fr`` language::
+#. From the ``blender-manual`` directory to generate a set of files for ``fr`` language::
 
-      make gettext
-      sphinx-intl update -p build/gettext -l fr
+      make update_po
 
    These files are still in English only, with all ``msgstr`` entries blank.
 
 #. Submit new set of files to the central repository::
 
       cd locale
-      svn add fr
-      svn commit --username <your username> -m "Initial commit language set of files for French"
+      git add fr
+      git commit -m "Initial commit language set of files for French"
 
-#. You don't need all other languages being there, so remove the locale directory for the time being::
-
-      rm -fr locale
-
-   We will download this new set of language as guided in the next section.
-
-.. note::
+.. tip::
 
    - It is recommended you make two environment variables for these directories, in the ``.bashrc``
      to make it more convenient for changing or scripting batch/shell commands
      for the process of translation and reviewing results::
 
-        export BLENDER_MAN_EN=$HOME/<directory to make file directory above>/blender_docs
+        export BLENDER_MAN_EN=$HOME/<directory to make file directory above>/blender-manual
         export BLENDER_MAN_FR=$BLENDER_MAN_EN/locale
 
    - Newly generated files will contain some placeholders for authors and revision dates etc.
      If you find the job of replacing them repetitive, make use of the script ``change_placeholders.sh``
-     in the subdirectory ``~/blender_docs/toos_maintenance``, make a copy of that to your local ``bin`` directory and
+     in the subdirectory ``~/blender-manual/tools_maintenance``, make a copy of that to your local ``bin`` directory and
      replace all values that were mentioned in the file with your specific details,
      then after each change to a file, you would do following commands
      to update the file with your personal details, revision date and time,

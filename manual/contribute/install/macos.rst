@@ -23,7 +23,7 @@ Install those packages or make sure you have them in your system.
 
 - `Python <https://www.python.org/>`__
 - `PIP <https://pip.pypa.io/en/latest/installing/>`__
-- `Subversion <https://subversion.apache.org/>`__
+- `Git <https://git-scm.com/download/mac>`__
 
 
 Downloading the Repository
@@ -32,7 +32,8 @@ Downloading the Repository
 Simply check out the Blender Manual's repository using::
 
    cd ~
-   svn checkout https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs
+   git lfs install
+   git clone https://projects.blender.org/blender/blender-manual.git
 
 The repository will now be downloaded which may take a few minutes depending on your internet connection.
 
@@ -41,17 +42,17 @@ Setting up the Build Environment
 ================================
 
 - Open a Terminal window.
-- Enter the ``blender_docs`` folder which was just added by the SVN checkout::
+- Enter the ``blender-manual`` folder which was just added by ``git clone``::
 
-     cd ~/blender_docs
+     cd ~/blender-manual
 
 - Inside that folder is a file called ``requirements.txt`` which contains a list of all the dependencies we need.
   To install these dependencies, we can use the ``pip`` command::
 
-     sudo pip install -r requirements.txt
+     pip install -r requirements.txt
 
 .. note::
 
    Every now and then you may want to make sure your dependencies are up to date using::
 
-      sudo pip install -r requirements.txt --upgrade
+      pip install -r requirements.txt --upgrade
