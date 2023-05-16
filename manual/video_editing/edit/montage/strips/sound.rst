@@ -40,12 +40,12 @@ Waveform
 The waveform of the audio is shown depending on two options:
 
 Overlay
-   The Sequencer Overlay menu has options to show all strip waveforms, none of them, or to use the per-strip option
+   The Sequencer Overlay menu has options to show all strip wave-forms, none of them, or to use the per-strip option
    described below.
 
 Strip
-   Each strip has an option 'Display Waveform'. It is only visible when the above overlay option is set to 'Use Strip
-   Option'
+   Each strip has an option *Display Waveform*.
+   It is only visible when the above overlay option is set to *Use Strip Option*.
 
 Clipping audio, i.e. values over 100% amplitude, will be shown in red in the waveform.
 
@@ -60,12 +60,12 @@ Examples of animating an audio strip are to fade in/out background music or to a
 Layered/crossed Sound strips are added together;
 the lower channel does not override and cut out higher channels (unlike image and video strips).
 This makes Blender an audio mixer.
-By adding audio tracks and using the curves to adjust each tracks' sound level,
+By adding audio tracks and using the curves to adjust each tracks sound level,
 you have an automated dynamic multi-track audio mixer!
 
 .. seealso::
 
-   Sounds can be crossfaded by adding a :ref:`Sound Crossfade <bpy.ops.sequencer.crossfade_sounds>` effect.
+   Sounds can be cross-faded by adding a :ref:`Sound Crossfade <bpy.ops.sequencer.crossfade_sounds>` effect.
 
 
 Output

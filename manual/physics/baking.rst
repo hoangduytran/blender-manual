@@ -43,7 +43,7 @@ Caches List
 
    Each cache can have a name. Double-click the cache entry to give it a name.
    If this name is given, any disk cache will be stored in files starting with that name.
-   For example, a cache named 'MyCache' will be stored in ``MyCache_xxxxxx_yy.bphys``.
+   For example, a cache named ``MyCache`` will be stored in ``MyCache_xxxxxx_yy.bphys``.
 
    If the cache does not have a name (which is the default),
    the filename of the cache will depend on the object it is attached to,

@@ -18,7 +18,7 @@ Replace Radius
    Replace the original radius.
 
 Radius
-   Base radius to be set if 'Replace Radius' is enabled.
+   Base radius to be set if *Replace Radius* is enabled.
 
 Shape
    Shape of the radius along the curve.
