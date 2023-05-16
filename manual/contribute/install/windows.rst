@@ -31,7 +31,7 @@ Installing Git and Downloading the Repository
 
 In this guide, we will use the official Git client, though any Git client will do.
 
-#. Download `Git <hhttps://git-scm.com/download/win>`__ for Windows.
+#. Download and install `Git <https://git-scm.com/download/win>`__ for Windows.
 #. Simply check out the Blender Manual's repository using::
 
       cd ~
