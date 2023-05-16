@@ -84,6 +84,9 @@ View
 Cursor
    Align the transformation axes to the :doc:`3D Cursor </editors/3dview/3d_cursor>`.
 
+Parent
+   Align the transformation axes to the :doc:`Parent </scene_layout/object/editing/parent>`.
+
 
 Examples
 --------
@@ -113,6 +116,13 @@ Examples
      - .. figure:: /images/editors_3dview_controls_orientation_manipulator-view.png
 
           View transform orientation.
+   * - .. figure:: /images/editors_3dview_controls_orientation_manipulator-parent.png
+
+          Parent transform orientation. Cube parented to rotated empty. 
+
+     - .. 
+
+     - .. 
 
 
 .. _bpy.types.TransformOrientation.name:
