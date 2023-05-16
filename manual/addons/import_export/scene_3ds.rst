@@ -37,8 +37,8 @@ Image Search
 
 Read Keyframe
    Reads the keyframe tracks from a 3ds file and transforms the objects to the data wich was found.
-   Usually only one frame is found in static scenes, it will be imported to the timeline. If the 3ds scene is animated,
-   the complete animation will be imported to the timeline.
+   Usually only one frame is found in static scenes, it will be imported to the timeline.
+   If the 3ds scene is animated, the complete animation will be imported to the timeline.
 
 
 Transform

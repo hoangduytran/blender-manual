@@ -65,10 +65,13 @@ however, the workflow is the same for any Blender project.
 Guidelines for Reviewers
 ========================
 
-- The pull request text should be usable as the git commit message (see the :ref:`guidelines <contribute-commit-good-message>` for details).
+- The pull request text should be usable as the git commit message
+  (see the :ref:`guidelines <contribute-commit-good-message>` for details).
 - Be explicit when some changes are to be addressed before committing, without the need for a review iteration.
 - If the pull request is not approved the author is expected to make another iteration.
-- If the change needs agreement on the design task first, put the pull request on hold by adding a "WIP: " prefix in the title, indicating the author considers the pull request not ready to be merged. No review is expected unless the author specifically asks for it.
+- If the change needs agreement on the design task first, put the pull request on hold by adding a
+  `WIP: ` prefix in the title, indicating the author considers the pull request not ready to be merged.
+  No review is expected unless the author specifically asks for it.
 - Writers are expected to reply to pull requests in 3 working days.
 - Add relevant modules/projects to tags.
 - Assign individuals (instead of modules/projects) for reviewers, to avoid too much noise.
