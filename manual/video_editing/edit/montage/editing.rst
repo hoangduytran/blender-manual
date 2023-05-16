@@ -625,3 +625,10 @@ Retiming split strips
 When strip is split, retming handle is created on both strip edges. If split happens on frame where there already is
 retiming handle, it is reused, so existing retiming is not affected. These retiming handles will be invisible and
 handle on left strip edge can not be moved.
+
+Smooth Transitions
+------------------
+
+It is possible to create smooth transition from one speed to another speed. This can be done by holding shift key and
+dragging handle at interface of 2 speeds. This will create 2 handles, that are linked and always move in opposite
+direction. When either of these handles is removed, this will restore strip to state before transition was created.
