@@ -12,7 +12,7 @@ These options allow you to align and orient the view.
 Align View to Active
    Aligns the view to a certain local axis of the active object, bone, or (in Edit Mode)
    the normal of the active face. The view also becomes orthographic.
-   
+
    To return to the regular (untilted) perspective view, you can first press :kbd:`Numpad3`
    to align to the global X axis, then orbit with :kbd:`MMB`.
 

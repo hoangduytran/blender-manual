@@ -14,7 +14,7 @@ Blender offers two such alternative navigation methods: Flying and Walking.
 You can initiate either method from the :menuselection:`View --> Navigation`
 menu. You can also initiate your preferred one (configured
 in the :doc:`Preferences </editors/preferences/navigation>`)
-by pressing :kbd:`Shift-AccentGrave`. 
+by pressing :kbd:`Shift-AccentGrave`.
 
 .. figure:: /images/editors_3dview_navigate_walk-fly_view-navigation-panel.png
 
@@ -33,7 +33,7 @@ Recording camera movement
    starting animation playback, and finally activating Fly/Walk navigation.
    The path will be recorded as camera keyframes which can then be
    used for rendering.
-   
+
    Animation playback can't be controlled while Fly/Walk navigation is active,
    so when you're done recording, you first need to exit the navigation
    with :kbd:`LMB` before you can stop playback.

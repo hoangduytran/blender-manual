@@ -87,7 +87,7 @@ Windows
 
    For installations from the Window's Store, the ``USER`` and ``SYSTEM``
    directories are inside a special folder resembling:
-   ``%USERPROFILE%\AppData\Local\Packages\BlenderFoundation.Blender<HASH>\LocalCache\Roaming\Blender 
+   ``%USERPROFILE%\AppData\Local\Packages\BlenderFoundation.Blender<HASH>\LocalCache\Roaming\Blender
    Foundation\Blender``
    where "HASH" is a string specific to each installation.
 

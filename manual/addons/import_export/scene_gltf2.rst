@@ -569,7 +569,6 @@ are supported directly by this add-on:
 - ``KHR_mesh_quantization``
 
 
-
 .. rubric:: Export
 
 - ``KHR_draco_mesh_compression``

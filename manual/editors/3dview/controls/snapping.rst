@@ -63,7 +63,7 @@ Volume
    This is useful for positioning an :doc:`Armature </animation/armatures/introduction>`
    bone so it's centered inside a character's arm, for example; the other snapping options
    would place it on the arm's surface instead.
-   
+
    While Blender also has :doc:`Volume objects </modeling/volumes/introduction>`, this option
    is not related to those.
 Edge Center

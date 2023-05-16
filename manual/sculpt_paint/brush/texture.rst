@@ -5,7 +5,7 @@ Texture & Texture Mask
 **********************
 
 This page covers both the Texture and Texture Mask panels.
-Add a Texture to the brush to control the color of the brush. 
+Add a Texture to the brush to control the color of the brush.
 A Texture Mask is used to control the strength of the brush.
 Both the Texture and Texture Mask offer the same settings.
 

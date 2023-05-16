@@ -41,7 +41,7 @@ Subdivision
 
 Text Info
    Show various bits of information in the top left corner of the viewport.
-   
+
    View Perspective
       Name of the :doc:`View Perspective </editors/3dview/navigate/projections>`,
       such as "Top Orthographic" or "User Perspective."

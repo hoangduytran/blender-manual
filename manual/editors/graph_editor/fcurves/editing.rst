@@ -142,7 +142,6 @@ The newly added keyframes will be selected, making it easier to quickly tweak th
 All previously selected keyframes are kept selected by using :kbd:`I`.
 
 
-
 .. _bpy.ops.graph.copy:
 .. _bpy.ops.graph.paste:
 

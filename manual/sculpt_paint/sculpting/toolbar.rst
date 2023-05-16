@@ -3,7 +3,7 @@
 Toolbar
 *******
 
-The amount of tools in sculpt mode is very extensive. 
+The amount of tools in sculpt mode is very extensive.
 This is an overview of all of them, categorized by their general functions.
 
 Add/Subtract Brushes
@@ -12,18 +12,18 @@ Add/Subtract Brushes
 .. figure:: /images/sculpt-paint_sculpting_toolbar_add_subt_brushes.png
    :align: right
 
-Recognizable by their blue icon and cursor. 
+Recognizable by their blue icon and cursor.
 These brushes generally push vertices outwards and inwards.
 
 :doc:`/sculpt_paint/sculpting/tools/draw`
    The standard brush for pushing vertices inwards and outwards from the surface direction.
 
 :doc:`/sculpt_paint/sculpting/tools/draw_sharp`
-   Same as *Draw* but with a much sharper :doc:`Falloff </sculpt_paint/brush/falloff>`. 
+   Same as *Draw* but with a much sharper :doc:`Falloff </sculpt_paint/brush/falloff>`.
    Useful for creating creases and sharp angles.
 
 :doc:`/sculpt_paint/sculpting/tools/clay`
-   Similar to the *Draw* brush but with a flattening effect and subtle smoothing. 
+   Similar to the *Draw* brush but with a flattening effect and subtle smoothing.
    Useful for polishing and building volumes.
 
 :doc:`/sculpt_paint/sculpting/tools/clay_strips`
@@ -48,11 +48,11 @@ Contrast Brushes
 .. figure:: /images/sculpt-paint_sculpting_toolbar_contrast_brushes.png
    :align: right
 
-Recognizable by their red icon and cursor. 
+Recognizable by their red icon and cursor.
 These brushes generally flatten or heighten the contrast of the surface.
 
 :doc:`/sculpt_paint/sculpting/tools/smooth`
-   Smooths out irregularities in the surface and shrinks volumes by averaging the vertices positions. 
+   Smooths out irregularities in the surface and shrinks volumes by averaging the vertices positions.
    An essential brush that is frequently used.
 
 :doc:`/sculpt_paint/sculpting/tools/flatten`
@@ -95,7 +95,7 @@ These brushes generally move, pinch and magnify the mesh.
    Simulating an armature-like deformations. Useful for quick posing and transformations.
 
 :doc:`/sculpt_paint/sculpting/tools/nudge`
-   Similar as *Thumb* but dynamically picks up vertices like the *Snake Hook*. 
+   Similar as *Thumb* but dynamically picks up vertices like the *Snake Hook*.
    Useful for nudging something along the mesh surface.
 
 :doc:`/sculpt_paint/sculpting/tools/rotate`

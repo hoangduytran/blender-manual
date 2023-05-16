@@ -73,7 +73,7 @@ Timing
 
       Factor
          The factor from 0 to 1.
-         
+
    Time Alignment *(in Concurrent Mode)*
       Align Start
          All stroke start at the same time (i.e. shorter strokes finish earlier).

@@ -55,4 +55,4 @@ Sync Zoom/Pan
 .. _bpy.types.RegionView3D.use_box_clip:
 
 Clip Contents
-   Clip objects based on what is visible in the other side views. 
+   Clip objects based on what is visible in the other side views.

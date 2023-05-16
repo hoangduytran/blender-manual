@@ -387,7 +387,6 @@ Delete
 Delete the selected strip(s).
 
 
-
 .. _bpy.ops.sequencer.scene_frame_range_update:
 
 Update Scene Frame Range

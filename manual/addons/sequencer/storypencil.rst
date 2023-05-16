@@ -65,7 +65,7 @@ Storypencil will open the source scene switching to the proper Workspace at the 
 When you finish editing the source scene you can return to the video Sequencer using the Back button on the Dope Sheet
 header in the source scene Workspace.
 
-Stoypencil will also temporarily copy the audio from the video sequencer edit to the source scene. 
+Stoypencil will also temporarily copy the audio from the video sequencer edit to the source scene.
 This makes it easy to work on the scene with the audio in sync and without having to go back to the video sequencer
 each time.
 
@@ -94,7 +94,7 @@ Mode
 
 Show Strip Range
    When enabled, shows the IN/OUT range from the video sequencer in the scene dope sheet of the source scene. (Green
-   and red lines)   
+   and red lines)
 
 Timeline Synchronization (New Window Mode)
    When enabled, keeps the video sequencer and source scene timelines in sync.
@@ -104,7 +104,6 @@ Audio Copy to Scene (Switch Mode)
 
 Audio Ignore Muted Sound (Switch Mode)
    When copy the audio ignore the muted audio strips.
-
 
 
 New Scenes

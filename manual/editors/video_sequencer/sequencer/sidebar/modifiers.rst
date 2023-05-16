@@ -70,7 +70,6 @@ Mask Time :guilabel:`Mask Input Only`
    :Absolute: Mask animation is in sync with scene frame.
 
 
-
 Types
 =====
 

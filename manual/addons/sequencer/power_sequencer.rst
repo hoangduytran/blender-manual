@@ -21,7 +21,7 @@ Usage
 
 You can find the add-on's full documentation on the author's website:
 
-- `Getting started 
+- `Getting started
   <https://www.gdquest.com/tutorial/blender/power-sequencer/chapter/00-getting-started-with-the-vse/>`__
 - `Features reference <https://gdquest.gitbook.io/blender-power-sequencer/>`__
 

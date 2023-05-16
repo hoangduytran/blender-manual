@@ -118,11 +118,11 @@ Examples
           View transform orientation.
    * - .. figure:: /images/editors_3dview_controls_orientation_manipulator-parent.png
 
-          Parent transform orientation. Cube parented to rotated empty. 
+          Parent transform orientation. Cube parented to rotated empty.
 
-     - .. 
+     - ..
 
-     - .. 
+     - ..
 
 
 .. _bpy.types.TransformOrientation.name:

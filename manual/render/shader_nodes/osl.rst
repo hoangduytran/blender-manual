@@ -12,15 +12,15 @@ These nodes will only work with the CPU and OptiX rendering backend.
 To enable it, select *Open Shading Language* as the shading system in the render settings.
 
 .. note::
-   
-   Some OSL features are not available when using the OptiX backend. Examples include: 
+
+   Some OSL features are not available when using the OptiX backend. Examples include:
 
    - Memory usage reductions offered by features like on-demand texture loading and
      mip-mapping are not available.
    - Texture lookups require OSL to be able to determine a constant image file path for each
      texture call.
    - Some noise functions are not available. Examples include *Cell*, *Simplex*, and *Gabor*.
-   - The :ref:`trace <render-shader-nodes-osl-trace>` function is not functional. 
+   - The :ref:`trace <render-shader-nodes-osl-trace>` function is not functional.
      As a result of this, the :ref:`Ambient Occlusion <bpy.types.ShaderNodeAmbientOcclusion>`
      and :ref:`Bevel <bpy.types.ShaderNodeBevel>` nodes do not work.
 

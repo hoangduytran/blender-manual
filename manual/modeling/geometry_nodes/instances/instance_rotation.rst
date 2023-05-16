@@ -10,7 +10,7 @@ Instance Rotation Node
    :alt: Instance Rotation node.
 
 The *Instance Rotation* outputs the XYZ :term:`Euler` rotation of each top-level instance in the
-local space of the modifier object. 
+local space of the modifier object.
 
 The :doc:`/modeling/geometry_nodes/instances` page contains more information about geometry instances.
 

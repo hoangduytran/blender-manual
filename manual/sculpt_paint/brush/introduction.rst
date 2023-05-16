@@ -13,9 +13,8 @@ While click & dragging in the 3D Viewport it will create a :doc:`stroke </sculpt
 and apply an effect depending on various brush settings.
 
 .. tip::
-   It is highly recommended to use a :ref:`Graphics Tablet <hardware-tablet>` 
-   for a better brush feel and additional features. 
-   
+   It is highly recommended to use a :ref:`Graphics Tablet <hardware-tablet>`
+   for a better brush feel and additional features.
 
 
 Brush Control

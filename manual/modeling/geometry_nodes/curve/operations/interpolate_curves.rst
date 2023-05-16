@@ -32,7 +32,7 @@ Guide Up
 Guide Group ID
    Splits guides into separate groups. New curves interpolate existing curves from a single group.
    This input can be useful for generating hair parts by stopping curves in different sections
-   (with different group IDs) from affecting each other. 
+   (with different group IDs) from affecting each other.
 Points
    The positions of the first root control points of the newly generated interpolated curves.
 Points Up

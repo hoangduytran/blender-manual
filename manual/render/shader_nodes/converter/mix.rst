@@ -8,7 +8,7 @@
 Mix Node
 ********
 
-The *Mix Node* mixes values, colors and vectors inputs 
+The *Mix Node* mixes values, colors and vectors inputs
 using a factor to control the amount of interpolation.
 The *Color* mode has additional blending modes.
 
@@ -17,9 +17,9 @@ The *Color* mode has additional blending modes.
    :alt: Mix Node.
 
 .. important::
-  
-   This is a new node as of Blender 3.4. The previous *Mix RGB* node 
-   is automatically converted to the Color version of this node in 
+
+   This is a new node as of Blender 3.4. The previous *Mix RGB* node
+   is automatically converted to the Color version of this node in
    Shader and Geometry node editors.
    Files saved with the new node are not forward compatible.
 
@@ -36,11 +36,11 @@ Properties
 ==========
 
 Data Type
-   The data type that is used for mixing. The node supports float, 
+   The data type that is used for mixing. The node supports float,
    vector and color data types.
-   
+
 Factor Mode (Vector only)
-   The factor mode can be set to *Uniform* and *Non-Uniform*.   
+   The factor mode can be set to *Uniform* and *Non-Uniform*.
    In uniform mode, a single float controls the factor.
    In non-uniform mode, a vector controls the factor for
    each XYZ channel separately.
@@ -54,7 +54,7 @@ Mix (Color only)
    Hue, Saturation, Value, Color, Soft Light, Linear Light
 
 Clamp Factor
-   Limit the factor value between 0.0 and 1.0. If this option is 
+   Limit the factor value between 0.0 and 1.0. If this option is
    unchecked then the node operates using *Extrapolation*.
 
 Clamp Result (Color only)
@@ -70,6 +70,6 @@ Result
 Examples
 ========
 
-See the Color > Mix page for additional examples: 
+See the Color > Mix page for additional examples:
 :doc:`Mix Color Node </render/shader_nodes/color/mix>`
-   
+

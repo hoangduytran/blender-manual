@@ -34,7 +34,7 @@ Saving
    Cache Result
       Saves the rendered view layers and their :doc:`passes </render/layers/passes>` to a multi-layer OpenEXR image.
       The Compositor can then use this file to improve performance, especially for heavy compositing.
-      
+
       The image is stored in the *Render Cache* folder as specified in the
       :doc:`File Paths Preferences </editors/preferences/file_paths>`.
       You can also load it back into the Image Editor's Render Result, even after closing

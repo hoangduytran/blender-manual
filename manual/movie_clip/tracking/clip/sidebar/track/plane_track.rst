@@ -34,7 +34,7 @@ New Image from Plane Track
     The resulting image can then be used for editing and retouching, for example to paint out certain parts
     of the footage.
 Update Image from Plane Track
-    Updates the pixels of the active Plane Track's image. 
+    Updates the pixels of the active Plane Track's image.
 
 .. _bpy.types.MovieTrackingPlaneTrack.image_opacity:
 

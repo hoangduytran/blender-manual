@@ -108,7 +108,7 @@ Alpha Hashed
 Clip Threshold
 ==============
 
-Threshold value for Alpha Clip mode in *Blend Mode* and *Shadow Mode*. 
+Threshold value for Alpha Clip mode in *Blend Mode* and *Shadow Mode*.
 
 
 Screen Space Refraction

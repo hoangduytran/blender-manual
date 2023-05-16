@@ -20,7 +20,7 @@ transformations around the point you want.
 
 .. figure:: /images/editors_3dview_controls_pivot-point_index_demo.png
    :align: center
-   
+
    With the default "Median Point" pivot point (left) it's tricky to
    bring the second wheel spoke into place, but with "3D Cursor" (right)
    it's easy.

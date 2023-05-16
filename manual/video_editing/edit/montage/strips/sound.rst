@@ -44,7 +44,7 @@ Overlay
    described below.
 
 Strip
-   Each strip has an option 'Display Waveform'. It is only visible when the above overlay option is set to 'Use Strip 
+   Each strip has an option 'Display Waveform'. It is only visible when the above overlay option is set to 'Use Strip
    Option'
 
 Clipping audio, i.e. values over 100% amplitude, will be shown in red in the waveform.

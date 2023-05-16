@@ -149,7 +149,6 @@ Shadow Caustics
    to selectively speed up refractive caustic rendering of select objects.
 
 
-
 Volume
 ------
 

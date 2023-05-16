@@ -62,7 +62,7 @@ Type
       followed by :doc:`Geometry Node instance </modeling/geometry_nodes/instances>` attributes
       (searching from the innermost instancing layer to outer ones), and finally in the instancer object.
       If the current object is not instanced, or the property is not found, it falls back to the *Object* mode.
-      
+
       .. warning::
          Currently only up to 4 layers of Geometry Node instancing are searched.
    :View Layer:

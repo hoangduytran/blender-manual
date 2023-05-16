@@ -58,7 +58,7 @@ Filter Type
    :Sharpen:
       Sharpens and smooths the mesh based on its curvature,
       resulting in pinching hard edges and polishing flat surfaces.
-      Especially useful when sculpting hard surfaces and stylized models 
+      Especially useful when sculpting hard surfaces and stylized models
       with creasing and flattening brushes.
 
       Smooth Ratio

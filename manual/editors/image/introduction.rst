@@ -19,7 +19,7 @@ Toolbar
 Sample
    Used to sample the color of one or more pixels in the image.
    As long as you hold :kbd:`LMB`, the footer will show the following:
-   
+
    - X and Y coordinates of the mouse cursor.
    - Color in RGBA.
    - Color in RGB after :doc:`/render/color_management`.
@@ -54,19 +54,19 @@ Image
    A :ref:`data-block menu <ui-data-block>` used for selecting images.
    Once an image is selected, the :doc:`Image tab </editors/image/image_settings>`
    appears in the Sidebar region.
-   
+
    Apart from loading existing images, you can also create new ones:
-   
+
    .. figure:: /images/editors_image_image-settings_generated-new-image.png
-   
+
       The pop-over that's displayed when clicking "New Image" in the header.
-   
+
    The *Tiled* option creates an image with support for
    :doc:`/modeling/meshes/uv/workflows/udims`. For the other options, see
    :ref:`Generated Images <image-generated>`.
 
    In addition to images, the data-block selector includes the following items:
-   
+
    - Render Result: displays renders. When this item is selected, the *Slot*,
      *View Layer*, and *Render Pass* selectors become available (see below).
    - Viewer Node: displays the image that's fed into the
@@ -83,7 +83,7 @@ Slot
    you compare them by pressing :kbd:`J` and :kbd:`Alt-J` to cycle forwards and backwards.
    Alternatively, you can use the number keys :kbd:`1`, :kbd:`2`, :kbd:`3` etc.
    to select the slot with the corresponding number.
-   
+
    Slots can be renamed by double clicking their name in the Image panel in the Sidebar.
 
 View Layer

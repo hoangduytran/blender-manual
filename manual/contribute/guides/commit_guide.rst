@@ -32,7 +32,6 @@ If you leave out ``-m "message"``, you will be prompted to type the message in a
    commits to a specific release branch and how to create merge commits.
 
 
-
 .. _contribute-commit-good-message:
 
 Writing a Good Commit Message

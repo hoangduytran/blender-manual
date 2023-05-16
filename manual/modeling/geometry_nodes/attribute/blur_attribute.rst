@@ -29,7 +29,7 @@ Explicit relations for correct blurring are vertices, edges, and faces of meshes
    Blurring of face corner attributes is not handled by this node,
    because the ideal behavior for mixing face corner values is not clear.
 
-All :ref:`attribute data types <attribute-data-types>` are supported except 
+All :ref:`attribute data types <attribute-data-types>` are supported except
 for boolean attributes.
 
 

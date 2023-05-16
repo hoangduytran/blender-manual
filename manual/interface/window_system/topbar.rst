@@ -154,7 +154,7 @@ Defaults
 
    Save Startup File
       Saves the current blend-file as the startup file.
-   
+
    .. _bpy.ops.wm.read_factory_settings:
 
    Load Factory Settings

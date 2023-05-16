@@ -69,67 +69,67 @@ of meshes, it is always worth trying to provide as clean a mesh as possible.
 --------------
 
 Solid
-	Checks for Non-Manifold edges and Bad Contiguous edges.
+   Checks for Non-Manifold edges and Bad Contiguous edges.
 
-	Edges should connect to exactly 2 faces. In it connects to only one,
-	it means there's a hole in the mesh. More is also not allowed. These edges are considered Non-manifold.
-	If one of the faces' normals is pointing in a different direction than its neighbors,
-	its edges are marked as "Bad Contiguous".
+   Edges should connect to exactly 2 faces. In it connects to only one,
+   it means there's a hole in the mesh. More is also not allowed. These edges are considered Non-manifold.
+   If one of the faces' normals is pointing in a different direction than its neighbors,
+   its edges are marked as "Bad Contiguous".
 
-	In this screenshot, the left shape has a hole, and the right shape has one of its faces flipped.
+   In this screenshot, the left shape has a hole, and the right shape has one of its faces flipped.
 
-	.. figure:: /images/3dprint_solid.jpg
+   .. figure:: /images/3dprint_solid.jpg
 
-		Left, marked in blue: Non-manifold edges. Right, marked in red: Bad contiguous edges.
+      Left, marked in blue: Non-manifold edges. Right, marked in red: Bad contiguous edges.
 
 Intersections
-	These two cubes have intersecting faces. A Boolean modifier would help in this example.
-	It's worth noting that some slicer applications can deal with this,
-	so it's not always required to resolve this issue.
+   These two cubes have intersecting faces. A Boolean modifier would help in this example.
+   It's worth noting that some slicer applications can deal with this,
+   so it's not always required to resolve this issue.
 
-	.. figure:: /images/3dprint_intersect.jpg
+   .. figure:: /images/3dprint_intersect.jpg
 
 Degenerate
-	Faces and edges which have 0 area or length, are considered `degenerate`.
-	In this example, the top face of a cube has been scaled down to 0,
-	but have not been merged. A :menuselection:`Merge --> By Distance` would resolve this issue.
+   Faces and edges which have 0 area or length, are considered `degenerate`.
+   In this example, the top face of a cube has been scaled down to 0,
+   but have not been merged. A :menuselection:`Merge --> By Distance` would resolve this issue.
 
-	.. figure:: /images/3dprint_degenerate.jpg
+   .. figure:: /images/3dprint_degenerate.jpg
 
-		There's a hidden face here.
+      There's a hidden face here.
 
 Distorted
-	The vertices of a quad or ngon can be folded in such a way that the face is not flat.
-	In practice, quads are rarely ever flat. When exporting, these faces are converted to triangles.
-	If the surface is excessively deformed, this can result in unexpected shapes.
+   The vertices of a quad or ngon can be folded in such a way that the face is not flat.
+   In practice, quads are rarely ever flat. When exporting, these faces are converted to triangles.
+   If the surface is excessively deformed, this can result in unexpected shapes.
 
-	In this example, a quad has been folded into a saddle-like shape.
-	This triggers the `Distorted` check. It would be best to triangulate by hand here.
+   In this example, a quad has been folded into a saddle-like shape.
+   This triggers the `Distorted` check. It would be best to triangulate by hand here.
 
-	.. figure:: /images/3dprint_intersect.jpg
+   .. figure:: /images/3dprint_intersect.jpg
 
-		This quad can triangulate in unexpected ways.
+      This quad can triangulate in unexpected ways.
 
 Thickness
-	Faces that form very thin geometry might be missed entirely by the slicer. Such faces are marked as `Thin`.
+   Faces that form very thin geometry might be missed entirely by the slicer. Such faces are marked as `Thin`.
 
-	.. figure:: /images/3dprint_thickness.jpg
+   .. figure:: /images/3dprint_thickness.jpg
 
 Edge Sharp
-	Similar to `Thickness`, sharp edges can thin pieces of geometry which might be missed by the `slicer`
+   Similar to `Thickness`, sharp edges can thin pieces of geometry which might be missed by the `slicer`
 
 Overhang
-	As 3D printers can't print in mid-air, parts of the model which overhang will not print correctly.
-	In practice, slicers can add additional material, `support`, to anticipate for overhanging layers.
+   As 3D printers can't print in mid-air, parts of the model which overhang will not print correctly.
+   In practice, slicers can add additional material, `support`, to anticipate for overhanging layers.
 
-	.. figure:: /images/3dprint_overhang.jpg
+   .. figure:: /images/3dprint_overhang.jpg
 
 Check All
-	Performs all of the above checks at once. In this example, Suzanne shows quite a few problems.
-	This is because the eyes are separate parts, and the sockets have holes.
-	This makes the mesh not `Solid` and `Intersecting`. Some of the faces are `Distorted`.
+   Performs all of the above checks at once. In this example, Suzanne shows quite a few problems.
+   This is because the eyes are separate parts, and the sockets have holes.
+   This makes the mesh not `Solid` and `Intersecting`. Some of the faces are `Distorted`.
 
-	.. figure:: /images/3dprint_suzanne.jpg
+   .. figure:: /images/3dprint_suzanne.jpg
 
 
 Clean Up
