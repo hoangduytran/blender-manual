@@ -73,8 +73,7 @@ Guidelines for Reviewers
   ``WIP:`` prefix in the title, indicating the author considers the pull request not ready to be merged.
   No review is expected unless the author specifically asks for it.
 - Writers are expected to reply to pull requests in 3 working days.
-- Add relevant modules/projects to tags.
-- Assign individuals (instead of modules/projects) for reviewers, to avoid too much noise.
+- Add relevant modules/projects to the labels.
 - Encourage new writes to do review, it's a good way to learn and important to grow the project.
 
 
