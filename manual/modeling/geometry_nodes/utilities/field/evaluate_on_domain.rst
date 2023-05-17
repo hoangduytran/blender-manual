@@ -43,7 +43,7 @@ Properties
 ==========
 
 Domain
-   The :ref:`attribute domain <attribute-domains>` used for for evaluation of the *Value* input.
+   The :ref:`attribute domain <attribute-domains>` used for evaluation of the *Value* input.
 
 
 Output

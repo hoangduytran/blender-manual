@@ -144,7 +144,7 @@ No Video
 `AV1 <https://en.wikipedia.org/wiki/AV1>`__
    A free open-standard lossy video compression format, designed as a successor to *VP9*.
    AV1 offers great compression rates and visual quality,
-   *AV1* produces video files that that are about 30% more space efficient than *VP9*
+   *AV1* produces video files that are about 30% more space efficient than *VP9*
 
 
 .. _files-audio-codecs:

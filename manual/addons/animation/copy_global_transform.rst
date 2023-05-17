@@ -71,7 +71,7 @@ Armature + Bone
 Bone Only
    When you choose *no mirror object* at all, you can still choose a *bone
    name*. This is used for mirroring against a bone in the *active armature*.
-   This can be useful to mirror bone transforms relative to the the 'chest' bone
+   This can be useful to mirror bone transforms relative to the 'chest' bone
    of the active character.
 Object Only
    This will just mirror relative to the chosen object.

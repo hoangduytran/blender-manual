@@ -47,7 +47,7 @@ Outputs
 The outputs of this node depends on the Mode property (see above).
 
 Alpha
-   The color channel that that is responsible for the image's transparency.
+   The color channel that is responsible for the image's transparency.
 
 
 Examples

@@ -11,7 +11,7 @@ Activation
 ==========
 
 - Open Blender and go to the Edit menu and select Preferences.
-- In the Blender Preferences window, click on the the Add-ons tab on the left.
+- In the Blender Preferences window, click on the Add-ons tab on the left.
 - In the search bar in the top-right, type "Power Sequencer".
 - Click the checkbox to the left of Sequencer: Power Sequencer to activate the add-on.
 

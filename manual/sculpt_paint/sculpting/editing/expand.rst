@@ -84,7 +84,7 @@ Pattern Creation
 
    A "Recursions" with :kbd:`R` or :kbd:`Alt-R` will start
    a new expansion along the border of the current expansion.
-   Doing this multiple times, can help for for increasingly random patterns
+   Doing this multiple times, can help for increasingly random patterns
    or advanced pattern creation.
 
    .. figure:: /images/sculpt-paint_sculpting_expand_pattern2.png

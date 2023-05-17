@@ -69,7 +69,7 @@ Deformation
       Useful for creating folds like on a skirt.
    Smooth
       Works similar to the :doc:`Grab </sculpt_paint/sculpting/tools/smooth>` tool but,
-      the vertices that are smoothed are constrained to the the mesh boundary.
+      the vertices that are smoothed are constrained to the mesh boundary.
 
 .. _bpy.types.Brush.boundary_falloff_type:
 

@@ -37,7 +37,7 @@ Properties
 Distribution Method
    :Random:
       Distribute points randomly inside of the volume. The local point count is implicitly
-      defined as a product of of the global from the *Density* input and the local voxel value.
+      defined as a product of the global from the *Density* input and the local voxel value.
       This method creates a distribution that is not stable as the input volume deforms.
    :Grid:
       Distribute the points in a grid pattern inside of the volume. At each grid point, the voxel

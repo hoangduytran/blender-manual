@@ -65,7 +65,7 @@ Relaxation Method
      Similar to Laplacian, the HC method uses equal weighting while trying to preserve
      a gradient between dense regions of the mesh and regions with fewer edges.e
 
-     Note, this method uses the The "Humphrey's Classes" operator as described in the paper:
+     Note, this method uses the "Humphrey's Classes" operator as described in the paper:
      `"Improved Laplacian Smoothing of Noisy Surface Meshes"
      <http://informatikbuero.com/downloads/Improved_Laplacian_Smoothing_of_Noisy_Surface_Meshes.pdf>`__.
    :Geometry:

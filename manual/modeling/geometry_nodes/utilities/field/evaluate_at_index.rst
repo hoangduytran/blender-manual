@@ -34,7 +34,7 @@ Properties
 ==========
 
 Domain
-   The :ref:`attribute domain <attribute-domains>` used for for evaluation of the *Value* input.
+   The :ref:`attribute domain <attribute-domains>` used for evaluation of the *Value* input.
    This is useful because it can be a different domain than the domain from the
    :ref:`field context <field-context>`, i.e. to choose a vertex for each face.
 
