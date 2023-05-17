@@ -33,7 +33,7 @@ determines how bold the PP arms are ranging from 1 to 5. The last is the ``Alpha
 and determines the translucency (Color Alpha) of the PP, values range from 0.2 to 1.
 
 The next row shows the ``Pivot Location``, values can be entered here,
-or the boxes may be “scrubbed” and the PP will move as you do so.
+or the boxes may be "scrubbed" and the PP will move as you do so.
 
 On the next row is ``To Selected``, which locates the PP on a selected set of geometry.
 The middle button is ``To Cursor``, which locates the PP at the 3D Cursor location.

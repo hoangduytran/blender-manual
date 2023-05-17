@@ -15,7 +15,7 @@ Here the Cursor has been set with the command **cd-1.5,,**
 placing the cursor negative 1.5 in X from the selected vertex.
 
 PDT has a **Command Input**, which activates when you press Return. this takes two letters,
-followed by numbers separated by commas “,”. Valid Primary letters are, can be capitals, or lower case:
+followed by numbers separated by commas ",". Valid Primary letters are, can be capitals, or lower case:
 
 * C = Cursor commands.
 * D = Duplicate commands
@@ -45,7 +45,7 @@ Principles:
 To operate the Command Line, first you must RMB-click in the input box, then type,
 or amend the command there, then press ``Return`` to activate the command.
 I will explore ways of capturing commands directly from the keyboard,
-maybe by using a “trigger” input first.
+maybe by using a "trigger" input first.
 
 For example, key ALT+P first then the command, with a "watcher" routine
 to send subsequent inputs to the command line, I do not know if this is possible yet.

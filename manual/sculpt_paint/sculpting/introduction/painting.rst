@@ -22,4 +22,4 @@ In the case of painting brushes it will blur the colors within the brush radius 
 
 .. note::
    Once any painting tool is executed, the :ref:`viewport color shading <viewport_shading_solid_color>` is switched
-   to “Attribute”.  This ensures that color attributes are shown on all objects once painting is needed.
+   to "Attribute".  This ensures that color attributes are shown on all objects once painting is needed.

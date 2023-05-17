@@ -24,13 +24,13 @@ like an engine assembly for example, as collections. The way Blender handles mat
 or linked, objects is that if you load an object using Append, it will bring the materials of the object with it.
 If you append the part many times, you get many copies of the same material – not a situation that is efficient.
 So the recommendation for this trial system is to leave the materials off the objects and store them
-either against a “holder” object, or set a *f*ake user** so the material is always held in the library blend file.
+either against a "holder" object, or set a **fake user** so the material is always held in the library blend file.
 Then you can append, or link the material once and assign it to many copies of the appended, or linked object.
 
 The plan is to expand the system so users can send objects, or collections, or material from their current
 open blend file to the Library blend file. This will be a further development in a later release,
 if this is possible. Parts Libraries have been in existence in CAD systems since the 1980’s
-where they were called “Cells” and had one, or many “Cell Libraries” to store them in, each cell
+where they were called "Cells" and had one, or many "Cell Libraries" to store them in, each cell
 had a user defined origin point that was used to place the part. The process was to put the cursor
 where you wanted the part, then call it by name and it would be placed with its origin at the cursor location.
 
@@ -86,7 +86,7 @@ The principle of operation is therefore:
 
 At the moment, if you bring in a collection, ALL objects in that collection are placed
 at the cursor location. The purpose of this is to bring in complex models and assume
-that they will be placed “as one” at the cursor location, this also assumes that
+that they will be placed "as one" at the cursor location, this also assumes that
 they were built as a number of objects with a shared origin in the library.
 
 The suggestion at this stage that materials can be imported and used on each object

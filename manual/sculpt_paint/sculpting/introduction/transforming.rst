@@ -11,7 +11,7 @@ or automatically positioned with :ref:`Mask Expand <bpy.ops.sculpt.mask_expand>`
 This ensures that the pivot point can be more freely placed and always moves with the transformed geometry.
 
 .. tip::
-   For even more control, assign a shortcut to the Set Pivot to “Surface” menu operator.
+   For even more control, assign a shortcut to the Set Pivot to "Surface" menu operator.
    This way the pivot can be placed on any point on a surface, similar to placing the 3D Cursor.
 
 
