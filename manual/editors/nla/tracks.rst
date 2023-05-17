@@ -12,9 +12,6 @@ the bottom layer first, to the top, last.
 
    NLA Tracks and Strips.
 
-Solo (star icon)
-   Toggling *Solo Track* causes only the selected tracks effects to be visible when animating.
-   This is very useful for debugging complex animations.
 Mute (checkbox)
    Keeps the track from having an effect on the animation. (Mute only applies when *Solo* is not used.)
    All strips in that track are shown as being muted (dashed outline).
@@ -22,6 +19,9 @@ Lock (padlock icon)
    Prevents changes from being made to this layer.
    This is useful, for example, if you want to select several strips and move them;
    but you want to keep a few tracks excluded from the change.
+Solo (star icon)
+   Toggling *Solo Track* causes only the selected tracks effects to be visible when animating.
+   This is very useful for debugging complex animations.
 
 
 Action Track
