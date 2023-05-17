@@ -58,7 +58,7 @@ Workflow
 The workflow for working with pull requests can be found on the
 `Blender Developer's Wiki <https://wiki.blender.org/wiki/Tools/Pull_Requests>`__.
 
-Note, some text in the above guideline is focused on the main Blende repository,
+Note, some text in the above guideline is focused on the main Blender repository,
 however, the workflow is the same for any Blender project.
 
 
@@ -70,7 +70,7 @@ Guidelines for Reviewers
 - Be explicit when some changes are to be addressed before committing, without the need for a review iteration.
 - If the pull request is not approved the author is expected to make another iteration.
 - If the change needs agreement on the design task first, put the pull request on hold by adding a
-  `WIP: ` prefix in the title, indicating the author considers the pull request not ready to be merged.
+  ``WIP:`` prefix in the title, indicating the author considers the pull request not ready to be merged.
   No review is expected unless the author specifically asks for it.
 - Writers are expected to reply to pull requests in 3 working days.
 - Add relevant modules/projects to tags.
@@ -81,10 +81,12 @@ Guidelines for Reviewers
 Tips
 ====
 
-- To get the patch file, add .patch to the end of the URL of the pull request. Example::
+- To get the patch file, add .patch to the end of the URL of the pull request.
+  Example::
 
      https://projects.blender.org/blender/blender-manual/pulls/104892.patch
 
-- Checkout a pull request into a detached head (not leaving behind a branch). Example::
+- Checkout a pull request into a detached head (not leaving behind a branch).
+  Example::
 
      git fetch -q origin +refs/pull/104892/head: ; git checkout -qf FETCH_HEAD
