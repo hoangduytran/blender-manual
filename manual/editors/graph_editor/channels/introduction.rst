@@ -54,7 +54,8 @@ Selecting
 ---------
 
 - Select channel (text in white/black): :kbd:`LMB`
-- Multi Select/Deselect: :kbd:`Shift-LMB`
+- Multi Select/Deselect: :kbd:`Ctrl-LMB`
+- Range Select: :kbd:`Shift-LMB`
 - Select All: :kbd:`A`
 - Deselect All: :kbd:`Alt-A`
 - Box Select: (:kbd:`LMB` drag) or :kbd:`B` (:kbd:`LMB` drag)

@@ -150,14 +150,14 @@ Copy/Paste
 
 .. admonition:: Reference
 
-   :Menu:      :menuselection:`Key --> Copy Keyframes`, :menuselection:`Key --> Paste Keyframes`
+   :Menu:      :menuselection:`Key --> Copy`, :menuselection:`Key --> Paste`
    :Shortcut:  :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
 
 Use :kbd:`Ctrl-C` to copy selected keyframes and :kbd:`Ctrl-V` to paste the previously copied keyframes.
 During the paste action, the :ref:`bpy.ops.screen.redo_last` panel provides some options in
 how the paste is applied.
 
-Offset
+Frame Offset
    :No Offset:
       Pastes the keyframes in the location they were copied from.
    :Frame Relative:
@@ -167,6 +167,19 @@ Offset
       Pastes the keyframes with the first keyframe of the copied set placed at the current frame.
    :Frame End:
       Pastes the keyframes with the last keyframe of the copied set placed at the current frame.
+
+Value Offset
+   :No Offset:
+      Pastes the keyframes with the value they were copied from.
+   :Cursor Value:
+      Paste the keyframes at the 2D cursor as a starting point.
+   :Current Frame Value:
+      Paste keyframes relative to the value of the curve under the cursor.
+   :Right Key:
+      Paste keyframes such that the last frame matches the key value right of the cursor.
+   :Left Key:
+      Paste keyframes such that the first key matches the key value left of the cursor.
+
 Type
    :Mix:
       Integrates the pasted keyframes in with existing keyframes only overwriting keyframes that share a frame.
@@ -442,3 +455,31 @@ seem to be never modified by this tool.
      - .. figure:: /images/editors_graph-editor_fcurves_editing_smooth.png
 
           F-Curve after smoothing.
+
+
+.. _bpy.ops.graph.gaussian_smooth:
+
+Smooth (Gaussian)
+-----------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Smooth --> Smooth (Gaussian)`
+
+Smooths the selected keyframes using a Gaussian kernel. It can handle gaps in the keyframe data.
+The operator is modal with a blend factor, making it possible to tweak the strength of the filter.
+
+Factor
+   A blend factor from original to filtered curve.
+
+Sigma
+   The shape of the gaussian distribution. Lower values mean a sharper curve, giving keys that are close to each other more weight.
+   A high value behaves like a simple average filter.
+
+Filter Width
+   A wider filter looks at more keyframes, producing a smoother result.
+   At a size of 1 the filter only looks at the keyframes to the immediate left and right for a weighted average.
+
+.. figure:: /images/editors_graph-editor_gaussian_smooth.jpg
+
+   F-Curve after applying the Gaussian Smooth with the original curve overlayed.
