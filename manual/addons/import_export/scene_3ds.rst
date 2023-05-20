@@ -73,6 +73,10 @@ Include
 Selection Only
    When checked, only selected objects are exported. Otherwise export all objects in the scene.
 
+Write Keyframe
+   Writes the keyframe section of a 3ds file and exportes the animation if an action was found.
+   The animation can be imported the same, uncheck if any importer crashes, 
+   not every application can handle the keyframe section.
 
 Transform
 ^^^^^^^^^
@@ -178,3 +182,4 @@ Keyframes
 The importer can read the keyframes, they will be added to the timeline.
 Most animations will play, but the transformations may not be correct,
 some axes or rotations can be inverted. It depends on how it was exported from other applications.
+The exporter can write the keyframes of the timeline to an animated 3ds file.
