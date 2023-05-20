@@ -53,8 +53,8 @@ Falloff
 
 .. figure:: /images/render_cycles_world-settings_mist-example1-BI.jpg
 
-   Mist example (`blend-file <https://archive.blender.org/wiki/index.php/File:25-Manual-World-Mist-
-   Example1.blend>`__).
+   Mist example
+   (`blend-file <https://archive.blender.org/wiki/index.php/File:25-Manual-World-Mist-Example1.blend>`__).
 
 
 .. _bpy.types.CyclesVisibilitySettings.camera:

@@ -12,7 +12,7 @@ When executed, it uniformly expand outwards a pattern from the vertex under the 
 
    These operators are meant to be used interactively through the shortcut.
 
-There is also a `full showcase of the Expand features and use cases <https://www.youtube.com/watch?v=XT7h6lmE5bc>`_.
+There is also a `full showcase of the Expand features and use cases <https://www.youtube.com/watch?v=XT7h6lmE5bc>`__.
 
 .. figure:: /images/sculpt-paint_sculpting_expand_example.png
 

@@ -163,8 +163,9 @@ Interpolation
 
    .. seealso::
 
-      For more info and a few live demos, see https://easings.net and
-      http://robertpenner.com/easing/
+      For more info and a few live demos,
+      see `easings.net <https://easings.net>`__ and
+      `Robert Penner's Easing Functions <http://robertpenner.com/easing>`__.
 
 
    .. rubric:: Dynamic Effects

@@ -184,9 +184,9 @@ If an input image to a node is not perfectly aligned with the operation domain o
 different size in pixels, the node would typically need to do a process called Interpolation, where
 the input image is read at the exact positions of the pixels of the operation domain. This can be
 done using different interpolation methods, including Nearest-Neighbor, Bilinear, and Bicubic
-interpolations. Those interpolation methods are demonstrated in the following `Wikipedia gallery
-<https://en.wikipedia.org/wiki/Comparison_gallery_of_image_scaling_algorithms>`_. Transformation
-nodes like the :ref:`Transform <bpy.types.CompositorNodeTransform>` and :ref:`Rotate
+interpolations. Those interpolation methods are demonstrated in the following
+`Wikipedia gallery <https://en.wikipedia.org/wiki/Comparison_gallery_of_image_scaling_algorithms>`__.
+Transformation nodes like the :ref:`Transform <bpy.types.CompositorNodeTransform>` and :ref:`Rotate
 <bpy.types.CompositorNodeRotate>` nodes include an interpolation option to set how they prefer their
 output image to be read and interpolated.
 

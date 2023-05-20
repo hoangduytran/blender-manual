@@ -42,14 +42,15 @@ See `Examples`_ at the end of this page.
    - A list of software that deals with PDB in different ways can be found on
      the `RCSB site <https://www.rcsb.org/docs/additional-resources/molecular-graphics-software>`__. There also is
      `Vesta <https://jp-minerals.org/vesta/en/>`__, `ASE <https://wiki.fysik.dtu.dk/ase/>`__ and all the
-     `quantum chemical calculators <https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_
-     software>`__ used in research, which can create or even calculate atomic structures and store them in PDB/XYZ
-     files.
+     `quantum chemical calculators
+     <https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_software>`__
+     used in research, which can create or even calculate atomic structures and store them in PDB/XYZ files.
 
 .. seealso:: **Forum**
 
-   - Please, use the `Blender Artists forum <https://blenderartists.org/t/atomic-blender-pdb-xyz-for-blender-2-8-and-
-     higher/1197801>`__ for comments and questions or directly the `Blender chat <https://blender.chat/home>`__.
+   - Please, use the `Blender Artists forum
+     <https://blenderartists.org/t/atomic-blender-pdb-xyz-for-blender-2-8-and-higher/1197801>`__
+     for comments and questions or directly the `Blender chat <https://blender.chat/home>`__.
    - There also is the possibility to ask questions on `Stack Exchange <https://blender.stackexchange.com/>`__.
      However, note that some of the developers like Blendphys don't have enough credits, which are, however, needed to
      have the permission for giving answers on Stack Exchange.

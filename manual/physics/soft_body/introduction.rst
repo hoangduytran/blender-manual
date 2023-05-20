@@ -49,8 +49,8 @@ Soft bodies are well suited for:
 
 The following videos may give you some more ideas:
 
-- https://www.youtube.com/watch?v=hLnY-OFUBzM
-- https://www.youtube.com/watch?v=qdusMZlBbQ4
+- `New Penguoen <https://www.youtube.com/watch?v=hLnY-OFUBzM>`__.
+- `Blender Softbody Simulations <https://www.youtube.com/watch?v=qdusMZlBbQ4>`__.
 
 
 Creating a Soft Body

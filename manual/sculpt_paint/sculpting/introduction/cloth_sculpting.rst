@@ -27,4 +27,4 @@ but other transform brushes like :doc:`Pose </sculpt_paint/sculpting/tools/pose>
 :doc:`Boundary </sculpt_paint/sculpting/tools/boundary>` also support cloth sculpting in the brush settings.
 
 A demo file for trying out the various brushes and tools is available
-`here <https://www.blender.org/download/demo-files/#sculpting>`_.
+`here <https://www.blender.org/download/demo-files/#sculpting>`__.

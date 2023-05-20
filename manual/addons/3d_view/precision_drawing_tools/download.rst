@@ -8,9 +8,10 @@ In this case you need only enable the Add-on in the Add-on Preferences.
 
 However, the latest releases can be found on our GitHub.
 
-Downloads should only be taken the from the official releases page:
+Downloads should only be taken the from the
+`official releases page <https://github.com/Clockmender/Precision-Drawing-Tools/releases>`__.
 
-https://github.com/Clockmender/Precision-Drawing-Tools/releases
+
 
 Patches and Commits, that may add new features and/or bug fixes may be downloaded
 from the Commits to the Master branch, no development code should be used
@@ -55,6 +56,6 @@ again only edit the message section in quotes, not the PDT assignments.
 Issues
 ======
 
-Please report any issues, or feature request, etc. using the Issues section
-of the PDT Repository (https://github.com/Clockmender/Precision-Drawing-Tools/issues),
+Please report any issues, or feature request, etc. using the Issues section of the
+`PDT Repository <https://github.com/Clockmender/Precision-Drawing-Tools/issues>`__,
 that way they can be properly tracked, actioned and incorporated into the add-on.

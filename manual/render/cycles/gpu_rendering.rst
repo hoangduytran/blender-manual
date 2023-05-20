@@ -246,8 +246,7 @@ but the only real solution is to use separate graphics cards for display and ren
 
 Another solution can be to increase the time-out,
 although this will make the user interface less responsive when rendering heavy scenes.
-`Learn More Here <https://learn.microsoft.com/en-us/windows-hardware/drivers/display/timeout-detection-and-
-recovery>`__.
+`Learn More Here <https://learn.microsoft.com/en-us/windows-hardware/drivers/display/timeout-detection-and-recovery>`__.
 
 
 CUDA error: Unknown error in cuCtxSynchronize()
