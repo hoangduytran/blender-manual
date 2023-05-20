@@ -458,7 +458,7 @@ class RstSpellingVisitor(docutils.nodes.NodeVisitor):
     def visit_date(self, node):
         # date = datetime.date(*(
         #    map(int, unicode(node[0]).split('-'))))
-        #metadata['creation_date'] = date
+        # metadata['creation_date'] = date
         pass
 
     # def visit_document(self, node):

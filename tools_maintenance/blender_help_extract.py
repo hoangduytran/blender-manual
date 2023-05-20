@@ -33,6 +33,7 @@ def text_remove_preprocess(text):
     non_comment_lines = [line for line in lines if not line.strip().startswith("#")]
     return "\n".join(non_comment_lines)
 
+
 def text_join_lines(text):
     lines = text.split("\n")
     lines_out = [[]]
@@ -165,7 +166,7 @@ def text_extract_strings(text):
 def text_extract_help(text, args, static_strings):
     func_id = 'static int arg_handle_print_help(int UNUSED(argc), const char **UNUSED(argv), void *data)\n'
     index_start = text.find(func_id)
-    assert(index_start != -1)
+    assert (index_start != -1)
     index_end = text.find("exit(0);", index_start)
     # print(index_start, index_end)
     body = text[index_start + len(func_id):index_end]

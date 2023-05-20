@@ -237,7 +237,7 @@ epub_publisher = 'Blender Foundation'
 
 # The language of the text. It defaults to the language option
 # or 'en' if the language is not set.
-#epub_language = ''
+# epub_language = ''
 
 epub_copyright = 'This manual is licensed under a CC-BY-SA 4.0 Int. License.'
 
@@ -330,17 +330,17 @@ latex_logo = "../resources/theme/blender-logo.svg"
 
 # This value determines the topmost sectioning unit. It should be chosen from
 # 'part', 'chapter' or 'section'.
-#latex_toplevel_sectioning = 'None'
+# latex_toplevel_sectioning = 'None'
 
 # A list of document names to append as an appendix to all manuals.
-#latex_appendices = []
+# latex_appendices = []
 
 # If true, generate domain-specific indices in addition to the general index.
-#latex_domain_indices = True
+# latex_domain_indices = True
 
 # If true, add page references after internal references.
 # This is very useful for printed copies of the manual.
-#latex_show_pagerefs = False
+# latex_show_pagerefs = False
 
 # Control whether to display URL addresses.
 latex_show_urls = "no"
@@ -415,17 +415,17 @@ texinfo_documents = [
 ]
 
 # A list of document names to append as an appendix to all manuals.
-#texinfo_appendices = []
+# texinfo_appendices = []
 
 # If true, generate domain-specific indices in addition to the general index.
-#texinfo_domain_indices = True
+# texinfo_domain_indices = True
 
 # Control how to display URL addresses.
-#texinfo_show_urls = 'footnote'
+# texinfo_show_urls = 'footnote'
 
 # If true, do not generate a @detailmenu in the “Top” node’s menu
 # containing entries for each sub-node in the document.
-#texinfo_no_detailmenu = False
+# texinfo_no_detailmenu = False
 
 
 # -- Extension configuration -------------------------------------------------

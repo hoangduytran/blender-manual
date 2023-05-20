@@ -178,7 +178,7 @@ def main(argv=None):
         print("Role", role_id, "not handled!", file=sys.stderr)
         sys.exit(1)
 
-    assert(line is not None)
+    assert (line is not None)
     print("%s:%d:%d" % (fn, line, col))
 
 
