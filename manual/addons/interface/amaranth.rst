@@ -381,7 +381,7 @@ Sequencer: Display Image File Name
 When seeking through an image sequence, display the active strips'
 file name for the current frame, and its playhead (in square brackets).
 
-Usage: Find it in the VSE header.
+Usage: Find it in the sequencer header.
 
 
 EXR Render: Warn when Z not connected

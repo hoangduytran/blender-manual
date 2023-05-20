@@ -28,7 +28,7 @@ Expand
 Snapping
 ^^^^^^^^
 
-It is possible to enable snapping in the header of the VSE.
+It is possible to enable snapping in the header of the Video Sequencer.
 The snapping behavior can be configured as follows:
 
 .. _bpy.types.SequencerToolSettings.snap_to_current_frame:
