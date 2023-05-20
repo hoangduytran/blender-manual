@@ -49,56 +49,70 @@ def check_word(w):
     return dict_spelling.check(w)
 
 
+# Match HTML link `Text <url>`__
+# A URL may span multiple lines.
+RE_URL_LINKS = re.compile(r"(`)([^`<]+)(<[^`>]+>)(`)(__)", re.MULTILINE)
+
+# Match `|substitution|` for removal.
+RE_SUBST = re.compile(r"\|[a-zA-Z0-9_]+\|")
+
+# :some_role:`Text <ref>`
+RE_ROLE_WITH_TEXT = re.compile(r"(:[A-Za-z_]+:)(`)([^`<]+)(<[^`>]+>)(`)", flags=re.MULTILINE)
+
+RE_ROLE_INCLUDE = re.compile(r"(:(menuselection|guilabel):)(`)([^`]+)(`)", flags=re.MULTILINE)
+RE_ROLE_EXCLUDE = re.compile(r"(:(kbd|ref|doc|abbr):)(`)([^`]+)(`)", flags=re.MULTILINE)
+
+RE_ROLE_ANY = re.compile(r"(:[A-Za-z_]+:)(`)([^`]+)(`)", flags=re.MULTILINE)
+
+RE_WORDS = re.compile(
+    r"\b("
+    # Capital words, with optional '-' and "'".
+    r"[A-Z]+[\-'A-Z]*[A-Z]|"
+    # Lowercase words, with optional '-' and "'".
+    r"[A-Za-z][\-'a-z]*[a-z]+"
+    r")\b"
+)
+
+
+def regex_key_raise(x):
+    raise Exception("Unknown role! " + "".join(x.groups()))
+
+
 def check_spelling_body(text):
-    for w in text.split():
-        # skip directive args (e.g. figure target), could do differently?
-        if w.startswith(":") and w.endswith(":"):
-            continue
-        if w.startswith("<") and w.endswith(">"):
-            continue
 
-        w = w.strip("{}[](),.!?;\"'1234567890-_*")
+    text = re.sub(RE_URL_LINKS, lambda x: x.groups()[1].strip(), text)
+    text = re.sub(RE_ROLE_WITH_TEXT, lambda x: x.groups()[2].strip(), text)
+    text = re.sub(RE_ROLE_INCLUDE, lambda x: x.groups()[3].strip(), text)
 
-        if w.startswith(":") and w.endswith(":"):
-            continue
-        if w.startswith("<") and w.endswith(">"):
-            continue
+    text = re.sub(RE_ROLE_EXCLUDE, lambda _: " ", text)
+    text = re.sub(RE_ROLE_ANY, regex_key_raise, text)
 
-        # skip character and name entities
-        if w.startswith("\\") or w.startswith("|"):
-            continue
+    # Remove substitutions.
+    text = re.sub(RE_SUBST, lambda _: " ", text)
 
-        # now we've gotten rid of typical roles, strip other chars
-        w = w.strip(":`()<>{}.,")
+    for re_match in RE_WORDS.finditer(text):
+        w = re_match.group(0)
 
-        # skip python references
-        if w.startswith("bpy."):
+        # Skip entirely uppercase words.
+        # These are typically used for acronyms: XYZ, UDIM, API ... etc.
+        if w.isupper():
             continue
 
-        # skip document references and keyboard shortcuts
-        if w.startswith(("doc:", "kbd:", "menuselection:", "ref:", "https:", "http:", "abbr:")):
+        w_lower = w.lower()
+
+        if USE_ONCE and w_lower in once_words:
             continue
 
-        w_ = w
-        for w in w_.split("/"):
-            if not w:
-                continue
+        if check_word(w):
+            pass
+        elif "-" in w and all(check_word(w_split) for w_split in w.split("-")):
+            pass  # all words split by dash are correct, also pass
+        else:
+            bad_words.add(w)
+            # print(" %r" % w)
 
-            w_lower = w.lower()
-
-            if USE_ONCE and w_lower in once_words:
-                continue
-
-            if check_word(w):
-                pass
-            elif "-" in w and all(check_word(w_split) for w_split in w.split("-")):
-                pass  # all words split by dash are correct, also pass
-            else:
-                bad_words.add(w)
-                # print(" %r" % w)
-
-                if USE_ONCE:
-                    once_words.add(w_lower)
+            if USE_ONCE:
+                once_words.add(w_lower)
 
 
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
