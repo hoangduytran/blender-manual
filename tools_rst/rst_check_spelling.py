@@ -69,14 +69,14 @@ def check_spelling_body(text):
             continue
 
         # now we've gotten rid of typical roles, strip other chars
-        w = w.strip(":`()<>{}")
+        w = w.strip(":`()<>{}.,")
 
         # skip python references
         if w.startswith("bpy."):
             continue
 
         # skip document references and keyboard shortcuts
-        if w.startswith("doc:") or w.startswith("kbd:") or w.startswith("menuselection:") or w.startswith("ref:"):
+        if w.startswith(("doc:", "kbd:", "menuselection:", "ref:", "https:", "http:", "abbr:")):
             continue
 
         w_ = w
@@ -192,6 +192,7 @@ directives.register_directive('highlight', directive_ignore_recursive)
 directives.register_directive('parsed-literal', directive_ignore_recursive)
 # Custom directives from extensions
 directives.register_directive('youtube', directive_ignore_recursive)
+directives.register_directive('peertube', directive_ignore_recursive)
 directives.register_directive('vimeo', directive_ignore_recursive)
 directives.register_directive('todolist', directive_ignore_recursive)
 
@@ -223,7 +224,7 @@ def role_ignore_recursive(
         name, rawtext, text, lineno, inliner,
         options={}, content=[],
 ):
-    return [RoleIgnore("", '', *(), **{})], []
+    return [RoleIgnoreRecursive("", '', *(), **{})], []
 
 
 roles.register_canonical_role('abbr', role_ignore)
@@ -306,13 +307,21 @@ def check_spelling(filename):
     doc.walkabout(visitor)
 
 
+RST_CONTEXT_FLAG_LITERAL = 1 << 0
+RST_CONTEXT_FLAG_LITERAL_BLOCK = 1 << 1
+RST_CONTEXT_FLAG_MATH = 1 << 2
+RST_CONTEXT_FLAG_COMMENT = 1 << 3
+
+
 class RstSpellingVisitor(docutils.nodes.NodeVisitor):
     __slots__ = (
         "document",
+        "skip_context",
     )
 
     def __init__(self, doc):
         self.document = doc
+        self.skip_context = 0
 
     # -----------------------------
     # Visitors (docutils callbacks)
@@ -400,8 +409,10 @@ class RstSpellingVisitor(docutils.nodes.NodeVisitor):
         # check_spelling_body(text)
 
     def visit_Text(self, node):
+        # Visiting text in a sipped context (literal for example).
+        if self.skip_context:
+            return
         text = node.astext()
-        # print(text)
         check_spelling_body(text)
 
     def depart_Text(self, node):
@@ -420,37 +431,48 @@ class RstSpellingVisitor(docutils.nodes.NodeVisitor):
         self.is_emphasis = False
 
     def visit_math(self, node):
+        self.skip_context |= RST_CONTEXT_FLAG_MATH
         raise docutils.nodes.SkipNode
 
     def depart_math(self, node):
-        pass
+        self.skip_context &= ~RST_CONTEXT_FLAG_MATH
 
     def visit_literal(self, node):
+        self.skip_context |= RST_CONTEXT_FLAG_LITERAL
         raise docutils.nodes.SkipNode
 
     def depart_literal(self, node):
-        pass
+        self.skip_context &= ~RST_CONTEXT_FLAG_LITERAL
 
     def visit_literal_block(self, node):
+        self.skip_context |= RST_CONTEXT_FLAG_LITERAL_BLOCK
         raise docutils.nodes.SkipNode
 
     def depart_literal_block(self, node):
+        self.skip_context &= ~RST_CONTEXT_FLAG_LITERAL_BLOCK
         pass
 
     def visit_code_block(self, node):
+        # No need to flag.
         raise docutils.nodes.SkipNode
 
     def depart_code_block(self, node):
         pass
 
     def visit_reference(self, node):
-        raise docutils.nodes.SkipNode
+        pass
 
     def depart_reference(self, node):
         pass
 
+    def visit_title_reference(self, node):
+        pass
+
+    def depart_title_reference(self, node):
+        pass
+
     def visit_download_reference(self, node):
-        raise docutils.nodes.SkipNode
+        pass
 
     def depart_download_reference(self, node):
         pass
@@ -466,10 +488,11 @@ class RstSpellingVisitor(docutils.nodes.NodeVisitor):
     #    # metadata['searchable_text'] = node.astext()
 
     def visit_comment(self, node):
+        self.skip_context |= RST_CONTEXT_FLAG_COMMENT
         raise docutils.nodes.SkipNode
 
     def depart_comment(self, node):
-        pass
+        self.skip_context &= ~RST_CONTEXT_FLAG_COMMENT
 
     def visit_raw(self, node):
         raise docutils.nodes.SkipNode
