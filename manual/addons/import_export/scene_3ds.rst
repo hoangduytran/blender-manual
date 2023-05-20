@@ -74,8 +74,8 @@ Selection Only
    When checked, only selected objects are exported. Otherwise export all objects in the scene.
 
 Write Keyframe
-   Writes the keyframe section of a 3ds file and exporters the animation if an action was found.
-   The animation can be imported the same, un-check if any importer crashes,
+   Writes the keyframe section of a 3ds file and exports the animation if an action was found.
+   The animation can be imported the same way, un-check if any importer crashes,
    not every application can handle the keyframe section.
 
 Transform
