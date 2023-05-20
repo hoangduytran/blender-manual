@@ -414,8 +414,8 @@ that generate the various patterns of many living organisms.
 See `this video <https://youtu.be/J-0NzU1TmIY>`__ for an example of the Reaction-Diffusion simulation with Tissue.
 
 
-Radom Materials
----------------
+Random Materials
+----------------
 
 (To Do)
 

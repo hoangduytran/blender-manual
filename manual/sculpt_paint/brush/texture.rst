@@ -135,7 +135,7 @@ Size X, Y, Z
 
 Sample Bias :guilabel:`Sculpt Mode`
    Value added to texture samples.
-   This can be used if the midlevel of a height map is not correct.
+   This can be used if the mid-level of a height map is not correct.
 
 .. _bpy.types.Brush.use_color_as_displacement:
 

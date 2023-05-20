@@ -76,7 +76,7 @@ Timeline Scrub
 Call a timeline popup at mouse position to scrub without leaving the 3D viewport.
 
 Default shortcut to call the timeline is :kbd:`Alt-MMB`.
-The shortcut enable the scrubbing when hovering timeline editors as well (dopesheet, sequencer, etc).
+The shortcut enable the scrubbing when hovering timeline editors as well (dope-sheet, sequencer, etc).
 
 Scene start/end and keyframes are represented with symbols on the timeline.
 

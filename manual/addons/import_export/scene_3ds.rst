@@ -36,7 +36,7 @@ Image Search
    This enables a recursive file search if an image file can't be found.
 
 Read Keyframe
-   Reads the keyframe tracks from a 3ds file and transforms the objects to the data wich was found.
+   Reads the keyframe tracks from a 3ds file and transforms the objects to the data which was found.
    Usually only one frame is found in static scenes, it will be imported to the timeline.
    If the 3ds scene is animated, the complete animation will be imported to the timeline.
 
@@ -60,7 +60,7 @@ Apply Transform
 
 World Space
    Use world matrix instead of local matrix to transform the objects.
-   This is useful for older 3ds files from 3D Studio DOS wich only used world space to transform the objects.
+   This is useful for older 3ds files from 3D Studio DOS which only used world space to transform the objects.
    It is also useful if the object was exported without apply transform.
 
 
@@ -74,8 +74,8 @@ Selection Only
    When checked, only selected objects are exported. Otherwise export all objects in the scene.
 
 Write Keyframe
-   Writes the keyframe section of a 3ds file and exportes the animation if an action was found.
-   The animation can be imported the same, uncheck if any importer crashes, 
+   Writes the keyframe section of a 3ds file and exporters the animation if an action was found.
+   The animation can be imported the same, un-check if any importer crashes,
    not every application can handle the keyframe section.
 
 Transform
@@ -92,11 +92,11 @@ Forward / Up
 Materials
 =========
 
-Materials in 3ds are defined in various color and percent chunks wich can include
+Materials in 3ds are defined in various color and percent chunks which can include
 either integer percent and 24bit color values or float color and percent values,
 both can be read by the importer and will be converted to blender values.
 The exporter uses the integer values, since this is used from 3ds version 3 and above.
-The material definitions wich Blender can use are the following:
+The material definitions which Blender can use are the following:
 
 - 3ds Diffuse Color <-> blender Base Color
 - 3ds Specular Color <-> blender Specular Color
@@ -105,8 +105,8 @@ The material definitions wich Blender can use are the following:
 - 3ds Mat Shin2 <-> blender Specular Intensity
 - 3ds Mat Shin3 <-> blender Metallic
 - 3ds Mat Opacity <-> blender Alpha inverted
-- 3ds Mat Bump PCT <-> blender Normalmap Strength
-- 3ds Self Illum PCT <-> blender Emission Strength
+- 3ds Mat Bump PCT <-> blender Normal-map Strength
+- 3ds Self Illumination PCT <-> blender Emission Strength
 
 
 Textures
@@ -115,8 +115,8 @@ Textures
 Each 3ds material can include different texture mappings,
 which are all imported to Blender material nodes including texture coordinates.
 The 3ds exporter basically takes the images and coordinates,
-wich are directly connected to the Principled BSDF shader,
-if an image is connected to a colormix shader, it will exported as secondary texture.
+which are directly connected to the Principled BSDF shader,
+if an image is connected to a color-mix shader, it will exported as secondary texture.
 Shininess maps to roughness and opacity to the alpha channel,
 they must be color inverted afterwards to match with Blender definition.
 The material mappings are defined as following:
@@ -126,9 +126,9 @@ The material mappings are defined as following:
 - 3ds Shininess Map <-> blender Roughness Texture
 - 3ds Reflection Map <-> blender Metallic Texture
 - 3ds Opacity Map <-> blender Alpha Texture
-- 3ds Self Illum Map <-> blender Emission Texture
+- 3ds Self Illumination Map <-> blender Emission Texture
 - 3ds Bump Map <-> blender Normal Map (tangent space)
-- 3ds Tex2 Map <-> blender Color Texture (connect to mixshader)
+- 3ds Tex2 Map <-> blender Color Texture (connect to mix-shader)
 
 .. figure:: /images/addons_io_3ds_material-nodes.jpg
 
@@ -144,12 +144,12 @@ Meshes
 ======
 
 Meshes are made of triangles only, no quads are supported,
-3ds Studio uses edge visibilty flags to hide and show edges, many 3ds files use them to mark the quads.
+3ds Studio uses edge visibility flags to hide and show edges, many 3ds files use them to mark the quads.
 The Blender 3ds importer and exporter will use those flags to mark edges sharp,
 this can be used to convert the triangles back to quads.
-The importer can read the smoothchunk and shades a face smooth if it belongs to a smoothgroup,
+The importer can read the smooth-chunk and shades a face smooth if it belongs to a smooth-group,
 the exporter creates a smooth chunk if the mesh contains any smooth faces.
-3ds only supports one pair of UV coordinates per vertex. If any vertex has more UVs, it will be dublicated.
+3ds only supports one pair of UV coordinates per vertex. If any vertex has more UVs, it will be duplicated.
 
 
 Ambient
