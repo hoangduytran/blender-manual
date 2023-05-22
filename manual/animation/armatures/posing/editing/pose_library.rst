@@ -1,3 +1,4 @@
+
 .. _bpy.ops.poselib:
 
 ************
@@ -70,13 +71,9 @@ True to its name, the *Create Pose Asset* button automatically marks the Action 
 Not only does this make it available in the pose library, it will also act as a *fake user*
 to ensure the Action isn't lost after you unassign it from the armature.
 
-The *Create Pose Asset* button is also available in the 3D Viewport sidebar.
-This button acts almost the same as the one in the Action Editor, except for one thing:
-it will not assign the newly created Action. Doing so would be invisible,
-as the pose doesn't change and the name of the current Action is not shown in the viewport.
-The pose asset can still be renamed in the Asset Browser.
-There you can also click the *Assign Action* button to explicitly assign
-the selected pose asset as the armature's active Action.
+The pose asset can be renamed in the Asset Browser. There you can also right
+click on the thumbnail, then choose Assign Action to assign the Action to the
+active Object (see description above).
 
 .. note::
 
@@ -127,8 +124,7 @@ data to the currently open blend-file. To copy a pose from some other file into
 a pose library file, see the following steps:
 
 - Pose the character and select the relevant bones.
-- Click the **Copy Pose as Asset button**, which is available in the Action Editor
-  as well as the 3D Viewport Sidebar. This will create the pose asset
+- Click the **Copy Pose as Asset button**, which is available in the Action Editor. This will create the pose asset
   (including its thumbnail) and store it in a temporary file somewhere.
 - Choose an existing pose asset, and open its context menu. Click the **Open Blend File** option.
 - A new Blender process will start, and automatically open the asset library
@@ -213,14 +209,6 @@ The **Pose Library panels will appear** when the active object is an armature
 and in Pose Mode. The :doc:`catalog system </files/asset_libraries/catalogs>`
 and the filter bar at the top can be used to search for specific poses.
 
-.. _bpy.types.WindowManager.poselib_flipped:
-
-Flip Pose
-   Will mirror the pose from left to right and vice versa.
-   This makes it possible, for example, to apply a left-hand pose to the right hand,
-   reducing the number of poses you have to put into the library.
-   This can of course also be applied for asymmetrical facial expressions
-   that depend on the camera angle.
 
 The following operators can be accessed by :kbd:`RMB` on a pose:
 
@@ -233,13 +221,22 @@ Apply Pose
    and then an "open hand" pose for only the index finger and thumb.
    Double-clicking a pose will also apply it.
 
-.. _bpy.ops.poselib.blend_pose_asset:
+Apply Pose Flipped
+   Will mirror the pose from left to right and vice versa. This makes it
+   possible, for example, to apply a left-hand pose to the right hand, reducing
+   the number of poses you have to put into the library. This can of course also
+   be applied for asymmetrical facial expressions that depend on the camera
+   angle. While blending (see below), keep :kbd:`Ctrl` pressed to blend the flipped pose.
+
+. _bpy.ops.poselib.blend_pose_asset:
 
 Blend Pose
    Allows you to gradually blend a pose from the library into the character's pose.
    Click the button, then move the mouse left/right to determine the desired blend.
-   While blending, you can use the Tab key to toggle between the original and the blended pose.
-   As usual in Blender, left-click or press Enter to confirm; right-click or press Escape to cancel the operator.
+   A pose asset can be "subtracted" while blending. Drag to the right to blend as usual, drag to the left to subtract the pose.
+   While blending, you can use :kbd:`Tab` to toggle between the original and the blended pose.
+   As usual in Blender, :kbd:`LMB` or press :kbd:`Enter` to confirm; :kbd:`RMB` or press :kbd:`Esc` to cancel the operator.
+   Blending can also exaggerate a pose, by pressing :kbd:`E` (for Extrapolate) and applying a pose for more than 100%.
 
 .. _bpy.ops.poselib.pose_asset_select_bones:
 
@@ -266,8 +263,6 @@ This means that it can allow faster interaction.
 You can also select and apply a pose via the cursor keys.
 This allows for fast exploration of the poses,
 to directly see the result on the active character.
-Of course the *Flip Pose* checkbox is available here as well --
-it works the same as described in the previous section.
 
 **Drag the pose thumbnail left to right to blend it** into the character's current pose.
 Just release the mouse button to confirm.
