@@ -49,20 +49,51 @@ def check_word(w):
     return dict_spelling.check(w)
 
 
-# Match HTML link `Text <url>`__
-# A URL may span multiple lines.
-RE_URL_LINKS = re.compile(r"(`)([^`<]+)(<[^`>]+>)(`)(__)", re.MULTILINE)
+def regex_key_raise(x):
+    raise Exception("Unknown role! " + "".join(x.groups()))
 
-# Match `|substitution|` for removal.
-RE_SUBST = re.compile(r"\|[a-zA-Z0-9_]+\|")
 
-# :some_role:`Text <ref>`
-RE_ROLE_WITH_TEXT = re.compile(r"(:[A-Za-z_]+:)(`)([^`<]+)(<[^`>]+>)(`)", flags=re.MULTILINE)
+# A table of regex and their replacement functions.
+#
+# This is used to clean up text from `docutils.nodes.NodeVisitor.visit_Text` which doesn't remove inline markup.
+# Note that in some cases the order matters, especially with include/excluding roles.
 
-RE_ROLE_INCLUDE = re.compile(r"(:(menuselection|guilabel):)(`)([^`]+)(`)", flags=re.MULTILINE)
-RE_ROLE_EXCLUDE = re.compile(r"(:(kbd|ref|doc|abbr):)(`)([^`]+)(`)", flags=re.MULTILINE)
+RE_TEXT_REPLACE_ROLES_INCLUDE = ("menuselection", "guilabel")
+RE_TEXT_REPLACE_ROLES_EXCLUDE = ("kbd", "ref", "doc", "abbr")
 
-RE_ROLE_ANY = re.compile(r"(:[A-Za-z_]+:)(`)([^`]+)(`)", flags=re.MULTILINE)
+RE_TEXT_REPLACE_TABLE = (
+    # Match HTML link: `Text <url>`__
+    # A URL may span multiple lines.
+    (
+        re.compile(r"(`)([^`<]+)(<[^`>]+>)(`)(__)", re.MULTILINE),
+        lambda x: x.groups()[1].strip(),
+    ),
+    # Roles with plain-text: :some_role:`Text <ref>`
+    (
+        re.compile(r"(:[A-Za-z_]+:)(`)([^`<]+)(<[^`>]+>)(`)", flags=re.MULTILINE),
+        lambda x: x.groups()[2].strip(),
+    ),
+    # Roles to always include.
+    (
+        re.compile(r"(:(" + ("|".join(RE_TEXT_REPLACE_ROLES_INCLUDE)) + r"):)(`)([^`]+)(`)", flags=re.MULTILINE),
+        lambda x: x.groups()[3].strip(),
+    ),
+    # Roles to always exclude.
+    (
+        re.compile(r"(:(" + ("|".join(RE_TEXT_REPLACE_ROLES_EXCLUDE)) + r"):)(`)([^`]+)(`)", flags=re.MULTILINE),
+        lambda _: " ",
+    ),
+    # Ensure all roles are handled.
+    (
+        re.compile(r"(:[A-Za-z_]+:)(`)([^`]+)(`)", flags=re.MULTILINE),
+        regex_key_raise,
+    ),
+    # Match substitution for removal: `|identifier|`
+    (
+        re.compile(r"\|[a-zA-Z0-9_]+\|"),
+        lambda _: " ",
+    ),
+)
 
 RE_WORDS = re.compile(
     r"\b("
@@ -74,21 +105,11 @@ RE_WORDS = re.compile(
 )
 
 
-def regex_key_raise(x):
-    raise Exception("Unknown role! " + "".join(x.groups()))
-
-
 def check_spelling_body(text):
 
-    text = re.sub(RE_URL_LINKS, lambda x: x.groups()[1].strip(), text)
-    text = re.sub(RE_ROLE_WITH_TEXT, lambda x: x.groups()[2].strip(), text)
-    text = re.sub(RE_ROLE_INCLUDE, lambda x: x.groups()[3].strip(), text)
-
-    text = re.sub(RE_ROLE_EXCLUDE, lambda _: " ", text)
-    text = re.sub(RE_ROLE_ANY, regex_key_raise, text)
-
-    # Remove substitutions.
-    text = re.sub(RE_SUBST, lambda _: " ", text)
+    # Wash text or inline RST.
+    for re_expr, re_replace_fn in RE_TEXT_REPLACE_TABLE:
+        text = re.sub(re_expr, re_replace_fn, text)
 
     for re_match in RE_WORDS.finditer(text):
         w = re_match.group(0)
