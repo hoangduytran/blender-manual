@@ -46,16 +46,21 @@ Distribute Memory Across Devices
 
    Currently only NVLink on Nvidia GPUs is supported.
 
-MetalRT (Experimental)
-   MetalRT for ray tracing uses less memory for scenes which use curves extensively,
-   and can give better performance in specific cases.
-   This feature is experimental and some scenes may render incorrectly.
+Embree on GPU
+   Enables the use of hardware ray tracing on Intel GPUs, providing better overall performance.
+
+   Only supported with oneAPI rendering devices..
 
 HIP RT (Experimental)
    Speeds up rendering by enabling AMD hardware ray tracing on RDNA2 and above, with shader fallback on older cards.
    This feature is experimental and some scenes may render incorrectly.
 
    This feature is only available when using a *HIP* render device.
+
+MetalRT (Experimental)
+   MetalRT for ray tracing uses less memory for scenes which use curves extensively,
+   and can give better performance in specific cases.
+   This feature is experimental and some scenes may render incorrectly.
 
 
 Operating System Settings

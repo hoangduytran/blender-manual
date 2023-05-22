@@ -32,11 +32,11 @@ Outputs
 Mesh
    Mesh component of the input geometry.
 
-Point Cloud
-   Point cloud component of the input geometry.
-
 Curve
    Curve component of the input geometry.
+
+Point Cloud
+   Point cloud component of the input geometry.
 
 Volume
    Volume component of the input geometry.
