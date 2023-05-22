@@ -237,7 +237,6 @@ Start Tweaking Strips Actions (Full Stack)
 .. reference::
 
    :Menu:      :menuselection:`Edit --> Start Tweaking Strips Actions (Full Stack)`
-   :Shortcut:  :kbd:`Tab`
 
 Allows you to edit the contents of the strip without disabling all the tracks above the tweaked strip.
 This allows keyframing to work as expected, and preserves the pose that you visually keyed.
@@ -258,8 +257,10 @@ Start Tweaking Strips Actions (Lower Stack)
 .. reference::
 
    :Menu:      :menuselection:`Edit --> Start Tweaking Strips Actions (Lower Stack)`
+   :Shortcut:  :kbd:`Tab`
 
 The contents of Action strips can be edited, but you must be in *Tweak Mode* to do so.
 The keyframes of the action can then be edited in the Dope Sheet.
 
 When you finished editing the strip, simply go to :menuselection:`Edit --> Stop Tweaking Strips Actions`
+or press :kbd:`Tab`.
