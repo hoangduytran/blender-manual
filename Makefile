@@ -22,6 +22,11 @@ Checking
 - check_structure      to check the structure of all .rst files.
 - check_syntax         to check the syntax of all .rst files.
 - check_spelling       to check spelling for text in RST files.
+
+Utilities
+---------
+
+- update               to update the repository to the most recent version.
 endef
 # HELP_TEXT (end)
 
@@ -116,6 +121,9 @@ update_po:
 report_po_progress:
 	@python3 tools_report/report_translation_progress.py --quiet \
 	         `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.git*' -printf 'locale/%f\n' | sort`
+
+update:
+	@git pull --rebase
 
 # ----------------------
 # Help for build targets
