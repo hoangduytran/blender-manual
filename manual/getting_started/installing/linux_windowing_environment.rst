@@ -82,14 +82,11 @@ Environment Variables
 Known Limitations
 -----------------
 
-Gnome Shell's Fractional Scaling
-   While Blender supports fractional scaling on KDE & WLROOT's based compositors,
-   gnome-shell-43 has an experimental fractional scaling which is enabled by default on Ubuntu
-   internally this renders a larger buffer then down-scales it and may cause minor glitches such as a
-   `small cursor size <https://projects.blender.org/blender/blender/issues/105895>`__.
+Gnome Shell's Fractional Scaling (before version 44)
+   Versions of Gnome-Shell prior to 44 don't fully support fractional scaling.
 
-   Wayland now has an API handle fractional scaling (``wp-fractional-scale-v1``),
-   which should eventually resolve this issue.
+   Using fractional under older versions of Gnome-Shell may result in glitches such as a
+   `small cursor size <https://projects.blender.org/blender/blender/issues/105895>`__.
 
 NVidia GPU
    Currently NVidia drivers don't fully support features needed for Wayland. Graphical glitches and flickering are
