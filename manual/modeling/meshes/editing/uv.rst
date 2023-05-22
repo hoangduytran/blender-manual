@@ -193,10 +193,8 @@ Follow Active Quads
    :Menu:      :menuselection:`UV --> Follow Active Quads`
    :Shortcut:  :kbd:`U`
 
-The Follow Active Quads tool takes the selected faces and lays them out
-by following continuous face loops, even if the mesh face is irregularly-shaped.
-Note that it does not respect the image size,
-so you may have to scale them all down a bit to fit the image area.
+Extrapolate UV's based on the active quad by following continuous face loops,
+even if the mesh face is irregularly-shaped.
 
 
 Options
@@ -205,16 +203,27 @@ Options
 Edge Length Mode
    Method to space UV edge loops.
 
-   :Even: Space all UVs evenly.
-   :Length: Todo.
-   :Length Average: Average space UVs edge length of each loop.
+   :Even:
+      Space all UVs evenly, where the shape of the quad in the 3D viewport is ignored.
+   :Length:
+      Each face's UV's are calculated based on the edge length.
+
+      While this minimizes distortion, adjacent loops may become disconnected.
+   :Length Average:
+      Average space UVs edge length of each loop.
+
+      This has the benefit of minimizing distortion, while keeping UV's connected.
 
 .. note::
 
-   Please note that it is the shape of the active quad in UV space that is being followed,
-   not its shape in 3D space. To get a clean 90-degree unwrap make sure the active quad is
-   a rectangle in UV space before using "Follow active quad".
+   For a clean 90-degree unwrap it's typically best to first make sure the quad a rectangle in UV space.
 
+   Otherwise any distortion in the active UV is extended which doesn't result in a useful grid-layout.
+
+.. note::
+
+   The resulting unwrap is not clamped within the UV bounds,
+   you may wish to scale down the active quad's UV's so the result is in a usable range.
 
 .. _bpy.ops.uv.cube_project:
 

@@ -137,14 +137,16 @@ Image
    See :doc:`/editors/image/image_settings`.
 
 Image Pin
-   Todo.
+   When enabled the current image remains visible regardless of the object selection.
+
+   This can be useful to enable when an image is used as a reference.
 
 Active UV Loop Layer
    Select which UV map to use.
 
 Viewport Gizmos
    Selectively show or hide specific gizmo controls that are displayed in the 2D viewport.
-	All gizmos can be hidden or shown at once with the toggle next to the pop-over arrow.
+   All gizmos can be hidden or shown at once with the toggle next to the pop-over arrow.
 
    Navigate
       Enable/disable the gizmos used to pan or zoom the 2D viewport,
