@@ -40,7 +40,7 @@ Bigger Changes
 If you are going to add or overhaul a section, be sure to check carefully that it does not already exist.
 In some places, the docs are so disorganized that sections may be duplicated or in a strange location.
 In the case that you find a duplicate or out of place section,
-`create a task <https://projects.blender.org/blender/documentation/issues/new>`__
+`create an issue <https://projects.blender.org/blender/documentation/issues/new>`__
 explaining the issue, and optionally include a revision (actual changes).
 
 Before you make any edits that are not simple and plainly justified (for example, moving folders around),
