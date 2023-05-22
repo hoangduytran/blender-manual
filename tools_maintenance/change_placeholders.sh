@@ -6,7 +6,7 @@
 # when updating PO files, automatically inserting name of author and revision time,
 # which should save you some times.
 # Recommend to copy this to your $HOME/bin directory and add executable flag (chmod u+x),
-# then use it with the directory of your local repository (svn or git), ie.
+# then use it with the directory of your local repository, ie.
 # 		$HOME/bin/change_placeholders.sh $BLENDER_MAN_EN
 # Windows users can try to install Linux on Windows following this guide (https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 # Author: Hoang Duy Tran <hoangduytran1960@googlemail.com>

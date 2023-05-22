@@ -52,7 +52,7 @@ Setting up the Build Environment
 ================================
 
 - Open a Command Prompt. (Run as Administrator)
-- Enter the ``blender-manual`` folder which was just added by the SVN checkout::
+- Enter the ``blender-manual`` folder which was just added by `git clone`::
 
      cd C:\blender-manual
 

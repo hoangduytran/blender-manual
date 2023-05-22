@@ -180,7 +180,6 @@ dict_custom = {
     "redhat",
     "renderman",
     "sgi",
-    "tortoisesvn",
     "unix",
     "xinerama",
 
