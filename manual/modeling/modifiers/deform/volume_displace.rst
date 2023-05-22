@@ -5,6 +5,10 @@
 Volume Displace Modifier
 ************************
 
+.. reference::
+
+   This modifier is only available for volume objects.
+
 The *Volume Displace* modifier displaces existing volume grids based on a 3D texture.
 It uses the RGB color channels of the texture to displace the volume into the X, Y and Z direction.
 
