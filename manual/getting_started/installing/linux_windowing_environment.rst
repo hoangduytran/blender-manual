@@ -62,8 +62,8 @@ Disable Wayland (forcing X11)
       WAYLAND_DISPLAY="" blender
 
 Disable ``libdecor`` (forcing borderless windows under Gnome-Shell)
-
    Uninstall ``libdecor``, then run Blender with an empty X11 display variable.
+
    .. code-block:: sh
 
       DISPLAY="" blender
