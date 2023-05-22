@@ -7,7 +7,7 @@ Mesh to Volume Modifier
 
 .. reference::
 
-   This modifier is only available for volume objects.
+   This modifier is only available for :doc:`Volume Objects </modeling/volumes/index>`.
 
 The *Mesh to Volume* modifier uses a mesh to create a new volume grid.
 All previously existing volume grids on the volume object are discarded.
