@@ -134,17 +134,11 @@ Feature Comparison
      - |cross| :sup:`*2`
      - | Needed for dragging between windows and
        | restoring window positions on file load.
-   * - Window Raise/Lower
-     - |tick|
-     - |cross| :sup:`*2`
-     - | Used to bring the render window
-       | to the foreground.
 
 Other features which both systems support such as Hi-DPI, 3D-mouse, tablet input, ... etc.
 have been left out of this list.
 
 | :sup:`*1` In X11 fast cursor motion may exit the window bounds while the cursor is grabbed (transforming for e.g.).
-| :sup:`*2` Wayland doesn't support setting the window position & depth,
-  as this is a design decision it's unlikely to be supported (see issues for
-  `position <https://projects.blender.org/blender/blender/issues/98928>`__ and
-  `depth <https://projects.blender.org/blender/blender/issues/102985>`__).
+| :sup:`*2` Wayland doesn't support setting the window position,
+  as this is a design decision it's unlikely to be supported
+  (see issues for `position <https://projects.blender.org/blender/blender/issues/98928>`__).
