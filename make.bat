@@ -63,6 +63,11 @@ if "%1" == "help" (
 	echo - check_structure      to check the structure of all .rst files
 	echo - check_syntax         to check the syntax of all .rst files
 	echo - check_spelling       to check spelling for text in RST files
+	echo.
+	echo Utilities
+	echo ---------
+	echo.
+	echo - update               to update the repository to the most recent version.
 	goto EOF
 )
 
@@ -107,6 +112,10 @@ if "%1" == "check_spelling" (
 
 if "%1" == "check_structure" (
 	python tools_rst\rst_check_images.py
+	goto EOF
+
+if "%1" == "update" (
+	git pull --rebase
 	goto EOF
 
 ) else (

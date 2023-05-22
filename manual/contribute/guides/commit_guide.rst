@@ -20,7 +20,7 @@ If you leave out ``-m "message"``, you will be prompted to type the message in a
    You should make sure you are always on the latest revision before committing.
    You may not be able to commit directly if there are conflicting changes in the latest revision.
 
-   To avoid this run ``git pull --rebase`` before committing.
+   To avoid this update your local repository before committing (run ``make update``).
 
 .. seealso::
 
