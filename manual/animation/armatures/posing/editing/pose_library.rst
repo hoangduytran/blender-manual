@@ -228,7 +228,7 @@ Apply Pose Flipped
    be applied for asymmetrical facial expressions that depend on the camera
    angle. While blending (see below), keep :kbd:`Ctrl` pressed to blend the flipped pose.
 
-. _bpy.ops.poselib.blend_pose_asset:
+.. _bpy.ops.poselib.blend_pose_asset:
 
 Blend Pose
    Allows you to gradually blend a pose from the library into the character's pose.
