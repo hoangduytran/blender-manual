@@ -91,7 +91,7 @@ Frame Sequence Workflow
 =======================
 
 #. First prepare your animation.
-#. In the *Dimensions* panel, choose the render size, Pixel Aspect Ratio, and the Range of Frames to use,
+#. In the *Format* panel, choose the render size, Pixel Aspect Ratio, and the Range of Frames to use,
    as well as the frame rate, which should already be set.
 #. In the Output panel set up your animation to be rendered out as images,
    generally using a format that does not compromise any quality.

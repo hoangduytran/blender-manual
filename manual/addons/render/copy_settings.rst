@@ -43,7 +43,7 @@ Presets
    *This will work even without the UI template list patch.*
 
    Set Scale/Clear Scale
-      Copy the render scale setting (below resolution controls, in *Dimensions* panel).
+      Copy the render scale setting (below resolution controls, in *Format* panel).
       Highly useful to do preview renders!
 
    Set Resolution/Clear Resolution
