@@ -144,3 +144,7 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/align
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotate_euler.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/rotate_euler.html"
 
 RedirectMatch "^/manual/{lang}/{version}/editors/graph_editor/channels.html" "/manual/{lang}/{version}/editors/graph_editor/channels/index.html"
+
+RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/invert.html" "^/manual/{lang}/{version}/compositing/types/color/invert_color.html"
+RedirectMatch "^/manual/{lang}/{version}/editors/texture_node/types/color/invert.html" "^/manual/{lang}/{version}/editors/texture_node/types/color/invert_color.html"
+RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/color/invert.html" "^/manual/{lang}/{version}/render/shader_nodes/color/invert_color.html"
