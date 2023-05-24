@@ -1,4 +1,4 @@
-.. index:: Compositor Nodes; Hue Saturation Value
+.. index:: Compositor Nodes; Hue/Saturation/Value
 .. _bpy.types.CompositorNodeHueSat:
 .. Editor's Note: This page gets copied into:
 .. - :doc:`</render/cycles/nodes/types/color/hue_saturation>`
@@ -6,14 +6,14 @@
 .. --- copy below this line ---
 
 *************************
-Hue Saturation Value Node
+Hue Saturation/Value Node
 *************************
 
 .. figure:: /images/compositing_node-types_CompositorNodeHueSat.webp
    :align: right
    :alt: Hue Saturation Node.
 
-The *Hue Saturation Value Node* applies a color transformation in the HSV :term:`Color Model`.
+The *Hue/Saturation/Value Node* applies a color transformation in the HSV :term:`Color Model`.
 
 
 Inputs
