@@ -58,7 +58,7 @@ Levels
 
 .. _bpy.ops.paint.vertex_color_hsv:
 
-Hue Saturation Value
+Hue/Saturation/Value
    Adjust the HSV values of the selected vertices.
 
 .. _bpy.ops.paint.vertex_color_brightness_contrast:

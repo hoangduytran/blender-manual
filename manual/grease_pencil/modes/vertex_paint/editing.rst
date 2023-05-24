@@ -58,13 +58,13 @@ Adjust the levels of Color Attributes.
 
 .. _bpy.ops.gpencil.vertex_color_hsv:
 
-Hue Saturation Value
+Hue/Saturation/Value
 ====================
 
 .. reference::
 
    :Mode:      Vertex Paint Mode
-   :Menu:      :menuselection:`Paint --> Hue Saturation Value`
+   :Menu:      :menuselection:`Paint --> Hue/Saturation/Value`
 
 Adjust the color's HSV values.
 
