@@ -14,12 +14,13 @@ and consequently we can render via a remote shell (typically SSH).
 - See :doc:`Command Line Arguments </advanced/command_line/arguments>`
   for a full list of arguments
   (for example to specify which scene to render, the end frame number, etc.), or simply run:
-- See :ref:`Command Line Launching <command_line-launch-index>`
-  for specific instructions on launching Blender from the command line.
 
 .. code-block:: sh
 
    blender --help
+
+- See :ref:`Command Line Launching <command_line-launch-index>`
+  for specific instructions on launching Blender from the command line.
 
 .. note::
 
