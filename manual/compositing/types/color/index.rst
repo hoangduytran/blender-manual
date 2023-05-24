@@ -18,7 +18,7 @@ overlaying another image, etc.
    gamma.rst
    hue_correct.rst
    hue_saturation.rst
-   invert.rst
+   invert_color.rst
    mix.rst
    posterize.rst
    rgb_curves.rst

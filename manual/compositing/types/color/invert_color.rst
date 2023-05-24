@@ -1,19 +1,19 @@
-.. index:: Compositor Nodes; Invert
+.. index:: Compositor Nodes; Invert Color
 .. _bpy.types.CompositorNodeInvert:
 .. Editor's Note: This page gets copied into:
 .. - :doc:`</render/cycles/nodes/types/color/invert>`
 
 .. --- copy below this line ---
 
-***********
-Invert Node
-***********
+*****************
+Invert Color Node
+*****************
 
 .. figure:: /images/compositing_node-types_CompositorNodeInvert.webp
    :align: right
-   :alt: Invert Node.
+   :alt: Invert Color Node.
 
-The *Invert Node* inverts the colors in the input image, producing a negative.
+The *Invert Color Node* inverts the colors in the input image, producing a negative.
 
 
 Inputs

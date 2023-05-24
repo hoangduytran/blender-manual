@@ -7,7 +7,7 @@
    :maxdepth: 1
 
    combine_color.rst
-   invert.rst
+   invert_color.rst
    mix_rgb.rst
    rgb_curves.rst
    hue_saturation.rst
