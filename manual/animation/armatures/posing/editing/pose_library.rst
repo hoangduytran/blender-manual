@@ -233,10 +233,11 @@ Apply Pose Flipped
 Blend Pose
    Allows you to gradually blend a pose from the library into the character's pose.
    Click the button, then move the mouse left/right to determine the desired blend.
-   A pose asset can be "subtracted" while blending. Drag to the right to blend as usual, drag to the left to subtract the pose.
-   While blending, you can use :kbd:`Tab` to toggle between the original and the blended pose.
-   As usual in Blender, :kbd:`LMB` or press :kbd:`Enter` to confirm; :kbd:`RMB` or press :kbd:`Esc` to cancel the operator.
-   Blending can also exaggerate a pose, by pressing :kbd:`E` (for Extrapolate) and applying a pose for more than 100%.
+   A pose asset can be "subtracted" while blending. Drag to the right to blend as usual, drag to the left to subtract
+   the pose. While blending, you can use :kbd:`Tab` to toggle between the original and the blended pose.
+   As usual in Blender, :kbd:`LMB` or press :kbd:`Return` to confirm; :kbd:`RMB` or press :kbd:`Esc` to cancel the
+   operator. Blending can also exaggerate a pose, by pressing :kbd:`E` (for Extrapolate) and applying a pose for more
+   than 100%.
 
 .. _bpy.ops.poselib.pose_asset_select_bones:
 

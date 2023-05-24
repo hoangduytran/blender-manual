@@ -473,8 +473,8 @@ Factor
    A blend factor from original to filtered curve.
 
 Sigma
-   The shape of the gaussian distribution. Lower values mean a sharper curve, giving keys that are close to each other more weight.
-   A high value behaves like a simple average filter.
+   The shape of the gaussian distribution. Lower values mean a sharper curve, giving keys that are close to each
+   other more weight. A high value behaves like a simple average filter.
 
 Filter Width
    A wider filter looks at more keyframes, producing a smoother result.
