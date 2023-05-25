@@ -302,7 +302,7 @@ Cache
    Show Cache
       Show all enabled types.
 
-      Soft Body, Particles, Cloth, Smoke, Dynamic Paint, Rigid Body.
+      Soft Body, Particles, Cloth, Simulation Nodes, Smoke, Dynamic Paint, Rigid Body.
 
    .. figure:: /images/editors_timeline_cache.png
 
