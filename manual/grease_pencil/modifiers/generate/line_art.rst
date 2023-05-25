@@ -92,12 +92,9 @@ Contour
    Where the edge becomes the separation line of front/backfacing faces.
    The silhouette can also be inverted by clicking the invert button.
 
-    :None: Not filtering any lines based on illumination region.
-    :Illuminated: Only selecting lines from illuminated regions.
-    :Shaded: Only selecting lines from shaded regions.
-    :Illuminated (Enclosed Shapes):
-      Selecting lines from lit regions, and make the combination of contour,
-      light contour and shadow lines into enclosed shapes.
+    :Contour: Generate lines from contour.
+    :Silhouette: Only generate lines from the silhouette of the source objects as a whole.
+    :Individual Silhouette: Generate lines from the individual silhouettes of the source objects.
 
 .. _bpy.types.LineartGpencilModifier.use_crease:
 
@@ -145,7 +142,7 @@ Cast Shadow
 
 .. _bpy.types.LineartGpencilModifier.use_overlap_edge_type_support:
 
-Allow Overlap
+Allow Overlapping Types
    Allow an edge to have multiple overlapping types.
    This will create a separate stroke for each overlapping type.
 
