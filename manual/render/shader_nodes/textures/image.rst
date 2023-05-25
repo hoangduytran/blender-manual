@@ -63,7 +63,7 @@ Projection
       this origin onto this sphere. This projection is, of course, perfect for spherical objects
       such as planets, and is also useful for organic objects.
    :Tube:
-      Wrap the image around a cylinder with origin (0.5, 0.5, 0) and height 1, and project the
+      Wrap the image around a cylinder with base (0.5, 0.5, 0) and height 1, and project the
       *Vector* horizontally from the central axis onto this cylinder. This projection is useful for
       a label on a bottle, for example. However, it's not suited for the top or bottom side of objects.
 

@@ -9,7 +9,7 @@ Image Tab
 UV Vertex
 ---------
 
-Transform Properties :doc:`Selecting UVs </modeling/meshes/uv/editing>`.
+The averaged-out position of the selected UV vertices.
 
 
 Image
@@ -21,7 +21,7 @@ See :doc:`/editors/image/image_settings`.
 UDIM Tiles
 ----------
 
-Allows you to manage :doc:`UDIM Tiles </modeling/meshes/uv/workflows/udims>`.
+See :doc:`UDIM Tiles </modeling/meshes/uv/workflows/udims>`.
 
 
 Tool Tab
@@ -36,39 +36,33 @@ View Tab
 Display
 -------
 
-You can set the editors display options in this panel.
+You can set the editor's display options in this panel.
 
-.. figure:: /images/editors_uv_sidebar_display-panel.png
-   :align: right
-
-   Display panel: With both an image and UVs selected.
-
-Aspect Ratio
-   Display Aspect for this image. Does not affect rendering.
+Aspect Ratio X, Y
+   Display aspect for this image. Does not affect rendering.
 
 Repeat Image
-   Duplicate the image until it is repeated to fill the main view.
+   Tile the image so it completely fills the editor.
 
 .. _bpy.types.SpaceUVEditor.show_pixel_coords:
 
 Pixel Coordinates
-   Display UV coordinates in pixels rather than from 0.0 to 1.0
+   Use pixel coordinates rather than relative coordinates (0 to 1) for the UV Vertex
+   and 2D Cursor Location fields.
 
 
 2D Cursor
 ---------
 
 Location X, Y
-   Control 2D cursor location.
+   View and change the location of the 2D Cursor.
 
 
 Annotations
 -----------
 
-Options for the :doc:`annotation tool </interface/annotate_tool>`.
+Options for the :doc:`Annotate tool </interface/annotate_tool>`.
 
-
-.. (TODO add) images per type
 
 Scopes
 ======
