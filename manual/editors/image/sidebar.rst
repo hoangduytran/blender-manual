@@ -43,7 +43,7 @@ You can set the editor's display options in this panel.
 Aspect Ratio
    Display aspect for this image. Does not affect rendering.
 Repeat Image
-   Tiles the image so it completely fills the editor.
+   Tile the image so it completely fills the editor.
 
 
 Annotations
@@ -78,7 +78,7 @@ A predominantly dark image would have the highest values toward the left side of
 Use this mode to balance out the tonal range in an image.
 A well-balanced image should have a nice smooth distribution of color values.
 
-You can drag the mouse in the histogram to adjust its vertical zoom.
+You can drag :kbd:`LMB` in the histogram to adjust its vertical zoom.
 
 Luma
    Shows a luminosity histogram.

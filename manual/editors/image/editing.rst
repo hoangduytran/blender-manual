@@ -14,7 +14,7 @@ New
    :Menu:      :menuselection:`Image --> New`
    :Shortcut:  :kbd:`Alt-N`
 
-Creates a new :ref:`image-generated` Image.
+Create a new :ref:`image-generated` Image.
 
 
 .. _bpy.ops.image.open:
@@ -28,7 +28,7 @@ Open
    :Menu:      :menuselection:`Image --> Open`
    :Shortcut:  :kbd:`Alt-O`
 
-Load image from a file.
+Load an image from a file.
 
 
 .. _bpy.ops.image.read_viewlayers:
