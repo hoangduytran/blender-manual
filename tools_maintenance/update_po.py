@@ -6,20 +6,6 @@
 # It looks more complex then it really is, since we do multi-processing
 # to update the PO files, to save some time.
 
-# Subversion Checkout Location
-# ============================
-#
-# Note: this script supports subversion repositories at these locations:
-#
-# ./local/(.svn)          All languages in one checkout.
-# ./local/{LANG}/(.svn)   Each language in it's own checkout.
-#
-# All commands run from the project root, passing in paths
-# without changing directories.
-#
-# This works since subversion will detect the parent directories ".svn"
-# path without us having to change directories.
-
 import os
 import sys
 import shutil
@@ -33,8 +19,8 @@ VERBOSE = False
 USE_MULTI_PROCESS = True
 
 
-def run_svn(args, with_output=False):
-    cmd = ["svn", *args]
+def run_git(args, with_output=False):
+    cmd = ["git", *args]
     if VERBOSE:
         print(">>> ", cmd)
 
@@ -84,7 +70,8 @@ def run_multiprocess__multi(arg_list, job_total=1):
         sys.stdout.flush()
         sys.stderr.flush()
 
-        processes.append((args_index, subprocess.Popen(["sphinx-intl", *args])))
+        processes.append(
+            (args_index, subprocess.Popen(["sphinx-intl", *args])))
 
     while processes:
         processes_clear_finished()
@@ -122,42 +109,21 @@ LOCALE_DIR = os.path.join(ROOT_DIR, "locale")
 
 POT_FILE = os.path.join(LOCALE_DIR, "blender_manual.pot")
 
-# When we cannot use portable API's.
-IS_WIN32 = (os.name == "nt")
-
 
 # -----------------------------------------------------------------------------
 # Main Function
 
 def main():
 
-    # True when all languages are checked out under "locale/".
-    has_complete_locale_checkout = os.path.exists(os.path.join(LOCALE_DIR, ".svn"))
-
-    # All directories containing '.svn' (the parent directory).
-    svn_dirs_all = []
-    for svn_dir in os.listdir(LOCALE_DIR):
-        if not svn_dir.startswith((".", "_")):
-            svn_dir = os.path.join(LOCALE_DIR, svn_dir)
-            if os.path.isdir(svn_dir):
-                svn_dirs_all.append(svn_dir)
-    # Only for reproducible execution.
-    svn_dirs_all.sort()
-
     # ---------------------
     # Update the Locale Dir
-    #
-    # It's easy to accidentally have a repository in an invalid state,
-    # and it's not always obvious that this is the cause of failure to commit.
-    # Play it safe and cleanup every time.
+    status = run_git(["-C", LOCALE_DIR, "status"], True)
 
-    if has_complete_locale_checkout:
-        run_svn(["cleanup", LOCALE_DIR])
-        run_svn(["up", LOCALE_DIR])
-    else:
-        for svn_dir in svn_dirs_all:
-            run_svn(["cleanup", svn_dir])
-            run_svn(["up", svn_dir])
+    if b"nothing to commit, working tree clean" not in status:
+        sys.exit(
+            "Locale directory has uncommitted changes, please stash or comment them")
+
+    run_git(["-C", LOCALE_DIR, "pull", "--rebase"])
 
     # ---------------
     # Create PO Files
@@ -214,58 +180,23 @@ def main():
         print("Warning, the following commands returned non-zero exit codes:")
         for returncode, arg in zip(sphinx_intl_return_codes, sphinx_intl_arg_list):
             if returncode != 0:
-                print("returncode:", returncode, "from command:", "sphinx-intl", arg)
+                print("returncode:", returncode,
+                      "from command:", "sphinx-intl", arg)
         print("Some manual corrections might need to be done.")
     del sphinx_intl_return_codes, sphinx_intl_arg_list
-
-    # ----------
-    # Handle SVN
-
-    # Add newly created PO files:
-    for svn_dir in svn_dirs_all:
-        # Multiple args, don't quote.
-        svn_files_new = []
-        svn_dirs_new = []
-        for line in run_svn(("status", svn_dir), True).decode("utf-8").splitlines():
-            if line.startswith("?"):
-                line = line.strip()
-                line = line.split()[-1]
-                if line.endswith(".po"):
-                    svn_files_new.append(line)
-                elif os.path.isdir(line):
-                    svn_dirs_new.append(line)
-
-        if svn_files_new:
-            run_svn(["add", *svn_files_new, *svn_dirs_new])
-        del svn_files_new, svn_dirs_new
 
     # ---------------------
     # Print Commit Messages
     #
     # Use space prefix as shell's (bash/zsh/fish) uses this as a hint not to store in the users history.
-    revision = re.findall(
-        r"^Revision:\s([\d]+)",
-        run_svn(["info", ROOT_DIR], True).decode('utf8'),
-        flags=re.MULTILINE,
-    )
-    revision = revision[0] if revision else "Unknown"
-
-    # Note that when 'has_complete_locale_checkout == True' we _could_ commit all languages at once,
-    # however this can cause commits that are so large, they take a long time and risk hanging.
-    # So commit every language on it's own.
-
-    for svn_dir in svn_dirs_all:
-        # 'shlex.quote' causes path separator to be converted to forward slashes,
-        # causing the command to fail.
-        if IS_WIN32:
-            print("  " + subprocess.list2cmdline(["svn", "ci", svn_dir, "-m", "Update r" + revision]))
-        else:
-            print("  svn ci {:s} -m \"Update r{:s}\"".format(quote(svn_dir), revision))
-
-    if IS_WIN32:
-        print("  " + subprocess.list2cmdline(["svn", "ci", POT_FILE, "-m", "Update r" + revision]))
-    else:
-        print("  svn ci {:s} -m \"Update r{:s}\"".format(quote(POT_FILE), revision))
+    revision = run_git(["-C", ROOT_DIR, "rev-parse",
+                       "--short", "HEAD"], True).decode('utf8').strip()
+    revision = revision if revision else "Unknown"
+    print("\nPo files updated, commit files using the following commands:")
+    print("cd locale")
+    print("git add -A")
+    print(
+        "git commit -m \"Update po-files ({:s})\"".format(revision))
 
 
 if __name__ == "__main__":
