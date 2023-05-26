@@ -139,14 +139,6 @@ Show Overlays
 Active UV Loop Layer
    Select which UV map to use.
 
-Viewport Gizmos
-   Selectively show or hide specific gizmo controls that are displayed in the 2D viewport.
-	All gizmos can be hidden or shown at once with the toggle next to the pop-over arrow.
-
-   Navigate
-      Enable/disable the gizmos used to pan or zoom the 2D viewport,
-      see :ref:`Navigation Gizmos <editors-uv-navigate-gizmos>` for more information.
-
 Display Channels
    Select what color channels are displayed.
 
