@@ -157,9 +157,10 @@ Other
 Attributes
 ==========
 
-Some object, particle and mesh attributes are available to the built-in ``getattribute()`` function.
-UV maps and Color Attributes can be retrieved using their name.
-Other attributes are listed below:
+Geometry attributes can be read through the ``getattribute()`` function.
+This includes UV maps, color attributes and any attributes output from geometry nodes.
+
+The following built-in attributes are available through ``getattribute()`` as well.
 
 ``geom:generated``
    Automatically generated texture coordinates, from undeformed mesh.
@@ -242,3 +243,16 @@ This function cannot be used instead of lighting;
 the main purpose is to allow shaders to "probe" nearby geometry,
 for example to apply a projected texture that can be blocked by geometry,
 apply more "wear" to exposed geometry, or make other ambient occlusion-like effects.
+
+Metadata
+========
+
+Metadata on parameters controls their display in the user interface. The following
+metadata is supported:
+
+``[[ string label = "My Label" ]]``
+  Name of parameter in in the user interface
+``[[ string widget = "null" ]]``
+  Hide parameter in the user interface.
+``[[ string widget = "boolean" ]]`` and ``[[ string widget = "checkbox" ]]``
+  Display integer parameter as a boolean checkbox.
