@@ -162,9 +162,13 @@ UV maps and Color Attributes can be retrieved using their name.
 Other attributes are listed below:
 
 ``geom:generated``
-   Generated texture coordinates.
+   Automatically generated texture coordinates, from undeformed mesh.
 ``geom:uv``
    Default render UV map.
+``geom:tangent``
+   Default tangent vector along surface, in object space.
+``geom:undisplaced``
+   Position before displacement, in object space.
 ``geom:dupli_generated``
    For instances, generated coordinate from instancer object.
 ``geom:dupli_uv``
@@ -177,26 +181,38 @@ Other attributes are listed below:
    Vertex coordinates array of the polygon (always three vertices currently).
 ``geom:name``
    Name of the object.
+``geom:is_smooth``
+   Is mesh face smooth or flat shaded.
 ``geom:is_curve``
-   Is object a strand or not.
+   Is object a curve or not.
 ``geom:curve_intercept``
-   Point along the strand, from root to tip.
+   0..1 coordinate for point along the curve, from root to tip.
 ``geom:curve_thickness``
-   Thickness of the strand.
+   Thickness of the curve in object space.
+``geom:curve_length``
+   Length of the curve in object space.
 ``geom:curve_tangent_normal``
    Tangent Normal of the strand.
+``geom:is_point``
+   Is point in a point cloud or not.
+``geom:point_radius``
+   Radius of point in point cloud.
+``geom:point_position``
+   Center position of point in point cloud.
+``geom:point_random``
+   Random number, different for every point in point cloud.
 ``path:ray_length``
    Ray distance since last hit.
+``object:random``
+   Random number, different for every object instance.
+``object:index``
+   Object unique instance index.
 ``object:location``
    Object location.
-``object:index``
-   Object index number.
-``object:random``
-   Per object random number generated from object index and name.
 ``material:index``
-   Material index number.
+   Material unique index number.
 ``particle:index``
-   Particle instance number.
+   Particle unique instance number.
 ``particle:age``
    Particle age in frames.
 ``particle:lifetime``
