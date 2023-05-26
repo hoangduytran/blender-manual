@@ -6,7 +6,7 @@ AutoCAD DXF
 .. reference::
 
    :Category:  Import-Export
-   :Menu:      :menuselection:`File --> Import/Export --> AutoCAD DXF`
+   :Menu:      :menuselection:`File --> Import/Export --> AutoCAD DXF (.dxf)`
 
 
 .. _dxf-import:
