@@ -164,10 +164,10 @@ def text_extract_strings(text):
 
 
 def text_extract_help(text, args, static_strings):
-    func_id = 'static int arg_handle_print_help(int UNUSED(argc), const char **UNUSED(argv), void *data)\n'
+    func_id = 'static void print_help(bArgs *ba, bool all)\n'
     index_start = text.find(func_id)
     assert (index_start != -1)
-    index_end = text.find("exit(0);", index_start)
+    index_end = text.find("\n}\n", index_start)
     # print(index_start, index_end)
     body = text[index_start + len(func_id):index_end]
     body = [l for l in body.split("\n") if not l.strip().startswith("#")]
@@ -226,8 +226,8 @@ def text_extract_help(text, args, static_strings):
 
     ind_re = None
     for l in body:
-        if l.startswith("printf"):
-            l = eval(l.replace("printf(", "").replace(");", ""), other_vars)
+        if l.startswith("PRINT"):
+            l = eval(l.replace("PRINT(", "").replace(");", ""), other_vars)
             if type(l) is tuple:
                 # Run the C-style string format.
                 l = l[0] % l[1:]
