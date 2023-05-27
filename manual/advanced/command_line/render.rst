@@ -98,21 +98,5 @@ Cycles
 ------
 
 In addition to the options above, which apply to all render engines,
-Cycles has additional options to further control its behavior.
-
-.. code-block:: sh
-
-   blender -b file.blend -f 20 -- --cycles-device CPU
-
-.. note::
-
-   Unlike the generic options, the Cycles-specific ones must be passed on
-   the end of the command line, following a double dash.
-
-``--cycles-device CPU``
-   Override the device that is used to render frames.
-   Currently supported options are ``CPU``, ``CUDA``, ``OPTIX``, ``HIP``, ``ONEAPI``, and ``METAL``.
-   Additionally, you can append ``+CPU`` to any GPU type for hybrid rendering.
-
-``--cycles-print-stats``
-   Show detailed statistics about memory and time usage for Cycles renders on the console.
+Cycles has additional options to further control its behavior. 
+See :ref:`Cycles Render Options <command-line-args-cycles-render-options>`
