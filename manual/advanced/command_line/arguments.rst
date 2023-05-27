@@ -65,6 +65,28 @@ Render Options
    [1-1024], 0 for systems processor count.
 
 
+.. _command-line-args-cycles-render-options:
+
+Cycles Render Options
+=====================
+
+Cycles add-on options must be specified following a double dash.
+
+--cycles-device OPTIX
+   Set the device used for rendering. Options: CPU, CUDA, OPTIX, HIP, ONEAPI, METAL.
+
+   Append +CPU to a GPU device to render on both CPU and GPU.
+
+   Example:
+
+   .. code-block:: sh
+
+      blender -b file.blend -f 20 -- --cycles-device OPTIX
+
+--cycles-print-stats
+   Log statistics about render memory and time usage.
+
+
 .. _command-line-args-format-options:
 
 Format Options
@@ -257,6 +279,8 @@ Debug Options
    Enable floating-point exceptions.
 ``--debug-exit-on-error``
    Immediately exit when internal errors are detected.
+``--debug-freestyle``
+   Enable debug messages for Freestyle.
 ``--disable-crash-handler``
    Disable the crash handler.
 ``--disable-abort-handler``
@@ -305,10 +329,14 @@ Misc Options
    Print this help text and exit.
 ``/?``
    Print this help text and exit (Windows only).
-``-R``
-   Register blend-file extension, then exit (Windows only).
-``-r``
-   Silently register blend-file extension, then exit (Windows only).
+``-r``, ``--register``
+   Register blend-file extension for current user, then exit (Windows only).
+``--register-allusers``
+   Register blend-file extension for all users, then exit (Windows only).
+``--unregister``
+   Unregister blend-file extension for current user, then exit (Windows only).
+``--unregister-allusers``
+   Unregister blend-file extension for all users, then exit (Windows only).
 ``-v``, ``--version``
    Print Blender version and exit.
 ``--``
@@ -320,8 +348,6 @@ Misc Options
 Other Options
 =============
 
-``--debug-freestyle``
-   Enable debug messages for Freestyle.
 
 
 .. _command-line-args-argument-parsing:
@@ -381,5 +407,5 @@ Environment Variables
 :BLENDER_SYSTEM_DATAFILES:  Directory for system wide data files.
 :BLENDER_SYSTEM_PYTHON:     Directory for system Python libraries.
 :OCIO:                     Path to override the OpenColorIO config file.
-:TEMP:                     Store temporary files here.
-:TMP: or $TMPDIR           Store temporary files here.
+:TEMP:                     Store temporary files here (MS-Windows).
+:TMP: or $TMPDIR           Store temporary files here (UNIX Systems).
