@@ -1,326 +1,227 @@
 #!/usr/bin/env python3
 # Apache License, Version 2.0
-# <pep8 compliant>
 
 import os
 import re
+import subprocess
+
 
 # This script extracts the '--help' message from Blender's source code,
 # using primitive regex parsing.
 #
 # e.g:
 # python tools_maintenance/blender_help_extract.py \
-#        ../blender/source/creator/creator_args.c \
+#        /path/to/blender \
 #        manual/advanced/command_line/arguments.rst
 
-
-def text_remove_comments(text):
-    def replacer(match):
-        s = match.group(0)
-        if s.startswith('/'):
-            return " "
-        else:
-            return s
-    pattern = re.compile(
-        r'//.*?$|/\*.*?\*/|\'(?:\\.|[^\\\'])*\'|"(?:\\.|[^\\"])*"',
-        re.DOTALL | re.MULTILINE
-    )
-    return re.sub(pattern, replacer, text)
-
-
-def text_remove_preprocess(text):
-    lines = text.split("\n")
-    non_comment_lines = [line for line in lines if not line.strip().startswith("#")]
-    return "\n".join(non_comment_lines)
-
-
-def text_join_lines(text):
-    lines = text.split("\n")
-    lines_out = [[]]
-    for l in lines:
-        lines_out[-1].append(l)
-        if l.endswith((";", "{", ")", "}")) or l.lstrip().startswith("#"):
-            lines_out.append([])
-    text = "\n".join(
-        [
-            " ".join(l.lstrip() if i != 0 else l for i, l in enumerate(l_group))
-            for l_group in lines_out
-        ]
-    )
+def help_text_make_version_substitution(text: str) -> str:
+    re_version = re.compile(r"^(Blender )(\d.*)$", flags=re.MULTILINE)
+    text = re.sub(re_version, lambda x: x.group(1) + "|BLENDER_VERSION|", text)
     return text
 
 
-def text_expand_macros(text):
-    # CB() macro
-    def replacer_CB(match):
-        return match.group(2) + "_doc, " + match.group(2)
+def help_text_make_args_literal(text: str) -> str:
 
-    pattern_CB = re.compile(
-        r'\b(CB)\s*\(([^\,]+)\)',
-        re.DOTALL | re.MULTILINE
+    re_argument_command = re.compile(r"(\-+[A-Za-z\-]+)")
+
+    def re_argument_command_fn(x: re.Match[str]) -> str:
+        return "``" + x.group(1) + "``"
+
+    re_argument_line = re.compile(r"^(\s*)(\-+[A-Za-z\-]+.*)$", flags=re.MULTILINE)
+
+    def re_argument_line_fn(x: re.Match[str]) -> str:
+        indent = x.group(1)
+        content = x.group(2)
+        content = re.sub(re_argument_command, re_argument_command_fn, content)
+        # Weak but works to replace or's with commas.
+        content = content.replace("`` or ``-", "``, ``-", 1)
+        return indent + content
+
+    text = re.sub(re_argument_line, re_argument_line_fn, text)
+    return text
+
+
+def help_text_make_single_quotes_literal(text: str) -> str:
+    re_table = (
+        (
+            re.compile(r"(\s+)'([^\']+)'"),
+            lambda x: x.group(1) + "``" + x.group(2) + "``",
+        ),
+        (
+            re.compile(r"([-+]?<[A-Za-z_0-9\(\)]+>)"),
+            lambda x: "``" + x.group(1) + "``",
+        ),
     )
 
-    # CB_EX() macro
-    def replacer_CB_EX(match):
-        return match.group(2) + "_doc_" + match.group(3) + ", " + match.group(2)
-
-    pattern_CB_EX = re.compile(
-        r'\b(CB_EX)\s*\(([^\,]+),\s*([^\)]+)\)',
-        re.DOTALL | re.MULTILINE
-    )
-
-    # STRINGIFY_ARG() macro
-    def replacer_STRINGIFY_ARG(match):
-        return "\"``" + match.group(2) + "``\""
-
-    pattern_STRINGIFY_ARG = re.compile(
-        r'\b(STRINGIFY_ARG)\s*\(([^\)]+)\)',
-        re.DOTALL | re.MULTILINE
-    )
-
-    text = re.sub(pattern_CB, replacer_CB, text)
-    text = re.sub(pattern_CB_EX, replacer_CB_EX, text)
-    text = re.sub(pattern_STRINGIFY_ARG, replacer_STRINGIFY_ARG, text)
+    for re_expr, re_fn in re_table:
+        text = re.sub(re_expr, re_fn, text)
 
     return text
 
 
-def text_extract_args(text):
+def help_text_make_title_and_dedent(text: str) -> str:
+    re_title = re.compile(r"\n\n([A-Z][^:]+):$", flags=re.MULTILINE)
+    title_char = "="
 
-    args = {}
-    # use replace to scan (misuse!)
+    def re_title_fn(x: re.Match[str]) -> str:
+        heading = x.group(1)
+        return (
+            "\n"
+            "\n"
+            ".. _command-line-args-{:s}:\n"
+            "\n"
+            "{:s}\n"
+            "{:s}\n"
+        ).format(
+            "".join([(c if c.isalpha() else "-") for c in heading.lower()]),
+            heading,
+            ("=" * len(heading)),
+        )
 
-    def replacer(match):
-        fn = match.group(1)
-        s = match.group(2)
+    text = re.sub(re_title, re_title_fn, text)
 
-        # remove first 2 args
-        s = s.split(',', 1)[-1]
-        # remove last 2 args
-        s = s.rsplit(',', 2)[0]
+    # Un-indent entirely indented blocks (directly after the title).
+    lines = text.splitlines(keepends=False)
+    i = 0
+    while i < len(lines):
+        if not (lines[i].startswith(title_char) and lines[i].strip(title_char) == ""):
+            # Not a title, continue.
+            i += 1
+            continue
 
-        if fn == "BLI_args_add":
-            # get first 2 args
-            arg_short, arg_long, s = [w.strip() for w in s.split(",", 2)]
-        elif fn == "BLI_args_add_case":
-            # get first 2 args
-            arg_short, _, arg_long, _, s = [w.strip() for w in s.split(",", 4)]
-            del _
-        else:
-            # should never happen
-            raise Exception("Bad function call %r" % fn)
+        # We have a title, check the next non-blank line.
+        i_next = i + 1
+        while lines[i_next] == "":
+            i_next += 1
+        if not lines[i_next].startswith(" "):
+            # No indentation, continue.
+            i = i_next
+            continue
 
-        if arg_short == "NULL":
-            arg_short = None
-        else:
-            arg_short = eval(arg_short, {})
-        if arg_long == "NULL":
-            arg_long = None
-        else:
-            arg_long = eval(arg_long, {})
-        args[arg_short, arg_long] = s
-
-        # print(arg_short, arg_long, s)
-
-    pattern = re.compile(
-        r'\b(BLI_args_add[_case]*)\s*\(((?:(?!\)\s*;).)*?)\)\s*;',
-        re.DOTALL | re.MULTILINE
-    )
-
-    re.sub(pattern, replacer, text)
-    return args
-
-
-def text_extract_strings(text):
-    strings = {}
-    # use replace to scan (misuse!)
-
-    text = (
-        text
-    ).replace(
-        "PY_ENABLE_AUTO", " \" (default)\""
-    ).replace(
-        "PY_DISABLE_AUTO", " \"\""
-    ).replace(
-        "STRINGIFY(BLENDER_STARTUP_FILE)", "\"startup.blend\""
-    ).replace(
-        "STRINGIFY(BLENDER_MAX_THREADS)", "\"1024\""
-    )
-
-    def replacer(match):
-        var = match.group(1).strip()
-        s = match.group(2)
-        s = " ".join([w.strip() for w in s.split("\n")])
-        s = eval(s, {})
-        strings[var] = s
-
-    pattern = re.compile(
-        r'\bstatic\s+const\s+char\s+([A-Za-z0-9_]+)\[\]\s*=\s*((?:(?!"\s*;).)*?")\s*;',
-        re.DOTALL | re.MULTILINE
-    )
-
-    re.sub(pattern, replacer, text)
-    return strings
-
-
-def text_extract_help(text, args, static_strings):
-    func_id = 'static void print_help(bArgs *ba, bool all)\n'
-    index_start = text.find(func_id)
-    assert (index_start != -1)
-    index_end = text.find("\n}\n", index_start)
-    # print(index_start, index_end)
-    body = text[index_start + len(func_id):index_end]
-    body = [l for l in body.split("\n") if not l.strip().startswith("#")]
-    body = [l.strip() for l in body]
-    body = [l for l in body if l]
-
-    # args dicts
-    args_short = {}
-    args_long = {}
-    args_used = set()
-
-    for (arg_short, arg_long), value in args.items():
-        if arg_short is not None:
-            args_short[arg_short] = (arg_short, arg_long), value
-        if arg_long is not None:
-            args_long[arg_long] = (arg_short, arg_long), value
-    # there is some overlap in short/long args, second pass to fix
-    # by assigning long-only
-    for (arg_short, arg_long), value in args.items():
-        if arg_short is not None:
-            if arg_long is None:
-                args_short[arg_short] = (arg_short, arg_long), value
-
-    def args_get(arg):
-        value = args_long.get(arg)
-        if value is None:
-            value = args_short.get(arg)
-            if value is None:
-                raise Exception("Can't find %r" % arg)
-        return value
-
-    text_rst = []
-
-    # execute the code!
-    other_vars = {
-        "BKE_blender_version_string": lambda: "|BLENDER_VERSION|",
-    }
-
-    def write_arg(arg):
-        (arg_short, arg_long), arg_text = args_get(arg)
-        args_used.add((arg_short, arg_long))
-
-        # replacement table
-        arg_text = re.sub(r"\"\s*STRINGIFY_ARG\s*\(([a-zA-Z0-9_]+)\)\"", r"``\1``", arg_text)
-        arg_text = arg_text.replace('" STRINGIFY(BLENDER_MAX_THREADS) "', "64")
-        arg_text = arg_text.replace('" STRINGIFY(BLENDER_STARTUP_FILE) "', "startup.blend")
-        arg_text = arg_text.replace('" PY_ENABLE_AUTO', '\"')
-        arg_text = arg_text.replace('" PY_DISABLE_AUTO', ', (default).\"')
-
-        # print(arg_text)
-        arg_text = eval(arg_text, static_strings)
-        arg_text = arg_text.replace("\t", "   ")
-
-        text_rst.append("``" + "``, ``".join([w for w in (arg_short, arg_long) if w is not None]) + "`` ")
-        text_rst.append(arg_text + "\n")
-
-    ind_re = None
-    for l in body:
-        if l.startswith("PRINT"):
-            l = eval(l.replace("PRINT(", "").replace(");", ""), other_vars)
-            if type(l) is tuple:
-                # Run the C-style string format.
-                l = l[0] % l[1:]
-            if l.lstrip() == l and l.strip("\n").endswith(":"):
-                # Create RST heading & unique reference target.
-                l = l.strip(":\n")
-                l = (
-                    "\n"
-                    "\n"
-                    ".. _command-line-args-%s:\n"
-                    "\n"
-                    "%s\n"
-                    "%s\n"
-                    "\n"
-                ) % (
-                    # Create reference so each heading can be linked to.
-                    "".join([(c if c.isalpha() else "-") for c in l.lower()]),
-                    # The heading.
-                    l,
-                    # Heading underline.
-                    len(l) * "=",
-                )
-                ind_re = None
+        # Measure indent and de-dent until indentation not met.
+        indent_len = len(lines[i_next]) - len(lines[i_next].lstrip())
+        indent = " " * indent_len
+        while i_next < len(lines):
+            if lines[i_next].startswith(indent):
+                lines[i_next] = lines[i_next][indent_len:]
+            elif lines[i_next] == "":
+                pass
             else:
-                # unindent to the previous min indent
-                for _ in range(2):
-                    if ind_re is None:
-                        ind_re = r"\A\t{0,}"
-                    ind_m = re.match(ind_re, l)
-                    if ind_m:
-                        ind_re = r"\A\t{" + str(ind_m.end(0)) + r"}"
-                        l = re.sub(ind_re, '', l)
-                        break
-                    else:
-                        # indent is less than before
-                        ind_re = None
+                break
+            i_next += 1
 
-                l = l.replace("\t", "   ")
+        i = i_next
 
-            text_rst.append(l)
-        elif l.startswith("BLI_args_print_arg_doc("):
-            arg = l.split(",")[-1].strip(");\n")
-            arg = eval(arg, {})
-            write_arg(arg)
-        elif l.startswith("BLI_args_print_other_doc("):
-            items = list(args.items())
-            # sort as strings since we can't order (None <> str)
-            items.sort(key=lambda i: str(i[0]))
-            for key, value in items:
-                if key not in args_used:
-                    write_arg(key[0] or key[1])
+    text = "\n".join(lines)
 
-    text_rst = "".join(text_rst)
+    return text
 
-    # not essential, but nice to have <word> as ``<word>``
-    text_rst = re.sub(r"([\+\-]*<[a-zA-Z0-9\(\)_\-]+>)", r"``\1``", text_rst)
 
-    # ------
-    # Post process (formatting)
-    # text_rst = re.split(r"\\n|[()]", text_rst)
-    text_rst = text_rst.splitlines()
+def help_text_make_environment_variables(text: str) -> str:
+    env_vars = []
 
-    for i, l in enumerate(text_rst):
-        # detect env var list
-        l_strip = l.lstrip()
-        if l_strip.startswith("$"):
-            l_strip, l_tail = l_strip.lstrip("$").split(" ", 1)
-            if l_strip.isupper():
-                l = ":%s: %s" % (l_strip, l_tail)
-            del l_tail
-        elif l_strip.startswith("#"):
-            indent = l[:len(l) - len(l_strip)]
-            l = "\n" + indent + ".. code-block:: sh\n\n" + indent + "   " + l.lstrip("# ") + "\n"
-        else:
-            # use "'" as "``", except when used as plural, e.g. "Python's"
-            l = re.sub("(?<![a-z])'|'(?![st])", "``", l)
-        del l_strip
+    # Single lines.
+    re_env = re.compile(r"^(\s*)\$([A-Z][A-Z0-9_]*)(\s+)", flags=re.MULTILINE)
 
-        text_rst[i] = l.rstrip(" ")
+    def re_env_fn(x: re.Match[str]) -> str:
+        env_var = x.group(2)
+        env_vars.append(env_var)
+        return x.group(1) + ":" + env_var + ":" + x.group(3)
 
-    # finally, make switches literal if they proceed literal args
-    # or have their own line.
-    # -a ``<b>`` ... --> ``-a`` ``<b>``
-    # and...
-    # -a --> ``-a``
-    for i, l in enumerate(text_rst):
-        if l.lstrip().startswith("-"):
-            l = re.sub(r"(\s+)(\-[a-z])(\s+``)", r"\1``\2``\3", l)
-            l = re.sub(r"^(\s+)(\-[a-z])$", r"\1``\2``", l)
-            text_rst[i] = l
+    text = re.sub(re_env, re_env_fn, text)
 
-    text_rst = [
-        ".. DO NOT EDIT THIS FILE, GENERATED BY %r\n" % os.path.basename(__file__),
+    def re_env_var_quote_fn(x: re.Match[str]) -> str:
+        beg, end = x.span(1)
+        # Ignore environment variables that were just converted into field definitions.
+        if x.string[beg - 1] == ":" and x.string[end] == ":":
+            # Do nothing.
+            return x.group(1)
+
+        return "``" + x.group(1) + "``"
+
+    # Now literal quote all environment variables.
+    re_env_var_quote = re.compile(r"\b({:s}\b)".format("|".join(env_vars)))
+    text = re.sub(re_env_var_quote, re_env_var_quote_fn, text)
+    return text
+
+
+def help_text_make_code_blocks(text: str) -> str:
+    re_code_block = re.compile(r"^(\s*)(# .*)$", flags=re.MULTILINE)
+
+    def re_code_block_fn(x: re.Match[str]) -> str:
+        indent = x.group(1)
+        content = x.group(2)
+        return (
+            "\n"
+            "{:s}.. code-block:: sh\n"
+            "\n"
+            "{:s}   {:s}\n"
+        ).format(indent, indent, content[1:].lstrip())
+
+    text = re.sub(re_code_block, re_code_block_fn, text)
+
+    return text
+
+
+def help_text_as_rst(text: str) -> str:
+    # Expand tabs & strip trailing space.
+    text = text.expandtabs(3)
+    text = "\n".join([l.rstrip() for l in text.splitlines()]) + "\n"
+
+    text = help_text_make_version_substitution(text)
+    text = help_text_make_args_literal(text)
+    text = help_text_make_single_quotes_literal(text)
+    text = help_text_make_title_and_dedent(text)
+    text = help_text_make_environment_variables(text)
+    text = help_text_make_code_blocks(text)
+
+    # Hack: `/?` is a special case.
+    text = text.replace("\n/?\n", "\n``/?``\n", 1)
+    return text
+
+
+def main() -> None:
+    import sys
+    blender_bin = sys.argv[-2]
+    output_file = sys.argv[-1]
+
+    if not output_file.endswith(".rst"):
+        print("Expected an '.rst' file to be passed as the last argument")
+        return
+
+    env = os.environ.copy()
+    env["ASAN_OPTIONS"] = (
+        env.get("ASAN_OPTIONS", "") +
+        ":exitcode=0:check_initialization_order=0:strict_init_order=0:detect_leaks=0"
+    )
+
+    text_beg = "BEGIN_BLOCK"
+    text_end = "END_BLOCK"
+    text = subprocess.check_output(
+        [
+            blender_bin,
+            "--factory-startup",
+            "--background",
+            "--python-expr",
+            # Code begin/end text because of Blender's chatty reporting of version and that it quit.
+            (
+                "print("
+                "'{:s}\\n' + "
+                "__import__('bpy').app.help_text(all=True) + "
+                "'\\n{:s}'"
+                ")"
+            ).format(text_beg, text_end),
+        ],
+        env=env,
+    ).decode("utf-8")
+
+    # Extract between begin/end markers.
+    text = text[text.find(text_beg) + len(text_beg) + 1: text.find(text_end)]
+
+    text_rst = help_text_as_rst(text)
+
+    text_rst = (
+        ".. DO NOT EDIT THIS FILE, GENERATED BY '{:s}'\n"
         "\n"
         "   CHANGES TO THIS FILE MUST BE MADE IN BLENDER'S SOURCE CODE, SEE:\n"
         "   https://projects.blender.org/blender/blender/src/branch/main/source/creator/creator_args.c\n"
@@ -331,46 +232,10 @@ def text_extract_help(text, args, static_strings):
         "Command Line Arguments\n"
         "**********************\n"
         "\n"
-    ] + text_rst
+    ).format(os.path.basename(__file__)) + text_rst
 
-    text_rst = "\n".join(text_rst)
-    text_rst = text_rst + "\n"
-    text_rst = text_rst.replace("\n\n\n\n", "\n\n\n")
-
-    return text_rst
-
-
-def main():
-    import sys
-    source_file = sys.argv[-2]
-    output_file = sys.argv[-1]
-
-    if not source_file.endswith("creator_args.c"):
-        print("Expected 'creator_args.c' to be passed as the second last argument")
-        return
-    if not output_file.endswith(".rst"):
-        print("Expected an '.rst' file to be passed as the last argument")
-        return
-
-    with open(source_file, 'r') as f:
-        text = f.read()
-
-    text = text_remove_comments(text)
-    text = text_remove_preprocess(text)
-    # join ',\n' - function args split across lines.
-    text = text_join_lines(text)
-    # expand CB macros
-    text = text_expand_macros(text)
-    # first pass, extract 'BLI_args_add'
-
-    args = text_extract_args(text)
-
-    static_strings = text_extract_strings(text)
-
-    text_rst = text_extract_help(text, args, static_strings)
-
-    with open(output_file, 'w') as f:
-        f.write(text_rst)
+    with open(output_file, "w", encoding="utf-8") as fh:
+        fh.write(text_rst)
 
 
 if __name__ == "__main__":
