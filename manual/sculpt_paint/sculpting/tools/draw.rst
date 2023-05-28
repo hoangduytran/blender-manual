@@ -36,8 +36,9 @@ to displace geometry in three directions instead of just one.
 
    An example of various VDM brushes used on a smooth head from the offical demo file.
 
-`Download the demo file <https://www.blender.org/download/demo-files/#sculpting>`_ for more information and to try
-the feature out.
+For easy creation of VDM brushes, enable the :doc:`VDM Brush Baker </addons/baking/vdm_brush_baker>` addon.
+`Download the demo file <https://www.blender.org/download/demo-files/#sculpting>`__
+for more information and to try the feature out.
 
 To use this feature, enable :ref:`Vector Displacement <bpy.types.Brush.use_color_as_displacement>` in the texture
 panel. All :ref:`stroke methods <bpy.types.Brush.stroke_method>` are supported, but the recommended behavior is

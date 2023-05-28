@@ -27,6 +27,7 @@ Add-ons Category Listings
    add_curve/index.rst
    add_mesh/index.rst
    animation/index.rst
+   baking/index.rst
    camera/index.rst
    development/index.rst
    import_export/index.rst
