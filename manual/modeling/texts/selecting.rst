@@ -15,6 +15,8 @@ it determines where new chars will be inserted.
 
 Select All :kbd:`Ctrl-A`
    Selects the full text.
+Top/Bottom :kbd:`Shift-Ctrl-Home`/ :kbd:`Shift-Ctrl-End`
+   Moves the cursor to the start or end of the text object.
 Next/Previous Character :kbd:`Left`/ :kbd:`Right`
    You can move the cursor with the arrow keys.
 Next/Previous Word :kbd:`Ctrl-Left`/ :kbd:`Ctrl-Right`
