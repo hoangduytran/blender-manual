@@ -14,6 +14,17 @@ See :doc:`Brush </grease_pencil/modes/weight_paint/tool_settings/brush>` for mor
 Draw
    Paints a specified weight over the strokes.
 
+Blur
+   Smooths out the weighting of adjacent points. In this mode the Weight
+   Value is ignored. The strength defines how much the smoothing is applied.
+
+Average
+   Smooths weights by painting the average resulting weight from all weights under the brush.
+
+Smear
+   Smudges weights by grabbing the weights under the brush and "dragging" them.
+   This can be imagined as a finger painting tool.
+
 :ref:`Annotate <tool-annotate-freehand>`
    Draw free-hand annotation.
 
