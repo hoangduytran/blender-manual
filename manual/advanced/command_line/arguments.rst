@@ -9,8 +9,8 @@
 Command Line Arguments
 **********************
 
-Blender |BLENDER_VERSION|
-Usage: blender [args ...] [file] [args ...]
+| Blender |BLENDER_VERSION|
+| Usage: ``blender [args ...] [file] [args ...]``
 
 .. _command-line-args-render-options:
 

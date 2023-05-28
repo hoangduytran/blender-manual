@@ -14,9 +14,13 @@ import subprocess
 #        /path/to/blender \
 #        manual/advanced/command_line/arguments.rst
 
-def help_text_make_version_substitution(text: str) -> str:
-    re_version = re.compile(r"^(Blender )(\d.*)$", flags=re.MULTILINE)
-    text = re.sub(re_version, lambda x: x.group(1) + "|BLENDER_VERSION|", text)
+def help_text_make_version_and_usage_substitution(text: str) -> str:
+    re_version = re.compile(r"^(Blender )\d.*\n(Usage:\s+)(.*)$", flags=re.MULTILINE)
+    text = re.sub(
+        re_version,
+        lambda x: "| " + x.group(1) + "|BLENDER_VERSION|\n| " + x.group(2) + "``" + x.group(3) + "``",
+        text,
+    )
     return text
 
 
@@ -168,7 +172,7 @@ def help_text_as_rst(text: str) -> str:
     text = text.expandtabs(3)
     text = "\n".join([l.rstrip() for l in text.splitlines()]) + "\n"
 
-    text = help_text_make_version_substitution(text)
+    text = help_text_make_version_and_usage_substitution(text)
     text = help_text_make_args_literal(text)
     text = help_text_make_single_quotes_literal(text)
     text = help_text_make_title_and_dedent(text)
