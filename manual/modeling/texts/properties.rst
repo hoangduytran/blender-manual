@@ -15,6 +15,8 @@ Most of the settings in the *Shape* panel are shared with those of
 :doc:`Curves </modeling/curves/properties/shape>`
 data-blocks, please refer to those for details.
 
+.. _bpy.types.TextCurve.use_fast_edit:
+
 Fast Editing
    Does not fill the letters in Edit Mode, only show their outline.
 
@@ -101,16 +103,31 @@ but you have to choose between different styles of a same font, or different fon
 Blender has a number of typographic controls for changing the style and layout of text,
 found in the *Font* panel.
 
+.. _bpy.types.TextCharacterFormat.use_bold:
+
 Bold
    Toggled with the *Bold* button before typing. Text can also be set to
    **bold** by selecting it then using the *Bold* entry in the *Text* menu of
    the 3D Viewport.
-Italics
+
+.. _bpy.types.TextCharacterFormat.use_italic:
+
+Italic
    Toggled with the *Italic* button before typing. Text can also be set to
    *italic* by selecting it then using the *Italic* entry in the *Text* menu of
    the 3D Viewport.
+
+.. _bpy.types.TextCharacterFormat.use_underline:
+
 Underline
-   Enables underlining, as controlled by the :ref:`underline settings <modeling-text-character-underline>` below.
+   Toggled with the *Underline* button before typing.
+   Text can also be set to Underlined by selecting it
+   then using the *Underline* entry in the *Text* menu of the 3D Viewport.
+
+   See also :ref:`underline settings <modeling-text-character-underline>` below.
+
+.. _bpy.types.TextCharacterFormat.use_small_caps:
+
 Small Caps
    Enable this option to type characters as small caps.
 
@@ -121,9 +138,14 @@ Small Caps
 Transform
 ---------
 
+.. _bpy.types.TextCurve.size:
+
 Size
    Controls the size of the whole text (no way to control each char size independently).
    Note however, that chars with different fonts (different styles, see below) might have different visible sizes.
+
+.. _bpy.types.TextCurve.shear:
+
 Shear
    Controls the inclination of the whole text.
    As similar as it may seem, this is not the same thing as italics style.
@@ -132,6 +154,8 @@ Shear
       :width: 340px
 
       Shear example.
+
+.. _bpy.types.TextCurve.family:
 
 Object Font
    Allows individual objects to be used to render fonts, you can create/model your own complex font inside Blender!
@@ -153,6 +177,8 @@ Object Font
       The objects are duplicated so that their center is positioned at
       the *lower right corner* of the corresponding characters.
 
+.. _bpy.types.TextCurve.follow_curve:
+
 Text on Curve
    Select a curve object for the text object to follow.
 
@@ -167,15 +193,18 @@ Text on Curve
       which offers more control, and is the standard way to achieve such effects in modern Blender.
 
 .. _modeling-text-character-underline:
+.. _bpy.types.TextCurve.underline_position:
 
-Underline
-   Toggled with the *Underline* button before typing.
-   Text can also be set to Underlined by selecting it
-   then using the *Underline* entry in the *Text* menu of the 3D Viewport.
 Underline Position
    This allows you to shift vertically the position of the underline.
+
+.. _py.types.TextCurve.underline_height:
+
 Underline Thickness
    This controls the thickness of the underline.
+
+.. _bpy.types.TextCurve.small_caps_scale:
+
 Small Caps Scale
    The scaling applied to capital letters to turn them into small caps.
 
@@ -198,6 +227,8 @@ The *Paragraph* Panel has settings for the alignment and spacing of text.
 Alignment
 ---------
 
+.. _bpy.types.TextCurve.align_x:
+
 Horizontal
    :Left:
       Aligns text to the left of the frames when using them,
@@ -217,6 +248,8 @@ Horizontal
       It uses character spacing (kerning) to fill lines.
 
    .. note:: Both *Justify* and *Flush* only work within frames.
+
+.. _bpy.types.TextCurve.align_y:
 
 Vertical
    :Top:
@@ -247,15 +280,26 @@ Vertical
 Spacing
 -------
 
+.. _bpy.types.TextCurve.space_character:
+
 Character Spacing
    A factor by which space between each character (kerning) is scaled in width.
 
    In Edit Mode in the 3D Viewport, you can also control individual kerning
    at text cursor position by pressing :kbd:`Alt-Left` / :kbd:`Alt-Right` to decrease/increase it.
+
+.. _bpy.types.TextCurve.space_word:
+
 Word Spacing
    A factor by which whitespace between words is scaled in width.
+
+.. _bpy.types.TextCurve.space_line:
+
 Line Spacing
    A factor by which the vertical space between lines is scaled.
+
+.. _bpy.types.TextCurve.offset_x:
+.. _bpy.types.TextCurve.offset_y:
 
 Offset X, Y
    These settings control the X and Y offset of the text position within the object.
@@ -284,12 +328,18 @@ If the last frame is reached, text overflows out of it (by default, see options 
 
    Text Boxes panel.
 
+.. _bpy.ops.font.textbox_add:
+
 Add Textbox
    Inserts a new frame, just after the current one (in text flow order).
    The new frame will have the same size and position as the selected one.
 
+.._bpy.ops.font.textbox_remove:
+
 Delete ``X``
    Delete the current frame.
+
+.. _bpy.types.TextCurve.overflow:
 
 Overflow
    How to handle text overflowing available space in the defined boxes.
@@ -306,9 +356,14 @@ Overflow
          It will only truncate in *Object Mode*,
          in *Edit Mode* the whole text remains visible (and overflows as needed).
 
+.. _bpy.types.TextBox.width:
+
 Size X, Y
    Specifies the width and height of the text box, if set to **zero** no word wrapping happens
    (it is ignored, and the whole text box system is disabled if all are set to a null size).
+
+.. _bpy.types.TextBox.x:
+.. _bpy.types.TextBox.y:
 
 Offset X, Y
    Controls the *X* and *Y* offset of the frame, i.e. its position.
