@@ -8,5 +8,5 @@
 
    introduction.rst
    tools.rst
-   tool_settings/brush.rst
+   tool_settings/index.rst
    weights_menu.rst
