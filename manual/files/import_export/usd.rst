@@ -89,6 +89,9 @@ Materials
    See `USD issue #542 <https://github.com/PixarAnimationStudios/USD/issues/542>`__
    for more information.
 
+Root Prim
+   If set, add a transform primitive with the given path to the stage as the parent of all exported data.
+
 Use Settings for
    Determines the whether to use *Viewport* or *Render* visibility of collection, modifiers,
    or any other property that can be set for both the *Viewport* and *Render*.
