@@ -34,10 +34,10 @@ Data API
 Library Overrides
    Display library override data in the current blend-file. Separated further into two view modes:
 
-   Properties:
+   :Properties:
       Display data-blocks with overridden properties. The overridden properties are listed together with widgets to
       modify the value of the properties.
-   Hierarchies:
+   :Hierarchies:
       Visualize the hierarchical dependencies between data-blocks with library overrides. For example, to create a
       library override of a mesh used by an object inside of a linked collection, Blender automatically creates
       (disabled) library overrides for the object and the collection, resulting in a collection > object > mesh
@@ -137,19 +137,19 @@ Object State
    List the objects based on their state or restrictions.
    The results can be inverted using the *Invert* button.
 
-   All
+   :All:
       The default option, no restrictions.
-   Visible
+   :Visible:
       List only the objects visible in the viewports.
       The global and temporary visibility settings are taken into consideration.
-   Invisible
+   :Invisible:
       List only the objects not visible in the viewports.
-   Selected
+   :Selected:
       Lists the object(s) that are currently selected in the 3D Viewport.
       See :doc:`selecting in the 3D Viewport </scene_layout/object/selecting>` for more information.
-   Active
+   :Active:
       Lists only the active (often last selected) object.
-   Selectable
+   :Selectable:
       List all objects whose :ref:`Selectability <bpy.types.Collection.hide_select>` option is enabled.
 
 .. _bpy.types.SpaceOutliner.use_filter_object_content:
