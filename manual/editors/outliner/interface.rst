@@ -167,6 +167,7 @@ Object Children
 .. _bpy.types.SpaceOutliner.use_filter_object_mesh:
 .. _bpy.types.SpaceOutliner.use_filter_object_light:
 .. _bpy.types.SpaceOutliner.use_filter_object_camera:
+.. _bpy.types.SpaceOutliner.use_filter_object_grease_pencil:
 .. _bpy.types.SpaceOutliner.use_filter_object_empty:
 .. _bpy.types.SpaceOutliner.use_filter_object_others:
 
