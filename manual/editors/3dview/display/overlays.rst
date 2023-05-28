@@ -84,8 +84,13 @@ Annotations
 Objects
 -------
 
-Extra
+Extras
    Show objects that don't have geometry (such as empties, cameras and lights).
+
+.. _bpy.types.View3DOverlay.show_light_colors:
+
+Light Colors
+   Shades the outline of light objects to the color the light produces.
 Relationship Lines
    Show dashed lines indicating parent or constraint relationships.
 Outline Selected
