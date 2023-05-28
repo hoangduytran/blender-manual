@@ -106,30 +106,36 @@ found in the *Font* panel.
 .. _bpy.types.TextCharacterFormat.use_bold:
 
 Bold
-   Toggled with the *Bold* button before typing. Text can also be set to
-   **bold** by selecting it then using the *Bold* entry in the *Text* menu of
-   the 3D Viewport.
+   With no text selected, toggles new text to be **bold**.
+   With text selected, toggles the selected text to be **bold**.
+   Text can also be set to bold by selecting it then using the *Bold*
+   entry in the *Text* menu of the 3D Viewport.
 
 .. _bpy.types.TextCharacterFormat.use_italic:
 
 Italic
-   Toggled with the *Italic* button before typing. Text can also be set to
-   *italic* by selecting it then using the *Italic* entry in the *Text* menu of
-   the 3D Viewport.
+   With no text selected, toggles new text to be *italic*.
+   With text selected, toggles the selected text to be *italic*.
+   Text can also be set to italic by selecting it then using the *Bold*
+   entry in the *Text* menu of the 3D Viewport.
 
 .. _bpy.types.TextCharacterFormat.use_underline:
 
 Underline
-   Toggled with the *Underline* button before typing.
-   Text can also be set to Underlined by selecting it
-   then using the *Underline* entry in the *Text* menu of the 3D Viewport.
+   With no text selected, toggles new text to be underline.
+   With text selected, toggles the selected text to be underline.
+   Text can also be set to underline by selecting it then using the *Underline*
+   entry in the *Text* menu of the 3D Viewport.
 
    See also :ref:`underline settings <modeling-text-character-underline>` below.
 
 .. _bpy.types.TextCharacterFormat.use_small_caps:
 
 Small Caps
-   Enable this option to type characters as small caps.
+   With no text selected, toggles new text to be small capitals.
+   With text selected, toggles the selected text to be small capitals.
+   Text can also be set to small caps by selecting it then using the *Small Caps*
+   entry in the *Text* menu of the 3D Viewport.
 
    The size of the *Small Caps* can be changed with
    the :ref:`Small Caps Scale setting <modeling-text-character-underline>`.
