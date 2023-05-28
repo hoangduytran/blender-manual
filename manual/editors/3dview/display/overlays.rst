@@ -183,27 +183,31 @@ Seams
 Shading
 -------
 
-Hidden Wire
-   Show only front-facing wireframes.
-   This is useful for a retopology workflow.
+.. _bpy.types.View3DOverlay.show_retopology:
 
-   .. tip::
+Retopology
+   Hide the solid mesh and offset the overlay towards the view.
+   Selection is occluded by inactive geometry, unless X-Ray is enabled
 
-      Optimally this could be combined with the *X-Ray* display setting.
+   .. _bpy.types.View3DOverlay.retopology_offset:
+
+   Offset
+      Amount to offset edit mesh in front of other geometry.
+
+.. _bpy.types.View3DOverlay.show_weight:
 
 Vertex Groups Weights
    Display weights in Edit Mode.
+
+   .. _bpy.types.ToolSettings.vertex_group_user:
 
    Zero Weights
       Display unreferenced and zero-weighted areas in black.
       This helps to identify areas with very low weights that have been painted onto.
 
-      None
-         Vertices are displayed in the usual way.
-      Active
-         Vertices are shown in black if they have no weight in the active vertex group.
-      All
-         Vertices are shown in black if they have no weight in any vertex group.
+      :None: Vertices are displayed in the usual way.
+      :Active: Vertices are shown in black if they have no weight in the active vertex group.
+      :All: Vertices are shown in black if they have no weight in any vertex group.
 
 
 Mesh Analysis
