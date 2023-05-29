@@ -53,7 +53,8 @@ Shared Location
    This is the default and gives the illusion that multiple faces in a UV map can share the same vertex;
    in reality, they have separate vertices that overlap.
 Shared Vertex
-   Automatically select UV vertices that correspond to the same mesh vertex, even if they have different UV coordinates.
+   Automatically select UV vertices that correspond to the same mesh vertex,
+   even if they have different UV coordinates.
    This is also the behavior when *Sync Selection* is enabled.
 
 Select Menu
@@ -104,7 +105,8 @@ Select Similar :kbd:`Shift-G`
          :Area 3D: Selects faces with a similar area in the 3D mesh.
          :Material: Selects faces that have the same :doc:`Material </render/materials/index>`.
          :Object:
-            Selects faces that belong to the same object. This is useful when multiple objects are in Edit mode at once.
+            Selects faces that belong to the same object.
+            This is useful when multiple objects are in Edit mode at once.
          :Polygon Sides: Selects faces with a similar number of edges.
          :Winding: Select faces that have the same orientation (facing upwards or downwards in the UV map).
 
@@ -124,15 +126,16 @@ Select Similar :kbd:`Shift-G`
 
 Select Split :kbd:`Y`
    "Detaches" the selected faces so they can be moved elsewhere without affecting their neighbors.
-   
+
    .. hint::
+
       Unlike :doc:`Split Selection </modeling/meshes/editing/mesh/split>` for meshes, which physically disconnects
-      faces, this is a pure selection operator. In UV space, the faces were never connected to begin with; it only seemed
-      that way because *Sticky Selection* automatically selected the vertices of the neighboring faces.
+      faces, this is a pure selection operator. In UV space, the faces were never connected to begin with;
+      it only seemed that way because *Sticky Selection* automatically selected the vertices of the neighboring faces.
       *Select Split* deselects those vertices again.
-   
+
       As an alternative to *Select Split*, you can set the *Sticky Selection Mode* to *Disabled*.
-   
+
 Select Overlap
    Selects all UV faces that overlap each other.
 
@@ -155,10 +158,10 @@ activated using the menu, or the active one and the clicked one when activated u
 Face Stepping
    For vertices: allows the path to step across faces, following their diagonal rather than
    their edges.
-   
+
    For edges: selects disconnected edges that are perpendicular to the path (edge ring),
    rather than connected edges along the path (edge loop).
-   
+
    For faces: allows the path to go through faces that only share a vertex, rather than an edge.
 Topological Distance
    Calculates the distance by simply counting edges rather than measuring their lengths.
