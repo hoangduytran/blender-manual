@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # Apache License, Version 2.0
-# <pep8 compliant>
 
 """
 General purpose tool for remapping directory structure of RestructuredText documents.

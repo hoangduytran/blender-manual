@@ -18,8 +18,6 @@
 #
 # ##### END GPL LICENSE BLOCK #####
 
-# <pep8 compliant>
-
 __all__ = (
     "role_iter",
     "directive_iter",

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # Apache License, Version 2.0
 # Copyright 2015 Anton Felix Lorenzen <anfelor@web.de>
-# <pep8 compliant>
 
 '''
 Translation Tracker: report the number of complete translations.
