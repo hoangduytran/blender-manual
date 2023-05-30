@@ -27,11 +27,6 @@ Image
    The image(s) will be saved on rendering, writing to the current frame.
    An entire sequence of images will be saved, when an animation is rendered.
 
-.. note::
-
-   To support subsequent arrangement and layering of images, the node can supply a Z-depth map.
-   However, please note that only the OpenEXR image formats save the Z information.
-
 
 Properties
 ==========
