@@ -20,12 +20,6 @@ Rendering Technologies
 Blender supports different technologies to render on the GPU depending on the particular GPU manufacturer
 and operating system.
 
-.. note::
-
-   :ref:`Path Guiding <bpy.types.CyclesRenderSettings.use_guiding>` is not supported
-   when rendering on the GPU.
-
-
 CUDA -- NVIDIA
 --------------
 
@@ -33,8 +27,6 @@ CUDA -- NVIDIA
 Nvidia graphics cards with compute capability 3.0 and higher. To make sure your GPU is supported,
 see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
 with the compute capabilities and supported graphics cards.
-
-.. note:: :doc:`/render/shader_nodes/osl` is not supported.
 
 
 .. _render-cycles-gpu-optix:
@@ -44,13 +36,9 @@ OptiX -- NVIDIA
 
 OptiX is supported on Windows and Linux and requires a Nvidia graphics cards with compute capability 5.0 and higher
 and a driver version of at least 470. To make sure your GPU is supported,
-see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
-OptiX works best on RTX graphics cards with hardware ray tracing support (e.g. Turing and above).
+see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__.
 
-.. note::
-
-   :doc:`/render/shader_nodes/osl` is supported with a few limitations.
-   Refer to the :doc:`/render/shader_nodes/osl` documentation for a list of limitations.
+OptiX takes advantage of hardware ray-tracing acceleration in RTX graphics cards, for improved performance.
 
 
 HIP -- AMD
@@ -77,17 +65,16 @@ Minimum driver versions:
 Please refer to `AMD's website <https://www.amd.com/en/graphics>`__ for more
 information about AMD graphics cards and their architectures.
 
-.. note::
+On Windows, experimental hardware ray-tracing support is available with the most recent drivers. This can be enabled in the preferences. However there are currently known issues regarding motion blur, hair rendering and degenerate triangle shapes.
 
-   :doc:`/render/shader_nodes/osl` and the *Clip* extension mode in the
-   :doc:`/render/shader_nodes/textures/image` are not supported.
+The *Clip* extension mode in :doc:`/render/shader_nodes/textures/image` is not supported for HIP.
 
 
 oneAPI -- Intel
 ---------------
 
 oneAPI is a computation library that is supported on Windows and Linux and requires a
-Intel® Arc™ graphics card with the Xe HPG architecture.
+Intel® Arc™ graphics card with the Xe HPG architecture. Hardware acceleration for ray-tracing is supported.
 
 Supported GPUs include:
 
@@ -101,8 +88,6 @@ Minimum driver versions:
 Please refer to `Intel's website <https://www.intel.com/content/www/us/en/products/details/discrete-gpus.html>`__
 for more information about Intel graphics cards and their architectures.
 
-.. note:: :doc:`/render/shader_nodes/osl` is not supported.
-
 
 Metal -- Apple (macOS)
 ----------------------
@@ -111,9 +96,14 @@ Metal is supported on Apple computers with Apple Silicon, AMD and Intel graphics
 macOS 13.0 or newer is required to support all features and graphics cards.
 
 Apple Silicon and AMD graphics cards also work on macOS 12.3 and newer, however
-without support for :ref:`MNEE caustics <bpy.types.CyclesObjectSettings.is_caustics_caster>`.
+without support for :ref:`Shadow Caustics <bpy.types.CyclesObjectSettings.is_caustics_caster>`.
 
-.. note:: :doc:`/render/shader_nodes/osl` is not supported.
+
+Limitations
+===========
+
+ - :ref:`Path Guiding <bpy.types.CyclesRenderSettings.use_guiding>` is not supported on any GPU.
+ - :doc:`/render/shader_nodes/osl` is only supported for OptiX, with some limitations listed in the documentation.
 
 
 Frequently Asked Questions
@@ -122,14 +112,11 @@ Frequently Asked Questions
 Why is Blender unresponsive during rendering?
 ---------------------------------------------
 
-While a graphics card is rendering, it cannot redraw the user interface, which makes Blender unresponsive.
-We attempt to avoid this problem by giving back control over to the GPU as often as possible,
-but a completely smooth interaction cannot be guaranteed, especially on heavy scenes.
-This is a limitation of graphics cards for which no true solution exists,
-though we might be able to improve this somewhat in the future.
+On older GPU generations, graphics cards can only either render or draw the user interface.
+This can make Blender unresponsive while it is rendering.
+Heavy scenes can also make Blender unresponsive on newer GPUs, when using a lot of memory or executing expensive shaders, however this is generally less of a problem.
 
-If possible, it is best to install more than one GPU,
-using one for display and the other(s) for rendering.
+The only complete solution for this is to use a dedicated GPU for rendering, and another for display.
 
 
 Why does a scene that renders on the CPU not render on the GPU?
@@ -154,8 +141,9 @@ Yes, go to :menuselection:`Preferences --> System --> Compute Device Panel`, and
 Would multiple GPUs increase available memory?
 ----------------------------------------------
 
-Typically, no, each GPU can only access its own memory, however, some GPUs can share their memory.
-This is can be enabled with :ref:`Distributed Memory Across Devices <prefs-system-cycles-distributive-memory>`.
+Typically, no, each GPU can only access its own memory.
+
+The exception is NVIDIA GPUs connected with NVLink, where multiple GPUs can share memory at a small performance cost. This is can be enabled with :ref:`Distributed Memory Across Devices <prefs-system-cycles-distributive-memory>` in the preferences.
 
 
 What renders faster?
@@ -171,6 +159,33 @@ Error Messages
 
 In case of problems, be sure to install the official graphics drivers from the GPU manufacturers website,
 or through the package manager on Linux.
+The graphics drivers provided by the computer manufacturer can sometimes be outdated or incomplete.
+
+
+Error: Out of memory
+--------------------
+
+This usually means there is not enough memory to store the scene for use by the GPU.
+
+.. note::
+
+   One way to reduce memory usage is by using smaller resolution textures.
+   For example, 8k, 4k, 2k, and 1k image textures take up respectively 256MB, 64MB, 16MB and 4MB of memory.
+
+
+The NVIDIA OpenGL driver lost connection with the display driver
+----------------------------------------------------------------
+
+If a GPU is used for both display and rendering,
+Windows has a limit on the time the GPU can do render computations.
+If you have a particularly heavy scene, Cycles can take up too much GPU time.
+Reducing Tile Size in the Performance panel may alleviate the issue,
+but the only real solution is to use separate graphics cards for display and rendering.
+
+Another solution can be to increase the time-out,
+although this will make the user interface less responsive when rendering heavy scenes.
+`Learn More Here <https://learn.microsoft.com/en-us/windows-hardware/drivers/display/timeout-detection-and-
+recovery>`__.
 
 
 Unsupported GNU version
@@ -210,7 +225,7 @@ Remove compatibility checks
 CUDA Error: Kernel compilation failed
 -------------------------------------
 
-This error may happen if you have a new Nvidia graphics card that is not yet supported by
+This error may happen if you have a new NVIDIA graphics card that is not yet supported by
 the Blender version and CUDA toolkit you have installed.
 In this case Blender may try to dynamically build a kernel for your graphics card and fail.
 
@@ -223,35 +238,3 @@ In this case you can:
 
 Normally users do not need to install the CUDA toolkit as Blender comes with precompiled kernels.
 
-
-Error: Out of memory
---------------------
-
-This usually means there is not enough memory to store the scene for use by the GPU.
-
-.. note::
-
-   One way to reduce memory usage is by using smaller resolution textures.
-   For example, 8k, 4k, 2k, and 1k image textures take up respectively 256MB, 64MB, 16MB and 4MB of memory.
-
-
-The Nvidia OpenGL driver lost connection with the display driver
-----------------------------------------------------------------
-
-If a GPU is used for both display and rendering,
-Windows has a limit on the time the GPU can do render computations.
-If you have a particularly heavy scene, Cycles can take up too much GPU time.
-Reducing Tile Size in the Performance panel may alleviate the issue,
-but the only real solution is to use separate graphics cards for display and rendering.
-
-Another solution can be to increase the time-out,
-although this will make the user interface less responsive when rendering heavy scenes.
-`Learn More Here <https://learn.microsoft.com/en-us/windows-hardware/drivers/display/timeout-detection-and-
-recovery>`__.
-
-
-CUDA error: Unknown error in cuCtxSynchronize()
------------------------------------------------
-
-An unknown error can have many causes, but one possibility is that it is a time-out.
-See the above answer for solutions.
