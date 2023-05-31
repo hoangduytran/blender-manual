@@ -17,3 +17,4 @@
    forces/index.rst
    collision.rst
    baking.rst
+   simulation_nodes.rst

@@ -40,10 +40,6 @@ Render Region
    See the :ref:`Render Region <editors-3dview-navigate-render-region>`
    documentation to see how to define the size of the render region.
 
-   .. note::
-
-      This disables the *Save Buffers* option in the Performance panel.
-
 .. _bpy.types.RenderSettings.use_crop_to_border:
 
 Crop to Render Region

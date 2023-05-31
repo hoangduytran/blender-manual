@@ -1,46 +1,23 @@
-.. index:: Geometry Nodes; Simulation Zone
-.. _bpy.types.GeometryNodeSimulationInput:
-.. _bpy.types.GeometryNodeSimulationOutput:
 
-***************
-Simulation Zone
-***************
+****************
+Simulation Nodes
+****************
 
-A simulation zones allows the result of one frame to influence the next one.
+Through the use of :doc:`Simulation Zones </modeling/geometry_nodes/simulation/simulation_zone>`,
+:doc:`/modeling/geometry_nodes/index` can be used to create custom physic simulations through nodes.
+Simulation zones allow the result of one frame to influence the next one.
 That way even a set of simple rules can lead to complex results, with the passing of time.
 The most common type of them is physics simulation, with specific solvers for physical phenomena.
 
-.. figure:: /images/modeling_geometry-nodes-simulation_zone.png
-   :align: center
+.. seealso::
 
-   Initial simulation nodes and simulation zone.
-
-When adding a simulation, two nodes are added, defining among them a "Simulation Zone".
-
-The inputs that are connected to the Simulation Input node are evaluated only once,
-at the beginning of the simulation, passed to the next simulation state and eventually outputted.
-Other nodes can be linked inside the simulation region from the outside.
-Those are re-evaluated every step based on their value at the given frame.
-
-It is not possible to have any link going towards outside.
-The result of the simulation can only be accessed via the Simulation Output node.
-This also allows sub-frame interpolation for motion blur.
+   Read more about :doc:`Simulation Zones </modeling/geometry_nodes/simulation/simulation_zone>`
 
 
-Clock
-=====
-
-The simulation is tied to the animation system, with support for sub-steps.
-It will only be evaluated while the animation frame changes, and is cached like
-the existing physics simulations in Blender.
-
-
-Properties
-==========
-
-In the Node Editor the inputs can be renamed, shuffled and removed.
-This is also the place where sub-steps can be defined for a simulation.
-
+.. _bpy.types.Object.use_simulation_cache:
+.. _bpy.ops.object.simulation_nodes_cache_calculate_to_frame:
+.. _bpy.ops.object.simulation_nodes_cache_bake:
+.. _bpy.ops.object.simulation_nodes_cache_delete:
 
 Baking
 ======
