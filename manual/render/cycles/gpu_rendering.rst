@@ -98,7 +98,7 @@ macOS 13.0 or newer is required to support all features and graphics cards.
 Apple Silicon and AMD graphics cards also work on macOS 12.3 and newer, however
 without support for :ref:`Shadow Caustics <bpy.types.CyclesObjectSettings.is_caustics_caster>`.
 
-:ref:`Light Trees <bpy.types.CyclesRenderSettings.use_light_tree>` are not support when using
+:ref:`Light Trees <bpy.types.CyclesRenderSettings.use_light_tree>` are not supported when using
 an AMD graphics card with Metal.
 
 
