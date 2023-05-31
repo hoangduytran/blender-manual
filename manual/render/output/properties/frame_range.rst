@@ -24,8 +24,8 @@ Step
    Controls the number of frames to advance by for each frame in the timeline.
 
 
-Time Remapping
-==============
+Time Stretching
+===============
 
 Use to remap the length of an animation; making it run slower or faster.
 The *Old* and *New* settings may either be used as absolute values or as a ratio:
@@ -33,7 +33,7 @@ For example, setting *Old* to a value of 2 and *New* to 1 will run the animation
 
 .. warning::
 
-   Using *Time Remapping* will not influence the *Start* or *End* frames set above,
+   Using *Time Stretching* will not influence the *Start* or *End* frames set above,
    so make sure that your animation is not cut off or has extraneous still frames at the end.
 
 .. _bpy.types.RenderSettings.frame_map_old:

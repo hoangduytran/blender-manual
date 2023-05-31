@@ -13,5 +13,5 @@ There is support for many different stereo 3D visualization types.
 .. note::
 
    If you have a real 3D display at some point you can change the 3D display mode in the Window menu,
-   by calling the Stereo 3D operator.
+   by calling the *Stereo 3D* operator.
    Be aware that some modes require a fullscreen editor to work, and this can be taxing on your CPU.
