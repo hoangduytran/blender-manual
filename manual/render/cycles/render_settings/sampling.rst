@@ -175,7 +175,7 @@ Training Samples
 .. _bpy.types.CyclesRenderSettings.use_surface_guiding:
 
 Surface
-   Enable path guiding for the diffuse component of surfaces.
+   Enable path guiding for the diffuse and glossy components of surfaces.
 
 .. _bpy.types.CyclesRenderSettings.use_volume_guiding:
 
