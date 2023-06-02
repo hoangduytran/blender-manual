@@ -632,3 +632,12 @@ Smooth Transitions
 It is possible to create smooth transition from one speed to another speed. This can be done by holding shift key and
 dragging handle at interface of 2 speeds. This will create 2 handles, that are linked and always move in opposite
 direction. When either of these handles is removed, this will restore strip to state before transition was created.
+
+Freeze Frames
+-------------
+
+Freeze frame can be created by adding retiming handle to frame you want to freeze. Then while holding ctrl key, drag
+the handle. 
+
+.. note::
+   It is not possible to make smooth transition into freeze frame
