@@ -286,23 +286,33 @@ The *Pack Islands* tool can be used to optimize the UV layout by adjusting exist
 to efficiently fill the :term:`Texture Space`. Based on the options selected,
 the tool will scale, translate and rotate the islands,
 ensuring a specified margin exists between them to maximize the usage of the UV space.
+Pinned islands can have additional restrictions applied to customize the packing process even further.
 
- Pack To
-   Determines the final placement of UV islands after completing the packing operation.
+ Shape Method
+   The method to use when considering the shape of each island.
 
-   :Closest UDIM: Pack islands to the :doc:`UDIM </modeling/meshes/uv/workflows/udims>` grid
-       nearest to the center of the selection.
-   :Active UDIM: Pack islands to the active UDIM image tile or, if no image is available,
-       the UDIM grid tile where the 2D cursor is located.
-   :Original bounding box: Find the original bounding box of the selection,
-     packs the islands, and then moves them back inside the original box.
+   :Exact Shape (Concave):
+      Use the complete shape of the island, including filling any holes or concave regions around the island.
+   :Boundary Shape (Convex):
+      Takes into account the boundary (Convex Hull) of the island.
+      This method will not place islands inside holes.
+   :Bounding Box: Uses the simple bounding box of the island.
+
+ Scale
+   Scale the islands to fill the unit square, or pack islands towards the lower left corner.
 
  Rotate
    Allows the rotation of islands, as well as translation and scaling, to optimize texture usage.
 
- Merge Overlapped
-   Before the main packing operation, overlapping islands are detected and temporarily combined.
-   During packing, the relative rotation and position of the merged islands are preserved.
+ Rotation Method
+   The allowable rotations to use for each each island.
+
+   :Any:
+      Any rotation which improves the packing is allowed.
+   :Axis-aligned:
+      The island will first be rotated into a smallest rectangle. Additional rotation will only be in 90-degree turns.
+   :Cardinal: Like the four cardinal directions on a compass, North, South, East and West, only 90-degree turns will be allowed.
+
 
  Margin Method
    The method to use when calculating the empty space between islands.
@@ -314,15 +324,30 @@ ensuring a specified margin exists between them to maximize the usage of the UV 
  Margin
    The scale for the empty space between islands.
 
- Shape Method
-   The method to use when considering the shape of each island.
+ Pinned Islands
+   An island which has any of its UVs pinned is considered a *Pinned Island*.
+   With this option, you can change the way *Pinned Islands* are packed
 
-   :Exact shape (Concave):
-      Use the complete shape of the island, including filling any holes or concave regions around the island.
-   :Boundary shape (Convex):
-      Takes into account the boundary (Convex Hull) of the island.
-      This method will not place islands inside holes.
-   :Bounding box: Uses the simple bounding box of the island.
+   :Pack: *Pinned Islands* are packed in the same way as other islands.
+   :Lock Scale: The scale of the *Pinned Islands* will not change.
+   :Lock Rotation: *Pinned Islands* will not rotate.
+   :Lock Rotation and Scale: *Pinned Islands* can translate, but not scale nor rotate.
+   :Lock in Place: *Pinned Islands* will be unable to move. The other islands will pack around them.
+   :Ignore: Even if an island is selected, if it contains a pin, it will not be included in the *Pack Islands* calculation.
+
+ Merge Overlapping
+   Before the main packing operation, overlapping islands are detected and temporarily combined.
+   During packing, the relative rotation and position of the merged islands are preserved.
+
+ Pack To
+   Determines the final placement of UV islands after completing the packing operation.
+
+   :Closest UDIM: Pack islands to the :doc:`UDIM </modeling/meshes/uv/workflows/udims>` grid
+       nearest to the center of the selection.
+   :Active UDIM: Pack islands to the active UDIM image tile or, if no image is available,
+       the UDIM grid tile where the 2D cursor is located.
+   :Original bounding box: Find the original bounding box of the selection,
+     packs the islands, and then moves them back inside the original box.
 
 .. note::
 
