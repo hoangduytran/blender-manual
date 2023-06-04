@@ -181,8 +181,19 @@ Effects
 
 :guilabel:`Eevee only`
 
+.. _bpy.types.ViewLayerEEVEE.use_pass_bloom:
+
 Bloom
    The influence of the Bloom effect.
+
+.. _bpy.types.ViewLayerEEVEE.use_pass_transparent:
+
+Transparency
+   Contain :ref:`Alpha Blended <bpy.types.Material.blend_method>` surfaces,
+   so they can be adjusted in the compositor and later mixed with opaque passes.
+
+   This pass only supports monochromatic opacity.
+   Colored opacity will show differently than in combined pass.
 
 
 Cryptomatte

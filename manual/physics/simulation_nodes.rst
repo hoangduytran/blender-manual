@@ -14,11 +14,6 @@ The most common type of them is physics simulation, with specific solvers for ph
    Read more about :doc:`Simulation Zones </modeling/geometry_nodes/simulation/simulation_zone>`
 
 
-.. _bpy.types.Object.use_simulation_cache:
-.. _bpy.ops.object.simulation_nodes_cache_calculate_to_frame:
-.. _bpy.ops.object.simulation_nodes_cache_bake:
-.. _bpy.ops.object.simulation_nodes_cache_delete:
-
 Baking
 ======
 
@@ -31,8 +26,6 @@ This allows for animators to quickly inspect all the previous frames of a simula
 
    Cached frames in the Timeline.
 
-For the cases where the current frame is the only one relevant, users can opt-out of "Keep All Cache" to save memory.
-
 When the result is ready to be sent to a render-farm, it can be baked to disk.
 This allows for the simulation to be rendered in a non-sequential order.
 
@@ -44,6 +37,26 @@ This allows for the simulation to be rendered in a non-sequential order.
 .. note::
 
    Baking the simulation will bake all the simulations in all modifiers for the selected objects.
+
+.. _bpy.ops.object.simulation_nodes_cache_calculate_to_frame:
+
+Calculate to Frame
+   Calculate simulations in geometry nodes modifiers from the start to current frame.
+
+.. _bpy.ops.object.simulation_nodes_cache_bake:
+
+Bake
+   Bake simulations in geometry nodes modifiers.
+
+   .. _bpy.ops.object.simulation_nodes_cache_delete:
+
+   Delete Cached Simulation
+      Delete cached/baked simulations in geometry nodes modifiers
+
+.. _bpy.types.Object.use_simulation_cache:
+
+Cache
+   For the cases where the current frame is the only one relevant, users can opt-out of caching the results to save memory.
 
 
 Examples

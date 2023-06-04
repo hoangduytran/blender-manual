@@ -6,7 +6,7 @@
 Simulation Zone
 ***************
 
-A simulation zones allows the result of one frame to influence the next one.
+Simulation zones allow the result of one frame to influence the next one.
 That way even a set of simple rules can lead to complex results, with the passing of time.
 The most common type of them is physics simulation, with specific solvers for physical phenomena.
 
@@ -15,7 +15,7 @@ The most common type of them is physics simulation, with specific solvers for ph
 
    Initial simulation nodes and simulation zone.
 
-When adding a simulation, two nodes are added, defining among them a "Simulation Zone".
+When adding a simulation, two nodes are added, defining between them a "Simulation Zone".
 
 The inputs that are connected to the Simulation Input node are evaluated only once,
 at the beginning of the simulation, passed to the next simulation state and eventually outputted.
