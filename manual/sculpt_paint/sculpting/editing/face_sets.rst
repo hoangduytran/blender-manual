@@ -119,7 +119,7 @@ Once the operator is initiated, hover over the face set and :kbd:`LMB` to create
 After the operator is finished the new mesh will be selected in Object Mode.
 
 
-.. _sculpt.face_set_invert_visibility:
+.. _bpy.ops.sculpt.face_set_invert_visibility:
 
 Invert Visible Face Sets
 ========================
