@@ -56,7 +56,8 @@ Bake
 .. _bpy.types.Object.use_simulation_cache:
 
 Cache
-   For the cases where the current frame is the only one relevant, users can opt-out of caching the results to save memory.
+   For the cases where the current frame is the only one relevant,
+   users can opt-out of caching the results to save memory.
 
 
 Examples

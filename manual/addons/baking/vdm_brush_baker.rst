@@ -32,5 +32,6 @@ Tips
 ----
 
 - While Sculpting make sure to mask the borders of the plane for a better result.
-- If your VDM brush gets cut off at the corners, you can increase the size inside the texture panel of the brush settings to 1.1 or 1.2 for each axis.
-- A vdm-resolution of 512 px or lower is usually enough. Unless you have extremely detailed sculptings
+- If your VDM brush gets cut off at the corners,
+  you can increase the size inside the texture panel of the brush settings to 1.1 or 1.2 for each axis.
+- A vdm-resolution of 512 px or lower is usually enough. Unless you have extremely detailed sculptings.

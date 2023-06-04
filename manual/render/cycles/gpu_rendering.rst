@@ -65,7 +65,9 @@ Minimum driver versions:
 Please refer to `AMD's website <https://www.amd.com/en/graphics>`__ for more
 information about AMD graphics cards and their architectures.
 
-On Windows, experimental hardware ray-tracing support is available with the most recent drivers. This can be enabled in the preferences. However there are currently known issues regarding motion blur, hair rendering and degenerate triangle shapes.
+On Windows, experimental hardware ray-tracing support is available with the most recent drivers.
+This can be enabled in the preferences.
+However there are currently known issues regarding motion blur, hair rendering and degenerate triangle shapes.
 
 The *Clip* extension mode in :doc:`/render/shader_nodes/textures/image` is not supported for HIP.
 
@@ -117,7 +119,8 @@ Why is Blender unresponsive during rendering?
 
 On older GPU generations, graphics cards can only either render or draw the user interface.
 This can make Blender unresponsive while it is rendering.
-Heavy scenes can also make Blender unresponsive on newer GPUs, when using a lot of memory or executing expensive shaders, however this is generally less of a problem.
+Heavy scenes can also make Blender unresponsive on newer GPUs,
+when using a lot of memory or executing expensive shaders, however this is generally less of a problem.
 
 The only complete solution for this is to use a dedicated GPU for rendering, and another for display.
 
@@ -146,7 +149,9 @@ Would multiple GPUs increase available memory?
 
 Typically, no, each GPU can only access its own memory.
 
-The exception is NVIDIA GPUs connected with NVLink, where multiple GPUs can share memory at a small performance cost. This is can be enabled with :ref:`Distributed Memory Across Devices <prefs-system-cycles-distributive-memory>` in the preferences.
+The exception is NVIDIA GPUs connected with NVLink, where multiple GPUs can share memory at a small performance cost.
+This is can be enabled with :ref:`Distributed Memory Across Devices <prefs-system-cycles-distributive-memory>`
+in the preferences.
 
 
 What renders faster?

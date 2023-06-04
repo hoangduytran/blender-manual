@@ -310,8 +310,11 @@ Pinned islands can have additional restrictions applied to customize the packing
    :Any:
       Any rotation which improves the packing is allowed.
    :Axis-aligned:
-      The island will first be rotated into a smallest rectangle. Additional rotation will only be in 90-degree turns.
-   :Cardinal: Like the four cardinal directions on a compass, North, South, East and West, only 90-degree turns will be allowed.
+      The island will first be rotated into a smallest rectangle.
+      Additional rotation will only be in 90-degree turns.
+   :Cardinal:
+      Like the four cardinal directions on a compass, North, South, East and West,
+      only 90-degree turns will be allowed.
 
 
  Margin Method
@@ -333,7 +336,8 @@ Pinned islands can have additional restrictions applied to customize the packing
    :Lock Rotation: *Pinned Islands* will not rotate.
    :Lock Rotation and Scale: *Pinned Islands* can translate, but not scale nor rotate.
    :Lock in Place: *Pinned Islands* will be unable to move. The other islands will pack around them.
-   :Ignore: Even if an island is selected, if it contains a pin, it will not be included in the *Pack Islands* calculation.
+   :Ignore: Even if an island is selected, if it contains a pin,
+      it will not be included in the *Pack Islands* calculation.
 
  Merge Overlapping
    Before the main packing operation, overlapping islands are detected and temporarily combined.

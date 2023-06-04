@@ -1,7 +1,7 @@
 
-#############
+##########
   Baking
-#############
+##########
 
 These add-ons add UI elements for faster baking access.
 
