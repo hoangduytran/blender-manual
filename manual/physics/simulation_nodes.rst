@@ -47,6 +47,10 @@ Calculate to Frame
 
 Bake
    Bake simulations in geometry nodes modifiers.
+   In order to bake the simulation, the blend-file must be saved to your computer.
+   The location the file is saved determines where the baked data is also saved.
+   The directory the baked data is saved to can be changed per modifier in the
+   :ref:`Internal Dependencies <bpy.types.NodesModifier.simulation_bake_directory>`.
 
    .. _bpy.ops.object.simulation_nodes_cache_delete:
 

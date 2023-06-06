@@ -71,12 +71,12 @@ Adjust the color's HSV values.
 
 .. _bpy.ops.gpencil.vertex_color_brightness_contrast:
 
-Bright/Contrast
-===============
+Brightness/Contrast
+===================
 
 .. reference::
 
    :Mode:      Vertex Paint Mode
-   :Menu:      :menuselection:`Paint --> Bright/Contrast`
+   :Menu:      :menuselection:`Paint --> Brightness/Contrast`
 
 Adjust the color's brightness/contrast.

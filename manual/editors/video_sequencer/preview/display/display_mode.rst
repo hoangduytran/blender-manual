@@ -42,7 +42,7 @@ Separate Colors
 
 This mode is good for:
 
-- If the waveform does not fill the whole picture you might want to play with the Bright/Contrast modifier
+- If the waveform does not fill the whole picture you might want to play with the Brightness/Contrast modifier
   until it fills the whole picture (contrast autostretch).
 - With the more advanced Curves or Color Balance modifiers, you can be more precise.
 - You can judge if you want to dump the whole thing since it is

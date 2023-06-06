@@ -47,7 +47,7 @@ Masking
 Use it for masking the other modifiers in the stack which are below.
 
 For example, to correct the brightness only on a certain zone of the image,
-you can filter the Bright/Contrast modifier by placing a Mask modifier,
+you can filter the Brightness/Contrast modifier by placing a Mask modifier,
 just before it in the stack. You can choose to use a Mask created in the Mask editor,
 or to use another strip as a mask (the image of this strip must have an alpha channel).
 This mask will be applied on all the others modifiers below it in the stack.
@@ -76,11 +76,11 @@ Types
 Currently, the following modifiers are supported:
 
 
-.. index:: Video Sequencer Modifiers; Bright/Contrast Modifier
+.. index:: Video Sequencer Modifiers; Brightness/Contrast Modifier
 .. _bpy.types.BrightContrastModifier:
 
-Bright/Contrast Modifier
-------------------------
+Brightness/Contrast Modifier
+----------------------------
 
 Adjusts the brightness and contrast of the modifier input.
 
@@ -153,7 +153,7 @@ Mask Modifier
 The mask modifier is used to affect the :term:`Alpha Channel` of the current strip.
 
 For example, to correct the brightness only on a certain zone of the image,
-you can filter the Bright/Contrast modifier by placing a Mask modifier,
+you can filter the Brightness/Contrast modifier by placing a Mask modifier,
 just before it in the stack. You can choose to use a Mask created in the Mask editor,
 or to use another strip as a mask (the image of this strip must have an alpha channel).
 This mask will be applied on all the others modifiers below it in the stack.

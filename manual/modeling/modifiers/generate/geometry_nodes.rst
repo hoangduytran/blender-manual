@@ -62,6 +62,13 @@ This panel displays information about all custom named attributes used by the no
 More information is available in the
 :ref:`geometry nodes inspection page <bpy.types.SpaceNodeOverlay.show_named_attributes>`.
 
+.. _bpy.types.NodesModifier.simulation_bake_directory:
+
+Bake
+   Location on disk where the
+   :ref:`baked data <bpy.ops.object.simulation_nodes_cache_bake>` for
+   :doc:`simulation zones </modeling/geometry_nodes/simulation/simulation_zone>` are stored.
+
 
 .. _bpy.ops.object.geometry_nodes_move_to_nodes:
 

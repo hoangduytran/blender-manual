@@ -32,7 +32,8 @@ Spline Type
    on the different spline types.
 
    :Bézier:
-      Convert to a Bézier spline.
+      Convert to a Bézier spline. A spline converted from a poly spline gets vector handles,
+      while one converted from NURBS or Catmull Rom spline gets auto handles.
 
       .. note::
 
@@ -44,6 +45,8 @@ Spline Type
       Convert to a NURBS spline.
    :Poly:
       Convert to a poly spline.
+   :Catmull Rom:
+      Convert to a Catmull Rom spline.
 
 
 Outputs

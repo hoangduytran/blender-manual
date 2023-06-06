@@ -10,9 +10,10 @@ Spline Resolution Node
    :alt: Spline Resolution node.
 
 The *Spline Resolution* outputs the number of evaluated curve points that will be generated for
-every control point on the spline. This node works for NURBS and Bézier splines, for poly splines, there
-is a one-to-one correspondence between original points and evaluated points,
-so the resolution value will be 1.
+every control point on the spline. This node works for NURBS, Bézier, and Catmull Rom splines.
+
+For poly splines, there is a one-to-one correspondence between original points and evaluated points,
+so the resolution does not have an effect.
 
 On Bézier splines, the resolution does not have an effect on segments between vector handles,
 since there are no extra evaluated points between the neighboring control points.
