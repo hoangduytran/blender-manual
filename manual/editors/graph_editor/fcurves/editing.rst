@@ -339,7 +339,7 @@ Blend
 .. reference::
 
    :Menu:      :menuselection:`Key --> Blend`
-   :Shortcut:  :kbd:`D`
+   :Shortcut:  :kbd:`Alt-D`
 
 .. _bpy.ops.graph.breakdown:
 
@@ -417,6 +417,11 @@ Blend
 
 Smooth
 ======
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Smooth`
+   :Shortcut:  :kbd:`Alt-S`
 
 .. _bpy.ops.graph.smooth:
 
