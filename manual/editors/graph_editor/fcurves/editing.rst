@@ -141,6 +141,18 @@ Inserts a keyframe to the active F-Curve at the mouse position.
 The newly added keyframes will be selected, making it easier to quickly tweak the newly added keyframes.
 All previously selected keyframes are kept selected by using :kbd:`I`.
 
+Type
+   :All Channels:
+      Insert a keyframe on all visible and editable F-Curves using each curve's current value.
+   :Only Selected Channels:
+      Insert a keyframe on selected F-Curves using each curve's current value.
+   :Only Active F-Curve:
+      Insert a keyframe on the active F-Curve using the curve's current value.
+   :Active Channels at Cursor:
+      Insert a keyframe for the active F-Curve at the cursor point.
+   :Selected Channels at Cursor:
+      Insert a keyframe for selected F-Curves at the cursor point.
+
 
 .. _bpy.ops.graph.copy:
 .. _bpy.ops.graph.paste:
