@@ -8,6 +8,7 @@ Nodes that retrieve information about the connectivity between mesh elements.
 .. toctree::
    :maxdepth: 1
 
+   corners_of_edge.rst
    corners_of_face.rst
    corners_of_vertex.rst
    edges_of_corner.rst
