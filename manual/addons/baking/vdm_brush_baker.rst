@@ -1,6 +1,7 @@
-*******
+
+***************
 VDM Brush Baker
-*******
+***************
 
 This is a small add-on that makes it easy to create vector displacement map (aka VDM) brushes in Blender.
 Sculpting setups and the brushes can be created with one click.
