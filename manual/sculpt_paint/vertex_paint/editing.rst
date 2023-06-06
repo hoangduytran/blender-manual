@@ -63,5 +63,5 @@ Hue/Saturation/Value
 
 .. _bpy.ops.paint.vertex_color_brightness_contrast:
 
-Bright/Contrast
+Brightness/Contrast
    Adjust the brightness/contrast of the selected vertices.
