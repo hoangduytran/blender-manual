@@ -26,7 +26,8 @@ output is one of those corners, chosen using the *Sort Index* input.
 
 * Red: selected edge
 * Blue: corners that get individually returned, depending on the sorting
-* Purple: corners that can be retrieved by offseting the blue corner indices using :doc:`/modeling/geometry_nodes/mesh/topology/offset_corner_in_face`
+* Purple: corners that can be retrieved by offseting the blue corner indices using
+  :doc:`/modeling/geometry_nodes/mesh/topology/offset_corner_in_face`
 
 Inputs
 ======
