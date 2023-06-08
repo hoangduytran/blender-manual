@@ -115,7 +115,7 @@ if "%1" == "check_structure" (
 	goto EOF
 
 if "%1" == "update" (
-	git pull --rebase
+	python tools_make\make_update.py
 	goto EOF
 
 ) else (

@@ -123,7 +123,7 @@ report_po_progress:
 	         `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.git*' -printf 'locale/%f\n' | sort`
 
 update:
-	@git pull --rebase
+	@python3 ./tools_make/make_update.py
 
 # ----------------------
 # Help for build targets
