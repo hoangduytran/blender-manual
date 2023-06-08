@@ -116,7 +116,7 @@ check_spelling:
 	@python3 tools_rst/rst_check_spelling.py
 
 checkout_locale:
-	@python3 ./tools_maintenance/checkout_locale.py
+	@python3 ./tools_make/checkout_locale.py
 
 update_po:
 	@python3 ./tools_maintenance/update_po.py
