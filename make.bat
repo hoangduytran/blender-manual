@@ -93,6 +93,11 @@ if "%1" == "check_syntax" (
 	goto EOF
 )
 
+if "%1" == "checkout_locale" (
+	python tools_make\checkout_locale.py
+	goto EOF
+)
+
 if "%1" == "update_po" (
 	python tools_maintenance\update_po.py
 	goto EOF
