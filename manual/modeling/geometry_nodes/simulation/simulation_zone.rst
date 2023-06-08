@@ -54,7 +54,7 @@ This allows for animators to quickly inspect all the previous frames of a simula
 
    Cached frames in the Timeline.
 
-For the cases where the current frame is the only one relevant, users can opt-out of "Keep All Cache" to save memory.
+For the cases where the current frame is the only one relevant, users can opt-out of "Cache" to save memory.
 
 When the result is ready to be sent to a render-farm, it can be baked to disk.
 This allows for the simulation to be rendered in a non-sequential order.
@@ -62,7 +62,7 @@ This allows for the simulation to be rendered in a non-sequential order.
 .. figure:: /images/modeling-geometry_nodes-simulation-baking.png
    :align: center
 
-   Simulation and Physics, Geometry Nodes user interface.
+   Simulation and Physics, Simulation Nodes user interface.
 
 .. note::
 
