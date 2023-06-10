@@ -73,6 +73,10 @@ Include
 Selection Only
    When checked, only selected objects are exported. Otherwise export all objects in the scene.
 
+Export Hierarchy
+   Preserves the object hierarchy if no keyframe section is written. Blender can read the hierarchy chunks
+   but most importers do not use them, therefore only recommended if the file is used in Blender only.
+
 Write Keyframe
    Writes the keyframe section of a 3ds file and exports the animation if an action was found.
    The animation can be imported the same way, un-check if any importer crashes,
