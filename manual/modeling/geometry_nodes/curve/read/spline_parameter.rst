@@ -60,7 +60,7 @@ Length
 
 Index
    Each control point's index on its spline. This is different from the output of the
-   :doc:`index node</modeling/geometry_nodes/geometry/read/input_index>`, which also counts the
+   :doc:`index node </modeling/geometry_nodes/geometry/read/input_index>`, which also counts the
    control points in all previous splines.
 
 

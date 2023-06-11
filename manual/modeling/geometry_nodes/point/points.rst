@@ -27,7 +27,7 @@ Radius
 
 .. note::
    Since the point cloud is created from scratch, the *Position* and *Radius* inputs can only depend on
-   the :doc:`index</modeling/geometry_nodes/geometry/read/input_index>` node. Regular input nodes like
+   the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>` node. Regular input nodes like
    the :doc:`position </modeling/geometry_nodes/geometry/read/position>` won't work.
 
 

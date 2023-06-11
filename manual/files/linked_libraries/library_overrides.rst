@@ -181,7 +181,7 @@ Make Editable
 -------------
 
 That same operation can also be used to make existing overrides user-editable,
-after they have been created, or :ref:`cleared<Clear Override>`
+after they have been created, or :ref:`cleared <Clear Override>`
 
 
 .. _bpy.ops.object.reset_override_library:

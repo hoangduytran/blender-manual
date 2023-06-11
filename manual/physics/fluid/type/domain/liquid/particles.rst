@@ -37,7 +37,7 @@ Combined Export
 
 Upres Factor
    Factor by which to enhance the resolution of the particle simulation. The scaling factor is coupled
-   to the :ref:`Resolution Divisions<bpy.types.FluidDomainSettings.resolution_max>` (i.e. the particle
+   to the :ref:`Resolution Divisions <bpy.types.FluidDomainSettings.resolution_max>` (i.e. the particle
    simulation is this times bigger than the base simulation).
 
 .. _bpy.types.FluidDomainSettings.sndparticle_potential_max_wavecrest:
