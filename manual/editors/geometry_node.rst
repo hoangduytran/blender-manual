@@ -4,9 +4,9 @@
 Geometry Node Editor
 ********************
 
-The Geometry Node editor is used to edit a :doc:`Node Group </interface/controls/nodes/groups>`
-which is used by the :doc:`Geometry Node Modifier </modeling/modifiers/generate/geometry_nodes>`.
-This node group can define many operations to modify an object's geometry.
+The Geometry Node editor is used to edit :doc:`Node Groups </interface/controls/nodes/groups>`
+which are used by the :doc:`Geometry Node Modifier </modeling/modifiers/generate/geometry_nodes>`.
+Such a node group can define many operations to modify an object's geometry.
 
 .. .. figure:: /images/editors_shader-editor_main.png
 ..
@@ -33,26 +33,31 @@ Node
 ----
 
 Geometry Node Group
-   The :ref:`data-block selector <ui-data-block>` can change the active node group being edited.
+   :doc:`/interface/controls/templates/data_block` for creating and selecting node groups.
 Pin (pin icon)
-   The pin button will keep the current geometry node group selection fixed,
+   The pin button will keep the current node group selection fixed,
    instead of using the :ref:`Active Modifier <modifier-stack-active>`.
-   When a geometry node group is pinned, it will remain visible in the Geometry Node editor
+   When a node group is pinned, it will remain visible in the Geometry Node editor
    even when another object or modifier is selected elsewhere.
 
 ----
 
 Parent Node Tree
-   Jumps up a node group level, see :ref:`bpy.ops.node.tree_path_parent` for more information.
+   Jumps up a node group level. See :ref:`bpy.ops.node.tree_path_parent` for details.
 Snapping
-   Controls to control snapping when transforming nodes.
-
+   Snapping options. See :doc:`/interface/controls/nodes/arranging` for details.
+Overlays
+   See :ref:`Overlays <bpy.types.SpaceNodeOverlay.show_overlays>`.
 
 Toolbar
 -------
 
-The Geometry Node editor has several tools to work with tools that can be accessed from the Toolbar.
-
+Select
+   See :doc:`Selecting Nodes </interface/controls/nodes/selecting>`.
+Annotate
+   See :doc:`/interface/annotate_tool`.
+Links Cut
+   See :ref:`Cut Links <bpy.ops.node.links_cut>`.
 
 Sidebar
 -------
@@ -60,27 +65,26 @@ Sidebar
 Node
 ^^^^
 
-This tab allows you to edit the geometry node group's inputs and outputs.
-
-.. tip::
-
-   The inputs of the node group can be edited as properties of
-   the :doc:`Geometry Node Modifier </modeling/modifiers/generate/geometry_nodes>`.
-
-
-Item
-^^^^
-
 This tab gives access to the active node's properties.
-
 
 Tool
 ^^^^
 
 This tab gives access to the active tool's settings.
 
-
 View
 ^^^^
 
-This tab gives access properties that affect editor data such as annotations.
+This tab allows managing annotations.
+
+
+Group
+^^^^^
+
+This tab allows you to edit the current node group's inputs and outputs.
+
+.. tip::
+
+   In the :doc:`Geometry Node Modifier </modeling/modifiers/generate/geometry_nodes>`,
+   you can specify values for the root node group's inputs, as well as select destination
+   :doc:`/modeling/geometry_nodes/attributes_reference` for its outputs.
