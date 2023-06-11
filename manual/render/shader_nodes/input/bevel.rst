@@ -27,7 +27,7 @@ The Bevel modifier is a faster option when it works, but sometimes fails on comp
        or :ref:`Caustic receiver <bpy.types.CyclesObjectSettings.is_caustics_receiver>` while the scene
        contains an active :ref:`Caustic caster <bpy.types.CyclesObjectSettings.is_caustics_caster>`,
        :ref:`Caustic receiver <bpy.types.CyclesObjectSettings.is_caustics_receiver>`, and
-       :ref:`Shadow Caustic Light<bpy.types.CyclesLightSettings.is_caustics_light>`.
+       :ref:`Shadow Caustic Light <bpy.types.CyclesLightSettings.is_caustics_light>`.
      - :doc:`/render/shader_nodes/osl` is active while using the OptiX rendering backend.
 
 

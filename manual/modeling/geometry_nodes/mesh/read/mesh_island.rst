@@ -15,7 +15,7 @@ and will have the same *Island Index* output.
 
 This node's behavior is similar to the :ref:`Select Linked <bpy.ops.mesh.select_linked>` operator
 in edit mode, or the *Random per Island* output of the
-:doc:`Geometry shader node</render/shader_nodes/input/geometry>`.
+:doc:`Geometry shader node </render/shader_nodes/input/geometry>`.
 
 
 Inputs

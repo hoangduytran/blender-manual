@@ -219,7 +219,7 @@ to selectively speed up caustic rendering of objects in your scene.
    - The :ref:`Ambient Occlusion <bpy.types.ShaderNodeAmbientOcclusion>` and
      :ref:`Bevel <bpy.types.ShaderNodeBevel>` nodes will not produce a valid result on objects that are
      a Caustic caster or Caustic receiver while the scene contains a active Caustic caster,
-     Caustic receiver, and :ref:`Shadow Caustic Light<bpy.types.CyclesLightSettings.is_caustics_light>`.
+     Caustic receiver, and :ref:`Shadow Caustic Light <bpy.types.CyclesLightSettings.is_caustics_light>`.
 
    - MNEE Caustics only work if the caustic caster has smooth normals.
 

@@ -73,7 +73,7 @@ Guide Parent
 
 Bake Guides, Free Guides
    This option is only available when using the :ref:`Modular <bpy.types.FluidDomainSettings.cache_type>` cache type
-   and when using *Effector* as the :ref:`Velocity Source<bpy.types.FluidDomainSettings.guide_source>`.
+   and when using *Effector* as the :ref:`Velocity Source <bpy.types.FluidDomainSettings.guide_source>`.
    *Bake Guides* writes vertex velocities of effector objects to drive.
    It is meant to be used before baking the fluid simulation.
 
