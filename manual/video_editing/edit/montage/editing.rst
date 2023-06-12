@@ -609,6 +609,9 @@ Retiming handle can be moved by dragging it with mouse. The handle is mapped to 
 moving handle effectively means moving a frame to new position. When handle is moved, all remaining handles to the
 right will be moved by same amount. Handels can not be moved past each other or start of the strip.
 
+.. hint::
+   Speed can be set by clicking on speed label and inputting new value.
+
 .. note::
 
    Only strip content is retimed, existing animation is not handled by the tool
