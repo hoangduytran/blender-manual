@@ -13,7 +13,7 @@ This has various advantages but is especially useful for base mesh creation and 
 Detailing is possible, but the slower performance on high resolution meshes and simplified cloth physics
 might not lead to desirable results.
 
-The resolution of the topology is the mainly responsible for the size of the folds
+The resolution of the topology is mainly responsible for the size of the folds
 and detail level of the simulation. So an optimal and evenly distributed topology is important.
 
 Many sculpting features are supported, so for example :ref:`Masked <sculpt-mask-menu>` vertices
