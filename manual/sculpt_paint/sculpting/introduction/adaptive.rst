@@ -119,7 +119,7 @@ since any edits to the base mesh will result in corrupted subdivision details.
    Alternatively use the :doc:`Slide Relax </sculpt_paint/sculpting/tools/slide_relax>`
    brush to slide topology to where it is needed.
 
-Additional brushes like the :doc:`Multire Eraser </sculpt_paint/sculpting/tools/multires_displacement_eraser>` and
+Additional brushes like the :doc:`Multires Eraser </sculpt_paint/sculpting/tools/multires_displacement_eraser>` and
 :doc:`Multires Smear </sculpt_paint/sculpting/tools/multires_displacement_smear>` are recommended for adjustments.
 
 Here are general shortcuts to use the feature.

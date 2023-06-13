@@ -131,7 +131,7 @@ Gizmo settings for :doc:`cameras </render/cameras>`.
 
 Lens
    Show the gizmo to adjust the focal length (for Perspective cameras)
-   or orthographic scale (for Orthograpic cameras).
+   or orthographic scale (for Orthographic cameras).
 Focus Distance
    Enable the gizmo for adjusting the focus distance. To see this gizmo,
    you need to enable the :menuselection:`Viewport Display --> Limits` checkbox

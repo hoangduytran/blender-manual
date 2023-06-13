@@ -51,12 +51,12 @@ Boundary
    Sets the type of fill boundary limits calculation to perform.
 
    :All:    Use the thickness of the strokes and the editing lines together.
-   :Stroke: Use only the thickness of the strokes (ignore edit lines).
-   :Line:   Use only the edit lines (ignore strokes).
+   :Strokes: Use only the thickness of the strokes (ignore edit lines).
+   :Edit Lines:   Use only the edit lines (ignore strokes).
 
    .. _bpy.types.BrushGpencilSettings.show_fill_boundary:
 
-   Show Lines (grid icon)
+   Show Lines (eye icon)
       Toggle show auxiliary lines to see the fill boundary.
 
 .. _bpy.types.BrushGpencilSettings.fill_layer_mode:
