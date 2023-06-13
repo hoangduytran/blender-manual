@@ -133,7 +133,7 @@ def work_tree_update(args: argparse.Namespace, path: Path, use_fetch: bool = Tru
     """
 
     if use_upstream_workflow(args, path):
-        message = work_tree_update_upstream_workflow(args, use_fetch)
+        message = work_tree_update_upstream_workflow(args, path, use_fetch)
         if message != "no_branch":
             return message
 
