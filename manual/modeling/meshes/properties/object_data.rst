@@ -100,23 +100,6 @@ Convert Color Attribute
       :Byte Color: RGBA color with 8-bit precision.
 
 
-.. _bpy.types.FaceMaps:
-.. _bpy.ops.object.face_map:
-
-Face Maps
-=========
-
-Face Maps create custom gizmos to deform meshes by assigning faces to *Face Maps*.
-They can be used to rig quickly within Object Mode and without making complicated rigging setups.
-Face Maps are currently not fully implemented in Blender and require add-ons to take full advantage of this feature.
-
-.. seealso::
-
-   `Auto Face Map Widgets add-on <https://projects.blender.org/blender/blender-addons-contrib/src/branch/main/object_facemap_auto>`__
-
-
-.. _bpy.types.AttributeGroup:
-
 Attributes
 ==========
 

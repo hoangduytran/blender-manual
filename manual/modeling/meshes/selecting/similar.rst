@@ -61,8 +61,6 @@ Face Selection Mode:
       Selects all faces that are (nearly) in the same plane as those selected.
    Flat/Smooth
       Selects all faces with similar :doc:`face shading </modeling/meshes/editing/face/shading>`.
-   Face-Map
-      Selects all faces belonging to a :ref:`Face-Map <bpy.types.FaceMaps>`.
    Freestyle Face Marks
       Selects all faces with similar :ref:`Freestyle Face Marks <bpy.ops.mesh.mark_freestyle_face>`.
 

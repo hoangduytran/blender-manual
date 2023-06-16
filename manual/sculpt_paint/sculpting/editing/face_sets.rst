@@ -74,8 +74,6 @@ Mode
       Creates face sets using :ref:`Bevel Weights <bpy.ops.transform.edge_bevelweight>` as boundaries.
    By Sharp Edges
       Creates face sets using :ref:`Sharp Edges <bpy.ops.mesh.mark_sharp>` as boundaries.
-   By Face Maps
-      Creates a face set per :ref:`Face Map <bpy.types.FaceMaps>`.
 
 Threshold
    The minimum value to consider a certain attribute a boundary when creating the face sets.
