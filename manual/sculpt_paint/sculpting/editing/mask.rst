@@ -134,6 +134,7 @@ Auto Iteration Count
    Disable this option to set the Iterations manually.
 
 .. tip::
+
    An alternative to Iterations is to use :ref:`Repeat Last <bpy.ops.screen.repeat_last>`
    via the shortcut :kbd:`Shift-R`.
 
@@ -144,6 +145,7 @@ Expand Mask
 ===========
 
 .. note::
+
    More info on Mask Expand along Topology at the :ref:`Expand page <bpy.ops.sculpt.expand>`.
 
 Mask Extract
@@ -193,6 +195,7 @@ Fill Holes
    Fills concave holes with geometry that might have resulted from the *Mask Slice* operation.
 
    .. tip::
+
       If nothing is masked, this operation can be used to just fill all holes.
       Especially when using :doc:`Trim </sculpt_paint/sculpting/tools/lasso_trim>`
       tools and the :doc:`Voxel Remesher </sculpt_paint/sculpting/tool_settings/remesh>`

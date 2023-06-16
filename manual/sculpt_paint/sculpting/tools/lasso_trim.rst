@@ -31,6 +31,7 @@ When removing geometry, the new interior geometry along the selection will be as
 a new face set instead.
 
 .. note::
+
    It is not recommended to use this tool on a mesh above 100k vertices when using *Difference*
    or *Union* as the Trim Mode. This tool is using a Boolean operation so it might take a long time to process.
    For higher resolution meshes it is recommended to instead use the

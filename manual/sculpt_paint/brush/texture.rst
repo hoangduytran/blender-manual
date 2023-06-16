@@ -22,6 +22,7 @@ Texture
    Textures can be further edited in the properties editor (Click the properties icon for quick access)
 
 .. tip::
+
    It's recommended to load all needed images ahead of time as image textures into Blender.
    Then they can be easily selected by clicking on the texture and picking it from the data-block popup.
    Textures can also be `appended/linked` from other Blender files.
@@ -33,6 +34,7 @@ Mapping & Mask Mapping
    How the texture is applied to the brush stroke.
 
    .. tip::
+
       It is recommended to set this to *Area Plane* or *View Plane* for the most common behavior.
       Ideally match this setting with the
       :ref:`Sculpt Plane <bpy.types.Brush.sculpt_plane>` setting if in sculpt mode.
@@ -143,5 +145,6 @@ Vector Displacement :guilabel:`Sculpt Mode`
    Use the color channels to displace geometry in 3 vectors.
 
    .. note::
+
       This is only supported for the :doc:`Draw </sculpt_paint/sculpting/tools/draw>` brush
       with :ref:`Area Plane <bpy.types.BrushTextureSlot.map_mode>` mapping enabled.

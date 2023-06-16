@@ -36,6 +36,7 @@ Edge Index
    The index of the input edge.
 
    .. note::
+
       By default this uses the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
       from the field context, which makes it important that the node is evaluated on
       the edge domain.

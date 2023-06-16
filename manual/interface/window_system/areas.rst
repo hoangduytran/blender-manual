@@ -23,6 +23,7 @@ Areas are grouped into :doc:`Workspaces </interface/window_system/workspaces>`,
 which are geared towards particular tasks (modeling, animating and so on).
 
 .. note::
+
    While some keyboard shortcuts in Blender are global (such as :kbd:`Ctrl-S`
    for saving), many depend on which editor the mouse cursor is hovering over.
 

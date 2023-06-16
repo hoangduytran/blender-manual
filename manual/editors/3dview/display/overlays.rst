@@ -248,6 +248,7 @@ Face Angle
 
 
 .. seealso::
+
    The :doc:`Measure </editors/3dview/toolbar/measure>` tool for measuring
    arbitrary distances and angles.
 

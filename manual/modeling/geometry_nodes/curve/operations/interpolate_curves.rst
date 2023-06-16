@@ -25,6 +25,7 @@ Guide Up
    wouldn't have a way to know about.
 
    .. tip::
+
       In a typical "child hair" generation setup, this up direction is retrieved with a combination
       of the :doc:`/modeling/geometry_nodes/mesh/sample/sample_uv_surface` using the same geometry
       that the points were distributed on, and the :doc:`/modeling/geometry_nodes/geometry/read/normal`.
@@ -58,6 +59,7 @@ Closest Index
    Index of the closest guide curve for each generated curve.
 
    .. note::
+
       Internally this node mixes the data from multiple guide curves, with the maximum number
       of sources depending on the *Max Neighbor* input. This output is only the index of the curve
       with the largest weight.

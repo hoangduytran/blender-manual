@@ -16,6 +16,7 @@ This is an essential sculpting brush to be used frequently to build shapes and a
 .. figure:: /images/sculpt-paint_sculpting_grab_example.jpg
 
 .. note::
+
    The effect is similar to moving geometry in Edit Mode with Proportional Editing enabled,
    except that *Grab* can make use of other Sculpt Mode options and brush settings.
 

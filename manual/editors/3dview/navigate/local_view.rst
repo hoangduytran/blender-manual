@@ -35,6 +35,7 @@ from the View menu or using the shortcut :kbd:`NumpadSlash`.
           Local View.
 
 .. note::
+
    In local view, the 3D cursor is not locked to the scene.
    Instead, each view has an independent cursor location.
 

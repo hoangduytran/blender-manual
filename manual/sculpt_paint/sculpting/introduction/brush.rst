@@ -13,6 +13,7 @@ The inner ring of the brush cursor is used to visualize the strength of the brus
 .. figure:: /images/sculpt-paint_sculpting_introduction_brush.jpg
 
 .. note::
+
     How closely the cursor follows the curvature of the mesh can be changed in
     the :doc:`Brush Settings </sculpt_paint/sculpting/tool_settings/brush_settings>` with "Normal Radius".
     This can make hard surface sculpting easier, for example with the

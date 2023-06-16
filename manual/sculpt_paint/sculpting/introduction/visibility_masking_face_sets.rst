@@ -25,6 +25,7 @@ and :kbd:`Shift-H` to hide the face set under the cursor.
 is also available in the :kbd:`W` pie menu.
 
 .. seealso::
+
    More information for controlling the visibility at :doc:`Show & Hide </sculpt_paint/sculpting/editing/sculpt>`.
 
 Masks
@@ -59,6 +60,7 @@ Both these operators can be quickly accessed in the :kbd:`A` pie menu.
 
 
 .. seealso::
+
    More information about editing and using masks at the :doc:`Mask Menu </sculpt_paint/sculpting/editing/mask>`
 
 Face Sets
@@ -83,6 +85,7 @@ They can also be edited with the
 :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool.
 
 .. seealso::
+
    More information about editing and using face sets at the
    :doc:`Face Sets Menu </sculpt_paint/sculpting/editing/face_sets>`
 

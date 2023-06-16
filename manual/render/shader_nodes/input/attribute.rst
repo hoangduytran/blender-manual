@@ -64,6 +64,7 @@ Type
       If the current object is not instanced, or the property is not found, it falls back to the *Object* mode.
 
       .. warning::
+
          Currently only up to 4 layers of Geometry Node instancing are searched.
    :View Layer:
       The attribute is looked up in the current :doc:`View Layer </scene_layout/view_layers/introduction>`,
@@ -71,6 +72,7 @@ Type
       logic as *Object*. Attributes of this type have the same uniform value throughout the whole Render Layer.
 
       .. tip::
+
          This gives access to a number of useful built-in properties, for example:
 
          ``color`` or ``world.color``

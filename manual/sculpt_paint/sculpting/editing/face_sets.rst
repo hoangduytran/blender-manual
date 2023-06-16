@@ -101,6 +101,7 @@ Expand Face Set
 ===============
 
 .. note::
+
    More info on Face Set Expand at the :ref:`Expand page <bpy.ops.sculpt.expand>`.
 
 

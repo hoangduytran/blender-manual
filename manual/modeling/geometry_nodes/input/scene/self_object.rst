@@ -13,6 +13,7 @@ The *Self Object* node outputs the object that contains the geometry nodes modif
 currently being executed. This can be used to retrieve the original transforms.
 
 .. note::
+
    The geometry cannot be retrieved from this object with the
    :doc:`/modeling/geometry_nodes/input/scene/object_info`, since its final geometry is still
    being evaluated.

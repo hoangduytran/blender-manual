@@ -92,6 +92,7 @@ Pattern Creation
       An example of using loops and gradients with multiple expanded masks.
 
    .. tip::
+
       Remember that Expand only affects visible geometry.
       So if a pattern should only be created on a part of the mesh,
       :doc:`hide </sculpt_paint/sculpting/editing/sculpt>` the other geometry first.
@@ -112,6 +113,7 @@ Expanding Textures
    in the :doc:`Texture Properties </render/materials/legacy_textures/index>`.
 
    .. note::
+
       This texture only works when the :ref:`Mapping <bpy.types.BrushTextureSlot.map_mode>` is set to *3D*.
 
    Use :kbd:`Y` and :kbd:`T` to increase or decrease the affect the texture has on the edge of the mask.
@@ -184,12 +186,14 @@ meaning all the shortcuts and functionality works the same as that tool.
 This operator is especially useful for hard surface sculpting.
 
 .. tip::
+
     If one expansion does not properly fill the entire desired surface,
     use the operator repeatedly with a different starting point.
 
 .. needs visual practical example
 
 .. note::
+
    Using any of the Falloff shortcuts :kbd:`1-4`
    will replace the curvature falloff of this operator.
 
@@ -256,6 +260,7 @@ This operator uses the same internal operator as :ref:`bpy.ops.sculpt.expand`
 meaning all the hotkeys and functionality works the same as that tool.
 
 .. note::
+
    Using any of the Falloff shortcuts :kbd:`1-4`
    the operator to switch to :ref:`Expand Face Set by Topology <face_set_expand>`.
 

@@ -195,6 +195,7 @@ Target Rig :guilabel:`auto`
    allowing it to be freely renamed if the default naming scheme doesn't fit.
 
    .. note::
+
       When the option isn't set, Rigify will create a brand new rig object even if an object
       with a matching name already exists.
 

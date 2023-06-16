@@ -7,6 +7,7 @@ Attach Hair Curves to Surface
 Attaches hair curves to a surface mesh.
 
 .. note::
+
    This node/modifier will not function without the *Surface* geometry/object and *Surface UV Map* inputs.
 
 .. peertube:: keeNa3Rpe7grQvX5d35w8H
@@ -31,6 +32,7 @@ Surface Rest Position
    Set the surface mesh into its rest position before attachment.
 
    .. tip::
+
       In a typical hair generation setup, this node or modifier will be
       combined with the :doc:`/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
       If that operation comes after this one, it makes sense to turn this option on so the

@@ -35,6 +35,7 @@ Resolution X,Y,Z
    The number of voxels to evaluate the field in on each axis.
 
    .. note::
+
       Changing these values can have a significant impact on performance. For example, the default values
       of 32 mean the input field will be evaluated about 33 thousand times. Increasing the values to 100
       will give 1 million evaluations, and 1000 would give 1 billion.

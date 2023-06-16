@@ -72,6 +72,7 @@ if you have the *Grave Accent / Tilde Action* in the
 :doc:`Keymap Preferences </editors/preferences/keymap>` set to *Gizmos*.
 
 .. note::
+
    If you're using a tool that's tied to a particular gizmo setup (the *Move*, *Rotate*,
    *Scale* and *Transform* tools), the Move/Rotate/Scale checkboxes won't have any effect.
 

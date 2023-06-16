@@ -15,6 +15,7 @@ Primitives
    When adding curves there are some common options like other :ref:`Objects <object-common-options>`.
 
 .. note::
+
    Eventually all the primitive curves will be replaced to use the same curve system used for hair curves.
    Until this is done, their features will diverge.
 

@@ -113,6 +113,7 @@ Offset
    (Put differently: how many frames at the start of the video to skip.)
 
    .. hint::
+
       Blender plays video textures at the scene framerate, not their original framerate,
       meaning they'll be faster or slower than intended if these framerates don't match up.
       You can put a :doc:`Driver </animation/drivers/introduction>` on the Offset to work

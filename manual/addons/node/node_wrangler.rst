@@ -299,12 +299,14 @@ for Shader, the final Group Output for Geometry Nodes) to preview its output in 
 You can cycle through the available outputs by clicking it again while holding the modifier keys.
 
 .. seealso::
+
    While in Shader, any output can be connected to the final output, in Geometry Nodes, only Geometry outputs
    can be connected to the final output.
    To preview other types of outputs in Geometry Nodes,
    use its own :doc:`Viewer Node </modeling/geometry_nodes/output/viewer>`.
 
 .. seealso::
+
    Also check out *Connect to Output*. It is a similar function but has different behaviors.
    It also works in all node editors.
 

@@ -10,6 +10,7 @@ existing curves is desired, the :doc:`/modeling/geometry_nodes/hair/generation/i
 is a better choice.
 
 .. note::
+
    This node/modifier will not function without the *Surface* geometry/object and *Surface UV Map* inputs.
 
 .. peertube:: nkB43evNMakLmvuoExgKuF
@@ -32,6 +33,7 @@ Surface Rest Position
    Set the surface mesh into its rest position before attachment.
 
    .. tip::
+
       In a typical hair generation setup, this node or modifier will be
       combined with the :doc:`/modeling/geometry_nodes/curve/operations/deform_curves_on_surface`.
       If that operation comes after this one, it makes sense to turn this option on so the
@@ -62,6 +64,7 @@ Mask Texture
    The image is sampled with the *Surface UV Map* input.
 
    .. tip::
+
       The accuracy of sampling the image doesn't depend on the density of the surface mesh's vertices
       because it is sampled after the curve root points are generated, the accuracy . However, using
       the *Density Mask* input instead can give better performance. Using them in combination can

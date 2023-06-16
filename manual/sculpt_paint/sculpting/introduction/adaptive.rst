@@ -28,6 +28,7 @@ Reaching high vertex counts should still be achievable with this technique, depe
    Or avoid any holes in the mesh/volume that are larger than the defined voxel size.
 
 .. tip::
+
    If in doubt, you can fill all holes in edit mode or by using the
    :ref:`Mask Slice and Fill Holes <bpy.ops.mesh.paint_mask_slice>`
    operation to fill all holes in the mesh. If nothing is masked, it only fills any holes.
@@ -67,6 +68,7 @@ To more easily access this feature, use the shortcuts :kbd:`Ctrl-D` to enabled D
 and :kbd:`R` to define the resolution.
 
 .. note::
+
    Because Dyntopo and the Voxel Remesher are mutually exclusive and cannot be used at the same time,
    both use the same shortcut to define the remeshing resolution.
 
@@ -93,6 +95,7 @@ only that the subdivisions can be freely sculpted for very high resolution detai
 .. figure:: /images/sculpt-paint_sculpt_multires_example.png
 
 .. note::
+
    For this technique it is highly recommended to use on a clean topology base mesh.
    This means the base mesh should be only made of quads
    and avoid non-manifold faces, as well as poles with two connected edges.
@@ -113,6 +116,7 @@ The topology should also not be changed once already subdivided,
 since any edits to the base mesh will result in corrupted subdivision details.
 
 .. tip::
+
    Pay attention to the topology that you sculpt and how much it gets stretched.
    If more resolution is needed you can always subdivide another time,
    but there will be worse performance and slower level switching once more than 5 subdivisions are used.

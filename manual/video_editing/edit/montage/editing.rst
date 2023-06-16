@@ -610,6 +610,7 @@ moving handle effectively means moving a frame to new position. When handle is m
 right will be moved by same amount. Handels can not be moved past each other or start of the strip.
 
 .. hint::
+
    Speed can be set by clicking on speed label and inputting new value.
 
 .. note::
@@ -643,4 +644,5 @@ Freeze frame can be created by adding retiming handle to frame you want to freez
 the handle.
 
 .. note::
+
    It is not possible to make smooth transition into freeze frame

@@ -20,6 +20,7 @@ to further adjustments and tweaks to the result
 (which do not depend that much on a clean topology).
 
 .. tip::
+
    Boundaries to hidden geometry will also be counted as an open boundary.
 
 The boundary origin is displayed via a white line, which indicates the reach of the deformation.
@@ -41,6 +42,7 @@ General
 *******
 
 .. note::
+
    More info at :ref:`sculpt-tool-settings-brush-settings-general` brush settings
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 

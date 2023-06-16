@@ -17,6 +17,7 @@ This node is similar to the :doc:`/modeling/geometry_nodes/geometry/sample/geome
 but it gives the value of any attribute at the closest surface point, not just its position.
 
 .. warning::
+
    Because the node samples the *surface* of a mesh rather than its edges or vertices,
    values from loose points and edges are ignored.
 

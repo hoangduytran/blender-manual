@@ -37,6 +37,7 @@ Inputs
    time is defined in the :doc:`node group inputs panel </interface/controls/nodes/groups>`.
 
    .. note::
+
       The :ref:`attribute domain <attribute-domains>` and the used to access the attribute is defined by the
       node the input is connected to.
 
