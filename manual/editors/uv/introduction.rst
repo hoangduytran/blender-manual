@@ -64,7 +64,6 @@ the flattening, using :doc:`seams </modeling/meshes/uv/unwrapping/seams>` for ex
 However, it's not always possible to eliminate it completely.
 
 
-
 Interface
 =========
 

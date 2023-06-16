@@ -46,4 +46,3 @@ Point Index
 
 Total
    The number of control points in the curve.
-

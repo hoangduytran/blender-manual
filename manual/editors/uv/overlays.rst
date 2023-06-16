@@ -5,7 +5,7 @@ Overlays
 
 .. figure:: /images/editors_uv_overlays.png
    :align: right
-   
+
    The Overlays pop-over.
 
 In the header, there is a button to turn off all overlays for the UV Editor.

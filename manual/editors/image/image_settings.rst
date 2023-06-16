@@ -187,7 +187,7 @@ Seam Margin
    A higher value will result in a thicker margin, which can be useful if you intend to create mipmaps
    of the texture. However, this may also reduce painting performance.
 
-   .. note ::
+   .. note::
 
       This setting only affects Sculpt Mode, where texture painting support is currently experimental.
       In Texture Paint Mode, a fixed margin is used instead.

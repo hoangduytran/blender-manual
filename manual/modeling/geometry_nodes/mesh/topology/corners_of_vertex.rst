@@ -50,4 +50,3 @@ Corner Index
 
 Total
    The number of faces or face corners connected to the vertex.
-

@@ -35,4 +35,3 @@ Outputs
 
 Self Object
    The object currently being evaluated.
-

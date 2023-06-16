@@ -66,4 +66,3 @@ Surface UV Coordinate
 
 Surface Normal
    Surface normal at the attachment point.
-

@@ -19,6 +19,7 @@ The settings only apply to the current 3D Viewport. Object types marked as unsel
 can still be selected in other viewports and in the
 :doc:`Outliner </editors/outliner/introduction>`, for example.
 
-.. seealso ::
+.. seealso::
+
    Outliner :ref:`Restriction Columns <editors-outliner-interface-restriction_columns>`
    for making individual objects invisible or unselectable across all viewports.

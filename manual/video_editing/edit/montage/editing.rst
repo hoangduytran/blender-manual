@@ -640,7 +640,7 @@ Freeze Frames
 -------------
 
 Freeze frame can be created by adding retiming handle to frame you want to freeze. Then while holding ctrl key, drag
-the handle. 
+the handle.
 
 .. note::
    It is not possible to make smooth transition into freeze frame

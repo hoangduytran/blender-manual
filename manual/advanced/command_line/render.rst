@@ -98,5 +98,5 @@ Cycles
 ------
 
 In addition to the options above, which apply to all render engines,
-Cycles has additional options to further control its behavior. 
+Cycles has additional options to further control its behavior.
 See :ref:`Cycles Render Options <command-line-args-cycles-render-options>`

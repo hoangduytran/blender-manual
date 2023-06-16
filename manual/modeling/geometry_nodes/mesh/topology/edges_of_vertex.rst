@@ -51,4 +51,3 @@ Edge Index
 
 Total
    The number of edges connected to the vertex.
-

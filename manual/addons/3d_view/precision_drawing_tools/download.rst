@@ -12,7 +12,6 @@ Downloads should only be taken the from the
 `official releases page <https://github.com/Clockmender/Precision-Drawing-Tools/releases>`__.
 
 
-
 Patches and Commits, that may add new features and/or bug fixes may be downloaded
 from the Commits to the Master branch, no development code should be used
 in any Production Environment, unless you accept that it is at your own risk.
