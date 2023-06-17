@@ -349,10 +349,36 @@ If you select a directory and hit :kbd:`Return`, you will go into that directory
 Editing
 =======
 
+.. _bpy.ops.file.external_operation:
+
+External
+   Use the operating system to perform an action on the file or directory.
+   The options listed below might not be available on all operating systems.
+
+   :Open: Open the file.
+   :Open Folder: Open the folder.
+   :Edit: Edit the file.
+   :New: Create a new file of this type.
+   :Find File: Search for files of this type.
+   :Show: Show this file.
+   :Play: Play this file.
+   :Browse: Browse this file.
+   :Preview: Preview this file.
+   :Print: Print this file.
+   :Install: Install this file.
+   :Run As User: Run as specific user.
+   :Properties: Show OS Properties for this item.
+   :Find in Folder: Search for items in this folder.
+   :Command Prompt Here: Open a command prompt here.
+
+.. _bpy.ops.file.delete:
+
 Delete Files :kbd:`Delete`, :kbd:`X`
    Delete the currently selected files or directories by moving them to the operating system's "trash".
 
    Note, on Linux deleting directories requires KDE or GNOME.
+
+.. _bpy.ops.file.rename:
 
 Rename :kbd:`F2`
    Change the name for the currently selected file or directory.
