@@ -30,6 +30,8 @@ that determine how the driver works.
 Driver Settings
 ===============
 
+.. _bpy.types.Driver.type:
+
 Type
 ----
 
@@ -72,6 +74,7 @@ This button only appears in the popover version of the Drivers panel.
 
 
 .. _drivers-variables:
+.. _bpy.types.DriverTarget:
 
 Driver Variables
 ================
@@ -90,6 +93,9 @@ in order for dependencies to be correctly tracked.
 Add Input Variable
    Adds a new Driver Variable.
 
+.. _bpy.ops.graph.driver_variables_copy:
+.. _bpy.ops.graph.driver_variables_paste:
+
 Copy/Paste Variables
    Copies the current variable list so it can be pasted into another driver's variable list.
 
@@ -107,9 +113,13 @@ Copy/Paste Variables
 
           Distance.
 
+.. _bpy.types.DriverVariable.name:
+
 Name
    Name for use in scripted expressions.
    The name must start with a letter, and only contain letters, digits, or underscores.
+
+.. _bpy.types.DriverVariable.type:
 
 Variable Type
    The type of variable to use.
@@ -177,13 +187,10 @@ Rotation Transform Channels support a number of operation modes, including:
 
 Auto Euler
    Uses the :term:`Euler` order of the target to decompose rotation into channels.
-
 XYZ Euler, ...
    Explicitly specifies the :term:`Euler` rotation order to use.
-
 Quaternion
    Provides the :term:`Quaternion` representation of the rotation.
-
 Swing and X/Y/Z Twist
    Decomposes the rotation into two parts: a :term:`Swing` rotation that aims the specified
    axis in its final direction, followed by a :term:`Twist <Swing>` rotation around that axis.
@@ -223,6 +230,8 @@ Swing and X/Y/Z Twist
 Expressions
 ===========
 
+.. _bpy.types.Driver.expression:
+
 Expression
    A text field where you can enter an arbitrary Python expression that refers to
    *Driver Variables* by their names.
@@ -232,6 +241,8 @@ Expression
    a custom function to the namespace, see the :ref:`driver namespace example <driver-namespace>`.
 
    For performance reasons it is best to use the `Simple Expressions`_ subset as much as possible.
+
+.. _bpy.types.Driver.use_self:
 
 Use Self
    If this option is enabled, the variable ``self`` can be used for drivers to reference their own data.
