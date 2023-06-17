@@ -173,6 +173,20 @@ Variable Type
       Provides the value of the rotational difference between two objects or bones, in radians.
    Distance
       Provides the value of the distance between two objects or bones.
+   Context Property
+      Provides the value of a property that is implicitly referring to either a scene
+      or a view layer of the currently evaluating animation system.
+      This is a weak reference which does not lead to the scene or view layer
+      referenced from the driver to be linked when linking animation data.
+
+      An example when such properties comes in play is referring to a transformation
+      of the active camera. It is possible to setup driver in a character file,
+      and make the driver use the set camera when the character is linked into a set.
+
+      RNA Path
+         The RNA name of the property, based on a subset of Python attribute access syntax.
+         For example: ``location.x`` or ``location[0]`` for the raw X location value, or
+         ``["prop_name"]`` for a custom property.
 
 Value
    Shows the value of the variable.
