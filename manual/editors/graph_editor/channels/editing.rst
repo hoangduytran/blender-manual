@@ -177,6 +177,25 @@ Revive Disabled F-Curves
 Clears "disabled" tag from all F-Curves to get broken F-Curves working again.
 
 
+.. _bpy.ops.anim.channels_view_selected:
+
+Frame Selected Channels
+=======================
+
+.. reference::
+
+   :Menu:      :menuselection:`Channel --> Frame Selected Channels`
+   :Shortcut:  :kbd:`NumpadPeriod`
+
+Reset viewable area to show the selected channels.
+To frame the channel that is under the mouse cursor, use :kbd:`Alt-MMB`.
+
+Include Handles
+   Include handles of keyframes when calculating extents.
+Use Preview Range
+   Ignore frames outside of the preview range.
+
+
 .. _bpy.ops.graph.bake:
 
 Bake Curve
