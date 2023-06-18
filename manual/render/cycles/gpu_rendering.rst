@@ -97,7 +97,8 @@ Metal -- Apple (macOS)
 Metal is supported on Apple computers with Apple Silicon, AMD and Intel graphics cards.
 macOS 13.0 or newer is required to support all features and graphics cards.
 
-:ref:`Light Trees <bpy.types.CyclesRenderSettings.use_light_tree>` and :ref:`Shadow Caustics <bpy.types.CyclesObjectSettings.is_caustics_caster>` are not supported when using an AMD graphics card with Metal.
+:ref:`Light Trees <bpy.types.CyclesRenderSettings.use_light_tree>` and :ref:`Shadow Caustics 
+<bpy.types.CyclesObjectSettings.is_caustics_caster>` are not supported when using an AMD graphics card with Metal.
 
 
 Limitations
