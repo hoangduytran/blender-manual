@@ -65,7 +65,7 @@ Minimum driver versions:
 Please refer to `AMD's website <https://www.amd.com/en/graphics>`__ for more
 information about AMD graphics cards and their architectures.
 
-On Windows, experimental hardware ray-tracing support is available with the most recent drivers. This can be enabled in the preferences. However there are currently known issues regarding motion blur, hair rendering and degenerate triangle shapes.
+On Windows, experimental hardware ray-tracing support is available with the most recent drivers. This can be enabled in the preferences. However there are currently known issues regarding hair rendering and degenerate triangle shapes.
 
 The *Clip* extension mode in :doc:`/render/shader_nodes/textures/image` is not supported for HIP.
 
