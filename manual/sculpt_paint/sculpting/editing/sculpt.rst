@@ -6,13 +6,41 @@ Sculpt
 This page details the general hotkey operators and menu operators in sculpt mode.
 
 
+Transforms
+==========
+
+Move
+   Change the position of the object.
+Rotate
+   Change the orientation of the mesh.
+Scale
+   Increase/decrease the size of the mesh.
+Sphere
+   Morph the mesh to a spherical shape.
+
+.. seealso::
+
+   :doc:`Transform Tools </sculpt_paint/sculpting/tools/transforms>`.
+
+
 Show & Hide
 ===========
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Sculpt`
 
 Some very common hotkey operators to control the visibility based on face sets.
 These are not part of any menu and have to be used via the shortcuts.
 More visibility operators can be found in the :doc:`Face Sets Menu </sculpt_paint/sculpting/editing/face_sets>`
 and the Pie Menu shortcut :kbd:`W`. (Since visibility is often toggled via face sets.)
+
+Box Hide
+   Draw a box to hide faces of a mesh.
+Box Show
+   Draw a box to reveal hidden faces.
+   This works similar to the :ref:`Box Select <tool-select-box>` tool.
 
 .. _bpy.ops.sculpt.face_set_change_visibility:
 
@@ -31,18 +59,10 @@ Hide Active Face Set :kbd:`Shift-H`
 
 .. _sculpt_show_all:
 
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Sculpt`
-
 Show All :kbd:`W`, :kbd:`Alt-H`
    Reveal all hidden faces.
-Show Bounding Box
-   Draw a box to reveal hidden faces.
-   This works similar to the :ref:`Box Select <tool-select-box>` tool.
-Hide Bounding Box
-   Draw a box to hide faces of a mesh.
+Invert Visible Face Sets
+   Hides all geometry that is part of a face set and makes all hidden geometry that is part of a face set visible.
 Hide Masked
    Hides all masked vertices.
 
@@ -50,6 +70,118 @@ Hide Masked
 
    For a more general introduction see
    :doc:`Visibility, Masking & Face Sets </sculpt_paint/sculpting/introduction/visibility_masking_face_sets>`.
+
+
+Trimming
+========
+
+The trimming operators add or remove geometry from the mesh based on a gesture input.
+These operators are especially useful for sketching an early base mesh for further
+sculpting with the :doc:`voxel remesher </sculpt_paint/sculpting/tool_settings/remesh>`.
+
+.. _bpy.ops.sculpt.trim_box_gesture:
+
+:doc:`/sculpt_paint/sculpting/tools/box_trim`
+   Removes geometry based on a :ref:`box selection <tool-select-box>`.
+
+.. _bpy.ops.sculpt.trim_lasso_gesture:
+
+:doc:`/sculpt_paint/sculpting/tools/lasso_trim`
+   Removes geometry based on a :ref:`lasso selection <tool-select-lasso>`.
+
+:doc:`Box Add </sculpt_paint/sculpting/tools/box_trim>`
+   Adds geometry based on a :ref:`box selection <tool-select-box>`.
+
+:doc:`Lasso Add </sculpt_paint/sculpting/tools/lasso_trim>`
+   Adds geometry based on a :ref:`lasso selection <tool-select-lasso>`.
+
+.. _bpy.ops.sculpt.project_line_gesture:
+
+:doc:`/sculpt_paint/sculpting/tools/line_project`
+   Flattens the geometry along a plane determined by the camera view and a drawn line.
+   The region of the mesh being flattened is visualized by the side of the line that is shaded.
+
+
+Fairing
+=======
+
+These operators smooths geometry patches based of a :doc:`Face set </sculpt_paint/sculpting/editing/face_sets>`.
+
+.. seealso::
+
+   :doc:`Edit Face Set Tool </sculpt_paint/sculpting/tools/edit_face_set>`
+
+Fair Positions
+   Creates a perfectly flat and smooth geometry patch from the face set.
+   This is the ideal way to trim parts of your mesh
+   if the vertex count is too high for other operations,
+   or the vertex IDs must not be altered
+   (Like when using :doc:`Multires </modeling/modifiers/generate/multiresolution>` sculpting).
+
+Fair Tangency
+   Creates a smooth as possible geometry patch from the face set
+   by minimizing changes in vertex :term:`tangents <Tangent>`.
+   This is ideal for creating smooth curved surfaces on complex topology,
+   where just using the smooth brush will not lead to desired results
+
+
+.. _bpy.ops.sculpt.mesh_filter:
+
+Mesh Filters
+============
+
+Applies a deformation to all vertices in the mesh at the same time.
+Masking, auto-masking and visibility will be taken into account.
+
+To use these operators, click and drag away from left to right
+or from right to left for a negative effect.
+
+.. seealso::
+
+   :doc:`Mesh Filter Tool </sculpt_paint/sculpting/tools/mesh_filter>`
+
+Smooth
+   Smooths the positions of the vertices to either polish surfaces or remove volume from larger shapes.
+   Especially useful to fix most of the artifacts of the voxel remesher.
+   This filter works similar to the :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+Surface Smooth
+   Eliminates irregularities of the mesh by making the positions
+   of the vertices more uniform while preserving the volume of the object.
+   This filter works similar to the *Surface* deformation type of the
+   :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+Inflate
+   Displaces vertices uniformly along their normal.
+   This filter works similar to the :doc:`Inflate </sculpt_paint/sculpting/tools/inflate>` brush.
+Relax Topology
+   Tries to create an even distribution of quads without deforming the volume of the mesh.
+   This filter works the same as holding :kbd:`Shift` with the
+   :doc:`Slide Relax </sculpt_paint/sculpting/tools/slide_relax>` brush.
+Relax Face Sets
+   This will remove the jagged lines visible after drawing or creating a face set.
+   This filter works the same as holding :kbd:`Shift` with the
+   :doc:`Draw Face Set </sculpt_paint/sculpting/tools/draw_facesets>` brush.
+Sharpen
+   Sharpens and smooths the mesh based on its curvature,
+   resulting in pinching hard edges and polishing flat surfaces.
+   Especially useful when sculpting hard surfaces and stylized models
+   with creasing and flattening brushes.
+Enhance Details
+   Increases the high frequency surface details of the mesh
+   by intensifying the difference between creases and valleys.
+   This filter works similar to the inverted direction of the
+   :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+Erase Displacement
+   Deletes displacement information of
+   the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,
+   resetting the mesh to a regular subdivision surface result.
+   This can be used to reset parts of the sculpt or to fix reprojection artifacts
+   after applying a :doc:`Shrinkwrap Modifier </modeling/modifiers/deform/shrinkwrap>`.
+
+   Negative strokes will intensify the displacement details,
+   this method works similar to *Enhance Details* and can give better results in some circumstances.
+Random
+   Randomly moves vertices along the vertex normal.
+   This filter works similar to the :ref:`Randomize Transform <bpy.ops.object.randomize_transform>`.
 
 
 .. _bpy.ops.sculpt.set_pivot_position:
@@ -90,23 +222,6 @@ Surface
    For a more general introduction see :doc:`Transforming </sculpt_paint/sculpting/introduction/transforming>`.
 
 
-Transfer Sculpt Mode
-====================
-
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Sculpt --> Transfer Sculpt Mode`
-   :Shortcut:  :kbd:`Alt-Q`
-
-Switches Sculpt Mode from the :term:`Active` object to the object under the mouse.
-See :ref:`bpy.ops.object.transfer_mode` for more information.
-
-.. seealso::
-   For a more general introduction see
-   :doc:`Working with Multiple Objects </sculpt_paint/sculpting/introduction/multiple_objects>`.
-
-
 .. _bpy.ops.sculpt.optimize:
 
 Rebuild BVH
@@ -123,3 +238,20 @@ to improve performance, which might degrade over time while using Dyntopo.
 .. seealso::
 
    For a more general introduction see :doc:`Adaptive Resolution </sculpt_paint/sculpting/introduction/adaptive>`.
+
+
+Transfer Sculpt Mode
+====================
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Sculpt --> Transfer Sculpt Mode`
+   :Shortcut:  :kbd:`Alt-Q`
+
+Switches Sculpt Mode from the :term:`Active` object to the object under the mouse.
+See :ref:`bpy.ops.object.transfer_mode` for more information.
+
+.. seealso::
+   For a more general introduction see
+   :doc:`Working with Multiple Objects </sculpt_paint/sculpting/introduction/multiple_objects>`.
