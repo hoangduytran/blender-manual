@@ -34,8 +34,8 @@ Outputs
 =======
 
 Island Index
-   The index of the each vertex's island. Indices are decided based on the
-   lowest vertex index contained in each island
+   The index of each vertex's island. Indices are decided based on the
+   lowest vertex index contained in each island.
 
 Island Count
    The total number of mesh islands. This is a single value, and does not vary per element.
