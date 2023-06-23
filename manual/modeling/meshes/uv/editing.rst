@@ -288,7 +288,7 @@ the tool will scale, translate and rotate the islands,
 ensuring a specified margin exists between them to maximize the usage of the UV space.
 Pinned islands can have additional restrictions applied to customize the packing process even further.
 
- Shape Method
+Shape Method
    The method to use when considering the shape of each island.
 
    :Exact Shape (Concave):
@@ -297,14 +297,11 @@ Pinned islands can have additional restrictions applied to customize the packing
       Takes into account the boundary (Convex Hull) of the island.
       This method will not place islands inside holes.
    :Bounding Box: Uses the simple bounding box of the island.
-
- Scale
+Scale
    Scale the islands to fill the unit square, or pack islands towards the lower left corner.
-
- Rotate
+Rotate
    Allows the rotation of islands, as well as translation and scaling, to optimize texture usage.
-
- Rotation Method
+Rotation Method
    The allowable rotations to use for each each island.
 
    :Any:
@@ -312,34 +309,27 @@ Pinned islands can have additional restrictions applied to customize the packing
    :Axis-aligned:
       The island will first be rotated into a smallest rectangle. Additional rotation will only be in 90-degree turns.
    :Cardinal: Like the four cardinal directions on a compass, North, South, East and West, only 90-degree turns will be allowed.
-
-
- Margin Method
+Margin Method
    The method to use when calculating the empty space between islands.
 
    :Scaled: Use scale of existing UVs to multiply margin. (The default from Blender 3.3 and later.)
    :Add: Simple method, just add the margin. (This is the default margin scale from Blender 2.8 and earlier.)
    :Fraction: Precisely specify the fraction of the UV unit square for margin. (Slower than other two methods.)
-
- Margin
+Margin
    The scale for the empty space between islands.
-
- Pinned Islands
+Lock Pinned Islands
    An island which has any of its UVs pinned is considered a *Pinned Island*.
-   With this option, you can change the way *Pinned Islands* are packed
+   With this option, *Pinned Islands* will be unable to move. The other islands will pack around them.
+Lock Method
+   Change the way *Pinned Islands* are packed
 
-   :Pack: *Pinned Islands* are packed in the same way as other islands.
-   :Lock Scale: The scale of the *Pinned Islands* will not change.
-   :Lock Rotation: *Pinned Islands* will not rotate.
-   :Lock Rotation and Scale: *Pinned Islands* can translate, but not scale nor rotate.
-   :Lock in Place: *Pinned Islands* will be unable to move. The other islands will pack around them.
-   :Ignore: Even if an island is selected, if it contains a pin, it will not be included in the *Pack Islands* calculation.
-
- Merge Overlapping
+   :Scale: The scale of the *Pinned Islands* will not change.
+   :Rotation: *Pinned Islands* will not rotate.
+   :Rotation and Scale: *Pinned Islands* can translate, but not scale nor rotate.
+Merge Overlapping
    Before the main packing operation, overlapping islands are detected and temporarily combined.
    During packing, the relative rotation and position of the merged islands are preserved.
-
- Pack To
+Pack To
    Determines the final placement of UV islands after completing the packing operation.
 
    :Closest UDIM: Pack islands to the :doc:`UDIM </modeling/meshes/uv/workflows/udims>` grid
@@ -351,7 +341,7 @@ Pinned islands can have additional restrictions applied to customize the packing
 
 .. note::
 
-   The performance of the *Pack Islands* tool is heavily affected by the options selected,
+   The performance of the *Pack Islands* operator is heavily affected by the options selected,
    and sometimes the options can combine in different ways to produce unexpectedly slower results.
 
    The fastest results can be obtained by using the "Bounding Box" shape method and the "Add" margin method.
