@@ -92,9 +92,9 @@ Contour
    Where the edge becomes the separation line of front/backfacing faces.
    The silhouette can also be inverted by clicking the invert button.
 
-    :Contour: Generate lines from contour.
-    :Silhouette: Only generate lines from the silhouette of the source objects as a whole.
-    :Individual Silhouette: Generate lines from the individual silhouettes of the source objects.
+   :Contour: Generate lines from contour.
+   :Silhouette: Only generate lines from the silhouette of the source objects as a whole.
+   :Individual Silhouette: Generate lines from the individual silhouettes of the source objects.
 
 .. _bpy.types.LineartGpencilModifier.use_crease:
 

@@ -54,5 +54,9 @@ Mode
 
             After using Fair Tangency.
 
+Strength
+   The amount of effect the filter has on the mesh.
+   This setting is only available for the fairing operations.
+
 Modify Hidden
    Apply the edit operation to hidden face sets.
