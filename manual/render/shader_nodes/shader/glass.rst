@@ -37,8 +37,6 @@ Properties
 Distribution
    Microfacet distribution to use.
 
-   :Sharp:
-      Results in perfectly sharp reflections like a mirror. The *Roughness* value is not used.
    :GGX: GGX microfacet distribution.
    :Multiple-scattering GGX: :guilabel:`Cycles Only`
       Takes multiple bounce (scattering) events between microfacets into account.

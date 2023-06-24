@@ -8,7 +8,6 @@
    :maxdepth: 1
 
    add.rst
-   anisotropic.rst
    background.rst
    diffuse.rst
    emission.rst
