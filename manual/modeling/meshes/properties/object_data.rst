@@ -100,6 +100,8 @@ Convert Color Attribute
       :Byte Color: RGBA color with 8-bit precision.
 
 
+.. _bpy.types.AttributeGroup:
+
 Attributes
 ==========
 
