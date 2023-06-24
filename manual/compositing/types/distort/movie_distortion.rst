@@ -9,8 +9,6 @@ Movie Distortion Node
    :align: right
    :alt: Movie Distortion Node.
 
-:guilabel:`CPU Compositor Only`
-
 In the real world, all camera lenses produce some or the other sort of lens distortion.
 But, whatever we render has got no distortion. So, this node helps in removing distortion from movies
 or adding distortion to render to make our render blend in with the movie clip.
