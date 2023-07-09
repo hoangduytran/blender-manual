@@ -28,8 +28,16 @@ Voxel Amount
 Voxel Size
    Specify the voxel side length.
 
+Exterior Band Width
+   The maximum distance of the included voxels to the surface on the outside of the mesh.
+
 Interior Band Width
    The maximum distance of the included voxels to the surface on the inside of the mesh.
+
+Fill Volume
+   The entire enclosed volume or otherwise only the voxels close to the surface
+   will get a density greater than zero.
+   This setting is only used when the mesh object is :term:`Manifold`.
 
 
 Properties
@@ -40,6 +48,7 @@ Resolution
 
    :Amount:
       Specify the approximate number of voxels along the diagonal.
+
    :Size:
       Specify the voxel side length. It is recommended to be careful when tweaking this value,
       because small changes can have a large effect on the processing time.

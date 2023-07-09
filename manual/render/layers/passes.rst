@@ -60,10 +60,8 @@ Indexes
       the :doc:`ID Mask Node </compositing/types/converter/id_mask>` in the Compositor.
 
 Debug
-   Render Time
-      Render time in milliseconds per sample and pixel.
    Sample Count
-      Number of samples/camera rays per pixel.
+      Number of samples/camera rays per pixel, to analyze adaptive sampling.
 
 Alpha Threshold
    Z, Index, normal, UV and vector passes are
