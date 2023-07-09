@@ -39,8 +39,6 @@ Image
    Standard color output.
 Alpha
    Separate Alpha value.
-Z
-   Z depth layer.
 
 .. note:: Multi-Layer Format
 

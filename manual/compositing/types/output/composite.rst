@@ -25,8 +25,6 @@ Image
    RGB image. The default is black, so leaving this node unconnected will result in a black image.
 Alpha
    Alpha channel.
-Z
-   Z depth.
 
 
 Properties

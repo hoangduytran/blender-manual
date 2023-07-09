@@ -267,10 +267,6 @@ Codec
       JPEG-like lossy algorithm from DreamWorks; compresses blocks 32 scanlines together.
    :``DWAB``:
       Same as ``DWAA`` but compresses blocks of 256 scanlines.
-Z Buffer
-   Save the depth information.
-   In Blender, this now is written in floats too,
-   denoting the exact distance from the camera.
 Preview
    On rendering animations (or single frames via command line),
    Blender saves the same image also as a JPEG, for quick preview or download.

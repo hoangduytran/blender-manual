@@ -20,7 +20,10 @@ by pressing :kbd:`Shift-Ctrl-LMB` on it.
 Inputs
 ======
 
-See :doc:`Composite Node </compositing/types/output/composite>`.
+Image
+   RGB image. The default is black, so leaving this node unconnected will result in a black image.
+Alpha
+   Alpha channel.
 
 
 Properties
@@ -30,13 +33,13 @@ Tile Order
    The tile order can be defined for the backdrop image, using the *Tile order* field in the properties of
    the Viewer node (*Properties* panel in Sidebar region, with the Viewer node selected):
 
-   Rule of thirds
+   :Rule of thirds:
       Calculates tiles around each of the nine zones defined by the *rule of thirds*.
-   Bottom up
+   :Bottom up:
       Tiles are calculated from the bottom up.
-   Random
+   :Random:
       Calculates tiles in a non-specific order.
-   Center
+   :Center:
       Calculates the tiles around a specific center, defined by X and Y fields.
 
       X, Y

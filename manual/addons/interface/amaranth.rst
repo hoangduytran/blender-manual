@@ -383,15 +383,6 @@ file name for the current frame, and its playhead (in square brackets).
 
 Usage: Find it in the sequencer header.
 
-
-EXR Render: Warn when Z not connected
--------------------------------------
-
-Display a warning label when exporting EXR, with Z Buffer enabled,
-but the Z input in the **Composite** node is not connected.
-
-Usage: Find it in the Output panel, Render properties.
-
 .. reference::
 
    :Category: Interface
