@@ -27,4 +27,5 @@ General purpose nodes for modifying data.
    :maxdepth: 1
 
    random_value.rst
+   repeat_zone.rst
    switch.rst
