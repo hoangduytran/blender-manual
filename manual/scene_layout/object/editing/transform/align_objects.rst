@@ -21,24 +21,19 @@ High Quality
    if one or more of the selected objects have any rotation transformations
    (or delta rotation transformations), it is recommended to check *High Quality*
    so that their bounding box is calculated with precision for all three global axes.
-
 Align Mode
    The *Align Mode* control will define what part of the objects will be aligned:
 
-   Centers
+   :Centers:
       The objects centers.
-   Positive Sides/Negative Sides
+   :Positive Sides/Negative Sides:
       The positive or negative sides (on the global axes) of their respective bounding boxes.
 Relative To
    The *Relative To* control will let us choose to align the objects to:
 
-   Active
-      The active object.
-   Selection
-      The median point of the selection.
-   3D Cursor
-      The current position of the 3D Cursor.
-   Scene Origin
-      The global origin.
+   :Active: The active object.
+   :Selection: The median point of the selection.
+   :3D Cursor: The current position of the 3D Cursor.
+   :Scene Origin: The global origin.
 Align X, Y, Z
    Chooses which axis to align the selected objects on.
