@@ -21,7 +21,7 @@ The simulation is automatically cached during playback.
 The valid cache can be seen as a strong yellow line in the timeline editor.
 This allows for animators to quickly inspect all the previous frames of a simulation.
 
-.. figure:: /images/modeling-geometry_nodes-simulation-baking_timeline.png
+.. figure:: /images/modeling_geometry-nodes_simulation_baking_timeline.png
    :align: center
 
    Cached frames in the Timeline.
@@ -29,7 +29,7 @@ This allows for animators to quickly inspect all the previous frames of a simula
 When the result is ready to be sent to a render-farm, it can be baked to disk.
 This allows for the simulation to be rendered in a non-sequential order.
 
-.. figure:: /images/modeling-geometry_nodes-simulation-baking.png
+.. figure:: /images/modeling_geometry-nodes_simulation_baking.png
    :align: center
 
    Simulation and Physics, Geometry Nodes user interface.
@@ -70,7 +70,7 @@ Examples
 Combined with the :doc:`/modeling/geometry_nodes/geometry/sample/index_of_nearest`,
 this can be used for a number of sphere-based simulations.
 
-.. figure:: /images/modeling-geometry_nodes-simulation-example.png
+.. figure:: /images/modeling_geometry-nodes_simulation_example.png
    :align: center
 
    Index of Nearest sample file CC-BY Sean Christofferson.
