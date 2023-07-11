@@ -26,3 +26,6 @@ Geometry nodes can modify different types of geometry:
 
 The interface of the modifier is described in the
 :doc:`Modifier </modeling/modifiers/generate/geometry_nodes>` page.
+
+To expand Blender with node-group operators see the description in the 
+:doc:`Operators </modeling/geometry_nodes/operators>` page.
