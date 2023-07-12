@@ -27,9 +27,12 @@ Language Files
 
 From the directory containing your checkout of the manual run::
 
-   git clone https://projects.blender.org/blender/blender-manual-translations.git locale
+   make checkout_locale
 
-This will create a ``locale/fr`` subdirectory.
+You will be prompted to type in the language folder you want to download.
+In the case of this example we will use ``fr``. Pressing :kbd:`enter` will confirm this selection.
+
+It will take a few minutes to download but once complete it will create a ``locale/fr`` subdirectory.
 
 You should have a directory layout like this::
 
