@@ -84,8 +84,9 @@ Supported GPUs include:
 
 Minimum driver versions:
 
- - Windows: Intel Graphics Driver 30.0.101.4032
- - Linux: ``intel-level-zero-gpu`` package 22.10.24931
+ - Windows: Intel Graphics Driver XX.X.101.4314
+ - Linux: ``intel-level-zero-gpu`` package 1.3.25812,
+   typically available through the ``intel-compute-runtime`` package XX.XX.25812
 
 Please refer to `Intel's website <https://www.intel.com/content/www/us/en/products/details/discrete-gpus.html>`__
 for more information about Intel graphics cards and their architectures.

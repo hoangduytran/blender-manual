@@ -138,8 +138,8 @@ Variable Type
          The ID of the ID-block type. For example: "Material.001".
       RNA Path
          The RNA name of the property, based on a subset of Python attribute access syntax.
-         For example: ``location.x`` or ``location[0]`` for the raw X location value, or
-         ``["prop_name"]`` for a custom property.
+         For example: ``location.x`` or ``location[0]`` for the X location animation channel
+         value (before parenting or constraints), or ``["prop_name"]`` for a custom property.
 
       .. tip::
 
@@ -185,8 +185,19 @@ Variable Type
 
       RNA Path
          The RNA name of the property, based on a subset of Python attribute access syntax.
-         For example: ``location.x`` or ``location[0]`` for the raw X location value, or
-         ``["prop_name"]`` for a custom property.
+         For example: ``camera.location.x`` or ``camera.location[0]`` for the camera X location animation
+         channel value (before parenting or constraints), or ``["prop_name"]`` for a custom property.
+
+      .. tip::
+         Although the values of the x/y/z animation channels for the camera location can be accessed
+         via ``camera.location[0/1/2]``, retrieving its world space location and orientation after parenting
+         and constraints currently requires using ``camera.matrix_world``. This property can be understood
+         easily by viewing the matrix as an array of four vectors in *World* space:
+
+         * ``matrix_world[0][0/1/2]`` is the *Screen Right* direction vector (camera local X).
+         * ``matrix_world[1][0/1/2]`` is the *Screen Up* direction vector (camera local Y).
+         * ``matrix_world[2][0/1/2]`` is the **opposite** of the direction the camera is pointing.
+         * ``matrix_world[3][0/1/2]`` is the *location* of the camera.
 
 Value
    Shows the value of the variable.
