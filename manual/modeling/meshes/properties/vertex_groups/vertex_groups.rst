@@ -40,7 +40,7 @@ Active Vertex Group
       Sort by Bone Hierarchy
          (Todo)
 
-      Copy Vertex Group
+      Duplicate Vertex Group
          Add a copy of the active vertex group as a new group.
          The new group will be named like the original group with "_copy" appended at the end of its name.
          And it will contain associations to exactly the same vertices
