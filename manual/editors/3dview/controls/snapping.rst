@@ -24,59 +24,6 @@ or more temporarily by holding :kbd:`Ctrl`.
    Snap menu.
 
 
-.. _bpy.types.ToolSettings.snap_elements:
-
-Snap To
-=======
-
-.. reference::
-
-   :Mode:      Object, Edit, and Pose Mode
-   :Header:    :menuselection:`Snapping --> Snap To`
-   :Shortcut:  :kbd:`Shift-Ctrl-Tab`
-
-Determines the target which the selection will be snapped to.
-
-Increment
-   Snaps to grid points. When in Orthographic view, the snapping increment changes depending on the zoom level.
-
-   .. note::
-
-      By default, this option won't snap to the grid that's displayed in the viewport,
-      but an imaginary grid with the same resolution that starts at the selection's
-      original location. In other words, it lets you move the selection in "increments" of the
-      grid cell size.
-
-      If you want to snap to the viewport grid instead, you can enable *Absolute Grid Snap*
-      (see below).
-Vertex
-   Snaps to the vertex that's closest to the mouse cursor.
-Edge
-   Snaps to the edge that's closest to the mouse cursor.
-Face Project
-   Snaps to the face that's under the mouse cursor.
-Face Nearest
-   Individually snaps each object (in Object Mode) or vertex (in Edit Mode) to the face that's closest
-   to its new location. This makes it possible to snap to occluded geometry.
-Volume
-   Snaps the selection to a depth that's centered *inside* the object under the cursor.
-   This is useful for positioning an :doc:`Armature </animation/armatures/introduction>`
-   bone so it's centered inside a character's arm, for example; the other snapping options
-   would place it on the arm's surface instead.
-
-   While Blender also has :doc:`Volume objects </modeling/volumes/introduction>`, this option
-   is not related to those.
-Edge Center
-   Snaps to the centerpoint of the edge that's closest to the mouse cursor.
-Edge Perpendicular
-   Snaps to a specific point on the edge so that the line from the selection's original location
-   (indicated by a white cross) to its new location is perpendicular to that edge.
-
-.. tip::
-
-   Multiple snapping modes can be enabled at once using :kbd:`Shift-LMB`.
-
-
 .. _bpy.types.ToolSettings.snap_target:
 
 Snap With
@@ -119,6 +66,82 @@ Closest
           Median.
 
 
+.. _bpy.types.ToolSettings.snap_elements_base:
+
+Snap To
+=======
+
+.. reference::
+
+   :Mode:      Object, Edit, and Pose Mode
+   :Header:    :menuselection:`Snapping --> Snap To`
+   :Shortcut:  :kbd:`Shift-Ctrl-Tab`
+
+Determines the target which the selection will be snapped to.
+
+Increment
+   Snaps to grid points. When in Orthographic view, the snapping increment changes depending on the zoom level.
+
+   .. note::
+
+      By default, this option won't snap to the grid that's displayed in the viewport,
+      but an imaginary grid with the same resolution that starts at the selection's
+      original location. In other words, it lets you move the selection in "increments" of the
+      grid cell size.
+
+      If you want to snap to the viewport grid instead, you can enable *Absolute Grid Snap*
+      (see below).
+Vertex
+   Snaps to the vertex that's closest to the mouse cursor.
+Edge
+   Snaps to the edge that's closest to the mouse cursor.
+Volume
+   Snaps the selection to a depth that's centered *inside* the object under the cursor.
+   This is useful for positioning an :doc:`Armature </animation/armatures/introduction>`
+   bone so it's centered inside a character's arm, for example; the other snapping options
+   would place it on the arm's surface instead.
+
+   While Blender also has :doc:`Volume objects </modeling/volumes/introduction>`, this option
+   is not related to those.
+Edge Center
+   Snaps to the centerpoint of the edge that's closest to the mouse cursor.
+Edge Perpendicular
+   Snaps to a specific point on the edge so that the line from the selection's original location
+   (indicated by a white cross) to its new location is perpendicular to that edge.
+
+.. tip::
+
+   Multiple snapping modes can be enabled at once using :kbd:`Shift-LMB`.
+
+
+.. _bpy.types.ToolSettings.snap_elements_individual:
+
+Snap Individual Elements To
+===========================
+
+.. reference::
+
+   :Mode:      Object, Edit, and Pose Mode
+   :Header:    :menuselection:`Snapping --> Snap Individual Elements To`
+   :Shortcut:  :kbd:`Shift-Ctrl-Tab`
+
+Type of element for individual transformed elements to snap to.
+
+Face Project
+   Snaps to the face that's under the mouse cursor.
+
+   This can be used for bending a flat sheet so it snugly fits against a curved
+   surface, for example.
+
+   .. seealso::
+
+      :doc:`/modeling/modifiers/deform/shrinkwrap`
+
+Face Nearest
+   Individually snaps each object (in Object Mode) or vertex (in Edit Mode) to the face that's closest
+   to its new location. This makes it possible to snap to occluded geometry.
+
+
 Target Selection
 ================
 
@@ -154,31 +177,15 @@ Exclude Non-Selectable
 Absolute Grid Snap :guilabel:`Increment`
    Snaps to the grid, instead of snapping in increments relative to the current location.
 
-.. _bpy.types.ToolSettings.use_snap_backface_culling:
-
-Backface Culling
-   Exclude back-facing geometry from snapping.
-
 .. _bpy.types.ToolSettings.use_snap_align_rotation:
 
 Align Rotation to Target
    Rotates the selection so that its Z axis gets aligned to the normal of the target.
 
-.. _bpy.types.ToolSettings.use_snap_project:
+.. _bpy.types.ToolSettings.use_snap_backface_culling:
 
-Project Individual Elements :guilabel:`Face Project`
-   Rather than the default behavior where only the "Snap With" point gets snapped
-   to the target and the rest of the selection follows along (maintaining the
-   original shape), this option makes each object (in Object Mode) or vertex
-   (in Edit Mode) snap to a target independently of the others, which
-   may cause the selection's shape to change.
-
-   This can be used for bending a flat sheet so it snugly fits against a curved
-   surface, for example.
-
-   .. seealso::
-
-      :doc:`/modeling/modifiers/deform/shrinkwrap`
+Backface Culling
+   Exclude back-facing geometry from snapping.
 
 .. _bpy.types.ToolSettings.use_snap_to_same_target:
 
