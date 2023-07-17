@@ -96,6 +96,28 @@ Animation Player
    and no 3rd party application needs to be installed.
 
 
+.. _prefs-file_paths-text_editor:
+
+Text Editor
+-----------
+
+Program
+   Command to launch the text editor when using :ref:`Edit Externally <bpy.ops.text.jump_to_file_at_point>`,
+   either a full path or a command in ``$PATH``. Use the internal editor when left blank.
+
+Arguments
+   Defines the specific format of the arguments with which the text editor opens files.
+
+   The supported expansions are as follows:
+
+   - ``$filepath``: The absolute path of the file.
+   - ``$line``: The line to open at (Optional).
+   - ``$column``: The column to open from the beginning of the line (Optional).
+   - ``$line0`` & ``$column0`` similar to the above but they start at zero.
+
+   Example: ``-f $filepath -l $line -c $column``
+
+
 Development
 ===========
 

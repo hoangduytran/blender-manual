@@ -102,24 +102,53 @@ Navigation
 Text Menu
 ---------
 
+.. _bpy.ops.text.new:
+
 New :kbd:`Alt-N`
    Creates a new text Data Block.
-Open Text Block :kbd:`Alt-O`.
+
+.. _bpy.ops.text.open:
+
+Open :kbd:`Alt-O`.
    Loads an external text file that is selected via the :doc:`File Browser </editors/file_browser>`.
+
+.. _bpy.ops.text.reload:
+
 Reload :kbd:`Alt-R`
    Reopens (reloads) the current buffer (all non-saved modifications are lost).
+
+.. _bpy.ops.text.jump_to_file_at_point:
+
+Edit Externally
+   Edit text file in external text editor.
+   The external editor can be configured in the :ref:`User Preferences <prefs-file_paths-text_editor>`.
+
+.. _bpy.ops.text.save:
+
 Save :kbd:`Alt-S`
    Saves an already open file.
+
+.. _bpy.ops.text.save_as:
+
 Save As :kbd:`Shift-Ctrl-Alt-S`.
    Saves text as a new text file,
    a :doc:`File Browser </editors/file_browser>` is opened to select the directory
    to save the file along with giving the file a name and file extension.
+
+.. _bpy.types.Text.use_module:
+
 Register
    Run the text data-block as a Python script on loading the blend-file.
    Read more about the registration of Python modules in
    `API documentation <https://docs.blender.org/api/current/info_overview.html#registration>`__.
+
+.. _bpy.types.SpaceTextEditor.use_live_edit:
+
 Live Edit
-   Todo.
+   Run the Python script while editing
+
+.. _bpy.ops.text.run_script:
+
 Run Script :kbd:`Alt-P`
    Executes the text as a Python script, see `Running Scripts`_ for more information.
 
