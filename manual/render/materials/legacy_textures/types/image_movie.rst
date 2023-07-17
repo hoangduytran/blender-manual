@@ -69,6 +69,8 @@ Image
    The Image :ref:`ui-data-block`.
 
 
+.. _bpy.types.ImageTexture.use_alpha:
+
 Alpha
 -----
 
@@ -76,6 +78,8 @@ Use the alpha channel information stored in the image.
 Where the alpha value in the image is less than 1.0,
 the object will be partially transparent and things behind it will be visible.
 Works with :ref:`image formats <files-media-image_formats>` that store transparency information.
+
+.. _bpy.types.ImageTexture.use_calculate_alpha:
 
 Calculate
    Calculate an alpha based on the RGB values of the Image.
@@ -96,6 +100,8 @@ Calculate
 
              Image with *Calculate* alpha only, *Use Alpha* in the *Image* panel is disabled.
 
+.. _bpy.types.ImageTexture.invert_alpha:
+
 Invert
    Reverses the alpha value.
    Use this option if the mask image has white where you want it transparent and vice versa.
@@ -111,35 +117,39 @@ Mapping
 In the *Mapping* panel,
 you can control how the image is mapped or projected onto the 3D model.
 
+.. _bpy.types.ImageTexture.use_flip_axis:
+
 Flip Axes
    Rotates the image 90 degrees counterclockwise when rendered.
+
+.. _bpy.types.ImageTexture.extension:
 
 Extension
    How the image is extrapolated beyond its original bounds.
 
-   Extend
+   :Extend:
       Outside the image the colors of the edges are extended.
-   Clip
+   :Clip:
       Clip to image size and set exterior pixels as transparent.
       Outside the image, an alpha value of 0.0 is returned.
       This allows you to 'paste' a small logo on a large object.
-   Clip Cube
+   :Clip Cube:
       Clips to cubic-shaped area around the images and sets exterior pixels as transparent.
       The same as Clip, but now the 'Z' coordinate is calculated as well.
       An alpha value of 0.0 is returned outside a cube-shaped area around the image.
-   Repeat
+   :Repeat:
       The image is repeated horizontally and vertically.
 
-      Repeat
+      Repeat X, Y
          X/Y repetition multiplier.
-      Mirror
+      Mirror X, Y
          Mirror on X/Y axes. These buttons allow you to map the texture as a mirror, or automatic flip of the image,
          in the corresponding X and/or Y direction.
-   Checker
+   :Checker:
       Checkerboards quickly made.
       You can use the option *size* on the *Mapping* panel as well to create the desired number of checkers.
 
-      Even/Odd
+      Tiles Even/Odd
          Set even/odd tiles.
       Distance
          Governs the distance between the checkers in parts of the texture size.
@@ -163,6 +173,8 @@ In the *Sampling* panel you can control how the information is retrieved from th
 
    Image Sampling panel.
 
+.. _bpy.types.ImageTexture.use_interpolation:
+
 Interpolation
    This option interpolates the pixels of an image.
    This becomes visible when you enlarge the picture. By default, this option is on.
@@ -183,6 +195,8 @@ Interpolation
 
              Enlarged Image texture with *Interpolation*.
 
+.. _bpy.types.ImageTexture.use_mipmap:
+
 MIP Map
    :term:`Mip-maps <Mip-map>` are precalculated, smaller, filtered textures for a certain size.
    A series of pictures is generated, each half the size of the former one.
@@ -192,10 +206,14 @@ MIP Map
    (see below) becomes large. Without mip-maps you may get varying pictures from slightly different camera angles,
    when the textures become very small. This would be noticeable in an animation.
 
+.. _bpy.types.ImageTexture.use_mipmap_gauss:
+
 Gaussian Filter
    Used in conjunction with mip-mapping, it enables the mip-map to be made smaller based on color similarities.
    In game engines, you want your textures, especially your mip-map textures,
    to be as small as possible to increase rendering speed and frame rate.
+
+.. _bpy.types.ImageTexture.filter_type:
 
 Filter Type
    Texture filter to use for image sampling.
@@ -203,9 +221,9 @@ Filter Type
    When a texture (2D texture space) is mapped onto a 3D model (3D model space),
    different algorithms can be used to compute a value for each pixel based on samples from several texels.
 
-   Box
+   :Box:
       A fast and simple nearest-neighbor interpolation known as Monte Carlo integration.
-   EWA (Elliptical Weighted Average)
+   :EWA (Elliptical Weighted Average):
       One of the most efficient direct
       convolution algorithms developed by Paul Heckbert and Ned Greene in the 1980s.
       For each texel, EWA samples, weights, and accumulates texels within an elliptical footprint
@@ -213,7 +231,7 @@ Filter Type
 
       Eccentricity
          Maximum Eccentricity. Higher values give less blur at distant/oblique angles, but is slower.
-   FELINE (Fast Elliptical Lines)
+   :FELINE (Fast Elliptical Lines):
       Uses several isotropic probes at several points along a line in texture space to produce
       an anisotropic filter to reduce aliasing artifacts without considerably increasing rendering time.
 
@@ -222,16 +240,20 @@ Filter Type
          Further reading: McCormack, J; Farkas, KI; Perry, R; Jouppi, NP (1999)
          `Simple and Table Feline: Fast Elliptical Lines for Anisotropic Texture Mapping
          <https://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf>`__, WRL
-   Area
+   :Area:
       Area filter to use for image sampling.
 
       Eccentricity
          Maximum Eccentricity. Higher values give less blur at distant/oblique angles, but is slower.
 
+.. _bpy.types.ImageTexture.filter_size:
+
 Size
    The filter size used in rendering, and also by the options *Mip Map* and *Interpolation*.
    If you notice gray lines or outlines around the textured object, particularly where the image is transparent,
    turn this value down from 1.0 to 0.1 or so.
+
+.. _bpy.types.ImageTexture.use_filter_size_min:
 
 Minimum Size
    Use Filter Size as a minimal filter value in pixels.
