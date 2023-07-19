@@ -78,6 +78,14 @@ Syntax Highlight
    Colors special words, in the `Main View`_, that are used in the Python programming language.
 Highlight Line
    Emphasizes the active line by altering the color of the background.
+
+-----
+
+Zoom In/Out
+   Increase/decrease the font size of text in the main view.
+
+-----
+
 Navigation
    Top :kbd:`Ctrl-Home`
       Moves the view and cursor to the start of the text file.
