@@ -122,6 +122,18 @@ Save current blend-file over itself (if it was not saved yet, this will automati
    The File Browser in save configuration.
 
 
+Save Incremental
+================
+
+.. reference::
+
+   :Menu:      :menuselection:`File --> Save Incremental`
+   :Shortcut:  :kbd:`Ctrl-Alt-S`
+
+Save the current Blender file with a numerically
+incremented name that does not overwrite any existing files.
+
+
 .. _bpy.ops.wm.save_as_mainfile:
 
 Save As

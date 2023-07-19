@@ -63,12 +63,21 @@ Recover
    Recover Auto Save
       This will open an automatically saved file
       to :doc:`recover </troubleshooting/recover>` it.
+
+-----
+
 Save :kbd:`Ctrl-S`
    :ref:`Save <bpy.ops.wm.save_mainfile>` the current blend-file.
+Save Incremental :kbd:`Ctrl-Alt-S`
+   Save the current Blender file with a numerically
+   incremented name that does not overwrite any existing files.
 Save As... :kbd:`Shift-Ctrl-S`
    Opens the File Browser to specify file name and location of :ref:`save <bpy.ops.wm.save_mainfile>`.
 Save Copy...
    :ref:`Saves <bpy.ops.wm.save_mainfile>` a copy of the current file.
+
+----
+
 Link...
    Links data from an external blend-file (library) to the current one.
    The editing of that data is only possible in the external library.
@@ -79,6 +88,9 @@ Append...
    The new data is copied from the external file, and completely unlinked from it.
 Data Previews
    Tools for managing :doc:`data-block previews </files/blend/previews>`.
+
+-----
+
 Import
    Blender can use information stored in a variety of other format files which are created by
    other graphics programs. See :doc:`Import/Export </files/import_export>`.
@@ -86,6 +98,9 @@ Export
    Normally you save your work in a blend-file,
    but you can export some or all of your work to a format that can be processed by other graphics programs.
    See :doc:`Import/Export </files/import_export>`.
+
+-----
+
 External Data
    External data, like texture images and other resources,
    can be stored inside the blend-file (packed) or as separate files (unpacked).
@@ -140,6 +155,7 @@ Clean Up
       Remove all unused data-blocks from only the current blend-file
       including any indirectly used data-blocks i.e. those only used by unused data-blocks.
 
+-----
 
 .. _startup-file:
 
@@ -169,6 +185,8 @@ Defaults
       Loads the default settings to the original application template.
 
    .. seealso:: :ref:`prefs-menu`.
+
+-----
 
 Quit :kbd:`Ctrl-Q`
    Closes Blender. The current scene is saved to a file called "quit.blend" in Blender's temporary directory
