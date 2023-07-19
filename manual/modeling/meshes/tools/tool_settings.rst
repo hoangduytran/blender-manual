@@ -31,24 +31,13 @@ Keep Connected
       Keeping UVs connected is useful for organic modeling, but not for architectural modeling.
 
 
-UVs
----
-
-.. _bpy.types.ToolSettings.use_edge_path_live_unwrap:
-
-Live Unwrap
-   Automatically recalculates the UV unwrapping every time an edge has its seam property changed.
-   Note, this is different than the :ref:`Live Unwrap <bpy.types.SpaceUVEditor.use_live_unwrap>`
-   option in the UV Editor.
-
-
 .. _bpy.types.Mesh.use_mirror_x:
 .. _bpy.types.Mesh.use_mirror_y:
 .. _bpy.types.Mesh.use_mirror_z:
 .. _modeling_meshes_tools-settings_mirror:
 
 Mirror
-------
+^^^^^^
 
 Mirror allows you to transform vertices symmetrically according to the chosen axis.
 When you transform an element (vertex, edge or face),
@@ -65,7 +54,7 @@ it will be transformed accordingly, through a symmetry along the chosen axis.
 .. _bpy.types.Mesh.use_mirror_topology:
 
 Topology Mirror
----------------
+^^^^^^^^^^^^^^^
 
 .. note::
 
@@ -88,7 +77,7 @@ The effect of this is that mirrored vertices can be non-symmetrical and yet stil
 
 
 Example
-^^^^^^^
+"""""""
 
 For an example of how to use *Topology Mirror* open up a new Blender scene,
 then delete the default cube and add a Monkey object to the 3D Viewport.
@@ -105,13 +94,13 @@ then delete the default cube and add a Monkey object to the 3D Viewport.
 
 .. _bpy.types.ToolSettings.use_mesh_automerge:
 
-Auto Merge Vertices
--------------------
+Auto Merge
+^^^^^^^^^^
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Sidebar --> Tool --> Options --> Auto Merge Vertices`
+   :Menu:      :menuselection:`Sidebar --> Tool --> Options --> Auto Merge`
 
 When enabled, as soon as a vertex moves closer to another one
 than the *Threshold* setting, they are automatically merged.
@@ -130,3 +119,14 @@ Split Edges & Faces
 
 Threshold
    Defines the maximum distance between vertices that are merged.
+
+
+UVs
+---
+
+.. _bpy.types.ToolSettings.use_edge_path_live_unwrap:
+
+Live Unwrap
+   Automatically recalculates the UV unwrapping every time an edge has its seam property changed.
+   Note, this is different than the :ref:`Live Unwrap <bpy.types.SpaceUVEditor.use_live_unwrap>`
+   option in the UV Editor.
