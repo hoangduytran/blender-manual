@@ -104,11 +104,11 @@ Touchpad
 
 .. note::
 
-   This panel is only available on Windows or macOS.
+   This panel is available on Windows, macOS, and Linux with Wayland.
 
 Multi-touch Gestures
    Use multi-touch gestures for navigation with touchpad, instead of scroll wheel emulation.
-
+   For more detail on supported gestures, see :doc:`Configuring Peripherals </getting_started/configuration/hardware>`.
 
 Tablet
 ======

@@ -21,8 +21,9 @@ Blender supports various types of input devices:
 
 - Keyboard (recommended: keyboard with numeric keypad, English layout works best)
 - Mouse (recommended: three button mouse with scroll wheel)
-- NDOF Device (also known as *3D Mouse*)
 - Graphic Tablet
+- Touchpad
+- NDOF Device (also known as *3D Mouse*)
 
 .. note::
 
@@ -99,6 +100,27 @@ as well as provide additional controls such as pressure sensitivity.
 
 
 .. _hardware-ndof:
+
+Touchpad
+--------
+
+Touchpad controls are available on Windows, macOS and Linux with Wayland.
+If you are working from a laptop without a mouse,
+you can emulate controls using multi-touch gestures with the trackpad from :doc:`Preferences </editors/preferences/input>`.
+
+.. list-table:: Supported multi-touch gestures
+   :header-rows: 1
+
+   * - Gesture
+     - Effect
+   * - Pan
+     - Hold the :kbd:`Shift` key while dragging two fingers on the pad.
+   * - Zoom
+     - Hold the :kbd:`Ctrl` or :kbd:`OSKey` key while dragging two fingers on the pad.
+   * - Orbit
+     - Drag two fingers on the pad.
+   * - Emulate right-click
+     - Tap two fingers on the pad.
 
 NDOF (3D Mouse)
 ---------------
