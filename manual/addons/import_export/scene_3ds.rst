@@ -47,12 +47,9 @@ Size Constraint
    Scales the imported objects by 10 scene units until it reaches the size defined here.
    To disable set the *Size Constraint* to zero.
 
-Forward / Up Axis
-   Since many applications use a different axis for 'Up',
-   these are axis conversions for Forward and Up axes -- By mapping these to different axes
-   you can convert rotations between applications default up and forward axes.
-   Blender uses Y forward, Z up (since the front view looks along the +Y direction).
-   For example, its common for applications to use Y as the up axis, in that case -Z forward, Y up is needed.
+Convert Measure
+   Converts the measurement units from millimeters to meters. Blender uses meter scale, 
+   but many 3ds files have millimeter unit scale, especially the ones exported from CAD applications.
 
 Apply Transform
    Applies object transformations after importing. If unchecked, all objects will stay at its origins.
@@ -61,6 +58,13 @@ World Space
    Use world matrix instead of local matrix to transform the objects.
    This is useful for older 3ds files from 3D Studio DOS which only used world space to transform the objects.
    It is also useful if the object was exported without apply transform.
+
+Forward / Up Axis
+   Since many applications use a different axis for 'Up',
+   these are axis conversions for Forward and Up axes -- By mapping these to different axes
+   you can convert rotations between applications default up and forward axes.
+   Blender uses Y forward, Z up (since the front view looks along the +Y direction).
+   For example, its common for applications to use Y as the up axis, in that case -Z forward, Y up is needed.
 
 
 Export
