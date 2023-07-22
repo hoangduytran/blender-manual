@@ -40,9 +40,12 @@ Read Keyframe
    Usually only one frame is found in static scenes, it will be imported to the timeline.
    If the 3ds scene is animated, the complete animation will be imported to the timeline.
 
-
 Transform
 ^^^^^^^^^
+
+Size Constraint
+   Scales the imported objects by 10 scene units until it reaches the size defined here.
+   To disable set the *Size Constraint* to zero.
 
 Forward / Up Axis
    Since many applications use a different axis for 'Up',
@@ -50,10 +53,6 @@ Forward / Up Axis
    you can convert rotations between applications default up and forward axes.
    Blender uses Y forward, Z up (since the front view looks along the +Y direction).
    For example, its common for applications to use Y as the up axis, in that case -Z forward, Y up is needed.
-
-Size Constraint
-   Scales the imported objects by 10 scene units until it reaches the size defined here.
-   To disable set the *Size Constraint* to zero.
 
 Apply Transform
    Applies object transformations after importing. If unchecked, all objects will stay at its origins.
@@ -84,6 +83,12 @@ Write Keyframe
 
 Transform
 ^^^^^^^^^
+
+Scale
+   The global scale factor for export. There are no unit scale definitions in a 3ds file, 
+   only the float values are stored. Blender will use meters for export but many applications,
+   like 3ds MAX\ :sup:`®`, are using millimeters. This option defines the scale factor to use for export.
+   If millimeters are desired, the scale factor has to be setted 1000.
 
 Forward / Up
    Since many applications use a different axis for pointing upwards,
