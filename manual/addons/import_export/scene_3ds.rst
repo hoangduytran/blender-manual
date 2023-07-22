@@ -88,7 +88,7 @@ Scale
    The global scale factor for export. There are no unit scale definitions in a 3ds file, 
    only the float values are stored. Blender will use meters for export but many applications,
    like 3ds MAX\ :sup:`®`, are using millimeters. This option defines the scale factor to use for export.
-   If millimeters are desired, the scale factor has to be setted 1000.
+   If millimeters are desired, the scale factor has to be setted to 1000.
 
 Forward / Up
    Since many applications use a different axis for pointing upwards,
