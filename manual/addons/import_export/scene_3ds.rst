@@ -43,7 +43,7 @@ Read Keyframe
 Transform
 ^^^^^^^^^
 
-Size Constraint
+Constrain Size
    Scales the imported objects by 10 scene units until it reaches the size defined here.
    To disable set the *Size Constraint* to zero.
 
@@ -94,7 +94,7 @@ Scale
    like 3ds MAX\ :sup:`®`, are using millimeters. This option defines the scale factor to use for export.
    If millimeters are desired, the scale factor has to be setted to 1000.
 
-Forward / Up
+Forward / Up Axis
    Since many applications use a different axis for pointing upwards,
    these are axis conversion for these settings, Forward and up axes -- By mapping these to different axes
    you can convert rotations between applications default up and forward axes. Blender uses Y forward,
