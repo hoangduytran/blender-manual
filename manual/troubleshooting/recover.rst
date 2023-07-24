@@ -82,4 +82,4 @@ Trusted Source
 
    When recovering an *Auto Saved* file, any changes made since the last *Auto Save* will be lost.
    Only one *Auto Saved* file exists for each ``.blend`` file, i.e. Blender does not keep older versions.
-   Therefor, you will only be able to restore the most recent *Auto Save* file.
+   Therefore, you will only be able to restore the most recent *Auto Save* file.
