@@ -7,7 +7,7 @@ Autodesk 3DS
 
    :Category: Import-Export
    :Menu: :menuselection:`File --> Import/Export --> 3D Studio (.3ds)`
-   :Version: 2.4.4
+   :Version: 2.4.5
    :Blender: 3.6
    :Authors: Bob Holcomb, Campbell Barton, Sebastian Schrand
    :Maintainer: Sebastian Sille (NRGSille)
@@ -47,9 +47,10 @@ Constrain Size
    Scales the imported objects by 10 scene units until it reaches the size defined here.
    To disable set the *Size Constraint* to zero.
 
-Convert Measure
-   Converts the measurement units from millimeters to meters. Blender uses meter scale, 
+Convert Units
+   Converts the scale of all objects to the scene unit length settings. Blender uses meter scale, 
    but many 3ds files have millimeter unit scale, especially the ones exported from CAD applications.
+   If millimeters are expected to import, set the scene unit length settings to *Millimeters*.
 
 Apply Transform
    Applies object transformations after importing. If unchecked, all objects will stay at its origins.
@@ -76,11 +77,15 @@ Include
 Selection Only
    When checked, only selected objects are exported. Otherwise export all objects in the scene.
 
+Object Filter
+   The kind of objects to be exported, checked object types will be exported and unchecked not.
+   Hold shift while selecting to check multiple object types.
+
 Export Hierarchy
    Preserves the object hierarchy if no keyframe section is written. Blender can read the hierarchy chunks
    but most importers do not use them, therefore only recommended if the file is used in Blender only.
 
-Write Keyframe
+Export Keyframes
    Writes the keyframe section of a 3ds file and exports the animation if an action was found.
    The animation can be imported the same way, un-check if any importer crashes,
    not every application can handle the keyframe section.
@@ -88,11 +93,15 @@ Write Keyframe
 Transform
 ^^^^^^^^^
 
-Scale
+Scale Factor
    The global scale factor for export. There are no unit scale definitions in a 3ds file, 
    only the float values are stored. Blender will use meters for export but many applications,
    like 3ds MAX\ :sup:`®`, are using millimeters. This option defines the scale factor to use for export.
    If millimeters are desired, the scale factor has to be setted to 1000.
+
+Scene Units
+   Takes the scene unit length settings into account to export the real size of the objects.
+   If the settings are millimeters, the exported scene will be scaled up since Blender uses meters for unit scale.
 
 Forward / Up Axis
    Since many applications use a different axis for pointing upwards,
