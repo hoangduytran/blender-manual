@@ -16,9 +16,6 @@ These visibility options can also be set in the :doc:`Outliner </editors/outline
 Selectable
    The object is able to be selected in the 3D Viewport.
 
-.. (todo) we should probably use a rubric directive for UI headings instead of indented blocks
-   This way we can can have RNA links above properties without affecting the HTML rendering
-
 .. _bpy.types.Object.hide_viewport:
 .. _bpy.types.Object.hide_render:
 
