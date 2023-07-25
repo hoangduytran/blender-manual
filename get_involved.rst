@@ -45,20 +45,17 @@ This project is run by a small team of volunteers and we would love your contrib
 How to Get Started
 ==================
 
-#. `Install the manual locally <https://docs.blender.org/manual/en/dev/about/contribute/install/index.html>`__
-#. `Build the manual locally <https://docs.blender.org/manual/en/dev/about/contribute/build/index.html>`__
-#. `Subscribe to the mailing list <http://projects.blender.org/mailman/listinfo/bf-docboard>`__
-#. Email the mailing list about your interest in helping
+#. `Install the manual locally <https://docs.blender.org/manual/en/dev/contribute/install/index.html>`__
+#. `Build the manual locally <https://docs.blender.org/manual/en/dev/contribute/build/index.html>`__
+#. Open an issue with your interest in helping
 
 
 Communication
 =============
 
 - `#docs <https://blender.chat/channel/docs>`__ -- Chat with documenters, developers, and users.
-- `Mailing list <http://wiki.blender.org/index.php/Dev:Doc/Contact#Mailing_Lists>`__ -- Subscribe to
-  the `bf-docboard <http://projects.blender.org/mailman/listinfo/bf-docboard>`__
-  to communicate with others about the documentation project
-- `Bug tracker <https://projects.blender.org/blender/documentation>`__ -- Report bugs or
+- `Developer Forum <https://devtalk.blender.org/>`__
+- `Issue tracker <https://projects.blender.org/blender/documentation>`__ -- Report bugs or
   find projects you can work on to improve the documentation.
 
 
@@ -71,5 +68,5 @@ If you would like to help to translate the manual from English to your language 
 
 You should also read the following documents:
 
-- `Translation contributing guide <https://docs.blender.org/manual/en/dev/about/contribute/translations/contribute.html>`__
-- `Translation style guide <https://docs.blender.org/manual/en/dev/about/contribute/translations/style_guide.html>`__
+- `Translation contributing guide <https://docs.blender.org/manual/en/dev/contribute/translations/contribute.html>`__
+- `Translation style guide <https://docs.blender.org/manual/en/dev/contribute/translations/style_guide.html>`__

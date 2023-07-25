@@ -30,15 +30,14 @@ edit, and contribute your changes by following these links:
 **Note:**
 We realize this may be intimidating if you're not familiar with Git
 or making patches, you may also submit the modified file as an
-[Issue](https://projects.blender.org/blender/blender-manual/issues/new),
-or mail the bf-docboard mailing list.
+[Issue](https://projects.blender.org/blender/blender-manual/issues/new).
 
 
 ## Links
 
 - **Manual Docs**: [Contributing Guide](https://docs.blender.org/manual/en/dev/contribute/index.html) (the process for editing the manual).
 - **Source Files**: [Manual Repository](https://projects.blender.org/blender/blender-manual) (Git repository).
-- **Mailing List**: [bf-docboard](http://lists.blender.org/mailman/listinfo/bf-docboard)
+- **[Developer forum](https://devtalk.blender.org/c/documentation/12)**
 - **Administrators**: @blendify @fsiddi
 
 
@@ -48,7 +47,7 @@ The coordination of the Blender Manual is run by a set of **Administrators**,
 which are responsible for managing the whole project and infrastructures (listed above).
 
 If you are interested in becoming a contributor, please contact us on the
-[bf-docboard](http://lists.blender.org/mailman/listinfo/bf-docboard) mailing list.
+[developer forum](https://devtalk.blender.org/c/documentation/12).
 
 
 # Translations
@@ -61,11 +60,10 @@ To get started see the [contribution guide for translations](https://docs.blende
 
 - **Source Files**: [Translation's Repository](https://projects.blender.org/blender/blender-manual-translations) (git repository).
 - **Forum**: [Documentation category on Developer Talk](https://devtalk.blender.org/c/documentation)
-- **Mailing List**: [bf-docboard](http://lists.blender.org/mailman/listinfo/bf-docboard)
 - **Administrators**: @blendify , @fsiddi
 
 **Note:*
 If you are a new translator who wants to start translating a new language
-that is not listed below send and email to the
-[bf-docboard](http://lists.blender.org/mailman/listinfo/bf-docboard)
+that is not listed open an issue on the 
+[issue tracker](https://projects.blender.org/blender/blender-manual/issues)
 and we would be glad to set it up for you.

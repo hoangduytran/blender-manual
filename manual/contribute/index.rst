@@ -70,9 +70,7 @@ Contacts
 
 `Project Page <https://projects.blender.org/blender/documentation>`__
    An overview of the documentation project.
-`Mailing List <https://lists.blender.org/mailman/listinfo/bf-docboard>`__
-   A mailing list for discussing ideas, and keeping track of progress.
-`Devtalk <https://devtalk.blender.org/c/documentation/12>`__
+`Documentation Forum <https://devtalk.blender.org/c/documentation/12>`__
    A forum based discussions on writing and translating documentation.
    This includes the user manual, Wiki, release notes, and code docs.
 :ref:`blender-chat`

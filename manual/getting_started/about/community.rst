@@ -43,7 +43,7 @@ Being open source, Blender welcomes development from volunteers.
 Communication between developers is done mostly through three platforms:
 
 - The `projects.blender.org <https://projects.blender.org/>`__ system
-- Various `mailing lists <https://lists.blender.org/mailman/listinfo>`__
+- `Developer Forum <https://devtalk.blender.org/>`__
 - Online Chat (see below)
 
 If you are interested in helping develop Blender,
