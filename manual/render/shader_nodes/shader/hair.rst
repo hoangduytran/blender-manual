@@ -39,11 +39,11 @@ Roughness U/V
 
       * - .. figure:: /images/render_shader-nodes_shader_hair_reflect-roughness-uv.png
 
-             Reflection Roughness.
+             Roughness when using the Reflection Component.
 
         - .. figure:: /images/render_shader-nodes_shader_hair_trans-roughness-uv.png
 
-             Transmission Roughness.
+             Roughness when using the Transmission Component.
 
 Tangent
    Input tangent.

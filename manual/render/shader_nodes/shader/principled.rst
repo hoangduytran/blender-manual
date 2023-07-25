@@ -104,8 +104,7 @@ IOR
    Index of refraction for transmission.
 Transmission
    Mix between fully opaque surface at zero and fully glass like transmission at one.
-Transmission Roughness :guilabel:`Cycles Only`
-   With **GGX** distribution controls roughness used for transmitted light.
+
 Emission
    Light emission from the surface, like the Emission shader.
 Emission Strength
@@ -129,8 +128,7 @@ Distribution
    Microfacet distribution to use.
 
    :GGX:
-      A method that is faster than *Multiple-scattering GGX*
-      but is less physically accurate. Selecting it enables the *Transmission Roughness* input.
+      A method that is faster than *Multiple-scattering GGX* but is less physically accurate.
    :Multiple-scattering GGX:
       Takes multiple bounce (scattering) events between microfacets into account.
       This gives a more energy conserving results,
