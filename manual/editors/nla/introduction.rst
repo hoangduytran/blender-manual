@@ -81,71 +81,8 @@ For descriptions of the different marker tools, see :ref:`Editing Markers <anima
 Edit Menu
 ---------
 
-Transform
-   Move
-      Move the selected NLA-strips in time or to different NLA-track.
-   Extend :kbd:`E`
-      Extend the selected NLA-strips.
-   Scale :kbd:`S`
-      Scale the selected NLA-strips.
-Snap
-   Selection to Current Frame
-      Move the start of selected NLA-strips to the current frame.
-   Selection to Nearest Frame
-      Move the start of the selected NLA-strips to the nearest frame.
-   Selection to Nearest Second
-      Move the start of the selected NLA-strips to the nearest second.
-   Selection to Nearest Marker
-      Move the start of the selected NLA-strips to the nearest marker.
-
-Duplicate :kbd:`Shift-D`
-   Make a copy of the selected NLA-strips.
-
-Linked Duplicate :kbd:`Alt-D`
-   Make a shallow copy of the selected NLA-strips.
-Split Strips :kbd:`Y`
-   NLA-Split the selected strips into two NLA-strips. The split happens at the current frame.
-Delete Strips :kbd:`X`
-   Delete selected NLA-Strips.
-Delete Tracks
-   Delete the selected NLA track and all strips that it contains.
-Toggle Muting :kbd:`H`
-   Mute or unmute the selected NLA-strips. Muted NLA-strips will not influence the animation.
-Apply Scale :kbd:`Ctrl-A`
-   Apply the scale of the selected NLA-strips to their referenced Actions.
-
-Clear Scale :kbd:`Alt-S`
-   Reset the scaling of the selected NLA-strips.
-Sync Action Length
-   Synchronize the length of the action to the length used in the NLA-strip.
-Make Single User :kbd:`U`
-   This tool ensures that none of the selected strips use an action
-   which is also used by any other strips.
-Swap Strips :kbd:`Alt-F`
-   Swap the order of the selected NLA-strips in their NLA-track.
-Move Strips Up :kbd:`PageUp`
-   Move selected NLA-strips a track up if there is room.
-Move Strips Down :kbd:`PageDown`
-   Move selected NLA-strips a track down if there is room.
-Track Ordering
-   To Top
-      Move selected track to the top of the tracks.
-   Up
-      Move selected track one track up.
-   Down
-      Move selected track one track down.
-   To Bottom
-      Move selected tracks to the bottom of the tracks.
-
-Remove Empty Animation Data
-   Remove Animation Data from selected objects when they don't contain any animation.
-Start Editing Stashed Action :kbd:`Shift-Tab`
-   It will enter and exit Tweak Mode as usual, but will also make sure that the action can be edited in isolation
-   (by flagging the NLA track that the action strip comes from as being "solo").
-   This is useful for editing stashed actions, without the rest of the NLA Stack interfering.
-Start Tweaking Strips Actions :kbd:`Tab`
-   The contents of Action strips can be edited, but you must be in *Tweak Mode* to do so.
-   The keyframes of the action can then be edited in the Dope Sheet.
+Contains tools for working with NLA strips.
+For descriptions of the different editing tools, see :doc:`Editing Strips </editors/nla/editing>`.
 
 
 Add
@@ -164,10 +101,15 @@ Add Meta-Strip :kbd:`Ctrl-G`
 Remove Meta-Strip :kbd:`Ctrl-Alt-G`
    Ungroup selected Meta strips.
 
+.. _bpy.ops.nla.tracks_add:
+
 Add Tracks
    Add a new NLA-Track on top of the selected object.
 Add Track Above Selected
    Add a new NLA-Track just above the selected NLA-track.
+
+.. _bpy.ops.nla.selected_objects_add:
+
 Include Selected Objects
    Let the selected objects appear in the NLA Editor. This is done by adding
    an empty animation data object to the selected object.

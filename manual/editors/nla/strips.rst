@@ -7,6 +7,8 @@ Strips
 There are four kinds of strips: Action, Transition, Sound clip and Meta.
 
 
+.. _bpy.ops.nla.actionclip_add:
+
 Action Strips
 =============
 
@@ -22,6 +24,8 @@ Alternatively, you can go to :menuselection:`Add --> Action Strip`.
    that might extend keyframe data.
 
 
+.. _bpy.ops.nla.transition_add:
+
 Transition Strips
 =================
 
@@ -33,6 +37,8 @@ and go to :menuselection:`Add --> Transition`.
 
    Transition Strip.
 
+
+.. _bpy.ops.nla.soundclip_add:
 
 Sound Clip Strips
 =================
@@ -48,10 +54,20 @@ Meta strips group strips together as a whole, so you can move them as one.
 If you find yourself moving a lot of strips together, you can group them into a Meta strip.
 A Meta strip can be moved and duplicated like a normal strip.
 
+
+.. _bpy.ops.nla.meta_add:
+
+Add Meta-Strips
+---------------
+
 .. reference::
 
    :Menu:      :menuselection:`Add --> Add Meta-Strips`
-   :Shortcut:  :kbd:`Shift-G`
+   :Shortcut:  :kbd:`Ctrl-G`
+
+Group selected NLA-strips into a meta strip.
+A meta strip will group the selected NLA-strips of the same NLA-track.
+
 
 .. list-table::
 
@@ -65,9 +81,15 @@ A Meta strip can be moved and duplicated like a normal strip.
 
           Combine them into a meta strip.
 
-A Meta strip still contains the underlying strips. You can ungroup a Meta strip.
+
+.. _bpy.ops.nla.meta_remove:
+
+Remove Meta-Strips
+------------------
 
 .. reference::
 
    :Menu:      :menuselection:`Add --> Remove Meta-Strips`
-   :Shortcut:  :kbd:`Alt-G`
+   :Shortcut:  :kbd:`Ctrl-Alt-G`
+
+A Meta strip still contains the underlying strips. You can ungroup a Meta strip.

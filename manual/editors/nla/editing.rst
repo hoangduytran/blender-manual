@@ -6,7 +6,12 @@ Editing
 Transform
 =========
 
-Todo.
+Move
+   Move the selected NLA-strips in time or to different NLA-track.
+Extend :kbd:`E`
+   Extend the selected NLA-strips.
+Scale :kbd:`S`
+   Scale the selected NLA-strips.
 
 
 .. _bpy.ops.nla.snap:
@@ -14,7 +19,14 @@ Todo.
 Snap
 ====
 
-Todo.
+Selection to Current Frame
+   Move the start of selected NLA-strips to the current frame.
+Selection to Nearest Frame
+   Move the start of the selected NLA-strips to the nearest frame.
+Selection to Nearest Second
+   Move the start of the selected NLA-strips to the nearest second.
+Selection to Nearest Marker
+   Move the start of the selected NLA-strips to the nearest marker.
 
 
 .. _bpy.ops.nla.bake:
@@ -83,7 +95,12 @@ the original will turn to red.
 Split Strips
 ============
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Split Strips`
+   :Shortcut:  :kbd:`Y`
+
+NLA-Split the selected strips into two NLA-strips. The split happens at the current frame.
 
 
 .. _bpy.ops.nla.delete:
@@ -91,7 +108,12 @@ Todo.
 Delete Strips
 =============
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Delete Strips`
+   :Shortcut:  :kbd:`X`
+
+Delete selected NLA-Strips.
 
 
 .. _bpy.ops.nla.tracks_delete:
@@ -99,7 +121,11 @@ Todo.
 Delete Tracks
 =============
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Delete Tracks`
+
+Delete the selected NLA track and all strips that it contains.
 
 
 .. _bpy.ops.nla.mute_toggle:
@@ -107,7 +133,12 @@ Todo.
 Toggle Muting
 =============
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Toggle Muting`
+   :Shortcut:  :kbd:`H`
+
+Mute or unmute the selected NLA-strips. Muted NLA-strips will not influence the animation.
 
 
 .. _bpy.ops.nla.apply_scale:
@@ -115,7 +146,13 @@ Todo.
 Apply Scale
 ===========
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Apply Scale`
+   :Shortcut:  :kbd:`Ctrl-A`
+
+Apply the scale of the selected NLA-strips to their referenced Actions.
+
 
 
 .. _bpy.ops.nla.clear_scale:
@@ -123,7 +160,12 @@ Todo.
 Clear Scale
 ===========
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Clear Scale`
+   :Shortcut:  :kbd:`Alt-S`
+
+Reset the scaling of the selected NLA-strips.
 
 
 .. _bpy.ops.nla.action_sync_length:
@@ -131,7 +173,11 @@ Todo.
 Sync Action Length
 ==================
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Sync Action Length`
+
+Synchronize the length of the action to the length used in the NLA-strip.
 
 
 .. _bpy.ops.nla.make_single_user:
@@ -156,7 +202,12 @@ This tool ensures that none of the selected strips use an action which is also u
 Swap Strips
 ===========
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Swap Strips`
+   :Shortcut:  :kbd:`Alt-F`
+
+Swap the order of the selected NLA-strips in their NLA-track.
 
 
 .. _bpy.ops.nla.move_up:
@@ -164,7 +215,12 @@ Todo.
 Move Strips Up
 ==============
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Swap Strips`
+   :Shortcut:  :kbd:`PageUp`
+
+Move selected NLA-strips up a track if there is room.
 
 
 .. _bpy.ops.nla.move_down:
@@ -172,13 +228,25 @@ Todo.
 Move Strips Down
 ================
 
-Todo.
+.. reference::
+
+   :Menu:      :menuselection:`Edit --> Swap Strips`
+   :Shortcut:  :kbd:`PageDown`
+
+Move selected NLA-strips down a track if there is room.
 
 
 Track Ordering
 ==============
 
-Todo.
+To Top
+   Move selected track to the top of the tracks.
+Up
+   Move selected track one track up.
+Down
+   Move selected track one track down.
+To Bottom
+   Move selected tracks to the bottom of the tracks.
 
 
 .. _bpy.ops.anim.channels_clean_empty:
