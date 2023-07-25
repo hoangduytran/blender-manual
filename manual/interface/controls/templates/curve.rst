@@ -26,7 +26,7 @@ Move
 Add
    Click anywhere on the curve where there is not already a control point.
 Remove
-   Select it and click the ``X`` button at the top right.
+   Select it and click the ``X`` button at the bottom right.
 
 
 Controls
@@ -46,36 +46,6 @@ Specials ``v``
 
    Reset View
       Resets the view of the curve.
-
-   Handle Options
-      Controls how the control points affect the curve shape.
-      It determines the interpolation of the curve segment at the selected control point.
-
-      Vector Handle
-         Vector handles create straight lines and sharp corners.
-      Auto Handle
-         Automatic handles that create smooth curves.
-      Auto-Clamped Handle
-         Automatic handles that create smooth curves while also preventing overshoot.
-      Free Handle
-         The handles can be moved completely independently, and thus can result in a sharp change of direction.
-      Aligned Free Handles
-         The two handles of the curve point are locked together to always point in exactly opposite directions.
-         This results in a curve that is always smooth at the control point.
-
-      .. list-table::
-
-         * - .. figure:: /images/interface_controls_templates_curve_handle-vector.png
-
-                Vector Handles.
-
-           - .. figure:: /images/interface_controls_templates_curve_handle-auto.png
-
-                Auto Handles.
-
-           - .. figure:: /images/interface_controls_templates_curve_handle-auto-clamped.png
-
-                Auto Clamped Handles.
 
    Extend Options
       Controls how the curve is extended before the first control point and after the last control point.
@@ -103,11 +73,42 @@ Clipping Options (dot icon)
       Forces curve points to stay between specified values.
    Min X/Y and Max X/Y
       Set the minimum and maximum bounds of the curve points.
-Delete ``X``
-   Remove the selected control point. The first and last points cannot be deleted.
 
+Below the curve are options for the selected control point:
+
+Handle Type
+   Controls how the control points affect the curve shape.
+   It determines the interpolation of the curve segment at the selected control point.
+
+   :Vector Handle:
+      Vector handles create straight lines and sharp corners.
+   :Auto Handle:
+      Automatic handles that create smooth curves.
+   :Auto-Clamped Handle:
+      Automatic handles that create smooth curves while also preventing overshoot.
+   :Free Handle:
+      The handles can be moved completely independently, and thus can result in a sharp change of direction.
+   :Aligned Free Handles:
+      The two handles of the curve point are locked together to always point in exactly opposite directions.
+      This results in a curve that is always smooth at the control point.
+
+   .. list-table::
+
+      * - .. figure:: /images/interface_controls_templates_curve_handle-vector.png
+
+             Vector Handles.
+
+        - .. figure:: /images/interface_controls_templates_curve_handle-auto.png
+
+             Auto Handles.
+
+        - .. figure:: /images/interface_controls_templates_curve_handle-auto-clamped.png
+
+             Auto Clamped Handles.
 X, Y
    The coordinates of the selected control point.
+Delete ``X``
+   Remove the selected control point. The first and last points cannot be deleted.
 Copy/Paste :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
    The whole curve can be copied from one Curve Widget to another by hovering over
    the curve graph and pressing :kbd:`Ctrl-C`, :kbd:`Ctrl-V`.
