@@ -812,8 +812,8 @@ Align UV cursor (2D Cursor in UV Editor).
 
 Align Method
    :Texture: The UV cursor aligns to the selected texture.
-   :UV: The UV cursor aligns to the d UV (includes non-selected UV).
-   :UV (Selected): The UV cursor aligns to the displayed UV (only selected UV).
+   :UV: The UV cursor aligns to the UV (includes non-selected UV).
+   :UV (Selected): The UV cursor aligns to the selected portion of the UV.
 
 .. rubric:: Usage
 
