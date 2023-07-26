@@ -7,7 +7,7 @@ Autodesk 3DS
 
    :Category: Import-Export
    :Menu: :menuselection:`File --> Import/Export --> 3D Studio (.3ds)`
-   :Version: 2.4.5
+   :Version: 2.4.6
    :Blender: 3.6
    :Authors: Bob Holcomb, Campbell Barton, Sebastian Schrand
    :Maintainer: Sebastian Sille (NRGSille)
@@ -178,8 +178,8 @@ Ambient
 =======
 
 If ambient chunks are found by the importer, a new world with the ambient color will be created.
-Ambient keyframes will be imported to the timeline.
-The exporter creates an ambient chunk with the color of the active world if there is any.
+Ambient keyframes will be imported to the timeline. The exporter creates an ambient chunk with the color of 
+the active world and creates background chunks with color or image if the nodes are connected to world output.
 
 
 Lights
