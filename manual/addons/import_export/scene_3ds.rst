@@ -35,6 +35,10 @@ Include
 Image Search
    This enables a recursive file search if an image file can't be found.
 
+Object Filter
+   The kind of objects to be imported, checked object types will be imported and unchecked not.
+   Hold shift while selecting to check multiple object types.
+
 Read Keyframe
    Reads the keyframe tracks from a 3ds file and transforms the objects to the data which was found.
    Usually only one frame is found in static scenes, it will be imported to the timeline.
