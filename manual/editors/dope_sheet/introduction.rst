@@ -134,6 +134,7 @@ Scaling Keyframes
    To scale (stretch) selected keys, press :kbd:`S`.
 Extending Keyframes
    To extend the time between two keys, select all with :kbd:`A`,
+   place the Playhead between two keyframes and press :kbd:`E`.
 Sliding Keyframes
    To slide, position the mouse at the point where the sliding should start (between first and last selected keyframes) and press :kbd:`Shift-T`.
    For more precision it is recommended to disable keyframes auto-snap.
