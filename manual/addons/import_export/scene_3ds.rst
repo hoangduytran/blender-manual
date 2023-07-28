@@ -39,7 +39,7 @@ Object Filter
    The kind of objects to be imported, checked object types will be imported and unchecked not.
    Hold shift while selecting to check multiple object types.
 
-Read Keyframe
+Animation
    Reads the keyframe tracks from a 3ds file and transforms the objects to the data which was found.
    Usually only one frame is found in static scenes, it will be imported to the timeline.
    If the 3ds scene is animated, the complete animation will be imported to the timeline.
@@ -51,7 +51,7 @@ Constrain Size
    Scales the imported objects by 10 scene units until it reaches the size defined here.
    To disable set the *Size Constraint* to zero.
 
-Convert Units
+Scene Units
    Converts the scale of all objects to the scene unit length settings. Blender uses meter scale, 
    but many 3ds files have millimeter unit scale, especially the ones exported from CAD applications.
    If millimeters are expected to import, set the scene unit length settings to *Millimeters*.
@@ -85,11 +85,11 @@ Object Filter
    The kind of objects to be exported, checked object types will be exported and unchecked not.
    Hold shift while selecting to check multiple object types.
 
-Export Hierarchy
+Hierarchy
    Preserves the object hierarchy if no keyframe section is written. Blender can read the hierarchy chunks
    but most importers do not use them, therefore only recommended if the file is used in Blender only.
 
-Export Keyframes
+Animation
    Writes the keyframe section of a 3ds file and exports the animation if an action was found.
    The animation can be imported the same way, un-check if any importer crashes,
    not every application can handle the keyframe section.
