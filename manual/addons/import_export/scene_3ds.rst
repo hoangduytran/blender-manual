@@ -182,8 +182,16 @@ Ambient
 =======
 
 If ambient chunks are found by the importer, a new world with the ambient color will be created.
-Ambient keyframes will be imported to the timeline. The exporter creates an ambient chunk with the color of 
+Ambient keyframes will be imported to the timeline and background color to the world background node.
+If a background image is found, it will be connected to the background node and if a fog chunk was found, 
+a volume shader with the fog settings will be connected to the world output. If ambient is animated, an ambient node 
+will be created and connected to a mixshader. The exporter can export these settings and will also accept an add-shader
+instead of a mixshader, images are taken from the background input. The exporter creates an ambient chunk with the color of 
 the active world and creates background chunks with color or image if the nodes are connected to world output.
+
+.. figure:: /images/addons_io_3ds_world-nodes.jpg
+
+   An example of a 3ds file with all world nodes imported.
 
 
 Lights
