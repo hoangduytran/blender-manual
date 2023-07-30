@@ -196,7 +196,8 @@ a volume shader with the fog settings will be connected to the world output. If 
 will be created and connected to a mixshader. The exporter can export these settings and will also accept an
 add-shader instead of a mixshader, images are taken from the background input. The exporter creates an ambient chunk
 with the color of the active world and creates background chunks with color or image if the nodes are connected to
-world output.
+world output or mix and add shader. Ambient color animations can primary be exported from the world color. If nodes are used, 
+the exporter checks the RGB input node and the emission shader for color animations and writes an ambient track node chunk.
 
 .. figure:: /images/addons_io_3ds_world-nodes.jpg
 
