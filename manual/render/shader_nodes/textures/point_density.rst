@@ -8,7 +8,8 @@ Point Density Node
    :align: right
    :alt: Point Density Node.
 
-The *Point Density* node is available in volume shaders, to render volumetric points for each particle or vertex of another object.
+The *Point Density* node is available in volume shaders, to render volumetric points for each particle or vertex of
+another object.
 
 
 Inputs

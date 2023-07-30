@@ -106,7 +106,8 @@ Touchpad
 
 Touchpad controls are available on Windows, macOS and Linux with Wayland.
 If you are working from a laptop without a mouse,
-you can emulate controls using multi-touch gestures with the trackpad from :doc:`Preferences </editors/preferences/input>`.
+you can emulate controls using multi-touch gestures with the trackpad from
+:doc:`Preferences </editors/preferences/input>`.
 
 .. list-table:: Supported multi-touch gestures
    :header-rows: 1

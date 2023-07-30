@@ -108,7 +108,8 @@ Touchpad
 
 Multi-touch Gestures
    Use multi-touch gestures for navigation with touchpad, instead of scroll wheel emulation.
-   For more detail on supported gestures, see :doc:`Configuring Peripherals </getting_started/configuration/hardware>`.
+   For more detail on supported gestures, see :doc:`Configuring Peripherals </getting_started/configuration/hardware>`
+   .
 
 Tablet
 ======
