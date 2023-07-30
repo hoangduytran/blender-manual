@@ -44,6 +44,10 @@ Animation
    Usually only one frame is found in static scenes, it will be imported to the timeline.
    If the 3ds scene is animated, the complete animation will be imported to the timeline.
 
+Cursor origin
+   Reads the 3D cursor location chunk if one is found. Almost all valid 3ds files including this chunk,
+   but with the location set to zero.
+
 Transform
 ^^^^^^^^^
 
@@ -78,7 +82,7 @@ Export
 Include
 ^^^^^^^
 
-Selection Only
+Selection
    When checked, only selected objects are exported. Otherwise export all objects in the scene.
 
 Object Filter
@@ -93,6 +97,10 @@ Animation
    Writes the keyframe section of a 3ds file and exports the animation if an action was found.
    The animation can be imported the same way, un-check if any importer crashes,
    not every application can handle the keyframe section.
+
+Cursor origin
+   Saves the current 3D cursor location of the scene to a chunk, the importer can read the location,
+   if the option is enabled.
 
 Transform
 ^^^^^^^^^
