@@ -44,7 +44,7 @@ Animation
    Usually only one frame is found in static scenes, it will be imported to the timeline.
    If the 3ds scene is animated, the complete animation will be imported to the timeline.
 
-Cursor origin
+Cursor Origin
    Reads the 3D cursor location chunk if one is found. Almost all valid 3ds files including this chunk,
    but with the location set to zero.
 
@@ -98,7 +98,7 @@ Animation
    The animation can be imported the same way, un-check if any importer crashes,
    not every application can handle the keyframe section.
 
-Cursor origin
+Cursor Origin
    Saves the current 3D cursor location of the scene to a chunk, the importer can read the location,
    if the option is enabled.
 
