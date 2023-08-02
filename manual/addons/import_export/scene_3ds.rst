@@ -189,16 +189,17 @@ the exporter creates a smooth chunk if the mesh contains any smooth faces.
 Ambient
 =======
 
-If ambient chunks are found by the importer, a new world with the ambient color will be created.
-Ambient keyframes will be imported to the timeline and background color to the world background node.
-If a background image is found, it will be connected to the background node and if fog chunks are found, 
-volume shaders with the fog settings will be connected to the world output. If ambient is animated, an ambient node 
-will be created and connected to a mixshader. Gradient chunks will be imported to a color ramp node. 
-The exporter can export these settings and will also accept an add-shader instead of a mixshader, images are taken from the background input.
-The exporter creates an ambient chunk with the color of the active world and creates background chunks with color or image if 
-the nodes are connected to world output or mix and add shader. Ambient color animations can primary be exported from the world color.  
-If nodes are used, the exporter checks the RGB input node and the emission shader for color animations and writes an ambient track node chunk. 
-If a color ramp node is connected to background or colormix node and includes at least three colors, the exporter will create a gradient chunk.
+If ambient chunks are found by the importer, a new world with the ambient color will be created. Ambient keyframes
+will be imported to the timeline and background color to the world background node. If a background image is found, it
+will be connected to the background node and if fog chunks are found, volume shaders with the fog settings will be
+connected to the world output. If ambient is animated, an ambient node will be created and connected to a mixshader.
+Gradient chunks will be imported to a color ramp node. The exporter can export these settings and will also accept an
+add-shader instead of a mixshader, images are taken from the background input. The exporter creates an ambient chunk
+with the color of the active world and creates background chunks with color or image if the nodes are connected to
+world output or mix and add shader. Ambient color animations can primary be exported from the world color. If nodes
+are used, the exporter checks the RGB input node and the emission shader for color animations and writes an ambient
+track node chunk. If a color ramp node is connected to background or colormix node and includes at least three colors,
+the exporter will create a gradient chunk.
 
 .. figure:: /images/addons_io_3ds_world-nodes.jpg
 
