@@ -64,8 +64,8 @@ Much more complex base mesh sculpting is especially useful with this technique.
 The disadvantages of this technique are a slower performance and limited support for some sculpt mode features.
 Custom attributes like Color Attributes, UV Maps and Face Sets are also lost or corrupted when using Dyntopo.
 
-To more easily access this feature, use the shortcuts :kbd:`Ctrl-D` to enabled Dyntopo
-and :kbd:`R` to define the resolution.
+This feature shares the same shortcuts with voxel remeshing when enabled.
+Use :kbd:`R` to define the resolution and :kbd:`Ctrl-R` to flood fill the resolution (if Constant Detail is used).
 
 .. note::
 
@@ -128,8 +128,8 @@ Additional brushes like the :doc:`Multires Eraser </sculpt_paint/sculpting/tools
 
 Here are general shortcuts to use the feature.
 
-- Step up one multires level :kbd:`PageUp`
-- Step down one multires level :kbd:`PageDown`
+- Step up one multires level :kbd:`Alt-2`
+- Step down one multires level :kbd:`Alt-1`
 - Set multires level / Create multires modifier :kbd:`Ctrl-0` to :kbd:`Ctrl-5`
 
 .. seealso::

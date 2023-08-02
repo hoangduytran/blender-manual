@@ -18,11 +18,11 @@ Sculpt Mode primarily uses Masks and Face Sets to easily control the mesh visibi
 and which faces can currently be edited.
 The exception is the :ref:`Clipping Region <clipping_region>`, which can be used in any mode.
 
-The most common shortcuts are :kbd:`H` to isolate the face set under the cursor (or show everything)
-and :kbd:`Shift-H` to hide the face set under the cursor.
+The most common shortcuts are :kbd:`H` to hide the face set under the cursor
+and :kbd:`Shift-H` to isolate the face set under the cursor (or show everything).
 
 :ref:`Inverting the visibility <bpy.ops.sculpt.face_set_change_visibility>` and :ref:`showing all <sculpt_show_all>`
-is also available in the :kbd:`W` pie menu.
+is also available in the :kbd:`Alt-W` pie menu.
 
 .. seealso::
 
@@ -73,7 +73,7 @@ which can then be quickly hidden or shown like mentioned above.
 They can also be used for fast mask creation via the :ref:`Mask Expand <bpy.ops.sculpt.expand>`.
 :ref:`Face Set Expand <face_set_expand>` is also useful for creating, editing and joining face sets.
 
-More options can be found in the :kbd:`W` pie menu.
+More options can be found in the :kbd:`Alt-W` pie menu.
 
 .. figure:: /images/sculpt-paint_sculpting_editing_face_set_pie.png
 

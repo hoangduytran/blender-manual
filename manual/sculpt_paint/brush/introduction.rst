@@ -25,7 +25,7 @@ These are the most common hotkeys for controlling the brush.
 
 - Set brush size :kbd:`F`
 - Set brush strength :kbd:`Shift-F`
-- Rotate brush texture :kbd:`Ctrl-F`
+- Rotate brush texture / Set brush weight :kbd:`Ctrl-F`
 
 After pressing these hotkeys, you can then either adjust the value interactively or by typing in numbers.
 Move the mouse right or left to increase/reduce the value

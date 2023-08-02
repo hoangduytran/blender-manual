@@ -29,7 +29,8 @@ Details About Selecting
 
 The following standard selection operations are supported:
 
-- :kbd:`Alt-LMB` -- Single faces. Use :kbd:`Shift-LMB` to select multiple.
+- :kbd:`Alt-LMB` -- Single faces
+- :kbd:`Shift-Alt-LMB` -- Select more or remove them from the selection.
 - :kbd:`A` -- All faces, :kbd:`A A` to deselect.
 - :kbd:`B` -- Box selection.
 - :kbd:`C` -- Circle select with brush.
@@ -48,7 +49,7 @@ Vertex Selection Masking
 
    :Mode:      Vertex and Weight Paint Modes
    :Header:    :menuselection:`Vertex Selection`
-   :Shortcut:  :kbd:`V`
+   :Shortcut:  :kbd:`2`
 
 In this mode you can select one or more vertices and then paint only on the selection.
 All unselected vertices are protected from unintentional changes.
@@ -67,6 +68,7 @@ Face Selection Masking
 
    :Mode:      Texture, Vertex, and Weight Paint Modes
    :Header:    :menuselection:`Paint Mask`
+   :Shortcut:  :kbd:`1`
 
 The *Face Selection masking* allows you to select faces and limit the paint
 tool to those faces, very similar to Vertex selection masking.

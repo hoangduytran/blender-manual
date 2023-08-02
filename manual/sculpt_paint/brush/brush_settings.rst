@@ -79,8 +79,8 @@ Blend
 Weight :guilabel:`Weight Paint`
    The weight value that is applied to the vertex group.
 
-   Use :kbd:`Ctrl-LMB` to sample the weight value of clicked vertex.
-   :kbd:`Shift-LMB` lets you select the group from which to sample from.
+   Use :kbd:`Shift-X` to sample the weight value of clicked vertex.
+   :kbd:`Shift-Ctrl-X` lets you select the group from which to sample from.
 
 .. _bpy.types.Brush.direction:
 
@@ -187,7 +187,7 @@ Auto-Masking :guilabel:`Sculpt Mode`
    The auto-masking toggles in the brush settings are the same as the sculpt mode auto-masking settings.
    The difference is that these toggles can be customized per brush to create specific brush behaviors.
 
-.. seealso:: Auto-Masking
+.. seealso::
    For more information on the Auto-Masking toggles, see :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
 
 .. _bpy.types.Brush.sculpt_plane:
@@ -223,7 +223,7 @@ Color
 
 The color of the brush. See :ref:`ui-color-picker`.
 
-Press :kbd:`S` on any part of the image to sample that color and set it as the brush color.
+Press :kbd:`Shift-X` on any part of the image to sample that color and set it as the brush color.
 Hold :kbd:`Ctrl` while painting to temporally paint with the secondary color.
 
 .. _bpy.ops.paint.brush_colors_flip:
