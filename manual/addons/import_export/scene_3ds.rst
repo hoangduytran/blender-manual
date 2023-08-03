@@ -58,7 +58,8 @@ Constrain Size
 Scene Units
    Converts the scale of all objects to the scene unit length settings. Blender uses meter scale, 
    but many 3ds files have millimeter unit scale, especially the ones exported from CAD applications.
-   If millimeters are expected to import, set the scene unit length settings to *Millimeters*.
+   If millimeters are expected to import, set the scene unit length settings to *Millimeters*. 
+   The meshes can also be converted to imperial unit measures if this is enabled in the scene units.
 
 Apply Transform
    Applies object transformations after importing. If unchecked, all objects will stay at its origins.
@@ -114,6 +115,7 @@ Scale Factor
 Scene Units
    Takes the scene unit length settings into account to export the real size of the objects.
    If the settings are millimeters, the exported scene will be scaled up since Blender uses meters for unit scale.
+   Also imperial unit measures are supported, the exporter will convert the mesh to the selected scene unit.
 
 Forward / Up Axis
    Since many applications use a different axis for pointing upwards,
