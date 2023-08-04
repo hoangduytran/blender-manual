@@ -61,8 +61,13 @@ Scene Units
    If millimeters are expected to import, set the scene unit length settings to *Millimeters*. 
    The meshes can also be converted to imperial unit measures if this is enabled in the scene units.
 
+Pivot Origin
+   Moves all geometry to the pivot origin. Enable this option for transformed pivot centers to move 
+   the geometry back to its origin.
+
 Apply Transform
-   Applies object transformations after importing. If unchecked, all objects will stay at its origins.
+   Applies object transformations after importing. If unchecked, all transformations will be cleared 
+   and the objects will stay at its origins.
 
 World Space
    Use world matrix instead of local matrix to transform the objects.
