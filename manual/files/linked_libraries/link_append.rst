@@ -11,6 +11,10 @@ Newly added collections types are available in :menuselection:`Add --> Collectio
 
 Look in the *Outliner*, with display mode set to *Blender File*, to see all your linked and appended data-blocks.
 
+.. note::
+
+   It is not possible to Append or Link data from :doc:`much newer blend-files </files/blend/compatibility>`
+
 
 .. _bpy.ops.wm.link:
 
