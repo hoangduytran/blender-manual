@@ -32,7 +32,7 @@ Transform
 Scale
    Factor to increase the physical size of the BVH.
 Rotation
-   .. todo:: |TODO|
+   Rotation order of the BVH.
 Forward / Up
    Since many applications use a different axis for pointing upwards, these are axis conversion for these settings,
    Forward and up axes -- By mapping these to different axes you can convert rotations
@@ -67,7 +67,7 @@ Transform
 Scale
    Factor to increase the physical size of the BVH.
 Rotation
-   TODO.
+   Rotation order of the BVH.
 Root Translation Only
    Only write the translation animation channels for the root bone.
 
