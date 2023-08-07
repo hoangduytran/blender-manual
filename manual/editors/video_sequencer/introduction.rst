@@ -4,22 +4,15 @@
 Introduction
 ************
 
-Blender is a versatile software used for modeling, sculpting, 2D drawing, animation, and video editing.
-Most of the work is done in so-called editors:
-tools for viewing and modifying your work through a specific part of Blender.
-
-There are a couple of editors that can manage video:
-the :doc:`Compositor </editors/compositor>`, the :doc:`Movie Clip Editor </editors/clip/index>`,
-the :doc:`Image Editor </editors/image/index>` (only for still images), and the Video Sequencer.
-
-This section describes only the interface of the Video Sequencer,
-to read more about usage of the Video Sequencer read the :doc:`Video Editing </video_editing/index>` section.
+The Video Sequencer allows you to place images, videos, sounds, and scenes
+on a timeline and combine them into a new video. This section only describes its UI;
+to read more about its usage, see the :doc:`Video Editing </video_editing/index>` section.
 
 
 Editor Layout
 =============
 
-The Video Sequencer is composed of multiple regions (see figure 1).
+The Video Sequencer is composed of multiple regions.
 They are described in more detail in the next sections.
 Figure 1 shows the combined *Sequencer & Preview* view type.
 This view can be broken up into the following regions:
@@ -28,22 +21,18 @@ This view can be broken up into the following regions:
 
    Figure 1: Sequence Editor shown in the Sequencer & Preview view type.
 
-   Header (red), Preview (yellow), Sequencer (blue), Properties (gray),
-   Panels & Tabs (yellow), Toolbar (purple).
-
 Header
    This region displays menus and buttons for interacting with the editor.
    The header changes slightly depending on the selected view type (see below).
 Preview
    This region shows the output of the Sequencer at the time of the Playhead.
 Sequencer
-   This region shows timeline for managing the montage of strips.
-Properties
+   This region shows a timeline for managing the montage of strips.
+Sidebar
    This region shows the properties of the active strip.
-   Is divided into panels and tabs. Toggle on or off with :kbd:`N` key.
+   It's divided into panels and tabs. Toggle on or off with :kbd:`N`.
 Toolbar
-   This region shows a list of icons, clicking on a icon will changes the active tool.
-   Toggle on or off with :kbd:`T` key.
+   This region shows a list of tools. Toggle on or off with :kbd:`T`.
 
 
 .. _bpy.types.SpaceSequenceEditor.view_type:
@@ -52,7 +41,7 @@ View Types
 ==========
 
 The Video Sequencer has three view types which can be
-changed with the View Type menu (see figure 1; top left).
+changed with the View Type selector (see figure 1; top left).
 
 .. figure:: /images/editors_vse_view_types.svg
 
@@ -63,24 +52,24 @@ Sequencer
 Preview
    View preview window and preview properties.
 Sequencer & Preview
-   Combined view of preview and timeline and properties of both.
+   Combined view of preview and timeline and their properties.
 
 .. tip::
 
-   It is possible to create multiple instances of any view type in single workspace.
+   It's possible to have multiple Video Sequencers in one workspace,
+   each with its own view type.
 
 
 Performance
 ===========
 
-Playback performance can be improved through several ways.
-The biggest impact on performance is to allow the Video Sequencer to cache the playback.
-There are two levels of cache, the first is a RAM cache,
-this is enabled by default but can be increased based on the amount of RAM available.
-The next level of cache is a disk cache which stores cached strips on disk.
-A disk cache can generally cache more than a RAM cache, but it can be slower.
-Both of these cache options can be configured in the :ref:`Preferences <prefs-system-sound>`.
+Playback performance can be improved in several ways.
+
+The method with the most impact is to allow the Video Sequencer to cache the playback.
+There are two levels of cache: a memory cache, which is enabled by default
+(and can be enlarged if RAM allows), and a disk cache, which is slower but has more capacity.
+Both of these can be configured in the :ref:`Preferences <prefs-system-video-sequencer>`.
 
 Another way to improve performance is by using :ref:`Strip Proxies <bpy.types.SequenceProxy>`.
-These are used to cache images or movies in a file that is easier to playback
-by reducing the image quality by either decreasing the resolution and/or compressing the image.
+These are copies of source images and videos with a lower resolution and/or quality,
+making them faster to load than the originals.
