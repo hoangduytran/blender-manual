@@ -31,12 +31,6 @@ Render Settings
    note its Python name (e.g. ``resolution_x`` for the X resolution, etc.),
    and enable the corresponding item in this list.
 
-   .. important::
-
-      This will only work if you have a Blender patched with ``ui_template_list diff``,
-      see `UI Template List Enhancement
-      <https://archive.blender.org/wiki/index.php/User:Mont29/UI_Template_List_Enhancement/>`__.
-
 Presets
    The column of buttons to the right of the list are a set of presets
    which set or clear one or more settings at once.
