@@ -44,18 +44,10 @@ Presets
       Copy the render resolution and aspect ratio settings.
       Beware of side effects if you modify the aspect of your render (e.g. switching from: 4/3 to 16/9...).
 
-   Set OSA/Clear OSA
-      Copy the global :abbr:`OSA (Oversampling)` usage, and OSA level settings.
-      Together with *Render Scale*, this is most useful for preview renders.
-
    Set Threads/Clear Threads
       Copy the settings (auto/fixed, and number) of threads used during rendering.
       Might be useful when e.g. you render your blend-files on various computers
       (even though the *Auto* option should work good in general...).
-
-   Set Fields/Clear Fields
-      Copy all fields settings.
-      Allows you to easily switch from progressive to interlaced...
 
    Set Stamp/Clear Stamp
       Copy whether to render stamps or not (i.e. the global stamp switch setting).
