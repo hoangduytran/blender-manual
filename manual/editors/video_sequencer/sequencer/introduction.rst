@@ -15,10 +15,10 @@ blurring...).
 
 :doc:`select </video_editing/edit/montage/selecting>` and
 :doc:`modify </video_editing/edit/montage/editing>` strips.
-There are also several built-in 
+There are also several built-in
 that can be combined with other strips to change their appearance.
 
-The Sequencer view is horizontally divided into 
+The Sequencer view is horizontally divided into
 each channel can contain what is called a strip.
 A strip can be an image, animation, or any number of effects.
 Each channel is numbered consecutively on the Y axis,

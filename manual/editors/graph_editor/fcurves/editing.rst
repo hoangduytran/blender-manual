@@ -518,7 +518,7 @@ Frequency Cutoff
    rate in this case is the scene frame rate multiplied by the `Samples per Frame` of this operator.
 
 Filter order
-   Higher values mean the frequency cutoff is steeper. 
+   Higher values mean the frequency cutoff is steeper.
 
 Samples per Frame
    Before the filter is applied, the curve is resampled at this interval to avoid errors when there
@@ -531,4 +531,4 @@ Blend
 Blend In/Out
    The number of frames at the start and end for which to blend between the filtered and unfiltered curve.
    This can help reducing jumps in the animation at the selection border. At value 1 it only locks the first and
-   last frame of the selection to the original position. 
+   last frame of the selection to the original position.

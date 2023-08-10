@@ -56,17 +56,17 @@ Constrain Size
    To disable set the *Size Constraint* to zero.
 
 Scene Units
-   Converts the scale of all objects to the scene unit length settings. Blender uses meter scale, 
+   Converts the scale of all objects to the scene unit length settings. Blender uses meter scale,
    but many 3ds files have millimeter unit scale, especially the ones exported from CAD applications.
-   If millimeters are expected to import, set the scene unit length settings to *Millimeters*. 
+   If millimeters are expected to import, set the scene unit length settings to *Millimeters*.
    The meshes can also be converted to imperial unit measures if this is enabled in the scene units.
 
 Pivot Origin
-   Moves all geometry to the pivot origin. Enable this option for transformed pivot centers to move 
+   Moves all geometry to the pivot origin. Enable this option for transformed pivot centers to move
    the geometry back to its origin.
 
 Apply Transform
-   Applies object transformations after importing. If unchecked, all transformations will be cleared 
+   Applies object transformations after importing. If unchecked, all transformations will be cleared
    and the objects will stay at its origins.
 
 World Space
@@ -112,7 +112,7 @@ Transform
 ^^^^^^^^^
 
 Scale Factor
-   The global scale factor for export. There are no unit scale definitions in a 3ds file, 
+   The global scale factor for export. There are no unit scale definitions in a 3ds file,
    only the float values are stored. Blender will use meters for export but many applications,
    like 3ds MAX\ :sup:`®`, are using millimeters. This option defines the scale factor to use for export.
    If millimeters are desired, the scale factor has to be setted to 1000.
@@ -216,11 +216,11 @@ the exporter will create a gradient chunk.
 Lights
 ======
 
-Lights in 3DS Studio can be a point source or a spotlight, they use color and energy data and a target for the spotlight. 
-The color and position of a light can be animated, the spotlight additionally has a target, beam angle and hotspot, 
-wich can be animated. The lights and animation can be imported and exported, the spotlight can contain a projection 
-bitmap, if an image is connected to a emission or colormixer, it will be exported. The x/y scale of a spotlight will be 
-exported in an aspect ratio chunk, the importer can calculate it back to x/y scale. The target data is calculated to 
+Lights in 3DS Studio can be a point source or a spotlight, they use color and energy data and a target for the spotlight.
+The color and position of a light can be animated, the spotlight additionally has a target, beam angle and hotspot,
+wich can be animated. The lights and animation can be imported and exported, the spotlight can contain a projection
+bitmap, if an image is connected to a emission or colormixer, it will be exported. The x/y scale of a spotlight will be
+exported in an aspect ratio chunk, the importer can calculate it back to x/y scale. The target data is calculated to
 Z and X axis angle for pan and tilt, Y is used for the roll angle.
 
 

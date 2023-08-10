@@ -154,7 +154,6 @@ Apply Scale
 Apply the scale of the selected NLA-strips to their referenced Actions.
 
 
-
 .. _bpy.ops.nla.clear_scale:
 
 Clear Scale
