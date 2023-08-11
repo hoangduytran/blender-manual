@@ -488,3 +488,15 @@ a.external {
 }
 
 /* End genindex consistency. */
+
+/* Correctly display keyboard shortcuts inside definition lists (theme.css explicitly excludes this case for some reason) */
+dt > kbd {
+	font-weight: normal;
+	font-size: 80%;
+	background-color: #fff;
+	border: 1px solid #a6a6a6;
+	border-radius: 4px;
+	box-shadow: 0 2px grey;
+	padding: 2.4px 6px;
+	margin: auto 0;
+}
