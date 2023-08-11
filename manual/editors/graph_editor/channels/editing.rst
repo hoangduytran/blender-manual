@@ -206,7 +206,10 @@ Bake Curve
    :Menu:      :menuselection:`Channel --> Bake Curve`
    :Shortcut:  :kbd:`Alt-C`
 
-Baking a curve replaces it with a set of sampled points, and removes the ability to edit the curve.
+Baking a curve replaces it with a set of sampled points at each full frame. 
+**It is a destructive process that removes the ability to edit the curve**.
+The main use for this is to reduce the file size with large datasets. Samples are only 1/5th the size per key.
+The sampled points interpolate linearly on subframes.
 
 
 .. _bpy.ops.graph.unbake:
@@ -218,7 +221,8 @@ Un-Bake Curve
 
    :Menu:      :menuselection:`Channel --> Un-Bake Curve`
 
-Unbaking a curve replaces the baked curve with an unbaked curve, adding the ability to edit it.
+Unbaking a curve replaces the baked curve with keyframes, adding the ability to edit it.
+It will not recreate the curve as it was before, instead it will place 1 key at every frame.
 
 
 .. _bpy.ops.graph.sound_bake:
