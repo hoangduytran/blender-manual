@@ -13,8 +13,10 @@ General
 .. list-table::
    :widths: 20 80
 
-   * - :kbd:`1` - :kbd:`9`
-     - Mode/Element switching
+   * - :kbd:`1` - :kbd:`3`
+     - Switch Selection mode
+   * - :kbd:`4``
+     - Object Modes pie menu
    * - :kbd:`RMB`
      - Context menu
    * - :kbd:`Tab`
@@ -65,6 +67,8 @@ Viewport
      - Front/Side/Top/Camera Viewpoints
    * - :kbd:`F`
      - Frame Selected
+   * - :kbd:`Shift F`
+     - Center View to Mouse
    * - :kbd:`A`
      - Frame All
 
@@ -91,7 +95,7 @@ Selection
      - Select Loop
    * - Double :kbd:`Alt-LMB`
      - Select Ring
-   * - :kbd:`]`
+   * - :kbd:`Ctrl L`
      - Select Linked
 
 
@@ -104,7 +108,7 @@ Tools
    * - :kbd:`W`, :kbd:`E`, :kbd:`R`
      - Transform Tools
    * - :kbd:`Q`
-     - Box Select
+     - Select Tools
    * - :kbd:`D`
      - Annotate
    * - :kbd:`C`
