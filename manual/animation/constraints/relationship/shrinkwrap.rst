@@ -8,12 +8,7 @@ Shrinkwrap Constraint
 The *Shrinkwrap* constraint is the "object counterpart" of
 the :doc:`Shrinkwrap Modifier </modeling/modifiers/deform/shrinkwrap>`.
 It moves the owner origin and therefore the owner object's location to the surface of its target.
-
-This implies that the target *must* have a surface. In fact,
-the constraint is even more selective, as it can only use meshes as targets. Hence,
-the *Shrinkwrap* option is only shown in the *Add Constraint to Active Object* menu,
-:kbd:`Ctrl-Alt-C`, (or its bone's equivalent),
-when the selected inactive object is a mesh.
+This implies that the target *must* have a surface; thus, you can only use meshes as targets.
 
 
 Options
