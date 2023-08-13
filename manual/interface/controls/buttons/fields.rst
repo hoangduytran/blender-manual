@@ -33,20 +33,19 @@ Number fields store values and units.
 
 The first type of number field shows triangles pointing left (<) and right (>)
 on the sides of the field when mouse pointer is over the field.
+
 Sliders, a second type of number field, have a colored bar in the background
 to display values over a range, e.g. percentage values.
 
 The value can be edited in several ways:
 
 Incremental Steps
-   To change the value in unit steps, click :kbd:`LMB` on the small triangles
-   (only available on first field type).
+   To change the value in unit steps, click :kbd:`LMB` on the small triangles (not available for sliders).
    You can also use :kbd:`Ctrl-Wheel` while hovering over the field to edit the value.
 Dragging
    To change the value with the mouse, hold down :kbd:`LMB` and drag to left or right.
 
    Hold :kbd:`Ctrl` to snap to the discrete steps while dragging or :kbd:`Shift` for precision input.
-
 Keyboard Input
    Press :kbd:`LMB` or :kbd:`Return` to enter value by typing it with keyboard.
 
