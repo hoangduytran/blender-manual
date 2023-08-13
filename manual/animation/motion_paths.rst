@@ -43,7 +43,7 @@ Each frame is displayed by a small white dot on the paths.
 
 The paths are automatically updated when you edit your poses/keyframes,
 and they are also active during animation playback. Playing the animation
-affects the paths only when the *Around Current Frame* option is enabled.
+affects the paths only when using the *Around Frame* type.
 
 
 Options
@@ -90,7 +90,7 @@ Calculation Range
 
 Frame Range Start, End
    Starting and Ending frame of range of paths to display/calculate
-   (not for the *Around Current Frame* type).
+   (not for the *Around Frame* type).
 
    Although the start and end frame are always editable, updating the motion
    path will change these according to the *Calculation Range* setting. To
@@ -101,7 +101,7 @@ Frame Range Start, End
 
 Frame Range Before, After
    Number of frames to show before and after the current frame
-   (only for the *Around Current Frame* type).
+   (only for the *Around Frame* type).
 
 .. _bpy.types.AnimVizMotionPaths.frame_step:
 
