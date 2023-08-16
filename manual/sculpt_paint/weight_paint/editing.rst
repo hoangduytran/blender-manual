@@ -392,6 +392,60 @@ Limit
    Maximum number of weights allowed on each vertex.
 
 
+.. _bpy.ops.paint.weight_gradient:
+
+Gradient (Linear)
+=================
+
+.. reference::
+
+   :Mode:      Weight Paint Mode
+   :Menu:      :menuselection:`Weights --> Gradient (Linear)`
+   :Shortcut:  :kbd:`Shift-LMB`
+
+Applies a linear weight gradient;
+this is useful at times when painting gradual changes in weight becomes difficult.
+Blends the weights of selected vertices with unselected vertices.
+
+.. figure:: /images/sculpt-paint_weight-paint_tools_gradient.png
+
+   Example of the Gradient tool being used with selected vertices.
+
+Weight
+   The gradient starts at the current selected weight value, blending out to nothing.
+Strength
+   Lower values can be used so the gradient mixes in with the existing weights (just like with the brush).
+Type
+   The shape of the gradient.
+
+   :Linear: Create gradient that forms a straight line.
+   :Radial: Create gradient that forms a circle.
+
+
+Gradient (Radial)
+=================
+
+.. reference::
+
+   :Mode:      Weight Paint Mode
+   :Menu:      :menuselection:`Weights --> Gradient (Radial)`
+   :Shortcut:  :kbd:`Shift-Alt-LMB`
+
+Applies a radial weight gradient;
+this is useful at times when painting gradual changes in weight becomes difficult.
+Blends the weights of selected vertices with unselected vertices.
+
+Weight
+   The gradient starts at the current selected weight value, blending out to nothing.
+Strength
+   Lower values can be used so the gradient mixes in with the existing weights (just like with the brush).
+Type
+   The shape of the gradient.
+
+   :Linear: Create gradient that forms a straight line.
+   :Radial: Create gradient that forms a circle.
+
+
 .. _bpy.ops.object.vertex_group_lock:
 
 Locks

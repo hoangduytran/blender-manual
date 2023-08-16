@@ -67,8 +67,8 @@ Gradient
    Type
       The shape of the gradient.
 
-      :Linear: Create gradient that forms a straight line. :kbd:`Alt-LMB` and drag.
-      :Radial: Create gradient that forms a circle. :kbd:`Ctrl-Alt-LMB` and drag.
+      :Linear: Create gradient that forms a straight line. :kbd:`Shift-LMB` and drag.
+      :Radial: Create gradient that forms a circle. :kbd:`Shift-Alt-LMB` and drag.
 
 Sample
    Weights
