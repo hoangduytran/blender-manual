@@ -17,7 +17,7 @@ Inputs
 
 Image
    Standard color input.
-Distort
+Distortion
    This creates a bulging or pinching effect from the center of the image.
 Dispersion
    This simulates chromatic aberrations, where different wavelengths of light refract slightly differently,
