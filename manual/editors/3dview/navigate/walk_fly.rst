@@ -100,6 +100,10 @@ Settings like mouse sensitivity and default speed can be adjusted in the
    * - :kbd:`Z`
      - Correct the Z axis of the view (smoothly roll it to ensure it's upright,
        not tilted to a side).
+   * - :kbd:`Period`
+     - Increases the jump height.
+   * - :kbd:`Comma`
+     - Decreases the jump height.
 
 
 .. _bpy.ops.view3d.fly:
