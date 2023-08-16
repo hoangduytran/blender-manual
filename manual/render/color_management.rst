@@ -270,6 +270,10 @@ Color Spaces
    Blender's OCIO configuration file is equipped by default to read/write files in these color spaces:
 
    :sRGB: Standard RGB display space using Rec. 709 chromaticities and a D65 white point.
+   :Linear CIE-XYZ E:
+      1931 CIE XYZ standard with assumed illuminant E white point.
+   :Linear CIE-XYZ D65:
+      1931 CIE XYZ with adapted illuminant D65 white point.
    :Linear:
       Blender's native linear space meaning there is no gamma mapping,
       using Linear Rec. 709 chromaticities and a D65 white point.
