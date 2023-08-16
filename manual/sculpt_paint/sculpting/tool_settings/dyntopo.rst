@@ -68,9 +68,3 @@ Detailing
 Detail Flood Fill
    When using *Constant* or *Manual* *Detailing*, this option is made available,
    allowing you to fill the entire object with a uniform detail, based on the detail size.
-
-.. _bpy.types.Sculpt.use_smooth_shading:
-
-Smooth Shading
-   Toggles whether mesh faces are smooth or flat-shaded.
-   In dynamic-topology mode all faces have the same type of shading.
