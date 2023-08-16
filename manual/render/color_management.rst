@@ -270,24 +270,25 @@ Color Spaces
    Blender's OCIO configuration file is equipped by default to read/write files in these color spaces:
 
    :sRGB: Standard RGB display space using Rec. 709 chromaticities and a D65 white point.
-   :Linear CIE-XYZ E:
-      1931 CIE XYZ standard with assumed illuminant E white point.
-   :Linear CIE-XYZ D65:
-      1931 CIE XYZ with adapted illuminant D65 white point.
-   :Linear:
-      Blender's native linear space meaning there is no gamma mapping,
-      using Linear Rec. 709 chromaticities and a D65 white point.
-   :Linear ACES:
-      Also known as ACES2065-1, which is an ACES color space using the AP0 color primaries,
-      a D60 white point and a linear transfer function.
-      This color space is meant to store and transfer data with the most amount of possible color information.
-   :Linear ACEScg:
+   :Rec.2020: BT.2020 2.4 Exponent EOTF Display.
+   :Rec.1886: BT.1886 2.4 Exponent EOTF Display, commonly used for TVs.
+   :Non-Color: Generic data that is not color, will not apply any color transform (e.g. normal maps).
+   :Linear Rec.709: Linear BT.709 chromaticities with illuminant D65 white point.
+   :Linear Rec.2020: Linear BT.2020 with illuminant D65 white point.
+   :Linear FilmLight E-Gamut: Linear E-Gamut with illuminant D65 white point.
+   :Linear DCI-P3 D65: Linear DCI-P3 with illuminant D65 white point.
+   :Linear CIE-XYZ E: 1931 CIE XYZ standard with assumed illuminant E white point.
+   :Linear CIE-XYZ D65: 1931 CIE XYZ with adapted illuminant D65 white point.
+   :Filmic sRGB: Similar to *sRGB* but uses the Filmic view transform.
+   :Filmic Log: Intermediate log color space of Filmic view transform.
+   :Display P3: Apple's Display P3 with sRGB compound (piece-wise) encoding transfer function, common on Mac devices.
+   :ACEScg:
       An ACES color space that is designed to be used for rendering and compositing.
       It uses the AP1 color primaries, a D60 white point, and a linear transfer function.
       While similar to ACES2065-1, this color space has a smaller color gamut.
       The smaller gamut allow it to better represent the colors that fit inside the CIE 1931 chromaticities diagram.
       Colors that lie outside the CIE 1931 chromaticities are generally not important to rendering and compositing
       because the human stimulus cannot represent these colors.
-   :Non-Color: Generic data that is not color, will not apply any color transform (e.g. normal maps).
-   :Filmic sRGB: Similar to *sRGB* but uses the Filmic view transform.
-   :Filmic Log: Intermediate log color space of Filmic view transform.
+   :ACES2065-1:
+      An ACES color space using the AP0 color primaries, a D60 white point and a linear transfer function.
+      This color space is meant to store and transfer data with the most amount of possible color information.
