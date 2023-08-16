@@ -122,8 +122,6 @@ Display Device
    or when writing out image files intended to be displayed on another device.
 
    :sRGB: Used by most displays.
-   :XYZ: Commonly used by digital projectors.
-   :None: Disables color management.
 
 .. _bpy.types.ColorManagedViewSettings.view_transform:
 
@@ -140,11 +138,11 @@ View Transform
    :Filmic Log:
       Converts to Filmic log color space. This can be used for export to color grading applications,
       or to inspect the image by flattening out very dark and light areas.
+   :False Color:
+      Shows a heat map of image intensities, to visualize the dynamic range.
    :Raw:
       Intended for inspecting the image but not for final export.
       Raw gives the image without any color space conversion.
-   :False Color:
-      Shows a heat map of image intensities, to visualize the dynamic range.
 
 .. _bpy.types.ColorManagedViewSettings.look:
 
@@ -286,8 +284,6 @@ Color Spaces
       The smaller gamut allow it to better represent the colors that fit inside the CIE 1931 chromaticities diagram.
       Colors that lie outside the CIE 1931 chromaticities are generally not important to rendering and compositing
       because the human stimulus cannot represent these colors.
-   :XYZ: Standard linear XYZ space.
-   :Non-Color: Color space used for images which contains non-color data (e.g. normal maps).
-   :Raw: Does not automatically convert to linear; same as Non-Color.
-   :Filmic Log: Intermediate log color space of Filmic view transform.
+   :Non-Color: Generic data that is not color, will not apply any color transform (e.g. normal maps).
    :Filmic sRGB: Similar to *sRGB* but uses the Filmic view transform.
+   :Filmic Log: Intermediate log color space of Filmic view transform.
