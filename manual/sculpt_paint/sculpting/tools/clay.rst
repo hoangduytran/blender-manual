@@ -7,7 +7,6 @@ Clay
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Clay`
-   :Shortcut:  :kbd:`C`
 
 Similar to the :doc:`Draw </sculpt_paint/sculpting/tools/draw>` brush,
 but includes settings to adjust the :ref:`sculpt plane <bpy.types.Brush.sculpt_plane>`

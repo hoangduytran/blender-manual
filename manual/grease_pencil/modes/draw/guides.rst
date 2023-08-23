@@ -23,33 +23,29 @@ Guide Types
 
    Guide selector activated in the 3D Viewport header.
 
-Circular
+:Circular:
    Constrains the drawing of new strokes to form rings from the selected reference point.
-
-Radial
+:Radial:
    Constrains the drawing of new strokes to form rays from the selected reference point.
-
-Parallel
+:Parallel:
    Constrains the drawing of new strokes to form parallel lines.
 
    Angle
       Angle direction of the parallel lines.
-
-Grid
+:Grid:
    Constrains the drawing of new strokes to form parallel horizontal or vertical lines.
-
-Isometric
+:Isometric:
    Constrains the drawing of new strokes to vertical or isometric lines.
 
    Angle
       Angle direction of the isometric lines.
 
 
-.. _bpy.types.GPencilSculptGuide.use_snapping:
-.. _bpy.types.GPencilSculptGuide.reference_point:
 
 Common Options
 --------------
+
+.. _bpy.types.GPencilSculptGuide.use_snapping:
 
 Use Snapping
    When enabled, snap the drawn strokes to an angle or spacing.
@@ -57,21 +53,19 @@ Use Snapping
    Spacing
       Guide spacing.
 
+.. _bpy.types.GPencilSculptGuide.reference_point:
+
 Reference Point
    Determines the origin point to use for the creation of the lines.
    Applies only for *Circular* and *Radial* guides.
 
-   Cursor
-      Use the cursor as a reference point.
-
-   Custom
-      Use a custom location as a reference point.
+   :Cursor: Use the cursor as a reference point.
+   :Custom: Use a custom location as a reference point.
 
       Custom Location
          X, Y Z
 
-   Object
-      Use an object as a reference point.
+   :Object: Use an object as a reference point.
 
       Object
          A :ref:`Data ID menu <ui-data-id>` to select the object (usually an empty),

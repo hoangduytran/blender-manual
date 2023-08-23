@@ -7,7 +7,6 @@ Draw
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Draw`
-   :Shortcut:  :kbd:`X`
 
 Moves vertices inward or outward, based the average vertex normals within the brush radius.
 This is a very default behavior for sculpting and can be used in most cases.

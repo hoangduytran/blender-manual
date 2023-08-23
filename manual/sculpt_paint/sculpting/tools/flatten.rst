@@ -7,7 +7,6 @@ Flatten
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Flatten`
-   :Shortcut:  :kbd:`Shift-T`
 
 Flatten or contrast surfaces by pulling and pushing them towards
 (or away from) a defined medium height.

@@ -8,9 +8,8 @@ Dyntopo
 
    :Mode:      Sculpt Mode
    :Panel:     :menuselection:`Sidebar --> Tool --> Dyntopo`
-   :Shortcut:  :kbd:`Ctrl-D`
 
-Dynamic Topology (aka Dyntopo) can be toggled with the checkbox in the header or with :kbd:`Ctrl-D`.
+Dynamic Topology (aka Dyntopo) can be toggled with the checkbox.
 With dynamic topology active, most brushes will subdivide the mesh during the stroke.
 
 For a general explanation of dynamic topology, visit

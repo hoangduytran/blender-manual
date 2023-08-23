@@ -7,7 +7,6 @@ Inflate
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Inflate`
-   :Shortcut:  :kbd:`I`
 
 Similar to :doc:`Draw </sculpt_paint/sculpting/tools/clay>`,
 except that vertices are moved in the direction of their own normals.

@@ -66,7 +66,6 @@ Select Alternated
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Select --> Alternated`
-   :Shortcut:  :kbd:`Shift-L`
 
 Selects alternate points in the selected strokes.
 

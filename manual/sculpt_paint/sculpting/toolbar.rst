@@ -6,6 +6,7 @@ Toolbar
 The amount of tools in sculpt mode is very extensive.
 This is an overview of all of them, categorized by their general functions.
 
+
 Add/Subtract Brushes
 ====================
 
@@ -67,6 +68,7 @@ These brushes generally flatten or heighten the contrast of the surface.
 :doc:`/sculpt_paint/sculpting/tools/multiplane_scrape`
    Scrapes the mesh with two angled planes at the same time, producing a sharp edge between them.
 
+
 Transform Brushes
 =================
 
@@ -109,6 +111,7 @@ These brushes generally move, pinch and magnify the mesh.
 :doc:`/sculpt_paint/sculpting/tools/boundary`
    Transform mesh boundaries specifically with various deformations.
 
+
 General Brushes
 ===============
 
@@ -136,6 +139,7 @@ These brushes are general purpose brushes or specific.
 :doc:`/sculpt_paint/sculpting/tools/multires_displacement_smear`
    Smear displacement information on a Multiresolution modifier.
 
+
 Painting Brushes
 ================
 
@@ -150,6 +154,7 @@ These brushes are used for painting color attributes within sculpt mode.
 
 :doc:`/sculpt_paint/sculpting/tools/smear`
    Smears the vertex colors via color attributes.
+
 
 Gesture Tools
 =============
@@ -186,6 +191,7 @@ Box Hide
 :doc:`/sculpt_paint/sculpting/tools/line_project`
    Flatten the geometry towards a drawn line.
 
+
 Filter Tools
 ============
 
@@ -203,6 +209,7 @@ Tools for applying effects on the entire unmasked and visible mesh.
 :doc:`/sculpt_paint/sculpting/tools/color_filter`
    Changes the active color attribute on all unmasked vertices.
 
+
 Single Click Tools
 ==================
 
@@ -216,6 +223,7 @@ Simpler tools that apply an operation on surfaces that are clicked on.
 
 :doc:`/sculpt_paint/sculpting/tools/mask_by_color`
    Create a mask from any color from the color attribute by clicking on it.
+
 
 General Tools
 =============

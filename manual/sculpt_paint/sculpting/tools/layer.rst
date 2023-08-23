@@ -7,7 +7,6 @@ Layer
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Layer`
-   :Shortcut:  :kbd:`L`
 
 This brush is similar to :doc:`Draw </sculpt_paint/sculpting/tools/clay>`,
 except that the height capped.

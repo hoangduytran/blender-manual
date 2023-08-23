@@ -7,7 +7,6 @@ Grab
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Grab`
-   :Shortcut:  :kbd:`G`
 
 Drag geometry across the screen, following the cursor.
 *Grab* only moves the vertices that are under the brush radius at the start of the stroke.
