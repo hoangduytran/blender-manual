@@ -91,6 +91,11 @@ Context Path
 Annotations
    Displays :doc:`Annotations </interface/annotate_tool>` in the preview region.
 
+.. _bpy.types.SpaceNodeOverlay.show_previews:
+
+Previews
+   Display each node's :ref:`interface-nodes-parts-preview` if the node's preview is also toggled.
+
 
 Toolbar
 -------

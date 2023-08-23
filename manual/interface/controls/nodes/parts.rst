@@ -7,7 +7,7 @@ Node Parts
 
 All nodes in Blender are based on a similar construction.
 This applies to :ref:`any type of node <tab-node-tree-types>`.
-These parts include the Title, Sockets, Preview and more.
+These parts include the title, sockets, properties and more.
 
 .. figure:: /images/interface_controls_nodes_parts_overview.png
 
@@ -23,6 +23,23 @@ which can be used to collapse the node. This can also be done with :kbd:`H`.
 .. figure:: /images/interface_controls_nodes_parts_collapsed.png
 
    How a node appears when collapsed.
+
+
+.. _interface-nodes-parts-preview:
+
+Preview
+-------
+
+Previews are an overlay that shows a small image above the node displaying the node result.
+Not all nodes support previews, but the ones that do can be toggled using
+the icon in the top right-hand corner of the node next to the title.
+
+Previews can be disabled for the whole node tree by using
+:ref:`Previews <bpy.types.SpaceNodeOverlay.show_previews>` overlay toggle.
+
+.. figure:: /images/interface_controls_nodes_parts_previewless.png
+
+   Preview toggle button.
 
 
 .. _bpy.types.NodeLink:
@@ -135,14 +152,3 @@ Node settings are located below the outputs and above any inputs.
 .. figure:: /images/interface_controls_nodes_parts_controls.png
 
    An example of the controls on the Chroma Key node.
-
-
-Preview
--------
-
-Some nodes can show an image that previews their result.
-The preview can be toggled using the icon on the very top right-hand corner of the node, next to the title.
-
-.. figure:: /images/interface_controls_nodes_parts_previewless.png
-
-   How a node appears without the preview.
