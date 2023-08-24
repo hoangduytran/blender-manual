@@ -24,5 +24,5 @@ Nodes that can operate on different geometry types (volume, mesh).
 .. toctree::
    :maxdepth: 1
 
-   join_geometry.rst
    geometry_to_instance.rst
+   join_geometry.rst

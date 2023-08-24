@@ -10,4 +10,5 @@
    image_info.rst
    is_viewport.rst
    object_info.rst
+   scene_time.rst
    self_object.rst
