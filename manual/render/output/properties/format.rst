@@ -61,3 +61,7 @@ Frame Rate
       These can be represent as a fraction where the *Base* value
       is used as the fraction's denominator and the FPS being the numerator:
       :math:`\frac{FPS}{Base}`.
+
+   .. seealso::
+
+      :ref:`Viewport Playback Frame Rate Limited <troubleshooting-fps_limit>`
