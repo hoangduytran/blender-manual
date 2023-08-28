@@ -20,6 +20,14 @@ Text Info Overlay
    Playback Frame Rate (FPS)
       Show the frames per second screen refresh rate while an animation is played back.
       It appears in the top left of the 3D Viewport, displaying red if the frame rate set cannot be reached.
+   Frame Rate Samples
+      Calculate the FPS displayed in the viewport based on an average of the current and previously displayed frames.
+      A value of zero uses the number of frames in 1.0 second.
+
+      - More samples represent the average FPS over a longer period of time,
+        however sudden changes to performance result in a more gradual increase/decrease over time.
+      - Fewer samples shows an FPS which more closely matches the actual performance,
+        however the value may jitter - making the FPS difficult to comprehend.
 
 .. _prefs-viewport-gizmo-size:
 
