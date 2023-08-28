@@ -151,13 +151,12 @@ def window_run_operator_from_search(*, window, operator_name):
 
 
 def window_screenshot_to_filepath(*, window, filepath):
+    from bpy import context
     for _ in range(SCREENSHOT_WAIT_TICKS):
         yield
 
-    bpy.ops.screen.screenshot(
-        {"window": window},
-        filepath=filepath,
-    )
+    with context.temp_override(window=window):
+        bpy.ops.screen.screenshot(filepath=filepath)
     yield
 
 
@@ -277,7 +276,8 @@ def screenshot_preferences(window):
         if section == 'EXPERIMENTAL':
             prefs.view.show_developer_ui = False
 
-    bpy.ops.wm.window_close({"window": prefs_window})
+    with context.temp_override(window=prefs_window):
+        bpy.ops.wm.window_close()
 
     # import IPython
     # IPython.embed()
