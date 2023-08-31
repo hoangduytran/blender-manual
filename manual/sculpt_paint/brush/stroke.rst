@@ -12,7 +12,7 @@ Any other brush behavior and effect is applied on top of the stroke.
 
 .. _bpy.types.Brush.stroke_method:
 
-Stroke Method :kbd:`E`
+Stroke Method :kbd:`Alt-E`
    Defines the way brush strokes are applied to the canvas.
 
    .. container:: lead

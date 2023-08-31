@@ -55,7 +55,7 @@ Delete Active Keyframe
    :Mode:      Draw Mode, Edit Mode, Sculpt Mode
    :Menu:      :menuselection:`Stroke --> Animation --> Delete Active Keyframe (Active Layer)`
                :menuselection:`Stroke --> Animation --> Delete Active Keyframes (All Layers)`
-   :Shortcut:  :kbd:`Shift-X`
+   :Shortcut:  :kbd:`Shift-Delete`, :kbd:`Alt-I`
 
 Deletes the last keyframe in the Dope Sheet or the current keyframe if you are on one.
 

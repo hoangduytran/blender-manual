@@ -22,6 +22,8 @@ Radius
    Meanwhile the texture of the brush will be visible inside the circle.
    You can also enter the size numerically with the number keys.
 
+   The size can be decreased/increased using :kbd:`[` and :kbd:`]` respectfully.
+
    Size Pressure
       Brush size can be affected by enabling the pressure sensitivity icon,
       if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
@@ -31,9 +33,9 @@ Radius
 Radius Unit :guilabel:`Sculpt Mode`
    Controls how the brush *Radius* is measured.
 
-   View
+   :View:
       The *Radius* is measured based on how the cursor appears on the monitor i.e. "screen space".
-   Scene
+   :Scene:
       The *Radius* is measured based on real world units.
       This means that the brush radius stays consistent, independently from zooming in and out in the viewport.
       The unit type and scaling can be configured in the :ref:`Scene Units <bpy.types.UnitSettings>`.
@@ -157,11 +159,11 @@ Pinch/Magnify :guilabel:`Sculpt Mode`
 Deformation Target
    How the deformation of the brush will affect the object.
 
-   Geometry
-      Deform the geometry directly.
-   Cloth Simulation
+   :Geometry: Deform the geometry directly.
+   :Cloth Simulation:
       Deform the mesh while a :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`
       is applied to it at the same time.
+
 
 .. _sculpt-tool-settings-brush-settings-advanced:
 
@@ -215,6 +217,7 @@ Original :guilabel:`Sculpt Mode`
       When locked keep using the plane origin of surface where stroke was initiated,
       instead of the surface plane currently under the cursor.
 
+
 Color Picker
 ============
 
@@ -249,12 +252,12 @@ A gradient can be used as a color source.
 Gradient Colors
    The :ref:`ui-color-ramp-widget` to define the gradient colors.
 Mode
-   Pressure
+   :Pressure:
       Will choose a color from the color ramp according to the stylus pressure.
-   Clamp
+   :Clamp:
       Will alter the color along the stroke and as specified by *Gradient Spacing* option.
       With *Clamp* it uses the last color of the color ramp after the specified gradient.
-   Repeat
+   :Repeat:
       Similar to *Clamp*. After the last color it resets the color to the first color in the color ramp and
       repeats the pattern.
 

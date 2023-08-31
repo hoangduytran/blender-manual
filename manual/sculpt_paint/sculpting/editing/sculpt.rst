@@ -44,18 +44,12 @@ Box Show
 
 .. _bpy.ops.sculpt.face_set_change_visibility:
 
-Toggle Visibility :kbd:`H`
+Toggle Visibility :kbd:`Shift-H`
    Hide all face sets except the active one (under the cursor).
    If face sets are already hidden, then this operator will show everything.
 
-Hide Active Face Set :kbd:`Shift-H`
-   Hide the face set under the cursor. Press :kbd:`H` afterwards to show everything.
-
-.. note::
-
-   These two shortcuts are inverted compared to other modes, to make the operators more convenient to access.
-   Toggling the Visibility is far more often used. If this behavior is undesired it's recommended
-   to change the keymap in the preferences.
+Hide Active Face Set :kbd:`H`
+   Hide the face set under the cursor. Press :kbd:`Shift-H` afterwards to show everything.
 
 .. _sculpt_show_all:
 
@@ -184,6 +178,20 @@ Random
    This filter works similar to the :ref:`Randomize Transform <bpy.ops.object.randomize_transform>`.
 
 
+.. _bpy.ops.sculpt.sample_color:
+
+Sample Color
+============
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Sculpt --> Set Pivot`
+   :Shortcut:  :kbd:`Shift-X`
+
+Sample the vertex color of the active vertex.
+
+
 .. _bpy.ops.sculpt.set_pivot_position:
 
 Set Pivot
@@ -209,13 +217,12 @@ Mask Border
    This operation will automatically happen when using :ref:`bpy.ops.sculpt.expand`.
 Active Vertex
    Sets the pivot position to the active vertex position.
-Surface
+Surface :kbd:`Shift-RMB`
    Sets the pivot position to the surface under the cursor.
 
 .. tip::
 
-   For more convenient placement of the pivot point it's recommended to assign a shortcut to either
-   *Surface* or *Active Vertex*.
+   For more convenient placement of the pivot point it's recommended to use the shortcut assigned to *Surface*.
 
 .. seealso::
 

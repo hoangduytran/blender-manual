@@ -10,7 +10,7 @@ Editing
 
 .. _bpy.ops.paint.vertex_color_set:
 
-Set Vertex Colors :kbd:`Shift-K`
+Set Vertex Colors :kbd:`Ctrl-X`
    Fill the active Color Attribute with the current paint color.
 
 .. _bpy.ops.paint.vertex_color_smooth:

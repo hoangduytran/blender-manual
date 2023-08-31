@@ -26,10 +26,8 @@ Soften
    Blur Mode
       The blur kernel type controls how neighboring pixels are weighted when calculating the blur effect.
 
-      Gaussian
-         Gaussian will sample the pixels near the center of the brush most.
-      Box
-         Box samples all surrounding pixels equally.
+      :Gaussian: Gaussian will sample the pixels near the center of the brush most.
+      :Box: Box samples all surrounding pixels equally.
 
 Smear
    When you click, takes the colors under the cursor, and blends them in the direction you move the mouse.

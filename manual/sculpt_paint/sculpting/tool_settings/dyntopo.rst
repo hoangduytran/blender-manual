@@ -64,6 +64,6 @@ Detailing
 
 .. _bpy.ops.sculpt.detail_flood_fill:
 
-Detail Flood Fill
+Detail Flood Fill :kbd:`Ctrl-R`
    When using *Constant* or *Manual* *Detailing*, this option is made available,
    allowing you to fill the entire object with a uniform detail, based on the detail size.

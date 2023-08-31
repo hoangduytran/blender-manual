@@ -26,6 +26,7 @@ if they come after the Multires.
    with a :doc:`Shrinkwrap modifier </modeling/modifiers/deform/shrinkwrap>`. For the best result make sure to set the
    wrap method to *Project*, snap mode to *Above Surface* and enable *Negative*.
 
+
 Options
 =======
 
@@ -39,6 +40,7 @@ Levels Viewport
    Set the level of subdivisions to show in the viewport.
 Sculpt
    Set the level of subdivisions to use specifically in Sculpt Mode.
+   While in Sculpt mode use :kbd:`Alt-1` to decrease the level or :kbd:`Alt-2` to increase.
 Render
    Set the level of subdivisions to show when rendering.
 

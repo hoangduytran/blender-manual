@@ -6,6 +6,12 @@ Face Sets
 
 This page details the face set related hotkey operators and menu operators in sculpt mode.
 
+
+.. tip::
+
+   There is a face set pie menu that can be accessed with :kbd:`Alt-W`.
+
+
 .. _bpy.ops.sculpt.face_sets_create:
 
 Face Set from Masked
@@ -56,24 +62,18 @@ Initializes all face sets on the mesh at once based off one of several mesh attr
 Mode
    The mesh data attribute used to define the boundaries for the face sets.
 
-   By Loose Parts
-      Creates a new face set per discontinuous part of the mesh.
-   By Face Set Boundaries
+   :By Loose Parts: Creates a new face set per discontinuous part of the mesh.
+   :By Face Set Boundaries:
       Creates a face set for each isolated face set.
       This mode is useful for splitting the patterns created by :ref:`Face Set Expand <face_set_expand>`
       into individual Face Sets for further editing.
-   By Materials
-      Creates a face set per :ref:`Material Slot <bpy.types.MaterialSlot>`.
-   By Normals
-      Creates face sets for Faces that have similar :ref:`Normals <modeling-meshes-structure-normals>`.
-   By UV Seams
-      Creates face sets using :doc:`UV Seams </modeling/meshes/uv/unwrapping/seams>` as boundaries.
-   By Edge Creases
-      Creates face sets using :ref:`Edge Creases <bpy.ops.transform.edge_crease>` as boundaries.
-   By Edge Bevel Weight
+   :By Materials: Creates a face set per :ref:`Material Slot <bpy.types.MaterialSlot>`.
+   :By Normals: Creates face sets for Faces that have similar :ref:`Normals <modeling-meshes-structure-normals>`.
+   :By UV Seams: Creates face sets using :doc:`UV Seams </modeling/meshes/uv/unwrapping/seams>` as boundaries.
+   :By Edge Creases: Creates face sets using :ref:`Edge Creases <bpy.ops.transform.edge_crease>` as boundaries.
+   :By Edge Bevel Weight:
       Creates face sets using :ref:`Bevel Weights <bpy.ops.transform.edge_bevelweight>` as boundaries.
-   By Sharp Edges
-      Creates face sets using :ref:`Sharp Edges <bpy.ops.mesh.mark_sharp>` as boundaries.
+   :By Sharp Edges: Creates face sets using :ref:`Sharp Edges <bpy.ops.mesh.mark_sharp>` as boundaries.
 
 Threshold
    The minimum value to consider a certain attribute a boundary when creating the face sets.
@@ -161,7 +161,6 @@ Generates a new set of random colors to render the face sets in the 3D Viewport.
 .. _bpy.types.Sculpt.show_face_sets:
 .. _bpy.types.View3DOverlay.sculpt_mode_face_sets_opacity:
 
-
 Display Settings
 ================
 
@@ -171,5 +170,5 @@ Display Settings
    :Popover:   :menuselection:`Viewport Overlays -- Sculpt --> Face Sets`
 
 The face sets display can be toggled as a :doc:`viewport overlay </editors/3dview/display/overlays>`.
-In the overlay popover, the opacity of the face sets overlay can be adjusted to make it more or less visible on the
-mesh.
+In the overlay popover, the opacity of the face sets overlay can be adjusted
+to make it more or less visible on the mesh.
