@@ -142,7 +142,7 @@ Node Editor
 Auto-Offset
    Automatically offset the following or previous nodes in a chain when inserting a new node.
    See :ref:`editors-nodes-usage-auto-offset` for more information.
-Node Auto-offset Margin
+Auto-offset Margin
    Margin to use for :ref:`offsetting nodes <editors-nodes-usage-auto-offset>`.
 
 
