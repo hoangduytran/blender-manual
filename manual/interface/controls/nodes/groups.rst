@@ -104,30 +104,6 @@ Hide in Modifier
    This option is only available for geometry nodes and only for input sockets.
 
 
-.. _bpy.ops.node.tree_path_parent:
-.. _bpy.ops.node.group_edit:
-
-Edit Group
-==========
-
-.. reference::
-
-   :Menu:      :menuselection:`Node --> Edit Group`
-   :Header:    :menuselection:`Go to Parent Node Tree`
-   :Shortcut:  :kbd:`Tab`, :kbd:`Ctrl-Tab`
-
-With a node group selected, press :kbd:`Tab` to move into it and see its content.
-Press :kbd:`Tab` again (or :kbd:`Ctrl-Tab`) to leave the group and go back to
-its parent, which could be the top-level node tree or another node group.
-You can refer to the breadcrumbs in the top left corner of the node editor
-to see where you are in the hierarchy.
-
-.. figure:: /images/render_cycles_optimizations_reducing-noise_glass-group.png
-   :width: 620px
-
-   Example of an expanded node group.
-
-
 .. _bpy.ops.node.group_make:
 
 Make Group
@@ -156,6 +132,48 @@ So it is recommended to use some naming convention that will allow you to distin
    and should not be used in node groups either (only in the top-level node tree).
 
 
+.. _bpy.ops.node.group_insert:
+
+Insert Into Group
+=================
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Insert Into Group`
+
+Moves the selected nodes into the :term:`active <Active>` group node.
+To use, select a set of nodes, ending with the destination group node,
+then, running the operation will move those nodes into that group.
+The moved nodes are collected into a group of their own to preserve their connection context,
+having their own group input and output nodes.
+The group's existing input and output nodes are updated with new sockets, if any, from the new nodes.
+The node group must be edited to contain a single *Group Input* and a single *Group Output* node.
+
+
+.. _bpy.ops.node.tree_path_parent:
+.. _bpy.ops.node.group_edit:
+
+Edit Group
+==========
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Edit Group`
+   :Header:    :menuselection:`Go to Parent Node Tree`
+   :Shortcut:  :kbd:`Tab`, :kbd:`Ctrl-Tab`
+
+With a node group selected, press :kbd:`Tab` to move into it and see its content.
+Press :kbd:`Tab` again (or :kbd:`Ctrl-Tab`) to leave the group and go back to
+its parent, which could be the top-level node tree or another node group.
+You can refer to the breadcrumbs in the top left corner of the node editor
+to see where you are in the hierarchy.
+
+.. figure:: /images/render_cycles_optimizations_reducing-noise_glass-group.png
+   :width: 620px
+
+   Example of an expanded node group.
+
+
 .. _bpy.ops.node.group_ungroup:
 
 Ungroup
@@ -176,25 +194,6 @@ Separate :kbd:`P`
       Copy to parent node tree, keep group intact.
    Move
       Move to parent node tree, remove from group.
-
-
-.. _bpy.ops.node.group_insert:
-
-Group Insert
-============
-
-.. reference::
-
-   :Menu:      :menuselection:`Node --> Group Insert`
-
-.. move node into selected group
-
-Selecting a set of nodes, ending with the destination group node,
-and pressing :menuselection:`Node --> Group Insert` will move those nodes into that group.
-The moved nodes are collected into a group of their own to preserve their connection context,
-having their own group input and output nodes.
-The group's existing input and output nodes are updated with new sockets, if any, from the new nodes.
-The node group must be edited to contain a single *Group Input* and a single *Group Output* node.
 
 
 Reusing Node Groups
