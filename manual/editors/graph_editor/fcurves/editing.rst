@@ -440,6 +440,66 @@ Blend
    values greater than 0.5 cause keyframes to concave down, a value of 0.5 results in a straight line.
 
 
+Blend Offset
+------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Blend Offset`
+
+Move the selected keyframes as a block so the first/last key align with the key before/after the selection.
+Does nothing when there is no key before/after the current selection.
+
+Offset Factor
+   At -1 the first key of the selection is aligned with the key just before the selection.
+   At 1 the last key is aligned with the key after the selection.
+
+
+Blend to Ease
+-------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Blend to Ease`
+
+Blend the selected keys from their current position to either an ease in or an ease out curve.
+
+Blend
+   At -1 the keys will start slowly and then accelerate to the end.
+   At 1 the keys will rise quickly and then taper off.
+
+
+Match Slope
+-----------
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Match Slope`
+
+Blend the selected keys to a straight line formed by the two keys just outside the current selection.
+The factor determines if the two keys left or right of the selection are used. If there are not
+two keys in the given direction the operator will throw a warning and not change the keys.
+
+Factor
+   Determines which slope to blend towards. At -1 will blend to the left slope, at 1 to the right.
+
+
+Shear
+-----
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Shear Keys`
+
+Shear the keys based on the position of the keyframe selection ends. 
+Pressing :kbd:`D` while the modal operator is active will toggle the anchor key 
+between the start and end of the selection.
+
+Shear Factor
+   How much to shear and if it shears up or down. Negative values shear down, positive shear up.
+
+Direction
+   `From Left` or `From Right` determine the anchor key from which to shear.
+
+
 Smooth
 ======
 
