@@ -14,18 +14,6 @@ that can be combined into a single node while selectively exposing inputs of the
 Group nodes can simplify a node tree by allowing instancing and hiding parts of the tree.
 
 
-Make Group
-==========
-
-Creates a node group from the selected nodes, see :ref:`bpy.ops.node.group_make` for more information.
-
-
-Ungroup
-=======
-
-Removes the selected nodes from a group, see :ref:`bpy.ops.node.group_ungroup` for more information.
-
-
 Group Input
 ===========
 
