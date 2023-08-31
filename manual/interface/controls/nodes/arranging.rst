@@ -43,7 +43,7 @@ for the new node.
 
 .. figure:: /images/interface_controls_nodes_arranging_auto-offset.png
 
-Auto-offset is enabled by default, but it can be disabled from the editor's View menu.
+Auto-offset is enabled by default, but it can be disabled in the :ref:`User Preferences <preferences-editing-node-editor>`.
 
 You can toggle the offset direction while you are moving the node by pressing :kbd:`T`.
 

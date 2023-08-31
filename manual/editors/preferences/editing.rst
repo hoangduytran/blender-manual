@@ -134,6 +134,18 @@ Auto Close Character Pairs
    when typing characters such as quotes, brackets, braces, or parentheses.
 
 
+.. _preferences-editing-node-editor:
+
+Node Editor
+===========
+
+Auto-Offset
+   Automatically offset the following or previous nodes in a chain when inserting a new node.
+   See :ref:`editors-nodes-usage-auto-offset` for more information.
+Node Auto-offset Margin
+   Margin to use for :ref:`offsetting nodes <editors-nodes-usage-auto-offset>`.
+
+
 Miscellaneous
 =============
 
@@ -144,5 +156,3 @@ Sculpt Overlay Color
    The overlay color is visible only when the overlay visibility is selected
    (clicking at the *eye* to set its visibility), and the transparency of the overlay is
    controlled by the alpha slider located at the :menuselection:`Tool tab --> Display panel` in the Sidebar.
-Node Auto-offset Margin
-   Margin to use for :ref:`offsetting nodes <editors-nodes-usage-auto-offset>`.
