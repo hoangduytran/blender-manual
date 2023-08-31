@@ -22,7 +22,7 @@ Each level can be expanded/collapsed by the small arrow to the left of its heade
 .. _bpy.types.DopeSheet.use_filter_invert:
 .. _bpy.types.DopeSheet.filter_text:
 
-Name Filter (:kbd:`Ctrl-F`)
+Name Filter :kbd:`Ctrl-F`
    Only display channels that match the search text.
    Pressing the invert button displays all channels except the channels that match the search text.
 
@@ -40,13 +40,13 @@ Modifiers (wrench icon)
    Deactivates the F-Curve modifiers of the selected curve or all curves in the channel.
 Mute (checkbox)
    Deactivates the channel/curve.
-Lock (:kbd:`Tab`) (padlock icon)
+Lock :kbd:`Tab` (padlock icon)
    Toggle channel/curve from being editable.
    Selected channels can be locked by pressing :kbd:`Tab`.
 
    .. note::
 
-      This also works in the Nonlinear Animation Editor, but note that it 
+      This also works in the Nonlinear Animation Editor, but note that it
       does not prevent edition of the underlying F-Curve, only the NLA strips of
       the NLA track.
 
