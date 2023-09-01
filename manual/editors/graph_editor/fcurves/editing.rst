@@ -440,6 +440,8 @@ Blend
    values greater than 0.5 cause keyframes to concave down, a value of 0.5 results in a straight line.
 
 
+.. _bpy.ops.graph.blend_offset:
+
 Blend Offset
 ------------
 
@@ -455,6 +457,8 @@ Offset Factor
    At 1 the last key is aligned with the key after the selection.
 
 
+.. _bpy.ops.graph.blend_to_ease:
+
 Blend to Ease
 -------------
 
@@ -468,6 +472,8 @@ Blend
    At -1 the keys will start slowly and then accelerate to the end.
    At 1 the keys will rise quickly and then taper off.
 
+
+.. _bpy.ops.graph.match_slope:
 
 Match Slope
 -----------
@@ -484,8 +490,10 @@ Factor
    Determines which slope to blend towards. At -1 will blend to the left slope, at 1 to the right.
 
 
-Shear
------
+.. _bpy.ops.graph.shear:
+
+Shear Keys
+----------
 
 .. reference::
 
@@ -497,7 +505,6 @@ between the start and end of the selection.
 
 Shear Factor
    How much to shear and if it shears up or down. Negative values shear down, positive shear up.
-
 Direction
    `From Left` or `From Right` determine the anchor key from which to shear.
 
@@ -509,6 +516,7 @@ Smooth
 
    :Menu:      :menuselection:`Key --> Smooth`
    :Shortcut:  :kbd:`Alt-S`
+
 
 .. _bpy.ops.graph.smooth:
 
@@ -563,6 +571,7 @@ Filter Width
 
    F-Curve after applying the Gaussian Smooth with the original curve overlayed.
 
+
 Butterworth Smooth
 ------------------
 
@@ -578,18 +587,14 @@ Frequency Cutoff
    The lower the value the smoother the curve. There is an implicit maximum at which
    the value no longer changes the curve which is at half the sample rate. The sample
    rate in this case is the scene frame rate multiplied by the `Samples per Frame` of this operator.
-
 Filter order
    Higher values mean the frequency cutoff is steeper.
-
 Samples per Frame
    Before the filter is applied, the curve is resampled at this interval to avoid errors when there
    are uneven spaces between frames. If keys are on subframes, e.g. a 60fps file in a 30fps scene,
    increase this value to 2.
-
 Blend
    A 0-1 value to blend from original curve to filtered curve.
-
 Blend In/Out
    The number of frames at the start and end for which to blend between the filtered and unfiltered curve.
    This can help reducing jumps in the animation at the selection border. At value 1 it only locks the first and
