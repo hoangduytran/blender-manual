@@ -190,6 +190,7 @@ Auto-Masking :guilabel:`Sculpt Mode`
    The difference is that these toggles can be customized per brush to create specific brush behaviors.
 
 .. seealso::
+
    For more information on the Auto-Masking toggles, see :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
 
 .. _bpy.types.Brush.sculpt_plane:

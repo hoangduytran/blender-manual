@@ -36,6 +36,7 @@ If *Sync Selection* is enabled, you can hold :kbd:`Shift` while clicking a selec
 activate multiple ones at the same time, or :kbd:`Ctrl` to expand/contract the selection.
 
 .. seealso::
+
    :doc:`Mesh Selection </modeling/meshes/selecting/introduction>`
 
 

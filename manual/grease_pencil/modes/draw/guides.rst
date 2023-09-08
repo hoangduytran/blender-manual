@@ -41,7 +41,6 @@ Guide Types
       Angle direction of the isometric lines.
 
 
-
 Common Options
 --------------
 

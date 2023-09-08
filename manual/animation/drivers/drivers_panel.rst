@@ -189,6 +189,7 @@ Variable Type
          channel value (before parenting or constraints), or ``["prop_name"]`` for a custom property.
 
       .. tip::
+
          Although the values of the x/y/z animation channels for the camera location can be accessed
          via ``camera.location[0/1/2]``, retrieving its world space location and orientation after parenting
          and constraints currently requires using ``camera.matrix_world``. This property can be understood

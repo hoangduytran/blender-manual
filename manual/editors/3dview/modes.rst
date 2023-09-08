@@ -125,6 +125,7 @@ Alternatively, you can hover over the other object in the 3D Viewport
 and press :kbd:`Alt-Q`.
 
 .. seealso::
+
    :ref:`Lock Object Modes <bpy.types.ToolSettings.lock_object_mode>` for
    preventing *accidental* mode changes.
 

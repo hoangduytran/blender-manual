@@ -206,7 +206,7 @@ Bake Curve
    :Menu:      :menuselection:`Channel --> Bake Curve`
    :Shortcut:  :kbd:`Alt-C`
 
-Baking a curve replaces it with a set of sampled points at each full frame. 
+Baking a curve replaces it with a set of sampled points at each full frame.
 **It is a destructive process that removes the ability to edit the curve**.
 The main use for this is to reduce the file size with large datasets. Samples are only 1/5th the size per key.
 The sampled points interpolate linearly on subframes.

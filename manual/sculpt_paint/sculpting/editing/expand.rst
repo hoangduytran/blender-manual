@@ -76,6 +76,7 @@ Pattern Creation
       loops and a recursion to create wood carving patterns.
 
    .. tip::
+
       :doc:`Mirror options </sculpt_paint/sculpting/tool_settings/symmetry>`
       can also be combined with the expansion.
 

@@ -471,6 +471,7 @@ Blend
 
 Match Slope
 -----------
+
 .. reference::
 
    :Menu:      :menuselection:`Key --> Blend --> Match Slope`
@@ -485,12 +486,13 @@ Factor
 
 Shear
 -----
+
 .. reference::
 
    :Menu:      :menuselection:`Key --> Blend --> Shear Keys`
 
-Shear the keys based on the position of the keyframe selection ends. 
-Pressing :kbd:`D` while the modal operator is active will toggle the anchor key 
+Shear the keys based on the position of the keyframe selection ends.
+Pressing :kbd:`D` while the modal operator is active will toggle the anchor key
 between the start and end of the selection.
 
 Shear Factor

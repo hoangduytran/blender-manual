@@ -157,6 +157,7 @@ Holding :kbd:`Ctrl` will remove them.
 While dragging, you can additionally hold :kbd:`Spacebar` to move the shape around with the mouse.
 
 .. note::
+
    *Select Lasso* behaves the same as *Select Circle* in that
    it only looks at origin points in Object Mode.
 
