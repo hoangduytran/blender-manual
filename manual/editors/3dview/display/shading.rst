@@ -22,6 +22,19 @@ opens a popover with additional options described below.
 Pressing :kbd:`Z` opens a pie menu for changing the shading mode.
 Pressing :kbd:`Shift-Z` switches between the current shading mode and Wireframe.
 
+.. _bpy.types.View3DShading.wireframe_color_type:
+
+Wire Color
+   How the wireframes are colored. This affects the object outline, wireframe overlay, and wireframe shading mode.
+
+   :Single:
+      All objects get shaded using the same single color.
+   :Object:
+      Use the color from the object's
+      :ref:`Viewport Display <properties-object-viewport-display>` settings.
+   :Random:
+      Each object gets displayed in a random color.
+
 
 .. _3dview-shading-rendered:
 
@@ -30,27 +43,18 @@ Wireframe
 
 Only displays the edges (wireframes) of the objects in the scene.
 
-Color
-   Single
-      All objects get shaded using the same single color.
-   Object
-      Use the color from the object's
-      :ref:`Viewport Display <properties-object-viewport-display>` settings.
-   Random
-      Each object gets displayed in a random color.
-
 .. _bpy.types.View3DShading.background_type:
 
 Background
    How the background is displayed in the 3D Viewport.
 
-   Theme
+   :Theme:
       Use the background of the theme. This can be configured in the
       :doc:`Themes Preferences </editors/preferences/themes>`
       under :menuselection:`3D Viewport --> Theme Space --> Gradient Colors`.
-   World
+   :World:
       Use the color from the :doc:`World </render/lights/world>`'s Viewport Display options.
-   Viewport
+   :Viewport:
       Select a custom color for the background of the 3D Viewport.
 
 Options
