@@ -52,6 +52,10 @@ HDRI Preview Size
 Size
    Diameter of the *3D Viewport Axis* widget.
 
+Fresnel Edit Mode
+   Enable a fresnel effect on edit mesh overlays.
+   It improves shape readability of very dense meshes, but increases eye fatigue when modeling lower poly.
+
 
 .. _prefs-system-multisampling:
 
