@@ -196,45 +196,46 @@ Use Preview Range
    Ignore frames outside of the preview range.
 
 
-.. _bpy.ops.graph.bake:
+.. _bpy.ops.graph.keys_to_samples:
 
-Bake Curve
-==========
+Keys to Samples
+===============
 
 .. reference::
 
-   :Menu:      :menuselection:`Channel --> Bake Curve`
+   :Menu:      :menuselection:`Channel --> Keys to Samples`
    :Shortcut:  :kbd:`Alt-C`
 
-Baking a curve replaces it with a set of sampled points at each full frame.
+This operator replaces an F-Curve with a set of sampled points at each full frame. 
 **It is a destructive process that removes the ability to edit the curve**.
 The main use for this is to reduce the file size with large datasets. Samples are only 1/5th the size per key.
 The sampled points interpolate linearly on subframes.
 
 
-.. _bpy.ops.graph.unbake:
+.. _bpy.ops.graph.samples_to_keys:
 
-Un-Bake Curve
-=============
+Samples to Keys
+===============
 
 .. reference::
 
-   :Menu:      :menuselection:`Channel --> Un-Bake Curve`
+   :Menu:      :menuselection:`Channel --> Samples to Keys`
 
-Unbaking a curve replaces the baked curve with keyframes, adding the ability to edit it.
+This operator replaces a sampled F-Curve with keyframes, adding the ability to edit it.
 It will not recreate the curve as it was before, instead it will place 1 key at every frame.
 
 
-.. _bpy.ops.graph.sound_bake:
+.. _bpy.ops.graph.sound_to_samples:
 
-Bake Sound to F-Curves
-======================
+Sound to Samples
+================
 
 .. reference::
 
-   :Menu:      :menuselection:`Channel --> Bake Sound to F-Curves`
+   :Menu:      :menuselection:`Channel --> Sound to Samples`
 
-The *Bake Sound to F-Curves* operator takes a sound file and uses its sound wave to create the animation data.
+The *Sound to Samples* operator takes a sound file and uses its sound wave to create the animation data.
+By default this data will not be editable, use *Samples to Keys* to get editable keyframes.
 
 Lowest Frequency
    Cutoff frequency of a high-pass filter that is applied to the audio data.

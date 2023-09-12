@@ -298,27 +298,27 @@ Mode
       which controls how much the new decimated curve is allowed to deviate from the original.
 
 
-.. _bpy.ops.graph.sample:
+.. _bpy.ops.graph.bake_keys:
 
-Sample Keyframes
-----------------
+Bake Keyframes
+--------------
 
 .. reference::
 
-   :Menu:      :menuselection:`Key --> Density --> Sample Keyframes`
+   :Menu:      :menuselection:`Key --> Density --> Bake Keyframes`
    :Shortcut:  :kbd:`Shift-Alt-O`
 
-Sampling a set of keyframes replaces interpolated values with a new keyframe for each frame.
+Baking a set of keyframes replaces interpolated values with a new keyframe for each frame.
 
 .. list-table::
 
    * - .. figure:: /images/editors_graph-editor_fcurves_editing_sample.png
 
-          F-Curve before sampling.
+          F-Curve before baking.
 
      - .. figure:: /images/editors_graph-editor_fcurves_editing_sample2.png
 
-          F-Curve after sampling.
+          F-Curve after baking.
 
 
 .. _bpy.ops.graph.clean:
