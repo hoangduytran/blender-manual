@@ -8,9 +8,48 @@ On this page French (``fr``) is used for examples. However, it can be replaced w
 `languages codes <https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html>`__.
 So, be sure to change the ``/fr`` suffixes in this guide to the language you are translating!
 
-To see which languages are currently available, you can browse the repository:
+To see which languages are currently available, you can check the
+`online interface <https://translate.blender.org/projects/blender-manual/manual/>`__,
+or browse the `underlying git repository <https://projects.blender.org/blender/blender-manual-translations>`__.
 
-``https://projects.blender.org/blender/blender-manual-translations``
+
+===================
+Simple Contribution
+===================
+
+The preferred way to contribute to the translation effor is the use the
+`web-based interface <https://translate.blender.org/projects/blender-manual/manual>`__,
+currently a Weblate instance.
+
+Simple enhancement suggestions can be contributed by any user, even without loging in.
+Suggestions will be reviewed by the translating team before they get published.
+
+Weblate also comes with new helping tools to improve coherance of translations, like the
+`glossary <https://translate.blender.org/projects/blender-manual/glossary/>`__.
+
+
+===================
+Advanced Operations
+===================
+
+If for some reasons the web-based translation interface does not work well for you,
+you can still download PO file from it, and upload back it later.
+
+.. warning::
+
+   You will have to deal with potential conflicts yourself if some update happened in the mean time.
+   Direct commit to the git repository for translations is not possible anymore.
+
+.. note::
+
+   There is a known issue with the current tool behind the web interface,
+   which will make heavy processing like upload and integration of a PO file
+   take several minutes, with the web page staying in refresh mode for the whole time.
+   If it takes more than ten minutes, it will even apparently fail
+   with a server timeout error message.
+   There is usually no actual problem though, so no need to re-try uploading the PO file then,
+   refreshing the page after a few minutes should be enough
+   to see the contribution in the web interface.
 
 .. note::
 
@@ -44,16 +83,20 @@ You should have a directory layout like this::
 
 .. note::
 
-   When running Git from the command line (such as updating or committing),
-   you will need to change directory to ``locale`` first rather then the ``blender-manual`` directory.
+   When running Git from the command line (such as updating),
+   you will need to change directory to ``locale`` first rather than the ``blender-manual`` directory.
+
+
+The PO language files themselves can also be downloaded from the web interface, ``Files`` menu,
+on each dedicated language page of the ``Manual`` comnponent.
 
 
 A PO Editor
 -----------
 
 To make edit the PO files you will need to install a PO editor.
-We recommended that you use `Poedit <https://poedit.net/>`__
-however, any PO editor will do.
+We recommend that you use `Poedit <https://poedit.net/>`__,
+however any PO editor will do.
 
 .. note::
 
@@ -67,6 +110,9 @@ however, any PO editor will do.
 
 Building with Translations
 ==========================
+
+Building
+--------
 
 Now you can build the manual with the translation applied:
 
@@ -95,49 +141,12 @@ Once in your editor you will see a list of texts, each of these items represent 
 You may need to adjust your editor to sort the list in a way that makes sense for example "by source".
 
 You can now select an untranslated string and your editor will have an input box to add the translation.
-The modified ``.po`` files can now submitted as a patch or committed back to the repository.
+The modified ``.po`` files can now be submitted back to the web-based interface.
 
 .. tip::
 
    Make sure that you `Building with Translations`_ to catch any syntax errors you may make while translating.
    These errors will be displayed as warnings while building the manual.
-
-
-Submitting Translations
-=======================
-
-Translators who have been given commit access can commit to the
-main repository without needing to fork the repository.
-
-See :doc:`/contribute/guides/commit_guide` if this applies to you.
-
-
-Fork Translation Repository
----------------------------
-
-#. Go to Blender repository and click the Fork button.
-#. Confirm the fork with the default settings.
-#. Now you will have to add your personal fork as a remote in your local git repository.
-   Click *SSH* to see the correct URL, and then add it like this::
-
-      git remote add me git@projects.blender.org:<USERNAME>/blender-manual-translations.git
-      git submodule sync
-
-.. note::
-
-   In order to push to the fork repository, you need an SSH key.
-   If you don't already have the file ``~/.ssh/id_rsa.pub``,
-   there's a simple command to generate such keys which works on Linux, macOS, and in Git Bash on Windows::
-
-      ssh-keygen
-
-   This command will generate a private key id_rsa and a public key id_rsa.pub in ``~/.ssh``.
-   The private key must never be shown or sent to anyone else to avoid compromising your account,
-   but the public key is safe to share.
-
-   The contents of ``~/.ssh/id_rsa.pub`` can be copied and pasted into
-   the `account settings on projects.blender.org <https://projects.blender.org/user/settings/keys>`__,
-   after clicking "Add Key". Any name for the SSH key is ok.
 
 
 Maintenance
