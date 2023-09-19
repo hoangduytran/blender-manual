@@ -51,7 +51,7 @@ Scale
 Remove Disconnected
    Filter out small disconnected pieces of the output.
 
-   Thin parts of the input mesh can become lose, and generate small isolated bits of mesh.
+   Thin parts of the input mesh can become loose, and generate small isolated bits of mesh.
    This option will remove those.
 
    Threshold
