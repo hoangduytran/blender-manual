@@ -17,10 +17,10 @@ Branches
 Work is done in two branches:
 
 - ``blender-v{VERSION}-release`` branch: fixes and other incremental improvements.
-- ``master`` branch: documentation for new features and improvements for the release after that.
+- ``main`` branch: documentation for new features and improvements for the release after that.
 
 The ``blender-v{VERSION}-release`` branch will be available for 5 weeks prior to the release date.
-At the same time ``master`` will be open for the next release,
+At the same time ``main`` will be open for the next release,
 giving 2 months to add documentation for new features of the next release, and another month to make improvements.
 
 
@@ -75,7 +75,7 @@ while Blender 2.91 is in Bcon1 (new features and changes).
        and writing documentation for features already added or likely to be added to Blender.
        This is also the perfect time to make any larger or more disruptive improvements to the manual.
 
-     - ``master``
+     - ``main``
 
    * - Bcon2
 
@@ -86,7 +86,7 @@ while Blender 2.91 is in Bcon1 (new features and changes).
      - Work to improve, optimize and fix bugs in new and existing features.
        All big or disruptive changes must be finished at the end of this stage.
 
-     - ``master``
+     - ``main``
 
    * - Bcon3
 
