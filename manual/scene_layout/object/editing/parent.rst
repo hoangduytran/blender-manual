@@ -325,7 +325,7 @@ As a result, the object will move to the location of the parent, but keep its ro
 
 Keep Transform
    The object's current world transform (so its absolute location, rotation and scale in the world) is computed.
-   The new parent is set, and then the *Parent Inverse* matrix is computed such that after setting
+   The new parent is set, and then the local transform values are set in such a way that after setting
    the new parent the object is still at its previous world transform.
 
 
