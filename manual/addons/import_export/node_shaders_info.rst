@@ -52,6 +52,8 @@ Principled BSDF
    - Metallic
    - IOR
    - Transmission
+   - Emission
+   - Emission Strength
    - Alpha
 
 Normal Map
