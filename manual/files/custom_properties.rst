@@ -63,6 +63,7 @@ Type
    :Boolean: A data type that has two possible values e.g. ``True`` or ``False``.
    :Boolean Array: A collection of boolean values  e.g. ``[True, False, True]``
    :String: A sequence of characters such as "Some Text".
+   :Data-Block: A reference to a Blender object, see :doc:`/files/data_blocks`.
    :Python: Edit a Python data type directly, used for unsupported data types.
 
 Array Length
@@ -137,6 +138,9 @@ Subtype
       For either of the color subtypes to work as expected the *Property Value* must be a vector
       with three or four values depending on the availability of an :term:`Alpha Channel`.
 
+ID Type :guilabel:`Data-Block`
+   The ID-block type. For example: Key, Image, Object, Material.
+   See :ref:`data-system-datablock-types` for a full list.
 
 Description
    Allows you to write a custom :doc:`Tooltip </getting_started/help>` for your property.
