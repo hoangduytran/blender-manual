@@ -176,6 +176,17 @@ Sequencer
    :ref:`Default OpenColorIO Configuration <ocio-config-default-color-spaces>`
 
 
+Display
+-------
+
+High Dynamic Range
+   Enable high dynamic range display in rendered viewport, uncapping display brightness.
+   This requires a monitor with HDR support and a view transform designed for HDR
+   (Filmic does not generate HDR colors).
+
+   This feature is currently only supported on macOS.
+
+
 .. _bpy.types.ColorManagedViewSettings.use_curve_mapping:
 
 Use Curves
