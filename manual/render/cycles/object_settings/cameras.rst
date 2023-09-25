@@ -3,7 +3,7 @@
 Cameras
 *******
 
-.. _bpy.types.CyclesCameraSettings.panorama_type:
+.. _bpy.types.Camera.panorama_type:
 
 Panoramic Cameras
 =================
@@ -24,12 +24,12 @@ so it can be used to render an environment map. To match the default mapping,
 set the camera object rotation to (90, 0, -90) or pointing along the positive X axis.
 This corresponds to looking at the center of the image using the default environment texture mapping.
 
-.. _bpy.types.CyclesCameraSettings.latitude:
+.. _bpy.types.Camera.latitude:
 
 Latitude Min, Max
    Limits of the vertical field of view angles.
 
-.. _bpy.types.CyclesCameraSettings.longitude:
+.. _bpy.types.Camera.longitude:
 
 Longitude Min, Max
    Limits of the horizontal field of view angles.
@@ -63,12 +63,12 @@ The *Fisheye Equidistant* lens does not correspond to any real lens model;
 it will give a circular fisheye that does not take any sensor information into account
 but rather uses the whole sensor. This is a good lens for full-dome projections.
 
-.. _bpy.types.CyclesCameraSettings.fisheye_lens:
+.. _bpy.types.Camera.fisheye_lens:
 
 Lens
    Lens focal length in millimeters.
 
-.. _bpy.types.CyclesCameraSettings.fisheye_fov:
+.. _bpy.types.Camera.fisheye_fov:
 
 Field of View
    Field of view angle, going to 360 and more to capture the whole environment.
