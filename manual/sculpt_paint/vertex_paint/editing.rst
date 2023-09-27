@@ -16,6 +16,9 @@ Set Vertex Colors
 
 Fill the active Color Attribute with the current paint color.
 
+Affect Alpha
+   Set color completely opaque instead of reusing existing alpha.
+
 
 .. _bpy.ops.paint.vertex_color_smooth:
 
