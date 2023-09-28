@@ -116,6 +116,22 @@ Segments
 Display Size X, Z
    Controls the visible thickness of the bone segments when the armature is rendered in the *B-Bones* mode.
 
+.. _bpy.types.EditBone.bbone_mapping_mode:
+
+Vertex Mapping
+   Controls how vertices are weighted to the individual segments of a B-Bone for deformations:
+
+   :Straight:
+      A fast mapping that works well for B-Bones with a straight or gently curved rest pose.
+   :Curved:
+      A slower mapping that improves deformations for B-Bones with a strongly curved rest pose. This should
+      be used selectively when needed.
+
+   .. figure:: /images/animation_armatures_bones_properties_bendy-bones_vertex-mapping.png
+      :width: 300px
+
+      Straight vs Curved vertex mapping on a B-Bone with a strongly curved rest pose.
+
 .. _bpy.types.EditBone.bbone_curveinx:
 .. _bpy.types.EditBone.bbone_curveinz:
 
