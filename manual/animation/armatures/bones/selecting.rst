@@ -216,10 +216,10 @@ Prefix
    Select bones with matching name prefix (separated by ``.``).
 Suffix
    Select bones with matching name suffix (separated by ``.``).
-Layer
-   Select bones on the same layer.
-Group
-   Select bones in the same group.
+Bone Collection
+   Select bones that share one or more bone collections with the active bone.
+Color
+   Select bones that have the same color as the active bone.
 Shape
    Select bones using the same shape object (in Pose Mode).
 

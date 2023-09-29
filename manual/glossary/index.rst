@@ -121,8 +121,14 @@ This page lists definitions for terms used in Blender and this manual.
       The operation to chamfer or bevel edges of an object.
 
    Bone
-      The building block of an :term:`Armature`. Made up of a :term:`Head`, :term:`Tail`
-      and :term:`Roll Angle` which define a set of local axes and a point of rotation at the Head.
+      The building block of an :term:`Armature`. Made up of a :term:`Head`,
+      :term:`Tail` and :term:`Roll Angle` which define a set of local axes and a
+      point of rotation at the Head. Also see :term:`Pose Bone`.
+
+   Bone Collection
+      Collection of :term:`bones <Bone>` of an :term:`Armature`, identified by
+      its name. Bone collections can be used to organise bones and toggle their
+      visibility. See :ref:`bone-collections`.
 
    Boolean
       A type of logic dealing with binary true/false states.
@@ -668,13 +674,20 @@ This page lists definitions for terms used in Blender and this manual.
       :term:`Vertex` where three, five, or more edges meet.
       A vertex connected to one, two, or four edges is not a pole.
 
+   Pose Bone
+      Pose-specific properties of a :term:`Bone`, such as its location /
+      rotation / scale relative to the :term:`Armature`'s rest pose. Its
+      properties are stored on the :term:`Object`, and thus can be different for
+      each user of the Armature. The Pose Bone also stores constraints.
+
    Pose Mode
       Used for :term:`Posing`, :term:`Keyframing`, :term:`Weight Painting`,
       :term:`Constraining <Constraint>` and :term:`Parenting` the :term:`Bones <Bone>` of an :term:`Armature`.
 
    Posing
-      Moving, Rotating and Scaling the :term:`Bones <Bone>` of an :term:`Armature`
-      to achieve an aesthetically pleasing pose for a character.
+      Moving, Rotating and Scaling the :term:`Pose Bones <Pose Bone>` of an
+      :term:`Armature` to achieve an aesthetically pleasing pose for a
+      character.
 
    Premultiplied Alpha
       See :term:`Alpha Channel`.

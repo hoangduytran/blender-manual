@@ -109,9 +109,9 @@ Show
       When enabled, the default standard bone shape is replaced,
       in *Object Mode* and *Pose Mode*, by the shape of a chosen object
       (see :doc:`Shaped Bones </animation/armatures/bones/properties/display>` for details).
-   Group Colors
-      Use the Bone Group colors to color the bone.
-      For more details see :doc:`Bone Groups </animation/armatures/properties/bone_groups>`.
+   Bone Colors
+      Draws bones in their configured colors. Disable to always draw bones in the default color.
+      For more details see :ref:`Bone Colors <bpy.types.Bone.color>`.
    In Front
       When enabled, the bones of the armature will always be shown on top of
       the solid objects (meshes, surfaces, ...). I.e. they will always be visible and selectable
