@@ -1,4 +1,6 @@
 
+.. _properties_data_bone_relations:
+
 *********
 Relations
 *********
@@ -10,29 +12,27 @@ Relations
 
 .. figure:: /images/animation_armatures_bones_properties_relations_panel.png
 
-   Relations panel.
+   Bone Relations panel.
 
-In this panel you can arrange sets of bones in different layers for easier manipulation.
+In this panel you can manage the relationship of this bone with its parent bone.
+It also shows the bone collections the bone is assigned to.
 
+.. _bpy.types.Bone.collections:
+.. _bpy.types.EditBone.collections:
+.. _bpy.types.PoseBone.collections:
 
-.. _bpy.types.EditBone.layers:
+Bone Collections
+================
 
-Bone Layers
-===========
+This list shows the :term:`bone collections <Bone Collection>` the bone is
+assigned to. Press the eye icon to show or hide the entire bone collection.
+Press the X icon to remove the bone from that particular collection.
 
-Moving Bones between Layers
----------------------------
+To assign the bone to other bone collections, either use the :kbd:`M` or
+:kbd:`Shift+M` shortcuts (see :ref:`Moving Bones Between Collections
+<moving_bones_between_collections>`) or go to the :ref:`Armature properties
+panel <bpy.types.BoneCollection>`.
 
-Obviously, you have to be in *Edit Mode* or *Pose Mode* to move bones between layers.
-Note that as with objects, bones can lay in several layers at once,
-just use the usual :kbd:`Shift-LMB` clicks...
-First of all, you have to select the chosen bone(s)!
-
-- In the Properties, use the "layer buttons" of each selected bone Relations panel (*Bones* tab)
-  to control in which layer(s) it lays.
-- In the *3D Viewport*, use the menu :menuselection:`Armature --> Move Bone To Layer` or
-  :menuselection:`Pose --> Move Bone To Layer` or press :kbd:`M` to show the usual pop-up layers menu.
-  Note that this way, you assign the same layers to all selected bones.
 
 
 Parenting

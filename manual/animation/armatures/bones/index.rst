@@ -9,6 +9,7 @@
    :maxdepth: 2
 
    introduction.rst
+   bone_collections.rst
    structure.rst
    tools/index.rst
    selecting.rst

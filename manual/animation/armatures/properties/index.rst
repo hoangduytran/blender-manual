@@ -7,6 +7,5 @@
    :maxdepth: 2
 
    introduction.rst
-   skeleton.rst
+   bone_collections.rst
    display.rst
-   bone_groups.rst

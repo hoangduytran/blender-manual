@@ -5,10 +5,31 @@ Introduction
 
 The *Armature* tab in Properties contains various panels gathering the armature settings.
 
-.. TODO2.8
-   .. figure:: /images/animation_armatures_properties_introduction_properties-editor.png
+.. figure:: /images/animation_armatures_properties_introduction_properties-editor.png
 
-      The Armature tab in the Properties.
+   The Armature tab in the Properties.
+
+Pose
+====
+
+.. reference::
+
+   :Mode:      All Modes
+   :Panel:     :menuselection:`Armature --> Pose`
+
+Pose Position
+   A radio button to switch between Pose Position and Rest Position.
+
+   In *Edit Mode*, you always see armatures in their rest position,
+   in *Object Mode* and *Pose Mode*, by default, you see them in *Pose Position*
+   (i.e. as it was transformed in the *Pose Mode*).
+   If you want to see it in the rest position in all modes, select *Rest Position*.
+
+
+Bone Collections
+================
+
+See :doc:`Bone Collections </animation/armatures/properties/bone_collections>`.
 
 
 Motion Paths
