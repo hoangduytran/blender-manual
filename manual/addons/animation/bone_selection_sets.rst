@@ -32,7 +32,7 @@ A bone can belong to more than one selection set.
 
 .. seealso::
 
-   :doc:`/animation/armatures/properties/bone_groups` for a way to visually distinguish groups of bones.
+   :doc:`/animation/armatures/properties/bone_collections` for a way to organise groups of bones.
 
 
 .. reference::

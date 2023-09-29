@@ -80,6 +80,7 @@ After reloading `armature_shot_47.blend`, it will look like this:
 - *Face Controls*
 - *Face Detail Controls*
 
+.. _bpy.types.armature.layers:
 
 Some history
 ============
