@@ -44,5 +44,5 @@ There are six different color codes, ordered here by precedence
 
 .. note::
 
-   When :doc:`/animation/armatures/properties/bone_groups` colors are enabled,
+   When :ref:`bone colors <bpy.types.BoneColor>` are enabled,
    the state colors will be overridden.
