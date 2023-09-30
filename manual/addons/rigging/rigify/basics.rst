@@ -64,14 +64,14 @@ Rigify Human Alignment Tips
   they are almost useless if you plan to make facial animation through shape keys.
   Consider removing face features from your character if they aren't really needed.
   If you don't need the face all the face bones can be deleted.
-  All the face bones are on the first armature layer by default.
-  You can select them by displaying only bone layer 1, selecting all of its content and
+  All the face bones are in the *Face* armature bone collection by default.
+  You can select them by displaying only that collection, selecting all of its content and
   then deleting the bones in Edit Mode to correctly remove the face.
 
   If you want to scale all the face bones at once, consider scaling the face master bone
   in Pose Mode (see Pose Mode matching method).
   The face master bone is placed in the same position of the head bone.
-  To select it easily, hide all other bone layers.
+  To select it easily, hide all other bone collections.
 
   For more tips, see the :doc:`Positioning Guide </addons/rigging/rigify/bone_positioning>`.
 
@@ -147,13 +147,13 @@ Binding the Geometry to the Rig
 
 To bind the geometry to the rig you can use your preferred tools. Just few things you have to know:
 
-- All the deforming bones are on the armature layer 30.
+- All the deforming bones are in the *DEF* bone collection.
 - Eyes and Teeth bones of the legacy face are not deforming. You are supposed to bind the eyes and
   teeth geometry through Child Of constraints.
 - Usually armature deform with automatic weights do a really good job out of the box
   if you correctly place your bones (and there is enough topology to work with!).
 
-For more detailed information on armature layers, Armature modifier and weight painting refer to the Blender manual.
+For more detailed information on bone collections, Armature modifier and weight painting refer to the Blender manual.
 
 
 .. _bpy.types.Armature.rigify:
@@ -172,27 +172,36 @@ By using options in the Advanced sub-panel, it is possible to:
 - Choose whether to use linked duplicates for left and right side widgets.
 - Execute a script data-block after generation.
 
-
 Advanced Options Sub-Panel
 --------------------------
+
+.. figure:: /images/addons_rigging_rigify_basics_advanced-panel.png
+   :align: right
+   :width: 300px
 
 Advanced rig generation options are by default hidden in a sub-panel. Click on the *Advanced* line to open it.
 
 Some of the options will be automatically set by Rigify if they have no value when a rig is generated,
 while others are fully controlled by the user.
 
-Target Rig :guilabel:`auto`
-   This option specifies the generated rig to overwrite when re-generating from this metarig.
+Rig Name
+   When a brand new rig is generated, as opposed to overwriting an existing one, the value of this option
+   is used to name it.
 
-   If the option is not set, Rigify will generate a new rig object and store it in this option.
-   The new object will be named based on the name of the metarig according to the following rules:
+   If this field is empty, the new object will be named based on the name of the metarig according
+   to the following rules:
 
    * If the name contains ``META``, it is replaced with ``RIG``.
    * If the name contains ``metarig``, it is replaced with ``rig``.
    * Otherwise, ``RIG-`` is prepended to the name.
 
-   When overwriting an existing rig object specified by the option, its name is not changed,
-   allowing it to be freely renamed if the default naming scheme doesn't fit.
+   When overwriting an existing rig object specified by the *Target Rig* option, its name is not changed,
+   allowing it to be freely renamed without having to keep the value of this option in sync.
+
+Target Rig :guilabel:`auto`
+   This option specifies the generated rig to overwrite when re-generating from this metarig.
+
+   If the option is not set, Rigify will generate a new rig object and store it in this option.
 
    .. note::
 
@@ -204,13 +213,13 @@ Rig UI Script :guilabel:`auto`
    works in the same manner as *Target Rig*.
 
    The script controls the UI in the 3D Viewport that allows conveniently switching visible
-   bone layers, changing custom properties, converting between IK and FK and so on.
+   bone collections, changing custom properties, converting between IK and FK and so on.
 
 Widgets Collection :guilabel:`auto`
    This reference specifies the collection containing generated widgets, and
    works in the same manner as *Target Rig*.
 
-Force Widget Update
+Overwrite Widget Meshes
    If enabled, Rigify will generate new widgets every time the rig is re-generated. By default,
    it tries to reuse the already generated widget objects that exist in the widget collection,
    allowing them to be manually edited to fit the character better.

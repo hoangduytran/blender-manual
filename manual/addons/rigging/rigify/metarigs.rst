@@ -5,7 +5,8 @@ Creating Meta-rigs
 
 #. Add a single bone from the :menuselection:`Add --> Armature` menu.
 #. Go in armature Edit Mode and build the meta rig by samples or Rigify-types.
-#. Define Rigify layers, bone grouping and selection sets.
+#. Define the :ref:`Rigify bone collection UI <bpy.types.BoneCollection.rigify_ui_row>`,
+   :ref:`color sets <bpy.types.Armature.rigify_colors>`, and selection sets.
 #. In the armature properties click on the *Generate* button to generate the rig.
 
 
@@ -59,7 +60,7 @@ Just add a single bone from the *Add* menu.
 
 .. tip::
 
-   At this stage naming the newly added armature "meta-rig" is a good idea.
+   At this stage naming the newly added armature ``metarig`` is a good idea.
    You can do it at any time (or not at all) but it's suggested to do it before going on
    so it will always be clear on which armature you have to work when editing the meta-rig structure.
 
@@ -77,7 +78,7 @@ Building a meta-rig from scratch in Edit Mode can be done in two ways:
 Adding Samples (Basic)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Adding samples in Edit Mode is a good way to start building a meta-rig.
+Adding pre-defined samples in Edit Mode is a good way to start building a meta-rig.
 This way you can become familiar with the available building blocks and how they are meant to be used.
 To add a rig sample:
 
@@ -90,11 +91,38 @@ To add a rig sample:
 For the list of available samples, see the :doc:`Rig Types </addons/rigging/rigify/rig_types/index>` page.
 
 
+.. _bpy.types.PoseBone.rigify_type:
+.. _bpy.types.RigifyParameters:
+
 Using Rig Types (Advanced)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Create your bone chains in Edit Mode.
-#. Assign the correct rig type to the first bone of each chain in Pose Mode.
+.. figure:: /images/addons_rigging_rigify_metarigs_rigify-type-panel.png
+   :align: right
+   :width: 300px
+
+For full control, you can use the Rigify Type panel of bone properties in Pose Mode to assign
+any Rigify sub-rig type to any bone, as well as change its options.
+
+For the list of available sub-rig types and their options, see the :doc:`Rig Types </addons/rigging/rigify/rig_types/index>` page.
+
+At the top of the panel you can find a field specifying the rig type for the active bone. The drop-down list
+can be optionally filtered by the :doc:`Feature Set </addons/rigging/rigify/feature_sets>` it belongs to.
+
+Below that you can change options relevant to the selected rig type, if it has any.
+
+Bone Collection References
+""""""""""""""""""""""""""
+
+Some rig types that generate many control bones have options that reference
+:ref:`Bone Collections <bpy.types.BoneCollection.rigify_ui_row>`. These reference lists have a standard UI with
+the following features:
+
+* A checkbox controlling whether the reference should be used.
+* A button to copy the reference list contents from the active to all selected bones.
+* A plus button to add a new reference to the list.
+* A list of references, each entry with a field to specify the target collection,
+  and a button to remove the entry from the list.
 
 .. note::
 
@@ -113,7 +141,7 @@ Using Rig Types (Advanced)
 Custom Root Bone
 ^^^^^^^^^^^^^^^^
 
-If the meta-rig contains a bone called "root", it is used as the root control bone instead of creating a new one.
+If the meta-rig contains a bone called ``root``, it is used as the root control bone instead of creating a new one.
 This allows changing the rest position of the root bone, assigning a custom widget,
 or adding custom properties to the bone.
 
@@ -121,71 +149,129 @@ The custom root bone must have no parent, and use the :ref:`basic.raw_copy <rigi
 type or none.
 
 
-Layers, Bone Groups & Selection Sets
-====================================
+.. _bpy.types.Armature.rigify_colors:
 
-:ref:`Armature Layers <bpy.types.Armature.layers>` are usually used to isolate bones.
-Rigify can take advantage of armature layer to generate extra features and the user interface for the final rig.
-Rigify layers are displayed in a vertical layout inside their own separate panel named Rigify Layer Names.
+Color Sets
+==========
 
-- The first column shows the layer number.
-- The second column is a display toggle.
+.. figure:: /images/addons_rigging_rigify_metarigs_color-sets-panel.png
+   :align: right
+   :width: 300px
 
-  This toggle controls the armature layer visibility.
-  It has the same effect of enabling/disabling the layer visibility from the top armature layers menu.
-  It is just redrawn here for a simplicity.
+The Color Sets panel is used to define the bone color scheme for the final rig. The colors from the list
+can be associated with bone collections from the relevant panel.
 
-- The third column sets a specific layer name to be used to build the rig UI of the final rig.
-  If set, a button with the specified name will be created in the ``rig_ui_template`` to control the visibility of
-  this specific armature layer. If layer contains at least one bone but its name field is empty,
-  a button with no name will be created in the rig UI.
-
-- The fourth column defines in which UI row the layer button will be created.
-
-  This numbers define the layer ordering in the UI and will ignore the effective layer number.
-  If two layer have the same row number their UI buttons will be created in the same row.
-
-- The fifth column is a toggle for the selection set.
-
-  If checked a selection set with that name will be created and associated to the final rig.
-
-- The sixth column defines the Rigify Bone Grouping.
-
-  If Rigify Bone Groups are set, the user can make the association between
-  the bones on the layer and the specified bone group from the list.
-  The controls on the final rig will inherit the bone grouping through this value.
-
-- The seventh column displays -- if set -- the associated bone group name.
-
-In order to use the Bone Groups in the *Rigify Layer Names* fields,
-*Rigify Bone Groups* must be set through the specific panel.
-Usually this panel is displayed just above Rigify Layer Names panel.
-
-Rigify Bone Groups are used to define bone colors on the final rig.
-The top two rows of the Rigify Bone Groups panel are used to define the bone colors general behavior.
+The top two rows of the Color Sets panel are used to define the general behavior of the bone colors.
 Usually color themes use a gradient of colors to define the different bone states: default, selected and active.
 When multiple color themes are used in the same rig, identifying which bone is selected or
 active can be tricky since each color will have its corresponding state.
 
-To override this behavior Rigify Bone Groups unifies the active and selected states with the same color.
+To override this behavior Rigify unifies the active and selected states using the same color.
 This is defined by two values:
 
 Unified Selected/Active Colors
    When this option is active adding a bone group in the list will always keep the colors consistent.
-   When a color scheme is added as from a theme, the color scheme is loaded as is.
+   When a color scheme is added from a theme, the color scheme is loaded as is.
    Click on the *Apply* button to force the system to unify selected and active colors.
 
 Selected/Active Colors
-   This two color fields define respectively *Selected* and *Active* colors.
-   By default Rigify reads this colors from the theme defined by the user in the Blender preferences.
+   This two color fields define respectively the *Selected* and *Active* colors.
+   By default Rigify reads these colors from the theme defined by the user in the Blender preferences.
    This way the *Selected*/*Active* colors can always have a predictable and consistent behavior in the UI.
-   The colors can be customized by clicking on the relative color field.
+   The colors can be customized by clicking on the relevant color field.
    To reset them to the Blender current theme value just click on the button with the update icon.
 
-Bone Groups can be added and deleted as done in the general Bone Group panel
-by clicking on the ``+`` or ``-`` buttons.
-All Bone Groups can be deleted at once by clicking on the Specials menu.
+Color Sets can be added and deleted by clicking on the ``+`` or ``-`` buttons.
+All color sets can be deleted at once by clicking on the Specials menu.
 
-To add the predefined Rigify Default Bone Groups list click on *Add Standard* button.
+To add the colors from the predefined Rigify default color scheme (as shown in the image) to the list click
+the *Add Standard* button.
 
 To add a specific theme with its own color scheme, select it from the list and click on the *Add From Theme* button.
+
+
+.. _bpy.types.BoneCollection.rigify_ui_row:
+
+Bone Collections UI
+===================
+
+.. figure:: /images/addons_rigging_rigify_metarigs_bone-collections-panel.png
+   :align: right
+   :width: 300px
+
+:doc:`Bone Collections </animation/armatures/bones/bone_collections>` are used to group related bones together
+so that they can be hidden or revealed together.
+
+Rigify can take advantage of collections to generate extra features and the user interface for the final rig.
+A panel named Rigify Layer Names is generated with buttons for hiding the collections, arranged in an intuitive layout.
+
+The Bone Collections UI panel allows configuring the layout of that generated panel, as well as specifying some
+other settings for bone collections, such as the color set to use.
+
+The top of the panel is occupied by a list that duplicates the main bone collection list, but displays additional
+properties, such as the color set, whether the collection has a button, or whether it generates a selection set.
+
+Validate Collection References
+  Some sub-rig types have :ref:`references <bpy.types.RigifyParameters>` to bone collections in their properties.
+  Rigify uses a referencing scheme that is robust to collection renames, but deleting collections or joining armatures
+  can still lead to broken references.
+
+  This button runs a scan that validates and normalizes all collection references, reporting any errors, and
+  reducing the chance of breakage being caused by subsequent user actions.
+
+  This scan is also performed automatically every time the rig is generated.
+
+  .. warning::
+    To avoid breakage this operation should be used both immediately before and after joining two metarig armatures.
+    More specifically, it must be always done between the actions of renaming any collections and joining.
+
+Color Set
+  Specifies the :ref:`color set <bpy.types.Armature.rigify_colors>` to use for bones in this collection. If a bone
+  belongs to multiple collections, in general the collection located earlier in the list has priority.
+
+Add Selection Set
+  Specifies whether a selection set should be generated for this collection.
+
+UI Row
+  If nonzero, specifies which row of the Rigify Layer Names panel should contain the button controlling
+  the visibility of this collection. When zero, no button is generated, and the collection is hidden.
+
+UI Title
+  This field can be used to override the title used on the UI button to be distinct from the true collection name.
+  Unlike collection names, titles are not required to be unique, so this can be used to reduce clutter by relying
+  on contextual cues within the panel.
+
+UI Layout sub-panel
+-------------------
+
+.. figure:: /images/addons_rigging_rigify_metarigs_bone-collections-layout-panel.png
+   :align: right
+   :width: 300px
+
+The UI Layout sub-panel provides a WYSIWYG editor for the layout of the generated UI panel
+(as defined by the UI Row and UI Title settings above).
+
+Each row contains three buttons at the end:
+
+Arrow
+   Moves the active collection button to this row.
+Plus
+   Inserts a new row before the current one.
+Minus
+   Removes the current row and shifts all buttons up.
+
+To the left of the editing control buttons, rows display buttons corresponding to the collections, same as the final
+UI, except that rather than hiding or unhiding, clicking these buttons selects the collection.
+
+For the active collection the selection button is replaced with an input field for editing the UI Title, and an **X**
+button to unassign the collection from the UI.
+
+For any collections not assigned to the UI, their select buttons are displayed in a separate section at the bottom
+of the sub-panel.
+
+The ``Root`` collection will be added and/or assigned a UI button automatically if necessary when the rig is generated.
+If desired, it is possible to manually assign UI buttons to the internal ``ORG``, ``DEF`` and ``MCH`` collections.
+
+.. tip::
+   Blank rows appear much thinner in the final interface, since they don't have to contain editing buttons, and can be
+   used as logical separators.
