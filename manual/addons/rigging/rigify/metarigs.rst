@@ -203,7 +203,8 @@ Bone Collections UI
 so that they can be hidden or revealed together.
 
 Rigify can take advantage of collections to generate extra features and the user interface for the final rig.
-A panel named Rigify Layer Names is generated with buttons for hiding the collections, arranged in an intuitive layout.
+A panel named :ref:`Rig Layers <rigify.rig_ui_template.RigLayers>` is generated with buttons for hiding the
+collections, arranged in an intuitive layout.
 
 The Bone Collections UI panel allows configuring the layout of that generated panel, as well as specifying some
 other settings for bone collections, such as the color set to use.
@@ -233,8 +234,8 @@ Add Selection Set
   Specifies whether a selection set should be generated for this collection.
 
 UI Row
-  If nonzero, specifies which row of the Rigify Layer Names panel should contain the button controlling
-  the visibility of this collection. When zero, no button is generated, and the collection is hidden.
+  If nonzero, specifies which row of the :ref:`Rig Layers <rigify.rig_ui_template.RigLayers>` panel should contain the
+  button controlling the visibility of this collection. When zero, no button is generated, and the collection is hidden.
 
 UI Title
   This field can be used to override the title used on the UI button to be distinct from the true collection name.
