@@ -3,8 +3,10 @@
 Faces
 *****
 
-``faces.super_face``
-====================
+.. _rigify.rigs.faces.super_face:
+
+faces.super_face
+================
 
 Will create a face system based on the bones child to the parent that has the property set on it.
 

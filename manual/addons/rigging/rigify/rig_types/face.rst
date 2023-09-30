@@ -8,21 +8,21 @@ These rig types implement components of a modular face.
 
 .. _rigify.rigs.face.basic_tongue:
 
-``face.basic_tongue``
-=====================
+face.basic_tongue
+=================
 
-Generates a simple tongue, extracted from the original PitchiPoy ``super_face`` rig.
+Generates a simple tongue, extracted from the original PitchiPoy :ref:`super_face <rigify.rigs.faces.super_face>` rig.
 
 B-Bone Segments (integer)
    Defines the number of b-bone segments each tweak control will be split into.
 Primary Control Layers
-   Optionally specifies layers for the main control.
+   Optionally specifies bone collections for the main control.
 
 
 .. _rigify.rigs.face.skin_eye:
 
-``face.skin_eye``
-=================
+face.skin_eye
+=============
 
 Implements a skin system :ref:`parent controller <rigify.rigs.skin.skin_parents>` that manages
 two skin chains for the top and bottom eyelids in addition to generating the eye rotation mechanism.
@@ -49,8 +49,8 @@ Eyelids Follow Default
 
 .. _rigify.rigs.face.skin_jaw:
 
-``face.skin_jaw``
-=================
+face.skin_jaw
+=============
 
 Implements a skin system :ref:`parent controller <rigify.rigs.skin.skin_parents>` that manages
 one or more loops of mouth skin chains in response to the movement of jaw and mouth controls.
