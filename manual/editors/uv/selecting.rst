@@ -164,7 +164,7 @@ Face Stepping
    rather than connected edges along the path (edge loop).
 
    For faces: allows the path to go through faces that only share a vertex, rather than an edge.
-Topological Distance
+Topology Distance
    Calculates the distance by simply counting edges rather than measuring their lengths.
 Fill Region :kbd:`Shift-Ctrl-LMB`
    Selects all shortest paths (rather than just one).
