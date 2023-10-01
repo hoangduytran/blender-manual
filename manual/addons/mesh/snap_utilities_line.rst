@@ -62,22 +62,22 @@ Options
 
    **1.** It detects the drawing of a closed segment.
 
-   .. figure:: /images/addons_mesh_snap_utilities-creating-faces-1.jpg
+   .. figure:: /images/addons_mesh_snap_utilities-creating-faces-1.png
       :align: center
 
    **2.** The last vertex of the segment binds to an edge that connects another vertex of the segment.
 
-   .. figure:: /images/addons_mesh_snap_utilities-creating-faces-2.jpg
+   .. figure:: /images/addons_mesh_snap_utilities-creating-faces-2.png
       :align: center
 
    **3.** It detects an isolated edge loop.
 
-   .. figure:: /images/addons_mesh_snap_utilities-creating-faces-3.jpg
+   .. figure:: /images/addons_mesh_snap_utilities-creating-faces-3.png
       :align: center
 
    **4.** We redraw existing edges to match the conditions mentioned above.
 
-   .. figure:: /images/addons_mesh_snap_utilities-creating-faces-4.jpg
+   .. figure:: /images/addons_mesh_snap_utilities-creating-faces-4.png
       :align: center
 
 
