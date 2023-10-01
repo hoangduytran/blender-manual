@@ -63,6 +63,7 @@ Duplicate
 .. reference::
 
    :Menu:      :menuselection:`Edit --> Duplicate`
+   :Shortcut:  :kbd:`Alt-D`
 
 Creates a new instance of the selected strips with a copy of the action.
 
@@ -75,15 +76,14 @@ Linked Duplicate
 .. reference::
 
    :Menu:      :menuselection:`Edit --> Linked Duplicate`
-   :Shortcut:  :kbd:`Alt-D`
+   :Shortcut:  :kbd:`Shift-D`
 
 The contents of one Action strip can be instanced multiple times. To instance another strip,
 select a strip, go to :menuselection:`Edit --> Linked Duplicate`.
 It will uses the same action as the selected strips.
 
 Now, when any strip is tweaked, the others will change too.
-If a strip other than the original is tweaked,
-the original will turn to red.
+If a strip other than the original is tweaked, the original will turn to red.
 
 .. figure:: /images/editors_nla_editing_linked-strip-edit.png
 
