@@ -13,8 +13,8 @@ This is unlike chain-based rig types that usually consume the whole connected ch
 
 .. _rigify.rigs.basic.copy_chain:
 
-``basic.copy_chain``
-====================
+basic.copy_chain
+================
 
 Copies the bone chain keeping all the parent relations within the chain untouched.
 Useful as a utility rig type for custom rigs.
@@ -29,8 +29,8 @@ Deform (Boolean)
 
 .. _rigify.rigs.basic.pivot:
 
-``basic.pivot``
-===============
+basic.pivot
+===========
 
 Single-bone rig type that creates a 'custom pivot' control for rotating and scaling its child sub-rigs.
 
@@ -74,8 +74,8 @@ Deform Bone
 
 .. _rigify.rigs.basic.raw_copy:
 
-``basic.raw_copy``
-==================
+basic.raw_copy
+==============
 
 Single-bone rig type that copies the bone without the ``ORG-`` name prefix.
 
@@ -106,8 +106,8 @@ Relink Constraints
 
 .. _rigify.rigs.basic.super_copy:
 
-``basic.super_copy``
-====================
+basic.super_copy
+================
 
 Single-bone rig type that simply copies the bone. Useful as utility rig type for
 adding custom features or specific deform bones to your rigs.
