@@ -21,7 +21,7 @@ and mattes will be anti-aliased and take into account effects like motion blur a
 .. important::
 
    The Cryptomatte Legacy node is deprecated and replaced by
-   :doc:`Cryptomatte Node </compositing/types/matte/cryptomatte>`.
+   :doc:`Cryptomatte Node </compositing/types/mask/cryptomatte>`.
    The legacy node will be removed in a future Blender release.
 
 

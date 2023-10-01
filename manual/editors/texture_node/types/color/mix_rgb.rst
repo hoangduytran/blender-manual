@@ -1,4 +1,4 @@
 .. _bpy.types.TextureNodeMixRGB:
 .. DO NOT EDIT FILE. This is simply a stub which copies everything from the link below.
-.. include:: /compositing/types/color/mix.rst
+.. include:: /compositing/types/color/mix/mix_color.rst
    :start-after: .. --- copy below this line ---

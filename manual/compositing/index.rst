@@ -24,11 +24,43 @@ Node Types
 
    types/input/index.rst
    types/output/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
    types/color/index.rst
-   types/converter/index.rst
    types/filter/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   types/keying/index.rst
+   types/mask/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   types/tracking/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   types/transform/index.rst
+   types/utilities/index.rst
    types/vector/index.rst
-   types/matte/index.rst
-   types/distort/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
    types/groups.rst
    types/layout/index.rst

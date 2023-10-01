@@ -339,7 +339,7 @@ regardless of the Image nodes resolutions or Render Layers from different scenes
 
 Switch View Node
    If you need to treat the views separately, you can use
-   the :doc:`Switch View node </compositing/types/converter/switch_view>`
+   the :doc:`Switch View node </compositing/types/utilities/switch_stereo_view>`
    to combine the views before an Output node.
 
 .. tip:: Performance

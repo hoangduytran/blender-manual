@@ -48,7 +48,7 @@ Factor
 
 .. hint:: Output values
 
-   The :doc:`Map Value </compositing/types/vector/map_value>`
+   The :doc:`Map Value </compositing/types/utilities/map_value>`
    node can be used to map the output to a more appropriate value.
    With sometimes curves, it is possible that the Time Curve node
    may output a number larger than one or less than zero.

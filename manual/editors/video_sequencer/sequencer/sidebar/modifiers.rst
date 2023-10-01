@@ -93,7 +93,7 @@ Color Balance Modifier
 
 Color balance adjustments, either by the Lift, Gamma, and Gain or the Slope, Offset and Power method.
 
-This modifier works similar to the :doc:`Color Balance Node </compositing/types/color/color_balance>`.
+This modifier works similar to the :doc:`Color Balance Node </compositing/types/color/adjust/color_balance>`.
 
 .. figure:: /images/video-editing_sequencer_sidebar_color-balance-modifier.png
    :align: right
@@ -131,7 +131,7 @@ Curves Modifier
 
 Color and RGB curves.
 
-This modifier works the same as the :doc:`Curves Node </compositing/types/color/rgb_curves>`.
+This modifier works the same as the :doc:`Curves Node </compositing/types/color/adjust/rgb_curves>`.
 
 
 .. index:: Video Sequencer Modifiers; Hue Correct Modifier
@@ -142,7 +142,7 @@ Hue Correct Modifier
 
 HSV multi points curves.
 
-This modifier works the same as the :doc:`Curves Node </compositing/types/color/hue_correct>`.
+This modifier works the same as the :doc:`Curves Node </compositing/types/color/adjust/hue_correct>`.
 
 
 .. index:: Video Sequencer Modifiers; Mask Modifier
@@ -191,7 +191,7 @@ Tone Map Modifier
 Used to map one set of colors to another in order to approximate the appearance
 of high dynamic range images in a medium that has a more limited dynamic range.
 
-This modifier works the same as the :doc:`Tone Map Node </compositing/types/color/tone_map>`.
+This modifier works the same as the :doc:`Tone Map Node </compositing/types/color/adjust/tone_map>`.
 
 
 .. index:: Video Sequencer Modifiers; White Balance Modifier

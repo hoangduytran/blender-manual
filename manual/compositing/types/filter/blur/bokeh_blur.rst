@@ -30,7 +30,7 @@ Size
    controlled by an input image. In order to use the latter, the Variable Size option must be selected.
    See the examples section below for more on how to use this.
 Bounding Box
-   This can be used with a :doc:`Box Mask </compositing/types/matte/box_mask>`
+   This can be used with a :doc:`Box Mask </compositing/types/mask/box_mask>`
    matte node or with a :doc:`Mask </compositing/types/input/mask>`
    input node to restrict the area of the image the blur is applied to. This could be helpful, for example,
    when developing a node system by allowing only a small area of the image to be filtered
@@ -59,14 +59,14 @@ Examples
 
 Three examples of how the size input may be used follow.
 
-An :doc:`ID masked </compositing/types/converter/id_mask>`
+An :doc:`ID masked </compositing/types/mask/id_mask>`
 alpha image can be used so that a background is blurred while foreground objects remain in focus.
 To prevent strange edges the :doc:`Dilate Node </compositing/types/filter/dilate_erode>` should be used.
 
-The Z pass can be visualized using a :doc:`Map Value </compositing/types/vector/map_value>` node
-and a :doc:`Color Ramp </compositing/types/converter/color_ramp>` node
-as described in :doc:`Render Layers </compositing/types/input/render_layers>`.
-A *multiply* :doc:`Math </compositing/types/converter/math>` node can be used following the color ramp
+The Z pass can be visualized using a :doc:`Map Value </compositing/types/utilities/map_value>` node
+and a :doc:`Color Ramp </compositing/types/color/color_ramp>` node
+as described in :doc:`Render Layers </compositing/types/input/scene/render_layers>`.
+A *multiply* :doc:`Math </compositing/types/utilities/math>` node can be used following the color ramp
 so that a blur value greater than one is used for objects outside the focal range.
 
 .. figure:: /images/compositing_types_filter_bokeh-blur_example-1.png

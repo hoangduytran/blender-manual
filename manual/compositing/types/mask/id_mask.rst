@@ -13,7 +13,7 @@ The *ID Mask Node* can be used to access an alpha mask per object or per materia
 
 .. seealso::
 
-   The ID Mask node is superseded by the :doc:`/compositing/types/matte/cryptomatte`.
+   The ID Mask node is superseded by the :doc:`/compositing/types/mask/cryptomatte`.
    Cryptomatte is more feature complete and supported by Cycles and Eevee.
    It is recommended to use this feature moving forward.
 
@@ -23,8 +23,8 @@ Inputs
 
 ID Value
    Input for the *Object Index* or *Material Index* render pass.
-   Which is an output of the :doc:`Render Layers node </compositing/types/input/render_layers>` or
-   the :doc:`Image node </compositing/types/input/render_layers>` with a multi-layer format.
+   Which is an output of the :doc:`Render Layers node </compositing/types/input/scene/render_layers>` or
+   the :doc:`Image node </compositing/types/input/scene/render_layers>` with a multi-layer format.
 
 
 Properties
