@@ -49,7 +49,7 @@ Example
 =======
 
 Consider a node setup for green screen removal, using
-a :doc:`Color Key </compositing/types/matte/color_key>`:
+a :doc:`Color Key </compositing/types/keying/color_key>`:
 
 .. figure:: /images/compositing_types_matte_keying-screen_key-usage.png
    :width: 480px

@@ -1,7 +1,7 @@
 
-###############
-  Matte Nodes
-###############
+################
+  Keying Nodes
+################
 
 These nodes give you the essential tools for creating a :term:`Matte` for images
 that do not already have their own :term:`Alpha Channel`.
@@ -18,7 +18,7 @@ Taking out too much green can result in foreground actors looking flat or bluish
 You can and should chain these nodes together,
 improving your masking and color correction in successive refinements,
 using each node's strengths to operate on the previous node's output.
-:doc:`Keying Node </compositing/types/matte/keying>` is the closest to a "does-it-all" node
+:doc:`Keying Node </compositing/types/keying/keying>` is the closest to a "does-it-all" node
 for green screens, but the best results stem from a combination of techniques.
 
 .. note::
@@ -34,26 +34,21 @@ for green screens, but the best results stem from a combination of techniques.
    by the node.
 
    Simple garbage mattes can be created with
-   the :doc:`Box Mask </compositing/types/matte/box_mask>` or
-   the :doc:`Ellipse Mask </compositing/types/matte/ellipse_mask>`.
+   the :doc:`Box Mask </compositing/types/mask/box_mask>` or
+   the :doc:`Ellipse Mask </compositing/types/mask/ellipse_mask>`.
    More complicated matte shapes using
-   a :doc:`Double Edge Mask </compositing/types/matte/double_edge_mask>` or
+   a :doc:`Double Edge Mask </compositing/types/mask/double_edge_mask>` or
    using a :doc:`Mask </compositing/types/input/mask>`.
 
 .. toctree::
    :maxdepth: 1
 
-   box_mask.rst
    channel_key.rst
    chroma_key.rst
    color_key.rst
    color_spill.rst
-   cryptomatte.rst
-   cryptomatte_legacy.rst
    difference_key.rst
    distance_key.rst
-   double_edge_mask.rst
-   ellipse_mask.rst
    keying.rst
    keying_screen.rst
    luminance_key.rst

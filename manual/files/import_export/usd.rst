@@ -293,27 +293,22 @@ Import Options
 
 The following options are available when importing from USD:
 
-Cameras
-   Import cameras (perspective and orthographic).
-
-Curves
-   Import curve primitives, including USD basis and NURBS curves.
-   (Note that support for Bézier basis is not yet fully implemented.)
-
-Lights
-   Import lights. Does not currently include USD dome, cylinder or geometry lights.
-
-Materials
-   Import materials.
-
-Meshes
-   Import meshes.
-
-Volumes
-   Import USD OpenVDB field assets.
-
-Primitives
-   Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
+Data Types
+   Cameras
+      Import cameras (perspective and orthographic).
+   Curves
+      Import curve primitives, including USD basis and NURBS curves.
+      (Note that support for Bézier basis is not yet fully implemented.)
+   Lights
+      Import lights. Does not currently include USD dome, cylinder or geometry lights.
+   Materials
+      Import materials.
+   Meshes
+      Import meshes.
+   Volumes
+      Import USD OpenVDB field assets.
+   Primitives
+      Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
 
 Path Mask
    Import only the subset of the USD scene rooted at the given primitive.
@@ -321,41 +316,38 @@ Path Mask
 Scale
    Value by which to scale the imported objects in relation to the world's origin.
 
-UV Coordinates
-   Read mesh UV coordinates.
+Mesh Data
+   UV Coordinates
+      Read mesh UV coordinates.
+   Color Attributes
+      Convert the USD mesh ``displayColor`` values to Blender's Color Attributes.
+   Mesh attributes
+      Read USD ``Primvars`` as mesh attributes.
 
-Color Attributes
-   Convert the USD mesh ``displayColor`` values to Blender's Color Attributes.
+Include
+   Subdivision
+      Create Subdivision Surface modifiers based on the USD ``SubdivisionScheme`` attribute.
+   Import Instance Proxies
+      Create unique Blender objects for USD instances.
+   Visible Primitives Only
+      Do not import invisible USD primitives. Only applies to primitives with a non-animated
+      `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
+      Primitives with animated visibility will always be imported.
+   Guide
+      Include primitives with
+      `purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__ ``guide``.
+   Proxy
+      Include primitives with purpose ``proxy``.
+   Render
+      Include primitives with purpose ``render``.
 
-Subdivision
-   Create Subdivision Surface modifiers based on the USD ``SubdivisionScheme`` attribute.
-
-Import Instance Proxies
-   Create unique Blender objects for USD instances.
-
-Visible Primitives Only
-   Do not import invisible USD primitives. Only applies to primitives with a non-animated
-   `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
-   Primitives with animated visibility will always be imported.
-
-Guide
-   Include primitives with
-   `purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__ ``guide``.
-
-Proxy
-   Include primitives with purpose ``proxy``.
-
-Render
-   Include primitives with purpose ``render``.
-
-Set Frame Range
-   Update the scene's start and end frame to match those of the USD stage.
-
-Relative Path
-   Select the file relative to the blend-file.
-
-Create Collection
-   Add all imported objects to a new collection.
+Options
+   Set Frame Range
+      Update the scene's start and end frame to match those of the USD stage.
+   Relative Path
+      Select the file relative to the blend-file.
+   Create Collection
+      Add all imported objects to a new collection.
 
 Light Intensity Scale
    Scale for the intensity of imported lights.

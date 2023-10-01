@@ -10,17 +10,29 @@ overlaying another image, etc.
 .. toctree::
    :maxdepth: 1
 
-   alpha_over.rst
-   bright_contrast.rst
-   color_balance.rst
-   color_correction.rst
-   exposure.rst
-   gamma.rst
-   hue_correct.rst
-   hue_saturation.rst
+   adjust/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   mix/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   alpha_convert.rst
+   color_ramp.rst
+   convert_colorspace.rst
+   set_alpha.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
    invert_color.rst
-   mix.rst
-   posterize.rst
-   rgb_curves.rst
-   tone_map.rst
-   z_combine.rst
+   rgb_to_bw.rst

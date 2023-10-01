@@ -84,7 +84,7 @@ In this example, the image has too much red in it,
 so we run it through an *RGB Curves* node and reduce the Red channel.
 
 Also, read on for examples of the Darken and Contrast Enhancement curves,
-:doc:`here </compositing/types/color/mix>`.
+:doc:`here </compositing/types/color/mix/mix_color>`.
 
 
 Color Correction using Black/White Levels

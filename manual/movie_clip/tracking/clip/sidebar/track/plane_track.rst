@@ -26,7 +26,7 @@ Image
    Field to select or create an image which will be displayed inside the plane track.
    This image is for preview purposes in the Movie Clip editor only.
    To include it in your final render,
-   see :doc:`Plane Track Deform node </compositing/types/distort/plane_track_deform>`.
+   see :doc:`Plane Track Deform node </compositing/types/tracking/plane_track_deform>`.
 
 New Image from Plane Track
     Creates an image from the pixels of the movieclip that the plane marker "sees" at the current frame.

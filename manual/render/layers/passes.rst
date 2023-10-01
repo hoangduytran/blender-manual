@@ -54,10 +54,10 @@ Include
 Indexes
    Object Index
       Creates a mask of the object that can be later read by
-      the :doc:`ID Mask Node </compositing/types/converter/id_mask>` in the Compositor.
+      the :doc:`ID Mask Node </compositing/types/mask/id_mask>` in the Compositor.
    Material Index
       Creates a mask of the material that can be later read by
-      the :doc:`ID Mask Node </compositing/types/converter/id_mask>` in the Compositor.
+      the :doc:`ID Mask Node </compositing/types/mask/id_mask>` in the Compositor.
 
 Debug
    Sample Count
@@ -128,7 +128,7 @@ Other
    Shadow Catcher
       Extra indirect light information collected by objects with
       the :ref:`Shadow Catcher <render-cycles-object-settings-visibility>` option enabled.
-      Multiply this pass with existing footage using the :doc:`/compositing/types/color/mix`
+      Multiply this pass with existing footage using the :doc:`/compositing/types/color/mix/mix_color`
       in the :doc:`Compositor </editors/compositor>` to add the indirect lighting
       information to the footage.
 
@@ -238,7 +238,7 @@ Typical Workflow
 
 .. seealso::
 
-   :doc:`Cryptomatte Node </compositing/types/matte/cryptomatte>`.
+   :doc:`Cryptomatte Node </compositing/types/mask/cryptomatte>`.
 
 
 .. _bpy.ops.scene.view_layer_add_aov:

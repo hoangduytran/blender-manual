@@ -271,7 +271,7 @@ and such markers can be tracked even if partially occluded (appear and disappear
 It is only required that two neighbor frames have at least four common tracks.
 
 An image can be projected onto the plane with
-the :doc:`/compositing/types/distort/plane_track_deform` compositing node.
+the :doc:`/compositing/types/tracking/plane_track_deform` compositing node.
 
 
 .. _bpy.ops.clip.solve_camera:

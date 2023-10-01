@@ -18,14 +18,22 @@ As such, they have no input sockets; only outputs.
 .. toctree::
    :maxdepth: 1
 
+   constant/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
    bokeh_image.rst
    image.rst
    mask.rst
    movie_clip.rst
-   render_layers.rst
-   rgb.rst
-   scene_time.rst
    texture.rst
-   time_curve.rst
-   track_position.rst
-   value.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   scene/index.rst

@@ -9,18 +9,32 @@ post-processing effect on the image.
 .. toctree::
    :maxdepth: 1
 
+   blur/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
    anti_aliasing.rst
-   bilateral_blur.rst
-   blur_node.rst
-   bokeh_blur.rst
-   defocus.rst
    denoise.rst
    despeckle.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
    dilate_erode.rst
-   directional_blur.rst
-   filter_node.rst
-   glare.rst
    inpaint.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   filter.rst
+   glare.rst
    pixelate.rst
+   posterize.rst
    sun_beams.rst
-   vector_blur.rst

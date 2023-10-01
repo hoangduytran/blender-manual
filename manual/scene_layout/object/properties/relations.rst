@@ -39,7 +39,7 @@ Up Axis
 
 Pass Index
    Defines the index the object will have in the Object Index render pass. See :doc:`passes </render/layers/passes>`
-   and :doc:`ID mask </compositing/types/converter/id_mask>` for more information.
+   and :doc:`ID mask </compositing/types/mask/id_mask>` for more information.
 
    .. note::
 

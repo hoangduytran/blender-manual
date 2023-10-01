@@ -10,7 +10,7 @@ Bokeh Image Node
    :alt: Bokeh Image Node.
 
 The *Bokeh Image* node generates a special input image for use with
-the :doc:`Bokeh Blur </compositing/types/filter/bokeh_blur>` filter node.
+the :doc:`Bokeh Blur </compositing/types/filter/blur/bokeh_blur>` filter node.
 
 The *Bokeh Image* node is designed to create a reference image which simulates optical parameters
 such as aperture shape and lens distortions which have important impacts on bokeh in real cameras.
@@ -52,7 +52,7 @@ Example
 =======
 
 In the example below the *Bokeh Image* is used to define the shape of the bokeh for
-the :doc:`Bokeh Blur </compositing/types/filter/bokeh_blur>` node.
+the :doc:`Bokeh Blur </compositing/types/filter/blur/bokeh_blur>` node.
 
 .. figure:: /images/compositing_types_filter_bokeh-blur_example-1.png
    :width: 640px

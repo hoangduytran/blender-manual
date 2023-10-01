@@ -12,7 +12,7 @@ Map UV Node
 With this node objects can be "re-textured" after they have been rendered.
 
 To apply a texture to individual enumerated objects
-the :doc:`ID Mask Node </compositing/types/converter/id_mask>` could be used.
+the :doc:`ID Mask Node </compositing/types/mask/id_mask>` could be used.
 
 
 Inputs
