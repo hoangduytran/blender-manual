@@ -244,7 +244,7 @@ Render Pass
 
 Compositor
    Controls the enablement of the compositor in the viewport. If enabled, the scene compositor node
-   tree will be evaluated using the :ref:`Realtime Compositor <realtime-compositor>` and the output
+   tree will be evaluated using the :ref:`GPU Compositor <realtime-compositor>` and the output
    will be displayed directly in the viewport.
 
    :Disabled: Always disabled.
