@@ -31,12 +31,15 @@ Sculpting Options
 
    General sculpting options.
 
+.. _bpy.types.ToolSettings.use_gpencil_select_mask_segment:
+
 Selection Mask
    Sculpt Mode in Grease Pencil allows you to select points or strokes to restrict the effect
    of the sculpting tools to only a certain areas of your drawing.
 
    You can use the selection tools in the Toolbar for a quick selection.
    You can restrict sculpting only on the selected points or strokes with the Selection mode buttons.
+   The three modes can be toggled with :kbd:`1`, :kbd:`2`, or :kbd:`3` respectively.
 
 Multiframe
    Sometimes you may need to modify several frames at the same time with the sculpting tools.
