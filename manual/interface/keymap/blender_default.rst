@@ -212,6 +212,10 @@ Alt Cursor Access
 Select All Toggles
    Causes selection shortcut :kbd:`A` to deselect all when any selection exists.
 
+Region Toggle Pie
+   :kbd:`N` opens a :ref:`pie menu <bpy.types.UIPieMenu>` to toggle :doc:`/interface/window_system/regions`,
+   rather than toggling a single region.
+
 
 3D Viewport
 -----------
