@@ -278,7 +278,7 @@ If a Sheen Roughness Texture is used, glTF requires the values be written to the
 .. tip::
 
    Sheen BSDF node is only available on Cycles render engine.
-   You may have to temporary switch to Cycles to add this node, and get back to Eevee.
+   You may have to temporary switch to Cycles to add this node, and get back to EEVEE.
 
 .. note::
 
@@ -452,8 +452,8 @@ Double-Sided / Backface Culling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For materials where only the front faces will be visible, turn on *Backface Culling* in
-the *Settings* panel of an Eevee material. When using other engines (Cycles, Workbench)
-you can temporarily switch to Eevee to configure this setting, then switch back.
+the *Settings* panel of an EEVEE material. When using other engines (Cycles, Workbench)
+you can temporarily switch to EEVEE to configure this setting, then switch back.
 
 Leave this box unchecked for double-sided materials.
 
@@ -468,7 +468,7 @@ Blend Modes
 The Base Color input can optionally supply alpha values.
 How these values are treated by glTF depends on the selected blend mode.
 
-With the Eevee render engine selected, each material has a Blend Mode on
+With the EEVEE render engine selected, each material has a Blend Mode on
 the material settings panel. Use this setting to define how alpha values from
 the Base Color channel are treated in glTF. Three settings are supported by glTF:
 
@@ -482,7 +482,7 @@ Alpha Clip
 
 .. figure:: /images/addons_import-export_scene-gltf2_material-alpha-blend.png
 
-   With the Eevee engine selected, a material's blend modes are configurable.
+   With the EEVEE engine selected, a material's blend modes are configurable.
 
 .. note::
 

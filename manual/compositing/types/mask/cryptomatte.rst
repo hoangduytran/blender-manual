@@ -12,7 +12,7 @@ Cryptomatte Node
 :guilabel:`CPU Compositor Only`
 
 The Cryptomatte node uses the Cryptomatte standard to efficiently create mattes for compositing.
-Cycles and Eevee output the required render passes, which can then be used in the Compositor
+Cycles and EEVEE output the required render passes, which can then be used in the Compositor
 or another compositor with Cryptomatte support to create masks for specified objects.
 
 Unlike the Material and Object Index passes, the objects to isolate are selected in compositing,

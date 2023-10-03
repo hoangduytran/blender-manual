@@ -34,7 +34,7 @@ Properties
 
 Target
    Render engine the input shaders are used for.
-   By default shaders are shared between Cycles and Eevee,
+   By default shaders are shared between Cycles and EEVEE,
    with multiple output nodes specialized shader setups can be created for each.
 
 

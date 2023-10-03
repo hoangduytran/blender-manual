@@ -8,7 +8,7 @@ Specular BSDF
    :align: right
    :alt: Specular BSDF node.
 
-:guilabel:`Eevee Only`
+:guilabel:`EEVEE Only`
 
 The *Specular* :abbr:`BSDF (Bidirectional Scattering Distribution Function)`
 combines multiple layers into a single easy to use node.

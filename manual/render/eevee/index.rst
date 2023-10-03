@@ -1,7 +1,7 @@
 .. _bpy.types.SceneEEVEE:
 
 #########
-  Eevee
+  EEVEE
 #########
 
 .. toctree::

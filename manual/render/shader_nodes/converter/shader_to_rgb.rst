@@ -8,7 +8,7 @@ Shader To RGB
    :align: right
    :alt: Shader to RGB.
 
-:guilabel:`Eevee Only`
+:guilabel:`EEVEE Only`
 
 The Shader to RGB node is typically used for non-photorealistic rendering,
 to apply additional effects on the output of BSDFs.

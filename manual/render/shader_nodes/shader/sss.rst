@@ -45,7 +45,7 @@ Properties
 Subsurface Method
    Rendering method to simulate subsurface scattering.
 
-   .. note:: Eevee does use not support the *Random Walk* methods.
+   .. note:: EEVEE does not support the *Random Walk* methods.
 
    :Christensen-Burley:
       An approximation to physically-based volume scattering.

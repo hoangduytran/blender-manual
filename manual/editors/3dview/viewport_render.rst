@@ -30,7 +30,7 @@ the Cycles Renderer.
 
 .. note::
 
-   Viewport rendering only works for the Workbench and Eevee render engines.
+   Viewport rendering only works for the Workbench and EEVEE render engines.
    It's not supported for Cycles.
 
 .. tip::
@@ -46,7 +46,7 @@ Some settings are located in the properties of the render engine
 that is used to render the view.
 
 Solid mode uses the render settings of Workbench;
-Material Preview mode uses the render settings of Eevee.
+Material Preview mode uses the render settings of EEVEE.
 
 Additionally, some output settings are used too:
 

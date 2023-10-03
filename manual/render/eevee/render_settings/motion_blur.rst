@@ -43,7 +43,7 @@ Max Blur
 
       High maximum blur values may also reduce the quality.
 
-   Eevee uses a fast post-process vector blur using a vector motion pass.
+   EEVEE uses a fast post-process vector blur using a vector motion pass.
    This blurs the image between three time steps using pixel velocity.
    This technique is fast and produces clean gradients, but issues can occur at object borders
    or if the motion is locally too complex;
@@ -71,7 +71,7 @@ Steps
       When using multiple time steps, the render sample count is rounded up to the next multiple
       of steps to ensure even distribution of samples across steps.
 
-   Eevee splits the render into multiple time steps and accumulates the result
+   EEVEE splits the render into multiple time steps and accumulates the result
    which is known as Accumulation Motion Blur.
    This technique is precise but requires many steps for clean gradients.
    This is used in combination with the post-process blur to handle the inter-step gaps.

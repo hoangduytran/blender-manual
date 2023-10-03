@@ -213,7 +213,7 @@ Pack
    * - :doc:`Light Probe </render/eevee/light_probes/introduction>`
      - |tick|
      - |none|
-     - | Help achieve complex real-time lighting in Eevee.
+     - | Help achieve complex real-time lighting in EEVEE.
    * - :doc:`Scene </scene_layout/scene/introduction>`
      - |tick|
      - |none|

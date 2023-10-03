@@ -52,7 +52,7 @@ Sorting Problem
 
 When writing to the color buffer using transparent blend modes,
 the order in which the color blending happens is important as it can change the final output color.
-As of now Eevee does not support per-fragment (pixel) sorting or per-triangle sorting.
+As of now EEVEE does not support per-fragment (pixel) sorting or per-triangle sorting.
 Only per-object sorting is available and is automatically done on all transparent surfaces based on object origin.
 
 .. note::
@@ -76,7 +76,7 @@ Shadow Mode
 ===========
 
 Type of shadows used for a transparent surface.
-Eevee does not support colored shadow maps.
+EEVEE does not support colored shadow maps.
 
 Half transparent shadows can be produced by using hashed transparent shadows and
 a larger Soft value on the shadow map.
@@ -147,7 +147,7 @@ Refraction Depth
 Subsurface Translucency
 =======================
 
-Eevee's Subsurface Scattering algorithm works by blurring the irradiance in screen space.
+EEVEE's Subsurface Scattering algorithm works by blurring the irradiance in screen space.
 This means that if no visible part of the surface is lit, the effect disappears.
 
 However, true Subsurface Scattering goes beneath the surface and can travel a large distance.

@@ -6,11 +6,11 @@ Indirect Lighting
 *****************
 
 While not strictly correct, all lighting that is not coming straight out
-from a light object is considered as indirect lighting in Eevee.
+from a light object is considered as indirect lighting in EEVEE.
 That means distant :term:`HDRI` lighting (or World) is considered as indirect lighting.
 Mesh objects using an Emission node are also considered as indirect lighting.
 
-In Eevee, indirect lighting is separated into two component: Diffuse and Specular.
+In EEVEE, indirect lighting is separated into two component: Diffuse and Specular.
 Both have different needs and representation. For efficiency,
 the indirect lighting data is precomputed on demand into a static lighting cache.
 

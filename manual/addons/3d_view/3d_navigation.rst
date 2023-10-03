@@ -49,7 +49,7 @@ Align View from
 Lock View to Object
    Select an object to align view, from the list.
 
-View to Select
+View to Selected
    Align view on selected object.
 
 Cursor

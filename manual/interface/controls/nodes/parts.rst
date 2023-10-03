@@ -58,7 +58,7 @@ Each socket is color-coded depending on what type of data it handles.
 .. rubric:: Built-in
 
 Shader (bright green)
-   Used for shaders in :doc:`Cycles </render/cycles/index>` and :doc:`Eevee </render/eevee/index>`.
+   Used for shaders in :doc:`Cycles </render/cycles/index>` and :doc:`EEVEE </render/eevee/index>`.
 Geometry (turquoise)
    Used in :doc:`Geometry Nodes </modeling/geometry_nodes/index>`.
 

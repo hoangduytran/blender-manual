@@ -3,10 +3,10 @@
 Limitations
 ***********
 
-Eevee's goal is to be an interactive render engine. Some features may not be there yet or
-may be impossible to implement into Eevee's architecture without compromising performance.
+EEVEE's goal is to be an interactive render engine. Some features may not be there yet or
+may be impossible to implement into EEVEE's architecture without compromising performance.
 
-Here is a rather exhaustive list of all the limitations you can expect while working with Eevee.
+Here is a rather exhaustive list of all the limitations you can expect while working with EEVEE.
 
 
 Cameras
@@ -18,7 +18,7 @@ Cameras
 Lights
 ======
 
-- Only 128 active lights can be supported by Eevee in a scene.
+- Only 128 active lights can be supported by EEVEE in a scene.
 - Only 8 Shadowed sun lights can be supported at the same time.
 - As of now, lights can only have one color and do not support light node trees.
 
@@ -26,16 +26,16 @@ Lights
 Light Probes
 ============
 
-- Eevee only supports up to 128 active Reflection Cubemaps.
-- Eevee only supports up to 64 active Irradiance Volumes.
-- Eevee only supports up to 16 active Reflection Planes inside the view frustum.
+- EEVEE only supports up to 128 active Reflection Cubemaps.
+- EEVEE only supports up to 64 active Irradiance Volumes.
+- EEVEE only supports up to 16 active Reflection Planes inside the view frustum.
 
 
 Indirect Lighting
 =================
 
 - Volumetrics don't receive light from Irradiance Volumes but do receive world's diffuse lighting.
-- Eevee does not support "specular to diffuse" light bounces nor "specular to specular" light bounces.
+- EEVEE does not support "specular to diffuse" light bounces nor "specular to specular" light bounces.
 - All specular lighting is turned off during baking.
 
 
@@ -44,7 +44,7 @@ Indirect Lighting
 Shadows
 =======
 
-- Only 128 active lights can be supported by Eevee in a scene.
+- Only 128 active lights can be supported by EEVEE in a scene.
 - Only 8 Shadowed sun lights can be supported at the same time.
 
 
@@ -74,8 +74,8 @@ Depth of Field
 Screen Space Effects
 ====================
 
-Eevee is not a ray tracing engine and cannot do ray-triangle intersection.
-Instead of this, Eevee uses the depth buffer as an approximated scene representation.
+EEVEE is not a ray tracing engine and cannot do ray-triangle intersection.
+Instead of this, EEVEE uses the depth buffer as an approximated scene representation.
 This reduces the complexity of scene scale effects and enables a higher performance.
 However, only what is in inside the view can be considered when computing these effects.
 Also, since it only uses one layer of depth, only the front-most pixel distance is known.
@@ -168,8 +168,8 @@ Shader Nodes
 ============
 
 - All BSDF's are using approximations to achieve realtime performance
-  so there will always be small differences between Cycles and Eevee.
-- Some utility nodes are not yet compatible with Eevee.
+  so there will always be small differences between Cycles and EEVEE.
+- Some utility nodes are not yet compatible with EEVEE.
 
 .. seealso::
 
@@ -179,7 +179,7 @@ Shader Nodes
 Memory Management
 =================
 
-In Eevee, :abbr:`GPU (Graphic Processing Unit, also known as Graphics Card)`
+In EEVEE, :abbr:`GPU (Graphic Processing Unit, also known as Graphics Card)`
 Memory management is done by the GPU driver.
 In theory, only the needed textures and meshes (now referred as "the resources") for a single draw call
 (i.e. one object) needs to fit into the GPU memory.
@@ -197,7 +197,7 @@ if the GPU will render them successfully.
 CPU Rendering
 =============
 
-Being a rasterization engine, Eevee only uses the power of
+Being a rasterization engine, EEVEE only uses the power of
 the :abbr:`GPU (Graphic Processing Unit, also known as Graphics Card)` to render.
 There is no plan to support :abbr:`CPU (Central Processing Unit)` (software) rendering
 as it would be very inefficient. CPU power is still needed to handle high scene complexity
@@ -214,4 +214,4 @@ multiple :abbr:`GPU (Graphic Processing Unit, also known as Graphics Card)` syst
 Headless Rendering
 ==================
 
-There is currently no support for using Eevee on headless systems (i.e. without a Display Manager).
+There is currently no support for using EEVEE on headless systems (i.e. without a Display Manager).

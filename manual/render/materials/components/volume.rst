@@ -119,7 +119,7 @@ Multiple Scattering
 
 Real-world effects such as scattering in clouds or subsurface scattering require many
 scattering bounces. However, unbiased rendering of such effects can be noisy, so by default
-the number of bounces is zero in Cycles, and no support is available in Eevee.
+the number of bounces is zero in Cycles, and no support is available in EEVEE.
 The effect you get when rendering with zero volume bounces is what is known as
 "single scattering", the effect from more bounces is "multiple scattering".
 

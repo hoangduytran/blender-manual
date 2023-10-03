@@ -34,7 +34,7 @@ These tabs contain settings for the active scene.
 
 .. _properties-render-tab:
 
-- Render: :doc:`Eevee </render/eevee/index>`,
+- Render: :doc:`EEVEE </render/eevee/index>`,
   :doc:`Cycles </render/cycles/render_settings/index>` or
   :doc:`Workbench </render/workbench/index>` settings
 - :doc:`Output </render/output/index>`

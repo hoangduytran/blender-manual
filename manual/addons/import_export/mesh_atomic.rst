@@ -286,13 +286,13 @@ black. Note that the last value of a color tuple is the alpha value of the
 color. Furthermore, several other properties such as ``Metallic``,
 ``Roughness`` and ``Transmission`` can be changed. These are the properties
 in the :doc:`Principled BSDF shader </render/shader_nodes/shader/principled>`.
-There are also some properties for :doc:`Eevee </render/eevee/index>`, which
+There are also some properties for :doc:`EEVEE </render/eevee/index>`, which
 can be used to determine the object's transparency etc.
 
 
 Note that in the header of the custom data file,
 all possible values of the string options ``P BSDF Subsurface method``,
-``P BSDF Distribution``, ``Eevee Blend Method`` and ``Eevee Shadow Method``
+``P BSDF Distribution``, ``EEVEE Blend Method`` and ``EEVEE Shadow Method``
 are listed.
 
 .. figure:: /images/addons_import-export_mesh-atomic_utilities-panel.png

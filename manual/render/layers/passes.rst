@@ -70,7 +70,7 @@ Alpha Threshold
    With higher values surfaces that are mostly transparent can be skipped until an opaque surface is encountered.
 
 
-Eevee
+EEVEE
 -----
 
 Include
@@ -141,7 +141,7 @@ Other
    for that a glass BSDF with index of refraction 1.0 can be used.
 
 
-Eevee
+EEVEE
 -----
 
 Diffuse
@@ -177,7 +177,7 @@ Other
 Effects
 =======
 
-:guilabel:`Eevee only`
+:guilabel:`EEVEE only`
 
 .. _bpy.types.ViewLayerEEVEE.use_pass_bloom:
 
@@ -318,7 +318,7 @@ All these lighting passes can be combined to produce the final image as follows:
 .. figure:: /images/render_layers_passes_combine.svg
 
 
-Eevee
+EEVEE
 -----
 
 The passes can be combined to produce the final image as follows:
@@ -335,6 +335,6 @@ Known Limitations
 - Depth of field is not rendered in render passes except the combined pass.
   It is possible to add the depth of field back in the Compositor using
   the :ref:`Defocus node <bpy.types.CompositorNodeDefocus>`.
-- Eevee render passes exclude parts of the BSDF equation.
+- EEVEE render passes exclude parts of the BSDF equation.
   :doc:`Shader to RGB </render/shader_nodes/converter/shader_to_rgb>` is not supported as it needs
   the full BSDF equation.

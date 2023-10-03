@@ -4,23 +4,23 @@ Supported Nodes
 ***************
 
 Most nodes are taken from Cycles. However, some features are missing and
-may (or may not) be implemented in Eevee in the future.
+may (or may not) be implemented in EEVEE in the future.
 
 .. seealso::
 
    :doc:`Shader Nodes </render/shader_nodes/index>`.
 
 
-Eevee only Nodes
+EEVEE only Nodes
 ================
 
-These nodes are only available if Eevee is the active render engine. These nodes will not work in Cycles.
+These nodes are only available if EEVEE is the active render engine. These nodes will not work in Cycles.
 
 
 Shader to RGB
 -------------
 
-Eevee supports the conversion of BSDF outputs into color inputs to make any kind of custom shading.
+EEVEE supports the conversion of BSDF outputs into color inputs to make any kind of custom shading.
 This is supported using the :doc:`Shader to RGB </render/shader_nodes/converter/shader_to_rgb>` node.
 
 
@@ -144,7 +144,7 @@ Layer Weight
    Everything is compatible.
 
 Light Path
-   Eevee has no real concept of rays. But in order to ease the workflow between Cycles and Eevee
+   EEVEE has no real concept of rays. But in order to ease the workflow between Cycles and EEVEE
    some of the outputs are only supported in particular cases.
    This node makes it possible to tweak indirect lighting in the shader.
 
