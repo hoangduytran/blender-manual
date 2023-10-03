@@ -130,13 +130,35 @@ the following features:
    add a rig sample to your armature to see how it is supposed to be used.
 
 
-.. _bpy.ops.Armature.rigify_apply_selection_colors:
-.. _bpy.ops.Armature.rigify_add_bone_groups:
-.. _bpy.types.Armature.rigify_colors_lock:
-.. _bpy.types.Armature.rigify_theme_to_add:
-.. _bpy.types.Armature.rigify_colors_index:
-.. _bpy.types.RigifySelectionColors:
-.. _bpy.types.RigifyArmatureLayer:
+Preserved Bone Properties
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Certain properties of the metarig bones are often copied to the generated rig control, deform and mechanism bones.
+
+The exact set depends on the sub-rig and the specific generated bone, and the sub-rig may override some properties
+even if it copies others of its subset, but there are certain common patterns:
+
+Parenting Settings
+   This subset consists of the parent ORG bone, Use Connect, Use Inherit Rotation, Use Local Location, and Inherit Scale.
+
+   It is usually copied to deform bones, FK controls, and in other cases where the sub-rig doesn't have a reason
+   to completely override them.
+Bendy Bone Settings (Edit Mode)
+   Consist of the segment count, Mapping Mode, Ease In/Out, Roll In/Out, Curve In/Out and Scale In/Out.
+
+   The segment count is often overridden via a sub-rig option, but other settings are usually copied to deform
+   bones as is.
+Transformation Settings
+   Consist of the rotation mode, pose mode rotation values, and channel locks.
+
+   These settings are usually copied to FK controls.
+Custom Properties
+   Usually copied to one of the controls generated based on the metarig bone (mainly FK). Intra-armature drivers
+   that access the property are retargeted to the copied instance.
+Custom Widget
+   Usually copied to one of the controls generated based on the metarig bone (mainly FK), and suppresses automatic
+   generation of a widget for the bone if specified.
+
 
 Custom Root Bone
 ^^^^^^^^^^^^^^^^
@@ -149,7 +171,14 @@ The custom root bone must have no parent, and use the :ref:`basic.raw_copy <rigi
 type or none.
 
 
+.. _bpy.ops.Armature.rigify_apply_selection_colors:
+.. _bpy.ops.Armature.rigify_add_bone_groups:
 .. _bpy.types.Armature.rigify_colors:
+.. _bpy.types.Armature.rigify_colors_lock:
+.. _bpy.types.Armature.rigify_theme_to_add:
+.. _bpy.types.Armature.rigify_colors_index:
+.. _bpy.types.RigifySelectionColors:
+.. _bpy.types.RigifyArmatureLayer:
 
 Color Sets
 ==========

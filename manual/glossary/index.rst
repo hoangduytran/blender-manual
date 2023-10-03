@@ -276,6 +276,10 @@ This page lists definitions for terms used in Blender and this manual.
       the point of focus than it is in front, as the angle of the light rays change more rapidly;
       they approach being parallel with increasing distance.
 
+   Dielectric Material
+      A material for real world objects that are electrical insulators such as plastics, wood, glass, ect.
+      Essentially this summarizes any material that is solid and non metallic.
+
    Diffuse Light
       Even, directed light coming off a surface.
       For most things, diffuse light is the main lighting we see.

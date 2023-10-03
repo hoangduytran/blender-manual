@@ -63,7 +63,7 @@ Edge Tag (in Edge select mode only)
 Face Stepping
    Supports diagonal paths for vertices and faces, and
    selects edge rings with edges.
-Topological Distance
+Topology Distance
    Only takes into account the number of edges of the path and
    not the length of the edges to calculate the distances.
 Fill Region :kbd:`Shift-Ctrl-LMB`

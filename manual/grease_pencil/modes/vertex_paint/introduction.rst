@@ -36,6 +36,8 @@ Vertex Paint Options
 
    General Vertex Paint options.
 
+.. _bpy.types.ToolSettings.use_gpencil_vertex_select_mask_stroke:
+
 Selection Mask
    Vertex Paint Mode in Grease Pencil allows you to select points or strokes to restrict the effect
    of the painting tools to only a certain areas of your drawing.
@@ -43,6 +45,7 @@ Selection Mask
    You can use the selection tools in the Toolbar for a quick selections.
 
    You can restrict painting only on the selected points or strokes with the Selection mode toggle.
+   The three modes can be toggled with :kbd:`1`, :kbd:`2`, or :kbd:`3` respectively.
 
 Multiframe
    Sometimes you may need to modify several frames at the same time with the painting tools.

@@ -1,10 +1,10 @@
 .. _realtime-compositor:
 
-*******************
-Realtime Compositor
-*******************
+**************
+GPU Compositor
+**************
 
-The Realtime Compositor is a new GPU accelerated compositor introduced in Blender 3.5 and is
+The new GPU accelerated compositor introduced in Blender 3.5 and is
 currently used for :ref:`viewport compositing <viewport-compositing>`. This compositor is currently
 more limited and not all :ref:`Compositor Nodes <compositor-nodes>` are supported, such nodes are
 marked with the :guilabel:`CPU Compositor Only` label along with notes about other limitations.
@@ -319,7 +319,7 @@ pixel space of the input.
 Output
 ======
 
-The realtime compositor only supports a single active output target, that is, only one of the
+The GPU compositor only supports a single active output target, that is, only one of the
 :ref:`Composite nodes <bpy.types.CompositorNodeComposite>`, :ref:`Viewer nodes
 <bpy.types.CompositorNodeViewer>`, or :ref:`Split Viewer nodes
 <bpy.types.CompositorNodeSplitViewer>` in the node tree will be considered active and the rest will
