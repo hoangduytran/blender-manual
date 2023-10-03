@@ -32,6 +32,27 @@ Inputs
 
 Base Color
    Diffuse or metal surface color.
+Roughness
+   Specifies microfacet roughness of the surface for diffuse and specular reflection.
+Metallic
+   Blends between a non-metallic and metallic material model.
+   A value of 1.0 gives a fully specular reflection tinted with the base color,
+   without diffuse reflection or transmission.
+   At 0.0 the material consists of a diffuse or transmissive base layer, with a specular reflection layer on top.
+IOR
+   Index of refraction for transmission.
+Transmission
+   Mix between fully opaque surface at zero and fully glass like transmission at one.
+Alpha
+   Controls the transparency of the surface, with 1.0 fully opaque.
+   Usually linked to the Alpha output of an Image Texture node.
+Normal
+   Controls the normals of the base layers.
+
+
+Substance
+---------
+
 Subsurface
    Mix between diffuse and subsurface scattering.
    Rather than being a simple mix between Diffuse and Subsurface Scattering,
@@ -48,11 +69,11 @@ Subsurface IOR :guilabel:`Cycles Only`
    Index of refraction for *Subsurface Scattering*.
 Subsurface Anisotropy :guilabel:`Cycles Only`
    Controls the directionality of subsurface scattering.
-Metallic
-   Blends between a non-metallic and metallic material model.
-   A value of 1.0 gives a fully specular reflection tinted with the base color,
-   without diffuse reflection or transmission.
-   At 0.0 the material consists of a diffuse or transmissive base layer, with a specular reflection layer on top.
+
+
+Specular
+--------
+
 Specular
    Amount of dielectric specular reflection. Specifies facing (along normal)
    reflectivity in the most common 0 - 8% range.
@@ -76,9 +97,6 @@ Specular Tint
 
    Normal dielectrics have colorless reflection, so this parameter is not technically physically correct
    and is provided for faking the appearance of materials with complex surface structure.
-Roughness
-   Specifies microfacet roughness of the surface for diffuse and specular reflection.
-
 Anisotropic :guilabel:`Cycles Only`
    Amount of anisotropy for specular reflection. Higher values give elongated highlights along the tangent direction;
    negative values give highlights shaped perpendicular to the tangent direction.
@@ -90,6 +108,25 @@ Anisotropic Rotation :guilabel:`Cycles Only`
       Compared to the *Anisotropic BSDF* node, the direction of highlight elongation
       is rotated by 90°. Add 0.25 to the value to correct.
 
+Tangent
+   Controls the tangent for the *Anisotropic* layer.
+
+
+Coat
+----
+
+Clearcoat
+   Extra white specular layer on top of others.
+   This is useful for materials like car paint and the like.
+Clearcoat Roughness:
+   Roughness of clearcoat specular.
+Clearcoat Normal
+   Controls the normals of the *Clearcoat* layer.
+
+
+Sheen
+-----
+
 Sheen
    Amount of soft velvet like reflection near edges, for simulating materials such as cloth.
 Sheen Roughness
@@ -97,30 +134,16 @@ Sheen Roughness
    higher values reflect more color and can give a dusty appearance, while lower values look fuzzy and darker.
 Sheen Tint
    The color of the sheen reflection.
-Clearcoat
-   Extra white specular layer on top of others.
-   This is useful for materials like car paint and the like.
-Clearcoat Roughness:
-   Roughness of clearcoat specular.
-IOR
-   Index of refraction for transmission.
-Transmission
-   Mix between fully opaque surface at zero and fully glass like transmission at one.
+
+
+Emission
+--------
 
 Emission
    Light emission from the surface, like the Emission shader.
 Emission Strength
    Strength of the emitted light. A value of 1.0 will ensure that the object
    in the image has the exact same color as the *Emission Color*, i.e. make it 'shadeless'.
-Alpha
-   Controls the transparency of the surface, with 1.0 fully opaque.
-   Usually linked to the Alpha output of an Image Texture node.
-Normal
-   Controls the normals of the base layers.
-Clearcoat Normal
-   Controls the normals of the *Clearcoat* layer.
-Tangent
-   Controls the tangent for the *Anisotropic* layer.
 
 
 Properties
