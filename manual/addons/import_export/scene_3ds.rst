@@ -140,7 +140,7 @@ The exporter uses the integer values, since this is used from 3ds version 3 and 
 The material definitions which Blender can use are the following:
 
 - 3ds Diffuse Color <-> blender Base Color
-- 3ds Specular Color <-> blender Specular Color
+- 3ds Specular Color <-> blender Specular Tint
 - 3ds Ambient Color <-> blender Emission Color
 - 3ds Mat Shininess <-> blender Roughness inverted
 - 3ds Mat Shin2 <-> blender Specular Intensity
@@ -171,7 +171,7 @@ The material mappings are defined as following:
 - 3ds Bump Map <-> blender Normal Map (tangent space)
 - 3ds Tex2 Map <-> blender Color Texture (connect to mix-shader)
 
-.. figure:: /images/addons_io_3ds_material-nodes.jpg
+.. figure:: /images/addons_io_3ds_shader-nodes.jpg
 
    An example of a 3ds file with all image maps imported.
 
