@@ -91,10 +91,12 @@ Anisotropic Rotation :guilabel:`Cycles Only`
       is rotated by 90°. Add 0.25 to the value to correct.
 
 Sheen
-   Amount of soft velvet like reflection near edges,
-   for simulating materials such as cloth.
+   Amount of soft velvet like reflection near edges, for simulating materials such as cloth.
+Sheen Roughness
+   Controls the amount of color that is reflected back to the camera,
+   higher values reflect more color and can give a dusty appearance, while lower values look fuzzy and darker.
 Sheen Tint
-   Mix between white and using base color for sheen reflection.
+   The color of the sheen reflection.
 Clearcoat
    Extra white specular layer on top of others.
    This is useful for materials like car paint and the like.
