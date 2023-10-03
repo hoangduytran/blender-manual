@@ -25,6 +25,6 @@
    toon.rst
    translucent.rst
    transparent.rst
-   velvet.rst
+   sheen.rst
    volume_absorption.rst
    volume_scatter.rst

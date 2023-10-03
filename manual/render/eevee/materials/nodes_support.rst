@@ -102,7 +102,7 @@ Toon BSDF
 Hair BSDF
    Not supported.
 
-Velvet BSDF
+Sheen BSDF
    Not supported.
 
 Principled Hair BSDF
