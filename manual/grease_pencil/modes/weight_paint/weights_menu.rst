@@ -26,6 +26,8 @@ Adjust the Weight of the :doc:`Draw </grease_pencil/modes/weight_paint/tools>`
 tool to the weight of the vertex under the mouse cursor.
 
 
+.. _bpy.ops.gpencil.vertex_group_normalize_all:
+
 Normalize All
 =============
 
@@ -41,6 +43,8 @@ Lock Active
    Keep the values of the active group while normalizing all the others.
 
 
+.. _bpy.ops.gpencil.vertex_group_normalize:
+
 Normalize
 =========
 
@@ -53,6 +57,8 @@ This tool only works on the active vertex group.
 All points keep their relative weights, but the entire set of weights is scaled up
 such that the highest weight value is 1.0.
 
+
+.. _bpy.ops.gpencil.vertex_group_invert:
 
 Invert
 ======
@@ -79,6 +85,8 @@ Remove Weights
    Remove vertices from the vertex group if they are 0.0 after inverting.
 
 
+.. _bpy.ops.gpencil.vertex_group_smooth:
+
 Smooth
 ======
 
@@ -89,6 +97,8 @@ Smooth
 
 Smooths the weights of the active vertex group.
 
+
+.. _bpy.ops.gpencil.generate_weights:
 
 Generate Weights
 ================
