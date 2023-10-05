@@ -6,7 +6,7 @@ Introduction
 .. figure:: /images/render_output_properties_stereoscopy_usage_viewport.png
 
 Multi-view is a complete toolset for working with stereoscopic rendering in Blender.
-It works with both the Eevee and Cycles rendering engines.
+It works with both the EEVEE and Cycles rendering engines.
 Cycles additionally supports stereoscopic panoramic cameras.
 There is support for many different stereo 3D visualization types.
 

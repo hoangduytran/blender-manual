@@ -5,7 +5,7 @@ Shadows
 *******
 
 These settings influence shadows which appear on objects because there is another object (the occluder)
-between them and a Light. Eevee uses a technique called Shadow Mapping to calculate these shadows.
+between them and a Light. EEVEE uses a technique called Shadow Mapping to calculate these shadows.
 A shadow map is calculated by looking around from the position of each Light and finding the objects
 which are closest to the Light. These objects are called the nearest occluders.
 Everything which is behind (or, you can say, covered by) the nearest occluders will be in shadow.

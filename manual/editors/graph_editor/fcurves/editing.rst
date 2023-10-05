@@ -509,6 +509,56 @@ Direction
    `From Left` or `From Right` determine the anchor key from which to shear.
 
 
+.. _bpy.ops.graph.scale_average:
+
+Scale Average
+=============
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Scale Average`
+
+Scale the selected key segments to their average value. This differs from the regular scaling by being per segment.
+That means selected keyframes on two different F-Curves will scale to different points.
+
+Factor
+   The scale factor applied to the F-Curve segments.
+
+
+.. _bpy.ops.graph.push_pull:
+
+Push Pull
+=============
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Push Pull`
+
+Scale the keys from an imaginary line that runs from the start to the end of the selected segment.
+
+Factor
+   How far to push or pull the keys.
+
+
+.. _bpy.ops.graph.time_offset:
+
+Time Offset
+=============
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Time Offset`
+
+This operator shifts the value of the keys in time, while keeping the actual key positions in the same place.
+It supports wrapping, so when offsetting beyond the range of the F-Curve it will take values from the other end, but offset in y-value so there is no jump.
+This works best with dense key data. Gaps in the keyframe data might cause data to get lost if it is shifted into the gaps.
+
+Frame Offset
+   How far in frames to offset the animation.
+
+
+
+
 Smooth
 ======
 

@@ -4,8 +4,8 @@
 Depth of Field
 **************
 
-To render a scene, Eevee uses a pinhole camera model which produces
-a perfectly focused image of the scene. For an enhanced realism, Eevee can simulate
+To render a scene, EEVEE uses a pinhole camera model which produces
+a perfectly focused image of the scene. For an enhanced realism, EEVEE can simulate
 the optical :term:`Depth of Field` using a post-process filter, and a sample-based method.
 The optical settings are located in the :doc:`camera settings </render/cameras>` properties.
 Whereas the quality of the effect can be controlled by the settings found in the present section.

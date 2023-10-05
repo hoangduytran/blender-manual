@@ -63,10 +63,10 @@ Transmission Depth :guilabel:`Cycles Only`
    This can be used to avoid black surfaces, due to low amount of max bounces.
 
 
-Eevee Support
+EEVEE Support
 =============
 
-Eevee has no real concept of rays. But in order to ease the workflow between Cycles and Eevee
+EEVEE has no real concept of rays. But in order to ease the workflow between Cycles and EEVEE
 some of the outputs are only supported in particular cases.
 This node makes it possible to tweak indirect lighting in the shader.
 

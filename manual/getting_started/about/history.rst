@@ -248,13 +248,13 @@ Version/Revision Milestones
 
 `2.80 <https://www.blender.org/download/releases/2-80>`__ -- July 2019:
    A totally redesigned UI for easier navigation; improved viewport, gizmos, and tools.
-   With Eevee a new physically based real-time render engine was created.
+   With EEVEE a new physically based real-time render engine was created.
    The Grease Pencil got a big overhaul and is now a full 2D drawing and animation system.
    Replacing the old layers, collections are a powerful way to organize objects.
    Other improvements: Cycles, Modeling, Animation, Import/Export, Dependency Graph.
 `2.81 <https://www.blender.org/download/releases/2-81/>`__ -- November 2019:
    Revamped sculpting tools, Cycles OptiX accelerated rendering, denoising,
-   many Eevee improvements, library overrides, UI improvements and much more.
+   many EEVEE improvements, library overrides, UI improvements and much more.
 `2.82 <https://www.blender.org/download/releases/2-82/>`__ -- February 2020:
    UDIM and USD support, Mantaflow for fluids and smoke simulation,
    AI denoising, Grease Pencil improvements, and much more.
@@ -266,7 +266,7 @@ Version/Revision Milestones
 .. rubric:: Blender 2.9 -- Refining 2.8
 
 `2.90 <https://www.blender.org/download/releases/2-90/>`__ -- August 2020:
-   Improved sky texture, Eevee motion blur, sculpting improvements,
+   Improved sky texture, EEVEE motion blur, sculpting improvements,
    revamped modifier UI, improved modeling tools, and faster motion blur in Cycles.
 `2.91 <https://www.blender.org/download/releases/2-91/>`__ -- November 2020:
    Outliner improvements, property search, improved mesh Boolean operations, animation curves,
@@ -276,13 +276,13 @@ Version/Revision Milestones
    Cycles Color Attribute baking, APIC fluid simulations, Video Sequencer improvements, and much more.
 `2.93 <https://www.blender.org/download/releases/2-93/>`__ -- June 2021:
    New geometry nodes, sculpting improvements, Grease Pencil Line Art modifier along with other improvements,
-   an improved :abbr:`DOF (Depth Of Field)` for the Eevee render engine, redesigned Cryptomatte workflow, and more.
+   an improved :abbr:`DOF (Depth Of Field)` for the EEVEE render engine, redesigned Cryptomatte workflow, and more.
 
 
 .. rubric:: Blender 3.0 -- Optimizing Performance
 
 `3.0 <https://www.blender.org/download/releases/3-0/>`__ -- December 2021
-   Asset Browser added, Cycles X, Eevee Attributes, New geometry nodes,
+   Asset Browser added, Cycles X, EEVEE Attributes, New geometry nodes,
    animation update, Grease Pencil line art improvements, pose library,
    Open Image Denoising 2-8x faster, additional support for AMD on linux.
 

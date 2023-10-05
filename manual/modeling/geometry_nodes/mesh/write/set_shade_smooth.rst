@@ -10,8 +10,13 @@ Set Shade Smooth Node
    :alt: Set Shade Smooth node.
 
 The *Set Shade Smooth* node controls whether the mesh's faces look smooth in the viewport and renders.
+The smooth status of both edges and faces can be controlled, corresponding to the `sharp_edge` and
+`sharp_face` attributes. 
 The input node for this data is the :doc:`Is Shade Smooth </modeling/geometry_nodes/mesh/read/is_shade_smooth>` node.
 
+.. note::
+   For proper use of the *Edge* domain sharpness, the mesh :ref:`Auto Smooth <bpy.types.Mesh.use_auto_smooth>`
+   property must be enabled. This is only accessible on original meshes, not meshes created in geometry nodes.
 
 Inputs
 ======
@@ -30,7 +35,8 @@ Selection
 Properties
 ==========
 
-This node has no properties.
+Domain
+   Whether to write smoothness of mesh faces or edges.
 
 
 Outputs

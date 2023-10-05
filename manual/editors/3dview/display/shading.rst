@@ -201,7 +201,7 @@ Specular Highlighting
 Material Preview
 ================
 
-Render the 3D Viewport with :doc:`Eevee </render/eevee/introduction>` and an HDRI environment.
+Render the 3D Viewport with :doc:`EEVEE </render/eevee/introduction>` and an HDRI environment.
 This mode is particularly suited for previewing materials and painting textures.
 You can select different lighting conditions to test your materials.
 

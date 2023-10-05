@@ -89,7 +89,7 @@ Material Type
 
 .. note::
 
-   *Blend Mode* and *Shadow Mode* options are specific to the Eevee renderer.
+   *Blend Mode* and *Shadow Mode* options are specific to the EEVEE renderer.
    For a detailed explanation of each option, see :doc:`Material Settings </render/eevee/materials/settings>`.
 
 Blend Mode

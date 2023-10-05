@@ -128,7 +128,7 @@ Sections
             :target: render/index.html
 
          :doc:`/render/index`
-            Rendering and shading with Eevee, Cycles and Freestyle.
+            Rendering and shading with EEVEE, Cycles and Freestyle.
 
       .. container:: card
 

@@ -4,7 +4,7 @@ Material Utilities
 ******************
 
 Materials Utilities/Specials is designed to help with batch materials tasks.
-The add-on works in either Eevee or Cycles renderers.
+The add-on works in either EEVEE or Cycles renderers.
 Common tasks are available from the :kbd:`Shift-Q` pop-up menu and also the Materials Specials menu.
 
 

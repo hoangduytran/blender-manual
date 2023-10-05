@@ -23,7 +23,7 @@ Common
 .. _bpy.types.Light.use_custom_distance:
 .. _bpy.types.Light.cutoff_distance:
 
-Eevee
+EEVEE
 =====
 
 Specular

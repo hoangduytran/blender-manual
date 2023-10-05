@@ -55,7 +55,7 @@ New objects can be created with the *Add* menu in the 3D Viewport's header.
 :doc:`Light </render/lights/light_object>`
    Empty objects that emit light and are used for lighting the scene in renders.
 :doc:`Light Probe </render/eevee/light_probes/introduction>`
-   Used by the Eevee render engine to record lighting information for indirect lighting.
+   Used by the EEVEE render engine to record lighting information for indirect lighting.
 
 :doc:`Camera </render/cameras>`
    This is the virtual camera that is used to determine what appears in the render.
