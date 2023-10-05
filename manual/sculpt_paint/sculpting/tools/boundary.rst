@@ -39,7 +39,7 @@ Brush Settings
 ==============
 
 General
-*******
+-------
 
 .. note::
 
@@ -47,29 +47,29 @@ General
    and on :ref:`sculpt-tool-settings-brush-settings-advanced` brush settings.
 
 Unique
-******
+------
 
 .. _bpy.types.Brush.boundary_deform_type:
 
 Deformation
    Deformation type that is used by the brush.
 
-   Bend
+   :Bend:
       Rotates the boundary around the local Y axis.
       Useful for creating folding shapes, like sleeves.
-   Expand
+   :Expand:
       Moves/extends the mesh boundary in the local X direction.
       Useful for extending the boundaries along the surface.
-   Inflate
+   :Inflate:
       Works similar to the :doc:`Inflate </sculpt_paint/sculpting/tools/inflate>` tool but,
       the vertices that are inflated are constrained to the mesh boundary.
-   Grab
+   :Grab:
       Works similar to the :doc:`Grab </sculpt_paint/sculpting/tools/grab>` tool but,
       the vertices that are grabbed are constrained to the mesh boundary.
-   Twist
+   :Twist:
       Rotates the active boundary around the local Z axis.
       Useful for creating folds like on a skirt.
-   Smooth
+   :Smooth:
       Works similar to the :doc:`Grab </sculpt_paint/sculpting/tools/smooth>` tool but,
       the vertices that are smoothed are constrained to the mesh boundary.
 
@@ -78,13 +78,13 @@ Deformation
 Boundary Falloff
    How the brush :doc:`Falloff </sculpt_paint/brush/falloff>` is applied across the boundary.
 
-   Constant
+   :Constant:
       Applies the same deformation in the entire boundary.
-   Brush Radius
+   :Brush Radius:
       Applies the deformation only within the brush radius.
-   Loop
+   :Loop:
       Applies the brush falloff in a loop pattern along the boundary.
-   Loop and Invert
+   :Loop and Invert:
       Applies the falloff radius in a loop pattern,
       inverting the direction back & forth.
 

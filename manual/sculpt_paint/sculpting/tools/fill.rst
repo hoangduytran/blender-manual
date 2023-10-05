@@ -31,6 +31,8 @@ General
 Unique
 ------
 
+.. _bpy.types.Brush.invert_to_scrape_fill:
+
 Invert to Scrape
    When enabled, holding :kbd:`Ctrl` while sculpting
    changes the brush behavior to be the same as the *Scrape* brush.

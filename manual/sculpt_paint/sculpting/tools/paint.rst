@@ -39,24 +39,36 @@ Strength
 Unique
 ------
 
+.. _bpy.types.Brush.flow:
+
 Flow
    Amount of paint that is applied per stroke sample.
    Used to create fast/slow accumulation effect.
+
+.. _bpy.types.Brush.wet_mix:
 
 Wet Mix
    Amount of paint that is picked from the surface into the brush color.
    Can achieve the effect of a wet canvas.
 
+.. _bpy.types.Brush.wet_persistence:
+
 Wet Persistence
    Amount of wet paint that stays in the brush after applying paint to the surface.
 
+.. _bpy.types.Brush.wet_paint_radius_factor:
+
 Wet Paint Radius
    Ratio between the brush radius and the radius that is going to be used to sample the color to blend in wet paint.
+
+.. _bpy.types.Brush.density:
 
 Density
    Amount of random elements that are going to be affected by this brush.
    Use this for a more detailed airbrush effect.
    This works best on a high resolution.
+
+.. _bpy.types.Brush.tip_scale_x:
 
 Tip Scale X
    Scale of the brush tip in the X axis.

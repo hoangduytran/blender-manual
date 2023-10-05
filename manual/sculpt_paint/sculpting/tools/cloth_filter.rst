@@ -18,8 +18,8 @@ Click and drag away from the object for a positive effect and towards for a nega
    that should remain stationary, or by using :ref:`Face Sets <sculpting-editing-facesets>`.
 
 
-Brush Settings
-==============
+Tool Settings
+=============
 
 Filter Type
    Operation that is going to be applied to the mesh.

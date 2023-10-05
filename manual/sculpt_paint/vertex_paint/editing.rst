@@ -3,23 +3,6 @@
 Editing
 *******
 
-.. _bpy.ops.paint.vertex_color_set:
-
-Set Vertex Colors
-=================
-
-.. reference::
-
-   :Mode:      Vertex Paint Mode
-   :Menu:      :menuselection:`Paint --> Set Vertex Colors`
-   :Shortcut:  :kbd:`Ctrl-X`
-
-Fill the active Color Attribute with the current paint color.
-
-Affect Alpha
-   Set color completely opaque instead of reusing existing alpha.
-
-
 .. _bpy.ops.paint.vertex_color_smooth:
 
 Smooth Vertex Colors
@@ -128,3 +111,36 @@ Brightness/Contrast
    :Menu:      :menuselection:`Paint --> Brightness/Contrast`
 
 Adjust the brightness/contrast of the selected vertices.
+
+
+.. _bpy.ops.paint.vertex_color_set:
+
+Set Vertex Colors
+=================
+
+.. reference::
+
+   :Mode:      Vertex Paint Mode
+   :Menu:      :menuselection:`Paint --> Set Vertex Colors`
+   :Shortcut:  :kbd:`Ctrl-X`
+
+Fill the active Color Attribute with the current paint color.
+
+Affect Alpha
+   Set color completely opaque instead of reusing existing alpha.
+
+
+.. _bpy.ops.paint.sample_color:
+
+Sample Color
+============
+
+.. reference::
+
+   :Mode:      Vertex Paint Mode
+   :Menu:      :menuselection:`Paint --> Sample Color`
+   :Shortcut:  :kbd:`Shift-X`
+
+
+Adjust the brush color of the :doc:`Draw </sculpt_paint/vertex_paint/tools>`
+tool to the color under the mouse cursor.

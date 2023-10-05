@@ -315,12 +315,9 @@ Expand/Contract
 Source
    The vertices to mix with.
 
-   All
-      Smoothing will smooth both selected and deselected vertices.
-   Only Selected
-      Smoothing will only smooth with selected vertices.
-   Only Deselected
-      Smoothing will only smooth with deselected vertices.
+   :All: Smoothing will smooth both selected and deselected vertices.
+   :Only Selected: Smoothing will only smooth with selected vertices.
+   :Only Deselected: Smoothing will only smooth with deselected vertices.
 
 
 Transfer Weights
@@ -390,6 +387,47 @@ Subset
    See above :ref:`The Subset Option <sculpt-paint_weight-paint_editing_subset>` for how subsets are defined.
 Limit
    Maximum number of weights allowed on each vertex.
+
+
+.. _bpy.ops.paint.weight_set:
+
+Set Weight
+==========
+
+.. reference::
+
+   :Mode:      Weight Paint Mode
+   :Menu:      :menuselection:`Weight --> Set Weight`
+   :Shortcut:  :kbd:`Ctrl-X`
+
+Fill the active vertex group with the current paint weight.
+
+
+Sample Weight
+=============
+
+.. reference::
+
+   :Mode:      Weight Paint Mode
+   :Menu:      :menuselection:`Weight --> Sample Weight`
+   :Shortcut:  :kbd:`Shift-X`
+
+Adjust the Weight of the :doc:`Draw </sculpt_paint/weight_paint/tools>`
+tool to the weight of the vertex under the mouse cursor.
+
+
+.. _bpy.ops.paint.weight_sample_group:
+
+Sample Group
+============
+
+.. reference::
+
+   :Mode:      Weight Paint Mode
+   :Menu:      :menuselection:`Weight --> Sample Group`
+   :Shortcut:  :kbd:`Shift-Ctrl-X`
+
+Select one of the vertex groups available under current mouse position.
 
 
 .. _bpy.ops.paint.weight_gradient:
