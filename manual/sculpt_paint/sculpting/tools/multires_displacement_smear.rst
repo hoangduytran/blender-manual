@@ -35,6 +35,8 @@ General
 Unique
 ------
 
+.. _bpy.types.Brush.smear_deform_type:
+
 Deformation
    Deformation type that is used by the brush.
 

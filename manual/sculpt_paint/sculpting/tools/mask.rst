@@ -37,7 +37,5 @@ Unique
 Mask Tool
    The mask brush has two modes:
 
-   Draw
-      Mask drawing.
-   Smooth :kbd:`Shift`
-      Holding :kbd:`Shift` will instead smooth existing masks.
+   :Draw: Mask drawing.
+   :Smooth: Holding :kbd:`Shift` will instead smooth existing masks.
