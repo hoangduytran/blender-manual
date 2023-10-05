@@ -528,7 +528,7 @@ Factor
 .. _bpy.ops.graph.push_pull:
 
 Push Pull
-=============
+=========
 
 .. reference::
 
@@ -543,7 +543,7 @@ Factor
 .. _bpy.ops.graph.time_offset:
 
 Time Offset
-=============
+===========
 
 .. reference::
 
@@ -555,8 +555,6 @@ This works best with dense key data. Gaps in the keyframe data might cause data 
 
 Frame Offset
    How far in frames to offset the animation.
-
-
 
 
 Smooth
