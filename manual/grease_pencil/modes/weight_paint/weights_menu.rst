@@ -11,6 +11,21 @@ Weights Menu
 This page covers many of the tools in the *Weights* menu.
 
 
+.. _bpy.ops.gpencil.weight_sample:
+
+Sample Weight
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Weights --> Sample Weight`
+   :Shortcut:  :kbd:`Shift-X`
+
+Adjust the Weight of the :doc:`Draw </grease_pencil/modes/weight_paint/tools>`
+tool to the weight of the vertex under the mouse cursor.
+
+
 Normalize All
 =============
 

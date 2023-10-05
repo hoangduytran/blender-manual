@@ -186,10 +186,11 @@ Sample Color
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Sculpt --> Set Pivot`
+   :Menu:      :menuselection:`Sculpt --> Sample Color`
    :Shortcut:  :kbd:`Shift-X`
 
-Sample the vertex color of the active vertex.
+
+Adjust the brush color of the :doc:`/sculpt_paint/sculpting/tools/paint` tool to the color under the mouse cursor.
 
 
 .. _bpy.ops.sculpt.set_pivot_position:
