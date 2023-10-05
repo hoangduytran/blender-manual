@@ -214,38 +214,45 @@ Normalize
       Automatically recalculate curve normalization on every curve edit.
       This is useful to prevent curves from jumping after tweaking it.
 
+Create Ghost Curves (framed F-Curve icon)
+   Creates a picture with the current shape of the curves.
 
-F-Curve Controls
-----------------
+
+Transform Controls
+------------------
 
 .. figure:: /images/editors_graph-editor_introduction_header-edit.png
 
-   F-Curve controls.
-
-Proportional Editing :kbd:`O`
-   See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
-Auto Snap
-   Auto snap the keyframes for transformations.
-
-   - No Auto-Snap
-   - Frame Step
-   - Second Step
-   - Nearest Frame
-   - Nearest Second
-   - Nearest Marker
+   Transform controls.
 
 Pivot Point
    Pivot point for rotation.
 
-   Bounding Box Center
-      Center of the selected keyframes.
-   2D Cursor
-      Center of the *2D Cursor*. *Playhead* + *Cursor*.
-   Individual Centers
-      Rotate the selected keyframe *Bézier* handles.
+   :Bounding Box Center: Center of the selected keyframes.
+   :2D Cursor: Center of the *2D Cursor*. *Playhead* + *Cursor*.
+   :Individual Centers: Rotate the selected keyframe *Bézier* handles.
 
-Create Ghost Curves (framed F-Curve icon)
-   Creates a picture with the current shape of the curves.
+.. _bpy.types.ToolSettings.use_snap_anim:
+
+Snap
+   Activates automatic snapping when you moving keys.
+
+   .. _bpy.types.ToolSettings.snap_anim_element:
+
+   Snap To
+      Type of element to snap to.
+
+      :Frame: Snap to frame.
+      :Second: Snap to seconds.
+      :Nearest Marker: Snap to nearest :doc:`Marker </animation/markers>`.
+
+   .. _bpy.types.ToolSettings.use_snap_time_absolute:
+
+   Absolute Time Snap
+      Absolute time alignment when transforming keyframes
+
+Proportional Editing :kbd:`O`
+   See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
 
 
 Sidebar Region

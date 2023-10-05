@@ -53,14 +53,14 @@ Properties
 Distribution
    Microfacet distribution to use.
 
-   :GGX: GGX microfacet distribution.
-   :Multiple-scattering GGX: :guilabel:`Cycles Only`
-      Takes multiple bounce (scattering) events between microfacets into account.
-      This gives a more energy conserving results, which would otherwise be visible as excessive darkening.
    :Beckmann: :guilabel:`Cycles Only`
       Beckmann microfacet distribution.
+   :GGX: GGX microfacet distribution.
    :Ashikhmin-Shirley: :guilabel:`Cycles Only`
       Ashikhmin-Shirley microfacet distribution.
+   :Multiscatter GGX: :guilabel:`Cycles Only`
+      GGX with additional correction to account for multiple scattering,
+      preserve energy and prevent unexpected darkening at high roughness.
 
 
 Outputs

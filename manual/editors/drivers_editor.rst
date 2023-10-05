@@ -98,8 +98,8 @@ Filter (funnel icon)
       This option may affect the playback speed for heavy scenes.
 
 
-Curve Controls
---------------
+Transform Controls
+------------------
 
 .. figure:: /images/editors_graph-editor_introduction_header-edit.png
    :width: 250px
@@ -109,22 +109,22 @@ Curve Controls
 Pivot Point
    Pivot point for rotation.
 
-   Bounding Box Center
-      Center of the selected curve handles.
-   2D Cursor
-      Center of the *2D Cursor*. *Playhead* + *Cursor*.
-   Individual Centers
-      Rotate the selected curve handles.
+   :Bounding Box Center: Center of the selected curve handles.
+   :2D Cursor: Center of the *2D Cursor*. *Playhead* + *Cursor*.
+   :Individual Centers: Rotate the selected curve handles.
 
-Auto Snap
-   Auto snap the curve handles when editing.
+Snap
+   Activates automatic snapping when you moving keys.
 
-   - No Auto-Snap
-   - Frame Step
-   - Second Step
-   - Nearest Frame
-   - Nearest Second
-   - Nearest Marker
+   Snap To
+      Type of element to snap to.
+
+      :Frame: Snap to frame.
+      :Second: Snap to seconds.
+      :Nearest Marker: Snap to nearest :doc:`Marker </animation/markers>`.
+
+   Absolute Time Snap
+      Absolute time alignment when transforming keyframes
 
 Proportional Editing :kbd:`O`
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
