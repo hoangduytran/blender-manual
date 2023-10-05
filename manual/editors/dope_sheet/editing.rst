@@ -6,21 +6,23 @@ Editing
 Control
 =======
 
-.. _bpy.types.SpaceDopeSheetEditor.auto_snap:
-
-Auto Snapping
--------------
+Snap
+----
 
 Activates automatic snapping when you moving keys.
 
-:Frame Step: Snap to 1.0 frame intervals.
-:Second Step: Snap to 1.0 second intervals.
-:Nearest Frame: Snap to actual frames (NLA-action time).
-:Nearest Second: Snap to actual seconds (NLA-action time).
-:Nearest Marker: Snap to nearest marker.
+Snap To
+   Type of element to snap to.
+
+   :Frame: Snap to frame.
+   :Second: Snap to seconds.
+   :Nearest Marker: Snap to nearest :doc:`Marker </animation/markers>`.
+
+Absolute Time Snap
+   Absolute time alignment when transforming keyframes
 
 
 Proportional Editing
 --------------------
 
-Todo.
+See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.

@@ -113,3 +113,20 @@ Add Track Above Selected
 Include Selected Objects
    Let the selected objects appear in the NLA Editor. This is done by adding
    an empty animation data object to the selected object.
+
+
+Transform Controls
+------------------
+
+Snap
+   Activates automatic snapping when you moving keys.
+
+   Snap To
+      Type of element to snap to.
+
+      :Frame: Snap to frame.
+      :Second: Snap to seconds.
+      :Nearest Marker: Snap to nearest :doc:`Marker </animation/markers>`.
+
+   Absolute Time Snap
+      Absolute time alignment when transforming keyframes
