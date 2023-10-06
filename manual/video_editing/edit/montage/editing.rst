@@ -657,7 +657,7 @@ Removing Retiming Keys
 
    :Menu:      :menuselection:`Strip --> Retiming --> Delete Retiming Keys`
 
-Retiming key can be deleted by selecting and pressing :kbd:`Del` or :kbd:`X`. When handle is deleted, strip size will
+Retiming key can be deleted by selecting and pressing :kbd:`Delete` or :kbd:`X`. When handle is deleted, strip size will
 not change, therefore speed will change to average between 2 retimed segments.
 
 .. hint::

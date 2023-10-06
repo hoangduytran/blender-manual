@@ -29,7 +29,7 @@ assigned to. Press the eye icon to show or hide the entire bone collection.
 Press the X icon to remove the bone from that particular collection.
 
 To assign the bone to other bone collections, either use the :kbd:`M` or
-:kbd:`Shift+M` shortcuts (see :ref:`Moving Bones Between Collections
+:kbd:`Shift-M` shortcuts (see :ref:`Moving Bones Between Collections
 <moving_bones_between_collections>`) or go to the :ref:`Armature properties
 panel <bpy.types.BoneCollection>`.
 

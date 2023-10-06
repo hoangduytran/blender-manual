@@ -87,7 +87,7 @@ Bone Collections
    to that collection.
 
    Available as :menuselection:`Pose --> Bone Collections` (*Pose Mode*)
-   :menuselection:`Armature --> Bone Collections` (*Edit Mode*), and :kbd:`Shift+M` (either mode).
+   :menuselection:`Armature --> Bone Collections` (*Edit Mode*), and :kbd:`Shift-M` (either mode).
 
 .. note::
 
