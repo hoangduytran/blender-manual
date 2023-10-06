@@ -549,9 +549,10 @@ Time Offset
 
    :Menu:      :menuselection:`Key --> Blend --> Time Offset`
 
-This operator shifts the value of the keys in time, while keeping the actual key positions in the same place.
-It supports wrapping, so when offsetting beyond the range of the F-Curve it will take values from the other end, but offset in y-value so there is no jump.
-This works best with dense key data. Gaps in the keyframe data might cause data to get lost if it is shifted into the gaps.
+This operator shifts the value of the keys in time, while keeping the actual key positions in the same place. It
+supports wrapping, so when offsetting beyond the range of the F-Curve it will take values from the other end, but
+offset in y-value so there is no jump. This works best with dense key data. Gaps in the keyframe data might cause data
+to get lost if it is shifted into the gaps.
 
 Frame Offset
    How far in frames to offset the animation.

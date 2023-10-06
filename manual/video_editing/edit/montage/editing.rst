@@ -620,8 +620,9 @@ added to strips where any key is selected.
 Selecting Retiming Keys
 -----------------------
 
-Retiming keys are always shown on strip as inactive by default. To select them, a strip property must be enabled.
-This can be done from retiming menu, side panel or by pressing :kbd:`Ctrl-R`. After this is done, retiming keys can be selected.
+Retiming keys are always shown on strip as inactive by default. To select them, a strip property must be enabled. This
+can be done from retiming menu, side panel or by pressing :kbd:`Ctrl-R`. After this is done, retiming keys can be
+selected.
 
 Multiple keys can be selected at once with box selection. Box select will select keys, only if a key is already 
 selected. Otherwise it will select strips only.
@@ -657,8 +658,8 @@ Removing Retiming Keys
 
    :Menu:      :menuselection:`Strip --> Retiming --> Delete Retiming Keys`
 
-Retiming key can be deleted by selecting and pressing :kbd:`Delete` or :kbd:`X`. When handle is deleted, strip size will
-not change, therefore speed will change to average between 2 retimed segments.
+Retiming key can be deleted by selecting and pressing :kbd:`Delete` or :kbd:`X`. When handle is deleted, strip size
+will not change, therefore speed will change to average between 2 retimed segments.
 
 .. hint::
 

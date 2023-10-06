@@ -120,8 +120,16 @@ in the modifier's UI.
 Geometry Randomization
 ======================
 
-Many nodes don't guarantee the order of elements in which they output things. For example, the order of edges coming out of the `Triangulate` node is deterministic but not well defined. The order may change between Blender versions. Therefor, if node setups depend on a specific order, they may break when the Blender implementation changes. Changing the order can often be necessary in order to fix bugs or improve performance.
+Many nodes don't guarantee the order of elements in which they output things. For example, the order of edges coming
+out of the `Triangulate` node is deterministic but not well defined. The order may change between Blender versions.
+Therefor, if node setups depend on a specific order, they may break when the Blender implementation changes. Changing
+the order can often be necessary in order to fix bugs or improve performance.
 
-"Geometry randomization" can be temporarily enabled to see if a .blend file depends on the indices in unstable ways. When enabled, various internal algorithms shuffle the result geometry elements so that any dependence on it would not work anymore. When building setups that are supposed to last a long time, it is recommended to check if they still work with randomization enabled.
+"Geometry randomization" can be temporarily enabled to see if a .blend file depends on the indices in unstable ways.
+When enabled, various internal algorithms shuffle the result geometry elements so that any dependence on it would not
+work anymore. When building setups that are supposed to last a long time, it is recommended to check if they still
+work with randomization enabled.
 
-To enable it, first enable `Developer Extras` in the :doc:`preferences </editors/preferences/interface>`. Then :doc:`search </interface/controls/templates/operator_search>` for `Set Geometry Randomization`. The popup allows enabling and disabling the randomization.
+To enable it, first enable `Developer Extras` in the :doc:`preferences </editors/preferences/interface>`. Then
+:doc:`search </interface/controls/templates/operator_search>` for `Set Geometry Randomization`. The popup allows
+enabling and disabling the randomization.

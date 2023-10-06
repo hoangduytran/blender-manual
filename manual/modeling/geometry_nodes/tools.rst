@@ -23,18 +23,19 @@ them as Assets if they want to share them.
 
 .. note::
 
-   The :doc:`Inspection </modeling/geometry_nodes/inspection>` features are not supported on this context: Viewer Node and Socket Inspection.
+   The :doc:`Inspection </modeling/geometry_nodes/inspection>` features are not supported on this context: Viewer Node
+   and Socket Inspection.
 
 Asset
 =====
 
-For a node group to be shared as a tool, it has to be an :doc:`Asset </editors/asset_browser>` first. The asset catalog is used
-to determine on which menus the node group will show, similar to the regular node group assets.
+For a node group to be shared as a tool, it has to be an :doc:`Asset </editors/asset_browser>` first. The asset
+catalog is used to determine on which menus the node group will show, similar to the regular node group assets.
 
 The asset options need to be set on the :doc:`Asset Browser </editors/asset_browser>`.
 
-The catalog is used to determined in which menu the tool is available. Assets that have no catalog assigned to them, or local tools
-are exposed in the Unassigned menu.
+The catalog is used to determined in which menu the tool is available. Assets that have no catalog assigned to them,
+or local tools are exposed in the Unassigned menu.
 
 Tool Settings
 =============

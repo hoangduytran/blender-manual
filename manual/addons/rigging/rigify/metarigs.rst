@@ -104,7 +104,8 @@ Using Rig Types (Advanced)
 For full control, you can use the Rigify Type panel of bone properties in Pose Mode to assign
 any Rigify sub-rig type to any bone, as well as change its options.
 
-For the list of available sub-rig types and their options, see the :doc:`Rig Types </addons/rigging/rigify/rig_types/index>` page.
+For the list of available sub-rig types and their options, see the
+:doc:`Rig Types </addons/rigging/rigify/rig_types/index>` page.
 
 At the top of the panel you can find a field specifying the rig type for the active bone. The drop-down list
 can be optionally filtered by the :doc:`Feature Set </addons/rigging/rigify/feature_sets>` it belongs to.
@@ -139,7 +140,8 @@ The exact set depends on the sub-rig and the specific generated bone, and the su
 even if it copies others of its subset, but there are certain common patterns:
 
 Parenting Settings
-   This subset consists of the parent ORG bone, Use Connect, Use Inherit Rotation, Use Local Location, and Inherit Scale.
+   This subset consists of the parent ORG bone, Use Connect, Use Inherit Rotation, Use Local Location, and Inherit
+   Scale.
 
    It is usually copied to deform bones, FK controls, and in other cases where the sub-rig doesn't have a reason
    to completely override them.
@@ -264,7 +266,8 @@ Add Selection Set
 
 UI Row
   If nonzero, specifies which row of the :ref:`Rig Layers <rigify.rig_ui_template.RigLayers>` panel should contain the
-  button controlling the visibility of this collection. When zero, no button is generated, and the collection is hidden.
+  button controlling the visibility of this collection. When zero, no button is generated, and the collection is
+  hidden.
 
 UI Title
   This field can be used to override the title used on the UI button to be distinct from the true collection name.
@@ -299,8 +302,9 @@ button to unassign the collection from the UI.
 For any collections not assigned to the UI, their select buttons are displayed in a separate section at the bottom
 of the sub-panel.
 
-The ``Root`` collection will be added and/or assigned a UI button automatically if necessary when the rig is generated.
-If desired, it is possible to manually assign UI buttons to the internal ``ORG``, ``DEF`` and ``MCH`` collections.
+The ``Root`` collection will be added and/or assigned a UI button automatically if necessary when the rig is
+generated. If desired, it is possible to manually assign UI buttons to the internal ``ORG``, ``DEF`` and ``MCH``
+collections.
 
 .. tip::
    Blank rows appear much thinner in the final interface, since they don't have to contain editing buttons, and can be

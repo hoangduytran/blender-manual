@@ -52,10 +52,10 @@ Compositing Nodes
 -----------------
 
 Setup Corner Pin
-   Add a compositing setup of the Image Texture, Scale, and :doc:`Corner Pin </compositing/types/transform/corner_pin>`
-   nodes to inject a warped view of the image into the compositor output. The add-on adds drivers to
-   the corner values of the Corner Pin node so that transforms of the plane and camera drive them.
-   Make sure to have an active camera in the scene before the import.
+   Add a compositing setup of the Image Texture, Scale, and 
+   :doc:`Corner Pin </compositing/types/transform/corner_pin>` nodes to inject a warped view of the image into the
+   compositor output. The add-on adds drivers to the corner values of the Corner Pin node so that transforms of the
+   plane and camera drive them. Make sure to have an active camera in the scene before the import.
 
 .. note::
 

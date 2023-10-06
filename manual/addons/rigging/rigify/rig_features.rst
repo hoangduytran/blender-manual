@@ -80,8 +80,8 @@ Limb Master
 Many limb-like sub-rigs have a gear-shaped bone at their base.
 
 This bone can in some cases be used to transform the whole sub-rig as a rigid unit, and is also used as a container
-for its custom properties that are displayed in the *Rig Main Properties* panel. If you are looking in the Graph editor
-for the animated values of the properties, this is most likely the bone to look at.
+for its custom properties that are displayed in the *Rig Main Properties* panel. If you are looking in the Graph
+editor for the animated values of the properties, this is most likely the bone to look at.
 
 As an exception, if multiple controls of the sub-rig need their own copy of conceptually the same property,
 it may be placed on those controls directly instead.
