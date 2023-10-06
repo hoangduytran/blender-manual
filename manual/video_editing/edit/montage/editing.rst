@@ -580,69 +580,121 @@ To Current Frame
 
 .. _bpy.types.SequencerToolSettings.overlap_mode:
 
-Retiming Tool
-=============
+.. _sequencer-editing-retiming:
 
-.. reference::
+Retiming
+========
 
-   :Tool:      :menuselection:`Toolbar --> Retime`
 .. figure:: /images/video-editing-retiming.png
 
-Strips can be sped up or, slowed down using retiming tool. When tool is activated, retiming controls can be used on
-active strip.
-
-.. note::
-
-   Retiming tool will not work with effect strips.
-
-Adding Retiming Handles
------------------------
-
-When tool is activated, retiming handle is added at the end of the strip. This handle is not visible, but can be moved
-in a way similar to resizing the strip. Retiming handles are added by clicking on + button displayed on the strip next
-to current frame. This button is only visible when current frame intersects the strip.
-
-Moving Retiming Handles
------------------------
-
-Retiming handle can be moved by dragging it with mouse. The handle is mapped to particular frame of strip content, so
-moving handle effectively means moving a frame to new position. When handle is moved, all remaining handles to the
-right will be moved by same amount. Handels can not be moved past each other or start of the strip.
+Strips can be sped up or, slowed down by adding and moving retiming keys. Retiming controls can be activated for
+individual strips, after which keys can be selected and moved.
 
 .. hint::
 
-   Speed can be set by clicking on speed label and inputting new value.
+   To quickly change selected strip speed, press :kbd:`R` and enter desired speed.
 
 .. note::
 
-   Only strip content is retimed, existing animation is not handled by the tool
+   Effect strips can not be retimed.
 
-Removing Retiming Handles
--------------------------
 
-Handle can be deleted by clicking on triangle. When handle is deleted, strip size will not change and speed will
-change to average between 2 affected sections.
+.. _bpy.ops.sequencer.retiming_key_add:
 
-Retiming split strips
----------------------
+Adding Retiming Keys
+--------------------
 
-When strip is split, retming handle is created on both strip edges. If split happens on frame where there already is
-retiming handle, it is reused, so existing retiming is not affected. These retiming handles will be invisible and
-handle on left strip edge can not be moved.
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Retiming --> Add Retiming Key`
+
+Retiming key can be added to selected strips from retiming menu, or by pressing :kbd:`I` and choosing Add Retiming
+Key option. This adds a key to current frame. This operation will also create keys at strip start and end point,
+since these keys must be always present.
+
+When keys are selected, strips are deselected, but it is still possible to add new keys. In this case keys will be 
+added to strips where any key is selected.
+
+.. _bpy.ops.sequencer.retiming_show:
+
+Selecting Retiming Keys
+-----------------------
+
+Retiming keys are always shown on strip as inactive by default. To select them, a strip property must be enabled.
+This can be done from retiming menu, side panel or by pressing :kbd:`Ctrl-R`. After this is done, retiming keys can be selected.
+
+Multiple keys can be selected at once with box selection. Box select will select keys, only if a key is already 
+selected. Otherwise it will select strips only.
+
+.. _bpy.ops.sequencer.retiming_segment_speed_set:
+
+Moving Retiming Keys
+--------------------
+
+Retiming key can be moved by dragging it with mouse, or by pressing :kbd:`G`. The key is mapped to particular frame 
+of strip content, so moving it effectively means moving a frame to a new position and therefore stretching, or
+contracting time flow.
+
+When a key is moved, this does not affect position of other keys inside of the strip. If strip has more keys inside,
+multiple keys have to be selected, if only 1 segment has to be retimed. However if there are retiming keys outside
+of strip boundary, these will be moved along with first or last key in strip in order to preserve 
+existing retiming, that is not visible.
+
+.. hint::
+
+   Speed can be set by clicking on retiming key and pressing :kbd:`R` or using context menu.
+
+.. note::
+
+   Only strip content is retimed, existing animation is not handled by the tool.
+
+.. _bpy.ops.sequencer.retiming_reset:
+
+Removing Retiming Keys
+----------------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Retiming --> Delete Retiming Keys`
+
+Retiming key can be deleted by selecting and pressing :kbd:`Del` or :kbd:`X`. When handle is deleted, strip size will
+not change, therefore speed will change to average between 2 retimed segments.
+
+.. hint::
+
+   You can quickly revert back to original strip by resetting retiming from strip retiming menu.
+
+.. note::
+
+   When transition key is removed, it will re-create simple retiming key from which transition was created.
+
+
+.. _bpy.ops.sequencer.retiming_transition_add:
 
 Smooth Transitions
 ------------------
 
-It is possible to create smooth transition from one speed to another speed. This can be done by holding shift key and
-dragging handle at interface of 2 speeds. This will create 2 handles, that are linked and always move in opposite
-direction. When either of these handles is removed, this will restore strip to state before transition was created.
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Retiming --> Add Speed Transition`
+
+It is possible to create smooth transition from one speed to another speed. This can be done by selecting retiming
+key between 2 segments of different speeds, and choosing Add Speed Transition either from strip retiming menu or
+context menu. This will create 2 keys, that are linked and always move in opposite direction. if both keys are moved 
+at once, this changes where transition starts and ends.
+
+.. _bpy.ops.sequencer.retiming_freeze_frame_add:
 
 Freeze Frames
 -------------
 
-Freeze frame can be created by adding retiming handle to frame you want to freeze. Then while holding ctrl key, drag
-the handle.
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Retiming --> Add Freeze Frame`
+
+Freeze frame is used to stop strip playback at particular frame for any duration. Freeze frame can be added from
+strip retiming menu or context menu. 
 
 .. note::
 
-   It is not possible to make smooth transition into freeze frame
+   It is not possible to make smooth transition into or from freeze frame.

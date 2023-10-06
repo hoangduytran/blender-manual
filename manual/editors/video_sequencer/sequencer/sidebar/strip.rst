@@ -186,14 +186,15 @@ The Time panel is used to control source and timeline position of the strip.
 Lock (padlock icon)
    Prevents the strip from being moved (found in the panel header).
 
+.. _bpy.types.Sequence.show_retiming_keys:
+
+Show Retiming Keys
+   Toggle visibility and selectability of :ref:`Retiming keys <sequencer-editing-retiming>`.
+
 .. _bpy.types.Sequence.channel:
 
 Channel
    Changes the channel number, or row, of the strip.
-
-Speed Factor
-   Coefficient of playback speed.
-   This value will affect length of the strip, that will not be represented in the timeline.
 
 .. _bpy.types.Sequence.frame_start:
 
