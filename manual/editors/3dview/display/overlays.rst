@@ -42,23 +42,23 @@ Subdivision
 Text Info
    Show various bits of information in the top left corner of the viewport.
 
-   View Perspective
-      Name of the :doc:`View Perspective </editors/3dview/navigate/projections>`,
-      such as "Top Orthographic" or "User Perspective."
-   Playback Frame Rate (FPS)
-      Displays the Frames Per Second at which the animation is playing.
-      By default, Blender goes through every single frame, which may result in an FPS that's lower than
-      intended (and the animation playing slower than realtime); the FPS turns red in this case.
-      You can change this behavior in the Playback popover of the :doc:`Timeline </editors/timeline>`.
-   Object Info
-      Shows the current frame in parentheses, followed by the names of the selected
-      :doc:`Collection </scene_layout/collections/index>` and the :ref:`active object <object-active>`.
-      When applicable, also shows the selected :doc:`Shape Key </animation/shape_keys/introduction>`
-      and (in angle brackets) the :doc:`Marker </animation/markers>` on the current frame.
-      If the object has a keyframe on the current frame, the Object Info is displayed in yellow.
-   Grid Resolution
-      When the view is aligned to a world axis (see :doc:`/editors/3dview/navigate/viewpoint`),
-      the Text Info additionally shows the smallest distance between two parallel grid lines.
+   - **View Perspective** --
+     Name of the :doc:`View Perspective </editors/3dview/navigate/projections>`,
+     such as "Top Orthographic" or "User Perspective."
+   - **Playback Frame Rate (FPS)** --
+     Displays the Frames Per Second at which the animation is playing.
+     By default, Blender goes through every single frame, which may result in an FPS that's lower than
+     intended (and the animation playing slower than realtime); the FPS turns red in this case.
+     You can change this behavior in the Playback popover of the :doc:`Timeline </editors/timeline>`.
+   - **Object Info** --
+     Shows the current frame in parentheses, followed by the names of the selected
+     :doc:`Collection </scene_layout/collections/index>` and the :ref:`active object <object-active>`.
+     When applicable, also shows the selected :doc:`Shape Key </animation/shape_keys/introduction>`
+     and (in angle brackets) the :doc:`Marker </animation/markers>` on the current frame.
+     If the object has a keyframe on the current frame, the Object Info is displayed in yellow.
+   - **Grid Resolution** --
+     When the view is aligned to a world axis (see :doc:`/editors/3dview/navigate/viewpoint`),
+     the Text Info additionally shows the smallest distance between two parallel grid lines.
 
 Statistics
    Show information about the amount of objects and geometry.
@@ -66,8 +66,8 @@ Statistics
    For example, selecting a mesh gives info on the number of vertices, edges, and faces,
    while selecting a light shows the number of lights in the scene.
 
-   - Objects -- Number of the selected objects and the total count.
-   - Geometry -- Displays information about the current scene depending on the mode and object type.
+   - **Objects** -- Number of the selected objects and the total count.
+   - **Geometry** -- Displays information about the current scene depending on the mode and object type.
      This can be the number of vertices, faces, triangles, or bones.
 
 HDRI Preview
@@ -322,12 +322,9 @@ Zero Weights
    Display unreferenced and zero-weighted areas in black.
    This helps to identify areas with very low weights that have been painted onto.
 
-   None
-      Vertices are displayed in the usual way.
-   Active
-      Vertices are shown in black if they have no weight in the active vertex group.
-   All
-      Vertices are shown in black if they have no weight in any vertex group.
+   :None: Vertices are displayed in the usual way.
+   :Active: Vertices are shown in black if they have no weight in the active vertex group.
+   :All: Vertices are shown in black if they have no weight in any vertex group.
 
 Show Weight Contours
    Show contour lines formed by points with the same interpolated weight.
@@ -360,8 +357,7 @@ Bone Wireframe Opacity
    The maximum opacity used for bones drawn in the *Wireframe*
    :doc:`shading mode </editors/3dview/display/shading>`
    (or in *Solid* shading mode with X-Ray active).
-   This is helpful when it is necessary to reduce clutter and focus on
-   the mesh rather than bones.
+   This is helpful when it is necessary to reduce clutter and focus on the mesh rather than bones.
 
 
 .. _3dview-overlay-grease-pencil:
