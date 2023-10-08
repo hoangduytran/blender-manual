@@ -19,7 +19,7 @@ the corresponding parameters in this shader.
 This "Uber" shader includes multiple layers to create a wide variety of materials.
 The base layer is a user controlled mix between diffuse, metal,
 subsurface scattering and transmission.
-On top of that there is a specular layer, sheen layer and clearcoat layer.
+On top of that there is a specular layer, sheen layer, and coat layer.
 
 .. note::
 
@@ -115,13 +115,20 @@ Tangent
 Coat
 ----
 
-Clearcoat
-   Extra white specular layer on top of others.
-   This is useful for materials like car paint and the like.
-Clearcoat Roughness:
-   Roughness of clearcoat specular.
-Clearcoat Normal
-   Controls the normals of the *Clearcoat* layer.
+Coat
+   Controls the intensity of the coat layer, both the reflection and the tinting.
+   Typically should be 0 or 1 for physically-based materials.
+Coat Roughness:
+   Roughness of coat layer.
+Coat IOR
+   The :term:`Index of Refraction` of the coat layer.
+   This parameter affects the materials reflectivity as well as the falloff of the coat tinting.
+Coat Tint
+   Adds a colored tint to the coat layer by modeling volumetric absorption in the layer.
+   Saturation increases at shallower angles,
+   as the light travels farther through the medium (depending on the Coat IOR).
+Coat Normal
+   Controls the normals of the coat layer.
 
 
 Sheen
