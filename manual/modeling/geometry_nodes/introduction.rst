@@ -23,9 +23,8 @@ Geometry nodes can modify different types of geometry:
 * :doc:`Volumes </modeling/volumes/introduction>`
 * :doc:`Instances </modeling/geometry_nodes/instances>`
 
-
 The interface of the modifier is described in the
 :doc:`Modifier </modeling/modifiers/generate/geometry_nodes>` page.
 
-To expand Blender with node-group operators see the description in the 
-:doc:`Operators </modeling/geometry_nodes/operators>` page.
+To expand Blender with node-group operators see the description in the
+:doc:`/modeling/geometry_nodes/tools` page.
