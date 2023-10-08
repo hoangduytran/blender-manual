@@ -331,6 +331,7 @@ Clean Keyframes
    :Menu:      :menuselection:`Key --> Density --> Clean Keyframes`
    :Shortcut:  :kbd:`X`
 
+Removes redundant keys within the selection of keyframes. 
 *Clean Keyframes* resets the keyframe tangents on selected keyframes
 to their auto-clamped shape, if they have been modified.
 
@@ -342,6 +343,7 @@ to their auto-clamped shape, if they have been modified.
    (by selecting all bones and pressing :kbd:`I` for instance).
 
 Channels
+   Operate on selected channels and cleans them regardless of keyframe selection.
    Deletes the channel itself if it is only left with
    a single keyframe containing the default property value and
    it's not being used by any generative F-Curve modifiers or drivers.
