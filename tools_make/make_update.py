@@ -188,7 +188,7 @@ if __name__ == "__main__":
             manual_skip_msg = manual_update(args)
         if manual_skip_msg:
             manual_skip_msg = "Manual repository skipped: " + manual_skip_msg + "\n"
-    if not args.no_locale:
+    if not args.no_locale and os.path.exists(locale_dir):
         locale_skip_msg = git_update_skip(args, locale_dir)
         if not locale_skip_msg:
             locale_skip_msg = locale_update(args)
