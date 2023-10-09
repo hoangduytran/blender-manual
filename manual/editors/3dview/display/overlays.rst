@@ -14,15 +14,19 @@ Clicking the icon toggles all overlays in the 3D Viewport.
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 
-The available options depend on the mode that the 3D Viewport is in.
+Next to the Viewport Overlays popover could be a second popover.
+The availability of these options depend on the mode the 3D Viewport is in or what type of object is selected.
+These settings are described later on in this page.
 
 
-Object Mode
-===========
+
+General
+=======
 
 The following options are always present, independent of the current mode.
 Some of the overlays can be customized in the
 :doc:`Viewport Preferences </editors/preferences/viewport>`.
+
 
 Guides
 ------
@@ -160,8 +164,8 @@ Size
 
 .. _3dview-overlay-mesh_edit_mode:
 
-Mesh Edit Mode
-==============
+Mesh Edit Mode Overlays
+=======================
 
 The following options are available when in Mesh Edit Mode.
 
@@ -252,6 +256,7 @@ Face Angle
    The :doc:`Measure </editors/3dview/toolbar/measure>` tool for measuring
    arbitrary distances and angles.
 
+
 .. _mesh-display-normals:
 
 Normals
@@ -292,8 +297,8 @@ Face Marks
    Display Freestyle face marks.
 
 
-Sculpt Mode
-===========
+Sculpt Mode Overlays
+====================
 
 Mask
    Show :ref:`Masks <sculpt-mask-menu>` as overlays on an object. The opacity of the overlay can be adjusted.
@@ -302,8 +307,8 @@ Face Sets
    The opacity of the overlay can be adjusted.
 
 
-Vertex Paint
-============
+Vertex Paint Overlays
+=====================
 
 .. _bpy.types.View3DOverlay.vertex_paint_mode_opacity:
 
@@ -313,8 +318,8 @@ Show Wire
    Display mesh edges in white (unlike the *Wireframe* overlay which shows them in black).
 
 
-Weight Paint
-============
+Weight Paint Overlays
+=====================
 
 Opacity
    The opacity of the overlay.
@@ -336,8 +341,8 @@ Show Wire
    Display mesh edges in white (unlike the *Wireframe* overlay which shows them in black).
 
 
-Texture Paint
-=============
+Texture Paint Overlays
+======================
 
 .. _bpy.types.View3DOverlay.texture_paint_mode_opacity:
 
@@ -345,8 +350,8 @@ Stencil Mask Opacity
    Opacity of the :doc:`stencil mask </sculpt_paint/texture_paint/tool_settings/mask>` overlay.
 
 
-Bones
-=====
+Pose Mode Overlays
+==================
 
 Fade Geometry
    Show the bones on top and face other geometry to the back.
@@ -364,6 +369,8 @@ Bone Wireframe Opacity
 
 Grease Pencil
 =============
+
+These overlays are available when a :doc:`/grease_pencil/index` object is selected.
 
 Onion Skin
    Show ghosts of the keyframes before and after the current frame.
@@ -383,6 +390,7 @@ Fade Inactive Objects
 
    Fade Grease Pencil Objects
       Include or exclude Grease Pencil objects.
+
 Edit Lines
    Show edit lines in Edit Mode.
 Only in Multiframe
