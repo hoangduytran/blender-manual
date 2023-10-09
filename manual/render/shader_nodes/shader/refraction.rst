@@ -31,11 +31,8 @@ Properties
 ==========
 
 Distribution
-   Microfacet distribution to use.
-
-   :GGX: GGX microfacet distribution.
-   :Beckmann: :guilabel:`Cycles Only`
-      Beckmann microfacet distribution.
+   Microfacet distribution to use. *Sharp* results in perfectly sharp refractions,
+   while *Beckmann* and *GGX* can use the *Roughness* input for blurry refractions.
 
 
 Outputs

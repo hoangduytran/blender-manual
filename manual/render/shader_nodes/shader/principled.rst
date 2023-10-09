@@ -161,9 +161,10 @@ Distribution
 
    :GGX:
       A method that is faster than *Multiple-scattering GGX* but is less physically accurate.
-   :Multiscatter GGX: :guilabel:`Cycles Only`
-      GGX with additional correction to account for multiple scattering,
-      preserve energy and prevent unexpected darkening at high roughness.
+   :Multiscatter GGX:
+      Takes multiple scattering events between microfacets into account.
+      This gives more energy conserving results,
+      which would otherwise be visible as excessive darkening.
 
 Subsurface Method
    Rendering method to simulate subsurface scattering.

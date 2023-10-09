@@ -38,9 +38,9 @@ Distribution
    Microfacet distribution to use.
 
    :GGX: GGX microfacet distribution.
-   :Multiscatter GGX: :guilabel:`Cycles Only`
-      GGX with additional correction to account for multiple scattering,
-      preserve energy and prevent unexpected darkening at high roughness.
+   :Multiscatter GGX:
+      Takes multiple scattering events between microfacets into account.
+      This gives more energy conserving results, which would otherwise be visible as excessive darkening.
    :Beckmann: :guilabel:`Cycles Only`
       Beckmann microfacet distribution.
 
