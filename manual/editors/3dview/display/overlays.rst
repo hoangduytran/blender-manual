@@ -14,15 +14,19 @@ Clicking the icon toggles all overlays in the 3D Viewport.
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 
-The available options depend on the mode that the 3D Viewport is in.
+Next to the Viewport Overlays popover could be a second popover.
+The availability of these options depend on the mode the 3D Viewport is in or what type of object is selected.
+These settings are described later on in this page.
 
 
-Object Mode
-===========
+
+General
+=======
 
 The following options are always present, independent of the current mode.
 Some of the overlays can be customized in the
 :doc:`Viewport Preferences </editors/preferences/viewport>`.
+
 
 Guides
 ------
@@ -42,23 +46,23 @@ Subdivision
 Text Info
    Show various bits of information in the top left corner of the viewport.
 
-   View Perspective
-      Name of the :doc:`View Perspective </editors/3dview/navigate/projections>`,
-      such as "Top Orthographic" or "User Perspective."
-   Playback Frame Rate (FPS)
-      Displays the Frames Per Second at which the animation is playing.
-      By default, Blender goes through every single frame, which may result in an FPS that's lower than
-      intended (and the animation playing slower than realtime); the FPS turns red in this case.
-      You can change this behavior in the Playback popover of the :doc:`Timeline </editors/timeline>`.
-   Object Info
-      Shows the current frame in parentheses, followed by the names of the selected
-      :doc:`Collection </scene_layout/collections/index>` and the :ref:`active object <object-active>`.
-      When applicable, also shows the selected :doc:`Shape Key </animation/shape_keys/introduction>`
-      and (in angle brackets) the :doc:`Marker </animation/markers>` on the current frame.
-      If the object has a keyframe on the current frame, the Object Info is displayed in yellow.
-   Grid Resolution
-      When the view is aligned to a world axis (see :doc:`/editors/3dview/navigate/viewpoint`),
-      the Text Info additionally shows the smallest distance between two parallel grid lines.
+   - **View Perspective** --
+     Name of the :doc:`View Perspective </editors/3dview/navigate/projections>`,
+     such as "Top Orthographic" or "User Perspective."
+   - **Playback Frame Rate (FPS)** --
+     Displays the Frames Per Second at which the animation is playing.
+     By default, Blender goes through every single frame, which may result in an FPS that's lower than
+     intended (and the animation playing slower than realtime); the FPS turns red in this case.
+     You can change this behavior in the Playback popover of the :doc:`Timeline </editors/timeline>`.
+   - **Object Info** --
+     Shows the current frame in parentheses, followed by the names of the selected
+     :doc:`Collection </scene_layout/collections/index>` and the :ref:`active object <object-active>`.
+     When applicable, also shows the selected :doc:`Shape Key </animation/shape_keys/introduction>`
+     and (in angle brackets) the :doc:`Marker </animation/markers>` on the current frame.
+     If the object has a keyframe on the current frame, the Object Info is displayed in yellow.
+   - **Grid Resolution** --
+     When the view is aligned to a world axis (see :doc:`/editors/3dview/navigate/viewpoint`),
+     the Text Info additionally shows the smallest distance between two parallel grid lines.
 
 Statistics
    Show information about the amount of objects and geometry.
@@ -66,8 +70,8 @@ Statistics
    For example, selecting a mesh gives info on the number of vertices, edges, and faces,
    while selecting a light shows the number of lights in the scene.
 
-   - Objects -- Number of the selected objects and the total count.
-   - Geometry -- Displays information about the current scene depending on the mode and object type.
+   - **Objects** -- Number of the selected objects and the total count.
+   - **Geometry** -- Displays information about the current scene depending on the mode and object type.
      This can be the number of vertices, faces, triangles, or bones.
 
 HDRI Preview
@@ -160,8 +164,8 @@ Size
 
 .. _3dview-overlay-mesh_edit_mode:
 
-Mesh Edit Mode
-==============
+Mesh Edit Mode Overlays
+=======================
 
 The following options are available when in Mesh Edit Mode.
 
@@ -252,6 +256,7 @@ Face Angle
    The :doc:`Measure </editors/3dview/toolbar/measure>` tool for measuring
    arbitrary distances and angles.
 
+
 .. _mesh-display-normals:
 
 Normals
@@ -292,8 +297,8 @@ Face Marks
    Display Freestyle face marks.
 
 
-Sculpt Mode
-===========
+Sculpt Mode Overlays
+====================
 
 Mask
    Show :ref:`Masks <sculpt-mask-menu>` as overlays on an object. The opacity of the overlay can be adjusted.
@@ -302,8 +307,8 @@ Face Sets
    The opacity of the overlay can be adjusted.
 
 
-Vertex Paint
-============
+Vertex Paint Overlays
+=====================
 
 .. _bpy.types.View3DOverlay.vertex_paint_mode_opacity:
 
@@ -313,8 +318,8 @@ Show Wire
    Display mesh edges in white (unlike the *Wireframe* overlay which shows them in black).
 
 
-Weight Paint
-============
+Weight Paint Overlays
+=====================
 
 Opacity
    The opacity of the overlay.
@@ -322,12 +327,9 @@ Zero Weights
    Display unreferenced and zero-weighted areas in black.
    This helps to identify areas with very low weights that have been painted onto.
 
-   None
-      Vertices are displayed in the usual way.
-   Active
-      Vertices are shown in black if they have no weight in the active vertex group.
-   All
-      Vertices are shown in black if they have no weight in any vertex group.
+   :None: Vertices are displayed in the usual way.
+   :Active: Vertices are shown in black if they have no weight in the active vertex group.
+   :All: Vertices are shown in black if they have no weight in any vertex group.
 
 Show Weight Contours
    Show contour lines formed by points with the same interpolated weight.
@@ -339,8 +341,8 @@ Show Wire
    Display mesh edges in white (unlike the *Wireframe* overlay which shows them in black).
 
 
-Texture Paint
-=============
+Texture Paint Overlays
+======================
 
 .. _bpy.types.View3DOverlay.texture_paint_mode_opacity:
 
@@ -348,8 +350,8 @@ Stencil Mask Opacity
    Opacity of the :doc:`stencil mask </sculpt_paint/texture_paint/tool_settings/mask>` overlay.
 
 
-Bones
-=====
+Pose Mode Overlays
+==================
 
 Fade Geometry
    Show the bones on top and face other geometry to the back.
@@ -360,14 +362,15 @@ Bone Wireframe Opacity
    The maximum opacity used for bones drawn in the *Wireframe*
    :doc:`shading mode </editors/3dview/display/shading>`
    (or in *Solid* shading mode with X-Ray active).
-   This is helpful when it is necessary to reduce clutter and focus on
-   the mesh rather than bones.
+   This is helpful when it is necessary to reduce clutter and focus on the mesh rather than bones.
 
 
 .. _3dview-overlay-grease-pencil:
 
 Grease Pencil
 =============
+
+These overlays are available when a :doc:`/grease_pencil/index` object is selected.
 
 Onion Skin
    Show ghosts of the keyframes before and after the current frame.
@@ -387,6 +390,7 @@ Fade Inactive Objects
 
    Fade Grease Pencil Objects
       Include or exclude Grease Pencil objects.
+
 Edit Lines
    Show edit lines in Edit Mode.
 Only in Multiframe

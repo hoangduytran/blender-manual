@@ -1,6 +1,7 @@
 import bpy
 from dataclasses import dataclass
 from itertools import islice
+from pathlib import Path
 
 
 @dataclass
@@ -92,8 +93,9 @@ class MakeScreenshotsOperator(bpy.types.Operator):
         return {'RUNNING_MODAL'}
 
     def modal(self, context, event):
-        temp_path = f"/home/jacques/Downloads/temp.png"
-        filepath = f"/home/jacques/Downloads/node-types_{self.current_name}.png"
+        base_path = Path.home() / "Downloads" / "node_screenshots"
+        temp_path = str(base_path / "temp.png")
+        filepath = str(base_path / f"node-types_{self.current_name}.png")
         bpy.ops.screen.screenshot_area(filepath=temp_path)
 
         rect = node_region_rect(context.region, self.current_node)

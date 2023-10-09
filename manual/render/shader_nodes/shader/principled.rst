@@ -10,39 +10,49 @@ Principled BSDF
 
 The *Principled* :abbr:`BSDF (Bidirectional Scattering Distribution Function)`
 that combines multiple layers into a single easy to use node.
-It is based on the Disney principled model also known as the "PBR" shader,
-making it compatible with other software such as Pixar's Renderman\ :sup:`®`
-and Unreal Engine\ :sup:`®`. Image textures painted or baked from
-software like Substance Painter\ :sup:`®` may be directly linked to
-the corresponding parameters in this shader.
+It can model a wide variety of materials.
 
-This "Uber" shader includes multiple layers to create a wide variety of materials.
-The base layer is a user controlled mix between diffuse, metal,
-subsurface scattering and transmission.
-On top of that there is a specular layer, sheen layer and clearcoat layer.
+It is based on OpenPBR Surface shading model, and provides parameters
+compatible with similar PBR shaders found in other software,
+such as the Disney and Standard Surface models.
+Image textures painted or baked from software like Substance Painter
+may be directly linked to the corresponding parameters in this shader.
 
-.. note::
 
-   The emphasis on compatibility with other software means that it interprets
-   certain input parameters differently from older Blender nodes.
+Layers and Components
+=====================
 
+The base layer is a mix between metal, diffuse, subsurface, and transmission components.
+Most materials will use one of these components, though it is possible to smoothly mix
+between them.
+
+.. figure:: /images/render_shader-nodes_principled_layers.svg
+
+The metal component is opaque and only reflect lights. Diffuse and subsurface components
+have a specular layer. Diffuse is fully opaque, while subsurface also involves light
+scattering just below the surface. Both sit below a specular layer. The transmission
+component includes both specular reflection and refraction.
+
+On top of all base layers there is an optional glossy coat. And finally the sheen layer
+sits on top of all other layers, to add fuzz or dust.
+
+Light emission can also be added. This is below the coat and sheen layers, to model
+for example emissive displays with a coat or dust.
 
 Inputs
 ======
 
 Base Color
-   Diffuse or metal surface color.
+   Overall color of the material used for diffuse, subsurface, metal and transmission.
 Roughness
-   Specifies microfacet roughness of the surface for diffuse and specular reflection.
+   Specifies microfacet roughness of the surface for specular reflection and transmission.
 Metallic
-   Blends between a non-metallic and metallic material model.
+   Blends between a dielectric and metallic material model.
+   At 0.0 the material consists of a diffuse or transmissive base layer, with a specular reflection layer on top.
    A value of 1.0 gives a fully specular reflection tinted with the base color,
    without diffuse reflection or transmission.
-   At 0.0 the material consists of a diffuse or transmissive base layer, with a specular reflection layer on top.
 IOR
-   Index of refraction for transmission.
-Transmission
-   Mix between fully opaque surface at zero and fully glass like transmission at one.
+   Index of refraction for specular reflection and transmission.
 Alpha
    Controls the transparency of the surface, with 1.0 fully opaque.
    Usually linked to the Alpha output of an Image Texture node.
@@ -50,133 +60,148 @@ Normal
    Controls the normals of the base layers.
 
 
-Substance
----------
-
 Subsurface
-   Mix between diffuse and subsurface scattering.
-   Rather than being a simple mix between Diffuse and Subsurface Scattering,
-   it acts as a multiplier for the Subsurface Radius.
-Subsurface Radius
+----------
+
+Subsurface scattering is used to render materials such as skin, milk and wax.
+Light scatters below the surface to create a soft appearance.
+
+Method
+   Rendering method to simulate subsurface scattering.
+
+   :Christensen-Burley:
+      An approximation to physically-based volume scattering.
+      This method is less accurate than *Random Walk* however,
+      in some situations this method will resolve noise faster.
+   :Random Walk: :guilabel:`Cycles Only`
+      Provides accurate results for thin and curved objects.
+      Random Walk uses true volumetric scattering inside the mesh,
+      which means that it works best for closed meshes.
+      Overlapping faces and holes in the mesh can cause problems.
+   :Random Walk (Skin): :guilabel:`Cycles Only`
+      Random walk method optimized for skin rendering, with
+      radius automatically adjusted based on color and subsurface
+      entry direction using mix of diffuse and custom IOR. It
+      tends to retain greater surface detail and color.
+
+Weight
+   Blend between diffuse surface and subsurface scattering.
+   Typically should be zero or one (either fully diffuse or subsurface)
+Radius
    Average distance that light scatters below the surface.
    Higher radius gives a softer appearance, as light bleeds into shadows and through the object.
    The scattering distance is specified separately for the RGB channels,
    to render materials such as skin where red light scatters deeper.
    The X, Y and Z values are mapped to the R, G and B values, respectively.
-Subsurface Color
-   Subsurface scattering base color.
-Subsurface IOR :guilabel:`Cycles Only`
-   Index of refraction for *Subsurface Scattering*.
-Subsurface Anisotropy :guilabel:`Cycles Only`
-   Controls the directionality of subsurface scattering.
+Scale
+  Scale applied to the radius.
+IOR :guilabel:`Cycles Only`
+   Index of refraction used for rays that enter the subsurface component. This may be set to
+   a different value than the global IOR to simulate different layers of skin.
+Anisotropy :guilabel:`Cycles Only`
+   Directionanltiy of volume scattering within the subsurface medium. Zero scatters uniformly
+   in all directories, with higher values scattering more strongly forward.
+   For example skin has been measure to have an anisotropy of 0.8.
 
 
 Specular
 --------
 
-Specular
-   Amount of dielectric specular reflection. Specifies facing (along normal)
-   reflectivity in the most common 0 - 8% range.
-
-   .. hint::
-
-      To compute this value for a realistic material with a known index of
-      refraction, you may use this special case of the Fresnel formula:
-      :math:`specular = ((ior - 1)/(ior + 1))^2 / 0.08`
-
-      For example:
-
-      - water: ior = 1.33, specular = 0.25
-      - glass: ior = 1.5, specular = 0.5
-      - diamond: ior = 2.417, specular = 2.15
-
-      Since materials with reflectivity above 8% do exist, the field allows values above 1.
-
-Specular Tint
-   Tints the facing specular reflection using the base color, while glancing reflection remains white.
-
-   Normal dielectrics have colorless reflection, so this parameter is not technically physically correct
-   and is provided for faking the appearance of materials with complex surface structure.
-Anisotropic :guilabel:`Cycles Only`
-   Amount of anisotropy for specular reflection. Higher values give elongated highlights along the tangent direction;
-   negative values give highlights shaped perpendicular to the tangent direction.
-Anisotropic Rotation :guilabel:`Cycles Only`
-   Rotates the direction of anisotropy, with 1.0 going full circle.
-
-   .. hint::
-
-      Compared to the *Anisotropic BSDF* node, the direction of highlight elongation
-      is rotated by 90°. Add 0.25 to the value to correct.
-
-Tangent
-   Controls the tangent for the *Anisotropic* layer.
-
-
-Coat
-----
-
-Clearcoat
-   Extra white specular layer on top of others.
-   This is useful for materials like car paint and the like.
-Clearcoat Roughness:
-   Roughness of clearcoat specular.
-Clearcoat Normal
-   Controls the normals of the *Clearcoat* layer.
-
-
-Sheen
------
-
-Sheen
-   Amount of soft velvet like reflection near edges, for simulating materials such as cloth.
-Sheen Roughness
-   Controls the amount of color that is reflected back to the camera,
-   higher values reflect more color and can give a dusty appearance, while lower values look fuzzy and darker.
-Sheen Tint
-   The color of the sheen reflection.
-
-
-Emission
---------
-
-Emission
-   Light emission from the surface, like the Emission shader.
-Emission Strength
-   Strength of the emitted light. A value of 1.0 will ensure that the object
-   in the image has the exact same color as the *Emission Color*, i.e. make it 'shadeless'.
-
-
-Properties
-==========
+Controls for both the metallic component and specular layer on top of diffuse and subsurface.
 
 Distribution
    Microfacet distribution to use.
 
    :GGX:
       A method that is faster than *Multiple-scattering GGX* but is less physically accurate.
-   :Multiscatter GGX: :guilabel:`Cycles Only`
-      GGX with additional correction to account for multiple scattering,
-      preserve energy and prevent unexpected darkening at high roughness.
+   :Multiscatter GGX:
+      Takes multiple scattering events between microfacets into account.
+      This gives more energy conserving results,
+      which would otherwise be visible as excessive darkening.
 
-Subsurface Method
-   Rendering method to simulate subsurface scattering.
+IOR Level
+    Adjustment to the IOR to increase or decrease intensity of the specular layer.
+    0.5 means no adjustment, 0 removes all reflections, 1 doubles them at normal incidence.
 
-   .. note:: EEVEE does not support the *Random Walk* methods.
+    This input is designed for conveniently texturing the IOR and amount of specular
+    reflection.
 
-   :Christensen-Burley:
-      An approximation to physically-based volume scattering.
-      This method is less accurate than *Random Walk* however,
-      in some situations this method will resolve noise faster.
-   :Random Walk (Fixed Radius):
-      Provides accurate results for thin and curved objects.
-      Random Walk uses true volumetric scattering inside the mesh,
-      which means that it works best for closed meshes.
-      Overlapping faces and holes in the mesh can cause problems.
-   :Random Walk:
-      Behaves similarly to *Random Walk (Fixed Radius)* but modulates
-      the *Subsurface Radius* based on the *Color*, *Subsurface Anisotropy*, and *Subsurface IOR*.
-      This method thereby attempts to retain greater surface detail and color
-      than *Random Walk (Fixed Radius)*.
+Tint
+   Color tint for specular and metallic reflection.
+
+   For non-metallic tints provides artistic control over the color specular reflections at normal incidence,
+   while grazing reflections remain white. In reality non-metallic specular reflection is fully white.
+
+   For metallic materials tints the edges to simulate complex IOR as found in materials such as gold or copper.
+
+Anisotropic :guilabel:`Cycles Only`
+   Amount of anisotropy for specular reflection. Higher values give elongated highlights along the tangent direction;
+   negative values give highlights shaped perpendicular to the tangent direction.
+Anisotropic Rotation :guilabel:`Cycles Only`
+   Rotates the direction of anisotropy, with 1.0 going full circle.
+
+   Compared to the *Anisotropic BSDF* node, the direction of highlight elongation
+   is rotated by 90°. Add 0.25 to the value to correct.
+
+Tangent
+   Controls the tangent for the *Anisotropic* layer.
+
+
+Transmission
+------------
+
+Transmission is used to render materials like glass and liquids, where the surface both
+reflects light and transmits it into the interior of the object
+
+Weight
+   Mix between fully opaque surface at zero and fully transmissive at one.
+
+Coat
+----
+
+Coat on top of the materials, to simulate for example a clearcoat, lacquer or car paint.
+
+Weight
+   Controls the intensity of the coat layer, both the reflection and the tinting.
+   Typically should be zero or one for physically-based materials, but may be textured
+   to vary the amount of coating across the surface.
+Roughness
+	 Roughness of the coat layer.
+IOR
+   Index of refraction of the coat layer. Affects its reflectivity as well as the falloff of coat tinting.
+Tint
+   Adds a colored tint to the coat layer by modeling absorption in the layer.
+   Saturation increases at shallower angles, as the light travels farther
+   through the medium, depending on the IOR.
+Normal
+   Controls the normals of the *Coat* layer, for example to add a smooth coating on a rough surface.
+
+
+Sheen
+-----
+
+Sheen simulates very small fibers on the surface.
+For cloth this adds a soft velvet like reflection near edges.
+It can also be used to simulate dust on arbitrary materials.
+
+Weight
+   Controls in the intensity of the sheen layer.
+Roughness
+   Roughness of the sheen reflection.
+Tint
+   The color of the sheen reflection.
+
+
+Emission
+--------
+
+Light emission from the surface.
+
+Color
+   Color of light emission from the surface.
+Strength
+   Strength of the emitted light. A value of 1.0 will ensure that the object
+   in the image has the exact same color as the *Emission Color*, i.e. make it 'shadeless'.
 
 
 Outputs
@@ -184,13 +209,3 @@ Outputs
 
 BSDF
    Standard shader output.
-
-
-Examples
-========
-
-Below are some examples of how all the Principled BSDF's parameters interact with each other.
-
-.. figure:: /images/render_shader-nodes_shader_principled_example-1a.jpg
-.. figure:: /images/render_shader-nodes_shader_principled_example-2a.jpg
-.. figure:: /images/render_shader-nodes_shader_principled_example-2b.jpg

@@ -225,12 +225,14 @@ The region is divided into separate panels each containing a :ref:`UI List <ui-l
 Clicking on one of the directories will immediately navigate to that folder.
 
 
-.. _bpy.types.SpaceFileBrowser.system_folders:
+.. _bpy.types.SpaceFileBrowser.bookmarks:
 
-Volumes
-^^^^^^^
+Bookmarks
+^^^^^^^^^
 
-Contains all OS-defined available volumes, e.g. drives or network mounts.
+Contains folders that you want to be able to access often without having to navigate to them in the File Browser.
+To the right of that list are buttons to perform basic management actions on your bookmarks,
+e.g. add/remove an entry, move it up or down in the list, etc.
 
 
 .. _bpy.types.SpaceFileBrowser.system_bookmarks:
@@ -241,14 +243,12 @@ System
 Contains OS-defined common directories, like the main user folder...
 
 
-.. _bpy.types.SpaceFileBrowser.bookmarks:
+.. _bpy.types.SpaceFileBrowser.system_folders:
 
-Bookmarks
-^^^^^^^^^
+Volumes
+^^^^^^^
 
-Contains folders that you want to be able to access often without having to navigate to them in the File Browser.
-To the right of that list are buttons to perform basic management actions on your bookmarks,
-e.g. add/remove an entry, move it up or down in the list, etc.
+Contains all OS-defined available volumes, e.g. drives or network mounts.
 
 
 .. _bpy.types.SpaceFileBrowser.recent_folders:

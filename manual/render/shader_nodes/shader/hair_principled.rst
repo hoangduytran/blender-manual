@@ -24,6 +24,9 @@ easy-to-use shader for rendering hair and fur.
 Inputs
 ======
 
+Common
+------
+
 Color
    The RGB color of the strand. Only used in Direct coloring.
 
@@ -103,40 +106,6 @@ Tint
 
 Absorption Coefficient
    Attenuation coefficient :math:`\sigma`.
-Roughness
-   Specify how much the glints are smoothed in the direction of the hair shaft.
-   Too low values will smoothen the hair to the point of looking almost metallic,
-   making glints look like :term:`Fireflies`; while setting it too high will result in a Lambertian look.
-
-   .. figure:: /images/render_shader-nodes_shader_hair-principled_demo-roughness.jpg
-      :align: center
-
-      Roughness.
-
-Radial Roughness
-   Specify how much the glints are smoothed in the direction of the hair normal.
-   Too low values will concentrate the glint;
-   while setting it too high will spread the light across the width of the strand.
-
-   .. hint::
-
-      Mathematically, this parameter is mapped to the logistic distribution's
-      scale factor :math:`s` (section 4.1 of [CBTB16]_).
-
-.. figure:: /images/render_shader-nodes_shader_hair-principled_demo-radial-roughness.jpg
-   :align: center
-
-   Radial Roughness.
-
-Coat
-   Simulate a shiny coat of fur, by reducing the Roughness to the given factor
-   only for the first light bounce (diffuse).
-   Range :math:`[0, 1]` equivalent to a reduction of :math:`[0\%, 100\%]` of the original Roughness.
-
-   .. figure:: /images/render_shader-nodes_shader_hair-principled_demo-coat.jpg
-      :align: center
-
-      Coat.
 
 IOR
    Index of refraction (:term:`IOR`) defining how much the ray changes direction.
@@ -181,6 +150,76 @@ Random
    instanced with the value obtained from :menuselection:`Hair Info --> Random`.
 
 
+Chiang Model
+------------
+
+The Chiang model is based on a Gaussian distribution with separate roughness
+along and orthogonal to the hair.
+
+Roughness
+   Specify how much the glints are smoothed in the direction of the hair shaft.
+   Too low values will smoothen the hair to the point of looking almost metallic,
+   making glints look like :term:`Fireflies`; while setting it too high will result in a Lambertian look.
+
+   .. figure:: /images/render_shader-nodes_shader_hair-principled_demo-roughness.jpg
+      :align: center
+
+      Roughness.
+
+Radial Roughness
+   Specify how much the glints are smoothed in the direction of the hair normal.
+   Too low values will concentrate the glint;
+   while setting it too high will spread the light across the width of the strand.
+
+   .. hint::
+
+      Mathematically, this parameter is mapped to the logistic distribution's
+      scale factor :math:`s` (section 4.1 of [CBTB16]_).
+
+.. figure:: /images/render_shader-nodes_shader_hair-principled_demo-radial-roughness.jpg
+   :align: center
+
+   Radial Roughness.
+
+Coat
+   Simulate a shiny coat of fur, by reducing the Roughness to the given factor
+   only for the first light bounce (diffuse).
+   Range :math:`[0, 1]` equivalent to a reduction of :math:`[0\%, 100\%]` of the original Roughness.
+
+   .. figure:: /images/render_shader-nodes_shader_hair-principled_demo-coat.jpg
+      :align: center
+
+      Coat.
+
+
+Huang Model
+-----------
+
+The Huang model is based on microfacet based reflection and transmission,
+and supports elliptically shaped hair.
+
+Aspect Ratio
+   The ratio of the minor axis to the major axis of an elliptical cross-section.
+   Recommended values are 0.8~1 for Asian hair, 0.65~0.9 for Caucasian hair, 0.5~0.65 for
+   African hair. The major axis is aligned with the curve normal, which can be created
+   with geometry nodes, but is not supported in legacy particle hair.
+
+Roughness
+   Microfacet roughness for reflection and transmission.
+
+Reflection
+   Optional factor for modulating the first light bounce off the hair surface.
+   The color of this component is always white. Keep this 1.0 for physical correctness.
+Transmission
+   Optional factor for modulating the transmission component. Picks up the color of the
+   pigment inside the hair. Keep this 1.0 for physical correctness.
+Secondary Reflection
+   Optional factor for modulating the component which is transmitted into the hair,
+   reflected off the backside of the hair and then transmitted out of the hair. This
+   component is oriented approximately around the incoming direction, and picks up the
+   color of the pigment inside the hair. Keep this 1.0 for physical correctness
+
+ 
 Properties
 ==========
 
@@ -223,8 +262,7 @@ BSDF
 References
 ==========
 
-This shader is an implementation of the paper by Chiang et al. [CBTB16]_,
-which was used in the Disney film, "Zootopia"\ :sup:`®`.
+This shader is an implementation of the papers by Chiang et al. [CBTB16]_ and Huang et al. [HHH22]_.
 
 .. [CBTB16] Chiang, M. J. , Bitterli, B. , Tappan, C. and Burley, B. (2016),
    A Practical and Controllable Hair and Fur Model for Production Path Tracing. Computer Graphics Forum, 35: 275-283.
@@ -233,3 +271,9 @@ which was used in the Disney film, "Zootopia"\ :sup:`®`.
 .. [EFHLA11] d'Eon, E. , Francois, G. , Hill, M. , Letteri, J. and Aubry, J. (2011),
    An Energy‐Conserving Hair Reflectance Model. Computer Graphics Forum, 30: 1181-1187.
    `doi:10.1111/j.1467-8659.2011.01976.x <https://doi.org/10.1111/j.1467-8659.2011.01976.x>`__
+
+.. [HHH22] Huang W., Hullin M.B. Hanika J. (2022)
+   A Microfacet-based Hair Scattering Model. Computer Graphics Forum, 41: 79-91.
+   `doi:10.1111/cgf.14588 <https://doi.org/10.1111/cgf.14588>`__
+
+
