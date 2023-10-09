@@ -272,7 +272,7 @@ This shader is an implementation of the papers by Chiang et al. [CBTB16]_ and Hu
    An Energy‐Conserving Hair Reflectance Model. Computer Graphics Forum, 30: 1181-1187.
    `doi:10.1111/j.1467-8659.2011.01976.x <https://doi.org/10.1111/j.1467-8659.2011.01976.x>`__
 
-.. [HHH22] Huang W., Hullin M.B. Hanika J. (2022)
+.. [HHH22] Huang W., Hullin M.B. Hanika J. (2022),
    A Microfacet-based Hair Scattering Model. Computer Graphics Forum, 41: 79-91.
    `doi:10.1111/cgf.14588 <https://doi.org/10.1111/cgf.14588>`__
 
