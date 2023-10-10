@@ -28,7 +28,7 @@ use guiding in the simulation.
 
 .. _bpy.types.FluidDomainSettings.guide_alpha:
 
-Velocity Factor
+Weight
    Controls the lag of the guiding. A larger value (also known as the 'alpha' guiding value)
    results in a greater lag.
 

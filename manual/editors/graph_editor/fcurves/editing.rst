@@ -410,7 +410,7 @@ Blend to Default Value
 
 .. reference::
 
-   :Menu:      :menuselection:`Key --> Blend --> Blend to Neighbor`
+   :Menu:      :menuselection:`Key --> Blend --> Blend to Default Value`
 
 Transitions the current keyframe towards the property's default value.
 To use this operator, drag the mouse left or right to adjust the operator's *Blend* property.
@@ -514,7 +514,7 @@ Direction
 .. _bpy.ops.graph.scale_average:
 
 Scale Average
-=============
+-------------
 
 .. reference::
 
@@ -530,7 +530,7 @@ Factor
 .. _bpy.ops.graph.push_pull:
 
 Push Pull
-=========
+---------
 
 .. reference::
 
@@ -545,7 +545,7 @@ Factor
 .. _bpy.ops.graph.time_offset:
 
 Time Offset
-===========
+-----------
 
 .. reference::
 
