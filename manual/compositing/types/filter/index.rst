@@ -35,6 +35,7 @@ post-processing effect on the image.
 
    filter.rst
    glare.rst
+   kuwahara.rst
    pixelate.rst
    posterize.rst
    sun_beams.rst
