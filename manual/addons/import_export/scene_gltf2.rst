@@ -47,7 +47,6 @@ GPU Instances
 
 When the option is enable in Exporter, instances are exported using the ``EXT_mesh_gpu_instancing`` extension.
 There are some limitations, at export:
-
 - Instances must be meshes, and don't have any children themselves
 - Instances must all be children of the same object.
 - This extension doesn't manage material variation. That means that the generated file may include all instances with
@@ -875,6 +874,9 @@ Data - Scene Graph
 GPU Instances
    Export using ``EXT_mesh_gpu_instancing`` extensions.
 
+Flatten Object Hierarchy
+   Useful in case of non-decomposable TRS matrix. Only skined meshes will stay children of armature.
+
 Data - Mesh
 ^^^^^^^^^^^
 
@@ -945,6 +947,8 @@ Use Rest Position Armature
 Export Deformation Bones only
    Export Deformation bones only, not other bones.
    Animation for deformation bones are baked.
+Remove Armature Object
+   Remove Armature Objects if possible. If some armature(s) have multiple root bones, we can't remove them.
 Flatten Bone Hierarchy
    Useful in case of non-decomposable TRS matrix.
 
