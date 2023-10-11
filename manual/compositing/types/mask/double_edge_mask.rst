@@ -9,8 +9,6 @@ Double Edge Mask Node
    :align: right
    :alt: Double Edge Mask Node.
 
-:guilabel:`CPU Compositor Only`
-
 The *Double Edge Mask* node creates a gradient between two masks.
 
 
