@@ -145,7 +145,7 @@ Any asset from any blend-file contained in that directory
 
 Import Method
    Determines how data is managed when an asset is imported,
-   unless overridden by the :ref:`Asset Browser <bpy.types.FileAssetSelectParams.import_type>`.
+   unless overridden by the :ref:`Asset Browser <bpy.types.FileAssetSelectParams.import_method>`.
 
    :Link:
       *Same as* :menuselection:`File --> Link...`
