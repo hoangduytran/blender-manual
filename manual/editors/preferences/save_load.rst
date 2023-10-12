@@ -17,6 +17,36 @@ Save
       Asks for confirmation before closing or opening a new blend-file
       if the current file has unsaved changes.
 
+.. _prefs-save_load-backups:
+
+Save Versions
+   Number of versions created (for backup) when saving newer versions of a file.
+
+   This option keeps saved versions of your file in the same directory,
+   using extensions: ``.blend1``, ``.blend2``, etc.,
+   with the number increasing to the number of versions you specify.
+
+   Older files will be named with a higher number.
+   E.g. with the default setting of 2, you will have three versions of your file:
+
+   - ``*.blend`` -- last saved.
+   - ``*.blend1`` -- second last saved.
+   - ``*.blend2`` -- third last saved.
+
+Recent Files
+   Number of files displayed in :menuselection:`File --> Open Recent`.
+
+.. _prefs-auto-save:
+
+Auto Save
+   Enables :doc:`Auto Save </troubleshooting/recover>`.
+   Tells Blender to *automatically* save a backup copy of your work-in-progress files to the :ref:`temp-dir`.
+
+   Timer (Minutes)
+      This specifies the number of minutes to wait between each :doc:`Auto Save </troubleshooting/recover>`.
+      The default value of the Blender installation is 2 minutes.
+      The minimum is 1, and the Maximum is 60 (save every hour).
+
 File Preview Types
    Select how blend-file preview are generated.
    These previews are used both in the :doc:`File Browser </editors/file_browser>`
@@ -42,39 +72,6 @@ Text Files
    Tabs as Spaces
       Entering :kbd:`Tab` in the Text Editor adds the appropriate number of spaces
       instead of using characters.
-
-.. _prefs-save_load-backups:
-
-Save Versions
-   Number of versions created (for backup) when saving newer versions of a file.
-
-   This option keeps saved versions of your file in the same directory,
-   using extensions: ``.blend1``, ``.blend2``, etc.,
-   with the number increasing to the number of versions you specify.
-
-   Older files will be named with a higher number.
-   E.g. with the default setting of 2, you will have three versions of your file:
-
-   :``*.blend``: last saved.
-   :``*.blend1``: second last saved.
-   :``*.blend2``: third last saved.
-
-Recent Files
-   Number of files displayed in :menuselection:`File --> Open Recent`.
-
-
-.. _prefs-auto-save:
-
-Auto Save
----------
-
-Enables :doc:`Auto Save </troubleshooting/recover>`.
-Tells Blender to *automatically* save a backup copy of your work-in-progress files to the :ref:`temp-dir`.
-
-Timer
-   This specifies the number of minutes to wait between each :doc:`Auto Save </troubleshooting/recover>`.
-   The default value of the Blender installation is 2 minutes.
-   The minimum is 1, and the Maximum is 60 (save every hour).
 
 
 .. _bpy.ops.preferences.autoexec:

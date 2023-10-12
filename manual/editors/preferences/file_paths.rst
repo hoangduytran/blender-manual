@@ -35,96 +35,13 @@ Temporary Files
    (see :ref:`temp-dir` for details).
 
 
-.. _bpy.ops.preferences.script_directory_add:
-.. _bpy.ops.preferences.script_directory_remove:
-
-Script Directories
-==================
-
-Additional locations to search for Python scripts.
-
-Each path can be given a *Name* to signify to purpose of that script directory.
-
-By default, Blender looks in several directories (platform dependent) for scripts.
-By adding a user script path in the preferences an additional directory is used.
-This can be used to store your own scripts and add-ons independently of the current Blender version.
-
-You will need to create specific subfolders in this path which match the structure of the ``scripts``
-folder found in Blender's installation directory.
-
-The following subdirectories will be used when present:
-
-``startup/``
-   Modules in this folder will be imported on startup.
-``addons/``
-   Add-ons located here will be listed in the add-ons preferences.
-``modules/``
-   Modules in this folder can be imported by other scripts.
-``presets/``
-   Presets in this folder will be added to existing presets.
-
-.. note::
-
-   You have to restart Blender for all changes to the users scripts to take effect.
-
-
 Render
-======
+------
 
 Render Output
    Where rendered images/videos are saved.
 Render Cache
    The location where cached render images are stored.
-
-
-Applications
-============
-
-Image Editor
-   The path to an external program to use for image editing.
-
-.. _prefs-file_paths-animation_player:
-
-Animation Player
-   The program used for playing back rendered animations via
-   :ref:`View Animation <topbar-render-view_animation>`.
-
-   By default this is set to *Internal* which uses Blender's built-in
-   :ref:`animation player <bpy.ops.render.play_rendered_anim>`.
-
-   This has the advantage that all image formats supported by Blender can be played back
-   and no 3rd party application needs to be installed.
-
-
-.. _prefs-file_paths-text_editor:
-
-Text Editor
------------
-
-Program
-   Command to launch the text editor when using :ref:`Edit Externally <bpy.ops.text.jump_to_file_at_point>`,
-   either a full path or a command in ``$PATH``. Use the internal editor when left blank.
-
-Arguments
-   Defines the specific format of the arguments with which the text editor opens files.
-
-   The supported expansions are as follows:
-
-   - ``$filepath``: The absolute path of the file.
-   - ``$line``: The line to open at (Optional).
-   - ``$column``: The column to open from the beginning of the line (Optional).
-   - ``$line0`` & ``$column0`` similar to the above but they start at zero.
-
-   Example: ``-f $filepath -l $line -c $column``
-
-
-Development
-===========
-
-Only visible when :ref:`Developer Extras <prefs-interface-dev-extras>` are enabled.
-
-I18n Branches
-   The path to the ``/branches`` directory of your local SVN translation copy, to allow translating from the UI.
 
 
 Asset Libraries
@@ -181,6 +98,89 @@ Import Method
 
 Relative Path
    Use relative path when linking assets from this asset library.
+
+
+.. _bpy.ops.preferences.script_directory_add:
+.. _bpy.ops.preferences.script_directory_remove:
+
+Script Directories
+==================
+
+Additional locations to search for Python scripts.
+
+Each path can be given a *Name* to signify to purpose of that script directory.
+
+By default, Blender looks in several directories (platform dependent) for scripts.
+By adding a user script path in the preferences an additional directory is used.
+This can be used to store your own scripts and add-ons independently of the current Blender version.
+
+You will need to create specific subfolders in this path which match the structure of the ``scripts``
+folder found in Blender's installation directory.
+
+The following subdirectories will be used when present:
+
+``startup/``
+   Modules in this folder will be imported on startup.
+``addons/``
+   Add-ons located here will be listed in the add-ons preferences.
+``modules/``
+   Modules in this folder can be imported by other scripts.
+``presets/``
+   Presets in this folder will be added to existing presets.
+
+.. note::
+
+   You have to restart Blender for all changes to the users scripts to take effect.
+
+
+Applications
+============
+
+Image Editor
+   The path to an external program to use for image editing.
+
+.. _prefs-file_paths-animation_player:
+
+Animation Player
+   The program used for playing back rendered animations via
+   :ref:`View Animation <topbar-render-view_animation>`.
+
+   By default this is set to *Internal* which uses Blender's built-in
+   :ref:`animation player <bpy.ops.render.play_rendered_anim>`.
+
+   This has the advantage that all image formats supported by Blender can be played back
+   and no 3rd party application needs to be installed.
+
+
+.. _prefs-file_paths-text_editor:
+
+Text Editor
+-----------
+
+Program
+   Command to launch the text editor when using :ref:`Edit Externally <bpy.ops.text.jump_to_file_at_point>`,
+   either a full path or a command in ``$PATH``. Use the internal editor when left blank.
+
+Arguments
+   Defines the specific format of the arguments with which the text editor opens files.
+
+   The supported expansions are as follows:
+
+   - ``$filepath``: The absolute path of the file.
+   - ``$line``: The line to open at (Optional).
+   - ``$column``: The column to open from the beginning of the line (Optional).
+   - ``$line0`` & ``$column0`` similar to the above but they start at zero.
+
+   Example: ``-f $filepath -l $line -c $column``
+
+
+Development
+===========
+
+Only visible when :ref:`Developer Extras <prefs-interface-dev-extras>` are enabled.
+
+I18n Branches
+   The path to the ``/branches`` directory of your local SVN translation copy, to allow translating from the UI.
 
 
 Known Limitations

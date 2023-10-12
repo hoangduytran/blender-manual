@@ -49,10 +49,13 @@ Emulate 3 Button Mouse
       Some touchpads support three-finger tap for middle mouse button,
       which may be an alternative to using this option.
 
-   Modifier *(unsupported on Microsoft Windows)*
-      :kbd:`Alt`
+   Modifier
+      The modifier key to press to emulate the middle mouse keybindings.
+      This option is unsupported on Microsoft Windows.
+
+      :Alt:
          Use the :kbd:`Alt` key to emulate the middle mouse button.
-      :kbd:`OSKey`
+      :OSKey:
          Use the :kbd:`OSKey` to emulate the middle mouse button.
 
          This has the advantage that it doesn't conflict with existing :kbd:`Alt-MMB` shortcuts,
@@ -78,6 +81,8 @@ Release Confirms
    Dragging :kbd:`LMB` on an object will move it.
    To confirm this (and other) transform, an :kbd:`LMB` is necessary by default.
    When this option is activated, the release of :kbd:`LMB` acts as confirmation of the transform.
+Double Click Speed
+   The time in milliseconds to trigger a double click.
 Mouse Drag Threshold
    The number of pixels that a User Interface element has to be moved before it is recognized by Blender,
    values below this will be detected as click events.
