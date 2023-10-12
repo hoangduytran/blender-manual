@@ -196,7 +196,9 @@ Quit :kbd:`Ctrl-Q`
 Edit Menu
 ---------
 
-Undo/Redo/History
+Undo, Redo, Undo History
+   See :doc:`/interface/undo_redo`.
+Adjust Last Operation, Repeat Last, Repeat History
    See :doc:`/interface/undo_redo`.
 Menu Search
    Find a menu based on its name.
@@ -303,7 +305,7 @@ Save Screenshot (Editor)
 Help Menu
 ---------
 
-See :doc:`/getting_started/help`.
+See :ref:`help-menu`.
 
 
 Workspaces
