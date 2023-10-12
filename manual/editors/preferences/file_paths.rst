@@ -35,6 +35,71 @@ Temporary Files
    (see :ref:`temp-dir` for details).
 
 
+Render
+------
+
+Render Output
+   Where rendered images/videos are saved.
+Render Cache
+   The location where cached render images are stored.
+
+
+Asset Libraries
+===============
+
+Name and on-drive directory paths of asset libraries.
+To make Blender aware of an asset library, add it to this list.
+The name is for your reference only, and will appear in asset library selectors.
+The path should point to the location of the asset library.
+
+.. figure:: /images/asset_browser-asset_library_preferences.png
+
+   Name and Location of asset libraries in the Preferences.
+
+To create a new asset library, just create an empty directory and add it to the :ref:`ui-list-view`.
+Any asset from any blend-file contained in that directory
+(or subdirectories thereof) will appear in the :doc:`/editors/asset_browser`.
+
+Import Method
+   Determines how data is managed when an asset is imported,
+   unless overridden by the :ref:`Asset Browser <bpy.types.FileAssetSelectParams.import_method>`.
+
+   :Link:
+      *Same as* :menuselection:`File --> Link...`
+
+      The asset will be linked to the current blend-file, and thus be read-only.
+      Later changes to the asset file will be reflected in all files that link it in.
+   :Append:
+      *Same as* :menuselection:`File --> Append...`
+
+      All of the asset and all its dependencies will be appended to the current file.
+      Dragging a material into the scene three times will result in three independent copies.
+      Dragging an object into the scene three times will also result in three independent copies.
+
+      "Dependencies" in this case means everything the asset refers to.
+      For an object, this can be its mesh and materials, but also other objects
+      used by modifiers, constraints, or drivers.
+
+      Since the file now has its own copy of the asset, later changes to
+      the asset file will not be reflected in the file it's appended to.
+   :Append (Reuse Data):
+      *Specific to the Asset Browser*.
+
+      The first time an asset is used, it will be appended, including its dependencies,
+      just like described previously. However, Blender will keep track of where it originated,
+      and the next time the asset is used, as much data as possible will be reused.
+      Dragging a material into the scene three times will only load it once,
+      and just assign the same material three times.
+      Dragging an object into the scene three times will create three copies of the object,
+      but all copies will share their mesh data, materials, etc.
+
+      Since the file now has its own copy of the asset, later changes to
+      the asset file will not be reflected in the file it's appended to.
+
+Relative Path
+   Use relative path when linking assets from this asset library.
+
+
 .. _bpy.ops.preferences.script_directory_add:
 .. _bpy.ops.preferences.script_directory_remove:
 
@@ -66,15 +131,6 @@ The following subdirectories will be used when present:
 .. note::
 
    You have to restart Blender for all changes to the users scripts to take effect.
-
-
-Render
-======
-
-Render Output
-   Where rendered images/videos are saved.
-Render Cache
-   The location where cached render images are stored.
 
 
 Applications
@@ -125,62 +181,6 @@ Only visible when :ref:`Developer Extras <prefs-interface-dev-extras>` are enabl
 
 I18n Branches
    The path to the ``/branches`` directory of your local SVN translation copy, to allow translating from the UI.
-
-
-Asset Libraries
-===============
-
-Name and on-drive directory paths of asset libraries.
-To make Blender aware of an asset library, add it to this list.
-The name is for your reference only, and will appear in asset library selectors.
-The path should point to the location of the asset library.
-
-.. figure:: /images/asset_browser-asset_library_preferences.png
-
-   Name and Location of asset libraries in the Preferences.
-
-To create a new asset library, just create an empty directory and add it to the :ref:`ui-list-view`.
-Any asset from any blend-file contained in that directory
-(or subdirectories thereof) will appear in the :doc:`/editors/asset_browser`.
-
-Import Method
-   Determines how data is managed when an asset is imported,
-   unless overridden by the :ref:`Asset Browser <bpy.types.FileAssetSelectParams.import_type>`.
-
-   :Link:
-      *Same as* :menuselection:`File --> Link...`
-
-      The asset will be linked to the current blend-file, and thus be read-only.
-      Later changes to the asset file will be reflected in all files that link it in.
-   :Append:
-      *Same as* :menuselection:`File --> Append...`
-
-      All of the asset and all its dependencies will be appended to the current file.
-      Dragging a material into the scene three times will result in three independent copies.
-      Dragging an object into the scene three times will also result in three independent copies.
-
-      "Dependencies" in this case means everything the asset refers to.
-      For an object, this can be its mesh and materials, but also other objects
-      used by modifiers, constraints, or drivers.
-
-      Since the file now has its own copy of the asset, later changes to
-      the asset file will not be reflected in the file it's appended to.
-   :Append (Reuse Data):
-      *Specific to the Asset Browser*.
-
-      The first time an asset is used, it will be appended, including its dependencies,
-      just like described previously. However, Blender will keep track of where it originated,
-      and the next time the asset is used, as much data as possible will be reused.
-      Dragging a material into the scene three times will only load it once,
-      and just assign the same material three times.
-      Dragging an object into the scene three times will create three copies of the object,
-      but all copies will share their mesh data, materials, etc.
-
-      Since the file now has its own copy of the asset, later changes to
-      the asset file will not be reflected in the file it's appended to.
-
-Relative Path
-   Use relative path when linking assets from this asset library.
 
 
 Known Limitations

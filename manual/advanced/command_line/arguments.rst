@@ -306,9 +306,6 @@ Debug Options
 ``--debug-gpu-force-workarounds``
    Enable workarounds for typical GPU issues and disable all GPU extensions.
 
-``--debug-gpu-disable-ssbo``
-   Disable usage of shader storage buffer objects.
-
 ``--debug-gpu-renderdoc``
    Enable Renderdoc integration for GPU frame grabbing and debugging.
 

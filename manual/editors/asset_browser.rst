@@ -174,7 +174,7 @@ The use of pose assets is different, and is described in :doc:`/animation/armatu
 There are several things that can happen when an asset is used,
 depending on the following configuration of the Asset Browser:
 
-.. _bpy.types.FileAssetSelectParams.import_type:
+.. _bpy.types.FileAssetSelectParams.import_method:
 
 Import Method
    Determines how data is managed when an asset is imported.

@@ -75,22 +75,14 @@ The same links can also be found in the :ref:`splash`.
 
 :doc:`Manual </index>`
    This is a link to the Official Blender Manual (which you are now reading).
+`Release Notes <https://wiki.blender.org/wiki/Reference/Release_Notes/>`__
+   Link to the release notes for the current Blender version.
 `Tutorials <https://www.blender.org/support/tutorials>`__
    Multiple tutorials to help you learn to use Blender.
 `Support <https://www.blender.org/support>`__
    Links to various sites, providing both community and professional support.
-
-----
-
 `User Communities <https://www.blender.org/community/>`__
    Lists of many different community sites and support venues.
-`Developer Community <https://devtalk.blender.org>`__
-   Blender's developer forum.
-
-----
-
-`Python API Reference <https://docs.blender.org/api/current/>`__
-   Python application programming interface (API)
 
 ----
 

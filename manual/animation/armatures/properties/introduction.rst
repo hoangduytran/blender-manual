@@ -17,6 +17,8 @@ Pose
    :Mode:      All Modes
    :Panel:     :menuselection:`Armature --> Pose`
 
+.. _bpy.types.Armature.pose_position:
+
 Pose Position
    A radio button to switch between Pose Position and Rest Position.
 

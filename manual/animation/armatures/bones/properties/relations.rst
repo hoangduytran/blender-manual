@@ -17,23 +17,6 @@ Relations
 In this panel you can manage the relationship of this bone with its parent bone.
 It also shows the bone collections the bone is assigned to.
 
-.. _bpy.types.Bone.collections:
-.. _bpy.types.EditBone.collections:
-.. _bpy.types.PoseBone.collections:
-
-Bone Collections
-================
-
-This list shows the :term:`bone collections <Bone Collection>` the bone is
-assigned to. Press the eye icon to show or hide the entire bone collection.
-Press the X icon to remove the bone from that particular collection.
-
-To assign the bone to other bone collections, either use the :kbd:`M` or
-:kbd:`Shift-M` shortcuts (see :ref:`Moving Bones Between Collections
-<moving_bones_between_collections>`) or go to the :ref:`Armature properties
-panel <bpy.types.BoneCollection>`.
-
-
 
 Parenting
 =========
@@ -47,11 +30,6 @@ Parent
 
 Relative Parenting :guilabel:`Pose Mode Only`
    Changes how transformation of the bone is applied to its child Objects.
-
-.. _bpy.types.PoseBone.bone_group:
-
-Bone Group :guilabel:`Pose Mode Only`
-   To assign a selected bone to a given bone group use the *Bone Group* data ID.
 
 .. _bpy.types.EditBone.use_connect:
 
@@ -107,6 +85,12 @@ Inherit Rotation
 Inherit Scale
    Specifies which effects of parent scaling the bone inherits:
 
+   These inheriting behaviors propagate along the bones' hierarchy.
+   So when you scale down a bone, all its descendants are by default scaled down accordingly.
+   However, if you disable one bone's *Inherit Scale* or *Inherit Rotation*
+   property in this "family", this will break the scaling propagation,
+   i.e. this bone *and all its descendants* will no longer be affected when you scale one of its ancestors.
+
    :Full:
       The bone inherits all effects of parent scaling and shear.
    :Fix Shear:
@@ -128,50 +112,41 @@ Inherit Scale
 
       This choice replicates the behavior of the old Inherit Scale checkbox, and may be removed in a future release.
 
-These inheriting behaviors propagate along the bones' hierarchy.
-So when you scale down a bone, all its descendants are by default scaled down accordingly.
-However, if you disable one bone's *Inherit Scale* or *Inherit Rotation*
-property in this "family", this will break the scaling propagation,
-i.e. this bone *and all its descendants* will no longer be affected when you scale one of its ancestors.
+   .. tip::
 
-.. tip::
+      The various *Inherit Scale* options are provided as tools in avoiding shear that is caused
+      by non-uniform scaling combined with parenting and rotation. There is no obvious best way
+      to achieve that, so different options are useful for different situations.
 
-   The various *Inherit Scale* options are provided as tools in avoiding shear that is caused
-   by non-uniform scaling combined with parenting and rotation. There is no obvious best way
-   to achieve that, so different options are useful for different situations.
+      - **None** --
+        Useful for gaining full control over the scaling of the child in order
+        to e.g. manually overwrite it with constraints.
+      - **Average** --
+        Useful to block squash and stretch propagation between sub-rigs, while
+        allowing uniform changes in the size and volume to pass through.
+      - **Aligned** --
+        Can be used within bone chains, e.g. tentacles, in order to propagate
+        lengthwise scaling as lengthwise, and sideways as sideways, no matter
+        how the tentacle bends. Similar to using *None* with
+        :doc:`Copy Scale </animation/constraints/transform/copy_scale>` from parent.
+      - **Fix Shear** --
+        May be useful at the base of an appendage in order to reallocate squash and stretch
+        between axes based on the difference in rest pose orientations of the parent and child.
+        It behaves closest to *Full* while suppressing shear.
 
-   None
-      Useful for gaining full control over the scaling of the child in order
-      to e.g. manually overwrite it with constraints.
+   .. list-table:: Examples of transforming parented/connected bones with Inherit Rotation disabled.
 
-   Average
-      Useful to block squash and stretch propagation between sub-rigs, while
-      allowing uniform changes in the size and volume to pass through.
+      * - .. figure:: /images/animation_armatures_bones_properties_relations_inherit-rot-disabled.png
 
-   Aligned
-      Can be used within bone chains, e.g. tentacles, in order to propagate
-      lengthwise scaling as lengthwise, and sideways as sideways, no matter
-      how the tentacle bends. Similar to using *None* with
-      :doc:`Copy Scale </animation/constraints/transform/copy_scale>` from parent.
+             The yellow outlined Inherit Rotation disabled bone in the armature.
 
-   Fix Shear
-      May be useful at the base of an appendage in order to reallocate squash and stretch
-      between axes based on the difference in rest pose orientations of the parent and child.
-      It behaves closest to *Full* while suppressing shear.
+        - .. figure:: /images/animation_armatures_bones_properties_relations_inherit-rot-disabled-descendant.png
 
-.. list-table:: Examples of transforming parented/connected bones with Inherit Rotation disabled.
+             Rotation of a bone with an Inherit Rotation disabled bone among its descendants.
 
-   * - .. figure:: /images/animation_armatures_bones_properties_relations_inherit-rot-disabled.png
+        - .. figure:: /images/animation_armatures_bones_properties_relations_inherit-rot-disabled-scale.png
 
-          The yellow outlined Inherit Rotation disabled bone in the armature.
-
-     - .. figure:: /images/animation_armatures_bones_properties_relations_inherit-rot-disabled-descendant.png
-
-          Rotation of a bone with an Inherit Rotation disabled bone among its descendants.
-
-     - .. figure:: /images/animation_armatures_bones_properties_relations_inherit-rot-disabled-scale.png
-
-          Scaling of a bone with an Inherit Rotation disabled bone among its descendants.
+             Scaling of a bone with an Inherit Rotation disabled bone among its descendants.
 
 Connected bones have another specificity: they cannot be moved. Indeed,
 as their root must be at their parent's tip, if you do not move the parent,
@@ -216,3 +191,20 @@ which allows you to pose a whole chain just by moving its tip.
 
    This feature is somewhat extended/completed by
    the :doc:`pose library </animation/armatures/posing/editing/pose_library>`.
+
+
+.. _bpy.types.Bone.collections:
+.. _bpy.types.EditBone.collections:
+.. _bpy.types.PoseBone.collections:
+
+Bone Collections
+================
+
+This list shows the :term:`bone collections <Bone Collection>` the bone is
+assigned to. Press the eye icon to show or hide the entire bone collection.
+Press the X icon to remove the bone from that particular collection.
+
+To assign the bone to other bone collections, either use the :kbd:`M` or
+:kbd:`Shift-M` shortcuts (see :ref:`Moving Bones Between Collections
+<moving_bones_between_collections>`) or go to the :ref:`Armature properties
+panel <bpy.types.BoneCollection>`.

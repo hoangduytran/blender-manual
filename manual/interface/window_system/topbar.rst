@@ -196,7 +196,9 @@ Quit :kbd:`Ctrl-Q`
 Edit Menu
 ---------
 
-Undo/Redo/History
+Undo, Redo, Undo History
+   See :doc:`/interface/undo_redo`.
+Adjust Last Operation, Repeat Last, Repeat History
    See :doc:`/interface/undo_redo`.
 Menu Search
    Find a menu based on its name.
@@ -224,8 +226,8 @@ Lock Object Modes
       You may want to disable *Lock Object Modes* for example when weighting rigged objects
       or sculpting/painting where you intentionally want to switch between objects in different modes.
 
-Preferences
-   Open the Preferences window.
+Preferences :kbd:`Ctrl-Comma`
+   Open the :doc:`Preferences window </editors/preferences/index>`.
 
 
 .. _topbar-render:
@@ -303,7 +305,7 @@ Save Screenshot (Editor)
 Help Menu
 ---------
 
-See :doc:`/getting_started/help`.
+See :ref:`help-menu`.
 
 
 Workspaces

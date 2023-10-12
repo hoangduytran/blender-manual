@@ -10,7 +10,7 @@ Introduction
 .. reference::
 
    :Menu:      :menuselection:`Edit --> Preferences...`
-   :Shortcut:  :kbd:`F4`, :kbd:`P`
+   :Shortcut:  :kbd:`Ctrl-Comma`
 
 This chapter explains how to change Blender's default configuration with the *Preferences* editor.
 

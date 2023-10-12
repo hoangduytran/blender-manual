@@ -17,9 +17,11 @@ Text Info Overlay
    View Name
       Display the name and type of the current view in the top left corner of the 3D Viewport.
       For example: "User Perspective" or "Top Orthographic".
-   Playback Frame Rate (FPS)
-      Show the frames per second screen refresh rate while an animation is played back.
-      It appears in the top left of the 3D Viewport, displaying red if the frame rate set cannot be reached.
+
+Playback Frame Rate (FPS)
+   Show the frames per second screen refresh rate while an animation is played back.
+   It appears in the top left of the 3D Viewport, displaying red if the frame rate set cannot be reached.
+
    Frame Rate Samples
       Calculate the FPS displayed in the viewport based on an average of the current and previously displayed frames.
       A value of zero uses the number of frames in 1.0 second.
@@ -37,7 +39,7 @@ Gizmo Size
 HDRI Preview Size
    Diameter of the HDRI sphere overlay.
 
-3D Viewport Axis
+3D Viewport Axes
    :Interactive Navigation:
       Display the axis as an interactive gizmo.
       Click sets the viewport to display along this axis and dragging orbits the view.
@@ -52,9 +54,10 @@ HDRI Preview Size
 Size
    Diameter of the *3D Viewport Axis* widget.
 
-Fresnel Edit Mode
-   Enable a fresnel effect on edit mesh overlays.
-   It improves shape readability of very dense meshes, but increases eye fatigue when modeling lower poly.
+Fresnel
+   Edit Mode
+      Enable a fresnel effect on edit mesh overlays.
+      It improves shape readability of very dense meshes, but increases eye fatigue when modeling lower poly.
 
 
 .. _prefs-system-multisampling:

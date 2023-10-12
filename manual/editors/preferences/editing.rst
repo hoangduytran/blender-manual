@@ -57,10 +57,10 @@ Instance Empty Size
 
 .. _prefs-editing-duplicate-data:
 
-Duplicate Data
---------------
+Copy on Duplicate
+-----------------
 
-The *Duplicate Data* checkboxes define what data is copied with a duplicated object and
+The checkboxes define what data is copied with a duplicated object and
 what data remains linked. Any boxes that are checked will have their data copied along with
 the duplication of the object. Any boxes that are not checked will instead have their data linked
 from the source object that was duplicated.
@@ -71,7 +71,7 @@ and each mesh will behave independently of the duplicate.
 If you leave the mesh box unchecked then when you change the mesh of one object,
 the change will be mirrored in the duplicate object.
 
-The same rules apply to each of the checkboxes in the *Duplicate Data* list.
+The same rules apply to each of the checkboxes in the data-block list.
 
 
 3D Cursor
@@ -142,8 +142,9 @@ Node Editor
 Auto-Offset
    Automatically offset the following or previous nodes in a chain when inserting a new node.
    See :ref:`editors-nodes-usage-auto-offset` for more information.
-Auto-offset Margin
-   Margin to use for :ref:`offsetting nodes <editors-nodes-usage-auto-offset>`.
+
+   Auto-offset Margin
+      Margin to use for :ref:`offsetting nodes <editors-nodes-usage-auto-offset>`.
 
 
 Miscellaneous
