@@ -226,8 +226,8 @@ Lock Object Modes
       You may want to disable *Lock Object Modes* for example when weighting rigged objects
       or sculpting/painting where you intentionally want to switch between objects in different modes.
 
-Preferences
-   Open the Preferences window.
+Preferences :kbd:`Ctrl-Comma`
+   Open the :doc:`Preferences window </editors/preferences/index>`.
 
 
 .. _topbar-render:
