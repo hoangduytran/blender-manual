@@ -255,27 +255,27 @@ Simple Tentacle
 
 The simplest type of rig for a finger or appendage in general is the
 :ref:`simple tentacle <rigify.rigs.limbs.simple_tentacle>` sub-rig. It has only basic FK controls and tweaks,
-with the only automation being the ability to copy the local rotation of a FK joint to the next one.
+with the only automation being the ability to copy certain axes of the local rotation of a FK control to the next one.
 
 Advanced Finger
 ---------------
 
 .. figure:: /images/addons_rigging_rigify_rig-features_finger-controls.png
 
-For the case of fingers, there is a dedicated :ref:`finger <rigify.rigs.limbs.super_finger>` sub-rig type,
+For fingers specifically, Rigify has a dedicated :ref:`finger <rigify.rigs.limbs.super_finger>` sub-rig type,
 which provides:
 
 Master
-   A master control, which can be used to rotate the finger as a whole, as well as to bend it via Y scaling.
+   A master control (orange), which can be used to rotate the finger as a whole, as well as to bend it via Y scaling.
 FK Chain
-   FK control chain (green) that can operate as semi-tweaks through allowing translation.
+   FK control chain (green) that can also operate as semi-tweaks through allowing translation.
 IK Control :guilabel:`Optional`
-   IK control for the tip.
+   IK control for the tip (red).
 
-   .. note::
-      IK in this sub-rig is rudimentary and operates as an adjustment for FK. The intended way of use is to pose
-      the finger in FK, and then use FK->IK snap and enable IK if it is necessary to pin the tip of the finger
-      in place.
+.. note::
+   IK in this sub-rig is rudimentary and operates as an adjustment for FK. The intended way of use is to pose
+   the finger in FK, and then enable IK after using IK->FK snap if it is necessary to pin the tip of the finger
+   in place.
 
 The properties panel has the following features:
 
@@ -315,7 +315,7 @@ Stretch To Fit
 Manual Squash & Stretch
    This mode is almost the same, but the chain does not automatically scale to match the curve length.
    Instead, it tries to cover as much as possible of the curve given its manually scaled length.
-   If the curve is too short, the chain will overhang it and straighten out, but this is not fully stable.
+   If the curve is too short, the chain will overhang it and straighten out, but this can result in jitter.
 Direct Tip Control
    This mode is more similar to the behavior of IK limbs: the final bone of the chain is directly controlled by
    the tip IK control, while the other bones of the chain stretch and follow the curve to bridge the gap.
@@ -328,7 +328,7 @@ IK Start
    The IK control at the base of the tentacle, which can be used to control the base twist and sideways scale, and
    is one of the potential switchable parents for other IK controls.
 
-   In the *Manual Squash & Stretch* mode it controls uniform scale of the tentacle.
+   In the *Manual Squash & Stretch* mode it controls uniform scale of the tentacle in all directions.
 IK Start (Extra) :guilabel:`Optional`
    Extra start controls, optional and hidden by default. Switchable parents default to the *IK Start* control.
    The scale of the control may optionally affect the thickness of the chain via the radius of the curve point.
@@ -346,9 +346,10 @@ IK End
 
    In the *Direct Tip Control* mode also directly controls the last bone of the chain.
 IK End Twist :guilabel:`Optional`
-   * *Stretch To Fit*: controls the twist of the tip of the tentacle, interpolated to nothing at the base.
-   * *Manual Squash & Stretch*: also controls the scaling of the tip of the tentacle.
-   * *Direct Tip Control*: does not exist.
+   This control is visually attached to the last bone of the chain, and must use Euler rotation.
+   * *Stretch To Fit*: it controls the twist of the tip of the tentacle, interpolated to nothing at the base.
+   * *Manual Squash & Stretch*: it also controls the scaling of the tip of the tentacle.
+   * *Direct Tip Control*: the control does not exist.
 FK Chain :guilabel:`Optional`
    If enabled, the rig has an alternative fully FK control chain.
 
@@ -369,12 +370,13 @@ Start/End Controls :guilabel:`Optional`
    to its 'hidden' position.
 
 End Twist Estimate :guilabel:`Optional`
-   In the *Direct Tip Control* mode the twist at the end of the tentacle is deduced from the orientation of the
-   tip control. However, for technical reasons, that is only possible within the 180 degrees range of neutral.
+   In the *Direct Tip Control* mode the twist at the end of the tentacle is deduced from the free form orientation
+   of the tip control, rather than using a separate twist control with constrained Euler rotation. However, for
+   technical reasons, that can only give values within the 180 degrees range of neutral.
 
    A long tentacle can accept more twist than 180 degrees, so a workaround is necessary. This property allows
-   specifying an approximate estimate of the twist value, and the rig then applies the automatic correction within
-   180 degrees of this value.
+   specifying an approximate estimate of the twist value (effectively shifting the neutral position), and the
+   rig then applies the automatic correction within 180 degrees of this value.
 
 IK-FK, IK<->FK Snapping :guilabel:`Optional`
    If the FK controls are enabled, these provide standard IK-FK switching and snapping.
@@ -383,33 +385,166 @@ IK-FK, IK<->FK Snapping :guilabel:`Optional`
    manual tuning. For this reason, buttons for baking the snapping over a range of keyframes are not provided.
 
 Parent Switch
-   Switches the parent of the active IK control.
+   Switches the parent of the selected IK control.
 
+
+Spine, Head & Tail
+==================
+
+.. figure:: /images/addons_rigging_rigify_rig-features_spine-controls.png
+   :align: right
+   :width: 200px
+
+Spine
+-----
+
+The :ref:`spine <rigify.rigs.spines.basic_spine>` sub-rig provides a cube shaped torso control with
+switchable parent, and bent circle shaped hip and chest controls subordinate to it. For low level deformation
+tweak controls are provided.
+
+The torso control can optionally be accompanied with a custom pivot control. The rig can also optionally
+provide a full set of FK controls that are subordinate to the normal simplified ones, but above tweaks.
+
+The rig properties panel for the spine controls usually includes options for the head and/or tail as well.
+
+
+.. figure:: /images/addons_rigging_rigify_rig-features_head-controls.png
+   :align: right
+   :width: 200px
 
 Head
-====
+----
+
+The :ref:`head <rigify.rigs.spines.super_head>` sub-rig attaches to the end of the spine, and provides
+rotational controls for the head and neck, as well as tweaks for fine control of the neck.
+
+If the neck is three or more bones long, an additonal tweak-like translational
+neck bend control is provided (the widget looks like a circle with arrows).
+
+The properties panel contains the following options:
 
 Neck Follow :guilabel:`Slider`
+   .. figure:: /images/addons_rigging_rigify_rig-features_head-properties.png
+      :align: right
+      :width: 200px
+
    This slider controls the rotations isolation for the neck bones.
-   When set to 0 the neck will stay oriented as the Torso (the big box control).
-   When set to 1 the neck will be oriented as the Chest (the big circle in the shoulder area).
+   The neck will follow the orientation of the Torso when set to 0, and the Chest when set to 1.
 
 Head Follow :guilabel:`Slider`
-   This slider controls the rotations isolation for the head.
-   When set to 0 the head will stay oriented as the Torso (the big box control).
-   When set to 1 the head will be oriented as the neck.
+   .. figure:: /images/addons_rigging_rigify_rig-features_tail-controls.png
+      :align: right
+      :width: 200px
 
+   This slider controls the rotations isolation for the head.
+   The head will follow the orientation of the Torso when set to 0, and the Chest when set to 1.
+
+Tail
+----
+
+The :ref:`tail <rigify.rigs.spines.basic_tail>` sub-rig attaches to the start of the spine, and provides
+FK controls for the tail, as well as a master control that replicates its local rotation around certain axes
+to all individual bones.
+
+The properties panel contains the following options:
+
+Tail Follow :guilabel:`Slider`
+   This slider controls the rotations isolation for the tail.
+   The tail will follow the orientation of the Torso when set to 0, and the Hips when set to 1.
 
 Face
 ====
 
-Mouth Lock :guilabel:`Slider`
-   This slider controls the mouth opening.
-   When set to 0 moving/rotating the jaw bone will result in mouth opening,
-   when set to 1 the lips will stay sealed while the jaw is moving.
+.. note::
+   This describes the new-style modular face produced by the Upgrade Face operator button.
 
-Eyes Following :guilabel:`Slider`
-   This slider controls the eyelid automation.
-   When set to 1 the eyelids and the lower eyebrow will follow
-   the eye movement giving a realistic effect to the character,
-   when set to 0 no automation will happen.
+Basic Concepts
+--------------
+
+Skin Bone Chains
+^^^^^^^^^^^^^^^^
+
+.. figure:: /images/addons_rigging_rigify_rig-features_face-chains.png
+   :align: right
+   :width: 300px
+
+The foundation of the Rigify face is a network of Bendy Bone :ref:`chains <rigify.rigs.skin.basic_chain>` with controls
+placed at every bone end. These controls affect all bones that meet at that specific point.
+
+When the controls are merely translated, the B-Bone chains retain the normal automatic bezier handle behavior.
+Local rotation and/or scaling of the controls are applied on top of that.
+
+In case of :ref:`certain chains <rigify.rigs.skin.stretchy_chain>`, the transformation of the end and/or middle
+controls is interpolated to other controls located between them. In such cases the controls often have different
+colors and/or shapes.
+
+Additionally, certain controls have :ref:`arbitrary constraints <rigify.rigs.skin.glue>` that partially copy
+transformation from nearby control points.
+
+Specialized Controllers
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Certain areas of the face, like eyes or mouth, have additional specialized controllers that apply custom behavior
+on top of the chains and their controllers within the relevant area.
+
+Eyes
+----
+
+.. figure:: /images/addons_rigging_rigify_rig-features_eye-controls.png
+   :align: right
+   :width: 300px
+
+The :ref:`eyes <rigify.rigs.face.skin_eye>` have the following controls in addition to the eyelid chains:
+
+Master
+   This large circular control can be used to transform the whole eye as one unit.
+Common Target
+   This large control enveloping all individual eye targets has a switchable parent and can
+   be used to specify the point that the eyes should look at.
+Eye Target
+   These small circle controls within the common target control specify the point targeted by each
+   individual eye. Their local scale can also be used to affect the iris or pupil of the eye,
+   depending on how it was weight painted.
+
+The rig properties panel contains the following options:
+
+.. figure:: /images/addons_rigging_rigify_rig-features_eye-properties.png
+   :align: right
+   :width: 200px
+
+Eyelids Follow :guilabel:`Slider`
+   Controls how much the rotation of the eyeball affects the eyelids. Depending on the sub-rig generation
+   options, this slider can be split to separately control the horizontal and vertical directions.
+
+Eyelids Attached :guilabel:`Slider` :guilabel:`Optional`
+   If enabled in the sub-rig generation options, this slider can be used to disable the mechanism that
+   forces the eyelids to conform to the sphere of the eye.
+
+Parent :guilabel:`Parent Switch`
+   Selects the parent for the common target control.
+
+Mouth
+-----
+
+.. figure:: /images/addons_rigging_rigify_rig-features_mouth-controls.png
+   :align: right
+   :width: 300px
+
+The :ref:`mouth <rigify.rigs.face.skin_jaw>` has the following controls:
+
+Jaw Master
+   Controls rotation of the jaw, directly affecting the main jaw deform bone, as well
+   as chains fully belonging to the jaw. Chains forming the lip loop(s) are adjusted to
+   open the mouth as the jaw rotates or moves.
+Mouth Master
+   This control uniformly transforms the lips without moving the jaw.
+
+The rig properties panel contains the following options:
+
+.. figure:: /images/addons_rigging_rigify_rig-features_mouth-properties.png
+   :align: right
+   :width: 200px
+
+Mouth Lock :guilabel:`Slider`
+   This slider can be changed from 0 to 1 in order to suppress opening of the mouth
+   when the jaw rotates or moves.
