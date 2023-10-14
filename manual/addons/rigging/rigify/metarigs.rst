@@ -305,3 +305,88 @@ If desired, it is possible to manually assign UI buttons to the internal ``ORG``
 .. tip::
    Blank rows appear much thinner in the final interface, since they don't have to contain editing buttons, and can be
    used as logical separators.
+
+Actions
+=======
+
+.. figure:: /images/addons_rigging_rigify_metarigs_actions-list-panel.png
+   :align: right
+   :width: 300px
+
+The :doc:`Action </animation/constraints/relationship/action>` constraint allows applying poses defined
+by an action to bones based on the transformation of another bone. This requires adding the constraint to every
+bone affected by the action, which is very tedious. For this reason, Rigify includes a system to do this
+automatically through the Actions panel.
+
+The panel defines a list of actions to be applied to the generated rig bones. Each action must be listed only once.
+
+The list entries show the name of the action, the trigger (a bone or a corrective action driven by two others), and
+a checkbox that can be used to temporarily disable applying this action to the rig. The icon at the start of the entry
+is changed from an action icon to a link icon to highlight corrective actions that depend on the active normal one,
+or normal actions used by the active corrective action.
+
+.. note::
+   The Action constraints are added to the bones in such an order as to exactly reproduce the intended deformation,
+   assuming the actions were created (posed and keyframed) in the order listed.
+
+Normal Actions
+--------------
+
+.. figure:: /images/addons_rigging_rigify_metarigs_actions-normal-panel.png
+   :align: right
+   :width: 300px
+
+Normal actions are applied based on the transformation of a specific control bone from the generated rig.
+They have the following properties:
+
+Control Bone
+   Specifies the bone that drives the action.
+Symmetrical
+   If the control bone has a suffix that specifies that it belongs to the left or right side, this option can
+   be enabled to automatically apply symmetry.
+
+   When enabled, left-side bones keyframed in the action will be controlled by the left-side control, and right-side
+   bones by the right side control. Bones that don't have a a side suffix are assumed to belong to the center of the
+   character. They are rigged with two Action constraints with influence 0.5 that are controlled by each of the
+   control bones.
+Frame Start & End
+   Specifies the frame range of the action that will be used by the created constraints.
+Target Space, Transform Channel
+   Specifies the coordinate space and transformation channel of the target bone that should be used.
+Min, Max
+   Specifies the range of the transformation channel values that is mapped to the specified action frame range.
+Default Frame
+   Shows the frame within the action that maps to the neutral value (1 for scale and 0 otherwise)
+   of the transformation channel, as computed from the specified range values.
+
+Corrective Actions
+------------------
+
+.. figure:: /images/addons_rigging_rigify_metarigs_actions-corrective-panel.png
+   :align: right
+   :width: 300px
+
+Corrective actions are applied based on the progress of two other actions from the list, and are used to improve
+the pose when they are used together.
+
+Frame Start & End
+   Specifies the frame range of the action that will be used by the created constraints.
+Trigger A & B
+   Specifies the two actions that control the correction. The interface rows contain buttons to show the settings
+   for that action, or jump to it in the list.
+
+The progress of the corrective action from the start to the end frame is calculated as the product of the progress
+values of the two trigger actions. Thus, the start frame is applied when either of the triggers is at the start frame,
+and the end frame is used when both are at their end frame.
+
+Corrective actions must be below their triggers in the list, which is enforced via an implicit reorder even if violated.
+
+.. tip::
+   Corrective actions behave in the most intuitive way when both triggers have the Default Frame equal to Start Frame.
+   To create a corrective action in such case:
+
+   * Create the two trigger actions, add them to the panel and generate the rig.
+   * Pose your controls so that both trigger actions are fully activated to the end frame.
+   * Pose and keyframe the necessary corrections in the end frame of the new action, while keying the start
+     frame to the neutral values.
+   * Add the newly created action to the end of the list in the panel and configure its settings.
