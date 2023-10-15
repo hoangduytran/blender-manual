@@ -37,6 +37,11 @@ Bone Color
    Edit modes. If there are multiple armature Objects that share the same
    Armature data-block, all armatures will share this color.
 
+   .. _bpy.ops.armature.copy_bone_color_to_selected:
+
+   Copy Bone Color to Selected
+      Copy the bone color of the :term`Active` bone to all selected bones.
+
 Pose Bone Color (only in Pose mode)
    Either a selection of the theme-dependent colors, or a custom color. This is
    a way to *override* the bone color on a per-armature object basis.
@@ -47,6 +52,9 @@ Pose Bone Color (only in Pose mode)
    particular armature object. It is only available in Pose mode. If there are
    multiple armature Objects that share the same Armature data-block, they each
    can have unique pose bone colors.
+
+   Copy Bone Color to Selected
+      Copy the bone color of the :term`Active` bone to all selected bones.
 
 
 .. _bpy.types.BoneColor:
