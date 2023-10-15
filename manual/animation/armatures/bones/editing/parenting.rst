@@ -74,3 +74,32 @@ To disconnect and/or free bones, you can:
   If you just want to disconnect it from its parent, disable the *Connected* checkbox.
 
 Note that relationships with non-selected children are never modified.
+
+
+Bone Collections
+================
+
+.. reference::
+
+   :Mode:      Edit Mode, Pose Mode
+   :Menu:      :menuselection:`Armature --> Bone Collections`, :menuselection:`Pose --> Bone Collections`
+   :Shortcut:  :kbd:`Shift-M`
+
+Manages the :ref:`bpy.types.BoneCollection` the bone is assigned to.
+
+.. _bpy.ops.armature.collection_show_all:
+
+Show All :kbd:`Ctrl-AccentGrave`
+   Unhides any hidden bone collections.
+
+Bone Collections List
+   This list shows the :term:`bone collections <Bone Collection>`
+   and can be used to manage which collections the bone is assigned to.
+
+   Press the eye icon to show or hide the entire bone collection.
+   Press the - icon to remove the bone from that particular collection.
+   Press the + icon to add the bone to that particular collection.
+
+Assign to new Collection
+   Assigns the selected bones to a new collection named "New Collection".
+   This collection can be renamed in the :ref:`bpy.types.BoneCollection` panel of the Armature properties.
