@@ -111,3 +111,10 @@ Bone Collections
    editable.
 
    See :ref:`Library Overrides of Bone Collections <bone_collections_library_overrides>`.
+
+
+Custom Properties
+=================
+
+Create and manage your own properties to store data in the Bone Collection's data-block.
+See the :ref:`Custom Properties <files-data_blocks-custom-properties>` page for more information.
