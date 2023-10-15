@@ -42,6 +42,14 @@ In the Node Editor the inputs can be renamed, shuffled and removed.
 This is also the place where sub-steps can be defined for a simulation.
 
 
+Inputs
+------
+
+Skip
+   Forward the output of the simulation input node directly
+   to the output node and ignore the nodes in the simulation zone.
+
+
 Baking
 ======
 

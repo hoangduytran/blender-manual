@@ -1,4 +1,3 @@
-.. _bpy.types.Bone.hide:
 .. _bpy.types.Bone.color:
 .. _bpy.types.EditBone.color:
 .. _bpy.types.PoseBone.color:
@@ -22,9 +21,13 @@ Viewport Display
 
 Display panel lets you customize the look of your bones.
 
+.. _bpy.types.Bone.hide:
+
 Hide
    Hides the bone in the 3D Viewport. When this is unchecked, the bone's
    visibility is determined by the visibility of its :ref:`bone collections <bpy.types.Bone.collections>`.
+
+.. _bpy.types.BoneColor.palette:
 
 Bone Color
    Either a selection of the theme-dependent colors, or a custom color. This is
@@ -33,6 +36,11 @@ Bone Color
    This color is stored on the bone itself, and thus is visible in both Pose and
    Edit modes. If there are multiple armature Objects that share the same
    Armature data-block, all armatures will share this color.
+
+   .. _bpy.ops.armature.copy_bone_color_to_selected:
+
+   Copy Bone Color to Selected
+      Copy the bone color of the :term`Active` bone to all selected bones.
 
 Pose Bone Color (only in Pose mode)
    Either a selection of the theme-dependent colors, or a custom color. This is
@@ -45,11 +53,15 @@ Pose Bone Color (only in Pose mode)
    multiple armature Objects that share the same Armature data-block, they each
    can have unique pose bone colors.
 
+   Copy Bone Color to Selected
+      Copy the bone color of the :term`Active` bone to all selected bones.
+
+
 .. _bpy.types.BoneColor:
 .. _bpy.types.ThemeBoneColorSet:
 
 Bone Colors
-=============
+===========
 
 Bones can be individually colored. For these colors to be visible, enable the
 :ref:`Bone Colors checkbox <bpy.types.Armature.show>` in the Armature display panel.
@@ -70,9 +82,6 @@ Active
    The third color field is the outline color of the active bone.
 
 As soon as you alter one of the colors, it is switched to the *Custom Set* option.
-
-
-
 
 
 .. _bpy.types.PoseBone.custom_shape:

@@ -29,6 +29,7 @@ the visibility of its collections, and its own 'hidden' property:
 - A bone that is not assigned to any bone collection is visible; otherwise it
   would be impossible to select it & assign it to a collection.
 
+
 .. _bone_collections_library_overrides:
 
 Library Overrides
@@ -50,10 +51,11 @@ There are a few limitations when it comes to bone collections & overrides:
   properties panel. Python access is fine; this is just a current limitation of
   Blender's UI code.
 
+
 How It Works
 ------------
 
-Bone collections added via overrides are 'anchored' to the preceeding
+Bone collections added via overrides are 'anchored' to the preceding
 collection, by name. Here is an example. The *italic* collections are defined on
 the linked Armature in `armature.blend`. The **bold** ones are added by
 overrides in `armature_shot_47.blend`.
@@ -79,6 +81,7 @@ After reloading `armature_shot_47.blend`, it will look like this:
 - **Right Pinky** (still anchored to "Left Pinky")
 - *Face Controls*
 - *Face Detail Controls*
+
 
 .. _bpy.types.armature.layers:
 

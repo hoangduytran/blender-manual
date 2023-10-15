@@ -1,4 +1,3 @@
-.. _bpy.types.BoneGroups:
 .. _bpy.types.BoneCollection:
 
 ****************
@@ -10,7 +9,6 @@ Bone Collections
    Bone Collections were introduced in Blender 4.0 as replacement of Armature
    Layers and Bone Groups. :ref:`Bone colors <bpy.types.Bone.color>` are now
    managed directly on the bone.
-
 
 .. reference::
 
@@ -29,6 +27,19 @@ allows the creation, deletion, and editing of Bone Collections.
 
    The Bone Properties panel gives a slightly different view on the bone's collections. See
    :doc:`Bone Relations </animation/armatures/bones/properties/relations>`.
+
+
+Specials
+========
+
+.. _bpy.ops.armature.collection_solo_visibility:
+
+Solo Visibility
+   Hide all other bone collections except the active one.
+
+Show All
+   Unhides any hidden bone collections.
+
 
 Assign & Select
 ===============
@@ -63,6 +74,7 @@ Deselect
    For setting up custom selection sets of bones, take a look at the *Selection
    Sets* add-on. It is bundled with Blender.
 
+
 .. _moving_bones_between_collections:
 
 Moving Bones between Collections
@@ -71,7 +83,9 @@ Moving Bones between Collections
 Blender should be in *Edit Mode* or *Pose Mode* to move bones between collections.
 Note that as with objects, bones can be assigned to in several collections at once.
 
-Move to Collection
+.. _bpy.ops.armature.move_to_collection:
+
+Move to Bone Collection
    Shows a list of the Armature's *editable* bone collections. Choosing a bone
    collection unassign the selected bones from all other bone collections, then
    assigns them to the chosen one.
@@ -97,3 +111,10 @@ Bone Collections
    editable.
 
    See :ref:`Library Overrides of Bone Collections <bone_collections_library_overrides>`.
+
+
+Custom Properties
+=================
+
+Create and manage your own properties to store data in the Bone Collection's data-block.
+See the :ref:`Custom Properties <files-data_blocks-custom-properties>` page for more information.

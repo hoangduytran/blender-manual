@@ -104,7 +104,8 @@ Operation
       :Ceil: Rounds the input value up to the nearest integer.
       :Truncate: Outputs the integer part of the *value*.
       :Fraction: Returns the fractional part of the *value*.
-      :Modulo: Outputs the remainder once the first value is divided by the second value.
+      :Truncated Modulo: Outputs the remainder once the first value is divided by the second value.
+      :Floored Modulo: Returns the positive remainder of a division operation.
       :Wrap:
          Outputs a value between *Min* and *Max* based on the absolute difference between
          the input value and the nearest integer multiple of *Max* less than the value.
