@@ -29,6 +29,18 @@ allows the creation, deletion, and editing of Bone Collections.
    :doc:`Bone Relations </animation/armatures/bones/properties/relations>`.
 
 
+Specials
+========
+
+.. _bpy.ops.armature.collection_solo_visibility:
+
+Solo Visibility
+   Hide all other bone collections except the active one.
+
+Show All
+   Unhides any hidden bone collections.
+
+
 Assign & Select
 ===============
 
