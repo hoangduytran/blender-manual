@@ -1,4 +1,3 @@
-.. _bpy.types.BoneGroups:
 .. _bpy.types.BoneCollection:
 
 ****************
@@ -10,7 +9,6 @@ Bone Collections
    Bone Collections were introduced in Blender 4.0 as replacement of Armature
    Layers and Bone Groups. :ref:`Bone colors <bpy.types.Bone.color>` are now
    managed directly on the bone.
-
 
 .. reference::
 

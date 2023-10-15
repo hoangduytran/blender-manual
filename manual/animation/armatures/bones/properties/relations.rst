@@ -200,10 +200,20 @@ which allows you to pose a whole chain just by moving its tip.
 Bone Collections
 ================
 
-This list shows the :term:`bone collections <Bone Collection>` the bone is
-assigned to. Press the eye icon to show or hide the entire bone collection.
-Press the X icon to remove the bone from that particular collection.
+.. _bpy.ops.armature.collection_show_all:
 
-To assign the bone to other bone collections, either use the :kbd:`M` or :kbd:`Shift-M` shortcuts
-(see :ref:`Moving Bones Between Collections <moving_bones_between_collections>`)
-or go to the :ref:`Armature properties panel <bpy.types.BoneCollection>`.
+Show All :kbd:`Ctrl-AccentGrave`
+   Unhides any hidden bone collections.
+
+Bone Collections List
+   This list shows the :term:`bone collections <Bone Collection>` the bone is
+   assigned to. Press the eye icon to show or hide the entire bone collection.
+   Press the X icon to remove the bone from that particular collection.
+
+   To assign the bone to other bone collections, either use the :kbd:`M` or :kbd:`Shift-M` shortcuts
+   (see :ref:`Moving Bones Between Collections <moving_bones_between_collections>`)
+   or go to the :ref:`Armature properties panel <bpy.types.BoneCollection>`.
+
+Assign to new Collection
+   Assigns the selected bones to a new collection named "New Collection".
+   This collection can be renamed in the :ref:`bpy.types.BoneCollection` panel of the Armature properties.
