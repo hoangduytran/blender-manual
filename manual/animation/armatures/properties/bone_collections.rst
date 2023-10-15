@@ -30,6 +30,7 @@ allows the creation, deletion, and editing of Bone Collections.
    The Bone Properties panel gives a slightly different view on the bone's collections. See
    :doc:`Bone Relations </animation/armatures/bones/properties/relations>`.
 
+
 Assign & Select
 ===============
 
@@ -63,6 +64,7 @@ Deselect
    For setting up custom selection sets of bones, take a look at the *Selection
    Sets* add-on. It is bundled with Blender.
 
+
 .. _moving_bones_between_collections:
 
 Moving Bones between Collections
@@ -71,7 +73,9 @@ Moving Bones between Collections
 Blender should be in *Edit Mode* or *Pose Mode* to move bones between collections.
 Note that as with objects, bones can be assigned to in several collections at once.
 
-Move to Collection
+.. _bpy.ops.armature.move_to_collection:
+
+Move to Bone Collection
    Shows a list of the Armature's *editable* bone collections. Choosing a bone
    collection unassign the selected bones from all other bone collections, then
    assigns them to the chosen one.
