@@ -155,7 +155,7 @@ IOR :guilabel:`Cycles Only`
       IOR from 1.0 to 2.0
 
 Anisotropy :guilabel:`Cycles Only`
-   Directionanltiy of volume scattering within the subsurface medium. Zero scatters uniformly
+   Directionality of volume scattering within the subsurface medium. Zero scatters uniformly
    in all directories, with higher values scattering more strongly forward.
    For example skin has been measure to have an anisotropy of 0.8.
 
