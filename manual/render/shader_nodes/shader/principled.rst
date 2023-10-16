@@ -28,16 +28,16 @@ between them.
 
 .. figure:: /images/render_shader-nodes_principled_layers.svg
 
-The metal component is opaque and only reflect lights. Diffuse and subsurface components
-have a specular layer. Diffuse is fully opaque, while subsurface also involves light
-scattering just below the surface. Both sit below a specular layer. The transmission
-component includes both specular reflection and refraction.
+The metal component is opaque and only reflect lights. Diffuse is fully opaque, while
+subsurface also involves light scattering just below the surface. Both diffuse and
+subsurface sit below a specular layer. The transmission component includes both
+specular reflection and refraction.
 
 On top of all base layers there is an optional glossy coat. And finally the sheen layer
 sits on top of all other layers, to add fuzz or dust.
 
-Light emission can also be added. This is below the coat and sheen layers, to model
-for example emissive displays with a coat or dust.
+Light emission can also be added. Light emits from below the coat and sheen layers,
+to model for example emissive displays with a coat or dust.
 
 Inputs
 ======
@@ -48,7 +48,7 @@ Base Color
    .. figure:: /images/render_shader-nodes_shader_principled-base-color.webp
       :align: center
 
-      Base color variations
+      Same base color for multiple materials types
 
 Roughness
    Specifies microfacet roughness of the surface for specular reflection and transmission.
@@ -112,7 +112,7 @@ Method
       Random walk method optimized for skin rendering. The radius
       is automatically adjusted based on the color texture, and
       the subsurface entry direction uses a mix of diffuse and
-      specular tranmission with custom IOR. This tends to retain
+      specular transmission with custom IOR. This tends to retain
       greater surface detail and color and matches measured skin
       more closely.
 
@@ -138,7 +138,7 @@ Radius
       Radius from white to red
 
 Scale
-  Scale applied to the radius.
+   Scale applied to the radius.
 
    .. figure:: /images/render_shader-nodes_shader_principled-subsurface-scale.webp
       :align: center
@@ -181,11 +181,11 @@ Distribution
       which would otherwise be visible as excessive darkening.
 
 IOR Level
-    Adjustment to the IOR to increase or decrease intensity of the specular layer.
-    0.5 means no adjustment, 0 removes all reflections, 1 doubles them at normal incidence.
+   Adjustment to the IOR to increase or decrease intensity of the specular layer.
+   0.5 means no adjustment, 0 removes all reflections, 1 doubles them at normal incidence.
 
-    This input is designed for conveniently texturing the IOR and amount of specular
-    reflection.
+   This input is designed for conveniently texturing the IOR and amount of specular
+   reflection.
 
    .. figure:: /images/render_shader-nodes_shader_principled-specular-ior-level.webp
       :align: center
@@ -259,7 +259,7 @@ Weight
       Weight from 0.0 to 1.0
 
 Roughness
-	 Roughness of the coat layer.
+   Roughness of the coat layer.
 
    .. figure:: /images/render_shader-nodes_shader_principled-coat-roughness.webp
       :align: center
