@@ -95,6 +95,9 @@ Extras
 
 Light Colors
    Shades the outline of light objects to the color the light produces.
+
+.. _bpy.types.View3DOverlay.show_relationship_lines:
+
 Relationship Lines
    Show dashed lines indicating parent or constraint relationships.
 Outline Selected

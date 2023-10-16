@@ -128,3 +128,10 @@ Axis
    Position
       The position for the axes display on the bone.
       Increasing the value moves it closer to the tip; decreasing moves it closer to the root.
+
+.. _bpy.types.Armature.relation_line_position:
+
+Relations
+   Whether the :ref:`Relationship Lines <bpy.types.View3DOverlay.show_relationship_lines>`
+   overlay should be drawn from each parent's tail or head.
+   The lines are always drawn towards the childrens' heads.
