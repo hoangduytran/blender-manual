@@ -1,4 +1,3 @@
-.. _bpy.ops.wm.search:
 
 ******
 Search
@@ -52,3 +51,8 @@ within Blender, even if they are not exposed in a menu.
 This is useful for Python developers for testing purposes.
 Blender might also include a few advanced operators that are not
 exposed in a menu and can only be accessed via this search menu.
+
+.. seealso::
+
+   The :ref:`User Preferences <prefs-interface-search-order>`
+   has an option to change how the search results are scored.

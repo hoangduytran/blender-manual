@@ -203,11 +203,11 @@ White Balance Modifier
 Use it to adjust the white balance by choosing the color that should be white.
 
 
-.. index:: Video Sequencer Modifiers; Equalizer Modifier
+.. index:: Video Sequencer Modifiers; Sound Equalizer Modifier
 .. _bpy.types.SoundEqualizerModifier:
 
-Equalizer Modifier
-------------------
+Sound Equalizer Modifier
+------------------------
 
-This modifier can be used to emphasize or supress sound frequencies.
+This modifier can be used to emphasize or suppress sound frequencies.
 The range is limited to 35Hz - 20kHz and +/-35dB

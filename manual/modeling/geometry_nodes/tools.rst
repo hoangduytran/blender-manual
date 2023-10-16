@@ -17,15 +17,15 @@ They can be shared as any regular node group assets.
 Tool Context
 ============
 
-The way to create Node-based tools is by switching the Geometry Nodes editor context to `Tool`.
+The way to create Node-based tools is by switching the Geometry Nodes editor context to *Tool*.
 
-New node groups created there will be enabled as Tool by default, although users still need to set
-them as Assets if they want to share them.
+New node groups created there will be enabled as *Tool* by default,
+although users still need to set them as Assets if they want to share them.
 
 .. note::
 
-   The :doc:`Inspection </modeling/geometry_nodes/inspection>` features are not supported on this context: Viewer Node
-   and Socket Inspection.
+   The :doc:`Inspection </modeling/geometry_nodes/inspection>`
+   features are not supported on this context: Viewer Node and Socket Inspection.
 
 
 Asset
@@ -36,8 +36,8 @@ catalog is used to determine on which menus the node group will show, similar to
 
 The asset options need to be set on the :doc:`Asset Browser </editors/asset_browser>`.
 
-The catalog is used to determined in which menu the tool is available. Assets that have no catalog assigned to them,
-or local tools are exposed in the Unassigned menu.
+The catalog is used to determined in which menu the tool is available.
+Assets that have no catalog assigned to them, or local tools are exposed in the "Unassigned" menu.
 
 
 Tool Settings
@@ -65,8 +65,8 @@ The following nodes are only supported in the tool context:
 
 .. note::
 
-   The :doc:`Self Object </modeling/geometry_nodes/input/scene/self_object>` node returns the Active object
-   when inside a Tool node group.
+   The :doc:`Self Object </modeling/geometry_nodes/input/scene/self_object>`
+   node returns the Active object when inside a Tool node group.
 
 
 Non-supported Nodes
@@ -74,5 +74,5 @@ Non-supported Nodes
 
 These nodes are only supported in the modifier context:
 
-  - Simulation Zone
-  - Viewer Node
+  - :doc:`/modeling/geometry_nodes/simulation/simulation_zone`
+  - :doc:`/modeling/geometry_nodes/output/viewer`

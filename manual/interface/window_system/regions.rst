@@ -40,7 +40,7 @@ Header
 
 A header is a small horizontal strip, which sits either at the top or bottom of an area.
 All editors have a header acting as a container for menus and commonly used tools.
-:ref:`Menus <ui-header-menu>` and buttons will change with the editor type and
+:ref:`Menus <bpy.types.UIPopupMenu>` and buttons will change with the editor type and
 the selected object and mode.
 
 .. figure:: /images/editors_3dview_introduction_3d-view-header-object-mode.png
@@ -62,7 +62,7 @@ Show Header
 Show Tool Settings
    Toggles the visibility of the `Tool Settings`_.
 Show Menus
-   Toggles whether the :ref:`Menus <ui-header-menu>` are collapsed or not.
+   Toggles whether the :ref:`Menus <bpy.types.UIPopupMenu>` are collapsed or not.
 Flip to Bottom/Top
    Toggles whether the header or Tool Settings appear on the top or bottom of the editor.
 Vertical/Horizontal Split

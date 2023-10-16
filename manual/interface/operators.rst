@@ -6,7 +6,7 @@ Operators
 Operators execute an action the moment they're activated,
 which makes them different from tools (which require some sort of input).
 Operators can be started from :ref:`ui-operator-buttons`,
-:ref:`ui-header-menu`, or :ref:`bpy.ops.wm.search_menu`.
+:ref:`bpy.types.UIPopupMenu`, or :ref:`bpy.ops.wm.search_menu`.
 Examples of operators include adding a new object,
 deleting it, or setting its shading to smooth.
 

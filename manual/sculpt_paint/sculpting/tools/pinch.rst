@@ -7,6 +7,7 @@ Pinch
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Pinch`
+   :Shortcut:  :kbd:`P`
 
 Pulls geometry towards the center of the brush.
 When inverted via :kbd:`Ctrl` it will *Magnify* geometry

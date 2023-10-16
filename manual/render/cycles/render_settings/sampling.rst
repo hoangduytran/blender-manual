@@ -233,7 +233,6 @@ Sample Offset
    then combine the images with `bpy.ops.cycles.merge_images`
 
 Scrambling Distance
-
    .. _bpy.types.CyclesRenderSettings.adaptive_scrambling_distance:
 
    Automatic

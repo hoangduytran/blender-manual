@@ -60,6 +60,13 @@ Tooltips
    Python Tooltips
       Displays a property's Python information below the tooltip.
 
+.. _prefs-interface-search-order:
+
+Search
+   Sort by Most Recent
+      Show most recently selected items at the top of search results,
+      otherwise search results are sorted alphabetically.
+
 
 Editors
 =======

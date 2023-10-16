@@ -111,6 +111,13 @@ Origin
 Origin (All)
    Show the origins of all objects.
 
+.. _bpy.types.View3DOverlay.bone_wire_alpha:
+
+Bone Wireframe Opacity
+   The maximum opacity used for bones drawn in the *Wireframe*
+   :doc:`shading mode </editors/3dview/display/shading>` (or in *Solid* shading mode with X-Ray active).
+   This is helpful when it is necessary to reduce clutter and focus on the mesh rather than bones.
+
 
 Geometry
 --------
@@ -360,12 +367,6 @@ Fade Geometry
    Show the bones on top and face other geometry to the back.
    The opacity can be controlled with the slider.
    Only available in Pose Mode.
-
-Bone Wireframe Opacity
-   The maximum opacity used for bones drawn in the *Wireframe*
-   :doc:`shading mode </editors/3dview/display/shading>`
-   (or in *Solid* shading mode with X-Ray active).
-   This is helpful when it is necessary to reduce clutter and focus on the mesh rather than bones.
 
 
 .. _3dview-overlay-grease-pencil:

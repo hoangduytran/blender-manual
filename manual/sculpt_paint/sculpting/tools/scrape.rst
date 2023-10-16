@@ -7,6 +7,7 @@ Scrape
 
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Scrape`
+   :Shortcut:  :kbd:`Shift-T`
 
 Similar to the :doc:`Flatten </sculpt_paint/sculpting/tools/flatten>` brush,
 but only pushes surfaces downward to the medium height.
