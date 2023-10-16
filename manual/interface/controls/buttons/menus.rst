@@ -33,19 +33,25 @@ Scrolling is done by moving the mouse above or below this triangle.
 
 
 .. _bpy.types.UIPopupMenu:
-.. _ui-header-menu:
 
-Header Menus
-============
+Popup Menus
+===========
 
 .. figure:: /images/interface_controls_buttons_menus_menu-button.png
    :align: right
 
    Image menu in the Header of the Image editor.
 
-Most :ref:`headers <ui-region-header>` exhibit a set of menus, located at the start of the header.
-Header menus are used to configure the editor and access operators.
-All menu entries show the relevant shortcut keys, if any.
+Popup menus list :doc:`/interface/operators` which can be executed by selecting with :kbd:`LMB`
+or using the generated shortcut indicated by the underlined character of the operator name.
+All menu entries show any relevant shortcut keys, which can be executed without opening the menu.
+
+.. _bpy.ops.wm.search_single_menu:
+
+All popup menus can be searched by pressing :kbd:`Spacebar` and typing the name of the operator in the menu.
+If a popup menu has "Search" as one of the items, the menu can be searched without having to press :kbd:`Spacebar` first.
+
+All popup menus of an editor can be searched using the :ref:`bpy.ops.wm.search_menu` feature.
 
 
 Collapsing Menus
