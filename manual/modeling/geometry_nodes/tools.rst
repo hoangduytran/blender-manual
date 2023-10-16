@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Tools
-.. _bpy.types.GeometryNode:
+.. _bpy.types.GeometryNodeTree:
 
 ****************
 Node-Based Tools
@@ -17,15 +17,17 @@ They can be shared as any regular node group assets.
 Tool Context
 ============
 
-The way to create Node-based tools is by switching the Geometry Nodes editor context to *Tool*.
+The way to create Node-based tools is by switching the Geometry Nodes editor
+:ref:`context <bpy.types.SpaceNodeEditor.geometry_nodes_type>` to *Tool*.
 
-New node groups created there will be enabled as *Tool* by default,
-although users still need to set them as Assets if they want to share them.
+New node groups created in the tool context will be enabled as
+:ref:`Tool <bpy.types.GeometryNodeTree.is_tool>` by default,
+although users still need to set them as Assets if they want to share them (see below).
 
 .. note::
 
    The :doc:`Inspection </modeling/geometry_nodes/inspection>`
-   features are not supported on this context: Viewer Node and Socket Inspection.
+   features are not supported in the *Tool* context: Viewer Node and Socket Inspection.
 
 
 Asset
@@ -33,11 +35,10 @@ Asset
 
 For a node group to be shared as a tool, it has to be an :doc:`Asset </editors/asset_browser>` first. The asset
 catalog is used to determine on which menus the node group will show, similar to the regular node group assets.
+If the catalog name matches an existing menu, the tool will be added to the end of it.
+Assets that have no catalog assigned to them, or local tools are exposed in the "Unassigned" menu.
 
 The asset options need to be set on the :doc:`Asset Browser </editors/asset_browser>`.
-
-The catalog is used to determined in which menu the tool is available.
-Assets that have no catalog assigned to them, or local tools are exposed in the "Unassigned" menu.
 
 
 Tool Settings
@@ -49,7 +50,11 @@ The node group inputs will be exposed as in the :doc:`Adjust Last Operation </in
 Supported Modes and Data-Types
 ==============================
 
-Tools are only possible for Edit and Sculpting mode, for Mesh and Curve objects.
+Node groups must specify which mode and object types they support.
+This helps to determine where the tool is available in the user interface.
+These properties can be configured in popover menus in the :doc:`/editors/geometry_node`.
+
+Currently, only Edit and Sculpting mode, for Mesh and Curve objects are supported.
 
 
 Tool-specific Nodes
