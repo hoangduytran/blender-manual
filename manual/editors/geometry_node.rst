@@ -21,6 +21,15 @@ Interface
 Header
 ------
 
+.. _bpy.types.SpaceNodeEditor.geometry_nodes_type:
+
+Geometry Nodes Type
+   Geometry Nodes can have multiple contexts depending on the intended function of the node group.
+   Changing the context adjusts the user interface to best fit the needs of the selected context.
+
+   :Modifier: Used to create node groups that will be used by the :doc:`/modeling/modifiers/generate/geometry_nodes`.
+   :Tool: Used to create node groups that will be used to create :doc:`/modeling/geometry_nodes/tools`.
+
 View
    Standard view menu.
 Select
@@ -49,6 +58,7 @@ Snapping
 Overlays
    See :ref:`Overlays <bpy.types.SpaceNodeOverlay.show_overlays>`.
 
+
 Toolbar
 -------
 
@@ -59,6 +69,7 @@ Annotate
 Links Cut
    See :ref:`Cut Links <bpy.ops.node.links_cut>`.
 
+
 Sidebar
 -------
 
@@ -67,10 +78,12 @@ Node
 
 This tab gives access to the active node's properties.
 
+
 Tool
 ^^^^
 
 This tab gives access to the active tool's settings.
+
 
 View
 ^^^^
@@ -88,3 +101,56 @@ This tab allows you to edit the current node group's inputs and outputs.
    In the :doc:`Geometry Node Modifier </modeling/modifiers/generate/geometry_nodes>`,
    you can specify values for the root node group's inputs, as well as select destination
    :doc:`/modeling/geometry_nodes/attributes_reference` for its outputs.
+
+
+Properties
+""""""""""
+
+.. _bpy.types.GeometryNodeTree.is_modifier:
+
+Modifier
+   The node group is used as a :doc:`/modeling/modifiers/generate/geometry_nodes`.
+
+.. _bpy.types.GeometryNodeTree.is_tool:
+
+Tool
+   The node group is used as a :doc:`/modeling/geometry_nodes/tools`.
+
+
+Tool Context
+============
+
+These popover menus are displayed in the header when the tool context is enabled.
+These properties determine where the tool is available in the user interface.
+
+
+Types
+-----
+
+The :doc:`/scene_layout/object/types` the tool supports.
+
+.. _bpy.types.GeometryNodeTree.is_type_mesh:
+
+Mesh
+   The node tree supports :doc:`Mesh Objects </modeling/meshes/index>`.
+
+.. _bpy.types.GeometryNodeTree.is_type_curve:
+
+Curves
+   The node tree supports :doc:`Curve Objects </modeling/curves/index>`.
+
+
+Modes
+-----
+
+The :doc:`/editors/3dview/modes` the tool supports.
+
+.. _bpy.types.GeometryNodeTree.is_mode_edit:
+
+Edit Mode
+   The node group is used in edit mode.
+
+.. _bpy.types.GeometryNodeTree.is_mode_sculpt:
+
+Sculpt Mode
+   The node group is used in :doc:`Sculpt Mode </sculpt_paint/sculpting/index>`.
