@@ -128,7 +128,7 @@ Display Settings
 .. _bpy.types.FileSelectParams.display_size:
 
 Display Size
-   The size of the thumbnails, or the width of the columns.
+   The size of the thumbnails.
 
 .. _bpy.types.FileSelectParams.recursion_level:
 
