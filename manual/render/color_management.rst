@@ -114,14 +114,19 @@ this behavior can be set in the :ref:`Output Color Management Properties <render
 .. _bpy.types.ColorManagedDisplaySettings.display_device:
 
 Display Device
-   The device that the image is being viewed on.
+   The color space for the display that Blender is being viewed on.
 
-   Most computer monitors are configured for the sRGB color space,
-   and so when working on a computer usually this option should just be left to the default.
-   It would typically be changed when viewing the image on another display device connected to the computer,
-   or when writing out image files intended to be displayed on another device.
+   Most displays are sRGB by default with some newer displays having the option to use Rec. 2020.
+   These displays have a wider color gamut and can display high dynamic range content.
+   If you have an Apple display you probably will want to use Display P3.
+
+   It is important to check your OS and display setting to make sure
+   they all match the display in use to view the most accurate image.
 
    :sRGB: Used by most displays.
+   :Display P3: Used by most Apple devices.
+   :Rec. 1886: Used by many older TVs.
+   :Rec. 2020: Used for newer wide gamut HDR displays.
 
 .. _bpy.types.ColorManagedViewSettings.view_transform:
 
@@ -132,14 +137,48 @@ View Transform
       Does no extra conversion besides the conversion for the display device. Often used for
       non-photorealistic results or video editing where a specific look is already baked into
       the input video.
+   :AgX:
+      A tone mapping transform that improves on *Filmic*, giving more photorealistic results.
+      AgX offers 16.5 stops of dynamic range and unsaturates highly
+      exposed colors to mimic film's natural response to light.
    :Filmic:
-      For photorealistic results and better handling of high dynamic range colors.
-      The contrast can be adjusted by changing the *Look* option for the Filmic view transform.
+      A tone mapping transform designed to handle high dynamic range colors.
+      Filmic is deprecated and is superseded by AgX which improves handling of saturated colors.
    :Filmic Log:
       Converts to Filmic log color space. This can be used for export to color grading applications,
       or to inspect the image by flattening out very dark and light areas.
    :False Color:
-      Shows a heat map of image intensities, to visualize the dynamic range.
+      Shows a heat map of image intensities, to visualize the dynamic range, and help properly expose an image.
+
+      Below is a table that represents how normalized linear color data is represented with False Color.
+
+      .. list-table::
+         :header-rows: 1
+
+         * - Luminance Value
+           - Color
+         * - Low Clip
+           - Black
+         * - 0.0001% to 0.05%
+           - Blue
+         * - 0.05% to 0.5%
+           - Blue-Cyan
+         * - 0.5% to 5%
+           - Cyan
+         * - 5% to 16%
+           - Green-Cyan
+         * - 16% to 22%
+           - Grey
+         * - 22% to 35%
+           - Green-Yellow
+         * - 35% to 55%
+           - Yellow
+         * - 55% to 80%
+           - Orange
+         * - 80% to 97%
+           - Red
+         * - High Clip
+           - White
    :Raw:
       Intended for inspecting the image but not for final export.
       Raw gives the image without any color space conversion.
