@@ -13,30 +13,52 @@ They work by changing how an object is displayed and rendered, but not the geome
 You can add several modifiers to a single object to form `The Modifier Stack`_
 and *Apply* a modifier if you wish to make its changes permanent.
 
-.. figure:: /images/modeling_modifiers_introduction_menu.png
+.. _bpy.ops.object.modifier_add:
 
-   Modifiers menu.
-
-They can be added to the active object using the *Add Modifier* drop-down menu at the top of their properties tab.
+They can be added to the active object using the *Add Modifier* operator
+at the top of Modifiers tab in the :doc:`/editors/properties_editor` or using :kbd:`Shift-A` in the same tab.
 New modifiers are always added at the bottom of the :ref:`stack <modifier-stack>` (i.e. will be applied last).
 
-There are four categories of modifiers:
+There are many built-in modifiers but Blender also allows users
+to make their own modifiers through :doc:`/modeling/geometry_nodes/index`.
 
-Modify
-   These are tools similar to the *Deform* ones (see below),
+
+Categories
+==========
+
+There are four categories of built-in modifiers:
+
+Edit
+   Similar to the *Deform*  modifiers (see below),
    however, they usually do not directly affect the geometry of the object,
    but some other data, such as vertex groups.
 Generate
-   These are constructive/destructive tools that will affect the whole :term:`Topology` of the mesh.
+   Constructive/destructive modifiers that will affect the whole :term:`Topology` of the mesh.
    They can change the general appearance of the object, or add new geometry to it...
 Deform
-   Unlike *Generate* ones above, these only change the shape of an object, without altering its topology.
+   Unlike *Generate* ones above, these modifiers only change the shape of an object, without altering its topology.
 Simulate
-   Those represent :doc:`physics simulations </physics/index>`. In most cases, they are automatically added to
+   Represent :doc:`physics simulations </physics/index>`. In most cases, they are automatically added to
    the modifiers stack whenever a *Particle System* or *Physics* simulation is enabled. Their only role is to define
    the position in the modifier stack from which is taken the base data for the simulation they represent.
-   As such, they typically have no attributes, and are controlled by settings exposed in
-   separate sections of the :doc:`Properties </editors/properties_editor>`.
+   As such, they typically have no properties, and are controlled by settings exposed in
+   separate sections of the :doc:`/editors/properties_editor`.
+
+You will also notice a category called "Hair",
+this category comes from a bundled :term:`Asset Library` that is distributed with Blender.
+See :doc:`/modeling/geometry_nodes/hair/index` for more information.
+
+Users can make their own categories by making geometry node groups :term:`assets <Asset>`
+and assigning them to a :term:`Asset Catalog`. This catalog name will be the category name.
+If a user creates a catalog with the same name as one of the built-in categories
+the node group will be added to the bottom of the corresponding menu.
+
+Node Groups that are non-assets or that do not belong to a category will be available in the "Unassigned" sub-menu.
+
+.. note::
+
+   Geometry Node Groups must have the :ref:`Modifier <bpy.types.GeometryNodeTree.is_modifier>`
+   property enabled for the node group to show up in the Add Modifier menu.
 
 
 .. _bpy.types.Modifier.show:
@@ -44,14 +66,14 @@ Simulate
 Interface
 =========
 
+Each modifier's interface shares the same basic components, see Fig. :ref:`fig-modifiers-panel-layout`.
+
 .. _fig-modifiers-panel-layout:
 
 .. figure:: /images/modeling_modifiers_introduction_panel-layout.png
    :align: center
 
    Panel layout (Subdivision Surface as an example).
-
-Each modifier's interface shares the same basic components, see Fig. :ref:`fig-modifiers-panel-layout`.
 
 At the top is the panel header.
 The icons each represent different settings for the modifier (left to right):

@@ -70,7 +70,7 @@ Rigging often involves using one or more of the following features:
    This allows mesh objects to have flexible joints and is often used for skeletal animation.
 :ref:`Constraints <constraints-index>`
    To control the kinds of motions that make sense and add functionality to the rig.
-:ref:`Object Modifiers <modifiers-index>`
+:doc:`Object Modifiers </modeling/modifiers/index>`
    Mesh deformation can be quite involved, there are multiple modifiers that help control this.
 :ref:`Shape Keys <animation-shape_keys-index>`
    To support different target shapes *(such as facial expressions)* to be controlled.
