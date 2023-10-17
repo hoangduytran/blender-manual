@@ -15,13 +15,23 @@ Most experimental features are only available in `Daily Builds <https://builder.
 Debugging
 =========
 
-Cycles Debug
-   Show the Cycles rendering debug panel.
-
+Undo Legacy
+   Use legacy undo (slower than the new default one, but may be more stable in some cases).
 Override Auto Resync
    Enables library overrides automatic resync detection and process on file load.
    Disable when dealing with older blend-files that need manual Resync (Enforce) handling.
 
-Proxy to Override Auto Conversion
-   Enables conversion of proxies to library overrides on file load.
-   Disable if you want to keep existing proxies, and deal with their conversion yourself.
+Cycles Debug
+   Show the Cycles rendering debug panel.
+
+Asset Debug Info
+   Enable some extra fields in the Asset Browser to aid debugging.
+
+Asset Indexing
+   Disabling the asset indexer forces every asset library refresh to completely reread assets from disk.
+
+Viewport Debug
+   Enable viewport debugging options for developers in the overlays pop-over.
+
+EEVEE Debug
+   Enable EEVEE debuging options for developers.
