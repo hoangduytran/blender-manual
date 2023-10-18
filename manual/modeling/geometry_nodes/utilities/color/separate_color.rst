@@ -1,5 +1,6 @@
 .. _bpy.types.FunctionNodeSeparateColor:
 .. index:: Geometry Nodes; Separate Color
+.. --- copy below this line ---
 
 *******************
 Separate Color Node

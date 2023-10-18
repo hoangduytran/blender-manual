@@ -1,5 +1,6 @@
 .. _bpy.types.FunctionNodeCombineColor:
 .. index:: Geometry Nodes; Combine Color
+.. --- copy below this line ---
 
 ******************
 Combine Color Node
