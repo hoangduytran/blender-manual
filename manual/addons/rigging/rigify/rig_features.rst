@@ -468,8 +468,8 @@ Skin Bone Chains
    :align: right
    :width: 300px
 
-The foundation of the Rigify face is a network of Bendy Bone :ref:`chains <rigify.rigs.skin.basic_chain>` with controls
-placed at every bone end. These controls affect all bones that meet at that specific point.
+The foundation of the Rigify face is a network of Bendy Bone :ref:`chains <rigify.rigs.skin.basic_chain>` with
+controls placed at every bone end. These controls affect all bones that meet at that specific point.
 
 When the controls are merely translated, the B-Bone chains retain the normal automatic bezier handle behavior.
 Local rotation and/or scaling of the controls are applied on top of that.

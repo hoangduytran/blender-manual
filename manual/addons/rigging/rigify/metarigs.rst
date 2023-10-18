@@ -383,7 +383,8 @@ The progress of the corrective action from the start to the end frame is calcula
 values of the two trigger actions. Thus, the start frame is applied when either of the triggers is at the start frame,
 and the end frame is used when both are at their end frame.
 
-Corrective actions must be below their triggers in the list, which is enforced via an implicit reorder even if violated.
+Corrective actions must be below their triggers in the list, which is enforced via an implicit reorder even if
+violated.
 
 .. tip::
    Corrective actions behave in the most intuitive way when both triggers have the Default Frame equal to Start Frame.

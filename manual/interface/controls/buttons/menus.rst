@@ -49,7 +49,8 @@ All menu entries show any relevant shortcut keys, which can be executed without 
 .. _bpy.ops.wm.search_single_menu:
 
 All popup menus can be searched by pressing :kbd:`Spacebar` and typing the name of the operator in the menu.
-If a popup menu has "Search" as one of the items, the menu can be searched without having to press :kbd:`Spacebar` first.
+If a popup menu has "Search" as one of the items, the menu can be searched without having to press :kbd:`Spacebar`
+first.
 
 All popup menus of an editor can be searched using the :ref:`bpy.ops.wm.search_menu` feature.
 
