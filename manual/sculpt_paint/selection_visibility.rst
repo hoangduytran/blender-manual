@@ -35,11 +35,14 @@ The following standard selection operations are supported:
 - :kbd:`B` -- Box selection.
 - :kbd:`C` -- Circle select with brush.
 - :kbd:`Ctrl-I` -- Invert selection.
-
-The following only work for face selection:
-
 - :kbd:`L` -- Pick linked (under the mouse cursor).
 - :kbd:`Ctrl-L` -- Select linked.
+- :kbd:`Ctrl-NumpadPlus` -- Extend Selection
+- :kbd:`Ctrl-NumpadMinus` -- Shrink Selection
+
+The following only work for face selection and with the selection tool active:
+
+- :kbd:`ALT-LMB` -- Loop Select
 
 
 Vertex Selection Masking
