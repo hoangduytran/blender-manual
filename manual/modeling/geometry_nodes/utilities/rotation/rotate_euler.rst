@@ -16,7 +16,7 @@ Inputs
 ======
 
 Rotation
-   The Euler rotation to rotate.
+   The :term:`Euler` rotation to rotate.
 
 Rotate By
    Specifies how much an Euler rotation is rotated. This input is only available

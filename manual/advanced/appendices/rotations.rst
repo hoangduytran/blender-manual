@@ -17,6 +17,7 @@ Take, for instance, any three values for X, Y and Z rotation. Perform each one o
 Depending on the order in which you perform these, you will end up with different final orientations.
 So proper rotation coordinate systems are needed.
 
+.. _euler mode:
 
 Euler Modes
 ===========
@@ -56,6 +57,7 @@ This particular loss of axis is known as the "gimbal lock".
 One advantage of this mode is that animation curves are easy to understand and edit.
 However, special attention must be done when the middle axis approaches values close to 90° (or equivalent angles).
 
+.. _axis angle mode:
 
 Axis Angle Mode
 ===============
@@ -81,6 +83,7 @@ along the defined rotation axis, i.e. it points towards the direction defined by
 The axis-angle system is free from gimbal lock, but animation curves in this mode are not intuitive at all
 when animating axis and angle at the same time, in which case they are difficult to understand and edit.
 
+.. _quaternion mode:
 
 Quaternion Mode
 ===============
