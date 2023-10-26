@@ -253,12 +253,15 @@ Use from 3D Viewport
 
 .. figure:: /images/asset_browser-pose_library-use_from_viewport.png
 
-   The pose library as a side-panel of the 3D Viewport.
+   The pose library in use from the Asset Shelf.
 
-The Sidebar of the 3D Viewport has a Pose Library panel in the Animations tab.
-Contrary to the Asset Browser, which can be used for different asset types and
-also for some asset management tasks, this panel is dedicated to applying poses.
-This means that it can allow faster interaction.
+.. note::
+
+  The pose library previously lived in the Sidebar within the Pose Library panel.
+  The panel still exists, but now contains a button to open the asset shelf.
+
+In the 3D viewport, poses can be quickly applied from the :ref:`ui-region-asset_shelf`.
+Contrary to the Asset Browser, the shelf allows you to apply poses quicker.
 
 **Click on a pose to apply it.** A single click is enough.
 You can also select and apply a pose via the cursor keys.
@@ -267,11 +270,6 @@ to directly see the result on the active character.
 
 **Drag the pose thumbnail left to right to blend it** into the character's current pose.
 Just release the mouse button to confirm.
-
-To **search for poses**, hover your mouse over the poses,
-then press :kbd:`Ctrl-F` and type a search query.
-This will filter the poses to match what you typed.
-The scrollable area will automatically scroll the search field into view.
 
 
 .. _pose-library-old:

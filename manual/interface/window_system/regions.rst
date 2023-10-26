@@ -170,3 +170,42 @@ Scaling
 The scale of certain regions (such as the Toolbar) can be changed by dragging inside them
 with :kbd:`Ctrl-MMB`, or using :kbd:`NumpadPlus` and :kbd:`NumpadMinus` while hovering the
 mouse cursor over them. Press :kbd:`Home` to reset the scale to the default.
+
+
+.. _ui-region-asset_shelf:
+
+Asset Shelf
+===========
+
+Search
+------
+
+To search for assets, hover your mouse over the Asset Shelf, then press Ctrl-F and type a search query. 
+This will filter the poses to match what you typed.
+
+
+Tabs
+----
+
+.. figure:: /images/asset_shelf-tabs.png
+
+   The usage of catalogs as tabs.
+
+Catalogs can be shown as individual tabs. Each tab will only show its content, and the content of its children. 
+That makes it easy to filter down to a certain set of assets.
+
+
+Display Options
+---------------
+
+.. figure:: /images/asset_shelf-options.png
+
+   Display options available for the asset shelf.
+
+It is possible to change the size of items on the shelf by using the size property.
+
+By toggling on the "Names" checkbox, the asset names will be shown in the shelf. Alternatively it is also
+possible to hover over an item to show its name.
+
+By default the shelf only has a height for one item row. To allow for more rows, drag it on the upper edge to increase its size.
+
