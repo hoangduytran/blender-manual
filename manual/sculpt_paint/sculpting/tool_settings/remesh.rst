@@ -5,7 +5,7 @@ Remesh
 
 .. reference::
 
-   :Mode:      All Paint Modes
+   :Mode:      Sculpt Mode
    :Header:    :menuselection:`Tool Settings --> Remesh`
    :Panel:     :menuselection:`Sidebar --> Tool --> Remesh`
    :Shortcut:  :kbd:`Ctrl-R`
