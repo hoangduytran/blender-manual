@@ -36,8 +36,8 @@ Properties
 ==========
 
 Data Type
-   The data type that is used for mixing. The node supports float,
-   vector and color data types.
+   The data type that is used for mixing.
+   The node supports float, vector, color, and rotation data types.
 
 Factor Mode (Vector only)
    The factor mode can be set to *Uniform* and *Non-Uniform*.
