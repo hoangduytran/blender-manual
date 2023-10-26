@@ -115,6 +115,25 @@ Detach Links :kbd:`Alt-LMB` drag
    and move the nodes to a new location.
 
 
+.. _bpy.ops.node.clipboard_copy:
+.. _bpy.ops.node.clipboard_paste:
+
+Copy/Paste
+==========
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Copy`, :menuselection:`Node --> Paste`
+   :Shortcut:  :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
+
+Not only the selected nodes but also the connections between them are copied to the clipboard.
+
+.. note::
+
+   The pasted node will be placed in the *same* position as when it was copied.
+   Use the same cautions as when duplicating.
+
+
 .. _bpy.ops.node.duplicate_move:
 
 Duplicate
@@ -148,25 +167,6 @@ Duplicate Linked
    :Shortcut:  :kbd:`Alt-D`
 
 Duplicate selected nodes, but not their node trees (in the case of group nodes), and move them.
-
-
-.. _bpy.ops.node.clipboard_copy:
-.. _bpy.ops.node.clipboard_paste:
-
-Copy/Paste
-==========
-
-.. reference::
-
-   :Menu:      :menuselection:`Node --> Copy`, :menuselection:`Node --> Paste`
-   :Shortcut:  :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
-
-Not only the selected nodes but also the connections between them are copied to the clipboard.
-
-.. note::
-
-   The pasted node will be placed in the *same* position as when it was copied.
-   Use the same cautions as when duplicating.
 
 
 .. _bpy.ops.node.delete:
