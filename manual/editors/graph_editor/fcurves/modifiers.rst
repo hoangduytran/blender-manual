@@ -278,9 +278,9 @@ Limits Modifier
 
 Limit curve values to specified X and Y ranges.
 
-Minimum X, Y
+Minimum, Maximum X
    Cuts a curve off at these frames ranges, and sets their minimum value at those points.
-Minimum X, Y
+Minimum, Maximum Y
    Truncates the curve values to a range.
 
 Influence
