@@ -42,7 +42,7 @@ The following standard selection operations are supported:
 
 The following only work for face selection and with the selection tool active:
 
-- :kbd:`ALT-LMB` -- Loop Select
+- :kbd:`Alt-LMB` -- Loop Select
 
 
 Vertex Selection Masking

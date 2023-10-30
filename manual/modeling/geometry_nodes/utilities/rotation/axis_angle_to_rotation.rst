@@ -9,7 +9,8 @@ Axis Angle to Rotation Node
     :align: right
     :alt: Axis Angle to Rotation node.
 
-The *Axis Angle to Rotation* node converts a :ref:`axis angle <axis angle mode>` rotation to a standard rotation value.
+The *Axis Angle to Rotation* node converts a :ref:`axis angle <axis angle mode>` rotation to a standard rotation
+value.
 
 Inputs
 ======

@@ -207,5 +207,6 @@ It is possible to change the size of items on the shelf by using the size proper
 By toggling on the "Names" checkbox, the asset names will be shown in the shelf. Alternatively it is also
 possible to hover over an item to show its name.
 
-By default the shelf only has a height for one item row. To allow for more rows, drag it on the upper edge to increase its size.
+By default the shelf only has a height for one item row. To allow for more rows, drag it on the upper edge to increase
+its size.
 
