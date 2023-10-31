@@ -180,13 +180,6 @@ Activate Gizmo Event
    :Drag:
       The operation only gets initiated once you start dragging the gizmo.
 
-Right Mouse Select Action
-   The default action for the right mouse button.
-   This option is only available when Right click *Select with Mouse Button* is chosen.
-
-   :Select & Tweak: Right mouse always tweaks the selected item.
-   :Selection Tool: Right mouse uses the selection tool.
-
 Tool Keys
    The method of keys to activate tools such as move, rotate, and scale.
 
@@ -203,11 +196,6 @@ Alt Tool Access
    to move the selected object, rather than having to drag its gizmo.)
    This option is only available when *Select with Mouse Button* is set to Left click
    and :ref:`Emulate 3 Button Mouse <preferences-input-emulate-mouse>` is disabled.
-
-Alt Cursor Access
-   Hold :kbd:`Alt-LMB` to place the Cursor (instead of :kbd:`LMB`), allows tools to activate on press
-   instead of drag. This option is only available when Right click *Select with Mouse Button* is chosen.
-   Note this option is not available when using :ref:`Emulate 3 Button Mouse <preferences-input-emulate-mouse>`.
 
 Select All Toggles
    Causes selection shortcut :kbd:`A` to deselect all when any selection exists.
@@ -263,6 +251,12 @@ Pie Menu on Drag
 
 Extra Shading Pie Menu Items
    Show additional items in the shading menu (:kbd:`Z` key).
+
+Transform Navigation with Alt
+   During transformations, use :kbd:`Alt` to navigate the 3D Viewport.
+
+   When disabled, hotkeys for proportional editing, automatic constraints,
+   and auto IK chain length will require holding :kbd:`Alt`.
 
 
 File Browser
