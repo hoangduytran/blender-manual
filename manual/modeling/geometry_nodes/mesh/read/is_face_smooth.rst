@@ -1,17 +1,17 @@
-.. index:: Geometry Nodes; Is Shade Smooth
+.. index:: Geometry Nodes; Is Face Smooth
 .. _bpy.types.GeometryNodeInputShadeSmooth:
 
 ********************
-Is Shade Smooth Node
+Is Face Smooth Node
 ********************
 
-.. figure:: /images/node-types_GeometryNodeInputShadeSmooth.webp
+.. figure:: /images/node-types_GeometryNodeInputFaceSmooth.png
    :align: right
-   :alt: Is Shade Smooth Node.
+   :alt: Is Face Smooth Node.
 
-The *Is Shade Smooth* node outputs true for each face of the mesh if that face
+The *Is Face Smooth* node outputs true for each face of the mesh if that face
 is marked to render smooth shaded. Otherwise, if the face is marked to render as flat
-shaded, so the node outputs false.
+shaded, then the node outputs false.
 
 
 Inputs
