@@ -4,13 +4,30 @@
 Defaults
 ********
 
-When you start Blender for the first time, the interactive region of
+When you start Blender for the first time or update to a new version, the interactive region of
 the :doc:`Splash Screen </interface/window_system/splash>` is replaced with
 a couple of initial preferences to configure how you interact with Blender.
 
 .. note::
 
    These options can always be changed later in the :doc:`Preferences </editors/preferences/index>`.
+
+
+Import Existing Settings
+========================
+
+This is where you can copy settings from an older version of Blender.
+Doing so will copy preferences and startup files from the previous version of Blender and then loads them.
+
+The settings need to be imported from previous versions because the configuration files of each Blender version
+are stored in separate folders. Refer to the :doc:`/advanced/blender_directory_layout` page
+for the location of these folders.
+
+If you would like to start fresh with the new version, continue to `Create New Settings`_.
+
+
+Create New Settings
+===================
 
 Language
    The language used in the user interface.
@@ -34,6 +51,7 @@ Shortcuts
 
 Select With
    Controls which mouse button, either right or left, is used to select items in Blender.
+
 Spacebar
    Controls the action of :kbd:`Spacebar`.
    These and other shortcuts can be modified in the :doc:`keymap preferences </editors/preferences/keymap>`.
@@ -47,24 +65,13 @@ Spacebar
    :Search:
       Opens up the :doc:`Menu Search </interface/controls/templates/operator_search>`.
       This option is good for someone who is new to Blender and is unfamiliar with its menus and shortcuts.
+
 Theme
    Choose between a light or dark theme for Blender.
    Themes can be customized more in the :doc:`Preferences </editors/preferences/themes>`.
 
-Load Previous Version Settings
-   Copies preferences and startup files from the previous version of Blender and then loads them.
-
-   The settings need to be imported from previous versions because the configuration files of each Blender version
-   are stored in separate folders. Refer to the :doc:`/advanced/blender_directory_layout` page
-   for the location of these folders.
-
-There are two areas where Blender's defaults are stored:
-
-Preferences
-   The :ref:`Preferences <prefs-menu>` file stores keymap, add-ons theme and other options.
-Startup File
-   The :ref:`Startup File <startup-file>` stores the scene and UI setup which are displayed at startup
-   and when creating a new file (:menuselection:`File --> New`).
+Save New Settings
+   Saves the settings set above and opens the regular :ref:`splash`.
 
 
 Saving Defaults
@@ -75,6 +82,14 @@ The preferences are automatically saved when changed.
 Changing the default startup file can be done via
 :menuselection:`File --> Defaults --> Save Startup File`.
 See :ref:`Startup File <startup-file>`.
+
+There are two areas where Blender's defaults are stored:
+
+Preferences
+   The :ref:`Preferences <prefs-menu>` file stores keymap, add-ons theme and other options.
+Startup File
+   The :ref:`Startup File <startup-file>` stores the scene and UI setup which are displayed at startup
+   and when creating a new file (:menuselection:`File --> New`).
 
 
 Loading Factory Settings

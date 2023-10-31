@@ -1,3 +1,4 @@
+.. _bpy.ops.wm.splash:
 .. _splash:
 
 *************
@@ -18,25 +19,35 @@ click anywhere outside the splash screen (but inside the Blender window) or pres
 The splash screen will disappear revealing the default screen.
 To reopen the splash screen, click on the Blender icon in the Topbar and select *Splash Screen*.
 
-Information Region
-   The upper part of the splash screen contains the splash image with the Blender version in the top right.
-Interactive Region
-   The interactive region is the bottom half of the splash screen.
-
-   New File
-      Start a new project based on a template.
-   Recent Files
-      Your most recently opened blend-files. This gives quick and easy access to your recent projects.
-   Open
-      Allows opening an existing blend-file.
-   Recover Last Session
-      Blender will try to recover the last :term:`session` based on temporary files. See
-      :doc:`/troubleshooting/recover`.
-   Links
-      Links to the official web site. The same links can be found in the :ref:`help-menu`
-      of the :doc:`Topbar </interface/window_system/topbar>`.
-
 .. note::
 
-   When starting Blender for the first time, the Interactive Region
-   contains a :ref:`Quick Set Up Process <splash-quick-start>`.
+   When starting Blender for the first time or updating to a new version,
+   the "interactive region" contains a :ref:`Quick Set Up Process <splash-quick-start>`.
+
+
+Splash Image
+============
+
+The upper part of the splash screen contains the splash image with the Blender version in the top right.
+
+
+Interactive Region
+==================
+
+The interactive region is the bottom half of the splash screen.
+
+New File
+   Start a new project based on a template.
+Recent Files
+   Your most recently opened blend-files. This gives quick and easy access to your recent projects.
+
+Open
+   Allows opening an existing blend-file.
+Recover Last Session
+   Blender will try to recover the last :term:`session` based on temporary files. See
+   :doc:`/troubleshooting/recover`.
+
+Donate
+   Open Blender's `Development Fund <https://fund.blender.org/>`__ website.
+What's New
+   Open the latest release notes.
