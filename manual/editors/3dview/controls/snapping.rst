@@ -218,18 +218,3 @@ Affect
 Specifies which transformations are affected by snapping.
 By default, snapping only happens while moving something,
 but you can also enable it for rotating and scaling.
-
-
-Multiple Snap Targets
----------------------
-
-While you're transforming a selection with snapping enabled,
-you can press :kbd:`A` whenever there's a highlighted snap target to
-mark it. With multiple such targets marked, the selection will
-then be snapped to their average location.
-
-Marking a target more than once will give it more weight.
-
-.. figure:: /images/editors_3dview_controls_snapping_target-multiple.png
-
-   Multiple snapping targets.
