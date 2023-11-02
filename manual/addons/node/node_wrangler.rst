@@ -335,18 +335,6 @@ Reload Images
 Reload all of the images used in the node tree. This lets you reload the images without using the Image Editor.
 
 
-Switch Node Type
-----------------
-
-.. reference::
-
-   :Menu:   :menuselection:`Node Wrangler --> Switch Node Type`
-   :Shortcut:  :kbd:`Shift-S`
-
-Change the type of the selected nodes to any other type. It tries to preserve the connections and values of
-the original as much as possible.
-
-
 Copy Settings
 -------------
 

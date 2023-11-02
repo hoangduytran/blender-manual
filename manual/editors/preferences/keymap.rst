@@ -89,17 +89,12 @@ The Keymap editor lets you change the default hotkeys. You can change keymaps fo
 Active
    Uncheck to disable this keymap item.
 Map Type
-   Keyboard
-      Single hotkey or key combination.
-   Mouse
-      Actions from mouse buttons, tablet or touchpad input.
-   NDOF
-      Movement from a 3D mouse (:term:`NDOF`) device.
-   Tweak
-      Mouse click and drag *(optionally map drag direction to different actions)*.
-   Text Input
-      Use this function by entering a text.
-   Timer
+   :Keyboard: Single hotkey or key combination.
+   :Mouse: Actions from mouse buttons, tablet or touchpad input.
+   :NDOF: Movement from a 3D mouse (:term:`NDOF`) device.
+   :Tweak: Mouse click and drag *(optionally map drag direction to different actions)*.
+   :Text Input: Use this function by entering a text.
+   :Timer:
       Used to control actions based on a time period.
       E.g. by default, *Animation Step* uses "Timer 0", *Smooth View* uses "Timer 1".
 Operator ID Name

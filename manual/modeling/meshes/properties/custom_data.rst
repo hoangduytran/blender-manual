@@ -28,20 +28,6 @@ Add/Clear Skin Data
 Add/Clear Custom Split Normals Data
    Adds :ref:`Custom Split Normals <modeling_meshes_normals_custom>` data, if none exists yet.
 
-.. _bpy.ops.mesh.customdata_bevel_weight_edge_add:
-.. _bpy.ops.mesh.customdata_bevel_weight_edge_clear:
-
-Add/Clear Edge Bevel Weight
-   Adds a zero :ref:`Edge Bevel Weight <modeling-edges-bevel-weight>` value to all edges of the mesh.
-   If edge bevel data does exist, this operator will delete all that data.
-
-.. _bpy.ops.mesh.customdata_bevel_weight_vertex_add:
-.. _bpy.ops.mesh.customdata_bevel_weight_vertex_clear:
-
-Add/Clear Vertex Bevel Weight
-   Adds a zero :ref:`Vertex Bevel Weight <modeling-vertex-bevel-weight>` value to all vertices of the mesh.
-   If vertex bevel data does exist, this operator will delete all that data.
-
 .. _bpy.ops.mesh.customdata_crease_edge_add:
 .. _bpy.ops.mesh.customdata_crease_edge_clear:
 

@@ -1,9 +1,9 @@
 .. index:: Geometry Nodes; Is Face Smooth
 .. _bpy.types.GeometryNodeInputShadeSmooth:
 
-********************
+*******************
 Is Face Smooth Node
-********************
+*******************
 
 .. figure:: /images/node-types_GeometryNodeInputFaceSmooth.png
    :align: right
