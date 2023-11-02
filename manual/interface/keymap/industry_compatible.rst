@@ -16,7 +16,9 @@ General
    * - :kbd:`1` - :kbd:`3`
      - Switch Selection mode
    * - :kbd:`4``
-     - Object Modes pie menu
+     - Object Mode
+   * - :kbd:`5``
+     - Modes Pie Menu
    * - :kbd:`RMB`
      - Context menu
    * - :kbd:`Tab`
