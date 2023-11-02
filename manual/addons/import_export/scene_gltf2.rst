@@ -47,10 +47,12 @@ GPU Instances
 
 When the option is enable in Exporter, instances are exported using the ``EXT_mesh_gpu_instancing`` extension.
 There are some limitations, at export:
+
 - Instances must be meshes, and don't have any children themselves
 - Instances must all be children of the same object.
 - This extension doesn't manage material variation. That means that the generated file may include all instances with same materials.
 - Instances detected are objects sharing the same mesh data.
+
 At import, instances are created by creating objects sharing the same mesh data.
 
 Materials
@@ -772,19 +774,6 @@ referenced by the ``.gltf`` file.
    Be aware that sharing this format requires sharing all of these separate files
    together as a group.
 
-
-glTF Embedded (``.gltf``)
--------------------------
-
-This produces a JSON text-based ``.gltf`` file, with all mesh data and
-image data encoded (using Base64) within the file. This form is useful if
-the asset must be shared over a plain-text-only connection.
-
-.. warning::
-
-   This is the least efficient of the available forms, and should only be used when required.
-
-
 Properties
 ==========
 
@@ -815,8 +804,8 @@ Lighting Mode
    Standard: Physically-based glTF lighting units (cd, lx, nt).
    Unitless: Non-physical, unitless lighting. Useful when exposure controls are not available
    Raw (Deprecated): Blender lighting strengths with no conversion
-Import Webp textures
-   If a texture exists in webp format, loads the webp texture instead of the fallback png/jpg one.
+Import WebP textures
+   If a texture exists in WebP format, loads the WebP texture instead of the fallback png/jpg one.
 
 
 Export
@@ -903,15 +892,15 @@ Materials
 Images
    Output format for images. PNG is lossless and generally preferred, but JPEG might be preferable for
    web applications due to the smaller file size.
-   If webp is chosen, all textures will be saved as Webp, without any png/jpg fallback.
+   If WebP is chosen, all textures will be saved as WebP, without any png/jpg fallback.
    If None is chosen, materials are exported without textures.
 Image Quality
-   When exporting jpeg or Webp files, the quality of the exported file.
-Create Webp
-   Creates webp textures for every textures, in addition to the existing texture.
-   For already webp textures, nothing happen.
-Webp fallback
-   For all webp textures, create a png fallback texture.
+   When exporting jpeg or WebP files, the quality of the exported file.
+Create WebP
+   Creates WebP textures for every textures, in addition to the existing texture.
+   For already WebP textures, nothing happen.
+WebP fallback
+   For all WebP textures, create a png fallback texture.
 Export Original PBR Specular
    When On, specular data are exported from glTF Material Output node,
    Instead of using sockets from Principled BSDF Node.
