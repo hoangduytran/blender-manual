@@ -79,9 +79,13 @@ Settings like mouse sensitivity and default speed can be adjusted in the
    * - :kbd:`D`/:kbd:`Right`
      - Strafe right.
    * - :kbd:`E`
-     - Move up -- only available if *Gravity* is off.
+     - Move up (global) -- only available if *Gravity* is off.
    * - :kbd:`Q`
-     - Move down -- only available if *Gravity* is off.
+     - Move down (global) -- only available if *Gravity* is off.
+   * - :kbd:`R`
+     - Move up (local) -- only available if *Gravity* is off.
+   * - :kbd:`F`
+     - Move down (local) -- only available if *Gravity* is off.
    * - :kbd:`Spacebar`
      - Teleport to the location at the crosshair
        (offset by the *Camera Height* value set in the Preferences).
