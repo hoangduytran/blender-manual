@@ -1,9 +1,9 @@
 .. _bpy.types.ShaderNodeBsdfVelvet:
 .. _bpy.types.ShaderNodeBsdfSheen:
 
-***********
+**********
 Sheen BSDF
-***********
+**********
 
 .. figure:: /images/node-types_ShaderNodeBsdfSheen.png
    :align: right
