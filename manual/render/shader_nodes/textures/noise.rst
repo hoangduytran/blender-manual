@@ -29,6 +29,9 @@ Detail
    Higher number of octaves corresponds to a higher render time.
 Roughness
    Blend between a smoother noise pattern, and rougher with sharper peaks.
+Lacunarity
+   The difference between the scale of each two consecutive octaves.
+   Larger values corresponds to larger scale for higher octaves.
 Distortion
    Amount of distortion.
 
@@ -48,6 +51,10 @@ Dimensions
 
       Higher dimensions corresponds to higher render time,
       so lower dimensions should be used unless higher dimensions are necessary.
+
+Normalize
+   If enabled, ensures that the output values stay in the range 0.0 to 1.0.
+   When disabled, output values are in the range -1.0 to 1.0.
 
 
 Outputs
