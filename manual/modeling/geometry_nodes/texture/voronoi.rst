@@ -31,6 +31,15 @@ W
    Texture coordinate to evaluate the noise at.
 Scale
    Scale of the noise.
+Detail
+   Number of noise octaves.
+   The fractional part of the input is multiplied by the magnitude of the highest octave.
+   Higher number of octaves corresponds to a higher evaluation time.
+Roughness
+   Blend between a smoother noise pattern, and rougher with sharper peaks.
+Lacunarity
+   The difference between the scale of each two consecutive octaves.
+   Larger values corresponds to larger scale for higher octaves.
 Smoothness
    The smoothness of the noise.
 
@@ -239,6 +248,10 @@ Distance Metric
         - .. figure:: /images/render_shader-nodes_textures_voronoi_minkowski-32.png
 
              Minkowski Exponent: 32.0 (approximation of Chebychev).
+
+Normalize
+   If enabled, ensures that the output values stay in the range 0.0 to 1.0.
+   In rare cases, the output value may be outside that range when *Feature* is *F2*.
 
 
 Outputs

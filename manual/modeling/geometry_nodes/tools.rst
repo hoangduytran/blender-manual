@@ -14,6 +14,8 @@ They can be shared as any regular node group assets.
    Node group tools integrated in the Selection menu.
 
 
+.. _tool_context:
+
 Tool Context
 ============
 
@@ -62,11 +64,11 @@ Tool-specific Nodes
 
 The following nodes are only supported in the tool context:
 
-   - 3D Cursor
-   - Face Set
-   - Selection
-   - Set Face Set
-   - Set Selection
+   - :doc:`/modeling/geometry_nodes/input/scene/3d_cursor`
+   - :doc:`/modeling/geometry_nodes/mesh/read/face_set`
+   - :doc:`/modeling/geometry_nodes/geometry/read/selection`
+   - :doc:`/modeling/geometry_nodes/mesh/write/set_face_set`
+   - :doc:`/modeling/geometry_nodes/geometry/write/set_selection`
 
 .. note::
 

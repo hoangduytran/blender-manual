@@ -8,3 +8,4 @@
 
    set_id.rst
    set_position.rst
+   set_selection.rst
