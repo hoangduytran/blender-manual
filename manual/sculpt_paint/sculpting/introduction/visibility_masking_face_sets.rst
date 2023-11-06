@@ -63,6 +63,9 @@ Both these operators can be quickly accessed in the :kbd:`A` pie menu.
 
    More information about editing and using masks at the :doc:`Mask Menu </sculpt_paint/sculpting/editing/mask>`
 
+
+.. _face_sets:
+
 Face Sets
 =========
 

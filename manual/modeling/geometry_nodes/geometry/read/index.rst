@@ -12,3 +12,4 @@
    normal.rst
    position.rst
    radius.rst
+   selection.rst
