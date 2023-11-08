@@ -5,7 +5,7 @@
 Node-Based Tools
 ****************
 
-Geometry Nodes can be used to expand the core functionality of Blender via node group defined tools.
+Geometry Nodes can be used to expand the core functionality of Blender via node-group-defined tools.
 They can be shared as any regular node group assets.
 
 .. figure:: /images/modeling_geometry-nodes_tools.png
@@ -52,17 +52,17 @@ The node group inputs will be exposed as in the :doc:`Adjust Last Operation </in
 Supported Modes and Data-Types
 ==============================
 
-Node groups must specify which mode and object types they support.
+Node groups must specify which modes and object types they support.
 This helps to determine where the tool is available in the user interface.
-These properties can be configured in popover menus in the :doc:`/editors/geometry_node`.
+These properties can be configured in popover menus in the :doc:`/editors/geometry_node` when in the *Tool* context.
 
-Currently, only Edit and Sculpting mode, for Mesh and Curve objects are supported.
+Currently only Edit and Sculpting modes are supported, and only for the Mesh and Hair Curves object types.
 
 
 Tool-specific Nodes
 ===================
 
-The following nodes are only supported in the tool context:
+The following nodes are only supported in the *Tool* context:
 
    - :doc:`/modeling/geometry_nodes/input/scene/3d_cursor`
    - :doc:`/modeling/geometry_nodes/mesh/read/face_set`
@@ -73,13 +73,13 @@ The following nodes are only supported in the tool context:
 .. note::
 
    The :doc:`Self Object </modeling/geometry_nodes/input/scene/self_object>`
-   node returns the Active object when inside a Tool node group.
+   node returns the Active object when inside a *Tool* node group.
 
 
 Non-supported Nodes
 ===================
 
-These nodes are only supported in the modifier context:
+These nodes are only supported in the *Modifier* context:
 
   - :doc:`/modeling/geometry_nodes/simulation/simulation_zone`
   - :doc:`/modeling/geometry_nodes/output/viewer`
