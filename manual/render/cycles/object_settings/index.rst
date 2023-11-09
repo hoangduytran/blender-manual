@@ -3,12 +3,12 @@
   Object Settings
 ###################
 
-These are options that are scattered though out Blender,
-and are often only available in certain contexts.
+Settings for objects and object data.
 
 .. toctree::
    :maxdepth: 2
 
    object_data.rst
+   light_linking.rst
    adaptive_subdiv.rst
    cameras.rst
