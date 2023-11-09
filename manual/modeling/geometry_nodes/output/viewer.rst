@@ -15,6 +15,10 @@ The *Viewer* node allows viewing data from inside a geometry node group in the
 Any geometry connected can be visualized in the viewport and its attribute values
 can be read in the spreadsheet.
 
+.. note::
+
+   This node cannot be used in the :ref:`Tool context <tool_context>`—only in the *Modifier* context.
+
 
 Usage
 =====

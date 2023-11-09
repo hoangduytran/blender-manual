@@ -26,6 +26,10 @@ It is not possible to have any link going towards outside.
 The result of the simulation can only be accessed via the Simulation Output node.
 This also allows sub-frame interpolation for motion blur.
 
+.. note::
+
+   This node cannot be used in the :ref:`Tool context <tool_context>`—only in the *Modifier* context.
+
 
 Clock
 =====

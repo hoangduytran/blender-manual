@@ -12,6 +12,8 @@ Self Object Node
 The *Self Object* node outputs the object that contains the geometry nodes modifier
 currently being executed. This can be used to retrieve the original transforms.
 
+When evaluated in the :ref:`Tool context <tool_context>`, this node returns the Active object.
+
 .. note::
 
    The geometry cannot be retrieved from this object with the

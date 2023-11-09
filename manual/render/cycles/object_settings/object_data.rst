@@ -261,3 +261,23 @@ Light Group
       If the name input into the *Light Group* field does not align with an existing
       Light Group, then pressing this button will create a *Light Group* with that name
       and assign the selected *Object* or *Light* to it.
+
+Light Linking
+-------------
+
+.. _render-cycles-object-light-linking-settings:
+
+Limit light influence to specified objects, with :ref:`Light Linking <bpy.types.Object.light_linking>`.
+
+Receiver Collection
+   Collection of objects that will receive light emitted from the object.
+
+Shadow Linking
+--------------
+
+.. _render-cycles-object-shadow-linking-settings:
+
+Limit shadows to specified objects, with :ref:`Light Linking <bpy.types.Object.light_linking>`.
+
+Shadow Blocker Collection
+   Collection of objects that will act as shadow blockers for light emitted from the object.
