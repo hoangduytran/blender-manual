@@ -245,6 +245,18 @@ You can even use the *Grab* sculpting tool to move the pinned UVs.
 This helps with fitting a UV island to a certain shape or region.
 
 
+Invert Pins
+===========
+
+.. reference::
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Invert Pins`
+
+Pin all un-pinned selected UVs and un-pin all currently selected pinned UVs.
+
+
 Mark/Clear Seams
 ================
 
