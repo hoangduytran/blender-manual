@@ -70,14 +70,15 @@ Attribute Data Types
 
 The type of an attribute is the kind of data stored at each element.
 
-   :Boolean: True or false value
-   :Integer: 32-bit integer
-   :8-Bit Integer: Smaller integer with a range from -128 to 127
-   :Float: Floating-point value
-   :Vector: 3D vector with floating-point values
-   :2D Vector: 2D vector with floating-point values
-   :Color: RGBA color with 32-bit floating-point values
-   :Byte Color: RGBA color with 8-bit positive integer values
+   :Boolean: True or false value.
+   :Integer: 32-bit integer.
+   :8-Bit Integer: Smaller integer with a range from -128 to 127.
+   :Float: Floating-point value.
+   :Vector: 3D vector with floating-point values.
+   :2D Vector: 2D vector with floating-point values.
+   :Color: RGBA color with 32-bit floating-point values.
+   :Byte Color: RGBA color with 8-bit positive integer values.
+   :Quaternion: Floating point :term:`Quaternion` rotation.
 
 The above list is in the order of least to most "complex" (An integer can contain more data than a
 boolean, so it is more complicated). When joining separate geometries together, the more complex data
