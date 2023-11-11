@@ -302,6 +302,9 @@ Cache
    Show Cache
       Show all enabled types.
 
+      Baked simulations will be shown as fully opaque, cached simulations will be slightly transparent,
+      and invalid caches will be slightly transparent with dark diagonal stripes.
+
       Soft Body, Particles, Cloth, Simulation Nodes, Smoke, Dynamic Paint, Rigid Body.
 
    .. figure:: /images/editors_timeline_cache.png

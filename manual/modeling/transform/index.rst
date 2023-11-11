@@ -1,4 +1,3 @@
-.. _bpy.ops.transform:
 
 #############
   Transform

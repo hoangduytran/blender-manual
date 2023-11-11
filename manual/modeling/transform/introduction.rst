@@ -15,13 +15,9 @@ They work by changing the geometry which you can edit directly.
 Operators
 =========
 
-.. _bpy.ops.transform.transform:
-
 There are several transformation operations included in Blender.
 Here are some of the main operations available:
 
-
-.. _bpy.ops.transform.translate:
 
 Move
 ----
@@ -29,15 +25,11 @@ Move
 This operations allows you to move elements along the X, Y, and Z axes in the scene.
 
 
-.. _bpy.ops.transform.rotate:
-
 Rotate
 ------
 
 You can use this function to rotate elements around the X, Y, and Z axes.
 
-
-.. _bpy.ops.transform.resize:
 
 Scale
 -----
@@ -45,15 +37,11 @@ Scale
 Scaling allows you to increase or decrease the size of an object along the X, Y, and Z axes.
 
 
-.. _bpy.ops.transform.align:
-
 Align to View
 -------------
 
 This is useful for aligning objects with the view from the camera or another specific viewpoint.
 
-
-.. _bpy.ops.transform.mirror:
 
 Mirror
 ------
