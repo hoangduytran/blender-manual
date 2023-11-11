@@ -35,6 +35,8 @@ Frame Selected :kbd:`NumpadPeriod`
    Zooms in the display to fit only the selected strips.
 Frame All :kbd:`Home`
    Zooms the display to show all strips.
+Go to Current Frame
+   Centers the horizontal timeline on the current frame.
 Zoom :kbd:`Shift-B`
    Click and drag to draw a rectangle and zoom to this rectangle.
 
