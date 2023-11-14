@@ -25,8 +25,17 @@ Other nodes can be connected as inputs to the inside of the repeat zone from the
 Those are constant throughout every iteration based on their value at the current frame.
 However, outputs of the zone must be connected through the *Repeat Output* node.
 
+
 Inputs
 ======
 
 Iterations
    Number of repetitions.
+
+
+Properties
+==========
+
+Inspection Index
+   Iteration number that is used by inspection features like the :doc:`/modeling/geometry_nodes/output/viewer`
+   or :doc:`socket inspection </modeling/geometry_nodes/inspection>`.
