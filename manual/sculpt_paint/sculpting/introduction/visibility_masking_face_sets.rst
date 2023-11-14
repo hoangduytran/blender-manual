@@ -28,6 +28,7 @@ is also available in the :kbd:`Alt-W` pie menu.
 
    More information for controlling the visibility at :doc:`Show & Hide </sculpt_paint/sculpting/editing/sculpt>`.
 
+
 Masks
 =====
 
@@ -39,6 +40,7 @@ The mask can for example be created/edited via the :doc:`Mask Brush </sculpt_pai
 :doc:`Lasso Mask </sculpt_paint/sculpting/tools/lasso_mask>`,
 :doc:`Line Mask </sculpt_paint/sculpting/tools/line_mask>`
 and :doc:`Mask by Color </sculpt_paint/sculpting/tools/mask_by_color>` tools.
+
 
 Clear & Invert
 --------------
@@ -57,7 +59,6 @@ the best workflow is to first :ref:`Clear <mask_clear>` and then :ref:`Invert <m
 Both these operators can be quickly accessed in the :kbd:`A` pie menu.
 
 .. figure:: /images/sculpt-paint_sculpting_editing_mask_pie.png
-
 
 .. seealso::
 
@@ -92,6 +93,7 @@ They can also be edited with the
    More information about editing and using face sets at the
    :doc:`Face Sets Menu </sculpt_paint/sculpting/editing/face_sets>`
 
+
 Auto-Masking
 ============
 
@@ -100,6 +102,7 @@ without having to manually create a new mask or hide geometry.
 This feature is especially useful in combination with face sets.
 
 .. figure:: /images/sculpt-paint_sculpting_automasking_panel.png
+
 
 Display Settings
 ================
