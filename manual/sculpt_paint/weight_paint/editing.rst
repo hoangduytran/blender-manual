@@ -439,7 +439,6 @@ Gradient (Linear)
 
    :Mode:      Weight Paint Mode
    :Menu:      :menuselection:`Weights --> Gradient (Linear)`
-   :Shortcut:  :kbd:`Shift-LMB`
 
 Applies a linear weight gradient;
 this is useful at times when painting gradual changes in weight becomes difficult.
@@ -467,7 +466,7 @@ Gradient (Radial)
 
    :Mode:      Weight Paint Mode
    :Menu:      :menuselection:`Weights --> Gradient (Radial)`
-   :Shortcut:  :kbd:`Shift-Alt-LMB`
+   :Shortcut:  :kbd:`Ctrl-Alt-LMB`
 
 Applies a radial weight gradient;
 this is useful at times when painting gradual changes in weight becomes difficult.
