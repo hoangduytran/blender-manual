@@ -73,11 +73,14 @@ Invert
 Random
    Randomizes inside the existing selection or create new random selection if nothing is selected already.
 
-.. _bpy.ops.sculpt_curves.select_end:
+.. _bpy.ops.sculpt_curves.select_ends:
 
 Endpoints
    Select endpoints of curves.
    Only supported in the Control Point selection mode.
+
+   Amount Start, End
+      Number of points to select from the front or back of the curve.
 
 .. _bpy.ops.sculpt_curves.select_grow:
 
