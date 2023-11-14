@@ -66,42 +66,49 @@ Sidebar
 
 The Sidebar lets you add, remove, reorder, and edit the sockets of the group's input and output nodes.
 
-.. _bpy.types.NodeSocketInterface.name:
+.. _bpy.types.NodeTreeInterfaceSocket.name:
 
 Name
    The name of the socket to display in the node's interface.
 
-.. _bpy.types.NodeSocketInterface.description:
+.. _bpy.types.NodeTreeInterfaceSocket.description:
 
 Tooltip
    The message displayed when hovering over socket properties.
    Currently only supported for :doc:`Geometry Node Editor </editors/geometry_node>`.
 
-.. _bpy.types.NodeSocketInterface*.default_value:
+.. _bpy.types.NodeTreeInterfaceSocket*.default_value:
 
 Default
    The value to use when nothing is connected to the socket.
 
-.. _bpy.types.NodeSocketInterface*.min_value:
-.. _bpy.types.NodeSocketInterface*.max_value:
+.. _bpy.types.NodeTreeInterfaceSocket*.min_value:
+.. _bpy.types.NodeTreeInterfaceSocket*.max_value:
 
 Min, Max
    The minimum and maximum value for the UI button shown in the node interface.
    Note, this is not a minimum or maximum for the data that can pass through the node.
    If a socket passes a higher value than the maximum, it will still pass into the node unchanged.
 
-.. _bpy.types.NodeSocketInterface.hide_value:
+.. _bpy.types.NodeTreeInterfaceSocket.hide_value:
 
 Hide Value
    Hide the socket value even when the socket is not connected.
 
-.. _bpy.types.NodeSocketInterface.hide_in_modifier:
+.. rubric:: Geometry Nodes
+
+.. _bpy.types.NodeTreeInterfaceSocket.hide_in_modifier:
 
 Hide in Modifier
    Don't show the input value in the geometry nodes modifier interface.
    This allows the input to be used in the context of a node group but not as a modifier input.
 
    This option is only available for geometry nodes and only for input sockets.
+
+.. _bpy.types.NodeTreeInterfaceSocket.force_non_field:
+
+Single Value
+   Only allow single value inputs rather than :doc:`/modeling/geometry_nodes/fields`.
 
 
 .. _bpy.ops.node.group_make:
