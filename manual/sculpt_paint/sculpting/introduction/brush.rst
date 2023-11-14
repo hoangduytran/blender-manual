@@ -25,6 +25,7 @@ For example, the :doc:`Box Trim </sculpt_paint/sculpting/tools/box_trim>`
 and :doc:`Lasso Trim </sculpt_paint/sculpting/tools/lasso_trim>` tools are able to use the current brush radius
 for how deep geometry is trimmed or added.
 
+
 Common Brushes
 ==============
 

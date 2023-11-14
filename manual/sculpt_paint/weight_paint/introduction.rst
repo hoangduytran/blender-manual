@@ -25,6 +25,8 @@ You can assign weights to the vertices of the object by painting on it with weig
 Starting to paint on a mesh automatically adds weights to the active vertex group
 (a new vertex group is created if needed).
 
+Vertex Groups can be managed in the pallette pop-over in the middle of the header.
+
 
 The Weighting Color Code
 ========================
