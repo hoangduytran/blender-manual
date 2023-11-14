@@ -39,8 +39,12 @@ Move to Next Word :kbd:`Ctrl-Right`
    If the cursor is in the middle of a word, the cursor is moved to the end of the current word.
 Move to Line Begin :kbd:`Home`
    Moves the cursor to the start of the current line.
+
+   :kbd:`Shift-Home`: Selects all text between the cursor and the start of the current line. 
 Move to Line End :kbd:`End`
    Moves the cursor to the end of the current line.
+
+   :kbd:`Shift-End`: Selects all text between the cursor and the end of the current line. 
 
 
 Console Menu
@@ -60,6 +64,8 @@ Delete Next Word :kbd:`Ctrl-Delete`
 Copy as Script :kbd:`Shift-Ctrl-C`
    Copies the full history buffer to the clipboard,
    this can be pasted into a text file to be used as a Python script.
+Cut :kbd:`Ctrl-X`
+   Deletes the selected text and copies it to the clipboard.
 Copy :kbd:`Ctrl-C`
    Copy the selection.
 Paste :kbd:`Ctrl-V`
@@ -81,10 +87,16 @@ Main View
 
 .. rubric:: Key Bindings
 
+- :kbd:`LMB` -- Moves the cursor along the input line.
 - :kbd:`Left` / :kbd:`Right` -- Cursor motion.
 - :kbd:`Ctrl-Left` / :kbd:`Ctrl-Right` -- Cursor motion, by word.
+- :kbd:`Shift-Left` / :kbd:`Shift-Right` -- Selects characters to the left/right.
+- :kbd:`Ctrl-Shift-Left` / :kbd:`Ctrl-Shift-Right` -- Selects words to the left/right.
+- :kbd:`Ctrl-A` Select all text and text history.
+
 - :kbd:`Backspace` / :kbd:`Delete` -- Erase characters.
 - :kbd:`Ctrl-Backspace` / :kbd:`Ctrl-Delete` -- Erase words.
+
 - :kbd:`Return` -- Execute command.
 - :kbd:`Shift-Return` -- Add to command history without executing.
 
