@@ -307,8 +307,12 @@ Data Types
       Import meshes.
    Volumes
       Import USD OpenVDB field assets.
-   Primitives
+   Shapes
       Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
+   Skeletons
+      Imports USD skeletons as Blender's :doc:`/animation/armatures/index`.
+   Blend Shapes
+      Imports USD skeletons as Blender's :doc:`/animation/shape_keys/index`.
 
 Path Mask
    Import only the subset of the USD scene rooted at the given primitive.
