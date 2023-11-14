@@ -60,3 +60,10 @@ Marking a target more than once will give it more weight.
 .. figure:: /images/editors_3dview_controls_snapping_target-multiple.png
 
    Multiple snapping targets.
+
+
+Navigating
+==========
+
+While performing a modal transformation, you can perform navigation actions such as zooming,
+panning, or rotating by holding :kbd:`Alt` then perform the desired action.
