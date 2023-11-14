@@ -154,6 +154,68 @@ Set Preview Range to Selected :kbd:`Ctrl-Alt-P`
    Sets the preview range to playback the selected NLA strips.
 
 
+Select Menu
+-----------
+
+.. _bpy.ops.graph.select_all:
+
+All :kbd:`A`
+   Selects all keyframes and handles.
+None :kbd:`Alt-A`
+   Clears all selected items.
+Invert
+   Selects all unselected items and unselects any currently selected items.
+
+.. _bpy.ops.graph.select_box:
+
+Box Select :kbd:`B`
+   Selects items inside the defined box.
+Box Select (Axis Range)
+   Todo.
+Box Select (Include Handles)
+   Selects keyframes and their handles inside the defined box.
+Circle Select :kbd:`C`
+   Selects keyframe points using circle selection.
+Lasso Select 
+   Selects keyframe points using lasso selection.
+
+.. _bpy.ops.graph.select_column:
+
+Columns on Selected Keys :kbd:`k`
+   Selects all other keyframes that are on the same frame as the selected keyframes.
+Column on Current Frame :kbd:`Ctrl-k`
+   Selects all other keyframes that are on the same frame as the current frame.
+Columns on Selected Markers :kbd:`Shift-k`
+   Selects all other keyframes that are on the same frame as the selected :doc:`/animation/markers`.
+Between Selected Markers :kbd:`Alt-K`
+   Selects all keyframes that are between the first and last :doc:`/animation/markers` as they fall in the timeline.
+
+.. _bpy.ops.graph.select_leftright:
+
+Before Current Frame
+   Select keyframes to the left of the current frame.
+After Current Frame
+   Select keyframes to the right of the current frame.
+
+.. _bpy.ops.graph.select_key_handles:
+
+Select Handles
+   Selects the associated handles to the currently selected keyframes.
+Select Keys
+   Selects the associated keyframes to the currently selected handles.
+
+.. _bpy.ops.graph.select_more:
+.. _bpy.ops.graph.select_less:
+
+Select More/Less
+   Selects/deselects keyframes in close proximity to currently selected keyframes.
+
+.. _bpy.ops.graph.select_linked:
+
+Select Linked
+   Select keyframes occurring in the same F-Curves as selected ones.
+
+
 Markers Menu
 ------------
 
