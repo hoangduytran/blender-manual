@@ -192,6 +192,20 @@ Options to control global gravity used for physics effects.
 See the :doc:`Physics chapter </physics/forces/gravity>` for more information.
 
 
+Simulation
+==========
+
+.. _bpy.types.Scene.use_custom_simulation_range:
+
+Simulation Range
+   Use a simulation range that is different from the scene range for
+   :doc:`Simulation Nodes </modeling/geometry_nodes/simulation/simulation_zone>`
+   that do not override the frame range themselves.
+
+Start, End
+   The frame at which the simulation starts/ends.
+
+
 Keying Sets
 ===========
 
