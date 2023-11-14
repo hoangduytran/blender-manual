@@ -9,7 +9,7 @@ Precision
    :Shortcut:  :kbd:`Ctrl` and/or :kbd:`Shift`
 
 Holding :kbd:`Ctrl` during a transform operation (such as move, rotate or scale)
-will toggle :ref:`Transform Snapping <transform-snap>`.
+will toggle :doc:`Transform Snapping </editors/3dview/controls/snapping>`.
 When using :ref:`Increment Snap <bpy.types.ToolSettings.snap_elements_base>`
 this allows the transformation to be performed in discrete amounts.
 

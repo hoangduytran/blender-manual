@@ -1,5 +1,6 @@
+.. |snap-header-icon| image:: /images/editors_3dview_controls_snapping_header-magnet-icon.png
+
 .. _bpy.types.ToolSettings.use_snap:
-.. _transform-snap:
 
 ********
 Snapping
@@ -8,22 +9,28 @@ Snapping
 .. reference::
 
    :Mode:      Object, Edit, and Pose Mode
-   :Header:    :menuselection:`Snap`
+   :Header:    :menuselection:`Snap` (|snap-header-icon|)
    :Shortcut:  :kbd:`Shift-Tab`
+
+.. figure:: /images/editors_3dview_controls_snapping_element-menu.png
+   :align: right
+
+   Snap menu.
 
 Snapping lets you easily align objects and mesh elements to others.
 It can be toggled by clicking the magnet icon in the 3D Viewport's header,
 or more temporarily by holding :kbd:`Ctrl`.
 
-.. figure:: /images/editors_3dview_controls_snapping_header-magnet-icon.png
+.. container:: lead
 
-   Magnet icon in the 3D Viewport header (blue when enabled).
+   .. clear
 
-.. figure:: /images/editors_3dview_controls_snapping_element-menu.png
+.. seealso::
 
-   Snap menu.
+   Transform operators have there own snapping operators,
+   see :doc:`Transform Modal Map </modeling/transform/modal_map>`
 
-
+   
 .. _bpy.types.ToolSettings.snap_target:
 
 Snap With
