@@ -120,6 +120,8 @@ Saturation
    Increase or decrease the saturation of an image.
 Multiply
    Multiplies the colors by this value. This will increases the brightness.
+Multiply Alpha
+   Multiply alpha along with color channels.
 Convert to Float
    Converts input to float data.
 
