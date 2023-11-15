@@ -179,9 +179,6 @@ Mesh Edit Mode Overlays
 
 The following options are available when in Mesh Edit Mode.
 
-Edges
-   Highlight selected and partially selected edges.
-   Only affects vertex and face selection modes, as edges are always highlighted in edge selection mode.
 Faces
    Highlight selected faces. Affects all selection modes.
 Center
