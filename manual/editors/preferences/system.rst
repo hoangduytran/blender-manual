@@ -57,10 +57,13 @@ HIP RT (Experimental)
 
    This feature is only available when using a *HIP* render device.
 
-MetalRT (Experimental)
+MetalRT
    MetalRT for ray tracing uses less memory for scenes which use curves extensively,
    and can give better performance in specific cases.
-   This feature is experimental and some scenes may render incorrectly.
+
+   :Off: Disable MetalRT (uses BVH2 layout for intersection queries).
+   :On: Enable MetalRT for intersection queries.
+   :Auto: Automatically pick the fastest intersection method.
 
 
 Operating System Settings
