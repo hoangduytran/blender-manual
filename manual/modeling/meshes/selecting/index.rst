@@ -17,3 +17,4 @@
    linked.rst
    side_of_active.rst
    mirror.rst
+   by_attribute.rst
