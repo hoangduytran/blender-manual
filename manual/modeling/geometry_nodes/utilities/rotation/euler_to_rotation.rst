@@ -22,4 +22,4 @@ Outputs
 =======
 
 Rotation
-    Standard rotation value. 
+    Standard rotation value.
