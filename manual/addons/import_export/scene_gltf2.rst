@@ -289,6 +289,27 @@ included in the export.
 
 
 
+
+Anisotropy
+^^^^^^^^^^
+
+Anisotropic textures and data need to be converted at export, and at import.
+
+At import, some nodes are created to manage this conversion
+
+.. figure:: /images/addons_import-export_scene-gltf2_material_anisotropy.png
+
+At export, this exact same nodes are detected, and used to export data.
+
+At export, you can also plug some grayscale textures for *Anisotropic* and *Anisotropic Rotation* sockets.
+Then, exporter will convert these texture into a glTF compatible texture.
+
+.. figure:: /images/addons_import-export_scene-gltf2_material_anisotropy-grayscale-texture.png
+
+Note that the *tangent* socket must be linked to a *tangent* node, with UVMap.
+The choosen UVMap must be the UVMap of the Normal Map.
+
+
 Transmission
 ^^^^^^^^^^^^
 
@@ -505,6 +526,16 @@ a typical node structure when several of the above options are applied at once:
 
    A Principled BSDF material with an emissive texture.
 
+UDIM
+^^^^
+
+UDIM is a way to store multiple textures in a single image file.
+The UDIM system is supported by Blender, but is not supported by glTF.
+When exporting a model that uses UDIM, the add-on will automatically split the
+image into multiple images, one for each tile, and will update the material
+nodes to use the new images.
+All UDIM texture must use the same UV map to be exported.
+
 
 Exporting a Shadeless (Unlit) Material
 --------------------------------------
@@ -539,6 +570,7 @@ are supported directly by this add-on:
 - ``KHR_materials_volume``
 - ``KHR_materials_sheen``
 - ``KHR_materials_specular``
+- ``KHR_materials_anisotropy``
 - ``KHR_materials_ior``
 - ``KHR_materials_variants``
 - ``KHR_lights_punctual``
@@ -558,6 +590,7 @@ are supported directly by this add-on:
 - ``KHR_materials_volume``
 - ``KHR_materials_sheen``
 - ``KHR_materials_specular``
+- ``KHR_materials_anisotropy``
 - ``KHR_materials_ior``
 - ``KHR_materials_variants``
 - ``KHR_texture_transform``
@@ -822,11 +855,18 @@ Y Up
 Data - Scene Graph
 ^^^^^^^^^^^^^^^^^^
 
+Geometry Nodes Instances
+   Export Geometry nodes instances. This feature is experimental.
+
 GPU Instances
    Export using ``EXT_mesh_gpu_instancing`` extensions.
 
 Flatten Object Hierarchy
    Useful in case of non-decomposable TRS matrix. Only skined meshes will stay children of armature.
+
+Full Collection Hierarchy
+   Export collections as empty, keeping full hierarchy. If an object is in multiple collections,
+   it will be exported it only once, in the first collection it is found.
 
 Data - Mesh
 ^^^^^^^^^^^
@@ -848,6 +888,8 @@ Loose Edges
    Export loose edges as lines, using the material from the first material slot.
 Loose Points
    Export loose points as glTF points, using the material from the first material slot.
+Shared Accessor
+   For triangles, use shared accessor for indices. This is more efficient (smaller files when you have lots of materials).
 
 Data - Material
 ^^^^^^^^^^^^^^^
@@ -867,6 +909,10 @@ Create WebP
    For already WebP textures, nothing happen.
 WebP fallback
    For all WebP textures, create a png fallback texture.
+Unused images
+   Export images that are not used in any material.
+Unused textures
+   Export texture info (sampler, image, texcoord) that are not used in any material.
 
 Data - Shape Keys
 ^^^^^^^^^^^^^^^^^
@@ -992,6 +1038,11 @@ Force keeping channel for armature / bones
    if all keyframes are identical in a rig, force keeping the minimal animation.
 Force keeping channel for objects
    if all keyframes are identical for object transformations, force keeping the minimal animation
+
+Animation - Filter
+^^^^^^^^^^^^^^^^^^
+
+Restrict actions to be exported to the ones matching the filter.
 
 Contributing
 ============
