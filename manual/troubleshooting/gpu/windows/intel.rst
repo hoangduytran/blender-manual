@@ -11,7 +11,7 @@ Windows update automatically installs graphics drivers, or
 your computer manufacturer may provide its own version of the graphics drivers.
 
 However, these are not always the latest version or may have been corrupted in some way.
-We recommend to always use the official drivers.
+We recommend to use the official drivers.
 
 `Download Latest Intel Drivers <https://www.intel.com/content/www/us/en/support/products/80939/graphics.html>`__
 
@@ -30,3 +30,20 @@ Confirm the changes with *Apply*.
 
 .. include:: ../common/other.rst
    :start-line: 1
+
+
+Legacy Intel HD 4000/5000
+=========================
+
+When running on Intel 3, 4 or 5th gen iGPU the latest Intel driver will crash on startup. In order
+to start Blender try to install a previous version of the driver. Drivers that are known to work
+are:
+
+- 20.19.15.4835
+
+Drivers that are known to fail are:
+
+- 20.19.15.5171
+- 20.19.15.5144
+
+`Download older Intel Drivers <https://www.intel.com/content/www/us/en/support/articles/000089377/graphics.html>`__
