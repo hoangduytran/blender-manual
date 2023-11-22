@@ -38,6 +38,7 @@ or making patches, you may also submit the modified file as an
 - **Manual Docs**: [Contributing Guide](https://docs.blender.org/manual/en/dev/contribute/index.html) (the process for editing the manual).
 - **Source Files**: [Manual Repository](https://projects.blender.org/blender/blender-manual) (Git repository).
 - **[Developer forum](https://devtalk.blender.org/c/documentation/12)**
+- **Chat**: [#docs on blender.chat](https://blender.chat/channel/docs).
 - **Administrators**: @blendify @fsiddi
 
 
@@ -60,6 +61,7 @@ To get started see the [contribution guide for translations](https://docs.blende
 
 - **Source Files**: [Translation's Repository](https://projects.blender.org/blender/blender-manual-translations) (git repository).
 - **Forum**: [Documentation category on Developer Talk](https://devtalk.blender.org/c/documentation)
+- **Chat**: [#translations on blender.chat](https://blender.chat/channel/translations).
 - **Administrators**: @blendify , @fsiddi
 
 **Note:*
