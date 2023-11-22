@@ -16,6 +16,7 @@ var all_langs = {
 	"ja": "&#x65E5;&#x672C;&#x8A9E;",
 	"ko": "&#xD55C;&#xAD6D;&#xC5B4;",
 	"nb": "Norsk Bokm&#x00E5;l",
+	"nl": "Nederlands",
 	"pt": "Portugu&ecirc;s",
 	"ru": "&#x3A1;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;",
 	"sk": "Sloven&#269;ina",
