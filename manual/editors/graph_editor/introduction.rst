@@ -57,6 +57,13 @@ Scale View
 
 In addition, you can also use the scrollbars to pan and zoom the view.
 
+.. tip::
+
+   You can frame an F-Curve channel from any animated property by right clicking on it and choosing `View in Graph Editor`.
+   In order to bind that function to a hotkey, you need to make a hotkey manually in the e.g. User Interface category. 
+   Using the right click menu won't work as it would be in the wrong category.
+   The operator name is `anim.view_curve_in_graph_editor`.
+
 
 .. _graph_editor-2d-cursor:
 .. _bpy.types.SpaceGraphEditor.cursor:
