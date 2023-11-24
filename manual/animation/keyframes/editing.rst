@@ -16,7 +16,8 @@ Insert Keyframe
 
 There are several methods of adding new keys. Namely:
 
-- In the 3D Viewport, pressing :kbd:`I` will bring up a menu to choose what to add a keyframe to.
+- In the 3D Viewport, pressing :kbd:`I` will key properties based on a setting in the User Preferences (:menuselection:`Animation --> Default Key Channels`).
+- When a Keying Set is active, it is used instead of reading the User Preferences.
 - Hovering over a property and pressing :kbd:`I` or with the context menu by :kbd:`RMB`
   a property and choose *Insert Keyframe* from the menu.
 
@@ -84,11 +85,10 @@ This example shows you how to animate a cube's location, rotation, and scale.
 
 #. First, in the Timeline, or other animation editors, set the frame to 1.
 #. With the cube selected in Object Mode, press :kbd:`I` in the 3D Viewport.
-   From the *Insert Keyframe* menu select *LocRotScale*.
    This will record the location, rotation, and scale, for the cube on frame 1.
 #. Set the frame to 100.
 #. Use Move :kbd:`G`, Rotate :kbd:`R`, Scale :kbd:`S`, to transform the cube.
-#. Press :kbd:`I` in the 3D Viewport. From the *Insert Keyframe* menu, select *LocRotScale*.
+#. Press :kbd:`I` in the 3D Viewport.
 
 To test the animation, press :kbd:`Spacebar` to play.
 
