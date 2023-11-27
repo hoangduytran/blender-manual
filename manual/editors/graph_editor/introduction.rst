@@ -59,9 +59,9 @@ In addition, you can also use the scrollbars to pan and zoom the view.
 
 .. tip::
 
-   You can frame an F-Curve channel from any animated property by right clicking on it and choosing `View in Graph Editor`.
-   In order to bind that function to a hotkey, you need to make a hotkey manually in the e.g. User Interface category. 
-   Using the right click menu won't work as it would be in the wrong category.
+   You can frame an F-Curve channel from any animated property by right clicking on it and choosing `View in Graph
+   Editor`. In order to bind that function to a hotkey, you need to make a hotkey manually in the e.g. User Interface
+   category. Using the right click menu won't work as it would be in the wrong category.
    The operator name is `anim.view_curve_in_graph_editor`.
 
 
@@ -188,11 +188,11 @@ Lasso Select
 
 .. _bpy.ops.graph.select_column:
 
-Columns on Selected Keys :kbd:`k`
+Columns on Selected Keys :kbd:`K`
    Selects all other keyframes that are on the same frame as the selected keyframes.
-Column on Current Frame :kbd:`Ctrl-k`
+Column on Current Frame :kbd:`Ctrl-K`
    Selects all other keyframes that are on the same frame as the current frame.
-Columns on Selected Markers :kbd:`Shift-k`
+Columns on Selected Markers :kbd:`Shift-K`
    Selects all other keyframes that are on the same frame as the selected :doc:`/animation/markers`.
 Between Selected Markers :kbd:`Alt-K`
    Selects all keyframes that are between the first and last :doc:`/animation/markers` as they fall in the timeline.

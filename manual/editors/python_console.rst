@@ -91,7 +91,7 @@ Main View
 - :kbd:`Left` / :kbd:`Right` -- Cursor motion.
 - :kbd:`Ctrl-Left` / :kbd:`Ctrl-Right` -- Cursor motion, by word.
 - :kbd:`Shift-Left` / :kbd:`Shift-Right` -- Selects characters to the left/right.
-- :kbd:`Ctrl-Shift-Left` / :kbd:`Ctrl-Shift-Right` -- Selects words to the left/right.
+- :kbd:`Shift-Ctrl-Left` / :kbd:`Shift-Ctrl-Right` -- Selects words to the left/right.
 - :kbd:`Ctrl-A` Select all text and text history.
 
 - :kbd:`Backspace` / :kbd:`Delete` -- Erase characters.

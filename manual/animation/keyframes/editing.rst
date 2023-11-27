@@ -16,7 +16,8 @@ Insert Keyframe
 
 There are several methods of adding new keys. Namely:
 
-- In the 3D Viewport, pressing :kbd:`I` will key properties based on a setting in the User Preferences (:menuselection:`Animation --> Default Key Channels`).
+- In the 3D Viewport, pressing :kbd:`I` will key properties based on a setting in the User Preferences
+  (:menuselection:`Animation --> Default Key Channels`).
 - When a Keying Set is active, it is used instead of reading the User Preferences.
 - Hovering over a property and pressing :kbd:`I` or with the context menu by :kbd:`RMB`
   a property and choose *Insert Keyframe* from the menu.

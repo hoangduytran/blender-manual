@@ -16,7 +16,8 @@ and shadow linking could be used to ensure no objects from the environment block
 Setup
 =====
 
-* Select the light or emissive mesh object and go to the :ref:`Shading panel <render-cycles-object-light-linking-settings>`.
+* Select the light or emissive mesh object and go to the :ref:`Shading panel
+  <render-cycles-object-light-linking-settings>`.
 * Create a new light or shadowing linking collection.
 * Drag & drop objects or collection from the outliner.
 
@@ -36,8 +37,9 @@ The behavior is as follows:
 
 * If only included objects are specified, the light only affects those objects.
 * If only excluded objects are specified, the light affects all objects in the scene except those specified.
-* If both included and excluded objects are specified, the light affects only included objects minus the excluded objects.
-  This can be used to for example set a character collection to be included, and then exclude specific objects part of the character.
+* If both included and excluded objects are specified, the light affects only included objects minus the excluded
+  objects. This can be used to for example set a character collection to be included, and then exclude specific
+  objects part of the character.
 
 Performance
 ===========
