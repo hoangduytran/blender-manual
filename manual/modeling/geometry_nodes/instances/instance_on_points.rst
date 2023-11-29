@@ -31,7 +31,7 @@ domain of the generated instances.
 Inputs
 ======
 
-Geometry
+Points
    Standard geometry input. The position of the points of this geometry affect the transforms of
    each instance output.
 
@@ -82,6 +82,6 @@ This node has no properties.
 Outputs
 =======
 
-Geometry
+Instances
    Standard geometry output. If the ``id`` attribute exists on the input geometry,
    it will be copied to the result instances.

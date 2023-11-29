@@ -17,7 +17,7 @@ The :doc:`/modeling/geometry_nodes/instances` page contains more information abo
 Inputs
 ======
 
-Geometry
+Instances
    Standard geometry input.
 
 Selection
@@ -47,5 +47,5 @@ This node has no properties.
 Outputs
 =======
 
-Geometry
+Instances
    Standard geometry output.
