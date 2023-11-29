@@ -18,19 +18,25 @@ Proxy Settings
 
    :Panel:     :menuselection:`Sidebar region --> Proxy & Timecode --> Proxy Settings`
 
+.. _bpy.types.SequenceEditor.proxy_storage:
+
 Storage
    Defines whether the proxies are for individual strips or the entire sequence.
 
-   Per Strip
-      Proxies are stored in the directory of the input.
-   Project
-      All proxies are stored in one directory.
+   :Per Strip: Proxies are stored in the directory of the input.
+   :Project: All proxies are stored in one directory.
+
+      .. _bpy.types.SequenceEditor.proxy_dir:
 
       Proxy Directory
          The location to store the proxies for the project.
 
+.. _bpy.ops.sequencer.enable_proxies:
+
 Set Selected Strip Proxies
    Set proxy size and overwrite flag for all selected strips.
+
+.. _bpy.ops.sequencer.rebuild_proxy:
 
 Rebuild Proxy and Timecode Indices
    Generates Proxies and Timecodes for all selected strips,
@@ -38,6 +44,7 @@ Rebuild Proxy and Timecode Indices
 
 
 .. _bpy.types.SequenceProxy:
+.. _bpy.types.MovieSequence.use_proxy:
 
 Strip Proxy & Timecode
 ======================
@@ -66,15 +73,23 @@ Custom Proxy
    File
       Allows you to use preexisting proxies.
 
+.. _bpy.types.SequenceProxy.build:
+
 Resolutions
    Buttons to control how big the proxies are.
    The available options are 25%, 50%, 75%, 100 percent of original strip size.
 
+.. _bpy.types.SequenceProxy.use_overwrite:
+
 Overwrite
    Saves over any existing proxies in the proxy storage directory.
 
+.. _bpy.types.SequenceProxy.quality:
+
 Quality
    Defines the quality of the images used for proxies.
+
+.. _bpy.types.SequenceProxy.timecode:
 
 Timecode Index
    When you are working with footage directly copied from a camera without preprocessing it,

@@ -37,9 +37,17 @@ Auto-Save Preferences
    this allows changes to the keymap and Quick Favorites menu to be stored and used between
    :term:`Blender Sessions <Blender Session>`.
 
+   .. _bpy.ops.wm.save_userpref:
+
    When disabled, a *Save Preferences* button is shown to manually perform the operation.
+
+.. _bpy.ops.wm.read_userpref:
+
 Revert to Saved Preferences
    Undoes any unsaved modifications, loading the previously saved state.
+
+.. _bpy.ops.wm.read_factory_userpref:
+
 Load Factory Preferences
    Completely undo all the modifications made to the preferences,
    resetting to the state used before making customizations.
