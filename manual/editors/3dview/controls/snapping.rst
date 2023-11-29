@@ -27,10 +27,10 @@ or more temporarily by holding :kbd:`Ctrl`.
 
 .. seealso::
 
-   Transform operators have there own snapping operators,
+   Transform operators have their own snapping operators,
    see :doc:`Transform Modal Map </modeling/transform/modal_map>`
 
-   
+
 .. _bpy.types.ToolSettings.snap_target:
 
 Snap With

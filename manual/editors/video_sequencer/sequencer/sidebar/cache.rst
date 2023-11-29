@@ -5,7 +5,7 @@ Cache
 
 The Cache is used to save frames in memory for preview,
 so they can be later displayed much faster than rendered from scratch.
-Cache capacity can be set in :doc:`System tab </editors/preferences/system>` of the Preferences.
+Cache capacity can be set in the :doc:`System tab </editors/preferences/system>` of the Preferences.
 
 In order for this tab to be visible, enable :ref:`Developer Extras <prefs-interface-dev-extras>`.
 
@@ -42,7 +42,7 @@ Strip Cache
    :Panel:     :menuselection:`Sidebar --> Cache --> Cache Settings`
 
 This panel sets the types of images that will be cached for the active strip.
-Enable overriding the cache defaults, when disabled, `Cache Settings`_ will be used.
+When enabled, these properties override the `Cache Settings`_.
 
 Cache
    Raw
