@@ -490,7 +490,7 @@ a.external {
 /* End genindex consistency. */
 
 /* Correctly display keyboard shortcuts inside definition lists (theme.css explicitly excludes this case for some reason) */
-dt > kbd {
+dt>kbd {
 	font-weight: normal;
 	font-size: 80%;
 	background-color: #fff;
@@ -499,4 +499,10 @@ dt > kbd {
 	box-shadow: 0 2px grey;
 	padding: 2.4px 6px;
 	margin: auto 0;
+}
+
+/* Fixes to field list, see #104636 */
+
+.field-list {
+	grid-template-columns: fit-content(24px) auto !important;
 }
