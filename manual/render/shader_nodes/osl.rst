@@ -70,8 +70,9 @@ macOS
 Writing Shaders
 ===============
 
-For more details on how to write shaders, see the `OSL specification
-<https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/blob/main/src/doc/osl-languagespec.pdf>`__.
+For more details on how to write shaders, see the
+`OSL Documentation <https://open-shading-language.readthedocs.io/en/latest/>`__.
+
 Here is a simple example:
 
 .. code-block:: cpp
@@ -98,6 +99,11 @@ ensure all shaders can be importance sampled.
 The available closures in Cycles correspond to the shader nodes and their sockets;
 for more details on what they do and the meaning of the parameters,
 see the :doc:`shader nodes manual </render/shader_nodes/shader/index>`.
+
+.. seealso::
+
+   Documentation on OSL's `built-in closures
+   <https://open-shading-language.readthedocs.io/en/latest/stdlib.html#material-closures>`__.
 
 
 BSDF
@@ -227,6 +233,7 @@ The following built-in attributes are available through ``getattribute()`` as we
 ``particle:angular_velocity``
    Angular velocity of the particle.
 
+
 .. _render-shader-nodes-osl-trace:
 
 Trace
@@ -243,6 +250,7 @@ This function cannot be used instead of lighting;
 the main purpose is to allow shaders to "probe" nearby geometry,
 for example to apply a projected texture that can be blocked by geometry,
 apply more "wear" to exposed geometry, or make other ambient occlusion-like effects.
+
 
 Metadata
 ========
