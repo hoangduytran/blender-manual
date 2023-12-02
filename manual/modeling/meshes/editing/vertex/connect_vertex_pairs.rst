@@ -9,7 +9,7 @@ Connect Vertex Pairs
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Vertex --> Connect Vertex Pairs`
 
-This tool connects selected vertices by creating edges between them and splitting the face.
+This operator connects selected vertices by creating edges between them and splitting the face.
 It can be used on many faces at once.
 
 .. list-table::
@@ -29,5 +29,5 @@ It can be used on many faces at once.
 
           Resulting face pair.
 
-The main difference between this tool and :doc:`/modeling/meshes/editing/vertex/connect_vertex_path`
-is that this tool ignores the selection order and connects all selected vertices that share a face.
+The main difference between this operator and :doc:`/modeling/meshes/editing/vertex/connect_vertex_path`
+is that this operator ignores the selection order and connects all selected vertices that share a face.

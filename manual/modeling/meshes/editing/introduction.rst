@@ -3,8 +3,8 @@
 Introduction
 ************
 
-Blender provides a variety of tools for editing meshes.
-These are tools used to add, duplicate, move and delete elements.
+Blender provides a variety of operators for editing meshes.
+These operators are used to add, duplicate, move and delete elements.
 
 These are available through the Menus in the 3D Viewport header, and context menus in the 3D Viewport,
 as well as individual shortcut keys.
@@ -18,14 +18,14 @@ as well as individual shortcut keys.
    the :doc:`pivot point </editors/3dview/controls/pivot_point/index>`
    and/or :doc:`transform orientation </editors/3dview/controls/orientation>` either.
 
-These transform tools are available in the *Transform* section of the *Mesh* menu in the header.
+These transform operators are available in the *Transform* section of the *Mesh* menu in the header.
 Note that, some of these can also be used on other editable objects, like curves, surfaces, and lattices.
 
 
-Accessing Mesh Tools
-====================
+Accessing Mesh Operators
+========================
 
-The mesh tools are found in various places, and available through shortcuts as well.
+The mesh editing operations are found in various places, and available through shortcuts as well.
 
 
 Menus
@@ -34,6 +34,6 @@ Menus
 These menus are located in the header.
 Some of the menus can be accessed with shortcuts:
 
-- :kbd:`Ctrl-F` brings up the Face tool menu
-- :kbd:`Ctrl-E` brings up the Edge tool menu
-- :kbd:`Ctrl-V` brings up the Vertex tool menu
+- :kbd:`Ctrl-F` brings up the Face operators menu
+- :kbd:`Ctrl-E` brings up the Edge operators menu
+- :kbd:`Ctrl-V` brings up the Vertex operators menu

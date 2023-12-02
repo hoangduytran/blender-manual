@@ -7,7 +7,7 @@ Offset Edge Slide
 .. reference::
 
    :Mode:      Edit Mode
-   :Tool:      :menuselection:`Edge --> Offset Edge Slide`
+   :Menu:      :menuselection:`Edge --> Offset Edge Slide`
    :Shortcut:  :kbd:`Shift-Ctrl-R`
 
 Add two edge loops on either side of selected loops.

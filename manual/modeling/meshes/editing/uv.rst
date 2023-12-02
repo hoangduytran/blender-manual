@@ -1,7 +1,7 @@
 
-********
-UV Tools
-********
+************
+UV Operators
+************
 
 .. reference::
 
@@ -43,7 +43,7 @@ The UVs menu will appear in the UV Editor after unwrapping has been performed on
 
    Result of unwrapping Suzanne.
 
-This tool unwraps the faces of the object to provide
+This operation unwraps the faces of the object to provide
 the "best fit" scenario based on how the faces are connected and will fit within the image,
 and takes into account any seams within the selected faces.
 If possible, each selected face gets its own different area of the image and is not overlapping any other faces UVs.
@@ -53,13 +53,11 @@ If all faces of an object are selected, then each face is mapped to a part of th
 Options
 -------
 
-Blender has two ways of calculating the unwrapping.
-They can be selected in the tool setting in the tool panel in the 3D Viewport.
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how a mesh is unwrapped:
 
 Method
  :Angle Based:
    Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh.
-
  :Conformal:
    Uses Least Squares Conformal Mapping (LSCM). This usually results in a less accurate UV mapping than Angle Based,
    but performs better on simpler objects.
@@ -117,8 +115,8 @@ just like the faces of the cube.
 
    Smart UV project on a cube.
 
-For more complex mechanical objects, this tool can quickly and easily create
-a regular and straightforward UV layout for you.
+For more complex mechanical objects, this operator can quickly and easily create
+a regular and straightforward UV layout.
 
 
 Options
@@ -155,14 +153,14 @@ and packs them into the UV bounds. Lightmaps are used primarily in realtime rend
 where lighting information is baked onto texture maps,
 when it is needed to use as much UV space as possible.
 It can also work on several meshes at once.
-It has several options that appear in the Toolbar:
+It has several options that appear in the :ref:`bpy.ops.screen.redo_last` panel:
 
-You can set the tool to map just *Selected Faces* or *All Faces* if
+You can set the operation to map just *Selected Faces* or *All Faces* if
 working with a single mesh.
 
 The *Selected Mesh Object* option works on multiple meshes. To use this,
 in *Object Mode* select several mesh objects,
-then go into *Edit Mode* and activate the tool.
+then go into *Edit Mode* and perform the operation.
 
 
 Options
@@ -224,6 +222,7 @@ Edge Length Mode
 
    The resulting unwrap is not clamped within the UV bounds,
    you may wish to scale down the active quad's UV's so the result is in a usable range.
+
 
 .. _bpy.ops.uv.cube_project:
 

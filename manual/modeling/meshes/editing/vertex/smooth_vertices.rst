@@ -38,13 +38,12 @@ Axes
 
           Mesh after ten smoothing iterations.
 
-.. seealso:: Subdividing
+.. tip::
 
-   Adjusting the *smooth* option after using
-   the :doc:`Subdivide </modeling/meshes/editing/edge/subdivide>` tool
-   results in a more organic shape.
+   Using the Smooth tool after :doc:`subdividing </modeling/meshes/editing/edge/subdivide>`
+   can help create a more organic shape.
 
 .. seealso:: Smooth Modifier
 
    The :doc:`Smooth Modifier </modeling/modifiers/deform/smooth>`, which can be limited to a *Vertex Group*,
-   is a non-destructive alternative to the Smooth tool.
+   is a non-destructive alternative to the Smooth operator.

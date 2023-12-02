@@ -11,7 +11,7 @@ Warp
 .. figure:: /images/modeling_meshes_editing_mesh_transform_warp_operator-panel.png
    :align: right
 
-   Warp tool options.
+   Warp options.
 
 The *Warp* transformation takes selected elements and
 warps them around the 3D cursor by a certain angle.
