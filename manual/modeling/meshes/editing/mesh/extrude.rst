@@ -9,9 +9,15 @@ Extrude
    :Menu:      :menuselection:`Mesh --> Extrude`
    :Shortcut:  :kbd:`Alt-E`
 
+This operators shown in this menu are dependent of what part of a mesh is currently selected.
+Many of the operators are also available in the :doc:`Vertex </modeling/meshes/editing/vertex/index>`,
+:doc:`Edge </modeling/meshes/editing/edge/index>`, abd :doc:`Face </modeling/meshes/editing/face/index>` menus.
+
 
 Extrude Faces
 =============
+
+Available when a :term:`Face` is selected.
 
 See :ref:`bpy.ops.view3d.edit_mesh_extrude_move_normal`.
 
@@ -19,11 +25,15 @@ See :ref:`bpy.ops.view3d.edit_mesh_extrude_move_normal`.
 Extrude Faces Along Normals
 ===========================
 
+Available when a :term:`Face` is selected.
+
 See :ref:`bpy.ops.view3d.edit_mesh_extrude_move_shrink_fatten`.
 
 
 Extrude Individual Faces
 ========================
+
+Available when a :term:`Face` is selected.
 
 See :ref:`tool-mesh-extrude_individual`.
 
@@ -31,17 +41,23 @@ See :ref:`tool-mesh-extrude_individual`.
 Extrude Manifold
 ================
 
+Available when a :term:`Face` is selected.
+
 See :doc:`/modeling/meshes/tools/extrude_manifold`.
 
 
 Extrude Edges
 =============
 
+Available when a :term:`Edge` is selected.
+
 See :ref:`bpy.ops.mesh.extrude_edges_move`.
 
 
 Extrude Vertices
 ================
+
+Available when a :term:`Vertex` is selected.
 
 See :ref:`bpy.ops.mesh.extrude_vertices_move`.
 

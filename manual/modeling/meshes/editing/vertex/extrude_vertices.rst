@@ -6,11 +6,12 @@ Extrude Vertices
 
 .. reference::
 
-   :Mode:      Edit Mode, Vertex Select mode
-   :Menu:      :menuselection:`Vertex --> Extrude Vertices`
-   :Shortcut:  :kbd:`Alt-E`
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Vertex --> Extrude Vertices`,
+               :menuselection:`Mesh --> Extrude --> Extrude Vertices`
+   :Shortcut:  :kbd:`E`
 
-Extrude vertices as individual vertices, use :kbd:`Alt-E` to access *Extrude Vertices*.
+Extrude vertices as individual vertices.
 
 .. list-table::
 

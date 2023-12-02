@@ -9,7 +9,6 @@ Extrude Manifold
    :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Extrude Manifold`
    :Menu:      :menuselection:`Mesh --> Extrude --> Extrude Manifold`
-   :Shortcut:  :kbd:`Alt-E`
 
 This tool is very similar to :doc:`/modeling/meshes/editing/face/extrude_faces`
 but enables *Dissolve Orthogonal Edges* by default.

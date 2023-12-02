@@ -6,11 +6,12 @@ Extrude Edges
 
 .. reference::
 
-   :Mode:      Edit Mode, Edge Selection mode
+   :Mode:      Edit Mode
    :Menu:      :menuselection:`Edge --> Extrude Edges`
-   :Shortcut:  :kbd:`Alt-E`
+               :menuselection:`Mesh --> Extrude --> Extrude Edges`
+   :Shortcut:  :kbd:`E`
 
-Extrude edges as individual edges, use :kbd:`Alt-E` to access the *Extrude Edges*.
+Extrude edges as individual edges.
 
 .. list-table::
 

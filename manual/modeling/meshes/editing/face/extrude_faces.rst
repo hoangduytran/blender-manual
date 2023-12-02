@@ -9,7 +9,8 @@ Extrude Faces
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Face --> Extrude Faces`
+   :Menu:      :menuselection:`Face --> Extrude Faces`,
+               :menuselection:`Mesh --> Extrude --> Extrude Faces`
    :Shortcut:  :kbd:`E`
 
 *Extrude Faces* duplicate faces, while keeping the new geometry connected with the original vertices.
