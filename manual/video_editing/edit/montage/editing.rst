@@ -9,6 +9,8 @@ Transform
 Options
 -------
 
+.. _bpy.types.SequencerToolSettings.overlap_mode:
+
 Overlap Mode
 ^^^^^^^^^^^^
 
@@ -28,8 +30,10 @@ Expand
 Snapping
 ^^^^^^^^
 
-It is possible to enable snapping in the header of the Video Sequencer.
-The snapping behavior can be configured as follows:
+The icon toggles snapping; you can also do this temporarily by holding :kbd:`Ctrl` after
+starting to drag a strip.
+
+The drop-down arrow offers the following options:
 
 .. _bpy.types.SequencerToolSettings.snap_to_current_frame:
 .. _bpy.types.SequencerToolSettings.snap_to_hold_offset:
@@ -340,6 +344,8 @@ This will result in two strips which use the same source, fitting the original s
    adjusting the start/end frames to form two non-overlapping strips showing the same content as before.
 
 
+.. _bpy.ops.sequencer.hold_split:
+
 Hold Split
 ==========
 
@@ -576,9 +582,6 @@ From Current Frame
    Fade from the current frame to the end of overlapping sequences.
 To Current Frame
    Fade from the start of sequences under the Playhead to the current frame.
-
-
-.. _bpy.types.SequencerToolSettings.overlap_mode:
 
 .. _sequencer-editing-retiming:
 

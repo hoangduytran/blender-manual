@@ -17,22 +17,23 @@ Header
 View Menu
 ---------
 
-As usual, the View Menu controls the editor's view settings.
+As usual, the View menu controls the editor's view settings.
 
 Sidebar :kbd:`N`
    Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
+Tool Settings
+   Show or hide the settings for the currently selected tool.
 Toolbar :kbd:`T`
    Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
 Adjust Last Operation
-   Displays a pop-up panel to alter properties of the last
-   completed operation. See :ref:`bpy.ops.screen.redo_last`.
+   See :ref:`bpy.ops.screen.redo_last`.
 Channels
    Show or hide the :ref:`bpy.types.SequenceTimelineChannel`.
 Preview as Backdrop
-   Displays the current frame in the background of the main view like in the Compositor.
+   Display the current frame in the background.
 
 Frame Selected :kbd:`NumpadPeriod`
-   Zooms in the display to fit only the selected strips.
+   Zooms the display to show only the selected strips.
 Frame All :kbd:`Home`
    Zooms the display to show all strips.
 Go to Current Frame
@@ -43,72 +44,83 @@ Zoom :kbd:`Shift-B`
 .. _bpy.types.SpaceSequenceEditor.use_clamp_view:
 
 Limit View to Contents
-   Limit the timeline's height to the maximum used channel slot.
-
-Navigation
-   Play Animation :kbd:`Spacebar`
-      Start or stop playback of animation. This will start playback in all editors.
-   Go to Current Frame :kbd:`Numpad0`
-      Scrolls the timeline so the current frame is in the center.
-   Jump to Previous Strip :kbd:`PageDown`
-      Current frame will jump to beginning of strip.
-   Jump to Next Strip :kbd:`PageUp`
-      Current frame will jump to end of strip.
-   Jump to Previous Strip (Center) :kbd:`Alt-PageDown`
-      Jump to previous center of the strip.
-   Jump to Next Strip (Center) :kbd:`Alt-PageUp`
-      Jump to next center of the strip.
-Range
-   Set Preview Range :kbd:`P`
-      Interactively define frame range used for playback.
-      Allows you to define a temporary preview range to use for animation playback
-      (this is the same thing as the *Playback Range* option of
-      the :ref:`Timeline editor header <animation-editors-timeline-headercontrols>`).
-   Set Preview Range to Strips
-      Sets the frame range of preview to the range of the selected strips.
-   Clear Preview Range :kbd:`Alt-P`
-      Clears preview range.
-   Set Start Frame :kbd:`Ctrl-Home`
-      Set Start of animation range to the current frame.
-   Set End Frame :kbd:`Ctrl-End`
-      Set End of animation range to the current frame.
-   Set Frame Range to Strips
-      Sets the frame range of preview and render animation to the frame range of the selected strips.
+   Prevents you from panning higher than the highest used channel.
 
 .. _bpy.ops.sequencer.refresh_all:
 
-Refresh All
-   To force Blender to re-read in files, and to force a re-render of the 3D Viewport,
-   click the *Refresh Sequencer* button.
-   Blender will update and synchronize all cached images and compute the current frame.
+Refresh All :kbd:`Ctrl-R`
+   Reloads external files, re-renders the 3D Viewport, and refreshes the current frame preview.
 
-   Certain operations, like moving an object in the 3D Viewport, may not force the *Sequencer*
-   to call for a refresh of the rendered image (since the movement may not affect the rendered image).
-   If an image or video, used as a strip, is changed by some application outside of Blender,
-   Blender has no real way of being notified from your operating system.
+   This is useful when you modified an external file or made a change in a scene that Blender
+   didn't detect.
+
+Navigation
+   Play Animation :kbd:`Spacebar`
+      Start or stop animation playback. This will start playback in all editors.
+   Go to Current Frame :kbd:`Numpad0`
+      Scrolls the timeline so the current frame is in the center.
+   Jump to Previous Strip :kbd:`PageDown`
+      Moves the playhead to the nearest strip border (start or end) that's before the current frame.
+   Jump to Next Strip :kbd:`PageUp`
+      Moves the playhead to the nearest strip border (start or end) that's after the current frame.
+   Jump to Previous Strip (Center) :kbd:`Alt-PageDown`
+      Moves the playhead to the nearest strip center that's before the current frame.
+   Jump to Next Strip (Center) :kbd:`Alt-PageUp`
+      Moves the playhead to the nearest strip center that's after the current frame.
+
+.. _bpy.ops.sequencer.previewrange_set:
+
+Range
+   Set Preview Range :kbd:`P`
+      Interactively define the frame range used for preview playback/rendering.
+
+      As long as this range is active, playback will be limited to it, letting you repeatedly view a
+      segment of the video without having to manually rewind each time. It also limits the range
+      that gets rendered.
+   Set Preview Range to Strips
+      Apply a preview range that encompasses the selected strips.
+   Clear Preview Range :kbd:`Alt-P`
+      Clears the preview range.
+   Set Start Frame :kbd:`Ctrl-Home`
+      Set the Start frame of the scene to the current frame.
+   Set End Frame :kbd:`Ctrl-End`
+      Set the End frame of the scene to the current frame.
+   Set Frame Range to Strips
+      Set the Start and End frames of the scene so they encompass the selected strips.
 
 Sync Visible Range
-   Synchronize the visible range with other time based editors.
+   Synchronizes the visible time range with other time-based editors (such as the Timeline and
+   the Graph Editor) that also have this option enabled.
 
 Show Seconds :kbd:`Ctrl-T`
    Shows seconds instead of frames on the time axis.
 Show Markers
-   Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
-   and markers operators are not available in this editor.
+   Shows the marker region. When disabled, the *Marker* menu is also hidden
+   and marker operators are not available in this editor.
 
 .. _bpy.types.SequenceEditor.show_cache:
 
 Show Cache
-   Show which frames are :doc:`Cached </editors/video_sequencer/sequencer/sidebar/cache>`
-   Show all enabled types;
-   Final Images, Raw Images, Preprocessed Images, Composite Images
+   Show which frames are :doc:`Cached </editors/video_sequencer/sequencer/sidebar/cache>`.
 
-   In order for this property to be visible, enable :ref:`Developer Extras <prefs-interface-dev-extras>`.
+   The :ref:`Developer Extras <prefs-interface-dev-extras>` must be enabled for this
+   menu item to be visible.
 
 Sequence Render Image
-   Render an image of the current frame.
+   Show the current frame preview as a Render Result where you can save it as an image file.
 Sequence Render Animation
-   Render timeline from Preview Start to Preview End Frame to a Video file or series of images.
+   Save previews of the frames in the scene range (or the preview range, if active) to a video file
+   or a series of image files. See the :doc:`/render/output/properties/output` panel for details.
+
+.. note::
+   *Sequence Render Image* and *Sequence Render Animation* don't render the final video by default --
+   specifically, they don't render Scene Strips, instead using the preview's
+   :doc:`shading mode </editors/3dview/display/shading>` (which is initially Solid).
+
+   To output a video where the Scene Strips are rendered, use the *Render* menu in the topbar,
+   or change :menuselection:`Sidebar --> View --> Scene Strip Display --> Shading` to *Rendered*.
+   The latter option is only available if the Video Sequencer is in the *Preview* or
+   *Sequencer & Preview* mode.
 
 Export Subtitles
    Exports :doc:`Text strips </video_editing/edit/montage/strips/text>`,
@@ -116,7 +128,7 @@ Export Subtitles
    The exported file contains all Text strips in the video sequence.
 
 Toggle Sequencer/Preview :kbd:`Ctrl-Tab`
-   Switch the editor display type between Sequencer and Preview.
+   Switch the editor mode between *Sequencer* and *Preview*.
 
 
 Markers Menu
@@ -129,7 +141,7 @@ within an animation. Like with most animation editors, markers are shown at the 
 
    Markers in animation editor.
 
-For descriptions of the different marker tools see :ref:`Editing Markers <animation-markers-editing>`.
+See :ref:`Editing Markers <animation-markers-editing>` for details.
 
 
 Main View
@@ -138,38 +150,36 @@ Main View
 Adjusting the View
 ------------------
 
-Use these shortcuts to adjust the sequence area of the editor:
+Use these shortcuts to adjust the view:
 
 - Pan: :kbd:`MMB`
+- Horizontal scroll: use :kbd:`Ctrl-Wheel`, or drag the horizontal scrollbar.
+- Vertical scroll: use :kbd:`Shift-Wheel`, or drag the vertical scrollbar.
 - Zoom: :kbd:`Wheel`
-- Vertical Scroll: use :kbd:`Shift-Wheel`, or drag on the left scrollbar.
-- Horizontal Scroll: use :kbd:`Ctrl-Wheel`, or drag on the lower scrollbar.
-- Scale View: :kbd:`Ctrl-MMB` and drag up/down (vertical scale) or left/right (horizontal scale).
-- Scale View Vertically: drag on the circles on the vertical scrollbar.
-- Scale View Horizontally: drag on the circles on the horizontal scrollbar.
-
+- Scale view: :kbd:`Ctrl-MMB` and drag left/right (horizontal scale) or up/down (vertical scale).
+  Alternatively, you can drag the circles on the scrollbars with :kbd:`LMB`.
 
 Playhead
 --------
 
-The Playhead is the blue vertical line with the current frame number at the top.
-It can be set or moved to a new position by pressing or holding :kbd:`LMB`
-in scrubbing area at the top of the timeline.
-You can move the Playhead in increments by pressing :kbd:`Left` or :kbd:`Right`, or by using :kbd:`Alt-Wheel`.
-You can also jump to the beginning or end frame by pressing :kbd:`Shift-Left` or :kbd:`Shift-Right`.
-As you do, the image for that frame is displayed in the Preview region.
+The Playhead is the blue vertical line with the current frame number at the top. It can be moved
+in the following ways:
 
-When you drag the frame indicator with :kbd:`Shift-RMB` directly on a sequence strip,
-this will show the strip *solo*, (temporarily disregarding effects and other strips,
-showing only this strip's output) and the strip will be highlighted.
+* Jump or scrub: click or drag :kbd:`LMB` in the scrubbing area at the top of the timeline.
+* Jump or scrub (alternative): click or drag :kbd:`Shift-RMB` anywhere in the timeline.
+  If you start dragging on a strip, that strip will be highlighted and displayed *solo* in the preview
+  (all other strips are temporarily muted).
+* Move in single-frame increments: :kbd:`Left`, :kbd:`Right`, or :kbd:`Alt-Wheel`.
+* Jump to the start or end frame of the scene (or :ref:`preview range <bpy.ops.sequencer.previewrange_set>`,
+  if active): :kbd:`Shift-Left` or :kbd:`Shift-Right`.
 
-When holding :kbd:`Ctrl` while dragging it will snap to the start and endpoints of strips.
+While dragging with :kbd:`LMB` or :kbd:`Shift-RMB`, you can additionally hold :kbd:`Ctrl`
+to snap to the start and end points of strips.
 
-Real-time preview is possible on reasonable computers
-when viewing an image sequence or movie (``avi``/``mov``) file.
-Scene strips can use viewport previews or proxies for real-time playback,
-otherwise displaying rendered frame is supported, but typically too slow for real-time playback.
+If scrubbing (or regular playback) performs poorly, you can speed it up by creating
+:doc:`proxies </editors/video_sequencer/sequencer/sidebar/proxy>`.
 
 .. hint::
 
-   Every other synced editor can be used for scrubbing e.g. the Timeline.
+   The current frame is synchronized across all editors, so if you move the Playhead in the
+   Timeline editor for example, it will move in the Video Sequence editor as well (and vice versa).

@@ -3,7 +3,7 @@
 Sequencer
 *********
 
-The Sequencer view type shows a timeline (highlighted in red in the figure below).
+The Sequencer view type shows a timeline and allows placing and editing strips.
 
 .. figure:: /images/editors_vse_sequencer.svg
    :alt: Sequencer
@@ -16,6 +16,6 @@ The Sequencer view type shows a timeline (highlighted in red in the figure below
    introduction.rst
    channels.rst
    navigating.rst
-   display.rst
    toolbar/index.rst
    sidebar/index.rst
+   display.rst

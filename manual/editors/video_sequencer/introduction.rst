@@ -14,25 +14,24 @@ Editor Layout
 
 The Video Sequencer is composed of multiple regions.
 They are described in more detail in the next sections.
-Figure 1 shows the combined *Sequencer & Preview* view type.
-This view can be broken up into the following regions:
+Figure 1 shows the combined *Sequencer & Preview* view type:
 
 .. figure:: /images/editors_vse_overview.svg
 
    Figure 1: Sequence Editor shown in the Sequencer & Preview view type.
 
 Header
-   This region displays menus and buttons for interacting with the editor.
+   Contains menus and buttons for interacting with the editor.
    The header changes slightly depending on the selected view type (see below).
 Preview
-   This region shows the output of the Sequencer at the time of the Playhead.
+   Shows the output of the Sequencer at the time of the Playhead.
 Sequencer
-   This region shows a timeline for managing the montage of strips.
+   Shows a timeline for managing the montage of strips.
 Sidebar
-   This region shows the properties of the active strip.
+   Shows the properties of the active strip.
    It's divided into panels and tabs. Toggle on or off with :kbd:`N`.
 Toolbar
-   This region shows a list of tools. Toggle on or off with :kbd:`T`.
+   Shows a list of tools. Toggle on or off with :kbd:`T`.
 
 
 .. _bpy.types.SpaceSequenceEditor.view_type:
@@ -41,7 +40,7 @@ View Types
 ==========
 
 The Video Sequencer has three view types which can be
-changed with the View Type selector (see figure 1; top left).
+changed using the View Type selector (see figure 1; top left).
 
 .. figure:: /images/editors_vse_view_types.svg
 
@@ -56,8 +55,10 @@ Sequencer & Preview
 
 .. tip::
 
-   It's possible to have multiple Video Sequencers in one workspace,
-   each with its own view type.
+   Rather than having one Video Sequencer in the *Sequencer & Preview* mode, it can be more
+   useful to have one in the *Sequencer* mode and another in the *Preview* mode,
+   the reason being that *Sequencer & Preview* lacks most of the *Preview* tools.
+   Blender's default *Video Editing* workspace offers this layout.
 
 
 Performance
@@ -65,7 +66,7 @@ Performance
 
 Playback performance can be improved in several ways.
 
-The method with the most impact is to allow the Video Sequencer to cache the playback.
+The method with the most impact is to allow the Video Sequencer to cache generated frames.
 There are two levels of cache: a memory cache, which is enabled by default
 (and can be enlarged if RAM allows), and a disk cache, which is slower but has more capacity.
 Both of these can be configured in the :ref:`Preferences <prefs-system-video-sequencer>`.

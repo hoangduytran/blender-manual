@@ -10,7 +10,7 @@ The *entire* strip could be selected by clicking :kbd:`LMB` in the middle of the
 Select Menu
 ===========
 
-The Select Menu helps you select strips in different ways.
+The Select menu lets you select strips in different ways.
 
 .. _bpy.ops.sequencer.select_all:
 
@@ -26,37 +26,33 @@ Invert :kbd:`Ctrl-I`
 .. _bpy.ops.sequencer.select_box:
 
 Box Select :kbd:`B`
-   Click and drag a rectangular lasso around a region of strips in your Sequence workspace.
-   Selects strips all intersecting this rectangle.
+   See :ref:`Box Select <bpy.ops.*.select_box>`.
 
 Box Select (Include Handles) :kbd:`Ctrl-B`
-   Works the same as *Box Select* but it selects only the strip's handles,
-   if just one handle is selected moving the strip after selecting will change the strip's length.
-   If both handles are selected the strip will move and behave the exact same as *Box Select*.
+   Works like *Box Select*, but also selects any strip handles inside the box. If a strip has only
+   one handle selected, dragging it will change the strip's length. (If both handles are selected,
+   the complete strip moves instead.)
 
 .. _bpy.ops.sequencer.select_side_of_frame:
 
 Side of Frame
    Left/Right :kbd:`[`/:kbd:`]`
-      Select strips laying left or right to the current frame.
+      Select the strips that lie completely to the left or right of the current frame.
    Current
-      Select strips intersecting with the current frame.
+      Select the strips that intersect the current frame.
 
 .. _bpy.ops.sequencer.select_handles:
 
 Handle
-   Operators to select strip handles.
-   These operators are useful to change the timing of a cut by moving the handles after selecting them.
-
    Both, Left, Right
-      Select the left, right, or both handles of selected strips.
+      Select the left, right, or both handles of the selected strips.
    Both/Left/Right Neighbor
       Select the handle of the neighboring strip to the left, right, or on both sides of the selected strips.
 
 .. _bpy.ops.sequencer.select_side:
 
 Channel
-   Select strips in the same channel laying left or right to active strip.
+   Select all the strips that are in the same channels as the currently selected strips.
 
 .. _bpy.ops.sequencer.select_more:
 .. _bpy.ops.sequencer.select_less:
@@ -64,25 +60,33 @@ Channel
 
 Linked
    All :kbd:`Ctrl-L` / Less :kbd:`Ctrl-NumpadMinus` / More :kbd:`Ctrl-NumpadPlus`
-      Selects strips, that are placed next to each other without any gaps.
+      Add/remove neighboring strips to/from the selection.
 
 .. _bpy.ops.sequencer.select_grouped:
 
 Grouped :kbd:`Shift-G`
-   Selects strips according to their relation with other strips.
+   Select strips that are similar to the active strip. By default, unsimilar strips are
+   deselected, but this can be changed in the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>`
+   region.
 
    Type
-      Selects any strips of the same type within a category for example,
-      if you have a Cross strip selected this will select all other effect strips.
+      Select strips that have the same specific type as the active strip. For example,
+      if the active strip is a Movie strip, this selects all Movie strips.
    Global Type
-      Selects any strips of the same type, e.g. Effect, Image, Movie, etc.
+      Select strips that have the same general type (graphics or audio) as the active strip.
    Effect Type
-      Selects all effect strips.
+      If the active strip is an effect strip, selects all effect strips. Otherwise,
+      selects all non-effect strips. (Despite the name, this operator does not check
+      the effect type.)
    Data
-      Selects strips that share the same data, for example, two image strips sharing the same image file.
+      Select strips that use the same source (file, scene, movie clip or mask) as the active strip.
    Effect
-      Selects the strip that shares an effect strip.
+      Find the effect types that are applied to the active strip, and select all strips that have
+      any of the same effect types applied to them. For example, if the active strip has a
+      Gaussian Blur effect on it, this will select all other strips that are also blurred.
    Effect/Linked
-      Selects the effect strips, if any, linked to the currently selected strip.
+      Select strips that are on a lower channel than a selected strip and overlap it in time;
+      then, effect strips linked to the selected content strips; and finally, content strips
+      linked to the selected effect strips.
    Overlap
-      Selects any strips that occur on the same frame as the current.
+      Select strips that partially or completely overlap the active strip in time.
