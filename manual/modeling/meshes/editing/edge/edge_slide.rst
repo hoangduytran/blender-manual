@@ -10,6 +10,7 @@ Edge Slide
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Edge --> Edge Slide`
+   :Shortcut:  :kbd:`G-G`
 
 Slides one or more edges across adjacent faces with a few restrictions involving the selection
 of edges (i.e. the selection *must* define a valid loop, see below).
