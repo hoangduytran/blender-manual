@@ -3,10 +3,10 @@
 Ivy Gen
 *******
 
+Adds generated ivy to a mesh object starting at the 3D Cursor.
+
 Based on the wonderful code by Thomas Luft and
 his original `IvyGen program <http://graphics.uni-konstanz.de/~luft/ivy_generator/>`__.
-
-Original Blender port by testscreenings, further advances by PKHG and TrumanBlending.
 
 .. figure:: /images/addons_add-curve_ivy-gen_example.jpg
    :align: center
@@ -27,12 +27,13 @@ Interface
    :align: right
    :width: 220px
 
-Located in the :menuselection:`3D Viewport --> Sidebar --> Create tab`.
+Located in the :menuselection:`3D Viewport --> Sidebar --> Create` tab.
 
-Located in the :menuselection:`3D Viewport --> Operator`.
+Add Default Ivy
+   Creates ivy using the default parameters.
 
-The Update Ivy operator is separate from the main menu and appears in the 3D Viewport.
-You can adjust settings in the panel and press the *Update* button to update parameters.
+The Update Ivy operator is separate from the main menu and appears in the 3D Viewport's :ref:`bpy.ops.screen.redo_last` panel.
+You can adjust settings in the panel and press the *Update Ivy* button to update parameters.
 
 
 Instructions
@@ -41,14 +42,12 @@ Instructions
 #. Select the object you want to grow ivy on.
 #. Enter Edit Mode and select a vertex that you want the ivy to spawn from.
 #. Snap the cursor to the selected vertex.
-#. Enter Object Mode and with the object selected:
-   :menuselection:`Sidebar --> Create --> Ivy Generator panel` adjust settings and choose *Add New Ivy*.
+#. Enter Object Mode and with the object selected go to:
+   :menuselection:`Sidebar --> Create --> Ivy Generator`, adjust settings, and choose *Add New Ivy*.
 
-The *Add Default Ivy* operator will use the default parameters during creation.
-This will generate your initial Ivy Curve and Leaves.
-From here you can access the *Ivy* menu in the Sidebar.
-I suggest to make small changes and then press *Update Ivy* in the 3D Viewport operator.
-
+   This will generate your initial Ivy Curve and Leaves.
+#. Use the *Update Ivy* in the :ref:`bpy.ops.screen.redo_last` panel
+   after making small changes to parameters to adjust the ivy to the desired look.
 
 .. reference::
 
