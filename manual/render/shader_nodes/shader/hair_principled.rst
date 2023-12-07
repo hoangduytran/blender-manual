@@ -219,7 +219,7 @@ Secondary Reflection
    component is oriented approximately around the incoming direction, and picks up the
    color of the pigment inside the hair. Keep this 1.0 for physical correctness
 
- 
+
 Properties
 ==========
 

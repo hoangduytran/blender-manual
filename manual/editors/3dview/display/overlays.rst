@@ -19,7 +19,6 @@ The availability of these options depend on the mode the 3D Viewport is in or wh
 These settings are described later on in this page.
 
 
-
 General
 =======
 

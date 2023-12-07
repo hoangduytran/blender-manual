@@ -331,7 +331,7 @@ Clean Keyframes
    :Menu:      :menuselection:`Key --> Density --> Clean Keyframes`
    :Shortcut:  :kbd:`X`
 
-Removes redundant keys within the selection of keyframes. 
+Removes redundant keys within the selection of keyframes.
 *Clean Keyframes* resets the keyframe tangents on selected keyframes
 to their auto-clamped shape, if they have been modified.
 

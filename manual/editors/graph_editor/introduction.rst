@@ -183,7 +183,7 @@ Box Select (Include Handles)
    Selects keyframes and their handles inside the defined box.
 Circle Select :kbd:`C`
    Selects keyframe points using circle selection.
-Lasso Select 
+Lasso Select
    Selects keyframe points using lasso selection.
 
 .. _bpy.ops.graph.select_column:

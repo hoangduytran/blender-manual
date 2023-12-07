@@ -32,7 +32,8 @@ Located in the :menuselection:`3D Viewport --> Sidebar --> Create` tab.
 Add Default Ivy
    Creates ivy using the default parameters.
 
-The Update Ivy operator is separate from the main menu and appears in the 3D Viewport's :ref:`bpy.ops.screen.redo_last` panel.
+The Update Ivy operator is separate from the main menu and appears in the 3D Viewport's
+:ref:`bpy.ops.screen.redo_last` panel.
 You can adjust settings in the panel and press the *Update Ivy* button to update parameters.
 
 

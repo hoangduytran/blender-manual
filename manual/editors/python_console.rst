@@ -40,11 +40,11 @@ Move to Next Word :kbd:`Ctrl-Right`
 Move to Line Begin :kbd:`Home`
    Moves the cursor to the start of the current line.
 
-   :kbd:`Shift-Home`: Selects all text between the cursor and the start of the current line. 
+   :kbd:`Shift-Home`: Selects all text between the cursor and the start of the current line.
 Move to Line End :kbd:`End`
    Moves the cursor to the end of the current line.
 
-   :kbd:`Shift-End`: Selects all text between the cursor and the end of the current line. 
+   :kbd:`Shift-End`: Selects all text between the cursor and the end of the current line.
 
 
 Console Menu

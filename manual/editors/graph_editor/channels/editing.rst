@@ -206,7 +206,7 @@ Keys to Samples
    :Menu:      :menuselection:`Channel --> Keys to Samples`
    :Shortcut:  :kbd:`Alt-C`
 
-This operator replaces an F-Curve with a set of sampled points at each full frame. 
+This operator replaces an F-Curve with a set of sampled points at each full frame.
 **It is a destructive process that removes the ability to edit the curve**.
 The main use for this is to reduce the file size with large datasets. Samples are only 1/5th the size per key.
 The sampled points interpolate linearly on subframes.

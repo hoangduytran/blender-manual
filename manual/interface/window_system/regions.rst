@@ -180,7 +180,7 @@ Asset Shelf
 Search
 ------
 
-To search for assets, hover your mouse over the Asset Shelf, then press Ctrl-F and type a search query. 
+To search for assets, hover your mouse over the Asset Shelf, then press Ctrl-F and type a search query.
 This will filter the poses to match what you typed.
 
 
@@ -191,7 +191,7 @@ Tabs
 
    The usage of catalogs as tabs.
 
-Catalogs can be shown as individual tabs. Each tab will only show its content, and the content of its children. 
+Catalogs can be shown as individual tabs. Each tab will only show its content, and the content of its children.
 That makes it easy to filter down to a certain set of assets.
 
 

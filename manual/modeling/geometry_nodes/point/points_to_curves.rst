@@ -10,7 +10,7 @@ Points to Curves Node
    :alt: Points to Curves node.
    :width: 250px
 
-The *Points to Curves* node generates a :doc:`Curves </modeling/curves/introduction>` geometry by taking all 
+The *Points to Curves* node generates a :doc:`Curves </modeling/curves/introduction>` geometry by taking all
 points and inserting them to new curves. All :doc:`Attributes </modeling/geometry_nodes/attributes_reference>`
 from points are propagated to :ref:`Curve Points <attribute-domains>`.
 :ref:`Built-in <geometry-nodes_builtin-attributes>` curves attributes stored in points will be ignored.

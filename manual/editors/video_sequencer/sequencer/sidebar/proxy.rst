@@ -3,7 +3,8 @@
 Proxy
 *****
 
-As projects involve increasingly high-resolution footage, the performance of the video preview can decrease drastically.
+As projects involve increasingly high-resolution footage,
+the performance of the video preview can decrease drastically.
 To combat this, proxies are used to maintain a smooth editing experience without compromising visual fidelity.
 
 Proxies are optimized, lower-resolution, versions of original video files
