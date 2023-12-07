@@ -3,8 +3,8 @@
 {%- if not pagename in ("search", "404", "genindex", "advanced/command_line/arguments") and hasdoc(pagename) %}
 <div class="footer-contribute">
    <ul>
-      <li>
-         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/{{ pagename }}{{ page_source_suffix }}"
+      <li>{# Add the `display=source` because GITEA's rendering misses Sphinx's features and shows warnings. #}
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/{{ pagename }}{{ page_source_suffix }}?display=source"
             class="fa fa-edit"> {{ _('View Source') }}</a>
       </li>
       <li>
