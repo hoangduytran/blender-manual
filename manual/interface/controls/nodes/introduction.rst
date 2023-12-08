@@ -58,13 +58,14 @@ Use Nodes
    Tells the render engine to use the node tree when computing the material color or rendering the final image,
    or not. If not, the tree is ignored. For materials, this is mostly a legacy option, because in the past
    materials could not be created with node trees.
-Use Pinned
+Pin
    When enabled, the editor will retain the material or texture, even when the user selects a different object.
    A node tree can then be edited independent of the object selection in the 3D Viewport.
 Parent Node Tree
    Leaves the current :doc:`node group </interface/controls/nodes/groups>` and returns to the parent node group/tree.
 Snapping
    Change options for snapping node positions to achieve a cleaner node tree layout.
+   See :doc:`/interface/controls/nodes/arranging`.
 
 
 .. _bpy.types.SpaceNodeOverlay.show_overlays:

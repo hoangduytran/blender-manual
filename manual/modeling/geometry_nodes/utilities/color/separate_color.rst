@@ -10,8 +10,8 @@ Separate Color Node
    :align: right
    :alt: Separate Color Node.
 
-The *Separate Color Node* splits an image into its composite color channels.
-The node can output multiple :term:`Color Models <Color Model>` depending on the Mode property.
+Splits an image into its channels,
+based on a particular :term:`Color Model`.
 
 
 Inputs
@@ -27,15 +27,15 @@ Properties
 Mode
    The color model to output.
 
-   :RGB: Split the input colors into it's three outputs: Red, Green, and Blue color channels.
-   :HSV: Split the input colors into it's three outputs: Hue, Saturation, and Value color channels.
-   :HSL: Split the input colors into it's three outputs: Hue, Saturation, and Lightness color channels.
+   :RGB: Red, Green, Blue.
+   :HSV: Hue, Saturation, Value.
+   :HSL: Hue, Saturation, Lightness.
 
 
 Outputs
 =======
 
-The outputs of this node depends on the Mode property (see above).
+The outputs of this node depend on the Mode property (see above).
 
 Alpha
-   The color channel that is responsible for the image's transparency.
+   The opacity value.

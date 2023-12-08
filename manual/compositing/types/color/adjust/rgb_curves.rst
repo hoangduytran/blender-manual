@@ -1,7 +1,10 @@
 .. index:: Compositor Nodes; RGB Curves
 .. _bpy.types.CompositorNodeCurveRGB:
 
-.. Editor's Note: This page gets copied into :doc:`</render/cycles/nodes/types/color/rgb_curves>`
+.. Editor's Note: This page gets copied into:
+.. - :doc:`</render/shader_nodes/color/rgb_curves>`
+.. - :doc:`</editors/texture_node/types/color/rgb_curves>`
+.. - :doc:`</modeling/geometry_nodes/utilities/color/rgb_curves>`
 
 .. --- copy below this line ---
 
@@ -13,21 +16,20 @@ RGB Curves Node
    :align: right
    :alt: RGB Curves Node.
 
-The *RGB Curves Node* allows color corrections for each color channel
-and levels adjustments in the compositing context.
+The *RGB Curves Node* performs level adjustments on each color channel.
 
 
 Inputs
 ======
 
 Factor
-   Controls the amount of influence the node exerts on the output image.
-Image
+   Controls the amount of influence the node exerts on the image.
+Image/Color
    Standard color input.
 Black Level :guilabel:`Compositor Only`
-   Defines the input color that is (linear) mapped to black.
+   Defines the input color that should be mapped to black.
 White Level :guilabel:`Compositor Only`
-   Defines the input color that is (linear) mapped to white.
+   Defines the input color that should be mapped to white.
 
 .. container:: lead
 
@@ -35,29 +37,33 @@ White Level :guilabel:`Compositor Only`
 
 .. tip::
 
-   To define the levels, use the :ref:`eyedropper <ui-eyedropper>` to select a color sample of a displayed image.
+   To define the black and white levels, use the :ref:`eyedropper <ui-eyedropper>` to select a color sample of a displayed image.
 
 
 Properties
 ==========
 
 Tone :guilabel:`Compositor Only`
-   :Standard: TODO 2.8
-   :Film Like: TODO 2.8
+   :Standard: The Combined curve is applied to each channel individually, which may result in a change of hue.
+   :Filmlike: Keeps the hue constant.
 
 Channel
-   Clicking on one of the channels displays the curve for each.
+   The curve to show.
 
-   C (Combined RGB), R (Red), G (Green), B (Blue)
+   :C: Combined
+   :R: Red
+   :G: Green
+   :B: Blue
+
 Curve
-   A Bézier curve that varies the input levels (X axis) to produce an output level (Y axis).
-   For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
+   A Bézier curve that maps each input level (X axis) to an output level (Y axis).
+   For the curve controls, see :ref:`Curve widget <ui-curve-widget>`.
 
 
 Outputs
 =======
 
-Image
+Image/Color
    Standard color output.
 
 
@@ -83,8 +89,8 @@ Color Correction using Curves
 In this example, the image has too much red in it,
 so we run it through an *RGB Curves* node and reduce the Red channel.
 
-Also, read on for examples of the Darken and Contrast Enhancement curves,
-:doc:`here </compositing/types/color/mix/mix_color>`.
+The documentation for the :doc:`/compositing/types/color/mix/mix_color` has an additional
+example about fixing overexposure.
 
 
 Color Correction using Black/White Levels

@@ -15,7 +15,7 @@ Inputs
 ======
 
 Color 1, Color 2
-   Image inputs setting the color of the squares.
+   The colors of the squares.
 Size
    The scale of the checker pattern.
 

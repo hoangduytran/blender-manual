@@ -11,10 +11,11 @@ Snapping
 The snapping options can be found on the rightmost side
 of the node editor's header.
 
-Snap
-   Toggle snapping on or off.
+Snap :kbd:`Shift-Tab`
+   Toggle snapping on or off. You can also do this temporarily by holding :kbd:`Ctrl` after starting to drag
+   one or more nodes around.
 
-Snap Node Element
+Snap Node Element :kbd:`Shift-Ctrl-Tab`
    What to snap the selected nodes to:
 
    :Grid: Snap to the grid in the background.

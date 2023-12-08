@@ -1,7 +1,8 @@
 .. index:: Compositor Nodes; Hue/Saturation/Value
 .. _bpy.types.CompositorNodeHueSat:
 .. Editor's Note: This page gets copied into:
-.. - :doc:`</render/cycles/nodes/types/color/hue_saturation>`
+.. - :doc:`</render/shader_nodes/color/hue_saturation>`
+.. - :doc:`</editors/texture_node/types/color/hue_saturation>`
 
 .. --- copy below this line ---
 
@@ -20,32 +21,23 @@ Inputs
 ======
 
 Factor
-   Controls the amount of influence the node exerts on the output image.
-Image
+   The amount of influence the node exerts on the image.
+Image/Color
    Standard color input.
-
-
-Properties
-==========
-
-The transformations are relative shifts.
-In the shader and texture context the following properties are available as input sockets.
-
 Hue
-   Specifies the hue rotation of the image. 360° are mapped to (0 to 1).
-   The hue shifts of 0 (-180°) and 1 (+180°) have the same result.
+   The hue rotation offset, from 0 (-180°) to 1 (+180°). Note that
+   0 and 1 have the same result.
 Saturation
-   A saturation of 0 removes hues from the image, resulting in a grayscale image.
-   A shift greater than 1.0 increases saturation.
+   A value of 0 removes color from the image, making it black-and-white.
+   A value greater than 1.0 increases saturation.
 Value
-   Value is the overall brightness of the image.
-   De/Increasing values shift an image darker/lighter.
-
+   The value shift. 0 makes the color black, 1 keeps it the same, and higher
+   values make it brighter.
 
 Outputs
 =======
 
-Image
+Image/Color
    Standard color output.
 
 
@@ -54,25 +46,14 @@ Hue/Saturation Tips
 
 Some things to keep in mind that might help you use this node better:
 
-Hues are vice versa
-   A blue image, with a Hue setting at either end of the spectrum (0 or 1),
-   is output as yellow (recall that white, minus blue, equals yellow).
-   A yellow image, with a Hue setting at 0 or 1, is blue.
-Hue and Saturation work together.
-   So, a Hue of 0.5 keeps the blues the same shade of blue,
-   but *Saturation* can deepen or lighten the intensity of that color.
-Gray & White are neutral hues
-   A gray image, where the RGB values are equal, has no hue. Therefore,
-   this node can only affect it with *Value*. This applies to all shades of gray,
-   from black to white; wherever the values are equal.
+Hues are laid out on a circle
+   If you apply a Hue offset of 1 (+180°) to a blue image, you get the diametrically opposite
+   color, which is yellow. If you apply a Hue offset of 1 to that yellow image, you get blue again.
+Grayscale images have no hue
+   Trying to change the Hue or Saturation of a grayscale image has no effect. You can only brighten
+   or darken it by adjusting the Value. To add color, use the Mix node instead.
 Changing the effect over time
-   The Hue and Saturation values can be animated with a *Time Node* or by animating the property.
-
-.. note:: Tinge
-
-   This HSV node simply shifts hues that are already there.
-   To colorize a gray image, or to add a tint to an image,
-   use a Mix node to add in a static color from an RGB input node with your image.
+   The different values can be animated using a *Time Curve* node or by setting keyframes.
 
 
 HSV Example

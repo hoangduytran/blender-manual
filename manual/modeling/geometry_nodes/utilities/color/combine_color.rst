@@ -10,28 +10,28 @@ Combine Color Node
    :align: right
    :alt: Combine Color Node.
 
-The *Combine Color Node* combines an image from its composite color channels.
-The node can combine multiple :term:`Color Models <Color Model>` depending on the Mode property.
+Combines four grayscale channels into one color image,
+based on a particular :term:`Color Model`.
 
 
 Inputs
 ======
 
-The outputs of this node depends on the Mode property (see below).
+The inputs of this node depend on the Mode property (see below).
 
 Alpha
-   The color channel that is responsible for the image's transparency.
+   The opacity of the output color.
 
 
 Properties
 ==========
 
 Mode
-   The color model to output.
+   The color model to use.
 
-   :RGB: Combine the three inputs: Red, Green, and Blue color channels into a single color.
-   :HSV: Combine the three inputs: Hue, Saturation, and Value color channels into a single color.
-   :HSL: Combine the three inputs: Hue, Saturation, and Lightness color channels into a single color.
+   :RGB: Red, Green, Blue.
+   :HSV: Hue, Saturation, Value.
+   :HSL: Hue, Saturation, Lightness.
 
 
 Output

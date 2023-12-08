@@ -9,28 +9,30 @@
 Group
 *****
 
-:doc:`Group Nodes </interface/controls/nodes/groups>` are a collection of nodes
-that can be combined into a single node while selectively exposing inputs of the embedded nodes.
-Group nodes can simplify a node tree by allowing instancing and hiding parts of the tree.
+A :doc:`Group Node </interface/controls/nodes/groups>` combines a set of nodes into a single one,
+and selectively exposes inputs and outputs of those nodes.
 
+Group nodes can simplify a node tree by hiding away complexity and reusing functionality.
 
 Group Input
 ===========
 
-Adds a group input node, this serves as a convenient way to re-add the input node in case it is accidentally deleted.
-Note, groups can only have one input, if more than one is added they are duplicates of each other.
+Exposes the inputs of the node group. You can have multiple of these nodes in your tree to keep it clean,
+bringing in each input right where you need it (rather than dragging long links all across your graph). 
 
+The input slots can be edited in the *Group* tab of the *Sidebar*.
 
 Group Output
 ============
 
-Adds a group output node, this serves as a convenient way to re-add the output node
-in case it is accidentally deleted. Note, groups can only have one output,
-if more than one is added they are duplicates of each other.
+Receives the outputs of the node group. You can have multiple of these nodes in your tree to keep it clean,
+outputting each result right where it's produced (rather than dragging long links all across your graph). 
+
+The output slots can be edited in the *Group* tab of the *Sidebar*.
 
 
 Node Groups
 ===========
 
-This section lists all the node groups either from the current blend-file or
+This section lists all the node groups, both those in the current blend-file and those
 :doc:`Linked or Appended </files/linked_libraries/link_append>` from another blend-file.

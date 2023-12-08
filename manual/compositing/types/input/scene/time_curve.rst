@@ -26,7 +26,7 @@ Properties
 
 Curve
    The Y value defined by the curve is the factor output.
-   For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
+   For the curve controls, see :ref:`Curve widget <ui-curve-widget>`.
 
    .. tip::
 
@@ -43,14 +43,13 @@ Outputs
 =======
 
 Factor
-   A speed of time factor (from 0.0 to 1.0) relative to the scene's :ref:`Frame Rate <bpy.types.RenderSettings.fps>`.
-   The factor changes according to the defined curve.
+   The Y value of the curve at the current frame.
 
-.. hint:: Output values
+.. hint::
 
    The :doc:`Map Value </compositing/types/utilities/map_value>`
    node can be used to map the output to a more appropriate value.
-   With sometimes curves, it is possible that the Time Curve node
+   With some curves, it is possible that the Time Curve node
    may output a number larger than one or less than zero.
    To be safe, use the Min/Max clamping function of the Map Value node to limit output.
 

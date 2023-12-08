@@ -1,7 +1,8 @@
 .. index:: Compositor Nodes; Invert Color
 .. _bpy.types.CompositorNodeInvert:
 .. Editor's Note: This page gets copied into:
-.. - :doc:`</render/cycles/nodes/types/color/invert>`
+.. - :doc:`</render/shader_nodes/color/invert_color>`
+.. - :doc:`</editors/texture_node/types/color/invert_color>`
 
 .. --- copy below this line ---
 
@@ -13,14 +14,14 @@ Invert Color Node
    :align: right
    :alt: Invert Color Node.
 
-The *Invert Color Node* inverts the colors in the input image, producing a negative.
+Inverts the colors in the input image, producing a negative.
 
 
 Inputs
 ======
 
 Factor
-   Controls the amount of influence the node exerts on the output image.
+   The amount of influence the node exerts on the image.
 Color
    Standard color input.
 
@@ -28,12 +29,12 @@ Color
 Properties
 ==========
 
-In the compositing context this node has the following properties.
+In the compositing context, this node has the following properties:
 
 RGB
-   De/activation of the color channel inversion.
+   Invert the color channels.
 Alpha
-   De/activation of the alpha channel inversion.
+   Invert the alpha channel.
 
 
 Outputs

@@ -21,8 +21,8 @@ The *Math Node* performs math operations.
 Inputs
 ======
 
-The inputs of the node are dynamic. Some inputs are only available in certain operations.
-For instance, the *Addend* input is only available in the *Multiply Add* operator.
+The inputs of the node are dynamic. Some inputs are only available for certain operations.
+For instance, the *Addend* input is only available for the *Multiply Add* operator.
 
 Value
    Input Value. Trigonometric functions read this value as radians.
@@ -110,7 +110,7 @@ Operation
          Outputs a value between *Min* and *Max* based on the absolute difference between
          the input value and the nearest integer multiple of *Max* less than the value.
       :Snap: Rounds the input value down to the nearest integer multiple of *Increment*.
-      :Ping-pong: The output value is moved between 0.0 and the *Scale* based on the input value.
+      :Ping-pong: Bounces back and forth between 0.0 and the *Scale* as the input value increases.
 
    Trigonometric
       :Sine:
@@ -160,21 +160,19 @@ Manual Z-Mask
 
    Minimum and maximum function example.
 
-This example has one scene input by the top *Render Layers* node,
-which has a cube that is about 10 units from the camera.
-The bottom *Render Layers* node inputs a scene
-with a plane that covers the left half of the view and is 7 units from the camera.
-Both are fed through their respective *Map Value* nodes to divide the Z-buffer by 20
-(multiply by 0.05, as shown in the Size field)
-and clamped to be a min/max of 0.0/1.0 respectively.
+The top *Render Layers* node has a cube that is about 10 units from the camera.
+The bottom *Render Layers* node has a plane that covers the left half of the view
+and is 7 units from the camera.
+Both are fed through their respective *Map Value* nodes to multiply the depth value by
+0.05 and clamp it to [0.0, 1.0], bringing it into a suitable range for displaying it as a color.
 
-For the minimum function,
-the node selects those Z values where the corresponding pixel is closer to the camera;
-so it chooses the Z values for the plane and part of the cube.
-The background has an infinite Z value, so it is clamped to 1.0 (shown as white).
-In the maximum example, the Z values of the cube are greater than the plane,
-so they are chosen for the left side, but the plane *Render Layers* Z are infinite
-(mapped to 1.0) for the right side, so they are chosen.
+The Minimum node selects the smallest of the two depth values at each pixel. In the left half,
+it chooses the plane (because it's closer than the cube), and in the right half,
+it chooses the cube (because it's closer than the background, which is infinitely far away).
+
+The Maximum node selects the largest of the two depth values at each pixel. In the left half,
+it chooses the cube (because it's farther away than the plane), and in the right half,
+it chooses the background (because it's farther away than the cube).
 
 
 Using Sine Function to Pulsate
@@ -189,9 +187,9 @@ At frame 25, the output value is 0.25.
 That value is multiplied by 2 × pi (6.28) and converted to 1.0 by the Sine function,
 since :math:`sin(2 × pi/ 4) = sin(pi/ 2) = +1.0`.
 
-Since the sine function can put out values between (-1.0 to 1.0),
+Since the sine function can output values between (-1.0 to 1.0),
 the *Map Value* node scales that to 0.0 to 1.0 by taking the input (-1 to 1), adding 1
-(making 0 to 2), and multiplying the result by one-half (thus scaling the output between 0 to 1).
+(making 0 to 2), and multiplying the result by 0.5 (thus scaling the output between 0 to 1).
 The default *Color Ramp* converts those values to a gray-scale.
 Thus, medium gray corresponds to a 0.0 output by the sine, black to -1.0,
 and white to 1.0. As you can see, :math:`sin(pi/ 2) = 1.0`. Like having your own visual color calculator!
@@ -241,5 +239,5 @@ rounds the value to the nearest whole number (produces 0, 1, 2, 3, 4, 5),
 and then divides the image pixel color by five (0.0, 0.2, 0.4, 0.6, 0.8, 1.0).
 
 In the case of a color image,
-you need to split it into separate RGB channels using *Separate/Combine RGBA* nodes
+you need to split it into separate RGB channels using *Separate/Combine Color* nodes
 and perform this operation on each channel independently.

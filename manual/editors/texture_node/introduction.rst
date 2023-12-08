@@ -5,68 +5,61 @@
 Introduction
 ************
 
+The Texture Node Editor allows creating custom textures by combining colors,
+procedural patterns, and images in various ways. This is a step up from the
+:doc:`built-in textures </render/materials/legacy_textures/introduction>`,
+where you can select a type from a list and not much more.
+
 .. note::
 
-   The texture node system is legacy and expected to be replaced by a new system.
-   Due to this, the manual is not up to date with the latest version of Blender.
+   Textures -- both built-in ones and node-based ones -- are a legacy feature.
+   For their original main purpose, which was of course texturing objects,
+   they have been replaced by :doc:`Materials </render/materials/introduction>`
+   which are set up in the :doc:`/editors/shader_editor`.
 
-Blender includes a node-based texture generation system, which enables textures
-creation by combining colors, patterns and other textures in the same way as
-shader writing with :doc:`material nodes </render/shader_nodes/index>`.
+   Today, the use of Textures is limited to:
+
+   * :doc:`Brushes </sculpt_paint/brush/texture>`.
+   * The :doc:`/modeling/modifiers/deform/displace`.
+   * Influencing size, density etc. of :doc:`particle systems </physics/particles/texture_influence>`.
+   * Influencing emission locations of :ref:`fire/smoke simulations <bpy.types.FluidFlowSettings.use_texture>`.
+   * :doc:`Compositing </compositing/types/input/texture>`.
+
+   In addition, the Displace modifier and fire/smoke simulations don't support
+   node-based textures, instead only working with the built-in ones.
 
 .. figure:: /images/editors_texture-node_introduction_types-combined.png
    :width: 600px
 
    Combined textures based on nodes.
 
-These textures can be used for brushes, compositing and inside particle systems.
-
 
 Using Texture Nodes
 ===================
 
-To use texture nodes with the current texture, open the Texture Node editor.
+The default Blender layout has no workspace containing the Texture Node Editor.
+You need to manually open it in an :doc:`area </interface/window_system/areas>` of choice.
 
-A new texture can be created by either clicking the *New* button in the Texture Node editor,
-or the *New* button in the Texture panel. Once a texture is selected,
-it can be toggled to a function as a regular texture or a node texture by
-clicking the *Use Nodes* option in the Texture Node editor.
-
-The default node setup will appear: a red-and-white checkerboard node
-connected to an *Output* named "Default". For texture nodes,
-multiple Outputs can exist in the node setup.
-Compare to other types of node contexts, which are limited to one active Output node.
-See the next section for details.
-
-For instructions on how to add, remove and manipulate the nodes in the tree,
-see the :doc:`nodes </interface/controls/nodes/index>` reference.
-
-
-Using Multiple Outputs
-======================
-
-Each texture defined with texture nodes can have several outputs,
-which can then be used for different things. For example,
-a texture that defines both a diffuse (color) map and a normal map.
-This can be done by:
-
-#. Create two texture slots in the texture list, and set them to the same texture data-block.
-#. Add two *Output* nodes to the node tree,
-   and type new names into their *Name* text fields: e.g. "Diffuse" for one and "Normal" for the other.
-#. Underneath the texture list view in the Texture panel, a selector with the names of the outputs is shown.
-   For each entry in the Texture list, select the desired output by changing the menu entry
-   (e.g. set one to *Diffuse* and the other to *Normal*).
-
-These named outputs could be used, when the material is defined with material nodes.
-In this case, Texture Channels are probably not used. Instead, insert
-the texture nodes into the material node tree by using :menuselection:`Add --> Input --> Texture`.
-Inside the just added texture node the output to use can then be selected (e.g. *Diffuse* or *Normal*).
+Once the editor is open, you first need to set the empty *Texture Type* selector to *Brush*,
+after which you can use the :doc:`/interface/controls/templates/data_block`
+to start creating textures. Note that you need to enable *Use Nodes* in the header
+before you can add nodes.
 
 
 Header
 ======
 
-Pin (pin icon)
-   The pin button will keep the current texture selection fixed.
-   When a texture is pinned, it will remain visible in the Texture Editor
-   even when another object or simulation is selected elsewhere.
+See :doc:`Nodes </interface/controls/nodes/introduction>` for the header items common to
+all node editors.
+
+Texture Type
+   World
+      Deprecated -- the scene's :doc:`/render/lights/world` is now defined using
+      a Material rather than a Texture.
+   Brush
+      Show brush Textures in the data-block menu. Because the other two types are deprecated,
+      this effectively shows all Textures.
+   Line Style
+      Deprecated -- :doc:`Line Styles </render/freestyle/view_layer/line_style/introduction>`
+      for the Freestyle renderer are now defined using Materials rather than Textures.
+

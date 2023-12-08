@@ -8,10 +8,7 @@ Output Node
    :align: right
    :alt: Output node.
 
-This node contains the result of the node texture.
-
-Multiple output nodes can exist in a node texture, however, only one of them is active.
-The active one is set in the Texture Panel in the *Output* selector.
+This node receives the result of the node-based texture.
 
 
 Inputs
@@ -24,8 +21,9 @@ Color
 Properties
 ==========
 
-File Path
-   Output ID.
+Output Name
+   The name of the output. (Originally, it was possible for textures to
+   have multiple outputs with different names.)
 
 
 Outputs

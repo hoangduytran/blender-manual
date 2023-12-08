@@ -8,7 +8,7 @@ Texture Node
    :align: right
    :alt: Texture node.
 
-The Texture node can be used to load another node-based or non-node-based texture.
+The Texture node loads another node-based or non-node-based texture.
 
 
 Inputs
@@ -26,8 +26,7 @@ Properties
 ==========
 
 Texture
-   The texture could be selected from a list of textures available in the current blend-file or link in textures.
-   The textures themselves could not be edited in this node, but in the Texture panel.
+   The texture to load -- either from the current blend-file, or from a linked one.
 
 
 Outputs
