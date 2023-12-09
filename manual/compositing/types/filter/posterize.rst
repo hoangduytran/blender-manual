@@ -21,7 +21,7 @@ Image
    Standard color input.
 Steps
    The number of colors per channel;
-   A value of 8 will result is :math:`8^3 = 512` total colors.
+   A value of 8 will result in :math:`8^3 = 512` total colors.
 
 
 Properties
