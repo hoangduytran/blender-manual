@@ -34,7 +34,7 @@ New meta-rigs are created assembling sub-rigs samples
 
    .. figure:: /images/addons_rigging_rigify_metarigs_built-samples.png
 
-      Human meta-rig split by samples.
+      Cat meta-rig built by samples.
 
 All the mechanics, deformation bones and widget are created on a single click
    The meta-rig contains more information than the visualized bones.
