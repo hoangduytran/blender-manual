@@ -44,8 +44,8 @@ Split Impulse
    (lowers the simulation stability a little so use only when necessary).
    Limits the force with which objects are separated on collision, generally produces nicer
    results, but makes the simulation less stable (especially when stacking many objects).
-Steps per Second
-   Number of simulation steps made per second (higher values are more accurate but slower).
+Substeps Per Frame
+   Number of simulation steps taken per frame (higher values are more accurate but slower).
    This only influences the accuracy and not the speed of the simulation.
 Solver Iterations
    Amount of constraint solver iterations made per simulation step (higher values are more accurate but slower).
