@@ -3,7 +3,7 @@
 Introduction
 ************
 
-Geometry nodes system for modifying the geometry of an object with node-based operations.
+Geometry Nodes is a system for modifying the geometry of an object with node-based operations.
 It can be accessed by adding a :doc:`Geometry Nodes Modifier </modeling/modifiers/generate/geometry_nodes>`.
 
 .. figure:: /images/modeling_geometry-nodes_introduction_properties.png
