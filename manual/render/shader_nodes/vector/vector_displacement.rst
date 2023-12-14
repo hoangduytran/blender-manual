@@ -15,8 +15,14 @@ It is typically used to apply vector displacement maps created by other sculptin
 software. Vector displacement maps can fully represent the high resolution detail to
 be applied on a smooth base mesh, unlike regular displacement maps.
 
-For best results the mesh must be subdivided finely to bring out
-the detail in the displacement texture.
+By default, Blender only uses :term:`Bump Mapping` to render displacement.
+However with true displacement, the rendered geometry will be physically displaced. To use true displacement
+the :ref:`Displacement method <bpy.types.Material.displacement_method>` must be set accordingly.
+
+.. tip::
+
+   For best results when using true displacement,
+   the mesh must be subdivided finely to bring out the detail in the displacement texture.
 
 .. seealso::
 

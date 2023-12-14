@@ -12,11 +12,14 @@ The *Displacement* node is used to displace the surface along the surface normal
 to add more detail to the geometry. Both procedural textures and baked displacement maps
 can be used.
 
-For best results the mesh must be subdivided finely to bring out the detail
-in the displacement texture.
+By default, Blender only uses :term:`Bump Mapping` to render displacement.
+However with true displacement, the rendered geometry will be physically displaced. To use true displacement
+the :ref:`Displacement method <bpy.types.Material.displacement_method>` must be set accordingly.
 
-It is also possible to use the displacement as bump mapping only by changing the material
-settings, so that no high resolution mesh is needed.
+.. tip::
+
+   For best results when using true displacement,
+   the mesh must be subdivided finely to bring out the detail in the displacement texture.
 
 .. seealso::
 
@@ -57,6 +60,10 @@ Displacement
 
 Examples
 ========
+
+.. figure:: /images/render_materials_components_displacement_node-setup.png
+
+   Typical displacement node setup.
 
 .. figure:: /images/render_materials_components_displacement_example.jpg
 

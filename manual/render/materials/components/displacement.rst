@@ -3,10 +3,6 @@
 Displacement
 ************
 
-.. reference::
-
-   :Panel:     :menuselection:`Material --> Settings --> Displacement`
-
 Detail can be added to the shape of a surface with displacement shaders.
 
 To create displacement, connect a :doc:`Displacement </render/shader_nodes/vector/displacement>`
@@ -19,10 +15,12 @@ then be connected to these nodes.
    Typical displacement node setup.
 
 Three displacement methods exist, with varying accuracy, performance and memory usage.
+The displacement method can be set per material in the
+:ref:`Material Settings <bpy.types.Material.displacement_method>`.
 
 .. figure:: /images/render_materials_components_displacement_example.jpg
 
-   Bump only, displacement only and displacement and bump combined.
+   Bump only, displacement only, and displacement and bump combined.
 
 
 Bump Only

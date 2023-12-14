@@ -12,9 +12,9 @@ Material Settings
 Surface
 =======
 
-.. _bpy.types.CyclesMaterialSettings.displacement:
+.. _bpy.types.Material.displacement_method:
 
-Displacement Method
+Displacement
    Method used to perform :doc:`Displacement </render/materials/components/displacement>` on materials.
 
    :Displacement Only:
