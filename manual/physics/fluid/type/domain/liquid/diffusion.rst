@@ -1,5 +1,6 @@
-.. |m2.s-1| replace:: m\ :sup:`2`.s\ :sup:`-1`
-.. |kg.m-3| replace:: kg.m\ :sup:`-3`
+.. |m2.s-1| replace:: :math:`m^{2}/s`
+.. |kg.m-3| replace:: :math:`kg/m^{3}`
+.. |Pa.s| replace:: :math:`Pa\cdot s`
 
 .. _bpy.ops.fluid.preset:
 .. _bpy.types.FluidDomainSettings.use_diffusion:
@@ -25,15 +26,15 @@ Viscosity
    The viscosity refers to the "thickness" of the fluid and actually the force needed to
    move an object of a certain surface area through it at a certain speed.
 
-   For manual entry, please note that the normal real-world viscosity
-   (the so-called dynamic viscosity) is measured in Pascal-seconds (Pa.s),
-   or in Poise units (P, equal to 0.1 Pa.s), and commonly centiPoise units (cP, equal to 0.001 Pa.s).
+   For manual entry, please note that real-world viscosity
+   (the so-called dynamic viscosity) is normally measured in Pascal-seconds (|Pa.s|),
+   or in Poise units (P, equal to 0.1 |Pa.s|), and commonly centiPoise units (cP, equal to 0.001 |Pa.s|).
 
-   Blender, on the other hand, uses the kinematic viscosity which is dynamic viscosity in Pa.s,
-   divided by the density in |kg.m-3|, unit |m2.s-1|. So for example,
-   the viscosity of water at room temperature is 1.002 cP, or 0.001002 Pa.s; the density of water is
-   about 1000 |kg.m-3|, which gives a kinematic viscosity of 0.000001002 |m2.s-1| --
-   so the entry would be 1.002 times 10 to the minus six (1.002×10\ :sup:`-6` in scientific notation).
+   Blender, on the other hand, uses the kinematic viscosity which is the dynamic viscosity divided by
+   the density, :math:`\frac{Pa\cdot s}{kg/m^{3}}`, which is |m2.s-1|. So for example, the viscosity
+   of water at room temperature is 1.002 cP, or 0.001002 |Pa.s|; the density of water is about
+   1000 |kg.m-3|, which gives a kinematic viscosity of 0.000001002 |m2.s-1| --  so the entry would be
+   1.002 times 10 to the minus six (1.002×10\ :sup:`-6` in scientific notation).
 
    The table below gives some examples of fluids together with their dynamic and kinematic viscosities.
 
@@ -62,6 +63,12 @@ Viscosity
         - 1.0×10\ :sup:`15`
         - 1.0×10\ :sup:`0` (1.0)
 
+   .. tip::
+  
+      You can find the kinematic viscosity of more materials in the proper units by
+      asking Wolfram Alpha, e.g. `"kinematic viscosity of alcohol in m^2/s"
+      <https://www.wolframalpha.com/input?i=kinematic+viscosity+of+alcohol+in+m%5E2%2Fs>`__.
+
    To simplify the input of these numbers, the viscosity is changed by entering values
    in scientific notation by entering a base value and the exponent of that number.
 
@@ -73,7 +80,7 @@ Viscosity
    .. _bpy.types.FluidDomainSettings.viscosity_exponent:
 
    Exponent
-      The exponent of the viscosity value that will be multiplied by 10\ :sup:`-6`
+      The exponent of the viscosity value that will be multiplied by 10\ :sup:`-1`
       (e.g. 6 in the case of water (20 °C)).
 
    .. note:: Viscosity Varies
