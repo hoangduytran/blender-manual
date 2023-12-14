@@ -89,6 +89,22 @@ To store 2D Vectors (UV maps) and Byte Colors the
 :doc:`/modeling/geometry_nodes/attribute/store_named_attribute` must be
 used because there are no sockets for those types.
 
+
+Data Conversion
+---------------
+
+Through the use of Geometry Nodes, data can be converted between types.
+
+Valid conversions:
+
+- Between color and vector -- mapping between color channels and vector components.
+- Between color and float -- the color data is converted to its grayscale equivalent.
+- Between float and integer -- integers simply become floats, floats are truncated.
+- Between float and vector --  when a float becomes a vector the value is used for each component.
+  When a vector becomes a float the average of the components is taken.
+- Between float and boolean -- values greater than 0 are true, true maps to 1, and false maps to 0.
+
+
 .. _attribute-domains:
 
 Attribute Domains

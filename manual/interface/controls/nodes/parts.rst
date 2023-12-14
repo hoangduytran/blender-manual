@@ -133,6 +133,10 @@ Valid conversions:
 - Between color and vector -- mapping between color channels and vector components.
 - Between color and float -- the color data is converted to its grayscale equivalent.
 - Color/float/vector to Shader -- implicitly converts to color and gives the result of using an Emission node.
+- Between float and integer -- integers simply become floats, floats are truncated.
+- Between float and vector --  when a float becomes a vector the value is used for each component.
+  When a vector becomes a float the average of the components is taken.
+- Between float and boolean -- values greater than 0 are true, true maps to 1, and false maps to 0.
 
 Explicit conversion requires the use of a conversion node such as
 the :doc:`/render/shader_nodes/converter/shader_to_rgb` node
