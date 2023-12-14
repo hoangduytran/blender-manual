@@ -22,7 +22,11 @@ or you can use it within an "Adjustment Layer" effect strip,
 which allows you to apply these modifiers onto several strips the same time.
 
 Use Linear Modifiers
-   Calculate modifiers in linear space instead of sequencer space.
+   Calculates modifiers in :ref:`linear color space` instead of the
+   :ref:`Sequencer color space <bpy.types.ColorManagedSequencerColorspaceSettings.name>`.
+
+   Calculating modifiers in linear space will match the image processing of the compositor.
+   In most cases this should be enabled, working in a non-linear workflow could have unpredictable results.
 Copy to Selected Strips
    Allows you to copy the modifiers to selected strips.
    This works two ways, you can either replace the old modifiers or append/add to the previous modifiers.
