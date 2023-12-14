@@ -22,7 +22,7 @@ or you can use it within an "Adjustment Layer" effect strip,
 which allows you to apply these modifiers onto several strips the same time.
 
 Use Linear Modifiers
-   Calculates modifiers in :ref:`linear color space` instead of the
+   Calculates modifiers in :ref:`linear color space <color-management-linear-space>` instead of the
    :ref:`Sequencer color space <bpy.types.ColorManagedSequencerColorspaceSettings.name>`.
 
    Calculating modifiers in linear space will match the image processing of the compositor.
