@@ -18,7 +18,7 @@ Figure 1 shows the combined *Sequencer & Preview* view type:
 
 .. figure:: /images/editors_vse_overview.svg
 
-   Figure 1: Sequence Editor shown in the Sequencer & Preview view type.
+   Figure 1: The Video Sequencer Editor shown in the Sequencer & Preview view type.
 
 Header
    Contains menus and buttons for interacting with the editor.
