@@ -7,23 +7,25 @@ Header
 ======
 
 Type
-   Strip type represented by an icon.
+   Strip type, represented by an icon.
 
 .. _bpy.types.Sequence.name:
 
 Name
-   You can name or rename your strips here.
+   A text field to adjust the name of the strip, which is shown on the strip in the timeline.
 
    .. _bpy.ops.sequencer.strip_color_tag_set:
 
    Color Tag
-      Besides the set of :ref:`Default Strip Colors <sequencer-strip-colors>`
-      strips can also be given an alternative predefined color.
+      The color of the strip in the timeline.
+      By default, strips are given a :ref:`Default Color <sequencer-strip-colors>` based on the type of strip.
+      The color tag can change the color to an alternative predefined color.
+
       This can be useful to help organize your sequence by for example,
       giving a special color to all graphic overlays and a different color for footage.
 
 Mute
-   If enabled the strip will not produce any output.
+   Toggles the strip from producing an output.
 
 
 Compositing
@@ -34,11 +36,14 @@ Compositing
    :Panel:     :menuselection:`Sidebar --> Strip --> Compositing`
 
 Blend
-   Mode of blending strip with lower channels.
+   The method for blending the current strip with strips in lower channels.
+   See :term:`Blend Modes` for more information.
 Opacity
-   Set the opacity (alpha) of the strip.
-   This value, when animated and with the :menuselection:`View --> Show F-Curves` option turned on,
-   is drawn on the strip as a dark section that follows the animation curve.
+   The transparency (:term:`alpha <Alpha Channel>`) of the strip.
+
+   When this property is animated, the opacity is drawn as an overlay on the strip.
+   The overlay will look like a dark section that follows the animation curve.
+   This can be hidden by disabling the :ref:`F-Curves <bpy.types.SequencerTimelineOverlay.show_fcurves>`.
 
 
 .. _bpy.types.SequenceTransform:
@@ -53,9 +58,9 @@ Transform
 .. _bpy.types.SequenceTransform.filter:
 
 Filter
-   Interpolation Methods.
+   The technique used to estimate the values of pixels at non-integer coordinates within the image.
 
-   :Nearest: No interpolation, uses nearest neighboring pixel.
+   :Nearest: No interpolation; uses nearest neighboring pixel.
    :Bilinear: Simple interpolation between adjacent pixels.
    :Subsampling (3x3): Use nearest with 3x3 :term:`subsamples <Anti-Aliasing>` during rendering.
 
@@ -101,12 +106,14 @@ Video
    :Panel:     :menuselection:`Sidebar --> Strip --> Video`
 
 Strobe
-   To only display each nth frame. For example, if you set this to 10,
-   the strip will only display frames 1, 11, 21, 31, 41... of the source.
-   *Strobe* is a float value -- this way you can get a strobe effect synced exactly to a beat,
-   for example, by using non-integer values.
+   Display every nth frame.
+   For example, if you set this to 10,  the strip will only display frames 1, 11, 21, 31, 41... of the source.
+
+   It is important to realize that this property is a float value.
+   This allows you to strobe effect synced exactly to a beat.
+
 Reverse Frames
-   Strip is played backwards starting from the last frame in the sequence.
+   Plays the strip backwards starting from the last frame in the sequence.
 
 
 Color
@@ -117,11 +124,11 @@ Color
    :Panel:     :menuselection:`Sidebar --> Strip --> Color`
 
 Saturation
-   Increase or decrease the saturation of an image.
+   Adjusts the vividness of colors in the image.
 Multiply
-   Multiplies the colors by this value. This will increases the brightness.
+   Multiplies the colors by this value. This will increase the brightness.
 Multiply Alpha
-   Multiply alpha along with color channels.
+   Multiply alpha along with color channels when using the *Multiply* option.
 Convert to Float
    Converts input to float data.
 
@@ -140,25 +147,41 @@ Working with sound is documented further at :ref:`bpy.types.SoundSequence`.
 .. _bpy.types.SoundSequence.volume:
 
 Volume
-   The volume of the sound.
-   This value, when animated and with the :menuselection:`View --> Show F-Curves` option activated,
-   is drawn on the strip as a dark section that follows the animation curve.
+   Adjusts the perceived loudness or intensity of the sound
+
+   When this property is animated, the volume is drawn as an overlay on the strip.
+   The overlay will look like a dark section that follows the animation curve.
+   This can be hidden by disabling the :ref:`F-Curves <bpy.types.SequencerTimelineOverlay.show_fcurves>`.
    The value is also reflected in the waveform.
+
+.. figure:: /images/vse_setup_project_striptypes_sound-pan.png
+   :align: right
+   :width: 220px
 
 .. _bpy.types.SoundSequence.pan:
 
 Pan
    Used to pan the audio between speakers in multichannel audio.
-   Only works for mono sources. The number of audio channels can be configured in
-   the :ref:`Audio Output <render-output-video-encoding-audio>` settings.
-   For stereo output panning works from left (-1) to right (1). When
-   the output uses more than two channels, values can be between -2 and 2,
-   where 0 means front/center, -1 means to the left and 1 to the right.
-   To address rear speakers, you can pan to those with the higher values:
-   -2, 2 is back. This value basically represents the angle at
+   Only mono sources can be panned, if the source file is not mono enable *Mono* to mix the channels together.
+
+   This value basically represents the angle at
    which it's played if you multiply the value by 90 degrees.
-   For smooth animation you can assign values outside the soft bounds,
-   since the angle wraps around over multiple rotations.
+
+   For stereo output panning works from left (-1) to right (1);
+   where 0 means front/center, -1 means to the left and 1 to the right.
+
+   To address rear speakers, you can pan to those with the higher values;
+   where -2 is back left, and 2 is back right.
+
+   .. tip::
+
+      For smooth animation you can assign values outside the soft bounds,
+      since the angle wraps around over multiple rotations.
+
+   .. note::
+
+      The number of audio channels can be configured in the
+      :ref:`Audio Output <render-output-video-encoding-audio>` settings.
 
 .. _bpy.types.SoundSequence.show_waveform:
 
@@ -171,7 +194,7 @@ Display Waveform
 .. _bpy.types.Sound.use_mono:
 
 Mono
-   Mixdown all audio channels into a single one.
+   Mixdown all audio channels into a single channel.
 
 
 .. _sequencer-strips-properties-time:
@@ -249,8 +272,8 @@ Change Data/Files
    Same as the *Path* and *File* fields, but this time combined to open the File Browser in order to
    find the file(s) you search. Same as :menuselection:`Strip --> Inputs --> Change Paths/Files`.
 
-MPEG Preseek
-   Movie strip only -- Use Preseek field to tell Blender to look backward and compose an image
+MPEG Preseek :guilabel:`Movie Strip`
+   Use Preseek field to tell Blender to look backward and compose an image
    based on the specified amount of previous frames (e.g. 15 for MPEG-2 DVD).
 Color Space
    To specify the color space of the source file.
@@ -262,19 +285,19 @@ Alpha Mode
    If the source file has an Alpha (transparency) channel, you can choose:
 
    :term:`Straight Alpha` or :term:`Premultiplied Alpha`
-Stream Index
-   Movie strip only -- For files with several movie streams, use the stream with the given index.
+Stream Index :guilabel:`Movie Strip`
+   For files with several movie streams, use the stream with the given index.
 Deinterlace
-   Removes fields in a video file. For example,
-   if it is an analog video and it has even or odd interlacing fields.
+   Removes fields in a video file.
+   For example, if it is an analog video and it has even or odd interlacing fields.
 
 Source Information
    Displays information about the strip's media.
 
    Resolution
       Resolution of the active strip image output.
-   FPS
-      Movie strip only -- The frame rate encoded into the video file.
+   FPS :guilabel:`Movie Strip`
+      The frame rate encoded into the video file.
       If this value does not match the scene :ref:`Frame Rate <bpy.types.RenderSettings.fps>`
       the perceived speed of the media will be wrong unless the speed is
       :ref:`changed <video_editing-change_fps>` to account for the difference in frame rate.
