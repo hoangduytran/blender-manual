@@ -31,10 +31,20 @@ Usage
 #. Select a posed character object and click on *Create duplicate for editing* in the shape keys panel.
    This will create a copy of the mesh that you can edit/sculpt.
 #. Select your sculpted copy and then the character object.
-   Click on the little black arrow in the shape keys panel and choose one of the options shown in the image.
+   In :doc:`/animation/shape_keys/shape_keys_panel` go to the specials menu and choose one of the options:
+
+   Create duplicate for editing
+      Create a duplicate object with all modifiers applied.
+   Add as corrective pose-shape (slow, all modifiers)
+      Adds first object as shape to second object for the current pose while maintaining modifiers.
+   Add as corrective pose-shape delta" (slow, all modifiers + other shape key values)
+      Adds first object as shape to second object for the current pose
+      while maintaining modifiers and currently used other shape keys
+      with keep other shape key value, generate new shape key which deform to source shape.
+
    If your object has only Armature modifiers, choose the faster method.
-   If other (more complex?) modifiers are involved, or you want to incorporate dual quaternion skinning
-   (now called *Preserve Volume* in the UI) you will have to use the slower method.
+   If other (more complex?) modifiers are involved, or you want to use *Preserve Volume*.
+   In this case, you will have to use the slower method.
 
 If all went right, your character or object should have the new shape key for your pose.
 If not, double check that your mesh and armature object have no translation or rotation and try again.
