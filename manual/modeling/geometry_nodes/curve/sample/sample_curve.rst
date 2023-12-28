@@ -27,7 +27,7 @@ Inputs
 Curves
    Standard geometry input with a curve component.
 
-Input
+Value
    A field input to evaluate custom attributes.
    The evaluation is outputted through the *Value* output.
 
