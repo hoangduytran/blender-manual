@@ -51,6 +51,8 @@ def node_region_rect(region, node):
 def iter_node_names(tree_type):
     if tree_type == 'GEOMETRY':
         for cls in bpy.types.GeometryNode.__subclasses__():
+            if cls.__name__ == "GeometryNodeCustomGroup":
+                continue
             yield cls.__name__
         for cls in bpy.types.FunctionNode.__subclasses__():
             yield cls.__name__
