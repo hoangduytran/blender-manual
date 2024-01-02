@@ -5,7 +5,7 @@
 Set Face Set Node
 *****************
 
-.. figure:: /images/node-types_GeometryNodeToolSetFaceSet.png
+.. figure:: /images/node-types_GeometryNodeToolSetFaceSet.webp
    :align: right
    :alt: Set Face Set node.
 

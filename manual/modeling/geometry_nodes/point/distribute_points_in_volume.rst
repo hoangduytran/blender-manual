@@ -5,7 +5,7 @@
 Distribute Points in Volume
 ***************************
 
-.. figure:: /images/node-types_GeometryNodeDistributePointsInVolume.png
+.. figure:: /images/node-types_GeometryNodeDistributePointsInVolume.webp
    :align: center
    :alt: Distribute Points in Volume node.
 

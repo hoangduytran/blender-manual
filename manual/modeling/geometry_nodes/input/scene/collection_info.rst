@@ -5,7 +5,7 @@
 Collection Info Node
 ********************
 
-.. figure:: /images/node-types_GeometryNodeCollectionInfo.jpeg
+.. figure:: /images/node-types_GeometryNodeCollectionInfo.webp
    :align: right
    :alt: Collection Info node.
    :width: 190px

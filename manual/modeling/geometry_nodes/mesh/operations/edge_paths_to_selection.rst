@@ -5,7 +5,7 @@
 Edge Paths to Selection Node
 ****************************
 
-.. figure:: /images/node-types_GeometryNodeEdgePathsToSelection.png
+.. figure:: /images/node-types_GeometryNodeEdgePathsToSelection.webp
    :align: right
    :alt: Edge Paths to Selection Node.
 

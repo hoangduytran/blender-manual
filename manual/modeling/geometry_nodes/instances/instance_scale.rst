@@ -5,7 +5,7 @@
 Instance Scale Node
 *******************
 
-.. figure:: /images/node-types_GeometryNodeInputInstanceScale.png
+.. figure:: /images/node-types_GeometryNodeInputInstanceScale.webp
    :align: right
    :alt: Instance Scale node.
 

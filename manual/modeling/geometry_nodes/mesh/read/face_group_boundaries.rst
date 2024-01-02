@@ -5,7 +5,7 @@
 Face Group Boundaries Node
 **************************
 
-.. figure:: /images/node-types_GeometryNodeMeshFaceSetBoundaries.png
+.. figure:: /images/node-types_GeometryNodeMeshFaceSetBoundaries.webp
    :align: right
    :alt: Face Group Boundaries node.
 

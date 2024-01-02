@@ -5,7 +5,7 @@
 Is Edge Smooth Node
 *******************
 
-.. figure:: /images/node-types_GeometryNodeInputEdgeSmooth.png
+.. figure:: /images/node-types_GeometryNodeInputEdgeSmooth.webp
    :align: right
    :alt: Is Edge Smooth Node.
 

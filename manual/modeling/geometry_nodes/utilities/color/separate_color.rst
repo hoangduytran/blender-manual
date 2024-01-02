@@ -6,7 +6,7 @@
 Separate Color Node
 *******************
 
-.. figure:: /images/node-types_FunctionNodeSeparateColor.png
+.. figure:: /images/node-types_FunctionNodeSeparateColor.webp
    :align: right
    :alt: Separate Color Node.
 

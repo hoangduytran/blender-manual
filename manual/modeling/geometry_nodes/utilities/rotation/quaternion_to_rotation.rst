@@ -5,7 +5,7 @@
 Quaternion to Rotation Node
 ***************************
 
-.. figure:: /images/node-types_FunctionNodeQuaternionToRotation.png
+.. figure:: /images/node-types_FunctionNodeQuaternionToRotation.webp
    :align: right
    :alt: Quaternion to Rotation node.
 

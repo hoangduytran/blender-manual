@@ -5,7 +5,7 @@
 Remove Named Attribute Node
 ***************************
 
-.. figure:: /images/node-types_GeometryNodeRemoveNamedAttribute.png
+.. figure:: /images/node-types_GeometryNodeRemoveAttribute.webp
    :align: right
    :alt: Remove Named Attribute node.
 

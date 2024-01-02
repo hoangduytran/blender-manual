@@ -5,7 +5,7 @@
 Blur Attribute Node
 *******************
 
-.. figure:: /images/node-types_GeometryNodeBlurAttribute.jpg
+.. figure:: /images/node-types_GeometryNodeBlurAttribute.webp
    :align: right
    :alt: Blur Attribute node.
    :width: 300px

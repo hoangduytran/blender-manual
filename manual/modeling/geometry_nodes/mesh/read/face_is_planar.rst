@@ -5,7 +5,7 @@
 Is Face Planar Node
 *******************
 
-.. figure:: /images/node-types_GeometryNodeInputMeshFaceIsPlanar.png
+.. figure:: /images/node-types_GeometryNodeInputMeshFaceIsPlanar.webp
    :align: right
    :alt: Is Face Planar Node.
 

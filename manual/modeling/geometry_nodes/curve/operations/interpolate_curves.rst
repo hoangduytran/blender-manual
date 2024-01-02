@@ -5,7 +5,7 @@
 Interpolate Curves Node
 ***********************
 
-.. figure:: /images/node-types_GeometryNodeInterpolateCurves.png
+.. figure:: /images/node-types_GeometryNodeInterpolateCurves.webp
    :align: right
    :alt: Interpolate Curves node.
 

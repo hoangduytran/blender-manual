@@ -5,7 +5,7 @@
 Volume Cube Node
 ****************
 
-.. figure:: /images/node-types_GeometryNodeVolumeCube.png
+.. figure:: /images/node-types_GeometryNodeVolumeCube.webp
    :align: right
    :alt: The Volume Cube node.
 

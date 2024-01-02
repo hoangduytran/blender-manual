@@ -5,7 +5,7 @@
 Shortest Edge Paths Node
 ************************
 
-.. figure:: /images/node-types_GeometryNodeInputShortestEdgePaths.png
+.. figure:: /images/node-types_GeometryNodeInputShortestEdgePaths.webp
    :align: right
    :alt: Shortest Edge Paths Node.
 

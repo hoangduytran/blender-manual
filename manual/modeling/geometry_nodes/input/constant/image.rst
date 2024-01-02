@@ -5,7 +5,7 @@
 Image Node
 **********
 
-.. figure:: /images/node-types_GeometryNodeImage.jpg
+.. figure:: /images/node-types_GeometryNodeInputImage.webp
    :align: right
    :width: 300px
 

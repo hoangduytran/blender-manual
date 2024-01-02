@@ -5,7 +5,7 @@
 Edge Paths to Curves Node
 *************************
 
-.. figure:: /images/node-types_GeometryNodeEdgePathsToCurves.png
+.. figure:: /images/node-types_GeometryNodeEdgePathsToCurves.webp
    :align: right
    :alt: Edge Paths to Curves Node.
 

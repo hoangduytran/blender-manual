@@ -5,7 +5,7 @@
 Rotate Vector Node
 ******************
 
-.. figure:: /images/node-types_FunctionNodeRotateVector.png
+.. figure:: /images/node-types_FunctionNodeRotateVector.webp
    :align: right
    :alt: Rotate Vector node.
 

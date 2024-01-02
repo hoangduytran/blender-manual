@@ -5,7 +5,7 @@
 Store Named Attribute Node
 **************************
 
-.. figure:: /images/node-types_GeometryNodeStoreNamedAttribute.png
+.. figure:: /images/node-types_GeometryNodeStoreNamedAttribute.webp
    :align: right
    :alt: Store Named Attribute node.
 

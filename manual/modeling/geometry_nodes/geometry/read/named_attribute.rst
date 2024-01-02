@@ -5,7 +5,7 @@
 Named Attribute Node
 ********************
 
-.. figure:: /images/node-types_GeometryNodeNamedAttribute.png
+.. figure:: /images/node-types_GeometryNodeInputNamedAttribute.webp
    :align: right
    :alt: Named Attribute node.
 

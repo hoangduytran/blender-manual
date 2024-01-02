@@ -5,7 +5,7 @@
 Is Face Smooth Node
 *******************
 
-.. figure:: /images/node-types_GeometryNodeInputFaceSmooth.png
+.. figure:: /images/node-types_GeometryNodeInputShadeSmooth.webp
    :align: right
    :alt: Is Face Smooth Node.
 

@@ -5,7 +5,7 @@
 Transform Geometry Node
 ***********************
 
-.. figure:: /images/node-types_GeometryNodeTransformGeometry.jpg
+.. figure:: /images/node-types_GeometryNodeTransform.webp
    :align: right
    :alt: Transform Geometry node.
    :width: 190px

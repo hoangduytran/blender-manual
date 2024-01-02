@@ -5,7 +5,7 @@
 Selection Node
 **************
 
-.. figure:: /images/node-types_GeometryNodeToolSelection.png
+.. figure:: /images/node-types_GeometryNodeToolSelection.webp
    :align: right
    :alt: Selection node.
 

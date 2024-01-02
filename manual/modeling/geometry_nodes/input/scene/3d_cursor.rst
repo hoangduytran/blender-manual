@@ -5,7 +5,7 @@
 3D Cursor Node
 **************
 
-.. figure:: /images/node-types_GeometryNodeTool3DCursor.png
+.. figure:: /images/node-types_GeometryNodeTool3DCursor.webp
    :align: right
    :alt: 3D Cursor node.
 

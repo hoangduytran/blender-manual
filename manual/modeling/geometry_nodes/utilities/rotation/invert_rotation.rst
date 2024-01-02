@@ -5,7 +5,7 @@
 Invert Rotation Node
 ********************
 
-.. figure:: /images/node-types_FunctionNodeInvertRotation.png
+.. figure:: /images/node-types_FunctionNodeInvertRotation.webp
    :align: right
    :alt: Invert Rotation node.
 

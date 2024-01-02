@@ -6,7 +6,7 @@ UV Unwrap Node
 **************
 
 
-.. figure:: /images/node-types_GeometryUVUnrwap.png
+.. figure:: /images/node-types_GeometryNodeUVUnwrap.webp
    :align: right
    :alt: UV Unwrap node.
 

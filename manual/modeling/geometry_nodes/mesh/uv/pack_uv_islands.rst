@@ -6,7 +6,7 @@ Pack UV Islands Node
 ********************
 
 
-.. figure:: /images/node-types_GeometryUVPackIslands.png
+.. figure:: /images/node-types_GeometryNodeUVPackIslands.webp
    :align: right
    :alt: Pack UV Islands node.
 

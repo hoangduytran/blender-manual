@@ -5,7 +5,7 @@
 Image Info Node
 ***************
 
-.. figure:: /images/node-types_GeometryNodeImageInfo.jpg
+.. figure:: /images/node-types_GeometryNodeImageInfo.webp
    :align: right
    :alt: Image Info node.
    :width: 300px

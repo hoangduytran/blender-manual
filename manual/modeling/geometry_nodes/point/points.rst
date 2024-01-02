@@ -5,7 +5,7 @@
 Points Node
 ***********
 
-.. figure:: /images/node-types_GeometryNodePoints.png
+.. figure:: /images/node-types_GeometryNodePoints.webp
    :align: right
    :alt: Points node.
 

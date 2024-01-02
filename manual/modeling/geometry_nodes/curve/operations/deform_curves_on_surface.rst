@@ -5,7 +5,7 @@
 Deform Curves on Surface Node
 *****************************
 
-.. figure:: /images/node-types_GeometryDeformCurvesOnSurface.png
+.. figure:: /images/node-types_GeometryNodeDeformCurvesOnSurface.webp
    :align: center
    :alt: Deform Curves on Surface node.
 

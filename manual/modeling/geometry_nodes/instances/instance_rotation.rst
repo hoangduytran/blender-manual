@@ -5,7 +5,7 @@
 Instance Rotation Node
 **********************
 
-.. figure:: /images/node-types_GeometryNodeInputInstanceRotation.png
+.. figure:: /images/node-types_GeometryNodeInputInstanceRotation.webp
    :align: right
    :alt: Instance Rotation node.
 

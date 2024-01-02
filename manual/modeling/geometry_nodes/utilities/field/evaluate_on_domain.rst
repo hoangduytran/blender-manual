@@ -5,7 +5,7 @@
 Evaluate on Domain Node
 ***********************
 
-.. figure:: /images/node-types_GeometryNodeInterpolateDomain.png
+.. figure:: /images/node-types_GeometryNodeFieldOnDomain.webp
    :align: right
    :alt: Evaluate on Domain Node.
 

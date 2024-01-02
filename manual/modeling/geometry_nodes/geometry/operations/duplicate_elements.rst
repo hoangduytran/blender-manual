@@ -5,7 +5,7 @@
 Duplicate Elements Node
 ***********************
 
-.. figure:: /images/node-types_GeometryNodeDuplicateElements.png
+.. figure:: /images/node-types_GeometryNodeDuplicateElements.webp
    :align: center
    :alt: Duplicate Elements node.
 

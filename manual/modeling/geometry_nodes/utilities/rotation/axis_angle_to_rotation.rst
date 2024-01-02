@@ -5,7 +5,7 @@
 Axis Angle to Rotation Node
 ***************************
 
-.. figure:: /images/node-types_FunctionNodeAxisAngleToRotation.png
+.. figure:: /images/node-types_FunctionNodeAxisAngleToRotation.webp
     :align: right
     :alt: Axis Angle to Rotation node.
 

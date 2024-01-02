@@ -5,7 +5,7 @@
 Edges to Face Groups Node
 *************************
 
-.. figure:: /images/node-types_GeometryNodeEdgesToFaceGroups.png
+.. figure:: /images/node-types_GeometryNodeEdgesToFaceGroups.webp
    :align: right
    :alt: Edges to Face Groups Node.
 

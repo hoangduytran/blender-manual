@@ -6,7 +6,7 @@
 Combine Color Node
 ******************
 
-.. figure:: /images/node-types_FunctionNodeCombineColor.png
+.. figure:: /images/node-types_FunctionNodeCombineColor.webp
    :align: right
    :alt: Combine Color Node.
 

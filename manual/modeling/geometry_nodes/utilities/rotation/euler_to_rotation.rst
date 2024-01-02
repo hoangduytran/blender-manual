@@ -5,7 +5,7 @@
 Euler to Rotation Node
 **********************
 
-.. figure:: /images/node-types_FunctionNodeEulerToRotation.png
+.. figure:: /images/node-types_FunctionNodeEulerToRotation.webp
    :align: right
    :alt: Euler to Rotation node.
 
