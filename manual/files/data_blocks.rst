@@ -91,168 +91,165 @@ Pack
    * - :doc:`Action </animation/actions>`
      - |tick|
      - |none|
-     - | Stores animation F-Curves.
-       | Used as data-block animation data,
-       | and the Nonlinear Animation editor.
+     - Stores animation F-Curves.
+       Used as data-block animation data, and the Nonlinear Animation editor.
    * - :doc:`Armature </animation/armatures/introduction>`
      - |tick|
      - |none|
-     - | Skeleton used to deform meshes.
-       | Used as data of armature objects, and by the Armature Modifier.
+     - Skeleton used to deform meshes.
+       Used as data of armature objects, and by the Armature Modifier.
    * - :doc:`Brush </sculpt_paint/brush/brush>`
      - |tick|
      - |none|
-     - | Used by paint tools.
+     - Used by paint tools.
    * - :doc:`Camera </render/cameras>`
      - |tick|
      - |none|
-     - | Used as data by camera objects.
+     - Used as data by camera objects.
    * - :doc:`Cache File </modeling/modifiers/modify/mesh_sequence_cache>`
      - |tick|
      - |none|
-     - | Used by Mesh Cache modifiers.
+     - Used by Mesh Cache modifiers.
    * - :doc:`Curve </modeling/curves/introduction>`
      - |tick|
      - |none|
-     - | Used as data by curve, font & surface objects.
+     - Used as data by curve, font & surface objects.
    * - :doc:`Font </modeling/texts/introduction>`
      - |tick|
      - |tick|
-     - | References font files.
-       | Used by curve object-data of text objects.
+     - References font files.
+       Used by curve object-data of text objects.
    * - :doc:`Grease Pencil </grease_pencil/introduction>`
      - |tick|
      - |none|
-     - | 2D/3D sketch data used by Grease Pencil objects.
-       | Used as overlay *helper* info, by the
-       | 3D Viewport, Image, Sequencer & Movie Clip editors.
+     - 2D/3D sketch data used by Grease Pencil objects.
+       Used as overlay *helper* info, by the 3D Viewport, Image, Sequencer & Movie Clip editors.
    * - :doc:`Collection </scene_layout/collections/introduction>`
      - |tick|
      - |none|
-     - | Group and organize objects in scenes.
-       | Used to instance objects, and in library linking.
+     - Group and organize objects in scenes.
+       Used to instance objects, and in library linking.
    * - :doc:`Image </editors/image/introduction>`
      - |tick|
      - |tick|
-     - | Image files.
-       | Used by shader nodes and textures.
+     - Image files.
+       Used by shader nodes and textures.
    * - :doc:`Keys (Shape Keys) </animation/shape_keys/introduction>`
      - |cross|
      - |none|
-     - | Geometry shape storage, which can be animated.
-       | Used by mesh, curve, and lattice objects.
+     - Geometry shape storage, which can be animated.
+       Used by mesh, curve, and lattice objects.
    * - :doc:`Light </render/lights/light_object>`
      - |tick|
      - |none|
-     - | Used as object data by light objects.
+     - Used as object data by light objects.
    * - :doc:`Library </files/linked_libraries/index>`
      - |cross|
      - |tick|
-     - | References to an external blend-file.
-       | Access from the Outliner's *Blender File* view.
+     - References to an external blend-file.
+       Access from the Outliner's *Blender File* view.
    * - :doc:`Line Style </render/freestyle/introduction>`
      - |tick|
      - |none|
-     - | Used by the Freestyle renderer.
+     - Used by the Freestyle renderer.
    * - :doc:`Lattice </animation/lattice>`
      - |tick|
      - |none|
-     - | Grid based lattice deformation.
-       | Used as data of lattice objects, and by the Lattice Modifier.
+     - Grid based lattice deformation.
+       Used as data of lattice objects, and by the Lattice Modifier.
    * - :doc:`Mask </movie_clip/masking/introduction>`
      - |tick|
      - |none|
-     - | 2D animated mask curves.
-       | Used by compositing nodes & sequencer strip.
+     - 2D animated mask curves.
+       Used by compositing nodes & sequencer strip.
    * - :doc:`Material </render/materials/introduction>`
      - |tick|
      - |none|
-     - | Set shading and texturing render properties.
-       | Used by objects, meshes & curves.
+     - Set shading and texturing render properties.
+       Used by objects, meshes & curves.
    * - :doc:`Metaball </modeling/metas/introduction>`
      - |tick|
      - |none|
-     - | An isosurface in 3D space.
-       | Used as data of metaball objects.
+     - An isosurface in 3D space.
+       Used as data of metaball objects.
    * - :doc:`Mesh </modeling/meshes/introduction>`
      - |tick|
      - |none|
-     - | Geometry made of vertices/edges/faces.
-       | Used as data of mesh objects.
+     - Geometry made of vertices/edges/faces.
+       Used as data of mesh objects.
    * - :doc:`Movie Clip </editors/clip/introduction>`
      - |tick|
      - |cross|
-     - | Reference to an image sequence or video file.
-       | Used in the *Movie Clip* editor.
+     - Reference to an image sequence or video file.
+       Used in the *Movie Clip* editor.
    * - :doc:`Node Tree </render/shader_nodes/groups>`
      - |tick|
      - |none|
-     - | Groups of re-usable nodes.
-       | Used in the node editors.
+     - Groups of re-usable nodes.
+       Used in the node editors.
    * - :doc:`Object </scene_layout/object/introduction>`
      - |tick|
      - |none|
-     - | An entity in the scene with location,
-       | scale, rotation.
-       | Used by scenes & collections.
+     - An entity in the scene with location, scale, rotation.
+       Used by scenes & collections.
    * - :doc:`Paint Curve </sculpt_paint/brush/stroke>`
      - |tick|
      - |none|
-     - | Stores a paint or sculpt stroke.
-       | Access from the paint tools.
+     - Stores a paint or sculpt stroke.
+       Access from the paint tools.
    * - :doc:`Palette </sculpt_paint/index>`
      - |tick|
      - |none|
-     - | Store color presets.
-       | Access from the paint tools.
+     - Store color presets.
+       Access from the paint tools.
    * - :doc:`Particle </physics/particles/introduction>`
      - |tick|
      - |none|
-     - | Particle settings.
-       | Used by particle systems.
+     - Particle settings.
+       Used by particle systems.
    * - :doc:`Light Probe </render/eevee/light_probes/introduction>`
      - |tick|
      - |none|
-     - | Help achieve complex real-time lighting in EEVEE.
+     - Help achieve complex real-time lighting in EEVEE.
    * - :doc:`Scene </scene_layout/scene/introduction>`
      - |tick|
      - |none|
-     - | Primary store of all data displayed and animated.
-       | Used as top-level storage for objects & animation.
+     - Primary store of all data displayed and animated.
+       Used as top-level storage for objects & animation.
    * - :doc:`Sounds </render/output/audio/speaker>`
      - |tick|
      - |tick|
-     - | Reference to sound files.
-       | Used as data of speaker objects.
+     - Reference to sound files.
+       Used as data of speaker objects.
    * - :doc:`Speaker </render/output/audio/speaker>`
      - |tick|
      - |none|
-     - | Sound sources for a 3D scene.
-       | Used as data of speaker object.
+     - Sound sources for a 3D scene.
+       Used as data of speaker object.
    * - :doc:`Text </editors/text_editor>`
      - |tick|
      - |cross|
-     - | Text data.
-       | Used by Python scripts and OSL shaders.
+     - Text data.
+       Used by Python scripts and OSL shaders.
    * - :doc:`Texture </render/materials/legacy_textures/introduction>`
      - |tick|
      - |none|
-     - | 2D/3D textures.
-       | Used by brushes and modifiers.
+     - 2D/3D textures.
+       Used by brushes and modifiers.
    * - :doc:`Window Manager </interface/window_system/introduction>`
      - |cross|
      - |none|
-     - | The overarching manager for all of Blender's user interface.
-       | Includes Workspaces, notification system, operators, and keymaps.
+     - The overarching manager for all of Blender's user interface.
+       Includes Workspaces, notification system, operators, and keymaps.
    * - :doc:`World </render/lights/world>`
      - |tick|
      - |none|
-     - | Define global render environment settings.
+     - Define global render environment settings.
    * - :doc:`Workspace </interface/window_system/workspaces>`
      - |cross|
      - |none|
-     - | UI layout.
-       | Used by each window, which has its own workspace.
+     - UI layout.
+       Used by each window, which has its own workspace.
 
 
 .. _data-system-datablock-life-time:
