@@ -261,16 +261,21 @@ Reset Backdrop
 Reset the position and scale of the backdrop.
 
 
-Set Viewer's Tile Center
-------------------------
+Viewer Focus
+------------
 
 :guilabel:`Compositor`
 
 .. reference::
 
-   :Shortcut:  double-click :kbd:`LMB`
+   :Shortcut:  :kbd:`LMB-LMB`
 
-Set the viewer's tile center to the mouse position.
+Set the viewer's tile :ref:`center <bpy.types.CompositorNodeViewer.center>` to the mouse position.
+
+This shortcut allows you to rapidly adjust and prioritize what portions of the backdrop get recalculated first.
+By prioritizing a certain area, you can make adjustments to the composite
+and see the results faster without having to wait for the whole image to render.
+
 
 
 Add Attribute Node

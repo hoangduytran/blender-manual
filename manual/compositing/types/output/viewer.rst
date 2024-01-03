@@ -29,9 +29,19 @@ Alpha
 Properties
 ==========
 
+Use Alpha
+   Used alpha channel, colors are treated alpha *premultiplied*.
+   If disabled, alpha channel gets set to 1,
+   and colors are treated as alpha *straight*, i.e. color channels does not change.
+
 Tile Order
-   The tile order can be defined for the backdrop image, using the *Tile order* field in the properties of
-   the Viewer node (*Properties* panel in Sidebar region, with the Viewer node selected):
+   The background is computed in small chunks, also referred to as tiles.
+   This property determines the starting point and order to render these chunks.
+
+   By prioritizing a certain area, you can make adjustments to the composite
+   and see the results faster without having to wait for the whole image to render.
+
+   This property is only accessible in the *Properties* panel in Sidebar region.
 
    :Rule of thirds:
       Calculates tiles around each of the nine zones defined by the *rule of thirds*.
@@ -40,9 +50,13 @@ Tile Order
    :Random:
       Calculates tiles in a non-specific order.
    :Center:
-      Calculates the tiles around a specific center, defined by X and Y fields.
+      Calculates the tiles starting at a specific focal point, defined by the *X* and *Y* fields.
+      Note, the tile center is only visible when the viewer node is selected.
+
+      .. _bpy.types.CompositorNodeViewer.center:
 
       X, Y
+         The position of the center or "focal point" relative to the image bounds; the origin is bottom left.
 
 
 Outputs
