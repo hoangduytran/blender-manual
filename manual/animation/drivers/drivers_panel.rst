@@ -99,20 +99,6 @@ Add Input Variable
 Copy/Paste Variables
    Copies the current variable list so it can be pasted into another driver's variable list.
 
-.. list-table::
-
-   * - .. figure:: /images/animation_drivers_drivers-panel_single-property.png
-
-          Single property.
-
-     - .. figure:: /images/animation_drivers_drivers-panel_transform-channel2.png
-
-          Transform channel.
-
-     - .. figure:: /images/animation_drivers_drivers-panel_distance.png
-
-          Distance.
-
 .. _bpy.types.DriverVariable.name:
 
 Name
@@ -125,6 +111,10 @@ Variable Type
    The type of variable to use.
 
    Single Property
+      .. figure:: /images/animation_drivers_drivers-panel_single-property.png
+         :align: right
+         :width: 200px
+
       Retrieves the value of an RNA property, specified by a data-block reference and a path string.
 
       In case of transform properties, this will return the exact value of the UI property,
@@ -140,6 +130,10 @@ Variable Type
          The RNA name of the property, based on a subset of Python attribute access syntax.
          For example: ``location.x`` or ``location[0]`` for the X location animation channel
          value (before parenting or constraints), or ``["prop_name"]`` for a custom property.
+      Fallback
+         If enabled, allows specifying a fallback value to use as the variable value if the RNA Path cannot
+         be resolved, instead of causing a driver evaluation failure. For more info see
+         :ref:`Context Property <bpy.types.DriverVariable.type.CONTEXT_PROP>` below.
 
       .. tip::
 
@@ -149,13 +143,16 @@ Variable Type
          into the driver via :ref:`Paste Driver Variables <drivers-variables>`.
 
    Transform Channel
+      .. figure:: /images/animation_drivers_drivers-panel_transform-channel2.png
+         :align: right
+         :width: 200px
+
       Retrieves the value of a Transform channel from an object or bone.
 
       ID
          ID of the object. For example: Cube, Armature, Camera.
       Bone
-         ID of the Armature bone. For example: "Bone", "Bone.002", "Arm.r".
-         This option is for armatures.
+         For armatures, the name of the Armature bone. For example: "Bone", "Bone.002", "Arm.r".
       Type
          For example, X Location, X Rotation, X Scale.
 
@@ -169,24 +166,64 @@ Variable Type
       Space
          World Space, Transform Space, Local Space.
 
+      .. figure:: /images/animation_drivers_drivers-panel_rotational-difference.png
+         :align: right
+         :width: 200px
+
    Rotational Difference
       Provides the value of the rotational difference between two objects or bones, in radians.
+
+      Bone
+         For armatures, the name of the Armature bone. For example: "Bone", "Bone.002", "Arm.r".
+
    Distance
+      .. figure:: /images/animation_drivers_drivers-panel_distance.png
+         :align: right
+         :width: 200px
+
       Provides the value of the distance between two objects or bones.
+
+      Bone
+         For armatures, the name of the Armature bone. For example: "Bone", "Bone.002", "Arm.r".
+
+      Space
+         World Space, Transform Space, Local Space.
+
+   .. _bpy.types.DriverVariable.type.CONTEXT_PROP:
+
    Context Property
+      .. figure:: /images/animation_drivers_drivers-panel_context-property.png
+         :align: right
+         :width: 200px
+
       Provides the value of a property that is implicitly referring to either a scene
       or a view layer of the currently evaluating animation system.
       This is a weak reference which does not lead to the scene or view layer
       referenced from the driver to be linked when linking animation data.
 
       An example when such properties comes in play is referring to a transformation
-      of the active camera. It is possible to setup driver in a character file,
+      of the active camera. It is possible to set up a driver in a character file,
       and make the driver use the set camera when the character is linked into a set.
+
+      Context
+         Active Scene, Active View Layer.
 
       RNA Path
          The RNA name of the property, based on a subset of Python attribute access syntax.
          For example: ``camera.location.x`` or ``camera.location[0]`` for the camera X location animation
          channel value (before parenting or constraints), or ``["prop_name"]`` for a custom property.
+
+      Fallback
+         If enabled, allows specifying a fallback value to use as the variable value if the RNA Path cannot
+         be resolved, instead of causing a driver evaluation failure.
+
+         This feature can be very useful for making drivers more robust when implementing scene-global options
+         using custom properties. When the object is linked into a different scene, these custom properties may
+         not exist there, and the fallbacks can be used to provide sensible default values.
+
+         Fallbacks can also be used to :ref:`emulate <driver-attribute-node-emulation>`
+         the lookup behavior of the View Layer mode of the material
+         :doc:`Attribute Node </render/shader_nodes/input/attribute>`.
 
       .. tip::
 

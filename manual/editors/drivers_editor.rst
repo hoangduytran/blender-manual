@@ -74,11 +74,11 @@ Normalize
       Automatically recalculate curve normalization on every curve edit.
       Disabling this setting may be useful to prevent curves from jumping after tweaking.
 
-Show Only Selected (mouse cursor icon)
+Only Show Selected (mouse cursor icon)
    Only include curves related to the selected objects and data.
 Show Hidden (dashed object icon)
    Include curves from objects/bones that are not visible.
-Show Only Errors (warning triangle icon)
+Only Show Errors (warning triangle icon)
    Only include curves and drivers that are disabled or have errors.
    Useful for debugging.
 
@@ -96,6 +96,14 @@ Filter (funnel icon)
       (as well as helping to keep the animation of related objects together).
 
       This option may affect the playback speed for heavy scenes.
+
+   Variable Fallback As Error
+      Normally, setting up :ref:`fallback values <bpy.types.DriverVariable.type.CONTEXT_PROP>` for driver variables
+      means that failing to evaluate the property does not constitute a driver evaluation error.
+
+      In some cases it can be useful to find drivers that would have failed if not for the fallback values.
+      Enabling this option includes such drivers into the *Only Show Errors* filter. However, only actual failed
+      drivers are underlined in red in the channel list.
 
 
 Transform Controls

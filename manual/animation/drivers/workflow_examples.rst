@@ -96,6 +96,44 @@ There are more custom function examples available in Blender's Text Editor
 Since :ref:`Simple Expressions <drivers-simple-expressions>` cannot access
 custom functions, using them only makes sense for complex computations.
 
+.. warning::
+   Trying to replace built-in entries of the driver namespace may result in undefined behavior.
+
+.. _driver-attribute-node-emulation:
+
+View Layer Attribute Lookup
+===========================
+
+The material :doc:`Attribute Node </render/shader_nodes/input/attribute>` in the View Layer mode
+automatically searches for the attribute property in multiple locations. This, for example, can allow
+setting a certain value of the custom attribute at the :doc:`Scene </scene_layout/scene/introduction>`
+or :doc:`World </render/lights/world>` level, and then overriding it
+differently for one :doc:`View Layer </scene_layout/view_layers/introduction>`.
+
+.. figure:: /images/animation_drivers_workflow-examples_attribute-lookup.png
+   :width: 200px
+   :align: right
+
+Context Properties of drivers don't implement this behavior, so if necessary it has to be manually
+emulated via fallback values and a conditional expression (conditions are
+:ref:`Simple Expressions <drivers-simple-expressions>`).
+
+For an attribute named ``attr``, the node tries the following six RNA path lookups in order:
+
+* ``["attr"]`` in the active View Layer (custom property).
+* ``attr`` in the active View Layer (built-in property).
+* ``["attr"]`` in the active Scene.
+* ``attr`` in the active Scene.
+* ``world["attr"]`` in the active Scene.
+* ``world.attr`` in the active Scene.
+
+Depending on the specific property it may be sufficient to check only a subset of these locations.
+For example, the image on the right shows how to access an attribute that is known to definitely be
+a custom property with a color value.
+
+Driver variables accessing locations that are not final in the lookup chain should use fallback values
+that are invalid for the attribute (e.g. negative color values), which can then be checked by the conditional
+expression. The final variable should fallback to a valid default value to be used when the property is not set at all.
 
 .. _shapekey-driver-example:
 

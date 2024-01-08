@@ -69,7 +69,8 @@ Type
    :View Layer:
       The attribute is looked up in the current :doc:`View Layer </scene_layout/view_layers/introduction>`,
       :doc:`Scene </scene_layout/scene/introduction>` and :doc:`World </render/lights/world>`, using the same lookup
-      logic as *Object*. Attributes of this type have the same uniform value throughout the whole Render Layer.
+      logic as *Object*, and likewise producing all zero outputs including *Alpha* if not found. Attributes of this
+      type have the same uniform value throughout the whole Render Layer.
 
       .. tip::
 
@@ -82,6 +83,12 @@ Type
             Outputs the current :doc:`rendering resolution </render/output/properties/format>`.
          ``camera.data.angle_x``, ``camera.data.angle_y``,
             Outputs the effective field of view of the active :doc:`Camera </render/cameras>`.
+
+      .. seealso::
+
+         An alternative method to access the same set of properties is to use driver
+         :ref:`Context Properties <bpy.types.DriverVariable.type.CONTEXT_PROP>`,
+         possibly with a :ref:`manually emulated <driver-attribute-node-emulation>` lookup fallback chain.
 
 
 Outputs
