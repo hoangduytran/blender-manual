@@ -16,6 +16,8 @@ Noise Texture Node
    :alt: Noise Texture Node.
 
 The *Noise Texture* node evaluates a fractal Perlin noise at the input texture coordinates.
+It can be used for a single Perlin noise evaluation, or for combining multiple octaves
+(layers) with increasingly finer detail.
 
 
 Inputs
@@ -39,6 +41,10 @@ Roughness
 Lacunarity
    The difference between the scale of each two consecutive octaves.
    Larger values corresponds to larger scale for higher octaves.
+Offset
+   An added offset to each octave, determines the level where the highest octave will appear.
+Gain
+   An extra multiplier to tune the magnitude of octaves.
 Distortion
    Amount of distortion.
 
@@ -64,6 +70,26 @@ Normalize
    When disabled, output values are in the range -1.0 to 1.0.
 
 
+Type
+   Type of Noise texture, with different ways to combine octaves.
+
+   :FBM:
+      Fractal Brownian motion, produces a homogeneous and isotropic result.
+      Values from octaves are added together.
+   :Multifractal:
+      More uneven, varying by location similar to real terrain.
+      Values from octaves are multiplied together.
+   :Hybrid Multifractal:
+      Creates peaks and valleys with different roughness values, like real mountains rise out of flat plains.
+      Combines octaves using both addition and multiplication.
+   :Ridged Multifractal:
+      Creates sharp peaks. Calculates the absolute value of the noise,
+      creating "canyons", and then flips the surface upside down.
+   :Hetero Terrain:
+      Similar to *Hybrid Multifractal* creates a heterogeneous terrain, but with the likeness of river channels.
+
+
+
 Outputs
 =======
 
@@ -79,6 +105,35 @@ Examples
 .. figure:: /images/render_shader-nodes_textures_noise_example.jpg
 
    Noise Texture with high detail.
+
+.. list-table:: Different Noise types with the same parameters.
+
+   * - .. figure:: /images/render_shader-nodes_textures_musgrave_example-type-fbm.jpg
+          :width: 320px
+
+          fBM (fractal Brownian Motion).
+
+     - .. figure:: /images/render_shader-nodes_textures_musgrave_example-type-multifractal.jpg
+          :width: 320px
+
+          Multifractal.
+
+   * - .. figure:: /images/render_shader-nodes_textures_musgrave_example-type-hybrid.jpg
+          :width: 320px
+
+          Hybrid Multifractal.
+
+     - .. figure:: /images/render_shader-nodes_textures_musgrave_example-type-terrain.jpg
+          :width: 320px
+
+          Heterogeneous Terrain.
+
+   * - .. figure:: /images/render_shader-nodes_textures_musgrave_example-type-ridged.jpg
+          :width: 320px
+
+          Ridged Multifractal.
+
+     - ..
 
 
 Notes
