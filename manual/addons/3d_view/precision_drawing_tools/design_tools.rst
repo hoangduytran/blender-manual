@@ -108,10 +108,11 @@ Origin is moved, but geometry is not moved from its absolute position in World S
 Taper:
 ======
 
-This button is used to set the Object Origin to the current Cursor location.
-You can see a full list of available options in the table on the previous page
-(Before You Begin) for both Edit and Object modes. Here the ``Working Plane``
-setting is irrelevant. This Tool works only in Edit Mode.
+This button is used to taper one face of an object, by rotating selected vertices about a fulcrum point,
+whilst maintaining the projection of associated edges, to a predefined angle.
+You can see a full list of available options in the table on Page 3 of this Wiki
+for both Edit and Object modes. Here the Working Plane setting is irrelevant.
+This Tool works only in Edit Mode.
 
 Uses: ``Move/Rot`` Axis Selector.
 
