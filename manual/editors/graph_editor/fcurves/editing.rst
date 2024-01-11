@@ -527,6 +527,24 @@ Factor
    The scale factor applied to the F-Curve segments.
 
 
+.. _bpy.ops.graph.scale_from_neighbor:
+
+Scale from Neighbor
+-------------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Scale from Neighbor`
+
+Scale the selected key segments from either their left or right neighbor key. Pressing :kbd:`D` while in the modal
+operator switches the reference key from one end to the other.
+
+Factor
+   The scale factor applied to the F-Curve segments.
+Reference Key
+   `From Left` or `From Right` determine from which end of the segment to scale.
+
+
 .. _bpy.ops.graph.push_pull:
 
 Push Pull
