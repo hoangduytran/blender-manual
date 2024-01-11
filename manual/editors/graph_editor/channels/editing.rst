@@ -263,6 +263,30 @@ Square
       All values lower than this threshold result in 0.
 
 
+.. _bpy.ops.graph.channels_bake:
+
+Bake Channels
+=============
+
+.. reference::
+
+   :Menu:      :menuselection:`Channel --> Bake Channels`
+
+The *Bake Channels* operator creates new keyframes on the F-Curves of channels that are selected in the channel box.
+
+Range
+   The range that will be baked. Defaults to the scene range or preview range.
+Step
+   Distance between keyframes. Can be used to bake on 2s or even bake to subframes.
+Remove Existing Keys
+   Boolean option that if enabled also removes keys outside the specified baking range.
+Interpolation Type
+   Choose which interpolation type new keys should have, e.g. Constant or Bezier.
+Bake Modifiers
+   If true bakes the effect of the modifier stack to keys and deletes the modifier stack. 
+   If false, modifiers get disabled before baking, so the resulting keys will behave as if the modifiers didn't exist.
+
+
 .. _bpy.ops.graph.euler_filter:
 
 Discontinuity (Euler) Filter
