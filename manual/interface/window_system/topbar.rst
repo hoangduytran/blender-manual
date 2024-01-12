@@ -32,7 +32,7 @@ About Blender
 
    - **Donate**: Open Blender's `Development Fund <https://fund.blender.org/>`__ website.
    - **What's New**: Open the latest release notes.
-   - **Credits**: Open the `credits <https://www.blender.org/about/credits/>__` webpage.
+   - **Credits**: Open the `credits <https://www.blender.org/about/credits/>`__ webpage.
    - **License**: Open the `license <https://www.blender.org/about/license/>`__ webpage.
    - **Blender Store**: Open the `Blender Store <https://store.blender.org/>`__ website.
    - **Blender Website**: Open main `Blender <https://www.blender.org/>`__ website.
