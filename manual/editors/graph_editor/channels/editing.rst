@@ -296,4 +296,6 @@ Discontinuity (Euler) Filter
 
    :Menu:      :menuselection:`Channel --> Discontinuity (Euler) Filter`
 
-Todo.
+This operator cleans up Euler rotation channels that suffer from :term:`Gimbal Lock`. 
+The channels of all three axes of euler rotation need to be selected for the operator
+to work.
