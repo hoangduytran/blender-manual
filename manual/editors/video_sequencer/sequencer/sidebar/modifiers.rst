@@ -48,21 +48,19 @@ Remove ``X``
 Masking
 -------
 
-Use it for masking the other modifiers in the stack which are below.
-
+Each Modifier has an option to mask the effect of the modifier and any modifiers below it.
 For example, to correct the brightness only on a certain zone of the image,
-you can filter the Brightness/Contrast modifier by placing a Mask modifier,
-just before it in the stack. You can choose to use a Mask created in the Mask editor,
-or to use another strip as a mask (the image of this strip must have an alpha channel).
-This mask will be applied on all the others modifiers below it in the stack.
+you can filter the Brightness/Contrast modifier.
+
+The mask can either be a Mask created in the Mask editor or use another strip as a mask.
 
 Mask Input Type
-   Type of input data used for mask.
+   Type of input data used for the mask.
 
    :Strip:
-      Uses the grayscale representation of the image in a strip to affect the alpha of the current strip.
+      Uses the grayscale representation of the image in a strip to mask the affects of the modifier.
    :Mask:
-      Use a mask data-block to affect the alpha of the current strip.
+      Use a mask data-block to mask the affects of the modifier.
 
 Mask
    The Strip or Mask data-block to use as an input.
@@ -71,7 +69,7 @@ Mask Time :guilabel:`Mask Input Only`
    How the start frame of the mask is calculated.
 
    :Relative: Mask animation is offset to the start of the strip.
-   :Absolute: Mask animation is in sync with scene frame.
+   :Absolute: Mask animation is in sync with the scene frame.
 
 
 Types
@@ -135,7 +133,7 @@ Curves Modifier
 
 Color and RGB curves.
 
-This modifier works the same as the :doc:`Curves Node </compositing/types/color/adjust/rgb_curves>`.
+This modifier works the same as the :doc:`/compositing/types/color/adjust/rgb_curves`.
 
 
 .. index:: Video Sequencer Modifiers; Hue Correct Modifier
@@ -146,7 +144,7 @@ Hue Correct Modifier
 
 HSV multi points curves.
 
-This modifier works the same as the :doc:`Curves Node </compositing/types/color/adjust/hue_correct>`.
+This modifier works the same as the :doc:`/compositing/types/color/adjust/hue_correct`.
 
 
 .. index:: Video Sequencer Modifiers; Mask Modifier
@@ -156,16 +154,10 @@ Mask Modifier
 
 The mask modifier is used to affect the :term:`Alpha Channel` of the current strip.
 
-For example, to correct the brightness only on a certain zone of the image,
-you can filter the Brightness/Contrast modifier by placing a Mask modifier,
-just before it in the stack. You can choose to use a Mask created in the Mask editor,
-or to use another strip as a mask (the image of this strip must have an alpha channel).
-This mask will be applied on all the others modifiers below it in the stack.
-
 .. _bpy.types.SequenceModifier.input_mask_type:
 
 Mask Input Type
-   Type of input data used for mask.
+   Type of input data used for the mask.
 
    :Strip:
       Uses the grayscale representation of the image in a strip to affect the alpha of the current strip.
@@ -184,7 +176,7 @@ Mask Time :guilabel:`Mask Input Only`
    How the start frame of the mask is calculated.
 
    :Relative: Mask animation is offset to the start of the strip.
-   :Absolute: Mask animation is in sync with scene frame.
+   :Absolute: Mask animation is in sync with the scene frame.
 
 
 .. index:: Video Sequencer Modifiers; Tone Map Modifier
