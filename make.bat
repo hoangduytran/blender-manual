@@ -89,38 +89,38 @@ if "%1" == "latexpdf" (
 )
 
 if "%1" == "check_syntax" (
-	python tools_rst\rst_check_syntax.py --kbd --long
+	python tools\check_source\check_syntax.py --kbd --long
 	goto EOF
 )
 
 if "%1" == "checkout_locale" (
-	python tools_make\checkout_locale.py
+	python build_files\utils\checkout_locale.py
 	goto EOF
 )
 
 if "%1" == "update_po" (
-	python tools_maintenance\update_po.py
+	python tools/utils_maintenance\update_po.py
 	goto EOF
 )
 
 if "%1" == "report_po_progress" (
 	IF NOT EXIST %cd%\locale GOTO MISSING_LOCALE
-	python tools_report\report_translation_progress.py locale\%2 --quiet
+	python tools\translations\report_translation_progress.py locale\%2 --quiet
 	goto EOF
 
 )
 
 if "%1" == "check_spelling" (
-	python tools_rst\rst_check_spelling.py
+	python tools\check_source\check_spelling.py
 	goto EOF
 )
 
 if "%1" == "check_structure" (
-	python tools_rst\rst_check_images.py
+	python tools\check_source\check_images.py
 	goto EOF
 
 if "%1" == "update" (
-	python tools_make\make_update.py
+	python build_files\utils\make_update.py
 	goto EOF
 
 ) else (

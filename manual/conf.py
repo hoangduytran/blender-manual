@@ -16,7 +16,7 @@ import sys
 
 from sphinx import version_info as sphinx_version
 
-sys.path.insert(0, os.path.abspath(os.path.join('..', 'exts')))
+sys.path.insert(0, os.path.abspath(os.path.join('..', 'build_files', 'extensions')))
 
 # Sphinx errors out on single threaded builds see T86621
 sys.setrecursionlimit(2000)
@@ -64,7 +64,7 @@ if "latex" in sys.argv:
     image_converter = "magick"
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['../resources/templates']
+templates_path = ['../build_files/templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -161,12 +161,12 @@ html_baseurl = "https://docs.blender.org/manual/en/latest/"
 # or URL that points an image file for the logo.
 #
 # Socket logo from: https://www.blender.org/about/logo
-html_logo = "../resources/theme/blender-logo.svg"
+html_logo = "../build_files/theme/blender-logo.svg"
 
 # If given, this must be the name of an image file
 # (path relative to the configuration directory) that is the favicon of
 # the docs, or URL that points an image file for the favicon.
-html_favicon = "../resources/theme/favicon.ico"
+html_favicon = "../build_files/theme/favicon.ico"
 
 if html_theme == "sphinx_rtd_theme":
     html_css_files = ["css/theme_overrides.css",
@@ -176,7 +176,7 @@ if html_theme == "sphinx_rtd_theme":
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["../resources/theme"]
+html_static_path = ["../build_files/theme"]
 
 # If this is not None, a ‘Last updated on:’ timestamp is inserted at
 # every page bottom, using the given strftime() format.
@@ -325,7 +325,7 @@ latex_documents = [
 # Boundin gBox).
 
 '''
-latex_logo = "../resources/theme/blender-logo.svg"
+latex_logo = "../build_files/theme/blender-logo.svg"
 '''
 
 # This value determines the topmost sectioning unit. It should be chosen from

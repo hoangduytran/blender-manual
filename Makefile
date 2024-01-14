@@ -106,29 +106,29 @@ epubpdf: .SPHINXBUILD_EXISTS
 		--pdf-page-margin-bottom 50 \
 
 check_syntax:
-	@python3 tools_rst/rst_check_syntax.py --long --title --kbd > rst_check_syntax.log
+	@python3 tools/check_source/check_syntax.py --long --title --kbd > rst_check_syntax.log
 	@echo "Lines:" `cat rst_check_syntax.log | wc -l`
 	@python3 tools/open_quickfix_in_editor.py rst_check_syntax.log
 	@rm rst_check_syntax.log
 
 check_structure:
-	@python3 tools_rst/rst_check_images.py
+	@python3 tools/check_source/check_images.py
 
 check_spelling:
-	@python3 tools_rst/rst_check_spelling.py
+	@python3 tools/check_source/check_spelling.py
 
 checkout_locale:
-	@python3 ./tools_make/checkout_locale.py
+	@python3 ./build_files/utils/checkout_locale.py
 
 update_po:
-	@python3 ./tools_maintenance/update_po.py
+	@python3 ./tools/utils_maintenance/update_po.py
 
 report_po_progress:
-	@python3 tools_report/report_translation_progress.py --quiet \
+	@python3 tools/translations/report_translation_progress.py --quiet \
 	         `find locale/ -maxdepth 1 -mindepth 1 -type d -not -iwholename '*.git*' -printf 'locale/%f\n' | sort`
 
 update:
-	@python3 ./tools_make/make_update.py
+	@python3 ./build_files/utils/make_update.py
 
 format_py:
 	@autopep8 --in-place --recursive .
