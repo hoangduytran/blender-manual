@@ -21,20 +21,6 @@ Inputs
 Image
    Standard color input.
 
-
-Properties
-==========
-
-Type
-   :Classic: A simple smoothing method that averages the local square
-      neighbourhood of the image while preserving edges. Produces blocky results
-      due to the square neighbourhood and provides no tuning parameters, but is
-      faster to compute.
-   :Anisotropic: A complex smoothing method that averages the local
-      neighbourhood of the image in the direction of the flow of the edges,
-      thus preserving the edges in the output. Produces painterly-like results
-      and provides multiple turning parameters, while being slower to compute.
-
 Size
    Controls the size of the smoothing neighbourhood. Large values may introduce
    artifacts for highly detailed areas. For the anisotropic method, the larger
@@ -57,6 +43,20 @@ Size
         - .. figure:: /images/compositing_types_filter_kuwahara-node_size9.webp
 
              Size: 9.
+
+
+Properties
+==========
+
+Type
+   :Classic: A simple smoothing method that averages the local square
+      neighbourhood of the image while preserving edges. Produces blocky results
+      due to the square neighbourhood and provides no tuning parameters, but is
+      faster to compute.
+   :Anisotropic: A complex smoothing method that averages the local
+      neighbourhood of the image in the direction of the flow of the edges,
+      thus preserving the edges in the output. Produces painterly-like results
+      and provides multiple turning parameters, while being slower to compute.
 
 Uniformity
    Controls the uniformity of the directions of the edges of the image. Non
