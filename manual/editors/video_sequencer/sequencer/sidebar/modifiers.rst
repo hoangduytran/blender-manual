@@ -38,11 +38,11 @@ Common Options
 Each modifier has several buttons at its top:
 
 Mute (eye icon)
-   Disables the modifier. Very useful to compare the image, with / without modifications.
+   Disables the modifier, useful to compare the image, with or without modifications.
 Move (up/down arrow icon)
-   The next two buttons are used to change the modifier's position in the stack.
+   These two buttons change the modifier's position in the stack which affects their computation order.
 Remove ``X``
-   The cross is to delete the modifier from the stack.
+   Deletes the modifier from the stack.
 
 
 Masking
