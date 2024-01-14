@@ -9,8 +9,6 @@ Defocus Node
    :align: right
    :alt: Defocus Node.
 
-:guilabel:`CPU Compositor Only`
-
 The *Defocus Node* blurs areas of an image based on a map/mask input.
 
 It is typically used to emulate depth of field (:term:`DOF`) using a post-processing method with a Z-buffer input.
@@ -50,7 +48,7 @@ Max Blur
    This value limits the amount of blur by setting a maximum blur radius.
    Can be used to optimize the performance.
    The default value of 0 means no limit.
-Threshold
+Threshold :guilabel:`CPU Compositor Only`
    Some artifacts, like edge bleed, may occur, if the blur difference between pixels is large.
    This value controls how large that blur difference considered to be safe.
 
@@ -58,7 +56,7 @@ Threshold
 
       Only change this value, if there is an occurring problem with an in-focus object.
 
-Preview
+Preview :guilabel:`CPU Compositor Only`
    If enabled a limited amount of (quasi-)random samples are used to render the preview.
    This way of sampling introduces additional noise, which will not show up in the final render.
 Scene
