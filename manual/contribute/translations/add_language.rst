@@ -105,7 +105,7 @@ Generating the Set of Files for the Target Language
 
    - Newly generated files will contain some placeholders for authors and revision dates etc.
      If you find the job of replacing them repetitive, make use of the script ``change_placeholders.sh``
-     in the subdirectory ``~/blender-manual/tools/util/maintenance``, make a copy of that to your local ``bin`` directory
+     in the subdirectory ``~/blender-manual/tools/util_maintenance``, make a copy of that to your local ``bin`` directory
      and replace all values that were mentioned in the file with your specific details,
      then after each change to a file, you would do following commands
      to update the file with your personal details, revision date and time,
