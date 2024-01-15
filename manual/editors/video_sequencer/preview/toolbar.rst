@@ -5,7 +5,7 @@
 
 Tweak :kbd:`W`
    Perform a multiple actions; first of it can be select images and by consequence their associated strip.
-   Second it can move strips using the same principles as the :ref:`Move tool <tool-vse-preview-move>`.
+   Second it can move strips using the same principles as the :ref:`Move tool <tool-sequencer-preview-move>`.
    Using the shortcut :kbd:`W`, will cycle between this tool and other sub-tools described below.
 
    :ref:`Select Box <tool-select-box>` :kbd:`B`
@@ -32,7 +32,7 @@ Cursor
    the distance in pixels the cursor has moved in each of the cardinal directions.
    The third number, between parenthesis, is the Euclidean distance the cursor has moved.
 
-.. _tool-vse-preview-move:
+.. _tool-sequencer-preview-move:
 
 Move :kbd:`G`
    Changes the location of the selected image by adjusting the strip's
