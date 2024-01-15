@@ -37,7 +37,8 @@ White Level :guilabel:`Compositor Only`
 
 .. tip::
 
-   To define the black and white levels, use the :ref:`eyedropper <ui-eyedropper>` to select a color sample of a displayed image.
+   To define the black and white levels,
+   use the :ref:`eyedropper <ui-eyedropper>` to select a color sample of a displayed image.
 
 
 Properties

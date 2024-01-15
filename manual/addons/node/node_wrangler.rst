@@ -268,7 +268,7 @@ Viewer Focus
 
 .. reference::
 
-   :Shortcut:  :kbd:`LMB-LMB`
+   :Shortcut: Double :kbd:`LMB`
 
 Set the viewer's tile :ref:`center <bpy.types.CompositorNodeViewer.center>` to the mouse position.
 
