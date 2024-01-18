@@ -55,14 +55,14 @@ Trying the Make Process to Create HTML Files in English
 Creating the Language Entry in the HTML Menu
 ============================================
 
-#. Create an entry for the language in the html menu by opening file ``./resources/theme/js/version_switch.js``
+#. Create an entry for the language in the html menu by opening file ``./build_files/theme/js/version_switch.js``
    (assuming you are at the ``blender-manual`` subdirectory).
 #. Find the table for the languages in ``var all_langs = {..};``.
 #. Enter the entry: ``"fr": "Fran&ccedil;ais",``, (``"fr": "Français"``).
    (Notice the Unicode characters.)
 #. Commit the updated file::
 
-      git add ./resources/theme/js/version_switch.js
+      git add ./build_files/theme/js/version_switch.js
       git commit -m "HTML: Add French to language menu"
 
 #. Push your changes to the upstream repository::
@@ -105,7 +105,7 @@ Generating the Set of Files for the Target Language
 
    - Newly generated files will contain some placeholders for authors and revision dates etc.
      If you find the job of replacing them repetitive, make use of the script ``change_placeholders.sh``
-     in the subdirectory ``~/blender-manual/tools_maintenance``, make a copy of that to your local ``bin`` directory
+     in the subdirectory ``~/blender-manual/tools/util_maintenance``, make a copy of that to your local ``bin`` directory
      and replace all values that were mentioned in the file with your specific details,
      then after each change to a file, you would do following commands
      to update the file with your personal details, revision date and time,

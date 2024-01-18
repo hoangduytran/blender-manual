@@ -6,7 +6,7 @@ This script extracts RST fro Blender's "--help",
 using simple conventions & REGEX parsing.
 
 Example:
-   python tools_maintenance/blender_help_extract.py /path/to/blender manual/advanced/command_line/arguments.rst
+   python tools/utils_maintenance/blender_help_extract.py /path/to/manual/advanced/command_line/arguments.rst
 """
 
 # Conversion from There are some cases which aren't handled (and aren't needed at the moment),

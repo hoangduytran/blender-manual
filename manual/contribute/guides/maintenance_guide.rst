@@ -11,11 +11,11 @@ When RST-files are added or removed the corresponding locale files
 are added or removed automatically by the update script.
 However, if files need to be moved please use this Python script::
 
-   python tools_rst/rst_remap.py start
+   python tools/utils_maintenance/rst_remap.py start
 
 RST-files can then be freely moved and the remap script will move the locale file after::
 
-   python tools_rst/rst_remap.py finish
+   python tools/utils_maintenance/rst_remap.py finish
 
 It is best to avoid moving/renaming files as this breaks URLs and
 without this script translators will lose all their work in these files.

@@ -11,7 +11,7 @@ Check spelling for all RST files in the repository.
 import docutils.parsers.rst
 from docutils.parsers.rst import directives, roles
 import docutils
-from rst_check_spelling_config import (
+from check_spelling_config import (
     dict_custom,
     dict_ignore,
 )
