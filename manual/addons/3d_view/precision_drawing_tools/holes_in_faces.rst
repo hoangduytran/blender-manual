@@ -43,7 +43,7 @@ Below is an example of a 2D curve surface, with the settings shown to make it a 
 
 These curve surface can then be placed in front of a mesh object to make a face,
 but this will require Align tools in awkward rotational angles, something we have not released yet.
-The proviso on this is that you can never ``Apply`` the rotations used, but that is no hardship.
+The provision on this is that you can never ``Apply`` the rotations used, but that is no hardship.
 
 Below is what this looks like if converted to a mesh,
 producing totally unsuitable topology for precision modeling, or even beveling:

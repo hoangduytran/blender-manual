@@ -215,7 +215,7 @@ To print out the name of first object in the list::
 
    bpy.context.selected_objects[0]
 
-The complex one... But this prints a list of objects not including the active object::
+The complex one... But this prints a list of selected objects not including the active object:::
 
    [obj for obj in bpy.context.selected_objects if obj != bpy.context.object]
 
