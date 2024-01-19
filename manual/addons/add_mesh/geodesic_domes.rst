@@ -3,24 +3,14 @@
 Geodesic Domes
 **************
 
-Original introduction from Andy Houston (Blender 2.4 series)
+This script can be used to create geodesic objects, not limited to domes or spheres.
+Each mesh type created has it's own set of editable parameters.
+By editing the parameters, you can create many simple or complex mesh shapes.
+Create an equal-sided pyramid, a soccer ball, a wine glass and more.
+Limited only by your imagination (and some cool math limitations).
+Create complex mesh deformations with the superformula parameters.
 
-- Geodesic spheres based on icosahedrons, octahedrons and tetrahedrons.
-- Triangular, hexagonal and hex/tri combo face options.
-- A function that turns the current shape into its geometric dual (sort of).
-- Grid, Cylinder, Parabola, Torus and Ball primitives.
-- Hubs and Struts. Fill out those edges and vertices with your custom, decorative meshes.
-- Superformula deforming. Create rounded triangles, wobbly shapes, etc.
-
-Introduction by Brendon Murphy (Blender 2.6/7 series)
-
-- This script can be used to create geodesic objects, not limited to domes or spheres.
-- Each mesh type created has it's own set of editable parameters.
-- By editing the parameters, you can create many simple or complex mesh shapes.
-- Create an equal-sided pyramid, a soccer ball, a wine glass and more.
-- Limited only by your imagination (and some cool math limitations).
-- Create complex mesh deformations with the superformula parameters.
-- In the next section we will cover the menu types and how to use the parameters to "design" your mesh.
+In the next section we will cover the menu types and how to use the parameters to "design" your mesh.
 
 
 Activation
@@ -44,18 +34,23 @@ For now, let's look at the Object Types and their parameters:
 
 Objects
    There are six Object types you can create by default.
+   Each type has it's own set of parameters.
    Using the parameters you can build upon these objects to create more object types.
    Object Types have unique parameter sets and share the Superformula parameters (described below).
+
+   :Import Your Mesh:
+      You can import your own mesh into Geodesic Domes for use within the script.
+      This is limited to the Faces, Struts and Hubs menus.
+
 
 
 Geodesic Object Class Types
 ===========================
 
-Geodesic
-   Please note, the *Frequency* parameters have a high impact on object creation.
-   To create a Geodesic Dome you must increase the *Frequency* or the default Triangle.
+Please note, the *Frequency* parameters have a high impact on object creation.
+To create a Geodesic Dome you must increase the *Frequency* of the default Triangle.
 
-Subdivide Basic/Triacon
+Class
    Class 1 is the "equilateral triangle".
    Class 2 is the "cube".
 
@@ -73,7 +68,7 @@ Round
 
 
 Geodesic Object Parameters
---------------------------
+==========================
 
 Frequency
    Subdivide base triangles.
@@ -103,13 +98,8 @@ Dual
    Faces become vertices, vertices become faces, edges flip.
 
 
-Geodesic Object Types
-=====================
-
-There are six Object types you can create.
-Each type has it's own set of parameters.
-As you can see most menu items are self explanatory.
-The tooltips will give you further information on individual parameters.
+Other Object Parameters
+=======================
 
 Gap
    Shrink faces in direction.
@@ -118,13 +108,6 @@ Gap
 Phase
    Rotate around a pivot.
    Useful for rotating deformation or use with *Gap*.
-
-
-Import Your Mesh
-================
-
-You can import your own mesh into Geodesic Domes for use within the script.
-This is limited to the Faces, Struts and Hubs menus.
 
 
 Faces
