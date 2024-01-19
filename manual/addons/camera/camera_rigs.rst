@@ -78,7 +78,7 @@ Modes
 -----
 
 There are two modes of operation for the 2D rig: Rotation and Shift.
-You can switch between the two modes in the add-on's Interface_.
+You can switch between the two modes in the add-on's interface.
 
 Rotation is the default mode, and will rotate the camera to aim at and keep the corners in its frame.
 Shift mode, on the other hand, uses the Shift properties on the Camera to achieve a cropping effect instead of a pan.
@@ -148,7 +148,7 @@ Crane Rig Height, Arm Length
    These values only show in the interface when a crane rig is selected, they are also animatable.
 
 Rotation/Shift
-   The Rotation/Shift slider lets you switch between Rotation and Shift Modes_ for the 2D Camera rig.
+   The Rotation/Shift slider lets you switch between Rotation and Shift modes for the 2D Camera rig.
    You can also choose an intermediate value to have a bit of both.
 
 
