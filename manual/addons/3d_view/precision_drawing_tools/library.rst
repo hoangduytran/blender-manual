@@ -20,15 +20,15 @@ Principles:
 ===========
 
 The concept is to store parts as either individual objects, or in the case of more complex parts,
-like an engine assembly for example, as collections. The way Blender handles materials for append,
-or linked, objects is that if you load an object using Append, it will bring the materials of the object with it.
-If you append the part many times, you get many copies of the same material – not a situation that is efficient.
+like an engine assembly for example, as collections.
+When objects are linked or appended, Blender will will bring the materials of the object with it.
+If you append the part many times, you get many copies of the same material -– not a situation that is efficient.
 So the recommendation for this trial system is to leave the materials off the objects and store them
 either against a "holder" object, or set a **fake user** so the material is always held in the library blend file.
-Then you can append, or link the material once and assign it to many copies of the appended, or linked object.
+Then you can append or link the material once and assign it to many copies of the appended or linked object.
 
-The plan is to expand the system so users can send objects, or collections, or material from their current
-open blend file to the Library blend file. This will be a further development in a later release,
+The plan is to expand the system so users can send objects, collections, or material from their current
+open blend-file to the Library blend-file. This will be a further development in a later release,
 if this is possible. Parts Libraries have been in existence in CAD systems since the 1980’s
 where they were called "Cells" and had one, or many "Cell Libraries" to store them in, each cell
 had a user defined origin point that was used to place the part. The process was to put the cursor
@@ -39,7 +39,7 @@ PDT Parts Library uses the same method to store, recall and place parts at the c
 .. figure:: /images/addons_pdt_library_2.png
    :width: 450px
 
-This shows the Parts Library Menu and some sample parts brought in by either ``Appending``, or ``Linking``.
+This shows the Parts Library Menu and some sample parts brought in by either ``Appending`` or ``Linking``.
 
 
 Parts Library File:
