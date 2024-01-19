@@ -99,7 +99,7 @@ against each object, this could be, for example, the rotational center of a hydr
 where you do not want this location to also be the object origin point.
 
 You can then read back this information to place the PP using the ``PP Read`` button.
-If the custom property are not there, either because it hasn’t been written,
+If the custom property are not there, either because it hasn't been written,
 or because you have deleted it, an error is displayed.
 
 .. figure:: /images/addons_pdt_pivot_4.png

@@ -42,7 +42,7 @@ Lazy Connect
 
 Connect two nodes without even clicking the sockets. Just drag the cursor from one node to another while
 holding :kbd:`Alt-RMB`.
-It will select the nodes nearest the start and end points of the drag for connection, so you don’t even have
+It will select the nodes nearest the start and end points of the drag for connection, so you don't even have
 to click on the nodes.
 
 .. figure:: /images/addons_node_node-wrangler_lazy-connect.png

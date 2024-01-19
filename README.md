@@ -53,7 +53,7 @@ If you are interested in becoming a contributor, please contact us on the
 
 # Translations
 
-For translations, we use Sphinx’s internationalization package.
+For translations, we use Sphinx's internationalization package.
 To get started see the [contribution guide for translations](https://docs.blender.org/manual/en/dev/contribute/index.html#translations).
 
 

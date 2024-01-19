@@ -110,7 +110,7 @@ language = 'en'
 locale_dirs = ['../locale/']
 gettext_compact = "blender_manual"
 
-# If true, “fuzzy” messages in the message catalogs are used for translation.
+# If true, "fuzzy" messages in the message catalogs are used for translation.
 gettext_allow_fuzzy_translations = False
 
 
@@ -146,9 +146,9 @@ if html_theme == "sphinx_rtd_theme":
 
     extensions.append('sphinx_rtd_theme')
 
-# The “title” for HTML documentation generated with Sphinx’s own templates.
+# The "title" for HTML documentation generated with Sphinx's own templates.
 # This is appended to the <title> tag of individual pages, and
-# used in the navigation bar as the “topmost” element.
+# used in the navigation bar as the "topmost" element.
 html_title = "Blender Manual"
 
 # The base URL which points to the root of the HTML documentation.
@@ -178,7 +178,7 @@ if html_theme == "sphinx_rtd_theme":
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["../build_files/theme"]
 
-# If this is not None, a ‘Last updated on:’ timestamp is inserted at
+# If this is not None, a 'Last updated on:' timestamp is inserted at
 # every page bottom, using the given strftime() format.
 # The empty string is equivalent to '%b %d, %Y'
 # (or a locale-dependent equivalent).
@@ -202,10 +202,10 @@ html_show_sourcelink = False
 # Ed. Note: URL has to be adapted, when versioning is set up.
 html_use_opensearch = 'https://docs.blender.org/manual/' + language + '/latest'
 
-# If true, “(C) Copyright …” is shown in the HTML footer.
+# If true, "(C) Copyright …" is shown in the HTML footer.
 html_show_copyright = True
 
-# If true, “Created using Sphinx” is shown in the HTML footer.
+# If true, "Created using Sphinx" is shown in the HTML footer.
 html_show_sphinx = False
 
 # If true, the text around the keyword is shown as summary of each search result.
@@ -423,7 +423,7 @@ texinfo_documents = [
 # Control how to display URL addresses.
 # texinfo_show_urls = 'footnote'
 
-# If true, do not generate a @detailmenu in the “Top” node’s menu
+# If true, do not generate a @detailmenu in the "Top" node's menu
 # containing entries for each sub-node in the document.
 # texinfo_no_detailmenu = False
 

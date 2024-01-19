@@ -121,7 +121,7 @@ The panel will display the most used camera settings.
 Only the added features will be explain here, for more information refer to the :doc:`/render/cameras` section.
 
 Set DOF Bone
-   The *Set DOF Bone* button will automatically set up the camera so that it uses the camera rig’s Aim bone as a
+   The *Set DOF Bone* button will automatically set up the camera so that it uses the camera rig's Aim bone as a
    target for the depth of field (DOF).
 
 Focal Distance/F-Stop/Focal Length

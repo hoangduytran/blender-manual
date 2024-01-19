@@ -29,7 +29,7 @@ Then you can append or link the material once and assign it to many copies of th
 
 The plan is to expand the system so users can send objects, collections, or material from their current
 open blend-file to the Library blend-file. This will be a further development in a later release,
-if this is possible. Parts Libraries have been in existence in CAD systems since the 1980’s
+if this is possible. Parts Libraries have been in existence in CAD systems since the 1980's
 where they were called "Cells" and had one, or many "Cell Libraries" to store them in, each cell
 had a user defined origin point that was used to place the part. The process was to put the cursor
 where you wanted the part, then call it by name and it would be placed with its origin at the cursor location.
@@ -72,8 +72,8 @@ or materials depends on the setting of the **Selector** next to the Link button.
 The next three **Selectors** will show the ``Objects``, ``Collections`` and ``Materials``
 in the Library blend file, either all of them, or filtered by the Search input next to each Selector.
 
-The ``Search`` strings consist of any characters that appear anywhere in the Object’s,
-Collection’s, or Material’s Name. So searching with ``gear`` in the search box will find,
+The ``Search`` strings consist of any characters that appear anywhere in the Object's,
+Collection's, or Material's Name. So searching with ``gear`` in the search box will find,
 for example, objects named ``25T 20mm gear``, or ``gears – 20mm 25teeth``, etc.
 
 The principle of operation is therefore:
