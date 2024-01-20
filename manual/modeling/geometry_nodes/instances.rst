@@ -64,6 +64,16 @@ were more complicated.
    end of the node tree.
 
 
+Realizing Instances
+===================
+
+The term "realizing" instances referes to converting the instances into unique geometry.
+When instances are realized they will take up more memory and manipulation to geometry
+will have to be processed individually rather the once per instancing geometry.
+
+To realize instance use the :doc`/modeling/geometry_nodes/instances/realize_instances`.
+
+
 .. _geometry-nodes_instance-processing:
 
 Instance Processing
