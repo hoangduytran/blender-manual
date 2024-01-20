@@ -49,6 +49,13 @@ This is also the place where sub-steps can be defined for a simulation.
 Inputs
 ------
 
+Delta Time
+   The time in seconds between frames.
+   Essentially this the inverse of the render :ref:`Frame Rate <bpy.types.RenderSettings.fps>`.
+
+   This delta is used to drive the simulation by connecting it node setups that depend on a rate.
+   This will keep the simulation playback consistent when the frame rate changes.
+
 Skip
    Forward the output of the simulation input node directly
    to the output node and ignore the nodes in the simulation zone.
