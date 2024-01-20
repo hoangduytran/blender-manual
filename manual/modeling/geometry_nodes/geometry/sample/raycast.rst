@@ -45,7 +45,6 @@ Mapping
 
    :Interpolated:
       Vertex and corner attributes are interpolated smoothly, with a bilinear function.
-
    :Nearest:
       Choose the value of the closest vertex without interpolating.
 
@@ -63,7 +62,8 @@ Hit Normal
    The surface :term:`Normal` vector at the hit location.
 
 Hit Distance
-   The distance from the ray origin to the *Hit Position*.
+   The distance from the *Source Position* to the *Hit Position*.
+   If the ray does not hit, the *Ray Length* is returned.
 
 Attribute
    Interpolated values of the *Attribute* input sampled at the *Hit Position*.
