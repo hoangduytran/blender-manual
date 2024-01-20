@@ -42,8 +42,15 @@ Particle Radius
 .. _bpy.types.FluidDomainSettings.use_speed_vectors:
 
 Use Speed Vectors
-   If this checkbox is enabled, speed vectors (mesh vertex velocities) are generated and stored on
-   drive. They can be used to compute image-based motion blur with the compositing nodes.
+   Creates a ``velocity`` :ref:`Attribute </modeling/geometry_nodes/attributes_reference>`
+   which records the velocity of each vertex per frame.
+   These will be used (automatically) when rendering with motion blur enabled.
+
+   .. note::
+
+      In order to render motion blur with Cycles,
+      :ref:`Deformation Motion Blur <bpy.types.CyclesObjectSettings.use_deform_motion>`
+      must be enabled.
 
    .. list-table:: Comparison of a liquid splash with and without motion blur (rendered with Cycles).
 
