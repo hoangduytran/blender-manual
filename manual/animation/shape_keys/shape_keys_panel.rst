@@ -11,6 +11,7 @@ Shape Keys Panel
 
 .. figure:: /images/animation_shape-keys_shape-keys-panel_basis.png
    :align: right
+   :width: 296px
 
    Shape Keys panel.
 
@@ -40,6 +41,19 @@ Active Shape Key Index
    Mute (check mark)
       If unchecked, the shape key will not be taken into consideration when
       mixing the shape key stack into the result visible in the 3D Viewport.
+
+   .. _bpy.types.ShapeKey.lock_shape:
+
+   Lock Shape (lock icon)
+      Shape keys can be locked to protect them from accidental modification due to inadvertently
+      selecting the wrong key for editing in the list. Most common sculpt and edit mode operators
+      and tools that move vertices abort with an error if the active shape key is locked.
+
+      .. note::
+         Operators that always modify all shape keys in exactly the same way, like
+         :ref:`Apply Object Transforms <bpy.ops.object.transform_apply>`, don't check shape key locks.
+         Neither currently do most edit mode operators that modify topology, because the topology is
+         expected to usually be finalized before shape keys are created.
 
 Shape Key Specials
    .. _bpy.ops.object.shape_key_add:
@@ -118,6 +132,7 @@ Relative Shape Keys
 
 .. figure:: /images/animation_shape-keys_shape-keys-panel_relative.png
    :align: right
+   :width: 296px
 
    Relative Shape Keys options.
 
@@ -175,6 +190,7 @@ Absolute Shape Keys
 
 .. figure:: /images/animation_shape-keys_shape-keys-panel_absolute.png
    :align: right
+   :width: 296px
 
    Absolute Shape Keys options.
 
