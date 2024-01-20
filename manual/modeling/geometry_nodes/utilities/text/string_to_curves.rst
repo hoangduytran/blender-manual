@@ -100,7 +100,7 @@ Remainder
    *Text Box Width* inputs. Only used in the *Truncate* overflow mode.
 
 Line
-   An attribute field containing which the index of the each character's line in the text layout
+   An attribute field containing the line index of each character
    (on the :ref:`instance domain <attribute-domains>`).
 
 Pivot Point
