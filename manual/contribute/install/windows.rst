@@ -51,6 +51,17 @@ In this guide, we will use the official Git client, though any Git client will d
 Setting up the Build Environment
 ================================
 
+.. tip::
+
+   It is recommended to setup and activate a virtual Python environment where dependencies will be installed::
+
+      python3 -m venv .venv
+      .venv/Scripts/activate
+
+   Repeat the ``.venv/Scripts/activate`` command to re-activate the virtual environment,
+   whenever you open a new terminal to build the documentation.
+
+
 - Open a Command Prompt. (Run as Administrator)
 - Enter the ``blender-manual`` folder which was just added by `git clone`::
 

@@ -31,6 +31,7 @@ When using `Homebrew <https://brew.sh>`__, run the following commands in the ter
    brew install git git-lfs
    git lfs install
 
+
 Downloading the Repository
 ==========================
 
@@ -44,6 +45,17 @@ The repository will now be downloaded which may take a few minutes depending on 
 
 Setting up the Build Environment
 ================================
+
+.. tip::
+
+   It is recommended to setup and activate a virtual Python environment where dependencies will be installed::
+
+      python3 -m venv .venv
+      source .venv/bin/activate
+
+   Repeat the ``source .venv/bin/activate`` command to re-activate the virtual environment,
+   whenever you open a new terminal to build the documentation.
+
 
 - Open a Terminal window.
 - Enter the ``blender-manual`` folder which was just added by ``git clone``::

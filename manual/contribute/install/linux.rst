@@ -48,6 +48,19 @@ The repository will now be downloaded which may take a few minutes depending on 
 Setting up the Build Environment
 ================================
 
+.. tip::
+
+   It is recommended to setup and activate a virtual Python environment where dependencies will be installed::
+
+      python3 -m venv .venv
+      source .venv/bin/activate
+
+   Repeat the ``source .venv/bin/activate`` command to re-activate the virtual environment,
+   whenever you open a new terminal to build the documentation.
+
+   This step may be required on some distributions that enforce `PEP 668 <https://peps.python.org/pep-0668/>`__.
+
+
 - Open a Terminal window.
 - Enter the ``blender-manual`` folder which was just added by ``git clone``::
 
