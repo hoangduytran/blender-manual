@@ -9,20 +9,17 @@ Instances
 
    The three types of instances.
 
-In addition to storing real data like a mesh or a curve, a geometry can store instances,
-which themselves can reference more geometry, or an object, or a collection. The purpose
-of instancing is to allow including much more geometry in the result, without duplicating
-the actual data. This is because renderer like :doc:`Cycles </render/cycles/index>`
-can handle the same geometry data in many different locations better than when the data
-is duplicated.
+In addition to storing real data like a mesh or a curve, objects can store instances,
+which themselves can reference more geometry, an object, or a collection. The purpose
+of instancing is to allow duplicating geometry and storing it in an object, without duplicating
+the actual data. This optimization allows render engines  like :doc:`Cycles </render/cycles/index>`
+to handle the same geometry data in many different locations better than when the data is duplicated.
 
-Each instance keeps track of which geometry it corresponds to, and a :term:`Transform`.
-Instances can also store the ``id`` attribute, used for correct motion blur when instances
-move in an animation.
+Each instance keeps track of which geometry it corresponds to
+and how the instanced is transformed compared to it's source geometry.
+Instances can also store the ``id`` attribute, which is used to correct motion blur when instances move in an animation.
 
-The main node used to create instances in geometry nodes
-is the :doc:`/modeling/geometry_nodes/instances/instance_on_points`.
-
+Instances can be created with geometry nodes using the :doc:`/modeling/geometry_nodes/instances/instance_on_points`.
 
 .. warning::
 
@@ -37,8 +34,8 @@ Nested Instancing
 
 Since instances can store a geometry, and a geometry can contain instances, nested instancing is possible.
 In other words, it is possible to instance an instance, or even a collection of instances.
-By default, the :doc:`/modeling/geometry_nodes/instances/instance_on_points` will create
-nested instances by instancing on the points real geometry and instanced geometry.
+For example, by default, the :doc:`/modeling/geometry_nodes/instances/instance_on_points` will create
+nested instances by instancing instances on the points of real geometry.
 
 .. figure:: /images/modeling_geometry-nodes_instances-nested.png
    :align: center
@@ -47,7 +44,7 @@ nested instances by instancing on the points real geometry and instanced geometr
    :doc:`Instance on Points </modeling/geometry_nodes/instances/instance_on_points>` nodes.
 
 Here, nested instancing is used to distribute geometry that contains both a mesh
-and instances. The output geometry contains a "real" mesh, and a group of instances.
+and instances. The output geometry contains a "real" mesh and a group of instances.
 Each instance contains a sphere mesh and many instances of a cone geometry.
 
 .. figure:: /images/modeling_geometry-nodes_instances-nested-tree.png
@@ -56,15 +53,16 @@ Each instance contains a sphere mesh and many instances of a cone geometry.
 
    The tree of instanced geometry for the example above.
 
-What makes this method helpful is that the output geometry only contains three unique meshes:
+What makes this method helpful is the output geometry only contains three unique meshes:
 the plane, the sphere, and the cone. This would make the performance much better if the meshes
 were more complicated.
 
 .. warning::
 
-   Only eight levels of nested instancing are supported for rendering and the viewport currently.
+   Only eight levels of nested instancing are supported for rendering and viewing in the viewport.
    Though deeper trees of instances can be made inside geometry nodes, they must be realized at the
    end of the node tree.
+
 
 .. _geometry-nodes_instance-processing:
 
@@ -72,7 +70,7 @@ Instance Processing
 ===================
 
 Almost all nodes that process geometry do so by processing each unique
-geometry in their input's tree of instances separately. For example,
+geometry separately rather than realized geometry. For example,
 if a :doc:`/modeling/geometry_nodes/mesh/operations/subdivision_surface` was placed at
 the end of the example above, it would only have to subdivide three meshes,
 rather than each instance of a mesh. Another important example is processing with
