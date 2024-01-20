@@ -140,8 +140,40 @@ Hair
 BSSRDF
 ------
 
-- ``bssrdf_cubic(N, radius, texture_blur, sharpness)``
-- ``bssrdf_gaussian(N, radius, texture_blur)``
+Used to simulate subsurface scattering.
+
+.. function:: bssrdf(method, N, radius, albedo)
+
+   :type method: string
+   :arg method:
+      Rendering method to simulate subsurface scattering.
+
+      - ``burley``:
+        An approximation to physically-based volume scattering.
+        This method is less accurate than ``random_walk`` however,
+        in some situations this method will resolve noise faster.
+      - ``random_walk_skin``:
+        Provides accurate results for thin and curved objects.
+        Random Walk uses true volumetric scattering inside the mesh,
+        which means that it works best for closed meshes.
+        Overlapping faces and holes in the mesh can cause problems.
+      - ``random_walk``:
+        Behaves similarly to ``random_walk_skin`` but modulates
+        the *Radius* based on the *Color*, *Anisotropy*, and *IOR*.
+        This method thereby attempts to retain greater surface detail and color
+        than ``random_walk_skin``.
+   :type N: vector
+   :arg N: Normal vector of the surface point being shaded.
+   :type radius: vector
+   :arg radius:
+      Average distance that light scatters below the surface.
+      Higher radius gives a softer appearance, as light bleeds into shadows and through the object.
+      The scattering distance is specified separately for the RGB channels,
+      to render materials such as skin where red light scatters deeper.
+      The X, Y and Z values are mapped to the R, G and B values, respectively.
+   :type albedo: color
+   :arg albedo:
+      Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
 
 
 Volume
