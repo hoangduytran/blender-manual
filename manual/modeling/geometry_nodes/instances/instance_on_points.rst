@@ -43,7 +43,7 @@ Points
       and *Scale* inputs, but it will *also* be transformed based on the parent instances.
 
 Selection
-   Whether to instance on each point. True values mean the an instance will be generated on the point,
+   Whether to instance on each point. True values mean an instance will be generated on the point,
    false values mean the point will be skipped.
 
 Instance
