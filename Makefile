@@ -121,7 +121,7 @@ checkout_locale:
 	@python3 ./build_files/utils/checkout_locale.py
 
 update_po:
-	@python3 ./tools/utils_maintenance/update_po.py
+	@python3 ./tools/translations/update_po.py
 
 report_po_progress:
 	@python3 tools/translations/report_translation_progress.py --quiet \

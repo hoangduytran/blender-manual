@@ -101,7 +101,7 @@ os.environ["LANG"] = "en_US.UTF-8"
 
 # Ensure we're in the repo's base:
 ROOT_DIR = os.path.normpath(os.path.join(
-    os.path.abspath(os.path.dirname(__file__)), ".."))
+    os.path.abspath(os.path.dirname(__file__)), "..", ".."))
 os.chdir(ROOT_DIR)
 LOCALE_BUILD_DIR = os.path.join(ROOT_DIR, "build", "gettext")
 
