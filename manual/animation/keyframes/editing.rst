@@ -21,6 +21,7 @@ There are several methods of adding new keys. Namely:
 - When a Keying Set is active, it is used instead of reading the User Preferences.
 - Hovering over a property and pressing :kbd:`I` or with the context menu by :kbd:`RMB`
   a property and choose *Insert Keyframe* from the menu.
+- With the User Preference "Pie Menu on Drag" enabled, holding down :kbd:`I` and moving the cursor will bring up a pie menu to insert one of Location, Rotation, Scale and Available.
 
 
 Auto Keyframe

@@ -9,15 +9,15 @@ Keying Sets
 
    The Active Keying Sets data ID in the Timeline.
 
-Keying sets are a collection of animated properties that are used to animate
+Keying Sets are a collection of animated properties that are used to animate
 and keyframe multiple properties at the same time.
-For example, using keying sets you can press :kbd:`I` in the 3D Viewport,
-Blender will add keyframes for all the properties in the active keying set.
-There are some built-in keying sets and,
-also custom keying sets called *Absolute Keying Sets*.
-To select and use a keying set, set the *Active Keying Set*
+For example, pressing :kbd:`K` in the 3D Viewport will bring up the available Keying Sets.
+Blender will then add keyframes for whichever Keying Set is chosen.
+There are some built-in Keying Sets and,
+also custom Keying Sets called *Absolute Keying Sets*.
+To select and use a Keying Set, set the *Active Keying Set*
 in the :ref:`Keying popover <timeline-keying>` in the Timeline header,
-or the Keying Set panel, or press :kbd:`Shift-Ctrl-Alt-I` in the 3D Viewport.
+or the Keying Set panel, or press :kbd:`Shift-K` in the 3D Viewport.
 
 
 Keying Set Panel
@@ -35,28 +35,28 @@ This panel is used to add, select, manage *Absolute Keying Sets*.
    The Keying Set panel.
 
 Active Keying Set
-   The :ref:`List View <ui-list-view>` of keying sets in the active scene.
+   The :ref:`List View <ui-list-view>` of Keying Sets in the active scene.
 
    Add ``+``
-      Adds an empty keying set.
+      Adds an empty Keying Set.
 
 Description
-   A short description of the keying set.
+   A short description of the Keying Set.
 
 Export to File
-   Export keying set to a Python script ``File.py``.
-   To re-add the keying set from the ``File.py``, open then run the ``File.py`` from the Text Editor.
+   Export Keying Set to a Python script ``File.py``.
+   To re-add the Keying Set from the ``File.py``, open then run the ``File.py`` from the Text Editor.
 
 
 Keyframing Settings
 -------------------
 
 General Override
-   These options control all properties in the keying set.
+   These options control all properties in the Keying Set.
    Note that the same settings in *Preferences* override these settings if enabled.
 
 Active Set Override
-   These options control individual properties in the keying set.
+   These options control individual properties in the Keying Set.
 
 Common Settings
    Only Needed
@@ -75,7 +75,7 @@ Active Keying Set Panel
    :Editor:    Properties
    :Panel:     :menuselection:`Scene --> Active Keying Set`
 
-This panel is used to add properties to the active keying set.
+This panel is used to add properties to the active Keying Set.
 
 .. figure:: /images/animation_keyframes_keying-sets_scene-active-keying-set-panel.png
 
@@ -83,7 +83,7 @@ This panel is used to add properties to the active keying set.
 
 Paths
    A collection of paths in a :ref:`List View <ui-list-view>` each with a *Data Path* to a property
-   to add to the active keying set.
+   to add to the active Keying Set.
 
    Add ``+``
       Adds an empty path.
@@ -113,10 +113,10 @@ Adding Properties
    :Menu:      :menuselection:`Context menu --> Add All/Single to Keying Set`
    :Shortcut:  :kbd:`K`
 
-Some ways to add properties to keying sets.
+Some ways to add properties to Keying Sets.
 
 :kbd:`RMB` the property in the *User Interface*, then select *Add Single to Keying Set* or *Add All to Keying Set*.
-This will add the properties to the active keying set, or to a new keying set if none exist.
+This will add the properties to the active Keying Set, or to a new Keying Set if none exist.
 
 Hover the mouse over the properties, then press :kbd:`K`, to add *Add All to Keying Set*.
 
@@ -126,11 +126,11 @@ Hover the mouse over the properties, then press :kbd:`K`, to add *Add All to Key
 Whole Character Keying Set
 ==========================
 
-The built-in *Whole Character* keying set is made to keyframe all properties
+The built-in *Whole Character* Keying Set is made to keyframe all properties
 that are likely to get animated in a character rig. It was also implicitly used by
 the :ref:`Old Pose Library system <pose-library-old>`.
 
 In order to determine which bones to add keys for, and which bones to skip,
-the keying set uses the bone names. The following bone name prefixes will be skipped:
+the Keying Set uses the bone names. The following bone name prefixes will be skipped:
 
 "COR", "DEF", "GEO", "MCH", "ORG", "VIS"
