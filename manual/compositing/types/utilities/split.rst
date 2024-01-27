@@ -1,16 +1,15 @@
-.. index:: Compositor Nodes; Split Viewer
-.. _bpy.types.CompositorNodeSplitViewer:
+.. index:: Compositor Nodes; Split
+.. _bpy.types.CompositorNodeSplit:
 
-*****************
-Split Viewer Node
-*****************
+**********
+Split Node
+**********
 
-.. figure:: /images/compositing_node-types_CompositorNodeSplitViewer.webp
+.. figure:: /images/compositing_node-types_CompositorNodeSplit.webp
    :align: right
    :alt: Split Viewer Node.
 
-The *Split Viewer* node takes two images and displays these side-by-side
-as backdrop or as a Viewer Node output.
+The *Split* node takes two images and displays these side-by-side.
 
 
 Inputs
