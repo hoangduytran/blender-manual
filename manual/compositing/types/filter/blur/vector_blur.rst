@@ -9,8 +9,6 @@ Vector (Motion) Blur Node
    :align: right
    :alt: Vector Blur Node.
 
-:guilabel:`CPU Compositor Only`
-
 The Vector Blur node is a fast method for simulating :term:`Motion Blur` in compositing.
 It uses the vector speed render pass to blur the image pixels in 2D.
 
