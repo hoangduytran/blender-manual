@@ -9,8 +9,9 @@ Pixelate Node
    :align: right
    :alt: Pixelate Node.
 
-Add this node in front of a :doc:`Scale node </compositing/types/transform/scale>`
-to get a pixelated (non-smoothed) image from the resultant upscaled image.
+The Pixelate node reduces the level of detail in an image by causing individual pixels to become more prominent.
+It results in a blocky or mosaic-like appearance, where the fine details of the image are obscured,
+and the overall image is represented using larger, more noticeable pixels.
 
 
 Inputs
@@ -23,7 +24,8 @@ Color
 Properties
 ==========
 
-This node has no properties.
+Pixel Size
+   The size of the pixels in the output image, measured in pixels.
 
 
 Outputs
@@ -35,11 +37,5 @@ Color
 
 Example
 =======
-
-Open an image you would like to pixelate using an Image node.
-Add two Scale nodes between the input and output :menuselection:`Add --> Distort --> Scale`.
-Change the values of X and Y to 0.2 in the first scale box and to 5 in the second.
-The composited image will appear unchanged. Now add a Pixelate node between the two Scale nodes.
-The result will be a pixelated image.
 
 .. figure:: /images/compositing_types_filter_pixelate_example.png
