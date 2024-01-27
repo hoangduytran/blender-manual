@@ -32,6 +32,13 @@ UV
 Properties
 ==========
 
+Filter Type
+   Interpolation Methods.
+
+   :Anisotropic:
+      Enhances the clarity of textures viewed at oblique angles, addressing issues like blurring and distortion.
+   :Nearest: No interpolation, uses nearest neighboring pixel.
+
 Alpha
    Alpha threshold is used to fade out pixels on boundaries.
 
