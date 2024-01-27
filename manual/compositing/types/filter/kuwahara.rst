@@ -58,6 +58,9 @@ Type
       thus preserving the edges in the output. Produces painterly-like results
       and provides multiple turning parameters, while being slower to compute.
 
+High Precision
+   Uses a more precise but slower method. Use if the output contains undesirable noise.
+
 Uniformity
    Controls the uniformity of the directions of the edges of the image. Non
    uniform directions are nearly never desirable, so this should typically be
