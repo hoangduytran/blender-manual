@@ -130,7 +130,7 @@ Type
    Option *Color* means that the stick is divided into two parts,
    showing the colors of the respective two atoms which it connects.
 
-   Instancing Vertices
+   :Instancing Vertices:
       The sticks of one element are put into one instancing vertex structure and the sticks appear as cylinders.
       The instancing vertex structure makes the displaying and loading of many sticks relatively fast
       (see Section `The instancing vertex structure`_ for more info). Options *Unit* is the length of a unit
@@ -141,14 +141,14 @@ Type
       This can then lead to a 'overlapping effect' where a stick intersects the atoms. Option *Bonds*
       displays apart from single also double, triple, etc. bonds whereas
       option *Distance* is the distance between the bonds measured in stick diameter.
-   Skin
+   :Skin:
       The skin and subdivision modifiers are used to build the sticks.
       This gives a nice network of sticks, which can be used to show,
       e.g. only the bonds of the structure (delete the atoms before!).
       Options *SubDivV* and *SubDivR* are parameters of the subdivision operator.
       If option *Smooth* is activated, the initial squarish profile of the sticks changes to a more circular one.
       Note that if this option is chosen, there is only one object representing all sticks.
-   Normal
+   :Normal:
       Normal cylinders are used. For each bond, one individual cylinder is used.
       If option *One Object* is activated, about *No* sticks are joined into one mesh object.
       This makes displaying the sticks very fast. However, individual sticks do not exist anymore.
@@ -200,11 +200,11 @@ without having any meaning. This is the reason why the visibility switch
 of the representative ball is switched off (see red arrow)!
 
 There are some consequences:
-a) The representative ball appears at all vertices with the same orientation.
-b) Changing the material properties of the representative ball changes the properties of
-all duplicated balls.
-c) A ball is NOT an individual object, it is rather a linked member of the
-structure. Actually, the object as such does not exist.
+
+- The representative ball appears at all vertices with the same orientation.
+- Changing the material properties of the representative ball changes the properties of all duplicated balls.
+- A ball is NOT an individual object, it is rather a linked member of the structure.
+  Actually, the object as such does not exist.
 
 .. figure:: /images/addons_import-export_mesh-atomic_dupli_2.png
    :align: right
@@ -232,7 +232,6 @@ Separate an atom
 
 For making the handling of the atomic structures a bit more easy, the utility
 panel can be used, see the next Section.
-
 
 .. hint:: **Converting All Atoms of an Instancing Vertex Structure to Real Independent Objects**
 
