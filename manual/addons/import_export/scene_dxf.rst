@@ -66,8 +66,8 @@ Merged Objects
    merge similar DXF geometry to one object.
 
    By Layer
-      Produces one object per layer; if there is mesh, curve, lamp, text data on one layer
-      one object per layer and per Blender object.
+      Produces one object per DXF layer.
+      If a layer contains multiple data types that cannot be merged will still be individual objects.
    By Layer and DXF Type
       The second not only differentiates between Blender data types but also DXF types,
       such as ``LWPOLYLINE`` and ``POLYLINE``.
