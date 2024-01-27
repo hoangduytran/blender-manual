@@ -64,7 +64,7 @@ Viscosity
         - 1.0×10\ :sup:`0` (1.0)
 
    .. tip::
-  
+
       You can find the kinematic viscosity of more materials in the proper units by
       asking Wolfram Alpha, e.g. `"kinematic viscosity of alcohol in m^2/s"
       <https://www.wolframalpha.com/input?i=kinematic+viscosity+of+alcohol+in+m%5E2%2Fs>`__.
@@ -101,3 +101,33 @@ Viscosity
 
 Surface Tension
    Surface tension in grid units. Higher value will produce liquids with greater surface tension.
+
+
+.. _bpy.types.FluidDomainSettings.use_viscosity:
+
+High Viscosity Solver
+=====================
+
+The high viscosity liquid solver can be used to simulate fluids with increased viscosity,
+replicating the behavior of substances like honey or molasses.
+This specialized solver enhances the accuracy of slow-moving and thick liquid simulations.
+
+.. _bpy.types.FluidDomainSettings.viscosity_value:
+
+Strength
+   The viscosity of the liquid. Higher values result in more viscous fluids.
+
+   .. note::
+
+      A strength value of 0 will still apply some viscosity.
+      Uncheck the *High Viscosity Solver* to disable the high viscosity liquid solver simulation step completely.
+
+   .. list-table:: Rotating liquid inflow with varying viscosities.
+
+      * - .. figure:: /images/physics_fluid_type_domain_liquid_viscosity_0-2.png
+
+             Strength of 0.2 (at frame 65).
+
+        - .. figure:: /images/physics_fluid_type_domain_liquid_viscosity_0-4.png
+
+             Strength of 0.4 (at frame 200).
