@@ -59,24 +59,55 @@ Performance
 
 This panel helps you tweak the performance of the Compositor.
 
+.. _bpy.types.CompositorNodeTree.precision:
+
+Precision
+   The precision of compositor intermediate result.
+
+   :Auto: Use full precision for final renders, half precision otherwise.
+   :Full: Use full precision for final renders and viewport.
+
+.. _bpy.types.CompositorNodeTree.render_quality:
+
 Render
    Sets the quality when doing the final render.
+
+.. _bpy.types.CompositorNodeTree.edit_quality:
+
 Edit
    Sets the quality when making edits.
+
+.. _bpy.types.CompositorNodeTree.chunk_size:
+
 Chunk Size
    Max size of a tile (smaller values give a better distribution of multiple threads, but more overhead).
+
+.. _bpy.types.CompositorNodeTree.use_opencl:
+
 OpenCL
    This allows the use of an OpenCL platform to aid in rendering.
    Generally, this should be enabled unless your hardware does not have good OpenCL support.
+
+.. _bpy.types.CompositorNodeTree.use_groupnode_buffer:
+
 Buffer Groups
    Enables buffering of group nodes to increase the speed at the cost of more memory.
+
+.. _bpy.types.CompositorNodeTree.use_two_pass:
+
 Two Pass
    Use two pass execution during editing: the first pass calculates fast nodes, the second pass calculates all nodes.
+
+.. _bpy.types.CompositorNodeTree.use_viewer_border:
+
 Viewer Region
    This allows to set an area of interest for the backdrop.
    Press :kbd:`Ctrl-B` and select a rectangular area in the preview
    which will become the next preview in the backdrop.
    :kbd:`Ctrl-Alt-B` discards the region back to a full preview.
    This is only a preview option, final compositing during a render ignores this region.
+
+.. _bpy.types.SpaceNodeEditor.use_auto_render:
+
 Auto Render
    Re-render and composite changed layer when edits to the 3D scene are made.
