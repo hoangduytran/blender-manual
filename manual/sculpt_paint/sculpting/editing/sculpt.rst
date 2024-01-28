@@ -253,6 +253,12 @@ to improve performance, which might degrade over time while using Dyntopo.
    For a more general introduction see :doc:`Adaptive Resolution </sculpt_paint/sculpting/introduction/adaptive>`.
 
 
+Dynamic Topology Toggle
+=======================
+
+Toggles :doc:`/sculpt_paint/sculpting/tool_settings/dyntopo.rst`.
+
+
 Transfer Sculpt Mode
 ====================
 
@@ -266,5 +272,6 @@ Switches Sculpt Mode from the :term:`Active` object to the object under the mous
 See :ref:`bpy.ops.object.transfer_mode` for more information.
 
 .. seealso::
+
    For a more general introduction see
    :doc:`Working with Multiple Objects </sculpt_paint/sculpting/introduction/multiple_objects>`.
