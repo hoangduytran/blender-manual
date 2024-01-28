@@ -21,8 +21,8 @@ The exception is the :ref:`Clipping Region <clipping_region>`, which can be used
 The most common shortcuts are :kbd:`H` to hide the face set under the cursor
 and :kbd:`Shift-H` to isolate the face set under the cursor (or show everything).
 
-:ref:`Inverting the visibility <bpy.ops.sculpt.face_set_change_visibility>` and :ref:`showing all <sculpt_show_all>`
-is also available in the :kbd:`Alt-W` pie menu.
+:ref:`Inverting the visibility <bpy.ops.sculpt.face_set_change_visibility>`
+and :ref:`showing all <bpy.ops.sculpt.reveal_all>` is also available in the :kbd:`Alt-W` pie menu.
 
 .. seealso::
 

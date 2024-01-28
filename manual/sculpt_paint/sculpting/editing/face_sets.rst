@@ -118,33 +118,6 @@ Once the operator is initiated, hover over the face set and :kbd:`LMB` to create
 After the operator is finished the new mesh will be selected in Object Mode.
 
 
-.. _bpy.ops.sculpt.face_set_invert_visibility:
-
-Invert Visible Face Sets
-========================
-
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Invert Visible Face Sets`
-
-Hides all geometry that is part of a face set and makes all hidden geometry that is part of a face set visible.
-
-
-.. _bpy.ops.sculpt.reveal_all:
-
-Show All Face Sets
-==================
-
-.. reference::
-
-   :Mode:      Sculpt Mode
-   :Menu:      :menuselection:`Face Sets --> Show All Face Sets`
-   :Shortcut:  :kbd:`Alt-H`
-
-Shows all hidden geometry that is part of a face set.
-
-
 .. _bpy.ops.sculpt.face_sets_randomize_colors:
 
 Randomize Colors
