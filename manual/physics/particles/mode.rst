@@ -13,12 +13,16 @@ Since working in Particle Edit Mode is pretty easy and very similar
 to working with vertices in the 3D Viewport, we will show how to set up
 a particle system and then give a reference of the various functions.
 
-
 .. important::
 
    Particle Edit Mode, specifically for hair is deprecated;
    please use the new :ref:`bpy.ops.object.curves_empty_hair_add`
    object with its associated :doc:`Sculpt Mode </sculpt_paint/curves_sculpting/introduction>` instead.
+
+.. important::
+
+   Editing a cached cloth simulation is not currently working, see:
+   `blender/blender#77114 <https://projects.blender.org/blender/blender/issues/77114>`__ for details.
 
 
 Usage
