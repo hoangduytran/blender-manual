@@ -23,6 +23,8 @@ Sphere
    :doc:`Transform Tools </sculpt_paint/sculpting/tools/transforms>`.
 
 
+.. _bpy.ops.paint.hide_show:
+
 Show & Hide
 ===========
 
@@ -51,7 +53,7 @@ Toggle Visibility :kbd:`Shift-H`
 Hide Active Face Set :kbd:`H`
    Hide the face set under the cursor. Press :kbd:`Shift-H` afterwards to show everything.
 
-.. _bpy.ops.sculpt.reveal_all:
+.. _sculpt_show_all:
 
 Show All :kbd:`W`, :kbd:`Alt-H`
    Reveal all hidden geometry.
