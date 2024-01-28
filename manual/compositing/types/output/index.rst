@@ -9,7 +9,6 @@ These nodes are used to output the composited result in some way.
    :maxdepth: 1
 
    composite.rst
-   split_viewer.rst
    viewer.rst
 
 ----------

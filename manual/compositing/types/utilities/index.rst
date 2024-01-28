@@ -23,5 +23,6 @@
 .. toctree::
    :maxdepth: 1
 
+   split.rst
    switch.rst
    switch_stereo_view.rst

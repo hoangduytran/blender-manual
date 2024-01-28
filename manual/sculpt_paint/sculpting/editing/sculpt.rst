@@ -256,7 +256,7 @@ to improve performance, which might degrade over time while using Dyntopo.
 Dynamic Topology Toggle
 =======================
 
-Toggles :doc:`/sculpt_paint/sculpting/tool_settings/dyntopo.rst`.
+Toggles :doc:`/sculpt_paint/sculpting/tool_settings/dyntopo`.
 
 
 Transfer Sculpt Mode

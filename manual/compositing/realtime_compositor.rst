@@ -319,16 +319,16 @@ pixel space of the input.
 Output
 ======
 
-The GPU compositor only supports a single active output target, that is, only one of the
-:ref:`Composite nodes <bpy.types.CompositorNodeComposite>`, :ref:`Viewer nodes
-<bpy.types.CompositorNodeViewer>`, or :ref:`Split Viewer nodes
-<bpy.types.CompositorNodeSplitViewer>` in the node tree will be considered active and the rest will
-be ignored. In particular, the compositor searches the *Active Node Tree Context* and falls back to
-the *Root Node Tree Context* if no active output was found in the active node tree context. The
-active node tree context is the node tree of an expanded node group, that is, when the users selects
-a node group node and edits its underlying tree, while the root node tree context is the top level
-node tree without any expanded node groups. The compositor searches for the active *Composite* node,
-if non was found, it searches for the active *Viewer* node, be it a *Viewer* or a *Split Viewer*
-node, if non was found, the compositor doesn't run altogether. Consequently, note that adding a
-*Viewer* node will have no effect if there is a *Composite* node, since the priority is given to
-*Composite* nodes.
+The GPU compositor only supports a single active output target, that is,
+only one of the :ref:`Composite nodes <bpy.types.CompositorNodeComposite>` or
+:ref:`Viewer nodes <bpy.types.CompositorNodeViewer>`
+in the node tree will be considered active and the rest will be ignored.
+In particular, the compositor searches the *Active Node Tree Context* and falls back to
+the *Root Node Tree Context* if no active output was found in the active node tree context.
+The active node tree context is the node tree of an expanded node group, that is,
+when the users selects a node group node and edits its underlying tree,
+while the root node tree context is the top level node tree without any expanded node groups.
+The compositor searches for the active *Composite* node, if non was found, it searches for the active *Viewer* node,
+be it a *Viewer* or a *Split Viewer* node, if non was found, the compositor doesn't run altogether.
+Consequently, note that adding a *Viewer* node will have no effect if there is a *Composite* node,
+since the priority is given to *Composite* nodes.
