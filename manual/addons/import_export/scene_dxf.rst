@@ -211,8 +211,6 @@ Unsupported Data
 - Object matrix: extrusion (``210-group``), rotation, elevation
 - 3D Viewport: (wip: ``VIEW``, ``VPORT``)
 - Instancing vert: auto-instanced or (wip: ``INSERT``)
-- Instancing frame: auto-instanced or (wip: ``INSERT``)
-- Instancing group: auto-instanced or (wip: ``INSERT``)
 - Material: ``LAYER``, ``COLOR`` and ``STYLE`` properties
 - Group: ``BLOCK`` and ``INSERT``
 - Parenting: ``BLOCK`` and ``INSERT``
