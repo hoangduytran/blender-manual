@@ -102,11 +102,11 @@ Viewport
       Uses the faster available denoiser for 3D Viewport rendering
       (*OptiX* if available, otherwise *OpenImageDenoise*).
    :OpenImageDenoise:
-      Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
-      an AI denoiser which runs on the CPU.
+      Uses an artificial intelligence algorithm to remove noise from renders.
+      It is using the `Open Image Denoise <https://www.openimagedenoise.org/>`__ library by Intel.
    :OptiX:
       Uses an artificial intelligence algorithm to remove noise from renders.
-      It is based on the :ref:`render-cycles-gpu-optix` acceleration engine
+      It is using the :ref:`render-cycles-gpu-optix` acceleration engine
       and therefore has the same GPU requirements as rendering with Optix.
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_start_sample:
