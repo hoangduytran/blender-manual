@@ -38,6 +38,11 @@ Volume Resolution
    Resolution percentage of :doc:`volume objects </modeling/volumes/index>` in the viewport.
    This mostly affects memory usage rather than computation times.
 
+.. _bpy.types.RenderSettings.use_simplify_normals:
+
+Normals
+   Skip computing custom normals and face corner normals for displaying meshes in the viewport.
+
 
 Render
 ======

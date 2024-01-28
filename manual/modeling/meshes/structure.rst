@@ -139,6 +139,11 @@ Blender supports custom normals on a 'smooth fan' base, defined as a set of neig
 sharing the same vertex and 'linked' by smooth edges. This means you can have normals per face corners,
 per a set of neighbor face corners, or per vertex.
 
+.. tip::
+
+   The computation of *Custom Split Normals* can be disabled to improve performance.
+   This option can be found in the :ref:`Simplify Rendering Settings <bpy.types.RenderSettings.use_simplify_normals>`.
+
 
 Enabling Custom Split Normals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
