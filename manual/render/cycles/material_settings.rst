@@ -55,6 +55,11 @@ Transparent Shadows
    Use transparent shadows if it contains a :doc:`Transparent BSDF </render/shader_nodes/shader/transparent>`,
    disabling will render faster but will not give accurate shadows.
 
+.. _bpy.types.CyclesMaterialSettings.use_bump_map_correction:
+
+Bump Map Correction
+   Applies corrections to solve shadow terminator artifacts caused by bump mapping.
+
 
 Volume
 ======
