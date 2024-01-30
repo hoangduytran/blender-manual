@@ -60,7 +60,6 @@ Mesh Boundary
       Increases the soft gradient towards the auto-masked boundary edges.
       Each step iterates the distance one edge further.
       This setting is used for both Mesh Boundary and Face Sets Boundary.
-      It is also currently stored per brush.
 
 .. _bpy.types.Sculpt.use_automasking_boundary_face_sets:
 
