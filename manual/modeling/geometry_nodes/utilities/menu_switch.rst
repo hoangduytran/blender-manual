@@ -9,7 +9,7 @@ Menu Switch Node
    :align: right
    :alt: Menu Switch Node.
 
-A *Menu Switch* node outputs one of its inputs depending on a menu
+The *Menu Switch* node outputs one of its inputs depending on a menu
 selection. Only the input that is passed through the node is computed.
 
 The available menu entries are defined by the user. Menu items can be
@@ -30,11 +30,16 @@ To avoid this a menu switch can be wrapped in a node group. Multiple
 node groups of the same type can be connected to the same menu, since
 they contain the same menu switch node.
 
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
-|.. figure:: /images/node-types_GeometryNodeMenuSwitch_conflict.webp|.. figure:: /images/node-types_GeometryNodeMenuSwitch_group_wrapper.webp|
-|   :align: left                                                    |   :align: right                                                        |
-|   :alt: Conflict caused by connecting different menus.            |   :alt: Same node group can be connected without conflict.             |
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/node-types_GeometryNodeMenuSwitch_conflict.webp
+
+          Conflict caused by connecting different menus.
+
+     - .. figure:: /images/node-types_GeometryNodeMenuSwitch_group_wrapper.webp
+
+          Same node group can be connected without conflict.
+
 
 Inputs
 ======
