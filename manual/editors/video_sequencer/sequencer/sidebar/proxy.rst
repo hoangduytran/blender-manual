@@ -22,7 +22,7 @@ Proxy Settings
 .. _bpy.types.SequenceEditor.proxy_storage:
 
 Storage
-   Defines whether the proxies are for individual strips or the entire sequence.
+   How proxies are stored for the project.
 
    :Per Strip: Proxies are stored in the directory of the input.
    :Project: All proxies are stored in one directory.
@@ -59,31 +59,34 @@ Strip Proxy & Timecode
 
 Once you have chosen the :term:`Proxy`/:term:`Timecode` options,
 you need to select all strips for which you want proxies to be built.
-Then use :menuselection:`Strip --> Rebuild Proxy and Timecode Indices`, or button in `Proxy Settings`_ panel.
+Then use :menuselection:`Strip --> Rebuild Proxy and Timecode Indices`,
+or the according button in the `Proxy Settings`_ panel.
 Once all proxies are built, they will be ready to use.
 
-In order to use proxies, you have to select matching
-:ref:`Proxy Render Size <bpy.types.SpaceSequenceEditor.proxy_render_size>` in
-the Sequencer preview Sidebar panel.
+In order to use proxies, you have to select a
+:ref:`Proxy Render Size <bpy.types.SpaceSequenceEditor.proxy_render_size>`
+that matches one of the selected *Resolutions*.
 
 Custom Proxy
    Directory
-      By default, all generated proxy images are storing to
+      By default, all generated proxy images are stored to
       the ``<path of original footage>/BL_proxy/<clip name>`` folder,
-      but this location can be set by hand using this option.
+      but this location can be set to a custom directory using this option.
    File
       Allows you to use preexisting proxies.
 
 .. _bpy.types.SequenceProxy.build:
 
 Resolutions
-   Buttons to control how big the proxies are.
+   Controls the resolution(s) of the computed proxy images; multiply sizes can be selected.
    The available options are 25%, 50%, 75%, 100 percent of original strip size.
 
 .. _bpy.types.SequenceProxy.use_overwrite:
 
 Overwrite
-   Saves over any existing proxies in the proxy storage directory.
+   When rebuilding proxies, this option sets whether to overwrite existing proxy files or to use existing files.
+   Saves over any existing proxy files in the proxy storage directory.
+   When disabled, existing proxy files will be used.
 
 .. _bpy.types.SequenceProxy.quality:
 
@@ -94,13 +97,13 @@ Quality
 
 Timecode Index
    When you are working with footage directly copied from a camera without preprocessing it,
-   there might be bunch of artifacts, mostly due to seeking a given frame in sequence.
-   This happens because such footage usually does not have correct frame rate values in their headers.
+   there might be numerous artifacts, mostly due to seeking a given frame in the sequence.
+   This happens because such footage usually does not have correct frame rate values in the file header.
    This issue can still arise when the source clip has the same frame rate as the scene settings.
-   In order for Blender to correctly calculate frames and frame rate there are two possible solutions:
+   In order for Blender to correctly calculate the frames and frame rate there are two possible solutions:
 
    #. Preprocess your video with e.g. MEncoder to repair the file header and insert the correct keyframes.
-   #. Use Proxy/Timecode option in Blender.
+   #. Use the Proxy/Timecode option in Blender.
 
    :None: Do not use any timecode.
    :Record Run: Use images in the order they are recorded.
@@ -108,9 +111,10 @@ Timecode Index
    :Free Run (Rec Date):
       Interpolate a global timestamp using the record date and time written by recording device.
    :Record Run No Gaps:
-      Record run, but ignore timecode, changes in frame rate or dropouts.
+      Similar to *Record Run*, but ignores the timecode given in the file header,
+      changes in frame rate, or frame dropouts.
 
    .. note::
 
-      Record Run is the timecode which usually is best to use, but if the source file is totally damaged,
-      *Record Run No Gaps* will be the only chance of getting acceptable result.
+      Record Run is the *Timecode Index* which usually is best to use, but if the source file is totally damaged,
+      *Record Run No Gaps* will be the only chance of getting an acceptable result.

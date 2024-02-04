@@ -30,22 +30,22 @@ Build Undistorted
    Builds images from undistorted original images for the sizes set above.
    This helps provide faster playback of undistorted footage.
 Quality
-   Defines the quality of the JPEG images used for proxies.
+   Defines the quality of the images used for proxies.
 Proxy Custom Directory
-   By default, all generated proxy images are storing to
+   By default, all generated proxy images are stored to
    the ``<path of original footage>/BL_proxy/<clip name>`` folder,
-   but this location can be set by hand using this option.
+   but this location can be set to a custom directory using this option.
 Rebuild Proxy
    Regenerates proxy images for all sizes set above and regenerate all timecodes which can be used later.
 Timecode
    When you are working with footage directly copied from a camera without preprocessing it,
-   there might be bunch of artifacts, mostly due to seeking a given frame in sequence.
-   This happens because such footage usually does not have correct frame rate values in their headers.
+   there might be numerous artifacts, mostly due to seeking a given frame in the sequence.
+   This happens because such footage usually does not have correct frame rate values in the file header.
    This issue can still arise when the source clip has the same frame rate as the scene settings.
-   In order for Blender to correctly calculate frames and frame rate there are two possible solutions:
+   In order for Blender to correctly calculate the frames and frame rate there are two possible solutions:
 
    #. Preprocess your video with e.g. MEncoder to repair the file header and insert the correct keyframes.
-   #. Use Proxy/Timecode option in Blender.
+   #. Use the Proxy/Timecode option in Blender.
 
    :None: Do not use any timecode.
    :Record Run: Use images in the order they are recorded.
@@ -53,12 +53,13 @@ Timecode
    :Free Run (Rec Date):
       Interpolate a global timestamp using the record date and time written by recording device.
    :Record Run No Gaps:
-      Record run, but ignore timecode, changes in frame rate or dropouts.
+      Similar to *Record Run*, but ignores the timecode given in the file header,
+      changes in frame rate, or frame dropouts.
 
    .. note::
 
-      Record Run is the timecode which usually is best to use, but if the source file is totally damaged,
-      *Record Run No Gaps* will be the only chance of getting acceptable result.
+      Record Run is the *Timecode Index* which usually is best to use, but if the source file is totally damaged,
+      *Record Run No Gaps* will be the only chance of getting an acceptable result.
 
 Proxy Render Size
    Defines which proxy image resolution is used for display.
