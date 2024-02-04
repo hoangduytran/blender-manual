@@ -264,7 +264,7 @@ such as filename and file path and various methods of interpreting these files.
 
 Path
    The directory that contains the source file.
-   When the file is moved this can be updated instead of re-create the strip.
+   When the file is moved, the path can be updated instead of recreating the strip.
 File
    The file name of the source file.
    For image strips showing an image sequence, this will be different for each frame.
