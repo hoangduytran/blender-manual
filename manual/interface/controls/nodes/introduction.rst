@@ -21,17 +21,19 @@ The list below shows the different types of nodes and where they're documented.
 
    * - Icon
      - Name
-     - Documentation
+     - Description
+   * - .. figure:: /images/interface_controls_nodes_introduction_icons-geometry.png
+     - :doc:`Geometry Nodes </modeling/geometry_nodes/index`
+     - Used for procedural modeling.
    * - .. figure:: /images/interface_controls_nodes_introduction_icons-material.png
-     - Shader Nodes
-     - Documentation is in the :doc:`Render </render/shader_nodes/index>` section.
+     - :doc:`Shader Nodes </render/shader_nodes/index>`
+     - Used to create materials for objects.
    * - .. figure:: /images/interface_controls_nodes_introduction_icons-render-layers.png
-     - Composite Nodes
-     - Documentation can be found in the :doc:`Compositing </compositing/index>` section.
+     - :doc:`Composite Nodes </compositing/index>`
+     - Used to edit rendered images.
    * - .. figure:: /images/interface_controls_nodes_introduction_icons-texture.png
-     - Texture Nodes
-     - Texture Nodes are covered
-       in the :doc:`UV editor </editors/texture_node/introduction>` docs.
+     - :doc:`Texture Nodes </editors/texture_node/introduction>`
+     - Used to create custom textures.
 
 
 Editor Interface
