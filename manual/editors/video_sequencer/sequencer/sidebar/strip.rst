@@ -272,9 +272,6 @@ Change Data/Files
    Same as the *Path* and *File* fields, but this time combined to open the File Browser in order to
    find the file(s) you search. Same as :menuselection:`Strip --> Inputs --> Change Paths/Files`.
 
-MPEG Preseek :guilabel:`Movie Strip`
-   Use Preseek field to tell Blender to look backward and compose an image
-   based on the specified amount of previous frames (e.g. 15 for MPEG-2 DVD).
 Color Space
    To specify the color space of the source file.
 
