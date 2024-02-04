@@ -40,6 +40,8 @@ to start Blender try to install a previous version of the driver. Drivers that a
 are:
 
 - 20.19.15.4835
+- 20.19.15.4963
+- 20.19.15.5063
 
 Drivers that are known to fail are:
 
