@@ -145,8 +145,8 @@ This mechanism is exposed in the *Rig Main Properties* panel through a row with 
 
 * A button that presents a dropdown menu, which allows switching the parent on the current frame while
   preserving the bone position and orientation in the world space.
-* An input field that exposes the raw switch property for keyframing and direct manipulation. Values correspond to
-  positions in the dropdown list.
+* A dropdown input field that directly exposes the switch property for keyframing and direct manipulation.
+  Changing the value can cause the bone position to jump.
 * A button to apply the position preserving parent switch over the bake range of keyframes.
 
 .. note::
@@ -180,9 +180,10 @@ IK Stretch :guilabel:`Slider`
    Blends between the limb stretching freely at 1, or having its maximum length constrained at 0.
 
 Toggle Pole :guilabel:`Switch`
-   When set to 0 the IK limb will use the rotational pole vector (the arrow at the base of the limb).
+   When the toggle is checked, the IK limb will use the rotational pole vector (the arrow at the base of the limb).
    Rotating/translating/scaling the arrow will control the IK limb base.
-   When set to 1 the classic pole vector will be displayed and used to orient the IK limb.
+
+   When the toggle is unchecked, the classic pole vector will be displayed and used to orient the IK limb.
    The arrow will continue to handle the scale and the location of the IK limb base.
 
    Similar to *Parent Switching*, the row includes buttons to convert the current pose between types,
@@ -347,6 +348,7 @@ IK End
    In the *Direct Tip Control* mode also directly controls the last bone of the chain.
 IK End Twist :guilabel:`Optional`
    This control is visually attached to the last bone of the chain, and must use Euler rotation.
+
    * *Stretch To Fit*: it controls the twist of the tip of the tentacle, interpolated to nothing at the base.
    * *Manual Squash & Stretch*: it also controls the scaling of the tip of the tentacle.
    * *Direct Tip Control*: the control does not exist.
