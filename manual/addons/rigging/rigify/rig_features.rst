@@ -180,10 +180,10 @@ IK Stretch :guilabel:`Slider`
    Blends between the limb stretching freely at 1, or having its maximum length constrained at 0.
 
 Toggle Pole :guilabel:`Switch`
-   When the toggle is checked, the IK limb will use the rotational pole vector (the arrow at the base of the limb).
+   When the toggle is Off, the IK limb will use the rotational pole vector (the arrow at the base of the limb).
    Rotating/translating/scaling the arrow will control the IK limb base.
 
-   When the toggle is unchecked, the classic pole vector will be displayed and used to orient the IK limb.
+   When the toggle is On, the classic pole vector will be displayed and used to orient the IK limb.
    The arrow will continue to handle the scale and the location of the IK limb base.
 
    Similar to *Parent Switching*, the row includes buttons to convert the current pose between types,
