@@ -23,7 +23,7 @@ The list below shows the different types of nodes and where they're documented.
      - Name
      - Description
    * - .. figure:: /images/interface_controls_nodes_introduction_icons-geometry.png
-     - :doc:`Geometry Nodes </modeling/geometry_nodes/index`
+     - :doc:`Geometry Nodes </modeling/geometry_nodes/index>`
      - Used for procedural modeling.
    * - .. figure:: /images/interface_controls_nodes_introduction_icons-material.png
      - :doc:`Shader Nodes </render/shader_nodes/index>`
