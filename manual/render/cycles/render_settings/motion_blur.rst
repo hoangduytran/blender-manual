@@ -18,7 +18,7 @@ both in a movie frame and in a photograph from a real-world camera.
    Motion blur example.
    (`blend-file <https://archive.blender.org/wiki/uploads/0/03/Blender2.65_motion_blur.blend>`__)
 
-.. _bpy.types.CyclesRenderSettings.motion_blur_position:
+.. _bpy.types.RenderSettings.motion_blur_position:
 
 Position
    Controls at what point the shutter opens in relation to the current frame.
