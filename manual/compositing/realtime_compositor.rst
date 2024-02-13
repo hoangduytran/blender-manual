@@ -4,11 +4,8 @@
 GPU Compositor
 **************
 
-The new GPU accelerated compositor introduced in Blender 3.5 and is
-currently used for :ref:`viewport compositing <viewport-compositing>`. This compositor is currently
-more limited and not all :ref:`Compositor Nodes <compositor-nodes>` are supported, such nodes are
-marked with the :guilabel:`CPU Compositor Only` label along with notes about other limitations.
-Moreover, MacOS is not supported due to missing support for modern OpenGL.
+The new GPU accelerated compositor introduced in Blender 3.5 and is currently used for
+:ref:`viewport compositing <viewport-compositing>`.
 
 Data
 ====
@@ -134,8 +131,7 @@ Operation Domain
 space called the *Operation Domain*. The nodes only consider the area of the input images that
 overlap the operation domain and ignores the rest of the images. If an input image doesn't
 completely overlap the operation domain, the rest of the operation domain for that input will be
-assumed to be a zero value, a zero vector, or a transparent zero color depending on the type. This
-behavior can be changed to an extent, see the section about *Wrapping* below.
+assumed to be a zero value, a zero vector, or a transparent zero color depending on the type.
 
 For instance, the figure below illustrates a case where the operation domain of a node is the large
 blue area and the domain of an input image is the small red area. In that case, the input image
@@ -189,29 +185,6 @@ interpolations. Those interpolation methods are demonstrated in the following
 Transformation nodes like the :ref:`Transform <bpy.types.CompositorNodeTransform>` and :ref:`Rotate
 <bpy.types.CompositorNodeRotate>` nodes include an interpolation option to set how they prefer their
 output image to be read and interpolated.
-
-Note that the transform nodes don't do any interpolations themselves, they merely record the
-preferred interpolation method for the output image and latter nodes that read that image will be
-the node that does the actual interpolation. It follows that latter transform nodes will overwrite
-the interpolation methods set by former transform nodes if no interpolation took place in-between.
-
-Wrapping
-^^^^^^^^
-
-While it was previously stated that areas of the input images that do not overlap the operation
-domain are assumed to be zero, this is only the default behavior. The alternative behavior is to
-instruct the compositor to repeat the input image to fill the missing areas along the horizontal
-direction, vertical direction, or both. This can be set in the *Wrap* option of the :ref:`Translate
-node <bpy.types.CompositorNodeTranslate>`. Much like the aforementioned interpolation method, the
-*Translate* node doesn't do any wrapping itself, it merely sets the preferred method of filling
-empty spaces and latter nodes that read the image will be the node that does the actual wrapping.
-
-For instance, the previous *Alpha Over* example but with *Both Axis Wrapping* enabled is shown in
-the figure below.
-
-.. figure:: /images/compositing_realtime-compositor_compositing-space_operation-domain_wrapping.png
-
-   The previous example with *Alpha Over* example but with *Both Axis Wrapping* enabled.
 
 Determining Operation Domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -296,39 +269,18 @@ input in the *Mix* node has the highest domain priority, as shown in the followi
    Working around the clipping behavior of the *Alpha Over* node using a Mix node, noting that the
    first *Image* input in the *Mix* node has the highest domain priority
 
-Pixelation
-""""""""""
-
-If the domain input of the node is very large, other inputs will look pixelated. That's because the
-resolution of the domain input is the same, while its apparent size is greatly increased, so the
-number of pixels covered by other inputs is much fewer.
-
-.. figure:: /images/compositing_realtime-compositor_compositing-space_operation-domain_considerations_pixelation.png
-
-   An example case where pixelation happens due to very large domain inputs.
-
-Pixel Space Operations
-""""""""""""""""""""""
-
-Nodes operate on their input images in local pixel space irrespective of their transformation in the
-compositing space. For instance, if an image that is rotated by 90 degrees is blurred along the
-horizontal direction using the :ref:`Blur node <bpy.types.CompositorNodeBlur>`, the blurring will
-apparently take place along the vertical direction instead, because the node is applied in the local
-pixel space of the input.
-
 Output
 ======
 
-The GPU compositor only supports a single active output target, that is,
-only one of the :ref:`Composite nodes <bpy.types.CompositorNodeComposite>` or
-:ref:`Viewer nodes <bpy.types.CompositorNodeViewer>`
-in the node tree will be considered active and the rest will be ignored.
-In particular, the compositor searches the *Active Node Tree Context* and falls back to
-the *Root Node Tree Context* if no active output was found in the active node tree context.
-The active node tree context is the node tree of an expanded node group, that is,
-when the users selects a node group node and edits its underlying tree,
-while the root node tree context is the top level node tree without any expanded node groups.
-The compositor searches for the active *Composite* node, if non was found, it searches for the active *Viewer* node,
-be it a *Viewer* or a *Split Viewer* node, if non was found, the compositor doesn't run altogether.
-Consequently, note that adding a *Viewer* node will have no effect if there is a *Composite* node,
-since the priority is given to *Composite* nodes.
+The GPU compositor only supports a single active output target, that is, only one of the
+:ref:`Composite nodes <bpy.types.CompositorNodeComposite>` or :ref:`Viewer nodes
+<bpy.types.CompositorNodeViewer>` in the node tree will be considered active and the rest will be
+ignored. In particular, the compositor searches the *Active Node Tree Context* and falls back to the
+*Root Node Tree Context* if no active output was found in the active node tree context. The active
+node tree context is the node tree of an expanded node group, that is, when the users selects a node
+group node and edits its underlying tree, while the root node tree context is the top level node
+tree without any expanded node groups. The compositor searches for the active *Composite* node, if
+non was found, it searches for the active *Viewer* node, be it a *Viewer* or a *Split Viewer* node,
+if non was found, the compositor doesn't run altogether. Consequently, note that adding a *Viewer*
+node will have no effect if there is a *Composite* node, since the priority is given to *Composite*
+nodes.
