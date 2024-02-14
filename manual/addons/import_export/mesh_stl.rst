@@ -6,7 +6,7 @@ STL
 .. reference::
 
    :Category:  Import-Export
-   :Menu:      :menuselection:`File --> Import/Export --> Stl (.stl)`
+   :Menu:      :menuselection:`File --> Import/Export --> Stl (.stl) (legacy)`
 
 This format is useful if you intend to import/export the files for CAD software.
 It is also commonly used for loading into 3D printing software.
@@ -59,9 +59,9 @@ Properties
 ----------
 
 ASCII
-   TODO.
+   Exports the stl-file in ASCII format rather than as a binary format
 Batch Mode
-   TODO.
+   Export each object as a separate STL file.
 
 
 Include
