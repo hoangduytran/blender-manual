@@ -331,8 +331,8 @@ Mesh Data
 Include
    Subdivision
       Create Subdivision Surface modifiers based on the USD ``SubdivisionScheme`` attribute.
-   Import Instance Proxies
-      Create unique Blender objects for USD instances.
+   Scene Instancing
+      Import USD scene graph instances as collection instances, otherwise they are imported as copies.
    Visible Primitives Only
       Do not import invisible USD primitives. Only applies to primitives with a non-animated
       `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
