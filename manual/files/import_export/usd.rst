@@ -9,7 +9,7 @@ Exporting to USD Files
 Universal Scene Description (USD) files can contain complex layering, overriding, and references to other files.
 Blender's USD Exporter takes a much simpler approach. When exporting, all visible, supported objects in
 the scene are exported, optionally limited by their selection state. Blender does not (yet) support exporting
-invisible objects, USD layers, variants, skeletal animation, etc.
+invisible objects, USD layers, variants, etc.
 
 The following objects can be exported to USD:
 
@@ -18,6 +18,7 @@ The following objects can be exported to USD:
 - Light (all types except area lights).
 - Hair (exported as curves, and limited to parent strands).
 - Volume (both static and animated volumes).
+- Armatures
 
 When exporting an animation, the final, evaluated mesh is written to USD.
 This means that the following meshes can be exported:
@@ -88,6 +89,23 @@ Materials
    because the Hydra viewport does not support materials on subsets.
    See `USD issue #542 <https://github.com/PixarAnimationStudios/USD/issues/542>`__
    for more information.
+
+   Rigging
+      Armatures
+         Export :doc:`Armatures </animation/armatures/index>` and meshes with
+         :doc:`Armature Modifiers </modeling/modifiers/deform/armature>` as USD skeletons and skinned meshes.
+
+         Limitations:
+
+         - Modifiers in addition to Armature modifiers will not be applied.
+         - Bendy bones are not supported.
+      Only Deform Bones
+         Only export :ref:`deform bones <bpy.types.Bone.use_deform>` and their parents.
+      Shape Keys
+         Export shape keys as USD blend shapes.
+
+         Absolute shape keys are not supported.
+
 
 Root Prim
    If set, add a transform primitive with the given path to the stage as the parent of all exported data.
