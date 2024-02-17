@@ -30,6 +30,11 @@ Node groups can be nested (that is, node groups can contain other node groups).
    Recursive node groups are prohibited for all the current node systems to prevent infinite recursion.
    A node group can never contain itself (or another group that contains it).
 
+.. tip::
+
+   Like all data-blocks, node groups with names that start with ``.`` are normally hidden from
+   :ref:`lists and menus <ui-data-block>` and can only be accessed through search.
+   This can be useful for node asset authors to hide their internal sub-groups from the final user.
 
 Interface
 =========

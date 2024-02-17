@@ -21,6 +21,13 @@ Type
       A list of data-blocks available in the current blend-file, or a link to select an item from.
       The menu may show a preview besides the items and
       a search field to search the items in the list by name.
+
+      .. note::
+
+         Data-blocks with names that begin with ``.`` are hidden from the list, unless a string
+         that also starts with ``.`` is entered into the search field, or the
+         :ref:`Show Hidden Files/Data-Blocks <prefs-show-hidden-files>` user preference is enabled.
+
 Name
    Displays, and allows editing of, the name of the selected data-block.
    If a name is already in use by a different data-block, Blender will append a number like ".001".

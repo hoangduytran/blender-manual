@@ -109,10 +109,13 @@ Defaults
       (i.e. blend-files when loading a complete Blender setting).
       The selection of file types may be changed in the file region.
 
+   .. _prefs-show-hidden-files:
+
    Show Hidden Files/Data-Blocks
-      Hide files which start with ``.`` in File Browsers and data IDs.
+      Unhide files and data-blocks with names that start with ``.`` in File Browsers
+      and :ref:`data IDs <ui-data-block>`.
 
       .. hint::
 
-         Data-blocks beginning with a ``.`` can be selected by typing in the ``.`` characters.
-         When explicitly written, the setting to hide these data-blocks is ignored.
+         Data-blocks with names beginning with a ``.`` can be selected by typing in a search
+         string that also starts with the ``.`` character, even if this setting is disabled.
