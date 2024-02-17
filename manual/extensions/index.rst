@@ -193,4 +193,4 @@ For the official Extensions Platform, the `website` value is the page of the ext
 
 .. note::
 
-  Any remote repository is expected to follow the latest `API <http://extensions.local:8111/api/swagger/>`__.
+  Any remote repository is expected to follow the latest `API <http://extensions.blender.org/api/swagger/>`__.
