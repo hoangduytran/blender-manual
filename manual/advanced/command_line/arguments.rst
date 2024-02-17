@@ -100,10 +100,10 @@ Format Options
 ``-F``, ``--render-format`` ``<format>``
    Set the render format.
    Valid options are:
-   ``TGA`` ``RAWTGA`` ``JPEG`` ``IRIS`` ``IRIZ`` ``AVIRAW`` ``AVIJPEG`` ``PNG`` ``BMP``.
+   ``TGA`` ``RAWTGA`` ``JPEG`` ``IRIS`` ``AVIRAW`` ``AVIJPEG`` ``PNG`` ``BMP`` ``HDR`` ``TIFF``.
 
    Formats that can be compiled into Blender, not available on all systems:
-   ``HDR`` ``TIFF`` ``OPEN_EXR`` ``OPEN_EXR_MULTILAYER`` ``MPEG`` ``CINEON`` ``DPX`` ``DDS`` ``JP2`` ``WEBP``.
+   ``OPEN_EXR`` ``OPEN_EXR_MULTILAYER`` ``FFMPEG`` ``CINEON`` ``DPX`` ``JP2`` ``WEBP``.
 
 ``-x``, ``--use-extension`` ``<bool>``
    Set option to add the file extension to the end of the file.

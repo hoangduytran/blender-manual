@@ -170,3 +170,6 @@ Vertex Groups
 Validate Meshes
    Checks the imported mesh data for errors and corrects them if needed.
    This slows down the importing process but can fix glitches in the imported mesh.
+Path Separator
+   Character used to separate an object's name into a hierarchical
+   structure using :doc:`/scene_layout/collections/index`.
