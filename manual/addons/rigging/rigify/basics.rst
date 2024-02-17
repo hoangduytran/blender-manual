@@ -141,6 +141,14 @@ For information about additional generation options, see the `Advanced Rig Gener
    As with all Python add-ons, Blender interface cannot be updated until the Python script execution is over.
    Wait until the rig appears to see the results.
 
+.. warning::
+   Rigify is designed assuming a workflow where the meta-rig is kept available to allow re-generating
+   the main rig whenever it is necessary to make changes to it. Removing the meta-rig after generating
+   the main rig, or significantly modifying the generated rig is not advised: it will make it impossible
+   to introduce features added in later versions of Rigify, or easily adapt it to breaking changes in later
+   Blender versions. In general, automatic version update scripts will be provided for meta-rigs when necessary,
+   but not generated rigs.
+
 
 Binding the Geometry to the Rig
 -------------------------------
