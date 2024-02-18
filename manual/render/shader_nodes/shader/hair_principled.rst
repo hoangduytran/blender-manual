@@ -71,8 +71,8 @@ Melanin Redness
 
    .. hint::
 
-      The ratio formula is: :math:`eumelanin = Melanin*(1.0-MelaninRedness)`,
-      :math:`pheomelanin = Melanin*MelaninRedness`.
+      The ratio formula is: :math:`eumelanin = Melanin×(1.0-MelaninRedness)`,
+      :math:`pheomelanin = Melanin×MelaninRedness`.
 
       The resulting quantities are converted (after randomization, if specified)
       to absorption concentration via the following formula
@@ -81,8 +81,8 @@ Melanin Redness
       .. math::
 
          \sigma_{a} =
-         eumelanin   * \left[\begin{matrix} 0.506 \\ 0.841 \\ 1.653 \\ \end{matrix}\right] +
-         pheomelanin * \left[\begin{matrix} 0.343 \\ 0.733 \\ 1.924 \\ \end{matrix}\right]
+         eumelanin   × \left[\begin{matrix} 0.506 \\ 0.841 \\ 1.653 \\ \end{matrix}\right] +
+         pheomelanin × \left[\begin{matrix} 0.343 \\ 0.733 \\ 1.924 \\ \end{matrix}\right]
 
    .. figure:: /images/render_shader-nodes_shader_hair-principled_demo-melanin-redness.jpg
       :align: center
@@ -124,7 +124,7 @@ Random Color
    .. hint::
 
       The melanin concentration is multiplied by :math:`randomFactor`,
-      where :math:`randomFactor = 1.0 + 2.0*(Random - 0.5) * RandomColor`.
+      where :math:`randomFactor = 1.0 + 2.0×(Random - 0.5) × RandomColor`.
 
    .. figure:: /images/render_shader-nodes_shader_hair-principled_demo-random-color.jpg
       :align: center

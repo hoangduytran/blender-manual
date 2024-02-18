@@ -49,22 +49,22 @@ Blending
       The result of the strip is multiplied, subtracted, or added to the accumulated results,
       and then blended in according to influence.
 
-      :math:`result = mix(previous, previous (+-*) value, influence)`
+      :math:`result = mix(previous, previous (+-×) value, influence)`
    Combine
       Depending on the type of each property, one of the following methods is automatically chosen:
 
       Axis/Angle Rotation
-         :math:`result = previous + value * influence`
+         :math:`result = previous + value × influence`
 
          This results in averaging the axis and adding the amount of rotation.
       Quaternion Rotation
          Quaternion math is applied to all four channels of the property at once:
 
-         :math:`result = {previous} \times {value} ^ {influence}`
+         :math:`result = {previous} × {value} ^ {influence}`
       Proportional (Scale)
-         :math:`result = previous * (value / default) ^ {influence}`
+         :math:`result = previous × (value / default) ^ {influence}`
       Others
-         :math:`result = previous + (value - default) * {influence}`
+         :math:`result = previous + (value - default) × {influence}`
 
       This allows layering actions that can also be used as a standalone.
       Properties keyframed at their default values remain at default.

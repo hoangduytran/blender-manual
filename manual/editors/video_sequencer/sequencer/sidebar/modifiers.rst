@@ -112,7 +112,7 @@ Lift/Gamma/Gain
       Adjusts highlights.
 
 Offset/Power/Slope (ASC-CDL)
-   The following formula is applied to each RGB color value separately: :math:`c_{out} =  (c_{in}*s + o)^p`
+   The following formula is applied to each RGB color value separately: :math:`c_{out} =  (c_{in}×s + o)^p`
 
    Slope
       The multiplier :math:`s` influences all color values except black. Its effect is stronger
