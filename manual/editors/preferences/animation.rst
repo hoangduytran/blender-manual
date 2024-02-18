@@ -56,18 +56,21 @@ Default Key Channels
 Only Insert Needed
    This will only insert keyframes if the value of the property is different.
 
+   :Manual: When keying manually, skip inserting keys that don't affect the animation.
+   :Auto: Auto-Keying will skip inserting keys that don't affect the animation.
+
 Keyframing -- Visual Keying
    When an object is using constraints, the object property value does not actually change.
    *Visual Keying* will add keyframes to the object property,
    with a value based on the visual transformation from the constraint.
 
 Auto-Keyframing
+   Enable in New Scenes
+      Enables *Auto Keyframe* by default for new scenes.
    Show Warning
       Displays a warning at the top right of the *3D Viewport*, when moving objects, if *Auto Keyframe* is on.
    Only Insert Available
       This will only add keyframes to channels of F-Curves that already exist.
-   Enable in New Scenes
-      Enables *Auto Keyframe* by default for new scenes.
 
    .. seealso::
 
