@@ -77,22 +77,6 @@ Render
 Edit
    Sets the quality when making edits.
 
-.. _bpy.types.CompositorNodeTree.chunk_size:
-
-Chunk Size
-   Max size of a tile (smaller values give a better distribution of multiple threads, but more overhead).
-
-.. _bpy.types.CompositorNodeTree.use_opencl:
-
-OpenCL
-   This allows the use of an OpenCL platform to aid in rendering.
-   Generally, this should be enabled unless your hardware does not have good OpenCL support.
-
-.. _bpy.types.CompositorNodeTree.use_groupnode_buffer:
-
-Buffer Groups
-   Enables buffering of group nodes to increase the speed at the cost of more memory.
-
 .. _bpy.types.CompositorNodeTree.use_two_pass:
 
 Two Pass
