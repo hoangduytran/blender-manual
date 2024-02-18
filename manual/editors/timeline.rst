@@ -201,8 +201,7 @@ Active Keying Set
    With a keying set selected, when you insert a keyframe,
    Blender will add keyframes for the properties in the active *Keying Set*.
    There are some built-in keying sets, *LocRotScale*, and also custom keying sets.
-   Custom keying sets can be defined in the panels
-   :menuselection:`Properties --> Scene --> Keying Sets + Active Keying Set`.
+   Custom keying sets can be created in the :ref:`Keying Set <bpy.types.KeyingSets>` panel.
 
    Insert Keyframes (plus icon)
       Insert keyframes on the current frame for the properties in the active *Keying Set*.
@@ -256,17 +255,21 @@ and :ref:`Lock Camera to View <bpy.types.SpaceView3D.lock_camera>` to record the
    Note that *Auto Keyframe* only works for transform properties (objects and bones),
    in the 3D Viewport (i.e. you can't use it e.g. to animate the colors of a material in the Properties...).
 
-Add & Replace / Replace
+.. _bpy.types.ToolSettings.auto_keying_mode:
+
+Mode
    This controls how the auto keyframe mode works.
    Only one mode can be used at a time.
 
-   Add & Replace
-      Add or replace existing keyframes.
-   Replace
-      Only replace existing keyframes.
+   :Add & Replace: Add or replace existing keyframes.
+   :Replace: Only replace existing keyframes.
+
+.. _bpy.types.ToolSettings.use_keyframe_insert_keyingset:
 
 Only Active Keying Set
-   When enabled, new keyframes for properties will be inserted into the active *Keying Set*.
+   When enabled, new keyframes for properties will be inserted into the active :doc:`Keying Set </animation/keyframes/keying_sets>`.
+
+.. _bpy.types.ToolSettings.use_record_with_nla:
 
 Layered Recording
    Adds a new NLA Track and strip for every loop/pass made over the animation to allow non-destructive tweaking.

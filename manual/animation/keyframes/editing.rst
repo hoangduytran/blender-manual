@@ -11,17 +11,19 @@ Insert Keyframe
 .. reference::
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Animation --> Insert Keyframe...`
+   :Menu:      :menuselection:`Object --> Animation --> Insert Keyframe`
    :Shortcut:  :kbd:`I`
 
 There are several methods of adding new keys. Namely:
 
-- In the 3D Viewport, pressing :kbd:`I` will key properties based on a setting in the User Preferences
-  (:menuselection:`Animation --> Default Key Channels`).
-- When a Keying Set is active, it is used instead of reading the User Preferences.
+- In the 3D Viewport, pressing :kbd:`I` will key properties based on the
+  :ref:`Default Key Channels <bpy.types.PreferencesEdit.key_insert_channels> ` User Preferences.
+- When a :doc:`Keying Set </animation/keyframes/keying_sets>` is active,
+  it is used instead of reading the User Preferences.
 - Hovering over a property and pressing :kbd:`I` or with the context menu by :kbd:`RMB`
   a property and choose *Insert Keyframe* from the menu.
-- With the User Preference "Pie Menu on Drag" enabled, holding down :kbd:`I` and moving the cursor will bring up a pie menu to insert one of Location, Rotation, Scale and Available.
+- With the User Preference "Pie Menu on Drag" enabled, holding down :kbd:`I`
+  and moving the cursor will bring up a pie menu to insert one of Location, Rotation, Scale, and Available.
 
 
 Auto Keyframe
@@ -35,6 +37,21 @@ Auto Keyframe is the record button in the *Timeline* header. Auto Keyframe adds
 keyframes automatically to the set frame if the value for transform type properties changes.
 
 See :ref:`Timeline Keyframe Control <bpy.types.ToolSettings.use_keyframe_insert_auto>` for more info.
+
+
+.. _bpy.ops.anim.keyframe_insert_menu:
+
+Insert Keyframe with Keying Set
+===============================
+
+.. reference::
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Object --> Animation --> Insert Keyframe with Keying Set`
+   :Shortcut:  :kbd:`K`
+
+Insert Keyframes for specified :doc:`Keying Set </animation/keyframes/keying_sets>`,
+with menu of available Keying Sets.
 
 
 .. _bpy.ops.anim.keyframe_delete:

@@ -42,13 +42,24 @@ Keyframes
 These settings control :doc:`Keyframes </animation/keyframes/index>`
 which are the building blocks for animations.
 
-Visual Keying
-   When an object is using constraints, the object property value does not actually change.
-   *Visual Keying* will add keyframes to the object property,
-   with a value based on the visual transformation from the constraint.
+.. _bpy.types.PreferencesEdit.key_insert_channels:
+
+Default Key Channels
+   Which channels to insert keys at when no keying set is active.
+
+   :Location: Inset keyframes for an object's :ref:`Location <bpy.types.Object.location>`.
+   :Rotation: Inset keyframes for an object's :ref:`Rotation <bpy.types.Object.rotation>`.
+   :Scale: Inset keyframes for an object's :ref:`Scale <bpy.types.Object.scale>`.
+   :Rotation Mode: Inset keyframes for an object's :ref:`Rotation Mode <bpy.types.Object.rotation_mode>`.
+   :Custom Properties: Inset keyframes for :doc:`/files/custom_properties`.
 
 Only Insert Needed
    This will only insert keyframes if the value of the property is different.
+
+Keyframing -- Visual Keying
+   When an object is using constraints, the object property value does not actually change.
+   *Visual Keying* will add keyframes to the object property,
+   with a value based on the visual transformation from the constraint.
 
 Auto-Keyframing
    Show Warning
