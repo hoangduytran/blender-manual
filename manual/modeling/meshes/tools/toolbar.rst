@@ -93,9 +93,6 @@ Transform
 :ref:`Spin <tool-mesh-spin>`
    Create new geometry by extruding and rotating.
 
-   :ref:`Spin Duplicate <tool-mesh-spin>`
-      Create new geometry by duplicating and rotating.
-
 :ref:`Smooth <tool-mesh-smooth>`
    Flatten angles of selected vertices.
 
