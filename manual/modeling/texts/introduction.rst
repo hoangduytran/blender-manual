@@ -3,11 +3,6 @@
 Introduction
 ************
 
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Add --> Text`
-
 Text objects contain some text, and are in the same object type family as curves and surfaces ones,
 as fonts are vector data (they are made of curves).
 
