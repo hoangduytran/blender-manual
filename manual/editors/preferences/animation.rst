@@ -42,21 +42,35 @@ Keyframes
 These settings control :doc:`Keyframes </animation/keyframes/index>`
 which are the building blocks for animations.
 
-Visual Keying
-   When an object is using constraints, the object property value does not actually change.
-   *Visual Keying* will add keyframes to the object property,
-   with a value based on the visual transformation from the constraint.
+.. _bpy.types.PreferencesEdit.key_insert_channels:
+
+Default Key Channels
+   Which channels to insert keys at when no keying set is active.
+
+   :Location: Inset keyframes for an object's :ref:`Location <bpy.types.Object.location>`.
+   :Rotation: Inset keyframes for an object's :ref:`Rotation <bpy.types.Object.rotation>`.
+   :Scale: Inset keyframes for an object's :ref:`Scale <bpy.types.Object.scale>`.
+   :Rotation Mode: Inset keyframes for an object's :ref:`Rotation Mode <bpy.types.Object.rotation_mode>`.
+   :Custom Properties: Inset keyframes for :doc:`/files/custom_properties`.
 
 Only Insert Needed
    This will only insert keyframes if the value of the property is different.
 
+   :Manual: When keying manually, skip inserting keys that don't affect the animation.
+   :Auto: Auto-Keying will skip inserting keys that don't affect the animation.
+
+Keyframing -- Visual Keying
+   When an object is using constraints, the object property value does not actually change.
+   *Visual Keying* will add keyframes to the object property,
+   with a value based on the visual transformation from the constraint.
+
 Auto-Keyframing
+   Enable in New Scenes
+      Enables *Auto Keyframe* by default for new scenes.
    Show Warning
       Displays a warning at the top right of the *3D Viewport*, when moving objects, if *Auto Keyframe* is on.
    Only Insert Available
       This will only add keyframes to channels of F-Curves that already exist.
-   Enable in New Scenes
-      Enables *Auto Keyframe* by default for new scenes.
 
    .. seealso::
 

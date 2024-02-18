@@ -27,6 +27,9 @@ Tool Settings
 
 Steps
    Specifies how many copies will be extruded along the "sweep".
+Use Duplicates
+   When enabled, will keep the original selected elements as separated islands in the mesh
+   (i.e. unlinked to the result of the spin extrusion).
 Axis
    Specifies the axis to use as the pivot of the spin operation.
 
@@ -36,9 +39,6 @@ Options
 
 Steps
    Specifies how many copies will be extruded along the "sweep".
-Use Duplicates
-   When enabled, will keep the original selected elements as separated islands in the mesh
-   (i.e. unlinked to the result of the spin extrusion).
 Angle
    Specifies the angle "swept" by this tool, in degrees (e.g. set it to 180 for half a turn).
 Auto Merge
