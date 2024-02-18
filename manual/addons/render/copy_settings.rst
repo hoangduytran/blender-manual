@@ -6,14 +6,6 @@ Copy Render Settings
 This is a simple tool that adds in the Render properties a new panel with a big *Copy Render Settings* button,
 and some options to control what to copy, and to which scenes...
 
-I wrote it as I often have tens of scenes all edited/gathered in a single "main" scene sequence.
-When I want to make preview renders of that main scene,
-I had to manually set all other scenes' preview scale -- long and boring.
-And even worse, I often forgot to put them back to full resolution before final rendering!
-
-So, with this add-on, I just have to set the preview scale in the main scene,
-enable or disable :term:`Anti-Aliasing`, and hit *Copy Render Settings*!
-
 
 Activation
 ==========
