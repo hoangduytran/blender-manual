@@ -9,6 +9,13 @@ may be impossible to implement into EEVEE's architecture without compromising pe
 Here is a rather exhaustive list of all the limitations you can expect while working with EEVEE.
 
 
+Attributes and Properties
+=========================
+
+- Only 14 attributes from Geometry Nodes are supported in a material
+- Only 8 custom object properties are supported in a material
+
+
 Cameras
 =======
 
