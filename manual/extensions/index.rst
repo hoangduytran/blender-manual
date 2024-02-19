@@ -95,7 +95,7 @@ This example is a good start point to the `blender_manifest.toml` that should be
     # website = "http://extensions.blender.org/add-ons/my-example-package/"
 
     # List defined by Blender and server, see:
-    # https://docs.blender.org/manual/en/4.1/extensions/tags.html
+    # https://docs.blender.org/manual/en/dev/extensions/tags.html
     tags = ["Modeling", "UV", "Motion Capture"]
 
     blender_version_min = "4.1.0"
@@ -123,7 +123,7 @@ Required values:
  * ``name``: Complete name of the extension.
  * ``schema_version``: Internal version of the file format - use 1.0.0.
  * ``tagline``: One-line short description.
- * ``tags``: List of tags.
+ * ``tags``: List of tags. See the :doc:`list of available tags <tags>`.
  * ``type``: "add-on", "theme".
  * ``version``: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
