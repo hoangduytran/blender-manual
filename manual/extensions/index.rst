@@ -115,8 +115,7 @@ This example is a good start point to the `blender_manifest.toml` that should be
       "1998 Company Name",
     ]
 
-    # Optional: list of resources add-on will access
-    # Supported permissions:
+    # Optional: add-ons can list which resources they will require:
     # * "files" (for access of any filesystem operations)
     # * "network" (for internet access)
     permissions = ["files", "network"]
@@ -138,7 +137,7 @@ Optional values:
  * ``website``: Website for the extension.
  * ``copyright``: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
  * ``blender_version_max``: Maximum version of Blender that can run this.
- * ``permissions``: Add-ons can hint at which resources it may access. The options are ["files", "network"].
+ * ``permissions``: Add-ons can list which resources they require. The available options are ["files", "network"].
 
  ..
     Command-line
