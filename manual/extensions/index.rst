@@ -98,7 +98,7 @@ This example is a good start point to the `blender_manifest.toml` that should be
     # https://docs.blender.org/manual/en/dev/extensions/tags.html
     tags = ["Modeling", "UV", "Motion Capture"]
 
-    blender_version_min = "4.1.0"
+    blender_version_min = "4.2.0"
     # Optional: maximum supported Blender version
     # blender_version_max = "5.1.0"
 
