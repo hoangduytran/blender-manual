@@ -86,8 +86,7 @@ This example is a good start point to the `blender_manifest.toml` that should be
     # Supported types: "add-on", "keymap", "theme"
     type = "add-on"
 
-    # Optional list of permissions extensions of type add-on may rely on.
-    # Supported permissions:
+    # Optional: add-ons can list which resources they will require:
     # * "files" (for access of any filesystem operations)
     # * "network" (for internet access)
     permissions = ["files", "network"]
@@ -114,11 +113,6 @@ This example is a good start point to the `blender_manifest.toml` that should be
       "2002-2024 Developer Name",
       "1998 Company Name",
     ]
-
-    # Optional: add-ons can list which resources they will require:
-    # * "files" (for access of any filesystem operations)
-    # * "network" (for internet access)
-    permissions = ["files", "network"]
 
 Required values:
  * ``blender_version_min``: Minimum supported Blender version.
