@@ -153,13 +153,13 @@ Third party sites that wish to support extensions in Blender can do so by two wa
   1. Fork the entire `Extensions Website <https://projects.blender.org/infrastructure/extensions-website>`__ as a start point; or
   2. Host a JSON file listing all the packages of your repository.
 
-To generate a valid JSON file you can use the command-line tool:
+.. To generate a valid JSON file you can use the command-line tool:
 
-.. code:: bash
+.. .. code:: bash
 
-  ./blender.exe tools.extension server-generate
+..   ./blender.exe tools.extension server-generate
 
-This creates a listing from all the .zip packages that it can find in the specified location.
+.. This creates a listing from all the .zip packages that it can find in the specified location.
 Example of how the JSON is expected to look like:
 
 .. code:: json
