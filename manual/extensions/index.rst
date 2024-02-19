@@ -10,7 +10,7 @@
    `Blender 4.2 <https://projects.blender.org/blender/blender/milestone/19>`__.
    Please enable "Extensions" on the :doc:`Experimental Preferences </editors/preferences/experimental>` to help testing it.
 
-Extensions are **add-ons**, **themes** or **keymaps** used to extend the core functionality of Blender.
+Extensions are **add-ons** or **themes** used to extend the core functionality of Blender.
 They are shared in online platforms, and can be installed and updated from within Blender.
 
 The official extensions platform for the Blender project is https://extensions.blender.org.
@@ -50,17 +50,6 @@ A theme extension only needs the manifest and the .xml theme file.
   ├─ blender_manifest.toml
   └─ theme.xml
 
-Keymap extension
-++++++++++++++++
-
-The keymap extensions only need the manifest and the keymap .py file.
-
-.. code-block:: text
-
-  my_extension-0.0.1.zip
-  ├─ blender_manifest.toml
-  └─ keymap.py
-
 .. note::
 
   Extensions can optionally have all its files inside a folder (inside the archive).
@@ -83,7 +72,7 @@ This example is a good start point to the `blender_manifest.toml` that should be
     name = "Test Extension"
     tagline = "This is another extension."
     description = "Where to access the add-on, basic usage."
-    # Supported types: "add-on", "keymap", "theme"
+    # Supported types: "add-on", "theme"
     type = "add-on"
 
     # Optional: add-ons can list which resources they will require:
@@ -124,7 +113,7 @@ Required values:
  * ``schema_version``: Internal version of the file format - use 1.0.0.
  * ``tagline``: One-line short description.
  * ``tags``: List of tags.
- * ``type``: "add-on", "keymap", "theme".
+ * ``type``: "add-on", "theme".
  * ``version``: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
 Optional values:

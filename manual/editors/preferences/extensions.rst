@@ -71,7 +71,6 @@ Or show only extensions of a single type:
 
 * **Add-ons**
 * **Themes**
-* **Keymaps**
 
 Repositories
 ============
