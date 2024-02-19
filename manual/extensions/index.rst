@@ -27,6 +27,18 @@ Extension files
 An extension is shared as a .zip archive containing a manifest file and other files.
 The expected files depend on the extension type.
 
+Add-on extension
+++++++++++++++++
+
+Add-ons need at least the manifest and an __init__.py file, while more complex add-ons have a few different .py files or wheels together.
+
+.. code-block:: text
+
+  my_extension-0.0.1.zip
+  ├─ __init__.py
+  ├─ blender_manifest.toml
+  └─ (...)
+
 Theme extension
 +++++++++++++++
 
@@ -48,18 +60,6 @@ The keymap extensions only need the manifest and the keymap .py file.
   my_extension-0.0.1.zip
   ├─ blender_manifest.toml
   └─ keymap.py
-
-Add-on extension
-++++++++++++++++
-
-Add-ons need at least the manifest and an __init__.py file, while more complex add-ons have a few different .py files or wheels together.
-
-.. code-block:: text
-
-  my_extension-0.0.1.zip
-  ├─ __init__.py
-  ├─ blender_manifest.toml
-  └─ (...)
 
 .. note::
 
@@ -186,7 +186,7 @@ Example of how the JSON is expected to look like:
     "website": "http://extensions.blender.org/add-ons/blender-kitsu/",
     "schema_version": "1.0.0"
   }}
-  
+
 Optional fields (e.g., blender_version_max) are to be emmitted from the entries.
 
 For the official Extensions Platform, the `website` value is the page of the extension in the online platform. Even if the manifest points to the project specific website.
