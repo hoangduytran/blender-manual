@@ -13,13 +13,24 @@
 Extensions are **add-ons** or **themes** used to extend the core functionality of Blender.
 They are shared in online platforms, and can be installed and updated from within Blender.
 
-The official extensions platform for the Blender project is https://extensions.blender.org.
+The official extensions platform for the Blender project is `extensions.blender.org <https://extensions.blender.org>`__.
 Other third party sites can also be supported, as long as they follow the Extensions Platform specification.
 
 .. seealso::
 
   For the extension settings, and how to manage them, refer to the
   :doc:`User Preferences </editors/preferences/extensions>`.
+
+How to create extensions
+========================
+
+1. Create a `blender_manifest.toml <#manifest>`__  file with all the required meta-data `(name, maintainer, ...)`.
+
+2. Create a .zip file with the manifest file together with your `extension files <#extension-files>`__.
+
+3. `Upload your extension <https://extensions.blender.org/submit/>`__ `(this step requires you to login to your Blender ID account)`.
+
+The extension will be help for review, and published once the moderation team approves it.
 
 Extension files
 ===============
