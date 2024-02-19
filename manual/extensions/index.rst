@@ -140,15 +140,16 @@ Optional values:
  * ``blender_version_max``: Maximum version of Blender that can run this.
  * ``permissions``: Add-ons can hint at which resources it may access. The options are ["files", "network"].
 
-Command-line
-============
+ ..
+    Command-line
+    ============
 
- There are a few tools accessible via command-line that can help the creation of extensions.
+     There are a few tools accessible via command-line that can help the creation of extensions.
 
-.. code:: bash
+    .. code:: bash
 
-  ./blender.exe tools.extension validate-manifest <blender_manifest.toml>
-  ./blender.exe tools.extension create <folder-name-with-manifest/>
+      ./blender.exe tools.extension validate-manifest <blender_manifest.toml>
+      ./blender.exe tools.extension create <folder-name-with-manifest/>
 
 
 Third party extension sites
