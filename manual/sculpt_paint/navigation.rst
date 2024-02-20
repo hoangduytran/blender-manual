@@ -23,7 +23,8 @@ Orbit Method = Trackball
 
 .. Needs a visual example to make it easier to understand.
 
-:ref:`Auto Depth <bpy.types.PreferencesInput.use_mouse_depth_navigate>` & :ref:`Zoom to Mouse Position <bpy.types.PreferencesInput.use_zoom_to_mouse>`
+:ref:`Auto Depth <bpy.types.PreferencesInput.use_mouse_depth_navigate>`
+& :ref:`Zoom to Mouse Position <bpy.types.PreferencesInput.use_zoom_to_mouse>`
    Use the mouse position to zoom towards and rotate around the surface that is pointed at.
    This can be an alternative to the repeated manual use of the Center View to Mouse operator.
 
