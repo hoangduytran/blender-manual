@@ -115,13 +115,13 @@ This example is a good start point to the `blender_manifest.toml` that should be
     ]
 
 Required values:
- * ``blender_version_min``: Minimum supported Blender version.
+ * ``blender_version_min``: Minimum supported Blender version - use at least `4.2.0`.
  * ``description``: What it does, how to use, where to access it (in case of add-ons).
  * ``id``: Unique identifier for the extension.
  * ``license``: `SPDX license identifier <https://spdx.org/licenses/>`__ - note the official Blender Extensions platform only support free and open licensed extensions.
  * ``maintainer``: Maintainer of the extension.
  * ``name``: Complete name of the extension.
- * ``schema_version``: Internal version of the file format - use 1.0.0.
+ * ``schema_version``: Internal version of the file format - use `1.0.0`.
  * ``tagline``: One-line short description.
  * ``tags``: List of tags. See the :doc:`list of available tags <tags>`.
  * ``type``: "add-on", "theme".
@@ -160,6 +160,7 @@ Third party sites that wish to support extensions in Blender can do so by two wa
 ..   ./blender.exe tools.extension server-generate
 
 .. This creates a listing from all the .zip packages that it can find in the specified location.
+
 Example of how the JSON is expected to look like:
 
 .. code:: json
