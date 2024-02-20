@@ -94,9 +94,9 @@ This example is a good start point to the `blender_manifest.toml` that should be
     # Optional link to documentation, support, source files, etc
     # website = "http://extensions.blender.org/add-ons/my-example-package/"
 
-    # List defined by Blender and server, see:
+    # Optional list defined by Blender and server, see:
     # https://docs.blender.org/manual/en/dev/extensions/tags.html
-    tags = ["Import-Export", "UV"]
+    tags = ["Animation", "Sequencer"]
 
     blender_version_min = "4.2.0"
     # Optional: maximum supported Blender version
@@ -123,7 +123,6 @@ Required values:
  * ``name``: Complete name of the extension.
  * ``schema_version``: Internal version of the file format - use `1.0.0`.
  * ``tagline``: One-line short description.
- * ``tags``: List of tags. See the :doc:`list of available tags <tags>`.
  * ``type``: "add-on", "theme".
  * ``version``: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
@@ -132,6 +131,7 @@ Optional values:
  * ``copyright``: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
  * ``blender_version_max``: Maximum version of Blender that can run this.
  * ``permissions``: Add-ons can list which resources they require. The available options are ["files", "network"].
+ * ``tags``: List of tags. See the :doc:`list of available tags <tags>`.
 
  ..
     Command-line
