@@ -16,6 +16,7 @@ This is the list of the tags currently supported:
 * Import-Export
 * Lighting
 * Material
+* Modeling
 * Mesh
 * Node
 * Object
