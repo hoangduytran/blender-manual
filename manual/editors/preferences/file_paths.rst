@@ -23,12 +23,23 @@ Locations for various external files can be set for the following options:
 Data
 ====
 
+.. _bpy.types.PreferencesFilePaths.font_directory:
+
 Fonts
    Default location to browse for :doc:`text object </modeling/texts/index>` font files.
+
+.. _bpy.types.PreferencesFilePaths.texture_directory:
+
 Textures
    Default location to browse for image textures.
+
+.. _bpy.types.PreferencesFilePaths.sound_directory:
+
 Sounds
    Default location to browse for sound files.
+
+.. _bpy.types.PreferencesFilePaths.temporary_directory:
+
 Temporary Files
    The location where temporary files are stored,
    leave blank to use the systems temporary directory
@@ -38,11 +49,18 @@ Temporary Files
 Render
 ------
 
+.. _bpy.types.PreferencesFilePaths.render_output_directory:
+
 Render Output
    Where rendered images/videos are saved.
+
+.. _bpy.types.PreferencesFilePaths.render_cache_directory:
+
 Render Cache
    The location where cached render images are stored.
 
+
+.. _bpy.types.UserAssetLibrary:
 
 Asset Libraries
 ===============
@@ -59,6 +77,8 @@ The path should point to the location of the asset library.
 To create a new asset library, just create an empty directory and add it to the :ref:`ui-list-view`.
 Any asset from any blend-file contained in that directory
 (or subdirectories thereof) will appear in the :doc:`/editors/asset_browser`.
+
+.. _bpy.types.UserAssetLibrary.import_method:
 
 Import Method
    Determines how data is managed when an asset is imported,
@@ -96,12 +116,15 @@ Import Method
       Since the file now has its own copy of the asset, later changes to
       the asset file will not be reflected in the file it's appended to.
 
+.. _bpy.types.UserAssetLibrary.use_relative_path:
+
 Relative Path
    Use relative path when linking assets from this asset library.
 
 
 .. _bpy.ops.preferences.script_directory_add:
 .. _bpy.ops.preferences.script_directory_remove:
+.. _bpy.types.ScriptDirectory:
 
 Script Directories
 ==================
@@ -136,10 +159,12 @@ The following subdirectories will be used when present:
 Applications
 ============
 
+.. _bpy.types.PreferencesFilePaths.image_editor:
+
 Image Editor
    The path to an external program to use for image editing.
 
-.. _prefs-file_paths-animation_player:
+.. _bpy.types.PreferencesFilePaths.animation_player_preset:
 
 Animation Player
    The program used for playing back rendered animations via
@@ -157,9 +182,13 @@ Animation Player
 Text Editor
 -----------
 
+.. _bpy.types.PreferencesFilePaths.text_editor:
+
 Program
    Command to launch the text editor when using :ref:`Edit Externally <bpy.ops.text.jump_to_file_at_point>`,
    either a full path or a command in ``$PATH``. Use the internal editor when left blank.
+
+.. _bpy.types.PreferencesFilePaths.text_editor_args:
 
 Arguments
    Defines the specific format of the arguments with which the text editor opens files.
@@ -177,7 +206,9 @@ Arguments
 Development
 ===========
 
-Only visible when :ref:`Developer Extras <prefs-interface-dev-extras>` are enabled.
+Only visible when :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>` are enabled.
+
+.. _bpy.types.PreferencesFilePaths.i18n_branches_directory:
 
 I18n Branches
    The path to the ``/branches`` directory of your local SVN translation copy, to allow translating from the UI.

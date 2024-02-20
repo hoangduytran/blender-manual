@@ -17,7 +17,7 @@ Insert Keyframe
 There are several methods of adding new keys. Namely:
 
 - In the 3D Viewport, pressing :kbd:`I` will key properties based on the
-  :ref:`Default Key Channels <bpy.types.PreferencesEdit.key_insert_channels> ` User Preferences.
+  :ref:`Default Key Channels <bpy.types.PreferencesEdit.key_insert_channels>` User Preferences.
 - When a :doc:`Keying Set </animation/keyframes/keying_sets>` is active,
   it is used instead of reading the User Preferences.
 - Hovering over a property and pressing :kbd:`I` or with the context menu by :kbd:`RMB`

@@ -44,7 +44,7 @@ Operator Search
    :Mode:      All Modes
    :Menu:      :menuselection:`Edit --> Operator Search`
 
-When :ref:`Developer Extras <prefs-interface-dev-extras>` are activated,
+When :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>` are activated,
 the Operator Search can be accessed from the Edit menu in the Topbar.
 This menu searches all :doc:`/interface/operators`
 within Blender, even if they are not exposed in a menu.
@@ -54,5 +54,5 @@ exposed in a menu and can only be accessed via this search menu.
 
 .. seealso::
 
-   The :ref:`User Preferences <prefs-interface-search-order>`
+   The :ref:`User Preferences <bpy.types.Preferences.use_recent_searches>`
    has an option to change how the search results are scored.

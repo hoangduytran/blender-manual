@@ -54,7 +54,7 @@ See :doc:`/sculpt_paint/weight_paint/tool_settings/options`.
 .. note::
 
    You can customize the colors in the weight gradient by enabling
-   :ref:`Custom Weight Paint Range <prefs-system-weight>` in the *Editing* tab
+   :ref:`Custom Weight Paint Range <bpy.types.PreferencesView.use_weight_color_range>` in the *Editing* tab
    of the *Preferences*.
 
 

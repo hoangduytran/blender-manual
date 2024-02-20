@@ -203,7 +203,7 @@ Adjust Last Operation, Repeat Last, Repeat History
 Menu Search
    Find a menu based on its name.
 Operator Search
-   Execute an operator based on its name (:ref:`Developer Extras <prefs-interface-dev-extras>` only).
+   Execute an operator based on its name (:ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>` only).
 Rename Active Item
    Rename the active object or node;
    see :ref:`Rename tool <tools_rename-active>` for more information.
@@ -260,7 +260,7 @@ View Animation :kbd:`Ctrl-F11`
    .. seealso::
 
       - :ref:`Animation player <bpy.ops.render.play_rendered_anim>` for details.
-      - :ref:`Preferences <prefs-file_paths-animation_player>` for selecting a
+      - :ref:`Preferences <bpy.types.PreferencesFilePaths.animation_player_preset>` for selecting a
         different animation player than the default one.
 Lock Interface
    Lock interface during rendering in favor of giving more memory to the renderer.

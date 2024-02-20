@@ -15,7 +15,9 @@ Objects
 New Objects
 -----------
 
-Link Materials to
+.. _bpy.types.PreferencesEdit.material_link:
+
+Link Materials To
    To understand this option properly, you need to understand how Blender works with Objects.
    Almost everything in Blender is organized in a hierarchy of data-blocks.
    A data-block can be thought of as containers for certain pieces of information. For example,
@@ -28,9 +30,9 @@ Link Materials to
 
    A material may be linked in two different ways:
 
-   Object Data
+   :Object Data:
       Any created material will be created as part of the Object Data data-block.
-   Object
+   :Object:
       Any created material will be created as part of the Object data-block.
 
    .. figure:: /images/editors_preferences_editing_data-blocks-link.png
@@ -41,21 +43,29 @@ Link Materials to
 
       :doc:`Read more about Blender's Data System </files/index>`.
 
+.. _bpy.types.PreferencesEdit.object_align:
+
 Align to
-   World
+   :World:
       New objects align with world coordinates.
-   View
+   :View:
       New object align with view coordinates.
-   3D Cursor
+   :3D Cursor:
       New objects align to the 3D cursor's orientation.
+
+.. _bpy.types.PreferencesEdit.use_enter_edit_mode:
+
 Enter Edit Mode
    If selected, Edit Mode is automatically activated when you create a new object.
+
+.. _bpy.types.PreferencesEdit.collection_instance_empty_size:
+
 Instance Empty Size
    The display size for empties when
    a new :doc:`collection instance </scene_layout/object/properties/instancing/collection>` is created.
 
 
-.. _prefs-editing-duplicate-data:
+.. _bpy.types.PreferencesEdit.use_duplicate:
 
 Copy on Duplicate
 -----------------
@@ -77,10 +87,15 @@ The same rules apply to each of the checkboxes in the data-block list.
 3D Cursor
 =========
 
-Cursor Surface Project
+.. _bpy.types.PreferencesEdit.use_mouse_depth_cursor:
+
+Cursor -- Surface Project
    When placing the cursor by clicking,
    the cursor is projected onto the surface under the cursor.
-Cursor Lock Adjust
+
+.. _bpy.types.PreferencesEdit.use_cursor_lock_adjust:
+
+Cursor -- Lock Adjust
    When the viewport is locked to the cursor,
    moving the cursor avoids the view *jumping* based on the new offset.
 
@@ -88,8 +103,13 @@ Cursor Lock Adjust
 Annotations
 ===========
 
+.. _bpy.types.PreferencesEdit.grease_pencil_default_color:
+
 Default Color
    The default color for new Annotate layers.
+
+.. _bpy.types.PreferencesEdit.grease_pencil_eraser_radius:
+
 Eraser Radius
    The size of the eraser used with the Annotate Tool.
 
@@ -98,7 +118,7 @@ Eraser Radius
    :doc:`Read more about Annotations </interface/annotate_tool>`.
 
 
-.. _prefs-system-weight:
+.. _bpy.types.PreferencesView.use_weight_color_range:
 
 Weight Paint
 ============
@@ -113,13 +133,17 @@ For detailed information see the :doc:`Color ramps </interface/controls/template
 Grease Pencil
 =============
 
-Distance
-   Manhattan
-      The minimum number of pixels the mouse should have moved either
-      horizontally or vertically before the movement is recorded.
-      Decreasing this should work better for curvy lines.
-   Euclidean
-      The minimum distance that mouse has to travel before movement is recorded.
+.. _bpy.types.PreferencesEdit.grease_pencil_manhattan_distance:
+
+Manhattan
+   The minimum number of pixels the mouse should have moved either
+   horizontally or vertically before the movement is recorded.
+   Decreasing this should work better for curvy lines.
+
+.. _bpy.types.PreferencesEdit.grease_pencil_euclidean_distance:
+
+Euclidean
+   The minimum distance that mouse has to travel before movement is recorded.
 
 .. seealso::
 
@@ -128,6 +152,8 @@ Distance
 
 Text Editor
 ===========
+
+.. _bpy.types.PreferencesEdit.use_text_edit_auto_close:
 
 Auto Close Character Pairs
    Automatically insert the corresponding character to close an expression
@@ -139,9 +165,13 @@ Auto Close Character Pairs
 Node Editor
 ===========
 
+.. _bpy.types.PreferencesEdit.node_use_insert_offset:
+
 Auto-Offset
    Automatically offset the following or previous nodes in a chain when inserting a new node.
    See :ref:`editors-nodes-usage-auto-offset` for more information.
+
+   .. _bpy.types.PreferencesEdit.node_margin:
 
    Auto-offset Margin
       Margin to use for :ref:`offsetting nodes <editors-nodes-usage-auto-offset>`.
@@ -149,6 +179,8 @@ Auto-Offset
 
 Miscellaneous
 =============
+
+.. _bpy.types.PreferencesEdit.sculpt_paint_overlay_color:
 
 Sculpt Overlay Color
    Defines a color to be used in the inner part of

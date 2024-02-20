@@ -29,7 +29,8 @@ Interface
 The *Merge By Distance* and *Curve Simplify* buttons are located in
 the :menuselection:`3D Viewport --> Curve Context Menu` in curve Edit Mode.
 
-The *Simplify F-Curves* tool can be accessed by enabling :ref:`Developer Extras <prefs-interface-dev-extras>`
+The *Simplify F-Curves* tool can be accessed by enabling
+:ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>`
 and using the :ref:`bpy.ops.wm.search_menu` to search for "Simplify F-Curves" in the Dope Sheet or Graph Editor.
 
 

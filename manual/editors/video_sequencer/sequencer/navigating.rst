@@ -103,7 +103,7 @@ Show Markers
 Show Cache
    Show which frames are :doc:`Cached </editors/video_sequencer/sequencer/sidebar/cache>`.
 
-   The :ref:`Developer Extras <prefs-interface-dev-extras>` must be enabled for this
+   The :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>` must be enabled for this
    menu item to be visible.
 
 Sequence Render Image

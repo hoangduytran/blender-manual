@@ -22,8 +22,14 @@ Preset Management
 
 Keymap Presets
    Select the keymap from a list of predefined keymaps.
+
+.. _bpy.ops.preferences.keyconfig_import:
+
 Import
    Importing opens a File Browser to select a ``.py`` file to add to the list of keymap presets.
+
+.. _bpy.ops.preferences.keyconfig_export:
+
 Export
    Saves the current keymap configuration as a preset others may use.
 
@@ -42,9 +48,9 @@ Filtering
 .. _bpy.types.SpacePreferences.filter_type:
 
 Filter Type
-   Name
+   :Name:
       Search the keymap item by the operator name it runs.
-   Key Binding
+   :Key Binding:
       Search the keymap item by the key used to activate it.
 
       .. hint::
@@ -86,8 +92,13 @@ The Keymap editor lets you change the default hotkeys. You can change keymaps fo
 #. Select which Input will control the function.
 #. Change hotkeys as you want. Just click on the shortcut input and enter the new shortcut.
 
+.. _bpy.types.KeyMapItem.active:
+
 Active
    Uncheck to disable this keymap item.
+
+.. _bpy.types.KeyMapItem.map_type:
+
 Map Type
    :Keyboard: Single hotkey or key combination.
    :Mouse: Actions from mouse buttons, tablet or touchpad input.
@@ -97,19 +108,32 @@ Map Type
    :Timer:
       Used to control actions based on a time period.
       E.g. by default, *Animation Step* uses "Timer 0", *Smooth View* uses "Timer 1".
+
+.. _bpy.types.KeyMapItem.idname:
+
 Operator ID Name
    The identifier for the operator to call.
 
    .. hint::
 
       See :mod:`blender_api:bpy.ops` for a list of operators (remove the ``bpy.`` prefix for the identifier).
+
 Event
+   .. _bpy.types.KeyMapItem.type:
+
    Type
       The key or button that activates this keymap item (depending on the map type).
+
+   .. _bpy.types.KeyMapItem.value:
+
    Value
       The action (such as press, release, click, drag, etc.), (depending on the map type).
+
+   .. _bpy.types.KeyMapItem.key_modifier:
+
    Modifier
       Additional keys to hold (such as :kbd:`Ctrl`, :kbd:`Shift`, :kbd:`Alt`).
+
 Operator Properties
    Changes to the defaults properties this operator is activated with
 

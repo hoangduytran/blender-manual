@@ -71,7 +71,7 @@ Some window managers default to :kbd:`Alt-LMB` and :kbd:`Alt-RMB` for moving and
 
 Blender uses these for various operations, notably:
 
-- :ref:`Emulate 3 Button Mouse <preferences-input-emulate-mouse>`.
+- :ref:`Emulate 3 Button Mouse <bpy.types.PreferencesInput.use_mouse_emulate_3_button>`.
 - :ref:`bpy.ops.mesh.loop_multi_select`.
 - :ref:`Changing multiple properties at once <keymap-common-properties>`.
 

@@ -23,6 +23,9 @@ Unlike lights in the scene, the lighting direction follows the viewport orientat
 Editor
 ------
 
+.. _bpy.types.PreferencesSystem.use_studio_light_edit:
+.. _bpy.ops.preferences.studiolight_new:
+
 There are up to four virtual light sources.
 
 The Light toggles allow you to enable or disable individual lights.
@@ -30,21 +33,37 @@ At least one of the four lights must remain enabled for the 3D Viewport.
 The lights are equal, except for their direction and color.
 You can control the direction of the lights, as well as their diffuse and specular colors.
 
-Light
-   Use Light
-      Toggles the specific light.
-   Diffuse
-      This is the constant color of the light.
-   Specular
-      This is the highlight color of the light.
-   Smooth
-      Smooth the shading from this light.
+.. _bpy.types.UserSolidLight.use:
 
-      *This has the effect of lighting to be less direct.*
-   Direction
-      The direction of the light, (see :ref:`ui-direction-button`).
+Use Light
+   Toggles the specific light.
 
-      The direction of the light will be the same as shown at the sphere surface.
+.. _bpy.types.UserSolidLight.diffuse_color:
+
+Diffuse
+   This is the constant color of the light.
+
+.. _bpy.types.UserSolidLight.specular_color:
+
+Specular
+   This is the highlight color of the light.
+
+.. _bpy.types.UserSolidLight.smooth:
+
+Smooth
+   Smooth the shading from this light.
+
+   *This has the effect of lighting to be less direct.*
+
+.. _bpy.types.UserSolidLight.direction:
+
+Direction
+   The direction of the light, (see :ref:`ui-direction-button`).
+
+   The direction of the light will be the same as shown at the sphere surface.
+
+.. _bpy.types.PreferencesSystem.light_ambient:
+
 Ambient Color
    The color of unlit areas.
 
@@ -53,6 +72,7 @@ Ambient Color
 
 MatCaps
 =======
+
 
 This panel manages :term:`MatCap` image files
 which can used to light the view when :ref:`MatCap <render-workbench-matcap>` shading is enabled.

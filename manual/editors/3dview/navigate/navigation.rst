@@ -39,7 +39,7 @@ You can also press :kbd:`Numpad9` to switch to the opposite side of the view
 .. seealso::
 
    - :ref:`Orbit Style Preference <prefs-input-orbit-style>`
-   - :ref:`Auto-Perspective Preference <prefs-navigation-auto_perspective>`
+   - :ref:`Auto-Perspective Preference <bpy.types.PreferencesInput.use_auto_perspective>`
 
 
 .. _bpy.ops.view3d.view_roll:
@@ -54,7 +54,7 @@ Roll
    :Shortcut:  :kbd:`Shift-Numpad4`, :kbd:`Shift-Numpad6`
 
 Rotate the viewport camera around its viewing direction in 15° discrete steps by default.
-See the :ref:`rotation angle <prefs-navigation-rotation_angle>` preference to configure.
+See the :ref:`rotation angle <bpy.types.PreferencesView.rotation_angle>` preference to configure.
 
 To reset the roll, you can first align the view to the global X axis
 using :kbd:`Numpad3`, then orbit to get back to the regular perspective view.
