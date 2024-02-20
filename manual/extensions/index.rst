@@ -81,8 +81,7 @@ This example is a good start point to the `blender_manifest.toml` that should be
     id = "my_example_extension"
     version = "1.0.0"
     name = "Test Extension"
-    tagline = "This is another extension."
-    description = "Where to access the add-on, basic usage."
+    tagline = "This is another extension"
     # Supported types: "add-on", "theme"
     type = "add-on"
 
@@ -116,20 +115,19 @@ This example is a good start point to the `blender_manifest.toml` that should be
 
 Required values:
  * ``blender_version_min``: Minimum supported Blender version - use at least `4.2.0`.
- * ``description``: What it does, how to use, where to access it (in case of add-ons).
  * ``id``: Unique identifier for the extension.
  * ``license``: `SPDX license identifier <https://spdx.org/licenses/>`__ - note the official Blender Extensions platform only support free and open licensed extensions.
  * ``maintainer``: Maintainer of the extension.
  * ``name``: Complete name of the extension.
  * ``schema_version``: Internal version of the file format - use `1.0.0`.
- * ``tagline``: One-line short description.
+ * ``tagline``: One-line short description - cannot end with a pontuation.
  * ``type``: "add-on", "theme".
  * ``version``: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
 Optional values:
+ * ``blender_version_max``: Maximum version of Blender that can run this.
  * ``website``: Website for the extension.
  * ``copyright``: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
- * ``blender_version_max``: Maximum version of Blender that can run this.
  * ``permissions``: Add-ons can list which resources they require. The available options are ["files", "network"].
  * ``tags``: List of tags. See the :doc:`list of available tags <tags>`.
 
