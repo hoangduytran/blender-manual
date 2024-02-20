@@ -11,7 +11,7 @@ Operator Cheat Sheet
 .. reference::
 
    :Menu:      :menuselection:`Help --> Operator Cheat Sheet`
-   :Context:   Enable :ref:`Developer Extras <prefs-interface-dev-extras>`
+   :Context:   Enable :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>`
 
 Creates a text file in the Text Editor that gives a list of all operators
 and their default values in Python syntax, along with the generated docs.

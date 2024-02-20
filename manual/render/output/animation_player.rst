@@ -164,6 +164,6 @@ there are situations where high resolution images may slow down playback causing
 
 .. seealso::
 
-   :ref:`Memory Cache Limit <prefs-system-memory-cache-limit>` preference to control this limit,
+   :ref:`Memory Cache Limit <bpy.types.PreferencesSystem.memory_cache_limit>` preference to control this limit,
    which may be increased to cache more images during playback.
    :ref:`command-line-args-animation-playback-options` to specify this value when launching from the command line.

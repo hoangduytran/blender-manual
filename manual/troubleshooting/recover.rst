@@ -30,7 +30,8 @@ So saving renames the previously saved file with a ``.blend1`` extension instead
 
 This file can be used to revert to a previous state.
 
-See :ref:`Save Versions <prefs-save_load-backups>` to configure the number of versions kept.
+See :ref:`Save Versions <bpy.types.PreferencesFilePaths.save_version>`
+to configure the number of versions kept.
 
 
 .. _troubleshooting-file_recovery-auto_save:
@@ -62,7 +63,8 @@ The *Recover Auto Save* allows you to open the *Auto Saved* file.
 You will have to navigate to your :ref:`temp-dir`.
 The *Auto Saved* files are named using a random number and have a blend extension.
 
-See :ref:`Auto Save Preferences <prefs-auto-save>` to configure auto-save.
+See :ref:`Auto Save Preferences <bpy.types.PreferencesFilePaths.use_auto_save_temporary_files>`
+to configure auto-save.
 
 Trusted Source
    When enabled, Python scripts and drivers that may be included in the file will be run automatically.

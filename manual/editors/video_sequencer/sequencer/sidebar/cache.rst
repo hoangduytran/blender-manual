@@ -7,7 +7,8 @@ The Cache is used to save frames in memory for preview,
 so they can be later displayed much faster than rendered from scratch.
 Cache capacity can be set in the :doc:`System tab </editors/preferences/system>` of the Preferences.
 
-In order for this tab to be visible, enable :ref:`Developer Extras <prefs-interface-dev-extras>`.
+In order for this tab to be visible,
+enable :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>`.
 
 .. seealso::
 

@@ -1,3 +1,5 @@
+.. _bpy.ops.workspace:
+.. _bpy.types.Window.workspace:
 
 **********
 Workspaces
@@ -25,6 +27,9 @@ Tabs
    Click on the tabs to switch between the workspaces.
    You can also use the keyboard shortcuts :kbd:`Ctrl-PageUp` and :kbd:`Ctrl-PageDown`.
    Double-click a tab to rename the workspace.
+
+.. _bpy.ops.workspace.add:
+
 Add ``+``
    Click on the *Add* button to add a new workspace.
 Context menu :kbd:`RMB`

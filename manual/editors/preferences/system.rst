@@ -85,11 +85,17 @@ Make Default
 Memory & Limits
 ===============
 
+.. _bpy.types.PreferencesEdit.undo_steps:
+
 Undo Steps
    Number of Undo steps available.
 
+.. _bpy.types.PreferencesEdit.undo_memory_limit:
+
 Undo Memory Limit
    Maximum memory usage in Mb (0 is unlimited).
+
+.. _bpy.types.PreferencesEdit.use_global_undo:
 
 Global Undo
    This enables Blender to save actions done when you are **not** in *Edit Mode*.
@@ -106,20 +112,30 @@ Global Undo
 
    :doc:`Read more about Undo and Redo options </interface/undo_redo>`.
 
+.. _bpy.types.PreferencesSystem.scrollback:
+
 Console Scroll-back Lines
    The number of lines, buffered in memory of the console window.
    Useful for debugging purposes and command-line rendering.
+
+.. _bpy.types.PreferencesSystem.texture_time_out:
 
 Texture Time Out
    Time since last access of a GL texture in seconds, after which it is freed.
    Set this to 0 to keep textures allocated.
 
+   .. _bpy.types.PreferencesSystem.texture_collection_rate:
+
    Garbage Collection Rate
       Number of seconds between each run of the GL texture garbage collector.
+
+.. _bpy.types.PreferencesSystem.vbo_time_out:
 
 VBO Time Out
    Time since last access of a GL vertex buffer object (VBO) in seconds after which it is freed
    (set to 0 to keep VBO allocated).
+
+   .. _bpy.types.PreferencesSystem.vbo_collection_rate:
 
    Garbage Collection Rate
       Number of seconds between each run of the GL vertex buffer object garbage collector.
@@ -130,23 +146,37 @@ VBO Time Out
 Video Sequencer
 ===============
 
-.. _prefs-system-memory-cache-limit:
+.. _bpy.types.PreferencesSystem.memory_cache_limit:
 
 Memory Cache Limit
    Upper limit of the Video Sequencer and Movie Clip Editor memory cache (in megabytes).
    For an optimal Clip editor and Sequencer performance, high values are recommended.
+
+.. _bpy.types.PreferencesSystem.use_sequencer_disk_cache:
+
 Disk Cache
    Writes cached strips to disk which can store a lot more than RAM.
    To use the Disk Cache, this option must be enabled,
    the *Disk Cache Directory* and *Disk Cache Limit* set, then save or reopen the existing blend-file.
+
+.. _bpy.types.PreferencesSystem.sequencer_disk_cache_dir:
+
 Directory
    The location on disk to store the cache.
+
+.. _bpy.types.PreferencesSystem.sequencer_disk_cache_size_limit:
+
 Cache Limit
    Upper limit of the Video Sequencer's disk cache (in gigabytes), setting to zero disables disk cache.
+
+.. _bpy.types.PreferencesSystem.sequencer_disk_cache_compression:
+
 Compression
    The level of compression to compress image in the disk cache.
    This has a trade off between saving disk space and requiring more processing.
    The more compression used requires faster disk write/read speeds and more CPU usage.
+
+.. _bpy.types.PreferencesSystem.sequencer_proxy_setup:
 
 Proxy Setup
    When and how :doc:`Proxies </editors/video_sequencer/sequencer/sidebar/proxy>` are created.
@@ -169,6 +199,8 @@ within Blender and are only available with a device other than *None*.
 To control these settings for exporting sound
 see the :ref:`Encoding Panel <render-output-video-encoding-panel>`
 and :ref:`Audio Panel <data-scenes-audio>`.
+
+.. _bpy.types.PreferencesSystem.audio_device:
 
 Audio Device
    Sets the audio engine to use to process and output audio.
@@ -194,13 +226,24 @@ Audio Device
       Uses Simple Direct Media Layer API from `libsdl.org <https://www.libsdl.org>`__
       which supports all platforms. Might be of lower quality and thus should only be used as backup.
 
+.. _bpy.types.PreferencesSystem.audio_channels:
+
 Channels
    Sets the audio channel count.
+
+.. _bpy.types.PreferencesSystem.audio_mixing_buffer:
+
 Mixing Buffer
    Sets the number of samples used by the audio mixing buffer.
    Higher buffer sizes can cause latency issues,
    but if you hear clicks or other problems, try to increase the size.
+
+.. _bpy.types.PreferencesSystem.audio_sample_rate:
+
 Sample Rate
    Sets the audio `sampling rate <https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate>`__.
+
+.. _bpy.types.PreferencesSystem.audio_sample_format:
+
 Sample Format
    Sets the audio sample format.

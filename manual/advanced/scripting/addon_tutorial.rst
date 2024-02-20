@@ -37,7 +37,7 @@ See `Use The Terminal <https://docs.blender.org/api/current/info_tips_and_tricks
 
 .. tip::
 
-   You can enable :ref:`Developer Extras <prefs-interface-dev-extras>`
+   You can enable :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>`
    in the preferences to enable features that make developing add-ons easier.
 
 

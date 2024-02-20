@@ -12,12 +12,13 @@ Save & Load
 Blend Files
 ===========
 
-Save
-   Save Prompt
-      Asks for confirmation before closing or opening a new blend-file
-      if the current file has unsaved changes.
+.. _bpy.types.PreferencesView.use_save_prompt:
 
-.. _prefs-save_load-backups:
+Save -- Save Prompt
+   Asks for confirmation before closing or opening a new blend-file
+   if the current file has unsaved changes.
+
+.. _bpy.types.PreferencesFilePaths.save_version:
 
 Save Versions
    Number of versions created (for backup) when saving newer versions of a file.
@@ -33,19 +34,25 @@ Save Versions
    - ``*.blend1`` -- second last saved.
    - ``*.blend2`` -- third last saved.
 
+.. _bpy.types.PreferencesFilePaths.recent_files:
+
 Recent Files
    Number of files displayed in :menuselection:`File --> Open Recent`.
 
-.. _prefs-auto-save:
+.. _bpy.types.PreferencesFilePaths.use_auto_save_temporary_files:
 
 Auto Save
    Enables :doc:`Auto Save </troubleshooting/recover>`.
    Tells Blender to *automatically* save a backup copy of your work-in-progress files to the :ref:`temp-dir`.
 
+   .. _bpy.types.PreferencesFilePaths.auto_save_time:
+
    Timer (Minutes)
       This specifies the number of minutes to wait between each :doc:`Auto Save </troubleshooting/recover>`.
       The default value of the Blender installation is 2 minutes.
       The minimum is 1, and the Maximum is 60 (save every hour).
+
+.. _bpy.types.PreferencesFilePaths.file_preview_type:
 
 File Preview Types
    Select how blend-file preview are generated.
@@ -59,23 +66,32 @@ File Preview Types
    :Screenshot: Generate a preview by taking a screenshot of the active Workspace.
    :Camera View: Generate a preview of a Workbench render from the camera's point of view.
 
-Default To
-   Relative Paths
-      Default value for :ref:`Relative Paths <files-blend-relative_paths>` when loading external files
-      such as images, sounds, and linked libraries. It will be ignored if a path is already set.
-   Compress File
-      Default value for :ref:`Compress file <files-blend-compress>` when saving blend-files.
-   Load UI
-      Default value for :ref:`Load UI <file-load-ui>` when loading blend-files.
+.. _bpy.types.PreferencesFilePaths.use_relative_paths:
 
-Text Files
-   Tabs as Spaces
-      Entering :kbd:`Tab` in the Text Editor adds the appropriate number of spaces
-      instead of using characters.
+Default To -- Relative Paths
+   Default value for :ref:`Relative Paths <files-blend-relative_paths>` when loading external files
+   such as images, sounds, and linked libraries. It will be ignored if a path is already set.
+
+.. _bpy.types.PreferencesFilePaths.use_file_compression:
+
+Default To -- Compress File
+   Default value for :ref:`Compress file <files-blend-compress>` when saving blend-files.
+
+.. _bpy.types.PreferencesFilePaths.use_load_ui:
+
+Default To -- Load UI
+   Default value for :ref:`Load UI <file-load-ui>` when loading blend-files.
+
+.. _bpy.types.PreferencesFilePaths.use_tabs_as_spaces:
+
+Text Files -- Tabs as Spaces
+   Entering :kbd:`Tab` in the Text Editor adds the appropriate number of spaces
+   instead of using characters.
 
 
 .. _bpy.ops.preferences.autoexec:
-.. _prefs-auto-execution:
+.. _bpy.ops.preferences.autoexec_path:
+.. _bpy.types.PreferencesFilePaths.use_scripts_auto_execute:
 
 Auto Run Python Scripts
 -----------------------
@@ -83,6 +99,8 @@ Auto Run Python Scripts
 Python scripts (including driver expressions) are not executed by default for security reasons.
 You may be working on projects where you only load files from trusted sources,
 making it more convenient to allow scripts to be executed automatically.
+
+.. _bpy.types.PathCompare:
 
 Excluded Paths
    Blend-files in these folders will *not* automatically run Python scripts.
@@ -96,26 +114,31 @@ Excluded Paths
 File Browser
 ============
 
-Show Locations
-   Recent
-      Hide the *Recent* panel of the :doc:`File Browser </editors/file_browser>`
-      which displays recently accessed folders.
-   System
-      Hide System Bookmarks in the *File Browser*.
+.. _bpy.types.PreferencesFilePaths.show_recent_locations:
 
-Defaults
-   Filter Files
-      By activating this, the file region in the File Browser will only show appropriate files
-      (i.e. blend-files when loading a complete Blender setting).
-      The selection of file types may be changed in the file region.
+Show Locations -- Recent
+   Hide the *Recent* panel of the :doc:`File Browser </editors/file_browser>`
+   which displays recently accessed folders.
 
-   .. _prefs-show-hidden-files:
+.. _bpy.types.PreferencesFilePaths.show_system_bookmarks:
 
-   Show Hidden Files/Data-Blocks
-      Unhide files and data-blocks with names that start with ``.`` in File Browsers
-      and :ref:`data IDs <ui-data-block>`.
+Show Locations -- System
+   Hide System Bookmarks in the *File Browser*.
 
-      .. hint::
+.. _bpy.types.PreferencesFilePaths.use_filter_files:
 
-         Data-blocks with names beginning with a ``.`` can be selected by typing in a search
-         string that also starts with the ``.`` character, even if this setting is disabled.
+Defaults -- Filter Files
+   By activating this, the file region in the File Browser will only show appropriate files
+   (i.e. blend-files when loading a complete Blender setting).
+   The selection of file types may be changed in the file region.
+
+.. _bpy.types.PreferencesFilePaths.show_hidden_files_datablocks:
+
+Defaults -- Show Hidden Files/Data-Blocks
+   Unhide files and data-blocks with names that start with ``.`` in File Browsers
+   and :ref:`data IDs <ui-data-block>`.
+
+   .. hint::
+
+      Data-blocks with names beginning with a ``.`` can be selected by typing in a search
+      string that also starts with the ``.`` character, even if this setting is disabled.

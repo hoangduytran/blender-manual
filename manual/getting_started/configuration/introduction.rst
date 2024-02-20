@@ -55,4 +55,4 @@ If you trust the source of your blend-files, you can enable *Auto Run Python Scr
 This option is meant to protect you from malicious Python scripts in blend-files that you got from someone else.
 Many users turn this option on, as advanced rigs tend to use scripts of some sort.
 
-See Save & Load :ref:`prefs-auto-execution` Preference.
+See Save & Load :ref:`bpy.types.PreferencesFilePaths.use_scripts_auto_execute` Preference.

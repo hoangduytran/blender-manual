@@ -188,14 +188,14 @@ Tool Keys
 
 Alt Click Tool Prompt
    Tapping :kbd:`Alt` shows a prompt in the status bar prompting a second keystroke to activate the tool.
-   Note that this option is not available when using :ref:`Emulate 3 Button Mouse <preferences-input-emulate-mouse>`.
+   Note that this option is not available when using :ref:`Emulate 3 Button Mouse <bpy.types.PreferencesInput.use_mouse_emulate_3_button>`.
 
 Alt Tool Access
    Hold :kbd:`Alt` to use the :doc:`Active Tool </interface/tool_system>` when the gizmo would normally be required.
    (For example, with the Move tool selected, you can hold :kbd:`Alt` and drag the mouse anywhere in the viewport
    to move the selected object, rather than having to drag its gizmo.)
    This option is only available when *Select with Mouse Button* is set to Left click
-   and :ref:`Emulate 3 Button Mouse <preferences-input-emulate-mouse>` is disabled.
+   and :ref:`Emulate 3 Button Mouse <bpy.types.PreferencesInput.use_mouse_emulate_3_button>` is disabled.
 
 Select All Toggles
    Causes selection shortcut :kbd:`A` to deselect all when any selection exists.

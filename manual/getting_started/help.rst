@@ -32,7 +32,7 @@ Library
 Disabled (red)
    The reason why the value is not editable.
 Python
-   When :ref:`Python Tooltips <prefs-interface-tooltips-python>` are enabled,
+   When :ref:`Python Tooltips <bpy.types.PreferencesView.show_tooltips_python>` are enabled,
    a Python expression is displayed for :ref:`scripting <scripting-index>` (usually an operator or property).
 
 

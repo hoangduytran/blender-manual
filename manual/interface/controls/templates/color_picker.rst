@@ -60,7 +60,7 @@ Types
 =====
 
 The default color picker type can be selected in the Preferences,
-see: :ref:`Interface <prefs-interface-color-picker-type>`.
+see: :ref:`Interface <bpy.types.PreferencesView.color_picker_type>`.
 
 .. list-table:: Color Picker types.
 

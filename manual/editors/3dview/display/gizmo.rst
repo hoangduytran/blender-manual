@@ -100,7 +100,7 @@ if you have the *Grave Accent / Tilde Action* in the
 
 .. seealso::
 
-   The :ref:`Gizmo Preferences <prefs-viewport-gizmo-size>`.
+   The :ref:`Gizmo Preferences <bpy.types.PreferencesView.gizmo_size>`.
 
 
 Empty
