@@ -24,13 +24,15 @@ Other third party sites can also be supported, as long as they follow the Extens
 How to create extensions
 ========================
 
-1. Create a `blender_manifest.toml <#manifest>`__  file with all the required meta-data `(name, maintainer, ...)`.
+1. Create a directory for your extension and populate it with the add-on code or theme file.
 
-2. Create a .zip file with the manifest file together with your `extension files <#extension-files>`__.
+2. Add a `blender_manifest.toml <#manifest>`__  file with all the required meta-data `(name, maintainer, ...)`.
 
-3. `Upload your extension <https://extensions.blender.org/submit/>`__ `(this step requires you to login to your Blender ID account)`.
+3. Compress the directory as a .zip file.
 
-The extension will be help for review, and published once the moderation team approves it.
+4. `Upload the zip file <https://extensions.blender.org/submit/>`__ `(this step requires Blender ID)`.
+
+The extension will be held for `review <https://extensions.blender.org/approval-queue/>`__, and published once the moderation team approves it.
 
 Extension files
 ===============
