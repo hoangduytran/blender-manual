@@ -70,7 +70,7 @@ Manifest
 ========
 
 A manifest is a file with all the meta-data required for an extension to be processed.
-This example is a good start point to the `blender_manifest.toml` that should be inside the .zip.
+This example is a good starting point to the `blender_manifest.toml` that should be inside the .zip.
 
   .. code-block:: toml
 
@@ -116,7 +116,7 @@ This example is a good start point to the `blender_manifest.toml` that should be
 Required values:
  * ``blender_version_min``: Minimum supported Blender version - use at least `4.2.0`.
  * ``id``: Unique identifier for the extension.
- * ``license``: `SPDX license identifier <https://spdx.org/licenses/>`__ - note the official Blender Extensions platform only support free and open licensed extensions.
+ * ``license``: `SPDX license identifier <https://spdx.org/licenses/>`__ - note the official Blender Extensions platform only supports free and open licensed extensions.
  * ``maintainer``: Maintainer of the extension.
  * ``name``: Complete name of the extension.
  * ``schema_version``: Internal version of the file format - use `1.0.0`.
@@ -146,7 +146,7 @@ Optional values:
 Third party extension sites
 ===========================
 
-Third party sites that wish to support extensions in Blender can do so by two ways:
+Third party sites that wish to support extensions in Blender can do so in two ways:
 
   1. Fork the entire `Extensions Website <https://projects.blender.org/infrastructure/extensions-website>`__ as a start point; or
   2. Host a JSON file listing all the packages of your repository.
@@ -159,7 +159,7 @@ Third party sites that wish to support extensions in Blender can do so by two wa
 
 .. This creates a listing from all the .zip packages that it can find in the specified location.
 
-Example of how the JSON is expected to look like:
+Example of what the JSON is expected to look like:
 
 .. code:: json
 
@@ -180,7 +180,7 @@ Example of how the JSON is expected to look like:
     "schema_version": "1.0.0"
   }}
 
-Optional fields (e.g., blender_version_max) are to be emmitted from the entries.
+Optional fields (e.g., blender_version_max) are to be emitted from the entries.
 
 For the official Extensions Platform, the `website` value is the page of the extension in the online platform. Even if the manifest points to the project specific website.
 
