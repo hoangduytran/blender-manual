@@ -22,10 +22,10 @@ The *Extensions* section lets you manage the extensions preferences.
 Install
 =======
 
-They are differnt ways to install an extension:
+They are different ways to install an extension:
 
-* **Install from the Website**: by dragging the installation URL into Blender.
-* **Install from Clipboard**: the URL should be copied from the download link on the website.
+* **Install from the Website**: Drag the installation URL into Blender.
+* **Install from Clipboard**: Copy the URL from the download link on the website.
 * **Install from Blender**: From Blender search for the extension name and click on Install.
 * **Install from Disk**: For packages saved locally (advanced option, from the Settings menu).
 
@@ -49,10 +49,10 @@ Some extension types do not support this, and will always be shown as enabled.
 Settings
 ========
 
-* **Check for Updates**: Manually check the online repositores for avaiable updates.
+* **Check for Updates**: Manually check the online repositores for available updates.
 * **Update All**: Update all the extensions that have an update available.
 * **Install from Disk**: Install an extension from a .zip package. This is installed to a Local Repository and no updates will be available.
-* **Install Legacy Add-on**: Add-ons are effetcively replaced by extensions. However to keep old add-ons working for now, they can still be installed independently of the new system.
+* **Install Legacy Add-on**: Add-ons are effectively replaced by extensions. However to keep old add-ons working for now, they can still be installed independently of the new system.
 
 Filter
 ======
