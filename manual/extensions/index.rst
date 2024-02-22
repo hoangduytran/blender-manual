@@ -92,6 +92,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
     version = "1.0.0"
     name = "Test Extension"
     tagline = "This is another extension"
+    maintainer = "Developer name <email@address.com>"
     # Supported types: "add-on", "theme"
     type = "add-on"
 
@@ -113,9 +114,8 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
     # Optional: maximum supported Blender version
     # blender_version_max = "5.1.0"
 
-    maintainer = "Developer name <email@address.com>"
-    # License conforming to https://spdx.org/is suppose to dolicenses/
-    # use "SPDX: prefix.
+    # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
+    # https://docs.blender.org/manual/en/dev/extensions/licenses.html
     license = [
       "SPDX:GPL-2.0-or-later",
     ]
@@ -125,12 +125,9 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
       "1998 Company Name",
     ]
 
-Required values:
-
    :blender_version_min: Minimum supported Blender version - use at least ``4.2.0``.
    :id: Unique identifier for the extension.
-   :license: `SPDX license identifier <https://spdx.org/licenses/>`__ -
-      note the official Blender Extensions platform only supports free and open licensed extensions.
+   :license: List of :doc:`licenses <licenses>`, use `SPDX license identifier <https://spdx.org/licenses/>`__.
    :maintainer: Maintainer of the extension.
    :name: Complete name of the extension.
    :schema_version: Internal version of the file format - use ``1.0.0``.
