@@ -144,16 +144,16 @@ Optional values:
    :permissions: Add-ons can list which resources they require. The available options are ["files", "network"].
    :tags: List of tags. See the :doc:`list of available tags <tags>`.
 
- ..
-    Command-line
-    ============
+..
+   Command-line
+   ============
 
-     There are a few tools accessible via command-line that can help the creation of extensions.
+    There are a few tools accessible via command-line that can help the creation of extensions.
 
-    .. code:: bash
+   .. code:: bash
 
-      ./blender.exe tools.extension validate-manifest <blender_manifest.toml>
-      ./blender.exe tools.extension create <folder-name-with-manifest/>
+     ./blender.exe tools.extension validate-manifest <blender_manifest.toml>
+     ./blender.exe tools.extension create <folder-name-with-manifest/>
 
 
 Third party extension sites
