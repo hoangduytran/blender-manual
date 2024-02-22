@@ -1,5 +1,9 @@
 .. index:: Tags
 
+.. Mark as "orphan" until extensions is out of beta.
+
+:orphan:
+
 #################
   Extensions Tags
 #################

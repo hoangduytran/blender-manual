@@ -1,14 +1,20 @@
 .. index:: Extensions
 
+.. Mark as "orphan" until extensions is out of beta.
+
+:orphan:
+
 #############
   Extensions
 #############
 
 .. important::
 
-   This feature is only available experimentally in `daily builds <https://builder.blender.org/download/daily/>`__ of
+   This feature is only available experimentally in
+   `daily builds <https://builder.blender.org/download/daily/>`__ of
    `Blender 4.2 <https://projects.blender.org/blender/blender/milestone/19>`__.
-   Please enable "Extensions" on the :doc:`Experimental Preferences </editors/preferences/experimental>` to help testing it.
+   Please enable "Extensions" on the :doc:`Experimental Preferences </editors/preferences/experimental>`
+   to help testing it.
 
 Extensions are **add-ons** or **themes** used to extend the core functionality of Blender.
 They are shared in online platforms, and can be installed and updated from within Blender.
@@ -24,26 +30,28 @@ Other third party sites can also be supported, as long as they follow the Extens
 How to create extensions
 ========================
 
-1. Create a directory for your extension and populate it with the add-on code or theme file.
+#. Create a directory for your extension and populate it with the add-on code or theme file.
 
-2. Add a `blender_manifest.toml <#manifest>`__  file with all the required meta-data `(name, maintainer, ...)`.
+#. Add a `blender_manifest.toml <#manifest>`__  file with all the required meta-data ``(name, maintainer, ...)``.
 
-3. Compress the directory as a .zip file.
+#. Compress the directory as a ``.zip`` file.
 
-4. `Upload the zip file <https://extensions.blender.org/submit/>`__ `(this step requires Blender ID)`.
+#. `Upload the zip file <https://extensions.blender.org/submit/>`__ (this step requires Blender ID).
 
-The extension will be held for `review <https://extensions.blender.org/approval-queue/>`__, and published once the moderation team approves it.
+The extension will be held for `review <https://extensions.blender.org/approval-queue/>`__,
+and published once the moderation team approves it.
 
 Extension files
 ===============
 
-An extension is shared as a .zip archive containing a manifest file and other files.
+An extension is shared as a ``.zip`` archive containing a manifest file and other files.
 The expected files depend on the extension type.
 
 Add-on extension
 ++++++++++++++++
 
-Add-ons need at least the manifest and an __init__.py file, while more complex add-ons have a few different .py files or wheels together.
+Add-ons need at least the manifest and an ``__init__.py`` file,
+while more complex add-ons have a few different .py files or wheels together.
 
 .. code-block:: text
 
@@ -72,7 +80,7 @@ Manifest
 ========
 
 A manifest is a file with all the meta-data required for an extension to be processed.
-This example is a good starting point to the `blender_manifest.toml` that should be inside the .zip.
+This example is a good starting point to the ``blender_manifest.toml`` that should be inside the ``.zip``.
 
   .. code-block:: toml
 
@@ -116,22 +124,25 @@ This example is a good starting point to the `blender_manifest.toml` that should
     ]
 
 Required values:
- * ``blender_version_min``: Minimum supported Blender version - use at least `4.2.0`.
- * ``id``: Unique identifier for the extension.
- * ``license``: `SPDX license identifier <https://spdx.org/licenses/>`__ - note the official Blender Extensions platform only supports free and open licensed extensions.
- * ``maintainer``: Maintainer of the extension.
- * ``name``: Complete name of the extension.
- * ``schema_version``: Internal version of the file format - use `1.0.0`.
- * ``tagline``: One-line short description - cannot end with a pontuation.
- * ``type``: "add-on", "theme".
- * ``version``: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
+
+   - ``blender_version_min``: Minimum supported Blender version - use at least ``4.2.0``.
+   - ``id``: Unique identifier for the extension.
+   - ``license``: `SPDX license identifier <https://spdx.org/licenses/>`__ -
+   - note the official Blender Extensions platform only supports free and open licensed extensions.
+   - ``maintainer``: Maintainer of the extension.
+   - ``name``: Complete name of the extension.
+   - ``schema_version``: Internal version of the file format - use ``1.0.0``.
+   - ``tagline``: One-line short description - cannot end with a pontuation.
+   - ``type``: "add-on", "theme".
+   - ``version``: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
 Optional values:
- * ``blender_version_max``: Maximum version of Blender that can run this.
- * ``website``: Website for the extension.
- * ``copyright``: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
- * ``permissions``: Add-ons can list which resources they require. The available options are ["files", "network"].
- * ``tags``: List of tags. See the :doc:`list of available tags <tags>`.
+
+   - ``blender_version_max``: Maximum version of Blender that can run this.
+   - ``website``: Website for the extension.
+   - ``copyright``: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
+   - ``permissions``: Add-ons can list which resources they require. The available options are ["files", "network"].
+   - ``tags``: List of tags. See the :doc:`list of available tags <tags>`.
 
  ..
     Command-line
@@ -150,8 +161,9 @@ Third party extension sites
 
 Third party sites that wish to support extensions in Blender can do so in two ways:
 
-  1. Fork the entire `Extensions Website <https://projects.blender.org/infrastructure/extensions-website>`__ as a start point; or
-  2. Host a JSON file listing all the packages of your repository.
+  #. Fork the entire `Extensions Website <https://projects.blender.org/infrastructure/extensions-website>`__
+     as a start point; or
+  #. Host a JSON file listing all the packages of your repository.
 
 .. To generate a valid JSON file you can use the command-line tool:
 
@@ -182,9 +194,10 @@ Example of what the JSON is expected to look like:
     "schema_version": "1.0.0"
   }}
 
-Optional fields (e.g., blender_version_max) are to be emitted from the entries.
+Optional fields (e.g., ``blender_version_max``) are to be emitted from the entries.
 
-For the official Extensions Platform, the `website` value is the page of the extension in the online platform. Even if the manifest points to the project specific website.
+For the official Extensions Platform, the ``website`` value is the page of the extension in the online platform.
+Even if the manifest points to the project specific website.
 
 .. note::
 
