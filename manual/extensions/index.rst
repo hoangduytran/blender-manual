@@ -98,6 +98,8 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
     # Optional: add-ons can list which resources they will require:
     # * "files" (for access of any filesystem operations)
     # * "network" (for internet access)
+    # * "camera" (to capture photos and videos)
+    # * "microphone" (to capture audio)
     permissions = ["files", "network"]
 
     # Optional link to documentation, support, source files, etc
@@ -141,7 +143,7 @@ Optional values:
    :blender_version_max: Maximum version of Blender that can run this.
    :website: Website for the extension.
    :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
-   :permissions: Add-ons can list which resources they require. The available options are ["files", "network"].
+   :permissions: Add-ons can list which resources they require. The available options are ["files", "network", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <tags>`.
 
 ..
