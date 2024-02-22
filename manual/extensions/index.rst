@@ -125,24 +125,24 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
 
 Required values:
 
-   - ``blender_version_min``: Minimum supported Blender version - use at least ``4.2.0``.
-   - ``id``: Unique identifier for the extension.
-   - ``license``: `SPDX license identifier <https://spdx.org/licenses/>`__ -
-   - note the official Blender Extensions platform only supports free and open licensed extensions.
-   - ``maintainer``: Maintainer of the extension.
-   - ``name``: Complete name of the extension.
-   - ``schema_version``: Internal version of the file format - use ``1.0.0``.
-   - ``tagline``: One-line short description - cannot end with a pontuation.
-   - ``type``: "add-on", "theme".
-   - ``version``: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
+   :blender_version_min: Minimum supported Blender version - use at least ``4.2.0``.
+   :id: Unique identifier for the extension.
+   :license: `SPDX license identifier <https://spdx.org/licenses/>`__ -
+      note the official Blender Extensions platform only supports free and open licensed extensions.
+   :maintainer: Maintainer of the extension.
+   :name: Complete name of the extension.
+   :schema_version: Internal version of the file format - use ``1.0.0``.
+   :tagline: One-line short description - cannot end with a pontuation.
+   :type: "add-on", "theme".
+   :version: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
 Optional values:
 
-   - ``blender_version_max``: Maximum version of Blender that can run this.
-   - ``website``: Website for the extension.
-   - ``copyright``: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
-   - ``permissions``: Add-ons can list which resources they require. The available options are ["files", "network"].
-   - ``tags``: List of tags. See the :doc:`list of available tags <tags>`.
+   :blender_version_max: Maximum version of Blender that can run this.
+   :website: Website for the extension.
+   :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
+   :permissions: Add-ons can list which resources they require. The available options are ["files", "network"].
+   :tags: List of tags. See the :doc:`list of available tags <tags>`.
 
  ..
     Command-line
