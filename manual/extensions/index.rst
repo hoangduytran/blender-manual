@@ -125,6 +125,8 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
       "1998 Company Name",
     ]
 
+Required values:
+
    :blender_version_min: Minimum supported Blender version - use at least ``4.2.0``.
    :id: Unique identifier for the extension.
    :license: List of :doc:`licenses <licenses>`, use `SPDX license identifier <https://spdx.org/licenses/>`__.
