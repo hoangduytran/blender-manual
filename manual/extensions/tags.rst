@@ -25,6 +25,7 @@ This is the list of the tags currently supported:
 * Node
 * Object
 * Paint
+* Pipeline
 * Physics
 * Render
 * Rigging
