@@ -29,7 +29,7 @@ Mesh
 Value
    A field to evaluate on the target *Mesh* geometry for later sampling at the surface positions.
 
-Source UV Map
+UV Map
    The mesh UV map to sample, evaluated on the *Mesh* input. Should not have overlapping faces.
 
 Sample UV
