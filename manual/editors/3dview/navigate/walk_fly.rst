@@ -39,7 +39,6 @@ Recording camera movement
    with :kbd:`LMB` before you can stop playback.
 
 
-.. _bpy.types.WalkNavigation:
 .. _bpy.ops.view3d.walk:
 
 Walk Navigation

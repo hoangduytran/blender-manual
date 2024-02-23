@@ -20,10 +20,10 @@ The *Geometry Proximity* node computes the closest location on the target geomet
 Inputs
 ======
 
-Target
+Geometry
    Standard geometry input.
 
-Source Position
+Sample Position
    The given position to calculate the closest location on the target.
 
 

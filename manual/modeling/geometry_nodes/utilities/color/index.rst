@@ -8,6 +8,7 @@ Nodes for modifying color data passed through color sockets.
 .. toctree::
    :maxdepth: 1
 
+   blackbody.rst
    color_ramp.rst
    combine_color.rst
    mix_rgb.rst

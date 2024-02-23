@@ -26,7 +26,8 @@ Type
 
          Data-blocks with names that begin with ``.`` are hidden from the list, unless a string
          that also starts with ``.`` is entered into the search field, or the
-         :ref:`Show Hidden Files/Data-Blocks <bpy.types.PreferencesFilePaths.show_hidden_files_datablocks>` user preference is enabled.
+         :ref:`Show Hidden Files/Data-Blocks <bpy.types.PreferencesFilePaths.show_hidden_files_datablocks>`
+         user preference is enabled.
 
 Name
    Displays, and allows editing of, the name of the selected data-block.

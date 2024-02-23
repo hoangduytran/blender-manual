@@ -188,7 +188,8 @@ Tool Keys
 
 Alt Click Tool Prompt
    Tapping :kbd:`Alt` shows a prompt in the status bar prompting a second keystroke to activate the tool.
-   Note that this option is not available when using :ref:`Emulate 3 Button Mouse <bpy.types.PreferencesInput.use_mouse_emulate_3_button>`.
+   Note that this option is not available when using
+   :ref:`Emulate 3 Button Mouse <bpy.types.PreferencesInput.use_mouse_emulate_3_button>`.
 
 Alt Tool Access
    Hold :kbd:`Alt` to use the :doc:`Active Tool </interface/tool_system>` when the gizmo would normally be required.
