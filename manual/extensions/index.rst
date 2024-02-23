@@ -145,6 +145,11 @@ Optional values:
    :permissions: Add-ons can list which resources they require. The available options are ["files", "network", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <tags>`.
 
+.. note::
+
+  All the values present in the manifest file must be filled (i.e., cannot be empty, nor text `""`, nor list `[]`).
+
+  If you don't want to set one of the optional values just exclude it from the manifest altogether.
 ..
    Command-line
    ============
@@ -195,7 +200,8 @@ Example of what the JSON is expected to look like:
     "schema_version": "1.0.0"
   }}
 
-Optional fields (e.g., ``blender_version_max``) are to be emitted from the entries.
+Just like for the manifest file, the optional fields (e.g., ``blender_version_max``) are either to have a value
+or should be omitted from the entries.
 
 For the official Extensions Platform, the ``website`` value is the page of the extension in the online platform.
 Even if the manifest points to the project specific website.
