@@ -114,8 +114,9 @@ when the original geometry already has attributes with the specified names. In t
 a geometry node group might mistakenly overwrite some essential data. The overlay helps
 to make detecting that situation easy.
 
-The same data is also available in the :ref:`geometry-nodes-internal-dependencies` panel
+The same data is also available in the :ref:`modifiers-geometry-nodes-named-attributes` panel
 in the modifier's UI.
+
 
 Geometry Randomization
 ======================
