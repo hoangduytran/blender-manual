@@ -87,8 +87,8 @@ Points
 Normal
    The :term:`Normal` of the triangle on which each point is scattered.
 
-Rotation:
+Rotation
    An XYZ :term:`Euler` rotation built from the normal attribute for convenience. Such a value can also be
-   built from the normal with the :doc:`/modeling/geometry_nodes/utilities/rotation/rotate_euler`. Keep in mind that
-   the Z axis of the result rotation will be arbitrary, since the mesh normal used to create the rotation
-   does not have enough information to set all three rotation axes.
+   built from the normal with the :doc:`/modeling/geometry_nodes/utilities/rotation/euler_to_rotation`.
+   Keep in mind that the Z axis of the result rotation will be arbitrary, since the mesh normal used
+   to create the rotation does not have enough information to set all three rotation axes.
