@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeBlackbody:
+.. --- copy below this line ---
 
 **************
 Blackbody Node
