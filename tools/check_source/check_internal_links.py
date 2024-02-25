@@ -6,7 +6,7 @@ import io
 import argparse
 
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
-ROOT_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", "manual"))
+ROOT_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", "..", "manual"))
 EDIT_FILE = os.path.join(CURRENT_DIR, "broken_doc_links.txt")
 ROLE = ":doc:"
 

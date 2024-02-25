@@ -12,7 +12,7 @@ import re
 # if you want to operate on a subdir, e.g: "render"
 SUBDIR = ""
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
-ROOT_DIR = os.path.normpath(os.path.join(CURRENT_DIR, ".."))
+ROOT_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", ".."))
 RST_DIR = os.path.join(ROOT_DIR, "manual", SUBDIR)
 LOCALE_DIR = os.path.join(ROOT_DIR, "locale")
 

@@ -108,7 +108,7 @@ epubpdf: .SPHINXBUILD_EXISTS
 check_syntax:
 	@python3 tools/check_source/check_syntax.py --long --title --kbd > rst_check_syntax.log
 	@echo "Lines:" `cat rst_check_syntax.log | wc -l`
-	@python3 tools/open_quickfix_in_editor.py rst_check_syntax.log
+	@python3 tools/utils_ide/open_quickfix_in_editor.py rst_check_syntax.log
 	@rm rst_check_syntax.log
 
 check_structure:

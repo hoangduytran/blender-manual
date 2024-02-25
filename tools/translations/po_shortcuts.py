@@ -12,7 +12,7 @@ import re
 import json
 
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
-PO_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", "locale"))
+PO_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", "..", "locale"))
 
 ROLE = 'kbd'  # Change to any other role if needed
 

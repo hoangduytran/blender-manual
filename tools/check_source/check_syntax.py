@@ -9,7 +9,7 @@ import re
 # if you want to operate on a subdir, e.g: "render"
 SUBDIR = ""
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
-RST_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", "manual", SUBDIR))
+RST_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", "..", "manual", SUBDIR))
 
 
 def rst_files(path):
