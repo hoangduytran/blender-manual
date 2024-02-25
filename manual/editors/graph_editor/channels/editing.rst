@@ -283,7 +283,7 @@ Remove Existing Keys
 Interpolation Type
    Choose which interpolation type new keys should have, e.g. Constant or Bezier.
 Bake Modifiers
-   If true bakes the effect of the modifier stack to keys and deletes the modifier stack. 
+   If true bakes the effect of the modifier stack to keys and deletes the modifier stack.
    If false, modifiers get disabled before baking, so the resulting keys will behave as if the modifiers didn't exist.
 
 
@@ -296,6 +296,6 @@ Discontinuity (Euler) Filter
 
    :Menu:      :menuselection:`Channel --> Discontinuity (Euler) Filter`
 
-This operator cleans up Euler rotation channels that suffer from :term:`Gimbal Lock`. 
+This operator cleans up Euler rotation channels that suffer from :term:`Gimbal Lock`.
 The channels of all three axes of euler rotation need to be selected for the operator
 to work.

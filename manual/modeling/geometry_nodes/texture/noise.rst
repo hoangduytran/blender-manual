@@ -89,7 +89,6 @@ Type
       Similar to *Hybrid Multifractal* creates a heterogeneous terrain, but with the likeness of river channels.
 
 
-
 Outputs
 =======
 

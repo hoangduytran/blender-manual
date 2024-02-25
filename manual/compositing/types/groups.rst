@@ -18,7 +18,7 @@ Group Input
 ===========
 
 Exposes the inputs of the node group. You can have multiple of these nodes in your tree to keep it clean,
-bringing in each input right where you need it (rather than dragging long links all across your graph). 
+bringing in each input right where you need it (rather than dragging long links all across your graph).
 
 The input slots can be edited in the *Group* tab of the *Sidebar*.
 
@@ -26,7 +26,7 @@ Group Output
 ============
 
 Receives the outputs of the node group. You can have multiple of these nodes in your tree to keep it clean,
-outputting each result right where it's produced (rather than dragging long links all across your graph). 
+outputting each result right where it's produced (rather than dragging long links all across your graph).
 
 The output slots can be edited in the *Group* tab of the *Sidebar*.
 

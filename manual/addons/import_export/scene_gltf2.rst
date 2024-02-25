@@ -288,7 +288,6 @@ Image Texture node connected, the ``KHR_materials_specular`` glTF extension will
 included in the export.
 
 
-
 Anisotropy
 ^^^^^^^^^^
 

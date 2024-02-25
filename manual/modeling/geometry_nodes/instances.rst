@@ -17,7 +17,8 @@ to handle the same geometry data in many different locations better than when th
 
 Each instance keeps track of which geometry it corresponds to
 and how the instanced is transformed compared to it's source geometry.
-Instances can also store the ``id`` attribute, which is used to correct motion blur when instances move in an animation.
+Instances can also store the ``id`` attribute,
+which is used to correct motion blur when instances move in an animation.
 
 Instances can be created with geometry nodes using the :doc:`/modeling/geometry_nodes/instances/instance_on_points`.
 

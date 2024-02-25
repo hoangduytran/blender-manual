@@ -277,7 +277,6 @@ By prioritizing a certain area, you can make adjustments to the composite
 and see the results faster without having to wait for the whole image to render.
 
 
-
 Add Attribute Node
 ------------------
 

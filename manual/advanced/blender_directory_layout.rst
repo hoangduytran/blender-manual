@@ -87,7 +87,7 @@ Windows
 
    For installations from the Window's Store, the ``USER`` and ``SYSTEM``
    directories are inside a special folder resembling:
-   
+
    .. parsed-literal:: %ProgramFiles%\\WindowsApps\\BlenderFoundation.Blender<HASH>\\Blender\\\ |BLENDER_VERSION|\\
 
    Where "HASH" is a string specific to each installation.

@@ -43,7 +43,6 @@ Objects
       This is limited to the Faces, Struts and Hubs menus.
 
 
-
 Geodesic Object Class Types
 ===========================
 

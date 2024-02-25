@@ -131,9 +131,9 @@ Depending on the specific property it may be sufficient to check only a subset o
 For example, the image on the right shows how to access an attribute that is known to definitely be
 a custom property with a color value.
 
-Driver variables accessing locations that are not final in the lookup chain should use fallback values
-that are invalid for the attribute (e.g. negative color values), which can then be checked by the conditional
-expression. The final variable should fallback to a valid default value to be used when the property is not set at all.
+Driver variables accessing locations that are not final in the lookup chain should use fallback values that are
+invalid for the attribute (e.g. negative color values), which can then be checked by the conditional expression.
+The final variable should fallback to a valid default value to be used when the property is not set at all.
 
 .. _shapekey-driver-example:
 
