@@ -70,7 +70,7 @@ The available filtering options are:
 - Installed Extensions Only
 
 Filter by Type
-===============
+==============
 
 - **All**: Show all the extension types combined.
 

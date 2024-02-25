@@ -267,7 +267,8 @@ Mode
 .. _bpy.types.ToolSettings.use_keyframe_insert_keyingset:
 
 Only Active Keying Set
-   When enabled, new keyframes for properties will be inserted into the active :doc:`Keying Set </animation/keyframes/keying_sets>`.
+   When enabled, new keyframes for properties will be inserted into the active
+   :doc:`Keying Set </animation/keyframes/keying_sets>`.
 
 .. _bpy.types.ToolSettings.use_record_with_nla:
 

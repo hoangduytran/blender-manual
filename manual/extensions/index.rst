@@ -4,9 +4,9 @@
 
 :orphan:
 
-#############
+##############
   Extensions
-#############
+##############
 
 .. important::
 
@@ -24,18 +24,15 @@ Other third party sites can also be supported, as long as they follow the Extens
 
 .. seealso::
 
-  For the extension settings, and how to manage them, refer to the
-  :doc:`User Preferences </editors/preferences/extensions>`.
+   For the extension settings, and how to manage them, refer to the
+   :doc:`User Preferences </editors/preferences/extensions>`.
 
 How to create extensions
 ========================
 
 #. Create a directory for your extension and populate it with the add-on code or theme file.
-
 #. Add a `blender_manifest.toml <#manifest>`__  file with all the required meta-data ``(name, maintainer, ...)``.
-
 #. Compress the directory as a ``.zip`` file.
-
 #. `Upload the zip file <https://extensions.blender.org/submit/>`__ (this step requires Blender ID).
 
 The extension will be held for `review <https://extensions.blender.org/approval-queue/>`__,
@@ -55,10 +52,10 @@ while more complex add-ons have a few different .py files or wheels together.
 
 .. code-block:: text
 
-  my_extension-0.0.1.zip
-  ├─ __init__.py
-  ├─ blender_manifest.toml
-  └─ (...)
+   my_extension-0.0.1.zip
+   ├─ __init__.py
+   ├─ blender_manifest.toml
+   └─ (...)
 
 Theme extension
 +++++++++++++++
@@ -67,14 +64,14 @@ A theme extension only needs the manifest and the .xml theme file.
 
 .. code-block:: text
 
-  my_extension-0.0.1.zip
-  ├─ blender_manifest.toml
-  └─ theme.xml
+   my_extension-0.0.1.zip
+   ├─ blender_manifest.toml
+   └─ theme.xml
 
 .. note::
 
-  Extensions can optionally have all its files inside a folder (inside the archive).
-  This is a common behaviour when saving a repository as ZIP from version-control platforms.
+   Extensions can optionally have all its files inside a folder (inside the archive).
+   This is a common behaviour when saving a repository as ZIP from version-control platforms.
 
 Manifest
 ========
@@ -82,48 +79,48 @@ Manifest
 A manifest is a file with all the meta-data required for an extension to be processed.
 This example is a good starting point to the ``blender_manifest.toml`` that should be inside the ``.zip``.
 
-  .. code-block:: toml
+.. code-block:: toml
 
-    schema_version = "1.0.0"
+   schema_version = "1.0.0"
 
-    # Example of manifest file for a Blender extension
-    # Change the values according to your extension
-    id = "my_example_extension"
-    version = "1.0.0"
-    name = "Test Extension"
-    tagline = "This is another extension"
-    maintainer = "Developer name <email@address.com>"
-    # Supported types: "add-on", "theme"
-    type = "add-on"
+   # Example of manifest file for a Blender extension
+   # Change the values according to your extension
+   id = "my_example_extension"
+   version = "1.0.0"
+   name = "Test Extension"
+   tagline = "This is another extension"
+   maintainer = "Developer name <email@address.com>"
+   # Supported types: "add-on", "theme"
+   type = "add-on"
 
-    # Optional: add-ons can list which resources they will require:
-    # * "files" (for access of any filesystem operations)
-    # * "network" (for internet access)
-    # * "camera" (to capture photos and videos)
-    # * "microphone" (to capture audio)
-    permissions = ["files", "network"]
+   # Optional: add-ons can list which resources they will require:
+   # * "files" (for access of any filesystem operations)
+   # * "network" (for internet access)
+   # * "camera" (to capture photos and videos)
+   # * "microphone" (to capture audio)
+   permissions = ["files", "network"]
 
-    # Optional link to documentation, support, source files, etc
-    # website = "http://extensions.blender.org/add-ons/my-example-package/"
+   # Optional link to documentation, support, source files, etc
+   # website = "http://extensions.blender.org/add-ons/my-example-package/"
 
-    # Optional list defined by Blender and server, see:
-    # https://docs.blender.org/manual/en/dev/extensions/tags.html
-    tags = ["Animation", "Sequencer"]
+   # Optional list defined by Blender and server, see:
+   # https://docs.blender.org/manual/en/dev/extensions/tags.html
+   tags = ["Animation", "Sequencer"]
 
-    blender_version_min = "4.2.0"
-    # Optional: maximum supported Blender version
-    # blender_version_max = "5.1.0"
+   blender_version_min = "4.2.0"
+   # Optional: maximum supported Blender version
+   # blender_version_max = "5.1.0"
 
-    # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
-    # https://docs.blender.org/manual/en/dev/extensions/licenses.html
-    license = [
-      "SPDX:GPL-2.0-or-later",
-    ]
-    # Optional: required by some licenses.
-    copyright = [
-      "2002-2024 Developer Name",
-      "1998 Company Name",
-    ]
+   # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
+   # https://docs.blender.org/manual/en/dev/extensions/licenses.html
+   license = [
+     "SPDX:GPL-2.0-or-later",
+   ]
+   # Optional: required by some licenses.
+   copyright = [
+     "2002-2024 Developer Name",
+     "1998 Company Name",
+   ]
 
 Required values:
 
@@ -142,14 +139,16 @@ Optional values:
    :blender_version_max: Maximum version of Blender that can run this.
    :website: Website for the extension.
    :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
-   :permissions: Add-ons can list which resources they require. The available options are ["files", "network", "camera", "microphone"].
+   :permissions: Add-ons can list which resources they require. The available options are
+      ["files", "network", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <tags>`.
 
 .. note::
 
-  All the values present in the manifest file must be filled (i.e., cannot be empty, nor text `""`, nor list `[]`).
+   All the values present in the manifest file must be filled
+   (i.e., cannot be empty, nor text ``""``, nor list ``[]``).
 
-  If you don't want to set one of the optional values just exclude it from the manifest altogether.
+   If you don't want to set one of the optional values just exclude it from the manifest altogether.
 ..
    Command-line
    ============
@@ -167,9 +166,9 @@ Third party extension sites
 
 Third party sites that wish to support extensions in Blender can do so in two ways:
 
-  #. Fork the entire `Extensions Website <https://projects.blender.org/infrastructure/extensions-website>`__
-     as a start point; or
-  #. Host a JSON file listing all the packages of your repository.
+#. Fork the entire `Extensions Website <https://projects.blender.org/infrastructure/extensions-website>`__
+   as a start point; or
+#. Host a JSON file listing all the packages of your repository.
 
 .. To generate a valid JSON file you can use the command-line tool:
 
@@ -183,22 +182,22 @@ Example of what the JSON is expected to look like:
 
 .. code:: json
 
-  {"blender_kitsu": {
-    "id": "1",
-    "name": "Blender Kitsu",
-    "tagline": "Pipeline management for projects collaboration",
-    "version": "0.1.5-alpha+f52258de",
-    "type": "add-on",
-    "archive_size": 856650,
-    "archive_hash": "sha256:3d2972a6f6482e3c502273434ca53eec0c5ab3dae628b55c101c95a4bc4e15b2",
-    "archive_url": "http://extensions.blender.org/media/files/ed/ed656b177b01999e6fcd0e37c34ced471ef88c89db578f337e40958553dca5d2.zip",
-    "blender_version_min": "4.2.0",
-    "maintainer": "Blender Studio",
-    "tags": ["Pipeline"],
-    "license": ["SPDX:GPL-3.0-or-later"],
-    "website": "http://extensions.blender.org/add-ons/blender-kitsu/",
-    "schema_version": "1.0.0"
-  }}
+   {"blender_kitsu": {
+     "id": "1",
+     "name": "Blender Kitsu",
+     "tagline": "Pipeline management for projects collaboration",
+     "version": "0.1.5-alpha+f52258de",
+     "type": "add-on",
+     "archive_size": 856650,
+     "archive_hash": "sha256:3d2972a6f6482e3c502273434ca53eec0c5ab3dae628b55c101c95a4bc4e15b2",
+     "archive_url": "https://extensions.blender.org/add-ons/blender-kitsu/0.1.0/download/",
+     "blender_version_min": "4.2.0",
+     "maintainer": "Blender Studio",
+     "tags": ["Pipeline"],
+     "license": ["SPDX:GPL-3.0-or-later"],
+     "website": "http://extensions.blender.org/add-ons/blender-kitsu/",
+     "schema_version": "1.0.0"
+   }}
 
 Just like for the manifest file, the optional fields (e.g., ``blender_version_max``) are either to have a value
 or should be omitted from the entries.
@@ -208,4 +207,4 @@ Even if the manifest points to the project specific website.
 
 .. note::
 
-  Any remote repository is expected to follow the latest `API <http://extensions.blender.org/api/swagger/>`__.
+   Any remote repository is expected to follow the latest `API <http://extensions.blender.org/api/swagger/>`__.
