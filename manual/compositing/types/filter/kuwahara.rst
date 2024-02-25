@@ -22,7 +22,7 @@ Image
    Standard color input.
 
 Size
-   Controls the size of the smoothing neighbourhood. Large values may introduce
+   Controls the size of the smoothing neighborhood. Large values may introduce
    artifacts for highly detailed areas. For the anisotropic method, the larger
    the size, the slower the filter.
 
@@ -50,11 +50,11 @@ Properties
 
 Type
    :Classic: A simple smoothing method that averages the local square
-      neighbourhood of the image while preserving edges. Produces blocky results
-      due to the square neighbourhood and provides no tuning parameters, but is
+      neighborhood of the image while preserving edges. Produces blocky results
+      due to the square neighborhood and provides no tuning parameters, but is
       faster to compute.
    :Anisotropic: A complex smoothing method that averages the local
-      neighbourhood of the image in the direction of the flow of the edges,
+      neighborhood of the image in the direction of the flow of the edges,
       thus preserving the edges in the output. Produces painterly-like results
       and provides multiple turning parameters, while being slower to compute.
 

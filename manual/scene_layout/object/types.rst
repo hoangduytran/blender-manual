@@ -40,7 +40,7 @@ New objects can be created with the *Add* menu in the 3D Viewport's header.
    See :doc:`Grease Pencil Primitives </grease_pencil/primitives>`
 
 :doc:`Armature </animation/armatures/index>`
-   Used for rigging 3D models to make them posable and animatable.
+   Used for rigging 3D models to make them pose-able and animatable.
 :doc:`Lattice </animation/lattice>`
    Non-renderable wireframes commonly used for the deformation of other objects
    with help of the :doc:`Lattice Modifier </modeling/modifiers/deform/lattice>`.

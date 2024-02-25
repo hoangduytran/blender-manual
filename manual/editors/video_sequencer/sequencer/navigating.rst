@@ -117,7 +117,7 @@ Sequence Render Animation
    specifically, they don't render Scene Strips, instead using the preview's
    :doc:`shading mode </editors/3dview/display/shading>` (which is initially Solid).
 
-   To output a video where the Scene Strips are rendered, use the *Render* menu in the topbar,
+   To output a video where the Scene Strips are rendered, use the *Render* menu in the top-bar,
    or change :menuselection:`Sidebar --> View --> Scene Strip Display --> Shading` to *Rendered*.
    The latter option is only available if the Video Sequencer is in the *Preview* or
    *Sequencer & Preview* mode.

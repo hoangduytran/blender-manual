@@ -49,7 +49,7 @@ the second image below gives an impression of what the diffuse shader "sees".
 To find the light that is reflected from this surface,
 we need to find the average color from all these pixels.
 Note the glossy highlight on the sphere,
-and the bright spot the light casts on the nearby wall. These hotspots are much brighter than
+and the bright spot the light casts on the nearby wall. These hot-spots are much brighter than
 other parts of the image and will contribute significantly to the lighting of this pixel.
 
 .. list-table::

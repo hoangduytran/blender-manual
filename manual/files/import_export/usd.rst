@@ -34,7 +34,7 @@ This means that the following meshes can be exported:
 .. note::
 
    To export the Blender scene as a `USDZ archive <https://openusd.org/release/spec_usdz.html>`__, set
-   the file extension of the output file to **.usdz**.  The exported USDZ package will be a zip archive
+   the file extension of the output file to ``.usdz``.  The exported USDZ package will be a zip archive
    containing the USD and its texture file dependencies.
 
 .. figure:: /images/files_import-export_usd_example.png
