@@ -48,19 +48,22 @@ Refine Method
 .. _bpy.types.Sculpt.detail_type_method:
 
 Detailing
-   Dyntopo uses three different detail methods to create dynamic detail to an object.
+   Dyntopo uses the following different detail methods to create dynamic detail on an object.
 
    :Relative Detail:
       This method uses a detail size based on the number of pixels, and in turn
       will create topology in that size. Zoom out big details, zoom in small fine details.
    :Constant Detail:
       To keep detail uniform across the entire object, Constant Detail can be used.
-      The Detail is based on the percentage of a single unit.
+      The detail is based on the percentage of a single unit.
    :Brush Detail:
       Giving more control over the topology, with this method you can create topology
       based on the brush size. You can increase and lower topology by resizing the brush itself.
       The detail size is based the size of the brush itself,
       where full detail will create topology the size of the brush radius itself.
+   :Manual Detail:
+      Similar to constant detail, this value sets a percentage value uniform across the object, but only
+      applies detailing changes when using Flood Fill.
 
 .. _bpy.ops.sculpt.detail_flood_fill:
 
