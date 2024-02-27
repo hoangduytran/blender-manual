@@ -9,11 +9,6 @@ The *Normal Edit* modifier affects (or generates) custom normals. It uses a few 
 to compute them (quite useful in game development and architecture areas), and mixes back those generated normals
 with existing ones.
 
-.. note::
-
-   This modifier requires custom normals to be enabled, which can be done by
-   enabling :ref:`Auto Smooth <auto-smooth>` in the :menuselection:`Properties --> Object Data --> Normals`.
-
 
 Options
 =======

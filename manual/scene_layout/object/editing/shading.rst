@@ -23,8 +23,7 @@ Activating the smoothing features does not actually modify the object's geometry
 it changes the way the shading is calculated across the surfaces (normals will be interpolated),
 giving the illusion of a smooth surface.
 
-Select the *Shade Flat* item in the *Object* menu
-to revert the shading back (normals will be constant)
+Using :ref:`bpy.ops.object.shade_flat` will revert the shading back (normals will be constant)
 to that shown in the first image below.
 
 .. list-table:: Example mesh flat (left) and smooth-shaded (right).
@@ -36,24 +35,29 @@ to that shown in the first image below.
      - .. figure:: /images/scene-layout_object_editing_shading_example-smooth.png
           :width: 200px
 
+Keep Sharp Edges
+   Do not clear sharp edges (which are redundant with objects shaded as flat or smooth).
+   This option is useful to not destroy data in case you want to revert changes later.
 
-Shade Auto Smooth
-=================
+
+.. _bpy.ops.object.shade_smooth_by_angle:
+
+Shade Smooth by Angle
+=====================
 
 .. reference::
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Shade Smooth`
+   :Menu:      :menuselection:`Object --> Shade Smooth by Angle`
 
-Automatically applies smooth shading to faces with a defined shallow angle and all other faces are sharp.
-This method works great for objects with both sharp and smooth areas.
+Set the sharpness of mesh edges based on the angle between the neighboring faces.
 
-Selecting the *Shade Flat* will revert the shading back to flat;
-additionally, pressing *Shade Smooth* will disable all flat normals,
+Angle
+   Maximum angle between face normals that will be considered as smooth.
+
+The *Shade Flat* operator will revert the shading back to flat;
+additionally, the *Shade Smooth* operator will disable all flat normals,
 making the entire object appear smooth again.
-
-When this operator is used it enables the :ref:`Auto Smooth <bpy.types.Mesh.use_auto_smooth>` property.
-See :ref:`modeling_meshes_normals_sharp_edge` for more details.
 
 
 .. _bpy.ops.object.shade_flat:
@@ -66,9 +70,10 @@ Shade Flat
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Shade Flat`
 
-As seen in the previous sections, polygons are central to Blender.
-Most objects are represented by polygons and truly curved objects
-are often approximated by polygon meshes. When rendering images,
-you may notice that these polygons appear as a series of small, flat faces.
-Sometimes this is a desirable effect for hard surfaces,
-but for organic surfaces you usually want your objects to look smooth.
+Signify the object to render and display faces uniformly,
+using the :ref:`Face Normals <modeling-meshes-structure-normals>`.
+This is usually desirable for objects with flat surfaces.
+
+Keep Sharp Edges
+   Do not clear sharp edges (which are redundant with objects shaded as flat or smooth).
+   This option is useful to not destroy data in case you want to revert changes later.

@@ -273,10 +273,16 @@ Built-in attributes always exist, and cannot be removed. Their data type and dom
      - Edge attribute used by the Subdivision Surface modifier.
        The values are limited to a range of 0 and 1.
 
+   * - ``sharp_edge``
+     - *Boolean*
+     - *Edge*
+     - Attribute determining if an edge should have flat (rather than smooth) shading enabled
+       in the viewport or a render.
+
    * - ``sharp_face``
      - *Boolean*
      - *Face*
-     - Attribute determining if a face should have sharp (rather than smooth) shading enabled
+     - Attribute determining if a face should have flat (rather than smooth) shading enabled
        in the viewport or a render.
 
    * - ``resolution``

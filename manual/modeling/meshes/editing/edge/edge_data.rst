@@ -73,7 +73,11 @@ Mark Sharp & Clear Sharp
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Edge --> Mark Sharp/Clear Sharp`
 
-The *Sharp* mark is used by the :ref:`split normals <auto-smooth>`
-and the :doc:`Edge Split </modeling/modifiers/generate/edge_split>` modifier,
-which are part of the smoothing or customized shading techniques.
-As seams, it is a property of edges, and these operators set or unset it for selected ones.
+Signifies the selected edge(s) as being "sharp".
+This edge attribute can either be set (mark) or unset (clear).
+
+This influences the rendering of :ref:`modeling-meshes-structure-normals`
+to appear flat if smooth shading is enabled for the connecting face or object.
+This attribute can also be used by many modifiers or operators to mask their effect.
+
+Internally, this uses the :ref:`sharp edge attribute <geometry-nodes_builtin-attributes>`.

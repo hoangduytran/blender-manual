@@ -82,6 +82,7 @@ Node Types
    :titlesonly:
 
    hair/index.rst
+   normals/index.rst
 
 
 .. tip::

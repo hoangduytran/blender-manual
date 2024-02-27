@@ -146,4 +146,4 @@ projection in return for being significantly slower.
 Instead of finding the closest point, it searches for the nearest point
 that has its interpolated smooth normal pointing towards or away from the original point position.
 Non-manifold boundary edges are specially handled as infinitely thin cylinders
-that emit normals in all perpendicular directions. Ignores flat shading and auto smooth settings.
+that emit normals in all perpendicular directions; ignores flat shading.

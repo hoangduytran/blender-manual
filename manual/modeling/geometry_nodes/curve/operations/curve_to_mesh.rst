@@ -17,8 +17,7 @@ like ``sharp_face``, will be transferred to the correct domain as well.
 
 .. tip::
 
-   The output mesh has :ref:`auto smooth <auto-smooth>` set
-   and :ref:`sharp edges <modeling_meshes_normals_sharp_edge>` from
+   The output mesh has :ref:`sharp edges <geometry-nodes_builtin-attributes>` set from
    the profile curve tagged automatically. If any splines in the profile curve
    are Bézier splines and any of the control points use *Free* or *Vector* handles,
    the corresponding edges will be shaded sharp.

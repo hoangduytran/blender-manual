@@ -49,14 +49,17 @@ Tool Settings
 The node group inputs will be exposed as in the :doc:`Adjust Last Operation </interface/undo_redo>` panel.
 
 
-Supported Modes and Data-Types
-==============================
+.. _modeling-geometry_nodes-tools_contexts:
+
+Supported Modes & Data-Types
+============================
 
 Node groups must specify which modes and object types they support.
 This helps to determine where the tool is available in the user interface.
-These properties can be configured in popover menus in the :doc:`/editors/geometry_node` when in the *Tool* context.
+These properties can be configured in popover menus in the
+:ref:`Geometry Node editor <editors-geometry_nodes-tool_context>` when in the *Tool* context.
 
-Currently only Edit and Sculpting modes are supported, and only for the Mesh and Hair Curves object types.
+Currently only Object, Edit, and Sculpting modes are supported, and only for the Mesh and Hair Curves object types.
 
 
 Tool-specific Nodes

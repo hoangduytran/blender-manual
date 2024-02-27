@@ -234,3 +234,6 @@ RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/combine_xyz
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/seperate_xyz.html" "^/manual/{lang}/{version}/compositing/types/vector/seperate_xyz.html"
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_shade_smooth.html" "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_face_smooth.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_to_mesh.html" "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/volume_to_mesh.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_cube.html" "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/primatives/volume_cube.html"

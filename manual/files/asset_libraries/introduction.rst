@@ -201,12 +201,17 @@ Clear Asset (Set Fake User)
    and still be sure it is not lost when saving the blend-file.
 
 
+.. _assets-bundled:
+
 Bundled Assets
 ==============
 
 Blender includes many assets out of the box, these are contained in the "Essentials" library.
-This library contains a catalog of hair node groups for use with geometry nodes.
-Read more about these node groups in the :doc:`Geometry Nodes </modeling/geometry_nodes/hair/index>` section.
+
+Included in this library are:
+
+- :doc:`Hair node groups </modeling/geometry_nodes/hair/index>`
+- :doc:`/modeling/geometry_nodes/normals/smooth_by_angle`
 
 
 .. _asset-libraries-design-limitations:

@@ -196,14 +196,13 @@ On export, for every mesh:
 
 On import, when the Alembic mesh contains:
 
-- Loop normals (``kFacevaryingScope``) are used as custom loop normals, and enable *Auto Smooth* to have
-  Blender actually use them.
+- Loop normals (``kFacevaryingScope``) are used as custom loop normals.
 - Vertex normals (``kVertexScope`` or ``kVaryingScope``) are convert to loop normals, and handle as above.
 - If there are no normals then the mesh is marked as smooth.
 - Unsupported normal types (``kConstantScope``, ``kUniformScope``, ``kUnknownScope``) are handled as *no normals*.
 
-When an imported mesh does not contain normals, the final look can be controlled by enabling
-the :ref:`Auto Smooth <auto-smooth>` checkbox and altering the threshold angle.
+When an imported mesh does not contain normals, the final look can be controlled using the
+:ref:`Normal's Shading <modeling-meshes-structure-normals-shading>`.
 
 
 Handling Time

@@ -117,11 +117,15 @@ Tool
    The node group is used as a :doc:`/modeling/geometry_nodes/tools`.
 
 
+.. _editors-geometry_nodes-tool_context:
+
 Tool Context
 ============
 
 These popover menus are displayed in the header when the tool context is enabled.
 These properties determine where the tool is available in the user interface.
+
+See :ref:`modeling-geometry_nodes-tools_contexts` for more information.
 
 
 Types
@@ -145,12 +149,17 @@ Modes
 
 The :doc:`/editors/3dview/modes` the tool supports.
 
+.. _bpy.types.GeometryNodeTree.is_mode_object:
+
+Object Mode
+   The node group can be used in Object mode.
+
 .. _bpy.types.GeometryNodeTree.is_mode_edit:
 
 Edit Mode
-   The node group is used in edit mode.
+   The node group can be used in edit mode.
 
 .. _bpy.types.GeometryNodeTree.is_mode_sculpt:
 
 Sculpt Mode
-   The node group is used in :doc:`Sculpt Mode </sculpt_paint/sculpting/index>`.
+   The node group can be used in :doc:`Sculpt Mode </sculpt_paint/sculpting/index>`.

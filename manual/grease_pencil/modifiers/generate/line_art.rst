@@ -108,7 +108,7 @@ Crease
 
    Crease Threshold
       Angles smaller than this will be treated as creases.
-      Crease angle priority: object line art crease override > mesh auto smooth angle > line art default crease.
+      Crease angle priority: object line art crease override > line art default crease.
 
 .. _bpy.types.LineartGpencilModifier.use_intersection:
 
