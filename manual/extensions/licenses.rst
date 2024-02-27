@@ -37,7 +37,10 @@ In those cases a few variant versions of GNU GPL are also accepted. Here are all
 Creative Commons
 ================
 
-Assets inside an extension can be either public domain, or creative commons:
+The most popular creative commons license for assets is either `Public Domain (CC0) <https://spdx.org/licenses/CC0-1.0.html>`__ 
+or `CC-BY <https://spdx.org/licenses/CC-BY-SA-4.0.html>`__.
+
+Other supported creative commons licenses are:
 
 - `CC0-1.0 Universal (CC0 1.0) Public Domain Dedication <https://spdx.org/licenses/CC0-1.0.html>`__.
 - `Creative Commons Attribution 1.0 Generic <https://spdx.org/licenses/CC-BY-1.0.html>`__.
