@@ -30,12 +30,15 @@ Install
 They are different ways to install an extension:
 
 - **Install from the Website**: Drag the installation URL into Blender.
-- **Install from Clipboard**: Copy the URL from the download link on the website.
 - **Install from Blender**: From Blender search for the extension name and click on Install.
 - **Install from Disk**: For packages saved locally (advanced option, from the Settings menu).
 
 Any installed extension can be removed. This is a permanent change though.
 To stop an extension temporarily it is better to Disable it instead.
+
+.. note::
+
+   You can *Install from Disk* by drag and dropping an extension ``.zip`` package into Blender.
 
 Update
 ======
@@ -66,8 +69,9 @@ Filter
 
 The available filtering options are:
 
-- Enabled Extensions Only
-- Installed Extensions Only
+- Enabled Extensions
+- Installed Extensions
+- Legacy Add-ons
 
 Filter by Type
 ==============
