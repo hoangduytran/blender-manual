@@ -33,3 +33,4 @@ Other third party sites can also be supported, as long as they follow the Extens
    Getting started <getting_started.rst>
    Compatible licenses <licenses.rst>
    Supported tags <tags.rst>
+   Add-ons <addons.rst>

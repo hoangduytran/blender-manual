@@ -28,7 +28,7 @@ The expected files depend on the extension type.
 Add-on extension
 ++++++++++++++++
 
-Add-ons need at least the manifest and an ``__init__.py`` file,
+:doc:`Add-ons <addons>` need at least the manifest and an ``__init__.py`` file,
 while more complex add-ons have a few different .py files or wheels together.
 
 .. code-block:: text
