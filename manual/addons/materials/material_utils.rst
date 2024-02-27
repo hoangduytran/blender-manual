@@ -69,8 +69,6 @@ Specials (star icon)
       Todo.
    Join by Material
       Todo.
-   Set Auto Smooth
-      Activate :ref:`Auto Smooth <auto-smooth>`.
    Slot to Top/Slot to Bottom
       Move the slot to top or bottom of the stack.
 

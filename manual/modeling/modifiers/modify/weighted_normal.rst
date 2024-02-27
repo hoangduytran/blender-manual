@@ -5,15 +5,10 @@
 Weighted Normal Modifier
 ************************
 
-This modifier changes the custom normals of a mesh, using various selectable methods.
+This modifier changes the :ref:`custom normals <modeling_meshes_normals_custom>`
+of a mesh, using various selectable methods.
 This can be useful to make some faces appear very flat during shading, among other effects.
-See :doc:`Normals </modeling/meshes/editing/mesh/normals>` for a description of normals
-and custom normals.
-
-.. note::
-
-   This modifier requires custom normals to be enabled, which can be done by
-   enabling :ref:`Auto Smooth <auto-smooth>` in the :menuselection:`Properties --> Object Data --> Normals`.
+See :doc:`Normals </modeling/meshes/editing/mesh/normals>` for a description of normals and custom normals.
 
 
 Options
@@ -51,7 +46,7 @@ Threshold
    they will get equal weights.
 
 Keep Sharp
-   Preserve :ref:`sharp edges <modeling_meshes_normals_sharp_edge>`,
+   Preserve :ref:`sharp edges <geometry-nodes_builtin-attributes>`,
    though smoothing will still happen if there are multiple faces between any two sharp edges.
 
 Face Influence

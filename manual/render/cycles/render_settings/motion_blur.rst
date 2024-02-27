@@ -73,6 +73,5 @@ The default mapping is set to when shutter opens and closes instantly.
 Limitations
 ===========
 
-- Deformation motion blur does not work on objects with :ref:`Auto Smooth <bpy.types.Mesh.use_auto_smooth>` enabled.
 - Camera motion blur does not work for :doc:`Orthographic Cameras </render/cameras>`.
 - Motion blur does not take into account the movement of :doc:`Lights </render/lights/light_object>`.

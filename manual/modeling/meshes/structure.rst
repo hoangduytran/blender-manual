@@ -68,6 +68,8 @@ In geometry, a normal is a direction or line that is perpendicular to something,
 typically a triangle or surface but can also be relative to a line,
 a tangent line for a point on a curve, or a tangent plane for a point on a surface.
 
+Normals help to determine the shading of the mesh among other things.
+
 .. figure:: /images/modeling_meshes_structure_viewport.png
    :width: 350px
 
@@ -79,50 +81,30 @@ The visualization can be activated, in Edit Mode,
 in the :ref:`Mesh Display Viewport Overlays panel <mesh-display-normals>`.
 
 
-.. _modeling_meshes_editing_normals_properties:
+.. _modeling-meshes-structure-normals-shading:
 
-Properties
-----------
+Shading
+-------
 
-.. reference::
+Surface normals play a fundamental role in determining how light interacts with 3D objects
+and thus greatly influence the shading of those objects. Normals can be shaded smooth or flat.
 
-   :Panel:     :menuselection:`Properties --> Object Data --> Normals`
+When a mesh uses flat shading, the faces are rendered and displayed faces uniformly.
+This is usually desirable for objects with flat surfaces such as a cube or pyramid.
 
-.. figure:: /images/modeling_meshes_structure_normals-panel.png
+When a mesh uses smooth shading, the normals are interpolated cross the vertices of a polygonal mesh,
+smooth transitions between adjacent polygons can be achieved, resulting in a more realistic appearance.
 
-   Normals panel.
+By default face normals have flat shading however, this can be adjusted either for the whole object or per face.
 
-.. _auto-smooth:
-.. _bpy.types.Mesh.use_auto_smooth:
-.. _bpy.types.Mesh.auto_smooth_angle:
+To adjust the the shading of the whole object, use:
 
-Auto Smooth
-   Edges where an angle between the faces is smaller than specified in the *Angle* field will be smoothed,
-   when shading of these parts of the mesh is set to smooth. This is an easier way to combine smooth and sharp edges.
+- :ref:`bpy.ops.object.shade_smooth` -- To mark the whole object as smooth
+- :ref:`bpy.ops.object.shade_smooth_by_angle` -- To mark portions of the object as smooth
 
-.. figure:: /images/modeling_meshes_structure_example-auto-smooth.png
-   :width: 250px
+To revert to flat shading, use :ref:`bpy.ops.object.shade_flat`
 
-   Example mesh with *Auto Smooth* enabled.
-
-
-.. _modeling_meshes_normals_sharp_edge:
-
-Advanced Smooth Shading & Sharp Edges
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-By default in Blender, with basic normal computing behavior, a sharp edge is always defined
-as an edge being either non-manifold, or having at least one of its faces defined as flat.
-
-Enabling the *Auto Smooth* setting adds an extra parameter to define a sharp edge,
-the *Angle* threshold between two neighbor faces, above which the edge will always be considered as sharp.
-
-*Auto Smooth* also enables *Custom Split Normals* handling, which can be either defined (and edited)
-as a :doc:`mesh data layer </modeling/meshes/editing/mesh/normals>`, or generated on the fly by modifiers.
-In any case, when a mesh gets custom normals, they always supersede the default ones computed by *Auto Smooth*.
-
-Sharp edges may still be used by the custom normals modifiers to compute their normals,
-depending on their settings.
+The shading of objects can also be adjusted per face, edge, or vertex.
 
 
 .. _modeling_meshes_normals_custom:
@@ -143,25 +125,6 @@ per a set of neighbor face corners, or per vertex.
 
    The computation of *Custom Split Normals* can be disabled to improve performance.
    This option can be found in the :ref:`Simplify Rendering Settings <bpy.types.RenderSettings.use_simplify_normals>`.
-
-
-Enabling Custom Split Normals
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Normals --> Split`
-
-Enables custom split normals.
-Also, any of the custom normal editing tools (see below) will, as a convenience,
-enable custom normals if they are not already enabled.
-
-.. note::
-
-   This has the side effect of enabling :ref:`Auto Smooth <auto-smooth>`, as that is necessary to use custom normals.
-   Once you have custom normals, the angle threshold of the *Auto Smooth* behavior is disabled --
-   all non-sharp-tagged edges will be considered as smooth, disregarding the angle between their faces.
 
 
 Editing Custom Split Normals

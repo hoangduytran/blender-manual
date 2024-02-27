@@ -112,16 +112,6 @@ other attributes like vertex groups.
 See :doc:`Attributes Reference </modeling/geometry_nodes/attributes_reference>` for more information.
 
 
-Normals
-=======
-
-In geometry, a normal is a direction or line that is perpendicular to something,
-typically a triangle or surface but can also be relative to a line, a tangent line for a point on a curve,
-or a tangent plane for a point on a surface. Normals help to determine the shading of the mesh among other things.
-
-See :ref:`Normal Properties <modeling_meshes_editing_normals_properties>` for more information.
-
-
 Texture Space
 =============
 

@@ -259,8 +259,8 @@ Harden Normals
    match the surrounding faces, and the normals of the surrounding faces are not affected.
    This will keep the surrounding faces flat (if they were before),
    with the bevel faces shading smoothly into them. For this effect to work,
-   you need custom normals data, which requires *Auto Smooth* option to be enabled
-   (see :doc:`Normals </modeling/meshes/editing/mesh/normals>`).
+   a mesh must have :ref:`custom split normals <modeling_meshes_normals_custom>`.
+   As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.
 
 Mark
    Seam
