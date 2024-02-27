@@ -63,5 +63,5 @@ In some exceptional cases other licenses may be required. Extensions are still a
 - `MIT License <https://spdx.org/licenses/MIT.html>`__.
 - `MIT No Attribution <https://spdx.org/licenses/MIT-0.html>`__.
 - `Mozilla Public License 2.0 <https://spdx.org/licenses/MPL-2.0.html>`__.
-- `Pixar Open RenderMan License <https://spdx.org/licenses/Pixar.html>`__.
+- `Pixar License <https://spdx.org/licenses/Pixar.html>`__.
 - `Zlib License <https://spdx.org/licenses/Zlib.html>`__.
