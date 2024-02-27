@@ -8,7 +8,11 @@
 Extensions Tags
 ###############
 
+A different set of tags is available for the different extensions types.
 This is the list of the tags currently supported:
+
+Add-ons
+#######
 
 * 3D View
 * Add Mesh
@@ -35,3 +39,12 @@ This is the list of the tags currently supported:
 * Text Editor
 * UV
 * User Interface
+
+Themes
+######
+
+* Dark
+* Light
+* Print
+* Accessibility
+* High Contrast
