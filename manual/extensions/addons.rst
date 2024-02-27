@@ -4,9 +4,9 @@
 
 .. index:: Add-ons Extensions
 .. index:: Add-ons
-.. _bpy.types.Addon:
-.. _bpy.ops.wm.addon:
-.. _bpy.types.WindowManager.addon:
+.. .. _bpy.types.Addon:
+.. .. _bpy.ops.wm.addon:
+.. .. _bpy.types.WindowManager.addon:
 
 #######
 Add-ons
@@ -22,8 +22,8 @@ Add-ons
 
    For the deprecated information about individual add-ons bundled with Blender visit :doc:`Add-ons </addons/index>`.
 
-*Add-ons* let you extend Blender's functionality using Python. 
-Most of the time you can get add-ons as part of the :doc:`Extensions <index>` system. 
+*Add-ons* let you extend Blender's functionality using Python.
+Most of the time you can get add-ons as part of the :doc:`Extensions <index>` system.
 
 .. tip::
 
