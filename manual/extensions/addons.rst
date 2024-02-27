@@ -47,8 +47,8 @@ the *File Paths* section of the *Preferences*. To create a personal script direc
 Now when you install add-ons you can select the *Target Path* when installing 3rd party scripts.
 Blender will copy newly installed add-ons under the directory selected in your Preferences.
 
-Legacy Addons vs Extension Add-ons
-##################################
+Legacy vs Extension Add-ons
+###########################
 
 With the introduction of Extensions in Blender 4.2, the old way of creating add-ons is considered deprecated. The changes are rather small, but they effectively affect all the existing add-ons.
 
