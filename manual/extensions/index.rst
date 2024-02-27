@@ -4,9 +4,9 @@
 
 :orphan:
 
-##############
-  Extensions
-##############
+##########
+Extensions
+##########
 
 .. important::
 

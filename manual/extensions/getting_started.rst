@@ -4,9 +4,9 @@
 
 :orphan:
 
-##########################
-  How to Create Extensions
-##########################
+########################
+How to Create Extensions
+########################
 
 Creating an extension takes only a few steps:
 

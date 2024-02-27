@@ -4,9 +4,9 @@
 
 :orphan:
 
-######################
-  Extension Licenses
-######################
+##################
+Extension Licenses
+##################
 
 The `Blender Extensions Platform <https://extensions.blender.org>`__ only supports
 free and open source extensions compatible with Blender's license:

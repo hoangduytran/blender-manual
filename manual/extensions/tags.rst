@@ -4,9 +4,9 @@
 
 :orphan:
 
-###################
-  Extensions Tags
-###################
+###############
+Extensions Tags
+###############
 
 This is the list of the tags currently supported:
 
