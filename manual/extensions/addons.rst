@@ -50,8 +50,8 @@ Blender will copy newly installed add-ons under the directory selected in your P
 Legacy vs Extension Add-ons
 ###########################
 
-With the introduction of Extensions in Blender 4.2, the old way of creating add-ons is considered deprecated. The
-changes are rather small, but they effectively affect all the existing add-ons.
+With the introduction of Extensions in Blender 4.2, the old way of creating add-ons is considered deprecated.
+While the changes are rather small they impact existing add-ons.
 
 In order to allow a smooth transition process, the so-called legacy add-ons will continue to be supported by Blender.
 They can be installed via :doc:`Install legacy Add-on </editors/preferences/extensions>` button in the User
