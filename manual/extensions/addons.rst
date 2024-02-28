@@ -14,7 +14,7 @@ Add-ons
 
 .. important::
 
-   This page is part of :doc:`Extensions <index>`, and  is only available experimentally in
+   This page is part of :doc:`Extensions <index>`, and is only available experimentally in
    `daily builds <https://builder.blender.org/download/daily/>`__ of
    `Blender 4.2 <https://projects.blender.org/blender/blender/milestone/19>`__.
    Please enable "Extensions" on the :doc:`Experimental Preferences </editors/preferences/experimental>`
@@ -39,7 +39,7 @@ the *File Paths* section of the *Preferences*. To create a personal script direc
 
 #. Create an empty directory in a location of your choice (e.g. ``my_scripts``).
 #. Add a subdirectory under ``my_scripts`` called ``addons``
-    (it *must* have this name for Blender to recognize it).
+   (it *must* have this name for Blender to recognize it).
 #. Open the *File Paths* section of the *Preferences*.
 #. Set the *Scripts* file path to point to your script directory (e.g. ``my_scripts``).
 #. Save the preferences and restart Blender for it to recognize the new add-on location.
@@ -53,7 +53,7 @@ Legacy vs Extension Add-ons
 With the introduction of Extensions in Blender 4.2, the old way of creating add-ons is considered deprecated. The
 changes are rather small, but they effectively affect all the existing add-ons.
 
-In order to allow a smooth transition process, the so-called legacy add-ons will continue to be supported by Blender. 
+In order to allow a smooth transition process, the so-called legacy add-ons will continue to be supported by Blender.
 They can be installed via :doc:`Install legacy Add-on </editors/preferences/extensions>` button in the User
 Preferences.
 
@@ -72,8 +72,8 @@ Converting a Legacy Add-on into an Extension
 
 .. note::
 
-  For testing it is import to :doc:`install the extension from disk </editors/preferences/extensions>` and check if
-  everything is working well. This will get you as close to the final experience as possible.
+   For testing it is import to :doc:`install the extension from disk </editors/preferences/extensions>` and check if
+   everything is working well. This will get you as close to the final experience as possible.
 
 Extensions and Namespace
 ========================
@@ -86,14 +86,14 @@ For example, now instead of ``kitsu`` the module name would be ``bl_ext.RemoteRe
 
 This has a few implications for preferences and module imports.
 
-User Preferences and __package__
---------------------------------
+User Preferences and ``__package__``
+------------------------------------
 
-  :before: ``bpy.context.preferences.addons['kitsu']``
-  :now: ``bpy.context.preferences.addons[__package__]``
+   :before: ``bpy.context.preferences.addons["kitsu"]``
+   :now: ``bpy.context.preferences.addons[__package__]``
 
 
-Add-ons can define their own preferences, and can access them using the complete module name. This is done by using 
+Add-ons can define their own preferences, and can access them using the complete module name. This is done by using
 ``__package__``.
 
 This was already supported in the legacy add-ons, but not reinforced. As such this can break backward compatibility.
@@ -101,25 +101,25 @@ This was already supported in the legacy add-ons, but not reinforced. As such th
 Relative Imports
 ----------------
 
-  :before: ``from kitsu import utils``
-  :now: ``from . import utils``
+   :before: ``from kitsu import utils``
+   :now: ``from . import utils``
 
-Importing packages within the add-on module need to use relative paths. This is a standard Python feature and only
-appliable for add-ons that have multiple folders.
+Importing packages within the add-on module need to use relative paths.
+This is a standard Python feature and only applicable for add-ons that have multiple folders.
 
 This was already supported in the legacy add-ons, but not reinforced. As such this can break backward compatibility.
 
 Wheels
 ======
 
-Extensions are supposed to be self-contained, and as such must come with all its depedencies. When relying on 
+Extensions are supposed to be self-contained, and as such must come with all its dependencies. When relying on
 external modules they should be bundled together by using `wheels <https://pythonwheels.com/>`__.
 
-Wheels themselves can lead to version conflicts, since different add-ons could require different versions of the same 
+Wheels themselves can lead to version conflicts, since different add-ons could require different versions of the same
 library.
 
-Luckily there is an alternative way of loading wheels that doesn't affect sys.modules or sys.path. This way an add-on 
-can load its own version of an external library from its bundled wheel file, without no other add-on having access to 
-it.
+Luckily there is an alternative way of loading wheels that doesn't affect ``sys.modules`` or ``sys.path``.
+This way an add-on can load its own version of an external library from its bundled wheel file,
+without no other add-on having access to it.
 
 See Flamenco add-on for an `implementation example <https://projects.blender.org/studio/flamenco/src/branch/main/addon/flamenco/wheels/__init__.py>`__.
