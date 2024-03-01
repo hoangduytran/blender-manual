@@ -18,6 +18,7 @@ Add-ons
 * Add Mesh
 * Add Curve
 * Animation
+* Bake
 * Compositing
 * Development
 * Game Engine
@@ -34,6 +35,7 @@ Add-ons
 * Render
 * Rigging
 * Scene
+* Sculpt
 * Sequencer
 * System
 * Text Editor
