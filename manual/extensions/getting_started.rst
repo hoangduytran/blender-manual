@@ -164,7 +164,6 @@ Example of what the JSON is expected to look like:
 .. code:: json
 
    {"blender_kitsu": {
-     "id": "1",
      "name": "Blender Kitsu",
      "tagline": "Pipeline management for projects collaboration",
      "version": "0.1.5-alpha+f52258de",
