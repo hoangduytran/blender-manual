@@ -109,6 +109,11 @@ Step
    Allows displaying one point for every *n* frames on the path.
    Mostly useful when you enable the frame number display (see below), to avoid cluttering the 3D Viewport.
 
+Bake to Active Camera
+   When enabled the motion path is calculated in screen space for the active scene camera. Note that the resulting motion path will only 
+   be useful for that single camera. Switching cameras using markers is not supported. It will only bake to the camera
+   that is active when the bake was started.
+
 .. _bpy.types.MotionPath.frame_start:
 .. _bpy.types.MotionPath.frame_end:
 
