@@ -117,11 +117,18 @@ within an animation. Like with most animation editors, markers are shown at the 
 For descriptions of the different marker tools, see :ref:`Editing Markers <animation-markers-editing>`.
 
 
-Edit Menu
----------
+Track Menu
+----------
+
+Contains tools for working with NLA tracks.
+For descriptions of the different editing tools, see :doc:`Editing Tracks </editors/nla/editing/track>`.
+
+
+Strip Menu
+----------
 
 Contains tools for working with NLA strips.
-For descriptions of the different editing tools, see :doc:`Editing Strips </editors/nla/editing>`.
+For descriptions of the different editing tools, see :doc:`Editing Strips </editors/nla/editing/strip>`.
 
 
 Add
@@ -134,22 +141,9 @@ Add Transition :kbd:`Shift-T`
 Add Sound Strip :kbd:`Shift-K`
    Add an NLA-strip controlling when the speaker object plays its sound clip.
 
-Add Meta-Strip :kbd:`Ctrl-G`
-   Group selected NLA-strips into a meta strip.
-   A meta strip will group the selected NLA-strips of the same NLA-track.
-Remove Meta-Strip :kbd:`Ctrl-Alt-G`
-   Ungroup selected Meta strips.
-
-.. _bpy.ops.nla.tracks_add:
-
-Add Tracks
-   Add a new NLA-Track on top of the selected object.
-Add Track Above Selected
-   Add a new NLA-Track just above the selected NLA-track.
-
 .. _bpy.ops.nla.selected_objects_add:
 
-Include Selected Objects
+Selected Objects
    Let the selected objects appear in the NLA Editor. This is done by adding
    an empty animation data object to the selected object.
 
