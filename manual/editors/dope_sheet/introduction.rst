@@ -142,6 +142,8 @@ Sliding Keyframes
 See the Key menu for a full list of selection tools.
 
 
+.. _editors-dope_sheet-channels_region:
+
 Channels Region
 ---------------
 
@@ -167,9 +169,37 @@ a second one concerning the action data-blocks, and a few other tools
 View Menu
 ^^^^^^^^^
 
+Sidebar :kbd:`N`
+   Show or hide the :ref:`Sidebar Region <ui-region-sidebar>`.
 Adjust Last Operation
    Displays a pop-up panel to alter properties of the last
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
+Channels
+   Show or hide the :ref:`Channels Region <editors-dope_sheet-channels_region>`.
+
+----------
+
+Frame Selected :kbd:`NumpadPeriod`
+   Reset viewable area to show selected keyframes.
+Frame All :kbd:`Home`
+   Reset viewable area to show all keyframes.
+Go to Current Frame :kbd:`Numpad0`
+   Centers the area to the Playhead.
+
+----------
+
+Multi-Word Match Search
+   Fuzzy/Multi-Word name filtering matches word snippets/partial words,
+   instead of having to match everything. It breaks down the search text based on whitespace placement.
+   e.g. "lo ro" will filter all location and rotation, while "lc rt" will *not* work.
+
+----------
+
+Realtime Updates
+   When transforming keyframes, changes to the animation data are propagated to other views.
+Show Sliders
+   A toggle option that shows the value sliders for the channels.
+   See the Fig. :ref:`fig-dope-sheet-action`.
 
 .. figure:: /images/animation_keyframes_introduction_interpolation.png
    :align: right
@@ -187,13 +217,52 @@ Show Handles and Interpolation
 
    Extreme markers.
 
-Show Extremes
+Show Curve Extremes
    Detect keys where the curve changes direction based on comparing with the adjacent key values,
    and display that by changing the keyframe icons to resemble an arrow.
    A muted version of the icon is used if the curve overshoots the extreme,
    or for groups with different results for contained curves.
+Auto-Merge Keyframes
+   Automatically merge nearby keyframes.
 
-See Graph editor's :ref:`graph-view-menu`.
+----------
+
+Show Markers
+   Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
+   and markers operators are not available in this editor.
+Show Seconds :kbd:`Ctrl-T`
+   Show timing in seconds not frames.
+Sync Visible Range
+   It synchronizes the horizontal panning and scale of the current editor
+   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
+   That way you always have these editors showing the same section of frames.
+
+----------
+
+Set Preview Range :kbd:`P`
+   Interactively define frame range used for playback.
+   Allows you to define a temporary preview range to use for animation playback
+   (this is the same thing as the *Playback Range* option of
+   the :ref:`Timeline editor header <animation-editors-timeline-headercontrols>`).
+Clear Preview Range :kbd:`Alt-P`
+   Clears the preview range.
+Set Preview Range to Selected :kbd:`Ctrl-Alt-P`
+   Sets the preview range to playback the selected NLA strips.
+
+----------
+
+Toggle Graph Editor
+   Changes the area's editor to the :doc:`/editors/graph_editor/index`.
+
+----------
+
+Area
+   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   documentation for more information.
+
+.. seealso::
+
+   - See Timeline's :ref:`timeline-view-menu`.
 
 
 Markers Menu
@@ -245,11 +314,6 @@ Show Hidden
 Only Show Errors
    Only include curves and drivers that are disabled or have errors.
    Useful for debugging.
-
-F-Curve Name Filter
-   Fuzzy/Multi-Word name filtering matches word snippets/partial words,
-   instead of having to match everything. It breaks down the search text based on whitespace placement.
-   e.g. "lo ro" will filter all location and rotation, while "lc rt" will *not* work.
 
 Filter by Type
    Filter curves by property type.

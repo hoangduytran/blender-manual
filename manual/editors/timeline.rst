@@ -288,19 +288,40 @@ The *View Menu* controls what you see, and what it looks like.
 Adjust Last Operation
    Displays a pop-up panel to alter properties of the last
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
+Channels
+   Show or hide the Channels Region.
+
+----------
+
+Frame All :kbd:`Home`
+   Maximize the area based on the Animation Range.
+Go to Current Frame :kbd:`Numpad0`
+   Centers the Timeline to the Playhead.
+
+----------
+
+Show Markers
+   Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
+   and markers operators are not available in this editor.
 Show Seconds :kbd:`Ctrl-T`
    Whether to show the time in the X axis and the *Playhead* as
    frames (based on the FPS) or as seconds.
 Sync Visible Range
    It synchronizes the horizontal panning and scale of the current editor
-   with the other editors (Graph, Dope Sheet, NLA and Sequencer) when this option is set.
+   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
    That way you always have these editors showing the same section of frames.
-Show Markers
-   Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
-   and markers operators are not available in this editor.
-Only Keyframes from Selected Channels
-   For *Armatures*, this will display the object keyframes,
-   and the keyframes for the active and selected pose bones.
+
+----------
+
+Only Show Selected
+   Only include keyframes related to the selected item this item
+   could be sequencer strips, nodes, objects, or any other type of data.
+Only Show Errors
+   Only include curves and drivers that are disabled or have errors.
+   Useful for debugging.
+
+----------
+
 Cache
    Show Cache
       Show all enabled types.
@@ -314,10 +335,11 @@ Cache
 
       Timeline Cache.
 
-Frame All :kbd:`Home`
-   Maximize the area based on the Animation Range.
-Go to Current Frame :kbd:`Numpad0`
-   Centers the Timeline to the Playhead.
+----------
+
+Area
+   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   documentation for more information.
 
 
 Markers Menu

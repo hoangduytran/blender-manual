@@ -17,13 +17,32 @@ Header
 View Menu
 ---------
 
+Sidebar :kbd:`N`
+   Show or hide the :ref:`Sidebar Region <ui-region-sidebar>`.
 Adjust Last Operation
    Displays a pop-up panel to alter properties of the last
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
+Channels
+   Show or hide the Channels Region.
+
+----------
+
+Frame Selected :kbd:`NumpadPeriod`
+   Reset viewable area to show selected strips.
+Frame All :kbd:`Home`
+   Reset viewable area to show all strips.
+Go to Current Frame :kbd:`Numpad0`
+   Centers the area to the Playhead.
+
+----------
+
 Realtime Updates
    When transforming NLA-strips, the changes to the animation are propagated to other views.
 Show Control F-Curves
    Overlays a graph of the NLA-strip's influence on top of the strip.
+
+----------
+
 Show Markers
    Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
    and markers operators are not available in this editor.
@@ -33,15 +52,35 @@ Show Local Markers
    .. figure:: /images/editors_nla_tracks_local_markers.png
 
       Local markers shown on a strip.
+Show Seconds :kbd:`Ctrl-T`
+   Show timing in seconds not frames.
+Sync Visible Range
+   It synchronizes the horizontal panning and scale of the current editor
+   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
+   That way you always have these editors showing the same section of frames.
+
+----------
 
 Set Preview Range :kbd:`P`
-   Selecting a preview range by dragging in the NLA Editor.
+   Interactively define frame range used for playback.
+   Allows you to define a temporary preview range to use for animation playback
+   (this is the same thing as the *Playback Range* option of
+   the :ref:`Timeline editor header <animation-editors-timeline-headercontrols>`).
 Clear Preview Range :kbd:`Alt-P`
-   Unset the preview range
-Auto Select Preview Range :kbd:`Ctrl-Alt-P`
-   Automatically select the preview range based on the range of keyframes.
+   Clears the preview range.
+Set Preview Range to Selected :kbd:`Ctrl-Alt-P`
+   Sets the preview range to playback the selected NLA strips.
 
-.. seealso:: See Timeline's :ref:`timeline-view-menu`.
+
+----------
+
+Area
+   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   documentation for more information.
+
+.. seealso::
+
+   - See Timeline's :ref:`timeline-view-menu`.
 
 
 Select Menu
