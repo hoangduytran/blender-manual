@@ -216,7 +216,7 @@ Bake Action
 
    :Editor:    3D Viewport
    :Mode:      Object and Pose Modes
-   :Menu:      :menuselection:`Header --> Object Animation --> Bake Action...`
+   :Menu:      :menuselection:`Header --> Object --> Animation --> Bake Action...`
 
 The final motion of objects or bones depends not only on the keyframed animation,
 but also on any active F-Curve modifiers, drivers, and constraints.
@@ -226,6 +226,39 @@ modifiers, drivers, and constraints applied, and keyframes the result.
 
 This can be useful for adding deviation to a cyclic action like a :term:`Walk Cycle`,
 or to create a keyframe animation created from drivers or constraints.
+
+Start Frame
+   Start frame for baking.
+End Frame
+   End frame for baking.
+Frame Step
+   Number of frames to skip forward while baking each frame.
+Only Selected Bones
+   Only key selected bones (Pose baking only).
+Visual Keying
+   Keyframe from the final transformations (with constraints applied).
+Clear Constraints
+   Remove all constraints from keyed object/bones, and do 'visual' keying.
+Clear Parents
+   Bake animation onto the object then clear parents (objects only).
+Overwrite Current Action
+   Bake animation into current action, instead of creating a new one
+   (useful for baking only part of bones in an armature).
+Clean Curves
+   After baking curves, remove redundant keys.
+Bake Data
+   Which data's transformations to bake
+
+   :Pose: Bake bones transformations.
+   :Object: Bake object transformations.
+Channels
+   Which channels to bake.
+
+   :Location: Bake location channels.
+   :Rotation: Bake rotation channels.
+   :Scale: Bake scale channels.
+   :B-Bone: Bake B-Bone channels.
+   :Custom Properties: Bake custom properties.
 
 
 .. _bpy.ops.nla.apply_scale:

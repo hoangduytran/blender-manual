@@ -9,6 +9,7 @@ Bone Collections
 :term:`Armature` into named collections. The armature is the owner of these
 collections, so they are available in all modes. Bone Collections are identified
 by their name, which are unique within the Armature.
+Bone Collections can be nested inside other Bone Collections to create an organized hierarchy for complex rigs.
 
 In the text below, "collection" is understood to refer to "bone collection";
 :term:`Scene Collections <Collection>` are not described here.
@@ -21,11 +22,13 @@ Visibility
 
 Bone Collections can be shown & hidden via the list in the Armature properties,
 as well as via the list in the Bone properties. Bone visibility is determined by
-the visibility of its collections, and its own 'hidden' property:
+the visibility of its collections, its own 'solo' and 'hidden' properties:
 
 - If the bone itself is marked as 'hidden', it is invisible regardless of the
   bone collections.
+- If a parent collection is hidden, child collections will also be hidden; same is true for soloed collections.
 - A bone is visible when it is contained in any visible collection.
+- If a collection is soloed, it will be visible regardless of the collection's 'hidden' property.
 - A bone that is not assigned to any bone collection is visible; otherwise it
   would be impossible to select it & assign it to a collection.
 
