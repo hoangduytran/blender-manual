@@ -133,6 +133,9 @@ Show Sliders
    See the Fig. :ref:`fig-dope-sheet-action`.
 Auto-Merge Keyframes
    Automatically merge nearby keyframes.
+
+.. _bpy.types.SpaceGraphEditor.use_auto_lock_translation_axis:
+
 Auto-Lock Key Axis
    Automatically locks the movement of keyframes to the dominant axis.
 
