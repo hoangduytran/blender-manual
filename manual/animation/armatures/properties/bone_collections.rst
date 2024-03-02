@@ -20,8 +20,26 @@ Bone Collections
 
    The Bone Collections panel in the Armature properties.
 
-This panel contains the Bone Collection :ref:`List view <ui-list-view>`, which
-allows the creation, deletion, and editing of Bone Collections.
+This panel contains a Tree View to manage :doc:`Bone Collection </animation/armatures/bones/bone_collections>`
+From this panel, Bone Collections can be created, deleted, re-arranged, and more.
+
+Collections can be renamed by double clicking on the name.
+To nest a collection inside an existing collection, click and drag the name onto another collection's name.
+Child collection can also be made by :kbd:`RMB` and selecting "Add Child Collection".
+
+To the right of the name gives a few controls of the collection:
+
+.. _bpy.types.BoneCollection.is_visible:
+
+Visible (Eye)
+   Bones in this collection will be visible in the 3D Viewport.
+
+.. _bpy.types.BoneCollection.is_solo:
+
+Solo (Star)
+   Show only this bone collection, and others also marked as "solo".
+
+Further more, collection that are not empty will have a dot to indicate the collection has bones assigned to it.
 
 .. tip::
 
@@ -32,13 +50,19 @@ allows the creation, deletion, and editing of Bone Collections.
 Specials
 ========
 
-.. _bpy.ops.armature.collection_solo_visibility:
-
-Solo Visibility
-   Hide all other bone collections except the active one.
-
 Show All
    Unhides any hidden bone collections.
+
+.. _bpy.ops.armature.collection_unsolo_all:
+
+Un-Solo All
+   Clear the ‘solo’ setting on all bone collections
+
+.. _bpy.ops.armature.collection_remove_unused:
+
+Remove Unused
+   Remove all bone collections that have neither bones nor children.
+   This is done recursively, so bone collections that only have unused children are also removed.
 
 
 Assign & Select
