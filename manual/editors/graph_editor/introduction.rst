@@ -107,19 +107,53 @@ Header
 View Menu
 ---------
 
+Sidebar :kbd:`N`
+   Show or hide the :ref:`Sidebar Region <ui-region-sidebar>`.
+Adjust Last Operation
+   Displays a pop-up panel to alter properties of the last
+   completed operation. See :ref:`bpy.ops.screen.redo_last`.
+Channels
+   Show or hide the :ref:`Channels Region <editors-graph_editor-channels_region>`.
+
+----------
+
+Frame Selected :kbd:`NumpadPeriod`
+   Reset viewable area to show selected keyframes.
+Frame All :kbd:`Home`
+   Reset viewable area to show all keyframes.
+Go to Current Frame :kbd:`Numpad0`
+   Centers the area to the Playhead.
+
+----------
+
 Realtime Updates
    When transforming keyframes, changes to the animation data are propagated to other views.
-Show Cursor
-   Toggles the visibility of the `Playhead & 2D Cursor`_.
 Show Sliders
    A toggle option that shows the value sliders for the channels.
    See the Fig. :ref:`fig-dope-sheet-action`.
 Auto-Merge Keyframes
    Automatically merge nearby keyframes.
 
+.. _bpy.types.SpaceGraphEditor.use_auto_lock_translation_axis:
+
+Auto-Lock Key Axis
+   Automatically locks the movement of keyframes to the dominant axis.
+
+----------
+
 Show Markers
    Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
    and markers operators are not available in this editor.
+Show Cursor
+   Toggles the visibility of the `Playhead & 2D Cursor`_.
+Show Seconds :kbd:`Ctrl-T`
+   Show timing in seconds not frames.
+Sync Visible Range
+   It synchronizes the horizontal panning and scale of the current editor
+   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
+   That way you always have these editors showing the same section of frames.
+
+----------
 
 .. _bpy.types.SpaceGraphEditor.show_extrapolation:
 
@@ -128,27 +162,12 @@ Show Extrapolation
    portion of curves.
 Show Handles :kbd:`Ctrl-H`
    Toggles the display of a curve's handles in the curve view.
-Only Selected Curve Keyframes
-   Only shows the keyframes markers on the selected curves.
 Only Selected Keyframes Handles
    Only shows the handles for the currently selected curves.
-Frame All :kbd:`Home`
-   Reset viewable area to show all keyframes.
-Frame Selected :kbd:`NumpadPeriod`
-   Reset viewable area to show selected keyframes.
-Go to Current Frame :kbd:`Numpad0`
-   Centers the area to the Playhead.
 
-.. seealso::
-
-   - See Graph Editor's :ref:`graph_editor-view-properties`.
-   - See Timeline's :ref:`timeline-view-menu`.
-
+----------
 
 .. _graph-preview-range:
-
-Preview Range
-^^^^^^^^^^^^^
 
 Set Preview Range :kbd:`P`
    Interactively define frame range used for playback.
@@ -158,7 +177,24 @@ Set Preview Range :kbd:`P`
 Clear Preview Range :kbd:`Alt-P`
    Clears the preview range.
 Set Preview Range to Selected :kbd:`Ctrl-Alt-P`
-   Sets the preview range to playback the selected NLA strips.
+   Automatically select the preview range based on the range of keyframes.
+
+
+----------
+
+Toggle Dope Sheet
+   Changes the area's editor to the :doc:`/editors/dope_sheet/index`.
+
+----------
+
+Area
+   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   documentation for more information.
+
+.. seealso::
+
+   - See Graph Editor's :ref:`graph_editor-view-properties`.
+   - See Timeline's :ref:`timeline-view-menu`.
 
 
 Select Menu
@@ -253,11 +289,6 @@ Show Only Errors
 
 Filter (funnel icon)
    Only include curves with keywords contained in the search field.
-
-   Multi-Word
-      Fuzzy/Multi-Word name filtering matches word snippets/partial words,
-      instead of having to match everything. It breaks down the search text based on whitespace placement.
-      e.g. "lo ro" will filter all location and rotation, while "lc rt" will *not* work.
 
    Type Filter
       Filter curves by property type.

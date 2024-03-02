@@ -19,32 +19,24 @@ View Menu
 
 As usual, the View menu controls the editor's view settings.
 
+Toolbar :kbd:`T`
+   Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
 Sidebar :kbd:`N`
    Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
 Tool Settings
    Show or hide the settings for the currently selected tool.
-Toolbar :kbd:`T`
-   Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
 Adjust Last Operation
-   See :ref:`bpy.ops.screen.redo_last`.
+   Displays a pop-up panel to alter properties of the last
+   completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
    Show or hide the :ref:`bpy.types.SequenceTimelineChannel`.
+
+----------
+
 Preview as Backdrop
    Display the current frame in the background.
 
-Frame Selected :kbd:`NumpadPeriod`
-   Zooms the display to show only the selected strips.
-Frame All :kbd:`Home`
-   Zooms the display to show all strips.
-Go to Current Frame
-   Centers the horizontal timeline on the current frame.
-Zoom :kbd:`Shift-B`
-   Click and drag to draw a rectangle and zoom to this rectangle.
-
-.. _bpy.types.SpaceSequenceEditor.use_clamp_view:
-
-Limit View to Contents
-   Prevents you from panning higher than the highest used channel.
+----------
 
 .. _bpy.ops.sequencer.refresh_all:
 
@@ -53,6 +45,36 @@ Refresh All :kbd:`Ctrl-R`
 
    This is useful when you modified an external file or made a change in a scene that Blender
    didn't detect.
+
+----------
+
+Frame Selected :kbd:`NumpadPeriod`
+   Zooms the display to show only the selected strips.
+Frame All :kbd:`Home`
+   Zooms the display to show all strips.
+Go to Current Frame
+   Centers the horizontal timeline on the current frame.
+Zoom to Border :kbd:`Shift-B`
+   Click and drag to draw a rectangle and zoom to this rectangle.
+
+.. _bpy.types.SpaceSequenceEditor.use_clamp_view:
+
+Limit View to Contents
+   Prevents you from panning higher than the highest used channel.
+
+----------
+
+Show Markers
+   Shows the marker region. When disabled, the *Marker* menu is also hidden
+   and marker operators are not available in this editor.
+Show Seconds :kbd:`Ctrl-T`
+   Shows seconds instead of frames on the time axis.
+Sync Visible Range
+   It synchronizes the horizontal panning and scale of the current editor
+   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
+   That way you always have these editors showing the same section of frames.
+
+----------
 
 Navigation
    Play Animation :kbd:`Spacebar`
@@ -88,23 +110,17 @@ Range
    Set Frame Range to Strips
       Set the Start and End frames of the scene so they encompass the selected strips.
 
-Sync Visible Range
-   Synchronizes the visible time range with other time-based editors (such as the Timeline and
-   the Graph Editor) that also have this option enabled.
-
-Show Seconds :kbd:`Ctrl-T`
-   Shows seconds instead of frames on the time axis.
-Show Markers
-   Shows the marker region. When disabled, the *Marker* menu is also hidden
-   and marker operators are not available in this editor.
+----------
 
 .. _bpy.types.SequenceEditor.show_cache:
 
-Show Cache
+Cache
    Show which frames are :doc:`Cached </editors/video_sequencer/sequencer/sidebar/cache>`.
 
    The :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>` must be enabled for this
    menu item to be visible.
+
+----------
 
 Sequence Render Image
    Show the current frame preview as a Render Result where you can save it as an image file.
@@ -122,13 +138,23 @@ Sequence Render Animation
    The latter option is only available if the Video Sequencer is in the *Preview* or
    *Sequencer & Preview* mode.
 
+----------
+
 Export Subtitles
    Exports :doc:`Text strips </video_editing/edit/montage/strips/text>`,
    which can act as subtitles, to a `SubRip <https://en.wikipedia.org/wiki/SubRip>`__ file (``.srt``).
    The exported file contains all Text strips in the video sequence.
 
+----------
+
 Toggle Sequencer/Preview :kbd:`Ctrl-Tab`
    Switch the editor mode between *Sequencer* and *Preview*.
+
+----------
+
+Area
+   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   documentation for more information.
 
 
 Markers Menu

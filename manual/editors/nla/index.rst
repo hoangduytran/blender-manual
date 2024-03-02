@@ -11,5 +11,5 @@
    introduction.rst
    tracks.rst
    strips.rst
-   editing.rst
+   editing/index.rst
    sidebar.rst

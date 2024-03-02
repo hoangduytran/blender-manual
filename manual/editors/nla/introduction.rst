@@ -17,13 +17,32 @@ Header
 View Menu
 ---------
 
+Sidebar :kbd:`N`
+   Show or hide the :ref:`Sidebar Region <ui-region-sidebar>`.
 Adjust Last Operation
    Displays a pop-up panel to alter properties of the last
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
+Channels
+   Show or hide the Channels Region.
+
+----------
+
+Frame Selected :kbd:`NumpadPeriod`
+   Reset viewable area to show selected strips.
+Frame All :kbd:`Home`
+   Reset viewable area to show all strips.
+Go to Current Frame :kbd:`Numpad0`
+   Centers the area to the Playhead.
+
+----------
+
 Realtime Updates
    When transforming NLA-strips, the changes to the animation are propagated to other views.
 Show Control F-Curves
    Overlays a graph of the NLA-strip's influence on top of the strip.
+
+----------
+
 Show Markers
    Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
    and markers operators are not available in this editor.
@@ -33,15 +52,35 @@ Show Local Markers
    .. figure:: /images/editors_nla_tracks_local_markers.png
 
       Local markers shown on a strip.
+Show Seconds :kbd:`Ctrl-T`
+   Show timing in seconds not frames.
+Sync Visible Range
+   It synchronizes the horizontal panning and scale of the current editor
+   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
+   That way you always have these editors showing the same section of frames.
+
+----------
 
 Set Preview Range :kbd:`P`
-   Selecting a preview range by dragging in the NLA Editor.
+   Interactively define frame range used for playback.
+   Allows you to define a temporary preview range to use for animation playback
+   (this is the same thing as the *Playback Range* option of
+   the :ref:`Timeline editor header <animation-editors-timeline-headercontrols>`).
 Clear Preview Range :kbd:`Alt-P`
-   Unset the preview range
-Auto Select Preview Range :kbd:`Ctrl-Alt-P`
-   Automatically select the preview range based on the range of keyframes.
+   Clears the preview range.
+Set Preview Range to Selected :kbd:`Ctrl-Alt-P`
+   Sets the preview range to playback the selected NLA strips.
 
-.. seealso:: See Timeline's :ref:`timeline-view-menu`.
+
+----------
+
+Area
+   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   documentation for more information.
+
+.. seealso::
+
+   - See Timeline's :ref:`timeline-view-menu`.
 
 
 Select Menu
@@ -78,11 +117,18 @@ within an animation. Like with most animation editors, markers are shown at the 
 For descriptions of the different marker tools, see :ref:`Editing Markers <animation-markers-editing>`.
 
 
-Edit Menu
----------
+Track Menu
+----------
+
+Contains tools for working with NLA tracks.
+For descriptions of the different editing tools, see :doc:`Editing Tracks </editors/nla/editing/track>`.
+
+
+Strip Menu
+----------
 
 Contains tools for working with NLA strips.
-For descriptions of the different editing tools, see :doc:`Editing Strips </editors/nla/editing>`.
+For descriptions of the different editing tools, see :doc:`Editing Strips </editors/nla/editing/strip>`.
 
 
 Add
@@ -95,22 +141,9 @@ Add Transition :kbd:`Shift-T`
 Add Sound Strip :kbd:`Shift-K`
    Add an NLA-strip controlling when the speaker object plays its sound clip.
 
-Add Meta-Strip :kbd:`Ctrl-G`
-   Group selected NLA-strips into a meta strip.
-   A meta strip will group the selected NLA-strips of the same NLA-track.
-Remove Meta-Strip :kbd:`Ctrl-Alt-G`
-   Ungroup selected Meta strips.
-
-.. _bpy.ops.nla.tracks_add:
-
-Add Tracks
-   Add a new NLA-Track on top of the selected object.
-Add Track Above Selected
-   Add a new NLA-Track just above the selected NLA-track.
-
 .. _bpy.ops.nla.selected_objects_add:
 
-Include Selected Objects
+Selected Objects
    Let the selected objects appear in the NLA Editor. This is done by adding
    an empty animation data object to the selected object.
 

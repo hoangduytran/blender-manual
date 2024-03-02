@@ -237,3 +237,5 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_sh
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_to_mesh.html" "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/volume_to_mesh.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_cube.html" "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/primatives/volume_cube.html"
+
+RedirectMatch "^/manual/{lang}/{version}/editors/nla/editing.html" "^/manual/{lang}/{version}/editors/nla/editing/index.html"

@@ -3,6 +3,8 @@
 Introduction
 ************
 
+.. _editors-graph_editor-channels_region:
+
 Channels Region
 ===============
 

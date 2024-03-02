@@ -320,6 +320,9 @@ Background Source
 Color Space
    The color space the image or video file uses within Blender.
 
+View as Render
+   Apply the :ref:`color management <render-post-color-management>` settings when displaying this image on the screen.
+
 Opacity
    Controls the transparency of the background image.
 
