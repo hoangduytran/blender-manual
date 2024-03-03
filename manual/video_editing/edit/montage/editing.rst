@@ -631,6 +631,8 @@ selected.
 Multiple keys can be selected at once with box selection. Box select will select keys, only if a key is already
 selected. Otherwise it will select strips only.
 
+Use :kbd:`Ctrl-LMB` to select all keys to the right of the selected key.
+
 
 .. _bpy.ops.sequencer.retiming_segment_speed_set:
 
