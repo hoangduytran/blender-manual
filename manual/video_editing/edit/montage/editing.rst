@@ -725,6 +725,9 @@ Sets the speed of a retimed segment.
 
 Speed
    The rate compared to the original time.
+Preserve Current retiming
+   Keeps the speed of the other retiming segments unchanged by adjusting the
+   :ref:`Duration <bpy.types.Sequence.frame_final_duration>` of the strip instead.
 
 
 .. _bpy.ops.sequencer.retiming_show:
