@@ -63,9 +63,6 @@ Camera
 
    It is useful to support switching views within a single scene.
 
-Volume
-   Volume of the audio taken from the chosen scene.
-
 Show
    Annotations
       Shows :doc:`Annotations </interface/annotate_tool>` while in non-render
@@ -74,6 +71,15 @@ Show
    Transparent
       Creates a transparent background.
       This is useful for doing overlays like rendering out Grease Pencil films via the Sequencer.
+
+
+Sound
+-----
+
+.. _bpy.types.SceneSequence.volume:
+
+Strip Volume
+   Volume of the audio taken from the chosen scene.
 
 
 Limitations
