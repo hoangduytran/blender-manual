@@ -49,8 +49,7 @@ AMD graphics card with the Vega architecture or newer. Both discrete GPUs and AP
 
 Supported GPUs include:
 
- - Radeon VII
- - Radeon RX Vega Series
+ - Radeon RX Vega Series (Excluding the Radeon VII)
  - Radeon RX 5000 Series
  - Radeon RX 6000 Series
  - Radeon RX 7000 Series
