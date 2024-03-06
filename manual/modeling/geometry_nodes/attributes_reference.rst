@@ -267,12 +267,6 @@ Built-in attributes always exist, and cannot be removed. Their data type and dom
      - *Face*
      - Used to specify the material slot for every face in a mesh.
 
-   * - ``crease``
-     - *Float*
-     - *Edge*
-     - Edge attribute used by the Subdivision Surface modifier.
-       The values are limited to a range of 0 and 1.
-
    * - ``sharp_edge``
      - *Boolean*
      - *Edge*
@@ -338,6 +332,33 @@ However, the attributes might be expected by Blender to have a certain type.
    * - ``surface_uv_coordinate``
      - *2D Vector*
      - Used to describe curve attachment locations on a mesh surface, typically used for hair use cases.
+
+   * - ``crease_vert``
+     - *Float*
+     - *Point*
+     - Vertex attribute used by the Subdivision Surface modifier.
+       The values are expected to be in a range of 0 and 1.
+
+   * - ``crease_edge``
+     - *Float*
+     - *Edge*
+     - Edge attribute used by the Subdivision Surface modifier.
+       The values are expected to be in a range of 0 and 1.
+
+   * - ``uv_seam``
+     - *Boolean*
+     - *Edge*
+     - True if an edge is considered a boundary between UV islands when unwrapping.
+
+   * - ``bevel_weight_vert``
+     - *Float*
+     - *Point*
+     - Used as vertex control for the bevel modifier.
+
+   * - ``bevel_weight_edge``
+     - *Float*
+     - *Edge*
+     - Used as edge control for the bevel modifier.
 
 
 Custom Attributes
