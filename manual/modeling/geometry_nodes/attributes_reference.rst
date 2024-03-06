@@ -316,14 +316,17 @@ However, the attributes might be expected by Blender to have a certain type.
 
    * - Name
      - Type
+    - Domain
      - Notes
 
    * - ``velocity``
      - *Vector*
+     - *Point*
      - Used to create motion blur when rendering animations.
 
    * - ``rest_position``
      - *Vector*
+     - *Point*
      - Holds the position of points or vertices from before a geometry is deformed procedurally.
        Can be created automatically before :doc:`Shape Keys </animation/shape_keys/index>` and
        :doc:`Modifiers </modeling/modifiers/introduction>` are evaluated with the
@@ -331,6 +334,7 @@ However, the attributes might be expected by Blender to have a certain type.
 
    * - ``surface_uv_coordinate``
      - *2D Vector*
+     - *Curve*
      - Used to describe curve attachment locations on a mesh surface, typically used for hair use cases.
 
    * - ``crease_vert``
