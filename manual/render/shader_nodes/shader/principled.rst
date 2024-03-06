@@ -157,7 +157,7 @@ IOR :guilabel:`Cycles Only`
 Anisotropy :guilabel:`Cycles Only`
    Directionality of volume scattering within the subsurface medium. Zero scatters uniformly
    in all directories, with higher values scattering more strongly forward.
-   For example skin has been measure to have an anisotropy of 0.8.
+   For example skin has been measured to have an anisotropy of 0.8.
 
    .. figure:: /images/render_shader-nodes_shader_principled-subsurface-anisotropy.webp
       :align: center
