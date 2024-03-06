@@ -316,7 +316,7 @@ However, the attributes might be expected by Blender to have a certain type.
 
    * - Name
      - Type
-    - Domain
+     - Domain
      - Notes
 
    * - ``velocity``
@@ -335,7 +335,7 @@ However, the attributes might be expected by Blender to have a certain type.
    * - ``surface_uv_coordinate``
      - *2D Vector*
      - *Curve*
-     - Used to describe curve attachment locations on a mesh surface, typically used for hair use cases.
+     - Used to describe curve attachment locations on a mesh surface, typically used for the hair system.
 
    * - ``crease_vert``
      - *Float*
