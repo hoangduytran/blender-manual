@@ -311,7 +311,7 @@ The data type of these attributes can be changed, just like any attribute beside
 However, the attributes might be expected by Blender to have a certain type.
 
 .. list-table::
-   :widths: 10 10 50
+   :widths: 10 10 10 50
    :header-rows: 1
 
    * - Name
