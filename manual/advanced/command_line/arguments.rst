@@ -146,7 +146,7 @@ Window Options
    Force opening with borders.
 
 ``-W``, ``--window-fullscreen``
-   Force opening in fullscreen mode.
+   Force opening in full-screen mode.
 
 ``-p``, ``--window-geometry`` ``<sx>`` ``<sy>`` ``<w>`` ``<h>``
    Open with lower left corner at ``<sx>``, ``<sy>`` and width and height as ``<w>``, ``<h>``.
@@ -173,7 +173,7 @@ Python Options
    Enable automatic Python script execution.
 
 ``-Y``, ``--disable-autoexec``
-   Disable automatic Python script execution (pydrivers & startup scripts), (default).
+   Disable automatic Python script execution (Python-drivers & startup scripts), (default).
 
 
 ``-P``, ``--python`` ``<filepath>``
@@ -292,7 +292,7 @@ Debug Options
    Enable colors for dependency graph debug messages.
 
 ``--debug-depsgraph-uid``
-   Verify validness of session-wide identifiers assigned to ID datablocks.
+   Verify validness of session-wide identifiers assigned to ID data-blocks.
 
 ``--debug-ghost``
    Enable debug messages for Ghost (Linux only).
@@ -307,7 +307,7 @@ Debug Options
    Enable workarounds for typical GPU issues and disable all GPU extensions.
 
 ``--debug-gpu-compile-shaders``
-   Compile all staticly defined shaders to test platform compatibility.
+   Compile all statically defined shaders to test platform compatibility.
 
 ``--debug-gpu-renderdoc``
    Enable Renderdoc integration for GPU frame grabbing and debugging.
@@ -472,7 +472,7 @@ Environment Variables
 :BLENDER_SYSTEM_SCRIPTS:    Directory for system wide scripts.
 :BLENDER_SYSTEM_DATAFILES:  Directory for system wide data files.
 :BLENDER_SYSTEM_PYTHON:     Directory for system Python libraries.
-:OCIO:                     Path to override the OpenColorIO config file.
+:OCIO:                      Path to override the OpenColorIO configuration file.
 :TEMP:                      Store temporary files here (MS-Windows).
 :TMPDIR:                    Store temporary files here (UNIX Systems).
                            The path must reference an existing directory or it will be ignored.
