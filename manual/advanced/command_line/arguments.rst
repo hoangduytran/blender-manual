@@ -20,6 +20,9 @@ Render Options
 ``-b``, ``--background``
    Run in background (often used for UI-less rendering).
 
+   The audio device is disabled in background-mode by default
+   and can be re-enabled by passing in ``-setaudo Default`` afterwards.
+
 ``-a``, ``--render-anim``
    Render frames from start to end (inclusive).
 
@@ -307,7 +310,7 @@ Debug Options
    Enable workarounds for typical GPU issues and disable all GPU extensions.
 
 ``--debug-gpu-compile-shaders``
-   Compile all staticly defined shaders to test platform compatibility.
+   Compile all statically defined shaders to test platform compatibility.
 
 ``--debug-gpu-renderdoc``
    Enable Renderdoc integration for GPU frame grabbing and debugging.
@@ -390,7 +393,15 @@ Misc Options
 
 ``-setaudio``
    Force sound system to a specific device.
-   ``None`` ``SDL`` ``OpenAL`` ``CoreAudio`` ``JACK`` ``PulseAudio`` ``WASAPI``.
+   ``None`` ``Default`` ``SDL`` ``OpenAL`` ``CoreAudio`` ``JACK`` ``PulseAudio`` ``WASAPI``.
+
+
+``-c``, ``--command`` ``<command>``
+   Run a command which consumes all remaining arguments.
+   Use ``-c help`` to list all other commands.
+   Pass ``--help`` after the command to see its help text.
+
+   This implies ``--background`` mode.
 
 
 ``-h``, ``--help``
