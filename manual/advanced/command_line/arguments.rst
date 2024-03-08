@@ -291,7 +291,7 @@ Debug Options
 ``--debug-depsgraph-pretty``
    Enable colors for dependency graph debug messages.
 
-``--debug-depsgraph-uuid``
+``--debug-depsgraph-uid``
    Verify validness of session-wide identifiers assigned to ID datablocks.
 
 ``--debug-ghost``
@@ -305,6 +305,9 @@ Debug Options
 
 ``--debug-gpu-force-workarounds``
    Enable workarounds for typical GPU issues and disable all GPU extensions.
+
+``--debug-gpu-compile-shaders``
+   Compile all staticly defined shaders to test platform compatibility.
 
 ``--debug-gpu-renderdoc``
    Enable Renderdoc integration for GPU frame grabbing and debugging.
@@ -351,7 +354,7 @@ GPU Options
 ===========
 
 ``--gpu-backend``
-   Force to use a specific GPU backend. Valid options: ``vulkan``,  ``metal``,  ``opengl``.
+   Force to use a specific GPU backend. Valid options: ``vulkan`` (experimental),  ``metal``,  ``opengl``.
 
 
 .. _command-line-args-misc-options:
@@ -470,5 +473,6 @@ Environment Variables
 :BLENDER_SYSTEM_DATAFILES:  Directory for system wide data files.
 :BLENDER_SYSTEM_PYTHON:     Directory for system Python libraries.
 :OCIO:                     Path to override the OpenColorIO config file.
-:TEMP:                     Store temporary files here (MS-Windows).
-:TMP: or $TMPDIR           Store temporary files here (UNIX Systems).
+:TEMP:                      Store temporary files here (MS-Windows).
+:TMPDIR:                    Store temporary files here (UNIX Systems).
+                           The path must reference an existing directory or it will be ignored.
