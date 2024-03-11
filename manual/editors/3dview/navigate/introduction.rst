@@ -1,4 +1,3 @@
-
 ************
 Introduction
 ************
@@ -20,6 +19,11 @@ For example, it is possible to pan and zoom in the Image editor.
 Navigation Gizmo
 ================
 
+.. figure:: /images/editors_3dview_navigate_introduction_gizmo_camera_view.png
+   :align: right
+
+   Navigation Gizmo in camera view.
+
 .. figure:: /images/editors_3dview_navigate_introduction_gizmo.png
    :align: right
 
@@ -37,4 +41,4 @@ The four buttons below the orbit gizmo do the following:
 - :ref:`Zoom the 3D Viewport <bpy.ops.view3d.zoom>`
 - :ref:`Pan the 3D Viewport <bpy.ops.view3d.view_pan>`
 - :doc:`Toggle the Camera View </editors/3dview/navigate/camera_view>`
-- :doc:`Toggle the Projection </editors/3dview/navigate/projections>`
+- :doc:`Toggle the Projection </editors/3dview/navigate/projections>` / :ref:`Toggle Lock Camera to View <bpy.types.SpaceView3D.lock_camera>` (in camera view)
