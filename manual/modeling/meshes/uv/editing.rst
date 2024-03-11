@@ -327,8 +327,8 @@ Rotation Method
 Margin Method
    The method to use when calculating the empty space between islands.
 
-   :Scaled: Use scale of existing UVs to multiply margin. (The default from Blender 3.3 and later.)
-   :Add: Simple method, just add the margin. (This is the default margin scale from Blender 2.8 and earlier.)
+   :Scaled: Use scale of existing UVs to multiply margin.
+   :Add: Simple method, just add the margin.
    :Fraction: Precisely specify the fraction of the UV unit square for margin. (Slower than other two methods.)
 Margin
    The scale for the empty space between islands.
