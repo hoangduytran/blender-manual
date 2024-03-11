@@ -60,9 +60,18 @@ Transform
 Filter
    The technique used to estimate the values of pixels at non-integer coordinates within the image.
 
-   :Nearest: No interpolation; uses nearest neighboring pixel.
-   :Bilinear: Simple interpolation between adjacent pixels.
-   :Subsampling (3x3): Use nearest with 3x3 :term:`subsamples <Anti-Aliasing>` during rendering.
+   :Auto:
+      Automatically choose filter based on scaling factor.
+
+      - No scale, no rotation, integer positions: *Nearest*
+      - Scaling up by more than 2x: *Cubic Mitchell*
+      - Scaling down by more than 2x: *Box*
+      - Otherwise: Bilinear
+   :Nearest: No interpolation; uses nearest neighboring pixel (fastest).
+   :Bilinear: Interpolate between 2×2 samples.
+   :Cubic Mitchell: Cubic Mitchell filter on 4×4 samples.
+   :Cubic B-Spline: Cubic B-Spline filter (blurry but no ringing) on 4×4 samples.
+   :Box: Averages source image samples that fall under destination pixel.
 
 .. _bpy.types.SequenceTransform.offset:
 
