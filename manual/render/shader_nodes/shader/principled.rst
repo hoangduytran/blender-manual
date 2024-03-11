@@ -52,6 +52,7 @@ Base Color
 
 Roughness
    Specifies microfacet roughness of the surface for specular reflection and transmission.
+   A value of 0.0 gives a perfectly sharp reflection, while 1.0 gives a diffuse reflection.
 
    .. figure:: /images/render_shader-nodes_shader_principled-roughness.webp
       :align: center
@@ -70,7 +71,9 @@ Metallic
       Metallic from 0.0 to 1.0
 
 IOR
-   Index of refraction for specular reflection and transmission.
+   Index of refraction (:term:`IOR`) for specular reflection and transmission.
+   For most materials, the IOR is between 1.0 (vacuum and air) and 4.0 (germanium).
+   The default value of 1.5 is a good approximation for glass.
 
    .. figure:: /images/render_shader-nodes_shader_principled-ior.webp
       :align: center
@@ -93,11 +96,11 @@ Normal
 Subsurface
 ----------
 
-Subsurface scattering is used to render materials such as skin, milk and wax.
+:term:`Subsurface scattering` is used to render materials such as skin, milk and wax.
 Light scatters below the surface to create a soft appearance.
 
 Method
-   Rendering method to simulate subsurface scattering.
+   Rendering method to simulate :term:`Subsurface scattering`.
 
    :Christensen-Burley:
       An approximation to physically-based volume scattering.
@@ -112,13 +115,13 @@ Method
       Random walk method optimized for skin rendering. The radius
       is automatically adjusted based on the color texture, and
       the subsurface entry direction uses a mix of diffuse and
-      specular transmission with custom IOR. This tends to retain
+      specular transmission with custom :term:`IOR`. This tends to retain
       greater surface detail and color and matches measured skin
       more closely.
 
 Weight
    Blend between diffuse surface and subsurface scattering.
-   Typically should be zero or one (either fully diffuse or subsurface)
+   Typically should be zero or one (either fully diffuse or subsurface).
 
    .. figure:: /images/render_shader-nodes_shader_principled-subsurface-weight.webp
       :align: center
@@ -146,7 +149,7 @@ Scale
       Scale from 0 cm to 50 cm
 
 IOR :guilabel:`Cycles Only`
-   Index of refraction used for rays that enter the subsurface component. This may be set to
+   Index of refraction (:term:`IOR`) used for rays that enter the subsurface component. This may be set to
    a different value than the global IOR to simulate different layers of skin.
 
    .. figure:: /images/render_shader-nodes_shader_principled-subsurface-ior.webp
@@ -156,8 +159,8 @@ IOR :guilabel:`Cycles Only`
 
 Anisotropy :guilabel:`Cycles Only`
    Directionality of volume scattering within the subsurface medium. Zero scatters uniformly
-   in all directories, with higher values scattering more strongly forward.
-   For example skin has been measured to have an anisotropy of 0.8.
+   in all directions, with higher values scattering more strongly forward.
+   For example, skin has been measured to have an anisotropy of 0.8.
 
    .. figure:: /images/render_shader-nodes_shader_principled-subsurface-anisotropy.webp
       :align: center
@@ -181,7 +184,7 @@ Distribution
       which would otherwise be visible as excessive darkening.
 
 IOR Level
-   Adjustment to the IOR to increase or decrease intensity of the specular layer.
+   Adjustment to the :term:`IOR` to increase or decrease intensity of the specular layer.
    0.5 means no adjustment, 0 removes all reflections, 1 doubles them at normal incidence.
 
    This input is designed for conveniently texturing the IOR and amount of specular
@@ -226,7 +229,7 @@ Anisotropic Rotation :guilabel:`Cycles Only`
       Anisotropic rotation from 0.0 to 1.0
 
 Tangent
-   Controls the tangent for the *Anisotropic* layer.
+   Controls the tangent direction for anisotropy.
 
 
 Transmission
@@ -267,7 +270,7 @@ Roughness
       Roughness from 0.0 to 1.0
 
 IOR
-   Index of refraction of the coat layer. Affects its reflectivity as well as the falloff of coat tinting.
+   Index of refraction (:term:`IOR`) of the coat layer. Affects its reflectivity as well as the falloff of coat tinting.
 
    .. figure:: /images/render_shader-nodes_shader_principled-coat-ior.webp
       :align: center
@@ -334,8 +337,9 @@ Color
       Emission color variations
 
 Strength
-   Strength of the emitted light. A value of 1.0 will ensure that the object
+   Strength of the emitted light. A value of 1.0 ensures that the object
    in the image has the exact same color as the *Emission Color*, i.e. make it 'shadeless'.
+
 
    .. figure:: /images/render_shader-nodes_shader_principled-emission-strength.webp
       :align: center
