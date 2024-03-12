@@ -123,6 +123,23 @@ To Lowercase
 Changes the case of the selected text to lowercase.
 
 
+.. _bpy.ops.font.text_insert_unicode:
+
+Insert Unicode
+==============
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Insert Unicode`
+
+Opens a dialog box to input the entry of any Unicode character by entering its hexadecimal codepoint value.
+
+See Wikipedia for a `List of Unicode characters <https://en.wikipedia.org/wiki/List_of_Unicode_characters>`__
+which list there respective hexadecimal codepoint values.
+
+
 .. _bpy.ops.font.text_insert:
 
 Special Characters
