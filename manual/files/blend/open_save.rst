@@ -71,6 +71,9 @@ Open Recent
 
 Lists recently used files. Click on one to load it in.
 
+Clear Recent Files List
+   Removes all items from the list.
+
 
 Recover
 =======

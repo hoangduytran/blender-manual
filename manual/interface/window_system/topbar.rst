@@ -53,6 +53,9 @@ Open :kbd:`Ctrl-O`
 Open Recent :kbd:`Shift-Ctrl-O`
    Displays a list of the most :ref:`recently opened <other-file-open-options>` blend-files.
    Select any of the file names in the list to open that blend-file.
+
+   Clear Recent Files List
+      Removes all items from the list.
 Revert
    Reopens the current file to its last saved version.
 Recover
