@@ -103,7 +103,7 @@ Object ID for Collection Instances
 Override the Pass Index for all objects in the Collection.
 
 In order for the Pass Index to be loaded on computers without Amaranth installed,
-it will automatically create a text file (called AmaranthStartup.py) and save it inside the .blend,
+it will automatically create a text file (called AmaranthStartup.py) and save it inside the blend-file,
 this will auto-run on startup and set the Pass Index. Remember to have auto-run Python scripts on your Preferences.
 
 Usage: Select an Instanced Collection and set a Pass Index (other than zero) and press "Apply Object ID to Duplis"
@@ -247,9 +247,9 @@ List Missing Images
 
 Display a list of missing images (that is, images that can't be found) Under a collapsible list.
 
-Display the image name and its path, if the image is coming from a linked .blend, display the path to it.
+Display the image name and its path, if the image is coming from a linked blend-file, display the path to it.
 
-Clicking on the .blend library path (Blender icon) will open the file in a new Blender instance.
+Clicking on the blend-file's library path (Blender icon) will open the file in a new Blender instance.
 
 Usage: Find it in the Scene Debug panel, under Scene Properties.
 
@@ -316,7 +316,7 @@ A quick way to go to the currently open blend's directory.
 Libraries Bookmark
 ------------------
 
-The "Libraries" panel in the File Browser displays the path to all the libraries linked to that .blend.
+The "Libraries" panel in the File Browser displays the path to all the libraries linked to that blend-file.
 That way you can quickly go to the folders related to the file.
 
 Usage: Find it in the **Libraries** panel in File Browser. Click on any path to go to that directory.
@@ -370,7 +370,7 @@ Instancing: Show Path of Libraries
 ----------------------------------
 
 Display the library path of a linked Collection Instance.
-Click on the path to open that .blend file in a new Blender instance.
+Click on the path to open that blend-file in a new Blender instance.
 
 Usage: Find it in the **Instancing** panel, when a Collection Instance (linked) is active.
 

@@ -9,7 +9,7 @@ Camera Animation
    :Menu:      :menuselection:`File --> Export --> Cameras & Markers (.py)`
 
 Exports a .py file containing information about the animation of cameras in the scene.
-This file can be used to 'import' these cameras and their animation to another .blend file.
+This file can be used to 'import' these cameras and their animation to another blend-file.
 
 
 Exported Data
