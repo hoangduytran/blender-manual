@@ -42,6 +42,8 @@ The region contains an array of files, folders, or internal blend-file data in a
 `Navigating`_, `selecting`_, and `editing`_ of these items works just as it would in your operating system's file
 browser.
 
+Hovering over items will show a tooltip with extra information about the file.
+
 
 .. _file_browser-previews:
 
@@ -55,7 +57,7 @@ In its *Thumbnail* display mode, the File Browser supports many types of preview
 - Blend-files
 - Internal :doc:`Data-blocks </files/data_blocks>`
 
-In order to get previews for data-block, there previews must be generated.
+In order to get previews for data-blocks, there previews must be generated.
 See :doc:`Blend-files Previews </files/blend/previews>` for how to generate and manage Blender data previews.
 
 .. figure:: /images/editors_file-browser_previews.png
