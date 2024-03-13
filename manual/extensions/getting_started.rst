@@ -130,16 +130,33 @@ Optional values:
    (i.e., cannot be empty, nor text ``""``, nor list ``[]``).
 
    If you don't want to set one of the optional values just exclude it from the manifest altogether.
-..
-   Command-line
-   ============
 
-    There are a few tools accessible via command-line that can help the creation of extensions.
+Command-line
+============
 
-   .. code:: bash
+Extensions can be built, validated & installed via command-line.
 
-     ./blender.exe tools.extension validate-manifest <blender_manifest.toml>
-     ./blender.exe tools.extension create <folder-name-with-manifest/>
+.. note::
+
+   Extension commands currently require a daily build of Blender with extensions enabled in the preferences.
+
+To build the package defined in the current directory use the following commands:
+
+.. code:: bash
+
+   blender --command extension build
+
+To validate the manifest without building:
+
+.. code:: bash
+
+   blender --command extension validate
+
+For a list of available options, see:
+
+.. code:: bash
+
+   blender --command extension --help
 
 
 Third party extension sites
@@ -151,13 +168,13 @@ Third party sites that wish to support extensions in Blender can do so in two wa
    as a start point; or
 #. Host a JSON file listing all the packages of your repository.
 
-.. To generate a valid JSON file you can use the command-line tool:
+To generate a valid JSON file you can use the command-line tool:
 
-.. .. code:: bash
+.. code:: bash
 
-..   ./blender.exe tools.extension server-generate
+   blender --command extension server-generate --repo-dir=/path/to/packages
 
-.. This creates a listing from all the .zip packages that it can find in the specified location.
+This creates a listing from all the packages found in the specified location.
 
 Example of what the JSON is expected to look like:
 
