@@ -29,7 +29,7 @@ Delete
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Curves --> Transform`
+   :Menu:      :menuselection:`Curves --> Delete`
    :Shortcut:  :kbd:`X`
 
 The Delete operator can remove Control Points or Segments.

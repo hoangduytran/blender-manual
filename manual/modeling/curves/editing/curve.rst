@@ -23,7 +23,7 @@ Move, Rotate, Scale
    Like other elements in Blender, curve control points and handles can be
    moved, rotated, or scaled as described in
    :doc:`Basic Transformations </scene_layout/object/editing/transform/introduction>`.
-To Sphere, Shear, Warp, Bend, Push/Pull, Warp, Randomize
+To Sphere, Shear, Bend, Push/Pull, Warp, Randomize
    The transform tools are described in
    the :doc:`Transformations </modeling/meshes/editing/mesh/transform/index>` sections.
 Move/Scale Texture Space
