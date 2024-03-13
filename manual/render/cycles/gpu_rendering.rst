@@ -40,6 +40,9 @@ see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#c
 
 OptiX takes advantage of hardware ray-tracing acceleration in RTX graphics cards, for improved performance.
 
+GPU acceleration for OpenImageDenoise is available for compute capability 7.0 and higher, which includes
+all NVIDIA RTX cards.
+
 
 HIP -- AMD
 ----------
@@ -68,14 +71,15 @@ On Windows, experimental hardware ray-tracing support is available with the most
 This can be enabled in the preferences.
 However there are currently known issues regarding motion blur, hair rendering and degenerate triangle shapes.
 
-The *Clip* extension mode in :doc:`/render/shader_nodes/textures/image` is not supported for HIP.
+GPU accelerated denoising is available on discrete Radeon RX 6000 and Radeon RX 7000 GPUs.
 
 
 oneAPI -- Intel
 ---------------
 
 oneAPI is a computation library that is supported on Windows and Linux and requires a
-Intel® Arc™ graphics card with the Xe HPG architecture. Hardware acceleration for ray-tracing is supported.
+Intel® Arc™ graphics card with the Xe HPG architecture.
+Hardware acceleration for ray-tracing and denoising is supported.
 
 Supported GPUs include:
 
@@ -90,6 +94,8 @@ Minimum driver versions:
 Please refer to `Intel's website <https://www.intel.com/content/www/us/en/products/details/discrete-gpus.html>`__
 for more information about Intel graphics cards and their architectures.
 
+GPU accelerated denoising is available on all supported GPUs.
+
 
 Metal -- Apple (macOS)
 ----------------------
@@ -101,6 +107,8 @@ Using AMD graphics cards with Metal has a number of limitations. :ref:`Light Tre
 <bpy.types.CyclesRenderSettings.use_light_tree>` and :ref:`Shadow Caustics
 <bpy.types.CyclesObjectSettings.is_caustics_caster>` are not supported, and the Principled Hair BSDF causes poor
 rendering performance.
+
+GPU accelerated denoising is available on Apple Silicon.
 
 
 Limitations

@@ -85,13 +85,11 @@ Render
 
    :OpenImageDenoise:
       Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
-      an AI denoiser. Typically provides the highest quality. Supports GPU
-      acceleration on modern GPUs.
+      an AI denoiser. Typically provides the highest quality, and is the default.
       
    :OptiX:
-      Uses NVIDIA's OptiX AI denoiser. It has the same GPU requirements
-      as rendering with OptiX, which includes a wider range of devices
-      than OpenImageDenoise.
+      Uses NVIDIA's OptiX AI denoiser. Supports GPU acceleration on some
+      older NVIDIA GPUs where OpenImageDenoise does not.
 
 .. _bpy.types.CyclesRenderSettings.use_preview_denoising:
 .. _bpy.types.CyclesRenderSettings.preview_denoiser:
@@ -105,13 +103,11 @@ Viewport
 
    :OpenImageDenoise:
       Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
-      an AI denoiser. Typically provides the highest quality. Supports GPU
-      acceleration on modern GPUs.
+      an AI denoiser. Typically provides the highest quality.
       
    :OptiX:
-      Uses NVIDIA's OptiX AI denoiser. It has the same GPU requirements
-      as rendering with OptiX, which includes a wider range of devices
-      than OpenImageDenoise.
+      Uses NVIDIA's OptiX AI denoiser. Supports GPU acceleration on some
+      older NVIDIA GPUs where OpenImageDenoise does not.
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_start_sample:
 
@@ -154,9 +150,13 @@ Prefilter
 .. _bpy.types.CyclesRenderSettings.denoising_use_gpu:
 
 Use GPU
-   Perform denoising on GPU devices, if available.
+   Perform denoising on the GPU.
    This is significantly faster than on CPU, but requires additional GPU memory.
    When large scenes need more GPU memory, this option can be disabled.
+
+   See :doc:`GPU Rendering </render/cycles/gpu_rendering>` for details on
+   supported GPU.
+
 
 .. _bpy.types.CyclesRenderSettings.use_guiding:
 
