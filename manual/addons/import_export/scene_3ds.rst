@@ -29,6 +29,7 @@ Import
 ------
 
 Importing .3ds files is also possible by simply drag & drop the file from a desktop window.
+Hold shift or ctrl to select multiple files for import.
 
 Include
 ^^^^^^^
@@ -44,6 +45,10 @@ Animation
    Reads the keyframe tracks from a 3ds file and transforms the objects to the data which was found.
    Usually only one frame is found in static scenes, it will be imported to the timeline.
    If the 3ds scene is animated, the complete animation will be imported to the timeline.
+
+Collection
+   Creates a new collection for the imported file. This is useful for importing multiple objects at once 
+   to get a better overview in the outliner.
 
 Cursor Origin
    Reads the 3D cursor location chunk if one is found. Almost all valid 3ds files including this chunk,
@@ -85,6 +90,9 @@ Forward / Up Axis
 
 Export
 ------
+
+It is recommended to apply all transformations (especially rotation and scale) before exporting, 
+transformations in 3ds are part of animations and may not be correctly imported again without apply transform.
 
 Include
 ^^^^^^^
