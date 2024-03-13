@@ -11,6 +11,7 @@
    introduction.rst
    meshes/index.rst
    curves/index.rst
+   curves_new/index.rst
    surfaces/index.rst
    metas/index.rst
    texts/index.rst
