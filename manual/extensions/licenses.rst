@@ -8,7 +8,9 @@
 Extension Licenses
 ##################
 
-For add-ons and themes the recommended license is `GNU General Public License v2.0 or later <https://spdx.org/licenses/GPL-2.0-or-later.html>`__. For assets, the required license is `Public Domain (CC0) <https://spdx.org/licenses/CC0-1.0.html>`__.
+For add-ons and themes the recommended license is
+`GNU General Public License v2.0 or later <https://spdx.org/licenses/GPL-2.0-or-later.html>`__.
+For assets, the required license is `Public Domain (CC0) <https://spdx.org/licenses/CC0-1.0.html>`__.
 
 The `Blender Extensions Platform <https://extensions.blender.org>`__ only supports
 free and open source extensions compatible with Blender's license:

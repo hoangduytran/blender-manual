@@ -270,7 +270,8 @@ Roughness
       Roughness from 0.0 to 1.0
 
 IOR
-   Index of refraction (:term:`IOR`) of the coat layer. Affects its reflectivity as well as the falloff of coat tinting.
+   Index of refraction (:term:`IOR`) of the coat layer.
+   Affects its reflectivity as well as the falloff of coat tinting.
 
    .. figure:: /images/render_shader-nodes_shader_principled-coat-ior.webp
       :align: center

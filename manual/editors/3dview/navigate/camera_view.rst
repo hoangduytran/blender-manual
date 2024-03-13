@@ -137,8 +137,8 @@ Camera Navigation
 -----------------
 
 By enabling :ref:`Lock Camera to View <bpy.types.SpaceView3D.lock_camera>` in
-:menuselection:`Sidebar --> View` and switching to camera view or toggle the lock navigation gizmo button when in camera view,
-the camera will become "glued" to the view and follow it around as you navigate.
+:menuselection:`Sidebar --> View` and switching to camera view or toggle the lock navigation gizmo button
+when in camera view, the camera will become "glued" to the view and follow it around as you navigate.
 
 .. seealso::
 

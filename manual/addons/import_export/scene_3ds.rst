@@ -27,6 +27,7 @@ Properties
 
 Import
 ------
+
 Importing .3ds files is also possible by simply drag & drop the file from a desktop window.
 
 Include

@@ -31,14 +31,14 @@ Properties
 ==========
 
 Domain
-   The domain on which the selection and group ID fields are evaluated. 
+   The domain on which the selection and group ID fields are evaluated.
 
    :Point:
       The fields are evaluated on points, control points, and vertices.
    :Edge:
       The fields are evaluated on the edges of the mesh component.
    :Faces:
-      The fields are evaluated on the faces of the mesh component. 
+      The fields are evaluated on the faces of the mesh component.
    :Spline:
       The fields are evaluated on the splines in the curve component.
    :Instances:
@@ -67,8 +67,7 @@ Examples
    :align: center
 
    Here, a grid is split into instances based on a voronoi texture, then translated randomly in Z.
-   Note that the GroupID field expects different integers values (0, 1, 2, 3…), not floats (0.1, 0.2, 0.3), 
-   which is why the color needs to be multiplied by 1000. 
-   
+   Note that the GroupID field expects different integers values (0, 1, 2, 3…), not floats (0.1, 0.2, 0.3),
+   which is why the color needs to be multiplied by 1000.
 
 

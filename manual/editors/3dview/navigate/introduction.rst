@@ -41,4 +41,5 @@ The four buttons below the orbit gizmo do the following:
 - :ref:`Zoom the 3D Viewport <bpy.ops.view3d.zoom>`
 - :ref:`Pan the 3D Viewport <bpy.ops.view3d.view_pan>`
 - :doc:`Toggle the Camera View </editors/3dview/navigate/camera_view>`
-- :doc:`Toggle the Projection </editors/3dview/navigate/projections>` / :ref:`Toggle Lock Camera to View <bpy.types.SpaceView3D.lock_camera>` (in camera view)
+- :doc:`Toggle the Projection </editors/3dview/navigate/projections>` /
+  :ref:`Toggle Lock Camera to View <bpy.types.SpaceView3D.lock_camera>` (in camera view)

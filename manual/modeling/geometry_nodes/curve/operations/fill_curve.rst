@@ -55,7 +55,7 @@ One or many "single point spline" can be used to customize the triangulation of 
    :align: center
 
    This is the default behavior of the *Fill Curve* node applied to the star primitive.
-    
+
 
 .. figure:: /images/modeling_geometry-nodes_curve_curve-fill_example_1.png
    :align: center
@@ -74,22 +74,22 @@ The following figures display diverse application of the Group ID.
 
 .. The following example were made with some nodes "hidden" to illustrate the amount of mesh islands
 .. and avoid Z fighting.
-.. Mesh Island Index -> Set Position (as z offset) 
+.. Mesh Island Index -> Set Position (as z offset)
 .. Mesh Island Index -> Map Range (Mesh island count as input max) -> Color Ramp (distributed from left)
 .. Colors Used : 5ABD9E, 85BD50, DDB72C, D26072
 
 .. figure:: /images/modeling_geometry-nodes_curve_curve-fill_group-id_0.png
    :align: center
-   :alt: 
+   :alt:
 
    Here, the 4 curves share the same Group ID, resulting in 1 mesh island (default behavior).
 
 .. figure:: /images/modeling_geometry-nodes_curve_curve-fill_group-id_1.png
-   :align: center 
+   :align: center
 
    Here, the 4 curves have different Group ID, resulting in 4 mesh islands.
 
 .. figure:: /images/modeling_geometry-nodes_curve_curve-fill_group-id_2.png
-   :align: center 
+   :align: center
 
    Here, the 4 curves are seperated into two groups based on their positions, resulting in 2 mesh islands.

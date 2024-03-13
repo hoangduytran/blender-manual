@@ -112,8 +112,9 @@ Step
 .. _bpy.types.AnimVizMotionPaths.use_camera_space_bake:
 
 Bake to Active Camera
-   When enabled the motion path is calculated in screen space for the active scene camera. Note that the resulting motion path will only
-   be useful for that single camera. Switching cameras using markers is not supported. It will only bake to the camera
+   When enabled the motion path is calculated in screen space for the active scene camera.
+   Note that the resulting motion path will only be useful for that single camera.
+   Switching cameras using markers is not supported. It will only bake to the camera
    that is active when the bake was started.
 
 .. _bpy.types.MotionPath.frame_start:

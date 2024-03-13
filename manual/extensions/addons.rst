@@ -122,4 +122,5 @@ Luckily there is an alternative way of loading wheels that doesn't affect ``sys.
 This way an add-on can load its own version of an external library from its bundled wheel file,
 without no other add-on having access to it.
 
-See Flamenco add-on for an `implementation example <https://projects.blender.org/studio/flamenco/src/branch/main/addon/flamenco/wheels/__init__.py>`__.
+See Flamenco add-on for an `implementation example
+<https://projects.blender.org/studio/flamenco/src/branch/main/addon/flamenco/wheels/__init__.py>`__.
