@@ -29,6 +29,8 @@ and :ref:`showing all <sculpt_show_all>` is also available in the :kbd:`Alt-W` p
    More information for controlling the visibility at :doc:`Show & Hide </sculpt_paint/sculpting/editing/sculpt>`.
 
 
+.. _sculpt-masks:
+
 Masks
 =====
 
@@ -40,6 +42,8 @@ The mask can for example be created/edited via the :doc:`Mask Brush </sculpt_pai
 :doc:`Lasso Mask </sculpt_paint/sculpting/tools/lasso_mask>`,
 :doc:`Line Mask </sculpt_paint/sculpting/tools/line_mask>`
 and :doc:`Mask by Color </sculpt_paint/sculpting/tools/mask_by_color>` tools.
+
+Internally, masks are stored using the ``sculpt_mask`` :doc:`/modeling/geometry_nodes/attributes_reference`.
 
 
 Clear & Invert
@@ -72,7 +76,7 @@ Face Sets
 
 .. figure:: /images/sculpt-paint_sculpting_editing_face_set_example.png
 
-Face Sets are used to group your mesh into differently colored faces,
+Face sets are used to group your mesh into differently colored faces,
 which can then be quickly hidden or shown like mentioned above.
 They can also be used for fast mask creation via the :ref:`Mask Expand <bpy.ops.sculpt.expand>`.
 :ref:`Face Set Expand <face_set_expand>` is also useful for creating, editing and joining face sets.
@@ -92,6 +96,8 @@ They can also be edited with the
 
    More information about editing and using face sets at the
    :doc:`Face Sets Menu </sculpt_paint/sculpting/editing/face_sets>`
+
+Internally, face sets are stored using the ``sculpt_face_set`` :doc:`/modeling/geometry_nodes/attributes_reference`.
 
 
 Auto-Masking
