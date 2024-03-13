@@ -11,6 +11,7 @@
    delete_geometry.rst
    duplicate_elements.rst
    merge_by_distance.rst
+   split_to_instances.rst
    transform_geometry.rst
 
 -----
