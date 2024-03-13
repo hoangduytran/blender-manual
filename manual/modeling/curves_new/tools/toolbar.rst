@@ -45,3 +45,6 @@ Transform
 
 :ref:`Measure <tool-measure>`
    Measure distances in the scene.
+
+:ref:`Tilt <modeling-curve-tilt>`
+   Control the rotation value of the control points around the curve's axis.

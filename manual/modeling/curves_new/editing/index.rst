@@ -11,3 +11,4 @@ Curves objects also have basic editing support in "Edit Mode".
    :maxdepth: 2
 
    curves.rst
+   control_points.rst
