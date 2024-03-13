@@ -21,6 +21,23 @@ To Sphere, Shear, Bend, Push/Pull
    the :doc:`Transformations </modeling/meshes/editing/mesh/transform/index>` sections.
 
 
+.. _bpy.ops.curves.duplicate_move:
+
+Duplicate
+=========
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curves --> Duplicate`
+   :Shortcut:  :kbd:`Shift-D`
+
+This operator duplicates the selected control points,
+along with the curve segments implicitly selected (if any).
+.. If only a handle is selected, the full point will be duplicated too.
+The copy is selected so you can move it to another place.
+
+
 .. _bpy.ops.curves.delete:
 
 Delete

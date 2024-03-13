@@ -107,10 +107,10 @@ Add Duplicate
    :Menu:      :menuselection:`Curve --> Add Duplicate`
    :Shortcut:  :kbd:`Shift-D`
 
-This tool duplicates the selected control points,
+This operator duplicates the selected control points,
 along with the curve segments implicitly selected (if any).
 If only a handle is selected, the full point will be duplicated too.
-The copy is selected and placed in select mode, so you can move it to another place.
+The copy is selected so you can move it to another place.
 
 
 .. _bpy.ops.curve.split:
