@@ -23,7 +23,7 @@ Move, Rotate, Scale
    Like other elements in Blender, curve control points and handles can be
    moved, rotated, or scaled as described in
    :doc:`Basic Transformations </scene_layout/object/editing/transform/introduction>`.
-To Sphere, Shear, Warp, Bend, Push/Pull, Warp, Randomize
+To Sphere, Shear, Bend, Push/Pull, Warp, Randomize
    The transform tools are described in
    the :doc:`Transformations </modeling/meshes/editing/mesh/transform/index>` sections.
 Move/Scale Texture Space
@@ -107,10 +107,10 @@ Add Duplicate
    :Menu:      :menuselection:`Curve --> Add Duplicate`
    :Shortcut:  :kbd:`Shift-D`
 
-This tool duplicates the selected control points,
+This operator duplicates the selected control points,
 along with the curve segments implicitly selected (if any).
 If only a handle is selected, the full point will be duplicated too.
-The copy is selected and placed in select mode, so you can move it to another place.
+The copy is selected so you can move it to another place.
 
 
 .. _bpy.ops.curve.split:

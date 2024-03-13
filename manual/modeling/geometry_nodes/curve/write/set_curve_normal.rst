@@ -24,9 +24,10 @@ Inputs
 
 Curve
    Standard geometry input, containing curves.
-
 Selection
    Whether or not to change the value on each curve.
+Normal
+   Input for the custom normal attribute (``custom_normal``) when using *Free* mode.
 
 
 Properties
@@ -41,6 +42,16 @@ Mode
    :Z-Up:
       The final normals are calculated so that they is perpendicular to the Z axis and the tangent.
       If a series of points is vertical, the X axis is used
+   :Free:
+      Use the stored custom normal attribute (``custom_normal``) as the final normals.
+
+      This mode adds a *Normal* input that can be used to set the value of the custom normal.
+
+      .. note::
+
+         Custom normals are not rotation invariant,
+         meaning normals must be set **after** any rotation transformations;
+         i.e. at the end of the node tree or at the bottom of the modifier stack.
 
 
 Outputs
