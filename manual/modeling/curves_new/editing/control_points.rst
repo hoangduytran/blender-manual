@@ -3,6 +3,8 @@
 Control Points
 **************
 
+.. _modeling-curves-tilt:
+
 Tilt
 ====
 

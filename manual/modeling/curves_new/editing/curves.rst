@@ -21,6 +21,29 @@ To Sphere, Shear, Bend, Push/Pull
    the :doc:`Transformations </modeling/meshes/editing/mesh/transform/index>` sections.
 
 
+.. _modeling-curves-radius:
+
+Radius
+------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Tool:      :menuselection:`Toolbar --> Radius`
+   :Menu:      :menuselection:`Curves --> Transform --> Radius`
+   :Shortcut:  :kbd:`Alt-S`
+
+The Radius allows you to directly control the width of the extrusion along the "spinal" curve.
+The radius will be interpolated from point to point (you can check it with the normals).
+The *Radius* of the points is set using the *Radius* transform tool. Or in the Sidebar *Transform* panel.
+
+.. figure:: /images/modeling_curves_editing_curve_extrude-radius.png
+   :align: center
+   :width: 50%
+
+   One control point radius set to zero.
+
+
 .. _bpy.ops.curves.duplicate_move:
 
 Duplicate
