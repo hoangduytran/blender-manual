@@ -126,7 +126,7 @@ out of the `Triangulate` node is deterministic but not well defined. The order m
 Therefor, if node setups depend on a specific order, they may break when the Blender implementation changes. Changing
 the order can often be necessary in order to fix bugs or improve performance.
 
-"Geometry randomization" can be temporarily enabled to see if a .blend file depends on the indices in unstable ways.
+"Geometry randomization" can be temporarily enabled to see if a blend-file depends on the indices in unstable ways.
 When enabled, various internal algorithms shuffle the result geometry elements so that any dependence on it would not
 work anymore. When building setups that are supposed to last a long time, it is recommended to check if they still
 work with randomization enabled.

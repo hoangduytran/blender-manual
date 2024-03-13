@@ -69,7 +69,12 @@ Open Recent
    :Menu:      :menuselection:`File --> Open Recent`
    :Shortcut:  :kbd:`Shift-Ctrl-O`
 
-Lists recently used files. Click on one to load it in.
+Displays a list of recently opened blend-files.
+Hovering over items will show a preview, and information about the blend-file.
+Select any of the file names in the list to open that blend-file.
+
+Clear Recent Files List
+   Removes all items from the list.
 
 
 Recover

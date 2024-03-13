@@ -28,89 +28,209 @@ First, the 3D Viewport, where you type your text, and have a few shortcuts, e.g.
 styles (see :ref:`modeling-text-character`) -- note however, that most Blender shortcuts you know
 in Edit Mode do not exist for texts. The second place is the Properties, especially the *Font* tab.
 
-
-.. _bpy.ops.font.text_paste_from_file:
-.. _bpy.ops.font.style_toggle:
-.. _bpy.ops.font.change_spacing:
-
-Text
-====
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`3D Viewport --> Text`
-
 Editing text objects is similar to using a standard text editor but is not as
 full-featured and has some differences.
 The menu of the 3D Viewport header offers few options. You have no transform nor mirror tools, and so on.
 To leave Edit Mode use :kbd:`Tab` as it does not insert a tab character in the text,
 but rather enters and exits Edit Mode, as with other object types.
 
-Cut :kbd:`Ctrl-X`
-   To cut and copy text to the buffer, use the shortcut or the matching entry in the *Edit* menu.
-Copy :kbd:`Ctrl-C`
-   To copy text to the buffer, use the shortcut or the matching entry in the *Edit* menu.
-Paste :kbd:`Ctrl-V`
-   To paste text from the buffer, use the shortcut or the matching entry in the *Edit* menu.
+
+.. _bpy.ops.font.text_cut:
+
+Cut
+===
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Cut`
+   :Shortcut:  :kbd:`Ctrl-X`
+
+To cut and copy text to the buffer, use the shortcut or the matching entry in the *Edit* menu.
+
+
+.. _bpy.ops.font.text_copy:
+
+Copy
+====
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Copy`
+   :Shortcut:  :kbd:`Ctrl-C`
+
+To copy text to the buffer, use the shortcut or the matching entry in the *Edit* menu.
+
+
+.. _bpy.ops.font.text_paste:
+
+Paste
+=====
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Paste`
+   :Shortcut:  :kbd:`Ctrl-V`
+
+To paste text from the buffer, use the shortcut or the matching entry in the *Edit* menu.
+
+
+.. _bpy.ops.font.text_paste_from_file:
+
 Paste File
-   Inserts text from and external text file.
-   This will bring up a :doc:`File Browser </editors/file_browser>` for navigating to a valid UTF-8 file.
-   As usual, be careful that the file does not have too many characters,
-   as interactive response will slow down.
+==========
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Paste File`
+
+Inserts text from and external text file.
+This will bring up a :doc:`File Browser </editors/file_browser>` for navigating to a valid UTF-8 file.
+As usual, be careful that the file does not have too many characters,
+as interactive response will slow down.
+
+
+.. _bpy.ops.font.case_set:
+
 To Uppercase
-   Changes the case of the selected text to uppercase.
+============
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> To Uppercase`
+
+Changes the case of the selected text to uppercase.
+
+
 To Lowercase
-   Changes the case of the selected text to lowercase.
+============
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> To Lowercase`
+
+Changes the case of the selected text to lowercase.
+
+
+.. _bpy.ops.font.text_insert_unicode:
+
+Insert Unicode
+==============
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Insert Unicode`
+
+Opens a dialog box to input the entry of any Unicode character by entering its hexadecimal codepoint value.
+
+See Wikipedia for a `List of Unicode characters <https://en.wikipedia.org/wiki/List_of_Unicode_characters>`__
+which list there respective hexadecimal codepoint values.
+
+
+.. _bpy.ops.font.text_insert:
+
 Special Characters
-   This is a limited character map to insert characters which aren't available from the keyboard.
-   Many other special characters can be "composed", see `Accent Characters`_.
-   If you need others, you will have to copy-paste them from an external editor or character map program.
+==================
 
-   .. note::
+.. reference::
 
-      The text buffer is in sync with the desktop clipboard.
-      But if it is used within Blender the text formatting will be copied as well.
-      For other ways of inserting a text, see `Inserting Text`_.
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Special Characters`
+
+This is a limited character map to insert characters which aren't available from the keyboard.
+Many other special characters can be "composed", see `Accent Characters`_.
+If you need others, you will have to copy-paste them from an external editor or character map program.
+
+.. note::
+
+   The text buffer is in sync with the desktop clipboard.
+   But if it is used within Blender the text formatting will be copied as well.
+   For other ways of inserting a text, see `Inserting Text`_.
+
+
+.. _bpy.ops.font.style_toggle:
 
 Toggle Bold, Italics, Underline, Small Caps
-   To apply the *Bold*, *Italics*, *Underline* or *Small Caps* attribute to a set of characters,
-   you either turn on the related setting prior to typing characters,
-   or select existing text, and then toggle desired style from the menu.
+===========================================
 
-   .. warning::
+.. reference::
 
-      Blender's *Bold* and *Italic* buttons do not work the same way as in other applications,
-      as they also serve as placeholders for you to load up other fonts manually.
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Toggle Bold/Italics/Underline/Small Caps`
+
+To apply the *Bold*, *Italics*, *Underline* or *Small Caps* attribute to a set of characters,
+you either turn on the related setting prior to typing characters,
+or select existing text, and then toggle desired style from the menu.
+
+.. warning::
+
+   Blender's *Bold* and *Italic* buttons do not work the same way as in other applications,
+   as they also serve as placeholders for you to load up other fonts manually.
+
+
+.. _bpy.ops.font.change_spacing:
 
 Kerning
-   Font kerning is the space between individual characters.
+=======
 
-   Decrease Kerning :kbd:`Alt-Left`
-      Decreases the spacing between the characters on either side of the cursor.
-   Increase Kerning :kbd:`Alt-Right`
-      Increase the spacing between the characters on either side of the cursor.
-   Reset Kerning
-      Sets the spacing between the characters on either side of the cursor to their initial value.
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Kerning`
+
+Font kerning is the space between individual characters.
+
+Decrease Kerning :kbd:`Alt-Left`
+   Decreases the spacing between the characters on either side of the cursor.
+Increase Kerning :kbd:`Alt-Right`
+   Increase the spacing between the characters on either side of the cursor.
+Reset Kerning
+   Sets the spacing between the characters on either side of the cursor to their initial value.
+
+
+.. _bpy.ops.font.delete:
 
 Delete
-   Previous/Next Character
-      Deletes the character before or after the cursor.
-   Previous/Next Word
-      Deletes the word before or after the cursor.
+======
+
+.. reference::
+
+   :Editor:    3D Viewport
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> Text --> Delete`
+
+Previous/Next Character
+   Deletes the character before or after the cursor.
+Previous/Next Word
+   Deletes the word before or after the cursor.
 
 
 Inserting Text
 ==============
 
-You can insert text in two ways: from the internal text buffer
-(as described above), or from a text file.
+You can insert text in two ways: from the internal text buffer or from a text file.
 
 Using an existing text data-block, you can convert it to an object from the Text editor's header,
 select :menuselection:`Edit --> Text to 3D Object`,
 *One Object* or *One Object per Line* depending on your needs.
 
-It is also possible to paste from the clipboard or a file from the *Edit* menu, while editing 3D text.
+It is also possible to paste from the clipboard or a file, while editing 3D text.
 
 
 Accent Characters

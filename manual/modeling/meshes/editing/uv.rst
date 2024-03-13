@@ -49,6 +49,12 @@ and takes into account any seams within the selected faces.
 If possible, each selected face gets its own different area of the image and is not overlapping any other faces UVs.
 If all faces of an object are selected, then each face is mapped to a part of the image.
 
+.. tip::
+
+   A face's UV image texture only has to use *part* of the image, not the *whole* image.
+   Also, portions of the same image can be shared by multiple faces.
+   A face can be mapped to less and less of the total image.
+
 
 Options
 -------
@@ -59,29 +65,24 @@ Method
  :Angle Based:
    Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh.
  :Conformal:
-   Uses Least Squares Conformal Mapping (LSCM). This usually results in a less accurate UV mapping than Angle Based,
-   but performs better on simpler objects.
-
+   Uses Least Squares Conformal Mapping (LSCM).
+   This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects.
 Fill Holes
    Activating Fill Holes will prevent overlapping from occurring and better represent any holes in the UV regions.
-
 Correct Aspect
-   Map UVs taking image aspect into account.
-
+   Map UVs will take the image's aspect ratio into consideration.
+   If an image has already been mapped to the :term:`Texture Space` that is non-square,
+   the projection will take this into account and distort the mapping to appear correctly.
 Use Subdivision Surface
    Map UVs taking vertex position after Subdivision Surface Modifier into account.
-
 Margin Method
-   See :ref:`bpy.ops.uv.pack_islands` for a description of this option.
+   The method to use when calculating the empty space between islands.
 
+   :Scaled: Use scale of existing UVs to multiply margin.
+   :Add: Simple method, just add the margin.
+   :Fraction: Precisely specify the fraction of the UV unit square for margin. (Slower than other two methods.)
 Margin
-   See :ref:`bpy.ops.uv.pack_islands` for a description of this parameter.
-
-.. tip::
-
-   A face's UV image texture only has to use *part* of the image, not the *whole* image.
-   Also, portions of the same image can be shared by multiple faces.
-   A face can be mapped to less and less of the total image.
+   The scale for the empty space between islands.
 
 
 .. _bpy.ops.uv.smart_project:
@@ -105,18 +106,16 @@ This algorithm examines the shape of your object,
 the selected faces and their relation to one another,
 and creates a UV map based on this information and settings that you supply.
 
-In the example below,
-the Smart Mapper mapped all of the faces of a cube to a neat arrangement of three sides on top,
-three sides on the bottom, for all six sides of the cube to fit squarely,
-just like the faces of the cube.
+In the example below, the Smart Mapper mapped all of the faces of a cube to a neat arrangement of three sides on top,
+three sides on the bottom, for all six sides of the cube to fit squarely, just like the faces of the cube.
 
 .. figure:: /images/modeling_meshes_editing_uv_smart-project.png
    :width: 670px
 
    Smart UV project on a cube.
 
-For more complex mechanical objects, this operator can quickly and easily create
-a regular and straightforward UV layout.
+For more complex mechanical objects,
+this operator can quickly and easily create a regular and straightforward UV layout.
 
 
 Options
@@ -128,12 +127,26 @@ Angle Limit
    This controls how faces are grouped: a higher limit will lead to many small groups but less distortion,
    while a lower limit will create fewer groups at the expense of more distortion.
 Margin Method
-   See :ref:`bpy.ops.uv.pack_islands` for a description of this option.
+   The method to use when calculating the empty space between islands.
+
+   :Scaled: Use scale of existing UVs to multiply margin.
+   :Add: Simple method, just add the margin.
+   :Fraction: Precisely specify the fraction of the UV unit square for margin. (Slower than other two methods.)
+Rotation Method
+   :Axis-aligned: Rotated to a minimal rectangle, either vertical or horizontal.
+   :Axis-aligned (Horizontal): Rotate islands to be aligned horizontally.
+   :Axis-aligned (Vertical): Rotate islands to be aligned vertically.
 Island Margin
    This controls how tightly the UV islands are packed together.
    A higher number will add more space between islands.
 Area Weight
    Weight projection's vector by faces with larger areas.
+Correct Aspect
+   Map UVs will take the image's aspect ratio into consideration.
+   If an image has already been mapped to the :term:`Texture Space` that is non-square,
+   the projection will take this into account and distort the mapping to appear correctly.
+Scale to Bounds
+   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
 
 
 .. _bpy.ops.uv.lightmap_pack:
@@ -152,20 +165,15 @@ Lightmap Pack takes each of a mesh's faces, or selected faces,
 and packs them into the UV bounds. Lightmaps are used primarily in realtime rendering,
 where lighting information is baked onto texture maps,
 when it is needed to use as much UV space as possible.
-It can also work on several meshes at once.
 It has several options that appear in the :ref:`bpy.ops.screen.redo_last` panel:
-
-You can set the operation to map just *Selected Faces* or *All Faces* if
-working with a single mesh.
-
-The *Selected Mesh Object* option works on multiple meshes. To use this,
-in *Object Mode* select several mesh objects,
-then go into *Edit Mode* and perform the operation.
 
 
 Options
 -------
 
+Selection
+   :Selected Faces: Only unwraps the selected faces.
+   :All Faces: Unwraps the whole mesh.
 Share Texture Space
    This is useful if mapping more than one mesh.
    It attempts to fit all of the objects' faces in the UV bounds without overlapping.
@@ -194,6 +202,17 @@ Follow Active Quads
 Extrapolate UV's based on the active quad by following continuous face loops,
 even if the mesh face is irregularly-shaped.
 
+.. note::
+
+   For a clean 90-degree unwrap it's typically best to first make sure the quad a rectangle in UV space.
+
+   Otherwise any distortion in the active UV is extended which doesn't result in a useful grid-layout.
+
+.. note::
+
+   The resulting unwrap is not clamped within the UV bounds,
+   you may wish to scale down the active quad's UV's so the result is in a usable range.
+
 
 Options
 -------
@@ -211,17 +230,6 @@ Edge Length Mode
       Average space UVs edge length of each loop.
 
       This has the benefit of minimizing distortion, while keeping UV's connected.
-
-.. note::
-
-   For a clean 90-degree unwrap it's typically best to first make sure the quad a rectangle in UV space.
-
-   Otherwise any distortion in the active UV is extended which doesn't result in a useful grid-layout.
-
-.. note::
-
-   The resulting unwrap is not clamped within the UV bounds,
-   you may wish to scale down the active quad's UV's so the result is in a usable range.
 
 
 .. _bpy.ops.uv.cube_project:
@@ -367,8 +375,6 @@ Pole
    :Fan: UVs are fanned at the poles.
 Preserve Seams
    Separate projections by islands isolated by seams.
-Radius
-   The radius of the sphere to use.
 Correct Aspect
    Map UVs will take the image's aspect ratio into consideration.
    If an image has already been mapped to a :term:`Texture Space` that is non-square,
@@ -402,6 +408,8 @@ Options
 
 Orthographic
    Apply an orthographic projection.
+Camera Bounds
+   Map UVs to the camera region taking resolution and aspect into account
 Correct Aspect
    Map UVs will take the image's aspect ratio into consideration.
    If an image has already been mapped to a :term:`Texture Space` that is non-square,
@@ -423,8 +431,7 @@ Project from View (Bounds)
    :Menu:      :menuselection:`UV --> Project from View (Bounds)`
    :Shortcut:  :kbd:`U`
 
-Similar to `Project from View`_,
-but with *Scale to Bounds* and *Correct Aspect* activated.
+The same as :ref:`bpy.ops.uv.project_from_view`, but with *Scale to Bounds* activated by default.
 
 
 .. _bpy.ops.uv.reset:
