@@ -339,6 +339,16 @@ However, the attributes might be expected by Blender to have a certain type.
      - *2D Vector*
      - Used to describe curve attachment locations on a mesh surface, typically used for hair use cases.
 
+   * - ``sculpt_face_set``
+     - *Integer*
+     - *Face*
+     - Used by the :ref:`Sculpt Face Sets Feature <face_sets>`.
+
+   * - ``sculpt_mask``
+     - *Float*
+     - *Point*
+     - Used by the :ref:`Sculpt Masking Feature <sculpt-masks>`.
+
 
 Custom Attributes
 =================
