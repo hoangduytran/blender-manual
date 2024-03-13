@@ -4,9 +4,9 @@
 
 :orphan:
 
-##################
+******************
 Extension Licenses
-##################
+******************
 
 For add-ons and themes the recommended license is
 `GNU General Public License v2.0 or later <https://spdx.org/licenses/GPL-2.0-or-later.html>`__.
@@ -20,7 +20,7 @@ This allows extensions to be packed with Blender and distributed in compliance
 with the governing principles of the `Blender license <https://www.blender.org/about/license/>`__.
 
 More GPL and LGPL Licenses
-++++++++++++++++++++++++++
+==========================
 
 Some third-party add-on libraries may require a different compatible license.
 

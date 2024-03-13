@@ -4,9 +4,9 @@
 
 :orphan:
 
-########################
+************************
 How to Create Extensions
-########################
+************************
 
 Creating an extension takes only a few steps:
 
@@ -26,7 +26,7 @@ An extension is shared as a ``.zip`` archive containing a manifest file and othe
 The expected files depend on the extension type.
 
 Add-on extension
-++++++++++++++++
+----------------
 
 :doc:`Add-ons <addons>` need at least the manifest and an ``__init__.py`` file,
 while more complex add-ons have a few different .py files or wheels together.
@@ -39,7 +39,7 @@ while more complex add-ons have a few different .py files or wheels together.
    └─ (...)
 
 Theme extension
-+++++++++++++++
+---------------
 
 A theme extension only needs the manifest and the .xml theme file.
 

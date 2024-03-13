@@ -8,9 +8,9 @@
 .. .. _bpy.ops.wm.addon:
 .. .. _bpy.types.WindowManager.addon:
 
-#######
+*******
 Add-ons
-#######
+*******
 
 .. important::
 
@@ -32,7 +32,7 @@ Most of the time you can get add-ons as part of the :doc:`Extensions <index>` sy
    for any errors that may have occurred.
 
 User-Defined Add-on Path
-########################
+========================
 
 You can also create a personal directory containing new add-ons and configure your files path in
 the *File Paths* section of the *Preferences*. To create a personal script directory:
@@ -48,7 +48,7 @@ Now when you install add-ons you can select the *Target Path* when installing 3r
 Blender will copy newly installed add-ons under the directory selected in your Preferences.
 
 Legacy vs Extension Add-ons
-###########################
+===========================
 
 With the introduction of Extensions in Blender 4.2, the old way of creating add-ons is considered deprecated.
 While the changes are rather small they impact existing add-ons.
@@ -61,7 +61,7 @@ All add-on maintainers are urged to convert the add-ons they want to share, so t
 features like updating from the extensions platform.
 
 Converting a Legacy Add-on into an Extension
-********************************************
+--------------------------------------------
 
 #. Create a :doc:`manifest file <getting_started>`.
 #. Remove the ``bl_info`` information (this is now in the manifest).
@@ -76,7 +76,7 @@ Converting a Legacy Add-on into an Extension
    everything is working well. This will get you as close to the final experience as possible.
 
 Extensions and Namespace
-========================
+------------------------
 
 The legacy add-ons would use their module name to access the preferences. This could lead to a name clash when
 extensions with the same name (from different repositories) would be installed.
@@ -87,7 +87,7 @@ For example, now instead of ``kitsu`` the module name would be ``bl_ext.RemoteRe
 This has a few implications for preferences and module imports.
 
 User Preferences and ``__package__``
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    :before: ``bpy.context.preferences.addons["kitsu"]``
    :now: ``bpy.context.preferences.addons[__package__]``
@@ -99,7 +99,7 @@ Add-ons can define their own preferences, and can access them using the complete
 This was already supported in the legacy add-ons, but not reinforced. As such this can break backward compatibility.
 
 Relative Imports
-----------------
+^^^^^^^^^^^^^^^^
 
    :before: ``from kitsu import utils``
    :now: ``from . import utils``
@@ -110,7 +110,7 @@ This is a standard Python feature and only applicable for add-ons that have mult
 This was already supported in the legacy add-ons, but not reinforced. As such this can break backward compatibility.
 
 Wheels
-======
+------
 
 Extensions are supposed to be self-contained, and as such must come with all its dependencies. When relying on
 external modules they should be bundled together by using `wheels <https://pythonwheels.com/>`__.
