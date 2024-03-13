@@ -111,7 +111,7 @@ Required values:
    :maintainer: Maintainer of the extension.
    :name: Complete name of the extension.
    :schema_version: Internal version of the file format - use ``1.0.0``.
-   :tagline: One-line short description - cannot end with a pontuation.
+   :tagline: One-line short description - cannot end with punctuation.
    :type: "add-on", "theme".
    :version: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
