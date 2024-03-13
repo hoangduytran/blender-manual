@@ -1,4 +1,3 @@
-
 ********
 Sampling
 ********
@@ -84,13 +83,15 @@ Render
    For denoising the image after rendering with the :doc:`Denoising node </compositing/types/filter/denoise>`,
    the :ref:`Data Render Passes <render_layers_passes_data>` also adapt to the selected denoiser.
 
-   :Open Image Denoise:
+   :OpenImageDenoise:
       Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
-      an AI denoiser which runs on the CPU.
+      an AI denoiser. Typically provides the highest quality. Supports GPU
+      acceleration on modern GPUs.
+      
    :OptiX:
-      Uses an artificial intelligence algorithm to remove noise from renders.
-      It is based on the :ref:`render-cycles-gpu-optix` acceleration engine
-      and therefore has the same GPU requirements as rendering with Optix.
+      Uses NVIDIA's OptiX AI denoiser. It has the same GPU requirements
+      as rendering with OptiX, which includes a wider range of devices
+      than OpenImageDenoise.
 
 .. _bpy.types.CyclesRenderSettings.use_preview_denoising:
 .. _bpy.types.CyclesRenderSettings.preview_denoiser:
@@ -99,15 +100,18 @@ Viewport
    Denoising for the *Rendered* mode in the 3D Viewport can be enabled or disabled for with the checkbox.
 
    :Automatic:
-      Uses the faster available denoiser for 3D Viewport rendering
-      (*OptiX* if available, otherwise *OpenImageDenoise*).
+      Uses GPU accelerated denoising if supported, for best performance.
+      Prefers OpenImageDenoise over OptiX.
+
    :OpenImageDenoise:
-      Uses an artificial intelligence algorithm to remove noise from renders.
-      It is using the `Open Image Denoise <https://www.openimagedenoise.org/>`__ library by Intel.
+      Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
+      an AI denoiser. Typically provides the highest quality. Supports GPU
+      acceleration on modern GPUs.
+      
    :OptiX:
-      Uses an artificial intelligence algorithm to remove noise from renders.
-      It is using the :ref:`render-cycles-gpu-optix` acceleration engine
-      and therefore has the same GPU requirements as rendering with Optix.
+      Uses NVIDIA's OptiX AI denoiser. It has the same GPU requirements
+      as rendering with OptiX, which includes a wider range of devices
+      than OpenImageDenoise.
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_start_sample:
 
@@ -146,6 +150,13 @@ Prefilter
       Prefilters the input passes before denoising to reduce noise. This option usually produces
       more detailed results than *Fast* with increased processing time.
 
+.. _bpy.types.CyclesRenderSettings.preview_denoising_use_gpu:
+.. _bpy.types.CyclesRenderSettings.denoising_use_gpu:
+
+Use GPU
+   Perform denoising on GPU devices, if available.
+   This is significantly faster than on CPU, but requires additional GPU memory.
+   When large scenes need more GPU memory, this option can be disabled.
 
 .. _bpy.types.CyclesRenderSettings.use_guiding:
 
