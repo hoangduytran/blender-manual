@@ -151,17 +151,22 @@ To build the package defined in the current directory use the following commands
 
    blender --command extension build
 
-To validate the manifest without building:
+See :ref:`build <command-line-args-extension-build>` docs.
+
+---
+
+To validate the manifest without building the package:
 
 .. code:: bash
 
    blender --command extension validate
 
-For a list of available options, see:
+See :ref:`validate <command-line-args-extension-validate>` docs.
 
-.. code:: bash
+.. seealso::
 
-   blender --command extension --help
+   :ref:`command_line-args-extensions`.
+
 
 
 Third party extension sites
@@ -180,6 +185,8 @@ To generate a valid JSON file you can use the command-line tool:
    blender --command extension server-generate --repo-dir=/path/to/packages
 
 This creates a listing from all the packages found in the specified location.
+
+See :ref:`server-generate <command-line-args-extension-server-generate>` docs.
 
 Example of what the JSON is expected to look like:
 

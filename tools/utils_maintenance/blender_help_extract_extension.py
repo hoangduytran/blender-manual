@@ -346,6 +346,7 @@ def help_text_as_rst(blender_bin: str) -> str:
         text_sub_command = patch_help_text_all(text_sub_command, True)
         title = "Subcommand: ``" + sub_command + "``"
         help_output.append(
+            ".. _command-line-args-extension-{:s}:\n\n".format(sub_command) +
             title + "\n" +
             ("-" * len(title)) + "\n\n" +
             text_sub_command.rstrip() +

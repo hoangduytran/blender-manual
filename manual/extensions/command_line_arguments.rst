@@ -52,6 +52,8 @@ subcommands:
 Blender Package Management
 ==========================
 
+.. _command-line-args-extension-list:
+
 Subcommand: ``list``
 --------------------
 
@@ -66,6 +68,8 @@ options:
   -s BOOLEAN, --sync BOOLEAN
                         Sync the remote directory before performing the action (default=1).
 
+.. _command-line-args-extension-sync:
+
 Subcommand: ``sync``
 --------------------
 
@@ -77,6 +81,8 @@ Download package information for remote repositories.
 
 options:
   -h, --help  show this help message and exit
+
+.. _command-line-args-extension-upgrade:
 
 Subcommand: ``upgrade``
 -----------------------
@@ -91,6 +97,8 @@ options:
   -h, --help            show this help message and exit
   -s BOOLEAN, --sync BOOLEAN
                         Sync the remote directory before performing the action (default=1).
+
+.. _command-line-args-extension-install:
 
 Subcommand: ``install``
 -----------------------
@@ -110,6 +118,8 @@ options:
                         Sync the remote directory before performing the action (default=1).
   --enable BOOLEAN      Enable the extension after installation (default=1)
 
+.. _command-line-args-extension-install-file:
+
 Subcommand: ``install-file``
 ----------------------------
 
@@ -128,6 +138,8 @@ options:
   -h, --help            show this help message and exit
   -r REPO, --repo REPO  The repository identifier.
   --enable BOOLEAN      Enable the extension after installation (default=1)
+
+.. _command-line-args-extension-remove:
 
 Subcommand: ``remove``
 ----------------------
@@ -149,6 +161,8 @@ options:
 Blender Repository Management
 =============================
 
+.. _command-line-args-extension-repo-list:
+
 Subcommand: ``repo-list``
 -------------------------
 
@@ -160,6 +174,8 @@ List all repositories stored in Blender's preferences.
 
 options:
   -h, --help  show this help message and exit
+
+.. _command-line-args-extension-repo-add:
 
 Subcommand: ``repo-add``
 ------------------------
@@ -188,6 +204,8 @@ options:
                         where packages may be installed by file or managed manually.
   --cache BOOLEAN       Use package cache (default=1).
 
+.. _command-line-args-extension-repo-remove:
+
 Subcommand: ``repo-remove``
 ---------------------------
 
@@ -207,6 +225,8 @@ options:
 
 Extension Creation
 ==================
+
+.. _command-line-args-extension-build:
 
 Subcommand: ``build``
 ---------------------
@@ -228,6 +248,8 @@ options:
   --output-filepath OUTPUT_FILEPATH
                         The package output filepath (should include a ``.zip`` extension).
 
+.. _command-line-args-extension-validate:
+
 Subcommand: ``validate``
 ------------------------
 
@@ -241,6 +263,8 @@ options:
   -h, --help            show this help message and exit
   --source-dir SOURCE_DIR
                         The package source directory containing a ``blender_manifest.toml`` manifest.
+
+.. _command-line-args-extension-server-generate:
 
 Subcommand: ``server-generate``
 -------------------------------
