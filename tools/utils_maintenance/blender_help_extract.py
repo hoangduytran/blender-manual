@@ -6,7 +6,7 @@ This script extracts RST fro Blender's "--help",
 using simple conventions & REGEX parsing.
 
 Example:
-   python tools/utils_maintenance/blender_help_extract.py /path/to/manual/advanced/command_line/arguments.rst
+   python tools/utils_maintenance/blender_help_extract.py /path/to/blender
 """
 
 # Conversion from There are some cases which aren't handled (and aren't needed at the moment),
@@ -18,6 +18,10 @@ Example:
 import os
 import re
 import subprocess
+import sys
+
+BASE_DIR = os.path.normpath(os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", ".."))
+HELP_RST = os.path.join(BASE_DIR, "manual", "advanced", "command_line", "arguments.rst")
 
 
 def help_text_make_version_and_usage_substitution(text: str) -> str:
@@ -213,14 +217,18 @@ def help_text_as_rst(text: str) -> str:
     return text_header + text
 
 
-def main() -> None:
+def main() -> int:
     import sys
-    blender_bin = sys.argv[-2]
-    output_file = sys.argv[-1]
-
-    if not output_file.endswith(".rst"):
-        print("Expected an '.rst' file to be passed as the last argument")
-        return
+    blender_bin = sys.argv[-1]
+    output_file = HELP_RST
+    if not os.path.exists(output_file):
+        # If the RST doesn't exist, chances are it was moved, don't blindly write to the (old?) location.
+        # The user can touch the path if this is really needed.
+        print(
+            "File not found: {:s}\n"
+            "If this is intentional touch the destination before running!".format(output_file)
+        )
+        return 1
 
     env = os.environ.copy()
     env["ASAN_OPTIONS"] = (
@@ -256,7 +264,9 @@ def main() -> None:
 
     with open(output_file, "w", encoding="utf-8") as fh:
         fh.write(text_rst)
+    print("Updated:", os.path.relpath(output_file, BASE_DIR))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
