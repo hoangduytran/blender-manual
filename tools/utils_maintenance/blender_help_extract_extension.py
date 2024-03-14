@@ -30,7 +30,7 @@ sub_command_titles: Dict[str, Tuple[str, ...]] = {
     "Blender Package Management": (
         "list",
         "sync",
-        "upgrade",
+        "update",
         "install",
         "install-file",
         "remove",

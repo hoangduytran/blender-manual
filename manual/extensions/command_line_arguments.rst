@@ -31,7 +31,7 @@ subcommands:
   `Blender Package Management`_
     :list:                List all packages.
     :sync:                Synchronize with remote repositories.
-    :upgrade:             Upgrade any outdated packages.
+    :update:              Upgrade any outdated packages.
     :install:             Install packages.
     :install-file:        Install package from file.
     :remove:              Remove packages.
@@ -59,14 +59,13 @@ Subcommand: ``list``
 
 usage::
 
-       blender --command extension list [-h] [-s BOOLEAN]
+       blender --command extension list [-h] [-s]
 
 List packages from all enabled repositories.
 
 options:
-  -h, --help            show this help message and exit
-  -s BOOLEAN, --sync BOOLEAN
-                        Sync the remote directory before performing the action (default=1).
+  -h, --help  show this help message and exit
+  -s, --sync  Sync the remote directory before performing the action.
 
 .. _command-line-args-extension-sync:
 
@@ -82,21 +81,20 @@ Download package information for remote repositories.
 options:
   -h, --help  show this help message and exit
 
-.. _command-line-args-extension-upgrade:
+.. _command-line-args-extension-update:
 
-Subcommand: ``upgrade``
------------------------
+Subcommand: ``update``
+----------------------
 
 usage::
 
-       blender --command extension upgrade [-h] [-s BOOLEAN]
+       blender --command extension update [-h] [-s]
 
-Download and upgrade any outdated packages.
+Download and update any outdated packages.
 
 options:
-  -h, --help            show this help message and exit
-  -s BOOLEAN, --sync BOOLEAN
-                        Sync the remote directory before performing the action (default=1).
+  -h, --help  show this help message and exit
+  -s, --sync  Sync the remote directory before performing the action.
 
 .. _command-line-args-extension-install:
 
@@ -105,18 +103,15 @@ Subcommand: ``install``
 
 usage::
 
-       blender --command extension install [-h] [-s BOOLEAN]
-                                           [--enable BOOLEAN]
-                                           packages
+       blender --command extension install [-h] [-s] [--enable] packages
 
 positional arguments:
-  :packages:              The packages to operate on (separated by ``,`` without spaces).
+  :packages:    The packages to operate on (separated by ``,`` without spaces).
 
 options:
-  -h, --help            show this help message and exit
-  -s BOOLEAN, --sync BOOLEAN
-                        Sync the remote directory before performing the action (default=1).
-  --enable BOOLEAN      Enable the extension after installation (default=1)
+  -h, --help  show this help message and exit
+  -s, --sync  Sync the remote directory before performing the action.
+  --enable    Enable the extension after installation.
 
 .. _command-line-args-extension-install-file:
 
@@ -125,9 +120,7 @@ Subcommand: ``install-file``
 
 usage::
 
-       blender --command extension install-file [-h] -r REPO
-                                                [--enable BOOLEAN]
-                                                file
+       blender --command extension install-file [-h] -r REPO [--enable] file
 
 Install a package file into a local repository.
 
@@ -137,7 +130,7 @@ positional arguments:
 options:
   -h, --help            show this help message and exit
   -r REPO, --repo REPO  The repository identifier.
-  --enable BOOLEAN      Enable the extension after installation (default=1)
+  --enable              Enable the extension after installation.
 
 .. _command-line-args-extension-remove:
 
