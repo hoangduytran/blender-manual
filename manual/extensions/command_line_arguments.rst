@@ -257,7 +257,7 @@ usage::
 
        blender --command extension validate [-h] [--source-dir SOURCE_DIR]
 
-Validate a package in the current directory.
+Validate the package meta-data in the current directory.
 
 options:
   -h, --help            show this help message and exit
@@ -279,3 +279,4 @@ This can be used to host packages which only requires static-file hosting.
 options:
   -h, --help           show this help message and exit
   --repo-dir REPO_DIR  The remote repository directory.
+
