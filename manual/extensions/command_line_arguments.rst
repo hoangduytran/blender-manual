@@ -3,6 +3,11 @@
    CHANGES TO THIS FILE MUST BE MADE IN BLENDER'S SOURCE CODE, SEE:
    https://projects.blender.org/blender/blender-addons-contrib/src/branch/main/bl_pkg/bl_extension_cli.py
 
+.. Keep index link until this page is made public,
+   so it's possible to navigate to other extensions pages.
+
+:ref:`Extensions Index <extensions-index>`
+
 .. _command_line-args-extensions:
 
 *********************************
@@ -20,6 +25,7 @@ options:
   -h, --help            show this help message and exit
 
 subcommands:
+
 
 
   `Blender Package Management`_
@@ -96,7 +102,7 @@ usage::
                                            packages
 
 positional arguments:
-  :packages:              The packages to operate on (separated by "," without spaces).
+  :packages:              The packages to operate on (separated by ``,`` without spaces).
 
 options:
   -h, --help            show this help message and exit
@@ -133,7 +139,7 @@ usage::
 Disable & remove package(s).
 
 positional arguments:
-  :packages:    The packages to operate on (separated by "," without spaces).
+  :packages:    The packages to operate on (separated by ``,`` without spaces).
 
 options:
   -h, --help  show this help message and exit
@@ -249,4 +255,3 @@ This can be used to host packages which only requires static-file hosting.
 options:
   -h, --help           show this help message and exit
   --repo-dir REPO_DIR  The remote repository directory.
-

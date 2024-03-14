@@ -8,6 +8,11 @@
 .. .. _bpy.ops.wm.addon:
 .. .. _bpy.types.WindowManager.addon:
 
+.. Keep index link until this page is made public,
+   so it's possible to navigate to other extensions pages.
+
+:ref:`Extensions Index <extensions-index>`
+
 *******
 Add-ons
 *******

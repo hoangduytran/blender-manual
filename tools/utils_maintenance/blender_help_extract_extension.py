@@ -223,7 +223,10 @@ def patch_help_text_main(
 
     else:
         for sub_command in sub_commands:
-            help_output = help_output.replace("    {:s} ".format(sub_command), "    :{:s}: ".format(sub_command))
+            help_output = help_output.replace(
+                "    {:s} ".format(sub_command),
+                "    :{:s}: ".format(sub_command)
+            )
     return help_output
 
 
@@ -292,6 +295,11 @@ def help_text_as_rst(blender_bin: str) -> str:
         "\n"
         "   CHANGES TO THIS FILE MUST BE MADE IN BLENDER'S SOURCE CODE, SEE:\n"
         "   https://projects.blender.org/blender/blender-addons-contrib/src/branch/main/bl_pkg/bl_extension_cli.py\n"
+        "\n"
+        ".. Keep index link until this page is made public,\n"
+        "   so it's possible to navigate to other extensions pages.\n"
+        "\n"
+        ":ref:`Extensions Index <extensions-index>`\n"
         "\n"
         ".. _command_line-args-extensions:\n"
         "\n"

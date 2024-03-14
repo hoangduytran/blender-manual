@@ -1,3 +1,4 @@
+.. _extensions-index:
 .. index:: Extensions
 
 .. Mark as "orphan" until extensions is out of beta.
