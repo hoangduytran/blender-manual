@@ -103,15 +103,19 @@ Subcommand: ``install``
 
 usage::
 
-       blender --command extension install [-h] [-s] [--enable] packages
+       blender --command extension install [-h] [-s] [-e] [--no-prefs]
+                                           packages
 
 positional arguments:
-  :packages:    The packages to operate on (separated by ``,`` without spaces).
+  :packages:      The packages to operate on (separated by ``,`` without spaces).
 
 options:
-  -h, --help  show this help message and exit
-  -s, --sync  Sync the remote directory before performing the action.
-  --enable    Enable the extension after installation.
+  -h, --help    show this help message and exit
+  -s, --sync    Sync the remote directory before performing the action.
+  -e, --enable  Enable the extension after installation.
+  --no-prefs    Treat the user-preferences as read-only,
+                preventing updates for operations that would otherwise modify them.
+                This means removing extensions or repositories for example, wont update the user-preferences.
 
 .. _command-line-args-extension-install-file:
 
@@ -120,7 +124,8 @@ Subcommand: ``install-file``
 
 usage::
 
-       blender --command extension install-file [-h] -r REPO [--enable] file
+       blender --command extension install-file [-h] -r REPO [-e] [--no-prefs]
+                                                file
 
 Install a package file into a local repository.
 
@@ -130,7 +135,10 @@ positional arguments:
 options:
   -h, --help            show this help message and exit
   -r REPO, --repo REPO  The repository identifier.
-  --enable              Enable the extension after installation.
+  -e, --enable          Enable the extension after installation.
+  --no-prefs            Treat the user-preferences as read-only,
+                        preventing updates for operations that would otherwise modify them.
+                        This means removing extensions or repositories for example, wont update the user-preferences.
 
 .. _command-line-args-extension-remove:
 
@@ -139,7 +147,7 @@ Subcommand: ``remove``
 
 usage::
 
-       blender --command extension remove [-h] packages
+       blender --command extension remove [-h] [--no-prefs] packages
 
 Disable & remove package(s).
 
@@ -148,6 +156,9 @@ positional arguments:
 
 options:
   -h, --help  show this help message and exit
+  --no-prefs  Treat the user-preferences as read-only,
+              preventing updates for operations that would otherwise modify them.
+              This means removing extensions or repositories for example, wont update the user-preferences.
 
 
 
@@ -178,6 +189,7 @@ usage::
        blender --command extension repo-add [-h] [--name NAME]
                                             [--directory DIRECTORY]
                                             [--url URL] [--cache BOOLEAN]
+                                            [--no-prefs]
                                             id
 
 Add a new local or remote repository.
@@ -196,6 +208,9 @@ options:
                         as it is not connected to an external repository,
                         where packages may be installed by file or managed manually.
   --cache BOOLEAN       Use package cache (default=1).
+  --no-prefs            Treat the user-preferences as read-only,
+                        preventing updates for operations that would otherwise modify them.
+                        This means removing extensions or repositories for example, wont update the user-preferences.
 
 .. _command-line-args-extension-repo-remove:
 
@@ -204,7 +219,7 @@ Subcommand: ``repo-remove``
 
 usage::
 
-       blender --command extension repo-remove [-h] id
+       blender --command extension repo-remove [-h] [--no-prefs] id
 
 Remove a repository.
 
@@ -213,6 +228,9 @@ positional arguments:
 
 options:
   -h, --help  show this help message and exit
+  --no-prefs  Treat the user-preferences as read-only,
+              preventing updates for operations that would otherwise modify them.
+              This means removing extensions or repositories for example, wont update the user-preferences.
 
 
 
