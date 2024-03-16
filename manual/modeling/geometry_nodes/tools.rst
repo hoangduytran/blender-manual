@@ -61,6 +61,11 @@ These properties can be configured in popover menus in the
 
 Currently only Object, Edit, and Sculpting modes are supported, and only for the Mesh and Hair Curves object types.
 
+.. important::
+
+   For mesh objects, :doc:`/animation/shape_keys/index` are not supported.
+   Operating a node tool on a mesh with shape keys will remove the shape key data.
+
 
 Tool-specific Nodes
 ===================
