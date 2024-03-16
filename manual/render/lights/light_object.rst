@@ -54,6 +54,11 @@ Power
    Power of the light in Watts. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
 
+.. _bpy.types.PointLight.use_soft_falloff:
+
+Soft Falloff
+   Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
+
 .. _bpy.types.PointLight.shadow_soft_size:
 
 Radius
@@ -75,6 +80,11 @@ in a given direction.
 Power
    Power of the light in Watts. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
+
+.. _bpy.types.SpotLight.use_soft_falloff:
+
+Soft Falloff
+   Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
 
 .. _bpy.types.SpotLight.shadow_soft_size:
 
