@@ -19,17 +19,15 @@ For example, it is possible to pan and zoom in the Image editor.
 Navigation Gizmo
 ================
 
-.. figure:: /images/editors_3dview_navigate_introduction_gizmo_camera_view.png
-   :align: right
-
-   Navigation Gizmo in camera view.
-
-.. figure:: /images/editors_3dview_navigate_introduction_gizmo.png
-   :align: right
-
-   Navigation Gizmo.
-
 The navigation gizmo can be found in the top right of the editor.
+
+.. list-table:: Navigation Gizmo (left) and Navigation Gizmo in camera view (right).
+
+   * - .. figure:: /images/editors_3dview_navigate_introduction_gizmo.png
+          :width: 146px
+
+     - .. figure:: /images/editors_3dview_navigate_introduction_gizmo_camera_view.png
+          :width: 146px
 
 The Orbit gizmo at the top shows the current orientation of the view.
 Dragging it with :kbd:`LMB` will :ref:`orbit <bpy.ops.view3d.view_orbit>` the view.
