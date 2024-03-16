@@ -46,6 +46,9 @@ Transform
 :ref:`Measure <tool-measure>`
    Measure distances in the scene.
 
+:ref:`Draw <modeling-curves-draw>`
+   Free-hand drawing of new curves.
+
 :ref:`Radius <modeling-curves-radius>`
    Control the radius value of the control points.
 

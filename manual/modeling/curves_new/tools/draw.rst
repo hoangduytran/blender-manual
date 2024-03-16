@@ -1,4 +1,4 @@
-.. _bpy.ops.curve.draw:
+.. _modeling-curves-draw:
 
 ****
 Draw
@@ -11,6 +11,8 @@ Draw
 
 The Curve draw tool allows you to free-hand draw curves.
 
+
+.. _bpy.types.CurvePaintSettings:
 
 Tool Settings
 =============
@@ -71,6 +73,9 @@ Depth
          :Normal to Surface: Draws aligned to the surface.
          :Tangent to Surface: Draws perpendicular to the surface.
          :View: Draws aligned to the viewport.
+
+Curve 2D
+   Project the curve on the Z axis.
 
 
 Options
