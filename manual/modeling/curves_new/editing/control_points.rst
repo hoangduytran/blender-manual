@@ -3,6 +3,20 @@
 Control Points
 **************
 
+.. _bpy.ops.curves.extrude_move:
+
+Extrude Curve and Move
+======================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Shortcut:  :kbd:`E`
+
+Extrudes points by duplicating the selected points, which then can be moved,
+and connecting those points back to the original curve creating a continuous curve.
+
+
 .. _modeling-curves-tilt:
 
 Tilt
