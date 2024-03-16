@@ -28,6 +28,11 @@ Count
 Interpolate Length
    Use the average length of the curves in close proximity.
 
+.. _bpy.types.BrushCurvesSculptSettings.interpolate_radius:
+
+Interpolate Radius
+   Use the average radius of the curves in close proximity. If there is no radius attribute, then the interpolation will skip.
+
 .. _bpy.types.BrushCurvesSculptSettings.interpolate_shape:
 
 Interpolate Shape
@@ -42,6 +47,11 @@ Interpolate Point Count
 
 Curve Length
    Length of newly added curves when not interpolated.
+
+.. _bpy.types.BrushCurvesSculptSettings.curve_radius:
+
+Curve Radius
+   Radius of newly added curves when not interpolated.
 
 .. _bpy.types.BrushCurvesSculptSettings.points_per_curve:
 
