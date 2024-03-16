@@ -77,6 +77,9 @@ Depth
 Curve 2D
    Project the curve on the Z axis.
 
+As NURBS
+   Draw curves as a NURBS curve with Bézier knot mode, instead of a Bézier curve.
+
 
 Options
 =======
