@@ -67,11 +67,11 @@ Tool-specific Nodes
 
 The following nodes are only supported in the *Tool* context:
 
-   - :doc:`/modeling/geometry_nodes/input/scene/3d_cursor`
-   - :doc:`/modeling/geometry_nodes/mesh/read/face_set`
-   - :doc:`/modeling/geometry_nodes/geometry/read/selection`
-   - :doc:`/modeling/geometry_nodes/mesh/write/set_face_set`
-   - :doc:`/modeling/geometry_nodes/geometry/write/set_selection`
+- :doc:`/modeling/geometry_nodes/input/scene/3d_cursor`
+- :doc:`/modeling/geometry_nodes/mesh/read/face_set`
+- :doc:`/modeling/geometry_nodes/geometry/read/selection`
+- :doc:`/modeling/geometry_nodes/mesh/write/set_face_set`
+- :doc:`/modeling/geometry_nodes/geometry/write/set_selection`
 
 .. note::
 
@@ -84,5 +84,5 @@ Non-supported Nodes
 
 These nodes are only supported in the *Modifier* context:
 
-  - :doc:`/modeling/geometry_nodes/simulation/simulation_zone`
-  - :doc:`/modeling/geometry_nodes/output/viewer`
+- :doc:`/modeling/geometry_nodes/simulation/simulation_zone`
+- :doc:`/modeling/geometry_nodes/output/viewer`
