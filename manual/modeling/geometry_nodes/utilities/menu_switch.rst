@@ -41,6 +41,11 @@ they contain the same menu switch node.
           Same node group can be connected without conflict.
 
 
+.. seealso::
+
+   The :doc:`/modeling/geometry_nodes/utilities/index_switch` is similar but it exposes the choices as an integer index.
+
+
 Inputs
 ======
 

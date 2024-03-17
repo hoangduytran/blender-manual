@@ -12,6 +12,12 @@ Switch Node
 The *Switch* node outputs one of two inputs depending on a condition.
 Only the input that is passed through the node is computed.
 
+.. seealso::
+
+   The :doc:`/modeling/geometry_nodes/utilities/menu_switch`
+   and :doc:`/modeling/geometry_nodes/utilities/index_switch`
+   can be used to switch between an arbitrary amount of inputs.
+
 
 Inputs
 ======
