@@ -56,7 +56,7 @@ Show All
 .. _bpy.ops.armature.collection_unsolo_all:
 
 Un-Solo All
-   Clear the ‘solo’ setting on all bone collections
+   Clear the 'solo' setting on all bone collections
 
 .. _bpy.ops.armature.collection_remove_unused:
 

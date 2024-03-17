@@ -200,8 +200,9 @@ which allows you to pose a whole chain just by moving its tip.
 Bone Collections
 ================
 
-This list shows the :term:`bone collections <Bone Collection>` the bone is
-assigned to. Press the eye icon to show or hide the entire bone collection.
+This list shows the :term:`bone collections <Bone Collection>` the bone is assigned to.
+Press the eye icon to show or hide the entire bone collection.
+Press the star icon to show only this bone collection, and others also marked as 'solo'
 Press the X icon to remove the bone from that particular collection.
 
 To assign the bone to other bone collections, either use the :kbd:`M` or :kbd:`Shift-M` shortcuts

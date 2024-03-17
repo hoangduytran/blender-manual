@@ -264,6 +264,17 @@ This is an imperfect representation, because empty objects have a transform and 
 but this approach nonetheless helps preserve the structure of the scene hierarchy.
 
 
+PointInstancer Primitives
+-------------------------
+
+USD provides a ``UsdGeomPointInstancer`` prim type,
+containing instances that are scattered on a primitive's points.
+
+These are imported into Blender as Point Clouds using a
+:doc:`/modeling/modifiers/generate/geometry_nodes`
+and the :doc:`/modeling/geometry_nodes/instances/instance_on_points`.
+
+
 Animations
 ----------
 

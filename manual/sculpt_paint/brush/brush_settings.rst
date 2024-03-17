@@ -184,6 +184,13 @@ Anti-Aliasing :guilabel:`2D Painting Only`
    this is useful if you are working with pixel art or low resolution textures.
 
 .. _bpy.types.Brush.use_automasking_topology:
+.. _bpy.types.Brush.use_automasking_boundary_face_sets:
+.. _bpy.types.Brush.use_automasking_boundary_edges:
+.. _bpy.types.Brush.use_automasking_cavity:
+.. _bpy.types.Brush.use_automasking_cavity_inverted:
+.. _bpy.types.Brush.use_automasking_view_normal:
+.. _bpy.types.Brush.use_automasking_start_normal:
+.. _bpy.types.Brush.automasking:
 
 Auto-Masking :guilabel:`Sculpt Mode`
    The auto-masking toggles in the brush settings are the same as the sculpt mode auto-masking settings.

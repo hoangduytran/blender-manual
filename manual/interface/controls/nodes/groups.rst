@@ -95,12 +95,18 @@ Min, Max
    Note, this is not a minimum or maximum for the data that can pass through the node.
    If a socket passes a higher value than the maximum, it will still pass into the node unchanged.
 
+.. rubric:: Geometry Nodes
+
+.. _bpy.types.NodeTreeInterfaceSocket.default_input:
+
+Default Input
+   Input to use when the socket is unconnected.
+   Requires *Hide Value* to be enabled.
+
 .. _bpy.types.NodeTreeInterfaceSocket.hide_value:
 
 Hide Value
    Hide the socket value even when the socket is not connected.
-
-.. rubric:: Geometry Nodes
 
 .. _bpy.types.NodeTreeInterfaceSocket.hide_in_modifier:
 

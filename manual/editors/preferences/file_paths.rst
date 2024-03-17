@@ -41,9 +41,9 @@ Sounds
 .. _bpy.types.PreferencesFilePaths.temporary_directory:
 
 Temporary Files
-   The location where temporary files are stored,
-   leave blank to use the systems temporary directory
-   (see :ref:`temp-dir` for details).
+   The directory for storing temporary save files. The path must reference an existing directory
+   or it will be ignored and the systems temporary directory will be used instead.
+   When left blank, the systems temporary directory will be used (see :ref:`temp-dir` for details).
 
 
 Render

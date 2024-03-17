@@ -81,3 +81,22 @@ to appear flat if smooth shading is enabled for the connecting face or object.
 This attribute can also be used by many modifiers or operators to mask their effect.
 
 Internally, this uses the :ref:`sharp edge attribute <geometry-nodes_builtin-attributes>`.
+
+
+.. _bpy.ops.mesh.set_sharpness_by_angle:
+
+Set Sharpness by Angle
+======================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Edge --> Set Sharpness by Angle`
+
+Sets the :ref:`sharp edge attribute <geometry-nodes_builtin-attributes>`
+based on the angle between neighboring faces.
+
+Angle
+   Maximum angle between face normals that will be considered as smooth.
+Extend
+   Add new sharp edges without clearing existing sharp edges.
