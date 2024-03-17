@@ -34,6 +34,7 @@ Stroke Method :kbd:`Alt-E`
 
       Spacing
          Limits brush application to the distance specified by the percentage of the brush radius.
+
    :Airbrush:
       Flow of the brush continues as long as the mouse click is held (spray),
       determined by the *Rate* setting.
@@ -150,6 +151,11 @@ Jitter Unit
 
 Input Samples
    Recent mouse locations (input samples) are averaged together to smooth brush strokes.
+
+   .. _bpy.types.UnifiedPaintSettings.use_unified_input_samples:
+
+   Use Unified Input Samples
+      Use the same brush *Input Samples* across all brushes.
 
 
 .. _bpy.types.Brush.use_smooth_stroke:
