@@ -31,7 +31,8 @@ Interpolate Length
 .. _bpy.types.BrushCurvesSculptSettings.interpolate_radius:
 
 Interpolate Radius
-   Use the average radius of the curves in close proximity. If there is no radius attribute, then the interpolation will skip.
+   Use the average radius of the curves in close proximity.
+   If there is no radius attribute, then the interpolation will skip.
 
 .. _bpy.types.BrushCurvesSculptSettings.interpolate_shape:
 

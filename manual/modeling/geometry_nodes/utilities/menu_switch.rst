@@ -43,7 +43,8 @@ they contain the same menu switch node.
 
 .. seealso::
 
-   The :doc:`/modeling/geometry_nodes/utilities/index_switch` is similar but it exposes the choices as an integer index.
+   The :doc:`/modeling/geometry_nodes/utilities/index_switch`
+   is similar but it exposes the choices as an integer index.
 
 
 Inputs
