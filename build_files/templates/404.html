@@ -36,26 +36,29 @@
 </noscript>
 <script>
 	function init() {
-		const versions = getVersion();
+		var versions = getVersion();
 		if (versions !== null) {
 			replaceSearch(versions);
 		}
 	}
 	/*get language and version from url*/
 	function getVersion() {
-		const versions = window.location.pathname.split('/', 4);
-		if (versions && versions[1] === "manual") {
-			return versions.slice(2);
+		var url = window.location.href;
+		var versions = url.match(/\/manual\/([\w\-\.]+)\/(dev|\d\.\d[\w\d\.]*)\//);
+		if (versions !== null) {
+			return [versions[1], versions[2]];
 		}
 		return null;
 	}
 	/*replace search form url*/
-	function replaceSearch(versions) {
-		const searchforms = document.getElementsByTagName("FORM");
-		for (let searchform of searchforms) {
-			searchform.setAttribute("action", ["", "manual", ...versions, "search.html"].join("/"));
-			let searchtext = searchform.querySelector("input[name=\"q\"]");
-			searchtext.setAttribute("placeholder", "Search Docs (" + versions.join(" ") + ")");
+	function replaceSearch(version) {
+		var searchforms = document.getElementsByTagName("FORM");
+		for (let i = 0; i < searchforms.length; i++) {
+			searchforms[i].setAttribute("action", "/manual/" + version[0] + "/" + version[1] + "/search.html");
+		}
+		var searchtexts = document.getElementsByName("q");
+		for (let i = 0; i < searchtexts.length; i++) {
+			searchtexts[i].setAttribute("placeholder", "Search Docs (" + version[0] + " " + version[1] + ")");
 		}
 	}
 	window.onload = init();
