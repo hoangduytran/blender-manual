@@ -341,12 +341,10 @@ However, the attributes might be expected by Blender to have a certain type.
 
    * - ``sculpt_face_set``
      - *Integer*
-     - *Face*
      - Used by the :ref:`Sculpt Face Sets Feature <face_sets>`.
 
    * - ``sculpt_mask``
      - *Float*
-     - *Point*
      - Used by the :ref:`Sculpt Masking Feature <sculpt-masks>`.
 
 
