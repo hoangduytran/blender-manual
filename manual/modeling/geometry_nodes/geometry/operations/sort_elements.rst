@@ -5,7 +5,7 @@
 Sort Elements Node
 ******************
 
-.. figure:: /images/node-types_GeometryNodeSeparateComponents.webp
+.. figure:: /images/node-types_GeometryNodeSortElements.png
    :align: right
    :alt: Sort Elements node.
 
@@ -22,12 +22,12 @@ Selection
    The selection of elements to sort, if left blank, all elements are sorted.
    Non selected elements will be keep their current indices.
 
-Weight
-   The sorted values used to do the reordering.
-   If this is not a field, the node has no affect.
-
 Group ID
    Elements with the same group ID are sorted together.
+   If this is not a field, the node has no affect.
+   
+Sort Weight
+   The sorted values used to do the reordering.
    If this is not a field, the node has no affect.
 
 

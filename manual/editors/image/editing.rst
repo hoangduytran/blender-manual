@@ -182,22 +182,25 @@ Resize
 Adjust the image size in pixels.
 
 
+
+Transform
+=========
+
 .. _bpy.ops.image.flip:
 
-Flip
-====
-
-.. reference::
-
-   :Mode:      All Modes
-   :Menu:      :menuselection:`Image --> Flip`
-
-Mirror the image across an axis.
-
-Horizontally
+Flip Horizontally
    Mirrors the image so the left side becomes the right side.
-Vertically
+Flip Vertically
    Mirrors the image so the top becomes the bottom.
+
+.. _bpy.ops.image.rotate_orthogonal:
+
+Rotate 90° Clockwise
+   Rotates the image clockwise 90°.
+Rotate 90° Counter-Clockwise
+   Rotates the image counter-clockwise 90°.
+Rotate 180°
+   Rotates the image 180°.
 
 
 .. _bpy.ops.image.pack:

@@ -62,7 +62,7 @@ Sidebar
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar --> Group --> Inputs`, :menuselection:`Sidebar --> Group --> Outputs`
+   :Panel:     :menuselection:`Sidebar --> Group --> Interface`
 
 .. figure:: /images/interface_controls_nodes_groups_interface-panel.png
    :align: right
@@ -73,14 +73,21 @@ The Sidebar lets you add, remove, reorder, and edit the sockets of the group's i
 
 .. _bpy.types.NodeTreeInterfaceSocket.name:
 
-Name
-   The name of the socket to display in the node's interface.
+Interface List
+   A :ref:`ui-list-view` of all inputs, outputs and panels.
+
+   Here you can name the socket which is displayed in the node's interface.
 
 .. _bpy.types.NodeTreeInterfaceSocket.description:
 
-Tooltip
+Description
    The message displayed when hovering over socket properties.
    Currently only supported for :doc:`Geometry Node Editor </editors/geometry_node>`.
+
+.. _bpy.types.NodeTreeInterfacePanel.default_closed:
+
+Closed by Default :guilabel:`Panels`
+   Panel is closed by default on new nodes.
 
 .. _bpy.types.NodeTreeInterfaceSocket*.default_value:
 

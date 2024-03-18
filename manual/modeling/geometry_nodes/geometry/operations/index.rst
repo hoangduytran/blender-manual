@@ -6,6 +6,7 @@
 .. toctree::
    :maxdepth: 1
 
+   bake.rst
    bounding_box.rst
    convex_hull.rst
    delete_geometry.rst
