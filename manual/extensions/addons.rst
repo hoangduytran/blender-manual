@@ -87,21 +87,57 @@ The legacy add-ons would use their module name to access the preferences. This c
 extensions with the same name (from different repositories) would be installed.
 To prevent this conflict, the repository name is now part of the namespace.
 
-For example, now instead of ``kitsu`` the module name would be ``bl_ext.RemoteRepository.kitsu`` instead.
+For example, now instead of ``kitsu`` the module name would be ``bl_ext.{repository_module_name}.kitsu`` instead.
 
 This has a few implications for preferences and module imports.
 
 User Preferences and ``__package__``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   :before: ``bpy.context.preferences.addons["kitsu"]``
-   :now: ``bpy.context.preferences.addons[__package__]``
+Add-ons can define their own preferences which use the package name as an identifier.
+This can be accessed using ``__package__``.
 
+This was already supported in the legacy add-ons, but not reinforced.
+As such this can break backward compatibility.
 
-Add-ons can define their own preferences, and can access them using the complete module name. This is done by using
-``__package__``.
+Before:
 
-This was already supported in the legacy add-ons, but not reinforced. As such this can break backward compatibility.
+   .. code-block:: python
+
+      class KitsuPreferences(bpy.types.AddonPreferences):
+          bl_idname = "kitsu"
+          # ... snip ...
+
+      # Access with:
+      addon_prefs = bpy.context.preferences.addons["kitsu"]
+
+Now:
+
+   .. code-block:: python
+
+      class KitsuPreferences(bpy.types.AddonPreferences):
+          bl_idname = __package__
+          # ... snip ...
+
+      # Access with:
+      addon_prefs = bpy.context.preferences.addons[__package__]
+
+Sub-packages
+   An add-on that defines sub-packages (sub-directories with their own ``__init__.py`` file)
+   that needs to use this identifier will have to import the top-level package using a relative import.
+
+   .. code-block:: python
+
+      from .. import __package__ as base_package
+
+   Then ``base_package`` can be used instead of ``__package__``.
+   The ``..`` imports relative to the packages parent, sub-sub-packages must use ``...`` and so on.
+
+.. note::
+
+   - The value of ``__package__`` will vary between systems so it should never be replaced with a literal string.
+   - Extensions must not manipulate the value of ``__package__`` as this may cause unexpected behavior or errors.
+
 
 Relative Imports
 ^^^^^^^^^^^^^^^^
