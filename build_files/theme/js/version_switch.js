@@ -1,4 +1,4 @@
-(function() {//switch: v1.4
+(function() {//switch: v1.5
 "use strict";
 
 var versionsFileUrl = "https://docs.blender.org/versions.json"
@@ -141,7 +141,14 @@ buildList(v, l) {
 			clone = template.firstElementChild.cloneNode(true);
 			const link = clone.querySelector("a");
 			link.href = href;
-			link.innerHTML = title;
+			if (that.type) {
+				link.innerHTML = title;
+			} else {
+				const hint = document.createElement("bdi");
+				hint.innerHTML = title;
+				link.appendChild(hint);
+			}
+			link.setAttribute("lang", !that.type ? ix : "en");
 		}
 		that.list.append(clone);
 	};
