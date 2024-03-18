@@ -61,6 +61,8 @@ Skip
    to the output node and ignore the nodes in the simulation zone.
 
 
+.. _geometry_nodes-simulation-baking:
+
 Baking
 ======
 

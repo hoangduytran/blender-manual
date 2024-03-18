@@ -66,9 +66,13 @@ Bake
 .. _bpy.types.NodesModifier.simulation_bake_directory:
 
 Bake Path
-   Location on disk where the
-   :ref:`baked data <bpy.ops.object.simulation_nodes_cache_bake>` for
-   :doc:`simulation zones </modeling/geometry_nodes/simulation/simulation_zone>` are stored.
+   Location on disk where the baked data for
+   :doc:`Simulation Zones </modeling/geometry_nodes/simulation/simulation_zone>`
+   and :doc:`Bake Nodes </modeling/geometry_nodes/geometry/operations/bake>` are stored.
+
+.. seealso::
+
+   :doc:`Geometry Node Baking </modeling/geometry_nodes/baking>`
 
 
 .. _modifiers-geometry-nodes-named-attributes:

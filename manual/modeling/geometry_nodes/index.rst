@@ -15,6 +15,7 @@
    attributes_reference.rst
    fields.rst
    instances.rst
+   baking.rst
    tools.rst
 
 
