@@ -151,6 +151,30 @@ Face Orientation
    the outside surface of an object should typically be all blue.
 
 
+.. _3dview-overlays-view_node:
+
+Viewer Node
+-----------
+
+Visualizes :doc:`/modeling/geometry_nodes/attributes_reference`
+connected to the :doc:`/modeling/geometry_nodes/output/viewer`.
+
+.. _bpy.types.View3DOverlay.show_viewer_attribute:
+
+Viewer Node
+   Visualize the value of the attribute connected to the *Viewer Node* as a greyscale color.
+
+   .. _bpy.types.View3DOverlay.viewer_attribute_opacity:
+
+   Color Opacity
+      Opacity of the attribute that is currently visualized.
+
+.. _bpy.types.View3DOverlay.show_viewer_text:
+
+Attribute Text
+   Show attribute values as text in viewport.
+
+
 .. _bpy.types.SpaceView3D.show_reconstruction:
 
 Motion Tracking

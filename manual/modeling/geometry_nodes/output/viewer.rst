@@ -42,15 +42,10 @@ Attribute Visualization
 -----------------------
 
 When the viewer has a geometry and a separate value input connected, the values can be visualized
-with a :doc:`viewport overlays </editors/3dview/display/overlays>`. When possible, the
-:ref:`attribute domain <attribute-domains>` used to visualize the data is determined automatically.
+with a :ref:`viewport overlays <3dview-overlays-view_node>`. When possible, the
+:ref:`attribute domain <attribute-domains>` is used to visualize the data is determined automatically.
 Otherwise, the viewer node falls back to the face corner domain on meshes and the point domain
 on curves. When necessary, the domain can be chosen manually.
-
-.. _bpy.types.View3DOverlay.show_viewer_attribute:
-.. _bpy.types.View3DOverlay.viewer_attribute_opacity:
-
-The attribute overlay opacity can be controlled with the *Viewer Node* setting in the overlays popover.
 
 The spreadsheet now only shows the "Viewer" column for the domain that is selected in the Viewer node.
 
