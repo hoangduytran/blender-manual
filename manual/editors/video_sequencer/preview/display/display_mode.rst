@@ -108,20 +108,22 @@ This mode is good for:
   you can see in the U/V plot if you distort the color.
 - If you do color-matching on a by hand basis you can match the angle you see of different channels monitors.
 
-.. figure:: /images/video-editing_preview_display-mode_example.jpg
+.. list-table::
 
-   Example image.
+   * - .. figure:: /images/video-editing_preview_display-mode_example.jpg
 
-.. figure:: /images/video-editing_preview_display-mode_vectorscope.png
+       Example image.
 
-   Example of a Chroma Vectorscope Preview.
+     - .. figure:: /images/video-editing_preview_display-mode_vectorscope.png
+
+       Example of a Chroma Vectorscope Preview.
 
 
 Histogram
 =========
 
 This mode displays a graph showing the distribution of color information in the pixels of
-the currently displayed image. The X axis represents values of pixel, from 0 to 1 (or 0 to 255),
+the currently displayed image. The X axis represents values of pixel, from 0 to 1,
 while the Y axis represents the number of pixels in that tonal range. A predominantly dark
 image would have most of its information toward the left side of the graph.
 
