@@ -14,6 +14,7 @@ sphinx-intl==2.1.0
 # Only needed to match the theme used for the official documentation.
 # Without this theme, the default theme will be used.
 furo==2024.1.29
+sphinx-basic-ng==1.0.0b2
 
 # Only for convenience, allows live updating while editing RST files.
 # Access by running:
