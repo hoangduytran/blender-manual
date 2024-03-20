@@ -150,18 +150,39 @@ This is a standard Python feature and only applicable for add-ons that have mult
 
 This was already supported in the legacy add-ons, but not reinforced. As such this can break backward compatibility.
 
-Wheels
-------
 
-Extensions are supposed to be self-contained, and as such must come with all its dependencies. When relying on
-external modules they should be bundled together by using `wheels <https://pythonwheels.com/>`__.
+3rd Party Python Modules
+------------------------
 
-Wheels themselves can lead to version conflicts, since different add-ons could require different versions of the same
-library.
+Extensions must be self-contained, and as such must come with all its dependencies.
 
-Luckily there is an alternative way of loading wheels that doesn't affect ``sys.modules`` or ``sys.path``.
-This way an add-on can load its own version of an external library from its bundled wheel file,
-without no other add-on having access to it.
+Currently there is no general solution for this although
+`support is planned <https://projects.blender.org/blender/blender/issues/119681>`__ using Python
+`wheels <https://pythonwheels.com/>`__.
 
-See Flamenco add-on for an `implementation example
-<https://projects.blender.org/studio/flamenco/src/branch/main/addon/flamenco/wheels/__init__.py>`__.
+Some options are listed here:
+
+Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
+   This can be used as a way to bundle a pure Python dependencies as a sub-module.
+
+   This has the advantage of avoiding version conflicts although it requires some work to setup each package.
+
+Import Wheel's Directly
+   Wheels themselves can lead to version conflicts,
+   since different add-ons could require different versions of the same library.
+
+   It is possible to load wheels that doesn't permanently affect ``sys.modules`` or ``sys.path``.
+   This way an add-on can load its own version of an external library from its bundled wheel file.
+
+   See Flamenco add-on for an `implementation example
+   <https://projects.blender.org/studio/flamenco/src/branch/main/addon/flamenco/wheels/__init__.py>`__.
+
+   .. warning::
+
+      While this method works in many cases, it can also fail for various reasons:
+
+      - Access to files bundled with the module will fail.
+      - Imports made by the module at runtime referencing it's own modules will fail.
+      - Mis-match between the wheel and the module name aren't supported.
+      - Wheels that depend on other wheels currently aren't supported.
+      - Different system-architectures aren't supported.
