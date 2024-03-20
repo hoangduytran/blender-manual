@@ -1,0 +1,11 @@
+{%- extends "!base.html" -%}
+
+{%- block linktags -%}
+{{ super() }}
+{%- include "components/linktags.html" -%}
+{%- endblock -%}
+
+{%- block theme_scripts -%}
+{{ super() }}
+<script defer data-domain="docs.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+{%- endblock -%}

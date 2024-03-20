@@ -54,7 +54,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',
     'sphinx.ext.todo',
-    'sphinxcontrib.jquery',
 ]
 
 # Is there a better way to check for PDF building?
@@ -95,9 +94,6 @@ numfig = False
 # if set to 0, figures, tables and code-blocks are continuously numbered starting at 1.
 numfig_secnum_depth = 0
 
-# The style name to use for Pygments highlighting of source code.
-pygments_style = 'default'
-
 
 # -- Options for Internationalization ----------------------------------------
 
@@ -118,11 +114,11 @@ gettext_allow_fuzzy_translations = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "default"
+html_theme = "basic"
 try:
-    import sphinx_rtd_theme
-    html_theme = "sphinx_rtd_theme"
-    del sphinx_rtd_theme
+    import furo
+    html_theme = "furo"
+    del furo
 except ModuleNotFoundError:
     pass
 
@@ -135,21 +131,30 @@ html_theme_options = {}
 # the configuration directory.
 html_theme_path = []
 
-if html_theme == "sphinx_rtd_theme":
+if html_theme == "furo":
     html_theme_options = {
-        "analytics_id": "UA-1418081-1",
-        # included in the title
-        "display_version": False,
-        "collapse_navigation": True,
-        "navigation_depth": -1,
+        "source_edit_link": "https://projects.blender.org/blender/blender-manual/_edit/main/manual/{filename}",
+        "light_css_variables": {
+            "color-brand-primary": "#265787",
+            "color-brand-content": "#265787",
+        },
     }
 
-    extensions.append('sphinx_rtd_theme')
+    html_sidebars = {
+        "**": [
+            "sidebar/brand.html",
+            "sidebar/search.html",
+            "sidebar/scroll-start.html",
+            "sidebar/navigation.html",
+            "sidebar/scroll-end.html",
+            "sidebar/variant-selector.html",
+        ]
+    }
 
 # The "title" for HTML documentation generated with Sphinx's own templates.
 # This is appended to the <title> tag of individual pages, and
 # used in the navigation bar as the "topmost" element.
-html_title = "Blender Manual"
+html_title = 'Blender %s Manual' % blender_version
 
 # The base URL which points to the root of the HTML documentation.
 # It is used to indicate the location of document using
@@ -168,7 +173,7 @@ html_logo = "../build_files/theme/blender-logo.svg"
 # the docs, or URL that points an image file for the favicon.
 html_favicon = "../build_files/theme/favicon.ico"
 
-if html_theme == "sphinx_rtd_theme":
+if html_theme == "furo":
     html_css_files = ["css/theme_overrides.css",
                       "css/version_switch.css"]
     html_js_files = ["js/version_switch.js"]
