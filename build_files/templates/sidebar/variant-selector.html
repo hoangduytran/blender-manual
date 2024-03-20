@@ -2,28 +2,24 @@
   <ul id="versionwrap" role="presentation">
     <li role="presentation">
       <span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
-            aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+        aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
         {{ release }}
       </span>
       <div class="version-dialog" aria-hidden="true">
-        <div class="version-arrow" aria-hidden="true"></div>
         <div class="version-title">Versions</div>
-        <ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
-                                      aria-hidden="true">
+        <ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover" aria-hidden="true">
           <li role="presentation">Loading...</li>
         </ul>
       </div>
     </li>
     <li role="presentation">
       <span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
-            aria-haspopup="true" aria-controls="version-langlist">
+        aria-haspopup="true" aria-controls="version-langlist">
         {% if language is not none %} {{ language }} {% else %} en {% endif %}
       </span>
       <div class="version-dialog" aria-hidden="true">
-        <div class="version-arrow" aria-hidden="true"></div>
         <div class="version-title">Languages</div>
-        <ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
-                                       aria-hidden="true">
+        <ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover" aria-hidden="true">
           <li role="presentation">Loading...</li>
         </ul>
       </div>
@@ -37,8 +33,8 @@
     <div class="admonition warning">
       <p class="first admonition-title">Note</p>
       <p class="last">
-      You are not using the most up to date version of the documentation.
-      <a href="#"></a> is the newest version.
+        You are not using the most up to date version of the documentation.
+        <a href="#"></a> is the newest version.
       </p>
     </div>
   </template>
