@@ -13,10 +13,11 @@ a brush will only paint on the selected vertices or faces.
 The option is available from the header of the 3D Viewport
 (see icons surrounded by the yellow frame):
 
-.. figure:: /images/sculpt-paint_brush_introduction_select.png
+.. figure:: /images/sculpt-paint_brush_introduction_select.webp
 
-   You can choose between *Face Selection masking* (left button)
-   and *Vertex selection masking* (right button).
+   You can choose between *Face Selection masking* (left button), *Vertex
+   selection masking* (middle button), and *Bone selection* (right button). The
+   latter is only available when the mesh has an Armature modifier.
 
 Selection masking has some advantages over the default paint mode:
 
