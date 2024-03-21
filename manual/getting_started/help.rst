@@ -111,8 +111,7 @@ Directories
    Paths used for scripts, data files, presets and temporary files.
 
    Those directories are configured using the :doc:`Preferences </editors/preferences/file_paths>` Editor.
-OpenGL
-   Shows the OpenGL version, the name of the manufacturer,
-   and the capabilities of your hardware and driver.
+GPU
+   Shows the GPU vendor, version and the capabilities of your hardware and driver.
 Enabled Add-Ons
    Lists add-ons currently in use.
