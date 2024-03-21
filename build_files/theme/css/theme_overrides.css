@@ -125,6 +125,13 @@ kbd:not(.compound) {
 	padding: 0 .2rem;
 }
 
+/* Don't underline any text within code blocks (hurts readability). */
+.highlight .nc,
+.highlight .nn,
+.highlight .gu {
+	text-decoration-line: none !important;
+}
+
 .caption .menuselection {
 	background-color: transparent;
 	border: none;
