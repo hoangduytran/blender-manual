@@ -81,6 +81,6 @@ Voxel Grid Cell Size
    Size of the voxel grid cells for interaction effects.
 
 Density Target
-   Maximum density if the hair.
+   Maximum density of the hair.
 Density Strength
    The influence that the *Density Target* has on the simulation.
