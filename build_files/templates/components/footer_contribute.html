@@ -3,18 +3,13 @@
   <ul>
     <li>{# Add the `display=source` because GITEA's rendering misses Sphinx's features and shows warnings. #}
       <a href="https://projects.blender.org/blender/blender-manual/{#
-              #}src/branch/main/manual/{{ pagename }}{{ page_source_suffix }}?display=source" class="fa fa-edit"> {{
+              #}src/branch/main/manual/{{ pagename }}{{ page_source_suffix }}?display=source"> {{
         _('View Source') }}</a>
     </li>
     <li>
       <a href="https://translate.blender.org/zen/blender-manual/{#
-              #}manual/{{ language }}/?q=location%3Amanual%2F{{ pagename }}" class="fa fa-edit"> {{ _('View
-        Translation') }}</a>
-    </li>{#
-    <li>
-      <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/{{ pagename }}{{ page_source_suffix }}"
-        class="fa fa-edit"> {{ _('Edit Page') }}</a>
-    </li>#}
+              #}manual/{{ language }}/?q=location%3Amanual%2F{{ pagename }}"> {{ _('View Translation') }}</a>
+    </li>
     <li>
       <a href="https://projects.blender.org/blender/documentation/issues/new?{#
               #}template=.gitea/issue_template/bug.yaml&field:{#
@@ -25,8 +20,7 @@
               #}Permanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2F{#
               #}manual%2F{{ language }}%2F{{ version }}%2F{{ pagename }}{{ file_suffix }}%29%0D%0A%0D%0A%2A%2A{#
               #}Short+description+of+error%2A%2A%0D%0A%5B{#
-              #}Please+fill+out+a+short+description+of+the+error+here%5D%0D%0A" class="fa fa-bug"> {{ _('Report issue
-        on this page') }}</a>
+              #}Please+fill+out+a+short+description+of+the+error+here%5D%0D%0A"> {{ _('Report issue on this page') }}</a>
     </li>
   </ul>
 </div>
