@@ -23,7 +23,7 @@
 	width: 100%;
 	text-align: center;
 	padding: 3px 10px;
-	margin: 0px 5px 4px;
+	margin: 0 5px 4px;
 	vertical-align: middle;
 	color: var(--color-link);
 	border: solid 1px var(--color-sidebar-background-border);
@@ -87,7 +87,7 @@
 	margin-bottom: 4px;
 	text-align: center;
 	border: solid 1px var(--color-sidebar-background-border);
-	border-radius: 0px 0px 3px 3px;
+	border-radius: 0 0 3px 3px;
 }
 
 .version-list a,
@@ -99,7 +99,7 @@
 	line-height: 1.15;
 	width: 100%;
 	margin: 0;
-	padding: 4px 0px;
+	padding: 4px 0;
 	color: var(--color-sidebar-link-text);
 }
 

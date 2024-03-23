@@ -210,7 +210,7 @@ a.external {
 /* 'refbox' field. */
 .refbox .field-list .field-name,
 .refbox .field-list .field-body {
-	padding: 0px;
+	padding: 0;
 }
 
 .refbox dl dt {
@@ -241,7 +241,7 @@ a.external {
 
 .card div.figure,
 .card figure {
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	display: block;
 }
 
@@ -268,13 +268,13 @@ a.external {
 }
 
 .card dl dt {
-	padding: 0px 15px 0px !important
+	padding: 0 15px 0 !important
 }
 
 .card dl dd {
-	padding: 0px 15px 5px 15px;
+	padding: 0 15px 5px 15px;
 	font-style: normal;
-	margin: 0px;
+	margin: 0;
 	color: var(--color-foreground-secondary);
 	font-size: 90%;
 }
