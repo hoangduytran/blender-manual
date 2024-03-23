@@ -6,7 +6,7 @@
  *		https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_css_file
  */
 
-body {
+ body {
 	--sidebar-caption-font-size: var(--font-size--normal);
 	--toc-title-font-size: var(--font-size--normal);
 	--toc-font-size: var(--sidebar-item-font-size);
@@ -321,20 +321,21 @@ a.external {
 }
 
 .footer-contribute ul {
+	display: flex;
+	gap: 1.5rem;
 	margin: 0;
 	padding: 0;
 	padding-bottom: 1rem
 }
 
 .footer-contribute li {
-	display: inline;
 	list-style-type: none;
-	padding-right: 1.5rem;
 }
 
 @media (max-width: 46em) {
-	.footer-contribute {
-	  text-align: center;
+	.footer-contribute > ul {
+		align-items: center;
+		justify-content: center;
 	}
 }
 
