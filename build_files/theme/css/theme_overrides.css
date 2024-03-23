@@ -332,6 +332,12 @@ a.external {
 	padding-right: 1.5rem;
 }
 
+@media (max-width: 46em) {
+	.footer-contribute {
+	  text-align: center;
+	}
+}
+
 @media print {
 	.footer-contribute {
 		display: none;
