@@ -107,8 +107,12 @@ Workspace Settings
 
 .. reference::
 
-   :Editor:    Properties
-   :Menu:      :menuselection:`Active Tool and Workspace Settings --> Workspace`
+   :Editor:    :doc:`/editors/properties_editor`
+   :Panel:     :menuselection:`Tool tab --> Workspace`
+
+Pin Scene
+   When enabled, the current workspace will remember the currently selected scene.
+   Then, whenever you activate the workspace, it'll automatically switch back to that scene.
 
 .. _bpy.types.WorkSpace.object_mode:
 
@@ -121,8 +125,6 @@ Mode
 .. _bpy.types.WorkSpace.use_filter_by_owner:
 
 Filter Add-ons
---------------
-
-Determines which :doc:`Add-ons </addons/index>` are enabled in the active workspace.
-When unchecked, the global add-ons will be used.
-When checked, you can enable individual add-ons in the list below.
+   Determines which :doc:`add-ons </addons/index>` are enabled in the active workspace.
+   When unchecked, the global add-ons will be used.
+   When checked, you can enable individual add-ons in the list below.
