@@ -29,10 +29,12 @@ as Right, Front, and Top are commonly used for this.
 
 To use Knife Project, select the objects to be cut, switch to *Edit Mode*,
 select the cutting objects in the Outliner (:kbd:`Ctrl-LMB`),
-and choose :menuselection:`Mesh --> Knife Project`. If Blender switches back
-to *Object Mode* when selecting the cutting objects, make sure that
-:menuselection:`Edit --> Lock Object Modes` is checked in the topbar.
+and choose :menuselection:`Mesh --> Knife Project`.
 
+If Blender switches back to *Object Mode* when selecting the cutting objects,
+make sure that :menuselection:`Edit --> Lock Object Modes` is checked in the topbar.
+Alternatively, if you have only one cutting object, you can select it in the
+viewport with :kbd:`Ctrl-LMB`.
 
 Options
 =======
