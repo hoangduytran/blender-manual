@@ -10,13 +10,13 @@ Properties
 
    The Properties, with *Object* properties shown.
 
-The Properties shows and allows editing of many active data, including the active scene and object.
+The Properties editor shows and allows editing of many active data, including the active scene and object.
 
 
 Tabs
 ====
 
-The Properties has several categories, which can be chosen via tabs (the icons column to its left).
+The Properties editor has several categories, which can be chosen via tabs (the icons column to its left).
 Each tab regroups properties and settings of a data type, and is documented in its own manual sections, linked below.
 
 

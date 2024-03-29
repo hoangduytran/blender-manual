@@ -8,7 +8,7 @@ Viewport Display
    :Mode:      Object Mode
    :Panel:     :menuselection:`Properties --> Object Properties --> Viewport Display`
 
-The *Viewport Display* panel is used to enable extra display options for the 3D Viewport.
+This panel lets you configure display options for the 3D Viewport.
 
 .. figure:: /images/scene-layout_object_properties_display_panel.png
 
@@ -18,39 +18,44 @@ The *Viewport Display* panel is used to enable extra display options for the 3D 
 
 Show
    Name
-      Displays the name of the object in the 3D Viewport.
+      Displays the object's name in the 3D Viewport.
    Axes
-      Displays an object similar to an empty that shows the object's axis.
+      Displays an object similar to an empty that shows the object's orientation.
    Wireframe
-      Displays an object's wireframe on top of the solid display.
+      Displays the object's wireframe on top of the solid display.
    All Edges
-      Displays all edges for mesh objects.
+      Displays all wireframe edges. This overrides the
+      :ref:`wireframe threshold <bpy.types.View3DOverlay.wireframe_threshold>`
+      that you can set in the 3D Viewport's overlay settings.
    Texture Space
-      Displays the objects :term:`Texture Space`.
+      Displays the object's :term:`Texture Space`.
    Shadow
       Allows the object to cast shadows in the viewport.
 
    .. _bpy.types.Object.show_in_front:
 
    In Front
-      Makes the object display in front of others. (Unsupported for instanced objects.)
+      Makes the object display in front of others. Unsupported for instanced objects.
+      Limited support in the *Material Preview* and *Rendered* shading modes
+      (works for e.g. armatures, but not for meshes).
 
 .. _bpy.types.Object.display_type:
 
 Display As
-   The shading mode to display in the 3D Viewport; this can be useful if you have
-   a high-poly object that is slowing down the viewport.
+   Lets you display the object with less detail, going from removing the textures to
+   only showing a bounding box. This can be useful if you have a high-poly object
+   that is slowing down the viewport.
 
 .. _bpy.types.Object.color:
 
 Color
-   Allows to specify the object's color when using the Workbench renderer.
+   The object's color in the *Wireframe* and *Solid* viewport shading modes.
+   Used when the viewport's :ref:`(Wire) Color <viewport_shading_solid_color>`
+   shading option is set to *Object*.
 
 .. _bpy.types.Object.show_bounds:
 .. _bpy.types.Object.display_bounds_type:
 
 Bounds
-   Displays a bounding shape around an object.
-   This can be helpful if you have high-poly objects that slow down the viewport.
-   The shape of the object's bounds can be calculated with different primitive shapes
-   that might be closer to what the original object looks like.
+   Displays a bounding shape around an object. You can choose between different
+   primitive shapes that might be closer to what the original object looks like.
