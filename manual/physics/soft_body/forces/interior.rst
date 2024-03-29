@@ -3,25 +3,22 @@
 Interior
 ********
 
-In between each neighboring vertex of a mesh, you typically create edges to connect them.
-Imagine each edge as a spring. Any mechanical spring is able to stretch under tension,
-and to squeeze under pressure. All springs have an ideal length,
-and a stiffness that limits how far you can stretch or squeeze the spring.
+By default, the edges of a soft-body mesh act like springs. This means that,
+like a mechanical spring, they can stretch under tension and squeeze under pressure.
+Their initial length is also their "ideal" or "rest" length, which they try to return to.
 
-In Blender's case, the ideal length is the original edge length which you designed as a part of your mesh,
-even before you enable the Soft Body system. Until you add the Soft Body physics,
-all springs are assumed to be perfectly stiff: no stretch and no squeeze.
+Having edges act like springs is what holds the mesh together. If you were to disable this
+behavior (as well as the :doc:`/physics/soft_body/settings/goal`), each vertex would be free
+to go anywhere independently of the others, which would stretch the mesh until it's
+no longer recognizable.
 
-You can adjust the stiffness of all those edge springs, allowing your mesh to sag, to bend,
-to flutter in the breeze, or to puddle up on the ground.
+Having springs along edges alone typically isn't enough, however:
+vertices in quads are still free to move towards their diagonal opposite,
+potentially collapsing the quad into a line.
 
-----
-
-To create a connection between the vertices of a soft body object there have to be forces
-that hold the vertices together. These forces are effective along the edges in a mesh,
-the connections between the vertices. The forces act like a spring.
-Fig. :ref:`fig-softbody-force-interior-connection` illustrates how a 3×3 grid of vertices
-(a mesh plane in Blender) are connected in a soft body simulation.
+You could solve this by creating diagonal edges everywhere, but fortunately,
+you don't have to: simply enable the *Stiffness* option to have Blender create
+diagonal springs internally. This way, you don't have to change your mesh.
 
 .. list-table::
 
@@ -31,7 +28,7 @@ Fig. :ref:`fig-softbody-force-interior-connection` illustrates how a 3×3 grid o
           :width: 180px
           :figwidth: 180px
 
-          Vertices and forces along their connection edges.
+          Base springs along edges.
 
      - .. _fig-softbody-force-interior-stiff:
 
@@ -39,40 +36,28 @@ Fig. :ref:`fig-softbody-force-interior-connection` illustrates how a 3×3 grid o
           :width: 180px
           :figwidth: 180px
 
-          Additional forces with Stiff Quads enabled.
+          Additional springs when Stiffness is enabled.
 
-But two vertices could freely rotate if you do not create additional edges between them.
-The logical method to keep a body from collapsing would be to create additional edges between the vertices.
-This works pretty well, but would change your mesh topology drastically.
+Another method of preventing mesh collapse is applying *Bending Stiffness*,
+which adds rotational resistance: making edges try to keep their relative angles.
 
-Luckily, Blender allows to define additional *virtual* connections.
-On one hand you can define virtual connections between the diagonal edges of a quad face
-(*Stiff Quads* Fig. :ref:`fig-softbody-force-interior-stiff`),
-on the other hand you can define virtual connections between a vertex and any vertices connected
-to its neighbors' *Bending Stiffness*. In other words, the amount of bend that is allowed between
-a vertex and any other vertex that is separated by two edge connections.
+Both of these methods are described in more detail below. You can configure them,
+as well as other settings, in the :doc:`Soft Body Edges panel </physics/soft_body/settings/edges>`.
 
 
-Settings
-========
+Stiffness
+=========
 
-The characteristics of edges are set with the *Springs* and *Stiff Quads* properties in the *Soft Body Edges* panel.
-See the :doc:`Soft Body Edges settings </physics/soft_body/settings/edges>` for details.
+To show the effect of the Stiffness setting, we will drop two cubes onto a plane
+(see :doc:`Collisions </physics/soft_body/collision>`). The blue cube uses quads,
+while the red one uses tris. Both cubes have their Goal setting disabled.
 
-
-Tips: Preventing Collapse
-=========================
-
-Stiff Quads
------------
-
-To show the effect of the different edge settings we will use two cubes
-(blue: only quads, red: only tris) and let them fall without any goal onto a plane
-(how to set up collision is shown on the page :doc:`Collisions </physics/soft_body/collision>`).
+If *Stiffness* is disabled, the quad-only cube will collapse completely,
+while the tri cube only temporarily deforms from the impact:
 
 .. _fig-softbody-force-interior-without:
 
-.. list-table:: Without Stiff Quads.
+.. list-table:: Without Stiffness.
 
    * - .. figure:: /images/physics_soft-body_forces_interior_quadvstri-sb-001.png
           :width: 200px
@@ -89,13 +74,12 @@ To show the effect of the different edge settings we will use two cubes
 
           Frame 401.
 
-In Fig. :ref:`fig-softbody-force-interior-without`, the default settings are used (without *Stiff Quads*).
-The "quad only" cube will collapse completely, the cube composed of tris keeps its shape,
-though it will deform temporarily because of the forces created during collision.
+If *Stiffness* is enabled, the quad cube maintains its shape as well thanks to the
+extra springs:
 
 .. _fig-softbody-force-interior-with:
 
-.. list-table:: With Stiff Quads.
+.. list-table:: With Stiffness.
 
    * - .. figure:: /images/physics_soft-body_forces_interior_quadvstri-sb-001.png
           :width: 200px
@@ -112,16 +96,15 @@ though it will deform temporarily because of the forces created during collision
 
           Frame 401.
 
-In Fig. :ref:`fig-softbody-force-interior-with`, *Stiff Quads* is activated (for both cubes).
-Both cubes keep their shape, there is no difference for the red cube,
-because it has no quads anyway.
-
 
 Bending Stiffness
------------------
+=================
 
-The second method to stop an object from collapsing is to change its *Bending* stiffness.
-This includes the diagonal edges (damping also applies to these connections).
+The second method to stop an object from collapsing is to give it *Bending Stiffness.*
+Just like the other settings, this can be combined with *Stiffness* to add bending
+resistance to the diagonal springs as well.
+
+We first do the same cube experiment as before, using only *Bending Stiffness*:
 
 .. _fig-softbody-force-interior-bending:
 
@@ -142,15 +125,15 @@ This includes the diagonal edges (damping also applies to these connections).
 
           Frame 401.
 
-In Fig. :ref:`fig-softbody-force-interior-bending`, *Bending* is activated with a strength setting of 1.
-Now both cubes are more rigid.
+Both cubes keep their shape. Now, we try the same thing with subdivided planes,
+again a quad-based one and a triangulated one:
 
 .. list-table::
 
    * - .. figure:: /images/physics_soft-body_forces_interior_quadvstri-bending-001.png
           :width: 200px
 
-          Two planes going to collide.
+          Two planes falling.
 
      - .. _fig-softbody-force-interior-no-bending:
 
@@ -164,10 +147,8 @@ Now both cubes are more rigid.
 
           High bending stiffness (10).
 
-Bending stiffness can also be used if you want to make a subdivided plane more plank like.
-Without *Bending* the faces can freely rotate against each other like hinges
-Fig. :ref:`fig-softbody-force-interior-no-bending`.
-There would be no change in the simulation if you activated *Stiff Quads*,
-because the faces are not deformed at all in this example.
+Without any *Bending Stiffness*, the faces can rotate freely as though their edges were hinges.
+Enabling *Stiffness* to add diagional springs would not change this (just as triangulating doesn't).
 
-Bending stiffness is the strength needed for the plane to be deformed.
+With a high *Bending Stiffness*, however, the edges resist this rotation, and the planes
+act more like planks than towels.
