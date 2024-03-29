@@ -11,33 +11,30 @@ UV Maps
 .. reference::
 
    :Mode:      All Modes
-   :Panel:     :menuselection:`Properties --> Object Data --> UV Maps`
+   :Panel:     :menuselection:`Properties --> Data --> UV Maps`
 
 .. figure:: /images/modeling_meshes_uv_uv-texture-spaces_uv-maps.png
 
-   The UV Maps panel in the Mesh tab.
+   The UV Maps panel in the Data tab.
 
-If you have an active object, inside the Properties Editor, on the Object Data tab,
-the UV maps panel contains a :ref:`List view <ui-list-view>`
-that lists the UV maps created for this mesh.
+If you have a mesh object selected, you'll find its UV maps in the Data tab of the
+:doc:`Properties editor </editors/properties_editor>`. After selecting a map,
+you can view and edit it in the :doc:`UV editor </editors/uv/introduction>`.
 
-If you have the UV Editor open, you will see the currently selected UV map.
+One mesh can have multiple UV maps (e.g. one map per texture), although it's
+also possible to reuse an UV map for multiple textures.
 
 Active Render
-   Click the camera icon to enable that UV texture for rendering.
-   If no other map is explicitly specified.
+   Click the camera icon to make a certain UV map the default one for rendering.
+   This will be the map that's used by the *UV* output of the
+   :doc:`/render/shader_nodes/input/texture_coordinate`.
+   You can use the :doc:`/render/shader_nodes/input/uv_map` to access any other maps.
 
 Add ``+``
-   Clicking the *Add* button duplicates the selected UV map or creates a new UV map if the list is empty.
+   Duplicates the selected UV map, or creates a new one if the list is empty.
 
 Remove ``-``
-   Clicking the *Remove* button will remove the selected UV map.
-
-.. seealso::
-
-   Note that each texture can be mapped to a specific UV layout.
-
-   .. TODO2.8 link to docs on UV mapping textures.
+   Removes the selected UV map.
 
 
 .. _bpy.types.*texspace:
@@ -51,27 +48,27 @@ Texture Space
 .. reference::
 
    :Mode:      All Modes
-   :Panel:     :menuselection:`Properties --> Object Data --> Texture Space`
+   :Panel:     :menuselection:`Properties --> Data --> Texture Space`
 
-These are settings of the :term:`Texture Space` used by generated texture mapping.
-The visualization of the texture space can be activated in the :doc:`/scene_layout/object/properties/display`.
+This panel lets you configure the object's :term:`Texture Space`, which is a 3D box
+used for generating texture coordinates without the use of a UV map.
+You can visualize the texture space using the option in the
+:doc:`/scene_layout/object/properties/display` panel.
 
 Auto Texture Space
-   Adjusts the active object's texture space automatically when transforming the object.
+   Calculates the texture space automatically.
 
    Location, Size
-      If the texture space is not calculated automatically then you can define
-      the location and size of the texture space relative to the base object.
-      These can also be adjusted from the 3D Viewport, see `Editing`_ for more information.
+      Lets you define the texture space manually, relative to the object.
+      Note that you can also edit it in the 3D Viewport -- see `Editing`_ below.
 
-----
+Texture Mesh :guilabel:`Mesh objects`
+   Use another mesh for texture indices. The vertices of the two objects must be perfectly aligned
+   or the UV map will be distorted.
 
-Texture Mesh
-   Use another mesh for texture indices, the vertex of the two objects must be perfectly aligned.
-   Otherwise the UV map will be distorted. Note that, this is only for mesh objects.
-Match Texture Space
-   Modifies the *Location* and *Size* to match the objects bounding box.
-   This disables Auto Texture Space. Note that, this is only for curve objects.
+Match Texture Space :guilabel:`Curve objects`
+   Modifies the *Location* and *Size* to match the object's bounding box.
+   This disables Auto Texture Space.
 
    .. is Match Texture Space the same thing as Auto Texture Space?
 
@@ -84,20 +81,23 @@ Editing
 .. reference::
 
    :Mode:      Object Mode and Edit Mode
-   :Menu:      :menuselection:`Object --> Transform --> Scale/Move Texture Space`
+   :Menu:      :menuselection:`Object --> Transform --> Move/Scale Texture Space`
 
-To modify the texture space from the 3D Viewport, enable
-:ref:`Edit Texture Space <modeling_transform_edit-texture-space>` while transforming an object.
+Click one of these menu items, then move the mouse to adjust the texture space
+and press :kbd:`LMB` to confirm. While transforming, you can use keyboard shortcuts to lock
+certain axes; see the status bar.
 
 
 Accessing
 ---------
 
-The automatically calculated UV map can be accessed by an object's material through
-the *Generated* output of the :doc:`/render/shader_nodes/input/texture_coordinate`.
-This output can then be used to map any texture onto an object.
+When setting up a material shader, you can use the *Generated* output of the
+:doc:`/render/shader_nodes/input/texture_coordinate` to read the 3D coordinate
+inside the object's texture space. You can then pass this coordinate to a texture
+node.
 
 .. tip::
 
-   Generated texture spaces do not have rotation support, to overcome this,
-   a :doc:`/render/shader_nodes/vector/mapping` can be used to rotate the UV map.
+   Texture spaces do not have rotation support. You can use a
+   :doc:`/render/shader_nodes/vector/mapping` to manually rotate the coordinate
+   in the material shader instead.
