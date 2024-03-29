@@ -22,7 +22,7 @@ If you have a mesh object selected, you'll find its UV maps in the Data tab of t
 you can view and edit it in the :doc:`UV editor </editors/uv/introduction>`.
 
 One mesh can have multiple UV maps (e.g. one map per texture), although it's
-also possible to reuse an UV map for multiple textures.
+also possible to reuse a UV map for multiple textures.
 
 Active Render
    Click the camera icon to make a certain UV map the default one for rendering.
