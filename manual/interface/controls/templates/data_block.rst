@@ -14,8 +14,9 @@ in order to link it to something else (such as an object).
 
 Type
    Shows an icon indicating the data-block type. Clicking the image or the down arrow opens the popup menu.
-   Dragging the image lets you apply the data-block to something else (for example, you can drag
-   a material onto an object in the 3D Viewport, or onto a :ref:`ui-data-id` field).
+   Dragging the image lets you apply the data-block to something else. (For example, you can drag a
+   material onto an object in the 3D Viewport to :doc:`assign </render/materials/assignment>` it.
+   Dragging onto :ref:`ui-data-id` fields is also possible.)
 
    List
       A list of data-blocks available in the current blend-file, or a link to select an item from.
