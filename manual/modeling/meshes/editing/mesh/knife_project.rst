@@ -9,34 +9,29 @@ Knife Project
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Mesh --> Knife Project`
 
-Knife projection is a non-interactive tool where you can use objects to cookie-cut into
-one or more meshes rather than hand drawing the line. The outline of selected objects
-that *are not* in Edit Mode are used to cut the meshes along the view axis of objects
-that *are* in Edit Mode. Afterwards the resulting geometry inside the cutters outline will be selected.
-Outlines can be a wireframe or boundary edges (i.e. the unconnected edges of a mesh), as well as
-Curve objects.
-
-Keep in mind that Knife Project works from the current view's perspective.  For best results, make sure
-to rotate your view to exactly the position you require before using this tool.  Orthographic views such
-as Right, Front, and Top are commonly used for more predictable results.
+Knife Project is a non-interactive tool where you can use objects to cookie-cut into
+one or more meshes rather than hand drawing the line. The outline of the selected objects
+that *are not* in Edit Mode is projected along the view axis onto the meshes that *are*
+in Edit Mode, and then cuts into the faces there. Afterwards, the resulting geometry
+inside the cut gets selected.
 
 .. note::
-
-   The primitives, being manifold objects, do not have wireframe or boundary edges.
-   In the case of the cube, deleting the top face will result in cutting edges.
+   The cutting objects must be curves or non-manifold meshes (e.g. flat shapes, loose edges).
    :ref:`Select Non-Manifold <bpy.ops.mesh.select_non_manifold>`
-   (Wire, Boundaries) will highlight the cutting edges of mesh objects.
+   will highlight the cutting edges of mesh objects.
 
-   In general, for flat shapes, you will usually want to select "Faces Only" from the delete menu to leave
-   behind only edges.
-
-To use Knife Project, first in *Object Mode* select the objects to be cut,
-then switch to *Edit Mode* and select the cutting objects in the Outliner (:kbd:`Ctrl-LMB`),
-and finally choose :menuselection:`Mesh --> Knife Project`.
+Keep in mind that Knife Project works from the current view's perspective. For best results, make sure
+to rotate your view to exactly the position you require before using this tool. Orthographic views such
+as Right, Front, and Top are commonly used for this.
 
 .. hint::
-
    :doc:`3D Viewport Alignment </editors/3dview/navigate/align>` to adjust the projection axis.
+
+To use Knife Project, select the objects to be cut, switch to *Edit Mode*,
+select the cutting objects in the Outliner (:kbd:`Ctrl-LMB`),
+and choose :menuselection:`Mesh --> Knife Project`. If Blender switches back
+to *Object Mode* when selecting the cutting objects, make sure that
+:menuselection:`Edit --> Lock Object Modes` is checked in the topbar.
 
 
 Options
