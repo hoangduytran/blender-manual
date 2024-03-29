@@ -25,10 +25,11 @@ Pressing :kbd:`Shift-Z` switches between the current shading mode and Wireframe.
 .. _bpy.types.View3DShading.wireframe_color_type:
 
 Wire Color
-   How the wireframes are colored. This affects the object outline, wireframe overlay, and wireframe shading mode.
+   How wireframes are colored. This affects the Wireframe shading mode and overlay.
 
-   :Single:
-      All objects get shaded using the same single color.
+   :Theme:
+      Use the *Active Object*, *Wire*, or *Wire Edit* :doc:`theme color </editors/preferences/themes>`
+      based on the object's current state.
    :Object:
       Use the color from the object's
       :ref:`Viewport Display <properties-object-viewport-display>` settings.
