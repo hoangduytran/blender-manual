@@ -14,22 +14,21 @@ Modifiers
 .. figure:: /images/video-editing_sequencer_sidebar_modifiers_panel.png
    :align: right
 
-Modifiers are used to make adjustments on the image, like contrast,
+Modifiers are used to make adjustments to the image, like contrast,
 brightness, saturation, color balance and applying masks.
 
-You can add these modifiers directly to the selected strip,
-or you can use it within an "Adjustment Layer" effect strip,
-which allows you to apply these modifiers onto several strips the same time.
+You can add these modifiers directly to a media strip,
+or you can use them within an :doc:`Adjustment Layer </video_editing/edit/montage/strips/adjustment>`
+strip, making them apply to several media strips in one go.
 
 Use Linear Modifiers
    Calculates modifiers in :ref:`linear color space <color-management-linear-space>` instead of the
    :ref:`Sequencer color space <bpy.types.ColorManagedSequencerColorspaceSettings.name>`.
 
    Calculating modifiers in linear space will match the image processing of the compositor.
-   In most cases this should be enabled, working in a non-linear workflow could have unpredictable results.
+   In most cases, this should be enabled; working in a non-linear workflow could have unpredictable results.
 Copy to Selected Strips
-   Allows you to copy the modifiers to selected strips.
-   This works two ways, you can either replace the old modifiers or append/add to the previous modifiers.
+   Copies the modifiers to the selected strips, either replacing their current modifiers or appending to them.
 
 
 Common Options
@@ -38,9 +37,9 @@ Common Options
 Each modifier has several buttons at its top:
 
 Mute (eye icon)
-   Disables the modifier, useful to compare the image, with or without modifications.
+   Disables the modifier. Useful to compare the image with or without modifications.
 Move (up/down arrow icon)
-   These two buttons change the modifier's position in the stack which affects their computation order.
+   These two buttons change the modifier's position in the stack which affects its computation order.
 Remove ``X``
    Deletes the modifier from the stack.
 
@@ -48,22 +47,19 @@ Remove ``X``
 Masking
 -------
 
-Each Modifier has an option to mask the effect of the modifier and any modifiers below it.
-For example, to correct the brightness only on a certain zone of the image,
-you can filter the Brightness/Contrast modifier.
-
-The mask can either be a Mask created in the Mask editor or use another strip as a mask.
+You can mask each modifier to limit the area of the image it affects. This can be done using
+either a :doc:`Mask </movie_clip/masking/introduction>` or another strip.
 
 Mask Input Type
    Type of input data used for the mask.
 
    :Strip:
-      Uses the grayscale representation of the image in a strip to mask the affects of the modifier.
+      Use the grayscale representation of another strip's image.
    :Mask:
-      Use a mask data-block to mask the affects of the modifier.
+      Use a Mask data-block.
 
 Mask
-   The Strip or Mask data-block to use as an input.
+   The Strip or Mask data-block to use.
 
 Mask Time :guilabel:`Mask Input Only`
    How the start frame of the mask is calculated.
@@ -84,7 +80,7 @@ Currently, the following modifiers are supported:
 Brightness/Contrast Modifier
 ----------------------------
 
-Adjusts the brightness and contrast of the modifier input.
+Adjusts the brightness and contrast of the image.
 
 
 .. index:: Video Sequencer Modifiers; Color Balance Modifier
@@ -93,7 +89,7 @@ Adjusts the brightness and contrast of the modifier input.
 Color Balance Modifier
 ----------------------
 
-Color balance adjustments, either by the Lift, Gamma, and Gain or the Slope, Offset and Power method.
+Color balance adjustments, either by the Lift/Gamma/Gain or the Offset/Power/Slope method.
 
 This modifier works similar to the :doc:`Color Balance Node </compositing/types/color/adjust/color_balance>`.
 
@@ -119,10 +115,10 @@ Offset/Power/Slope (ASC-CDL)
       the brighter the source color is.
    Offset
       Shifts color values after applying Slope by adding the Offset :math:`o` to them. Note that
-      the selected value shown in the UI will be subtracted by 1, so the default value of 1 means
+      the selected value shown in the UI will be reduced by 1, so the default value of 1 means
       effectively no offset is applied.
    Power
-      Over-all exponent :math:`p`, which mainly adjusts the midtones.
+      Overall exponent :math:`p`, which mainly adjusts the midtones.
 
 
 .. index:: Video Sequencer Modifiers; Curves Modifier
@@ -160,7 +156,7 @@ Mask Input Type
    Type of input data used for the mask.
 
    :Strip:
-      Uses the grayscale representation of the image in a strip to affect the alpha of the current strip.
+      Use the grayscale representation of another strip to affect the alpha of the current strip.
    :Mask:
       Use a mask data-block to affect the alpha of the current strip.
 
@@ -168,7 +164,7 @@ Mask Input Type
 .. _bpy.types.SequenceModifier.input_mask_strip:
 
 Mask
-   The Strip or Mask data-block to use as an input.
+   The Strip or Mask data-block to use.
 
 .. _bpy.types.SequenceModifier.mask_time:
 
@@ -196,7 +192,7 @@ This modifier works the same as the :doc:`Tone Map Node </compositing/types/colo
 White Balance Modifier
 ----------------------
 
-Use it to adjust the white balance by choosing the color that should be white.
+Used to adjust the white balance by choosing the color that should be white.
 
 
 .. index:: Video Sequencer Modifiers; Sound Equalizer Modifier
@@ -206,4 +202,4 @@ Sound Equalizer Modifier
 ------------------------
 
 This modifier can be used to emphasize or suppress sound frequencies.
-The range is limited to 35Hz - 20kHz and +/-35dB
+The range is limited to 35Hz - 20kHz and +/-35dB.

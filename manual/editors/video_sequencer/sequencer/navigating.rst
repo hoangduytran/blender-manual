@@ -40,7 +40,7 @@ Preview as Backdrop
 
 .. _bpy.ops.sequencer.refresh_all:
 
-Refresh All :kbd:`Ctrl-R`
+Refresh All :kbd:`Ctrl-E`
    Reloads external files, re-renders the 3D Viewport, and refreshes the current frame preview.
 
    This is useful when you modified an external file or made a change in a scene that Blender
@@ -52,7 +52,7 @@ Frame Selected :kbd:`NumpadPeriod`
    Zooms the display to show only the selected strips.
 Frame All :kbd:`Home`
    Zooms the display to show all strips.
-Go to Current Frame
+Go to Current Frame :kbd:`Numpad0`
    Centers the horizontal timeline on the current frame.
 Zoom to Border :kbd:`Shift-B`
    Click and drag to draw a rectangle and zoom to this rectangle.

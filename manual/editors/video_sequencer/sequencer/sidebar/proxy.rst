@@ -5,26 +5,34 @@ Proxy
 
 As projects involve increasingly high-resolution footage,
 the performance of the video preview can decrease drastically.
-To combat this, proxies are used to maintain a smooth editing experience without compromising visual fidelity.
+To combat this, Blender can generate proxies -- copies of the original footage stored at a
+lower quality and/or resolution -- to maintain a smooth editing experience without
+compromising visual fidelity in the end result.
 
-Proxies are optimized, lower-resolution, versions of original video files
-that are used as a substitute of the high-quality source videos to increase playback performance.
-For rendering out the final project, the original, high quality source files are used.
+The quickest way to set up proxies for videos is to simply select a
+:ref:`Proxy Render Size <bpy.types.SpaceSequenceEditor.proxy_render_size>`
+in the *View* tab (visible when the editor is in *Preview* or
+*Sequencer & Preview* mode). This will automatically enable the selected
+proxy resolution in all the strips and start generating the downscaled video files.
 
+You can use the *Proxy* tab if you want to configure proxies in more detail
+(or create proxies for image sequences).
 
 Proxy Settings
 ==============
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar region --> Proxy & Timecode --> Proxy Settings`
+   :Panel:     :menuselection:`Sidebar region --> Proxy --> Proxy Settings`
+
+Contains scene-wide proxy settings.
 
 .. _bpy.types.SequenceEditor.proxy_storage:
 
 Storage
    How proxies are stored for the project.
 
-   :Per Strip: Proxies are stored in the directory of the input.
+   :Per Strip: Each strip can specify where to store its proxies (see below).
    :Project: All proxies are stored in one directory.
 
       .. _bpy.types.SequenceEditor.proxy_dir:
@@ -35,14 +43,21 @@ Storage
 .. _bpy.ops.sequencer.enable_proxies:
 
 Set Selected Strip Proxies
-   Set proxy size and overwrite flag for all selected strips.
+   Shows a pop-over that lets you choose the resolution(s) to generate
+   and whether to overwrite existing proxy files. Once you confirm with the *Set* button,
+   your choices are applied to the selected strips. You can view and tweak the
+   settings for individual strips in the *Strip Proxy & Timecode* panel (see below).
+
+   In the *Preview* mode, where the *Proxy* tab is not available,
+   this is instead done through the menu :menuselection:`View --> Proxy --> Setup`.
 
 .. _bpy.ops.sequencer.rebuild_proxy:
 
 Rebuild Proxy and Timecode Indices
-   Generates Proxies and Timecodes for all selected strips,
-   same as doing :menuselection:`Strip --> Rebuild Proxy and Timecode Indices`.
+   Generates proxies and time indices for the selected strips.
 
+   In the *Preview* mode, where the *Proxy* tab is not available,
+   this is instead done through the menu :menuselection:`View --> Proxy --> Rebuild`.
 
 .. _bpy.types.SequenceProxy:
 .. _bpy.types.MovieSequence.use_proxy:
@@ -57,47 +72,37 @@ Strip Proxy & Timecode
 .. figure:: /images/video-editing_sequencer_sidebar_proxy_panel.png
    :align: right
 
-Once you have chosen the :term:`Proxy`/:term:`Timecode` options,
-you need to select all strips for which you want proxies to be built.
-Then use :menuselection:`Strip --> Rebuild Proxy and Timecode Indices`,
-or the according button in the `Proxy Settings`_ panel.
-Once all proxies are built, they will be ready to use.
-
-In order to use proxies, you have to select a
-:ref:`Proxy Render Size <bpy.types.SpaceSequenceEditor.proxy_render_size>`
-that matches one of the selected *Resolutions*.
+Contains strip-specific proxy settings. The checkbox in the header can be used to
+enable/disable proxy generation.
 
 Custom Proxy
    Directory
-      By default, all generated proxy images are stored to
-      the ``<path of original footage>/BL_proxy/<clip name>`` folder,
-      but this location can be set to a custom directory using this option.
+      By default, all generated proxy videos are stored to
+      the folder ``<path of original footage>/BL_proxy/<clip name>``,
+      but this can be changed to a custom directory using this option.
    File
       Allows you to use preexisting proxies.
 
 .. _bpy.types.SequenceProxy.build:
 
 Resolutions
-   Controls the resolution(s) of the computed proxy images; multiply sizes can be selected.
-   The available options are 25%, 50%, 75%, 100 percent of original strip size.
+   The resolution(s) of the proxy videos to generate; multiple sizes can be selected.
 
 .. _bpy.types.SequenceProxy.use_overwrite:
 
 Overwrite
-   When rebuilding proxies, this option sets whether to overwrite existing proxy files or to use existing files.
-   Saves over any existing proxy files in the proxy storage directory.
-   When disabled, existing proxy files will be used.
+   Whether to overwrite existing proxy files or keep them.
 
 .. _bpy.types.SequenceProxy.quality:
 
 Quality
-   Defines the quality of the images used for proxies.
+   The video/image quality for proxies.
 
 .. _bpy.types.SequenceProxy.timecode:
 
-Timecode Index
+:term:`Timecode` Index
    When you are working with footage directly copied from a camera without preprocessing it,
-   there might be numerous artifacts, mostly due to seeking a given frame in the sequence.
+   there might be numerous artifacts, mostly due to seeking to a given frame in the sequence.
    This happens because such footage usually does not have correct frame rate values in the file header.
    This issue can still arise when the source clip has the same frame rate as the scene settings.
    In order for Blender to correctly calculate the frames and frame rate there are two possible solutions:

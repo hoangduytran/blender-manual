@@ -17,15 +17,11 @@ Name
    .. _bpy.ops.sequencer.strip_color_tag_set:
 
    Color Tag
-      The color of the strip in the timeline.
-      By default, strips are given a :ref:`Default Color <sequencer-strip-colors>` based on the type of strip.
-      The color tag can change the color to an alternative predefined color.
-
-      This can be useful to help organize your sequence by for example,
-      giving a special color to all graphic overlays and a different color for footage.
+      Strips are given a :ref:`Default Color <sequencer-strip-colors>` based on their type;
+      using the color tag, you can assign a custom color to help organize your sequence.
 
 Mute
-   Toggles the strip from producing an output.
+   Uncheck to prevent the strip from producing output.
 
 
 Compositing
@@ -39,7 +35,7 @@ Blend
    The method for blending the current strip with strips in lower channels.
    See :term:`Blend Modes` for more information.
 Opacity
-   The transparency (:term:`alpha <Alpha Channel>`) of the strip.
+   The opacity (:term:`alpha <Alpha Channel>`) of the strip.
 
    When this property is animated, the opacity is drawn as an overlay on the strip.
    The overlay will look like a dark section that follows the animation curve.
@@ -156,7 +152,7 @@ Working with sound is documented further at :ref:`bpy.types.SoundSequence`.
 .. _bpy.types.SoundSequence.volume:
 
 Volume
-   Adjusts the perceived loudness or intensity of the sound
+   Adjusts the perceived loudness or intensity of the sound.
 
    When this property is animated, the volume is drawn as an overlay on the strip.
    The overlay will look like a dark section that follows the animation curve.
@@ -171,16 +167,15 @@ Volume
 
 Pan
    Used to pan the audio between speakers in multichannel audio.
-   Only mono sources can be panned, if the source file is not mono enable *Mono* to mix the channels together.
+   Only mono sources can be panned; if the source file is not mono, enable *Mono* to mix the channels together.
 
    This value basically represents the angle at
    which it's played if you multiply the value by 90 degrees.
 
-   For stereo output panning works from left (-1) to right (1);
-   where 0 means front/center, -1 means to the left and 1 to the right.
+   For stereo, output panning works from left (-1) to center (0) and finally right (1).
 
-   To address rear speakers, you can pan to those with the higher values;
-   where -2 is back left, and 2 is back right.
+   To address rear speakers, you can pan to those with higher values,
+   where -2 is back left and 2 is back right.
 
    .. tip::
 
@@ -191,14 +186,6 @@ Pan
 
       The number of audio channels can be configured in the
       :ref:`Audio Output <render-output-video-encoding-audio>` settings.
-
-.. _bpy.types.SoundSequence.show_waveform:
-
-Display Waveform
-   Display an approximate waveform of the sound file inside of the Sound strip.
-   The waveform reflects strip volume and its animation using :doc:`keyframes </animation/keyframes/introduction>`.
-
-   Clipping audio, i.e. values over 100% amplitude, will be shown in red in the waveform.
 
 .. _bpy.types.Sound.use_mono:
 
@@ -217,8 +204,8 @@ Time
 
 The Time panel is used to control source and timeline position of the strip.
 
-Lock (padlock icon)
-   Prevents the strip from being moved (found in the panel header).
+Lock (padlock icon in panel header)
+   Prevents the strip from being moved.
 
 .. _bpy.types.Sequence.show_retiming_keys:
 
@@ -233,32 +220,45 @@ Channel
 .. _bpy.types.Sequence.frame_start:
 
 Start
-   Changes the starting frame number of the strip, which is the same as selecting and moving the strip.
+   Changes the starting frame of the strip, which is the same as selecting and moving the strip.
 
 .. _bpy.types.Sequence.frame_final_duration:
 
 Duration
-   Changes the length, in frames of the strip. This works by changing the end frame,
+   Changes the length (in frames) of the strip. This works by changing the end frame,
    which is the same as selecting and moving the strip's right handle.
 End
-   Specifies the ending time and ending frame number for the strip.
+   Shows the ending time and frame of the strip.
 
 .. _bpy.types.Sequence.frame_offset_start:
 .. _bpy.types.Sequence.frame_offset_end:
 
 Strip Offset Start/End
-   Can be used to either extend the strip beyond the end frame by repeating the last frame.
-   Or it can be used to shorten the strip, as if you were cropping the end frame.
-   This is the same as adjusting the strip handles.
+   Positive values will move the strip's handles inwards, making it start later than the start
+   of the source material and stop before its end. This lets you trim down the source material
+   to the part you need. You can enable the
+   :ref:`Offsets overlay <bpy.types.SpaceSequeSequencerTimelineOverlaynceEditor.show_strip_offset>`
+   to see the start and end of the full source file.
+
+   Negative values will move the strip's handles outwards, making it start earlier than the start
+   of the source material and stop after its end. This lets you show the first and/or last frame
+   as a frozen image for some time.
+
+   Instead of adjusting these offsets in the Sidebar, you can also drag the strip's handles.
 
 .. _bpy.types.MovieSequence.animation_offset_start:
 .. _bpy.types.MovieSequence.animation_offset_end:
 .. _sequencer-duration-hard:
 
 Hold Offset Start/End
-   Offset of the uncut strip content.
+   Used for trimming frames off the start/end of the source material. At first sight, this
+   does the same as the *Strip Offset* properties, but you can in fact combine them
+   to hold (freeze) a frame other than the first or last one. For example, if you set the
+   *Hold Offset Start* to 10 and the *Strip Offset Start* to -20, the video will first show
+   the 11th frame of the source for 21 frames, and then play the remaining frames.
+
 Current Frame
-   The frame number relative to the start of the active strip.
+   The Playhead's frame number relative to the start of the strip.
 
 
 Source
@@ -268,45 +268,50 @@ Source
 
    :Panel:     :menuselection:`Sidebar --> Strip --> Source`
 
-The Source panel is used to control sources of the strip
-such as filename and file path and various methods of interpreting these files.
+The Source panel shows (and lets you change) the file which the strip points to,
+as well as how this file should be displayed.
 
-Path
-   The directory that contains the source file.
-   When the file is moved, the path can be updated instead of recreating the strip.
 File
-   The file name of the source file.
-   For image strips showing an image sequence, this will be different for each frame.
-Change Data/Files
-   Same as the *Path* and *File* fields, but this time combined to open the File Browser in order to
-   find the file(s) you search. Same as :menuselection:`Strip --> Inputs --> Change Paths/Files`.
+   The full path of the source file.
 
 Color Space
-   To specify the color space of the source file.
+   The color space of the source file.
 
    The list of color spaces depends on the active :ref:`OCIO config <ocio-config>`.
    The default supported color spaces are described in detail here:
    :ref:`Default OpenColorIO Configuration <ocio-config-default-color-spaces>`
 Alpha Mode
-   If the source file has an Alpha (transparency) channel, you can choose:
-
-   :term:`Straight Alpha` or :term:`Premultiplied Alpha`
+   If the source file has an Alpha (transparency) channel, you can choose between
+   :term:`Straight Alpha` and :term:`Premultiplied Alpha`.
 Stream Index :guilabel:`Movie Strip`
-   For files with several movie streams, use the stream with the given index.
+   The video stream to use, in case there are multiple.
 Deinterlace
-   Removes fields in a video file.
-   For example, if it is an analog video and it has even or odd interlacing fields.
+   Applies deinterlacing to analog video.
 
 Source Information
    Displays information about the strip's media.
 
    Resolution
-      Resolution of the active strip image output.
+      Resolution of the active strip's image output.
    FPS :guilabel:`Movie Strip`
       The frame rate encoded into the video file.
-      If this value does not match the scene :ref:`Frame Rate <bpy.types.RenderSettings.fps>`
+      If this value does not match the scene's :ref:`Frame Rate <bpy.types.RenderSettings.fps>`,
       the perceived speed of the media will be wrong unless the speed is
-      :ref:`changed <video_editing-change_fps>` to account for the difference in frame rate.
+      :ref:`changed <video_editing-change_fps>` to account for the difference.
+
+
+Options for Image Strips
+------------------------
+
+Directory
+   The directory that contains the source file(s).
+   
+Filename
+   The name of the source file. For image sequences, this will be different for each frame.
+
+Change Data/Files
+   Opens a File Browser to let you select a new set of images (as an alternative to modifying
+   the above textboxes). Same as :menuselection:`Strip --> Inputs --> Change Paths/Files`.
 
 
 Options for Sound Strips
@@ -314,10 +319,10 @@ Options for Sound Strips
 
 Sound
    :ref:`Data-block menu <ui-data-block>` to select a sound.
-Path
-   Path to the sound file used by this :ref:`data-block <ui-data-block>` menu.
+File Path
+   Path to the file used by the selected sound :ref:`data-block <ui-data-block>`.
 Pack
-   Pack sound into the blend-file.
+   :doc:`Pack </files/blend/packed_data>` the sound into the blend-file.
 
 .. _bpy.types.Sound.use_memory_cache:
 
