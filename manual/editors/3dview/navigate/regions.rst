@@ -80,16 +80,22 @@ Render Region
    :Shortcut:  Mark: :kbd:`Ctrl-B`
                Clear: :kbd:`Ctrl-Alt-B`
 
-When using the :ref:`Rendered shading mode <view3d-viewport-shading>`,
-it can be quite slow to render the entire 3D Viewport. To fix this,
-you can define a subregion to render just a portion.
-This can be very useful for reducing render times for quick previews on an area of interest.
+Allows you to limit rendering to a 2D rectangular area. If you're busy tweaking
+just a small part of the scene, it can be quite wasteful to have the whole viewport in
+:ref:`Rendered shading mode <view3d-viewport-shading>` or make full-frame renders,
+so this feature lets you save time.
 
-Apart from clearing the render region, you can also temporarily disable it
-in the :ref:`Sidebar <bpy.types.SpaceView3D.use_render_border>` if you're not in
-:doc:`Camera View </editors/3dview/navigate/camera_view>`,
-or in the Output tab of the :ref:`Properties <bpy.types.RenderSettings.use_border>`
-editor if you are.
+You can define Render Regions in two different contexts:
+
+- If you define one while in :doc:`Camera View </editors/3dview/navigate/camera_view>`,
+  it will apply not just to the viewport, but also to the final render.
+  If you want to temporarily disable this region rather than clearing it entirely,
+  you can do so in the Output tab of the :ref:`Properties <bpy.types.RenderSettings.use_border>` editor.
+- If you define one while not in Camera View, it will only apply to the viewport.
+  If you want to temporarily disable this region rather than clearing it entirely,
+  you can do so in the :ref:`Sidebar <bpy.types.SpaceView3D.use_render_border>`.
+
+Both Render Regions can exist at the same time.
 
 .. list-table:: Render region and associated render.
    :widths: 65 35
@@ -98,10 +104,9 @@ editor if you are.
 
      - .. figure:: /images/editors_3dview_navigate_regions_render-border-2.png
 
-.. tip::
-
-   If you set a render region while in camera view and have it enabled in
-   the Output properties, it will be applied to the final render.
+.. note::
+   Render regions only apply to the viewport when using Cycles, not when using EEVEE.
+   However, they always affect the final render.
 
 .. seealso::
 
