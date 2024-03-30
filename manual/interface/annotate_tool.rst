@@ -34,8 +34,7 @@ Annotate Line
 .. _tool-annotate-polygon:
 
 Annotate Polygon
-   Click multiple times to create multiple connected lines, then press :kbd:`RMB`,
-   :kbd:`Return` or :kbd:`Esc` to confirm.
+   Click multiple times to create multiple connected lines, then press :kbd:`Return` or :kbd:`Esc` to confirm.
 
 .. _tool-annotate-eraser:
 
