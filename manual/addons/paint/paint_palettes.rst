@@ -8,7 +8,7 @@ Todo.
 .. seealso::
 
    Please see the
-   `old Wiki <https://archive.blender.org/wiki/index.php/Extensions:2.6/Py/Scripts/Paint/Palettes/>`__
+   `old Wiki <https://archive.blender.org/wiki/2015/index.php/Extensions:2.6/Py/Scripts/Paint/Palettes/>`__
    for the archived original docs.
 
 

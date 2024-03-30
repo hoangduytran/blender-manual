@@ -67,8 +67,7 @@ support channel in the ``#docs`` or ``#blender-coders`` channel in :ref:`blender
 
 Blender itself has a system of module owners with developer and artist members who are
 responsible for the design and maintenance of the assigned Blender areas.
-See the `module owners page <https://wiki.blender.org/wiki/Process/Module_Owners/List>`__
-for more information.
+See the `module pages <https://projects.blender.org/blender/blender/wiki>`__ for more information.
 
 
 Preview

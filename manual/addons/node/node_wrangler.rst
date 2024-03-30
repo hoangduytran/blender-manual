@@ -547,7 +547,7 @@ Select multiple images and add a node for each image.
 .. seealso::
 
    Please see the
-   `old Wiki <https://archive.blender.org/wiki/index.php/Extensions:2.6/Py/Scripts/Nodes/Nodes_Efficiency_Tools/>`__
+   `old Wiki <https://archive.blender.org/wiki/2015/index.php/Extensions:2.6/Py/Scripts/Nodes/Nodes_Efficiency_Tools/>`__
    for the archived original docs.
 
 

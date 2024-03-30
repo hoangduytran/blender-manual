@@ -25,4 +25,4 @@ the result will not be blurred between materials along the strokes.
    :align: center
 
    Material modifiers demo by T.K.
-   (`blend-file <https://archive.blender.org/wiki/index.php/File:Lilies_Color_Material.zip>`__).
+   (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:Lilies_Color_Material.zip>`__).

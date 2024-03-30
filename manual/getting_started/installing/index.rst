@@ -48,7 +48,7 @@ Each package described below has something just right for everyone.
 .. note::
 
    Blender's source code is available for free to either reference or
-   to `Build from Source <https://wiki.blender.org/wiki/Building_Blender>`__.
+   to `Build from Source <https://developer.blender.org/docs/handbook/building_blender/>`__.
    While normal users are **not** expected to compile Blender, it does have advantages:
 
    - Blender is always up to date.

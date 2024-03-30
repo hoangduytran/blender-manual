@@ -76,4 +76,4 @@ Other Useful Links
 
 - `Blender FAQ <https://www.blender.org/support/faq/>`__ (Can I use Blender commercially? What is GPL/GNU? ...)
 - `Demo and benchmark files <https://www.blender.org/download/demo-files/>`__
-- Developer's `Ask Us Anything! <https://wiki.blender.org/wiki/Reference/AskUsAnything>`__
+- Developer's `Ask Us Anything! <https://developer.blender.org/docs/handbook/new_developers/faq/>`__

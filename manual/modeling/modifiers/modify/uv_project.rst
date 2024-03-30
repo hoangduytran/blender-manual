@@ -16,7 +16,7 @@ It emits a UV map from the negative Z axis of a controller object
 (such as an :doc:`empty object </modeling/empties>`),
 and applies it to the object as the "light" hits it.
 
-`Download an example <https://archive.blender.org/wiki/index.php/File:Uvproject.blend>`__.
+`Download an example <https://archive.blender.org/wiki/2015/index.php/File:Uvproject.blend>`__.
 
 
 Options

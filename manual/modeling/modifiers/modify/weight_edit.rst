@@ -127,4 +127,4 @@ to generate weights used by the :doc:`Displace </modeling/modifiers/deform/displ
 
 .. peertube:: 5c73d2a3-d624-4c66-9adf-a9345690b843
 
-`The blend-file <https://archive.blender.org/wiki/index.php/File:ManModifiersWeightVGroupEx.blend>`__, TEST_2 scene.
+`The blend-file <https://archive.blender.org/wiki/2015/index.php/File:ManModifiersWeightVGroupEx.blend>`__, TEST_2 scene.

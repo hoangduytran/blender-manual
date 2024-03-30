@@ -18,4 +18,4 @@ sets by selecting it from the select menu next to its name.
 
 .. figure:: /images/render_freestyle_parameter-editor_line-style_introduction_line-style-example.png
 
-   Line Style Example (`blend-file <https://archive.blender.org/wiki/index.php/File:LineStyles.zip>`__).
+   Line Style Example (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:LineStyles.zip>`__).

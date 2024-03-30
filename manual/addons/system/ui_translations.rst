@@ -16,8 +16,7 @@ Activation
 Description
 ===========
 
-See `Blender translation how-to <https://wiki.blender.org/wiki/Dev:Doc/How_to/Translate_Blender>`__ in the Wiki.
-
+See `Manage UI Translations Add-on <https://developer.blender.org/docs/handbook/translating/translator_guide/#manage-ui-translations-add-on>`__.
 
 .. reference::
 

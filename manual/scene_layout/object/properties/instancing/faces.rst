@@ -27,7 +27,7 @@ You can go back from *Instancing Faces* to multiple linked objects using
 .. seealso:: Example blend-file
 
    Download the blend-file used for the examples on this page
-   `here <https://archive.blender.org/wiki/index.php/File:Manual-2.5-Duplifaces-Example01.blend>`__.
+   `here <https://archive.blender.org/wiki/2015/index.php/File:Manual-2.5-Duplifaces-Example01.blend>`__.
 
 
 Basic Usage

@@ -13,8 +13,8 @@ and newer ones (forward compatibility). This comes with some limitations though.
 
 .. note::
 
-   Here is a `more exhaustive documentation <https://wiki.blender.org/wiki/Process/Compatibility_Handling>`__
-   about compatibility handling, in the developpers documentation.
+   Here is a `more exhaustive documentation <https://developer.blender.org/docs/handbook/guidelines/compatibility_handling_for_blend_files/>`__
+   about compatibility handling, in the developer's documentation.
 
 
 Backward Compatibility

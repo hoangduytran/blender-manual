@@ -61,4 +61,4 @@ Example
 .. figure:: /images/render_cycles_render-settings_motion-blur_example-cubes.jpg
    :width: 640px
 
-   `Example blend-file <https://en.blender.org/uploads/0/03/Blender2.65_motion_blur.blend>`__.
+   `Example blend-file <https://archive.blender.org/wiki/2015/uploads/0/03/Blender2.65_motion_blur.blend>`__.

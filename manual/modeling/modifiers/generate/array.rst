@@ -147,7 +147,7 @@ Examples
 .. figure:: /images/modeling_modifiers_generate_array_example-mechanical-chain.png
 
    A chain created from a single link.
-   `Sample blend-file <https://archive.blender.org/wiki/index.php/File:Dev-ArrayModifier-Chain01.blend>`__.
+   `Sample blend-file <https://archive.blender.org/wiki/2015/index.php/File:Dev-ArrayModifier-Chain01.blend>`__.
 
 .. figure:: /images/modeling_modifiers_generate_array_example-organic-tentacle.jpg
 
@@ -155,7 +155,7 @@ Examples
 
    The segment in the foreground is the base mesh for the tentacle; the tentacle is capped by two
    specially-modeled objects deformed by the same Curve object as the main part of the tentacle.
-   `Sample blend-file <https://archive.blender.org/wiki/index.php/File:Manual-Modifier-Array-Tentacle01.blend>`__.
+   `Sample blend-file <https://archive.blender.org/wiki/2015/index.php/File:Manual-Modifier-Array-Tentacle01.blend>`__.
 
 
 Fractal
@@ -172,4 +172,4 @@ Fractal
           :width: 320px
 
           Fractal created with multiple arrays.
-          `Sample blend-file <https://archive.blender.org/wiki/index.php/File:Dev-ArrayModifier-Fractal01.blend>`__.
+          `Sample blend-file <https://archive.blender.org/wiki/2015/index.php/File:Dev-ArrayModifier-Fractal01.blend>`__.

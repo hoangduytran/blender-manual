@@ -24,7 +24,7 @@ If you leave out ``-m "message"``, you will be prompted to type the message in a
 
 .. seealso::
 
-   `Blender's Git usage guide <https://wiki.blender.org/wiki/Tools/Git>`__
+   `Blender's Git usage guide <https://developer.blender.org/docs/handbook/contributing/using_git/>`__
 
 .. seealso::
 

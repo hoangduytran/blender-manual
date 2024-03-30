@@ -156,7 +156,7 @@ and each of those vertex groups is assigned to a separate and independent partic
 with each particle system being assigned to a different Particle Instance modifier.
 In the case shown the Particle Instance modifiers are added to a sphere and a cube.
 See `example blend-file
-<https://archive.blender.org/wiki/uploads/4/48/Manual_-_Modifiers_-_Particle_Instance_Modifiers_-_Split_Plane.blend>`__.
+<https://archive.blender.org/wiki/2015/uploads/4/48/Manual_-_Modifiers_-_Particle_Instance_Modifiers_-_Split_Plane.blend>`__.
 
 .. figure:: /images/modeling_modifiers_physics_particle-instance_create-along-paths.jpg
    :align: center

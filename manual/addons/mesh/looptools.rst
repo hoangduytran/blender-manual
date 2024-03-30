@@ -223,7 +223,7 @@ Influence
    the `script home page <https://sites.google.com/site/bartiuscrouch/looptools>`__.
 
    Please see the
-   `old Wiki <https://archive.blender.org/wiki/index.php/Extensions:2.6/Py/Scripts/Modeling/LoopTools/>`__
+   `old Wiki <https://archive.blender.org/wiki/2015/index.php/Extensions:2.6/Py/Scripts/Modeling/LoopTools/>`__
    for the archived original docs.
 
 

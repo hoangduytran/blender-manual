@@ -16,7 +16,7 @@ to a single destination one, using interpolation.
    :width: 680px
 
    Transferring normals between objects,
-   `see example blend-file <https://archive.blender.org/wiki/uploads/a/ad/Data_Transfer_Normal_Torus.blend>`__.
+   `see example blend-file <https://archive.blender.org/wiki/2015/uploads/a/ad/Data_Transfer_Normal_Torus.blend>`__.
 
 .. seealso::
 

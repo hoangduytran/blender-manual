@@ -14,7 +14,7 @@ For example, this allows you to have a catalog of assets for "Furniture"
 with sub-catalogs of "Tables", "Chairs", "Lamps", etc...
 
 For more technical information,
-see `Asset Catalogs on the Blender Wiki <https://wiki.blender.org/wiki/Source/Architecture/Asset_System/Catalogs>`__.
+see `Asset Catalogs on the Blender Developer Documentation <https://developer.blender.org/docs/features/asset_system/backend/asset_catalogs/>`__.
 
 .. figure:: /images/asset-browser-catalogs.png
    :width: 640px

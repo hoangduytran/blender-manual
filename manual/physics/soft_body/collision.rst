@@ -69,7 +69,7 @@ in the :ref:`Soft Body Solver settings <physics-softbody-settings-solver>`.
 
 .. seealso::
 
-   Download the `blend-file <https://archive.blender.org/wiki/uploads/8/8d/CollidingVertices.blend>`__.
+   Download the `blend-file <https://archive.blender.org/wiki/2015/uploads/8/8d/CollidingVertices.blend>`__.
 
 Now let's see what happens if we make vertices heavier and let them travel at a faster speed.
 In the video above, you can see vertices traveling at different speeds.
