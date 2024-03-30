@@ -95,4 +95,4 @@ Examples
 .. figure:: /images/render_shader-nodes_shader_anisotropic_example.jpg
 
    Anisotropic shading with 0° rotation, 90° rotation and textured rotation of the tangent direction.
-   `Example blend-file <https://archive.blender.org/wiki/uploads/b/b7/Blender2.65_cycles_anisotropic.blend>`__.
+   `Example blend-file <https://archive.blender.org/wiki/2015/uploads/b/b7/Blender2.65_cycles_anisotropic.blend>`__.

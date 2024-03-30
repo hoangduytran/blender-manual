@@ -412,25 +412,25 @@ Examples
           :width: 200px
 
           Femme front view
-          `blend-file <https://archive.blender.org/wiki/uploads/8/8f/Apinzonf_GSOC_2012_Media_femme_front.blend>`__.
+          `blend-file <https://archive.blender.org/wiki/2015/uploads/8/8f/Apinzonf_GSOC_2012_Media_femme_front.blend>`__.
 
      - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_border0-0.jpg
           :width: 200px
 
           Femme side view
-          `blend-file <https://archive.blender.org/wiki/uploads/4/47/Apinzonf_GSOC_2012_Media_femme_side.blend>`__.
+          `blend-file <https://archive.blender.org/wiki/2015/uploads/4/47/Apinzonf_GSOC_2012_Media_femme_side.blend>`__.
 
      - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_t-wgroup.png
           :width: 200px
 
           Cube smooth
-          `blend-file <https://archive.blender.org/wiki/uploads/5/54/Apinzonf_GSOC_2012_Media_cube_smooth.blend>`__.
+          `blend-file <https://archive.blender.org/wiki/2015/uploads/5/54/Apinzonf_GSOC_2012_Media_cube_smooth.blend>`__.
 
      - .. figure:: /images/modeling_modifiers_deform_laplacian-smooth_camel-repeat0.jpg
           :width: 200px
 
           Shape enhanced
-          `blend-file <https://archive.blender.org/wiki/uploads/4/44/Apinzonf_Shape_Enhanced_camel.blend>`__.
+          `blend-file <https://archive.blender.org/wiki/2015/uploads/4/44/Apinzonf_Shape_Enhanced_camel.blend>`__.
 
 .. seealso::
 

@@ -246,6 +246,6 @@ or by using other constraints.
 .. figure:: /images/animation_armatures_posing_bone-constraints_inverse-kinematics_introduction_example.png
    :align: center
 
-   `IK Arm Example <https://archive.blender.org/wiki/index.php/File:IK_Arm_Example.blend>`__.
+   `IK Arm Example <https://archive.blender.org/wiki/2015/index.php/File:IK_Arm_Example.blend>`__.
 
 Note that, if a *Pole Target* is used, IK locking will not work on the root bone.

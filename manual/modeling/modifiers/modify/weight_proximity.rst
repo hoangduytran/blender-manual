@@ -106,4 +106,4 @@ a :doc:`Wave </modeling/modifiers/deform/wave>` modifier with a modified vertex 
 
 .. peertube:: 579d7bd1-3f25-4441-ad7e-2d52667845c1
 
-`The blend-file <https://archive.blender.org/wiki/index.php/File:ManModifiersWeightVGroupEx.blend>`__, TEST_1 scene.
+`The blend-file <https://archive.blender.org/wiki/2015/index.php/File:ManModifiersWeightVGroupEx.blend>`__, TEST_1 scene.

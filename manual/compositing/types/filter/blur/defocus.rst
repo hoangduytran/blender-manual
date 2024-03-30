@@ -86,7 +86,7 @@ Examples
 .. figure:: /images/compositing_types_filter_defocus_example.jpg
    :width: 300px
 
-In this `blend-file example <https://archive.blender.org/wiki/uploads/7/79/Doftest.blend>`__,
+In this `blend-file example <https://archive.blender.org/wiki/2015/uploads/7/79/Doftest.blend>`__,
 the ball array image is blurred as if it was taken by a camera with an f-stop of 2.8 resulting
 in a fairly narrow depth of field centered on 7.5 units from the camera.
 As the balls recede into the distance, they get blurrier.

@@ -5,7 +5,7 @@ Blender ID Authentication
 
 This add-on allows you to authenticate your Blender with your `Blender ID <https://id.blender.org/>`__ account.
 This authentication can then be used by other add-ons, such as the
-`Blender Cloud add-on <https://archive.blender.org/wiki/index.php/Extensions:2.6/Py/Scripts/System/BlenderCloud/>`__.
+`Blender Cloud add-on <https://archive.blender.org/wiki/2015/index.php/Extensions:2.6/Py/Scripts/System/BlenderCloud/>`__.
 
 
 Installation

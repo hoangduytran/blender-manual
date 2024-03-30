@@ -37,12 +37,12 @@ the Blender Python API reference manual for the full detail of style module cons
    * - .. figure:: /images/render_freestyle_python_scripting-mode-example-1.jpg
 
           By T.K. using the Python Scripting mode
-          (`blend-file <https://archive.blender.org/wiki/index.php/File:Turning_Pages.zip>`__, CC0).
+          (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:Turning_Pages.zip>`__, CC0).
 
      - .. figure:: /images/render_freestyle_python_scripting-mode-example-2.png
 
           By T.K. using the Python Scripting mode
-          (`blend-file <https://archive.blender.org/wiki/index.php/File:Lily_Broken_Topology.zip>`__, CC0).
+          (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:Lily_Broken_Topology.zip>`__, CC0).
 
 
 Writing Style Modules

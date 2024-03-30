@@ -16,7 +16,7 @@ both in a movie frame and in a photograph from a real-world camera.
 .. figure:: /images/render_cycles_render-settings_motion-blur_example-cubes.jpg
 
    Motion blur example.
-   (`blend-file <https://archive.blender.org/wiki/uploads/0/03/Blender2.65_motion_blur.blend>`__)
+   (`blend-file <https://archive.blender.org/wiki/2015/uploads/0/03/Blender2.65_motion_blur.blend>`__)
 
 .. _bpy.types.RenderSettings.motion_blur_position:
 

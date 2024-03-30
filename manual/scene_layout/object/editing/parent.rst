@@ -173,7 +173,7 @@ when it is assigned to the new parent "EmptyB".
 If you want to follow along with the above description here is the blend-file:
 
 `File:Parent_-_Object_(Keep_Transform)_(Demo_File).blend
-<https://archive.blender.org/wiki/index.php/File:Parent_-_Object_(Keep_Transform)_(Demo_File).blend>`__.
+<https://archive.blender.org/wiki/2015/index.php/File:Parent_-_Object_(Keep_Transform)_(Demo_File).blend/>`__.
 
 
 Bone Parent

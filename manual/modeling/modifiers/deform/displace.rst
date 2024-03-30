@@ -84,10 +84,10 @@ Example
    :width: 680px
 
    Three different objects created with the Displace modifier.
-   `Sample blend-file <https://archive.blender.org/wiki/uploads/9/9e/Manual-Modifier-Displace-Example01.blend>`__.
+   `Sample blend-file <https://archive.blender.org/wiki/2015/uploads/9/9e/Manual-Modifier-Displace-Example01.blend>`__.
 
 .. figure:: /images/modeling_modifiers_deform_displace_example-2.jpg
    :width: 540px
 
    A slime animation created with the Displace modifier.
-   `Sample blend-file <https://archive.blender.org/wiki/uploads/6/62/Manual-Modifier-Displace-Slime01.blend>`__.
+   `Sample blend-file <https://archive.blender.org/wiki/2015/uploads/6/62/Manual-Modifier-Displace-Slime01.blend>`__.

@@ -18,4 +18,4 @@ Orientation
    :align: center
 
    Calligraphy modifier demo by T.K.
-   (`blend-file <https://archive.blender.org/wiki/index.php/File:Toycar_Calligraphy.zip>`__).
+   (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:Toycar_Calligraphy.zip>`__).

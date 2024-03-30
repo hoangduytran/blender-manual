@@ -118,14 +118,14 @@ Version/Revision Milestones
 `2.37 <https://archive.blender.org/www/development/release-logs/blender-237a/>`__ -- June 2005:
    Transformation tools and widgets, soft bodies, force fields, deflections,
    incremental subdivision surfaces, transparent shadows, and multi-threaded rendering.
-`2.40 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.40>`__ -- December 2005:
+`2.40 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.40>`__ -- December 2005:
    Full rework of armature system, shape keys, fur with particles, fluids, and rigid bodies.
-`2.41 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.41>`__ -- January 2006:
+`2.41 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.41>`__ -- January 2006:
    Lots of fixes, and some Game Engine features.
-`2.42 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.42>`__ -- July 2006:
+`2.42 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.42>`__ -- July 2006:
    The nodes release, Array modifier, vector blur, new physics engine, rendering, lip sync, and many other features.
    This was the release following `Project Orange <https://orange.blender.org/>`__.
-`2.43 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.43>`__ -- February 2007:
+`2.43 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.43>`__ -- February 2007:
    Multiresolution meshes, multi-layer UV textures, multi-layer images and multi-pass rendering and baking,
    sculpting, retopology, multiple additional mattes, distort and filter nodes, modeling and
    animation improvements, better painting with multiple brushes, fluid particles,
@@ -135,20 +135,20 @@ Version/Revision Milestones
    of subsurface scattering, which simulates light scattering beneath the surface of organic and soft objects.
 `2.45 <https://archive.blender.org/www/development/release-logs/blender-245/index.html>`__ -- September 2007:
    Serious bug fixes, with some performance issues addressed.
-`2.46 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.46>`__ -- May 2008:
+`2.46 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.46>`__ -- May 2008:
    The Peach release was the result of a huge effort of over 70 developers providing enhancements to
    provide hair and fur, a new particle system, enhanced image browsing, cloth, a seamless
    and non-intrusive physics cache, rendering improvements in reflections, AO, and render baking,
    a Mesh Deform modifier for muscles and such, better animation support via armature tools and
    drawing, skinning, constraints and a colorful Action Editor, and much more.
    It contained the results of `Project Peach <https://peach.blender.org/>`__.
-`2.47 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.47>`__ -- August 2008:
+`2.47 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.47>`__ -- August 2008:
    Bugfix release.
 `2.48 <https://archive.blender.org/www/development/release-logs/blender-248/index.html>`__ -- October 2008:
    The Apricot release, cool GLSL shaders, lights and GE improvements, snap, sky simulator,
    Shrinkwrap modifier, and Python editing improvements.
    This contained the results `Project Apricot <https://apricot.blender.org/>`__.
-`2.49 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.49>`__ -- June 2009:
+`2.49 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.49>`__ -- June 2009:
    Node-based textures, armature sketching (called Etch-a-Ton), Boolean mesh operation improvements,
    JPEG2000 support, projection painting for direct transfer of images to models, and
    a significant Python script catalog. GE enhancements included video textures, where you can play movies in-game,
@@ -168,27 +168,27 @@ Version/Revision Milestones
 
 .. rubric:: Blender 2.6x to 2.7x -- Improvements & Stabilizing
 
-`2.60 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.60>`__ -- October 2011:
+`2.60 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.60>`__ -- October 2011:
    Internationalization of the UI, improvements in the animation system and the GE,
    vertex weight groups modifiers, 3D audio and video, and bug fixes.
-`2.61 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.61>`__ -- December 2011:
+`2.61 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.61>`__ -- December 2011:
    The Cycles renderer was added to the trunk, the camera tracker was added, dynamic paint for modifying textures
    with mesh contact/approximation, the Ocean modifier to simulate ocean and foam, new add-ons, bug fixes,
    and more extensions added for the Python API.
-`2.62 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.62>`__ -- February 2012:
+`2.62 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.62>`__ -- February 2012:
    The `Carve library <https://code.google.com/archive/p/carve/>`__ was added to improve Boolean operations,
    support for object tracking was added, the Remesh modifier was added, many improvements in the GE,
    matrices and vectors in the Python API were improved, plus new add-ons, and many bug fixes.
-`2.63 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.63>`__ -- April 2012:
+`2.63 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.63>`__ -- April 2012:
    Bmesh was merged with the trunk, with full support for n-sided polygons, sculpt hiding, a panoramic camera
    for Cycles, mirror ball environment textures and float precision textures, render layer mask layers,
    ambient occlusion and viewport display of background images and render layers.
    New import and export add-ons were added, and 150 bug fixes.
-`2.64 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.64>`__ -- October 2012:
+`2.64 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.64>`__ -- October 2012:
    A mask editor was added, along with an improved motion tracker, OpenColorIO, Cycles improvements,
    Sequencer improvements, better mesh tools (Inset and Bevel were improved), new keying nodes, sculpt masking,
    Collada improvements, a new Skin modifier, a new compositing nodes backend, and the fixing of many bugs.
-`2.65 <https://archive.blender.org/wiki/index.php/Dev:Ref/Release_Notes/2.65>`__ -- December 2012:
+`2.65 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.65>`__ -- December 2012:
    Fire and smoke improvements, anisotropic shader for Cycles, modifier improvements,
    the Bevel tool now includes rounding, new add-ons, and over 200 bug fixes.
 `2.66 <https://www.blender.org/download/releases/2-66>`__ -- February 2013:

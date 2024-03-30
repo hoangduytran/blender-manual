@@ -122,7 +122,7 @@ Vertex Group
 .. seealso::
 
    Example blend-file:
-   `Cloth self-collisions <https://archive.blender.org/wiki/index.php/File:Cloth-regression-selfcollisions.blend>`__.
+   `Cloth self-collisions <https://archive.blender.org/wiki/2015/index.php/File:Cloth-regression-selfcollisions.blend>`__.
 
 
 Troubleshooting

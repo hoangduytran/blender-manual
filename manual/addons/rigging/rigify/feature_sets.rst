@@ -26,4 +26,5 @@ These are some examples of *Feature Sets* currently provided by past and current
 You can install these packages by clicking :menuselection:`Clone --> Download ZIP`,
 and then install the downloaded file through Rigify settings.
 
-Developer documentation is available on the `Blender Wiki <https://wiki.blender.org/wiki/Process/Addons/Rigify>`__.
+Developer documentation is available on the `Blender Developer Documentation
+<https://developer.blender.org/docs/features/animation/rigify/>`__.

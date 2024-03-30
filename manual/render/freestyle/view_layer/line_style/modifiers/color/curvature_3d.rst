@@ -31,4 +31,4 @@ Curvature Min, Max
    :width: 50%
 
    Curvature 3D modifier demo by T.K.
-   (`blend-file <https://archive.blender.org/wiki/index.php/File:Render_freestyle_modifier_curvature_3d.blend>`__).
+   (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:Render_freestyle_modifier_curvature_3d.blend>`__).

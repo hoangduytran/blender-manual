@@ -57,7 +57,7 @@ Example
    :width: 600px
 
    Bilateral smoothed Ambient Occlusion.
-   `blend-file example <https://archive.blender.org/wiki/uploads/2/2a/Bilateral_blur_example_01.blend>`__
+   `blend-file example <https://archive.blender.org/wiki/2015/uploads/2/2a/Bilateral_blur_example_01.blend>`__
 
 .. list-table::
 

@@ -257,7 +257,7 @@ Run Script
 
    Doing such changes via a script ensures they aren't lost if the rig is re-generated.
 
-   Users familiar with `Rigify scripting <https://wiki.blender.org/wiki/Process/Addons/Rigify>`__
+   Users familiar with `Rigify scripting <https://developer.blender.org/docs/features/animation/rigify/>`__
    can import Rigify utility modules, and access the generator instance through ``rigify.get_generator()``.
    Yet note that, since generation is already finished, the only use of that is reading data created
    in the generation process.

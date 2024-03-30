@@ -38,7 +38,7 @@ Repeat
    however, it will take longer to calculate.
 
    .. list-table:: Deform horse example
-      `blend-file <https://archive.blender.org/wiki/uploads/a/a2/Apinzonf_Deform_Horse_example1.blend>`__.
+      `blend-file <https://archive.blender.org/wiki/2015/uploads/a/a2/Apinzonf_Deform_Horse_example1.blend>`__.
 
       * - .. figure:: /images/modeling_modifiers_deform_laplacian-deform_cactus09.png
              :width: 130px

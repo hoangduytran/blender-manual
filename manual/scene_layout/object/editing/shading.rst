@@ -27,7 +27,7 @@ Using :ref:`bpy.ops.object.shade_flat` will revert the shading back (normals wil
 to that shown in the first image below.
 
 .. list-table:: Example mesh flat (left) and smooth-shaded (right).
-   `Sample blend-file <https://archive.blender.org/wiki/index.php/File:25-manual-meshsmooth-example.blend>`__.
+   `Sample blend-file <https://archive.blender.org/wiki/2015/index.php/File:25-manual-meshsmooth-example.blend>`__.
 
    * - .. figure:: /images/scene-layout_object_editing_shading_example-flat.png
           :width: 200px

@@ -38,7 +38,7 @@ Development
 ===========
 
 Developer documentation is available on
-the `Blender Wiki <https://wiki.blender.org/wiki/Process/Addons/Rigify>`__.
+the `Blender Developer Documentation <https://developer.blender.org/docs/features/animation/rigify/>`__.
 
 
 .. reference::

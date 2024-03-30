@@ -55,8 +55,8 @@ Fork
 Workflow
 ========
 
-The workflow for working with pull requests can be found on the
-`Blender Developer's Wiki <https://wiki.blender.org/wiki/Tools/Pull_Requests>`__.
+The workflow for working with pull requests can be found in the
+`Blender Developer's Documentation <https://developer.blender.org/docs/handbook/contributing/pull_requests/>`__.
 
 Note, some text in the above guideline is focused on the main Blender repository,
 however, the workflow is the same for any Blender project.

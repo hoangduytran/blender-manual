@@ -44,7 +44,7 @@ Type
          :width: 60%
 
          Proof of concept of visible and hidden edges by LightBWK
-         (`blend-file <https://archive.blender.org/wiki/index.php/File:HiddenCreaseEdgeMark.zip>`__).
+         (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:HiddenCreaseEdgeMark.zip>`__).
 
    :QI Range:
       QI stands for *Quantitative Invisibility*. Lines occluded by
@@ -61,7 +61,7 @@ Type
          :width: 60%
 
          QI Range proof of concept demo, Start: 3, End: 7, by LightBWK
-         (`blend-file <https://archive.blender.org/wiki/index.php/File:QI-Range.zip>`__).
+         (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:QI-Range.zip>`__).
 
 
 .. _bpy.types.FreestyleLineSet.exclude:
@@ -81,7 +81,7 @@ Edge types can also be excluded from calculation by pressing the *X* next to the
 
    Examples of some basic edge types:
    Silhouette (green), Crease (black), Border (blue) and Edge Marks (red)
-   (`blend-file <https://archive.blender.org/wiki/index.php/File:EdgeType.zip>`__ by LightBWK).
+   (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:EdgeType.zip>`__ by LightBWK).
 
 .. _bpy.types.FreestyleLineSet.select_silhouette:
 
@@ -101,7 +101,7 @@ Type
          :width: 60%
 
          Crease Angle proof of concept for 121° by LightBWK
-         (`blend-file <https://archive.blender.org/wiki/index.php/File:CreaseAngle.zip>`__).
+         (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:CreaseAngle.zip>`__).
 
    .. _bpy.types.FreestyleLineSet.select_border:
 
@@ -141,7 +141,7 @@ Type
       Draws some lines which would form the *Silhouette* of the mesh if the view point was shifted.
       Depends on your view map settings for *Kr Derivative Epsilon* and *Sphere Radius*
       (further information: `File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf
-      <https://archive.blender.org/wiki/index.php/File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf>`__).
+      <https://archive.blender.org/wiki/2015/index.php/File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf>`__).
 
    .. _bpy.types.FreestyleLineSet.select_ridge_valley:
 

@@ -19,4 +19,4 @@ Therefore, it is recommended to use this modifier together with one of the split
    :align: center
 
    Guiding Lines modifier Demo by T.K.
-   (`blend-file <https://archive.blender.org/wiki/index.php/File:Toycar_Guiding_Line.zip>`__).
+   (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:Toycar_Guiding_Line.zip>`__).
