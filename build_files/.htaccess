@@ -239,3 +239,5 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_t
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_cube.html" "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/primatives/volume_cube.html"
 
 RedirectMatch "^/manual/{lang}/{version}/editors/nla/editing.html" "^/manual/{lang}/{version}/editors/nla/editing/index.html"
+
+RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/shader/anisotropic.html" "^/manual/{lang}/{version}/render/shader_nodes/shader/glossy.html"
