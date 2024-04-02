@@ -11,7 +11,12 @@
 	{% trans %}You can try one of the following things:{% endtrans %}</p>
 
 <div class="search404 centered">
-	{% include "sidebar/search.html" %}
+  <form class="sidebar-search-container" method="get" action="{{ pathto('search') }}" role="search">
+    <input class="sidebar-search" placeholder="{{ _("Search") }}" name="q" aria-label="{{ _("Search" ) }}">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+  <div id="searchbox"></div>
 </div>
 
 {%- endblock %}
