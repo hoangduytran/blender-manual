@@ -104,10 +104,10 @@ Subcommand: ``install``
 usage::
 
        blender --command extension install [-h] [-s] [-e] [--no-prefs]
-                                           packages
+                                           PACKAGES
 
 positional arguments:
-  :packages:      The packages to operate on (separated by ``,`` without spaces).
+  :PACKAGES:      The packages to operate on (separated by ``,`` without spaces).
 
 options:
   -h, --help    show this help message and exit
@@ -125,12 +125,12 @@ Subcommand: ``install-file``
 usage::
 
        blender --command extension install-file [-h] -r REPO [-e] [--no-prefs]
-                                                file
+                                                FILE
 
 Install a package file into a local repository.
 
 positional arguments:
-  :file:                  The packages file.
+  :FILE:                  The packages file.
 
 options:
   -h, --help            show this help message and exit
@@ -147,12 +147,12 @@ Subcommand: ``remove``
 
 usage::
 
-       blender --command extension remove [-h] [--no-prefs] packages
+       blender --command extension remove [-h] [--no-prefs] PACKAGES
 
 Disable & remove package(s).
 
 positional arguments:
-  :packages:    The packages to operate on (separated by ``,`` without spaces).
+  :PACKAGES:    The packages to operate on (separated by ``,`` without spaces).
 
 options:
   -h, --help  show this help message and exit
@@ -190,12 +190,12 @@ usage::
                                             [--directory DIRECTORY]
                                             [--url URL] [--cache BOOLEAN]
                                             [--no-prefs]
-                                            id
+                                            ID
 
 Add a new local or remote repository.
 
 positional arguments:
-  :id:                    The repository identifier.
+  :ID:                    The repository identifier.
 
 options:
   -h, --help            show this help message and exit
@@ -219,12 +219,12 @@ Subcommand: ``repo-remove``
 
 usage::
 
-       blender --command extension repo-remove [-h] [--no-prefs] id
+       blender --command extension repo-remove [-h] [--no-prefs] ID
 
 Remove a repository.
 
 positional arguments:
-  :id:          The repository identifier.
+  :ID:          The repository identifier.
 
 options:
   -h, --help  show this help message and exit
@@ -266,14 +266,18 @@ Subcommand: ``validate``
 
 usage::
 
-       blender --command extension validate [-h] [--source-dir SOURCE_DIR]
+       blender --command extension validate [-h] [SOURCE_PATH]
 
 Validate the package meta-data in the current directory.
 
+positional arguments:
+  :SOURCE_PATH:  The package source path (either directory containing package files or the package archive).
+               This path must containing a ``blender_manifest.toml`` manifest.
+
+               The current directory ``.`` is default.
+
 options:
-  -h, --help            show this help message and exit
-  --source-dir SOURCE_DIR
-                        The package source directory containing a ``blender_manifest.toml`` manifest.
+  -h, --help   show this help message and exit
 
 .. _command-line-args-extension-server-generate:
 
