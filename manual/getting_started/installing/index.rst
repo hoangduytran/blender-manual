@@ -64,9 +64,11 @@ Follow the steps for your platform.
    by following the upgrade steps described in the sections below.
 
 
+Installation Guides
+===================
+
 .. toctree::
    :maxdepth: 1
-   :caption: Installation Guides
 
    linux.rst
    macos.rst
