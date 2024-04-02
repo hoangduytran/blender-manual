@@ -58,6 +58,12 @@ hr.docutils {
 	transition: transform 0.25s ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	.toctree-checkbox~label .icon svg {
+		transition-duration: 0s !important;
+	}
+}
+
 /* Add more visual weight to definition terms */
 dl dt {
 	font-weight: bold !important

@@ -167,6 +167,7 @@ getNamed(v) {
 	return v;
 }
 dialogToggle(speed) {
+	speed = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : speed;
 	const wasClose = !this.isOpen;
 	const that = this;
 	if(!this.isOpen) {
