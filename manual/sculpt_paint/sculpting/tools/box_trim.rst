@@ -33,7 +33,8 @@ a new face set instead.
 .. note::
 
    It is not recommended to use this tool on a mesh above 100k
-   vertices when using *Difference* or *Union* as the Trim Mode.
+   vertices when using *Difference* or *Union* as the Trim Mode
+   with the *Exact* Solver.
    This tool is using a Boolean operation so it might take a long time to process.
    For higher resolution meshes it is recommended to instead use the
    :doc:`Line Project </sculpt_paint/sculpting/tools/line_project>` tool or the *Fair Positions*
@@ -42,6 +43,16 @@ a new face set instead.
 
 Tool Settings
 =============
+Solver
+   Algorithm used to calculate the Boolean intersections.
+
+   :Fast:
+      Uses a mathematically simple solver which offers the best performance;
+      however, this solver lacks support for overlapping geometry.
+   :Exact:
+      Uses a mathematically complex solver which offers the best results and has full
+      support for overlapping geometry; however, this solver is much slower than the
+      *Fast Solver*.
 
 Trim Mode
    Geometry can be either added or removed by choosing one of these modes.
