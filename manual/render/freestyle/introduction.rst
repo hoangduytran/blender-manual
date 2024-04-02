@@ -29,7 +29,8 @@ such as Japanese big brush, cartoon, blueprint, and thickness-with-depth.
      - .. figure:: /images/render_freestyle_introduction_example-2.png
 
           By mato.sus304. CC BY-SA.
-          (`File:Mato_sus304_cut02.zip <https://archive.blender.org/wiki/2015/index.php/File:Mato_sus304_cut02.zip>`__)
+          (`File:Mato_sus304_cut02.zip
+          <https://archive.blender.org/wiki/2015/index.php/File:Mato_sus304_cut02.zip>`__)
 
    * - .. figure:: /images/render_freestyle_introduction_example-3.png
 

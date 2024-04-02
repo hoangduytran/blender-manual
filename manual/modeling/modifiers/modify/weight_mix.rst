@@ -128,4 +128,5 @@ the :doc:`Wave </modeling/modifiers/deform/wave>` modifier.
 
 .. peertube:: 40378a39-cd90-404a-89bf-64ee9a39310a
 
-`The blend-file <https://archive.blender.org/wiki/2015/index.php/File:ManModifiersWeightVGroupEx.blend>`__, TEST_4 scene.
+`The blend-file <https://archive.blender.org/wiki/2015/index.php/File:ManModifiersWeightVGroupEx.blend>`__,
+TEST_4 scene.
