@@ -161,6 +161,12 @@ To validate the manifest without building the package:
 
    blender --command extension validate
 
+You may also validate a package without having to extract it first.
+
+.. code:: bash
+
+   blender --command extension validate add-on-package.zip
+
 See :ref:`validate <command-line-args-extension-validate>` docs.
 
 .. seealso::
