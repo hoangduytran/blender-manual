@@ -22,6 +22,7 @@ Vertex groups are maintained within the *Object Data* Properties, in the *Vertex
 .. _bpy.ops.object.vertex_group_remove_from:
 .. _bpy.ops.object.vertex_group_remove:
 .. _bpy.ops.object.vertex_group_move:
+.. _bpy.types.VertexGroups.active_index:
 
 Active Vertex Group
    A :ref:`List view <ui-list-view>`.

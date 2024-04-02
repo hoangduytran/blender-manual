@@ -26,6 +26,8 @@ It is available in Edit Mode and in Weight Paint Mode
 (when Vertex Selection masking is enabled as well).
 
 
+.. _bpy.types.ToolSettings.vertex_group_subset:
+
 Vertex Group Categories
 =======================
 
@@ -33,28 +35,21 @@ Actually we do not have any strict categories of vertex groups in Blender.
 Technically they all behave the same way.
 However, we can identify two implicit categories of vertex groups:
 
+:Deform Groups:
+   These vertex groups are sometimes also named 'weight groups' or 'weight maps'.
+   They are used for defining the weight tables of armature bones.
+   All deform groups of an object are strictly related to each other via their weight values.
 
-Deform Groups
--------------
-
-These vertex groups are sometimes also named 'weight groups' or 'weight maps'.
-They are used for defining the weight tables of armature bones.
-All deform groups of an object are strictly related to each other via their weight values.
-
-Strictly speaking, the sum of all deform weights for any vertex of a mesh should be exactly 1.0.
-In Blender this constraint is a bit relaxed (see below).
-Nevertheless, deform groups should always be seen as related to each other.
-Hence, we have provided a filter that allows restricting the Vertex Weight panel to
-display only the deform bones of an object.
-
-
-Other Groups
-------------
-
-All other usages of vertex groups are summarized into the *Other* category.
-These vertex groups can be found within Shape keys, Modifiers, etc.
-There is really no good name for this category,
-so we kept it simple and named it *Other*.
+   Strictly speaking, the sum of all deform weights for any vertex of a mesh should be exactly 1.0.
+   In Blender this constraint is a bit relaxed (see below).
+   Nevertheless, deform groups should always be seen as related to each other.
+   Hence, we have provided a filter that allows restricting the Vertex Weight panel to
+   display only the deform bones of an object.
+:Other Groups:
+   All other usages of vertex groups are summarized into the *Other* category.
+   These vertex groups can be found within Shape keys, Modifiers, etc.
+   There is really no good name for this category,
+   so we kept it simple and named it *Other*.
 
 
 Weight Table
@@ -100,11 +95,6 @@ Select the *Viewport Overlays* popover from the header of the 3D Viewport.
 And there enable the *Vertex Group Weights* option.
 Now you can see the weights of the active vertex group displayed on the mesh surface.
 
-.. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_edit-mode.png
-   :width: 260px
-
-   Weights in Edit Mode.
-
 
 Edit Weights in Edit Mode
 -------------------------
@@ -113,10 +103,10 @@ It is now very easy to work with vertex groups in Edit Mode.
 All edit options of the mesh are available and
 you have direct visual control over how your weights change when you edit the weight values.
 
-.. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-weight.png
+.. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_edit-mode.png
    :width: 260px
 
-   Change Weight value.
+   Weights in Edit Mode.
 
 
 Change a Weight
@@ -127,11 +117,13 @@ or you can change the weight by :kbd:`LMB` and while holding down the mouse butt
 drag right or left to increase/decrease the weight value. You also can use the right/left
 arrows displayed around the weight value to change the weight in steps.
 
-.. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-paste.png
+.. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-weight.png
    :width: 260px
 
-   Paste weights.
+   Change Weight value.
 
+
+.. _bpy.ops.object.vertex_weight_paste:
 
 Pasting
 -------
@@ -139,11 +131,13 @@ Pasting
 :kbd:`LMB` the Paste button allows you to forward a single weight of the active vertex to all selected vertices.
 But note that weights are only pasted to vertices which already have a weight value in the affected vertex group.
 
-.. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-delete.png
+.. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-paste.png
    :width: 260px
 
-   Delete weights.
+   Paste weights.
 
+
+.. _bpy.ops.object.vertex_weight_delete:
 
 Deleting
 --------
@@ -151,9 +145,14 @@ Deleting
 :kbd:`LMB` the Delete button will instantly remove the weight from the active vertex.
 Thus the entire row disappears when you click on the delete icon.
 
+.. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-delete.png
+   :width: 260px
 
-Tools
-=====
+   Delete weights.
+
+
+Operators
+=========
 
 .. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-functions.png
    :width: 260px
@@ -164,6 +163,9 @@ Normalize
    Normalizes the weights of the active vertex.
    That is all weights of the active vertex are recalculated
    such that their relative weight is maintained and the weight sum is 1.0.
+
+.. _bpy.ops.object.vertex_weight_copy:
+
 Copy
    Copies all weights defined for the active vertex to all selected vertices.
    Thus all previously defined weights are overwritten.
