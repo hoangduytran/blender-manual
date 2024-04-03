@@ -476,6 +476,7 @@ Environment Variables
                          (other ``BLENDER_USER_*`` variables override when set).
 :BLENDER_USER_CONFIG:     Directory for user configuration files.
 :BLENDER_USER_SCRIPTS:    Directory for user scripts.
+:BLENDER_USER_EXTENSIONS: Directory for user extensions.
 :BLENDER_USER_DATAFILES:  Directory for user data files (icons, translations, ..).
 
 :BLENDER_SYSTEM_RESOURCES:  Top level directory for system files.

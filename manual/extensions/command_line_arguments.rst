@@ -189,7 +189,7 @@ usage::
        blender --command extension repo-add [-h] [--name NAME]
                                             [--directory DIRECTORY]
                                             [--url URL] [--cache BOOLEAN]
-                                            [--no-prefs]
+                                            [--clear-all] [--no-prefs]
                                             ID
 
 Add a new local or remote repository.
@@ -208,6 +208,7 @@ options:
                         as it is not connected to an external repository,
                         where packages may be installed by file or managed manually.
   --cache BOOLEAN       Use package cache (default=1).
+  --clear-all           Clear all repositories before adding, simplifies test setup.
   --no-prefs            Treat the user-preferences as read-only,
                         preventing updates for operations that would otherwise modify them.
                         This means removing extensions or repositories for example, wont update the user-preferences.
