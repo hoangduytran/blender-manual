@@ -43,6 +43,7 @@ a new face set instead.
 
 Tool Settings
 =============
+
 Solver
    Algorithm used to calculate the Boolean intersections.
 
