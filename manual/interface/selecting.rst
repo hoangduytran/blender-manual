@@ -79,7 +79,7 @@ While dragging, you can additionally hold :kbd:`Spacebar` to move the rectangle 
        .. figure:: /images/interface_selecting_border-select2.png
           :width: 200px
 
-          Selecting.
+          Selecting vertices.
 
      - .. _fig-mesh-select-basics-complete:
 
@@ -130,7 +130,7 @@ of the :doc:`Properties editor </editors/properties_editor>`).
      - .. figure:: /images/interface_selecting_circle-select2.png
           :width: 320px
 
-          Selecting.
+          Selecting vertices.
 
      - .. figure:: /images/interface_selecting_circle-select3.png
           :width: 320px
@@ -171,7 +171,7 @@ While dragging, you can additionally hold :kbd:`Spacebar` to move the shape arou
      - .. figure:: /images/interface_selecting_lasso-select2.png
           :width: 200px
 
-          Selecting.
+          Selecting vertices.
 
      - .. figure:: /images/interface_selecting_lasso-select3.png
           :width: 200px
