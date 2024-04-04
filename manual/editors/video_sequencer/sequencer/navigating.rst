@@ -17,7 +17,7 @@ Header
 View Menu
 ---------
 
-As usual, the View menu controls the editor's view settings.
+The View menu controls the editor's view settings.
 
 Toolbar :kbd:`T`
    Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
@@ -70,9 +70,10 @@ Show Markers
 Show Seconds :kbd:`Ctrl-T`
    Shows seconds instead of frames on the time axis.
 Sync Visible Range
-   It synchronizes the horizontal panning and scale of the current editor
-   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
-   That way you always have these editors showing the same section of frames.
+   Synchronizes the horizontal panning and scale of the editor
+   with other time-based editors (Graph, Dope Sheet, NLA, and Sequencer)
+   that also have this option is set.
+   That way, they always show the same section of time.
 
 ----------
 
@@ -188,7 +189,7 @@ Use these shortcuts to adjust the view:
 Playhead
 --------
 
-The Playhead is the blue vertical line with the current frame number at the top. It can be moved
+The Playhead is the blue vertical line with the current time at the top. It can be moved
 in the following ways:
 
 * Jump or scrub: click or drag :kbd:`LMB` in the scrubbing area at the top of the timeline.
