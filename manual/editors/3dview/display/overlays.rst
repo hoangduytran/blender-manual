@@ -34,12 +34,12 @@ Grid
    Show grid in orthographic side view.
 Floor
    Show the ground plane in perspective view.
-Axis
+Axes
    Show the X, Y and/or Z axis lines.
 
 Scale
    The distance between lines in the grid/floor.
-Subdivision
+Subdivisions
    The number of subdivisions between grid lines.
 
 Text Info
