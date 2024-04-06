@@ -46,9 +46,8 @@ Type
          Proof of concept of visible and hidden edges by LightBWK
          (`blend-file <https://archive.blender.org/wiki/2015/index.php/File:HiddenCreaseEdgeMark.zip>`__).
 
-   :QI Range:
-      QI stands for *Quantitative Invisibility*. Lines occluded by
-      a number of surfaces in the given range are rendered.
+   :Quantitative Invisibility:
+      Lines occluded by a number of surfaces in the given range are rendered.
 
       .. _bpy.types.FreestyleLineSet.qi_start:
       .. _bpy.types.FreestyleLineSet.qi_end:
@@ -111,7 +110,7 @@ Type
 
    .. _bpy.types.FreestyleLineSet.select_edge_mark:
 
-   Edge Marks
+   Edge Mark
       Renders marked edges. See `Edge Marks`_ for details.
 
    .. _bpy.types.FreestyleLineSet.select_contour:
