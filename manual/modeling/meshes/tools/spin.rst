@@ -8,6 +8,7 @@ Spin
 .. reference::
 
    :Mode:      Edit Mode
+   :Menu:      :menuselection:`Mesh --> Extrude --> Spin`
    :Tool:      :menuselection:`Toolbar --> Spin`
 
 The *Spin* tool extrudes (or duplicates it if the selection is manifold) the selected elements,
