@@ -1,15 +1,17 @@
+.. |gizmo-icon| image:: /images/editors_3dview_display_gizmo_header.png
 .. _bpy.types.SpaceSequenceEditor.show_gizmo:
 
 ******
 Gizmos
 ******
 
-Which gizmos that are displayed in the preview region can be changed via the Gizmos popover.
-There is a toggle to hide all gizmos by clicking the toggle next to the popover.
+.. reference::
 
+   :Header:    |gizmo-icon| :menuselection:`Gizmos`
 
-Viewport Gizmos
-===============
+Clicking the icon toggles all gizmos in the Video Sequencer.
+The drop-down button displays a popover with more detailed settings,
+which are described below.
 
 .. _bpy.types.SpaceSequenceEditor.show_gizmo_navigate:
 

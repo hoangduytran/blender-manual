@@ -41,8 +41,7 @@ Preview as Backdrop
 .. _bpy.ops.sequencer.refresh_all:
 
 Refresh All :kbd:`Ctrl-E`
-   Reloads external files, re-renders the 3D Viewport, and refreshes the current frame preview.
-
+   Reloads external files and refreshes the current frame preview.
    This is useful when you modified an external file or made a change in a scene that Blender
    didn't detect.
 
@@ -158,8 +157,8 @@ Area
    documentation for more information.
 
 
-Markers Menu
-------------
+Marker Menu
+-----------
 
 :doc:`Markers </animation/markers>` are used to denote frames with key points or significant events
 within an animation. Like with most animation editors, markers are shown at the bottom of the editor.

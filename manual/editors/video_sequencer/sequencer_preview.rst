@@ -20,4 +20,5 @@ Reasons for this include:
 - You can't maximize the preview on another screen.
 
 One way of getting two separate editors is to simply open the default
-*Video Editing* workspace.
+*Video Editing* :doc:`workspace </interface/window_system/workspaces>`.
+(You may need to click the "+" icon to the right of the tabs to find it.)

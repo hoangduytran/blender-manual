@@ -5,7 +5,7 @@ Header
 
 .. figure:: /images/video-editing_preview_introduction_header.png
 
-   Sequencer Display header.
+   Header in Preview mode.
 
 
 .. _bpy.types.SpaceSequenceEditor.show:
@@ -23,32 +23,29 @@ Tool Settings
 ----------
 
 Preview During Transform
-   Show a preview of the start or end frame while transforming a strip's start/end handles.
+   When enabled, previews the strip's new first/last frame while dragging its left/right handle.
 
 ----------
 
 Refresh All
-   To force Blender to re-read in files, and to force a re-render of the 3D Viewport,
-   click the *Refresh Sequencer* button.
-   Blender will update and synchronize all cached images and compute the current frame.
-
-   Certain operations, like moving an object in the 3D Viewport, may not force the *Sequencer*
-   to call for a refresh of the rendered image (since the movement may not affect the rendered image).
-   If an image or video, used as a strip, is changed by some application outside of Blender,
-   Blender has no real way of being notified from your operating system.
+   Reloads external files and refreshes the current frame preview.
+   This is useful when you modified an external file or made a change in a scene that Blender
+   didn't detect.
 
 ----------
 
 Frame Selected
-   Zoom and position the bounding box of the selected image into the center of the preview.
+   Pan and zoom the view to focus on the selected image.
 Fit Preview in Window :kbd:`Home`
-   Resize the preview so that it fits in the area.
+   Pan and zoom the view so that the entire video is visible.
+   This enables *Zoom to Fit*.
 Zoom to Border :kbd:`Shift-B`
-   Click and drag to draw a rectangle and zoom to this rectangle.
+   Click and drag a rectangle to zoom to it.
 Fractional Zoom
    Resize the preview in steps from 1:8 to 8:1.
 Zoom to Fit
-   Automatically zoom preview image to make it fully fit the region.
+   As long as this option is enabled, the preview will automatically zoom to keep the
+   video size synchronized with the editor size.
 
 ----------
 
@@ -58,9 +55,18 @@ Proxy
 ----------
 
 Sequence Render Image
-   Render the image at the current frame.
+   Show the current frame preview as a Render Result where you can save it as an image file.
 Sequence Render Animation
-   Render timeline from Preview Start to Preview End Frame to a Video file or series of images.
+   Save previews of the frames in the scene range (or the preview range, if active) to a video file
+   or a series of image files. See the :doc:`/render/output/properties/output` panel for details.
+
+.. note::
+   *Sequence Render Image* and *Sequence Render Animation* don't render the final video by default --
+   specifically, they don't render Scene Strips, instead using the preview's
+   :doc:`shading mode </editors/3dview/display/shading>` (which is initially Solid).
+
+   To output a video where the Scene Strips are rendered, use the *Render* menu in the top-bar,
+   or change :menuselection:`Sidebar --> View --> Scene Strip Display --> Shading` to *Rendered*.
 
 ----------
 
@@ -74,13 +80,49 @@ Export Subtitles
 ----------
 
 Toggle Sequencer/Preview :kbd:`Ctrl-Tab`
-   Switch the editor display type between Sequencer and Preview.
+   Switch the editor mode between *Sequencer* and *Preview*.
 
 ----------
 
 Area
-   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   Area controls. See the :doc:`user interface </interface/window_system/areas>`
    documentation for more information.
+
+
+Select Menu
+===========
+
+See :doc:`/video_editing/edit/montage/selecting`.
+
+Strip Menu
+==========
+
+See :doc:`/video_editing/edit/montage/editing`.
+
+Image Menu
+==========
+
+Clear
+   Resets the position, rotation, or scale of the selected images.
+Apply
+   Scale to Fit
+      Resizes the selected images so that they're as large as possible while still
+      fitting completely inside the video. They don't get cropped, and their aspect ratio
+      stays the same.
+
+   Scale to Fill
+      Resizes the selected images to that they fill the entire video space.
+      They may get cropped, but their aspect ratio stays the same.
+
+   Stretch to Fill
+      Resizes the selected images to match the video dimensions.
+      They don't get cropped, but their aspect ratio may change.
+
+
+Pivot Point
+===========
+
+See :doc:`/editors/video_sequencer/preview/controls/pivot_point`.
 
 
 Display Mode
@@ -93,12 +135,17 @@ Display Channels
 ================
 
 Color & Alpha
-   Display preview image with transparency over checkerboard pattern.
+   Display the preview image with transparency over a checkerboard pattern.
 Color
-   Ignore transparency of preview image (fully transparent areas will be black).
+   Ignore the transparency of the preview image (fully transparent areas will be black).
 
+
+Gizmos
+======
+
+See :doc:`/editors/video_sequencer/preview/display/gizmos`.
 
 Overlays
 ========
 
-See :doc:`Preview Overlays </editors/video_sequencer/preview/display/overlays>`.
+See :doc:`/editors/video_sequencer/preview/display/overlays`.

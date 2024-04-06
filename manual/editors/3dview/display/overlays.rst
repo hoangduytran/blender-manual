@@ -14,9 +14,9 @@ Clicking the icon toggles all overlays in the 3D Viewport.
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 
-Next to the Viewport Overlays popover could be a second popover.
-The availability of these options depend on the mode the 3D Viewport is in or what type of object is selected.
-These settings are described later on in this page.
+Depending on the current :doc:`object interaction mode </editors/3dview/modes>`,
+there may be a second button with yet more settings,
+which are also described here.
 
 
 General

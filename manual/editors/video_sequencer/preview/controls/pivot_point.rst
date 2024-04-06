@@ -1,25 +1,29 @@
 .. _bpy.types.SequencerToolSettings.pivot_point:
+.. |pivot-icon| image:: /images/editors_3dview_controls_pivot-point_menu.png
 
 ***********
 Pivot Point
 ***********
 
-The Pivot Point is primarily used in operations such as rotate and scale.
-It defines the point around which the strip image will be rotated or scaled.
-Using pop up menu in the header of the Sequencer preview, you can change the location of the pivot point.
+.. reference::
 
-The *Pivot Point* is also extensively used in the 3D Viewport.
+   :Header:    |pivot-icon| :menuselection:`Pivot Point`
+   :Shortcut:  :kbd:`Period`
+
+The Pivot Point is the point around which images are rotated and scaled.
+It's indicated by the position of the selected tool's gizmo.
+
+.. seealso::
+   The :doc:`/editors/3dview/controls/pivot_point/index` of the 3D Viewport
 
 Bounding Box Center
-   The bounding box is a rectangular box that is wrapped as tightly as possible around the selection.
+   Use the center of the rectangle that's wrapped as tightly as possible around the selected
+   images' origin points.
 Median Point
-   The median point is the points that is closest to all the origins of the selected strips.
-   You can think of it as the midpoint of the area that is covered with the selected strips.
+   Use the averaged-out position of the selected images' origin points.
 2D Cursor
-   Sometimes you want to rotate a strip around a specific point in the preview.
-   Therefore, you can set the 2D Cursor and change the pivot point accordingly.
+   Use the location of the :ref:`2D Cursor <editors_sequencer_preview_2d-cursor>`,
+   for when you want to specify the pivot point by hand.
 Individual Origins
-   If multiple strips are selected, you may want to rotate or scale these strip around
-   there own origins instead of for example the median point of all selected strips.
-   For example, if you have three portrait strip's of faces,
-   you probably want each face to be rotated around its individual origin.
+   Rotate/scale each image around its own origin, rather than rotating/scaling
+   all of them around the same single point like the other options do.

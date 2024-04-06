@@ -3,19 +3,15 @@
 Sidebar
 *******
 
-The sidebar of the Preview can be toggled with the menu:
-:menuselection:`View --> Sidebar` or with the shortcut :kbd:`N`.
+The Sidebar can be toggled with the menu item :menuselection:`View --> Sidebar`
+or with the shortcut :kbd:`N`.
 
-:ref:`fig-editors_vse_preview_sidebar-overview` shows the sidebar of the Preview,
-but also the sidebar of the sequencer. In the Preview sidebar,
-the View tab is active and all panels are expanded.
-Safe Areas are enabled and an Annotation is added.
+The image below shows two Video Sequencers, one in Preview mode and one in Sequencer mode,
+both with their Sidebar open.
 
 .. _fig-editors_vse_preview_sidebar-overview:
 .. figure:: /images/editors_vse_preview_sidebar-overview.svg
    :alt: Sidebar overview
-
-   Video Sequence Editor with two sidebars: Preview and Sequencer.
 
 
 Tool
@@ -27,8 +23,18 @@ Tool
    :View Type: Preview
    :Panel:     :menuselection:`Sidebar --> Tool tab`
 
-Displays information about the active :doc:`tool </editors/video_sequencer/preview/toolbar>`.
+Settings for the active :doc:`tool </editors/video_sequencer/preview/toolbar>`.
 
+Drag
+   What to do when dragging :kbd:`LMB` on a place other than the tool's gizmo.
+
+   Active Tool
+      Perform the same action as when dragging the gizmo.
+   Tweak
+      Move the image under the mouse cursor.
+   Select Box
+      Drag a selection rectangle and select all the images that are partially
+      or completely inside it.
 
 View
 ====
@@ -45,19 +51,23 @@ View Settings
 .. _bpy.types.SpaceSequenceEditor.proxy_render_size:
 
 Proxy Render Size
-   Size to display proxies at in the preview region.
-   Using a smaller preview size will increase speed.
+   Controls the preview resolution. Lower values have worse detail but better performance.
 
-   :No Display: Disables the preview.
-   :Scene Size: Matches proxy size to the final render :ref:`resolution <bpy.types.RenderSettings.resolution_y>`.
-   :25%, 50%, 75%, 100%: Proxies are sized to be the selected percent of the original input.
+   :No Display: Disable the preview entirely.
+   :Scene Size: Preview at the full resolution without using proxies.
+   :25%, 50%, 75%, 100%: Preview at a downscaled resolution, optionally using proxies (see below).
+      Even selecting 100% can give a performance benefit due to the reduced image quality
+      and corresponding smaller file size.
 
 .. _bpy.types.SpaceSequenceEditor.use_proxies:
 
 Use Proxies
-   Use optimized files for faster scrubbing when available.
-   Proxies limit the visual accuracy of the preview by reducing
-   the preview resolution and using compressed copies of the input.
+   Enable the use of :doc:`proxies </editors/video_sequencer/sequencer/sidebar/proxy>`,
+   which are copies of original footage stored at a lower resolution and/or quality
+   for better preview performance.
+
+   Proxies can be configured in the *Proxy* tab of the Sidebar, which is however
+   only visible in the *Sequencer* and *Sequencer & Preview* modes.
 
 .. _bpy.types.SequenceEditor.use_prefetch:
 
@@ -69,18 +79,14 @@ Prefetch Frames
 .. _bpy.types.SpaceSequenceEditor.display_channel:
 
 Channel
-   Selects the channel to show in the preview.
-
-   Channel 0 is the compositing result of all strips.
-   Channel 1 is the current frame's image from the strip in channel 1 only
-   (channel 1 is at the bottom of the stack). The display of these modes is either the composite
-   (channel 0) or the frame from the strip (channels 1 through n).
+   Setting this to 0 shows all :doc:`channels </editors/video_sequencer/sequencer/channels>`.
+   Setting it to something higher will only show the channels up to and including that number.
 
 .. _bpy.types.SpaceSequenceEditor.show_overexposed:
 
 Show Overexposed
-   Shows overexposed (bright white) areas using a zebra pattern.
-   The threshold can be adjust with the slider.
+   Hilight overexposed (bright white) areas using a zebra pattern.
+   The threshold can be adjusted with the slider.
 
 
 .. _editors_sequencer_preview_2d-cursor:
@@ -94,20 +100,20 @@ Show Overexposed
    :View Type: Preview
    :Panel:     :menuselection:`Sidebar --> View tab --> 2D Cursor`
 
-The 2D cursor is the white-red circle with a cross-hair that is shown in the main region.
-It can be used by setting the :ref:`Pivot Point <bpy.types.SequencerToolSettings.pivot_point>`
-to *2D Cursor* to transform all strips in relation to the location of the 2D cursor.
-
-The visibility of the 2D cursor can be controlled with the
-:ref:`2D Cursor <bpy.types.SequencerPreviewOverlay.show_cursor>` overlay option.
+The 2D Cursor is the white-red circle with a crosshair that is shown in the preview region
+(provided that the :ref:`2D Cursor overlay <bpy.types.SequencerPreviewOverlay.show_cursor>`
+is enabled). It can be used as a :ref:`Pivot Point <bpy.types.SequencerToolSettings.pivot_point>`
+for rotating and scaling images.
 
 .. _bpy.types.SpaceSequenceEditor.cursor_location:
 
 Location X, Y
-   The location of the 2D cursor relative to the center of the main region.
-   The edge of the image will be 0.5 away, so (0.5, 0.5) will be the top right corner.
+   The location of the 2D Cursor relative to the center of the video.
+   The edges are 0.5 away, so (0.5, 0.5) is the top right corner.
 
-   The 2D cursor's location can also be set with Cursor tool or by :kbd:`Shift-RMB`.
+   The 2D Cursor's location can also be set with the
+   :doc:`Cursor tool </editors/video_sequencer/preview/toolbar>`
+   or by dragging with :kbd:`Shift-RMB`.
 
 
 .. _bpy.types.SequenceEditor.show_overlay:
@@ -121,39 +127,38 @@ Frame Overlay
    :View Type: Preview
    :Panel:     :menuselection:`Sidebar --> View tab --> Frame Overlay`
 
-Option to enable the overlay.
-It can be used for comparing the current frame to a reference frame.
+The Frame Overlay lets you display a reference frame for comparing to the current frame.
 
 .. _bpy.ops.sequencer.view_ghost_border:
 
 Set Overlay Region
-   Selects the rectangular bounds for the overlay region.
-   This area can be defined by pressing :kbd:`O` key over the preview.
+   Lets you drag a rectangle to define the bounds of the overlay.
+   Instead of clicking this button, you can also press :kbd:`O` while hovering over the preview.
 
 .. _bpy.types.SequenceEditor.overlay_frame:
 
 Frame Offset
-   The slider controls the offset of the reference frame relative to current frame.
+   The time offset between the reference frame and the current frame, in frames.
 
 .. _bpy.types.SpaceSequenceEditor.overlay_frame_type:
 
 Overlay Type
-   It describes the way the reference frame should be displayed.
+   How the reference frame should be displayed.
 
-   :Rectangle: Which means the rectangle area of reference frame will be displayed on top of current frame.
-   :Reference: Only the reference frame is displayed in the preview region.
-   :Current: Only the current frame is displayed in the preview region.
+   :Rectangle: Display part of the reference frame (defined by the *Overlay Region*) on top of the current frame.
+   :Reference: Display only the reference frame.
+   :Current: Display only the current frame.
 
    .. tip::
 
-      It is possible to have several Sequence Editors opened and they can use different overlay types.
-      So it is possible to have current and reference frames displayed in different editor spaces.
+      Each Video Sequencer editor can have its own *Overlay Type*.
+      This means you can open two of them for showing the current frame and the reference frame next to each other.
 
 .. _bpy.types.SequenceEditor.use_overlay_frame_lock:
 
 Overlay Lock
-   It's still possible to lock the reference frame to its current position.
-
+   Keep displaying the same reference frame, even when moving to a different time point.
+   This works by automatically adjusting the *Frame Offset*.
 
 Safe Areas
 ----------
@@ -164,8 +169,7 @@ Safe Areas
    :View Type: Preview
    :Panel:     :menuselection:`Sidebar --> View tab --> Safe Areas`
 
-Shows guides used to position elements to ensure that
-the most important parts of the video can be seen across all screens.
+Shows guides indicating the video area where content can be seen across all screens.
 
 .. seealso::
 
@@ -181,21 +185,21 @@ Scene Strip Display
    :View Type: Preview
    :Panel:     :menuselection:`Sidebar --> View tab --> Scene Strip Display`
 
-It allows you to control how the images of :doc:`Scene Strips </video_editing/edit/montage/strips/scene>`
+Controls how :doc:`Scene Strips </video_editing/edit/montage/strips/scene>`
 are displayed in the preview.
 
 .. _bpy.types.RenderSettings.sequencer_gl_preview:
 
 Shading
-   Method for rendering the viewport.
-   See the 3D Viewport's :ref:`view3d-viewport-shading` options.
+   The :ref:`shading mode <view3d-viewport-shading>` to use.
 
 .. _bpy.types.RenderSettings.use_sequencer_override_scene_strip:
 
 Override Scene Settings
-   Use the :doc:`Workbench render settings </render/workbench/index>` from the sequencer scene,
-   *not* the Workbench render settings from the source scene.
-   This option is only available, if *Solid* shading is activate.
+   Use the :doc:`Workbench render settings </render/workbench/index>` from the
+   current scene rather than the scenes referenced by the strips.
+   Only available for the *Wireframe* and *Solid* shading modes.
+   
 
 
 Annotations
@@ -207,7 +211,7 @@ Annotations
    :View Type: Preview
    :Panel:     :menuselection:`Sidebar --> View tab --> Annotations`
 
-Allows you to use :doc:`Annotations </interface/annotate_tool>` in the Sequencer.
+For managing the :doc:`Annotations </interface/annotate_tool>` in the Sequencer.
 
 
 .. _editors_vse_preview_sidebar-metadata:
@@ -221,27 +225,25 @@ Metadata
    :View Type: Preview
    :Panel:     :menuselection:`Sidebar --> Metadata tab`
 
-Lists information that has been encoded in the currently displayed movie or image strip;
-note that this is the strip under the playhead, *not* the active (selected) strip.
-Note, this metadata is readonly and cannot be edited in Blender.
-Metadata can include the filename, the date created, the camera model etc.
-The metadata from saved from a Blender render is also displayed in the appropriate fields (camera, time, etc...;
-see :doc:`Rendered Output </render/output/properties/metadata>` for a full list.
-Some other graphic program also store some metadata, however,
-only the text stored in the header field "Comments" can be read
+Lists information that has been encoded in the currently visible movie or image file
+(*not* the file referenced by the selected strip). This can include the filename,
+the creation date, the camera model etc. This also works for images produced by Blender;
+see :doc:`Render Output </render/output/properties/metadata>` for the metadata
+that can be included in this case.
 
-Some of this metadata can also be made visible in the Preview with the
-:ref:`Metadata <bpy.types.SequencerPreviewOverlay.show_metadata>` overlay.
+Other graphics programs may also store metadata,
+but only the text in the header field "Comments" can be read.
+
+Some of this metadata can also be made visible in the preview with the
+:ref:`Metadata overlay <bpy.types.SequencerPreviewOverlay.show_metadata>`.
 
 .. tip::
 
-   To edit a files metadata you can use an external program such as exiftool.
-   For example, the command to change the "Comments" field is::
+   The metadata can't be edited from Blender. Instead, you can use an external program such as exiftool.
+   For example, the command to change the "Comments" field is:
 
-      exiftool --comments="My new comment" name-of-file.png
+   ``exiftool --comments="My new comment" name-of-file.png``
 
 .. note::
 
-   The metadata will only be displayed for the image/ movie strip and not from strips processed by any effect strip.
-   For example, adding an effect strip (eg. Glow) will hide the metadata from view.
-   Of course, the metadata isn't removed from the file. Hiding the effect strip will display it again.
+   Metadata is only displayed for images/movies that don't have an effect applied.

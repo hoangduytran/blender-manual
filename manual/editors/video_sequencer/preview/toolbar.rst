@@ -4,130 +4,135 @@
 ###########
 
 Tweak :kbd:`W`
-   Perform a multiple actions; first of it can be select images and by consequence their associated strip.
-   Second it can move strips using the same principles as the :ref:`Move tool <tool-sequencer-preview-move>`.
-   Using the shortcut :kbd:`W`, will cycle between this tool and other sub-tools described below.
+   Lets you select images by clicking, and move them by dragging.
+   Press :kbd:`W` to cycle between this tool and *Select Box*.
 
-   :ref:`Select Box <tool-select-box>` :kbd:`B`
-      Selects images within a rectangular box drawn in the Preview area.
-
-      To use the tool, :kbd:`LMB` and drag within the preview area to draw a rectangle,
-      releasing the mouse confirms the selection.
-
-      You can also just :kbd:`LMB` to preform a normal single item selection.
+   :ref:`Select Box <tool-select-box>`
+      Lets you select one image by clicking, or multiple images by dragging a rectangle.
 
 Cursor
-   Changes the location of the :ref:`editors_sequencer_preview_2d-cursor`.
+   Lets you move the :ref:`editors_sequencer_preview_2d-cursor` by clicking or dragging with :kbd:`LMB`.
+   
+   While dragging, you can press :kbd:`X` or :kbd:`Y` to constrain movement to an axis.
 
-   To use the tool, :kbd:`LMB` within the preview area to move the cursor to that position.
-   You can also click and drag to interactively position the cursor.
+   If you need extra precision, you can hold :kbd:`Shift` to move the cursor more
+   slowly than the mouse, or type a number to move it by an exact amount.
 
-   The movement of the cursor can be constrained along the global/local X or Y axis by pressing :kbd:`X` or :kbd:`Y`,
-   pressing the hotkeys will cycle between global/local orientations and disabling constraints.
+   The header shows how far the cursor has traveled, including the distance along each axis.
+   
+   Instead of this tool, you can also drag the mouse while holding :kbd:`Shift-RMB`
+   (works with all tools) or adjust the 2D Cursor Location in :menuselection:`Sidebar --> View`.
 
-   Holding :kbd:`Shift` will move the cursor in smaller increments for more precision.
-   You may also type in an exact amount to move for absolute precision.
-
-   While the operation is running a message will display in the header indicating
-   the distance in pixels the cursor has moved in each of the cardinal directions.
-   The third number, between parenthesis, is the Euclidean distance the cursor has moved.
+   .. note::
+      By default, the 2D Cursor is only shown while dragging it. To make it permanently
+      visible, enable the *2D Cursor* :doc:`overlay </editors/video_sequencer/preview/display/overlays>`.
 
 .. _tool-sequencer-preview-move:
 
 Move :kbd:`G`
-   Changes the location of the selected image by adjusting the strip's
-   :ref:`Position <bpy.types.SequenceTransform.offset>` properties.
+   Lets you move the selected images by dragging with :kbd:`LMB`.
+   Alternatively, you can press :kbd:`G`, move the mouse, and finally click :kbd:`LMB` to confirm
+   (or :kbd:`RMB` to cancel).
 
-   To use the tool, :kbd:`LMB` on the image and drag it to the desired position.
-   If :ref:`Active Tools <bpy.types.SpaceSequenceEditor.show_gizmo_tool>`
-   is enabled, you can also move the image by dragging the gizmo.
+   If the :ref:`Active Tools <bpy.types.SpaceSequenceEditor.show_gizmo_tool>`
+   gizmo is enabled, you can drag one of the colored arrows to only move along that one axis.
+   You can also press :kbd:`X` or :kbd:`Y` while moving: press once to constrain to the
+   corresponding global axis, a second time to constrain to the local axis,
+   and a third time to remove the constraint again. Yet another way is to hold
+   :kbd:`MMB` and move the mouse horizontally or vertically.
 
-   The movement of the image can be constrained along the global/local X or Y axis by pressing :kbd:`X` or :kbd:`Y`,
-   pressing the hotkeys will cycle between global/local orientations and disabling constraints.
+   If you need more precision, you can do one of the following while moving:
 
-   Holding :kbd:`Shift` will move the image in smaller increments for more precision.
-   You may also type in an exact amount to move for absolute precision.
+   - Hold :kbd:`Shift` to move more slowly.
+   - Type a number to move by an exact amount.
+   - Use the arrow keys.
 
-   While the operation is running a message will display in the header indicating
-   the distance in pixels the image has moved in each of the cardinal directions.
-   The third number, between parenthesis, is the Euclidean distance the image has moved.
+   The header shows how far the image has moved, including the offset along each axis.
+   
+   Instead of using this tool, you can also adjust the :ref:`Position <bpy.types.SequenceTransform.offset>`
+   in the Sidebar's *Strip* tab (only available in the *Sequencer* and *Sequencer & Preview* modes).
 
 Rotate :kbd:`R`
-   Moves the selected image's in a circle about the :ref:`Pivot Point <bpy.types.SequencerToolSettings.pivot_point>`
-   by adjusting the strip's :ref:`Rotation <bpy.types.SequenceTransform.rotation>` property.
-   By default, the image will rotate around its median but this can be changed by changing the Pivot Point.
+   Lets you rotate the selected images by holding :kbd:`LMB` and moving the mouse in a circle.
+   Alternatively, you can press :kbd:`R`, move the mouse, and finally click :kbd:`LMB` to confirm
+   (or :kbd:`RMB` to cancel).
 
-   To use the tool, :kbd:`LMB` on the image and drag it (in a circle) to the desired position.
-   The further away the mouse cursor is from the Pivot point, the slower the rotation movement is.
-   You can also use the Arrow-keys to move the handle very precisely.
-   If :ref:`Active Tools <bpy.types.SpaceSequenceEditor.show_gizmo_tool>`
-   is enabled, you can also rotate the image by dragging the gizmo.
+   Images are rotated around the :ref:`Pivot Point <bpy.types.SequencerToolSettings.pivot_point>`,
+   so if it's off-center, the images will not just rotate but also move around it.
 
-   Holding :kbd:`Shift` will rotate the image in smaller increments for more precision.
-   You may also type in an exact amount to move for absolute precision.
+   If you need more precision, you can do one of the following while rotating:
 
-   While the operation is running a message will display in the header indicating
-   the amount of rotation in the scene's rotation unit.
+   - Hold :kbd:`Shift` to rotate more slowly.
+   - Hold :kbd:`Ctrl` to rotate in increments of 5 degrees.
+   - Type a number to rotate by an exact amount.
+   - Use the arrow keys.
+
+   The header shows how much the image has rotated.
+
+   Instead of using this tool, you can also adjust the :ref:`Rotation <bpy.types.SequenceTransform.rotation>`
+   in the Sidebar's *Strip* tab (only available in the *Sequencer* and *Sequencer & Preview* modes).
 
 Scale :kbd:`S`
-   Changes the size of the image by adjusting the strip's
-   :ref:`Scale <bpy.types.SequenceTransform.scale>` properties.
-   The scaling use the :ref:`Pivot Point <bpy.types.SequencerToolSettings.pivot_point>` as reference.
-   So, for example, if the Pivot Point is set to *2D Cursor*,
-   scaling down a strip will also move the strip in the direction of the 2D cursor.
+   Lets you resize the selected images by dragging with :kbd:`LMB`.
+   Alternatively, you can press :kbd:`S`, move the mouse, and finally click :kbd:`LMB` to confirm
+   (or :kbd:`RMB` to cancel).
 
-   To use the tool, :kbd:`LMB` on the image and drag it to the desired size.
-   The further away the mouse cursor is initially from the Pivot point, the more precise the scaling is.
-   You can also use the Arrow-keys to adjust the scale very precisely.
-   If :ref:`Active Tools <bpy.types.SpaceSequenceEditor.show_gizmo_tool>`
-   is enabled, you can also scale the image by dragging the gizmo.
+   If the :ref:`Active Tools <bpy.types.SpaceSequenceEditor.show_gizmo_tool>`
+   gizmo is enabled, you can drag one of the colored lines to only scale along that one axis.
+   You can also press :kbd:`X` or :kbd:`Y` while scaling: press once to constrain to the
+   corresponding global axis, a second time to constrain to the local axis,
+   and a third time to remove the constraint again. Yet another way is to hold
+   :kbd:`MMB` and move the mouse horizontally or vertically.
 
-   The scale of the image can be constrained along the global/local X or Y axis by pressing :kbd:`X` or :kbd:`Y`,
-   pressing the hotkeys will cycle between global/local orientations and disabling constraints.
+   Images are scaled around the :ref:`Pivot Point <bpy.types.SequencerToolSettings.pivot_point>`,
+   so if it's off-center and you scale down, the images will not just become smaller
+   but also move towards it.
 
-   Holding :kbd:`Shift` will scale the image in smaller increments for more precision.
-   You may also type in an exact amount to scale for absolute precision.
+   If you need more precision, you can do one of the following while scaling:
 
-   The amount of scaling is relative meaning a scale value of 0.4 will scale the image to 40% of its size.
+   - Hold :kbd:`Shift` to scale more slowly.
+   - Hold :kbd:`Ctrl` to scale in increments of 10%.
+   - Type a number to scale by an exact factor (e.g. ``.5`` to make it half the size).
+   - Use the arrow keys.
 
-   While the operation is running a message will display in the header indicating
-   the amount the image has been scaled in each of the cardinal directions.
+   The header shows the current scale factor.
+
+   Instead of using this tool, you can also adjust the :ref:`Scale <bpy.types.SequenceTransform.scale>`
+   in the Sidebar's *Strip* tab (only available in the *Sequencer* and *Sequencer & Preview* modes).
 
 Transform
-   Supports any combination of the moving, rotating, scaling at the same time.
-   In the figure below, the Transform tool is enabled and strip 3 selected.
+   Lets you move, rotate, and scale images all using one tool.
 
    .. figure:: /images/editors_vse_preview_toolbar_transform.png
 
       The Transform tool
 
-   With the four squares at the corners of the strip, you can scale the strip.
-   The circle on top is for rotating and the crosshair in the middle is for moving the strip.
+   It works as follows:
+
+   - Drag the cross in the center to move the image.
+   - Drag the dot on the protruding line to rotate.
+   - Drag one of the corners to scale equally along both axes.
+   - Drag one of the sides to scale along just one axis.
 
 Sample
-   Used to sample a pixel's color from the preview.
+   Lets you sample a pixel's color by holding :kbd:`LMB`. The editor will show the following information
+   about it on the bottom:
 
-   To use the Sample tool, :kbd:`LMB` anywhere in the preview.
-   Information about the pixel under the mouse cursor is shown in an overlay at the bottom of the editor.
-
-   In the order of appearance, the following information is shown:
-
-   - The X and Y coordinates of the clicked pixel. Remember that the left bottom corner is location (0, 0).
-   - The values for the red, green, and blue component as from the color picker.
-   - The alpha value of the pixel.
-   - The color-managed values of the red, green, and blue component (the color as you see in the preview).
-   - The hue, saturation, value, and luminance equivalent values of the color-managed values.
+   - The X and Y coordinates, in pixels relative to the top left corner.
+   - The red, green, blue, and alpha components of the pixel, as decimal values between 0 and 1.
+   - The red, green, and blue components of the pixel with :doc:`/render/color_management` applied.
+   - The hue, saturation, value, and luminance components of the pixel with Color Management applied.
 
    .. figure:: /images/editors_vse_preview_sample-tool.png
 
       Sample tool example.
 
 :ref:`Annotate <tool-annotate-freehand>`
-   Draw free-hand annotation.
+   Draw free-hand annotations.
 
    :ref:`Annotate Line <tool-annotate-line>`
-      Draw straight line annotation.
+      Draw a straight line annotation.
    :ref:`Annotate Polygon <tool-annotate-polygon>`
       Draw a polygon annotation.
    :ref:`Annotate Eraser <tool-annotate-eraser>`
-      Erase previous drawn annotations.
+      Erase previously drawn annotations.

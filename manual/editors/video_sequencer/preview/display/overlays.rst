@@ -1,35 +1,45 @@
 .. _bpy.types.SequencerPreviewOverlay:
+.. |overlays-icon| image:: /images/editors_3dview_display_overlays.png
 
 ********
 Overlays
 ********
 
-Overlays are information that is displayed on top of the preview region.
-There is a toggle to show or hide all overlays for the preview region.
+.. reference::
 
+   :Header:    |overlays-icon| :menuselection:`Overlays`
 
-.. rubric:: Preview Overlays
+Clicking the icon toggles all overlays in the Video Sequencer.
+The drop-down button displays a popover with more detailed settings,
+which are described below.
+
+Image Outline
+   Shows an outline around the selected images.
 
 .. _bpy.types.SequencerPreviewOverlay.show_cursor:
 
 2D Cursor
-   Shows the :ref:`editors_sequencer_preview_2d-cursor` in the image preview region.
+   Shows the :ref:`editors_sequencer_preview_2d-cursor`.
 
 Frame Overlay
-   Displays the :ref:`Frame Overlay <bpy.types.SequenceEditor.show_overlay>`,
-   to compare the current frame to a reference frame.
+   Shows the :ref:`Frame Overlay <bpy.types.SequenceEditor.show_overlay>`
+   for comparing the current frame to a reference frame.
 
 .. _bpy.types.SequencerPreviewOverlay.show_safe_areas:
 
 Safe Areas
-   Display an overlay on the preview, marking where the title safe regions are.
+   Shows guides indicating the video area where content can be seen across all screens.
+
+   .. seealso::
+
+      :ref:`Camera Safe Areas <bpy.types.DisplaySafeAreas>`.
 
 .. _bpy.types.SequencerPreviewOverlay.show_metadata:
 
 Metadata
-   Display :ref:`Image Metadata <editors_vse_preview_sidebar-metadata>` in the preview area.
+   Shows :ref:`file metadata <editors_vse_preview_sidebar-metadata>`.
 
 .. _bpy.types.SequencerPreviewOverlay.show_annotation:
 
 Annotations
-   Displays :doc:`Annotations </interface/annotate_tool>` in the preview region.
+   Shows :doc:`Annotations </interface/annotate_tool>`.
