@@ -187,7 +187,7 @@ html_static_path = ["../build_files/theme"]
 # every page bottom, using the given strftime() format.
 # The empty string is equivalent to '%b %d, %Y'
 # (or a locale-dependent equivalent).
-html_last_updated_fmt = '%m/%d/%Y'
+html_last_updated_fmt = '%Y-%m-%d'
 
 # Additional templates that should be rendered to HTML pages,
 # must be a dictionary that maps document names to template names.
