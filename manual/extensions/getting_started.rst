@@ -198,21 +198,28 @@ Example of what the JSON is expected to look like:
 
 .. code:: json
 
-   {"blender_kitsu": {
-     "name": "Blender Kitsu",
-     "tagline": "Pipeline management for projects collaboration",
-     "version": "0.1.5-alpha+f52258de",
-     "type": "add-on",
-     "archive_size": 856650,
-     "archive_hash": "sha256:3d2972a6f6482e3c502273434ca53eec0c5ab3dae628b55c101c95a4bc4e15b2",
-     "archive_url": "https://extensions.blender.org/add-ons/blender-kitsu/0.1.0/download/",
-     "blender_version_min": "4.2.0",
-     "maintainer": "Blender Studio",
-     "tags": ["Pipeline"],
-     "license": ["SPDX:GPL-3.0-or-later"],
-     "website": "http://extensions.blender.org/add-ons/blender-kitsu/",
-     "schema_version": "1.0.0"
-   }}
+   {
+     "version": "v1",
+     "blocklist": [],
+     "data": [
+      {
+         "id": "blender_kitsu",
+         "name": "Blender Kitsu",
+         "tagline": "Pipeline management for projects collaboration",
+         "version": "0.1.5-alpha+f52258de",
+         "type": "add-on",
+         "archive_size": 856650,
+         "archive_hash": "sha256:3d2972a6f6482e3c502273434ca53eec0c5ab3dae628b55c101c95a4bc4e15b2",
+         "archive_url": "https://extensions.blender.org/add-ons/blender-kitsu/0.1.0/download/",
+         "blender_version_min": "4.2.0",
+         "maintainer": "Blender Studio",
+         "tags": ["Pipeline"],
+         "license": ["SPDX:GPL-3.0-or-later"],
+         "website": "http://extensions.blender.org/add-ons/blender-kitsu/",
+         "schema_version": "1.0.0"
+      }
+      ]
+  }
 
 Just like for the manifest file, the optional fields (e.g., ``blender_version_max``) are either to have a value
 or should be omitted from the entries.
