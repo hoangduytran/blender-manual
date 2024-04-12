@@ -175,7 +175,7 @@ a[href^="#fig-"]::after {
 }
 
 /* Mark external links. */
-a.external {
+a.external:not(figure > a.external) {
 	filter: brightness(150%);
 }
 
