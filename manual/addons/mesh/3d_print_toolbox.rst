@@ -23,8 +23,8 @@ Installation
 Description
 ===========
 
-Blender can be used to created meshes for 3D printing.
-Meshes exported from Blender are usually imported into a piece of software
+Blender can be used to create meshes for 3D printing.
+Meshes exported from Blender are usually imported into a piece of software that
 takes the mesh and "slices" it into paths that the 3D printer can execute.
 An example of such `Slicer <https://en.wikipedia.org/wiki/Slicer_(3D_printing)>`__
 software is `Cura <https://github.com/Ultimaker/Cura>`__.
@@ -71,7 +71,7 @@ of meshes, it is always worth trying to provide as clean a mesh as possible.
 Solid
    Checks for Non-Manifold edges and Bad Contiguous edges.
 
-   Edges should connect to exactly 2 faces. In it connects to only one,
+   Edges should connect to exactly 2 faces. If it connects to only one,
    it means there's a hole in the mesh. More is also not allowed. These edges are considered Non-manifold.
    If one of the faces' normals is pointing in a different direction than its neighbors,
    its edges are marked as "Bad Contiguous".
@@ -106,7 +106,7 @@ Distorted
    In this example, a quad has been folded into a saddle-like shape.
    This triggers the `Distorted` check. It would be best to triangulate by hand here.
 
-   .. figure:: /images/3dprint_intersect.jpg
+   .. figure:: /images/3dprint_distorted.jpg
 
       This quad can triangulate in unexpected ways.
 
@@ -143,8 +143,38 @@ Make Manifold
   such as by fixing `bad normals`, filling holes, and removing empty edges and faces.
 
 
-Transform
-=========
+Edit
+====
+
+Hollow
+------
+
+This tool generates an offset surface from the target object using `OpenVDB <https://www.openvdb.org/>`__.
+It is useful for hollowing out a model for 3D printing, for instance, to save material and/or speedup print.
+It is also possible to create a thin-walled mold for the object, when using an outside offset surface.
+
+The target object must be a closed surface to allow for an inside offset surface, but not necessarily manifold.
+On the other hand, outside offset surfaces can be created even for open objects.
+
+Offset Direction
+   Where the offset surface is created relative to the object. An *Inside* surface is useful to hollow out the the
+   target, while an *Outside* surface can be used to create a thin-walled mold.
+
+Offset
+   Surface offset in relation to the original mesh.
+
+Voxel size
+   Lower values capture finer details but increase processing time and memory usage. Too large a value may lead to
+   the offset surface intersecting the original object.
+
+Hollow Duplicate
+   When unchecked, only the offset surface is generated. When checked, the tool generates a hollowed out copy
+   of the target.
+
+.. figure:: /images/3dprint_hollow_in_out.jpg
+
+   An inside (left) and an outside (right) hollowed out object, both cut in half to show the interior.
+
 
 Scale To
 --------
@@ -155,6 +185,14 @@ Volume
 Bounds
    Scales the model so that the biggest axis of the objects `bounds` (or `dimensions`) match the given value.
 
+Align XY
+--------
+
+Rotates the object so that the selected faces are parallel, in average, to the XY plane.
+
+Face Areas
+   Take into account the sizes of the selected faces, so that larger ones contribute proportionally more to
+   the orientation than the smaller ones.
 
 Export
 ======
