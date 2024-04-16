@@ -138,6 +138,12 @@ This will move the point of interest (and the view along with it).
 
 :kbd:`RMB` cancels the dolly operation.
 
+.. hint::
+
+   Dolly changes orthographic views to a perspective projection.
+
+   This is done because dolly doesn't work well with an orthographic projection because *moving* forwards/backwards
+   with an orthographic projection doesn't have the effect of zooming.
 
 .. NOTE(@campbellbarton): "Frame All" & "Frame Selected" could be documented elsewhere,
    however there doesn't seem to be an ideal location as only items in the View sub-menus have their own files.
