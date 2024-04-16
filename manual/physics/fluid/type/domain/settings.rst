@@ -55,6 +55,13 @@ Time Scale
    while higher values can be used to advance the simulation faster
    (good for generating fluids to be used in still renders).
 
+.. _bpy.types.FluidDomainSettings.use_adaptive_timesteps:
+
+Use Adaptive Time Steps
+   Lets the solver automatically decide when to perform multiple simulation steps per frame.
+   It takes into account the maximum and minimum number of time steps,
+   the current *Frame Rate*, and the *Time Scale*.
+
 .. _bpy.types.FluidDomainSettings.cfl_condition:
 
 CFL Number
@@ -62,7 +69,7 @@ CFL Number
    Fluid is only allowed to move up to this velocity in one time step. If this threshold is
    exceeded the solver will subdivide the simulation step.
 
-   In general, greater CFL (Courant–Friedrichs–Lewy) numbers will minimize the number of simulation steps
+   In general, greater CFL (`Courant–Friedrichs–Lewy <https://en.wikipedia.org/wiki/Courant%E2%80%93Friedrichs%E2%80%93Lewy_condition>`_) numbers will minimize the number of simulation steps
    and the computation time. Yet it will yield less physically accurate behavior for fast fluid flows.
    Smaller CFL numbers result in more simulation steps per frame, longer simulation times
    but more accurate behavior at high velocities (e.g. fast fluid flow colliding
@@ -72,13 +79,6 @@ CFL Number
 
    When lowering the *CFL* number it is recommended to increase the maximum number of time steps.
    Similarly, when increasing the *CFL* number the minimum number of time steps should be adjusted.
-
-.. _bpy.types.FluidDomainSettings.use_adaptive_timesteps:
-
-Use Adaptive Time Steps
-   Lets the solver automatically decide when to perform multiple simulation steps per frame.
-   It takes into account the maximum and minimum number of time steps,
-   the current *Frame Rate*, and the *Time Scale*.
 
 .. _bpy.types.FluidDomainSettings.timesteps_max:
 

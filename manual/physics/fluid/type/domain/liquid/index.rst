@@ -6,6 +6,6 @@
 .. toctree::
    :maxdepth: 2
 
-   mesh.rst
-   particles.rst
    diffusion.rst
+   particles.rst
+   mesh.rst
