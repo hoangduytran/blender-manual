@@ -15,6 +15,11 @@ from git import Repo
 
 def print_summary(repo, commits):
     for commit_hash in commits:
+
+        if commit_hash == "\n":
+            print("")
+            continue
+
         commit = repo.commit(commit_hash)
         commit_hash_short = commit_hash[:10]
         commit_url = "https://projects.blender.org/blender/blender/commit/" + commit_hash_short
