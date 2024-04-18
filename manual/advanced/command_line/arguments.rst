@@ -55,7 +55,7 @@ Render Options
    * ``animation_##_test.png`` becomes ``animation_01_test.png``
    * ``test-######.png`` becomes ``test-000001.png``
 
-   When the filename does not contain ``#``, The suffix ``####`` is added to the filename.
+   When the filename does not contain ``#``, the suffix ``####`` is added to the filename.
 
    The frame number will be added at the end of the filename, eg:
 
@@ -71,7 +71,7 @@ Render Options
 
 ``-t``, ``--threads`` ``<threads>``
    Use amount of ``<threads>`` for rendering and other operations
-   [1-1024], 0 for systems processor count.
+   [1-1024], 0 to use the systems processor count.
 
 .. _command-line-args-cycles-render-options:
 
@@ -411,16 +411,16 @@ Misc Options
    Print this help text and exit (Windows only).
 
 ``-r``, ``--register``
-   Register blend-file extension for current user, then exit (Windows only).
+   Register blend-file extension for current user, then exit (Windows & Linux only).
 
 ``--register-allusers``
-   Register blend-file extension for all users, then exit (Windows only).
+   Register blend-file extension for all users, then exit (Windows & Linux only).
 
 ``--unregister``
-   Unregister blend-file extension for current user, then exit (Windows only).
+   Unregister blend-file extension for current user, then exit (Windows & Linux only).
 
 ``--unregister-allusers``
-   Unregister blend-file extension for all users, then exit (Windows only).
+   Unregister blend-file extension for all users, then exit (Windows & Linux only).
 
 ``-v``, ``--version``
    Print Blender version and exit.
