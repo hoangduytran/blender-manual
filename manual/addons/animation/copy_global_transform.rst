@@ -23,11 +23,14 @@ Activation
 Interface
 =========
 
-Located in :menuselection:`3D Viewport --> N-panel --> Animation tab`.
-
-.. figure:: /images/addons_animation_copy-global-transform.png
+.. figure:: copy_global_transform-main.webp
    :align: right
 
+Located in :menuselection:`3D Viewport --> N-panel --> Animation tab`.
+
+The figure on the right shows the main functionality of the Copy Global
+Transform panel. The collapsed panels are described each in their own section
+below.
 
 Description
 ===========
@@ -59,7 +62,10 @@ Paste and Bake
 .. _copy-global-transform-mirror-options:
 
 Mirror Options
-==============
+++++++++++++++
+
+.. figure:: copy_global_transform-mirror_options.webp
+   :align: right
 
 The copied transform can be mirrored relative to an object or a :term:`Bone`.
 This requires choosing that object or bone first.
@@ -78,6 +84,61 @@ Object Only
 
 After pasting with 'Paste Mirrored', the mirror axes can be chosen in the
 :ref:`redo panel <bpy.ops.screen.redo_last>`.
+
+
+.. _copy-global-transform-fix-to-camera:
+
+Fix to Camera
++++++++++++++
+
+.. figure:: copy_global_transform-fix_to_camera.webp
+   :align: right
+
+Also known as "bake to camera", this operator will ensure selected objects/bones
+remain static (relative to the camera) on unkeyed frames.
+
+This is done by generating new keys. These keys will be of :ref:`type
+'Generated' <keyframe-type>` so that it remains clear which keys were manually
+created, and which were generated. This way the tool can be re-run to
+re-generate the keys.
+
+1. Ensure your animation is keyed using constant interpolation. If this is not
+   the case yet, bake your animation (at least the transform channels). This
+   tool does _not_ work with the :ref:`"Stepped" F-Curve modifier <bpy.types.FModifierStepped>`
+2. Choose which of the Location/Rotation/Scale channels you want to fix to the
+   camera. When unsure, make sure they are all checked.
+3. Press the "Fix to Camera" button.
+
+To undo the effect of the "Fix to Camera" operator, click on the trash bin
+button. That will remove all the generated keys in either the scene range or the
+frame range.
+
+The tool operates on the scene frame range, or on the preview range if that is
+active. Keys outside that range are ignored, both when fixing to the camera and
+when removing generated keys.
+
+.. warning::
+
+   This tool assumes that *all* keys with type 'Generated' are equal. It will
+   overwrite them (or remove them, depending on which button you press).
+
+
+Relative Copy-Paste
++++++++++++++++++++
+
+.. figure:: copy_global_transform-relative.webp
+   :align: right
+
+The "Relative" panel has copy/paste buttons that work relative to a chosen
+object. When copying, the world-space transform is determined, and then adjusted
+to become relative to the world-space transform of the chosen object. When
+pasting, this happens in reverse.
+
+If no object is chosen, the copy/paste will happen relative to the active scene
+camera. What is the active scene camera is determined for every action, so when
+you paste it can be different from when you copied. This can help to keep an
+object visually in the same place when switching cameras, or when switching
+between scenes.
 
 
 Limitations
