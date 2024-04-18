@@ -69,15 +69,27 @@ MetalRT
 Operating System Settings
 =========================
 
-Make this installation your default Blender.
+Make this installation your default Blender (MS-Windows & Linux only).
+
+Register
+   Make the currently in use Blender installation the default
+   for generating thumbnails and the default for opening blend-files.
+Unregister
+   Remove file association & thumbnailer.
+
+For All Users
+   Register Blender for all users, requires escalated privileges.
+
 
 .. note::
 
-   This panel of options is only available on Microsoft Windows.
+   Linux Registration
 
-Make Default
-   Make the currently in use Blender installation the default
-   for generating thumbnails and the default for opening blend-files.
+   Files are setup files under: ``/usr/local`` for all users, otherwise ``~/.local`` is used.
+
+   - A desktop file & icon is installed so the application is available in launchers.
+   - A file association for ``*.blend`` is setup.
+   - The thumbnailer is installed so blend-file thumbnails will be shown in file managers (**For All Users** only).
 
 
 .. _prefs-system-memory-and-limits:
