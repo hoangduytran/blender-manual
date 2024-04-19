@@ -4,55 +4,57 @@
 Clip Display
 ************
 
-This pop-over contains display settings related to editor itself.
+This pop-over contains various display settings for both Tracking mode and Mask mode.
 
 .. _bpy.types.SpaceClipEditor.show_red_channel:
 .. _bpy.types.SpaceClipEditor.show_green_channel:
 .. _bpy.types.SpaceClipEditor.show_blue_channel:
 
 R, G, B
-   Control the color channels used for frame preview.
-   It is needed because the tracking algorithm works with grayscale images and it is not
-   always obvious to see which channels disabled will increase contrast of feature points and reduce noise.
+   Controls the color channels used for the frame preview. The tracking algorithm works with grayscale images,
+   and with these options, you can check which combination of enabled and disabled channels will yield
+   the best contrast and the least noise.
+
+   Note that this only affects the preview. To select which channels to use for the actual tracking,
+   use the :doc:`Track tab in the Toolbar </movie_clip/tracking/clip/toolbar/track>` to set a default
+   for newly created markers, or the :doc:`Track tab in the Sidebar </movie_clip/tracking/clip/sidebar/track/track>`
+   to configure existing markers.
 
 .. _bpy.types.SpaceClipEditor.use_grayscale_preview:
 
 Grayscale Preview (B/W)
-   Shows the whole frame gray-scale.
+   Shows the whole frame as a grayscale image.
 
 .. _bpy.types.SpaceClipEditor.use_mute_footage:
 
 Mute (eye icon) :kbd:`M`
-   Shows black frames in the preview instead of the movie clip.
-   It helps to find tracks which are tracked inaccurately or which were not tracked at all.
+   Hides the movie clip and displays a black image instead.
+   This helps to find markers that are tracked inaccurately or not at all.
 
 .. _bpy.types.MovieClipUser.use_render_undistorted:
 
 Render Undistorted
-   Applies the *Lens Distortion* settings to the viewport image in order to display the footage undistorted.
-   It is only a preview option, which does not actually change the footage itself.
+   Applies the :ref:`Lens settings <bpy.types.MovieTrackingCamera.lens>` to the
+   video preview to undo lens distortion. Does not change the footage itself.
 
 .. _bpy.types.SpaceClipEditor.show_stable:
 
 Show Stable
-   This option makes the displayed frame be affected by the 2D stabilization settings
-   (available in reconstruction mode only).
-   It is only a preview option, which does not actually change the footage itself.
+   Applies the :doc:`2D stabilization </movie_clip/tracking/clip/sidebar/stabilization/introduction>`
+   settings to the video preview. Does not change the footage itself.
 
 .. _bpy.types.SpaceClipEditor.show_grid:
 
 Grid
-   Displays a grid which is originally orthographic,
-   but is affected by the distortion model (available in distortion mode only).
-   This grid can be used for manual calibration --
-   distorted lines of grids are equal to straight lines in the footage.
+   Displays a grid which is originally orthographic, but is distorted by the Lens settings.
+   This can be used for manual calibration: the distorted grid lines should match lines
+   in the footage that are meant to be straight.
 
 .. _bpy.types.SpaceClipEditor.use_manual_calibration:
 
 Calibration
-   Applies the distortion model for annotation strokes (available in distortion mode only).
-   This option also helps to perform manual calibration.
-   A more detailed description of this process will be added later.
+   Applies the Lens settings to annotation strokes.
+   Like the Grid, this option also helps to perform manual calibration.
 
 .. _bpy.types.MovieClip.display_aspect:
 
@@ -63,42 +65,39 @@ Display Aspect Ratio
 Marker Display
 ==============
 
-Defines how markers are displayed in the editor.
-Settings can be found in the :ref:`Clip Display <clip-editor-clip-display-label>` pop-over.
+Determines how markers are displayed in the editor.
 
 Pattern
-   Can be used to disable displaying of rectangles which correspond to pattern areas of tracks.
-   In some cases it helps
-   to make the clip view cleaner to check how good tracking is.
+   Whether to show the pattern areas of tracks. Can be used to reduce clutter and
+   check how good tracking is.
 
 Search :kbd:`Alt-S`
-   Can be used to disable displaying of rectangles which correspond to search areas of tracks.
-   In some cases it helps to make the clip view cleaner to check how good tracking is.
-   Only search areas for selected tracks will be displayed.
+   Whether to show the search areas of *selected* tracks. Can be used to reduce clutter and
+   check how good tracking is.
 
 Path
-   And *Length* control displaying of the paths of tracks. The ways tracks are moving can be visible looking
-   at only one frame. It helps to determine if a track jumps from its position or not.
+   Shows past (red) and future (blue) positions of tracks relative to the current frame,
+   visualizing how they move. This makes it easier to spot irregularities.
+   
+Length
+   Length (in frames) of the *Path*.
 
 Show Disabled :kbd:`Alt-D`
-   Makes it possible to hide all tracks which are disabled on the current frame.
-   This helps to make view more clear, to see if the tracking is accurate enough.
+   When unchecked, hides the tracks that are disabled on the current frame
+   (except for the active track, i.e. the one that was selected last).
+   This helps to make the view more clear and see if the tracking is accurate enough.
 
 Info
-   Displays information such as track name and status of the track
-   (if it is keyframed, disabled, tracked or estimated).
-   Names and status for selected tracks are displayed.
+   Displays the name and status of each selected track.
+   The status can be "keyframed," "tracked," "disabled" and so on.
 
 3D Markers
-   Shows the markers after solving the movie clip. Therefore the solved position of each track is
-   projected back to the movie clip and displayed as a small point.
-   The color of the point depends on the distance between the projected coordinate and
-   the original coordinate: if they are close enough, the point is green, otherwise it will be red.
-   This helps to find tracks which were not solved nicely and need to be tweaked.
+   Shows the result of :doc:`solving </movie_clip/tracking/clip/toolbar/solve>` the
+   markers' 3D locations based on their 2D movement. Each 3D location is projected
+   back to the movie clip and displayed as a small point, which is colored green if
+   it's close to the original 2D marker (meaning a good solve) or red if it's far away
+   (meaning it needs to be tweaked).
 
 Display Thin
-   The way in which markers are displayed compact (black outline and yellow foreground color)
-   makes tracks visible on all kind of footage (both dark and light).
-   But sometimes it can be annoying and this option will make the marker display more compactly --
-   the outline is replaced by dashed black lines rendered on top of the foreground,
-   so that marker areas are only 1px thick.
+   By default, marker areas are displayed as bright boxes with a black outline.
+   This option displays them using thin dashed lines instead.

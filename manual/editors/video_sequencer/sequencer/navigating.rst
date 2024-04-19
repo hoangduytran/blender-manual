@@ -153,7 +153,7 @@ Toggle Sequencer/Preview :kbd:`Ctrl-Tab`
 ----------
 
 Area
-   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   Area controls. See the :doc:`user interface </interface/window_system/areas>`
    documentation for more information.
 
 

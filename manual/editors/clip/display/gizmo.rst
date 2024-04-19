@@ -10,7 +10,7 @@ Viewport Gizmos
    :Mode:      All Modes
    :Header:    |gizmo-icon| :menuselection:`Gizmos`
 
-Clicking the icon toggles all gizmos in the 3D Viewport.
+Clicking the icon toggles all the gizmos in the Movie Clip Editor.
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 
@@ -21,5 +21,4 @@ Viewport Gizmos
 .. _bpy.types.SpaceClipEditor.show_gizmo_navigate:
 
 Navigate
-   Toggle the visibility of the gizmos in the upper right of the editor
-   that are used to pan and zoom the 2D viewport.
+   Toggle the visibility of the zooming and panning gizmos in the upper right corner.

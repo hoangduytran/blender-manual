@@ -14,32 +14,29 @@ Proxy/Timecode
 .. figure:: /images/editors_clip_sidebar_proxy-panel.png
    :align: right
 
-A proxy is a smaller image (faster to load) that stands in for the main image.
-When you rebuild proxies Blender computes small images (like thumbnails)
-for the big images and may take some time. After computing them, though,
-editing functions like scrubbing and scrolling is much faster but gives a low-res result.
-Make sure to disable proxies before final rendering.
-
-Once you have chosen the Proxy/Timecode options,
-you need to use :menuselection:`Clip --> Proxy --> Rebuild Proxy and Timecode Indices`
-to generate the proxy clip and it will be available after Blender makes it.
+High-resolution video files can impact Blender's performance, slowing down scrubbing and other operations.
+To counter this, you can generate one or more proxies, which are copies of the original footage
+stored at a lower resolution and/or quality. These proxies can then be used as a less resource-heavy
+standin while working on the scene.
 
 Build Original
-   Used to define which resolutions of proxy images should be built.
+   The proxy resolution(s) to generate based on the original, distorted footage.
 Build Undistorted
-   Builds images from undistorted original images for the sizes set above.
-   This helps provide faster playback of undistorted footage.
+   The proxy resolution(s) to generate based on the undistorted footage
+   (that is, with the :ref:`Lens settings <bpy.types.MovieTrackingCamera.lens>` applied
+   to undo the distortion in the recording).
 Quality
-   Defines the quality of the images used for proxies.
+   The image quality for the proxies.
 Proxy Custom Directory
-   By default, all generated proxy images are stored to
-   the ``<path of original footage>/BL_proxy/<clip name>`` folder,
-   but this location can be set to a custom directory using this option.
-Rebuild Proxy
-   Regenerates proxy images for all sizes set above and regenerate all timecodes which can be used later.
+   By default, proxies are stored to a ``BL_proxy`` subfolder next to the original file.
+   Use this option to specify a different location.
+Build Proxy/Timecode
+   Generates proxies based on the settings above, as well as timecode files.
+   Instead of using this button, you can also click
+   :menuselection:`Clip --> Proxy --> Rebuild Proxy and Timecode Indices`.
 Timecode
    When you are working with footage directly copied from a camera without preprocessing it,
-   there might be numerous artifacts, mostly due to seeking a given frame in the sequence.
+   there might be numerous artifacts, mostly due to seeking to a given frame in the sequence.
    This happens because such footage usually does not have correct frame rate values in the file header.
    This issue can still arise when the source clip has the same frame rate as the scene settings.
    In order for Blender to correctly calculate the frames and frame rate there are two possible solutions:
@@ -49,9 +46,9 @@ Timecode
 
    :None: Do not use any timecode.
    :Record Run: Use images in the order they are recorded.
-   :Free Run: Use global timestamp written by recording device.
+   :Free Run: Use the global timestamp written by the recording device.
    :Free Run (Rec Date):
-      Interpolate a global timestamp using the record date and time written by recording device.
+      Interpolate a global timestamp using the record date and time written by the recording device.
    :Record Run No Gaps:
       Similar to *Record Run*, but ignores the timecode given in the file header,
       changes in frame rate, or frame dropouts.
@@ -62,10 +59,9 @@ Timecode
       *Record Run No Gaps* will be the only chance of getting an acceptable result.
 
 Proxy Render Size
-   Defines which proxy image resolution is used for display.
-   If *Render Undistorted* is set, then images created from undistorted frames are used.
-   If there are no generated proxies, render size is set to "No proxy, full render",
-   and if render undistorted is enabled, undistortion will happen automatically on frame refresh.
+   Which proxy size to use for display. Depending on the
+   :ref:`Render Undistorted <bpy.types.MovieClipUser.use_render_undistorted>` setting,
+   Blender will use either the Original proxy or the Undistorted proxy.
 
 
 Footage Settings
@@ -74,20 +70,42 @@ Footage Settings
 See :doc:`/editors/image/image_settings`.
 
 
+Track
+=====
+
+See :doc:`/movie_clip/tracking/clip/sidebar/track/index`.
+
+
+Stabilization
+=============
+
+See :doc:`/movie_clip/tracking/clip/sidebar/stabilization/index`.
+
+
 View
 ====
+
+.. _bpy.types.SpaceClipEditor.cursor:
 
 2D Cursor
 ---------
 
-The 2D cursor is the dashed gray cross-hair that is shown in the main region.
-It can be used by setting the pivot point to *2D Cursor* to transform all points
-in relation to the location of the 2D cursor.
+The 2D Cursor is the dashed crosshair in the main region. It can be used as a
+transformation :doc:`pivot point </editors/3dview/controls/pivot_point/index>`
+by selecting the corresponding option in the editor's header.
+
+Note that the 2D Cursor is only available in Mask mode, not in Tracking mode.
 
 .. _bpy.types.SpaceClipEditor.cursor_location:
 
 Location X, Y
-   The location of the 2D cursor is relative to the bottom left of the main region.
-   The edge of the image will be 0.5 away, so (0.5, 0.5) will be the top right corner.
+   The relative location of the 2D Cursor, going from (0, 0) for the bottom left
+   corner to (1, 1) for the top right corner.
 
-   The 2D cursor's location can also be set with :kbd:`Shift-RMB`.
+   You can also position the 2D Cursor by clicking :kbd:`Shift-RMB`
+   in (or around) the video.
+
+Annotations
+-----------
+
+See :doc:`/interface/annotate_tool`.

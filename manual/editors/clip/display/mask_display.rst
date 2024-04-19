@@ -3,34 +3,34 @@
 Mask Display
 ************
 
-This popover controls mask display options.
+This popover controls how masks are displayed in Mask mode.
 
 .. _bpy.types.SpaceClipEditor.show_mask_spline:
 
 Spline
-   Toggles the display of the mask splines.
-   This option is useful while combined with the *Overlay* option below to see a simplified view of the mask.
-   Note the splines must be enabled to select and edit the spline points.
+   Toggles the display of the mask splines. Note that if they're hidden,
+   you won't be able to edit them.
 
    .. _bpy.types.SpaceClipEditor.mask_display_type:
 
    Edge Display Type
-      Style of the edge.
+      Line style of the splines.
 
 .. _bpy.types.SpaceClipEditor.show_mask_overlay:
 
 Overlay
-   Added mask overlay to both Image and Clip editors.
+   Visualizes masks by shading the whole clip.
 
    .. _bpy.types.SpaceClipEditor.mask_overlay_mode:
 
    Overlay Mode
       :Alpha Channel:
-         Which displays the rasterized mask as a grayscale image.
+         Displays just the masks as a grayscale image. Excluded areas are black,
+         while included areas are white.
       :Combined:
-         Displays both the clip along with the mask overlaid on top.
+         Displays the clip with excluded areas darkened.
 
 .. _bpy.types.SpaceClipEditor.blend_factor:
 
 Blending Factor
-   How much the clip is mixed with the grayscale mask representation when using "Combined" *Overlay Mode*.
+   How much excluded areas are darkened when using the "Combined" *Overlay Mode*.

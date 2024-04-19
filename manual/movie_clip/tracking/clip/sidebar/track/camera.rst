@@ -1,4 +1,4 @@
-::.. _bpy.types.MovieTrackingCamera:
+.. _bpy.types.MovieTrackingCamera:
 
 ******
 Camera
@@ -22,6 +22,7 @@ Pixel Aspect
    but can also be guessed. For example, you know that the footage should be 1920×1080,
    but the images themselves are 1280×1080. In this case, the pixel aspect is: 1920 / 1280 = 1.5.
 
+.. _bpy.types.MovieTrackingCamera.lens:
 
 Lens
 ====
