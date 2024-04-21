@@ -12,8 +12,8 @@ see :ref:`UV Editing <bpy.ops.uv.snap_selected>`.
 
 .. _bpy.types.ToolSettings.snap_uv_element:
 
-Snap To
-=======
+Snap Target
+===========
 
 .. reference::
 
@@ -23,15 +23,12 @@ Snap To
 Increment
    Snaps to grid points.
 
-   .. note::
+   This option snaps to an imaginary grid that starts at the selection's original location and has the same
+   resolution as the grid displayed in the editor. In other words, it lets you move the selection in
+   "increments" of the grid cell size.
 
-      By default, this option won't snap to the grid that's displayed in the editor,
-      but an imaginary grid with the same resolution that starts at the selection's
-      original location. In other words, it lets you move the selection in "increments" of the
-      grid cell size.
-
-      If you want to snap to the viewport grid instead, you can enable *Absolute Grid Snap*
-      (see below).
+Grid
+   Snaps to grid points.
 
 Vertex
    Snaps to the vertex that's closest to the mouse cursor.
@@ -40,12 +37,7 @@ Vertex
 Additional Options
 ==================
 
-.. _bpy.types.ToolSettings.use_snap_uv_grid_absolute:
-
-Absolute Grid Snap :guilabel:`Increment`
-   Snaps to the grid, instead of snapping in increments relative to the current location.
-
-Target :guilabel:`Vertex`
+Snap Base :guilabel:`Vertex`
    See :ref:`3D Viewport Snapping <bpy.types.ToolSettings.snap_target>` for more information.
 
 
@@ -55,3 +47,11 @@ Affect
 Specifies which transformations are affected by snapping.
 By default, snapping only happens while moving something,
 but you can also enable it for rotating and scaling.
+
+
+Rotation Increment
+==================
+
+Angle used in incremental snapping for the rotation operator.
+The second value is the `Rotation Precision Increment`, used for finer transformations
+and activated by default with the :kbd:`Shift` key.

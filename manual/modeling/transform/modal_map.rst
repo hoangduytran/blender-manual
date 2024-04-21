@@ -41,10 +41,19 @@ The default hotkey in this case is :kbd:`Ctrl`.
 Set Snap Base
 -------------
 
-Snap Base is taken automatically depending on the :ref:`Snap With <bpy.types.ToolSettings.snap_target>` options.
-However, this automatic snap detection point of origin is not always what the user desires.
-Therefore, transform operations have a utility to set a new snap origin point during the transformation.
+The Snap Base is automatically determined based on the :ref:`Snap Base <bpy.types.ToolSettings.snap_target>` options.
+However, this automatic snap detection point of origin may not always align with the user's intentions.
+Therefore, transform operations include a utility to set a new snap origin point during the transformation.
+The new Snap Base will correspond to the snap point whose target is defined by the
+:ref:`Snap Target <bpy.types.ToolSettings.snap_elements_base>`.
+
 By default the hotkey is :kbd:`B`.
+
+
+.. note::
+
+   If only Snap to Increment is enabled as :ref:`Snap Target <bpy.types.ToolSettings.snap_elements_base>`,
+   the targets `Vertex`, `Edge`, `Face` and `Edge Center` will be used instead.
 
 
 Add Snap Point

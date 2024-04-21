@@ -33,17 +33,16 @@ or more temporarily by holding :kbd:`Ctrl`.
 
 .. _bpy.types.ToolSettings.snap_target:
 
-Snap With
+Snap Base
 =========
 
 .. reference::
 
    :Mode:      Object, Edit, and Pose Mode
-   :Header:    :menuselection:`Snapping --> Snap with`
+   :Header:    :menuselection:`Snapping --> Snap Base`
    :Shortcut:  :kbd:`Shift-Ctrl-Tab`
 
-Determines what part of the selection will coincide with the target.
-(The rest of the selection will follow along.)
+Determines which point in the geometry is the snap base that will snap to the target.
 
 Active
    Snaps using the origin (in Object Mode) or center (in Edit Mode) of the active element.
@@ -75,13 +74,13 @@ Closest
 
 .. _bpy.types.ToolSettings.snap_elements_base:
 
-Snap To
-=======
+Snap Target
+===========
 
 .. reference::
 
    :Mode:      Object, Edit, and Pose Mode
-   :Header:    :menuselection:`Snapping --> Snap To`
+   :Header:    :menuselection:`Snapping --> Snap Target`
    :Shortcut:  :kbd:`Shift-Ctrl-Tab`
 
 Determines the target which the selection will be snapped to.
@@ -89,15 +88,11 @@ Determines the target which the selection will be snapped to.
 Increment
    Snaps to grid points. When in Orthographic view, the snapping increment changes depending on the zoom level.
 
-   .. note::
-
-      By default, this option won't snap to the grid that's displayed in the viewport,
-      but an imaginary grid with the same resolution that starts at the selection's
-      original location. In other words, it lets you move the selection in "increments" of the
-      grid cell size.
-
-      If you want to snap to the viewport grid instead, you can enable *Absolute Grid Snap*
-      (see below).
+   This option snaps to an imaginary grid that starts at the selection's original location and has the same
+   resolution as the viewport grid. In other words, it lets you move the selection in "increments" of the
+   grid cell size.
+Grid
+   Snaps to the grid that's displayed in the viewport.
 Vertex
    Snaps to the vertex that's closest to the mouse cursor.
 Edge
@@ -123,13 +118,13 @@ Edge Perpendicular
 
 .. _bpy.types.ToolSettings.snap_elements_individual:
 
-Snap Individual Elements To
-===========================
+Snap Target for Individual Elements
+===================================
 
 .. reference::
 
    :Mode:      Object, Edit, and Pose Mode
-   :Header:    :menuselection:`Snapping --> Snap Individual Elements To`
+   :Header:    :menuselection:`Snapping --> Snap Target for Individual Elements`
    :Shortcut:  :kbd:`Shift-Ctrl-Tab`
 
 Type of element for individual transformed elements to snap to.
@@ -153,7 +148,7 @@ Target Selection
 ================
 
 Sets more detailed snapping options. The available options depend on the mode
-(Object/Edit) as well as the Snap To selection.
+(Object/Edit) as well as the :ref:`Snap Target <bpy.types.ToolSettings.snap_elements_base>`.
 
 .. _bpy.types.ToolSettings.use_snap_self:
 
@@ -178,11 +173,6 @@ Include Non-Edited :guilabel:`Edit Mode`
 
 Exclude Non-Selectable
    Snap only to objects that are selectable.
-
-.. _bpy.types.ToolSettings.use_snap_grid_absolute:
-
-Absolute Grid Snap :guilabel:`Increment`
-   Snaps to the grid, instead of snapping in increments relative to the current location.
 
 .. _bpy.types.ToolSettings.use_snap_align_rotation:
 
@@ -225,3 +215,10 @@ Affect
 Specifies which transformations are affected by snapping.
 By default, snapping only happens while moving something,
 but you can also enable it for rotating and scaling.
+
+Rotation Increment
+==================
+
+Angle used in incremental snapping for the rotation operator.
+The second value is the `Rotation Precision Increment`, used for finer transformations
+and activated by default with the :kbd:`Shift` key.
