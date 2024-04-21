@@ -11,6 +11,8 @@ Curve to Mesh Node
 
 The Curve to Mesh node converts all splines of a curve to a mesh.
 Optionally, a profile curve can be provided to give the curve a custom shape.
+This profile curve is scaled by the radius at each control point;
+see the :doc:`/modeling/geometry_nodes/curve/write/set_curve_radius`.
 
 The node transfers attributes to the result. Attributes that are built-in on meshes but not curves,
 like ``sharp_face``, will be transferred to the correct domain as well.
