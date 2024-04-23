@@ -192,6 +192,15 @@ Pan
 Mono
    Mixdown all audio channels into a single channel.
 
+.. _bpy.types.SoundSequence.show_waveform:
+
+Display Waveform
+   Display an approximate waveform of the sound file inside of the Sound strip.
+   The waveform reflects strip volume and its animation using :doc:`keyframes </animation/keyframes/introduction>`.
+
+   Clipping audio, i.e. values over 100% amplitude, will be shown in red.
+
+   This option is only visible if the :ref:`Waveforms overlay <bpy.types.SequencerTimelineOverlay>` is set to *Strip*.
 
 .. _sequencer-strips-properties-time:
 
