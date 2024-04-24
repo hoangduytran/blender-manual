@@ -129,43 +129,43 @@ Controls which sides of the domain will allow fluid "pass through" the domain, m
 without influencing the rest of the simulation, and which sides will deflect fluids.
 
 
-Smoke
-=====
+Gas
+===
 
 .. reference::
 
-   :Panel:     :menuselection:`Physics --> Fluid --> Settings --> Smoke`
+   :Panel:     :menuselection:`Physics --> Fluid --> Gas`
    :Type:      Domain (Gas)
 
 .. _bpy.types.FluidDomainSettings.alpha:
 
 Buoyancy Density
-   Buoyant force based on smoke density.
+   Buoyant force based on gas density.
 
-   - Values above 0 will cause the smoke to rise (simulating smoke which is lighter than ambient air).
-   - Values below 0 will cause smoke to sink (simulating smoke which is heavier than ambient air).
+   - Values above 0 will cause the gas to rise (simulating gas which is lighter than ambient air).
+   - Values below 0 will cause gas to sink (simulating gas which is heavier than ambient air).
 
 .. _bpy.types.FluidDomainSettings.beta:
 
 Buoyancy Heat
-   Controls how much smoke is affected by temperature.
-   The effect this setting has on smoke depends on the per flow object
+   Controls how much gas is affected by temperature.
+   The effect this setting has on gas depends on the per flow object
    :ref:`Initial Temperature <bpy.types.FluidFlowSettings.temperature>`:
 
-   - Values above 0 will result in the smoke rising when the flow object *Initial Temperature* is
-     set to a positive value, and smoke sinking when the flow object *Initial Temperature* is
+   - Values above 0 will result in the gas rising when the flow object *Initial Temperature* is
+     set to a positive value, and gas sinking when the flow object *Initial Temperature* is
      set to a negative value.
    - Values below 0 will result in the opposite of positive values,
-     i.e. smoke emitted from flow objects with a positive *Initial Temperature* will sink,
-     and smoke from flow objects with a negative *Initial Temperature* will rise.
+     i.e. gas emitted from flow objects with a positive *Initial Temperature* will sink,
+     and gas from flow objects with a negative *Initial Temperature* will rise.
 
-   Note that smoke from multiple flow objects with different temperatures will mix and warm up or
+   Note that gas from multiple flow objects with different temperatures will mix and warm up or
    cool down until an equilibrium is reached.
 
 .. _bpy.types.FluidDomainSettings.vorticity:
 
 Vorticity
-   Controls the amount of turbulence in the smoke. Higher values will make lots of small swirls,
+   Controls the amount of turbulence in the gas. Higher values will make lots of small swirls,
    while lower values make smoother shapes.
 
    .. list-table:: Comparison of different amounts of vorticity.
@@ -184,17 +184,17 @@ Vorticity
 Dissolve
 --------
 
-Allow smoke to dissipate over time.
+Allow gas to dissipate over time.
 
 .. _bpy.types.FluidDomainSettings.dissolve_speed:
 
 Time
-   Speed of smoke's dissipation in frames.
+   Speed of gas dissipation in frames.
 
 .. _bpy.types.FluidDomainSettings.use_dissolve_smoke_log:
 
 Slow
-   Dissolve smoke in a logarithmic fashion. Dissolves quickly at first, but lingers longer.
+   Dissolve gas in a logarithmic fashion. Dissolves quickly at first, but lingers longer.
 
 
 Fire
@@ -203,7 +203,7 @@ Fire
 .. reference::
 
    :Type:      Domain
-   :Panel:     :menuselection:`Physics --> Fluid --> Settings --> Fire`
+   :Panel:     :menuselection:`Physics --> Fluid --> Gas --> Fire`
 
 .. _bpy.types.FluidDomainSettings.burning_rate:
 
@@ -247,7 +247,7 @@ Liquid
 .. reference::
 
    :Type:      Domain
-   :Panel:     :menuselection:`Physics --> Fluid --> Settings --> Liquid`
+   :Panel:     :menuselection:`Physics --> Fluid --> Liquid`
 
 Liquid settings control the behavior of the particles which the simulation consists of.
 Enabling the liquid checkbox will automatically create a particle system for the simulation.
