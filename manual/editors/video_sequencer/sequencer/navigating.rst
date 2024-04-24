@@ -70,7 +70,7 @@ Show Seconds :kbd:`Ctrl-T`
    Shows seconds instead of frames on the time axis.
 Sync Visible Range
    Synchronizes the horizontal panning and scale of the editor
-   with other time-based editors that also have this option is set.
+   with other time-based editors that also have this option set.
    That way, they always show the same section of time.
 
 ----------

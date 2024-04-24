@@ -16,81 +16,76 @@
 Timeline
 ********
 
-The *Timeline* editor, identified by a clock icon,
-is used for manipulating keyframes and scrubbing the Playhead.
+The *Timeline* editor is used to jump to different frames, manipulate keyframes,
+and control animation playback.
 
 .. figure:: /images/editors_timeline_interface.png
 
    The Timeline.
 
-The *Timeline* gives the user a broad overview of a scene's animation,
-by showing the current frame, the keyframes of the active object,
-the start and end frames of your animation sequence, as well as markers set by the user.
-
-The *Timeline* includes *Transport Controls*, to play, pause, and skip through an animation sequence.
-
-It also includes tools for manipulating *Keyframes*, *Keying Sets*, and *Markers*.
-
 
 Main View
 =========
 
-The main *Timeline* region displays the animation frames over time.
-
-.. figure:: /images/editors_timeline_main.png
-
-Here you can see the *Keyframes* (diamond shapes), *Playhead* (blue handle), *Scrollbar* (along the bottom).
+The X axis represents time, with the numbers 0/50/100/... being frame numbers.
+The blue line is the *Playhead* indicating the current frame,
+and the diamond shapes are *Keyframes*, points where you specified
+a certain value for a certain property at a certain time.
 
 
 Adjusting the View
 ------------------
 
-The *Timeline* can be panned by holding :kbd:`MMB`,
-then dragging the area left or right.
+Panning is done by dragging :kbd:`MMB`.
 
-You can zoom the *Timeline* by using :kbd:`Ctrl-MMB`, the mouse :kbd:`Wheel`,
-or pressing :kbd:`NumpadMinus` and :kbd:`NumpadPlus`.
+Zooming is done by dragging :kbd:`Ctrl-MMB`, rolling the mouse :kbd:`Wheel`,
+or pressing :kbd:`NumpadMinus`/:kbd:`NumpadPlus`.
 
-You can also use the scrollbars, located at the bottom or the right of the editor, to pan and zoom the view.
+You can also use the scrollbars located at the bottom and the right of the editor.
 
 
 Playhead
 --------
-
-The *Playhead* is the blue vertical line with the current frame number at the top.
 
 .. figure:: /images/editors_timeline_cursor.png
    :align: right
 
    Playhead.
 
-The *Playhead* can be set or moved to a new position by pressing or
-holding :kbd:`LMB` in scrubbing area at the top of the timeline.
+The *Playhead* is the blue vertical line showing the current frame number.
 
-The *Playhead* can be moved in single-frame increments by pressing :kbd:`Left` or :kbd:`Right`,
-or you can jump to the beginning or end frame by pressing :kbd:`Shift-Left` or :kbd:`Shift-Right`.
+It can be moved to a new position by clicking or
+dragging :kbd:`LMB` in the scrubbing area at the top.
+
+You can also move it in single-frame increments by pressing :kbd:`Left` or :kbd:`Right`,
+or jump to the beginning or end frame by pressing :kbd:`Shift-Left` or :kbd:`Shift-Right`.
 
 
 Frame Range
 -----------
 
-By default, the *Frame Range* is set to start at frame 1 and end at frame 250.
-You can change the frame range in the top right of the Timeline header, or in the Output Properties.
+The *Frame Range* determines the length of the scene's animation.
+By default, it's set to start at frame 1 and end at frame 250.
+You can change this using the Start/End inputs in the Timeline header,
+or in the :doc:`Output Properties </render/output/properties/frame_range>`.
 
 
 Keyframes
 ---------
 
-For the active and selected objects, keyframes are displayed as diamond shapes.
+By default, the timeline only shows keyframes for selected items.
+You can make it show all keyframes by unchecking
+:menuselection:`View --> Only Show Selected`.
 
-You can click to select one at a time, or select several by holding :kbd:`Shift`,
-or by dragging a box around the keyframes.
-You can then move single keys by dragging them,
-and you can move multiple keys by pressing :kbd:`G` and scale them with :kbd:`S`.
+You can click a keyframe to select it (and deselect all others),
+or click it while holding :kbd:`Shift` to add it to the selection
+(or remove it if it was already selected). You can also drag a box
+to select multiple keyframes in one go.
 
-*Only Selected Channels* can be enabled. :menuselection:`Timeline --> View --> Only Selected Channels`.
-For *Armatures*, this will display the object keyframes,
-and the keyframes for the active and selected pose bones.
+To move the selected keyframes, simply drag one of them. Alternatively,
+you can press :kbd:`G`, move the mouse, and click :kbd:`LMB` to confirm
+(or :kbd:`RMB` to cancel). You can also press :kbd:`S` to scale the keyframes
+in relation to the Playhead.
 
 
 Markers
@@ -102,6 +97,12 @@ See the :doc:`Markers page </animation/markers>` for more information.
 Header
 ======
 
+.. _animation-editors-timeline-headercontrols:
+
+.. figure:: /images/editors_timeline_header.png
+
+   Popovers for Playback and Keying; transport controls; and frame controls
+
 Popovers
 --------
 
@@ -112,8 +113,6 @@ Playback Popover
 
 .. figure:: /images/editors_timeline_playback.png
 
-The *Playback* popover contains options controlling the animation playback.
-
 .. _bpy.types.Scene.sync_mode:
 
 Sync
@@ -123,12 +122,12 @@ Sync
 
       3D Viewport red FPS.
 
-   When you play an animation, the frame rate is displayed at the top left of the 3D Viewport.
-   If the scene is detailed and playback is slower than the set :ref:`Frame Rate <bpy.types.RenderSettings.fps>`,
-   these options are used to synchronize the playback.
+   If animation playback can't keep up with the desired :ref:`Frame Rate <bpy.types.RenderSettings.fps>`,
+   the actual frame rate (shown in the top left corner of the 3D Viewport) will turn red,
+   and the *Sync* option determines how the situation should be handled.
 
    Play Every Frame
-      Plays every frame even if playback is slow.
+      Play every frame, even if this results in the animation playing slower than intended.
    Frame Dropping
       Drop frames if playback becomes slower than the scene's frame rate.
    Sync to Audio
@@ -136,41 +135,25 @@ Sync
 
 Audio
    Scrubbing
-      If your animation has sound, this option plays bits of the sound wave
-      while you move the Playhead with :kbd:`LMB` or keyboard arrows.
-   Mute
-      Mute the sound from any audio source.
+      Play bits of the sound in the animation (if there is any) while you drag the Playhead around.
+   Play Audio
+      Uncheck to mute all sound.
 
 Playback
-   Limit Playback to Frame Range
-      Don't allow selecting frames outside of the playback range using the mouse.
+   Limit to Frame Range
+      Don't allow moving the Playhead outside of the Frame Range using the mouse.
 
    .. _bpy.types.Screen.use_follow:
 
    Follow Current Frame
-      Animation editors can be setup to always follow the time indicator as animation is being played back.
-      Following will be done when animating and changing frame:
-      When the cursor reaches the end of the screen, the next range of frames of the same width will be displayed.
+      Automatically pan the view to catch up when the Playhead goes off screen.
 
 .. _bpy.types.Screen.use_play:
 
 Play In
-   Active Editor
-      While playing, updates the Timeline, if *Animation Editors* and *All 3D Viewports* disabled.
-   3D Viewport
-      While playing, updates the 3D Viewport and the Timeline.
-   Animation Editors
-      While playing, updates the Timeline, Dope Sheet, Graph Editor, Video Sequencer.
-   Image Editor
-      The Image editor in Mask mode.
-   Properties Editor
-      When the animation is playing, this will update the property values in the UI.
-   Movie Clip Editor
-      While playing, updates the Movie Clip Editor.
-   Node Editors
-      While playing, updates the Node properties for the node editors.
-   Video Sequencer
-      While playing, updates the Video Sequencer.
+   Which editors to update on each animation frame. If an editor is unchecked,
+   it'll only be updated once playback stops (with some exceptions where it'll
+   update on each frame anyway).
 
 .. _bpy.types.Scene.show_subframe:
 
@@ -178,6 +161,9 @@ Show
    Subframes
       Display and allow changing the current scene subframe.
 
+Set Start/End Frame
+   Set the scene's start/end frame to the current frame.
+   If the Preview Range is active (see `Frame Controls`_), that one is changed instead.
 
 .. _timeline-keying:
 
@@ -196,22 +182,25 @@ Active Keying Set
 
       Timeline Keying Sets.
 
-   *Keying Sets* are a set of keyframe channels in one.
-   They are made so the user can record multiple properties at the same time.
-   With a keying set selected, when you insert a keyframe,
-   Blender will add keyframes for the properties in the active *Keying Set*.
-   There are some built-in keying sets, *LocRotScale*, and also custom keying sets.
-   Custom keying sets can be created in the :ref:`Keying Set <bpy.types.KeyingSets>` panel.
+   A *Keying Set* is a named collection of animatable properties. If you select
+   one and then press :kbd:`I` while not hovering over any input field,
+   Blender will create keyframes for the properties in that keying set.
 
-   Insert Keyframes (plus icon)
-      Insert keyframes on the current frame for the properties in the active *Keying Set*.
-   Delete Keyframes (minus icon)
-      Delete keyframes on the current frame for the properties in the active *Keying Set*.
+   If you don't have a keying set selected, you'll get keyframes on a default
+   set of properties instead (e.g. Location/Rotation/Scale for objects).
+
+   There are a number of predefined keying sets, but you can also create your own
+   in the :ref:`Keying Sets <bpy.types.KeyingSets>` panel.
+
+   Insert Keyframes (plus icon) :kbd:`I`
+      Insert keyframes on the current frame.
+   Delete Keyframes (cross icon) :kbd:`Alt-I`
+      Delete keyframes on the current frame.
 
 .. _bpy.types.ToolSettings.keyframe_type:
 
 New Keyframe Type
-   :ref:`keyframe-type` on insertion.
+   The :ref:`keyframe type <keyframe-type>` for newly created keyframes.
 
 .. _bpy.types.ToolSettings.use_keyframe_cycle_aware:
 
@@ -226,54 +215,52 @@ Cycle-Aware Keying
    In addition, when adding a new curve into an action with a
    :ref:`Manual Frame Range <bpy.types.Action.use_frame_range>`
    and *Cyclic Animation* enabled, the curve is automatically made cyclic with the period matching the frame range.
-   For convenience this check and conversion is also done before adding the second keyframe to such a curve.
+   For convenience, this check and conversion is also done before adding the second keyframe to such a curve.
 
 
 .. Move to some content to animation?
 .. _bpy.types.ToolSettings.use_keyframe_insert_auto:
 
-Auto Keying Popover
-^^^^^^^^^^^^^^^^^^^
+Auto Keying
+^^^^^^^^^^^
 
 .. figure:: /images/editors_timeline_keyframes-auto.png
    :align: right
 
-   Timeline Auto Keyframe.
+   Auto Keying button.
 
-The record button (|record|) enables *Auto Keyframe*:
-It will add and/or replace existing keyframes for the active object when you transform it in the 3D Viewport.
-For example, when enabled, first set the Playhead to the desired frame,
-then move an object in the 3D Viewport, or set a new value for a property in the UI.
+When the record button (|record|) is enabled, Blender will automatically create keyframes on the current
+frame whenever you transform an object or bone in the 3D Viewport (or change one of its transform properties
+in the :doc:`Properties Editor </editors/properties_editor>`).
 
-When you set a new value for the properties,
-Blender will add keyframes on the current frame for the transform properties.
-Other use cases are :ref:`Fly/Walk Navigation <3dview-fly-walk>` to record the walk/flight path
-and :ref:`Lock Camera to View <bpy.types.SpaceView3D.lock_camera>` to record the navigation in camera view.
+One special use case is to record a camera path as you fly through the scene.
+See :ref:`Fly/Walk Navigation <3dview-fly-walk>`.
 
 .. note::
 
-   Note that *Auto Keyframe* only works for transform properties (objects and bones),
-   in the 3D Viewport (i.e. you can't use it e.g. to animate the colors of a material in the Properties...).
+   Auto Keying only works for transform properties (Location, Rotation, Scale).
+   It won't create a keyframe if you change, say, the color of a material --
+   you still have to do that manually.
 
 .. _bpy.types.ToolSettings.auto_keying_mode:
 
 Mode
-   This controls how the auto keyframe mode works.
-   Only one mode can be used at a time.
-
-   :Add & Replace: Add or replace existing keyframes.
-   :Replace: Only replace existing keyframes.
+   Add & Replace
+      Add or replace keyframes as needed.
+   Replace
+      Only replace existing keyframes.
 
 .. _bpy.types.ToolSettings.use_keyframe_insert_keyingset:
 
 Only Active Keying Set
-   When enabled, new keyframes for properties will be inserted into the active
-   :doc:`Keying Set </animation/keyframes/keying_sets>`.
+   By default, Auto Keying will create keyframes even for properties that are not in the
+   :ref:`active keying set <bpy.types.KeyingSetsAll.active>`. Use this checkbox to change that.
 
 .. _bpy.types.ToolSettings.use_record_with_nla:
 
 Layered Recording
-   Adds a new NLA Track and strip for every loop/pass made over the animation to allow non-destructive tweaking.
+   Adds a new :doc:`NLA Track </editors/nla/tracks>` for every pass made over the animation
+   to allow non-destructive tweaking.
 
 
 Menus
@@ -284,53 +271,50 @@ Menus
 View Menu
 ^^^^^^^^^
 
-The *View Menu* controls what you see, and what it looks like.
-
 Adjust Last Operation
    Displays a pop-up panel to alter properties of the last
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
-   Show or hide the Channels Region.
+   Show or hide the Channels region (the tree of objects and animatable properties on the left).
 
 ----------
 
 Frame All :kbd:`Home`
-   Maximize the area based on the Animation Range.
+   Pans and zooms the view so that all keyframes are visible.
 Go to Current Frame :kbd:`Numpad0`
    Centers the Timeline to the Playhead.
 
 ----------
 
 Show Markers
-   Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
-   and markers operators are not available in this editor.
+   Shows the Markers region (if any markers are defined).
+   When disabled, the `Marker Menu`_ is also hidden and marker operators are not
+   available in this editor.
 Show Seconds :kbd:`Ctrl-T`
-   Whether to show the time in the X axis and the *Playhead* as
-   frames (based on the FPS) or as seconds.
+   Shows the time on the X axis and the *Playhead* as timestamps instead of frame numbers.
+   A timestamp such as ``01:03+02`` means "1 minute, 3 seconds, 2 frames."
 Sync Visible Range
-   It synchronizes the horizontal panning and scale of the current editor
-   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
-   That way you always have these editors showing the same section of frames.
+   Synchronizes the horizontal panning and scale of the editor
+   with other time-based editors that also have this option set.
+   That way, they always show the same section of time.
 
 ----------
 
 Only Show Selected
-   Only include keyframes related to the selected item this item
-   could be sequencer strips, nodes, objects, or any other type of data.
+   Only show keyframes related to the selected items.
+   This could be objects, bones, nodes, and so on.
 Only Show Errors
-   Only include curves and drivers that are disabled or have errors.
+   Only show curves and drivers that are disabled or have errors.
    Useful for debugging.
 
 ----------
 
 Cache
    Show Cache
-      Show all enabled types.
+      Which simulation caches to show on the timeline.
 
       Baked simulations will be shown as fully opaque, cached simulations will be slightly transparent,
       and invalid caches will be slightly transparent with dark diagonal stripes.
-
-      Soft Body, Particles, Cloth, Simulation Nodes, Smoke, Dynamic Paint, Rigid Body.
 
    .. figure:: /images/editors_timeline_cache.png
 
@@ -339,41 +323,27 @@ Cache
 ----------
 
 Area
-   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   Area controls. See the :doc:`user interface </interface/window_system/areas>`
    documentation for more information.
 
 
-Markers Menu
-^^^^^^^^^^^^
+Marker Menu
+^^^^^^^^^^^
 
 :doc:`Markers </animation/markers>` are used to denote frames with key points or significant events
-within an animation. Like with most animation editors, markers are shown at the bottom of the editor.
+within an animation. Like in most animation editors, they're shown at the bottom of the Timeline.
 
 .. figure:: /images/editors_graph-editor_introduction_markers.png
 
-   Markers in animation editor.
+   Markers in an animation editor.
 
-For descriptions of the different marker tools see :ref:`Editing Markers <animation-markers-editing>`.
-
-
-.. _animation-editors-timeline-headercontrols:
-
-Header Controls
----------------
-
-The Timeline header controls.
-
-.. figure:: /images/editors_timeline_header.png
-
-   Timeline header controls.
-
-   \1. Popovers for Playback and Keying, 2. Transport Controls, 3. Frame Controls
+For descriptions of the different marker tools, see :ref:`Editing Markers <animation-markers-editing>`.
 
 
 Transport Controls
-^^^^^^^^^^^^^^^^^^
+------------------
 
-These buttons are used to set, play, rewind, the *Playhead*.
+These buttons are used to set the current frame and control playback.
 
 .. figure:: /images/editors_timeline_player-controls.png
    :align: right
@@ -381,34 +351,36 @@ These buttons are used to set, play, rewind, the *Playhead*.
    Transport controls.
 
 Jump to Start (|first|) :kbd:`Shift-Left`
-   This sets the cursor to the start of frame range.
+   Sets the Playhead to the start of the frame range.
 Jump to Previous Keyframe (|previous|) :kbd:`Down`
-   This sets the cursor to the previous keyframe.
+   Moves the Playhead to the previous keyframe.
 Rewind (|rewind|) :kbd:`Shift-Ctrl-Spacebar`
-   This plays the animation sequence in reverse.
-   When playing the play buttons switch to a pause button.
+   Starts playing the animation in reverse.
 Play (|play|) :kbd:`Spacebar`
-   This plays the animation sequence.
-   When playing the play buttons switch to a pause button.
+   Starts playing the animation.
 Jump to Next Keyframe (|next|) :kbd:`Up`
-   This sets the cursor to the next keyframe.
+   Moves the Playhead to the next keyframe.
 Jump to End (|last|) :kbd:`Shift-Right`
-   This sets the cursor to the end of frame range.
+   Sets the Playhead to the end of the frame range.
 Pause (|pause|) :kbd:`Spacebar`
-   This stops the animation.
+   Stops playing the animation.
 
 
 Frame Controls
-^^^^^^^^^^^^^^
+--------------
 
 Current Frame :kbd:`Alt-Wheel`
-   The current frame of the animation/playback range.
-   Also the position of the *Playhead*.
-Preview Range (clock icon)
-   This is a temporary frame range used for previewing a smaller part of the full range.
-   The preview range only affects the viewport, not the rendered output.
-   See :ref:`graph-preview-range`.
-Start Frame
-   The start frame of the animation/playback range.
-End Frame
-   The end frame of the animation/playback range.
+   The number of the frame that's currently being displayed in the 3D Viewport.
+   This is also the location of the Playhead.
+Use Preview Range (clock icon)
+   The Preview Range is an alternative Frame Range that you can use for focusing on a
+   particular part of the animation. It lets you repeatedly play a short segment without
+   having to manually rewind or change the frame range of the entire scene.
+
+   This range only affects the preview in the 3D Viewport; it doesn't affect rendering.
+   
+   The boundaries of the Preview Range are shown in dark orange. You can quickly configure
+   and enable it by pressing :kbd:`P` and dragging a box. To disable it,
+   you can press :kbd:`Alt-P`.
+Start/End Frame
+   The start/end frame of the scene (or the preview range, if active).
