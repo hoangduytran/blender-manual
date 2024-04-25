@@ -7,7 +7,7 @@ Line Art Modifier
 
 The *Line Art* modifier generates stylized line art from a scene, collection, or object.
 
-In order fot the effects of the modifier to be visible, the scene must have an active camera.
+In order for the effects of the modifier to be visible, the scene must have an active camera.
 The generated lines are only generated on portions of the object that a visible from this camera.
 
 .. note::
