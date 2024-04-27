@@ -35,23 +35,20 @@ Options
    Time Offset Modifier.
 
 Mode
-   Regular
+   :Regular:
       Offsets keyframes in the default animation playback direction (playhead moving from left to right).
-
-   Reverse
+   :Reverse:
       Offsets keyframes in reversed animation playback direction (playhead moving from right to left).
-
-   Fixed Frame
+   :Fixed Frame:
       The Frame parameter determines which frame is displayed. This value needs to be animated in order to
       have the displayed frame change during playback.
 
       Frame
          The number of the frame to display.
 
-   Ping Pong
+   :Ping Pong:
       Loop back and forth animation.
-
-   Chain
+   :Chain:
       It allows to combine the different Modes consecutively.
 
       Repeat

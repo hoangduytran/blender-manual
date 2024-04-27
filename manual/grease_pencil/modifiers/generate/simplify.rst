@@ -15,27 +15,27 @@ Options
 =======
 
 .. figure:: /images/grease-pencil_modifiers_generate_simplify_panel.png
-   :align: right
+   :align: center
 
    The Simplify modifier.
 
 Mode
    Determines how to reduce points in the strokes.
 
-   Fixed
+   :Fixed:
       Deletes alternated points in the strokes, except the start and end points.
 
       Iterations
          Number of times to repeat the procedure.
 
-   Adaptive
+   :Adaptive:
       Uses the RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion.
       The algorithm try to obtain a similar line shape with fewer points.
 
       Factor
          Controls the amount of recursively simplifications applied by the algorithm.
 
-   Sample
+   :Sample:
       Recreates the stroke geometry with a predefined length between points.
 
       Length
@@ -46,7 +46,7 @@ Mode
       Sharp Threshold
          Preserve corners that have sharper angle than this threshold.
 
-   Merge
+   :Merge:
       Simplifies the strokes by merging points that are closer than a specified distance to each other.
 
       Distance

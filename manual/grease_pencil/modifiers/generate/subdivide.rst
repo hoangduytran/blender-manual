@@ -18,11 +18,8 @@ Options
    The Subdivide modifier.
 
 Subdivision Type
-   Catmull-Clark
-      The default option, subdivides and smooths the surfaces.
-
-   Simple
-      Only subdivides the surfaces, without any smoothing.
+   :Catmull-Clark: Subdivides and smooths the surfaces.
+   :Simple: Only subdivides the surfaces, without any smoothing.
 
 Subdivisions
    Recursively adds more points.

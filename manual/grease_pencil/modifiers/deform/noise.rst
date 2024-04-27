@@ -48,13 +48,12 @@ Randomize
 When enabled, the noise uses a random value over time.
 
 Mode
-   Steps
+   :Steps:
       New random value at defined steps.
 
       Step
          Number of frames before using a new random value.
-
-   keyframes
+   :Keyframes:
       New random value only on keyframes.
 
 

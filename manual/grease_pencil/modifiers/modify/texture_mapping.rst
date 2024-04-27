@@ -12,22 +12,19 @@ Options
 =======
 
 .. figure:: /images/grease-pencil_modifiers_color_texture-mapping_panel.png
-   :align: right
+   :align: center
 
    Texture Mapping.
 
 Mode
    The texture transformation will be applied to the stroke/fill or stroke UVs.
 
-   Stroke
+   :Stroke:
       Stroke Fit Method
          Selects the texture fitting method.
 
-         Constant Length
-            The texture keep a consistent length along the strokes.
-
-         Stroke Length
-            The texture is normalized to fit the stroke length.
+         :Constant Length: The texture keep a consistent length along the strokes.
+         :Stroke Length: The texture is normalized to fit the stroke length.
 
       UV Offset
          Moves the texture along the strokes.
@@ -42,7 +39,7 @@ Mode
       Scale
          Factor for the texture scale.
 
-   Fill
+   :Fill:
       Fill Rotation
          Sets the texture angle.
 

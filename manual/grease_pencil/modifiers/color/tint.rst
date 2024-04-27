@@ -30,10 +30,10 @@ Strength
    A shift greater than 1.0 will make the points alpha less transparent than originally (2.0 is fully opaque).
 
 Tint Type
-   Uniform
+   :Uniform:
       Color
          Defines the tint color for mixing with the original color.
-   Gradient
+   :Gradient:
       Color Ramp
          Defines the tint gradient color for mixing with the original color.
          For controls see :ref:`ui-color-ramp-widget`.

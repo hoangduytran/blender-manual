@@ -21,13 +21,13 @@ Options
 Affect
    Combination of stroke/points properties that will be affected by the smooth factor.
 
-   Position
+   :Position:
       Smooth affect the point location.
-   Strength
+   :Strength:
       Smooth affect the point strength (opacity).
-   Thickness
+   :Thickness:
       Smooth affect the point thickness.
-   UV
+   :UV:
       Smooth affect the point UV rotation.
 
 Factor
