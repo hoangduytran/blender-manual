@@ -1,9 +1,9 @@
 .. index:: Compositor Nodes; Vector Blur
 .. _bpy.types.CompositorNodeVecBlur:
 
-*************************
-Vector (Motion) Blur Node
-*************************
+****************
+Vector Blur Node
+****************
 
 .. figure:: /images/compositing_node-types_CompositorNodeVecBlur.webp
    :align: right
@@ -32,20 +32,6 @@ Samples
    Quality factor.
 Blur
    Scaling factor for the motion vector (actually the "shutter speed" in frames).
-Speed
-   The vector blur could produce artifacts like streaks, lines and other.
-   To tackle these problems, the filter applies clamping,
-   which can be used to limit which pixels get blurred. The speed is set in pixel units.
-
-   Maximum Speed
-      The maximum threshold. The majority of artifacts are caused by pixels moving too fast.
-   Minimum Speed
-      The minimum threshold for moving pixels can separate
-      the hardly moving pixels from the moving ones.
-      Especially when the camera itself moves,
-      the vector mask can become the entire image.
-Curved
-   Interpolates motion between frames using a quadratic Bézier function rather than a linear function.
 
 
 Outputs
