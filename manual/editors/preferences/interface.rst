@@ -147,8 +147,8 @@ File Browser
 
 .. _prefs-interface-translation:
 
-Translation
-===========
+Language
+========
 
 .. _bpy.types.PreferencesView.language:
 
@@ -158,7 +158,7 @@ Language
 
 .. _bpy.types.PreferencesView.use_translate:
 
-Affect
+Translate
    Tooltips
       Translates the descriptions when hovering over UI elements.
    Interface
