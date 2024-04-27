@@ -46,13 +46,14 @@ Max Angle
    Larger values are required for triangles with a shared edge that is small,
    relative to the size of the other edges of the triangles.
 Compare UVs
-   When enabled, it will prevent the union of triangles that are not also adjacent in the active UV map.
-Compare VCols
-   When enabled, it will prevent the union of triangles that have no matching Color Attribute color.
+   Prevents the union of triangles that are not also adjacent in the active UV map.
+Compare Color Attributes
+   Prevents the union of triangles that do not have matching
+   :ref:`Color Attributes <modeling-meshes-properties-object_data-color-attributes>`.
 Compare Sharp
-   When enabled, it will prevent the union of triangles that share an edge marked as sharp.
+   Prevents the union of triangles that share an edge marked as sharp.
 Compare Materials
-   When enabled, it will prevent the union of triangles that do not have the same material assigned.
+   Prevents the union of triangles that do not have the same material assigned.
 
 .. hint::
 
