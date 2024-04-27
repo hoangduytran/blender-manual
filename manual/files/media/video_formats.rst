@@ -134,7 +134,7 @@ These options are not available with all :ref:`Containers <files-video-container
    Lossless, this stores each frame as an independent image in the video stream.
    Compression will be poor, but as every frame is fully self-contained, scrubbing and editing can be simpler.
    Supports an alpha channel.
-:`QT rle / QT Animation <https://en.wikipedia.org/wiki/QuickTime_Animation>`__:
+:`QuickTime Animation <https://en.wikipedia.org/wiki/QuickTime_Animation>`__:
    Original format of QuickTime videos. Supports an alpha channel.
 :`Theora <https://en.wikipedia.org/wiki/Theora>`__:
    A free open-standard lossy codec designed together with the :ref:`Ogg container <files-video-containers>`.
