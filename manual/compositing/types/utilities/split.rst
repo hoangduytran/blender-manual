@@ -9,7 +9,8 @@ Split Node
    :align: right
    :alt: Split Viewer Node.
 
-The *Split* node takes two images and displays these side-by-side.
+The *Split* node combines two images for side-by-side display. Typically
+used in combination with the :doc:`Viewer Node </compositing/types/output/viewer>`.
 
 
 Inputs

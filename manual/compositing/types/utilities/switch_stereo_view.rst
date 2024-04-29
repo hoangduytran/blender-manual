@@ -9,7 +9,7 @@ Switch View Node
    :align: right
    :alt: Switch View Node.
 
-The *Switch View* node combines the *views* (left and right) into a single Stereo 3D output.
+The *Switch View* node combines the *views* (left and right) into a single stereo 3D output.
 This can be useful if for example, you need to treat the view as separate images by combining each of the views.
 
 .. container:: lead

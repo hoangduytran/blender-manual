@@ -9,8 +9,8 @@ Bilateral Blur Node
    :align: right
    :alt: Bilateral Blur Node.
 
-The Bilateral Blur node performs a high-quality adaptive blur on the source image,
-allowing to blur images while retaining their sharp edges.
+The Bilateral Blur node performs a high-quality adaptive blur, blurring
+the image while retaining sharp edges.
 
 It can be used for various purposes like: smoothing noisy render passes to avoid longer computation times
 in example ray-traced ambient occlusion, blurry refractions/reflections, soft shadows,

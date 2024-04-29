@@ -9,7 +9,7 @@ Pixelate Node
    :align: right
    :alt: Pixelate Node.
 
-The Pixelate node reduces the level of detail in an image by causing individual pixels to become more prominent.
+The Pixelate node reduces the detail in an image by making individual pixels more prominent.
 It results in a blocky or mosaic-like appearance, where the fine details of the image are obscured,
 and the overall image is represented using larger, more noticeable pixels.
 

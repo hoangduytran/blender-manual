@@ -9,10 +9,10 @@ Map UV Node
    :align: right
    :alt: Map UV node.
 
-With this node objects can be "re-textured" after they have been rendered.
+Map a texture using UV coordinates, to apply a texture to objects in compositing.
 
-To apply a texture to individual enumerated objects
-the :doc:`ID Mask Node </compositing/types/mask/id_mask>` could be used.
+May be used in combination with ::doc:`Cryptomatte Node </compositing/types/mask/cryptomatte>'`
+to apply the texture only to specific objects.
 
 
 Inputs

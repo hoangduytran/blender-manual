@@ -9,7 +9,7 @@ Render Layers Node
    :align: right
    :alt: Render Layers Node.
 
-This node is the starting place for getting a picture of your scene into the compositing node tree.
+Read render layers and passes from a scene into the compositing node graph.
 
 
 Inputs

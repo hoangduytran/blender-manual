@@ -9,7 +9,7 @@ Dilate/Erode Node
    :align: right
    :alt: Dilate/Erode Node.
 
-The *Dilate/Erode node* provides a morphology (mathematical shape analysis) filter.
+The *Dilate/Erode node* expands and shrinks masks, using a morphological operator.
 
 
 Inputs

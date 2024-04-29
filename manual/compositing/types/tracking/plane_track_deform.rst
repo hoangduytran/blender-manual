@@ -9,8 +9,8 @@ Plane Track Deform Node
    :align: right
    :alt: Plane Track Deform Node.
 
-The Plane Track Deform Node is used to incorporate the special "plane track" in your composite by checking areas
-which are planes, and replacing their footage with some other image.
+The Plane Track Deform Node is used replace flat planes in footage by another image,
+using plane tracks from motion tracking.
 
 
 Plane Track

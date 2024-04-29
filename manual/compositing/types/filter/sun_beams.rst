@@ -9,8 +9,8 @@ Sun Beams Node
    :align: right
    :alt: Sun Beams Node.
 
-The Sun Beams node provides a computationally cheap way of
-creating the name giving effect based on the image brightness alone.
+The Sun Beams node provides a cheap way of adding sun beams based
+on image brightness alone.
 
 Sun Beams is a 2D effect for simulating the effect of bright light getting scattered in a medium
 `(Crepuscular Rays) <https://en.wikipedia.org/wiki/Crepuscular_rays>`__.

@@ -9,7 +9,7 @@ Anti-Aliasing Node
    :align: right
    :alt: Anti-Aliasing Node.
 
-The Anti-Aliasing node removes distortion artifacts around edges known as aliasing.
+The Anti-Aliasing node smooths away jagged edges.
 
 
 Inputs
