@@ -153,6 +153,11 @@ Override
 Material Override
    Overrides all materials in the render layer.
 
+.. _bpy.types.ViewLayer.world_override:
+
+World Override
+   Overrides world background in the render layer.
+
 .. _bpy.types.ViewLayer.samples:
 
 Samples
