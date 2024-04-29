@@ -34,7 +34,9 @@ Radius
 IOR :guilabel:`Cycles Only`
    Index of refraction for *Subsurface Scattering*.
 Anisotropy :guilabel:`Cycles Only`
-   Controls the directionality of subsurface scattering.
+   Directionality of subsurface scattering. Higher anisotropy scatters deeper into the object.
+Roughness :guilabel:`Cycles Only`
+   Roughness of the glossy surface surrounding the subsurface volume.
 Normal
    Normal used for shading; if nothing is connected the default shading normal is used.
 
