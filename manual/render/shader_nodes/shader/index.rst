@@ -19,6 +19,7 @@
    principled.rst
    hair_principled.rst
    volume_principled.rst
+   ray_portal.rst
    refraction.rst
    specular_bsdf.rst
    sss.rst
