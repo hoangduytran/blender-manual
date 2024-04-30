@@ -4,6 +4,8 @@
 Ray Portal BSDF
 ***************
 
+:guilabel:`Cycles Only`
+
 The *Ray Portal BSDF* node transports rays that enter to another location
 in the scene. It can be used to render portals for visual effects, and
 other production rendering tricks.
