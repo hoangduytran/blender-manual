@@ -11,7 +11,7 @@ Map UV Node
 
 Map a texture using UV coordinates, to apply a texture to objects in compositing.
 
-May be used in combination with ::doc:`Cryptomatte Node </compositing/types/mask/cryptomatte>'`
+May be used in combination with :doc:`Cryptomatte Node </compositing/types/mask/cryptomatte>`
 to apply the texture only to specific objects.
 
 
