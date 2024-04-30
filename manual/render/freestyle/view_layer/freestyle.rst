@@ -14,7 +14,6 @@ Freestyle can be enabled/disabled per View Layer by toggling the checkbox in the
 
 .. figure:: /images/render_freestyle_view-layer_freestyle-panel.png
    :align: center
-   :width: 50%
 
    View Layer: Freestyle panel.
 
