@@ -12,3 +12,4 @@ Curves objects also have basic editing support in "Edit Mode".
 
    curves.rst
    control_points.rst
+   segments.rst

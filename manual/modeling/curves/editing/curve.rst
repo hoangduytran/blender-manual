@@ -43,7 +43,7 @@ Radius
    :Menu:      :menuselection:`Curve --> Transform --> Radius`
    :Shortcut:  :kbd:`Alt-S`
 
-The Radius allows you to directly control the width of the extrusion along the "spinal" curve.
+Controls the width of the extrusion along the "spinal" curve.
 The radius will be interpolated from point to point (you can check it with the normals).
 The *Radius* of the points is set using the *Radius* transform tool. Or in the Sidebar *Transform* panel.
 
@@ -76,8 +76,7 @@ Snap
    :Menu:      :menuselection:`Curve --> Snap`
    :Shortcut:  :kbd:`Shift-S`
 
-:doc:`Mesh snapping </editors/3dview/controls/snapping>`
-also works with curve components.
+:doc:`Mesh snapping </editors/3dview/controls/snapping>` also works with curve components.
 Both control points and their handles will be affected by snapping,
 except for within itself (other components of the active curve).
 Snapping works with 2D curves but points will be constrained to the local XY axes.
@@ -107,8 +106,7 @@ Add Duplicate
    :Menu:      :menuselection:`Curve --> Add Duplicate`
    :Shortcut:  :kbd:`Shift-D`
 
-This operator duplicates the selected control points,
-along with the curve segments implicitly selected (if any).
+Duplicates the selected control points, along with the curve segments implicitly selected (if any).
 If only a handle is selected, the full point will be duplicated too.
 The copy is selected so you can move it to another place.
 
@@ -124,7 +122,7 @@ Split
    :Menu:      :menuselection:`Curve --> Split`
    :Shortcut:  :kbd:`Y`
 
-The *Split* operator splits a selected segment of a curve from the rest of the curve.
+Splits a selected segment of a curve from the rest of the curve.
 This curve can then be moved or altered without affecting the other curve.
 If a single control point is selected the *Split* operator will create a new singular loose control point;
 leaving the previously selected control point attached to the rest of the curve.
@@ -141,14 +139,13 @@ Separate
    :Menu:      :menuselection:`Curve --> Separate`
    :Shortcut:  :kbd:`P`
 
-Curve objects that are made of multiple distinct curves can be separated into their own
-objects by selecting the desired segments and pressing :kbd:`P`.
+Separates curve objects that are made of multiple distinct curves into their own objects.
+
 Note, if there is only one curve in a Curve object,
-*Separate* will create a new Curve object with no control points.
+This operation will create a new Curve object with no control points.
 
 
 .. _bpy.ops.curve.cyclic_toggle:
-.. _modeling-curves-toggle-cyclic:
 
 Toggle Cyclic
 =============
@@ -159,7 +156,7 @@ Toggle Cyclic
    :Menu:      :menuselection:`Curve --> Toggle Cyclic`
    :Shortcut:  :kbd:`Alt-C`
 
-This toggles between an open curve and closed curve (Cyclic).
+Toggles between an open curve and closed curve (Cyclic).
 Only curves with at least one selected control point will be closed/open.
 The shape of the closing segment is based on the start and end handles for Bézier curves,
 and as usual on adjacent control points for NURBS.
@@ -180,7 +177,6 @@ Remember that when a 2D curve is closed, it creates a renderable flat face.
 
 
 .. _bpy.ops.curve.spline_type_set:
-.. _curve-convert-type:
 
 Set Spline Type
 ===============
@@ -190,7 +186,7 @@ Set Spline Type
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Curve --> Set Spline Type`
 
-*Set Spline Type* converts splines in a curve object between Bézier, NURBS, and Poly curves.
+Converts splines in a curve object between Bézier, NURBS, and Poly curves.
 Note, this is not a "smart" conversion, i.e. Blender does not try to keep the same shape,
 nor the same number of control points. For example, when converting a NURBS to a Bézier,
 each group of three NURBS control points become a unique Bézier one (center point and two handles).
@@ -248,7 +244,6 @@ Ratio
 
 
 .. _bpy.ops.curve.delete:
-.. _bpy.ops.curve.dissolve_verts:
 
 Delete
 ======
@@ -256,8 +251,8 @@ Delete
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Curve --> Delete...`
-   :Shortcut:  :kbd:`X`, :kbd:`Delete`; :kbd:`Ctrl-X`
+   :Menu:      :menuselection:`Curve --> Delete`
+   :Shortcut:  :kbd:`X`, :kbd:`Delete`
 
 Options for the *Delete* pop-up menu:
 
@@ -270,9 +265,21 @@ Vertices
    and when all points are deleted, the curve itself is deleted.
 Segment
    Deletes the segment that connects the selected control points and disconnecting them.
-Dissolve Vertices :kbd:`Ctrl-X`
-   Deletes the selected control points, while the remaining segment is fitted to the deleted curve
-   by adjusting its handles.
+
+
+.. _bpy.ops.curve.dissolve_verts:
+
+Dissolve Vertices
+-----------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curve --> Delete --> Dissolve Vertices`
+   :Shortcut:  :kbd:`Ctrl-X`
+
+Deletes the selected control points, while the remaining segment
+is fitted to the deleted curve by adjusting its handles.
 
 .. list-table::
 

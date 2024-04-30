@@ -44,3 +44,19 @@ Clear Tilt
 
 You can also reset the tilt to its default value (i.e. perpendicular to the original curve plane).
 
+
+.. _bpy.ops.curves.handle_type_set:
+
+Set Handle Type
+===============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Control Points --> Set Handle Type`
+   :Shortcut:  :kbd:`V`
+
+Handle types are a property of :ref:`Bézier curves <curve-bezier>` and
+can be used to alter features of the curve.
+For example, switching to *Vector handles* can be used to create curves with sharp corners.
+Read the :ref:`Bézier curves <curve-bezier-handle-type>` page for more details.

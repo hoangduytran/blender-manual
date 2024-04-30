@@ -75,3 +75,51 @@ Delete
 The Delete operator can remove Control Points or Segments.
 Deleting can be used to make curves shorter or simplify
 segments by deleting control points in the mid section of a segment.
+
+
+Toggle Cyclic
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curve --> Toggle Cyclic`
+   :Shortcut:  :kbd:`Alt-C`
+
+Toggles between an open curve and closed curve (Cyclic).
+Only curves with at least one selected control point will be closed/open.
+The shape of the closing segment is based on the start and end handles for Bézier curves,
+and as usual on adjacent control points for NURBS.
+The only time a handle is adjusted after closing is if the handle is an *Auto* one.
+Fig. :ref:`fig-curves-editing-open-close` is the same Bézier curve open and closed.
+
+This action only works on the original starting control point or the last control point added.
+Deleting a segment(s) does not change how the action applies;
+it still operates only on the starting and last control points. This means that
+:kbd:`Alt-C` may actually join two curves instead of closing a single curve!
+Remember that when a 2D curve is closed, it creates a renderable flat face.
+
+.. _fig-curves-editing-open-close:
+
+.. figure:: /images/modeling_curves_editing_curve_open-closed-cyclic.png
+
+   Open and Closed curves.
+
+
+.. _bpy.ops.curve.spline_type_set:
+
+Set Curve Type
+==============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curves --> Set Curve Type`
+
+Converts splines in a curve object between Bézier, NURBS, and Poly curves.
+Note, this is not a "smart" conversion, i.e. Blender does not try to keep the same shape,
+nor the same number of control points. For example, when converting a NURBS to a Bézier,
+each group of three NURBS control points become a unique Bézier one (center point and two handles).
+
+Handles
+   Take handle information into account in the conversion

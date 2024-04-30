@@ -148,7 +148,7 @@ Toggle Cyclic
    :Menu:      :menuselection:`Surface --> Toggle Cyclic`
    :Shortcut:  :kbd:`Alt-C`
 
-As in :ref:`curves <modeling-curves-toggle-cyclic>`,
+As in :ref:`curves <bpy.ops.curve.cyclic_toggle>`,
 surfaces can be closed (cyclic) or open. However, as surfaces are 2D,
 you can control this property independently along the U and V axes.
 

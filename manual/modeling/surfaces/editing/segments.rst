@@ -16,7 +16,7 @@ by adding one or more control points between the selected segments.
 Selected grids will be split into four smaller ones.
 
 If used on a 1D surface (a "surface curve"),
-this tool works exactly as with :ref:`curves <modeling-curves-subdivision>`.
+this tool works exactly as with :ref:`curves <bpy.ops.curve.subdivide>`.
 
 Number of Cuts
    The number of subdivisions to perform.
