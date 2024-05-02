@@ -44,7 +44,7 @@ Material Index
    Material pass index, same as *Pass Index*
    in the :menuselection:`Properties --> Material --> Settings`.
 Random
-   Random number unique to a single object instance.
+   Random number unique to a single object instance. Output is a Float between 0.0 and 1.0
 
 .. note::
 
