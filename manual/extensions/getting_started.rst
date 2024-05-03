@@ -84,7 +84,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # * "network" (for internet access)
    # * "camera" (to capture photos and videos)
    # * "microphone" (to capture audio)
-   permissions = ["files", "network"]
+   # permissions = ["files", "network"]
 
    # Optional link to documentation, support, source files, etc
    # website = "http://extensions.blender.org/add-ons/my-example-package/"
