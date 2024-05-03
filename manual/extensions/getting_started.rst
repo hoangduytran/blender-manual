@@ -103,10 +103,10 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
      "SPDX:GPL-2.0-or-later",
    ]
    # Optional: required by some licenses.
-   copyright = [
-     "2002-2024 Developer Name",
-     "1998 Company Name",
-   ]
+   # copyright = [
+   #   "2002-2024 Developer Name",
+   #   "1998 Company Name",
+   # ]
 
 Required values:
 
