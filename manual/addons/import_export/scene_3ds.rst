@@ -113,6 +113,9 @@ Animation
    The animation can be imported the same way, un-check if any importer crashes,
    not every application can handle the keyframe section.
 
+Collection
+   Instead of exporting the complete scene, only the active collection will be exported.
+
 Cursor Origin
    Saves the current 3D cursor location of the scene to a chunk, the importer can read the location,
    if the option is enabled.
