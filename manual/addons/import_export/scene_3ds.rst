@@ -134,6 +134,10 @@ Scene Units
    If the settings are millimeters, the exported scene will be scaled up since Blender uses meters for unit scale.
    Also imperial unit measures are supported, the exporter will convert the mesh to the selected scene unit.
 
+Apply Transform
+   Applies object matrix transformations before exporting. If unchecked, no transformations will be applied
+   to the objects.
+
 Forward / Up Axis
    Since many applications use a different axis for pointing upwards,
    these are axis conversion for these settings, Forward and up axes -- By mapping these to different axes
