@@ -239,9 +239,14 @@ Lights in 3DS Studio can be a point source or a spotlight,
 they use color and energy data and a target for the spotlight.
 The color and position of a light can be animated, the spotlight additionally has a target, beam angle and hotspot,
 wich can be animated. The lights and animation can be imported and exported, the spotlight can contain a projection
-bitmap, if an image is connected to a emission or colormixer, it will be exported. The x/y scale of a spotlight will
-be exported in an aspect ratio chunk, the importer can calculate it back to x/y scale. The target data is calculated
-to Z and X axis angle for pan and tilt, Y is used for the roll angle.
+bitmap, if an image is connected to a emission or colormixer, it will be exported. If a projection image has been found 
+by the importer, it will be connected to a colormix node together with a RGB node for the color animation. The x/y scale 
+of a spotlight will be exported in an aspect ratio chunk, the importer can calculate it back to x/y scale. The target data 
+is calculated to Z and X axis angle for pan and tilt, Y is used for the roll angle.
+
+.. figure:: /images/addons_io_3ds_light-nodes.jpg
+
+   An example of a 3ds file with all light nodes imported.
 
 
 Cameras
