@@ -130,7 +130,6 @@ Realtime Updates
    When transforming keyframes, changes to the animation data are propagated to other views.
 Show Sliders
    A toggle option that shows the value sliders for the channels.
-   See the Fig. :ref:`fig-dope-sheet-action`.
 Auto-Merge Keyframes
    Automatically merge nearby keyframes.
 

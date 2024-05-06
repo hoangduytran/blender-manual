@@ -54,7 +54,7 @@ See :doc:`Keyframe Editing </animation/keyframes/editing>` for more information.
    The channels in the Dope Sheet correspond to the active 2D layer of the Grease Pencil object.
 
 Grease Pencil has its own mode in the Dope Sheet to work with keyframes.
-See Grease Pencil mode in the :doc:`Dope Sheet </editors/dope_sheet/grease_pencil>`
+See Grease Pencil mode in the :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>`
 section for more information.
 There are also several tools on the Stroke menu to work with keyframes and strokes.
 See :doc:`Animation tools </grease_pencil/animation/tools>` for more information.

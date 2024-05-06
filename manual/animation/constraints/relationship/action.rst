@@ -7,7 +7,7 @@ Action Constraint
 
 The *Action* constraint is powerful.
 It allows you control
-an :doc:`Action </editors/dope_sheet/action>` using the transformations of another object.
+an :doc:`Action </editors/dope_sheet/modes/action>` using the transformations of another object.
 
 The underlying idea of the *Action* constraint is very similar to the one behind
 the :doc:`Drivers </animation/drivers/index>`, except that the former uses a whole action

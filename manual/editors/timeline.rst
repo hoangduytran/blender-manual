@@ -295,7 +295,7 @@ Show Seconds :kbd:`Ctrl-T`
    A timestamp such as ``01:03+02`` means "1 minute, 3 seconds, 2 frames."
 Sync Visible Range
    Synchronizes the horizontal panning and scale of the editor
-   with other time-based editors that also have this option set.
+   with other time-based editors that also have this option enabled.
    That way, they always show the same section of time.
 
 ----------

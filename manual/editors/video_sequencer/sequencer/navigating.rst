@@ -70,7 +70,7 @@ Show Seconds :kbd:`Ctrl-T`
    Shows seconds instead of frames on the time axis.
 Sync Visible Range
    Synchronizes the horizontal panning and scale of the editor
-   with other time-based editors that also have this option set.
+   with other time-based editors that also have this option enabled.
    That way, they always show the same section of time.
 
 ----------
@@ -97,7 +97,7 @@ Range
 
       As long as this range is active, playback will be limited to it, letting you repeatedly view a
       segment of the video without having to manually rewind each time. It also limits the range
-      that gets rendered.
+      that gets rendered by *Sequence Render Animation* (see below).
    Set Preview Range to Strips
       Apply a preview range that encompasses the selected strips.
    Clear Preview Range :kbd:`Alt-P`

@@ -26,7 +26,7 @@ When you draw, the new strokes are added to the active layer.
 By default the view order of the layers in the viewport is top to bottom.
 
 Every layer correspond to a channel in the Dope Sheet editor (in Grease Pencil mode).
-See :doc:`Dope Sheet </editors/dope_sheet/grease_pencil>` for more information.
+See :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>` for more information.
 
 Layers can also be used together with Modifiers to only affects part of your drawing.
 See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more information.
@@ -215,7 +215,7 @@ Display
 .. _bpy.types.GPencilLayer.channel_color:
 
 Custom Channel Color
-   Sets the color to use in the channel region of the :doc:`Dope Sheet </editors/dope_sheet/grease_pencil>`.
+   Sets the color to use in the channel region of the :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>`.
 
 .. _bpy.types.GPencilLayer.use_solo_mode:
 

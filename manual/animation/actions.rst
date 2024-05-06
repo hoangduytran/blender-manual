@@ -54,7 +54,7 @@ When you first animate an object by adding keyframes,
 Blender creates an *Action* to record the data.
 
 *Actions* can be managed with the *Action data-block menu*
-in the Dope Sheet :doc:`Action Editor </editors/dope_sheet/action>` header,
+in the Dope Sheet :doc:`Action Editor </editors/dope_sheet/modes/action>` header,
 or the Sidebar region of the :doc:`NLA Editor </editors/nla/sidebar>`.
 
 If you are making multiple actions for the same object,
@@ -64,6 +64,8 @@ This will give the actions a *Fake User* and will make Blender save the unlinked
 Objects can only use one *Action* at a time for editing.
 The :doc:`NLA Editor </editors/nla/index>` is used to blend multiple actions together.
 
+
+.. _actions-properties:
 
 Properties
 ==========
