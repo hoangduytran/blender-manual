@@ -82,7 +82,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # Optional: add-ons can list which resources they will require:
    # * "files" (for access of any filesystem operations)
    # * "network" (for internet access)
-   # * "clipboard" (for read and/or write the system clipboard)
+   # * "clipboard" (to read and/or write the system clipboard)
    # * "camera" (to capture photos and videos)
    # * "microphone" (to capture audio)
    # permissions = ["files", "network"]
