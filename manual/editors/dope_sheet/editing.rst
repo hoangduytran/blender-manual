@@ -125,9 +125,9 @@ The dropdown button shows a popover with the following options:
 Snap To
    Type of element to snap to.
 
-   :Frame: Snap to frame.
+   :Frame: Snap to full frames.
    :Second: Snap to seconds.
-   :Nearest Marker: Snap to nearest :doc:`Marker </animation/markers>`.
+   :Nearest Marker: Snap to the nearest :doc:`Marker </animation/markers>`.
 
 Absolute Time Snap
    When disabled, keyframes will move in increments of *Snap To*.

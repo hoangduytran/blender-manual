@@ -12,70 +12,69 @@ Channels Region
 
    The Channels region.
 
-The channels region is used to select and manage the curves for all Animation Editors.
-This part shows the objects and their animation data hierarchy each as headers.
-Each level can be expanded/collapsed by the small arrow to the left of its header.
+This region is found on the left side of time-based editors like the :doc:`/editors/timeline`,
+the :doc:`Dope Sheet Editor </editors/dope_sheet/introduction>`, and the Graph Editor.
+It shows a tree of items (objects, bones...) and their animated properties,
+with the latter also being called "channels." Each channel has an associated F-curve
+describing how its value changes over time.
 
-- Scenes, Objects (dark blue)
-- :doc:`Actions </animation/actions>`, :doc:`Shape keys </animation/shape_keys/index>`, etc. (light blue)
-- Channel Groups (green)
-- Channels (gray)
+The rows are color-coded as follows:
+
+- Dark blue: scenes, objects
+- Light blue: :doc:`actions </animation/actions>`, :doc:`shape keys </animation/shape_keys/index>` etc.
+- Green: channel groups
+- Gray: channels
 
 .. _bpy.types.DopeSheet.use_filter_invert:
 .. _bpy.types.DopeSheet.filter_text:
 
-Name Filter :kbd:`Ctrl-F`
-   Only display channels that match the search text.
-   Pressing the invert button displays all channels except the channels that match the search text.
+Search :kbd:`Ctrl-F`
+   Lets you filter the channels by typing a part of their name. Click the Invert button to instead
+   show channels that *don't* include the search text.
 
 
 Controls
 --------
 
-On the headers, there are toggles to control channel's setting:
+The headers contain the following toggle buttons:
 
 Pin (pin icon)
-   Make the channel always visible regardless of the current selection.
+   Keep the row and its children visible even when selecting a different object.
 Hide (eye icon)
-   Hides the channel(s)/curve (Graph editor only).
+   Hides the keyframes and curve associated with the channel.
 Modifiers (wrench icon)
-   Deactivates the F-Curve modifiers of the selected curve or all curves in the channel.
+   Deactivates the modifiers of the curve.
 Mute (checkbox)
-   Deactivates the channel/curve.
+   Deactivates the curve, making the animation behave as though it doesn't exist.
 Lock :kbd:`Tab` (padlock icon)
-   Toggle channel/curve from being editable.
-   Selected channels can be locked by pressing :kbd:`Tab`.
+   Prevent the curve from being edited.
 
    .. note::
 
-      This also works in the Nonlinear Animation Editor, but note that it
-      does not prevent edition of the underlying F-Curve, only the NLA strips of
-      the NLA track.
+      This also works in the :doc:`Nonlinear Animation Editor </editors/nla/introduction>`,
+      but note that it only locks the strips there, not the underlying F-curves.
 
 
 Selection
 ---------
 
-- Select header: :kbd:`LMB`
-- Add/Remove from selection: :kbd:`Ctrl-LMB`
-- Select Range: :kbd:`Shift-LMB`
+- Select single header: click :kbd:`LMB`
+- Add/Remove single header to/from selection: click :kbd:`Ctrl-LMB`
+- Select range: click :kbd:`Shift-LMB`
 - Select All: :kbd:`A`
-- Deselect All: :kbd:`Alt-A` or double :kbd:`A`
-- Box Select: (:kbd:`LMB` drag) or :kbd:`B` (:kbd:`LMB` drag)
-- Box Deselect: (:kbd:`Ctrl-LMB` drag) or :kbd:`B` (:kbd:`Shift-LMB` drag)
-- Select all keyframes in the Channel: double :kbd:`LMB` on a Channel Header.
+- Deselect All: press :kbd:`Alt-A` or double-tap :kbd:`A`
+- Box Select: drag :kbd:`LMB`
+- Box Add: drag :kbd:`Shift-LMB`
+- Box Remove: drag :kbd:`Ctrl-LMB`
+- Select all keyframes in the channel: double-click :kbd:`LMB` on its header.
 
 
 Editing
 -------
 
-- Rename (Anything but a Channel): double :kbd:`LMB`
+- Rename (anything but a channel): double-click :kbd:`LMB`
 - Delete selected: :kbd:`X` or :kbd:`Delete`
 - Lock selected: :kbd:`Tab`
-- Enable Channel Setting: :kbd:`Shift-Ctrl-W`
-- Disable Channel Setting: :kbd:`Alt-W`
-- Toggle Channel Setting: :kbd:`Shift-W`
-
 
 Sliders
 ^^^^^^^
@@ -84,6 +83,6 @@ Sliders
 
    The Action editor showing sliders.
 
-On channel headers, you can have another column with number fields or sliders,
-allowing you to change the value on the current keyframes, or to add new keyframes.
-See :ref:`graph-view-menu` for how to show these sliders.
+If you enable :menuselection:`View --> Show Sliders`, the region will show a
+value slider next to each channel. Changing such a slider will change the value
+of the curve at the current frame, creating a keyframe if one doesn't already exist.

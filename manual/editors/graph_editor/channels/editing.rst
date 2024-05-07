@@ -11,16 +11,15 @@ Delete Channels
 .. reference::
 
    :Menu:      :menuselection:`Channel --> Delete Channels`
-   :Shortcut:  :kbd:`X`
+   :Shortcut:  :kbd:`Delete`, :kbd:`X`
 
-Deletes the whole channel from the current action
-(i.e. unlink the underlying F-Curve data-block from this action data-block).
+Removes the selected channels from the current :doc:`action </animation/actions>`.
 
 .. warning::
 
-   The :kbd:`X` shortcut is area-dependent: if you use it in the left list part,
-   it will delete the selected channels, whereas if you use it in the main area,
-   it will delete the selected keyframes.
+   Make sure the mouse cursor is hovering over the channel region before using
+   the keyboard shortcuts. If it's hovering over the main region, you'll only
+   delete the selected keyframes, not the full channels.
 
 
 .. _bpy.ops.anim.channels_group:
@@ -34,8 +33,8 @@ Un/Group Channels
    :Menu:      :menuselection:`Channel --> Un/Group Channels`
    :Shortcut:  :kbd:`Ctrl-Alt-G`, :kbd:`Ctrl-G`
 
-Un/Groups the selected channels into a collection that can be renamed by double clicking on the group name.
-For example, this helps to group channels that relate a part of an armature to keep the editor more organized.
+Un/Groups the selected channels into a collection that can be renamed by double-clicking its name.
+Grouping channels helps keep the view more organized.
 
 
 .. _bpy.ops.anim.channels_setting_toggle:
@@ -50,10 +49,14 @@ Toggle/Enable/Disable Channel Settings
    :Menu:      :menuselection:`Channel --> Toggle/Enable/Disable Channel Settings`
    :Shortcut:  :kbd:`Shift-W`, :kbd:`Shift-Ctrl-W`, :kbd:`Alt-W`
 
-Enable/disable a channel's setting (selected in the menu that pops up).
+Toggles, enables, or disables a certain setting for the selected channels:
 
-Protect, Mute
-   Todo.
+Protect
+   When a channel is protected (closed padlock icon), it can't be edited.
+   Instead of pressing :kbd:`Shift-W` and selecting *Toggle*,
+   you can also simply press :kbd:`Tab`.
+Mute
+   When a channel is muted (empty checkbox), it doesn't affect the animation.
 
 
 .. _bpy.ops.anim.channels_editable_toggle:
@@ -80,11 +83,7 @@ Extrapolation Mode
    :Menu:      :menuselection:`Channel --> Extrapolation Mode`
    :Shortcut:  :kbd:`Shift-E`
 
-Change the extrapolation between selected keyframes.
-
-Extrapolation defines the behavior of a curve before the first and after the last keyframes.
-
-There are two basic extrapolation modes:
+Changes how the curve behaves before its first keyframe and after its last keyframe.
 
 :Constant:
    .. figure:: /images/editors_graph-editor_fcurves_introduction_extrapolate1.png
@@ -93,8 +92,8 @@ There are two basic extrapolation modes:
 
       Constant extrapolation.
 
-   The default one, curves before their first keyframe and after their last one have a constant value
-   (the one of these first and last keyframes).
+   Continue in a straight line, keeping the same value as the first/last keyframe.
+   This is the default.
 
 :Linear:
    .. figure:: /images/editors_graph-editor_fcurves_introduction_extrapolate2.png
@@ -103,11 +102,13 @@ There are two basic extrapolation modes:
 
       Linear extrapolation.
 
-   Curves ends are straight lines (linear), as defined by the slope of their first and last keyframes.
+   Continue in a straight line, keeping the same slope as on the first/last keyframe.
 
-Additional extrapolation methods (e.g. the *Cycles* modifier)
-are located in the :doc:`F-Curve Modifiers </editors/graph_editor/fcurves/modifiers>`.
+:Make Cyclic:
+   Repeat the whole curve. This works by adding a :ref:`Cycles modifier <bpy.types.FModifierCycles>`.
 
+:Clear Cyclic:
+   Remove the above modifier, making the curve non-repeating again.
 
 .. _bpy.ops.graph.fmodifier_add:
 
@@ -119,9 +120,8 @@ Add F-Curve Modifier
    :Menu:      :menuselection:`Channel --> Add F-Curve Modifier`
    :Shortcut:  :kbd:`Shift-Ctrl-M`
 
-Opens a pop-up allowing you to add modifiers to the active F-Curve.
-Settings for the :doc:`modifier </editors/graph_editor/fcurves/modifiers>` can be found in
-the :menuselection:`Sidebar --> Modifiers` tab.
+Shows a submenu from where you can add a :doc:`modifier </editors/graph_editor/fcurves/modifiers>`
+to the active curve. Settings for these modifiers can be found in :menuselection:`Sidebar --> Modifiers`.
 
 
 .. _bpy.ops.graph.hide:
@@ -133,9 +133,9 @@ Show/Hide
 Hide Selected Curves :kbd:`H`
    Hides the selected curves.
 Hide Unselected :kbd:`Shift-H`
-   Show only the selected curve (and hide everything else).
+   Hides all curves except the selected ones.
 Reveal Curves :kbd:`Alt-H`
-   Show all previous hidden curves.
+   Shows all previous hidden curves.
 
 
 .. _bpy.ops.anim.channels_expand:
@@ -149,7 +149,7 @@ Expand/Collapse Channels
    :Menu:      :menuselection:`Channel --> Expand/Collapse Channels`
    :Shortcut:  :kbd:`NumpadPlus`, :kbd:`NumpadMinus`
 
-Expands or collapses selected channels.
+Expands or collapses the selected headers.
 
 
 .. _bpy.ops.anim.channels_move:
@@ -161,8 +161,12 @@ Move
 
    :Menu:      :menuselection:`Channel --> Move...`
 
-This allows you to move selected channels up/down :kbd:`PageUp`, :kbd:`PageDown`,
-or directly to the top/bottom :kbd:`Shift-PageUp`, :kbd:`Shift-PageDown`.
+Lets you reorder the selected channels in the list:
+
+- To the top :kbd:`Shift-PageUp`
+- Up one line :kbd:`PageUp`
+- Down one line :kbd:`PageDown`
+- To the bottom :kbd:`Shift-PageDown`
 
 
 .. _bpy.ops.anim.channels_fcurves_enable:
@@ -174,27 +178,8 @@ Revive Disabled F-Curves
 
    :Menu:      :menuselection:`Channel --> Revive Disabled F-Curves`
 
-Clears "disabled" tag from all F-Curves to get broken F-Curves working again.
-
-
-.. _bpy.ops.anim.channels_view_selected:
-
-Frame Selected Channels
-=======================
-
-.. reference::
-
-   :Menu:      :menuselection:`Channel --> Frame Selected Channels`
-   :Shortcut:  :kbd:`NumpadPeriod`
-
-Reset viewable area to show the selected channels.
-To frame the channel that is under the mouse cursor, use :kbd:`Alt-MMB`.
-
-Include Handles
-   Include handles of keyframes when calculating extents.
-Use Preview Range
-   Ignore frames outside of the preview range.
-
+Clears the "disabled" tag from all F-Curves to get broken F-Curves working again.
+(A curve is broken if it references a property that doesn't exist.)
 
 .. _bpy.ops.graph.keys_to_samples:
 
@@ -206,10 +191,13 @@ Keys to Samples
    :Menu:      :menuselection:`Channel --> Keys to Samples`
    :Shortcut:  :kbd:`Alt-C`
 
-This operator replaces an F-Curve with a set of sampled points at each full frame.
-**It is a destructive process that removes the ability to edit the curve**.
-The main use for this is to reduce the file size with large datasets. Samples are only 1/5th the size per key.
-The sampled points interpolate linearly on subframes.
+Switches the selected curves from interpolating between a set of keyframes to using
+a sampled value at each full frame.
+**This is a destructive process that removes the ability to edit the curve.**
+It's mainly used to reduce the file size with large datasets, as samples take up
+less space than keyframes.
+
+Between samples (on subframes), the curve interpolates linearly.
 
 
 .. _bpy.ops.graph.samples_to_keys:
@@ -221,8 +209,8 @@ Samples to Keys
 
    :Menu:      :menuselection:`Channel --> Samples to Keys`
 
-This operator replaces a sampled F-Curve with keyframes, adding the ability to edit it.
-It will not recreate the curve as it was before, instead it will place 1 key at every frame.
+Switches the selected curves from using samples to using keyframes, making them editable.
+Note that this creates a keyframe on every frame.
 
 
 .. _bpy.ops.graph.sound_to_samples:
@@ -234,8 +222,7 @@ Sound to Samples
 
    :Menu:      :menuselection:`Channel --> Sound to Samples`
 
-The *Sound to Samples* operator takes a sound file and uses its sound wave to create the animation data.
-By default this data will not be editable, use *Samples to Keys* to get editable keyframes.
+Creates a sampled curve based on a sound file. Use *Samples to Keys* if you need to edit it.
 
 Lowest Frequency
    Cutoff frequency of a high-pass filter that is applied to the audio data.
@@ -243,10 +230,10 @@ Highest Frequency
    Cutoff frequency of a low-pass filter that is applied to the audio data.
 Attack Time
    Value for the hull curve calculation that tells how fast the hull curve can rise.
-   The lower the value the steeper it can rise.
+   The lower the value, the steeper it can rise.
 Release Time
    Value for the hull curve calculation that tells how fast the hull curve can fall.
-   The lower the value the steeper it can fall.
+   The lower the value, the steeper it can fall.
 Threshold
    Minimum amplitude value needed to influence the hull curve.
 
@@ -272,20 +259,20 @@ Bake Channels
 
    :Menu:      :menuselection:`Channel --> Bake Channels`
 
-The *Bake Channels* operator creates new keyframes on the F-Curves of channels that are selected in the channel box.
+Generates new keyframes for the selected curves.
 
-Range
+Frame Range
    The range that will be baked. Defaults to the scene range or preview range.
-Step
-   Distance between keyframes. Can be used to bake on 2s or even bake to subframes.
-Remove Existing Keys
-   Boolean option that if enabled also removes keys outside the specified baking range.
+Frame Step
+   Distance between keyframes. Can be used to create a keyframe every 10 frames or even every half frame.
+Remove Outside Range
+   Removes existing keys outside the specified baking range.
 Interpolation Type
-   Choose which interpolation type new keys should have, e.g. Constant or Bezier.
+   The :ref:`interpolation type <editors-graph-fcurves-settings-interpolation>` for the new keys.
 Bake Modifiers
-   If true bakes the effect of the modifier stack to keys and deletes the modifier stack.
-   If false, modifiers get disabled before baking, so the resulting keys will behave as if the modifiers didn't exist.
-
+   If enabled, the new keyframes are based on the modified curve, and the modifiers get deleted.
+   
+   If disabled, the new keyframes are based on the original curve, and the modifiers stay applied.
 
 .. _bpy.ops.graph.euler_filter:
 
@@ -296,6 +283,18 @@ Discontinuity (Euler) Filter
 
    :Menu:      :menuselection:`Channel --> Discontinuity (Euler) Filter`
 
-This operator cleans up Euler rotation channels that suffer from :term:`Gimbal Lock`.
-The channels of all three axes of euler rotation need to be selected for the operator
-to work.
+Cleans up Euler rotation channels that suffer from :term:`Gimbal Lock`.
+The channels of all three euler rotation axes need to be selected for this to work.
+
+.. _bpy.ops.anim.channels_view_selected:
+
+Frame Selected Channels
+=======================
+
+.. reference::
+
+   :Menu:      :menuselection:`Channel --> Frame Selected Channels`
+   :Shortcut:  :kbd:`NumpadPeriod`
+
+Pans and zooms the view to show all keyframes of the selected curves.
+You can also click a channel with :kbd:`Alt-MMB`.

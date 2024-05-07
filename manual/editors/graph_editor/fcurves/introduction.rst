@@ -3,56 +3,37 @@
 Introduction
 ************
 
-After animating some property in Blender using keyframes you can edit their corresponding curves.
-When something is "animated", it changes over time. This curve is shown as something called an F-Curve.
-Basically what an F-Curve does is an interpolation between two animated properties. In Blender,
-animating an object means changing one of its properties, such as the object's location, or its scale.
+Blender lets you animate almost any property, going from the X coordinate of an object to the
+transparency of a material. The evolution of a property's value over time is described by
+a *function curve*, or F-Curve for short.
 
-As mentioned, Blender's fundamental unit of time is the "frame",
-which usually lasts just a fraction of a second, depending on the *frame rate* of the scene.
-As animation is composed of incremental changes spanning multiple frames,
-usually these properties are **not** manually modified *frame-by-frame*, because:
-
-- It would take ages!
-- It would be very difficult to get smooth variations of the property
-  (unless you compute mathematical functions and type a precise value for each frame, which would be crazy).
-
-This is why nearly all direct animation is done using *interpolation*.
-
-The idea is simple: you define a few Keyframes, which are multiple frames apart.
-Between these keyframes, the properties' values are computed (interpolated)
-by Blender and filled in. Thus, the animators' workload is significantly reduced.
+An important aspect of F-Curves is that they can interpolate. This saves you the effort of
+manually configuring a value on every single frame, which would be highly impractical.
+Instead, you define just a few values on key frames, and let the curve calculate the
+values on all the other frames.
 
 .. figure:: /images/editors_graph-editor_fcurves_introduction_f-curves-concept.png
    :align: right
    :width: 200px
+   
+   Example of interpolation.
 
-   Example of an interpolation.
-
-For example, if you have:
-
-- A control point of value 0 at frame 0,
-- another one of value 10 at frame 25,
-- and you use linear interpolation, then, at frame 5 we get a value of 2.
-
-The same goes for all intermediate frames: with just two points,
-you get a smooth increase from (0 to 10) along the 25 frames.
-Obviously, if you would like the frame 15 to have a value of 9,
-you would have to add another control point (or keyframe)...
+The example curve on the right has two such keyframes (indicated by black dots):
+one on frame 0 with value 0, and another on frame 25 with value 10.
+The curve automatically calculates the values for the other frames,
+such as for frame 5 where the value is 2.
 
 
 Direction of Time
 =================
 
-Although F-Curves are very similar to :ref:`curve-bezier`,
-there are some important differences.
+F-Curves are similar to :doc:`Curve objects </modeling/curves/introduction>` in that they interpolate
+between a set of user-defined control points. However, because their purpose is to define a *single*
+value on every frame, there's an important difference: F-curves can't be closed or otherwise made to
+turn back on themselves. They always continue going further to the right.
 
-For obvious reasons, a property represented by a curve
-cannot have more than **one** value at a given time, hence:
-
-- When you move a control point ahead of a control point that was previously ahead of the point that you are moving,
-  the two control points switch their order in the edited curve, to avoid the curve going back in time.
-- For the above reason, it is impossible to have a closed F-Curve.
+If you try to make a curve go left by dragging one control point past another,
+it switches the order of the points to prevent this.
 
 .. list-table:: Two control points switching: the curve cannot go back in time!
 

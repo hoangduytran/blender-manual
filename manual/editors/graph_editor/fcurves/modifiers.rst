@@ -10,14 +10,13 @@ F-Curve Modifiers
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar region --> Modifiers --> Modifiers`
+   :Panel:     :menuselection:`Sidebar region --> Modifiers`
 
-F-Curve modifiers are similar to object modifiers, in that they add non-destructive effects,
-that can be adjusted at any time, and layered to create more complex effects.
-Like object modifiers, F-Curve modifiers are evaluated from the top down.
-In other words, the top modifier is calculated first and consequent modifiers are calculated in order.
-Modifiers can be moved by dragging the modifier box from the top right.
+F-Curve modifiers are similar to object modifiers, in that they add non-destructive effects
+that can be adjusted at any time and layered to create more complex effects.
 
+Modifiers are evaluated from top to bottom.
+You can change their order by dragging the dots in their top right corner.
 
 Interface
 =========
@@ -25,16 +24,24 @@ Interface
 .. _bpy.types.FModifier.name:
 
 Name
-   By default modifiers are named by their function, however, the name can be changed by double clicking the name.
+   By default, modifiers are named after their function, but this can be changed.
 
 .. _bpy.types.FModifier.mute:
 
 Mute
-   Modifiers can be muted or hidden by toggling the checkbox in the modifier's panel header.
+   Click the checkbox in a modifier's header to disable it.
 
 Delete
-   Modifiers can be removed using the delete button in the modifier's panel header.
+   Click the cross in a modifier's header to delete it.
 
+Influence
+   Lets you blend between the original curve and the modified one.
+
+Restrict Frame Range
+   Start/End
+      The frame on which the modifier's effect starts/ends.
+   Blend In/Out
+      The number of frames, relative the start/end values above, it takes the modifier to fade in/out.
 
 Adding a Modifier
 =================
@@ -43,9 +50,9 @@ Adding a Modifier
 
    Modifiers panel.
 
-The F-Curve modifier panel is located in the Sidebar region.
-Select a curve by selecting one of its curve points, or by selecting the channel list.
-Click on the *Add Modifier* menu to select a modifier.
+Modifiers can be managed on the *Modifiers* tab of the Sidebar.
+Select an F-Curve (in the channel region or by selecting one of its keyframes),
+then click the *Add Modifier* dropdown and choose the modifier to add.
 
 
 Types of Modifiers
@@ -57,41 +64,31 @@ Types of Modifiers
 Generator Modifier
 ------------------
 
-Generator creates a polynomial function.
+Creates a polynomial function.
 These are basic mathematical formulas that represent lines, parabolas,
 and other more complex curves, depending on the values used.
+
+.. seealso::
+
+   The `Wikipedia Page <https://en.wikipedia.org/wiki/Polynomial>`__
+   for more information on polynomials.
 
 Mode
    Method used to represent the equation.
 
-   :Expanded Polynomial:   Equation in the form :math:`y = x^1 + x^2 + ... + x^n`.
-   :Factorized Polynomial: Equation in the form :math:`y = (Ax + B)(Cx + D)`.
+   Expanded Polynomial
+      Equation in the form :math:`y = A + Bx^1 + Cx^2 + ... + Dx^n`.
+   Factorized Polynomial
+      Equation in the form :math:`y = (Ax + B)(Cx + D)`.
 
 Additive
-   This option causes the modifier to be added to the curve, instead of replacing it by default.
+   Add the polynomial to the curve rather than replacing it.
 
 Order
-   Specify the order of the polynomial, or the highest power of ``X`` for this polynomial.
-   (Number of coefficients: 1.)
+   The highest power of ``x`` for this polynomial.
 
-   Change the Coefficient values to reshape the curve.
-
-   .. seealso::
-
-      The `Wikipedia Page <https://en.wikipedia.org/wiki/Polynomial>`__
-      for more information on polynomials.
-
-Influence
-   Controls the percentage of affect the modifier has on the F-Curve.
-
-
-Restrict Frame Range
-^^^^^^^^^^^^^^^^^^^^
-
-Start/End
-   The frame on which the modifier's effect starts/ends.
-Blend In, Out
-   The number of frames, relative the start/end values above, the modifier takes to fade in/out.
+Coefficient
+   The constants A, B, C... in the equation.
 
 
 .. index:: F-Curve Modifiers; Built-in Function Modifier
@@ -104,17 +101,17 @@ These are additional formulas, each with the same options to control their shape
 Consult mathematics reference for more detailed information on each function:
 
 Type
-   The built-in function to use.
+   The built-in function to use:
 
-   :Sine: `Sine <https://en.wikipedia.org/wiki/Sine>`__.
-   :Cosine: `Cosine <https://en.wikipedia.org/wiki/Trigonometric_functions>`__.
-   :Tangent: `Tangent <https://en.wikipedia.org/wiki/Trigonometric_functions>`__.
-   :Square Root: The square root of the value.
-   :Natural Logarithm: The natural log of the value.
-   :Normalized Sine: :math:`sin(x)/x`.
+   - `Sine <https://en.wikipedia.org/wiki/Sine>`__
+   - `Cosine <https://en.wikipedia.org/wiki/Trigonometric_functions>`__
+   - `Tangent <https://en.wikipedia.org/wiki/Trigonometric_functions>`__
+   - `Square Root <https://en.wikipedia.org/wiki/Square_root>`__
+   - `Natural Logarithm <https://en.wikipedia.org/wiki/Natural_logarithm>`__
+   - Normalized Sine: :math:`sin(x)/x`
 
 Additive
-   This option causes the modifier to be added to the curve, instead of replacing it by default.
+   Add the function to the curve rather than replacing it.
 
 Amplitude
    Adjusts the Y scaling.
@@ -125,18 +122,6 @@ Phase Offset
 Value Offset
    Adjusts the Y offset.
 
-Influence
-   Controls the percentage of affect the modifier has on the F-Curve.
-
-
-Restrict Frame Range
-^^^^^^^^^^^^^^^^^^^^
-
-Start/End
-   The frame on which the modifier's effect starts/ends.
-Blend In, Out
-   The number of frames, relative the start/end values above, the modifier takes to fade in/out.
-
 
 .. index:: F-Curve Modifiers; Envelope Modifier
 .. _bpy.types.FModifierEnvelope:
@@ -145,37 +130,29 @@ Blend In, Out
 Envelope Modifier
 -----------------
 
-Allows you to adjust the overall shape of a curve with control points.
+Lets you reshape the curve. First, you define an envelope, which consists of two horizontal
+lines that more or less match the curve's lower and upper bounds. Then, you add control points,
+where each point can push, squeeze, and stretch the envelope (and the curve along with it)
+at a certain frame.
+
+.. figure:: /images/editors_graph-editor_fcurves_modifiers_envelope.png
+   
+   The Envelope modifier.
 
 Reference
-   Set the Y value the envelope is centered around.
-Min
-   Lower distance from Reference Value for ``1:1`` default influence.
-Max
-   Upper distance from Reference Value for ``1:1`` default influence.
+   The value which the envelope is centered around.
+Min/Max
+   The offset from the reference value to the envelope's initial lower/upper bound.
 
 Add Control Point
-   Add a set of control points. They will be created at the current frame.
+   Adds a control point at the current frame.
 
 Point
    Frame
-      Set the frame number for the control point.
-   Min
-      Specifies the lower control point's position.
-   Max
-      Specifies the upper control point's position.
-
-Influence
-   Controls the percentage of affect the modifier has on the F-Curve.
-
-
-Restrict Frame Range
-^^^^^^^^^^^^^^^^^^^^
-
-Start/End
-   The frame on which the modifier's effect starts/ends.
-Blend In, Out
-   The number of frames, relative the start/end values above, the modifier takes to fade in/out.
+      The frame of the control point.
+   Min/Max
+      The offset from the reference value to the envelope's adjusted lower/upper bound
+      at this frame.
 
 
 .. index:: F-Curve Modifiers; Cycles Modifier
@@ -184,36 +161,25 @@ Blend In, Out
 Cycles Modifier
 ---------------
 
-Cycles allows you add cyclic motion to a curve that has two or more control points.
-The options can be set for before and after the curve.
+Makes the curve repeat itself.
 
 .. note::
 
    The Cycles Modifier can only be the first modifier.
 
 Before/After Mode
-   :No Cycles: Do not repeat curve data before/after.
-   :Repeat Motion:
-      Repeats the curve data, while maintaining their values each cycle.
-   :Repeat with Offset:
-      Repeats the curve data, but offsets the value of the first point to the value of the last point each cycle.
-   :Repeat Mirrored:
-      Each cycle the curve data is flipped across the X axis.
+   No Cycles
+      Do not repeat the curve before/after the original.
+   Repeat Motion
+      Repeats the curve, keeping the values of each copy the same.
+   Repeat with Offset
+      Repeats the curve, offsetting each copy vertically so that its first keyframe matches the
+      previous last keyframe.
+   Repeat Mirrored
+      Repeats the curve, flipping every other copy horizontally.
 
 Count
-   Set the number of times to cycle the data. A value of 0 cycles the data infinitely.
-
-Influence
-   Controls the percentage of affect the modifier has on the F-Curve.
-
-
-Restrict Frame Range
-^^^^^^^^^^^^^^^^^^^^
-
-Start/End
-   The frame on which the modifier's effect starts/ends.
-Blend In, Out
-   The number of frames, relative the start/end values above, the modifier takes to fade in/out.
+   The number of copies to create. A value of 0 means infinite.
 
 
 Trivially Cyclic Curves
@@ -237,37 +203,25 @@ Noise Modifier
 --------------
 
 Modifies the curve with a noise formula.
-This is useful for creating subtle or extreme randomness to animated movements,
+This is useful for adding subtle or extreme randomness to animated movements,
 like camera shake.
 
 Blend Type
-   :Replace: Adds a -0.5 to 0.5 range noise function to the curve.
-   :Add: Adds a 0 to 1 range noise function to the curve.
-   :Subtract: Subtracts a 0 to 1 range noise function to the curve.
-   :Multiply: Multiplies a 0 to 1 range noise function to the curve.
+   :Replace: Adds noise in the range [-0.5, 0.5].
+   :Add: Adds noise in the range [0, 1].
+   :Subtract: Subtracts noise in the range [0, 1].
+   :Multiply: Multiplies by noise in the range [0, 1].
 
 Scale
-   Adjust the overall size of the noise. Values further from 0 give less frequent noise.
+   Changes the horizontal scale of the noise. Higher values make for less dense oscillation.
 Strength
-   Adjusts the Y scaling of the noise function.
+   Changes the vertical scale of the noise.
 Offset
    Offsets the noise in time.
 Phase
    Adjusts the random seed of the noise.
 Depth
    Adjusts how detailed the noise function is.
-
-Influence
-   Controls the percentage of affect the modifier has on the F-Curve.
-
-
-Restrict Frame Range
-^^^^^^^^^^^^^^^^^^^^
-
-Start/End
-   The frame on which the modifier's effect starts/ends.
-Blend In, Out
-   The number of frames, relative the start/end values above, the modifier takes to fade in/out.
 
 
 .. index:: F-Curve Modifiers; Limits Modifier
@@ -276,24 +230,13 @@ Blend In, Out
 Limits Modifier
 ---------------
 
-Limit curve values to specified X and Y ranges.
+Limits the curve to specific time and value ranges.
 
 Minimum, Maximum X
-   Cuts a curve off at these frames ranges, and sets their minimum value at those points.
+   Removes the original curve data to the left of the minimum frame and to the right of the maximum,
+   replacing it by :ref:`Constant extrapolation <bpy.ops.graph.extrapolation_type>`.
 Minimum, Maximum Y
-   Truncates the curve values to a range.
-
-Influence
-   Controls the percentage of affect the modifier has on the F-Curve.
-
-
-Restrict Frame Range
-^^^^^^^^^^^^^^^^^^^^
-
-Start/End
-   The frame on which the modifier's effect starts/ends.
-Blend In, Out
-   The number of frames, relative the start/end values above, the modifier takes to fade in/out.
+   Clamps the curve values, never letting them go below the minimum or above the maximum.
 
 
 .. index:: F-Curve Modifiers; Stepped Interpolation Modifier
@@ -302,26 +245,15 @@ Blend In, Out
 Stepped Interpolation Modifier
 ------------------------------
 
-Gives the curve a stepped appearance by rounding values down within a certain range of frames.
+Gives the curve a stepped appearance by sampling it every N frames and making it hold its value
+after each sample. In a sense, this lowers the curve's frame rate by letting it change its value
+less frequently, producing choppy movement as a result.
 
 Step Size
-   Specify the number of frames to hold each frame.
+   The number of frames to hold each step.
 Offset
-   Reference number of frames before frames get held.
-   Use to get hold for (1-3) vs (5-7) holding patterns.
+   The frame at which the first step begins.
 Start Frame
-   Restrict modifier to only act before its "end" frame.
+   The frame where to start applying the effect.
 End Frame
-   Restrict modifier to only act after its "start" frame.
-
-Influence
-   Controls the percentage of affect the modifier has on the F-Curve.
-
-
-Restrict Frame Range
-^^^^^^^^^^^^^^^^^^^^
-
-Start/End
-   The frame on which the modifier's effect starts/ends.
-Blend In, Out
-   The number of frames, relative the start/end values above, the modifier takes to fade in/out.
+   The frame where to stop applying the effect.

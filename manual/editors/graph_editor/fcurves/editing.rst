@@ -11,24 +11,29 @@ Transform
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Key --> Transform`
 
-An F-Curve can be edited by transforming the locations of the keyframes.
+An F-Curve can be edited by transforming the locations of its keyframes.
 
 Move, Rotate, Scale
    Like other elements in Blender, keyframes can be
-   moved, rotated, or scaled as described in
+   moved, rotated, and scaled as described in
    :doc:`Basic Transformations </scene_layout/object/editing/transform/introduction>`.
-Extend
-   Moves keyframes relative to the current frame.
-   If the mouse is to the left of the Playhead,
-   this operator only affects the selected keyframes that are to the left of the Playhead.
-   On the contrary, if the mouse is to the right of the Playhead,
-   this operator only affects the selected keyframes that are to the right of the Playhead.
+Extend :kbd:`E`
+   Lets you quickly move the selected keyframes that are on a certain side of the Playhead.
+   This is handy if you need to, say, move all the keyframes after a certain time point to
+   the right to make space for new ones.
+
+   To use this operator, first select some or all keyframes and place your mouse cursor to
+   the left or right of the Playhead. Then, press :kbd:`E`, move the mouse to move (only)
+   the keyframes on that side of the Playhead, and press :kbd:`LMB` to confirm
+   (or :kbd:`RMB` to cancel).
 
 .. tip::
 
-   For precise control of the keyframe position and value,
-   you can set values in the *Active Keyframe* of the Sidebar region.
+   You can also change the *Key Frame* and *Value* properties in
+   :menuselection:`Sidebar --> F-Curve --> Active Keyframe` if you want to specify exact numbers.
 
+While transforming keyframes, you can hold :kbd:`Shift` to move them more slowly for
+better precision, or :kbd:`Ctrl` to move them in coarse increments.
 
 .. _bpy.ops.graph.snap:
 
@@ -40,18 +45,21 @@ Snap
    :Menu:      :menuselection:`Key --> Snap`
    :Shortcut:  :kbd:`Shift-S`
 
-Keyframes can be snapped to different properties by using the *Snap Keys* tool.
+Apart from using the snapping operators in this menu, you can also turn on
+:ref:`snapping <bpy.types.ToolSettings.use_snap_anim>` in the header.
 
 Selection to Current Frame
-   Snap the selected keyframes to the current frame.
+   Set the selected keyframes' time to the current frame.
 Selection to Cursor Value
-   Snap the selected keyframes to the *2D Cursor*.
+   Set the selected keyframes' value to that of the :ref:`2D Cursor <graph_editor-2d-cursor>`.
 Selection to Nearest Frame
-   Snap the selected keyframes to their nearest frame individually.
+   Round the time of each keyframe to the nearest frame.
 Selection to Nearest Second
-   Snap the selected keyframes to their nearest second individually, based on the *FPS* of the scene.
+   Round the time of each keyframe to the nearest second. You can use
+   :menuselection:`View --> Show Seconds` to show seconds instead of frames
+   at the top of the editor.
 Selection to Nearest Marker
-   Snap the selected keyframes to their nearest marker individually.
+   Set the time of each keyframe to that of the nearest :doc:`marker </animation/markers>`.
 Flatten Handles
    Flatten the *Bézier* handles for the selected keyframes.
 
@@ -71,23 +79,19 @@ Equalize Handles
    Ensure selected keyframes' handles have equal length.
 
    Side
-      Side of the keyframes' Bézier handles to affect
-
-      :Left: Equalize selected keyframes' left handles.
-      :Right: Equalize selected keyframes' right handles.
-      :Both: Equalize both of a keyframe's handles.
+      Which handles to affect (left, right, or both).
    Handle Length
       Length to make selected keyframes' Bézier handles.
    Flatten
-      Make the values of the selected keyframes' handles the same as their respective keyframes.
+      Make the values of the handles the same as their respective keyframes.
 
 Cursor to Selected :kbd:`Ctrl-G`
-   Places the cursor at the midpoint between selected keyframes.
+   Changes the time and value of the 2D Cursor to the average time and value of the selected keyframes.
 
 .. _bpy.ops.graph.snap_cursor_value:
 
 Cursor Value to Selection
-   Places the cursor value on the average value of selected keyframes.
+   Changes the value of the 2D Cursor to the average value of the selected keyframes.
 
 
 .. _bpy.ops.graph.mirror:
@@ -100,18 +104,18 @@ Mirror
    :Menu:      :menuselection:`Key --> Mirror`
    :Shortcut:  :kbd:`Ctrl-M`
 
-Selected keyframes can be mirrored over different properties using the *Mirror Keys* tool.
+Mirrors the selected keyframes across a reference point.
 
 By Times over Current Frame
-   Mirror horizontally over the current frame.
+   Mirror horizontally across the current frame.
 By Values over Cursor Value
-   Mirror vertically over the 2D cursor.
-By Times over Time 0
-   Mirror horizontally over frame 0.
-By Values over Value 0
-   Mirror vertically over value 0.
+   Mirror vertically across the 2D Cursor's value.
+By Times over Zero Time
+   Mirror horizontally across frame 0.
+By Values over Zero Value
+   Mirror vertically across value 0.
 By Times over First Selected Marker
-   Mirror horizontally over the first selected marker.
+   Mirror horizontally across the first selected marker.
 
 
 .. _bpy.ops.graph.frame_jump:
@@ -124,7 +128,7 @@ Jump to Selected
    :Menu:      :menuselection:`Key --> Jump to Selected`
    :Shortcut:  :kbd:`Ctrl-G`
 
-Places the 2D cursor at the center of the selected keyframes.
+Places the 2D Cursor at the average time and value of the selected keyframes.
 
 
 .. _bpy.ops.graph.keyframe_insert:
@@ -137,21 +141,18 @@ Insert
    :Menu:      :menuselection:`Key --> Insert`
    :Shortcut:  :kbd:`I`
 
-Inserts a keyframe to the active F-Curve at the mouse position.
-The newly added keyframes will be selected, making it easier to quickly tweak the newly added keyframes.
-All previously selected keyframes are kept selected by using :kbd:`I`.
+Adds new keyframes and selects them. Previously selected keyframes stay selected too.
 
-Type
-   :All Channels:
-      Insert a keyframe on all visible and editable F-Curves using each curve's current value.
-   :Only Selected Channels:
-      Insert a keyframe on selected F-Curves using each curve's current value.
-   :Only Active F-Curve:
-      Insert a keyframe on the active F-Curve using the curve's current value.
-   :Active Channels at Cursor:
-      Insert a keyframe for the active F-Curve at the cursor point.
-   :Selected Channels at Cursor:
-      Insert a keyframe for selected F-Curves at the cursor point.
+All Channels
+   Insert a keyframe on all visible and editable F-Curves using each curve's current value.
+Only Selected Channels
+   Insert a keyframe on the selected F-Curves using each curve's current value.
+Only Active F-Curve
+   Insert a keyframe on the active F-Curve using the curve's current value.
+Active Channels at Cursor
+   Insert a keyframe on the active F-Curve at the 2D Cursor's value.
+Selected Channels at Cursor
+   Insert a keyframe on the selected F-Curves at the 2D Cursor's value.
 
 
 .. _bpy.ops.graph.copy:
@@ -165,44 +166,52 @@ Copy/Paste
    :Menu:      :menuselection:`Key --> Copy`, :menuselection:`Key --> Paste`
    :Shortcut:  :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
 
-Use :kbd:`Ctrl-C` to copy selected keyframes and :kbd:`Ctrl-V` to paste the previously copied keyframes.
-During the paste action, the :ref:`bpy.ops.screen.redo_last` panel provides some options in
-how the paste is applied.
+Use :kbd:`Ctrl-C` to copy the selected keyframes and :kbd:`Ctrl-V` to paste them.
+After pasting, the :ref:`bpy.ops.screen.redo_last` panel provides some extra options:
 
 Frame Offset
-   :No Offset:
-      Pastes the keyframes in the location they were copied from.
-   :Frame Relative:
-      Pastes the keyframe relative to the current frame based on the locations of
-      the keyframes relative to the current frame when they were copied.
-   :Frame Start:
-      Pastes the keyframes with the first keyframe of the copied set placed at the current frame.
-   :Frame End:
-      Pastes the keyframes with the last keyframe of the copied set placed at the current frame.
+   Offsets the pasted keyframes horizontally so that...
+
+   Frame Start
+      ...the first one lands on the current frame.
+   Frame End
+      ...the last one lands on the current frame.
+   Frame Relative
+      ...they land at the same distance from the current frame as when they were copied.
+   No Offset
+      ...they stay at their original frames.
 
 Value Offset
-   :No Offset:
-      Pastes the keyframes with the value they were copied from.
-   :Cursor Value:
-      Paste the keyframes at the 2D cursor as a starting point.
-   :Current Frame Value:
-      Paste keyframes relative to the value of the curve under the cursor.
-   :Right Key:
-      Paste keyframes such that the last frame matches the key value right of the cursor.
-   :Left Key:
-      Paste keyframes such that the first key matches the key value left of the cursor.
+   Offsets the pasted keyframes vertically so that...
+
+   Left Key
+      ...the first one has the value of the existing keyframe to the left of the Playhead.
+   Right Key
+      ...the last one has the value of the existing keyframe to the right of the Playhead.
+   Current Frame Value
+      ...the first one has the value of the curve at the current frame.
+   Cursor Value
+      ...the first one has the value of the :ref:`2D Cursor <graph_editor-2d-cursor>`.
+   No Offset
+      ...they keep their original values.
 
 Type
-   :Mix:
-      Integrates the pasted keyframes in with existing keyframes only overwriting keyframes that share a frame.
-   :Overwrite All:
-      Removes all previous keyframes and replaces them with the pasted keyframes.
-   :Overwrite Range:
-      Overwrite keys in pasted range.
-   :Overwrite Entire Range:
-      Overwrite keys in pasted range, using the range of all copied keys.
+   Mix
+      Integrates the pasted keyframes with existing ones, only overwriting those that share a frame.
+   Overwrite All
+      Removes all previous keyframes in the target F-Curves.
+   Overwrite Range
+      Within each F-Curve, remove the existing keyframes that are in the range of the keyframes
+      pasted into it.
+   Overwrite Entire Range
+      Within each F-Curve, remove the existing keyframes that are in the range of all pasted
+      keyframes combined.
+
 Flipped
-   Paste keyframes from mirrored bones if they exist.
+   If you copied keyframes from one or more pairs of
+   :doc:`symmetrically opposite bones </animation/armatures/bones/editing/naming>`,
+   enabling this option will paste the keyframes of the left bones into the curves of the right ones
+   and vice versa. In addition, the values are inverted, effectively mirroring the animation.
 
 
 .. _bpy.ops.graph.duplicate_move:
@@ -254,7 +263,8 @@ Interpolation Mode
    :Menu:      :menuselection:`Key --> Interpolation Mode`
    :Shortcut:  :kbd:`T`
 
-Sets the :ref:`interpolation mode <editors-graph-fcurves-settings-interpolation>` between the selected keyframes.
+Sets the :ref:`interpolation mode <editors-graph-fcurves-settings-interpolation>` of the selected keyframes.
+This determines the curve interpolation between each keyframe and the next.
 
 
 .. _bpy.ops.graph.easing_type:
@@ -268,6 +278,8 @@ Easing Type
    :Shortcut:  :kbd:`Ctrl-E`
 
 Sets the :ref:`easing mode <editors-graph-fcurves-settings-easing>` of the selected keyframes.
+This determines whether easing is applied to the left side, right side, or both sides of the
+curve segments between each keyframe and the next.
 
 
 Density
@@ -283,19 +295,23 @@ Decimate
    :Menu:      :menuselection:`Key --> Density --> Decimate (Ratio)`
    :Menu:      :menuselection:`Key --> Density --> Decimate (Allowed Change)`
 
-The *Decimate* tool simplifies an F-Curve by removing
-keyframes that influence the curve shape the least.
+Simplifies an F-Curve by removing the keyframes that influence its shape the least.
 
 Mode
-   Controls which method is used pick the number of keyframes to use.
+   How to pick the number of keyframes to delete.
 
-   :Ratio:
-      Deletes a defined percentage of keyframes,
-      the amount of keyframes to delete is define by the *Remove* property.
-   :Error Margin:
-      Deletes keyframes which only allowing the F-Curve to change by a defined amount.
-      The amount of change is controlled by the *Max Error Margin*
-      which controls how much the new decimated curve is allowed to deviate from the original.
+   Ratio
+      Deletes a certain percentage of keyframes.
+      
+      Remove
+         The percentage of keyframes to remove.
+
+   Error Margin
+      Deletes as many keyframes as possible while ensuring the F-Curve's shape changes
+      no more than a certain amount.
+
+      Max Error Margin
+         How much the decimated curve may deviate from the original.
 
 
 .. _bpy.ops.graph.bake_keys:
@@ -308,7 +324,11 @@ Bake Keyframes
    :Menu:      :menuselection:`Key --> Density --> Bake Keyframes`
    :Shortcut:  :kbd:`Shift-Alt-O`
 
-Baking a set of keyframes replaces interpolated values with a new keyframe for each frame.
+Creates a keyframe at every frame.
+
+.. seealso::
+   :ref:`Bake Channels <bpy.ops.graph.channels_bake>`, which offers options on
+   what range to bake and how.
 
 .. list-table::
 
@@ -331,23 +351,23 @@ Clean Keyframes
    :Menu:      :menuselection:`Key --> Density --> Clean Keyframes`
    :Shortcut:  :kbd:`X`
 
-Removes redundant keys within the selection of keyframes.
-*Clean Keyframes* resets the keyframe tangents on selected keyframes
-to their auto-clamped shape, if they have been modified.
+Finds redundant keyframes among the selected ones and deletes them. A keyframe is seen as
+redundant if it has the same value as its neighbors -- even if the curve segments around it
+aren't flat.
 
 .. tip::
 
-   The modified curve left after the *Clean* tool is run is not the same as the original,
-   so this tool is better used before doing custom editing of F-Curves and after initial keyframe insertion,
-   to get rid of any unwanted keyframes inserted while doing mass keyframe insertion
-   (by selecting all bones and pressing :kbd:`I` for instance).
+   This operator is likely to change the shape of the affected curves, so it's best run after
+   e.g. bulk keyframe insertion on all the bones of an armature (which creates useless keyframes
+   on bones that haven't moved) and before tweaking the curves by hand.
+
+Threshold
+   Value threshold. By increasing this, you can also delete keyframes that *almost* have the
+   same value as their neighbors.
 
 Channels
-   Operate on selected channels and cleans them regardless of keyframe selection.
-   Deletes the channel itself if it is only left with
-   a single keyframe containing the default property value and
-   it's not being used by any generative F-Curve modifiers or drivers.
-
+   Cleans all the keyframes (even unselected ones) in the selected F-Curves.
+   If a curve is left with only one keyframe, it's deleted entirely.
 
 .. list-table::
 
@@ -368,6 +388,14 @@ Blend
    :Menu:      :menuselection:`Key --> Blend`
    :Shortcut:  :kbd:`Alt-D`
 
+Adjusts the values of the selected keyframes by a certain percentage. Select a blending operator,
+move the mouse left or right to adjust the factor, and click :kbd:`LMB` to confirm
+(or :kbd:`RMB` to cancel).
+
+Several blending operators work based on "neighboring keyframes." This means that they divide the
+selected keyframes into contiguous groups, then reference the unselected keyframes immediately
+before and after each group.
+
 .. _bpy.ops.graph.breakdown:
 
 Breakdown
@@ -377,12 +405,15 @@ Breakdown
 
    :Menu:      :menuselection:`Key --> Blend --> Breakdown`
 
-Moves the selected keyframes to an in between position relative to the adjacent keyframes.
-To use this operator, drag the mouse left or right to adjust the operator's *Factor* property.
+Sets the value of the selected keyframes to an interpolation of their neighbors.
 
 Factor
-   The amount to favor either the left or the right key. Values less than 0.5 favor the left keyframe,
-   values greater than 0.5 favor the right keyframe, a value of 0.5 results in no change.
+   At -1, the keyframes are set to the value of the left neighbor.
+   
+   At 1, they're set to the value of the right neighbor.
+
+   For other factors, they're set to an interpolation between the two neighbor values,
+   with 0 being right in the middle.
 
 
 .. _bpy.ops.graph.blend_to_neighbor:
@@ -394,13 +425,14 @@ Blend to Neighbor
 
    :Menu:      :menuselection:`Key --> Blend --> Blend to Neighbor`
 
-Transitions the current keyframe with the neighboring keyframes in the timeline.
-In order for this operator to work, there must be a keyframe before and after the current frame.
-To use this operator, drag the mouse left or right to adjust the operator's *Blend* property.
+Moves each selected keyframe towards the value of the left or right neighbor by a certain percentage.
 
 Blend
-   The amount to favor either the left or the right key. Values less than 0.5 favor the left keyframe,
-   values greater than 0.5 favor the right keyframe, a value of 0.5 results in no change.
+   When negative, each keyframe moves *Blend* percent to the value of the left neighbor.
+
+   When positive, they move to the right neighbor.
+   
+   When zero, they keep their original values.
 
 
 .. _bpy.ops.graph.blend_to_default:
@@ -412,12 +444,10 @@ Blend to Default Value
 
    :Menu:      :menuselection:`Key --> Blend --> Blend to Default Value`
 
-Transitions the current keyframe towards the property's default value.
-To use this operator, drag the mouse left or right to adjust the operator's *Blend* property.
+Moves the selected keyframes towards the property's default value by a certain percentage.
 
-Blend
-   The amount to favor either the current key or the default value.
-   A value of 0 represents the current key, a value of 1 represents the default value.
+Factor
+   How much to change the keyframes' values, going from 0 (no change) to 1 (reset to the default value).
 
 .. seealso::
 
@@ -434,17 +464,17 @@ Ease
 
    :Menu:      :menuselection:`Key --> Blend --> Ease`
 
-Aligns selected keyframes to follow an S-curve between the first and last keyframe.
-To use this operator, drag the mouse left or right to adjust the operator's *Curve Bend* property.
-During modal operations, pressing :kbd:`Tab` will change which property the slider affects.
+Makes the selected keyframes follow an S-curve. While the slider is visible (so after activating
+the operator but before confirming with :kbd:`LMB`), you can press :kbd:`Tab` to toggle which
+of the following settings to edit:
 
 Curve Bend
-   Changes which key the S-curve favors. At 0 the S-curve is right in the center. At either -1 or 1
-   it favors one of the ends.
+   A negative value gives more weight to the left side, while a positive value gives more weight
+   to the right. A value of 0 results in a balanced curve.
 
 Sharpness
-   How abruptly the S-curve changes. At 0 it will be a straight line. Higher values give a quicker change.
-
+   A low value results in an almost straight diagonal line, while a high value results in a steep
+   rise/drop in the curve.
 
 .. _bpy.ops.graph.blend_offset:
 
@@ -455,12 +485,15 @@ Blend Offset
 
    :Menu:      :menuselection:`Key --> Blend --> Blend Offset`
 
-Move the selected keyframes as a block so the first/last key align with the key before/after the selection.
-Does nothing when there is no key before/after the current selection.
+Moves the selected keyframes up or down -- all by the same amount -- until the first/last one matches
+the left/right neighbor.
 
 Offset Factor
-   At -1 the first key of the selection is aligned with the key just before the selection.
-   At 1 the last key is aligned with the key after the selection.
+   At -1, the first selected key gets aligned to its left neighbor.
+
+   At 1, the last selected key gets aligned to its right neighbor.
+
+   At 0, nothing changes.
 
 
 .. _bpy.ops.graph.blend_to_ease:
@@ -472,11 +505,16 @@ Blend to Ease
 
    :Menu:      :menuselection:`Key --> Blend --> Blend to Ease`
 
-Blend the selected keys from their current position to either an ease in or an ease out curve.
+Blends the selected keys to either an "ease in" or an "ease out" curve.
 
 Blend
-   At -1 the keys will start slowly and then accelerate to the end.
-   At 1 the keys will rise quickly and then taper off.
+   At -1, the keys will follow an "ease in" curve, with small value changes in the beginning
+   and large changes towards the end.
+
+   At 1, the keys will follow an "ease out" curve, with large value changes in the beginning
+   and small changes towards the end.
+
+   At 0, nothing changes.
 
 
 .. _bpy.ops.graph.match_slope:
@@ -488,13 +526,33 @@ Match Slope
 
    :Menu:      :menuselection:`Key --> Blend --> Match Slope`
 
-Blend the selected keys to a straight line formed by the two keys just outside the current selection.
-The factor determines if the two keys left or right of the selection are used. If there are not
-two keys in the given direction the operator will throw a warning and not change the keys.
+Blends the selected keys towards a straight line going through two keys just outside the current selection.
 
 Factor
-   Determines which slope to blend towards. At -1 will blend to the left slope, at 1 to the right.
+   Negative values use the two keys to the left of the selection.
 
+   Positive values use the keys to the right.
+
+   At zero, nothing changes.
+
+.. _bpy.ops.graph.push_pull:
+
+Push Pull
+---------
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Blend --> Push Pull`
+
+Moves the selected keys towards, or away from, the straight line going through the first and last
+selected key.
+
+Factor
+   At 0, the keys will lie on the straight line.
+
+   At 1, they keep their original values.
+
+   At 2, each key's value will be twice as far from the straight line as before.
 
 .. _bpy.ops.graph.shear:
 
@@ -505,14 +563,14 @@ Shear Keys
 
    :Menu:      :menuselection:`Key --> Blend --> Shear Keys`
 
-Shear the keys based on the position of the keyframe selection ends.
-Pressing :kbd:`D` while the modal operator is active will toggle the anchor key
-between the start and end of the selection.
+Shears the selected keyframes -- that is, changes their value by an amount that increases
+as they get further away in time from a reference keyframe. By default, this reference keyframe
+is the leftmost selected one, but you can instead use the rightmost one by pressing :kbd:`D`.
 
 Shear Factor
-   How much to shear and if it shears up or down. Negative values shear down, positive shear up.
+   How much to shear. Negative values move keyframes downwards, while positive ones move them up.
 Direction
-   `From Left` or `From Right` determine the anchor key from which to shear.
+   Whether to use the leftmost or the rightmost selected keyframe as a reference.
 
 
 .. _bpy.ops.graph.scale_average:
@@ -524,11 +582,14 @@ Scale Average
 
    :Menu:      :menuselection:`Key --> Blend --> Scale Average`
 
-Scale the selected key segments to their average value. This differs from the regular scaling by being per segment.
-That means selected keyframes on two different F-Curves will scale to different points.
+Scales the selected keyframes vertically, using their average value as the pivot.
 
 Factor
-   The scale factor applied to the F-Curve segments.
+   At 0, the keyframes will all have the average value.
+
+   At 1, they keep their original values.
+
+   At 2, each keyframe's value will be twice as far from the average as before.
 
 
 .. _bpy.ops.graph.scale_from_neighbor:
@@ -540,28 +601,14 @@ Scale from Neighbor
 
    :Menu:      :menuselection:`Key --> Blend --> Scale from Neighbor`
 
-Scale the selected key segments from either their left or right neighbor key. Pressing :kbd:`D` while in the modal
-operator switches the reference key from one end to the other.
+Scales the selected keyframes vertically, using a keyframe just outside the selection as
+the pivot. By default, this is the neighbor to the left of the selection,
+but you can instead use the right one by pressing :kbd:`D`.
 
 Factor
-   The scale factor applied to the F-Curve segments.
+   The scale factor to apply.
 Reference Key
-   `From Left` or `From Right` determine from which end of the segment to scale.
-
-
-.. _bpy.ops.graph.push_pull:
-
-Push Pull
----------
-
-.. reference::
-
-   :Menu:      :menuselection:`Key --> Blend --> Push Pull`
-
-Scale the keys from an imaginary line that runs from the start to the end of the selected segment.
-
-Factor
-   How far to push or pull the keys.
+   Whether to use the left or right neighbor as the pivot.
 
 
 .. _bpy.ops.graph.time_offset:
@@ -573,13 +620,15 @@ Time Offset
 
    :Menu:      :menuselection:`Key --> Blend --> Time Offset`
 
-This operator shifts the value of the keys in time, while keeping the actual key positions in the same place. It
-supports wrapping, so when offsetting beyond the range of the F-Curve it will take values from the other end, but
-offset in y-value so there is no jump. This works best with dense key data. Gaps in the keyframe data might cause data
-to get lost if it is shifted into the gaps.
+Shifts the values of the selected keyframes so that the resulting F-Curve appears to move in time.
+Works best with dense keyframes.
+
+As the curve leaves the selected keyframes' time range on one end, it wraps back in on the other,
+offset vertically so that the ends connect and there is no jump.
 
 Frame Offset
-   How far in frames to offset the animation.
+   By how many frames to shift the F-Curve. The slider is limited to the range -10 ... 10,
+   but you can type larger numbers too.
 
 
 Smooth
@@ -589,6 +638,33 @@ Smooth
 
    :Menu:      :menuselection:`Key --> Smooth`
    :Shortcut:  :kbd:`Alt-S`
+
+.. _bpy.ops.graph.gaussian_smooth:
+
+Smooth (Gaussian)
+-----------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Key --> Smooth --> Smooth (Gaussian)`
+
+Smooths the selected keyframes using a Gaussian kernel. Click the menu item, move the mouse left or right to
+adjust the strength, and click :kbd:`LMB` to confirm (or :kbd:`RMB` to cancel).
+
+Factor
+   How strongly the smoothing should be applied.
+
+Sigma
+   The shape of the gaussian distribution. Lower values mean a sharper curve, giving keys that are close to each
+   other more weight. A high value behaves like a simple average filter.
+
+Filter Width
+   A wider filter looks at more keyframes, producing a smoother result.
+   At a width of 1, the filter only looks at the keyframes to the immediate left and right for a weighted average.
+
+.. figure:: /images/editors_graph-editor_gaussian_smooth.jpg
+
+   F-Curve after applying the Gaussian Smooth with the original curve overlayed.
 
 
 .. _bpy.ops.graph.smooth:
@@ -602,8 +678,8 @@ Smooth (Legacy)
    :Shortcut:  :kbd:`Alt-O`
 
 There is also an option to smooth the selected curves, but beware: its algorithm seems to be
-to divide by two the distance between each keyframe and the average linear value of the curve,
-without any setting, which gives quite a strong smoothing! Note that the first and last keys
+to halve the distance between each keyframe and the average linear value of the curve,
+which gives quite a strong smoothing! Note that the first and last keys
 seem to be never modified by this tool.
 
 .. list-table::
@@ -617,34 +693,6 @@ seem to be never modified by this tool.
           F-Curve after smoothing.
 
 
-.. _bpy.ops.graph.gaussian_smooth:
-
-Smooth (Gaussian)
------------------
-
-.. reference::
-
-   :Menu:      :menuselection:`Key --> Smooth --> Smooth (Gaussian)`
-
-Smooths the selected keyframes using a Gaussian kernel. It can handle gaps in the keyframe data.
-The operator is modal with a blend factor, making it possible to tweak the strength of the filter.
-
-Factor
-   A blend factor from original to filtered curve.
-
-Sigma
-   The shape of the gaussian distribution. Lower values mean a sharper curve, giving keys that are close to each
-   other more weight. A high value behaves like a simple average filter.
-
-Filter Width
-   A wider filter looks at more keyframes, producing a smoother result.
-   At a size of 1 the filter only looks at the keyframes to the immediate left and right for a weighted average.
-
-.. figure:: /images/editors_graph-editor_gaussian_smooth.jpg
-
-   F-Curve after applying the Gaussian Smooth with the original curve overlayed.
-
-
 Butterworth Smooth
 ------------------
 
@@ -652,13 +700,17 @@ Butterworth Smooth
 
    :Menu:      :menuselection:`Key --> Smooth --> Butterworth Smooth`
 
-Smooth the selected keyframes using a Butterworth filter. This filter is ideal for
-smoothing large amounts of data because it preserves the peaks of the animation.
-The downside is that it can introduce a ripple effect when the key values change rapidly.
+Smooth the selected keyframes using a Butterworth filter. Click the menu item,
+move the mouse left or right to adjust the frequency,
+and click :kbd:`LMB` to confirm (or :kbd:`RMB` to cancel).
+
+This filter is ideal for smoothing large amounts of data because it preserves the peaks
+of the animation. The downside is that it can introduce a ripple effect when the key
+values change rapidly.
 
 Frequency Cutoff
-   The lower the value the smoother the curve. There is an implicit maximum at which
-   the value no longer changes the curve which is at half the sample rate. The sample
+   The lower the value, the smoother the curve. There is an implicit maximum at which
+   the value no longer changes the curve, which is at half the sample rate. The sample
    rate in this case is the scene frame rate multiplied by the `Samples per Frame` of this operator.
 Filter order
    Higher values mean the frequency cutoff is steeper.
@@ -667,8 +719,8 @@ Samples per Frame
    are uneven spaces between frames. If keys are on subframes, e.g. a 60fps file in a 30fps scene,
    increase this value to 2.
 Blend
-   A 0-1 value to blend from original curve to filtered curve.
+   A value between 0 and 1 for blending between the original curve and the smoothed one.
 Blend In/Out
-   The number of frames at the start and end for which to blend between the filtered and unfiltered curve.
-   This can help reducing jumps in the animation at the selection border. At value 1 it only locks the first and
-   last frame of the selection to the original position.
+   The number of frames at the start and end for which to blend between the original and smoothed curve.
+   This can help reduce jumps in the animation at the selection border. At value 1, it only locks the first and
+   last frames of the selection to their original values.
