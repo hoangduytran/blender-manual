@@ -44,17 +44,17 @@ Snap Base
 
 Determines which point in the geometry is the snap base that will snap to the target.
 
-Active
+:Active:
    Snaps using the origin (in Object Mode) or center (in Edit Mode) of the active element.
-Median
+:Median:
    Snaps using the median of the selection.
-Center
+:Center:
    Snaps using the current transformation center
    (another word for the :doc:`pivot point </editors/3dview/controls/pivot_point/index>`).
    This option is especially useful in combination with the
    :doc:`3D Cursor </editors/3dview/3d_cursor>` for choosing the snapping
    point completely manually.
-Closest
+:Closest:
    Snaps using the vertex that's closest to the target.
 
 .. list-table::
@@ -85,19 +85,19 @@ Snap Target
 
 Determines the target which the selection will be snapped to.
 
-Increment
+:Increment:
    Snaps to grid points. When in Orthographic view, the snapping increment changes depending on the zoom level.
 
    This option snaps to an imaginary grid that starts at the selection's original location and has the same
    resolution as the viewport grid. In other words, it lets you move the selection in "increments" of the
    grid cell size.
-Grid
+:Grid:
    Snaps to the grid that's displayed in the viewport.
-Vertex
+:Vertex:
    Snaps to the vertex that's closest to the mouse cursor.
-Edge
+:Edge:
    Snaps to the edge that's closest to the mouse cursor.
-Volume
+:Volume:
    Snaps the selection to a depth that's centered *inside* the object under the cursor.
    This is useful for positioning an :doc:`Armature </animation/armatures/introduction>`
    bone so it's centered inside a character's arm, for example; the other snapping options
@@ -105,9 +105,9 @@ Volume
 
    While Blender also has :doc:`Volume objects </modeling/volumes/introduction>`, this option
    is not related to those.
-Edge Center
+:Edge Center:
    Snaps to the centerpoint of the edge that's closest to the mouse cursor.
-Edge Perpendicular
+:Edge Perpendicular:
    Snaps to a specific point on the edge so that the line from the selection's original location
    (indicated by a white cross) to its new location is perpendicular to that edge.
 
@@ -129,17 +129,12 @@ Snap Target for Individual Elements
 
 Type of element for individual transformed elements to snap to.
 
-Face Project
+:Face Project:
    Snaps to the face that's under the mouse cursor.
+   This can be used for bending a flat sheet so it snugly fits against a curved surface, for example.
 
-   This can be used for bending a flat sheet so it snugly fits against a curved
-   surface, for example.
-
-   .. seealso::
-
-      :doc:`/modeling/modifiers/deform/shrinkwrap`
-
-Face Nearest
+   This works similar to the :doc:`/modeling/modifiers/deform/shrinkwrap`.
+:Face Nearest:
    Individually snaps each object (in Object Mode) or vertex (in Edit Mode) to the face that's closest
    to its new location. This makes it possible to snap to occluded geometry.
 
@@ -216,9 +211,13 @@ Specifies which transformations are affected by snapping.
 By default, snapping only happens while moving something,
 but you can also enable it for rotating and scaling.
 
+
+.. _bpy.types.ToolSettings.snap_angle_increment_3d:
+.. _bpy.types.ToolSettings.snap_angle_increment_3d_precision:
+
 Rotation Increment
 ==================
 
 Angle used in incremental snapping for the rotation operator.
-The second value is the `Rotation Precision Increment`, used for finer transformations
+The second value is the *Rotation Precision Increment*, used for finer transformations
 and activated by default with the :kbd:`Shift` key.
