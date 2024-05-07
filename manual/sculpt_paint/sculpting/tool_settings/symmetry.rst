@@ -37,10 +37,16 @@ Tile Offset X, Y, Z
    The offset allows the option to alter the tile size along all three axes.
    The default tile size is set to one unit.
 
+.. rubric:: Symmetrize
+
 .. _bpy.types.Sculpt.symmetrize_direction:
 
 Direction
    Determines which direction the model will be symmetrized.
+
+Merge Distance
+   A parameter of the *Symmetrize* operator to control
+   the distance within which symmetrical vertices are merged.
 
 .. _bpy.ops.sculpt.symmetrize:
 
@@ -48,7 +54,3 @@ Symmetrize
    Uses direction orientation to symmetrize. Since Dyntopo adds
    details dynamically it may happen that the model becomes asymmetric,
    so this a good tool for that.
-
-Merge Distance
-   A parameter of the *Symmetrize* operator to control
-   the distance within which symmetrical vertices are merged.
