@@ -14,45 +14,40 @@ Display Mode
 The editors header has a select menu that let you filter what the Outliner should show.
 It helps to narrow the list of objects so that you can find things quickly and easily.
 
-Scenes
+:Scenes:
    Shows *everything* the *Outliner* can display (in all scenes, all view layers, etc.).
-
-View Layer
+:View Layer:
    Shows all the collections and objects in the current view layer.
-
-Video Sequencer
+:Video Sequencer:
    Lists data, images and videos, that are used by the :doc:`Video Sequencer </video_editing/index>`.
-
-Blender File
+:Blender File:
    Lists all data in the current blend-file.
-
-Data API
+:Data API:
    Lists every :doc:`data-block </files/data_blocks>` along with any properties that they might have.
-
-.. _bpy.types.SpaceOutliner.lib_override_view_mode:
-
-Library Overrides
+:Library Overrides:
    Display library override data in the current blend-file. Separated further into two view modes:
 
-   :Properties:
-      Display data-blocks with overridden properties. The overridden properties are listed together with widgets to
-      modify the value of the properties.
-   :Hierarchies:
-      Visualize the hierarchical dependencies between data-blocks with library overrides. For example, to create a
-      library override of a mesh used by an object inside of a linked collection, Blender automatically creates
-      (disabled) library overrides for the object and the collection, resulting in a collection > object > mesh
-      library override hierarchy.
+   .. _bpy.types.SpaceOutliner.lib_override_view_mode:
+
+   Library Overrides Display Mode
+      :Properties:
+         Display data-blocks with overridden properties. The overridden properties are listed together with widgets to
+         modify the value of the properties.
+      :Hierarchies:
+         Visualize the hierarchical dependencies between data-blocks with library overrides. For example, to create a
+         library override of a mesh used by an object inside of a linked collection, Blender automatically creates
+         (disabled) library overrides for the object and the collection, resulting in a collection > object > mesh
+         library override hierarchy.
 
       .. _bpy.ops.ed.lib_id_override_editable_toggle:
 
-      This library override view mode has a column on the right side
-      of the editor to toggle if the library is editable or not.
-
-Orphan Data
-   Lists :doc:`data-blocks </files/data_blocks>`
-   which are unused and/or will be lost when the file is reloaded.
-   It includes data-blocks which have only a fake user. You can add/remove Fake User
-   by clicking on cross/tick icon in the right side of the Outliner editor.
+   This library override view mode has a column on the right side
+   of the editor to toggle if the library is editable or not.
+:Unused Data:
+   Lists :doc:`data-blocks </files/data_blocks>` and other data
+   that are unused and/or will be lost when the file is reloaded.
+   It includes data-blocks which have only a fake user. You can add/remove the Fake User
+   by clicking on cross/tick icon on the right side of the Outliner editor.
 
 
 .. _bpy.types.SpaceOutliner.filter_text:
