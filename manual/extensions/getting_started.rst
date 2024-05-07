@@ -127,7 +127,7 @@ Optional values:
    :website: Website for the extension.
    :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
    :permissions: Add-ons can list which resources they require. The available options are
-      ["files", "network", "camera", "microphone"].
+      ["files", "network", "clipboard", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <tags>`.
 
 .. note::
