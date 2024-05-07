@@ -109,7 +109,3 @@ Examples
    :width: 200px
 
    Example of Sky Texture.
-
-.. seealso::
-
-   :doc:`/addons/lighting/sun_position` add-on
