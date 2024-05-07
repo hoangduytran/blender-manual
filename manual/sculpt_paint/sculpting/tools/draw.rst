@@ -1,4 +1,3 @@
-
 ****
 Draw
 ****
@@ -36,7 +35,6 @@ to displace geometry in three directions instead of just one.
 
    An example of various VDM brushes used on a smooth head from the official demo file.
 
-For easy creation of VDM brushes, enable the :doc:`VDM Brush Baker </addons/baking/vdm_brush_baker>` addon.
 `Download the demo file <https://www.blender.org/download/demo-files/#sculpting>`__
 for more information and to try the feature out.
 
