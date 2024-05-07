@@ -53,7 +53,7 @@ Toggle Visibility :kbd:`Shift-H`
 Hide Active Face Set :kbd:`H`
    Hide the face set under the cursor. Press :kbd:`Shift-H` afterwards to show everything.
 
-.. _sculpt_show_all:
+.. _bpy.ops.paint.hide_show_all:
 
 Show All :kbd:`W`, :kbd:`Alt-H`
    Reveal all hidden geometry.
@@ -62,6 +62,9 @@ Show All :kbd:`W`, :kbd:`Alt-H`
 
 Invert Visible
    Hides all visible geometry and makes all hidden geometry visible.
+
+.. _bpy.ops.paint.hide_show_masked:
+
 Hide Masked
    Hides all masked vertices.
 

@@ -22,7 +22,7 @@ The most common shortcuts are :kbd:`H` to hide the face set under the cursor
 and :kbd:`Shift-H` to isolate the face set under the cursor (or show everything).
 
 :ref:`Inverting the visibility <bpy.ops.sculpt.face_set_change_visibility>`
-and :ref:`showing all <sculpt_show_all>` is also available in the :kbd:`Alt-W` pie menu.
+and :ref:`showing all <bpy.ops.paint.hide_show_all>` is also available in the :kbd:`Alt-W` pie menu.
 
 .. seealso::
 
