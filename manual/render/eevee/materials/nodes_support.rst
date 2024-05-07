@@ -1,4 +1,3 @@
-
 ***************
 Supported Nodes
 ***************
@@ -113,7 +112,7 @@ Input Nodes
 -----------
 
 Ambient Occlusion
-   The sample count is not used.
+   The *Only Local* option is not supported.
 
 Camera Data
    EveHair Inforything is compatible.
