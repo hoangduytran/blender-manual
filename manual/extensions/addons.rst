@@ -167,22 +167,50 @@ Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
 
    This has the advantage of avoiding version conflicts although it requires some work to setup each package.
 
-Import Wheel's Directly
-   Wheels themselves can lead to version conflicts,
-   since different add-ons could require different versions of the same library.
+.. _extensions-addons-wheels:
 
-   It is possible to load wheels that doesn't permanently affect ``sys.modules`` or ``sys.path``.
-   This way an add-on can load its own version of an external library from its bundled wheel file.
+Bundle Wheels (``*.whl``)
+   Wheels can be bundled using the following steps.
 
-   See Flamenco add-on for an `implementation example
-   <https://projects.blender.org/studio/flamenco/src/branch/main/addon/flamenco/wheels/__init__.py>`__.
+   Downloading Wheels
+      Download the wheel to the directory ``./wheels/``.
 
-   .. warning::
+      For wheels that are platform independent this example downloads ``jsmin``:
 
-      While this method works in many cases, it can also fail for various reasons:
+      .. code-block:: shell
 
-      - Access to files bundled with the module will fail.
-      - Imports made by the module at runtime referencing it's own modules will fail.
-      - Mis-match between the wheel and the module name aren't supported.
-      - Wheels that depend on other wheels currently aren't supported.
-      - Different system-architectures aren't supported.
+         pip wheel jsmin -w ./wheels
+
+
+      For wheels that contain binary compiled files, wheels for all supported platforms should be included:
+
+      This example downloads ``pillow`` - the popular image manipulation module.
+
+      .. code-block:: shell
+
+         pip download pillow --dest ./wheels --only-binary=:all: --python-version=3.11 --platform=macosx_11_0_arm64
+         pip download pillow --dest ./wheels --only-binary=:all: --python-version=3.11 --platform=manylinux_2_28_x86_64
+         pip download pillow --dest ./wheels --only-binary=:all: --python-version=3.11 --platform=win_amd64
+
+      To the available platform identifiers are listed on the download page. https://pypi.org/project/pillow/#files
+
+   Update the Manifest
+      In ``blender_manifest.toml`` include the wheels as a list of paths, e.g.
+
+      .. code-block:: toml
+
+         wheels = [
+            "./wheels/pillow-10.3.0-cp311-cp311-macosx_11_0_arm64.whl",
+            "./wheels/pillow-10.3.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+            "./wheels/pillow-10.3.0-cp311-cp311-win_amd64.whl",
+         ]
+
+   Now installing the package will extract the wheel into the extensions own ``site-packages`` directory.
+
+   Once the extension has been installed you can check the module is being loaded
+   by importing it in the Python console and printing it's location, e.g.
+
+   .. code-block:: python
+
+      import PIL
+      print(PIL.__file__)

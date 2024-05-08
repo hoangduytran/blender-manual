@@ -109,6 +109,12 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    #   "1998 Company Name",
    # ]
 
+   # Optional: bundle 3rd party Python modules.
+   # copyright = [
+   #   "./wheels/jsmin-3.0.1-py3-none-any.whl",
+   #   "./wheels/hexdump-3.3-py3-none-any.whl"
+   # ]
+
 Required values:
 
    :blender_version_min: Minimum supported Blender version - use at least ``4.2.0``.
@@ -129,6 +135,12 @@ Optional values:
    :permissions: Add-ons can list which resources they require. The available options are
       ["files", "network", "clipboard", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <tags>`.
+   :wheels: List of relative file-paths Python wheels
+      (see :ref:`Bundle Wheels <extensions-addons-wheels>`).
+
+      - By convention, always locate the files under ``./wheels/``.
+      - Wheels must be bundled unmodified from Python's package index.
+      - Use forward slashes as path separators.
 
 .. note::
 
