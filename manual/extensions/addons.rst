@@ -52,6 +52,28 @@ the *File Paths* section of the *Preferences*. To create a personal script direc
 Now when you install add-ons you can select the *Target Path* when installing 3rd party scripts.
 Blender will copy newly installed add-ons under the directory selected in your Preferences.
 
+Bundle Dependencies
+===================
+
+For add-ons to be bundled as extensions, they must be self-contained.
+That means they must come with all its dependencies. In particular 3rd party Python modules.
+
+They are a few options for this:
+
+Bundle with :doc:`Python Wheels <python_wheels>`.
+   This is the recommended way to bundle dependencies.
+
+Bundle other add-ons together.
+   This is recommended if an add-on depends on another add-on.
+
+   Make sure that both the individual and the combined add-on check for already registered types (Operators, Panels, ...).
+   This avoids duplications of operators and panels on the interface if the add-ons are installed as a bundle and individually.
+
+Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
+   This can be used as a way to bundle a pure Python dependencies as a sub-module.
+
+   This has the advantage of avoiding version conflicts although it requires some work to setup each package.
+
 Legacy vs Extension Add-ons
 ===========================
 
@@ -149,64 +171,3 @@ Importing packages within the add-on module need to use relative paths.
 This is a standard Python feature and only applicable for add-ons that have multiple folders.
 
 This was already supported in the legacy add-ons, but not reinforced. As such this can break backward compatibility.
-
-
-3rd Party Python Modules
-------------------------
-
-Extensions must be self-contained, and as such must come with all its dependencies.
-
-Some options are listed here:
-
-Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
-   This can be used as a way to bundle a pure Python dependencies as a sub-module.
-
-   This has the advantage of avoiding version conflicts although it requires some work to setup each package.
-
-.. _extensions-addons-wheels:
-
-Bundle Wheels (``*.whl``)
-   `Wheels <https://pythonwheels.com/>`__ can be bundled using the following steps.
-
-   Downloading Wheels
-      Download the wheel to the directory ``./wheels/``.
-
-      For wheels that are platform independent this example downloads ``jsmin``:
-
-      .. code-block:: shell
-
-         pip wheel jsmin -w ./wheels
-
-
-      For wheels that contain binary compiled files, wheels for all supported platforms should be included:
-
-      This example downloads ``pillow`` - the popular image manipulation module.
-
-      .. code-block:: shell
-
-         pip download pillow --dest ./wheels --only-binary=:all: --python-version=3.11 --platform=macosx_11_0_arm64
-         pip download pillow --dest ./wheels --only-binary=:all: --python-version=3.11 --platform=manylinux_2_28_x86_64
-         pip download pillow --dest ./wheels --only-binary=:all: --python-version=3.11 --platform=win_amd64
-
-      To the available platform identifiers are listed on the download page. https://pypi.org/project/pillow/#files
-
-   Update the Manifest
-      In ``blender_manifest.toml`` include the wheels as a list of paths, e.g.
-
-      .. code-block:: toml
-
-         wheels = [
-            "./wheels/pillow-10.3.0-cp311-cp311-macosx_11_0_arm64.whl",
-            "./wheels/pillow-10.3.0-cp311-cp311-manylinux_2_28_x86_64.whl",
-            "./wheels/pillow-10.3.0-cp311-cp311-win_amd64.whl",
-         ]
-
-   Now installing the package will extract the wheel into the extensions own ``site-packages`` directory.
-
-   Once the extension has been installed you can check the module is being loaded
-   by importing it in the Python console and printing it's location, e.g.
-
-   .. code-block:: python
-
-      import PIL
-      print(PIL.__file__)

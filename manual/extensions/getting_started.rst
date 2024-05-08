@@ -110,9 +110,10 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # ]
 
    # Optional: bundle 3rd party Python modules.
+   # https://docs.blender.org/manual/en/dev/extensions/python_wheels.html
    # wheels = [
-   #   "./wheels/jsmin-3.0.1-py3-none-any.whl",
-   #   "./wheels/hexdump-3.3-py3-none-any.whl"
+   #   "./wheels/hexdump-3.3-py3-none-any.whl",
+   #   "./wheels/jsmin-3.0.1-py3-none-any.whl"
    # ]
 
 Required values:
@@ -135,12 +136,7 @@ Optional values:
    :permissions: Add-ons can list which resources they require. The available options are
       ["files", "network", "clipboard", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <tags>`.
-   :wheels: List of relative file-paths Python wheels
-      (see :ref:`Bundle Wheels <extensions-addons-wheels>`).
-
-      - By convention, always locate the files under ``./wheels/``.
-      - Wheels must be bundled unmodified from Python's package index.
-      - Use forward slashes as path separators.
+   :wheels: List of relative file-paths :doc:`Python Wheels <python_wheels>`.
 
 .. note::
 

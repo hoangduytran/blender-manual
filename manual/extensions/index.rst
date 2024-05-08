@@ -35,4 +35,5 @@ Other third party sites can also be supported, as long as they follow the Extens
    Compatible licenses <licenses.rst>
    Supported tags <tags.rst>
    Add-ons <addons.rst>
+   Python Wheels <python_wheels.rst>
    Command Line Arguments <command_line_arguments.rst>
