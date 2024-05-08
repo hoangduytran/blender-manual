@@ -110,7 +110,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # ]
 
    # Optional: bundle 3rd party Python modules.
-   # copyright = [
+   # wheels = [
    #   "./wheels/jsmin-3.0.1-py3-none-any.whl",
    #   "./wheels/hexdump-3.3-py3-none-any.whl"
    # ]

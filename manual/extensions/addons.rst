@@ -156,10 +156,6 @@ This was already supported in the legacy add-ons, but not reinforced. As such th
 
 Extensions must be self-contained, and as such must come with all its dependencies.
 
-Currently there is no general solution for this although
-`support is planned <https://projects.blender.org/blender/blender/issues/119681>`__ using Python
-`wheels <https://pythonwheels.com/>`__.
-
 Some options are listed here:
 
 Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
@@ -170,7 +166,7 @@ Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
 .. _extensions-addons-wheels:
 
 Bundle Wheels (``*.whl``)
-   Wheels can be bundled using the following steps.
+   `Wheels <https://pythonwheels.com/>`__ can be bundled using the following steps.
 
    Downloading Wheels
       Download the wheel to the directory ``./wheels/``.
