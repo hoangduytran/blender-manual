@@ -45,7 +45,11 @@ Orbit Around Selection
    The selection center becomes the rotation center of the viewport.
    When there is no selection the last selection will be used.
 
-   This uses the selected object (bounding box center) in Object Mode, selected elements in edit/pose modes and the average of strokes in paintmodes.
+   The method used to calculate the center depends on the the current mode:
+
+   - Object mode uses the selections bounding box center.
+   - Edit & pose mode use the selected elements center.
+   - Paint modes use the center of the last brush stroke.
 
    .. note::
 
