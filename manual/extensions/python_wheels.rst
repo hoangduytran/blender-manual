@@ -17,9 +17,10 @@ They are supported in Blender to make self-contained Python :doc:`Extensions </e
 
 Guidelines
 ==========
-* Wheels must be bundled unmodified from Python's package index.
-* Use forward slashes as path separators when listing them on the `manifest </extensions/getting_started#manifest>`__.
-* By convention, always locate the files under ``./wheels/``.
+
+- Wheels must be bundled unmodified from Python's package index.
+- Use forward slashes as path separators when listing them on the `manifest </extensions/getting_started#manifest>`__.
+- By convention, always locate the files under ``./wheels/``.
 
 How to bundle wheels
 ====================

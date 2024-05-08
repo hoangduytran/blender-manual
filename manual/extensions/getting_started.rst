@@ -133,7 +133,8 @@ Optional values:
    :blender_version_max: Maximum version of Blender that can run this.
    :website: Website for the extension.
    :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
-   :permissions: Add-ons can list which resources they require. The available options are
+   :permissions:
+      Add-ons can list which resources they require. The available options are
       ["files", "network", "clipboard", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <tags>`.
    :wheels: List of relative file-paths :doc:`Python Wheels <python_wheels>`.
