@@ -60,14 +60,16 @@ That means they must come with all its dependencies. In particular 3rd party Pyt
 
 They are a few options for this:
 
-Bundle with :doc:`Python Wheels <python_wheels>`.
+Bundle with :doc:`Python Wheels <./python_wheels>`.
    This is the recommended way to bundle dependencies.
 
 Bundle other add-ons together.
    This is recommended if an add-on depends on another add-on.
 
-   Make sure that both the individual and the combined add-on check for already registered types (Operators, Panels, ...).
-   This avoids duplications of operators and panels on the interface if the add-ons are installed as a bundle and individually.
+   Make sure that both the individual and the combined add-on
+   check for already registered types (Operators, Panels, ...).
+   This avoids duplication of operators and panels on the interface
+   if the add-ons are installed as a bundle and individually.
 
 Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
    This can be used as a way to bundle a pure Python dependencies as a sub-module.
@@ -90,7 +92,7 @@ features like updating from the extensions platform.
 Converting a Legacy Add-on into an Extension
 --------------------------------------------
 
-#. Create a :doc:`manifest file <getting_started>`.
+#. Create a :doc:`manifest file <./getting_started>`.
 #. Remove the ``bl_info`` information (this is now in the manifest).
 #. Replace all references to the module name to ``__package__``.
 #. Make all module imports to use relative import.

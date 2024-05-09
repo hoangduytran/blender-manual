@@ -136,8 +136,8 @@ Optional values:
    :permissions:
       Add-ons can list which resources they require. The available options are
       ["files", "network", "clipboard", "camera", "microphone"].
-   :tags: List of tags. See the :doc:`list of available tags <tags>`.
-   :wheels: List of relative file-paths :doc:`Python Wheels <python_wheels>`.
+   :tags: List of tags. See the :doc:`list of available tags <./tags>`.
+   :wheels: List of relative file-paths :doc:`Python Wheels <./python_wheels>`.
 
 .. note::
 

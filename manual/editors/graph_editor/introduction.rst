@@ -399,6 +399,7 @@ Proportional Editing :kbd:`O`
 
 Sidebar Region
 ==============
+
 .. _bpy.types.SpaceGraphEditor.show_cursor:
 .. _graph_editor-view-properties:
 

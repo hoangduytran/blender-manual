@@ -123,7 +123,7 @@ For information about additional generation options, see the `Advanced Rig Gener
 
 .. tip::
 
-   If the metarig uses the legacy :doc:`face rig <rig_types/faces>`, you can use the
+   If the metarig uses the legacy :doc:`face rig <./rig_types/faces>`, you can use the
    *Upgrade Face Rig* button that appears above *Generate Rig* to automatically upgrade
    to the new modular face system.
 

@@ -69,8 +69,10 @@ CFL Number
    Fluid is only allowed to move up to this velocity in one time step. If this threshold is
    exceeded the solver will subdivide the simulation step.
 
-   In general, greater CFL (`Courant–Friedrichs–Lewy <https://en.wikipedia.org/wiki/Courant%E2%80%93Friedrichs%E2%80%93Lewy_condition>`_) numbers will minimize the number of simulation steps
-   and the computation time. Yet it will yield less physically accurate behavior for fast fluid flows.
+   In general, greater CFL
+   (`Courant–Friedrichs–Lewy <https://en.wikipedia.org/wiki/Courant%E2%80%93Friedrichs%E2%80%93Lewy_condition>`__)
+   numbers will minimize the number of simulation steps and the computation time.
+   Yet it will yield less physically accurate behavior for fast fluid flows.
    Smaller CFL numbers result in more simulation steps per frame, longer simulation times
    but more accurate behavior at high velocities (e.g. fast fluid flow colliding
    with obstacle).

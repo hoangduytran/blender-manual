@@ -82,7 +82,8 @@ Show Pose Markers :guilabel:`Action Editor`
    Instead of showing the global scene markers, show the local pose markers (which only exist inside the action).
    While this option is active, the *Add Marker* menu item will also create pose markers instead of scene markers.
 Make Markers Local :guilabel:`Action Editor`
-   Converts the selected scene markers into pose markers, making them only visible inside the currently selected action.
+   Converts the selected scene markers into pose markers,
+   making them only visible inside the currently selected action.
 
 For information about the other marker tools, see :ref:`Editing Markers <animation-markers-editing>`.
 
@@ -144,4 +145,3 @@ Proportional Editing
 ^^^^^^^^^^^^^^^^^^^^
 
 See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
-
