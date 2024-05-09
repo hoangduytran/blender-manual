@@ -260,9 +260,10 @@ List Missing Node Links
 Operator to look for empty image nodes, or missing images in nodes.
 
 The "List Missing Node Links" button will print:
-* Node Groups that were linked but are now "Missing Datablock"
-* Image Nodes pointing to a non-existent image
-* Image Nodes that don't have any output connected
+
+- Node Groups that were linked but are now "Missing Data-Block".
+- Image Nodes pointing to a non-existent image.
+- Image Nodes that don't have any output connected.
 
 Additionally, it will print in the terminal a list of all the Materials that meet any of the missing cases above,
 the object they belong to, and their path (if they're coming from a Library).

@@ -97,7 +97,7 @@ Converting a Legacy Add-on into an Extension
 #. Replace all references to the module name to ``__package__``.
 #. Make all module imports to use relative import.
 #. Use `wheels <https://pythonwheels.com/>`__ to pack your external Python dependencies.
-#. Remember to test it throughly.
+#. Remember to test it thoroughly.
 
 .. note::
 
