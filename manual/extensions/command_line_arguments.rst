@@ -27,7 +27,6 @@ options:
 subcommands:
 
 
-
   `Blender Package Management`_
     :list:                List all packages.
     :sync:                Synchronize with remote repositories.
@@ -45,7 +44,6 @@ subcommands:
     :build:               Build a package.
     :validate:            Validate a package.
     :server-generate:     Create a listing from all packages.
-
 
 
 
@@ -161,7 +159,6 @@ options:
               This means removing extensions or repositories for example, wont update the user-preferences.
 
 
-
 Blender Repository Management
 =============================
 
@@ -232,7 +229,6 @@ options:
   --no-prefs  Treat the user-preferences as read-only,
               preventing updates for operations that would otherwise modify them.
               This means removing extensions or repositories for example, wont update the user-preferences.
-
 
 
 Extension Creation

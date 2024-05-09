@@ -271,7 +271,7 @@ Interpolation Type
    The :ref:`interpolation type <editors-graph-fcurves-settings-interpolation>` for the new keys.
 Bake Modifiers
    If enabled, the new keyframes are based on the modified curve, and the modifiers get deleted.
-   
+
    If disabled, the new keyframes are based on the original curve, and the modifiers stay applied.
 
 .. _bpy.ops.graph.euler_filter:

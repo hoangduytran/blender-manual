@@ -378,7 +378,7 @@ Use Preview Range (clock icon)
    having to manually rewind or change the frame range of the entire scene.
 
    This range only affects the preview in the 3D Viewport; it doesn't affect rendering.
-   
+
    The boundaries of the Preview Range are shown in dark orange. You can quickly configure
    and enable it by pressing :kbd:`P` and dragging a box. To disable it,
    you can press :kbd:`Alt-P`.

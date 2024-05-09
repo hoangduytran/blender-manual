@@ -12,14 +12,14 @@ Tweak :kbd:`W`
 
 Cursor
    Lets you move the :ref:`editors_sequencer_preview_2d-cursor` by clicking or dragging with :kbd:`LMB`.
-   
+
    While dragging, you can press :kbd:`X` or :kbd:`Y` to constrain movement to an axis.
 
    If you need extra precision, you can hold :kbd:`Shift` to move the cursor more
    slowly than the mouse, or type a number to move it by an exact amount.
 
    The header shows how far the cursor has traveled, including the distance along each axis.
-   
+
    Instead of this tool, you can also drag the mouse while holding :kbd:`Shift-RMB`
    (works with all tools) or adjust the 2D Cursor Location in :menuselection:`Sidebar --> View`.
 
@@ -48,7 +48,7 @@ Move :kbd:`G`
    - Use the arrow keys.
 
    The header shows how far the image has moved, including the offset along each axis.
-   
+
    Instead of using this tool, you can also adjust the :ref:`Position <bpy.types.SequenceTransform.offset>`
    in the Sidebar's *Strip* tab (only available in the *Sequencer* and *Sequencer & Preview* modes).
 

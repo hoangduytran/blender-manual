@@ -15,7 +15,7 @@ values on all the other frames.
 .. figure:: /images/editors_graph-editor_fcurves_introduction_f-curves-concept.png
    :align: right
    :width: 200px
-   
+
    Example of interpolation.
 
 The example curve on the right has two such keyframes (indicated by black dots):

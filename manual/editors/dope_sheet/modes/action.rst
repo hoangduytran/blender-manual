@@ -54,11 +54,11 @@ Previous/Next Layer (down/up arrows)
    (leaving only the starred track enabled).
 
 .. figure:: /images/editors_dope-sheet_action-editor_layers_1.png
-   
+
    By default, the Action Editor shows the selected object's active action.
 
 .. figure:: /images/editors_dope-sheet_action-editor_layers_2.png
-   
+
    After clicking *Previous Layer*, we enter Tweak Mode for the action in the topmost NLA track.
    The NLA Editor hilights it in green, and the Action Editor lets us edit its keyframes.
 

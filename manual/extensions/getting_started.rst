@@ -184,7 +184,6 @@ See :ref:`validate <command-line-args-extension-validate>` docs.
    :ref:`command_line-args-extensions`.
 
 
-
 Third party extension sites
 ===========================
 

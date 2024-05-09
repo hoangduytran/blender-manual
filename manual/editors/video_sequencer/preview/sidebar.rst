@@ -199,7 +199,6 @@ Override Scene Settings
    Use the :doc:`Workbench render settings </render/workbench/index>` from the
    current scene rather than the scenes referenced by the strips.
    Only available for the *Wireframe* and *Solid* shading modes.
-   
 
 
 Annotations

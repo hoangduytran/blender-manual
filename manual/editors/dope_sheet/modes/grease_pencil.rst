@@ -12,7 +12,7 @@ animation frames. It is especially useful for blocking out shots.
 Channels Region
 ===============
 
-The Channels region shows the Grease Pencil object in light blue and its 
+The Channels region shows the Grease Pencil object in light blue and its
 :doc:`layers </grease_pencil/properties/layers>` in gray.
 Layers have the following settings:
 

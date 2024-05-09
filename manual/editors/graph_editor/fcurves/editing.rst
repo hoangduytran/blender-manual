@@ -302,7 +302,7 @@ Mode
 
    Ratio
       Deletes a certain percentage of keyframes.
-      
+
       Remove
          The percentage of keyframes to remove.
 
@@ -409,7 +409,7 @@ Sets the value of the selected keyframes to an interpolation of their neighbors.
 
 Factor
    At -1, the keyframes are set to the value of the left neighbor.
-   
+
    At 1, they're set to the value of the right neighbor.
 
    For other factors, they're set to an interpolation between the two neighbor values,
@@ -431,7 +431,7 @@ Blend
    When negative, each keyframe moves *Blend* percent to the value of the left neighbor.
 
    When positive, they move to the right neighbor.
-   
+
    When zero, they keep their original values.
 
 

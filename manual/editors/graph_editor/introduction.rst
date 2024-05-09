@@ -333,16 +333,16 @@ Create Ghost Curves (framed F-Curve icon)
 Filter (funnel icon)
    Search
       Filters the channel list by a search term.
-   
+
    Filtering Collection
       Select a collection to only show keyframes from objects in that collection.
-   
+
    Filter by Type
       Filter curves by property type.
-   
+
    Sort Data-Blocks
       Sorts data-blocks alphabetically to make them easier to find.
-   
+
       If your playback speed suffers because of this
       (should only really be an issue when working with lots of objects),
       you can turn it off.
@@ -388,7 +388,7 @@ Snap
       For example, if you selected *Second* and have a keyframe that's currently on
       0:06+5, dragging it to the right will snap it to 0:07+5. Its time
       increases by a second, and its subsecond offset of 5 frames remains the same.
-   
+
       When enabled, keyframes will snap to multiples of *Snap To*.
       Taking the above example, the keyframe would snap to 0:07+0,
       removing the subsecond offset.

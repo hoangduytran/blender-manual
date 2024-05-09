@@ -314,7 +314,7 @@ Options for Image Strips
 
 Directory
    The directory that contains the source file(s).
-   
+
 Filename
    The name of the source file. For image sequences, this will be different for each frame.
 

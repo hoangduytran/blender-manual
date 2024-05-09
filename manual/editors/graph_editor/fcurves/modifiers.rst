@@ -136,7 +136,7 @@ where each point can push, squeeze, and stretch the envelope (and the curve alon
 at a certain frame.
 
 .. figure:: /images/editors_graph-editor_fcurves_modifiers_envelope.png
-   
+
    The Envelope modifier.
 
 Reference

@@ -25,7 +25,7 @@ Selection
 Group ID
    Elements with the same group ID are sorted together.
    If this is not a field, the node has no affect.
-   
+
 Sort Weight
    The sorted values used to do the reordering.
    If this is not a field, the node has no affect.

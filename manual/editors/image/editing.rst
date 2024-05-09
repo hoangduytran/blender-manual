@@ -182,7 +182,6 @@ Resize
 Adjust the image size in pixels.
 
 
-
 Transform
 =========
 

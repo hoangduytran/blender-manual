@@ -47,7 +47,7 @@ Animation
    If the 3ds scene is animated, the complete animation will be imported to the timeline.
 
 Collection
-   Creates a new collection for the imported file. This is useful for importing multiple objects at once 
+   Creates a new collection for the imported file. This is useful for importing multiple objects at once
    to get a better overview in the outliner.
 
 Cursor Origin
@@ -91,7 +91,7 @@ Forward / Up Axis
 Export
 ------
 
-It is recommended to apply all transformations (especially rotation and scale) before exporting, 
+It is recommended to apply all transformations (especially rotation and scale) before exporting,
 transformations in 3ds are part of animations and may not be correctly imported again without apply transform.
 
 Include
@@ -239,9 +239,9 @@ Lights in 3DS Studio can be a point source or a spotlight,
 they use color and energy data and a target for the spotlight.
 The color and position of a light can be animated, the spotlight additionally has a target, beam angle and hotspot,
 wich can be animated. The lights and animation can be imported and exported, the spotlight can contain a projection
-bitmap, if an image is connected to a emission or colormixer, it will be exported. If a projection image has been found 
-by the importer, it will be connected to a colormix node together with a RGB node for the color animation. The x/y scale 
-of a spotlight will be exported in an aspect ratio chunk, the importer can calculate it back to x/y scale. The target data 
+bitmap, if an image is connected to a emission or colormixer, it will be exported. If a projection image has been found
+by the importer, it will be connected to a colormix node together with a RGB node for the color animation. The x/y scale
+of a spotlight will be exported in an aspect ratio chunk, the importer can calculate it back to x/y scale. The target data
 is calculated to Z and X axis angle for pan and tilt, Y is used for the roll angle.
 
 .. figure:: /images/addons_io_3ds_light-nodes.jpg

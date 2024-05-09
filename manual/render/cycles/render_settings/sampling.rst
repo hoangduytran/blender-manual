@@ -86,7 +86,7 @@ Render
    :OpenImageDenoise:
       Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
       an AI denoiser. Typically provides the highest quality, and is the default.
-      
+
    :OptiX:
       Uses NVIDIA's OptiX AI denoiser. Supports GPU acceleration on some
       older NVIDIA GPUs where OpenImageDenoise does not.
@@ -104,7 +104,7 @@ Viewport
    :OpenImageDenoise:
       Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
       an AI denoiser. Typically provides the highest quality.
-      
+
    :OptiX:
       Uses NVIDIA's OptiX AI denoiser. Supports GPU acceleration on some
       older NVIDIA GPUs where OpenImageDenoise does not.

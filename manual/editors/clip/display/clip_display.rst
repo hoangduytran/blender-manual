@@ -78,7 +78,7 @@ Search :kbd:`Alt-S`
 Path
    Shows past (red) and future (blue) positions of tracks relative to the current frame,
    visualizing how they move. This makes it easier to spot irregularities.
-   
+
 Length
    Length (in frames) of the *Path*.
 

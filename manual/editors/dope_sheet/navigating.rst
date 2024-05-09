@@ -78,7 +78,7 @@ Show Curve Extremes
 
    A keyframe may show both arrows, namely when it's part of a summary row containing a channel with a
    maximum and one with a minimum.
-   
+
 Auto-Merge Keyframes
    Automatically merge keyframes that end up on the same frame after transformation.
 

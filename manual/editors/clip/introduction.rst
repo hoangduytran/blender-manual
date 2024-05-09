@@ -87,7 +87,7 @@ Menu for :doc:`loading movie clips and creating proxies </movie_clip/tracking/cl
 
 Track Menu
 ----------
-   
+
 Menu for performing :doc:`tracking </movie_clip/tracking/clip/editing/track>` operations.
 
 Reconstruction Menu
