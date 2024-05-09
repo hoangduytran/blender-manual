@@ -12,17 +12,34 @@
 Python Wheels
 *************
 
-`Python wheels <https://pythonwheels.com/>`_ (``*.whl``) are the standard way of distributing Python modules.
+.. TODO:
+
+   - Guidelines for wheel selecting the version to use.
+   - Finalize a policy for how conflicting versions of a wheel are handled.
+
+
+`Python wheels <https://pythonwheels.com/>`__ (``*.whl``) are the standard way of distributing Python modules.
 They are supported in Blender to make self-contained Python :doc:`Extensions </extensions/index>`.
+
 
 Guidelines
 ==========
 
-- Wheels must be bundled unmodified from Python's package index.
-- Use forward slashes as path separators when listing them on the `manifest </extensions/getting_started#manifest>`__.
 - By convention, always locate the files under ``./wheels/``.
 
-How to bundle wheels
+
+Requirements
+============
+
+- Wheels must be bundled unmodified from `Python's package index <https://pypi.org>`__.
+- Wheels must include their dependencies.
+- Wheels filenames must match Python's binary distribution specification:
+  `see docs <https://packaging.python.org/en/latest/specifications/binary-distribution-format/#file-name-convention>`__.
+  *Wheels downloaded from Python's package index will follow this convention.*
+- Use forward slashes as path separators when listing them on the `manifest </extensions/getting_started#manifest>`.
+
+
+How to Bundle Wheels
 ====================
 
 Python wheels  (``*.whl``) can be bundled using the following steps.
@@ -47,7 +64,8 @@ Downloading Wheels
       pip download pillow --dest ./wheels --only-binary=:all: --python-version=3.11 --platform=manylinux_2_28_x86_64
       pip download pillow --dest ./wheels --only-binary=:all: --python-version=3.11 --platform=win_amd64
 
-   The available platform identifiers are listed on `pillow's download page <https://pypi.org/project/pillow/#files>`_.
+   The available platform identifiers are listed on
+   `pillow's download page <https://pypi.org/project/pillow/#files>`__.
 
 Update the Manifest
    In ``blender_manifest.toml`` include the wheels as a list of paths, e.g.
