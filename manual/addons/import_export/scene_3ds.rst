@@ -215,17 +215,27 @@ the exporter creates a smooth chunk if the mesh contains any smooth faces.
 Ambient
 =======
 
-If ambient chunks are found by the importer, a new world with the ambient color will be created. Ambient keyframes
-will be imported to the timeline and background color to the world background node. If a background image is found, it
-will be connected to the background node and if fog chunks are found, volume shaders with the fog settings will be
-connected to the world output. If ambient is animated, an ambient node will be created and connected to a mixshader.
-Gradient chunks will be imported to a color ramp node. The exporter can export these settings and will also accept an
-add-shader instead of a mixshader, images are taken from the background input. The exporter creates an ambient chunk
-with the color of the active world and creates background chunks with color or image if the nodes are connected to
-world output or mix and add shader. Ambient color animations can primary be exported from the world color. If nodes
-are used, the exporter checks the RGB input node and the emission shader for color animations and writes an ambient
-track node chunk. If a color ramp node is connected to background or colormix node and includes at least three colors,
-the exporter will create a gradient chunk.
+Ambient chunks are interpreted as world nodes in blender. The importer creates a node setup for each chunk 
+in order to reproduce the 3ds settings as accurately as possible. Ambient animation keyframes will be imported 
+to the timeline, using the world color and a RGB node connected to a emission with a mixshader for the background color. 
+The mix shader will be connected to the world output node. If a background image is found, it will be connected to the 
+background node and if fog chunks are found, volume shaders with the fog settings will be connected to the world 
+volume output. The exporter can export these settings by using a specific node for each chunk to export. Ambient color 
+animations can primary be exported from the world color. If nodes are used, the exporter checks the RGB input node and 
+the emission shader for color animations and writes an ambient track node chunk. Distance cue can be exported from a 
+map range node using "From Min" for near distance, "From Max" for near dimming and "To Min" for far dimming and 
+"To Max" for far distance. The following world nodes can be used for ambient chunk export, the output of the node 
+has to be connected to a valid input:
+
+- 3ds Ambient Light <-> blender World Color
+- 3ds Ambient Keyframe <-> blender RGB Node
+- 3ds Ambient Color <-> blender Emission Shader
+- 3ds Solid Background <-> blender Background Shader
+- 3ds Background Bitmap <-> blender Texture Environment
+- 3ds Gradient Background <-> blender ColorRamp Node
+- 3ds Fog Definition <-> blender Volume Absorption
+- 3ds Layered Fog <-> blender Volume Scatter
+- 3ds Distance Cue <-> blender MapRange Node
 
 .. figure:: /images/addons_io_3ds_world-nodes.jpg
 
