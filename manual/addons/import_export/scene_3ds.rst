@@ -162,9 +162,9 @@ The material definitions which Blender can use are the following:
 - 3ds Mat Shin2 <-> blender Specular Intensity
 - 3ds Mat Shin3 <-> blender Metallic
 - 3ds Mat Opacity <-> blender Alpha inverted
-- 3ds Mat TransFall <-> blender Transmission
-- 3ds Mat RefBlur <-> blender Coat Weight
-- 3ds Mat TexBlur <-> blender Sheen Weight
+- 3ds Mat TransFalloff <-> blender Transmission
+- 3ds Mat ReflectBlur <-> blender Coat Weight
+- 3ds Mat TextureBlur <-> blender Sheen Weight
 - 3ds Mat Bump PCT <-> blender Normal-map Strength
 - 3ds Self Illumination PCT <-> blender Emission Strength
 
