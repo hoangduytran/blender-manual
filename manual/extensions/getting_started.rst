@@ -109,6 +109,10 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    #   "1998 Company Name",
    # ]
 
+   # Optional list of supported platforms. If ommitted, the extension will be available in all operating systems.
+   # platforms = ["windows-amd64", "macos-arm64", "linux-x86_64"]
+   # Other supported platforms: "windows-arm64", "macos-x86_64"
+
    # Optional: bundle 3rd party Python modules.
    # https://docs.blender.org/manual/en/dev/extensions/python_wheels.html
    # wheels = [
@@ -137,6 +141,10 @@ Optional values:
       Add-ons can list which resources they require. The available options are
       ["files", "network", "clipboard", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <./tags>`.
+   :platforms:
+      List of supported platforms. If ommitted, the extension will be available in all operating systems.
+      The available options are
+      ["windows-amd64", "windows-arm64", "macos-x86_64", "macos-arm64", "linux-x86_64"]
    :wheels: List of relative file-paths :doc:`Python Wheels <./python_wheels>`.
 
 .. note::
