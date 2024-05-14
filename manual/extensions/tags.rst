@@ -20,10 +20,11 @@ Add-ons
 =======
 
 * 3D View
-* Add Mesh
 * Add Curve
+* Add Mesh
 * Animation
 * Bake
+* Camera
 * Compositing
 * Development
 * Game Engine
@@ -44,8 +45,8 @@ Add-ons
 * Sequencer
 * System
 * Text Editor
-* UV
 * User Interface
+* UV
 
 Themes
 ======
