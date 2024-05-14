@@ -45,6 +45,7 @@ Add-ons
 * Sequencer
 * System
 * Text Editor
+* Tracking
 * User Interface
 * UV
 
