@@ -54,6 +54,8 @@ Themes
 
 * Dark
 * Light
+* Colorful
+* Inspired By
 * Print
 * Accessibility
 * High Contrast
