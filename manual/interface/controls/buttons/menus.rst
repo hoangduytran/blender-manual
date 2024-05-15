@@ -60,11 +60,11 @@ Collapsing Menus
 
 Sometimes it's helpful to gain some extra horizontal space in the header by collapsing menus.
 This can be accessed from the header context menu:
-click :kbd:`RMB` on the header and select *Collapse Menus*.
+click :kbd:`RMB` on the header and uncheck the *Show Menus checkbox*.
 
 .. list-table::
 
-   * - .. figure:: /images/interface_controls_buttons_menus_header-menu-expand.png
+   * - .. figure:: /images/interface_controls_buttons_menu_header_uncheck_show_menus_checkbox.png
 
           Right-click on any of the header menus.
 
