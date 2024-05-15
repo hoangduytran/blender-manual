@@ -28,6 +28,8 @@ Add-ons
 * Compositing
 * Development
 * Game Engine
+* Geometry Nodes
+* Grease Pencil
 * Import-Export
 * Lighting
 * Material
