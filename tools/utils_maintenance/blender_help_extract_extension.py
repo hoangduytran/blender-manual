@@ -252,8 +252,6 @@ def blender_command_output(blender_bin: str, args: Sequence[str]) -> str:
             # Code begin/end text because of Blender's chatty reporting of version and that it quit.
             "--python-expr", "print('{:s}')".format(text_beg),
             "--python-expr", "__import__('atexit').register(lambda: print('{:s}'))".format(text_end),
-            "--python-expr", "__import__('bpy').context.preferences.view.show_developer_ui = True",
-            "--python-expr", "__import__('bpy').context.preferences.experimental.use_extension_repos = True",
             "--command", *args,
         ),
         env=env,
@@ -357,7 +355,14 @@ def help_text_as_rst(blender_bin: str) -> str:
     for i in range(len(help_output)):
         help_output[i] = re.sub(r"[ \t]+(\n|\Z)", r"\1", help_output[i])
 
-    return "".join(help_output)
+    result = "".join(help_output)
+
+    # Remove excessive newlines.
+    # Could be investigated in the generated help text but it's quite harmless to change here.
+    while "\n\n\n\n" in result:
+        result = result.replace("\n\n\n\n", "\n\n\n")
+
+    return result
 
 
 def main() -> int:
