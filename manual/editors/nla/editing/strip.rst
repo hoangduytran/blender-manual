@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+*****
+Strip
+*****
 
 Transform
 =========
@@ -11,12 +11,22 @@ Transform
    :Editor:    Nonlinear Animation
    :Menu:      :menuselection:`Strip --> Transform`
 
-Move
-   Move the selected NLA-strips in time or to different NLA-track.
+Move :kbd:`G`
+   Move the selected strips in time or to a different track.
 Extend :kbd:`E`
-   Extend the selected NLA-strips.
+   Lets you quickly move the selected strips that are on a certain side of the Playhead.
+   This is handy if you need to, say, move all the strips after a certain time point to
+   the right to make space for new ones.
+
+   To use this operator, first select some or all strips and place your mouse cursor to
+   the left or right of the Playhead. Then, press :kbd:`E`, move the mouse to move (only)
+   the strips on that side of the Playhead, and press :kbd:`LMB` to confirm
+   (or :kbd:`RMB` to cancel).
+
+   If a strip straddles the Playhead, only its starting/ending point will be moved
+   (again depending on the position of the mouse cursor).
 Scale :kbd:`S`
-   Scale the selected NLA-strips.
+   Scales the selected strips, using the Playhead as the pivot point.
 
 
 .. _bpy.ops.nla.swap:
@@ -30,7 +40,7 @@ Swap
    :Menu:      :menuselection:`Strip --> Transform --> Swap`
    :Shortcut:  :kbd:`Alt-F`
 
-Swap the order of the selected NLA-strips in their NLA-track.
+Swap the order of the selected strips in their track.
 
 
 .. _bpy.ops.nla.move_up:
@@ -44,7 +54,7 @@ Move Up
    :Menu:      :menuselection:`Strip --> Transform --> Move Up`
    :Shortcut:  :kbd:`PageUp`
 
-Move selected NLA-strips up a track if there is room.
+Move selected strips up a track if there is room.
 
 
 .. _bpy.ops.nla.move_down:
@@ -58,7 +68,7 @@ Move Down
    :Menu:      :menuselection:`Strip --> Transform --> Move Down`
    :Shortcut:  :kbd:`PageDown`
 
-Move selected NLA-strips down a track if there is room.
+Move selected strips down a track if there is room.
 
 
 .. _bpy.ops.nla.snap:
@@ -72,13 +82,13 @@ Snap
    :Menu:      :menuselection:`Strip --> Snap`
 
 Selection to Current Frame
-   Move the start of selected NLA-strips to the current frame.
+   Move the start of the selected strips to the current frame.
 Selection to Nearest Frame
-   Move the start of the selected NLA-strips to the nearest frame.
+   Move the start of the selected strips to the nearest full frame.
 Selection to Nearest Second
-   Move the start of the selected NLA-strips to the nearest second.
+   Move the start of the selected strips to the nearest second.
 Selection to Nearest Marker
-   Move the start of the selected NLA-strips to the nearest marker.
+   Move the start of the selected strips to the nearest marker.
 
 
 .. _bpy.ops.nla.split:
@@ -92,7 +102,7 @@ Split
    :Menu:      :menuselection:`Strip --> Split`
    :Shortcut:  :kbd:`Y`
 
-NLA-Split the selected strips into two NLA-strips. The split happens at the current frame.
+Split the selected strips in two at the current frame.
 
 
 .. _bpy.ops.nla.duplicate:
@@ -106,8 +116,8 @@ Duplicate
    :Menu:      :menuselection:`Strip --> Duplicate`
    :Shortcut:  :kbd:`Alt-D`
 
-Creates a new instance of the selected strips with a copy of the action.
-
+Creates copies of the selected strips, duplicating any actions they reference.
+Editing the keyframes in a copied strip therefore doesn't affect the original.
 
 .. _bpy.ops.nla.duplicate_linked_move:
 
@@ -120,12 +130,9 @@ Linked Duplicate
    :Menu:      :menuselection:`Strip --> Linked Duplicate`
    :Shortcut:  :kbd:`Shift-D`
 
-The contents of one Action strip can be instanced multiple times. To instance another strip,
-select a strip, go to :menuselection:`Strip --> Linked Duplicate`.
-It will uses the same action as the selected strips.
-
-Now, when any strip is tweaked, the others will change too.
-If a strip other than the original is tweaked, the original will turn to red.
+Creates copies of the selected strips, reusing any actions they reference.
+Editing the keyframes in a copied strip therefore also affects the original
+(and vice versa). Blender warns you about this by hilighting the other strip in red.
 
 .. figure:: /images/editors_nla_editing_linked-strip-edit.png
 
@@ -141,9 +148,9 @@ Delete
 
    :Editor:    Nonlinear Animation
    :Menu:      :menuselection:`Strip --> Delete`
-   :Shortcut:  :kbd:`X`
+   :Shortcut:  :kbd:`Delete`, :kbd:`X`
 
-Delete selected NLA-Strips.
+Deletes the selected NLA-Strips.
 
 
 .. _bpy.ops.nla.meta_add:
@@ -157,9 +164,7 @@ Make Meta
    :Menu:      :menuselection:`Add --> Make Meta`
    :Shortcut:  :kbd:`Ctrl-G`
 
-Group selected NLA-strips into a meta strip.
-A meta strip will group the selected NLA-strips of the same NLA-track.
-
+Groups the selected NLA-strips into a meta strip.
 
 .. list-table::
 
@@ -185,7 +190,7 @@ Remove Meta
    :Menu:      :menuselection:`Strip --> Remove Meta`
    :Shortcut:  :kbd:`Ctrl-Alt-G`
 
-A Meta strip still contains the underlying strips. You can ungroup a Meta strip.
+Ungroups the selected meta strips, replacing them by their contents.
 
 
 .. _bpy.ops.nla.mute_toggle:
@@ -199,7 +204,8 @@ Toggle Muting
    :Menu:      :menuselection:`Strip --> Toggle Muting`
    :Shortcut:  :kbd:`H`
 
-Mute or unmute the selected NLA-strips. Muted NLA-strips will not influence the animation.
+Mutes or unmutes the selected strips. Muted strips have a dotted border and
+don't influence the animation.
 
 
 .. _bpy.ops.nla.bake:
@@ -218,14 +224,15 @@ Bake Action
    :Mode:      Object and Pose Modes
    :Menu:      :menuselection:`Header --> Object --> Animation --> Bake Action...`
 
-The final motion of objects or bones depends not only on the keyframed animation,
-but also on any active F-Curve modifiers, drivers, and constraints.
-On each frame of all the scene's frames, the *Bake Action* operator computes
-the final animation of the selected objects or bones with all those
-modifiers, drivers, and constraints applied, and keyframes the result.
+The final motion of objects and bones depends not only on the keyframed animation,
+but also on :doc:`F-Curve modifiers </editors/graph_editor/fcurves/modifiers>`,
+:doc:`drivers </animation/drivers/introduction>`,
+and :doc:`constraints </animation/constraints/introduction>`.
+The *Bake Action* operator computes this final motion and creates a corresponding
+keyframe on every scene frame.
 
 This can be useful for adding deviation to a cyclic action like a :term:`Walk Cycle`,
-or to create a keyframe animation created from drivers or constraints.
+or to create a keyframe animation from drivers or constraints.
 
 Start Frame
    Start frame for baking.
@@ -242,14 +249,14 @@ Clear Constraints
 Clear Parents
    Bake animation onto the object then clear parents (objects only).
 Overwrite Current Action
-   Bake animation into current action, instead of creating a new one
+   Bake animation into the current action instead of creating a new one
    (useful for baking only part of bones in an armature).
 Clean Curves
-   After baking curves, remove redundant keys.
+   After baking curves, :ref:`remove redundant keys <bpy.ops.graph.clean>`.
 Bake Data
-   Which data's transformations to bake
+   Which data's transformations to bake.
 
-   :Pose: Bake bones transformations.
+   :Pose: Bake bone transformations.
    :Object: Bake object transformations.
 Channels
    Which channels to bake.
@@ -257,7 +264,7 @@ Channels
    :Location: Bake location channels.
    :Rotation: Bake rotation channels.
    :Scale: Bake scale channels.
-   :B-Bone: Bake B-Bone channels.
+   :B-Bone: Bake :doc:`B-Bone </animation/armatures/bones/properties/bendy_bones>` channels.
    :Custom Properties: Bake custom properties.
 
 
@@ -272,7 +279,7 @@ Apply Scale
    :Menu:      :menuselection:`Strip --> Apply Scale`
    :Shortcut:  :kbd:`Ctrl-A`
 
-Apply the scale of the selected NLA-strips to their referenced Actions.
+Applies the scale of the selected strips to their referenced actions.
 
 
 .. _bpy.ops.nla.clear_scale:
@@ -286,7 +293,7 @@ Clear Scale
    :Menu:      :menuselection:`Strip --> Clear Scale`
    :Shortcut:  :kbd:`Alt-S`
 
-Reset the scaling of the selected NLA-strips.
+Resets the scale of the selected strips.
 
 
 .. _bpy.ops.nla.action_sync_length:
@@ -299,8 +306,13 @@ Sync Action Length
    :Editor:    Nonlinear Animation
    :Menu:      :menuselection:`Strip --> Sync Action Length`
 
-Synchronize the length of the action to the length used in the NLA-strip.
+Resets the strip's length to that of its underlying action,
+ensuring that it (only) plays from the action's first keyframe to its last.
 
+.. seealso::
+   
+   The :ref:`Sync Length Now` button in the :ref:`Sidebar <nla-sidebar-action-clip>`,
+   which does the same thing.
 
 .. _bpy.ops.nla.make_single_user:
 
@@ -313,7 +325,9 @@ Make Single User
    :Menu:      :menuselection:`Strip --> Make Single User`
    :Shortcut:  :kbd:`U`
 
-This tool ensures that none of the selected strips use an action which is also used by any other strips.
+Duplicates actions where necessary so that each selected strip has its own action that's not used
+by any others. This way, you can edit the keyframes in the selected strips knowing that you won't
+affect any other part of the animation.
 
 .. note::
 
@@ -331,12 +345,16 @@ Start Editing Stashed Action
    :Menu:      :menuselection:`Strip --> Start Editing Stashed Action`
    :Shortcut:  :kbd:`Shift-Tab`
 
-It will enter and exit Tweak Mode as usual, but will also make sure that the action can be edited in isolation
-(by flagging the NLA track that the action strip comes from as being "solo").
-This is useful for editing stashed actions, without the rest of the NLA Stack interfering.
+Enters Tweak Mode for the selected strip's action, making its keyframes available for editing in
+e.g. the :doc:`Graph Editor </editors/graph_editor/introduction>`. In addition, marks the strip's
+track as *Solo*, muting all the other tracks -- this way, they no longer influence the animation
+and you can focus exclusively on the action you're editing.
 
-When you finished editing the strip, simply go to :menuselection:`Strip --> Stop Editing Stashed Action`
-or press :kbd:`Shift-Tab`.
+While the menu item refers to stashed (muted) actions, this only reflects the typical use case.
+It works on unmuted actions as well.
+
+When you're done editing, click :menuselection:`Strip --> Stop Editing Stashed Action`
+or press :kbd:`Shift-Tab` again.
 
 .. list-table::
 
@@ -360,17 +378,17 @@ Start Tweaking Strips Actions (Full Stack)
    :Menu:      :menuselection:`Strip --> Start Tweaking Strips Actions (Full Stack)`
    :Shortcut:  :kbd:`Tab`
 
-Allows you to edit the contents of the strip without disabling all the tracks above the tweaked strip.
-This allows keyframing to work as expected, and preserves the pose that you visually keyed.
+Enters Tweak Mode for the selected strip's action, making its keyframes available for editing.
+Leaves all the other tracks enabled so that you can still see their effects while making changes.
 
-When you finished editing the strip, simply go to :menuselection:`Strip --> Stop Tweaking Strips Actions`
-or press :kbd:`Tab`.
+When you're done, click :menuselection:`Strip --> Stop Tweaking Strips Actions`
+or press :kbd:`Tab` again.
 
 .. note::
 
    For transitions above the tweaked strip, keyframe remapping will fail
    for channel values that are affected by the transition.
-   A work around is to tweak the active strip without evaluating the upper NLA stack.
+   A workaround is to tweak the active strip without evaluating the upper NLA stack.
 
 
 Start Tweaking Strips Actions (Lower Stack)
@@ -381,7 +399,7 @@ Start Tweaking Strips Actions (Lower Stack)
    :Editor:    Nonlinear Animation
    :Menu:      :menuselection:`Strip --> Start Tweaking Strips Actions (Lower Stack)`
 
-The contents of Action strips can be edited, but you must be in *Tweak Mode* to do so.
-The keyframes of the action can then be edited in the Dope Sheet.
+Enters Tweak Mode for the selected strip's action, making its keyframes available for editing.
+Mutes any tracks above the current one so that they don't influence the animation while making changes.
 
-When you finished editing the strip, simply go to :menuselection:`Strip --> Stop Tweaking Strips Actions`
+When you're done, click :menuselection:`Strip --> Stop Tweaking Strips Actions` or press :kbd:`Tab`.

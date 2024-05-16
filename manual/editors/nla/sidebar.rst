@@ -14,40 +14,42 @@ Edited Action
 
    Edited Action panel.
 
-This panel is available for actions that have not been ":ref:`Pushed Down <bpy.ops.nla.action_pushdown>`".
+Contains settings for the object's active action. Only visible if the
+:ref:`Action Track <nla-action-track>` is selected.
 
 Action
-   A :ref:`Data-Block <ui-data-block>` menu that allows you to edit actions shown in the action track.
+   A :ref:`data-block <ui-data-block>` menu where you can see, change, and clear the object's active action.
    See also the Action Editor's :ref:`Action <dopesheet-action-action>`.
 
 .. _bpy.types.AnimData.action_extrapolation:
 
 Extrapolation
-   Action to take for gaps past the strip extents.
+   Determines whether the action will influence the frames before/after its boundaries
+   once it has been pushed down into a strip. (As long as it's still the active action,
+   *Hold* is used regardless of the choice.)
 
    Hold
-      Affects both sides of the strip. This should only be set on the very first strip.
-      When the order of strips changes (for example by dragging them in the NLA editor),
-      a strip that is marked as *Hold* is no longer the very first strip
-      will automatically be set to *Hold Forward* by Blender.
+      The property values at the action's first keyframe also apply to the earlier frames
+      (if the strip is the first in the track). The values at its last keyframe also
+      apply to the later frames (up to the next strip).
    Hold Forward
-      Affects the region after the clip, only. This can be set on any strip.
+      The property values at the action's last keyframe also apply to the later frames
+      (up to the next strip).
    Nothing
-      Affects only the region of the strip itself. This can be set on any strip.
+      The animated properties return to their default values outside of the strip boundaries.
 
 .. _bpy.types.AnimData.action_blend_type:
 
 Blending
-   Affects how the property values directly produced by the strip are combined with
-   the result of evaluating the stack below. The bottom-most strip is blended on top of
-   the default values of the properties.
+   How to combine the action's property values with those of the tracks below.
 
    Replace
-      The top strip is linearly blended in with the accumulated result according to influence,
-      completely overwriting it if influence is set to 100%.
+      Overwrites the values produced by the lower tracks. If *Influence* is less than 1,
+      a linear interpolation between the previous and new values is used instead.
    Multiply, Subtract, Add
-      The result of the strip is multiplied, subtracted, or added to the accumulated results,
-      and then blended in according to influence.
+      Blends the action's values with those of the lower tracks using a simple calculation.
+      If *Influence* is less than 1, a linear interpolation between the previous values
+      and these calculated values is used.
 
       :math:`result = mix(previous, previous (+-×) value, influence)`
    Combine
@@ -66,12 +68,9 @@ Blending
       Others
          :math:`result = previous + (value - default) × {influence}`
 
-      This allows layering actions that can also be used as a standalone.
-      Properties keyframed at their default values remain at default.
-
       .. note::
 
-         Since this blending mode is based on using quaternion multiplication to calculate
+         Since this blending mode uses quaternion multiplication to calculate
          the Quaternion Rotation properties, it always drives all four channels during playback,
          and *Insert Single Keyframe* is forced to insert all four keys.
          Other types of channels can still be keyed individually.
@@ -79,21 +78,20 @@ Blending
 .. _bpy.types.AnimData.action_influence:
 
 Influence
-   Amount the active Action contributes to the result of the NLA stack.
+   How much the action contributes to the result of the NLA stack.
 
 
 Strip
 =====
 
-.. _bpy.types.NlaStrip.name:
-
 Name
-   Name of the track which the strip currently belongs to.
+   Name of the strip.
 
 .. _bpy.types.NlaStrip.mute:
 
-Mute
-   Toggles NLA strip evaluation, the strip outline will be dashed.
+Mute (checkbox)
+   When unchecked, the strip will no longer contribute to the animation.
+   It's shown with a dotted outline to indicate this.
 
 
 Active Strip
@@ -107,9 +105,17 @@ Active Strip
 
    Active Strip panel.
 
-Frame Start, End
-   The boundaries of the strip itself. Note that this will stretch the duration of the Action,
-   it will not cause greater or fewer keyframes from the Actions to play (see below for that option).
+Contains common strip properties.
+
+Frame Start
+   The frame where the strip begins. Changing this will move the strip while
+   keeping its duration constant.
+
+Frame End
+   The frame where the strip ends. Changing this will also change the *Action Clip Frame End*,
+   thereby cropping or extending the action. If you instead want to speed it up or slow it down,
+   scale it by using :menuselection:`Strip --> Transform --> Scale`
+   or adjusting the *Playback Scale* setting.
 
 Extrapolation
    See :ref:`Extrapolation <bpy.types.AnimData.action_extrapolation>`.
@@ -118,75 +124,102 @@ Blending
    See :ref:`Blending <bpy.types.AnimData.action_blend_type>`.
 
 Blend In, Out
-   The first and last frame that represents when this strip will have full influence.
+   How many frames it takes for the strip's influence to ramp up at the start
+   and wind down at the end.
+
+.. figure:: /images/editors_nla_sidebar_active-strip_auto-blend.png
+   :align: right
+
+   Two strips with Auto Blend enabled.
 
 Auto Blend In/Out
-   Creates a ramp starting at the overlap of the strips. The first strip has full control,
-   and it ramps linearly giving the second strip full control by the end of the overlapping time period.
+   Calculates *Blend In/Out* automatically by looking at the strips in the track
+   above or below that overlap the current strip in time.
 
 Playback
    Reversed
-      Cause this strip to be played completely backwards.
+      Makes the strip play backwards.
    Cyclic Strip Time
-      Cycle the animated time within the action start and end.
+      Whether to wrap the *Animated Strip Time* back to the start if it exceeds
+      the Action Clip Frame End.
 
+.. _bpy.types.NlaStrip.influence:
 
 Animated Influence
 ^^^^^^^^^^^^^^^^^^
 
-Enabling alteration of the degree of influence this strip has as a keyframable value.
-If influence isn't animated, the strips will fade linearly, during the overlap.
-These can be found in the Dope Sheet or Graph Editors under the *NLA Control Curves* and
-look like group channels. They appear before all the groups or F-Curves for that channel.
+Lets you manually specify, and animate, how strongly the strip affects the animation.
+This is an alternative to using the *(Auto) Blend In/Out* settings above.
+
+To create an influence keyframe, first type a value, then either click
+:menuselection:`Insert Keyframe` in its context menu or press :kbd:`I`
+while hovering over it. You can see the keyframes in e.g. the
+:doc:`Graph Editor </editors/graph_editor/introduction>`.
 
 
 Animated Strip Time
 ^^^^^^^^^^^^^^^^^^^
 
-Same as *Animated Influence*, but with *Strip Time*.
+Lets you manually specify, and animate, the frame at which the underlying action
+is sampled.
 
+.. note::
+   Although the setting is called *Strip Time*, its value is a frame number
+   inside the action, not inside the strip. If you have an action going
+   from frame 1 to frame 50 that's referenced by a strip going from frame
+   101 to 150, you'd set the *Strip Time* to 1 to see the first keyframe,
+   not 101.
+
+In combination with *Cyclic Strip Time*, this lets you play the
+action's keyframes multiple times in a single strip.
+As an example, say that the action's keyframes are between frames 1 and 50.
+If you animate the strip time to instead go from 1 to 100,
+the keyframes will play twice (at twice the speed).
+
+In practice, however, it's easier to use the *Repeat* setting described below.
+
+.. _nla-sidebar-action-clip:
 
 Action Clip
 -----------
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar region --> Animations --> Action Clip`
+   :Panel:     :menuselection:`Sidebar region --> Strip --> Action Clip`
 
 .. figure:: /images/editors_nla_sidebar_action-clip-panel.png
 
    Action Clip panel.
 
-This represents the 'object data' of the strip. Much like the transform values of an object.
+Contains properties specific to Action strips.
 
 Action
-   A reference to the Action contained within the strip.
-   Can be changed to replace the current strip's value with another Action.
+   The action referenced by the strip.
 
 Frame Start, End
-   How much of the Action to use.
+   How much of the action to use. By adjusting these, you can crop or extend the action
+   (and the strip, as its *Frame End* will change accordingly).
+   If you extend the action, :ref:`F-Curve Extrapolation <editors-graph-fcurves-settings-extrapolation>`
+   will kick in.
 
-   For instance, it is common to set the first and last keyframe of an Action to be the same keyframes.
-   The problem with this is if you loop the animation,
-   there is a slight hitch where the same keyframes are played twice.
-   To fix this, simply reduce the *End Frame*.
-
-   .. note::
-
-      If you select values that are above or below the actual keyframe count of the Action,
-      then the :ref:`F-Curve Extrapolation <editors-graph-fcurves-settings-extrapolation>` will be applied.
+   One case where these settings can be useful is in cyclic animation where the first
+   and last keyframes of the action have the same value (meaning this value applies for
+   two frames when the animation restarts). By reducing the *Frame End*, you can exclude
+   the last keyframe and have the value apply for only one frame instead.
 
 Sync Length
-   Causes the *Start* and *End Frames*, above, to be reset to
-   the first and last keyframed frames of the Action.
+   Automatically sets *Frame Start/End* to the action's first/last keyframe when exiting
+   Tweak Mode.
+
 Now
-   The *Now* button causes the *Start* and *End Frames*, above, to be reset
-   to the first and last keyframed frames of the Action.
+   Sets *Frame Start/End* to the action's first/last keyframe.
 
 Playback Scale
-   Stretches strip, another way of increasing the *Strip Extents: End Frame*, above.
+   Makes the animation play more quickly (scale < 1) or slowly (scale > 1) than the
+   original action.
+
 Repeat
-   Also expands the strip, but by looping from the first keyframe and going forward.
+   Makes the action play multiple times.
 
 
 Action
@@ -194,10 +227,9 @@ Action
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar region --> Animations --> Action`
+   :Panel:     :menuselection:`Sidebar region --> Strip --> Action`
 
-This panel is identical to the one in Dope Sheet, and allows viewing or changing properties of the
-action used in the Action Clip, i.e. :ref:`Manual Frame Range <bpy.types.Action.use_frame_range>`.
+See :ref:`Action Properties <actions-properties>`.
 
 
 Modifiers
@@ -205,9 +237,9 @@ Modifiers
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar region --> Modifiers --> Modifiers`
+   :Panel:     :menuselection:`Sidebar region --> Modifiers`
 
-Like its counterparts in graph and video editing,
-Modifiers can stack different combinations of effects for strips.
+Strip modifiers let you make non-destructive changes to all the curves inside
+the strip's action.
 
 See :doc:`F-Curve Modifiers </editors/graph_editor/fcurves/modifiers>`.

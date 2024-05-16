@@ -4,11 +4,36 @@
 Introduction
 ************
 
-The NLA editor, short for NonLinear Animation, can manipulate and repurpose :doc:`/animation/actions`,
-without the tedium of handling keyframes. It is often used to make broad,
-significant changes to a scene's animation, with relative ease.
-It can also repurpose, chain together a sequence of motions, and "layered" actions, which make it easier to organize,
-and version-control your animation.
+The NonLinear Animation editor, or NLA editor for short, lets you animate on a higher level.
+Instead of working with individual keyframes, it works with :doc:`actions </animation/actions>`,
+which are named, reusable animation segments.
+
+.. figure:: /images/editors_nla_introduction_example.png
+
+   The NLA editor.
+
+
+Main Region
+===========
+
+The editor displays a stack of :doc:`tracks </editors/nla/tracks>` which work like layers in an image editing
+program. Higher tracks take precedence over lower ones, although you can also choose to blend them.
+
+Each track can contain any number of :doc:`strips </editors/nla/strips>` -- typically Action Strips,
+which are instances of actions.
+
+The top track hilighted in orange is special: this is the Action Track. Unlike the other tracks,
+it doesn't contain strips -- instead, it contains the object's *active action*,
+which is where new keyframes are added to by default.
+
+Editors like the :doc:`Timeline </editors/timeline>` and the :doc:`Dope Sheet Editor </editors/dope_sheet/introduction>`
+normally only show the keyframes of this active action. If you want to edit another action,
+you can select it in the NLA editor and press :kbd:`Tab` to enter Tweak Mode.
+
+.. figure:: /images/editors_nla_introduction_tweak-mode.png
+
+   Tweaking an action. Notice that it's shown in both its original track and the Action Track.
+   The active action is temporarily hidden.
 
 
 Header
@@ -18,97 +43,103 @@ View Menu
 ---------
 
 Sidebar :kbd:`N`
-   Show or hide the :ref:`Sidebar Region <ui-region-sidebar>`.
+   Shows or hides the :ref:`Sidebar Region <ui-region-sidebar>`.
 Adjust Last Operation
    Displays a pop-up panel to alter properties of the last
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
-   Show or hide the Channels Region.
+   Shows or hides the Track Region.
 
 ----------
 
 Frame Selected :kbd:`NumpadPeriod`
-   Reset viewable area to show selected strips.
+   Pans and zooms the view to focus on the selected strips.
 Frame All :kbd:`Home`
-   Reset viewable area to show all strips.
+   Pans and zooms the view to show all strips.
 Go to Current Frame :kbd:`Numpad0`
-   Centers the area to the Playhead.
+   Centers the view on the Playhead.
 
 ----------
 
 Realtime Updates
-   When transforming NLA-strips, the changes to the animation are propagated to other views.
+   Whether to update other views (such as the 3D Viewport) while you're moving strips around.
+   If disabled, the other views only get updated once you finish the move.
 Show Control F-Curves
-   Overlays a graph of the NLA-strip's influence on top of the strip.
+   Shows a graph on top of each strip that uses :ref:`Animated Influence <bpy.types.NlaStrip.influence>`.
 
 ----------
 
 Show Markers
-   Shows the markers region. When disabled, the `Markers Menu`_ is also hidden
-   and markers operators are not available in this editor.
+   Shows the marker region (provided any markers have been defined).
+   When disabled, the `Marker Menu`_ is also hidden and marker operators are not available in this editor.
 Show Local Markers
-   Shows action-local markers on the strip, this is useful when synchronizing time across strips.
+   Shows action-local markers (which you can create in the :ref:`Action Editor <dopesheet-marker-menu>`).
+   This can be useful to align strips to each other.
 
    .. figure:: /images/editors_nla_tracks_local_markers.png
 
-      Local markers shown on a strip.
+      Local markers shown in the NLA Editor (top) and the Action Editor (bottom).
 Show Seconds :kbd:`Ctrl-T`
-   Show timing in seconds not frames.
+   Shows timing in seconds instead of frames.
 Sync Visible Range
-   It synchronizes the horizontal panning and scale of the current editor
-   with the other editors (Graph, Dope Sheet, NLA, and Sequencer) when this option is set.
-   That way you always have these editors showing the same section of frames.
+   Synchronizes the horizontal panning and scale of the editor
+   with other time-based editors that also have this option enabled.
+   That way, they always show the same section of time.
 
 ----------
 
 Set Preview Range :kbd:`P`
-   Interactively define frame range used for playback.
-   Allows you to define a temporary preview range to use for animation playback
-   (this is the same thing as the *Playback Range* option of
-   the :ref:`Timeline editor header <animation-editors-timeline-headercontrols>`).
+   Lets you drag a box to define a time range for previewing. As long as this range is active,
+   playback will be limited to it, letting you repeatedly view a segment of the animation without
+   having to manually rewind each time.
+
+   You can change the start or end frame using the corresponding button in the
+   Timeline editor's :ref:`Playback <timeline-playback>` popover.
+   Alternatively, you can simply run *Set Preview Range* again.
 Clear Preview Range :kbd:`Alt-P`
    Clears the preview range.
 Set Preview Range to Selected :kbd:`Ctrl-Alt-P`
-   Sets the preview range to playback the selected NLA strips.
+   Applies a preview range that encompasses the selected strips.
 
 
 ----------
 
 Area
-   Area controls, see the :doc:`user interface </interface/window_system/areas>`
+   Area controls. See the :doc:`user interface </interface/window_system/areas>`
    documentation for more information.
-
-.. seealso::
-
-   - See Timeline's :ref:`timeline-view-menu`.
 
 
 Select Menu
 -----------
 
 All :kbd:`A`
-   Select all NLA-strips.
+   Selects all strips.
 None :kbd:`Alt-A`
-   Deselect all NLA-strips.
+   Deselects all strips.
 Invert :kbd:`Ctrl-I`
-   Invert the current selection of NLA-strips.
-Box Select :kbd:`B`
-   Select NLA-strips by drawing a box. All NLA-strips that intersects the box
-   will be added to the current selection.
-Border Axis Range :kbd:`Alt-B`
-   Select NLA-strips by drawing a box. All NLA-strips that intersects the frames
-   of the drawn box will be added to the current selection.
+   Inverts the current selection.
+
+----------
+
+:ref:`Box Select <bpy.ops.*.select_box>` :kbd:`B`
+   Lets you drag a box and selects the strips that are partially or completely inside it.
+Box Select (Axis Range) :kbd:`Alt-B`
+   Lets you drag a box and selects the strips that overlap the corresponding time range,
+   even if they're above or below the box.
+
+----------
+
 Before Current Frame :kbd:`[`
-   Select all NLA-strips before the current frame.
+   Selects all the strips that start before (or on) the current frame.
 After Current Frame :kbd:`]`
-   Select all NLA-strips after the current frame.
+   Selects all the strips that end after (or on) the current frame.
 
 
-Markers Menu
-------------
+Marker Menu
+-----------
 
 :doc:`Markers </animation/markers>` are used to denote frames with key points or significant events
-within an animation. Like with most animation editors, markers are shown at the bottom of the editor.
+within an animation. Like with most animation editors, they're shown at the bottom.
 
 .. figure:: /images/editors_graph-editor_introduction_markers.png
 
@@ -117,49 +148,79 @@ within an animation. Like with most animation editors, markers are shown at the 
 For descriptions of the different marker tools, see :ref:`Editing Markers <animation-markers-editing>`.
 
 
+Add Menu
+--------
+
+Action :kbd:`Shift-A`
+   Adds a strip referencing an action to the active track.
+Transition :kbd:`Shift-T`
+   Adds a transition strip between the two selected action strips.
+Sound :kbd:`Shift-K`
+   Adds a strip that controls when the :doc:`/render/output/audio/speaker` object plays its sound clip.
+
+----------
+
+.. _bpy.ops.nla.selected_objects_add:
+
+Selected Objects
+   Makes the selected objects appear in the NLA Editor without adding an action or track to them.
+
+See :doc:`/editors/nla/strips` for details on the various strip types.
+
 Track Menu
 ----------
 
 Contains tools for working with NLA tracks.
-For descriptions of the different editing tools, see :doc:`Editing Tracks </editors/nla/editing/track>`.
+See :doc:`Editing Tracks </editors/nla/editing/track>` for details.
 
 
 Strip Menu
 ----------
 
 Contains tools for working with NLA strips.
-For descriptions of the different editing tools, see :doc:`Editing Strips </editors/nla/editing/strip>`.
+See :doc:`Editing Strips </editors/nla/editing/strip>` for details.
 
+Filters
+-------
 
-Add
----
+Only Show Selected
+   Only shows tracks belonging to objects that are selected.
+Show Hidden
+   Shows tracks from objects that are hidden.
+Include Missing NLA
+   Shows the Action Track even if there is no action in it.
+Search
+   Filters the track list by a search term.
+Filtering Collection
+   Select a collection to only show tracks from objects in that collection.
+Filter by Type
+   Filter tracks by target type.
+Sort Data-Blocks
+   Sorts data-blocks alphabetically to make them easier to find.
 
-Add Action Strip :kbd:`Shift-A`
-   Add an NLA-strip referencing an Action to the active track.
-Add Transition :kbd:`Shift-T`
-   Add an NLA-strip to create a transition between a selection of two adjacent NLA-strips.
-Add Sound Strip :kbd:`Shift-K`
-   Add an NLA-strip controlling when the speaker object plays its sound clip.
-
-.. _bpy.ops.nla.selected_objects_add:
-
-Selected Objects
-   Let the selected objects appear in the NLA Editor. This is done by adding
-   an empty animation data object to the selected object.
-
-
-Transform Controls
-------------------
+   If your playback speed suffers because of this
+   (should only really be an issue when working with lots of objects),
+   you can turn it off.
 
 Snap
-   Activates automatic snapping when you moving keys.
+----
 
-   Snap To
-      Type of element to snap to.
+The toggle button enables/disables automatic strip snapping.
+The dropdown button shows a popover with the following options:
 
-      :Frame: Snap to frame.
-      :Second: Snap to seconds.
-      :Nearest Marker: Snap to nearest :doc:`Marker </animation/markers>`.
+Snap To
+   Type of element to snap to.
 
-   Absolute Time Snap
-      Absolute time alignment when transforming keyframes
+   :Frame: Snap to full frames.
+   :Second: Snap to seconds.
+   :Nearest Marker: Snap to the nearest :doc:`Marker </animation/markers>`.
+
+Absolute Time Snap
+   When disabled, strips will move in increments of *Snap To*.
+   For example, if you selected *Second* and have a strip that currently
+   starts on 0:06+5, dragging it to the right will snap it to 0:07+5. Its time
+   increases by a second, and its subsecond offset of 5 frames remains the same.
+
+   When enabled, strips will snap to multiples of *Snap To*.
+   Taking the above example, the strip would snap to 0:07+0,
+   removing the subsecond offset.

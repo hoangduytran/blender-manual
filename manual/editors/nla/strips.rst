@@ -4,7 +4,8 @@
 Strips
 ******
 
-There are four kinds of strips: Action, Transition, Sound clip and Meta.
+A strip tells the animation when something happens and for how long.
+There are a few different types which are described below.
 
 
 .. _bpy.ops.nla.actionclip_add:
@@ -12,16 +13,18 @@ There are four kinds of strips: Action, Transition, Sound clip and Meta.
 Action Strips
 =============
 
-Action Strips are a container of keyframe data of an action.
-Any action used by the NLA first must be turned into an Action strip.
-This is done so by clicking the :ref:`Push Down Action <bpy.ops.nla.action_pushdown>` button see above.
-Alternatively, you can go to :menuselection:`Add --> Action Strip`.
+An action strip plays the keyframes inside an :doc:`action </animation/actions>`.
+You can create one using :menuselection:`Add --> Action`. Another way is to click
+:ref:`Push Down Action <bpy.ops.nla.action_pushdown>` in the NLA's Action Track --
+this will create a strip based on the object's active action.
 
-.. note::
+Multiple strips can reference the same action, so that you can potentially change
+multiple parts of the animation by editing a single set of keyframes.
 
-   Action Strips only playback the keyframe data that fits into the length of the strip.
-   This includes any :doc:`modifiers </editors/graph_editor/fcurves/modifiers>`
-   that might extend keyframe data.
+A strip can be shorter than its underlying action, be it through cropping,
+speeding up, or both. It can also be longer than its underlying action,
+be it through extending, slowing down, or both. See the
+:ref:`Sidebar <nla-sidebar-action-clip>` for details.
 
 
 .. _bpy.ops.nla.transition_add:
@@ -29,9 +32,8 @@ Alternatively, you can go to :menuselection:`Add --> Action Strip`.
 Transition Strips
 =================
 
-Transitions interpolate between Actions. They must be placed in between other strips.
-Select two or more strips on the same track,
-and go to :menuselection:`Add --> Transition`.
+A transition strip interpolates between two neighboring action strips.
+Select them and click :menuselection:`Add --> Transition`.
 
 .. figure:: /images/editors_nla_strips_basics-transition.png
 
@@ -40,16 +42,13 @@ and go to :menuselection:`Add --> Transition`.
 
 .. _bpy.ops.nla.soundclip_add:
 
-Sound Clip Strips
-=================
+Sound Strips
+============
 
-Controls when a speaker plays a sound clip.
-:menuselection:`Add --> Sound Clip`.
+These strips control when a :doc:`/render/output/audio/speaker` plays its sound clip.
 
 
 Meta Strips
 ===========
 
-Meta strips group strips together as a whole, so you can move them as one.
-If you find yourself moving a lot of strips together, you can group them into a Meta strip.
-A Meta strip can be moved and duplicated like a normal strip.
+A meta strip groups other strips together, letting you move, scale, and copy them as one combined unit.
