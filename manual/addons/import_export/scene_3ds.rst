@@ -6,7 +6,7 @@ Autodesk 3DS
 
    :Category: Import-Export
    :Menu: :menuselection:`File --> Import/Export --> 3D Studio (.3ds)`
-   :Version: 2.5.1
+   :Version: 2.6.0
    :Blender: 4.2
    :Authors: Bob Holcomb, Campbell Barton, Sebastian Schrand
    :Maintainer: Sebastian Sille (NRGSille)
@@ -67,18 +67,9 @@ Scene Units
    If millimeters are expected to import, set the scene unit length settings to *Millimeters*.
    The meshes can also be converted to imperial unit measures if this is enabled in the scene units.
 
-Pivot Origin
-   Moves all geometry to the pivot origin. Enable this option for transformed pivot centers to move
-   the geometry back to its origin.
-
 Apply Transform
    Applies object transformations after importing. If unchecked, all transformations will be cleared
    and the objects will stay at its origins.
-
-World Space
-   Use world matrix instead of local matrix to transform the objects.
-   This is useful for older 3ds files from 3D Studio DOS which only used world space to transform the objects.
-   It is also useful if the object was exported without apply transform.
 
 Forward / Up Axis
    Since many applications use a different axis for 'Up',
