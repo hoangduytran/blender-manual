@@ -143,12 +143,11 @@ Where ``./config/startup.blend`` could be ``~/.blender/|BLENDER_VERSION|/config/
    Modules for add-ons to use
    (added to Python's ``sys.path``).
 
-``./scripts/addons_contrib/*.py``
-   Another add-ons directory which is used for community maintained add-ons (must be manually created).
+``./scripts/addons_core/*.py``
+   The add-ons directory which is used for bundled add-ons.
 
-``./scripts/addons_contrib/modules/*.py``
-   Modules for ``addons_contrib`` to use
-   (added to Python's ``sys.path``).
+``./scripts/addons_core/modules/*.py``
+   Modules for ``addons_core`` to use (added to Python's ``sys.path`` when it found).
 
 ``./scripts/modules/*.py``
    Python modules containing our core API and utility functions for other scripts to import
