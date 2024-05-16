@@ -1,7 +1,11 @@
-
 ************************
 Atomic Blender (PDB/XYZ)
 ************************
+
+
+.. hint:: **2024-05-16: Attention!**
+ 
+ This wiki page will not be maintained in the future, the new Wiki page is** `here <https://projects.blender.org/extensions/io_mesh_atomic/wiki>`__.
 
 The Atomic Blender (PDB/XYZ) add-on imports atomic structures
 (molecules, crystals, clusters, particles, surfaces, etc.), which are described in
