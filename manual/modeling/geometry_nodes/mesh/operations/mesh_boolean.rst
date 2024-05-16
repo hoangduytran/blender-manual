@@ -5,13 +5,13 @@
 Mesh Boolean Node
 *****************
 
-
 .. figure:: /images/node-types_GeometryNodeMeshBoolean.webp
    :align: right
    :alt: Mesh Boolean node.
 
 The *Mesh Boolean Node* allows you to cut, subtract, and join the geometry of two inputs.
 This node offers the same operations as the :doc:`Boolean modifier </modeling/modifiers/generate/booleans>`.
+
 
 Inputs
 ======
@@ -41,6 +41,17 @@ Operation
    :Difference:
       Geometry 2 is subtracted from geometry 1 (everything outside of geometry 2 is kept).
 
+Solver
+   Algorithm used to calculate the Boolean intersections.
+
+   :Fast:
+      Uses a mathematically simple solver which offers the best performance;
+      however, this solver lacks support for overlapping geometry.
+   :Exact:
+      Uses a mathematically complex solver which offers the best results
+      and has full support for overlapping geometry;
+      however, this solver is much slower than the *Fast Solver*.
+
 
 Output
 ======
@@ -48,6 +59,6 @@ Output
 Mesh
    Standard geometry output.
 
-Intersecting Edges
+Intersecting Edges :guilabel:`Exact Solver`
    A boolean attribute field with a selection of the edges that were created where the two inputs
    meet.
