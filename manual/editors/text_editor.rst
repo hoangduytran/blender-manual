@@ -56,9 +56,7 @@ Text
 Run Script (play icon)
    Executes the text as a Python script :kbd:`Alt-P`. See `Template Menu`_.
 Show
-   Toggle display options.
-
-   Line Numbers, Word Wrap, Syntax Highlighting
+   Toggles for line numbers, word wrapping, and syntax highlighting.
 Script Node Update (refresh icon)
    When an `OSL-file <https://github.com/AcademySoftwareFoundation/OpenShadingLanguage>`__
    is opened, this updates the :ref:`Shader Script <bpy.types.ShaderNodeScript>` node
@@ -70,10 +68,13 @@ View Menu
 
 Sidebar :kbd:`Ctrl-T`
    Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
+
+-----
+
 Line Numbers
    Displays the text file's line numbers on the left of the `Main View`_.
 Word Wrap
-   Wraps words that are too long to fit into the horizontal space by pushing them to a new "pseudo line".
+   Wraps words that don't fit into the horizontal space by pushing them to a new "pseudo line".
 Syntax Highlight
    Colors special words, in the `Main View`_, that are used in the Python programming language.
 Highlight Line
@@ -139,26 +140,26 @@ Save :kbd:`Alt-S`
 .. _bpy.ops.text.save_as:
 
 Save As :kbd:`Shift-Ctrl-Alt-S`.
-   Saves text as a new text file,
-   a :doc:`File Browser </editors/file_browser>` is opened to select the directory
-   to save the file along with giving the file a name and file extension.
+   Saves text as a new text file.
+   A :doc:`File Browser </editors/file_browser>` is opened to select the directory
+   to save the file along with giving the file a name and extension.
 
 .. _bpy.types.Text.use_module:
 
 Register
-   Run the text data-block as a Python script on loading the blend-file.
+   Runs the text data-block as a Python script on loading the blend-file.
    Read more about the registration of Python modules in
    `API documentation <https://docs.blender.org/api/current/info_overview.html#registration>`__.
 
 .. _bpy.types.SpaceTextEditor.use_live_edit:
 
 Live Edit
-   Run the Python script while editing
+   Runs the Python script each time you make a change.
 
 .. _bpy.ops.text.run_script:
 
 Run Script :kbd:`Alt-P`
-   Executes the text as a Python script, see `Running Scripts`_ for more information.
+   Executes the text as a Python script. See `Running Scripts`_ for more information.
 
 
 Edit Menu
@@ -167,9 +168,9 @@ Edit Menu
 Undo/Redo
    See :doc:`/interface/undo_redo`.
 Cut :kbd:`Ctrl-X`
-   Cuts out the marked text into the text clipboard.
+   Cuts out the marked text into the clipboard.
 Copy :kbd:`Ctrl-C`
-   Copies the marked text into the text clipboard.
+   Copies the marked text into the clipboard.
 Paste :kbd:`Ctrl-V`
    Pastes the text from the clipboard at the cursor location in the Text editor.
 Duplicate Line :kbd:`Ctrl-D`
@@ -229,7 +230,7 @@ Unindent :kbd:`Shift-Tab`.
    Unindents the selection.
 Toggle Comments :kbd:`Ctrl-Slash`.
    Toggles whether the selected line(s) are a Python comment.
-   If no lines are selected the current line is toggled.
+   If no lines are selected, the current line is toggled.
 Convert Whitespace
    Converts indentation characters *To Spaces* or *To Tabs*.
 
@@ -237,10 +238,7 @@ Convert Whitespace
 Template Menu
 -------------
 
-The *Text Editor* has some dedicated Python scripts,
-which are useful for writing tools, like a class/function/variable browser, completion...
-
-Python, OpenShading Language
+Contains a number of templates for both Python and Open Shading Language scripts.
 
 
 Main View
@@ -251,11 +249,11 @@ Typing on the keyboard produces text in the text buffer.
 As usual, pressing, dragging and releasing :kbd:`LMB` selects text.
 Pressing :kbd:`RMB` opens the context menu.
 
-.. tip:: Usages for the Text editor
+.. tip::
 
-   The Text editor is handy also when you want to share your blend-files with others.
-   The Text editor can be used to write in a ``README`` text explaining the contents of your blend-file.
-   Be sure to keep it visible when saving!
+   The Text editor is also handy when you want to share your blend-file with others:
+   you can leave a note that explains how the file is structured.
+   Be sure to keep the editor visible when saving so they'll see it!
 
 
 Sidebar
@@ -287,7 +285,7 @@ Replace Text :kbd:`Ctrl-H`
 .. _bpy.types.SpaceTextEditor.use_find_all:
 
 Case
-   Search is sensitive to upper-case and lower-case letters.
+   Search is sensitive to uppercase and lowercase letters.
 Wrap
    Search again from the start of the file when reaching the end.
 All
@@ -301,8 +299,8 @@ Properties
 .. _bpy.types.SpaceTextEditor.margin_column:
 
 Margin
-   Shows a right margin to help keep line length at a reasonable length when scripting.
-   The width of the margin is specified in *Margin Column*.
+   Shows a vertical margin line to help keep text lines at a reasonable length.
+   The position of this margin line is specified by *Margin Column*.
 
 .. _bpy.types.SpaceTextEditor.font_size:
 
@@ -317,13 +315,13 @@ Tab Width
 .. _bpy.types.Text.indentation:
 
 Indentation
-   Use *Tabs* or *Spaces* for indentations.
+   Whether to use *Tabs* or *Spaces* for indentation.
 
 
 Footer
 ======
 
-The Text editor footer displays if the text is saved internal or external and
+The Text editor footer displays whether the text is saved internally or externally and
 if there are unsaved changes to an external file.
 For external files, this region also displays the file path to the text file.
 
@@ -334,8 +332,6 @@ Usage
 Running Scripts
 ---------------
 
-The most notable keystroke is :kbd:`Alt-P` which makes the content of the buffer
-being parsed by the internal Python interpreter built into Blender.
-Before going on it is worth noticing that Blender comes with a fully functional Python interpreter built-in,
-and with a lots of Blender-specific modules,
-as described in the :doc:`/advanced/scripting/index` section.
+The most notable keystroke is :kbd:`Alt-P` which executes the current text as a Python script.
+You can access not just the standard Python modules, but also a whole bunch of Blender-specific ones;
+see :doc:`/advanced/scripting/index`.
