@@ -17,16 +17,6 @@
 Add-ons
 *******
 
-.. important::
-
-   This page is part of :doc:`Extensions <index>`, and is only available experimentally in
-   `daily builds <https://builder.blender.org/download/daily/>`__ of
-   `Blender 4.2 <https://projects.blender.org/blender/blender/milestone/19>`__.
-   Please enable "Extensions" on the :doc:`Experimental Preferences </editors/preferences/experimental>`
-   to help testing it.
-
-   For the deprecated information about individual add-ons bundled with Blender visit :doc:`Add-ons </addons/index>`.
-
 *Add-ons* let you extend Blender's functionality using Python.
 Most of the time you can get add-ons as part of the :doc:`Extensions <index>` system.
 
