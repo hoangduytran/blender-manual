@@ -46,7 +46,6 @@ subcommands:
     :server-generate:     Create a listing from all packages.
 
 
-
 Blender Package Management
 ==========================
 
@@ -251,10 +250,16 @@ options:
   -h, --help            show this help message and exit
   --source-dir SOURCE_DIR
                         The package source directory containing a ``blender_manifest.toml`` manifest.
+
+                        Default's to the current directory.
   --output-dir OUTPUT_DIR
                         The package output directory.
+
+                        Default's to the current directory.
   --output-filepath OUTPUT_FILEPATH
                         The package output filepath (should include a ``.zip`` extension).
+
+                        Defaults to a name created using the ``id`` from the manifest.
 
 .. _command-line-args-extension-validate:
 
@@ -271,7 +276,7 @@ positional arguments:
   :SOURCE_PATH:  The package source path (either directory containing package files or the package archive).
                This path must containing a ``blender_manifest.toml`` manifest.
 
-               The current directory ``.`` is default.
+               Defaults to the current directory.
 
 options:
   -h, --help   show this help message and exit
