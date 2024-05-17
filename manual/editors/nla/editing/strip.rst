@@ -311,7 +311,7 @@ ensuring that it (only) plays from the action's first keyframe to its last.
 
 .. seealso::
    
-   The :ref:`Sync Length Now` button in the :ref:`Sidebar <nla-sidebar-action-clip>`,
+   The Sync Length Now button in the :ref:`Sidebar <nla-sidebar-action-clip>`,
    which does the same thing.
 
 .. _bpy.ops.nla.make_single_user:
