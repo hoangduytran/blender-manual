@@ -7,13 +7,8 @@
 Python Console
 **************
 
-The Python Console is a quick way to execute commands,
-with access to the entire Python API, command history and auto-complete.
-The command prompt is typical for Python 3.x,
-the interpreter is loaded and is ready to accept commands at the prompt ``>>>``.
-
-The Python Console is a good way to explore the possibilities of Blender built-in Python.
-The Python Console can be used to test small bits of Python code which can then be pasted into larger scripts.
+The Python Console offers a quick way to test code snippets and explore Blender's API.
+It executes whatever you type on its ``>>>`` prompt and has command history and auto-complete.
 
 .. figure:: /images/editors_python-console_default.png
 
@@ -30,7 +25,7 @@ View Menu
 ^^^^^^^^^
 
 Zoom In / Zoom Out
-   Increases/Decreases the font size of the console text.
+   Increases/decreases the font size.
 Move to Previous Word :kbd:`Ctrl-Left`
    Moves the cursor to the beginning of the previous word.
    If the cursor is in the middle of a word, the cursor is moved to the beginning of the current word.
@@ -51,7 +46,7 @@ Console Menu
 ^^^^^^^^^^^^
 
 Clear All
-   Refreshes the console giving the view a fresh start.
+   Refreshes the console, giving the view a fresh start.
    Note that command history is not cleared.
 Clear Line :kbd:`Shift-Return`.
    Removes everything from the prompt line.
@@ -62,24 +57,24 @@ Delete Next Word :kbd:`Ctrl-Delete`
    Deletes everything between the cursor and the end of the next word.
    If the cursor is in the middle of a word, deletes everything to the end of the current word.
 Copy as Script :kbd:`Shift-Ctrl-C`
-   Copies the full history buffer to the clipboard,
-   this can be pasted into a text file to be used as a Python script.
+   Copies the full history buffer to the clipboard.
+   This can be pasted into a text file to be used as a Python script.
 Cut :kbd:`Ctrl-X`
-   Deletes the selected text and copies it to the clipboard.
+   Copies the selected text into the clipboard and deletes it.
 Copy :kbd:`Ctrl-C`
-   Copy the selection.
+   Copies the selected text into the clipboard.
 Paste :kbd:`Ctrl-V`
-   Paste into the command line.
+   Pastes into the command line.
 Indent :kbd:`Tab`
    Inserts a tab character at the cursor.
 Unindent :kbd:`Shift-Tab`
    Unindents the selection.
 Backward in History :kbd:`Up`
-   Changes the current command to previous command as they appear in the command history.
+   Changes the current command to the previous one from the command history.
 Forward in History :kbd:`Down`
-   Changes the current command to next command as they appear in the command history.
+   Changes the current command to the next one from the command history.
 Autocomplete :kbd:`Tab`
-   See `Auto Completion`_ for more information.
+   See `Auto Completion`_.
 
 
 Main View
@@ -88,11 +83,11 @@ Main View
 .. rubric:: Key Bindings
 
 - :kbd:`LMB` -- Moves the cursor along the input line.
-- :kbd:`Left` / :kbd:`Right` -- Cursor motion.
-- :kbd:`Ctrl-Left` / :kbd:`Ctrl-Right` -- Cursor motion, by word.
+- :kbd:`Left` / :kbd:`Right` -- Moves the cursor by one character.
+- :kbd:`Ctrl-Left` / :kbd:`Ctrl-Right` -- Moves the cursor by one word.
 - :kbd:`Shift-Left` / :kbd:`Shift-Right` -- Selects characters to the left/right.
 - :kbd:`Shift-Ctrl-Left` / :kbd:`Shift-Ctrl-Right` -- Selects words to the left/right.
-- :kbd:`Ctrl-A` Select all text and text history.
+- :kbd:`Ctrl-A` Selects all text and text history.
 
 - :kbd:`Backspace` / :kbd:`Delete` -- Erase characters.
 - :kbd:`Ctrl-Backspace` / :kbd:`Ctrl-Delete` -- Erase words.
@@ -117,8 +112,8 @@ Some variables and modules are available for convenience:
 First Look at the Console Environment
 -------------------------------------
 
-To check what is loaded into the interpreter environment, type ``dir()``
-at the prompt and execute it.
+To see the list of global functions and variables,
+type ``dir()`` and press :kbd:`Enter` to execute it.
 
 .. figure:: /images/editors_python-console_dir.png
 
@@ -128,38 +123,13 @@ at the prompt and execute it.
 Auto Completion
 ---------------
 
-Now, type ``bpy.`` and then press :kbd:`Tab` and you will see the Console
-auto-complete feature in action.
+The Console can preview the available members of a module or variable.
+As an example, type ``bpy.`` and press :kbd:`Tab`:
 
 .. figure:: /images/editors_python-console_completion.png
 
-You will notice that a list of submodules inside of ``bpy`` appear. These modules encapsulate all
-that we can do with Blender Python API and are very powerful tools.
-
-Lets list all the contents of ``bpy.app`` module.
-
-Notice the green output above the prompt where you enabled auto-completion.
-What you see is the result of auto completion listing.
-In the above listing all are module attributed names,
-but if you see any name end with ``(``, then that is a function.
-
-We will make use of this a lot to help our learning the API faster.
-Now that you got a hang of this, lets proceed to investigate some of modules in ``bpy``.
-
-
-Before Tinkering with the Modules
----------------------------------
-
-If you look at the 3D Viewport in the default Blender scene,
-you will notice three objects: Cube, Light and Camera.
-
-- All objects exist in a context and there can be various modes under which they are operated upon.
-- At any instance, only one object is active and there can be more than one selected object.
-- All objects are data in the blend-file.
-- There are operators/functions that create and modify these objects.
-
-For all the scenarios listed above (not all were listed, mind you...)
-the ``bpy`` module provides functionality to access and modify data.
+The submodules are listed in green. Attributes and methods will be listed
+in the same way, with methods being indicated by a trailing ``(``.
 
 
 Examples
@@ -168,54 +138,46 @@ Examples
 bpy.context
 -----------
 
+This module gives you access to the current scene,
+the currently selected objects, the current object mode, and so on.
+
 .. note::
 
-   For the commands below to show the proper output, make sure you have selected object(s) in the 3D Viewport.
+   For the commands below to show the proper output,
+   make sure you have selected object(s) in the 3D Viewport.
 
 .. figure:: /images/editors_python-console_bpy-context.png
 
-``bpy.context.mode``
-   Will print the current 3D Viewport mode (Object, Edit, Sculpt, etc.).
+Get the current 3D Viewport mode (Object, Edit, Sculpt, etc.)::
 
-``bpy.context.object`` or ``bpy.context.active_object``
-   Will give you access to the active object in the 3D Viewport.
+   bpy.context.mode
+   
+Get the active object::
 
-Change the X location to a value of 1::
+   bpy.context.object
+   bpy.context.active_object
+
+Change the active object's X coordinate to 1::
 
    bpy.context.object.location.x = 1
 
-Move the object from previous X location by 0.5 unit::
+Move the active object by 0.5 along the X axis::
 
    bpy.context.object.location.x += 0.5
 
-Change the X, Y, Z location::
+Change all three location coordinates in one go::
 
    bpy.context.object.location = (1, 2, 3)
 
-Change only the X, Y components::
+Change only the X and Y coordinates::
 
    bpy.context.object.location.xy = (1, 2)
 
-The data type of object's location::
-
-   type(bpy.context.object.location)
-
-Now that is a lot of data that you have access to::
-
-   dir(bpy.context.object.location)
-
-``bpy.context.selected_objects``
-   Will give access to a list of all selected objects.
-
-Type this and then press :kbd:`Tab`::
+Get the selected objects::
 
    bpy.context.selected_objects
 
-To print out the name of first object in the list::
-
-   bpy.context.selected_objects[0]
-
-The complex one... But this prints a list of selected objects not including the active object:::
+Get the selected objects excluding the active one::
 
    [obj for obj in bpy.context.selected_objects if obj != bpy.context.object]
 
@@ -223,12 +185,8 @@ The complex one... But this prints a list of selected objects not including the 
 bpy.data
 --------
 
-``bpy.data`` has functions and attributes that give you access to all the data in the blend-file.
-
-You can access following data in the current blend-file:
-objects, meshes, materials, textures, scenes, screens, sounds, scripts, etc.
-
-That is a lot of data.
+Gives you access to all the data in the blend-file,
+regardless of whether it's currently active or selected.
 
 .. figure:: /images/editors_python-console_bpy-data.png
 
@@ -236,8 +194,7 @@ That is a lot of data.
 bpy.ops
 -------
 
-The tool system is built around the concept of operators.
-Operators are typically executed from buttons or menus but can be called directly from Python too.
-
-See the `bpy.ops <https://docs.blender.org/api/current/bpy.ops.html>`__
+"Operators" are actions that are normally triggered from a button or menu item
+but can also be called programmatically. See the
+`bpy.ops <https://docs.blender.org/api/current/bpy.ops.html>`__
 API documentation for a list of all operators.
