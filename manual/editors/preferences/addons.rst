@@ -77,12 +77,6 @@ of the add-ons shown in the figure below.
 
 The add-on functionality should be immediately available.
 
-.. note::
-
-   Add-ons that activate or change multiple hotkeys have a special system of activation.
-   For example, with the :doc:`/addons/interface/viewport_pies` add-on
-   for each menu there is a selection box to activate the menu and its hotkey.
-
 .. tip::
 
    If the Add-on does not activate when enabled,

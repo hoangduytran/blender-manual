@@ -472,7 +472,7 @@ this allows you to have multiple keys accessing the same operator with different
    it is hard to make sure add-ons will not overwrite each other's keymaps.
    Thus at least take care when assigning keys that they do not
    conflict with important functionality of Blender
-   (see also :doc:`/addons/development/is_key_free`).
+   (see also `is key free add-on <https://projects.blender.org/extensions/development_iskeyfree>`__).
 
 For API documentation on the functions listed above, see:
 

@@ -52,8 +52,7 @@ The exporter can bake mesh modifiers and animation into the FBX so the final res
 .. note::
 
    Blender now only supports complex node-based shading. FBX having a fixed pipeline-like support of materials,
-   this add-on uses the :doc:`generic wrapper </addons/import_export/node_shaders_info>`
-   featured by Blender to convert between both.
+   this add-on converts between them.
 
 
 Properties
