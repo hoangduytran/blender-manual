@@ -22,7 +22,7 @@ options:
 subcommands:
 
 
-  `Blender Package Management`_
+  `Package Management`_
     :list:                List all packages.
     :sync:                Synchronize with remote repositories.
     :update:              Upgrade any outdated packages.
@@ -30,7 +30,7 @@ subcommands:
     :install-file:        Install package from file.
     :remove:              Remove packages.
 
-  `Blender Repository Management`_
+  `Repository Management`_
     :repo-list:           List repositories.
     :repo-add:            Add repository.
     :repo-remove:         Remove repository.
@@ -41,8 +41,8 @@ subcommands:
     :server-generate:     Create a listing from all packages.
 
 
-Blender Package Management
-==========================
+Package Management
+==================
 
 .. _command-line-args-extension-list:
 
@@ -153,8 +153,8 @@ options:
               This means removing extensions or repositories for example, wont update the user-preferences.
 
 
-Blender Repository Management
-=============================
+Repository Management
+=====================
 
 .. _command-line-args-extension-repo-list:
 

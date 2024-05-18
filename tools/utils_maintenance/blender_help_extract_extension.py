@@ -27,7 +27,7 @@ USE_TITLE_GROUPS = True
 # Group sub-commands with titles,
 # reasonably involved but makes sense.
 sub_command_titles: Dict[str, Tuple[str, ...]] = {
-    "Blender Package Management": (
+    "Package Management": (
         "list",
         "sync",
         "update",
@@ -35,7 +35,7 @@ sub_command_titles: Dict[str, Tuple[str, ...]] = {
         "install-file",
         "remove",
     ),
-    "Blender Repository Management": (
+    "Repository Management": (
         "repo-list",
         "repo-add",
         "repo-remove",
