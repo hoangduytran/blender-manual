@@ -25,7 +25,7 @@
 .. toctree::
    :maxdepth: 1
 
-   addons.rst
+   extensions.rst
 
 .. toctree::
    :maxdepth: 1

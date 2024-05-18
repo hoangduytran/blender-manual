@@ -1,14 +1,5 @@
 .. index:: Licenses
 
-.. Mark as "orphan" until extensions is out of beta.
-
-:orphan:
-
-.. Keep index link until this page is made public,
-   so it's possible to navigate to other extensions pages.
-
-:ref:`Extensions Index <extensions-index>`
-
 ******************
 Extension Licenses
 ******************

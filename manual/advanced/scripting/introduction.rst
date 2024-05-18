@@ -70,13 +70,13 @@ Add-ons
 -------
 
 Add-ons are scripts that enable Blender to gain extra functionality;
-they can be enabled from the :doc:`Preferences </editors/preferences/addons>`.
+they can be enabled from the :doc:`Preferences </editors/preferences/extensions>`.
 
 Outside of the Blender executable, there are hundreds of add-ons written by many people:
 
 - Officially supported add-ons are bundled with Blender.
-- Other *Testing* add-ons are included in `development builds <https://builder.blender.org/download/>`__
-  of Blender but not official releases.
+- Other add-ons are provided by `Blender Extensions <https://extensions.blender.org/>`__
+  which aren't part of official releases.
   Many of them work reliably and are very useful but are not yet ensured to be stable for release.
 
 .. seealso::
@@ -117,10 +117,5 @@ You can setup an additional search path for scripts in
 Installation
 ^^^^^^^^^^^^
 
-Add-ons are conveniently installed through Blender in the :doc:`Preferences </editors/preferences/addons>`.
-Click the :menuselection:`Install...` button and select the ``.py`` or ``.zip`` file.
-
-To manually install scripts or add-ons, place them in the ``addons``, ``modules``, ``presets``,
-or ``startup`` directory according to their type. See the description above.
-
-You can also run scripts by loading them in the :doc:`Text Editor </editors/text_editor>`.
+Add-ons are conveniently installed through Blender in the :doc:`Preferences </editors/preferences/extensions>`.
+Click the :menuselection:`Install...` button and select the ``.zip`` file.

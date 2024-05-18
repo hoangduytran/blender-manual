@@ -294,11 +294,6 @@ def help_text_as_rst(blender_bin: str) -> str:
         "   CHANGES TO THIS FILE MUST BE MADE IN BLENDER'S SOURCE CODE, SEE:\n"
         "   https://projects.blender.org/blender/blender-addons-contrib/src/branch/main/bl_pkg/bl_extension_cli.py\n"
         "\n"
-        ".. Keep index link until this page is made public,\n"
-        "   so it's possible to navigate to other extensions pages.\n"
-        "\n"
-        ":ref:`Extensions Index <extensions-index>`\n"
-        "\n"
         ".. _command_line-args-extensions:\n"
         "\n"
         "*********************************\n"
@@ -361,6 +356,7 @@ def help_text_as_rst(blender_bin: str) -> str:
     # Could be investigated in the generated help text but it's quite harmless to change here.
     while "\n\n\n\n" in result:
         result = result.replace("\n\n\n\n", "\n\n\n")
+    result = result.rstrip("\n") + "\n"
 
     return result
 

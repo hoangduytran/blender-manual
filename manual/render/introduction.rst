@@ -11,7 +11,7 @@ Blender includes three render engines with different strengths:
 - :doc:`Workbench </render/workbench/index>` is designed for layout, modeling and previews.
 
 More renderers from third-party developers are available as
-:doc:`add-ons </editors/preferences/addons>`.
+:doc:`add-ons </editors/preferences/extensions>`.
 Each renderer has its own render settings to control render quality and performance.
 
 What the render looks like is defined by :doc:`cameras </render/cameras>`,

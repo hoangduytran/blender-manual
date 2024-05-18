@@ -1,7 +1,7 @@
-
-.. Mark as "orphan" until extensions is out of beta.
-
-:orphan:
+.. _bpy.types.Addon:
+.. _bpy.ops.wm.addon:
+.. _bpy.types.WindowManager.addon:
+.. _bpy.ops.preferences.addon:
 
 **********
 Extensions
@@ -33,6 +33,36 @@ To stop an extension temporarily it is better to Disable it instead.
 
    You can *Install from Disk* by drag and dropping an extension ``.zip`` package into Blender.
 
+
+Install Legacy Add-on
+---------------------
+
+To install legacy addons, use the *Install...* button and
+use the File Browser to select the ``.zip`` or ``.py`` add-on file.
+
+Now the add-on will be installed, however not automatically enabled.
+The search field will be set to the add-on's name (to avoid having to look for it),
+Enable the add-on by checking the enable checkbox.
+
+Refresh
+   Scans the :doc:`Add-on Directory </advanced/blender_directory_layout>` for new add-ons.
+
+.. tip:: User-Defined Add-on Path
+
+   You can also create a personal directory containing new add-ons and configure your files path in
+   the *File Paths* section of the *Preferences*. To create a personal script directory:
+
+   #. Create an empty directory in a location of your choice (e.g. ``my_scripts``).
+   #. Add a subdirectory under ``my_scripts`` called ``addons``
+      (it *must* have this name for Blender to recognize it).
+   #. Open the *File Paths* section of the *Preferences*.
+   #. Set the *Scripts* file path to point to your script directory (e.g. ``my_scripts``).
+   #. Save the preferences and restart Blender for it to recognize the new add-on location.
+
+   Now when you install add-ons you can select the *Target Path* when installing 3rd party scripts.
+   Blender will copy newly installed add-ons under the directory selected in your Preferences.
+
+
 Update
 ======
 
@@ -47,6 +77,13 @@ Enable/Disable
 Once an extension is installed it can be disabled (or re-enabled) as part of the user preferences.
 Some extension types do not support this, and will always be shown as enabled.
 
+.. tip::
+
+   If the Add-on does not activate when enabled,
+   check the :doc:`Console window </advanced/command_line/introduction>`
+   for any errors that may have occurred.
+
+
 Settings
 ========
 
@@ -56,6 +93,20 @@ Settings
   This is installed to a Local Repository and no updates will be available.
 - **Install Legacy Add-on**: Add-ons are effectively replaced by extensions.
   However to keep old add-ons working for now, they can still be installed independently of the new system.
+
+
+.. _bpy.types.AddonPreferences:
+
+Add-on Preferences
+------------------
+
+Some add-ons may have their own preferences which can be found
+in the *Preferences* section of the add-on information box.
+
+Some add-ons use this section for example to enable/disable
+certain functions of the add-on. Sometimes these might even all default to off.
+So it is important to check if the enabled add-on has any particular preferences.
+
 
 Filter
 ======

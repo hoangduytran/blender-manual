@@ -1,17 +1,10 @@
 .. Mark as "orphan" until extensions is out of beta.
 
-:orphan:
-
 .. index:: Add-ons Extensions
 .. index:: Add-ons
 .. .. _bpy.types.Addon:
 .. .. _bpy.ops.wm.addon:
 .. .. _bpy.types.WindowManager.addon:
-
-.. Keep index link until this page is made public,
-   so it's possible to navigate to other extensions pages.
-
-:ref:`Extensions Index <extensions-index>`
 
 *******
 Add-ons

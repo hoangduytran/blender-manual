@@ -15,7 +15,7 @@ Luckily, Blender offers a wide range of file formats (e.g. ABC, USD, OBJ, FBX, P
 that can be used to import and export.
 
 Popular formats are enabled by default, other formats are also supported and distributed with Blender,
-these can be enabled in the Preferences through the use of :doc:`Add-ons </editors/preferences/addons>`.
+these can be enabled in the Preferences through the use of :doc:`Add-ons </editors/preferences/extensions>`.
 
 .. toctree::
    :maxdepth: 1
