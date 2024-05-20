@@ -252,7 +252,7 @@ less frequently, producing choppy movement as a result.
 Step Size
    The number of frames to hold each step.
 Offset
-   The frame at which the first step begins.
+   The number of frames to offset the sample points.
 Start Frame
    The frame where to start applying the effect.
 End Frame

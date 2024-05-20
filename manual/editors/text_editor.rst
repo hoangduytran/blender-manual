@@ -8,8 +8,10 @@
 Text Editor
 ***********
 
-Blender has a *Text Editor* among its editor types,
-accessible via the *Editor type* menu, or the shortcut :kbd:`Shift-F11`.
+This editor can be used to write Python scripts, Open Shading Language scripts,
+or just plaintext notes. To open it, you can switch to the *Scripting*
+:doc:`workspace </interface/window_system/workspaces>` or press
+:kbd:`Shift-F11` to replace the current editor.
 
 
 Header
