@@ -3,6 +3,14 @@
 Collada
 *******
 
+.. warning::
+
+  COLLADA I/O support is now considered as a legacy feature in Blender, and will be removed
+  in a future release.
+  Please see the
+  `official announcement <https://devtalk.blender.org/t/moving-collada-i-o-to-legacy-status/34621>`__
+  for more insight on this topic.
+
 The COLLADA™ module has been implemented as a flexible tool for exporting and importing ``.dae`` files.
 A design goal is to provide a set of parameters which should make it possible
 to export/import Collada files from/to a variety of tools.
