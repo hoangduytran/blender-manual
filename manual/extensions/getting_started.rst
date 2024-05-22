@@ -111,6 +111,14 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    #   "./wheels/jsmin-3.0.1-py3-none-any.whl"
    # ]
 
+   # Optional: build setting.
+   # https://docs.blender.org/manual/en/dev/extensions/command_line_arguments.html#command-line-args-extension-build
+   # [build]
+   # paths_exclude_pattern = [
+   #   "/.git/"
+   #   "__pycache__/"
+   # ]
+
 Required values:
 
    :blender_version_min: Minimum supported Blender version - use at least ``4.2.0``.
@@ -137,6 +145,31 @@ Optional values:
       The available options are
       ["windows-amd64", "windows-arm64", "macos-x86_64", "macos-arm64", "linux-x86_64"]
    :wheels: List of relative file-paths :doc:`Python Wheels <./python_wheels>`.
+
+Optional values for "build":
+
+   These values are only used by the :ref:`build <command-line-args-extension-build>` sub-command.
+
+   :paths:
+      A list of file-paths relative to the manifest to include when building the package.
+
+   :paths_exclude_pattern:
+      A list of file-path patterns to exclude include when building the package.
+
+      The pattern matching is compatible with `gitignore <https://git-scm.com/docs/gitignore>`__.
+
+      Note that setting this value isn't supported when ``paths`` is also declared.
+
+   If the ``[build]`` table isn't declared the following default is used:
+
+   .. code-block:: toml
+
+      [build]
+      paths_exclude_pattern = [
+        "__pycache__/",
+        ".*",
+      ]
+
 
 .. note::
 
