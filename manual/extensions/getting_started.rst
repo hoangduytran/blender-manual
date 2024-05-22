@@ -100,7 +100,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    #   "1998 Company Name",
    # ]
 
-   # Optional list of supported platforms. If ommitted, the extension will be available in all operating systems.
+   # Optional list of supported platforms. If omitted, the extension will be available in all operating systems.
    # platforms = ["windows-amd64", "macos-arm64", "linux-x86_64"]
    # Other supported platforms: "windows-arm64", "macos-x86_64"
 
@@ -141,7 +141,7 @@ Optional values:
       ["files", "network", "clipboard", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <./tags>`.
    :platforms:
-      List of supported platforms. If ommitted, the extension will be available in all operating systems.
+      List of supported platforms. If omitted, the extension will be available in all operating systems.
       The available options are
       ["windows-amd64", "windows-arm64", "macos-x86_64", "macos-arm64", "linux-x86_64"]
    :wheels: List of relative file-paths :doc:`Python Wheels <./python_wheels>`.
