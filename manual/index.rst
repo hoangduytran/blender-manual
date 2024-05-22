@@ -161,11 +161,6 @@ Sections
 
       .. container:: card
 
-         :doc:`/extensions/index`
-            Extend Blender with 3rd party extensions.
-
-      .. container:: card
-
          :doc:`/addons/index`
             Additional functionality available as add-ons.
 
@@ -208,7 +203,6 @@ Sections
       movie_clip/index.rst
       video_editing/index.rst
       files/index.rst
-      extensions/index.rst
       addons/index.rst
       advanced/index.rst
       troubleshooting/index.rst

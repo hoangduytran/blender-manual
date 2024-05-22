@@ -1,9 +1,9 @@
 .. _extensions-index:
 .. index:: Extensions
 
-**********
-Extensions
-**********
+*******************
+Creating Extensions
+*******************
 
 Extensions are **add-ons** or **themes** used to extend the core functionality of Blender.
 They are shared in online platforms, and can be installed and updated from within Blender.

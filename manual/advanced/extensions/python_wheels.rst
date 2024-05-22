@@ -10,7 +10,7 @@ Python Wheels
 
 
 `Python wheels <https://pythonwheels.com/>`__ (``*.whl``) are the standard way of distributing Python modules.
-They are supported in Blender to make self-contained Python :doc:`Extensions </extensions/index>`.
+They are supported in Blender to make self-contained Python :ref:`Extensions <extensions-index>`.
 
 
 Guidelines

@@ -15,7 +15,7 @@ The *Extensions* section lets you manage the extensions preferences.
 
 .. seealso::
 
-   To learn about extensions and how to create them refer to the :doc:`Extensions </extensions/index>` page.
+   To learn about extensions and how to create them refer to the :ref:`Extensions <extensions-index>` page.
 
 Install
 =======
