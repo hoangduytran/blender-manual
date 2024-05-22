@@ -251,7 +251,7 @@ Example of what the JSON is expected to look like:
          "type": "add-on",
          "archive_size": 856650,
          "archive_hash": "sha256:3d2972a6f6482e3c502273434ca53eec0c5ab3dae628b55c101c95a4bc4e15b2",
-         "archive_url": "https://extensions.blender.org/add-ons/blender-kitsu/0.1.0/download/",
+         "archive_url": "https://extensions.blender.org/add-ons/blender-kitsu/0.1.5-alpha+f52258de/download/",
          "blender_version_min": "4.2.0",
          "maintainer": "Blender Studio",
          "tags": ["Pipeline"],
