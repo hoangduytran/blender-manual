@@ -202,6 +202,18 @@ Python Options
    Comma separated list (no spaces) of add-ons to enable in addition to any default add-ons.
 
 
+.. _command-line-args-network-options:
+
+Network Options
+===============
+
+``--online-mode``
+   Allow internet access, overriding the preference.
+
+``--offline-mode``
+   Disallow internet access, overriding the preference.
+
+
 .. _command-line-args-logging-options:
 
 Logging Options
