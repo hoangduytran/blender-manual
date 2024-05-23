@@ -79,7 +79,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # permissions = ["files", "network"]
 
    # Optional link to documentation, support, source files, etc
-   # website = "http://extensions.blender.org/add-ons/my-example-package/"
+   # website = "https://extensions.blender.org/add-ons/my-example-package/"
 
    # Optional list defined by Blender and server, see:
    # https://docs.blender.org/manual/en/dev/extensions/tags.html
@@ -256,7 +256,7 @@ Example of what the JSON is expected to look like:
          "maintainer": "Blender Studio",
          "tags": ["Pipeline"],
          "license": ["SPDX:GPL-3.0-or-later"],
-         "website": "http://extensions.blender.org/add-ons/blender-kitsu/",
+         "website": "https://extensions.blender.org/add-ons/blender-kitsu/",
          "schema_version": "1.0.0"
       }
       ]
@@ -270,4 +270,4 @@ Even if the manifest points to the project specific website.
 
 .. note::
 
-   Any remote repository is expected to follow the latest `API <http://extensions.blender.org/api/swagger/>`__.
+   Any remote repository is expected to follow the latest `API <https://extensions.blender.org/api/swagger/>`__.
