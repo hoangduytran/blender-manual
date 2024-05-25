@@ -357,6 +357,12 @@ Flip
    Y
       Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top.
 
+.. note::
+
+   Movie Clips or images with view as render are only visible behind objects
+   when :ref:`film transparency <bpy.types.RenderSettings.film_transparent>`
+   is enabled or the :ref:`scene world <bpy.types.View3DShading.use_scene_world>`
+   is disabled in the viewport.
 
 .. _bpy.types.Camera.show:
 .. _bpy.types.Camera.display_size:

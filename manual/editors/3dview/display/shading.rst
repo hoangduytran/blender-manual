@@ -215,6 +215,9 @@ Lighting
    Scene Lights
       Use the lights in the scene. When disabled (or when the scene contains no lights),
       a virtual light is used instead.
+   
+..  _bpy.types.View3DShading.use_scene_world:
+
    Scene World
       Use the World of the scene.
       When disabled, a world will be constructed with the following options:
