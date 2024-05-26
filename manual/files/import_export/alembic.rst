@@ -129,11 +129,9 @@ UVs
    When enabled, UV maps are exported. Although the Alembic standard only supports
    a single UV map, Blender exports all UV maps in a way that should be readable by other software.
 
-Pack UV Islands
-   Generates an optimized UV layout with non-overlapping islands
-   that tries to efficiently fill the :term:`Texture Space`.
-   See the :ref:`Pack Islands operator <bpy.ops.uv.pack_islands>`
-   that works with the same principle for more information.
+Merge UVs
+   When enabled, UVs sharing the same vertex and location will be merged into a single UV.
+   The exported file can be slightly smaller.
 
 Normals
    When enabled, an object's :term:`Normals <Normal>` are exported.
