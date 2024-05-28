@@ -26,7 +26,8 @@ The top track hilighted in orange is special: this is the Action Track. Unlike t
 it doesn't contain strips -- instead, it contains the object's *active action*,
 which is where new keyframes are added to by default.
 
-Editors like the :doc:`Timeline </editors/timeline>` and the :doc:`Dope Sheet Editor </editors/dope_sheet/introduction>`
+Editors like the :doc:`Timeline </editors/timeline>` and the
+:doc:`Dope Sheet Editor </editors/dope_sheet/introduction>`
 normally only show the keyframes of this active action. If you want to edit another action,
 you can select it in the NLA editor and press :kbd:`Tab` to enter Tweak Mode.
 

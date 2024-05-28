@@ -35,13 +35,16 @@ the *File Paths* section of the *Preferences*. To create a personal script direc
 Now when you install add-ons you can select the *Target Path* when installing 3rd party scripts.
 Blender will copy newly installed add-ons under the directory selected in your Preferences.
 
+
 Internet Access
 ===============
 
-If the add-on needs to use internet, it should check for the (read-only) property `bpy.app.online_access`.
-This option is controlled by Preferences, which can be overriding via command-line (`--offline-mode`/`--online-mode`).
+If the add-on needs to use internet, it should check for the (read-only) property ``bpy.app.online_access``.
+This option is controlled by Preferences, which can be overriding via command-line
+(``--offline-mode`` / ``--online-mode``).
 
-For better error messages, you can check also for `bpy.app.online_access_overriden`, to determine whether users can turn `Allow Online Access` on the preferences, or not.
+For better error messages, you can check also for ``bpy.app.online_access_overriden``,
+to determine whether users can turn ``Allow Online Access`` on the preferences, or not.
 
 Blender itself doesn't block internet access based on this setting. It is up to the add-ons to respect it.
 

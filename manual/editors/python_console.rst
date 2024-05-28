@@ -113,7 +113,7 @@ First Look at the Console Environment
 -------------------------------------
 
 To see the list of global functions and variables,
-type ``dir()`` and press :kbd:`Enter` to execute it.
+type ``dir()`` and press :kbd:`Return` to execute it.
 
 .. figure:: /images/editors_python-console_dir.png
 
@@ -151,7 +151,7 @@ the currently selected objects, the current object mode, and so on.
 Get the current 3D Viewport mode (Object, Edit, Sculpt, etc.)::
 
    bpy.context.mode
-   
+
 Get the active object::
 
    bpy.context.object
