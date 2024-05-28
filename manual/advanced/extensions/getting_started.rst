@@ -101,7 +101,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # ]
 
    # Optional list of supported platforms. If omitted, the extension will be available in all operating systems.
-   # platforms = ["windows-amd64", "macos-arm64", "linux-x64"]
+   # platforms = ["windows-x64", "macos-arm64", "linux-x64"]
    # Other supported platforms: "windows-arm64", "macos-x64"
 
    # Optional: bundle 3rd party Python modules.
@@ -143,7 +143,7 @@ Optional values:
    :platforms:
       List of supported platforms. If omitted, the extension will be available in all operating systems.
       The available options are
-      ["windows-amd64", "windows-arm64", "macos-x64", "macos-arm64", "linux-x64"]
+      ["windows-x64", "windows-arm64", "macos-x64", "macos-arm64", "linux-x64"]
    :wheels: List of relative file-paths :doc:`Python Wheels <./python_wheels>`.
 
 Optional values for "build":
