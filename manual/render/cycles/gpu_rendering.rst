@@ -1,4 +1,3 @@
-
 *************
 GPU Rendering
 *************
@@ -87,7 +86,7 @@ Supported GPUs include:
 
 Minimum driver versions:
 
- - Windows: Intel Graphics Driver XX.X.101.5186
+ - Windows: Intel Graphics Driver XX.X.101.5518
  - Linux: ``intel-level-zero-gpu`` package 1.3.27642,
    typically available through the ``intel-compute-runtime`` package XX.XX.27642.38
 
