@@ -24,7 +24,7 @@ This will give you a foundation environment for:
 Below examples show the process to create a new set of files for French, language code ``fr``, on Linux platform.
 Other platforms might vary slightly but should be mainly the same.
 
-#. `Create a Blender ID <https://id.blender.org/register/>`__ if you have not done so already
+#. `Create a Blender ID <https://id.blender.org/register/>`__ if you have not done so already.
 #. Log into `projects.blender.org <https://projects.blender.org/>`__ and
    `Create an Issue <https://projects.blender.org/blender/documentation/issues/new>`__
    requesting for commit access in order to transfer changes to the central repository of the translation team.
