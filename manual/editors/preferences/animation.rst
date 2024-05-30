@@ -30,8 +30,17 @@ Minimum Grid Spacing
 
 Timecode Style
    Format of timecodes displayed when not displaying timing in terms of frames.
-   The format uses '+' as a separator for sub-second frame numbers,
-   with left and right truncation of the timecode as necessary.
+
+   :Minimal Info:
+      Most compact representation, uses '+' as separator for sub-second frame numbers,
+      with left and right truncation of the timecode as necessary.
+   :SMPTE (Full): Full SMPTE timecode (format is HH:MM:SS:FF).
+   :SMPTE (Compact):
+      SMPTE timecode showing minutes, seconds, and frames only
+      -- hours are also shown if necessary, but not by default.
+   :Compact with Decimals:
+      Similar to SMPTE (Compact), except that the decimal part of the second is shown instead of frames.
+   :Only Seconds: Direct conversion of frame numbers to seconds.
 
 .. _bpy.types.PreferencesView.view_frame_type:
 
