@@ -77,7 +77,7 @@ Time
 
       * - .. figure:: /images/physics_fluid_type_domain_gas_noise_base-res-1.png
 
-             Resolution Division: 200, without noise
+             Resolution Divisions: 200, without noise
 
         - .. figure:: /images/physics_fluid_type_domain_gas_noise_base-res-2.png
 
