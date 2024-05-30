@@ -3,6 +3,7 @@
 
 # Python virtual environment
 .venv/
+.python-version
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
