@@ -88,6 +88,16 @@ Show Overexposed
    Hilight overexposed (bright white) areas using a zebra pattern.
    The threshold can be adjusted with the slider.
 
+.. _bpy.types.SequenceEditor.show_missing_media:
+
+Show Missing Media
+   Render missing images/movies with a solid magenta color.
+   When disabled, missing content will render fully transparent.
+
+   .. tip::
+
+      Strips with missing content will be displayed as red in the timeline.
+
 
 .. _editors_sequencer_preview_2d-cursor:
 
