@@ -67,16 +67,6 @@ Precision
    :Auto: Use full precision for final renders, half precision otherwise.
    :Full: Use full precision for final renders and viewport.
 
-.. _bpy.types.CompositorNodeTree.render_quality:
-
-Render
-   Sets the quality when doing the final render.
-
-.. _bpy.types.CompositorNodeTree.edit_quality:
-
-Edit
-   Sets the quality when making edits.
-
 .. _bpy.types.CompositorNodeTree.use_two_pass:
 
 Two Pass
