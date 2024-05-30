@@ -51,8 +51,9 @@ Split By Group
 Vertex Groups
    Import OBJ groups as vertex groups.
 Validate Meshes
-   Checks the imported mesh data for errors and corrects them if needed.
-   This slows down the importing process but can fix glitches in the imported mesh.
+   Check the imported mesh for corrupt data and fix it if necessary.
+   When disabled, erroneous data may cause crashes displaying or editing the meshes.
+   This option will make the importing slower but is recommended, as data errors are not always obvious.
 Path Separator
    Character used to separate an object's name into a hierarchical
    structure using :doc:`/scene_layout/collections/index`.

@@ -40,7 +40,8 @@ Facet Normals
    Use (import) facet normals (note that this will still give flat shading).
 Validate Mesh
    Check the imported mesh for corrupt data and fix it if necessary.
-   This option will make the importing slower but is often not necessary.
+   When disabled, erroneous data may cause crashes displaying or editing the meshes.
+   This option will make the importing slower but is recommended, as data errors are not always obvious.
 
 
 Exporting

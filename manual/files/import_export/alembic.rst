@@ -63,7 +63,9 @@ Is Sequence
    Set to true if the cache is split into separate files.
 
 Validate Meshes
-   Check imported mesh objects for invalid data (slow).
+   Check the imported mesh for corrupt data and fix it if necessary.
+   When disabled, erroneous data may cause crashes displaying or editing the meshes.
+   This option will make the importing slower but is recommended, as data errors are not always obvious.
 
 Always Add Cache Reader
    Add cache modifiers and constraints to imported objects even if they are

@@ -3,6 +3,229 @@
 Universal Scene Description
 ***************************
 
+
+
+Importing USD Files
+===================
+
+`USD <https://graphics.pixar.com/usd/release/index.html>`__ files typically represent the scene as
+a hierarchy of primitives, or `prims <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Prim>`__.
+Individual prims contain data to describe scene entities, such as geometry, lights, cameras and transform hierarchies.
+Blender's USD importer converts USD prims to a hierarchy of Blender objects. Like the USD exporter,
+the importer does not yet handle more advanced USD concepts, such as layers and references.
+
+The following USD data types can be imported as Blender objects:
+
+- Cameras
+- Curves
+- Lights
+- Materials
+- Meshes
+- Primitive Shapes
+- Volume
+
+For more information on how the various data types are handled,
+see the following descriptions of the `Import Options`_.
+
+.. note::
+
+   When importing a `USDZ archive <https://openusd.org/release/spec_usdz.html>`__, it is
+   important to carefully consider the :ref:`Import Textures <usd-import-textures>` option to determine
+   whether and how to copy texture files from the zip archive.
+
+
+Xform and Scope Primitives
+--------------------------
+
+USD provides an ``Xform`` prim type, containing transform data, which can be
+used to represent transform hierarchies and to organize the scene.
+Such ``Xform`` prims are imported as Blender empty objects.
+
+USD also supports ``Scope`` primitives, which are entities
+that do not contain transform data, but which serve to group other element of the scene.
+Blender doesn't have an exact counterpart to the concept of a scope,
+so such primitives are imported as Blender empties located at the origin.
+This is an imperfect representation, because empty objects have a transform and ``Scopes`` do not,
+but this approach nonetheless helps preserve the structure of the scene hierarchy.
+
+
+PointInstancer Primitives
+-------------------------
+
+USD provides a ``UsdGeomPointInstancer`` prim type,
+containing instances that are scattered on a primitive's points.
+
+These are imported into Blender as Point Clouds using a
+:doc:`/modeling/modifiers/generate/geometry_nodes`
+and the :doc:`/modeling/geometry_nodes/instances/instance_on_points`.
+
+
+Animations
+----------
+
+The importer supports two types of animation:
+
+- **Animating transforms**: If a USD primitive has time-varying transform data,
+  a :doc:`Transform Cache </animation/constraints/transform/transform_cache>` constraint
+  will be added to the imported Blender object.
+- **Animating geometry**: Animating mesh and curve geometry is supported by adding
+  a :doc:`Mesh Sequence Cache </modeling/modifiers/modify/mesh_sequence_cache>` modifier to the imported data.
+  Geometry attribute (`USD Primvar <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Primvar>`__)
+  animation is currently supported only for Color Attributes and UVs.
+  Note that USD file sequences (i.e. a unique file per frame) are not yet supported.
+
+
+Materials
+---------
+
+If a USD mesh or geometry subset has a bound material, the importer will assign to
+the Blender object a material with the same name as the USD material.
+If a Blender material with the same name already exists in the scene, the existing material may be used,
+depending on the :ref:`Material Name Collision <usd-material-name-collision>` option.
+Otherwise, a new material will be created.
+
+If the USD material has
+a `USD Preview Surface <https://graphics.pixar.com/usd/release/spec_usdpreviewsurface.html>`__ shader source,
+the :ref:`render-materials-settings-viewport-display` color, metallic, and roughness are set to
+the corresponding USD Preview Surface input values.
+
+There is also an *Import USD Preview* option to convert USD Preview Surface shaders
+to Blender :doc:`Principled BSDF </render/shader_nodes/shader/principled>` shader nodes.
+This option can be lossy, as it does not yet handle converting all shader settings and types,
+but it can generate approximate visualizations of the materials.
+
+
+Coordinate System Orientation
+-----------------------------
+
+If the imported USD is Y up, a rotation will be automatically applied to
+root objects to convert to Blender's Z up orientation.
+
+
+Import Options
+==============
+
+The following options are available when importing from USD:
+
+Data Types
+   Cameras
+      Import cameras (perspective and orthographic).
+   Curves
+      Import curve primitives, including USD basis and NURBS curves.
+      (Note that support for Bézier basis is not yet fully implemented.)
+   Lights
+      Import lights. Does not currently include USD dome, cylinder or geometry lights.
+   Materials
+      Import materials.
+   Meshes
+      Import meshes.
+   Volumes
+      Import USD OpenVDB field assets.
+   Shapes
+      Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
+   Skeletons
+      Imports USD skeletons as Blender's :doc:`/animation/armatures/index`.
+   Blend Shapes
+      Imports USD skeletons as Blender's :doc:`/animation/shape_keys/index`.
+
+Path Mask
+   Import only the subset of the USD scene rooted at the given primitive.
+
+Scale
+   Value by which to scale the imported objects in relation to the world's origin.
+
+Mesh Data
+   UV Coordinates
+      Read mesh UV coordinates.
+   Color Attributes
+      Convert the USD mesh ``displayColor`` values to Blender's Color Attributes.
+   Mesh attributes
+      Read USD ``Primvars`` as mesh attributes.
+   Validate Meshes
+      Check the imported mesh for corrupt data and fix it if necessary.
+      When disabled, erroneous data may cause crashes displaying or editing the meshes.
+      This option will make the importing slower but is recommended, as data errors are not always obvious.
+
+Include
+   Subdivision
+      Create Subdivision Surface modifiers based on the USD ``SubdivisionScheme`` attribute.
+   Scene Instancing
+      Import USD scene graph instances as collection instances, otherwise they are imported as copies.
+   Visible Primitives Only
+      Do not import invisible USD primitives. Only applies to primitives with a non-animated
+      `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
+      Primitives with animated visibility will always be imported.
+   Guide
+      Include primitives with
+      `purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__ ``guide``.
+   Proxy
+      Include primitives with purpose ``proxy``.
+   Render
+      Include primitives with purpose ``render``.
+
+Options
+   Set Frame Range
+      Update the scene's start and end frame to match those of the USD stage.
+   Relative Path
+      Select the file relative to the blend-file.
+   Create Collection
+      Add all imported objects to a new collection.
+
+Light Intensity Scale
+   Scale for the intensity of imported lights.
+
+
+Materials
+---------
+
+Import All Materials
+   Also import materials that are not used by any geometry.
+   Note, when this option is false, materials referenced by geometry will still be imported.
+
+Import USD Preview
+   Convert USD Preview Surface shaders to Principled BSDF shader networks.
+
+Set Material Blend
+   If the *Import USD Preview* option is enabled, the material blend method will automatically be set based on
+   the ``opacity`` and ``opacityThreshold`` shader inputs, allowing for visualization of transparent objects.
+
+.. _usd-material-name-collision:
+
+Material Name Collision
+   Behavior when the name of an imported material conflicts with an existing material.
+
+   :Make Unique: Import each USD material as a unique Blender material.
+   :Reference Existing: If a material with the same name already exists, reference that instead of importing.
+
+
+Textures
+--------
+
+When importing a USDZ package, the following options specify whether and how texture asset dependencies
+of the USD should be copied from the zip archive so they can be loaded into Blender.
+
+.. _usd-import-textures:
+
+Import Textures
+   Behavior when importing textures from a USDZ archive.
+
+   :None: Don't import textures. Note that, with this option, material textures may fail to be resolved in Blender.
+   :Packed: Import textures as packed data in the Blender file.
+   :Copy: Copy files to the directory specified in the **Textures Directory** option.
+
+Textures Directory
+   Path to the directory where imported textures will be copied, when the **Import Textures** mode is **Copy**.
+
+   Note that the default textures directory is the relative path ``//textures``, which requires the
+   Blender file to have been saved before importing, so the relative path can be resolved.
+
+File Name Collision
+   Behavior when the name of an imported texture file conflicts with an existing file.
+
+   :Use Existing: If a file with the same name already exists, use that instead of copying.
+   :Overwrite: Overwrite existing files.
+
+
 Exporting to USD Files
 ======================
 
@@ -218,220 +441,3 @@ USDZ
    Due to a current limitation in the USD library, UDIM textures cannot be include in the USDZ archive.
    This limitation will likely be addressed in a future version of USD.
    (See `USD pull request #2133 <https://github.com/PixarAnimationStudios/USD/pull/2133>`__.)
-
-
-Importing USD Files
-===================
-
-`USD <https://graphics.pixar.com/usd/release/index.html>`__ files typically represent the scene as
-a hierarchy of primitives, or `prims <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Prim>`__.
-Individual prims contain data to describe scene entities, such as geometry, lights, cameras and transform hierarchies.
-Blender's USD importer converts USD prims to a hierarchy of Blender objects. Like the USD exporter,
-the importer does not yet handle more advanced USD concepts, such as layers and references.
-
-The following USD data types can be imported as Blender objects:
-
-- Cameras
-- Curves
-- Lights
-- Materials
-- Meshes
-- Primitive Shapes
-- Volume
-
-For more information on how the various data types are handled,
-see the following descriptions of the `Import Options`_.
-
-.. note::
-
-   When importing a `USDZ archive <https://openusd.org/release/spec_usdz.html>`__, it is
-   important to carefully consider the :ref:`Import Textures <usd-import-textures>` option to determine
-   whether and how to copy texture files from the zip archive.
-
-
-Xform and Scope Primitives
---------------------------
-
-USD provides an ``Xform`` prim type, containing transform data, which can be
-used to represent transform hierarchies and to organize the scene.
-Such ``Xform`` prims are imported as Blender empty objects.
-
-USD also supports ``Scope`` primitives, which are entities
-that do not contain transform data, but which serve to group other element of the scene.
-Blender doesn't have an exact counterpart to the concept of a scope,
-so such primitives are imported as Blender empties located at the origin.
-This is an imperfect representation, because empty objects have a transform and ``Scopes`` do not,
-but this approach nonetheless helps preserve the structure of the scene hierarchy.
-
-
-PointInstancer Primitives
--------------------------
-
-USD provides a ``UsdGeomPointInstancer`` prim type,
-containing instances that are scattered on a primitive's points.
-
-These are imported into Blender as Point Clouds using a
-:doc:`/modeling/modifiers/generate/geometry_nodes`
-and the :doc:`/modeling/geometry_nodes/instances/instance_on_points`.
-
-
-Animations
-----------
-
-The importer supports two types of animation:
-
-- **Animating transforms**: If a USD primitive has time-varying transform data,
-  a :doc:`Transform Cache </animation/constraints/transform/transform_cache>` constraint
-  will be added to the imported Blender object.
-- **Animating geometry**: Animating mesh and curve geometry is supported by adding
-  a :doc:`Mesh Sequence Cache </modeling/modifiers/modify/mesh_sequence_cache>` modifier to the imported data.
-  Geometry attribute (`USD Primvar <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Primvar>`__)
-  animation is currently supported only for Color Attributes and UVs.
-  Note that USD file sequences (i.e. a unique file per frame) are not yet supported.
-
-
-Materials
----------
-
-If a USD mesh or geometry subset has a bound material, the importer will assign to
-the Blender object a material with the same name as the USD material.
-If a Blender material with the same name already exists in the scene, the existing material may be used,
-depending on the :ref:`Material Name Collision <usd-material-name-collision>` option.
-Otherwise, a new material will be created.
-
-If the USD material has
-a `USD Preview Surface <https://graphics.pixar.com/usd/release/spec_usdpreviewsurface.html>`__ shader source,
-the :ref:`render-materials-settings-viewport-display` color, metallic, and roughness are set to
-the corresponding USD Preview Surface input values.
-
-There is also an *Import USD Preview* option to convert USD Preview Surface shaders
-to Blender :doc:`Principled BSDF </render/shader_nodes/shader/principled>` shader nodes.
-This option can be lossy, as it does not yet handle converting all shader settings and types,
-but it can generate approximate visualizations of the materials.
-
-
-Coordinate System Orientation
------------------------------
-
-If the imported USD is Y up, a rotation will be automatically applied to
-root objects to convert to Blender's Z up orientation.
-
-
-Import Options
-==============
-
-The following options are available when importing from USD:
-
-Data Types
-   Cameras
-      Import cameras (perspective and orthographic).
-   Curves
-      Import curve primitives, including USD basis and NURBS curves.
-      (Note that support for Bézier basis is not yet fully implemented.)
-   Lights
-      Import lights. Does not currently include USD dome, cylinder or geometry lights.
-   Materials
-      Import materials.
-   Meshes
-      Import meshes.
-   Volumes
-      Import USD OpenVDB field assets.
-   Shapes
-      Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
-   Skeletons
-      Imports USD skeletons as Blender's :doc:`/animation/armatures/index`.
-   Blend Shapes
-      Imports USD skeletons as Blender's :doc:`/animation/shape_keys/index`.
-
-Path Mask
-   Import only the subset of the USD scene rooted at the given primitive.
-
-Scale
-   Value by which to scale the imported objects in relation to the world's origin.
-
-Mesh Data
-   UV Coordinates
-      Read mesh UV coordinates.
-   Color Attributes
-      Convert the USD mesh ``displayColor`` values to Blender's Color Attributes.
-   Mesh attributes
-      Read USD ``Primvars`` as mesh attributes.
-
-Include
-   Subdivision
-      Create Subdivision Surface modifiers based on the USD ``SubdivisionScheme`` attribute.
-   Scene Instancing
-      Import USD scene graph instances as collection instances, otherwise they are imported as copies.
-   Visible Primitives Only
-      Do not import invisible USD primitives. Only applies to primitives with a non-animated
-      `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
-      Primitives with animated visibility will always be imported.
-   Guide
-      Include primitives with
-      `purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__ ``guide``.
-   Proxy
-      Include primitives with purpose ``proxy``.
-   Render
-      Include primitives with purpose ``render``.
-
-Options
-   Set Frame Range
-      Update the scene's start and end frame to match those of the USD stage.
-   Relative Path
-      Select the file relative to the blend-file.
-   Create Collection
-      Add all imported objects to a new collection.
-
-Light Intensity Scale
-   Scale for the intensity of imported lights.
-
-
-Materials
----------
-
-Import All Materials
-   Also import materials that are not used by any geometry.
-   Note, when this option is false, materials referenced by geometry will still be imported.
-
-Import USD Preview
-   Convert USD Preview Surface shaders to Principled BSDF shader networks.
-
-Set Material Blend
-   If the *Import USD Preview* option is enabled, the material blend method will automatically be set based on
-   the ``opacity`` and ``opacityThreshold`` shader inputs, allowing for visualization of transparent objects.
-
-.. _usd-material-name-collision:
-
-Material Name Collision
-   Behavior when the name of an imported material conflicts with an existing material.
-
-   :Make Unique: Import each USD material as a unique Blender material.
-   :Reference Existing: If a material with the same name already exists, reference that instead of importing.
-
-
-Textures
---------
-
-When importing a USDZ package, the following options specify whether and how texture asset dependencies
-of the USD should be copied from the zip archive so they can be loaded into Blender.
-
-.. _usd-import-textures:
-
-Import Textures
-   Behavior when importing textures from a USDZ archive.
-
-   :None: Don't import textures. Note that, with this option, material textures may fail to be resolved in Blender.
-   :Packed: Import textures as packed data in the Blender file.
-   :Copy: Copy files to the directory specified in the **Textures Directory** option.
-
-Textures Directory
-   Path to the directory where imported textures will be copied, when the **Import Textures** mode is **Copy**.
-
-   Note that the default textures directory is the relative path ``//textures``, which requires the
-   Blender file to have been saved before importing, so the relative path can be resolved.
-
-File Name Collision
-   Behavior when the name of an imported texture file conflicts with an existing file.
-
-   :Use Existing: If a file with the same name already exists, use that instead of copying.
-   :Overwrite: Overwrite existing files.
