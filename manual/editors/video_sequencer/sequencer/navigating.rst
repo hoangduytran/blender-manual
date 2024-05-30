@@ -111,16 +111,6 @@ Range
 
 ----------
 
-.. _bpy.types.SequenceEditor.show_cache:
-
-Cache
-   Show which frames are :doc:`Cached </editors/video_sequencer/sequencer/sidebar/cache>`.
-
-   The :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>` must be enabled for this
-   menu item to be visible.
-
-----------
-
 Sequence Render Image
    Show the current frame preview as a Render Result where you can save it as an image file.
 Sequence Render Animation

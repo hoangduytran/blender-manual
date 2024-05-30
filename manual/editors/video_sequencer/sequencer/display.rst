@@ -25,6 +25,11 @@ a pop-over where you can toggle individual ones:
 Grid
    Shows vertical lines at regular time intervals.
 
+.. _bpy.types.SequencerCacheOverlay.show_cache:
+
+Cache
+   Visualize cached images on the timeline.
+
 
 Strips
 ------

@@ -7,12 +7,9 @@ The Cache is used to save preview frames in memory,
 so they can later be displayed much faster than if they were rendered from scratch.
 Cache capacity can be set in the :doc:`System tab </editors/preferences/system>` of the Preferences.
 
-In order for this tab to be visible,
-enable :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>`.
-
 .. seealso::
 
-   Which frames are cached can be visualized by enabling :ref:`Show Cache <bpy.types.SequenceEditor.show_cache>`.
+   Which frames are cached can be visualized by enabling :ref:`Show Cache <bpy.types.SequencerCacheOverlay.show_cache>`.
 
 
 Cache Settings
@@ -37,6 +34,24 @@ Cache
       for faster tweaking of stacked strips at the cost of memory usage.
    Final
       Cache the final rendered frame.
+
+
+Display
+-------
+
+Visualize cached images on the timeline.
+
+.. _bpy.types.SequencerCacheOverlay.show_cache_:
+
+Cache
+   Raw
+      Visualize cached raw images on the timeline.
+   Pre-processed
+      Visualize cached pre-processed images on the timeline.
+   Composite
+      Visualize cached composite images on the timeline.
+   Final
+      Visualize cached final images on the timeline.
 
 
 Strip Cache
