@@ -101,13 +101,13 @@ Clear some data-block types' previews (you can choose which in its options),
 in one or more blend-files on your drive. You should not use this operator on the file currently opened in Blender.
 
 Scenes
-   Generate previews of scenes and their collections.
+   Clear previews of scenes and their collections.
 Collections
-   Generate previews of collections of objects.
+   Clear previews of collections of objects.
 Objects
-   Generate previews of objects.
+   Clear previews of objects.
 Materials & Textures
-   Generates previews for materials, textures, images, and other internal data.
+   Clear previews for materials, textures, images, and other internal data.
 Trusted Blend Files
    When enabled, Python scripts and drivers that may be included in the file will be run automatically.
    Enable this only if you created the file yourself,
@@ -115,4 +115,4 @@ Trusted Blend Files
    See :doc:`Python Security </advanced/scripting/security>` to configure default trust options.
 Save Backups
    Keep a :ref:`backup version <bpy.types.PreferencesFilePaths.save_version>` (``blend1-file``)
-   of the files when saving with generated previews.
+   of the files when saving with cleared previews.
