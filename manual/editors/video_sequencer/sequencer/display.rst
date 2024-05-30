@@ -14,9 +14,20 @@ Sequencer Overlays
 
    :Header:    |overlays-icon| :menuselection:`Overlays`
 
+.. figure:: /images/editors-video_sequencer-sequencer-overlays.png
+
 Overlays are information that is displayed on top of the sequencer region.
 The icon toggles all overlays in one go, while the drop-down button shows
 a pop-over where you can toggle individual ones:
+
+.. _bpy.types.SequencerTimelineOverlay.show_grid:
+
+Grid
+   Shows vertical lines at regular time intervals.
+
+
+Strips
+------
 
 .. _bpy.types.SequencerTimelineOverlay.show_strip_name:
 
@@ -33,6 +44,21 @@ Source
 Duration
    Shows the length of each strip (in frames).
 
+.. _bpy.types.SequencerTimelineOverlay.show_fcurves:
+
+Animation Curves
+   Shows animation curves for volume (Sound strips) and opacity (other strips).
+
+.. _bpy.types.SequencerTimelineOverlay.show_thumbnails:
+
+Thumbnails
+   Displays thumbnails across the full width of each Movie or Image strip.
+   The thumbnail size depends on the vertical zoom level (which can be adjusted
+   by dragging up and down with :kbd:`Ctrl-MMB`). Zooming in results in taller
+   strips with bigger, but fewer thumbnails. Zooming out results in narrower
+   strips with smaller, but more thumbnails.
+
+
 .. _bpy.types.SequencerTimelineOverlay.show_strip_tag_color:
 
 Color Tags
@@ -47,28 +73,13 @@ Offsets
    Shows overflow bars of content that was trimmed from the strip (by moving
    the strip's handles). See :ref:`bpy.types.Sequence.frame_offset_start`.
 
-.. _bpy.types.SequencerTimelineOverlay.show_fcurves:
 
-F-Curves
-   Shows animation curves for volume (Sound strips) and opacity (other strips).
-
-.. _bpy.types.SequencerTimelineOverlay.show_thumbnails:
-
-Thumbnails
-   Displays thumbnails across the full width of each Movie or Image strip.
-   The thumbnail size depends on the vertical zoom level (which can be adjusted
-   by dragging up and down with :kbd:`Ctrl-MMB`). Zooming in results in taller
-   strips with bigger, but fewer thumbnails. Zooming out results in narrower
-   strips with smaller, but more thumbnails.
-
-.. _bpy.types.SequencerTimelineOverlay.show_grid:
-
-Grid
-   Shows vertical lines at regular time intervals.
+Waveforms
+---------
 
 .. _bpy.types.SequencerTimelineOverlay.waveform_display_type:
 
-Waveforms
+Type
    Global options for waveform display on Sound strips.
 
    :On: Enable waveforms for all strips.
@@ -79,7 +90,7 @@ Waveforms
 
 .. _bpy.types.SequencerTimelineOverlay.waveform_display_style:
 
-Waveform Style
+Style
    How Waveforms are displayed.
 
    :Full: Displays the audio amplitude.
