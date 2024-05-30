@@ -7,6 +7,7 @@ GPU Compositor
 The new GPU accelerated compositor introduced in Blender 3.5 and is currently used for
 :ref:`viewport compositing <viewport-compositing>`.
 
+
 Data
 ====
 
@@ -26,6 +27,7 @@ hand, if node inputs that expect an image are given a single value, the single v
 to cover the whole compositing space. For instance, the :ref:`Filter node
 <bpy.types.CompositorNodeFilter>` expect its *Factor* input to be an image, but if a single value is
 given, it will be assumed to be the same for all pixels.
+
 
 Type
 ----
@@ -52,6 +54,7 @@ Color
   not conform to a specific color space or alpha storage model, instead, appropriate nodes will have
   settings to control the representation of their output and nodes exist to convert between the
   different representations.
+
 
 Implicit Conversion
 ^^^^^^^^^^^^^^^^^^^
@@ -82,6 +85,7 @@ the :ref:`Math node <bpy.types.CompositorNodeMath>` expect float inputs.
 
    An example that demonstrates implicit conversion between a color type and a float type, since the
    *Math* node expects float inputs.
+
 
 Compositing Space
 =================
@@ -123,6 +127,7 @@ the domains of two example images.
 Images can be transformed using nodes like the :ref:`Transform <bpy.types.CompositorNodeTransform>`,
 :ref:`Translate <bpy.types.CompositorNodeTranslate>`, and :ref:`Rotate
 <bpy.types.CompositorNodeRotate>` nodes.
+
 
 Operation Domain
 ----------------
@@ -173,6 +178,7 @@ be a zero transparent color, which is convenient for the use case.
    only covers a small area of the operation domain, which is the whole viewport in this case, so
    the rest of the area is assumed to be a zero transparent color.
 
+
 Interpolation
 ^^^^^^^^^^^^^
 
@@ -186,6 +192,7 @@ Transformation nodes like the :ref:`Transform <bpy.types.CompositorNodeTransform
 <bpy.types.CompositorNodeRotate>` nodes include an interpolation option to set how they prefer their
 output image to be read and interpolated.
 
+
 Determining Operation Domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -193,6 +200,7 @@ The question remains on how nodes determine their operation domain. Different no
 different mechanisms for determining their operation domain. But generally, three classes of nodes
 exist when it comes to the mechanism of determining the operation domain, each of which is presented
 in one of the following sections.
+
 
 Input Nodes
 """""""""""
@@ -202,6 +210,7 @@ domain with an identity transformation and the same size as their outputs, so fo
 the operation domain will be the domain whose size is the size of the image and whose transformation
 is an identity one.
 
+
 Output Nodes
 """"""""""""
 
@@ -209,6 +218,7 @@ The operation domain of output nodes like the :ref:`Viewer node <bpy.types.Compo
 a domain with an identity transformation and the same size as the final compositor output. For
 :ref:`viewport compositing <viewport-compositing>`, that size would be the viewport size, and for
 final render compositing, that size would be the scene render size.
+
 
 Other Nodes
 """""""""""
@@ -239,12 +249,14 @@ the :ref:`Filter node <bpy.types.CompositorNodeFilter>` has two inputs, the doma
 * Neither the *Image* nor the *Factor* inputs are connected to images, in this case, there isn't
   a domain input because the node is evaluated on single values.
 
+
 Considerations
 ^^^^^^^^^^^^^^
 
 The aforementioned mechanism for determining the operation domain has a number of consequences that
 needs to be considered as they might be undesirable, each of which is presented in one of the
 following sections.
+
 
 Clipping
 """"""""
@@ -268,6 +280,7 @@ input in the *Mix* node has the highest domain priority, as shown in the followi
 
    Working around the clipping behavior of the *Alpha Over* node using a Mix node, noting that the
    first *Image* input in the *Mix* node has the highest domain priority
+
 
 Output
 ======
