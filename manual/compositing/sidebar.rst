@@ -59,7 +59,7 @@ Performance
 
 This panel helps you tweak the performance of the Compositor.
 
-.. _bpy.types.CompositorNodeTree.precision:
+.. _bpy.types.RenderSettings.compositor_precision:
 
 Precision
    The precision of compositor intermediate result.
