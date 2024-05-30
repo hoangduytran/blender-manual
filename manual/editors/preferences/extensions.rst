@@ -20,7 +20,7 @@ The *Extensions* section lets you manage the extensions preferences.
 Install
 =======
 
-They are different ways to install an extension:
+There are different ways to install an extension:
 
 - **Install from the Website**: Drag the installation URL into Blender.
 - **Install from Blender**: From Blender search for the extension name and click on Install.

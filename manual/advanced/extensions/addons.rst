@@ -54,7 +54,7 @@ Bundle Dependencies
 For add-ons to be bundled as extensions, they must be self-contained.
 That means they must come with all its dependencies. In particular 3rd party Python modules.
 
-They are a few options for this:
+There are a few options for this:
 
 Bundle with :doc:`Python Wheels <./python_wheels>`.
    This is the recommended way to bundle dependencies.
