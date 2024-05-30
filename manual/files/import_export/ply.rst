@@ -18,6 +18,9 @@ and you can choose which data you want to export (UV textures, Color Attributes,
 Import
 ======
 
+General
+-------
+
 Scale
    Value by which to scale the imported objects in relation to the world's origin.
 Scene Unit
@@ -29,6 +32,11 @@ Forward Axis, Up Axis
 
    Blender uses Y Forward, Z Up (since the front view looks along the +Y direction).
    For example, it's common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
+
+
+Options
+-------
+
 Merge Vertices
    Attempts to combine co-located vertices where possible.
 Import Vertex Colors
@@ -44,11 +52,14 @@ Import Vertex Colors
 Export
 ======
 
+General
+-------
+
 Format: ASCII
    Formats the file using the simple a ASCII format.
    This option might be helpful if the program that
    will later import the file does not support the binary file format.
-Limit to: Selected Only
+Include: Selected Only
    Only selected objects are exported.
    Instanced objects, for example collections that are instanced in the scene,
    are considered 'selected' when their instancer is selected.
@@ -61,18 +72,19 @@ Forward Axis, Up Axis
 
    Blender uses Y Forward, Z Up (since the front view looks along the +Y direction).
    For example, it's common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
-Objects: Apply Modifiers
-   Export objects using the evaluated mesh, meaning the resulting mesh after all
-   :doc:`Modifiers </modeling/modifiers/index>` have been calculated.
 
-Geometry: UV Coordinates
+
+Geometry
+--------
+
+UV Coordinates
    Write out the active UV layers coordinates from Blender.
-Geometry: Normals
+Vertex Normals
    Write out Blender's face and vertex normals (depending on the faces smooth setting).
 
    Mostly this isn't needed since most applications will calculate their
    own normals but to match Blender's normal map textures you will need to write these too.
-Import Vertex Colors
+Vertex Colors
    The color space that the color data in the ply-file was saved in.
 
    :None: Does not import vertex color data.
@@ -86,3 +98,6 @@ Triangulated Mesh
    - N-gon-method: "Beauty"
    - Quad-method: "Shortest Diagonal"
    - Min vertices: 4
+Apply Modifiers
+   Export objects using the evaluated mesh, meaning the resulting mesh after all
+   :doc:`Modifiers </modeling/modifiers/index>` have been calculated.

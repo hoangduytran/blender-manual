@@ -32,27 +32,78 @@ It is also possible to animate characters (or other models) in Blender, export t
 load those files into other software for further processing.
 
 
+.. _bpy.ops.wm.alembic_import:
+
+Importing Alembic Files
+=======================
+
+When importing an Alembic file, :doc:`Mesh Sequence Cache modifiers </modeling/modifiers/modify/mesh_sequence_cache>`
+are automatically added to time-varying meshes. For time-varying object transforms
+(so animation of rotation, location, or scale)
+the :ref:`Transform Cache Constraint <bpy.types.TransformCacheConstraint>` is used.
+
+
+General
+-------
+
+Scale
+   Value by which to enlarge or shrink the objects with respect to the world's origin
+
+
+Options
+-------
+
+Relative Path
+   Select the file relative to the blend-file.
+
+Set Frame Range
+   If checked, update scene's start and end frame to match those of the Alembic archive.
+
+Is Sequence
+   Set to true if the cache is split into separate files.
+
+Validate Meshes
+   Check imported mesh objects for invalid data (slow).
+
+Always Add Cache Reader
+   Add cache modifiers and constraints to imported objects even if they are
+   not animated so that they can be updated when reloading the Alembic archive.
+
+
+.. _bpy.ops.wm.alembic_export:
+
 Exporting to Alembic Files
 ==========================
 
 This section describes the effect of the different export options.
 
 
-Manual Transform
-----------------
+General
+-------
 
-.. figure:: /images/files_import-export_alembic_export-panel-scene-options.png
+.. figure:: /images/files_import-export_alembic_export-panel-general-options.png
    :align: right
 
-   Generic and Scene Alembic Export options.
+   General options.
 
 Scale
    This sets the global scale of the Alembic file. Keep it at the default value of 1.0 to use
    Blender's units.
 
+Include
+   Selected Objects
+      When enabled, exports only the selected objects. When disabled, all objects are exported.
+   Visible Objects
+      Limits the export to scene collections that are currently visible.
 
-Scene Options
--------------
+
+Scene
+-----
+
+.. figure:: /images/files_import-export_alembic_export-panel-scene-options.png
+   :align: right
+
+   Scene options.
 
 Frame Start, End
    Sets the frame range to export to Alembic. This defaults to the current scene frame range.
@@ -76,11 +127,6 @@ Sub-frame Sampling
       This mimics a "180 degree" shutter, opening 90 degrees before the frame
       and closing 90 degrees after the frame.
 
-Flatten Hierarchy
-   When disabled, parent/child relations between objects are exported too. Any parent object that
-   is not exported itself, but with children that *are* exported, is replaced by an empty.
-   When enabled, parent/child relations are not exported, and transformations are all written in world coordinates.
-
 Use Instancing
    Exports data of :doc:`duplicated </scene_layout/object/editing/duplicate_linked>`
    or :doc:`instanced </scene_layout/object/properties/instancing/index>` objects as Alembic instances;
@@ -103,13 +149,12 @@ Custom Properties
 
    - Numbers can be animated as well.
 
-Only
-   Selected Objects
-      When enabled, exports only the selected objects. When disabled, all objects are exported.
-   Visible Objects
-      Limits the export to scene collections that are currently visible.
+Flatten Hierarchy
+   When disabled, parent/child relations between objects are exported too. Any parent object that
+   is not exported itself, but with children that *are* exported, is replaced by an empty.
+   When enabled, parent/child relations are not exported, and transformations are all written in world coordinates.
 
-Use Settings For
+Settings
    Determines visibility of objects, modifier settings,
    and other areas where there are different settings for viewport and rendering.
 
@@ -117,15 +162,15 @@ Use Settings For
    :Viewport: Use Viewport settings for object visibility, modifier settings, etc.
 
 
-Object Options
---------------
+Geometry
+--------
 
-.. figure:: /images/files_import-export_alembic_export-panel-object-options.png
+.. figure:: /images/files_import-export_alembic_export-panel-geometry-options.png
    :align: right
 
-   Object options.
+   Geometry options.
 
-UVs
+UV Coordinates
    When enabled, UV maps are exported. Although the Alembic standard only supports
    a single UV map, Blender exports all UV maps in a way that should be readable by other software.
 
@@ -166,16 +211,12 @@ Particle Systems
    Particle Systems options.
 
 Alembic has no support for Particle Systems, in the same way that it does not support armatures.
-Hair is exported as animated zero-width curves. Particles are exported as animated points.
 
+Export Hair
+   Hair is exported as animated zero-width curves.
 
-Importing Alembic Files
-=======================
-
-When importing an Alembic file, :doc:`Mesh Sequence Cache modifiers </modeling/modifiers/modify/mesh_sequence_cache>`
-are automatically added to time-varying meshes. For time-varying object transforms
-(so animation of rotation, location, or scale)
-the :ref:`Transform Cache Constraint <bpy.types.TransformCacheConstraint>` is used.
+Export Particles
+   Particles are exported as animated points.
 
 
 Custom Split Normals of Meshes
