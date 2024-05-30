@@ -108,18 +108,16 @@ Quality
    In order for Blender to correctly calculate the frames and frame rate there are two possible solutions:
 
    #. Preprocess your video with e.g. MEncoder to repair the file header and insert the correct keyframes.
-   #. Use the Proxy/Timecode option in Blender.
+   #. Use the Timecode Index option in Blender.
 
-   :None: Do not use any timecode.
-   :Record Run: Use images in the order they are recorded.
-   :Free Run: Use global timestamp written by recording device.
-   :Free Run (Rec Date):
-      Interpolate a global timestamp using the record date and time written by recording device.
+   :None:
+      Ignore generated timecodes, seek in movie stream based on calculated timestamp.
+   :Record Run:
+      Seek based on timestamps read from movie stream, giving the best match between scene and movie times.
    :Record Run No Gaps:
-      Similar to *Record Run*, but ignores the timecode given in the file header,
-      changes in frame rate, or frame dropouts.
+      Effectively convert movie to an image sequence, ignoring incomplete or dropped frames, and changes in frame rate.
 
    .. note::
 
-      Record Run is the *Timecode Index* which usually is best to use, but if the source file is totally damaged,
+      *Record Run* is the Timecode Index which usually is best to use, but if the source file is totally damaged,
       *Record Run No Gaps* will be the only chance of getting an acceptable result.

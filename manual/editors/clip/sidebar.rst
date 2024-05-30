@@ -34,7 +34,10 @@ Build Proxy/Timecode
    Generates proxies based on the settings above, as well as timecode files.
    Instead of using this button, you can also click
    :menuselection:`Clip --> Proxy --> Rebuild Proxy and Timecode Indices`.
-Timecode
+
+.. _bpy.types.MovieClipProxy.timecode:
+
+:term:`Timecode` Index
    When you are working with footage directly copied from a camera without preprocessing it,
    there might be numerous artifacts, mostly due to seeking to a given frame in the sequence.
    This happens because such footage usually does not have correct frame rate values in the file header.
@@ -42,20 +45,18 @@ Timecode
    In order for Blender to correctly calculate the frames and frame rate there are two possible solutions:
 
    #. Preprocess your video with e.g. MEncoder to repair the file header and insert the correct keyframes.
-   #. Use the Proxy/Timecode option in Blender.
+   #. Use the Timecode Index option in Blender.
 
-   :None: Do not use any timecode.
-   :Record Run: Use images in the order they are recorded.
-   :Free Run: Use the global timestamp written by the recording device.
-   :Free Run (Rec Date):
-      Interpolate a global timestamp using the record date and time written by the recording device.
+   :None:
+      Ignore generated timecodes, seek in movie stream based on calculated timestamp.
+   :Record Run:
+      Seek based on timestamps read from movie stream, giving the best match between scene and movie times.
    :Record Run No Gaps:
-      Similar to *Record Run*, but ignores the timecode given in the file header,
-      changes in frame rate, or frame dropouts.
+      Effectively convert movie to an image sequence, ignoring incomplete or dropped frames, and changes in frame rate.
 
    .. note::
 
-      Record Run is the *Timecode Index* which usually is best to use, but if the source file is totally damaged,
+      *Record Run* is the Timecode Index which usually is best to use, but if the source file is totally damaged,
       *Record Run No Gaps* will be the only chance of getting an acceptable result.
 
 Proxy Render Size
