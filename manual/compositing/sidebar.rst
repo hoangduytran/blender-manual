@@ -67,11 +67,6 @@ Precision
    :Auto: Use full precision for final renders, half precision otherwise.
    :Full: Use full precision for final renders and viewport.
 
-.. _bpy.types.CompositorNodeTree.use_two_pass:
-
-Two Pass
-   Use two pass execution during editing: the first pass calculates fast nodes, the second pass calculates all nodes.
-
 .. _bpy.types.CompositorNodeTree.use_viewer_border:
 
 Viewer Region
