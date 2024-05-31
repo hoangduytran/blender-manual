@@ -111,16 +111,26 @@ External Data
    Blender keeps track of all unpacked resources via a relative or absolute path.
    See :ref:`pack or unpack external data <pack-unpack-data>`.
 
-   Automatically Pack Into .blend
-      This option activates the file packing.
-      If enabled, every time the blend-file is saved, all external files will be saved (packed) in it.
-   Pack All Into .blend
-      Pack all used external files into the blend-file.
-   Unpack Into Files
-      Unpack all files packed into this blend-file to external ones.
-   Make All Paths Relative
-      Make all paths to external files :ref:`files-blend-relative_paths` to current blend-file.
-   Make All Paths Absolute
+   Automatically Pack Resources
+      Pack all currently used external files into the blend-file and automatically pack any files
+      that are added later. Unchecking this option will only stop the automatic packing for new files;
+      it won't unpack existing ones.
+   Pack Resources
+      Pack all used external files into the blend-file. After running this operator and saving the
+      blend-file, the external files will no longer be used -- any changes in them will no longer be
+      reflected in the blend-file, and you are free to move or delete them.
+   Unpack Resources
+      Export previously packed files back to external ones. You can choose whether to reuse existing
+      external files or overwrite them.
+   Pack Linked Libraries
+      Pack data-blocks that are :doc:`linked </files/linked_libraries/link_append>` from an external
+      blend-file into the current one.
+   Unpack Linked Libraries
+      Export previously packed data-blocks back to external blend-files. Existing blend-files are
+      overwritten.
+   Make Paths Relative
+      Make all paths to external files :ref:`relative <files-blend-relative_paths>` to the current blend-file.
+   Make Paths Absolute
       Make all paths to external files absolute (= full path from the system's root).
    Report Missing Files
       This option is useful to check if there are links to unpacked files that no longer exist.
@@ -132,7 +142,7 @@ External Data
       and a search will be performed in it, recursively in all contained directories.
       Every missing file found in the search will be recovered.
       Those recoveries will be done as absolute paths,
-      so if you want to have relative paths you will need to select *Make All Paths Relative*.
+      so if you want to have relative paths you will need to select *Make Paths Relative*.
 
       .. note::
 
