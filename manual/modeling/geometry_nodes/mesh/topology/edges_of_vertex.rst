@@ -59,6 +59,7 @@ Outputs
 
 Edge Index
    The geometry-wide index of the selected edge. You can pass this to the
+   :doc:`/modeling/geometry_nodes/utilities/field/evaluate_at_index` or the
    :doc:`/modeling/geometry_nodes/geometry/sample/sample_index` (with the domain set to Edge)
    to retrieve details about the edge.
 
@@ -91,7 +92,7 @@ The direction vector of each cone is the centerpoint of the most vertical neighb
 minus the position of the vertex. Finding that most vertical neighboring edge is where the
 *Edges of Vertex* node comes in: for each vertex, it sorts the connected edges by their
 weight and pick the first one (because the Sort Index is 0). Once we have the edge's index,
-we use the :doc:`/modeling/geometry_nodes/geometry/sample/sample_index` to retrieve its
+we use the :doc:`/modeling/geometry_nodes/utilities/field/evaluate_at_index` to retrieve its
 centerpoint.
 
 With the rotations of the cones calculated, we use the

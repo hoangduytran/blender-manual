@@ -59,6 +59,7 @@ Outputs
 
 Corner Index
    The geometry-wide index of the selected corner. You can pass this to the
+   :doc:`/modeling/geometry_nodes/utilities/field/evaluate_at_index` or the
    :doc:`/modeling/geometry_nodes/geometry/sample/sample_index` (with the domain set to Face Corner)
    to retrieve details about the corner.
 

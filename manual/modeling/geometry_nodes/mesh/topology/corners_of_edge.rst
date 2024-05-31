@@ -64,7 +64,7 @@ Weights
    Corners with the same weight are sorted by their index.
 
 Sort Index
-   The 0-based index of the corner to select from the edge's sorted neighboring corners.
+   The 0-based index of the corner to select from the edge's sorted corners.
    If this value is outside the range of valid indices, it wraps around.
 
 
@@ -79,6 +79,7 @@ Outputs
 
 Corner Index
    The geometry-wide index of the selected corner. You can pass this to the
+   :doc:`/modeling/geometry_nodes/utilities/field/evaluate_at_index` or the
    :doc:`/modeling/geometry_nodes/geometry/sample/sample_index` (with the domain set to Face Corner)
    to retrieve details about the corner.
 
