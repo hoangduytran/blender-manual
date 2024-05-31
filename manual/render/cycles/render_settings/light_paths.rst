@@ -56,12 +56,12 @@ This will still converge to the same image, but renders faster while possibly be
 Transparency
 ============
 
-The transparent :abbr:`BSDF (Bidirectional Scattering Distribution Function)` shader is given
-special treatment. When a ray passes through it, light passes straight on,
-as if there was no geometry there.
-The ray type does not change when passing through a transparent BSDF.
+The :doc:`/render/shader_nodes/shader/transparent` shader is given
+special treatment. Rays pass straight through it, changing neither direction nor type
+as if there were no geometry at all.
 
-Alpha pass output is also different for the transparent BSDF.
+Alpha pass output is also different for the transparent
+:abbr:`BSDF (Bidirectional Scattering Distribution Function)`.
 Other transmission BSDFs are considered opaque,
 because they change the light direction. As such they cannot be used for
 alpha-over compositing, while this is possible with the transparent BSDF.

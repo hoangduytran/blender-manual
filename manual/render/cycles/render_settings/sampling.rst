@@ -273,7 +273,8 @@ Min Light Bounces
 .. _bpy.types.CyclesRenderSettings.min_transparent_bounces:
 
 Min Transparent Bounces
-   Minimum number of transparent bounces. Setting this higher reduces noise in the first bounces,
+   Minimum number of :ref:`transparent <render-cycles-light-paths-transparency>` bounces
+   (more specifically "passthroughs"). Setting this higher reduces noise in the first bounces,
    but can also be less efficient for more complex geometry like hair and volumes.
 
 .. _bpy.types.CyclesRenderSettings.use_layer_samples:
