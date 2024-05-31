@@ -111,20 +111,6 @@ Lasso Select
 See :ref:`tool-select-lasso`.
 
 
-.. _bpy.ops.object.select_by_type:
-
-Select All by Type
-------------------
-
-.. reference::
-
-   :Mode:      Object Mode
-   :Menu:      :menuselection:`Select --> Select All by Type`
-
-With this tool, it becomes possible to select objects of a certain type in one go.
-For a description of all object types see :doc:`Object Types </scene_layout/object/types>`.
-
-
 .. _bpy.ops.object.select_camera:
 
 Select Active Camera
@@ -196,6 +182,20 @@ Extend Parent
    Extends the selection to the immediate parents of the currently selected objects.
 Extend Child
    Extends the selection to the immediate children of the currently selected objects.
+
+
+.. _bpy.ops.object.select_by_type:
+
+Select All by Type
+------------------
+
+.. reference::
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Select --> Select All by Type`
+
+With this tool, it becomes possible to select objects of a certain type in one go.
+For a description of all object types see :doc:`Object Types </scene_layout/object/types>`.
 
 
 .. _bpy.ops.object.select_grouped:

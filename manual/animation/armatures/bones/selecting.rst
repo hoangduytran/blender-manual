@@ -148,13 +148,13 @@ Less :kbd:`Ctrl-NumpadMinus`
 
 .. _bpy.ops.armature.select_linked:
 
-Linked
-======
+Select Linked
+=============
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Linked`
+   :Menu:      :menuselection:`Select --> Select Linked`
    :Shortcut:  :kbd:`Ctrl-L`
 
 Selects all the bones in the chain which the active (last selected) bone belongs to.
@@ -175,31 +175,15 @@ All Forks
           Its whole chain selected with Linked.
 
 
-.. _bpy.ops.armature.select_hierarchy:
-
-Parent/Child
-============
-
-Parent :kbd:`[`, Child :kbd:`]`
-   You can deselect the active bone and select its immediate parent or one of its children.
-
-
-Extend Parent/Child
-===================
-
-Extend Parent :kbd:`Shift-[`, Extend Child :kbd:`Shift-]`
-   Similar to *Parent*/*Child* but it keeps the active bone in the selection.
-
-
 .. _bpy.ops.armature.select_similar:
 
-Similar
-=======
+Select Similar
+==============
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Similar`
+   :Menu:      :menuselection:`Select --> Select Similar`
    :Shortcut:  :kbd:`Shift-G`
 
 Children
@@ -233,3 +217,20 @@ Select Pattern
    :Menu:      :menuselection:`Select --> Select Pattern...`
 
 Select bones by names, see :ref:`Object Select Pattern <bpy.ops.object.select_pattern>` for details.
+
+
+.. _bpy.ops.armature.select_hierarchy:
+
+Parent/Child
+============
+
+Parent :kbd:`[`, Child :kbd:`]`
+   You can deselect the active bone and select its immediate parent or one of its children.
+
+
+Extend Parent/Child
+===================
+
+Extend Parent :kbd:`Shift-[`, Extend Child :kbd:`Shift-]`
+   Similar to *Parent*/*Child* but it keeps the active bone in the selection.
+

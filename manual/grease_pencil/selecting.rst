@@ -42,19 +42,27 @@ Box/Circle/All/None/Invert Select
    :doc:`Object Mode </scene_layout/object/selecting>`.
 
 
-.. _bpy.ops.gpencil.select_linked:
+.. _bpy.ops.gpencil.select_random:
 
-Select Linked
+Select Random
 =============
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Linked`
-   :Shortcut:  :kbd:`L`, :kbd:`Ctrl-L`
+   :Menu:      :menuselection:`Select --> Select Random`
 
-:kbd:`L` (or :kbd:`Ctrl-L` for all) will add to the selection the cursor's nearest control point,
-and all the linked ones, i.e. all points belonging to the same stroke.
+Randomly selects unselected points or strokes.
+
+Ratio
+   The likelihood of an unselected elements being selected.
+   Note that, this is not the percentage amount of elements that will be selected.
+Random Seed
+   :term:`Seed` used by the pseudo-random number generator.
+Action
+   Selection or deselection of elements.
+Unselect Ends
+   Excludes the selection of stroke end points.
 
 
 .. _bpy.ops.gpencil.select_alternate:
@@ -65,83 +73,9 @@ Select Alternated
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Alternated`
+   :Menu:      :menuselection:`Select --> Select Alternated`
 
 Selects alternate points in the selected strokes.
-
-
-.. _bpy.ops.gpencil.select_random:
-
-Select Random
-=============
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Random`
-
-Randomly selects unselected points or strokes.
-
-Ratio
-   The likelihood of an unselected elements being selected.
-   Note that, this is not the percentage amount of elements that will be selected.
-
-Random Seed
-   :term:`Seed` used by the pseudo-random number generator.
-
-Action
-   Selection or deselection of elements.
-
-Unselect Ends
-   Excludes the selection of stroke end points.
-
-
-.. _bpy.ops.gpencil.select_grouped:
-
-Select Grouped
-==============
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Grouped`
-   :Shortcut:  :kbd:`Shift-G`
-
-Layer
-   Selects all the points/strokes on the same layer.
-Material
-   Selects all the points/strokes that share the same material.
-
-
-.. _bpy.ops.gpencil.select_vertex_color:
-
-Select Color Attribute
-======================
-
-.. reference::
-
-   :Mode:      Vertex Paint Mode
-   :Menu:      :menuselection:`Select --> Color Attribute`
-
-Selects all points with a similar Color Attribute as the current selection.
-
-Tolerance
-   How similar colors are allowed to be; higher values select a wider range of colors.
-
-
-.. _bpy.ops.gpencil.select_first:
-.. _bpy.ops.gpencil.select_last:
-
-Select First/Last
-=================
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> First/Last`
-
-These operators will toggle the selection of the first or last point(s) of the stroke(s) in the object.
-This is useful to quickly find the start of a stroke.
 
 
 .. _bpy.ops.gpencil.select_more:
@@ -170,3 +104,65 @@ Less
    When *all* points of a stroke are selected, nothing will happen
    (as for *Less*, all linked points are always selected, and of course, *More* cannot add any).
    Conversely, the same goes when no points are selected.
+
+
+.. _bpy.ops.gpencil.select_grouped:
+
+Select Grouped
+==============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Grouped`
+   :Shortcut:  :kbd:`Shift-G`
+
+Layer
+   Selects all the points/strokes on the same layer.
+Material
+   Selects all the points/strokes that share the same material.
+
+
+.. _bpy.ops.gpencil.select_linked:
+
+Select Linked
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Linked`
+   :Shortcut:  :kbd:`L`, :kbd:`Ctrl-L`
+
+:kbd:`L` (or :kbd:`Ctrl-L` for all) will add to the selection the cursor's nearest control point,
+and all the linked ones, i.e. all points belonging to the same stroke.
+
+
+.. _bpy.ops.gpencil.select_first:
+.. _bpy.ops.gpencil.select_last:
+
+Select First/Last
+=================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> First/Last`
+
+These operators will toggle the selection of the first or last point(s) of the stroke(s) in the object.
+This is useful to quickly find the start of a stroke.
+
+
+.. _bpy.ops.gpencil.select_vertex_color:
+
+Select Color Attribute
+======================
+
+.. reference::
+
+   :Mode:      Vertex Paint Mode
+
+Selects all points with a similar Color Attribute as the current selection.
+
+Tolerance
+   How similar colors are allowed to be; higher values select a wider range of colors.

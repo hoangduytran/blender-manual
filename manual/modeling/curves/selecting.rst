@@ -31,49 +31,83 @@ Select Menu
 With curves, all "advanced" selection options are grouped
 in the *Select* menu of the 3D Viewport header.
 
-All :kbd:`A`
-   Select all.
-None :kbd:`Alt-A`
-   Select none.
-Inverse :kbd:`Ctrl-I`
-   Selects all the geometry that are not selected, and deselect currently selected components.
 
-----
+.. _bpy.ops.curve.select_all:
 
-:ref:`Box Select <tool-select-box>` :kbd:`B`
-   Interactive box selection.
-:ref:`Circle Select <tool-select-circle>` :kbd:`C`
-   Interactive circle selection.
-:ref:`Lasso Select <tool-select-lasso>`
-   Interactive free-form selection.
+All
+===
 
-----
+.. reference::
 
-`Select Random`_
-   Select random control points.
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> All`
+   :Shortcut:  :kbd:`A`
 
-`Checker Deselect`_
-   Select every Nth control point.
+Select all selectable elements.
 
-`Select Linked`_ :kbd:`Ctrl-L`
-   Select control points that are connected to the current selection.
 
-`Select Similar`_ :kbd:`Shift-G`
-   Select control points that have similar properties to the current selection.
+None
+====
 
-----
+.. reference::
 
-`(De)select First/Last`_
-   Toggle the selection of the first or last control point(s).
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> None`
+   :Shortcut:  :kbd:`Alt-A`
 
-`Select Next/Previous`_
-   Selects the next or previous control points.
+Deselect all elements, but the active element stays the same.
 
-----
 
-`Select More/Less`_
-   Select objects based on their parent child relationships.
+Invert
+======
 
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Invert`
+   :Shortcut:  :kbd:`Ctrl-I`
+
+Selects all the geometry that are not selected, and deselect currently selected components.
+
+
+
+Box Select
+==========
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Box Select`
+   :Shortcut:  :kbd:`B`
+
+Interactive :ref:`box selection <tool-select-box>`.
+
+
+Circle Select
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Circle Select`
+   :Shortcut:  :kbd:`C`
+
+Interactive :ref:`circle selection <tool-select-circle>`.
+
+
+Lasso Select
+============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Lasso Select`
+   :Shortcut:  :kbd:`Ctrl-Alt-LMB`
+
+See :ref:`tool-select-lasso`.
+
+
+.. _bpy.ops.curve.select_random:
 
 Select Random
 =============
@@ -92,6 +126,8 @@ Random Seed
 Action
    Controls whether the operator *Selects* or *Deselects* control points.
 
+
+.. _bpy.ops.curve.select_nth:
 
 Checker Deselect
 ================
@@ -115,6 +151,37 @@ Offset
    Offset from the starting point.
 
 
+.. _bpy.ops.curve.select_more:
+.. _bpy.ops.curve.select_less:
+
+Select More/Less
+================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> More/Less`
+   :Shortcut:  :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
+
+Their purpose, based on the currently selected control points, is to reduce or enlarge this selection.
+
+More
+   For each selected control point, select *all* its linked points (i.e. one or two...).
+Less
+   For each selected control point, if *all* points linked to this point are selected, keep this one selected.
+   Otherwise, deselect it.
+
+This implies two points:
+
+#. When *all* control points of a curve are selected, nothing will happen
+   (as for *Less*, all linked points are always selected, and of course, *More* cannot add any).
+   Conversely, the same goes when no control points are selected.
+#. Second, these tools will never "go outside" of a curve
+   (they will never "jump" to another curve in the same object).
+
+
+.. _bpy.ops.curve.select_linked:
+
 Select Linked
 =============
 
@@ -128,6 +195,8 @@ Select Linked
 and all the linked ones, i.e. all points belonging to the same curve. Note that for Bézier,
 using :kbd:`L` with a handle selected will select the whole control point and all the linked ones.
 
+
+.. _bpy.ops.curve.select_similar:
 
 Select Similar
 ==============
@@ -162,6 +231,9 @@ Threshold
    close the property's values have to be in the comparison.
 
 
+.. _bpy.ops.curve.de_select_first:
+.. _bpy.ops.curve.de_select_last:
+
 (De)select First/Last
 =====================
 
@@ -176,6 +248,9 @@ in the object. This is useful to quickly find the start of a curve
 (e.g. when using it as path...).
 
 
+.. _bpy.ops.curve.select_next:
+.. _bpy.ops.curve.select_previous:
+
 Select Next/Previous
 ====================
 
@@ -188,32 +263,6 @@ These operators will select the next or previous control point(s),
 based on the current selection
 (i.e. the control points following or preceding the selected ones along the curve).
 In case of a cyclic curve, the first and last points are not considered as neighbors.
-
-
-Select More/Less
-================
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> More/Less`
-   :Shortcut:  :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
-
-Their purpose, based on the currently selected control points, is to reduce or enlarge this selection.
-
-More
-   For each selected control point, select *all* its linked points (i.e. one or two...).
-Less
-   For each selected control point, if *all* points linked to this point are selected, keep this one selected.
-   Otherwise, deselect it.
-
-This implies two points:
-
-#. When *all* control points of a curve are selected, nothing will happen
-   (as for *Less*, all linked points are always selected, and of course, *More* cannot add any).
-   Conversely, the same goes when no control points are selected.
-#. Second, these tools will never "go outside" of a curve
-   (they will never "jump" to another curve in the same object).
 
 
 Pick Shortest Path

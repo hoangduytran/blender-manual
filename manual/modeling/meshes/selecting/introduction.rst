@@ -164,7 +164,7 @@ All :kbd:`A`
    Select all.
 None :kbd:`Alt-A`
    Select none.
-Inverse :kbd:`Ctrl-I`
+Invert :kbd:`Ctrl-I`
    Selects all the geometry that is not selected, and deselect currently selected components.
 
 ----
@@ -178,6 +178,8 @@ Inverse :kbd:`Ctrl-I`
 
 ----
 
+Select Mirror :kbd:`Shift-Ctrl-M`
+   Select mesh items at the mirrored location across the chosen axis.
 :ref:`Select Random <bpy.ops.mesh.select_random>`
    Selects a random group of vertices, edges, or faces, based on a percentage value.
 :ref:`Checker Deselect <bpy.ops.mesh.select_nth>`
@@ -185,23 +187,7 @@ Inverse :kbd:`Ctrl-I`
 
 ----
 
-Select Sharp Edges
-   This tool selects all edges between two faces forming an angle greater than the angle value,
-   where an increasing angle selects sharper edges.
-
-----
-
-:ref:`Select Similar <bpy.ops.mesh.select_similar>` :kbd:`Shift-G`
-   Select elements similar to the current selection.
-
-----
-
-:doc:`Select All by Trait </modeling/meshes/selecting/all_by_trait>`
-   Select geometry by querying its characteristics.
-
-----
-
-Select More/Less
+More/Less
    More :kbd:`Ctrl-NumpadPlus`
       Expands the selection to the adjacent elements of the selection type.
    Less :kbd:`Ctrl-NumpadMinus`
@@ -213,16 +199,10 @@ Select More/Less
 
 ----
 
-Select Loops
-   :ref:`Edge Loops <bpy.ops.mesh.loop_multi_select>`
-      Select connected edges.
-   :ref:`Face Loops <modeling-meshes-selecting-face-loops>`
-      Select connected faces.
-   :ref:`Edge Rings <modeling-meshes-selecting-edge-rings>`
-      Select connected edge ring.
-
-----
-
+:ref:`Select Similar <bpy.ops.mesh.select_similar>` :kbd:`Shift-G`
+   Select elements similar to the current selection.
+:doc:`Select All by Trait </modeling/meshes/selecting/all_by_trait>`
+   Select geometry by querying its characteristics.
 Select Linked
    :ref:`Select Linked <bpy.ops.mesh.select_linked>`
       Selects all components that are connected to the current selection.
@@ -231,14 +211,21 @@ Select Linked
    Linked Flat Faces
       Select connected faces based on a threshold of the angle between them.
       This is useful for selecting faces that are planar.
+Select Loops
+   :ref:`Edge Loops <bpy.ops.mesh.loop_multi_select>`
+      Select connected edges.
+   :ref:`Face Loops <modeling-meshes-selecting-face-loops>`
+      Select connected faces.
+   :ref:`Edge Rings <modeling-meshes-selecting-edge-rings>`
+      Select connected edge ring.
 
-----
+Sharp Edges
+   This tool selects all edges between two faces forming an angle greater than the angle value,
+   where an increasing angle selects sharper edges.
 
-Select Side of Active
+Side of Active
    Selects all vertices on the mesh in a single axis relative to the active vertex.
    In Vertex selection mode only.
-Select Mirror :kbd:`Shift-Ctrl-M`
-   Select mesh items at the mirrored location across the chosen axis.
 
 
 Known Issues

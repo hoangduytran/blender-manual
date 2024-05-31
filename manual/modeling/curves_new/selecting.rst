@@ -32,24 +32,114 @@ This feature is makes it easy to select whole segments at once, or to give more 
    Limits selection to whole curve segments.
 
 
-Operators
-=========
+.. _bpy.ops.curves.select_all:
 
 All
-   Select all control points or curves.
+===
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> All`
+   :Shortcut:  :kbd:`A`
+
+Select all selectable elements.
+
 
 None
-   Deselect all control points or curves.
+====
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> None`
+   :Shortcut:  :kbd:`Alt-A`
+
+Deselect all elements, but the active element stays the same.
+
 
 Invert
-   Invert the selection.
+======
 
-Random
-   Randomizes inside the existing selection or create new random selection if nothing is selected already.
+.. reference::
 
-Endpoints
-   Select endpoints of curves.
-   Only supported in the Control Point selection mode.
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Invert`
+   :Shortcut:  :kbd:`Ctrl-I`
 
-Grow
-   Select points or curves which are close to already selected elements.
+Selects all the geometry that are not selected, and deselect currently selected components.
+
+
+.. _bpy.ops.curves.select_random:
+
+Select Random
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Random`
+
+Select Random control points.
+
+Seed
+   :term:`Seed` used by the pseudo-random number generator.
+Probability
+   Selects the defined percentage of control points.
+
+
+.. _bpy.ops.curves.select_more:
+.. _bpy.ops.curves.select_less:
+
+Select More/Less
+================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> More/Less`
+   :Shortcut:  :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
+
+Their purpose, based on the currently selected control points, is to reduce or enlarge this selection.
+
+More
+   For each selected control point, select *all* its linked points (i.e. one or two...).
+Less
+   For each selected control point, if *all* points linked to this point are selected, keep this one selected.
+   Otherwise, deselect it.
+
+This implies two points:
+
+#. When *all* control points of a curve are selected, nothing will happen
+   (as for *Less*, all linked points are always selected, and of course, *More* cannot add any).
+   Conversely, the same goes when no control points are selected.
+#. Second, these tools will never "go outside" of a curve
+   (they will never "jump" to another curve in the same object).
+
+
+.. _bpy.ops.curves.select_linked:
+
+Select Linked
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Linked`
+   :Shortcut:  :kbd:`L`, :kbd:`Ctrl-L`, :kbd:`Shift-L`
+
+:kbd:`L` (or :kbd:`Ctrl-L` for all) will add to the selection the cursor's nearest control point,
+and all the linked ones, i.e. all points belonging to the same curve. Note that for Bézier,
+using :kbd:`L` with a handle selected will select the whole control point and all the linked ones.
+
+
+Select Endpoints
+================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Endpoints`
+
+Select endpoints of curves.
+Only supported in the Control Point selection mode.

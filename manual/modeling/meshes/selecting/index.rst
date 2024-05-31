@@ -7,14 +7,14 @@
    :maxdepth: 2
 
    introduction.rst
+   mirror.rst
    random.rst
    checker_deselect.rst
-   sharp_edges.rst
+   more_less.rst
    similar.rst
    all_by_trait.rst
-   more_less.rst
-   loops.rst
    linked.rst
+   loops.rst
+   sharp_edges.rst
    side_of_active.rst
-   mirror.rst
    by_attribute.rst

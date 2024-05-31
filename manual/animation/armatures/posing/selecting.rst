@@ -1,4 +1,3 @@
-.. _bpy.ops.pose.select_all:
 
 *********
 Selecting
@@ -9,12 +8,50 @@ with a few deviations:
 You can only select *whole bones* in *Pose Mode*, not roots/tips...
 
 
+.. _bpy.ops.pose.select_all:
+
+All
+===
+
+.. reference::
+
+   :Mode:      Pose Mode
+   :Menu:      :menuselection:`Select --> All`
+   :Shortcut:  :kbd:`A`
+
+Select all selectable bones.
+
+
+None
+====
+
+.. reference::
+
+   :Mode:      Pose Mode
+   :Menu:      :menuselection:`Select --> None`
+   :Shortcut:  :kbd:`Alt-A`
+
+Deselect all bones, but the active bone stays the same.
+
+
+Invert
+======
+
+.. reference::
+
+   :Mode:      Pose Mode
+   :Menu:      :menuselection:`Select --> Invert`
+   :Shortcut:  :kbd:`Ctrl-I`
+
+Toggle the selection state of all visible bones.
+
+
 Box Select
 ==========
 
 .. reference::
 
-   :Mode:      All Modes
+   :Mode:      Pose Mode
    :Menu:      :menuselection:`Select --> Box Select`
    :Shortcut:  :kbd:`B`
 
@@ -26,7 +63,7 @@ Circle Select
 
 .. reference::
 
-   :Mode:      All Modes
+   :Mode:      Pose Mode
    :Menu:      :menuselection:`Select --> Circle Select`
    :Shortcut:  :kbd:`C`
 
@@ -38,11 +75,12 @@ Lasso Select
 
 .. reference::
 
-   :Mode:      All modes
+   :Mode:      Pose Mode
    :Menu:      :menuselection:`Select --> Lasso Select`
    :Shortcut:  :kbd:`Ctrl-Alt-LMB`
 
 See :ref:`tool-select-lasso`.
+
 
 .. _bpy.ops.pose.select_mirror:
 
@@ -51,35 +89,59 @@ Select Mirror
 
 .. reference::
 
-   :Mode:      Edit Mode
+   :Mode:      Pose Mode
    :Menu:      :menuselection:`Select --> Select Mirror`
    :Shortcut:  :kbd:`Shift-Ctrl-M`
 
 Flip the selection from one side to another.
 
 
-.. _bpy.ops.pose.select_constraint_target:
+.. _bpy.ops.pose.select_hierarchy:
 
-Constraint Target
-=================
+Select More/Less
+================
 
 .. reference::
 
    :Mode:      Pose Mode
-   :Menu:      :menuselection:`Select --> Constraint Target`
+   :Menu:      :menuselection:`Select --> More/Less`
 
-Todo.
+Parent :kbd:`[`, Child :kbd:`]`
+   You can deselect the active bone and select its immediate parent or one of its children.
+Extend Parent :kbd:`Shift-[`, Extend Child :kbd:`Shift-]`
+   Similar to *Parent*/*Child* but it keeps the active bone in the selection.
+
+
+.. _bpy.ops.pose.select_grouped:
+
+Select Grouped
+==============
+
+.. reference::
+
+   :Mode:      Pose Mode
+   :Menu:      :menuselection:`Select --> Select Grouped`
+   :Shortcut:  :kbd:`Shift-G`
+
+You can select bones, based on various properties, through the *Select Grouped* pop-up menu :kbd:`Shift-G`:
+
+Collection
+   Selects all bones that are share at least one bone collection with the active bone.
+Color
+   Selects all bones that have the same color as the active bone.
+Keying Set
+   All bones affected by active :doc:`Keying Set </animation/keyframes/keying_sets>`
 
 
 .. _bpy.ops.pose.select_linked:
 
-Linked
-======
+Select Linked
+=============
 
 .. reference::
 
    :Mode:      Pose Mode
-   :Menu:      :menuselection:`Select --> Linked`
+   :Menu:      :menuselection:`Select --> Select Linked`
    :Shortcut:  :kbd:`Ctrl-L`
 
 Selects all the bones in the chain which the active (last selected) bone belongs to.
@@ -100,49 +162,12 @@ All Forks
           Its whole chain selected with Linked.
 
 
-.. _bpy.ops.pose.select_hierarchy:
-
-Select More/Less
-================
-
-.. reference::
-
-   :Mode:      Pose Mode
-   :Menu:      :menuselection:`Select --> Select More/Less`
-
-Parent :kbd:`[`, Child :kbd:`]`
-   You can deselect the active bone and select its immediate parent or one of its children.
-Extend Parent :kbd:`Shift-[`, Extend Child :kbd:`Shift-]`
-   Similar to *Parent*/*Child* but it keeps the active bone in the selection.
-
-
-.. _bpy.ops.pose.select_grouped:
-
-Grouped
-=======
-
-.. reference::
-
-   :Mode:      Pose Mode
-   :Menu:      :menuselection:`Select --> Grouped`
-   :Shortcut:  :kbd:`Shift-G`
-
-You can select bones, based on various properties, through the *Select Grouped* pop-up menu :kbd:`Shift-G`:
-
-Collection
-   Selects all bones that are share at least one bone collection with the active bone.
-Color
-   Selects all bones that have the same color as the active bone.
-Keying Set
-   ToDo.
-
-
 Select Pattern
 ==============
 
 .. reference::
 
-   :Mode:      Object Mode
+   :Mode:      Pose Mode
    :Menu:      :menuselection:`Select --> Select Pattern...`
 
 Selects all bones whose name matches a given pattern.
@@ -155,3 +180,16 @@ Case Sensitive
    The matching can be chosen to be case sensitive or not.
 Extend
    When *Extend* checkbox is checked the selection is extended instead of generating a new one.
+
+
+.. _bpy.ops.pose.select_constraint_target:
+
+Constraint Target
+=================
+
+.. reference::
+
+   :Mode:      Pose Mode
+   :Menu:      :menuselection:`Select --> Constraint Target`
+
+Select bones used as targets for the currently selected bones

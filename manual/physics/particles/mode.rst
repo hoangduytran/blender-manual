@@ -87,13 +87,13 @@ Selecting
 
 - Single: :kbd:`LMB`.
 - All: :kbd:`A`.
-- Linked: Move the mouse over a keypoint and press :kbd:`L`.
+- None :kbd:`Alt-A`
+- Invert :kbd:`Ctrl-I`
 - Box select: :kbd:`B`.
 - Circle Select :kbd:`C`.
 - Lasso Select :kbd:`Ctrl-Alt-LMB`.
+- Select Linked: Move the mouse over a keypoint and press :kbd:`L`.
 - Root/Tips: :menuselection:`Select --> Roots / Tips`.
-
-You may also use the *Select* Menu.
 
 .. tip:: Selections
 
@@ -105,6 +105,8 @@ You may also use the *Select* Menu.
    The method to select individual points is the same as in Edit Mode.
    :kbd:`RMB` to select, :kbd:`Shift-RMB` to add/remove a point from the selection.
 
+
+.. _bpy.ops.particle.select_random:
 
 Select Random
 -------------
@@ -122,6 +124,8 @@ Type
    hair/point does not refer to the particle type but the path/points of the hair/particle.
 
 
+.. _bpy.types.ParticleEdit.select_mode:
+
 Select Modes
 ------------
 
@@ -129,12 +133,9 @@ Select Modes
 
    Select Modes.
 
-Path
-   No keypoints are visible, you can select/deselect only all particles.
-Point
-   You see all of the keypoints.
-Tip
-   You can see and edit (including the brushes) only the tip of the particles, i.e. the last keypoint.
+:Path: No keypoints are visible, you can select/deselect only all particles.
+:Point: You see all of the keypoints.
+:Tip: You can see and edit (including the brushes) only the tip of the particles, i.e. the last keypoint.
 
 
 .. _bpy.types.ParticleBrush:
