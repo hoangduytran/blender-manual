@@ -39,11 +39,29 @@ Frame Selected
 Fit Preview in Window :kbd:`Home`
    Pan and zoom the view so that the entire video is visible.
    This enables *Zoom to Fit*.
-Zoom to Border :kbd:`Shift-B`
-   Click and drag a rectangle to zoom to it.
-Fractional Zoom
-   Resize the preview in steps from 1:8 to 8:1.
-Zoom to Fit
+
+Zoom
+   Menu with convenient zoom levels and operations.
+   The zoom levels are calculated based on the images resolution compared to the screen resolution.
+
+   - 12.5% (1:8) :kbd:`Numpad8` zoom out to a factor of 12.5%.
+   - 25% (1:4) :kbd:`Numpad4` zoom out to a factor of 25%.
+   - 50% (1:2) :kbd:`Numpad2` zoom out to a factor of 50%.
+   - 100% (1:1) :kbd:`Numpad1` resets the zoom to 100%.
+   - 200% (2:1) :kbd:`Ctrl-Numpad2` zoom in to a factor of 200%.
+   - 400% (4:1) :kbd:`Ctrl-Numpad4` zoom in to a factor of 400%.
+   - 800% (8:1) :kbd:`Ctrl-Numpad8` zoom in to a factor of 800%.
+
+   Zoom In/Out :kbd:`Wheel`
+      Zooms the view in or out.
+   Zoom to Fit :kbd:`Shift-Home`
+      Like *Frame All*, but uses as much space in the editor as possible.
+   Zoom Region :kbd:`Shift-B`
+      Zoom in the view to the nearest item contained in the border.
+
+.. _bpy.types.SpaceSequenceEditor.use_zoom_to_fit:
+
+Auto Zoom
    As long as this option is enabled, the preview will automatically zoom to keep the
    video size synchronized with the editor size.
 

@@ -31,21 +31,27 @@ Show Metadata
    :doc:`/render/output/properties/metadata` panel to change what metadata to include.
 Display Texture Paint UVs
    Toggles UVs in Paint Mode. The object must be in Texture Paint Mode or Edit Mode for the UVs to be visible.
-Zoom In/Out :kbd:`Wheel`
-   Adjusts the zoom level.
-Fractional Zoom
-   - Zoom 1:8 :kbd:`Numpad8`
-   - Zoom 1:4 :kbd:`Numpad4`
-   - Zoom 1:2 :kbd:`Numpad2`
-   - Zoom 1:1 :kbd:`Numpad1`
-   - Zoom 2:1 :kbd:`Ctrl-Numpad2`
-   - Zoom 4:1 :kbd:`Ctrl-Numpad4`
-   - Zoom 8:1 :kbd:`Ctrl-Numpad8`
+
+Zoom
+   Menu with convenient zoom levels and operations.
+   The zoom levels are calculated based on the images resolution compared to the screen resolution.
+
+   - 12.5% (1:8) :kbd:`Numpad8` zoom out to a factor of 12.5%.
+   - 25% (1:4) :kbd:`Numpad4` zoom out to a factor of 25%.
+   - 50% (1:2) :kbd:`Numpad2` zoom out to a factor of 50%.
+   - 100% (1:1) :kbd:`Numpad1` resets the zoom to 100%.
+   - 200% (2:1) :kbd:`Ctrl-Numpad2` zoom in to a factor of 200%.
+   - 400% (4:1) :kbd:`Ctrl-Numpad4` zoom in to a factor of 400%.
+   - 800% (8:1) :kbd:`Ctrl-Numpad8` zoom in to a factor of 800%.
+
+   Zoom In/Out :kbd:`Wheel`
+      Zooms the view in or out.
+   Zoom to Fit :kbd:`Shift-Home`
+      Like *Frame All*, but uses as much space in the editor as possible.
+   Zoom Region :kbd:`Shift-B`
+      Zoom in the view to the nearest item contained in the border.
 Frame All :kbd:`Home`
    Pans and zooms the view so that the image is centered and fully visible.
-Frame All Fit :kbd:`Shift-Home`
-   Same as *Frame All*, but uses as much of the editor's space as possible
-   (rather than leaving some margin around the image).
 Center View to Cursor
    Pan the view so that the 2D cursor is at the center of the editor.
 Render Region :kbd:`Ctrl-B`

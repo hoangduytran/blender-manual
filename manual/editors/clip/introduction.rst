@@ -50,17 +50,24 @@ Frame Selected :kbd:`NumpadPeriod`
    Zooms and pans the view to focus on the selected items.
 Frame All :kbd:`Home`
    Zooms and pans the view so that the whole video is visible.
-View Fit :kbd:`F`
-   Like *Frame All*, but uses as much space in the editor as possible.
 Center View to Cursor :guilabel:`Mask Mode`
    Pans the view so that the :ref:`2D Cursor <bpy.types.SpaceClipEditor.cursor>` is in the center.
-Fractional Zoom
-   Applies a specific zoom factor going from 8 times smaller to 8 times larger.
+Zoom
+   Menu with convenient zoom levels and operations.
+   The zoom levels are calculated based on the images resolution compared to the screen resolution.
 
-----------
+   - 12.5% (1:8) :kbd:`Numpad8` zoom out to a factor of 12.5%.
+   - 25% (1:4) :kbd:`Numpad4` zoom out to a factor of 25%.
+   - 50% (1:2) :kbd:`Numpad2` zoom out to a factor of 50%.
+   - 100% (1:1) :kbd:`Numpad1` resets the zoom to 100%.
+   - 200% (2:1) :kbd:`Ctrl-Numpad2` zoom in to a factor of 200%.
+   - 400% (4:1) :kbd:`Ctrl-Numpad4` zoom in to a factor of 400%.
+   - 800% (8:1) :kbd:`Ctrl-Numpad8` zoom in to a factor of 800%.
 
-Zoom In/Out :kbd:`Wheel`
-   Zooms the view.
+   Zoom In/Out :kbd:`Wheel`
+      Zooms the view in or out.
+   Zoom to Fit :kbd:`F`
+      Like *Frame All*, but uses as much space in the editor as possible.
 
 ----------
 
