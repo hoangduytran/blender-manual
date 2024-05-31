@@ -180,7 +180,13 @@ The built-in *Whole Character* Keying Set is made to keyframe all properties
 that are likely to get animated in a character rig. It was also implicitly used by
 the :ref:`Old Pose Library system <pose-library-old>`.
 
-In order to determine which bones to add keys for, and which bones to skip,
-the Keying Set uses the bone names. The following bone name prefixes will be skipped:
+This keying set ignores bones whose name starts with one of the following prefixes,
+as it assumes these are technical bones that are not meant to be animated directly.
+The built-in Rigify addon generates such bones, for example.
 
-"COR", "DEF", "GEO", "MCH", "ORG", "VIS"
+- COR (Corrective)
+- DEF (Deformation)
+- GEO (Geometry)
+- MCH (Mechanism)
+- ORG (Original from meta rig)
+- VIS (Visualization)
