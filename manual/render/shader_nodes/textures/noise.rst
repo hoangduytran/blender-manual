@@ -16,7 +16,7 @@ It can be used for a single Perlin noise evaluation, or for combining multiple o
 Inputs
 ======
 
-The inputs are dynamic, they become available if needed depending on the node properties.
+The inputs are dynamic: they become available if needed depending on the node properties.
 
 Vector
    Texture coordinate to evaluate the noise at;
@@ -26,9 +26,8 @@ W
 Scale
    Scale of the base noise octave.
 Detail
-   Number of noise octaves.
-   The fractional part of the input is multiplied by the magnitude of the highest octave.
-   Higher number of octaves corresponds to a higher render time.
+   Number of noise octaves. This can have a fractional part, in which case a blend
+   is performed (e.g. a Detail of 2.5 results in a 50% blend between 2 and 3 octaves).
 Roughness
    Blend between a smoother noise pattern, and rougher with sharper peaks.
 Lacunarity
@@ -58,15 +57,10 @@ Dimensions
       Higher dimensions corresponds to higher render time,
       so lower dimensions should be used unless higher dimensions are necessary.
 
-Normalize
-   If enabled, ensures that the output values stay in the range 0.0 to 1.0.
-   When disabled, output values are in the range -1.0 to 1.0.
-
-
 Type
    Type of Noise texture, with different ways to combine octaves.
 
-   :FBM:
+   :fBM:
       Fractal Brownian motion, produces a homogeneous and isotropic result.
       Values from octaves are added together.
    :Multifractal:
@@ -81,6 +75,9 @@ Type
    :Hetero Terrain:
       Similar to *Hybrid Multifractal* creates a heterogeneous terrain, but with the likeness of river channels.
 
+Normalize :guilabel:`fBM`
+   If enabled, ensures that the output values stay in the range 0.0 to 1.0.
+   If disabled, the range is at most -(*Detail* + 1) to *Detail* + 1 (smaller if *Roughness* < 1).
 
 Outputs
 =======
