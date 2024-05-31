@@ -468,7 +468,7 @@ Mask
 
    Rounding snaps alpha values that are 0.5 or greater up to 1, and ones below 0.5 down to
    1. It is also possible to use a cutoff value different than 0.5 by using Math nodes to
-   do `1 - (alpha < cutoff)`.
+   do ``1 - (alpha < cutoff)``.
 
    Mask mode is essentially the same as EEVEE's "Alpha Clip" blend mode, but is done with
    shader nodes so it works in other render engines.

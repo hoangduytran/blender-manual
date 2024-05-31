@@ -119,9 +119,9 @@ Move to Bone Collection
 
 Bone Collections
    Shows a list of the Armature's *editable* bone collections. The collections
-   that the active bone is assigned to are prefixed with a `-`, and choosing
+   that the active bone is assigned to are prefixed with a ``-``, and choosing
    those will unassign all selected bones from that collection. Similarly,
-   choosing a bone collection prefixed with a `+` will assign all selected bones
+   choosing a bone collection prefixed with a ``+`` will assign all selected bones
    to that collection.
 
    Available as :menuselection:`Pose --> Bone Collections` (*Pose Mode*)

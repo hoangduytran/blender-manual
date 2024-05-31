@@ -53,5 +53,5 @@ Rotation Increment
 ==================
 
 Angle used in incremental snapping for the rotation operator.
-The second value is the `Rotation Precision Increment`, used for finer transformations
+The second value is the **Rotation Precision Increment**, used for finer transformations
 and activated by default with the :kbd:`Shift` key.

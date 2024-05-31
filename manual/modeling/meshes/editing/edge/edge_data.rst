@@ -33,7 +33,7 @@ Edge Bevel Weight
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Edge --> Edge Bevel Weight`
 
-Sets the value for the `bevel_weight_edge` attribute, a value between (0.0 to 1.0).
+Sets the value for the ``bevel_weight_edge`` attribute, a value between (0.0 to 1.0).
 
 This attribute is used by the :doc:`Bevel Modifier </modeling/modifiers/generate/bevel>`
 to control the bevel intensity of the edges.

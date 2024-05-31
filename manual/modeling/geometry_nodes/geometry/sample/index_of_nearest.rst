@@ -11,7 +11,7 @@ Index of Nearest
    :width: 300px
 
 
-The `Index of Nearest` node is a way to find other close elements in the same geometry.
+The **Index of Nearest** node is a way to find other close elements in the same geometry.
 If needed you can use Group ID to determine the group of neighbors to be analyzed together.
 
 This is an alternative to the :doc:`/modeling/geometry_nodes/geometry/sample/sample_nearest` node.

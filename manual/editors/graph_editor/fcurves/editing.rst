@@ -711,7 +711,7 @@ values change rapidly.
 Frequency Cutoff
    The lower the value, the smoother the curve. There is an implicit maximum at which
    the value no longer changes the curve, which is at half the sample rate. The sample
-   rate in this case is the scene frame rate multiplied by the `Samples per Frame` of this operator.
+   rate in this case is the scene frame rate multiplied by the **Samples per Frame** of this operator.
 Filter order
    Higher values mean the frequency cutoff is steeper.
 Samples per Frame

@@ -27,7 +27,8 @@ Requirements
 - Wheels filenames must match Python's binary distribution specification:
   `see docs <https://packaging.python.org/en/latest/specifications/binary-distribution-format/#file-name-convention>`__.
   *Wheels downloaded from Python's package index will follow this convention.*
-- Use forward slashes as path separators when listing them on the `manifest </extensions/getting_started#manifest>`.
+- Use forward slashes as path separators when listing them on the
+  :ref:`manifest <extensions-manifest>`.
 
 
 How to Bundle Wheels

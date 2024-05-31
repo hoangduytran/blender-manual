@@ -422,12 +422,12 @@ Import Textures
 
    :None: Don't import textures. Note that, with this option, material textures may fail to be resolved in Blender.
    :Packed: Import textures as packed data in the Blender file.
-   :Copy: Copy files to the directory specified in the `Textures Directory` option.
+   :Copy: Copy files to the directory specified in the **Textures Directory** option.
 
 Textures Directory
-   Path to the directory where imported textures will be copied, when the `Import Textures` mode is `Copy`.
+   Path to the directory where imported textures will be copied, when the **Import Textures** mode is **Copy**.
 
-   Note that the default textures directory is the relative path `//textures`, which requires the
+   Note that the default textures directory is the relative path ``//textures``, which requires the
    Blender file to have been saved before importing, so the relative path can be resolved.
 
 File Name Collision

@@ -48,7 +48,10 @@ A theme extension only needs the manifest and the .xml theme file.
 .. note::
 
    Extensions can optionally have all its files inside a folder (inside the archive).
-   This is a common behaviour when saving a repository as ZIP from version-control platforms.
+   This is a common behavior when saving a repository as ZIP from version-control platforms.
+
+
+.. _extensions-manifest:
 
 Manifest
 ========
@@ -108,7 +111,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # https://docs.blender.org/manual/en/dev/extensions/python_wheels.html
    # wheels = [
    #   "./wheels/hexdump-3.3-py3-none-any.whl",
-   #   "./wheels/jsmin-3.0.1-py3-none-any.whl"
+   #   "./wheels/jsmin-3.0.1-py3-none-any.whl",
    # ]
 
    # Optional: build setting.
@@ -116,7 +119,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # [build]
    # paths_exclude_pattern = [
    #   "/.git/",
-   #   "__pycache__/"
+   #   "__pycache__/",
    # ]
 
 Required values:

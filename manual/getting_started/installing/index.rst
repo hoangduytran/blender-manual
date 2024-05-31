@@ -75,7 +75,7 @@ Installation Guides
    windows.rst
    steam.rst
 
-.. This is referenced from `linux.rst`, include in a hidden `toctree` to prevent warnings.
+.. This is referenced from ``linux.rst``, include in a hidden ``toctree`` to prevent warnings.
 .. toctree::
    :hidden:
 

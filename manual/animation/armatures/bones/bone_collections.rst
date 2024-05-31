@@ -60,15 +60,15 @@ How It Works
 
 Bone collections added via overrides are 'anchored' to the preceding
 collection, by name. Here is an example. The *italic* collections are defined on
-the linked Armature in `armature.blend`. The **bold** ones are added by
-overrides in `armature_shot_47.blend`.
+the linked Armature in ``armature.blend``. The **bold** ones are added by
+overrides in ``armature_shot_47.blend``.
 
 - *FK Controls*
 - *IK Controls*
 - **Left Pinky** (anchored to "IK Controls")
 - **Right Pinky** (anchored to "Left Pinky")
 
-Now if the Armature in `armature.blend` gets updated with two more collections
+Now if the Armature in ``armature.blend`` gets updated with two more collections
 it might look like this:
 
 - *FK Controls*
@@ -76,7 +76,7 @@ it might look like this:
 - *Face Controls*
 - *Face Detail Controls*
 
-After reloading `armature_shot_47.blend`, it will look like this:
+After reloading ``armature_shot_47.blend``, it will look like this:
 
 - *FK Controls*
 - *IK Controls*

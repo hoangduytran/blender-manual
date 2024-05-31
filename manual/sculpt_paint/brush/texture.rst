@@ -25,7 +25,7 @@ Texture
 
    It's recommended to load all needed images ahead of time as image textures into Blender.
    Then they can be easily selected by clicking on the texture and picking it from the data-block popup.
-   Textures can also be `appended/linked` from other Blender files.
+   Textures can also be appended/linked from other Blender files.
 
 .. _bpy.types.BrushTextureSlot.map_mode:
 .. _bpy.types.BrushTextureSlot.mask_map_mode:

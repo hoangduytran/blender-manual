@@ -24,7 +24,7 @@ NURBS splines will be transformed into poly splines in order to be trimmed.
 .. note::
 
    Since curve :doc:`normals </modeling/geometry_nodes/geometry/read/normal>` are calculated the final curve,
-   this node may change the resulting normals when the `Minimum` twist method is used, since the `Minimum`
+   this node may change the resulting normals when the **Minimum** twist method is used, since the **Minimum**
    method considers the entire length of the curve to decide the final normals. In some cases the
    :doc:`/modeling/geometry_nodes/attribute/capture_attribute` could be used to avoid this,
    by saving the original normals to be used later.

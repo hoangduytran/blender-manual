@@ -16,7 +16,7 @@ Constraints
 When moving, rotating or scaling, if you only want certain axes to be affected,
 you can restrict the transformation to those axes.
 
-By default the constraint keys are :kbd:`X`, `Y` and `Z`.
+By default the constraint keys are :kbd:`X`, :kbd:`Y` and :kbd:`Z`.
 This constraint can be restricted to plane if :kbd`Shift`
 is pressed or automatically detected if :kbd:`MMB` is pressed.
 
@@ -53,7 +53,7 @@ By default the hotkey is :kbd:`B`.
 .. note::
 
    If only Snap to Increment is enabled as :ref:`Snap Target <bpy.types.ToolSettings.snap_elements_base>`,
-   the targets `Vertex`, `Edge`, `Face` and `Edge Center` will be used instead.
+   the targets **Vertex**, **Edge**, **Face** and **Edge Center** will be used instead.
 
 
 Add Snap Point
