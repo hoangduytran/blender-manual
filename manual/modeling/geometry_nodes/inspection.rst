@@ -71,7 +71,7 @@ generated when the node is executed, so a node must be connected to the *Group O
 to have a warning.
 
 
-.. _bpy.types.SpaceNodeOverlay.show_timing:
+.. _modeling-geometry_nodes-inspection-timings:
 
 Node Timings Overlay
 ====================

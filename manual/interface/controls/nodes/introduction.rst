@@ -99,6 +99,14 @@ Annotations
 Previews
    Display each node's :ref:`interface-nodes-parts-preview` if the node's preview is also toggled.
 
+.. _bpy.types.SpaceNodeOverlay.show_timing:
+
+Timings
+   Display each node's last execution time.
+   This option is only available for compositing and geometry nodes.
+
+   In the context of geometry nodes, see :ref:`modeling-geometry_nodes-inspection-timings`.
+
 
 Toolbar
 -------
