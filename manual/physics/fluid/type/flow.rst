@@ -165,7 +165,7 @@ Flow Source
 
    Particle System :guilabel:`Fire or Smoke Only`:
       Create smoke or fire from a particle system on the flow object.
-      which can be select with a :ref:`ui-data-id`.
+      The particle system can be selected with a :ref:`ui-data-id`.
 
       Note that only *Emitter* type particle systems can add smoke.
       See :doc:`Particles </physics/particles/introduction>` for information on
