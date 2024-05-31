@@ -915,6 +915,7 @@ Shared Accessor
 
 Data - Mesh - Vertex Color
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Use Vertex Color
    :Material:
       Export vertex color when used in material node tree as Base Color multiplier.

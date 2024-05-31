@@ -74,7 +74,8 @@ Stroke Method :kbd:`Alt-E`
          The control points and handles can be dragged with :kbd:`RMB` (In right click select with :kbd:`LMB`).
          To make sure that the handles of a control point are symmetrical,
          drag them using :kbd:`Shift-RMB`.
-         A few transform operators are supported such as moving (:kbd:`G`), rotating (:kbd:`R`) and scaling (:kbd:`S`).
+         A few transform operators are supported such as moving
+         (:kbd:`G`), rotating (:kbd:`R`) and scaling (:kbd:`S`).
 
          .. _bpy.ops.paintcurve.select:
 

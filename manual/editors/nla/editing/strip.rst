@@ -310,7 +310,7 @@ Resets the strip's length to that of its underlying action,
 ensuring that it (only) plays from the action's first keyframe to its last.
 
 .. seealso::
-   
+
    The Sync Length Now button in the :ref:`Sidebar <nla-sidebar-action-clip>`,
    which does the same thing.
 
