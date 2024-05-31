@@ -18,7 +18,8 @@ Note that this is a very expensive shader, and may slow down renders
 by 20% even if there is a lot of other complexity in the scene.
 For that reason, we suggest to mainly use this for baking or
 still frame renders where render time is not as much of an issue.
-The Bevel modifier is a faster option when it works, but sometimes fails on complex or messy geometry.
+The :doc:`/modeling/modifiers/generate/bevel` is a faster option when it works,
+but sometimes fails on complex or messy geometry.
 
 .. note::
 
@@ -38,7 +39,8 @@ Inputs
 Radius
    Width of the bevel effect on edges.
 Normal
-   Normal to apply bevel on top of, to be combined with a Bump node for example.
+   Normal to apply bevel on top of, to be combined with a :doc:`/render/shader_nodes/vector/bump`
+   for example. When not connected, uses the surface normal.
 
 
 Properties
@@ -59,6 +61,10 @@ Normal
 
 Examples
 ========
+
+.. figure:: /images/render_shader-nodes_input_bevel_example_setup.jpg
+
+   A minimal node setup for working with the Bevel node.
 
 .. figure:: /images/render_shader-nodes_input_bevel_example.jpg
 
