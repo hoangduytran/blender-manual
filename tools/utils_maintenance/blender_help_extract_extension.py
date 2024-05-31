@@ -66,7 +66,7 @@ if not USE_TITLE_GROUPS:
 
 
 BASE_DIR = os.path.normpath(os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", ".."))
-HELP_RST = os.path.join(BASE_DIR, "manual", "extensions", "command_line_arguments.rst")
+HELP_RST = os.path.join(BASE_DIR, "manual", "advanced", "extensions", "command_line_arguments.rst")
 
 COMMAND_NAME = "blender --command extension"
 
