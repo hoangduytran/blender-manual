@@ -9,32 +9,44 @@ Corners of Vertex Node
    :align: right
    :alt: Corners of Vertex node.
 
-The *Corners of Vertex* node retrieves face corners attached to each vertex.
-The node first gathers a list of the corners of all faces connected to the vertex.
-That list is then sorted based on the values of the *Sort Weight* input.
-The *Total* output is the number of connected faces/corners, and the *Corner Index*
-output is one of those corners, chosen with the *Sort Index* input.
+Selects a neighboring face corner of a vertex and outputs its index.
+
+This node is a bit special because it operates in two different domains.
+First, it evaluates a *Weight* for each corner in the geometry.
+Then, for each item in the context domain, it will:
+
+- Pick a vertex from the geometry based on the *Vertex Index*.
+- Find the face corners adjacent to this vertex.
+- Sort these corners by their associated weight.
+- Pick a corner from the above sorted list based on the *Sort Index*,
+  where 0 means the corner with the lowest weight,
+  1 means the corner with the second-lowest weight and so on.
+- Output the geometry-wide index of this corner.
 
 
 Inputs
 ======
 
 Vertex Index
-   The index of the input vertex.
-
+   The index of the vertex for which to find the corners.
+   
    .. note::
-
-      By default this uses the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
-      from the field context, which makes it important that the node is evaluated on
-      the vertex domain.
+      
+      If this input is not connected, it uses the
+      :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
+      of the context item, which means it's important that the node is evaluated
+      in the Point domain.
 
 Weights
-   Values used to sort the corners connected to the vertex.
-   By default the corners are sorted by index, so the corners with the smallest indices come first.
+   The weights of the corners in the geometry. Unlike the other inputs which follow
+   the context domain, this one is always evaluated in the Face Corner domain.
+   
+   The corners are sorted by their associated weight in ascending order.
+   Corners with the same weight are sorted by their index.
 
 Sort Index
-   Which of the sorted corners to use for the *Corner Index* output. If the value is larger than
-   the total number of connected face corners, it will wrap around to the beginning.
+   The 0-based index of the corner to select from the vertex's sorted corners.
+   If this value is outside the range of valid indices, it wraps around.
 
 
 Properties
@@ -47,7 +59,14 @@ Outputs
 =======
 
 Corner Index
-   An corner connected to the face, chosen by the *Sort Index* input.
+   The geometry-wide index of the selected corner. You can pass this to the
+   :doc:`/modeling/geometry_nodes/geometry/sample/sample_index` (with the domain set to Face Corner)
+   to retrieve details about the corner.
 
 Total
-   The number of faces or face corners connected to the vertex.
+   The number of adjacent corners, which is also the number of faces.
+
+.. seealso::
+   
+   The page for the :doc:`/modeling/geometry_nodes/mesh/topology/edges_of_vertex` has an example
+   of how to work with the different domains.

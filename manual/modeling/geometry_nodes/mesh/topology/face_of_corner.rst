@@ -9,20 +9,21 @@ Face of Corner Node
    :align: right
    :alt: Face of Corner node.
 
-The *Face of Corner* node retrieves the face a face corner is part of.
+Retrieves the face that a face corner is part of.
 
 
 Inputs
 ======
 
 Corner Index
-   The index of the input face corner.
+   The geometry-wide index of the corner.
 
    .. note::
-
-      By default this uses the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
-      from the field context, which makes it important that the node is evaluated on
-      the face corner domain.
+      
+      If this input is not connected, it uses the
+      :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
+      of the context item, which means it's important that the node is evaluated
+      in the Face Corner domain.
 
 
 Properties
@@ -35,11 +36,8 @@ Outputs
 =======
 
 Face Index
-   The index of the face the corner is a part of.
+   The geometry-wide index of the face which the corner belongs to.
 
 Index in Face
-   The index of the corner, starting from the first corner in the face.
-   Each face is comprised of a list of face corners, this output is the distance
-   from the start of that list. If the corner is the first in the face, the value
-   will be zero. If it comes last, the value will be one less than the number of
-   corners in the face.
+   The face-local index of the corner. This is 0 for the first corner of the face,
+   1 for the next corner, and so on up to (number of corners - 1) for the last corner.

@@ -9,8 +9,7 @@ Vertex of Corner Node
    :align: right
    :alt: Vertex of Corner node.
 
-The *Vertex of Corner* node outputs the index of the vertex that a face corner is
-attached to.
+Outputs the index of the vertex that a face corner is attached to.
 
 
 Inputs
@@ -20,10 +19,11 @@ Corner Index
    The index of the face corner.
 
    .. note::
-
-      By default this uses the :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
-      from the field context, which makes it important that the node is evaluated on
-      the face corner domain.
+      
+      If this input is not connected, it uses the
+      :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
+      of the context item, which means it's important that the node is evaluated
+      in the Face Corner domain.
 
 
 Properties
