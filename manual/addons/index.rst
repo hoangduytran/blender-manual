@@ -26,4 +26,5 @@ Add-ons Category Listings
    3d_view/index.rst
    animation/index.rst
    import_export/index.rst
+   node/index.rst
    system/index.rst
