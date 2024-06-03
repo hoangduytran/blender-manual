@@ -1,5 +1,3 @@
-.. TODO2.8, Add: Angular Velocity: Axis changed, added options.
-
 ********
 Rotation
 ********
@@ -8,47 +6,35 @@ Rotation
 
    :Panel:     :menuselection:`Particle System --> Rotation`
 
-.. TODO2.8:
-   .. figure:: /images/physics_particles_emitter_rotation_panel.png
-
-      Particles rotation settings.
-
-These parameters specify how the individual particles are rotated during their travel.
-To visualize the rotation of a particle, display particles as *Axis*
-in the :doc:`/physics/particles/emitter/display` panel.
+These parameters specify how the individual particles are rotated at the start of,
+and during, their lifetime. You can visualize their orientation by setting *Display As*
+to *Axis* in the :doc:`/physics/particles/emitter/display` panel.
 
 Orientation Axis
-   Sets the initial rotation of the particle by aligning the X axis in the direction of:
+   Aligns the X axis of new particles to:
 
    None
       The global X axis.
    Normal
-      Orient to the emitter's surface normal, the objects Y axis points outwards.
+      The emitter's surface normal.
    Normal-Tangent
-      As with normal, orient the Y axis to the surface normal.
-      Also orient the X axis to the tangent for control over the objects rotation about the normal.
-      requires UV coordinates, the UV rotation effects the objects orientation, currently uses the active UV map.
-      This allow deformation without the objects rotating in relation to their surface.
-   Velocity
-      The particle's initial velocity.
+      The emitter's surface normal, additionally aligning the particle's Y axis to the positive V
+      direction in the emitter's active UV map. This makes it possible to deform the emitter
+      while keeping particle rotation consistent.
+   Velocity / Hair
+      The particle's initial velocity vector/hair growth direction.
    Global X, Y, Z
       One of the global axes.
    Object X, Y, Z
-      One of the emitter object axes.
-
-   Random
-      Randomizes rotation.
-
+      One of the emitter's local axes.
+Randomize
+   How much to randomize the particle's initial rotation (along all axes).
 Phase
-   Initial rotation phase.
+   Initial rotation around the particle's X axis, going from -1 (-180°) to 1 (180°).
 Randomize Phase
-   Adds a random variation to the *Phase*.
+   Maximum random rotation to add to the *Phase*, going from 0 (0°) to 2 (360°).
 Dynamic
-   If Dynamic is enabled, only initializes particles to the chosen rotation and angular velocity and
-   let the physics simulation handle the rest.
-   Particles then change their angular velocity if they collide with other objects
-   (like in the real world due to friction between the colliding surfaces).
-   Otherwise the angular velocity is predetermined at all times (i.e. set rotation to dynamic/constant).
+   Whether the particles' rotation can change over time.
 
 
 Angular Velocity
@@ -58,21 +44,42 @@ Angular Velocity
 
    :Panel:     :menuselection:`Particle System --> Rotation --> Angular Velocity`
 
+Lets you configure if and how particles should spin over time.
+*Dynamic* needs to be enabled for this to work.
+
 Axis
-   The selector specifies the axis of angular velocity to be.
+   The axis to spin around. If this is set to *Velocity*, *Horizontal*, or *Vertical*,
+   particles will additionally spin to keep pointing in their direction of movement,
+   even if *Amount* is zero.
 
    None
-      A zero vector (no rotation).
-   Spin
-      The particles velocity vector.
+      Spinning is disabled.
+   Velocity
+      Spin around the particle's velocity vector.
+   Horizontal
+      Spin around the axis that's horizontal (lying in the global XY plane)
+      and perpendicular to the particle's velocity. Particles moving along the
+      global Z axis won't spin because no unique rotation axis exists in this case.
+   Vertical
+      Spin around the axis that's perpendicular to both the particle's velocity
+      and the above *Horizontal* axis. Particles moving along the global Z axis
+      won't spin.
+   Global X, Y, Z
+      Spin around the chosen global axis.
    Random
-      A random vector.
+      Spin around a random axis.
 
-   .. hint:: Curve Guide
+   .. hint::
 
-      If you use a Curve Guide and want the particles to follow the curve,
-      you have to set Angular Velocity to Spin and leave the rotation on Constant
-      (i.e. do not turn on Dynamic). Curve Follow does not work for particles.
+      If you use a :doc:`/physics/forces/force_fields/types/curve_guide` and want the
+      particles to always point in the direction of the curve, you should set the
+      *Orientation Axis* to *Velocity / Hair*, enable *Dynamic*, and set the
+      *Angular Velocity Axis* to *Velocity*.
+
+      (For a regular object, you'd normally use the *Follow Curve* option of a
+      :doc:`/animation/constraints/relationship/follow_path` or the legacy
+      :ref:`Follow <bpy.types.Curve.use_path_follow>` option of the curve itself,
+      but these don't work for particles.)
 
 Amount
-   The magnitude of angular velocity.
+   How fast to spin around the *Axis*.

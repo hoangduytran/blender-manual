@@ -22,8 +22,11 @@ You can also use *Curve Guide* to shape certain hair strands.
 Since you can animate curves as a soft body or any other usual way,
 you may build very complex animations while keeping great control and keeping the simulation time to a minimum.
 
-The option *Curve Follow* does not work for particles. Instead you have to set *Angular Velocity*
-(*Particle system* tab) to *Spin* and leave the rotation constant (i.e. do not turn on *Dynamic*).
+To make particles point in the direction of the curve, you need to set their *Orientation Axis*
+to *Velocity / Hair*, enable *Dynamic*, and set their *Angular Velocity Axis* to *Velocity*,
+all in the the :doc:`/physics/particles/emitter/rotation` settings of the particle system.
+The :doc:`/animation/constraints/relationship/follow_path` and the curve's legacy
+:ref:`Follow <bpy.types.Curve.use_path_follow>` option won't work for this.
 
 A *Curve Guide* force affects all particles on the same layer, independently from their distance to the curve.
 If you have several guides in a layer,
