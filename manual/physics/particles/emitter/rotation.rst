@@ -49,8 +49,8 @@ Lets you configure if and how particles should spin over time.
 
 Axis
    The axis to spin around. If this is set to *Velocity*, *Horizontal*, or *Vertical*,
-   particles will additionally spin to keep pointing in their direction of movement,
-   even if *Amount* is zero.
+   particles will additionally spin to keep the same orientation relative to their
+   direction of movement, even if *Amount* is zero.
 
    None
       Spinning is disabled.
