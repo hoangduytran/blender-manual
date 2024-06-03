@@ -29,9 +29,9 @@ Inputs
 
 Vertex Index
    The index of the vertex for which to find the corners.
-   
+
    .. note::
-      
+
       If this input is not connected, it uses the
       :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
       of the context item, which means it's important that the node is evaluated
@@ -40,7 +40,7 @@ Vertex Index
 Weights
    The weights of the corners in the geometry. Unlike the other inputs which follow
    the context domain, this one is always evaluated in the Face Corner domain.
-   
+
    The corners are sorted by their associated weight in ascending order.
    Corners with the same weight are sorted by their index.
 
@@ -68,6 +68,6 @@ Total
    The number of adjacent corners, which is also the number of faces.
 
 .. seealso::
-   
+
    The page for the :doc:`/modeling/geometry_nodes/mesh/topology/edges_of_vertex` has an example
    of how to work with the different domains.

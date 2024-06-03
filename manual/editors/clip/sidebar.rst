@@ -52,7 +52,8 @@ Build Proxy/Timecode
    :Record Run:
       Seek based on timestamps read from movie stream, giving the best match between scene and movie times.
    :Record Run No Gaps:
-      Effectively convert movie to an image sequence, ignoring incomplete or dropped frames, and changes in frame rate.
+      Effectively convert movie to an image sequence,
+      ignoring incomplete or dropped frames, and changes in frame rate.
 
    .. note::
 

@@ -4,7 +4,6 @@ Universal Scene Description
 ***************************
 
 
-
 Importing USD Files
 ===================
 

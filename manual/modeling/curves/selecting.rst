@@ -70,7 +70,6 @@ Invert
 Selects all the geometry that are not selected, and deselect currently selected components.
 
 
-
 Box Select
 ==========
 

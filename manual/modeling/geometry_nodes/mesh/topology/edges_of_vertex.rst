@@ -28,9 +28,9 @@ Inputs
 
 Vertex Index
    The index of the vertex for which to find the edges.
-   
+
    .. note::
-      
+
       If this input is not connected, it uses the
       :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
       of the context item, which means it's important that the node is evaluated
@@ -39,7 +39,7 @@ Vertex Index
 Weights
    The weights of the edges in the geometry. Unlike the other inputs which follow
    the context domain, this one is always evaluated in the Edge domain.
-   
+
    The edges are sorted by their associated weight in ascending order.
    Edges with the same weight are sorted by their index.
 
@@ -99,9 +99,9 @@ With the rotations of the cones calculated, we use the
 :doc:`/modeling/geometry_nodes/instances/instance_on_points` to create them.
 
 .. figure:: /images/modeling_geometry-nodes_mesh_topology_edges-of-vertex_example-setup.png
-   
+
    Example node setup. (Rightclick and choose "Open image in new tab" to see a larger version.)
 
 .. figure:: /images/modeling_geometry-nodes_mesh_topology_edges-of-vertex_example-result.png
-   
+
    The resulting geometry.

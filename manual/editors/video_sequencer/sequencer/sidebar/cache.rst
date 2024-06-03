@@ -9,7 +9,8 @@ Cache capacity can be set in the :doc:`System tab </editors/preferences/system>`
 
 .. seealso::
 
-   Which frames are cached can be visualized by enabling :ref:`Show Cache <bpy.types.SequencerCacheOverlay.show_cache>`.
+   Which frames are cached can be visualized by enabling
+   :ref:`Show Cache <bpy.types.SequencerCacheOverlay.show_cache>`.
 
 
 Cache Settings

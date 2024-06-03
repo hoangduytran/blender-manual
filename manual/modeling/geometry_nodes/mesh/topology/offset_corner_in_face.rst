@@ -23,7 +23,7 @@ Corner Index
    The index of the input face corner.
 
    .. note::
-      
+
       If this input is not connected, it uses the
       :doc:`index </modeling/geometry_nodes/geometry/read/input_index>`
       of the context item, which means it's important that the node is evaluated
