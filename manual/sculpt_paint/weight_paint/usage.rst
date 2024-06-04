@@ -8,58 +8,39 @@ Using Vertex Groups
 Vertex Groups for Bones
 =======================
 
-This is one of the main uses of weight painting. When a bone moves, vertices
-around the joint should move as well, but just a little, to mimic the stretching
-of the skin around the joint. Use a "light" weight (10 - 40%) paint on
-the vertices around the joint so that they move a little when the bone rotates.
-While there are ways to automatically assign weights to an armature
-(see the :doc:`skinning section </animation/armatures/skinning/index>`),
-you can do this manually. To do this from scratch, refer to the process below.
-To modify automatically assigned weights, jump into the middle of the process where noted:
+This is one of the main uses of weight painting. While you can have Blender
+generate the weights automatically (see the
+:doc:`skinning section </animation/armatures/skinning/index>`),
+you may want to tweak them or even create them from scratch,
+especially around joints.
 
-#. Create an armature.
-#. Create a mesh that will be deformed when the armature's bone(s) move.
-#. With the mesh selected, create an *Armature* modifier for your mesh
-   (located in the Properties, *Modifiers* tab).
-   Enter the name of the armature.
+The process is as follows:
 
-Pick up here for modifying automatically assigned weights.
-
-#. Select the armature in 3D Viewport, and bring the armature to *Pose Mode*
-   with :kbd:`Ctrl-Tab`, or the 3D Viewport header mode selector.
-#. Select a desired bone in the armature.
-#. Select your mesh with :kbd:`LMB` and change immediately to *Weight Paint Mode*.
-   The mesh will be colored according to the weight (degree)
-   that the selected bone movement affects the mesh. Initially, it will be all blue (no effect).
-#. Weight paint to your heart's content. The mesh around the bone itself should
-   be red (generally) and fade out through the rainbow to blue for vertices
-   farther away from the bone.
-
-To select a different bone of the armature use :kbd:`Ctrl-LMB`,
-this action will activate the corresponding vertex group and display related weights.
+#. Select the armature and bring it into *Pose Mode* by pressing :kbd:`Ctrl-Tab`.
+#. Make sure that :menuselection:`Edit --> Lock Object Modes` is unchecked
+   in the topbar.
+#. Select the mesh and bring it into *Weight Paint Mode*.
+#. Make sure that *Bone Selection* is checked in the 3D Viewport's header.
+#. Select a bone using :kbd:`Ctrl-Shift-LMB`. This will activate the bone's
+   vertex group and display its current weights on the mesh.
+#. Paint weights for the bone using :kbd:`LMB`.
 
 .. note::
 
-   You can only select one bone at a time in this mode (so :kbd:`Shift-LMB` clicking does not work).
+   You can only select one bone at a time in this mode.
 
 .. tip::
 
-   If the mesh skins the bones, you will not be able to see the bones because
-   the mesh is painted. If so, enable :ref:`In Front <bpy.types.Object.show>`.
+   The bones are likely embedded inside the mesh, making them invisible and
+   unselectable. To get around this, you can enable :ref:`In Front <bpy.types.Object.show>`
+   for the armature.
 
-If you paint on the mesh, a vertex group is created for the bone.
-If you paint on vertices outside the group, the painted vertices are
-automatically added to the vertex group.
+If a bone doesn't have a vertex group yet when you start painting,
+Blender will create one automatically.
 
-If you have a symmetrical mesh and a symmetrical armature you can use
-:ref:`Vertex Group X <bpy.types.Mesh.use_mirror_vertex_group_x>`.
-Then the mirrored groups with the mirrored weights are automatically created.
-
-.. tip:: Selecting Deform Groups
-
-   When you are doing weight painting for deform bones (with an armature),
-   you can select a deform group by selecting the corresponding bone.
-   However, this vertex group selection mode is disabled when Selection Masking is active!
+If you have a symmetrical mesh and a symmetrical armature, you can use
+:ref:`Mirror Vertex Groups <bpy.types.Mesh.use_mirror_vertex_groups>`
+to automatically create vertex groups and weights for the other side.
 
 
 Vertex Groups for Particles
@@ -70,11 +51,6 @@ Vertex Groups for Particles
 
    Weight painted particle emission.
 
-In example faces or vertices with zero weight generate no particles.
-A weight of 0.1 will result in 10% of the amounts of particles.
-This option "conserves" the total indicated number of particles, adjusting the distributions
-so that the proper weights are achieved while using the actual number of particles called for.
-Use this to make portions of your mesh hairier than others by weight painting a vertex group,
-and then calling out the name of the vertex group
-in the :doc:`Vertex Groups </physics/particles/emitter/vertex_groups>` panel
-:menuselection:`Properties --> Particles tab`.
+By selecting vertex groups in the :doc:`Vertex Groups </physics/particles/emitter/vertex_groups>`
+panel of a :doc:`particle system </physics/particles/introduction>`'s properties,
+you can have different particle densities, hair lengths etc. across different areas of the mesh.
