@@ -14,6 +14,15 @@ It acts much like a :doc:`Transparent BSDF </render/shader_nodes/shader/transpar
 render passes are passed through,
 and it is affected by light path max transparent bounces.
 
+.. note::
+
+   - The Ray Portal BSDF only allows rays to pass through it in one direction. Add a
+     second portal at the target location to make rays go in the other direction as well.
+
+   - Light sampling does not work efficiently through portals. This can lead to increased
+     noise from lights on the other side of portals. Particularly small lights may be very
+     noisy, or not pass through at all.
+
 
 Inputs
 ======
