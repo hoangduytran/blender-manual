@@ -15,7 +15,7 @@ The *Extensions* section lets you manage the extensions preferences.
 
 .. seealso::
 
-   To learn about extensions and how to create them refer to the :ref:`Extensions <extensions-index>` page.
+   To learn about extensions and how to create them, refer to the :ref:`Extensions <extensions-index>` page.
 
 Install
 =======
@@ -23,44 +23,40 @@ Install
 There are different ways to install an extension:
 
 - **Install from the Website**: Drag the installation URL into Blender.
-- **Install from Blender**: From Blender search for the extension name and click on Install.
-- **Install from Disk**: For packages saved locally (advanced option, from the Settings menu).
+- **Install from Blender**: Search for the extension name and click on Install.
+- **Install from Disk**: Use the dropdown menu in the top right,
+  or drag-and-drop an extension ``.zip`` package into Blender.
 
-Any installed extension can be removed. This is a permanent change though.
-To stop an extension temporarily it is better to Disable it instead.
-
-.. note::
-
-   You can *Install from Disk* by drag and dropping an extension ``.zip`` package into Blender.
+Any installed extension can be removed. This is a permanent change, though.
+To stop an extension temporarily, it is better to Disable it instead.
 
 
 Install Legacy Add-on
 ---------------------
 
-To install legacy addons, use the *Install...* button and
-use the File Browser to select the ``.zip`` or ``.py`` add-on file.
+To install legacy addons, click the *Install from Disk* menu item and select the addon's
+``.py`` file (if it has only one such file) or its ``.zip`` file.
 
-Now the add-on will be installed, however not automatically enabled.
-The search field will be set to the add-on's name (to avoid having to look for it),
-Enable the add-on by checking the enable checkbox.
+The add-on will not be automatically enabled after installation; click the checkbox to do that.
 
 Refresh
    Scans the :doc:`Add-on Directory </advanced/blender_directory_layout>` for new add-ons.
 
-.. tip:: User-Defined Add-on Path
+.. tip::
 
-   You can also create a personal directory containing new add-ons and configure your files path in
-   the *File Paths* section of the *Preferences*. To create a personal script directory:
+   While this screen doesn't allow installing a folder-based addon with loose ``.py`` files,
+   you can still do so by adding it as a :ref:`Script Directory <bpy.types.ScriptDirectory>`:
 
    #. Create an empty directory in a location of your choice (e.g. ``my_scripts``).
    #. Add a subdirectory under ``my_scripts`` called ``addons``
       (it *must* have this name for Blender to recognize it).
+   #. Place your addon folder inside this ``addons`` folder.
    #. Open the *File Paths* section of the *Preferences*.
-   #. Set the *Scripts* file path to point to your script directory (e.g. ``my_scripts``).
+   #. Add a *Script Directories* entry pointing to your script folder (e.g. ``my_scripts``).
    #. Save the preferences and restart Blender for it to recognize the new add-on location.
 
-   Now when you install add-ons you can select the *Target Path* when installing 3rd party scripts.
-   Blender will copy newly installed add-ons under the directory selected in your Preferences.
+   The addons in this folder will automatically become available; all you need to
+   do is enable them.
 
 
 Update
