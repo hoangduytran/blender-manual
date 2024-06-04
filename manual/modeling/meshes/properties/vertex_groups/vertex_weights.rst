@@ -58,7 +58,7 @@ You can click the name of a vertex group to make it the active one.
 .. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-name.png
    :width: 260px
 
-   Change Active Group.
+   Changing the active vertex group.
 
 Display Weights in Edit Mode
 ----------------------------
@@ -87,7 +87,7 @@ one or by dragging left and right with :kbd:`LMB`. You can also click the arrows
 .. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-weight.png
    :width: 260px
 
-   Change Weight value.
+   Changing a weight value.
 
 
 .. _bpy.ops.object.vertex_weight_paste:
@@ -102,7 +102,7 @@ and in fact doesn't use the clipboard at all.
 .. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-paste.png
    :width: 260px
 
-   Paste weights.
+   Copying a weight.
 
 
 .. _bpy.ops.object.vertex_weight_delete:
@@ -116,7 +116,7 @@ making the row disappear from the list.
 .. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-delete.png
    :width: 260px
 
-   Delete weights.
+   Deleting a weight.
 
 
 Operators
@@ -125,7 +125,7 @@ Operators
 .. figure:: /images/modeling_meshes_properties_vertex-groups_vertex-weights_editor-functions.png
    :width: 260px
 
-   Vertex Weights operators.
+   Vertex weight operators.
 
 Normalize
    Recalculates the weights of the active vertex so that they add up to 1.0 while
