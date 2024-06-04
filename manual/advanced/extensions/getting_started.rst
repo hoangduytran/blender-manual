@@ -73,14 +73,6 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # Supported types: "add-on", "theme"
    type = "add-on"
 
-   # Optional: add-ons can list which resources they will require:
-   # * "files" (for access of any filesystem operations)
-   # * "network" (for internet access)
-   # * "clipboard" (to read and/or write the system clipboard)
-   # * "camera" (to capture photos and videos)
-   # * "microphone" (to capture audio)
-   # permissions = ["files", "network"]
-
    # Optional link to documentation, support, source files, etc
    # website = "https://extensions.blender.org/add-ons/my-example-package/"
 
@@ -114,6 +106,25 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    #   "./wheels/jsmin-3.0.1-py3-none-any.whl",
    # ]
 
+   ## Optional: add-ons can list which resources they will require:
+   ## * files (for access of any filesystem operations)
+   ## * network (for internet access)
+   ## * clipboard (to read and/or write the system clipboard)
+   ## * camera (to capture photos and videos)
+   ## * microphone (to capture audio)
+   ##
+   ## If using network, remember to also check `bpy.app.online_access`
+   ## https://docs.blender.org/manual/en/dev/advanced/extensions/addons.html#internet-access
+   ##
+   ## For each permission it is important to also specify the reason why it is required.
+   ## Keep this a single short sentence without a period (.) at the end.
+   ## For longer explanations use the documentation or detail page.
+   #
+   # [permissions]
+   # network = "Need to sync motion-capture data to server"
+   # file = "Import/export FBX from/to disk"
+   # clipboard = "Copy and paste bone transforms"
+
    # Optional: build setting.
    # https://docs.blender.org/manual/en/dev/extensions/command_line_arguments.html#command-line-args-extension-build
    # [build]
@@ -139,15 +150,16 @@ Optional values:
    :blender_version_max: Maximum version of Blender that can run this.
    :website: Website for the extension.
    :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
-   :permissions:
-      Add-ons can list which resources they require. The available options are
-      ["files", "network", "clipboard", "camera", "microphone"].
    :tags: List of tags. See the :doc:`list of available tags <./tags>`.
    :platforms:
       List of supported platforms. If omitted, the extension will be available in all operating systems.
       The available options are
       ["windows-x64", "windows-arm64", "macos-x64", "macos-arm64", "linux-x64"]
    :wheels: List of relative file-paths :doc:`Python Wheels <./python_wheels>`.
+   :permissions:
+      Add-ons can list which resources they require. The available options are
+      *files*, *network*, *clipboard*, *camera*, *microphone*.
+      Each permission should be followed by an explanation (short single-sentence with no end pontuation (.)).
 
 Optional values for "build":
 
