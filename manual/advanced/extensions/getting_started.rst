@@ -77,7 +77,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # website = "https://extensions.blender.org/add-ons/my-example-package/"
 
    # Optional list defined by Blender and server, see:
-   # https://docs.blender.org/manual/en/dev/extensions/tags.html
+   # https://docs.blender.org/manual/en/dev/advanced/extensions/tags.html
    tags = ["Animation", "Sequencer"]
 
    blender_version_min = "4.2.0"
@@ -85,7 +85,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # blender_version_max = "5.1.0"
 
    # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
-   # https://docs.blender.org/manual/en/dev/extensions/licenses.html
+   # https://docs.blender.org/manual/en/dev/advanced/extensions/licenses.html
    license = [
      "SPDX:GPL-2.0-or-later",
    ]
@@ -100,7 +100,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # Other supported platforms: "windows-arm64", "macos-x64"
 
    # Optional: bundle 3rd party Python modules.
-   # https://docs.blender.org/manual/en/dev/extensions/python_wheels.html
+   # https://docs.blender.org/manual/en/dev/advanced/extensions/python_wheels.html
    # wheels = [
    #   "./wheels/hexdump-3.3-py3-none-any.whl",
    #   "./wheels/jsmin-3.0.1-py3-none-any.whl",
@@ -126,7 +126,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # clipboard = "Copy and paste bone transforms"
 
    # Optional: build setting.
-   # https://docs.blender.org/manual/en/dev/extensions/command_line_arguments.html#command-line-args-extension-build
+   # https://docs.blender.org/manual/en/dev/advanced/extensions/command_line_arguments.html#command-line-args-extension-build
    # [build]
    # paths_exclude_pattern = [
    #   "/.git/",
