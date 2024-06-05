@@ -37,7 +37,7 @@ there are some important differences:
 As described above, the Screw operator automatically determines the height offset and radial
 offset to apply after each revolution. It does this by looking for the endpoints of an open profile --
 a series of connected edges that don't form a closed loop. The geometry is extruded so that the
-profile's top vertex in one revolution will coincide with the bottom vertex of the next.
+profile's top vertex in one revolution will coincide with the bottom vertex in the next.
 
 The most common use case is extruding such an open profile. You're not limited to this, however.
 As long as there is one open profile in the selection -- even just a single loose edge --
@@ -114,7 +114,7 @@ Axis X, Y, Z
 Notice that the *Axis* only determines how the geometry spins "horizontally" around
 the centerpoint. It doesn't determine how the geometry moves "vertically."
 Instead, the geometry always moves by a distance and direction given by the endpoints
-of the open profile, and away from the object's local Z axis.
+of the open profile, towards the object's negative local Z axis.
 
 
 Examples
