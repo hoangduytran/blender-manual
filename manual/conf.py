@@ -171,7 +171,7 @@ html_logo = "../build_files/theme/blender-logo.svg"
 # If given, this must be the name of an image file
 # (path relative to the configuration directory) that is the favicon of
 # the docs, or URL that points an image file for the favicon.
-html_favicon = "../build_files/theme/favicon.ico"
+html_favicon = "../build_files/theme/favicon.png"
 
 if html_theme == "furo":
     html_css_files = ["css/theme_overrides.css",
