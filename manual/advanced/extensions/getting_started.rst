@@ -122,7 +122,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    #
    # [permissions]
    # network = "Need to sync motion-capture data to server"
-   # file = "Import/export FBX from/to disk"
+   # files = "Import/export FBX from/to disk"
    # clipboard = "Copy and paste bone transforms"
 
    # Optional: build setting.
