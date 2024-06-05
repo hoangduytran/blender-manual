@@ -29,16 +29,13 @@ Angle
    Degrees for a single helix revolution.
 
 Screw
-   Offsets the revolution along its axis.
+   The height of one helix iteration.
 
 Iterations
    Number of revolutions.
 
 Axis
    The axis along which the helix will be built.
-
-   Screw
-      The height of one helix iteration.
 
 Axis Object
    The name of an object to define the axis direction.
