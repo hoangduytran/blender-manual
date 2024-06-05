@@ -13,6 +13,7 @@ __pycache__/
 # Varius extensions
 *.log
 *.tmp
+*.DS_Store
 
 # Sphinx documentation
 build/
