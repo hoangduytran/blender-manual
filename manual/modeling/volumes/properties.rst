@@ -8,8 +8,11 @@ Properties
 Grids
 =====
 
-OpenVDB can contain multiple grids which represent different "layers" of volume.
-The :ref:`ui-list-view` shows all the grids in the OpenVDB-file along with its name and data type.
+The :ref:`ui-list-view` shows the grids in the OpenVDB-file, listing their name and data type.
+A "grid" is a set of volumetric data, which typically stores the density of each voxel
+but can also contain temperatures, velocities and so on.
+
+Click a grid to make the volume object display it.
 
 
 OpenVDB File
@@ -18,41 +21,44 @@ OpenVDB File
 .. _bpy.types.Volume.filepath:
 
 File Path
-   Volume sample file used by the volume data-block.
+   The VDB file to use.
 
 .. _bpy.types.Volume.is_sequence:
 
 Sequence
-   Loads the OpenVDB-file as an animation loading separate files for individual frames.
+   Loads further VDB files, one for each frame in an animation. Much like with image sequences,
+   all the files should have a numerical suffix in their name; so if you selected smoke-000.vdb
+   in the *File Path*, there should be a smoke-001.vdb, a smoke-002.vdb and so on.
 
    .. _bpy.types.Volume.frame_duration:
 
    Frames
-      Number of frames of the sequence to use.
+      How many frames of the sequence to use.
 
    .. _bpy.types.Volume.frame_start:
 
    Start
-      Global starting frame of the sequence, assuming the first frame has a 1 in the file name.
+      Scene frame at which the sequence should start.
 
    .. _bpy.types.Volume.frame_offset:
 
    Offset
-      Offset the number of the frame to use in the animation.
+      How many frames of the sequence to skip at the beginning.
 
    .. _bpy.types.Volume.sequence_mode:
 
    Mode
-      Animation setting of the volume sequence before the start frame and after the end frame.
+      How the volume should behave before the sequence's first frame (*Start*) and after its
+      last (*Start* + *Frames*).
 
       :Clip:
-         Hides frames outside the specified frame range.
+         Show nothing.
       :Extend:
-         Repeats the start frame before, and the end frame after the frame range.
+         Keep showing the first/last frame of the sequence.
       :Repeat:
-         Cycles the frames in the sequence; restarting at frame one.
+         Play the sequence again (and again, and again...).
       :Ping-Pong:
-         Repeats the frames, reversing the playback direction on every other cycle.
+         Play the sequence forwards, then backwards, then forwards again and so on.
 
 
 .. _bpy.types.VolumeDisplay:
@@ -65,14 +71,14 @@ Viewport Display
 Wireframe
    Method used to represent volumes in :ref:`wireframe <3dview-shading-rendered>` shading mode.
    For heavy volume data sets, it can be useful to set the object to always display as wireframe.
-   This way the 3D Viewport remains responsive but the volume still appears in the final render.
+   This way, the 3D Viewport remains responsive but the volume still appears in the final render.
 
    :None:
       The volume is not displayed in wireframe mode.
    :Bounds:
-      Displays the volume as :term:`Bounding Box` for the entire volume grid.
+      Displays the volume as a :term:`Bounding Box` for the entire grid.
    :Boxes:
-      Displays a bounding boxes for nodes in the volume tree.
+      Displays bounding boxes for nodes in the volume tree.
    :Points:
       Displays points for nodes in the volume tree.
 
@@ -135,7 +141,7 @@ Render
 .. _bpy.types.VolumeRender.space:
 
 Space
-   Specifies how volume density and step size are computed relative either to the object or world.
+   Specifies how volume density and step size are computed.
 
    :Object:
       Keeps volume *Density* and *Detail* the same regardless of object scale.
@@ -156,8 +162,27 @@ Clipping :guilabel:`Cycles Only`
 .. _bpy.types.VolumeRender.precision:
 
 Precision :guilabel:`Cycles Only`
-   Specifies volume data precision, lower values reduce memory consumption at the cost of detail.
+   Specifies volume data precision. Lower values reduce memory consumption at the cost of detail.
 
    :Full: Full float (Use 32 bit for all data).
    :Half: Half float (Use 16 bit for all data).
-   :Variable: Automatically vary the precision and use less precision for less noticeable areas.
+   :Variable: Automatically use less precision for less noticeable areas.
+
+.. _bpy.types.VolumeRender.velocity_grid:
+
+Velocity Grid :guilabel:`Cycles Only`
+   The name of the grid that contains voxel velocities, for calculating motion blur.
+   This can be the name of a single grid containing 3D vectors,
+   or a prefix of three separate grids containing scalar values.
+   In the latter case, the X grid should have a name suffix of ``x``, ``.x`` or ``_x``,
+   with similar conventions for the Y and Z grids.
+
+.. _bpy.types.VolumeRender.velocity_unit:
+
+Velocity Unit :guilabel:`Cycles Only`
+   Whether the velocity grid(s) specify distances per frame or per second.
+
+.. _bpy.types.VolumeRender.velocity_scale:
+
+Velocity Scale :guilabel:`Cycles Only`
+   A custom multiplier to apply to the velocities in the VDB.
