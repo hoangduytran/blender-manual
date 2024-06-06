@@ -30,11 +30,8 @@ manually by clicking *Make Default* on the System tab of the
 :doc:`Preferences </editors/preferences/system>`. Alternatively, you can run ``blender -r``
 from the :doc:`Command Line </advanced/command_line/arguments>`.
 
-.. tip:: How to Make a Portable Installation
-
-   To keep all configuration files and installed add-ons in the executable folder,
-   create a folder named ``config`` in the :ref:`LOCAL directory <blender-directory-layout>`
-   of the unzipped folder.
+To make the installation and configuration fully self-contained, set up a
+:ref:`Portable Installation <portable-installation>`.
 
 
 Install from Microsoft Store

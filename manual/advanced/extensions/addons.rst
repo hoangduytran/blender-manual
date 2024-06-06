@@ -72,6 +72,7 @@ Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
 
    This has the advantage of avoiding version conflicts although it requires some work to setup each package.
 
+.. This section is reference for legacy add-on installation.
 .. _bpy.ops.preferences.addon_install:
 
 Legacy vs Extension Add-ons

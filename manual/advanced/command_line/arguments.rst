@@ -484,18 +484,19 @@ Arguments are executed in the order they are given. eg:
 Environment Variables
 =====================
 
-:BLENDER_USER_RESOURCES:  Top level directory for user files.
-                         (other ``BLENDER_USER_*`` variables override when set).
+:BLENDER_USER_RESOURCES:  Replace default directory of all user files.
+                          Other ``BLENDER_USER_*`` variables override when set.
 :BLENDER_USER_CONFIG:     Directory for user configuration files.
 :BLENDER_USER_SCRIPTS:    Directory for user scripts.
 :BLENDER_USER_EXTENSIONS: Directory for user extensions.
 :BLENDER_USER_DATAFILES:  Directory for user data files (icons, translations, ..).
 
-:BLENDER_SYSTEM_RESOURCES:  Top level directory for system files.
-                           (other ``BLENDER_SYSTEM_*`` variables override when set).
-:BLENDER_SYSTEM_SCRIPTS:    Directory for system wide scripts.
-:BLENDER_SYSTEM_DATAFILES:  Directory for system wide data files.
-:BLENDER_SYSTEM_PYTHON:     Directory for system Python libraries.
+:BLENDER_SYSTEM_RESOURCES:  Replace default directory of all bundled resource files.
+                            Other ``BLENDER_SYSTEM_*`` variables override or add when set.
+:BLENDER_SYSTEM_SCRIPTS:    Directory to add more bundled scripts.
+:BLENDER_SYSTEM_DATAFILES:  Directory to replace bundled datafiles.
+:BLENDER_SYSTEM_PYTHON:     Directory to replace bundled Python libraries.
+
 :OCIO:                      Path to override the OpenColorIO configuration file.
 :TEMP:                      Store temporary files here (MS-Windows).
 :TMPDIR:                    Store temporary files here (UNIX Systems).

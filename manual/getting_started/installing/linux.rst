@@ -23,6 +23,9 @@ You may also associate blend-files with Blender so that when selected from the f
 they will automatically open in Blender.
 These settings are typically found in conjunction with the Window Manager settings. (Gnome or KDE.)
 
+To make the installation and configuration fully self-contained, set up a
+:ref:`Portable Installation <portable-installation>`.
+
 
 Install from Package Manager
 ============================

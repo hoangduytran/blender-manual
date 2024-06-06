@@ -45,7 +45,7 @@ Key Features
 - It has a high-quality 3D architecture, enabling fast and efficient creation workflow.
 - It boasts active community support. See `blender.org/community <https://www.blender.org/community>`__
   for an extensive list of sites.
-- It has a small executable, which is optionally portable.
+- It can be installed into and run from any directory without modifying the system.
 
 You can download the latest version of Blender `here <https://www.blender.org/download/>`__.
 

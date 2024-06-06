@@ -18,12 +18,8 @@ Then drag ``Blender.app`` into the Applications folder.
 Depending on the Security and Privacy preferences of your Mac,
 macOS will request your approval before opening Blender for the first time.
 
-.. tip:: How to Make a Portable Installation
-
-   To keep all configuration files and installed add-ons inside the Blender application bundle,
-   create a folder named ``config`` in the :ref:`LOCAL directory <blender-directory-layout>`.
-
-   .. parsed-literal:: ./Blender.app/Contents/Resources/|BLENDER_VERSION|/config/
+To make the installation and configuration fully self-contained, set up a
+:ref:`Portable Installation <portable-installation>`.
 
 
 Updating on macOS
