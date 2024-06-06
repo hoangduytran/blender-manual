@@ -114,7 +114,7 @@ Axis X, Y, Z
 Notice that the *Axis* only determines how the geometry spins "horizontally" around
 the centerpoint. It doesn't determine how the geometry moves "vertically."
 Instead, the geometry always moves by a distance and direction given by the endpoints
-of the open profile, towards the object's negative local Z axis.
+of the open profile, and goes downward in the object's local space.
 
 
 Examples

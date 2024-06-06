@@ -126,7 +126,7 @@ Kink Type
       Radius, Resolution
          Define the overall size.
       Shape
-         Makes a the spiral grow in- or outward.
+         Makes the spiral grow in- or outward.
 
    .. note:: Alignment Limitations
 
