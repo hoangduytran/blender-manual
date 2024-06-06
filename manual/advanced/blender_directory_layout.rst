@@ -33,13 +33,7 @@ macOS
 Windows
 -------
 
-Download from blender.org:
-
 .. parsed-literal:: %USERPROFILE%\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
-
-Microsoft Store installation:
-
-.. parsed-literal:: %ProgramFiles%\\WindowsApps\\BlenderFoundation.Blender<HASH>\\Blender\\\ |BLENDER_VERSION|\\
 
 .. _portable-installation:
 
@@ -78,7 +72,7 @@ assets and more.
 Linux
 -----
 
-Download from blender.org:
+Archive downloaded from blender.org:
 
 .. parsed-literal:: ./|BLENDER_VERSION|/
 
@@ -94,11 +88,11 @@ macOS
 Windows
 -------
 
-Zip file download from blender.org:
+Zip file downloaded from blender.org:
 
 .. parsed-literal:: ./|BLENDER_VERSION|/
 
-Installer download from blender.org:
+Installer downloaded from blender.org:
 
 .. parsed-literal:: %ProgramFiles%\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
 
