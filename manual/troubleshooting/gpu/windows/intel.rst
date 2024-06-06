@@ -45,7 +45,8 @@ are:
 
 Drivers that are known to fail are:
 
-- 20.19.15.5171
 - 20.19.15.5144
+- 20.19.15.5166
+- 20.19.15.5171
 
 `Download older Intel Drivers <https://www.intel.com/content/www/us/en/support/articles/000089377/graphics.html>`__
