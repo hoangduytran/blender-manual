@@ -4,99 +4,127 @@
 Blender's Directory Layout
 **************************
 
-This page documents the different directories used by Blender
-*(which can be helpful for troubleshooting)*.
+This page documents the different directories used by Blender.
 
-There are three different directories Blender may use,
-their exact locations are platform dependent.
-
-:LOCAL:
-   Location of configuration and run-time data (for self-contained bundle).
-:USER:
-   Location of configuration files (typically in the user's home directory).
-:SYSTEM:
-   Location of run-time data for system wide installation (may be read-only).
-
-For system installations both **SYSTEM** and **USER** directories are needed.
-
-For locally extracted Blender distributions, the user configuration and run-time data are
-kept in the same subdirectory, allowing multiple Blender versions to run without conflict,
-ignoring the **USER** and **SYSTEM** files.
-This requires you to create a folder named ``config`` in the **LOCAL** directory.
+This can be helpful for troubleshooting, automation and customization.
 
 
-Platform Dependent Paths
-========================
+User Directories
+================
 
-Here are the default locations for each system:
-
+User directories store preferences, startup file, installed extensions,
+presets and more. By default these use the standard configuration folders
+for each operating system.
 
 Linux
 -----
 
-:LOCAL:
-   .. parsed-literal:: ./|BLENDER_VERSION|/
-:USER:
-   .. parsed-literal:: $HOME/.config/blender/|BLENDER_VERSION|/
-:SYSTEM:
-   .. parsed-literal:: /usr/share/blender/|BLENDER_VERSION|/
+.. parsed-literal:: $HOME/.config/blender/|BLENDER_VERSION|/
 
-.. note::
+If the ``$XDG_CONFIG`` environment variable is set:
 
-   The path |INSTALLDIR| is relative to the Blender executable and
-   is used for self-contained bundles distributed by official blender.org builds.
-
-.. |INSTALLDIR| replace:: ./|BLENDER_VERSION|/
-
-.. note::
-
-   The **USER** path will use ``$XDG_CONFIG_HOME`` if it is set:
-
-   .. parsed-literal:: $XDG_CONFIG_HOME/blender/|BLENDER_VERSION|/
-
+.. parsed-literal:: $XDG_CONFIG_HOME/blender/|BLENDER_VERSION|/
 
 macOS
 -----
 
-:LOCAL:
-   .. parsed-literal:: ./|BLENDER_VERSION|/
-:USER:
-   .. parsed-literal:: /Users/$USER/Library/Application Support/Blender/|BLENDER_VERSION|/
-:SYSTEM:
-   .. parsed-literal:: /Library/Application Support/Blender/|BLENDER_VERSION|/
-
-.. note::
-
-   macOS stores the Blender binary in ``./Blender.app/Contents/MacOS/Blender``.
-   The local path to data and config is:
-
-   .. parsed-literal:: ./Blender.app/Contents/Resources/|BLENDER_VERSION|/
-
+.. parsed-literal:: /Users/$USER/Library/Application Support/Blender/|BLENDER_VERSION|/
 
 Windows
 -------
 
-:LOCAL:
-   .. parsed-literal:: .\\\ |BLENDER_VERSION|\\
-:USER:
-   .. parsed-literal:: %USERPROFILE%\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
-:SYSTEM:
-   .. parsed-literal:: %USERPROFILE%\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
+Download from blender.org:
 
-.. note::
+.. parsed-literal:: %USERPROFILE%\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
 
-   For installations from the Window's Store, the ``USER`` and ``SYSTEM``
-   directories are inside a special folder resembling:
+Microsoft Store installation:
 
-   .. parsed-literal:: %ProgramFiles%\\WindowsApps\\BlenderFoundation.Blender<HASH>\\Blender\\\ |BLENDER_VERSION|\\
+.. parsed-literal:: %ProgramFiles%\\WindowsApps\\BlenderFoundation.Blender<HASH>\\Blender\\\ |BLENDER_VERSION|\\
 
-   Where "HASH" is a string specific to each installation.
+.. _portable-installation:
+
+Portable Installation
+---------------------
+
+When running Blender from a portable drive, it's possible to keep the configuration
+files on the same drive to take with you.
+
+To enable this, create a folder named ``portable`` at the following locations:
+
+* Windows: Next to the Blender executable, in the unzipped folder
+* Linux: Next to the Blender executable, in the unzipped folder
+* macOS: Inside the application bundle at ``Blender.app/Contents/Resources``
+
+This folder will then store preferences, startup file, installed extensions
+and presets.
+
+Environment Variables
+---------------------
+
+``BLENDER_USER`` :ref:`command-line-args-environment-variables` can be used to store
+some or all configuration files in other directories.
+
+This may be used for example when using a different configuration for a specific
+project, without affecting the regular user configuration.
+
+
+System Directories
+==================
+
+System directories store files that come bundled with Blender and
+are required for it to function. This includes scripts, presets, essential
+assets and more. 
+
+Linux
+-----
+
+Download from blender.org:
+
+.. parsed-literal:: ./|BLENDER_VERSION|/
+
+Linux distribution packages:
+
+.. parsed-literal:: /usr/share/blender/|BLENDER_VERSION|/
+
+macOS
+-----
+
+.. parsed-literal:: ./Blender.app/Contents/Resources/|BLENDER_VERSION|/
+
+Windows
+-------
+
+Zip file download from blender.org:
+
+.. parsed-literal:: ./|BLENDER_VERSION|/
+
+Installer download from blender.org:
+
+.. parsed-literal:: %ProgramFiles%\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
+
+Microsoft Store installation:
+
+.. parsed-literal:: %ProgramFiles%\\WindowsApps\\BlenderFoundation.Blender<HASH>\\Blender\\\ |BLENDER_VERSION|\\
+
+
+Environment Variables
+---------------------
+
+``BLENDER_SYSTEM`` :ref:`command-line-args-environment-variables`
+can be used to bundle additional scripts and extensions, that are not part of the
+regular Blender installation.
+
+This can be used for example to deploy Blender in an animation studio, with
+additional add-ons available to all users.
 
 
 Path Layout
 ===========
 
 This is the path layout which is used within the directories described above.
+
+Configuration files are only stored in user directories, while scripts and data
+files can exist in both user and system directories.
 
 Where ``./config/startup.blend`` could be ``~/.blender/|BLENDER_VERSION|/config/startup.blend`` for example.
 
@@ -200,16 +228,3 @@ The temporary directory is selected based on the following priority:
 - User Preference (see :ref:`prefs-file-paths`).
 - Environment variables (``TEMP`` on Windows, ``TMP`` & ``TMP_DIR`` on other platforms).
 - The ``/tmp/`` directory.
-
-
-Overriding Default Directories
-==============================
-
-It's possible to override the default **USER** and **SYSTEM** directories using environment variables.
-
-While this shouldn't be needed for typical usage, some specialized use cases may take advantage of this, such as:
-
-- Using a shared network drives for specific paths.
-- Isolating an instance from the default user files to prevent automated tasks from accessing user configuration.
-
-See :ref:`command-line-args-environment-variables` for details.
