@@ -21,7 +21,7 @@ Linux
 
 .. parsed-literal:: $HOME/.config/blender/|BLENDER_VERSION|/
 
-If the ``$XDG_CONFIG`` environment variable is set:
+If the ``$XDG_CONFIG_HOME`` environment variable is set:
 
 .. parsed-literal:: $XDG_CONFIG_HOME/blender/|BLENDER_VERSION|/
 
