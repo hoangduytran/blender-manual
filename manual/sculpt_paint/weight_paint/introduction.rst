@@ -94,10 +94,10 @@ Vertex group locking
    it has a more significant meaning of locking the current influence of chosen bones,
    so that when you paint other bones, the weight is redistributed only between the unlocked groups.
 
-   In locations affected by more than two bones this allows more precise tweaking and re-balancing of
+   In locations affected by multiple bones, this allows more precise tweaking and re-balancing of
    weights by temporarily focusing on a subset of bones. This can also be aided by
-   the :ref:`Lock Relative <bpy.types.ToolSettings.use_auto_normalize>` option, which displays weights as
-   if re-normalized with the locked groups deleted, thus making it appear as if the locked groups did not even exist.
+   the :ref:`Lock Relative <bpy.types.ToolSettings.use_auto_normalize>` option, which displays unlocked groups as
+   though re-normalized with the locked groups deleted, thus making it appear as if the locked groups did not even exist.
 
 Multi-Paint
    Finally, the :ref:`Multi-Paint <bpy.types.ToolSettings.use_auto_normalize>` option allows treating
