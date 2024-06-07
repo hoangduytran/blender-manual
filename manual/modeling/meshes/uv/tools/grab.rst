@@ -45,11 +45,11 @@ Falloff
 
                   Smooth.
 
-            - .. figure:: /images/sculpt-paint_brush_falloff_custom-sphere.png
+              - .. figure:: /images/sculpt-paint_brush_falloff_custom-sphere.png
 
-                  Sphere.
+                    Sphere.
 
-            - .. figure:: /images/sculpt-paint_brush_falloff_custom-root.png
+              - .. figure:: /images/sculpt-paint_brush_falloff_custom-root.png
 
                   Root.
 
@@ -57,11 +57,11 @@ Falloff
 
                   Sharp.
 
-            - .. figure:: /images/sculpt-paint_brush_falloff_custom-linear.png
+              - .. figure:: /images/sculpt-paint_brush_falloff_custom-linear.png
 
                   Linear.
 
-            - .. figure:: /images/sculpt-paint_brush_falloff_custom-constant.png
+              - .. figure:: /images/sculpt-paint_brush_falloff_custom-constant.png
 
                   Constant.
 
