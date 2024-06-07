@@ -155,3 +155,6 @@ Color fields with an alpha channel are divided in half: on the left, the color i
 and on the right, it's shown with an alpha channel over a checker pattern.
 
 Colors can be copied to other color fields by dragging and dropping.
+
+Hovering over a color property will display a large swatch preview of the color
+and the color's hexadecimal, RGBA, and HSVA values.

@@ -36,9 +36,6 @@ Node groups can be nested (that is, node groups can contain other node groups).
    :ref:`lists and menus <ui-data-block>` and can only be accessed through search.
    This can be useful for node asset authors to hide their internal sub-groups from the final user.
 
-Interface
-=========
-
 When a node group is created, new *Group Input* and *Group Output* nodes are generated
 to represent the data flow into and out of the group. Furthermore connections to input sockets coming
 from unselected nodes will become attached to new sockets on the *Group Input* node.
@@ -53,27 +50,74 @@ The process is similar for the *Group Output* regarding data
 you want to be made available outside the group.
 
 
+Properties
+==========
+
+Group
+-----
+
+.. reference::
+
+   :Panel:     :menuselection:`Sidebar --> Group --> Group`
+
+.. figure:: /images/interface_controls_nodes_groups_interface-group-panel.png
+   :align: right
+
+   The *Group* panel.
+
+This panel contains properties that relate the group node such as it's name and look.
+
+Name
+   The name of node as displayed in the :ref:`interface-nodes-parts-title`.
+
+.. _bpy.types.NodeTree.description:
+
+Description
+   The message displayed when hovering over the :ref:`interface-nodes-parts-title` or in add menus.
+
+.. _bpy.types.NodeTree.color_tag:
+
+Color Tag
+   Color tag of the node group which influences the header color.
+
+
+Usage :guilabel:`Geometry Nodes`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This panel is only visible in the :doc:`Geometry Node Editor </editors/geometry_node>`.
+
+.. _bpy.types.GeometryNodeTree.is_modifier:
+
+Modifier
+   The node group is used as a :doc:`/modeling/modifiers/generate/geometry_nodes`.
+
+.. _bpy.types.GeometryNodeTree.is_tool:
+
+Tool
+   The node group is used as a :doc:`/modeling/geometry_nodes/tools`.
+
+
 .. _bpy.ops.node.tree_socket_add:
 .. _bpy.ops.node.tree_socket_remove:
 .. _bpy.ops.node.tree_socket_move:
 
-Sidebar
--------
+Group Sockets
+-------------
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar --> Group --> Interface`
+   :Panel:     :menuselection:`Sidebar --> Group --> Group Sockets`
 
-.. figure:: /images/interface_controls_nodes_groups_interface-panel.png
+.. figure:: /images/interface_controls_nodes_groups_interface-group_sockets_panel.png
    :align: right
 
-   The interface panel for editing groups.
+   The *Group Sockets* panel.
 
-The Sidebar lets you add, remove, reorder, and edit the sockets of the group's input and output nodes.
+This panel is used to add, remove, reorder, and edit the sockets of the group's input and output.
 
 .. _bpy.types.NodeTreeInterfaceSocket.name:
 
-Interface List
+Socket List
    A :ref:`ui-list-view` of all inputs, outputs and panels.
 
    Here you can name the socket which is displayed in the node's interface.
@@ -82,7 +126,6 @@ Interface List
 
 Description
    The message displayed when hovering over socket properties.
-   Currently only supported for :doc:`Geometry Node Editor </editors/geometry_node>`.
 
 .. _bpy.types.NodeTreeInterfacePanel.default_closed:
 

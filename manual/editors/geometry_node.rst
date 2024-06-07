@@ -103,20 +103,6 @@ This tab allows you to edit the current node group's inputs and outputs.
    :doc:`/modeling/geometry_nodes/attributes_reference` for its outputs.
 
 
-Properties
-""""""""""
-
-.. _bpy.types.GeometryNodeTree.is_modifier:
-
-Modifier
-   The node group is used as a :doc:`/modeling/modifiers/generate/geometry_nodes`.
-
-.. _bpy.types.GeometryNodeTree.is_tool:
-
-Tool
-   The node group is used as a :doc:`/modeling/geometry_nodes/tools`.
-
-
 .. _editors-geometry_nodes-tool_context:
 
 Tool Context
