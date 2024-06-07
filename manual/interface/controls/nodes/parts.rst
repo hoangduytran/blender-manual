@@ -12,6 +12,8 @@ These parts include the title, sockets, properties and more.
 .. figure:: /images/interface_controls_nodes_parts_overview.png
 
 
+.. _interface-nodes-parts-title:
+
 Title
 =====
 
