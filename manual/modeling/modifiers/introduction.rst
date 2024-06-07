@@ -13,10 +13,8 @@ They work by changing how an object is displayed and rendered, but not the geome
 You can add several modifiers to a single object to form `The Modifier Stack`_
 and *Apply* a modifier if you wish to make its changes permanent.
 
-.. _bpy.ops.object.modifier_add:
-
-They can be added to the active object using the *Add Modifier* operator
-at the top of Modifiers tab in the :doc:`/editors/properties_editor` or using :kbd:`Shift-A` in the same tab.
+They can be added to the active object using the :ref:`bpy.ops.object.modifier_add` operator,
+the "Add Modifier" button at the top of Modifiers tab in the :doc:`/editors/properties_editor`, or using :kbd:`Shift-A` in the same tab.
 New modifiers are always added at the bottom of the :ref:`stack <modifier-stack>` (i.e. will be applied last).
 
 There are many built-in modifiers but Blender also allows users

@@ -18,7 +18,6 @@ Interface
 .. toctree::
    :maxdepth: 1
 
-   interface/adding_removing.rst
    interface/header.rst
    interface/common.rst
    interface/stack.rst
