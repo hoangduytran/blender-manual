@@ -238,6 +238,7 @@ usage::
        blender --command extension build [-h] [--source-dir SOURCE_DIR]
                                          [--output-dir OUTPUT_DIR]
                                          [--output-filepath OUTPUT_FILEPATH]
+                                         [--verbose]
 
 Build a package in the current directory.
 
@@ -255,6 +256,7 @@ options:
                         The package output filepath (should include a ``.zip`` extension).
 
                         Defaults to a name created using the ``id`` from the manifest.
+  --verbose             Include verbose output.
 
 .. _command-line-args-extension-validate:
 
