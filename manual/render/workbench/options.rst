@@ -34,11 +34,11 @@ Cavity
    Highlight ridges and valleys in the scene geometry.
 
    Type
-      Method how to calculate the cavity.
+      How to calculate cavities.
 
       :World: More precise but is slower to calculate.
       :Screen: Fast but does not take the size of the ridges and valleys into account.
-      :Both: Both will use both methods.
+      :Both: Use both methods.
 
    Ridge
       Control the visibility of ridges.

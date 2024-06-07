@@ -13,21 +13,31 @@ The lighting conditions that will be used can be set in the Lighting panel.
 .. _bpy.types.View3DShading.light:
 
 :Flat:
-   Do not calculate any lighting. The base color of the scene will be rendered.
+   Objects are "shaded" in a flat color, without any hilights or shadows.
+
 :Studio:
-   Use studio lights to light the objects.
-   The studio lights can be :ref:`configured in the preferences <prefs-lights-studio>`.
-   Studio lights can follow the camera or be fixed. When fixed the angle of the lights can be adjusted.
+   Use a predefined studio lighting setup, such as a key light
+   shining from the front and a rim light shining from the back.
+   Click the sphere to choose a different setup.
+
+   The studio lights can be configured in the :ref:`Preferences <prefs-lights-studio>`.
+   By default, they follow the viewport camera around, but this can be changed:
 
    World Space Lighting
-      Uses world space lighting so lights do not follow the view camera.
+      Keep the lights fixed in place rather than following the viewport camera.
    Rotation
-      The rotation of the studio lights on the Z axis.
+      The rotation of the lights on the Z axis.
 
 .. _render-workbench-matcap:
 
 :MatCap:
-   Use a material capture to light the objects in the scene.
-   MatCaps can be flipped horizontally by clicking the Flip MatCap button.
+   Use a Material Capture, which is an image with texturing, lighting
+   and even reflections baked into it. Objects are shaded by
+   simply picking colors from this image based on the direction of
+   the normal in relation to the camera.
 
-   Custom MatCaps can be :ref:`loaded in the preferences <prefs-lights-matcaps>`.
+   Click the sphere to choose a different MatCap,
+   or the double arrow button to flip it horizontally.
+
+   Custom MatCaps can be loaded in the :ref:`Preferences <prefs-lights-matcaps>`.
+

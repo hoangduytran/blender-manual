@@ -25,6 +25,7 @@ The colors that the Workbench uses to render objects can be changed.
 :Random:
    A random color will be selected for every object in the scene.
 :Texture:
-   Display the active texture using the active UV mapping coordinates.
-   When an object has no active texture the object will be rendered with the settings
-   in the Viewport Display :ref:`properties-material-viewport-display` panel.
+   Show the texture from the active :doc:`/render/shader_nodes/textures/image`
+   using the active UV map. If there is no active texture, the object will be
+   rendered with the settings in the :ref:`properties-material-viewport-display`'s
+   Viewport Display panel.

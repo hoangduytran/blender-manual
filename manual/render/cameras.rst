@@ -165,12 +165,13 @@ Focus Object
    Choose an object which will determine the focal point. Linking an object will deactivate the distance parameter.
 Focal Distance
    Sets the distance to the focal point when no *Focus Object* is specified.
-   If *Limits* are enabled, a yellow cross is shown on the camera line of sight at this distance.
+   This distance can be visualized in the 3D Viewport by enabling *Limits* in the camera's
+   :ref:`Viewport Display <bpy.types.Camera.show>` panel.
 
    .. hint::
 
-      Hover the mouse over the *Distance* property and press :kbd:`E` to use a special *Depth Picker*.
-      Then click on a point in the 3D Viewport to sample the distance from that point to the camera.
+      Hover the mouse over the *Distance* property and press :kbd:`E` to use a special *Depth Picker*,
+      then click on a point in the 3D Viewport to sample the distance from that point to the camera.
 
 
 Aperture
@@ -383,7 +384,11 @@ Size
 
 Show
    Limits
-      Shows a line which indicates *Start* and *End Clipping* values.
+      Shows an orange line indicating the *Clip Start* and *End* values,
+      as well as a yellow cross indicating the *Focus Distance*.
+      If the *Focus Distance* gizmo is enabled in the 3D Viewport's
+      :doc:`gizmo settings </editors/3dview/display/gizmo>`,
+      this cross can also be dragged with the mouse to adjust the distance.
    Mist
       Toggles viewing of the mist limits on and off.
       The limits are shown as two connected white dots on the camera line of sight.
