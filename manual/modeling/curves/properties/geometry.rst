@@ -156,7 +156,7 @@ Object
 
 Object
    Here you can specify a curve object (opened or closed) which will be extruded along the curve.
-   If your object's :ref:`shape <bpy.types.Curve.dimensions>` is 3D,
+   If the curve's :ref:`shape <bpy.types.Curve.dimensions>` is 3D,
    it will be projected to its local XY plane before the extrusion.
    You can check how the projected Object looks like by switching its shape to 2D.
 
@@ -166,6 +166,20 @@ Object
       If it is in the local XZ or YZ plane, it will be reduced to a line when it is projected to the local XY plane.
       Because of this, the extruded shape will be a flat plane.
 
+   .. note::
+      If the selected curve has modifiers, these will not be taken into account.
+      The extrusion will use the original curve shape. The reason for this behavior
+      is that curves turn into meshes internally when they have modifiers on them,
+      at which point they can't be used as bevel objects anymore.
+      
+      To work around this, you can disable beveling on the path curve, and instead
+      add geometry nodes to it: retrieve the profile curve using an
+      :doc:`/modeling/geometry_nodes/input/scene/object_info`, convert it from
+      a mesh back into a curve using a
+      :doc:`/modeling/geometry_nodes/mesh/operations/mesh_to_curve`,
+      and finally pass both the path curve and the profile curve to a
+      :doc:`/modeling/geometry_nodes/curve/operations/curve_to_mesh`.
+   
    .. list-table::
 
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel-object.png

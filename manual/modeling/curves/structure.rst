@@ -100,6 +100,16 @@ Aligned (purple handles)
 Free (black handles)
    The handles are independent of each other.
 
+.. note::
+   When a control point is selected, its handles are overlaid with a red hilight
+   that changes their color. For example, Vector handles that are normally green
+   will look yellow when selected, which can make it difficult to distinguish
+   them from unselected Automatic handles.
+   
+   If you prefer not to have this color change, you can disable it by opening the Theme
+   preferences, finding the entry :menuselection:`3D Viewport --> Active Spline`,
+   and changing it to black. From then on, selected curve handles will simply look
+   a bit brighter than unselected ones.
 
 .. _curve-nurbs:
 
