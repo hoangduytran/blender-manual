@@ -13,14 +13,14 @@ Emission
       Hair particle system settings.
 
 Number
-   Set the amount of hair strands. Use as little particles as possible,
-   especially if you plan to use soft body animation later.
-   But you need enough particles to have good control.
-   For a "normal" haircut I found some thousand (very roughly 2000) particles to give enough control.
-   You may need a lot more particles if you plan to cover a body with fur.
-   Volume will be produced later with *Children*.
+   Sets the amount of hair strands. Use as few particles as possible
+   (especially if you plan to use soft body animation later),
+   but still enough to cover the surface and have good control.
+   A few thousand particles is generally enough for a regular haircut.
+   The hair will be made denser later on using
+   :doc:`/physics/particles/emitter/children`.
 Hair Length
-   Controls how long the hair are.
+   Controls the length of the hair.
 
 .. seealso::
 
