@@ -17,4 +17,5 @@ This chapter covers advanced use (topics which may not be required for typical u
    limits.rst
    operators.rst
    blender_directory_layout.rst
+   deploying_blender.rst
    appendices/index.rst

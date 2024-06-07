@@ -55,8 +55,8 @@ and presets.
 Environment Variables
 ---------------------
 
-``BLENDER_USER`` :ref:`command-line-args-environment-variables` can be used to store
-some or all configuration files in other directories.
+``BLENDER_USER`` :ref:`environment variables <command-line-args-environment-variables>`
+can be used to store some or all configuration files in other directories.
 
 This may be used for example when using a different configuration for a specific
 project, without affecting the regular user configuration.
@@ -104,13 +104,14 @@ Microsoft Store installation:
 Environment Variables
 ---------------------
 
-``BLENDER_SYSTEM`` :ref:`command-line-args-environment-variables`
+``BLENDER_SYSTEM`` :ref:`environment variables <command-line-args-environment-variables>`
 can be used to bundle additional scripts and extensions, that are not part of the
 regular Blender installation.
 
 This can be used for example to deploy Blender in an animation studio, with
 additional add-ons available to all users.
 
+.. _blender-directory-path-layout:
 
 Path Layout
 ===========
