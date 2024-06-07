@@ -97,7 +97,8 @@ Vertex group locking
    In locations affected by multiple bones, this allows more precise tweaking and re-balancing of
    weights by temporarily focusing on a subset of bones. This can also be aided by
    the :ref:`Lock Relative <bpy.types.ToolSettings.use_auto_normalize>` option, which displays unlocked groups as
-   though re-normalized with the locked groups deleted, thus making it appear as if the locked groups did not even exist.
+   though re-normalized with the locked groups deleted, thus making it appear as if the locked groups did not even
+   exist.
 
 Multi-Paint
    Finally, the :ref:`Multi-Paint <bpy.types.ToolSettings.use_auto_normalize>` option allows treating
