@@ -21,7 +21,7 @@ The process is as follows:
    in the topbar.
 #. Select the mesh and bring it into *Weight Paint Mode*.
 #. Make sure that *Bone Selection* is checked in the 3D Viewport's header.
-#. Select a bone using :kbd:`Alt-LMB` (or :kbd:`Ctrl-Shift-LMB`).
+#. Select a bone using :kbd:`Alt-LMB` (or :kbd:`Shift-Ctrl-LMB`).
    This will activate the bone's vertex group and display its current weights on the mesh.
 #. Paint weights for the bone using :kbd:`LMB`.
 
