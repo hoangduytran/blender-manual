@@ -17,6 +17,9 @@
    join.rst
    asset.rst
    parent.rst
+   modifiers.rst
+   constraints.rst
+   track.rst
    relations/index.rst
    link_transfer/index.rst
    shading.rst

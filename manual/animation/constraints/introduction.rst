@@ -50,6 +50,23 @@ in the :doc:`Armature chapter </animation/armatures/posing/bone_constraints/inde
 Constraints work in combination with each other to form a Constraint Stack.
 
 
+Adding & Removing Constraints
+=============================
+
+To add a constraint click on the *Add Object Constraint* menu in the Constraints tab.
+Alternatively, you can use the :ref:`bpy.ops.object.constraint_add_with_targets` operator.
+
+To copy constraints from one object to another use :ref:`bpy.ops.object.constraints_copy`.
+
+Any single constraint can be removed by clicking on the "X" button
+in the constraint's :doc:`header </animation/constraints/interface/header>`.
+To remove all constants from an object use :ref:`bpy.ops.object.constraints_clear`.
+
+.. tip::
+
+   Tracking constraints can be added/removed using the :doc:`Track menu </scene_layout/object/editing/track>`.
+
+
 Tips
 ====
 
