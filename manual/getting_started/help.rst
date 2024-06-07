@@ -27,6 +27,9 @@ Shortcut
    A keyboard or mouse shortcut associated to the tool.
 Value
    The value of the property.
+
+   Hovering over a color property will display a large swatch preview of the color
+   and the color's hexadecimal, RGBA, and HSVA values.
 Library
    Source file of the active object. See also :doc:`/files/linked_libraries/index`.
 Disabled (red)
