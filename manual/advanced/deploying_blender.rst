@@ -35,6 +35,8 @@ Working offline can be enforced by running with the ``--offline-mode``
 :ref:`command line argument <command-line-args-network-options>`. Users
 will then be unable to enable online access in the preferences.
 
+.. _deploying-blender-bundling:
+
 Bundling Extensions
 ===================
 
@@ -86,7 +88,7 @@ For example, a script can enable add-ons for every user.
 
    def register():
        import addon_utils
-       addon_utils.enable("node_wrangler")
+       addon_utils.enable("my-addon")
 
    def unregister():
        pass

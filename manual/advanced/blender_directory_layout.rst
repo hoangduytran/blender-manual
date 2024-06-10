@@ -55,12 +55,8 @@ and presets.
 Environment Variables
 ---------------------
 
-``BLENDER_USER`` :ref:`environment variables <command-line-args-environment-variables>`
-can be used to store some or all configuration files in other directories.
-
-This may be used for example when using a different configuration for a specific
-project, without affecting the regular user configuration.
-
+The ``BLENDER_USER_RESOURCES`` :ref:`environment variable <command-line-args-environment-variables>`
+can be set to a custom directory to replace the default user directory.
 
 System Directories
 ==================
@@ -104,95 +100,103 @@ Microsoft Store installation:
 Environment Variables
 ---------------------
 
-``BLENDER_SYSTEM`` :ref:`environment variables <command-line-args-environment-variables>`
-can be used to bundle additional scripts and extensions, that are not part of the
-regular Blender installation.
+``BLENDER_SYSTEM_SCRIPTS`` and ``BLENDER_SYSTEM_EXTENSIONS``
+:ref:`environment variables <command-line-args-environment-variables>`
+can be used to :ref:`bundle additional scripts and extensions <deploying-blender-bundling>`,
+that are not part of the regular Blender installation.
 
-This can be used for example to deploy Blender in an animation studio, with
-additional add-ons available to all users.
+Other ``BLENDER_SYSTEM`` environment variables can override other system paths,
+though are not commonly used in practice.
 
 .. _blender-directory-path-layout:
 
 Path Layout
 ===========
 
-This is the path layout which is used within the directories described above.
+``./autosave``
+  Autosave blend-file location. (Windows only, temp directory used for other systems.)
 
-Configuration files are only stored in user directories, while scripts and data
-files can exist in both user and system directories.
+  Located in user directories.
 
-Where ``./config/startup.blend`` could be ``~/.blender/|BLENDER_VERSION|/config/startup.blend`` for example.
+``./config``
+  User configuration and session info.
 
-``./autosave/ ...``
-   Autosave blend-file location. (Windows only, temp directory used for other systems.)
+  Located in user directories.
 
-   Search order: ``LOCAL, USER``.
+  ``./config/startup.blend``
+     Blend file to load on startup.
 
-``./config/ ...``
-   Defaults & session info.
+  ``./config/userpref.blend``
+     User preferences.
 
-   Search order: ``LOCAL, USER``.
+  ``./config/bookmarks.txt``
+     File Browser bookmarks.
 
-``./config/startup.blend``
-   Default file to load on startup.
+  ``./config/recent-files.txt``
+     Recent file menu list.
 
-``./config/userpref.blend``
-   Default preferences to load on startup.
+``./datafiles``
+  Data files loaded at runtime.
 
-``./config/bookmarks.txt``
-   File Browser bookmarks.
+  Located in both user and system directories. User data files either override
+  or add to system data files.
 
-``./config/recent-files.txt``
-   Recent file menu list.
+  ``./datafiles/colormanagement``
+     Default OpenColorIO configuration.
 
-``./datafiles/ ...``
-   Runtime files.
+  ``./datafiles/fonts``
+     User interface fonts.
 
-   Search order: ``LOCAL, USER, SYSTEM``.
+  ``./datafiles/studiolights``
+     Studio light images for 3D viewport.
 
-``./datafiles/locale/{language}/``
-   Static precompiled language files for UI translation.
+``./extensions``
+  Extension repositories.
 
-``./scripts/ ...``
-   Python scripts for the user interface and tools.
+  Located in both user and system directories. Repositories are loaded from
+  both directories.
 
-   Search order: ``LOCAL, USER, SYSTEM``.
+``./scripts``
+  Add-ons, presets, templates, user interface, startup scripts.
 
-``./scripts/addons/*.py``
-   Python add-ons which may be enabled in the Preferences include import/export format support,
-   render engine integration and many handy utilities.
+  Located in both user and system directories. Scripts are loaded from
+  both directories.
 
-``./scripts/addons/modules/*.py``
-   Modules for add-ons to use
-   (added to Python's ``sys.path``).
+  ``./scripts/addons/*.py``
+     Python add-ons which may be enabled in the Preferences include import/export format support,
+     render engine integration and many handy utilities.
 
-``./scripts/addons_core/*.py``
-   The add-ons directory which is used for bundled add-ons.
+  ``./scripts/addons/modules/*.py``
+     Modules for add-ons to use
+     (added to Python's ``sys.path``).
 
-``./scripts/addons_core/modules/*.py``
-   Modules for ``addons_core`` to use (added to Python's ``sys.path`` when it found).
+  ``./scripts/addons_core/*.py``
+     The add-ons directory which is used for bundled add-ons.
 
-``./scripts/modules/*.py``
-   Python modules containing our core API and utility functions for other scripts to import
-   (added to Python's ``sys.path``).
+  ``./scripts/addons_core/modules/*.py``
+     Modules for ``addons_core`` to use (added to Python's ``sys.path`` when it found).
 
-``./scripts/startup/*.py``
-   Scripts which are automatically imported on startup.
+  ``./scripts/modules/*.py``
+     Python modules containing our core API and utility functions for other scripts to import
+     (added to Python's ``sys.path``).
 
-``./scripts/presets/{preset}/*.py``
-   Presets used for storing user-defined settings for cloth, render formats, etc.
+  ``./scripts/startup/*.py``
+     Scripts which are automatically imported on startup.
 
-``./scripts/templates_py/*.py``
-   Example scripts which can be accessed from :menuselection:`Text Editor --> Templates --> Python`.
+  ``./scripts/presets/{preset}/*.py``
+     Presets used for storing user-defined settings for cloth, render formats, etc.
 
-``./scripts/templates_osl/*.osl``
-   Example OSL shaders which can be accessed from
-   :menuselection:`Text Editor --> Templates --> Open Shading Language`.
+  ``./scripts/templates_py/*.py``
+     Example scripts which can be accessed from :menuselection:`Text Editor --> Templates --> Python`.
 
-``./python/ ...``
+  ``./scripts/templates_osl/*.osl``
+     Example OSL shaders which can be accessed from
+     :menuselection:`Text Editor --> Templates --> Open Shading Language`.
+
+``./python``
    Bundled Python distribution.
 
-   Search order: ``LOCAL, SYSTEM``.
+   Located in system directories.
 
 
 .. _local-cache-dir:
