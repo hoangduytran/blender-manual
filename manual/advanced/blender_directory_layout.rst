@@ -135,6 +135,12 @@ Path Layout
   ``./config/recent-files.txt``
      Recent file menu list.
 
+  ``./config/{APP_TEMPLATE_ID}/startup.blend``
+    Startup file for an application template.
+
+  ``./config/{APP_TEMPLATE_ID}/userpref.blend``
+    User preferences file for an application template.
+
 ``./datafiles``
   Data files loaded at runtime.
 
