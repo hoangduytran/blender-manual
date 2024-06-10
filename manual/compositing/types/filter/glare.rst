@@ -24,6 +24,13 @@ Properties
 ==========
 
 Glare Type
+   :Bloom:
+      Simulates the glow around bright objects caused by light scattering in eyes and cameras.
+
+      Size
+         Scale of the glow relative to the size of the image. 9 means the glow can cover the
+         entire image, 8 means it can only cover half the image, 7 means it can only cover quarter
+         of the image, and so on.
    :Ghosts:
       Creates a haze over the image.
    :Streaks:
@@ -35,16 +42,15 @@ Glare Type
          The rotation offset factor of the streaks.
       Fade
          Fade out factor for the streaks.
-   :Fog Glow:
-      Looks similar to *Ghost*. However, it is much smaller in size
-      and gives more of an atmospheric haze or "glow" around the image.
-
-      .. note::
-
-         Viewport compositing results will vary from CPU compositing due to different algorithms.
+   :Bloom:
+      Simulates the glow around bright objects caused by light scattering in eyes and cameras.
+      This is similar to the *Bloom* mode, but is more physically accurate, at the cost of much
+      slower computation time.
 
       Size
-         Scale of the glow relative to the size of the original bright pixels.
+         Scale of the glow relative to the size of the image. 9 means the glow will cover the
+         entire image, 8 means it will cover half the image, 7 means it will cover quarter of the
+         image, and so on.
    :Simple Star:
       Works similar to *Streaks* but gives a simpler shape looking like a star.
 
