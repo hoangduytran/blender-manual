@@ -32,10 +32,12 @@ Wrapping
    Repeat pixels on the other side when they extend over the image dimensions, making endless translating possible.
 
    None, X Axis, Y Axis, Both Axis
+Filter
+   Interpolation Methods.
 
-.. note::
-
-   Individual axis wrapping is only supported in the CPU compositor.
+   :Nearest: No interpolation, uses nearest neighboring pixel.
+   :Bilinear: Simple interpolation between adjacent pixels.
+   :Bicubic: Highest quality interpolation.
 
 
 Outputs
