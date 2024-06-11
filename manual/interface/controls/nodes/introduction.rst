@@ -83,6 +83,11 @@ There is a toggle to show or hide all overlays for the node editor next to the o
 Wire Colors
    Color node links based on their connected sockets.
 
+.. _bpy.types.SpaceNodeOverlay.show_reroute_auto_labels:
+
+Reroute Auto Labels
+   Label reroute nodes based on the label of connected reroute nodes.
+
 .. _bpy.types.SpaceNodeOverlay.show_context_path:
 
 Context Path
