@@ -41,22 +41,29 @@ Bundling Extensions
 ===================
 
 When working offline or in a more controlled environment, it may be useful
-to provide a set of extensions to all users. These can be served from a
-read-only system repository. This repository could exist on a network drive
-or in a system directory.
+to provide a set of extensions to all users. These can be served from the
+default read-only System repository. This can be located for example on a
+network drive or in a system directory.
 
-The location of this system extension repository can be manually configured
-in the Extensions preferences.
+.. figure:: /images/advanced_deploying-blender_system-extensions.png
+
+   System repository
 
 The ``$BLENDER_SYSTEM_EXTENSIONS``
 :ref:`environment variable <command-line-args-environment-variables>`
-can also set the default location. This is a directory, within which a
-``system`` directory should exist. Then extract extension packages there,
+controls the default location. This should point to a directory, within
+which a ``system`` directory should exist.
+
+Extensions packages should be extracted in this ``system`` directory,
 with a resulting path like this:
 
 .. code-block:: bash
 
     $BLENDER_SYSTEM_EXTENSIONS/system/my-addon/blender_manifest.toml
+
+In the Extensions preferences, it's possible to manually set a custom
+directory of the default System repository and to create multiple
+repositories.
 
 Bundling Scripts
 ================
@@ -95,6 +102,20 @@ For example, a script can enable add-ons for every user.
 
    if __name__ == "__main__":
        register()
+
+Legacy Add-ons
+--------------
+
+Add-ons that have not been converted to become an extension yet need
+to be placed in the ``addons`` script directory.
+
+For example, an add-on could be located at:
+
+.. code-block:: bash
+
+    $BLENDER_SYSTEM_SCRIPTS/addons/simple_addon.py
+    $BLENDER_SYSTEM_SCRIPTS/addons/complex_addon/__init__.py
+
 
 VFX Platform
 ============
