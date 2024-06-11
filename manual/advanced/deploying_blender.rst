@@ -107,9 +107,10 @@ Application Templates
 ---------------------
 
 :ref:`app_templates` can be used to set up Blender for particular
-tasks or projects, separate from the default configuration.
+tasks or projects, separate from the default configuration. When
+creating a new file the user can choose the template.
 
-These can be placed in system script directories like this:
+The files are expected to be placed in the system script directories like this:
 
 .. code-block:: bash
 
