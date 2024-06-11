@@ -103,6 +103,20 @@ For example, a script can enable add-ons for every user.
    if __name__ == "__main__":
        register()
 
+Application Templates
+---------------------
+
+:ref:`app_templates` can be used to set up Blender for particular
+tasks or projects, separate from the default configuration. When
+creating a new file the user can choose the template.
+
+The files are expected to be placed in the system script directories like this:
+
+.. code-block:: bash
+
+   $BLENDER_SYSTEM_SCRIPTS/startup/bl_app_templates_system/MyTemplate/__init__.py
+   $BLENDER_SYSTEM_SCRIPTS/startup/bl_app_templates_system/MyTemplate/startup.blend
+
 Legacy Add-ons
 --------------
 
