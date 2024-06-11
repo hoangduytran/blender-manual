@@ -86,7 +86,8 @@ Wire Colors
 .. _bpy.types.SpaceNodeOverlay.show_reroute_auto_labels:
 
 Reroute Auto Labels
-   Label reroute nodes based on the label of connected reroute nodes.
+   Label :doc:`Reroute Nodes </interface/controls/nodes/reroute>`
+   based on the label of connected reroute nodes.
 
 .. _bpy.types.SpaceNodeOverlay.show_context_path:
 
