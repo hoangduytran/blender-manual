@@ -97,11 +97,16 @@ Data Previews
 
 Import
    Blender can use information stored in a variety of other format files which are created by
-   other graphics programs. See :doc:`Import/Export </files/import_export>`.
+   other graphics programs. See :doc:`Import/Export </files/import_export/index>`.
 Export
    Normally you save your work in a blend-file,
    but you can export some or all of your work to a format that can be processed by other graphics programs.
-   See :doc:`Import/Export </files/import_export>`.
+   See :doc:`Import/Export </files/import_export/index>`.
+
+.. _bpy.ops.wm.collection_export_all:
+
+Export All Collections
+   Invokes all :ref:`configured exporters <collections-exporters>` for all collection.
 
 -----
 

@@ -13,4 +13,4 @@
    linked_libraries/index.rst
    asset_libraries/index.rst
    media/index.rst
-   import_export.rst
+   import_export/index.rst

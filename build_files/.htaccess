@@ -241,3 +241,5 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_c
 RedirectMatch "^/manual/{lang}/{version}/editors/nla/editing.html" "^/manual/{lang}/{version}/editors/nla/editing/index.html"
 
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/shader/anisotropic.html" "^/manual/{lang}/{version}/render/shader_nodes/shader/glossy.html"
+
+RedirectMatch "^/manual/{lang}/{version}/files/import_export.html" "^/manual/{lang}/{version}/files/import_export/index.html"

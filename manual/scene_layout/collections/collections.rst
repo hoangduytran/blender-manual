@@ -54,6 +54,47 @@ Instance Offset X, Y Z
    Applies a spatial offset of the instanced collections from the original object's origin.
 
 
+.. _collections-exporters:
+
+Exporters
+---------
+
+Each collection can be exported to a number of various file formats.
+These exporters are available globally, see :doc:`/files/import_export/index`,
+however, this panel streamlines the process of re-exporting the same asset(s) repeatedly.
+For example when creating glTF assets for a game and iterating on the look,
+or when using Blender in a studio pipeline to create USD assets.
+
+The following file formats are supported, see each for the documentation of export parameters:
+
+- :doc:`/files/import_export/alembic`
+- :doc:`/files/import_export/usd`
+- :doc:`/files/import_export/obj`
+- :doc:`/files/import_export/ply`
+- :doc:`/addons/import_export/scene_fbx`
+- :doc:`/addons/import_export/scene_gltf2`
+
+.. _bpy.types.Collection.active_exporter_index:
+
+Exporter List
+   A :ref:`list view <ui-list-view>` of all the enabled exporters for the active collection.
+   The selecting an exporter from the list will show it's options in a sub panel below.
+
+.. _bpy.ops.collection.exporter_add:
+.. _bpy.ops.collection.exporter_remove:
+
+Exporters can be added/removed through the ``+`` and ``-`` icons to right of the Exporter list.
+
+.. _bpy.ops.collection.export_all:
+
+Export All
+   Exports all exports for the active collection.
+
+.. tip::
+
+   Use :menuselection:`File --> Export All Collections` to export all exporters for all collections.
+
+
 .. _scene_layout-collections-line-art:
 
 Line Art

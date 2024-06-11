@@ -42,7 +42,7 @@ Glare Type
          The rotation offset factor of the streaks.
       Fade
          Fade out factor for the streaks.
-   :Bloom:
+   :Fog Glow:
       Simulates the glow around bright objects caused by light scattering in eyes and cameras.
       This is similar to the *Bloom* mode, but is more physically accurate, at the cost of much
       slower computation time.
