@@ -189,6 +189,12 @@ Path Layout
   ``./scripts/startup/*.py``
      Scripts which are automatically imported on startup.
 
+   ``/scripts/startup/bl_app_templates_user/{APP_TEMPLATE_ID}``
+     Application templates installed in user directories.
+
+   ``/scripts/startup/bl_app_templates_system/{APP_TEMPLATE_ID}``
+     Application templates automatically loaded from system directories.
+
   ``./scripts/presets/{preset}/*.py``
      Presets used for storing user-defined settings for cloth, render formats, etc.
 
