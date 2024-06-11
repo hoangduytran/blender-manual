@@ -106,7 +106,7 @@ Remember that when a 2D curve is closed, it creates a renderable flat face.
    Open and Closed curves.
 
 
-.. _bpy.ops.curve.spline_type_set:
+.. _bpy.ops.curves.spline_type_set:
 
 Set Curve Type
 ==============

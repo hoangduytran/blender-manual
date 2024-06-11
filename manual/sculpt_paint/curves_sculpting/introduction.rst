@@ -57,8 +57,6 @@ This feature is makes it easy to select whole segments at once, or to give more 
 Select Menu
 ===========
 
-.. _bpy.ops.curves.select_all:
-
 All
    Select all control points or curves.
 
