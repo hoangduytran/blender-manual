@@ -134,6 +134,7 @@ html_theme_path = []
 if html_theme == "furo":
     html_theme_options = {
         "source_edit_link": "https://projects.blender.org/blender/blender-manual/_edit/main/manual/{filename}",
+        "source_view_link": "https://projects.blender.org/blender/blender-manual/src/branch/main/manual/{filename}",
         "light_css_variables": {
             "color-brand-primary": "#265787",
             "color-brand-content": "#265787",
