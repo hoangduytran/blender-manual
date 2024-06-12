@@ -14,9 +14,9 @@ You can add several modifiers to a single object to form `The Modifier Stack`_
 and *Apply* a modifier if you wish to make its changes permanent.
 
 They can be added to the active object using the :ref:`bpy.ops.object.modifier_add` operator,
-the "Add Modifier" button at the top of Modifiers tab in the :doc:`/editors/properties_editor`, or using
- :kbd:`Shift-A` in the same tab. New modifiers are always added at the bottom of the
-  :ref:`stack <modifier-stack>` (i.e. will be applied last).
+the "Add Modifier" button at the top of Modifiers tab in the :doc:`/editors/properties_editor`,
+or using :kbd:`Shift-A` in the same tab.
+New modifiers are always added at the bottom of the :ref:`stack <modifier-stack>` (i.e. will be applied last).
 
 There are many built-in modifiers but Blender also allows users
 to make their own modifiers through :doc:`/modeling/geometry_nodes/index`.
