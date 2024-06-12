@@ -14,7 +14,7 @@ Renderer Settings
 While shading nodes control the appearance, these settings control the quality and algorithms
 that each renderer uses to render the material.
 
-- :doc:`EEVEE specific settings </render/eevee/materials/settings>`
+- :doc:`EEVEE specific settings </render/eevee/material_settings>`
 - :doc:`Cycles specific settings </render/cycles/material_settings>`
 
 

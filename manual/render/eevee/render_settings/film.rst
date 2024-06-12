@@ -7,7 +7,7 @@ Filter Size
    Due to limited resolution of images and computer screens, pixel filters are needed to avoid :term:`Aliasing`.
    This is achieved by slightly blurring the image to soften edges.
 
-   This Setting controls home much the image is softened;
+   This Setting controls how much the image is softened;
    lower values give more crisp renders, higher values are softer and reduce aliasing.
 
 Transparent

@@ -36,7 +36,7 @@ Poor Performance
 Render Errors
 -------------
 
-See :doc:`EEVEE </render/eevee/limitations>` and
+See :doc:`EEVEE </render/eevee/limitations/index>` and
 :doc:`Cycles </render/cycles/gpu_rendering>` documentation respectively.
 
 

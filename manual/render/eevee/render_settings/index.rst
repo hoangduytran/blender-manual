@@ -8,16 +8,12 @@
    :maxdepth: 2
 
    sampling.rst
-   grease_pencil.rst
-   ambient_occlusion.rst
-   bloom.rst
+   clamping.rst
+   raytracing.rst
+   volumes.rst
+   curves.rst
    depth_of_field.rst
-   subsurface_scattering.rst
-   screen_space_reflections.rst
-   motion_blur
-   volumetrics.rst
-   performance.rst
-   hair.rst
-   shadows.rst
-   indirect_lighting.rst
+   motion_blur.rst
    film.rst
+   performance.rst
+   grease_pencil.rst

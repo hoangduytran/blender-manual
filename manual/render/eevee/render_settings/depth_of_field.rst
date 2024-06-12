@@ -48,14 +48,6 @@ Neighbor Rejection
    Lower values will improve the performance but will also reduce the quality of highlights.
    Brightness is in the scene's referred color space.
 
-Denoise Amount
-   This will reduce the flickering by clamping the color of
-   each pixels to their neighborhood's average instead of their maximum.
-   Higher values gives more stable results but may darken the scene.
-
-High Quality Slight Defocus
-   Increase the quality of almost in-focus regions.
-
 Jitter Camera
    Randomize the camera position for every scene render sample to increase precision.
    Enabling this option can change the scene's actual sample count.

@@ -15,8 +15,8 @@ both in a movie frame and in a photograph from a real-world camera.
 
 .. note::
 
-   Motion blur is only available in final renders and is not shown in the 3D Viewport
-   and thus :ref:`Viewport Renders <bpy.ops.render.opengl>`.
+   Motion blur is only visible in the viewport during animation playback and uses a simpler
+   algorithm than final render. Same thing applies to :ref:`Viewport Renders <bpy.ops.render.opengl>`.
 
 Position
    Controls at what point the shutter opens in relation to the current frame.
@@ -35,33 +35,6 @@ Background Separation
    Used by the post-process blur to avoid blurring the background over the foreground.
    Lower values will reduce background bleeding onto foreground elements.
 
-Max Blur
-   Maximum blur distance a pixel can spread over.
-   A value of 0 will disable the post-process blur and only use the accumulation blur.
-
-   .. note::
-
-      High maximum blur values may also reduce the quality.
-
-   EEVEE uses a fast post-process vector blur using a vector motion pass.
-   This blurs the image between three time steps using pixel velocity.
-   This technique is fast and produces clean gradients, but issues can occur at object borders
-   or if the motion is locally too complex;
-   for example, if there are many vector variations in a small area.
-
-   This technique uses random sampling and the noise amount is proportional to the sample count found in
-   :menuselection:`Properties --> Render --> Sampling --> Render Samples`.
-
-   .. note::
-
-      Memory usage (VRAM) will be three times higher for objects using deformation motion blur
-      if using post-process blur.
-
-   .. note::
-
-      Alpha blended surface or volumetric effects will not have the correct velocity and will not
-      be correctly blurred by this technique. Use the accumulation blur for that.
-
 Steps
    This controls the number of steps used by the accumulation blur and thus its accuracy.
    More steps means longer render time.
@@ -78,6 +51,9 @@ Steps
    Each step corresponds to a full scene re-evaluation and can add a lot of overhead to the render time.
    By adding more steps you can also reduce the *Max Blur* options because the post-process blur
    has to cover a smaller distance.
+
+Shutter Curve
+   Use a custom shutter curve.
 
 
 Example

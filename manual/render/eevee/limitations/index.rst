@@ -1,11 +1,10 @@
 
 #############
-  Materials
+ Limitations
 #############
 
 .. toctree::
    :maxdepth: 2
 
-   introduction.rst
+   limitations.rst
    nodes_support.rst
-   settings.rst

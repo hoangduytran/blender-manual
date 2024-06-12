@@ -10,8 +10,10 @@
 
    introduction.rst
    render_settings/index.rst
-   materials/index.rst
-   world.rst
-   lighting.rst
+   scene_settings.rst
+   world_settings.rst
+   object_settings/index.rst
+   material_settings.rst
+   light_settings.rst
    light_probes/index.rst
-   limitations.rst
+   limitations/index.rst

@@ -22,7 +22,7 @@ Color
 Renderer Settings
 =================
 
-- :doc:`EEVEE specific settings </render/eevee/lighting>`
+- :doc:`EEVEE specific settings </render/eevee/light_settings>`
 - :doc:`Cycles specific settings </render/cycles/light_settings>`
 
 
