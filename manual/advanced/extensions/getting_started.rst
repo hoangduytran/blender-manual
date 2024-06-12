@@ -129,8 +129,9 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # https://docs.blender.org/manual/en/dev/advanced/extensions/command_line_arguments.html#command-line-args-extension-build
    # [build]
    # paths_exclude_pattern = [
-   #   "/.git/",
    #   "__pycache__/",
+   #   "/.git/",
+   #   "/*.zip",
    # ]
 
 Required values:
@@ -183,6 +184,7 @@ Optional values for "build":
       paths_exclude_pattern = [
         "__pycache__/",
         ".*",
+        "*.zip",
       ]
 
 
