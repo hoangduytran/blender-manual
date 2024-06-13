@@ -5,7 +5,7 @@ Extensions Tags
 ***************
 
 A different set of tags is available for the different extensions types.
-This is the list of the tags currently supported:
+This is the list of the tags currently supported by the `Blender Extensions Platform <https://extensions.blender.org/>`_:
 
 Add-ons
 =======
