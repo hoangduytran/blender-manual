@@ -31,7 +31,7 @@ with any :ref:`Render Method <bpy.types.Material.render_method>`.
      Increasing the :ref:`Shadow Pool Size <bpy.types.SceneEEVEE.shadow_pool_size>` or
      the :ref:`Resolution Limit <bpy.types.Light.shadow_maximum_resolution>` on some lights
      can fix the issue. Otherwise, the only workaround is to disable shadow casting on some lights.
-   - *Shadow Map Raytracing* can be tweaked in the :ref:`Render Settings <eevee-shadow-raytrace>`.
+   - *Shadow Map Raytracing* can be tweaked in the :ref:`Render Settings <bpy.types.SceneEEVEE.use_shadows>`.
    - Turning on :ref:`Jitter <bpy.types.Light.use_shadow_jitter>` can reduce the light leaking artifacts
      caused by large lights and *Shadow Map Raytracing*.
 

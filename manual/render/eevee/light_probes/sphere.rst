@@ -21,6 +21,10 @@ Adjusting their resolution is done inside the :doc:`Scene data </render/eevee/sc
 The world also has an internal light probe sphere with a resolution that can be adjusted
 in the :doc:`World data </render/eevee/world_settings>` panel.
 
+
+Properties
+==========
+
 .. reference::
 
    :Panel:     :menuselection:`Object Data --> Probe`
@@ -37,7 +41,7 @@ Falloff
 
 
 Capture
-=======
+-------
 
 .. note::
 
@@ -49,7 +53,7 @@ Clipping
 
 
 Custom Parallax
-===============
+---------------
 
 .. reference::
 
@@ -64,7 +68,7 @@ change the shape and radius of the parallax volume independently.
 
 
 Viewport Display
-================
+----------------
 
 Data
    Show the captured light using a reflective sphere of the given size.

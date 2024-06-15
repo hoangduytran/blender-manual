@@ -14,6 +14,7 @@ Transparent
    Render the background transparent, for compositing the image over another background after rendering.
 
 .. _bpy.types.SceneEEVEE.use_overscan:
+.. _bpy.types.SceneEEVEE.overscan_size:
 
 Overscan
    Percentage of the render size to add to the internal render buffer.

@@ -19,6 +19,9 @@ the world's diffuse lighting will be used to shade it.
    - Large scenes may require using many volumes with different level of details.
 
 
+Properties
+==========
+
 .. reference::
 
    :Panel:     :menuselection:`Object Data --> Probe`
@@ -28,9 +31,7 @@ Intensity
    Making this parameter anything other than 1.0 is not physically correct.
    To be used for tweaking, animating or artistic purposes.
 
-
-Sampling Bias
-=============
+.. rubric:: Sampling Bias
 
 Normal Bias
    Offset sampling of the irradiance grid in the surface normal direction to reduce light bleeding.
@@ -46,8 +47,7 @@ Facing Bias
    Increasing this bias will make the interpolation smoother but also introduce some light bleeding.
 
 
-Validity & Dilation
-===================
+.. rubric:: Validity & Dilation
 
 During the baking process, a validity score is assigned to each capture point.
 This score is based on the number of back-faces hit when capturing the incoming lighting.
@@ -60,14 +60,14 @@ Validity Threshold
 Dilation Threshold
    Capture points with validity below this threshold will have their data replaced using valid neighbors.
 
-Dilation radius
+Radius
    Radius in capture points in which to search for a valid neighbor.
 
 
 .. _eevee-lightprobe-volume-bake:
 
 Bake
-====
+----
 
 Light probe volume light data is static and needs to be manually baked.
 Once baked, the data is stored inside the object data-block and can be moved, animated and linked
@@ -79,6 +79,7 @@ between blender files.
 During baking, the scene is converted into a different representation to accelerate light transport.
 This representation can be very memory intensive and prevents baking if it cannot fit inside the GPU memory.
 There are a few way to deal with this issue:
+
 - Larger scenes should be divided into smaller sections or use different level of details.
 - Reduce *Surfel Resolution*.
 - Turn off the light probe volume visibility option on objects that have little to no effect in the bake.
@@ -88,6 +89,9 @@ There are a few way to deal with this issue:
    The internal scene representation can be inspected using the `Debug Value` 3, 4 and 5.
 
 Resolution
+----------
+
+Resolution X, Y, Z
    Spatial resolution for volumetric light probes is determined per probe.
    The local volume is divided into a regular grid of the specified dimensions.
    The lighting will be captured for each cell in this grid.
@@ -105,7 +109,7 @@ Surfel Resolution
 
 
 Capture
-=======
+-------
 
 Capture Distance
    Distance around the light probe volume that will be captured during the bake.
@@ -123,14 +127,14 @@ Emission Contribution
 
 
 Clamping
-========
+^^^^^^^^
 
-Clamp Direct
+Direct Light
    Clamp incoming direct light. 0.0 disables direct light clamping.
    Here direct light refers to the light that bounces only once (from the light object)
    or light coming from emissive materials.
 
-Clamp Indirect
+Indirect Light
    Clamp incoming indirect light. 0.0 disables indirect light clamping.
    Here indirect light refers to the light that bounces off a surface after the first bounce (from the light object)
    or during the first bounce if the light comes from emissive materials.
@@ -141,7 +145,7 @@ Clamp Indirect
 
 
 Offset
-======
+^^^^^^
 
 In order to reduce artifacts caused by bad capture point positioning,
 the bake process adjusts their location before capturing light.
@@ -160,7 +164,7 @@ Search Distance
 
 
 Viewport Display
-================
+----------------
 
 Data
    Show the captured light using small diffuse spheres of the given size.

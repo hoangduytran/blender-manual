@@ -1,5 +1,3 @@
-.. _bpy.types.SceneEEVEE.taa_samples:
-.. _bpy.types.SceneEEVEE.taa_render_samples:
 
 ********
 Sampling
@@ -12,8 +10,11 @@ TAA is sample based so the more samples the more aliasing is reduced at the cost
 
    :Panel:     :menuselection:`Render --> Sampling`
 
+
 Viewport
 ========
+
+.. _bpy.types.SceneEEVEE.taa_samples:
 
 Samples
    The number of samples to use in the 3D Viewport.
@@ -35,37 +36,46 @@ Jittered Shadows
 Render
 ======
 
+.. _bpy.types.SceneEEVEE.taa_render_samples:
+
 Samples
    The number of samples to use in the final render.
 
 
-.. _eevee-shadow-raytrace:
+.. _bpy.types.SceneEEVEE.use_shadows:
 
 Shadows
 =======
 
 .. _bpy.types.SceneEEVEE.shadow_ray_count:
 
-Shadow Rays Count
+Rays
    Number of rays to trace for each light.
    Higher values reduces the noise caused by random shadow sampling.
 
 .. _bpy.types.SceneEEVEE.shadow_step_count:
 
-Shadow Steps Count
+Steps
    Number of shadow map sample per shadow ray.
    Higher step count results in softer shadows but have a higher cost.
 
-.. _bpy.types.SceneEEVEE.volumetric_shadow:
+.. _bpy.types.SceneEEVEE.use_volumetric_shadows:
 
 Volumetric Shadows
    Approximate light absorption of the surrounding volume objects. This makes the volumes more opaque to light.
    This is a very computationally expensive option and has limitations.
 
+   .. _bpy.types.SceneEEVEE.volumetric_shadow_samples:
+
+   Steps
+      Number of steps to compute volumetric shadowing.
+
    .. seealso:: :ref:`Volume Limitations <eevee-limitations-volumetrics>`.
 
-Volumetric Shadows Steps
-   Number of steps to compute volumetric shadowing.
+.. _bpy.types.SceneEEVEE.shadow_resolution_scale:
+
+Resolution
+   Resolution percentage of shadow maps.
 
 
 Advanced

@@ -21,19 +21,20 @@ both in a movie frame and in a photograph from a real-world camera.
 Position
    Controls at what point the shutter opens in relation to the current frame.
 
-   Start on Frame
-      Shutter is starting to open at the current frame.
-   Center on Frame
-      Shutter is fully opened at the current frame.
-   End on Frame
-      Shutter is fully closed at the current frame.
+   :Start on Frame: Shutter is starting to open at the current frame.
+   :Center on Frame: Shutter is fully opened at the current frame.
+   :End on Frame: Shutter is fully closed at the current frame.
 
 Shutter
    Time (in frames) taken between shutter open and close.
 
-Background Separation
+Bleeding Bias
    Used by the post-process blur to avoid blurring the background over the foreground.
    Lower values will reduce background bleeding onto foreground elements.
+
+Max Blur
+   Max Blur is intended to act as an optimization tool by
+   limiting the number of pixels across which the blur is calculated.
 
 Steps
    This controls the number of steps used by the accumulation blur and thus its accuracy.

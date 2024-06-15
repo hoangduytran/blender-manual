@@ -28,9 +28,15 @@ will effectively capture the underside of the surface.
 You can manually move the light probe plane above the surface enough for it to not appear in the capture.
 Alternatively you can disable the light probe visibility in the object visibility panel.
 
+
+Properties
+==========
+
 .. reference::
 
    :Panel:     :menuselection:`Object Data --> Probe`
+
+.. _bpy.types.LightProbe.influence_distance:
 
 Distance
    A probe object only influences the lighting of surfaces inside its influence zone.
@@ -41,7 +47,9 @@ Distance
 
 
 Capture
-=======
+-------
+
+.. _bpy.types.LightProbe.clip_start:
 
 Clipping Offset
    Define how far below the plane the near clip is when capturing the scene.
@@ -49,7 +57,7 @@ Clipping Offset
 
 
 Viewport Display
-================
+----------------
 
 .. reference::
 

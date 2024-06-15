@@ -8,11 +8,10 @@ Clamping
    :Panel:     :menuselection:`Render --> Clamping`
 
 
-.. _bpy.types.SceneEEVEE.clamp_surface_direct:
-.. _bpy.types.SceneEEVEE.clamp_surface_indirect:
-
 Surface
-_______
+=======
+
+.. _bpy.types.SceneEEVEE.clamp_surface_direct:
 
 Direct Light
    This option limits the maximum light intensity a surface can reflect.
@@ -20,6 +19,7 @@ Direct Light
    Setting this option to 0.0 disables clamping altogether.
    Lower values have a greater effect on the resulting image than higher values.
 
+.. _bpy.types.SceneEEVEE.clamp_surface_indirect:
 
 Indirect Light
    Similar to **Direct Light** but limits the maximum light intensity reflected using ray-tracing and light-probes.
@@ -32,14 +32,16 @@ Indirect Light
     Care must be taken when using this setting to find a balance between mitigating fireflies and
     losing intentionally bright parts.
 
-.. _bpy.types.SceneEEVEE.clamp_volume_direct:
-.. _bpy.types.SceneEEVEE.clamp_volume_indirect:
 
 Volume
-______
+======
+
+.. _bpy.types.SceneEEVEE.clamp_volume_direct:
 
 Direct Light
    The same as *Surface Direct Light* but for volume direct lighting.
+
+.. _bpy.types.SceneEEVEE.clamp_volume_indirect:
 
 Indirect Light
    The same as *Surface Direct Light* but for volume indirect lighting.

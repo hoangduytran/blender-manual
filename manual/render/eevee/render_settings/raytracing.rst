@@ -1,4 +1,6 @@
 .. _bpy.types.SceneEEVEE.raytracing:
+.. _bpy.types.RaytraceEEVEE:
+.. _bpy.types.SceneEEVEE.use_raytracing:
 
 **********
 Raytracing
@@ -25,10 +27,8 @@ Method
    :Light Probe:
       Use light-probe spheres and planes to find scene intersection.
       This option has the lowest tracing cost but relies on manually placed light-probes.
-
    :Screen-Trace:
       Trace ray against the screen depth buffer. Fallback to light-probes if ray exits the view.
-
 
 Resolution
    Resolution at which the ray-tracing is performed.
@@ -41,7 +41,7 @@ Max Roughness
 
 
 Screen Tracing
-______________
+==============
 
 These settings control the behavior of the screen space ray-tracing.
 They are only visible if *Screen-Trace* is the active tracing *Method*.
@@ -55,8 +55,10 @@ Thickness
    Higher values will stretch the reflections and add flickering. Lower values may make the ray miss surfaces.
 
 
+.. _bpy.types.RaytraceEEVEE.use_denoise:
+
 Denoising
-_________
+=========
 
 Denoising can be enabled to reduce the amount of noise from the raw ray-traced output.
 This can help image stability but will also over-blur the final ray-traced output.
@@ -74,8 +76,10 @@ Bilateral Filter
    Blur the resolved ray-traced output using a bilateral filter.
 
 
+.. _bpy.types.SceneEEVEE.fast_gi:
+
 Fast GI Approximation
-_____________________
+=====================
 
 Fast GI Approximation is a fallback to the ray-tracing pipeline for
 :abbr:`BSDF (Bidirectional Scattering Distribution Function)` with high roughness.
@@ -89,7 +93,6 @@ Method
    :Ambient Occlusion:
       Use scene intersections to shadow the distant lighting from light-probes.
       This is the fastest option.
-
    :Global Illumination:
       Compute global illumination taking into account light bouncing off surrounding objects.
 
@@ -97,11 +100,11 @@ Resolution
    Resolution at which the fast GI is computed.
    Lower options will be faster and use less memory but will produce blurrier results.
 
-Ray Count
+Rays
    Number of GI rays per pixel at the specified *Resolution*.
    Higher values will reduce noise.
 
-Step Count
+Steps
    Number of screen samples per GI ray.
    Higher values will reduce the noise amount and increase the quality.
 
@@ -114,7 +117,6 @@ Precision
    Higher values increase the precision of the scene intersections with the GI rays.
    Increased precision also increases performance cost.
 
-
 Distance
    If non-zero, the maximum distance at which other surfaces will contribute to the fast GI approximation.
 
@@ -123,7 +125,10 @@ Thickness Near
    Reduces light leaking and missing contact occlusion.
    The effectiveness decreases proportionally to the distance from the shading point, following the inverse square law.
 
-Thickness Far
+Far
    Angular thickness of the surfaces when computing fast GI and ambient occlusion.
    Reduces energy loss and missing occlusion of far geometry.
    Higher values will make the very thin objects block or reflect too much light.
+
+Bias
+   Bias the shading normal to reduce self intersection artifacts.

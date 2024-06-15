@@ -1,26 +1,52 @@
-*****************
-Material Settings
-*****************
-
-.. reference::
-
-   :Panel:     :menuselection:`Properties --> Material --> Settings`
+*********
+Materials
+*********
 
 .. seealso::
 
    While EEVEE shares the same material node system as Cycles, not all features are supported.
    See :ref:`Shader nodes limitations <eevee-limitations-materials>`.
 
-Pass Index
-==========
 
-Index number for the *Material Index* :doc:`render pass </render/layers/passes>`.
-This can be used to give a mask to a material which then can be read with
-the :doc:`ID Mask Node </compositing/types/mask/id_mask>` in the Compositor.
+Thickness
+=========
+
+.. reference::
+
+   :Panel:     :menuselection:`Properties --> Material --> Thickness`
+
+This feature is used to approximate the inner geometry structure of the object without heavy computation.
+This is currently used for Subsurface, Translucent BSDF, Refraction BSDF and the nodes containing them.
+
+If no value is plugged into the output node, a default thickness based on the smallest dimension of the object is computed.
+If a value is connected it will be used as object space thickness (i.e. scaled by object transform).
+A value of zero will disable the thickness approximation and treat the object as having only one interface.
 
 .. note::
+   - The thickness is used to skip the inner part of the object.
+   - Refraction will not refract objects inside the thickness distance.
+   - Shadow casting object will not cast shadow within the thickness distance.
 
-   :doc:`Volume Objects </modeling/volumes/introduction>` dp not support the pass index.
+.. tip::
+   - For large or compound meshes (e.g. vegetation), the thickness should be set to the thickness of individual parts (e.g. leaves, grass blades).
+   - Thickness can be baked to textures or custom attributes for more accurate result.
+
+
+Material Settings
+=================
+
+.. reference::
+
+   :Panel:     :menuselection:`Properties --> Material --> Settings`
+
+Pass Index
+   Index number for the *Material Index* :doc:`render pass </render/layers/passes>`.
+   This can be used to give a mask to a material which then can be read with
+   the :doc:`ID Mask Node </compositing/types/mask/id_mask>` in the Compositor.
+
+   .. note::
+
+      :doc:`Volume Objects </modeling/volumes/introduction>` do not support the pass index.
 
 
 .. _bpy.types.Material.surface:
@@ -39,29 +65,19 @@ Backface Culling
       Use back face culling when casting shadows.
 
    Light Probe Volume
-      Use back face culling when baking light probe volumes.
-      Additionally helps rejecting capture point inside the object to avoid light leaking.
-
-   .. seealso::
-
-      :doc:`Light Probe Volume </render/eevee/light_probes/volume>`.
-
+      Use back face culling when baking :doc:`Light Probe Volumes </render/eevee/light_probes/volume>`.
+      Additionally helps rejecting capture point inside the object to avoid light leaking
 
 .. _bpy.types.Material.displacement:
 
 Displacement
-------------
-
-Displacement Type
    Controls how the displacement output from the shader node tree is used.
 
    :Bump Only:
       Use Bump Mapping to simulated the appearance of displacement.
       This only modifies the shading normal of the object. Vertex position is not affected.
-
    :Displacement Only:
       This mode is not supported and falls back to *Displacement and Bump*.
-
    :Displacement and Bump:
       Combination of true displacement and bump mapping for finer details.
       Vertex position is modified.
@@ -97,39 +113,35 @@ Render Method
       Allows for grayscale hashed transparency, and compatible with render passes and raytracing.
       Also know as deferred rendering.
 
+      When using *Dithered* render method, the materials are rendered in layers.
+      Each layer can only transmit (e.g. refract) light emitted from previous layers.
+      If no intersection with the layers below exists, the transmissive BSDFs will fallback to light probes.
+
+      Raytraced Transmission
+         Use raytracing to determine transmitted color instead of using only light probes.
+         This prevents the surface from contributing to the lighting of surfaces not using this setting.
+
    :Blended:
       Allows the colored transparency, but incompatible with render passes and raytracing.
       Also known as forward rendering.
 
+      .. admonition:: Sorting Problem
+         :class: important
 
-Dithered Layers
----------------
+         When using *Blended* render method, the order in which the color blending happens is important as it
+         can change the final output color. EEVEE does not support per-fragment (pixel) sorting or per-triangle sorting.
+         Only per-object sorting is available and is automatically done on all transparent surfaces based on object origin.
+         Opaque surfaces (i.e. that have no transparency) will still have correct sorting regardless of the render method.
 
-When using *Dithered* render method, the materials are rendered in layers.
-Each layer can only transmit (e.g. refract) light emitted from previous layers.
-If no intersection with the layers below exists, the transmissive BSDFs will fallback to light probes.
+         .. tip::
 
-Raytraced Transmission
-   Use raytracing to determine transmitted color instead of using only light probes.
-   This prevents the surface from contributing to the lighting of surfaces not using this setting.
+            Face order can be adjusted in edit mode by using :doc:`sort element </modeling/meshes/editing/mesh/sort_elements>`
+            or using a :doc:`geometry node </modeling/geometry_nodes/geometry/operations/sort_elements>`.
 
+      .. note::
 
-Sorting Problem
----------------
-
-When using *Blended* render method, the order in which the color blending happens is important as it
-can change the final output color. EEVEE does not support per-fragment (pixel) sorting or per-triangle sorting.
-Only per-object sorting is available and is automatically done on all transparent surfaces based on object origin.
-Opaque surfaces (i.e. that have no transparency) will still have correct sorting regardless of the render method.
-
-.. tip::
-   Face order can be adjusted in edit mode by using :doc:`sort element </modeling/meshes/editing/mesh/sort_elements>`
-   or using :doc:`geometry node </modeling/geometry_nodes/geometry/operations/sort_elements>`.
-
-.. note::
-
-   Per-object sorting has a performance cost and having thousands of
-   objects in a scene will greatly degrade performance.
+         Per-object sorting has a performance cost and having thousands of
+         objects in a scene will greatly degrade performance.
 
 .. _bpy.types.Material.use_transparency_overlap:
 
@@ -139,35 +151,14 @@ Transparency Overlap
    This option can be disabled to fix sorting issues caused by blending order.
    Only available for the *Blended* render method.
 
-
 .. _bpy.types.Material.thickness:
 
 Thickness
----------
-
-This feature is used to approximate the inner geometry structure of the object without heavy computation.
-This is currently used for Subsurface, Translucent BSDF, Refraction BSDF and the nodes containing them.
-
-If no value is plugged into the output node, a default thickness based on the smallest dimension of the object is computed.
-If a value is connected it will be used as object space thickness (i.e. scaled by object transform).
-A value of zero will disable the thickness approximation and treat the object as having only one interface.
-
-.. note::
-   - The thickness is used to skip the inner part of the object.
-   - Refraction will not refract objects inside the thickness distance.
-   - Shadow casting object will not cast shadow within the thickness distance.
-
-.. tip::
-   - For large or compound meshes (e.g. vegetation), the thickness should be set to the thickness of individual parts (e.g. leaves, grass blades).
-   - Thickness can be baked to textures or custom attributes for more accurate result.
-
-Thickness Mode
    Determines what model to use to approximate the object geometry.
 
    :Sphere:
       Approximate the object as a sphere whose diameter is equal to the thickness defined by the node tree.
       This is more suited to objects with rounder edges (e.g. a monkey head), and is perfectly suited to spheres.
-
    :Slab:
       Approximate the object as an infinite slab of thickness defined by the node tree.
       This is more suited to very flat or thin objects (e.g. glass panels, grass blades).
@@ -180,10 +171,10 @@ From Shadow
    However, this will have a performance impact that scale with the number of render samples.
 
 
-.. _bpy.types.Material.volume:
-
 Volume
 ======
+
+.. _bpy.types.Material.volume_intersection_method:
 
 Intersection
    Determines which inner part of the mesh will produce volumetric effect.
@@ -191,7 +182,6 @@ Intersection
    :Fast:
       Each face is considered as a medium interface. Gives correct results for manifold geometry
       that contains no inner part.
-
    :Accurate:
       Faces are considered as medium interface only when they have different consecutive facing.
       Gives correct results as long as the max ray depth is not exceeded. Has significant memory

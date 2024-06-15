@@ -4,7 +4,7 @@ Object
 ******
 
 Ray Visibility
---------------
+==============
 
 Objects can be set to be invisible to particular ray types.
 This can be used, for example, to make an emitting mesh invisible to camera rays.
@@ -21,7 +21,7 @@ Shadow
 
 
 Light Probes
-------------
+============
 
 Objects can be set to not be captured by certain :doc:`light probe </render/eevee/light_probes/introduction>`.
 This can be used, for example, to avoid animated object being recorded into static light probes.
