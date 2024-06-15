@@ -16,7 +16,7 @@ Most of the time you can get add-ons as part of the :doc:`Extensions <index>` sy
 .. tip::
 
    If the Add-on does not activate when enabled,
-   check the :doc:`Console window </advanced/command_line/introduction>`
+   check the :doc:`Console window </advanced/command_line/index>`
    for any errors that may have occurred.
 
 User-Defined Add-on Path

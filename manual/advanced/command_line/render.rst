@@ -1,8 +1,8 @@
 .. _command_line-render:
 
-**********************
-Command Line Rendering
-**********************
+*******************************
+Rendering From The Command Line
+*******************************
 
 In some situations we want to increase the render speed,
 access Blender remotely to render something or build scripts that use the command line.
