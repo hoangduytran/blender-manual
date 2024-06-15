@@ -118,7 +118,7 @@ In the header, you can use the presets, which choose optimum settings for you fo
 
 .. tip::
 
-   When you view the :doc:`System Console </advanced/command_line/introduction>`,
+   When you view the :doc:`System Console </advanced/command_line/index>`,
    you can see some of the output of the encoding process.
    You will see even more output if you execute Blender as ``blender -d``.
 

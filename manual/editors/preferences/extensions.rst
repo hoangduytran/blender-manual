@@ -76,7 +76,7 @@ Some extension types do not support this, and will always be shown as enabled.
 .. tip::
 
    If the Add-on does not activate when enabled,
-   check the :doc:`Console window </advanced/command_line/introduction>`
+   check the :doc:`Console window </advanced/command_line/index>`
    for any errors that may have occurred.
 
 
