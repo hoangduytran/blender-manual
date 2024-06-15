@@ -19,8 +19,10 @@ These nodes are only available if EEVEE is the active render engine. These nodes
 Shader to RGB
 -------------
 
-EEVEE supports the conversion of BSDF outputs into color inputs to make any kind of custom shading.
+EEVEE supports the conversion of BSDF outputs into color inputs to make a wide variety of custom shading.
 This is supported using the :doc:`Shader to RGB </render/shader_nodes/converter/shader_to_rgb>` node.
+This node evaluates the lighting of the BSDFs connected to it just like a *Blended* material and inherits
+its limitation.
 
 
 Specular BSDF
@@ -51,24 +53,18 @@ Although most BSDFs are supported, many of them are approximations and are not f
 Diffuse BSDF
    Roughness is not supported. Only Lambertian diffusion is supported.
 
-Emission
-   Treated as indirect lighting and will only show up in :abbr:`SSR (Screen Space Reflection)`\ s and Probes.
-
 Glass / Refraction BSDF
-   Does not refract lights. Does not support Beckmann distribution.
-   See :ref:`Refraction limitations <eevee-limitations-refraction>`.
+   Only supports GGX and Multiscatter GGX distribution.
+   See :ref:`Raytracing limitations <eevee-limitations-raytracing>`.
 
 Glossy BSDF
-   Does not support Beckmann and Ashikhmin-Shirley distributions.
+   Only supports GGX and Multiscatter GGX distributions.
 
 Subsurface Scattering
-   Random Walk sampling is not supported. Per color channel Radius is specified by the default socket value.
-   Any link plugged into this socket gets ignored.
-   Texture Blur is not accurate for any value other than 0.0 and 1.0.
+   Random Walk sampling, IOR and Anisotropic are not supported.
 
 Transparent BSDF
-   Transparency will only have an effect if the Material blend mode is not Opaque.
-   Colored and additive transparency are only compatible with "Alpha Blend" mode.
+   Colored and additive transparency are only compatible with blended modes.
 
 Translucent BSDF
    Does not diffuse the light inside the object. It only lights the object with reversed normals.
@@ -89,8 +85,7 @@ Principled Volume
    Same as Volume Scatter. See :ref:`Volume Limitation <eevee-limitations-volumetrics>`.
 
 Holdout
-   Partially supported, using :ref:`Blend Modes <bpy.types.Material.blend_method>`
-   other than *Alpha* may give incorrect results.
+   Partially supported, using dithered mode may give incorrect results.
 
 Anisotropic BSDF
    Not supported.
@@ -114,9 +109,6 @@ Input Nodes
 Ambient Occlusion
    The *Only Local* option is not supported.
 
-Camera Data
-   EveHair Inforything is compatible.
-
 Geometry
    Pointiness is not supported.
 
@@ -132,37 +124,26 @@ Attribute
 Bevel
    Not supported.
 
-Fresnel
-   Everything is compatible.
-
 Curves Info
    The Random output uses a different :abbr:`RNG (Random Number Generator)` algorithm.
    Range and statistical distribution of the values should be the same but the values will be different.
-
-Layer Weight
-   Everything is compatible.
 
 Light Path
    EEVEE has no real concept of rays. But in order to ease the workflow between Cycles and EEVEE
    some of the outputs are only supported in particular cases.
    This node makes it possible to tweak indirect lighting in the shader.
 
-   Only a subset of the outputs are supported and the ray depth does not exactly have the same meaning.
-   In order for the *Is Camera*, *Is Shadow*, *Is Diffuse*, and *Is Glossy* outputs to work,
-   the object must be inside an :doc:`Irradiance Volume </render/eevee/light_probes/irradiance_volumes>`
-   and :doc:`/render/eevee/render_settings/indirect_lighting` must be baked.
-
    - *Is Camera*: Supported.
    - *Is Shadow*: Supported.
-   - *Is Diffuse*: Supported.
-   - *Is Glossy*: Supported.
+   - *Is Diffuse*: Set to 1.0 when baking light probe volume. Otherwise is set to 0.0.
+   - *Is Glossy*: Set to 1.0 when baking light probe sphere or plane. Otherwise is set to 0.0.
    - *Is Singular*: Not supported. Same as Is Glossy.
    - *Is Reflection*: Not supported. Same as Is Glossy.
    - *Is Transmission*: Not supported. Same as Is Glossy.
    - *Ray Length*: Not supported. Defaults to 1.0.
-   - *Ray Depth*: Indicates the current bounce when baking the light cache.
-   - *Diffuse Depth*: Same as Ray Depth but only when baking diffuse light.
-   - *Glossy Depth*: Same as Ray Depth but only when baking specular light.
+   - *Ray Depth*: Not supported. Defaults to 0.0.
+   - *Diffuse Depth*: Partially supported. Set to 1.0 when baking light probe volume. Otherwise is set to 0.0.
+   - *Glossy Depth*: Partially supported. Set to 1.0 when baking light probe sphere or plane. Otherwise is set to 0.0.
    - *Transparent Depth*: Not supported. Defaults to 0.
    - *Transmission Depth*: Not supported. Same as Glossy Depth.
 
@@ -171,14 +152,8 @@ Light Path
       *Is Glossy* does not work with Screen Space Reflections/Refractions
       but does work with reflection planes (whether used with SSR or not).
 
-Object Info
-   Everything is compatible.
-
 Particle Info
    Not supported.
-
-Tangent
-   Everything is compatible.
 
 Texture Coordinate
    *From Instancer* is not supported.
@@ -218,12 +193,3 @@ Other Nodes
 
 Light Falloff
    Not supported.
-
-Bump
-   Imprecision due to less precise derivatives.
-
-Displacement/Vector Displacement
-   Not supported.
-
-Material Output
-   Displacement output behavior is broken compared to Cycles.

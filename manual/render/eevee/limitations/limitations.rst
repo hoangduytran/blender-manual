@@ -25,35 +25,33 @@ Cameras
 Lights
 ======
 
-- Only 128 active lights can be supported by EEVEE in a scene.
-- Only 8 Shadowed sun lights can be supported at the same time.
-- As of now, lights can only have one color and do not support light node trees.
+- Lights can only have one color and do not support light node trees.
+- Unlike in Cycles, the :ref:`Size <bpy.types.SpotLight.shadow_soft_size>` of spot lights does not change the softness of the cone.
+- The area light :ref:`Beam spread <bpy.types.SpotLight.spot_size>` option is not supported.
 
 
 Light Probes
 ============
 
-- EEVEE only supports up to 128 active Reflection Cubemaps.
-- EEVEE only supports up to 64 active Irradiance Volumes.
-- EEVEE only supports up to 16 active Reflection Planes inside the view frustum.
-
+- EEVEE supports up to 128 active light probe spheres.
+- EEVEE supports up to 16 active light probe planes inside the view frustum.
+- Active light probe volumes must fit inside the :ref:`Light Probes Volume Memory Pool <bpy.types.SceneEEVEE.gi_irradiance_pool_size>`.
 
 Indirect Lighting
 =================
 
-- Volumetrics don't receive light from Irradiance Volumes but do receive world's diffuse lighting.
-- EEVEE does not support "specular to diffuse" light bounces nor "specular to specular" light bounces.
-- All specular lighting is turned off during baking.
-
+- Light probe capture does not support specular reflections. Specular energy is treated as diffuse.
 
 .. _eevee-limitations-shadows:
 
 Shadows
 =======
 
-- Only 128 active lights can be supported by EEVEE in a scene.
-- Only 8 Shadowed sun lights can be supported at the same time.
-
+- *Shadow Map Raytracing* can produce light leaking because of overlapping shadow casters.
+  This can be mitigated by using lower :ref:`step count <bpy.types.SceneEEVEE.shadow_step_count>`, enabling
+  :ref:`jitter <bpy.types.Light.use_shadow_jitter>`, or reducing the light shape size.
+- Thin objects (e.g. walls without thickness) might have light leaking on the shadowed side.
+  This can be mitigated by making the object have some thickness or lowering :ref:`Resolution Limit<bpy.types.Light.shadow_maximum_resolution>`.
 
 .. _eevee-limitations-volumetrics:
 
@@ -62,10 +60,8 @@ Volumetrics
 
 - Only single scattering is supported.
 - Volumetrics are rendered only for the camera "rays". They don't appear in reflections/refractions and probes.
-- Volumetrics don't receive light from Irradiance Volumes but do receive diffuse lighting from the world.
 - Volumetric shadowing only work in volumetrics. They won't cast shadows onto solid objects in the scene.
 - Volumetric shadowing only work for volumes inside the view frustum.
-- Volumetric lighting do not respect the lights shapes. They are treated as point lights.
 
 
 .. _eevee-limitations-dof:
@@ -73,15 +69,16 @@ Volumetrics
 Depth of Field
 ==============
 
-- Alpha blended surfaces cannot be correctly handled by the post-processing blur,
+- Blended materials cannot be correctly handled by the post-processing blur,
   but will be correctly handled by the sample-based method. For this, you need to
   disable the post-process depth of field by setting the *Max Size* to 0.
 
+.. _eevee-limitations-screenspace:
 
 Screen Space Effects
 ====================
 
-EEVEE is not a ray tracing engine and cannot do ray-triangle intersection.
+Ray-triangle intersection is not currently supported.
 Instead of this, EEVEE uses the depth buffer as an approximated scene representation.
 This reduces the complexity of scene scale effects and enables a higher performance.
 However, only what is in inside the view can be considered when computing these effects.
@@ -93,83 +90,26 @@ These limitations creates a few problems:
   This can be partially fixed by using the *overscan* feature.
 - Screen space effects lack deep information (or the thickness of objects).
   This is why most effects have a thickness parameter to control how to consider potential intersected pixels.
+- Objects behind other objects (occluded) are not considered by these effects.
 - Blended surfaces are not considered by these effects.
   They are not part of the depth prepass and do not appear in the depth buffer.
 - Objects that a part of :ref:`Holdout Collections <bpy.ops.outliner.collection_holdout_set>`
   will not be rendered with screen space effects.
 
 
-.. _eevee-limitations-ao:
+.. _eevee-limitations-raytracing:
 
-Ambient Occlusion
------------------
+Raytracing
+----------
 
-- Objects are treated as infinitely thick, producing overshadowing if the *Distance* is really large.
-
-
-.. _eevee-limitations-reflections:
-
-Screen Space Reflections
-------------------------
-
-- Only one glossy BSDF can emit screen space reflections.
-- The evaluated BSDF is currently arbitrarily chosen.
-- Screen Space Reflections will reflect transparent objects and objects using Screen Space Refraction
-  but without accurate positioning due to the one layer depth buffer.
-
-
-.. _eevee-limitations-refraction:
-
-Screen Space Refraction
------------------------
-
+- Blended materials and materials using raytrace refractions will not appear in dithered materials reflections.
+- Blended materials are not compatible with raytracing.
 - Only one refraction event is correctly modeled.
-- Only opaque and alpha hashed materials can be refracted.
-
-
-.. _eevee-limitations-sss:
-
-Subsurface Scattering
----------------------
-
-- Only one BSSRDF can produce screen space subsurface scattering.
-- The evaluated BSSRDF is currently arbitrarily chosen.
-- A maximum of 254 different surfaces can use subsurface scattering.
-- Only scaling is adjustable per pixel. Individual RGB radii are adjustable in the socket default value.
-- Input radiance from each surfaces are not isolated during the blurring,
-  leading to light leaking from surface to surface.
-
-
-Motion Blur
-===========
-
-:doc:`Motion Blur </render/eevee/render_settings/motion_blur>`
-is only available in final renders and is not shown in the 3D Viewport
-and thus :ref:`Viewport Renders <bpy.ops.render.opengl>`.
+  An approximation of the second refraction event can be achieved using the :ref:`Thickness workflow <bpy.types.Material.thickness>`.
+- Only dithered materials *not* using Raytrace Refractions can be refracted.
 
 
 .. _eevee-limitations-materials:
-
-Materials
-=========
-
-Refractions
-   Refraction is faked by sampling the same reflection probe used by the Glossy BSDFs,
-   but using the refracted view direction instead of the reflected view direction.
-   Only the first refraction event is modeled correctly.
-   An approximation of the second refraction event can be used for relatively thin objects using Refraction Depth.
-   Using Screen Space refraction will refract what is visible inside the view,
-   and use the nearest probe if there is no hit.
-
-   Screen Space Reflections and Ambient Occlusion are not compatible with Screen Space Refraction;
-   they will be disabled on the surfaces that use it.
-   Surfaces that use Screen Space Refraction will not appear in Screen Space Reflections at the right place.
-   Surfaces that use Screen Space Refraction will not cast Ambient Occlusion onto other surfaces.
-
-Volume Objects
-   Object volume shaders will affect the whole bounding box of the object.
-   The shape of the volume must be adjusted using procedural texturing inside the shader.
-
 
 Shader Nodes
 ============
@@ -177,10 +117,14 @@ Shader Nodes
 - All BSDF's are using approximations to achieve realtime performance
   so there will always be small differences between Cycles and EEVEE.
 - Some utility nodes are not yet compatible with EEVEE.
+- Certain combinations of BSDF's will result in more noise than others.
+  This is the case when mixing Diffuse BSDF and Refraction BSDF.
+- Displacement of flat shaded surfaces will split the mesh into triangles.
+  See :ref:`Displacement <bpy.types.Material.displacement>` for a workaround.
 
 .. seealso::
 
-   For a full list of unsupported nodes see :doc:`Nodes Support </render/eevee/materials/nodes_support>`.
+   For a full list of unsupported nodes see :doc:`Nodes Support </render/eevee/limitations/nodes_support>`.
 
 
 Memory Management
@@ -221,4 +165,4 @@ multiple :abbr:`GPU (Graphic Processing Unit, also known as Graphics Card)` syst
 Headless Rendering
 ==================
 
-There is currently no support for using EEVEE on headless systems (i.e. without a Display Manager).
+Headless rendering is not supported on headless Windows systems.

@@ -71,9 +71,6 @@ some of the outputs are only supported in particular cases.
 This node makes it possible to tweak indirect lighting in the shader.
 
 Only a subset of the outputs are supported and the ray depth does not exactly have the same meaning.
-In order for the *Is Camera*, *Is Shadow*, *Is Diffuse*, and *Is Glossy* outputs to work,
-the object must be inside an :doc:`Irradiance Volume </render/eevee/light_probes/irradiance_volumes>`
-and :doc:`/render/eevee/render_settings/indirect_lighting` must be baked.
 
 - *Is Camera*: Supported.
 - *Is Shadow*: Supported.

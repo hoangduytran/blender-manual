@@ -81,7 +81,8 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    tags = ["Animation", "Sequencer"]
 
    blender_version_min = "4.2.0"
-   # Optional: maximum supported Blender version
+   ## Optional: Blender version that the extension does not support, earlier versions are supported.
+   ## This can be omitted and defined later on the extensions platform if an issue is found.
    # blender_version_max = "5.1.0"
 
    # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
@@ -148,7 +149,7 @@ Required values:
 
 Optional values:
 
-   :blender_version_max: Maximum version of Blender that can run this.
+   :blender_version_max: Blender version that the extension does not support, earlier versions are supported.
    :website: Website for the extension.
    :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
    :tags: List of tags. See the :doc:`list of available tags <./tags>`.

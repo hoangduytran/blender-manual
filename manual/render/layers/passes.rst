@@ -187,7 +187,7 @@ Bloom
 .. _bpy.types.ViewLayerEEVEE.use_pass_transparent:
 
 Transparency
-   Contain :ref:`Alpha Blended <bpy.types.Material.blend_method>` surfaces,
+   Contain :ref:`Blended <bpy.types.Material.render_method>` surfaces,
    so they can be adjusted in the compositor and later mixed with opaque passes.
 
    This pass only supports monochromatic opacity.
@@ -329,8 +329,8 @@ The passes can be combined to produce the final image as follows:
 Known Limitations
 =================
 
-- Alpha blended materials are not rendered in render passes except the combined pass.
-  Use the *Alpha Clip* or *Alpha Hashed* as :ref:`Blending Mode <bpy.types.Material.blend_method>`
+- Blended materials are not rendered in render passes except the combined pass.
+  Use the *Dithered* as :ref:`Render Method <bpy.types.Material.render_method>`
   to render transparent materials in render passes.
 - Depth of field is not rendered in render passes except the combined pass.
   It is possible to add the depth of field back in the Compositor using

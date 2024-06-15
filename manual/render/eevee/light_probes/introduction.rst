@@ -3,10 +3,10 @@
 Introduction
 ************
 
-Probe objects are used by EEVEE as support objects.
-They record lighting information locally in order to light the scene using indirect lighting.
+Light probe objects are used by EEVEE as support objects.
 
-There are three different probe types. One for diffuse lighting, two for specular lighting.
+There are three different types of light probes.
+Each type of light probe records the lighting at a different resolution and frequency.
+Probes are used together to recover incoming light information when using ray tracing is not possible (either for performance or for technical limitations).
 
 These types of objects are only useful for EEVEE (and by extension, the Material Preview mode).
-They are meant to guide the engine to compute better lighting quickly.

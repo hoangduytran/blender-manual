@@ -124,16 +124,16 @@ Path Layout
   Located in user directories.
 
   ``./config/startup.blend``
-     Blend file to load on startup.
+    Blend file to load on startup.
 
   ``./config/userpref.blend``
-     User preferences.
+    User preferences.
 
   ``./config/bookmarks.txt``
-     File Browser bookmarks.
+    File Browser bookmarks.
 
   ``./config/recent-files.txt``
-     Recent file menu list.
+    Recent file menu list.
 
   ``./config/{APP_TEMPLATE_ID}/startup.blend``
     Startup file for an application template.
@@ -148,13 +148,13 @@ Path Layout
   or add to system data files.
 
   ``./datafiles/colormanagement``
-     Default OpenColorIO configuration.
+    Default OpenColorIO configuration.
 
   ``./datafiles/fonts``
-     User interface fonts.
+    User interface fonts.
 
   ``./datafiles/studiolights``
-     Studio light images for 3D viewport.
+    Studio light images for 3D viewport.
 
 ``./extensions``
   Extension repositories.
@@ -169,46 +169,46 @@ Path Layout
   both directories.
 
   ``./scripts/addons/*.py``
-     Python add-ons which may be enabled in the Preferences include import/export format support,
-     render engine integration and many handy utilities.
+    Python add-ons which may be enabled in the Preferences include import/export format support,
+    render engine integration and many handy utilities.
 
   ``./scripts/addons/modules/*.py``
-     Modules for add-ons to use
-     (added to Python's ``sys.path``).
+    Modules for add-ons to use
+    (added to Python's ``sys.path``).
 
   ``./scripts/addons_core/*.py``
-     The add-ons directory which is used for bundled add-ons.
+    The add-ons directory which is used for bundled add-ons.
 
   ``./scripts/addons_core/modules/*.py``
-     Modules for ``addons_core`` to use (added to Python's ``sys.path`` when it found).
+    Modules for ``addons_core`` to use (added to Python's ``sys.path`` when it found).
 
   ``./scripts/modules/*.py``
-     Python modules containing our core API and utility functions for other scripts to import
-     (added to Python's ``sys.path``).
+    Python modules containing our core API and utility functions for other scripts to import
+    (added to Python's ``sys.path``).
 
   ``./scripts/startup/*.py``
-     Scripts which are automatically imported on startup.
+    Scripts which are automatically imported on startup.
 
-   ``/scripts/startup/bl_app_templates_user/{APP_TEMPLATE_ID}``
-     Application templates installed in user directories.
+    ``./scripts/startup/bl_app_templates_user/{APP_TEMPLATE_ID}``
+      Application templates installed in user directories.
 
-   ``/scripts/startup/bl_app_templates_system/{APP_TEMPLATE_ID}``
-     Application templates automatically loaded from system directories.
+    ``./scripts/startup/bl_app_templates_system/{APP_TEMPLATE_ID}``
+       pplication templates automatically loaded from system directories.
 
   ``./scripts/presets/{preset}/*.py``
-     Presets used for storing user-defined settings for cloth, render formats, etc.
+    Presets used for storing user-defined settings for cloth, render formats, etc.
 
   ``./scripts/templates_py/*.py``
-     Example scripts which can be accessed from :menuselection:`Text Editor --> Templates --> Python`.
+    Example scripts which can be accessed from :menuselection:`Text Editor --> Templates --> Python`.
 
   ``./scripts/templates_osl/*.osl``
-     Example OSL shaders which can be accessed from
-     :menuselection:`Text Editor --> Templates --> Open Shading Language`.
+    Example OSL shaders which can be accessed from
+    :menuselection:`Text Editor --> Templates --> Open Shading Language`.
 
 ``./python``
-   Bundled Python distribution.
+  Bundled Python distribution.
 
-   Located in system directories.
+  Located in system directories.
 
 
 .. _local-cache-dir:

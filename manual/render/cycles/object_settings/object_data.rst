@@ -76,8 +76,6 @@ Transmission
 Volume Scatter
    Makes the object visible in volumetric scatter rays.
 
-.. _bpy.types.Object.visible_shadow:
-
 Shadow
    Enables the object to cast shadows.
 

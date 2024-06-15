@@ -1,4 +1,4 @@
-.. _bpy.types.SceneEEVEE.bokeh_max_size:
+.. _bpy.types.SceneEEVEE.bokeh:
 
 **************
 Depth of Field
@@ -48,13 +48,7 @@ Neighbor Rejection
    Lower values will improve the performance but will also reduce the quality of highlights.
    Brightness is in the scene's referred color space.
 
-Denoise Amount
-   This will reduce the flickering by clamping the color of
-   each pixels to their neighborhood's average instead of their maximum.
-   Higher values gives more stable results but may darken the scene.
-
-High Quality Slight Defocus
-   Increase the quality of almost in-focus regions.
+.. _bpy.types.SceneEEVEE.use_bokeh_jittered:
 
 Jitter Camera
    Randomize the camera position for every scene render sample to increase precision.
@@ -76,7 +70,7 @@ Jitter Camera
       The :math:`ring\_count` is chosen so that the entire pattern contains at least the number of
       samples set in the :doc:`Render Settings </render/eevee/render_settings/sampling>`.
 
-Overblur
+Over-blur
    Scales the post-process depth of field radius to reduce artifacts. Higher values will soften the bokeh shape.
 
 .. seealso:: :ref:`Limitations <eevee-limitations-dof>`.
