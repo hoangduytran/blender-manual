@@ -17,6 +17,10 @@ to export/import Collada files from/to a variety of tools.
 But please be aware that the Collada module is still a work in progress.
 So it may be possible that your particular usage scenario is not yet supported.
 
+.. important::
+
+   Collada support in Blender is considered deprecated and may be removed in a future version.
+
 
 Collada Exporter
 ================
