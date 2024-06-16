@@ -78,15 +78,21 @@ Include Shape Keys
 Global Orientation
 ^^^^^^^^^^^^^^^^^^
 
-Todo.
+Apply
+   Rotate all root objects to match the global orientation settings otherwise set the global orientation per Collada asset.
+
+Forward / Up Axis
+   Since many applications use a different axis for pointing upwards, these are axis conversion for these settings,
+   Forward and up axes -- By mapping these to different axes you can convert rotations
+   between applications default up and forward axes.
+
+   Blender uses Y forward, Z up (since the front view looks along the +Y direction).
+   For example, it is common for applications to use Y as the up axis, in that case -Z forward, Y up is needed.
 
 
 Texture Options
 ^^^^^^^^^^^^^^^
 
-Only Selected UV Map
-   When your mesh contains multiple UV layers, then Blender exports all layers by default.
-   This option allows you to only export the active (selected) UV layer.
 Copy
    When you export images either material based image textures,
    then the exporter creates absolute file references in the export file.
@@ -94,6 +100,9 @@ Copy
    But if the *Copy* option is enabled, the exporter will create copies of the images instead and
    place the copies besides the export file. In that case the file references are made relative.
 
+Only Selected UV Map
+   When your mesh contains multiple UV layers, then Blender exports all layers by default.
+   This option allows you to only export the active (selected) UV layer.
 
 Geometry
 --------
