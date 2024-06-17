@@ -94,6 +94,16 @@ For All Users
    - The thumbnailer is installed so blend-file thumbnails will be shown in file managers (**For All Users** only).
 
 
+Network
+=======
+
+.. _bpy.types.PreferencesSystem.use_online_access:
+
+Allow Online Access
+   Allow internet access. Blender may access configured online extension repositories.
+   Installed third party add-ons may access the internet for their own functionality.
+
+
 .. _prefs-system-memory-and-limits:
 
 Memory & Limits
