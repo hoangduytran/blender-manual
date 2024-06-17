@@ -207,7 +207,7 @@ Pack
      - |none|
      - Particle settings.
        Used by particle systems.
-   * - :doc:`Light Probe </render/eevee/light_probes/introduction>`
+   * - :doc:`Light Probe </render/eevee/light_probes/index>`
      - |tick|
      - |none|
      - Help achieve complex real-time lighting in EEVEE.
