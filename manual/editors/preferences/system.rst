@@ -71,6 +71,9 @@ Operating System Settings
 
 Make this installation your default Blender (MS-Windows & Linux only).
 
+On Linux, if Blender is installed from a package manager such as Snap,
+file association is handled by the package manager.
+
 Register
    Make the currently in use Blender installation the default
    for generating thumbnails and the default for opening blend-files.
@@ -81,9 +84,8 @@ For All Users
    Register Blender for all users, requires escalated privileges.
 
 
-.. note::
-
-   Linux Registration
+.. admonition:: Linux Registration
+   :class: note
 
    Files are setup files under: ``/usr/local`` for all users, otherwise ``~/.local`` is used.
 
