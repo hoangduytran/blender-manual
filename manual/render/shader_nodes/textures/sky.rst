@@ -25,15 +25,18 @@ Properties
 Sky Type
    Sky model to use.
 
-   :Preetham:
+   Preetham
       Based on the 1999 `paper <https://doi.org/10.1145/311535.311545>`__ by Preetham et al.
-   :Hosek/Wilkie:
+   Hosek/Wilkie
       Based on the 2012 `paper <https://cgg.mff.cuni.cz/projects/SkylightModelling/>`__ by Hosek and Wilkie.
-   :Nishita:
+   Nishita
       Improved version of the 1993
       `model <https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky/simulating-
       colors-of-the-sky.html>`__
       by Nishita et al.
+
+      Note that this sky type is quite bright and makes the image look overexposed with the default scene settings.
+      You can reduce the Exposure setting in :menuselection:`Properties --> Render --> Film` to fix this.
 
 Sun Direction
    Sun direction vector.
