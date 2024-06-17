@@ -243,3 +243,9 @@ RedirectMatch "^/manual/{lang}/{version}/editors/nla/editing.html" "^/manual/{la
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/shader/anisotropic.html" "^/manual/{lang}/{version}/render/shader_nodes/shader/glossy.html"
 
 RedirectMatch "^/manual/{lang}/{version}/files/import_export.html" "^/manual/{lang}/{version}/files/import_export/index.html"
+
+RedirectMatch "^/manual/{lang}/{version}/render/eevee/light_probes/introduction.html" "^/manual/{lang}/{version}/render/eevee/light_probes/index.html"
+RedirectMatch "^/manual/{lang}/{version}/movie_clip/introduction.html" "^/manual/{lang}/{version}/movie_clip/index.html"
+RedirectMatch "^/manual/{lang}/{version}/getting_started/about/introduction.html" "^/manual/{lang}/{version}/getting_started/about/index.html"
+RedirectMatch "^/manual/{lang}/{version}/animation/armatures/bones/properties/introduction.html" "^/manual/{lang}/{version}/animation/armatures/bones/properties/index.html"
+RedirectMatch "^/manual/{lang}/{version}/advanced/command_line/introduction.html" "^/manual/{lang}/{version}/advanced/command_line/index.html"

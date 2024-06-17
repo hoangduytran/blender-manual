@@ -44,9 +44,11 @@ This option is controlled by Preferences, which can be overriding via command-li
 (``--offline-mode`` / ``--online-mode``).
 
 For better error messages, you can check also for ``bpy.app.online_access_overriden``,
-to determine whether users can turn ``Allow Online Access`` on the preferences, or not.
+to determine whether users can turn :ref:`Allow Online Access <bpy.types.PreferencesSystem.use_online_access>`
+on the preferences, or not.
 
 Blender itself doesn't block internet access based on this setting. It is up to the add-ons to respect it.
+
 
 Bundle Dependencies
 ===================
@@ -72,6 +74,7 @@ Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
 
    This has the advantage of avoiding version conflicts although it requires some work to setup each package.
 
+
 .. This section is reference for legacy add-on installation.
 .. _bpy.ops.preferences.addon_install:
 
@@ -88,6 +91,7 @@ Preferences.
 All add-on maintainers are urged to convert the add-ons they want to share, so they are future proof and can support
 features like updating from the extensions platform.
 
+
 Converting a Legacy Add-on into an Extension
 --------------------------------------------
 
@@ -103,6 +107,7 @@ Converting a Legacy Add-on into an Extension
    For testing it is import to :doc:`install the extension from disk </editors/preferences/extensions>` and check if
    everything is working well. This will get you as close to the final experience as possible.
 
+
 Extensions and Namespace
 ------------------------
 
@@ -113,6 +118,7 @@ To prevent this conflict, the repository name is now part of the namespace.
 For example, now instead of ``kitsu`` the module name would be ``bl_ext.{repository_module_name}.kitsu`` instead.
 
 This has a few implications for preferences and module imports.
+
 
 User Preferences and ``__package__``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -5,8 +5,6 @@
 World Settings
 **************
 
-.. _bpy.types.WorldMistSettings:
-
 Mist Pass
 =========
 
@@ -24,18 +22,12 @@ Mist can greatly enhance the illusion of depth in your rendering. To create mist
 Blender generates a render layer with a depth map ranging between 0.0 and 1.0
 that can be used in the Compositor to generate a mist effect.
 
-.. _bpy.types.WorldMistSettings.start:
-
 Start
    The distance from the camera at which the mist starts to fade in.
-
-.. _bpy.types.WorldMistSettings.depth:
 
 Depth
    The distance from *Start* of the mist, that it fades in over.
    Objects further from the camera than *Start + Depth* are completely hidden by the mist.
-
-.. _bpy.types.WorldMistSettings.falloff:
 
 Falloff
    The curve function that controls the rate of change of the mist's strength further and further into the distance.

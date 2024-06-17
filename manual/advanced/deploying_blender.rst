@@ -10,6 +10,7 @@ For example in an animation studio or for school courses.
 
 This page contains tips setting up Blender in such environments.
 
+
 Installing Blender
 ==================
 
@@ -23,17 +24,20 @@ change the results of production files. For a given project, it is
 advisable to use a single :abbr:`LTS (Long-Term-Support)` version
 of Blender. LTS versions receive bug fixes for two years.
 
+
 Working Offline
 ===============
 
 For security or other reasons, workstation may not have internet access.
 
 By default Blender does not access the internet, however this can be
-enabled in the System preferences with the Online Access option.
+enabled in the System preferences with the
+:ref:`Online Access <bpy.types.PreferencesSystem.use_online_access>` option.
 
 Working offline can be enforced by running with the ``--offline-mode``
 :ref:`command line argument <command-line-args-network-options>`. Users
 will then be unable to enable online access in the preferences.
+
 
 .. _deploying-blender-bundling:
 
@@ -65,6 +69,7 @@ In the Extensions preferences, it's possible to manually set a custom
 directory of the default System repository and to create multiple
 repositories.
 
+
 Bundling Scripts
 ================
 
@@ -78,6 +83,7 @@ without modifying the preferences.
 These script directories are expected to contain specific directories
 like ``presets``, ``addons`` and ``startup`` for different types of
 scripts. See :ref:`blender-directory-path-layout` for a complete list.
+
 
 Startup Scripts
 ---------------
@@ -103,6 +109,7 @@ For example, a script can enable add-ons for every user.
    if __name__ == "__main__":
        register()
 
+
 Application Templates
 ---------------------
 
@@ -116,6 +123,7 @@ The files are expected to be placed in the system script directories like this:
 
    $BLENDER_SYSTEM_SCRIPTS/startup/bl_app_templates_system/MyTemplate/__init__.py
    $BLENDER_SYSTEM_SCRIPTS/startup/bl_app_templates_system/MyTemplate/startup.blend
+
 
 Legacy Add-ons
 --------------
@@ -137,6 +145,7 @@ VFX Platform
 Blender follows the `VFX reference platform <https://vfxplatform.com>`_,
 which means it is able to run on the same systems as other VFX software
 and exchange image, volume and scene files with them.
+
 
 Python Version
 --------------

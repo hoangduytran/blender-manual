@@ -9,6 +9,9 @@ to arbitrary textures.
 In EEVEE, the world lighting contribution is stored into an internal :doc:`Light Probe </render/eevee/light_probes/index>`.
 This makes the lighting less precise than Cycles.
 
+
+.. _bpy.types.WorldMistSettings:
+
 Mist Pass
 =========
 

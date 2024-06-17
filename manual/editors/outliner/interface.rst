@@ -57,6 +57,7 @@ Display Filter
 
 You can search the view for data-blocks,
 by using Search field in the header of the *Outliner*,
+You can start a search using :kbd:`Ctrl-F` or clear a search with :kbd:`Alt-F`.
 
 
 .. _editors-outliner-interface-filter:

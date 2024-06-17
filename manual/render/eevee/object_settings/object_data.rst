@@ -23,7 +23,7 @@ Shadow
 Light Probes
 ============
 
-Objects can be set to not be captured by certain :doc:`light probe </render/eevee/light_probes/introduction>`.
+Objects can be set to not be captured by certain :doc:`light probe </render/eevee/light_probes/index>`.
 This can be used, for example, to avoid animated object being recorded into static light probes.
 For instanced objects, visibility is inherited; if the parent object is hidden for some ray types,
 the children will be hidden for these too.

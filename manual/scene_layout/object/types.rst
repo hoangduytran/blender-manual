@@ -52,9 +52,13 @@ New objects can be created with the *Add* menu in the 3D Viewport's header.
    Empty objects that display images in the 3D Viewport.
    These images can be used to aid artists in modeling or animating.
 
+   Image Plane
+      Adds a :ref:`mesh plane <bpy.ops.mesh.primitive_plane_add>` with materials and texture from an image file.
+      The dimensions of the plane are calculated to match the aspect of the image file.
+
 :doc:`Light </render/lights/light_object>`
    Empty objects that emit light and are used for lighting the scene in renders.
-:doc:`Light Probe </render/eevee/light_probes/introduction>`
+:doc:`Light Probe </render/eevee/light_probes/index>`
    Used by the EEVEE render engine to record lighting information for indirect lighting.
 
 :doc:`Camera </render/cameras>`
@@ -84,17 +88,15 @@ Type
    You can change the type of some objects after their creation with a selector.
 Radius/Size
    Sets the starting size.
-
 Align
    Rotates the new object so that it is aligned in one of the following manners:
 
-   World
+   :World:
       Aligns the object to the global space axes, i.e. the object's front faces the negative Y axis (default).
-   View
+   :View:
       Aligns the object to the view space axes, i.e. the object's front faces the viewport's point of view.
-   3D Cursor
+   :3D Cursor:
       Aligns the object to match the rotation of the :doc:`3D Cursor </editors/3dview/3d_cursor>`.
-
 Location
    Objects are placed, by default, at the position of the 3D Cursor.
    These values let you place the object in an other position.
