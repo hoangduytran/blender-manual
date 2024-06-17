@@ -11,6 +11,7 @@ Extrude Curve and Move
 .. reference::
 
    :Mode:      Edit Mode
+   :Menu:      :menuselection:`Control Points --> Extrude Curve and Move`
    :Shortcut:  :kbd:`E`
 
 Extrudes points by duplicating the selected points, which then can be moved,
