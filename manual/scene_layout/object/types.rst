@@ -84,17 +84,15 @@ Type
    You can change the type of some objects after their creation with a selector.
 Radius/Size
    Sets the starting size.
-
 Align
    Rotates the new object so that it is aligned in one of the following manners:
 
-   World
+   :World:
       Aligns the object to the global space axes, i.e. the object's front faces the negative Y axis (default).
-   View
+   :View:
       Aligns the object to the view space axes, i.e. the object's front faces the viewport's point of view.
-   3D Cursor
+   :3D Cursor:
       Aligns the object to match the rotation of the :doc:`3D Cursor </editors/3dview/3d_cursor>`.
-
 Location
    Objects are placed, by default, at the position of the 3D Cursor.
    These values let you place the object in an other position.

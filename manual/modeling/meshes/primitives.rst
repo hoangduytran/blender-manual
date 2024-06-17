@@ -69,12 +69,9 @@ Vertices
 Fill Type
    Set how the circle will be filled.
 
-   Triangle Fan
-      Fill with triangular faces which share a vertex in the middle.
-   N-gon
-      Fill with a single :term:`N-gon`.
-   Nothing
-      Do not fill. Creates only the outer ring of vertices.
+   :Triangle Fan: Fill with triangular faces which share a vertex in the middle.
+   :N-gon: Fill with a single :term:`N-gon`.
+   :Nothing: Do not fill. Creates only the outer ring of vertices.
 
 
 .. _bpy.ops.mesh.primitive_uv_sphere_add:
@@ -220,13 +217,14 @@ This is intended as a test mesh, similar to:
 - `Utah Teapot <https://en.wikipedia.org/wiki/Utah_teapot>`__
 - `Stanford Bunny <https://en.wikipedia.org/wiki/Stanford_Bunny>`__.
 
-.. hint:: History
+.. admonition:: History
+   :class: tip
 
    This is a gift from old NaN to the community and is seen as a programmer's joke or
    "Easter Egg". It creates a monkey's head once you press the *Monkey* button.
    The Monkey's name is "Suzanne" and is Blender's mascot.
 
-.. note:: Add-ons
+.. note::
 
    In addition to the basic geometric primitives can be added via extensions
    These are available from the :doc:`Preferences </editors/preferences/extensions>`.
