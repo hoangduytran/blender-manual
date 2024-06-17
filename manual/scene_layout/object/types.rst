@@ -52,6 +52,10 @@ New objects can be created with the *Add* menu in the 3D Viewport's header.
    Empty objects that display images in the 3D Viewport.
    These images can be used to aid artists in modeling or animating.
 
+   Image Plane
+      Adds a :ref:`mesh plane <bpy.ops.mesh.primitive_plane_add>` with materials and texture from an image file.
+      The dimensions of the plane are calculated to match the aspect of the image file.
+
 :doc:`Light </render/lights/light_object>`
    Empty objects that emit light and are used for lighting the scene in renders.
 :doc:`Light Probe </render/eevee/light_probes/introduction>`

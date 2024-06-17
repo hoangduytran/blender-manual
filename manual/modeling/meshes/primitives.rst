@@ -48,6 +48,17 @@ It is like a piece of paper lying on a table;
 it is not a three-dimensional object because it is flat and has no thickness.
 Objects that can be created with planes include floors, tabletops, or mirrors.
 
+.. seealso::
+
+   :ref:`Import Images as Planes <bpy.ops.image.import_as_mesh_planes>`
+   adds a mesh plane with materials and texture from an image file.
+   The dimensions of the plane are calculated to match the aspect of the image file.
+
+.. toctree::
+   :hidden:
+
+   import_images_as_planes.rst
+
 
 .. _bpy.ops.mesh.primitive_cube_add:
 
