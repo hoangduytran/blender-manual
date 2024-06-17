@@ -7,6 +7,11 @@ Check the :doc:`Downloading Blender </getting_started/installing/index>`
 page to find the minimum requirements and the different versions that are available
 for Blender (if you have not done so yet).
 
+.. important::
+
+   Blender supports both Intel and Apple Silicon architectures on macOS.
+   Make sure to download a variant that is compatible with your CPU's architecture.
+
 
 Install from DMG
 ================
