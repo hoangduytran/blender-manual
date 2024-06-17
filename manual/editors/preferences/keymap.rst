@@ -25,11 +25,11 @@ Keymap Presets
 
    .. _bpy.ops.wm.keyconfig_preset_add:
 
-   You add a custom keymap configuration to the preset list by ``LMB`` on the *Add* button ``+``.
+   You add a custom keymap configuration to the preset list by :kbd:`LMB` on the *Add* button ``+``.
 
    .. _bpy.ops.wm.keyconfig_preset_remove:
 
-   You remove a custom keymap configuration from the preset list by ``LMB`` on the *Remove* button ``-``.
+   You remove a custom keymap configuration from the preset list by :kbd:`LMB` on the *Remove* button ``-``.
 
 .. _bpy.ops.preferences.keyconfig_import:
 

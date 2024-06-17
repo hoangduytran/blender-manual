@@ -16,7 +16,6 @@
    :maxdepth: 1
 
    interface.rst
-   themes.rst
    viewport.rst
    lights.rst
    editing.rst
@@ -26,6 +25,7 @@
    :maxdepth: 1
 
    extensions.rst
+   themes.rst
 
 .. toctree::
    :maxdepth: 1

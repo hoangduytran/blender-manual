@@ -9,6 +9,11 @@ for Blender (if you have not done so yet).
 
 Download the zip-file or Windows Installer File.
 
+.. important::
+
+   Blender supports both x64 and arm64 architectures on Windows.
+   Make sure to download a variant that is compatible with your CPU's architecture.
+
 
 Install from Windows Installer File
 ===================================

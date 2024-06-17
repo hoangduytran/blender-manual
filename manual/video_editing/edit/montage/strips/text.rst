@@ -41,6 +41,16 @@ Color
    The text color.
 Shadow
    Creates a shadow of the specified color under the text.
+Shadow Angle
+   Defines the position of the shadow as an angle, 0° being to the right and 90° being below.
+Shadow Offset
+   Amount to shift the shadow compared to the normal text.
+Shadow Blur
+   Amount to blur the shadow.
+Outline
+   Creates a line with the defined color enclosing the shape of the text.
+Outline Width
+   The thickness of the outline.
 Box
    Creates a background for the text to improve the readability and clarity of text in some situations.
    The color and opacity of the box can be adjusted using the color selector.

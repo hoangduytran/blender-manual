@@ -35,11 +35,62 @@ Transform
 - Shear :kbd:`Shift-Ctrl-Alt-S`
 
 
-Axis Locking
-------------
+.. rubric:: Axis Locking
 
 Transformations can be locked to an axis by pressing :kbd:`X` or :kbd:`Y` after one of the transform tools.
 Also, holding the :kbd:`MMB` will constrain movement to the X or Y axis.
+
+
+Vertex Slide
+------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Transform --> Vertex Slide`
+
+Vertex Slide will transform a vertex along one of its adjacent edges.
+Use :kbd:`Shift-V` to activate tool.
+The nearest selected vertex to the mouse cursor will be the control one.
+Move the mouse along the direction of the desired edge to specify the vertex position.
+Then press :kbd:`LMB` to confirm the transformation.
+
+Factor
+   Determines the amount of slide performed.
+   Negative values correspond to slides toward one vertex, while positive ones, refer to the other one.
+Even :kbd:`E`
+   By default, the offset value of the vertices is a percentage of the edges length along which they move.
+   When Even mode is active, the vertices are shifted by an absolute value.
+Flipped :kbd:`F`
+   When Flipped is active, vertices move the same distance from adjacent vertices,
+   instead of moving from their original position.
+Clamp :kbd:`Alt` or :kbd:`C`
+   Toggle clamping the slide within the edge extents.
+
+
+Edge Slide
+----------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Transform --> Edge Slide`
+
+Slides one or more edges across adjacent faces with a few restrictions involving the selection
+of edges (i.e. the selection *must* define a valid loop, see below).
+
+Factor
+   Determines the amount of slide performed.
+   Negative values correspond to slides toward one face, while positive ones, refer to the other one.
+Even :kbd:`E`
+   Forces the edge loop to match the shape of the adjacent edge loop.
+   You can flip to the opposite vertex using :kbd:`F`.
+Flipped :kbd:`F`
+   When Even mode is active, this flips between the two adjacent edge loops the active edge loop will match.
+Clamp :kbd:`Alt` or :kbd:`C`
+   Toggle clamping the slide within the edge extents.
+Mirror Editing
+   Lets you propagate the operation to the symmetrical elements of the mesh (if present, in local X direction).
 
 
 Randomize
@@ -58,16 +109,12 @@ similar to *Randomize Transform* tool in the 3d view.
 Random Seed
    Changes the random :term:`seed` used by the pseudo-random number generator,
    producing a different transform result for each seed value.
-
 Location
    Amount to randomize location.
-
 Rotation
    Amount to randomize rotation.
-
 Scale Even
    Apply the same scale to the U coordinate and V coordinate.
-
 Scale
    Amount to randomize scale in U and V coordinates.
 
