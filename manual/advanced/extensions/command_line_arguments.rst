@@ -238,7 +238,7 @@ usage::
        blender --command extension build [-h] [--source-dir SOURCE_DIR]
                                          [--output-dir OUTPUT_DIR]
                                          [--output-filepath OUTPUT_FILEPATH]
-                                         [--verbose]
+                                         [--split-platforms] [--verbose]
 
 Build a package in the current directory.
 
@@ -256,6 +256,11 @@ options:
                         The package output filepath (should include a ``.zip`` extension).
 
                         Defaults to a name created using the ``id`` from the manifest.
+  --split-platforms     Build a separate package for each platform.
+                        Adding the platform as a file name suffix (before the extension).
+
+                        This can be useful to reduce the upload size of packages that bundle large
+                        platform-specific modules (``*.whl`` files).
   --verbose             Include verbose output.
 
 .. _command-line-args-extension-validate:
