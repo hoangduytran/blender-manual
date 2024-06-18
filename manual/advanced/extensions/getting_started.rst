@@ -81,8 +81,8 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    tags = ["Animation", "Sequencer"]
 
    blender_version_min = "4.2.0"
-   ## Optional: Blender version that the extension does not support, earlier versions are supported.
-   ## This can be omitted and defined later on the extensions platform if an issue is found.
+   # # Optional: Blender version that the extension does not support, earlier versions are supported.
+   # # This can be omitted and defined later on the extensions platform if an issue is found.
    # blender_version_max = "5.1.0"
 
    # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
@@ -107,19 +107,19 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    #   "./wheels/jsmin-3.0.1-py3-none-any.whl",
    # ]
 
-   ## Optional: add-ons can list which resources they will require:
-   ## * files (for access of any filesystem operations)
-   ## * network (for internet access)
-   ## * clipboard (to read and/or write the system clipboard)
-   ## * camera (to capture photos and videos)
-   ## * microphone (to capture audio)
-   ##
-   ## If using network, remember to also check `bpy.app.online_access`
-   ## https://docs.blender.org/manual/en/dev/advanced/extensions/addons.html#internet-access
-   ##
-   ## For each permission it is important to also specify the reason why it is required.
-   ## Keep this a single short sentence without a period (.) at the end.
-   ## For longer explanations use the documentation or detail page.
+   # # Optional: add-ons can list which resources they will require:
+   # # * files (for access of any filesystem operations)
+   # # * network (for internet access)
+   # # * clipboard (to read and/or write the system clipboard)
+   # # * camera (to capture photos and videos)
+   # # * microphone (to capture audio)
+   # #
+   # # If using network, remember to also check `bpy.app.online_access`
+   # # https://docs.blender.org/manual/en/dev/advanced/extensions/addons.html#internet-access
+   # #
+   # # For each permission it is important to also specify the reason why it is required.
+   # # Keep this a single short sentence without a period (.) at the end.
+   # # For longer explanations use the documentation or detail page.
    #
    # [permissions]
    # network = "Need to sync motion-capture data to server"
