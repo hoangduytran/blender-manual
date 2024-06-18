@@ -161,7 +161,7 @@ Optional values:
    :permissions:
       Add-ons can list which resources they require. The available options are
       *files*, *network*, *clipboard*, *camera*, *microphone*.
-      Each permission should be followed by an explanation (short single-sentence with no end pontuation (.)).
+      Each permission should be followed by an explanation (short single-sentence with no end punctuation (``.``)).
 
 Optional values for "build":
 
@@ -187,6 +187,11 @@ Optional values for "build":
         ".*",
         "*.zip",
       ]
+
+Reserved:
+   These values **must not** be declared in a TOML and are reserved for internal use.
+
+   - ``[build.generated]``
 
 
 .. note::
