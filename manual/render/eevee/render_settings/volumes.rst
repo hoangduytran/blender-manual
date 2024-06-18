@@ -34,8 +34,10 @@ Custom Range
 When working with volume objects, EEVEE automatically computes the best depth range where to compute
 the volume sampling and lighting.
 In certain situations, this isn't enough and produces sub-optimal sampling which increases noise.
-This is particularly the case when using a volume shader inside the *World* or when working with large number of volume objects.
-The custom depth range can be enabled to restrict the computation of volumes to a certain range along the camera depth and thus increase precision.
+This is particularly the case when using a volume shader inside the *World* or when working with large
+number of volume objects.
+The custom depth range can be enabled to restrict the computation of volumes to a certain range along
+the camera depth and thus increase precision.
 
 Start
    Start distance of the volumetric effect.

@@ -26,7 +26,8 @@ Indirect Light
 
 .. note::
 
-    These options provide a way to limit :term:`Fireflies` and :term:`Aliasing` of highly reflective surfaces and dense volumes.
+    These options provide a way to limit :term:`Fireflies` and :term:`Aliasing`
+    of highly reflective surfaces and dense volumes.
     However, note that as you clamp out such values, other bright lights will be dimmed as well.
 
     Care must be taken when using this setting to find a balance between mitigating fireflies and

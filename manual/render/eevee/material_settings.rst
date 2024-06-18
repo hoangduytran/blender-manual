@@ -18,7 +18,8 @@ Thickness
 This feature is used to approximate the inner geometry structure of the object without heavy computation.
 This is currently used for Subsurface, Translucent BSDF, Refraction BSDF and the nodes containing them.
 
-If no value is plugged into the output node, a default thickness based on the smallest dimension of the object is computed.
+If no value is plugged into the output node, a default thickness based on the smallest dimension of the object
+is computed.
 If a value is connected it will be used as object space thickness (i.e. scaled by object transform).
 A value of zero will disable the thickness approximation and treat the object as having only one interface.
 
@@ -28,7 +29,8 @@ A value of zero will disable the thickness approximation and treat the object as
    - Shadow casting object will not cast shadow within the thickness distance.
 
 .. tip::
-   - For large or compound meshes (e.g. vegetation), the thickness should be set to the thickness of individual parts (e.g. leaves, grass blades).
+   - For large or compound meshes (e.g. vegetation),
+     the thickness should be set to the thickness of individual parts (e.g. leaves, grass blades).
    - Thickness can be baked to textures or custom attributes for more accurate result.
 
 
@@ -83,11 +85,13 @@ Displacement
       Vertex position is modified.
 
    .. note::
+
       This type of displacement is not precomputed. It has a performance impact multiplied by the
       render sample count. However, the evaluation is much faster than doing it using geometry
       nodes or a displacement modifier.
 
    .. note::
+
       Displacing flat shaded geometry will split adjacent faces.
       This can be worked around by passing the vertex normals as a custom attribute.
 
@@ -128,15 +132,19 @@ Render Method
       .. admonition:: Sorting Problem
          :class: important
 
-         When using *Blended* render method, the order in which the color blending happens is important as it
-         can change the final output color. EEVEE does not support per-fragment (pixel) sorting or per-triangle sorting.
-         Only per-object sorting is available and is automatically done on all transparent surfaces based on object origin.
-         Opaque surfaces (i.e. that have no transparency) will still have correct sorting regardless of the render method.
+         When using *Blended* render method, the order in which the color blending
+         happens is important as it can change the final output color.
+         EEVEE does not support per-fragment (pixel) sorting or per-triangle sorting.
+         Only per-object sorting is available and is automatically done on all
+         transparent surfaces based on object origin.
+         Opaque surfaces (i.e. that have no transparency)
+         will still have correct sorting regardless of the render method.
 
          .. tip::
 
-            Face order can be adjusted in edit mode by using :doc:`sort element </modeling/meshes/editing/mesh/sort_elements>`
-            or using a :doc:`geometry node </modeling/geometry_nodes/geometry/operations/sort_elements>`.
+            Face order can be adjusted in edit mode by using
+            :doc:`sort element </modeling/meshes/editing/mesh/sort_elements>` or using a
+            :doc:`geometry node </modeling/geometry_nodes/geometry/operations/sort_elements>`.
 
       .. note::
 

@@ -16,6 +16,7 @@ in Edit Mode, and then cuts into the faces there. Afterwards, the resulting geom
 inside the cut gets selected.
 
 .. note::
+
    The cutting objects must be curves or non-manifold meshes (e.g. flat shapes, loose edges).
    :ref:`Select Non-Manifold <bpy.ops.mesh.select_non_manifold>`
    will highlight the cutting edges of mesh objects.

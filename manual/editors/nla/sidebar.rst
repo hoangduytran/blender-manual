@@ -164,6 +164,7 @@ Lets you manually specify, and animate, the frame at which the underlying action
 is sampled.
 
 .. note::
+
    Although the setting is called *Strip Time*, its value is a frame number
    inside the action, not inside the strip. If you have an action going
    from frame 1 to frame 50 that's referenced by a strip going from frame

@@ -50,6 +50,7 @@ Active Shape Key Index
       and tools that move vertices abort with an error if the active shape key is locked.
 
       .. note::
+
          Operators that always modify all shape keys in exactly the same way, like
          :ref:`Apply Object Transforms <bpy.ops.object.transform_apply>`, don't check shape key locks.
          Neither currently do most edit mode operators that modify topology, because the topology is

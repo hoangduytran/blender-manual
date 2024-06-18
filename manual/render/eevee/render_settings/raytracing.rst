@@ -15,7 +15,8 @@ This is done by generating ray from each :abbr:`BSDF (Bidirectional Scattering D
 and finding their intersection with the scene individually.
 
 When disabled, it is replaced by a faster pipeline that uses pre-filtered light-probes.
-This fallback mode offers a more visually stable and optimized alternative when visual fidelity is not the primary goal.
+This fallback mode offers a more visually stable and optimized alternative when visual
+fidelity is not the primary goal.
 
 .. seealso::
 
@@ -85,7 +86,8 @@ Fast GI Approximation is a fallback to the ray-tracing pipeline for
 :abbr:`BSDF (Bidirectional Scattering Distribution Function)` with high roughness.
 It produces a less noisy output and captures bounce lighting more efficiently than individually traced rays.
 
-This is currently implemented as a screen space effect and will inherit all associated :ref:`limitations <eevee-limitations-screenspace>`.
+This is currently implemented as a screen space effect and will inherit all associated
+:ref:`limitations <eevee-limitations-screenspace>`.
 
 Method
    Determine the method used to compute the fast GI approximation.
@@ -111,7 +113,8 @@ Steps
    .. tip::
 
       With a higher step count, there is less chance to miss other surfaces that could reflect or block the light.
-      This means that the Fast GI *Thickness* parameters can be tweaked to lower values without losing too much light bounce energy.
+      This means that the Fast GI *Thickness* parameters can be tweaked to lower values without losing too much light
+      bounce energy.
 
 Precision
    Higher values increase the precision of the scene intersections with the GI rays.
@@ -123,7 +126,8 @@ Distance
 Thickness Near
    Geometric thickness of the surfaces when computing fast GI and ambient occlusion.
    Reduces light leaking and missing contact occlusion.
-   The effectiveness decreases proportionally to the distance from the shading point, following the inverse square law.
+   The effectiveness decreases proportionally to the distance from the shading point,
+   following the inverse square law.
 
 Far
    Angular thickness of the surfaces when computing fast GI and ambient occlusion.

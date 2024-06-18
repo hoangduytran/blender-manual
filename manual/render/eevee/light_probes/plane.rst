@@ -11,8 +11,8 @@ This type of light probe is suited to smooth planar surfaces.
 Each visible planar light probe increases the render time as the scene needs to be rendered for
 each of them.
 
-Light probe planes only work when the ray tracing method is set to `Screen-Trace`. When enabled, they
-accelerate the tracing process and complete the missing data from the screen space ray tracing.
+Light probe planes only work when the ray tracing method is set to ``Screen-Trace``.
+When enabled, they accelerate the tracing process and complete the missing data from the screen space ray tracing.
 
 .. note::
 
