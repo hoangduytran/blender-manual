@@ -153,7 +153,10 @@ Playback
 Play In
    Which editors to update on each animation frame. If an editor is unchecked,
    it'll only be updated once playback stops (with some exceptions where it'll
-   update on each frame anyway).
+   update on each frame anyway). When starting playback in either the :doc:`Graph Editor </editors/graph_editor/introduction>`,
+   :doc:`Dope Sheet </editors/dope_sheet/introduction>` or the :doc:`NLA Editor</editors/nla/introduction>`, 
+   all editors will play back regardless of the settings. 
+   This is a feature requested by animators to easily play back all views.
 
 .. _bpy.types.Scene.show_subframe:
 
