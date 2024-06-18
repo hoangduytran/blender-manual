@@ -103,6 +103,15 @@ Allow Online Access
    Allow internet access. Blender may access configured online extension repositories.
    Installed third party add-ons may access the internet for their own functionality.
 
+Time Out
+   The time (in seconds) that online operations may wait before timing out.
+
+   Use the systems default when zero.
+
+Connection Limit
+   The maximum number of simultaneous connections an online operation may make.
+
+   Do not limit the number of connections when zero.
 
 .. _prefs-system-memory-and-limits:
 
