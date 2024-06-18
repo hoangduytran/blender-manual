@@ -74,6 +74,7 @@ Once baked, the data is stored inside the object data-block and can be moved, an
 between blender files.
 
 .. note::
+
    Baking uses the render visibility of the objects in the scene.
 
 During baking, the scene is converted into a different representation to accelerate light transport.
@@ -86,7 +87,7 @@ There are a few way to deal with this issue:
 
 .. tip::
 
-   The internal scene representation can be inspected using the `Debug Value` 3, 4 and 5.
+   The internal scene representation can be inspected using the ``Debug Value`` 3, 4 and 5.
 
 Resolution
 ----------
@@ -105,6 +106,7 @@ Surfel Resolution
    Higher values increase quality, but have a huge impact on memory usage.
 
    .. tip::
+
       A good value is twice the maximum *Resolution*.
 
 

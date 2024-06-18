@@ -105,6 +105,7 @@ Both Render Regions can exist at the same time.
      - .. figure:: /images/editors_3dview_navigate_regions_render-border-2.png
 
 .. note::
+
    Render regions only apply to the viewport when using Cycles, not when using EEVEE.
    However, they always affect the final render.
 

@@ -79,7 +79,8 @@ Global Orientation
 ^^^^^^^^^^^^^^^^^^
 
 Apply
-   Rotate all root objects to match the global orientation settings otherwise set the global orientation per Collada asset.
+   Rotate all root objects to match the global orientation settings otherwise set the global orientation per Collada
+   asset.
 
 Forward / Up Axis
    Since many applications use a different axis for pointing upwards, these are axis conversion for these settings,

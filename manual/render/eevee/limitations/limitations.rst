@@ -26,7 +26,8 @@ Lights
 ======
 
 - Lights can only have one color and do not support light node trees.
-- Unlike in Cycles, the :ref:`Size <bpy.types.SpotLight.shadow_soft_size>` of spot lights does not change the softness of the cone.
+- Unlike in Cycles, the :ref:`Size <bpy.types.SpotLight.shadow_soft_size>`
+  of spot lights does not change the softness of the cone.
 - The area light :ref:`Beam spread <bpy.types.SpotLight.spot_size>` option is not supported.
 
 
@@ -35,7 +36,8 @@ Light Probes
 
 - EEVEE supports up to 128 active light probe spheres.
 - EEVEE supports up to 16 active light probe planes inside the view frustum.
-- Active light probe volumes must fit inside the :ref:`Light Probes Volume Memory Pool <bpy.types.SceneEEVEE.gi_irradiance_pool_size>`.
+- Active light probe volumes must fit inside the
+  :ref:`Light Probes Volume Memory Pool <bpy.types.SceneEEVEE.gi_irradiance_pool_size>`.
 
 Indirect Lighting
 =================
@@ -51,7 +53,8 @@ Shadows
   This can be mitigated by using lower :ref:`step count <bpy.types.SceneEEVEE.shadow_step_count>`, enabling
   :ref:`jitter <bpy.types.Light.use_shadow_jitter>`, or reducing the light shape size.
 - Thin objects (e.g. walls without thickness) might have light leaking on the shadowed side.
-  This can be mitigated by making the object have some thickness or lowering :ref:`Resolution Limit<bpy.types.Light.shadow_maximum_resolution>`.
+  This can be mitigated by making the object have some thickness or lowering
+  :ref:`Resolution Limit<bpy.types.Light.shadow_maximum_resolution>`.
 
 .. _eevee-limitations-volumetrics:
 
@@ -105,7 +108,8 @@ Raytracing
 - Blended materials and materials using raytrace refractions will not appear in dithered materials reflections.
 - Blended materials are not compatible with raytracing.
 - Only one refraction event is correctly modeled.
-  An approximation of the second refraction event can be achieved using the :ref:`Thickness workflow <bpy.types.Material.thickness>`.
+  An approximation of the second refraction event can be achieved using the
+  :ref:`Thickness workflow <bpy.types.Material.thickness>`.
 - Only dithered materials *not* using Raytrace Refractions can be refracted.
 
 

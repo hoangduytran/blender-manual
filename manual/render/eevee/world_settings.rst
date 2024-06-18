@@ -6,7 +6,8 @@ World Settings
 The world environment can emit light, ranging from a single solid color
 to arbitrary textures.
 
-In EEVEE, the world lighting contribution is stored into an internal :doc:`Light Probe </render/eevee/light_probes/index>`.
+In EEVEE, the world lighting contribution is stored into an internal
+:doc:`Light Probe </render/eevee/light_probes/index>`.
 This makes the lighting less precise than Cycles.
 
 
@@ -86,7 +87,8 @@ Resolution
 Sun
 ---
 
-EEVEE can separate the light from intense light sources (e.g. a sun from an outdoor :abbr:`HDRI (High Dynamic Range Imaging)`) and
+EEVEE can separate the light from intense light sources
+(e.g. a sun from an outdoor :abbr:`HDRI (High Dynamic Range Imaging)`) and
 replace them with a sun light. This increases the quality of the lighting as the internal light probes
 alone cannot reproduce this type of lighting with enough precision.
 

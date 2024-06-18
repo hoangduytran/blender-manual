@@ -24,6 +24,7 @@ Cursor
    (works with all tools) or adjust the 2D Cursor Location in :menuselection:`Sidebar --> View`.
 
    .. note::
+
       By default, the 2D Cursor is only shown while dragging it. To make it permanently
       visible, enable the *2D Cursor* :doc:`overlay </editors/video_sequencer/preview/display/overlays>`.
 

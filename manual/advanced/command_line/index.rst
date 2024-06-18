@@ -27,7 +27,7 @@ for specific instructions on launching Blender from the command line.
 
 
 Launching from the Command Line
-================================
+===============================
 
 .. toctree::
    :hidden:

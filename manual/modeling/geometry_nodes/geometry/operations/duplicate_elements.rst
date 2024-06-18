@@ -57,7 +57,7 @@ Geometry
 Duplicate Index
    An attribute field with a value for every output element describing which
    duplicate of the corresponding input. The value for every input element will
-   start at 0 and increase to `Amount - 1`.
+   start at 0 and increase to ``Amount - 1``.
 
 
 Examples

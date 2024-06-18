@@ -17,6 +17,7 @@ RGB to BW Node
 The *RGB to BW Node* makes a color image black-and-white by outputting its luminance.
 
 .. note::
+
    You can directly connect Color sockets to Value sockets in node graphs,
    which also converts the image to black-and-white. As such, this node is
    not always necessary.

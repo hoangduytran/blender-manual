@@ -44,7 +44,9 @@ Jitter
    Has a high performance impact as the shadow map cannot be cached and needs to be updated for each render sample.
 
    .. note::
-      The effect isn't visible by default in the viewport. See :ref:`render settings <bpy.types.SceneEEVEE.use_shadow_jitter_viewport>`.
+
+      The effect isn't visible by default in the viewport.
+      See :ref:`render settings <bpy.types.SceneEEVEE.use_shadow_jitter_viewport>`.
 
 .. _bpy.types.Light.shadow_jitter_overblur:
 
@@ -52,6 +54,7 @@ Overblur
    Apply shadow tracing to each jittered sample to reduce under-sampling artifacts.
 
    .. note::
+
       Any value higher than zero will result in a blurrier shadow and is not physically correct.
 
 .. _bpy.types.Light.shadow_filter_radius:
@@ -61,6 +64,7 @@ Filter
    The effective world scale of the filter depends on the shadow map resolution at the shadowed pixel position.
 
    .. note::
+
       Any value bigger than 1px will increase the chances of light leaking artifacts.
 
 .. _bpy.types.Light.shadow_maximum_resolution:
@@ -73,32 +77,40 @@ Resolution Limit
    This property limits the maximum amount of detail that the shadow map can capture.
 
    .. note::
+
       Reducing the shadow map resolution will increase the chances of light leaking artifacts.
 
 .. _bpy.types.Light.use_absolute_resolution:
 
 Absolute Resolution Limit
    Limit the resolution at 1 unit from the light origin instead of relative to the shadowed pixel.
-   This makes :ref:`Resolution Limit <bpy.types.Light.shadow_maximum_resolution>` act as a regular shadow map pixel size.
+   This makes :ref:`Resolution Limit <bpy.types.Light.shadow_maximum_resolution>`
+   act as a regular shadow map pixel size.
 
    .. hint::
 
-      With this option enabled, the following equation can be used to set the *Resolution Limit* with a desired resolution:
+      With this option enabled, the following equation can be used to set the *Resolution Limit*
+      with a desired resolution:
 
       .. math::
+
          resolution\_limit = 2 * \sqrt{2} / resolution
 
-      The :math:`2 * \sqrt{2}` refers to the unit cube diagonal and :math:`resolution` refers to the desired resolution (e.g. 1024px).
+      The :math:`2 * \sqrt{2}` refers to the unit cube diagonal and
+      :math:`resolution` refers to the desired resolution (e.g. 1024px).
 
    .. note::
-      The setting :ref:`Absolute Resolution Limit <bpy.types.Light.use_absolute_resolution>` does not exist for Sun Light.
+
+      The setting :ref:`Absolute Resolution Limit <bpy.types.Light.use_absolute_resolution>`
+      does not exist for Sun Light.
 
 
 Influence
 =========
 
 These parameters modulate the intensity of the light depending on the shader type.
-These are meant for artistic control, and any value other than 1.0 breaks :abbr:`PBR (Physically Based Rendering)` rules.
+These are meant for artistic control, and any value other than 1.0 breaks
+:abbr:`PBR (Physically Based Rendering)` rules.
 
 .. _bpy.types.Light.diffuse_factor:
 
@@ -137,6 +149,7 @@ Distance
    Specifies where light influence will be set to 0.
 
 .. note::
+
    The setting :ref:`Custom Distance <bpy.types.Light.use_custom_distance>` does not exist for Sun Light.
 
 .. seealso::
