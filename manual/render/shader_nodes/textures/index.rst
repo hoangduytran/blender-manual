@@ -10,6 +10,7 @@
    brick.rst
    checker.rst
    environment.rst
+   gabor.rst
    gradient.rst
    ies.rst
    image.rst
