@@ -80,3 +80,43 @@ Running
 
       import PIL
       print(PIL.__file__)
+
+
+Platform Builds
+===============
+
+Wheels can severely impact the size of an extension. To mitigate this, it is possible to build different
+extension zip files for each unique required platform.
+
+For this you need to use the ``--split-platforms`` option from the :ref:`build <command-line-args-extension-build>` command.
+
+.. code:: bash
+
+   blender --command extension build --split-platforms
+
+Example
+-------
+
+Manifest file excerpt:
+
+.. code-block:: toml
+
+   id = "my_addon_with_wheels"
+   version = "1.0.0"
+
+   platforms = ["windows-x64", "macos-x64"]
+   wheels = [
+      "./wheels/pillow-10.3.0-cp311-cp311-macosx_11_0_arm64.whl",
+      "./wheels/pillow-10.3.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "./wheels/pillow-10.3.0-cp311-cp311-win_amd64.whl",
+   ]
+
+Generated files from ``--split-platforms``:
+
+- my_addon_with_wheels-1.0.0-windows_x64.zip
+- my_addon_with_wheels-1.0.0-macos_x64.zip
+
+.. note::
+
+   Even though there is a Linux-only wheel present, no Linux zip file is generated.
+   This happens because the ``platforms`` field only has Mac and Windows.
