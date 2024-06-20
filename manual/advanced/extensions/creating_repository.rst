@@ -54,3 +54,68 @@ Even if the manifest points to the project specific website.
 .. note::
 
    Any remote repository is expected to follow the latest `API <https://extensions.blender.org/api/swagger/>`__.
+
+
+Multiple Versions
+=================
+
+When Blender fetches the extensions listing it passes the following arguments to make sure only compatible extensions are listed:
+
+* ``platform``
+* ``blender_version``
+
+This means that servers which can handle these arguments will have a single entry per-extension on the listing.
+
+For static generated JSONs this is not supported. Instead, the JSON generated with the
+:ref:`server-generate <command-line-args-extension-server-generate>` command will display all
+available versions for all the unique combinations of platforms.
+
+
+Download Links
+==============
+
+In order to support drag and drop for installing from a remote repository, there are a few optional ways to prepare the URLs.
+
+The only strict requirement is that the download URL must end in ``.zip``.
+
+You can pass different arguments to the URL to give more clues to Blender about what to do with the dragged URL.
+
+   :repository: Link to the JSON file to be used to install the repository on Blender. It supports relative URLs.
+   :platforms: Comma-separated list of supported platforms. If omitted, the extension will be available in all operating systems.
+   :blender_version_min: Minimum supported Blender version.
+   :blender_version_max: Blender version that the extension does not support, earlier versions are supported.
+
+
+.. tip::
+
+   The more details you provide, the better the user experience.
+
+With the exception of the ``repository``, all the other parameters can be extracted from the extensions manifest.
+Those arguments are to be encoded as part of the URL.
+
+Expected format:
+   ``<URL>.zip?repository=<repository>&blender_version_min=<version_min>&blender_max=<version_max_exclusive>&platforms=<platform1,platform2,...>``
+
+Example:
+   ``https://extensions.blender.org/add-ons/amaranth-toolset/1.0.23/download/add-on-amaranth-toolset-v1.0.23.zip?repository=/api/v1/extensions/&blender_version_min=4.2.0&platforms=linux-x64,macos-x64``
+
+
+HTML Example
+------------
+
+For a sample of the HTML code you can use to list all the extensions in the repository, use the ``html`` option
+when generating the server.
+
+.. code:: bash
+
+   blender --command extension server-generate --repo-dir=/path/to/packages --html
+
+This creates a ``download.html`` file with all the extra URLs parameters ready to use.
+
+Tags and Translations
+=====================
+
+If you are planning to use a different set of :doc:`tags <tags>` than the ones used by Blender Extensions Platform,
+remember to submit a pull request to `tags.py <https://projects.blender.org/blender/blender/src/scripts/modules/_bpy_internal/extensions/tags.py>`__.
+
+This way they can be shown translated within Blender.
