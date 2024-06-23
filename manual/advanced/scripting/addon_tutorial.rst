@@ -485,7 +485,7 @@ For API documentation on the functions listed above, see:
 Bringing It All Together
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block:: python
 
    bl_info = {
        "name": "Cursor Array",

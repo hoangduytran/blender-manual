@@ -88,7 +88,8 @@ Platform Builds
 Wheels can severely impact the size of an extension. To mitigate this, it is possible to build different
 extension zip files for each unique required platform.
 
-For this you need to use the ``--split-platforms`` option from the :ref:`build <command-line-args-extension-build>` command.
+For this you need to use the ``--split-platforms`` option from the
+:ref:`build <command-line-args-extension-build>` command.
 
 .. code:: bash
 

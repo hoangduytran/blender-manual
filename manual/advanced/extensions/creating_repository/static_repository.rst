@@ -2,7 +2,8 @@
 Creating a Static Extensions Repository
 ***************************************
 
-To host your own extensions and leverage Blender update system all that is required is a static JSON file on a server, pointing towards download links for the extensions.
+To host your own extensions and leverage Blender update system all that is required is a static JSON file on a server,
+pointing towards download links for the extensions.
 
 JSON
 ====
@@ -23,16 +24,23 @@ The generated JSON is aligned with the `API <https://developer.blender.org/docs/
 Download Links
 ==============
 
-In order to support drag and drop for installing from a remote repository, there are a few optional ways to prepare the URLs.
+In order to support drag and drop for installing from a remote repository,
+there are a few optional ways to prepare the URLs.
 
 The only strict requirement is that the download URL must end in ``.zip``.
 
 You can pass different arguments to the URL to give more clues to Blender about what to do with the dragged URL.
 
-   :repository: Link to the JSON file to be used to install the repository on Blender. It supports relative URLs.
-   :platforms: Comma-separated list of supported platforms. If omitted, the extension will be available in all operating systems.
-   :blender_version_min: Minimum supported Blender version.
-   :blender_version_max: Blender version that the extension does not support, earlier versions are supported.
+   :repository:
+      Link to the JSON file to be used to install the repository on Blender.
+      It supports relative URLs.
+   :platforms:
+      Comma-separated list of supported platforms.
+      If omitted, the extension will be available in all operating systems.
+   :blender_version_min:
+      Minimum supported Blender version.
+   :blender_version_max:
+      Blender version that the extension does not support, earlier versions are supported.
 
 
 .. tip::
