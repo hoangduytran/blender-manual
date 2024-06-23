@@ -243,4 +243,4 @@ Third party extension sites
 ===========================
 
 If you want to host the extensions yourself,
-see the :doc:`Creating an Extensions Repository <creating_repository>` docs.
+see the :doc:`Creating an Extensions Repository <./creating_repository/index>` docs.
