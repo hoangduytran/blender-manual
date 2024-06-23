@@ -119,7 +119,7 @@ usage::
        blender --command extension install-file [-h] -r REPO [-e] [--no-prefs]
                                                 FILE
 
-Install a package file into a local repository.
+Install a package file into a user repository.
 
 positional arguments:
   :FILE:                  The packages file.
@@ -291,10 +291,21 @@ Subcommand: ``server-generate``
 usage::
 
        blender --command extension server-generate [-h] --repo-dir REPO_DIR
+                                                   [--html]
+                                                   [--html-template HTML_TEMPLATE_FILE]
 
 Generate a listing of all packages stored in a directory.
 This can be used to host packages which only requires static-file hosting.
 
 options:
-  -h, --help           show this help message and exit
-  --repo-dir REPO_DIR  The remote repository directory.
+  -h, --help            show this help message and exit
+  --repo-dir REPO_DIR   The remote repository directory.
+  --html                Create a HTML file (``index.html``) as well as the repository JSON
+                        to support browsing extensions online with static-hosting.
+  --html-template HTML_TEMPLATE_FILE
+                        An optional HTML file path to override the default HTML template with your own.
+
+                        The following keys will be replaced with generated contents:
+
+                        - ``${body}`` is replaced the extensions contents.
+                        - ``${date}`` is replaced the creation date.
