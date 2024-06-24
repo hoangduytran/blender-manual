@@ -37,11 +37,8 @@ Masks
 .. figure:: /images/sculpt-paint_sculpting_editing_mask_example.jpg
 
 A mask is used to control which vertices of the mesh are influenced by sculpting and painting.
-The mask can for example be created/edited via the :doc:`Mask Brush </sculpt_paint/sculpting/tools/mask>`,
-:doc:`Box Mask </sculpt_paint/sculpting/tools/box_mask>`,
-:doc:`Lasso Mask </sculpt_paint/sculpting/tools/lasso_mask>`,
-:doc:`Line Mask </sculpt_paint/sculpting/tools/line_mask>`
-and :doc:`Mask by Color </sculpt_paint/sculpting/tools/mask_by_color>` tools.
+The mask can for example be created/edited via the :doc:`/sculpt_paint/sculpting/tools/mask_tools`
+and :doc:`Mask by Color </sculpt_paint/sculpting/tools/mask_by_color>` tool.
 
 Internally, masks are stored using the ``sculpt_mask`` :doc:`/modeling/geometry_nodes/attributes_reference`.
 

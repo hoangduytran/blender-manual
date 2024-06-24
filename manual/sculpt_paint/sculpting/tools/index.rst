@@ -38,9 +38,7 @@
    multires_displacement_smear.rst
    paint.rst
    smear.rst
-   box_mask.rst
-   lasso_mask.rst
-   line_mask.rst
+   mask_tools.rst
    box_face_set.rst
    lasso_face_set.rst
    box_trim.rst

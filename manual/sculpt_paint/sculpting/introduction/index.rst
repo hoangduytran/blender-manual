@@ -7,6 +7,7 @@
 
    general.rst
    brush.rst
+   gesture_tools.rst
    visibility_masking_face_sets.rst
    filters.rst
    transforming.rst
