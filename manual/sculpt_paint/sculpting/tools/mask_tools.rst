@@ -6,7 +6,6 @@ Mask Gesture Tools
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Tool:      :menuselection:`Toolbar --> Box Mask`
 
 Mask gesture tools apply a constant value to all selected vertices within the selection area.
 By default, these tools fully mask each vertex. Holding :kbd:`Ctrl` while performing the selection
@@ -55,6 +54,8 @@ Line Mask
 Creates a new :doc:`Mask </sculpt_paint/sculpting/editing/mask>` based on a
 :ref:`line gesture <gesture-tool-line>`
 
+.. _tool-polyline-mask:
+
 Polyline Mask
 =============
 
@@ -64,7 +65,7 @@ Polyline Mask
    :Tool:      :menuselection:`Toolbar --> Polyline Mask`
 
 Creates a new :doc:`Mask </sculpt_paint/sculpting/editing/mask>` based on a
-:ref:`line gesture <gesture-tool-polyline>`
+:ref:`polyline gesture <gesture-tool-polyline>`
 
 Common Options
 ==============
