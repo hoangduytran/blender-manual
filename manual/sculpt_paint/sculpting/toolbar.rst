@@ -162,16 +162,11 @@ Gesture Tools
 .. figure:: /images/sculpt-paint_sculpting_toolbar_gestures.png
    :align: right
 
-General gesture tools to apply an operation via box, lasso and line shapes.
+General gesture tools to apply an operation via box, lasso, line and polyline shapes. 
+See :doc:`/sculpt_paint/sculpting/introduction/gesture_tools` for more information.
 
-:doc:`/sculpt_paint/sculpting/tools/box_mask`
-   Create a mask via a box gesture.
-
-:doc:`/sculpt_paint/sculpting/tools/lasso_mask`
-   Create a mask via a lasso gesture.
-
-:doc:`/sculpt_paint/sculpting/tools/line_mask`
-   Create a mask via on one side of a drawn line.
+:doc:`/sculpt_paint/sculpting/tools/mask_tools`
+   Create a mask via a gesture.
 
 Box Hide
    Hides/Shows geometry via a box gesture.
