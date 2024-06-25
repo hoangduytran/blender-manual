@@ -1,4 +1,3 @@
-
 ************
 Introduction
 ************
@@ -16,13 +15,6 @@ and will be improved and expanded over multiple upcoming releases.
 
    :doc:`/animation/armatures/posing/editing/pose_library`
       Build on top of the Asset Browser.
-
-   The following blog posts were written during the design and development of the Asset Browser.
-   They are linked here for historical reasons, and to give some more context to the current design.
-
-   - `2020-03: Asset Manager <https://code.blender.org/2020/03/asset-manager/>`__
-   - `2021-06: Asset Browser Project Update <https://code.blender.org/2021/06/asset-browser-project-update/>`__
-   - `2021-06: Asset Browser Workshop Outcomes <https://code.blender.org/2021/06/asset-browser-workshop-outcomes/>`__
 
 
 What is an Asset?
