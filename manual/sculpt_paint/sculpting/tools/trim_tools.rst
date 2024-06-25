@@ -1,14 +1,13 @@
 
-**********
-Lasso Trim
-**********
+******************
+Trim Gesture Tools
+******************
 
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Tool:      :menuselection:`Toolbar --> Lasso Trim`
 
-Adds or removes geometry based on a :ref:`lasso selection <tool-select-lasso>`.
+Trim gesture tools add or remove geometry based on a selection area.
 This tool is especially useful for sketching an early base mesh for further
 sculpting with the :doc:`voxel remesher </sculpt_paint/sculpting/tool_settings/remesh>`.
 
@@ -32,13 +31,69 @@ a new face set instead.
 
 .. note::
 
-   It is not recommended to use this tool on a mesh above 100k vertices when using *Difference*
-   or *Union* as the Trim Mode with the *Exact* Solver.
+   It is not recommended to use this tool on a mesh above 100k
+   vertices when using *Difference* or *Union* as the Trim Mode
+   with the *Exact* Solver.
    This tool is using a Boolean operation so it might take a long time to process.
    For higher resolution meshes it is recommended to instead use the
    :doc:`Line Project </sculpt_paint/sculpting/tools/line_project>` tool or the *Fair Positions*
    mode of the :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool to trim geometry.
 
+.. _tool-box-trim:
+
+Box Trim
+========
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Tool:      :menuselection:`Toolbar --> Box Trim`
+
+Performs a Boolean operation based on the area defined by a
+:ref:`box gesture <gesture-tool-box>`.
+
+.. _tool-lasso-trim:
+
+Lasso Trim
+==========
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Tool:      :menuselection:`Toolbar --> Lasso Trim`
+
+Performs a Boolean operation based on the area defined by a
+:ref:`lasso gesture <gesture-tool-lasso>`.
+
+.. _tool-line-trim:
+
+Line Trim
+=========
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Tool:      :menuselection:`Toolbar --> Line Trim`
+
+Performs a Boolean operation based on the area defined by a
+:ref:`line gesture <gesture-tool-line>`.
+
+.. note::
+    
+    The Line Trim tool does not support adding geometry. Only *Difference* mode is supported.
+
+.. _tool-polyline-trim:
+
+Polyline Trim
+=============
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Tool:      :menuselection:`Toolbar --> Polyline Trim`
+
+Performs a Boolean operation based on the area defined by a
+:ref:`polyline gesture <gesture-tool-polyline>`.
 
 Tool Settings
 =============

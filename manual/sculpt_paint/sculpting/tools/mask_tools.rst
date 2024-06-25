@@ -52,7 +52,7 @@ Line Mask
    :Tool:      :menuselection:`Toolbar --> Line Mask`
 
 Creates a new :doc:`Mask </sculpt_paint/sculpting/editing/mask>` based on a
-:ref:`line gesture <gesture-tool-line>`
+:ref:`line gesture <gesture-tool-line>`.
 
 .. _tool-polyline-mask:
 
@@ -65,10 +65,10 @@ Polyline Mask
    :Tool:      :menuselection:`Toolbar --> Polyline Mask`
 
 Creates a new :doc:`Mask </sculpt_paint/sculpting/editing/mask>` based on a
-:ref:`polyline gesture <gesture-tool-polyline>`
+:ref:`polyline gesture <gesture-tool-polyline>`.
 
-Common Options
-==============
+Tool Settings
+=============
 
 Front Faces Only
    Only creates a mask on the faces that face towards the view.
