@@ -177,6 +177,11 @@ mouse cursor over them. Press :kbd:`Home` to reset the scale to the default.
 Asset Shelf
 ===========
 
+.. figure:: /images/interface_window-system_regions_asset-shelf.png
+   :align: center
+
+   The Asset Shelf of the 3D View, showing material assets.
+
 Search
 ------
 
