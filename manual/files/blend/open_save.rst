@@ -72,6 +72,8 @@ Open Recent
 Displays a list of recently opened blend-files.
 Hovering over items will show a preview, and information about the blend-file.
 Select any of the file names in the list to open that blend-file.
+When :kbd:`RMB` on a listed item, a context menu will appear; One of the available options is *Open File Location*, which will open that 
+location in an OS file explorer or Finder window.
 
 Clear Recent Files List
    Removes all items from the list.
