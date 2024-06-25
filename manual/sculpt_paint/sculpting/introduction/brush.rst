@@ -20,9 +20,8 @@ The inner ring of the brush cursor is used to visualize the strength of the brus
     :doc:`Scrape </sculpt_paint/sculpting/tools/scrape>` brush.
 
 The brush is also used for other :doc:`tools </sculpt_paint/sculpting/tools/index>` in the toolbar
-to better display how that tool works.
-For example, the :doc:`Box Trim </sculpt_paint/sculpting/tools/box_trim>`
-and :doc:`Lasso Trim </sculpt_paint/sculpting/tools/lasso_trim>` tools are able to use the current brush radius
+to better display how that tool works. For example, the :ref:`Box Trim <tool-box-trim>`
+and :ref:`Lasso Trim <tool-lasso-trim>` tools are able to use the current brush radius
 for how deep geometry is trimmed or added.
 
 
