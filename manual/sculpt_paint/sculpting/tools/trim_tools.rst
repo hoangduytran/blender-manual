@@ -39,6 +39,7 @@ a new face set instead.
    :doc:`Line Project </sculpt_paint/sculpting/tools/line_project>` tool or the *Fair Positions*
    mode of the :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool to trim geometry.
 
+
 .. _tool-box-trim:
 
 Box Trim
@@ -52,6 +53,7 @@ Box Trim
 Performs a Boolean operation based on the area defined by a
 :ref:`box gesture <gesture-tool-box>`.
 
+
 .. _tool-lasso-trim:
 
 Lasso Trim
@@ -64,6 +66,7 @@ Lasso Trim
 
 Performs a Boolean operation based on the area defined by a
 :ref:`lasso gesture <gesture-tool-lasso>`.
+
 
 .. _tool-line-trim:
 
@@ -79,8 +82,9 @@ Performs a Boolean operation based on the area defined by a
 :ref:`line gesture <gesture-tool-line>`.
 
 .. note::
-    
+
     The Line Trim tool does not support adding geometry. Only *Difference* mode is supported.
+
 
 .. _tool-polyline-trim:
 
@@ -94,6 +98,7 @@ Polyline Trim
 
 Performs a Boolean operation based on the area defined by a
 :ref:`polyline gesture <gesture-tool-polyline>`.
+
 
 Tool Settings
 =============

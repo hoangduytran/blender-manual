@@ -73,8 +73,7 @@ Box Mask
    :Menu:      :menuselection:`Mask --> Box Mask`
    :Shortcut:  :kbd:`B`
 
-Works like the :doc:`Box Mask </sculpt_paint/sculpting/tools/box_mask>` tool,
-it creates a rectangular mask region.
+Works like the :ref:`Box Mask <tool-box-mask>` tool, it creates a rectangular mask region.
 Hold :kbd:`Shift` or press :kbd:`MMB` to clear the mask of the selected region.
 
 
@@ -89,8 +88,7 @@ Lasso Mask
    :Menu:      :menuselection:`Mask --> Lasso Mask`
    :Shortcut:  :kbd:`Shift-Ctrl-LMB`
 
-Can be used to create a free-form mask, similar to the
-:doc:`Lasso Mask </sculpt_paint/sculpting/tools/box_mask>` tool.
+Can be used to create a free-form mask, similar to the :ref:`Lasso Mask <tool-lasso-mask>` tool.
 This is very commonly used.
 
 .. tip::
@@ -197,7 +195,7 @@ Fill Holes
    .. tip::
 
       If nothing is masked, this operation can be used to just fill all holes.
-      Especially when using :doc:`Trim </sculpt_paint/sculpting/tools/lasso_trim>`
+      Especially when using :doc:`Trim Tools </sculpt_paint/sculpting/tools/trim_tools>`
       tools and the :doc:`Voxel Remesher </sculpt_paint/sculpting/tool_settings/remesh>`
 
    ..

@@ -83,18 +83,18 @@ sculpting with the :doc:`voxel remesher </sculpt_paint/sculpting/tool_settings/r
 
 .. _bpy.ops.sculpt.trim_box_gesture:
 
-:doc:`/sculpt_paint/sculpting/tools/box_trim`
+:ref:`tool-box-trim`
    Removes geometry based on a :ref:`box selection <tool-select-box>`.
 
 .. _bpy.ops.sculpt.trim_lasso_gesture:
 
-:doc:`/sculpt_paint/sculpting/tools/lasso_trim`
+:ref:`tool-lasso-trim`
    Removes geometry based on a :ref:`lasso selection <tool-select-lasso>`.
 
-:doc:`Box Add </sculpt_paint/sculpting/tools/box_trim>`
+:ref:`Box Add <tool-box-trim>`
    Adds geometry based on a :ref:`box selection <tool-select-box>`.
 
-:doc:`Lasso Add </sculpt_paint/sculpting/tools/lasso_trim>`
+:ref:`Lasso Add <tool-lasso-trim>`
    Adds geometry based on a :ref:`lasso selection <tool-select-lasso>`.
 
 .. _bpy.ops.sculpt.project_line_gesture:
