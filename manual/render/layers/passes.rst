@@ -61,7 +61,7 @@ Indexes
 
 Debug
    Sample Count
-      Number of samples/camera rays per pixel, to analyze adaptive sampling.
+      Number of samples per pixel taken, divided by the maximum number of samples. To analyze adaptive sampling.
 
 Alpha Threshold
    Z, Index, normal, UV and vector passes are
