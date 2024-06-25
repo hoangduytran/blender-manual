@@ -39,10 +39,9 @@
    paint.rst
    smear.rst
    mask_tools.rst
-   box_face_set.rst
-   lasso_face_set.rst
-   box_trim.rst
-   lasso_trim.rst
+   hide_tools.rst
+   face_set_tools.rst
+   trim_tools.rst
    line_project.rst
    mesh_filter.rst
    cloth_filter.rst

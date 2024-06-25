@@ -168,20 +168,14 @@ See :doc:`/sculpt_paint/sculpting/introduction/gesture_tools` for more informati
 :doc:`/sculpt_paint/sculpting/tools/mask_tools`
    Create a mask via a gesture.
 
-Box Hide
-   Hides/Shows geometry via a box gesture.
+:doc:`/sculpt_paint/sculpting/tools/hide_tools`
+   Hides/Shows geometry via a gesture.
 
-:doc:`/sculpt_paint/sculpting/tools/box_face_set`
-   Create a face set via a box gesture.
+:doc:`/sculpt_paint/sculpting/tools/face_set_tools`
+   Create a face set via a gesture.
 
-:doc:`/sculpt_paint/sculpting/tools/lasso_face_set`
-   Create a face set via a lasso gesture.
-
-:doc:`/sculpt_paint/sculpting/tools/box_trim`
-   Perform a Boolean operation via a box gesture.
-
-:doc:`/sculpt_paint/sculpting/tools/lasso_trim`
-   Perform a Boolean operation via a lasso gesture.
+:doc:`/sculpt_paint/sculpting/tools/trim_tools`
+   Perform a Boolean operation via a gesture.
 
 :doc:`/sculpt_paint/sculpting/tools/line_project`
    Flatten the geometry towards a drawn line.

@@ -24,6 +24,8 @@ and :kbd:`Shift-H` to isolate the face set under the cursor (or show everything)
 :ref:`Inverting the visibility <bpy.ops.sculpt.face_set_change_visibility>`
 and :ref:`showing all <bpy.ops.paint.hide_show_all>` is also available in the :kbd:`Alt-W` pie menu.
 
+Modifying visibility can also be done via the :doc:`/sculpt_paint/sculpting/tools/hide_tools`.
+
 .. seealso::
 
    More information for controlling the visibility at :doc:`Show & Hide </sculpt_paint/sculpting/editing/sculpt>`.
@@ -84,8 +86,7 @@ More options can be found in the :kbd:`Alt-W` pie menu.
 
 Otherwise Face Sets can be created/edited with the
 :doc:`Draw Face Sets </sculpt_paint/sculpting/tools/draw_facesets>` brush,
-:doc:`Box Face Set </sculpt_paint/sculpting/tools/box_face_set>` and
-:doc:`Lasso Face Set </sculpt_paint/sculpting/tools/lasso_face_set>`.
+:doc:`/sculpt_paint/sculpting/tools/mask_tools`.
 They can also be edited with the
 :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool.
 
