@@ -18,6 +18,13 @@ see `Asset Catalogs on the Blender Developer Documentation <https://developer.bl
 
 .. figure:: /images/asset-browser-catalogs.png
    :width: 640px
+   :figclass: only-light
+
+   Example file system and catalog structures.
+
+.. figure:: /images/asset-browser-catalogs_dark.png
+   :width: 640px
+   :figclass: only-dark
 
    Example file system and catalog structures.
 
