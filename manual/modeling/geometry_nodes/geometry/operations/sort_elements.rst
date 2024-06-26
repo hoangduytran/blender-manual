@@ -5,7 +5,7 @@
 Sort Elements Node
 ******************
 
-.. figure:: /images/node-types_GeometryNodeSortElements.png
+.. figure:: /images/node-types_GeometryNodeSortElements.webp
    :align: right
    :alt: Sort Elements node.
 
