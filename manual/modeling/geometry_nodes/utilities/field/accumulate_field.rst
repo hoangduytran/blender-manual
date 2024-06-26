@@ -42,6 +42,7 @@ Data Type
    :Float: The node will accumulate a *Float* field.
    :Integer: The node will accumulate an *Integer* field.
    :Vector: The node will accumulate a *Vector* field.
+   :Transform: The node will accumulate a *Matrix* field.
 
 Domain
    The :ref:`attribute domain <attribute-domains>` used for accumulation
