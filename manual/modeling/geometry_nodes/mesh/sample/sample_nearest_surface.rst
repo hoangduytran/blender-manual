@@ -31,9 +31,15 @@ Mesh
 Value
    A field to evaluate on the *Source* geometry for use with the transfer method.
 
+Group ID
+   Is evaluated on the face domain and splits the input mesh into multiple parts, each with its own id.
+
 Sample Position
    The position to start from when finding the closest location on the target mesh.
    By default, this is the same as if the :doc:`/modeling/geometry_nodes/geometry/read/position` was connected.
+
+Sample Group ID
+   Determines in which group the closest nearest surface is detected.
 
 
 Properties
@@ -48,3 +54,6 @@ Outputs
 
 Value
    The data retrieved and interpolated from the *Source* geometry, mapped based on the node's settings and inputs.
+
+Is Valid
+   Outputs true if a nearest surface was found, it's false if the group is empty.
