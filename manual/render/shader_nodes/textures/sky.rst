@@ -8,7 +8,8 @@ Sky Texture Node
    :align: right
    :alt: Sky Texture Node.
 
-The *Sky Texture* node adds a procedural Sky texture.
+The *Sky Texture* node generates a procedural sky. It's typically used in combination
+with the :doc:`/render/shader_nodes/output/world`.
 
 
 Inputs

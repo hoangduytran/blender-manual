@@ -49,42 +49,42 @@ Ray Depth
 
    .. note::
 
-      Passing through a transparent shader
-      :ref:`does not count as a normal "bounce" <render-cycles-light-paths-transparency>`.
+      Passing through a
+      :ref:`transparent <render-cycles-light-paths-transparency>`
+      shader does not count as a normal "bounce".
 
 Diffuse Depth :guilabel:`Cycles Only`
    Number of times the ray has gone through diffuse reflection or transmission.
 Glossy Depth :guilabel:`Cycles Only`
    Number of times the ray has gone through glossy reflection or transmission.
 Transparent Depth :guilabel:`Cycles Only`
-   Returns the number of transparent surfaces passed through.
+   Number of times the ray has gone through a transparent surface.
 Transmission Depth :guilabel:`Cycles Only`
-   Replace a Transmission light path after X bounces with another shader, e.g. a Diffuse one.
-   This can be used to avoid black surfaces, due to low amount of max bounces.
+   Number of times the ray has gone through a transmissive surface.
+   A typical use case is to avoid black spots in the render (caused by rays hitting
+   the bounce limit) by switching from a transmissive to a diffuse shader past a
+   certain point. See :doc:`/render/shader_nodes/shader/mix`.
 
 
 EEVEE Support
 =============
 
-EEVEE has no real concept of rays. But in order to ease the workflow between Cycles and EEVEE
-some of the outputs are only supported in particular cases.
-This node makes it possible to tweak indirect lighting in the shader.
-
-Only a subset of the outputs are supported and the ray depth does not exactly have the same meaning.
+EEVEE has no real concept of rays, but in order to ease the workflow between Cycles and EEVEE,
+some of the outputs are supported in particular cases.
 
 - *Is Camera*: Supported.
 - *Is Shadow*: Supported.
 - *Is Diffuse*: Supported.
 - *Is Glossy*: Supported.
-- *Is Singular*: Not supported. Same as Is Glossy.
-- *Is Reflection*: Not supported. Same as Is Glossy.
-- *Is Transmission*: Not supported. Same as Is Glossy.
-- *Ray Length*: Not supported. Defaults to 1.0.
+- *Is Singular*: Not supported. Same as *Is Glossy*.
+- *Is Reflection*: Not supported. Same as *Is Glossy*.
+- *Is Transmission*: Not supported. Same as *Is Glossy*.
+- *Ray Length*: Distance from the camera to the shading point.
 - *Ray Depth*: Indicates the current bounce when baking the light cache.
 - *Diffuse Depth*: Same as Ray Depth but only when baking diffuse light.
 - *Glossy Depth*: Same as Ray Depth but only when baking specular light.
 - *Transparent Depth*: Not supported. Defaults to 0.
-- *Transmission Depth*: Not supported. Same as Glossy Depth.
+- *Transmission Depth*: Not supported. Same as *Glossy Depth*.
 
 .. note::
 
