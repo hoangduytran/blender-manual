@@ -56,4 +56,4 @@ Value
    The data retrieved and interpolated from the *Source* geometry, mapped based on the node's settings and inputs.
 
 Is Valid
-   Outputs true if a nearest surface was found, it's false if the group is empty.
+   Whether the sampling was successful. It can fail when the sampled group is empty.
