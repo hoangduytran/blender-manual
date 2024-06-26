@@ -23,8 +23,14 @@ Inputs
 Geometry
    Standard geometry input.
 
+Group ID
+   Splits the elements of the input geometry into groups which can be sampled individually.
+
 Sample Position
    The given position to calculate the closest location on the target.
+
+Sample Group ID
+   Determines in which group the closest nearest element is detected.
 
 
 Properties
@@ -49,6 +55,9 @@ Position
 
 Distance
    Distance (as floating-point value) from the source position to the closest location in the target.
+
+Is Valid
+   Whether the sampling was successful. It can fail when the sampled group is empty.
 
 
 Examples
