@@ -135,7 +135,7 @@ Show Overlays
    Lets you show/hide all overlays using the toggle button, or specific overlays
    using the drop-down arrow. See :doc:`/editors/uv/overlays`.
 
-Active UV Loop Layer
+Active UV Map Layer
    Select which UV map to use.
 
 Display Channels
