@@ -26,6 +26,7 @@ As Instance
    Output the entire object as single instance instead of realized geometry.
    This allows instancing non-geometry object types, because the output will contain an instance of the object.
 
+
 Properties
 ==========
 
@@ -43,12 +44,13 @@ Transform Space
 Outputs
 =======
 
+Transform
+   :term:`Transformation Matrix` containing the location, rotation and scale of the object.
 Location
    Location of the object in world space.
 Rotation
    Rotation of the object in world space.
 Scale
    Scale of the object in world space.
-
 Geometry
    Geometry of the object in world space with all its modifiers applied.
