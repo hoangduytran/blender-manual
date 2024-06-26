@@ -85,7 +85,7 @@ This way, the most vertical connected edge of each vertex will have the lowest w
 and come first in the list.
 
 Next, in the point domain, we need to calculate the rotation of each cone.
-By using the :doc:`/modeling/geometry_nodes/utilities/rotation/align_euler_to_vector`,
+By using the :doc:`/modeling/geometry_nodes/utilities/rotation/align_rotation_to_vector`,
 the problem gets simplified and we only need to calculate a direction vector.
 
 The direction vector of each cone is the centerpoint of the most vertical neighboring edge

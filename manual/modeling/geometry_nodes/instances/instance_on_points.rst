@@ -67,7 +67,7 @@ Rotation
    :doc:`Distribute Points on Faces </modeling/geometry_nodes/point/distribute_points_on_faces>`
    and :doc:`Curve to Points </modeling/geometry_nodes/curve/operations/curve_to_points>`. An Euler rotation
    can also be created from a direction vector like the :doc:`normal </modeling/geometry_nodes/geometry/read/normal>`
-   with the :doc:`/modeling/geometry_nodes/utilities/rotation/align_euler_to_vector`.
+   with the :doc:`/modeling/geometry_nodes/utilities/rotation/align_rotation_to_vector`.
 
 Scale
    The size of each generated instance.
