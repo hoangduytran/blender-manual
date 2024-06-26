@@ -27,6 +27,7 @@ Inputs
 Geometry
    Standard geometry input, which is used as the default bake item.
    More bake items can be added by dragging sockets into the blank socket or in the *Bake Items* panel.
+   Items can be renamed by :kbd:`Ctrl-LMB` on the socket name or in the nodes *Properties* panel.
 
 
 Bake Items
@@ -100,3 +101,4 @@ For each input, the same output is added to act as a pass through.
 Geometry
    Standard geometry output, which is used as the default bake item.
    More bake items can be added by dragging sockets into the blank socket or in the *Bake Items* panel.
+   Items can be renamed by :kbd:`Ctrl-LMB` on the socket name or in the nodes *Properties* panel.

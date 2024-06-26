@@ -54,8 +54,8 @@ Menu
    Determines which of the input options below will be passed through.
 
 Item Inputs
-   One input is created for every menu entry. The input is used when the
-   matching option is selected.
+   One input is created for every menu entry. The input is used when the matching option is selected.
+   Items can be renamed by :kbd:`Ctrl-LMB` on the socket name or in the nodes *Properties* panel.
 
 
 Properties
