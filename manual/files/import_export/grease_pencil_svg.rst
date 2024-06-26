@@ -1,16 +1,22 @@
 
-***********************************************
-Scalable Vector Graphics (SVG) as Grease Pencil
-***********************************************
+**********************************
+Import/Export SVG as Grease Pencil
+**********************************
 
-This format is use for interchanging vector based illustrations between applications
+The Scalable Vector Graphics (SVG) format is use for interchanging vector based illustrations between applications
 and is supported by vector graphics editors such as Inkscape, and modern browsers among others.
 
 .. warning:: The exporter only works in Object Mode.
 
 
+.. _bpy.ops.wm.gpencil_import_svg:
+
 Import
 ======
+
+.. reference::
+
+   :menu: :menuselection:`File --> Import --> SVG as Grease Pencil`
 
 Options
 -------
@@ -22,8 +28,14 @@ Scale
    Generated strokes scale.
 
 
+.. _bpy.ops.wm.gpencil_export_svg:
+
 Export
 ======
+
+.. reference::
+
+   :menu: :menuselection:`File --> Export --> Grease Pencil as SVG`
 
 Options
 -------

@@ -1,16 +1,17 @@
+.. _bpy.ops.wm.gpencil_export_pdf:
 
-***********************************************
-Portable Document Format (PDF) as Grease Pencil
-***********************************************
+*****************************
+Export Grease Pencil as (PDF)
+*****************************
 
-This format is use for interchanging PDFs between applications,
+The Portable Document Format (PDF) is use for interchanging PDFs between applications,
 it support the export of Grease Pencil animation creating one page in the PDF document for each keyframe selected.
 
 .. warning:: The exporter only works in Object Mode.
 
 
-Export Options
-==============
+Options
+=======
 
 The following options are available when exporting to PDF:
 
@@ -40,4 +41,4 @@ Fill
 Normalize
    When enabled, Export strokes with constant thickness.
 
-.. note:: The export of the Grease Pencil strokes is doing always from camera view.
+.. note:: The export of the Grease Pencil strokes is always from camera view.
