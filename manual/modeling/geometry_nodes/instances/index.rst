@@ -10,10 +10,17 @@ Nodes that only operate on instances.
 
    instance_on_points.rst
    instances_to_points.rst
+
+----
+
+.. toctree::
+   :maxdepth: 1
+
+   realize_instances.rst
    rotate_instances.rst
    scale_instances.rst
    translate_instances.rst
-   realize_instances.rst
+   set_instance_transform.rst
 
 ----
 
