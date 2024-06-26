@@ -13,3 +13,4 @@
    position.rst
    radius.rst
    selection.rst
+   active_element.rst
