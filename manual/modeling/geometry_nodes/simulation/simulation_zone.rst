@@ -49,6 +49,11 @@ This is also the place where sub-steps can be defined for a simulation.
 Inputs
 ------
 
+Geometry
+   Standard geometry input, which is available by default to input geometry into the simulation zone.
+   More bake items can be added by dragging sockets into the blank socket or in the *Simulation State* panel.
+   Items can be renamed by :kbd:`Ctrl-LMB` on the socket name or in the nodes *Properties* panel.
+
 Delta Time
    The time in seconds between frames.
    Essentially this the inverse of the render :ref:`Frame Rate <bpy.types.RenderSettings.fps>`.
