@@ -32,7 +32,8 @@ Center View to Cursor
 
 View Lock to Active
    Centers the view on the active object and makes it the point of interest. The view
-   will continue orbiting around it even if you pan to a different location.
+   will continue orbiting around the object even if you pan to a different location.
+   In addition, it will follow the object if it moves.
 
 View Lock Clear
    Returns the view to how it was before using *View Lock to Active*.
