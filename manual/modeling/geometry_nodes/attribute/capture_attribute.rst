@@ -34,18 +34,31 @@ Inputs
 Geometry
    Standard geometry input.
 
-Value
+Capture Items
    The input field to evaluate.
+   More fields can be added by dragging sockets into the blank socket or in the *Capture Items* panel.
+   Items can be renamed by :kbd:`Ctrl-LMB` on the socket name or in the nodes *Properties* panel.
 
 
 Properties
 ==========
 
-Data Type
-   The :ref:`data type <attribute-data-types>` used for the evaluated data.
-
 Domain
    Which :ref:`attribute domain <attribute-domains>` to store the evaluated data on.
+
+
+Capture Items
+-------------
+
+.. reference::
+
+   :Menu: :menuselection:`Sidebar --> Node --> Properties --> Capture Items`
+
+Manages the input fields sockets of the node.
+Field sockets can be added, removed, reorganized, and renamed from the :ref:`ui-list-view`.
+
+Data Type
+   The :ref:`data type <attribute-data-types>` used for the evaluated data.
 
 
 Outputs
