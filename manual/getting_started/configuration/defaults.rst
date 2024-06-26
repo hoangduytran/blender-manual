@@ -13,28 +13,32 @@ a couple of initial preferences to configure how you interact with Blender.
    These options can always be changed later in the :doc:`Preferences </editors/preferences/index>`.
 
 
-Import Existing Settings
-========================
+Import Preferences From Previous Version
+========================================
 
-This is where you can copy settings from an older version of Blender.
+This is where you can copy preferences from an older version of Blender.
 Doing so will copy preferences and startup files from the previous version of Blender and then loads them.
 
-The settings need to be imported from previous versions because the configuration files of each Blender version
+The preferences need to be imported from previous versions because the configuration files of each Blender version
 are stored in separate folders. Refer to the :doc:`/advanced/blender_directory_layout` page
 for the location of these folders.
 
-If you would like to start fresh with the new version, continue to `Create New Settings`_.
+If you would like to start fresh with the new version, continue to `Create New Preferences`_.
 
 
-Create New Settings
-===================
+Create New Preferences
+======================
 
 Language
    The language used in the user interface.
    The list is broken up into categories determining how complete the translations are.
    More language preferences can be set in the :ref:`Translation Preferences <prefs-interface-translation>`.
 
-Shortcuts
+Theme
+   Choose between a light or dark theme for Blender.
+   Themes can be customized more in the :doc:`Preferences </editors/preferences/themes>`.
+
+Keymap
    Presets for the default :doc:`keymap </editors/preferences/keymap>` for Blender.
    Note that this manual assumes that you use the "Blender" keymap.
 
@@ -49,10 +53,10 @@ Shortcuts
       and is intended for people who use many different such applications.
       Read more about this keymap :doc:`here </interface/keymap/industry_compatible>`.
 
-Select With
+Mouse Select
    Controls which mouse button, either right or left, is used to select items in Blender.
 
-Spacebar
+Spacebar Action
    Controls the action of :kbd:`Spacebar`.
    These and other shortcuts can be modified in the :doc:`keymap preferences </editors/preferences/keymap>`.
 
@@ -66,12 +70,8 @@ Spacebar
       Opens up the :doc:`Menu Search </interface/controls/templates/operator_search>`.
       This option is good for someone who is new to Blender and is unfamiliar with its menus and shortcuts.
 
-Theme
-   Choose between a light or dark theme for Blender.
-   Themes can be customized more in the :doc:`Preferences </editors/preferences/themes>`.
-
-Save New Settings
-   Saves the settings set above and opens the regular :ref:`splash`.
+Save New Preferences
+   Saves the preferences set above and opens the regular :ref:`splash`.
 
 
 Saving Defaults
