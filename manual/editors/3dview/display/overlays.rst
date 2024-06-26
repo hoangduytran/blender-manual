@@ -225,18 +225,22 @@ Shading
 .. _bpy.types.View3DOverlay.show_retopology:
 
 Retopology
-   Hide the solid mesh and offset the overlay towards the view.
-   Selection is occluded by inactive geometry, unless X-Ray is enabled
+   This overlay is useful when you have a sculpted mesh with the desired shape and
+   want to recreate it with better topology. It makes the edited mesh see-through
+   (so that you can see the sculpted mesh underneath it) and optionally renders it
+   in front of nearby geometry (so that you can see it underneath the sculpted mesh).
 
    .. _bpy.types.View3DOverlay.retopology_offset:
 
    Offset
-      Amount to offset edit mesh in front of other geometry.
+      Distance to "move the edited mesh towards the camera." Use this to display the
+      mesh in front of other objects that would normally occlude it.
 
 .. _bpy.types.View3DOverlay.show_weight:
 
 Vertex Groups Weights
-   Display weights in Edit Mode.
+   Visualize the weights of the active vertex group,
+   much like in :doc:`Weight Paint </sculpt_paint/weight_paint/introduction>` mode.
 
    .. _bpy.types.ToolSettings.vertex_group_user:
 
