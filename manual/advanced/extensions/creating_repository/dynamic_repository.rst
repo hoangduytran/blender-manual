@@ -14,7 +14,8 @@ compatible extensions are listed:
 - ``platform``
 - ``blender_version``
 
-This means that servers have the chance to handle these arguments to output a single entry per-extension on the listing.
+This means that servers have the chance to handle these arguments to output a single entry per-extension on the
+listing.
 
 These arguments are passed as parameters to the server via a query URL:
 

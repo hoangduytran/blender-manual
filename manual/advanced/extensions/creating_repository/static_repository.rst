@@ -51,7 +51,8 @@ With the exception of the ``repository``, all the other parameters can be extrac
 Those arguments are to be encoded as part of the URL.
 
 Expected format:
-   ``<URL>.zip?repository=<repository>&blender_version_min=<version_min>&blender_max=<version_max_exclusive>&platforms=<platform1,platform2,...>``
+   ``<URL>.zip?repository=<repository>&blender_version_min=<version_min>&blender_max=
+   <version_max_exclusive>&platforms=<platform1,platform2,...>``
 
 Example:
    ``https://extensions.blender.org/add-ons/amaranth-toolset/1.0.23/download/add-on-amaranth-toolset-v1.0.23.zip?repository=/api/v1/extensions/&blender_version_min=4.2.0&platforms=linux-x64,macos-x64``
