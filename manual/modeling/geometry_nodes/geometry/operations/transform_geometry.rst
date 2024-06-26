@@ -16,8 +16,7 @@ The :doc:`/modeling/geometry_nodes/geometry/write/set_position` is used for movi
 individual points of a geometry. For transforming instances individually, the instance
 :doc:`translate </modeling/geometry_nodes/instances/translate_instances>`,
 :doc:`rotate </modeling/geometry_nodes/instances/rotate_instances>`, or
-:doc:`scale </modeling/geometry_nodes/instances/scale_instances>`
-nodes can be used.
+:doc:`scale </modeling/geometry_nodes/instances/scale_instances>` nodes can be used.
 
 
 Inputs
@@ -35,11 +34,18 @@ Rotation
 Scale
    Scale for the geometry in the local space of the modified object.
 
+Transform
+   A :term:`Transformation Matrix`, available when using *Matrix* mode.
+
 
 Properties
 ==========
 
-This node has no properties.
+Mode
+   How the transformation is specified.
+
+   :Components: Provide separate inputs for location, rotation and scale.
+   :Matrix: Use a transformation matrix.
 
 
 Output
