@@ -1,15 +1,15 @@
-.. index:: Geometry Nodes; Align Euler to Vector
-.. _bpy.types.FunctionNodeAlignEulerToVector:
+.. index:: Geometry Nodes; Align Rotation to Vector
+.. _bpy.types.FunctionNodeAlignRotationToVector:
 
-**************************
-Align Euler to Vector Node
-**************************
+*****************************
+Align Rotation to Vector Node
+*****************************
 
-.. figure:: /images/node-types_FunctionNodeAlignEulerToVector.webp
+.. figure:: /images/node-types_FunctionNodeAlignRotationToVector.webp
    :align: center
-   :alt: Align Euler to Vector node.
+   :alt: Align Rotation to Vector node.
 
-The *Align Euler to Vector* node rotates an Euler rotation into the given direction.
+The *Align Rotation to Vector* node rotates an Euler rotation into the given direction.
 
 
 Inputs

@@ -78,7 +78,7 @@ Tangent
 
    .. tip::
 
-      This output can be combined with the :doc:`/modeling/geometry_nodes/utilities/rotation/align_euler_to_vector`
+      This output can be combined with the :doc:`/modeling/geometry_nodes/utilities/rotation/align_rotation_to_vector`
       to create a rotation that lines up with direction of the curve. Including the *Normal* output
       in a second align node after can align the other rotation axis.
 

@@ -6,7 +6,7 @@
 .. toctree::
    :maxdepth: 1
 
-   align_euler_to_vector.rst
+   align_rotation_to_vector.rst
    rotate_rotation.rst
    rotate_vector.rst
    axis_angle_to_rotation.rst
