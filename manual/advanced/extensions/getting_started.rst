@@ -143,7 +143,7 @@ Required values:
    :maintainer: Maintainer of the extension.
    :name: Complete name of the extension.
    :schema_version: Internal version of the file format - use ``1.0.0``.
-   :tagline: One-line short description - cannot end with punctuation.
+   :tagline: One-line short description, up to 64 characters - cannot end with punctuation.
    :type: "add-on", "theme".
    :version: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
@@ -161,7 +161,7 @@ Optional values:
    :permissions:
       Add-ons can list which resources they require. The available options are
       *files*, *network*, *clipboard*, *camera*, *microphone*.
-      Each permission should be followed by an explanation (short single-sentence with no end punctuation).
+      Each permission should be followed by an explanation (short single-sentence, up to 64 characters, with no end punctuation).
 
 Optional values for "build":
 
