@@ -100,8 +100,6 @@ Persistent Data
 Viewport
 ========
 
-.. _bpy.types.RenderSettings.preview_pixel_size:
-
 Pixel Size
    Option to control the resolution for viewport rendering.
    Allows you to speed up viewport rendering, which is especially useful for displays with high DPI.
