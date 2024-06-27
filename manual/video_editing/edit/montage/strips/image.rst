@@ -68,7 +68,7 @@ Channel
    The :doc:`Channel </editors/video_sequencer/sequencer/channels>` to place the strip.
 
 Replace Selection
-   Replaces the currently selected strips with the new strip.
+   Previously selected strips will be deselected. Only added strips will be selected.
 
 Fit Method
    Determines how images with an aspect ratio different than the scene's
