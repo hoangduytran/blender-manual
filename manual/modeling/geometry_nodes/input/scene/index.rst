@@ -14,3 +14,4 @@
    object_info.rst
    scene_time.rst
    self_object.rst
+   viewport_transform.rst
