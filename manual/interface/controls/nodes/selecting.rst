@@ -3,18 +3,20 @@
 Selecting
 *********
 
-Box Select
-   Drag with :kbd:`LMB` to box-select multiple nodes.
-   Alternatively, :kbd:`B` starts the bounding box selection process as well.
-Lasso Select
-   Drag with :kbd:`Ctrl-Alt-LMB` to perform a lasso selection. Note that this is different
-   from the :kbd:`Ctrl-RMB` used in other editors.
-Select All :kbd:`A`
-   Select all nodes.
-Deselect All :kbd:`Alt-A`
-   Deselect all nodes.
+.. _bpy.ops.node.select_all:
+
+All :kbd:`A`
+   Selects all nodes.
+None :kbd:`Alt-A`
+   Deselects all nodes.
 Invert :kbd:`Ctrl-I`
-   Invert the selection.
+   Inverts the current selection.
+Box Select :kbd:`B`
+   See :ref:`Box Select <bpy.ops.*.select_box>`.
+Circle Select
+   See :ref:`Circle Select <bpy.ops.*.select_circle>`.
+Lasso Select
+   See :ref:`Lasso Select <bpy.ops.*.select_lasso>`.
 Select Linked From :kbd:`L`
    Expand the selection to nodes which are linked to the inputs of the currently selected nodes.
 Select Linked To :kbd:`Shift-L`

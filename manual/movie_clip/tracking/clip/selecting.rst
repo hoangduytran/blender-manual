@@ -3,6 +3,17 @@
 Selecting
 *********
 
+.. _bpy.ops.clip.select_all:
+
+All :kbd:`A`
+   Selects all items.
+
+None :kbd:`Alt-A`
+   Deselects all items.
+
+Inverse :kbd:`Ctrl-I`
+   Selects non-selected items and deselects existing selection.
+
 .. _bpy.ops.clip.select_box:
 
 Box Select
@@ -43,33 +54,6 @@ Lasso Select
    :Shortcut:  :kbd:`Ctrl-Alt-RMB`
 
 See :ref:`tool-select-lasso`.
-
-
-.. _bpy.ops.clip.select_all:
-
-(De)select All
-==============
-
-.. reference::
-
-   :Mode:      All modes
-   :Menu:      :menuselection:`Select --> (De)select All`
-   :Shortcut:  :kbd:`A`
-
-Selects all items.
-
-
-Inverse
-=======
-
-.. reference::
-
-   :Mode:      All modes
-   :Menu:      :menuselection:`Select --> Inverse`
-   :Shortcut:  :kbd:`Ctrl-I`
-
-Selects non-selected items and deselects existing selection.
-
 
 .. _bpy.ops.clip.select_grouped:
 

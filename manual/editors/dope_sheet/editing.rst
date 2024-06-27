@@ -11,6 +11,8 @@ Select Menu
 .. seealso::
    :doc:`/interface/selecting`.
 
+.. _bpy.ops.action.select_all:
+
 All :kbd:`A`
    Selects all keyframes.
 None :kbd:`Alt-A`
@@ -32,6 +34,18 @@ Box Select (Axis Range) :kbd:`Alt-B`
 
 ----------
 
+More :kbd:`Ctrl-NumpadPlus`
+   Expand the selection to include the neighbors (in time) of the currently selected keys.
+Less :kbd:`Ctrl-NumpadMinus`
+   Deselect keyframes with fewer than two selected neighbors.
+
+----------
+
+Select Linked :kbd:`L`
+   Select keys that are on the same channel as a key that's already selected.
+
+----------
+
 Columns on Selected Keys :kbd:`K`
    Selects keys that are on the same frame as a key that's already selected.
 Column on Current Frame :kbd:`Ctrl-K`
@@ -49,18 +63,6 @@ Before Current Frame :kbd:`[`
 After Current Frame :kbd:`]`
    Select the keys that lie after (or on) the current frame.
    You can also click :kbd:`Shift-Ctrl-LMB` anywhere to the right of the Playhead.
-
-----------
-
-Select More :kbd:`Ctrl-NumpadPlus`
-   Expand the selection to include the neighbors (in time) of the currently selected keys.
-Select Less :kbd:`Ctrl-NumpadMinus`
-   Deselect keyframes with fewer than two selected neighbors.
-
-----------
-
-Select Linked :kbd:`L`
-   Select keys that are on the same channel as a key that's already selected.
 
 .. _dopesheet-marker-menu:
 
