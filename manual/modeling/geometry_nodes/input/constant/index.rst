@@ -13,6 +13,7 @@ Nodes used mainly as input to other nodes.
    image.rst
    integer.rst
    material.rst
+   rotation.rst
    string.rst
    value.rst
    vector.rst
