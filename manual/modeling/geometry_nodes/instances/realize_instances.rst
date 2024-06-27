@@ -51,6 +51,13 @@ Inputs
 
 Geometry
    Standard geometry input.
+Selection
+   Which top-level instances to realize.
+Realize All
+   Realize all levels of nested instances for each top-level instances
+   (overrides the value of the *Depth* input).
+Depth
+   Number of levels of nested instances to realize for each top-level instance.
 
 
 Properties
