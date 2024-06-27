@@ -33,38 +33,9 @@ Box Select (Include Handles) :kbd:`Ctrl-B`
    one handle selected, dragging it will change the strip's length. (If both handles are selected,
    the complete strip moves instead.)
 
-.. _bpy.ops.sequencer.select_side_of_frame:
-
-Side of Frame
-   Left/Right :kbd:`[`/:kbd:`]`
-      Select the strips that lie completely to the left or right of the current frame.
-   Current
-      Select the strips that intersect the current frame.
-
-.. _bpy.ops.sequencer.select_handles:
-
-Handle
-   Both, Left, Right
-      Select the left, right, or both handles of the selected strips.
-   Both/Left/Right Neighbor
-      Select the handle of the neighboring strip to the left, right, or on both sides of the selected strips.
-
-.. _bpy.ops.sequencer.select_side:
-
-Channel
-   Select all the strips that are in the same channels as the currently selected strips.
-
-.. _bpy.ops.sequencer.select_more:
-.. _bpy.ops.sequencer.select_less:
-.. _bpy.ops.sequencer.select_linked:
-
-Linked
-   All :kbd:`Ctrl-L` / Less :kbd:`Ctrl-NumpadMinus` / More :kbd:`Ctrl-NumpadPlus`
-      Add/remove neighboring strips to/from the selection.
-
 .. _bpy.ops.sequencer.select_grouped:
 
-Grouped :kbd:`Shift-G`
+Select Grouped :kbd:`Shift-G`
    Select strips that are similar to the active strip. By default, unsimilar strips are
    deselected, but this can be changed in the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>`
    region.
@@ -90,3 +61,32 @@ Grouped :kbd:`Shift-G`
       linked to the selected effect strips.
    Overlap
       Select strips that partially or completely overlap the active strip in time.
+
+.. _bpy.ops.sequencer.select_more:
+.. _bpy.ops.sequencer.select_less:
+.. _bpy.ops.sequencer.select_linked:
+
+Select Linked
+   All :kbd:`Ctrl-L` / Less :kbd:`Ctrl-NumpadMinus` / More :kbd:`Ctrl-NumpadPlus`
+      Add/remove neighboring strips to/from the selection.
+
+.. _bpy.ops.sequencer.select_side_of_frame:
+
+Side of Frame
+   Left/Right :kbd:`[`/:kbd:`]`
+      Select the strips that lie completely to the left or right of the current frame.
+   Current
+      Select the strips that intersect the current frame.
+
+.. _bpy.ops.sequencer.select_handles:
+
+Handle
+   Both, Left, Right
+      Select the left, right, or both handles of the selected strips.
+   Both/Left/Right Neighbor
+      Select the handle of the neighboring strip to the left, right, or on both sides of the selected strips.
+
+.. _bpy.ops.sequencer.select_side:
+
+Channel
+   Select all the strips that are in the same channels as the currently selected strips.

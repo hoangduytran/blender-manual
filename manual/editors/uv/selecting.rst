@@ -61,6 +61,8 @@ Shared Vertex
 Select Menu
 ===========
 
+.. _bpy.ops.uv.select_all:
+
 All :kbd:`A`
    Selects all UV elements.
 None :kbd:`Alt-A`
@@ -73,15 +75,10 @@ Box Select Pinned :kbd:`Ctrl-B`
    Like *Box Select*, but only selects :ref:`pinned <bpy.ops.uv.pin>` UV vertices.
 Circle Select
    See :ref:`Circle Select <bpy.ops.*.select_circle>`.
+Lasso Select
+   See :ref:`Lasso Select <bpy.ops.*.select_lasso>`.
 More/Less :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
    Expands/contracts the selection to/from the adjacent elements.
-Select Pinned :kbd:`Shift-P`
-   Selects all pinned UVs.
-Select Linked
-   Linked :kbd:`Ctrl-L`
-      Selects all elements that are connected to the currently selected ones.
-   Shortest Path
-      Selects the path between two selected elements. (See below)
 
 .. _bpy.ops.uv.select_similar:
 
@@ -125,6 +122,13 @@ Select Similar :kbd:`Shift-G`
    Threshold
       Tolerance for values that are almost, but not quite the same. A higher threshold will select more elements.
 
+Select Linked
+   Linked :kbd:`Ctrl-L`
+      Selects all elements that are connected to the currently selected ones.
+   Shortest Path
+      Selects the path between two selected elements. (See below)
+Select Pinned :kbd:`Shift-P`
+   Selects all pinned UVs.
 Select Split :kbd:`Y`
    "Detaches" the selected faces so they can be moved elsewhere without affecting their neighbors.
 
