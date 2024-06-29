@@ -336,6 +336,14 @@ File References
       Use relative paths to reference external files (i.e. textures, volumes) in the exported USD file,
       otherwise use absolute paths.
 
+Convert Orientation
+   Convert orientation axis to a different convention to match other applications.
+   Blender uses Y Forward, Z Up (since the front view looks along the +Y direction).
+   For example, its common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
+
+   Forward / Up Axis
+      By mapping these to different axes you can convert rotations between applications default up and forward axes.
+
 Use Settings for
    Determines the whether to use *Viewport* or *Render* visibility of collection, modifiers,
    or any other property that can be set for both the *Viewport* and *Render*.
