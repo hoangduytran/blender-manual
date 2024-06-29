@@ -20,4 +20,5 @@ Built-In Modifiers
    modify/index.rst
    generate/index.rst
    deform/index.rst
+   normals/index.rst
    physics/index.rst

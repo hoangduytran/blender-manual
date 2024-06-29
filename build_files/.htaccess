@@ -251,3 +251,6 @@ RedirectMatch "^/manual/{lang}/{version}/animation/armatures/bones/properties/in
 RedirectMatch "^/manual/{lang}/{version}/advanced/command_line/introduction.html" "^/manual/{lang}/{version}/advanced/command_line/index.html"
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/align_euler_to_vector.html" "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/align_rotation_to_vector.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/modifiers/modify/normal_edit.html" "^/manual/{lang}/{version}/modeling/modifiers/normals/normal_edit.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/modifiers/modify/weighted_normal.html" "^/manual/{lang}/{version}/modeling/modifiers/normals/weighted_normal.html"
