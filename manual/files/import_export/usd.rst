@@ -106,72 +106,86 @@ Import Options
 
 The following options are available when importing from USD:
 
-Data Types
-   Cameras
-      Import cameras (perspective and orthographic).
-   Curves
-      Import curve primitives, including USD basis and NURBS curves.
-      (Note that support for Bézier basis is not yet fully implemented.)
-   Lights
-      Import lights. Does not currently include USD dome, cylinder or geometry lights.
-   Materials
-      Import materials.
-   Meshes
-      Import meshes.
-   Volumes
-      Import USD OpenVDB field assets.
-   Shapes
-      Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
-   Skeletons
-      Imports USD skeletons as Blender's :doc:`/animation/armatures/index`.
-   Blend Shapes
-      Imports USD skeletons as Blender's :doc:`/animation/shape_keys/index`.
+
+General
+-------
 
 Path Mask
    Import only the subset of the USD scene rooted at the given primitive.
 
-Scale
-   Value by which to scale the imported objects in relation to the world's origin.
-
-Mesh Data
-   UV Coordinates
-      Read mesh UV coordinates.
-   Color Attributes
-      Convert the USD mesh ``displayColor`` values to Blender's Color Attributes.
-   Mesh attributes
-      Read USD ``Primvars`` as mesh attributes.
-   Validate Meshes
-      Check the imported mesh for corrupt data and fix it if necessary.
-      When disabled, erroneous data may cause crashes displaying or editing the meshes.
-      This option will make the importing slower but is recommended, as data errors are not always obvious.
-
 Include
-   Subdivision
-      Create Subdivision Surface modifiers based on the USD ``SubdivisionScheme`` attribute.
-   Scene Instancing
-      Import USD scene graph instances as collection instances, otherwise they are imported as copies.
    Visible Primitives Only
       Do not import invisible USD primitives. Only applies to primitives with a non-animated
       `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
       Primitives with animated visibility will always be imported.
+
+Set Frame Range
+   Update the scene's start and end frame to match those of the USD stage.
+Create Collection
+   Add all imported objects to a new collection.
+Relative Path
+   Select the file relative to the blend-file.
+
+Scale
+   Value by which to scale the imported objects in relation to the world's origin.
+Light Intensity Scale
+   Scale for the intensity of imported lights.
+
+
+Object Types
+------------
+
+Cameras
+   Import cameras (perspective and orthographic).
+Curves
+   Import curve primitives, including USD basis and NURBS curves.
+   (Note that support for Bézier basis is not yet fully implemented.)
+Lights
+   Import lights. Does not currently include USD dome, cylinder or geometry lights.
+Materials
+   Import materials.
+Meshes
+   Import meshes.
+Volumes
+   Import USD OpenVDB field assets.
+USD Shapes
+   Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
+
+USD Purpose
+   Render
+      Include primitives with purpose ``render``.
+   Proxy
+      Include primitives with purpose ``proxy``.
    Guide
       Include primitives with
       `purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__ ``guide``.
-   Proxy
-      Include primitives with purpose ``proxy``.
-   Render
-      Include primitives with purpose ``render``.
 
-Options
-   Set Frame Range
-      Update the scene's start and end frame to match those of the USD stage.
-   Relative Path
-      Select the file relative to the blend-file.
-   Create Collection
-      Add all imported objects to a new collection.
 
-Light Intensity Scale
-   Scale for the intensity of imported lights.
+Geometry
+--------
+
+UV Coordinates
+   Read mesh UV coordinates.
+Color Attributes
+   Convert the USD mesh ``displayColor`` values to Blender's Color Attributes.
+Mesh Attributes
+   Read USD ``Primvars`` as mesh attributes.
+Subdivision
+   Create Subdivision Surface modifiers based on the USD ``SubdivisionScheme`` attribute.
+
+Validate Meshes
+   Check the imported mesh for corrupt data and fix it if necessary.
+   When disabled, erroneous data may cause crashes displaying or editing the meshes.
+   This option will make the importing slower but is recommended, as data errors are not always obvious.
+
+
+Rigging
+-------
+
+Shape Keys
+   Imports USD blend shapes as Blender's :doc:`/animation/shape_keys/index`.
+Armatures
+   Imports USD skeletons as Blender's :doc:`/animation/armatures/index`.
 
 
 Materials
@@ -225,6 +239,13 @@ File Name Collision
    :Overwrite: Overwrite existing files.
 
 
+Particles and Instancing
+------------------------
+
+Scene Instancing
+   Import USD scene graph instances as collection instances, otherwise they are imported as copies.
+
+
 Exporting to USD Files
 ======================
 
@@ -271,22 +292,45 @@ Export Options
 
 The following options are available when exporting to USD:
 
-Selection Only
-   When checked, only selected objects are exported.
-   Instanced objects, for example collections that are instanced in the scene,
-   are considered 'selected' when their instancer is selected.
 
-Visible Only
-   Only exports objects that are not :doc:`hidden </scene_layout/object/editing/show_hide>`.
-   Invisible parents of exported objects are exported as empty transforms.
+General
+-------
 
-Animation
-   When checked, the entire scene frame range is exported.
-   When unchecked, only the current scene frame is exported.
+Root Prim
+   If set, add a transform primitive with the given path to the stage as the parent of all exported data.
+
+Include
+   Selection Only
+      When checked, only selected objects are exported.
+      Instanced objects, for example collections that are instanced in the scene,
+      are considered 'selected' when their instancer is selected.
+   Visible Only
+      Only exports objects that are not :doc:`hidden </scene_layout/object/editing/show_hide>`.
+      Invisible parents of exported objects are exported as empty transforms.
+   Animation
+      When checked, the entire scene frame range is exported.
+      When unchecked, only the current scene frame is exported.
+
+File References
+   Relative Paths
+      Use relative paths to reference external files (i.e. textures, volumes) in the exported USD file,
+      otherwise use absolute paths.
+
+Use Settings for
+   Determines the whether to use *Viewport* or *Render* visibility of collection, modifiers,
+   or any other property that can be set for both the *Viewport* and *Render*.
+
+
+Object Types
+------------
 
 Hair
    When checked, parent hair strands are exported as a curve system.
    Hair strand colors are not exported.
+
+
+Geometry
+--------
 
 UV Maps
    When checked, includes UV coordinates for exported meshes.
@@ -297,52 +341,44 @@ UV Maps
 Normals
    When checked, includes normals for exported meshes. This includes custom loop normals.
 
-Materials
-   Exports material information of the object.
-   By default the exporter approximates the :doc:`/render/shader_nodes/shader/principled`
-   node tree by converting it to USD's Preview Surface format.
-   If *To USD Preview Surface* is disabled, the material is set to the viewport materials of meshes.
 
-   Additional material properties are set in the *Material* grouping of options.
+Rigging
+-------
 
-   When a mesh has multiple materials assigned, a geometry subset is created for each material.
-   The first material (if any) is always applied to the mesh itself as well
-   (regardless of the existence of geometry subsets),
-   because the Hydra viewport does not support materials on subsets.
-   See `USD issue #542 <https://github.com/PixarAnimationStudios/USD/issues/542>`__
-   for more information.
+Shape Keys
+   Export shape keys as USD blend shapes.
 
-   Rigging
-      Armatures
-         Export :doc:`Armatures </animation/armatures/index>` and meshes with
-         :doc:`Armature Modifiers </modeling/modifiers/deform/armature>` as USD skeletons and skinned meshes.
+   Absolute shape keys are not supported.
 
-         Limitations:
+Armatures
+   Export :doc:`Armatures </animation/armatures/index>` and meshes with
+   :doc:`Armature Modifiers </modeling/modifiers/deform/armature>` as USD skeletons and skinned meshes.
 
-         - Modifiers in addition to Armature modifiers will not be applied.
-         - Bendy bones are not supported.
-      Only Deform Bones
-         Only export :ref:`deform bones <bpy.types.Bone.use_deform>` and their parents.
-      Shape Keys
-         Export shape keys as USD blend shapes.
+   Limitations:
 
-         Absolute shape keys are not supported.
+   - Modifiers in addition to Armature modifiers will not be applied.
+   - Bendy bones are not supported.
 
-
-Root Prim
-   If set, add a transform primitive with the given path to the stage as the parent of all exported data.
-
-Use Settings for
-   Determines the whether to use *Viewport* or *Render* visibility of collection, modifiers,
-   or any other property that can be set for both the *Viewport* and *Render*.
+Only Deform Bones
+   Only export :ref:`deform bones <bpy.types.Bone.use_deform>` and their parents.
 
 
 Materials
 ---------
 
-Additional options when *Materials* are enabled for export.
+Exports material information of the object.
+By default the exporter approximates the :doc:`/render/shader_nodes/shader/principled`
+node tree by converting it to USD's Preview Surface format.
+If *To USD Preview Surface* is disabled, the material is set to the viewport materials of meshes.
 
-To USD Preview Surface
+When a mesh has multiple materials assigned, a geometry subset is created for each material.
+The first material (if any) is always applied to the mesh itself as well
+(regardless of the existence of geometry subsets),
+because the Hydra viewport does not support materials on subsets.
+See `USD issue #542 <https://github.com/PixarAnimationStudios/USD/issues/542>`__
+for more information.
+
+USD Preview Surface Network
    When exporting materials, approximate a :doc:`/render/shader_nodes/shader/principled`
    node tree to by converting it to USD's Preview Surface format.
    If disabled, the material is set to the viewport materials of meshes.
@@ -358,14 +394,6 @@ Export Textures
 
 Overwrite Textures
    Allow overwriting existing texture files when exporting textures.
-
-
-File References
----------------
-
-Relative Paths
-   Use relative paths to reference external files (i.e. textures, volumes) in the exported USD file,
-   otherwise use absolute paths.
 
 
 Experimental
