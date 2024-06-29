@@ -334,6 +334,10 @@ Blender Data
    Blender Names
       Author USD custom attributes containing the original Blender object and object data names.
 
+Allow Unicode
+   Preserves UTF-8 encoded characters when writing USD prim and property names
+   (requires software utilizing USD 24.03 or greater when opening the resulting files).
+
 File References
    Relative Paths
       Use relative paths to reference external files (i.e. textures, volumes) in the exported USD file,
