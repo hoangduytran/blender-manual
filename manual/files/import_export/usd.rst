@@ -159,6 +159,8 @@ Meshes
    Import meshes.
 Volumes
    Import USD OpenVDB field assets.
+Point Clouds
+   Imports USD ``UsdGeomPoints`` as a :doc:`/modeling/point_cloud` object.
 USD Shapes
    Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
 
