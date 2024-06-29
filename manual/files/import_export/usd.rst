@@ -211,6 +211,9 @@ Import All Materials
 Import USD Preview
    Convert USD Preview Surface shaders to Principled BSDF shader networks.
 
+Create World Material
+   Converts the first discovered USD dome light to a :doc:`world background shader </render/lights/world>`.
+
 Set Material Blend
    If the *Import USD Preview* option is enabled, the material blend method will automatically be set based on
    the ``opacity`` and ``opacityThreshold`` shader inputs, allowing for visualization of transparent objects.
@@ -415,6 +418,11 @@ USD Preview Surface Network
 
       Not all nodes are supported; currently only Diffuse,
       Principle, Image Textures, and UVMap nodes are support.
+
+Convert World Material
+   Convert the :doc:`world material </render/lights/world>` to a USD dome light.
+   Currently works for simple materials, consisting of an environment texture connected to a background shader,
+   with an optional vector multiply of the texture color.
 
 Export Textures
    Export textures referenced by shader nodes to a "textures"
