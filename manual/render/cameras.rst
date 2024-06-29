@@ -169,8 +169,9 @@ Focal Distance
 
    .. hint::
 
-      Hover the mouse over the *Distance* property and press :kbd:`E` to use a special *Depth Picker*.
-      Then click on a point in the 3D Viewport to sample the distance from that point to the camera.
+      Use the eyedropper icon or hover the mouse over the *Focal Distance* property
+      and press :kbd:`E` to enable the depth *Depth Picker*.
+      Then :kbd:`LMB` on a point in the 3D Viewport to sample the distance from that point to the camera.
 
 
 Aperture
