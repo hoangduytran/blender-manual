@@ -145,6 +145,41 @@ File Browser
    :New Window: A new File Browser editor is opened as a regularly sized temporary window.
 
 
+.. _prefs-interface-status_bar:
+
+Status Bar
+----------
+
+Preferences that affect the :doc:`/interface/window_system/status_bar`.
+
+.. _bpy.types.PreferencesView.show_statusbar:
+
+.. rubric:: Show
+
+Scene Statistics
+   Shows information about the data in the active scene.
+
+   - **Collection**: The name of the active :doc:`Collection </scene_layout/collections/index>`.
+   - **Active Object**: The name of the active selected object.
+   - **Geometry**: Information about the current scene depending on the mode and object type.
+     This can be the number of vertices, faces, triangles, or bones.
+   - **Objects**: The number of selected objects and the total count of objects.
+
+Scene Duration
+   Shows the total amount of time of the playback along with the current frame number and total frame count.
+   The format of the duration text is determined by the :ref:`Timecode Style <bpy.types.PreferencesView.timecode_style>`.
+
+System Memory
+   Shows an estimate of Blender's RAM consumption. On a single-instance single-machine scenario,
+   this estimate provides a measurement against the hardware limit of the machine.
+
+Extensions Updates
+   Shows the number of :doc:`extensions </advanced/extensions/index>` with available updates.
+
+Blender Version
+   Shows the version number of Blender that is currently running.
+
+
 .. _prefs-interface-translation:
 
 Language

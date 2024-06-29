@@ -9,9 +9,9 @@ Normals
 
 .. seealso::
 
-   The :doc:`/modeling/modifiers/modify/normal_edit` can be used to edit normals.
+   The :doc:`/modeling/modifiers/normals/normal_edit` can be used to edit normals.
 
-   The :doc:`/modeling/modifiers/modify/weighted_normal` can be used to affect normals by various methods,
+   The :doc:`/modeling/modifiers/normals/weighted_normal` can be used to affect normals by various methods,
    including *Face Strength* (see below).
 
    You can also copy normals from another mesh using Mesh Data Transfer
@@ -217,7 +217,7 @@ Select by Face Strength
 
 Another way to affect normals is to set a *Face Strength* on the faces of the model.
 The Face Strength can be either *Weak*, *Medium*, or *Strong*.
-The idea is that the :doc:`/modeling/modifiers/modify/weighted_normal` can
+The idea is that the :doc:`/modeling/modifiers/normals/weighted_normal` can
 be set to pay attention to the Face Strength as follows:
 When combining the normals that meet at a vertex, only the faces
 with the strongest Face Strength will contribute to the final value.

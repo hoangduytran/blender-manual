@@ -1,9 +1,9 @@
 
-*******
-Collada
-*******
+****************
+Collada (Legacy)
+****************
 
-.. warning::
+.. important::
 
   COLLADA I/O support is now considered as a legacy feature in Blender, and will be removed
   in a future release.
@@ -17,13 +17,13 @@ to export/import Collada files from/to a variety of tools.
 But please be aware that the Collada module is still a work in progress.
 So it may be possible that your particular usage scenario is not yet supported.
 
-.. important::
-
-   Collada support in Blender is considered deprecated and may be removed in a future version.
-
 
 Collada Exporter
 ================
+
+.. reference::
+
+   :Menu: :menuselection:`File --> Export Collada (.dae) (Legacy)`
 
 .. figure:: /images/files_import-export_collada_export.png
    :align: right
@@ -196,6 +196,10 @@ Keep Bind Info
 
 Collada Importer
 ================
+
+.. reference::
+
+   :Menu: :menuselection:`File --> Export Collada (.dae) (Legacy)`
 
 .. figure:: /images/files_import-export_collada_import.png
    :align: right

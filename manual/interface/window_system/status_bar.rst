@@ -50,25 +50,31 @@ Resource Information
 ====================
 
 The right side of the Status Bar displays information about the Blender instance.
-Which information is shown can be chosen by clicking :kbd:`RMB`.
+Which information is shown can be chosen by :kbd:`RMB` on the Status Bar
+or in the :ref:`Preferences <prefs-interface-status_bar>`.
 
 .. figure:: /images/interface_window-system_status-bar_ui-right.png
    :align: center
 
 Scene Statistics
-   Collection
-      Name of the active :doc:`Collection </scene_layout/collections/index>`.
-   Active Object
-      Name of the active selected object.
-   Geometry
-      Displays information about the current scene depending on the mode and object type.
-      This can be the number of vertices, faces, triangles, or bones.
-   Objects
-      Number of the selected objects and the total count.
+   Shows information about the data in the active scene.
+
+   - **Collection**: The name of the active :doc:`Collection </scene_layout/collections/index>`.
+   - **Active Object**: The name of the active selected object.
+   - **Geometry**: Information about the current scene depending on the mode and object type.
+     This can be the number of vertices, faces, triangles, or bones.
+   - **Objects**: The number of selected objects and the total count of objects.
+
+Scene Duration
+   Shows the total amount of time of the playback along with the current frame number and total frame count.
+   The format of the duration text is determined by the :ref:`Timecode Style <bpy.types.PreferencesView.timecode_style>`.
 
 System Memory
-   Estimate of Blender's RAM consumption. In a single-instance single-machine scenario,
+   Shows an estimate of Blender's RAM consumption. On a single-instance single-machine scenario,
    this estimate provides a measurement against the hardware limit of the machine.
 
+Extensions Updates
+   Shows the number of :doc:`extensions </advanced/extensions/index>` with available updates.
+
 Blender Version
-   The version of Blender that is currently running.
+   Shows the version number of Blender that is currently running.

@@ -276,7 +276,7 @@ Material Index
 Face Strength
    Set *Face Strength* on the faces involved in the bevel, according to the mode specified here.
    This can be used in conjunction with a following
-   :doc:`Weighted Normals </modeling/modifiers/modify/weighted_normal>` modifier
+   :doc:`Weighted Normals </modeling/modifiers/normals/weighted_normal>` modifier
    (with the *Face Influence* option checked).
 
    :None:
