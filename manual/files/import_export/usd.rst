@@ -131,6 +131,17 @@ Scale
 Light Intensity Scale
    Scale for the intensity of imported lights.
 
+Custom Properties
+   Behavior when importing USD attributes as :doc:`Custom Properties <files-data_blocks-custom-properties>`.
+
+   :None: Does not import USD custom attributes.
+   :User:
+      Imports USD attributes in the ``userProperties`` namespace as custom properties.
+      The namespace will be stripped from the property names.
+   :All Custom:
+      Imports all USD custom attributes as custom properties.
+      Namespaces will be retained in the property names.
+
 
 Object Types
 ------------
@@ -310,6 +321,13 @@ Include
    Animation
       When checked, the entire scene frame range is exported.
       When unchecked, only the current scene frame is exported.
+
+Blender Data
+   Custom Properties
+      Exports :doc:`Custom Properties <files-data_blocks-custom-properties>`
+      as USD attributes in the ``userProperties`` namespace.
+   Blender Names
+      Author USD custom attributes containing the original Blender object and object data names.
 
 File References
    Relative Paths
