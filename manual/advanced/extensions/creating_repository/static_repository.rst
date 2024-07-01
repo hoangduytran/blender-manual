@@ -5,6 +5,7 @@ Creating a Static Extensions Repository
 To host your own extensions and leverage Blender update system all that is required is a static JSON file on a server,
 pointing towards download links for the extensions.
 
+
 JSON
 ====
 
@@ -14,15 +15,45 @@ To generate a valid JSON file you can use the command-line tool:
 
    blender --command extension server-generate --repo-dir=/path/to/packages
 
-This creates a listing from all the packages found in the specified location.
+This creates an ``index.json`` listing from all the packages found in the specified location.
 
 See :ref:`server-generate <command-line-args-extension-server-generate>` docs.
 
 The generated JSON is aligned with the `API <https://developer.blender.org/docs/features/extensions/api_listing/>`__.
 
 
+Testing
+-------
+
+To test the generated repository, create a new "Remote" repository from the user preferences:
+
+- **Extensions -> Repositories -> [+] -> Add Remote Repository**
+- In the **URL** paste the location of the generated JSON.
+  So the example ``/path/to/packages`` would use the: ``file:///path/to/packages/index.json``.
+  You may wish to use a web browser to navigate to the file-system location and copy that URL into Blender.
+
+
+HTML
+====
+
+The ``server-generate`` command can optionally create a simple website using the ``--html`` argument.
+which can be used
+to view extensions online, the links can dropped into Blender for installation.
+
+
+
+For a sample of the HTML code you can use to list all the extensions in the repository, use the ``html`` option
+when generating the server.
+
+.. code:: bash
+
+   blender --command extension server-generate --repo-dir=/path/to/packages --html
+
+This creates an ``index.html`` file with all the extra URLs parameters ready to use.
+
+
 Download Links
-==============
+--------------
 
 In order to support drag and drop for installing from a remote repository,
 there are a few optional ways to prepare the URLs.
@@ -56,16 +87,3 @@ Expected format:
 
 Example:
    ``https://extensions.blender.org/add-ons/amaranth-toolset/1.0.23/download/add-on-amaranth-toolset-v1.0.23.zip?repository=/api/v1/extensions/&blender_version_min=4.2.0&platforms=linux-x64,macos-x64``
-
-
-HTML Example
-------------
-
-For a sample of the HTML code you can use to list all the extensions in the repository, use the ``html`` option
-when generating the server.
-
-.. code:: bash
-
-   blender --command extension server-generate --repo-dir=/path/to/packages --html
-
-This creates a ``download.html`` file with all the extra URLs parameters ready to use.
