@@ -9,7 +9,8 @@ Set Instance Transform Node
    :align: right
    :alt: Set Instance Transform node.
 
-The *Set Instance Transform* node :term:`Transforms <Transform>` geometry instances using a :term:`Transformation Matrix`.
+The *Set Instance Transform* node :term:`Transforms <Transform>` geometry instances
+using a :term:`Transformation Matrix`.
 
 The :doc:`/modeling/geometry_nodes/instances` page contains more information about geometry instances.
 

@@ -67,7 +67,8 @@ Scene Statistics
 
 Scene Duration
    Shows the total amount of time of the playback along with the current frame number and total frame count.
-   The format of the duration text is determined by the :ref:`Timecode Style <bpy.types.PreferencesView.timecode_style>`.
+   The format of the duration text is determined by the
+   :ref:`Timecode Style <bpy.types.PreferencesView.timecode_style>`.
 
 System Memory
    Shows an estimate of Blender's RAM consumption. On a single-instance single-machine scenario,
