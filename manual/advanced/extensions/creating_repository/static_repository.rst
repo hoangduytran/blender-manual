@@ -29,7 +29,11 @@ To test the generated repository, create a new "Remote" repository from the user
 
 - **Extensions -> Repositories -> [+] -> Add Remote Repository**
 - In the **URL** paste the location of the generated JSON.
-  So the example ``/path/to/packages`` would use the: ``file:///path/to/packages/index.json``.
+  So the example ``/path/to/packages`` would use the:
+
+  - ``file:///path/to/packages/index.json`` on Linux/macOS.
+  - ``file:///C:/path/to/packages/index.json`` on MS-Windows.
+
   You may wish to use a web browser to navigate to the file-system location and copy that URL into Blender.
 
 
@@ -87,5 +91,5 @@ Expected format:
 
 Example:
    ``https://extensions.blender.org/add-ons/amaranth-toolset/1.0.23/download/add-on-amaranth-toolset-v1.0.23.zip?repository=%2Fapi%2Fv1%2Fextensions%2F&blender_version_min=4.2.0&platforms=linux-x64%2Cmacos-x64``
-   
+
    *Note that ``%2F`` and ``%2C`` are simply the url-encoded equivalent of ``/`` and ``,`` respectively.*
