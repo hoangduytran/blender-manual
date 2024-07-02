@@ -132,7 +132,7 @@ Light Intensity Scale
    Scale for the intensity of imported lights.
 
 Custom Properties
-   Behavior when importing USD attributes as :doc:`Custom Properties <files-data_blocks-custom-properties>`.
+   Behavior when importing USD attributes as :ref:`Custom Properties <files-data_blocks-custom-properties>`.
 
    :None: Does not import USD custom attributes.
    :User:
@@ -329,7 +329,7 @@ Include
 
 Blender Data
    Custom Properties
-      Exports :doc:`Custom Properties <files-data_blocks-custom-properties>`
+      Exports :ref:`Custom Properties <files-data_blocks-custom-properties>`
       as USD attributes in the ``userProperties`` namespace.
    Blender Names
       Author USD custom attributes containing the original Blender object and object data names.
