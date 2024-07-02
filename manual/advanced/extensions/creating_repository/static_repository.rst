@@ -33,6 +33,7 @@ To test the generated repository, create a new "Remote" repository from the user
 
   - ``file:///path/to/packages/index.json`` on Linux/macOS.
   - ``file:///C:/path/to/packages/index.json`` on MS-Windows.
+  - ``file://HOST/share/path/to/packages/index.json`` network shares on MS-Windows.
 
   You may wish to use a web browser to navigate to the file-system location and copy that URL into Blender.
 
