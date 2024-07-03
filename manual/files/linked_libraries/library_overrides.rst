@@ -70,6 +70,47 @@ data-blocks of different hierarchies, like a parenting relationships between two
 of a same character.
 
 
+Animation & Overrides
+=====================
+
+Due to current design of animation data in Blender, what is editable in overrides' animations can
+change greatly depending on whether animation data was already defined in the linked reference
+data-block. Animation data is created for a datablock if it gets animated by keyframes, or
+through drivers.
+
+In general, an overrides can do much more with its animation data if no animation data exists
+in its linked reference data-block.
+
+**Keyframes (a.k.a. F-Curves)**
+
+:doc:`Keyframed animation </animation/keyframes/introduction>` belongs to another data-block
+(an Action one). So it is possible to assign a purely local Action data-block replacing
+the one linked from the library. This will completely replace the keyframed animation
+from the linked data though, and not override it in any way.
+
+Overridden Action data-blocks only support a very limited amount of editing.
+For example, an existing F-Curve can be muted, but its keyframes cannot be edited,
+and no new F-Curve can be added.
+
+**Drivers**
+
+If the linked reference data has animation data, then its overrides only have
+limited possibilities to edit the existing :doc:`drivers </animation/drivers/introduction>`.
+For example, it will be possible to change the exisitng target of a driver,
+but it won't be possible to add new drivers, or new targets to an existing driver.
+
+If the linked reference data has no animation data, then its overrides will create a new one
+when they get some drivers defined. Drivers can then be fully edited, added or removed,
+just as with purely local data-blocks.
+
+**NLA**
+
+The :doc:`NLA editor </editors/nla/introduction>` data also belongs to the animation data
+of a data-block. However, this data does support some greater level of edition in overrides,
+including moving or resizing existing strips from the linked data,
+and adding new local strips.
+
+
 Resyncing Overrides
 ===================
 
