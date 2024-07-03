@@ -53,7 +53,3 @@ Minimum Vertices
    Minimum number of vertices a face must have to be triangulated.
    For example, setting this value to 5, will prevent triangulation of :term:`Quads <Quad>`
    and only triangulate :term:`N-gons <N-gon>`.
-
-Keep Normals
-   When using :ref:`custom normals <modeling_meshes_normals_custom>`,
-   try to preserve the same shading as before triangulation.
