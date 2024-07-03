@@ -17,7 +17,7 @@ Faces
 Collection
    This creates an instance of the collection with the transformation of the object.
    Collection instancers can be animated using actions,
-   or can get a :doc:`Proxy </files/linked_libraries/library_proxies>`.
+   or can get a :doc:`Library Override </files/linked_libraries/library_overrides>`.
 
 .. toctree::
    :maxdepth: 2
