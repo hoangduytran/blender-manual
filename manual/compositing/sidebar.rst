@@ -83,8 +83,3 @@ Viewer Region
    which will become the next preview in the backdrop.
    :kbd:`Ctrl-Alt-B` discards the region back to a full preview.
    This is only a preview option, final compositing during a render ignores this region.
-
-.. _bpy.types.SpaceNodeEditor.use_auto_render:
-
-Auto Render
-   Re-render and composite changed layer when edits to the 3D scene are made.
