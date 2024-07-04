@@ -1,4 +1,3 @@
-
 ************
 Displacement
 ************
@@ -66,10 +65,8 @@ as 8-bit images often can not represent all the necessary detail.
 Displacement and Bump
 =====================
 
-:guilabel:`Cycles Only`
-
 Both methods can be combined to use actual displacement for the bigger displacement and
 bump for the finer details. This can provide a good balance to reduce memory usage.
 
-Once you subdivide the mesh very finely, it is better to use only actual displacement.
+Once you subdivide the mesh very finely, it is better to use only actual displacement in Cycles.
 Keeping bump maps will then only increase memory usage and slow down renders.
