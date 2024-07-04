@@ -371,6 +371,9 @@ GPU Options
 ``--gpu-backend``
    Force to use a specific GPU backend. Valid options: ``vulkan`` (experimental),  ``metal``,  ``opengl``.
 
+``--gpu-compilation-subprocesses``
+   Override the Max Compilation Subprocesses setting (OpenGL only).
+
 
 .. _command-line-args-misc-options:
 
