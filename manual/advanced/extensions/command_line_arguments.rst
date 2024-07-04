@@ -238,6 +238,7 @@ usage::
        blender --command extension build [-h] [--source-dir SOURCE_DIR]
                                          [--output-dir OUTPUT_DIR]
                                          [--output-filepath OUTPUT_FILEPATH]
+                                         [--valid-tags VALID_TAGS_JSON]
                                          [--split-platforms] [--verbose]
 
 Build a package in the current directory.
@@ -256,6 +257,16 @@ options:
                         The package output filepath (should include a ``.zip`` extension).
 
                         Defaults to a name created using the ``id`` from the manifest.
+  --valid-tags VALID_TAGS_JSON
+                        Reference a file path containing valid tags lists.
+
+                        If you wish to reference custom tags a ``.json`` file can be used.
+                        The contents must be a dictionary of lists where the ``key`` matches the extension type.
+
+                        For example:
+                           ``{"add-ons": ["Example", "Another"], "theme": ["Other", "Tags"]}``
+
+                        To disable validating tags, pass in an empty path ``--valid-tags=""``.
   --split-platforms     Build a separate package for each platform.
                         Adding the platform as a file name suffix (before the extension).
 
@@ -270,18 +281,30 @@ Subcommand: ``validate``
 
 usage::
 
-       blender --command extension validate [-h] [SOURCE_PATH]
+       blender --command extension validate [-h]
+                                            [--valid-tags VALID_TAGS_JSON]
+                                            [SOURCE_PATH]
 
 Validate the package meta-data in the current directory.
 
 positional arguments:
-  :SOURCE_PATH:  The package source path (either directory containing package files or the package archive).
-               This path must containing a ``blender_manifest.toml`` manifest.
+  :SOURCE_PATH:           The package source path (either directory containing package files or the package archive).
+                        This path must containing a ``blender_manifest.toml`` manifest.
 
-               Defaults to the current directory.
+                        Defaults to the current directory.
 
 options:
-  -h, --help   show this help message and exit
+  -h, --help            show this help message and exit
+  --valid-tags VALID_TAGS_JSON
+                        Reference a file path containing valid tags lists.
+
+                        If you wish to reference custom tags a ``.json`` file can be used.
+                        The contents must be a dictionary of lists where the ``key`` matches the extension type.
+
+                        For example:
+                           ``{"add-ons": ["Example", "Another"], "theme": ["Other", "Tags"]}``
+
+                        To disable validating tags, pass in an empty path ``--valid-tags=""``.
 
 .. _command-line-args-extension-server-generate:
 
