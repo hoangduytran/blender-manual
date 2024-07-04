@@ -27,4 +27,5 @@ Add-ons Category Listings
    animation/index.rst
    import_export/index.rst
    node/index.rst
+   rigging/index.rst
    system/index.rst
