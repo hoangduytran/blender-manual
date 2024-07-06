@@ -68,6 +68,11 @@ Invert Visible
 Hide Masked
    Hides all masked vertices.
 
+.. _bpy.ops.paint.visibility_filter:
+
+Grow/Shrink Visibility :kbd:`PageUp`, :kbd:`PageDown`
+   Grows or shrinks the visible area of the mesh along its surface.
+
 .. seealso::
 
    For a more general introduction see
