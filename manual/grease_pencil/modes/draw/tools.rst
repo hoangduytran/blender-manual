@@ -10,17 +10,8 @@ Drawing Tools
 Cursor
    Change the location of the 3D Cursor.
 
-:ref:`Draw <tool-grease-pencil-draw-draw>`
-   Draw free-hand strokes.
-
-:ref:`Fill <tool-grease-pencil-draw-fill>`
-   Automatic fill closed strokes areas.
-
-:ref:`Erase <tool-grease-pencil-draw-erase>`
-   Erase strokes.
-
-:ref:`Tint <tool-grease-pencil-draw-tint>`
-   Colorize stroke points.
+:doc:`Brush </grease_pencil/modes/draw/tools/brush>`
+   Tool to use for any of the drawing brushes, see :doc:`/grease_pencil/modes/draw/brushes/overview`.
 
 :ref:`Cutter <tool-grease-pencil-draw-cutter>`
    Cut strokes in between others.

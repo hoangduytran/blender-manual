@@ -7,7 +7,7 @@ Introduction
 It is commonly used for hair grooming, but can be used with all kinds of curves.
 
 The curves' surface object plays an important role in many curves sculpting brushes.
-Most brushes such as :doc:`Add Curves </sculpt_paint/curves_sculpting/tools/add_curves>`
+Most brushes such as :doc:`Add Curves </sculpt_paint/curves_sculpting/brushes/add_curves>`
 require the surface to be set already.
 
 .. note::

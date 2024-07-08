@@ -217,7 +217,7 @@ Boundary Strokes
    :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Boundary Strokes`
 
 Removes boundary strokes used by the *Fill* tool.
-See :doc:`Fill tool </grease_pencil/modes/draw/tools/fill>` for more information.
+See :doc:`Fill tool </grease_pencil/modes/draw/brushes/fill>` for more information.
 
 Mode
    Active Frame Only

@@ -146,5 +146,5 @@ Vector Displacement :guilabel:`Sculpt Mode`
 
    .. note::
 
-      This is only supported for the :doc:`Draw </sculpt_paint/sculpting/tools/draw>` brush
+      This is only supported for the :doc:`Draw </sculpt_paint/sculpting/brushes/draw>` brush
       with :ref:`Area Plane <bpy.types.BrushTextureSlot.map_mode>` mapping enabled.

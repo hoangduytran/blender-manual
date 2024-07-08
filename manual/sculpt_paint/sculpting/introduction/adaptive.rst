@@ -74,9 +74,9 @@ Use :kbd:`R` to define the resolution and :kbd:`Ctrl-R` to flood fill the resolu
 
 .. figure:: /images/sculpt-paint_sculpt_dyntopo_detail.png
 
-Brushes like :doc:`Simplify </sculpt_paint/sculpting/tools/simplify>`,
-:doc:`Snake Hook </sculpt_paint/sculpting/tools/snake_hook>`
-and :doc:`Clay Strips </sculpt_paint/sculpting/tools/clay_strips>` work especially well with this feature.
+Brushes like :doc:`Density </sculpt_paint/sculpting/brushes/density>`,
+:doc:`Snake Hook </sculpt_paint/sculpting/brushes/snake_hook>`
+and :doc:`Clay Strips </sculpt_paint/sculpting/brushes/clay_strips>` work especially well with this feature.
 
 
 .. seealso::
@@ -120,11 +120,11 @@ since any edits to the base mesh will result in corrupted subdivision details.
    Pay attention to the topology that you sculpt and how much it gets stretched.
    If more resolution is needed you can always subdivide another time,
    but there will be worse performance and slower level switching once more than 5 subdivisions are used.
-   Alternatively use the :doc:`Slide Relax </sculpt_paint/sculpting/tools/slide_relax>`
+   Alternatively use the :doc:`Slide Relax </sculpt_paint/sculpting/brushes/slide_relax>`
    brush to slide topology to where it is needed.
 
-Additional brushes like the :doc:`Multires Eraser </sculpt_paint/sculpting/tools/multires_displacement_eraser>` and
-:doc:`Multires Smear </sculpt_paint/sculpting/tools/multires_displacement_smear>` are recommended for adjustments.
+Additional brushes like the :doc:`Multires Eraser </sculpt_paint/sculpting/brushes/multires_displacement_eraser>` and
+:doc:`Multires Smear </sculpt_paint/sculpting/brushes/multires_displacement_smear>` are recommended for adjustments.
 
 Here are general shortcuts to use the feature.
 

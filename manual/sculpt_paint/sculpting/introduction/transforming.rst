@@ -19,6 +19,6 @@ Optionally instead of keeping the transform tools active, you can enable the
    In that case move the pivot point somewhere else to be able to click on the desired surface.
 
 Apart from the transform tools there are also special brushes to move,
-rotate and scale the topology like :doc:`Pose </sculpt_paint/sculpting/tools/pose>`,
-:doc:`Boundary </sculpt_paint/sculpting/tools/boundary>`
-and :doc:`Elastic Deform </sculpt_paint/sculpting/tools/elastic_deform>`.
+rotate and scale the topology like :doc:`Pose </sculpt_paint/sculpting/brushes/pose>`,
+:doc:`Boundary </sculpt_paint/sculpting/brushes/boundary>`
+and :doc:`Elastic Deform </sculpt_paint/sculpting/brushes/elastic_deform>`.

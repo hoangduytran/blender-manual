@@ -7,10 +7,7 @@
 .. toctree::
    :maxdepth: 2
 
-   draw.rst
-   fill.rst
-   erase.rst
-   tint.rst
+   brush.rst
    cutter.rst
    eyedropper.rst
    line.rst

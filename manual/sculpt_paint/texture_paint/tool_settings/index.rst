@@ -7,7 +7,7 @@
    :maxdepth: 2
 
    texture_slots.rst
-   /sculpt_paint/brush/brush.rst
+   /sculpt_paint/brush/index.rst
    brush_settings.rst
    mask.rst
    symmetry.rst

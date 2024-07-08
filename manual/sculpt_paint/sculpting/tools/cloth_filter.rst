@@ -8,13 +8,13 @@ Cloth Filter
    :Mode:      Sculpt Mode
    :Tool:      :menuselection:`Toolbar --> Cloth Filter`
 
-This tool works similar to the :doc:`Cloth Brush </sculpt_paint/sculpting/tools/cloth>`,
+This tool works similar to the :doc:`Cloth Brush </sculpt_paint/sculpting/brushes/cloth>`,
 however, it applies a cloth simulation to all vertices in the mesh at the same time.
 Click and drag away from the object for a positive effect and towards for a negative effect.
 
 .. tip::
 
-   Vertices can be "pinned" by :doc:`masking </sculpt_paint/sculpting/tools/mask>` vertices
+   Vertices can be "pinned" by :doc:`masking </sculpt_paint/sculpting/brushes/mask>` vertices
    that should remain stationary, or by using :ref:`Face Sets <sculpting-editing-facesets>`.
 
 

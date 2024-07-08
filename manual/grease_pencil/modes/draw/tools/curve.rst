@@ -17,7 +17,7 @@ Tool Settings
 
 You can configure the brush main settings exposed on the Tool Settings for convenience.
 For the draw brushes configuration and settings see:
-:doc:`Draw Brush </grease_pencil/modes/draw/tools/draw>`.
+:doc:`Draw Brush </grease_pencil/modes/draw/brushes/draw>`.
 
 Subdivisions
    The number of stroke points between each stroke edge.

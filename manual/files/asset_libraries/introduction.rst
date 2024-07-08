@@ -75,9 +75,11 @@ Primitive assets are data-blocks that are either **linked or appended** to the c
 Examples are objects, materials, and worlds. These can be dragged from the Asset Browser into
 the scene (objects and worlds), or onto existing objects (materials).
 
-Preset assets are data-blocks that are loaded and then **applied** to something.
-An example is a pose asset. When applying the pose, the data-block is loaded
-from its blend-file, and then the pose is applied to the active armature.
+Preset assets are data-blocks that are loaded and then **applied** to something or **activated**.
+An example is a pose asset. When applying the pose, the data-block is loaded from its blend-file,
+and then the pose is applied to the active armature. Brush assets are an example of an asset type
+that is activated. They get loaded into the current file and activated for painting or sculpting,
+but don't get saved in the file.
 
 In the future, the asset type definition will be expanded;
 see :ref:`asset-libraries-future-development` for more info.
@@ -97,6 +99,8 @@ for small single-file projects.
 When the current blend-file is part of an asset library, you can also see its assets in that library, of course.
 The assets that are in the current file are marked with an icon; only those are editable.
 
+
+.. _asset-life-cycle:
 
 Life Cycle of an Asset
 ======================
@@ -120,10 +124,9 @@ When using *Mark as Asset*, an automatic preview is generated.
 If you want, you can also change or replace this with an image of your own choosing;
 use the folder button next to the preview image in the Asset Details region of the Asset Browser.
 
-For preset assets, there will be a dedicated button for the different asset types.
-Currently poses are the only preset assets; use the **Create Pose Asset** button in the Action editor.
-This will copy the pose of the selected bones into a new Action, mark it as asset,
-and put it into the currently active asset catalog if there is an Asset Browser open.
+For preset assets, there will be a dedicated button for the different asset types. For example for
+poses there is a **Create Pose Asset** button in the Action editor. Brush assets are created by
+using **Duplicate Asset** from existing brush assets.
 
 After creating the asset, make sure the current blend-file is saved in your asset library.
 Blender does not copy the asset into the asset library for you.
@@ -204,21 +207,48 @@ Included in this library are:
 
 - :doc:`Hair node groups </modeling/geometry_nodes/hair/index>`
 - :doc:`/modeling/geometry_nodes/normals/smooth_by_angle`
+- Brushes:
 
+  - :doc:`Mesh Sculpt</sculpt_paint/sculpting/brushes/index>`
+  - :doc:`Curve Sculpt</sculpt_paint/curves_sculpting/brushes/index>`
+  - :doc:`Texture Paint</sculpt_paint/texture_paint/brushes>`
+  - :doc:`Vertex Paint</sculpt_paint/vertex_paint/brushes>`
+  - :doc:`Weight Paint</sculpt_paint/weight_paint/brushes>`
+
+.. _asset-system-files:
+
+Asset System Files (`.asset.blend` Extention)
+=============================================
+
+Some types of assets can be edited without having to open a blend-file inside of an asset library.
+Blender saves these assets to libraries in special files using the `.asset.blend` extension. They
+are entirely managed by Blender's asset system, and only contain a single asset and its
+dependencies.
+
+It is still possible to save a normal file with the `.asset.blend` extension. This will then not
+be treated as an asset system file, Blender knows the difference.
+
+Asset system files have one more special characteristic: You can open, but not save them. The
+:ref:`Save As <bpy.ops.wm.save_as_mainfile>` operator can still be used to create a new file from
+them, which will then be just a normal blend-file. Thus contained assets cannot be edited without
+opening the file itself. Blender shows some clear warnings to communicate that asset system files
+cannot be changed and saved the normal way.
+
+The reason these files are special is that the asset system might need to regenerate them. Any
+additional changes done by the user might be lost then. To prevent this data-loss, these files are
+protected from user modifications.
+
+Currently, only brush assets support this feature.
 
 .. _asset-libraries-design-limitations:
 
 Design Limitations
 ==================
 
-Blender is **not allowed to write to other blend-files** than the one you have currently open.
-This means that to edit an asset, you have to open its blend-file.
-Fortunately this is only a single click away, both in the Source List region of the Asset Browser
+Blender is **not allowed to write to other blend-files** than the one you have currently open, or
+the special `.asset.blend` files explained above. This means that to edit an asset, you have to
+open its blend-file. Fortunately this is only a single click away, both in the Source List region of the Asset Browser
 and in the asset context menu.
-
-This also means that **Blender does not copy assets into the asset library** for you.
-You are responsible for placing the blend-file with the asset in an asset library directory,
-and marking the asset as such. See :ref:`asset-pushing` for more on this topic.
 
 
 .. _asset-libraries-future-development:
@@ -260,6 +290,10 @@ or as an add-on; the rule above applies to Blender itself, not to its add-ons.
 
 Asset Pushing
 -------------
+
+.. note::
+   The introduction of Brush assets in Blender 4.3 includes support for an asset pushing concept as
+   described here. This might be brought to more asset types in future.
 
 Asset **pushing** is a way of getting assets into the asset library, where you are working on a file
 and want to copy the asset from that file into the library. This is a concept that appears deceptively simple.

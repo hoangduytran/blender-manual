@@ -161,7 +161,7 @@ Deformation Target
 
    :Geometry: Deform the geometry directly.
    :Cloth Simulation:
-      Deform the mesh while a :doc:`cloth simulation </sculpt_paint/sculpting/tools/cloth>`
+      Deform the mesh while a :doc:`cloth simulation </sculpt_paint/sculpting/brushes/cloth>`
       is applied to it at the same time.
 
 
@@ -169,6 +169,25 @@ Deformation Target
 
 Advanced
 ========
+
+.. _sculpt-tool-settings-brush-type:
+
+Brush Type
+   Defines the basic behavior and the available settings. Through the settings of
+   a brush type, brushes can be created that produce vastly different effects.
+
+   The *Essentials* asset library contains brushes for each of the brush types. Their preview image
+   and description should give a good idea of the effect the brush produces, with the particular
+   combination of brush type and settings. Because of this, they are usually the more useful starting
+   point for custom brushes than the mere brush type is, which is why the brush type is part of the
+   *Advanced* brush settings.
+
+   types.
+
+   - :doc:`Sculpt </sculpt_paint/sculpting/brushes/brush_types>`
+   - :doc:`Vertex Paint </sculpt_paint/vertex_paint/brushes>`
+   - :doc:`Weight Paint </sculpt_paint/weight_paint/brushes>`
+   - :doc:`Texture Paint </sculpt_paint/texture_paint/brushes>`
 
 Accumulate
    Causes stroke dabs to accumulate on top of each other.

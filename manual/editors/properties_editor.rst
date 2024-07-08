@@ -19,6 +19,7 @@ Tabs
 The Properties editor has several categories, which can be chosen via tabs (the icons column to its left).
 Each tab regroups properties and settings of a data type, and is documented in its own manual sections, linked below.
 
+.. _properties-tool-tab:
 
 Active Tool and Workspace Settings
 ----------------------------------

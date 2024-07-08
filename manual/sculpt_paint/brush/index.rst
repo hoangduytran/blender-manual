@@ -1,12 +1,13 @@
 
 #########
-  Brush
+  Brushes
 #########
 
 .. toctree::
    :maxdepth: 2
 
    introduction.rst
+   brush_management.rst
 
 
 Brush Settings
@@ -15,7 +16,6 @@ Brush Settings
 .. toctree::
    :maxdepth: 1
 
-   brush.rst
    brush_settings.rst
    texture.rst
    stroke.rst

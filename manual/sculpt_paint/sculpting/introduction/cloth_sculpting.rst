@@ -21,10 +21,10 @@ are :doc:`pinned </physics/cloth/settings/shape>` in the simulation.
 Another example is with :doc:`auto-masked </sculpt_paint/sculpting/controls>` face set boundaries.
 The sculpt mode :ref:`gravity <bpy.types.Sculpt.gravity>` factor is also applied on the cloth physics.
 
-The main brushes and tools for this feature are the :doc:`Cloth Brush </sculpt_paint/sculpting/tools/cloth>`
+The main brushes and tools for this feature are the :doc:`Cloth Brush </sculpt_paint/sculpting/brushes/cloth>`
 and :doc:`Cloth Filter </sculpt_paint/sculpting/tools/cloth_filter>`,
-but other transform brushes like :doc:`Pose </sculpt_paint/sculpting/tools/pose>` and
-:doc:`Boundary </sculpt_paint/sculpting/tools/boundary>` also support cloth sculpting in the brush settings.
+but other transform brushes like :doc:`Pose </sculpt_paint/sculpting/brushes/pose>` and
+:doc:`Boundary </sculpt_paint/sculpting/brushes/boundary>` also support cloth sculpting in the brush settings.
 
 A demo file for trying out the various brushes and tools is available
 `here <https://www.blender.org/download/demo-files/#sculpting>`__.

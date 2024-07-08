@@ -150,23 +150,23 @@ or from right to left for a negative effect.
 Smooth
    Smooths the positions of the vertices to either polish surfaces or remove volume from larger shapes.
    Especially useful to fix most of the artifacts of the voxel remesher.
-   This filter works similar to the :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+   This filter works similar to the :doc:`Smooth </sculpt_paint/sculpting/brushes/smooth>` brush.
 Surface Smooth
    Eliminates irregularities of the mesh by making the positions
    of the vertices more uniform while preserving the volume of the object.
    This filter works similar to the *Surface* deformation type of the
-   :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+   :doc:`Smooth </sculpt_paint/sculpting/brushes/smooth>` brush.
 Inflate
    Displaces vertices uniformly along their normal.
-   This filter works similar to the :doc:`Inflate </sculpt_paint/sculpting/tools/inflate>` brush.
+   This filter works similar to the :doc:`Inflate </sculpt_paint/sculpting/brushes/inflate>` brush.
 Relax Topology
    Tries to create an even distribution of quads without deforming the volume of the mesh.
    This filter works the same as holding :kbd:`Shift` with the
-   :doc:`Slide Relax </sculpt_paint/sculpting/tools/slide_relax>` brush.
+   :doc:`Slide Relax </sculpt_paint/sculpting/brushes/slide_relax>` brush.
 Relax Face Sets
    This will remove the jagged lines visible after drawing or creating a face set.
    This filter works the same as holding :kbd:`Shift` with the
-   :doc:`Draw Face Set </sculpt_paint/sculpting/tools/draw_facesets>` brush.
+   :doc:`Draw Face Set </sculpt_paint/sculpting/brushes/draw_facesets>` brush.
 Sharpen
    Sharpens and smooths the mesh based on its curvature,
    resulting in pinching hard edges and polishing flat surfaces.
@@ -176,7 +176,7 @@ Enhance Details
    Increases the high frequency surface details of the mesh
    by intensifying the difference between creases and valleys.
    This filter works similar to the inverted direction of the
-   :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+   :doc:`Smooth </sculpt_paint/sculpting/brushes/smooth>` brush.
 Erase Displacement
    Deletes displacement information of
    the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,
@@ -203,7 +203,7 @@ Sample Color
    :Shortcut:  :kbd:`Shift-X`
 
 
-Adjust the brush color of the :doc:`/sculpt_paint/sculpting/tools/paint` tool to the color under the mouse cursor.
+Adjust the brush color of the :doc:`/sculpt_paint/sculpting/brushes/paint` tool to the color under the mouse cursor.
 
 
 .. _bpy.ops.sculpt.set_pivot_position:

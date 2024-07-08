@@ -115,7 +115,7 @@ Type
    Smooth/Sharpen Mask
       Changes the sharpness of the mask edge.
       Using this can be faster and more consistent than smoothing the mask
-      with the :doc:`Mask </sculpt_paint/sculpting/tools/mask>` brush.
+      with the :doc:`Mask </sculpt_paint/sculpting/brushes/mask>` brush.
    Grow/Shrink Mask
       Further grow or shrink the mask along the surface of the mesh.
    Increase/Decrease Contrast

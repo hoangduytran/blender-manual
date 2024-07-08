@@ -227,7 +227,7 @@ Saving Masks
    :doc:`hide face sets </sculpt_paint/sculpting/editing/sculpt>`)
 
 Pivot Points for Pose Brush
-   When using the :doc:`Pose Brush </sculpt_paint/sculpting/tools/pose>` it is most predictable when using it with
+   When using the :doc:`Pose Brush </sculpt_paint/sculpting/brushes/pose>` it is most predictable when using it with
    Face Sets to define the face set boundaries as pivot point locations.
    Face Sets can be expanded from a point or from a boundary between hidden face sets
    to create them quickly.
@@ -239,7 +239,7 @@ Pivot Points for Pose Brush
 
 Cloth Sculpting
    Tools like the :doc:`Cloth Filter </sculpt_paint/sculpting/tools/cloth_filter>`
-   and :doc:`Cloth Brush </sculpt_paint/sculpting/tools/cloth>`
+   and :doc:`Cloth Brush </sculpt_paint/sculpting/brushes/cloth>`
    work especially well when only simulating small areas at a time.
    Face Sets can very easily be created with Expand to assign areas of action.
 

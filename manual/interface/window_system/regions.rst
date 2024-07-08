@@ -83,6 +83,8 @@ The :ref:`Toolbar <ui-region-toolbar>` (on the left side of the editor area)
 contains a set of interactive tools. :kbd:`T` toggles the visibility of the Toolbar.
 
 
+.. _ui-region-tool-settings:
+
 Tool Settings
 =============
 

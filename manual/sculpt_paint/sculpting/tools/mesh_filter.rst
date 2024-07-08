@@ -24,13 +24,13 @@ Filter Type
    :Smooth:
       Smooths the positions of the vertices to either polish surfaces or remove volume from larger shapes.
       Especially useful to fix most of the artifacts of the voxel remesher.
-      This filter works similar to the :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+      This filter works similar to the :doc:`Smooth </sculpt_paint/sculpting/brushes/smooth>` brush.
    :Scale:
       Increases the size of the mesh.
       This filter works similar to the :ref:`Scale Transform <bpy.ops.transform.resize>`.
    :Inflate:
       Displaces vertices uniformly along their normal.
-      This filter works similar to the :doc:`Inflate </sculpt_paint/sculpting/tools/inflate>` brush.
+      This filter works similar to the :doc:`Inflate </sculpt_paint/sculpting/brushes/inflate>` brush.
    :Sphere:
       Morphs the mesh progressively into a sphere.
       This filter works similar to the :ref:`To Sphere Transform <bpy.ops.transform.tosphere>`.
@@ -40,16 +40,16 @@ Filter Type
    :Relax:
       Tries to create an even distribution of quads without deforming the volume of the mesh.
       This filter works the same as holding :kbd:`Shift` with the
-      :doc:`Slide Relax </sculpt_paint/sculpting/tools/slide_relax>` brush.
+      :doc:`Slide Relax </sculpt_paint/sculpting/brushes/slide_relax>` brush.
    :Relax Face Sets:
       This will remove the jagged lines visible after drawing or creating a face set.
       This filter works the same as holding :kbd:`Shift` with the
-      :doc:`Draw Face Set </sculpt_paint/sculpting/tools/draw_facesets>` brush.
+      :doc:`Draw Face Set </sculpt_paint/sculpting/brushes/draw_facesets>` brush.
    :Surface Smooth:
       Eliminates irregularities of the mesh by making the positions
       of the vertices more uniform while preserving the volume of the object.
       This filter works similar to the *Surface* deformation type of the
-      :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+      :doc:`Smooth </sculpt_paint/sculpting/brushes/smooth>` brush.
 
       Shape Preservation
          How much of the original shape is preserved when smoothing.
@@ -73,7 +73,7 @@ Filter Type
       Increases the high frequency surface details of the mesh
       by intensifying the difference between creases and valleys.
       This filter works similar to the inverted direction of the
-      :doc:`Smooth </sculpt_paint/sculpting/tools/smooth>` brush.
+      :doc:`Smooth </sculpt_paint/sculpting/brushes/smooth>` brush.
    :Erase Displacement:
       Deletes displacement information of
       the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,

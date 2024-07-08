@@ -20,6 +20,9 @@ It helps to narrow the list of objects so that you can find things quickly and e
    Shows all the collections and objects in the current view layer.
 :Video Sequencer:
    Lists data, images and videos, that are used by the :doc:`Video Sequencer </video_editing/index>`.
+
+.. _outliner-blender-file-mode:
+
 :Blender File:
    Lists all data in the current blend-file.
 :Data API:

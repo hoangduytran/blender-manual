@@ -123,6 +123,15 @@ Display Channels
       Single color channel visualized as a grayscale image.
 
 
+Asset Shelf Region
+==================
+
+Depending on the current mode, the asset shelf may be available, providing quick access to assets
+for this specific mode (for example brush assets in *Paint* mode).
+
+See :ref:`ui-region-asset_shelf` for more information.
+
+
 Main View
 =========
 

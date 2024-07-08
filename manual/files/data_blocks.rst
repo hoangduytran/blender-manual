@@ -98,10 +98,10 @@ Pack
      - |none|
      - Skeleton used to deform meshes.
        Used as data of armature objects, and by the Armature Modifier.
-   * - :doc:`Brush </sculpt_paint/brush/brush>`
+   * - :doc:`Brush </sculpt_paint/brush/index>`
      - |tick|
      - |none|
-     - Used by paint tools.
+     - Used as brush assets in sculpt and paint modes.
    * - :doc:`Camera </render/cameras>`
      - |tick|
      - |none|

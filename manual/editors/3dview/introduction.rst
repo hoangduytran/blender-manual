@@ -110,3 +110,11 @@ The Sidebar region contains properties of the active object and tool,
 as well as of the viewport itself.
 
 See :doc:`Sidebar </editors/3dview/sidebar>` for more information.
+
+Asset Shelf Region
+==================
+
+Depending on the current mode, the asset shelf may be available, providing quick access to assets
+for this specific mode (for example pose assets in *Pose Mode*, brush assets in *Sculpt Mode*).
+
+See :ref:`ui-region-asset_shelf` for more information.

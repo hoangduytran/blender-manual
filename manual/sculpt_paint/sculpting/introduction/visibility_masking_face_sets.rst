@@ -85,7 +85,7 @@ More options can be found in the :kbd:`Alt-W` pie menu.
 .. figure:: /images/sculpt-paint_sculpting_editing_face_set_pie.png
 
 Otherwise Face Sets can be created/edited with the
-:doc:`Draw Face Sets </sculpt_paint/sculpting/tools/draw_facesets>` brush,
+:doc:`Draw Face Sets </sculpt_paint/sculpting/brushes/draw_facesets>` brush,
 :doc:`/sculpt_paint/sculpting/tools/mask_tools`.
 They can also be edited with the
 :doc:`Edit Face Set </sculpt_paint/sculpting/tools/edit_face_set>` tool.

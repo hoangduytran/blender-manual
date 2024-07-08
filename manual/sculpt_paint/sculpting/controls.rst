@@ -32,8 +32,8 @@ Topology
    Only vertices that are topologically connected to where you started
    the stroke/tool on are affected. So loose geometry islands will be auto-masked.
 
-   Additionally for the :doc:`Grab </sculpt_paint/sculpting/tools/grab>` and
-   :doc:`Thumb </sculpt_paint/sculpting/tools/thumb>` brushes, anything that
+   Additionally for the :doc:`Grab </sculpt_paint/sculpting/brushes/grab>` and
+   :doc:`Thumb </sculpt_paint/sculpting/brushes/thumb>` brushes, anything that
    is not connected within the brush radius will be auto-masked.
    So even if geometry is connected somewhere,
    it is considered separate if the connection is not within the radius.
