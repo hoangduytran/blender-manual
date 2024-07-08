@@ -38,6 +38,10 @@ Working offline can be enforced by running with the ``--offline-mode``
 :ref:`command line argument <command-line-args-network-options>`. Users
 will then be unable to enable online access in the preferences.
 
+.. note::
+
+    Add-ons that follow this setting will only connect to the internet if enabled.
+    However, Blender cannot prevent third-party add-ons from violating this rule.
 
 .. _deploying-blender-bundling:
 
