@@ -404,7 +404,6 @@ Materials
 Exports material information of the object.
 By default the exporter approximates the :doc:`/render/shader_nodes/shader/principled`
 node tree by converting it to USD's Preview Surface format.
-If *To USD Preview Surface* is disabled, the material is set to the viewport materials of meshes.
 
 When a mesh has multiple materials assigned, a geometry subset is created for each material.
 The first material (if any) is always applied to the mesh itself as well
@@ -413,15 +412,32 @@ because the Hydra viewport does not support materials on subsets.
 See `USD issue #542 <https://github.com/PixarAnimationStudios/USD/issues/542>`__
 for more information.
 
+.. note::
+
+   If *USD Preview Surface Network* and *MaterialX Network* are disabled,
+   the material is set to the viewport materials of meshes.
+
 USD Preview Surface Network
-   When exporting materials, approximate a :doc:`/render/shader_nodes/shader/principled`
+   Approximates a :doc:`/render/shader_nodes/shader/principled`
    node tree to by converting it to USD's Preview Surface format.
-   If disabled, the material is set to the viewport materials of meshes.
 
    .. warning::
 
       Not all nodes are supported; currently only Diffuse,
       Principle, Image Textures, and UVMap nodes are support.
+
+MaterialX Network
+   Generates material shading graphs using the `MaterialX <http://materialx.org/>`__ standard.
+   This standard is designed to support a high amount of interoperability among
+   :abbr:`DCCs <Digital Content Creation>`. In Blender, MaterialX supports most
+   of the shader nodes and their functionality but has a few caveats (see below).
+
+   .. admonition:: Implementation Caveats
+      :class: important
+
+      When using the Principled BSDF, the resulting graph is very usable.
+      However, when using some of the other BSDFs, some of the generated
+      shading graphs are difficult for other DCC's to understand.
 
 Convert World Material
    Convert the :doc:`world material </render/lights/world>` to a USD dome light.
