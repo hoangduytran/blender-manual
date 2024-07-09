@@ -435,6 +435,20 @@ Export Textures
 Overwrite Textures
    Allow overwriting existing texture files when exporting textures.
 
+USDZ Texture Downsampling
+   Choose a maximum size for all exported textures.
+
+   :Keep: Keep all current texture sizes.
+   :256: Resize to a maximum of 256 pixels.
+   :512: Resize to a maximum of 512 pixels.
+   :1024: Resize to a maximum of 1024 pixels.
+   :2048: Resize to a maximum of 2048 pixels.
+   :4096: Resize to a maximum of 4096 pixels.
+   :Custom: Specify a custom size.
+
+      USDZ Custom Downscale Size
+         The size in pixels of the *Custom* downsampling.
+
 
 Experimental
 ------------
