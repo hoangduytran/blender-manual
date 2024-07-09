@@ -47,7 +47,10 @@ For better error messages, you can check also for ``bpy.app.online_access_overri
 to determine whether users can turn :ref:`Allow Online Access <bpy.types.PreferencesSystem.use_online_access>`
 on the preferences, or not.
 
-Blender itself doesn't block internet access based on this setting. It is up to the add-ons to respect it.
+.. note::
+
+   Add-ons that follow this setting will only connect to the internet if enabled.
+   However, Blender cannot prevent third-party add-ons from violating this rule.
 
 
 Bundle Dependencies
