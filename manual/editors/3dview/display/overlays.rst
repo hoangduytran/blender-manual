@@ -79,6 +79,12 @@ Statistics
    - **Geometry** -- Displays information about the current scene depending on the mode and object type.
      This can be the number of vertices, faces, triangles, or bones.
 
+.. _bpy.types.View3DOverlay.show_camera_guides:
+
+Camera Guides
+   Show Camera guides (:ref:`Safe Areas <bpy.ops.safe_areas>` & :ref:`Composition Guides <bpy.types.Camera.show_composition>`), 
+   only available in :ref:`camera view <bpy.ops.view3d.view_camera>`.
+
 HDRI Preview
    Show two spheres, one glossy and one diffuse, to preview the HDRI that's being used for world lighting.
    While HDRIs can be used in both the *Material Preview* and *Rendered*
