@@ -24,8 +24,8 @@ Accessing Brushes
 =================
 
 In modes that use painting or sculpting functionality, the :ref:`Asset Shelf <ui-region-asset_shelf>` of the 3D
-Viewport and Image Editor displays brush assets that can be used in that mode. Clicking a brush asset will activate the
-Brush Tool if necessary, with the clicked brush set.
+Viewport and Image Editor displays brush assets that can be used in that mode. Clicking a brush asset will activate
+the Brush Tool if necessary, with the clicked brush set.
 
 .. figure:: /images/sculpt-paint_brush_introduction_brush-asset-shelf.png
    :align: center
