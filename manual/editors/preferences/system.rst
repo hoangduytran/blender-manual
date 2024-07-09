@@ -100,8 +100,10 @@ Network
 .. _bpy.types.PreferencesSystem.use_online_access:
 
 Allow Online Access
-   Allow internet access. Blender may access configured online extension repositories.
-   Installed third party add-ons may access the internet for their own functionality.
+   Allow Blender to access the internet.
+
+   Add-ons that follow this setting will only connect to the internet if enabled.
+   However, Blender cannot prevent third-party add-ons from violating this rule.
 
 Time Out
    The time (in seconds) that online operations may wait before timing out.
