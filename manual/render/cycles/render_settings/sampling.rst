@@ -225,6 +225,20 @@ Light Threshold
 Advanced
 ========
 
+.. _bpy.types.CyclesRenderSettings.sampling_pattern:
+
+Pattern
+   The random sampling pattern used by the integrator.
+
+   :Automatic:
+      Uses *Blue-Noise* (see below), but for viewport rendering,
+      it optimizes for first sample quality for an interactive preview.
+   :Classic:
+      Use pre-computed tables of Owen-scrambled Sobol for random sampling.
+   :Blue-Noise:
+      Use a blue-noise pattern, which optimizes the frequency distribution of noise, for random sampling.
+      This results in an output that appears smoother despite not being less noisy overall.
+
 .. _bpy.types.CyclesRenderSettings.seed:
 
 Seed
@@ -244,6 +258,8 @@ Sample Offset
    then combine the images with ``bpy.ops.cycles.merge_images``
 
 Scrambling Distance
+   These properties are not compatible with *Blue-Noise* sampling patterns.
+
    .. _bpy.types.CyclesRenderSettings.adaptive_scrambling_distance:
 
    Automatic
