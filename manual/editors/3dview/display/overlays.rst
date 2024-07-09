@@ -11,6 +11,12 @@ Viewport Overlays
    :Header:    |overlays-icon| :menuselection:`Overlays`
 
 Clicking the icon toggles all overlays in the 3D Viewport.
+
+.. note::
+
+         Cameras outline & :ref:`passepartout <bpy.types.Camera.show_passepartout>` are not considered Viewport overlays.
+         
+
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 
