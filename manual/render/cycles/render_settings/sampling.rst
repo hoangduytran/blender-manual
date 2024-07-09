@@ -86,10 +86,11 @@ Render
    :OpenImageDenoise:
       Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
       an AI denoiser. Typically provides the highest quality, and is the default.
-
    :OptiX:
-      Uses NVIDIA's OptiX AI denoiser. Supports GPU acceleration on some
-      older NVIDIA GPUs where OpenImageDenoise does not.
+      Uses NVIDIA's OptiX AI denoiser.
+      Supports GPU acceleration on some older NVIDIA GPUs where OpenImageDenoise does not.
+
+      Only available on NVIDIA GPUs when configured in the :ref:`editors_preferences_cycles` user preferences.
 
 .. _bpy.types.CyclesRenderSettings.use_preview_denoising:
 .. _bpy.types.CyclesRenderSettings.preview_denoiser:
@@ -100,14 +101,14 @@ Viewport
    :Automatic:
       Uses GPU accelerated denoising if supported, for best performance.
       Prefers OpenImageDenoise over OptiX.
-
    :OpenImageDenoise:
       Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
       an AI denoiser. Typically provides the highest quality.
-
    :OptiX:
-      Uses NVIDIA's OptiX AI denoiser. Supports GPU acceleration on some
-      older NVIDIA GPUs where OpenImageDenoise does not.
+      Uses NVIDIA's OptiX AI denoiser.
+      Supports GPU acceleration on some older NVIDIA GPUs where OpenImageDenoise does not.
+
+      Only available on NVIDIA GPUs when configured in the :ref:`editors_preferences_cycles` user preferences.
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_start_sample:
 
@@ -154,8 +155,7 @@ Use GPU
    This is significantly faster than on CPU, but requires additional GPU memory.
    When large scenes need more GPU memory, this option can be disabled.
 
-   See :doc:`GPU Rendering </render/cycles/gpu_rendering>` for details on
-   supported GPU.
+   See :doc:`GPU Rendering </render/cycles/gpu_rendering>` for details on supported GPU.
 
 
 .. _bpy.types.CyclesRenderSettings.use_guiding:
@@ -172,7 +172,6 @@ and anisotropic scattering.
 .. note::
 
    - Path guiding is only available when rendering on a CPU.
-
    - While path guiding helps render caustics in some scenes, it is not designed for complex caustics
      as they are harder to learn and guide.
 
