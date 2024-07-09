@@ -11,6 +11,12 @@ Viewport Overlays
    :Header:    |overlays-icon| :menuselection:`Overlays`
 
 Clicking the icon toggles all overlays in the 3D Viewport.
+
+.. note::
+
+         Cameras outline & :ref:`passepartout <bpy.types.Camera.show_passepartout>` are not considered Viewport overlays.
+         
+
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 
@@ -72,6 +78,12 @@ Statistics
    - **Objects** -- Number of the selected objects and the total count.
    - **Geometry** -- Displays information about the current scene depending on the mode and object type.
      This can be the number of vertices, faces, triangles, or bones.
+
+.. _bpy.types.View3DOverlay.show_camera_guides:
+
+Camera Guides
+   Show Camera guides (:ref:`Safe Areas <bpy.ops.safe_areas>` & :ref:`Composition Guides <bpy.types.Camera.show_composition>`), 
+   only available in :ref:`camera view <bpy.ops.view3d.view_camera>`.
 
 HDRI Preview
    Show two spheres, one glossy and one diffuse, to preview the HDRI that's being used for world lighting.
