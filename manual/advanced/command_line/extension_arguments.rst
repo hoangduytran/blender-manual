@@ -179,8 +179,9 @@ usage::
 
        blender --command extension repo-add [-h] [--name NAME]
                                             [--directory DIRECTORY]
-                                            [--url URL] [--cache BOOLEAN]
-                                            [--clear-all] [--no-prefs]
+                                            [--url URL] [--source SOURCE]
+                                            [--cache BOOLEAN] [--clear-all]
+                                            [--no-prefs]
                                             ID
 
 Add a new local or remote repository.
@@ -198,6 +199,8 @@ options:
                         When omitted the repository is considered "local"
                         as it is not connected to an external repository,
                         where packages may be installed by file or managed manually.
+  --source SOURCE       The type of source in ('USER', 'SYSTEM').
+                        System repositories are managed outside of Blender and are considered read-only.
   --cache BOOLEAN       Use package cache (default=1).
   --clear-all           Clear all repositories before adding, simplifies test setup.
   --no-prefs            Treat the user-preferences as read-only,
