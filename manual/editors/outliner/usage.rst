@@ -11,13 +11,13 @@ Relations Management
 
    Linking objects to a collection.
 
-Data-blocks can be dragged and dropped to manage data relations in the Outliner.
-To begin a drag and drop, :kbd:`LMB` click and drag from the name or icon of a data-block.
+You can move an object (or collection) to a different parent collection by dragging and dropping.
 
-Objects can be moved to collections by dropping on the name or contents of a collection.
-To link an object to a collection, hold :kbd:`Ctrl` while dropping.
-To set parent-child relations between objects, drop an object onto another object
-while holding :kbd:`Shift`.
+You can link an object (or collection) to a parent collection by dragging and then holding
+:kbd:`Ctrl` while dropping. This way, you can make the object (or child collection) part of
+multiple parent collections at the same time.
+
+You can parent an object to another by dragging and then holding :kbd:`Shift` while dropping.
 
 .. note::
 
@@ -25,26 +25,26 @@ while holding :kbd:`Shift`.
    that are incompatible with the operation will remain unmodified.
 
 
-Modifiers, Constraints, & Visual Effects
-========================================
+Modifiers, Constraints, and Visual Effects
+==========================================
 
 You can manage :doc:`Modifiers </modeling/modifiers/index>`, :doc:`Constraints </animation/constraints/index>`, and
-:doc:`Visual Effects </grease_pencil/visual_effects/index>` from the Outliner in a couple ways:
+:doc:`Visual Effects </grease_pencil/visual_effects/index>` from the Outliner in a couple of ways:
 
-- To change the order within the :ref:`stack <modifier-stack>`
-  select the desired modifier and move it above or below other modifiers.
-- To apply a single modifier, right click on the modifier and select apply in the popover menu.
-- To delete a single modifier, right click on the modifier and select delete in the popover menu.
-- To copy a single modifier to another, select the modifier and drag it on top of the desired object.
-- To copy the whole modifier stack to another object, select the modifier icon and drag in to the desired object.
+- You can drag and drop individual items to change their order within the :ref:`stack <modifier-stack>` or to copy
+  them to another object.
+- You can drag and drop the group item (e.g. *Modifiers*) to copy the whole stack to another object.
+  The target object's existing stack will be replaced.
+- You can apply and delete items using the context menu.
+
 
 Drag & Dropping to 3D Viewport
 ==============================
 
-Objects & Object Data
----------------------
+Dragging an object from the Outliner to the :doc:`3D Viewport </editors/3dview/index>`
+creates a :doc:`duplicate </scene_layout/object/editing/duplicate>` -- a new object with its own copy
+of the underlying object data.
 
-Dragging object data-blocks from the Outliner to the :doc:`3D Viewport </editors/3dview/index>`
-creates a :doc:`duplicate </scene_layout/object/editing/duplicate>` of the object.
-Dragging *object data* data-blocks from the Outliner to the 3D Viewport
-creates a :doc:`linked duplicate </scene_layout/object/editing/duplicate_linked>` of the object.
+Dragging object data from the Outliner to the 3D Viewport creates a
+:doc:`linked duplicate </scene_layout/object/editing/duplicate_linked>` -- a new object that references
+the same underlying object data.

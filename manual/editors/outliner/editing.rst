@@ -9,32 +9,49 @@ Context Menu
 ============
 
 Show the context menu for a data-block with :kbd:`RMB` on the icon or name.
-Depending on the type of the preselected data-block(s), you will have all or part of the following options:
+Depending on the type of the selected data-block(s), you will have all or part of the following options:
 
 Copy/Paste
-   Copy/pastes selected data-blocks.
+   Copies/pastes the selected data-blocks.
 
 .. _bpy.ops.outliner.delete:
 
-Delete
-   Deletes the selected data-block.
+Delete :kbd:`X`, :kbd:`Delete`
+   Removes all usages of the selected data-blocks. Objects are removed from all scenes,
+   materials are removed from all meshes, and so on.
 
-Select, Select Hierarchy, Deselect
-   Add object to current selection without making it the active one.
+.. note::
+   Pressing these shortcuts while hovering over the 3D Viewport will instead *Unlink* the selected objects,
+   removing them only from the current scene.
 
+Delete Hierarchy
+   As above, but also affects child collections/objects. Note that if you run this on a collection,
+   child objects that (also) belong to another collection will not be deleted.
+
+Select
+   Adds the items that are selected in the Outliner to the selection in the 3D Viewport. This is only
+   useful when :ref:`Sync Selection <bpy.types.SpaceOutliner.use_sync_select>` is disabled,
+   as when it's enabled (which is the default), the Outliner selection is synchronized to the
+   3D Viewport automatically.
+
+Select Hierarchy
+   Adds the children of the selected items to the selection in the Outliner. If *Sync Selection* is enabled,
+   this also adds them to the selection in the 3D Viewport.
+
+Deselect
+   Removes the items that are selected in the Outliner from the selection in the 3D Viewport.
+
+Unlink
+   Removes the current usage of the data-block while keeping any others. Objects are only removed
+   from the current scene, materials are only removed from the current mesh, and so on.
 
 .. _editors-outliner-editing-collections:
 
 Collections
 -----------
 
-Collections are a way Blender uses to organize scenes.
-Collections contain objects and everything else in a scene.
-They can include collections themselves and are fully recursive.
-
-.. seealso::
-
-   Read more about :doc:`Collections </scene_layout/collections/index>`.
+:doc:`Collections </scene_layout/collections/index>` let you organize the content of a scene.
+They can contain objects as well as other collections.
 
 .. _bpy.ops.outliner.collection_new:
 
@@ -49,13 +66,8 @@ Duplicate Collections
 .. _bpy.ops.outliner.collection_duplicate_linked:
 
 Duplicate Linked
-   Duplicate entire hierarchy keeping content linked with original.
-
-Delete Hierarchy
-   Deletes the collection and removes all its child objects or collections.
-   It is important to note that this only deletes the collection,
-   if child objects are part of another collection they will stay in the scene collection
-   and their data-blocks will not be deleted from the blend-file.
+   Recursively duplicates the collection including child collections and objects,
+   but reuses object data.
 
 .. _bpy.ops.outliner.collection_instance:
 
@@ -68,32 +80,36 @@ Visibility
    .. _bpy.ops.outliner.collection_isolate:
 
    Isolate
-      Hides all collections except the selected collection and any parent collections (if any exist).
+      Shows the selected collection (as well as its child and parent collections)
+      and hides all the others.
 
    .. _bpy.ops.outliner.collection_show:
    .. _bpy.ops.outliner.collection_hide:
 
    Show/Hide
-      Shows/Hides the selected collection from the :doc:`View Layer </scene_layout/view_layers/index>`.
+      Changes the :ref:`Hide in Viewports <bpy.types.LayerCollection.hide_viewport>` setting
+      for the selected collections.
 
    .. _bpy.ops.outliner.collection_show_inside:
    .. _bpy.ops.outliner.collection_hide_inside:
 
    Show/Hide Inside
-      Shows/Hides all items that are a member of the selected collection, include child collections,
-      from the :doc:`View Layer </scene_layout/view_layers/index>`.
+      Changes the :ref:`Hide in Viewports <bpy.types.LayerCollection.hide_viewport>` setting
+      for the selected collections and all their children.
 
    .. _bpy.ops.outliner.collection_enable:
    .. _bpy.ops.outliner.collection_disable:
 
    Enable/Disable in Viewports
-      Enables/disables drawing in the :doc:`View Layer </scene_layout/view_layers/index>`.
+      Changes the :ref:`Disable in Viewports <bpy.types.Collection.hide_viewport>` setting
+      for the selected collections.
 
    .. _bpy.ops.outliner.collection_enable_render:
    .. _bpy.ops.outliner.collection_disable_render:
 
    Enable/Disable in Renders
-      Enables/disables visibility of the collection in renders.
+      Changes the :ref:`Disable in Renders <bpy.types.Collection.hide_render>` setting
+      for the selected collections.
 
 View Layer
    Controls the collection's interactions with the :doc:`View Layer </render/layers/introduction>`.
@@ -102,7 +118,12 @@ View Layer
    .. _bpy.ops.outliner.collection_exclude_set:
 
    Disable/Enable in View Layer
-      Disables/Enables the collection from the view layer.
+      Changes the :ref:`Exclude from View Layer <bpy.types.LayerCollection.exclude>` setting
+      for the selected collections.
+   
+   Set/Clear Holdout
+      Changes the :ref:`Holdout <bpy.types.LayerCollection.holdout>` setting
+      for the selected collections.
 
 .. _bpy.ops.outliner.collection_color_tag_set:
 
@@ -117,42 +138,28 @@ ID Data
 -------
 
 Unlink
-   To unlink a data-block from its "owner" (e.g. a material from its mesh).
+   Removes the current usage of the data-block while keeping any others
+   (e.g. removing a material from only the current mesh).
 Make Local
-   To create a "local" duplicate of this data-block.
+   Turns an :doc:`externally linked </files/linked_libraries/link_append>` data-block into a local one.
 Make Single User
-   This feature is not yet implemented.
+   This menu item is not currently functional. You can use the *User Count* button in the
+   :doc:`/interface/controls/templates/data_block` instead.
 Delete
    Deletes the selected data-block.
-Make Library Override
-   Make a local :doc:`override </files/linked_libraries/library_overrides>` of this linked data-block.
-Make Library Override Hierarchy
-   Make a local :doc:`override </files/linked_libraries/library_overrides>` of this linked data-block,
-   and its hierarchy of dependencies.
-Reset Library Override
-   Reset this local :doc:`override </files/linked_libraries/library_overrides>` to its linked values.
-Reset Library Override Hierarchy
-   Reset this local :doc:`override </files/linked_libraries/library_overrides>` to its linked values,
-   as well as its hierarchy of dependencies. This allows you to update local overrides
-   when the relationship between data-blocks changed in the linked library data.
-Resync Library Override Hierarchy
-   Rebuilds the local :doc:`override </files/linked_libraries/library_overrides>`
-   from its linked reference, as well as its hierarchy of dependencies.
-Delete Library Override Hierarchy
-   Deletes the local :doc:`override </files/linked_libraries/library_overrides>`
-   (including its hierarchy of override dependencies) and relinks its users to the linked data-blocks.
 Remap Users
-   Remap Users of a data-block to another one (of same type of course).
-   This means you can e.g. replace all usages of a material or texture by another one.
+   Replaces all usages of the selected data-block by a different one. For example,
+   you could use this to globally replace a material by another.
 Copy/Paste
-   Copy/pastes selected data-blocks.
-Add Fake User, Clear Fake User
-   Adds a "dummy" (fake) user so that the selected data-block always gets saved even if it has no users.
-   The fake user can be removed with *Clear Fake User*.
+   Copies/pastes selected data-blocks.
+Add/Clear Fake User
+   Adds/removes a :ref:`fake user <data-system-datablock-fake-user>`, which prevents unused data-blocks
+   from getting automatically deleted when saving and reloading the blend-file.
 Rename :kbd:`F2`
    Renames the selected data-block.
 Select Linked
-   Selects the linked data, see :ref:`bpy.ops.object.select_linked` for more information.
+   Selects the data-blocks that use the currently selected one (e.g. selecting all the objects that use the
+   selected material). See :ref:`bpy.ops.object.select_linked`.
 
 
 Mark as Asset
@@ -173,22 +180,31 @@ Clear Asset (Set Fake User)
 See :ref:`assets-clear-set-fake-user`.
 
 
+Library Override
+----------------
+
+See :doc:`/files/linked_libraries/library_overrides`.
+
+
 View
 ----
-
-The view menu is part of the context menu and supported in all the Outliner elements.
 
 .. _bpy.ops.outliner.show_active:
 
 Show Active :kbd:`Period`
-   Centers the Tree View to selected object.
+   Centers the tree view to the active item.
+
+.. _bpy.ops.outliner.expanded_toggle:
+
+Expand/Collapse All :kbd:`Shift-A`
+   Expands/collapses every single item in the tree.
 
 .. _bpy.ops.outliner.show_hierarchy:
 
-Show Hierarchy :kbd:`Home`
-   To collapse all levels of the tree.
+Show Object Hierarchy :kbd:`Home`
+   Expands all objects that have child objects, and collapses all objects that don't.
 
 .. _bpy.ops.outliner.show_one_level:
 
 Show/Hide One Level :kbd:`NumpadPlus`/ :kbd:`NumpadMinus`
-   Expand one level down in the tree or collapse one level using the keyboard shortcuts.
+   Expands/collapses a level down/up the tree across all items.

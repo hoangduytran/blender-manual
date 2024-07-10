@@ -9,25 +9,18 @@ Introduction
 
    The Outliner editor.
 
-The *Outliner* is a list that organizes data in the blend-file,
-i.e. the scene data, Video Sequencer data, or anything that gets stored in a blend-file.
-The *Outliner* can be used to:
+The *Outliner* shows the content of the blend-file in a tree. You can use it to:
 
-- View the data in the scene.
-- Select and deselect objects in the scene.
-- Hide or show an object in the scene.
-- Enable or disable selection (to make an object "unselectable" in the 3D Viewport).
-- Enable or disable the rendering of an object.
-- Delete objects from the scene.
-- Unlink data (equivalent to pressing the *X* button next to the name of a data-block).
-- Manage collections in the scene.
+- Get an overview of the data in the scene.
+- Select and deselect objects.
+- Make objects unselectable or invisible in the 3D Viewport.
+- Exclude objects from rendering.
+- Duplicate objects.
+- Delete objects.
+- Manage parent/child relationships and :doc:`collections </scene_layout/collections/introduction>`.
 
-.. (TODO) create new objects by drag & drop from the outliner
-
-Each row in the *Outliner* shows a data-block. You can :kbd:`LMB` click the disclosure triangle to
-the left of a name to expand the current data-block and see what other data-blocks it contains.
-Holding :kbd:`Shift` when clicking on the disclosure triangle will expand child data-blocks recursively.
-:kbd:`LMB` Clicking and dragging along disclosure triangles will expand or collapse multiple data-blocks.
+Items with an arrow on the left can be expanded. Click it with :kbd:`LMB` to expand a single item,
+drag :kbd:`LMB` to expand multiple items, or click :kbd:`Shift-LMB` to expand an item recursively.
 
 
 Example
