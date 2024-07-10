@@ -124,6 +124,9 @@ Subtype
    :Distance: Measure of space between items.
    :Power: Work as a factor of time, measured in watts. This is used in Blender to measure light intensity.
    :Temperature: Intensity of heat present.
+   :Wavelength:
+      The distance between cycles of a wave measured in millimeters (mm),
+      micrometers (µm), nanometers (nm), or picometers (pm).
 
    For float arrays:
 
