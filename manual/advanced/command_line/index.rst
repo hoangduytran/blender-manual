@@ -60,6 +60,15 @@ Arguments
 - :ref:`command-line-args-misc-options`
 
 
+Sub-Commands
+============
+
+.. toctree::
+   :maxdepth: 2
+
+   extension_arguments.rst
+
+
 Workflows
 =========
 

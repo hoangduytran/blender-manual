@@ -2,6 +2,7 @@
 .. _bpy.ops.wm.addon:
 .. _bpy.types.WindowManager.addon:
 .. _bpy.ops.preferences.addon:
+.. _prefs-extensions:
 
 **********
 Extensions
