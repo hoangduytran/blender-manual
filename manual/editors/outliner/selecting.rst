@@ -71,7 +71,6 @@ Keyboard selection and navigation starts from the active data-block.
 Properties Editor Sync
 ======================
 
-When clicking the data-block icons or any other data icon (modifiers, constraints, object data, etc.),
-the :doc:`/editors/properties_editor` editor will change to the corresponding tab.
-This feature can be enabled or disabled using the Properties editor's
-:ref:`Sync with Outliner <bpy.types.SpaceProperties.outliner_sync>` option.
+When clicking the icon (not the name) of an item in the Outliner, the :doc:`/editors/properties_editor`
+editor will automatically switch to the relevant tab. This feature can be disabled using
+the Properties editor's :ref:`Sync with Outliner <bpy.types.SpaceProperties.outliner_sync>` option.
