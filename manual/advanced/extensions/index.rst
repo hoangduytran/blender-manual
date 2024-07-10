@@ -11,11 +11,6 @@ They are shared in online platforms, and can be installed and updated from withi
 The official extensions platform for the Blender project is `extensions.blender.org <https://extensions.blender.org>`__.
 Other third party sites can also be supported, as long as they follow the Extensions Platform specification.
 
-.. seealso::
-
-   For the extension settings, and how to manage them, refer to the
-   :doc:`User Preferences </editors/preferences/extensions>`.
-
 .. toctree::
    :maxdepth: 1
 
@@ -24,5 +19,12 @@ Other third party sites can also be supported, as long as they follow the Extens
    Supported tags <tags.rst>
    Add-ons <addons.rst>
    Python Wheels <python_wheels.rst>
-   Command Line Arguments <command_line_arguments.rst>
    Creating a Repository <creating_repository/index.rst>
+
+.. seealso::
+
+   For the extension settings, and how to manage them, refer to the
+   :ref:`User Preferences <prefs-extensions>`.
+
+   For managing extensions from the command line, refer to
+   :ref:`Extension Command Line Arguments <command_line-args-extensions>`.
