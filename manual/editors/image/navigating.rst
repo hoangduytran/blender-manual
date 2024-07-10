@@ -20,8 +20,20 @@ and zooming more comfortably when e.g. no mouse wheel is available.
 View Menu
 =========
 
-Region Controls
-   Adjust which regions are visible in the Image editor.
+.. _bpy.types.SpaceImageEditor.show_region:
+
+Toolbar :kbd:`T`
+   Show or hide the :ref:`Toolbar <ui-region-toolbar>`.
+Sidebar :kbd:`N`
+   Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
+Tool Settings
+   Show or hide the settings for the currently selected tool.
+Asset Shelf
+   Toggle the visibility of the :ref:`ui-region-asset_shelf`.
+Adjust Last Operation
+   Displays a pop-up panel to alter properties of the last
+   completed operation. See :ref:`bpy.ops.screen.redo_last`.
+
 Update Automatically
    Instantly update any other editors that are affected by changes in this Image Editor.
    When disabled, the other editors may display outdated information until they're manually refreshed
