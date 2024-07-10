@@ -149,3 +149,13 @@ Edit Mode
 
 Sculpt Mode
    The node group can be used in :doc:`Sculpt Mode </sculpt_paint/sculpting/index>`.
+
+
+Options
+-------
+
+.. _bpy.types.GeometryNodeTree.use_wait_for_click:
+
+Wait for Click
+   Wait for a mouse click input (:kbd:`LMB`) before running the operator from a menu.
+   This is useful for the :doc:`/modeling/geometry_nodes/input/scene/mouse_position`.
