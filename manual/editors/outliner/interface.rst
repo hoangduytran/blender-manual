@@ -48,7 +48,7 @@ It helps to narrow the list of objects so that you can find things quickly and e
    Lists :doc:`data-blocks </files/data_blocks>` and other data
    that are unused and/or will be lost when the file is reloaded.
    It includes data-blocks which have only a fake user. You can add/remove the Fake User
-   by clicking on cross/tick icon on the right side of the Outliner editor.
+   by clicking on cross/tick icon on the right side of the Outliner.
 
 
 .. _bpy.types.SpaceOutliner.filter_text:
@@ -179,8 +179,6 @@ System Overrides
    `Display Mode`_.
 
 
-.. _bpy.ops.outliner.orphans_purge:
-
 Miscellaneous
 -------------
 
@@ -194,8 +192,20 @@ Keying Sets (Data API)
    Add/Remove selected data to the active :doc:`Keying Set </animation/keyframes/keying_sets>`.
 Drivers
    Add/Remove :doc:`Drivers </animation/drivers/index>` to the selected item.
+
+.. _bpy.ops.outliner.orphans_purge:
+
 Purge (Orphan Data)
-   Recursively remove all unused data-blocks from the file (cannot be undone).
+   Opens a dialog to remove unused data-blocks from both the current blend-file or any
+   :doc:`Linked Data </files/linked_libraries/link_append>` (cannot be undone).
+
+   Local Data-Blocks
+      Removes unused data-blocks from the current blend-file.
+   Linked Data-Blocks
+      Removes unused data-blocks from :doc:`Linked Data </files/linked_libraries/link_append>`.
+   Recursive Delete
+      Removes data-blocks only used by unused data-blocks,
+      ensuring that no orphaned data-blocks remain after execution.
 
 
 Main Region
