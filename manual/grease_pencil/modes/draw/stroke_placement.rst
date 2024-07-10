@@ -30,8 +30,15 @@ Origin
 Surface
    Strokes will stick on mesh surfaces.
 
+   .. _bpy.types.ToolSettings.gpencil_surface_offset:
+
    Offset
       Distance from the mesh surface to place the new strokes.
+
+   .. _bpy.types.ToolSettings.use_gpencil_project_only_selected:
+
+   Project Onto Selected
+      Only project the strokes onto selected objects.
 
 Stroke
    Strokes will stick on other strokes.
