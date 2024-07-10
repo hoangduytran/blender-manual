@@ -93,6 +93,21 @@ Open the image in the *Image Editor* program specified in the
 :doc:`File Paths Preferences </editors/preferences/file_paths>`.
 
 
+.. _bpy.ops.image.clipboard:
+
+Copy/Paste
+==========
+
+.. reference::
+
+   :Mode:      All Modes
+   :Menu:      :menuselection:`Image --> Copy/Paste`
+
+Copy and pastes imaged to/from a computers operating system.
+
+Currently, only PNG files are supported and is only supported on Windows and Linux running Wayland.
+
+
 .. _bpy.ops.image.save:
 
 Save
