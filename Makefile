@@ -7,7 +7,8 @@ Custom Targets
 
 Convenience targets provided for building docs.
 
-- livehtml (default)   to auto build on file changes on host on localhost.
+- html (default)       to build HTML documentation.
+- livehtml             to auto build HTML on file changes on host on localhost.
 - epubpdf              to convert an epub file to PDF.
 
 Translations
