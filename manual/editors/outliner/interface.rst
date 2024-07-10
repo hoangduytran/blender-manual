@@ -22,7 +22,7 @@ It helps to narrow the list of objects so that you can find things quickly and e
    Lists data, images and videos, that are used by the :doc:`Video Sequencer </video_editing/index>`.
 :Blender File:
    Lists all data in the current blend-file. On the right side of the list, an icon shows the number
-   of users and clicking the icon (shield icon) adds or removes a :ref:`fake user <data-system-datablock-fake-user`.
+   of users and clicking the icon (shield icon) adds or removes a :ref:`fake user <data-system-datablock-fake-user>`.
 :Data API:
    Lists every :doc:`data-block </files/data_blocks>` along with any properties that they might have.
 :Library Overrides:
