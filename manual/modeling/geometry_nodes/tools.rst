@@ -73,10 +73,13 @@ Tool-specific Nodes
 The following nodes are only supported in the *Tool* context:
 
 - :doc:`/modeling/geometry_nodes/input/scene/3d_cursor`
-- :doc:`/modeling/geometry_nodes/mesh/read/face_set`
+- :doc:`/modeling/geometry_nodes/input/scene/mouse_position`
+- :doc:`/modeling/geometry_nodes/input/scene/viewport_transform`
+- :doc:`/modeling/geometry_nodes/geometry/read/active_element`
 - :doc:`/modeling/geometry_nodes/geometry/read/selection`
-- :doc:`/modeling/geometry_nodes/mesh/write/set_face_set`
 - :doc:`/modeling/geometry_nodes/geometry/write/set_selection`
+- :doc:`/modeling/geometry_nodes/mesh/read/face_set`
+- :doc:`/modeling/geometry_nodes/mesh/write/set_face_set`
 
 .. note::
 
