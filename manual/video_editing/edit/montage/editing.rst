@@ -37,12 +37,15 @@ The drop-down arrow offers the following options:
 
 .. _bpy.types.SequencerToolSettings.snap_to_current_frame:
 .. _bpy.types.SequencerToolSettings.snap_to_hold_offset:
+.. _bpy.types.SequencerToolSettings.snap_to_markers:
 
 Snap to
    Current Frame
       Snaps the transformed selection to the Playhead.
    Hold Offset
       Snaps the transformed selection to the :ref:`Hold Offset <sequencer-duration-hard>`.
+   Markers
+      Snaps the transformed selection to :doc:`/animation/markers`.
 
 .. _bpy.types.SequencerToolSettings.snap_ignore_muted:
 .. _bpy.types.SequencerToolSettings.snap_ignore_sound:
