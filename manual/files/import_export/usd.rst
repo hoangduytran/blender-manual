@@ -517,14 +517,7 @@ Vertex Velocities
    as the baked mesh changes topology all the time, and
    thus computing the velocities at import time in a post-processing step is hard.
 
-Coordinate System Orientation
-   Blender uses the Z axis as up axis. Since USD supports both Y up and Z up,
-   the USD files written by Blender always use Z up.
-
 Materials
-   Very simple versions of the materials are exported, using only
-   the :ref:`render-materials-settings-viewport-display` color, metallic, and roughness.
-
    When there are multiple materials, the mesh faces are stored as geometry subset
    and each material is assigned to the appropriate subset.
    If there is only one material this is skipped. Note that the geometry subsets are not time-sampled,
