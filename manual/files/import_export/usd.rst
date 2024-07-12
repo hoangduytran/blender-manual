@@ -118,6 +118,9 @@ Include
       Do not import invisible USD primitives. Only applies to primitives with a non-animated
       `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
       Primitives with animated visibility will always be imported.
+   Defined Primitives Only
+      When disabled this allows importing USD primitives
+      which are not defined, such as those with an override specifier.
 
 Set Frame Range
    Update the scene's start and end frame to match those of the USD stage.
@@ -351,6 +354,13 @@ Convert Orientation
    Forward / Up Axis
       By mapping these to different axes you can convert rotations between applications default up and forward axes.
 
+Xform Ops
+   The type of transform operators to use to transform prims.
+
+   :Translate, Rotate, Scale: Export with translate, rotate, and scale ``Xform`` operators.
+   :Translate, Orient, Scale: Export with translate, orient quaternion, and scale ``Xform`` operators.
+   :Matrix: Export matrix operator.
+
 Use Settings for
    Determines the whether to use *Viewport* or *Render* visibility of collection, modifiers,
    or any other property that can be set for both the *Viewport* and *Render*.
@@ -359,8 +369,20 @@ Use Settings for
 Object Types
 ------------
 
+Meshes
+   Exports :doc:`Mesh Objects </modeling/meshes/index>`
+Lights
+   Exports :doc:`Light Objects </render/lights/index>`
+   USD does not directly support spot lights, so those are not exported.
+Cameras
+   Exports :doc:`Camera Objects </manual/render/cameras>`
+   Only perspective cameras are exported.
+Volumes
+   Exports :doc:`Volume Objects </modeling/volumes/index>`
+Curves
+   Exports :doc:`Curve Objects </modeling/curves/index>`
 Hair
-   When checked, parent hair strands are exported as a curve system.
+   Exports parent hair strands are exported as a curve system.
    Hair strand colors are not exported.
 
 
@@ -370,11 +392,16 @@ Geometry
 UV Maps
    When checked, includes UV coordinates for exported meshes.
    The name of the UV map in USD is the same as the name in Blender.
-   In USD the default name is ``st`` whereas in Blender the default name is ``UVMap``.
-   To export to the standard UV map name ``st``, rename the UV map in Blender to ``st``.
+
+Rename UV Maps
+   Exports UV maps using the USD  default name (``st``) as opposed to Blender's default name (``UVMap``).
 
 Normals
    When checked, includes normals for exported meshes. This includes custom loop normals.
+
+Triangulate
+   Triangulates the mesh before writing. For more detail on the specific option see
+   the :doc:`Triangulate modifier </modeling/modifiers/generate/triangulate>`.
 
 
 Rigging
@@ -498,14 +525,7 @@ Vertex Velocities
    as the baked mesh changes topology all the time, and
    thus computing the velocities at import time in a post-processing step is hard.
 
-Coordinate System Orientation
-   Blender uses the Z axis as up axis. Since USD supports both Y up and Z up,
-   the USD files written by Blender always use Z up.
-
 Materials
-   Very simple versions of the materials are exported, using only
-   the :ref:`render-materials-settings-viewport-display` color, metallic, and roughness.
-
    When there are multiple materials, the mesh faces are stored as geometry subset
    and each material is assigned to the appropriate subset.
    If there is only one material this is skipped. Note that the geometry subsets are not time-sampled,
