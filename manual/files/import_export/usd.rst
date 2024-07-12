@@ -351,6 +351,13 @@ Convert Orientation
    Forward / Up Axis
       By mapping these to different axes you can convert rotations between applications default up and forward axes.
 
+Xform Ops
+   The type of transform operators to use to transform prims.
+
+   :Translate, Rotate, Scale: Export with translate, rotate, and scale ``Xform`` operators.
+   :Translate, Orient, Scale: Export with translate, orient quaternion, and scale ``Xform`` operators.
+   :Matrix: Export matrix operator.
+
 Use Settings for
    Determines the whether to use *Viewport* or *Render* visibility of collection, modifiers,
    or any other property that can be set for both the *Viewport* and *Render*.
