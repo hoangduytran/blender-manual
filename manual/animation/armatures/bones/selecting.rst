@@ -193,7 +193,7 @@ Immediate Children
 Siblings
    Selects bones that have the same parent as the active bone.
 Length
-   Selects bones with a similar bone length (between tip and tail) under the specified *Threshold*.
+   Selects bones with a similar :ref:`bone length <bpy.types.EditBone.length>` under the specified *Threshold*.
 Direction (Y axis)
    Select bones aligned on the Y axis (along the bone's length).
 Prefix

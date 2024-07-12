@@ -40,6 +40,11 @@ Tail X, Y, Z
 Roll
    Bone rotation around head-tail axis.
 
+.. _bpy.types.EditBone.length:
+
+Length
+   The distance from the bone's head to it's tail. Changing the length moves the tail end.
+
 .. _bpy.types.EditBone.lock:
 
 Lock

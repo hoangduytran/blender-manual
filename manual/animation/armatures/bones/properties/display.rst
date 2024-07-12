@@ -101,9 +101,11 @@ Rotation X, Y, Z
 Override Transform
    Bone that defines the display transform of the custom shape.
 
-Scale to Bone Length
-   Whether the custom shape should be scaled by a factor equal to the bone's length.
+.. _bpy.types.PoseBone.use_custom_shape_bone_size:
 
+Scale to Bone Length
+   Whether the custom shape should be scaled by a factor
+   equal to the :ref:`bone's length <bpy.types.EditBone.length>`.
 
 .. _bpy.types.Bone.show_wire:
 
@@ -118,5 +120,6 @@ Wireframe
    - The origin of each instanced shape object is at the :doc:`root </animation/armatures/bones/structure>`
      of the bone.
    - The rotation of each shape object is such that its Y axis lies along the direction of the bone.
-   - For best results when *Scale to Bone Length* is enabled, make sure the template object is 1 unit
-     in size along its Y axis. This will make it perfectly match the size of each bone.
+   - For best results when :ref:`Scale to Bone Length <bpy.types.PoseBone.use_custom_shape_bone_size>` is enabled,
+     make sure the template object is 1 unit in size along its Y axis.
+     This will make it perfectly match the size of each bone.
