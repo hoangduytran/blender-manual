@@ -366,8 +366,20 @@ Use Settings for
 Object Types
 ------------
 
+Meshes
+   Exports :doc:`Mesh Objects </modeling/meshes/index>`
+Lights
+   Exports :doc:`Light Objects </render/lights/index>`
+   USD does not directly support spot lights, so those are not exported.
+Cameras
+   Exports :doc:`Camera Objects </manual/render/cameras>`
+   Only perspective cameras are exported.
+Volumes
+   Exports :doc:`Volume Objects </modeling/volumes/index>`
+Curves
+   Exports :doc:`Curve Objects </modeling/curves/index>`
 Hair
-   When checked, parent hair strands are exported as a curve system.
+   Exports parent hair strands are exported as a curve system.
    Hair strand colors are not exported.
 
 
