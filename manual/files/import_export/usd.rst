@@ -392,11 +392,16 @@ Geometry
 UV Maps
    When checked, includes UV coordinates for exported meshes.
    The name of the UV map in USD is the same as the name in Blender.
-   In USD the default name is ``st`` whereas in Blender the default name is ``UVMap``.
-   To export to the standard UV map name ``st``, rename the UV map in Blender to ``st``.
+
+Rename UV Maps
+   Exports UV maps using the USD  default name (``st``) as opposed to Blender's default name (``UVMap``).
 
 Normals
    When checked, includes normals for exported meshes. This includes custom loop normals.
+
+Triangulate
+   Triangulates the mesh before writing. For more detail on the specific option see
+   the :doc:`Triangulate modifier </modeling/modifiers/generate/triangulate>`.
 
 
 Rigging
