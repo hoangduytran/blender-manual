@@ -28,6 +28,8 @@ This operation adds a driver with a single variable (which needs to be filled in
 and displays the *Edit Driver* popover.
 
 
+.. _bpy.ops.anim.driver_button_edit:
+
 Edit Driver
 ===========
 
@@ -42,6 +44,8 @@ Many drivers don't use their :doc:`F-Curve </editors/graph_editor/fcurves/introd
 component, so this reduced interface is sufficient.
 
 
+.. _bpy.ops.screen.drivers_editor_show:
+
 Open Drivers Editor
 ===================
 
@@ -52,6 +56,9 @@ Open Drivers Editor
 Opens a new window with the *Drivers Editor* and
 selects the driver associated with the property.
 
+
+.. _bpy.ops.anim.copy_driver_button:
+.. _bpy.ops.anim.paste_driver_button:
 
 Copy & Paste
 ============
@@ -65,7 +72,22 @@ Drivers can be copied and pasted via the context menu.
 When adding drivers with the same settings, this can save time modifying settings.
 
 
-.. _drivers-copy-as-new:
+.. _bpy.ops.ui.copy_driver_to_selected_button:
+
+Copy Driver to Selected
+=======================
+
+.. reference::
+
+   :Menu:      :menuselection:`Context menu --> Copy Drivers to Selected`
+   :Menu:      :menuselection:`Context menu --> Copy Driver to Selected`
+   :Menu:      :menuselection:`Context menu --> Copy All Drivers to Selected`
+
+Copy the property's driver from the active item to the same
+property of all selected items, if the same property exists.
+
+
+.. _bpy.ops.ui.copy_as_driver_button:
 
 Copy As New Driver
 ==================

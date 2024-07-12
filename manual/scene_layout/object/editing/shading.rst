@@ -13,10 +13,11 @@ Shade Smooth
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Shade Smooth`
 
-The easiest way is to set an entire object as smooth or faceted by selecting a mesh object,
-and in *Object Mode*, select *Shade Smooth* in the *Object* menu.
+Sets an entire object as smooth or faceted.
 This forces the assignment of the "smoothing" attribute to each face in the mesh,
 including when you add or delete geometry.
+
+This operator will also remove any :doc:`Smooth By Angle Modifiers </modeling/modifiers/normals/smooth_by_angle>`
 
 Notice that the outline of the object is still strongly faceted.
 Activating the smoothing features does not actually modify the object's geometry;
@@ -40,24 +41,24 @@ Keep Sharp Edges
    This option is useful to not destroy data in case you want to revert changes later.
 
 
-.. _bpy.ops.object.shade_smooth_by_angle:
+.. _bpy.ops.object.shade_auto_smooth:
 
-Shade Smooth by Angle
-=====================
+Shade Auto Smooth
+=================
 
 .. reference::
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Shade Smooth by Angle`
+   :Menu:      :menuselection:`Object --> Shade Auto Smooth`
 
-Set the sharpness of mesh edges based on the angle between the neighboring faces.
+Adds a :doc:`/modeling/modifiers/normals/smooth_by_angle` to automatically set
+the sharpness of mesh edges based on the angle between the neighboring faces.
+Note, the modifier will be :ref:`pinned <bpy.types.Modifier.use_pin_to_last>` to be the last modifier.
 
+Auto Smooth
+   If disabled, any :doc:`Smooth By Angle Modifiers </modeling/modifiers/normals/smooth_by_angle>` are removed.
 Angle
    Maximum angle between face normals that will be considered as smooth.
-
-The *Shade Flat* operator will revert the shading back to flat;
-additionally, the *Shade Smooth* operator will disable all flat normals,
-making the entire object appear smooth again.
 
 
 .. _bpy.ops.object.shade_flat:
@@ -71,8 +72,10 @@ Shade Flat
    :Menu:      :menuselection:`Object --> Shade Flat`
 
 Signify the object to render and display faces uniformly,
-using the :ref:`Face Normals <modeling-meshes-structure-normals>`.
+using the :ref:`Face Normal's <modeling-meshes-structure-normals>` direction.
 This is usually desirable for objects with flat surfaces.
+
+This operator will also remove any :doc:`Smooth By Angle Modifiers </modeling/modifiers/normals/smooth_by_angle>`
 
 Keep Sharp Edges
    Do not clear sharp edges (which are redundant with objects shaded as flat or smooth).

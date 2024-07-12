@@ -171,7 +171,7 @@ Ease In, Out
    The *Ease In/Out* number fields, change the "length" of the :ref:`"auto" <curve-handle-type-auto>` Bézier handle
    to control the "root handle" and "tip handle" of the bone, respectively.
    These values are proportional to the default length,
-   which of course automatically varies depending on bone length,
+   which of course automatically varies depending on :ref:`bone length <bpy.types.EditBone.length>`,
    angle with the reference handle, and so on.
 
    Although easing is a scale-like value, the Edit Mode and Pose Mode versions of the values are added,

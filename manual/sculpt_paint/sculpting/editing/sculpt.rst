@@ -6,8 +6,8 @@ Sculpt
 This page details the general hotkey operators and menu operators in sculpt mode.
 
 
-Transforms
-==========
+Transform
+=========
 
 Move
    Change the position of the object.
@@ -79,36 +79,6 @@ Grow/Shrink Visibility :kbd:`PageUp`, :kbd:`PageDown`
    :doc:`Visibility, Masking & Face Sets </sculpt_paint/sculpting/introduction/visibility_masking_face_sets>`.
 
 
-Trimming
-========
-
-The trimming operators add or remove geometry from the mesh based on a gesture input.
-These operators are especially useful for sketching an early base mesh for further
-sculpting with the :doc:`voxel remesher </sculpt_paint/sculpting/tool_settings/remesh>`.
-
-.. _bpy.ops.sculpt.trim_box_gesture:
-
-:ref:`tool-box-trim`
-   Removes geometry based on a :ref:`box selection <tool-select-box>`.
-
-.. _bpy.ops.sculpt.trim_lasso_gesture:
-
-:ref:`tool-lasso-trim`
-   Removes geometry based on a :ref:`lasso selection <tool-select-lasso>`.
-
-:ref:`Box Add <tool-box-trim>`
-   Adds geometry based on a :ref:`box selection <tool-select-box>`.
-
-:ref:`Lasso Add <tool-lasso-trim>`
-   Adds geometry based on a :ref:`lasso selection <tool-select-lasso>`.
-
-.. _bpy.ops.sculpt.project_line_gesture:
-
-:doc:`/sculpt_paint/sculpting/tools/line_project`
-   Flattens the geometry along a plane determined by the camera view and a drawn line.
-   The region of the mesh being flattened is visualized by the side of the line that is shaded.
-
-
 Fairing
 =======
 
@@ -130,6 +100,36 @@ Fair Tangency
    by minimizing changes in vertex :term:`tangents <Tangent>`.
    This is ideal for creating smooth curved surfaces on complex topology,
    where just using the smooth brush will not lead to desired results
+
+
+Trimming
+========
+
+The trimming operators add or remove geometry from the mesh based on a gesture input.
+These operators are especially useful for sketching an early base mesh for further
+sculpting with the :doc:`voxel remesher </sculpt_paint/sculpting/tool_settings/remesh>`.
+
+.. _bpy.ops.sculpt.project_line_gesture:
+
+:doc:`/sculpt_paint/sculpting/tools/line_project`
+   Flattens the geometry along a plane determined by the camera view and a drawn line.
+   The region of the mesh being flattened is visualized by the side of the line that is shaded.
+
+.. _bpy.ops.sculpt.trim_box_gesture:
+
+:ref:`tool-box-trim`
+   Removes geometry based on a :ref:`box selection <tool-select-box>`.
+
+.. _bpy.ops.sculpt.trim_lasso_gesture:
+
+:ref:`tool-lasso-trim`
+   Removes geometry based on a :ref:`lasso selection <tool-select-lasso>`.
+
+:ref:`Box Add <tool-box-trim>`
+   Adds geometry based on a :ref:`box selection <tool-select-box>`.
+
+:ref:`Lasso Add <tool-lasso-trim>`
+   Adds geometry based on a :ref:`lasso selection <tool-select-lasso>`.
 
 
 .. _bpy.ops.sculpt.mesh_filter:
@@ -177,7 +177,7 @@ Enhance Details
    by intensifying the difference between creases and valleys.
    This filter works similar to the inverted direction of the
    :doc:`Smooth </sculpt_paint/sculpting/brushes/smooth>` brush.
-Erase Displacement
+Erase Multires Displacement
    Deletes displacement information of
    the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,
    resetting the mesh to a regular subdivision surface result.
@@ -186,7 +186,7 @@ Erase Displacement
 
    Negative strokes will intensify the displacement details,
    this method works similar to *Enhance Details* and can give better results in some circumstances.
-Random
+Randomize
    Randomly moves vertices along the vertex normal.
    This filter works similar to the :ref:`Randomize Transform <bpy.ops.object.randomize_transform>`.
 

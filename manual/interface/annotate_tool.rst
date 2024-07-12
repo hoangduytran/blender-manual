@@ -1,3 +1,4 @@
+.. _bpy.ops.gpencil.annotate:
 
 ***********
 Annotations
@@ -76,6 +77,16 @@ Placement
    :View:
       The new annotations are 2D and get stuck to the screen. They keep the same position,
       rotation and size no matter how you pan, orbit or zoom in the editor.
+
+.. _bpy.types.ToolSettings.use_annotation_stroke_endpoints:
+
+Only End Points :guilabel:`Surface Placement`
+   Only use the first and last parts of the stroke for snapping.
+
+.. _bpy.types.ToolSettings.use_annotation_project_only_selected:
+
+Project Onto Selected :guilabel:`Surface Placement`
+   Only project the strokes onto selected objects.
 
 Stabilize Stroke
    Helps to reduce jitter of the strokes while drawing by delaying and correcting the location of points.

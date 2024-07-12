@@ -41,5 +41,5 @@ Face normals are displayed evenly, because of this all the edges of the selected
 .. tip::
 
    Use the :doc:`Edge Split </modeling/modifiers/generate/edge_split>`
-   modifier and :ref:`Smooth by Angle Smooth <bpy.ops.object.shade_smooth_by_angle>`
+   modifier and :ref:`Smooth by Angle Smooth <bpy.ops.object.shade_auto_smooth>`
    to balance between smooth surfaces and sharp edges.

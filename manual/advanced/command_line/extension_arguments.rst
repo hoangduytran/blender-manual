@@ -179,7 +179,9 @@ usage::
 
        blender --command extension repo-add [-h] [--name NAME]
                                             [--directory DIRECTORY]
-                                            [--url URL] [--source SOURCE]
+                                            [--url URL]
+                                            [--access-token ACCESS_TOKEN]
+                                            [--source SOURCE]
                                             [--cache BOOLEAN] [--clear-all]
                                             [--no-prefs]
                                             ID
@@ -199,6 +201,8 @@ options:
                         When omitted the repository is considered "local"
                         as it is not connected to an external repository,
                         where packages may be installed by file or managed manually.
+  --access-token ACCESS_TOKEN
+                        The access token to use for remote repositories which require a token.
   --source SOURCE       The type of source in ('USER', 'SYSTEM').
                         System repositories are managed outside of Blender and are considered read-only.
   --cache BOOLEAN       Use package cache (default=1).
@@ -259,7 +263,7 @@ options:
   --output-filepath OUTPUT_FILEPATH
                         The package output filepath (should include a ``.zip`` extension).
 
-                        Defaults to a name created using the ``id`` from the manifest.
+                        Defaults to ``{id}-{version}.zip`` using values from the manifest.
   --valid-tags VALID_TAGS_JSON
                         Reference a file path containing valid tags lists.
 

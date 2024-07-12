@@ -100,7 +100,7 @@ By default face normals have flat shading however, this can be adjusted either f
 To adjust the the shading of the whole object, use:
 
 - :ref:`bpy.ops.object.shade_smooth` -- To mark the whole object as smooth
-- :ref:`bpy.ops.object.shade_smooth_by_angle` -- To mark portions of the object as smooth
+- :ref:`bpy.ops.object.shade_auto_smooth` -- To mark portions of the object as smooth
 
 To revert to flat shading, use :ref:`bpy.ops.object.shade_flat`
 

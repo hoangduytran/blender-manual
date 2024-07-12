@@ -13,32 +13,32 @@ Display Mode
 
 This header dropdown lets you choose what the Outliner should show.
 
-Scenes
+:Scenes:
    Shows the :doc:`view layers </scene_layout/view_layers/introduction>`,
    :doc:`collections </scene_layout/collections/introduction>`,
    and objects across all scenes.
-View Layer
+:View Layer:
    Shows the collections and objects in the current view layer of the current scene.
-Video Sequencer
+:Video Sequencer:
    Shows the images and videos that are used in the :doc:`Video Sequencer </video_editing/index>`.
 
 .. _outliner-blender-file-mode:
 
-Blender File
+:Blender File:
    Lists all data in the current blend-file. On the right side of the list, a shield icon shows the number
    of users -- clicking it adds or removes a :ref:`fake user <data-system-datablock-fake-user>`.
-Data API
+:Data API:
    Lists every :doc:`data-block </files/data_blocks>` in the file along with any properties that it might have.
-Library Overrides
+:Library Overrides:
    Shows the :doc:`library overrides </files/linked_libraries/library_overrides>`.
    Separated further into two view modes:
 
    .. _bpy.types.SpaceOutliner.lib_override_view_mode:
 
-   Properties
+   :Properties:
       Shows the data-blocks that have overridden properties in a list grouped by type.
       You can expand each data-block to see and change these properties.
-   Hierarchies
+   :Hierarchies:
       Shows the overridden data-blocks in a tree that visualizes their hierarchy.
       This includes parent data-blocks that were overridden implicitly.
       For example, if you created an override for a material,
@@ -48,10 +48,10 @@ Library Overrides
 
       This view also shows a column of icons on the right that let you toggle whether
       each override is editable.
-Unused Data
+:Unused Data:
    Lists the data-blocks that are unused or only have a :ref:`fake user <data-system-datablock-fake-user>`.
    You can add/remove a fake user by clicking the shield icon on the right.
-   
+
    Unused data-blocks are automatically deleted when saving and reloading the file.
    You can also delete them manually by clicking *Purge* in the header.
 
@@ -181,8 +181,6 @@ System Overrides
    `Display Mode`_.
 
 
-.. _bpy.ops.outliner.orphans_purge:
-
 Miscellaneous
 -------------
 
@@ -192,10 +190,24 @@ New Collection :guilabel:`View Layer`
    Add a new collection inside the selected one.
 Filter by Type :guilabel:`Blender File` :guilabel:`Unused Data`
    Restrict the type of the data-blocks shown in the Outliner.
-Keying Sets :guilabel:`Data API`
+Keying Sets (Data API) :guilabel:`Data API`
    Add/Remove the selected property to/from the active :doc:`Keying Set </animation/keyframes/keying_sets>`.
-Purge :guilabel:`Unused Data`
-   Remove all unused data-blocks from the file (cannot be undone).
+Drivers
+   Add/Remove :doc:`Drivers </animation/drivers/index>` to the selected item.
+
+.. _bpy.ops.outliner.orphans_purge:
+
+Purge (Orphan Data) :guilabel:`Unused Data`
+   Opens a dialog to remove unused data-blocks from both the current blend-file or any
+   :doc:`Linked Data </files/linked_libraries/link_append>` (cannot be undone).
+
+   Local Data-Blocks
+      Removes unused data-blocks from the current blend-file.
+   Linked Data-Blocks
+      Removes unused data-blocks from :doc:`Linked Data </files/linked_libraries/link_append>`.
+   Recursive Delete
+      Removes data-blocks only used by unused data-blocks,
+      ensuring that no orphaned data-blocks remain after execution.
 
 
 Main Region
@@ -265,7 +277,7 @@ Disable Selection (mouse cursor icon)
 Hide in Viewports (eye icon)
    Toggles the visibility of the object or collection in (only) the 3D Viewport, for the current view layer.
    The render is not affected.
-   
+
    As an alternative to clicking this icon, you can press :kbd:`H` while hovering over the
    3D Viewport to hide the selected objects, or :kbd:`Alt-H` to unhide all objects.
 
@@ -277,7 +289,7 @@ Hide in Viewports (eye icon)
    so they still get evaluated and affect playback performance.
 
    .. seealso::
-      
+
       Collections can be hidden for individual 3D Viewports;
       see :ref:`Local Collections <bpy.types.SpaceView3D.use_local_collections>` in the Sidebar.
 
@@ -301,7 +313,7 @@ Disable in Viewports (screen icon)
 Disable in Renders (camera icon)
    Toggles the visibility of the object or collection in (only) the render,
    for all view layers. The 3D Viewport is not affected.
-   
+
    This is typically used for supporting objects that help modeling and animation
    yet don't belong in the final image.
 

@@ -155,24 +155,19 @@ External Data
          you can save the blend-file and reload it again, so that all external files are reloaded at once.
 
 Clean Up
-   Unused Data-Blocks
-      Remove unused data-blocks from both the current blend-file and any
+   Purge Unused Data
+      Opens a dialog to remove unused data-blocks from both the current blend-file or any
       :doc:`Linked Data </files/linked_libraries/link_append>` (cannot be undone).
       See the :ref:`Outliner <bpy.ops.outliner.orphans_purge>` for more information.
-   Recursive Unused Data-Blocks
-      Remove all unused data-blocks from both the current blend-file and any
-      :doc:`Linked Data </files/linked_libraries/link_append>`
-      including any indirectly used data-blocks i.e. those only used by unused data-blocks.
-   Unused Linked Data-Blocks
-      Remove unused data-blocks from only :doc:`Linked Data </files/linked_libraries/link_append>`.
-   Recursive Unused Linked Data-Blocks
-      Remove all unused data-blocks from only :doc:`Linked Data </files/linked_libraries/link_append>`
-      including any indirectly used data-blocks i.e. those only used by unused data-blocks.
-   Unused Local Data-Blocks
-      Remove all unused data-blocks from only the current blend-file.
-   Recursive Unused Local Data-Blocks
-      Remove all unused data-blocks from only the current blend-file
-      including any indirectly used data-blocks i.e. those only used by unused data-blocks.
+
+   .. _bpy.ops.outliner.orphans_manage:
+
+   Manage Unused Data
+      Opens a pop-up window of the :doc:`Outliner </editors/outliner/index>` in
+      :ref:`Unused Data mode <bpy.types.SpaceOutliner.display_mode>` which lists
+      :doc:`data-blocks </files/data_blocks>` and other data that are unused
+      and/or will be lost when the file is reloaded. It includes data-blocks which have only a fake user.
+      You can add/remove the Fake User by clicking on cross/tick icon on the right side of the Outliner.
 
 -----
 

@@ -59,6 +59,8 @@ Depth
    :Surface:
       Used to draw on top of other objects.
 
+      Project Onto Selected
+         Only project the strokes onto selected objects.
       Offset
          Distance to offset the curve from the surface.
       Absolute Offset

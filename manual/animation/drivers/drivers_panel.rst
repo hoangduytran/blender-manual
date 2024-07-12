@@ -138,7 +138,7 @@ Variable Type
       .. tip::
 
          The easiest way to create a variable of this type is to use
-         the :ref:`Copy As New Driver <drivers-copy-as-new>`
+         the :ref:`Copy As New Driver <bpy.ops.ui.copy_as_driver_button>`
          context menu option of the input property, and paste the result
          into the driver via :ref:`Paste Driver Variables <drivers-variables>`.
 
