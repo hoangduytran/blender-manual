@@ -118,6 +118,9 @@ Include
       Do not import invisible USD primitives. Only applies to primitives with a non-animated
       `visibility <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Visibility>`__ attribute.
       Primitives with animated visibility will always be imported.
+   Defined Primitives Only
+      When disabled this allows importing USD primitives
+      which are not defined, such as those with an override specifier.
 
 Set Frame Range
    Update the scene's start and end frame to match those of the USD stage.
