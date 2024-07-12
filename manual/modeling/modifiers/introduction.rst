@@ -179,6 +179,12 @@ Extras
 
    Move to First/Last
       Moves the modifier to the first or last position in the modifier stack.
+
+   .. _bpy.types.Modifier.use_pin_to_last:
+
+   Pin to Last
+      Keeps the modifier at the end of the modifier stack.
+      When a modifier is pinned, a pin icon will be displayed on the right side of the panel's header.
    Move to Nodes
       Converts the existing :doc:`/modeling/modifiers/generate/geometry_nodes`
       node tree to a group node to be reused in other node trees.
@@ -194,6 +200,8 @@ Delete :kbd:`X`, :kbd:`Delete`
 Move ``::::``
    Move the modifier up/down in the :ref:`stack <modifier-stack>`,
    changing the evaluation order of the modifiers.
+
+   A modifier is not movable if :ref:`Pin to Last <bpy.types.Modifier.use_pin_to_last>` is enabled.
 
 Below this header, all of the options unique to each modifier will be displayed.
 

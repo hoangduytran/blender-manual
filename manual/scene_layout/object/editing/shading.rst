@@ -53,6 +53,7 @@ Shade Auto Smooth
 
 Adds a :doc:`/modeling/modifiers/normals/smooth_by_angle` to automatically set
 the sharpness of mesh edges based on the angle between the neighboring faces.
+Note, the modifier will be :ref:`pinned <bpy.types.Modifier.use_pin_to_last>` to be the last modifier.
 
 Auto Smooth
    If disabled, any :doc:`Smooth By Angle Modifiers </modeling/modifiers/normals/smooth_by_angle>` are removed.

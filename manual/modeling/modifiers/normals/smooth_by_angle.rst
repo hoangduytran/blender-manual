@@ -10,6 +10,11 @@ Sets the sharpness of mesh edges based on the angle between the neighboring face
 
    This is a geometry nodes asset that is included in the bundled :ref:`"Essentials" asset library <assets-bundled>`.
 
+.. tip::
+
+   This modifier can easily be added to an object with :ref:`bpy.ops.object.shade_auto_smooth`
+   or removed with :ref:`bpy.ops.object.shade_smooth` or :ref:`bpy.ops.object.shade_flat`.
+
 
 Options
 =======
