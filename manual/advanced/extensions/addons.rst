@@ -1,5 +1,3 @@
-.. Mark as "orphan" until extensions is out of beta.
-
 .. index:: Add-ons Extensions
 .. index:: Add-ons
 .. .. _bpy.types.Addon:
