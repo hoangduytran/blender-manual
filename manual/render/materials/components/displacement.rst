@@ -66,8 +66,6 @@ as 8-bit images often can not represent all the necessary detail.
 Displacement and Bump
 =====================
 
-:guilabel:`Cycles Only`
-
 Both methods can be combined to use actual displacement for the bigger displacement and
 bump for the finer details. This can provide a good balance to reduce memory usage.
 
