@@ -63,7 +63,7 @@ System Directories
 
 System directories store files that come bundled with Blender and
 are required for it to function. This includes scripts, presets, essential
-assets and more. 
+assets and more.
 
 Linux
 -----

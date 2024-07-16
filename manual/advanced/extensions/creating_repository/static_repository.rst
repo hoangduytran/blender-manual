@@ -48,7 +48,6 @@ which can be used
 to view extensions online, the links can dropped into Blender for installation.
 
 
-
 For a sample of the HTML code you can use to list all the extensions in the repository, use the ``html`` option
 when generating the server.
 

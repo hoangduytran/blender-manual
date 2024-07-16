@@ -7,7 +7,7 @@ Hide Gesture Tools
 
    :Mode:      Sculpt Mode
 
-Hide gesture tools hide all selected vertices within the selection area and any of their connected 
+Hide gesture tools hide all selected vertices within the selection area and any of their connected
 edges and faces.
 Holding :kbd:`Ctrl` while performing the selection reveals the vertices, edges, and faces.
 
@@ -69,13 +69,13 @@ Hides vertices and connected edges and faces based on a
 :ref:`polyline gesture <gesture-tool-polyline>`.
 
 .. note::
-    
+
     The Polyline Hide tool does not support showing all vertices via pressing :kbd:`LMB`.
 
 Tool Settings
 =============
 
-Visibility Area 
+Visibility Area
    Determines whether all vertices inside or outside the selected area should be affected.
 
    :Inside:
