@@ -51,6 +51,9 @@ Frame Selected :kbd:`NumpadPeriod`
    Zooms the display to show only the selected strips.
 Frame All :kbd:`Home`
    Zooms the display to show all strips.
+Frame Scene/Preview Range
+   Reset the horizontal view to the current scene frame range,
+   taking the preview range into account if it is active.
 Go to Current Frame :kbd:`Numpad0`
    Centers the horizontal timeline on the current frame.
 Zoom to Border :kbd:`Shift-B`
