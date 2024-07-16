@@ -76,6 +76,23 @@ Bundle with `Vendorize <https://pypi.org/project/vendorize>`__
    This has the advantage of avoiding version conflicts although it requires some work to setup each package.
 
 
+Local Storage
+=============
+
+Add-ons must not assume their own directory is user writable since this may not be the case for "System" repositories.
+Writing files into the add-on's directory also has the down side that upgrading the extension will remove all files.
+
+Add-ons which need their own user directory should use a utility function provided for this purpose:
+
+.. code-block:: python
+
+   extension_directory = bpy.utils.extension_path_user(__package__, path="", create=True)
+
+If you wish create subdirectories, this can be done with the ``path`` argument.
+
+This directory will be kept between upgrades but will be removed if the extension is uninstalled.
+
+
 .. This section is reference for legacy add-on installation.
 .. _bpy.ops.preferences.addon_install:
 
