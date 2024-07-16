@@ -1,3 +1,4 @@
+.. _command_line-index:
 
 #######################################
   Using Blender From The Command Line
@@ -13,7 +14,7 @@ Use Cases:
 
 - For :ref:`rendering animation <command_line-render>`.
 - For automation and batch processing which require launching Blender
-  with different :doc:`arguments </advanced/command_line/arguments>`.
+  with different :ref:`arguments <command_line-args>`.
 - For Python development, to see the output of the ``print()`` function.
 - If Blender exits unexpectedly, the messages may indicate the cause or error.
 - When troubleshooting, to see the output of ``--debug`` messages.

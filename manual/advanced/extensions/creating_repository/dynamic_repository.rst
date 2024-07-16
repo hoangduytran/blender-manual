@@ -1,3 +1,5 @@
+.. _extensions-create_repo-dynamic:
+
 ****************************************
 Creating a Dynamic Extensions Repository
 ****************************************

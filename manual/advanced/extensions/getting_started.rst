@@ -1,3 +1,4 @@
+.. _extensions-getting_started:
 .. index:: Extensions
 
 ************************
@@ -9,7 +10,7 @@ Creating an extension takes only a few steps:
 #. Create a directory for your extension and populate it with the add-on code or theme file.
 #. Add a `blender_manifest.toml <#manifest>`__  file with all the required meta-data ``(name, maintainer, ...)``.
 #. Compress the directory as a ``.zip`` file.
-#. :doc:`Install from Disk </editors/preferences/extensions>` to test if everything is working well.
+#. :ref:`Install from Disk <prefs-extensions-install>` to test if everything is working well.
 #. `Upload the zip file <https://extensions.blender.org/submit/>`__ (this step requires Blender ID).
 
 The extension will be held for `review <https://extensions.blender.org/approval-queue/>`__,
@@ -24,7 +25,7 @@ The expected files depend on the extension type.
 Add-on extension
 ----------------
 
-:doc:`Add-ons <addons>` need at least the manifest and an ``__init__.py`` file,
+:ref:`Add-ons <extensions-addons>` need at least the manifest and an ``__init__.py`` file,
 while more complex add-ons have a few different .py files or wheels together.
 
 .. code-block:: text
@@ -139,7 +140,8 @@ Required values:
 
    :blender_version_min: Minimum supported Blender version - use at least ``4.2.0``.
    :id: Unique identifier for the extension.
-   :license: List of :doc:`licenses <licenses>`, use `SPDX license identifier <https://spdx.org/licenses/>`__.
+   :license: List of :ref:`licenses <extensions-licenses>`,
+      use `SPDX license identifier <https://spdx.org/licenses/>`__.
    :maintainer: Maintainer of the extension.
    :name: Complete name of the extension.
    :schema_version: Internal version of the file format - use ``1.0.0``.
@@ -152,12 +154,12 @@ Optional values:
    :blender_version_max: Blender version that the extension does not support, earlier versions are supported.
    :website: Website for the extension.
    :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
-   :tags: List of tags. See the :doc:`list of available tags <./tags>`.
+   :tags: List of tags. See the :ref:`list of available tags <extensions-tags>`.
    :platforms:
       List of supported platforms. If omitted, the extension will be available in all operating systems.
       The available options are
       ["windows-x64", "windows-arm64", "macos-x64", "macos-arm64", "linux-x64"]
-   :wheels: List of relative file-paths :doc:`Python Wheels <./python_wheels>`.
+   :wheels: List of relative file-paths :ref:`Python Wheels <extensions-tags>`.
    :permissions:
       Add-ons can list which resources they require. The available options are
       *files*, *network*, *clipboard*, *camera*, *microphone*.
@@ -243,5 +245,4 @@ See :ref:`validate <command-line-args-extension-validate>` docs.
 Third party extension sites
 ===========================
 
-If you want to host the extensions yourself,
-see the :doc:`Creating an Extensions Repository <./creating_repository/index>` docs.
+If you want to host the extensions yourself, see the :ref:`extensions-create_repo-index` docs.

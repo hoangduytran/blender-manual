@@ -1,3 +1,5 @@
+.. _extensions-create_repo-static:
+
 ***************************************
 Creating a Static Extensions Repository
 ***************************************
