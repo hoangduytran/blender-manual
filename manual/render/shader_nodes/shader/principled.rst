@@ -341,11 +341,27 @@ Strength
    Strength of the emitted light. A value of 1.0 ensures that the object
    in the image has the exact same color as the *Emission Color*, i.e. make it 'shadeless'.
 
-
    .. figure:: /images/render_shader-nodes_shader_principled-emission-strength.webp
       :align: center
 
       Strength from 0.0 to 10.0
+
+
+Thin Film
+---------
+
+Thin Film simulates the effect of iridescence which is the
+phenomenon of a surface changing color as the view angle changes.
+
+Thickness
+   The thickness of the film, in nanometers a value of 0 disables the simulation.
+   For reference the thickness of a colorful looking bubble is about 200 to 500 nanometers.
+
+IOR
+   Index of refraction (:term:`IOR`) for rays transmitting through the thin film
+   For most materials, the IOR is between 1.0 (vacuum and air) and 4.0 (germanium).
+   The default value of 1.33 is a good approximation for water.
+   For reference soap has an IOR of 1.5, so the IOR for a soap bubble should be between 1.33 and 1.5.
 
 
 Outputs
