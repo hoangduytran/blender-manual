@@ -9,7 +9,7 @@
    combine_matrix.rst
    combine_transform.rst
    invert_matrix.rst
-   multiply_matrix.rst
+   multiply_matrices.rst
    project_point.rst
    separate_matrix.rst
    separate_transform.rst
