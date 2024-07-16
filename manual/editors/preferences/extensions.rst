@@ -132,8 +132,8 @@ Or show only extensions of a single type:
 Repositories
 ============
 
-By default Blender has a Local Repository and a Remote Repository pointing towards the
-`Official Blender Extensions Platform <https://extensions.blender.org>`__.
+By default Blender has a Remote Repository pointing towards the
+`Official Blender Extensions Platform <https://extensions.blender.org>`__ and two Local Repositories.
 
 In the cases where more repositories are needed (e.g., to access third party extension platforms),
 new repositories can be added.
@@ -154,3 +154,25 @@ To remove repositories click on the :menuselection:`-` icon:
 - **Remove Repository & Files**: Remove a repository and delete all associated files when removing.
 
 These changes are permanent and cannot be reversed.
+
+Remote Repository
+-----------------
+
+Remote repository with support for listing and updating extensions.
+
+Options:
+
+* **Check for Updates on Startup**: Allows Blender to check for updates upon launch. When updates are available a notification will be visible on the status bar.
+* **Access Token**: Personal access token, may be required by some repositories.
+
+
+Local Repository
+----------------
+
+A repository managed manually by the users.
+
+There are two types of local repositories. By default new local repositories are added as User repositories.
+This is what you want most of the time.
+
+After creating a repository they can be changed in the Advanced options to have a source System.
+These repositories are intended to `bundle extensions <../..//advanced/deploying_blender.html#bundling-extensions>`__ with Blender, to make it portable.
