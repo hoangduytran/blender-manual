@@ -286,6 +286,12 @@ Channels
 
 Frame All :kbd:`Home`
    Pans and zooms the view so that all keyframes are visible.
+
+.. _bpy.ops.anim.scene_range_frame:
+
+Frame Scene/Preview Range
+   Reset the horizontal view to the current scene frame range,
+   taking the preview range into account if it is active.
 Go to Current Frame :kbd:`Numpad0`
    Centers the Timeline to the Playhead.
 

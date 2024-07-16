@@ -108,6 +108,9 @@ Frame Selected :kbd:`NumpadPeriod`
    Pans and zooms the view to focus on the selected keyframes.
 Frame All :kbd:`Home`
    Pans and zooms the view to show all keyframes.
+Frame Scene/Preview Range
+   Reset the horizontal view to the current scene frame range,
+   taking the preview range into account if it is active.
 Go to Current Frame :kbd:`Numpad0`
    Centers the area to the Playhead.
 

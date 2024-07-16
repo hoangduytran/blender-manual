@@ -24,6 +24,8 @@ Detail Size/Percentage, Resolution :kbd:`R`
    Each Detail Type's detail is set here. Depending on the Detail Type being used
    this property will rather show as a pixel count (px), or percentage.
 
+   :kbd:`R` allows you to interactively set the detail, with a preview of the detail's density in the 3D Viewport.
+
    Sample Detail Size (pipette icon)
       When using *Constant Detail*, it is possible to sample the detail value of a certain mesh area
       by clicking the pipette icon next to the detail setting and then clicking on the area.

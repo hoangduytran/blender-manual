@@ -110,15 +110,10 @@ Viewport
 
       Only available on NVIDIA GPUs when configured in the :ref:`editors_preferences_cycles` user preferences.
 
-.. _bpy.types.CyclesRenderSettings.preview_denoising_start_sample:
-
-Start Sample
-   Sample to start :ref:`denoising <render-cycles-settings-viewport-denoising>` in the 3D Viewport.
-
 .. _bpy.types.CyclesRenderSettings.preview_denoising_input_passes:
 .. _bpy.types.CyclesRenderSettings.denoising_input_passes:
 
-Input Passes
+Passes
    Controls which :doc:`Render Pass </render/layers/passes>` the denoiser should use as input,
    which can have different effects on the denoised image.
    Generally, the more passes the denoiser has to denoise the better the result.
@@ -132,7 +127,7 @@ Input Passes
 .. _bpy.types.CyclesRenderSettings.preview_denoising_prefilter:
 .. _bpy.types.CyclesRenderSettings.denoising_prefilter:
 
-Prefilter
+Prefilter :guilabel:`OpenImageDenoise`
    Controls whether or not prefiltering is applied to *Input Passes* for use when denoising.
    Visible only when using *OpenImageDenoise*.
 
@@ -146,6 +141,22 @@ Prefilter
    :Accurate:
       Prefilters the input passes before denoising to reduce noise. This option usually produces
       more detailed results than *Fast* with increased processing time.
+
+.. _bpy.types.CyclesRenderSettings.preview_denoising_quality:
+.. _bpy.types.CyclesRenderSettings.denoising_quality:
+
+Quality :guilabel:`OpenImageDenoise`
+   Overall denoising quality.
+   Visible only when using *OpenImageDenoise*.
+
+   :High: Produces the highest quality output at the cost of time.
+   :Balanced: Balanced between performance and quality.
+   :Fast: Produces an output fast at the cost of quality (ideal for viewport rendering).
+
+.. _bpy.types.CyclesRenderSettings.preview_denoising_start_sample:
+
+Start Sample
+   Sample to start :ref:`denoising <render-cycles-settings-viewport-denoising>` in the 3D Viewport.
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_use_gpu:
 .. _bpy.types.CyclesRenderSettings.denoising_use_gpu:
