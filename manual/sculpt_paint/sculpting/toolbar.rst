@@ -162,7 +162,7 @@ Gesture Tools
 .. figure:: /images/sculpt-paint_sculpting_toolbar_gestures.png
    :align: right
 
-General gesture tools to apply an operation via box, lasso, line and polyline shapes. 
+General gesture tools to apply an operation via box, lasso, line and polyline shapes.
 See :doc:`/sculpt_paint/sculpting/introduction/gesture_tools` for more information.
 
 :doc:`/sculpt_paint/sculpting/tools/mask_tools`
