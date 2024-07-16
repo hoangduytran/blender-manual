@@ -139,6 +139,7 @@ In the cases where more repositories are needed (e.g., to access third party ext
 new repositories can be added.
 
 .. figure:: /images/editor_preferences_section_extensions_repositories.png
+   :width: 450px
 
    Repositories.
 
