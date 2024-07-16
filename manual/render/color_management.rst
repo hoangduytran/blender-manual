@@ -139,6 +139,12 @@ View Transform
       Does no extra conversion besides the conversion for the display device. Often used for
       non-photorealistic results or video editing where a specific look is already baked into
       the input video.
+   :Khronos PBR Neutral:
+      A tone mapping transform designed specifically for PBR color accuracy,
+      to get sRGB colors in the output render that match as faithfully as possible
+      the input sRGB base color in materials, under gray-scale lighting.
+      This is aimed toward product photography use cases, where the scene
+      is well-exposed and HDR color values are mostly restricted to small specular highlights.
    :AgX:
       A tone mapping transform that improves on *Filmic*, giving more photorealistic results.
       AgX offers 16.5 stops of dynamic range and unsaturates highly
