@@ -19,6 +19,7 @@ General purpose nodes for modifying data.
 
    Field <field/index.rst>
    Math <math/index.rst>
+   Matrix <matrix/index.rst>
    Rotation <rotation/index.rst>
 
 -----
