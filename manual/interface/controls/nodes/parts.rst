@@ -66,7 +66,7 @@ Geometry (turquoise)
 
 .. rubric:: Data
 
-Boolean (pink)
+Boolean (light pink)
    Used to pass a true or false value.
 Color (yellow)
    Indicates that the socket accepts/produces color information.
@@ -82,6 +82,10 @@ String (light blue)
    Used to pass a text value.
 Vector (dark blue)
    Indicates vector, coordinate and normal information.
+Rotation (pink)
+   Indicates a rotation/quaternion.
+Matrix (dark pink)
+   Indicates a 4×4 matrix of float values, it is often used to represent a :term:`Transformation Matrix`.
 
 .. rubric:: Data-Blocks
 
@@ -139,6 +143,7 @@ Valid conversions:
 - Between float and vector --  when a float becomes a vector the value is used for each component.
   When a vector becomes a float the average of the components is taken.
 - Between float and boolean -- values greater than 0 are true, true maps to 1, and false maps to 0.
+- Between rotations and matrices.
 
 Explicit conversion requires the use of a conversion node such as
 the :doc:`/render/shader_nodes/converter/shader_to_rgb` node
