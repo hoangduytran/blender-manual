@@ -166,6 +166,9 @@ Change Shortcut
 Remove Shortcut
    Unlinks the existing shortcut.
 
+Open File Location, Open Location Externally
+   Opens the containing folder using the operating system's file manager.
+
 Online Manual :kbd:`F1`
    Opens an online page of the Blender Manual in a web browser.
 

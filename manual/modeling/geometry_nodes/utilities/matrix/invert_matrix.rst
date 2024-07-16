@@ -10,7 +10,7 @@ Invert Matrix Node
    :alt: Invert Matrix node.
 
 The *Invert Matrix* node returns the mathematical
-`inverse matrix <https://mathworld.wolfram.com/MatrixInverse.html`__.
+`inverse matrix <https://mathworld.wolfram.com/MatrixInverse.html>`__.
 
 
 Inputs

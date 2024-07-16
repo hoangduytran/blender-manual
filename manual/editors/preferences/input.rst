@@ -144,6 +144,17 @@ Multi-touch Gestures
    For more detail on supported gestures,
    see :doc:`Configuring Peripherals </getting_started/configuration/hardware>`.
 
+.. _bpy.types.PreferencesInput.touchpad_scroll_direction:
+
+Scroll Direction
+   The direction scrolling responds to the scroll gestures.
+
+   Only available on Linux using Wayland.
+
+   :Traditional: Scrolls content down when gestures move up.
+   :Natural: Scrolls content up when gestures move up.
+
+
 Tablet
 ======
 

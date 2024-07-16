@@ -205,6 +205,13 @@ Move ``::::``
 
 Below this header, all of the options unique to each modifier will be displayed.
 
+.. tip::
+
+   Use :kbd:`Alt` to affect all selected objects at once
+   when performing operators such as add, apply, remove, and move to index.
+
+   See :ref:`3dview-multi-object-mode` for more information.
+
 
 .. _modifier-stack:
 

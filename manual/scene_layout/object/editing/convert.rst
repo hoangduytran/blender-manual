@@ -72,3 +72,18 @@ Trace Image to Grease Pencil
    :Menu:      :menuselection:`Object --> Convert --> Trace Image to Grease Pencil`
 
 See :doc:`/grease_pencil/modes/object/trace_image`.
+
+
+.. _bpy.ops.image.convert_to_mesh_plane:
+
+Convert to Mesh Plane
+=====================
+
+.. reference::
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Object --> Convert --> Convert to Mesh Plane`
+
+Converts the selected :ref:`image empty <bpy.types.Object.empty_image>` to a textured mesh plane.
+
+For a description of the options see :doc:`/modeling/meshes/import_images_as_planes`.
