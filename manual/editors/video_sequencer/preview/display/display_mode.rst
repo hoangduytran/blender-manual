@@ -4,7 +4,7 @@
 Display Mode
 ************
 
-Using this pop-over, you can choose between displaying the preview image
+Using this pop-up, you can choose between displaying the preview image
 or a scope that visualizes its color distribution.
 
 
@@ -39,10 +39,6 @@ Specifically:
 When this scope is selected, you have the following option in
 :menuselection:`Sidebar --> View --> View Settings`:
 
-Separate Colors
-   Show three waveforms -- for the red, green, and blue color channels -- instead of just one
-   for the overall image brightness.
-
 The examples below show two images and their corresponding luma waveforms.
 
 .. list-table::
@@ -60,6 +56,13 @@ The examples below show two images and their corresponding luma waveforms.
           The curves are quite visible. We found a luma of 80-100% for the sky,
           a luma around 40% for the sea, and a luma of 10-20% for the mountains,
           growing around 40% for the sunny part.
+
+
+RGB Parade
+==========
+
+Shows three waveforms -- for the red, green, and blue color channels -- instead of just one
+for the overall image brightness.
 
 
 Chroma Vectorscope
