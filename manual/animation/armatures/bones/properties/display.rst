@@ -112,6 +112,11 @@ Scale to Bone Length
 Wireframe
    When enabled, the bone is displayed in wireframe mode regardless of the viewport's shading mode.
 
+.. _bpy.types.PoseBone.custom_shape_wire_width:
+
+Wire Width
+   The line thickness of the wireframe for the custom shape.
+
 .. note::
 
    - Custom shapes will never be rendered. Like regular bones, they are only visible in the 3D Viewport.
