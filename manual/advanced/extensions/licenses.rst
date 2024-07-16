@@ -1,3 +1,4 @@
+.. _extensions-licenses:
 .. index:: Licenses
 
 ******************

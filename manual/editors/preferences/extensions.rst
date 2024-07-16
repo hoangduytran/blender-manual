@@ -18,6 +18,9 @@ The *Extensions* section lets you manage the extensions preferences.
 
    To learn about extensions and how to create them, refer to the :ref:`Extensions <extensions-index>` page.
 
+
+.. _prefs-extensions-install:
+
 Install
 =======
 
@@ -32,6 +35,8 @@ Any installed extension can be removed. This is a permanent change, though.
 To stop an extension temporarily, it is better to Disable it instead.
 
 
+.. _prefs-extensions-install_legacy_addon:
+
 Install Legacy Add-on
 ---------------------
 
@@ -41,7 +46,7 @@ To install legacy addons, click the *Install from Disk* menu item and select the
 The add-on will not be automatically enabled after installation; click the checkbox to do that.
 
 Refresh
-   Scans the :doc:`Add-on Directory </advanced/blender_directory_layout>` for new add-ons.
+   Scans the :ref:`Add-on Directory <blender-directory-layout>` for new add-ons.
 
 .. tip::
 

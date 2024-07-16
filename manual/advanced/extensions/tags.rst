@@ -1,3 +1,4 @@
+.. _extensions-tags:
 .. index:: Tags
 
 ***************

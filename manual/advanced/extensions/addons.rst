@@ -1,3 +1,4 @@
+.. _extensions-addons:
 .. index:: Add-ons Extensions
 .. index:: Add-ons
 .. .. _bpy.types.Addon:
@@ -9,13 +10,14 @@ Add-ons
 *******
 
 *Add-ons* let you extend Blender's functionality using Python.
-Most of the time you can get add-ons as part of the :doc:`Extensions <index>` system.
+Most of the time you can get add-ons as part of the :ref:`Extensions <extensions-index>` system.
 
 .. tip::
 
    If the Add-on does not activate when enabled,
-   check the :doc:`Console window </advanced/command_line/index>`
+   check the :ref:`Console window <command_line-index>`
    for any errors that may have occurred.
+
 
 User-Defined Add-on Path
 ========================
@@ -37,7 +39,7 @@ Blender will copy newly installed add-ons under the directory selected in your P
 Internet Access
 ===============
 
-If the add-on needs to use internet, it should check for the (read-only) property ``bpy.app.online_access``.
+If the add-on needs to use internet, it must check for the (read-only) property ``bpy.app.online_access``.
 This option is controlled by Preferences, which can be overriding via command-line
 (``--offline-mode`` / ``--online-mode``).
 
@@ -59,7 +61,7 @@ That means they must come with all its dependencies. In particular 3rd party Pyt
 
 There are a few options for this:
 
-Bundle with :doc:`Python Wheels <./python_wheels>`.
+Bundle with :ref:`Python Wheels <extensions-python_wheels>`.
    This is the recommended way to bundle dependencies.
 
 Bundle other add-ons together.
@@ -103,7 +105,7 @@ With the introduction of Extensions in Blender 4.2, the old way of creating add-
 While the changes are rather small they impact existing add-ons.
 
 In order to allow a smooth transition process, the so-called legacy add-ons will continue to be supported by Blender.
-They can be installed via :doc:`Install legacy Add-on </editors/preferences/extensions>` button in the User
+They can be installed via :ref:`Install legacy Add-on <prefs-extensions-install_legacy_addon>` button in the User
 Preferences.
 
 All add-on maintainers are urged to convert the add-ons they want to share, so they are future proof and can support
@@ -113,7 +115,7 @@ features like updating from the extensions platform.
 Converting a Legacy Add-on into an Extension
 --------------------------------------------
 
-#. Create a :doc:`manifest file <./getting_started>`.
+#. Create a :ref:`manifest file <extensions-getting_started>`.
 #. Remove the ``bl_info`` information (this is now in the manifest).
 #. Replace all references to the module name to ``__package__``.
 #. Make all module imports to use relative import.
@@ -122,7 +124,7 @@ Converting a Legacy Add-on into an Extension
 
 .. note::
 
-   For testing it is import to :doc:`install the extension from disk </editors/preferences/extensions>` and check if
+   For testing it is import to :ref:`install the extension from disk <prefs-extensions>` and check if
    everything is working well. This will get you as close to the final experience as possible.
 
 
