@@ -375,7 +375,7 @@ Lights
    Exports :doc:`Light Objects </render/lights/index>`
    USD does not directly support spot lights, so those are not exported.
 Cameras
-   Exports :doc:`Camera Objects </manual/render/cameras>`
+   Exports :doc:`Camera Objects </render/cameras>`
    Only perspective cameras are exported.
 Volumes
    Exports :doc:`Volume Objects </modeling/volumes/index>`
