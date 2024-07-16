@@ -61,8 +61,8 @@ Local Camera
 .. _bpy.types.View3DOverlay.show_camera_passepartout:
 
 Passepartout
-   Show :ref:`camera passepartout <bpy.types.Camera.show_passepartout>` when in 
-   :ref:`camera view <bpy.ops.view3d.view_camera>`.
+   Show :ref:`camera passepartout <bpy.types.Camera.show_passepartout>`
+   when in :ref:`camera view <bpy.ops.view3d.view_camera>`.
 
 .. _bpy.types.SpaceView3D.use_render_border:
 

@@ -79,8 +79,8 @@ Statistics
 .. _bpy.types.View3DOverlay.show_camera_guides:
 
 Camera Guides
-   Show Camera guides (:ref:`Safe Areas <bpy.ops.safe_areas>` & 
-   :ref:`Composition Guides <bpy.types.Camera.show_composition>`),
+   Show Camera guides
+   (:ref:`Safe Areas <bpy.ops.safe_areas>` & :ref:`Composition Guides <bpy.types.Camera.show_composition>`),
    only available in :ref:`camera view <bpy.ops.view3d.view_camera>`.
 
 HDRI Preview
