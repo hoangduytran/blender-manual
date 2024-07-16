@@ -162,7 +162,8 @@ Remote repository with support for listing and updating extensions.
 
 Options:
 
-* **Check for Updates on Startup**: Allows Blender to check for updates upon launch. When updates are available a notification will be visible on the status bar.
+* **Check for Updates on Startup**: Allows Blender to check for updates upon launch. When updates are available a 
+  notification will be visible on the status bar.
 * **Access Token**: Personal access token, may be required by some repositories.
 
 
@@ -175,4 +176,5 @@ There are two types of local repositories. By default new local repositories are
 This is what you want most of the time.
 
 After creating a repository they can be changed in the Advanced options to have a source System.
-These repositories are intended to `bundle extensions <../..//advanced/deploying_blender.html#bundling-extensions>`__ with Blender, to make it portable.
+These repositories are intended to `bundle extensions <../..//advanced/deploying_blender.html#bundling-extensions>`__ 
+with Blender, to make it portable.
