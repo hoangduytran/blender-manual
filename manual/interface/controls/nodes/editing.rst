@@ -33,7 +33,7 @@ and only affect the nodes' positions.
 Connecting Sockets
 ==================
 
-:kbd:`LMB`-click on a socket and drag. You will see a line coming out of it: this is called a *link*.
+:kbd:`LMB`-click on a socket and drag. YConnect to Outputou will see a line coming out of it: this is called a *link*.
 Keep dragging and connect the link to an input socket of another node, then release the :kbd:`LMB`.
 
 While multiple links can route out of an output socket, typically a single link can be attached to an input socket,
@@ -249,3 +249,17 @@ Read Render Layers :kbd:`Ctrl-R`
    For this to work, :ref:`Cache Result <bpy.types.RenderSettings.use_render_cache>` must be enabled.
 
    .. note:: This operator are only available in the :doc:`Compositor </compositing/index>`.
+
+
+.. _bpy.ops.node.connect_to_output:
+
+Connect to Output
+=================
+
+.. reference::
+
+   :Shortcut:  :kbd:`Shift-Alt-LMB`
+
+Connect the output of the selected node to the final output of the node tree (Composite in Compositor,
+Material Output or World Output in Shader, the final Group Output in Geometry Nodes, Output in Texture Nodes),
+or, if the node is inside a group, to the Group Output.
