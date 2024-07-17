@@ -26,10 +26,13 @@ Install
 
 There are different ways to install an extension:
 
-- **Install from the Website**: Drag the installation URL into Blender.
-- **Install from Blender**: Search for the extension name and click on Install.
-- **Install from Disk**: Use the dropdown menu in the top right,
-  or drag-and-drop an extension ``.zip`` package into Blender.
+Install from the Website
+   Drag the installation URL into Blender.
+Install from Blender
+   Search for the extension name and click on Install.
+Install from Disk
+   Use the drop-down menu in the top right,
+   or drag-and-drop an extension ``.zip`` package into Blender.
 
 Any installed extension can be removed. This is a permanent change, though.
 To stop an extension temporarily, it is better to Disable it instead.
@@ -40,7 +43,7 @@ To stop an extension temporarily, it is better to Disable it instead.
 Install Legacy Add-on
 ---------------------
 
-To install legacy addons, click the *Install from Disk* menu item and select the addon's
+To install legacy add-ons, click the *Install from Disk* menu item and select the add-on's
 ``.py`` file (if it has only one such file) or its ``.zip`` file.
 
 The add-on will not be automatically enabled after installation; click the checkbox to do that.
@@ -61,7 +64,7 @@ Refresh
    #. Add a *Script Directories* entry pointing to your script folder (e.g. ``my_scripts``).
    #. Save the preferences and restart Blender for it to recognize the new add-on location.
 
-   The addons in this folder will automatically become available; all you need to
+   The add-ons in this folder will automatically become available; all you need to
    do is enable them.
 
 
@@ -72,6 +75,7 @@ You need to manually check for available updates.
 Once an update is found, Blender will let you update any of the available extensions.
 
 The current available version of an extension on the repository will always be considered the latest version.
+
 
 Enable/Disable
 ==============
@@ -89,12 +93,16 @@ Some extension types do not support this, and will always be shown as enabled.
 Settings
 ========
 
-- **Check for Updates**: Manually check the online repositories for available updates.
-- **Update All**: Update all the extensions that have an update available.
-- **Install from Disk**: Install an extension from a ``.zip`` package.
-  This is installed to a Local Repository and no updates will be available.
-- **Install Legacy Add-on**: Add-ons are effectively replaced by extensions.
-  However to keep old add-ons working for now, they can still be installed independently of the new system.
+Check for Updates
+   Manually check the online repositories for available updates.
+Update All
+   Update all the extensions that have an update available.
+Install from Disk
+   Install an extension from a ``.zip`` package.
+   This is installed to a Local Repository and no updates will be available.
+Install Legacy Add-on
+   Add-ons are effectively replaced by extensions.
+   However to keep old add-ons working for now, they can still be installed independently of the new system.
 
 
 .. _bpy.types.AddonPreferences:
@@ -110,24 +118,14 @@ certain functions of the add-on. Sometimes these might even all default to off.
 So it is important to check if the enabled add-on has any particular preferences.
 
 
-Filter
-======
-
-The available filtering options are:
-
-- Enabled Extensions
-- Installed Extensions
-- Legacy Add-ons
-
 Filter by Type
 ==============
 
-- **All**: Show all the extension types combined.
-
 Or show only extensions of a single type:
 
-- **Add-ons**
-- **Themes**
+:Add-ons:
+:Themes:
+
 
 Repositories
 ============
@@ -145,15 +143,20 @@ new repositories can be added.
 
 To add new repositories click on the :menuselection:`+` icon:
 
-- **Add Remote Repository**: Add a repository from a URL.
-- **Add Local Repository**: Add a repository which will be managed by the user (to be used with Install from Disk).
+Add Remote Repository
+   Add a repository from a URL.
+Add Local Repository
+   Add a repository which will be managed by the user (to be used with Install from Disk).
 
 To remove repositories click on the :menuselection:`-` icon:
 
-- **Remove Repository**: Remove an extension repository.
-- **Remove Repository & Files**: Remove a repository and delete all associated files when removing.
+Remove Repository
+   Remove an extension repository.
+Remove Repository & Files
+   Remove a repository and delete all associated files when removing.
 
 These changes are permanent and cannot be reversed.
+
 
 Remote Repository
 -----------------
@@ -162,9 +165,11 @@ Remote repository with support for listing and updating extensions.
 
 Options:
 
-* **Check for Updates on Startup**: Allows Blender to check for updates upon launch. When updates are available a 
-  notification will be visible on the status bar.
-* **Access Token**: Personal access token, may be required by some repositories.
+Check for Updates on Startup
+   Allows Blender to check for updates upon launch.
+   When updates are available a notification will be visible on the status bar.
+Access Token
+   Personal access token, may be required by some repositories.
 
 
 Local Repository
@@ -176,5 +181,5 @@ There are two types of local repositories. By default new local repositories are
 This is what you want most of the time.
 
 After creating a repository they can be changed in the Advanced options to have a source System.
-These repositories are intended to `bundle extensions <../..//advanced/deploying_blender.html#bundling-extensions>`__ 
+These repositories are intended to :ref:`bundle extensions <deploying-blender-bundling>`
 with Blender, to make it portable.

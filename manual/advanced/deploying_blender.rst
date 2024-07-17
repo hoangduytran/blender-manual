@@ -43,6 +43,7 @@ will then be unable to enable online access in the preferences.
     Add-ons that follow this setting will only connect to the internet if enabled.
     However, Blender cannot prevent third-party add-ons from violating this rule.
 
+
 .. _deploying-blender-bundling:
 
 Bundling Extensions
