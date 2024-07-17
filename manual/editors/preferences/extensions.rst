@@ -43,7 +43,7 @@ To stop an extension temporarily, it is better to Disable it instead.
 Install Legacy Add-on
 ---------------------
 
-To install legacy add-ons, click the *Install from Disk* menu item and select the addon's
+To install legacy add-ons, click the *Install from Disk* menu item and select the add-on's
 ``.py`` file (if it has only one such file) or its ``.zip`` file.
 
 The add-on will not be automatically enabled after installation; click the checkbox to do that.
