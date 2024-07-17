@@ -120,7 +120,7 @@ View Layer
    Disable/Enable in View Layer
       Changes the :ref:`Exclude from View Layer <bpy.types.LayerCollection.exclude>` setting
       for the selected collections.
-   
+
    Set/Clear Holdout
       Changes the :ref:`Holdout <bpy.types.LayerCollection.holdout>` setting
       for the selected collections.

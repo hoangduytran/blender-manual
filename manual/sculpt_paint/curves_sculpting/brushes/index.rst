@@ -1,7 +1,7 @@
 
-#########
+###########
   Brushes
-#########
+###########
 
 Brushes for Curves *Sculpt Mode* bundled in the *Essentials* library.
 

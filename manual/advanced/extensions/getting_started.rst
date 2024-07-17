@@ -163,7 +163,7 @@ Optional values:
    :permissions:
       Add-ons can list which resources they require. The available options are
       *files*, *network*, *clipboard*, *camera*, *microphone*.
-      Each permission should be followed by an explanation (short single-sentence, up to 64 characters, with no end 
+      Each permission should be followed by an explanation (short single-sentence, up to 64 characters, with no end
       punctuation).
 
 Optional values for "build":
