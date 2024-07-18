@@ -40,6 +40,16 @@ Controls
 Move :kbd:`Spacebar`
    Hold to reposition the selection area.
 
+Tool Settings
+-------------
+Stabilize Stroke
+   Helps to reduce jitter of the strokes while drawing by delaying and correcting the location of points.
+
+   Radius
+      Minimum distance from the last point before the stroke continues.
+   Factor
+      A smooth factor, where higher values result in smoother strokes
+      but the drawing sensation feels as if you were pulling the stroke.
 
 .. _gesture-tool-line:
 
