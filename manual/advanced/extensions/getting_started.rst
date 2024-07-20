@@ -159,7 +159,7 @@ Optional values:
       List of supported platforms. If omitted, the extension will be available in all operating systems.
       The available options are
       ["windows-x64", "windows-arm64", "macos-x64", "macos-arm64", "linux-x64"]
-   :wheels: List of relative file-paths :ref:`Python Wheels <extensions-tags>`.
+   :wheels: List of relative file-paths :ref:`Python Wheels <extensions-python_wheels>`.
    :permissions:
       Add-ons can list which resources they require. The available options are
       *files*, *network*, *clipboard*, *camera*, *microphone*.

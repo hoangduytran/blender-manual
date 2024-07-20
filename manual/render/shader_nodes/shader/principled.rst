@@ -347,21 +347,33 @@ Strength
       Strength from 0.0 to 10.0
 
 
-Thin Film
----------
+Thin Film :guilabel:`Cycles Only`
+---------------------------------
 
-Thin Film simulates the effect of iridescence which is the
-phenomenon of a surface changing color as the view angle changes.
+Thin Film simulates the effect of interference in a thin film sitting on top of the material.
+This causes the specular reflection to be colored in a way which strongly depends on the view
+angle as well as the film thickness and the index of refraction (:term:`IOR`) of the film and
+the material itself.
+
+This effect is commonly seen on e.g. oil films, soap bubbles or glass coatings. While its
+influence is more obvious in specular highlights, it also affects transmission.
+
+.. note::
+   Thin-film interference is currently only applied to dielectric materials. Support for
+   thin films on top of Metallic is planned in the future.
 
 Thickness
-   The thickness of the film, in nanometers a value of 0 disables the simulation.
-   For reference the thickness of a colorful looking bubble is about 200 to 500 nanometers.
+   The thickness of the film in nanometers. A value of 0 disables the simulation.
+   The interference effect is strongest between roughly 100 and 1000 nanometers, since this is
+   near the wavelengths of visible light.
 
 IOR
-   Index of refraction (:term:`IOR`) for rays transmitting through the thin film
-   For most materials, the IOR is between 1.0 (vacuum and air) and 4.0 (germanium).
+   Index of refraction (:term:`IOR`) of the thin film.
+   The common range for this value is between 1.0 (vacuum and air) and roughly 2.0,
+   though some materials can reach higher values.
    The default value of 1.33 is a good approximation for water.
-   For reference soap has an IOR of 1.5, so the IOR for a soap bubble should be between 1.33 and 1.5.
+   Note that when the value is set to 1.0 or to the main IOR of the material, the thin film
+   effect disappears since the film optically blends into the air or the material.
 
 
 Outputs
