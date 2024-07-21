@@ -332,8 +332,15 @@ Include
 
 Blender Data
    Custom Properties
-      Exports :ref:`Custom Properties <files-data_blocks-custom-properties>`
-      as USD attributes in the ``userProperties`` namespace.
+      Exports :ref:`Custom Properties <files-data_blocks-custom-properties>` as USD attributes.
+      The *Namespace* property is used to determine the namespace that the attributes are written to.
+   Namespace
+      If set, add the given namespace as a prefix to exported custom property names.
+      This only applies to property names that do not already have a prefix
+      (e.g., it would apply to name ``bar`` but not ``foo:bar``) and does not apply to Blender
+      object and data names which are always exported in the ``userProperties:blender`` namespace.
+
+      By default, ``userProperties`` namespace is used.
    Blender Names
       Author USD custom attributes containing the original Blender object and object data names.
 
