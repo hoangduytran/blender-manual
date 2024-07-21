@@ -8,9 +8,13 @@
 ###############
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    introduction.rst
+
+
+Sections
+========
 
 .. toctree::
    :maxdepth: 1
@@ -25,6 +29,11 @@
    :maxdepth: 1
 
    extensions.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   addons.rst
    themes.rst
 
 .. toctree::

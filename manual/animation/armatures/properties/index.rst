@@ -8,4 +8,5 @@
 
    introduction.rst
    bone_collections.rst
+   selection_sets.rst
    display.rst
