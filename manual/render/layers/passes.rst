@@ -82,6 +82,11 @@ Include
       Distance to visible surfaces, mapped to the 0.0 - 1.0 range.
    Normal
       Surface normal used for shading.
+   Position
+      World position of objects in the scene.
+   Vector
+      Motion vectors for the Vector Blur node. The four components consist of 2D vectors
+      giving the motion towards the next and previous frame position in pixel space.
 
 
 Light
@@ -173,25 +178,19 @@ Other
       Ambient occlusion from directly visible surfaces. BSDF color or AO factor is not included; i.e.
       it gives a 'normalized' value between 0 and 1.
 
+   .. _bpy.types.ViewLayerEEVEE.use_pass_transparent:
 
-Effects
-=======
+   Transparent
+      Contain :ref:`Blended <bpy.types.Material.render_method>` surfaces,
+      so they can be adjusted in the compositor and later mixed with opaque passes.
 
-:guilabel:`EEVEE only`
+      This pass only supports monochromatic opacity.
+      Colored opacity will show differently than in combined pass.
 
-.. _bpy.types.ViewLayerEEVEE.use_pass_bloom:
+.. _bpy.types.SceneEEVEE.gtao_distance:
 
-Bloom
-   The influence of the Bloom effect.
-
-.. _bpy.types.ViewLayerEEVEE.use_pass_transparent:
-
-Transparency
-   Contain :ref:`Blended <bpy.types.Material.render_method>` surfaces,
-   so they can be adjusted in the compositor and later mixed with opaque passes.
-
-   This pass only supports monochromatic opacity.
-   Colored opacity will show differently than in combined pass.
+Occlusions Distance
+   Distance of object that contributes to the ambient occlusion effect.
 
 
 Cryptomatte
