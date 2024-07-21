@@ -51,10 +51,9 @@ that achieves the same effect.
 Objects invisible to a certain ray will be skipped in ray traversal already,
 leading to fewer ray casts and shader executions.
 
-.. _bpy.types.Object.visible_camera:
-
 Camera
-   Makes the object visible in camera rays.
+   Makes the object visible to the :doc:`Camera </render/cameras>`;
+   this includes the viewport's perspective in viewport rendering.
 
 .. _bpy.types.Object.visible_diffuse:
 

@@ -14,6 +14,12 @@ the children will be hidden for these too.
 In terms of performance, using these options is more efficient that using a shader node setup
 that achieves the same effect.
 
+.. _bpy.types.Object.visible_camera:
+
+Camera
+   Makes the object visible to the :doc:`Camera </render/cameras>`;
+   this includes the viewport's perspective in viewport rendering.
+
 .. _bpy.types.Object.visible_shadow:
 
 Shadow
