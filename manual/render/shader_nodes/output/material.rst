@@ -1,12 +1,12 @@
 .. _bpy.types.ShaderNodeOutputMaterial:
 
-*************
-Material Node
-*************
+********************
+Material Output Node
+********************
 
 .. figure:: /images/node-types_ShaderNodeOutputMaterial.webp
    :align: right
-   :alt: Material Node.
+   :alt: Material Output Node.
 
 The *Material Output* node is used to output surface material information to a surface object.
 
