@@ -4,7 +4,7 @@
 Clip Strip
 **********
 
-Clip can be modified within the :doc:`Movie Clip Editor </movie_clip/masking/index>`.
+Clip can be modified within the :doc:`/editors/clip/index`.
 
 
 Options
