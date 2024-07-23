@@ -50,5 +50,5 @@ Transparent Glass
 
 .. _bpy.types.CyclesRenderSettings.film_transparent_roughness:
 
-Transparent Roughness
+Roughness Threshold
    For transparent glass, keep surfaces with roughness above the threshold opaque.
