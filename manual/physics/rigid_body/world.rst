@@ -66,18 +66,16 @@ Start/End
    First and last frame of the simulation.
 Bake
    Calculates the simulation and protects the cache. You need to be in *Object Mode* to bake.
-
-   Free Bake
-      Active after the baking of simulation. Clears the baked cache.
-
+Delete Bake
+   Active after the baking of simulation. Clears the baked cache.
 Calculate to Frame
    Bake physics to current frame.
 Current Cache to Bake
    Bake from Cache.
 Bake All Dynamics
    Bake all physics.
-Free All Bakes
-   Free all baked caches of all objects in the current scene.
+Delete All Bakes
+   Deletes all baked caches of all objects in the current scene.
 Update All to Frame
    Update cache to current frame.
 
