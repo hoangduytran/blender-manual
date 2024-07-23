@@ -14,12 +14,10 @@ expanded over multiple upcoming releases.
    :doc:`/files/asset_libraries/index`
       For general information on Blender's asset library system, including how to
       :ref:`create <asset-create>` and :ref:`edit <asset-edit>` assets, and design choices.
-
    :doc:`/files/asset_libraries/catalogs`
       For organizing assets.
-
    :doc:`/animation/armatures/posing/editing/pose_library`
-      Build on top of the Asset Browser.
+      Built on top of the Asset Browser.
 
 
 .. _bpy.ops.asset.catalog_undo:

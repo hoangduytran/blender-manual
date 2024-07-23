@@ -10,12 +10,10 @@ and will be improved and expanded over multiple upcoming releases.
 
    :doc:`/editors/asset_browser`
       The main interface for organizing and using assets.
-
    :doc:`/files/asset_libraries/catalogs`
       For organizing assets.
-
    :doc:`/animation/armatures/posing/editing/pose_library`
-      Build on top of the Asset Browser.
+      Built on top of the Asset Browser.
 
    The following blog posts were written during the design and development of the Asset Browser.
    They are linked here for historical reasons, and to give some more context to the current design.
