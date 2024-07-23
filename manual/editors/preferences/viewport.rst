@@ -56,7 +56,7 @@ HDRI Preview Size
    :Interactive Navigation:
       Display the axis as an interactive gizmo.
       Click sets the viewport to display along this axis and dragging orbits the view.
-   :Simple Axis:
+   :Simple Axes:
       Display simple, less intrusive axis in the viewport.
 
       .. _bpy.types.PreferencesView.mini_axis_brightness:
@@ -93,7 +93,7 @@ Viewport Anti-Aliasing
 Smooth Wires
    Overlay
       Display overlays with smooth wire, without this wires will be rendered aliased.
-      To increase the visibility you can disable this and *Edit Mode*,
+      To increase the visibility you can disable this for Edit Mode specificity (see below),
       since edges do not blend into other shaded regions.
 
    .. _bpy.types.PreferencesSystem.use_edit_mode_smooth_wire:
