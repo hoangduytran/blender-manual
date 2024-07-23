@@ -51,10 +51,10 @@ Pass Index
       :doc:`Volume Objects </modeling/volumes/introduction>` do not support the pass index.
 
 
-.. _bpy.types.Material.surface:
-
 Surface
 =======
+
+.. _bpy.types.Material.use_backface_culling:
 
 Backface Culling
    Backface Culling hides the back side of faces.
@@ -95,7 +95,9 @@ Displacement
       Displacing flat shaded geometry will split adjacent faces.
       This can be worked around by passing the vertex normals as a custom attribute.
 
-Max Displacement
+.. _bpy.types.Material.max_vertex_displacement:
+
+Max Distance
    The maximum distance a vertex can be displaced when using true displacement.
    Displacements over this threshold may cause visibility issues.
    These visibility issues can be observed when the object is out of view at the edge of screen
@@ -108,7 +110,7 @@ Transparent shadows
    Use transparent shadows for this material if it contains a Transparent BSDF.
    Disabling will render faster but not give accurate shadows.
 
-.. _bpy.types.Material.render_method:
+.. _bpy.types.Material.surface_render_method:
 
 Render Method
    Controls the blending and the compatibility with certain features.
@@ -120,6 +122,8 @@ Render Method
       When using *Dithered* render method, the materials are rendered in layers.
       Each layer can only transmit (e.g. refract) light emitted from previous layers.
       If no intersection with the layers below exists, the transmissive BSDFs will fallback to light probes.
+
+      .. _bpy.types.Material.use_raytrace_refraction:
 
       Raytraced Transmission
          Use raytracing to determine transmitted color instead of using only light probes.
@@ -159,7 +163,7 @@ Transparency Overlap
    This option can be disabled to fix sorting issues caused by blending order.
    Only available for the *Blended* render method.
 
-.. _bpy.types.Material.thickness:
+.. _bpy.types.Material.thickness_mode:
 
 Thickness
    Determines what model to use to approximate the object geometry.
@@ -170,6 +174,8 @@ Thickness
    :Slab:
       Approximate the object as an infinite slab of thickness defined by the node tree.
       This is more suited to very flat or thin objects (e.g. glass panels, grass blades).
+
+.. _bpy.types.Material.use_thickness_from_shadow:
 
 From Shadow
    Use the shadow maps from shadow casting lights to refine the thickness defined by the material node tree.
