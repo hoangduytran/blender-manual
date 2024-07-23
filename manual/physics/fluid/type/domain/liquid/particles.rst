@@ -94,7 +94,7 @@ Wave Crest Particle Sampling
 
 .. _bpy.types.FluidDomainSettings.sndparticle_sampling_trappedair:
 
-Trapper Air Particle Sampling
+Trapped Air Particle Sampling
    Maximum number of particles generated per trapped air cell per frame.
 
 .. _bpy.types.FluidDomainSettings.sndparticle_life_max:
