@@ -32,10 +32,10 @@ Hints
   Note that for the cache to fill up,
   one has to start the playback before or on the frame that the simulation starts.
 - The cache is cleared automatically on changes. But not on all changes,
-  so it may be necessary to free it manually, e.g. if you change a force field.
+  so it may be necessary to delete it manually, e.g. if you change a force field.
 - The system is protected against changes after baking.
   If for example the mesh changes the simulation is not calculated anew.
-- The bake result can be cleared by clicking on the *Free Bake* button in the simulation cache settings.
+- The bake result can be cleared by clicking on the *Delete Bake* button in the simulation cache settings.
 - A simulation can only be edited in Particle Edit Mode when it has been baked in memory.
   And cannot be edited if the Disk Cache is used.
 - If you are not allowed to write to the required subdirectory caching will not take place,

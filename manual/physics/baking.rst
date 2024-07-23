@@ -11,7 +11,7 @@ so that the next time it runs, it can be replayed more quickly by reading the re
 
 If you bake the simulation the cache is protected,
 and you will be unable to change the simulation settings
-until you clear the baked frames by clicking *Free Bake*.
+until you clear the baked frames by clicking *Delete Bake*.
 
 It is generally recommended to bake your physics simulations before rendering.
 Aside from no longer needing to go through the time-consuming process of simulating again,
@@ -135,9 +135,9 @@ Bake
    The cursor will display as a number representing the progress of the baking.
    You need to be in Object Mode to bake.
 
-.. _free-physics-bake:
+.. _delete-physics-bake:
 
-Free Bake
+Delete Bake
    Mark the baked cache as temporary. The data will still exist,
    but will be removed with the next object modification and frame change.
    This button is only available when the physics system has been baked.
@@ -158,10 +158,10 @@ Bake All Dynamics
    Useful for baking complex setups involving interactions between different physics types.
 
    See :ref:`Bake <physics-bake>`.
-Free All Bakes
-   Free bakes of all physics systems in the scene, even those of different types.
+Delete All Bakes
+   Delete bakes of all physics systems in the scene, even those of different types.
 
-   See :ref:`Free Bake <free-physics-bake>`.
+   See :ref:`Delete Bake <delete-physics-bake>` for more information.
 Update All to Frame
    Bake all physics systems in the scene to the current frame.
 
