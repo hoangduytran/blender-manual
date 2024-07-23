@@ -19,19 +19,19 @@ Memory
 
 .. _bpy.types.SceneEEVEE.shadow_pool_size:
 
-Shadow Pool Size
-   A bigger pool size allows for more shadows in the scene but might not fit into GPU memory and decreases
-   performance.
-   Increasing it might fix the *Shadow buffer full* error.
+Shadow Pool
+   A bigger pool size allows for more shadows in the scene
+   but might not fit into GPU memory and decreases performance.
+   Increasing the size might fix the *Shadow buffer full* error.
 
    .. seealso::
       :ref:`Shadow documentation <bpy.types.Light.shadow>`
 
 .. _bpy.types.SceneEEVEE.gi_irradiance_pool_size:
 
-Light Probes Volume Pool Size
-   A bigger pool size allows for more irradiance grids in the scene but might not fit into GPU memory and
-   decreases performance.
+Light Probes Volume Pool
+   A bigger pool size allows for more irradiance grids in the scene
+   but might not fit into GPU memory and decreases performance.
 
 
 Viewport

@@ -15,23 +15,33 @@ Thickness
 
    :Panel:     :menuselection:`Properties --> Material --> Thickness`
 
-This feature is used to approximate the inner geometry structure of the object without heavy computation.
-This is currently used for Subsurface, Translucent BSDF, Refraction BSDF and the nodes containing them.
+Used to approximate the inner geometry structure of the object without heavy computation.
+This is currently used for :doc:`Subsurface Scattering </render/shader_nodes/shader/sss>`,
+:doc:`Translucent BSDF </render/shader_nodes/shader/translucent>`,
+:doc:`Refraction BSDF </render/shader_nodes/shader/refraction>`, and the nodes containing these effects.
 
-If no value is plugged into the output node, a default thickness based on the smallest dimension of the object
-is computed.
+If no value is plugged into the output node,
+a default thickness based on the smallest dimension of the object is used.
 If a value is connected it will be used as object space thickness (i.e. scaled by object transform).
 A value of zero will disable the thickness approximation and treat the object as having only one interface.
 
+This output is only used by the EEVEE render engine.
+
 .. note::
+
    - The thickness is used to skip the inner part of the object.
    - Refraction will not refract objects inside the thickness distance.
    - Shadow casting object will not cast shadow within the thickness distance.
 
 .. tip::
+
    - For large or compound meshes (e.g. vegetation),
      the thickness should be set to the thickness of individual parts (e.g. leaves, grass blades).
    - Thickness can be baked to textures or custom attributes for more accurate result.
+
+.. seealso::
+
+   :ref:`Thickness Mode <bpy.types.Material.thickness_mode>` -- controls how the thickness value is used.
 
 
 Material Settings
@@ -51,10 +61,10 @@ Pass Index
       :doc:`Volume Objects </modeling/volumes/introduction>` do not support the pass index.
 
 
-.. _bpy.types.Material.surface:
-
 Surface
 =======
+
+.. _bpy.types.Material.use_backface_culling:
 
 Backface Culling
    Backface Culling hides the back side of faces.
@@ -95,7 +105,9 @@ Displacement
       Displacing flat shaded geometry will split adjacent faces.
       This can be worked around by passing the vertex normals as a custom attribute.
 
-Max Displacement
+.. _bpy.types.Material.max_vertex_displacement:
+
+Max Distance
    The maximum distance a vertex can be displaced when using true displacement.
    Displacements over this threshold may cause visibility issues.
    These visibility issues can be observed when the object is out of view at the edge of screen
@@ -108,7 +120,7 @@ Transparent shadows
    Use transparent shadows for this material if it contains a Transparent BSDF.
    Disabling will render faster but not give accurate shadows.
 
-.. _bpy.types.Material.render_method:
+.. _bpy.types.Material.surface_render_method:
 
 Render Method
    Controls the blending and the compatibility with certain features.
@@ -120,6 +132,8 @@ Render Method
       When using *Dithered* render method, the materials are rendered in layers.
       Each layer can only transmit (e.g. refract) light emitted from previous layers.
       If no intersection with the layers below exists, the transmissive BSDFs will fallback to light probes.
+
+      .. _bpy.types.Material.use_raytrace_refraction:
 
       Raytraced Transmission
          Use raytracing to determine transmitted color instead of using only light probes.
@@ -159,7 +173,7 @@ Transparency Overlap
    This option can be disabled to fix sorting issues caused by blending order.
    Only available for the *Blended* render method.
 
-.. _bpy.types.Material.thickness:
+.. _bpy.types.Material.thickness_mode:
 
 Thickness
    Determines what model to use to approximate the object geometry.
@@ -170,6 +184,8 @@ Thickness
    :Slab:
       Approximate the object as an infinite slab of thickness defined by the node tree.
       This is more suited to very flat or thin objects (e.g. glass panels, grass blades).
+
+.. _bpy.types.Material.use_thickness_from_shadow:
 
 From Shadow
    Use the shadow maps from shadow casting lights to refine the thickness defined by the material node tree.

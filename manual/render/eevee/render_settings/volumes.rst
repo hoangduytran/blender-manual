@@ -1,17 +1,17 @@
 .. _bpy.types.SceneEEVEE.volumetric:
 
-***********
-Volumetrics
-***********
+*******
+Volumes
+*******
+
+.. reference::
+
+   :Panel:     :menuselection:`Properties --> Render --> Volumes`
 
 EEVEE simulates volumetric scattering by evaluating all volume objects inside the view frustum.
 
 To achieve this, EEVEE uses several 3D textures which have a high video memory usage.
 The texture dimensions can be tweaked using the *Resolution* and *Steps* parameters.
-
-.. reference::
-
-   :Panel:     :menuselection:`Properties --> Render --> Volumetrics`
 
 Resolution
    Controls the quality of the volumetric effects. Lower resolution increases video memory usage and quality.
