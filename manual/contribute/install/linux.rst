@@ -25,7 +25,7 @@ Debian/Ubuntu::
 
 Redhat/Fedora::
 
-   sudo yum install python python-pip git git-lfs
+   sudo dnf install python python-pip git git-lfs
    git lfs install --skip-repo
 
 Arch Linux::
