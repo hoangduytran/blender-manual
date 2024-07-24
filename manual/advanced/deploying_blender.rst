@@ -4,23 +4,22 @@
 Deploying Blender in Production
 *******************************
 
-It is possible to deploy Blender in environments that are more
-restricted, use automation or have other special requirements.
-For example in an animation studio or for school courses.
+This page contains tips for setting up Blender in environments
+such as animation studios and schools.
 
-This page contains tips setting up Blender in such environments.
-
+These environments often have special requirements regarding
+security, automated deployment and customization.
 
 Installing Blender
 ==================
 
 Blender downloads can be extracted to any directory on the system, as
-a self contained installation. Multiple Blender versions can easily
+a self contained installation. Multiple Blender versions can
 co-exist on the same system, and deployment can be automated using
 standard file management tools.
 
-New Blender versions may add, remove or changes functionality that
-change the results of production files. For a given project, it is
+New Blender versions may add, remove or change functionality that
+affects the results of production files. For a given project, it is
 advisable to use a single :abbr:`LTS (Long-Term-Support)` version
 of Blender. LTS versions receive bug fixes for two years.
 
@@ -50,9 +49,10 @@ Bundling Extensions
 ===================
 
 When working offline or in a more controlled environment, it may be useful
-to provide a set of extensions to all users. These can be served from the
-default read-only System repository. This can be located for example on a
-network drive or in a system directory.
+to provide a set of extensions to all users. For this there is a default
+read-only System repository. This repository can for example be located
+on a read-only network drive or in a system directory.
+
 
 .. figure:: /images/advanced_deploying-blender_system-extensions.png
 
@@ -71,7 +71,7 @@ with a resulting path like this:
     $BLENDER_SYSTEM_EXTENSIONS/system/my-addon/blender_manifest.toml
 
 In the Extensions preferences, it's possible to manually set a custom
-directory of the default System repository and to create multiple
+directory for the default System repository, or to create multiple
 repositories.
 
 
