@@ -321,6 +321,7 @@ Subcommand: ``server-generate``
 usage::
 
        blender --command extension server-generate [-h] --repo-dir REPO_DIR
+                                                   [--repo-config REPO_CONFIG]
                                                    [--html]
                                                    [--html-template HTML_TEMPLATE_FILE]
 
@@ -330,6 +331,21 @@ This can be used to host packages which only requires static-file hosting.
 options:
   -h, --help            show this help message and exit
   --repo-dir REPO_DIR   The remote repository directory.
+  --repo-config REPO_CONFIG
+                        An optional server configuration to include information which can't be detected.
+                        Defaults to ``blender_repo.toml`` (in the repository directory).
+
+                        This can be used to defined blocked extensions, for example ::
+
+                           schema_version = "1.0.0"
+
+                           [[blocklist]]
+                           id = "my_example_package"
+                           reason = "Explanation for why this extension was blocked"
+                           [[blocklist]]
+                           id = "other_extenison"
+                           reason = "Another reason for why this is blocked"
+
   --html                Create a HTML file (``index.html``) as well as the repository JSON
                         to support browsing extensions online with static-hosting.
   --html-template HTML_TEMPLATE_FILE
