@@ -23,6 +23,9 @@ Other third party sites can also be supported, as long as they follow the Extens
 
 .. seealso::
 
+   For extension add-on guidelines (requirements for ``extensions.blender.org``), refer to the
+   :ref:`Developer Handbook <https://developer.blender.org/docs/handbook/addons/guidelines/>`__.
+
    For the extension settings, and how to manage them, refer to the
    :ref:`User Preferences <prefs-extensions>`.
 
