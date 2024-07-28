@@ -94,4 +94,6 @@ Expected format:
 Example:
    ``https://extensions.blender.org/add-ons/amaranth-toolset/1.0.23/download/add-on-amaranth-toolset-v1.0.23.zip?repository=%2Fapi%2Fv1%2Fextensions%2F&blender_version_min=4.2.0&platforms=linux-x64%2Cmacos-x64``
 
-   *Note that ``%2F`` and ``%2C`` are simply the url-encoded equivalent of ``/`` and ``,`` respectively.*
+   .. note::
+
+      ``%2F`` and ``%2C`` are simply the url-encoded equivalent of ``/`` and ``,`` respectively.
