@@ -45,7 +45,7 @@ HTML
 
 The ``server-generate`` command can optionally create a simple website using the ``--html`` argument.
 which can be used
-to view extensions online, the links can dropped into Blender for installation.
+to view extensions online, the links can be dropped into Blender for installation.
 
 
 For a sample of the HTML code you can use to list all the extensions in the repository, use the ``html`` option
