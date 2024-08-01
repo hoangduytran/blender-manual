@@ -4,20 +4,25 @@
 Creating a Dynamic Extensions Repository
 ****************************************
 
-If you plan to setup a dynamic extensions repository, read first about :doc:`static repositories <static_repository>`.
-The expected format for how to list all the packages is the same, and should be used as a starting point.
+A dynamic repository allows you to serve a smaller JSON file with only the latest version of the extensions which are compatible
+with the query parameters. This is only relevant for repositories which contain multiple version of multiple extensions.
 
-Multiple Versions
-=================
+For small or personal repositories it is simpler and recommended to use :doc:`static repositories <static_repository>` instead.
+
+Listing
+=======
+
+To setup a dynamic extensions repository, follow the steps for :doc:`static repositories <static_repository>`, since the
+format and the listing are the same.
+
+Query Parameters
+================
 
 When Blender fetches the extensions listing it passes the following arguments to make sure only
 compatible extensions are listed:
 
 - ``platform``
 - ``blender_version``
-
-This means that servers have the chance to handle these arguments to output a single entry
-per-extension on the listing.
 
 These arguments are passed as parameters to the server via a query URL:
 

@@ -7,11 +7,14 @@ How to Create Extensions
 
 Creating an extension takes only a few steps:
 
-#. Create a directory for your extension and populate it with the add-on code or theme file.
+#. Open the directory containing the add-on code or theme file.
 #. Add a `blender_manifest.toml <#manifest>`__  file with all the required meta-data ``(name, maintainer, ...)``.
-#. Compress the directory as a ``.zip`` file.
-#. :ref:`Install from Disk <prefs-extensions-install>` to test if everything is working well.
-#. `Upload the zip file <https://extensions.blender.org/submit/>`__ (this step requires Blender ID).
+#. Use the :ref:`Blender command-line tool <command-line-args-extension-build>` to build the extension .zip file.
+
+How to publish to the `Blender Extensions Platform <https://extensions.blender.org>`__:
+
+* :ref:`Install from Disk <prefs-extensions-install>` to test if everything is working well.
+* `Upload the .zip file <https://extensions.blender.org/submit/>`__ (this step requires Blender ID).
 
 The extension will be held for `review <https://extensions.blender.org/approval-queue/>`__,
 and published once the moderation team approves it.
