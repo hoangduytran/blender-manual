@@ -50,7 +50,6 @@ Guidelines
    guides/commit_guide.rst
    guides/templates.rst
    guides/maintenance_guide.rst
-   release_cycle.rst
 
 
 Translations

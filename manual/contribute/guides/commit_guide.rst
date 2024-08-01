@@ -28,9 +28,8 @@ If you leave out ``-m "message"``, you will be prompted to type the message in a
 
 .. seealso::
 
-   See :doc:`/contribute/release_cycle` for documentation on how to make
+   See `release branch <https://developer.blender.org/docs/handbook/release_process/release_branch/>`__ for documentation on how to make
    commits to a specific release branch and how to create merge commits.
-
 
 .. _contribute-commit-good-message:
 
