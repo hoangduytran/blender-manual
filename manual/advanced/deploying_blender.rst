@@ -155,7 +155,7 @@ and exchange image, volume and scene files with them.
 Python Version
 --------------
 
-Blender and the `by module <https://pypi.org/project/bpy/>`_ are only compatible
+Blender and the `bpy module <https://pypi.org/project/bpy/>`_ are only compatible
 with a single Python version. This makes it possible for add-ons and VFX software
 in general to only have to target a single Python version.
 
