@@ -1,4 +1,4 @@
-sphinx==7.3.7
+sphinx==7.4.7
 
 # Sphinx dependencies that are important
 Jinja2==3.1.4
@@ -13,7 +13,7 @@ sphinx-intl==2.2.0
 
 # Only needed to match the theme used for the official documentation.
 # Without this theme, the default theme will be used.
-furo==2024.05.06
+furo==2024.07.18
 sphinx-basic-ng==1.0.0b2
 
 # Only for convenience, allows live updating while editing RST files.
