@@ -99,13 +99,8 @@ GPU accelerated denoising is available on all supported GPUs.
 Metal -- Apple (macOS)
 ----------------------
 
-Metal is supported on Apple computers with Apple Silicon, AMD and Intel graphics cards.
-macOS 13.0 or newer is required to support all features and graphics cards.
-
-Using AMD graphics cards with Metal has a number of limitations. :ref:`Light Trees
-<bpy.types.CyclesRenderSettings.use_light_tree>` and :ref:`Shadow Caustics
-<bpy.types.CyclesObjectSettings.is_caustics_caster>` are not supported, and the Principled Hair BSDF causes poor
-rendering performance.
+Metal is supported on Apple computers with Apple Silicon.
+macOS 13.0 or newer is required to support all features.
 
 GPU accelerated denoising is available on Apple Silicon.
 
