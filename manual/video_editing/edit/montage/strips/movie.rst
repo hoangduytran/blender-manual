@@ -75,7 +75,7 @@ Adjust Playback Rate
 Sound
    Add a :doc:`Sound Strip </video_editing/edit/montage/strips/sound>` that contains the movie's audio track.
 
-Use Movie Frame Rate
+Set Scene Frame Rate
    Sets the :ref:`Scene Frame Rate <bpy.types.RenderSettings.fps>` to the frame rate encoded in the movie file.
 
 
