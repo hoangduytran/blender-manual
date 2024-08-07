@@ -21,7 +21,8 @@ Filtering Add-ons
 .. _bpy.types.WindowManager.addon_search:
 
 Search Add-ons
-    Blender comes with some preinstalled Add-ons already, ready to be enabled. But you can also add your own, or any interesting ones you find on the web.
+    Blender comes with some preinstalled Add-ons already, ready to be enabled. But you can also add your own, or any 
+    interesting ones you find on the web.
 
 .. _bpy.types.PreferencesView.show_addons_enabled_only:
 
@@ -36,7 +37,8 @@ Add-on Settings
 ===============
 
 Refresh Local
-   Scan extension & legacy add-ons for changes to modules & meta-data (similar to restarting). Any issues are reported as warnings.
+   Scan extension & legacy add-ons for changes to modules & meta-data (similar to restarting). Any issues are 
+   reported as warnings.
 Install from Disk
    Install an extension from a ``.zip`` package.
    This is installed to a Local Repository and no updates will be available.
