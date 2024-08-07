@@ -11,6 +11,10 @@ Texture Node
 
 The Texture node makes 3D textures available to the Compositor.
 
+.. note::
+
+   The Texture node is not supported by the :doc:`viewport compositor </compositing/realtime_compositor>`.
+
 
 Inputs
 ======
