@@ -212,10 +212,6 @@ Command-line
 
 Extensions can be built, validated & installed via command-line.
 
-.. note::
-
-   Extension commands currently require a daily build of Blender with extensions enabled in the preferences.
-
 To build the package defined in the current directory use the following commands:
 
 .. code:: bash
