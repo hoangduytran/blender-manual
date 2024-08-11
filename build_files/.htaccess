@@ -259,19 +259,10 @@ RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/brush/brush.html" "^/manua
 RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/rotate.html" "^/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/twist.html"
 RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/simplify.html" "^/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/density.html"
 # Mesh sculpting tools converted to asset
-RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/\
-                   (blob|boundary|clay|clay_strips|clay_thumb|cloth|crease|draw|draw_facesets|draw_sharp|\
-                   elastic_deform|fill|flatten|grab|inflate|layer|mask|multiplane_scrape|\
-                   multires_displacement_eraser|multires_displacement_smear|nudge|paint|pinch|pose|\
-                   scrape|slide_relax|smear|smooth|snake_hook|thumb).html" \
-                "^/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/$1.html"
+RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/(blob|boundary|clay|clay_strips|clay_thumb|cloth|crease|draw|draw_facesets|draw_sharp|elastic_deform|fill|flatten|grab|inflate|layer|mask|multiplane_scrape|multires_displacement_eraser|multires_displacement_smear|nudge|paint|pinch|pose|scrape|slide_relax|smear|smooth|snake_hook|thumb).html" "^/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/$1.html"
 # Curve sculpting tools converted to asset
-RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/tools/\
-                   (index|add_curves|comb_curves|delete_curves|density_curves|grow_shrink_curves|\
-                   pinch_curves|puff_curves|selection_paint|slide_curves|smooth_curves|snake_hook_curves).html" \
-                "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/brushes/$1.html"
+RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/tools/(index|add_curves|comb_curves|delete_curves|density_curves|grow_shrink_curves|pinch_curves|puff_curves|selection_paint|slide_curves|smooth_curves|snake_hook_curves).html" "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/brushes/$1.html"
 # Grease pencil draw tools
-RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/(draw|erase|fill|tint).html" \
-                "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/brushes/$1.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/(draw|erase|fill|tint).html" "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/brushes/$1.html"
 # Texture paint tools converted to asset
 RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/texture_paint/tools.html" "^/manual/{lang}/{version}/sculpt_paint/texture_paint/brushes.html"
