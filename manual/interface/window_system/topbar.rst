@@ -72,13 +72,13 @@ Recover
 
 Save :kbd:`Ctrl-S`
    :ref:`Save <bpy.ops.wm.save_mainfile>` the current blend-file.
-Save Incremental :kbd:`Ctrl-Alt-S`
-   Save the current Blender file with a numerically
-   incremented name that does not overwrite any existing files.
 Save As... :kbd:`Shift-Ctrl-S`
    Opens the File Browser to specify file name and location of :ref:`save <bpy.ops.wm.save_mainfile>`.
 Save Copy...
    :ref:`Saves <bpy.ops.wm.save_mainfile>` a copy of the current file.
+Save Incremental :kbd:`Ctrl-Alt-S`
+   Save the current Blender file with a numerically
+   incremented name that does not overwrite any existing files.
 
 ----
 
