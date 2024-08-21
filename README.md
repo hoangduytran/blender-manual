@@ -38,7 +38,7 @@ or making patches, you may also submit the modified file as an
 - **Manual Docs**: [Contributing Guide](https://docs.blender.org/manual/en/dev/contribute/index.html) (the process for editing the manual).
 - **Source Files**: [Manual Repository](https://projects.blender.org/blender/blender-manual) (Git repository).
 - **[Developer forum](https://devtalk.blender.org/c/documentation/12)**
-- **Chat**: [#docs on blender.chat](https://blender.chat/channel/docs).
+- **Chat**: [#docs on chat.blender.org](https://chat.blender.org/#/room/#docs:blender.org).
 - **Administrators**: @blendify @fsiddi
 
 
@@ -61,11 +61,11 @@ To get started see the [contribution guide for translations](https://docs.blende
 
 - **Source Files**: [Translation's Repository](https://projects.blender.org/blender/blender-manual-translations) (git repository).
 - **Forum**: [Documentation category on Developer Talk](https://devtalk.blender.org/c/documentation)
-- **Chat**: [#translations on blender.chat](https://blender.chat/channel/translations).
+- **Chat**: [#translations on chat.blender.org](https://chat.blender.org/#/room/#translations:blender.org).
 - **Administrators**: @blendify , @fsiddi
 
 **Note:*
 If you are a new translator who wants to start translating a new language
-that is not listed open an issue on the 
+that is not listed open an issue on the
 [issue tracker](https://projects.blender.org/blender/blender-manual/issues)
 and we would be glad to set it up for you.
