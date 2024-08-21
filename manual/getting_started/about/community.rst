@@ -52,22 +52,22 @@ see the `Get Involved <https://www.blender.org/get-involved/>`__ page.
 
 .. _blender-chat:
 
-Blender Chat
+Chat
 ============
 
 For real-time discussion, we have
-`blender.chat <https://blender.chat>`__ which uses
+`chat.blender.org <https://chat.blender.org>`__ which uses
 `Blender ID <https://id.blender.org>`__ for authentication.
 
 You can join these channels:
 
-- `#today <https://blender.chat/channel/today>`__
-  For getting answers from the community.
-- `#blender-coders <https://blender.chat/channel/blender-coders>`__
+- `#general <https://chat.blender.org/#/room/#general:blender.org>`__
+  For general chat with the community.
+- `#blender-coders <https://chat.blender.org/#/room/#blender-coders:blender.org>`__
   For developers to discuss Blender development.
-- `#python <https://blender.chat/channel/python>`__
+- `#python <https://chat.blender.org/#/room/#python:blender.org>`__
   For support for developers using the Python API.
-- `#docs <https://blender.chat/channel/docs>`__
+- `#docs <https://chat.blender.org/#/room/#docs:blender.org>`__
   For discussion related to Blender's documentation.
 
 
