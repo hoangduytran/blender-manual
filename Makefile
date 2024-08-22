@@ -30,6 +30,13 @@ Utilities
 - update               to update the repository to the most recent version.
 - format_py            to auto-format Python scripts.
 
+Environment Variables
+---------------------
+
+- NO_INTERSPHINX
+  When non-zero & non-empty any build-targets that run sphinx will not use
+  'intersphinx' (which requires online access).
+
 endef
 # HELP_TEXT (end)
 

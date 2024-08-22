@@ -51,10 +51,13 @@ extensions = [
     "404",
     "peertube",
     "reference",
-    "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
 ]
+
+# This sometimes raises exceptions & performs online-access, make optional.
+if not os.environ.get("NO_INTERSPHINX", "").strip("0"):
+    extensions.append("sphinx.ext.intersphinx")
 
 # Is there a better way to check for PDF building?
 if "latex" in sys.argv:
