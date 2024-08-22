@@ -19,23 +19,6 @@ Most of the time you can get add-ons as part of the :ref:`Extensions <extensions
    for any errors that may have occurred.
 
 
-User-Defined Add-on Path
-========================
-
-You can also create a personal directory containing new add-ons and configure your files path in
-the *File Paths* section of the *Preferences*. To create a personal script directory:
-
-#. Create an empty directory in a location of your choice (e.g. ``my_scripts``).
-#. Add a subdirectory under ``my_scripts`` called ``addons``
-   (it *must* have this name for Blender to recognize it).
-#. Open the *File Paths* section of the *Preferences*.
-#. Set the *Scripts* file path to point to your script directory (e.g. ``my_scripts``).
-#. Save the preferences and restart Blender for it to recognize the new add-on location.
-
-Now when you install add-ons you can select the *Target Path* when installing 3rd party scripts.
-Blender will copy newly installed add-ons under the directory selected in your Preferences.
-
-
 Internet Access
 ===============
 
