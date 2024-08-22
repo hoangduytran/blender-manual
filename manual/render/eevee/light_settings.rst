@@ -24,7 +24,7 @@ EEVEE uses a technique called *Virtual Shadow Mapping* along with *Shadow Map Ra
 *Virtual Shadow Mapping* produces more accurate results than traditional shadow mapping by putting resolution
 only where it is needed. It also includes a very efficient caching mechanism.
 This technique offers better performance than ray tracing and is compatible
-with any :ref:`Render Method <bpy.types.Material.render_method>`.
+with any :ref:`Render Method <bpy.types.Material.surface_render_method>`.
 
 .. tip::
    - The error message *Shadow buffer full* means that the system cannot allocate enough shadow memory.

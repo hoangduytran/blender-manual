@@ -109,7 +109,7 @@ Raytracing
 - Blended materials are not compatible with raytracing.
 - Only one refraction event is correctly modeled.
   An approximation of the second refraction event can be achieved using the
-  :ref:`Thickness workflow <bpy.types.Material.thickness>`.
+  :ref:`Thickness workflow <eevee-materials-thickness>`.
 - Only dithered materials *not* using Raytrace Refractions can be refracted.
 
 

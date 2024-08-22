@@ -8,6 +8,8 @@ Materials
    See :ref:`Shader nodes limitations <eevee-limitations-materials>`.
 
 
+.. _eevee-materials-thickness:
+
 Thickness
 =========
 

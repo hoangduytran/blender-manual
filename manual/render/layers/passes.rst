@@ -181,7 +181,7 @@ Other
    .. _bpy.types.ViewLayerEEVEE.use_pass_transparent:
 
    Transparent
-      Contain :ref:`Blended <bpy.types.Material.render_method>` surfaces,
+      Contain :ref:`Blended <bpy.types.Material.surface_render_method>` surfaces,
       so they can be adjusted in the compositor and later mixed with opaque passes.
 
       This pass only supports monochromatic opacity.
@@ -329,7 +329,7 @@ Known Limitations
 =================
 
 - Blended materials are not rendered in render passes except the combined pass.
-  Use the *Dithered* as :ref:`Render Method <bpy.types.Material.render_method>`
+  Use the *Dithered* as :ref:`Render Method <bpy.types.Material.surface_render_method>`
   to render transparent materials in render passes.
 - Depth of field is not rendered in render passes except the combined pass.
   It is possible to add the depth of field back in the Compositor using
