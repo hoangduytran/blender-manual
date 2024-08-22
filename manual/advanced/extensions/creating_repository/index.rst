@@ -6,10 +6,12 @@ Creating an Extensions Repository
 
 Third party sites that wish to support extensions in Blender can do so in several ways, in order of complexity:
 
-* :doc:`Static <static_repository>`: Host a static JSON file listing all the packages of your repository.
-* :doc:`Dynamic <dynamic_repository>`: Serve the JSON file on-demand based on the Blender version and platform.
-* `Platform <https://projects.blender.org/infrastructure/extensions-website>`__: Fork the entire Extensions Website to
-  create your own.
+- :doc:`Static <static_repository>`:
+  Host a static JSON file listing all the packages of your repository.
+- :doc:`Dynamic <dynamic_repository>`:
+  Serve the JSON file on-demand based on the Blender version and platform.
+- `Platform <https://projects.blender.org/infrastructure/extensions-website>`__:
+  Fork the entire Extensions Website to create your own.
 
 Tags and Translations
 =====================

@@ -4,18 +4,18 @@
 Creating a Dynamic Extensions Repository
 ****************************************
 
-A dynamic repository allows you to serve a smaller JSON file with only the latest version of the extensions which are
-compatible with the query parameters. This is only relevant for repositories which contain multiple version of
-multiple extensions.
+A dynamic repository allows you to serve a smaller JSON file with only the latest version
+of the extensions which are compatible with the query parameters.
+This is only relevant for repositories which contain multiple version of multiple extensions.
 
-For small or personal repositories it is simpler and recommended to use :doc:`static repositories <static_repository>` 
-instead.
+For small or personal repositories it is simpler and recommended to use
+:doc:`static repositories <static_repository>` instead.
 
 Listing
 =======
 
-To setup a dynamic extensions repository, follow the steps for :doc:`static repositories <static_repository>`, since
-the format and the listing are the same.
+To setup a dynamic extensions repository, follow the steps for :doc:`static repositories <static_repository>`,
+since the format and the listing are the same.
 
 Query Parameters
 ================
@@ -42,6 +42,6 @@ This is passed to the servers via an Authorization header:
 
 .. code-block:: sh
 
-  curl -i https://extensions.blender.org/api/v1/extensions/ \
-    -H "Accept: application/json" \
-    -H "Authorization: Bearer abc29832befb92983423abcaef93001"
+   curl -i https://extensions.blender.org/api/v1/extensions/ \
+        -H "Accept: application/json" \
+        -H "Authorization: Bearer abc29832befb92983423abcaef93001"
