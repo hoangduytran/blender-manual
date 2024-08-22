@@ -116,3 +116,13 @@ Blender can be updated using the same steps as updating any other application.
 
    The Splash screen :doc:`/getting_started/configuration/defaults` page for information
    about importing settings from previous Blender versions and other quick settings.
+
+
+Known Limitations
+=================
+
+Archive Extraction
+------------------
+
+Extracting Blender's archive using **7-zip** is not supported.
+TAR must be used instead, see: `#104070 <https://projects.blender.org/blender/blender/issues/104070>`__.
