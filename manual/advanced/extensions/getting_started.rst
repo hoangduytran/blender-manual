@@ -92,7 +92,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
    # https://docs.blender.org/manual/en/dev/advanced/extensions/licenses.html
    license = [
-     "SPDX:GPL-2.0-or-later",
+     "SPDX:GPL-3.0-or-later",
    ]
    # Optional: required by some licenses.
    # copyright = [
