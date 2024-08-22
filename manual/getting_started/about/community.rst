@@ -53,7 +53,7 @@ see the `Get Involved <https://www.blender.org/get-involved/>`__ page.
 .. _blender-chat:
 
 Chat
-============
+====
 
 For real-time discussion, we have
 `chat.blender.org <https://chat.blender.org>`__ which uses
