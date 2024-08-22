@@ -74,6 +74,8 @@ Make this installation your default Blender (MS-Windows & Linux only).
 On Linux, if Blender is installed from a package manager such as Snap,
 file association is handled by the package manager.
 
+.. _prefs-system-register:
+
 Register
    Make the currently in use Blender installation the default
    for generating thumbnails and the default for opening blend-files.

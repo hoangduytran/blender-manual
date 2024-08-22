@@ -18,10 +18,8 @@ Blender can now be launched by double-clicking the executable.
 
 When using this method of installation, it is possible to have multiple versions of Blender installed.
 
-For ease of access, you can configure your system by adding a menu entry or shortcut for Blender.
-You may also associate blend-files with Blender so that when selected from the file browser,
-they will automatically open in Blender.
-These settings are typically found in conjunction with the Window Manager settings. (Gnome or KDE.)
+For ease of access, you may wish to add a menu entry and create blend-file associations for the file-browser.
+This can be done by :ref:`Registering Blender <prefs-system-register>`.
 
 To make the installation and configuration fully self-contained, set up a
 :ref:`Portable Installation <portable-installation>`.
