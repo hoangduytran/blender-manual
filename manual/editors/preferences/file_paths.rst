@@ -145,11 +145,18 @@ The following subdirectories will be used when present:
 ``startup/``
    Modules in this folder will be imported on startup.
 ``addons/``
-   Add-ons located here will be listed in the add-ons preferences.
+   Legacy add-ons located here will be listed in the add-ons preferences.
 ``modules/``
    Modules in this folder can be imported by other scripts.
 ``presets/``
    Presets in this folder will be added to existing presets.
+
+.. hint::
+
+   For add-ons it is now recommended to use a local extension repository if you wish
+   to define additional locations to install and manage them.
+
+   To make use of these you will need to define them as :ref:`extensions <extensions-index>`.
 
 .. note::
 
