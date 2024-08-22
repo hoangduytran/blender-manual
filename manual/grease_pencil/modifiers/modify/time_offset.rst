@@ -15,12 +15,6 @@ rain.
 In Fixed Frame mode the Time Offset Modifier can display drawings on your timeline entirely independently of
 the playhead position.
 
-Using the Time Offset Modifier it's possible to have Grease Pencil frame ranges play back as repeating loops.
-Traditionally, 2D animation that uses looped drawings includes characters walking, rising smoke, and falling
-rain.
-In Fixed Frame mode the Time Offset Modifier can display drawings on your timeline entirely independently of
-the playhead position.
-
 
 This can be handy for displaying drawings that will appear often in your animation. Think of switching between
 predefined mouth shapes for instance.
