@@ -269,6 +269,14 @@ For an operator::
    =========
 
 
+Icons
+=====
+
+Blender's icons can be included as inline text using::
+
+   `:bl-icon:`<icon_name>`
+
+
 Further Reading
 ===============
 

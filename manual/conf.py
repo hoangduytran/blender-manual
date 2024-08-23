@@ -49,6 +49,7 @@ release = blender_version
 # ones.
 extensions = [
     "404",
+    "icons",
     "peertube",
     "reference",
     "sphinx.ext.mathjax",
@@ -180,6 +181,7 @@ if html_theme == "furo":
     html_css_files = [
         "css/theme_overrides.css",
         "css/version_switch.css",
+        "fonts/bl-icons.css",
     ]
     html_js_files = [
         "js/version_switch.js",
