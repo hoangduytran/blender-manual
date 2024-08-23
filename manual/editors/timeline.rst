@@ -1,14 +1,4 @@
 .. index:: Editors; Timeline
-
-.. |first| unicode:: U+02759 U+023F4
-.. |last|  unicode:: U+023F5 U+02759
-.. |rewind| unicode:: U+025C0
-.. |play|   unicode:: U+025B6
-.. |previous| unicode:: U+025C6 U+023F4
-.. |next|     unicode:: U+023F5 U+025C6
-.. |pause| unicode:: U+023F8
-.. |record| unicode:: U+023FA
-
 .. _bpy.types.SpaceTimeline:
 .. _bpy.ops.time:
 
@@ -197,9 +187,9 @@ Active Keying Set
    There are a number of predefined keying sets, but you can also create your own
    in the :ref:`Keying Sets <bpy.types.KeyingSets>` panel.
 
-   Insert Keyframes (plus icon) :kbd:`I`
+   Insert Keyframes :bl-icon:`key_hlt` :kbd:`I`
       Insert keyframes on the current frame.
-   Delete Keyframes (cross icon) :kbd:`Alt-I`
+   Delete Keyframes :bl-icon:`key_dehlt` :kbd:`Alt-I`
       Delete keyframes on the current frame.
 
 .. _bpy.types.ToolSettings.keyframe_type:
@@ -234,7 +224,7 @@ Auto Keying
 
    Auto Keying button.
 
-When the record button (|record|) is enabled, Blender will automatically create keyframes on the current
+When the record button (:bl-icon:`rec`) is enabled, Blender will automatically create keyframes on the current
 frame whenever you transform an object or bone in the 3D Viewport (or change one of its transform properties
 in the :doc:`Properties Editor </editors/properties_editor>`).
 
@@ -361,19 +351,19 @@ These buttons are used to set the current frame and control playback.
 
    Transport controls.
 
-Jump to Start (|first|) :kbd:`Shift-Left`
+Jump to Start :bl-icon:`rew` :kbd:`Shift-Left`
    Sets the Playhead to the start of the frame range.
-Jump to Previous Keyframe (|previous|) :kbd:`Down`
+Jump to Previous Keyframe :bl-icon:`prev_keyframe` :kbd:`Down`
    Moves the Playhead to the previous keyframe.
-Rewind (|rewind|) :kbd:`Shift-Ctrl-Spacebar`
+Rewind :bl-icon:`play_reverse` :kbd:`Shift-Ctrl-Spacebar`
    Starts playing the animation in reverse.
-Play (|play|) :kbd:`Spacebar`
+Play :bl-icon:`play` :kbd:`Spacebar`
    Starts playing the animation.
-Jump to Next Keyframe (|next|) :kbd:`Up`
+Jump to Next Keyframe :bl-icon:`next_keyframe` :kbd:`Up`
    Moves the Playhead to the next keyframe.
-Jump to End (|last|) :kbd:`Shift-Right`
+Jump to End :bl-icon:`ff` :kbd:`Shift-Right`
    Sets the Playhead to the end of the frame range.
-Pause (|pause|) :kbd:`Spacebar`
+Pause :bl-icon:`pause` :kbd:`Spacebar`
    Stops playing the animation.
 
 
@@ -383,7 +373,7 @@ Frame Controls
 Current Frame :kbd:`Alt-Wheel`
    The number of the frame that's currently being displayed in the 3D Viewport.
    This is also the location of the Playhead.
-Use Preview Range (clock icon)
+Use Preview Range :bl-icon:`preview_range`
    The Preview Range is an alternative Frame Range that you can use for focusing on a
    particular part of the animation. It lets you repeatedly play a short segment without
    having to manually rewind or change the frame range of the entire scene.

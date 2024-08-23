@@ -395,15 +395,6 @@ latex_elements = {
 \\newunicodechar{✔}{\\ding{52}}
 \\newunicodechar{✗}{\\ding{55}}
 \\newunicodechar{✛}{\\ding{59}}
-
-\\usepackage{fontawesome}
-\\newunicodechar{⏮}{\\faFastBackward}
-\\newunicodechar{⏪}{\\faBackward}
-\\newunicodechar{▶}{\\faPlay}
-\\newunicodechar{⏩}{\\faForward}
-\\newunicodechar{⏭}{\\faFastForward}
-\\newunicodechar{⏸}{\\faPause}
-\\newunicodechar{◀}{\\reflectbox{▶}}
 """,
 
 }
