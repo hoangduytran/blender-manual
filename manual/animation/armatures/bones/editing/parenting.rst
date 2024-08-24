@@ -88,7 +88,7 @@ Bone Collections
 
 Manages the :ref:`bpy.types.BoneCollection` the bone is assigned to.
 
-.. _bpy.ops.armature.move_to_collection:
+.. _bpy.ops.armature.move_to_collection_parenting:
 
 Move to Collection :kbd:`M`
    Move bones to a collection.
