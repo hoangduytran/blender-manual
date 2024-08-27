@@ -18,7 +18,7 @@
    properties/index.rst
    Modifiers <modifiers/index.rst>
    visual_effects/index.rst
-   materials/index.rst
+   Materials <materials/index.rst>
    animation/index.rst
 
 

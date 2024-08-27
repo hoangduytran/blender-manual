@@ -1,7 +1,7 @@
 
-**********
-Properties
-**********
+*********************************
+Grease Pencil Material Properties
+*********************************
 
 Material Slots
 ==============
