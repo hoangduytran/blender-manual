@@ -24,8 +24,8 @@ the look of already drawn strokes.
 Grease Pencil Shader
 ====================
 
-The Grease Pencil shader creates a material that can work
-with strokes and/or filled areas of a Grease Pencil object.
+Grease Pencil materials use a special :doc:`shader </grease_pencil/materials/properties>`
+that define the appearance of the surface of the stroke and fill.
 
 Stroke and fill components has it own section panel and
 they can be enabled with a checkbox on the panel header.
@@ -63,81 +63,3 @@ settings together with the material used will define the look and feel of the fi
 
 Materials slots in the :ref:`List view <ui-list-view>` also have some extra controls
 that help to work with materials while drawing or editing lines.
-
-
-Common Settings
----------------
-
-.. figure:: /images/grease-pencil_materials_introduction_slots-panel.png
-   :align: right
-
-   Grease Pencil material slots panel.
-
-Next to the material name there are three icons buttons that control common properties of the material:
-
-Lock (padlock icon)
-   Toggle material from being editable.
-
-Viewport/Render Visibility (eye icon)
-   Toggle material visibility in the viewport and in render.
-
-Onion Skinning (onion skin icon)
-   Toggle the use of the material for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
-
-
-Specials
---------
-
-Show All
-   Turns on the visibility of every material in the list.
-
-Hide Others
-   Turns off the visibility of every material in the list except the active one.
-
-Lock All
-   Locks edition of all the materials in the list.
-
-Unlock All
-   Unlocks edition of all the materials in the list.
-
-Lock Unselected
-   Locks all materials not used in the selected strokes.
-
-Lock Unused
-   Locks and hides all unused materials.
-
-Convert Materials to Vertex Color
-   Only keeps necessary materials and convert all materials base color to a Color Attribute.
-
-Extract Palette from Vertex Color
-   Add all used Color Attributes to a new Color Palette. See :ref:`bpy.types.PaletteColor`.
-
-Copy Material to Selected
-   Copy the active material to the selected Grease Pencil object.
-
-Copy All Materials to Selected
-   Copy all materials to the selected Grease Pencil object.
-
-Merge Similar
-   Combines similar materials in the list and replace the strokes that use the one of
-   the merged materials with the new one.
-
-Remove Unused Slots
-   Remove all unused materials.
-
-
-Lock & Visibility General Controls
-----------------------------------
-
-Lock (padlock icon)
-   Toggle whether the active material is the only one that can be edited.
-
-Visibility (screen icon)
-   Toggle whether the active material is the only one that can be edited and is visible.
-
-
-Grease Pencil Shader
-====================
-
-Grease Pencil materials use a special :doc:`shader </grease_pencil/materials/properties>`
-that define the appearance of the surface of the stroke and fill.
