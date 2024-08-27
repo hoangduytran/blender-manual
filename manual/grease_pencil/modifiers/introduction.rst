@@ -24,7 +24,7 @@ and *Apply* a modifier if you wish to make its changes permanent.
 
 There are three types of modifiers for Grease Pencil:
 
-Modify
+Edit
    These are tools similar to the Deform ones (see below), however, they usually do not directly
    affect the geometry of the object, but some other data, such as vertex groups.
 Generate

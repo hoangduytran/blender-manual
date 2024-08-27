@@ -266,3 +266,9 @@ RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/tools/(in
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/(draw|erase|fill|tint).html" "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/brushes/$1.html"
 # Texture paint tools converted to asset
 RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/texture_paint/tools.html" "^/manual/{lang}/{version}/sculpt_paint/texture_paint/brushes.html"
+
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/index.html" "^/manual/{lang}/{version}/grease_pencil/edit/index.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/texture_mapping.html" "^/manual/{lang}/{version}/grease_pencil/edit/texture_mapping.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/time_offset.html" "^/manual/{lang}/{version}/grease_pencil/edit/time_offset.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/weight_angle.html" "^/manual/{lang}/{version}/grease_pencil/edit/weight_angle.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/weight_proximity.html" "^/manual/{lang}/{version}/grease_pencil/edit/weight_proximity.html"
