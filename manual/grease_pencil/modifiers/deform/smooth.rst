@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Smooth Modifier
-.. _bpy.types.SmoothGpencilModifier:
+.. _bpy.types.GreasePencilSmoothModifier:
 
 ***************
 Smooth Modifier

@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Thickness Modifier
-.. _bpy.types.ThicknessGpencilModifier:
+.. _bpy.types.GreasePencilThickModifierData:
 
 ******************
 Thickness Modifier

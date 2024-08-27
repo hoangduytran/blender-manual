@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Build Modifier
-.. _bpy.types.BuildGpencilModifier:
+.. _bpy.types.GreasePencilBuildModifier:
 
 **************
 Build Modifier

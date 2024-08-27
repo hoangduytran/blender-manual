@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Shrinkwrap Modifier
-.. _bpy.types.ShrinkwrapGpencilModifier:
+.. _bpy.types.GreasePencilShrinkwrapModifier:
 
 *******************
 Shrinkwrap Modifier

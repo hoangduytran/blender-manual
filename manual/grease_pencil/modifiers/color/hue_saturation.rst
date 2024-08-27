@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Hue/Saturation Modifier
-.. _bpy.types.ColorGpencilModifier:
+.. _bpy.types.GreasePencilColorModifier:
 
 ***********************
 Hue/Saturation Modifier

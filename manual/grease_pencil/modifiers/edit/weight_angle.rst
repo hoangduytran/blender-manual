@@ -1,3 +1,5 @@
+.. index:: Grease Pencil Modifiers; Vertex Weight Angle Modifier
+.. _bpy.types.GreasePencilWeightAngleModifier:
 
 ****************************
 Vertex Weight Angle Modifier

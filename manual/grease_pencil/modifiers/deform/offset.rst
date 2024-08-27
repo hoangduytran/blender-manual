@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Offset Modifier
-.. _bpy.types.OffsetGpencilModifier:
+.. _bpy.types.GreasePencilOffsetModifier:
 
 ***************
 Offset Modifier

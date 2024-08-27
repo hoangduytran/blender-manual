@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Length Modifier
-.. _bpy.types.LengthGpencilModifier:
+.. _bpy.types.GreasePencilLengthModifier:
 
 ***************
 Length Modifier

@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Simplify Modifier
-.. _bpy.types.SimplifyGpencilModifier:
+.. _bpy.types.GreasePencilSimplifyModifier:
 
 *****************
 Simplify Modifier

@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Armature Modifier
-.. _bpy.types.ArmatureGpencilModifier:
+.. _bpy.types.GreasePencilArmatureModifier:
 
 *****************
 Armature Modifier

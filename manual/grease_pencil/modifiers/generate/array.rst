@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Array Modifier
-.. _bpy.types.ArrayGpencilModifier:
+.. _bpy.types.GreasePencilArrayModifier:
 
 **************
 Array Modifier

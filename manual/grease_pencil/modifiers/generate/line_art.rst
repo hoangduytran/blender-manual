@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Line Art Modifier
-.. _bpy.types.LineartGpencilModifier:
+.. _bpy.types.GreasePencilLineartModifier:
 
 *****************
 Line Art Modifier
@@ -26,7 +26,7 @@ Options
 
    The Line Art modifier.
 
-.. _bpy.types.LineartGpencilModifier.use_cache:
+.. _bpy.types.GreasePencilLineartModifier.use_cache:
 
 Use Cache
    Optimize rendering by using cached scene data from the first line art modifier in the stack.
@@ -43,7 +43,7 @@ Source Type
 Object/Collection
    Based on the source type, collection or object can be selected as source geometry.
 
-   .. _bpy.types.LineartGpencilModifier.use_invert_collection:
+   .. _bpy.types.GreasePencilLineartModifier.use_invert_collection:
 
    Invert Collection Filtering
       Select everything except lines from specified collection.
@@ -71,7 +71,7 @@ Edge Types
 
 Line Art can identify different edge types. Selected edge types will be included in the result.
 
-.. _bpy.types.LineartGpencilModifier.shadow_region_filtering:
+.. _bpy.types.GreasePencilLineartModifier.shadow_region_filtering:
 
 Illumination Filtering
    Select feature lines that comes from lit or shaded regions.
@@ -86,9 +86,9 @@ Illumination Filtering
 
 .. rubric:: Create
 
-.. _bpy.types.LineartGpencilModifier.use_contour:
-.. _bpy.types.LineartGpencilModifier.silhouette_filtering:
-.. _bpy.types.LineartGpencilModifier.use_invert_silhouette:
+.. _bpy.types.GreasePencilLineartModifier.use_contour:
+.. _bpy.types.GreasePencilLineartModifier.silhouette_filtering:
+.. _bpy.types.GreasePencilLineartModifier.use_invert_silhouette:
 
 Contour
    Generate strokes from contour lines.
@@ -99,51 +99,51 @@ Contour
    :Silhouette: Only generate lines from the silhouette of the source objects as a whole.
    :Individual Silhouette: Generate lines from the individual silhouettes of the source objects.
 
-.. _bpy.types.LineartGpencilModifier.use_crease:
+.. _bpy.types.GreasePencilLineartModifier.use_crease:
 
 Crease
    Generate strokes where the edge angle is small enough.
 
-   .. _bpy.types.LineartGpencilModifier.crease_threshold:
+   .. _bpy.types.GreasePencilLineartModifier.crease_threshold:
 
    Crease Threshold
       Angles smaller than this will be treated as creases.
       Crease angle priority: object line art crease override > line art default crease.
 
-.. _bpy.types.LineartGpencilModifier.use_intersection:
+.. _bpy.types.GreasePencilLineartModifier.use_intersection:
 
 Intersections
    Generate strokes where lines intersect between faces.
 
-.. _bpy.types.LineartGpencilModifier.use_material:
+.. _bpy.types.GreasePencilLineartModifier.use_material:
 
 Material Borders
    Generate strokes where the edge separates faces with different materials.
 
-.. _bpy.types.LineartGpencilModifier.use_edge_mark:
+.. _bpy.types.GreasePencilLineartModifier.use_edge_mark:
 
 Edge Marks
    Generate strokes from freestyle edge marks.
 
-.. _bpy.types.LineartGpencilModifier.use_loose:
+.. _bpy.types.GreasePencilLineartModifier.use_loose:
 
 Loose
    Generate strokes for edges that do not form a :term:`Face`.
 
-.. _bpy.types.LineartGpencilModifier.use_light_contour:
+.. _bpy.types.GreasePencilLineartModifier.use_light_contour:
 
 Light Contour
    Generate light/shadow separation lines from a reference
-   :ref:`Light Object <bpy.types.LineartGpencilModifier.light_contour_object>`.
+   :ref:`Light Object <bpy.types.GreasePencilLineartModifier.light_contour_object>`.
 
-.. _bpy.types.LineartGpencilModifier.use_shadow:
+.. _bpy.types.GreasePencilLineartModifier.use_shadow:
 
 Cast Shadow
    Project contour lines using a light source object.
 
 .. rubric:: Options
 
-.. _bpy.types.LineartGpencilModifier.use_overlap_edge_type_support:
+.. _bpy.types.GreasePencilLineartModifier.use_overlap_edge_type_support:
 
 Allow Overlapping Types
    Allow an edge to have multiple overlapping types.
@@ -153,23 +153,23 @@ Allow Overlapping Types
 Light Reference
 ---------------
 
-.. _bpy.types.LineartGpencilModifier.light_contour_object:
+.. _bpy.types.GreasePencilLineartModifier.light_contour_object:
 
 Light Object
-   Use this light object to generate :ref:`Light Contour <bpy.types.LineartGpencilModifier.use_light_contour>`.
+   Use this light object to generate :ref:`Light Contour <bpy.types.GreasePencilLineartModifier.use_light_contour>`.
 
-.. _bpy.types.LineartGpencilModifier.shadow_camera_size:
+.. _bpy.types.GreasePencilLineartModifier.shadow_camera_size:
 
 Shadow Camera Size
    This value represents the "Orthographic Scale" of an ortho camera.
    If the camera is put at the lamps position with this scale, it will represent the coverage of the shadow "camera".
 
-.. _bpy.types.LineartGpencilModifier.shadow_camera_near:
+.. _bpy.types.GreasePencilLineartModifier.shadow_camera_near:
 
 Near
    Near clipping distance of shadow camera.
 
-.. _bpy.types.LineartGpencilModifier.shadow_camera_far:
+.. _bpy.types.GreasePencilLineartModifier.shadow_camera_far:
 
 Far
    Far clipping distance of shadow camera
@@ -178,8 +178,8 @@ Far
 Geometry Processing
 -------------------
 
-.. _bpy.types.LineartGpencilModifier.source_camera:
-.. _bpy.types.LineartGpencilModifier.use_custom_camera:
+.. _bpy.types.GreasePencilLineartModifier.source_camera:
+.. _bpy.types.GreasePencilLineartModifier.use_custom_camera:
 
 Custom Camera
    Use custom camera instead of the active camera for calculating strokes.
@@ -198,17 +198,17 @@ Clipping Boundaries
    When enabled, line art will generate clipping lines as contour type at the place
    where near or far clipping planes cut the model. Otherwise there will be no lines.
 
-.. _bpy.types.LineartGpencilModifier.use_crease_on_smooth:
+.. _bpy.types.GreasePencilLineartModifier.use_crease_on_smooth:
 
 Crease on Smooth
    Allow crease edges to show inside smooth surfaces.
 
-.. _bpy.types.LineartGpencilModifier.use_crease_on_sharp:
+.. _bpy.types.GreasePencilLineartModifier.use_crease_on_sharp:
 
 Crease on Sharp
    Allow creases to show on sharp edges.
 
-.. _bpy.types.LineartGpencilModifier.use_back_face_culling:
+.. _bpy.types.GreasePencilLineartModifier.use_back_face_culling:
 
 Force Backface Culling
    Remove all back faces to speed up calculation.
@@ -256,12 +256,12 @@ Intersection
 
 Allows you to select edges that intersect between two collections.
 
-.. _bpy.types.LineartGpencilModifier.use_intersection_mask:
+.. _bpy.types.GreasePencilLineartModifier.use_intersection_mask:
 
 Collection Mask
    Mask bits to match from :ref:`Collection Line Art <bpy.types.Collection.lineart_intersection_mask>` properties.
 
-.. _bpy.types.LineartGpencilModifier.use_intersection_match:
+.. _bpy.types.GreasePencilLineartModifier.use_intersection_match:
 
 Exact Match
    Require matching all intersection masks instead of just one.
@@ -271,7 +271,7 @@ Exact Match
    Demonstration of the usage of collection masks.
 
 
-.. _bpy.types.LineartGpencilModifier.use_face_mark:
+.. _bpy.types.GreasePencilLineartModifier.use_face_mark:
 
 Face Mark Filtering
 -------------------
@@ -283,17 +283,17 @@ Face Mark Filtering
 *Face Mark Filtering* can be used to have manual control over which
 feature edges produce strokes by using Freestyle face marks.
 
-.. _bpy.types.LineartGpencilModifier.use_face_mark_invert:
+.. _bpy.types.GreasePencilLineartModifier.use_face_mark_invert:
 
 Invert
    Invert face mark filtering.
 
-.. _bpy.types.LineartGpencilModifier.use_face_mark_boundaries:
+.. _bpy.types.GreasePencilLineartModifier.use_face_mark_boundaries:
 
 Boundaries
    Filter feature lines based on face mark boundaries.
 
-.. _bpy.types.LineartGpencilModifier.use_face_mark_keep_contour:
+.. _bpy.types.GreasePencilLineartModifier.use_face_mark_keep_contour:
 
 Keep Contour
    Preserve contour lines while filtering.
@@ -339,7 +339,7 @@ Image Threshold
    Allow the end point of short segments to be chained together if the 2D image space distance
    between them are within the specified threshold.
 
-.. _bpy.types.LineartGpencilModifier.smooth_tolerance:
+.. _bpy.types.GreasePencilLineartModifier.smooth_tolerance:
 
 Smooth Tolerance
    The strength of smoothing applied on jagged chains.
@@ -376,7 +376,7 @@ Composition
 
    Composition subpanel.
 
-.. _bpy.types.LineartGpencilModifier.overscan:
+.. _bpy.types.GreasePencilLineartModifier.overscan:
 
 Overscan
    To optimize rendering, Blender only renders the strokes for edges of the object that are in the camera's view.
@@ -384,18 +384,18 @@ Overscan
 
    This value prevents this error by adding a margin outside the camera's view to continue computing strokes.
 
-.. _bpy.types.LineartGpencilModifier.use_image_boundary_trimming:
+.. _bpy.types.GreasePencilLineartModifier.use_image_boundary_trimming:
 
 Image Boundary Trimming
    Trim all stroke right at the boundary of image (including overscan region).
 
-.. _bpy.types.LineartGpencilModifier.stroke_depth_offset:
+.. _bpy.types.GreasePencilLineartModifier.stroke_depth_offset:
 
 Depth Offset
    Move strokes slightly towards the camera to avoid clipping while preserve depth for the viewport.
    This option is unavailable unless :ref:`Show in Front <bpy.types.Object.show_in_front>` is disabled.
 
-.. _bpy.types.LineartGpencilModifier.use_offset_towards_custom_camera:
+.. _bpy.types.GreasePencilLineartModifier.use_offset_towards_custom_camera:
 
 Towards Custom Camera
    Offset strokes towards selected camera (see *Custom Camera* above) instead of the active camera.

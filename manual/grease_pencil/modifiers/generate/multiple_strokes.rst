@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Multiple Strokes
-.. _bpy.types.MultiplyGpencilModifier:
+.. _bpy.types.GreasePencilMultiplyModifier:
 
 ****************
 Multiple Strokes

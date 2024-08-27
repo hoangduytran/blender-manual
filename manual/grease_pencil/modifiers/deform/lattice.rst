@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Lattice Modifier
-.. _bpy.types.LatticeGpencilModifier:
+.. _bpy.types.GreasePencilLatticeModifier:
 
 ****************
 Lattice Modifier

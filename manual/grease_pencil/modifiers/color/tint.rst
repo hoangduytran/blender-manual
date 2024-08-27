@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Tint Modifier
-.. _bpy.types.TintGpencilModifier:
+.. _bpy.types.GreasePencilTintModifier:
 
 *************
 Tint Modifier

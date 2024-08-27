@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Dot Dash Modifier
-.. _bpy.types.DashGpencilModifier:
+.. _bpy.types.GreasePencilDashModifierData:
 
 *****************
 Dot Dash Modifier

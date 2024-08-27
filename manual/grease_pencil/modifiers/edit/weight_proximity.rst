@@ -1,3 +1,5 @@
+.. index:: Grease Pencil Modifiers; Vertex Weight Proximity Modifier
+.. _bpy.types.GreasePencilWeightProximityModifier:
 
 ********************************
 Vertex Weight Proximity Modifier

@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Outline Modifier
-.. _bpy.types.OutlineGpencilModifier:
+.. _bpy.types.GreasePencilOutlineModifier:
 
 ****************
 Outline Modifier

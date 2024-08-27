@@ -124,7 +124,7 @@ Usage
 Collection Mask
    Use custom intersection mask for faces in this collection.
    Intersection masks can be used by the Line Art modifier to filter lines.
-   See :ref:`Collection Masks <bpy.types.LineartGpencilModifier.use_intersection_mask>` for more information.
+   See :ref:`Collection Masks <bpy.types.GreasePencilLineartModifier.use_intersection_mask>` for more information.
 
 .. _bpy.types.Collection.lineart_intersection_mask:
 

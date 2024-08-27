@@ -1,5 +1,5 @@
 .. index:: Grease Pencil Modifiers; Envelope Modifier
-.. _bpy.types.EnvelopeGpencilModifier:
+.. _bpy.types.GreasePencilEnvelopeModifier:
 
 *****************
 Envelope Modifier
