@@ -9,7 +9,7 @@
 
    introduction.rst
 
-   generate/index.rst
-   deform/index.rst
-   color/index.rst
-   modify/index.rst
+   Generate <generate/index.rst>
+   Deform <deform/index.rst>
+   Color <color/index.rst>
+   Modify <modify/index.rst>
