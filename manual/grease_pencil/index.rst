@@ -16,7 +16,7 @@
    selecting.rst
    multiframe.rst
    properties/index.rst
-   modifiers/index.rst
+   Modifiers <modifiers/index.rst>
    visual_effects/index.rst
    materials/index.rst
    animation/index.rst
