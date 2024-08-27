@@ -13,40 +13,62 @@ Material Slots
 
 Next to the material name there are three icons buttons that control common properties of the material:
 
-Lock (padlock icon)
-   Toggle whether the active material is the only one that can be edited.
-Viewport/Render Visibility (eye icon)
-   Toggle whether the active material is the only one that can be edited and is visible.
-Onion Skinning (onion skin icon)
+.. _bpy.types.MaterialGPencilStyle.ghost:
+
+:bl-icon:`onionskin_on` /:bl-icon:`onionskin_off` (Show/Hide in Ghosts)
    Toggle the use of the material for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
+
+.. _bpy.types.MaterialGPencilStyle.hide:
+
+:bl-icon:`hide_off` / :bl-icon:`hide_on` (Hide/Show Material)
+   Toggle whether the active material is the only one that can be edited and is visible.
+
+.. _bpy.types.MaterialGPencilStyle.lock:
+
+:bl-icon:`unlocked` / :bl-icon:`locked` (Lock/Unlock Material)
+   Toggle whether the active material is the only one that can be edited.
 
 
 Specials
 --------
 
+.. _bpy.ops.grease_pencil.material_reveal:
+
 Show All
    Turns on the visibility of every material in the list.
+
+.. _bpy.ops.grease_pencil.material_hide:
 
 Hide Others
    Turns off the visibility of every material in the list except the active one.
 
+.. _bpy.ops.grease_pencil.material_lock_all:
+
 Lock All
    Locks edition of all the materials in the list.
+
+.. _bpy.ops.grease_pencil.material_unlock_all:
 
 Unlock All
    Unlocks edition of all the materials in the list.
 
+.. _bpy.ops.grease_pencil.material_lock_unselected:
+
 Lock Unselected
    Locks all materials not used in the selected strokes.
+
+.. _bpy.ops.grease_pencil.material_lock_unused:
 
 Lock Unused
    Locks and hides all unused materials.
 
-Convert Materials to Vertex Color
-   Only keeps necessary materials and convert all materials base color to a Color Attribute.
+.. Convert Materials to Vertex Color
+..    Only keeps necessary materials and convert all materials base color to a Color Attribute.
 
-Extract Palette from Vertex Color
-   Add all used Color Attributes to a new Color Palette. See :ref:`bpy.types.PaletteColor`.
+.. Extract Palette from Vertex Color
+..    Add all used Color Attributes to a new Color Palette. See :ref:`bpy.types.PaletteColor`.
+
+.. _bpy.ops.grease_pencil.material_copy_to_object:
 
 Copy Material to Selected
    Copy the active material to the selected Grease Pencil object.
@@ -54,9 +76,9 @@ Copy Material to Selected
 Copy All Materials to Selected
    Copy all materials to the selected Grease Pencil object.
 
-Merge Similar
-   Combines similar materials in the list and replace the strokes that use the one of
-   the merged materials with the new one.
+.. Merge Similar
+..    Combines similar materials in the list and replace the strokes that use the one of
+..    the merged materials with the new one.
 
 Remove Unused Slots
    Remove all unused materials.
@@ -72,8 +94,6 @@ Surface
 
 
 .. _bpy.types.MaterialGPencilStyle.show_stroke:
-.. _bpy.types.MaterialGPencilStyle.color:
-.. _bpy.types.MaterialGPencilStyle.use_overlap_strokes:
 
 Stroke
 ------
@@ -102,15 +122,8 @@ Style
 
    :Solid:
       Use a solid color.
-
-      Base Color
-         The base color of the stroke.
-
    :Texture:
       Use an image texture.
-
-      Base Color
-         The base color of the stroke.
 
       Image
          The image data-block used as an image source.
@@ -120,6 +133,11 @@ Style
 
       UV Factor
          The image size along the stroke.
+
+.. _bpy.types.MaterialGPencilStyle.color:
+
+Base Color
+   The base color of the stroke.
 
 .. _bpy.types.MaterialGPencilStyle.use_stroke_holdout:
 
@@ -138,12 +156,16 @@ Alignment
    :Fixed:
       Aligns to the screen space; ignoring the drawing path and the object's rotation.
 
+.. _bpy.types.MaterialGPencilStyle.alignment_rotation:
+
 Rotation
    Rotates the points of *Dot* and *Square* strokes.
 
    .. note::
 
       The *Rotation* option is limited to a range of -90 to 90 degrees.
+
+.. _bpy.types.MaterialGPencilStyle.use_overlap_strokes:
 
 Self Overlap
    Disables stencil and overlap self-intersections with alpha materials.
@@ -172,14 +194,6 @@ Self Overlap
 
 
 .. _bpy.types.MaterialGPencilStyle.show_fill:
-.. _bpy.types.MaterialGPencilStyle.fill_style:
-.. _bpy.types.MaterialGPencilStyle.fill_color:
-.. _bpy.types.MaterialGPencilStyle.mix_color:
-.. _bpy.types.MaterialGPencilStyle.mix_factor:
-.. _bpy.types.MaterialGPencilStyle.flip:
-.. _bpy.types.MaterialGPencilStyle.pattern:
-.. _bpy.types.MaterialGPencilStyle.texture:
-.. _bpy.types.MaterialGPencilStyle.use_fill_texture_mix:
 
 Fill
 ----
@@ -187,104 +201,96 @@ Fill
 When enabled, the shader use the fill component.
 The *Fill* component control how to render the filled areas determined by closed edit lines.
 
+.. _bpy.types.MaterialGPencilStyle.fill_style:
+
 Style
    The type of material.
 
-   Solid
+   :Solid:
       Use solid color.
-
-      Base Color
-         The base color of the fill.
-
-   Gradient
+   :Gradient:
       Use a color gradient.
 
+      .. _bpy.types.MaterialGPencilStyle.gradient_type:
+
       Gradient Type
-         Linear
-            Mix the colors along a single axis.
+         :Linear: Mix the colors along a single axis.
+         :Radial: Mix the colors radiating from a center point.
 
-         Radial
-            Mix the colors radiating from a center point.
-
-      Base Color
-         The primary color.
-
-      Secondary Color
-         The secondary color.
-
-      Blend
-         Base Color and Secondary Color mixing amount.
-
-      Flip Colors
-         Flips the gradient, inverting the Base Color and Secondary Color.
-
-      Location
-         Shifts the gradient position.
-
-         X, Y
-
-      Rotation
-         Rotates the gradient.
-
-      Scale
-         Scales the gradient.
-
-         X, Y
-
-   Texture
+   :Texture:
       Use an image texture.
 
-      Base Color
-         The base color of the fill.
+      .. _bpy.types.MaterialGPencilStyle.fill_image:
 
       Image
          The image data-block used as an image source.
 
-      Blend
-         Texture and Base Color mixing amount.
+   .. list-table:: Samples of different material fill styles.
 
-      Location
-         Shifts the image position.
+      * - .. figure:: /images/grease-pencil_materials_properties_fill-solid.png
+             :width: 130px
 
-         X, Y
+             Style: Solid.
 
-      Rotation
-         Rotates the image.
+        - .. figure:: /images/grease-pencil_materials_properties_fill-gradient.png
+             :width: 130px
 
-      Scale
-         Scales the image.
+             Style: Gradient (Linear).
 
-         X, Y
+        - .. figure:: /images/grease-pencil_materials_properties_fill-gradient-radial.png
+             :width: 130px
 
-      Clip Image
-         When enabled, show one image instance only (do not repeat).
+             Style: Gradient (Radial).
+
+        - .. figure:: /images/grease-pencil_materials_properties_fill-texture.png
+             :width: 130px
+
+             Style: Texture.
+
+.. _bpy.types.MaterialGPencilStyle.fill_color:
+
+Base Color
+   The base color of the fill.
+
+.. _bpy.types.MaterialGPencilStyle.mix_color:
+
+Secondary Color :guilabel:`Gradient`
+   The secondary color.
 
 .. _bpy.types.MaterialGPencilStyle.use_fill_holdout:
 
 Holdout
    Removes the color from strokes underneath the current by using it as a mask.
 
-.. list-table:: Samples of different material fill styles.
+.. _bpy.types.MaterialGPencilStyle.mix_factor:
 
-   * - .. figure:: /images/grease-pencil_materials_properties_fill-solid.png
-          :width: 130px
+Blend :guilabel:`Gradient / Texture`
+   The amount that the *Secondary Color* (for *Gradient Style*) or image texture (for Texture Style) Mixxes with the *Base Color*.
 
-          Style: Solid.
+.. _bpy.types.MaterialGPencilStyle.flip:
 
-     - .. figure:: /images/grease-pencil_materials_properties_fill-gradient.png
-          :width: 130px
+Flip Colors :guilabel:`Gradient`
+   Flips the gradient, inverting the Base Color and *Secondary Color*.
 
-          Style: Gradient (Linear).
+.. _bpy.types.MaterialGPencilStyle.texture_offset:
 
-     - .. figure:: /images/grease-pencil_materials_properties_fill-gradient-radial.png
-          :width: 130px
+Location X, Y :guilabel:`Gradient / Texture`
+   Shifts the position of gradient or image texture.
 
-          Style: Gradient (Radial).
+.. _bpy.types.MaterialGPencilStyle.texture_angle:
 
-     - .. figure:: /images/grease-pencil_materials_properties_fill-texture.png
-          :width: 130px
+Rotation :guilabel:`Gradient / Texture`
+   Rotates the gradient or image texture.
 
-          Style: Texture.
+.. _bpy.types.MaterialGPencilStyle.texture_scale:
+
+Scale X, Y :guilabel:`Gradient / Texture`
+   Scales the gradient or image texture.
+
+.. _bpy.types.MaterialGPencilStyle.texture_clamp:
+
+Clip Image :guilabel:`Texture`
+   When enabled, show one image instance only (do not repeat).
 
 
 Settings
