@@ -5,7 +5,7 @@ Brush Settings
 **************
 
 Material
-   Data-block selector for the :doc:`material </grease_pencil/materials/introduction>`.
+   Data-block selector for the :doc:`material </grease_pencil/materials/index>`.
    Except for the *Erase* tool of course.
 
    Pin Material (pin icon)

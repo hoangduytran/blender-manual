@@ -3,6 +3,8 @@
 Grease Pencil Material Properties
 *********************************
 
+.. _gp-material-slots:
+
 Material Slots
 ==============
 
@@ -83,6 +85,8 @@ Copy All Materials to Selected
 Remove Unused Slots
    Remove all unused materials.
 
+
+.. _gp-material-surface:
 
 Surface
 =======
@@ -292,6 +296,8 @@ Scale X, Y :guilabel:`Gradient / Texture`
 Clip Image :guilabel:`Texture`
    When enabled, show one image instance only (do not repeat).
 
+
+.. _gp-material-settings:
 
 Settings
 ========

@@ -19,7 +19,7 @@ Brush Settings
    :align: right
 
 Material
-   Data-block selector for the :doc:`material </grease_pencil/materials/introduction>`.
+   Data-block selector for the :doc:`material </grease_pencil/materials/index>`.
 
 Radius
    The radius of the brush in pixels.

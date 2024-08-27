@@ -36,5 +36,5 @@ Strokes
 =======
 
 The stroke is the rendered image of the points and edit lines,
-using a particular :doc:`Grease Pencil material </grease_pencil/materials/introduction>`.
+using a particular :doc:`Grease Pencil material </grease_pencil/materials/index>`.
 (Grease Pencil materials are linked at stroke level.)
