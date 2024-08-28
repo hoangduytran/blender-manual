@@ -20,7 +20,7 @@ Radius
    :kbd:`F` allows you to change the brush size interactively by dragging the pointer or
    by typing a number then confirm.
 
-   Use Pressure (pressure sensitivity icon)
+   :bl-icon:`stylus_pressure` (Size Pressure)
       Uses stylus pressure to control how strong the effect is.
    Occlude Eraser (overlapping squares icon)
       Erase only strokes visible and not occluded by geometry.
@@ -55,7 +55,7 @@ Strength
 
    .. _bpy.types.BrushGpencilSettings.use_strength_pressure:
 
-   Use Pressure (pressure sensitivity icon)
+   :bl-icon:`stylus_pressure` (Strength Pressure)
       Uses stylus pressure to control how strong the effect is.
 
 .. _bpy.types.BrushGpencilSettings.eraser_strength_factor:

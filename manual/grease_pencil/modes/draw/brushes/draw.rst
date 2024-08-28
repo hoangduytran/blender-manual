@@ -27,7 +27,7 @@ Radius
    :kbd:`F` allows you to change the brush size interactively by dragging the pointer or
    by typing a number then confirm.
 
-   Use Pressure (pressure sensitivity icon)
+   :bl-icon:`stylus_pressure` (Size Pressure)
       Uses stylus pressure to control how strong the effect is.
       The gradient of the pressure can be customized using
       the :doc:`curve widget </interface/controls/templates/curve>`.
@@ -40,7 +40,7 @@ Strength
    in the 3D Viewport and then moving the pointer and then :kbd:`LMB`.
    You can also enter the size numerically.
 
-   Use Pressure (pressure sensitivity icon)
+   :bl-icon:`stylus_pressure` (Strength Pressure)
       Uses stylus pressure to control how strong the effect is.
       The gradient of the pressure can be customized using
       the :doc:`curve widget </interface/controls/templates/curve>`.
@@ -197,7 +197,7 @@ Jitter
 Stroke Random (stroke icon)
    Use randomness only at stroke level.
 
-Use Pressure (pressure sensitivity icon)
+:bl-icon:`stylus_pressure` (Use Pressure)
    Uses the stylus pressure to control how strong the effect is.
    The gradient of the pressure can be customized using
    the :doc:`curve widget </interface/controls/templates/curve>`.

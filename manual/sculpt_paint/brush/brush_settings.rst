@@ -24,10 +24,10 @@ Radius
 
    The size can be decreased/increased using :kbd:`[` and :kbd:`]` respectfully.
 
-   Size Pressure
+   :bl-icon:`stylus_pressure` (Size Pressure)
       Brush size can be affected by enabling the pressure sensitivity icon,
       if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
-   Use Unified Radius
+   :bl-icon:`brushes_all` (Use Unified Radius)
       Use the same brush *Radius* across all brushes.
 
 Radius Unit :guilabel:`Sculpt Mode`
@@ -55,10 +55,10 @@ Strength
    and then moving the brush and then :kbd:`LMB`.
    You can also enter the strength numerically with the number keys.
 
-   Strength Pressure
+   :bl-icon:`stylus_pressure` (Strength Pressure)
       Brush strength can be affected by enabling the pressure sensitivity icon,
       if a supported tablet is being used.
-   Use Unified Strength
+   :bl-icon:`brushes_all` (Use Unified Strength)
       Use the same brush *Strength* across all brushes.
 
 Blend
@@ -261,7 +261,7 @@ Hold :kbd:`Ctrl` while painting to temporally paint with the secondary color.
 Swap Colors (cycle icon) :kbd:`X`
    Swaps the primary and secondary colors.
 
-Use Unified Color
+:bl-icon:`brushes_all` (Use Unified Color)
    Use the same brush color across all brushes.
 
 .. note::

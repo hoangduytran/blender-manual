@@ -29,10 +29,15 @@ Stroke Method :kbd:`Alt-E`
       whose distance (spacing) is determined by the *Spacing* setting.
 
       .. _bpy.types.Brush.spacing:
-      .. _bpy.types.Brush.use_pressure_spacing:
 
       Spacing
          Limits brush application to the distance specified by the percentage of the brush radius.
+
+         .. _bpy.types.Brush.use_pressure_spacing:
+
+         :bl-icon:`stylus_pressure` (Spacing Pressure)
+            Brush *Spacing* can be affected by enabling the pressure sensitivity icon,
+            if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
 
    :Airbrush:
       Flow of the brush continues as long as the mouse click is held (spray),
@@ -132,7 +137,7 @@ Jitter
 
    .. _bpy.types.Brush.use_pressure_jitter:
 
-   Jitter Pressure
+   :bl-icon:`stylus_pressure` (Jitter Pressure)
       Brush *Jitter* can be affected by enabling the pressure sensitivity icon,
       if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
 
@@ -154,7 +159,7 @@ Input Samples
 
    .. _bpy.types.UnifiedPaintSettings.use_unified_input_samples:
 
-   Use Unified Input Samples
+   :bl-icon:`brushes_all` Use Unified Input Samples
       Use the same brush *Input Samples* across all brushes.
 
 

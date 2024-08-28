@@ -16,14 +16,14 @@ Radius
    dragging the mouse and then :kbd:`LMB` (the texture of the brush should be visible inside the circle).
    Typing a number then enter while using :kbd:`F` allows you to enter the size numerically.
 
-   Pressure
+   :bl-icon:`stylus_pressure` (Size Pressure)
       Brush size can be affected by enabling the pressure sensitivity icon,
       if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
 
 Strength
    How powerful the brush is when applied.
 
-   Pressure
+   :bl-icon:`stylus_pressure` (Strength Pressure)
       Strength can be affected by enabling the pressure sensitivity icon,
       if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
 
