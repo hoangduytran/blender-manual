@@ -117,6 +117,7 @@ if "%1" == "check_spelling" (
 
 if "%1" == "check_structure" (
 	python tools\check_source\check_images.py
+	python tools\check_source\check_structure.py
 	goto EOF
 
 if "%1" == "update" (

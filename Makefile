@@ -121,6 +121,7 @@ check_syntax:
 
 check_structure:
 	@python3 tools/check_source/check_images.py
+	@python3 tools/check_source/check_structure.py
 
 check_spelling:
 	@python3 tools/check_source/check_spelling.py
