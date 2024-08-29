@@ -22,7 +22,7 @@ Use Cases:
 See: :ref:`command_line-launch-index`
 for specific instructions on launching Blender from the command line.
 
-.. tip:: Closing the Blender Console Window
+.. tip::
 
    Closing the *Console Window* will also close Blender, losing any unsaved work.
 
