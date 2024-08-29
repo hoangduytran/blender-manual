@@ -1,10 +1,14 @@
-.. _bpy.types.ToolSettings.gpencil_selectmode:
 .. _bpy.ops.gpencil.select:
-.. _bpy.ops.gpencil.selectmode_toggle:
 
 *********
 Selecting
 *********
+
+.. _bpy.ops.gpencil.selectmode_toggle:
+.. _bpy.types.ToolSettings.gpencil_selectmode_edit:
+
+Select Mode
+===========
 
 .. reference::
 
@@ -20,14 +24,9 @@ Selecting
 In Edit Mode there are three different selection modes.
 You can enter the different modes by selecting one of the three buttons in the header.
 
-Points
-   To select individual points.
-
-Strokes
-   To select an entire stroke.
-
-Points in Between
-   To select all points that are between other strokes.
+:Points: To select individual points.
+:Strokes: To select an entire stroke.
+:Segments: To select all points that are between other strokes.
 
 .. figure:: /images/grease-pencil_selecting_example.png
 
