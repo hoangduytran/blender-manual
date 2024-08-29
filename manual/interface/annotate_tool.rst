@@ -106,6 +106,8 @@ Style Start, End
    This can be used for example to create arrows to point out specific details in a scene.
 
 
+.. _bpy.types.GPencilLayer:
+
 Annotation Layers
 =================
 

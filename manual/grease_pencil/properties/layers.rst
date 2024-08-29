@@ -1,4 +1,4 @@
-.. _bpy.types.GPencilLayer:
+.. _bpy.types.GreasePencilLayer:
 
 ******
 Layers
@@ -39,22 +39,22 @@ See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more informatio
 
 Next to the layer name there are four icons buttons that control common properties of the layer:
 
-.. _bpy.types.GPencilLayer.use_mask_layer:
+.. _bpy.types.GreasePencilLayer.use_masks:
 
 Use Mask (mask icon)
    Toggle the affect of :doc:`Masks </grease_pencil/properties/masks>` on the layer.
 
-.. _bpy.types.GPencilLayer.use_onion_skinning:
+.. _bpy.types.GreasePencilLayer.use_onion_skinning:
 
 Onion Skinning (onion skin icon)
    Toggle using the layer for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
 
-.. _bpy.types.GPencilLayer.hide:
+.. _bpy.types.GreasePencilLayer.hide:
 
 Hide (eye icon)
    Toggle layer visibility in the viewport and in render.
 
-.. _bpy.types.GPencilLayer.lock:
+.. _bpy.types.GreasePencilLayer.lock:
 
 Lock (padlock icon)
    Toggle layer from being editable.
@@ -64,44 +64,47 @@ Lock (padlock icon)
 Layer Specials
    Operators for working with layers.
 
-   .. _bpy.ops.gpencil.layer_duplicate:
+   .. _bpy.ops.grease_pencil.layer_duplicate:
 
-   Duplicate Layer
+   Duplicate
       Makes an exact copy of the selected layer appending a number to differentiate its name.
-
    Duplicate Empty Keyframes
       Makes a copy of the selected layer but with empty keyframes.
       Useful to easily have empty keyframes preset to work on the cleanup or filling process.
 
-   .. _bpy.ops.gpencil.reveal:
+   .. _bpy.ops.grease_pencil.layer_reveal:
 
    Show All
       Turns on the visibility of every layer in the list.
-
    Hide Others
       Turns off the visibility of every layer in the list except the active one.
 
+   .. _bpy.ops.grease_pencil.layer_lock_all:
+
    Lock All
       Locks edition of all the layers in the list.
-
    Unlock All
       Unlocks edition of all the layers in the list.
+
+   .. _bpy.types.GreasePencilv3.use_autolock_layers:
 
    Autolock Inactive Layer
       Locks automatically the edition of every layer in the list except the active one.
       This way you avoid to make unwanted changes in other layers without the need to lock them every time.
 
-   Disallow Locked Materials Editing
+   .. _bpy.types.GreasePencilLayer.use_locked_material:
+
+   Use Locked Materials Editing
       Avoids editing locked materials in the layer. When disabled,
       any material can be edited even if they are locked in the material list.
 
-   .. _bpy.ops.gpencil.layer_merge:
+   .. .. _bpy.ops.gpencil.layer_merge:
 
-   Merge Down :kbd:`Shift-Ctrl-M`
-      Combine the selected layer with the layer below, the new layer keeps the name of the lower layer.
+   .. Merge Down :kbd:`Shift-Ctrl-M`
+   ..    Combine the selected layer with the layer below, the new layer keeps the name of the lower layer.
 
-   Merge All
-      Combine all layers into the active layer.
+   .. Merge All
+   ..    Combine all layers into the active layer.
 
    Copy Layer to Selected
       Copy the active layer to the selected Grease Pencil object.
@@ -109,31 +112,31 @@ Layer Specials
    Copy All Layers to Selected
       Copy all layers to the selected Grease Pencil object.
 
-.. _bpy.ops.gpencil.layer_isolate:
+.. .. _bpy.ops.gpencil.layer_isolate:
 
-Visibility (screen icon)
-   Toggle whether the active layer is the only one that can be edited and is visible.
+.. Visibility (screen icon)
+..    Toggle whether the active layer is the only one that can be edited and is visible.
 
-Isolate Lock (padlock icon)
-   Toggle whether the active layer is the only one that can be edited.
+.. Isolate Lock (padlock icon)
+..    Toggle whether the active layer is the only one that can be edited.
 
 ----
 
-Below the layers list there are additional common settings:
+Below the layers list there are additional settings:
 
-.. _bpy.types.GPencilLayer.blend_mode:
+.. _bpy.types.GreasePencilLayer.blend_mode:
 
-Blend
+Blend Mode
    The layer blending operation to perform. See :term:`Color Blend Modes`.
 
-.. _bpy.types.GPencilLayer.opacity:
+.. _bpy.types.GreasePencilLayer.opacity:
 
 Opacity
    Used to set the opacity of the layer.
 
-.. _bpy.types.GPencilLayer.use_lights:
+.. _bpy.types.GreasePencilLayer.use_lights:
 
-Use Lights
+Lights
    When enabled, the layer is affected by lights.
 
 
@@ -144,9 +147,9 @@ In a :ref:`List view <ui-list-view>` of layers affected by a layer mask.
 See :doc:`Masks </grease_pencil/properties/masks>` for more information.
 
 
-.. _bpy.types.GPencilLayer.location:
-.. _bpy.types.GPencilLayer.rotation:
-.. _bpy.types.GPencilLayer.scale:
+.. _bpy.types.GreasePencilLayer.location:
+.. _bpy.types.GreasePencilLayer.rotation:
+.. _bpy.types.GreasePencilLayer.scale:
 
 Transform
 =========
@@ -154,72 +157,61 @@ Transform
 Allows per-layer location, rotation and scale transformations.
 
 
-Adjustments
-===========
+.. Adjustments
+.. ===========
 
-.. figure:: /images/grease-pencil_properties_layers_adjustment.png
-   :align: right
+.. .. figure:: /images/grease-pencil_properties_layers_adjustment.png
+..    :align: right
 
-   Layers adjustment panel.
+..    Layers adjustment panel.
 
-.. _bpy.types.GPencilLayer.tint_color:
+.. Tint Color
+..    Color that tint any material colors used in the layer.
 
-Tint Color
-   Color that tint any material colors used in the layer.
+.. Factor
+..    Controls the amount of tint color to apply.
 
-.. _bpy.types.GPencilLayer.tint_factor:
-
-Factor
-   Controls the amount of tint color to apply.
-
-.. _bpy.types.GPencilLayer.line_change:
-
-Stroke Thickness
-   Thickness value that override the strokes thickness in the layer.
+.. Stroke Thickness
+..    Thickness value that override the strokes thickness in the layer.
 
 
 Relations
 =========
 
-.. _bpy.types.GPencilLayer.parent:
-.. _bpy.types.GPencilLayer.parent_type:
+.. _bpy.types.GreasePencilLayer.parent:
 
-Parent/Type
-   Select a Parent object and Type to manipulate the layer.
+Parent
+   Select a Parent object to manipulate the layer.
    The layer will inherit the transformations of the parent,
    this is especially useful when rigging for cut-out animation.
 
-.. _bpy.types.GPencilLayer.pass_index:
+.. _bpy.types.GreasePencilLayer.pass_index:
 
 Pass Index
    The layer index number can be used with some modifiers to restrict changes to only certain areas.
 
    See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more information.
 
-.. _bpy.types.GPencilLayer.viewlayer_render:
+.. _bpy.types.GreasePencilLayer.viewlayer_render:
 
 View Layer
    Defines the View Layer to use for the Grease Pencil layer.
    If empty, the layer will be included in all View Layers.
    This is useful to separate drawings parts for :doc:`compositing </compositing/introduction>`.
 
-.. _bpy.types.GPencilLayer.use_viewlayer_masks:
+.. _bpy.types.GreasePencilLayer.use_viewlayer_masks:
 
-Disable Masks in Render
-   If enabled no masks on the layer are included in the view layer render.
+Use Masks in Render
+   If disabled, no masks on the layer are included in the view layer render.
 
 
-Display
-=======
+.. Display
+.. =======
 
-.. _bpy.types.GPencilLayer.channel_color:
+.. Custom Channel Color
+..    Sets the color to use in the channel region of the :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>`.
 
-Custom Channel Color
-   Sets the color to use in the channel region of the :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>`.
-
-.. _bpy.types.GPencilLayer.use_solo_mode:
-
-Show Only On Keyframed
-   Makes the layer visible in the viewport only if it has a keyframe in the actual frame.
-   This helps for example when you are in the inking process using the *Fill* tool and want to only see
-   the strokes that are in the actual frame to avoid fill in unwanted regions.
+.. Show Only On Keyframed
+..    Makes the layer visible in the viewport only if it has a keyframe in the actual frame.
+..    This helps for example when you are in the inking process using the *Fill* tool and want to only see
+..    the strokes that are in the actual frame to avoid fill in unwanted regions.

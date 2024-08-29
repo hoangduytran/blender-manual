@@ -54,7 +54,7 @@ Object/Collection
    unless specified to do otherwise in object or collection Line Art *Usage* property.
 
 Layer
-   The Grease Pencil :ref:`bpy.types.GPencilLayer` to put the result in.
+   The Grease Pencil :ref:`bpy.types.GreasePencilLayer` to put the result in.
 
 Material
    The Grease Pencil :ref:`bpy.types.MaterialGPencilStyle` to generate strokes with.
