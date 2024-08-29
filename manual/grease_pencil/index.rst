@@ -20,17 +20,4 @@
    visual_effects/index.rst
    Materials <materials/index.rst>
    animation/index.rst
-
-
-Modes
-=====
-
-.. toctree::
-   :maxdepth: 2
-
-   modes/draw/index.rst
-   modes/sculpting/index.rst
-   modes/edit/index.rst
-   modes/vertex_paint/index.rst
-   modes/weight_paint/index.rst
-   modes/object/index.rst
+   Object Modes <modes/index.rst>
