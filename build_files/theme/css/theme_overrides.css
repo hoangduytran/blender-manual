@@ -303,6 +303,14 @@ a.external:not(figure > a.external) {
 	padding-top: 0.25em;
 }
 
+/* Make the top level links act like H2 tags. */
+.toctree-wrapper .toctree-l1 > a {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-top: 1.75rem;
+	margin-bottom: 1rem;
+}
+
 .toctree-wrapper ul {
 	list-style: none;
 	padding-left: 0;
