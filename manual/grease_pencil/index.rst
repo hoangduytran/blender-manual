@@ -13,7 +13,6 @@
    object.rst
    structure.rst
    primitives.rst
-   selecting.rst
    multiframe.rst
    properties/index.rst
    Modifiers <modifiers/index.rst>

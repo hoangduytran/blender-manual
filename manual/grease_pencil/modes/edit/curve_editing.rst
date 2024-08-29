@@ -19,7 +19,7 @@ Usage
 
 .. note::
 
-   Selecting :doc:`points in between </grease_pencil/selecting>` is disabled while in curve editing is active.
+   Selecting :doc:`points in between </grease_pencil/modes/edit/selecting>` is disabled while in curve editing is active.
 
 .. seealso::
 

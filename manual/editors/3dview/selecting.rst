@@ -37,7 +37,7 @@ Edit Mode
 - :doc:`Surface Edit Mode </modeling/surfaces/selecting>`
 - :ref:`Metaball Edit Mode <meta-toolbar-index>`
 - :doc:`Text Edit Mode </modeling/texts/selecting>`
-- :doc:`Grease Pencil Edit Mode </grease_pencil/selecting>`
+- :doc:`Grease Pencil Edit Mode </grease_pencil/modes/edit/selecting>`
 - :doc:`Bone Edit Mode </animation/armatures/bones/selecting>`
 - :doc:`Lattice Edit Mode </animation/lattice>`
 

@@ -7,6 +7,7 @@
    :maxdepth: 2
 
    introduction.rst
+   selecting.rst
    tools.rst
    curve_editing.rst
    grease_pencil_menu.rst
