@@ -246,7 +246,7 @@ Strip Offset Start/End
    Positive values will move the strip's handles inwards, making it start later than the start
    of the source material and stop before its end. This lets you trim down the source material
    to the part you need. You can enable the
-   :ref:`Offsets overlay <bpy.types.SpaceSequeSequencerTimelineOverlaynceEditor.show_strip_offset>`
+   :ref:`Offsets overlay <bpy.types.SequencerTimelineOverlay.show_strip_offset>`
    to see the start and end of the full source file.
 
    Negative values will move the strip's handles outwards, making it start earlier than the start

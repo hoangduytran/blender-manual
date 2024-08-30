@@ -72,7 +72,7 @@ Color Tags
    either click the *Color Tag* button next to the strip's name in
    :menuselection:`Sidebar --> Strip`, or use *Set Color Tag* in the strip's context menu.
 
-.. _bpy.types.SpaceSequeSequencerTimelineOverlaynceEditor.show_strip_offset:
+.. _bpy.types.SequencerTimelineOverlay.show_strip_offset:
 
 Offsets
    Shows overflow bars of content that was trimmed from the strip (by moving
