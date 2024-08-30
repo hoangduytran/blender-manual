@@ -1,7 +1,7 @@
 
-******
-Fields
-******
+************
+Input Fields
+************
 
 .. _bpy.ops.buttons.start_filter:
 .. _bpy.ops.buttons.clear_filter:
