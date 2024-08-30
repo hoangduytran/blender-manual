@@ -74,6 +74,15 @@ dl dt {
 dl.field-list {
 	display: grid;
 	grid-template-columns: auto minmax(80%, 95%);
+	row-gap: 0.125em;
+}
+
+.field-list > dt {
+	margin-top: 0 !important;
+}
+
+.field-list > dd > p {
+	margin-top: 0 !important;
 }
 
 dl.field-list > dd > p:last-child {
