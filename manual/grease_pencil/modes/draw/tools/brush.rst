@@ -1,7 +1,7 @@
 
-*****
-Brush
-*****
+**********
+Brush Tool
+**********
 
 .. reference::
 
@@ -16,8 +16,14 @@ See :doc:`brushes </grease_pencil/modes/draw/brushes/index>` (or the
 :doc:`overview </grease_pencil/modes/draw/brushes/overview>`) for a detailed list of all brushes
 and their options.
 
+
 Tool Settings
 =============
+
+Eraser
+------
+
+.. _bpy.types.Paint.eraser_brush:
 
 Default Eraser Brush
    Select a brush to use as eraser for quickly alternating with the main brush using
