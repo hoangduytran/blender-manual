@@ -319,6 +319,7 @@ a.external:not(figure > a.external) {
 	margin-bottom: 1rem !important;
 	border-top: solid var(--color-background-border) 1px;
 	padding-left: 2em;
+	padding-top: 0.25em;
 }
 
 /* End custom toctree. */
