@@ -35,7 +35,7 @@ Splash Screen
 Developer Extras
    Show settings and menu items which are intended to help developers, this includes:
 
-   - :doc:`Operator Search </interface/controls/templates/operator_search>`
+   - :ref:`Operator Search <bpy.ops.wm.search_operator>`
    - :doc:`Sequencer Cache Settings </editors/video_sequencer/sequencer/sidebar/cache>`
 
    Button Context Menu

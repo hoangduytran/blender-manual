@@ -367,7 +367,7 @@ Everything here has been covered in the previous steps, you may want to try run
 the add-on still and consider what could be done to make it more useful.
 
 The two of the most obvious missing things are -- having the total fixed at 10,
-and having to access the operator with :doc:`/interface/controls/templates/operator_search` is not very convenient.
+and having to access the operator with :ref:`bpy.ops.wm.search_operator` is not very convenient.
 
 Both these additions are explained next, with the final script afterwards.
 

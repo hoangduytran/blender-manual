@@ -50,7 +50,7 @@ Memory Statistics
    :Menu:      :menuselection:`Topbar --> Blender --> System --> Memory Statistics`
 
 This operator which can be found by searching "Memory Statistics"
-with the :doc:`Operator Search </interface/controls/templates/operator_search>`
+with the :ref:`Operator Search <bpy.ops.wm.search_operator>`
 will print useful information about memory objects, their size and user count.
 
 .. important::

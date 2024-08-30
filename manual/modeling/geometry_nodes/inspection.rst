@@ -132,5 +132,5 @@ work anymore. When building setups that are supposed to last a long time, it is 
 work with randomization enabled.
 
 To enable it, first enable **Developer Extras** in the :doc:`preferences </editors/preferences/interface>`.
-Then :doc:`search </interface/controls/templates/operator_search>` for **Set Geometry Randomization**.
+Then :ref:`search <bpy.ops.wm.search_operator>` for **Set Geometry Randomization**.
 The popup allows enabling and disabling the randomization.

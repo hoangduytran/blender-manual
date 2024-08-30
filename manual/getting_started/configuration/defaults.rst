@@ -67,7 +67,7 @@ Spacebar Action
       Opens the Toolbar underneath the cursor to quickly change the active tool.
       This option is good if doing a lot of modeling or rigging.
    :Search:
-      Opens up the :doc:`Menu Search </interface/controls/templates/operator_search>`.
+      Opens up the :ref:`Menu Search <bpy.ops.wm.search_menu>`.
       This option is good for someone who is new to Blender and is unfamiliar with its menus and shortcuts.
 
 Save New Preferences
