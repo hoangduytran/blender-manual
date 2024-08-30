@@ -1,4 +1,4 @@
-.. _bpy.types.ToolSettings.gpencil_stroke_placement:
+.. _bpy.types.ToolSettings.gpencil_stroke_placement_view3d:
 
 ****************
 Stroke Placement
@@ -9,26 +9,20 @@ Stroke Placement
    :Mode:      Draw Mode
    :Header:    :menuselection:`Stroke Placement`
 
-The Stroke Placement selector helps to select the location
-in which the newly created strokes are drawn.
-
-.. note::
-
-   The Stroke Placement selected has effect only for new strokes and does not affect the existing ones.
-
 .. figure:: /images/grease-pencil_modes_draw_stroke-placement_selector.png
    :align: right
 
-   Stroke Placement selector on 3D Viewport header.
+   Stroke Placement pop-over.
 
-Origin
-   Strokes are placed at Grease Pencil object origin.
+The Stroke Placement selector helps to select the location in which strokes are drawn.
 
-3D Cursor
-   Strokes are placed at 3D cursor.
+.. note::
 
-Surface
-   Strokes will stick on mesh surfaces.
+   The Stroke Placement selection only affects new strokes and does not affect the existing ones.
+
+:Origin: Strokes are placed at Grease Pencil object origin.
+:3D Cursor: Strokes are placed at 3D cursor.
+:Surface: Strokes will stick on mesh surfaces.
 
    .. _bpy.types.ToolSettings.gpencil_surface_offset:
 
@@ -40,8 +34,10 @@ Surface
    Project Onto Selected
       Only project the strokes onto selected objects.
 
-Stroke
+:Stroke:
    Strokes will stick on other strokes.
+
+   .. _bpy.types.ToolSettings.gpencil_stroke_snap_mode:
 
    Target
       :All Points:
@@ -50,10 +46,6 @@ Stroke
          Only the start and end points of the new stroke sticks to other strokes.
       :First Point:
          Only the start point of the new stroke sticks to other strokes.
-
-
-Examples
-========
 
 .. list-table:: Stroke using different Stroke Placements.
 
