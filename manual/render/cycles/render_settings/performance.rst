@@ -36,8 +36,8 @@ Threads
    The maximum number of CPU cores to use simultaneously while rendering.
 
 
-Tiles
-=====
+Memory
+======
 
 .. _bpy.types.RenderSettings.use_auto_tile:
 
