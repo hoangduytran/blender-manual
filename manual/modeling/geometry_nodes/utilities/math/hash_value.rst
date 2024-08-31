@@ -33,7 +33,7 @@ Properties
 ==========
 
 Data Type
-	The data type that is used for mixing. 
+	The data type that is used for the *Value* input. 
 	The node supports float, integer, vector, color, 
 	boolean, rotation, matrix and string data types.
 
