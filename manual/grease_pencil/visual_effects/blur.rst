@@ -23,10 +23,8 @@ Use Depth of Field
    When enabled, the blur effect uses the focal plane distance of the actual camera to
    calculate the object blur. Only available in camera view.
 
-Size
+Size X, Y
    Control the blur scale in pixels on the X and Y axis.
-
-   X, Y
 
 Rotation
    Control the Rotation of the blur.
