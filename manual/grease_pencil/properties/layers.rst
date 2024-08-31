@@ -31,6 +31,20 @@ See :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>` for more informa
 Layers can also be used together with Modifiers to only affects part of your drawing.
 See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more information.
 
+In Grease Pencil there are no special mask layers, any layer can act as a mask for other layers.
+The mask system is flexible enough to allow top-bottom and bottom-top masking.
+
+Layers used as mask can use all the blend modes and different opacity values like any other layer.
+
+.. note::
+
+   If you want to make a full transparent masking
+   you will have to set the mask layer(s) opacity to 0.
+
+By activating the mask toggle (mask icon) next to the layer name or
+using the checkbox on the masks panel header
+the layer becomes prepared to be masked by other layer(s).
+
 .. tip::
 
    Sometimes the layers you are not working on can be a distraction.
@@ -39,10 +53,8 @@ See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more informatio
 
 Next to the layer name there are four icons buttons that control common properties of the layer:
 
-.. _bpy.types.GreasePencilLayer.use_masks:
-
 Use Mask (mask icon)
-   Toggle the affect of :doc:`Masks </grease_pencil/properties/masks>` on the layer.
+   Toggle the affect of :ref:`Masks <bpy.types.GreasePencilLayer.use_masks>` on the layer.
 
 .. _bpy.types.GreasePencilLayer.use_onion_skinning:
 
@@ -140,11 +152,46 @@ Lights
    When enabled, the layer is affected by lights.
 
 
+.. _bpy.types.GreasePencilLayer.use_masks:
+
 Masks
 =====
 
-In a :ref:`List view <ui-list-view>` of layers affected by a layer mask.
-See :doc:`Masks </grease_pencil/properties/masks>` for more information.
+.. figure:: /images/grease-pencil_properties_masks_panel.png
+   :align: right
+
+   Masks list view.
+
+The layer/s that will act as mask of the current layer could be added
+to the Mask :ref:`list view <ui-list-view>`.
+
+In the Masks list next to the layers name there are two icons buttons that control
+common properties of the layer mask:
+
+Invert (mask icon)
+   Inverts the mask.
+
+Viewport/Render Visibility (eye icon)
+   Toggle layer visibility in the viewport and in render.
+
+
+
+.. list-table:: Mask (green circle) samples.
+
+   * - .. figure:: /images/grease-pencil_properties_masks_example-01.png
+          :width: 200px
+
+          Original image (Blend: Regular, Opacity: 1).
+
+     - .. figure:: /images/grease-pencil_properties_masks_example-02.png
+          :width: 200px
+
+          Blend: Hard Light, Opacity: 1.
+
+     - .. figure:: /images/grease-pencil_properties_masks_example-03.png
+          :width: 200px
+
+          Blend: Regular, Opacity: 1.
 
 
 .. _bpy.types.GreasePencilLayer.location:

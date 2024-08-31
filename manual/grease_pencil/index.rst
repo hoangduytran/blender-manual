@@ -10,13 +10,12 @@
    :maxdepth: 2
 
    introduction.rst
-   object.rst
    structure.rst
    primitives.rst
-   multiframe.rst
    properties/index.rst
    Modifiers <modifiers/index.rst>
    visual_effects/index.rst
    Materials <materials/index.rst>
+   multiframe.rst
    animation/index.rst
    Object Modes <modes/index.rst>

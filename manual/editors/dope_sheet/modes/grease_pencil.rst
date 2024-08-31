@@ -19,7 +19,7 @@ Layers have the following settings:
 Opacity
    The layer's :ref:`opacity <bpy.types.GreasePencilLayer.opacity>`.
 Use Mask
-   Toggle the layer's :doc:`masks </grease_pencil/properties/masks>` on or off.
+   Toggle the layer's :ref:`masks <bpy.types.GreasePencilLayer.use_masks>` on or off.
 Onion Skinning
    Toggle :doc:`onion skinning </grease_pencil/properties/onion_skinning>`.
 Visibility (eye icon)

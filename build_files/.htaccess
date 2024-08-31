@@ -272,7 +272,6 @@ RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/texture_mapping
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/time_offset.html" "/manual/{lang}/{version}/grease_pencil/edit/time_offset.html"
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/weight_angle.html" "/manual/{lang}/{version}/grease_pencil/edit/weight_angle.html"
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/weight_proximity.html" "/manual/{lang}/{version}/grease_pencil/edit/weight_proximity.html"
-
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/materials/introduction.html" "/manual/{lang}/{version}/grease_pencil/materials/index.html"
-
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/selecting.html" "/manual/{lang}/{version}/grease_pencil/modes/edit/selecting.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/object.html" "/manual/{lang}/{version}/grease_pencil/properties/object.html"
