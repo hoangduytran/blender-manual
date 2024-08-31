@@ -89,8 +89,10 @@ dl.field-list > dd > p:last-child {
 	margin-bottom: 0;
 }
 
+/* Revert back to normal definitions for field lists on mobile
+   inside a definition (gives more room for definition text). */
 @media (max-width: calc(67em / 2)) {
-	dl.field-list  {
+	dd > dl.field-list  {
 		grid-template-columns: unset;
     }
 }
