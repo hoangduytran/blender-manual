@@ -1,8 +1,6 @@
 .. index:: Compositor Nodes; Mix
 .. _bpy.types.CompositorNodeMixRGB:
 .. Editor's Note: This page gets copied into:
-.. - :doc:`</render/shader_nodes/color/mix>`
-.. - :doc:`</modeling/geometry_nodes/utilities/color/mix_rgb>`
 .. - :doc:`</editors/texture_node/types/color/mix_rgb>`
 
 .. --- copy below this line ---
@@ -17,34 +15,24 @@ Mix Node
 
 Blends two images together, much like how an image editing program blends two layers.
 
-  .. important::
-
-     As of Blender 3.4, this node has been updated in the Shader and Geometry node editors.
-     Files saved with the new node are not backward compatible.
 
 Inputs
 ======
 
-Factor
+Fac
    The opacity of the foreground image.
-Image/A/Color1
+Image
    The background image. Determines the dimensions of the output.
-Image/B/Color2
+Image
    The foreground image.
 
 Keep in mind that, unlike image editing programs where the foreground layer is on top,
 the foreground slot in Blender is on the bottom.
 
+
 Properties
 ==========
 
-Data Type :guilabel:`Shader Editor` :guilabel:`Geometry Node Editor`
-   The type of data to mix: Float, Vector, or Color.
-Factor Mode :guilabel:`Shader Editor` :guilabel:`Geometry Node Editor`
-   Uniform
-      The same single Factor is applied to all three Vector coordinates.
-   Non-Uniform
-      You can specify a different Factor for each Vector coordinate.
 Blending Mode
    The :term:`blending mode <Color Blend Modes>` to use.
 
@@ -90,18 +78,19 @@ Blending Mode
       Combines the value of the background color with the hue and saturation of the foreground color.
    `Value <https://docs.krita.org/en/reference_manual/blending_modes/hsx.html#bm-luminosity>`__
       Combines the hue and saturation of the background color with the value of the foreground color.
-Use Alpha
-   Whether to use the alpha channel of the foreground image during mixing.
-   The alpha channel of the background image is always used.
-Clamp/Clamp Result
+
+   Use Alpha
+      Whether to use the alpha channel of the foreground image during mixing.
+      The alpha channel of the background image is always used.
+
+Clamp
    Clamp the output value to the [0.0, 1.0] range.
-Clamp Factor :guilabel:`Shader Editor` :guilabel:`Geometry Node Editor`
-   Clamp the Factor to the [0.0, 1.0] range.
+
 
 Outputs
 =======
 
-Image/Result/Color
+Image
    The result of the mixing operation.
 
 

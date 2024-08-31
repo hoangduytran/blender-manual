@@ -1,27 +1,22 @@
 .. _bpy.types.ShaderNodeMix:
 .. Editor's Note: This page gets copied into:
 .. - :doc:`</modeling/geometry_nodes/utilities/mix>`
-
-.. --- copy below this line ---
+.. - :doc:`</render/shader_nodes/color/mix>`
 
 ********
 Mix Node
 ********
+
+.. --- copy below this line ---
 
 The *Mix Node* mixes values, colors and vectors inputs
 using a factor to control the amount of interpolation.
 The *Color* mode has additional blending modes.
 
 .. figure:: /images/render_shader-nodes_shader_mix_node.jpg
-   :align: right
+   :align: center
    :alt: Mix Node.
 
-.. important::
-
-   This is a new node as of Blender 3.4. The previous *Mix RGB* node
-   is automatically converted to the Color version of this node in
-   Shader and Geometry node editors.
-   Files saved with the new node are not forward compatible.
 
 Inputs
 ======

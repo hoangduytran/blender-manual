@@ -21,5 +21,5 @@
 .. toctree::
    :maxdepth: 1
 
-   mix_color.rst
+   Mix Color <mix_color.rst>
    z_combine.rst
