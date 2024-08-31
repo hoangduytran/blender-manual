@@ -85,6 +85,18 @@ Object Mode List
    * - .. figure:: /images/editors_3dview_modes_icons-grease-pencil.png
      - :doc:`Draw Mode </grease_pencil/modes/draw/index>`
      - A Grease Pencil-only mode, dedicated to creating Grease Pencil strokes.
+   * - .. figure:: /images/editors_3dview_modes_icons-sculpt-mode.png
+     - :doc:`Sculpt Mode (Grease Pencil) </grease_pencil/modes/sculpting/index>`
+     - A Grease Pencil-only mode, used to deform and shape existing strokes more organically.
+   * - .. figure:: /images/editors_3dview_modes_icons-edit-mode.png
+     - :doc:`Edit Mode (Grease Pencil) </grease_pencil/modes/edit/index>`
+     - A Grease Pencil-only mode, dedicated to modifying individual strokes and points of Grease Pencil objects.
+   * - .. figure:: /images/editors_3dview_modes_icons-vertex-paint.png
+     - :doc:`Vertex Paint Mode (Grease Pencil) </grease_pencil/modes/vertex_paint/index>`
+     - A Grease Pencil-only mode, dedicated to adding color the vertices of strokes directly.
+   * - .. figure:: /images/editors_3dview_modes_icons-weight-paint.png
+     - :doc:`Weight Paint Mode (Grease Pencil) </grease_pencil/modes/weight_paint/index>`
+     - A Grease Pencil-only mode, dedicated to assigning vertex weights to stroke.
 
 .. note::
 
