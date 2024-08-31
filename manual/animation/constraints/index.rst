@@ -19,7 +19,7 @@ Constraint Types
 .. toctree::
    :maxdepth: 2
 
-   motion_tracking/index.rst
-   transform/index.rst
-   tracking/index.rst
-   relationship/index.rst
+   Motion Tracking <motion_tracking/index.rst>
+   Transform <transform/index.rst>
+   Tracking <tracking/index.rst>
+   Relationship <relationship/index.rst>

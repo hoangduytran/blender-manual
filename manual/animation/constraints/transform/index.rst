@@ -1,7 +1,7 @@
 
-#############
-  Transform
-#############
+#########################
+  Transform Constraints
+#########################
 
 .. toctree::
    :maxdepth: 1

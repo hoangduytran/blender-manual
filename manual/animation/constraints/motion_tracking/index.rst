@@ -1,8 +1,7 @@
-.. _constraints-motion-tracking:
 
-###################
-  Motion Tracking
-###################
+###############################
+  Motion Tracking Constraints
+###############################
 
 .. toctree::
    :maxdepth: 2
