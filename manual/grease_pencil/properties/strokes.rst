@@ -34,18 +34,6 @@ Stroke Depth Order
 
              Blue, Green and Red strokes in three different layers using 3D Location depth order.
 
-.. _bpy.types.GreasePencil.stroke_thickness_space:
-
-Stroke Thickness
-   The basis for how the stroke thickness is calculated.
-
-   :World Space:
-      The thickness is relative to world space.
-      Stroke thickness change with the screen zoom factor.
-   :Screen Space:
-      The thickness is relative to screen space.
-      Stroke thickness remains the same regardless of the screen zoom factor.
-
 .. _bpy.types.GreasePencil.pixel_factor:
 
 Thickness Scale
