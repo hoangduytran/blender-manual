@@ -7,38 +7,9 @@
 .. include:: common/introduction.rst
    :start-line: 1
 
-
-Windows
-=======
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   windows/nvidia.rst
-   windows/amd.rst
-   windows/intel.rst
-   windows/other.rst
-
-
-Linux
-=====
-
-.. toctree::
-   :maxdepth: 1
-
-   linux/nvidia.rst
-   linux/amd.rst
-   linux/intel.rst
-   linux/other.rst
-
-
-macOS
-=====
-
-.. toctree::
-   :maxdepth: 1
-
-   apple/nvidia.rst
-   apple/amd.rst
-   apple/intel.rst
-   apple/other.rst
+   Windows <windows/index.rst>
+   Linux <linux/index.rst>
+   macOS <apple/index.rst>
