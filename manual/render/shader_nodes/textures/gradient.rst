@@ -22,7 +22,7 @@ Vector
 Properties
 ==========
 
-Type
+Gradient Type
    Controls the type of gradient generated.
 
    :Linear: Directly outputs the input X coordinate.
