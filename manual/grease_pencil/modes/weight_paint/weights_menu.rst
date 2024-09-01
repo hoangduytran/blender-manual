@@ -11,111 +11,111 @@ Weights Menu
 This page covers many of the tools in the *Weights* menu.
 
 
-.. _bpy.ops.gpencil.weight_sample:
+.. .. _bpy.ops.gpencil.weight_sample:
 
-Sample Weight
-=============
+.. Sample Weight
+.. =============
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Weights --> Sample Weight`
-   :Shortcut:  :kbd:`Shift-X`
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Weights --> Sample Weight`
+..    :Shortcut:  :kbd:`Shift-X`
 
-Adjust the Weight of the :doc:`Draw </grease_pencil/modes/weight_paint/tools>`
-tool to the weight of the vertex under the mouse cursor.
-
-
-.. _bpy.ops.gpencil.vertex_group_normalize_all:
-
-Normalize All
-=============
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Weights --> Normalize All`
-
-For each point, this tool makes sure that the sum of the weights across all vertex groups is equal to 1.
-It normalizes all of the vertex groups, except for locked groups, which keep their weight values untouched.
-
-Lock Active
-   Keep the values of the active group while normalizing all the others.
+.. Adjust the Weight of the :doc:`Draw </grease_pencil/modes/weight_paint/tools>`
+.. tool to the weight of the vertex under the mouse cursor.
 
 
-.. _bpy.ops.gpencil.vertex_group_normalize:
+.. .. _bpy.ops.gpencil.vertex_group_normalize_all:
 
-Normalize
-=========
+.. Normalize All
+.. =============
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Weights --> Normalize`
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Weights --> Normalize All`
 
-This tool only works on the active vertex group.
-All points keep their relative weights, but the entire set of weights is scaled up
-such that the highest weight value is 1.0.
+.. For each point, this tool makes sure that the sum of the weights across all vertex groups is equal to 1.
+.. It normalizes all of the vertex groups, except for locked groups, which keep their weight values untouched.
 
-
-.. _bpy.ops.gpencil.vertex_group_invert:
-
-Invert
-======
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Weights --> Invert`
-
-Replaces each weight of the selected vertex group by × -1.0 weight.
-
-Examples:
-
-- Original 1.0 converts to 0.0
-- Original 0.5 remains 0.5
-- Original 0.0 converts to 1.0
-
-Subset
-   Restrict the tool to a subset.
-   See :ref:`The Subset Option <bpy.ops.object.vertex_group_levels>` about how subsets are defined.
-Add Weights
-   Add vertices that have no weight before inverting (these weights will all be set to 1.0).
-Remove Weights
-   Remove vertices from the vertex group if they are 0.0 after inverting.
+.. Lock Active
+..    Keep the values of the active group while normalizing all the others.
 
 
-.. _bpy.ops.gpencil.vertex_group_smooth:
+.. .. _bpy.ops.gpencil.vertex_group_normalize:
 
-Smooth
-======
+.. Normalize
+.. =========
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Weights --> Smooth`
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Weights --> Normalize`
 
-Smooths the weights of the active vertex group.
+.. This tool only works on the active vertex group.
+.. All points keep their relative weights, but the entire set of weights is scaled up
+.. such that the highest weight value is 1.0.
 
 
-.. _bpy.ops.gpencil.generate_weights:
+.. .. _bpy.ops.gpencil.vertex_group_invert:
 
-Generate Weights
-================
+.. Invert
+.. ======
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Weights --> Generate Weights`
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Weights --> Invert`
 
-Generate automatic weight for armatures (requires an Armature modifier).
+.. Replaces each weight of the selected vertex group by × -1.0 weight.
 
-With Empty Group
-   When parenting it will create an empty vertex groups on the child objects (if they do not exist already)
-   for and named after each deforming bone in the armature.
+.. Examples:
 
-With Automatic Weights
-   Works similar to *With Empty Groups*, but it will not leave the vertex groups empty.
-   It calculates how much influence a particular bone would have on points based on the distance
-   from those points to a particular bone ("bone heat" algorithm).
-   This influence will be assigned as weights in the vertex groups.
+.. - Original 1.0 converts to 0.0
+.. - Original 0.5 remains 0.5
+.. - Original 0.0 converts to 1.0
+
+.. Subset
+..    Restrict the tool to a subset.
+..    See :ref:`The Subset Option <bpy.ops.object.vertex_group_levels>` about how subsets are defined.
+.. Add Weights
+..    Add vertices that have no weight before inverting (these weights will all be set to 1.0).
+.. Remove Weights
+..    Remove vertices from the vertex group if they are 0.0 after inverting.
+
+
+.. .. _bpy.ops.gpencil.vertex_group_smooth:
+
+.. Smooth
+.. ======
+
+.. .. reference::
+
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Weights --> Smooth`
+
+.. Smooths the weights of the active vertex group.
+
+
+.. .. _bpy.ops.gpencil.generate_weights:
+
+.. Generate Weights
+.. ================
+
+.. .. reference::
+
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Weights --> Generate Weights`
+
+.. Generate automatic weight for armatures (requires an Armature modifier).
+
+.. With Empty Group
+..    When parenting it will create an empty vertex groups on the child objects (if they do not exist already)
+..    for and named after each deforming bone in the armature.
+
+.. With Automatic Weights
+..    Works similar to *With Empty Groups*, but it will not leave the vertex groups empty.
+..    It calculates how much influence a particular bone would have on points based on the distance
+..    from those points to a particular bone ("bone heat" algorithm).
+..    This influence will be assigned as weights in the vertex groups.
