@@ -5,7 +5,7 @@ Light Settings
 
 .. reference::
 
-   :Panel:     :menuselection:`Properties --> Light` and :menuselection:`Shader Editor --> Sidebar --> Settings`
+   :Panel:     :menuselection:`Properties --> Light` and :menuselection:`Shader Editor --> Sidebar --> Options --> Light`
 
 Next to lighting from the background and any object with an emission shader,
 lights are another way to add light into the scene.
