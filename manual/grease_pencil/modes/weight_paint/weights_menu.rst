@@ -58,31 +58,23 @@ This page covers many of the tools in the *Weights* menu.
 .. such that the highest weight value is 1.0.
 
 
-.. .. _bpy.ops.gpencil.vertex_group_invert:
+.. _bpy.ops.grease_pencil.weight_invert:
 
-.. Invert
-.. ======
+Invert Weight
+=============
 
-.. .. reference::
+.. reference::
 
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Weights --> Invert`
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Weights --> Invert Weight`
 
-.. Replaces each weight of the selected vertex group by × -1.0 weight.
+Replaces each weight of the selected vertex group by × -1.0 weight.
 
-.. Examples:
+Examples:
 
-.. - Original 1.0 converts to 0.0
-.. - Original 0.5 remains 0.5
-.. - Original 0.0 converts to 1.0
-
-.. Subset
-..    Restrict the tool to a subset.
-..    See :ref:`The Subset Option <bpy.ops.object.vertex_group_levels>` about how subsets are defined.
-.. Add Weights
-..    Add vertices that have no weight before inverting (these weights will all be set to 1.0).
-.. Remove Weights
-..    Remove vertices from the vertex group if they are 0.0 after inverting.
+- Original 1.0 converts to 0.0
+- Original 0.5 remains 0.5
+- Original 0.0 converts to 1.0
 
 
 .. .. _bpy.ops.gpencil.vertex_group_smooth:
