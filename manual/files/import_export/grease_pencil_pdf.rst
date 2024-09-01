@@ -1,4 +1,4 @@
-.. _bpy.ops.wm.gpencil_export_pdf:
+.. _bpy.ops.wm.grease_pencil_export_pdf:
 
 *****************************
 Export Grease Pencil as (PDF)
@@ -10,10 +10,8 @@ it support the export of Grease Pencil animation creating one page in the PDF do
 .. warning:: The exporter only works in Object Mode.
 
 
-Options
-=======
-
-The following options are available when exporting to PDF:
+Scene Options
+-------------
 
 Object
    Determine which objects will be included in the export.
@@ -21,6 +19,10 @@ Object
    :Active: Export only the active Grease Pencil object.
    :Selected: Export all selected Grease Pencil objects.
    :Visible: Export all visible Grease Pencil object in the scene.
+
+
+Export Options
+--------------
 
 Frame
    Determine which frames will be included in the export.
@@ -38,7 +40,7 @@ Sampling
 Fill
    When enabled, Export the Grease Pencil strokes fill.
 
-Normalize
+Uniform Width
    When enabled, Export strokes with constant thickness.
 
 .. note:: The export of the Grease Pencil strokes is always from camera view.

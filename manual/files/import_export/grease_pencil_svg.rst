@@ -9,7 +9,7 @@ and is supported by vector graphics editors such as Inkscape, and modern browser
 .. warning:: The exporter only works in Object Mode.
 
 
-.. _bpy.ops.wm.gpencil_import_svg:
+.. _bpy.ops.wm.grease_pencil_import_svg:
 
 Import
 ======
@@ -18,9 +18,6 @@ Import
 
    :menu: :menuselection:`File --> Import --> SVG as Grease Pencil`
 
-Options
--------
-
 Resolution
    Resolution for generated strokes.
 
@@ -28,7 +25,7 @@ Scale
    Generated strokes scale.
 
 
-.. _bpy.ops.wm.gpencil_export_svg:
+.. _bpy.ops.wm.grease_pencil_export_svg:
 
 Export
 ======
@@ -37,8 +34,9 @@ Export
 
    :menu: :menuselection:`File --> Export --> Grease Pencil as SVG`
 
-Options
--------
+
+Scene Options
+-------------
 
 Object
    Determine which objects include in the export.
@@ -47,13 +45,17 @@ Object
    :Selected: Export all selected Grease Pencil objects.
    :Visible: Export all visible Grease Pencil object in the scene.
 
+
+Export Options
+--------------
+
 Sampling
    Precision for the stroke sampling. Low values mean a more accurate result.
 
 Fill
    When enabled, Export the Grease Pencil strokes fill.
 
-Normalize
+Uniform Width
    When enabled, Export strokes with constant thickness.
 
 Clip Camera
