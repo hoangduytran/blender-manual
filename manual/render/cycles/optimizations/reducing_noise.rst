@@ -29,7 +29,7 @@ tracing light rays from the camera into the scene and onto lights,
 rather than from the light sources into the scene and then into the camera.
 This has the advantage that we do not waste light rays that will not end up in the camera,
 but also means that it is difficult to find some light paths that may contribute a lot.
-Light rays will be sent either according to the surface BRDF,
+Light rays will be sent either according to the surface :abbr:`BSDF (Bidirectional Scattering Distribution Function)`,
 or in the direction of known light sources.
 
 .. seealso::
