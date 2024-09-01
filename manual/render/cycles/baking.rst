@@ -241,9 +241,10 @@ Target
       Clear Image
          If selected, clears the image before baking render.
 
-   :Color Attributes:
+   :Active Color Attribute:
       Bake to the :term:`Active` :doc:`Color Attributes </sculpt_paint/vertex_paint/index>` layer on the active mesh.
       Note, the active object must be a mesh as other object types do not have Color Attributes.
+
 
 Margin
 ------
