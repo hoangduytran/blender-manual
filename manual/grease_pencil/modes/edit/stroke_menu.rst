@@ -419,6 +419,8 @@ Value
    Opacity value to use on all points of the stroke.
 
 
+.. _bpy.types.GPencilSculptSettings.use_scale_thickness:
+
 Scale Thickness
 ===============
 
@@ -428,6 +430,7 @@ Scale Thickness
    :Menu:      :menuselection:`Stroke --> Scale Thickness`
 
 When enabled, scales the stroke thickness during scale transformations.
+
 
 Reset Fill Transform
 ====================
