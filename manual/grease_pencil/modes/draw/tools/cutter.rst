@@ -16,7 +16,7 @@ Tool Settings
 =============
 
 Flat Caps
-   Mark newly created :ref:`End Caps <bpy.ops.gpencil.stroke_caps_set>` as *Flat*.
+   Mark newly created :ref:`End Caps <bpy.ops.grease_pencil.caps_set>` as *Flat*.
 
 .. _bpy.types.GPencilSculptSettings.intersection_threshold:
 
