@@ -107,7 +107,7 @@ Converting a Legacy Add-on into an Extension
 
 .. note::
 
-   For testing it is import to :ref:`install the extension from disk <prefs-extensions>` and check if
+   For testing it is important to :ref:`install the extension from disk <prefs-extensions>` and check if
    everything is working well. This will get you as close to the final experience as possible.
 
 
