@@ -1,8 +1,8 @@
 .. _bpy.types.ShaderNodeOutputLight:
 
-**********
-Light Node
-**********
+*****************
+Light Output Node
+*****************
 
 .. figure:: /images/node-types_ShaderNodeOutputLight.webp
    :align: right

@@ -1,8 +1,8 @@
 .. _bpy.types.ShaderNodeOutputWorld:
 
-**********
-World Node
-**********
+*****************
+World Output Node
+*****************
 
 .. figure:: /images/node-types_ShaderNodeOutputWorld.webp
    :align: right
