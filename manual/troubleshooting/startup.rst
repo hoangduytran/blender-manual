@@ -3,18 +3,15 @@
 Startup
 *******
 
-Blender
-=======
-
-There are some common causes for problems when using Blender. If you cannot find a solution to your problem here,
-try asking the :doc:`community </getting_started/about/community>` for help.
-
-If Blender crashes on startup, there are a few things to check for:
+There are some common causes for problems when using Blender.
+If Blender fails to start, there are a few things to check for:
 
 - See if your computer meets the `minimum requirements <https://www.blender.org/download/requirements/>`__.
-- Confirm that your graphics card is supported and that the drivers are up to date.
+- Confirm that your graphics card is supported and that the drivers are up to date (see :doc:`/troubleshooting/gpu/index`).
+- Make sure any antivirus software is not preventing Blender from starting.
 
-Known causes listed below.
+If you cannot find a solution to your problem here,
+try asking the :doc:`community </getting_started/about/community>` for help.
 
 
 Common Startup Messages

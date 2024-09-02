@@ -1,8 +1,8 @@
 .. _troubleshooting-gpu-index:
 
-#####################
-  Graphics Hardware
-#####################
+#####################################
+  Troubleshooting Graphics Hardware
+#####################################
 
 .. include:: common/introduction.rst
    :start-line: 1

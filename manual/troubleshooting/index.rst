@@ -9,7 +9,7 @@
 
    startup.rst
    3d_view.rst
-   gpu/index.rst
+   Graphics Hardware <gpu/index.rst>
    crash.rst
    python.rst
    recover.rst
