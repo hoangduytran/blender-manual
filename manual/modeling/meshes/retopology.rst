@@ -6,7 +6,7 @@ Retopology
 **********
 
 Retopology is the process of simplifying the topology of a mesh to make it cleaner and easier to work with.
-Retopology is need for mangled topology resulting from sculpting or generated topology, for example from a 3D scan.
+Retopology is needed for mangled topology resulting from sculpting or generated topology, for example from a 3D scan.
 Meshes often need to be retopologized if the mesh is going to be deformed in some way.
 Deformations can include rigging or physics simulations such as cloth or soft body.
 Retopology can be done by hand by manipulating geometry in Edit Mode or through automated methods.
