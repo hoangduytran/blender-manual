@@ -4,7 +4,7 @@
 Selecting
 *********
 
-.. _bpy.ops.gpencil.selectmode_toggle:
+.. _bpy.ops.grease_pencil.set_selection_mode:
 .. _bpy.types.ToolSettings.gpencil_selectmode_edit:
 
 Select Mode
@@ -33,15 +33,16 @@ You can enter the different modes by selecting one of the three buttons in the h
    Points, stroke and in between stroke selection sample.
 
 
-Select Menu
-===========
+.. _bpy.ops.grease_pencil.select_all:
 
-Box/Circle/All/None/Invert Select
-   All these options have the same meaning and behavior as in
-   :doc:`Object Mode </scene_layout/object/selecting>`.
+Select All/None/Invert
+======================
+
+All these options have the same meaning and behavior as in
+:doc:`Object Mode </scene_layout/object/selecting>`.
 
 
-.. _bpy.ops.gpencil.select_random:
+.. _bpy.ops.grease_pencil.select_random:
 
 Select Random
 =============
@@ -60,11 +61,9 @@ Random Seed
    :term:`Seed` used by the pseudo-random number generator.
 Action
    Selection or deselection of elements.
-Unselect Ends
-   Excludes the selection of stroke end points.
 
 
-.. _bpy.ops.gpencil.select_alternate:
+.. _bpy.ops.grease_pencil.select_alternate:
 
 Select Alternated
 =================
@@ -77,8 +76,8 @@ Select Alternated
 Selects alternate points in the selected strokes.
 
 
-.. _bpy.ops.gpencil.select_more:
-.. _bpy.ops.gpencil.select_less:
+.. _bpy.ops.grease_pencil.select_more:
+.. _bpy.ops.grease_pencil.select_less:
 
 Select More/Less
 ================
@@ -89,7 +88,7 @@ Select More/Less
    :Menu:      :menuselection:`Select --> More/Less`
    :Shortcut:  :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
 
-The purpose of these tools is to reduce or enlarge the current selection within a stroke
+The purpose of these operators is to reduce or enlarge the current selection within a stroke
 (i.e. they will never "go outside" of a stroke or "jump" to another stroke in the same object).
 
 More
@@ -105,24 +104,24 @@ Less
    Conversely, the same goes when no points are selected.
 
 
-.. _bpy.ops.gpencil.select_grouped:
+.. .. _bpy.ops.gpencil.select_grouped:
 
-Select Grouped
-==============
+.. Select Grouped
+.. ==============
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Select Grouped`
-   :Shortcut:  :kbd:`Shift-G`
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Select --> Select Grouped`
+..    :Shortcut:  :kbd:`Shift-G`
 
-Layer
-   Selects all the points/strokes on the same layer.
-Material
-   Selects all the points/strokes that share the same material.
+.. Layer
+..    Selects all the points/strokes on the same layer.
+.. Material
+..    Selects all the points/strokes that share the same material.
 
 
-.. _bpy.ops.gpencil.select_linked:
+.. _bpy.ops.grease_pencil.select_linked:
 
 Select Linked
 =============
@@ -137,8 +136,7 @@ Select Linked
 and all the linked ones, i.e. all points belonging to the same stroke.
 
 
-.. _bpy.ops.gpencil.select_first:
-.. _bpy.ops.gpencil.select_last:
+.. _bpy.ops.grease_pencil.select_ends:
 
 Select First/Last
 =================
@@ -152,16 +150,16 @@ These operators will toggle the selection of the first or last point(s) of the s
 This is useful to quickly find the start of a stroke.
 
 
-.. _bpy.ops.gpencil.select_vertex_color:
+.. .. _bpy.ops.gpencil.select_vertex_color:
 
-Select Color Attribute
-======================
+.. Select Color Attribute
+.. ======================
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Vertex Paint Mode
+..    :Mode:      Vertex Paint Mode
 
-Selects all points with a similar Color Attribute as the current selection.
+.. Selects all points with a similar Color Attribute as the current selection.
 
-Tolerance
-   How similar colors are allowed to be; higher values select a wider range of colors.
+.. Tolerance
+..    How similar colors are allowed to be; higher values select a wider range of colors.
