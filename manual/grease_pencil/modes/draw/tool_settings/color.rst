@@ -4,26 +4,20 @@
 Color
 *****
 
-Controls the source of the stroke color.
-The mode can be pinned to the brush by enabling the Pin icon in the Tool Settings header.
+.. _bpy.types.GpPaint.color_mode:
 
+Paint Mode
+   Controls the source of the stroke color.
+   The mode can be pinned to the brush by enabling the Pin icon in the Tool Settings header.
 
-Material
-========
-
-Use the stroke/fill base color material.
-
-
-Color Attribute
-===============
-
-Use Color Attribute.
+   :Material: Use the stroke/fill base color material.
+   :Color Attribute: Use Color Attribute.
 
 Color Picker
-   The color of the brush. See :ref:`ui-color-picker`.
+   Sets the primary brush color.
 
-Color Palette
-   Active Color Palette. See :ref:`bpy.types.PaletteColor`.
+Color, Secondary Color
+   The color of the brush. See :ref:`ui-color-picker`.
 
 .. _bpy.types.BrushGpencilSettings.vertex_mode:
 
@@ -38,3 +32,9 @@ Mode
 
 Mix Factor
    Mixing factor between the selected color and the base material color.
+
+
+Palette
+-------
+
+Active Color Palette. See :ref:`bpy.types.PaletteColor`.
