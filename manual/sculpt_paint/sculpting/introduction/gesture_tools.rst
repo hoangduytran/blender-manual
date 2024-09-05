@@ -1,6 +1,6 @@
-=============
+*************
 Gesture Tools
-=============
+*************
 
 Separate from brushes and filters, Sculpt mode also has a set of tools that perform actions to a drawn
 selection area. These tools are similar to the selection tools (e.g. :ref:`box selection <tool-select-box>`
@@ -40,8 +40,10 @@ Controls
 Move :kbd:`Spacebar`
    Hold to reposition the selection area.
 
+
 Tool Settings
 -------------
+
 Stabilize Stroke
    Helps to reduce jitter of the strokes while drawing by delaying and correcting the location of points.
 
@@ -50,6 +52,7 @@ Stabilize Stroke
    Factor
       A smooth factor, where higher values result in smoother strokes
       but the drawing sensation feels as if you were pulling the stroke.
+
 
 .. _gesture-tool-line:
 

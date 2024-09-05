@@ -7,8 +7,9 @@ In order for sculpting to give accurate and predictable results, Blender needs e
 Instead of starting out with a highly subdivided mesh, add geometry dynamically
 by using either of the following adaptive sculpting methods.
 
+
 Voxel Remesher
---------------
+==============
 
 "Voxel remeshing" rebuilds the geometry with a perfectly even distributed topology.
 Depending on the set voxel size, this will lead to a lower or higher resolution.
@@ -46,10 +47,11 @@ and :kbd:`Ctrl-R` to execute the remeshing.
 
    More information at :doc:`Remesh </sculpt_paint/sculpting/tool_settings/remesh>`.
 
+
 .. _dyntopo_introduction:
 
 Dyntopo
--------
+=======
 
 Dynamic topology (aka Dyntopo) is a dynamic tessellation
 sculpting method that automatically adds and removes topology under the brush.
@@ -85,7 +87,7 @@ and :doc:`Clay Strips </sculpt_paint/sculpting/brushes/clay_strips>` work especi
 
 
 Multiresolution
----------------
+===============
 
 The Multiresolution Modifier can be used for subdivision based sculpting.
 This means the object will be subdivided, similar to the
