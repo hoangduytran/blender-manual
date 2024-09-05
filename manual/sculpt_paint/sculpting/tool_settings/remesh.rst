@@ -24,8 +24,7 @@ Voxel Size :kbd:`R`
    Using the shortcut displays an interactive grid overlay showing the resulting voxel size.
    Moving the mouse closer to center of the grid decreases the voxel size
    while moving away from the center increase the voxel size.
-   Holding :kbd:`Shift`` increases the precision; adjusting the voxel size in small increments.
-   Holding :kbd:`Ctrl` adjusts the voxel size relative to the current voxel size.
+   Holding :kbd:`Shift` increases the precision; adjusting the voxel size in small increments.
 
    Sample Voxel Size
       Used to adjust the *Voxel Size* by picking an area of the mesh
