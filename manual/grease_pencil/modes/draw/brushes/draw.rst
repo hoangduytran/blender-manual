@@ -28,7 +28,7 @@ Radius
    by typing a number then confirm.
 
    :bl-icon:`stylus_pressure` (Size Pressure)
-      Uses stylus pressure to control how strong the effect is.
+      Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
       The gradient of the pressure can be customized using
       the :doc:`curve widget </interface/controls/templates/curve>`.
 
@@ -41,7 +41,7 @@ Strength
    You can also enter the size numerically.
 
    :bl-icon:`stylus_pressure` (Strength Pressure)
-      Uses stylus pressure to control how strong the effect is.
+      Adjusts the strength based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
       The gradient of the pressure can be customized using
       the :doc:`curve widget </interface/controls/templates/curve>`.
 
@@ -142,6 +142,7 @@ Outline
       Material used for outline stroke.
    Thickness
       Thickness used for outline stroke.
+
 
 .. _bpy.types.BrushGpencilSettings.use_settings_random:
 

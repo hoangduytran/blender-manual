@@ -13,8 +13,9 @@ Radius
    :kbd:`F` allows you to change the brush size interactively by
    dragging the mouse and then :kbd:`LMB` (the texture of the brush should be visible inside the circle).
    Typing a number then enter while using :kbd:`F` allows you to enter the size numerically.
-   Brush size can be affected by enabling the pressure sensitivity icon,
-   if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
+
+   :bl-icon:`stylus_pressure` (Size Pressure)
+      Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
 
 Strength
    Controls how much each application of the brush affects the model.
@@ -24,8 +25,9 @@ Strength
    You can change the brush strength interactively by pressing :kbd:`Shift-F`
    in the 3D Viewport and then moving the brush and then :kbd:`LMB`.
    You can enter the size numerically also while in :kbd:`Shift-F` sizing.
-   Brush strength can be affected by enabling the pressure sensitivity icon,
-   if a supported tablet is being used.
+
+   :bl-icon:`stylus_pressure` (Strength Pressure)
+      Adjusts the strength based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
 
 Use Falloff
    When enabled, use Strength falloff for the brush.
@@ -67,6 +69,7 @@ Auto-Masking
 
    Layer
       Affect only the active layer.
+
 
 Cursor
 ======

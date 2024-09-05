@@ -21,7 +21,7 @@ Radius
    by typing a number then confirm.
 
    :bl-icon:`stylus_pressure` (Size Pressure)
-      Uses stylus pressure to control how strong the effect is.
+      Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
 
 Strength
    Control how much will affect the eraser has on the stroke transparency (alpha).
@@ -31,7 +31,7 @@ Strength
    You can also enter the size numerically.
 
    :bl-icon:`stylus_pressure` (Strength Pressure)
-      Uses stylus pressure to control how strong the effect is.
+      Adjusts the strength based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
 
 .. _bpy.types.BrushGpencilSettings.eraser_mode:
 

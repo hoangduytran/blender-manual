@@ -25,8 +25,7 @@ Radius
    The size can be decreased/increased using :kbd:`[` and :kbd:`]` respectfully.
 
    :bl-icon:`stylus_pressure` (Size Pressure)
-      Brush size can be affected by enabling the pressure sensitivity icon,
-      if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
+      Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
    :bl-icon:`brushes_all` (Use Unified Radius)
       Use the same brush *Radius* across all brushes.
 
@@ -56,8 +55,7 @@ Strength
    You can also enter the strength numerically with the number keys.
 
    :bl-icon:`stylus_pressure` (Strength Pressure)
-      Brush strength can be affected by enabling the pressure sensitivity icon,
-      if a supported tablet is being used.
+      Adjusts the strength based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
    :bl-icon:`brushes_all` (Use Unified Strength)
       Use the same brush *Strength* across all brushes.
 

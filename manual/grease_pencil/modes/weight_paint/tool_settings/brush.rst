@@ -13,8 +13,16 @@ Brush
 
 Radius :kbd:`F`
    The radius defines the area of influence of the brush.
+
+   :bl-icon:`stylus_pressure` (Size Pressure)
+      Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
+
 Strength
    This is the amount of paint to be applied per brush stroke.
+
+   :bl-icon:`stylus_pressure` (Strength Pressure)
+      Adjusts the strength based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
+
 Use Falloff
    When enabled, use Strength falloff for the brush.
    Brush Strength decays with the distance from the center of the brush.
