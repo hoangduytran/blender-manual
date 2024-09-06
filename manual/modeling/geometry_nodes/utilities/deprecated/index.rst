@@ -8,4 +8,5 @@ These nodes have been made deprecated, meaning they will be removed in a future 
 .. toctree::
    :maxdepth: 1
 
+   align_euler_to_vector.rst
    rotate_euler.rst
