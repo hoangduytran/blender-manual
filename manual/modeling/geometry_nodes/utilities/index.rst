@@ -21,6 +21,7 @@ General purpose nodes for modifying data.
    Math <math/index.rst>
    Matrix <matrix/index.rst>
    Rotation <rotation/index.rst>
+   Deprecated <deprecated/index.rst>
 
 -----
 
