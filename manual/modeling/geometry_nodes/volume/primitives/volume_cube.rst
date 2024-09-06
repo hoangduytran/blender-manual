@@ -1,4 +1,4 @@
-.. index:: Geometry Nodes: Volume Cube
+.. index:: Geometry Nodes; Volume Cube
 .. _bpy.types.GeometryNodeVolumeCube:
 
 ****************

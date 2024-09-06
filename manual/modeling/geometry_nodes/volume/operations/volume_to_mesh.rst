@@ -1,4 +1,4 @@
-.. index:: Geometry Nodes: Volume to Mesh
+.. index:: Geometry Nodes; Volume to Mesh
 .. _bpy.types.GeometryNodeVolumeToMesh:
 
 *******************
