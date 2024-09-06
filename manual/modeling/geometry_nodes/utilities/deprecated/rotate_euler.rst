@@ -13,7 +13,7 @@ The *Rotate Euler* node rotates an Euler rotation.
 
 .. important::
 
-   This node is deprecated, use the :doc:`manual/modeling/geometry_nodes/utilities/rotation/rotate_rotation` instead.
+   This node is deprecated, use the :doc:`/modeling/geometry_nodes/utilities/rotation/rotate_rotation` instead.
 
 
 Inputs
