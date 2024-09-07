@@ -157,5 +157,6 @@ The influence value is animatable, allowing constraints to be turned off, or par
 
 .. _bpy.ops.constraint.disable_keep_transform:
 
-The ``X`` button after the influence slider can be used to disable the constraint while trying to
-preserve the current object position. This may not work perfectly if other constraints remain active.
+:bl-icon:`cancel` (Disable and Keep Transform)
+   Disables the constraint while trying to preserve the current object position.
+   This may not work perfectly if other constraints remain active.

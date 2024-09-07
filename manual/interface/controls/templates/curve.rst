@@ -26,7 +26,7 @@ Move
 Add
    Click anywhere on the curve where there is not already a control point.
 Remove
-   Select it and click the ``X`` button at the bottom right.
+   Select it and click the :bl-icon:`x` button at the bottom right.
 
 
 Controls
@@ -107,7 +107,7 @@ Handle Type
              Auto Clamped Handles.
 X, Y
    The coordinates of the selected control point.
-Delete ``X``
+Delete :bl-icon:`x`
    Remove the selected control point. The first and last points cannot be deleted.
 Copy/Paste :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
    The whole curve can be copied from one Curve Widget to another by hovering over

@@ -39,7 +39,7 @@ The middle of the Status Bar displays information about in-progress operations.
 Running Task
    Shows the progress of the currently running task (such as rendering or baking).
    Hovering the mouse pointer over the progress bar will display a time estimate.
-   The task can be aborted by clicking the cancel button (``X`` icon).
+   The task can be aborted by clicking the cancel button (:bl-icon:`cancel`).
 Report Message
    Informational messages or warnings, such as after saving a file.
    They disappear after a short time.

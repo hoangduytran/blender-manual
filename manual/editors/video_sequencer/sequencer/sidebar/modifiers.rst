@@ -45,7 +45,7 @@ Mute (eye icon)
    Disables the modifier. Useful to compare the image with or without modifications.
 Move (up/down arrow icon)
    These two buttons change the modifier's position in the stack which affects its computation order.
-Remove ``X``
+:bl-icon:`x` (Remove Strip Modifier)
    Deletes the modifier from the stack.
 
 

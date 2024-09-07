@@ -69,7 +69,7 @@ Extras
 
 .. _bpy.ops.constraint.delete:
 
-Delete ``X`` :kbd:`X`, :kbd:`Delete`
+:bl-icon:`x` (Delete) :kbd:`X`, :kbd:`Delete`
    Delete the constraint from the stack.
    The settings will be lost.
    The constraint will no longer affect the final outcome of the stack.

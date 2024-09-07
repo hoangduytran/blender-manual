@@ -71,7 +71,9 @@ Target
 Sub-target
    Name of the target bone.
 
-Remove Button ``X``
+.. _bpy.ops.constraint.remove_target:
+
+:bl-icon:`x` (Remove Target)
    Removes the entry from the target list.
 
 Weight

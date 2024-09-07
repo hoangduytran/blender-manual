@@ -55,9 +55,11 @@ Add
       The choices for adding a scene, therefore, determine just how much of this information will be
       *copied from* the active scene to the new one, and how much will be *shared* (linked).
 
-Delete ``X``
-   You can delete the current scene by clicking the *X*
-   next to the name in the :doc:`Topbar </interface/window_system/topbar>`.
+.. _bpy.ops.scene.delete:
+
+:bl-icon:`x` (Delete Scene)
+   Deletes the current scene data-block.
+   Note, there always has to be one scene data-block.
 
 .. seealso:: Linking to a Scene
 

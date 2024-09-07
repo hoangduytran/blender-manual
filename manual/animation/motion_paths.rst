@@ -155,7 +155,7 @@ Update Paths
    .. _bpy.ops.pose.paths_clear:
    .. _bpy.ops.object.paths_clear:
 
-   Clear Paths ``X``
+   :bl-icon:`x` (Clear Paths)
       Clears paths on all objects/bones or just the selected ones when holding :kbd:`Shift`.
 
 .. _bpy.ops.object.paths_update_visible:

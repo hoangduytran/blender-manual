@@ -201,10 +201,8 @@ New ``+``
    Creates a new collection and adds the selected object to it.
 Name
    To rename a collection, simply click in the collections name field.
-Remove ``X``
-   To remove an object from a collection,
-   find the name of the collection from which you wish to remove the object,
-   and click the ``X`` button to the right of the collection name.
+:bl-icon:`x` (Remove Collection)
+   Removes the object from the specified collection.
 Specials
    Unlink Collection, Select Collection, Set Offset from Cursor
 Offset

@@ -56,7 +56,7 @@ Open File (folder icon)
    Opens the :doc:`File Browser </editors/file_browser>`, for importing an image for example.
 Unpack File (bin icon)
    :ref:`Unpack <pack-unpack-data>` the file packed into the current blend-file to an external one.
-Unlink Data-block ``X``
+:bl-icon:`x` (Unlink Data-block)
    Clears the link. :kbd:`Shift-LMB` to set the users to zero
    allowing the data to be fully deleted from the blend-file.
 
@@ -113,8 +113,8 @@ List
 Eyedropper
    In some Data IDs there is an :ref:`ui-eyedropper`
    available through the pipette icon on the right side.
-Remove ``X``
-   Click the ``X`` button on the right to clear the reference.
+:bl-icon:`x` (Clear Button String)
+   Click the :bl-icon:`x` button on the right to clear the reference.
 
 
 Sub IDs

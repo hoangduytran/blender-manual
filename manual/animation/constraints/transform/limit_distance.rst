@@ -34,10 +34,9 @@ Target
 Distance
    This number field sets the limit distance, i.e. the radius of the constraining sphere.
 
-   Reset Distance ``X``
-      When clicked, this small button will reset the *Distance* value,
-      so that it corresponds to the actual distance between the owner and its target
-      (i.e. the distance before this constraint is applied).
+   :bl-icon:`x` (Reset Distance)
+      Resets the *Distance* value,so that it corresponds to the actual distance between
+      the owner and its target (i.e. the distance before this constraint is applied).
 
 Clamp Region
    The *Limit Mode* select menu allows you to choose how to use the sphere

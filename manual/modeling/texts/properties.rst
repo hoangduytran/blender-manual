@@ -342,7 +342,7 @@ Add Textbox
 
 .._bpy.ops.font.textbox_remove:
 
-Delete ``X``
+:bl-icon:`x` (Remove Text Block)
    Delete the current frame.
 
 .. _bpy.types.TextCurve.overflow:

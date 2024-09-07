@@ -37,7 +37,7 @@ Original Length
    This number field sets the rest distance between the owner and its target, i.e.
    the distance at which there is no deformation (stretching) of the owner.
 
-   Reset Original Length ``X``
+   :bl-icon:`x` (Reset Original Length)
       When clicked, this small button will recalculate the *Rest Length* value,
       so that it corresponds to the actual distance between the owner and its target
       (i.e. the distance before this constraint is applied).

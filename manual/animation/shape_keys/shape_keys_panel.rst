@@ -148,7 +148,7 @@ the current weight or influence of that shape in the current *Mix*.
 
 .. _bpy.ops.object.shape_key_clear:
 
-Clear Shape Keys ``X``
+:bl-icon:`x` (Clear Shape Keys)
    Set all influence values, or weights, to zero.
    Useful to quickly guarantee that the result shown in the 3D Viewport is not affected by shapes.
 
