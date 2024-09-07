@@ -1,7 +1,7 @@
 
-*********
-Setttings
-*********
+********
+Settings
+********
 
 General settings for Grease Pencil strokes.
 

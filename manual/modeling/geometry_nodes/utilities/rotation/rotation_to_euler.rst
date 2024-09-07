@@ -1,4 +1,4 @@
-.. index:: Geometry Nodes; Roation to Euler
+.. index:: Geometry Nodes; Rotation to Euler
 .. _bpy.types.FunctionNodeRotationToEuler:
 
 **********************

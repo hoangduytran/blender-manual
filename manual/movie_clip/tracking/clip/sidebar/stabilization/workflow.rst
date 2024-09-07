@@ -37,7 +37,7 @@ Avoid Problematic Footage
 The 2D stabilizer can not work miracles; some flaws simply can not be fixed satisfactory.
 Notorious issues are motion blur, rolling shutter, pumping autofocus and moving compression artifacts.
 Especially if you do succeed with basic stabilization, such image flaws become yet the more noticeable and annoying.
-When on set or on location, it might be tempting to "fix matters in postpro".
+When on set or on location, it might be tempting to "fix matters in post production".
 Resist that deception, it rarely works out well.
 
 - Prefer a short exposure time to avoid motion blur.

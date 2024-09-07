@@ -100,6 +100,10 @@ dict_custom = {
     "wiki",
 
     # General computer graphics terms.
+    "albedo",
+    "anamorphic",
+    "anisotropic",
+    "anisotropy",
     "animatic",
     "atomics",
     "autofocus",
@@ -131,6 +135,7 @@ dict_custom = {
     "normals",
     "nurbs",
     "octree",
+    "oculus"
     "perlin",
     "phong",
     "quadriflow",
@@ -145,6 +150,8 @@ dict_custom = {
     "specular",
     "specularity",
     "uber",
+    "vectorscope"
+    "voronoi",
 
     # Specific computer terms/brands.
     "autocad",
@@ -181,6 +188,7 @@ dict_custom = {
     "renderman",
     "sgi",
     "unix",
+    "vive",
     "xinerama",
 
     # Blender specific terms

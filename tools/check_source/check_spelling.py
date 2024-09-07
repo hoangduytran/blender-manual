@@ -225,6 +225,12 @@ directives.register_directive('toctree', directive_ignore_recursive)
 directives.register_directive('code-block', directive_ignore_recursive)
 directives.register_directive('highlight', directive_ignore_recursive)
 directives.register_directive('parsed-literal', directive_ignore_recursive)
+# Python API reference.
+directives.register_directive('autoclass', directive_ignore_recursive)
+directives.register_directive('automodule', directive_ignore_recursive)
+directives.register_directive('autosummary', directive_ignore_recursive)
+directives.register_directive('currentmodule', directive_ignore_recursive)
+directives.register_directive('function', directive_ignore_recursive)
 # Custom directives from extensions
 directives.register_directive('youtube', directive_ignore_recursive)
 directives.register_directive('peertube', directive_ignore_recursive)
@@ -274,6 +280,9 @@ roles.register_canonical_role('ref', role_ignore_recursive)
 roles.register_canonical_role('term', role_ignore_recursive)
 # Python API reference.
 roles.register_canonical_role('meth', role_ignore_recursive)
+# Custom directives from extensions
+roles.register_canonical_role('bl-icon', role_ignore_recursive)
+
 
 # -----------------------------------------------------------------------------
 # Special logic to wash filedata

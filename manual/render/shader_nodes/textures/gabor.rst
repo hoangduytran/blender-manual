@@ -74,7 +74,7 @@ direction of the noise. However, the *Scale* parameter can also be used to globa
 number of bands, so consider increasing the scale first since high frequency noise can suffer from
 low contrast and limited interleaving of bands.
 
-.. list-table:: Different outputs with differenet parameters.
+.. list-table:: Different outputs with different parameters.
 
    * - .. figure:: /images/render_shader-nodes_textures_gabor_example-value.jpg
           :width: 320px
