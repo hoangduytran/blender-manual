@@ -47,11 +47,6 @@ Soft bodies are well suited for:
 - Tree branches moving in the wind, swinging ropes, and the like.
 - Flags, wide sleeves, cushions or other simple fabric reacting to forces.
 
-The following videos may give you some more ideas:
-
-- `New Penguoen <https://www.youtube.com/watch?v=hLnY-OFUBzM>`__.
-- `Blender Softbody Simulations <https://www.youtube.com/watch?v=qdusMZlBbQ4>`__.
-
 
 Creating a Soft Body
 ====================
