@@ -21,12 +21,17 @@ You can add these modifiers directly to a media strip,
 or you can use them within an :doc:`Adjustment Layer </video_editing/edit/montage/strips/adjustment>`
 strip, making them apply to several media strips in one go.
 
-Use Linear Modifiers
+.. _bpy.types.Sequence.use_linear_modifiers:
+
+Linear Modifiers
    Calculates modifiers in :ref:`linear color space <color-management-linear-space>` instead of the
    :ref:`Sequencer color space <bpy.types.ColorManagedSequencerColorspaceSettings.name>`.
 
    Calculating modifiers in linear space will match the image processing of the compositor.
    In most cases, this should be enabled; working in a non-linear workflow could have unpredictable results.
+
+.. _bpy.ops.sequencer.strip_modifier_copy:
+
 Copy to Selected Strips
    Copies the modifiers to the selected strips, either replacing their current modifiers or appending to them.
 
