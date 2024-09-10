@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeTexGabor:
+.. section-title
 
 ******************
 Gabor Texture Node
@@ -14,6 +15,8 @@ Additionally, it can be used to create omnidirectional noise like the standard N
 but since it is more expensive to compute, using the Noise Texture node is probably the better
 option in those cases. See the examples for more information.
 
+
+.. section-inputs
 
 Inputs
 ======

@@ -18,6 +18,7 @@ Nodes to add textures.
 
    brick.rst
    checker.rst
+   gabor.rst
    gradient.rst
    image.rst
    magic.rst
