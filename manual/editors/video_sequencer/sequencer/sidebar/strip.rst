@@ -159,6 +159,11 @@ Volume
    This can be hidden by disabling the :ref:`F-Curves <bpy.types.SequencerTimelineOverlay.show_fcurves>`.
    The value is also reflected in the waveform.
 
+.. _bpy.types.Sound.use_mono:
+
+Mono
+   Mixdown all audio channels into a single channel.
+
 .. figure:: /images/vse_setup_project_striptypes_sound-pan.png
    :align: right
    :width: 220px
@@ -186,11 +191,6 @@ Pan
 
       The number of audio channels can be configured in the
       :ref:`Audio Output <render-output-video-encoding-audio>` settings.
-
-.. _bpy.types.Sound.use_mono:
-
-Mono
-   Mixdown all audio channels into a single channel.
 
 .. _bpy.types.SoundSequence.show_waveform:
 
