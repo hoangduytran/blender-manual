@@ -1,3 +1,4 @@
+{% if builder not in ['epub'] %}
 {%- if not pagename in ("search", "404", "genindex", "advanced/command_line/arguments") and hasdoc(pagename) %}
 <div class="footer-contribute">
   <ul>
@@ -24,4 +25,5 @@
     </li>
   </ul>
 </div>
+{%- endif %}
 {%- endif %}
