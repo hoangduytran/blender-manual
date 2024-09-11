@@ -495,19 +495,15 @@ Align
    :Menu:      :menuselection:`UV --> Align`
    :Shortcut:  :kbd:`Shift-W`
 
-The *Align* tool will move the selected UVs to a line, where that line is specified in different ways by *Axis*.
-
-The *Straighten* option will calculate a line segment between two endpoints and move all selected UVs onto that line.
-
-The *Align X* and *Align Y* options will axis-align all selected UVs to the midpoint of the current selection.
+Moves the selected UV vertices to a line, where that line is specified in different ways by *Axis*.
 
 Axis
-   :Straighten: Move UV to closest point on line segment.
-   :Straighten X: Move *U* co-ordinates onto the line.
-   :Straighten Y: Move *V* co-ordinates onto the line.
-   :Align X: Move *U* co-ordinates to the midpoint of the selection.
-   :Align Y: Move *V* co-ordinates to the midpoint of the selection.
-   :Align Auto: Choose between *Align X* or *Align Y* automatically.
+   :Straighten: Positions UV vertices along the line defined by the endpoints.
+   :Straighten X: Positions UV vertices horizontally along the line defined by the endpoints.
+   :Straighten Y: Positions UV vertices vertically along the line defined by the endpoints.
+   :Align Auto: Positions UV vertices automatically chooses the direction based on which is most alignment already.
+   :Align Vertically: Positions UV vertices vertically along the line defined by the midpoint of the selection.
+   :Align Horizontally: Positions UV vertices horizontally along the line defined by the midpoint of the selection.
 
 
 .. _bpy.ops.uv.align_rotation:
