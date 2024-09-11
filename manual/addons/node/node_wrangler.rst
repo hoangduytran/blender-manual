@@ -12,11 +12,11 @@ Functions that only work in specific editors are marked with labels (:guilabel:`
 :guilabel:`Geometry Nodes`, :guilabel:`Texture Nodes`). Functions without labels should work for all node editors.
 
 
-Activation
-==========
+Enabling Add-on
+===============
 
-- Open Blender and go to the Preferences, then the Add-ons tab.
-- Find Node Wrangler and enable the add-on.
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "Node Wrangler" and check the *Enable Extension* checkbox.
 
 
 Usage

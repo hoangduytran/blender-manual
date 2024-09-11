@@ -13,6 +13,15 @@ Scalable Vector Graphics (SVG)
    Currently the script allows only importing and is limited to path geometry only.
 
 
+Enabling Add-on
+===============
+
+This add-on is enabled by default, in case it is not:
+
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "Scalable Vector Graphics (SVG)" and check the *Enable Extension* checkbox.
+
+
 Properties
 ==========
 

@@ -12,11 +12,11 @@ VR support in Blender is based on the OpenXR specification and requires some set
 These are explained in the :ref:`Head-Mounted Displays (HMD) <hardware-head-mounted-displays>` section.
 
 
-Activation
-==========
+Enabling Add-on
+===============
 
-- Open Blender and go to Preferences then the Add-ons tab.
-- Click 3D View then VR Scene Inspection to enable the script.
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "VR Scene Inspection" and check the *Enable Extension* checkbox.
 
 
 Interface

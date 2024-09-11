@@ -9,6 +9,15 @@ UV Layout
    :Menu:      :menuselection:`UV Editor --> UV --> Export UV Layout`
 
 
+Enabling Add-on
+===============
+
+This add-on is enabled by default, in case it is not:
+
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "UV Layout" and check the *Enable Extension* checkbox.
+
+
 Usage
 =====
 

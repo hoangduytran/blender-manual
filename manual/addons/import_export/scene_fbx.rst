@@ -9,6 +9,15 @@ FBX
    :Menu:      :menuselection:`File --> Import/Export --> FBX (.fbx)`
 
 
+Enabling Add-on
+===============
+
+This add-on is enabled by default, in case it is not:
+
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "FBX" and check the *Enable Extension* checkbox.
+
+
 Usage
 =====
 

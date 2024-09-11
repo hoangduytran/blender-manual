@@ -6,11 +6,11 @@ Manage UI Translations
 Todo
 
 
-Activation
-==========
+Enabling Add-on
+===============
 
-- Open Blender and go to Preferences then the Add-ons tab.
-- Click System then Manage UI translations to enable the script.
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "Manage UI Translations" and check the *Enable Extension* checkbox.
 
 
 Description

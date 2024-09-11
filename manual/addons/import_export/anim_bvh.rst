@@ -13,6 +13,15 @@ or data of a skeleton (rig) including its animation.
 Useful for importing data from motion capture devices.
 
 
+Enabling Add-on
+===============
+
+This add-on is enabled by default, in case it is not:
+
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "BioVision Motion Capture (BVH) format" and check the *Enable Extension* checkbox.
+
+
 Properties
 ==========
 

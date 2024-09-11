@@ -49,8 +49,8 @@ Ready to go
    Once you generate your rig you won't need Rigify or any other add-on to use it.
 
 
-Activation
-==========
+Enabling Add-on
+===============
 
-- Open Blender and go to Preferences then the Add-ons tab.
-- Click Rigging then Rigify to enable the script.
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "Rigify" and check the *Enable Extension* checkbox.

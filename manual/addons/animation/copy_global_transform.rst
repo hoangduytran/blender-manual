@@ -13,11 +13,11 @@ Since the transform is placed on the clipboard as text, you can even copy-paste
 it into an instant messenger and send it to someone else.
 
 
-Activation
-==========
+Enabling Add-on
+===============
 
-- Open Blender and go to Preferences then the Add-ons tab.
-- Click Animation then Copy Global Transform to enable the add-on.
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "Copy Global Transform" and check the *Enable Extension* checkbox.
 
 
 Interface
