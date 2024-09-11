@@ -85,7 +85,7 @@ When nodes receive inputs with differently sized Images, these rules apply:
 
 So each node in a composite can operate on different sized images as defined by its inputs.
 Only the *Composite* output node has a fixed size,
-as defined by the settings in :menuselection:`Output Properties --> Render --> Format`.
+as defined by the :doc:`Format Output Properties </render/output/properties/format>`
 The *Viewer* node always shows the size from its input, but when not linked
 (or linked to a value) it shows a small 320×256 pixel image.
 
@@ -94,7 +94,7 @@ Saving your Composite Image
 ===========================
 
 The *Render* button renders a single frame or image.
-Save your image using :menuselection:`Image --> Save Image` or :kbd:`Alt-S`.
+Save your image using :ref:`Save Image <bpy.ops.image.save>`.
 The image will be saved using the image format settings on the Render panel.
 
 To save a sequence of images, for example,
