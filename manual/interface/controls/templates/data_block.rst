@@ -31,8 +31,7 @@ Type
          user preference is enabled.
 
 Name
-   Displays, and allows editing of, the name of the selected data-block.
-   If a name is already in use by a different data-block, Blender will append a number like ".001".
+   Displays, and allows :doc:`editing </files/data_blocks#name-rename>` of, the name of the selected data-block.
 User Count
    Displays the number of :term:`users <Data User>` of the data (if there's more than one user).
    Clicking it will create a single-user copy.
