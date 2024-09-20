@@ -282,6 +282,30 @@ The data-block will then never be silently deleted by Blender,
 but you can still manually remove it if needed.
 
 
+.. _data-system-datablock-name-and-rename:
+
+Name & Rename
+=============
+
+Data-blocks names are unique within their namespace. A data-block namespace is defined by its type, and the blendfile it is stored in.
+
+This means that there can be for example an Object and a Mesh named the same, but there cannot be two local objects named the same in a blendfile. However, it is possible to have one local and several linked Objects sharing the same name.
+
+Data-block names have a fixed length of 63 bytes, i.e. 63 basic ASCII characters, or less when using diacritics or non-latin glyphs (the UTF8 encoding will then typically use more than a byte per character).
+
+When Blender has to name a new data-block, or rename an existing one, it will check for name collisions. If a data-block with the same name already exists, the (re)named data-block will get a numeric extension added as a post-fix to its 'root name', like e.g. `.001`. The first available index is used (up to the `999` value, after that the postfix index values are simply incremented until no collision happen anymore).
+
+In case adding the numeric suffix would make the data-block name too long, the root name part will be shortened as needed.
+
+Blender will never rename another data-block when doing automatic naming. So e.g. when adding a new `Cube` object and there are already `Cube` and `Cube.001` local objects, the new one will be named `Cube.002`.
+
+Local data-blocks can be renamed by the user in several places in the UI (like the ID selection widget, or the Outliner view). When renamed from the UI, the behavior in case of name collision is as follow:
+* If the original root name is different than in the new requested name, the renamed data-block gets the first available numerical suffix.
+  - E.g. assuming that there are three objects named `Sphere`, `Cube` and `Cube.001`, renaming `Sphere` to `Cube` will rename the data-block to `Cube.002`.
+* If the original root name is the same as in the new requested name, the renamed data-block gets the requested name, and the conflicting of data-block is renamed accordingly.
+  - E.g. assuming that there are three objects named `Sphere`, `Cube` and `Cube.001`, renaming `Cube.001` to `Cube` will rename the data-block to `Cube`, and the other data-block to `Cube.001`.
+
+
 Sharing
 =======
 
