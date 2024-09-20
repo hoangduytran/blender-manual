@@ -300,9 +300,13 @@ In case adding the numeric suffix would make the data-block name too long, the r
 Blender will never rename another data-block when doing automatic naming. So e.g. when adding a new `Cube` object and there are already `Cube` and `Cube.001` local objects, the new one will be named `Cube.002`.
 
 Local data-blocks can be renamed by the user in several places in the UI (like the ID selection widget, or the Outliner view). When renamed from the UI, the behavior in case of name collision is as follow:
+
 * If the original root name is different than in the new requested name, the renamed data-block gets the first available numerical suffix.
+
   - E.g. assuming that there are three objects named `Sphere`, `Cube` and `Cube.001`, renaming `Sphere` to `Cube` will rename the data-block to `Cube.002`.
+
 * If the original root name is the same as in the new requested name, the renamed data-block gets the requested name, and the conflicting of data-block is renamed accordingly.
+
   - E.g. assuming that there are three objects named `Sphere`, `Cube` and `Cube.001`, renaming `Cube.001` to `Cube` will rename the data-block to `Cube`, and the other data-block to `Cube.001`.
 
 
