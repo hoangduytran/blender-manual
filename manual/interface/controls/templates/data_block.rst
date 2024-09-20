@@ -117,27 +117,28 @@ Eyedropper
    Click the :bl-icon:`x` button on the right to clear the reference.
 
 
-Sub IDs
--------
+ID Sub-Data
+-----------
 
-Related types of IDs may become available to select a property or child object,
-depending on the object type.
+Related types of ID sub-data may become available to select,
+depending on the data-block type and its intended usage.
 
 .. figure:: /images/interface_controls_templates_data-block_subids.png
 
-   Sub ID Example.
+   Sub-data Example.
 
 Vertex Group
-   If the selected object in the *Target* field is a mesh or a lattice,
-   an additional field is displayed where a vertex group can be selected.
+   If the selected Object in the *Target* field is a mesh or a lattice,
+   an additional field may be displayed to select one of its vertex groups.
 Bone
-   If the selected object in the *Target* field is an armature,
-   an additional field is displayed where a bone can be selected.
+   If the selected Object in the *Target* field is an armature,
+   an additional field may be displayed to select one of its bones.
 
    Head/Tail
-      Once a bone is selected, a numeric field becomes available for specifying a point on the bone.
-      A value of 0 corresponds to the bone's head, while a value of 1 corresponds to its tail.
-      Any values between these will result in linear interpolation (so a value of 0.5 matches
+      Once a bone is selected, a numeric field may become available for specifying a point
+      along the bone.
+      A value of **0.0** corresponds to the bone's head, while a value of **1.0** corresponds to its tail.
+      Any values between these will result in linear interpolation (so a value of **0.5** matches
       the bone's center).
 
       Use B-Bone Shape
