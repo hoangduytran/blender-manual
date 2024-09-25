@@ -271,7 +271,7 @@ the :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>`, the output will 
    The *Foreground* input is bigger than the *Background* input in the *Alpha Over* node, so the
    output is intuitively clipped to the *Background* input because it is the domain input.
 
-The :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>` currently doe not support changing
+The :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>` currently does not support changing
 the domain priority for its inputs, so as a workaround, one can use a :ref:`Mix node
 <bpy.types.CompositorNodeMixRGB>` to achieved the desired behavior, noting that the first *Image*
 input in the *Mix* node has the highest domain priority, as shown in the following figure.
