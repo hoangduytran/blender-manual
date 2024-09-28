@@ -15,7 +15,7 @@ The *Track Position node* is used to return information about a tracking marker 
 Inputs
 ======
 
-This node as no inputs.
+This node has no inputs.
 
 
 Properties
