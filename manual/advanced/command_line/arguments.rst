@@ -324,6 +324,9 @@ Debug Options
 ``--debug-gpu-compile-shaders``
    Compile all statically defined shaders to test platform compatibility.
 
+``--debug-gpu-scope-capture``
+   Capture the GPU commands issued inside the give scope name.
+
 ``--debug-gpu-renderdoc``
    Enable Renderdoc integration for GPU frame grabbing and debugging.
 
@@ -361,6 +364,9 @@ Debug Options
 
 ``--verbose`` ``<verbose>``
    Set the logging verbosity level for debug messages that support it.
+
+``-q``, ``--quiet``
+   Suppress status printing (warnings & errors are still printed).
 
 
 .. _command-line-args-gpu-options:
