@@ -1,3 +1,4 @@
+.. _bpy.ops.sound.mixdown:
 
 ************
 Introduction
@@ -15,12 +16,18 @@ Relative Path
 Accuracy
    Sample accuracy, important for animation data (the lower the value, the more accurate).
 
-Audio Containers
+Container
    See :doc:`here </files/media/video_formats>`.
 
-Codec
+Channels
+   Sets the audio channel count.
+
+Format
    Some *Audio Containers* also have option to choose a codec.
    For more information see :doc:`here </files/media/video_formats>`.
+
+Sample Rate
+   Sets the audio `sampling rate <https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate>`__.
 
 Split Channels
    Each audio channel will be rendered into a separate file.
