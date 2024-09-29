@@ -13,7 +13,7 @@ Cursor
 :doc:`Brush </grease_pencil/modes/draw/tools/brush>`
    Tool to use for any of the drawing brushes, see :doc:`/grease_pencil/modes/draw/brushes/overview`.
 
-:ref:`Cutter <tool-grease-pencil-draw-cutter>`
+:ref:`Trim <tool-grease-pencil-draw-trim>`
    Cut strokes in between others.
 
 :ref:`Eyedropper <tool-grease-pencil-draw-eyedropper>`

@@ -275,3 +275,5 @@ RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/weight_proximit
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/materials/introduction.html" "/manual/{lang}/{version}/grease_pencil/materials/index.html"
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/selecting.html" "/manual/{lang}/{version}/grease_pencil/modes/edit/selecting.html"
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/object.html" "/manual/{lang}/{version}/grease_pencil/properties/object.html"
+
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/cutter.html" "/manual/{lang}/{version}/grease_pencil/modes/draw/tools/trim.html"

@@ -8,7 +8,7 @@
    :maxdepth: 2
 
    brush.rst
-   cutter.rst
+   trim.rst
    eyedropper.rst
    line.rst
    polyline.rst

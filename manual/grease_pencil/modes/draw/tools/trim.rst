@@ -1,15 +1,15 @@
-.. _tool-grease-pencil-draw-cutter:
+.. _tool-grease-pencil-draw-trim:
 
-***********
-Cutter Tool
-***********
+*********
+Trim Tool
+*********
 
 .. reference::
 
    :Mode:      Draw Mode
-   :Tool:      :menuselection:`Toolbar --> Cutter`
+   :Tool:      :menuselection:`Toolbar --> Trim`
 
-The Cutter tool delete points in between intersecting strokes.
+The Trim tool delete points in between intersecting strokes.
 
 
 Tool Settings
@@ -27,7 +27,7 @@ Threshold
 Usage
 =====
 
-Draw a dotted line around the strokes you want to be cut.
+Draw a dotted line around the strokes you want to trim.
 After releasing the mouse button all the points on the selected strokes
 will be deleted until another intersecting stroke is found.
 
@@ -41,7 +41,7 @@ will be deleted until another intersecting stroke is found.
      - .. figure:: /images/grease-pencil_modes_draw_tools_cutter_example-02.png
           :width: 200px
 
-          Lasso Selecting the strokes to be cut.
+          Lasso Selecting the strokes to be trimmed.
 
      - .. figure:: /images/grease-pencil_modes_draw_tools_cutter_example-03.png
           :width: 200px
