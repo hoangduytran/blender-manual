@@ -20,7 +20,16 @@ Container
    See :doc:`here </files/media/video_formats>`.
 
 Channels
-   Sets the audio channel count.
+   The number of audio source "locations" to encode.
+   Each channel can be mixed to a separate file by enabling *Split Channels* (see below).
+
+   :Mono: Output a single audio channel.
+   :Stereo: Output two audio channels; typically a left and right channel.
+   :Stereo LFE: Output a two audio channels with a "low-frequency effects" channel for frequencies below 120.
+   :4 Channels: Output a four audio channels.
+   :5.1 Surround:  Output a five audio channels with one :abbr:`LFE (low-frequency effects)` channel.
+   :6.1 Surround: Output a six audio channels with one :abbr:`LFE (low-frequency effects)` channel.
+   :7.1 Surround: Output a seven audio channels with one :abbr:`LFE (low-frequency effects)` channel.
 
 Format
    Some *Audio Containers* also have option to choose a codec.

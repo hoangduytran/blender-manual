@@ -235,7 +235,13 @@ Audio Codec
 .. _bpy.types.FFmpegSettings.audio_channels:
 
 Audio Channels
-   Sets the audio channel count.
+   The number of audio source "locations" to encode.
+
+   :Mono: Output a single audio channel.
+   :Stereo: Output two audio channels; typically a left and right channel.
+   :4 Channels: Output a four audio channels.
+   :5.1 Surround:  Output a five audio channels with one :abbr:`LFE (low-frequency effects)` channel.
+   :7.1 Surround: Output a seven audio channels with one :abbr:`LFE (low-frequency effects)` channel.
 
 .. _bpy.types.FFmpegSettings.audio_mixrate:
 
