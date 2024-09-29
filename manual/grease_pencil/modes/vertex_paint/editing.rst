@@ -3,7 +3,7 @@
 Editing
 *******
 
-.. _bpy.ops.gpencil.vertex_color_set:
+.. _bpy.ops.grease_pencil.vertex_color_set:
 
 Set Color Attribute
 ===================
@@ -16,7 +16,7 @@ Set Color Attribute
 Sets the :ref:`active color <grease-pencil-vertex-paint-brush-color>` to all selected vertices.
 
 
-.. _bpy.ops.gpencil.stroke_reset_vertex_color:
+.. _bpy.ops.grease_pencil.stroke_reset_vertex_color:
 
 Reset Vertex Color
 ==================
@@ -30,7 +30,7 @@ Removes the Color Attribute information of the active strokes,
 if no strokes are selected, all strokes are reset.
 
 
-.. _bpy.ops.gpencil.vertex_color_invert:
+.. _bpy.ops.grease_pencil.vertex_color_invert:
 
 Invert
 ======
@@ -43,7 +43,7 @@ Invert
 Invert RGB values.
 
 
-.. _bpy.ops.gpencil.vertex_color_levels:
+.. _bpy.ops.grease_pencil.vertex_color_levels:
 
 Levels
 ======
@@ -56,7 +56,7 @@ Levels
 Adjust the levels of Color Attributes.
 
 
-.. _bpy.ops.gpencil.vertex_color_hsv:
+.. _bpy.ops.grease_pencil.vertex_color_hsv:
 
 Hue/Saturation/Value
 ====================
@@ -69,7 +69,7 @@ Hue/Saturation/Value
 Adjust the color's HSV values.
 
 
-.. _bpy.ops.gpencil.vertex_color_brightness_contrast:
+.. _bpy.ops.grease_pencil.vertex_color_brightness_contrast:
 
 Brightness/Contrast
 ===================
