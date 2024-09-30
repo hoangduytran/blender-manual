@@ -23,26 +23,40 @@ Color
 Properties
 ==========
 
-Two different correction formulas could be selected.
+Correction Formula
+   The mathematical method to adjust the image's colors.
 
-Lift/Gamma/Gain
-   Lift
-      Increases the value of dark colors.
-   Gamma
-      Adjusts midtones.
-   Gain
-      Adjusts highlights.
+   :Lift/Gamma/Gain:
+      Adjusts the colors and tonal range of an image by controlling the shadows, midtones, and highlights separately.
 
-Offset/Power/Slope (ASC-CDL)
-   Offset
-      Summand. (Adjusts the overall brightness.)
+      Lift
+         Adjusts the darkest areas of the image (the shadows).
+      Gamma
+         Primarily affects the midtones, the middle range of brightness in the image.
+      Gain
+         Controls the brightest parts of the image (the highlights).
 
+   :Offset/Power/Slope (ASC-CDL):
+      A standardized model for adjusting the colors and tonal range of an image.
+      This allows the same values to be used across different application to yield the same result.
+      See `Advanced`_ for more details on the underlying implementation.
+
+      Offset
+         Adjusts the darkest areas of the image (the shadows).
       Basis
-         Additional offset, allows to specify a negative Offset value.
-   Power
-      Over-all exponent. (Adjusts the midtones.)
-   Slope
-      Multiplier. (Adjusts the highlights.)
+         Additional offset, allows to specify a negative offset value.
+      Power
+         Primarily affects the midtones, the middle range of brightness in the image.
+      Slope
+         Controls the brightest parts of the image (the highlights).
+   :White Point:
+      Adjusts the color that should be considered white.
+      The white point is specified as setting the inputs color temperature and then the desired output temperature.
+
+      Temperature
+         The blackbody temperature of the primary illuminant. By default a D65 white point is used.
+      Tint
+         The amount of green/magenta shift of the blackbody curve.
 
 
 Outputs
@@ -58,7 +72,7 @@ Advanced
 The Offset/Power/Slope Formula
 ------------------------------
 
-*out* = (*i* × *s* + *o*)\ :sup:`p`
+:math:`\text{out} = (i \times s + o)^p`
 
 where:
 
