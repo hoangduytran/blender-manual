@@ -71,7 +71,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # Change the values according to your extension
    id = "my_example_extension"
    version = "1.0.0"
-   name = "Test Extension"
+   name = "My Example Extension"
    tagline = "This is another extension"
    maintainer = "Developer name <email@address.com>"
    # Supported types: "add-on", "theme"
