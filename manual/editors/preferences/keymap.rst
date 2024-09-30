@@ -110,7 +110,7 @@ Active
 Map Type
    :Keyboard: Single hotkey or key combination.
    :Mouse: Actions from mouse buttons, tablet or touchpad input.
-   :NDOF: Movement from a 3D mouse (:term:`NDOF`) device.
+   :NDOF: Movement or button from a 3D mouse (:term:`NDOF`) device.
    :Tweak: Mouse click and drag *(optionally map drag direction to different actions)*.
    :Text Input: Use this function by entering a text.
    :Timer:
