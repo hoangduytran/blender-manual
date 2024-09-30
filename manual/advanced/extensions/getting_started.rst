@@ -77,12 +77,12 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # Supported types: "add-on", "theme"
    type = "add-on"
 
-   # Optional link to documentation, support, source files, etc
+   # # Optional: link to documentation, support, source files, etc
    # website = "https://extensions.blender.org/add-ons/my-example-package/"
 
-   # Optional list defined by Blender and server, see:
-   # https://docs.blender.org/manual/en/dev/advanced/extensions/tags.html
-   tags = ["Animation", "Sequencer"]
+   # # Optional: tag list defined by Blender and server, see:
+   # # https://docs.blender.org/manual/en/dev/advanced/extensions/tags.html
+   # tags = ["Animation", "Sequencer"]
 
    blender_version_min = "4.2.0"
    # # Optional: Blender version that the extension does not support, earlier versions are supported.
@@ -94,18 +94,18 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    license = [
      "SPDX:GPL-3.0-or-later",
    ]
-   # Optional: required by some licenses.
+   # # Optional: required by some licenses.
    # copyright = [
    #   "2002-2024 Developer Name",
    #   "1998 Company Name",
    # ]
 
-   # Optional list of supported platforms. If omitted, the extension will be available in all operating systems.
+   # # Optional: list of supported platforms. If omitted, the extension will be available in all operating systems.
    # platforms = ["windows-x64", "macos-arm64", "linux-x64"]
-   # Other supported platforms: "windows-arm64", "macos-x64"
+   # # Other supported platforms: "windows-arm64", "macos-x64"
 
-   # Optional: bundle 3rd party Python modules.
-   # https://docs.blender.org/manual/en/dev/advanced/extensions/python_wheels.html
+   # # Optional: bundle 3rd party Python modules.
+   # # https://docs.blender.org/manual/en/dev/advanced/extensions/python_wheels.html
    # wheels = [
    #   "./wheels/hexdump-3.3-py3-none-any.whl",
    #   "./wheels/jsmin-3.0.1-py3-none-any.whl",
@@ -130,9 +130,11 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # files = "Import/export FBX from/to disk"
    # clipboard = "Copy and paste bone transforms"
 
-   # Optional: build settings.
-   # https://docs.blender.org/manual/en/dev/advanced/extensions/command_line_arguments.html#command-line-args-extension-build
+   # # Optional: advanced build settings.
+   # # https://docs.blender.org/manual/en/dev/advanced/extensions/command_line_arguments.html#command-line-args-extension-build
    # [build]
+   # # These are the default build excluded patterns.
+   # # You only need to edit them if you want different options.
    # paths_exclude_pattern = [
    #   "__pycache__/",
    #   "/.git/",
