@@ -31,7 +31,8 @@ Type
          user preference is enabled.
 
 Name
-   Displays, and allows :ref:`editing <data-system-datablock-name-and-rename>` of, the name of the selected data-block.
+   Displays, and allows :ref:`editing <data-system-datablock-name-and-rename>` of, the name of the selected
+   data-block.
 User Count
    Displays the number of :term:`users <Data User>` of the data (if there's more than one user).
    Clicking it will create a single-user copy.

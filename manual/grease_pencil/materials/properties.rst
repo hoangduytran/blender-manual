@@ -269,7 +269,8 @@ Holdout
 .. _bpy.types.MaterialGPencilStyle.mix_factor:
 
 Blend :guilabel:`Gradient / Texture`
-   The amount that the *Secondary Color* (for *Gradient Style*) or image texture (for Texture Style) Mixxes with the *Base Color*.
+   The amount that the *Secondary Color* (for *Gradient Style*) or image texture (for Texture Style) Mixxes with the
+   *Base Color*.
 
 .. _bpy.types.MaterialGPencilStyle.flip:
 

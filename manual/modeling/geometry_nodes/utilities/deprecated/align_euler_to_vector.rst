@@ -13,7 +13,8 @@ The *Align Euler to Vector* node rotates an Euler rotation into the given direct
 
 .. important::
 
-   This node is deprecated, use the :doc:`/modeling/geometry_nodes/utilities/rotation/align_rotation_to_vector` instead.
+   This node is deprecated, use the :doc:`/modeling/geometry_nodes/utilities/rotation/align_rotation_to_vector`
+   instead.
 
 
 Inputs
