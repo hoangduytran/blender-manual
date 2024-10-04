@@ -206,7 +206,7 @@ Slice to New Object
    Create a new object from the masked geometry.
 
 
-.. _bpy.ops.sculpt.dirty_mask:
+.. _bpy.ops.sculpt.mask_from_cavity:
 
 Mask From Cavity
 ================
@@ -235,6 +235,53 @@ Invert
 Custom Curve
    Same as :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
 
+
+.. _bpy.ops.sculpt.mask_from_mesh_boundary:
+
+Mask From Mesh Boundary
+=======================
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Mask --> Mask from Mesh Boundary`
+
+Generates a mask based on the topological islands of the mesh. The settings of the operation can be changed
+in the :doc:`Adjust Last Operation </interface/undo_redo>` panel.
+
+Mode
+   Choose how the newly created mask is mixed with the existing one. By default it will replace the old mask via
+   "Mix".
+Mix Factor
+   The factor of the mix effect. Choose how strong the new mask is applied on the existing one.
+Automask Settings
+   The same settings as the :doc:`Auto-Masking </sculpt_paint/sculpting/controls>` settings are applied.
+Propagation Steps
+   Same as :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
+
+
+.. _bpy.ops.sculpt.mask_from_face_sets_boundary:
+
+Mask From Face Sets Boundary
+============================
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Mask --> Mask from Face Sets Boundary`
+
+Generates a mask based on the face set islands of the mesh. The settings of the operation can be changed
+in the :doc:`Adjust Last Operation </interface/undo_redo>` panel.
+
+Mode
+   Choose how the newly created mask is mixed with the existing one. By default it will replace the old mask via
+   "Mix".
+Mix Factor
+   The factor of the mix effect. Choose how strong the new mask is applied on the existing one.
+Automask Settings
+   The same settings as the :doc:`Auto-Masking </sculpt_paint/sculpting/controls>` settings are applied.
+Propagation Steps
+   Same as :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
 
 .. _bpy.ops.sculpt.mask_init:
 
