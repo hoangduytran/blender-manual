@@ -60,6 +60,11 @@ The *Mirror* tool is also available, behaving exactly the same as with
 :doc:`mesh vertices </modeling/meshes/editing/mesh/mirror>`.
 
 
+.. _bpy.ops.grease_pencil.snap_to_grid:
+.. _bpy.ops.grease_pencil.snap_to_cursor:
+.. _bpy.ops.grease_pencil.snap_cursor_to_selected:
+.. _bpy.ops.view3d.snap_cursor_to_center:
+
 Snap
 ====
 
@@ -85,32 +90,20 @@ Active Layer
 Select the active layer.
 
 
-Animation
-=========
+.. Animation
+.. =========
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode, Draw Mode
-   :Menu:      :menuselection:`Grease Pencil --> Animation`
-   :Shortcut:  :kbd:`I`
+..    :Mode:      Edit Mode, Draw Mode
+..    :Menu:      :menuselection:`Grease Pencil --> Animation`
+..    :Shortcut:  :kbd:`I`
 
-The stroke animation tools are described
-in the :doc:`Animation </grease_pencil/animation/tools>` section.
-
-
-Interpolation
-=============
-
-.. reference::
-
-   :Mode:      Edit Mode, Draw Mode
-   :Menu:      :menuselection:`Grease Pencil --> Interpolation`
-
-The stroke animation tools are described
-in the :ref:`Animation <grease-pencil-animation-tools-interpolation>` section.
+.. The stroke animation tools are described
+.. in the :doc:`Animation </grease_pencil/animation/tools>` section.
 
 
-.. _bpy.ops.gpencil.duplicate_move:
+.. _bpy.ops.grease_pencil.duplicate_move:
 
 Duplicate
 =========
@@ -126,22 +119,22 @@ with the rest of the strokes (unlike *Extrude*, for example),
 and places the duplicate at the location of the original elements.
 
 
-.. _bpy.ops.gpencil.stroke_split:
+.. .. _bpy.ops.gpencil.stroke_split:
 
-Split
-=====
+.. Split
+.. =====
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Grease Pencil --> Split`
-   :Shortcut:  :kbd:`V`
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Grease Pencil --> Split`
+..    :Shortcut:  :kbd:`V`
 
-Splits (disconnects) the selected points from the rest of the stroke.
-The separated points are left exactly at the same position as the original points but they belong to a new stroke.
+.. Splits (disconnects) the selected points from the rest of the stroke.
+.. The separated points are left exactly at the same position as the original points but they belong to a new stroke.
 
 
-.. _bpy.ops.gpencil.copy:
+.. _bpy.ops.grease_pencil.copy:
 
 Copy
 ====
@@ -155,27 +148,70 @@ Copy
 Copy the selected points/strokes to the clipboard.
 
 
-.. _bpy.ops.gpencil.paste:
+.. _bpy.ops.grease_pencil.paste:
 
-Paste & Paste by Layer
-======================
+Paste
+=====
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Grease Pencil --> Paste`, :menuselection:`Grease Pencil --> Paste by Layer`
+   :Menu:      :menuselection:`Grease Pencil --> Paste`
    :Shortcut:  :kbd:`Ctrl-V`
 
-Type
-   Paste to Active
-      Pastes the points/strokes copied from the clipboard into the active layer.
-      This is the default behavior and the mode used when using :menuselection:`Grease Pencil --> Paste`.
+Paste Grease Pencil points or strokes from the internal clipboard to the active layer.
 
-   Paste by Layer
-      Pastes the points/strokes copied from the clipboard into the layer they were copied from.
+Paste on Back
+    Add pasted strokes behind all strokes.
+Keep World Transform
+   Keep the world transform of strokes from the clipboard unchanged.
 
 
-.. _bpy.ops.gpencil.stroke_separate:
+Show/Hide
+=========
+
+Contains operators to adjust the visibility of points and strokes in the viewport.
+
+
+Show All Layers
+---------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Show/Hide --> Show All Layers`
+   :Shortcut:  :kbd:`Alt-H`
+
+Shows all Grease Pencil :doc:`layers </grease_pencil/properties/layers>`.
+
+
+.. _bpy.ops.grease_pencil.layer_hide:
+
+Hide Active Layer
+------------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Show/Hide --> Hide Active Layer`
+   :Shortcut:  :kbd:`H`
+
+Hides the active Grease Pencil :doc:`layers </grease_pencil/properties/layers>`.
+
+
+Hide Inactive Layers
+--------------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Show/Hide --> Hide Active Layer`
+   :Shortcut:  :kbd:`Shift-H`
+
+Hides the all Grease Pencil :doc:`layers </grease_pencil/properties/layers>` except the active layer.
+
+
+.. _bpy.ops.grease_pencil.separate:
 
 Separate
 ========
@@ -186,15 +222,12 @@ Separate
    :Menu:      :menuselection:`Grease Pencil --> Separate`
    :Shortcut:  :kbd:`P`
 
-Separate the selected elements into a new Grease Pencil object.
+Separate the selected geometry into a new Grease Pencil object.
 
 Selected Points
-   Separate the selected points into a new object.
-
-Selected Strokes
-   Separate the selected strokes into a new object.
-   If one point of a stroke is selected, the entire stroke will be separated.
-
+   Separate the selected geometry into a new object.
+Material
+   Separates the geometry by each material.
 Active Layer
    Separate all the strokes in the active layer into a new object.
    See :doc:`2D Layers </grease_pencil/properties/layers>` for more information.
@@ -206,73 +239,54 @@ Clean Up
 These tools help to cleanup degenerate geometry on the strokes.
 
 
-.. _bpy.ops.gpencil.frame_clean_fill:
+.. .. _bpy.ops.gpencil.frame_clean_fill:
 
-Boundary Strokes
-----------------
+.. Boundary Strokes
+.. ----------------
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Boundary Strokes`
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Boundary Strokes`
 
-Removes boundary strokes used by the *Fill* tool.
-See :doc:`Fill tool </grease_pencil/modes/draw/brushes/fill>` for more information.
+.. Removes boundary strokes used by the *Fill* tool.
+.. See :doc:`Fill tool </grease_pencil/modes/draw/brushes/fill>` for more information.
 
-Mode
-   Active Frame Only
-      Removes boundary strokes from the current frame.
-   All Frames
-      Removes boundary strokes from all frames.
-
-
-Boundary Strokes All Frames
----------------------------
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Boundary Strokes all Frames`
-
-Same as `Boundary Strokes`_ but *Mode* is set to *All Frames*.
+.. Mode
+..    Active Frame Only
+..       Removes boundary strokes from the current frame.
+..    All Frames
+..       Removes boundary strokes from all frames.
 
 
-.. _bpy.ops.gpencil.frame_clean_loose:
+.. Boundary Strokes All Frames
+.. ---------------------------
 
-Delete Loose Points
--------------------
+.. .. reference::
+
+..    :Mode:      Edit Mode
+..    :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Boundary Strokes all Frames`
+
+.. Same as `Boundary Strokes`_ but *Mode* is set to *All Frames*.
+
+
+.. _bpy.ops.grease_pencil.clean_loose:
+
+Clean Loose Points
+------------------
 
 .. reference::
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Delete Loose Points`
 
-Removes unconnected points.
+Removes strokes with only a few points.
+
+Limit
+   The number of points to consider a stroke as loose.
 
 
-.. _bpy.ops.gpencil.stroke_merge_by_distance:
-
-Merge by Distance
------------------
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Merge by Distance`
-
-*Merge by Distance* is a useful tool to simplify a stroke by merging
-the selected points that are closer than a specified distance to each other.
-Note, unless using *Unselected*, selected points must be contiguous,
-else they will not be merged.
-
-Merge Distance
-   Sets the distance threshold for merging points.
-Unselected
-   Allows points in selection to be merged with unselected points.
-   When disabled, selected points will only be merged with other selected ones.
-
-
-.. _bpy.ops.gpencil.frame_clean_duplicate:
+.. _bpy.ops.grease_pencil.frame_clean_duplicate:
 
 Delete Duplicate Frames
 -----------------------
@@ -285,7 +299,27 @@ Delete Duplicate Frames
 Removes any duplicate keyframes.
 
 
-.. _bpy.ops.gpencil.reproject:
+.. _bpy.ops.grease_pencil.stroke_merge_by_distance:
+
+Merge by Distance
+-----------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Merge by Distance`
+
+Simplifies a stroke by merging the selected points that are closer than a specified distance to each other.
+Note, unless using *Unselected*, selected points must be contiguous, else they will not be merged.
+
+Merge Distance
+   Sets the distance threshold for merging points.
+Unselected
+   Allows points in selection to be merged with unselected points.
+   When disabled, selected points will only be merged with other selected ones.
+
+
+.. _bpy.ops.grease_pencil.reproject:
 
 Reproject
 ---------
@@ -305,10 +339,10 @@ Reprojected Type
    :Top: Reproject selected strokes onto the top plane (XY).
    :View: Reproject selected strokes onto the current view.
    :Surface: Reproject selected strokes onto the mesh surfaces.
-   :Cursor: Reproject selected strokes onto 3D cursor rotation.
 
-Surface Offset
-   When Surface Mode is activated controls the stroke offset from the object.
+      Surface Offset
+         When Surface Mode is activated controls the stroke offset from the object.
+   :Cursor: Reproject selected strokes onto 3D cursor rotation.
 
 Keep Original
    Maintains the original strokes after applying the tool.
@@ -336,23 +370,20 @@ Keep Original
           Drawing after reprojection operation from the front view.
 
 
-.. _bpy.ops.gpencil.recalc_geometry:
+.. .. _bpy.ops.gpencil.recalc_geometry:
 
-Recalculate Geometry
-====================
+.. Recalculate Geometry
+.. --------------------
 
-.. reference::
+.. .. reference::
 
-   :Mode:      Edit Mode and Draw Mode
-   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Recalculate Geometry`
+..    :Mode:      Edit Mode and Draw Mode
+..    :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Recalculate Geometry`
 
-This operator updates all internal geometry data.
-It is not intended that you will have to use this operator
-but it can help in cases where strokes are drawn in a strange way or when you opened an old file.
+.. This operator updates all internal geometry data.
+.. It is not intended that you will have to use this operator
+.. but it can help in cases where strokes are drawn in a strange way or when you opened an old file.
 
-
-.. _bpy.ops.gpencil.delete:
-.. _bpy.ops.gpencil.dissolve:
 
 Delete
 ======
@@ -361,32 +392,86 @@ Delete
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Grease Pencil --> Delete`
-   :Shortcut:  :kbd:`X`, :kbd:`Delete`, :kbd:`Ctrl-X`
+   :Shortcut:  :kbd:`X`, :kbd:`Delete`
 
-Options for the Erase pop-up menu:
-
-Points
-   Deletes the selected points.
-   When only one point remains, there is no more visible stroke,
-   and when all points are deleted, the stroke itself is deleted.
-
-Strokes
-   Deletes all the strokes that selected points belongs to.
+Opens a pop-up menu with operators to remove geometry from the grease pencil object.
 
 Frames
    Deletes all the strokes at the current frame and in the current layer/channel.
 
-Dissolve :kbd:`Ctrl-X`
+
+.. _bpy.ops.grease_pencil.delete:
+
+Delete
+------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Delete --> Delete`
+
+Deletes the selected points.
+When only one point remains, there is no more visible stroke,
+and when all points are deleted, the stroke itself is deleted.
+
+
+.. _bpy.ops.grease_pencil.dissolve:
+
+Dissolve
+--------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Delete --> Dissolve`
+   :Shortcut:  :kbd:`Ctrl-X`
+
+Dissolving removes points between other points and connect the remaining points.
+
+:kbd:`Ctrl-X` Opens a pop-up to choose the dissolve type.
+
+Dissolve
    Deletes the selected points without splitting the stroke.
    The remaining points in the strokes stay connected.
-
-Dissolve between :kbd:`Ctrl-X`
+Dissolve Between
    Deletes all the points between the selected points without splitting the stroke.
    The remaining points in the strokes stay connected.
-
-Dissolve Unselect :kbd:`Ctrl-X`
+Dissolve Unselect
    Deletes all the points that are not selected in the stroke without splitting the stroke.
    The remaining points in the strokes stay connected.
 
-Delete All Active Frames
-   Deletes all the strokes at the current frame in all layers/channels.
+
+.. _bpy.ops.grease_pencil.delete_frame:
+
+Delete Active Keyframe (Active Layer)
+-------------------------------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Delete --> Delete Active Keyframe (Active Layer)`
+
+Deletes all the strokes at the current frame in the active layer.
+
+
+Delete Active Keyframes (All Layers)
+------------------------------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Delete --> Delete Active Keyframes (All Layers)`
+   :Shortcut:  :kbd:`Shift-Delete`
+
+Deletes all the strokes at the current frame in all layer.
+
+
+Interpolate Sequence
+====================
+
+.. reference::
+
+   :Mode:      Edit Mode, Draw Mode
+   :Menu:      :menuselection:`Grease Pencil --> Interpolate Sequence`
+
+See :ref:`bpy.ops.gpencil.interpolate_sequence`.

@@ -116,7 +116,7 @@ Projection Type
    Sets the projection type to use for the converted strokes.
 
 
-.. _bpy.ops.gpencil.bake_grease_pencil_animation:
+.. _bpy.ops.grease_pencil.bake_grease_pencil_animation:
 
 Bake Object Transform to Grease Pencil
 ======================================
@@ -124,7 +124,7 @@ Bake Object Transform to Grease Pencil
 .. reference::
 
    :Editor:    3D Viewport
-   :Mode:      Object and Pose Modes
+   :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Animation --> Bake Object Transform to Grease Pencil`
 
 Applies all transform animation at Object level within a selected frame range to Grease Pencil object keyframes.

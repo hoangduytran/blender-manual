@@ -30,7 +30,7 @@ View Type
    The default view, for placing and tracking markers.
 :doc:`Graph </movie_clip/tracking/graph>`
    Plots the movement speed of the markers on a graph.
-:doc:`Dopesheet </movie_clip/tracking/dope_sheet>`
+:doc:`Dope Sheet </movie_clip/tracking/dope_sheet>`
    Shows an overview of marker keyframes on a timeline.
 
 View Menu

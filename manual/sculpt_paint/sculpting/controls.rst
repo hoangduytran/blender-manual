@@ -61,12 +61,20 @@ Mesh Boundary
       Each step iterates the distance one edge further.
       This setting is used for both Mesh Boundary and Face Sets Boundary.
 
+   Create Mask
+      This will execute the :ref:`bpy.ops.sculpt.mask_from_mesh_boundary` operator with the current auto-masking settings.
+      This is very useful to visualize the current auto-mask, or to edit the mask further manually.
+
 .. _bpy.types.Sculpt.use_automasking_boundary_face_sets:
 
 Face Sets Boundary
    Vertices that are part of a boundary between face sets are not affected.
    This also includes boundary edges to hidden faces.
    Propagation Steps are shared with Mesh Boundary auto-masking.
+
+   Create Mask
+      This will execute the :ref:`bpy.ops.sculpt.mask_from_face_sets_boundary` operator with the current auto-masking settings.
+      This is very useful to visualize the current auto-mask, or to edit the mask further manually.
 
 .. _bpy.types.Sculpt.use_automasking_cavity:
 
@@ -89,7 +97,7 @@ Cavity
       This is very useful if only small crevices or flat surfaces should be affected.
       Or for example if the contrast should be increased/decreased in a specific way.
    Create Mask
-      This will execute the :ref:`bpy.ops.sculpt.dirty_mask` operator with the current auto-masking settings.
+      This will execute the :ref:`bpy.ops.sculpt.mask_from_cavity` operator with the current auto-masking settings.
       This is very useful to visualize the current auto-mask, or to edit the mask further manually.
 
 .. _bpy.types.Sculpt.use_automasking_cavity_inverted:
