@@ -104,21 +104,29 @@ Less
    Conversely, the same goes when no points are selected.
 
 
-.. .. _bpy.ops.gpencil.select_grouped:
+.. _bpy.ops.grease_pencil.select_similar:
 
-.. Select Grouped
-.. ==============
+Select Similar
+==============
 
 .. .. reference::
 
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Select --> Select Grouped`
-..    :Shortcut:  :kbd:`Shift-G`
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select Similar`
 
-.. Layer
-..    Selects all the points/strokes on the same layer.
-.. Material
-..    Selects all the points/strokes that share the same material.
+Select all strokes with similar characteristics.
+
+Mode
+   The characteristics to compare.
+
+   :Layer: Selects all the points/strokes with a similar layer index.
+   :Material: Selects all the points/strokes with a similar material index.
+   :Vertex Color: Selects all the points/strokes with a similar vertex color.
+   :Radius: Selects all the points/strokes with a similar stroke radius.
+   :Opacity: Selects all the points/strokes with a similar layer opacity
+
+Threshold
+   How similar the selection must be.
 
 
 .. _bpy.ops.grease_pencil.select_linked:
