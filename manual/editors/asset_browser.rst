@@ -47,14 +47,18 @@ Source List Region
 
 The Source List region can be used for navigating and `Using Assets`_.
 
-.. _bpy.types.FileAssetSelectParams.asset_library_ref:
+.. _bpy.types.FileAssetSelectParams.asset_library_reference:
 
 Asset Library
    Shows the active :doc:`asset library </files/asset_libraries/index>`,
    and allows switching between asset libraries.
-   The library ":ref:`Current File <asset-library-current-file>`" is special,
-   and will always show the assets from the current blend-file,
-   regardless of whether it is part of an asset library or not.
+
+   :All Libraries: Show assets from all of the listed asset libraries.
+   :Current File:
+      Show the assets currently available in this Blender session,
+      regardless of whether it is part of an asset library or not.
+      See :ref:`asset-library-current-file` for more information.
+   :Essentials: Show the basic building blocks and utilities coming with Blender.
 
 .. _bpy.ops.asset.bundle_install:
 
