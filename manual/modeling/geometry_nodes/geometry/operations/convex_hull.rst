@@ -25,13 +25,13 @@ Inputs
 ======
 
 Geometry
-   Standard geometry inputs.
+   Standard geometry input.
 
 
 Properties
 ==========
 
-This node has not properties.
+This node has no properties.
 
 
 Outputs
