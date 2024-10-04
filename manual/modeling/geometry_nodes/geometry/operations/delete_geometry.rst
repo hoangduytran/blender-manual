@@ -35,14 +35,14 @@ Domain
    :Edge:
       The selection is on the edges of the mesh component. The other components
       are not modified.
-   :Faces:
+   :Face:
       The selection is on the faces of the mesh component. The other components
       are not modified.
    :Spline:
       The selection is on the splines in the curve component. For each spline, it
       will either be deleted entirely or not at all. The other components are not
       modified.
-   :Instances:
+   :Instance:
       The selection is on the top-level instances, and the entire instance is
       removed if it is selected. If the input also contains realized geometry,
       that will be unaffected.
