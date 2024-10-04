@@ -204,22 +204,28 @@ Transform
 Allows per-layer location, rotation and scale transformations.
 
 
-.. Adjustments
-.. ===========
+Adjustments
+===========
 
-.. .. figure:: /images/grease-pencil_properties_layers_adjustment.png
-..    :align: right
+.. figure:: /images/grease-pencil_properties_layers_adjustment.png
+   :align: right
 
-..    Layers adjustment panel.
+   Layers adjustment panel.
 
-.. Tint Color
-..    Color that tint any material colors used in the layer.
+.. _bpy.types.GreasePencilLayer.radius_offset:
 
-.. Factor
-..    Controls the amount of tint color to apply.
+Tint Color
+   Color that tint any material colors used in the layer.
 
-.. Stroke Thickness
-..    Thickness value that override the strokes thickness in the layer.
+.. _bpy.types.GreasePencilLayer.tint_factor:
+
+Factor
+   Controls the amount of tint color to apply.
+
+.. _bpy.types.GreasePencilLayer.radius_offset:
+
+Stroke Thickness
+   Thickness value that override the strokes thickness in the layer.
 
 
 Relations
