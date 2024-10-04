@@ -484,3 +484,16 @@ Set Curve Resolution
    :Menu:      :menuselection:`Stroke --> Set Curve Resolution`
 
 Sets the :ref:`Curve Resolution <bpy.types.GreasePencil.edit_curve_resolution>` value.
+
+
+.. _bpy.ops.grease_pencil.reset_uvs:
+
+Reset UVs
+=========
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Set Curve Resolution`
+
+Reset UV transformation to default values.
