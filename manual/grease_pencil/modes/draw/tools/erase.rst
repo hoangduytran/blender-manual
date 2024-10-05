@@ -1,18 +1,33 @@
+.. _tool-grease-pencil-draw-erase:
 
-***********
-Erase Brush
-***********
+**********
+Erase Tool
+**********
 
 .. reference::
 
    :Mode:      Draw Mode
-   :Brush:     :menuselection:`Asset Shelf --> Erase`
+   :Tool:      :menuselection:`Toolbar --> Brush`
 
-The Erase brush erases already drawn strokes.
+The Erase tool erases already drawn strokes.
+
+The Erase tool uses any of the Grease Pencil *Erase* draw mode brushes.
+Activating a brush from an asset shelf or brush selector will also activate this tool for convenience.
+
+
+Tool Settings
+=============
+
+Brush Asset
+-----------
+
+The asset selector can be used to open a pop-up asset browser to select the active brush asset for the tool.
+
+See :ref:`brush-management-utility-operators` for more information.
 
 
 Brush Settings
-==============
+--------------
 
 Radius
    The radius of the brush in pixels.
@@ -46,7 +61,7 @@ Mode
 
 
 Cursor
-------
+^^^^^^
 
 The cursor can be disabled by toggling the checkbox in the *Cursor* pop-over menu.
 

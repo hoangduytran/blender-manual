@@ -8,6 +8,4 @@
 
    overview.rst
    draw.rst
-   fill.rst
-   erase.rst
    tint.rst

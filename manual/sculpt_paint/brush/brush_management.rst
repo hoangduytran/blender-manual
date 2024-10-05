@@ -13,6 +13,7 @@ any Blender session. There are two ways of managing brush assets:
   blend files within asset libraries, and managing brush asset data-blocks in there. Useful for
   careful curation of asset libraries, especially to prepare them for sharing with others.
 
+
 .. _brush-management-utility-operators:
 
 Asset Operators

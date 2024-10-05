@@ -474,4 +474,4 @@ Interpolate Sequence
    :Mode:      Edit Mode, Draw Mode
    :Menu:      :menuselection:`Grease Pencil --> Interpolate Sequence`
 
-See :ref:`bpy.ops.gpencil.interpolate_sequence`.
+See :ref:`bpy.ops.grease_pencil.interpolate_sequence`.

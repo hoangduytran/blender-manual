@@ -8,6 +8,8 @@
    :maxdepth: 2
 
    brush.rst
+   erase.rst
+   fill.rst
    trim.rst
    eyedropper.rst
    line.rst
