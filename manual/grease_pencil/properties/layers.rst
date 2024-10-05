@@ -10,17 +10,14 @@ Layers
    :Panel:     :menuselection:`Object Data tab --> Layers`
    :Shortcut:  :kbd:`Y`
 
-
-Layers List
-===========
-
 .. figure:: /images/grease-pencil_properties_layers_panel.png
    :align: right
 
    Grease Pencil Layers panel.
 
-Grease Pencil objects each have a list of 2D layers for grouping and arranging strokes
-in a :ref:`List view <ui-list-view>`. Any stroke can only belong to a single 2D layer.
+Grease Pencil objects can be organized into a tree known as layers for grouping and arranging strokes.
+
+Any stroke can only belong to a single 2D layer.
 There is always only one active layer in the list (the selected one).
 When you draw, the new strokes are added to the active layer.
 By default the view order of the layers in the viewport is top to bottom.
@@ -51,27 +48,28 @@ the layer becomes prepared to be masked by other layer(s).
    Activate *Fade Inactive Layers* in overlays to control the opacity of the non-active layers.
    See :doc:`Overlays </editors/3dview/display/overlays>` for more information.
 
-Next to the layer name there are four icons buttons that control common properties of the layer:
+Layers List
+   :ref:`List view <ui-list-view>` of all layers for the Grease Pencil object.
 
-Use Mask (mask icon)
-   Toggle the affect of :ref:`Masks <bpy.types.GreasePencilLayer.use_masks>` on the layer.
+   Next to the layer name there are four icons buttons that control common properties of the layer:
 
-.. _bpy.types.GreasePencilLayer.use_onion_skinning:
+   Use Mask (mask icon)
+      Toggle the affect of :ref:`Masks <bpy.types.GreasePencilLayer.use_masks>` on the layer.
 
-Onion Skinning (onion skin icon)
-   Toggle using the layer for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
+   .. _bpy.types.GreasePencilLayer.use_onion_skinning:
 
-.. _bpy.types.GreasePencilLayer.hide:
+   Onion Skinning (onion skin icon)
+      Toggle using the layer for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
 
-Hide (eye icon)
-   Toggle layer visibility in the viewport and in render.
+   .. _bpy.types.GreasePencilLayer.hide:
 
-.. _bpy.types.GreasePencilLayer.lock:
+   Hide (eye icon)
+      Toggle layer visibility in the viewport and in render.
 
-Lock (padlock icon)
-   Toggle layer from being editable.
+   .. _bpy.types.GreasePencilLayer.lock:
 
-----
+   Lock (padlock icon)
+      Toggle layer from being editable.
 
 Layer Specials
    Operators for working with layers.
@@ -132,8 +130,6 @@ Layer Specials
 
 .. Isolate Lock (padlock icon)
 ..    Toggle whether the active layer is the only one that can be edited.
-
-----
 
 Below the layers list there are additional settings:
 
