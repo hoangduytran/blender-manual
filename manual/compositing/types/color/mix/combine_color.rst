@@ -32,7 +32,7 @@ Mode
    :RGB: Combine the three inputs: Red, Green, and Blue color channels into a single image.
    :HSV: Combine the three inputs: Hue, Saturation, and Value color channels into a single image.
    :HSL: Combine the three inputs: Hue, Saturation, and Lightness color channels into a single image.
-   :YCbCrA:
+   :YCbCr:
       Combine the three inputs: Luminance, Chrominance Blue, and Chrominance Red color channels into a single image.
 
       Color Space
