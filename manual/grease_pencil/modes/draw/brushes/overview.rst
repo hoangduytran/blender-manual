@@ -9,11 +9,5 @@ overview of all of them.
 :doc:`Draw <draw>`
    Draw free-hand strokes.
 
-:doc:`Fill <fill>`
-   Automatic fill closed strokes areas.
-
-:doc:`Erase <erase>`
-   Erase strokes.
-
 :doc:`Tint <tint>`
    Colorize stroke points.

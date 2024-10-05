@@ -1,18 +1,33 @@
+.. _tool-grease-pencil-draw-fill:
 
-**********
-Fill Brush
-**********
+*********
+Fill Tool
+*********
 
 .. reference::
 
    :Mode:      Draw Mode
-   :Brush:      :menuselection:`Asset Shelf --> Fill`
+   :Tool:      :menuselection:`Toolbar --> Fill`
 
-The Fill brush is used to automatically fill closed strokes areas.
+The Fill tool is used to automatically fill closed strokes areas.
+
+The Fill tool uses any of the Grease Pencil *Fill* draw mode brushes.
+Activating a brush from an asset shelf or brush selector will also activate this tool for convenience.
+
+
+Tool Settings
+=============
+
+Brush Asset
+-----------
+
+The asset selector can be used to open a pop-up asset browser to select the active brush asset for the tool.
+
+See :ref:`brush-management-utility-operators` for more information.
 
 
 Brush Settings
-==============
+--------------
 
 You can also configure the brush main settings exposed on the Tool Settings for convenience.
 
@@ -42,7 +57,7 @@ Thickness
 
 
 Advanced
---------
+^^^^^^^^
 
 .. _bpy.types.BrushGpencilSettings.fill_draw_mode:
 
@@ -91,7 +106,7 @@ Limit to Viewport
 
 
 Gap Closure
-^^^^^^^^^^^
+"""""""""""
 
 Gap closure lines are automatic temporarily lines that help to close gaps on the strokes.
 
@@ -242,9 +257,9 @@ click again to fill the area.
           Use Fill Tool to leak material on the new closed area.
 
 
-Switch to Draw Tool
--------------------
+.. Switch to Draw Tool
+.. -------------------
 
-Use :kbd:`Ctrl-LMB` to change temporary to the active draw tool.
-For example to manually cover small areas difficult to reach for the Fill tool.
-See :doc:`Draw Tool </grease_pencil/modes/draw/brushes/draw>` for more information.
+.. Use :kbd:`Ctrl-LMB` to change temporary to the active draw tool.
+.. For example to manually cover small areas difficult to reach for the Fill tool.
+.. See :doc:`Draw Tool </grease_pencil/modes/draw/tools/draw>` for more information.

@@ -13,6 +13,12 @@ Cursor
 :doc:`Brush </grease_pencil/modes/draw/tools/brush>`
    Tool to use for any of the drawing brushes, see :doc:`/grease_pencil/modes/draw/brushes/overview`.
 
+:ref:`Fill <tool-grease-pencil-draw-fill>`
+   Automatic fill closed strokes areas.
+
+:ref:`Erase <tool-grease-pencil-draw-erase>`
+   Erase strokes.
+
 :ref:`Box <tool-grease-pencil-draw-box>`
    Draw rectangular shapes.
 
