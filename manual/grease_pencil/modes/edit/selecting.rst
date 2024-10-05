@@ -1,4 +1,4 @@
-.. _bpy.ops.gpencil.select:
+.. _bpy.ops.grease_pencil.select:
 
 *********
 Selecting
