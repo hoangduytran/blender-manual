@@ -209,7 +209,7 @@ Adjustments
 
    Layers adjustment panel.
 
-.. _bpy.types.GreasePencilLayer.radius_offset:
+.. _bpy.types.GreasePencilLayer.tint_color:
 
 Tint Color
    Color that tint any material colors used in the layer.

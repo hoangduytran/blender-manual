@@ -1,12 +1,13 @@
+.. _tool-grease-pencil-draw-erase:
 
-***********
-Erase Brush
-***********
+**********
+Erase Tool
+**********
 
 .. reference::
 
    :Mode:      Draw Mode
-   :Brush:     :menuselection:`Asset Shelf --> Erase`
+   :Tool:      :menuselection:`Toolbar --> Brush`
 
 The Erase tool erases already drawn strokes.
 
