@@ -11,21 +11,6 @@ Weights Menu
 This page covers many of the tools in the *Weights* menu.
 
 
-.. _bpy.ops.grease_pencil.weight_sample:
-
-Sample Weight
-=============
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Weights --> Sample Weight`
-   :Shortcut:  :kbd:`Shift-X`
-
-Adjust the Weight of the :doc:`Draw </grease_pencil/modes/weight_paint/tools>`
-tool to the weight of the vertex under the mouse cursor.
-
-
 .. _bpy.ops.grease_pencil.vertex_group_normalize_all:
 
 Normalize All
@@ -60,13 +45,13 @@ such that the highest weight value is 1.0.
 
 .. _bpy.ops.grease_pencil.weight_invert:
 
-Invert Weight
-=============
+Invert
+======
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Weights --> Invert Weight`
+   :Menu:      :menuselection:`Weights --> Invert`
 
 Replaces each weight of the selected vertex group by × -1.0 weight.
 
@@ -77,17 +62,17 @@ Examples:
 - Original 0.0 converts to 1.0
 
 
-.. .. _bpy.ops.gpencil.vertex_group_smooth:
+.. _bpy.ops.grease_pencil.vertex_group_smooth:
 
-.. Smooth
-.. ======
+Smooth
+======
 
-.. .. reference::
+.. reference::
 
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Weights --> Smooth`
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Weights --> Smooth`
 
-.. Smooths the weights of the active vertex group.
+Smooths the weights of the active vertex group.
 
 
 .. .. _bpy.ops.gpencil.generate_weights:
@@ -111,3 +96,18 @@ Examples:
 ..    It calculates how much influence a particular bone would have on points based on the distance
 ..    from those points to a particular bone ("bone heat" algorithm).
 ..    This influence will be assigned as weights in the vertex groups.
+
+
+.. _bpy.ops.grease_pencil.weight_sample:
+
+Sample Weight
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Weights --> Sample Weight`
+   :Shortcut:  :kbd:`Shift-X`
+
+Adjust the Weight of the :doc:`Draw </grease_pencil/modes/weight_paint/tools>`
+tool to the weight of the vertex under the mouse cursor.
