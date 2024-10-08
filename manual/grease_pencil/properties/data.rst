@@ -26,18 +26,30 @@ Onion skinning is used in animation to see several frames at once and make decis
 edits based on how the previous/next frames are drawn.
 
 
+:doc:`Settings </grease_pencil/properties/strokes>`
+===================================================
+
+General settings for Grease Pencil strokes.
+
+
+.. _bpy.types.AttributeGroupGreasePencil:
+
+Attributes
+==========
+
+An attribute is data stored per curve element. Every attribute has a data type, domain and name.
+This panel only lists custom attributes which excludes all the built-in attributes like ``position`` and
+other attributes like vertex groups.
+
+See :doc:`Attributes Reference </modeling/geometry_nodes/attributes_reference>` for more information.
+
+
 :doc:`Vertex Groups </modeling/meshes/properties/vertex_groups/index>`
 ======================================================================
 
 Vertex groups can be used to assign a group or weighted group to some operator.
 An object can have several weight groups and can be assigned in
 :doc:`Weight Paint Mode </grease_pencil/modes/weight_paint/index>`.
-
-
-:doc:`Settings </grease_pencil/properties/strokes>`
-===================================================
-
-General settings for Grease Pencil strokes.
 
 
 :ref:`Custom Properties <files-data_blocks-custom-properties>`

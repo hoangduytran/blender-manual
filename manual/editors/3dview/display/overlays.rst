@@ -410,50 +410,113 @@ Grease Pencil
 
 These overlays are available when a :doc:`/grease_pencil/index` object is selected.
 
+.. _bpy.types.View3DOverlay.use_gpencil_onion_skin:
+
 Onion Skin
    Show ghosts of the keyframes before and after the current frame.
    If :doc:`Multiframe </grease_pencil/multiframe>` is enabled,
    ghosts of the selected keyframes are shown instead.
    See :doc:`/grease_pencil/properties/onion_skinning`.
-Canvas
-   Display a grid over the Grease Pencil drawing plane.
-   The opacity of the grid can be controlled with the slider.
-   When using the *Canvas X-Ray* option, objects are drawn behind the canvas grid.
+
+.. _bpy.types.View3DOverlay.use_gpencil_fade_layers:
+.. _bpy.types.View3DOverlay.gpencil_fade_layer:
+
 Fade Inactive Layers
    Decrease the opacity of all the layers in the object other than the active one.
    The opacity factor can be controlled with the slider.
+
+.. _bpy.types.View3DOverlay.use_gpencil_fade_objects:
+.. _bpy.types.View3DOverlay.gpencil_fade_objects:
+
 Fade Inactive Objects
    Cover all of the viewport except the active Grease Pencil object with a full color layer to improve visibility
    while drawing over complex scenes.
 
+   .. _bpy.types.View3DOverlay.use_gpencil_fade_gp_objects:
+
    Fade Grease Pencil Objects
       Include or exclude Grease Pencil objects.
 
-Edit Lines
-   Show edit lines in Edit Mode.
+.. _bpy.types.View3DOverlay.use_gpencil_edit_lines:
+
+Edit Lines :guilabel:`Edit, Sculpt, Weight Paint, or Vertex Paint Modes`
+   Shows a line between points on top of other geometry when editing strokes.
+
+.. _bpy.types.View3DOverlay.use_gpencil_multiedit_line_only:
+
 Only in Multiframe
    When Multiframe is enabled and keyframes other than the current frame are selected,
    strokes on those keyframes are displayed as just their edit lines -- the strokes themselves are hidden.
    Note that this does not affect Onion Skinning.
-Stroke Direction
+
+.. _bpy.types.View3DOverlay.use_gpencil_show_directions:
+
+Stroke Direction :guilabel:`Edit`
    Toggle the display of the selected strokes' start points (green) and end points (red) to visualize their direction.
-Material Name
+
+.. _bpy.types.View3DOverlay.use_gpencil_show_material_name:
+
+Material Name :guilabel:`Edit`
    Show material name next to the selected strokes.
-Vertex Opacity
-   Opacity for vertices (points) and edit lines in Edit and Sculpt Mode.
-Vertex Paint Opacity
+
+.. rubric:: Vertex Paint
+
+.. Vertex Opacity :guilabel:`Vertex Paint`
+..    Opacity for vertices (points) and edit lines in Edit and Sculpt Mode.
+
+.. _bpy.types.View3DOverlay.gpencil_vertex_paint_opacity:
+
+Vertex Paint Opacity :guilabel:`Vertex Paint`
    The opacity of the vertex color overlay in Vertex Paint Mode and Draw Mode.
    Note that in Draw Mode, vertex paint is only visible in the *Material Preview*
    and *Rendered* shading modes by default. To see it in *Solid* mode, you either
    need to use Vertex Paint Mode, or set the :doc:`Color </render/workbench/color>`
    shading setting to *Attribute*.
 
-.. _bpy.types.View3DOverlay.display_handle:
+.. .. _bpy.types.View3DOverlay.display_handle:
 
-Handles
-   When :doc:`Curve Editing </grease_pencil/modes/edit/curve_editing>` is active,
-   this option controls how curves are displayed in the 3D Viewport.
+.. Handles
+..    When :doc:`Curve Editing </grease_pencil/modes/edit/curve_editing>` is active,
+..    this option controls how curves are displayed in the 3D Viewport.
 
-   :None: No handles are displayed, only the control points.
-   :Selected: Only handles for selected control points are displayed.
-   :All: All the handles are displayed.
+..    :None: No handles are displayed, only the control points.
+..    :Selected: Only handles for selected control points are displayed.
+..    :All: All the handles are displayed.
+
+
+.. _bpy.types.View3DOverlay.use_gpencil_grid:
+
+Canvas
+------
+
+Display a grid over the Grease Pencil drawing plane.
+
+.. _bpy.types.View3DOverlay.gpencil_grid_opacity:
+
+Canvas Grid Opacity
+   The opacity of the grid.
+
+.. _bpy.types.View3DOverlay.use_gpencil_canvas_xray:
+
+Canvas X-Ray
+   Objects are drawn behind the canvas grid.
+
+.. _bpy.types.View3DOverlay.gpencil_grid_subdivisions:
+
+Subdivisions
+   The number of subdivisions between grid lines.
+
+.. _bpy.types.View3DOverlay.gpencil_grid_color:
+
+Grid Color
+   The color of the grid lines.
+
+.. _bpy.types.View3DOverlay.gpencil_grid_scale:
+
+Scale X/Y
+   The horizontal/vertical size of the grid.
+
+.. _bpy.types.View3DOverlay.gpencil_grid_offset:
+
+Offset X/Y
+   The amount to shift the grid up/down and left/right.
