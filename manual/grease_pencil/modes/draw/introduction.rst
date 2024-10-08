@@ -59,14 +59,6 @@ The Drawing Planes selector defines the plane (orientation) to which the new str
 See :doc:`Drawing Planes </grease_pencil/modes/draw/drawing_planes>` for more information.
 
 
-Guides
-------
-
-Different Guides types can be activated to assist you when drawing new strokes.
-
-See :doc:`Guides </grease_pencil/modes/draw/guides>` for more information.
-
-
 .. _bpy.types.ToolSettings.use_gpencil_draw_additive:
 
 Drawing Options
