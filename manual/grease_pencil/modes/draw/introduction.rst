@@ -59,8 +59,6 @@ The Drawing Planes selector defines the plane (orientation) to which the new str
 See :doc:`Drawing Planes </grease_pencil/modes/draw/drawing_planes>` for more information.
 
 
-.. _bpy.types.ToolSettings.use_gpencil_draw_additive:
-
 Drawing Options
 ===============
 
@@ -68,10 +66,22 @@ Drawing Options
 
    General drawing options.
 
-Draw on Back
-   When enabled, new strokes are drawn below of all strokes in the layer.
-   For example when you want to paint with a fill material below line strokes on a character and
-   they are on the same layer.
+Multiframe
+   Allows to draw on several frames at the same time.
+
+   See :doc:`Multiframe </grease_pencil/multiframe>` for more information.
+
+.. _bpy.types.ToolSettings.use_gpencil_draw_additive:
+
+Additive Drawing
+   When creating new frames adding strokes with drawing tools,
+   the strokes from the previous/active frame are include as a basis for the new one.
+   When erasing existing strokes using Additive Drawing a new keyframe will be added.
+
+.. _bpy.types.ToolSettings.use_gpencil_automerge_strokes:
+
+AutoMerge
+   Joins new strokes with the beginning or end of previously drawn strokes in the active layer.
 
 .. _bpy.types.ToolSettings.use_gpencil_weight_data_add:
 
@@ -86,17 +96,7 @@ Add Weight Data
 
 .. _bpy.types.ToolSettings.use_gpencil_draw_onback:
 
-Additive Drawing
-   When creating new frames adding strokes with drawing tools,
-   the strokes from the previous/active frame are include as a basis for the new one.
-   When erasing existing strokes using Additive Drawing a new keyframe will be added.
-
-.. _bpy.types.ToolSettings.use_gpencil_automerge_strokes:
-
-AutoMerge
-   Joins new strokes with the beginning or end of previously drawn strokes in the active layer.
-
-Multiframe
-   Allows to draw on several frames at the same time.
-
-   See :doc:`Multiframe </grease_pencil/multiframe>` for more information.
+Draw on Back
+   When enabled, new strokes are drawn below of all strokes in the layer.
+   For example when you want to paint with a fill material below line strokes on a character and
+   they are on the same layer.
