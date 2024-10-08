@@ -1,3 +1,5 @@
+:orphan:
+
 .. _bpy.types.GreasePencil.use_curve_edit:
 
 *************
@@ -21,10 +23,10 @@ Usage
 
    Selecting :doc:`points in between </grease_pencil/modes/edit/selecting>` is disabled while in curve editing is active.
 
-.. seealso::
+.. .. seealso::
 
-   The curve editing handles display can be tweaked in
-   the :ref:`Overlays <bpy.types.View3DOverlay.display_handle>` popover.
+..    The curve editing handles display can be tweaked in
+..    the :ref:`Overlays <bpy.types.View3DOverlay.display_handle>` popover.
 
 
 Curve Editing Popover
