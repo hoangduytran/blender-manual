@@ -128,6 +128,7 @@ to determine the domains of attributes.
 - **Instance** domain attributes exist on the :doc:`/modeling/geometry_nodes/instances` in a geometry.
   They can be used to store different values on copies of geometry data. Instance domain attributes are
   only supported in geometry nodes.
+- **Layer** domain attributes are associated with a :doc:`Grease Pencil Layer </grease_pencil/properties/layers>`.
 
 Attributes are automatically interpolated to other domains. For example, when the
 :doc:`/modeling/geometry_nodes/geometry/read/position` is connected to the selection input of

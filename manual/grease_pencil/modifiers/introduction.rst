@@ -14,6 +14,8 @@ Modifiers are automatic operations that affect an object in a non-destructive wa
 With modifiers, you can perform many effects automatically that would otherwise be
 too tedious to do manually and without affecting the base geometry of your object.
 
+With :doc:`Geometry Nodes </modeling/geometry_nodes/index>`, it is possible to create custom Grease Pencil modifiers.
+
 They work by changing how an object is displayed and rendered, but not the geometry which you can edit directly.
 You can add several modifiers to a single object forming the modifier stack
 and *Apply* a modifier if you wish to make its changes permanent.
@@ -22,7 +24,7 @@ and *Apply* a modifier if you wish to make its changes permanent.
 
    Grease Pencil Modifiers menu.
 
-There are three types of modifiers for Grease Pencil:
+There are four types of modifiers for Grease Pencil:
 
 Edit
    These are tools similar to the Deform ones (see below), however, they usually do not directly
@@ -35,8 +37,6 @@ Deform
 Color
    The *Color* group of modifiers change the object color output.
 
-
-.. _bpy.ops.object.gpencil_modifier_apply:
 
 Interface
 =========

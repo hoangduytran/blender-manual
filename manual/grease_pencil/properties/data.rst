@@ -17,6 +17,7 @@ Grease Pencil
 
 Strokes can be grouped in 2D layers, a special Grease Pencil layers
 that help to organize the drawing order and visibility of the strokes.
+Layers can be organized into layer groups.
 
 
 :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`
@@ -37,11 +38,19 @@ General settings for Grease Pencil strokes.
 Attributes
 ==========
 
-An attribute is data stored per curve element. Every attribute has a data type, domain and name.
-This panel only lists custom attributes which excludes all the built-in attributes like ``position`` and
-other attributes like vertex groups.
+Layers can store :doc:`Custom Attributes </modeling/geometry_nodes/attributes_reference>`.
+The attributes are stored on the :ref:`Layer <attribute-domains>` domain.
 
-See :doc:`Attributes Reference </modeling/geometry_nodes/attributes_reference>` for more information.
+For example, the :ref:`Layer Adjustments <layer-adjustments>` are stored as layer attributes.
+
+Attributes
+   :ref:`List view <ui-list-view>` of all the attributes stored on the layers.
+
+   Name
+      Name of the layer attribute.
+
+   Data Type
+      The :ref:`Data Type <attribute-data-types>` of the attribute.
 
 
 :doc:`Vertex Groups </modeling/meshes/properties/vertex_groups/index>`
@@ -64,3 +73,4 @@ Create and manage your own properties to store data in the Grease Pencil's data-
    layers.rst
    onion_skinning.rst
    strokes.rst
+
