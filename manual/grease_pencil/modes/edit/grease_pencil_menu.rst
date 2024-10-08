@@ -90,17 +90,27 @@ Active Layer
 Select the active layer.
 
 
-.. Animation
-.. =========
+Animation
+=========
 
-.. .. reference::
+.. reference::
 
-..    :Mode:      Edit Mode, Draw Mode
-..    :Menu:      :menuselection:`Grease Pencil --> Animation`
-..    :Shortcut:  :kbd:`I`
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Animation`
+   :Shortcut:  :kbd:`I`
 
-.. The stroke animation tools are described
-.. in the :doc:`Animation </grease_pencil/animation/tools>` section.
+The stroke animation operations are described in the :doc:`Animation </grease_pencil/animation/tools>` section.
+
+
+Interpolate Sequence
+====================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Interpolate Sequence`
+
+See :ref:`bpy.ops.grease_pencil.interpolate_sequence`.
 
 
 .. _bpy.ops.grease_pencil.duplicate_move:
@@ -165,6 +175,17 @@ Paste on Back
     Add pasted strokes behind all strokes.
 Keep World Transform
    Keep the world transform of strokes from the clipboard unchanged.
+
+
+Weights
+=======
+
+.. reference::
+
+   :Mode:      Edit Mode, Draw Mode
+   :Menu:      :menuselection:`Grease Pencil --> Weights`
+
+The stroke weight operations are described in the :doc:`/grease_pencil/modes/weight_paint/weights_menu>` section.
 
 
 Show/Hide
@@ -464,14 +485,3 @@ Delete Active Keyframes (All Layers)
    :Shortcut:  :kbd:`Shift-Delete`
 
 Deletes all the strokes at the current frame in all layer.
-
-
-Interpolate Sequence
-====================
-
-.. reference::
-
-   :Mode:      Edit Mode, Draw Mode
-   :Menu:      :menuselection:`Grease Pencil --> Interpolate Sequence`
-
-See :ref:`bpy.ops.grease_pencil.interpolate_sequence`.

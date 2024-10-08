@@ -14,3 +14,4 @@
    stroke_placement.rst
    drawing_planes.rst
    guides.rst
+   editing.rst
