@@ -185,7 +185,7 @@ Weights
    :Mode:      Edit Mode, Draw Mode
    :Menu:      :menuselection:`Grease Pencil --> Weights`
 
-The stroke weight operations are described in the :doc:`/grease_pencil/modes/weight_paint/weights_menu>` section.
+The stroke weight operations are described in the :doc:`/grease_pencil/modes/weight_paint/weights_menu` section.
 
 
 Show/Hide

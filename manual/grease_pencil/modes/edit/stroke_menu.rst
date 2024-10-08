@@ -212,7 +212,7 @@ Join and Copy
    :Menu:      :menuselection:`Stroke --> Join --> Join and Copy`
    :Shortcut:  :kbd:`Shift-Ctrl-J`
 
-Same as :ref:`grease_pencil.join_selection` but *Type* defaults to *Join and Copy*.
+Same as :ref:`bpy.ops.grease_pencil.join_selection` but *Type* defaults to *Join and Copy*.
 
 
 .. _bpy.ops.grease_pencil.move_to_layer:
