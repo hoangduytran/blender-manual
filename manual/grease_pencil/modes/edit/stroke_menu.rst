@@ -496,7 +496,7 @@ Set Curve Resolution
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Stroke --> Set Curve Resolution`
 
-Sets the :ref:`Curve Resolution <bpy.types.GreasePencil.edit_curve_resolution>` value.
+Sets the number of points generated along each curve segment (between two handles).
 
 
 .. _bpy.ops.grease_pencil.reset_uvs:

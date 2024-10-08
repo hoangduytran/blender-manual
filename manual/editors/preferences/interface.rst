@@ -97,9 +97,33 @@ Navigation Controls
 .. _bpy.types.PreferencesView.color_picker_type:
 
 Color Picker Type
-   Choose which type of :term:`Color Space` you prefer. It will show when clicking :kbd:`LMB` on any color field.
+   Choose which type of :term:`Color Space` you prefer for the
+   :doc:`Color picker </interface/controls/templates/color_picker>`.
+   It will show when clicking :kbd:`LMB` on any color field.
 
-   See the different color picker types at the :doc:`Color picker </interface/controls/templates/color_picker>` page.
+   .. list-table:: Color Picker types.
+
+      * - .. figure:: /images/interface_controls_templates_color-picker_circle-hsv.png
+
+             Circle HSV.
+
+        - .. figure:: /images/interface_controls_templates_color-picker_circle-hsl.png
+
+             Circle HSL.
+
+        - ..
+
+      * - .. figure:: /images/interface_controls_templates_color-picker_square-sv-h.png
+
+             Square (SV + H).
+
+        - .. figure:: /images/interface_controls_templates_color-picker_square-hs-v.png
+
+             Square (HS + V).
+
+        - .. figure:: /images/interface_controls_templates_color-picker_square-hv-s.png
+
+             Square (HV + S).
 
 .. _bpy.types.PreferencesView.header_align:
 
