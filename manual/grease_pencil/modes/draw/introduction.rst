@@ -10,10 +10,6 @@ Already made strokes can not be selected in Draw Mode, for editing strokes you m
 the :doc:`Edit Mode </grease_pencil/modes/edit/introduction>` or
 :doc:`Sculpt Mode </grease_pencil/modes/sculpting/introduction>`.
 
-
-Draw Mode
-=========
-
 .. figure:: /images/grease-pencil_modes_draw_introduction_mode-selector.png
 
    3D Viewport Mode selector: Draw Mode.
@@ -31,8 +27,8 @@ There are also some tools to create primitives shapes like lines, arcs, curves, 
 See :doc:`Toolbar </grease_pencil/modes/draw/tools>` for more details.
 
 
-Strokes Location and Orientation Controls
-=========================================
+Strokes Location & Orientation Controls
+=======================================
 
 Drawing in a 3D space is not the same as drawing on a flat canvas.
 When drawing with Grease Pencil you have to define
