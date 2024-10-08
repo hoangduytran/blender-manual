@@ -12,17 +12,17 @@ Color Picker
 The color picker is a pop-up that lets you define a color value.
 Holding :kbd:`Ctrl` while dragging snaps the hue to make it quick to select primary colors.
 
-Color Field
+Color Picker
    Lets you pick the first and second color component. The shape can be changed; see `Types`_.
-
-Color Slider
-   The slider with a gradient in the background lets you define the third color component.
-   It can also be controlled with the :kbd:`Wheel`.
-
+Value/Lightness
+   The slider with a gradient in the background defines the value/lightness of the color mixing.
+   Fine control can be inputted with :kbd:`Wheel`.
 Color Model
-   Selects the :term:`Color Model` for the number fields below.
+   Selects the :term:`Color Model` for the number value fields.
 
-   RGB, HSV/HSL, Hex
+   :RGB: Create the final color by mixing red, green, and blue colors.
+   :HSV/HSL:
+      Create the final color by adjusting hue, saturation, and value/lightness.
 
    .. note::
 
@@ -31,29 +31,28 @@ Color Model
       On the contrary, *Hex* are automatically :term:`Gamma` corrected
       for the :term:`sRGB Color Space <Color Space>`.
       For more information, see :doc:`Color Management </render/color_management>`.
-
 Color Values
-   Blender uses values from 0 to 1 to express colors for RGB and HSV colors.
+   Blender uses values from 0 to 1.0 to express the color mixing for RGB and HSV/HSL colors.
 
-   Hexadecimal (Hex) values are expressed as ``RRGGBB``.
-   Shorthand hex colors are also supported as ``RGB``,
-   e.g. dark yellow ``FFCC00`` can be written as ``FC0``.
-
-   For operations that are capable of using the :term:`Alpha Channel`, another slider "A" is added.
+   For color inputs with an :term:`Alpha Channel`, another slider is added.
+Hex
+   The hexadecimal (hex) equivalent value to the mixed color.
+   Shorthand hex colors are can be typed in, e.g. dark yellow ``FFCC00`` can be written as ``FC0``.
 
 .. _bpy.ops.ui.eyedropper_color:
 
 Eyedropper (pipette icon)
    Samples a color from inside the Blender window using the :ref:`ui-eyedropper`.
+   Note, colors sampled from the eyedropper are in linear color space and do not account for view transform adjustments.
 
 
 Shortcuts
 =========
 
-- :kbd:`Ctrl-LMB` (drag) snaps to hue.
+- :kbd:`Ctrl-LMB` (drag) snaps the hue to 30° intervals.
 - :kbd:`Shift-LMB` (drag) precision motion.
-- :kbd:`Wheel` adjust the brightness.
-- :kbd:`Backspace` reset the value.
+- :kbd:`Wheel` adjust the value/lightness.
+- :kbd:`Backspace` reset the value to the default value.
 
 
 Types
