@@ -104,29 +104,29 @@ Factor
 ..    while larger values will result in fewer points needed to recreate the curve.
 
 
-.. .. _bpy.ops.gpencil.stroke_trim:
+.. _bpy.ops.gpencil.stroke_trim:
 
-.. Trim
-.. ====
+Trim
+====
 
-.. .. reference::
+.. reference::
 
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Stroke --> Trim`
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Trim`
 
-.. Trims selected stroke to first loop or intersection.
+Trims selected stroke to first loop or intersection.
 
-.. .. list-table::
+.. list-table::
 
-..    * - .. figure:: /images/grease-pencil_modes_edit_stroke-menu_trim-1.png
-..           :width: 320px
+   * - .. figure:: /images/grease-pencil_modes_edit_stroke-menu_trim-1.png
+          :width: 320px
 
-..           Original stroke.
+          Original stroke.
 
-..      - .. figure:: /images/grease-pencil_modes_edit_stroke-menu_trim-2.png
-..           :width: 320px
+     - .. figure:: /images/grease-pencil_modes_edit_stroke-menu_trim-2.png
+          :width: 320px
 
-..           Result of trim operation.
+          Result of trim operation.
 
 
 .. .. _bpy.ops.gpencil.stroke_outline:
@@ -178,28 +178,41 @@ Factor
 ..           Generated stroke after outline operation.
 
 
-.. .. _bpy.ops.gpencil.stroke_join:
+Join
+====
 
-.. Join
-.. ====
+.. _bpy.ops.grease_pencil.join_selection:
 
-.. .. reference::
+Join
+----
 
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Stroke --> Join --> Join, Join and Copy`
-..    :Shortcut:  :kbd:`Ctrl-J`, :kbd:`Shift-Ctrl-J`
+.. reference::
 
-.. Join two or more strokes into a single one.
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Join --> Join,`
+   :Shortcut:  :kbd:`Ctrl-J`
 
-.. Type
-..    Join :kbd:`Ctrl-J`
-..       Join selected strokes by connecting points.
+Join two or more strokes into a single one.
 
-..    Join and Copy :kbd:`Shift-Ctrl-J`
-..       Join selected strokes by connecting points in a new stroke.
+Type
+   :Join:
+      Join selected strokes by connecting points.
+   :Join and Copy:
+      Join selected strokes by connecting points in a new stroke.
+Leave Gaps
+   When enabled, do not use geometry to connect the strokes.
 
-.. Leave Gaps
-..    When enabled, do not use geometry to connect the strokes.
+
+Join and Copy
+-------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Join --> Join and Copy`
+   :Shortcut:  :kbd:`Shift-Ctrl-J`
+
+Same as :ref:`grease_pencil.join_selection` but *Type* defaults to *Join and Copy*.
 
 
 .. _bpy.ops.grease_pencil.move_to_layer:
