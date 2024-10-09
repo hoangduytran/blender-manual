@@ -49,9 +49,9 @@ the layer becomes prepared to be masked by other layer(s).
 
 .. tip::
 
-   Sometimes the layers you are not working on can be a distraction.
-   Activate *Fade Inactive Layers* in overlays to control the opacity of the non-active layers.
-   See :doc:`Overlays </editors/3dview/display/overlays>` for more information.
+   Sometimes the layers you are not working on can be a distraction in the 3D Viewport.
+   Activate the :ref:`Fade Inactive Layers <bpy.types.View3DOverlay.use_gpencil_fade_layers>`
+   overlay to control the opacity of the non-active layers.
 
 Layer Tree
    Tree view of all layers and groups for the Grease Pencil object.
