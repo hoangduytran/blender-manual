@@ -15,12 +15,17 @@ Layers
 
    Grease Pencil Layers panel.
 
-Grease Pencil objects can be organized into a tree known as layers for grouping and arranging strokes.
+Grease Pencil objects can be organized into a tree known as the layer tree for grouping and arranging strokes.
 
 Any stroke can only belong to a single 2D layer.
-There is always only one active layer in the list (the selected one).
+The selected layer is the active layer. Only one layer or group can be active at a time.
 When you draw, the new strokes are added to the active layer.
 By default the view order of the layers in the viewport is top to bottom.
+
+Layers can be grouped using Layer Groups.
+A layer can only be in one group at a time.
+Layers can be moved into groups using drag-and-drop.
+Groups can be color coded with a color tag.
 
 Every layer correspond to a channel in the Dope Sheet editor (in Grease Pencil mode).
 See :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>` for more information.
@@ -48,8 +53,8 @@ the layer becomes prepared to be masked by other layer(s).
    Activate *Fade Inactive Layers* in overlays to control the opacity of the non-active layers.
    See :doc:`Overlays </editors/3dview/display/overlays>` for more information.
 
-Layers List
-   :ref:`List view <ui-list-view>` of all layers for the Grease Pencil object.
+Layer Tree
+   Tree view of all layers and groups for the Grease Pencil object.
 
    Next to the layer name there are four icons buttons that control common properties of the layer:
 
@@ -113,7 +118,7 @@ Layer Specials
    Merge Down
       Combine the selected layer with the layer below, the new layer keeps the name of the lower layer.
    Merge Group
-       Combine layers in the active group into a single layer.
+       Combine layers in the active layer group into a single layer.
    Merge All
       Combine all layers into the active layer.
 
@@ -123,13 +128,13 @@ Layer Specials
    Copy All Layers to Selected
       Copy all layers to the selected Grease Pencil object.
 
-.. .. _bpy.ops.gpencil.layer_isolate:
+.. _bpy.ops.grease_pencil.layer_isolate:
 
-.. Visibility (screen icon)
-..    Toggle whether the active layer is the only one that can be edited and is visible.
+Visibility (screen icon)
+   Toggle whether the active layer is the only one that can be edited and is visible.
 
-.. Isolate Lock (padlock icon)
-..    Toggle whether the active layer is the only one that can be edited.
+Isolate Lock (padlock icon)
+   Toggle whether the active layer is the only one that can be edited.
 
 Below the layers list there are additional settings:
 
@@ -200,6 +205,8 @@ Transform
 
 Allows per-layer location, rotation and scale transformations.
 
+
+.. _layer-adjustments:
 
 Adjustments
 ===========

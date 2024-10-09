@@ -50,9 +50,6 @@ Shear :kbd:`Shift-Ctrl-Alt-S`
    To Sphere :kbd:`Shift-Alt-S`
       Move selected points outward in a spherical shape around the selected strokes' center.
 
-Transform Fill
-   Change the Translation, Rotation and scale of strokes fill.
-
 :ref:`Interpolate <tool-grease-pencil-draw-interpolate>` :kbd:`Ctrl-E`
    Automatically create a breakdown keyframe between two normal keyframes.
 
