@@ -40,7 +40,7 @@ Points Up
    Optional up vector that is typically a surface normal.
 Point Group ID
    The curve group to interpolate in.
-Max Neighbor
+Max Neighbors
    Maximum amount of close guide curves that are taken into account for interpolation.
 
 
@@ -61,7 +61,7 @@ Closest Index
    .. note::
 
       Internally this node mixes the data from multiple guide curves, with the maximum number
-      of sources depending on the *Max Neighbor* input. This output is only the index of the curve
+      of sources depending on the *Max Neighbors* input. This output is only the index of the curve
       with the largest weight.
 
 Closest Weight
