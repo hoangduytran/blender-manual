@@ -42,8 +42,8 @@ Hex
 .. _bpy.ops.ui.eyedropper_color:
 
 Eyedropper (pipette icon)
-   Samples a color from inside the Blender window using the :ref:`ui-eyedropper`.
-   Note, colors sampled from the eyedropper are in linear color space and do not account for view transform adjustments.
+   Samples a color from inside the Blender window using the :ref:`ui-eyedropper`. Note, colors sampled from the
+   eyedropper are in linear color space and do not account for view transform adjustments.
 
 
 Shortcuts
