@@ -33,25 +33,14 @@ See :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>` for more informa
 Layers can also be used together with Modifiers to only affects part of your drawing.
 See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more information.
 
-In Grease Pencil there are no special mask layers, any layer can act as a mask for other layers.
-The mask system is flexible enough to allow top-bottom and bottom-top masking.
-
-Layers used as mask can use all the blend modes and different opacity values like any other layer.
-
-.. note::
-
-   If you want to make a full transparent masking
-   you will have to set the mask layer(s) opacity to 0.
-
-By activating the mask toggle (mask icon) next to the layer name or
-using the checkbox on the masks panel header
-the layer becomes prepared to be masked by other layer(s).
+Layers can mask other layers by enabling Use Mask (mask icon)
+or using the checkbox in the Masks panel header. See :ref:`bpy.types.GreasePencilLayer.use_masks` for more information.
 
 .. tip::
 
-   Sometimes the layers you are not working on can be a distraction.
-   Activate *Fade Inactive Layers* in overlays to control the opacity of the non-active layers.
-   See :doc:`Overlays </editors/3dview/display/overlays>` for more information.
+   Sometimes the layers you are not working on can be a distraction in the 3D Viewport.
+   Activate the :ref:`Fade Inactive Layers <bpy.types.View3DOverlay.use_gpencil_fade_layers>`
+   overlay to control the opacity of the non-active layers.
 
 Layer Tree
    Tree view of all layers and groups for the Grease Pencil object.
@@ -162,7 +151,17 @@ Masks
 .. figure:: /images/grease-pencil_properties_masks_panel.png
    :align: right
 
-   Masks list view.
+   Masks panel.
+
+In Grease Pencil there are no special mask layers, any layer can act as a mask for other layers.
+The mask system is flexible enough to allow top-bottom and bottom-top masking.
+
+Layers used as masks can use all the blend modes and different opacity values like any other layer.
+
+.. tip::
+
+   If you want to make a full transparent masking
+   you will have to set the mask layer's opacity to 0.
 
 The layer/s that will act as mask of the current layer could be added
 to the Mask :ref:`list view <ui-list-view>`.

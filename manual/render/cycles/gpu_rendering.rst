@@ -34,7 +34,7 @@ OptiX -- NVIDIA
 ---------------
 
 OptiX is supported on Windows and Linux and requires a Nvidia graphics cards with compute capability 5.0 and higher
-and a driver version of at least 470. To make sure your GPU is supported,
+and a driver version of at least 495.89. To make sure your GPU is supported,
 see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__.
 
 OptiX takes advantage of hardware ray-tracing acceleration in RTX graphics cards, for improved performance.

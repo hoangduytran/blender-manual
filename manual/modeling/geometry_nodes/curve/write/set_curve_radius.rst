@@ -13,13 +13,13 @@ The *Set Curve Radius* controls the radius of the curve, used for operations lik
 in the :doc:`Curve to Mesh </modeling/geometry_nodes/curve/operations/curve_to_mesh>` node. The value is set for
 every control point, and is then interpolated to each evaluated point in between the control points.
 
-The input node for this data is the :doc:`Curve Radius node </modeling/geometry_nodes/geometry/read/radius>`.
+The input node for this data is the :doc:`Radius node </modeling/geometry_nodes/geometry/read/radius>`.
 
 
 Inputs
 ======
 
-Geometry
+Curve
    Standard geometry input, containing curves.
 
 Selection
