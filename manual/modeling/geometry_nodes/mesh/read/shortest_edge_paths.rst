@@ -14,7 +14,7 @@ The cost used to define "shortest" can be set to anything. By default there is a
 for every edge, but a typical input would be the length of each edge.
 
 The output is encoded with vertex indices, and is meant to be used on the vertex domain.
-For each vertex, the *Next Vertex Input* output stores the index of the following vertex
+For each vertex, the *Next Vertex Index* output gives the index of the following vertex
 in the path to the "closest" endpoint.
 
 The node is implemented with `Dijkstra's algorithm <https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm>`__.
@@ -59,4 +59,4 @@ Next Vertex Index
    (as defined by the cost input).
 
 Total Cost
-   The remaining cost before an end vertex is reached by following the next vertex indices
+   The remaining cost before an end vertex is reached.
