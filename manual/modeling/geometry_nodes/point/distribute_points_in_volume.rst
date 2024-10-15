@@ -28,7 +28,7 @@ Spacing
    Spacing between grid points.
 
 Threshold
-   Minimum value of a volume cell to contain a grid point
+   Minimum value of a volume cell to contain a grid point.
 
 
 Properties
