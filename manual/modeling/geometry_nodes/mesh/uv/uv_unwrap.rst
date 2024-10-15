@@ -43,10 +43,10 @@ Properties
 
 Method
    :Angle Based:
-      This method gives a good 2D representation of a mesh
+      This method gives a good 2D representation of a mesh.
    :Conformal:
       Uses LSCM (Least Squares Conformal Mapping). This usually gives a less accurate UV
-      mapping than Angle Based, but works better for simpler objects
+      mapping than Angle Based, but works better for simpler objects.
 
 
 Output
