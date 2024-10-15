@@ -17,7 +17,7 @@ the node uses simple domain interpolation to move values from the mesh's edges.
 
    The output of this node depends on the density of the mesh. If there are more edges
    closer together and the curvature of the mesh stays the same, the edge angle will
-   be different
+   be different.
 
 Inputs
 ======
