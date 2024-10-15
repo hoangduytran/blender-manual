@@ -17,7 +17,7 @@ When moving, rotating or scaling, if you only want certain axes to be affected,
 you can restrict the transformation to those axes.
 
 By default the constraint keys are :kbd:`X`, :kbd:`Y` and :kbd:`Z`.
-This constraint can be restricted to plane if :kbd`Shift`
+This constraint can be restricted to a plane if :kbd:`Shift`
 is pressed or automatically detected if :kbd:`MMB` is pressed.
 
 It is worth noting that if you press the same contraint hotkey a second time,
