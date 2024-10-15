@@ -40,8 +40,8 @@ Mode
       The final normals are calculated to have the smallest twist around
       the curve tangent across the whole curve.
    :Z-Up:
-      The final normals are calculated so that they is perpendicular to the Z axis and the tangent.
-      If a series of points is vertical, the X axis is used
+      The final normals are calculated so that they are perpendicular to the Z axis and the tangent.
+      If a series of points is vertical, the X axis is used.
    :Free:
       Use the stored custom normal attribute (``custom_normal``) as the final normals.
 
