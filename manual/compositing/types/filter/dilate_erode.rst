@@ -9,49 +9,64 @@ Dilate/Erode Node
    :align: right
    :alt: Dilate/Erode Node.
 
-The *Dilate/Erode node* expands and shrinks masks, using a morphological operator.
+Expands or shrinks a mask using a morphological operator.
 
 
 Inputs
 ======
 
 Mask
-   Single color channel (or a black-and-white image) input.
+   A grayscale image.
 
 
 Properties
 ==========
 
 Mode
-   Step, Threshold, Distance, Feather
+   Steps
+      Sets each pixel to the maximum (for dilation) or minimum (for erosion) value that's found
+      within a square surrounding it. This approach keeps the original gray levels and is best
+      suited for masks that contain sharp corners; rounded shapes such as circles will look more
+      square-like in the output.
+      
+      Despite the name, this is not an iterative process; the dilation/erosion is only performed
+      once regardless of the chosen *Distance*.
+   Threshold
+      Makes all the pixels fully black or white depending on whether they're darker or brighter
+      than 50% gray. Then, sets each pixel to the maximum (for dilation) or minimum
+      (for erosion) value that's found within a circle surrounding it. This approach loses the
+      original gray levels. Shape wise, it's well-suited for masks that contain rounded corners;
+      sharp ones will be rounded off.
+   Distance
+      Sets each pixel to the maximum (for dilation) or minimum (for erosion) value that's found
+      within a circle surrounding it. This approach preserves the original gray levels and
+      is well-suited for masks that contain rounded corners.
+   Feather
+      Blurs the image.
 Distance
-   The Distance is the filter radius.
-   A positive value of Distance dilates (expands) the influence of a pixel on its surrounding pixels.
-   A negative value erodes (shrinks) its influence.
+   The size of the surrounding area to look at for each pixel; or in other words, how much to
+   dilate (for positive values) or erode (for negative values) the mask.
 Edge
-   Edge to inset.
-
-   .. TODO2.8 Explain.
+   For the *Threshold* mode, determines how much to blur the edges after dilation/erosion.
 Falloff
-   Falloff type the feather.
-
-   .. TODO2.8 Explain.
+   For the *Feather* mode, determines the brightness curve of the blurred edges.
 
 
 Outputs
 =======
 
 Mask
-   The filtered mask output.
+   The resulting mask.
 
 
 Example
 =======
 
-In this example, we wanted to take the rather boring array of ball bearings and
-add some variation to it. So, we dilated the red and eroded the green, leaving the blue alone.
-If we had dilated both red and green... (hint: red and green make yellow).
-The amount of influence is increased by increasing the *Distance* values.
-`Blend-file available here <https://archive.blender.org/wiki/2015/uploads/5/51/Derotest.blend>`__.
+In the image below, notice that:
+
+* The light gray disk has turned white and the dark gray rectangle has turned black
+  because of the *Threshold* mode.
+* The shapes have become thicker -- dilated because of the positive *Distance*.
+* The shapes appear blurred because of the positive *Edge*.
 
 .. figure:: /images/compositing_types_filter_dilate-erode_example.png
