@@ -86,7 +86,7 @@ Lasso Mask
 
    :Mode:      Sculpt Mode
    :Menu:      :menuselection:`Mask --> Lasso Mask`
-   :Shortcut:  :kbd:`Shift-Ctrl-LMB`
+   :Shortcut:  :kbd:`Ctrl-RMB`
 
 Can be used to create a free-form mask, similar to the :ref:`Lasso Mask <tool-lasso-mask>` tool.
 This is very commonly used.
