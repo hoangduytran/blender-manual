@@ -6,7 +6,7 @@
 .. toctree::
    :maxdepth: 1
 
-   curve_handle_position.rst
+   curve_handle_positions.rst
    curve_length.rst
    curve_tangent.rst
    curve_tilt.rst
