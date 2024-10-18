@@ -35,14 +35,14 @@ Convert Premultiplied
    Use this checkbox when you know that your image has :term:`Straight Alpha` color values,
    to perform the correct over operation. Result will still be premultiplied alpha.
 
-Premultiply
+Premultiplied
    Mix between using :term:`Premultiplied Alpha` or :term:`Straight Alpha`.
 
    When set to 1, the foreground color values will be multiplied by alpha, i.e. premultiplied;
    this is equivalent to enabling *Convert Premultiplied*.
-   When set to 0, color values does not change.
+   When set to 0, the color values do not change.
 
-   If *Premultiply* is not zero, *Convert Premultiplied* will be ignored.
+   If *Premultiplied* is not zero, *Convert Premultiplied* will be ignored.
 
    .. note:: This is a legacy option.
 
