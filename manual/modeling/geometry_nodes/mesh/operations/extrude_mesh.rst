@@ -9,8 +9,8 @@ Extrude Mesh Node
    :align: right
    :alt: Extrude Mesh node.
 
-The *Extrude Mesh Node* generates new vertices, edges, or faces, on selected geometry
-and transforms them based on an offset.
+The *Extrude Mesh Node* generates new edges or faces on the selected geometry elements
+and moves them by a certain offset.
 
 The operations are similar to the :doc:`extrude tools </modeling/meshes/editing/mesh/extrude>`
 in mesh edit mode, though there are some differences. Most importantly, the node never keeps the back-faces
@@ -24,27 +24,23 @@ Mesh
    Standard geometry input.
 
 Selection
-   Whether to extrude each element.
-   True values mean elements will be extruded, false values mean elements will remain unchanged.
+   A boolean field indicating which elements should be extruded.
 
 Offset
-   The amount to translate the new geometry on each axis. The default value of the "Offset" input
-   is the mesh's :doc:`normals </modeling/geometry_nodes/geometry/read/normal>`. To change the distance,
-   the *Scale* input can be used. However, when an input is computed for this directly, the length
-   of the input vectors is used.
+   The translation vector for each extruded element. By default, this is the element's
+   :doc:`normal </modeling/geometry_nodes/geometry/read/normal>`.
 
    .. tip::
 
-      Because the default input is the mesh's normals, they may need to be calculated just for this node.
-      If the extrusion is only in one direction anyway, a potential performance improvement is to connect
-      a :doc:`/modeling/geometry_nodes/input/constant/vector` instead.
+      If all the elements are extruded in the same direction, you may be able to improve performance
+      by connecting a :doc:`/modeling/geometry_nodes/input/constant/vector` to this input,
+      thereby skipping the normal calculation.
 
-Scale
-   The factor used to scale elements or groups of elements.
+Offset Scale
+   Scaling factor for the above translation vector.
 
 Individual :guilabel:`Face Mode Only`
-   Whether to extrude each face individually rather than extruding connected groups of faces together as regions.
-   A quad side face will be generated on each side of every selected face.
+   Whether to extrude each face individually rather than extruding connected groups of faces together.
 
 
 Properties
@@ -52,16 +48,16 @@ Properties
 
 Mode
    :Vertices:
-      This mode is quite simple, it just attaches new edges and vertices to the selected vertices.
+      Attaches a new freestanding edge to each selected vertex.
 
    :Edges:
-      Attach new quad faces to the selected edges. Vertices shared by the
-      original selected vertices are also shared in the duplicated edges.
+      Attaches a new quad face to each selected edges. Vertices shared by the
+      original selected edges are also shared in the duplicated edges.
 
       .. note::
 
          Depending on the situation, the normals of the new faces may be arbitrary. If the selected
-         edges only have one selected face, then the node can pick a consistent orientation for the
+         edges each have only one connected face, then the node can pick a consistent orientation for the
          new faces, but if there is more than one connected face, or no connected faces, the normals
          may have to be adjusted afterwards.
 
@@ -70,9 +66,9 @@ Mode
       depending on the *Individual* boolean input.
 
       When the *Individual* input is false, the node will find regions of connected faces and generate
-      new "side" faces on the boundaries of those regions. If the whole mesh is selected and it is already
-      a :term:`Manifold` shape, then result will just be that the whole mesh moves. Any vertices, edges
-      or faces on the *inside* of the face regions are just moved, they are not duplicated.
+      new "side" faces on the boundaries of those regions. Any vertices, edges or faces on the *inside*
+      of the regions simply are moved, not duplicated. If the whole mesh is selected and it is already
+      a :term:`Manifold` shape, then the result will just be that the whole mesh gets resized.
 
 
 Output
@@ -82,15 +78,12 @@ Mesh
    Standard geometry output.
 
 Top
-   A boolean field output containing the top new top geometry. The :ref:`domain <attribute-domains>`
-   depends on the selected mode. In *Vertex* mode, this is a selection of the new vertices.
-   In *Edge* mode, this is a selection of the duplicated edges
-   and in *Face* mode, it is a selection of the new faces.
+   A boolean field indicating the "top" elements in the extrusion. In *Vertex* mode, these are the new vertices;
+   in *Edge* mode, the new edges; and in *Face* mode, the moved faces.
 
 Side
-   A boolean field output containing the "side" of the new geometry. In *Vertex* mode, it selects
-   the new edges, in *Edge* mode, the new faces, and in *Face* mode, the new side faces are selected,
-   which are all of the new faces that aren't in the *Top* selection.
+   A boolean field indicating the "side" elements in the extrusion. In *Vertex* mode, these are the new edges;
+   in *Edge* mode, the new faces; and in *Face* mode, too, the newly generated faces (as opposed to the moved ones).
 
 
 Examples
@@ -100,7 +93,7 @@ Examples
    :align: center
 
 Here, the selection outputs are used to set materials on certain faces of the mesh.
-A :doc:`/modeling/geometry_nodes/utilities/random_value` node can be used to limit the
+A :doc:`/modeling/geometry_nodes/utilities/random_value` is used to limit the
 extrusion to a random set of faces.
 
 
@@ -126,7 +119,7 @@ Vertex Mode
 
    The new edges created in vertex mode use the average value of all connected edges.
 
-* New **vertices** have copied values from their original vertices
+* New **vertices** have copied values from their original vertices.
 * New **edges** have the average value of any connected original edges.
   For boolean attributes, edges are selected if any connected edges were selected.
 
