@@ -9,17 +9,21 @@ Project Point Node
    :align: right
    :alt: Project Point node.
 
-The *Project Point* node projects a position vector using a :term:`Transformation Matrix`,
-using location, rotation, scale, and perspective divide.
+Applies a projection matrix to a point. Specifically, this node turns the given
+Euclidean vector (X, Y, Z) into the homogeneous vector (X, Y, Z, 1),
+multiplies the given projection matrix by it,
+and turns the resulting homogeneous vector back into a Euclidean one by dividing
+it by the absolute value of its W component. This last step is also known as
+perspective division.
 
 
 Inputs
 ======
 
 Vector
-   The position vector vector to transform.
+   The position vector to project.
 Transformation
-   The transformation matrix.
+   The projection matrix.
 
 
 Properties
