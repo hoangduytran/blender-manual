@@ -10,7 +10,7 @@ When Wayland is detected, it is the preferred system, otherwise X11 will be used
 
 .. hint::
 
-   The current "Windowing Environment" is listed in :menuselection:`File --> About`.
+   The current "Windowing Environment" is listed in :menuselection:`Topbar --> Blender --> About Blender`.
 
 
 X11
