@@ -7,7 +7,7 @@
    :maxdepth: 1
 
    align_rotation_to_vector.rst
-   axis_to_rotation.rst
+   axes_to_rotation.rst
    axis_angle_to_rotation.rst
    euler_to_rotation.rst
    invert_rotation.rst
