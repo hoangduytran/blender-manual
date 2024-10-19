@@ -41,6 +41,8 @@ Keep Shape
    When enabled, the smoothing algorithm will try to maintain as close as possible the overall
    shape of the original stroke.
 
+Smooth Ends
+   Smooth the ends of the strokes.
 
 Influence
 ---------

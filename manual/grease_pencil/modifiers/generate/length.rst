@@ -12,7 +12,7 @@ Options
 =======
 
 .. figure:: /images/grease-pencil_modifiers_generate_length_panel.png
-   :align: center
+   :align: right
 
    The Length modifier.
 

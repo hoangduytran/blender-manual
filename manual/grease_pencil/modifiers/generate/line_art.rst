@@ -277,6 +277,7 @@ Face Mark Filtering
 -------------------
 
 .. figure:: /images/grease-pencil_modifiers_generate_line-art_face-mark-filtering-panel.png
+   :align: right
 
    Face Mark Filtering subpanel.
 
@@ -373,6 +374,7 @@ Composition
 -----------
 
 .. figure:: /images/grease-pencil_modifiers_generate_line-art_composition-panel.png
+   :align: right
 
    Composition subpanel.
 
@@ -411,12 +413,17 @@ Bake
 
 Bake Line Art
    Bakes Line Art strokes for active Grease Pencil object within the *start*, *end* frame range in scene.
-   Bake Line Art (All) bakes all Grease Pencil objects that contains at least one Line Art modifier.
+   After baking, baked Line Art modifiers will be deactivated automatically.
+
+Bake All
+   Bakes all Grease Pencil objects that contains at least one Line Art modifier.
    After baking, baked Line Art modifiers will be deactivated automatically.
 
 Clear Baked Line Art
    Clears baked line art frames within the scene frame range for active Grease Pencil object.
-   Clear Baked Line Art (All) applies the same operation for all Grease Pencil objects that
+
+Clear All
+   Clears baked line art for all Grease Pencil objects that
    contains at least one Line Art modifier.
 
    .. warning::
