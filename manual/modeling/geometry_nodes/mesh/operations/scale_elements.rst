@@ -9,29 +9,27 @@ Scale Elements Node
    :align: right
    :alt: Scale Elements node.
 
-The *Scale Elements Node* scales groups of connected edges and faces.
-When multiple selected faces/edges share the same vertices, they are scaled together.
-The center and scaling factor is averaged in this case.
+Scales the selected faces or edges, letting you specify a scaling factor and pivot point for each one.
+Connected faces/edges are scaled together using their average factor and pivot point.
 
 
 Inputs
 ======
 
-Mesh
+Geometry
    Standard geometry input.
 
 Selection
-   Whether to scale each edge or face.
-   True values mean the element will be scaled, false means it will be unaffected.
+   Boolean field indicating which elements to scale.
 
 Scale
-   The factor used to scale elements or groups of elements.
+   The scaling factor for each element.
 
 Center
-   Origin of the scaling for each element. If multiple elements are connected, their center is averaged.
+   The pivot point for each element.
 
 Axis :guilabel:`Single Axis Mode Only`
-   Axis in which to scale the element. This input is normalized internally, so the length does not matter.
+   Axis along which to scale each element. This vector is normalized internally, so the length does not matter.
 
 
 Properties
@@ -40,18 +38,18 @@ Properties
 Domain
    The element type to transform.
 
-   :Face: Scale individual faces or neighboring face islands.
-   :Edge: Scale individual edges or neighboring edge islands.
+   :Face: Scale faces.
+   :Edge: Scale edges.
 
 Scale Mode
    :Uniform: Scale elements by the same factor in every direction.
-   :Single Axis: Scale elements in a single direction defined by the *Direction* input.
+   :Single Axis: Scale elements in a single direction defined by the *Axis* input.
 
 
 Output
 ======
 
-Mesh
+Geometry
    Standard geometry output.
 
 Examples
@@ -61,4 +59,4 @@ Examples
    :align: right
 
 The node is useful when combined with the :doc:`/modeling/geometry_nodes/mesh/operations/extrude_mesh`,
-especially in *Individual* mode, where face islands don't need to be scaled together.
+especially in *Individual* mode where connected faces aren't extruded together.
