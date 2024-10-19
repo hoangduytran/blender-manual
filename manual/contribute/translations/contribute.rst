@@ -17,14 +17,14 @@ or browse the `underlying git repository <https://projects.blender.org/blender/b
 Simple Contribution
 ===================
 
-The preferred way to contribute to the translation effor is the use the
+The preferred way to contribute to the translation effort is to use the
 `web-based interface <https://translate.blender.org/projects/blender-manual/manual>`__,
 currently a Weblate instance.
 
-Simple enhancement suggestions can be contributed by any user, even without loging in.
+Simple enhancement suggestions can be contributed by any user, even without logging in.
 Suggestions will be reviewed by the translating team before they get published.
 
-Weblate also comes with new helping tools to improve coherance of translations, like the
+Weblate also comes with new helping tools to improve coherence of translations, like the
 `glossary <https://translate.blender.org/projects/blender-manual/glossary/>`__.
 
 
@@ -33,11 +33,11 @@ Advanced Operations
 ===================
 
 If for some reasons the web-based translation interface does not work well for you,
-you can still download PO file from it, and upload back it later.
+you can still download the PO file from it, and upload it back later.
 
 .. warning::
 
-   You will have to deal with potential conflicts yourself if some update happened in the mean time.
+   You will have to deal with potential conflicts yourself if some updates happened in the meantime.
    Direct commit to the git repository for translations is not possible anymore.
 
 .. note::
@@ -54,7 +54,7 @@ you can still download PO file from it, and upload back it later.
 .. note::
 
    First of all, it is assumed that you have the manual already building.
-   If you have not done this already go back too
+   If you have not done this already go back to
    the :ref:`Getting Started <about-getting-started>` section.
 
 
@@ -88,22 +88,21 @@ You should have a directory layout like this::
 
 
 The PO language files themselves can also be downloaded from the web interface, ``Files`` menu,
-on each dedicated language page of the ``Manual`` comnponent.
+on each dedicated language page of the ``Manual`` component.
 
 
 A PO Editor
 -----------
 
-To make edit the PO files you will need to install a PO editor.
+To edit the PO files you will need to install a PO editor.
 We recommend that you use `Poedit <https://poedit.net/>`__,
 however any PO editor will do.
 
 .. note::
 
-   For Linux users, you will have to check with
+   For Linux users, you will need to check with
    your distribution's software center for a version of Poedit.
-   This editor is only a recommendation. There are others, such as Kate and Kwrite, that
-   could offer syntax highlighting and basic tools for text editing, e.g. letter case transposes.
+   This editor is only a recommendation. There are others, such as Kate and Kwrite, which could offer syntax highlighting and basic tools for text editing, e.g. letter case transposes.
    Other platforms can use some text editors supporting the syntax highlighting for PO files,
    or allowing you to create a custom one (such as Notepad++ on Windows).
 
@@ -125,7 +124,7 @@ On Windows run::
    set BF_LANG=fr
    make html
 
-Now you will have a build of the manual with translations applied.
+Now you will have a version of the manual with translations applied.
 
 
 Editing Translation Files
@@ -146,7 +145,7 @@ The modified ``.po`` files can now be submitted back to the web-based interface.
 .. tip::
 
    Make sure that you `Building with Translations`_ to catch any syntax errors you may make while translating.
-   These errors will be displayed as warnings while building the manual.
+   These errors will be displayed as warnings during the build process.
 
 
 Maintenance
