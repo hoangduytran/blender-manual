@@ -140,6 +140,12 @@ Summary
 
 Only Show Selected
    Only show keyframes belonging to objects/bones/... that are selected.
+
+.. note::
+   If this option is enabled, the Dope Sheet may not show all :doc:`material </render/materials/introduction>`
+   keyframes of the selected objects. Instead, it only shows the keyframes belonging to the selected nodes
+   in the :doc:`/editors/shader_editor`.
+
 Show Hidden
    Show keyframes from objects/bones/... that are hidden.
 Only Show Errors
