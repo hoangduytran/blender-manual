@@ -68,42 +68,30 @@ Edit the Simulation
 
 Switch to *Particle Edit* from the *Mode* select menu in the header of the 3D Viewport
 to edit the particle's paths/Keyframes. You may need to press :kbd:`T` from within the 3D Viewport
-to see the *Particle Edit* panel. Move to the frame you want to edit and use the various *Particle Edit*
-tools to edit your simulation. Work slowly, previewing your changes with :kbd:`Alt-A`,
-and save often so that you can go back to the previous version should something happen,
-or that you do not like the latest changes you have made.
-
-.. tip:: To be able to clearly see what you are working on:
-
-   #. Open the Options panel in the Toolbar.
-   #. Select *Point select mode* (see below) in the header of the 3D Viewport.
-      This will display key points along the particle path.
-
+to see the *Particle Edit* toolbox. Move to the frame you want to edit and use the various
+tools to edit your simulation.
 
 .. _particle-edit-selecting:
 
 Selecting
 =========
 
-- Single: :kbd:`LMB`.
+.. tip::
+   Switch to the *Point select mode* (see below) in the header of the 3D Viewport to be able to
+   see and select the keypoints.
+
+- Select single: :kbd:`LMB`.
+- Add to/remove from selection: :kbd:`Shift-LMB`.
 - All: :kbd:`A`.
-- None :kbd:`Alt-A`
-- Invert :kbd:`Ctrl-I`
+- None: :kbd:`Alt-A`.
+- Invert: :kbd:`Ctrl-I`.
 - Box select: :kbd:`B`.
-- Circle Select :kbd:`C`.
-- Lasso Select :kbd:`Ctrl-Alt-LMB`.
-- Select Linked: Move the mouse over a keypoint and press :kbd:`L`.
+- Circle Select: :kbd:`C`.
+- Lasso Select: :kbd:`Ctrl-Alt-LMB`.
+- Select Linked: Move the mouse over a path and press :kbd:`L` to add all its points to the selection.
+- Unselect Linked: Move the mouse over a path and press :kbd:`Shift-L` to remove all its points
+  from the selection.
 - Root/Tips: :menuselection:`Select --> Roots / Tips`.
-
-.. tip:: Selections
-
-   Selections are extremely useful for modifying only the particles that you want.
-   Hover over a particle path and press :kbd:`L` to link-select it,
-   hover over the next and press :kbd:`L` to add that path to the selection.
-   To remove a path, hold :kbd:`Shift` and press :kbd:`L`. To Deselect all press :kbd:`A`.
-
-   The method to select individual points is the same as in Edit Mode.
-   :kbd:`RMB` to select, :kbd:`Shift-RMB` to add/remove a point from the selection.
 
 
 .. _bpy.ops.particle.select_random:
