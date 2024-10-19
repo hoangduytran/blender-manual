@@ -44,13 +44,13 @@ Operation
 Solver
    Algorithm used to calculate the Boolean intersections.
 
-   :Fast:
+   :Float:
       Uses a mathematically simple solver which offers the best performance;
       however, this solver lacks support for overlapping geometry.
    :Exact:
       Uses a mathematically complex solver which offers the best results
       and has full support for overlapping geometry;
-      however, this solver is much slower than the *Fast Solver*.
+      however, this solver is much slower than the *Float Solver*.
 
 
 Output
