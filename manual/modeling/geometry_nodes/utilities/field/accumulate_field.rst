@@ -59,7 +59,7 @@ Trailing
    The running total of values in the corresponding group, starting at zero.
 
 Total
-   The total of all of the values in the corresponding group
+   The total of all the values in the corresponding group.
 
 
 Examples
@@ -85,7 +85,7 @@ Table
 +-------+-------------+---------+----------+-------+
 
 A few examples of input values and the node's results. One important take-away from this table
-is that the specific values for the *Group Input* does not matter; it only matters that the
+is that the specific values for the *Group Input* do not matter; it only matters that the
 values are shared between elements.
 
 Stacking Boxes
