@@ -304,6 +304,12 @@ Sync Visible Range
 Only Show Selected
    Only show keyframes related to the selected items.
    This could be objects, bones, nodes, and so on.
+
+.. note::
+   If this option is enabled, the Timeline may not show all :doc:`material </render/materials/introduction>`
+   keyframes of the selected objects. Instead, it only shows the keyframes belonging to the selected nodes
+   in the :doc:`/editors/shader_editor`.
+
 Only Show Errors
    Only show curves and drivers that are disabled or have errors.
    Useful for debugging.
