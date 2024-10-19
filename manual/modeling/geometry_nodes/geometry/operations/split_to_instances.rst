@@ -9,8 +9,8 @@ Split To Instances Node
    :align: right
    :alt: Split to Instance node.
 
-The *Split to Instances* node splits up geometry elements into :doc:`/modeling/geometry_nodes/instances`,
-based on a Group ID.
+Splits a selection of geometry elements (such as faces) into groups,
+then turns each group into an :doc:`instance </modeling/geometry_nodes/instances>`.
 
 
 Inputs
@@ -20,44 +20,48 @@ Geometry
    Standard geometry input.
 
 Selection
-   Boolean field that is true for parts of the geometry to be evaluated.
-   Parts not in the selection will not be in the node's output.
+   Boolean field indicating which geometry elements to include.
 
 Group ID
-   ID field (integer) used to distinguish different groups.
+   Integer field indicating which group each element belongs to. Elements with the
+   same ID will be moved into the same output instance.
 
 
 Properties
 ==========
 
 Domain
-   The domain on which the selection and group ID fields are evaluated.
+   The type of geometry to extract and split.
+   This is also the domain on which the *Selection* and *Group ID* fields are evaluated.
 
    :Point:
-      The fields are evaluated on points, control points, and vertices.
+      Points, spline control points, and vertices.
    :Edge:
-      The fields are evaluated on the edges of the mesh component.
-   :Faces:
-      The fields are evaluated on the faces of the mesh component.
+      Mesh edges.
+   :Face:
+      Mesh faces.
    :Spline:
-      The fields are evaluated on the splines in the curve component.
-   :Instances:
-      The fields are evaluated on the top-level instances. Realized instances are ignored.
+      Curve splines.
+   :Instance:
+      Top-level instances. Realized instances are ignored.
+   :Layer:
+      Grease Pencil layers.
 
 .. note::
 
-      When selecting a domain that doesn't modify all components, the unmodified
-      components will not be present in the output.
+      Geometry that doesn't match the selected domain will be removed.
+      For example, if you choose *Edge*, any faces, splines, and instances in the input
+      geometry will be lost.
 
 
 Output
 ======
 
 Instances
-   input geometry splitted up as instances.
+   The instances containing the grouped geometry elements.
 
 Group ID
-   ID field from the input Group ID
+   Group ID of each instance.
 
 
 Examples
@@ -66,8 +70,10 @@ Examples
 .. figure:: /images/modeling_geometry-nodes_geometry_split-to-instances_example.png
    :align: center
 
-   Here, a grid is split into instances based on a voronoi texture, then translated randomly in Z.
-   Note that the GroupID field expects different integers values (0, 1, 2, 3…), not floats (0.1, 0.2, 0.3),
-   which is why the color needs to be multiplied by 1000.
+In the example above, we start with a grid of 1000x1000 square faces serving as "pixels."
+Then, we group these faces into patches by assigning them a group ID sampled from a Voronoi texture,
+and move each resulting instance by a random amount along the Z axis.
 
-
+Note that, because the texture outputs floating point values between 0 and 1 while the group ID
+is an integer, all the values would be rounded to 0 or 1 and we would only get two groups.
+To get more variation, we multiply the texture value by 1000.
