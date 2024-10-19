@@ -9,8 +9,7 @@ Invert Matrix Node
    :align: right
    :alt: Invert Matrix node.
 
-The *Invert Matrix* node returns the mathematical
-`inverse matrix <https://mathworld.wolfram.com/MatrixInverse.html>`__.
+Returns the `inverse <https://mathworld.wolfram.com/MatrixInverse.html>`__ of the given matrix.
 
 
 Inputs
@@ -32,11 +31,11 @@ Outputs
 Matrix
    The inverted matrix.
 Invertible
-   Returns true if the matrix cannot be inverted.
-   For example. this can happen when a transformation matrix has a scale of zero.
+   Returns whether the matrix could be inverted.
+   This can be false when a transformation matrix has a scale of zero, for example.
    See `Invertible matrix <https://en.wikipedia.org/wiki/Invertible_matrix>`__ for more information.
 
    .. important::
 
-      When a matrix is invertible, the `identity matrix <https://en.wikipedia.org/wiki/Identity_matrix>`__
+      When a matrix is not invertible, the `identity matrix <https://en.wikipedia.org/wiki/Identity_matrix>`__
       is returned.
