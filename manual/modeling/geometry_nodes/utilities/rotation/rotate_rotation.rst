@@ -9,33 +9,31 @@ Rotate Rotation Node
    :align: right
    :alt: Rotate Euler node.
 
-The *Rotate Rotate Rotation* node applies an additional rotation amount to a rotation value.
+The *Rotate Rotation* node applies an additional rotation to a given one.
 
-To rotate a :term:`Euler Rotation`, first use the :doc:`/modeling/geometry_nodes/utilities/rotation/euler_to_rotation`
+To rotate an :term:`Euler Rotation`, first use the :doc:`/modeling/geometry_nodes/utilities/rotation/euler_to_rotation`.
 
 
 Inputs
 ======
 
 Rotation
-   The rotation to rotate.
+   The starting rotation.
 
 Rotate By
-   Specifies how much a rotation is rotated.
+   The additional rotation.
 
 
 Properties
 ==========
 
 Space
-   Base orientation for the rotation.
-
-   :Global: Rotate a rotation in :term:`Global Space`.
-   :Local: Rotate a rotation in :term:`Local Space`.
+   :Global: Rotate in :term:`Global Space`.
+   :Local: Rotate in :term:`Local Space`.
 
 
 Outputs
 =======
 
 Rotation
-   The rotated rotation.
+   The resulting rotation.
