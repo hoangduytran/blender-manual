@@ -8,23 +8,22 @@
 File Browser
 ************
 
-The File Browser is used in all the file-related operations. These include:
+The File Browser is used in all file-related operations. These include:
 
 - Opening and saving blend-files.
-- Browsing inside other blend-files, when appending or linking data-blocks,
-  see :doc:`Linked Libraries </files/linked_libraries/index>`.
+- Browsing the content of other blend-files when appending or linking data-blocks
+  (see :doc:`Linked Libraries </files/linked_libraries/index>`).
 - Importing from/exporting to other file formats.
-- Picking new locations for existing file paths (images, videos, fonts...).
+- Updating the locations of previously imported media (images, videos, fonts...).
 
 The most common way to use this editor is through modal operators (like opening or saving a blend-file).
-The File Browser will appear in a new window, waiting for the operation to complete,
-and then close returning the main window.
+The File Browser will appear in a new window, wait for you to select a file, and then close again.
 
-You can use the File Browser as any other editor type, to browse through the file system.
-The main purpose of this is to be able to drag-and-drop from the File Browser into other editors.
-
-- Images into the :ref:`editors-3dview-index` (to set as background or apply as material texture).
-- Media files into the :doc:`/video_editing/index`.
+You can also use the File Browser like a regular, permanently visible editor. In fact,
+the predefined Video Editing :doc:`workspace </interface/window_system/workspaces>` uses it this way.
+This lets you drag-and-drop media from the browser straight into e.g. the
+:doc:`3D Viewport </editors/3dview/introduction>` or the
+:doc:`Video Sequencer </editors/video_sequencer/introduction>`, saving you some overhead.
 
 .. figure:: /images/editors_file-browser_editor.png
 
@@ -37,12 +36,8 @@ Interface
 Main Region
 -----------
 
-The main region of the File Browser acts similar to the file browser built into you operating system.
-The region contains an array of files, folders, or internal blend-file data in a grid or list of items.
-`Navigating`_, `selecting`_, and `editing`_ of these items works just as it would in your operating system's file
-browser.
-
-Hovering over items will show a tooltip with extra information about the file.
+The main region lists files, folders, or blend-file contents.
+Hovering over an item will show a tooltip with extra information.
 
 
 .. _file_browser-previews:
@@ -57,8 +52,8 @@ In its *Thumbnail* display mode, the File Browser supports many types of preview
 - Blend-files
 - Internal :doc:`Data-blocks </files/data_blocks>`
 
-In order to get previews for data-blocks, there previews must be generated.
-See :doc:`Blend-files Previews </files/blend/previews>` for how to generate and manage Blender data previews.
+In order to get previews for data-blocks, these must first be generated.
+See :doc:`/files/blend/previews`.
 
 .. figure:: /images/editors_file-browser_previews.png
    :align: center
@@ -67,24 +62,24 @@ See :doc:`Blend-files Previews </files/blend/previews>` for how to generate and 
    The File Browser in *Thumbnail* mode.
 
 
-File Path Region
+Directory Region
 ----------------
 
-The File Path is above the main region and can aid in navigating and adjust how items are displayed.
+Above the file list, there's a textbox showing the current folder path, along with buttons for navigating.
 
 .. _bpy.ops.file.previous:
 
 Previous Folder :kbd:`Backspace`, :kbd:`Alt-Left`
-   Move to previous folder (in navigation history).
+   Move to previous folder in navigation history.
 
 .. _bpy.ops.file.next:
 
 Next Folder :kbd:`Shift-Backspace`, :kbd:`Alt-Right`
-   Move to next folder (in navigation history).
+   Move to next folder in navigation history.
 
 .. _bpy.ops.file.parent:
 
-Parent File :kbd:`P`, :kbd:`Alt-Up`
+Parent Directory :kbd:`P`, :kbd:`Alt-Up`
    Move up to parent directory.
 
 .. _bpy.ops.file.refresh:
@@ -94,30 +89,29 @@ Refresh File List :kbd:`R`, :kbd:`NumpadPeriod`
 
 .. _bpy.ops.file.directory_new:
 
-Create Directory :kbd:`I`
-   Will ask you to confirm and create a new directory inside current one,
-   scroll to it in the main view, and let you enter its name.
+Create New Directory :kbd:`I`
+   Create a new directory inside the current one.
 
 .. _bpy.types.FileSelectParams.directory:
 
-File Path :kbd:`Ctrl-L`
-   Text field for the current folder path.
+Directory :kbd:`Ctrl-L`
+   The current folder path.
    :kbd:`Tab` will auto-complete an existing path.
-   If you type a nonexistent directory path, you will be prompted to create that new directory.
+   If you type a nonexistent path, you will be prompted to create it.
 
 .. _bpy.types.FileSelectParams.filter_search:
 
 Search :kbd:`Ctrl-F`
    Filter items by name.
    The wildcard ``*`` will match anything, e.g. ``bl*er`` will match both ``blender`` and ``blogger``.
-   There is always an implicit wildcard at start and end of the search text,
+   There is always an implicit wildcard at the start and end of the search text,
    so ``blender`` will also match ``test_blender_file.blend``.
    This field can also be used to filter some specific file extension (e.g. ``.png`` will list all PNG files).
 
 .. _bpy.types.FileSelectParams.display_type:
 
 Display Mode
-   Controls how files are displayed.
+   Control how files are displayed.
 
    :Vertical List: Displays files and folders in a vertical list.
    :Horizontal List: Displays files and folders in a horizontal list.
@@ -129,18 +123,18 @@ Display Settings
 
 .. _bpy.types.FileSelectParams.display_size:
 
-Display Size
+Size
    The size of the thumbnails.
 
 .. _bpy.types.FileSelectParams.recursion_level:
 
-Recursion
+Recursions
    The number of directory levels to show at once in a flat way.
 
-   :None: List only the current directory content.
+   :None: List only the current directory's content.
    :Blend File: List the whole content of a blend-file (only available when linking or appending data-blocks).
-   :One Levels: List all subdirectories' content, one level of recursion.
-   :Two Levels: List all subdirectories' content, two level of recursion.
+   :One Level: List all subdirectories' content, one level of recursion.
+   :Two Levels: List all subdirectories' content, two levels of recursion.
    :Three Levels: List all subdirectories' content, three levels of recursion.
 
    .. hint::
@@ -149,14 +143,12 @@ Recursion
       even if you have arranged them in a nice set of directories to avoid having hundreds of
       files in a single place.
 
-      In the *Append/Link* case, showing the content of the whole blend-file will allow you
-      to link different types of data-blocks in a single operation.
+      In the *Append/Link* case, showing the content of the whole blend-file lets you
+      link different types of data-blocks in a single operation.
 
    .. warning::
 
-      The more levels you show at once, the more time it will take to list them all
-      (typically, it will be exponential, showing three levels at once
-      may take three orders of magnitude more time to be fully listed).
+      The more levels you show at once, the more time it will take to list them all.
 
 .. _bpy.types.FileSelectParams.sort_method:
 
@@ -174,8 +166,8 @@ Sort By
 Filter Settings
 ^^^^^^^^^^^^^^^
 
-On the right side of the file path are the filtering options.
 The toggle with the funnel icon controls whether filtering is enabled or not.
+The dropdown button next to it shows the filtering options.
 
 File Types
    Filters files by categories, like folders, blend-files, images, etc.
@@ -194,37 +186,34 @@ Show Hidden :kbd:`H`
 Execution Region
 ----------------
 
+These controls are at the bottom of the editor.
+
 .. _bpy.types.FileSelectParams.filename:
 
 File Name
-   Text field to edit the file name and extension.
-   When saving, if the background is red, a file with same name already exists in the folder.
+   Text field to edit the file name and extension. Turns red to warn you about overwriting an existing file.
    :kbd:`Tab` will auto-complete to existing names in the current directory.
 
-   Increment Filename ``-``, ``+``
-      Removes/Decreases or adds/increases a trailing number to your file name
+   Increase/Decrease Number ``+``, ``-``
+      Adds/increases or removes/decreases a trailing number in your file name
       (used e.g. to store different versions of a file).
 
 .. _bpy.ops.file.cancel:
 
 Cancel :kbd:`Esc`
-   Cancels the file selection (and the underlying operation), and closes the File Browser.
-   Using the *Back to Previous* button in the :doc:`Topbar </interface/window_system/topbar>`
-   will have the same effect.
+   Closes the File Browser and cancels the operation.
 
 .. _bpy.ops.file.execute:
 
 Confirm :kbd:`Return`
-   The main button to validate the operation, which defines its name.
-   Double-clicking on a non-directory item will have the same effect.
+   Confirm the current directory and file name. You can also double-click a file or data-block
+   in the main region.
 
 
-Source List Region
-------------------
+Quick Access Region
+-------------------
 
-The left region displays different ways to quickly access some directories.
-The region is divided into separate panels each containing a :ref:`UI List <ui-list-view>` of directories.
-Clicking on one of the directories will immediately navigate to that folder.
+The region on the left contains a few panels that let you quickly jump to certain directories with a single click.
 
 
 .. _bpy.types.SpaceFileBrowser.bookmarks:
@@ -232,9 +221,7 @@ Clicking on one of the directories will immediately navigate to that folder.
 Bookmarks
 ^^^^^^^^^
 
-Contains folders that you want to be able to access often without having to navigate to them in the File Browser.
-To the right of that list are buttons to perform basic management actions on your bookmarks,
-e.g. add/remove an entry, move it up or down in the list, etc.
+A custom list of folders that you use often. You can use the buttons to the right of the list to add/remove/move items.
 
 
 .. _bpy.types.SpaceFileBrowser.system_bookmarks:
@@ -242,7 +229,7 @@ e.g. add/remove an entry, move it up or down in the list, etc.
 System
 ^^^^^^
 
-Contains OS-defined common directories, like the main user folder...
+Common directories such as the home directory in Linux or the "Documents" folder in Windows.
 
 
 .. _bpy.types.SpaceFileBrowser.system_folders:
@@ -250,7 +237,7 @@ Contains OS-defined common directories, like the main user folder...
 Volumes
 ^^^^^^^
 
-Contains all OS-defined available volumes, e.g. drives or network mounts.
+Drives and network mounts.
 
 
 .. _bpy.types.SpaceFileBrowser.recent_folders:
@@ -258,7 +245,7 @@ Contains all OS-defined available volumes, e.g. drives or network mounts.
 Recent
 ^^^^^^
 
-Contains recently accessed folders.
+Recently accessed folders.
 
 .. _bpy.ops.file.reset_recent:
 
@@ -272,7 +259,7 @@ Operator Options Region
 -----------------------
 
 The right region shows the options of the calling operator.
-Besides common actions listed below, many import/export add-ons will also expose their options there.
+Besides the common actions listed below, many import/export add-ons will also expose their options there.
 
 Open, Save, Save As Blender File
    See :doc:`/files/blend/open_save`.
@@ -290,16 +277,16 @@ Relative Path
 Header Region
 -------------
 
-The header only contains two menus, one with you standard editor *View* controls
+The header only contains two menus, one with the standard editor *View* controls
 and the other to list a few `Selecting`_ operators for the sake of discoverability.
-Often it is hidden as most of the functionality is contained in the regions described previously.
+These menus are not visible when the browser is in a modal window.
 
 
 Navigating
 ==========
 
-Entering a Directory
-   A single :kbd:`LMB` click on a directory enters it.
+Entering a Directory :kbd:`Return`
+   Double-click a directory to enter it.
 Parent Directory :kbd:`P`
    Takes you up one level of directory.
 
@@ -308,26 +295,24 @@ File Drop
 ---------
 
 You can also drag and drop a file or directory from your file manager into the Blender File Browser.
-This will move it to the directory of the dropped file, and the file will be selected.
+This will navigate to the item and select it.
 
 
 Selecting
 =========
 
 Select
-   Both :kbd:`LMB` and :kbd:`RMB` clicks work.
-   Holding :kbd:`Shift` will extend the items selection.
-(De)select All :kbd:`A`
-   Toggles selecting all files.
+   Click :kbd:`LMB` to select a single item. Additionally hold :kbd:`Ctrl` to add/remove that item
+   to/from the selection, or :kbd:`Shift` to select a range of items.
 Dragging
    Dragging with :kbd:`LMB` starts a :ref:`box selection <tool-select-box>`.
 
 .. note::
 
-   You can always select several entries in the File Browser,
-   the last selected one is considered as the active one.
+   You can always select several entries in the File Browser --
+   the last selected one is considered the active one.
    If the calling operation expects a single path (like e.g. the main blend-file *Open* one),
-   it will get that active item's path, other selected ones will just be ignored.
+   it will get that active item's path, and the other selected items will be ignored.
 
 
 Arrow Keys
@@ -335,21 +320,18 @@ Arrow Keys
 
 It is also possible to select/deselect files by "walking" through them using the arrow keys:
 
-- Just using an arrow key, the next file in the chosen direction will be selected and all others deselected.
-- Holding down :kbd:`Shift` while doing this does not deselect anything so it extends to the selection,
-  plus it allows to deselect files by navigating into a block
-  of already selected ones (minimum two files in sequence).
-- Holding down :kbd:`Shift-Ctrl` further selects/deselects all files in between.
+- Press an arrow key to select the next/previous file in the list and deselect all the others.
+- Hold :kbd:`Shift` to keep the current selection (and add to it).
+- Hold :kbd:`Shift-Ctrl` to invert the selection as you pass over it.
 
 If no file is selected, the arrow key navigation selects the first or last file in the directory,
 depending on the arrow direction.
 
-If you select a directory and hit :kbd:`Return`, you will go into that directory
-(and highlighting 'parent' ``..`` entry will bring you up one level).
-
 
 Editing
 =======
+
+The following operations are available in the file list's context menu.
 
 .. _bpy.ops.file.external_operation:
 
@@ -375,7 +357,7 @@ External
 
 .. _bpy.ops.file.delete:
 
-Delete Files :kbd:`Delete`, :kbd:`X`
+Delete :kbd:`Delete`, :kbd:`X`
    Delete the currently selected files or directories by moving them to the operating system's "trash".
 
    Note, on Linux deleting directories requires KDE or GNOME.
@@ -383,4 +365,4 @@ Delete Files :kbd:`Delete`, :kbd:`X`
 .. _bpy.ops.file.rename:
 
 Rename :kbd:`F2`
-   Change the name for the currently selected file or directory.
+   Change the name of the currently selected file or directory.
