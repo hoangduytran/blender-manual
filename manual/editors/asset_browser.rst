@@ -4,10 +4,7 @@
 Asset Browser
 *************
 
-This section describes the *Asset Browser*, which is the main interface for organizing and using assets.
-
-The Asset Browser was introduced in Blender 3.0, and will be improved and
-expanded over multiple upcoming releases.
+The *Asset Browser* is the main interface for organizing and using assets.
 
 .. seealso::
 
@@ -34,49 +31,62 @@ Interface
 Main Region
 -----------
 
-The main region of the Asset Browser acts similar to the :doc:`/editors/file_browser` built into Blender.
-It shows the assets contained in the selected catalog.
+The center region of the Asset Browser lists the assets contained in the selected catalog.
 
-Click an asset to select and activate it. Box select by dragging :kbd:`LMB` or
-extend the selection with :kbd:`Shift-LMB` to select multiple assets.
-Every asset has a context menu.
+Click :kbd:`LMB` to select a single asset. Additionally hold :kbd:`Ctrl` to add/remove that asset
+to/from the selection, or :kbd:`Shift` to select a range of assets. You can also drag :kbd:`LMB`
+to perform a box select.
 
+The region has a context menu with the following operations:
 
-Source List Region
-------------------
+Refresh Asset Library :kbd:`R`
+   Refreshes the list.
+Clear Asset
+   See :ref:`bpy.ops.asset.clear`.
+Clear Asset (Set Fake User)
+   See :ref:`assets-clear-set-fake-user`.
+Open Blend File
+   Opens the blend-file containing the asset.
+Display Size
+   Changes the size of the preview thumbnails.
 
-The Source List region can be used for navigating and `Using Assets`_.
+Asset Library Region
+--------------------
+
+The region on the left lets you select an asset library and shows its catalogs.
+You can show/hide this region by pressing :kbd:`T`.
 
 .. _bpy.types.FileAssetSelectParams.asset_library_reference:
 
 Asset Library
-   Shows the active :doc:`asset library </files/asset_libraries/index>`,
-   and allows switching between asset libraries.
+   The :doc:`asset library </files/asset_libraries/introduction>` whose catalogs to show.
 
-   :All Libraries: Show assets from all of the listed asset libraries.
+   :All Libraries: Show catalogs from all available libraries.
    :Current File:
-      Show the assets currently available in this Blender session,
-      regardless of whether it is part of an asset library or not.
-      See :ref:`asset-library-current-file` for more information.
-   :Essentials: Show the basic building blocks and utilities coming with Blender.
+      Show the catalogs in the current blend-file (even if that file is not yet part of
+      an asset library). See :ref:`asset-library-current-file` for more information.
+   :Essentials: Show the catalogs that come bundled with Blender.
+
+   Any libraries that you added in the :ref:`File Path Preferences <bpy.types.UserAssetLibrary>`
+   are listed here too.
 
 .. _bpy.ops.asset.bundle_install:
 
-Copy Asset Bundle to Library
-   Shown when the Library selector is set to Current File,
-   the current blend-file file is considered an :ref:`Asset Bundle <asset-bundles>`,
-   and is not yet located inside any asset library.
+Copy Bundle to Asset Library
+   Shown when *Asset Library* is set to *Current File* and the current blend-file is an
+   :ref:`asset bundle <asset-bundles>` that's not yet part of an asset library.
 
-   The Copy Asset Bundle operator makes it simple to copy the file into the asset library.
-   The catalogs of the asset bundle will be merged into the asset library.
+   Lets you select a target asset library, then opens a File Browser in that library's root
+   folder so you can save the current blend-file there. Once saved, the assets in the blend-file
+   become available as part of the library.
 
-Catalog
-   Tree view that shows the :doc:`catalogs </files/asset_libraries/catalogs>` of the active asset library.
-   Selecting a catalog limits shown assets to assets only from the selected library.
+Catalogs
+   Tree view that shows the :doc:`catalogs </files/asset_libraries/catalogs>` of the selected
+   asset library. A catalog is a group of assets; when you select one, only the assets in that
+   catalog and its child catalogs will be listed.
 
-   Catalogs can be renamed by double clicking on there name.
-   Catalogs can also be nested inside others by dragging and dropping one catalog into another.
-   The "All" catalogs is built-in asset library that contains all other asset libraries.
+   You can rename a catalog by double-clicking it, or assign it to a different parent catalog
+   by dragging and dropping.
 
 Add-ons and features like the :doc:`/animation/armatures/posing/editing/pose_library`
 can show custom panels here.
@@ -88,12 +98,13 @@ can show custom panels here.
 Asset Details Region
 --------------------
 
-The Asset Details region on the right shows metadata of the active asset.
-**Only metadata of assets contained in the current blend-file can be edited**.
+The region on the right shows the metadata of the active asset.
+You can show/hide this region by pressing :kbd:`N` or clicking the gear icon in the header.
+
+*Only metadata of assets contained in the current blend-file can be edited*.
 
 Name
-   The asset data-block name. This name is unique for the asset data type within
-   the same blend-file.
+   The asset's name. Unique for the asset data type within the same blend-file.
 
 .. _bpy.types.WindowManager.asset_path_dummy:
 
@@ -103,14 +114,24 @@ Source
    .. _bpy.ops.asset.open_containing_blend_file:
 
    Open Blend File
-      This button will start a new Blender instance and open the blend-file that contains the asset.
-      In the background Blender will keep monitoring that new Blender instance;
-      when it is quit, the Asset Browser will be refreshed to show any updated assets.
+      Opens the blend-file that contains the asset in a new Blender instance.
+      When this instance is closed, the Asset Browser will be automatically refreshed.
+
+.. _bpy.types.AssetMetaData.license:
+
+License
+   Optional name of the license under which this asset is distributed.
+   Not used by Blender itself.
+
+.. _bpy.types.AssetMetaData.copyright:
+
+Copyright
+   Optional copyright notice. Not used by Blender itself.
 
 .. _bpy.types.AssetMetaData.description:
 
 Description
-   Optional field for the asset description. Not used by Blender itself.
+   Optional asset description. Not used by Blender itself.
 
 .. _bpy.types.AssetMetaData.author:
 
@@ -126,12 +147,12 @@ Shows the preview image of the asset. See :ref:`asset-previews`.
 .. _bpy.ops.ed.lib_id_load_custom_preview:
 
 Load Custom Preview
-   Opens a window with the File Browser to select an image for the asset preview.
+   Opens a File Browser where you can select a new image for the asset preview.
 
 .. _bpy.ops.ed.lib_id_generate_preview:
 
 Generate Preview
-   Generate/update a preview for the asset.
+   Autogenerate a new preview for the asset.
 
 Preview
    Menu of additional preview operators.
@@ -139,8 +160,8 @@ Preview
    .. _bpy.ops.ed.lib_id_generate_preview_from_object:
 
    Render Active Object
-      Generates a preview by based on the 3D Viewport's :term:`Active` object.
-      This is useful for node groups, particularly for geometry nodes,
+      Generates a preview based on the 3D Viewport's :term:`Active` object.
+      This is useful for node groups,
       which cannot automatically generate their own preview.
 
 
@@ -152,8 +173,8 @@ Tags
 ^^^^
 
 Panel for viewing and editing asset tags.
-These do not have any meaning to Blender, and can be chosen freely.
-When using the search field to filter the assets, those assets whose tags (partially) match
+These do not have any meaning to Blender and can be chosen freely.
+When using the search field to filter the assets, the assets whose tags (partially) match
 the search term will also be shown.
 
 .. note::
@@ -168,7 +189,7 @@ Using Assets
 ============
 
 As a general rule, **an asset can be used by dragging it from the Asset Browser to the desired location**.
-Objects and worlds can be dragged from the Asset Browser into the scene,
+Objects and worlds can be dragged from the Asset Browser into the scene.
 Materials can be dragged onto the object that should use them.
 Geometry nodes can also be dragged onto objects to add a :doc:`/modeling/modifiers/generate/geometry_nodes`.
 The use of pose assets is different, and is described in :doc:`/animation/armatures/posing/editing/pose_library`.
@@ -180,19 +201,20 @@ depending on the following configuration of the Asset Browser:
 
 Import Method
    Determines how data is managed when an asset is imported.
-   This option can be found in the center of the Asset Browser header.
+   This option can be found in the center of the Asset Browser header
+   (when an asset library other than *Current File* or *Essentials* is selected):
 
-   :Follow Preferences:
-      Use the import method set in the Preferences.
-   :Link:
+   Follow Preferences
+      Use the import method set in the :ref:`File Path Preferences <bpy.types.UserAssetLibrary.import_method>`.
+   Link
       *Same as* :menuselection:`File --> Link...`
 
       The asset will be linked to the current blend-file, and thus be read-only.
-      Later changes to the asset file will be reflected in all files that link it in.
-   :Append:
+      Later changes to the asset file will be reflected in all files that link it.
+   Append
       *Same as* :menuselection:`File --> Append...`
 
-      All of the asset and all its dependencies will be appended to the current file.
+      The asset and all its dependencies will be copied into the current file.
       Dragging a material into the scene three times will result in three independent copies.
       Dragging an object into the scene three times will also result in three independent copies.
 
@@ -202,11 +224,11 @@ Import Method
 
       Since the file now has its own copy of the asset, later changes to
       the asset file will not be reflected in the file it's appended to.
-   :Append (Reuse Data):
+   Append (Reuse Data)
       *Specific to the Asset Browser*.
 
       The first time an asset is used, it will be appended, including its dependencies,
-      just like described previously. However, Blender will keep track of where it originated,
+      just as described previously. However, Blender will keep track of where it originated,
       and the next time the asset is used, as much data as possible will be reused.
       Dragging a material into the scene three times will only load it once,
       and just assign the same material three times.
@@ -224,8 +246,8 @@ Import Method
 
          Some asset types such as collections can be created as an instanced collection.
          This is done by enabling the *Instance* option after dragging collection assets into the 3D Viewport.
-         By enabling this option an empty object is added that uses an instance of the collection.
-         If this option is disabled then the full collection hierarchy will be added to the scene.
+         By enabling this option, an empty object is added that uses an instance of the collection.
+         If this option is disabled, the full collection hierarchy will be added to the scene.
 
          Collection Assets from the current file will always be instanced.
 
@@ -248,16 +270,11 @@ Asset Previews
 
    Preview panel in the Asset Browser.
 
-Preview images are typically automatically generated when you
-:ref:`mark a data-block as asset <bpy.ops.asset.mark>`. The auto-generated
-preview tries to capture the object from the front. However this only works if
-the geometry is laid out so that it matches what Blender considers to be the
-front. That is, the geometry that should be the front needs to point down the -Y
-axis of the object. The rotation may have to be applied to get the expected
-result. Collection assets use the global -Y  axis as the front (instead of the
-local one, as collections themselves don't have a rotation).
+Preview images are typically generated automatically when you :ref:`mark a data-block as an asset <bpy.ops.asset.mark>`. 
+Objects are captured from their local -Y axis, while collections are captured from the global -Y axis
+(as these don't have a local axis).
 
-It's also possible to load image files from drive, to replace the auto-generated previews.
+If the auto-generated preview image isn't sufficient, you can replace it by a custom one.
 
 For previews of pose assets, see :ref:`poselib-preview-images`.
 
@@ -274,10 +291,10 @@ files need to be :doc:`packed </files/blend/packed_data>` into the current blend
 Asset bundles can be copied to an asset library via the :ref:`Asset Browser <bpy.ops.asset.bundle_install>`:
 
 - Open the asset bundle blend-file.
-- Switch its Asset Browser to *Current File* (if it's not set at that already).
+- Switch its Asset Browser to *Current File* (if it's not set to that already).
 - Click on *Copy Bundle to Asset Library*.
 - Choose the asset library to copy it to.
-- A File Browser will open, showing the files of the selected asset library.
+- A File Browser will open at the root folder of the selected asset library.
   Choose the desired location of the blend-file, and click the *Copy to Asset Library* button.
 - The blend-file will be saved at the chosen location, and any :doc:`catalogs </files/asset_libraries/catalogs>` of
   the asset bundle will be merged into the target asset library.
