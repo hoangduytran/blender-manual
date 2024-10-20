@@ -7,7 +7,8 @@
 Spreadsheet
 ***********
 
-The Spreadsheet editor is used to inspect geometry attributes.
+The Spreadsheet editor is used to inspect the geometry attributes of the :term:`active` object,
+typically in order to debug :doc:`geometry nodes </modeling/geometry_nodes/introduction>`.
 
 .. figure:: /images/editors_spreadsheet_interface.png
    :align: center
@@ -21,42 +22,45 @@ Header
 .. _bpy.types.SpaceSpreadsheet.object_eval_state:
 
 Object Evaluation State
-   Display the data of an object at different states of its evaluation.
+   The state for which to display data.
 
    :Evaluated: Display data from the object with all modifiers applied.
    :Original: Display data from the original object without any modifiers applied.
-   :Viewer Node: Display data from the active Viewer node of the active object.
+   :Viewer Node: Display the data that's fed into the active :doc:`/modeling/geometry_nodes/output/viewer`.
+
+   You can also toggle between *Evaluated* and *Viewer Node* by clicking the eye icon in the
+   Viewer node's header.
 
 .. _bpy.types.SpaceSpreadsheet.display_context_path_collapsed:
 
 Breadcrumbs
-   The breadcrumbs show three key parts of the path the evaluated object
-   takes before showing the information in the `Main Region`_.
-   In the order from left to right, the first item displayed is the :term:`Active` object.
-   The next two items are displayed when the *Viewer* node evaluation state is chosen.
-   The first of these next items is the name of the Geometry Nodes modifier,
-   the last item shown is the name of the active Viewer node.
+   Shows the name of the active object, and (if *Object Evaluation State* is set to *Viewer Node*)
+   the name of the Geometry Nodes modifier and the active Viewer node.
 
-   Clicking the arrow between items hides the name of the active modifier.
+   You can click one of the arrows between the names to hide the modifier.
 
 .. _bpy.ops.spreadsheet.toggle_pin:
 
 Toggle Pin
-   Usually, the editor displays data from the active object.
-   When an object is pinned, its data remains visible, even if another object becomes active.
+   Click to "lock" the editor to the currently active object, and have it keep displaying that
+   object's data even if another object becomes active. Click again to unlock.
 
 .. _bpy.types.SpaceSpreadsheet.show_only_selected:
 
 Selected Only
    This option is only available if the object is in Edit Mode.
-   When checked, only data for the selected mesh elements is shown.
+   When checked, only data for the selected geometry elements is shown.
 
+.. _bpy.types.SpaceSpreadsheet.use_filter:
+
+Use Filter
+   Whether to use the filters that are defined in the Sidebar (see below).
 
 Main Region
 ===========
 
-The main view allows you to view the actual spreadsheet.
-Row indices and column names remain visible when scrolling down or to the side.
+The main view shows the actual spreadsheet.
+Column names and row indices remain visible when scrolling down or to the side.
 
 .. note::
 
@@ -70,35 +74,11 @@ Row indices and column names remain visible when scrolling down or to the side.
 Data Set Region
 ===============
 
-With the Data Set region on the left you can choose which geometry component and geometry domain to view.
-For each attribute domain its size is displayed, for example the number of faces.
+With region on the left, you can choose what to display data for.
+The top tree lets you pick from the hierarchy of geometries, such as a mesh inside an instance.
+The bottom tree lets you pick a domain, such as mesh vertices or curve splines.
 
-Mesh
-   Mesh component containing point, corner, face and edge data.
-
-   :Vertex: Display attributes that are stored per vertex.
-   :Edge: Display attributes that are stored per edge.
-   :Face: Display attributes that are stored per face.
-   :Face Corner: Display attributes that are stored per face corner.
-
-Curve
-   Display curve data which are the attributes on splines and control points.
-
-   :Control Point: Display attributes that are stored per control point.
-   :Spline: Display attributes that are stored per spline.
-
-Point Cloud
-   Point cloud component containing only point data.
-
-   :Point: Display attributes that are stored per point.
-
-Volume Grids
-   Display OpenVDB volume grid data, each grid will be represented
-   with the *Grid Name*, the *Data Type*, and the *Class*.
-   The class can be either of: Fog Volume, Level Set, or Unknown.
-
-Instances
-   Display which objects and collections are instanced and their transforms.
+Each tree item shows the number of elements inside.
 
 
 Sidebar
@@ -106,44 +86,45 @@ Sidebar
 
 .. _bpy.ops.spreadsheet.add_row_filter_rule:
 
-The Sidebar contains row filters, which allow not including rows based on their value.
-The *Add Row Filter* button adds a new row filter.
+In the Sidebar, you can define filters so that only the rows matching these filters
+are displayed. Click *Add Row Filter* and set up the properties described below.
 
 .. _bpy.types.SpaceSpreadsheetRowFilter.enabled:
 
 Enabled
-   Each row filter can be enabled or disabled. Disabled row filters are grayed out, and aren't used for filtering.
+   Uncheck to temporarily disable the filter.
 
 .. _bpy.types.SpaceSpreadsheetRowFilter.column_name:
 
 Column
-   Row filters hide rows based on the values of the selected column.
-   The choice of name in the Column field determine which column is chosen.
-   If the column is not currently available, the row filter will be grayed out.
+   The name of the column to filter on. If there is no column with the specified name,
+   the filter will be grayed out and ignored.
 
-.. TODO 3.0 relink Attribute Convert node replacement tip:
-
-   To filter values based on a geometry attribute on a different domain,
-   the :doc:`Attribute Convert </modeling/geometry_nodes/attribute/attribute_convert>` node
-   can be used to move an attribute's values to any of a geometry component's other domains.
+   If you want to filter on an attribute from another domain, you can use the
+   :doc:`/modeling/geometry_nodes/attribute/store_named_attribute` to create a copy
+   that's converted to the current domain, then filter on that.
 
 .. _bpy.types.SpaceSpreadsheetRowFilter.operation:
 
 Operation
-   For spreadsheet column types besides Boolean columns and name or "string" columns,
-   it is possible to choose which operation to filter with.
+   For numerical columns, you can select one of the following comparison operators.
+   Other columns only support *Equal To*.
 
-   :Equal To: Display the row when data values are within the provided threshold from the row filter's value.
-   :Greater Than: Display the row when data values are greater than the row filter's value.
-   :Less Than: Display the row when data values are less than the row filter's value.
+   :Equal To: Only display rows whose value for the column is equal to the filter value
+      (within the specified threshold).
+   :Greater Than: Only display rows whose value for the column is greater than the filter value.
+   :Less Than: Only display rows whose value for the column is less than the filter value.
+
+Value
+   The filter value to compare the row value to.
 
 .. _bpy.types.SpaceSpreadsheetRowFilter.threshold:
 
 Threshold
-   The distance from the row filter's value for the equality operation.
+   How much the row's value is allowed to deviate from the filter value before it is excluded.
 
 
 Status Bar
 ==========
 
-The status bar shows how many rows and columns there are and how many have been filtered out.
+The status bar shows how many rows and columns there are, and how many rows remain after filtering.
