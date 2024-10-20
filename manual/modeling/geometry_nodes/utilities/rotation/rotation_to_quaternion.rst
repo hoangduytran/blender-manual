@@ -9,14 +9,14 @@ Rotation to Quaternion Node
    :align: right
    :alt: Rotation to Quaternion node.
 
-The *Rotation to Quaternion* node converts a standard rotation socket value to a
-:ref:`quaternion rotation <quaternion mode>` rotation.
+The *Rotation to Quaternion* node converts a standard rotation value to a
+:ref:`quaternion rotation <quaternion mode>`.
 
 Inputs
 ======
 
 Rotation
-    Standard rotation socket value.
+    Standard rotation value.
 
 
 Outputs
