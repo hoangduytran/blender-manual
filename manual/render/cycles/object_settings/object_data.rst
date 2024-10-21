@@ -111,6 +111,11 @@ Each object has its own motion blur settings along with
 the :doc:`Scene Level Motion Blur </render/cycles/render_settings/motion_blur>`.
 These settings can be found in the Object Properties tab of the Properties.
 
+.. note::
+
+   This option only applies to the motion of the object itself. Disabling it does not affect motion blur from
+   other sources, such as camera motion or animated focal length.   
+
 .. _bpy.types.CyclesObjectSettings.motion_steps:
 
 Steps
