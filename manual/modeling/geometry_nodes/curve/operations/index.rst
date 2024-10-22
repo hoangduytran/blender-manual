@@ -12,6 +12,7 @@
    fill_curve.rst
    fillet_curve.rst
    interpolate_curves.rst
+   merge_layers.rst
    resample_curve.rst
    reverse_curve.rst
    subdivide_curve.rst
