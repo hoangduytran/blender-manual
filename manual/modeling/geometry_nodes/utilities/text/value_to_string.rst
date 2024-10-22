@@ -18,14 +18,18 @@ Inputs
 Value
    Floating-point value to be converted.
 
-Decimals
+Decimals :guilabel:`Float Data Type`
    Integer value used to determine the precision of the output value.
 
 
 Properties
 ==========
 
-This node has no properties.
+Data Type
+   The type of numerical value to convert to a string.
+
+   :Float: Convert a floating-point value to a string.
+   :Integer: Convert a 32-bit integer to a string.
 
 
 Outputs
