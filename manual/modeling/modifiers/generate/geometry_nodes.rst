@@ -42,6 +42,17 @@ Inputs
       node the input is connected to.
 
 
+.. _modifiers-geometry-nodes-warnings:
+
+Warnings
+--------
+
+Nodes that show a warning message in the node editor will also show that message here.
+
+Custom warning messages can be created using the :doc:`/modeling/geometry_nodes/output/warning`.
+
+
+
 Output Attributes
 -----------------
 
