@@ -65,6 +65,25 @@ MetalRT
    :On: Enable MetalRT for intersection queries.
    :Auto: Automatically pick the fastest intersection method.
 
+.. _editors_preferences_display_graphics:
+
+Display Graphics
+================
+
+Changes how display graphics are drawn. 
+
+Backend
+   :OpenGL:
+     Use OpenGL to draw display graphics.
+     
+   :Vulkan:
+     Use Vulkan to draw display graphics. Vulkan is an experimental option
+
+Device
+   Select GPU device to use to draw the display graphics.
+   The Auto option will select the best matching GPU.
+   Device selection is only available when the Vulkan backend is active.
+
 
 Operating System Settings
 =========================
