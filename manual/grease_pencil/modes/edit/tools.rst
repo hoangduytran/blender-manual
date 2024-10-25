@@ -35,9 +35,6 @@ Scale
 Transform
    Tool to adjust the objects translation, rotations and scale.
 
-Extrude :kbd:`E`
-   Extrusion tools duplicate points, while keeping the new geometry connected with the original points.
-
 Radius :kbd:`Alt-S`
    Expand or contract the thickness radius of the selected points.
 

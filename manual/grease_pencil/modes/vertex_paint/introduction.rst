@@ -32,10 +32,6 @@ Once Vertex Paint Mode is activated, the Toolbar of the 3D Viewport will change 
 Vertex Paint Options
 ====================
 
-.. figure:: /images/grease-pencil_modes_vertex-paint_introduction_options.png
-
-   General Vertex Paint options.
-
 .. _bpy.types.ToolSettings.use_gpencil_vertex_select_mask_stroke:
 
 Selection Mask

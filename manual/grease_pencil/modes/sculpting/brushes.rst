@@ -7,7 +7,7 @@ Brushes for Grease Pencil *Sculpt* mode bundled in the *Essentials* library.
 See :doc:`Brush </grease_pencil/modes/sculpting/tool_settings/brush>` for more information.
 
 .. figure:: /images/grease-pencil_modes_sculpting_tools_brushes.png
-   :align: right
+   :align: center
 
 Smooth Stroke
    Eliminates irregularities in the area of the drawing

@@ -8,7 +8,7 @@ General settings for Grease Pencil strokes.
 .. figure:: /images/grease-pencil_properties_strokes_panel.png
    :align: center
 
-   Strokes panel.
+   Settings panel.
 
 .. _bpy.types.GreasePencil.stroke_depth_order:
 

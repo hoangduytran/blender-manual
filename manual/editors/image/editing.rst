@@ -105,7 +105,7 @@ Copy/Paste
 
 Copy and pastes imaged to/from a computers operating system.
 
-Currently, only PNG files are supported and is only supported on Windows and Linux running Wayland.
+Currently, only PNG files are supported and Linux support requires Wayland.
 
 
 .. _bpy.ops.image.save:

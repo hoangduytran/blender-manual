@@ -27,10 +27,6 @@ A red circle will appear and follow the location of the cursor in the 3D Viewpor
 Sculpting Options
 =================
 
-.. figure:: /images/grease-pencil_modes_sculpting_introduction_sculpting-options.png
-
-   General sculpting options.
-
 .. _bpy.types.ToolSettings.use_gpencil_select_mask_segment:
 
 Selection Mask

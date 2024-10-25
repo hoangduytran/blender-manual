@@ -30,9 +30,6 @@ Options
 Object
    The name of the object to hook points to.
 
-Vertex Group
-   Restricts the effect only to a vertex group.
-
 Strength
    Adjust this hooks influence on the stroke points, were (0.0 to 1.0) (no change to fully follow the hook).
 

@@ -31,9 +31,6 @@ Options
 Object
    The :doc:`Lattice </animation/lattice>` object with which to deform the base object.
 
-Vertex Group
-   Restricts the effect only to a vertex group.
-
 Strength
    A factor to control blending between original and deformed points positions.
 
