@@ -54,4 +54,4 @@ Example
      - .. figure:: /images/grease-pencil_modifiers_deform_lattice_edit.png
           :width: 320px
 
-          After lattice edition.
+          After lattice editing.

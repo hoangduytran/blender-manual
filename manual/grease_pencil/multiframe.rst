@@ -27,7 +27,7 @@ Usage
 #. Activate the Multiframe tool in the 3D Viewport's header with the toggle button (faded lines icon).
 #. Once activated you can:
 
-   - Select the points in all the selected keyframes and make your editions.
+   - Select the points in all the selected keyframes and make your edits.
    - Start sculpting. The sculpt brushes will affects all the strokes in the selected keyframes.
    - Start weight painting. The weight paint brush will affect all the strokes in the selected keyframes.
    - Start Drawing. The new strokes will be added in all the selected keyframes.

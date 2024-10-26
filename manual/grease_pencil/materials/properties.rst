@@ -47,12 +47,12 @@ Hide Others
 .. _bpy.ops.grease_pencil.material_lock_all:
 
 Lock All
-   Locks edition of all the materials in the list.
+   Locks editing of all the materials in the list.
 
 .. _bpy.ops.grease_pencil.material_unlock_all:
 
 Unlock All
-   Unlocks edition of all the materials in the list.
+   Unlocks editing of all the materials in the list.
 
 .. _bpy.ops.grease_pencil.material_lock_unselected:
 

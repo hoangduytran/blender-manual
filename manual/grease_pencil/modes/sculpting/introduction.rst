@@ -40,7 +40,7 @@ Selection Mask
 Multiframe
    Sometimes you may need to modify several frames at the same time with the sculpting tools.
 
-   You can activate multiframe edition with the Multiframe button next to the modes selector (faded lines icon).
+   You can activate multiframe editing with the Multiframe button next to the modes selector (faded lines icon).
    See :doc:`Multiframe </grease_pencil/multiframe>` for more information.
 
 

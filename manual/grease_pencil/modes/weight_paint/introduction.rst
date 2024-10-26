@@ -39,5 +39,5 @@ Weight Options
 Multiframe
    Sometimes you may need to assign weight to several frames at the same time with the Weight Paint tools.
 
-   You can activate multiframe edition with the Multiframe button next to the modes selector (faded lines icon).
+   You can activate multiframe editing with the Multiframe button next to the modes selector (faded lines icon).
    See :doc:`Multiframe </grease_pencil/multiframe>` for more information.

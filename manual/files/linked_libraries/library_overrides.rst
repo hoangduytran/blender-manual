@@ -106,9 +106,8 @@ just as with purely local data-blocks.
 **NLA**
 
 The :doc:`NLA editor </editors/nla/introduction>` data also belongs to the animation data
-of a data-block. However, this data does support some greater level of edition in overrides,
-including moving or resizing existing strips from the linked data,
-and adding new local strips.
+of a data-block. However, this data does support some greater level of editing in overrides,
+including moving or resizing existing strips from the linked data, and adding new local strips.
 
 
 Resyncing Overrides

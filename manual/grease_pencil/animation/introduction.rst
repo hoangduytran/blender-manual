@@ -106,13 +106,13 @@ In Edit Mode there is an option related to the animation workflow that you can u
 
 .. figure:: /images/grease-pencil_animation_introduction_edit-options.png
 
-   Multiframe edition.
+   Multiframe editing.
 
 Multiframe
    Sometimes you may need to modify several frames at the same time with edit tools,
    for example to repositioning drawings in an animation.
 
-   You can activate multiframe edition with the Multiframe button next to the modes selector (faded lines icon).
+   You can activate multiframe editing with the Multiframe button next to the modes selector (faded lines icon).
    See :doc:`Multiframe </grease_pencil/multiframe>` for more information.
 
 

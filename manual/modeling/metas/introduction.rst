@@ -26,7 +26,7 @@ then convert it to a mesh for further modeling or sculpting. Meta objects are al
 
    Names of *Meta* objects are very important, as they define :ref:`families <meta-ball-object-families>`,
    and only objects within a same family interact with each other.
-   Unlike other object types, even edition (transformations) in Object Mode will affect the generated geometry
+   Unlike other object types, even editing (transformations) in Object Mode will affect the generated geometry
    within the edited families.
 
 
