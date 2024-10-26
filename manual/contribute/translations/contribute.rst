@@ -100,11 +100,10 @@ however any PO editor will do.
 
 .. note::
 
-   For Linux users, you will need to check with
-   your distribution's software center for a version of Poedit.
-   This editor is only a recommendation. There are others, such as Kate and Kwrite, which could offer syntax highlighting and basic tools for text editing, e.g. letter case transposes.
-   Other platforms can use some text editors supporting the syntax highlighting for PO files,
-   or allowing you to create a custom one (such as Notepad++ on Windows).
+   For Linux users, you will need to check with your distribution's software center for a version of Poedit. This
+   editor is only a recommendation. There are others, such as Kate and Kwrite, which could offer syntax highlighting
+   and basic tools for text editing, e.g. letter case transposes. Other platforms can use some text editors supporting
+   the syntax highlighting for PO files, or allowing you to create a custom one (such as Notepad++ on Windows).
 
 
 Building with Translations

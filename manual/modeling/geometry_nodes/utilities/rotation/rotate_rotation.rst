@@ -11,7 +11,8 @@ Rotate Rotation Node
 
 The *Rotate Rotation* node applies an additional rotation to a given one.
 
-To rotate an :term:`Euler Rotation`, first use the :doc:`/modeling/geometry_nodes/utilities/rotation/euler_to_rotation`.
+To rotate an :term:`Euler Rotation`, first use the
+:doc:`/modeling/geometry_nodes/utilities/rotation/euler_to_rotation`.
 
 
 Inputs

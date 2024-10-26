@@ -221,7 +221,8 @@ The region on the left contains a few panels that let you quickly jump to certai
 Bookmarks
 ^^^^^^^^^
 
-A custom list of folders that you use often. You can use the buttons to the right of the list to add/remove/move items.
+A custom list of folders that you use often. You can use the buttons to the right of the list to add/remove/move
+items.
 
 
 .. _bpy.types.SpaceFileBrowser.system_bookmarks:

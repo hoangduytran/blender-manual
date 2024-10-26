@@ -270,9 +270,9 @@ Asset Previews
 
    Preview panel in the Asset Browser.
 
-Preview images are typically generated automatically when you :ref:`mark a data-block as an asset <bpy.ops.asset.mark>`. 
-Objects are captured from their local -Y axis, while collections are captured from the global -Y axis
-(as these don't have a local axis).
+Preview images are typically generated automatically when you :ref:`mark a data-block as an asset
+<bpy.ops.asset.mark>`. Objects are captured from their local -Y axis, while collections are captured from the global
+-Y axis (as these don't have a local axis).
 
 If the auto-generated preview image isn't sufficient, you can replace it by a custom one.
 

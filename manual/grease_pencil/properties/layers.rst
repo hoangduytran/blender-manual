@@ -17,15 +17,12 @@ Layers
 
 Grease Pencil objects can be organized into a tree known as the layer tree for grouping and arranging strokes.
 
-Any stroke can only belong to a single 2D layer.
-The selected layer is the active layer. Only one layer or group can be active at a time.
-When you draw, the new strokes are added to the active layer.
-By default the view order of the layers in the viewport is top to bottom.
+Any stroke can only belong to a single 2D layer. The selected layer is the active layer. Only one layer or group can
+be active at a time. When you draw, the new strokes are added to the active layer. By default the view order of the
+layers in the viewport is top to bottom.
 
-Layers can be grouped using Layer Groups.
-A layer can only be in one group at a time.
-Layers can be moved into groups using drag-and-drop.
-Groups can be color coded with a color tag.
+Layers can be grouped using Layer Groups. A layer can only be in one group at a time. Layers can be moved into groups
+using drag-and-drop. Groups can be color coded with a color tag.
 
 Every layer correspond to a channel in the Dope Sheet editor (in Grease Pencil mode).
 See :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>` for more information.
@@ -33,8 +30,8 @@ See :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>` for more informa
 Layers can also be used together with Modifiers to only affects part of your drawing.
 See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more information.
 
-Layers can mask other layers by enabling Use Mask (mask icon)
-or using the checkbox in the Masks panel header. See :ref:`bpy.types.GreasePencilLayer.use_masks` for more information.
+Layers can mask other layers by enabling Use Mask (mask icon) or using the checkbox in the Masks panel header. See
+:ref:`bpy.types.GreasePencilLayer.use_masks` for more information.
 
 .. tip::
 
@@ -73,8 +70,8 @@ Layer Specials
    Duplicate
       Makes an exact copy of the selected layer appending a number to differentiate its name.
    Duplicate Empty Keyframes
-      Makes a copy of the selected layer but with empty keyframes.
-      Useful to easily have empty keyframes preset to work on the cleanup or filling process.
+      Makes a copy of the selected layer but with empty keyframes. Useful to easily have empty keyframes preset to
+      work on the cleanup or filling process.
 
    .. _bpy.ops.grease_pencil.layer_reveal:
 
@@ -86,15 +83,15 @@ Layer Specials
    .. _bpy.ops.grease_pencil.layer_lock_all:
 
    Lock All
-      Locks edition of all the layers in the list.
+      Locks editing of all the layers in the list.
    Unlock All
-      Unlocks edition of all the layers in the list.
+      Unlocks editing of all the layers in the list.
 
    .. _bpy.types.GreasePencilv3.use_autolock_layers:
 
    Autolock Inactive Layer
-      Locks automatically the edition of every layer in the list except the active one.
-      This way you avoid to make unwanted changes in other layers without the need to lock them every time.
+      Automatically locks the editing of every layer in the list except the active one. This way you avoid making
+      unwanted changes in other layers without the need to lock them every time.
 
    .. _bpy.types.GreasePencilLayer.use_locked_material:
 
