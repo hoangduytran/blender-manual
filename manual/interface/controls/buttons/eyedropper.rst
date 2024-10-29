@@ -24,6 +24,15 @@ Objects/Object-Data
    This is used with object buttons (such as parent, constraints or modifiers) to
    select an object from the 3D Viewport or Outliner, rather than having to select it from a drop-down.
 
+Bones
+   This is used when a subtarget to an armature can be chosen. It is possible to
+   choose a bone from the 3D Viewport or from the outliner. Only bones that belong
+   to the armature that was chosen as a target can be picked.
+
+   .. note::
+      
+      In the 3D Viewport, bones can only be picked if the armature is in Pose Mode or in Edit Mode.
+
 Camera Depth
    Number fields effecting distance can also use the eyedropper.
 
