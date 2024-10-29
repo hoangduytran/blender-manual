@@ -35,11 +35,10 @@ To create or remove motion paths, it is necessary to first select the bones. The
 
    Remember that only selected bones and their paths are affected by these actions!
 
-The paths are shown in a light shade of gray for unselected points,
-and a slightly bluish gray for selected ones.
-Around the current frame a glow indicate the direction of movement:
-blue towards future frames and green towards the past.
-Each frame is displayed by a small white dot on the paths.
+The paths are shown in red for the section in the past and green for the section in the future.
+These colors follow the user preference options "Before Current Frame" and "After Current Frame",
+which can be found in the 3D Viewport section.
+Each frame is displayed by a small dot on the paths.
 
 The paths are automatically updated when you edit your poses/keyframes,
 and they are also active during animation playback. Playing the animation
@@ -205,7 +204,8 @@ Thickness
 .. _bpy.types.MotionPath.color:
 
 Custom Color
-   Use custom color for this motion path.
+   Use custom color for this motion path. The custom color can be modified for time
+   before and after the current frame.
 
 
 Example
