@@ -6,7 +6,7 @@ Scrape Multiplane
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Brush --> Scrape Multiplane`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Scrapes the mesh with two angled planes at the same time, creating a sharp edge between them.
 This is useful for creating & polishing hard surface objects.

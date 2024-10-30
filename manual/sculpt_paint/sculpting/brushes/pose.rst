@@ -6,7 +6,7 @@ Pose
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Pose`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Deform a model simulating armature-like workflow.
 This can either be useful for posing a model without a rig,

@@ -8,7 +8,7 @@ Brushes for *Sculpt Mode* bundled in the *Essentials* library.
 .. toctree::
    :maxdepth: 1
 
-   brush_types.rst
+   brushes.rst
    draw.rst
    draw_sharp.rst
    clay.rst

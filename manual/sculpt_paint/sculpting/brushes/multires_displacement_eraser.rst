@@ -6,7 +6,7 @@ Erase Multires Displacement
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Erase Multires Displacement`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 This brush deletes displacement information of
 the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,

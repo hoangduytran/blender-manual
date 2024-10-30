@@ -1,13 +1,12 @@
 
-***********
-Scrape/Fill
-***********
+******
+Scrape
+******
 
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Scrape/Fill`
-   :Shortcut:  :kbd:`Shift-T`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Similar to the :doc:`Flatten </sculpt_paint/sculpting/brushes/flatten>` brush,
 but only pushes surfaces downward to the medium height.

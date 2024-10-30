@@ -6,8 +6,7 @@ Smooth
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Smooth`
-   :Shortcut:  :kbd:`S`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Smooths the positions of the vertices to either polish surfaces or remove volume from larger shapes.
 Because this brush is so essential, it's always accessible by holding :kbd:`Shift` and sculpting.

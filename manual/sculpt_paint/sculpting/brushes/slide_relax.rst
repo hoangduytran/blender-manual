@@ -6,7 +6,7 @@ Relax Slide
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Relax Slide`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 This brush deforms the topology of the mesh
 while minimizing changes to the geometrical shape of the mesh.

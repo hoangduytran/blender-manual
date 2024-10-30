@@ -6,8 +6,7 @@ Crease
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Crease`
-   :Shortcut:  :kbd:`Shift-C`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Create sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.
 

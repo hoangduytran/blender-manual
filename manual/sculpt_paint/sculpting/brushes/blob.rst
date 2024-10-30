@@ -6,7 +6,7 @@ Blob
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Blob`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Similar to :doc:`Draw </sculpt_paint/sculpting/brushes/clay>`,
 but vertices are pushed outwards like an inverted pinching effect.

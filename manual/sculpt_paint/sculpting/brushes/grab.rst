@@ -6,8 +6,7 @@ Grab
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Grab`
-   :Shortcut:  :kbd:`G`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Drag geometry across the screen, following the cursor.
 *Grab* only moves the vertices that are under the brush radius at the start of the stroke.

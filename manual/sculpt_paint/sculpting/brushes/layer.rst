@@ -6,7 +6,7 @@ Layer
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Layer`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 This brush is similar to :doc:`Draw </sculpt_paint/sculpting/brushes/clay>`,
 except that the height capped.

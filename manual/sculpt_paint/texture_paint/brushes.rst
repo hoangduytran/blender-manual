@@ -13,13 +13,13 @@ Available brush types are listed here, together with brushes from the
 
 
 Draw
-   Brushes: Paint Texture
+   Brushes: Paint Hard, Paint Soft, Paint Hard Pressure, Paint Soft Pressure, Erase Hard, Erase Soft, Erase Hard Pressure
 
    The normal brush, draws a swath of color.
 
 
 Soften
-   Brushes: Blur Texture
+   Brushes: Blur
 
    Uses a "blur effect" to soften or sharpen the image.
 
@@ -44,13 +44,13 @@ Soften
       :Box: Box samples all surrounding pixels equally.
 
 Smear
-   Brushes: Smear Texture
+   Brushes: Smear
 
    When you click, takes the colors under the cursor, and blends them in the direction you move the mouse.
    Similar to the "smudge" tool of *Gimp*.
 
 Clone
-   Brushes: Clone Texture
+   Brushes: Clone
 
    Copies the colors from the specified image (or location of the same image) to the active image.
 
@@ -69,7 +69,7 @@ Clone
       Opacity of the clone image display.
 
 Fill
-   Brushes: Fill Texture
+   Brushes: Fill
 
    It can be used to fill large areas of the image with the brush color.
    The tool fills adjacent pixels that have a color value similar to the pixel you clicked on.
@@ -95,7 +95,7 @@ Fill
       in the :doc:`External </sculpt_paint/texture_paint/tool_settings/options>` panel.
 
 Mask
-   Brushes: Mask Texture
+   Brushes: Mask
 
    This brush paints gray-scale values on the mask texture
    specified in the :doc:`Mask panel </sculpt_paint/texture_paint/tool_settings/mask>`.

@@ -1,12 +1,12 @@
 
-*****
-Twist
-*****
+******
+Rotate
+******
 
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Twist`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Rotates geometry in the direction in which the cursor is moved.
 The initial drag direction is the zero angle

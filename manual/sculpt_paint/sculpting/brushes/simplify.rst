@@ -6,7 +6,7 @@ Density
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Density`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 The Density brush is specifically meant for use with
 :doc:`/sculpt_paint/sculpting/tool_settings/dyntopo`
