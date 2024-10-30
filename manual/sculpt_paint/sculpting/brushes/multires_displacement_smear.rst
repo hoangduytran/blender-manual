@@ -6,7 +6,7 @@ Smear Multires Displacement
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Smear Multires Displacement`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 This tool deforms displacement information of
 the :doc:`Multires Modifier </modeling/modifiers/generate/multiresolution>`,

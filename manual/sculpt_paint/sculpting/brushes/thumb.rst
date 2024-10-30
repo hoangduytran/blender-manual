@@ -6,7 +6,7 @@ Thumb
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Thumb`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Similar to the :doc:`Grab </sculpt_paint/sculpting/brushes/grab>` brush,
 but instead only moves the geometry along the surface (using the area plane).

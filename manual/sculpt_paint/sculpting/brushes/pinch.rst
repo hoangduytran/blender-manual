@@ -1,13 +1,12 @@
 
-*************
-Pinch/Magnify
-*************
+*****
+Pinch
+*****
 
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Pinch/Magnify`
-   :Shortcut:  :kbd:`P`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Pulls geometry towards the center of the brush.
 When inverted via :kbd:`Ctrl` it will *Magnify* geometry

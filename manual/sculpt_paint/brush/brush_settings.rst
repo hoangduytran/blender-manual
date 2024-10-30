@@ -180,9 +180,9 @@ Brush Type
    point for custom brushes than the mere brush type is, which is why the brush type is part of the
    *Advanced* brush settings.
 
-   types.
+   Brushes and Brush Types of each mode:
 
-   - :doc:`Sculpt </sculpt_paint/sculpting/brushes/brush_types>`
+   - :doc:`Sculpt </sculpt_paint/sculpting/brushes/brushes>`
    - :doc:`Vertex Paint </sculpt_paint/vertex_paint/brushes>`
    - :doc:`Weight Paint </sculpt_paint/weight_paint/brushes>`
    - :doc:`Texture Paint </sculpt_paint/texture_paint/brushes>`

@@ -6,8 +6,7 @@ Clay Strips
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Clay Strips`
-   :Shortcut:  :kbd:`C`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Similar to the :doc:`Clay </sculpt_paint/sculpting/brushes/clay>` brush,
 but it uses a square tip shape instead of a round one.

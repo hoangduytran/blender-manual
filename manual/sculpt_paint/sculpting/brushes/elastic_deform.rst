@@ -6,7 +6,7 @@ Elastic Deform
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Elastic Deform`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Used to simulate realistic deformations such as grabbing or twisting of :term:`Elastic` objects.
 For example, this tool works great for modeling the shape of organic objects such as humans or animals.

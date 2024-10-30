@@ -6,7 +6,7 @@ Fill
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Fill`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Similar to the :doc:`Flatten </sculpt_paint/sculpting/brushes/flatten>` brush,
 but only pushes surfaces upwards to the medium height.

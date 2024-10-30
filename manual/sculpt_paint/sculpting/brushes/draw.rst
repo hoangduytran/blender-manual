@@ -5,8 +5,7 @@ Draw
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Draw`
-   :Shortcut:  :kbd:`V`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Moves vertices inward or outward, based the average vertex normals within the brush radius.
 This is a very default behavior for sculpting and can be used in most cases.

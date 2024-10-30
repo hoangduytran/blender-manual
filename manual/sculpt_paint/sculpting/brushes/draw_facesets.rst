@@ -6,7 +6,7 @@ Draw Face Sets
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Draw Face Sets`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Draw new or extend existing :ref:`Face Sets <sculpting-editing-facesets>` with each stroke.
 

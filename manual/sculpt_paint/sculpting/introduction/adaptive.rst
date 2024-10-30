@@ -76,7 +76,7 @@ Use :kbd:`R` to define the resolution and :kbd:`Ctrl-R` to flood fill the resolu
 
 .. figure:: /images/sculpt-paint_sculpt_dyntopo_detail.png
 
-Brushes like :doc:`Density </sculpt_paint/sculpting/brushes/density>`,
+Brushes like :doc:`Density </sculpt_paint/sculpting/brushes/simplify>`,
 :doc:`Snake Hook </sculpt_paint/sculpting/brushes/snake_hook>`
 and :doc:`Clay Strips </sculpt_paint/sculpting/brushes/clay_strips>` work especially well with this feature.
 

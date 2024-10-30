@@ -6,7 +6,7 @@ Smear
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Smear`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Smears the painted colors of the active color attribute.
 It takes the colors under the cursor, and blends them in the direction of your stroke.

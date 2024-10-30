@@ -7,7 +7,7 @@ Cloth
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Cloth`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 This brush simulates cloth physics on the mesh under the brush cursor.
 There are various deformation types and settings to customize the brush.

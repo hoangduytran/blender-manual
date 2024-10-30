@@ -6,7 +6,7 @@ Paint
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Paint`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Paints on the active color attribute.
 Hold :kbd:`Shift` to blur painted colors instead.

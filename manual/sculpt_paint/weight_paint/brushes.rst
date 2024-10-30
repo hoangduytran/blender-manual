@@ -13,7 +13,7 @@ Available brush types are listed here, together with brushes from the
 
 
 Draw
-   Brushes: Paint Weight
+   Brushes: Paint
 
    Paints a specified weight over the object.
 
@@ -52,18 +52,18 @@ Draw
          Value is ignored. The strength defines how much the smoothing is applied.
 
 Blur
-   Brushes: Blur Weight
+   Brushes: Blur
 
    Smooths out the weighting of adjacent vertices. In this mode the Weight
    Value is ignored. The strength defines how much the smoothing is applied.
 
 Average
-   Brushes: Average Weight
+   Brushes: Average
 
    Smooths weights by painting the average resulting weight from all weights under the brush.
 
 Smear
-   Brushes: Smear Weight
+   Brushes: Smear
 
    Smudges weights by grabbing the weights under the brush and "dragging" them.
    This can be imagined as a finger painting tool.

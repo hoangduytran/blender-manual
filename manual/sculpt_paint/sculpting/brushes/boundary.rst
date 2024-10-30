@@ -6,7 +6,7 @@ Boundary
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Boundary`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Similar to the :doc:`Pose </sculpt_paint/sculpting/brushes/pose>` brush
 but deforms the open boundaries of a mesh.

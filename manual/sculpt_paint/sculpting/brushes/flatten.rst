@@ -1,12 +1,12 @@
 
-****************
-Flatten/Contrast
-****************
+*******
+Flatten
+*******
 
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Brush:     :menuselection:`Asset Shelf --> Flatten/Contrast`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Flatten or contrast surfaces by pulling and pushing them towards
 (or away from) a defined medium height.

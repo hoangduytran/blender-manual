@@ -6,8 +6,7 @@ Mask
 .. reference::
 
    :Mode:      Sculpt Mode
-   :Tool:      :menuselection:`Toolbar --> Mask`
-   :Shortcut:  :kbd:`M`
+   :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
 Paint a selection on parts of the mesh to be unaffected by other brushes & tools.
 The mask values are shown as a gray-scale overlay.
