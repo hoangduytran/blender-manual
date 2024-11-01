@@ -41,6 +41,12 @@ Clay Strips
    The same as the *Clay* brush, but more aggressive with a square falloff.
    A common standard for building rough volumes.
 
+Clay Thumb
+   | Brush Type: :doc:`clay_thumb`
+
+   The same as the *Clay* brush, but specifically for emulating the effect of running your thumb over surfaces.
+   Pushes geometry in and sideways.
+
 Layer
    Brush Type: :doc:`layer`
 
@@ -61,7 +67,7 @@ Crease Polish
    | Brush Type: :doc:`crease`
    | Shortcut:  :kbd:`Shift C`
 
-   Same as *Blob* but with a pinching effect. Useful for creating and polishing existing creases or carefully creating new ones.
+   A Draw brush with a pinching effect. Useful for polishing existing creases or carefully creating new ones.
 
 Crease Sharp
    Brush Type: :doc:`crease`
@@ -84,10 +90,10 @@ Smooth
    Smooths out irregularities in the surface and shrinks volumes by averaging the vertices positions.
    An essential brush that is frequently used.
 
-Flatten
+Flatten/Contrast
    Brush Type: :doc:`flatten`
 
-   Pushes vertices to an average height to create a flat surfaces.
+   Pushes vertices to an average height to create a flat surfaces. Alternatively pushes them away from the center for more contrast.
 
 Plateau
    Brush Type: :doc:`flatten`
@@ -97,7 +103,7 @@ Plateau
 Fill/Deepen
    Brush Type: :doc:`fill`
 
-   Pushes surfaces outwards. Useful for filling in holes and crevices.
+   Pushes surfaces upwards towards a flat plane. Useful for filling in holes and crevices. Alternatively deepens existing holes when holding 'Ctrl'.
 
 Scrape/Fill
    | Brush Type: :doc:`scrape`
@@ -108,7 +114,7 @@ Scrape/Fill
 Trim
    Brush Type: :doc:`scrape`
 
-   Pushes surfaces inwards toward a locked direction. The depth can be defined by going towards deeper surfaces along the stroke.
+   Pushes surfaces inwards toward a locked direction. The depth can be defined by going deeper towards surfaces along the stroke.
 
 Scrape Multiplane
    Brush Type: :doc:`multiplane_scrape`
@@ -128,7 +134,7 @@ Pinch/Magnify
    | Brush Type: :doc:`pinch`
    | Shortcut:  :kbd:`P`
 
-   Pulls vertices towards the center of the brush. Useful for polishing angles and creases.
+   Pulls vertices towards the center of the brush. Useful for polishing angles and creases. Alternatively pushes them away from the center.
 
 Grab
    | Brush Type: :doc:`grab`
@@ -149,7 +155,7 @@ Grab Silhouette
 Elastic Grab
    Brush Type: :doc:`elastic_deform`
 
-   Used to simulate realistic deformations such as grabbing or twisting of :term:`Elastic` objects.
+   Used to simulate realistic deformations from grabbing of :term:`Elastic` objects.
 
 Elastic Snake Hook
    Brush Type: :doc:`snake_hook`
@@ -204,7 +210,7 @@ Relax Pinch
 Boundary
    Brush Type: :doc:`boundary`
 
-   Transform mesh boundaries specifically with various deformations.
+   Transform specifically mesh boundaries with various deformations.
 
 
 Utility Brushes
@@ -218,7 +224,7 @@ These brushes are general purpose brushes or specific.
 Density
    Brush Type: :doc:`simplify`
 
-   Cleans up geometry by collapsing short edges.
+   Cleans up geometry by collapsing short edges. Specifically for use with :ref:`Dyntopo <dyntopo_introduction>`.
 
 Mask
    | Brush Type: :doc:`mask`
@@ -229,7 +235,7 @@ Mask
 Draw Face Sets
    Brush Type: :doc:`draw_facesets`
 
-   Paint new, smooth or extend existing face sets
+   Paint new, smooth or extend existing Face Sets.
 
 Erase Multires Displacement
    Brush Type: :doc:`multires_displacement_eraser`
@@ -308,7 +314,7 @@ Smear
 Sharpen
    Brush Type: :doc:`smear`
 
-   Similar to smear but instead pinches the colors inwards.
+   Pinches the colors inwards to create sharp edges or points.
 
 
 Simulation Brushes
@@ -377,7 +383,7 @@ Stretch/Move Cloth
 Bend Boundary Cloth
    Brush Type: :doc:`boundary`
 
-   Bend only open boundaries of the mesh, folding the surrounding geometry in the process
+   Bend only open boundaries of the mesh, folding the surrounding geometry in the process.
 
 Twist Boundary Cloth
    Brush Type: :doc:`boundary`
