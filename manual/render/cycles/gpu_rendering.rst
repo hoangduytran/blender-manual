@@ -54,7 +54,6 @@ Supported GPUs include:
  - Radeon RX 5000 Series
  - Radeon RX 6000 Series
  - Radeon RX 7000 Series
- - Radeon Pro WX 9100
  - Radeon Pro W6000 Series
 
 Minimum driver versions:
