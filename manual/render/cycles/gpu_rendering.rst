@@ -47,7 +47,7 @@ HIP -- AMD
 ----------
 
 :abbr:`HIP (Heterogeneous-compute Interface for Portability)` is supported on Windows and Linux and requires a
-AMD graphics card with the Vega architecture or newer. Both discrete GPUs and APUs are supported.
+AMD graphics card with the RDNA1 architecture or newer. Both discrete GPUs and APUs are supported.
 
 Supported GPUs include:
 
