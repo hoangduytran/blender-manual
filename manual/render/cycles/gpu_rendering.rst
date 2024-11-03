@@ -64,9 +64,10 @@ Minimum driver versions:
 Please refer to `AMD's website <https://www.amd.com/en/products/specifications>`__ for more
 information about AMD graphics cards and their architectures.
 
-On Windows, experimental hardware ray-tracing support is available with the most recent drivers.
+Experimental hardware ray-tracing support is available with the most recent drivers.
 This can be enabled in the preferences.
-However there are currently known issues regarding motion blur, hair rendering and degenerate triangle shapes.
+However there are currently known issues regarding motion blur, hair and point cloud rendering,
+and degenerate triangle shapes.
 
 GPU accelerated denoising is available on discrete Radeon RX 6000 and Radeon RX 7000 GPUs.
 
