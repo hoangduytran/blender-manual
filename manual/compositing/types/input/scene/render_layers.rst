@@ -51,6 +51,5 @@ See :doc:`render passes </render/layers/passes>`.
 
 .. note::
 
-   In the viewport compositor, only the Image and Alpha outputs are supported, where the Image output
-   is the viewport pass and the Alpha output is the alpha channel of the viewport pass. The rest of
-   the passes return a zero value, a zero vector, or a transparent color depending on their type.
+   In the viewport compositor, Render Passes are only supported in EEVEE. For other engines, the
+   passes return a zero value, a zero vector, or a transparent color depending on their type.
