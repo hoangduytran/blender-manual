@@ -2,24 +2,24 @@
 .. _tool-mesh-shrink-fatten:
 
 *************
-Shrink Fatten
+Shrink/Fatten
 *************
 
 .. reference::
 
    :Mode:      Edit Mode
    :Tool:      :menuselection:`Toolbar --> Shrink/Fatten`
-   :Menu:      :menuselection:`Mesh --> Transform --> Shrink Fatten`
+   :Menu:      :menuselection:`Mesh --> Transform --> Shrink/Fatten`
    :Shortcut:  :kbd:`Alt-S`
 
-This tool moved selected vertices/edges/faces along their own normal
-(perpendicular to the face), which, on "standard normal meshes", will shrink/fatten them.
+Moves the selected vertices "inwards" or "outwards" along their normal,
+all by the same distance. You can control this distance by moving the mouse up or down,
+typing a number, or using the slider in the :ref:`bpy.ops.screen.redo_last` panel.
 
-This transform tool does not take into account the pivot point or transform orientation.
-
-Offset Even :kbd:`S`, :kbd:`Alt`
-   Scale the offset to give it a more even thickness.
-   A greater offset factor is obtained vertices, which share faces, forming a more acute angle.
+Even Thickness :kbd:`S`, :kbd:`Alt`
+   Applies a larger offset to vertices that are part of a sharp corner, for a more uniform result.
+   You can toggle this option by pressing :kbd:`S`, holding :kbd:`Alt`, or clicking the
+   checkbox in the Adjust Last Operation panel.
 
 .. list-table::
 
