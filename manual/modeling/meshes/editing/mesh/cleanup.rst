@@ -1,4 +1,3 @@
-
 ********
 Clean Up
 ********
@@ -142,8 +141,7 @@ Merge by Distance
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Vertex --> Merge by Distance`,
-               :menuselection:`Context Menu --> Merge by Distance`
+   :Menu:      :menuselection:`Mesh --> Clean up --> Merge by Distance`
 
 Merge by Distance is a useful tool to simplify a mesh by merging the selected vertices that
 are closer than a specified distance to each other.
