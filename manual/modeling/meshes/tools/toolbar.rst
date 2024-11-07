@@ -54,7 +54,7 @@ Transform
       Interactively add a cone mesh object.
    :ref:`Add Cylinder <tool-add-cylinder>`
       Interactively add a cylinder mesh object.
-   :ref:`Add UV Sphere <tool-add-cylinder>`
+   :ref:`Add UV Sphere <tool-add-uvsphere>`
       Interactively add a UV sphere mesh object.
    :ref:`Add Icosphere <tool-add-icosphere>`
       Interactively add an icosphere mesh object.
@@ -96,7 +96,7 @@ Transform
 :ref:`Smooth <tool-mesh-smooth>`
    Flatten angles of selected vertices.
 
-   :ref:`Randomize <tool-mesh-smooth>`
+   :ref:`Randomize <bpy.ops.transform.vertex_random>`
       Randomize selected vertices.
 
 :ref:`Edge Slide <tool-mesh-edge_slide>`
@@ -105,11 +105,11 @@ Transform
    :ref:`Vertex Slide <tool-mesh-vertex-slide>`
       Slide vertex along an edge.
 
-:ref:`Shrink/Flatten <tool-mesh-shrink-fatten>`
-   Shrink selected vertices along their normals.
+:ref:`Shrink/Fatten <tool-mesh-shrink-fatten>`
+   Move the selected vertices along their normals.
 
    :ref:`Push/Pull <tool-transform-push_pull>`
-      Push or pull (scale) selected elements.
+      Move the selected elements away from/towards the pivot point.
 
 :ref:`Shear <tool-transform-shear>`
    Shear selected elements.
