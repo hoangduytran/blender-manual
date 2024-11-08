@@ -264,6 +264,12 @@ This page lists definitions for terms used in Blender and this manual.
    Cyclic
       Often referring to an object being circular. This term is often associated with :term:`Curve`.
 
+   Data-Block
+      Data-blocks are the named items in Blender that serve as the base unit of
+      data in a blend file, and which can be linked into other blend files. Some
+      examples of data-blocks are objects, materials, armatures, meshes,
+      node-trees, and actions.
+
    Data User
       An existing Blender object, which is using its own data, or
       linked data (data owned and controlled by another Blender object).
