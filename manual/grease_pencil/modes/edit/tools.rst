@@ -53,6 +53,9 @@ Shear :kbd:`Shift-Ctrl-Alt-S`
 :ref:`Interpolate <tool-grease-pencil-draw-interpolate>` :kbd:`Ctrl-E`
    Automatically create a breakdown keyframe between two normal keyframes.
 
+Gradient
+   Draw a line to set the fill material gradient for the selected strokes.
+
 :ref:`Annotate <tool-annotate-freehand>`
    Draw free-hand annotation.
 
