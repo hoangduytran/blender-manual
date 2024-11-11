@@ -9,16 +9,33 @@ Brush Tool
    :Tool:      :menuselection:`Toolbar --> Brush`
 
 
-Tool to use for any of the Grease Pencil *Draw* mode brushes. Activating a brush from an asset
-shelf or brush selector will also activate this tool for convenience.
+Tool to free form draw Grease Pencil strokes using any of the *Draw* type brushes.
 
-See :doc:`brushes </grease_pencil/modes/draw/brushes/index>` (or the
-:doc:`overview </grease_pencil/modes/draw/brushes/overview>`) for a detailed list of all brushes
-and their options.
+.. tip::
+
+   Activating a brush asset from an asset shelf or brush selector will also activate this tool for convenience.
 
 
 Tool Settings
 =============
+
+Brush Asset
+-----------
+
+Picks the brush asset used by the tool.
+
+See :doc:`/grease_pencil/modes/draw/tool_settings/brushes` for more information.
+
+See :doc:`/grease_pencil/modes/draw/brushes/draw` for a detailed list of all draw brushes and their options.
+
+
+Brush Settings
+--------------
+
+Parameters to control to look of the stroke.
+
+See :doc:`/grease_pencil/modes/draw/brushes/draw` for details.
+
 
 Eraser
 ------
@@ -28,6 +45,14 @@ Eraser
 Default Eraser Brush
    Select a brush to use as eraser for quickly alternating with the main brush using
    :kbd:`Ctrl-LMB`.
+
+
+Color
+-----
+
+Settings to determine the color of strokes.
+
+See :doc:`/grease_pencil/modes/draw/tool_settings/color`
 
 
 Usage

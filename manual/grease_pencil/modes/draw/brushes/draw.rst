@@ -1,7 +1,7 @@
 
-**********
-Draw Brush
-**********
+************
+Draw Brushes
+************
 
 .. reference::
 
@@ -10,6 +10,8 @@ Draw Brush
 
 The Draw brush allows you to draw free-hand strokes.
 
+
+.. _grease-pencil-draw-common-options:
 
 Brush Settings
 ==============

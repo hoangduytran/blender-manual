@@ -9,7 +9,7 @@ Polyline Tool
    :Mode:      Draw Mode
    :Tool:      :menuselection:`Toolbar --> Polyline`
 
-The Polyline tool create multiple straight lines.
+The Polyline tool creates multiple straight lines using any of the *Draw* type brushes.
 
 
 Tool Settings
@@ -39,6 +39,42 @@ Thickness Profile
 
      - .. figure:: /images/grease-pencil_modes_draw_tools_polyline_thickness-profile-03.png
           :width: 200px
+
+
+Brush Asset
+-----------
+
+Picks the brush asset used by the tool.
+
+See :doc:`/grease_pencil/modes/draw/tool_settings/brushes` for more information.
+
+See :doc:`/grease_pencil/modes/draw/brushes/draw` for a detailed list of all draw brushes and their options.
+
+
+Brush Settings
+--------------
+
+Parameters to control to look of the stroke.
+
+See :doc:`/grease_pencil/modes/draw/brushes/draw` for details.
+
+
+Eraser
+------
+
+.. _bpy.types.Paint.eraser_brush:
+
+Default Eraser Brush
+   Select a brush to use as eraser for quickly alternating with the main brush using
+   :kbd:`Ctrl-LMB`.
+
+
+Color
+-----
+
+Settings to determine the color of strokes.
+
+See :doc:`/grease_pencil/modes/draw/tool_settings/color`
 
 
 Usage
