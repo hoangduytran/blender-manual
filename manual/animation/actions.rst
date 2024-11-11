@@ -264,6 +264,17 @@ Cyclic Animation
       it will automatically enable cyclic extrapolation and set up the loop period for curves
       newly added to the action.
 
+Slot
+----
+
+The properties of the action slot that is used by the currently selected item in the channel list.
+
+Name
+   The name of the slot.
+
+Type
+   The data-block type that the slot is intended to animate.
+
 
 Custom Properties
 -----------------
