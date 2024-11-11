@@ -8,7 +8,6 @@ Layers
 
    :Mode:      All Modes
    :Panel:     :menuselection:`Object Data tab --> Layers`
-   :Shortcut:  :kbd:`Y`
 
 .. figure:: /images/grease-pencil_properties_layers_panel.png
    :align: right
@@ -271,15 +270,3 @@ View Layer
 
 Use Masks in Render
    If disabled, no masks on the layer are included in the view layer render.
-
-
-.. Display
-.. =======
-
-.. Custom Channel Color
-..    Sets the color to use in the channel region of the :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>`.
-
-.. Show Only On Keyframed
-..    Makes the layer visible in the viewport only if it has a keyframe in the actual frame.
-..    This helps for example when you are in the inking process using the *Fill* tool and want to only see
-..    the strokes that are in the actual frame to avoid fill in unwanted regions.

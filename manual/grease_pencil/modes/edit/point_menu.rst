@@ -53,20 +53,6 @@ Opacity
    When enabled, the operator affect the points strength (alpha).
 
 
-.. .. _bpy.ops.gpencil.stroke_merge:
-
-.. Merge
-.. =====
-
-.. .. reference::
-
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Point --> Merge`
-
-.. Combine all selected points into a unique stroke.
-.. All the selected points will be connected by new edit lines when needed to create the new stroke.
-
-
 Vertex Groups
 =============
 

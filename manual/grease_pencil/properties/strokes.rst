@@ -33,11 +33,3 @@ Stroke Depth Order
              :width: 320px
 
              Blue, Green and Red strokes in three different layers using 3D Location depth order.
-
-.. .. _bpy.types.GreasePencil.pixel_factor:
-
-.. Thickness Scale
-..    Sets a thickness scale factor for all strokes.
-
-.. Curve Resolution
-..    See :ref:`Curve Editing <bpy.types.GreasePencil.edit_curve_resolution>` for more information.

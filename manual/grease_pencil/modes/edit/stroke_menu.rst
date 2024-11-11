@@ -76,34 +76,6 @@ Factor
    Controls the amount of recursively simplifications applied by the algorithm.
 
 
-.. .. _bpy.ops.gpencil.stroke_simplify_fixed:
-
-.. Fixed
-.. -----
-
-.. Deletes alternated points in the strokes, except the start and end points.
-
-.. Steps
-..    The number of times to repeat the procedure.
-
-
-.. .. _bpy.ops.gpencil.stroke_sample:
-
-.. Sample
-.. ------
-
-.. Recreates the stroke geometry with a predefined length between points.
-
-.. Length
-..    The distance between points on the recreated stroke.
-..    Smaller values will require more points to recreate the stroke,
-..    while larger values will result in fewer points needed to recreate the curve.
-.. Sharp Threshold
-..    The maximum angle between points on the recreated stroke.
-..    Smaller values will require more points to recreate the stroke,
-..    while larger values will result in fewer points needed to recreate the curve.
-
-
 .. _bpy.ops.gpencil.stroke_trim:
 
 Trim
@@ -127,55 +99,6 @@ Trims selected stroke to first loop or intersection.
           :width: 320px
 
           Result of trim operation.
-
-
-.. .. _bpy.ops.gpencil.stroke_outline:
-
-.. Outline
-.. =======
-
-.. .. reference::
-
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Stroke --> Outline`
-
-.. Converts a stroke to an outline.
-
-.. View
-..    The projection method to generate the outline
-
-..    :View: Use the viewport's view as a projection.
-..    :Front: Use the X-Z axes view as a projection.
-..    :Side: use the Y-Z axis view as a projection
-..    :Top: Use the X-Y axes view as a projection
-..    :Camera: Use the view from the active camera as a projection.
-.. Material Mode
-..    How materials are assigned to the outline.
-
-..    :Active Material: The stroke outline will be assigned the active material.
-..    :Keep Material: The stoke outline will have the same material as before.
-..    :New Material: A new material will be created and assigned to the outline.
-.. Thickness
-..    Thickness of the stroke perimeter.
-.. Keep Shape
-..    Try to keep global shape when the stroke thickness change.
-.. Subdivisions
-..    Number of subdivisions for the start and end caps.
-.. Sample Length
-..    The length each resulting segment of the outline.
-..    Smaller values create outlines closer to the original shape.
-
-.. .. list-table::
-
-..    * - .. figure:: /images/grease-pencil_modes_edit_stroke-menu_outline-1.png
-..           :width: 320px
-
-..           Original stroke.
-
-..      - .. figure:: /images/grease-pencil_modes_edit_stroke-menu_outline-2.png
-..           :width: 320px
-
-..           Generated stroke after outline operation.
 
 
 Join
@@ -301,10 +224,6 @@ Type
    :Open All: Open all closed selected strokes.
    :Toggle: Close or Open selected strokes as required.
 
-.. Create Geometry
-..    When enabled, points are added for closing the strokes.
-..    If disabled, the operator act the same as *Toggle Cyclic*.
-
 
 Toggle Cyclic
 =============
@@ -320,10 +239,6 @@ Type
    :Close All: Close all open selected strokes.
    :Open All: Open all closed selected strokes.
    :Toggle: Close or Open selected strokes as required.
-
-.. Create Geometry
-..    When enabled, points are added for closing the strokes like when using the *Close* tool.
-..    If disabled, the stroke is close without any actual geometry.
 
 
 .. _bpy.ops.grease_pencil.caps_set:
@@ -382,19 +297,6 @@ Reverse the direction of the points in the selected strokes
 (i.e. the start point will become the end one, and vice versa).
 
 
-.. .. _bpy.ops.gpencil.stroke_start_set:
-
-.. Set Start Point
-.. ===============
-
-.. .. reference::
-
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Stroke --> Set Start Point`
-
-.. Set the start point for cyclic strokes.
-
-
 .. _bpy.ops.grease_pencil.set_uniform_thickness:
 
 Set Uniform Thickness
@@ -438,17 +340,6 @@ Scale Thickness
    :Menu:      :menuselection:`Stroke --> Scale Thickness`
 
 When enabled, scales the stroke thickness during scale transformations.
-
-
-.. Reset Fill Transform
-.. ====================
-
-.. .. reference::
-
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Stroke --> Reset Fill Transform`
-
-.. Reset all fill translation, scaling and rotations in the selected strokes.
 
 
 .. _bpy.ops.grease_pencil.set_curve_type:

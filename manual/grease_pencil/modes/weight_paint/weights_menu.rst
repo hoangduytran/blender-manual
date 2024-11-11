@@ -75,29 +75,6 @@ Smooth
 Smooths the weights of the active vertex group.
 
 
-.. .. _bpy.ops.gpencil.generate_weights:
-
-.. Generate Weights
-.. ================
-
-.. .. reference::
-
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Weights --> Generate Weights`
-
-.. Generate automatic weight for armatures (requires an Armature modifier).
-
-.. With Empty Group
-..    When parenting it will create an empty vertex groups on the child objects (if they do not exist already)
-..    for and named after each deforming bone in the armature.
-
-.. With Automatic Weights
-..    Works similar to *With Empty Groups*, but it will not leave the vertex groups empty.
-..    It calculates how much influence a particular bone would have on points based on the distance
-..    from those points to a particular bone ("bone heat" algorithm).
-..    This influence will be assigned as weights in the vertex groups.
-
-
 .. _bpy.ops.grease_pencil.weight_sample:
 
 Sample Weight
