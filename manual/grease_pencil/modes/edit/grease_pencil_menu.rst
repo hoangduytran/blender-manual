@@ -228,14 +228,14 @@ Separate
    :Menu:      :menuselection:`Grease Pencil --> Separate`
    :Shortcut:  :kbd:`P`
 
-Separate the selected geometry into a new Grease Pencil object.
+Separate different elements into new Grease Pencil objects based on specific criteria.
 
-Selected Points
-   Separate the selected geometry into a new object.
-Material
-   Separates the geometry by each material.
-Active Layer
-   Separate all the strokes in the active layer into a new object.
+Selection
+   Separates the selected points or strokes into a new object.
+By Material
+   Separates the geometry by creating a new object for each material.
+By Layer
+   Separates the geometry by creating a new object for each layer.
    See :doc:`2D Layers </grease_pencil/properties/layers>` for more information.
 
 
@@ -296,8 +296,8 @@ Unselected
 
 .. _bpy.ops.grease_pencil.reproject:
 
-Reproject
----------
+Reproject Strokes
+-----------------
 
 .. reference::
 
