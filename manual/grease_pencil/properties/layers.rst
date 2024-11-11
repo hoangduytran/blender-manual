@@ -65,6 +65,23 @@ Layer Tree
    Lock (padlock icon)
       Toggle layer from being editable.
 
+.. _bpy.ops.grease_pencil.layer_add:
+
+Add New Layer
+   Adds a new layer to the active object.
+
+.. _bpy.ops.grease_pencil.layer_group_add:
+
+Add New Layer Group
+   Adds a new layer group to the active object.
+   Note, layer groups cannot be added from the Dopesheet; they must be added from the Properties editor.
+
+.. _bpy.ops.grease_pencil.layer_remove:
+.. _bpy.ops.grease_pencil.layer_group_remove:
+
+Remove Layer/Group
+   Removes the active layer or layer group.
+
 Layer Specials
    Operators for working with layers.
 
@@ -116,6 +133,11 @@ Layer Specials
 
    Copy All Layers to Selected
       Copy all layers to the selected Grease Pencil object.
+
+.. _bpy.ops.grease_pencil.layer_move:
+
+Reorder Layer
+   Moves the active layer or layer group up/down in the tree.
 
 Below the layers list there are additional settings:
 
