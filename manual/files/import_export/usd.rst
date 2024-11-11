@@ -392,10 +392,12 @@ Lights
 Cameras
    Exports :doc:`Camera Objects </render/cameras>`
    Only perspective cameras are exported.
-Volumes
-   Exports :doc:`Volume Objects </modeling/volumes/index>`
 Curves
    Exports :doc:`Curve Objects </modeling/curves/index>`
+Point Clouds
+   Exports :doc:`Point Cloud Objects </modeling/point_cloud>` as ``UsdGeomPoints`` primitives.
+Volumes
+   Exports :doc:`Volume Objects </modeling/volumes/index>`
 Hair
    Exports parent hair strands are exported as a curve system.
    Hair strand colors are not exported.
