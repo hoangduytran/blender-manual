@@ -159,6 +159,11 @@ Volume
    This can be hidden by disabling the :ref:`F-Curves <bpy.types.SequencerTimelineOverlay.show_fcurves>`.
    The value is also reflected in the waveform.
 
+.. _bpy.types.SoundSequence.sound_offset:
+
+Offset
+   Offset of the sound from the beginning of the strip, expressed in seconds.
+
 .. _bpy.types.Sound.use_mono:
 
 Mono
