@@ -40,10 +40,14 @@ Remove Layer
    Removes the active layer.
 Move Layer
    Moves the active layer down/up.
-Isolate Layer (monitor icon)
-   Hide all layers except the active one.
-Isolate Layer (padlock icon)
-   Lock all layers except the active one.
+
+.. _bpy.ops.grease_pencil.layer_isolate:
+
+Isolate Layers (screen icon)
+   Toggle whether the active layer is the only one that can be edited and is visible.
+Isolate Layers (padlock icon)
+   Toggle whether the active layer is the only one that can be edited.
+
 
 Insert Keyframe
 ---------------

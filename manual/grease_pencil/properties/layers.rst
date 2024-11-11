@@ -117,14 +117,6 @@ Layer Specials
    Copy All Layers to Selected
       Copy all layers to the selected Grease Pencil object.
 
-.. _bpy.ops.grease_pencil.layer_isolate:
-
-Visibility (screen icon)
-   Toggle whether the active layer is the only one that can be edited and is visible.
-
-Isolate Lock (padlock icon)
-   Toggle whether the active layer is the only one that can be edited.
-
 Below the layers list there are additional settings:
 
 .. _bpy.types.GreasePencilLayer.blend_mode:
@@ -174,8 +166,6 @@ Invert (mask icon)
 
 Viewport/Render Visibility (eye icon)
    Toggle layer visibility in the viewport and in render.
-
-
 
 .. list-table:: Mask (green circle) samples.
 
