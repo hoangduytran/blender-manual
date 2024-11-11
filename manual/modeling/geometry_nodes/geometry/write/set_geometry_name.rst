@@ -5,7 +5,7 @@
 Set Geometry Name Node
 **********************
 
-.. figure:: /images/node-types_GeometryNodeSetGeometryName.webp
+.. figure:: /images/node-types_GeometryNodeSetGeometryName.png
    :align: right
    :alt: Set Geometry Name node.
 
