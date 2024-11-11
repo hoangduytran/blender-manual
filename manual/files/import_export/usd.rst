@@ -167,7 +167,7 @@ Point Clouds
 USD Shapes
    Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
 
-USD Purpose
+Display Purpose
    Render
       Include primitives with purpose ``render``.
    Proxy
@@ -175,6 +175,14 @@ USD Purpose
    Guide
       Include primitives with
       `purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__ ``guide``.
+
+Material Purpose
+   Attempt to import materials with the given purpose.
+   If no material with this purpose is bound to the primitive, fall back on loading any other bound material.
+
+   :All Purpose: Attempt to import ``allPurpose`` materials.
+   :Preview: Attempt to import ``preview`` materials. Load ``allPurpose`` materials as a fallback.
+   :Full: Attempt to import ``full`` materials. Load ``allPurpose`` or ``preview`` materials, in that order, as a fallback".
 
 
 Geometry
@@ -479,8 +487,13 @@ Convert World Material
    with an optional vector multiply of the texture color.
 
 Export Textures
-   Export textures referenced by shader nodes to a "textures"
-   folder which in the same directory as the USD file.
+   Method for exporting textures.
+
+   :Keep: Use original location of textures.
+   :Preserve:
+      Preserve file paths of textures from already imported USD files.
+      Export remaining textures to a 'textures' folder next to the USD file.
+   :New Path: Export textures to a 'textures' folder next to the USD file.
 
 Overwrite Textures
    Allow overwriting existing texture files when exporting textures.
