@@ -30,11 +30,11 @@ Brushes for *Sculpt Mode* bundled in the *Essentials* library.
    thumb.rst
    pose.rst
    nudge.rst
-   twist.rst
+   rotate.rst
    slide_relax.rst
    boundary.rst
    cloth.rst
-   density.rst
+   simplify.rst
    mask.rst
    draw_facesets.rst
    multires_displacement_eraser.rst
