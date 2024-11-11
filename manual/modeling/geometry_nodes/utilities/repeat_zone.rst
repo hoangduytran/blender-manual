@@ -1,4 +1,4 @@
-.. index:: Geometry Nodes; Repeat Zone
+.. index:: Geometry Nodes; Repeat
 .. _bpy.types.GeometryNodeRepeatInput:
 .. _bpy.types.GeometryNodeRepeatOutput:
 

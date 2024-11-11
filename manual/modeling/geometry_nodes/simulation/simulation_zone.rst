@@ -1,4 +1,4 @@
-.. index:: Geometry Nodes; Simulation Zone
+.. index:: Geometry Nodes; Simulation
 .. _bpy.types.GeometryNodeSimulationInput:
 .. _bpy.types.GeometryNodeSimulationOutput:
 
