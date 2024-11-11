@@ -3,17 +3,18 @@
 Action Editor
 *************
 
-While the *Dope Sheet* mode lets you work with keyframes of many objects at the same time,
-the *Action Editor* mode focuses on the keyframes inside a single :doc:`action </animation/actions>`.
+While the *Dope Sheet* mode lets you work with keyframes of all animation in the
+scene at the same time, the *Action Editor* mode focuses on the keyframes inside
+a single :doc:`action </animation/actions>`.
 
 .. figure:: /images/editors_dope-sheet_action-editor.png
 
    The Action Editor.
 
-An action is a reusable animation segment -- a collection of
-:doc:`F-curves </editors/graph_editor/fcurves/introduction>`, where each curve describes how
-a certain property changes over time. Objects can reference one action as their *active action*
-and additional ones through :doc:`Nonlinear Animation tracks </editors/nla/tracks>`.
+Actions are Blender's container for animation data. Objects and other animatable
+data-blocks reference actions to get animated by the animation data inside.
+Data-blocks can reference one action as their *active action* and additional
+actions through :doc:`Nonlinear Animation tracks </editors/nla/tracks>`.
 
 
 Header
@@ -27,13 +28,13 @@ Previous/Next Layer (down/up arrows)
 
 .. figure:: /images/editors_dope-sheet_action-editor_layers_1.png
 
-   By default, the Action Editor shows the selected object's active action,
+   By default, the Action Editor shows the selected object's active action and slot,
    which is stored in the Action Track at the top.
 
 .. figure:: /images/editors_dope-sheet_action-editor_layers_2.png
 
    After clicking *Previous Layer*, we enter Tweak Mode for the action in the second track.
-   The NLA Editor hilights it in green, and the Action Editor lets us edit its keyframes.
+   The NLA Editor highlights it in green, and the Action Editor lets us edit its keyframes.
 
 Push Down (strips with down arrow icon)
    Creates a new NLA track below the Action Track and moves the active action into it.
