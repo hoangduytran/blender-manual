@@ -1,7 +1,7 @@
 
-*******
-Brushes
-*******
+***********
+Brush Asset
+***********
 
 .. figure:: /images/grease-pencil_modes_draw_tool-settings_brushes_fill-brush-data-block.png
    :align: right
@@ -52,8 +52,6 @@ The brush can be changed in the Tool Settings.
 The different fill brushes are settings variations of the same *Fill Brush*.
 You can create many brushes, each with unique settings to get different result when filling areas.
 
-
-.. _grease_pencil-draw-brushes-erase:
 
 Erase Brushes
 -------------

@@ -75,8 +75,6 @@ Move :kbd:`Spacebar`
    Hold to reposition the line.
 
 
-.. _gesture-tool-polyline:
-
 Tool Settings
 -------------
 
@@ -85,11 +83,14 @@ Limit to Segment
    This helps defining a smaller area instead of extending the line infinitely long.
 
 
+.. _gesture-tool-polyline:
+
 Polyline Gestures
 =================
 
 Clicking places a point in the viewport. Each time :kbd:`LMB` is pressed, a new point of the polygon is created.
-Pressing :kbd:`LMB` on the starting point or pressing :kbd:`Return` closes the selection area.
+Pressing :kbd:`LMB` on the starting point, pressing :kbd:`LMB` twice,
+or pressing :kbd:`Return` closes the selection area.
 
 
 Controls

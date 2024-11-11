@@ -35,11 +35,6 @@ Resolution
    Resolution at which the ray-tracing is performed.
    Lower options will be faster and use less memory but will produce blurrier results.
 
-Max Roughness
-   Maximum roughness a :abbr:`BSDF (Bidirectional Scattering Distribution Function)` can have to use ray-tracing.
-   BSDFs with higher roughness will progressively use the *Fast GI Approximation*.
-   A value of 1 will raytrace every surfaces and disable the Fast GI.
-
 
 Screen Tracing
 ==============
@@ -78,6 +73,7 @@ Bilateral Filter
 
 
 .. _bpy.types.SceneEEVEE.fast_gi:
+.. _bpy.types.SceneEEVEE.use_fast_gi:
 
 Fast GI Approximation
 =====================
@@ -88,6 +84,13 @@ It produces a less noisy output and captures bounce lighting more efficiently th
 
 This is currently implemented as a screen space effect and will inherit all associated
 :ref:`limitations <eevee-limitations-screenspace>`.
+
+.. _bpy.types.RaytraceEEVEE.trace_max_roughness:
+
+Threshold
+   Maximum roughness a :abbr:`BSDF (Bidirectional Scattering Distribution Function)` can have to use ray-tracing.
+   BSDFs with higher roughness will progressively use the *Fast GI Approximation*.
+   A value of 1 will raytrace every surfaces and disable the Fast GI.
 
 Method
    Determine the method used to compute the fast GI approximation.

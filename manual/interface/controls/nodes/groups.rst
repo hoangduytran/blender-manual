@@ -80,6 +80,16 @@ Description
 Color Tag
    Color tag of the node group which influences the header color.
 
+.. _bpy.types.NodeTree.default_group_node_width:
+
+Node Width
+   The width for newly created group nodes.
+
+   .. _bpy.ops.node.default_group_width_set:
+
+   :bl-icon:`node` (Set Default Node Width)
+      Set the width based on the parent group node in the current context
+
 
 Usage :guilabel:`Geometry Nodes`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

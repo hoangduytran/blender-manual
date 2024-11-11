@@ -64,12 +64,6 @@ Lock Unselected
 Lock Unused
    Locks and hides all unused materials.
 
-.. Convert Materials to Vertex Color
-..    Only keeps necessary materials and convert all materials base color to a Color Attribute.
-
-.. Extract Palette from Vertex Color
-..    Add all used Color Attributes to a new Color Palette. See :ref:`bpy.types.PaletteColor`.
-
 .. _bpy.ops.grease_pencil.material_copy_to_object:
 
 Copy Material to Selected
@@ -77,10 +71,6 @@ Copy Material to Selected
 
 Copy All Materials to Selected
    Copy all materials to the selected Grease Pencil object.
-
-.. Merge Similar
-..    Combines similar materials in the list and replace the strokes that use the one of
-..    the merged materials with the new one.
 
 Remove Unused Slots
    Remove all unused materials.

@@ -8,7 +8,6 @@ Layers
 
    :Mode:      All Modes
    :Panel:     :menuselection:`Object Data tab --> Layers`
-   :Shortcut:  :kbd:`Y`
 
 .. figure:: /images/grease-pencil_properties_layers_panel.png
    :align: right
@@ -62,6 +61,23 @@ Layer Tree
    Lock (padlock icon)
       Toggle layer from being editable.
 
+.. _bpy.ops.grease_pencil.layer_add:
+
+Add New Layer
+   Adds a new layer to the active object.
+
+.. _bpy.ops.grease_pencil.layer_group_add:
+
+Add New Layer Group
+   Adds a new layer group to the active object.
+   Note, layer groups cannot be added from the Dopesheet; they must be added from the Properties editor.
+
+.. _bpy.ops.grease_pencil.layer_remove:
+.. _bpy.ops.grease_pencil.layer_group_remove:
+
+Remove Layer/Group
+   Removes the active layer or layer group.
+
 Layer Specials
    Operators for working with layers.
 
@@ -114,13 +130,10 @@ Layer Specials
    Copy All Layers to Selected
       Copy all layers to the selected Grease Pencil object.
 
-.. _bpy.ops.grease_pencil.layer_isolate:
+.. _bpy.ops.grease_pencil.layer_move:
 
-Visibility (screen icon)
-   Toggle whether the active layer is the only one that can be edited and is visible.
-
-Isolate Lock (padlock icon)
-   Toggle whether the active layer is the only one that can be edited.
+Reorder Layer
+   Moves the active layer or layer group up/down in the tree.
 
 Below the layers list there are additional settings:
 
@@ -171,8 +184,6 @@ Invert (mask icon)
 
 Viewport/Render Visibility (eye icon)
    Toggle layer visibility in the viewport and in render.
-
-
 
 .. list-table:: Mask (green circle) samples.
 
@@ -256,15 +267,3 @@ View Layer
 
 Use Masks in Render
    If disabled, no masks on the layer are included in the view layer render.
-
-
-.. Display
-.. =======
-
-.. Custom Channel Color
-..    Sets the color to use in the channel region of the :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>`.
-
-.. Show Only On Keyframed
-..    Makes the layer visible in the viewport only if it has a keyframe in the actual frame.
-..    This helps for example when you are in the inking process using the *Fill* tool and want to only see
-..    the strokes that are in the actual frame to avoid fill in unwanted regions.

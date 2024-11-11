@@ -9,7 +9,7 @@ Curve Tool
    :Mode:      Draw Mode
    :Tool:      :menuselection:`Toolbar --> Curve`
 
-The Curve tool create complex Bézier style curves.
+The Curve tool create complex Bézier style curves using any of the *Draw* type brushes..
 
 
 Tool Settings
@@ -39,6 +39,32 @@ Thickness Profile
 
      - .. figure:: /images/grease-pencil_modes_draw_tools_curve_thickness-profile-03.png
           :width: 200px
+
+
+Brush Asset
+-----------
+
+Picks the brush asset used by the tool.
+
+See :doc:`/grease_pencil/modes/draw/tool_settings/brushes` for more information.
+
+See :doc:`/grease_pencil/modes/draw/brushes/draw` for a detailed list of all draw brushes and their options.
+
+
+Brush Settings
+--------------
+
+Parameters to control to look of the stroke.
+
+See :doc:`/grease_pencil/modes/draw/brushes/draw` for details.
+
+
+Color
+-----
+
+Settings to determine the color of strokes.
+
+See :doc:`/grease_pencil/modes/draw/tool_settings/color`
 
 
 Usage

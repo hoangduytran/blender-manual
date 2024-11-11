@@ -129,21 +129,6 @@ with the rest of the strokes (unlike *Extrude*, for example),
 and places the duplicate at the location of the original elements.
 
 
-.. .. _bpy.ops.gpencil.stroke_split:
-
-.. Split
-.. =====
-
-.. .. reference::
-
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Grease Pencil --> Split`
-..    :Shortcut:  :kbd:`V`
-
-.. Splits (disconnects) the selected points from the rest of the stroke.
-.. The separated points are left exactly at the same position as the original points but they belong to a new stroke.
-
-
 .. _bpy.ops.grease_pencil.copy:
 
 Copy
@@ -260,37 +245,6 @@ Clean Up
 These tools help to cleanup degenerate geometry on the strokes.
 
 
-.. .. _bpy.ops.gpencil.frame_clean_fill:
-
-.. Boundary Strokes
-.. ----------------
-
-.. .. reference::
-
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Boundary Strokes`
-
-.. Removes boundary strokes used by the *Fill* tool.
-.. See :doc:`Fill tool </grease_pencil/modes/draw/brushes/fill>` for more information.
-
-.. Mode
-..    Active Frame Only
-..       Removes boundary strokes from the current frame.
-..    All Frames
-..       Removes boundary strokes from all frames.
-
-
-.. Boundary Strokes All Frames
-.. ---------------------------
-
-.. .. reference::
-
-..    :Mode:      Edit Mode
-..    :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Boundary Strokes all Frames`
-
-.. Same as `Boundary Strokes`_ but *Mode* is set to *All Frames*.
-
-
 .. _bpy.ops.grease_pencil.clean_loose:
 
 Clean Loose Points
@@ -389,21 +343,6 @@ Keep Original
           :width: 200px
 
           Drawing after reprojection operation from the front view.
-
-
-.. .. _bpy.ops.gpencil.recalc_geometry:
-
-.. Recalculate Geometry
-.. --------------------
-
-.. .. reference::
-
-..    :Mode:      Edit Mode and Draw Mode
-..    :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Recalculate Geometry`
-
-.. This operator updates all internal geometry data.
-.. It is not intended that you will have to use this operator
-.. but it can help in cases where strokes are drawn in a strange way or when you opened an old file.
 
 
 Delete

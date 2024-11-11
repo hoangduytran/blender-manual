@@ -13,6 +13,7 @@ For example the environment and characters in a shot might have different light 
 A character could have a dedicated linked rim light to make it stand out,
 and shadow linking could be used to ensure no objects from the environment block it.
 
+
 Setup
 =====
 
@@ -29,6 +30,7 @@ While a scene collection can be directly assigned as a light or shadow linking c
 it is recommended to instead create a dedicated collection and link any scene collection inside it instead.
 This way it's easy to include or exclude additional objects without affecting the scene layout.
 
+
 Include & Exclude
 =================
 
@@ -40,6 +42,7 @@ The behavior is as follows:
 * If both included and excluded objects are specified, the light affects only included objects minus the excluded
   objects. This can be used to for example set a character collection to be included, and then exclude specific
   objects part of the character.
+
 
 Performance
 ===========

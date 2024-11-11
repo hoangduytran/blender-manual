@@ -1,4 +1,3 @@
-.. _grease-pencil-draw-common-options:
 
 **************
 Brush Settings

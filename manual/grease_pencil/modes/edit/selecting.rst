@@ -109,7 +109,7 @@ Less
 Select Similar
 ==============
 
-.. .. reference::
+.. reference::
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Select --> Select Similar`
@@ -156,18 +156,3 @@ Select First/Last
 
 These operators will toggle the selection of the first or last point(s) of the stroke(s) in the object.
 This is useful to quickly find the start of a stroke.
-
-
-.. .. _bpy.ops.gpencil.select_vertex_color:
-
-.. Select Color Attribute
-.. ======================
-
-.. .. reference::
-
-..    :Mode:      Vertex Paint Mode
-
-.. Selects all points with a similar Color Attribute as the current selection.
-
-.. Tolerance
-..    How similar colors are allowed to be; higher values select a wider range of colors.
