@@ -11,7 +11,7 @@ Cursor
    Change the location of the 3D Cursor.
 
 :doc:`Brush </grease_pencil/modes/draw/tools/brush>`
-   Tool to use for any of the drawing brushes, see :doc:`/grease_pencil/modes/draw/brushes/overview`.
+   Tool to use for any of the :doc:`drawing brushes </grease_pencil/modes/draw/brushes/draw>`.
 
 :ref:`Fill <tool-grease-pencil-draw-fill>`
    Automatic fill closed strokes areas.
