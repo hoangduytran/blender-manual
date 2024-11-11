@@ -217,3 +217,16 @@ possible to hover over an item to show its name.
 By default the shelf only has a height for one item row. To allow for more rows, drag it on the upper edge to increase
 its size.
 
+
+Filter
+------
+
+.. _bpy.types.PreferencesView.use_filter_brushes_by_tool:
+
+By Active Tool
+   Only show brushes applicable for the currently active tool in the asset shelf.
+
+   .. note::
+
+      The value of this property is stored in the :doc:`/editors/preferences/index`,
+      which may have to be saved manually if *Auto-Save Preferences* is disabled.
