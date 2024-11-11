@@ -30,7 +30,8 @@ Inputs
 ======
 
 Iterations
-   Number of repetitions.
+   Number of times to repeat the execution of the zone. The current iteration is available with the
+   *Iteration* input on the inside of the zone.
 
 Geometry
    Standard geometry input, which is available by default to input geometry into the repeat zone.
