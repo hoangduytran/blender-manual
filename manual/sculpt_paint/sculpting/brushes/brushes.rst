@@ -10,8 +10,8 @@ These are based on various :ref:`Brush Types <sculpt-tool-settings-brush-type>` 
 Add/Subtract Brushes
 ====================
 
-These brushes generally push vertices outwards and inwards and are the most customizable to achieve a wide variety of effects.
-They typically don'y use a color in their thumbnail.
+These brushes generally push vertices outwards and inwards and are the most customizable to achieve a wide variety of
+effects. They typically don'y use a color in their thumbnail.
 
 .. figure:: /images/sculpt-paint_sculpting_brushes_overview-add-subtract.png
 
@@ -93,7 +93,8 @@ Smooth
 Flatten/Contrast
    Brush Type: :doc:`flatten`
 
-   Pushes vertices to an average height to create a flat surfaces. Alternatively pushes them away from the center for more contrast.
+   Pushes vertices to an average height to create a flat surfaces. Alternatively pushes them away from the center for
+   more contrast.
 
 Plateau
    Brush Type: :doc:`flatten`
@@ -103,18 +104,21 @@ Plateau
 Fill/Deepen
    Brush Type: :doc:`fill`
 
-   Pushes surfaces upwards towards a flat plane. Useful for filling in holes and crevices. Alternatively deepens existing holes when holding 'Ctrl'.
+   Pushes surfaces upwards towards a flat plane. Useful for filling in holes and crevices. Alternatively deepens
+   existing holes when holding 'Ctrl'.
 
 Scrape/Fill
    | Brush Type: :doc:`scrape`
    | Shortcut:  :kbd:`Shift T`
 
-   Pushes surfaces inwards. Alternatively fills surfaces while holding 'Ctrl'. This is the most common brush for flattening meshes.
+   Pushes surfaces inwards. Alternatively fills surfaces while holding 'Ctrl'. This is the most common brush for
+   flattening meshes.
 
 Trim
    Brush Type: :doc:`scrape`
 
-   Pushes surfaces inwards toward a locked direction. The depth can be defined by going deeper towards surfaces along the stroke.
+   Pushes surfaces inwards toward a locked direction. The depth can be defined by going deeper towards surfaces along
+   the stroke.
 
 Scrape Multiplane
    Brush Type: :doc:`multiplane_scrape`
@@ -134,7 +138,8 @@ Pinch/Magnify
    | Brush Type: :doc:`pinch`
    | Shortcut:  :kbd:`P`
 
-   Pulls vertices towards the center of the brush. Useful for polishing angles and creases. Alternatively pushes them away from the center.
+   Pulls vertices towards the center of the brush. Useful for polishing angles and creases. Alternatively pushes them
+   away from the center.
 
 Grab
    | Brush Type: :doc:`grab`
@@ -145,12 +150,14 @@ Grab
 Grab 2D
    Brush Type: :doc:`grab`
 
-   Similar to Grab but with an infinitely projected falloff. Useful for grabbing broader shapes and giving a similar feel to using Liquify tools in image painting applications.
+   Similar to Grab but with an infinitely projected falloff. Useful for grabbing broader shapes and giving a similar
+   feel to using Liquify tools in image painting applications.
 
 Grab Silhouette
    Brush Type: :doc:`grab`
 
-   Similar to Grab but only affects vertices with the normal facing sideways away from the view. Very useful for adjusting outer silhouettes of thin objects.
+   Similar to Grab but only affects vertices with the normal facing sideways away from the view. Very useful for
+   adjusting outer silhouettes of thin objects.
 
 Elastic Grab
    Brush Type: :doc:`elastic_deform`
@@ -166,13 +173,14 @@ Snake Hook
    | Brush Type: :doc:`snake_hook`
    | Shortcut:  :kbd:`K`
 
-   Pulls vertices along with the stroke to create long, snake-like forms. Geometry is rotated and magnified to allow continuous pulling.
-   Much more useful while having :ref:`Dyntopo <dyntopo_introduction>` enabled.
+   Pulls vertices along with the stroke to create long, snake-like forms. Geometry is rotated and magnified to allow
+   continuous pulling. Much more useful while having :ref:`Dyntopo <dyntopo_introduction>` enabled.
 
 Pull
    Brush Type: :doc:`snake_hook`
 
-   Iteratively picks up and lets go of geometry like the Snake Hook, but much softer. Useful for subtle small scale deforming over longer strokes.
+   Iteratively picks up and lets go of geometry like the Snake Hook, but much softer. Useful for subtle small scale
+   deforming over longer strokes.
 
 Thumb
    Brush Type: :doc:`thumb`
@@ -304,7 +312,8 @@ Blend Square
 Paint Blend
    Brush Type: :doc:`paint`
 
-   A mix of a Paint and Blend brush. On low pen pressure the brush averages colors and with high pen pressure it paints colors.
+   A mix of a Paint and Blend brush. On low pen pressure the brush averages colors and with high pen pressure it
+   paints colors.
 
 Smear
    Brush Type: :doc:`smear`

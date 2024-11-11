@@ -19,7 +19,8 @@ This page lists definitions for terms used in Blender and this manual.
       See also :ref:`selection states <object-active>`.
 
    :doc:`Action </animation/actions>`
-      Blender's container for animation data.  In Blender, animatable :term:`data-blocks <Data-Block>` do not store their own animation data, but instead store their animation data an actions.
+      Blender's container for animation data.  In Blender, animatable :term:`data-blocks <Data-Block>` do not store
+      their own animation data, but instead store their animation data an actions.
 
    Action Safe
       Area of the screen visible on most devices. Place content inside it to ensure it does not get cut off.

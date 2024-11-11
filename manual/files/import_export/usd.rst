@@ -182,7 +182,8 @@ Material Purpose
 
    :All Purpose: Attempt to import ``allPurpose`` materials.
    :Preview: Attempt to import ``preview`` materials. Load ``allPurpose`` materials as a fallback.
-   :Full: Attempt to import ``full`` materials. Load ``allPurpose`` or ``preview`` materials, in that order, as a fallback".
+   :Full: Attempt to import ``full`` materials. Load ``allPurpose`` or ``preview`` materials, in that order, as a
+    "fallback."
 
 
 Geometry

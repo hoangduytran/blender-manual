@@ -13,7 +13,8 @@ Available brush types are listed here, together with brushes from the
 
 
 Draw
-   Brushes: Paint Hard, Paint Soft, Paint Hard Pressure, Paint Soft Pressure, Erase Hard, Erase Soft, Erase Hard Pressure
+   Brushes: Paint Hard, Paint Soft, Paint Hard Pressure, Paint Soft Pressure, Erase Hard, Erase Soft, Erase Hard
+   Pressure
 
    The normal brush, draws a swath of color.
 
