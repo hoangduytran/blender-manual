@@ -6,6 +6,10 @@ Introduction
 Blender provides a variety of tools for editing Grease Pencil strokes.
 These are tools used to add, duplicate, move and delete elements.
 
+.. note::
+
+   Editing multiple Grease Pencil objects at once is currently not supported.
+
 
 Accessing Stroke Editing Tools
 ==============================
