@@ -655,7 +655,7 @@ Factor
    How strongly the smoothing should be applied.
 
 Sigma
-   The shape of the gaussian distribution. Lower values mean a sharper curve, giving keys that are close to each
+   The shape of the Gsaussian distribution. Lower values mean a sharper curve, giving keys that are close to each
    other more weight. A high value behaves like a simple average filter.
 
 Filter Width

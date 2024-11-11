@@ -172,7 +172,7 @@ connected to the :doc:`/modeling/geometry_nodes/output/viewer`.
 .. _bpy.types.View3DOverlay.show_viewer_attribute:
 
 Viewer Node
-   Visualize the value of the attribute connected to the *Viewer Node* as a greyscale color.
+   Visualize the value of the attribute connected to the *Viewer Node* as a grayscale color.
 
    .. _bpy.types.View3DOverlay.viewer_attribute_opacity:
 

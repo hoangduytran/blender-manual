@@ -128,7 +128,7 @@ Use the Mix nodes for merging, regardless of the selected nodes. You can choose 
 You can quickly set some operations by using corresponding shortcuts.
 
 - Add: :kbd:`Ctrl-Alt-=`, :kbd:`Ctrl-Alt-=`
-- Substract: :kbd:`Ctrl-Alt-Minus`, :kbd:`Ctrl-Alt-NumpadMinus`
+- Subtract: :kbd:`Ctrl-Alt-Minus`, :kbd:`Ctrl-Alt-NumpadMinus`
 - Multiply: :kbd:`Ctrl-Alt-8`, :kbd:`Ctrl-Alt-NumpadAsterisk`
 - Divide: :kbd:`Ctrl-Alt-Slash`, :kbd:`Ctrl-Alt-NumpadSlash`
 
@@ -144,7 +144,7 @@ Use the Math nodes for merging, regardless of the selected nodes. You can choose
 You can quickly set some operations by using corresponding shortcuts.
 
 - Add: :kbd:`Shift-Ctrl-=`, :kbd:`Shift-Ctrl-=`
-- Substract: :kbd:`Shift-Ctrl-Minus`, :kbd:`Shift-Ctrl-NumpadMinus`
+- Subtract: :kbd:`Shift-Ctrl-Minus`, :kbd:`Shift-Ctrl-NumpadMinus`
 - Multiply: :kbd:`Shift-Ctrl-8`, :kbd:`Shift-Ctrl-NumpadAsterisk`
 - Divide: :kbd:`Shift-Ctrl-Slash`, :kbd:`Shift-Ctrl-NumpadSlash`
 - Greater than: :kbd:`Ctrl-Comma`
@@ -191,7 +191,7 @@ You can use :kbd:`Alt-Up` or :kbd:`Alt-Down` to cycle through previous or next b
 You can also quickly set some operations by using corresponding shortcuts.
 
 - Add: :kbd:`Alt-=`, :kbd:`Alt-=`
-- Substract: :kbd:`Alt-Minus`, :kbd:`Alt-NumpadMinus`
+- Subtract: :kbd:`Alt-Minus`, :kbd:`Alt-NumpadMinus`
 - Multiply: :kbd:`Alt-8`, :kbd:`Alt-NumpadAsterisk`
 - Divide: :kbd:`Alt-Slash`, :kbd:`Alt-NumpadSlash`
 - Greater than: :kbd:`Alt-Comma`

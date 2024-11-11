@@ -248,7 +248,7 @@ Tip Control:
       the chain stretch to follow the curve and cover the gap.
 
       The rig automatically deduces twist of up to 180 degrees based on the orientation of the end control.
-      Higher amounts of twist have to be dialled in through an End Twist Estimate slider to avoid flipping.
+      Higher amounts of twist have to be dialed in through an End Twist Estimate slider to avoid flipping.
    Manual Squash & Stretch
       This mode allows full manual control over the chain scaling, while the chain covers as much of the curve
       as it can given its current length.

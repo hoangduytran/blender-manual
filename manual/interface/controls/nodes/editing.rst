@@ -33,7 +33,7 @@ and only affect the nodes' positions.
 Connecting Sockets
 ==================
 
-:kbd:`LMB`-click on a socket and drag. YConnect to Outputou will see a line coming out of it: this is called a *link*.
+:kbd:`LMB`-click on a socket and drag. "Connect to Output" will see a line coming out of it; this is called a *link*.
 Keep dragging and connect the link to an input socket of another node, then release the :kbd:`LMB`.
 
 While multiple links can route out of an output socket, typically a single link can be attached to an input socket,

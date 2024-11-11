@@ -3,7 +3,7 @@
 Light Probe Sphere
 ******************
 
-A light probe sphere records the light incomming from many directions at a single location.
+A light probe sphere records the light incoming from many directions at a single location.
 
 They are used for smooth and semi-rough reflections.
 Sphere probes smoothly blend to light probe volume lighting for completely diffuse reflections.

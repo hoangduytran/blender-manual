@@ -17,7 +17,7 @@ Proxy/Timecode
 High-resolution video files can impact Blender's performance, slowing down scrubbing and other operations.
 To counter this, you can generate one or more proxies, which are copies of the original footage
 stored at a lower resolution and/or quality. These proxies can then be used as a less resource-heavy
-standin while working on the scene.
+stand-in while working on the scene.
 
 Build Original
    The proxy resolution(s) to generate based on the original, distorted footage.

@@ -29,7 +29,7 @@ Use Falloff
 Weight :kbd:`Ctrl-F`
    The weight (visualized as a color) to be used by the brush.
 
-   Using :kbd:`Ctrl-RMB` you can set the weight to the value thats under the cursor.
+   Using :kbd:`Ctrl-RMB` you can set the weight to the value that's under the cursor.
 Direction :kbd:`D`
    Brush direction toggle, *Add* adds weight value while *Subtract* removes weight value.
    This setting can be toggled with :kbd:`D`.

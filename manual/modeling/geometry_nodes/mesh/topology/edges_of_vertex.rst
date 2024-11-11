@@ -100,7 +100,7 @@ With the rotations of the cones calculated, we use the
 
 .. figure:: /images/modeling_geometry-nodes_mesh_topology_edges-of-vertex_example-setup.png
 
-   Example node setup. (Rightclick and choose "Open image in new tab" to see a larger version.)
+   Example node setup. (Right-click and choose "Open image in new tab" to see a larger version.)
 
 .. figure:: /images/modeling_geometry-nodes_mesh_topology_edges-of-vertex_example-result.png
 

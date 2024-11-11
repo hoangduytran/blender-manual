@@ -50,4 +50,4 @@ Viewport Debug
 .. _bpy.types.PreferencesExperimental.use_eevee_debug:
 
 EEVEE Debug
-   Enable EEVEE debuging options for developers.
+   Enable EEVEE debugging options for developers.

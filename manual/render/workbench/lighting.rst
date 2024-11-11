@@ -13,7 +13,7 @@ The lighting conditions that will be used can be set in the Lighting panel.
 .. _bpy.types.View3DShading.light:
 
 :Flat:
-   Objects are "shaded" in a flat color, without any hilights or shadows.
+   Objects are "shaded" in a flat color, without any highlights or shadows.
 
 :Studio:
    Use a predefined studio lighting setup, such as a key light

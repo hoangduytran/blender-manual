@@ -11,7 +11,7 @@ Add/Subtract Brushes
 ====================
 
 These brushes generally push vertices outwards and inwards and are the most customizable to achieve a wide variety of
-effects. They typically don'y use a color in their thumbnail.
+effects. They typically don't use a color in their thumbnail.
 
 .. figure:: /images/sculpt-paint_sculpting_brushes_overview-add-subtract.png
 

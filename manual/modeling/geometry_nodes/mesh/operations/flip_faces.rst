@@ -15,7 +15,7 @@ Any :ref:`face corner domain <attribute-domains>` attributes of selected faces a
 
 Though this node is usually used to affect normals, it is not called "Flip Normals" for an important reason.
 The node does not actually interact with normals directly. Normals are defined by the
-`right hande rule <https://en.wikipedia.org/wiki/Right-hand_rule#Curve_orientation_and_normal_vectors>`__,
+`right hand rule <https://en.wikipedia.org/wiki/Right-hand_rule#Curve_orientation_and_normal_vectors>`__,
 so if a face's vertex list is reversed, then its normal will point in the opposite direction.
 
 

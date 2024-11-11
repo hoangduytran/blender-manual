@@ -101,7 +101,7 @@ Free (black handles)
    The handles are independent of each other.
 
 .. note::
-   When a control point is selected, its handles are overlaid with a red hilight
+   When a control point is selected, its handles are overlaid with a red highlight
    that changes their color. For example, Vector handles that are normally green
    will look yellow when selected, which can make it difficult to distinguish
    them from unselected Automatic handles.

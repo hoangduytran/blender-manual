@@ -20,7 +20,7 @@ By default the constraint keys are :kbd:`X`, :kbd:`Y` and :kbd:`Z`.
 This constraint can be restricted to a plane if :kbd:`Shift`
 is pressed or automatically detected if :kbd:`MMB` is pressed.
 
-It is worth noting that if you press the same contraint hotkey a second time,
+It is worth noting that if you press the same constraint hotkey a second time,
 you change the orientation from Local to Global or vice versa. Pressing a third time disables the constraint.
 
 

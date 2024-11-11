@@ -47,7 +47,7 @@ Add :kbd:`Shift-A`
    Contains a list of different :ref:`objects types <objects-types>` that can be added to the scene.
 Object
    Contains tools for operating on :doc:`objects </scene_layout/object/editing/transform/introduction>`,
-   such as duplicating them. A subset of these tools can also be accessed by rightclicking
+   such as duplicating them. A subset of these tools can also be accessed by right-clicking
    in the 3D Viewport.
 
 

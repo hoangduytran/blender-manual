@@ -132,7 +132,7 @@ Linked Duplicate
 
 Creates copies of the selected strips, reusing any actions they reference.
 Editing the keyframes in a copied strip therefore also affects the original
-(and vice versa). Blender warns you about this by hilighting the other strip in red.
+(and vice versa). Blender warns you about this by highlighting the other strip in red.
 
 .. figure:: /images/editors_nla_editing_linked-strip-edit.png
 

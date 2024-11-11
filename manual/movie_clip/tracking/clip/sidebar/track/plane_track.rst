@@ -29,7 +29,7 @@ Image
    see :doc:`Plane Track Deform node </compositing/types/tracking/plane_track_deform>`.
 
 New Image from Plane Track
-    Creates an image from the pixels of the movieclip that the plane marker "sees" at the current frame.
+    Creates an image from the pixels of the Movie Clip that the plane marker "sees" at the current frame.
     This allows to create an unwarped texture of any flat surface in the footage.
     The resulting image can then be used for editing and retouching, for example to paint out certain parts
     of the footage.

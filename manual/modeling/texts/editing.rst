@@ -134,10 +134,10 @@ Insert Unicode
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Header --> Text --> Insert Unicode`
 
-Opens a dialog box to input the entry of any Unicode character by entering its hexadecimal codepoint value.
+Opens a dialog box to input the entry of any Unicode character by entering its hexadecimal code point value.
 
 See Wikipedia for a `List of Unicode characters <https://en.wikipedia.org/wiki/List_of_Unicode_characters>`__
-which list there respective hexadecimal codepoint values.
+which list there respective hexadecimal code point values.
 
 
 .. _bpy.ops.font.text_insert:

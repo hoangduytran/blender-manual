@@ -3,7 +3,7 @@
 Light Probe Volume
 ******************
 
-A volume probe records the light incomming from all directions at many locations inside a volume.
+A volume probe records the light incoming from all directions at many locations inside a volume.
 
 The light is then filtered and only the diffuse light is recorded.
 The capture point positions are visible as an overlay when the Irradiance Volume object is selected.
@@ -39,7 +39,7 @@ Normal Bias
 
 View Bias
    Offset sampling of the irradiance grid in the viewing direction to reduce light bleeding.
-   Can lead to view dependant result if set too high. Prefer this if camera is static.
+   Can lead to view dependent result if set too high. Prefer this if camera is static.
 
 Facing Bias
    When set to zero, avoids capturing points behind the shaded surface to bleed light onto

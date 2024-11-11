@@ -176,7 +176,7 @@ View Transform
          * - 5% to 16%
            - Green-Cyan
          * - 16% to 22%
-           - Grey
+           - Gray
          * - 22% to 35%
            - Green-Yellow
          * - 35% to 55%

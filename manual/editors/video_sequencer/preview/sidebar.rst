@@ -85,7 +85,7 @@ Channel
 .. _bpy.types.SpaceSequenceEditor.show_overexposed:
 
 Show Overexposed
-   Hilight overexposed (bright white) areas using a zebra pattern.
+   Highlight overexposed (bright white) areas using a zebra pattern.
    The threshold can be adjusted with the slider.
 
 .. _bpy.types.SequenceEditor.show_missing_media:

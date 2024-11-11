@@ -131,7 +131,7 @@ All paint tools that use the view respect this clipping, including box select, a
 
 There are two helpful reminders that a Clipping Region is used:
 
-#. The clipping region is drawn as a grey box in the 3D Viewport
+#. The clipping region is drawn as a gray box in the 3D Viewport
 #. The Text Info overlay will state that the perspective is "Clipped"
 
 

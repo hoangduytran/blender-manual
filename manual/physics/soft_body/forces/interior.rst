@@ -148,7 +148,7 @@ again a quad-based one and a triangulated one:
           High bending stiffness (10).
 
 Without any *Bending Stiffness*, the faces can rotate freely as though their edges were hinges.
-Enabling *Stiffness* to add diagional springs would not change this (just as triangulating doesn't).
+Enabling *Stiffness* to add diagonal springs would not change this (just as triangulating doesn't).
 
 With a high *Bending Stiffness*, however, the edges resist this rotation, and the planes
 act more like planks than towels.

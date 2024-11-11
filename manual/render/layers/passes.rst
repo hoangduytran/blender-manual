@@ -337,4 +337,4 @@ Known Limitations
 - EEVEE render passes exclude parts of the BSDF equation.
   :doc:`Shader to RGB </render/shader_nodes/converter/shader_to_rgb>` is not supported as it needs
   the full BSDF equation.
-- EEVEE supports upto 16 color and 16 value AOV render passes.
+- EEVEE supports up to 16 color and 16 value AOV render passes.

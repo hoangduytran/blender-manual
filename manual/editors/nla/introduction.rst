@@ -22,7 +22,7 @@ program. Higher tracks take precedence over lower ones, although you can also ch
 Each track can contain any number of :doc:`strips </editors/nla/strips>` -- typically Action Strips,
 which are instances of actions.
 
-The top track hilighted in orange is special: this is the Action Track. Unlike the other tracks,
+The top track highlighted in orange is special: this is the Action Track. Unlike the other tracks,
 it doesn't contain strips -- instead, it contains the object's *active action*,
 which is where new keyframes are added to by default.
 
