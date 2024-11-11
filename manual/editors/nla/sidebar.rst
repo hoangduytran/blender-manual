@@ -18,8 +18,11 @@ Contains settings for the object's active action. Only visible if the
 :ref:`Action Track <nla-action-track>` is selected.
 
 Action
-   A :ref:`data-block <ui-data-block>` menu where you can see, change, and clear the object's active action.
+   A :ref:`data-block <ui-data-block>` menu where you can see, change, and clear the active action.
    See also the Action Editor's :ref:`Action <dopesheet-action-action>`.
+
+Slot
+   The slot within the active action to use.
 
 .. _bpy.types.AnimData.action_extrapolation:
 
@@ -196,6 +199,9 @@ Contains properties specific to Action strips.
 
 Action
    The action referenced by the strip.
+
+Slot
+   The slot within the action to use.
 
 Frame Start, End
    How much of the action to use. By adjusting these, you can crop or extend the action
