@@ -48,16 +48,6 @@ Parameters to control to look of the stroke.
 See :doc:`/grease_pencil/modes/draw/brushes/draw` for details.
 
 
-Eraser
-------
-
-.. _bpy.types.Paint.eraser_brush:
-
-Default Eraser Brush
-   Select a brush to use as eraser for quickly alternating with the main brush using
-   :kbd:`Ctrl-LMB`.
-
-
 Color
 -----
 
