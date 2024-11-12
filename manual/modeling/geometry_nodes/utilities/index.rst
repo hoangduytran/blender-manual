@@ -28,6 +28,7 @@ General purpose nodes for modifying data.
 .. toctree::
    :maxdepth: 1
 
+   for_each_element_zone.rst
    index_switch.rst
    menu_switch.rst
    random_value.rst

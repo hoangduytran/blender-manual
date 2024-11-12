@@ -67,6 +67,9 @@ Method
  :Conformal:
    Uses Least Squares Conformal Mapping (LSCM).
    This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects.
+ :Minimum Stretch:
+   Uses Scalable Locally Injective Mapping (SLIM).
+   This tries to balance minimizing area distortion and minimizing angle distortion.
 Fill Holes
    Activating Fill Holes will prevent overlapping from occurring and better represent any holes in the UV regions.
 Correct Aspect
@@ -75,6 +78,18 @@ Correct Aspect
    the projection will take this into account and distort the mapping to appear correctly.
 Use Subdivision Surface
    Map UVs taking vertex position after Subdivision Surface Modifier into account.
+Iterations
+   The Minimum Stretch method is iterative, where each iteration reduces the distortion more.
+   This option says how many iterations to use before stopping.
+Allow Flips
+   When using the Minimum Stretch method this option allows faces to flip, which sometimes results in less distortion when there are pins.
+Importance Weights
+   The Minimize Stretch method has a feature that allows a user-specified vertex group to control the relative amount of area used by different parts of the unwrapped map.
+   Vertices with higher weights will mark portions of the mesh whose adjacent UV map faces should be stretched larger than smaller-weight areas.
+   When this option is chosen, there are two additional options to control this:
+
+   :Attribute: The name of the vertex group with the weights to be used.
+   :Factor: A global factor to multiply all the weights. A bigger number will result in a more exaggerated difference between high-weight and low-weight areas.
 Margin Method
    The method to use when calculating the empty space between islands.
 
