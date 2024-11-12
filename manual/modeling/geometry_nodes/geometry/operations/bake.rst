@@ -17,7 +17,6 @@ Volume objects, however, are saved using the OpenVDB file format which can be us
 
 .. important::
 
-   - Blend-files must be saved to a disk before data can be baked.
    - It's not guaranteed that data written with one Blender version can be read by another Blender version.
 
 
@@ -74,10 +73,24 @@ Bake Mode
    :Still: Bakes the geometry data of the current frame.
 
 Bake
-   Preforms all necessary geometry calculations and saves the data to disk.
+   Preforms all necessary geometry calculations and saves the data on disk or packed into the .blend file.
+
+   Pack/Unpack
+      Packs or unpacks already baked data. When unpacking, there are different options to control where the data will be stored.
+      The options are the same as for the :ref:`Unpack Resources <bpy.ops.file.unpack_all>` operator.
 
    Delete (Trash Icon)
       Deletes the bake data.
+
+Bake Target
+   Specifies where the baked data should be stored.
+
+   :Inherit from Modifier:
+      The setting is copied from the modifier that contains the bake node. This is the default.
+   :Packed:
+      The baked data is packed into the .blend file. So no separate file is necessary.
+   :Disk:
+      The baked data is stored in a separate directory on disk.
 
 Custom Path
    Specify a path where the baked data should be stored manually.

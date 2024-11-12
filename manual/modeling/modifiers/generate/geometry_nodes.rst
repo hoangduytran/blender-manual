@@ -74,6 +74,14 @@ Manage
 Bake
 ^^^^
 
+Bake Target
+   Specifies where baked data should be stored. This can be overridden for individual bakes.
+
+   :Packed:
+      The baked data is packed into the .blend file. So no separate file is necessary.
+   :Disk:
+      The baked data is stored in a separate directory on disk.
+
 .. _bpy.types.NodesModifier.simulation_bake_directory:
 
 Bake Path
