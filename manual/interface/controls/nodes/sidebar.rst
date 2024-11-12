@@ -29,6 +29,11 @@ Name
 Label
    Nodes can be given a title by modifying the text field.
 
+.. _bpy.types.Node.warning_propagation:
+
+Warning Propagation
+   Controls which warnings in this node will be propagated to the parent node group or modifier.
+   This only exists for Geometry Nodes.
 
 .. _bpy.types.Node.use_custom_color:
 

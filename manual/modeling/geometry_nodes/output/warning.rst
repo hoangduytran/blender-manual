@@ -14,6 +14,9 @@ Outputs a custom message that can be referenced in the
 
 This allows node groups to communicate expectations about input values.
 
+By default, warnings are propagated through all parent node groups.
+However, this can be controlled using the :ref:`bpy.types.Node.warning_propagation` setting on each node.
+
 
 Inputs
 ======
