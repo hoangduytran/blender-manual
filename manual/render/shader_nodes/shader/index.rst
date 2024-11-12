@@ -16,6 +16,7 @@
    hair.rst
    holdout.rst
    mix.rst
+   metallic.rst
    principled.rst
    hair_principled.rst
    volume_principled.rst
