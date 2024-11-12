@@ -64,8 +64,10 @@ Column names and row indices remain visible when scrolling down or to the side.
 
 .. note::
 
-   Byte color attributes are displayed as scene linear floats.
-   The actual byte values are displayed in a tooltip when hovering over the float values.
+   Tooltips give more detail about the value, depending on the :ref:`type <attribute-data-types>`.
+   For example, *Byte Color* attributes are displayed as scene linear floats,
+   but the actual integer values are displayed when hovering over the float values,
+   and *Matrix* attribute values are only displayed in tooltips.
 
 
 .. _bpy.types.SpaceSpreadsheet.geometry_component_type:
