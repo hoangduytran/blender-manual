@@ -17,6 +17,7 @@
    instances.rst
    baking.rst
    tools.rst
+   gizmos.rst
 
 
 Node Types

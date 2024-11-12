@@ -9,4 +9,5 @@ Nodes used mainly as input to other nodes.
    :maxdepth: 1
 
    Constant <constant/index.rst>
+   Gizmo <gizmo/index.rst>
    Scene <scene/index.rst>
