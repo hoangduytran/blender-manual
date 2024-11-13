@@ -59,5 +59,12 @@ Stash (snowflake icon)
 .. _dopesheet-action-action:
 
 Action
-   A :ref:`data-block menu <ui-data-block>` that lets you change -- or clear --
-   the object's active action.
+   A :ref:`data-block menu <ui-data-block>` that lets you change -- or clear -- the object's active action.
+
+.. _bpy.types.ActionSlot.name_display:
+.. _bpy.ops.anim.slot_new_for_id:
+.. _bpy.ops.anim.slot_unassign_from_id:
+
+Slot Display Name
+   Name of the slot, for display in the user interface.
+   This name combined with the slot's data-block type is unique within its Action.
