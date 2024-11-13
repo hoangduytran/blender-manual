@@ -33,7 +33,7 @@ Previous/Next Layer (down/up arrows)
 .. figure:: /images/editors_dope-sheet_action-editor_layers_2.png
 
    After clicking *Previous Layer*, we enter Tweak Mode for the action in the second track.
-   The NLA Editor hilights it in green, and the Action Editor lets us edit its keyframes.
+   The NLA Editor highlights it in green, and the Action Editor lets us edit its keyframes.
 
 Push Down (strips with down arrow icon)
    Creates a new NLA track below the Action Track and moves the active action into it.
