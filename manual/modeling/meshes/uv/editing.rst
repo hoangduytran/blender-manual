@@ -207,10 +207,26 @@ At Center
 At Cursor
    Moves selection UVs to 2D cursor location.
 
+
 .. _bpy.ops.uv.remove_doubles:
 
 By Distance
-   Merges selected UVs within the specified *Merge Distance*.
+-----------
+
+.. reference::
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Merge --> By Distance`
+
+Merges selected UVs within the specified *Merge Distance*.
+
+Merge Distance
+   Maximum distance between merged vertices.
+Unselected
+   Merge selected to other unselected vertices.
+Shared Vertex
+   Merge UVs that correspond to the same mesh vertex, even if they have different UV coordinates.
 
 
 .. _bpy.ops.uv.select_split:
