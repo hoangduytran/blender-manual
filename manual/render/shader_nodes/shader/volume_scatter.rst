@@ -30,8 +30,8 @@ Backscatter :guilabel:`Fournier-Forand`
 Anisotropy :guilabel:`Draine`
    Controls the relative amount of backward and forward scattering.
 Alpha :guilabel:`Draine`
-   Blending factor between Henyey-Greenstein (:math:`\Alpha = 0`)
-   and Cornette & Shanks (:math:`\Alpha = 1`) phase functions.
+   Blending factor between Henyey-Greenstein (:math:`\alpha = 0`)
+   and Cornette & Shanks (:math:`\alpha = 1`) phase functions.
 Diameter :guilabel:`Mie`
    Diameter of the scattering particles in µm.
 
@@ -58,8 +58,7 @@ Phase
      :guilabel:`Cycles Only`
      Describes the scattering by particles with a size larger than the wavelength of light, such as cloud and fog.
 
-   .. tip::
-
+  .. tip::
       These phase functions can be combined using a :doc:`/render/shader_nodes/shader/mix`.
 
 
