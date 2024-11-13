@@ -44,51 +44,51 @@ Multiframe
    See :doc:`Multiframe </grease_pencil/multiframe>` for more information.
 
 
-Auto-Masking
-============
+.. Auto-Masking
+.. ============
 
-.. reference::
+.. .. reference::
 
-   :Menu:      :menuselection:`Header --> Auto-Masking`
-   :Shortcut:  :kbd:`Shift-Alt-A`
+..    :Menu:      :menuselection:`Header --> Auto-Masking`
+..    :Shortcut:  :kbd:`Shift-Alt-A`
 
-.. figure:: /images/grease-pencil_modes_sculpting_introduction_auto-masking.png
+.. .. figure:: /images/grease-pencil_modes_sculpting_introduction_auto-masking.png
 
-   Auto-Masking settings.
+..    Auto-Masking settings.
 
-These properties automatically mask geometry based on stroke, layers and materials under the cursor.
-It's an quick alternative to frequent manual masking.
-These masks are initialized on every new tool usage. They are also never visible as an overlay.
+.. These properties automatically mask geometry based on stroke, layers and materials under the cursor.
+.. It's an quick alternative to frequent manual masking.
+.. These masks are initialized on every new tool usage. They are also never visible as an overlay.
 
-These properties can be accessed via a :ref:`bpy.types.UIPieMenu` by pressing :kbd:`Shift-Alt-A`.
+.. These properties can be accessed via a :ref:`bpy.types.UIPieMenu` by pressing :kbd:`Shift-Alt-A`.
 
-All auto-masking modes can be combined, which makes the generated auto-mask more specific.
-For example it's possible to auto-mask strokes that use specific layer and material while excluding others.
+.. All auto-masking modes can be combined, which makes the generated auto-mask more specific.
+.. For example it's possible to auto-mask strokes that use specific layer and material while excluding others.
 
-.. _bpy.types.GPencilSculptSettings.use_automasking_stroke:
+.. .. _bpy.types.GPencilSculptSettings.use_automasking_stroke:
 
-Strokes
-   Only strokes that are under the cursor when you started the tool are affected.
+.. Strokes
+..    Only strokes that are under the cursor when you started the tool are affected.
 
-.. _bpy.types.GPencilSculptSettings.use_automasking_layer_stroke:
+.. .. _bpy.types.GPencilSculptSettings.use_automasking_layer_stroke:
 
-Layer
-   Only strokes on the same layers that are under the cursor when you started the tool are affected.
+.. Layer
+..    Only strokes on the same layers that are under the cursor when you started the tool are affected.
 
-.. _bpy.types.GPencilSculptSettings.use_automasking_material_stroke:
+.. .. _bpy.types.GPencilSculptSettings.use_automasking_material_stroke:
 
-Material
-   Only materials with the same material that are under the cursor when you started the tool are affected.
+.. Material
+..    Only materials with the same material that are under the cursor when you started the tool are affected.
 
-.. _bpy.types.GPencilSculptSettings.use_automasking_layer_active:
+.. .. _bpy.types.GPencilSculptSettings.use_automasking_layer_active:
 
-Active Layer
-   Only the strokes on the active layer are affected.
+.. Active Layer
+..    Only the strokes on the active layer are affected.
 
-.. _bpy.types.GPencilSculptSettings.use_automasking_material_active:
+.. .. _bpy.types.GPencilSculptSettings.use_automasking_material_active:
 
-Active Material
-   Only the strokes with the active material are affected.
+.. Active Material
+..    Only the strokes with the active material are affected.
 
 
 Keyboard Shortcuts
