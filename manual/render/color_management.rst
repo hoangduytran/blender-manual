@@ -243,6 +243,34 @@ Adjust RGB Curves to control the image colors before the color space conversion.
 Read more about using the :ref:`ui-curve-widget`.
 
 
+.. _bpy.types.ColorManagedViewSettings.use_white_balance:
+.. _bpy.types.ColorManagedViewSettings.white_balance:
+
+White Balance
+-------------
+
+Adjusts colors so that a given white point (expressed in color temperature and tint) ends up as white on the display.
+
+As an alternative to manually specifying the values, there's also a color picker.
+When a color is selected, temperature and tint are set such that this color ends up being balanced to white.
+This only works if the color is close enough to a blackbody emitter.
+
+Temperature
+   The blackbody temperature of the primary illuminant. By default a D65 white point is used.
+Tint
+   The amount of green/magenta shift of the blackbody curve.
+
+.. figure:: /images/render_color-management_white-balance-curve.png
+   :align: center
+
+   Blackbody temperature curve.
+
+.. tip::
+
+   White balancing can also be accomplished as part of the compositing
+   pipeline by using the :doc:`/compositing/types/color/adjust/color_balance`
+
+
 Image Files
 ===========
 
