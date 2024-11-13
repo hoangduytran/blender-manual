@@ -93,6 +93,18 @@ Normal
    Controls the normals of the base layers.
 
 
+Diffuse
+-------
+
+Roughness :guilabel:`Cycles Only`
+   Surface roughness; 0.0 gives standard Lambertian reflection, higher values activate the Oren-Nayar BSDF.
+
+   .. .. figure:: /images/render_shader-nodes_shader_principled-diffuse-roughness.webp
+   ..    :align: center
+
+   ..    Roughness from 0.0 to 1.0
+
+
 Subsurface
 ----------
 
