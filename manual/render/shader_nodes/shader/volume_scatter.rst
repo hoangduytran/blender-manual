@@ -10,63 +10,61 @@ Volume Scatter
 
 The *Volume Scatter* node allows light to be scattered as it passes through the volume.
 Typical usage would be to add fog to a scene. It can also be used with
-the :doc:`Volume Absorption </render/shader_nodes/shader/volume_absorption>`
-node to create smoke.
+the :doc:`Volume Absorption </render/shader_nodes/shader/volume_absorption>` node to create smoke.
 
 
 Inputs
 ======
 
-Common
-------
-
 Color
    Scattering coefficients per color channel.
 Density
    The density of the scatter effect.
-
-Henyey-Greenstein
------------------
-Anisotropy
+Anisotropy :guilabel:`Henyey-Greenstein`
    Controls the relative amount of backward and forward scattering.
-
-Fournier-Forand :guilabel:`Cycles Only`
----------------------------------------
-IOR
+IOR :guilabel:`Fournier-Forand`
    Refractive index of the scattering particles relative to water.
-Backscatter
-   Fraction of light that is scattered backwards. Most oceanic particles have backscatter fractions between 0.001 (e.g., very large phytoplankton) and 0.1 (e.g., very small mineral particles).
-
-Draine :guilabel:`Cycles Only`
-------------------------------
-Anisotropy
+Backscatter :guilabel:`Fournier-Forand`
+   Fraction of light that is scattered backwards. Most oceanic particles have backscatter
+   values between 0.001 (e.g., very large phytoplankton) and 0.1 (e.g., very small mineral particles).
+Anisotropy :guilabel:`Draine`
    Controls the relative amount of backward and forward scattering.
-Alpha
-   Blending factor between Henyey-Greenstein (:math:`\alpha = 0`) and Cornette & Shanks (:math:`\alpha = 1`) phase functions.
-
-Mie :guilabel:`Cycles Only`
----------------------------
-Diameter
+Alpha :guilabel:`Draine`
+   Blending factor between Henyey-Greenstein (:math:`\Alpha = 0`)
+   and Cornette & Shanks (:math:`\Alpha = 1`) phase functions.
+Diameter :guilabel:`Mie`
    Diameter of the scattering particles in µm.
+
 
 Properties
 ==========
+
 Phase
   Volume scattering phase function.
 
-  :Henyey-Greenstein: Simple and widely used phase function, useful for
-                      approximating scattering in biological tissues.
-  :Fournier-Forand:  :guilabel:`Cycles Only`
+  :Henyey-Greenstein:
+     Simple and widely used phase function, useful for approximating scattering in biological tissues.
+  :Fournier-Forand:
+     :guilabel:`Cycles Only`
      Suitable for modeling the scattering behavior of seawater.
-  :Draine:  :guilabel:`Cycles Only`
+  :Draine:
+     :guilabel:`Cycles Only`
      Suitable for modeling the scattering of interstellar dust.
-  :Rayleigh:  :guilabel:`Cycles Only`
-     Describes the scattering by particles with a size smaller than the wavelength of light, such as the scattering of sunlight in earth's atmosphere.
-  :Mie: :guilabel:`Cycles Only`
+  :Rayleigh:
+     :guilabel:`Cycles Only`
+     Describes the scattering by particles with a size smaller than the wavelength of light,
+     such as the scattering of sunlight in earth's atmosphere.
+  :Mie:
+     :guilabel:`Cycles Only`
      Describes the scattering by particles with a size larger than the wavelength of light, such as cloud and fog.
 
+   .. tip::
+
+      These phase functions can be combined using a :doc:`/render/shader_nodes/shader/mix`.
+
+
 Outputs
-==========
+=======
 
 Volume
    The Volume Shader output must be plugged into the *Volume Input*

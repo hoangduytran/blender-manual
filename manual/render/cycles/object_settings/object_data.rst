@@ -264,6 +264,7 @@ Light Group
       Light Group, then pressing this button will create a *Light Group* with that name
       and assign the selected *Object* or *Light* to it.
 
+
 Light Linking
 -------------
 
@@ -274,10 +275,9 @@ Limit light influence to specified objects, with :ref:`Light Linking <bpy.types.
 Receiver Collection
    Collection of objects that will receive light emitted from the object.
 
+
 Shadow Linking
 --------------
-
-.. _render-cycles-object-shadow-linking-settings:
 
 Limit shadows to specified objects, with :ref:`Light Linking <bpy.types.Object.light_linking>`.
 
