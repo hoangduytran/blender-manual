@@ -26,7 +26,8 @@ IOR :guilabel:`Fournier-Forand`
    Refractive index of the scattering particles relative to water.
 Backscatter :guilabel:`Fournier-Forand`
    Fraction of light that is scattered backwards. Most oceanic particles have backscatter
-   values between 0.001 (e.g., very large phytoplankton) and 0.1 (e.g., very small mineral particles).
+   values between 0.001 (e.g., very large phytoplankton) and 0.1 (e.g., very small mineral particles),
+   pure seawater has a backscatter of 0.5.
 Anisotropy :guilabel:`Draine`
    Controls the relative amount of backward and forward scattering.
 Alpha :guilabel:`Draine`
@@ -61,6 +62,12 @@ Phase
   .. tip::
       These phase functions can be combined using a :doc:`/render/shader_nodes/shader/mix`.
 
+.. figure:: /images/render_shader-nodes_shader_volume-scatter_phase.svg
+   :align: center
+   :alt: Volume Scattering Function in logarithmic scale.
+
+   Volume scattering phase as a function of angles between the incoming and the outgoing direction,
+   in logarithmic scale. Light comes from the left side.
 
 Outputs
 =======
