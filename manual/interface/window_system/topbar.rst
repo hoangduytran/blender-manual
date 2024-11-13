@@ -56,7 +56,7 @@ Open Recent :kbd:`Shift-Ctrl-O`
    Select any of the file names in the list to open that blend-file.
 
    Clear Recent Files List
-      Removes all items from the list.
+      Removes items from the recent files list.
 Revert
    Reopens the current file to its last saved version.
 Recover

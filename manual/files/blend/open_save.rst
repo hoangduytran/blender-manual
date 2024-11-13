@@ -75,8 +75,18 @@ Select any of the file names in the list to open that blend-file.
 When :kbd:`RMB` on a listed item, a context menu will appear; One of the available options is *Open File Location*,
 which will open that location in an OS file explorer or Finder window.
 
+.. _bpy.ops.wm.clear_recent_files:
+
 Clear Recent Files List
-   Removes all items from the list.
+-----------------------
+
+Removes items from the recent files list.
+
+Remove
+   Choose which type of items to remove.
+
+   :All Items: Removes all recent files.
+   :Items Not Found: Removes files from the list that cannot be found i.e. that have been moved or deleted.
 
 
 Recover
