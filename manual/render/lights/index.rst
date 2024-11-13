@@ -8,4 +8,5 @@
    :maxdepth: 2
 
    light_object.rst
+   light_linking.rst
    world.rst

@@ -17,8 +17,9 @@ and shadow linking could be used to ensure no objects from the environment block
 Setup
 =====
 
-* Select the light or emissive mesh object and go to the :ref:`Shading panel
-  <render-cycles-object-light-linking-settings>`.
+* Select the light or emissive mesh object and go to the
+  :ref:`Cycles Shading panel <render-cycles-object-light-linking-settings>` or
+  :ref:`EEVEE Shading panel <render-cycles-object-light-linking-settings>`.
 * Create a new light or shadowing linking collection.
 * Drag & drop objects or collection from the outliner.
 

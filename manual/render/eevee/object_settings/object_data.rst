@@ -1,10 +1,44 @@
 
-******
-Object
-******
+*****************
+Object Properties
+*****************
+
+Shading
+=======
+
+.. reference::
+
+   :Panel:     :menuselection:`Properties --> Object Properties --> Shading`
+
+Light Linking
+-------------
+
+.. _render-eevee-object-light-linking-settings:
+
+Limit light influence to specified objects, with :ref:`Light Linking <bpy.types.Object.light_linking>`.
+
+Receiver Collection
+   Collection of objects that will receive light emitted from the object.
+
+
+Shadow Linking
+--------------
+
+Limit shadows to specified objects, with :ref:`Light Linking <bpy.types.Object.light_linking>`.
+
+Shadow Blocker Collection
+   Collection of objects that will act as shadow blockers for light emitted from the object.
+
+
+Visibility
+==========
+
+.. reference::
+
+   :Panel:     :menuselection:`Object Properties --> Visibility`
 
 Ray Visibility
-==============
+--------------
 
 Objects can be set to be invisible to particular ray types.
 This can be used, for example, to make an emitting mesh invisible to camera rays.
@@ -27,7 +61,7 @@ Shadow
 
 
 Light Probes
-============
+------------
 
 Objects can be set to not be captured by certain :doc:`light probe </render/eevee/light_probes/index>`.
 This can be used, for example, to avoid animated object being recorded into static light probes.
