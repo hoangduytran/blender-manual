@@ -73,7 +73,7 @@ Edit Metadata...
       See :ref:`Asset Description <bpy.types.AssetMetaData.description>`.
 Edit Preview Image...
    Opens a window with the File Browser to select an image for the asset preview.
-Update Asset
+Save Changes to Asset
    Saves any changes made to the active brush to the asset library.
 Revert to Asset
    Discards any unsaved changes made to the brush asset.
