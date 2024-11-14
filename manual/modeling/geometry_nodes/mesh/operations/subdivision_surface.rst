@@ -28,6 +28,10 @@ Vertex Crease
    Controls how much the subdivision surface should be pulled towards the vertex.
    Similar to edge creases, but allows individual vertices to be creased.
 
+Limit Surface
+   Places vertices at the surface that would be produced with infinite
+   levels of subdivision (smoothest possible shape).
+
 
 Properties
 ==========
