@@ -41,7 +41,8 @@ A double link indicates that the propagation was successful.
 
 Gizmos can also be propagated to Group Inputs, in which case they are also available on the parent group node.
 If the current group is used by a modifier directly, the gizmo will also be available on the modifier.
-Gizmos that are propagated to the modifier always show when the modifier is active, independent of whether any node is visible or selected.
+Gizmos that are propagated to the modifier always show when the modifier is active, independent of whether any node 
+is visible or selected.
 
 .. _creating-geometry-nodes-gizmos:
 

@@ -9,7 +9,8 @@ Linear Gizmo
    :align: right
    :alt: Linear Gizmo Node.
 
-The *Linear Gizmo* node provides the most widely applicable gizmo. It can e.g. be used to control the height of something.
+The *Linear Gizmo* node provides the most widely applicable gizmo. It can e.g. be used to control the height of
+something.
 
 .. figure:: /images/node-types_GeometryNodeGizmoLinear_viewport.png
    :align: right

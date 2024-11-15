@@ -76,8 +76,8 @@ Bake
    Preforms all necessary geometry calculations and saves the data on disk or packed into the .blend file.
 
    Pack/Unpack
-      Packs or unpacks already baked data. When unpacking, there are different options to control where the data will be stored.
-      The options are the same as for the :ref:`Unpack Resources <bpy.ops.file.unpack_all>` operator.
+      Packs or unpacks already baked data. When unpacking, there are different options to control where the data will
+      be stored. The options are the same as for the :ref:`Unpack Resources <bpy.ops.file.unpack_all>` operator.
 
    Delete (Trash Icon)
       Deletes the bake data.
