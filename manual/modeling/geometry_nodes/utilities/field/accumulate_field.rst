@@ -26,7 +26,7 @@ Value
       When accumulating integer values, be careful to make sure that there are not
       too many large values. The maximum integer that Blender stores internally is
       around 2 billion. After that, values may wrap around and become negative.
-      See `wikipedia <https://en.wikipedia.org/wiki/Integer_%28computer_science%29>`__
+      See `Wikipedia <https://en.wikipedia.org/wiki/Integer_%28computer_science%29>`__
       for more information.
 
 Group Index

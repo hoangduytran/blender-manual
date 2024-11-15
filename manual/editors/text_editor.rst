@@ -9,7 +9,7 @@ Text Editor
 ***********
 
 This editor can be used to write Python scripts, Open Shading Language scripts,
-or just plaintext notes. To open it, you can switch to the *Scripting*
+or just plain text notes. To open it, you can switch to the *Scripting*
 :doc:`workspace </interface/window_system/workspaces>` or press
 :kbd:`Shift-F11` to replace the current editor.
 

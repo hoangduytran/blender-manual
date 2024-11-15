@@ -109,7 +109,7 @@ Icosphere
 =========
 
 An icosphere is a polyhedral sphere made up of triangles.
-Icospheres are normally used to achieve a more isotropical layout of
+Icospheres are normally used to achieve a more isotropic layout of
 vertices than a UV sphere, in other words, they are uniform in every direction.
 
 Subdivisions

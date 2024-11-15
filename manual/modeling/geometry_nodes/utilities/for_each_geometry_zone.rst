@@ -34,7 +34,7 @@ Selection
     Which subset of the chosen *Domain* to process.
 
 Index
-   Index of the element in the source geometry. Note that the same index can occure more than
+   Index of the element in the source geometry. Note that the same index can occur more than
    once when iterating over multiple geometry component types at once.
 
 Element

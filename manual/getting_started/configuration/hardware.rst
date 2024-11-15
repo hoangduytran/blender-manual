@@ -95,8 +95,8 @@ as well as provide additional controls such as pressure sensitivity.
 
 .. note::
 
-   If you are using a graphic tablet instead of a mouse and pressure sensitivity does not work properly,
-   try to place the mouse pointer in the Blender window and then unplug/replug your graphic tablet. This might help.
+   If you are using a graphic tablet instead of a mouse and pressure sensitivity does not work properly, try to place
+   the mouse pointer in the Blender window and then disconnect/reconnect your graphic tablet. This might help.
 
 
 .. _hardware-ndof:
@@ -256,7 +256,7 @@ Software Update.
    The performance of the passthrough render varies with the quality
    of the connection between the headset and the computer.
    For better results, connecting the headset directly through USB to the PC,
-   or at least connecting the computer to the local network over ethernet, is recommended.
+   or at least connecting the computer to the local network over Ethernet, is recommended.
 
 
 SteamVR

@@ -207,7 +207,7 @@ Relax Slide
    Brush Type: :doc:`slide_relax`
 
    Slides the topology of the mesh in the direction of the stroke
-   while preserving the geometrical shape of the mesh. Alternatively smoothes the mesh on 'Shift'.
+   while preserving the geometrical shape of the mesh. Alternatively smooths the mesh on 'Shift'.
    Also useful for redistributing topology where it is needed.
 
 Relax Pinch

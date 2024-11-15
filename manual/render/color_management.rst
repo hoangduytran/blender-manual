@@ -147,7 +147,7 @@ View Transform
       is well-exposed and HDR color values are mostly restricted to small specular highlights.
    :AgX:
       A tone mapping transform that improves on *Filmic*, giving more photorealistic results.
-      AgX offers 16.5 stops of dynamic range and unsaturates highly
+      AgX offers 16.5 stops of dynamic range and desaturates highly
       exposed colors to mimic film's natural response to light.
    :Filmic:
       A tone mapping transform designed to handle high dynamic range colors.

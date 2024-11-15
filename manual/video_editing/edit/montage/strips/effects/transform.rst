@@ -4,7 +4,7 @@
 Transform Strip
 ***************
 
-Transform is a swiss-army knife of image manipulation.
+Transform is a Swiss Army knife of image manipulation.
 It moves, rotates, and scales the images within a strip.
 
 

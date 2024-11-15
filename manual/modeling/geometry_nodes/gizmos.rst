@@ -52,14 +52,14 @@ Creating Custom Gizmos
 Adding custom gizmos to a node group that generates or modifies geometry can make it more convenient to use.
 
 To add a gizmo to a node group, one has to use one of the :ref:`gizmo nodes <gizmo-nodes-overview>`.
-The main aspect that makes gizmos unintuitive at first is that there is a **bidirection dependency**:
+The main aspect that makes gizmos unintuitive at first is that there is a **bidirectional dependency**:
 changing the gizmo position changes the controlled value and vice versa.
 
 The most simple custom gizmo setup is shown below.
 The Linear Gizmo node adds a gizmo that is drawn in the 3D viewport.
 The gizmo controls the value that is plugged into it.
 When trying this, you will notice that the gizmo always jumps back to the origin while the value is still changed.
-That is because the Position of the gizmo node does not dependend on the value yet.
+That is because the Position of the gizmo node does not depend on the value yet.
 
 .. figure:: /images/modeling_geometry-nodes_gizmos_simplest-gizmo.png
 

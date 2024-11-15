@@ -110,7 +110,7 @@ Method
    There are three ways to determine the edge weighting:
 
    :Laplacian:
-     The classic discrete laplace operator applied to the UV graph. Each edge has equal weighting,
+     The classic discrete Laplace operator applied to the UV graph. Each edge has equal weighting,
      resulting in triangles which resemble a honeycomb shape, or quads aligned into square grid.
    :HC:
      Similar to Laplacian, the HC method uses equal weighting while trying to preserve
@@ -120,6 +120,6 @@ Method
      `"Improved Laplacian Smoothing of Noisy Surface Meshes"
      <http://informatikbuero.com/downloads/Improved_Laplacian_Smoothing_of_Noisy_Surface_Meshes.pdf>`__.
    :Geometry:
-     Edges are weighted according to the discrete laplace operator (cotangent formula) applied to the 3D geometry.
+     Edges are weighted according to the discrete Laplace operator (cotangent formula) applied to the 3D geometry.
      This tries to bring the relative lengths of edges in UV closer to the relative lengths of edges in 3D,
      resulting in a UV unwrap with less distortion across edge boundaries.

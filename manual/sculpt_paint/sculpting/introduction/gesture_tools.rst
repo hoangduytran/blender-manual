@@ -59,7 +59,7 @@ Stabilize Stroke
 Line Gestures
 =============
 
-Dragging creates a line. The resulting action acts upon everything on the highlighed side of the line. The area acted
+Dragging creates a line. The resulting action acts upon everything on the highlighted side of the line. The area acted
 upon is extended in both directions of the viewport.
 
 

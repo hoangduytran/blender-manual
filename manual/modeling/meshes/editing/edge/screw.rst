@@ -177,7 +177,7 @@ but that after each loop, we still go down vertically (in the direction of the g
 Creating a Screw Spindle
 ------------------------
 
-The Screw operator is perfectly suited for creating helixes without any gaps between the turns.
+The Screw operator is perfectly suited for creating helices without any gaps between the turns.
 
 #. Open Blender and enter *Edit Mode* for the default cube.
 #. Delete all vertices by pressing :kbd:`X` or :kbd:`Delete`.
