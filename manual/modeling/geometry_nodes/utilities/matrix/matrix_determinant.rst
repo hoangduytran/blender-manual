@@ -9,7 +9,8 @@ Matrix Determinant Node
    :align: right
    :alt: Matrix Determinant node.
 
-The *Matrix Determinant* node computes the `determinant <https://en.wikipedia.org/wiki/Determinant>`__ of the passed in matrix.
+The *Matrix Determinant* node computes the `determinant <https://en.wikipedia.org/wiki/Determinant>`__ of the passed
+in matrix.
 
 
 Inputs

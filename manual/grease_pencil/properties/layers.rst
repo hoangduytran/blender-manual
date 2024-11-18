@@ -117,7 +117,7 @@ Layer Specials
 
    .. _bpy.ops.grease_pencil.layer_merge:
 
-   Merge Down :kbd:`Ctrl-Shift-M`
+   Merge Down :kbd:`Shift-Ctrl-M`
       Combine the selected layer with the layer below, the new layer keeps the name of the lower layer.
    Merge Group
        Combine layers in the active layer group into a single layer.
