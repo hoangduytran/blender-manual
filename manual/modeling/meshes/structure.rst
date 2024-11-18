@@ -92,17 +92,17 @@ and thus greatly influence the shading of those objects. Normals can be shaded s
 When a mesh uses flat shading, the faces are rendered and displayed faces uniformly.
 This is usually desirable for objects with flat surfaces such as a cube or pyramid.
 
-When a mesh uses smooth shading, the normals are interpolated cross the vertices of a polygonal mesh,
+When a mesh uses smooth shading, the normals are interpolated across the vertices of a polygonal mesh,
 smooth transitions between adjacent polygons can be achieved, resulting in a more realistic appearance.
 
 By default face normals have flat shading however, this can be adjusted either for the whole object or per face.
 
-To adjust the the shading of the whole object, use:
+To adjust the shading of the whole object, use:
 
-- :ref:`bpy.ops.object.shade_smooth` -- To mark the whole object as smooth
-- :ref:`bpy.ops.object.shade_auto_smooth` -- To mark portions of the object as smooth
+- :ref:`bpy.ops.object.shade_smooth` -- To mark the whole object as smooth.
+- :ref:`bpy.ops.object.shade_auto_smooth` -- To mark portions of the object as smooth.
 
-To revert to flat shading, use :ref:`bpy.ops.object.shade_flat`
+To revert to flat shading, use :ref:`bpy.ops.object.shade_flat`.
 
 The shading of objects can also be adjusted per face, edge, or vertex.
 
