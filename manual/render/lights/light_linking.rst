@@ -1,4 +1,3 @@
-
 *************
 Light Linking
 *************
@@ -22,6 +21,9 @@ Setup
   :ref:`EEVEE Shading panel <render-cycles-object-light-linking-settings>`.
 * Create a new light or shadowing linking collection.
 * Drag & drop objects or collection from the outliner.
+
+.. note::
+  Light linking emissive mesh object is only available for Cycles.
 
 Links can also be set up in the 3D viewport, with the Link Data operator.
 The active light object is linked to selected receiver or blocker object.
