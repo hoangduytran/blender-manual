@@ -113,6 +113,7 @@ Select Similar
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Select --> Select Similar`
+   :Shortcut:  :kbd:`Shift-G`
 
 Select all strokes with similar characteristics.
 
