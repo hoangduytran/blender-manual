@@ -160,3 +160,5 @@ GPU Subdivision
    Under certain circumstances, the GPU will be used to subdivide a mesh with a
    :doc:`Subdivision Surface modifier </modeling/modifiers/generate/subdivision_surface>`.
    This typically results in increased subdivision performance.
+
+   This feature is not supported on Qualcomm GPUs on Windows
