@@ -439,12 +439,12 @@ Fade Inactive Objects
 
 .. _bpy.types.View3DOverlay.use_gpencil_edit_lines:
 
-Edit Lines :guilabel:`Edit, Sculpt, Weight Paint, or Vertex Paint Modes`
+Edit Lines :guilabel:`Edit, Sculpt, Weight Paint, or Vertex Paint Modes` :kbd:`Shift-Q`
    Shows a line between points on top of other geometry when editing strokes.
 
 .. _bpy.types.View3DOverlay.use_gpencil_multiedit_line_only:
 
-Only in Multiframe
+Only in Multiframe :kbd:`Shift-Alt-Q`
    When Multiframe is enabled and keyframes other than the current frame are selected,
    strokes on those keyframes are displayed as just their edit lines -- the strokes themselves are hidden.
    Note that this does not affect Onion Skinning.

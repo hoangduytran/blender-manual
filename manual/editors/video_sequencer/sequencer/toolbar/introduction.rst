@@ -3,7 +3,7 @@
 Introduction
 ************
 
-:ref:`Tweak <tool-select-tweak>`
+:ref:`Select Box <tool-select-box>`
    Selects or moves from the same tool. Click and drag to create a "box" selection.
 
 :ref:`Blade <tool-blade>`

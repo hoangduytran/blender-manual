@@ -113,12 +113,12 @@ Join
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Stroke --> Join --> Join,`
-   :Shortcut:  :kbd:`Ctrl-J`
 
 Join two or more strokes into a single one.
 
 Type
    :Join:
+      :kbd:`Ctrl-J`
       Join selected strokes by connecting points.
    :Join and Copy:
       Join selected strokes by connecting points in a new stroke.

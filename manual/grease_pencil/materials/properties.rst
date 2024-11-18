@@ -76,6 +76,17 @@ Remove Unused Slots
    Remove all unused materials.
 
 
+Lock & Visibility Controls
+--------------------------
+
+.. _bpy.ops.grease_pencil.material_isolate:
+
+:bl-icon:`locked` (Isolate Material)
+    Toggle whether the active material is the only one that can be edited.
+:bl-icon:`restrict_view_on` (Isolate Material)
+    Toggle whether the active material is the only one that can be edited and is visible.
+
+
 .. _gp-material-surface:
 
 Surface

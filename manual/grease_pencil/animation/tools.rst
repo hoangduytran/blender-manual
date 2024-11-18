@@ -12,6 +12,7 @@ Insert Blank Keyframe (Active Layer)
 
    :Mode:      Draw Mode, Edit Mode, Sculpt Mode
    :Menu:      :menuselection:`Stroke --> Animation --> Insert Blank Keyframe (Active Layer)`
+   :Shortcut:  :kbd:`Shift-I`
 
 Add a new blank keyframe to the active layer at the current frame.
 If there is already a keyframe at the current frame,
@@ -74,6 +75,7 @@ Delete Active Keyframe (Active Layer)
 
    :Mode:      Draw Mode, Edit Mode, Sculpt Mode
    :Menu:      :menuselection:`Stroke --> Animation --> Delete Active Keyframe (Active Layer)`
+   :Shortcut:  :kbd:`Alt-I`
 
 Deletes the last keyframe in the Dope Sheet or the current keyframe if you are on one.
 

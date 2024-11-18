@@ -18,7 +18,7 @@ With :doc:`Geometry Nodes </modeling/geometry_nodes/index>`, it is possible to c
 
 They work by changing how an object is displayed and rendered, but not the geometry which you can edit directly.
 You can add several modifiers to a single object forming the modifier stack
-and *Apply* a modifier if you wish to make its changes permanent.
+and :ref:`Apply <grease-pencil_modifiers_apply>` a modifier if you wish to make its changes permanent.
 
 There are four types of modifiers for Grease Pencil:
 
@@ -48,6 +48,43 @@ See :ref:`Modifiers Interface <bpy.types.Modifier.show>` for more information.
 .. note::
 
    Grease Pencil strokes, unlike meshes, still can not be edited directly in the place.
+
+
+.. _grease-pencil_modifiers_apply:
+
+Applying Modifiers
+------------------
+
+Applying a modifier makes the effects of the modifier "real";
+converts the strokes to match the applied modifier's results, and deletes the modifier.
+
+When applying a modifier to an object that shares Object Data between multiple objects,
+the object must first be made a :ref:`Single User <data-system-datablock-make-single-user>`
+which can be performed by confirming the pop-up message.
+
+.. warning::
+
+   Applying a modifier that is not first in the stack will ignore the stack order
+   (it will be applied as if it was the first one), and may produce undesired results.
+
+.. reference::
+
+   :Panel:     :menuselection:`Properties --> Modifiers --> Modifier Header --> Specials`
+
+Apply (Active Keyframe) :kbd:`Ctrl-A`
+   Applies the modifier for the current keyframe.
+Apply (All Keyframes)
+   Applies the modifier for all keyframes.
+
+.. note::
+
+   With :doc:`Geometry Nodes </modeling/index>` it is possible to add new layers to the geometry.
+   When applying, this will create a single keyframe on the first frame of evaluation.
+   Layers with duplicated names in evaluated geometry will be deduplicated.
+
+   It is also possible to have layers with empty names.
+   When applying these get renamed to `Layer` (and `Layer.001` etc.
+   when such a layer already exists in the original geometry).
 
 
 .. _grease-pencil-modifier-influence-filters:
