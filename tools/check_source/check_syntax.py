@@ -149,6 +149,7 @@ def compile_valid_kbd():
         # Pointing Devices
         r"(",
         # Mouse
+        r"(?:Mouse-[4-9]?)",
         # Wheel
         r"(?:Wheel(Up|Down|In|Out)?)",
         # Buttons

@@ -24,14 +24,13 @@ which are geared towards particular tasks (modeling, animating and so on).
 
 .. note::
 
-   While some keyboard shortcuts in Blender are global (such as :kbd:`Ctrl-S`
-   for saving), many depend on which editor the mouse cursor is hovering over.
+   While some keyboard shortcuts in Blender are global (such as :kbd:`Ctrl-S` for saving),
+   many depend on which editor the mouse cursor is hovering over.
 
-   As an example, say you just selected two objects in the Outliner and want
-   to join them. If you pressed the shortcut for this (:kbd:`Ctrl-J`)
-   while the cursor is still in the Outliner, nothing would happen as the
-   shortcut isn't valid there; you first need to move your cursor
-   to the 3D Viewport.
+   As an example, say you just selected two objects in the Outliner and want to join them.
+   If you pressed the shortcut for this (:kbd:`Ctrl-J`)
+   while the cursor is still in the Outliner, nothing would happen as the shortcut isn't valid there;
+   you first need to move your cursor to the 3D Viewport.
 
 
 .. _bpy.ops.screen.area_move:
@@ -48,28 +47,28 @@ You can resize areas by dragging their borders with :kbd:`LMB`.
 Move your mouse cursor over the border between two areas,
 so that the cursor changes to a double-headed arrow, and then click and drag.
 
+.. tip::
 
-.. _bpy.ops.screen.area_split:
+   Hold :kbd:`Ctrl` to snap the size of areas to convenient sizes.
 
-Splitting
-=========
 
-.. figure:: /images/interface_window-system_areas_split.png
-   :align: right
-   :width: 250px
-   :figwidth: 250px
+Docking
+=======
 
-Splitting an area will create a new area. Placing the mouse cursor
-in an area corner will change the cursor to a cross (+) to indicate that
-pressing down :kbd:`LMB` will activate splitting or joining.
-Dragging from an area corner **inward** will *split* the area.
-You define the split direction by dragging either horizontally or vertically.
+Docking describes several ways an area a user can interactively manipulate
+the size and location of areas along with splitting an area into new areas.
+
+To start the interactive process, placing the mouse cursor
+in an area corner will change the cursor to a cross (+).
+Once the cursor is a cross, press and hold :kbd:`LMB` to preform any of the following actions:
+
+If you press :kbd:`Esc` or :kbd:`RMB` before releasing the mouse, the operation will be canceled.
 
 
 .. _bpy.ops.screen.area_join:
 
 Joining
-=======
+-------
 
 .. figure:: /images/interface_window-system_areas_join.png
    :align: right
@@ -78,32 +77,40 @@ Joining
 
    Properties is being joined to the Outliner.
 
-Dragging from an area corner **outward** will *join* two areas.
-The area that will be closed shows a dark overlay.
-You can select which area will be closed by moving the mouse over it.
-Release the :kbd:`LMB` to complete the join.
-If you press :kbd:`Esc` or :kbd:`RMB` before releasing the mouse,
-the operation will be canceled.
+Dragging from an area corner into the space of a second area will *join* two areas.
+The areas that will be joined will be displayed brighter.
 
-.. tip::
 
-   The cursor will also turn into a cross when hovering over either
-   end of the border between two areas. When splitting or joining,
-   it's best not to start dragging from this border, but from a
-   corner inside one of the areas.
+.. _bpy.ops.screen.area_split:
+
+Splitting
+---------
+
+.. figure:: /images/interface_window-system_areas_split.png
+   :align: right
+   :width: 250px
+   :figwidth: 250px
+
+Splitting an area will create a new area.
+Dragging from an area corner left/right will split the area vertically,
+to split the area horizontally drag up/down.
+
+You can split and join areas at once by dragging a split operation into a separate area.
+
+Dragging an area into the middle of an second area will replace the second area with the first area.
 
 
 .. _bpy.ops.screen.area_options:
 
 Area Options
-^^^^^^^^^^^^
+============
 
 :kbd:`RMB` on the border opens the *Area Options*.
 
 Vertical/Horizontal Split
    Shows an indicator line that lets you select the area and position where to split.
    :kbd:`Tab` switches between vertical/horizontal.
-Join Areas
+Join Up/Down/Left/Right
    Shows the join direction overlay.
 Swap Areas
    Swaps this area with the adjacent one.
@@ -112,7 +119,7 @@ Swap Areas
 .. _bpy.ops.screen.area_swap:
 
 Swapping Contents
------------------
+=================
 
 You can swap the contents of two areas by pressing :kbd:`Ctrl-LMB`
 on one of the corners of the initial area, dragging towards the target area,

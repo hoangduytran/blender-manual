@@ -69,12 +69,12 @@ Above the file list, there's a textbox showing the current folder path, along wi
 
 .. _bpy.ops.file.previous:
 
-Previous Folder :kbd:`Backspace`, :kbd:`Alt-Left`
+Previous Folder :kbd:`Backspace`, :kbd:`Alt-Left`, :kbd:`Mouse-4`
    Move to previous folder in navigation history.
 
 .. _bpy.ops.file.next:
 
-Next Folder :kbd:`Shift-Backspace`, :kbd:`Alt-Right`
+Next Folder :kbd:`Shift-Backspace`, :kbd:`Alt-Right` :kbd:`Mouse-5`
    Move to next folder in navigation history.
 
 .. _bpy.ops.file.parent:

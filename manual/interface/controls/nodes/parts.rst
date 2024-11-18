@@ -34,14 +34,10 @@ Preview
 
 Previews are an overlay that shows a small image above the node displaying the node result.
 Not all nodes support previews, but the ones that do can be toggled using
-the icon in the top right-hand corner of the node next to the title.
+the :bl-icon:`hide_off`/:bl-icon:`hide_on` icons in the top right-hand corner of the node next to the title.
 
 Previews can be disabled for the whole node tree by using
 :ref:`Previews <bpy.types.SpaceNodeOverlay.show_previews>` overlay toggle.
-
-.. figure:: /images/interface_controls_nodes_parts_previewless.png
-
-   Preview toggle button.
 
 
 .. _bpy.types.NodeLink:
