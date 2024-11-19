@@ -1,3 +1,4 @@
+
 *****
 Relax
 *****
@@ -22,7 +23,7 @@ Remember, you can use "Undo" at any time to return to an earlier state.
 Tool Settings
 =============
 
-Radius
+Size
    This option controls the radius of the brush, measured in pixels.
    :kbd:`F` allows you to change the brush size interactively by dragging the mouse and then :kbd:`LMB`.
    Typing a number then enter while using :kbd:`F` allows you to enter the size numerically.
@@ -107,14 +108,14 @@ Options
 .. _bpy.types.ToolSettings.uv_relax_method:
 
 Method
-   There are three ways to determine the edge weighting:
+   How to determine the edge weighting:
 
    :Laplacian:
      The classic discrete Laplace operator applied to the UV graph. Each edge has equal weighting,
      resulting in triangles which resemble a honeycomb shape, or quads aligned into square grid.
    :HC:
      Similar to Laplacian, the HC method uses equal weighting while trying to preserve
-     a gradient between dense regions of the mesh and regions with fewer edges.e
+     a gradient between dense regions of the mesh and regions with fewer edges.
 
      Note, this method uses the "Humphrey's Classes" operator as described in the paper:
      `"Improved Laplacian Smoothing of Noisy Surface Meshes"

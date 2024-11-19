@@ -9,7 +9,7 @@ Its primary task is to display a scene in the 3D Viewport when it is being worke
 
 .. note::
 
-   While its not intended to be used for final renders,
+   While it is not intended to be used for final renders,
    the Workbench render engine can be selected as the *Render Engine* in the Render properties.
 
 By default the 3D Viewport uses Workbench to shade and light objects.

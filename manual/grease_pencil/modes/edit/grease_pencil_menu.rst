@@ -194,7 +194,7 @@ Shows all Grease Pencil :doc:`layers </grease_pencil/properties/layers>`.
 .. _bpy.ops.grease_pencil.layer_hide:
 
 Hide Active Layer
-------------------
+-----------------
 
 .. reference::
 
