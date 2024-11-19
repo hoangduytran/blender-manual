@@ -19,7 +19,7 @@ These are some examples of *Feature Sets* currently provided by past and current
    Rig experiments, some of which might be included in Rigify in the future. Examples include
    limbs with an extra IK system based at knee/elbow, a spline based tentacle, and more.
 
-You can install these packages by clicking :menuselection:`Clone --> Download ZIP`,
+You can install these packages by clicking :menuselection:`Code --> Download ZIP`,
 and then install the downloaded file through Rigify settings.
 
 Developer documentation is available on the `Blender Developer Documentation

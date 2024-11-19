@@ -1,3 +1,4 @@
+
 ****
 Grab
 ****
@@ -13,7 +14,7 @@ The Grab tool moves UVs around.
 Tool Settings
 =============
 
-Radius
+Size
    This option controls the radius of the brush, measured in pixels.
    :kbd:`F` allows you to change the brush size interactively by dragging the mouse and then :kbd:`LMB`.
    Typing a number then enter while using :kbd:`F` allows you to enter the size numerically.

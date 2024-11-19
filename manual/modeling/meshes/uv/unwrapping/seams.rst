@@ -65,8 +65,8 @@ In the example to the right, the back-most edge of the cylinder was selected as 
 In the UV Editor, you can see that all the faces are nicely unwrapped,
 just as if you cut the seam with a scissors and spread out the fabric.
 
-When marking seams, you can use the :menuselection:`Select --> Linked Faces`
-or :kbd:`Ctrl-L` in Face Select Mode to check your work.
+When marking seams, you can use :ref:`Selected Linked <bpy.ops.mesh.select_linked>`
+in Face Select Mode to check your work.
 This menu option selects all faces connected to the selected one, up to a seam.
 If faces outside your intended seam are selected, you know that your seam is not continuous.
 You do not need continuous seams, however, as long as they resolve regions that may stretch.

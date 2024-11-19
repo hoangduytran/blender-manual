@@ -83,7 +83,7 @@ The type of an attribute is the kind of data stored at each element.
 The above list is in the order of least to most "complex" (An integer can contain more data than a
 boolean, so it is more complicated). When joining separate geometries together, the more complex data
 type is preferred when there are matching names. This is particularly important when joining geometry
-with named attributes with the :doc:`/modeling/geometry_nodes/geometry/join_geometry`
+with named attributes with the :doc:`/modeling/geometry_nodes/geometry/join_geometry`.
 
 To store 2D Vectors (UV maps) and Byte Colors the
 :doc:`/modeling/geometry_nodes/attribute/store_named_attribute` must be
@@ -174,7 +174,7 @@ Boolean Domain Interpolation
 
    * - Edge
      - Face
-     - A face is selected if all of its edges are selected
+     - A face is selected if all of its edges are selected.
 
    * - Edge
      - Corner

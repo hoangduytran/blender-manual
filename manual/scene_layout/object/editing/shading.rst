@@ -17,7 +17,7 @@ Sets an entire object as smooth or faceted.
 This forces the assignment of the "smoothing" attribute to each face in the mesh,
 including when you add or delete geometry.
 
-This operator will also remove any :doc:`Smooth By Angle Modifiers </modeling/modifiers/normals/smooth_by_angle>`
+This operator will also remove any :doc:`Smooth By Angle Modifiers </modeling/modifiers/normals/smooth_by_angle>`.
 
 Notice that the outline of the object is still strongly faceted.
 Activating the smoothing features does not actually modify the object's geometry;
