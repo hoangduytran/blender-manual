@@ -22,8 +22,11 @@ Gradient
    Type
       The shape of the gradient.
 
-      :Linear: Create gradient that forms a straight line. :kbd:`Shift-LMB` and drag.
-      :Radial: Create gradient that forms a circle. :kbd:`Shift-Alt-LMB` and drag.
+      :Linear: Create gradient that forms a straight line.
+      :Radial: Create gradient that forms a circle.
+
+      .. note::
+         These are also availible via shortcuts as the :ref:`menu operators <bpy.ops.paint.weight_gradient>`.
 
 Sample
    Weights
