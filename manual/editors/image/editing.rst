@@ -1,4 +1,3 @@
-
 *******
 Editing
 *******
@@ -103,7 +102,7 @@ Copy/Paste
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Copy/Paste`
 
-Copy and pastes imaged to/from a computers operating system.
+Copy and pastes images to/from a computers operating system.
 
 Currently, only PNG files are supported and Linux support requires Wayland.
 
