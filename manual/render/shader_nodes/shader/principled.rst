@@ -232,7 +232,7 @@ Anisotropic :guilabel:`Cycles Only`
 Anisotropic Rotation :guilabel:`Cycles Only`
    Rotates the direction of anisotropy, with 1.0 going full circle.
 
-   Compared to the *Anisotropic BSDF* node, the direction of highlight elongation
+   Compared to the *Glossy BSDF* node, the direction of highlight elongation
    is rotated by 90°. Add 0.25 to the value to correct.
 
    .. figure:: /images/render_shader-nodes_shader_principled-specular-anisotropic-rotation.webp
