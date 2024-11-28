@@ -196,6 +196,12 @@ VBO Time Out
    Garbage Collection Rate
       Number of seconds between each run of the GL vertex buffer object garbage collector.
 
+.. _bpy.types.PreferencesSystem.max_shader_compilation_subprocesses:
+
+Max Shader Compilation Subprocesses
+   Max number of parallel shader compilation subprocesses used by the OpenGL backend,
+   clamped at the max threads supported by the CPU (requires restarting Blender for changes to take effect).
+   Setting it to 0 disables subprocess shader compilation.
 
 .. _prefs-system-video-sequencer:
 
