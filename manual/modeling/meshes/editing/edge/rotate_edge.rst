@@ -43,6 +43,5 @@ The tool operates on selected edges or the shared edge between selected faces.
 
    To rotate an edge based on faces you must select adjacent face pairs,
    otherwise Blender notifies you with an error message,
-   *"Could not find any select edges that can be rotated"*. Using either *Rotate Edge CW*
-   or *Rotate Edge CCW* will produce exactly the same results as if you had
-   selected the common edge.
+   *"Could not find any selected edges that can be rotated"*. Using either *Rotate Edge CW*
+   or *Rotate Edge CCW* will produce exactly the same results as if you had selected the common edge.

@@ -9,10 +9,9 @@ Smooth Vertices
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Vertex --> Smooth Vertices`,
-               :menuselection:`Context Menu --> Smooth`
+               :menuselection:`Context Menu --> Smooth Vertices`
 
-This tool smooths the selected vertices by averaging the angles between the faces.
-After using the tool, options appear in the *Toolbar*:
+This operator smooths the selected vertices by averaging the angles between the faces.
 
 Smoothing
    Smoothing factor.

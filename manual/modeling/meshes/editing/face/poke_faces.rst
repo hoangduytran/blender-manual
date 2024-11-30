@@ -7,7 +7,7 @@ Poke Faces
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Faces --> Poke Faces`
+   :Menu:      :menuselection:`Face --> Poke Faces`
 
 Splits each selected faces into a triangle fan,
 creating a new center vertex and triangles between the original face edges
@@ -20,6 +20,6 @@ Offset Relative
 Poke Center
    Computes the center of a face.
 
-   :Weighted Mean: Using the mean average weighted by edge length.
-   :Mean: Using the mean average.
+   :Weighted Median: Using the mean average weighted by edge length.
+   :Median: Using the mean average.
    :Bounds: Uses center of bounding box.
