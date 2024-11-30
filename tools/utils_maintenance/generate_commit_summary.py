@@ -14,21 +14,32 @@ from git import Repo
 
 
 def print_summary(repo, commits):
+    print(f"""
+| Code Change |  Manual Change | Link to Documentation |
+| -------- | ------- | ------- |""")
+
+    # Collect commit details
+    commit_details = []
     for commit_hash in commits:
 
         if commit_hash == "\n":
             print("")
             continue
 
+        # Get commit details
         commit = repo.commit(commit_hash)
-        commit_hash_short = commit_hash[:10]
-        commit_url = "https://projects.blender.org/blender/blender/commit/" + commit_hash_short
-        commit_title = commit.message.partition('\n')[0]
-        commit_author = commit.author
+        commit_url = f"https://projects.blender.org/blender/blender/commit/{commit_hash[:10]}"
+        commit_title = commit.message.partition('\n')[0]  # First line of the commit message
 
-        print("- [ ] [{}]({}) {} ({})".format(commit_hash_short,
-                                              commit_url, commit_title, commit_author))
+        # Store commit details in a tuple
+        commit_details.append((commit_title, commit_url))
 
+    # Sort commits alphabetically by title
+    commit_details.sort(key=lambda x: x[0].lower())
+
+    # Print sorted commit details
+    for title, url in commit_details:
+        print(f"| [{title}]({url}) |||")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
