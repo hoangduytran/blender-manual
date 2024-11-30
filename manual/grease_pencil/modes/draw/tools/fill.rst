@@ -39,7 +39,7 @@ Direction :kbd:`Ctrl`
    :Normal:
       Fills the area inside the shape under the cursor.
    :Inverted:
-      Fills the area outside the shape under the cursor.
+      When clicking outside the drawing, fills all shapes touching the area under the cursor.
 
 .. _bpy.types.BrushGpencilSettings.fill_factor:
 
