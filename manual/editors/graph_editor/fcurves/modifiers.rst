@@ -222,6 +222,10 @@ Phase
    Adjusts the random seed of the noise.
 Depth
    Adjusts how detailed the noise function is.
+Lacunarity
+   Gap between successive frequencies. Depth has to be greater than 0 for this to have an effect.
+Roughness
+   The amount of high frequency detail. Depth has to be greater than 0 for this to have an effect.
 
 
 .. index:: F-Curve Modifiers; Limits Modifier
