@@ -28,3 +28,14 @@ in symmetrical movement when the Action is activated.
 .. note::
 
    Note that bone or constraint drivers will not be created or affected in any way.
+
+Bone collection assignments are also symmetrized. Similar to bones, only collections
+that follow the :ref:`naming convention <armature-editing-naming-conventions>` are symmetrized.
+Collections are created if they don't exist yet. On creation, they will be parented to 
+the same collection as the collection from which they are symmetrized.
+
+.. note::
+
+   Blender does not care if a left bone is assigned to a right collection.
+   It will symmetrize regardless meaning the resulting right bone will be assigned
+   to a left collection.
