@@ -19,6 +19,12 @@ The settings only apply to the current 3D Viewport. Object types marked as unsel
 can still be selected in other viewports and in the
 :doc:`Outliner </editors/outliner/introduction>`, for example.
 
+.. note::
+
+   The object types apply to the evaluated geometry type rather than the original.
+   For example, a mesh object changed to a volume with geometry nodes will be visible
+   even if the *Mesh* option is unchecked.
+
 .. seealso::
 
    Outliner :ref:`Restriction Columns <editors-outliner-interface-restriction_columns>`
