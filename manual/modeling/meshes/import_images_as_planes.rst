@@ -6,7 +6,7 @@ Import Images as Planes
 
 .. reference::
 
-   :Menu:      :menuselection:`3D Viewport --> Add --> Image --> Images as Planes`
+   :Menu:      :menuselection:`3D Viewport --> Add --> Image --> Mesh Plane`
 
 Imports images and creates planes with them as textures.
 It automates the process of creating a plane, resizing it to fit the dimensions of the image,
