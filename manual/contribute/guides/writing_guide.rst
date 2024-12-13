@@ -21,15 +21,15 @@ Complete
    The manual should provide information on what a feature is, how to use it, and its purpose.
    More background information should be provided when necessary to give deeper understanding of a 3D pipeline.
 Concise
-   Computer graphics is an incredibly interesting field,
-   there are many rules, exceptions to the rules, and interesting details.
-   Expanding into details can add unnecessary content,
-   so keep the text concise and relevant to the topic at hand.
+   Computer graphics is an incredibly interesting field.
+   There are many rules, exceptions to those rules, and interesting details.
+   However, expanding into details can add unnecessary content;
+   therefore, keep the text concise and relevant to the end user.
 Maintainable
    Keep in mind that Blender has frequent releases,
    so try to write content that will not have to be redone
    the moment some small change is made.
-   This also helps a small documentation community to maintain the manual.
+   This also helps a small documentation community maintain the manual.
 
 
 Content Guidelines
@@ -41,16 +41,16 @@ please keep this page in mind and only deviate from it when you have a good reas
 Rules of thumb:
 
 - Spell checking is *strongly* recommended.
-- Use American English (e.g: modeling and not modeling, color and not colour)
+- Use American English (e.g: modeling and not modelling, color and not colour)
   also for formatting numbers (e.g: 2,718.28 and not 2 718,28).
 - Take care about grammar, appropriate wording and use simple English.
-- Keep sentences short and clear, resulting in text that is easy to read, objective and to the point.
+- Keep sentences short and clear.
 - Including why or how an option might be useful is a good idea.
 - If you are unsure about how a feature works, ask someone else or find out who developed it and ask them.
 
 To be avoided:
 
-- Avoid writing in first person perspective, about yourself or your own opinions.
+- Avoid writing in the first person perspective, about yourself, or about your own opinions.
 - Avoid `weasel words <https://en.wikipedia.org/wiki/Weasel_word>`__ and being unnecessarily vague, e.g:
 
   | "Reloading the file will probably fix the problem"
@@ -60,16 +60,15 @@ To be avoided:
   | "Blender has 23 different kinds of modifiers."
   | "Enabling previews adds 65536 bytes to the size of each blend-file (unless it is compressed)."
 
-  These details are not useful for users to memorize and they become quickly outdated.
+  These details are not useful for users and become quickly outdated.
 - Avoid documenting bugs.
 
-  Blender often has 100's of bugs fixed between releases, so it is not realistic to reference
-  even a fraction of them from the manual, while keeping this list up to date.
+  Blender often has hundreds of bugs fixed between releases, so the manual cannot be expected to keep up.
 
   Issues that are known to the developers and are not going to be resolved before the next release
   can be documented as *Known Limitations*.
   In some cases, it may be best to include them in the :doc:`troubleshooting </troubleshooting/index>` section.
-- Avoid product placements, i.e. unnecessarily promoting software or hardware brands.
+- Avoid product placements, e.g. unnecessarily promoting software or hardware brands.
   Keep content vendor-neutral where possible.
 - Avoid technical explanations about the mathematical/algorithmic implementation of a feature
   if there is a simpler way to explain it.
@@ -79,7 +78,7 @@ To be avoided:
 - Avoid repetition of large portions of text. Simply explain it once, and from then on refer to that explanation.
 
   For general terminology, consider defining a ``:term:`` in the :doc:`glossary </glossary/index>`.
-- Avoid enumerations of similar options, such as listing every preset or every frame rate in a select menu.
+- Avoid listing every option in a menu, such as frame rates.
 
   Their contents may be summarized or simply omitted.
   -- Such lists are only showing what is already *obvious* in the interface
@@ -131,9 +130,9 @@ This entry::
 Would be written like this instead, putting a definition first::
 
    Displacement Mapping
-      A method for distorting vertices based on an image.
-      Similar to Bump Mapping, but instead operates on the mesh's actual geometry.
-      This relies on the mesh having enough geometry.
+      Distorts vertices with an image.
+      Similar to Bump Mapping, but operates on the mesh's geometry.
+      The mesh must have enough geometry.
 
 ----
 
@@ -160,5 +159,5 @@ This entry::
 Would be written more like this, avoiding the "it is"::
 
    Curve
-      A type of object defined in terms of a line interpolated between Control Vertices.
-      Available types of curves include Bézier and NURBS.
+      A line interpolated between Control Vertices.
+      Common types include Bézier and NURBS.
