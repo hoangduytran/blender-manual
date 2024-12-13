@@ -11,7 +11,7 @@ Importing USD Files
 a hierarchy of primitives, or `prims <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Prim>`__.
 Individual prims contain data to describe scene entities, such as geometry, lights, cameras and transform hierarchies.
 Blender's USD importer converts USD prims to a hierarchy of Blender objects. Like the USD exporter,
-the importer does not yet handle more advanced USD concepts, such as layers and references.
+the importer does not yet handle certain USD composition concepts, such as layers and references.
 
 The following USD data types can be imported as Blender objects:
 
@@ -20,8 +20,9 @@ The following USD data types can be imported as Blender objects:
 - Lights
 - Materials
 - Meshes
+- Point Clouds
 - Primitive Shapes
-- Volume
+- Volumes
 
 For more information on how the various data types are handled,
 see the following descriptions of the `Import Options`_.
@@ -67,11 +68,12 @@ The importer supports two types of animation:
 - **Animating transforms**: If a USD primitive has time-varying transform data,
   a :doc:`Transform Cache </animation/constraints/transform/transform_cache>` constraint
   will be added to the imported Blender object.
-- **Animating geometry**: Animating mesh and curve geometry is supported by adding
+- **Animating geometry**: Animated mesh, curve, and point cloud geometry is supported by adding
   a :doc:`Mesh Sequence Cache </modeling/modifiers/modify/mesh_sequence_cache>` modifier to the imported data.
   Geometry attribute (`USD Primvar <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Primvar>`__)
-  animation is currently supported only for Color Attributes and UVs.
-  Note that USD file sequences (i.e. a unique file per frame) are not yet supported.
+  animation is supported for all data types which have corresponding Blender equivalents. This includes
+  colors, UVs, velocities, and other generic attribute data.
+  Note that USD file sequences (i.e. a unique file per frame) are not supported.
 
 
 Materials
@@ -150,35 +152,36 @@ Object Types
 ------------
 
 Cameras
-   Import cameras (perspective and orthographic).
+   Import ``UsdGeomCamera`` primitives as :doc:`Camera Objects </render/cameras>` (perspective and orthographic).
 Curves
-   Import curve primitives, including USD basis and NURBS curves.
-   (Note that support for Bézier basis is not yet fully implemented.)
+   Import ``UsdGeomBasisCurves`` primitives as :doc:`Curves </modeling/curves_new/index>` and ``UsdGeomNurbsCurves``
+   as Blender meshes.
 Lights
-   Import lights. Does not currently include USD dome, cylinder or geometry lights.
+   Import lights as :doc:`Light Objects </render/lights/index>`. Does not currently include cylinder or geometry
+   lights.
 Materials
-   Import materials.
+   Import `UsdPreviewSurface <https://openusd.org/release/spec_usdpreviewsurface.html>`__ materials.
 Meshes
-   Import meshes.
+   Import ``UsdGeomMesh`` primitives as :doc:`Mesh Objects </modeling/meshes/index>`.
 Volumes
-   Import USD OpenVDB field assets.
+   Import ``UsdVolVolume`` OpenVDB assets as :doc:`Volume Objects </modeling/volumes/index>`.
 Point Clouds
-   Imports USD ``UsdGeomPoints`` as a :doc:`/modeling/point_cloud` object.
+   Import ``UsdGeomPoints`` primitives as :doc:`Point Cloud Objects </modeling/point_cloud>`.
 USD Shapes
-   Imports USD primitive shapes (cubes, spheres, cones, ect) as Blender meshes.
+   Import USD primitive shapes as Blender meshes.
+   ``UsdGeomCapsule``, ``UsdGeomCylinder``, ``UsdGeomCone``, ``UsdGeomCube``, and ``UsdGeomSphere`` are supported.
 
-Display Purpose
+`Display Purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__
    Render
       Include primitives with purpose ``render``.
    Proxy
       Include primitives with purpose ``proxy``.
    Guide
-      Include primitives with
-      `purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__ ``guide``.
+      Include primitives with purpose ``guide``.
 
 Material Purpose
    Attempt to import materials with the given purpose.
-   If no material with this purpose is bound to the primitive, fall back on loading any other bound material.
+   If no material with this purpose is bound to the primitive, then the fallback behavior, if any, is noted below.
 
    :All Purpose: Attempt to import ``allPurpose`` materials.
    :Preview: Attempt to import ``preview`` materials. Load ``allPurpose`` materials as a fallback.
@@ -203,6 +206,9 @@ Validate Meshes
    When disabled, erroneous data may cause crashes displaying or editing the meshes.
    This option will make the importing slower but is recommended, as data errors are not always obvious.
 
+Merge parent Xform
+   Allow USD primitives to merge with their Xform parent if they are the only child in the hierarchy.
+
 
 Rigging
 -------
@@ -224,7 +230,8 @@ Import USD Preview
    Convert USD Preview Surface shaders to Principled BSDF shader networks.
 
 Create World Material
-   Converts the first discovered USD dome light to a :doc:`world background shader </render/lights/world>`.
+   Converts the first discovered ``UsdLuxDomeLight`` dome light to a
+   :doc:`world background shader </render/lights/world>`.
 
 Set Material Blend
    If the *Import USD Preview* option is enabled, the material blend method will automatically be set based on
@@ -286,9 +293,11 @@ The following objects can be exported to USD:
 
 - Meshes (of different kinds, see below).
 - Cameras (perspective cameras only at the moment, not orthogonal ones).
-- Light (all types except area lights).
+- Curves
+- Lights
 - Hair (exported as curves, and limited to parent strands).
-- Volume (both static and animated volumes).
+- Point Clouds
+- Volumes
 - Armatures
 
 When exporting an animation, the final, evaluated mesh is written to USD.
@@ -389,19 +398,24 @@ Meshes
    Exports :doc:`Mesh Objects </modeling/meshes/index>`
 Lights
    Exports :doc:`Light Objects </render/lights/index>`
-   USD does not directly support spot lights, so those are not exported.
+   The ``UsdLuxShapingAPI`` is used to support spot lights.
 Cameras
    Exports :doc:`Camera Objects </render/cameras>`
    Only perspective cameras are exported.
 Curves
    Exports :doc:`Curve Objects </modeling/curves/index>`
 Point Clouds
-   Exports :doc:`Point Cloud Objects </modeling/point_cloud>` as ``UsdGeomPoints`` primitives.
+   Exports :doc:`Point Cloud Objects </modeling/point_cloud>`
 Volumes
    Exports :doc:`Volume Objects </modeling/volumes/index>`
 Hair
    Exports parent hair strands are exported as a curve system.
    Hair strand colors are not exported.
+
+.. note::
+
+   The corresponding USD schema type used during Export is analagous to the type read during
+   Import. See the Import section for details.
 
 
 Geometry
@@ -412,10 +426,15 @@ UV Maps
    The name of the UV map in USD is the same as the name in Blender.
 
 Rename UV Maps
-   Exports UV maps using the USD  default name (``st``) as opposed to Blender's default name (``UVMap``).
+   Exports UV maps using the USD default name (``st``) as opposed to Blender's default name (``UVMap``).
 
 Normals
    When checked, includes normals for exported meshes. This includes custom loop normals.
+
+Merge parent Xform
+   Merge USD primitives with their Xform parent if possible. USD does not allow nested ``UsdGeomGprims``,
+   intermediary Xform prims will be defined to keep the USD file valid when encountering object
+   hierarchies.
 
 Triangulate
    Triangulates the mesh before writing. For more detail on the specific option see
@@ -464,12 +483,19 @@ for more information.
 
 USD Preview Surface Network
    Approximates a :doc:`/render/shader_nodes/shader/principled`
-   node tree to by converting it to USD's Preview Surface format.
+   node tree by converting it to USD's Preview Surface format.
+
+   .. note::
+
+      To support ``opacityThreshold``, sometimes known as "Alpha Clip", the node tree
+      must either use a Math node set to ``Round``, if the desired threshold is 0.5, or
+      by using a pair of Math nodes implementing ``1 - (value < threshold)``. The result
+      should be plugged into the Alpha socket on the Principled BSDF node.
 
    .. warning::
 
-      Not all nodes are supported; currently only Diffuse,
-      Principle, Image Textures, and UVMap nodes are support.
+      Not all nodes are supported; currently only simple node trees containing Diffuse BSDF,
+      Principled BSDF, Image Textures, UVMap, and Separate RGB nodes are supported.
 
 MaterialX Network
    Generates material shading graphs using the `MaterialX <http://materialx.org/>`__ standard.
@@ -485,7 +511,7 @@ MaterialX Network
       shading graphs are difficult for other DCC's to understand.
 
 Convert World Material
-   Convert the :doc:`world material </render/lights/world>` to a USD dome light.
+   Convert the :doc:`world material </render/lights/world>` to a ``UsdLuxDomeLight``.
    Currently works for simple materials, consisting of an environment texture connected to a background shader,
    with an optional vector multiply of the texture color.
 
@@ -536,18 +562,6 @@ Single-sided and Double-sided Meshes
    so Blender uses the flag from the first material to mark the entire mesh as single/double-sided.
    If there is no material it defaults to double-sided.
 
-Mesh Normals
-   The mesh subdivision scheme in USD is 'Catmull-Clark' by default,
-   but Blender uses 'None' instead, indicating that a polygonal mesh is exported.
-   This is necessary for USD to understand the custom normals;
-   otherwise the mesh is always rendered smooth.
-
-Vertex Velocities
-   Currently only fluid simulations (not meshes in general) have explicit vertex velocities.
-   This is the most important case for exporting velocities, though,
-   as the baked mesh changes topology all the time, and
-   thus computing the velocities at import time in a post-processing step is hard.
-
 Materials
    When there are multiple materials, the mesh faces are stored as geometry subset
    and each material is assigned to the appropriate subset.
@@ -560,9 +574,6 @@ Hair
 
 Camera
    Only perspective cameras are exported.
-
-Lights
-   USD does not directly support spot lights, so those are not exported.
 
 Particles
    Particles are only written when they are alive, which means that they are always visible.
