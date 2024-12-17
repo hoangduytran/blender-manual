@@ -38,7 +38,7 @@ investor funding and a smaller company in April 2001.
 Six months later NaN's first commercial software product, Blender Publisher was launched.
 This product was targeted at the emerging market of interactive web-based 3D media.
 Due to disappointing sales and the ongoing difficult economic climate,
-the new investors decided to shut down all NaN operations.
+the new investors decided to shut down all NaN operations in March 2002.
 The shutdown also included discontinuing the development of Blender.
 Although there were clearly shortcomings in the then current version of Blender,
 such as a complex internal software architecture,
@@ -46,7 +46,7 @@ unfinished features and a non-standard way of providing the GUI, the enthusiasti
 the user community and customers who had purchased Blender Publisher in the past, meant that
 Ton could not justify leaving Blender to fade into insignificance.
 Since restarting a company with a sufficiently large team of developers was not feasible,
-Ton Roosendaal founded the non-profit organization, Blender Foundation, in March 2002.
+Ton Roosendaal founded the non-profit organization, Blender Foundation, in July 2002.
 
 The Blender Foundation's primary goal was to find a way to continue developing and
 promoting Blender as a community-based `open source <https://opensource.org/>`__ project.
