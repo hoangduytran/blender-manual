@@ -4,16 +4,11 @@
   About Blender
 #################
 
-Welcome to Blender! Blender is a free and open-source 3D creation suite.
+Blender is the free and open-source 3D creation suite.
+It supports the entirety of the 3D pipeline—modeling, rigging, animation,
+simulation, rendering, compositing, motion tracking and video editing. 
 
-With Blender, you can create 3D visualizations such as
-still images, 3D animations and VFX shots. You can also edit videos.
-It is well suited to individuals and small studios who
-benefit from its unified pipeline and responsive development process.
-
-Being a cross-platform application, Blender runs on Linux, macOS, as well as Windows systems.
-It also has relatively small memory and drive requirements compared to other 3D creation suites.
-Its interface uses OpenGL to provide a consistent experience across all supported hardware and platforms.
+Blender provides a consistent experience across Linux, macOS, and Windows operating systems via OpenGL.
 
 .. figure:: /images/getting-started_about_introduction_screenshot.jpg
 
