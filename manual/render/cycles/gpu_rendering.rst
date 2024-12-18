@@ -59,7 +59,7 @@ Supported GPUs include:
 Minimum driver versions:
 
  - Windows: Radeon Software 21.12.1 or Radeon PRO Software 21.Q4
- - Linux: Radeon Software 22.10 or ROCm 5.3
+ - Linux: Radeon Software 23.40 or ROCm 6.0
 
 Please refer to `AMD's website <https://www.amd.com/en/products/specifications>`__ for more
 information about AMD graphics cards and their architectures.
