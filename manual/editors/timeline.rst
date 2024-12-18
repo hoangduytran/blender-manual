@@ -152,9 +152,8 @@ Play In
 
 .. _bpy.types.Scene.show_subframe:
 
-Show
-   Subframes
-      Display and allow changing the current scene subframe.
+Show -- Subframes
+   Display and allow setting fractional frame values for the current frame.
 
 Set Start/End Frame
    Set the scene's start/end frame to the current frame.
