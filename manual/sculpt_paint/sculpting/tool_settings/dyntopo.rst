@@ -57,7 +57,7 @@ Detailing
       will create topology in that size. Zoom out big details, zoom in small fine details.
    :Constant Detail:
       To keep detail uniform across the entire object, Constant Detail can be used.
-      The detail is based on the percentage of a single unit.
+      The detail is a divisor of a Blender unit - higher values mean finer details.
    :Brush Detail:
       Giving more control over the topology, with this method you can create topology
       based on the brush size. You can increase and lower topology by resizing the brush itself.
@@ -71,4 +71,4 @@ Detailing
 
 Detail Flood Fill :kbd:`Ctrl-R`
    When using *Constant* or *Manual* *Detailing*, this option is made available,
-   allowing you to fill the entire object with a uniform detail, based on the detail size.
+   allowing you to fill the entire object with a uniform detail, based on the resolution.
