@@ -251,7 +251,7 @@ Color
 The color of the brush. See :ref:`ui-color-picker`.
 
 Press :kbd:`Shift-X` on any part of the image to sample that color and set it as the brush color.
-In Texture Paint, :kbd:`Ctrl-Shift-X` will sample the merged viewport color, while :kbd:`Shift-X`
+In Texture Paint, :kbd:`Shift-Ctrl-X` will sample the merged viewport color, while :kbd:`Shift-X`
 only samples the currently active texture.
 Hold :kbd:`Ctrl` while painting to temporally paint with the secondary color.
 
