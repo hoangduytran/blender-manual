@@ -76,6 +76,8 @@ Clipping Options (dot icon)
 
 Below the curve are options for the selected control point:
 
+.. _ui-curve-widget-handle-type:
+
 Handle Type
    Controls how the control points affect the curve shape.
    It determines the interpolation of the curve segment at the selected control point.

@@ -8,79 +8,73 @@ Geometry
 
    Geometry panel.
 
+The Geometry panel lets you turn a curve from a 1D line into a 2D ribbon or a 3D tube.
+
+.. figure:: /images/modeling_curves_properties_geometry_intro.png
+
+   Three copies of the same base curve: one without geometry (bright orange line);
+   one with Offset and Extrude applied (blue ribbon); and one with Offset, Extrude,
+   and Bevel applied (gray tube).
+
 .. _bpy.types.Curve.offset:
 
 Offset
-   Moves the extrusion parallel to the curve normals.
-
-   .. figure:: /images/modeling_curves_properties_geometry_extrude-offset.png
-      :width: 50%
-
-      Bézier Circle -1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.
+   Moves the control points along their normals.
 
 .. _bpy.types.Curve.extrude:
 
 Extrude
-   Will extrude the curve along both the positive and negative local Z axes.
-   Turns a one-dimensional curve into a two-dimensional curve by giving it height.
-   With a scale is the sum of both directions, perpendicular to the curve's normals.
+   Turns the curve from a line into a ribbon by extruding it to the "sides":
+   at each point, the curve normal is calculated as the "up" direction,
+   and the curve is extruded to the "left" and "right."
 
-   .. list-table::
+.. hint::
 
-      * - .. figure:: /images/modeling_curves_properties_geometry_extrude-bezier-circle.png
-             :width: 320px
-
-             Bézier Circle 0.0 extrude (Edit Mode).
-
-        - .. figure:: /images/modeling_curves_properties_geometry_extrude-after.png
-             :width: 320px
-
-             Extruded by 0.5 (Object Mode).
+   You can tweak the direction and distance of *Offset* and *Extrude* at each control point
+   by changing its :ref:`modeling-curve-tilt` (rotation around the tangent axis) and
+   :ref:`modeling-curve-radius` (scale factor).
 
 .. _bpy.types.Curve.taper_object:
 
 Taper Object
-   Tapering a curve causes it to get thinner towards one end.
-   You can also alter the proportions of the Taper throughout the tapered object
-   by moving/scaling/rotating the control points of the Taper Object.
-   The taper curve is evaluated along the local X axis, using the local Y axis for width control.
-   In order for this to work the Taper Object can only be another *open curve*.
+   A separate Curve object, consisting of a single, non-:ref:`cyclic <bpy.ops.curve.cyclic_toggle>`,
+   2D spline, that controls the scale factor of the geometry along the length of each of the curve's splines.
 
-   The details are:
+   .. note::
 
-   - The taper is applied independently to all curves of the extruded object.
-   - Only the first curve in a *Taper Object* is evaluated, even if you have several separated segments.
-   - The scaling starts at the first control point on the left
-     and moves along the curve to the last control point on the right.
-   - Negative scaling, (e.g. negative local Y on the taper curve) is possible as well.
-     However, rendering artifacts may appear.
-   - You may need to increase the curve resolution to see more detail of the taper.
-   - The Taper Object is distributed by control points.
-     Therefor unevenly spaced control points may likelier to stretch the shape of the taper.
-     Subdividing segments causes those points to use a larger fraction of the overall taper shape.
-   - With closed curves, the taper curve in *Taper Object* acts along the whole curve (perimeter of the object),
-     not just the length of the object, and varies the extrusion depth. In these cases,
-     you want the relative height of the *Taper Object*
-     Taper curve at both ends to be the same, so that the cyclic point
-     (the place where the endpoint of the curve connects to the beginning) is a smooth transition.
+      The "taper" in the name is misleading: this word means "to reduce in size towards the end,"
+      while the *Taper Object* has no such restriction -- you can also use it to create geometry
+      that's *bigger* at the ends. A better name might have been "Scale Curve."
 
-   .. hint::
+   Specifically, the *Taper Object* defines a graph where the X axis represents the position on the
+   curve and the Y axis represents the scale:
 
-      Editing the handles and control points of the Taper Object
-      will instantly change the shape of the original object.
+   - The first control point of the *Taper Object* spline corresponds to the first control point of
+     each geometry spline; same thing for the last points. The first *Taper* point should have the
+     highest X coordinate, and the last point the lowest. The specific range of X coordinates doesn't
+     matter: it could be [-10, 10], [-1, 1], or anything else.
+   - A Y coordinate of 1.0 leaves the geometry unchanged. A coordinate of 0.5 makes it half as large,
+     while 2.0 makes it twice as large.
+
+   The Z coordinates of the *Taper Object* control points are ignored, but if you want,
+   you can set the object's :ref:`shape <bpy.types.Curve.dimensions>` to "2D" to force them to 0.
 
 .. _bpy.types.Curve.taper_mode:
 
-Taper Mode
-   For curves using a *Taper Object*, this option defines
-   how the effective curve radius is computed from the Taper Object.
+Taper Radius
+   How to combine the scale graph of the *Taper Object* with the radii of the control points.
 
-   :Override: The curve radius is ignored and the effective radius is equal to the taper radius.
-   :Multiply: The effective radius is computed by multiplying the taper radius with the curve radius.
-   :Add: The effective radius is computed by adding the taper radius to the curve radius.
+   .. note::
+
+      As above, this setting is not limited to tapering and does not define any single radius.
+      A better name might have been "Scale Curve Mode."
+
+   :Override: The *Taper Object* (scale curve) overrides the radii (scales) of the curve's control points.
+   :Multiply: The scale given by the *Taper Object* is multiplied by that of the control points.
+   :Add: The scale given by the *Taper Object* is added to that of the control points.
 
    .. list-table::
-      Examples of a curve with a radius of zero on one end and a radius of one on the other end.
+      Examples of a curve with a Radius of 0 on the left and 1 on the right.
 
       * - .. figure:: /images/modeling_curves_properties_geometry_taper-mode-override.png
 
@@ -97,8 +91,10 @@ Taper Mode
 .. _bpy.types.Curve.use_map_taper:
 
 Map Taper
-   For curves using a Taper Object and with modifications to the *Start/End Bevel Factor*
-   the *Map Taper* option will apply the taper to the beveled part of the curve (not the whole curve).
+   If geometry is only generated for part of the curve (which can be achieved by changing
+   :ref:`Factor Start/End <bpy.types.Curve.bevel_factor_start>`), enabling *Map Taper* will
+   make the endpoints of the *Taper Object* correspond to those of the geometry instead of
+   those of the curve.
 
 
 .. _bpy.types.Curve.bevel:
@@ -106,127 +102,122 @@ Map Taper
 Bevel
 =====
 
+Apply a Bevel to turn the 1D line (or 2D ribbon when using :ref:`bpy.types.Curve.extrude`)
+into a 3D tube.
+
 Round
 -----
+
+The cross section of the tube becomes a circle (or pill when using Extrude).
+You can also get a half circle by changing the :ref:`bpy.types.Curve.fill_mode`.
 
 .. _bpy.types.Curve.bevel_depth:
 
 Depth
-   Changes the size of the bevel.
+   The size of the cross section.
 
    .. list-table::
 
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel-depth.png
              :width: 320px
 
-             A curve with different Bevel depths applied (Depth of 0.05).
+             Small Depth.
 
         - .. figure:: /images/modeling_curves_properties_geometry_bevel.png
              :width: 320px
 
-             A curve with different Bevel depths applied (Depth of 0.25).
+             Large Depth.
 
 .. _bpy.types.Curve.bevel_resolution:
 
 Resolution
-   Alters the smoothness of the bevel.
+   Drives the number of vertices in the cross section.
 
    .. list-table::
 
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel-resolution.png
              :width: 320px
 
-             A curve with different resolutions applied (Resolution of 1).
+             A low Resolution results in a blocky mesh.
 
         - .. figure:: /images/modeling_curves_properties_geometry_bevel.png
              :width: 320px
 
-             A curve with different resolutions applied (Resolution of 12).
+             A high Resolution results in a smooth mesh.
 
 .. _bpy.types.Curve.use_fill_caps:
 
 Fill Caps
-   Seals the ends of a beveled curve.
+   Seals the ends of the tube.
 
 
 Object
 ------
 
+This option lets you fully customize the shape of the cross section by selecting a separate Curve object.
+
+.. figure:: /images/modeling_curves_properties_geometry_bevel_object.png
+   :align: center
+
 .. _bpy.types.Curve.bevel_object:
 
 Object
-   Here you can specify a profile curve object (opened or closed) which will be extruded along the path curve.
-   If the profile curve's :ref:`shape <bpy.types.Curve.dimensions>` is 3D,
-   it will be projected to its local XY plane before the extrusion.
-   You can check what the projected object looks like by switching its shape to 2D.
+   The curve that defines the cross section. It can be either closed (:ref:`cyclic <bpy.ops.curve.cyclic_toggle>`)
+   or open.
 
    .. important::
 
-      Make sure the shape you want to extrude is in the Object's local XY plane.
-      If it is in the local XZ or YZ plane, it will be reduced to a line when it is projected to the local XY plane.
-      Because of this, the extruded shape will be a flat plane.
+      This curve should be flat in its local XY plane; using another plane will not give the
+      desired result.
 
    .. note::
       If the selected curve has modifiers, these will not be taken into account.
-      The extrusion will use the original curve shape. The reason for this behavior
-      is that curves turn into meshes internally when they have modifiers on them,
-      at which point they can't be used as bevel objects anymore.
+      The bevel will use the original curve shape. This happens because curves turn into
+      meshes internally when they have modifiers on them,
+      at which point they can't be used as cross section curves anymore.
 
       To work around this, you can disable beveling on the path curve, and instead
-      add geometry nodes to it: retrieve the profile curve using an
+      add geometry nodes to it: retrieve the cross section curve using an
       :doc:`/modeling/geometry_nodes/input/scene/object_info`, convert it from
       a mesh back into a curve using a
       :doc:`/modeling/geometry_nodes/mesh/operations/mesh_to_curve`,
-      and finally pass both the path curve and the profile curve to a
+      and finally pass both the path curve and the cross section curve to a
       :doc:`/modeling/geometry_nodes/curve/operations/curve_to_mesh`.
-
-   .. list-table::
-
-      * - .. figure:: /images/modeling_curves_properties_geometry_bevel-object.png
-             :width: 320px
-
-             A curve with a Bézier curve as the Bevel Object.
-
-        - .. figure:: /images/modeling_curves_properties_geometry_extrude-bevel-object.png
-             :width: 320px
-
-             A curve with a Bézier circle as the Bevel Object.
-
 
 Profile
 -------
 
-.. figure:: /images/modeling_modifiers_generate_bevel_profile-widget.png
-   :align: right
-   :width: 300px
+This option lets you customize the shape of the cross section without having to create a separate
+Curve object. However, unlike the *Object* option where the curve defines the full cross section,
+the *Profile* in the :ref:`ui-curve-widget` only defines a quarter which is then repeated and mirrored.
 
-   The custom profile widget.
+.. figure:: /images/modeling_curves_properties_geometry_bevel_profile.png
+   :align: center
 
-This :ref:`ui-curve-widget` allows the creation of a user-defined profile with more complexity than
-with the single profile parameter. The modal tool allows toggling the custom profile,
-but the shape of the profile is only editable in the options panel after the operation is confirmed.
+The black dots on the profile represent the points where it's sampled (that is, where mesh vertices
+will be created). You can increase the *Resolution* to get more sample points, and thus a smoother result.
 
-The profile starts at the bottom right of the widget and ends at the top left, as if it
-were between two edges intersecting at a right angle. Control points are created in the widget and
-then the path is sampled with the number of segments from the Bevel modifier.
+Preset
+   You can choose one of the predefined profiles instead of making your own.
+   The *Support Loops* and *Steps* presets are generated dynamically based on the *Resolution*
+   and need to be reapplied if you change it.
 
-.. note::
+Reverse Path
+   Mirrors the profile around the diagonal.
 
-   The *Profile* curve widget stays active when miters are enabled
-   because it still controls the shape of the miter profiles.
+Toggle Profile Clipping
+   Limits the X and Y coordinates of control points to the range [0, 1].
 
-Presets
-   The *Support Loops* and *Steps* presets are built dynamically depending on
-   the number of segments in the bevel. If the number of segments is changed,
-   the preset will have to be re-applied.
+Sample Straight Edges
+   Whether to sample the profile in the middle of perfectly straight segments
+   (lines between two control points with the *Vector* :ref:`handle type <ui-curve-widget-handle-type>`).
+   This is disabled by default, as it's normally enough to sample the profile at the control
+   points themselves.
 
-Sampling
-   Samples will first be added to each control point, then if there are enough samples,
-   they will be divided evenly between the edges. The *Sample Straight Edges* option toggles whether
-   the samples are added to edges with sharp control points on either side. If there aren't enough samples
-   to give each edge the same number of samples, they will just be added to the most curved edges.
-   So it is recommended to use at least as many segments as there are control points.
-
+Sample Even Lengths
+   By default, each profile segment receives the same number of sample points.
+   By enabling this option, the sample points are instead distributed evenly
+   along the whole length of the profile.
 
 Start & End Mapping
 ===================
@@ -235,153 +226,79 @@ Start & End Mapping
 .. _bpy.types.Curve.bevel_factor_end:
 
 Factor Start, End
-   These options determine where to start/end the geometry of the curve.
-   This allows to make a curve which is not fully covered with geometry.
-
-   A Start value to 0.5 will start the geometry at 50%
-   of the distance from the start of the curve (in effect shortening the curve).
-   An End value of 0.75 will start the geometry at 25%
-   of the distance from the end of the curve (again, shortening the curve).
+   The percentages along the length of the curve where the geometry should start
+   and end. By default, these are set to 0 and 1, making the geometry cover the full length;
+   but if you change them to 0.5 and 0.75, the geometry will only cover the third quarter
+   of the curve.
 
    .. list-table::
 
       * - .. figure:: /images/modeling_curves_properties_geometry_bevel.png
              :width: 320px
 
-             A curve with no *Factor Start, End*.
+             A curve with Factor Start set to 0 and End to 1.
 
         - .. figure:: /images/modeling_curves_properties_geometry_bevel-start-end-factor.png
              :width: 320px
 
-             A curve with a 0.6 End factor.
+             Factor End changed to 0.6.
 
 .. _bpy.types.Curve.bevel_factor_mapping_start:
 .. _bpy.types.Curve.bevel_factor_mapping_end:
 
 Mapping Start, End
-   Allows to control the relation between the *Factor Start, End* (number between 0 and 1)
-   and the rendered start and end point of the spline's geometry.
+   How to map the *Factor Start, End* percentages to positions on the curve.
 
    :Resolution:
-      Maps the start and end factor to the number of subdivisions of a spline (U resolution).
+      Only count control points, disregarding the lengths of the spline segments (pieces of
+      spline between two control points). If a spline has three control points and *Factor Start*
+      is set to 0.5, the geometry will always start at the second control point,
+      even if its distances to the first and third control points are completely different.
    :Segments:
-      Maps the start and end factor to the length of its segments.
-      Mapping to segments treats the subdivisions in each segment
-      of a curve as if they would have all the same length.
+      Calculate an approximate percentage along the length of the spline by assuming that
+      all the subdivisions within each segment are evenly distributed.
    :Spline:
-      Maps the start and end factor to the length of a spline.
-
+      Calculate an accurate percentage along the length of the spline.
 
 Examples
 ========
 
-.. TODO Add some "simple" extrusion examples.
-        Add some "bevel" extrusion with *Radius* examples.
-
 Open 2D Curve
 -------------
 
-The extrusion will create a "wall" or "ribbon" following the curve shape. If using a *Bevel Depth*,
-the wall becomes a sort of slide or gutter.
-If your normals are facing the wrong way you can switch their direction as shown
-:ref:`here <bpy.ops.curve.switch_direction>`.
+An open (non-cyclic) curve with beveling applied becomes a tube.
 
 .. figure:: /images/modeling_curves_properties_geometry_extrude-open-curve.png
    :width: 320px
-
-   Open 2D Curve with :kbd:`Alt-C`, fill set to none,
-   zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.
 
 
 Closed 2D Curve
 ---------------
 
-This is probably the most useful situation, as it will quickly create a volume, with (by default)
-two flat and parallel surfaces filling the two sides of the extruded "wall". You can remove one or both of these
-faces by choosing the fill mode: both, front, back, or none.
-
-The optional bevel depth will always create a 90 degree bevels here.
+A closed (cyclic) curve with beveling applied becomes a torus by default.
+If the curve is 2D and you set the :ref:`bpy.types.Curve.fill_mode` to *Both*,
+the top and bottom holes will be filled with flat discs, and you'll get a cylinder
+with rounded edges instead.
 
 .. figure:: /images/modeling_curves_properties_geometry_extrude-closed-curve.png
    :width: 320px
 
-   Closed 2D Curve, 0.5 extrude, 0.25 Bevel Depth, 10 Bevel resolution, Fill: Both.
-
-
-3D Curve
---------
-
-Here the fact that the curve is closed or not has no importance --
-you will never get a volume with an extruded 3D curve, only a wall or ribbon, like with open 2D curves.
-
-However, there is one more feature with 3D curves: the *Tilt* of the control points (see above).
-It will make the ribbon twist around the curve to create a Möbius strip, for example.
-
+This doesn't work with 3D curves.
 
 Taper
 -----
 
-Let us taper a simple curve circle extruded object using a taper curve. Add a curve,
-then exit *Edit Mode*. Add another one (a closed one, like a circle); call it "BevelCurve",
-and enter its name in the *Bevel Object* field of the first curve
-(*Curve* tab). We now have a pipe.
-Add a third curve while in *Object Mode* and call it "TaperCurve".
-Adjust the left control point by raising it up about 5 units.
+By selecting a 2D curve as the *Taper Object* of another (2D or 3D) curve,
+you can let the radius of the latter curve's geometry vary over the curve's
+length without having to create additional control points.
 
-Now return to the Object tab,
-and edit the first curve's *Taper Object* field in the Geometry panel to reference the new taper curve
-which we called "TaperCurve".
-When you hit enter the taper curve is applied immediately,
-with the results shown in Fig. :ref:`fig-curves-extrude-taper-curve`.
+.. figure:: /images/modeling_curves_properties_geometry_extrude-taper-example.png
 
-.. list-table::
+Tilt
+----
 
-   * - .. _fig-curves-extrude-taper-curve:
-
-       .. figure:: /images/modeling_curves_properties_geometry_extrude-bevel-object.png
-          :width: 320px
-
-          Circle curve set as Bevel Object.
-
-     - .. figure:: /images/modeling_curves_properties_geometry_extrude-taper-object.png
-          :width: 320px
-
-          Taper extruded curve.
-
-You can see the *taper curve* being applied to the *extruded object*.
-Notice how the pipe's volume shrinks to nothing as the taper curve goes from left to right.
-If the taper curve went below the local Y axis the pipe's inside would become the outside,
-which would lead to rendering artifacts.
-Of course as an artist that may be what you are looking for!
-
-.. _fig-curves-extrude-taper1:
-
-.. figure:: /images/modeling_curves_properties_geometry_extrude-taper-curve-closer.png
-
-   Taper example 1.
-
-In Fig. :ref:`fig-curves-extrude-taper1`
-you can clearly see the effect the left taper curve has on the right curve object.
-Here the left taper curve is closer to the object origin and
-that results in a smaller curve object to the right.
-
-.. _fig-curves-extrude-taper2:
-
-.. figure:: /images/modeling_curves_properties_geometry_extrude-taper-curve-away.png
-
-   Taper example 2.
-
-In Fig. :ref:`fig-curves-extrude-taper2` a control point in the taper curve to the left is moved away from
-the origin and that gives a wider result to the curve object on the right.
-
-.. _fig-curves-extrude-taper3:
-
-.. figure:: /images/modeling_curves_properties_geometry_extrude-taper-curve-irregular.png
-
-   Taper example 3.
-
-In Fig. :ref:`fig-curves-extrude-taper3` we see the use of a more irregular taper curve applied to a curve circle.
+You can use the :ref:`modeling-curve-tilt` tool to rotate a control point around
+its tangent axis, creating a twist in the curve. The example below also uses
+a custom profile (cross section).
 
 .. figure:: /images/modeling_curves_properties_geometry_extrude-bevel-curve-tilt.png
-
-   Bevel extrusion with Tilt example.
