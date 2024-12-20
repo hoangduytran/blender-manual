@@ -3,18 +3,8 @@
 UV Operators
 ************
 
-.. reference::
-
-   :Editor:    3D Viewport
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Header --> UV`
-   :Shortcut:  :kbd:`U`
-
-Blender offers several ways of mapping UVs.
-The simpler projection methods use formulas that map 3D space onto 2D space,
-by interpolating the position of points toward a point/axis/plane through a surface.
-The more advanced methods can be used with more complex models, and have more specific uses.
-
+Blender offers several ways of mapping UVs, going from simple ones that merely project the
+mesh's vertices onto a plane to more advanced ones.
 
 .. _bpy.ops.uv.unwrap:
 
@@ -23,84 +13,73 @@ Unwrap
 
 .. reference::
 
-   :Editor:    3D Viewport and UV Editor
+   :Editor:    3D Viewport, UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Unwrap`
+   :Menu:      :menuselection:`UV --> Unwrap --> Angle Based, Conformal, Minimum Stretch`
    :Shortcut:  :kbd:`U`
 
-Flattens the mesh surface by cutting along :doc:`seams </modeling/meshes/uv/unwrapping/seams>`.
+Cuts the selected faces along their :doc:`seams </modeling/meshes/uv/unwrapping/seams>`,
+flattens them, and lays them out on the UV map. Previously existing UV coordinates are overwritten.
 Useful for organic shapes.
-
-
-Begin by selecting all the faces you want to unwrap.
-In the 3D Viewport, select :menuselection:`UV --> Unwrap` or :kbd:`U` and select :menuselection:`Unwrap`.
-You can also do this from the UV Editor with :menuselection:`UV --> Unwrap` or :kbd:`U`.
-This method will unwrap all faces and reset previous work.
-The UVs menu will appear in the UV Editor after unwrapping has been performed once.
 
 .. figure:: /images/modeling_meshes_editing_uv_unwrap-example.png
    :width: 420px
 
    Result of unwrapping Suzanne.
 
-This operation unwraps the faces of the object to provide
-the "best fit" scenario based on how the faces are connected and will fit within the image,
-and takes into account any seams within the selected faces.
-If possible, each selected face gets its own different area of the image and is not overlapping any other faces UVs.
-If all faces of an object are selected, then each face is mapped to a part of the image.
-
-.. tip::
-
-   A face's UV image texture only has to use *part* of the image, not the *whole* image.
-   Also, portions of the same image can be shared by multiple faces.
-   A face can be mapped to less and less of the total image.
-
 
 Options
 -------
 
-The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how a mesh is unwrapped:
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
 
 Method
- :Angle Based:
-   Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh.
- :Conformal:
-   Uses Least Squares Conformal Mapping (LSCM).
-   This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects.
- :Minimum Stretch:
-   Uses Scalable Locally Injective Mapping (SLIM).
-   This tries to balance minimizing area distortion and minimizing angle distortion.
+   Angle Based
+      Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh.
+   Conformal
+      Uses Least Squares Conformal Mapping (LSCM).
+      This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects.
+   Minimum Stretch
+      Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.
 Fill Holes
-   Activating Fill Holes will prevent overlapping from occurring and better represent any holes in the UV regions.
-Correct Aspect
-   Map UVs will take the image's aspect ratio into consideration.
-   If an image has already been mapped to the :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correctly.
+   Virtually fill holes in the mesh before unwrapping, to better avoid overlaps and preserve symmetry.
 Use Subdivision Surface
-   Map UVs taking vertex position after Subdivision Surface Modifier into account.
-Iterations
-   The Minimum Stretch method is iterative, where each iteration reduces the distortion more.
-   This option says how many iterations to use before stopping.
-Allow Flips
-   When using the Minimum Stretch method this option allows faces to flip, which sometimes results in less distortion
-   when there are pins.
-Importance Weights
-   The Minimize Stretch method has a feature that allows a user-specified vertex group to control the relative amount
-   of area used by different parts of the unwrapped map. Vertices with higher weights will mark portions of the mesh
-   whose adjacent UV map faces should be stretched larger than smaller-weight areas. When this option is chosen, there
-   are two additional options to control this:
+   Use the new vertex positions that were calculated by the :doc:`/modeling/modifiers/generate/subdivision_surface`
+   (rather than the original positions from before any modifiers are run).
+Correct Aspect
+   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
+   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
+   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
+   in the :doc:`/editors/shader_editor`.
+Iterations :guilabel:`Minimum Stretch`
+   Number of iterations for the *Minimum Stretch* method, where each iteration reduces the distortion further.
+No Flip :guilabel:`Minimum Stretch`
+   Disallow flipping faces. Allowing it sometimes results in less distortion when there are :ref:`pins <bpy.ops.uv.pin>`.
+Importance Weights :guilabel:`Minimum Stretch`
+   Lets you specify a vertex group to manually influence the size of certain faces in the UV map.
+   Faces around high-weight vertices will take up more space in the UV map than ones around low-weight vertices.
 
-   :Attribute: The name of the vertex group with the weights to be used.
-   :Factor: A global factor to multiply all the weights. A bigger number will result in a more exaggerated difference
-    between high-weight and low-weight areas.
+   When enabling this option, two more appear:
+
+   Weight Group
+      The name of the vertex group to use.
+   Weight Factor
+      A global factor to multiply all the weights by. A bigger number will result in a more exaggerated
+      difference between high-weight and low-weight areas.
 Margin Method
-   The method to use when calculating the empty space between islands.
+   The meaning of the *Margin* parameter, which determines the size of the empty space between UV islands.
 
-   :Scaled: Use scale of existing UVs to multiply margin.
-   :Add: Simple method, just add the margin.
-   :Fraction: Precisely specify the fraction of the UV unit square for margin. (Slower than other two methods.)
+   Scaled
+      The *Margin* is a more or less arbitrary measure with no direct relation to the sizes of the UV islands or
+      the texture.
+   Add
+      As above, but without the internally calculated scaling factor.
+   Fraction
+      The *Margin* is a fraction of the UV bounds. This means that, if you have a 1024x1024 texture and
+      set the *Margin* to 1/1024, each UV island will have a margin of 1 pixel around it (and islands will
+      be no closer than 2 pixels to each other).
 Margin
-   The scale for the empty space between islands.
+   How much empty space to leave between islands. Controlled by *Margin Method*.
 
 
 .. _bpy.ops.uv.smart_project:
@@ -110,61 +89,61 @@ Smart UV Project
 
 .. reference::
 
-   :Editor:    3D Viewport
+   :Editor:    3D Viewport, UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Smart UV Project`
+   :Menu:      :menuselection:`UV --> Unwrap --> Smart UV Project`
    :Shortcut:  :kbd:`U`
 
-Smart UV Project, cuts a mesh based on an angle threshold (angular changes in your mesh).
-This gives you fine control over how automatic seams are created.
-It is a good method for simple and complex geometric forms,
-such as mechanical objects or architecture.
-
-This algorithm examines the shape of your object,
-the selected faces and their relation to one another,
-and creates a UV map based on this information and settings that you supply.
-
-In the example below, the Smart Mapper mapped all of the faces of a cube to a neat arrangement of three sides on top,
-three sides on the bottom, for all six sides of the cube to fit squarely, just like the faces of the cube.
+Examines the angles between the selected faces, cuts them along any sharp edges, then projects each separated group
+of faces along its average normal and lays it out on the UV map. You can also set up
+:doc:`seams </modeling/meshes/uv/unwrapping/seams>` for additional cutting. This is a good method for, say,
+mechanical objects or architecture.
 
 .. figure:: /images/modeling_meshes_editing_uv_smart-project.png
-   :width: 670px
 
-   Smart UV project on a cube.
-
-For more complex mechanical objects,
-this operator can quickly and easily create a regular and straightforward UV layout.
+   Smart UV project on a truncated pyramid.
 
 
 Options
 -------
 
-The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how a mesh is unwrapped:
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
 
 Angle Limit
-   This controls how faces are grouped: a higher limit will lead to many small groups but less distortion,
-   while a lower limit will create fewer groups at the expense of more distortion.
+   The maximum allowed angle between the normals of adjacent faces before they're split off from each other.
+   A low limit will create lots of small UV islands with little distortion, while a high limit will create
+   a few large islands with potentially more distortion.
 Margin Method
-   The method to use when calculating the empty space between islands.
+   The meaning of the *Island Margin* parameter, which determines the size of the empty space between UV islands.
 
-   :Scaled: Use scale of existing UVs to multiply margin.
-   :Add: Simple method, just add the margin.
-   :Fraction: Precisely specify the fraction of the UV unit square for margin. (Slower than other two methods.)
+   Scaled
+      The *Island Margin* is a more or less arbitrary measure with no direct relation to the sizes of the
+      UV islands or the texture.
+   Add
+      As above, but without the internally calculated scaling factor.
+   Fraction
+      The *Island Margin* is a fraction of the UV unit square. This means that, if you have a 1024x1024
+      texture and set the *Island Margin* to 1/1024, each UV island will have a margin of 1 pixel around it
+      (and islands will be no closer than 2 pixels to each other).
 Rotation Method
-   :Axis-aligned: Rotated to a minimal rectangle, either vertical or horizontal.
-   :Axis-aligned (Horizontal): Rotate islands to be aligned horizontally.
-   :Axis-aligned (Vertical): Rotate islands to be aligned vertically.
+   Axis-aligned
+      Automatically rotate to avoid wasting space.
+   Axis-aligned (Horizontal)
+      Rotate islands to be aligned horizontally.
+   Axis-aligned (Vertical)
+      Rotate islands to be aligned vertically.
 Island Margin
-   This controls how tightly the UV islands are packed together.
-   A higher number will add more space between islands.
+   How much empty space to leave between islands. Controlled by *Margin Method*.
 Area Weight
-   Weight projection's vector by faces with larger areas.
+   With a value of 0, the projection vector of each face group is simply the average of its face normals.
+   With a value of 1, it's an average that's weighted using the faces' areas. Other values blend between the two.
 Correct Aspect
-   Map UVs will take the image's aspect ratio into consideration.
-   If an image has already been mapped to the :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correctly.
+   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
+   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
+   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
+   in the :doc:`/editors/shader_editor`.
 Scale to Bounds
-   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
+   Stretches the resulting UV map to fill the complete texture.
 
 
 .. _bpy.ops.uv.lightmap_pack:
@@ -174,35 +153,35 @@ Lightmap Pack
 
 .. reference::
 
-   :Editor:    3D Viewport
+   :Editor:    3D Viewport, UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Lightmap Pack`
+   :Menu:      :menuselection:`UV --> Unwrap --> Lightmap Pack`
    :Shortcut:  :kbd:`U`
 
-Lightmap Pack takes each of a mesh's faces, or selected faces,
-and packs them into the UV bounds. Lightmaps are used primarily in realtime rendering,
-where lighting information is baked onto texture maps,
-when it is needed to use as much UV space as possible.
-It has several options that appear in the :ref:`bpy.ops.screen.redo_last` panel:
-
+Places each selected face separately on the UV map. Lightmaps are commonly used for baking lighting information
+into a texture for use in realtime rendering -- as such, they prioritize using as much of the texture as possible,
+typically resulting in a disconnected and distorted UV map that would be unsuitable for manual texturing work.
 
 Options
 -------
 
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
+
 Selection
-   :Selected Faces: Only unwraps the selected faces.
-   :All Faces: Unwraps the whole mesh.
+   Selected Faces
+      Only unwraps the selected faces.
+   All Faces
+      Unwraps the whole mesh.
 Share Texture Space
-   This is useful if mapping more than one mesh.
-   It attempts to fit all of the objects' faces in the UV bounds without overlapping.
+   You can use :ref:`3dview-multi-object-mode` to generate UV maps for multiple meshes at the same time.
+   When *Share Texture Space* is enabled, the UV maps won't overlap each other,
+   so that you can later use the same lightmap texture for all the meshes.
 New UV Map
-   If mapping multiple meshes, this option creates a new UV map for each mesh.
-   See :ref:`uv-maps-panel`.
+   Creates a new UV map instead of overwriting the currently selected one. See :ref:`uv-maps-panel`.
 Pack Quality
-   Pre-packing before the more complex Box packing.
+   Higher values result in a UV map that wastes less space (but also takes longer to calculate).
 Margin
-   This controls how tightly the UV islands are packed together.
-   A higher number will add more space between islands.
+   How much empty space to leave between the faces in the UV map.
 
 
 .. _bpy.ops.uv.follow_active_quads:
@@ -212,42 +191,40 @@ Follow Active Quads
 
 .. reference::
 
-   :Editor:    3D Viewport
+   :Editor:    3D Viewport, UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Follow Active Quads`
+   :Menu:      :menuselection:`UV --> Unwrap --> Follow Active Quads`
    :Shortcut:  :kbd:`U`
 
-Extrapolate UV's based on the active quad by following continuous face loops,
-even if the mesh face is irregularly-shaped.
+Starts from the active quad and recursively attaches its neighboring, selected mesh quads to its
+pre-existing UV quad. Non-quad faces are ignored.
 
 .. note::
 
-   For a clean 90-degree unwrap it's typically best to first make sure the quad a rectangle in UV space.
+   Because the active quad's UV layout is left unchanged, you'll typically want to make sure it has the
+   same shape in the UV map as on the mesh before running this unwrap. Otherwise, the distortion will
+   spread to all the other faces.
 
-   Otherwise any distortion in the active UV is extended which doesn't result in a useful grid-layout.
-
-.. note::
-
-   The resulting unwrap is not clamped within the UV bounds,
-   you may wish to scale down the active quad's UV's so the result is in a usable range.
+   Also, the resulting UV map may go out of bounds. You can fix this by manually scaling it down
+   or by using :ref:`bpy.ops.uv.pack_islands`.
 
 
 Options
 -------
 
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
+
 Edge Length Mode
-   Method to space UV edge loops.
+   How to calculate the lengths of the UV edges for the newly attached quads.
 
-   :Even:
-      Space all UVs evenly, where the shape of the quad in the 3D viewport is ignored.
-   :Length:
-      Each face's UV's are calculated based on the edge length.
-
-      While this minimizes distortion, adjacent loops may become disconnected.
-   :Length Average:
-      Average space UVs edge length of each loop.
-
-      This has the benefit of minimizing distortion, while keeping UV's connected.
+   Even
+      Give each new UV edge the same length as the UV edge it's extending,
+      regardless of its length on the mesh.
+   Length
+      Give each new UV edge a length that's proportional to its length on the mesh.
+   Length Average
+      Give each new UV edge a length that's proportional to the average edge length
+      in its :ref:`edge ring <bpy.ops.mesh.select_edge_ring>` on the mesh.
 
 
 .. _bpy.ops.uv.cube_project:
@@ -257,31 +234,35 @@ Cube Projection
 
 .. reference::
 
-   :Editor:    3D Viewport
+   :Editor:    3D Viewport, UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Cube Projection`
+   :Menu:      :menuselection:`UV --> Unwrap --> Cube Projection`
    :Shortcut:  :kbd:`U`
 
-Cube Projection maps the mesh onto the faces of a cube, which is then unfolded.
-It projects the mesh onto six separate planes, creating six UV islands.
-In the UV editor, these will appear overlapped, but can be moved.
-See :doc:`Editing UVs </modeling/meshes/uv/editing>`.
+Projects each selected face onto the most suitable side of a virtual cube,
+then places all these sides in the UV map, overlapping each other.
+If you don't want them to overlap, you can use :ref:`bpy.ops.uv.pack_islands`.
+
+The cube is centered on the :doc:`/editors/3dview/controls/pivot_point/index`
+and aligned to the mesh's local axes.
 
 
 Options
 -------
 
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
+
 Cube Size
-   Set the size of the cube to be projected onto.
+   The size of the cube to project onto.
 Correct Aspect
-   Map UVs will take the image's aspect ratio into consideration.
-   If an image has already been mapped to the :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correctly.
+   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
+   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
+   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
+   in the :doc:`/editors/shader_editor`.
 Clip to Bounds
-   Any UVs that lie outside the (0 to 1) range will be clipped to that range
-   by being moved to the UV space border it is closest to.
+   Moves any out-of-bounds UVs to the nearest border.
 Scale to Bounds
-   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
+   Stretches the resulting UV map to fill the complete texture.
 
 
 .. _bpy.ops.uv.cylinder_project:
@@ -291,51 +272,72 @@ Cylinder Projection
 
 .. reference::
 
-   :Editor:    3D Viewport
+   :Editor:    3D Viewport, UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Cylinder Projection`
+   :Menu:      :menuselection:`UV --> Unwrap --> Cylinder Projection`
    :Shortcut:  :kbd:`U`
 
-Normally, to unwrap a cylinder (tube) as if you slit it lengthwise and folded it flat,
-Blender wants the view to be vertical, with the tube standing "up".
-Different views will project the tube onto the UV map differently, skewing the image if used.
-However, you can set the axis on which the calculation is done manually.
-
+Projects the selected faces onto a virtual cylinder, then unrolls that cylinder.
+The cylinder is centered on the :doc:`/editors/3dview/controls/pivot_point/index`,
+which is normally the averaged-out position of the selected faces; however, you
+can also move it to a different place using e.g. the :doc:`/editors/3dview/3d_cursor`.
 
 Options
 -------
 
-Direction
-   :View on Poles:
-      Use when viewing from the top (at a pole) by using an axis that is straight down from the view.
-   :View on Equator:
-      Use if view is looking at the equator, by using a vertical axis.
-   :Align to Object:
-      Uses the object's transform to calculate the axis.
-Align
-   How to determine rotation around the pole.
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
 
-   :Polar ZX: Polar 0 is on the X axis.
-   :Polar ZY: Polar 0 is on the Y axis.
+Direction, Align
+   The direction of the cylinder's central axis.
+
+   View on Equator
+      Use an axis that's perpendicular to the viewing direction in the 3D Viewport.
+      If *Align* is *Polar ZX*, use the vertical axis of the viewing plane;
+      if it's *Polar ZY*, use the horizontal one.
+   View on Poles
+      Use an axis that's parallel to the viewing direction in the 3D Viewport.
+      Depending on *Align*, the cylinder will be rotated by 90° around its axis and the
+      UV map will be shifted horizontally by a quarter.
+   Align to Object
+      Use the object's local Z axis.
+      Depending on *Align*, the cylinder will be rotated by 90° around its axis and the
+      UV map will be shifted horizontally by a quarter.
 Pole
-   How to handle faces at the poles.
+   How to handle vertices that lie on the cylinder's central axis. (See example below.)
 
-   :Pinch: UVs are pinched at the poles.
-   :Fan: UVs are fanned at the poles.
+   Pinch
+      Place all UV versions of the vertex at the same U coordinate.
+      This tends to result in heavily distorted UV faces.
+   Fan
+      Place each UV version of the vertex at a U coordinate that minimizes distortion.
 Preserve Seams
-   Separate projections by islands isolated by seams.
+   Cut the mesh along its seams before projecting.
 Radius
-   The radius of the cylinder to use.
+   Half the height of the cylinder (i.e. *not* its radius; we're only using the cylinder
+   for projection, so its radius doesn't matter).
 Correct Aspect
-   Map UVs will take the image's aspect ratio into consideration.
-   If an image has already been mapped to a :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correctly.
+   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
+   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
+   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
+   in the :doc:`/editors/shader_editor`.
 Clip to Bounds
-   Any UVs that lie outside the (0 to 1) range will be clipped to that range
-   by being moved to the UV space border it is closest to.
+   Moves any out-of-bounds UVs to the nearest border.
 Scale to Bounds
-   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
+   Stretches the resulting UV map to fill the complete texture.
 
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_uv_unwrap-pole.png
+
+          Unwrapping the top of a dome.
+
+     - .. figure:: /images/modeling_meshes_editing_uv_unwrap-pinch.png
+
+          Pole set to Pinch.
+
+     - .. figure:: /images/modeling_meshes_editing_uv_unwrap-fan.png
+
+          Pole set to Fan.
 
 .. _bpy.ops.uv.sphere_project:
 
@@ -344,64 +346,63 @@ Sphere Projection
 
 .. reference::
 
-   :Editor:    3D Viewport
+   :Editor:    3D Viewport, UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Sphere Projection`
+   :Menu:      :menuselection:`UV --> Unwrap --> Sphere Projection`
    :Shortcut:  :kbd:`U`
 
-Spherical mapping is similar to cylinder but the difference is that
-a cylindrical mapping projects the UVs on a plane toward the cylinder shape,
-while a spherical map takes into account the sphere's curvature,
-and each latitude line becomes evenly spaced.
-*Sphere Projection* is useful for spherical shapes, like eyes, planets, etc.
+Projects the selected faces onto a virtual sphere, then flattens that sphere
+much like a world map: the latitude lines vertical and the longitude lines
+evenly spaced. This is useful for texturing spherical shapes such as eyes or planets.
 
-Recall the opening cartographer's approaching to mapping the world? Well,
-you can achieve the same here when unwrapping a sphere from different points of view.
-Normally, to unwrap a sphere, view the sphere with the poles at the top and bottom.
-After unwrapping, Blender will give you an equirectangular projection;
-the point at the equator facing you will be in the middle of the image.
-A polar view will give a very different but common projection map.
-Using an equirectangular projection map of the earth as the UV image
-will give a good planet mapping onto the sphere.
+The sphere is centered on the :doc:`/editors/3dview/controls/pivot_point/index`,
+which is normally the averaged-out position of the selected faces; however, you
+can also move it to a different place using e.g. the :doc:`/editors/3dview/3d_cursor`.
 
 .. figure:: /images/modeling_meshes_editing_uv_sphere-projection.png
 
    Using an equirectangular image with a Sphere Projection.
 
-
 Options
 -------
 
-Direction
-   Direction of the sphere.
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
 
-   :View on Poles:
-      Use when viewing from the top (at a pole) by using an axis that is straight down from the view.
-   :View on Equator:
-      Use if view is looking at the equator, by using a vertical axis.
-   :Align to Object:
-      Uses the object's transform to calculate the axis.
-Align
-   Select which axis is up.
+Direction, Align
+   The direction of the sphere's vertical axis.
 
-   :Polar ZX: Polar 0 is on the X axis.
-   :Polar ZY: Polar 0 is on the Y axis.
+   View on Equator
+      Use an axis that's perpendicular to the viewing direction in the 3D Viewport.
+      If *Align* is *Polar ZX*, use the vertical axis of the viewing plane;
+      if it's *Polar ZY*, use the horizontal one.
+   View on Poles
+      Use an axis that's parallel to the viewing direction in the 3D Viewport.
+      Depending on *Align*, the sphere will be rotated by 90° around its vertical axis
+      and the UV map will be shifted horizontally by a quarter.
+   Align to Object
+      Use the object's local Z axis.
+      Depending on *Align*, the sphere will be rotated by 90° around its vertical axis
+      and the UV map will be shifted horizontally by a quarter.
 Pole
-   How to handle faces at the poles.
+   How to handle vertices that lie on the sphere's central axis.
+   (See :ref:`bpy.ops.uv.cylinder_project` for an example.)
 
-   :Pinch: UVs are pinched at the poles.
-   :Fan: UVs are fanned at the poles.
+   Pinch
+      Place all UV versions of the vertex at the same U coordinate.
+      This tends to result in heavily distorted UV faces.
+   Fan
+      Place each UV version of the vertex at a U coordinate that minimizes distortion.
 Preserve Seams
-   Separate projections by islands isolated by seams.
+   Cut the mesh along its seams before projecting.
 Correct Aspect
-   Map UVs will take the image's aspect ratio into consideration.
-   If an image has already been mapped to a :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correctly.
+   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
+   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
+   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
+   in the :doc:`/editors/shader_editor`.
 Clip to Bounds
-   Any UVs that lie outside the (0 to 1) range will be clipped to that range
-   by being moved to the UV space border it is closest to.
+   Moves any out-of-bounds UVs to the nearest border.
 Scale to Bounds
-   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
+   Stretches the resulting UV map to fill the complete texture.
 
 
 .. _bpy.ops.uv.project_from_view:
@@ -416,27 +417,31 @@ Project from View
    :Menu:      :menuselection:`UV --> Project from View`
    :Shortcut:  :kbd:`U`
 
-Project from View takes the current view in the 3D Viewport and flattens the mesh as it appears.
-Use this option if you are using a picture of a real object as a UV Texture for an object that
-you have modeled. You will get stretching in areas where the model recedes away from you.
+Projects the selected faces onto the view plane. The UV map essentially becomes a wireframe picture
+of the mesh, taken in the 3D Viewport at the current viewing angle. Use this option if you are using a picture
+of a real object as a texture. You will get stretching in areas where the model recedes away from you.
 
 
 Options
 -------
 
+The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
+
 Orthographic
-   Apply an orthographic projection.
+   Use an :ref:`Orthographic <bpy.ops.view3d.view_persportho>` projection instead of Perspective.
 Camera Bounds
-   Map UVs to the camera region taking resolution and aspect into account
+   Map the borders of the image that would be rendered through the current camera to the borders of the UV map.
+   This option only has an effect when viewing the scene through the camera;
+   see :ref:`bpy.ops.view3d.view_camera`.
 Correct Aspect
-   Map UVs will take the image's aspect ratio into consideration.
-   If an image has already been mapped to a :term:`Texture Space` that is non-square,
-   the projection will take this into account and distort the mapping to appear correctly.
+   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
+   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
+   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
+   in the :doc:`/editors/shader_editor`.
 Clip to Bounds
-   Any UVs that lie outside the (0 to 1) range will be clipped to that range
-   by being moved to the UV space border it is closest to.
+   Moves any out-of-bounds UVs to the nearest border.
 Scale to Bounds
-   If the UV map is larger than the (0 to 1) range, the entire map will be scaled to fit inside.
+   Stretches the resulting UV map to fill the complete texture.
 
 
 Project from View (Bounds)
@@ -459,14 +464,9 @@ Reset
 
 .. reference::
 
-   :Editor:    3D Viewport and UV Editor
+   :Editor:    3D Viewport, UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Reset`
    :Shortcut:  :kbd:`U`
 
-Reset UVs maps each face to fill the UV grid, giving each face the same mapping.
-
-If you want to use an image that is tileable,
-the surface will be covered in a smooth repetition of that image,
-with the image skewed to fit the shape of each individual face.
-Use this unwrapping option to reset the map and undo any unwrapping (go back to the start).
+Resets the UV layout of each selected face to fill the whole UV area.

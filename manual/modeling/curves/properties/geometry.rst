@@ -43,21 +43,21 @@ Taper Object
    .. note::
 
       The "taper" in the name is misleading: this word means "to reduce in size towards the end,"
-      while the *Taper Object* has no such restriction -- you can also use it to create geometry
-      that's *bigger* at the ends. A better name might have been "Scale Curve."
+      while the *Taper Object* can apply any size anywhere. A better name might have been "Scale Curve."
 
    Specifically, the *Taper Object* defines a graph where the X axis represents the position on the
    curve and the Y axis represents the scale:
 
    - The first control point of the *Taper Object* spline corresponds to the first control point of
-     each geometry spline; same thing for the last points. The first *Taper* point should have the
-     highest X coordinate, and the last point the lowest. The specific range of X coordinates doesn't
-     matter: it could be [-10, 10], [-1, 1], or anything else.
+     each geometry spline. Same thing for the last points.
+   - The first *Taper* point should have the highest X coordinate, and the last point the lowest
+     (try :ref:`bpy.ops.curve.switch_direction` if the scaling doesn't seem to be working).
+     The specific range of X coordinates doesn't matter: it could be [-10, 10], [-1, 1], or anything else.
    - A Y coordinate of 1.0 leaves the geometry unchanged. A coordinate of 0.5 makes it half as large,
      while 2.0 makes it twice as large.
 
    The Z coordinates of the *Taper Object* control points are ignored, but if you want,
-   you can set the object's :ref:`shape <bpy.types.Curve.dimensions>` to "2D" to force them to 0.
+   you can set the object's :ref:`Shape <bpy.types.Curve.dimensions>` to "2D" to force them to 0.
 
 .. _bpy.types.Curve.taper_mode:
 

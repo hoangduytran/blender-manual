@@ -36,10 +36,10 @@ As a next step, you could put the spread-out box on top of a poster, cut the pos
 to match its shape, glue the poster to the box, and finally reassemble the box.
 You now have a 3D box textured with a 2D image.
 
-A UV map describes how the box is cut up, and how it's laid out on the poster.
-You have complete freedom in how to do this: if you wanted to, you could cut each individual
-side of the box and position, rotate, scale, and even skew it on the poster
-independently of the other sides.
+A UV map thus describes how the mesh's faces are laid out on the texture.
+You have complete freedom in how to do this: if you wanted to, you could cut each face loose
+and position, rotate, scale, and even skew it on the texture independently of the others.
+What's more, faces can overlap in the UV map, making them share the same part of the texture.
 
 
 Example
