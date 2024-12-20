@@ -305,27 +305,13 @@ Direction, Align
       Depending on *Align*, the cylinder will be rotated by 90° around its axis and the
       UV map will be shifted horizontally by a quarter.
 Pole
-   How to handle vertices that lie on the cylinder's central axis. (See example below.)
+   How to handle vertices that lie on the cylinder's central axis.
 
    Pinch
       Place all UV versions of the vertex at the same U coordinate.
       This tends to result in heavily distorted UV faces.
    Fan
       Place each UV version of the vertex at a U coordinate that minimizes distortion.
-Preserve Seams
-   Cut the mesh along its seams before projecting.
-Radius
-   Half the height of the cylinder (i.e. *not* its radius; we're only using the cylinder
-   for projection, so its radius doesn't matter).
-Correct Aspect
-   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
-   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
-   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
-   in the :doc:`/editors/shader_editor`.
-Clip to Bounds
-   Moves any out-of-bounds UVs to the nearest border.
-Scale to Bounds
-   Stretches the resulting UV map to fill the complete texture.
 
 .. list-table::
 
@@ -340,6 +326,21 @@ Scale to Bounds
      - .. figure:: /images/modeling_meshes_editing_uv_unwrap-fan.png
 
           Pole set to Fan.
+
+Preserve Seams
+   Cut the mesh along its seams before projecting.
+Radius
+   Half the height of the cylinder (i.e. *not* its radius; we're only using the cylinder
+   for projection, so its radius doesn't matter).
+Correct Aspect
+   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
+   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
+   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
+   in the :doc:`/editors/shader_editor`.
+Clip to Bounds
+   Moves any out-of-bounds UVs to the nearest border.
+Scale to Bounds
+   Stretches the resulting UV map to fill the complete texture.
 
 .. _bpy.ops.uv.sphere_project:
 
