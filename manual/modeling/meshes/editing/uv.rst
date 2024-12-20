@@ -202,10 +202,12 @@ pre-existing UV quad. Non-quad faces are ignored.
 .. note::
 
    Because the active quad's UV layout is left unchanged, you'll typically want to make sure it has the
-   same shape in the UV map as on the mesh before running this unwrap. Otherwise, the distortion will
-   spread to all the other faces.
+   same shape in the UV map as on the mesh before running this unwrap (e.g. by running another type of
+   unwrap on just that face). Otherwise, the distortion will spread to all the other faces.
 
-   Also, the resulting UV map may go out of bounds. You can fix this by manually scaling it down
+.. note::
+
+   The resulting UV map may go out of bounds. You can fix this by manually scaling it down
    or by using :ref:`bpy.ops.uv.pack_islands`.
 
 
@@ -384,7 +386,7 @@ Direction, Align
       Depending on *Align*, the sphere will be rotated by 90° around its vertical axis
       and the UV map will be shifted horizontally by a quarter.
 Pole
-   How to handle vertices that lie on the sphere's central axis.
+   How to handle vertices that lie on the sphere's vertical axis.
    (See :ref:`bpy.ops.uv.cylinder_project` for an example.)
 
    Pinch
