@@ -175,16 +175,18 @@ For more options see::
 Updating PO Files
 -----------------
 
-As the original manual changes, the templates will need updating.
-Note, doing this is not required,
-as administrator usually update the files for all languages at once.
-This allows all languages to be on the same version of the manual.
-However, if you need to update the files yourself, it can be done as follows::
+An administrator will regularly update the PO files to match the latest version of the
+English manual (typically once a week). You can check when the last update happened on the
+`Blender Manual Translations <https://projects.blender.org/blender/blender-manual-translations>`__
+project page.
+
+You can also update the files yourself by running the following command::
 
    make update_po
 
-The updated templates can then be committed to the repository.
+However, translators can't upload these updated files, so in practice there's not much point
+in doing this.
 
 .. seealso::
 
-   A guide how to add a new language can be found in the :doc:`/contribute/translations/add_language`.
+   :doc:`/contribute/translations/add_language`
