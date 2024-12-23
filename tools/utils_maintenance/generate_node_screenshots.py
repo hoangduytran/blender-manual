@@ -79,19 +79,53 @@ class MakeScreenshotsOperator(bpy.types.Operator):
     bl_idname = "test.make_screenshots"
     bl_label = "Make Screenshots"
 
+    only_selected: bpy.props.BoolProperty(
+        name="Only Selected Nodes",
+        description="Only create screenshots for selected nodes",
+        default=False
+    )
+
     def invoke(self, context, event):
+        # Prompt user for confirmation
+        return context.window_manager.invoke_props_dialog(self)
+
+    def execute(self, context):
+        # Start the modal operation after confirmation
         context.window_manager.modal_handler_add(self)
 
-        tree_type = context.space_data.node_tree.type
-        self.node_names_iterator = islice(iter_node_names(tree_type), 10000)
+        node_tree = context.space_data.node_tree
+        if self.only_selected:
+            selected_nodes = [node for node in node_tree.nodes if node.select]
+            if not selected_nodes:
+                self.report({'WARNING'}, "No nodes selected!")
+                return {'CANCELLED'}
+            self.selected_nodes = selected_nodes
+            self.selected_index = 0
+            return self.prepare_selected_node(context)
+        else:
+            tree_type = node_tree.type
+            self.node_names_iterator = islice(iter_node_names(tree_type), 10000)
+            return self.prepare_next_node(context)
 
-        return self.prepare_next_node(context)
+    def prepare_selected_node(self, context):
+        if self.selected_index >= len(self.selected_nodes):
+            return {'FINISHED'}
+
+        # Get the current node and deselect it
+        self.current_node = self.selected_nodes[self.selected_index]
+        self.current_name = self.current_node.bl_idname
+        self.selected_nodes[self.selected_index].select = False  # Deselect the node
+
+        self.selected_index += 1
+        context.area.tag_redraw()
+        return {'RUNNING_MODAL'}
 
     def prepare_next_node(self, context):
         try:
             node_name = next(self.node_names_iterator)
         except:
             return {'FINISHED'}
+
         node_tree = context.space_data.node_tree
         for node in node_tree.nodes:
             node.location.x = 10000
@@ -115,11 +149,11 @@ class MakeScreenshotsOperator(bpy.types.Operator):
         rect.width += margin * 2
         rect.height += margin * 2
 
-        bpy.ops.screen.screenshot_area(filepath=filepath)
-
         cut_image(temp_path, filepath, rect)
         context.area.tag_redraw()
 
+        if self.only_selected:
+            return self.prepare_selected_node(context)
         return self.prepare_next_node(context)
 
 
