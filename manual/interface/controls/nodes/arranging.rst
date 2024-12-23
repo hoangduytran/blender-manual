@@ -8,7 +8,7 @@ Snapping
 
 .. _bpy.types.ToolSettings.use_snap_node:
 
-Snapping aligns nodes the grid in the background.
+Snapping aligns the position and size of nodes to the background grid.
 This feature allows nodes to snap to a grid, ensuring that node layouts remain clean and visually aligned.
 Snapping can be toggling the snap icon (:bl-icon:`snap_off`/:bl-icon:`snap_on`) in the editor's headers
 or toggled temporarily while :ref:`transforming <nodes-editing-transform>` nodes by holding :kbd:`Ctrl`.
