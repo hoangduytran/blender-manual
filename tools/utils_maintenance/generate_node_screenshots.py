@@ -1,4 +1,5 @@
 import bpy
+import subprocess
 from dataclasses import dataclass
 from itertools import islice
 from pathlib import Path
@@ -47,6 +48,8 @@ def node_region_rect(region, node):
     location = node.location
     dimensions = node.dimensions
 
+    print(region)
+
     view_to_region = region.view2d.view_to_region
     bottom_left = view_to_region(
         location.x, location.y - dimensions.y, clip=False)
@@ -82,6 +85,11 @@ class MakeScreenshotsOperator(bpy.types.Operator):
     only_selected: bpy.props.BoolProperty(
         name="Only Selected Nodes",
         description="Only create screenshots for selected nodes",
+        default=False
+    )
+    convert_to_webp: bpy.props.BoolProperty(
+        name="Convert to WebP",
+        description="Convert screenshots to WebP format",
         default=False
     )
 
@@ -136,10 +144,21 @@ class MakeScreenshotsOperator(bpy.types.Operator):
         self.current_name = node_name
         return {'RUNNING_MODAL'}
 
+    def convert_to_webp_function(self, input_path, output_path):
+        try:
+            # Ensure cwebp is available on the system path
+            subprocess.run(['cwebp', '-lossless', input_path, '-o', output_path], check=True)
+            print(f"Converted {input_path} to {output_path}")
+        except subprocess.CalledProcessError as e:
+            self.report({'ERROR'}, f"Failed to convert to WebP: {e}")
+            print(f"Error during WebP conversion: {e}")
+
     def modal(self, context, event):
         base_path = Path.home() / "Downloads" / "node_screenshots"
         temp_path = str(base_path / "temp.png")
         filepath = str(base_path / f"node-types_{self.current_name}.png")
+        webp_filepath = str(base_path / f"node-types_{self.current_name}.webp")
+
         bpy.ops.screen.screenshot_area(filepath=temp_path)
 
         rect = node_region_rect(context.region, self.current_node)
@@ -150,7 +169,12 @@ class MakeScreenshotsOperator(bpy.types.Operator):
         rect.height += margin * 2
 
         cut_image(temp_path, filepath, rect)
-        context.area.tag_redraw()
+
+        if self.convert_to_webp:
+            # Convert PNG to WebP
+            self.convert_to_webp_function(filepath, webp_filepath)
+            # Optionally, delete the PNG after conversion
+            Path(filepath).unlink()
 
         if self.only_selected:
             return self.prepare_selected_node(context)
