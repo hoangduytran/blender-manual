@@ -37,6 +37,43 @@ different operating systems.
 FFmpeg Containers
 =================
 
+:`MPEG-4 <https://en.wikipedia.org/wiki/MPEG-4>`__:
+   While being a :ref:`video codec <files-video-codecs>`, it is also a real container,
+   in which you can store video and audio streams using various codecs.
+   It is widely supported by many modern software and hardware players.
+
+   File Extensions: ``.mp4``, ``.mpg``, ``.mpeg``
+:`Matroska <https://en.wikipedia.org/wiki/Matroska>`__:
+   A free open-standard container format, a file format that can hold an unlimited number of video,
+   audio, picture or subtitle tracks in one file.
+
+   File Extension: ``.mkv``
+:`WebM <https://en.wikipedia.org/wiki/WebM>`__:
+   A free open-standard container format, designed to be used for internet streaming.
+   Note that this container can only hold a VP9 video codec, and Vorbis or Opus audio codecs.
+
+   File Extension: ``.webm``
+
+-----
+
+:`AVI <https://en.wikipedia.org/wiki/Audio_Video_Interleave>`__:
+   A derivative of the Resource Interchange File Format (RIFF).
+   One of the first and most widely used video container format.
+
+   File Extension: ``.avi``
+:`DV <https://en.wikipedia.org/wiki/DV>`__:
+   An intra-frame video compression scheme, used by many digital camcorders back in the days.
+   It uses the discrete cosine transform (DCT, similar algorithm to JPEG)
+   to compress video on a frame-by-frame basis.
+   Audio is stored uncompressed.
+   This container enforces the video codec, you can only define quality parameters.
+
+   File extension: ``.dv``
+:`Flash <https://en.wikipedia.org/wiki/Flash_Video>`__:
+   A container file format used to deliver video over the Internet using Adobe Flash Player.
+   This container enforces the video codec, you can only define quality parameters.
+
+   File Extension: ``.flv``
 :`MPEG-1 <https://en.wikipedia.org/wiki/MPEG-1>`__:
    A standard for lossy compression of video and audio.
    It is designed to compress VHS-quality raw digital video and CD audio down to 1.5 Mbit/s.
@@ -51,51 +88,17 @@ FFmpeg Containers
    This container enforces the video codec, you can only define quality parameters, and the audio codec.
 
    File Extensions:  ``.dvd``, ``.vob``, ``.mpg``, ``.mpeg``
-:`MPEG-4 <https://en.wikipedia.org/wiki/MPEG-4>`__:
-   While being a :ref:`video codec <files-video-codecs>`, it is also a real container,
-   in which you can store video and audio streams using various codecs.
-   It is widely supported by many modern software and hardware players.
+:`Ogg <https://en.wikipedia.org/wiki/Ogg>`__:
+   A free open-standard container format, that can hold an unlimited number of video,
+   audio, picture or subtitle tracks in one file.
 
-   File Extensions: ``.mp4``, ``.mpg``, ``.mpeg``
-:`AVI <https://en.wikipedia.org/wiki/Audio_Video_Interleave>`__:
-   A derivative of the Resource Interchange File Format (RIFF).
-   One of the first and most widely used video container format.
-
-   File Extension: ``.avi``
+   File Extensions:  ``.ogg``, ``.ogv``
 :`QuickTime <https://en.wikipedia.org/wiki/.mov>`__:
    A multi-tracks format. QuickTime and MP4 container formats can use the same codecs.
    They are mostly interchangeable in a QuickTime-only environment.
    MP4, being an international standard, has more support.
 
    File Extension: ``.mov``
-:`DV <https://en.wikipedia.org/wiki/DV>`__:
-   An intra-frame video compression scheme, used by many digital camcorders back in the days.
-   It uses the discrete cosine transform (DCT, similar algorithm to JPEG)
-   to compress video on a frame-by-frame basis.
-   Audio is stored uncompressed.
-   This container enforces the video codec, you can only define quality parameters.
-
-   File extension: ``.dv``
-:`Ogg <https://en.wikipedia.org/wiki/Ogg>`__:
-   A free open-standard container format, that can hold an unlimited number of video,
-   audio, picture or subtitle tracks in one file.
-
-   File Extensions:  ``.ogg``, ``.ogv``
-:`Matroska <https://en.wikipedia.org/wiki/Matroska>`__:
-   A free open-standard container format, a file format that can hold an unlimited number of video,
-   audio, picture or subtitle tracks in one file.
-
-   File Extension: ``.mkv``
-:`Flash <https://en.wikipedia.org/wiki/Flash_Video>`__:
-   A container file format used to deliver video over the Internet using Adobe Flash Player.
-   This container enforces the video codec, you can only define quality parameters.
-
-   File Extension: ``.flv``
-:`WebM <https://en.wikipedia.org/wiki/WebM>`__:
-   A free open-standard container format, designed to be used for internet streaming.
-   Note that this container can only hold a VP9 video codec, and Vorbis or Opus audio codecs.
-
-   File Extension: ``.webm``
 
 
 .. _files-video-codecs:
@@ -106,6 +109,19 @@ FFmpeg Video Codecs
 These options are not available with all :ref:`Containers <files-video-containers>`.
 
 :No Video: For audio-only encoding.
+:`AV1 <https://en.wikipedia.org/wiki/AV1>`__:
+   A free open-standard lossy video compression format, designed as a successor to *VP9*.
+   AV1 offers great compression rates and visual quality,
+   *AV1* produces video files that are about 30% more space efficient than *VP9*
+:`H.264 <https://en.wikipedia.org/wiki/H.264>`__:
+   A modern variation of the MPEG-4 family, this lossy codec is very commonly used.
+   It offers a very good compression/quality ratio.
+:`WEBM / VP9 <https://en.wikipedia.org/wiki/VP9>`__:
+   A free open-standard lossy video compression format.
+   One of the most recent codecs, it is widely used for internet streaming.
+
+-----
+
 :`DNxHD <https://en.wikipedia.org/wiki/Avid_DNxHD>`__:
    Intended to be usable as both an intermediate format suitable for use while editing,
    and as a presentation format. It can be either lossless or lossy.
@@ -118,9 +134,6 @@ These options are not available with all :ref:`Containers <files-video-container
    Supports an alpha channel.
 :`Flash Video <https://en.wikipedia.org/wiki/Flash_Video>`__:
    See :ref:`Containers <files-video-containers>`.
-:`H.264 <https://en.wikipedia.org/wiki/H.264>`__:
-   A modern variation of the MPEG-4 family, this lossy codec is very commonly used.
-   It offers a very good compression/quality ratio.
 :`HuffYUV <https://en.wikipedia.org/wiki/Huffyuv>`__:
    Lossless video codec created by Ben Rudiak-Gould which is
    meant to replace uncompressed YCbCr as a video capture format.
@@ -138,13 +151,6 @@ These options are not available with all :ref:`Containers <files-video-container
    Original format of QuickTime videos. Supports an alpha channel.
 :`Theora <https://en.wikipedia.org/wiki/Theora>`__:
    A free open-standard lossy codec designed together with the :ref:`Ogg container <files-video-containers>`.
-:`WEBM / VP9 <https://en.wikipedia.org/wiki/VP9>`__:
-   A free open-standard lossy video compression format.
-   One of the most recent codecs, it is widely used for internet streaming.
-:`AV1 <https://en.wikipedia.org/wiki/AV1>`__:
-   A free open-standard lossy video compression format, designed as a successor to *VP9*.
-   AV1 offers great compression rates and visual quality,
-   *AV1* produces video files that are about 30% more space efficient than *VP9*
 
 
 .. _files-audio-codecs:
