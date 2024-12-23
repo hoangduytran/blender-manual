@@ -31,30 +31,50 @@ Style
 Font
    :ref:`ui-data-block` to choose which font-file is used to render the text.
 
-   Bold
+   :bl-icon:`bold` (Bold)
       Use a bold font face with a strong/thick visual appearance.
-   Italics
+   :bl-icon:`italic` (Italic)
       Use an italicized font face with a slanted visual appearance.
 Size
    Size of the text.
 Color
    The text color.
-Shadow
-   Creates a shadow of the specified color under the text.
-Shadow Angle
-   Defines the position of the shadow as an angle, 0° being to the right and 90° being below.
-Shadow Offset
-   Amount to shift the shadow compared to the normal text.
-Shadow Blur
-   Amount to blur the shadow.
+
+
 Outline
-   Creates a line with the defined color enclosing the shape of the text.
-Outline Width
+^^^^^^^
+
+Creates a line enclosing the shape of the text.
+
+Color
+   The color and opacity of the outline.
+Width
    The thickness of the outline.
+
+
+Shadow
+^^^^^^
+
+Creates a shadow under the text.
+
+Color
+   The color and opacity of the shadow.
+Angle
+   Defines the position of the shadow as an angle, 0° being to the right and 90° being below.
+Offset
+   Amount to shift the shadow compared to the normal text.
+Blur
+   Amount to blur the shadow.
+
+
 Box
-   Creates a background for the text to improve the readability and clarity of text in some situations.
-   The color and opacity of the box can be adjusted using the color selector.
-Box Margin
+^^^
+
+Creates a background for the text to improve the readability and clarity of text in some situations.
+
+Color
+   The color and opacity of the box.
+Margin
    The distance the box boundaries extends from the boundaries of the font glyphs.
    The distance is measured as a factor of the image's width.
 
