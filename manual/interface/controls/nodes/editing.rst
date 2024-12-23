@@ -3,6 +3,8 @@
 Editing
 *******
 
+.. _nodes-editing-transform:
+
 Transform
 =========
 

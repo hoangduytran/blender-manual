@@ -8,28 +8,10 @@ Snapping
 
 .. _bpy.types.ToolSettings.use_snap_node:
 
-The snapping options can be found on the rightmost side
-of the node editor's header.
-
-Snap :kbd:`Shift-Tab`
-   Toggle snapping on or off. You can also do this temporarily by holding :kbd:`Ctrl` after starting to drag
-   one or more nodes around.
-
-Snap Node Element :kbd:`Shift-Ctrl-Tab`
-   What to snap the selected nodes to:
-
-   :Grid: Snap to the grid in the background.
-   :Node X: Snap to the X coordinate of another node's vertical border.
-   :Node Y: Snap to the Y coordinate of another node's horizontal border.
-   :Node X/Y: Combination of the above.
-
-Snap Target
-   Which part of the selected nodes to snap:
-
-   :Closest: Snap closest point onto target.
-   :Center: Snap center of selected nodes onto target.
-   :Median: Snap median of selected nodes onto target.
-   :Active: Snap active node onto target.
+Snapping aligns nodes the grid in the background.
+This feature allows nodes to snap to a grid, ensuring that node layouts remain clean and visually aligned.
+Snapping can be toggling the snap icon (:bl-icon:`snap_off`/:bl-icon:`snap_on`) in the editor's headers
+or toggled temporarily while :ref:`transforming <nodes-editing-transform>` nodes by holding :kbd:`Ctrl`.
 
 
 .. _editors-nodes-usage-auto-offset:
@@ -52,6 +34,7 @@ You can toggle the offset direction while you are moving the node by pressing :k
 The offset margin can be changed using the *Auto-offset Margin*
 setting in the Editing section of the Preferences.
 
-.. seealso:: Example Video:
+.. admonition:: Example Video
+   :class: seealso
 
    `Auto-Offset. A workflow enhancement for Blender's node editors <https://vimeo.com/135125839>`__.
