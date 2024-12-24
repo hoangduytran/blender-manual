@@ -52,10 +52,13 @@ File Format
 .. _bpy.types.ImageFormatSettings.color_mode:
 
 Color
-   Choose the color format to save the image to.
-   Note that *RGBA* will not be available for all image formats.
+   The color format to save the image or video to.
+   This setting is used by some formats to optimize how much data is written to the file.
+   Note, *RGBA* is not available for all image formats, check the list above for details.
 
-   BW, RGB, RGBA
+   :BW: Saves the image using grayscale colors.
+   :RGB: Saves red, green and blue channels
+   :RGBA: Saves red, green, blue and alpha channels.
 
 Image Sequence
    .. _bpy.types.RenderSettings.use_overwrite:

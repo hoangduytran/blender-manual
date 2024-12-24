@@ -162,14 +162,24 @@ Saving Images
 File Format
    Choose what format to save the image as.
 
-Color Mode
-   Choose the color format to save the image (or video) to.
-   Note that *RGBA* is not available for all image formats, check the list above for details.
+Color
+   The color format to save the image or video to.
+   This setting is used by some formats to optimize how much data is written to the file.
+   Note, *RGBA* is not available for all image formats, check the list above for details.
 
-   BW, RGB, RGBA
+   :BW: Saves the image using grayscale colors.
+   :RGB: Saves red, green and blue channels
+   :RGBA: Saves red, green, blue and alpha channels.
+
+.. _bpy.types.ImageFormatSettings.color_depth:
+
 Color Depth
-   Some image file formats support a varying number of bits per pixel.
-   This affects the color quality and file size. Commonly used depths:
+   The exponent value (with base two) for how many colors can be represented within a single color channel.
+   A higher bit depth will allow more possible colors, reducing banding, and increasing precision.
+   Yet a higher bit depth will increase memory usage exponentially.
+
+   Note, not all file formats support every color depth configuration.
+   Below is a list of commonly used depths:
 
    :8-bit:
       Most common for on-screen graphics and video.
@@ -201,7 +211,7 @@ Save As Render
    For display image formats like PNG, apply view and display transform.
    For intermediate image formats like OpenEXR, use the default render output color space.
 Copy
-   The Copy checkbox will define if the data-block will reference the newly created file
+   Defines if the data-block will reference the newly created file
    or the reference will be unchanged, maintaining it with the original one.
 
 Color Space
@@ -286,9 +296,11 @@ Codec
       Lossy compression for 16 bit float images, at fixed 2.3:1 ratio
       with further compression on areas of flat color are further compressed, such as alpha channels.
 
+.. _bpy.types.ImageFormatSettings.use_preview:
+
 Preview
-   On rendering animations (or single frames via command line),
-   Blender saves the same image also as a JPEG, for quick preview or download.
+   When rendering animations (or single frames via command line),
+   save a JPEG copy of the image, for a quick preview.
 
 
 Radiance HDR
