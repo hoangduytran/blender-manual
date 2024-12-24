@@ -481,6 +481,16 @@ for more information.
    If *USD Preview Surface Network* and *MaterialX Network* are disabled,
    the material is set to the viewport materials of meshes.
 
+.. admonition:: Displacement Support
+   :class: warning
+
+   :doc:`Displacement </render/materials/components/displacement>` is support with some caveats:
+
+   - Only object space displacement is supported (no vector displacement).
+   - *Midlevel* and *Scale* controls can only be constants.
+   - MaterialX is currently not supported,
+     see the `feature commit <https://projects.blender.org/blender/blender/commit/b4c2feea38>`__ for details.
+
 USD Preview Surface Network
    Approximates a :doc:`/render/shader_nodes/shader/principled`
    node tree by converting it to USD's Preview Surface format.
