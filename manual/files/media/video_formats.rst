@@ -113,9 +113,12 @@ These options are not available with all :ref:`Containers <files-video-container
    A free open-standard lossy video compression format, designed as a successor to *VP9*.
    AV1 offers great compression rates and visual quality,
    *AV1* produces video files that are about 30% more space efficient than *VP9*
-:`H.264 <https://en.wikipedia.org/wiki/H.264>`__:
+:`H.264 <https://en.wikipedia.org/wiki/Advanced_Video_Coding>`__:
    A modern variation of the MPEG-4 family, this lossy codec is very commonly used.
    It offers a very good compression/quality ratio.
+:`H.265 / HEVC <https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding>`__:
+   An improved format of H.264 with improved compression efficiency, advanced motion compensation,
+   larger coding blocks, and enhanced prediction models for high-resolution content.
 :`WEBM / VP9 <https://en.wikipedia.org/wiki/VP9>`__:
    A free open-standard lossy video compression format.
    One of the most recent codecs, it is widely used for internet streaming.
