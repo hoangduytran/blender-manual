@@ -248,25 +248,44 @@ Output Options
 Available options for OpenEXR render output are:
 
 Color Depth
-   *Half* saves images in a custom 16 bits per channel floating-point format.
-   This reduces the actual "bit depth" to 10-bit, with a 5-bit power value and 1-bit sign.
+   The exponent value (with base two) for how many colors can be represented within a single color channel.
+   A higher bit depth will allow more possible colors, reducing banding, and increasing precision.
+   Yet a higher bit depth will increase memory usage exponentially.
 
-   Float (Half), Float (Full)
+   :Float (Half):
+      Saves images in a custom 16 bits per channel in a floating-point format.
+      This reduces the actual "bit depth" to 10-bit, with a 5-bit power value and 1-bit sign.
+   :Float (Full):
+      Saves images using 32 bits per channel in a floating-point format.
+
+.. _bpy.types.ImageFormatSettings.exr_codec:
+
 Codec
-   :``PXR24``:
-      Lossy algorithm from Pixar, converting 32-bit floats to 24-bit floats.
-   :``ZIP``:
-      Standard lossless compression using Zlib, operating on 16 scanlines at a time.
-   :``PIZ``:
-      Lossless wavelet compression. Compresses images with grain well.
-   :``RLE``:
-      Run-length encoded, lossless, works well when scanlines have same values.
-   :``ZIPS``:
-      Standard lossless compression using Zlib, operating on a single scanline at a time.
-   :``DWAA``:
-      JPEG-like lossy algorithm from DreamWorks; compresses blocks 32 scanlines together.
-   :``DWAB``:
-      Same as ``DWAA`` but compresses blocks of 256 scanlines.
+   The type of compression to encode the EXR-file with.
+
+   :None: Disables all compression for fastest encoding times but creates larger file sizes.
+   :ZIP:
+      Lossless compression using Zlib on 16 row image blocks.
+   :PIZ:
+      Lossless wavelet compression, effective for noisy/grainy images.
+   :DWAA (lossy):
+      JPEG-like lossy compression on 32 row image blocks.
+   :DWAB (lossy):
+      JPEG-like lossy compression on 256 row image blocks.
+   :ZIPS:
+      Lossless compression using Zlib, each image row compressed separately
+   :RLE:
+      Lossless run length encoding compression, works well when image rows have the same values.
+   :Pxr24 (lossy):
+      Converts 32-bit floats to 24 bits then uses deflate compression.
+      Pxr24 is lossless for half and 32-bit integer data and slightly lossy for 32-bit float data.
+   :B44 (lossy):
+      Lossy compression for 16 bit float images, at fixed 2.3:1 ratio.
+      B44 compresses uniformly regardless of image content.
+   :B44A (lossy):
+      Lossy compression for 16 bit float images, at fixed 2.3:1 ratio
+      with further compression on areas of flat color are further compressed, such as alpha channels.
+
 Preview
    On rendering animations (or single frames via command line),
    Blender saves the same image also as a JPEG, for quick preview or download.
