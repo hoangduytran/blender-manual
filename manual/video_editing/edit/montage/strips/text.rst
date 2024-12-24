@@ -77,6 +77,8 @@ Color
 Margin
    The distance the box boundaries extends from the boundaries of the font glyphs.
    The distance is measured as a factor of the image's width.
+Roundness
+   Rounds the corners of the box, defined as a factor of box height.
 
 
 Layout
