@@ -1,4 +1,3 @@
-
 ******************
 Light Probe Volume
 ******************
@@ -143,7 +142,7 @@ Indirect Light
 
 .. tip::
 
-   Setting *Clamp Indirect* to a very non-zero value will effectively only record the first light bounce leading.
+   Setting *Clamp Indirect* to a very small non-zero value will effectively only record the first light bounce leading.
 
 
 Offset
