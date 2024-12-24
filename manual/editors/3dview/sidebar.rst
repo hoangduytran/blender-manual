@@ -87,16 +87,22 @@ Lock to Object
 
 .. _bpy.types.SpaceView3D.lock_cursor:
 
-Lock: To 3D Cursor
+Lock -- To 3D Cursor
    Makes the 3D Cursor the point of interest of the viewpoint.
    This option is only available when *Lock to Object* is not active.
 
 .. _bpy.types.SpaceView3D.lock_camera:
 
-Lock: Camera to View
+Lock -- Camera to View
    When looking through a camera, the camera becomes "glued" to the view
    and will follow it around as you navigate.
    The camera frame will be outlined with a red dashed line.
+
+.. _bpy.types.RegionView3D.lock_rotation:
+
+Lock -- Rotation
+
+   Prevent changes to the orientation and perspective of the 3D Viewport.
 
 .. hint::
 
