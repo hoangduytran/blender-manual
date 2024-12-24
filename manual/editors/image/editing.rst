@@ -106,6 +106,9 @@ Copy and pastes images to/from a computers operating system.
 
 Currently, only PNG files are supported and Linux support requires Wayland.
 
+On Windows, images can be pasted into Blender using only the file path to the image
+(with this method, all image formats are supported).
+
 
 .. _bpy.ops.image.save:
 
