@@ -283,7 +283,7 @@ Version/Revision Milestones
 
 `3.0 <https://www.blender.org/download/releases/3-0/>`__ -- December 2021
    Asset Browser added, Cycles X, EEVEE Attributes, New geometry nodes,
-   animation update, Grease Pencil line art improvements, pose library,
+   animation update, Grease Pencil Line Art improvements, pose library,
    Open Image Denoising 2-8x faster, additional support for AMD on linux.
 
 `3.1 <https://www.blender.org/download/releases/3-1/>`__ -- March 2022
@@ -296,7 +296,7 @@ Version/Revision Milestones
    AMD GPU Rendering on Linux, painting in sculpt mode, WEBp image support.
 
 `3.3 <https://www.blender.org/download/releases/3-3/>`__ -- September 2022
-   New hair object, procedural UV nodes, line art shadow and contour,
+   New hair object, procedural UV nodes, Line Art shadow and contour,
    Intel GPU rendering support via oneAPI, and improvements to library overrides.
 
 `3.4 <https://www.blender.org/download/releases/3-4/>`__ -- December 2022

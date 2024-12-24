@@ -28,8 +28,8 @@ Options
 Target Object
    Determines if the image empty is kept or replaced.
 
-   New Object: Creates a new grease pencil object and keeps the image empty
-   Selected Object: Replaces the image empty with the grease pencil object.
+   New Object: Creates a new Grease Pencil object and keeps the image empty
+   Selected Object: Replaces the image empty with the Grease Pencil object.
 Radius
    The thickness of the generated Grease Pencil strokes.
 Color Threshold

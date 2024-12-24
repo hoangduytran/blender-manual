@@ -20,7 +20,7 @@ Inputs
 ======
 
 Grease Pencil
-   The grease pencil object with multiple layers to combine.
+   The Grease Pencil object with multiple layers to combine.
 Selection
    Operate of a subset of layers by setting the field layer index value to *true*.
    By default, all layers are selected.
@@ -43,4 +43,4 @@ Outputs
 =======
 
 Grease Pencil
-   The grease pencil object with combined layers.
+   The Grease Pencil object with combined layers.

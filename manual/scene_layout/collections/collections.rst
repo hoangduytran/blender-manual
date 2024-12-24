@@ -103,7 +103,7 @@ Line Art
 .. _bpy.types.Collection.lineart_usage:
 
 Usage
-   How the collection is loaded into line art.
+   How the collection is loaded into Line Art.
    Child objects of the collection can override this setting
    if they wish in :ref:`Object Properties <bpy.types.ObjectLineArt.usage>`.
 
@@ -112,7 +112,7 @@ Usage
       Objects in the collection will only cause occlusion to existing feature lines
       and their geometry stay invisible.
    :Exclude:
-      Objects in this collection will not be loaded into line art at all.
+      Objects in this collection will not be loaded into Line Art at all.
    :Intersection Only:
       Objects in the collection will only produce intersection lines in
       the scene and their own geometry stay invisible.

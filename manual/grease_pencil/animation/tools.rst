@@ -147,8 +147,8 @@ the selected objects with all those modifiers, drivers, and constraints applied,
 Target Object
    Determines if the image empty is kept or replaced.
 
-   New Object: Creates a new grease pencil object and keeps the image empty
-   Selected Object: Replaces the image empty with the grease pencil object.
+   New Object: Creates a new Grease Pencil object and keeps the image empty
+   Selected Object: Replaces the image empty with the Grease Pencil object.
 Start Frame, End Frame
    Start/End frame for the baking process.
 Step

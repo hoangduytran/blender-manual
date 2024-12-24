@@ -333,7 +333,7 @@ Freestyle
 ---------
 
 These settings apply to the :doc:`Freestyle </render/freestyle/introduction>`
-line art renderer.
+Line Art renderer.
 
 Edge Marks
    Display Freestyle edge marks.

@@ -354,7 +354,7 @@ Delete
    :Menu:      :menuselection:`Grease Pencil --> Delete`
    :Shortcut:  :kbd:`X`, :kbd:`Delete`
 
-Opens a pop-up menu with operators to remove geometry from the grease pencil object.
+Opens a pop-up menu with operators to remove geometry from the Grease Pencil object.
 
 Frames
    Deletes all the strokes at the current frame and in the current layer/channel.
