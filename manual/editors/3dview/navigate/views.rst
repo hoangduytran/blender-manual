@@ -41,11 +41,8 @@ Options
    :Mode:      All modes
    :Menu:      :menuselection:`Sidebar --> View --> Quad View`
 
-.. _bpy.types.RegionView3D.lock_rotation:
-
 Lock Rotation
-   When disabled, makes it possible to orbit in the orthographic views as well
-   (turning them into perspective views instead).
+   Prevent changes to the orientation and perspective of the 3D Viewport.
 
 .. _bpy.types.RegionView3D.show_sync_view:
 
