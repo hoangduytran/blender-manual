@@ -9,83 +9,74 @@ Map UV Node
    :align: right
    :alt: Map UV node.
 
-Map a texture using UV coordinates, to apply a texture to objects in compositing.
+Distorts a texture so it can be composited onto the UV-mapped objects in the scene.
 
-May be used in combination with :doc:`Cryptomatte Node </compositing/types/mask/cryptomatte>`
-to apply the texture only to specific objects.
+May be used in combination with the :doc:`Cryptomatte Node </compositing/types/mask/cryptomatte>`
+to only apply the texture to specific objects.
 
 
 Inputs
 ======
 
 Image
-   The new 2D texture.
+   The texture to distort.
 UV
-   The input for UV render pass.
-   See :doc:`Cycles render passes </render/layers/passes>`.
+   The UV coordinates at which to sample the texture. This slot is typically connected
+   to the UV render pass, which is only available with the Cycles renderer;
+   see :doc:`Cycles render passes </render/layers/passes>`.
 
 .. hint::
 
-   To store the UV pass a multi-layer OpenEXR format could be used.
+   It's possible to store the UV information in a multi-layer OpenEXR file.
 
 
 Properties
 ==========
 
 Filter Type
-   Interpolation Methods.
+   Interpolation method.
 
    :Anisotropic:
       Enhances the clarity of textures viewed at oblique angles, addressing issues like blurring and distortion.
    :Nearest: No interpolation, uses nearest neighboring pixel.
 
 Alpha
-   Alpha threshold is used to fade out pixels on boundaries.
+   Alpha threshold used to fade out pixels on boundaries.
 
 
 Outputs
 =======
 
 Image
-   The resulting image is the input image texture distorted to match the UV coordinates.
-   That image can then be overlay mixed with the original image to paint
-   the texture on top of the original. Adjust alpha and the mix factor to control
-   how much the new texture overlays the old.
-
-.. hint::
-
-   When painting the new texture,
-   it helps to have the UV maps for the original objects in the scene,
-   it is recommended to keep those UV texture outlines around even, when shooting is done.
+   The distorted texture, which can then be overlayed on the render using e.g. the
+   :doc:`/compositing/types/color/mix/alpha_over`.
 
 
 Examples
 ========
 
-In the example below,
-we have overlaid a grid pattern on top of the two heads after they have been rendered.
-During rendering, we enabled the UV layer in the Properties
-:menuselection:`Render Layer --> Passes`. Using a Mix node ("Overlay" in figure),
-we mix that new UV texture over the original face.
-We can use this grid texture to help in any motion tracking that we need to do.
+In the first example, we overlay a grid pattern on top of two Suzanne heads after they have
+been rendered. To achieve this, we enable the UV pass in the
+:doc:`Property Editor </editors/properties_editor>`'s
+:menuselection:`View Layer --> Passes` panel, use it to distort the grid image,
+and combine the result with the rendered image using the Alpha Over Node.
 
 .. figure:: /images/compositing_types_distort_map-uv_example-1.png
    :width: 700px
 
-   Adding a grid UV textures for motion tracking.
+   Overlaying a grid texture.
 
-In the next example, we overlay a logo on top of a mesh composed of two intersecting cubes,
-and we ensure that we Enable the Alpha premultiply button on the Mix node.
-The logo is used as additional UV texture on top of the existing texture. Other examples include
-the possibility that there was used an unauthorized product box during the initial animation,
-and it is needed to substitute in a different product sponsor after rendering.
+In the next example, we do the same thing with the Blender logo, using a cryptomatte
+to ensure it only gets applied to one of the cubes.
 
-.. hint::
+It's here that the limitations of the Map UV node become apparent: the overlayed image is
+really just "plastered on" and is not affected by the lighting and shadows in the scene.
+At most, you can cheat a little by making the image translucent like in the previous example.
 
-   Due to limits of this node, it is not recommended to rush pre-production rendering under
-   the guise of "fixing it later".
+So, while this node can be handy for certain post-production effects or fixes,
+it's generally not a replacement for including the image during rendering.
 
 .. figure:: /images/compositing_types_distort_map-uv_example-2.png
    :width: 700px
 
-   Adding UV textures in post-production.
+   Overlaying a logo.

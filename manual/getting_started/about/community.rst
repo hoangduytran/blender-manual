@@ -69,6 +69,8 @@ You can join these channels:
   For support for developers using the Python API.
 - `#docs <https://chat.blender.org/#/room/#docs:blender.org>`__
   For discussion related to Blender's documentation.
+- `#translations <https://chat.blender.org/#/room/#translations:blender.org>`__
+  For discussion related to translating Blender and its documentation.
 
 
 Other Useful Links
