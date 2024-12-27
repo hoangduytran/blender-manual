@@ -13,5 +13,6 @@ Nodes to manipulate strings.
    slice_string.rst
    special_characters.rst
    string_length.rst
+   find_in_string.rst
    string_to_curves.rst
    value_to_string.rst
