@@ -59,15 +59,11 @@ Performance
 
 This panel helps you tweak the performance of the Compositor.
 
-.. _bpy.types.RenderSettings.compositor_device:
-
 Device
    The device used for compositing.
 
    :CPU: Use the CPU for compositing.
    :GPU: Use the GPU for compositing.
-
-.. _bpy.types.RenderSettings.compositor_precision:
 
 Precision
    The precision of compositor intermediate result.

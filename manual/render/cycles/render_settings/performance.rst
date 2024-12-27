@@ -103,3 +103,6 @@ Viewport
 Pixel Size
    Option to control the resolution for viewport rendering.
    Allows you to speed up viewport rendering, which is especially useful for displays with high DPI.
+
+.. include:: /render/eevee/render_settings/performance.rst
+   :start-after: .. --- copy below this line ---
