@@ -46,6 +46,8 @@ Snap to
       Snaps the transformed selection to the :ref:`Hold Offset <sequencer-duration-hard>`.
    Markers
       Snaps the transformed selection to :doc:`/animation/markers`.
+   Retiming Keys
+      Snaps the transformed selection to :ref:`sequencer-editing-retiming`.
 
 .. _bpy.types.SequencerToolSettings.snap_ignore_muted:
 .. _bpy.types.SequencerToolSettings.snap_ignore_sound:
@@ -589,8 +591,8 @@ To Current Frame
 
 .. _sequencer-editing-retiming:
 
-Retiming
-========
+Retiming Keys
+=============
 
 .. figure:: /images/video-editing-retiming.png
 

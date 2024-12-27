@@ -224,7 +224,7 @@ Lock (padlock icon in panel header)
 .. _bpy.types.Sequence.show_retiming_keys:
 
 Show Retiming Keys
-   Toggle visibility and selectability of :ref:`Retiming keys <sequencer-editing-retiming>`.
+   Toggle visibility and selectability of :ref:`sequencer-editing-retiming`.
 
 .. _bpy.types.Sequence.channel:
 
