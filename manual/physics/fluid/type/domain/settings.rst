@@ -57,7 +57,7 @@ Time Scale
 
 .. _bpy.types.FluidDomainSettings.use_adaptive_timesteps:
 
-Use Adaptive Time Steps
+Adaptive Time Steps
    Lets the solver automatically decide when to perform multiple simulation steps per frame.
    It takes into account the maximum and minimum number of time steps,
    the current *Frame Rate*, and the *Time Scale*.
@@ -265,10 +265,10 @@ The fluid simulation will make use of all the fields without an attached particl
 Simulation Method
    Determines the liquid particle simulation method.
 
-   FLIP
+   FLIP (FLuid Implicit Particle)
       Produces a very splashy simulation with lots of particles dispersed in the air.
 
-   APIC
+   APIC (Affine Particle-In-Cell)
       Produces a very energetic but also more stable simulation.
       Vortices within the liquid will be preserved better than with *FLIP*.
 
