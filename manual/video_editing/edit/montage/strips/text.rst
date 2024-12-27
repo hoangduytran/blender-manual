@@ -86,8 +86,11 @@ Layout
 
 Location X, Y
    Positions the text on the X, Y axis.
+Alignment X, Y
+   Controls the horizontal positioning of text within the text strip.
+   The text content can be aligned to the left, center, or right.
 Anchor X, Y
-   Horizontal (X) or vertical (Y) anchor point of the text relative to the location.
+   Horizontal (X) or vertical (Y) "origin" of the text relative to the location.
 
 
 Example
