@@ -126,11 +126,31 @@ Select Linked
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Select --> Select Linked`
-   :Shortcut:  :kbd:`L`, :kbd:`Ctrl-L`, :kbd:`Shift-L`
+   :Shortcut:  :kbd:`Ctrl-L`
 
-:kbd:`L` (or :kbd:`Ctrl-L` for all) will add to the selection the cursor's nearest control point,
-and all the linked ones, i.e. all points belonging to the same curve. Note that for Bézier,
-using :kbd:`L` with a handle selected will select the whole control point and all the linked ones.
+Selects all control points connected to the active control point.
+
+This operator makes it easier to select or deselect entire segments of a curve, especially in
+dense or complex curves, where manually selecting each point would be time-consuming.
+
+
+.. _bpy.ops.curves.select_linked_pick:
+
+Select Linked Pick
+------------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Hotkeys:  :kbd:`L`, :kbd:`Shift-L`
+
+Selects (:kbd:`L`) or deselects (:kbd:`Shift-L`) control points
+connected to the control point nearest the mouse cursor.
+
+.. note::
+
+   For Bézier curves with a handle selected,
+   this selection operator will select the whole control point **and** all the linked ones.
 
 
 Select Endpoints
@@ -142,4 +162,5 @@ Select Endpoints
    :Menu:      :menuselection:`Select --> Select Endpoints`
 
 Select endpoints of curves.
-Only supported in the Control Point selection mode.
+
+*Only supported in the Control Point selection mode.*
