@@ -11,20 +11,17 @@ Triangles to Quads
    :Menu:      :menuselection:`Face --> Triangles to Quads`
    :Shortcut:  :kbd:`Alt-J`
 
-This tool converts the selected triangles into quads by taking adjacent triangles and
-removing the shared edge to create a quad, based on a threshold.
-This tool can be applied on a selection of multiple triangles.
+This operator converts selected triangles into quads by merging adjacent triangles and removing
+the shared edge to form a quad, based on a threshold.
 
-This means you can select the entire mesh and convert triangles that already form square shapes --
-to be converted into quads, without having to concern yourself with individual faces.
+It works with a selection of multiple triangles at once.
+This means you can select the entire mesh to convert triangles that already form square shapes into quads,
+without worrying about individual faces. Alternatively, manually select pairs of faces to guide the
+operator to join them as desired (see hint below for more joining options).
 
-Alternatively you can force this operation selecting a pairs of faces (see hint below for other ways of joining).
-
-To create a quad, this tool needs at least two adjacent triangles.
-If you have an even number of selected triangles,
-it is also possible not to obtain only quads. In fact,
-this tool tries to create most even rectangular quads from the given triangles,
-which means some triangles could remain.
+To create a quad, the operator requires at least two adjacent triangles. If you have an even number
+of selected triangles, not all triangles may be converted to quads. The operator aims to create the
+most even rectangular quads, so some triangles may remain.
 
 .. list-table::
 
@@ -39,12 +36,10 @@ which means some triangles could remain.
           After converting tris to quads.
 
 Max Angle
-   This value, between (0 to 180), controls the threshold for this tool to work on adjacent triangles.
-   With a threshold of 0.0,
-   it will only join adjacent triangles that form a perfect rectangle
-   (i.e. right-angled triangles sharing their hypotenuses).
-   Larger values are required for triangles with a shared edge that is small,
-   relative to the size of the other edges of the triangles.
+   Controls the threshold for this operator to work on adjacent triangles, with values between 0
+   and 180 degrees. At 0.0, only adjacent triangles that form a perfect rectangle are joined
+   (i.e. right-angled triangles sharing their hypotenuses). Larger values are required for
+   triangles with a shared edge that is small, relative to the size of the other edges of the triangles.
 Topology Influence
    Prioritizes edge joins that create quads with geometry that matches existing quads' topology.
    Useful for preserving topology, especially in areas with dense or irregular geometry.
