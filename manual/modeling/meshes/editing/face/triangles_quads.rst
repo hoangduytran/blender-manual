@@ -45,6 +45,14 @@ Max Angle
    (i.e. right-angled triangles sharing their hypotenuses).
    Larger values are required for triangles with a shared edge that is small,
    relative to the size of the other edges of the triangles.
+Topology Influence
+   Prioritizes edge joins that create quads with geometry that matches existing quads' topology.
+   Useful for preserving topology, especially in areas with dense or irregular geometry.
+
+   .. tip::
+
+      For best results, set Topology Influence between 100-130% and Max Angle to 180 degrees.
+      Lower values may leave behind parallelograms and triangles, while higher values may cause errors.
 Compare UVs
    Prevents the union of triangles that are not also adjacent in the active UV map.
 Compare Color Attributes
