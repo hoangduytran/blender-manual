@@ -57,6 +57,9 @@ Compare Sharp
    Prevents the union of triangles that share an edge marked as sharp.
 Compare Materials
    Prevents the union of triangles that do not have the same material assigned.
+Deselect Joined
+   Deselects the triangles that were successfully merged into quads during the operation.
+   Useful for identifying the remaining triangles that still need to be converted.
 
 .. hint::
 
