@@ -12,22 +12,32 @@ Knife Topology Tool
    :Menu:      :menuselection:`Mesh --> Knife Topology Tool`
    :Shortcut:  :kbd:`K`
 
-The Knife tool can be used to interactively subdivide (cut up)
-geometry by drawing lines or closed loops to create holes.
+The Knife tool lets you interactively "cut through" faces,
+subdividing them and creating a chain of new edges along the way.
 
 
 Usage
 =====
 
-When using *Knife*, the cursor changes to an icon of a scalpel
-and the header changes to display options for the tool.
-You can draw connected straight lines by clicking :kbd:`LMB`,
-marked with small green squares. Red squares are already defined cuts.
-Surrounding red squares mean that there is a cut already in that position,
-so no additional vertex will be created (besides the first one).
+First, select the tool in the Toolbar or press :kbd:`K`. The cursor
+will change into a scalpel to indicate it's active.
 
-If multiple objects are selected before entering Edit Mode,
-then knife cuts will affect all of those objects.
+Click :kbd:`LMB` at the place where you want to start cutting.
+This can be anywhere: on an existing vertex, edge or face,
+or even outside of the mesh.
+
+Move your mouse to the next location. You'll see a purple line indicating
+the new edges that will be created, and green squares indicating the new
+vertices. Click :kbd:`LMB` to confirm: the green squares will turn red,
+and you can define the next line in the cutting path.
+
+Once you're done, press :kbd:`Spacebar` or :kbd:`Return` to apply the cuts.
+Alternatively, press :kbd:`Esc` to cancel.
+
+.. hint::
+
+   By using :ref:`3dview-multi-object-mode`, you can cut multiple objects
+   at the same time.
 
 .. list-table::
 
@@ -41,135 +51,143 @@ then knife cuts will affect all of those objects.
 
      - .. figure:: /images/modeling_meshes_tools_knife_line-after.png
 
-          After confirming knife cut.
+          After applying knife cut.
 
 
 Tool Settings
 =============
 
-Occlude Geometry
-   Only cut geometry visible on screen.
+These settings are only available when using the tool from the Toolbar
+(not when pressing :kbd:`K`). They can be found in the *Tool* tab of the
+:doc:`/editors/properties_editor` editor and of the Sidebar.
 
-Only Selected :kbd:`Shift-K`
-   Only cuts through selected geometry.
+Occlude Geometry
+   Only cut geometry visible on screen. By disabling this, you can cut all the way
+   through the mesh, including faces that are on the backside or behind others.
+
+Only Selected
+   Only cut through selected geometry.
 
 X-Ray
-   Show cut points on non-visible geometry too, when *Occlude Geometry* is deactivated.
+   Show the cutting path even if it's occluded by geometry.
 
-Measurement
-   Which visible measurements to show.
+Measurements
+   The measurements to show along the cutting path: distances, angles, or both.
 
-   Distance, Angle, None, Both
+   .. list-table::
+
+      * - .. figure:: /images/modeling_meshes_tools_knife-measurement-distance.png
+             :width: 240px
+
+             Only distances.
+
+        - .. figure:: /images/modeling_meshes_tools_knife-measurement-angles.png
+             :width: 240px
+
+             Only angles.
+
+        - .. figure:: /images/modeling_meshes_tools_knife-measurement-both.png
+             :width: 240px
+
+             Both distances and angles.
 
 Angle Snapping
-   Whether or not dragged lines should be constrained to particular angles, and if so,
-   which coordinate system the angle is relative to.
+   Whether to constrain the cutting lines to multiples of the *Snap Increment* angle.
 
-   None, Screen, Relative
+   :None: No snapping.
+   :Screen: Snap in screen space (the viewing plane).
+   :Relative: Snap in a plane on the geometry, relative to an adjacent edge or cutting line.
 
-Angle Snapping Increment
-   When angle snapping is on, the angle will be constrained to a multiple of this angle.
+   .. list-table::
+      :widths: 1 1
+
+      * - .. figure:: /images/modeling_meshes_tools_knife_angle-before.png
+             :width: 240px
+
+             Relative snapping at 90°. Blender hilights the reference edge in yellow
+             and shows the snapping direction in white.
+
+        - .. figure:: /images/modeling_meshes_tools_knife_angle-after.png
+             :width: 240px
+
+             Doing a few more cuts and applying.
+
+Snap Increment
+   The angle to use for *Angle Snapping*.
 
 
 Controls
 ========
 
+These keyboard shortcuts are shown in the
+:doc:`status bar </interface/window_system/status_bar>` while cutting.
+They're available both when using the tool from the Toolbar and when pressing :kbd:`K`.
+
+Cut :kbd:`LMB`
+   You can either click to add a new cutting line, or drag to create cutting lines
+   as you move the mouse over edges.
+
+Close Loop - Double-click :kbd:`LMB`
+   Adds a cutting point at the cursor (just like when single-clicking) and then connects
+   it to the first point in the current path, closing the loop.
+
+Stop :kbd:`RMB`
+   Completes the current cutting path and begins a new one. The cursor will snap to previously
+   defined cuts.
+
+   .. list-table::
+      :widths: 1 1
+
+      * - .. figure:: /images/modeling_meshes_tools_knife_multiple-before.png
+
+             After defining the horizontal cut, press :kbd:`RMB` and define
+             the vertical one.
+
+        - .. figure:: /images/modeling_meshes_tools_knife_multiple-after.png
+
+             Result after applying.
+
 Confirm :kbd:`Spacebar` or :kbd:`Return`
-   Confirms the cut.
-   :kbd:`Return` will leave selected every edge except the new edges created from the cut.
+   Confirms the cut, turning the cutting paths into edges.
 
 Cancel :kbd:`Esc`
    Cancels the cut.
 
-Draw a Continuous Line :kbd:`LMB` drag.
-   So you can draw a free-hand line over a surface,
-   points will be created at edge intersections.
-
-Close Loop double-click :kbd:`LMB`
-   This is a quick way to close the loop you are currently cutting.
-
-New Cut :kbd:`RMB`
-   Begins a new cut. This allows you to define multiple distinct cut lines.
-   If multiple cuts have been defined, they are recognized as new snapping points.
-
-   .. list-table::
-
-      * - .. figure:: /images/modeling_meshes_tools_knife_multiple-before.png
-
-             Creating multiple cuts.
-
-        - .. figure:: /images/modeling_meshes_tools_knife_multiple-after.png
-
-             Result of starting new cuts while in the tool.
+Undo :kbd:`Ctrl-Z`
+   Undoes the previous cutting line (or, if you dragged the mouse before, all the cutting
+   lines created during that drag).
 
 Midpoint Snap :kbd:`Shift`
-   Hold to snap the cursor to the midpoint of edges,
-   meaning that all cuts will be performed at the exact center of each cut edge.
+   Hold to snap the cursor to the center of edges.
 
 Ignore Snap :kbd:`Ctrl`
-   Hold to make the tool ignore snapping,
-   unlike the default where mouse cursor snaps to near edges.
+   Hold to temporarily stop the cursor from snapping to existing vertices, edges,
+   and cutting lines.
 
-Cut Through: :kbd:`C`
-   Allow the Cut tool to cut through to occluded faces, instead of only the visible ones.
+Cut Through :kbd:`C`
+   Also cut through occluded faces, instead of only the visible ones.
+   This is linked to (and the opposite of) the *Occlude Geometry* setting above.
 
-Angle Constrain :kbd:`A`
-   Constrains the cut line to certain degree increments.
-   The increment can be specified in the Tool Settings (see above), or can be typed
-   when angle constraining is active.
-   The default angles are in the plane of the screen, but typing :kbd:`A` again
-   makes it relative to the last cut edge.
-   If the last cut edge is ambiguous (because the cut was on a vertex),
-   typing :kbd:`R` cycles through the possible reference edges.
+Axis :kbd:`X`, :kbd:`Y`, or :kbd:`Z`
+   Constrains the current cutting line to a global axis. Press a second time to use the
+   object's local axis, and a third time to disable the constraint again.
 
-   .. list-table::
+Measure :kbd:`S`
+   Cycles between measurements to show: distances, angles, or both.
 
-      * - .. figure:: /images/modeling_meshes_tools_knife_angle-before.png
-             :width: 320px
+X-Ray :kbd:`V`
+   Toggles whether to display cuts occluded by geometry.
 
-             Constraining cut angle.
+Angle Constraint :kbd:`A`
+   Constrains cutting lines to multiples of the *Snap Increment* angle. This angle
+   can be specified in the Tool Settings before cutting (see above) or typed
+   while cutting with *Angle Constraint* active.
 
-        - .. figure:: /images/modeling_meshes_tools_knife_angle-after.png
-             :width: 320px
+   By default, the snapping is done in the *Screen* plane. Press :kbd:`A`
+   a second time to snap in planes on the geometry, *Relative* to an automatically
+   chosen edge or cutting line. You can press :kbd:`R` to select a different reference line.
 
-             Result of constraining cut angle.
-
-Axis Constrain :kbd:`X`, :kbd:`Y`, or :kbd:`Z`
-   Constrains the cut line to one of the coordinate system axes.
-   Initially it will be the global axis with the given name,
-   but pressing the same key again switches to the object's local axis system.
-   Additionally, if the scene transformation orientation is set to
-   a custom orientation (e.g. from a face), the constraints will be in that coordinate system.
-
-Visible Measurements :kbd:`S`
-   Shows measurements of the cuts being made: angles with respect to a mesh edge, lengths, or both.
-   Pressing :kbd:`S` repeatedly cycles between what can be shown.
-
-   Only Distance, Only Angles, Both, None
-
-   .. list-table::
-
-      * - .. figure:: /images/modeling_meshes_tools_knife-measurement-distance.png
-             :width: 640px
-
-             Only Distance.
-
-        - .. figure:: /images/modeling_meshes_tools_knife-measurement-angles.png
-             :width: 640px
-
-             Only Angles.
-
-        - .. figure:: /images/modeling_meshes_tools_knife-measurement-both.png
-             :width: 640px
-
-             Both Angles and Distance.
-
-Undo :kbd:`Ctrl-Z`
-   Undoes the previous cut segment. The starting point for the next cut is adjusted accordingly.
-   If a cut is a drag cut, the entire drag cut is undone.
-
-X-Ray Mode :kbd:`V`
-   Toggles whether or not cuts to segments behind the visible geometry are shown.
+   Press :kbd:`A` a third time to disable the snapping again.
 
 
 Known Limitations
@@ -178,16 +196,7 @@ Known Limitations
 Duplicate Vertices
 ------------------
 
-If you experience problems where duplicate vertices are being created by cuts,
-this is often caused by too large a near/far clipping range.
-
-Try increasing the *Clip Start* to avoid this problem,
-see :ref:`Depth Troubleshooting <troubleshooting-depth>` for details.
-
-
-Unconnected Cuts
-----------------
-
-Cuts that begin or end in the middle of a face, will be ignored.
-
-*This is constrained by the kinds of geometry Blender can represent.*
+If a cut creates duplicate vertices, this is often caused by the clipping range
+being too large. Try increasing the :ref:`Clip Start <bpy.types.SpaceView3D.clip_start>`
+to avoid this problem.
+Also see :ref:`Depth Troubleshooting <troubleshooting-depth>` for details.

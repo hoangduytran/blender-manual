@@ -156,13 +156,14 @@ There are two ways of accomplishing this:
 - If you're not yet in the mode, you can simply select all the objects
   and enter it.
 - If you're already in the mode, you can bring other objects into it
-  by clicking :kbd:`Ctrl-LMB` on the dot in the Outliner.
+  by clicking :kbd:`Ctrl-LMB` on the dot in the
+  :doc:`Outliner </editors/outliner/introduction>`.
   Removing objects from the mode works in the same way.
 
 Some points of note:
 
-- The Properties editor will only ever show the details (shape keys,
-  UV maps...) of the active object, not of all the selected ones.
+- The :doc:`/editors/properties_editor` editor will only ever show the details
+  (shape keys, UV maps...) of the active object, not of all the selected ones.
 - Selecting any element from an object will make it the active one.
 - There are limits to the edits you can make.
   For example, you can't create an edge that connects vertices from
