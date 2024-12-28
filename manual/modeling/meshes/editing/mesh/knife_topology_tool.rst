@@ -66,7 +66,8 @@ Occlude Geometry
    through the mesh, including faces that are on the backside or behind others.
 
 Only Selected
-   Only cut through selected geometry.
+   Only cut through selected geometry. You can press :kbd:`Shift-K` instead of
+   :kbd:`K` to start cutting with this option enabled.
 
 X-Ray
    Show the cutting path even if it's occluded by geometry.
