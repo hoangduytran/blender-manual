@@ -70,15 +70,32 @@ Attribute Data Types
 
 The type of an attribute is the kind of data stored at each element.
 
-:Boolean: True or false value.
-:Integer: 32-bit integer.
-:8-Bit Integer: Smaller integer with a range from -128 to 127.
-:Float: Floating-point value.
-:Vector: 3D vector with floating-point values.
-:2D Vector: 2D vector with floating-point values.
-:Color: RGBA color with 32-bit floating-point values.
-:Byte Color: RGBA color with 8-bit positive integer values.
-:Quaternion: Floating point :term:`Quaternion` rotation.
+:Float:
+   Single floating-point value, commonly used for weights or intensity values.
+:Boolean:
+   True or false value for binary conditions.
+:Integer:
+   32-bit integer, used for indices or discrete values.
+:Vector:
+   3D vector with floating-point values, often representing directions or positions.
+:Color:
+   RGBA color with 32-bit floating-point values.
+:Byte Color:
+   RGBA color with 8-bit positive integer values, useful for compact color storage.
+:String:
+   Text string for storing names or labels.
+:2D Vector:
+   2D vector with floating-point values, often used for UV coordinates.
+:8-Bit Integer:
+   Small integer with a range from -128 to 127.
+:2D 16-Bit Integer Vector:
+   Signed 16-bit 2D vector for compact storage of integer pairs.
+:2D Integer Vector:
+   Signed 32-bit 2D vector.
+:Quaternion:
+   Floating-point :term:`Quaternion` rotation used in 3D transformations.
+:4x4 Matrix:
+   Floating-point matrix used for transformations or storing spatial relationships.
 
 The above list is in the order of least to most "complex" (An integer can contain more data than a
 boolean, so it is more complicated). When joining separate geometries together, the more complex data
