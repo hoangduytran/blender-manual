@@ -123,12 +123,19 @@ Group Sockets
 
    The *Group Sockets* panel.
 
-This panel is used to add, remove, reorder, and edit the sockets of the group's input and output.
+This panel is used to add, remove, reorder, and edit the input/output sockets of the node group.
+
+You can also add panels to organize sockets within a node group,
+structuring and categorizing inputs for improved clarity and usability.
+This is particularly helpful in complex node setups.
+
+Note, panels are always at the bottom of nodes.
+Panels can be nested by dragging a panel in the UI list on top of another panel.
 
 .. _bpy.types.NodeTreeInterfaceSocket.name:
 
 Socket List
-   A :ref:`ui-list-view` of all inputs, outputs and panels.
+   A :ref:`ui-list-view` of all inputs, outputs, and panels.
 
    Here you can name the socket which is displayed in the node's interface.
 
