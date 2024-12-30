@@ -9,26 +9,25 @@ Set Spline Cyclic Node
    :align: right
    :alt: Set Spline Cyclic node.
 
-The *Set Spline Cyclic* controls whether each spline will loop back on itself.
-Each spline has the same number of control points whether or not it is set as cyclic.
-But when displaying in the viewport or for operations with other nodes,
-a connection will be made between the first and last control points.
+The *Set Spline Cyclic* node changes whether splines loop back on themselves --
+that is, whether their first and last control points are connected.
 
-The input node for this data is the :doc:`/modeling/geometry_nodes/curve/read/is_spline_cyclic`.
+You can use the :doc:`/modeling/geometry_nodes/curve/read/is_spline_cyclic`
+to read this property.
 
 
 Inputs
 ======
 
-Curve
+Geometry
    Standard geometry input.
 
 Selection
-   Whether or not to change the cyclic value on each spline. True values mean the value will be changed,
-   false values mean the value will remain the same.
+   Whether to change the cyclic setting for each spline. *True* means the
+   setting will be changed, *false* means it will stay the same.
 
 Cyclic
-   Whether or not to join the first and last points of each spline.
+   Whether to connect the first and last control points of each spline.
 
 
 Properties
@@ -40,5 +39,5 @@ This node has no properties.
 Outputs
 =======
 
-Curve
+Geometry
    Standard geometry output.
