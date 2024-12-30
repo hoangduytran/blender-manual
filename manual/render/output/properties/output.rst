@@ -147,13 +147,32 @@ Video Codec
    Chooses the method of compression and encoding.
    For a list of all available options see :doc:`video formats </files/media/video_formats>`.
 
-.. note:: Standards
+   .. note:: Standards
 
-   Some containers and codecs are not compatible with each other,
-   so if you are getting errors check that your container and codec are compatible.
-   Like containers and codecs are sometimes not compatible with each other, some codecs
-   do not work with arbitrary dimensions. So, try to stick with common dimensions
-   or research the limitations of the codec you are trying to use.
+      Some containers and codecs are not compatible with each other,
+      so if you are getting errors check that your container and codec are compatible.
+      Like containers and codecs are sometimes not compatible with each other, some codecs
+      do not work with arbitrary dimensions. So, try to stick with common dimensions
+      or research the limitations of the codec you are trying to use.
+
+Color Depth
+   The exponent value (with base two) for how many colors can be represented within a single color channel.
+   A higher bit depth will allow more possible colors, reducing banding, and increasing precision.
+   Yet a higher bit depth will increase memory usage exponentially.
+
+   Note, not all file formats support every color depth configuration.
+
+   :8:
+      Allows 256 levels per channel, resulting in approximately 16.7 million total colors (RGB).
+      This is the most common format for on-screen graphics and standard video.
+   :10:
+      Allows 1,024 levels per channel, resulting in over 1 billion total colors (RGB).
+
+      *Available for H.264, H.265, and AV1 codecs.*
+   :12:
+      Allows 4,096 levels per channel, resulting in over 68 billion total colors (RGB).
+
+      *Available for H.265 and AV1 codecs.*
 
 .. _bpy.types.FFmpegSettings.constant_rate_factor:
 
