@@ -9,33 +9,30 @@ Symmetrize
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Armature --> Symmetrize`
 
-This operator will mirror the selected bones along the X axis based on
-Blender's bone :ref:`naming convention <armature-editing-naming-conventions>` for symmetrical armatures,
-either from left to right or right to left, depending on the selection.
+The Symmetrize operator mirrors selected bones along the X axis using Blender's bone
+:ref:`naming convention <armature-editing-naming-conventions>` for symmetrical armatures.
+Bones can be mirrored from left to right or right to left, depending on the selection.
+
+- If matching bones are selected on both sides, mirroring happens from right to left.
+- Bones with opposite names that don't exist are created, and existing ones are overwritten.
+- Bones that cannot be determined as left or right are ignored.
+
+Symmetrized bone and constraint properties are adjusted to mirror their behaviors.
+For bones with :doc:`Action Constraints </animation/constraints/relationship/action>`,
+keyframes are added to the target Action, ensuring symmetrical motion when the Action is activated.
 
 .. note::
 
-   If the side of the bone cannot be determined, it will be ignored.
+   Bone or constraint drivers are not created or affected during symmetrization.
 
-Bones with the opposite names that don't yet exist will be created, and already existing ones will be overwritten.
-If matching bones are selected on both sides, mirroring will happen from right to left.
 
-Symmetrized bone and constraint properties will have the necessary changes to mirror their behaviors.
-When symmetrizing bones with :doc:`Action Constraints </animation/constraints/relationship/action>`,
-the necessary keyframes will be added to the target Action to result
-in symmetrical movement when the Action is activated.
+.. rubric:: Bone Collections
 
-.. note::
-
-   Note that bone or constraint drivers will not be created or affected in any way.
-
-Bone collection assignments are also symmetrized. Similar to bones, only collections
-that follow the :ref:`naming convention <armature-editing-naming-conventions>` are symmetrized.
-Collections are created if they don't exist yet. On creation, they will be parented to 
-the same collection as the collection from which they are symmetrized.
+Bone collection assignments are also symmetrized. Collections that follow the
+:ref:`naming convention <armature-editing-naming-conventions>` are mirrored.
+If a collection does not exist, it is created and parented to the same collection as the original.
 
 .. note::
 
-   Blender does not care if a left bone is assigned to a right collection.
-   It will symmetrize regardless meaning the resulting right bone will be assigned
-   to a left collection.
+   Blender does not prevent left bones from being assigned to right collections.
+   During symmetrization, the resulting right bone will be assigned to the left collection.
