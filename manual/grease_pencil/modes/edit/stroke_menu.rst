@@ -69,11 +69,75 @@ Simplify
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Stroke --> Simplify`
 
+Reduces the complexity of Grease Pencil strokes by strategically removing points.
+This is useful for cleaning up strokes, optimizing performance,
+and preparing drawings for further editing or animation.
+There are multiple modes; described below:
+
+
+.. _bpy.ops.gpencil.stroke_simplify_fixed:
+
+Fixed
+-----
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Simplify -- Fixed`
+
+Deletes alternated points in the strokes, except the start and end points.
+
+Steps
+   The number of times to repeat the procedure.
+
+
+.. _bpy.ops.gpencil.stroke_simplify:
+
+Adaptive
+--------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Simplify -- Adaptive`
+
 Uses the RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion.
 The algorithm tries to obtain a similar line shape with fewer points.
 
 Factor
    Controls the amount of recursively simplifications applied by the algorithm.
+
+
+.. _bpy.ops.gpencil.stroke_sample:
+
+Sample
+------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Simplify -- Sample`
+
+Recreates the stroke geometry with a predefined length between points.
+
+Length
+   The distance between points on the recreated stroke.
+   Smaller values will require more points to recreate the stroke,
+   while larger values will result in fewer points needed to recreate the curve.
+
+
+Merge
+-----
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Simplify -- Merge`
+
+Simplifies the stroke by merging points that are closer than the specified distance.
+
+Distance
+   The maximum distance between vertices to determine which ones will be merged.
 
 
 .. _bpy.ops.gpencil.stroke_trim:
