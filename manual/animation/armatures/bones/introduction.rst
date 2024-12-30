@@ -3,39 +3,38 @@
 Introduction
 ************
 
-Bones are the base elements of armatures.
-The visualization of bones can be set in the Armatures :doc:`/animation/armatures/properties/display`.
+Much like in real-life skeletons, Bones are the building blocks of Armatures.
+Each bone has a resting position, orientation, and length -- and all of these
+can be changed while posing or animating.
 
-.. (wip) are rigid.
+You can change the way bones are displayed in the armature's
+:doc:`/animation/armatures/properties/display` settings.
 
-
-.. (todo move)? to bone > properties > deform, extend control: fk
 
 Classification
 ==============
 
-Bones in an Armature can be generally classified into two different types:
-
-#. Deforming Bones
-#. Control Bones
+Bones can be classified into two types depending on their
+:doc:`/animation/armatures/bones/properties/deform` setting:
 
 
 Deforming Bones
 ---------------
 
-Are bones which when transformed will result in vertices associated with
-them also transforming in a similar way. Deforming Bones are directly involved in altering
-the positions of vertices associated with their bones.
+Bones that have the *Deform* setting enabled will drag vertices along with them.
+For example, you could have a bone in a character's upper arm and another in
+the lower arm, and then rotate and flex the arm by transforming these bones.
 
 
 Control Bones
 -------------
 
-Are Bones which act in a similar way to switches,
-in that, they control how other bones or objects react when they are transformed.
-A Control Bone could for example act as a sliding switch control when the bone is in one
-position to the left, it could indicate to other bones that they react in a particular way when
-transformed, and when the Control Bone is positioned to the right,
-transforming other bones or objects could do something completely different.
-Control Bones are not directly used to alter the positions of vertices;
-in fact, Control Bones often have no vertices directly associated with themselves.
+Bones that have the *Deform* setting disabled do not drag any vertices along.
+Instead, they're typically used to control other bones.
+
+A common use case is
+:doc:`inverse kinematics </animation/armatures/posing/bone_constraints/inverse_kinematics/introduction>`:
+rotating the above two arm bones manually is a bit of a pain, so instead,
+you can add a control bone and configure the arm bones to automatically orient
+themselves towards it. This way, you can simply position the control bone
+where the character's hand should be, which is much easier.
