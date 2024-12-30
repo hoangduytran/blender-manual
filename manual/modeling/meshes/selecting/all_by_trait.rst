@@ -72,6 +72,56 @@ Faces by Sides
 Selects all faces that have a specified number of edges.
 
 
+.. _bpy.ops.mesh.select_by_pole_count:
+
+Select By Pole Count
+====================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select All by Trait --> Select by Pole Count`
+
+This operator selects all elements connected to :term:`Pole` vertices,
+based on the number of edges connected to each pole.
+
+- In vertex selection mode, pole vertices are selected.
+- In edge selection mode, pole vertices and all their connected edges are selected.
+- In face selection mode, pole vertices and all their connected faces are selected.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_face_select_by_pole_count_before.webp
+
+          Before selecting poles.
+
+     - .. figure:: /images/modeling_meshes_editing_face_select_by_pole_count_after.webp
+
+          After selecting poles.
+
+Pole Count
+   Specifies the number of edges a :term:`Pole` must have to be included in the selection.
+
+Type
+   Defines the comparison method for selecting poles:
+
+   :Equal: Includes poles with the specified number of edges.
+   :Not Equal: Includes poles with a number of edges different from the specified value.
+   :Greater Than: Includes poles with more edges than the specified value.
+   :Less Than: Includes poles with fewer edges than the specified value.
+
+Extend
+   Adds selected poles to the existing selection rather than replacing it.
+
+Exclude Non-manifold
+   Skips poles that are part of :term:`Non-manifold` geometry.
+
+.. hint::
+
+   Use this operator to inspect poles, which is particularly useful for identifying problematic poles
+   during topology cleanup or for optimizing quad flow.
+
+
 .. _bpy.ops.mesh.select_ungrouped:
 
 Ungrouped Vertices
