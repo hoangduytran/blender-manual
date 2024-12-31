@@ -115,11 +115,30 @@ Set Curve Type
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Curves --> Set Curve Type`
+   :Shortcut:  :kbd:`V`
 
-Converts splines in a curve object between Bézier, NURBS, and Poly curves.
-Note, this is not a "smart" conversion, i.e. Blender does not try to keep the same shape,
-nor the same number of control points. For example, when converting a NURBS to a Bézier,
-each group of three NURBS control points become a unique Bézier one (center point and two handles).
+Converts splines in a curve object between Bézier, NURBS, Poly, and Catmull Rom types.
+This is a basic conversion, meaning Blender does not preserve the exact shape or the number of control points.
+For example, converting a NURBS spline to a Bézier spline maps each group of three NURBS control points
+to a single Bézier control point with two handles.
+
+Type
+   Specifies the target spline type. For more details on spline types, see the
+   :ref:`Spline Types <curve-spline-types>` documentation.
+
+   :Bézier:
+      Converts the spline to a Bézier type.
+      - Poly splines are converted with vector handles.
+      - NURBS or Catmull Rom splines are converted with automatic handles.
+
+      .. note::
+
+         When converting a NURBS spline to Bézier, at least six points are required.
+         If the number of points is not a multiple of three, the spline will be truncated.
+
+   :NURBS: Converts the spline to a NURBS type.
+   :Poly: Converts the spline to a poly type.
+   :Catmull Rom: Converts the spline to a Catmull Rom type.
 
 Handles
-   Take handle information into account in the conversion
+   Includes handle information during the conversion process.

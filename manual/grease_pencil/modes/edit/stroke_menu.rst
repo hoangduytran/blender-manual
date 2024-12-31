@@ -415,30 +415,30 @@ Set Curve Type
 
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Stroke --> Set Curve Type`
+   :Shortcut:  :kbd:`V`
 
 Sets the spline type for the splines in the stroke component that are in the selection.
 
 Type
-   The type to convert the splines in the selection to.
-   Read the :ref:`Spline Types <curve-spline-types>` page for more details
-   on the different spline types.
+   Specifies the target spline type. For more details on spline types, see the
+   :ref:`Spline Types <curve-spline-types>` documentation.
 
    :Bézier:
-      Convert to a Bézier spline. A spline converted from a poly spline gets vector handles,
-      while one converted from NURBS or Catmull Rom spline gets auto handles.
+      Converts the spline to a Bézier type.
+      - Poly splines are converted with vector handles.
+      - NURBS or Catmull Rom splines are converted with automatic handles.
 
       .. note::
 
-         When converting from a NURBS spline to a Bézier spline, at least six points are needed.
-         When the number of points is not a multiple of three a full
-         conversion is not possible and the spline has to be truncated.
+         When converting a NURBS spline to Bézier, at least six points are required.
+         If the number of points is not a multiple of three, the spline will be truncated.
 
-   :NURBS: Convert to a NURBS spline.
-   :Poly: Convert to a poly spline.
-   :Catmull Rom: Convert to a Catmull Rom spline.
+   :NURBS: Converts the spline to a NURBS type.
+   :Poly: Converts the spline to a poly type.
+   :Catmull Rom: Converts the spline to a Catmull Rom type.
 
 Handles
-   Take handle information into account in the conversion
+   Includes handle information during the conversion process.
 
 
 .. _bpy.ops.grease_pencil.set_curve_resolution:
