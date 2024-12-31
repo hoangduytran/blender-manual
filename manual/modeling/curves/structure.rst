@@ -6,25 +6,23 @@ Structure
 Splines
 =======
 
-Splines are a substructure of curves and are the individual elements that make curve objects.
-A curve object can be composed of several different splines,
-just like mesh objects can have different discontinuous meshes under the same object.
-A spline defines the shape of the curve and can be transformed by altering its `Control Points`_.
-Splines come in three distinct types, which are described in `Spline Types`_.
-Each spline type has a slightly different algorithm for computing how bends in the spline are represented.
+Splines are the fundamental components of curve objects, defining their shapes.
+A curve object can consist of multiple splines,
+similar to how a mesh object can contain multiple disconnected meshes.
+Each spline's shape is determined by its :ref:`Control Points <curve-spline-types>`.
+Splines come in several types: Poly, Bézier, and NURBS, each with its own algorithm for representing curves,
+as described in the `Spline Types`_ section.
 
-Splines have their own separate properties from curves and can be altered
-by selecting the spline in Edit Mode and using
-the :doc:`Active Spline </modeling/curves/properties/active_spline>` panel.
+Splines have unique properties that can be adjusted in Edit Mode via the
+:doc:`Active Spline </modeling/curves/properties/active_spline>` panel.
 
 
 Control Points
 --------------
 
-Similar to meshes splines have control points or vertices.
-Control points connect to other control points to form splines.
-Control points can be :doc:`selected </modeling/curves/selecting>`
-and transformed to alter the resulting shape of the spline.
+Splines are made up of control points, which connect to form the spline.
+Control points can be :doc:`selected </modeling/curves/selecting>` and transformed to adjust the spline's shape.
+This is analogous to vertices in a mesh object.
 
 .. seealso::
 
@@ -39,15 +37,10 @@ Spline Types
 Poly
 ----
 
-Poly splines are the most simple spline type as they do not
-interpolate the shape of the curve between control points.
-
-Poly Curves are used when :ref:`converting meshes to curves <bpy.ops.object.convert>`.
-Because they do not interpolate the shape,
-Poly splines are able to give an accurate representation of the original mesh object.
-
-This is the primary use case of splines, most of the time `Bézier`_ or `NURBS`_
-splines are used instead; both of which interpolate the shape and give smooth results.
+Poly splines are the simplest type, with no interpolation between control points.
+They are used when :ref:`converting meshes to curves <bpy.ops.object.convert>`
+for accurate representation of the original mesh.
+While Poly splines are precise, `Bézier`_ or `NURBS`_ splines are generally preferred for smooth curves.
 
 
 .. _curve-bezier:
@@ -55,15 +48,11 @@ splines are used instead; both of which interpolate the shape and give smooth re
 Bézier
 ------
 
-The main elements used in editing Bézier curves are the control points and handles.
-A segment (the actual curve) is found between two control points.
-The handles define the curvature of the segment.
+Bézier splines use control points and handles to define their shape.
+A curve segment exists between two control points, with the handles controlling the curvature.
 
-In the image below,
-the control points can be found in the middle of the pink line,
-while the handles comprise the extensions from the control point.
-The arrows visualize the normals of the curve, which indicate i.e.
-the direction and the tilt.
+In the illustration below, the control points are at the center of the pink lines, while the handles extend outward.
+The arrows represent the curve normals, indicating direction and tilt.
 
 .. figure:: /images/modeling_curves_structure_control-points-handles.png
    :align: center
@@ -76,8 +65,7 @@ the direction and the tilt.
 Handle Types
 ^^^^^^^^^^^^
 
-There are four Bézier curve handle types.
-They can be accessed by pressing :kbd:`V` and selecting from the list that appears.
+Bézier curves support four handle types, which can be changed with :kbd:`V`:
 
 .. figure:: /images/modeling_curves_structure_bezier-handle-types.png
    :align: right
@@ -86,54 +74,47 @@ They can be accessed by pressing :kbd:`V` and selecting from the list that appea
 
 .. _curve-handle-type-auto:
 
-Automatic (yellow handles)
-   This handle has a completely automatic length and direction
-   which is set by Blender to ensure the smoothest result.
-   These handles convert to *Aligned* handles when moved.
-Vector (green handles)
-   Both parts of a handle always point to the previous handle or the next handle which allows
-   you to create curves or sections thereof made of straight lines or with sharp corners.
-   Vector handles convert to *Free* handles when moved.
-Aligned (purple handles)
-   These handles always lie in a straight line,
-   and give a continuous curve without sharp angles.
-Free (black handles)
-   The handles are independent of each other.
+:Automatic:
+   Automatically adjusts handle length and direction for the smoothest curve.
+   Displayed as yellow handles. Converts to *Aligned* when moved.
+:Vector:
+   Handles point directly toward adjacent control points, enabling straight lines or sharp corners.
+   Displayed as green handles. Converts to *Free* when moved.
+:Aligned:
+   Handles remain on a straight line, ensuring smooth, continuous curves.
+   Displayed as purple handles.
+:Free:
+   Handles move independently, allowing for asymmetric curves.
+   Displayed as black handles.
 
 .. note::
-   When a control point is selected, its handles are overlaid with a red highlight
-   that changes their color. For example, Vector handles that are normally green
-   will look yellow when selected, which can make it difficult to distinguish
-   them from unselected Automatic handles.
 
-   If you prefer not to have this color change, you can disable it by opening the Theme
-   preferences, finding the entry :menuselection:`3D Viewport --> Active Spline`,
-   and changing it to black. From then on, selected curve handles will simply look
-   a bit brighter than unselected ones.
+   When a control point is selected, its handles are highlighted in red, altering their usual color.
+   For example, Vector handles (normally green) appear yellow when selected,
+   which can be confused with Automatic handles.
+
+   To disable this effect,
+   adjust the color settings in :menuselection:`3D Viewport --> Active Spline` under Theme Preferences.
+
 
 .. _curve-nurbs:
 
 NURBS
 -----
 
-N.U.R.B.S. is the abbreviation for Non-Uniform Rational B-Splines.
-One of the major differences between Bézier objects and NURBS objects is that Bézier curves
-are approximations. For example, a Bézier circle is an *approximation* of a circle,
-whereas a NURBS circle is an *exact* circle.
-NURBS theory can be a *very* complicated topic. For an introduction,
-please consult the `Wikipedia page <https://en.wikipedia.org/wiki/NURBS>`__.
+NURBS (Non-Uniform Rational B-Splines) are mathematically precise splines, offering exact shapes.
+Unlike Bézier curves, which approximate shapes (e.g., a Bézier circle approximates a perfect circle),
+NURBS can represent exact geometry.
+
+For more information, refer to the `Wikipedia page <https://en.wikipedia.org/wiki/NURBS>`__.
 
 .. _curves_structure_nurbs_weight:
 
-NURBS spline control points are different than other spline types because they have a special weight property.
-This weight property controls how much influence the control point has on the surface.
-This weight should not be confused with the :ref:`Goal Weight <curves-weight>`,
-which is used only for soft body simulations.
-The NURBS control point weight can be adjusted in the *W* number field of
-the :doc:`Transform panel </modeling/curves/editing/transform_panel>`.
+NURBS control points have a unique weight property that determines their influence on the curve.
+This weight differs from the :ref:`Goal Weight <curves-weight>` used in soft body simulations.
+Weights can be adjusted in the *W* field of the :doc:`Transform panel </modeling/curves/editing/transform_panel>`.
 
 .. note::
 
-   If all the control points have the same *Weight* then each effectively cancels each other out.
-   It is the difference in the weights that cause the curve to move
-   towards or away from a control point.
+   If all control points have the same weight, their influences cancel out.
+   Differences in weight cause the curve to move toward or away from specific control points.
