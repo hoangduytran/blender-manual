@@ -6,8 +6,9 @@
 .. toctree::
    :maxdepth: 2
 
-   tools/index.rst
+   structure.rst
    primitives.rst
+   tools/index.rst
    selecting.rst
    editing/index.rst
    properties.rst
