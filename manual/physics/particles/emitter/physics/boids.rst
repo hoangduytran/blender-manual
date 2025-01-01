@@ -32,50 +32,52 @@ Movement
 
    :Panel:     :menuselection:`Particle System --> Physics --> Movement`
 
-Boids try to avoid objects with activated Collision.
-They try to reach goal objects, and fly from "predators" according to the *Boid Brain* settings.
-
-Boids can have different physics depending on whether they are in the air,
-or on land (on collision object).
+Boids avoid objects with Collision enabled, move toward goals, and flee from "predators" based on the *Boid Brain*.
+Their behavior changes depending on whether they are in the air or on land.
 
 Allow Flight
-   Allow boids to move in the air.
+   Enables movement in the air.
 Allow Land
-   Allow boids to move on land.
+   Enables movement on land.
 Allow Climbing
-   Allow boids to climb goal objects.
+   Enables climbing toward goal objects.
 
 Max Air Speed
-   Set the Maximum velocity in the air.
+   The maximum velocity boids can achieve while in the air.
 Min Air Speed
-   Set the Minimum velocity in the air.
+   The minimum velocity boids maintain while flying.
 Max Air Acceleration
-   Lateral acceleration in air, percentage of the max velocity (turn).
-   Defines how fast a boid is able to change direction.
+   Controls how quickly boids can change direction in the air, expressed as a percentage of their maximum velocity.
+   Higher values result in more agile movements.
 Max Air Angular Velocity
-   Tangential acceleration in air, percent 180 degrees.
-   Defines how much the boid can suddenly accelerate in order to fulfill a rule.
+   Limits how sharply boids can turn in the air, expressed as a percentage of 180 degrees.
+   Lower values create smoother curves during flight.
 Air Personal Space
-   Radius of boids personal space in air. Percentage of particle size.
+   The radius of personal space for boids in the air, as a percentage of their particle size.
+   Larger values reduce crowding in swarms.
 Landing Smoothness
-   How smoothly the boids land.
+   Adjusts how softly boids land on surfaces.
+   Higher values ensure gradual transitions when landing.
 
 Max Land Speed
-   Set the Maximum velocity on land.
+   The maximum velocity boids can achieve on land.
 Jump Speed
-   Maximum speed for jumping.
+   The velocity boids achieve during jumps.
 Max Land Acceleration
-   Lateral acceleration on land, percent of max velocity (turn). Defines how fast a boid is able to change direction.
+   Controls how quickly boids can change direction on land, expressed as a percentage of their maximum velocity.
 Max Land Angular Velocity
-   Tangential acceleration on land, percent 180 degrees.
-   Defines how much the boid can suddenly accelerate in order to fulfill a rule.
+   Limits how sharply boids can turn on land, expressed as a percentage of 180 degrees.
+   Lower values create smoother, less abrupt turns.
 Land Personal Space
-   Radius of boids personal space on land. Percentage of particle size.
+   The radius of personal space for boids on land, as a percentage of their particle size.
+   Larger values reduce crowding in herds or groups.
 Land Stick Force
-   How strong a force must be to start effecting a boid on land.
+   Determines the strength of a force required to influence boids on land.
+   Use lower values to allow boids to move more freely when interacting with forces.
 
 Collision Collection
-   Only collide with objects in this collection.
+   Restricts collisions to objects within the specified collection.
+   This is useful for limiting interactions to certain objects or environments.
 
 
 Battle
@@ -127,12 +129,9 @@ System
    Index of the *Object*\ 's particle system as set in the list view in the particle panel.
 
 Mode
-   Enemy
-      Setting the type to *Enemy* will cause the systems to fight with each other.
-   Friend
-      Will make the systems work together.
-   Neutral
-      Will not cause them to align or fight with each other.
+   :Enemy: Setting the type to *Enemy* will cause the systems to fight with each other.
+   :Friend: Will make the systems work together.
+   :Neutral: Will not cause them to align or fight with each other.
 
 
 Deflection
