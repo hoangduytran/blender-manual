@@ -9,23 +9,30 @@ Conventions Used in This Manual
 .. Note that these conventions are for people reading the manual.
    we have more detailed list of conventions for authors under the writing style section.
 
-Keyboards
----------
+Keyboard
+--------
 
-Hotkey letters are shown in this manual like they appear on a keyboard; for example:
+Hotkey letters are shown in this manual like they appear on a keyboard. For example:
 
-:kbd:`G`
-   refers to the lowercase ``g``.
-:kbd:`Shift`, :kbd:`Ctrl`, :kbd:`Alt`
-   are specified as modifier keys.
-:kbd:`Ctrl-W`, :kbd:`Shift-Alt-A`, ...
-   indicates that these keys should be pressed simultaneously.
-:kbd:`Numpad0` to :kbd:`Numpad9`, :kbd:`NumpadPlus`
-   refer to the keys on the separate numeric keypad.
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 30 70
+
+   * - :kbd:`G`
+     - The "G" key without any others (as though you were typing a lowercase "g").
+   * - :kbd:`Shift`, :kbd:`Ctrl`, :kbd:`Alt`
+     - Modifier keys.
+   * - :kbd:`Ctrl-W`, :kbd:`Shift-Alt-A`, ...
+     - Indicates that these keys should be pressed simultaneously.
+   * - :kbd:`0` to :kbd:`9`
+     - The keys on the number row above the letters.
+   * - :kbd:`Numpad0` to :kbd:`Numpad9`, :kbd:`NumpadPlus`
+     - The keys on the separate numeric keypad.
 
 Other keys are referred to by their names,
-such as :kbd:`Esc`, :kbd:`Tab`, :kbd:`F1` to :kbd:`F12`.
-Of special note are the arrow keys, :kbd:`Left`, :kbd:`Right` and so on.
+such as :kbd:`Esc`, :kbd:`Tab`, and :kbd:`F1` to :kbd:`F12`.
+Of special note are the arrow keys: :kbd:`Left`, :kbd:`Right` and so on.
 
 
 Mouse
@@ -33,14 +40,19 @@ Mouse
 
 This manual refers to mouse buttons as:
 
-:kbd:`LMB`
-   Left Mouse Button
-:kbd:`RMB`
-   Right Mouse Button
-:kbd:`MMB`
-   Middle Mouse Button
-:kbd:`Wheel`, :kbd:`WheelUp` & :kbd:`WheelDown`
-   Scrolling the wheel.
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 30 70
+
+   * - :kbd:`LMB`
+     - Left Mouse Button
+   * - :kbd:`RMB`
+     - Right Mouse Button
+   * - :kbd:`MMB`
+     - Middle Mouse Button
+   * - :kbd:`Wheel`, :kbd:`WheelUp` & :kbd:`WheelDown`
+     - Scrolling the wheel.
 
 .. note::
 
@@ -55,7 +67,8 @@ This manual refers to mouse buttons as:
 Hovering
 ========
 
-While hovering (when the cursor is held over a button).
+The following shortcuts can be pressed while hovering the mouse cursor
+over an editable field.
 
 
 .. _keymap-common-properties:
@@ -63,58 +76,101 @@ While hovering (when the cursor is held over a button).
 Properties
 ----------
 
-- :kbd:`Ctrl-C` -- Copy the (single) value of the button.
-- :kbd:`Ctrl-V` -- Paste the (single) value of the button.
-- :kbd:`Ctrl-Alt-C` -- Copy the entire vector or color of the field.
-- :kbd:`Ctrl-Alt-V` -- Paste the entire vector or color of the field.
-- :kbd:`RMB` -- Open the context menu.
-- :kbd:`Backspace` -- Clear the value (sets to zero or clears a text field).
-- :kbd:`Minus` -- Negate number values (multiply by -1.0).
-- :kbd:`Ctrl-Wheel` -- Change the value incremental steps.
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
 
-  For pop-up option menus buttons, this cycles the value.
-- :kbd:`Return` -- Activates menus or toggles the value.
+   * - :kbd:`Ctrl-C`
+     - Copy the (single) value of the field.
+   * - :kbd:`Ctrl-V`
+     - Paste the (single) value of the field.
+   * - :kbd:`Ctrl-Alt-C`
+     - Copy the entire vector or color of the field.
+   * - :kbd:`Ctrl-Alt-V`
+     - Paste the entire vector or color of the field.
+   * - :kbd:`RMB`
+     - Open the context menu.
+   * - :kbd:`Backspace`
+     - Reset the value to its default.
+   * - :kbd:`Minus`
+     - Invert the value's sign (multiply by -1.0).
+   * - :kbd:`Ctrl-Wheel`
+     - Change the value in incremental steps.
 
-- :kbd:`Alt` -- Hold while editing values to apply the change to all selected items
-  (objects, bones, sequence-strips).
+       For fields with a pop-up list of values, this cycles the value.
+   * - :kbd:`Return`
+     - Activates menus and toggles checkboxes.
+   * - :kbd:`Alt`
+     - Hold while editing values to apply the change to all selected items
+       (objects, bones, sequence-strips).
 
-  This can be used for number fields and toggles.
+       This can be used for number fields and toggles.
 
 
 Animation
 ---------
 
-- :kbd:`I` -- Insert a keyframe.
-- :kbd:`Alt-I` -- Clear the keyframe.
-- :kbd:`Shift-Alt-I` -- Clear all keyframes (removing all F-Curves).
-- :kbd:`Ctrl-D` -- Assign a driver.
-- :kbd:`Ctrl-Alt-D` -- Clear the driver.
-- :kbd:`K` -- Add a Keying Set.
-- :kbd:`Alt-K` -- Clear the Keying Set.
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`I`
+     - Insert a :doc:`keyframe </animation/keyframes/introduction>`.
+   * - :kbd:`Alt-I`
+     - Clear the keyframe.
+   * - :kbd:`Shift-Alt-I`
+     - Clear all keyframes.
+   * - :kbd:`Ctrl-D`
+     - Assign a :doc:`driver </animation/drivers/introduction>`.
+   * - :kbd:`Ctrl-Alt-D`
+     - Clear the driver.
+   * - :kbd:`K`
+     - Add the property to the current
+       :doc:`keying set </animation/keyframes/keying_sets>`.
+   * - :kbd:`Alt-K`
+     - Remove the property from the current keying set.
 
 
 Python Scripting
 ----------------
 
-- :kbd:`Ctrl-C` over any :ref:`ui-operator-buttons` copies their Python command into the clipboard.
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
 
-  This can be used in the Python Console or in the Text editor when writing scripts.
-- :kbd:`Shift-Ctrl-C` over property buttons copies their data path for this property
-  (also available from the context menu).
-
-  Useful when writing drivers or scripts.
-- :kbd:`Shift-Ctrl-Alt-C` over property buttons copies their *full* data path for the data-block and property.
-
-  Note that in most cases it is best to access values based on the context, instead of by name.
+   * - :kbd:`Ctrl-C`
+     - When pressed while hovering over an :ref:`operator button <ui-operator-buttons>`,
+       copies its Python command to the clipboard. This command can then be used in the
+       :doc:`Python Console </editors/python_console>` or in the :doc:`Text Editor </editors/text_editor>`
+       when writing scripts.
+   * - :kbd:`Shift-Ctrl-C`
+     - When pressed while hovering over a field, copies its relative data path (also available from
+       the context menu). Useful when writing drivers or scripts.
+   * - :kbd:`Shift-Ctrl-Alt-C`
+     - When pressed while hovering over a field, copies its full data path.
 
 
 Dragging
 ========
 
-- :kbd:`Ctrl` -- While dragging, snap to discrete steps.
-- :kbd:`Shift` -- Gives precision control over the value.
-- :kbd:`Shift-Ctrl` -- Precise snap will move the object with high precision
-  along with the snapping constraint.
+The following shortcuts can be used while moving/rotating/scaling an object in the 3D Viewport,
+dragging the slider of a value, and so on. Note that they should be pressed after starting
+the drag, not before.
+
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`Ctrl`
+     - Snap to coarse increments, making it easier to (say) rotate an object by exactly 90°.
+   * - :kbd:`Shift`
+     - Make the value change more slowly in response to mouse movement, giving you more precision.
+   * - :kbd:`Shift-Ctrl`
+     - Snap to fine increments.
 
 
 .. _ui-text-editing:
@@ -122,24 +178,52 @@ Dragging
 Text Editing
 ============
 
-- :kbd:`Home` -- Go to the start of the line.
-- :kbd:`End` -- Go to the end of the line.
-- :kbd:`Left`, :kbd:`Right` -- Move the cursor a single character.
-- :kbd:`Ctrl-Left`, :kbd:`Ctrl-Right` -- Move the cursor an entire word.
-- :kbd:`Backspace`, :kbd:`Delete` -- Delete characters.
-- :kbd:`Ctrl-Backspace`, :kbd:`Ctrl-Delete` -- Delete words.
-- :kbd:`Shift` -- Select while holding the key and moving the cursor.
-- :kbd:`Ctrl-A` -- Select all text.
-- :kbd:`Ctrl-C` -- Copy the selected text.
-- :kbd:`Ctrl-X` -- Cut the selected text.
-- :kbd:`Ctrl-V` -- Paste text at the cursor position.
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`Home`
+     - Go to the start of the line.
+   * - :kbd:`End`
+     - Go to the end of the line.
+   * - :kbd:`Left`, :kbd:`Right`
+     - Move the cursor a single character.
+   * - :kbd:`Ctrl-Left`, :kbd:`Ctrl-Right`
+     - Move the cursor an entire word.
+   * - :kbd:`Backspace`, :kbd:`Delete`
+     - Delete characters.
+   * - :kbd:`Ctrl-Backspace`, :kbd:`Ctrl-Delete`
+     - Delete words.
+   * - :kbd:`Shift`
+     - Select while holding the key and moving the cursor.
+   * - :kbd:`Ctrl-A`
+     - Select all text.
+   * - :kbd:`Ctrl-C`
+     - Copy the selected text.
+   * - :kbd:`Ctrl-X`
+     - Cut the selected text.
+   * - :kbd:`Ctrl-V`
+     - Paste text at the cursor position.
 
 
 Confirm & Cancel
 ================
 
-- :kbd:`Esc`, :kbd:`RMB` -- Cancel.
-- :kbd:`Return`, :kbd:`LMB` -- Confirm.
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`Esc`, :kbd:`RMB`
+     - Cancel.
+   * - :kbd:`Return`, :kbd:`LMB`
+     - Confirm.
 
 .. (todo?) deactivation: Some controls can be disabled, in Blender deactivated controls are still editable.
    That can be due to the current state or context. In that case, they appear in a lighter color.
+
+Customizing
+===========
+
+You can customize keyboard and mouse shortcuts in the :doc:`Preferences </editors/preferences/keymap>`.

@@ -11,18 +11,20 @@ General
 =======
 
 .. list-table::
+   :align: left
+   :width: 95%
    :widths: 20 80
 
    * - :kbd:`1` - :kbd:`3`
-     - Switch Selection mode
-   * - :kbd:`4``
+     - Switch :doc:`Selection mode </modeling/meshes/selecting/introduction>`
+   * - :kbd:`4`
      - Object Mode
-   * - :kbd:`5``
-     - Modes Pie Menu
+   * - :kbd:`5`
+     - :doc:`Modes </editors/3dview/modes>` Pie Menu
    * - :kbd:`RMB`
      - Context menu
    * - :kbd:`Tab`
-     - Menu Search.
+     - :ref:`Menu Search <bpy.ops.wm.search_menu>`
    * - :kbd:`Shift-Tab`
      - Quick access (favorites)
    * - :kbd:`Return`
@@ -39,24 +41,28 @@ Common Editing Keys
 ===================
 
 .. list-table::
-   :widths: 10 90
+   :align: left
+   :width: 95%
+   :widths: 20 80
 
    * - :kbd:`Backspace`
-     - Deletes the selected item, requires a confirmation dialog.
+     - Delete the selected item with a confirmation dialog
    * - :kbd:`Delete`
-     - Deletes the selected item, does not require a confirmation dialog.
+     - Delete the selected item without a confirmation dialog
    * - :kbd:`Ctrl-D`
      - Duplicate
    * - :kbd:`P`
      - Set Parent
    * - :kbd:`B`
-     - Proportional Editing / Soft Selection
+     - :doc:`/editors/3dview/controls/proportional_editing` (a.k.a. Soft Selection)
 
 
 Viewport
 ========
 
 .. list-table::
+   :align: left
+   :width: 95%
    :widths: 20 80
 
    * - :kbd:`Alt-LMB`
@@ -79,6 +85,8 @@ Selection
 =========
 
 .. list-table::
+   :align: left
+   :width: 95%
    :widths: 20 80
 
    * - :kbd:`LMB`
@@ -105,40 +113,46 @@ Tools
 =====
 
 .. list-table::
+   :align: left
+   :width: 95%
    :widths: 20 80
 
    * - :kbd:`W`, :kbd:`E`, :kbd:`R`
-     - Transform Tools
+     - Move, Rotate, Scale
    * - :kbd:`Q`
-     - Select Tools
+     - :doc:`Selection Tools </interface/selecting>`
    * - :kbd:`D`
-     - Annotate
+     - :doc:`Annotate Tool </interface/annotate_tool>`
    * - :kbd:`C`
-     - Cursor Tool
+     - :doc:`Cursor Tool </editors/3dview/3d_cursor>`
 
 
 Edit Mode Tools
 ===============
 
 .. list-table::
+   :align: left
+   :width: 95%
    :widths: 20 80
 
    * - :kbd:`Ctrl-E`
-     - Extrude
+     - :doc:`Extrude </modeling/meshes/editing/mesh/extrude>`
    * - :kbd:`Ctrl-B`
-     - Bevel
+     - :doc:`Bevel </modeling/meshes/editing/edge/bevel>`
    * - :kbd:`I`
-     - Inset
+     - :doc:`Inset </modeling/meshes/editing/face/inset_faces>`
    * - :kbd:`K`
-     - Knife
+     - :doc:`Knife </modeling/meshes/editing/mesh/knife_topology_tool>`
    * - :kbd:`Alt-C`
-     - Loop Cut
+     - :doc:`Loop Cut </modeling/meshes/editing/edge/loopcut_slide>`
 
 
 Animation
 =========
 
 .. list-table::
+   :align: left
+   :width: 95%
    :widths: 20 80
 
    * - :kbd:`Spacebar`
