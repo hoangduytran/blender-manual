@@ -54,7 +54,7 @@ Active Vertex Group
          Mirrors weights and/or flips group names.
          See :ref:`Mirror Vertex Group <bpy.ops.object.vertex_group_mirror>` for more information.
       Mirror Vertex Group (Topology)
-         Performs the *Mirror Vertex Group* with the *Topology Mirror* option enabled.
+         Performs the *Mirror Vertex Group* with :ref:`bpy.types.Mesh.use_mirror_topology` enabled.
 
       Remove from All Groups
          Unassigns the selected vertices from all (even locked) groups.

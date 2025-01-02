@@ -39,16 +39,22 @@ Keep Connected
 Mirror
 ^^^^^^
 
-Mirror allows you to transform vertices symmetrically according to the chosen axis.
-When you transform an element (vertex, edge or face),
-if there is its exact axis-mirrored counterpart (in local space),
-it will be transformed accordingly, through a symmetry along the chosen axis.
+The *Mirror* options enable symmetric transformations
+of mesh elements (vertices, edges, or faces) along the selected axis.
+When an element is transformed, its exact mirrored counterpart (in local space),
+if present, is transformed correspondingly to maintain symmetry.
+
+For the *Mirror* tool to function correctly, mirrored vertices must be precisely aligned with their counterparts.
+If vertices are not accurately positioned at their mirror locations,
+the *Mirror Axis* will not recognize them as mirrored.
+For meshes with visual symmetry but differing topology,
+enabling :ref:`Topology Mirror <bpy.types.Mesh.use_mirror_topology>` can address this limitation.
 
 .. note::
 
-   The conditions for *Mirror* to work are quite strict, which can make it difficult to use.
-   To have an exact mirrored version of a (half) mesh,
-   it's easier and simpler to use the :doc:`Mirror Modifier </modeling/modifiers/generate/mirror>`.
+   Strict alignment requirements can make *Mirror* challenging to use.
+   The :doc:`Mirror Modifier </modeling/modifiers/generate/mirror>` offers an alternative,
+   automatically handling symmetry.
 
 
 .. _bpy.types.Mesh.use_mirror_topology:
@@ -56,40 +62,28 @@ it will be transformed accordingly, through a symmetry along the chosen axis.
 Topology Mirror
 ^^^^^^^^^^^^^^^
 
-.. note::
+*Topology Mirror* determines mirrored vertices by analyzing their relationships with other vertices in the mesh,
+rather than relying solely on vertex positions.
+By evaluating the overall topology, this feature allows non-symmetrical vertices to be treated as mirrored.
 
-   For *Topology Mirror* to work, at least one of the three *Mirror Axis* must be enabled.
+*Topology Mirror* requires at least one *Mirror Axis* to be enabled.
 
-When using any of the three *Mirror Axis* options to work on a mirrored Mesh Geometry, the vertices that
-are mirrored must be perfectly placed. If they are not exactly positioned in their mirror
-locations then the *Mirror Axis* will not treat those vertices as mirrored.
+.. tip::
 
-*Topology Mirror* tries to address this problem by determining which vertices are mirrored vertices not only by
-using their positions but also by looking at how those vertices are related to others in the Mesh Geometry.
-It looks at the overall topology to determine if particular vertices will be treated as mirrored.
-The effect of this is that mirrored vertices can be non-symmetrical and yet still be treated as mirrored.
+   *Topology Mirror* is most effective with detailed geometry.
+   Simple meshes, such as cubes or UV spheres, may produce inconsistent results.
 
-.. note::
+.. rubric:: Example
 
-   The *Topology Mirror* functionality will work more reliably on mesh geometry
-   which is more detailed. If you use very simple geometry, for example
-   a *Cube* or *UV Sphere*, the *Topology Mirror* option will often not work.
+This example demonstrates how to use *Topology Mirror* effectively:
 
-
-Example
-"""""""
-
-For an example of how to use *Topology Mirror* open up a new Blender scene,
-then delete the default cube and add a Monkey object to the 3D Viewport.
-
-#. Press :kbd:`Tab` to put the Monkey object into *Edit Mode*.
-#. With all the *Mirror Axis* options disabled move one of the Monkey object's vertices slightly.
-#. Then Turn the *X Axis Mirror* on but leave *Topology Mirror* disabled.
-#. If you now move that vertex again, the *X Axis Mirror* will not work and the mirrored
-   vertices will not be altered.
-#. If you then enable *Topology Mirror* and move the same vertices again,
-   then *X Axis Mirror* should still mirror the other vertex,
-   even though they are not perfectly positioned.
+#. Open a new Blender scene. Delete the default cube and add a Monkey object in the 3D Viewport.
+#. Press :kbd:`Tab` to switch to *Edit Mode*.
+#. Disable all *Mirror* axes and move one of the Monkey object's vertices slightly.
+#. Enable the *X Axis Mirror* option but leave *Topology Mirror* disabled.
+   Move the same vertex again. The *X Axis Mirror* will not affect the mirrored vertices, as they are not perfectly aligned.
+#. Enable *Topology Mirror* and move the same vertex once more.
+   The *X Axis Mirror* will now mirror the other vertex, even though they are not perfectly positioned.
 
 
 .. _bpy.types.ToolSettings.use_mesh_automerge:

@@ -124,7 +124,7 @@ Topology Mirror
    #. Rename the new vertex group to the name of the target vertex group
       (the group you deleted above).
    #. Select the target vertex group and call the Mirror tool
-      (use only the Mirror weights option and optionally *Topology Mirror* if your mesh is not symmetric).
+      (use only *Mirror Weights* and optionally *Topology Mirror* if your mesh is not symmetric).
 
 
 .. _bpy.ops.object.vertex_group_invert:
