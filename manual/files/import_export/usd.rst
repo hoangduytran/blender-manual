@@ -131,6 +131,9 @@ Create Collection
 Relative Path
    Select the file relative to the blend-file.
 
+Apply Unit Conversion Scale
+   Scale the scene objects by the USD Stage ``metersPerUnit`` value. This scaling is applied in addition to the value
+   specified in the Scale option.
 Scale
    Value by which to scale the imported objects in relation to the world's origin.
 Light Intensity Scale
@@ -379,6 +382,12 @@ Convert Orientation
    Forward / Up Axis
       By mapping these to different axes you can convert rotations between applications default up and forward axes.
 
+Units
+   Set the USD Stage ``metersPerUnit`` metadata to the chosen measurement.
+
+   Meters Per Unit
+      Value to use for ``metersPerUnit`` if `Custom` Units are selected.
+
 Xform Ops
    The type of transform operators to use to transform prims.
 
@@ -387,8 +396,8 @@ Xform Ops
    :Matrix: Export matrix operator.
 
 Use Settings for
-   Determines the whether to use *Viewport* or *Render* visibility of collection, modifiers,
-   or any other property that can be set for both the *Viewport* and *Render*.
+   Determines whether to use *Viewport* or *Render* visibility of objects, modifier settings, and other
+   properties providing similar options, during export.
 
 
 Object Types
@@ -602,3 +611,72 @@ USDZ
    Due to a current limitation in the USD library, UDIM textures cannot be include in the USDZ archive.
    This limitation will likely be addressed in a future version of USD.
    (See `USD pull request #2133 <https://github.com/PixarAnimationStudios/USD/pull/2133>`__.)
+
+
+USD Primvar data types
+======================
+
+Blender supports a subset of the
+`USD basic data types <https://openusd.org/release/api/_usd__page__datatypes.html#Usd_Basic_Datatypes>`__ for import
+and export.
+
+Only the types natively supported by Blender's
+:doc:`attribute system </modeling/geometry_nodes/attributes_reference>` will be processed.
+
+.. list-table::
+   :widths: 15 15 50
+   :header-rows: 1
+
+   * - Blender type
+     - USD type
+     - Notes
+
+   * - Boolean
+     - bool
+     -
+
+   * - 8-Bit Integer
+     - uchar
+     - The USD unsigned 8-bit value will be cast to a signed value for import. The signed value will be cast to
+       unsigned for export.
+
+   * - Integer
+     - int
+     - A 32-bit signed integer value.
+
+   * - Float
+     - float
+     - A 32-bit, single-precision, floating point value.
+
+   * - Vector
+     - float3
+     - 3D vector with 32-bit floating-point values.
+
+   * - 2D Vector
+     - float2/texCoord2f
+     - 2D vector with 32-bit floating-point values.
+
+   * - Color
+     - color4f
+     - RGBA color with 32-bit floating-point values. As a special case, when encountering a Primvar or attribute for
+       USD's ``displayColor``, it will be read or written as ``color3f`` data with an Alpha component of 1.0.
+
+   * - Byte Color
+     - color4f
+     - USD does not provide a byte color equivalent. The byte values will be converted to float and exported as a
+       color4f.
+
+   * - Quaternion
+     - quatf
+     - Floating point :term:`Quaternion` rotation.
+
+.. admonition:: Implementation Caveats
+   :class: important
+
+   Blender does not support USD Primvars using 64-bit integer values (``int64``), those using unsigned types
+   (``uint``), or those using 64-bit double-precison or 16-bit half-precision floating-point values. For example, this
+   would include such types as ``matrix4d`` (4x4 matrix of doubles) and ``quath`` (half-precision quaternion).
+
+.. note::
+   The USD ``float4`` data type has no direct Blender equivalent and will not be treated as a Blender ``Color`` or
+   ``Quaternion``.
