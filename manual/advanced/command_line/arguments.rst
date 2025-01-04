@@ -21,7 +21,7 @@ Render Options
    Run in background (often used for UI-less rendering).
 
    The audio device is disabled in background-mode by default
-   and can be re-enabled by passing in ``-setaudo Default`` afterwards.
+   and can be re-enabled by passing in ``-setaudio Default`` afterwards.
 
 ``-a``, ``--render-anim``
    Render frames from start to end (inclusive).
@@ -328,7 +328,7 @@ Debug Options
    Capture the GPU commands issued inside the give scope name.
 
 ``--debug-gpu-renderdoc``
-   Enable Renderdoc integration for GPU frame grabbing and debugging.
+   Enable RenderDoc integration for GPU frame grabbing and debugging.
 
 ``--debug-wm``
    Enable debug messages for the window manager, shows all operators in search, shows keymap errors.
@@ -451,6 +451,29 @@ Misc Options
 
 ``--``
    End option processing, following arguments passed unchanged. Access via Python's ``sys.argv``.
+
+
+.. _command-line-args-other-options:
+
+Other Options
+=============
+
+``--disable-depsgraph-on-file-load``
+   Backround mode: Do not systematically build and evaluate ViewLayers' dependency graphs
+   when loading a blendfile in background mode (`-b` or `-c` options).
+
+   Scripts requiring evaluated data then need to explicitly ensure that
+   an evaluated depsgraph is available
+   (e.g. by calling `depsgraph = context.evaluated_depsgraph_get()`).
+
+   NOTE: this is a temporary option, in the future depsgraph will never be
+   automatically generated on file load in background mode.
+
+``--disable-liboverride-auto-resync``
+   Do not perform library override automatic resync when loading a new blendfile.
+
+   NOTE: this is an alternative way to get the same effect as when setting the
+   `No Override Auto Resync` User Preferences Debug option.
 
 
 .. _command-line-args-argument-parsing:
