@@ -170,8 +170,20 @@ Frame Selected
 
 .. reference::
 
-   :Mode:      All modes
+   :Mode:      Object, Edit, Pose
    :Menu:      :menuselection:`View --> Frame Selected`
    :Shortcut:  :kbd:`NumpadPeriod`
 
 Changes the view so that you can see the selected object(s).
+
+
+Frame Last Stroke
+=================
+
+.. reference::
+
+   :Mode:      Texture Paint, Vertex Paint, Weight Paint, Sculpt
+   :Menu:      :menuselection:`View --> Frame Last Stroke`
+   :Shortcut:  :kbd:`NumpadPeriod`
+
+Centers the view on the region of the last brush stroke.
