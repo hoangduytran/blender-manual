@@ -42,3 +42,31 @@ Viewport
 Pixel Size
    Option to control the resolution for viewport rendering.
    Allows you to speed up viewport rendering, which is especially useful for displays with high DPI.
+
+
+Compositor
+==========
+
+.. Editor's Note: This page gets copied into:
+.. - :doc:`</render/cycles/render_settings/performance>`
+.. - :doc:`</compositing/sidebar>`
+.. These bpy types can not be added below the copy line as it causes build warnings.
+
+.. _bpy.types.RenderSettings.compositor_device:
+.. _bpy.types.RenderSettings.compositor_precision:
+
+.. --- copy below this line ---
+
+Device
+   The device used for compositing.
+
+   :CPU: Use the CPU for compositing.
+   :GPU: Use the GPU for compositing.
+
+Precision
+   The precision of compositor intermediate result.
+
+   :Auto: Use full precision for final renders, half precision otherwise.
+   :Full: Use full precision for final renders and viewport.
+
+.. --- end copy above this line ---

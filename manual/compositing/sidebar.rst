@@ -59,21 +59,9 @@ Performance
 
 This panel helps you tweak the performance of the Compositor.
 
-.. _bpy.types.RenderSettings.compositor_device:
-
-Device
-   The device used for compositing.
-
-   :CPU: Use the CPU for compositing.
-   :GPU: Use the GPU for compositing.
-
-.. _bpy.types.RenderSettings.compositor_precision:
-
-Precision
-   The precision of compositor intermediate result.
-
-   :Auto: Use full precision for final renders, half precision otherwise.
-   :Full: Use full precision for final renders and viewport.
+.. include:: /render/eevee/render_settings/performance.rst
+   :start-after: .. --- copy below this line ---
+   :end-before: .. --- end copy above this line ---
 
 .. _bpy.types.CompositorNodeTree.use_viewer_border:
 
