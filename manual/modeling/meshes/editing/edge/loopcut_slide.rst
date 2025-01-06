@@ -10,7 +10,8 @@ Loop Cut and Slide
    :Menu:      :menuselection:`Edge --> Loop Cut and Slide`
    :Shortcut:  :kbd:`Ctrl-R`
 
-*Loop Cut and Slide* splits a loop of faces by inserting a new edge loop intersecting the chosen edge.
+*Loop Cut and Slide* splits a loop of faces into two or more parallel loops.
+The new edges are created in the middle by default, but you can also slide them closer to a side.
 
 
 Usage
@@ -18,35 +19,39 @@ Usage
 
 The tool is interactive and has two steps:
 
-#. Pre-Visualizing the Cut
+#. Choose the face loop to cut
 
-   After the tool is activated, move the cursor over a desired edge.
-   The cut to be made is marked with a magenta colored line as you move the mouse over the various edges.
-   The to be created edge loop stops at the poles (tris and n-gons) where the existing face loop terminates.
+   After activating the tool, move the cursor over an edge through which the cut should pass
+   (that is, an edge that's perpendicular to the cutting direction). Blender shows a yellow line
+   previewing the cut that will be made. Click :kbd:`LMB` to confirm and move to the next step,
+   or :kbd:`RMB` to abort.
 
-#. Sliding the new Edge Loop
+#. Slide the new edge loop(s)
 
-   Once an edge is chosen via :kbd:`LMB`,
-   you can move the mouse along the edge to determine where the new edge loop will be placed.
-   This is identical to the :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>`.
-   Clicking :kbd:`LMB` again confirms and makes the cut at the pre-visualized location,
-   or clicking :kbd:`RMB` forces the cut to exactly 50%.
-   This step is skipped when using multiple edge loops (see below).
+   You can now move the mouse to change the position of the new edge loop.
+   Click :kbd:`LMB` to create the cut at the chosen location,
+   or :kbd:`RMB` to create it at the center.
 
 .. list-table::
+   :widths: 1 1 1
 
    * - .. figure:: /images/modeling_meshes_tools_loop_before.png
+          :width: 240px
 
           Mesh before inserting edge loop.
 
      - .. figure:: /images/modeling_meshes_tools_loop_preview.png
+          :width: 240px
 
-          Preview of edge loop location.
+          Choosing the face loop.
 
      - .. figure:: /images/modeling_meshes_tools_loop_placement.png
+          :width: 240px
 
-          Interactive placement of edge loop between adjacent loops.
+          Sliding the new edge loop.
 
+.. seealso::
+   The :ref:`tool-mesh-edge_slide` tool for sliding existing edge loops.
 
 .. _modeling-meshes-editing-edge-loopcut-slide-options:
 
@@ -56,15 +61,9 @@ Options
 These options are available while the tool is in use, and later in
 the :ref:`bpy.ops.screen.redo_last` panel.
 
-Number of Cuts :kbd:`Wheel` or :kbd:`PageUp` / :kbd:`PageDown`
-   After activating the tool, but before confirming initial loop location,
-   you can increase and decrease the number of cuts to create,
-   by entering a number with the keyboard, scrolling :kbd:`Wheel` or using :kbd:`PageUp` and :kbd:`PageDown`.
-
-   .. note::
-
-      When creating multiple loops, these cuts are uniformly distributed in the original face loop,
-      and you will *not* be able to control their positions.
+Number of Cuts :kbd:`Wheel`
+   During the first step, you can change the number of cuts to create by
+   scrolling :kbd:`Wheel`, typing a number, or pressing :kbd:`PageUp`/:kbd:`PageDown`.
 
    .. list-table::
 
@@ -76,42 +75,58 @@ Number of Cuts :kbd:`Wheel` or :kbd:`PageUp` / :kbd:`PageDown`
 
              Result of using multiple cuts.
 
-Smoothness :kbd:`Alt-Wheel`
-   Smoothing causes edge loops to be placed in an interpolated position, relative to the face it is added to,
-   causing them to be shifted outwards or inwards by a given percentage,
-   similar to the *Subdivide Smooth* tool. When not using smoothing,
-   new vertices for the new edge loop are placed exactly on the preexisting edges.
-   This keeps subdivided faces flat, but can distort geometry,
-   particularly when using :doc:`Subdivision Surfaces </modeling/modifiers/generate/subdivision_surface>`.
-   Smoothing can help maintain the curvature of a surface once it is subdivided.
+Smoothness
+   How much to offset the newly created edges along their normals to maintain surface curvature.
+   You can change this in the first step using :kbd:`Alt-Wheel`, but because the smoothness
+   isn't previewed at that stage, it's typically better to change it afterwards in the
+   *Adjust Last Operation* panel.
 
    .. list-table::
 
       * - .. figure:: /images/modeling_meshes_editing_edge_loopcut-slide_unsmooth.png
 
-             Added edge loops without smoothing.
+             Added edge loop without smoothing.
 
         - .. figure:: /images/modeling_meshes_editing_edge_loopcut-slide_smooth.png
 
-             Same edge loops, but with smoothing value.
+             Same edge loop, but with smoothing value.
 
 Falloff
-   Falloff type for *Smoothness*, changes the shape of the profile.
+   Falloff type for *Smoothness*. Changes the shape of the profile.
 
 Factor
-   Position of the edge loop relative to the surrounding edge loops.
+   Position of the edge loop relative to the surrounding ones.
 
 Even :kbd:`E`
-   Only available for single edge loops.
-   This matches the shape of the edge loop to one of the adjacent edge loops.
-   (See :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>` for details.)
+   Makes the new edge loop have an even distance to an existing adjacent one
+   (instead of a distance that's proportional to the length of each
+   perpendicular edge it crosses). You can press :kbd:`E` during the second
+   step to toggle it.
 
-Flip :kbd:`F`
-   When Even is enabled, this flips the target edge loop to match.
-   (See :ref:`Edge Slide tool <modeling-meshes-editing-edge-slide>` for details.)
+Flipped :kbd:`F`
+   Keep an *Even* distance to the other adjacent edge. You can press :kbd:`F`
+   during the second step to toggle it.
 
-Clamp
-   Clamp within the edge extents.
+.. list-table::
+   :widths: 1 1 1
+
+   * - .. figure:: /images/modeling_meshes_editing_edge_loopcut-slide_uneven.png
+
+          Cut with *Even* disabled.
+
+     - .. figure:: /images/modeling_meshes_editing_edge_loopcut-slide_even.png
+
+          Cut with *Even* enabled. The red dot shows the side to which an even
+          distance is kept.
+
+     - .. figure:: /images/modeling_meshes_editing_edge_loopcut-slide_even_flipped.png
+
+          Cut with *Even* and *Flipped* enabled.
+
+Clamp :kbd:`C`
+   When unchecked, the new edge loop can go outside the face loop's boundary edges.
+   You can press :kbd:`C` or hold :kbd:`Alt` during the second step to toggle it.
 
 Correct UVs
-   Corrects the corresponding UV coordinates, if these exist, to avoid image distortions.
+   When unchecked, the faces in the :doc:`UV map </editors/uv/introduction>` will be split
+   uniformly even if the cut was placed off-center on the 3D mesh.

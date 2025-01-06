@@ -99,7 +99,7 @@ Quad Corner Type
              :width: 200px
 
              Path corner type.
-        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-straight-cut.png
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-straight_cut.png
              :width: 200px
 
              Straight Cut corner type.
@@ -232,7 +232,7 @@ Two Adjacent Quad Edges
 
 .. list-table::
 
-   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-straight-cut.png
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-straight_cut.png
           :width: 250px
 
           Straight Cut corner type.
