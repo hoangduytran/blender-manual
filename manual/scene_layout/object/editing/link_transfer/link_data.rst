@@ -7,73 +7,64 @@ Link Data
 .. reference::
 
    :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Link/Transfer Data...`
+   :Menu:      :menuselection:`Object --> Link/Transfer Data`
+   :Shortcut:  :kbd:`Ctrl-L`
 
-Links objects between scenes or data-blocks of the active object to all selected objects.
-In some case (i.e. Object Data, Modifier) the target objects must be
-of the same type as the active one or capable of receiving the data.
-If targets already have data linked to them, it will be unlinked first.
+Performs various assignments: adding an object to a scene, giving an object the same
+data or modifiers as another, and so on.
 
-Type
-   Data-block type to link.
+When you link two objects to the same data, changes made to one will also appear in the other.
+Should you no longer want this, you can use :ref:`data-system-datablock-make-single-user`
+to once again give each object its own data.
 
-   - `Link Object Data`_
-   - `Link Materials`_
-   - `Link Animation Data`_
-   - `Link Collections`_
-   - `Link Instance Collection`_
-   - `Link Fonts to Text`_
-   - `Copy Modifiers`_
-   - `Copy Grease Pencil Effects`_
+Link Objects to Scene
+   Adds the selected objects to the specified scene.
 
-.. seealso::
-
-   :ref:`data-system-datablock-make-single-user` for unlinking data-blocks.
-
+----
 
 Link Object Data
-================
-
-Replace assigned Object Data.
-
-
+   Replaces the :doc:`object data </scene_layout/object/introduction>` of the
+   selected objects by that of the :ref:`active object <object-active>`.
 Link Materials
-==============
-
-Replace assigned Materials.
-
-
+   Replaces the :doc:`materials </render/materials/introduction>` of the selected
+   objects by those of the active object.
 Link Animation Data
-===================
-
-Replace assigned Animation Data.
-
-
+   Replaces the :doc:`actions </animation/actions>` and :doc:`tracks </editors/nla/tracks>`
+   of the selected objects by those of the active object.
 Link Collections
-================
-
-Replace assigned Collections.
-
-
+   Moves the selected objects into the same
+   :doc:`collections </scene_layout/collections/introduction>` as the active object.
 Link Instance Collection
-========================
-
-Replace assigned Collection Instance.
-
-
+   Replaces the :doc:`instance collection </scene_layout/object/properties/instancing/collection>`
+   of the selected objects by that of the active object.
 Link Fonts to Text
-==================
+   Replaces the font of the selected :doc:`text objects </modeling/texts/introduction>` by that
+   of the active text object.
 
-Replace Text object Fonts.
-
+----
 
 Copy Modifiers
-==============
-
-Replace Modifiers.
-
-
+   Replaces the :doc:`modifiers </modeling/modifiers/introduction>` of the selected objects
+   by those of the active object.
 Copy Grease Pencil Effects
-==========================
+   Replaces the :doc:`visual effects </grease_pencil/visual_effects/introduction>` of the selected
+   Grease Pencil objects by those of the active object.
+Copy UV Maps
+   Replaces the active :doc:`UV map </editors/uv/introduction>` of each selected mesh object
+   by the active UV map of the active object.
 
-Replace Grease Pencil Effects.
+----
+
+Transfer Mesh Data
+   See :doc:`/scene_layout/object/editing/link_transfer/transfer_mesh_data`.
+Transfer Mesh Data Layout
+   See :doc:`/scene_layout/object/editing/link_transfer/transfer_mesh_data_layout`.
+
+----
+
+Link Receivers to Emitter
+   Adds the selected objects to the :doc:`Light Linking </render/lights/light_linking>`
+   collection of the active light object.
+Link Blockers to Emitter
+   Adds the selected objects to the :doc:`Shadow Linking </render/lights/light_linking>`
+   collection of the active light object.
