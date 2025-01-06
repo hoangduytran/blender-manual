@@ -71,7 +71,7 @@ Debug Menu
 This operator brings up a menu to set Blender into a certain debug mode.
 
 See the
-`source code <https://projects.blender.org/blender/blender/src/branch/main/source/blender/blenkernel/BKE_global.h>`__
+`source code <https://projects.blender.org/blender/blender/src/branch/main/source/blender/blenkernel/BKE_global.hh>`__
 for a description of what each value does.
 
 .. tip::
