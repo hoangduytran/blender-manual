@@ -9,43 +9,42 @@ Subdivide
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Edge --> Subdivide`
 
-Subdividing splits selected edges and faces by cutting them in half or more,
-adding new vertices, and subdividing accordingly the faces involved.
-It adds resolution to the mesh by divide faces or edges into smaller units.
+Subdividing adds resolution to the mesh by dividing faces or edges into smaller units.
 
-This process follows a few rules, depending on the settings:
+This process follows a few rules depending on the situation:
 
-- When only one edge of a face is selected (Triangle mode),
-  triangles are subdivided into two triangles, and quads, into three triangles.
+- When only one edge of a triangle or :term:`quad` is selected,
+  that face is split into triangles.
 - When two edges of a face are selected:
 
   - If the face is a triangle, a new edge is created between the two new vertices,
-    subdividing the triangle in a triangle and a quad.
-  - If the face is a quad, and the edges are neighbors,
-    there have *three* possible behaviors to divide the quad,
-    depending on the setting of *Quad Corner Type* (see below for details).
-  - If the face is a quad, and the edges are opposite,
+    subdividing the triangle into a triangle and a quad.
+  - If the face is a quad and the edges are neighbors, the face is split according
+    to the *Quad Corner Type* setting (see below).
+  - If the face is a quad and the edges are opposite,
     the quad is just subdivided in two quads by the edge linking the two new vertices.
 
 - When three edges of a face are selected:
 
   - If the face is a triangle, this means the whole face is selected and
-    it is then subdivided in four smaller triangles.
+    it is subdivided into four smaller triangles.
   - If the face is a quad, first the two opposite edges are subdivided as described above.
     Then, the "middle" edge is subdivided, affecting its new "sub-quad" as described above for only one edge.
-- When a face of a :term:`Quad` is selected, the face is subdivided into four smaller quads.
-- When a face of an :term:`N-gon` is selected,
+
+- When all four edges of a quad are selected, the face is subdivided into four smaller quads.
+- When one or more edges of an :term:`N-gon` are selected,
   the individual edges will be subdivided but the face will stay unsubdivided.
 
 
 Options
 =======
 
-These options are available in the *Tool* panel after running the tool:
+These options are available in the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>` panel after
+running the operator:
 
 Number of Cuts
-   Specifies the number of cuts per edge to make.
-   By default this is 1, cutting edges in half. A value of 2 will cut it into thirds, and so on.
+   The number of cuts per edge to make. By default this is 1, cutting edges in half.
+   A value of 2 will cut them into thirds, and so on.
 Smoothness
    Displaces subdivisions to maintain approximate curvature.
    The effect is similar to the way the :doc:`/modeling/modifiers/generate/subdivision_surface`
@@ -68,45 +67,46 @@ Smoothness
 
              Subdivided with smoothing of 1.
 
-Quad/Tri Mode
-   Forces subdivide to create triangles or quads instead of n-gons (see examples below).
-   This mode doesn't allow the use of *Straight Cut* on quad corners.
+Create N-Gons
+   When unchecked, forces the subdivision to create triangles or quads instead of n-gons
+   (see examples below).
 Quad Corner Type
-   Controls the way quads with only two adjacent selected edges are subdivided.
+   Controls the subdivision for quads with two selected, neighboring edges.
 
-   :Fan:
-      The quad is subdivided in a fan of four triangles,
-      the common vertex being the one opposite to the selected edges.
-   :Inner Vertices:
-      The selected edges are subdivided, then an edge is created between
-      the two new vertices, creating a small triangle.
-      This edge is also subdivided,
+   Inner Vertices
+      The selected edges are subdivided, then an edge is created between the two new vertices,
+      creating a small triangle. This edge is also subdivided,
       and the "inner vertex" thus created is linked by another edge to the one opposite
-      to the original selected edges. All this results in a quad subdivided in a triangle and two quads.
-   :Path:
-      First an edge is created between the two opposite ends of the selected edges,
-      dividing the quad in two triangles. Then, the same goes for the involved triangle as described above.
-   :Straight Cut:
+      to the original selected edges. This results in a triangle and two quads.
+   Path
+      The selected edges are subdivided, then new edges are created between the new vertices
+      as well as the existing outer vertices. This results in two triangles and a quad.
+   Straight Cut
       The selected edges are subdivided, then an edge is created between
-      the two new vertices, creating a small triangle and n-gon.
+      the two new vertices, creating a small triangle and N-gon.
+      If *Create N-Gons* is unchecked, this option works like *Inner Vertices* instead.
+   Fan
+      The quad is subdivided into a fan of a quad and two triangles,
+      the common vertex being the one opposite to the selected edges.
 
    .. list-table::
 
-      * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-fan2.png
+      * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert.png
              :width: 200px
 
-             Fan cut type.
-
-        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert.png
-             :width: 200px
-
-             Inner Vertices cut type.
-
+             Inner Vertices corner type.
         - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path.png
              :width: 200px
 
-             Path cut type.
+             Path corner type.
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-straight-cut.png
+             :width: 200px
 
+             Straight Cut corner type.
+        - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-fan2.png
+             :width: 200px
+
+             Fan corner type.
 Fractal
    Displaces the vertices in random directions after the mesh is subdivided.
 
@@ -133,7 +133,7 @@ Along Normal
    .. figure:: /images/modeling_meshes_editing_edge_subdivide_fractal-along-normal.png
       :width: 200px
 
-      Along normal set to 1.
+      Along Normal set to 1.
 
 Random Seed
    Changes the random seed of the *Fractal* noise function, producing a different result for each seed value.
@@ -147,8 +147,7 @@ Random Seed
 Examples
 ========
 
-Below are several examples illustrating the various possibilities of the *Subdivide*
-and *Subdivide Multi* tools. Note the selection after subdivision.
+Below are some examples illustrating edge subdivision in various scenarios.
 
 .. figure:: /images/modeling_meshes_editing_edge_subdivide_before.png
    :width: 300px
@@ -164,12 +163,12 @@ One Edge
    * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_one-edge.png
           :width: 250px
 
-          One Edge.
+          One edge.
 
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_one-edge-tri.png
           :width: 250px
 
-          Quad/Tri Mode.
+          *Create N-Gons* unchecked.
 
 
 Two Tri Edges
@@ -180,10 +179,12 @@ Two Tri Edges
    * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-tri.png
           :width: 250px
 
+          Two tri edges.
+
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-tri-tri.png
           :width: 250px
 
-          Quad/Tri Mode.
+          *Create N-Gons* unchecked.
 
 
 Two Opposite Quad Edges
@@ -194,14 +195,52 @@ Two Opposite Quad Edges
    * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-opposite.png
           :width: 250px
 
+          Two quad edges.
+
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-opposite-tri.png
           :width: 250px
 
-          Quad/Tri Mode.
+          *Create N-Gons* unchecked.
 
 
 Two Adjacent Quad Edges
 -----------------------
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert.png
+          :width: 250px
+
+          Inner Vertices corner type.
+
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert-tri.png
+          :width: 250px
+
+          *Create N-Gons* unchecked.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path.png
+          :width: 250px
+
+          Path corner type.
+
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path-tri.png
+          :width: 250px
+
+          *Create N-Gons* unchecked.
+
+.. list-table::
+
+   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-straight-cut.png
+          :width: 250px
+
+          Straight Cut corner type.
+
+     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert-tri.png
+          :width: 250px
+
+          *Create N-Gons* unchecked.
 
 .. list-table::
 
@@ -213,73 +252,55 @@ Two Adjacent Quad Edges
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-fan.png
           :width: 250px
 
-          Quad/Tri Mode.
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert.png
-          :width: 250px
-
-          Inner vertices cut type.
-
-     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-innervert-tri.png
-          :width: 250px
-
-          Quad/Tri Mode.
-
-.. list-table::
-
-   * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path.png
-          :width: 250px
-
-          Path cut type.
-
-     - .. figure:: /images/modeling_meshes_editing_edge_subdivide_two-edges-quad-path-tri.png
-          :width: 250px
-
-          Quad/Tri Mode.
+          *Create N-Gons* unchecked.
 
 
-Three Edges
------------
+Three Quad Edges
+----------------
 
 .. list-table::
 
    * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges.png
           :width: 250px
 
+          Three edges.
+
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri.png
           :width: 250px
 
-          Quad/Tri Mode.
+          *Create N-Gons* unchecked.
 
 
-Tri
----
+Full Triangle
+-------------
 
 .. list-table::
 
    * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri2.png
           :width: 250px
 
+          Full triangle.
+
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_three-edges-tri-tri.png
           :width: 250px
 
-          Quad/Tri Mode.
+          *Create N-Gons* unchecked.
 
 
-Quad/Four Edges
----------------
+Full Quad
+---------
 
 .. list-table::
 
    * - .. figure:: /images/modeling_meshes_editing_edge_subdivide_four-edges.png
           :width: 250px
 
+          Full quad.
+
      - .. figure:: /images/modeling_meshes_editing_edge_subdivide_four-edges-tri.png
           :width: 250px
 
-          Quad/Tri Mode.
+          *Create N-Gons* unchecked.
 
 
 Multiple Cuts
