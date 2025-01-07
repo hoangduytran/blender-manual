@@ -52,8 +52,9 @@ The behavior is as follows:
 Performance
 ===========
 
-Sampling for light linking is most efficient with the :ref:`light tree <bpy.types.CyclesRenderSettings.use_light_tree>`
-enabled, where a specialized acceleration structure is built for light linking.
+Sampling for light linking is most efficient with the :ref:`light tree
+<bpy.types.CyclesRenderSettings.use_light_tree>` enabled, where a specialized acceleration structure is built for
+light linking.
 
 When using shadow linking, renders can be slower and trace additional rays,
 as direct and indirect lighting take different paths.

@@ -81,7 +81,8 @@ This example demonstrates how to use *Topology Mirror* effectively:
 #. Press :kbd:`Tab` to switch to *Edit Mode*.
 #. Disable all *Mirror* axes and move one of the Monkey object's vertices slightly.
 #. Enable the *X Axis Mirror* option but leave *Topology Mirror* disabled.
-   Move the same vertex again. The *X Axis Mirror* will not affect the mirrored vertices, as they are not perfectly aligned.
+   Move the same vertex again. The *X Axis Mirror* will not affect the mirrored vertices, as they are not perfectly
+   aligned.
 #. Enable *Topology Mirror* and move the same vertex once more.
    The *X Axis Mirror* will now mirror the other vertex, even though they are not perfectly positioned.
 

@@ -184,11 +184,11 @@ Alt Middle Mouse Drag Action
    How to determine the new :ref:`viewpoint <bpy.ops.view3d.view_axis>` when dragging :kbd:`Alt-MMB` in the viewport.
 
    :Relative:
-      The new viewpoint depends on both the mouse movement direction and the current viewpoint. For example, dragging the mouse
-      horizontally rotates the viewpoint 90° around the view's current vertical axis.
+      The new viewpoint depends on both the mouse movement direction and the current viewpoint. For example, dragging
+      the mouse horizontally rotates the viewpoint 90° around the view's current vertical axis.
    :Absolute:
-      The new viewpoint only depends on the mouse movement direction. For example, dragging the mouse to the right always puts
-      the viewpoint on the positive side of the global X axis.
+      The new viewpoint only depends on the mouse movement direction. For example, dragging the mouse to the right
+      always puts the viewpoint on the positive side of the global X axis.
 
 .. _keymap-pref-py_menu_on_drag:
 
@@ -197,7 +197,8 @@ Tab for Pie Menu
    :doc:`modes </editors/3dview/modes>`. This option flips these two shortcuts around.
 
 Pie Menu on Drag
-   When enabled, certain keys get different behavior when tapped and show a pie menu when holding them and dragging the mouse.
+   When enabled, certain keys get different behavior when tapped and show a pie menu when holding them and dragging
+   the mouse.
 
    :kbd:`Tab`
       :Tap: Toggle Edit Mode.

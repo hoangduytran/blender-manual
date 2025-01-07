@@ -9,7 +9,8 @@ Find in String Node
    :align: center
    :alt: Find In String node.
 
-The *Find in String* node finds the number of times a substring occurs in a string, and the position of the start of the first match.
+The *Find in String* node finds the number of times a substring occurs in a string, and the position of the start of
+the first match.
 
 Inputs
 ======

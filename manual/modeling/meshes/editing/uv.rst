@@ -54,7 +54,8 @@ Correct Aspect
 Iterations :guilabel:`Minimum Stretch`
    Number of iterations for the *Minimum Stretch* method, where each iteration reduces the distortion further.
 No Flip :guilabel:`Minimum Stretch`
-   Disallow flipping faces. Allowing it sometimes results in less distortion when there are :ref:`pins <bpy.ops.uv.pin>`.
+   Disallow flipping faces. Allowing it sometimes results in less distortion when there are :ref:`pins
+   <bpy.ops.uv.pin>`.
 Importance Weights :guilabel:`Minimum Stretch`
    Lets you specify a vertex group to manually influence the size of certain faces in the UV map.
    Faces around high-weight vertices will take up more space in the UV map than ones around low-weight vertices.
