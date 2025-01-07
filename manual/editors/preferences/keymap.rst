@@ -219,7 +219,7 @@ Transform Navigation with Alt
    As an example: if this option is disabled, dragging :kbd:`MMB` always orbits the view, and when you're
    moving an object, you can drag with :kbd:`Alt-MMB` to lock the movement to an axis. If this option is enabled,
    these shortcuts get inverted while moving: :kbd:`MMB` does the axis lock, and you need to use :kbd:`Alt-MMB`
-   to orbit, :kbd:`Alt-Shift-MMB` to pan, and :kbd:`Alt-Wheel` to zoom.
+   to orbit, :kbd:`Shift-Alt-MMB` to pan, and :kbd:`Alt-Wheel` to zoom.
 
    This also applies to :doc:`/editors/3dview/controls/proportional_editing`
    (where :kbd:`Wheel` controls the size of the influence area) and :ref:`bpy.types.Pose.use_auto_ik`
