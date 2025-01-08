@@ -206,14 +206,10 @@ Import Method
 
    Follow Preferences
       Use the import method set in the :ref:`File Path Preferences <bpy.types.UserAssetLibrary.import_method>`.
-   Link
-      *Same as* :menuselection:`File --> Link...`
-
+   :ref:`Link <bpy.ops.wm.link>`
       The asset will be linked to the current blend-file, and thus be read-only.
       Later changes to the asset file will be reflected in all files that link it.
-   Append
-      *Same as* :menuselection:`File --> Append...`
-
+   :ref:`Append <bpy.ops.wm.append>`
       The asset and all its dependencies will be copied into the current file.
       Dragging a material into the scene three times will result in three independent copies.
       Dragging an object into the scene three times will also result in three independent copies.

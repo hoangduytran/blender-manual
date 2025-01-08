@@ -67,7 +67,8 @@ Instance Collections
    When enabled, each linked collection will be added to the scene as an
    :doc:`instance collection </scene_layout/object/properties/instancing/collection>`
    (that is, a single object that represents the entire collection).
-   You can add more such instances using :menuselection:`Add --> Collection Instance`.
+   You can add more such instances using :menuselection:`Add --> Collection Instance`,
+   or replace an instance by the collection contents using :ref:`bpy.ops.object.duplicates_make_real`.
 
    When disabled, the collections will be added as-is so you can see their content in the
    Outliner and create Library Overrides.
@@ -119,7 +120,8 @@ Instance Collections
    When enabled, each appended collection will be added to the scene as an
    :doc:`instance collection </scene_layout/object/properties/instancing/collection>`
    (that is, a single object that represents the entire collection).
-   You can add more such instances using :menuselection:`Add --> Collection Instance`.
+   You can add more such instances using :menuselection:`Add --> Collection Instance`,
+   or replace an instance by the collection contents using :ref:`bpy.ops.object.duplicates_make_real`.
 
    When disabled, the collections will be added as-is so you can see their content in the
    Outliner.

@@ -84,14 +84,10 @@ Import Method
    Determines how data is managed when an asset is imported,
    unless overridden by the :ref:`Asset Browser <bpy.types.FileAssetSelectParams.import_method>`.
 
-   :Link:
-      *Same as* :menuselection:`File --> Link...`
-
+   :ref:`Link <bpy.ops.wm.link>`
       The asset will be linked to the current blend-file, and thus be read-only.
       Later changes to the asset file will be reflected in all files that link it in.
-   :Append:
-      *Same as* :menuselection:`File --> Append...`
-
+   :ref:`Append <bpy.ops.wm.append>`
       All of the asset and all its dependencies will be appended to the current file.
       Dragging a material into the scene three times will result in three independent copies.
       Dragging an object into the scene three times will also result in three independent copies.
@@ -102,7 +98,7 @@ Import Method
 
       Since the file now has its own copy of the asset, later changes to
       the asset file will not be reflected in the file it's appended to.
-   :Append (Reuse Data):
+   Append (Reuse Data)
       *Specific to the Asset Browser*.
 
       The first time an asset is used, it will be appended, including its dependencies,
