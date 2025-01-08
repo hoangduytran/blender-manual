@@ -127,6 +127,11 @@ Clamp :kbd:`C`
    When unchecked, the new edge loop can go outside the face loop's boundary edges.
    You can press :kbd:`C` or hold :kbd:`Alt` during the second step to toggle it.
 
+Mirror Editing
+   When checked, sliding the newly created edges will also slide any existing edges
+   on the other side of the mesh. :ref:`Mesh Symmetry <modeling_meshes_tools-settings_mirror>`
+   needs to be enabled for this to work.
+
 Correct UVs
    When unchecked, the faces in the :doc:`UV map </editors/uv/introduction>` will be split
    uniformly even if the cut was placed off-center on the 3D mesh.

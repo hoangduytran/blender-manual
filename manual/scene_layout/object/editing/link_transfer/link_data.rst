@@ -17,8 +17,11 @@ When you link two objects to the same data, changes made to one will also appear
 Should you no longer want this, you can use :ref:`data-system-datablock-make-single-user`
 to once again give each object its own data.
 
+.. _bpy.ops.object.make_links_scene:
+
 Link Objects to Scene
-   Adds the selected objects to the specified scene.
+   Adds the selected objects to the specified scene. Objects can exist in multiple scenes
+   at once and have the same position/animation in all of them.
 
 ----
 
@@ -49,9 +52,13 @@ Copy Modifiers
 Copy Grease Pencil Effects
    Replaces the :doc:`visual effects </grease_pencil/visual_effects/introduction>` of the selected
    Grease Pencil objects by those of the active object.
+
+.. _bpy.ops.object.join_uvs:
+
 Copy UV Maps
    Replaces the active :doc:`UV map </editors/uv/introduction>` of each selected mesh object
-   by the active UV map of the active object.
+   by the active UV map of the active object. If a selected object doesn't have any UV maps,
+   one is created. All objects must have a matching topology.
 
 ----
 
@@ -62,9 +69,14 @@ Transfer Mesh Data Layout
 
 ----
 
+.. _bpy.ops.object.light_linking_receivers_link:
+
 Link Receivers to Emitter
    Adds the selected objects to the :doc:`Light Linking </render/lights/light_linking>`
    collection of the active light object.
+
+.. _bpy.ops.object.light_linking_blockers_link:
+
 Link Blockers to Emitter
    Adds the selected objects to the :doc:`Shadow Linking </render/lights/light_linking>`
    collection of the active light object.

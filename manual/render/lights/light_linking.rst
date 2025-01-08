@@ -22,7 +22,7 @@ Setup
 * Drag & drop objects or collections from the :doc:`Outliner </editors/outliner/introduction>`
   onto the list.
 
-You can also use the :doc:`/scene_layout/object/editing/link_transfer/link_data` operator for this:
+You can also use the :doc:`/scene_layout/object/editing/link_transfer/link_data` menu for this:
 select the objects, add the light to the selection, press :kbd:`Ctrl-L`, and choose
 :menuselection:`Link Receivers/Blockers to Emitter`.
 

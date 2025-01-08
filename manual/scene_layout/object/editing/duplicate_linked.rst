@@ -20,7 +20,9 @@ Reference the `Examples`_ for the discussions below.
 If the original object was animated, the duplicate will link to the same :ref:`Action <bpy.types.Action>`.
 This means that, even though each object has separate transform properties,
 they will be set to the same values by the animation system.
-If this is not desired, make the action a single-user copy in the :ref:`Action or NLA Editor <actions-workflow>`.
+If this is not desired, make the action a single-user copy in the
+:doc:`Action </editors/dope_sheet/modes/action>` or
+:doc:`NLA Editor </editors/nla/introduction>`.
 
 Linked
    In the *Duplicate Objects* :ref:`bpy.ops.screen.redo_last` panel the *Linked* checkbox is checked

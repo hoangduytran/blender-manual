@@ -3,17 +3,18 @@
 Link & Append
 *************
 
-These functions help you reuse materials, objects and other :doc:`data-blocks </files/data_blocks>`
-loaded from another blend-file.
+These functions help you reuse objects, materials and other :doc:`data-blocks </files/data_blocks>`
+from another blend-file.
 You can build libraries of common content and share them across multiple referencing files.
 
-Newly added collections types are available in :menuselection:`Add --> Collection Instance` in the 3D Viewport.
+.. tip::
 
-Look in the *Outliner*, with display mode set to *Blender File*, to see all your linked and appended data-blocks.
+   Instead of using the menu, you can also Link/Append blend-files by dragging and dropping them
+   into the Blender window.
 
 .. note::
 
-   It is not possible to Append or Link data from :doc:`much newer blend-files </files/blend/compatibility>`
+   It's not possible to Link or Append data from :doc:`much newer blend-files </files/blend/compatibility>`.
 
 
 .. _bpy.ops.wm.link:
@@ -24,38 +25,57 @@ Link
 .. reference::
 
    :Editor:    Topbar
-   :Mode:      All Modes
-   :Menu:      :menuselection:`File --> Link`
+   :Mode:      All modes except Edit Mode
+   :Menu:      :menuselection:`File --> Link...`
 
-*Link* creates a reference to the data in the source file such that
-changes made there will be reflected in the referencing file the next time it is reloaded.
-But linked data is usually not editable.
-:doc:`Library Overrides </files/linked_libraries/library_overrides>` can be created from
-linked data to allow some level of local editing, animation, etc.
+*Link* creates a reference to data in a source file such that changes made there will be
+reflected in the current file the next time it is reloaded.
+In the :doc:`File Browser </editors/file_browser>`, navigate to the external source blend-file
+and select the data-blocks you want to reuse.
 
-In the :doc:`File Browser </editors/file_browser>`,
-navigate to the external source blend-file and select the data-block you want to reuse.
+Linked data-blocks are indicated with a chain icon in the :doc:`Outliner </editors/outliner/introduction>`.
+They're also listed in the Outliner's *Blender File* :ref:`bpy.types.SpaceOutliner.display_mode`,
+along with the path of the blend-file they originate from.
 
-When you link an object, it will be placed in your scene at the 3D cursor position.
-Many other data types, cameras, curves, and materials for example,
-must be linked to an object before they become visible.
+Linked data-blocks are initially not editable. This even includes the location/rotation/scale
+of linked objects, which are locked to the transformation they have in the source file.
+There are ways around this, however:
 
+- If you link a collection with *Instance Collections* enabled or some
+  :doc:`object data </scene_layout/object/introduction>` with
+  *Instance Object Data* enabled, the collection/object data will be referenced through
+  an object created inside the current blend-file, which *can* be transformed.
+  (This new object will be created at the :ref:`editors-3dview-3d_cursor`.)
+- You can also do some level of editing/animating on linked (and thus normally locked)
+  data-blocks using :doc:`Library Overrides </files/linked_libraries/library_overrides>`.
 
 Options
 -------
 
+These options are available in the right-hand panel of the File Browser.
+
 Relative Path
-   See :ref:`files-blend-relative_paths`.
+   Reference the external blend-file using a
+   :ref:`relative path <files-blend-relative_paths>` rather than an absolute one.
 Select
-   Makes the object *Active* after it is loaded.
+   Select the newly added objects.
 Active Collection
-   The object will be added to the active collection of the active view layer.
-   Otherwise, it will be added to a new collection in the active view layer.
+   When enabled, objects and collections will be added to the active collection of the active
+   :doc:`view layer </scene_layout/view_layers/introduction>`.
+   Otherwise, they will be added to a new "Linked Data" collection in the active view layer.
 Instance Collections
-   This option instantiates the linked collection as an object, adding it to the active scene.
-   Otherwise, the linked collection is directly added to the active view layer.
+   When enabled, each linked collection will be added to the scene as an
+   :doc:`instance collection </scene_layout/object/properties/instancing/collection>`
+   (that is, a single object that represents the entire collection).
+   You can add more such instances using :menuselection:`Add --> Collection Instance`.
+
+   When disabled, the collections will be added as-is so you can see their content in the
+   Outliner and create Library Overrides.
 Instance Object Data
-   Create instances for object data which are not referenced by any objects.
+   When enabled, an object will be created for each directly linked object data.
+   Otherwise, no object will be created and the object data will not be visible in
+   the scene until you create one yourself (e.g. by dragging the object data from the
+   Outliner into the 3D Viewport).
 
 
 .. _bpy.ops.wm.append:
@@ -66,19 +86,15 @@ Append
 .. reference::
 
    :Editor:    Topbar
-   :Mode:      All Modes
-   :Menu:      :menuselection:`File --> Link`
+   :Mode:      All modes except Edit Mode
+   :Menu:      :menuselection:`File --> Append...`
 
-*Append* makes a full copy of the data into your blend-file, without keeping any reference to the original one.
+*Append* copies data-blocks into your blend-file without keeping any reference to the original ones.
 You can make further edits to your local copy of the data,
-but changes in the external source file will not be reflected in the referencing file.
+but changes in the external source file will not be reflected in the current one.
 
 In the :doc:`File Browser </editors/file_browser>`,
-navigate to the external source blend-file and select the data-block you want to reuse.
-
-.. tip::
-
-   Blend-files can also be linked/appended by dragging and dropping blend-files into the Blender window.
+navigate to the external source blend-file and select the data-blocks you want to reuse.
 
 .. note::
 
@@ -91,44 +107,68 @@ navigate to the external source blend-file and select the data-block you want to
 Options
 -------
 
+These options are available in the right-hand panel of the File Browser.
+
 Select
-   Makes the object *Active* after it is loaded.
+   Select the newly added objects.
 Active Collection
-   The object will be added to the active collection of the active view layer.
-   Otherwise, it will be added to a new collection in the active view layer.
+   When enabled, objects and collections will be added to the active collection of the active
+   :doc:`view layer </scene_layout/view_layers/introduction>`.
+   Otherwise, they will be added to a new "Appended Data" collection in the active view layer.
 Instance Collections
-   This option instantiates the linked collection as an object, adding it to the active scene.
-   Otherwise, the linked collection is directly added to the active view layer.
+   When enabled, each appended collection will be added to the scene as an
+   :doc:`instance collection </scene_layout/object/properties/instancing/collection>`
+   (that is, a single object that represents the entire collection).
+   You can add more such instances using :menuselection:`Add --> Collection Instance`.
+
+   When disabled, the collections will be added as-is so you can see their content in the
+   Outliner.
 Instance Object Data
-   Create instances for object data which are not referenced by any objects.
+   When enabled, an object will be created for each directly appended object data.
+   Otherwise, no object will be created and the object data will not be visible in
+   the scene until you create one yourself (e.g. by dragging the object data from the
+   Outliner into the 3D Viewport).
 Fake User
-   Defines the appended data-block as :ref:`Protected <data-system-datablock-fake-user>`.
+   Marks the appended data-blocks as :ref:`Protected <data-system-datablock-fake-user>`.
 Localize All
-   Appends also all indirectly linked data, instead of linking them.
+   Also copy all indirectly linked data, instead of maintaining the links.
 
 
 .. _bpy.ops.outliner.lib_operation:
 
-Library Reload & Relocate
-=========================
+Reload
+======
 
-Reloading is useful if you changed something in the library blend-file and want to see those changes
-in your current blend-file without having to re-open it.
-You can reload and relocate a whole library
-from the context menu of the library items in the *Outliner*'s *Blender File* view,
+.. reference::
 
-Relocating allows you to reload the library from a new file path.
-This can be used to either fix a broken linked library
-(e.g. because the library file was moved or renamed after linking from it),
-or to switch between different variations of a same set of data, in different library files.
+   :Editor:    Outliner
+   :Menu:      :menuselection:`Context menu --> Reload`
+
+When the Outliner is in the *Blender File* :ref:`bpy.types.SpaceOutliner.display_mode`,
+you can rightclick a linked blend-file and choose *Reload* to immediately update
+the current blend-file with the latest version of the linked data-blocks,
+without having to reopen the file.
+
+Relocate
+========
+
+.. reference::
+
+   :Editor:    Outliner
+   :Menu:      :menuselection:`Context menu --> Relocate`
+
+When the Outliner is in the *Blender File* :ref:`bpy.types.SpaceOutliner.display_mode`,
+you can rightclick a linked blend-file and choose *Relocate* to replace it by a different file.
+This can be used to either fix a broken linked library (e.g. because the file was moved or renamed),
+or to switch to a variation of the same data in a different file.
 
 
-Broken Library
---------------
+Broken Libraries
+----------------
 
-While loading a blend-file, if Blender cannot find a library,
+If Blender cannot find a library while loading a blend-file,
 it will create placeholder data-blocks to replace missing linked ones.
-That way, references to the missing data is not lost, and by relocating the missing library,
+That way, references to the missing data are not lost, and by relocating the missing library,
 the lost data can be automatically restored.
 
 
@@ -150,29 +190,28 @@ Make Local
 
 Makes the selected or all external objects local to the current blend-file.
 Links to the original library file will be lost,
-but it will make those data-blocks fully editable, just like the ones directly created in that blend-file.
+but the data-blocks will become fully editable, just like the ones directly
+created in the current blend-file.
 
 
 Options
 -------
 
-The operation available from the *Outliner*'s context menu has no options,
-and only affects the selected data-block.
+The operation available from the Outliner's context menu has no options
+and only affects the selected data-blocks.
 
-The operation available from the *3D Viewport* only directly affects selected objects,
+The operation available from the 3D Viewport only affects the selected objects,
 but it can also make local the objects' dependencies:
 
 Type
-   Optionally unlinks the object's Object Data and Material Data.
-
-   Selected Objects, + Object Data, + Materials, All (i.e. including all scenes)
+   Whether to localize only the objects themselves, or also their data and materials.
 
 
 Known Limitations
 =================
 
-For the most part linking data will work as expected, however,
-there are some corner cases which are not supported.
+For the most part, linking data will work as expected.
+However, there are some limitations to be aware of.
 
 
 Circular Dependencies
@@ -182,13 +221,12 @@ In general, dependencies should not go in both directions.
 Attempting to link or append data which links back to the current file will likely result in missing links.
 
 
-Object Rigid Body Constraints
------------------------------
+Scene-Level Settings
+--------------------
 
-When linking objects *directly* into a blend-file, the *Rigid Body* settings
-**will not** be linked in since they are associated with their scene's world.
-As an alternative, you can link in the entire scene and set it as a
-:ref:`Background Set <bpy.types.Scene.background_set>`.
+Scene-level settings such as the :doc:`/physics/rigid_body/world` will not
+be copied when linking objects. As an alternative, you can link the
+entire scene and use it as a :ref:`bpy.types.Scene.background_set`.
 
 
 .. _files-linked_libraries-known_limitations-compression:
@@ -196,7 +234,6 @@ As an alternative, you can link in the entire scene and set it as a
 Compression & Memory Use
 ------------------------
 
-Linking to blend-files with compression enabled may significantly increase memory usage while loading files.
-
-Reading data on demand isn't supported with compression
-*(this only impacts load time, once loaded there is no difference in memory use)*.
+Referencing :ref:`compressed <files-blend-compress>` blend-files may need a lot of
+memory because they have to be loaded in their entirety, even if you only link/append
+a small part of them. Once the data-blocks are loaded, however, memory usage is the same.

@@ -401,8 +401,6 @@ Dissolve Unselect
    The remaining points in the strokes stay connected.
 
 
-.. _bpy.ops.grease_pencil.delete_frame:
-
 Delete Active Keyframe (Active Layer)
 -------------------------------------
 

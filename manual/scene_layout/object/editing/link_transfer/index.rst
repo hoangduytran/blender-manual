@@ -12,8 +12,6 @@
 .. toctree::
    :maxdepth: 2
 
-   link_scene.rst
    link_data.rst
-   copy_uvmaps.rst
    transfer_mesh_data.rst
    transfer_mesh_data_layout.rst
