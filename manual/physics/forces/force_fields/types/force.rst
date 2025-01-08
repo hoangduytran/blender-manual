@@ -13,15 +13,8 @@ Force
 
    Force force field visualization.
 
-The *Force* field is the simplest of the fields. It gives a constant force towards
-(positive strength) or away from (negative strength) the object's origin.
-Newtonian particles are attracted to a field with negative strength,
-and are blown away from a field with positive strength.
-
-.. TODO2.8:
-   .. figure:: /images/physics_forces_force-fields_types_force_panel.png
-
-      UI for a Force force field.
+The *Force* field is the simplest of the fields. It gives a constant force away from
+(positive strength) or towards (negative strength) the object's origin.
 
 
 Example

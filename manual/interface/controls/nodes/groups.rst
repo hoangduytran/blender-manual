@@ -99,13 +99,22 @@ This panel is only visible in the :doc:`Geometry Node Editor </editors/geometry_
 .. _bpy.types.GeometryNodeTree.is_modifier:
 
 Modifier
-   The node group is used as a :doc:`/modeling/modifiers/generate/geometry_nodes`.
+   The node group is intended for use with the :doc:`/modeling/modifiers/generate/geometry_nodes`.
 
 .. _bpy.types.GeometryNodeTree.is_tool:
 
 Tool
-   The node group is used as a :doc:`/modeling/geometry_nodes/tools`.
+   The node group is intended to be used as a :doc:`tool </modeling/geometry_nodes/tools>`.
 
+The :ref:`data-block menu <ui-data-block>` in the header of the Geometry Node Editor
+only lists the node groups whose Usage matches the current :ref:`bpy.types.SpaceNodeEditor.geometry_nodes_type`.
+
+.. tip::
+
+   If you accidentally disable both Usages, the node group will not be accessible through the
+   data-block menu anymore. To make it accessible again, you can add it as a node to a different node
+   group (:menuselection:`Add --> Group`), select that node, and press :kbd:`Tab` to enter it.
+   From there, you can enable one of the Usages again.
 
 .. _bpy.ops.node.tree_socket_add:
 .. _bpy.ops.node.tree_socket_remove:
