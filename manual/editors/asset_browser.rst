@@ -5,6 +5,9 @@ Asset Browser
 *************
 
 The *Asset Browser* is the main interface for organizing and using assets.
+To access it, create a new :doc:`area </interface/window_system/areas>`,
+click the *Editor Type* button in its top left corner, and choose
+*Asset Browser*.
 
 .. seealso::
 

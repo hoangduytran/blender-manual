@@ -5,66 +5,82 @@
 Node-Based Tools
 ****************
 
-Geometry Nodes can be used to expand the core functionality of Blender via node-group-defined tools.
-They can be shared as any regular node group assets.
+Geometry :doc:`node groups </interface/controls/nodes/groups>` can not just be applied to
+an object using a modifier. It's also possible to turn them into tools that can be invoked
+from the Blender menu.
+
+You can create such tools in the :ref:`tool_context`, after which they appear in the
+*Non-Assets* menu of the 3D Viewport. If you want to move them to a different menu,
+reuse them in other blend-files, or share them with someone else, you need to turn
+them into an asset as described below.
 
 .. figure:: /images/modeling_geometry-nodes_tools.png
    :align: center
 
-   Node group tools integrated in the Selection menu.
-
+   Node group tools integrated in the Curves menu.
 
 .. _tool_context:
 
 Tool Context
 ============
 
-The way to create Node-based tools is by switching the Geometry Nodes editor
-:ref:`context <bpy.types.SpaceNodeEditor.geometry_nodes_type>` to *Tool*.
+Because tool node groups have different settings than modifier node groups, you need to change
+the :ref:`bpy.types.SpaceNodeEditor.geometry_nodes_type` in the Geometry Node Editor's header
+to *Tool* in order to edit them.
 
-New node groups created in the tool context will be enabled as
-:ref:`Tool <bpy.types.GeometryNodeTree.is_tool>` by default,
-although users still need to set them as Assets if they want to share them (see below).
+When this type is selected, the :ref:`data-block menu <ui-data-block>` in the editor's
+header will only show the node groups that have the
+:ref:`Tool Usage <bpy.types.GeometryNodeTree.is_tool>` enabled.
+
+- If you create a new node group while in the *Tool* editor type, the *Tool* Usage will be
+  enabled automatically.
+- If you want to convert an existing modifier node group, you need to manually enable the
+  *Tool* Usage in the Sidebar (and optionally disable the *Modifier* Usage) before switching
+  to the *Tool* editor type. Also make sure to set up the :ref:`modeling-geometry_nodes-tools_contexts`.
 
 .. note::
 
-   The :doc:`Inspection </modeling/geometry_nodes/inspection>`
-   features are not supported in the *Tool* context: Viewer Node and Socket Inspection.
-
+   The :doc:`inspection </modeling/geometry_nodes/inspection>`
+   features are not supported in the *Tool* context.
 
 Asset
 =====
 
-For a node group to be shared as a tool, it has to be an :doc:`Asset </editors/asset_browser>` first. The asset
-catalog is used to determine on which menus the node group will show, similar to the regular node group assets.
-If the catalog name matches an existing menu, the tool will be added to the end of it.
-Assets that have no catalog assigned to them, or local tools are exposed in the "Unassigned" menu.
+If you want to move a tool into a menu of your choice, reuse it in other blend-files,
+or share it with other people, you need to turn it into an
+:doc:`asset </files/asset_libraries/introduction>`. Simply rightclick the node group name
+in the Geometry Node Editor's header and choose *Mark as Asset*.
 
-The asset options need to be set on the :doc:`Asset Browser </editors/asset_browser>`.
+Once this is done, the node group will appear in the :doc:`Asset Browser </editors/asset_browser>`'s
+*Unassigned* :doc:`catalog </files/asset_libraries/catalogs>`. You can then move it into a catalog
+named after a menu to make it appear at the end of that menu.
+
+Finally, you can save the blend-file as an :ref:`asset bundle <asset-bundles>` and copy it into
+an asset library (described on linked page). From then on, the tool will be available in any
+blend-file you work with. You can also share the asset bundle file with others.
 
 
 Tool Settings
 =============
 
-The node group inputs will be exposed as in the :doc:`Adjust Last Operation </interface/undo_redo>` panel.
+If your tool requires any input from the user apart from the geometry to transform,
+you can :ref:`add sockets <bpy.ops.node.tree_socket_add>` to the *Group Input* node.
+These will be exposed in the :ref:`bpy.ops.screen.redo_last` panel when running the tool.
 
 
 .. _modeling-geometry_nodes-tools_contexts:
 
-Supported Modes & Data-Types
-============================
+Supported Modes & Object Types
+==============================
 
 Node groups must specify which modes and object types they support.
-This helps to determine where the tool is available in the user interface.
-These properties can be configured in popover menus in the
-:ref:`Geometry Node editor <editors-geometry_nodes-tool_context>` when in the *Tool* context.
-
-Currently only Object, Edit, and Sculpting modes are supported, and only for the Mesh and Hair Curves object types.
+This can be configured using the popover menus in the header of the
+:ref:`Geometry Node Editor <editors-geometry_nodes-tool_context>`.
 
 .. important::
 
-   For mesh objects, :doc:`/animation/shape_keys/index` are not supported.
-   Operating a node tool on a mesh with shape keys will remove the shape key data.
+   For mesh objects, :doc:`shape keys </animation/shape_keys/introduction>` are not supported.
+   They will be removed if you run a node tool on the object.
 
 
 Tool-specific Nodes
