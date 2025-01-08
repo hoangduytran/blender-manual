@@ -194,6 +194,15 @@ Materials can be dragged onto the object that should use them.
 Geometry nodes can also be dragged onto objects to add a :doc:`/modeling/modifiers/generate/geometry_nodes`.
 The use of pose assets is different, and is described in :doc:`/animation/armatures/posing/editing/pose_library`.
 
+When you drag a collection, it will be added as an
+:doc:`instance </scene_layout/object/properties/instancing/collection>` -- that is, a single object representing
+the entire collection, meaning the contents aren't visible in the :doc:`Outliner </editors/outliner/introduction>`
+and can't be edited. You can change this in the following ways:
+
+- Use :ref:`bpy.ops.object.duplicates_make_real` to replace the object by the collection contents.
+- Alternatively: delete the object, find the collection in the Outliner's *Blender File*
+  :ref:`bpy.types.SpaceOutliner.display_mode`, and click :menuselection:`Link to Scene` in its context menu.
+
 There are several things that can happen when an asset is used,
 depending on the following configuration of the Asset Browser:
 
