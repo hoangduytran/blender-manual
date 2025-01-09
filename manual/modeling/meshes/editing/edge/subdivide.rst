@@ -14,7 +14,8 @@ Subdividing adds resolution to the mesh by dividing faces or edges into smaller 
 This process follows a few rules depending on the situation:
 
 - When only one edge of a triangle or :term:`quad` is selected,
-  that face is split into triangles.
+  that face is turned into a quad or :term:`N-gon` respectively.
+  If the *Create N-Gons* option is disabled, the face is split into triangles instead.
 - When two edges of a face are selected:
 
   - If the face is a triangle, a new edge is created between the two new vertices,
@@ -32,7 +33,7 @@ This process follows a few rules depending on the situation:
     Then, the "middle" edge is subdivided, affecting its new "sub-quad" as described above for only one edge.
 
 - When all four edges of a quad are selected, the face is subdivided into four smaller quads.
-- When one or more edges of an :term:`N-gon` are selected,
+- When one or more edges of an N-gon are selected,
   the individual edges will be subdivided but the face will stay unsubdivided.
 
 
