@@ -11,7 +11,7 @@ Force
 
 .. figure:: /images/physics_forces_force-fields_types_force_visualzation.png
 
-   Force force field visualization.
+   Force field visualization.
 
 The *Force* field is the simplest of the fields. It gives a constant force away from
 (positive strength) or towards (negative strength) the object's origin.

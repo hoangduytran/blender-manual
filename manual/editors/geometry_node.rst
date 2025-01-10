@@ -13,7 +13,8 @@ Such a node group can define many operations to modify an object's geometry.
 ..    Geometry Node Editor with an example node setup.
 
 A list of all :doc:`Geometry Nodes </modeling/geometry_nodes/index>` is available in the modeling section.
-
+Also see the :doc:`Nodes </interface/controls/nodes/introduction>` page for information on working with
+nodes in general.
 
 Interface
 =========
