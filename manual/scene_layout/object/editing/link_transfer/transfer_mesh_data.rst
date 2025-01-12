@@ -9,16 +9,19 @@ Transfer Mesh Data
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Link/Transfer Data --> Transfer Mesh Data`
 
-The *Data Transfer* tool transfers several types of data from one mesh to another.
-Data types include vertex groups, UV maps, Color Attributes, custom normals...
-Transfer works by generating a mapping between source mesh's elements (vertices, edges, etc.)
-and destination ones, either on a one-to-one basis, or mapping several source elements
-to a single destination one by interpolated mapping.
+*Transfer Mesh Data* copies a certain type of data from the active mesh to the selected meshes.
+This could be a :doc:`UV map </editors/uv/introduction>`,
+a :ref:`color attribute <modeling-meshes-properties-object_data-color-attributes>`,
+the set of :ref:`custom normals <modeling_meshes_normals_custom>`, and so on.
 
-Transfers data layer(s) from active to selected meshes.
+For each element (vertex/edge/face) in each destination mesh, the operator finds one
+or more matching elements in the source mesh, then interpolates between those source
+elements' values.
+
+The :ref:`bpy.ops.screen.redo_last` panel offers the following options.
 
 Freeze Operator
-   Prevent changes to settings to re-run the operator.
+   Prevent changes to the settings from re-running the data transfer.
    This is useful if you are editing several settings at once with heavy geometry.
 Data Type
    Which data to transfer.
@@ -28,144 +31,160 @@ Data Type
       Data types.
 
 Create Data
-   Add data layers on destination meshes if needed.
-Vertex Mapping
-   Method used to map source vertices to destination ones.
-   Because the options change depending on the *Data Type*
-   options are explained in `Vertex Mapping`_ below.
-
-
-Vertex Mapping
-==============
-
-Topology
---------
-
-The simplest option, expects both meshes to have identical number of elements, and match them by order (indices).
-Useful e.g. between meshes that were identical copies, and got deformed differently.
-
-
-One-To-One Mappings
--------------------
-
-Those always select only one source element for each destination one, often based on shortest distance.
-
-Vertices
-   Nearest Vertex
-      Uses source's nearest vertex.
-
-   Nearest Edge Vertex
-      Uses source's nearest vertex of source's nearest edge.
-
-   Nearest Face Vertex
-      Uses source's nearest vertex of source's nearest face.
-
-Edges
-   Nearest Vertices
-      Uses source's edge which vertices are nearest from destination edge's vertices.
-
-   Nearest Edge
-      Uses source's nearest edge (using edge's midpoints).
-   Nearest Face Edge
-      Uses source's nearest edge of source's nearest face (using edge's midpoints).
-Face Corners
-   A face corner is not a real element by itself, it's some kind of split vertex attached to a specific face.
-   Hence both vertex (location) and face (normal, ...) aspects are used to match them together.
-
-   Nearest Corner and Best Matching Normal
-      Uses source's corner having the most similar *split* normal with destination one,
-      from those sharing the nearest source's vertex.
-   Nearest Corner and Best Matching Face Normal
-      Uses source's corner having the most similar *face* normal with destination one,
-      from those sharing the nearest source's vertex.
-   Nearest Corner of Nearest Face
-      Uses source's nearest corner of source's nearest face.
-Faces
-   Nearest Face
-      Uses source's nearest face.
-   Best Normal-Matching:
-      Uses source's face which normal is most similar with destination one.
-
-
-Interpolated Mappings
----------------------
-
-Those use several source elements for each destination one, interpolating their data during the transfer.
-
-Vertices
-   Nearest Edge Interpolated
-      Uses nearest point on nearest source's edge, interpolates data from both source edge's vertices.
-   Nearest Face Interpolated
-      Uses nearest point on nearest source's face, interpolates data from all that source face's vertices.
-   Projected Face Interpolated
-      Uses point of face on source hit by projection of destination vertex along its own normal,
-      interpolates data from all that source face's vertices.
-Edges
-   Projected Edge Interpolated
-      This is a sampling process. Several rays are cast from along the destination's edge
-      (interpolating both edge's vertex normals), and if enough of them hit a source's edge,
-      all hit source edges' data are interpolated into destination one.
-Face Corners
-   A face corner is not a real element by itself, it's some kind of split vertex attached to a specific face.
-   Hence both vertex (location) and face (normal, ...) aspects are used to match them together.
-
-   Nearest Face Interpolated
-      Uses nearest point of nearest source's face, interpolates data from all that source face's corners.
-   Projected Face Interpolated
-      Uses point of face on source hit by projection of destination corner along its own normal,
-      interpolates data from all that source face's corners.
-Faces
-   Projected Face Interpolated
-      This is a sampling process. Several rays are cast from the whole destination's face (along its own normal),
-      and if enough of them hit a source's face, all hit source faces' data are interpolated into destination one.
-
-
-Further Options
-===============
-
+   Add any missing data layers on the destination meshes (e.g. create missing vertex groups).
+Mapping
+   How to find the matching source element(s) for each destination element.
+   The various options are explained in the `Mapping`_ section below.
 Auto Transform
-   Automatically computes the transformation to get the best possible match between source and destination meshes.
-
-   This allows to match and transfer data between two meshes with similar shape,
-   but transformed differently. Note that you'll get best results with exact copies of the same mesh.
-   Otherwise, you'll likely get better results
-   if you "visually" make them match in 3D space (and use *Object Transform*) instead.
+   If the source and destination meshes don't overlap in world space, you can enable this
+   option to calculate a transformation automatically. While this is quick and easy, however,
+   you may get better results by making them overlap by hand.
 Object Transform
-   Evaluate source and destination meshes in global space.
+   Whether take into account the world space transformations of the source and destination objects.
+   When unchecked, the operator acts like all objects are in the same position and have
+   the default rotation and scale.
 Only Neighbor Geometry
-   Source elements must be closer than given distance from destination one.
+   Only consider source elements that are close enough to the destination one.
 
    Max Distance
       Maximum allowed distance between source and destination element (for non-topology mappings).
 
 Ray Radius
-   The starting ray radius to use when `Ray Casting <https://en.wikipedia.org/wiki/Ray_casting>`__
-   against vertices or edges. When transferring data between meshes Blender performs a series of
-   ray casts to generate mappings. Blender starts with a ray with the radius defined here,
-   if that does not detect a hit then the radius is progressively
-   increased until a positive hit or a limit is reached.
+   The starting radius to use when `ray casting <https://en.wikipedia.org/wiki/Ray_casting>`__.
 
-   This property acts as an accuracy/performance control;
-   using a lower ray radius will be more accurate however,
-   might take longer if Blender has to progressively increase the limit.
-   Lower values will work better for dense meshes with lots of detail
-   while larger values are probably better suited for simple meshes.
+   For certain mapping types, the operator performs a series of ray casts from each destination
+   element to find matching source elements. These ray casts start with the specified radius and
+   grow progressively larger until a match is found or a limit is reached.
 
+   A low starting radius will give more accurate results, but has worse performance if it's too
+   small and needs to be increased. A high starting radius has better performance,
+   but may result in suboptimal matches.
+
+   In general, use a low radius for dense meshes and a high one for simple ones.
+Source Layers Selection
+   Which source layers to copy to the destination meshes (e.g. only the active vertex group,
+   all vertex groups, or a specific vertex group).
+Destination Layers Matching
+   How to find the destination layer for a given source layer: by name or by order.
 Mix Mode
-   How to affect destination elements with source values.
+   How to combine the new data from the source mesh with the original data in the destination mesh.
 
-   All
-      Replaces everything in destination (note that *Mix Factor* is still used).
+   Replace
+      Interpolate between the original and new value using *Mix Factor*.
    Above Threshold
-      Only replaces destination value if it is above given threshold *Mix Factor*.
-      How that threshold is interpreted depends on data type,
-      note that for Boolean values this option fakes a logical AND.
+      Replace the destination value if it's greater than or equal to *Mix Factor*.
+      In the case of multi-component data like colors, the threshold is compared to the average of
+      these components.
+
+      For boolean *Data Types* like *Freestyle Mark*, you can use this to perform a logical AND:
+      simply ensure the *Mix Factor* is 0.5 or greater, and the destination mesh will only have
+      marked edges/faces that were already marked and are also marked in the source mesh.
    Below Threshold
-      Only replaces destination value if it is below given threshold *Mix Factor*.
-      How that threshold is interpreted depends on data type,
-      note that for Boolean values this option fakes a logical OR.
-   Mix, Add, Subtract, Multiply
-      Apply that operation, using mix factor to control how much of source or destination value to use.
-      Only available for a few types (vertex groups, Color Attributes).
+      Replace the destination value if it's less than or equal to *Mix Factor*.
+      In the case of multi-component data like colors, the threshold is compared to the average of
+      these components.
+
+      For boolean *Data Types* like *Freestyle Mark*, you can use this to perform a logical OR:
+      simply ensure the *Mix Factor* is 0.5 or greater, and the destination mesh will have
+      marked edges/faces that were already marked or are marked in the source mesh.
+   Mix
+      Mix the source value with the destination value, e.g. performing an alpha blend in the case
+      of color attributes. Then, interpolate using *Mix Factor*.
+   Add
+      Add the source value to the destination value, then interpolate using *Mix Factor*.
+   Subtract
+      Subtract the source value from the destination value, then interpolate using *Mix Factor*.
+   Multiply
+      Multiply the source value by the destination value, then interpolate using *Mix Factor*.
 Mix Factor
-   How much of the transferred data gets mixed into existing one (not supported by all data types).
+   Interpolation factor between the original destination value and the newly calculated value.
+   If *Mix Mode* is *Above Threshold* or *Below Threshold*, this is a threshold value instead.
+
+
+Mapping
+=======
+
+Topology
+--------
+
+Simply matches the elements based on their index. This requires all meshes to have the same
+number of elements and those elements to be ordered in the same way. Best suited for
+a destination mesh that's a deformed copy of the source.
+
+.. seealso::
+
+   :doc:`/modeling/meshes/editing/mesh/sort_elements` to ensure the objects have
+   the same element ordering.
+
+
+One-To-One Mappings
+-------------------
+
+These mappings always select only one source element for each destination one.
+
+Vertices
+   Nearest Vertex
+      Use the nearest source vertex.
+   Nearest Edge Vertex
+      Use the nearest source vertex on the nearest (by midpoint distance) source edge.
+   Nearest Face Vertex
+      Use the nearest source vertex on the nearest (by midpoint distance) source face.
+Edges
+   Nearest Vertices
+      Use the source edge whose vertices are nearest to the destination edge's.
+   Nearest Edge
+      Use the source edge whose midpoint is nearest to the destination edge's.
+   Nearest Face Edge
+      Use the nearest source edge on the nearest face (both by midpoint distance).
+Face Corners
+   A face corner is a vertex in the context of a face. This concept is most commonly used
+   in UV maps: each face corner can have its own UV coordinate, or in other words, one 3D vertex
+   can correspond to several UV vertices (one per face).
+
+   Nearest Corner and Best Matching Normal
+      Use the source corner that's nearest to the destination corner and has the most similar
+      :ref:`split normal <modeling_meshes_normals_custom>`.
+   Nearest Corner and Best Matching Face Normal
+      Use the source corner that's nearest to the destination corner and has the most similar
+      face normal.
+   Nearest Corner of Nearest Face
+      Use the nearest source corner on the nearest source face.
+Faces
+   Nearest Face
+      Use the nearest source face (by midpoint distance).
+   Best Normal-Matching
+      Cast a ray from the destination face's centerpoint along the face's normal
+      and use the source face found this way.
+
+
+Interpolated Mappings
+---------------------
+
+These mappings can match several source elements and interpolate between their values.
+
+Vertices
+   Nearest Edge Interpolated
+      Find the nearest point on the nearest source edge, then use that point to interpolate between
+      the values of the edge's vertices.
+   Nearest Face Interpolated
+      Find the nearest point on the nearest source face, then use that point to interpolate between
+      the values of the face's vertices.
+   Projected Face Interpolated
+      Project the destination vertex along its normal onto a source face,
+      then use the projected point to interpolate between the values of the face's vertices.
+Edges
+   Projected Edge Interpolated
+      Find source edges by projecting from a number of points on the destination edge
+      (where each point is projected along the interpolated normals of the destination edge's vertices).
+      Then, interpolate between the values of the source edges found this way.
+Face Corners
+   Nearest Face Interpolated
+      Find the nearest point on the nearest source face, then use that point to interpolate between
+      the values of the face's corners.
+   Projected Face Interpolated
+      Project the destination corner along its normal onto a source face,
+      then use the projected point to interpolate between the values of the face's corners.
+Faces
+   Projected Face Interpolated
+      Find source faces by casting rays from a number of points on the destination face along the destination
+      face's normal. Then, interpolate between the values of these source faces.

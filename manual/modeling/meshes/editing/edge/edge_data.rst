@@ -50,13 +50,13 @@ this operator alters the average weight of the edges.
 
 .. _bpy.ops.mesh.mark_seam:
 
-Mark Seam & Clear Seam
-======================
+Mark/Clear Seam
+===============
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Edge --> Mark Seam/Clear Seam`
+   :Menu:      :menuselection:`Edge --> Mark/Clear Seam`
 
 These operators set or unset this mark for selected edges.
 Seams are a way to create separations, "islands", in UV maps.
@@ -65,13 +65,13 @@ See the :ref:`UV Mapping section <editors-uv-index>` for more details.
 
 .. _bpy.ops.mesh.mark_sharp:
 
-Mark Sharp & Clear Sharp
-========================
+Mark/Clear Sharp
+================
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Edge --> Mark Sharp/Clear Sharp`
+   :Menu:      :menuselection:`Edge --> Mark/Clear Sharp`
 
 Signifies the selected edge(s) as being "sharp".
 This edge attribute can either be set (mark) or unset (clear).
@@ -100,3 +100,17 @@ Angle
    Maximum angle between face normals that will be considered as smooth.
 Extend
    Add new sharp edges without clearing existing sharp edges.
+
+
+.. _bpy.ops.mesh.mark_freestyle_edge:
+
+Mark/Clear Freestyle Edge
+=========================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Edge --> Mark/Clear Freestyle Edge`
+
+Marks or unmarks the selected edges as requiring Freestyle lines.
+See :ref:`freestyle-edge-marks`.

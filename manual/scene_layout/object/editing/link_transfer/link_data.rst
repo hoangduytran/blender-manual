@@ -58,7 +58,12 @@ Copy Grease Pencil Effects
 Copy UV Maps
    Replaces the active :doc:`UV map </editors/uv/introduction>` of each selected mesh object
    by the active UV map of the active object. If a selected object doesn't have any UV maps,
-   one is created. All objects must have a matching topology.
+   one is created.
+
+   All objects must have matching geometry and face order. You can ensure the latter using
+   :doc:`/modeling/meshes/editing/mesh/sort_elements`, but even then, this operator is really
+   only useful if the destination is a deformed copy of the source. Use
+   :doc:`/scene_layout/object/editing/link_transfer/transfer_mesh_data` for other cases.
 
 ----
 

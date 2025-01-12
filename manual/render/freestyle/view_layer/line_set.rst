@@ -149,6 +149,8 @@ Type
       its minimum or maximum. Depends on your *Sphere Radius* view map settings.
 
 
+.. _freestyle-edge-marks:
+
 Edge Marks
 ----------
 
@@ -196,6 +198,7 @@ What are edge marks not good for?
 
 
 .. _bpy.types.FreestyleLineSet.select_by_face_marks:
+.. _freestyle-face-marks:
 
 Face Marks
 ==========

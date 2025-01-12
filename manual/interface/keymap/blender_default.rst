@@ -86,7 +86,9 @@ These keys are shared across editors such as the 3D Viewport, UV and Graph edito
 
    * - :kbd:`A`
      - Select all.
-   * - :kbd:`Alt-A`, double-tap :kbd:`A`
+   * - :kbd:`Alt-A` /
+
+       Double-tap :kbd:`A`
      - Select none.
    * - :kbd:`Ctrl-I`
      - Invert selection.

@@ -72,23 +72,13 @@ this operator swaps which way the quad is split into triangles.
 
 .. _bpy.ops.mesh.mark_freestyle_face:
 
-Mark Freestyle Face
-===================
+Mark/Clear Freestyle Face
+=========================
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Face Data --> Mark Freestyle Face`
+   :Menu:      :menuselection:`Face --> Face Data --> Mark/Clear Freestyle Face`
 
-Todo.
-
-
-Clear Freestyle Face
-====================
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Face --> Face Data --> Clear Freestyle Face`
-
-Todo.
+Marks or unmarks the selected faces as requiring special Freestyle behavior.
+See :ref:`freestyle-face-marks`.
