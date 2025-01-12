@@ -11,7 +11,7 @@ Add
 .. reference::
 
    :Editor:    Nonlinear Animation
-   :Menu:      :menuselection:`Track --> Delete`
+   :Menu:      :menuselection:`Track --> Add`
 
 Adds a new track below the Action Track.
 
