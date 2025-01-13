@@ -10,13 +10,17 @@ Transfer Mesh Data
    :Menu:      :menuselection:`Object --> Link/Transfer Data --> Transfer Mesh Data`
 
 *Transfer Mesh Data* copies a certain type of data from the active mesh to the selected meshes.
-This could be a :doc:`UV map </editors/uv/introduction>`,
-a :ref:`color attribute <modeling-meshes-properties-object_data-color-attributes>`,
-the set of :ref:`custom normals <modeling_meshes_normals_custom>`, and so on.
+This could be :doc:`UV maps </editors/uv/introduction>`,
+:ref:`color attributes <modeling-meshes-properties-object_data-color-attributes>`,
+:ref:`custom normals <modeling_meshes_normals_custom>`, and so on.
 
 For each element (vertex/edge/face) in each destination mesh, the operator finds one
 or more matching elements in the source mesh, then interpolates between those source
 elements' values.
+
+.. seealso::
+
+   :doc:`/modeling/modifiers/modify/data_transfer`
 
 The :ref:`bpy.ops.screen.redo_last` panel offers the following options.
 
@@ -60,14 +64,25 @@ Ray Radius
    small and needs to be increased. A high starting radius has better performance,
    but may result in suboptimal matches.
 
-   In general, use a low radius for dense meshes and a high one for simple ones.
+   In general, use a low radius for dense source meshes and a high one for simple ones.
+
+Islands Precision
+   Affects the calculation that prevents a destination face from receiving UV coordinates from
+   disparate source UV islands. Keeping this at 0.0 means no island handling at all, while
+   higher numbers increase the correctness of the result at the cost of extra computation.
+
+   Typically, small values like 0.02 are enough to get good results, but if you are mapping from
+   a very high-poly source towards a very low-poly destination, you may have to raise it quite significantly.
+
 Source Layers Selection
    Which source layers to copy to the destination meshes (e.g. only the active vertex group,
    all vertex groups, or a specific vertex group).
+
 Destination Layers Matching
    How to find the destination layer for a given source layer: by name or by order.
+
 Mix Mode
-   How to combine the new data from the source mesh with the original data in the destination mesh.
+   How to combine the new data from the source mesh with the original data in the destination meshes.
 
    Replace
       Interpolate between the original and new value using *Mix Factor*.
@@ -96,6 +111,7 @@ Mix Mode
       Subtract the source value from the destination value, then interpolate using *Mix Factor*.
    Multiply
       Multiply the source value by the destination value, then interpolate using *Mix Factor*.
+
 Mix Factor
    Interpolation factor between the original destination value and the newly calculated value.
    If *Mix Mode* is *Above Threshold* or *Below Threshold*, this is a threshold value instead.
@@ -122,34 +138,34 @@ One-To-One Mappings
 
 These mappings always select only one source element for each destination one.
 
-Vertices
+Vertex Data
    Nearest Vertex
       Use the nearest source vertex.
    Nearest Edge Vertex
       Use the nearest source vertex on the nearest (by midpoint distance) source edge.
    Nearest Face Vertex
       Use the nearest source vertex on the nearest (by midpoint distance) source face.
-Edges
+Edge Data
    Nearest Vertices
       Use the source edge whose vertices are nearest to the destination edge's.
    Nearest Edge
       Use the source edge whose midpoint is nearest to the destination edge's.
    Nearest Face Edge
       Use the nearest source edge on the nearest face (both by midpoint distance).
-Face Corners
+Face Corner Data
    A face corner is a vertex in the context of a face. This concept is most commonly used
    in UV maps: each face corner can have its own UV coordinate, or in other words, one 3D vertex
    can correspond to several UV vertices (one per face).
 
    Nearest Corner and Best Matching Normal
       Use the source corner that's nearest to the destination corner and has the most similar
-      :ref:`split normal <modeling_meshes_normals_custom>`.
+      split normal.
    Nearest Corner and Best Matching Face Normal
       Use the source corner that's nearest to the destination corner and has the most similar
       face normal.
    Nearest Corner of Nearest Face
       Use the nearest source corner on the nearest source face.
-Faces
+Face Data
    Nearest Face
       Use the nearest source face (by midpoint distance).
    Best Normal-Matching
@@ -162,7 +178,7 @@ Interpolated Mappings
 
 These mappings can match several source elements and interpolate between their values.
 
-Vertices
+Vertex Data
    Nearest Edge Interpolated
       Find the nearest point on the nearest source edge, then use that point to interpolate between
       the values of the edge's vertices.
@@ -172,19 +188,19 @@ Vertices
    Projected Face Interpolated
       Project the destination vertex along its normal onto a source face,
       then use the projected point to interpolate between the values of the face's vertices.
-Edges
+Edge Data
    Projected Edge Interpolated
       Find source edges by projecting from a number of points on the destination edge
       (where each point is projected along the interpolated normals of the destination edge's vertices).
       Then, interpolate between the values of the source edges found this way.
-Face Corners
+Face Corner Data
    Nearest Face Interpolated
       Find the nearest point on the nearest source face, then use that point to interpolate between
       the values of the face's corners.
    Projected Face Interpolated
       Project the destination corner along its normal onto a source face,
       then use the projected point to interpolate between the values of the face's corners.
-Faces
+Face Data
    Projected Face Interpolated
       Find source faces by casting rays from a number of points on the destination face along the destination
       face's normal. Then, interpolate between the values of these source faces.

@@ -5,210 +5,227 @@
 Data Transfer Modifier
 **********************
 
-The Data Transfer modifier transfers several types of data from one mesh to another.
-Data types include vertex groups, UV maps, Color Attributes, custom normals...
+The *Data Transfer* modifier copies certain types of data from an external mesh
+to the modified one. This could be :doc:`UV maps </editors/uv/introduction>`,
+:ref:`color attributes <modeling-meshes-properties-object_data-color-attributes>`,
+:ref:`custom normals <modeling_meshes_normals_custom>`, and so on.
 
-Transfer works by generating a mapping between source mesh's elements (vertices, edges, etc.)
-and destination ones, either on a one-to-one basis, or mapping several source elements
-to a single destination one, using interpolation.
+For each element (vertex/edge/face) in the modified mesh, the modifier finds one
+or more matching elements in the source mesh, then interpolates between those source
+elements' values.
 
-.. figure:: /images/modeling_modifiers_modify_data-transfer_normals-example.jpg
-   :width: 680px
+.. figure:: /images/modeling_modifiers_modify_data-transfer_example.png
 
-   Transferring normals between objects,
-   `see example blend-file <https://archive.blender.org/wiki/2015/uploads/a/ad/Data_Transfer_Normal_Torus.blend>`__.
+   Transferring a UV map from a low resolution mesh to a high resolution one
+   using interpolation.
 
 .. seealso::
 
    :doc:`Transfer Mesh Data Operator </scene_layout/object/editing/link_transfer/transfer_mesh_data>`
 
+Usage
+=====
+
+- Select the *Source* mesh you want to copy data from.
+- If the source mesh and modified mesh aren't overlapping in world space,
+  uncheck *Object Transform* (the axes icon next to the source mesh).
+- Select which type of data you want to copy (e.g. vertex groups, UV maps...).
+- If you only want to copy a specific vertex group/UV map/..., select it in *Layer Selection*.
+- If the vertex groups/... you want to copy don't exist yet on the modified mesh,
+  click *Generate Data Layers* to create them.
 
 Options
 =======
 
-.. figure:: /images/modeling_modifiers_modify_data-transfer_panel.png
-   :align: right
-   :width: 300px
-
-   Data Transfer Modifier.
-
 Source
    Mesh object to copy data from.
 
-   If the button to the right of the field is unset, both the source and the destination geometry
-   is considered in global space when generating the mapping, otherwise they are evaluated
-   in local space (i.e. as if both object's origins were at the same place).
+   Object Transform (axes icon)
+      Whether take into account the world space transformations of the source and destination objects.
+      When unchecked, the modifier acts like both objects are in the same position and have
+      the default rotation and scale.
 
 Mix Mode
-   Controls how destination data are affected:
+   How to combine the new data from the source mesh with the original data in the destination mesh.
 
-   All
-      Replaces everything in destination (note that *Mix Factor* is still used).
+   Replace
+      Interpolate between the original and new value using *Mix Factor*.
    Above Threshold
-      Only replaces destination value if it's above given threshold *Mix Factor*.
-      How that threshold is interpreted depends on the data type,
-      note that for Boolean values this option fakes a logical AND.
+      Replace the destination value if it's greater than or equal to *Mix Factor*.
+      In the case of multi-component data like colors, the threshold is compared to the average of
+      these components.
+
+      For boolean data like *Freestyle Mark*, you can use this to perform a logical AND:
+      simply ensure the *Mix Factor* is 0.5 or greater, and the destination mesh will only have
+      marked edges/faces that were already marked and are also marked in the source mesh.
    Below Threshold
-      Only replaces destination value if it's below given threshold *Mix Factor*.
-      How that threshold is interpreted depends on the data type,
-      note that for Boolean values this option fakes a logical OR.
-   Mix, Add, Subtract, Multiply
-      Apply that operation, using mix factor to control how much of source or destination value to use.
-      Only available for a few types (vertex groups, Color Attributes).
+      Replace the destination value if it's less than or equal to *Mix Factor*.
+      In the case of multi-component data like colors, the threshold is compared to the average of
+      these components.
+
+      For boolean data like *Freestyle Mark*, you can use this to perform a logical OR:
+      simply ensure the *Mix Factor* is 0.5 or greater, and the destination mesh will have
+      marked edges/faces that were already marked or are marked in the source mesh.
+   Mix
+      Mix the source value with the destination value, e.g. performing an alpha blend in the case
+      of color attributes. Then, interpolate using *Mix Factor*.
+   Add
+      Add the source value to the destination value, then interpolate using *Mix Factor*.
+   Subtract
+      Subtract the source value from the destination value, then interpolate using *Mix Factor*.
+   Multiply
+      Multiply the source value by the destination value, then interpolate using *Mix Factor*.
 
 Mix Factor
-   How much of the transferred data gets mixed into existing one (not supported by all data types).
+   Interpolation factor between the original destination value and the newly calculated value.
+   If *Mix Mode* is *Above Threshold* or *Below Threshold*, this is a threshold value instead.
 
 Vertex Group
-   Allows per-element fine control of the mix factor. Vertex group influence can be reverted using the small
-   "arrow" button to the right.
+   Allows per-element control of the *Mix Factor*.
+
+   Invert (arrow icon)
+      Invert the weights of the vertex group (change them to 1 - weight).
 
 Generate Data Layers
-   This modifier cannot generate needed data layers itself. Once the set of source data to transfer is selected,
-   this button shall be used to generate matching destination layers, if needed.
+   Click to add any missing data layers, e.g. vertex groups that exist on the source mesh but not
+   yet on the modified mesh. The modifier doesn't do this automatically, so make sure to click
+   this button (or add the missing layers yourself) as the transfer may not work otherwise.
 
-
-Selection of Data to Transfer
------------------------------
-
-To keep the size of the modifier reasonable, the kind of elements to be affected must be selected first
-(vertices, edges, face corners and/or faces).
-
-Mapping Type
-   How is generated the mapping between those source and destination elements. Each type has its own options,
-   see `Geometry Mapping`_ below for details.
+   Layers added this way will stay behind when removing the modifier.
 
 Data Types
-   The left column of toggle buttons, to select which data types to transfer.
+   The toggle buttons *Custom Normals*, *Colors*, *UVs* etc. indicate which data
+   should be transferred.
 
-Multi-layers Data Types Options
-   In those cases (vertex groups, Color Attributes, UVs), one can select which source layers to transfer
-   (usually, either all of them, or a single specified one), and how to affect destination
-   (either by matching names, matching order/position,
-   or, if a single source is selected, by specifying manually the destination layer).
+Mapping
+   How to find the matching source element(s) for each destination element.
+   The various options are explained in the `Mapping`_ section below.
 
-Islands Handling Refinement
-   This setting only affects UV transfer currently. It allows to avoid a given destination face to get
-   UV coordinates from different source UV islands. Keeping it at 0.0 means no island handling at all.
+Layers Selection
+   Which source layers to copy to the destination mesh (e.g. all vertex groups
+   or a specific vertex group).
+
+Layer Matching
+   How to find the destination layer for a given source layer: by name or by order.
+
+Islands Precision
+   Affects the calculation that prevents a destination face from receiving UV coordinates from
+   disparate source UV islands. Keeping this at 0.0 means no island handling at all, while
+   higher numbers increase the correctness of the result at the cost of extra computation.
+
    Typically, small values like 0.02 are enough to get good results, but if you are mapping from
    a very high-poly source towards a very low-poly destination, you may have to raise it quite significantly.
 
 
-Usage
-=====
-
-First key thing to keep in mind when using this modifier is that it will **not** create destination data layers.
-*Generate Data Layers* button shall always be used for this purpose, once the set of source data to transfer
-has been selected. It should also be well understood that creating those data layers on destination mesh is **not**
-part of the modifier stack, which means e.g. that they will remain even once the modifier is deleted, or
-if the source data selection is modified.
-
-
-Geometry Mapping
-----------------
-
-Geometry mapping is how a given destination mesh relates to a source mesh.
-In this process a destination vertex/edge/...
-gets a part of the source mesh assigned with functions as its data source.
-It is crucial to understand this topic well to get good results with this modifier.
+Mapping
+=======
 
 Topology
-   The simplest option, expects both meshes to have identical number of elements, and match them by order (indices).
-   Useful e.g. between meshes that were identical copies, and got deformed differently.
+--------
+
+Simply matches the elements based on their index. This requires both meshes to have the same
+number of elements and those elements to be ordered in the same way. Best suited for
+a destination mesh that's a deformed copy of the source.
+
+.. seealso::
+
+   :doc:`/modeling/meshes/editing/mesh/sort_elements` to ensure the objects have
+   the same element ordering.
+
 
 One-To-One Mappings
-   Those always select only one source element for each destination one, often based on shortest distance.
+-------------------
 
-   Vertices
-      Nearest Vertex
-         Uses source's nearest vertex.
+These mappings always select only one source element for each destination one.
 
-      Nearest Edge Vertex
-         Uses source's nearest vertex of source's nearest edge.
-      Nearest Face Vertex
-         Uses source's nearest vertex of source's nearest face.
+Vertex Data
+   Nearest Vertex
+      Use the nearest source vertex.
+   Nearest Edge Vertex
+      Use the nearest source vertex on the nearest (by midpoint distance) source edge.
+   Nearest Face Vertex
+      Use the nearest source vertex on the nearest (by midpoint distance) source face.
+Edge Data
+   Nearest Vertices
+      Use the source edge whose vertices are nearest to the destination edge's.
+   Nearest Edge
+      Use the source edge whose midpoint is nearest to the destination edge's.
+   Nearest Face Edge
+      Use the nearest source edge on the nearest face (both by midpoint distance).
+Face Corner Data
+   A face corner is a vertex in the context of a face. This concept is most commonly used
+   in UV maps: each face corner can have its own UV coordinate, or in other words, one 3D vertex
+   can correspond to several UV vertices (one per face).
 
-   Edges
-      Nearest Vertices
-         Uses source's edge which vertices are nearest from destination edge's vertices.
-      Nearest Edge
-         Uses source's nearest edge (using edge's midpoints).
-      Nearest Face Edge
-         Uses source's nearest edge of source's nearest face (using edge's midpoints).
+   Nearest Corner and Best Matching Normal
+      Use the source corner that's nearest to the destination corner and has the most similar
+      split normal.
+   Nearest Corner and Best Matching Face Normal
+      Use the source corner that's nearest to the destination corner and has the most similar
+      face normal.
+   Nearest Corner of Nearest Face
+      Use the nearest source corner on the nearest source face.
+Face Data
+   Nearest Face
+      Use the nearest source face (by midpoint distance).
+   Best Normal-Matching
+      Cast a ray from the destination face's centerpoint along the face's normal
+      and use the source face found this way.
 
-   Face Corners
-      A face corner is not a real element by itself, it's some kind of split vertex attached to a specific face.
-      Hence both vertex (location) and face (normal, ...) aspects are used to match them together.
-
-      Nearest Corner and Best Matching Normal
-         Uses source's corner having the most similar *split* normal with destination one,
-         from those sharing the nearest source's vertex.
-      Nearest Corner and Best Matching Face Normal
-         Uses source's corner having the most similar *face* normal with destination one,
-         from those sharing the nearest source's vertex.
-      Nearest Corner of Nearest Face
-         Uses source's nearest corner of source's nearest face.
-
-   Faces
-      Nearest Face
-         Uses source's nearest face.
-      Best Normal-Matching
-         Uses source's face which normal is most similar with destination one.
 
 Interpolated Mappings
-   Those use several source elements for each destination one, interpolating their data during the transfer.
+---------------------
 
-   Vertices
-      Nearest Edge Interpolated
-         Uses nearest point on nearest source's edge, interpolates data from both source edge's vertices.
-      Nearest Face Interpolated
-         Uses nearest point on nearest source's face, interpolates data from all that source face's vertices.
-      Projected Face Interpolated
-         Uses point of face on source hit by projection of destination vertex along its own normal,
-         interpolates data from all that source face's vertices.
+These mappings can match several source elements and interpolate between their values.
 
-   Edges
-      Projected Edge Interpolated
-         This is a sampling process. Several rays are cast from along the destination's edge
-         (interpolating both edge's vertex normals), and if enough of them hit a source's edge,
-         all hit source edges' data are interpolated into destination one.
-
-   Face Corners
-      A face corner is not a real element by itself, it's some kind of split vertex attached to a specific face.
-      Hence both vertex (location) and face (normal, ...) aspects are used to match them together.
-
-      Nearest Face Interpolated
-         Uses nearest point of nearest source's face, interpolates data from all that source face's corners.
-      Projected Face Interpolated
-         Uses point of face on source hit by projection of destination corner along its own normal,
-         interpolates data from all that source face's corners.
-
-   Faces
-      Projected Face Interpolated
-         This is a sampling process. Several rays are cast from the whole destination's face (along its own normal),
-         and if enough of them hit a source's face, all hit source faces' data are interpolated into destination one.
+Vertex Data
+   Nearest Edge Interpolated
+      Find the nearest point on the nearest source edge, then use that point to interpolate between
+      the values of the edge's vertices.
+   Nearest Face Interpolated
+      Find the nearest point on the nearest source face, then use that point to interpolate between
+      the values of the face's vertices.
+   Projected Face Interpolated
+      Project the destination vertex along its normal onto a source face,
+      then use the projected point to interpolate between the values of the face's vertices.
+Edge Data
+   Projected Edge Interpolated
+      Find source edges by projecting from a number of points on the destination edge
+      (where each point is projected along the interpolated normals of the destination edge's vertices).
+      Then, interpolate between the values of the source edges found this way.
+Face Corner Data
+   Nearest Face Interpolated
+      Find the nearest point on the nearest source face, then use that point to interpolate between
+      the values of the face's corners.
+   Projected Face Interpolated
+      Project the destination corner along its normal onto a source face,
+      then use the projected point to interpolate between the values of the face's corners.
+Face Data
+   Projected Face Interpolated
+      Find source faces by casting rays from a number of points on the destination face along the destination
+      face's normal. Then, interpolate between the values of these source faces.
 
 
 Topology Mapping
 ----------------
 
-Max Distance
-   When the "pressure stylus" icon button to the right is enabled,
-   this is the maximum distance between source and destination to get a successful mapping.
-   If a destination element cannot find a source one within that range, then it will get no transferred data.
+.. note::
 
-   This allows to transfer a small sub-detailed mesh onto a more complete one
-   (e.g. from a "hand" mesh towards a "full body" one).
+   Despite the name of this panel, these settings do not apply to the *Topology* mapping type.
+
+Max Distance
+   When the checkbox is enabled, source and destination elements that are further away from each other
+   than the specified distance will not be considered as matches.
 
 Ray Radius
-   The starting ray radius to use when `Ray Casting <https://en.wikipedia.org/wiki/Ray_casting>`__
-   against vertices or edges. When transferring data between meshes Blender performs a series of
-   ray casts to generate mappings. Blender starts with a ray with the radius defined here,
-   if that does not return a hit then the radius is progressively
-   increased until a positive hit or a limit is reached.
+   The starting radius to use when `ray casting <https://en.wikipedia.org/wiki/Ray_casting>`__.
 
-   This property acts as an accuracy/performance control;
-   using a lower ray radius will be more accurate however,
-   might take longer if Blender has to progressively increase the limit.
-   Lower values will work better for dense meshes with lots of detail
-   while larger values are probably better suited for simple meshes.
+   For certain mapping types, the operator performs a series of ray casts from each destination
+   element to find matching source elements. These ray casts start with the specified radius and
+   grow progressively larger until a match is found or a limit is reached.
+
+   A low starting radius will give more accurate results, but has worse performance if it's too
+   small and needs to be increased. A high starting radius has better performance,
+   but may result in suboptimal matches.
+
+   In general, use a low radius for dense source meshes and a high one for simple ones.
