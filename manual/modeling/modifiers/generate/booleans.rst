@@ -5,72 +5,65 @@
 Boolean Modifier
 ****************
 
-The *Boolean* modifier performs operations on meshes that are otherwise too complex
-to achieve with as few steps by editing meshes manually. It uses one of
-the three available Boolean operations to create a single mesh out of two mesh objects:
+The *Boolean* modifier combines multiple meshes using a Boolean operation.
 
 .. figure:: /images/modeling_modifiers_generate_booleans_union-intersect-difference-examples.png
 
-   The Union, Intersection and Difference between a Cube and a UV Sphere,
-   with the modifier applied to the sphere and using the cube as target.
-
-This modifier needs a second mesh object, or collection of mesh objects,
-to be the target (the second operand) of the operation.
+   Applying the modifier to a sphere and creating the Intersection, Union, and Difference
+   with a cube. The cube is hidden for a better view.
 
 .. warning::
 
-   Only :term:`Manifold` meshes are guaranteed to give proper results,
-   other cases (especially "opened" meshes, :term:`Non-manifold` but without any self-intersections)
-   will usually work well, but might give odd glitches and artifacts in some cases.
+   Only :term:`Manifold` meshes are guaranteed to give proper results.
+   :term:`Non-manifold` ones (especially meshes with holes) will usually work well,
+   but might give odd glitches and artifacts.
 
 .. tip::
 
    If you have marked your objects to show the edges
-   (in :menuselection:`Properties --> Object Properties --> Viewport Display`, enable *Wireframe*),
-   you will see the edge creation process while you are moving your objects around. Depending on your mesh topology,
-   you can also enable X-Ray and Transparency and see the topology being created in real-time.
+   (in :menuselection:`Properties --> Object --> Viewport Display`, enable *Wireframe*),
+   you will see the edge creation process while you are moving your objects around.
+   You can also enable :ref:`X-Ray <3dview-shading-xray>` to see inside the objects.
 
+.. seealso::
+
+   :doc:`/modeling/meshes/editing/face/intersect_boolean` for performing one-off
+   Boolean operations inside a mesh in Edit Mode.
 
 Options
 =======
 
 .. figure:: /images/modeling_modifiers_generate_booleans_panel.png
    :align: center
-   :width: 300px
 
    The Boolean modifier.
 
 Operation
    :Intersect:
-      Everything inside both the target mesh and the modified mesh is kept.
-      If the target is a collection, then only the inside of *all* meshes is kept.
+      Only keep the volume that's inside the modified mesh and all of the source meshes.
    :Union:
-      The target mesh or collection is added to the modified mesh,
-      removing any interior faces.
+      Add the source meshes to the modified mesh while removing any interior faces.
    :Difference:
-      The target mesh, or collection of meshes, is subtracted from the modified mesh
-      (everything *outside* of the target mesh or collection is kept).
+      Cut the source meshes out of the modified mesh.
 
 Operand Type
-   Choose the type of the operand (target).
-
    :Object:
-      The target is a mesh object.
+      The source is a single mesh object.
 
    :Collection:
-      The target is a collection.
-      When the target is a collection and the Solver is Fast,
-      the Intersect operation is not allowed.
+      The source is a collection of any number of mesh objects.
+      If the *Solver* is *Fast*, the *Intersect* operation is not allowed.
 
 Object
-   The name of the target mesh object.
+   The source mesh object.
 
 Collection
-   The name of the target collection (may be empty if Solver is Exact,
-   which can be useful in combination with the Self option).
+   The source collection. May be empty if *Solver* is *Exact*,
+   in which case the modifier simply removes the modified mesh's
+   interior (self-intersecting) geometry.
 
 Solver
-   Algorithm used to calculate the Boolean intersections.
+   Algorithm used to perform the Boolean operation.
 
    :Fast:
       Uses a mathematically simple solver which offers the best performance;
@@ -78,7 +71,7 @@ Solver
    :Exact:
       Uses a mathematically complex solver which offers the best results
       and has full support for overlapping geometry;
-      however, this solver is much slower than the *Fast Solver*.
+      however, this solver is much slower than the *Fast* solver.
 
 
 Solver Options
@@ -88,16 +81,16 @@ Materials :guilabel:`Exact Solver`
    Method for setting materials on the new faces.
 
    :Index Based:
-      Set the material on new faces based on the order of the material slot lists.
-      If a material doesn't exist on the modifier object,
-      the face will use the same material slot or the first if the object doesn't have enough slots.
+      Map the :ref:`first material <bpy.types.MaterialSlot>` of the source mesh to the first material
+      of the modified mesh, the second to the second, and so on. If a source face has a higher
+      material index than the number of material slots on the modified mesh, the modified mesh's
+      first material is used.
    :Transfer:
-      Transfer materials from non-empty slots to the result mesh, adding new materials as necessary.
-      For empty slots, fall back to using the same material index as the operand mesh.
+      Use the same materials as on the source mesh, adding new material slots to the modified mesh
+      as necessary. For empty slots, fall back to using the same material index as the source mesh.
 
 Self Intersection :guilabel:`Exact Solver`
-   Correctly calculates cases when one or both operands have self-intersections,
-   this involves more calculations making it slower.
+   Correctly handle self-intersection in the participating meshes, at the cost of performance.
 
 Hole Tolerant :guilabel:`Exact Solver`
    Optimizes the Boolean output for :term:`Non-manifold` geometry
@@ -107,5 +100,5 @@ Hole Tolerant :guilabel:`Exact Solver`
 
 Overlap Threshold :guilabel:`Fast Solver`
    Maximum distance between two faces to consider them as overlapping.
-   This helps solve the limitation of this solver,
-   if the Boolean result seems unexpected try using the exact solver.
+   This helps solve the limitation of this solver.
+   If the result is still not as expected, try using the *Exact* solver.

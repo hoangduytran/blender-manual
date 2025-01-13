@@ -101,7 +101,7 @@ Mapping
    How to find the matching source element(s) for each destination element.
    The various options are explained in the `Mapping`_ section below.
 
-Layers Selection
+Layer Selection
    Which source layers to copy to the destination mesh (e.g. all vertex groups
    or a specific vertex group).
 
@@ -109,9 +109,10 @@ Layer Matching
    How to find the destination layer for a given source layer: by name or by order.
 
 Islands Precision
-   Affects the calculation that prevents a destination face from receiving UV coordinates from
-   disparate source UV islands. Keeping this at 0.0 means no island handling at all, while
-   higher numbers increase the correctness of the result at the cost of extra computation.
+   Controls the calculation that prevents a destination face from receiving UV coordinates from
+   disparate source UV islands (areas bordered by :doc:`seams </modeling/meshes/uv/unwrapping/seams>`).
+   Keeping this at 0.0 means no island handling at all, while higher numbers increase the correctness
+   of the result at the cost of extra computation.
 
    Typically, small values like 0.02 are enough to get good results, but if you are mapping from
    a very high-poly source towards a very low-poly destination, you may have to raise it quite significantly.

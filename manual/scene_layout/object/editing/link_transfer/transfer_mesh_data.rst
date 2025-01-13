@@ -67,9 +67,10 @@ Ray Radius
    In general, use a low radius for dense source meshes and a high one for simple ones.
 
 Islands Precision
-   Affects the calculation that prevents a destination face from receiving UV coordinates from
-   disparate source UV islands. Keeping this at 0.0 means no island handling at all, while
-   higher numbers increase the correctness of the result at the cost of extra computation.
+   Controls the calculation that prevents a destination face from receiving UV coordinates from
+   disparate source UV islands (areas bordered by :doc:`seams </modeling/meshes/uv/unwrapping/seams>`).
+   Keeping this at 0.0 means no island handling at all, while higher numbers increase the correctness
+   of the result at the cost of extra computation.
 
    Typically, small values like 0.02 are enough to get good results, but if you are mapping from
    a very high-poly source towards a very low-poly destination, you may have to raise it quite significantly.

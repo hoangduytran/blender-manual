@@ -9,20 +9,35 @@ Intersect (Boolean)
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Face --> Intersect (Boolean)`
 
-Performs Boolean operations with the selection on the unselected geometry.
-While the :doc:`/modeling/modifiers/generate/booleans` is useful for non-destructive edits,
-access to these operations with a tool in Edit Mode can be useful to quickly perform edits.
+Performs Boolean operations between the selected and unselected geometry.
+
+.. figure:: /images/modeling_meshes_editing_face_intersect-boolean_example.png
+
+   Selecting a sphere and performing an Intersection, Union, and Difference
+   with a cube.
+
+.. tip::
+
+   Hide geometry by pressing :kbd:`H` to exclude it from the operation,
+   then :kbd:`Alt-H` afterwards to unhide it again.
+
+.. seealso::
+
+   The :doc:`/modeling/modifiers/generate/booleans` can perform these same operations
+   non-destructively between different mesh objects.
+
+The :ref:`bpy.ops.screen.redo_last` panel offers the following options:
 
 Boolean Operation
    :Intersect:
-      Opposite of *Difference* (everything *inside* of the target mesh is kept).
+      Only keep the volume that's inside both the selected and the unselected geometry.
    :Union:
-      The target mesh is added to the modified mesh.
+      Remove the interior faces between the selected and the unselected geometry.
    :Difference:
-      The target mesh is subtracted from the modified mesh (everything *outside* of the target mesh is kept).
+      Cut the selected geometry out of the unselected geometry, then remove the selected geometry.
 
 Solver
-   Algorithm used to calculate the Boolean intersections.
+   Algorithm used to perform the Boolean operation.
 
    :Fast:
       Uses a mathematically simple solver which offers the best performance;
@@ -35,17 +50,17 @@ Solver
 
          .. warning::
 
-            A threshold approaching the size of faces may cause very slow calculation,
-            in general keep this value small.
+            A threshold approaching the size of faces may cause very slow calculation.
+            In general, keep this value small.
 
    :Exact:
       Uses a mathematically complex solver which offers the best results
       and has full support for overlapping geometry;
-      however, this solver is much slower than the *Fast Solver*.
+      however, this solver is much slower than the *Fast* solver.
 
 Swap
-   Changes the order of the operations when using *Difference* to determine which side is kept.
+   When using *Difference*, cut the unselected geometry out of the selected geometry instead
+   of the other way around.
 
 Self Intersection
-   Correctly calculates cases when one or both operands have self-intersections,
-   this involves more calculations making it slower.
+   Correctly handle self-intersection in the participating geometry, at the cost of performance.
