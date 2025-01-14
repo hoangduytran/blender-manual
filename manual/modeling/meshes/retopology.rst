@@ -1,22 +1,13 @@
-.. the title should be remeshing since retopology (feature based) is a subtype of remeshing.
-   remeshing vs. retopology by dev Pablo Dobarro bcon19: https://www.youtube.com/watch?v=lxkyA4Xslzs&t=9m34s
+*********
+Remeshing
+*********
 
-**********
-Retopology
-**********
+Blender offers several tools for regenerating a mesh so that it has (approximately) the same
+shape but fewer faces, more faces, or better topology.
 
-Retopology is the process of simplifying the topology of a mesh to make it cleaner and easier to work with.
-Retopology is needed for mangled topology resulting from sculpting or generated topology, for example from a 3D scan.
-Meshes often need to be retopologized if the mesh is going to be deformed in some way.
-Deformations can include rigging or physics simulations such as cloth or soft body.
-Retopology can be done by hand by manipulating geometry in Edit Mode or through automated methods.
+.. figure:: /images/modeling_meshes_retopology_example.png
 
-
-Using the Poly Build Tool
-=========================
-
-Todo 2.81.
-
+   Remeshing to clean up messy geometry.
 
 .. _bpy.types.Mesh.remesh:
 .. _bpy.ops.object.voxel_remesh:
@@ -27,110 +18,158 @@ Remeshing
 .. reference::
 
    :Mode:      Object Mode, Sculpt Mode
-   :Panel:     :menuselection:`Properties --> Object Data --> Remesh`
+   :Panel:     :menuselection:`Properties --> Data --> Remesh`
 
-Remeshing is a technique that automatically rebuilds the geometry with a more uniform topology.
-Remeshing can either add or remove the amount of topology depending on a defined resolution.
-This technique is especially useful for :doc:`sculpting </sculpt_paint/sculpting/index>`,
-to generate better topology after blocking out the initial shape.
+Remeshing automatically rebuilds the mesh with a uniform topology.
+You can run it with a high resolution to make a simple mesh denser, making it
+more suitable for :doc:`sculpting </sculpt_paint/sculpting/introduction/general>`.
+Alternatively, you can run it with a low resolution to simplify and clean up
+overly dense or messy geometry, such as from a sculpt or a 3D scan.
 
-.. note:: Limitations:
+.. note::
 
-   - Remeshing only works on the original mesh data and
-     ignores generated geometry from modifiers, shape keys, rigging, etc.
-   - Remeshing will not work with the :doc:`/modeling/modifiers/generate/multiresolution`.
+   - Remeshing only works on the original mesh data -- it ignores
+     :doc:`modifiers </modeling/modifiers/introduction>`,
+     :doc:`shape keys </animation/shape_keys/introduction>` and so on.
+   - Remeshing is not possible on objects with a
+     :doc:`/modeling/modifiers/generate/multiresolution`.
 
-.. seealso::
-
-   :doc:`Remesh modifier </modeling/modifiers/generate/remesh>`
-
+The *Remesh* panel lets you choose between two different modes:
 
 Voxel
 -----
 
-The Voxel Remesher uses OpenVDB to generate a new manifold mesh from the current geometry.
-It produces a mesh with perfectly even distributed topology and
-it does not have any performance penalty once the new mesh is calculated.
-This makes the voxel remesher great for sculpting as it is possible to
-sculpt at a much higher level of detail than using other features
-like dyntopo which often adds more performance overhead.
+The :term:`Voxel` remesher works by placing the mesh in a virtual 3D grid,
+seeing which points of the grid are closest to the mesh's outer
+surface, and generating a new mesh with vertices at those points.
+This means the resulting mesh has uniform topology and has no inner
+(self-intersecting) geometry.
+
+It's useful for the following cases:
+
+- Changing the resolution of, or generally cleaning up, a mesh that you
+  want to sculpt. Notably, by setting up the resolution before sculpting,
+  you can leave :ref:`Dyntopo <dyntopo_introduction>` disabled and avoid
+  its performance impact.
+- Cleaning up a mesh for 3D printing.
+- Generating a simplified standin mesh for use with physics simulation.
+
+However, because the topology is just a simple grid, the Voxel remesher
+should *not* be used for the following:
+
+- Creating topology for a mesh that will be deformed (e.g. a character
+  that will be animated). Such topology has to follow the flow of the
+  geometry, and no automatic tools exist for this right now; it has
+  to be done manually. See `Retopology`_.
+- Generating a mesh for applying the
+  :doc:`/modeling/modifiers/generate/subdivision_surface`
+  or the :doc:`/modeling/modifiers/generate/multiresolution`.
+  It's better to use the :ref:`bpy.ops.object.quadriflow_remesh` mode for this.
+- Reducing the face count of a mesh that otherwise has no problems with
+  its geometry. It's better to use :ref:`bpy.ops.mesh.decimate` for this.
+
+Voxel remesh has the following settings:
 
 Voxel Size
-   The resolution or the amount of detail the remeshed mesh will have.
-   The value is used to define the size, in object space, of the :term:`Voxel`.
-   These voxels are assembled around the mesh and are used to determine the new geometry.
-   For example a value of 0.5 m will create topological patches that are about 0.5 m
-   (assuming *Preserve Volume* is enabled).
-   Lower values preserve finer details but will result in a mesh with a much more dense topology.
+   The size of each voxel (3D grid cell). Use a low value to get a detailed
+   but dense mesh, or a high value for a light but coarse one.
 
 Adaptivity
    Reduces the final face count by simplifying geometry where detail is not needed.
-   This introduce triangulation to faces that do not need as much detail.
-   Note, an *Adaptivity* value greater than zero disables *Fix Poles*.
+   A value greater than zero disables *Fix Poles* and can introduce triangulation.
 
 Fix Poles
-   Tries to produce less :term:`Poles <Pole>` at the cost of some performance to produce a better topological flow.
+   Tries to reduce the number of :term:`Poles <Pole>` at the cost of some performance,
+   to produce a better topological flow.
 
 Preserve
    Volume
-      Tells the algorithm to try to preserve the original volume of the mesh.
+      Try to preserve the original volume of the mesh.
       Enabling this could make the operator slower depending on the complexity of the mesh.
-   Paint Mask
-      Reprojects the :ref:`paint mask <sculpt-mask-menu>` onto the new mesh.
-   Face Sets
-      Reprojects :ref:`Face Sets <sculpting-editing-facesets>` onto the new mesh.
-   Color Attributes
-      Reprojects the :ref:`Color Attributes <modeling-meshes-properties-object_data-color-attributes>` onto
-      the new mesh.
+   Attributes
+      Transfer attributes to the new mesh: the :ref:`paint mask <sculpt-mask-menu>`,
+      any :ref:`face sets <sculpting-editing-facesets>`,
+      :ref:`color attributes <modeling-meshes-properties-object_data-color-attributes>`,
+      and so on.
 
-Voxel Remesh
-   Performs the remeshing operation to create a new manifold mesh based on the volume of the current mesh.
-   Performing this will lose all mesh object data layers associated with the original mesh.
+.. seealso::
 
+   The :doc:`/modeling/modifiers/generate/remesh` can perform this operation non-destructively
+   and offers more remeshing methods.
 
 .. _bpy.ops.object.quadriflow_remesh:
 
 Quad
 ----
 
-The Quad remesh uses the Quadriflow algorithm to create a :term:`Quad`
-based mesh with few poles and edge loops following the curvature of the surface.
-This method is relatively slow but generates a higher quality output for final topology.
+The :term:`Quad` remesher uses the Quadriflow algorithm, which can produce better results
+but is also slower. It's not a replacement for the Voxel remesher, however, because it
+doesn't clean up intersecting geometry.
 
-.. warning::
+It's useful for the following cases:
 
-   Performing *Quadriflow Remesh* will lose all mesh object data layers associated with the original mesh.
+- Generating a mesh for applying the :doc:`/modeling/modifiers/generate/subdivision_surface`
+  or the :doc:`/modeling/modifiers/generate/multiresolution`.
+
+However, it's not recommended for the following:
+
+- Cleaning up the mesh for sculpting or 3D printing. The Voxel remesher is more suited for this.
+- Creating topology for a mesh that will be deformed (e.g. a character
+  that will be animated). Such topology has to follow the flow of the
+  geometry, and no automatic tools exist for this right now; it has
+  to be done manually. See `Retopology`_.
+- Reducing the face count of a mesh that otherwise has no problems with
+  its geometry. It's better to use :ref:`bpy.ops.mesh.decimate` for this.
 
 Quadriflow Remesh
-   Opens a pop-up used to set parameters for the remesh operation.
+   Opens a pop-up to set parameters for the remesh operation.
 
-Use Paint Symmetry
+Use Mesh Symmetry
    Generates a symmetrical mesh using the :ref:`Mesh Symmetry <modeling_meshes_tools-settings_mirror>` options.
 
 Preserve Sharp
-   Tells the algorithm to try to preserve sharp features of the mesh.
+   Try to preserve sharp features of the mesh.
    Enabling this could make the operator slower depending on the complexity of the mesh.
 
 Preserve Mesh Boundary
-   Tells the algorithm to try to preserve the original volume of the mesh.
+   Try to preserve the original volume of the mesh.
    Enabling this could make the operator slower depending on the complexity of the mesh.
 
-.. Use Mesh Curvature
-..    Take the mesh curvature into account when remeshing.
-
-Preserve Paint Mask
-   Reprojects the :ref:`Paint Mask <sculpt-mask-menu>` onto the new mesh.
+Preserve Attributes
+   Transfer attributes to the new mesh: the :ref:`paint mask <sculpt-mask-menu>`,
+   any :ref:`face sets <sculpting-editing-facesets>`,
+   :ref:`color attributes <modeling-meshes-properties-object_data-color-attributes>`,
+   and so on.
 
 Smooth Normals
-   Applies the :ref:`Smooth Normals <bpy.ops.object.shade_smooth>` operator to the resulting mesh.
+   Apply the :ref:`bpy.ops.object.shade_smooth` operator to the resulting mesh.
 
 Mode
    How to specify the amount of detail for the new mesh.
 
    :Ratio: Specify target number of faces relative to the current mesh.
-   :Edge Length: Input target edge length in the new mesh.
-   :Faces: Input target number of faces in the new mesh.
+   :Edge Length: Specify target edge length in the new mesh.
+   :Faces: Specify target number of faces in the new mesh.
 
 Seed
    Random :term:`Seed` to use with the solver;
    different seeds will cause the remesher to generate different quad layouts on the mesh.
+
+
+Retopology
+==========
+
+The automatic remesh tools generally don't result in topology that lends itself to deformation.
+Therefore, if you have sculpted a character and want to simplify it for animation,
+you'll typically have to do this manually in a process known as retopologizing.
+
+To do this, you typically create a new mesh that overlaps the original one,
+then adjust it until it fully covers the original mesh and matches its shape.
+
+- The :ref:`bpy.types.View3DOverlay.show_retopology` overlay of the 3D Viewport is useful here,
+  as it lets you see the original mesh through the retopologized one and vice versa --
+  without getting distracted by geometry on the other side as would be the case with
+  :ref:`X-ray <3dview-shading-xray>`.
+- You can use the :doc:`/modeling/meshes/tools/poly_build` tool to quickly add, change,
+  and remove faces.
+- Use :doc:`/editors/3dview/controls/snapping` to align new vertices to the original mesh.
