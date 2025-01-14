@@ -9,12 +9,16 @@ Set Attribute
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Mesh --> Set Attribute`
 
-Sets the value of the :term:`Active` :term:`Attribute` for the selected element.
-"Active attribute" here means the attribute that is currently selected in the
-:ref:`Attributes list <bpy.types.AttributeGroup>`.
+Opens a pop-up window showing the name of the :term:`active` :term:`attribute`
+as well as the value of that attribute for the active element (vertex/edge/face).
+From there, you can change the value to apply it to all selected elements.
 
-When the operator is executed a pop-up window will display the attribute's name and current value.
-From here, the value field came be adjusted to change the attribute's value.
+The "active" attribute is the one last selected in the
+:doc:`Data </modeling/meshes/properties/object_data>` tab of the
+:doc:`/editors/properties_editor` editor. It could be
+a :ref:`UV Map <uv-maps-panel>`,
+a :ref:`Color Attribute <modeling-meshes-properties-object_data-color-attributes>`,
+or a generic :doc:`Attribute </modeling/geometry_nodes/attributes_reference>`.
 
 .. seealso::
 

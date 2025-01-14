@@ -3,8 +3,12 @@
 Object Data
 ***********
 
-Meshes
-   The mesh :ref:`Data-Block Menu <ui-data-block>` can be used to link the data between objects.
+These panels can be found in the *Data* tab of the :doc:`/editors/properties_editor`
+editor after selecting a mesh object.
+
+Mesh data-block
+   The :ref:`Data-Block Menu <ui-data-block>` at the top can be used to make the object point
+   to different mesh :doc:`object data </scene_layout/object/introduction>`.
 
 
 Vertex Groups
@@ -15,7 +19,7 @@ An object can have several weight groups and can be assigned in
 :doc:`Weight Paint </modeling/meshes/properties/vertex_groups/vertex_groups>` mode,
 or in :doc:`Edit Mode </modeling/meshes/properties/vertex_groups/assigning_vertex_group>` via this panel.
 
-See :doc:`Vertex Groups </modeling/meshes/properties/vertex_groups/index>` for more information.
+See :doc:`Vertex Groups </modeling/meshes/properties/vertex_groups/introduction>` for more information.
 
 
 Shape Keys
@@ -132,7 +136,7 @@ Remeshing can either add or remove the amount of topology depending on the defin
 Remeshing is especially useful for :doc:`sculpting </sculpt_paint/sculpting/index>`,
 to generate better topology after blocking out the initial shape.
 
-See :doc:`Mesh Retopology </modeling/meshes/retopology>` for more information.
+See :doc:`/modeling/meshes/retopology` for more information.
 
 
 Geometry Data
