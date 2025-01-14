@@ -82,6 +82,7 @@ Hardware acceleration for ray-tracing and denoising is supported.
 Supported GPUs include:
 
  - Intel® Arc™ A-Series
+ - Intel® Arc™ B-Series
 
 Minimum driver versions:
 
