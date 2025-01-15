@@ -9,7 +9,7 @@ Background
    :alt: Background Shader node.
 
 The *Background* shader node is used to add background light emission.
-This node should only be used for the world surface output.
+This node should only be used for the :doc:`/render/shader_nodes/output/world`.
 
 
 Inputs
