@@ -30,7 +30,7 @@ Temporal Reprojection
 Jittered Shadows
    Enable jittered shadows on the viewport.
    Jittered shadows are always enabled for final renders.
-   This also affects shadows casted by transparent shadows.
+   This also affects any transparent shadows.
 
 
 Render

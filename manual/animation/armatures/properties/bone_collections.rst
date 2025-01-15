@@ -90,7 +90,7 @@ Deselect
 
 .. note::
 
-   Individual bones can als be unassigned from their collections via the
+   Individual bones can also be unassigned from their collections via the
    :ref:`Bone Relations panel <bpy.types.PoseBone.collections>`.
 
 .. tip::

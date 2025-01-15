@@ -26,7 +26,7 @@ Gradient
       :Radial: Create gradient that forms a circle.
 
       .. note::
-         These are also availible via shortcuts as the :ref:`menu operators <bpy.ops.paint.weight_gradient>`.
+         These are also available via shortcuts as the :ref:`menu operators <bpy.ops.paint.weight_gradient>`.
 
 Sample
    Weights

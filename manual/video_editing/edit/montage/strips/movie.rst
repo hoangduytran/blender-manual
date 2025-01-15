@@ -70,7 +70,7 @@ Set View Transform
    using the wrong transform could result in inaccurate colors or degraded rendering performance.
 
 Adjust Playback Rate
-   Automatically adjusts the video's speed to playback at the original speed regardless of the scene's framerate.
+   Automatically adjusts the video's speed to playback at the original speed regardless of the scene's frame rate.
 
 Sound
    Add a :doc:`Sound Strip </video_editing/edit/montage/strips/sound>` that contains the movie's audio track.

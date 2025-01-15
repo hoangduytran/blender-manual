@@ -105,7 +105,7 @@ Angle Snapping
       * - .. figure:: /images/modeling_meshes_tools_knife_angle-before.png
              :width: 240px
 
-             Relative snapping at 90°. Blender hilights the reference edge in yellow
+             Relative snapping at 90°. Blender highlights the reference edge in yellow
              and shows the snapping direction in white.
 
         - .. figure:: /images/modeling_meshes_tools_knife_angle-after.png

@@ -59,8 +59,8 @@ This will enable you to use some tools that will probably save you time and effo
 
 #. Before Blender handles an armature for mirroring or flipping,
    it first removes the number extension, e.g. ".001".
-#. You can copy a bone named "bla.L" and flip it over using :ref:`bpy.ops.armature.flip_names`.
-   Blender will name the copy "bla.L.001" and flipping the name will give you "bla.R".
+#. You can copy a bone named "blah.L" and flip it over using :ref:`bpy.ops.armature.flip_names`.
+   Blender will name the copy "blah.L.001" and flipping the name will give you "blah.R".
 
 
 .. _bpy.ops.armature.autoside_names:

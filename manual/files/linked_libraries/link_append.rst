@@ -100,7 +100,7 @@ navigate to the external source blend-file and select the data-blocks you want t
 .. note::
 
    Appending data you already have linked will add objects/collections to the scene,
-   but will keep them linked (and un-editable).
+   but will keep them linked (and uneditable).
 
    This is done so existing relationships with linked data remain intact.
 
@@ -147,7 +147,7 @@ Reload
    :Menu:      :menuselection:`Context menu --> Reload`
 
 When the Outliner is in the *Blender File* :ref:`bpy.types.SpaceOutliner.display_mode`,
-you can rightclick a linked blend-file and choose *Reload* to immediately update
+you can right-click a linked blend-file and choose *Reload* to immediately update
 the current blend-file with the latest version of the linked data-blocks,
 without having to reopen the file.
 
@@ -160,7 +160,7 @@ Relocate
    :Menu:      :menuselection:`Context menu --> Relocate`
 
 When the Outliner is in the *Blender File* :ref:`bpy.types.SpaceOutliner.display_mode`,
-you can rightclick a linked blend-file and choose *Relocate* to replace it by a different file.
+you can right-click a linked blend-file and choose *Relocate* to replace it by a different file.
 This can be used to either fix a broken linked library (e.g. because the file was moved or renamed),
 or to switch to a variation of the same data in a different file.
 

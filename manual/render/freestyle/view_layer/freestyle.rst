@@ -92,5 +92,5 @@ Kr Derivative Epsilon
    Controls the threshold on the minimum rate of change of curvature used to filter the output
    of the *Suggestive Contour* edge type selection. Increasing the value reduces the amount of
    rendered lines, starting from smoother areas of the object (further information in
-   `this pdf <https://archive.blender.org/wiki/2015/index.php/File:Manual-2.6-Render-Freestyle-
+   `this PDF <https://archive.blender.org/wiki/2015/index.php/File:Manual-2.6-Render-Freestyle-
    PrincetownLinestyle.pdf>`__).

@@ -48,8 +48,8 @@ rather than simply using the video as a texture, you should load it into the
 
 .. note::
 
-   Blender plays all videos at the scene framerate, not their original framerate,
-   meaning they'll be faster or slower than intended if these framerates don't match up.
+   Blender plays all videos at the scene frame rate, not their original frame rate,
+   meaning they'll be faster or slower than intended if these frame rates don't match up.
    To work around this, see the *Offset* field of the Image Texture Node
    linked above.
 

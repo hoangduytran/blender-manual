@@ -11,7 +11,7 @@ Extrude
 
 This operators shown in this menu are dependent of what part of a mesh is currently selected.
 Many of the operators are also available in the :doc:`Vertex </modeling/meshes/editing/vertex/index>`,
-:doc:`Edge </modeling/meshes/editing/edge/index>`, abd :doc:`Face </modeling/meshes/editing/face/index>` menus.
+:doc:`Edge </modeling/meshes/editing/edge/index>`, and :doc:`Face </modeling/meshes/editing/face/index>` menus.
 
 
 Extrude Faces

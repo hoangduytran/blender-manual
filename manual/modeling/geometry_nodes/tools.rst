@@ -48,7 +48,7 @@ Asset
 
 If you want to move a tool into a menu of your choice, reuse it in other blend-files,
 or share it with other people, you need to turn it into an
-:doc:`asset </files/asset_libraries/introduction>`. Simply rightclick the node group name
+:doc:`asset </files/asset_libraries/introduction>`. Simply right-click the node group name
 in the Geometry Node Editor's header and choose *Mark as Asset*.
 
 Once this is done, the node group will appear in the :doc:`Asset Browser </editors/asset_browser>`'s

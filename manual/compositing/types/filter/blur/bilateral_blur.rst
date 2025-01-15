@@ -22,13 +22,11 @@ Inputs
 
 Image
    Standard color input.
-   If only the image input is connected,
-   the node blurs the image depending on the edges present in the source image.
+   If only the image input is connected, the node blurs the image depending on the edges present in the source image.
 Determinator
-   Which is non-obligatory and if the Determinator is connected,
-   it serves as the source for defining edges/borders for the blur in the image.
-   This has great advantage in case the source image is too noisy,
-   but normals in combination with Z-buffer can still define exact borders/edges of objects.
+   Which is optional and if the Determinator is connected, it serves as the source for defining edges/borders for the
+   blur in the image. This has great advantage in case the source image is too noisy, but normals in combination with
+   Z-buffer can still define exact borders/edges of objects.
 
 
 Properties
