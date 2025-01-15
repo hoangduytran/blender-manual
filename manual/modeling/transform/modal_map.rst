@@ -74,5 +74,8 @@ Marking a target more than once will give it more weight.
 Navigating
 ==========
 
-While performing a modal transformation, you can perform navigation actions such as zooming,
+While performing a transformation, you can perform navigation actions such as zooming,
 panning, or rotating by holding :kbd:`Alt` then perform the desired action.
+
+This behavior can be changed through the *Transform Navigation with Alt* setting
+in the :doc:`/editors/preferences/keymap` Preferences.

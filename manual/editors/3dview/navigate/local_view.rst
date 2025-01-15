@@ -36,7 +36,7 @@ from the View menu or using the shortcut :kbd:`NumpadSlash`.
 
 .. note::
 
-   In local view, the 3D cursor is not locked to the scene.
+   In Local View, the :doc:`/editors/3dview/3d_cursor` is not locked to the scene.
    Instead, each view has an independent cursor location.
 
 .. tip::
@@ -58,8 +58,7 @@ Remove from Local View
    :Shortcut:  :kbd:`Alt-NumpadSlash`, :kbd:`Alt-Slash`
 
 Objects can be removed from Local View by selecting them and using the *Remove from Local View* operator.
-This will move them back to the global view. If the last remaining object is removed,
-the local view will be left empty and you will have to exit it to see any objects.
+If the last remaining object is removed, Blender will automatically return to the Global View.
 
 .. hint::
 

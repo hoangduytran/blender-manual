@@ -27,9 +27,8 @@ or more temporarily by holding :kbd:`Ctrl`.
 
 .. seealso::
 
-   Transform operators have their own snapping operators,
-   see :doc:`Transform Modal Map </modeling/transform/modal_map>`
-
+   :doc:`Transform Modal Map </modeling/transform/modal_map>` for further
+   keyboard shortcuts.
 
 .. _bpy.types.ToolSettings.snap_target:
 

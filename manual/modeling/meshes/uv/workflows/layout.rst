@@ -32,7 +32,7 @@ and unwrap it using :ref:`bpy.ops.uv.project_from_view`.
 
 .. figure:: /images/modeling_meshes_uv_workflows_layout_combining-uv-maps-3.png
 
-   Unwrapping the ear
+   Unwrapping the ear.
 
 The UV Editor only shows the ear at this point, but don't worry: the UV coordinates
 for the head are still there, just hidden. To make them visible again, either

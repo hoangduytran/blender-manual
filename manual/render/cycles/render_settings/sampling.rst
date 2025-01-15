@@ -233,8 +233,8 @@ Pattern
    :Classic:
       Use pre-computed tables of Owen-scrambled Sobol for random sampling.
    :Blue-Noise:
-      Use a blue-noise pattern, which optimizes the frequency distribution of noise, for random sampling.
-      If the full number of samples is rendered, then the output typically appears smoother than *Classic*
+      Use a blue-noise pattern, which optimizes the frequency distribution.
+      If the full number of samples is rendered, the output typically appears smoother than *Classic*
       despite not actually reducing the overall noise.
 
 .. _bpy.types.CyclesRenderSettings.seed:
@@ -260,14 +260,14 @@ Scrambling Distance
    .. _bpy.types.CyclesRenderSettings.preview_scrambling_distance:
 
    Viewport
-      Uses the *Scrambling Distance* optimization for viewport rendering.
+      Uses the *Scrambling Distance* adjustment for viewport rendering.
       This will make rendering faster but may cause flickering.
 
    .. _bpy.types.CyclesRenderSettings.scrambling_distance:
 
    Multiplier
       A multiplier for the scrambling distance. Values below one will reduce the distance, having the potential
-      to further improve GPU rendering performance, but increases the visibility of artifacts.
+      to improve GPU rendering performance but increase the visibility of artifacts.
 
 .. _bpy.types.CyclesRenderSettings.min_light_bounces:
 
@@ -301,7 +301,7 @@ Sample Subset
    Only render a subset of the samples. Multiple subset renders can be combined into a full
    one by running the following in the :doc:`Python Console </editors/python_console>`:
 
-   ``bpy.ops.cycles.merge_images(input_filepath1="1.exr", input_filepath2="2.exr", output_filepath="combined.exr")``
+   ``bpy.ops.cycles.merge_images(input_filepath1=r"1.exr", input_filepath2=r"2.exr", output_filepath=r"combined.exr")``
 
    A typical use case is to distribute the rendering of a single frame over multiple machines.
    Say you want to render 2048 samples in total, but split this work over two machines because
@@ -323,5 +323,5 @@ Sample Subset
    Length
       The number of samples in the subset. While this overrides *(Max) Samples* in terms of the
       samples that will get rendered, it's still important to set *(Max) Samples* to the total number
-      of samples you will render across all subsets -- otherwise, the subsets will have incompatible
-      noise and combining them will give a worse result.
+      of samples that will be rendered across all subsets -- otherwise, the subsets will have
+      incompatible noise and combining them will give a worse result.
