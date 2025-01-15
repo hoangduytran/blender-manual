@@ -19,7 +19,7 @@ Inputs
 ======
 
 Surface
-   Shading for the surfaces illuminated by the Light.
+   Shading for the (invisible) surface of the Light.
 
 
 Properties
