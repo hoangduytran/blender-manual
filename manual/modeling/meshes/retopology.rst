@@ -59,8 +59,8 @@ should *not* be used for the following:
 
 - Creating topology for a mesh that will be deformed (e.g. a character
   that will be animated). Such topology has to follow the flow of the
-  geometry, and no automatic tools exist for this right now; it has
-  to be done manually. See `Retopology`_.
+  geometry, and no perfect automatic tools exist for this right now;
+  it has to be done manually. See `Retopology`_.
 - Generating a mesh for applying the
   :doc:`/modeling/modifiers/generate/subdivision_surface`
   or the :doc:`/modeling/modifiers/generate/multiresolution`.
@@ -113,11 +113,11 @@ It's useful for the following cases:
 
 However, it's not recommended for the following:
 
-- Cleaning up the mesh for sculpting or 3D printing. The Voxel remesher is more suited for this.
-- Creating topology for a mesh that will be deformed (e.g. a character
+- Cleaning up a mesh for sculpting or 3D printing. The Voxel remesher is more suited for this.
+- Creating final topology for a mesh that will be deformed (e.g. a character
   that will be animated). Such topology has to follow the flow of the
-  geometry, and no automatic tools exist for this right now; it has
-  to be done manually. See `Retopology`_.
+  geometry, and no perfect automatic tools exist for this right now;
+  it has to be done manually. See `Retopology`_.
 - Reducing the face count of a mesh that otherwise has no problems with
   its geometry. It's better to use :ref:`bpy.ops.mesh.decimate` for this.
 
@@ -142,7 +142,7 @@ Preserve Attributes
    and so on.
 
 Smooth Normals
-   Apply the :ref:`bpy.ops.object.shade_smooth` operator to the resulting mesh.
+   Apply :ref:`bpy.ops.object.shade_smooth` to the new mesh.
 
 Mode
    How to specify the amount of detail for the new mesh.
@@ -169,7 +169,7 @@ then adjust it until it fully covers the original mesh and matches its shape.
 - The :ref:`bpy.types.View3DOverlay.show_retopology` overlay of the 3D Viewport is useful here,
   as it lets you see the original mesh through the retopologized one and vice versa --
   without getting distracted by geometry on the other side as would be the case with
-  :ref:`X-ray <3dview-shading-xray>`.
+  :ref:`X-Ray <3dview-shading-xray>`.
 - You can use the :doc:`/modeling/meshes/tools/poly_build` tool to quickly add, change,
   and remove faces.
 - Use :doc:`/editors/3dview/controls/snapping` to align new vertices to the original mesh.

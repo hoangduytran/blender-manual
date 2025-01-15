@@ -6,34 +6,29 @@ Sampling
 
    :Panel:     :menuselection:`Render --> Sampling`
 
-The integrator is the rendering algorithm used to compute the lighting.
-Cycles currently supports a path tracing integrator with direct light sampling.
-It works well for various lighting setups,
-but is not as suitable for caustics and some other complex lighting situations.
-
-Rays are traced from the camera into the scene,
-bouncing around until they find a light source such as a light, an object emitting light,
-or the world background. To find lights and surfaces emitting light,
-both indirect light sampling (letting the ray follow the surface BSDF)
-and direct light sampling (picking a light source and tracing a ray towards it) are used.
+Sampling is the process of tracing rays from the camera into the scene and
+bouncing them around until they reach a light source such as a Light object,
+an emissive mesh, or the world background. The algorithm for this is known
+as the integrator.
 
 .. _bpy.types.CyclesRenderSettings.preview_samples:
 
-Viewport Samples
-   Number of samples for viewport rendering. Setting this value to zero
-   enables indefinite sampling of the viewport.
+Viewport (Max) Samples
+   The number of paths to trace per pixel in the 3D Viewport
+   (when using the *Rendered* :doc:`shading mode </editors/3dview/display/shading>`).
+   Setting this value to zero enables indefinite sampling.
 
 .. _bpy.types.CyclesRenderSettings.samples:
 
-Render Samples
-   Number of paths to trace for each pixel in the final render. As more samples are taken,
-   the solution becomes less noisy and more accurate.
+Render (Max) Samples
+   The number of paths to trace per pixel in the final render.
+   A higher number results in a cleaner image at the cost of a longer render time.
 
 .. _bpy.types.CyclesRenderSettings.time_limit:
 
 Time Limit
-   Renders scene until time limit or sample count is reached. When the time is set to 0,
-   the sample count is used to determine when the render stops.
+   Stops rendering if the time exceeds the limit, even if the desired sample count
+   hasn't been reached yet. Setting this value to zero disables the limit.
 
    .. note:: The time limit does not include pre-render processing time, only render time.
 
@@ -43,29 +38,27 @@ Time Limit
 Adaptive Sampling
 =================
 
-With adaptive sampling Cycles automatically reduces the number of samples in areas that have little noise,
-for faster rendering and more even noise distribution.
-For example hair on a character may need many samples, but the background may need very few.
-
-With adaptive sampling it is also possible to render images with a target amount of noise.
-This is done by settings the *Noise Threshold*, typical values are in the range from 0.1 to 0.001.
-Then render samples can then be set to a high value,
-and the renderer will automatically choose the appropriate amount of samples.
+If the *Noise Threshold* checkbox is enabled, Cycles will use adaptive sampling,
+cutting short the sampling process in areas that have become less noisy than the
+specified threshold value -- in other words, not wasting time further refining
+areas that already look good enough. For example, hair on a character may need many samples,
+but the background may only need few.
 
 .. _bpy.types.CyclesRenderSettings.adaptive_threshold:
 .. _bpy.types.CyclesRenderSettings.preview_adaptive_threshold:
 
 Noise Threshold
-   The error threshold to decide whether to continue sampling a pixel or not.
-   Typical values are in the range from 0.1 to 0.001, with lower values meaning less noise.
-   Setting it to exactly 0 lets Cycles guess an automatic value for it based on the total sample count.
+   The threshold to decide whether to continue sampling a pixel.
+   Typical values are in the range from 0.1 to 0.001, with lower values meaning better
+   quality but longer render times.
+   Setting this to 0 makes Cycles guess an automatic value based on the total sample count.
 
 .. _bpy.types.CyclesRenderSettings.adaptive_min_samples:
 .. _bpy.types.CyclesRenderSettings.preview_adaptive_min_samples:
 
 Min Samples
    The minimum number of samples a pixel receives before adaptive sampling is applied.
-   When set to 0 (default), it is automatically set to a value determined by the *Noise Threshold*.
+   When set to 0 (default), Cycles automatically picks a value determined by the *Noise Threshold*.
 
 
 .. _render-cycles-settings-viewport-denoising:
@@ -73,30 +66,28 @@ Min Samples
 Denoising
 =========
 
-Denoising removes noise while previewing scenes in *Rendered* mode in the 3D Viewport or for final renders.
+Denoising uses a specialized algorithm to get a less noisy image without requiring more samples.
 
-.. _bpy.types.CyclesRenderSettings.use_denoising:
-.. _bpy.types.CyclesRenderSettings.denoiser:
+.. seealso::
 
-Render
-   Denoising for the final render can be enabled or disabled with the checkbox.
-   For denoising the image after rendering with the :doc:`Denoising node </compositing/types/filter/denoise>`,
-   the :ref:`Data Render Passes <render_layers_passes_data>` also adapt to the selected denoiser.
-
-   :OpenImageDenoise:
-      Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
-      an AI denoiser. Typically provides the highest quality, and is the default.
-   :OptiX:
-      Uses NVIDIA's OptiX AI denoiser.
-      Supports GPU acceleration on some older NVIDIA GPUs where OpenImageDenoise does not.
-
-      Only available on NVIDIA GPUs when configured in the :ref:`editors_preferences_cycles` user preferences.
+   If you enable the *Denoising Data* :doc:`render pass </render/layers/passes>`, you can
+   alternatively denoise in the compositing step using the :doc:`/compositing/types/filter/denoise`.
 
 .. _bpy.types.CyclesRenderSettings.use_preview_denoising:
-.. _bpy.types.CyclesRenderSettings.preview_denoiser:
 
-Viewport
-   Denoising for the *Rendered* mode in the 3D Viewport can be enabled or disabled for with the checkbox.
+Denoise (Viewport)
+   Whether to perform denoising for the 3D Viewport in the *Rendered* shading mode.
+
+.. _bpy.types.CyclesRenderSettings.use_denoising:
+
+Denoise (Render)
+   Whether to perform denoising for the final rendered image.
+
+.. _bpy.types.CyclesRenderSettings.preview_denoiser:
+.. _bpy.types.CyclesRenderSettings.denoiser:
+
+Denoiser
+   The algorithm to use.
 
    :Automatic:
       Uses GPU accelerated denoising if supported, for best performance.
@@ -114,10 +105,9 @@ Viewport
 .. _bpy.types.CyclesRenderSettings.denoising_input_passes:
 
 Passes
-   Controls which :doc:`Render Pass </render/layers/passes>` the denoiser should use as input,
-   which can have different effects on the denoised image.
-   Generally, the more passes the denoiser has to denoise the better the result.
-   It is recommended to at least use *Albedo* as *None* can blur out details,
+   Controls which :doc:`Render Passes </render/layers/passes>` the denoiser should use as input.
+   Generally, the more passes the denoiser has access to, the better the result.
+   It is recommended to use at least *Albedo* as *None* can blur out details,
    especially at lower sample counts.
 
    :None: Denoises the image using color data.
@@ -128,7 +118,7 @@ Passes
 .. _bpy.types.CyclesRenderSettings.denoising_prefilter:
 
 Prefilter :guilabel:`OpenImageDenoise`
-   Controls whether or not prefiltering is applied to *Input Passes* for use when denoising.
+   Controls whether prefiltering is applied to the *Passes* before denoising.
    Visible only when using *OpenImageDenoise*.
 
    :None:
@@ -140,7 +130,7 @@ Prefilter :guilabel:`OpenImageDenoise`
       This option is faster than *Accurate* but produces a blurrier result.
    :Accurate:
       Prefilters the input passes before denoising to reduce noise. This option usually produces
-      more detailed results than *Fast* with increased processing time.
+      more detailed results than *Fast*, but with increased processing time.
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_quality:
 .. _bpy.types.CyclesRenderSettings.denoising_quality:
@@ -149,14 +139,14 @@ Quality :guilabel:`OpenImageDenoise`
    Overall denoising quality.
    Visible only when using *OpenImageDenoise*.
 
-   :High: Produces the highest quality output at the cost of time.
+   :High: Produces the highest quality at the cost of time.
    :Balanced: Balanced between performance and quality.
-   :Fast: Produces an output fast at the cost of quality (ideal for viewport rendering).
+   :Fast: Sacrifices quality for speed (ideal for viewport rendering).
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_start_sample:
 
 Start Sample
-   Sample to start :ref:`denoising <render-cycles-settings-viewport-denoising>` in the 3D Viewport.
+   Sample at which to start denoising in the 3D Viewport.
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_use_gpu:
 .. _bpy.types.CyclesRenderSettings.denoising_use_gpu:
@@ -166,7 +156,7 @@ Use GPU
    This is significantly faster than on CPU, but requires additional GPU memory.
    When large scenes need more GPU memory, this option can be disabled.
 
-   See :doc:`GPU Rendering </render/cycles/gpu_rendering>` for details on supported GPU.
+   See :doc:`GPU Rendering </render/cycles/gpu_rendering>` for details on supported GPUs.
 
 
 .. _bpy.types.CyclesRenderSettings.use_guiding:
@@ -174,17 +164,19 @@ Use GPU
 Path Guiding
 ============
 
-Path guiding helps reduce noise in scenes where finding a path to light is difficult for
+Path guiding helps reduce noise in scenes where finding a path to a light source is difficult for
 regular path tracing, for example when a room is lit through a small door opening.
 Important light directions are learned over time, improving as more samples are taken.
-Guiding is supported for surfaces with diffuse BSDFs and volumes with isotropic
-and anisotropic scattering.
 
 .. note::
 
    - Path guiding is only available when rendering on a CPU.
    - While path guiding helps render caustics in some scenes, it is not designed for complex caustics
      as they are harder to learn and guide.
+
+.. seealso::
+
+   :ref:`render-cycles-lights-area-portals` to guide the path tracing manually.
 
 .. _bpy.types.CyclesRenderSettings.guiding_training_samples:
 
@@ -214,20 +206,16 @@ Light Tree
    distance and estimated intensity.
    This can significantly reduce noise, at the cost of a somewhat longer render time per sample.
 
-   Certain lighting properties are not accounted for in the light tree. This include custom
+   Certain lighting properties are not accounted for in the light tree. This includes custom
    falloff, ray visibility, and complex shader node setups including textures.
    This can result in an increase in noise in some scenes that make use of these features.
 
 .. _bpy.types.CyclesRenderSettings.light_sampling_threshold:
 
 Light Threshold
-   Probabilistically terminates light samples when the light contribution
-   is below this threshold (more noise but faster rendering).
-   Zero disables the test and never ignores lights.
-   This is useful because in large scenes with many light sources,
-   some lights might only contribute a small amount to the final image,
-   and increase render times. Using this setting can decrease the render times
-   needed to calculate the rays which in the end have very little effect on the image.
+   Probabilistically terminates light samples when the light contribution is below the threshold.
+   This avoids wasting time on lights that contribute little to the image.
+   Zero disables the test.
 
 
 Advanced
@@ -239,13 +227,15 @@ Pattern
    The random sampling pattern used by the integrator.
 
    :Automatic:
-      Uses *Blue-Noise* (see below), but for viewport rendering,
-      it optimizes for first sample quality for an interactive preview.
+      Use *Blue-Noise* (see below), but with a tweak for viewport rendering to get better quality in the
+      first sample. This is useful for interactive changes (panning the view, moving an object...)
+      where the render is constantly restarting.
    :Classic:
       Use pre-computed tables of Owen-scrambled Sobol for random sampling.
    :Blue-Noise:
-      Use a blue-noise pattern, which optimizes the frequency distribution of noise, for random sampling.
-      This results in an output that appears smoother despite not being less noisy overall.
+      Use a blue-noise pattern, which gives a better result than *Classic* with the same sample count --
+      if the full number of samples is rendered. (The difference is less pronounced when using
+      adaptive sampling.)
 
 .. _bpy.types.CyclesRenderSettings.seed:
 
@@ -258,41 +248,34 @@ Seed
       Changes the seed for each frame. It is a good idea to enable this
       when rendering animations because a varying noise pattern is less noticeable.
 
-.. _bpy.types.CyclesRenderSettings.sample_offset:
-
-Sample Offset
-   The number of samples to skip when starting render.
-   This can be used to distribute a render across multiple computers
-   then combine the images with ``bpy.ops.cycles.merge_images``
-
 Scrambling Distance
-   These properties are not compatible with *Blue-Noise* sampling patterns.
+   This is an optimization that speeds up rendering but potentially reduces quality.
+   Not compatible with the *Blue-Noise* sampling pattern.
 
    .. _bpy.types.CyclesRenderSettings.adaptive_scrambling_distance:
 
    Automatic
-      Uses a formula to adapt the scrambling distance strength based on the sample count.
+      Adapts the scrambling distance based on the sample count.
 
    .. _bpy.types.CyclesRenderSettings.preview_scrambling_distance:
 
    Viewport
-      Uses the *Scrambling Distance* value for the viewport rendering.
-      This will make the rendering faster but may cause flickering.
+      Uses the *Scrambling Distance* optimization for viewport rendering.
+      This will make rendering faster but may cause flickering.
 
    .. _bpy.types.CyclesRenderSettings.scrambling_distance:
 
    Multiplier
-      Lower values Reduce randomization between pixels to improve GPU rendering performance,
-      at the cost of possible rendering artifacts if set too low.
-
+      Lower values improve performance, at the cost of possible rendering artifacts if set too low.
 
 .. _bpy.types.CyclesRenderSettings.min_light_bounces:
 
 Min Light Bounces
    Minimum number of light bounces for each path,
    after which the integrator uses Russian Roulette to terminate paths that contribute less to the image.
-   Setting this higher gives less noise, but may also increase render time considerably. For a low number of bounces,
-   it is strongly recommended to set this equal to the maximum number of bounces.
+   Setting this higher gives less noise, but may also increase render time considerably. For a low number
+   of :ref:`maximum bounces <bpy.types.CyclesRenderSettings.max_bounces>`, it is strongly recommended to
+   set this minimum to the same value.
 
 .. _bpy.types.CyclesRenderSettings.min_transparent_bounces:
 
@@ -304,8 +287,40 @@ Min Transparent Bounces
 .. _bpy.types.CyclesRenderSettings.use_layer_samples:
 
 Layer Samples
-   When render layers have per layer number of samples set, this option specifies how to use them.
+   If any view layers have :ref:`Sample Overrides <bpy.types.ViewLayer.samples>` configured,
+   this option specifies how to use them.
 
-   :Use: The render layer samples will override the set scene samples.
-   :Bounded: Bound render layer samples by scene samples.
-   :Ignore: Ignore render layer sample settings.
+   :Use: Allow view layers to override the scene-level sample count.
+   :Bounded: Allow the overrides as long as they don't exceed the scene-level sample count.
+   :Ignore: Ignore the overrides.
+
+.. _bpy.types.CyclesRenderSettings.use_sample_subset:
+
+Sample Subset
+   Only render a subset of the samples. Multiple subset renders can be combined into a full
+   one by running the following in the :doc:`Python Console </editors/python_console>`:
+
+   ``bpy.ops.cycles.merge_images(input_filepath1="1.exr", input_filepath2="2.exr", output_filepath="combined.exr")``
+
+   A typical use case is to distribute the rendering of a single frame over multiple machines.
+   Say you want to render 2048 samples in total, but split this work over two machines because
+   doing it on one would take too long:
+
+   - On both machines, set the *(Max) Samples* to 2048, disable *Denoise*, and enable *Sample Subset*.
+   - On the first machine, set *Offset* to 0 and *Length* to 1024.
+   - On the second machine, set *Offset* to 1024 and *Length* to 1024.
+   - Run the 1024-sample render on each machine, then combine the results as described above to get
+     the equivalent of a single 2048-sample render.
+
+   .. _bpy.types.CyclesRenderSettings.sample_offset:
+
+   Offset
+      The 0-based index of the first sample in the subset.
+
+   .. _bpy.types.CyclesRenderSettings.sample_subset_length:
+
+   Length
+      The number of samples in the subset. While this overrides *(Max) Samples* in terms of the
+      samples that will get rendered, it's still important to set *(Max) Samples* to the total number
+      of samples you will render across all subsets -- otherwise, the subsets will have incompatible
+      noise and combining them will give a worse result.
