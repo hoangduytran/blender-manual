@@ -144,6 +144,18 @@ For example, an add-on could be located at:
     $BLENDER_SYSTEM_SCRIPTS/addons/complex_addon/__init__.py
 
 
+Custom Splash Screen
+====================
+
+When Blender is configured for a particular studio or a project in production,
+it can be helpful to customize the splash screen so artists know which version
+they are running.
+
+The ``BLENDER_CUSTOM_SPLASH`` :ref:`environment variable <command-line-args-environment-variables>`
+can replace the entire splash image, while ``BLENDER_CUSTOM_SPLASH_BANNER``
+only overlays a banner.
+
+
 VFX Platform
 ============
 
