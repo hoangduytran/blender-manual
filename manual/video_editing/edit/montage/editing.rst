@@ -746,5 +746,5 @@ Toggle Retiming Keys
    :Menu:      :menuselection:`Strip --> Retiming --> Toggle Retiming Keys`
    :Shortcut:  :kbd:`Ctrl-R`
 
-Enable's the :ref:`Show Retiming Keys <bpy.types.Sequence.show_retiming_keys>` strip property.
+Enables the :ref:`Show Retiming Keys <bpy.types.Sequence.show_retiming_keys>` strip property.
 This allows retiming keys to be shown for the first time and enables interacting with them.

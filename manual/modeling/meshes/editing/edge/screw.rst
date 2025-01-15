@@ -98,7 +98,7 @@ Steps
 Turns
    The number of turns to create.
 Center X, Y, Z
-   The worldspace coordinates of the centerpoint around which to spin the geometry.
+   The world space coordinates of the centerpoint around which to spin the geometry.
    Initially this is the location of the 3D Cursor.
 Axis X, Y, Z
    The direction vector around which to spin the geometry.

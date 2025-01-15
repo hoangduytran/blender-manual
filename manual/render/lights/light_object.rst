@@ -37,7 +37,7 @@ Point Light
 
    Point light.
 
-The point light is an omni-directional point of light,
+The point light is an omnidirectional point of light,
 that is, a point radiating the same amount of light in all directions.
 It's visualized by a plain, circled dot.
 Being a point light source, the direction of the light hitting an object's surface

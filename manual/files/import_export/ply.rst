@@ -95,7 +95,7 @@ Triangulated Mesh
    Meshes in the scene will not be affected.
    Behaves like :doc:`/modeling/modifiers/generate/triangulate` with the following settings:
 
-   - N-gon-method: "Beauty"
+   - N-gon Method: "Beauty"
    - Quad-method: "Shortest Diagonal"
    - Min vertices: 4
 Apply Modifiers

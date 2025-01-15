@@ -80,7 +80,7 @@ Shape
    as for a field from a 3D object there are additional *Surface* and *Every Point* options,
    and *Curve* for a field from a curve.
 
-   :Point: Point with omni-directional influence. Uses the object origin as the effector point.
+   :Point: Point with omnidirectional influence. Uses the object origin as the effector point.
    :Line:
       The force only acts in the local XY plane, using the Z axis line as the effector.
    :Plane:
