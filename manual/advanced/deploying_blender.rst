@@ -50,8 +50,8 @@ Bundling Extensions
 
 When working offline or in a more controlled environment, it may be useful
 to provide a set of extensions to all users. For this there is a default
-read-only System repository. This repository can for example be located
-on a read-only network drive or in a system directory.
+read-only System repository. This repository could be located on a
+read-only network drive or in a system directory.
 
 
 .. figure:: /images/advanced_deploying-blender_system-extensions.png
@@ -82,10 +82,10 @@ Besides extensions, it's possible to bundle scripts for presets,
 application templates, legacy add-ons, as well as scripts run on startup.
 
 Script directories can be manually added in the File Paths preferences.
-The ``$BLENDER_SYSTEM_SCRIPTS`` can also be used to add a script directory
+``$BLENDER_SYSTEM_SCRIPTS`` can also be used to add script directories
 without modifying the preferences.
 
-These script directories are expected to contain specific directories
+Script directories are expected to contain specific subdirectories
 like ``presets``, ``addons`` and ``startup`` for different types of
 scripts. See :ref:`blender-directory-path-layout` for a complete list.
 
@@ -144,15 +144,15 @@ For example, an add-on could be located at:
     $BLENDER_SYSTEM_SCRIPTS/addons/complex_addon/__init__.py
 
 
-Custom Splash Screen
-====================
+Splash Screen
+=============
 
-When Blender is configured for a particular studio or a project in production,
-it can be helpful to customize the splash screen so artists know which version
-they are running.
+When Blender is configured for a particular studio or a project, it can be
+helpful to customize the splash screen so artists know which version they
+are running.
 
 The ``BLENDER_CUSTOM_SPLASH`` :ref:`environment variable <command-line-args-environment-variables>`
-can replace the entire splash image, while ``BLENDER_CUSTOM_SPLASH_BANNER``
+replaces the entire splash image, while ``BLENDER_CUSTOM_SPLASH_BANNER``
 only overlays a banner.
 
 
