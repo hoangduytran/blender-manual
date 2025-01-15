@@ -233,9 +233,9 @@ Pattern
    :Classic:
       Use pre-computed tables of Owen-scrambled Sobol for random sampling.
    :Blue-Noise:
-      Use a blue-noise pattern, which gives a better result than *Classic* with the same sample count --
-      if the full number of samples is rendered. (The difference is less pronounced when using
-      adaptive sampling.)
+      Use a blue-noise pattern, which optimizes the frequency distribution of noise, for random sampling.
+      If the full number of samples is rendered, then the output typically appears smoother than *Classic*
+      despite not actually reducing the overall noise.
 
 .. _bpy.types.CyclesRenderSettings.seed:
 
@@ -249,8 +249,8 @@ Seed
       when rendering animations because a varying noise pattern is less noticeable.
 
 Scrambling Distance
-   This is an optimization that speeds up rendering but potentially reduces quality.
-   Not compatible with the *Blue-Noise* sampling pattern.
+   A technique that reduces the randomness between pixels in an attempt to improve GPU rendering performance,
+   at the cost of potential artifacts. Not compatible with the *Blue-Noise* sampling pattern.
 
    .. _bpy.types.CyclesRenderSettings.adaptive_scrambling_distance:
 
@@ -266,7 +266,8 @@ Scrambling Distance
    .. _bpy.types.CyclesRenderSettings.scrambling_distance:
 
    Multiplier
-      Lower values improve performance, at the cost of possible rendering artifacts if set too low.
+      A multiplier for the scrambling distance. Values below one will reduce the distance, having the potential
+      to further improve GPU rendering performance, but increases the visibility of artifacts.
 
 .. _bpy.types.CyclesRenderSettings.min_light_bounces:
 
