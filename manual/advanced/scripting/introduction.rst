@@ -1,4 +1,3 @@
-
 ************
 Introduction
 ************
@@ -29,12 +28,10 @@ Links that are useful while writing scripts:
 
 Links that deal with distributing your scripts:
 
-- `Sharing scripts <https://developer.blender.org/docs/handbook/addons/>`__
-  -- Information on how to share your scripts and get them included in the official Blender distribution.
 - `Creating Add-ons <https://developer.blender.org/docs/handbook/addons/guidelines/>`__
   -- Add-ons are used to encapsulate and distribute scripts.
-- `Add-ons project <https://projects.blender.org/blender/blender-addons>`__
-  -- Project to maintain a central repository of extensions to Blender.
+- :ref:`Creating Extensions <extensions-getting_started>`
+  -- Share add-ons on the `Blender Extensions <https://extensions.blender.org/>`__ platform.
 
 
 Getting Started
