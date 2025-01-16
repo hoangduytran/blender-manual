@@ -171,8 +171,10 @@ Remove from Collection :kbd:`Ctrl-Alt-G`
    a pop-up lets you select the collection and an option to remove it from all collections.
 Remove from All Collections :kbd:`Shift-Ctrl-Alt-G`
    Remove the selected objects from all collections.
-Add Selected to Active Collection :kbd:`Shift-Ctrl-G`
-   Adds the selected objects to the collections to which the active object belongs.
+Add Selected to Active Objects Collection :kbd:`Shift-Ctrl-G`
+   Adds the selected objects to one of the collections active object belongs to.
+   Optionally add to \"All Collections\"
+   to ensure selected objects are included in the same collections as the active object.
 Remove Selected from Active Collection :kbd:`Shift-Alt-G`
    Causes the selected objects to be removed from the collections to which the active object belongs.
 
