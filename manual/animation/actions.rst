@@ -142,6 +142,8 @@ For example, by default Blender creates a channel group for the channels of each
 bone. There are a few features in Blender that rely on the groups, but mostly
 they are just for your convenience.
 
+.. _working_with_actions:
+
 Working With Actions
 ====================
 
