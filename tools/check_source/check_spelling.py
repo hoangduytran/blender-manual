@@ -8,6 +8,9 @@ Check spelling for all RST files in the repository.
 - TODO: some words get extracted that shouldn't.
 """
 
+import concurrent.futures
+from concurrent.futures import ProcessPoolExecutor
+
 import docutils.parsers.rst
 from docutils.parsers.rst import directives, roles
 import docutils
@@ -28,6 +31,7 @@ dict_spelling = enchant.Dict("en_US")
 USE_ONCE = True
 once_words = set()
 bad_words = set()
+word_cache = {}         # Used to store validated words to prevent repeated lookups
 
 
 def find_vcs_root(test, dirs=(".svn", ".git", ".hg"), default=None):
@@ -39,6 +43,13 @@ def find_vcs_root(test, dirs=(".svn", ".git", ".hg"), default=None):
         prev, test = test, os.path.abspath(os.path.join(test, os.pardir))
     return default
 
+# Performs checks of words, first using the word cache
+def check_word_cached(w):
+    if w in word_cache:
+        return word_cache[w]
+    result = dict_spelling.check(w)
+    word_cache[w] = result
+    return result
 
 def check_word(w):
     if not w:
@@ -126,8 +137,15 @@ def check_spelling_body(text):
 
         if check_word(w):
             pass
-        elif "-" in w and all(check_word(w_split) for w_split in w.split("-")):
-            pass  # all words split by dash are correct, also pass
+        elif "-" in w:
+            if check_word_cached(w):  # Check the whole hyphenated word first
+                pass
+            elif all(check_word_cached(w_split) for w_split in w.split("-")):  # Then check individual parts
+                pass
+            else:
+                bad_words.add(w)  # If neither is valid, mark the whole word as bad
+                if USE_ONCE:
+                    once_words.add(w_lower)
         else:
             bad_words.add(w)
             # print(" %r" % w)
@@ -153,17 +171,27 @@ def rst_files(path):
 
 
 def main():
-    for fn in rst_files(RST_DIR):
-        check_spelling(fn)
+    # Collect all RST files
+    files = list(rst_files(RST_DIR))
+    
+    # Use ThreadPoolExecutor for multithreading - only tested on Windows but should not be OS-specific
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        # Submit each file to be processed in a separate thread
+        futures = [executor.submit(check_spelling, fn) for fn in files]
+        
+        # Wait for all threads to complete - not strictly required, but doesn't add much overhead and
+        #   does allow us to catch and display errors
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                # Check for exceptions raised during execution
+                future.result()
+            except Exception as e:
+                print(f"Error processing file: {e}")
 
-    # We could have nicer in-context display,
-    # for now just print the words
-    words_sorted = list(bad_words)
-    words_sorted.sort(key=lambda s: s.lower())
+    # Print the sorted list of bad words
+    words_sorted = sorted(bad_words, key=lambda s: s.lower())
     for w in words_sorted:
         print(w)
-        # print(w, "->", " ".join(dict_spelling.suggest(w)))
-
 
 # -----------------------------------------------------------------------------
 # Register dummy directives
