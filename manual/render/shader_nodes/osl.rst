@@ -201,7 +201,7 @@ This includes UV maps, color attributes and any attributes output from geometry 
 The following built-in attributes are available through ``getattribute()`` as well.
 
 ``geom:generated``
-   Automatically generated texture coordinates, from undeformed mesh.
+   Automatically generated texture coordinates, from non-deformed mesh.
 ``geom:uv``
    Default render UV map.
 ``geom:tangent``

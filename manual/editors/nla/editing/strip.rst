@@ -254,7 +254,7 @@ Overwrite Current Action
 Clean Curves
    After baking curves, :ref:`remove redundant keys <bpy.ops.graph.clean>`.
 Bake Data
-   Which data's transformations to bake.
+   Which data transformations to bake.
 
    :Pose: Bake bone transformations.
    :Object: Bake object transformations.

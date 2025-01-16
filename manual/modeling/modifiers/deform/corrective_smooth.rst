@@ -65,7 +65,7 @@ Pin Boundaries
    Prevent boundary vertices from smoothing.
 
 Rest Source
-   Select the source for reference vertex positions that defines the undeformed state.
+   Select the source for reference vertex positions that defines the non-deformed state.
 
    Original Coordinates
       Use the original input vertex positions.

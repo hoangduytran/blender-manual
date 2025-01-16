@@ -51,7 +51,7 @@ Outputs
 Generated
    Automatically-generated texture coordinates from the vertex positions of the mesh without deformation,
    keeping them sticking to the surface under animation.
-   Range from 0.0 to 1.0 over the bounding box of the undeformed mesh.
+   Range from 0.0 to 1.0 over the bounding box of the non-deformed mesh.
    See :ref:`Texture Spaces <properties-texture-space>` for more information.
 Normal
    Object space normal, for texturing objects with the texture staying fixed on the object as it transformed.
