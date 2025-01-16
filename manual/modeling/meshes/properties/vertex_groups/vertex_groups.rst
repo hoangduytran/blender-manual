@@ -39,7 +39,8 @@ Active Vertex Group
       Sort by Name
          Sorts vertex groups alphabetically.
       Sort by Bone Hierarchy
-         (Todo)
+
+.. todo:: Add this information.
 
       Duplicate Vertex Group
          Add a copy of the active vertex group as a new group.

@@ -46,7 +46,7 @@ Most the time people will use the *Standard* IK solver.
 Standard
 --------
 
-TODO.
+.. todo:: Add this information.
 
 
 .. _bpy.types.Itasc:

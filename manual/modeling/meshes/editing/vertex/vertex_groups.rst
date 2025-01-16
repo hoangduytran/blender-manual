@@ -3,4 +3,4 @@
 Vertex Groups
 *************
 
-Todo.
+.. todo:: Add this information.

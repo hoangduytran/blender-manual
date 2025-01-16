@@ -91,7 +91,7 @@ To be avoided:
 
   As a last resort you can add comment (which is not shown in the HTML page, but useful for other editors)::
 
-     .. TODO, how does this tool work? ask Joe Blogg's.
+     .. todo, how does this tool work? ask Joe Blogg's.
 
 
 Glossary

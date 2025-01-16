@@ -12,4 +12,4 @@ Flip Quats
 
 Flip quaternion values to achieve desired rotations, while maintaining the same orientations.
 
-.. todo add example
+.. todo:: add example

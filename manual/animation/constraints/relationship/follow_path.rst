@@ -106,7 +106,9 @@ Follow Curve
    it is affected depending on the Forward and Up Axes.
 
 Animate Path
-   Adds an F-Curve with options for the start and end frame. ToDo: from above.
+   Adds an F-Curve with options for the start and end frame.
+   
+   .. todo:: from above.
 
 Influence
    Controls the percentage of affect the constraint has on the object.

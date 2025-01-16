@@ -3,7 +3,7 @@
 Manage UI Translations
 **********************
 
-Todo
+.. todo:: Add this information.
 
 
 Enabling Add-on

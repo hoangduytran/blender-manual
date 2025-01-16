@@ -14,7 +14,7 @@ Open Clip
    :Menu:      :menuselection:`Clip --> Open Clip`
    :Shortcut:  :kbd:`Alt-O`
 
-Todo.
+.. todo:: Add this information.
 
 
 .. _bpy.ops.clip.set_scene_frames:
@@ -75,7 +75,7 @@ Force reload the currently loaded movie clip. Is mainly useful when the clip get
 Proxy
 =====
 
-Todo.
+.. todo:: Add this information.
 
 
 .. _bpy.ops.clip.set_viewport_background:

@@ -6,7 +6,7 @@ Track
 Transform
 =========
 
-Todo.
+.. todo:: Add this information.
 
 
 .. _bpy.ops.clip.track_markers:
@@ -125,7 +125,7 @@ Clear Active
 Clear Solution
 --------------
 
-Todo.
+.. todo:: Add this information.
 
 
 .. _bpy.ops.clip.refine_markers:
@@ -349,25 +349,25 @@ Keep Original
 Copy Tracks
 ===========
 
-Todo.
+.. todo:: Add this information.
 
 
 Paste Tracks
 ============
 
-Todo.
+.. todo:: Add this information.
 
 
 Animation
 =========
 
-Todo.
+.. todo:: Add this information.
 
 
 Show/Hide
 =========
 
-Todo.
+.. todo:: Add this information.
 
 
 Clean Up
@@ -439,4 +439,5 @@ Delete Marker
    :Menu:      :menuselection:`Track --> Delete Marker`
    :Shortcut:  :kbd:`Shift-X`
 
-Todo.
+.. todo:: Add this information.
+

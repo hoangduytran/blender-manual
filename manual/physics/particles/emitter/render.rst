@@ -17,9 +17,13 @@ Common Settings
 ===============
 
 Scale
-   Todo.
+
+.. todo:: Add this information.
+
 Scale Randomness
-   Todo.
+
+.. todo:: Add this information.
+
 Material
    Set which of the object's materials is used to shade the particles.
 Coordinates System

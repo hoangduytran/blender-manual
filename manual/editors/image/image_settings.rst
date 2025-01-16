@@ -192,7 +192,7 @@ Seam Margin
       This setting only affects Sculpt Mode, where texture painting support is currently experimental.
       In Texture Paint Mode, a fixed margin is used instead.
 
-   .. TODO
+   .. todo
       Remove the above "is currently experimental" once these tickets get resolved:
       https://projects.blender.org/blender/blender/issues/96225
       https://projects.blender.org/blender/blender/issues/97352

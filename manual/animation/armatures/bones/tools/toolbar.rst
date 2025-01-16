@@ -50,10 +50,14 @@ Transform
    Rotates a bone around its local Y axis.
 
 Bone Size
-   Todo.
+
+.. todo:: Add this information.
+
 
    Bone Envelope
-      Todo.
+
+.. todo:: Add this information.
+
 
 Extrude
    Creates a new bone connected to the last selected joint.
@@ -62,4 +66,6 @@ Extrude
       Creates a new bone between the last selected joint and the mouse position.
 
 Shear
-   Todo.
+
+.. todo:: Add this information.
+

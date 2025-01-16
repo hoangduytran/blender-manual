@@ -40,4 +40,4 @@ Outputs
 Image
    Standard color output.
 
-.. TODO <2.8 explain all options
+.. todo <2.8 explain all options

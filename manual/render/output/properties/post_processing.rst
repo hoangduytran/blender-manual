@@ -16,7 +16,8 @@ The Post Processing panel is used to control different options used to process y
    Post Processing panel.
 
 Pipeline
-   Todo.
+
+.. todo:: Add this information.
 
    .. _bpy.types.RenderSettings.use_compositing:
 

@@ -19,7 +19,7 @@ and you are automatically placed in move mode, so you can move your copy elsewhe
 In the *Toolbar* are settings for *Vector* offset, *Proportional Editing*,
 *Duplication Mode*, and *Axis Constraints*.
 
-.. TODO: Duplication Mode non-functional?
+.. todo: Duplication Mode non-functional?
 
 Note that duplicated elements belong to the same
 :doc:`vertex groups </modeling/meshes/properties/vertex_groups/index>` as the "original" ones.

@@ -115,7 +115,7 @@ Switch Direction handle directions in/out.
 Copy Paste
 ==========
 
-Todo.
+.. todo:: Add this information.
 
 
 .. _bpy.ops.mask.parent_clear:

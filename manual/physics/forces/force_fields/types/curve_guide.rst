@@ -104,12 +104,21 @@ Kink
 Type
    Changes the shape that the particles can take.
 
-   :None: Todo.
-   :Braid: Braid.
+   :None:
+
+    .. todo:: Add this information.
+
+   :Braid:
+
+    .. todo:: Add this information.
+
    :Curl: The radius of the influence depends on the distance of the curve to the emitter.
    :Radial: A three-dimensional, standing wave.
    :Roll: A one-dimensional, standing wave.
-   :Rotation: Todo.
+   :Rotation:
+
+    .. todo:: Add this information.
+
    :Wave: A two-dimensional, standing wave.
 
    It is not so easy to describe the resulting shapes, so have a look at the example below.

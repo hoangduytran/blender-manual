@@ -31,4 +31,4 @@ This add-on does not have any properties.
 Usage
 =====
 
-Todo.
+.. todo:: Add this information.

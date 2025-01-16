@@ -1,6 +1,6 @@
 .. index:: Editors; Preferences
 
-.. TODO: use substitutions, see: https://stackoverflow.com/questions/56557296
+.. todo: use substitutions, see: https://stackoverflow.com/questions/56557296
 .. |menu| unicode:: U+2630
 
 ************

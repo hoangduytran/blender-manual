@@ -597,7 +597,7 @@ This page lists definitions for terms used in Blender and this manual.
 
       See also: :ref:`Select Non-Manifold <bpy.ops.mesh.select_non_manifold>` tool.
 
-      .. TODO: Images would be useful here.
+      .. todo: Images would be useful here.
 
    Normal
       The normalized vector perpendicular to a surface.

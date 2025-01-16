@@ -5,7 +5,7 @@
 Normals
 *******
 
-.. TODO put in ref to weighted normals modifier and bevel tool and modifier.
+.. todo put in ref to weighted normals modifier and bevel tool and modifier.
 
 .. seealso::
 

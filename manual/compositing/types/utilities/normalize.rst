@@ -33,4 +33,4 @@ Outputs
 Value
    Standard value output.
 
-.. TODO Add more info and examples.
+.. todo Add more info and examples.

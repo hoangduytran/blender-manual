@@ -4,7 +4,7 @@
 Python Wheels
 *************
 
-.. TODO:
+.. todo::
 
    - Guidelines for wheel selecting the version to use.
    - Finalize a policy for how conflicting versions of a wheel are handled.

@@ -57,9 +57,12 @@ Clump
 Shape
    Form of *Clump*. Either inverse parabolic (0.99) or exponentially (-0.99).
 Twist
-   Todo.
+
+.. todo:: Add this information.
+
 Use Twist Curve
-   Todo.
+
+.. todo:: Add this information.
 
 
 Clump Noise
