@@ -6,6 +6,11 @@ Each mode and brush has unique brush settings.
 But there is also a lot of overlap or similar settings.
 This page explains general and mode specific settings that are used across various brushes in more detail.
 
+Changes to the settings of a brush asset are temporary and will be discarded when Blender is
+closed. To preserve settings, save them to the currently active brush asset using *Save Changes to
+Asset*, or create a new brush asset using *Duplicate Asset*, see :ref:`Asset Operators <asset-operators>`.
+Loading a different file while Blender remains open does not discard the settings.
+
 
 .. _sculpt-tool-settings-brush-settings-general:
 
