@@ -115,7 +115,7 @@ Offset
    .. hint::
 
       Blender plays video textures at the scene frame rate, not their original frame rate,
-      meaning they'll be faster or slower than intended if these framerates don't match up.
+      meaning they'll be faster or slower than intended if these frame rates don't match up.
       You can put a :doc:`Driver </animation/drivers/introduction>` on the Offset to work
       around this. Simply type the following into the field, replacing *StartFrame*,
       *VideoFrameRate* and *SceneFrameRate* by their respective numbers:

@@ -74,41 +74,26 @@ Include
 ^^^^^^^
 
 Import Normals
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Import Subdivision Surface
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Import User Properties
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Import Enums as Strings
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Image Search
-
-.. todo:: Add this information.
+   .. todo:: Add this information.
 
 
 Transform
 ^^^^^^^^^
 
 Scale
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Decal Offset
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Manual Orientation
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Forward / Up Axis
    Since many applications use a different axis for 'Up', these are axis conversion for these settings,
    Forward and Up axes -- By mapping these to different axes you can convert rotations
@@ -116,13 +101,11 @@ Forward / Up Axis
 
    Blender uses Y Forward, Z Up (since the front view looks along the +Y direction).
    For example, its common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
+
 Apply Transform
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Use Pre/Post Rotation
-
-.. todo:: Add this information.
+   .. todo:: Add this information.
 
 
 Animation
@@ -131,28 +114,20 @@ Animation
 .. todo:: Add this information.
 
 Animation Offset
-
-.. todo:: Add this information.
+   .. todo:: Add this information.
 
 
 Armature
 ^^^^^^^^
 
 Ignore Leaf Bones
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Force Connect Children
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Automatic Bone Orientation
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Primary/Secondary Bone Axis
-
-.. todo:: Add this information.
+   .. todo:: Add this information.
 
 
 Export
@@ -174,8 +149,7 @@ Path Mode
    :Copy: Copy the file on exporting and reference it with a relative path.
 
    Embed Textures
-
-.. todo:: Add this information.
+      .. todo:: Add this information.
 
 Batch Mode
    When enabled, export each group or scene to a file.
@@ -200,15 +174,11 @@ Selected Objects
    Only export the selected objects. Otherwise export all objects in the scene.
    Note, this does not apply when batch exporting.
 Active Collection
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Object Types
    Enable/Disable exporting of respective object types.
 Custom Properties
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 
 
 Transform
@@ -218,9 +188,7 @@ Scale
    Scale the exported data by this value. 10 is the default
    because this fits best with the scale most applications import FBX to.
 Apply Scaling
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Forward / Up
    Since many applications use a different axis for 'Up', these are axis conversions for Forward and
    Up axes -- By mapping these to different axes you can convert rotations between applications
@@ -229,55 +197,38 @@ Forward / Up
    Blender uses Y Forward, Z Up (since the front view looks along the +Y direction).
    For example, its common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
 Apply Unit
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Apply Transform
-
-.. todo:: Add this information.
+   .. todo:: Add this information.
 
 
 Geometry
 ^^^^^^^^
 
 Smoothing
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Export Subdivision Surface
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Apply Modifiers
    Export objects using the evaluated mesh, meaning the resulting mesh after all
    :doc:`Modifiers </modeling/modifiers/index>` have been calculated.
 Loose Edges
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Tangent Space
-
-.. todo:: Add this information.
+   .. todo:: Add this information.
 
 
 Armatures
 ^^^^^^^^^
 
 Primary/Secondary Bone Axis
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Armature FBXNode Type
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Only Deform Bones
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Add Leaf Bones
-
-.. todo:: Add this information.
+   .. todo:: Add this information.
 
 
 Bake Animation
@@ -286,28 +237,19 @@ Bake Animation
 .. todo:: Add this information.
 
 Key All Bones
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 NLA Strips
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 All Actions
    Export all actions compatible with the selected armatures
    start/end times which are derived from the keyframe range of each action.
    When disabled only the currently assigned action is exported.
 Force Start/End Keying
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Sampling Rate
-
-.. todo:: Add this information.
-
+   .. todo:: Add this information.
 Simplify
-
-.. todo:: Add this information.
+   .. todo:: Add this information.
 
 
 Compatibility
