@@ -45,7 +45,7 @@ updating the brushes in asset libraries for you. Assets managed this way will be
 
 .. _bpy.ops.brush.asset_save_as:
 
-Duplicate Asset... (Duplicate icon)
+:bl-icon:`duplicate` Duplicate Asset...
    Creates a copy of the currently active brush as asset, and activates it. A popup is spawned to input some settings
    to use:
 
