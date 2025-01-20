@@ -43,7 +43,8 @@ Hex
 
 Eyedropper (pipette icon)
    Samples a color from inside the Blender window using the :ref:`ui-eyedropper`. Note, colors sampled from the
-   eyedropper are in linear color space and do not account for view transform adjustments.
+   eyedropper are in linear color space and do not account for view transform adjustments. Picking colors from
+   reference and background images might not work as they can be rendered as an overlay.
 
 
 Shortcuts
