@@ -105,7 +105,7 @@ Layer Selection
    Which source layers to copy to the destination mesh (e.g. all vertex groups
    or a specific vertex group).
 
-Layer Matching
+Layer Mapping
    How to find the destination layer for a given source layer: by name or by order.
 
 Islands Precision
