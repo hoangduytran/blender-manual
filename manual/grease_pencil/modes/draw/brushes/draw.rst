@@ -59,17 +59,19 @@ Caps Type
 Advanced
 --------
 
-.. _bpy.types.BrushGpencilSettings.input_samples:
+.. _bpy.types.Brush.spacing:
 
-Input Samples
-   Controls how often the input device is read to generate points on the stroke.
-   Higher values give a higher precision (more points) but produce an irregular stroke,
-   while lower values give a lower precision (fewer points) but produce a soften stroke.
-   (0 disabled extra input device samples.)
+Spacing
+   Controls the minimum spacing between points in the stroke as a percentage of 
+   the brush size.
 
-   You have to set up this value according to your input device to obtain
-   the right balance between accuracy and softness for your strokes.
-   See :doc:`Input Device </getting_started/configuration/hardware>` for more information.
+   A lower spacing is useful when doing fast movements. Normally this would generate
+   less samples and lead to a larger spacing between points. When the spacing percentenage
+   is lowered, more points are generated to ensure the minimum spacing.
+
+   When drawing slowly, the point density is usually already high. In this case the 
+   spacing setting doesn't add new points. It only ensures a minimum spacing and won't 
+   remove points.
 
 .. _bpy.types.BrushGpencilSettings.active_smooth_factor:
 
