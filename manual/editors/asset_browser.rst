@@ -166,6 +166,11 @@ Preview
       Generates a preview based on the 3D Viewport's :term:`Active` object.
       This is useful for node groups,
       which cannot automatically generate their own preview.
+      
+   .. _bpy.ops.ed.lib_id_remove_preview:
+      
+   Remove Preview
+      Remove the preview of the asset.
 
 
 .. _bpy.ops.asset.tag_add:
