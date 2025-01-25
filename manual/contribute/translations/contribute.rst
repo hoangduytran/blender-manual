@@ -4,74 +4,67 @@
 Contribute
 **********
 
-On this page French (``fr``) is used for examples. However, it can be replaced with other
-`languages codes <https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html>`__.
-So, be sure to change the ``/fr`` suffixes in this guide to the language you are translating!
+This guide uses French (``fr``) as an example, but other
+`language codes <https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html>`__ can be used.
+Replace ``/fr`` in this guide with the code for your desired language.
 
-To see which languages are currently available, you can check the
-`online interface <https://translate.blender.org/projects/blender-manual/manual/>`__,
-or browse the `underlying git repository <https://projects.blender.org/blender/blender-manual-translations>`__.
+The currently available languages can be checked on the
+`online translation interface <https://translate.blender.org/projects/blender-manual/manual/>`__
+or in the `underlying git repository <https://projects.blender.org/blender/blender-manual-translations>`__.
 
 
 ===================
 Simple Contribution
 ===================
 
-The preferred way to contribute to the translation effort is to use the
-`web-based interface <https://translate.blender.org/projects/blender-manual/manual>`__,
-currently a Weblate instance.
+The preferred way to contribute to the translation effort is via the
+`web-based interface <https://translate.blender.org/projects/blender-manual/manual>`__, currently hosted on Weblate.
 
-Simple enhancement suggestions can be contributed by any user, even without logging in.
-Suggestions will be reviewed by the translating team before they get published.
+Suggestions for translations can be contributed without logging in.
+They will be reviewed by the translation team before being published.
 
-Weblate also comes with new helping tools to improve coherence of translations, like the
-`glossary <https://translate.blender.org/projects/blender-manual/glossary/>`__.
+Weblate also provides tools such as the
+`glossary <https://translate.blender.org/projects/blender-manual/glossary/>`__ to improve translation consistency.
 
 
 ===================
 Advanced Operations
 ===================
 
-If for some reasons the web-based translation interface does not work well for you,
-you can still download the PO file from it, and upload it back later.
+If the web-based interface does not suit your needs,
+PO-files can be downloaded, edited locally, and uploaded back to the platform.
 
 .. warning::
 
-   You will have to deal with potential conflicts yourself if some updates happened in the meantime.
-   Direct commit to the git repository for translations is not possible anymore.
+   Conflicts may arise if updates occur while editing locally. Resolving conflicts manually will be required.
+   Direct commits to the translation repository are no longer permitted.
 
 .. note::
 
-   There is a known issue with the current tool behind the web interface,
-   which will make heavy processing like upload and integration of a PO file
-   take several minutes, with the web page staying in refresh mode for the whole time.
-   If it takes more than ten minutes, it will even apparently fail
-   with a server timeout error message.
-   There is usually no actual problem though, so no need to re-try uploading the PO file then,
-   refreshing the page after a few minutes should be enough
-   to see the contribution in the web interface.
-
-.. note::
-
-   First of all, it is assumed that you have the manual already building.
-   If you have not done this already go back to
-   the :ref:`Getting Started <about-getting-started>` section.
+   Uploading or integrating PO files can take several minutes.
+   If a server timeout error appears after ten minutes,
+   refresh the page to confirm whether the upload succeeded.
 
 
 Installing
 ==========
 
+Before proceeding with translation tasks, ensure the manual builds correctly by following the
+:ref:`Getting Started <about-getting-started>` section.
+
+
 Language Files
 --------------
 
-From the directory containing your checkout of the manual run::
+Run the following command from the manual's root directory::
 
    make checkout_locale
 
-You will be prompted to type in the language folder you want to download.
-In the case of this example we will use ``fr``. Pressing :kbd:`Return` will confirm this selection.
+You will be prompted to specify the language folder to download.
+For example, type ``fr`` for French and press :kbd:`Return`.
+The command creates a ``locale/fr`` subdirectory after downloading.
 
-It will take a few minutes to download but once complete it will create a ``locale/fr`` subdirectory.
+Example directory structure:
 
 You should have a directory layout like this::
 
@@ -83,68 +76,55 @@ You should have a directory layout like this::
 
 .. note::
 
-   When running Git from the command line (such as updating),
-   you will need to change directory to ``locale`` first rather than the ``blender-manual`` directory.
+   When using Git from the command line, switch to the ``locale``
+   directory for updates instead of the ``blender-manual`` directory.
+
+Alternatively, download the PO files directly from Weblate by navigating to the ``Files`` menu on the language's page.
 
 
-The PO language files themselves can also be downloaded from the web interface, ``Files`` menu,
-on each dedicated language page of the ``Manual`` component.
+PO-File Editor
+--------------
 
-
-A PO Editor
------------
-
-To edit the PO files you will need to install a PO editor.
-We recommend that you use `Poedit <https://poedit.net/>`__,
-however any PO editor will do.
-
-.. note::
-
-   For Linux users, you will need to check with your distribution's software center for a version of Poedit. This
-   editor is only a recommendation. There are others, such as Kate and Kwrite, which could offer syntax highlighting
-   and basic tools for text editing, e.g. letter case transposes. Other platforms can use some text editors supporting
-   the syntax highlighting for PO files, or allowing you to create a custom one (such as Notepad++ on Windows).
+To edit the PO files, install a PO-file editor to modify the translation files.
+`Poedit <https://poedit.net/>`__ is recommended, but other editors are also suitable.
 
 
 Building with Translations
 ==========================
 
-Building
---------
+To build the manual with translations applied run the following commands in a terminal:
 
-Now you can build the manual with the translation applied:
+- **Linux/macOS**::
 
-On Linux and macOS run::
+     make -e BF_LANG=fr
 
-   make -e BF_LANG=fr
+- **Windows**::
 
-On Windows run::
-
-   set BF_LANG=fr
-   make html
-
-Now you will have a version of the manual with translations applied.
+     set BF_LANG=fr
+     make html
 
 
 Editing Translation Files
 =========================
 
-Now you can edit the PO translation files, in the ``LC_MESSAGES`` folder you have two files:
+The PO files in the ``LC_MESSAGES`` folder include:
 
-- ``blender_manual.po`` -- This is the main translation file that you will be editing.
-- ``sphinx.po`` -- This translation file is much smaller and contains translations for the website theme.
+- ``blender_manual.po``: The main file containing user manual translations.
+- ``sphinx.po``: A smaller file for translating the website theme.
 
-To edit these files open them up in your translation editor, i.e. Poedit.
-Once in your editor you will see a list of texts, each of these items represent some part of the user manual.
-You may need to adjust your editor to sort the list in a way that makes sense for example "by source".
 
-You can now select an untranslated string and your editor will have an input box to add the translation.
-The modified ``.po`` files can now be submitted back to the web-based interface.
+#. Use the PO editor to open these files. Each entry represents a section of the manual.
+#. Translate any untranslated strings using the input field provided by the editor.
+#. Save changes and upload the modified ``.po`` files back to Weblate.
 
 .. tip::
 
-   Make sure that you `Building with Translations`_ to catch any syntax errors you may make while translating.
-   These errors will be displayed as warnings during the build process.
+   Sort entries in the editor by source or translation status to make navigation easier.
+
+.. important::
+
+   Build the manual after translating to check for syntax errors,
+   which will appear as warnings will appear during the build process.
 
 
 Maintenance
@@ -155,19 +135,15 @@ Maintenance
 Keeping Track of Fuzzy Strings
 ------------------------------
 
-When the manual is updated, those translations which are outdated will be marked as fuzzy.
-To keep track with that, you can use a tool we created for that task.
-
-You can do this by running::
+When the manual is updated, outdated translations are marked as fuzzy. To track these run::
 
    make report_po_progress
 
-This will only give a quick summary however, you can get more information by running::
+For a detailed report, run::
 
    python tools/translations/report_translation_progress.py locale/fr/
 
-You should get a list of all the files with information about the number of empty and fuzzy strings.
-For more options see::
+This lists files with fuzzy or empty strings. For more options, see::
 
    python tools/translations/report_translation_progress.py --help
 
@@ -175,17 +151,15 @@ For more options see::
 Updating PO Files
 -----------------
 
-An administrator will regularly update the PO files to match the latest version of the
-English manual (typically once a week). You can check when the last update happened on the
-`Blender Manual Translations <https://projects.blender.org/blender/blender-manual-translations>`__
-project page.
+Administrators regularly update PO files to match the latest English manual (typically weekly).
+The last update can be checked on the
+`Blender Manual Translations <https://projects.blender.org/blender/blender-manual-translations>`__ project page.
 
-You can also update the files yourself by running the following command::
+Translators can update files locally using::
 
    make update_po
 
-However, translators can't upload these updated files, so in practice there's not much point
-in doing this.
+However, uploading these files to Weblate is not permitted.
 
 .. seealso::
 
