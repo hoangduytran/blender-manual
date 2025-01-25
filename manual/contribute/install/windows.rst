@@ -51,36 +51,35 @@ In this guide, we will use the official Git client, though any Git client will d
 Setting up the Build Environment
 ================================
 
-.. tip::
-
-   It is recommended to setup and activate a virtual Python environment where dependencies will be installed::
-
-      python3 -m venv .venv
-      .venv/Scripts/activate
-
-   Repeat the ``.venv/Scripts/activate`` command to re-activate the virtual environment,
-   whenever you open a new terminal to build the documentation.
-
-
-- Open a Command Prompt. (Run as Administrator)
+- Open a Terminal window.
 - Enter the ``blender-manual`` folder which was just added by ``git clone``::
 
      cd C:\blender-manual
 
-- Inside that folder is a file called ``requirements.txt`` which contains a list of all the dependencies we need.
-  Install all the dependencies using Python's ``pip`` command::
+- Install dependencies::
 
-     pip install -r requirements.txt
+     make setup
 
 - If all goes well, you should see the following message when it is finished::
 
      Successfully installed Jinja2 MarkupSafe Pygments Sphinx docutils sphinx-rtd-theme Cleaning up...
 
-During the setup, some warnings may be shown, but do not worry about them.
+During setup, some warnings may be shown, but do not worry about them.
 However, if any errors occur, they may cause some problems.
 
 .. note::
 
-   Every now and then you may want to make sure your dependencies are up to date using::
+   Every now and then you need to re-run this command, to make sure dependencies are up to date.
 
-      pip install -r requirements.txt --upgrade
+.. tip::
+
+   ``make setup`` automatically creates a virtual environment using these commands::
+
+      python -m venv .venv
+      .venv/Scripts/pip install -r requirements.txt
+
+   This avoids interfering with the system Python installation, following `PEP 668 <https://peps.python.org/pep-0668/>`__
+
+   The Sphinx command is available at::
+
+      .venv/Scripts/sphinx-build

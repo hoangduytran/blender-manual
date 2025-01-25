@@ -7,6 +7,7 @@ Custom Targets
 
 Convenience targets provided for building docs.
 
+- setup                to install Sphinx in a virtual environment.
 - html (default)       to build HTML documentation.
 - livehtml             to auto build HTML on file changes on host on localhost.
 - epubpdf              to convert an epub file to PDF.
@@ -47,10 +48,16 @@ OS:=$(shell uname -s)
 # End System Vars
 # ---------------
 
+# Use virtual environment if it exists.
+SPHINX_BIN_PATH := .venv/bin/
+ifeq (,$(wildcard $(SPHINX_BIN_PATH)))
+	SPHINX_BIN_PATH :=
+endif
+
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXBUILD     ?= sphinx-build
-SPHINXAUTOBUILD ?= sphinx-autobuild
+SPHINXBUILD     ?= $(SPHINX_BIN_PATH)sphinx-build
+SPHINXAUTOBUILD ?= $(SPHINX_BIN_PATH)sphinx-autobuild
 SOURCEDIR        = ./manual
 BUILDDIR        ?= build
 BF_LANG         ?= en
@@ -92,6 +99,10 @@ endif
 
 # End command checking
 # --------------------
+
+setup:
+	python3 -m venv .venv
+	.venv/bin/python3 -m pip install -r requirements.txt --upgrade
 
 html: .SPHINXBUILD_EXISTS
 	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)

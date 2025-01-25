@@ -48,31 +48,28 @@ The repository will now be downloaded which may take a few minutes depending on 
 Setting up the Build Environment
 ================================
 
-.. tip::
-
-   It is recommended to setup and activate a virtual Python environment where dependencies will be installed::
-
-      python3 -m venv .venv
-      source .venv/bin/activate
-
-   Repeat the ``source .venv/bin/activate`` command to re-activate the virtual environment,
-   whenever you open a new terminal to build the documentation.
-
-   This step may be required on some distributions that enforce `PEP 668 <https://peps.python.org/pep-0668/>`__.
-
-
 - Open a Terminal window.
 - Enter the ``blender-manual`` folder which was just added by ``git clone``::
 
      cd ~/blender-manual
 
-- Inside that folder is a file called ``requirements.txt`` which contains a list of all the dependencies we need.
-  To install these dependencies, we can use the ``pip3`` command::
+- Install dependencies::
 
-     pip3 install -r requirements.txt
+     make setup
 
 .. note::
 
-   Every now and then you may want to make sure your dependencies are up to date using::
+   Every now and then you need to re-run this command, to make sure dependencies are up to date.
 
-      pip3 install -r requirements.txt --upgrade
+.. tip::
+
+   ``make setup`` automatically creates a virtual environment using these commands::
+
+      python3 -m venv .venv
+      .venv/bin/pip install -r requirements.txt
+
+   This avoids interfering with the system Python installation, following `PEP 668 <https://peps.python.org/pep-0668/>`__
+
+   The Sphinx command is available at::
+
+      .venv/bin/sphinx-build

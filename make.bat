@@ -2,8 +2,16 @@
 
 REM Command file for Sphinx documentation
 
+REM Use virtual environment if it exists.
+set SPHINX_BIN_PATH=.venv\Scripts\
+if not exist "%SPHINX_BIN_PATH%" (
+  set SPHINX_BIN_PATH=
+)
 if "%SPHINXBUILD%" == "" (
-	set SPHINXBUILD=sphinx-build
+	set SPHINXBUILD=%SPHINX_BIN_PATH%sphinx-build
+)
+if "%SPHINXAUTOBUILD%" == "" (
+	set SPHINXAUTOBUILD=%SPHINX_BIN_PATH%sphinx-autobuild
 )
 set SOURCEDIR=.\manual
 set BUILDDIR=build
@@ -19,17 +27,19 @@ goto sphinx_ok
 
 set SPHINXBUILD=python -m sphinx.__init__
 %SPHINXBUILD% 2> nul
-if errorlevel 9009 (
-	echo.
-	echo The 'sphinx-build' command was not found. Make sure you have Sphinx
-	echo installed, then set the SPHINXBUILD environment variable to point
-	echo to the full path of the 'sphinx-build' executable. Alternatively you
-	echo may add the Sphinx directory to PATH.
-	echo.
-	echo If you don't have Sphinx installed, grab it from
-	echo http://sphinx-doc.org/
-	rem Exit with errorlevel 1
-	exit /b 1
+if not "%1" == "setup" (
+	if errorlevel 9009 (
+		echo.
+		echo The 'sphinx-build' command was not found. Make sure you have Sphinx
+		echo installed, then set the SPHINXBUILD environment variable to point
+		echo to the full path of the 'sphinx-build' executable. Alternatively you
+		echo may add the Sphinx directory to PATH.
+		echo.
+		echo If you don't have Sphinx installed, grab it from
+		echo http://sphinx-doc.org/
+		rem Exit with errorlevel 1
+		exit /b 1
+	)
 )
 
 :sphinx_ok
@@ -71,9 +81,15 @@ if "%1" == "help" (
 	goto EOF
 )
 
+if "%1" == "setup" (
+	python -m venv ".venv"
+	".venv/Scripts/pip" install -r "requirements.txt" --upgrade
+	goto EOF
+)
+
 if "%1" == "livehtml" (
 	:livehtml
-	sphinx-autobuild --open-browser --delay 0 "%SOURCEDIR%" "%BUILDDIR%\html" %SPHINXOPTS% %O%
+	%SPHINXAUTOBUILD% --open-browser --delay 0 "%SOURCEDIR%" "%BUILDDIR%\html" %SPHINXOPTS% %O%
 	if errorlevel 1 exit /b 1
 	goto EOF
 )
