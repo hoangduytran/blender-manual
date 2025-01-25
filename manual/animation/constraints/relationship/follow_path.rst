@@ -87,13 +87,13 @@ Offset
 
 Forward Axis
    The axis of the object that has to be aligned with the forward direction of the path
-   (i.e. tangent to the curve at the owner's position).
+   (i.e. tangent to the curve at the owner's position). It is affected if Follow Curve option activated.
 
 Up Axis
    The axis of the object that has to be aligned (as much as possible) with the world Z axis.
    In fact, with this option activated, the behavior of the owner shares some properties with
    the one caused by a :doc:`Locked Track constraint </animation/constraints/tracking/locked_track>`,
-   with the path as "axle", and the world Z axis as "magnet".
+   with the path as "axle", and the world Z axis as "magnet". It is affected if Follow Curve option activated.
 
 Fixed Position
    Object will stay locked to a single point somewhere along the length of the curve regardless of time.
