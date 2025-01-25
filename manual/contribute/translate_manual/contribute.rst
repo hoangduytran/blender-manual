@@ -163,4 +163,4 @@ However, uploading these files to Weblate is not permitted.
 
 .. seealso::
 
-   :doc:`/contribute/translations/add_language`
+   :doc:`/contribute/translate_manual/add_language`

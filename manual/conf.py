@@ -79,7 +79,7 @@ templates_path = ["../build_files/templates"]
 # that should be available in every file.
 rst_epilog = """
 .. |BLENDER_VERSION| replace:: {:s}
-.. |TODO| replace:: The documentation here is incomplete, you can help by :doc:`contributing </contribute/index>`.
+.. |TODO| replace:: The documentation here is incomplete, you can help by :doc:`contributing </contribute/manual/index>`.
 """.format(blender_version)
 
 # Quit warnings about missing download file

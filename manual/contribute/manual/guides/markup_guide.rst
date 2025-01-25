@@ -190,7 +190,7 @@ is ``47448bc1-0cc0-4bd1-b6c8-9115d8f7e08c``.
 
 To get a new video uploaded, contact
 a `Documentation Project Administrator <https://projects.blender.org/blender/documentation>`__ or
-include the uploaded video in your :doc:`Pull Request </contribute/pull_requests>` description.
+include the uploaded video in your :doc:`Pull Request </contribute/manual/getting_started/pull_requests>` description.
 
 
 Usage Guides

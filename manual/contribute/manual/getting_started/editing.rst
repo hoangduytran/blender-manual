@@ -27,8 +27,8 @@ Writing
 You can now edit the documentation files, which are the ``.rst``
 files inside the ``manual`` folder using a text editor of your choice.
 
-Be sure to check the :doc:`/contribute/guides/writing_guide`
-for conventions and :doc:`/contribute/guides/markup_guide`
+Be sure to check the :doc:`/contribute/manual/guides/writing_guide`
+for conventions and :doc:`/contribute/manual/guides/markup_guide`
 to learn how to write in the reStructuredText markup language.
 
 Happy writing!
@@ -73,7 +73,7 @@ See the `module pages <https://projects.blender.org/blender/blender/wiki>`__ for
 Preview
 =======
 
-To view your changes, build the manual :doc:`as instructed </contribute/build>`.
+To view your changes, build the manual :doc:`as instructed </contribute/manual/getting_started/build>`.
 Keep in mind that you can also build only the chapter you just edited to view it quickly.
 Open the generated ``.html`` files inside the ``build/html`` folder using your web browser,
 or refresh the page if you have it open already.

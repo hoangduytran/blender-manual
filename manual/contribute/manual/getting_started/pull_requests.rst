@@ -15,14 +15,14 @@ And having your work reviewed also generally keeps you on your toes.
    Writers who have been given commit access can commit to the
    main repository without needing to fork the repository.
 
-   See :doc:`/contribute/guides/commit_guide` if this applies to you.
+   See :doc:`/contribute/manual/guides/commit_guide` if this applies to you.
 
 
 One Time Setup
 ==============
 
 This assumes you have the Blender manual repository already checked out on your computer,
-following the :doc:`install instructions </contribute/install/index>`.
+following the :doc:`install instructions </contribute/manual/getting_started/install/index>`.
 
 
 Fork

@@ -278,3 +278,5 @@ RedirectMatch "^/manual/{lang}/{version}/grease_pencil/selecting.html" "/manual/
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/object.html" "/manual/{lang}/{version}/grease_pencil/properties/object.html"
 
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/cutter.html" "/manual/{lang}/{version}/grease_pencil/modes/draw/tools/trim.html"
+
+RedirectMatch "^/manual/{lang}/{version}/contribute/translations/contribute/" "/manual/{lang}/{version}/contribute/translate_manual//$1"
