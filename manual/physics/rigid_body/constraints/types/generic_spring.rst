@@ -23,7 +23,8 @@ leading to strange behavior. If your springs are acting weird, check the damping
 Options
 =======
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_rigid-body_constraints_types_generic-spring_panel.png
       :align: right
 

@@ -41,7 +41,8 @@ Source
    :Type:      Brush
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Source`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_dynamic-paint_brush_source-panel.png
 
       Paint source panel.
@@ -162,7 +163,8 @@ Velocity
    :Type:      Brush
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Velocity`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_dynamic-paint_brush_velocity-panel.png
 
       Velocity panel.
@@ -200,7 +202,8 @@ Waves
    :Type:      Brush
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Waves`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_dynamic-paint_brush_waves-panel.png
 
       Brush Waves panel.

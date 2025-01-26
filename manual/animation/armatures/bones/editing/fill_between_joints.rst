@@ -19,7 +19,7 @@ If you have one root and one tip selected, the new bone:
 - Will have the tip placed on the selected root.
 - Will be parented and connected to the bone owning the selected tip.
 
-.. TODO2.8 Update images (includes outliner)
+.. todo:: Update images (includes outliner)
 
 .. list-table:: Fill between a tip and a root.
 
@@ -37,7 +37,7 @@ If you have two tips selected, the new bone:
 - Will have the tip placed on the other selected tip.
 - Will be parented and connected to the bone owning the tip used as the new bone's root.
 
-.. TODO2.8 Update images (includes outliner)
+.. todo:: Update images (includes outliner)
 
 .. list-table:: Fill between tips.
 
@@ -61,7 +61,7 @@ When clicking :kbd:`F`, similar to the previous case, you will see a new bone:
 If you try to move the new bone, Blender will update the interface and you will see
 that the new bone's root moves to the tip of the parent bone.
 
-.. TODO2.8 Update images (includes outliner)
+.. todo:: Update images (includes outliner)
 
 .. list-table:: Fill between roots.
 
@@ -76,7 +76,7 @@ that the new bone's root moves to the tip of the parent bone.
 Clicking :kbd:`F` with only one bone joint selected will create a bone from the selected
 joint to the 3D cursor position, and it will not parent it to any bone in the armature.
 
-.. TODO2.8 Update images (includes outliner)
+.. todo:: Update images (includes outliner)
 
 .. list-table:: Fill with only one bone joint selected.
 

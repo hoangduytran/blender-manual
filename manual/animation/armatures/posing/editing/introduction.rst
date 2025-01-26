@@ -3,7 +3,8 @@
 Introduction
 ************
 
-.. TODO2.8
+.. todo:: Update image
+
    .. figure:: /images/animation_armatures_posing_editing_introduction_tools.png
       :align: right
 
@@ -30,7 +31,7 @@ the armature, which is its state as defined in *Edit Mode*. This means that in
 rest position, in *Pose Mode*, each bone has a scale of 1.0, and null rotation
 and position (as you can see it in the *Transform* panel, in the 3D Viewport's Sidebar).
 
-.. TODO2.8 Maybe update the images (color & style)
+.. todo:: Maybe update the images (color & style)
 
 .. figure:: /images/animation_armatures_posing_editing_introduction_local-rotation.png
 

@@ -20,7 +20,8 @@ a value smaller than 0.5 acceleration in positive axis direction (like +Z).
 Options
 =======
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_forces_force-fields_types_texture_panel.png
 
       UI for a Texture force field.

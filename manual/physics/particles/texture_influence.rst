@@ -11,7 +11,8 @@ Texture Influence
 
    :Panel:     :menuselection:`Texture --> Influence`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_texture-influence_panel.png
       :align: right
 

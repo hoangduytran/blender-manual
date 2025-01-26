@@ -40,7 +40,7 @@ Under *Soft Body Cache* change the values of your start and end frames. In this 
 Now, to test if everything is working, you can take a cache step of 5 or 10,
 but for the final animation it is better to reduce it to 1, to cache everything.
 
-.. TODO2.8:
+.. todo:: Update image
    When finished, your physics panel should look like this:
 
    .. figure:: /images/physics_soft-body_examples_physics-settings.png

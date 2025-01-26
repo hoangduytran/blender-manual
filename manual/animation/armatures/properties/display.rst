@@ -8,7 +8,8 @@ Viewport Display
    :Mode:      All Modes
    :Panel:     :menuselection:`Armature --> Viewport Display`
 
-.. TODO2.8
+.. todo:: Update image
+
    .. figure:: /images/animation_armatures_properties_display_panel.png
 
       The Display panel.

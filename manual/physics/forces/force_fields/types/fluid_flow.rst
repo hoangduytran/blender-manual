@@ -18,7 +18,8 @@ For example fire sparkles can realistically flow along the air turbulence near t
 Options
 =======
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_forces_force-fields_types_fluid-flow_panel.png
 
       UI for a Fluid Flow force field.

@@ -57,7 +57,8 @@ They are called *Halos* because you can see them, but they do not have any subst
 Path
 ----
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_emitter_render_path.png
 
       The Visualization panel for Path visualization.

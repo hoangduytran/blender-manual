@@ -12,7 +12,8 @@ the particle data can be cached in memory or stored on a drive.
 
 The *Emitter* particle system uses a unified system for caching and baking (together with Soft Body and Cloth).
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_emitter_cache_settings.png
 
    Particles Cache settings.

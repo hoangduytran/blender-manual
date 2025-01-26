@@ -111,7 +111,8 @@ This example shows you how to animate a cube's location, rotation, and scale.
 
 To test the animation, press :kbd:`Spacebar` to play.
 
-.. TODO2.8
+.. todo:: Update image
+
    .. figure:: /images/animation_keyframes_editing_keyframe-animation-examples.png
       :width: 600px
 

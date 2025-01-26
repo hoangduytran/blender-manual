@@ -41,9 +41,3 @@ Outputs
 
 Vector Output
    The transformed output vector.
-
-
-Examples
-========
-
-Todo <2.8 add.

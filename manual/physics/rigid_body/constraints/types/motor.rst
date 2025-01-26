@@ -22,7 +22,8 @@ special care must be taken to align the axes.
 Without proper alignment, the motor will appear to have no effect
 (because the hinge is preventing the motion of the motor).
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_rigid-body_constraints_types_motor_panel-example.png
 
       *Motor* constraint options.

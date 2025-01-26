@@ -7,7 +7,8 @@ Dynamics
 
    :Panel:     :menuselection:`Physics --> Rigid Body --> Dynamics`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_rigid-body_properties_dynamics_panel.png
 
       Rigid Body Dynamics panel.

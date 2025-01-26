@@ -89,7 +89,7 @@ it will be on the plane parallel to the view and passing through the 3D cursor.
 
 The position of the root and the parenting of the new bone depends on the active element:
 
-.. TODO2.8 Update images (includes outliner)
+.. todo:: Update images (includes outliner)
 
 .. figure:: /images/animation_armatures_bones_editing_extrude_mouse-clicks-1.png
    :width: 300px
@@ -102,7 +102,7 @@ If the active element is a *bone*:
 - The new bone is parented and connected to the active bone
   (check the Outliner in Fig. :ref:`fig-rig-bone-active-tip`).
 
-.. TODO2.8 Update images (includes outliner)
+.. todo:: Update images (includes outliner)
 
 .. _fig-rig-bone-active-tip:
 
@@ -117,8 +117,8 @@ If the active element is a *tip*:
 - The new bone is parented and connected to the bone owning the active tip
   (check the Outliner in Fig. :ref:`fig-rig-bone-active-tip`).
 
-.. TODO2.8 This doesn't seem to work as documented:
-.. TODO2.8 Update images (includes outliner)
+.. todo:: This doesn't seem to work as documented:
+.. todo:: Update images (includes outliner)
 
 .. _fig-rig-bone-disconnected-tip:
 
@@ -135,7 +135,7 @@ If the active element is a *disconnected root*:
 
 And hence the new bone will **not** be connected to any bone.
 
-.. TODO2.8 Update images (includes outliner)
+.. todo:: Update images (includes outliner)
 
 .. _fig-rig-bone-connected-root:
 

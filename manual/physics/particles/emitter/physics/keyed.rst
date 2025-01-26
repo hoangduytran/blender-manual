@@ -21,7 +21,8 @@ To setup *Keyed* particles you need at least two particle systems in the *Keys* 
 Options
 =======
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_emitter_physics_keyed_panel.png
       :align: right
 

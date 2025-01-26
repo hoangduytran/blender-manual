@@ -54,7 +54,8 @@ Inverse Kinematics
    :Mode:      All Modes
    :Panel:     :menuselection:`Armature --> Inverse Kinematics`
 
-.. TODO2.8
+.. todo:: Update image
+
    .. figure:: /images/animation_armatures_posing_bone-constraints_inverse-kinematics_introduction_panel.png
 
       The Inverse Kinematics panel.

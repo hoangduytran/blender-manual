@@ -15,7 +15,8 @@ A *Drag* force field resists particle motion by slowing it down.
 Options
 =======
 
-.. TODO2.8
+.. todo:: Update image
+
    .. figure:: /images/physics_forces_force-fields_types_drag_panel.png
 
       UI for a Drag force field.

@@ -10,7 +10,8 @@ Boids
    :Panel:     :menuselection:`Particle System --> Physics`
    :Type:      Boids
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_emitter_physics_boids_panel.png
 
       Boid Physics settings.

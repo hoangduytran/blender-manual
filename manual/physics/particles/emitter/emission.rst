@@ -15,7 +15,8 @@ but you may also render this kind of particles as objects
 (depending on the particle system's render settings,
 see :doc:`Visualization </physics/particles/emitter/render>`).
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_emitter_emission_settings.png
 
       Particle Emission settings.

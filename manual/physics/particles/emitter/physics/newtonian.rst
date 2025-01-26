@@ -14,7 +14,8 @@ and move according to external forces.
 The response to environment and to forces is computed differently,
 according to the given integrator chosen by the animator.
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_emitter_physics_newtonian_panel.png
 
       Newtonian Physics settings.

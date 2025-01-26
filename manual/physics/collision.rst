@@ -89,7 +89,8 @@ on a shared layer (particles, soft bodies, and cloth).
    The image to the right shows the *Modifiers* panel for the Character mesh object
    (not the cloth object).
 
-   .. TODO2.8:
+   .. todo:: Update image
+
       .. figure:: /images/physics_collision_stack.png
 
          Collision stack.

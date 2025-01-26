@@ -7,7 +7,8 @@ Emission
 
    :Panel:     :menuselection:`Particle System --> Emission`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_hair_emission_settings.png
 
       Hair particle system settings.

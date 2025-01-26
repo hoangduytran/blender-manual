@@ -8,7 +8,8 @@ Transform
    :Mode:      Edit Mode and Pose Mode
    :Panel:     :menuselection:`Bone --> Transform`
 
-.. TODO2.8
+.. todo:: Update image
+
    .. list-table::
 
       * - .. figure:: /images/animation_armatures_bones_properties_transform_panel-edit.png

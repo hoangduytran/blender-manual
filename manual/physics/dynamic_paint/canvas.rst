@@ -64,7 +64,8 @@ Surface
    :Type:      Canvas
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Surface`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_dynamic-paint_canvas_advanced-panel.png
 
       Canvas advanced panel.
@@ -202,7 +203,8 @@ Cache
    :Type:      Canvas
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Cache`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_dynamic-paint_canvas_cache-panel.png
 
       Canvas cache panel.
@@ -219,7 +221,8 @@ Effects
    :Type:      Canvas
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Effects`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_dynamic-paint_canvas_effects-panel.png
 
       Effects panel.
@@ -266,7 +269,8 @@ Output
    :Type:      Canvas
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Output`
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_dynamic-paint_canvas_output-panel.png
 
       Canvas Output panel.

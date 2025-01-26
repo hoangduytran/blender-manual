@@ -70,7 +70,8 @@ The process for working with standard particles is:
 Creating a Particle System
 --------------------------
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_particle-system-panel_create-new.png
 
       Adding a particle system.
@@ -88,7 +89,8 @@ Types of Particle Systems
 
 .. _fig-particle-intro-system-type:
 
-.. TODO2.8:
+.. todo:: Update image
+
    .. figure:: /images/physics_particles_particle-system-panel_select-type.png
 
       Particle System Types.
