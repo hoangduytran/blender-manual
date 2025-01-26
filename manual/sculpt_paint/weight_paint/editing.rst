@@ -244,80 +244,86 @@ Gain
 Smooth
 ======
 
-.. tip::
+The *Smooth* operator blends the weights of selected vertices based on the average of adjacent vertices,
+creating smoother transitions in weight painting. This operator is useful for refining weight distributions,
+improving deformation in rigging, and eliminating abrupt transitions between vertex weights.
 
-   The Smooth tool only works when "Vertex selection masking for painting" is enabled.
-   Otherwise the tool button is grayed out.
+.. note::
 
-Blends the weights of selected vertices with adjacent unselected vertices.
-This tool only works in vertex select mode.
+   This operator requires vertex selection to be enabled; otherwise, it will be unavailable.
 
-.. figure:: /images/sculpt-paint_weight-paint_editing_smooth-example-1.png
-
-To understand what the tool really does, let us take a look at a simple example.
-The selected vertex is connected to four adjacent vertices
-(marked with a gray circle in the image). All adjacent vertices are unselected.
-Now the tool calculates the average weight of all connected **and** unselected vertices.
-In the example this is:
-
-:math:`(1 + 0 + 0 + 0) / 4 = 0.25`
-
-This value is multiplied by the factor given in the Operator options (see below).
-
-- If the factor is 0.0 then actually nothing happens at all and the vertex just keeps its value.
-- If the factor is 1.0 then the calculated average weight is taken (0.25 here).
-- Dragging the factor from 0 to 1 gradually changes from the old value to the calculated average.
-
-.. figure:: /images/sculpt-paint_weight-paint_editing_smooth-example-2.png
-
-Now let us see what happens when we select all
-but one of the neighbors of the selected vertex as well.
-Again all connected and unselected vertices are marked with a gray circle.
-When we call the Smooth tool now and set the Factor to 1.0,
-then we see different results for each of the selected vertices:
-
-- The top-most and bottom-most selected vertices:
-
-  are surrounded by three unselected vertices, with an average weight of :math:`(1 + 0 + 0) / 3 = 0.333`
-  So their color has changed to light green.
-
-- The middle vertex:
-
-  is connected to one unselected vertex with ``weight = 1``.
-  So the average weight is 1.0 in this case, thus the selected vertex has changed to red.
-
-- The right vertex:
-
-  is surrounded by three unselected vertices with average weight = :math:`(0 + 0 + 0) / 3 = 0.0`
-  So the average weight is 0, thus the selected vertex has not changed at all
-  (it was already blue before Smooth was applied).
-
-.. figure:: /images/sculpt-paint_weight-paint_editing_smooth-example-3.png
-
-Finally let us look at a practical example.
-The middle edge loop has been selected
-and it will be used for blending the left side to the right side of the area.
-
-- All selected vertices have two unselected adjacent vertices.
-- The average weight of the unselected vertices is :math:`(1 + 0) / 2 = 0.5`
-- Thus when the *Factor* is set to 1.0 then the edge loop turns to
-  green and finally does blend the cold side (right) to the hot side (left).
+Subset
+   Restrict the tool to a subset.
+   See above :ref:`The Subset Option <sculpt-paint_weight-paint_editing_subset>` about how subsets are defined.
 
 Factor
-   The effective amount of blending.
-   When Factor is set to 0.0 then the `Smooth`_ tool does not do anything.
-   For Factor > 0 the weights of the affected vertices gradually shift from their original value
-   towards the average weight of all connected **and** unselected vertices (see examples above).
-Iterations
-   Number of times to repeat the smoothing operation.
-Expand/Contract
-   Positive values expand the selection to neighboring vertices while contract limits to the selection.
-Source
-   The vertices to mix with.
+   Controls the amount of blending toward the average weight of **connected** vertices.
 
-   :All: Smoothing will smooth both selected and deselected vertices.
-   :Only Selected: Smoothing will only smooth with selected vertices.
-   :Only Deselected: Smoothing will only smooth with deselected vertices.
+   - A *Factor* of 0.0 preserves the original weights.
+   - A *Factor* of 1.0 fully adopts the calculated average weight.
+   - Values between 0.0 and 1.0 blend the weights proportionally.
+
+Iterations
+   Sets how many times the smoothing operation is repeated.
+   Higher values produce smoother results but may introduce unwanted artifacts in fine details.
+
+Expand/Contract
+   Adjusts the smoothing influence by expanding or contracting the selection:
+
+   - Positive values expand the selection to include neighboring vertices.
+   - Negative values contract the selection to focus on a smaller subset of vertices.
+
+
+Examples
+--------
+
+.. rubric:: Example: Single Selected Vertex
+
+Consider a single selected vertex connected to four unselected vertices.
+The unselected vertices have weights: 1, 0, 0, and 0.
+The average weight of the unselected vertices is: :math:`(1 + 0 + 0 + 0) / 4 = 0.25`
+
+If the *Factor* is:
+
+- 0.0: The selected vertex retains its original weight.
+- 1.0: The selected vertex adopts the calculated average weight (0.25).
+- Between 0 and 1: The vertex's weight gradually shifts toward 0.25, blending proportionally.
+
+.. figure:: /images/sculpt-paint_weight-paint_editing_smooth-example-1.webp
+
+   Single vertex select with a *Factor* of 1.0.
+
+.. rubric:: Example: Multiple Selected Vertices
+
+When multiple vertices are selected,
+the *Smooth* operator applies calculations to each vertex based on its adjacent unselected vertices.
+
+For example:
+
+- A vertex connected to three unselected vertices with weights :math:`(1, 0, 0)` averages to :math:`0.333`.
+- A vertex connected to one unselected vertex with weight 1 averages to :math:`1.0`.
+- A vertex connected only to unselected vertices with weights :math:`(0, 0, 0)`
+  remains unchanged with an average weight of :math:`0.0`.
+
+These blended results depend on the *Factor* value.
+
+.. figure:: /images/sculpt-paint_weight-paint_editing_smooth-example-2.webp
+
+   Three selected vertices with a *Factor* of 1.0.
+
+.. rubric:: Example: Edge Loop Smoothing
+
+In a practical use case, selecting a middle edge loop allows
+the operator to blend weights between adjacent areas. For example:
+
+- The edge loop has two unselected adjacent vertices on either side, with weights :math:`1` and :math:`0`.
+- The average weight is :math:`(1 + 0) / 2 = 0.5`.
+- Applying the *Smooth* operator with *Factor* set to 1.0 will turn the edge loop green,
+  creating a smooth blend between the "hot" (left) and "cold" (right) sides.
+
+.. figure:: /images/sculpt-paint_weight-paint_editing_smooth-example-3.webp
+
+   Center edge loop of vertices selected with a *Factor* of 1.0.
 
 
 Transfer Weights
