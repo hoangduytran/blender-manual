@@ -61,7 +61,7 @@ This panel helps you tweak the performance of the Compositor.
 
 .. include:: /render/eevee/render_settings/performance.rst
    :start-after: .. --- copy below this line ---
-   :end-before: .. --- end copy above this line ---
+   :end-before: .. --- end copy above this line - compositor sidebar ---
 
 .. _bpy.types.CompositorNodeTree.use_viewer_border:
 

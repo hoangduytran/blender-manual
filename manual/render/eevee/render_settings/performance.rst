@@ -47,13 +47,15 @@ Pixel Size
 Compositor
 ==========
 
-.. Editor's Note: This page gets copied into:
+.. Editor's Note: This section gets copied into:
 .. - :doc:`</render/cycles/render_settings/performance>`
 .. - :doc:`</compositing/sidebar>`
-.. These bpy types can not be added below the copy line as it causes build warnings.
+.. These bpy types cannot be added below the copy line as it causes build warnings.
 
 .. _bpy.types.RenderSettings.compositor_device:
 .. _bpy.types.RenderSettings.compositor_precision:
+.. _bpy.types.RenderSettings.compositor_denoise_preview_quality:
+.. _bpy.types.RenderSettings.compositor_denoise_final_quality:
 
 .. --- copy below this line ---
 
@@ -69,4 +71,33 @@ Precision
    :Auto: Use full precision for final renders, half precision otherwise.
    :Full: Use full precision for final renders and viewport.
 
-.. --- end copy above this line ---
+.. --- end copy above this line - compositor sidebar ---
+
+Denoise Nodes
+^^^^^^^^^^^^^
+
+Preview Quality
+   The quality used by :doc:`Denoise nodes </compositing/types/filter/denoise>` during viewport
+   and interactive compositing of a render if their quality is set to *Follow Scene*.
+
+   :High:
+      Produces the highest quality output at the cost of long processing times.
+   :Balanced:
+      Balanced between performance and quality, typically processing in half the time as *High*,
+      while retaining most of the quality.
+   :Fast:
+      Produces an output quickly at a noticeable cost of quality.
+
+Final Quality
+   The quality used by :doc:`Denoise nodes </compositing/types/filter/denoise>` during the final
+   render if their quality is set to *Follow Scene*.
+
+   :High:
+      Produces the highest quality output at the cost of long processing times.
+   :Balanced:
+      Balanced between performance and quality, typically processing in half the time as *High*,
+      while retaining most of the quality.
+   :Fast:
+      Produces an output quickly at a noticeable cost of quality.
+
+.. --- end copy above this line - compositor performance ---

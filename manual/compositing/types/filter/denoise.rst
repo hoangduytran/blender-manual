@@ -46,6 +46,16 @@ Prefilter
    :Accurate:
       Prefilters the input passes before denoising to reduce noise. This option usually produces
       more detailed results than *Fast* with increased processing time.
+Quality
+   :Follow Scene:
+      Use the :ref:`scene's quality setting <bpy.types.RenderSettings.compositor_denoise_preview_quality>`.
+   :High:
+      Produces the highest quality output at the cost of long processing times.
+   :Balanced:
+      Balanced between performance and quality, typically processing in half the time as *High*,
+      while retaining most of the quality.
+   :Fast:
+      Produces an output quickly at a noticeable cost of quality.
 HDR
    Preserve colors outside the 0 to 1 range.
 
