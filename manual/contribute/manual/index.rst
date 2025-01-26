@@ -29,8 +29,10 @@ Where to help
    :hidden:
 
    todo_list.rst
+   new_features.rst
 
 - :doc:`todo_list`
+- :doc:`new_features`
 
 
 .. _contribute-contact:
