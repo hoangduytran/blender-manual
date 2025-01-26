@@ -36,7 +36,7 @@ Show & Hide
 Some very common hotkey operators to control the visibility based on face sets.
 These are not part of any menu and have to be used via the shortcuts.
 More visibility operators can be found in the :doc:`Face Sets Menu </sculpt_paint/sculpting/editing/face_sets>`
-and the Pie Menu shortcut :kbd:`W`. (Since visibility is often toggled via face sets.)
+and the Pie Menu shortcut :kbd:`Alt-W`. (Since visibility is often toggled via face sets.)
 
 Box Hide
    Draw a box to hide faces of a mesh.
