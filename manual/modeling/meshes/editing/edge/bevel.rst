@@ -23,7 +23,7 @@ Most edges are intentionally beveled for mechanical and practical reasons.
 Bevels are also useful for giving realism to non-organic models. In the real world,
 the blunt edges on objects catch the light and change the shading around the edges.
 This gives a solid, realistic look,
-as opposed to un-beveled objects which can look too perfect.
+as opposed to unbeveled objects which can look too perfect.
 
 .. figure:: /images/modeling_meshes_editing_edge_bevel_cubes.jpg
 
@@ -148,7 +148,7 @@ Clamp Overlap :kbd:`C`
    overlapping intersections with other geometry.
 
 Loop Slide
-   If there are un-beveled edges along with beveled edges into a vertex,
+   If there are unbeveled edges along with beveled edges into a vertex,
    the bevel tries to slide along those edges when possible.
    Turning the option off can lead to more even bevel widths.
 

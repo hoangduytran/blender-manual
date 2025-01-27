@@ -65,11 +65,11 @@ Subdivide
    (using the default Catmull-Clark algorithm).
 
 Simple
-   Creates a level of subdivision with un-smoothed base mesh edges
-   (using a simple interpolation by subdividing edges without any smoothing).
+   Creates a level of subdivision with unsmoothed base mesh edges (using a simple interpolation by subdividing edges
+   without any smoothing).
 Linear
-   Creates a completely un-smoothed level of subdivision
-   (using linear interpolation of the current sculpted displacement).
+   Creates a completely unsmoothed level of subdivision (using linear interpolation of the current sculpted
+   displacement).
 
 .. _bpy.ops.object.multires_unsubdivide:
 

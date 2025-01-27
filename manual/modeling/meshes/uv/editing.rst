@@ -317,7 +317,7 @@ Invert Pins
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Invert Pins`
 
-Pin all un-pinned selected UVs and un-pin all currently selected pinned UVs.
+Pin all unpinned selected UVs and unpin all currently selected pinned UVs.
 
 
 Mark/Clear Seams

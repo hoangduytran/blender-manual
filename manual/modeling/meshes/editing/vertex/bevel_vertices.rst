@@ -101,7 +101,7 @@ Clamp Overlap :kbd:`C`
    Limits the width of each beveled edge so that vertices do not overlap with other geometry.
 
 Loop Slide
-   If there are un-beveled edges along with beveled edges into a vertex,
+   If there are unbeveled edges along with beveled edges into a vertex,
    the bevel tries to slide along those edges when possible.
    Turning the option off can lead to more even bevel widths.
 
