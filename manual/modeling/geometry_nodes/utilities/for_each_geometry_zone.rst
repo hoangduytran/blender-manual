@@ -18,7 +18,7 @@ The zone is ideal for tasks that generate large or complex geometry for every el
 For example, generating a unique tree for every input curve, or a unique building on every input face.
 
 The zone makes less sense for processing small amounts of geometry. In that case (for example each of a character's
-hairs separately) it will likely **always be slower** than working on fewer larger geoemtries. The additional
+hairs separately) it will likely **always be slower** than working on fewer larger geometries. The additional
 flexibility from processing each element separately comes at the cost that Blender can't optimize the operation
 as well. For node groups that need to handle lots of geometry elements, it's recommended to design the node setup
 so that iteration over tiny sub-geometries is not required.

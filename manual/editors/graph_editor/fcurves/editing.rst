@@ -664,7 +664,7 @@ Filter Width
 
 .. figure:: /images/editors_graph-editor_gaussian_smooth.jpg
 
-   F-Curve after applying the Gaussian Smooth with the original curve overlayed.
+   F-Curve after applying the Gaussian Smooth with the original curve overlaid.
 
 
 .. _bpy.ops.graph.smooth:

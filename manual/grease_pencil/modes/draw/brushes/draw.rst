@@ -66,7 +66,7 @@ Spacing
    the brush size.
 
    A lower spacing is useful when doing fast movements. Normally this would generate
-   less samples and lead to a larger spacing between points. When the spacing percentenage
+   less samples and lead to a larger spacing between points. When the spacing percentage
    is lowered, more points are generated to ensure the minimum spacing.
 
    When drawing slowly, the point density is usually already high. In this case the 

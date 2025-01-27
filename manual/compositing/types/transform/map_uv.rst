@@ -48,7 +48,7 @@ Outputs
 =======
 
 Image
-   The distorted texture, which can then be overlayed on the render using e.g. the
+   The distorted texture, which can then be overlaid on the render using e.g. the
    :doc:`/compositing/types/color/mix/alpha_over`.
 
 
@@ -69,7 +69,7 @@ and combine the result with the rendered image using the Alpha Over Node.
 In the next example, we do the same thing with the Blender logo, using a cryptomatte
 to ensure it only gets applied to one of the cubes.
 
-It's here that the limitations of the Map UV node become apparent: the overlayed image is
+It's here that the limitations of the Map UV node become apparent: the overlaid image is
 really just "plastered on" and is not affected by the lighting and shadows in the scene.
 At most, you can cheat a little by making the image translucent like in the previous example.
 
