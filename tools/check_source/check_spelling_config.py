@@ -517,6 +517,7 @@ dict_ignore = {
     "vec",
     "x-axis",
     "y-axis",
+    "yadif",
     "z-axis",
 
     # Acronyms.
@@ -600,6 +601,7 @@ dict_ignore = {
     "koenig",
     "krita",
     "kuleshov",
+    "kutta",
     "kuwahara",
     "lambertian",
     "laplace",
@@ -630,6 +632,7 @@ dict_ignore = {
     "reddit",
     "roosendaal",
     "rossi",
+    "runge",
     "rylan",
     "scribus",
     "skorupa",
@@ -638,6 +641,7 @@ dict_ignore = {
     "stucci",
     "sybren",
     "varjo",
+    "verlet",
     "vegdahl",
     "voronoi",
     "vulkan",
