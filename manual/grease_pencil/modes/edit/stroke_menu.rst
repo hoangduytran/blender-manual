@@ -365,6 +365,19 @@ While this operation does not alter the visual appearance of the stroke,
 but affects behaviors that rely on the point order, such as the :doc:`Build Modifier </grease_pencil/modifiers/generate/build>`.
 
 
+.. _bpy.ops.grease_pencil.set_start_point:
+
+Set Start Point
+===============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Stroke --> Set Start Point`
+
+Set the start point for cyclic strokes, determining the point where the stroke begins and ends when it loops.
+
+
 .. _bpy.ops.grease_pencil.set_uniform_thickness:
 
 Set Uniform Thickness
