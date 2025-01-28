@@ -16,16 +16,15 @@ Options
 
 .. figure:: /images/modeling_modifiers_modify_uv-warp_panel.png
    :align: right
-   :width: 300px
 
-UV Layer
+UV Map
    Which UV map to modify; if not set it defaults to the active rendering layer.
 
 UV Center
    The center point of the UV map to use when applying scale or rotation.
    With (0, 0) at the bottom left and (1, 1) at the top right.
 
-Axis U/V
+Axis U, V
    The axes to use when mapping the 3D coordinates into 2D.
 
 Object From, To
@@ -48,7 +47,7 @@ Offset
    Amount to move the UV map.
 Scale
    Amount to scale the UV map.
-Rotate
+Rotation
    Amount to rotate the UV map.
 
 
