@@ -359,10 +359,10 @@ Switch Direction
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Stroke --> Switch Direction`
 
-The *Switch Direction* operator reverses the direction of the selected Grease Pencil stroke.
-This means the starting point of the stroke becomes the endpoint, and vice versa.
-While this operation does not alter the visual appearance of the stroke,
-but affects behaviors that rely on the point order, such as the :doc:`Build Modifier </grease_pencil/modifiers/generate/build>`.
+The *Switch Direction* operator reverses the direction of the selected Grease Pencil stroke. This means the starting
+point of the stroke becomes the endpoint, and vice versa. While this operation does not alter the visual appearance
+of the stroke, but affects behaviors that rely on the point order, such as the 
+:doc:`Build Modifier </grease_pencil/modifiers/generate/build>`.
 
 
 .. _bpy.ops.grease_pencil.set_start_point:

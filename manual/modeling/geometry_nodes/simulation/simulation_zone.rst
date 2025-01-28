@@ -33,8 +33,8 @@ This also allows sub-frame interpolation for motion blur.
 .. note::
 
    Anonymous attributes are not propagated by the simulation nodes unless they are explicitly stored in the simulation
-   state. This is because detecting which anonymous attributes will be required for the simulation and afterwards would
-   require looking into the future to see what data is necessary.
+   state. This is because detecting which anonymous attributes will be required for the simulation and afterwards
+   would require looking into the future to see what data is necessary.
 
 Clock
 =====

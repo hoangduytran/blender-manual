@@ -36,5 +36,5 @@ Switch Direction
 The *Switch Direction* operator reverses the direction of the selected surface segments.
 The start point of the curve becomes the end point, and vice versa.
 
-Reversing the direction of surface segments flips their "normals".
-Normals determine the "front" and "back" faces of the surface and are essential for proper shading, lighting, and rendering.
+Reversing the direction of surface segments flips their "normals". Normals determine the "front" and "back" faces of
+the surface and are essential for proper shading, lighting, and rendering.
