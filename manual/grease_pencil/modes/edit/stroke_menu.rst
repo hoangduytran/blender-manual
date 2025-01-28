@@ -18,10 +18,12 @@ Subdivide
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Stroke --> Subdivide`
 
-Subdivides the strokes by inserting points between the selected points.
+The *Subdivide* operator adds new control points to selected curve segments by dividing them into smaller sections.
+This is useful for creating smoother transitions, preparing curves for finer adjustments,
+or adding more detail for animation or modeling.
 
 Number of Cuts
-   The number of subdivisions to perform.
+   Specifies the number of divisions for each selected segment; each cut adds one new control point per segment.
 Selected Points
    When enabled, limits the effect to only the selected points within the stroke.
 
@@ -357,8 +359,10 @@ Switch Direction
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Stroke --> Switch Direction`
 
-Reverse the direction of the points in the selected strokes
-(i.e. the start point will become the end one, and vice versa).
+The *Switch Direction* operator reverses the direction of the selected Grease Pencil stroke.
+This means the starting point of the stroke becomes the endpoint, and vice versa.
+While this operation does not alter the visual appearance of the stroke,
+but affects behaviors that rely on the point order, such as the :doc:`Build Modifier </grease_pencil/modifiers/generate/build>`.
 
 
 .. _bpy.ops.grease_pencil.set_uniform_thickness:
