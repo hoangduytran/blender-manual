@@ -32,6 +32,12 @@ Curve
    Standard geometry input.
    All non-curve components are ignored.
 
+.. note::
+
+   If no radius attribute exists on the curve, the profile will not be scaled.
+   This is inconsistent with elsewhere in Blender where the default radius of 0.01m
+   is used when the attribute does not exist.
+
 Profile Curve
    If a profile curve is provided, it will be extruded along all splines.
    Otherwise the generated mesh will just be a chain of edges.
