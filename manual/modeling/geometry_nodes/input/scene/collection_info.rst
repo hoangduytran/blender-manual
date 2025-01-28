@@ -30,6 +30,11 @@ Separate Children
    the *Pick Instance* option in the :doc:`/modeling/geometry_nodes/instances/instance_on_points` to
    choose between collection children at each point.
 
+   .. note::
+
+      Because renaming objects and collections does not cause a modifier re-evaluation, an update will
+      need to be triggered manually for the node's output to reflect a changed name.
+
 Reset Children
    Remove the transform of each of the collection's children when converting them to instances.
    This is useful in order to keep child objects visually separate in the viewport,
