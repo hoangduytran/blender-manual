@@ -20,6 +20,10 @@ The *Convex Hull* node outputs a convex mesh that is enclosing all points in the
 
    Volumes are not supported by this node, and attributes are not automatically transferred to the result.
 
+.. note::
+
+   This node is affected by the limitations of floating point precision. If points are too close together,
+   they may be merged in the result mesh.
 
 Inputs
 ======
