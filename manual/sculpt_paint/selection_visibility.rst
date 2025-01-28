@@ -106,7 +106,7 @@ So a common trick is to:
 #. Refine your selection next or just hide the faces.
 #. Switch back to Vertex Selection mask mode.
 
-Hidig faces will make sure that vertices that belong to visible faces remain visible.
+Hiding faces will make sure that vertices that belong to visible faces remain visible.
 
 
 .. _clipping_region:
