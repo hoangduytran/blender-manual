@@ -30,6 +30,11 @@ This also allows sub-frame interpolation for motion blur.
 
    This node cannot be used in the :ref:`Tool context <tool_context>`—only in the *Modifier* context.
 
+.. note::
+
+   Anonymous attributes are not propagated by the simulation nodes unless they are explicitly stored in the simulation
+   state. This is because detecting which anonymous attributes will be required for the simulation and afterwards would
+   require looking into the future to see what data is necessary.
 
 Clock
 =====
