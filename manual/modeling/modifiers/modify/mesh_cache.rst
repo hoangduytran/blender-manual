@@ -5,17 +5,16 @@
 Mesh Cache Modifier
 *******************
 
-The Mesh Cache modifier main use is for animated mesh data to be applied to a mesh and
-played back, deforming the mesh.
+The *Mesh Cache* modifier applies animated mesh data from an external file to a mesh, allowing it to deform over time.
+It is commonly used for importing animations from other applications, enabling smooth playback of cached deformations.
 
-This works in a similar way to :doc:`shape keys </animation/shape_keys/introduction>`,
-but is aimed at playing back external files and is often used for interchange between applications.
+This modifier functions similarly to :doc:`shape keys </animation/shape_keys/introduction>`,
+but is specifically designed for playback of externally stored animations rather than keyframe-based deformations.
 
-.. tip::
+.. important::
 
-   Both MDD and PC2 depend on the vertex order on the mesh remaining unchanged.
-   This is a limitation of this method, so take care not to add, remove or reorder vertices
-   once this modifier is used.
+   Both ``.mdd`` and ``.pc2`` file formats rely on a consistent vertex order throughout the animation.
+   Adding, removing, or reordering vertices after this modifier may cause unintended results.
 
 
 Options
@@ -28,27 +27,34 @@ Options
    Mesh Cache Modifier.
 
 Format
-   The input file format (currently ``.mdd`` and ``.pc2`` are supported).
+   Specifies the input file format. The modifier currently supports ``.mdd`` and ``.pc2``.
 
 File Path
-   Path to the cache file.
+   Path to the external cache file containing the animation data.
 
 Influence
-   Factor to adjust the influence of the modifier's deformation, useful for blending in/out from the cache data.
+   Controls the strength of the deformation. Lower values blend the cached animation with the original mesh shape.
 
 Deform Mode
-   This setting defaults to *Overwrite* which will replace the vertex locations with those in the cache file.
-   However, you may want to use shape keys, for example, and mix them with the mesh cache.
-   In this case you can select the *Deform* option which integrates deformations with the mesh cache result.
+   Determines how the cache data influences the mesh:
 
-   .. note::
+   :Overwrite:
+      Replaces vertex positions with those from the cache file.
+   :Integrate:
+      Blends the cache deformation with existing deformations, such as shape keys or modifiers.
 
-      This feature is limited to making smaller, isolated edits and
-      will not work for larger changes such as re-posing limbs.
+      .. note::
+
+         This mode is best suited for minor, localized adjustments.
+         Large transformations, such as reposing limbs, may not work as expected.
 
 Interpolation
-   *None*, or *Linear*, which will blend between frames.
-   Use linear when the frames in the cache file do not match up exactly with the frames in the blend-file.
+   Controls how frames between cache data are handled:
+
+   :None:
+      Uses only the raw frame data from the cache without interpolation.
+   :Linear:
+      Blends between frames for smoother transitions, useful when cache frames do not align perfectly with the scene frames.
 
 Vertex Group
    If set, restrict the effect to the only vertices in that vertex group.
@@ -64,41 +70,39 @@ Time Remapping
 --------------
 
 Time Mode
-   Select how time is calculated.
+   Defines how animation time is interpreted:
 
    :Frame:
-      Allows you to control the frames,
-      which will ignore timing data in the file but is often useful since it gives simple control.
+      Ignores timing data from the cache and plays back frames directly.
+      This mode provides direct control over playback speed.
    :Time:
-      Evaluates time in seconds,
-      taking into account timing information from the file (offset and frame-times).
+      Uses the cache's timing data, including offsets and frame durations.
    :Factor:
-      Evaluates the entire animation as a value in the [0, 1] range.
+      Maps the entire animation to a range between ``0`` and ``1`` for precise control.
 
 Play Mode
-   Select how playback operates.
+   Specifies how playback timing is determined:
 
    :Scene:
-      Use the current frame from the scene to control playback.
+      Uses the scene's current frame for playback.
 
       Frame Start
-         Play the cache starting from this frame.
+         Defines the starting frame for playback.
       Frame Scale
-         Scale time by this factor (applied after the start value).
+         Adjusts the playback speed by scaling time.
 
    :Custom:
-      Control animation timing manually.
+      Allows manual control of animation timing.
 
       Evaluation Value
-         Property used for animation time,
-         this gives more control of timing (typically this value will be animated).
+         Determines animation playback position, which can be animated for precise control.
 
 
 Axis Mapping
 ------------
 
 Forward/Up Axis
-   The axis for forward and up used in the source file.
+   Specifies the forward and up axes of the imported animation, ensuring proper orientation.
 
 Flip Axis
-   In rare cases you may also need to flip the coordinates on an axis.
+   Flips the animation along a chosen axis if the imported data requires correction.
