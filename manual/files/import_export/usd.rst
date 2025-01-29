@@ -162,6 +162,9 @@ Curves
 Lights
    Import lights as :doc:`Light Objects </render/lights/index>`. Does not currently include cylinder or geometry
    lights.
+World Dome Light
+   Converts the first discovered ``UsdLuxDomeLight`` dome light to a
+   :doc:`world background shader </render/lights/world>`.
 Materials
    Import `UsdPreviewSurface <https://openusd.org/release/spec_usdpreviewsurface.html>`__ materials.
 Meshes
@@ -231,10 +234,6 @@ Import All Materials
 
 Import USD Preview
    Convert USD Preview Surface shaders to Principled BSDF shader networks.
-
-Create World Material
-   Converts the first discovered ``UsdLuxDomeLight`` dome light to a
-   :doc:`world background shader </render/lights/world>`.
 
 Set Material Blend
    If the *Import USD Preview* option is enabled, the material blend method will automatically be set based on
@@ -408,6 +407,10 @@ Meshes
 Lights
    Exports :doc:`Light Objects </render/lights/index>`
    The ``UsdLuxShapingAPI`` is used to support spot lights.
+World Dome Light
+   Convert the :doc:`world material </render/lights/world>` to a ``UsdLuxDomeLight``.
+   Currently works for simple materials, consisting of an environment texture connected to a background shader,
+   with an optional vector multiply of the texture color.
 Cameras
    Exports :doc:`Camera Objects </render/cameras>`
    Only perspective cameras are exported.
@@ -528,11 +531,6 @@ MaterialX Network
       When using the Principled BSDF, the resulting graph is very usable.
       However, when using some of the other BSDFs, some of the generated
       shading graphs are difficult for other DCC's to understand.
-
-Convert World Material
-   Convert the :doc:`world material </render/lights/world>` to a ``UsdLuxDomeLight``.
-   Currently works for simple materials, consisting of an environment texture connected to a background shader,
-   with an optional vector multiply of the texture color.
 
 Export Textures
    Method for exporting textures.
