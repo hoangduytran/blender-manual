@@ -24,11 +24,15 @@ you can view and edit it in the :doc:`UV editor </editors/uv/introduction>`.
 One mesh can have multiple UV maps (e.g. one map per texture), although it's
 also possible to reuse a UV map for multiple textures.
 
+.. _bpy.types.MeshUVLoopLayer.active_render:
+
 Active Render
    Click the camera icon to make a certain UV map the default one for rendering.
-   This will be the map that's used by the *UV* output of the
-   :doc:`/render/shader_nodes/input/texture_coordinate`.
-   You can use the :doc:`/render/shader_nodes/input/uv_map` to access any other maps.
+   This will be the map that's output by the
+   :ref:`UV Pass <bpy.types.ViewLayer.use_pass_uv>` for compositing
+   and the :doc:`/render/shader_nodes/input/texture_coordinate` for material shading.
+   Use the :doc:`/render/shader_nodes/input/uv_map` to access any other UV
+   maps in shaders.
 
 Add ``+``
    Duplicates the selected UV map, or creates a new one if the list is empty.

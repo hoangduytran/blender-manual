@@ -9,13 +9,14 @@ ID Mask Node
    :align: right
    :alt: ID Mask Node.
 
-The *ID Mask Node* can be used to access an alpha mask per object or per material.
+The *ID Mask Node* creates a mask for a particular object or material in the render.
+It relies on the *Object Index* or *Material Index* :doc:`render pass </render/layers/passes>`,
+which is only available when rendering with Cycles.
 
 .. seealso::
 
-   The ID Mask node is superseded by the :doc:`/compositing/types/mask/cryptomatte`.
-   Cryptomatte is more feature complete and supported by Cycles and EEVEE.
-   It is recommended to use this feature moving forward.
+   This node is superseded by the :doc:`/compositing/types/mask/cryptomatte`.
+   Cryptomatte is more versatile and is supported by both Cycles and EEVEE.
 
 
 Inputs
@@ -23,49 +24,38 @@ Inputs
 
 ID Value
    Input for the *Object Index* or *Material Index* render pass.
-   Which is an output of the :doc:`Render Layers node </compositing/types/input/scene/render_layers>` or
-   the :doc:`Image node </compositing/types/input/scene/render_layers>` with a multi-layer format.
+   Once a pass is enabled, it can be accessed through the *IndexOB* or *IndexMA* slot of the
+   :doc:`/compositing/types/input/scene/render_layers`.
 
 
 Properties
 ==========
 
 Index
-   Selection of the previously specified index.
-Anti-Aliasing
-   This post-processing filter smooths the mask edges. See :term:`Anti-Aliasing`.
+   The index for which to create a mask. This index can be configured for objects at
+   :menuselection:`Properties --> Object --> Relations --> Pass Index`,
+   and for materials at :menuselection:`Properties --> Material --> Settings --> Pass Index`.
+
+   .. figure:: /images/compositing_types_converter_id-mask_relations-panel.png
+
+      Object Pass Index.
+
+:term:`Anti-Aliasing`
+   Whether to smooth the mask edges.
 
 
 Outputs
 =======
 
 Alpha
-   The mask is white where the object is and black where it is not.
-   If the object is transparent, the alpha mask represent that with gray values.
-
-
-Setup
-=====
-
-An index can be specify for any object or material in the scene.
-The Object Index can be set in :menuselection:`Properties --> Object Properties --> Relations --> Pass Index`
-and :menuselection:`Material --> Settings --> Pass Index` for the Material Index.
-To be accessible after rendering, the Render Engine must be Cycles,
-and *Object Index* or *Material Index* render pass has to be enabled.
-
-.. figure:: /images/compositing_types_converter_id-mask_relations-panel.png
-
-   Object Pass Index.
-
+   A grayscale image that's white where the object exists and black where it does not.
 
 Example
 =======
 
-In this example, the left rear red cube is assigned Pass Index 1, and the right cube Pass Index 2.
-Where the two cubes intersect, there is going to be noticeable pixelation because they come together
-at a sharp angle and are different colors. Using the mask from object 1,
-which is smoothed (anti-aliased) at the edges, we use a *Mix Node* set on *Multiply*
-to multiply the smoothed edges of the image, thus removing those nasty lines, thus, being smoothed out.
+In the example below, the left and right cubes are assigned a *Pass Index* of 1 and 2 respectively.
+We extract a mask for the left cube, then use it to turn that cube red with a
+:doc:`/compositing/types/color/mix/mix_color`. The masks for the other Pass Indexes are also shown.
 
 .. figure:: /images/compositing_types_converter_id-mask_example.png
 

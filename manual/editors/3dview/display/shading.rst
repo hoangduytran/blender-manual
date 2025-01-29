@@ -216,7 +216,7 @@ Lighting
       Use the lights in the scene. When disabled (or when the scene contains no lights),
       a virtual light is used instead.
 
-..  _bpy.types.View3DShading.use_scene_world:
+   .. _bpy.types.View3DShading.use_scene_world:
 
    Scene World
       Use the World of the scene.
@@ -247,20 +247,13 @@ Render Pass
 .. _viewport-compositing:
 
 Compositor
-   Controls the enablement of the compositor in the viewport. If enabled, the scene compositor node
-   tree will be evaluated using the :ref:`GPU Compositor <realtime-compositor>` and the output
-   will be displayed directly in the viewport.
+   When to preview the result of :doc:`compositing </compositing/introduction>` in the 3D Viewport.
+   This is done using the :doc:`/compositing/realtime_compositor`.
 
-   :Disabled: Always disabled.
-   :Camera: Enabled only in camera view.
-   :Always: Always enabled regardless of the view.
-
-.. tip::
-
-   Since it might be difficult to control the look of the viewport compositor due to changes in the
-   aspect ratio, pan, and zoom of the viewport, one can limit the compositing space to the camera
-   region by changing to :doc:`Camera View </editors/3dview/navigate/camera_view>`, which should
-   make the results better match the final render.
+   :Disabled: Never show the compositing output.
+   :Camera: Only show the compositing output when in :doc:`Camera View </editors/3dview/navigate/camera_view>`,
+      which gives the best vantage point for previewing the final result.
+   :Always: Always show the compositing output.
 
 
 .. _3dview-rendered:
@@ -269,7 +262,7 @@ Rendered
 ========
 
 Render the 3D Viewport using the scene's *Render Engine*, for interactive rendering.
-This gives you a preview of the final result, including scene lighting effects.
+This gives a preview of the final result before compositing, including scene lighting effects.
 
 The options are the same as for *Material Preview*, except that
 the *Render Pass* selector will offer different passes if the scene

@@ -52,7 +52,9 @@ Outputs
 =======
 
 Volume
-   Standard shader output.
+   The Volume Shader output must be plugged into the *Volume Input*
+   of the :doc:`Material </render/shader_nodes/output/material>`
+   or :doc:`World </render/shader_nodes/output/world>` Output node.
 
 
 Examples

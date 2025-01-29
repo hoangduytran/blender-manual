@@ -1,14 +1,14 @@
 .. _bpy.types.ShaderNodeAmbientOcclusion:
 
-*****************
-Ambient Occlusion
-*****************
+**********************
+Ambient Occlusion Node
+**********************
 
 .. figure:: /images/node-types_ShaderNodeAmbientOcclusion.webp
    :align: right
    :alt: Ambient Occlusion node.
 
-The *Ambient Occlusion* shader computes how much the hemisphere above the shading point is occluded.
+The *Ambient Occlusion* node computes how much the hemisphere above the shading point is occluded.
 This can be used for procedural texturing, for example to add weathering effects to corners only.
 
 For Cycles, this is an expensive shader and can slow down render significantly.
@@ -25,6 +25,11 @@ in faster renders.
        :ref:`Caustic receiver <bpy.types.CyclesObjectSettings.is_caustics_receiver>`, and
        :ref:`Shadow Caustic Light <bpy.types.CyclesLightSettings.is_caustics_light>`.
      - :doc:`/render/shader_nodes/osl` is active while using the OptiX rendering backend.
+
+.. seealso::
+
+   The :ref:`bpy.types.ViewLayer.use_pass_ambient_occlusion` pass gives occlusion factors
+   across the whole render for use in compositing.
 
 Inputs
 ======

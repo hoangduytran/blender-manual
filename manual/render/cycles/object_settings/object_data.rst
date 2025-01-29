@@ -16,9 +16,9 @@ Visibility
 
    There are several other :doc:`general visibility </scene_layout/object/properties/visibility>` properties.
 
-.. _bpy.types.Object.is_shadow_catcher:
-
 Mask
+   .. _bpy.types.Object.is_shadow_catcher:
+
    Shadow Catcher
       Enables the object to only receive shadow rays. It is to be noted that,
       shadow catcher objects will interact with other CG objects via indirect light interaction.
@@ -114,7 +114,7 @@ These settings can be found in the Object Properties tab of the Properties.
 .. note::
 
    This option only applies to the motion of the object itself. Disabling it does not affect motion blur from
-   other sources, such as camera motion or animated focal length.   
+   other sources, such as camera motion or animated focal length.
 
 .. _bpy.types.CyclesObjectSettings.motion_steps:
 

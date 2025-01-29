@@ -75,13 +75,3 @@ By default there are only four crypto layers available as inputs to the Cryptoma
 You can add or remove layer inputs through
 :menuselection:`Sidebar --> Item --> Properties --> Add/Remove Crypto Layer`.
 These operators will add/remove layers from the bottom of the pass inputs.
-
-
-Example
-=======
-
-In the example below, you can see the pass output on the right side.
-On the left side you can see a couple of objects that were selected through the *Cryptomatte* node.
-Notice how the cube on the left has a sphere-shaped cut-out from a sphere that was not selected in the node.
-
-.. figure:: /images/compositing_types_matte_cryptomatte_example.png

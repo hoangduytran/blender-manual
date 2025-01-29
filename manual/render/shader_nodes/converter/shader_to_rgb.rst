@@ -1,8 +1,8 @@
 .. _bpy.types.ShaderNodeShaderToRGB:
 
-*************
-Shader To RGB
-*************
+*****************
+Shader To RGB Node
+******************
 
 .. figure:: /images/node-types_ShaderNodeShaderToRGB.webp
    :align: right

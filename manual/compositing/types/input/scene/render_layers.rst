@@ -9,7 +9,8 @@ Render Layers Node
    :align: right
    :alt: Render Layers Node.
 
-Read render layers and passes from a scene into the compositing node graph.
+Renders a :doc:`View Layer </render/layers/introduction>` and reads its
+:doc:`Passes </render/layers/passes>` into the compositing node graph.
 
 
 Inputs
@@ -22,18 +23,17 @@ Properties
 ==========
 
 Scene
-   Select the scene within your blend-file. The scene information taken is the raw footage
-   (pre-compositing and pre-sequencing).
+   The scene for which to render a view layer.
 
-   .. hint::
+View Layer
+   The view layer to render. The button next to the dropdown re-renders it immediately.
 
-      To use composited footage from another scene, it has to be rendered into a multi-layer frameset
-      (e.g. ``OpenEXR``) as an intermediate file store and then imported with Image input node again.
+.. hint::
 
-Render Layer
-   A list of available :doc:`Render Layers </render/layers/index>`.
-   The render button is a shorthand to re-render the active scene.
-
+   To use the compositing output from another scene rather than its "raw" render output,
+   first render that scene into a series of multi-layered images (using e.g. the OpenEXR format),
+   then load those images into the Compositor of the current scene using the
+   :doc:`/compositing/types/input/image`.
 
 Outputs
 =======
@@ -42,14 +42,10 @@ Image
    Rendered image.
 Alpha
    Alpha channel.
-
-
-.. rubric:: Render Passes Sockets
-
-Depending on the Render passes that are enabled, other sockets are available.
-See :doc:`render passes </render/layers/passes>`.
+Render pass sockets
+   Additional outputs for any enabled render passes.
 
 .. note::
 
-   In the viewport compositor, Render Passes are only supported in EEVEE. For other engines, the
-   passes return a zero value, a zero vector, or a transparent color depending on their type.
+   The :ref:`viewport compositor <viewport-compositing>` only supports render passes when using EEVEE.
+   For other engines, the passes will be empty.
