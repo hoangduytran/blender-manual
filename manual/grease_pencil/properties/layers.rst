@@ -267,3 +267,12 @@ View Layer
 
 Use Masks in Render
    If disabled, no masks on the layer are included in the view layer render.
+
+
+Display
+=======
+
+.. _bpy.types.GreasePencilLayer.channel_color:
+
+Channel Color
+   Sets the color to use in the channel region of the :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>`.
