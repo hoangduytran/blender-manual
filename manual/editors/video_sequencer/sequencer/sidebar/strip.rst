@@ -285,9 +285,14 @@ Source
 The Source panel shows (and lets you change) the file which the strip points to,
 as well as how this file should be displayed.
 
-File
-   The full path of the source file.
+Directory
+   The folder containing the source file for the strip.
 
+.. _bpy.types.StripElement.filename:
+
+Filename
+   The full name of the source file.
+   Note that file names are limited to 256
 Color Space
    The color space of the source file.
 
