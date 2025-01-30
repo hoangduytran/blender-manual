@@ -82,8 +82,9 @@ Slot Names and Associated Types
 -------------------------------
 
 Each slot in an action has a name, and you are free to name them whatever you
-like. By default slots are named after the data-block they were initially
-created for.
+like. By default, new slots are named after the last slot assigned to the
+data-block they were created for, or after the data-block itself if it's never
+been assigned a slot before.
 
 In addition to having a name, each slot also has an associated data-block type
 that it is intended for (for example, "material", "object", etc.). This is set
