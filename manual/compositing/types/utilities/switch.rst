@@ -5,7 +5,7 @@
 Switch Node
 ***********
 
-.. figure:: /images/compositing_node-types_CompositorNodeSwitch.webp
+.. figure:: /images/node-types_CompositorNodeSwitch.webp
    :align: right
    :alt: Switch Node.
 
