@@ -5,7 +5,7 @@
 Luminance Key Node
 ******************
 
-.. figure:: /images/compositing_node-types_CompositorNodeLumaMatte.webp
+.. figure:: /images/node-types_CompositorNodeLumaMatte.webp
    :align: right
    :alt: Luminance Key Node.
 

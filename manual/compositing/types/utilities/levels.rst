@@ -5,7 +5,7 @@
 Levels Node
 ***********
 
-.. figure:: /images/compositing_node-types_CompositorNodeLevels.webp
+.. figure:: /images/node-types_CompositorNodeLevels.webp
    :align: right
    :alt: Levels Node.
 

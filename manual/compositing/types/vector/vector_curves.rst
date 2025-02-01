@@ -8,7 +8,7 @@
 Vector Curves Node
 ******************
 
-.. figure:: /images/compositing_node-types_CompositorNodeCurveVec.webp
+.. figure:: /images/node-types_CompositorNodeCurveVec.webp
    :align: right
    :alt: Vector Curves Node.
 

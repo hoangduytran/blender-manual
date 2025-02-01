@@ -7,7 +7,7 @@ Color Balance Node
 
 The Color Balance node adjusts the color and values of an image.
 
-.. figure:: /images/compositing_node-types_CompositorNodeColorBalance.webp
+.. figure:: /images/node-types_CompositorNodeColorBalance.webp
    :alt: Color Balance Node.
 
 

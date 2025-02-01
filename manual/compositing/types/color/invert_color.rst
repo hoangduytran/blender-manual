@@ -10,7 +10,7 @@
 Invert Color Node
 *****************
 
-.. figure:: /images/compositing_node-types_CompositorNodeInvert.webp
+.. figure:: /images/node-types_CompositorNodeInvert.webp
    :align: right
    :alt: Invert Color Node.
 

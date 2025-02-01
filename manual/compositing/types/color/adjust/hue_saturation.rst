@@ -10,7 +10,7 @@
 Hue/Saturation/Value Node
 *************************
 
-.. figure:: /images/compositing_node-types_CompositorNodeHueSat.webp
+.. figure:: /images/node-types_CompositorNodeHueSat.webp
    :align: right
    :alt: Hue/Saturation/Value Node.
 

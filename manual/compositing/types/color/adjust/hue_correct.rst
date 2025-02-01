@@ -8,7 +8,7 @@ Hue Correct Node
 The *Hue Correct Node* adjusts the hue, saturation, and value of an image,
 with an input curve.
 
-.. figure:: /images/compositing_node-types_CompositorNodeHueCorrect.webp
+.. figure:: /images/node-types_CompositorNodeHueCorrect.webp
    :alt: Hue Correct Node.
 
 

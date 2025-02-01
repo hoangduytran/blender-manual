@@ -5,7 +5,7 @@
 Keying Node
 ***********
 
-.. figure:: /images/compositing_node-types_CompositorNodeKeying.webp
+.. figure:: /images/node-types_CompositorNodeKeying.webp
    :align: right
    :alt: Keying Node.
 

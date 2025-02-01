@@ -5,7 +5,7 @@
 Translate Node
 **************
 
-.. figure:: /images/compositing_node-types_CompositorNodeTranslate.webp
+.. figure:: /images/node-types_CompositorNodeTranslate.webp
    :align: right
    :alt: Translate Node.
 

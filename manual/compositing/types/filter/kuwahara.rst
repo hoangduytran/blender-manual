@@ -5,7 +5,7 @@
 Kuwahara Node
 *************
 
-.. figure:: /images/compositing_node-types_CompositorNodeKuwahara.webp
+.. figure:: /images/node-types_CompositorNodeKuwahara.webp
    :align: right
    :alt: Kuwahara Node.
 

@@ -5,7 +5,7 @@
 Switch View Node
 ****************
 
-.. figure:: /images/compositing_node-types_CompositorNodeSwitchView.webp
+.. figure:: /images/node-types_CompositorNodeSwitchView.webp
    :align: right
    :alt: Switch View Node.
 

@@ -5,7 +5,7 @@
 Dilate/Erode Node
 *****************
 
-.. figure:: /images/compositing_node-types_CompositorNodeDilateErode.webp
+.. figure:: /images/node-types_CompositorNodeDilateErode.webp
    :align: right
    :alt: Dilate/Erode Node.
 
@@ -28,7 +28,7 @@ Mode
       within a square surrounding it. This approach keeps the original gray levels and is best
       suited for masks that contain sharp corners; rounded shapes such as circles will look more
       square-like in the output.
-      
+
       Despite the name, this is not an iterative process; the dilation/erosion is only performed
       once regardless of the chosen *Distance*.
    Threshold

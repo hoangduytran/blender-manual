@@ -5,7 +5,7 @@
 Cryptomatte Node (Legacy)
 *************************
 
-.. figure:: /images/compositing_node-types_CompositorNodeCryptomatte.webp
+.. figure:: /images/node-types_CompositorNodeCryptomatte.webp
    :align: right
    :alt: Cryptomatte Node.
 

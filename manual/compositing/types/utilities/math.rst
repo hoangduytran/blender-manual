@@ -11,7 +11,7 @@
 Math Node
 *********
 
-.. figure:: /images/compositing_node-types_CompositorNodeMath.webp
+.. figure:: /images/node-types_CompositorNodeMath.webp
    :align: right
    :alt: Math node.
 

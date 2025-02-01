@@ -12,7 +12,7 @@
 RGB Curves Node
 ***************
 
-.. figure:: /images/compositing_node-types_CompositorNodeCurveRGB.webp
+.. figure:: /images/node-types_CompositorNodeCurveRGB.webp
    :align: right
    :alt: RGB Curves Node.
 

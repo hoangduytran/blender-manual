@@ -5,7 +5,7 @@
 Filter Node
 ***********
 
-.. figure:: /images/compositing_node-types_CompositorNodeFilter.webp
+.. figure:: /images/node-types_CompositorNodeFilter.webp
    :align: right
    :alt: Filter Node.
 

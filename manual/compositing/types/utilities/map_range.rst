@@ -5,7 +5,7 @@
 Map Range Node
 **************
 
-.. figure:: /images/compositing_node-types_CompositorNodeMapRange.webp
+.. figure:: /images/node-types_CompositorNodeMapRange.webp
    :align: right
    :alt: Map Range Node.
 

@@ -5,7 +5,7 @@
 Denoise Node
 ************
 
-.. figure:: /images/compositing_node-types_CompositorNodeDenoise.webp
+.. figure:: /images/node-types_CompositorNodeDenoise.webp
    :align: right
    :alt: Denoise Node.
 

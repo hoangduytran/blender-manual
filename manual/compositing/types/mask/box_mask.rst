@@ -5,7 +5,7 @@
 Box Mask Node
 *************
 
-.. figure:: /images/compositing_node-types_CompositorNodeBoxMask.webp
+.. figure:: /images/node-types_CompositorNodeBoxMask.webp
    :align: right
    :alt: Box Mask Node.
 

@@ -5,7 +5,7 @@
 ID Mask Node
 ************
 
-.. figure:: /images/compositing_node-types_CompositorNodeIDMask.webp
+.. figure:: /images/node-types_CompositorNodeIDMask.webp
    :align: right
    :alt: ID Mask Node.
 

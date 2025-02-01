@@ -5,7 +5,7 @@
 Glare Node
 **********
 
-.. figure:: /images/compositing_node-types_CompositorNodeGlare.webp
+.. figure:: /images/node-types_CompositorNodeGlare.webp
    :align: right
    :alt: Glare Node.
 

@@ -5,7 +5,7 @@
 Composite Node
 **************
 
-.. figure:: /images/compositing_node-types_CompositorNodeComposite.webp
+.. figure:: /images/node-types_CompositorNodeComposite.webp
    :align: right
    :alt: Composite Node.
 

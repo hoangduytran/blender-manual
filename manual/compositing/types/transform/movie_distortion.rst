@@ -5,7 +5,7 @@
 Movie Distortion Node
 *********************
 
-.. figure:: /images/compositing_node-types_CompositorNodeMovieDistortion.webp
+.. figure:: /images/node-types_CompositorNodeMovieDistortion.webp
    :align: right
    :alt: Movie Distortion Node.
 

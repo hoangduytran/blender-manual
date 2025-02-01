@@ -5,7 +5,7 @@
 Displace Node
 *************
 
-.. figure:: /images/compositing_node-types_CompositorNodeDisplace.webp
+.. figure:: /images/node-types_CompositorNodeDisplace.webp
    :align: right
    :alt: Displace Node.
 

@@ -5,7 +5,7 @@
 Render Layers Node
 ******************
 
-.. figure:: /images/compositing_node-types_CompositorNodeRLayers.webp
+.. figure:: /images/node-types_CompositorNodeRLayers.webp
    :align: right
    :alt: Render Layers Node.
 

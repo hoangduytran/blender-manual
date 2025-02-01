@@ -5,7 +5,7 @@
 Anti-Aliasing Node
 ******************
 
-.. figure:: /images/compositing_node-types_CompositorNodeAntiAliasing.webp
+.. figure:: /images/node-types_CompositorNodeAntiAliasing.webp
    :align: right
    :alt: Anti-Aliasing Node.
 

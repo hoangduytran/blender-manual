@@ -8,7 +8,7 @@
 Normal Node
 ***********
 
-.. figure:: /images/compositing_node-types_CompositorNodeNormal.webp
+.. figure:: /images/node-types_CompositorNodeNormal.webp
    :align: right
    :alt: Normal Node.
 

@@ -5,7 +5,7 @@
 Alpha Convert Node
 ******************
 
-.. figure:: /images/compositing_node-types_CompositorNodePremulKey.webp
+.. figure:: /images/node-types_CompositorNodePremulKey.webp
    :align: right
    :alt: Alpha Convert Node.
 

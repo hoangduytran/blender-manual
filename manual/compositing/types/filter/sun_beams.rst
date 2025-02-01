@@ -5,7 +5,7 @@
 Sun Beams Node
 **************
 
-.. figure:: /images/compositing_node-types_CompositorNodeSunBeams.webp
+.. figure:: /images/node-types_CompositorNodeSunBeams.webp
    :align: right
    :alt: Sun Beams Node.
 

@@ -5,7 +5,7 @@
 Keying Screen Node
 ******************
 
-.. figure:: /images/compositing_node-types_CompositorNodeKeyingScreen.webp
+.. figure:: /images/node-types_CompositorNodeKeyingScreen.webp
    :align: right
    :alt: Keying Screen node.
 

@@ -5,7 +5,7 @@
 Track Position Node
 *******************
 
-.. figure:: /images/compositing_node-types_CompositorNodeTrackPos.webp
+.. figure:: /images/node-types_CompositorNodeTrackPos.webp
    :align: right
    :alt: Track Position Node.
 

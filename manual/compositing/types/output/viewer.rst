@@ -5,7 +5,7 @@
 Viewer Node
 ***********
 
-.. figure:: /images/compositing_node-types_CompositorNodeViewer.webp
+.. figure:: /images/node-types_CompositorNodeViewer.webp
    :align: right
    :alt: Viewer Node.
 

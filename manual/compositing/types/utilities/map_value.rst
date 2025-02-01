@@ -5,7 +5,7 @@
 Map Value Node
 **************
 
-.. figure:: /images/compositing_node-types_CompositorNodeMapValue.webp
+.. figure:: /images/node-types_CompositorNodeMapValue.webp
    :align: right
    :alt: Map Value Node.
 

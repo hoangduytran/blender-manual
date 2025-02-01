@@ -5,7 +5,7 @@
 Split Node
 **********
 
-.. figure:: /images/compositing_node-types_CompositorNodeSplit.webp
+.. figure:: /images/node-types_CompositorNodeSplit.webp
    :align: right
    :alt: Split Viewer Node.
 

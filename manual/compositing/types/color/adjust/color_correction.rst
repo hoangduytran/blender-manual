@@ -5,7 +5,7 @@
 Color Correction Node
 *********************
 
-.. figure:: /images/compositing_node-types_CompositorNodeColorCorrection.webp
+.. figure:: /images/node-types_CompositorNodeColorCorrection.webp
    :alt: Color Correction Node.
 
 The Color Correction node adjusts the color of an image, separately in several tonal ranges

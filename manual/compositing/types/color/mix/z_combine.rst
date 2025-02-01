@@ -5,7 +5,7 @@
 Z Combine Node
 **************
 
-.. figure:: /images/compositing_node-types_CompositorNodeZcombine.webp
+.. figure:: /images/node-types_CompositorNodeZcombine.webp
    :align: right
    :alt: Z Combine Node.
 

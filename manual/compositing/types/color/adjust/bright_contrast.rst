@@ -9,7 +9,7 @@
 Brightness/Contrast Node
 ************************
 
-.. figure:: /images/compositing_node-types_CompositorNodeBrightContrast.webp
+.. figure:: /images/node-types_CompositorNodeBrightContrast.webp
    :align: right
    :alt: Brightness/Contrast Node.
 

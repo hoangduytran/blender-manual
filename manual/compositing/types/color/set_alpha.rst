@@ -5,7 +5,7 @@
 Set Alpha Node
 **************
 
-.. figure:: /images/compositing_node-types_CompositorNodeSetAlpha.webp
+.. figure:: /images/node-types_CompositorNodeSetAlpha.webp
    :align: right
    :alt: Set Alpha Node.
 

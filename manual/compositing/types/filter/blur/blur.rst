@@ -5,7 +5,7 @@
 Blur Node
 *********
 
-.. figure:: /images/compositing_node-types_CompositorNodeBlur.webp
+.. figure:: /images/node-types_CompositorNodeBlur.webp
    :align: right
    :alt: Blur Node.
 

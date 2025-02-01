@@ -5,7 +5,7 @@
 Cryptomatte Node
 ****************
 
-.. figure:: /images/compositing_node-types_CompositorNodeCryptomatteV2.webp
+.. figure:: /images/node-types_CompositorNodeCryptomatteV2.webp
    :align: right
    :alt: Cryptomatte Node.
 

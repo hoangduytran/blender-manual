@@ -5,7 +5,7 @@
 Separate XYZ Node
 *****************
 
-.. figure:: /images/compositing_node-types_CompositorNodeSeparateXYZ.webp
+.. figure:: /images/node-types_CompositorNodeSeparateXYZ.webp
    :align: right
    :alt: Separate XYZ Node.
 

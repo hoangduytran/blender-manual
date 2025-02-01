@@ -5,7 +5,7 @@
 Convert Colorspace Node
 ***********************
 
-.. figure:: /images/compositing_node-types_CompositorNodeConvertColorSpace.webp
+.. figure:: /images/node-types_CompositorNodeConvertColorSpace.webp
    :align: right
    :alt: Color Space Node.
 

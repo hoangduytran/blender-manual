@@ -5,7 +5,7 @@
 Mask Node
 *********
 
-.. figure:: /images/compositing_node-types_CompositorNodeMask.webp
+.. figure:: /images/node-types_CompositorNodeMask.webp
    :align: right
    :alt: Mask Node.
 

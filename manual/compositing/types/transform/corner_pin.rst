@@ -5,7 +5,7 @@
 Corner Pin Node
 ***************
 
-.. figure:: /images/compositing_node-types_CompositorNodeCornerPin.webp
+.. figure:: /images/node-types_CompositorNodeCornerPin.webp
    :align: right
    :alt: Corner Pin Node.
 

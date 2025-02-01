@@ -5,7 +5,7 @@
 Scale Node
 **********
 
-.. figure:: /images/compositing_node-types_CompositorNodeScale.webp
+.. figure:: /images/node-types_CompositorNodeScale.webp
    :align: right
    :alt: Scale Node.
 

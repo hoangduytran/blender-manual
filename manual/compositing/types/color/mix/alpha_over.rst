@@ -5,7 +5,7 @@
 Alpha Over Node
 ***************
 
-.. figure:: /images/compositing_node-types_CompositorNodeAlphaOver.webp
+.. figure:: /images/node-types_CompositorNodeAlphaOver.webp
    :align: right
    :alt: Alpha Over Node.
 
