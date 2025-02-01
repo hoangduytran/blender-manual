@@ -1,6 +1,6 @@
 .. _bpy.types.ShaderNodeShaderToRGB:
 
-*****************
+******************
 Shader To RGB Node
 ******************
 
