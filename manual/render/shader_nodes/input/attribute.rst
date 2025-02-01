@@ -20,10 +20,7 @@ This node has no inputs.
 Properties
 ==========
 
-Name
-   Name of the attribute.
-
-Type
+Attribute Type
    Specifies the type of the attribute.
 
    :Geometry:
@@ -89,6 +86,9 @@ Type
          An alternative method to access the same set of properties is to use driver
          :ref:`Context Properties <bpy.types.DriverVariable.type.CONTEXT_PROP>`,
          possibly with a :ref:`manually emulated <driver-attribute-node-emulation>` lookup fallback chain.
+
+Name
+   Name of the attribute.
 
 
 Outputs
