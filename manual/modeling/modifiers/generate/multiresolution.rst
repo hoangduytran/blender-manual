@@ -55,8 +55,8 @@ Optimal Display
    So when rendering the wireframe of this object, the wires of the subdivided edges will be skipped.
 
 
-Subdivisions
-------------
+Subdivision
+-----------
 
 .. _bpy.ops.object.multires_subdivide:
 
