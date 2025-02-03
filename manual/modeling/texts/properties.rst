@@ -9,7 +9,7 @@ Shape
 .. reference::
 
    :Mode:      All Modes
-   :Panel:     :menuselection:`Properties --> Text --> Shape`
+   :Panel:     :menuselection:`Properties --> Data --> Shape`
 
 Most of the settings in the *Shape* panel are shared with those of
 :doc:`Curves </modeling/curves/properties/shape>`
@@ -35,7 +35,7 @@ Geometry
 .. reference::
 
    :Mode:      All Modes
-   :Panel:     :menuselection:`Properties --> Font --> Geometry`
+   :Panel:     :menuselection:`Properties --> Data --> Geometry`
 
 Offset
    Offset the control points of the curves defining the letters, which will make them thinner or thicker.
@@ -69,7 +69,7 @@ Font
 .. reference::
 
    :Mode:      All Modes
-   :Panel:     :menuselection:`Properties --> Font --> Font`
+   :Panel:     :menuselection:`Properties --> Data --> Font`
 
 Blender comes with a *built-in* font by default that is displayed in
 each of the four font style data-block menus.
@@ -108,24 +108,24 @@ found in the *Font* panel.
 Bold
    With no text selected, toggles new text to be **bold**.
    With text selected, toggles the selected text to be **bold**.
-   Text can also be set to bold by selecting it then using the *Bold*
-   entry in the *Text* menu of the 3D Viewport.
+
+   Bold can also be toggled in the 3D Viewport using :ref:`Toggle Bold <bpy.ops.font.style_toggle>.
 
 .. _bpy.types.TextCharacterFormat.use_italic:
 
 Italic
    With no text selected, toggles new text to be *italic*.
    With text selected, toggles the selected text to be *italic*.
-   Text can also be set to italic by selecting it then using the *Bold*
-   entry in the *Text* menu of the 3D Viewport.
+
+   Italic can also be toggled in the 3D Viewport using :ref:`Toggle Italic <bpy.ops.font.style_toggle>.
 
 .. _bpy.types.TextCharacterFormat.use_underline:
 
 Underline
    With no text selected, toggles new text to be underline.
    With text selected, toggles the selected text to be underline.
-   Text can also be set to underline by selecting it then using the *Underline*
-   entry in the *Text* menu of the 3D Viewport.
+
+   Underline can also be toggled in the 3D Viewport using :ref:`Toggle Underline <bpy.ops.font.style_toggle>.
 
    See also :ref:`underline settings <modeling-text-character-underline>` below.
 
@@ -134,11 +134,12 @@ Underline
 Small Caps
    With no text selected, toggles new text to be small capitals.
    With text selected, toggles the selected text to be small capitals.
-   Text can also be set to small caps by selecting it then using the *Small Caps*
-   entry in the *Text* menu of the 3D Viewport.
 
-   The size of the *Small Caps* can be changed with
-   the :ref:`Small Caps Scale setting <modeling-text-character-underline>`.
+   Small Caps can also be toggled in the 3D Viewport using :ref:`Toggle Small Caps <bpy.ops.font.style_toggle>.
+
+   Text can also be set to small caps by selecting it then using :ref:`Toggle Small Caps <bpy.ops.font.style_toggle>.
+
+   The size of the *Small Caps* can be changed with :ref:`Small Caps Scale <modeling-text-character-underline>`.
 
 
 Transform
@@ -212,7 +213,7 @@ Underline Thickness
 .. _bpy.types.TextCurve.small_caps_scale:
 
 Small Caps Scale
-   The scaling applied to capital letters to turn them into small caps.
+   The size reduction applied to uppercase letters when using small caps.
 
 
 Paragraph
@@ -221,7 +222,7 @@ Paragraph
 .. reference::
 
    :Mode:      All
-   :Panel:     :menuselection:`Properties --> Font --> Paragraph`
+   :Panel:     :menuselection:`Properties --> Data --> Paragraph`
 
 The *Paragraph* Panel has settings for the alignment and spacing of text.
 
@@ -320,7 +321,7 @@ Text Boxes
 .. reference::
 
    :Mode:      All
-   :Panel:     :menuselection:`Properties --> Font --> Text Boxes`
+   :Panel:     :menuselection:`Properties --> Data --> Text Boxes`
 
 Text boxes (or frames) allow you to distribute the text among rectangular areas within a single text object.
 An arbitrary number of freely movable and re-sizable text frames are allowed per text object.
@@ -340,7 +341,7 @@ Add Textbox
    Inserts a new frame, just after the current one (in text flow order).
    The new frame will have the same size and position as the selected one.
 
-.._bpy.ops.font.textbox_remove:
+.. _bpy.ops.font.textbox_remove:
 
 :bl-icon:`x` (Remove Text Block)
    Delete the current frame.
