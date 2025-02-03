@@ -83,7 +83,7 @@ Toggle Cyclic
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Curve --> Toggle Cyclic`
+   :Menu:      :menuselection:`Curves --> Toggle Cyclic`
    :Shortcut:  :kbd:`Alt-C`
 
 Toggles between an open curve and closed curve (Cyclic).
