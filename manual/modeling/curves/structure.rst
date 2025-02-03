@@ -34,6 +34,8 @@ This is analogous to vertices in a mesh object.
 Spline Types
 ============
 
+.. _curve-poly:
+
 Poly
 ----
 

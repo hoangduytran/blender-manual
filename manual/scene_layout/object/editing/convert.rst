@@ -13,10 +13,14 @@ Curve
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Convert --> Curve`
 
-Converts the selected mesh, or text object to a curve object.
-For mesh objects, only edges belonging to no faces will be taken into account.
-The resulting curve will be a poly curve type, but can be converted to have
-smooth segments as described in :ref:`bpy.ops.curve.spline_type_set`.
+Converts the selected mesh or text object into a curve object.
+
+- **For mesh objects**: Only loose edges (edges not part of any faces) will be included in the conversion.
+- **For text objects**: The text is converted into curve outlines, preserving its shape.
+
+The resulting curve will be :ref:`Poly Curve <curve-poly>` by default.
+To create smooth segments, convert the curve to a :ref:`Bézier Curve <curve-bezier>`
+using :ref:`bpy.ops.curve.spline_type_set`.
 
 
 Mesh
