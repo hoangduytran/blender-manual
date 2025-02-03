@@ -90,7 +90,7 @@ Limit Method
       Use an attribute to determine the width of a bevel.
       When the bevel weight is 0.0, no bevel is applied.
 
-      Any attribute on the input mesh can be chosen. By default the `bevel_weight_edge` and `bevel_weight_vert`
+      Any attribute on the input mesh can be chosen. By default the ``bevel_weight_edge`` and ``bevel_weight_vert``
       attributes adjusted in :doc:`edit mode </modeling/meshes/editing/edge/edge_data>` are used.
       For convenience, the modifier lists the attributes from the original mesh in the dropdown,
       but attributes created by previous modifiers can also be used. Attributes with non-matching
