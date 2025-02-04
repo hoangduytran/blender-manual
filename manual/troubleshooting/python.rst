@@ -6,15 +6,14 @@ Python Errors
 Precompiled Libraries
 =====================
 
-While not common practice, Python add-ons can be distributed with their own precompiled libraries.
-Unlike regular Python scripts, these are not portable between different platforms.
+While not common practice, Python add-ons can be distributed with their own precompiled libraries. Unlike regular
+Python scripts, these are not portable between different platforms.
 
-It is possible the library is incompatible with your Blender installation
-(attempting to load a library built for a different version of Python,
-or loading a 32-bit library on a 64-bit system).
+It is possible the library is incompatible with your Blender installation (attempting to load a library built for a
+different version of Python, or loading a 32-bit library on a 64-bit system).
 
-If the add-on contains ``.pyd`` or ``.so`` files,
-check that the distribution is compatible with your operating system.
+If the add-on contains ``.pyd`` or ``.so`` files, check that the distribution is compatible with your operating
+system.
 
 
 Platform Specific
@@ -26,24 +25,22 @@ Windows
 Mixed Python Libraries (DLLs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If Python is raising errors or you have an add-on that just fails when enabled with an error, e.g:
-``... is not a valid Win32 application.``.
+If Python is raising errors or you have an add-on that just fails when enabled with an error -- e.g: ``... is not a
+valid Win32 application.`` -- this may be caused by some inconsistency in the Python libraries. While Blender comes with
+its own bundled Python interpreter, duplicate, incompatible libraries can cause problems.
 
 .. figure:: /images/troubleshooting_python_traceback.png
 
    A Python traceback.
 
-This may be caused by some inconsistency in the Python libraries.
-While Blender comes with its own bundled Python interpreter, duplicate, incompatible libraries can cause problems.
-
 To find out which Python Library caused the Problem check the error message.
 
-This is normally reported somewhere around the bottom line of the traceback.
-With the error above you see the problem is caused while trying to import ``_socket``.
-This corresponds to either a file named ``_socket.py`` or ``_socket.pyd``.
+This is normally reported somewhere around the bottom line of the traceback. With the error above you see the problem
+is caused while trying to import ``_socket``. This corresponds to either a file named ``_socket.py`` or
+``_socket.pyd``.
 
-To help troubleshoot this problem,
-the following script can be pasted into the Text editor and run to check for duplicate libraries in your search path.
+To help troubleshoot this problem, the following script can be pasted into the Text editor and run to check for
+duplicate libraries in your search path.
 (The output will show in :doc:`Command Line Window </advanced/command_line/index>`.)
 
 .. code-block:: python
