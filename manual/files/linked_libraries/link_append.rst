@@ -1,4 +1,3 @@
-
 *************
 Link & Append
 *************
@@ -48,6 +47,10 @@ There are ways around this, however:
   (This new object will be created at the :ref:`editors-3dview-3d_cursor`.)
 - You can also do some level of editing/animating on linked (and thus normally locked)
   data-blocks using :doc:`Library Overrides </files/linked_libraries/library_overrides>`.
+
+.. warning::
+
+   Since it is not editable, linked data cannot be :ref:`protected with the Fake User option <data-system-datablock-fake-user>`. Adding a :doc:`custom property </files/custom_properties>` pointing to an otherwise unused linked data-block (e.g. a Text block) is a good way to keep it referenced accross saves and reloads.
 
 Options
 -------
