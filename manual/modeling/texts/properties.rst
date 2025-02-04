@@ -109,7 +109,7 @@ Bold
    With no text selected, toggles new text to be **bold**.
    With text selected, toggles the selected text to be **bold**.
 
-   Bold can also be toggled in the 3D Viewport using :ref:`Toggle Bold <bpy.ops.font.style_toggle>.
+   Bold can also be toggled in the 3D Viewport using :ref:`Toggle Bold <bpy.ops.font.style_toggle>`.
 
 .. _bpy.types.TextCharacterFormat.use_italic:
 
@@ -117,7 +117,7 @@ Italic
    With no text selected, toggles new text to be *italic*.
    With text selected, toggles the selected text to be *italic*.
 
-   Italic can also be toggled in the 3D Viewport using :ref:`Toggle Italic <bpy.ops.font.style_toggle>.
+   Italic can also be toggled in the 3D Viewport using :ref:`Toggle Italic <bpy.ops.font.style_toggle>`.
 
 .. _bpy.types.TextCharacterFormat.use_underline:
 
@@ -125,7 +125,7 @@ Underline
    With no text selected, toggles new text to be underline.
    With text selected, toggles the selected text to be underline.
 
-   Underline can also be toggled in the 3D Viewport using :ref:`Toggle Underline <bpy.ops.font.style_toggle>.
+   Underline can also be toggled in the 3D Viewport using :ref:`Toggle Underline <bpy.ops.font.style_toggle>`.
 
    See also :ref:`underline settings <modeling-text-character-underline>` below.
 
@@ -135,9 +135,9 @@ Small Caps
    With no text selected, toggles new text to be small capitals.
    With text selected, toggles the selected text to be small capitals.
 
-   Small Caps can also be toggled in the 3D Viewport using :ref:`Toggle Small Caps <bpy.ops.font.style_toggle>.
+   Small Caps can also be toggled in the 3D Viewport using :ref:`Toggle Small Caps <bpy.ops.font.style_toggle>`.
 
-   Text can also be set to small caps by selecting it then using :ref:`Toggle Small Caps <bpy.ops.font.style_toggle>.
+   Text can also be set to small caps by selecting it then using :ref:`Toggle Small Caps <bpy.ops.font.style_toggle>`.
 
    The size of the *Small Caps* can be changed with :ref:`Small Caps Scale <modeling-text-character-underline>`.
 
