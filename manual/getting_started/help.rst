@@ -13,7 +13,7 @@ Tooltips
 
    Tooltip of the Renderer selector in the Info Editor.
 
-When hovering the mouse cursor over a button or setting, after a few instants a tooltip appears.
+After hovering the mouse cursor over a button or setting for a few moments, a tooltip will appear.
 
 
 Elements
@@ -28,15 +28,15 @@ Shortcut
 Value
    The value of the property.
 
-   Hovering over a color property will display a large swatch preview of the color
-   and the color's hexadecimal, RGBA, and HSVA values.
+   Hovering over a color property will display a large swatch preview of the color and the color's hexadecimal, RGBA,
+   and HSVA values.
 Library
    Source file of the active object. See also :doc:`/files/linked_libraries/index`.
 Disabled (red)
    The reason why the value is not editable.
 Python
-   When :ref:`Python Tooltips <bpy.types.PreferencesView.show_tooltips_python>` are enabled,
-   a Python expression is displayed for :ref:`scripting <scripting-index>` (usually an operator or property).
+   When :ref:`Python Tooltips <bpy.types.PreferencesView.show_tooltips_python>` are enabled, a Python expression is
+   displayed for :ref:`scripting <scripting-index>` (usually an operator or property).
 
 
 .. _help-manual-access:
@@ -53,16 +53,16 @@ Context-Sensitive Manual Access
 
 You may want to access help for a tool or area from within Blender.
 
-To do so; hover the cursor over the tool or button you need help with and
-use the keyboard shortcut or context menu item to visit pages of this reference manual from within Blender.
-This opens a web page relating to the button under the cursor, supporting both tool and value buttons.
+To do so, hover the cursor over the tool or button you need help with and use the keyboard shortcut or context menu
+item to visit pages of this reference manual from within Blender. This opens a web page relating to the button under
+the cursor, supporting both tool and value buttons.
 
 .. note::
 
-   We do not currently have 100% coverage.
-   You may see an alert in the info header if a tool does not have a link to the manual.
+   We do not currently have 100% coverage. You may see an alert in the info header if a tool does not have a link to
+   the manual.
 
-   Other times, buttons may link to more general sections of the documentation.
+   In other cases, buttons may link to more general sections of the documentation.
 
 
 .. _help-menu:
@@ -73,8 +73,8 @@ Help Menu
 Web Links
 ---------
 
-The first options of this menu provide direct links to Blender-related websites.
-The same links can also be found in the :ref:`splash`.
+The first options of this menu provide direct links to Blender-related websites. The same links can also be found in
+the :ref:`splash`.
 
 :doc:`Manual </index>`
    This is a link to the Official Blender Manual (which you are now reading).
@@ -98,16 +98,16 @@ The same links can also be found in the :ref:`splash`.
 Save System Info
 ----------------
 
-This extracts system information which can be useful for including in bug reports,
-inspecting the configuration, or diagnosing problems.
+This extracts system information which can be useful for including in bug reports, inspecting the configuration, or
+diagnosing problems.
 
 You will be prompted to save a text file called ``system-info.txt``.
 
 It contains the following sections:
 
 Blender
-   This section shows you the Blender version, details about the build configuration,
-   and the path in which Blender is running.
+   This section shows you the Blender version, details about the build configuration, and the path in which Blender is
+   running.
 Python
    The version and path of your Python installation.
 Directories
