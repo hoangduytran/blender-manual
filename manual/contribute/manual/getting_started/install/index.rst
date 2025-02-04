@@ -4,8 +4,8 @@
   Installing Dependencies
 ###########################
 
-This section documents how to install the software used to generate the manual.
-The installation is different for each operating system, instructions have been written for:
+This section documents how to install the software used to generate the manual. The installation is different for each
+operating system, instructions have been written for:
 
 .. toctree::
    :maxdepth: 1

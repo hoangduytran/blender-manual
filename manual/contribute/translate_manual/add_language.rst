@@ -8,12 +8,10 @@ Adding a Language
 Preparations
 ============
 
-If the language you want to translate has not been started by someone else already and
-you wish to create a set of new files for the desired language, say 'fr' (French),
-then you must first use the environment you have created,
-as guided in :ref:`Getting Started <about-getting-started>`,
-in particular :doc:`/contribute/manual/getting_started/install/index`
-and :doc:`/contribute/manual/getting_started/build` sections.
+If the language you want to translate has not been started by someone else already and you wish to create a set of new
+files for the desired language, say 'fr' (French), then you must first use the environment you have created, as guided
+in :ref:`Getting Started <about-getting-started>`, in particular
+:doc:`/contribute/manual/getting_started/install/index` and :doc:`/contribute/manual/getting_started/build` sections.
 
 This will give you a foundation environment for:
 
@@ -29,8 +27,8 @@ Other platforms might vary slightly but should be mainly the same.
    `Create an Issue <https://projects.blender.org/blender/documentation/issues/new>`__
    requesting for commit access in order to transfer changes to the central repository of the translation team.
 #. Open an instance of a console application.
-#. Change the current working directory to the directory of ``blender-manual``,
-   where the instance of ``Makefile`` resides.
+#. Change the current working directory to the directory of ``blender-manual``, where the instance of ``Makefile``
+   resides.
 
 
 Trying the Make Process to Create HTML Files in English
@@ -58,8 +56,7 @@ Creating the Language Entry in the HTML Menu
 #. Create an entry for the language in the html menu by opening file ``./build_files/theme/js/version_switch.js``
    (assuming you are at the ``blender-manual`` subdirectory).
 #. Find the table for the languages in ``var all_langs = {..};``.
-#. Enter the entry: ``"fr": "Fran&ccedil;ais",``, (``"fr": "Français"``).
-   (Notice the Unicode characters.)
+#. Add the entry: ``"fr": "Fran&ccedil;ais",``, (``"fr": "Français"``). (Notice the Unicode characters.)
 #. Commit the updated file::
 
       git add ./build_files/theme/js/version_switch.js
@@ -77,10 +74,9 @@ Generating the Set of Files for the Target Language
 
       git clone https://projects.blender.org/blender/blender-manual-translations.git locale
 
-   This will download all language sets available in the repository into the ``locale`` directory of your drive.
-   You can go to the ``locale`` directory to see the hidden subdirectory ``.git`` within it,
-   together with directories of languages.
-   You'll need to add your own set of files for the language you are trying to translating to.
+   This will download all language sets available in the repository into the ``locale`` directory of your drive. You
+   can go to the ``locale`` directory to see the hidden subdirectory ``.git`` within it, together with directories of
+   languages. You'll need to add your own set of files for the language you are trying to translating to.
 
 #. From the ``blender-manual`` directory to generate a set of files for ``fr`` language::
 
@@ -96,20 +92,18 @@ Generating the Set of Files for the Target Language
 
 .. tip::
 
-   - It is recommended you make two environment variables for these directories, in the ``.bashrc``
-     to make it more convenient for changing or scripting batch/shell commands
-     for the process of translation and reviewing results::
+   - It is recommended you make two environment variables for these directories, in the ``.bashrc`` to make it more
+     convenient for changing or scripting batch/shell commands for the process of translation and reviewing results::
 
         export BLENDER_MAN_EN=$HOME/<directory to make file directory above>/blender-manual
         export BLENDER_MAN_FR=$BLENDER_MAN_EN/locale
 
-   - Newly generated files will contain some placeholders for authors and revision dates etc.
-     If you find the job of replacing them repetitive, make use of the script ``change_placeholders.sh``
-     in the subdirectory ``~/blender-manual/tools/util_maintenance``, make a copy of that to your local ``bin``
-     directory and replace all values that were mentioned in the file with your specific details,
-     then after each change to a file, you would do following commands
-     to update the file with your personal details, revision date and time,
-     plus generating the html files for your language, which you can view using your Internet browser::
+   - Newly generated files will contain some placeholders for authors and revision dates etc. If you find the job of
+     replacing them repetitive, make use of the script ``change_placeholders.sh`` in the subdirectory
+     ``~/blender-manual/tools/util_maintenance``, make a copy of that to your local ``bin`` directory and replace all
+     values that were mentioned in the file with your specific details, then after each change to a file, you would do
+     following commands to update the file with your personal details, revision date and time, plus generating the
+     html files for your language, which you can view using your Internet browser::
 
         $HOME/bin/change_placeholders.sh $BLENDER_MAN_FR
         make -d --trace -w -B -e SPHINXOPTS="-D language='fr'" 2>&1

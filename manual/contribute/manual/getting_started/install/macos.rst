@@ -12,8 +12,8 @@ This guide covers the following topics:
 
 .. note::
 
-   This guide relies heavily on command-line tools.
-   It assumes you are the least familiar with the macOS Terminal application.
+   This guide relies heavily on command-line tools. It assumes you are the least familiar with the macOS Terminal
+   application.
 
 
 Installing Dependencies

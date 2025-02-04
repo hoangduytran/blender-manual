@@ -14,10 +14,9 @@ This guide covers the following topics:
 Installing Python
 =================
 
-#. Download the `Python installation package <https://www.python.org/downloads/>`__ for Windows.
-   In this guide version 3.9.x is used.
-#. Install Python with the installation wizard.
-   Please make sure that you enable the "Add Python to PATH" option:
+#. Download the `Python installation package <https://www.python.org/downloads/>`__ for Windows. In this guide version
+   3.9.x is used.
+#. Install Python with the installation wizard. Please make sure that you enable the "Add Python to PATH" option:
 
    .. figure:: /images/about_contribute_install_windows_installer.png
 
@@ -42,8 +41,8 @@ In this guide, we will use the official Git client, though any Git client will d
 
 .. note::
 
-   This process can be completed using a graphical Git client,
-   in that case you will just use the repository address in the URL field provided by your client::
+   This process can be completed using a graphical Git client, in that case you will just use the repository address
+   in the URL field provided by your client::
 
       https://projects.blender.org/blender/blender-manual.git
 
@@ -64,8 +63,8 @@ Setting up the Build Environment
 
      Successfully installed Jinja2 MarkupSafe Pygments Sphinx docutils sphinx-rtd-theme Cleaning up...
 
-During setup, some warnings may be shown, but do not worry about them.
-However, if any errors occur, they may cause some problems.
+During setup, some warnings may be shown, but do not worry about them. However, if any errors occur, they may cause
+some problems.
 
 .. note::
 

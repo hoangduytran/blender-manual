@@ -112,9 +112,9 @@ Instead, use proper markup with the keyword. This will be visible to the end-use
 
    .. todo:: message goes here
 
-If you intend to add a placeholder that should NOT be visible to the end user, use the syntax:
+If you intend to add a placeholder that should NOT be visible to the end user, use the syntax::
 
-   ``.. TODO internal developer message goes here``
+   .. TODO internal developer message goes here
 
 Note that **the lowercase keyword with 2 colons will render** in the page while **the uppercase keyword without colons
 will not.**

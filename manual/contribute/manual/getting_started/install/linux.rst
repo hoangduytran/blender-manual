@@ -68,7 +68,8 @@ Setting up the Build Environment
       python3 -m venv .venv
       .venv/bin/pip install -r requirements.txt
 
-   This avoids interfering with the system Python installation, following `PEP 668 <https://peps.python.org/pep-0668/>`__
+   This avoids interfering with the system Python installation, following `PEP 668
+   <https://peps.python.org/pep-0668/>`__
 
    The Sphinx command is available at::
 
