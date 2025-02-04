@@ -70,10 +70,10 @@ Text Styling
 ============
 
 See the `overview on ReStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__
-for more information on how to style the various elements of the documentation and
-on how to add lists, tables, pictures and code blocks.
-The `Sphinx reference <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`__ provides
-more insight additional constructs.
+for more information on how to style the various elements of the documentation and on how to add lists, tables,
+pictures and code blocks.
+The `Sphinx reference <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`__ provides more
+insight additional constructs.
 
 The following are useful markups for text styling::
 
@@ -93,8 +93,8 @@ Interface Elements
 Code Samples
 ============
 
-There is support for syntax highlighting if the programming language is provided,
-and line numbers can be optionally shown with the ``:linenos:`` option::
+There is support for syntax highlighting if the programming language is provided, and line numbers can be optionally
+shown with the ``:linenos:`` option::
 
    .. code-block:: python
       :linenos:
@@ -103,6 +103,21 @@ and line numbers can be optionally shown with the ``:linenos:`` option::
       def some_function():
           ...
 
+
+Placeholders
+============
+
+If information needs to be added in the future, do not simply add a paragraph saying "to-do" or "will add later."
+Instead, use proper markup with the keyword. This will be visible to the end-user in a special block::
+
+   .. todo:: message goes here
+
+If you intend to add a placeholder that should NOT be visible to the end user, use the syntax:
+
+   ``.. TODO internal developer message goes here``
+
+Note that **the lowercase keyword with 2 colons will render** in the page while **the uppercase keyword without colons
+will not.**
 
 Images
 ======
@@ -113,16 +128,15 @@ Figures should be used to place images::
 
       Image caption.
 
-For consistency, and since it would be good to ensure screenshots are
-all a similar size when floated next to text,
+For consistency, and since it would be good to ensure screenshots are all a similar size when floated next to text,
 writers should take screenshots in the following manner:
 
 #. Prepare the area you would like to capture making sure to use the default theme and setting.
    (In some cases you may not want to use the default settings e.g. if some options are hidden behind a checkbox.)
 #. Zoom to the maximum zoom level (hold :kbd:`NumpadPlus` or :kbd:`Ctrl-MMB` or similar).
 #. Zoom out eight zoom levels (:kbd:`NumpadMinus` -- eight times).
-#. In some cases you will want to leave a small margin around the thing you are trying to capture.
-   This should be around 30px but does not have to be exact.
+#. In some cases you will want to leave a small margin around the thing you are trying to capture. This should be
+   around 30px but does not have to be exact.
 
 This can be applied to several parts of the interface but might not work for all cases.
 
@@ -157,29 +171,23 @@ Naming
 Usage Guides
 ------------
 
-- Avoid specifying the resolution of the image,
-  so that the theme can handle the images consistently
-  and provide the best layout across different screen sizes.
-- When documenting a panel or section of the UI,
-  it is better to use a single image that shows all of the relevant areas
-  (rather than multiple images for each icon or button)
-  placed at the top of the section you are writing,
-  and then explain the features in the order that they appear in the image.
+- Avoid specifying the resolution of the image, so that the theme can handle the images consistently and provide the
+  best layout across different screen sizes.
+- When documenting a panel or section of the UI, it is better to use a single image that shows all of the relevant
+  areas (rather than multiple images for each icon or button) placed at the top of the section you are writing, and
+  then explain the features in the order that they appear in the image.
 
   .. note::
 
-     It is important that the manual can be maintained long term,
-     UI and tool options change so try to avoid having a lot of images
-     (when they are not especially necessary).
-     Otherwise, this becomes too much of a maintenance burden.
+     It is important that the manual can be maintained long term, UI and tool options change so try to avoid having a
+     lot of images (when they are not especially necessary). Otherwise, this becomes too much of a maintenance burden.
 
 
 Videos
 ======
 
-Videos can be embedded from Blender's self-hosted `PeerTube <https://joinpeertube.org/>`__ instance
-which can be found at `video.blender.org <https://video.blender.org/>`__.
-To embed a video using the following directive::
+Videos can be embedded from Blender's self-hosted `PeerTube <https://joinpeertube.org/>`__ instance which can be found
+at `video.blender.org <https://video.blender.org/>`__. To embed a video using the following directive::
 
    .. peertube:: ID
 
@@ -242,13 +250,11 @@ Linking to the outside world::
 Context Sensitive Manual Access
 -------------------------------
 
-It is possible to link to a specific part of the manual from in Blender by opening
-the context menu (right click) of a property or operator and selecting *Online Manual*.
-In order for this to work, this needs to be accounted for in the documentation.
-To link a property or operator to a specific part of the manual you need to add
-an external reference link tag whose ID matches Blender's RNA tag.
-The easiest way to find out what the tag for a property is to open the context menu of
-the property/operator and select *Online Python Reference* to extract the tag from the URL.
+It is possible to link to a specific part of the manual from in Blender by opening the context menu (right click) of a
+property or operator and selecting *Online Manual*. In order for this to work, this needs to be accounted for in the
+documentation. To link a property or operator to a specific part of the manual you need to add an external reference
+link tag whose ID matches Blender's RNA tag. The easiest way to find out what the tag for a property is to open the
+context menu of the property/operator and select *Online Python Reference* to extract the tag from the URL.
 Some examples of how this looks in the RST document are given below::
 
    .. _bpy.types.FluidDomainSettings.use_fractions:

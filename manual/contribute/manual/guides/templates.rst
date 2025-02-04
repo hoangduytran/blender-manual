@@ -10,8 +10,8 @@ The following guide provides patterns for interface elements and directories.
 Operator Menus
 ==============
 
-Each operator should receive its own heading or page based on the length of the content.
-At the start should be a reference admonition documenting the context of the operator::
+Each operator should receive its own heading or page based on the length of the content. At the start should be a
+reference admonition documenting the context of the operator::
 
    .. admonition:: Reference
       :class: refbox
@@ -24,9 +24,9 @@ At the start should be a reference admonition documenting the context of the ope
 Panels
 ======
 
-Panels should be documented by their own heading, nested panels should use decreasing heading levels.
-Each panel could have its own page based on the length of documentation and/or the amount of panels.
-Expanded menus that toggle what properties are presented to the user should be treated like subpanels::
+Panels should be documented by their own heading, nested panels should use decreasing heading levels. Each panel could
+have its own page based on the length of documentation and/or the amount of panels. Expanded menus that toggle what
+properties are presented to the user should be treated like subpanels::
 
    Panel Title
    ===========
@@ -38,8 +38,8 @@ Expanded menus that toggle what properties are presented to the user should be t
 Properties
 ==========
 
-Properties should be documented using definition lists.
-Properties that are hidden based on other properties should used nested definitions::
+Properties should be documented using definition lists. Properties that are hidden based on other properties should
+used nested definitions::
 
    Property
       Property description.
@@ -60,9 +60,8 @@ Select menus should be documented using the following syntax::
 Nodes
 =====
 
-Nodes should always have three headings inputs, properties and outputs
-with a note of absence if the node has none.
-At the end of the page can be an optional example(s) section::
+Nodes should always have three headings inputs, properties and outputs with a note of absence if the node has none. At
+the end of the page can be an optional example(s) section::
 
    **********
    World Node
@@ -125,9 +124,9 @@ For example:
       - ``introduction.rst``
       - ``volumes.rst``
 
-The idea is to enclose all the content of a section inside of a folder. Ideally every section
-should have an ``index.rst`` (containing the TOC for that section) and an ``introduction.rst``
-(introducing) to the contents of the section.
+The idea is to enclose all the content of a section inside of a folder. Ideally every section should have an
+``index.rst`` (containing the TOC for that section) and an ``introduction.rst`` (introducing) to the contents of the
+section.
 
 
 Table of Contents

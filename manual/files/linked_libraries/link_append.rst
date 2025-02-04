@@ -50,7 +50,10 @@ There are ways around this, however:
 
 .. warning::
 
-   Since it is not editable, linked data cannot be :ref:`protected with the Fake User option <data-system-datablock-fake-user>`. Adding a :doc:`custom property </files/custom_properties>` pointing to an otherwise unused linked data-block (e.g. a Text block) is a good way to keep it referenced accross saves and reloads.
+   Since it is not editable, linked data cannot be :ref:`protected with the Fake User option
+   <data-system-datablock-fake-user>`. Adding a :doc:`custom property </files/custom_properties>` pointing to an
+   otherwise unused linked data-block (e.g. a Text block) is a good way to keep it referenced accross saves and
+   reloads.
 
 Options
 -------
