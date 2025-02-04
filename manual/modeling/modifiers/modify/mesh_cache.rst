@@ -54,7 +54,8 @@ Interpolation
    :None:
       Uses only the raw frame data from the cache without interpolation.
    :Linear:
-      Blends between frames for smoother transitions, useful when cache frames do not align perfectly with the scene frames.
+      Blends between frames for smoother transitions, useful when cache frames do not align perfectly with the scene
+      frames.
 
 Vertex Group
    If set, restrict the effect to the only vertices in that vertex group.
