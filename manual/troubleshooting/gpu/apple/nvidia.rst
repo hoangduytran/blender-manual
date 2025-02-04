@@ -1,6 +1,6 @@
 
 ***************
-macOS -- Nvidia
+macOS -- NVIDIA
 ***************
 
 .. include:: ../common/introduction.rst

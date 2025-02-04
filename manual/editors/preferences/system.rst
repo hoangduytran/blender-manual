@@ -27,9 +27,9 @@ for more information see the :doc:`GPU Rendering </render/cycles/gpu_rendering>`
    When set to *None* or when the only option is *None*:
    the CPU will be used as the computing device for Cycles.
 :CUDA:
-   If the system has a compatible Nvidia CUDA device, it will be available as an option for rendering with Cycles.
+   If the system has a compatible NVIDIA CUDA device, it will be available as an option for rendering with Cycles.
 :OptiX:
-   If the system has a compatible Nvidia OptiX device, it will be available as an option for rendering with Cycles.
+   If the system has a compatible NVIDIA OptiX device, it will be available as an option for rendering with Cycles.
 :HIP:
    If the system has a compatible AMD HIP device, it will be available as an option for rendering with Cycles.
 :oneAPI:
@@ -44,7 +44,7 @@ Distribute Memory Across Devices
    effectively freeing up space for larger scenes. Note that in order for this option to be available,
    the GPUs must be connected together with a high bandwidth communication protocol.
 
-   Currently only NVLink on Nvidia GPUs is supported.
+   Currently only NVLink on NVIDIA GPUs is supported.
 
 Embree on GPU
    Enables the use of hardware ray tracing on Intel GPUs, providing better overall performance.

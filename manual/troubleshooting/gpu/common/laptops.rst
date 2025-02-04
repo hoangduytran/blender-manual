@@ -4,7 +4,7 @@ Laptops
 =======
 
 Laptops often have two GPUs for power saving purposes. One slower onboard GPU integrated into the main CPU (typically
-Intel or AMD) that uses lower power, and one faster dedicated GPU for better performance (AMD or Nvidia) that uses
+Intel or AMD) that uses lower power, and one faster dedicated GPU for better performance (AMD or NVIDIA) that uses
 more power.
 
 For the best performance, the dedicated GPU should be used for Blender. Which GPU to use for which application can be

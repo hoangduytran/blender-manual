@@ -20,7 +20,7 @@ Try running Blender from the :doc:`command line </advanced/command_line/index>`,
 are printed.
 
 On Windows, graphics drivers can sometimes get corrupted or incorrectly replaced by Windows Update. In this case, it
-can help to uninstall all graphics drivers (there may be multiple sets installed from Intel, AMD and Nvidia) and
+can help to uninstall all graphics drivers (there may be multiple sets installed from Intel, AMD and NVIDIA) and
 perform a clean installation with drivers from the manufacturer's website.
 
 

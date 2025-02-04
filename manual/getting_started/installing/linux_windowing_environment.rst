@@ -88,11 +88,11 @@ Gnome Shell's Fractional Scaling (before version 44)
    Using fractional under older versions of Gnome-Shell may result in glitches such as a
    `small cursor size <https://projects.blender.org/blender/blender/issues/105895>`__.
 
-NVidia GPU
-   Currently NVidia drivers don't fully support features needed for Wayland. Graphical glitches and flickering are
+NVIDIA GPU
+   Currently NVIDIA drivers don't fully support features needed for Wayland. Graphical glitches and flickering are
    common problems. In some cases, there can be
    `crashes on startup <https://projects.blender.org/blender/blender/issues/103999>`__.
-   This is not specific to Blender, so NVidia users may want to use X11 until driver support improves.
+   This is not specific to Blender, so NVIDIA users may want to use X11 until driver support improves.
 
 ----
 

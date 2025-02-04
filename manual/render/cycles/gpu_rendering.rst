@@ -23,8 +23,8 @@ CUDA -- NVIDIA
 --------------
 
 :abbr:`CUDA (Compute Unified Device Architecture)` is supported on Windows and Linux and requires a
-Nvidia graphics cards with compute capability 3.0 and higher. To make sure your GPU is supported,
-see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
+NVIDIA graphics cards with compute capability 3.0 and higher. To make sure your GPU is supported,
+see the `list of NVIDIA graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
 with the compute capabilities and supported graphics cards.
 
 
@@ -33,9 +33,9 @@ with the compute capabilities and supported graphics cards.
 OptiX -- NVIDIA
 ---------------
 
-OptiX is supported on Windows and Linux and requires a Nvidia graphics cards with compute capability 5.0 and higher
+OptiX is supported on Windows and Linux and requires a NVIDIA graphics cards with compute capability 5.0 and higher
 and a driver version of at least 495.89. To make sure your GPU is supported,
-see the `list of Nvidia graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__.
+see the `list of NVIDIA graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__.
 
 OptiX takes advantage of hardware ray-tracing acceleration in RTX graphics cards, for improved performance.
 
@@ -201,7 +201,7 @@ Unsupported GNU version
 -----------------------
 
 On Linux, depending on your GCC version you might get this error.
-See the `Nvidia CUDA Installation Guide for Linux
+See the `NVIDIA CUDA Installation Guide for Linux
 <https://docs.nvidia.com/cuda/archive/10.2/cuda-installation-guide-linux/index.html>`__
 for a list of supported GCC versions. There are two possible solutions to this error:
 
