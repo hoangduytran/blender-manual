@@ -281,6 +281,9 @@ To protect a data-block, use the button with the shield icon next to its name.
 The data-block will then never be silently deleted by Blender,
 but you can still manually remove it if needed.
 
+.. note::
+
+   :ref:`Linked data <bpy.ops.wm.link>` cannot be protected that way.
 
 .. _data-system-datablock-name-and-rename:
 
