@@ -22,6 +22,7 @@ Brushes for *Sculpt Mode* bundled in the *Essentials* library.
    flatten.rst
    fill.rst
    scrape.rst
+   plane.rst
    multiplane_scrape.rst
    pinch.rst
    grab.rst
