@@ -16,10 +16,11 @@ Before reporting a bug, some basic steps should be taken to ensure that you are 
   errors may be caused by bad settings or add-ons that have not been updated to work with the newest release of
   Blender.
 
-Registration Required
-=====================
+.. admonition:: Registration Required
 
-If this is your first time using the site, you will be required to register before you can file a bug report.
+   If this is your first time using one of the Blender Projects sites, you will be required to register a new Blender
+   ID before you can file a bug report. The screen will guide you through the process.
+
 
 Report from within Blender
 ==========================
