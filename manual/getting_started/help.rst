@@ -19,7 +19,7 @@ After hovering the mouse cursor over a button or setting for a few moments, a to
 Elements
 --------
 
-The context-sensitive Tooltip might contain some of these elements:
+The context-sensitive tooltip might contain some of these elements:
 
 Short Description
    Related details depending on the control.
@@ -30,6 +30,11 @@ Value
 
    Hovering over a color property will display a large swatch preview of the color and the color's hexadecimal, RGBA,
    and HSVA values.
+
+   .. figure:: /images/getting-started_help_color.png
+
+      Tooltip showing color information.
+
 Library
    Source file of the active object. See also :doc:`/files/linked_libraries/index`.
 Disabled (red)
@@ -115,7 +120,15 @@ Directories
    Paths used for scripts, data files, presets and temporary files.
 
    Those directories are configured using the :doc:`Preferences </editors/preferences/file_paths>` Editor.
+FFmpeg
+   The version of the installed FFmpeg components and codecs.
+Other Libraries
+   The version of other libraries used by Blender such as OpenColorIO, Alembic, USD, etc.
 GPU
    Shows the GPU vendor, version and the capabilities of your hardware and driver.
+Implementation Dependent GPU Limits
+   Specific limits on GPU functions related to how the current version of Blender was compiled.
+Cycles
+   The instruction sets and capabilities of each hardware render device available for use with Cycles.
 Enabled Add-Ons
-   Lists add-ons currently in use.
+   Lists add-ons currently in use along with their versions and paths.
