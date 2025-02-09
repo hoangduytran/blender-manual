@@ -441,6 +441,7 @@ dict_custom = {
     "xform",
 
     # Specific computer terms/brands.
+    "3Dconnexion",
     "autocad",
     "autodesk",
     "bullseye",
@@ -478,6 +479,7 @@ dict_custom = {
     "redhat",
     "renderman",
     "sgi",
+    "spacemouse",
     "unix",
     "vive",
     "xinerama",
