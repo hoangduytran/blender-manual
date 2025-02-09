@@ -80,3 +80,8 @@ After a crash, a file named ``blender.crash.txt`` is written to the ``/tmp`` dir
 
    More logs can be obtained by running Blender from Command Line and using ``--factory-startup --debug-all`` flags.
    See :ref:`command_line-launch-index` and :ref:`command_line-args`.
+
+Attaching to a Bug Report
+=========================
+
+Crash files should be attached when you are :doc:`report_bug`.

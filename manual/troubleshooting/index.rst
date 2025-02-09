@@ -13,3 +13,4 @@
    crash.rst
    python.rst
    recover.rst
+   report_bug.rst
