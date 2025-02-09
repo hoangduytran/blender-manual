@@ -43,7 +43,7 @@ Create New Preferences
 Language
    The language used in the user interface. The list is broken up into categories determining how complete the
    translations are. More language preferences can be set in the
-   :ref:`Translation Preferences <pres-interface-translation>`.
+   :ref:`Translation Preferences <prefs-interface-translation>`.
 
 Theme
    Choose between a light or dark theme for Blender. Themes can be customized more in the 
