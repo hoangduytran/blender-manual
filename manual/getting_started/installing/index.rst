@@ -52,7 +52,7 @@ right for everyone.
    - Blender is always up to date.
    - It allows access to any version or branch where a feature is being developed.
    - It can be freely customized.
-   - Curious users can look through the source code and make small changes see the effects to better understand how
+   - Curious users can look through the source code and make small changes to see the effects to better understand how
      Blender works.
 
 The procedure for installing a binary, either the latest stable release or a daily build, is the same. Follow the

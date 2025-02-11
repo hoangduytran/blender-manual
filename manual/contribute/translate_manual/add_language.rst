@@ -103,7 +103,7 @@ Generating the Set of Files for the Target Language
      ``~/blender-manual/tools/util_maintenance``, make a copy of that to your local ``bin`` directory and replace all
      values that were mentioned in the file with your specific details, then after each change to a file, you would do
      following commands to update the file with your personal details, revision date and time, plus generating the
-     html files for your language, which you can view using your Internet browser::
+     html files for your language, which you can view using your internet browser::
 
         $HOME/bin/change_placeholders.sh $BLENDER_MAN_FR
         make -d --trace -w -B -e SPHINXOPTS="-D language='fr'" 2>&1

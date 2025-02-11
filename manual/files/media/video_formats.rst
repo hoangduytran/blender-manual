@@ -70,7 +70,7 @@ FFmpeg Containers
 
    File extension: ``.dv``
 :`Flash <https://en.wikipedia.org/wiki/Flash_Video>`__:
-   A container file format used to deliver video over the Internet using Adobe Flash Player.
+   A container file format used to deliver video over the internet using Adobe Flash Player.
    This container enforces the video codec, you can only define quality parameters.
 
    File Extension: ``.flv``

@@ -5,7 +5,7 @@ Introduction
 
 Here are some preferences that you may wish to set initially. See the section
 :doc:`Preferences </editors/preferences/index>` for the complete list of available settings. The shortcut
-:kbd:`Ctrl+,` can be used to quickly open the Preferences dialog.
+:kbd:`Ctrl+,` can be used to quickly open the Preferences editor.
 
 
 .. _autosave-preferences:
