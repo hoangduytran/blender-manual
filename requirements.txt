@@ -23,3 +23,5 @@ sphinx-autobuild==2024.9.19
 
 # Required for spell-checking
 pyenchant
+# Required for `generate_commit_summary.py`
+GitPython
