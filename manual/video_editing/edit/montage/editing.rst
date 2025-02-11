@@ -259,7 +259,7 @@ Scale to Fit
 
    :Menu:      :menuselection:`Strip --> Image Transform --> Scale to Fit`
 
-Adjusts the strips :ref:`Scale Transforms <bpy.types.SequenceTransform.scale>`
+Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
 so the visual contents of the strip to fit exactly within the project's
 :ref:`Resolution <bpy.types.RenderSettings.resolution_x>`
 while maintaining the original aspect ratio.
@@ -275,7 +275,7 @@ Scale to Fill
 
    :Menu:      :menuselection:`Strip --> Image Transform --> Scale to Fill`
 
-Adjusts the strips :ref:`Scale Transforms <bpy.types.SequenceTransform.scale>`
+Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
 so the visual contents of the strip to span the project's
 :ref:`Resolution <bpy.types.RenderSettings.resolution_x>`
 while maintaining the original aspect ratio.
@@ -290,7 +290,7 @@ Stretch to Fill
 
    :Menu:      :menuselection:`Strip --> Image Transform --> Stretch to Fill`
 
-Adjusts the strips :ref:`Scale Transforms <bpy.types.SequenceTransform.scale>`
+Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
 so the visual contents of the strip to fill the project's
 :ref:`Resolution <bpy.types.RenderSettings.resolution_x>`.
 Note, unlike the other two methods described above, *Stretch to Fill* does not maintaining the original aspect ratio.
@@ -307,7 +307,7 @@ Clear Position
 
    :Menu:      :menuselection:`Strip --> Image Transform --> Clear Position`
 
-Resets the strips :ref:`Position Transforms <bpy.types.SequenceTransform.rotation>` to a value of zero.
+Resets the strips :ref:`Position Transforms <bpy.types.StripTransform.rotation>` to a value of zero.
 
 
 Clear Scale
@@ -317,7 +317,7 @@ Clear Scale
 
    :Menu:      :menuselection:`Strip --> Image Transform --> Clear Scale`
 
-Resets the strips :ref:`Scale Transforms <bpy.types.SequenceTransform.scale>` to a value of one.
+Resets the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>` to a value of one.
 
 
 Clear Rotation
@@ -327,7 +327,7 @@ Clear Rotation
 
    :Menu:      :menuselection:`Strip --> Image Transform --> Clear Rotation`
 
-Resets the strips :ref:`Rotation Transform <bpy.types.SequenceTransform.rotation>` to a value of zero.
+Resets the strips :ref:`Rotation Transform <bpy.types.StripTransform.rotation>` to a value of zero.
 
 
 Clear All
@@ -337,7 +337,7 @@ Clear All
 
    :Menu:      :menuselection:`Strip --> Image Transform --> Clear All`
 
-Resets the strips position, scale, and rotation :ref:`Transforms <bpy.types.SequenceTransform>` to
+Resets the strips position, scale, and rotation :ref:`Transforms <bpy.types.StripTransform>` to
 their default values.
 
 
@@ -623,7 +623,7 @@ individual strips, after which keys can be selected and moved.
 .. rubric:: Selecting Retiming Keys
 
 Retiming keys are always shown on strip as inactive by default.
-In order to select retiming keys, :ref:`Show Retiming Keys <bpy.types.Sequence.show_retiming_keys>` must be enabled.
+In order to select retiming keys, :ref:`Show Retiming Keys <bpy.types.Strip.show_retiming_keys>` must be enabled.
 This property can also be enabled using :ref:`bpy.ops.sequencer.retiming_show`.
 
 Multiple keys can be selected at once with box selection. Box select will select keys, only if a key is already
@@ -743,7 +743,7 @@ Speed
    The rate compared to the original time.
 Preserve Current retiming
    Keeps the speed of the other retiming segments unchanged by adjusting the
-   :ref:`Duration <bpy.types.Sequence.frame_final_duration>` of the strip instead.
+   :ref:`Duration <bpy.types.Strip.frame_final_duration>` of the strip instead.
 
 
 .. _bpy.ops.sequencer.retiming_show:
@@ -757,5 +757,5 @@ Toggle Retiming Keys
    :Menu:      :menuselection:`Strip --> Retiming --> Toggle Retiming Keys`
    :Shortcut:  :kbd:`Ctrl-R`
 
-Enables the :ref:`Show Retiming Keys <bpy.types.Sequence.show_retiming_keys>` strip property.
+Enables the :ref:`Show Retiming Keys <bpy.types.Strip.show_retiming_keys>` strip property.
 This allows retiming keys to be shown for the first time and enables interacting with them.

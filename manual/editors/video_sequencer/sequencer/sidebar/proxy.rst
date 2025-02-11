@@ -59,7 +59,7 @@ Rebuild Proxy and Timecode Indices
    In the *Preview* mode, where the *Proxy* tab is not available,
    this is instead done through the menu :menuselection:`View --> Proxy --> Rebuild`.
 
-.. _bpy.types.SequenceProxy:
+.. _bpy.types.StripProxy:
 .. _bpy.types.MovieSequence.use_proxy:
 
 Strip Proxy & Timecode
@@ -83,22 +83,22 @@ Custom Proxy
    File
       Allows you to use preexisting proxies.
 
-.. _bpy.types.SequenceProxy.build:
+.. _bpy.types.StripProxy.build:
 
 Resolutions
    The resolution(s) of the proxy videos to generate; multiple sizes can be selected.
 
-.. _bpy.types.SequenceProxy.use_overwrite:
+.. _bpy.types.StripProxy.use_overwrite:
 
 Overwrite
    Whether to overwrite existing proxy files or keep them.
 
-.. _bpy.types.SequenceProxy.quality:
+.. _bpy.types.StripProxy.quality:
 
 Quality
    The video/image quality for proxies.
 
-.. _bpy.types.SequenceProxy.timecode:
+.. _bpy.types.StripProxy.timecode:
 
 :term:`Timecode` Index
    When you are working with footage directly copied from a camera without preprocessing it,

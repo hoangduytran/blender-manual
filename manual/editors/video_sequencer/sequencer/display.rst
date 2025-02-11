@@ -37,7 +37,7 @@ Strips
 .. _bpy.types.SequencerTimelineOverlay.show_strip_name:
 
 Name
-   Shows the :ref:`Name <bpy.types.Sequence.name>` of each strip.
+   Shows the :ref:`Name <bpy.types.Strip.name>` of each strip.
 
 .. _bpy.types.SequencerTimelineOverlay.show_strip_source:
 
@@ -76,7 +76,7 @@ Color Tags
 
 Offsets
    Shows overflow bars of content that was trimmed from the strip (by moving
-   the strip's handles). See :ref:`bpy.types.Sequence.frame_offset_start`.
+   the strip's handles). See :ref:`bpy.types.Strip.frame_offset_start`.
 
 
 Waveforms

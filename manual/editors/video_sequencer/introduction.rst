@@ -71,6 +71,6 @@ There are two levels of cache: a memory cache, which is enabled by default
 (and can be enlarged if RAM allows), and a disk cache, which is slower but has more capacity.
 Both of these can be configured in the :ref:`Preferences <prefs-system-video-sequencer>`.
 
-Another way to improve performance is by using :ref:`Strip Proxies <bpy.types.SequenceProxy>`.
+Another way to improve performance is by using :ref:`Strip Proxies <bpy.types.StripProxy>`.
 These are copies of source images and videos with a lower resolution and/or quality,
 making them faster to load than the originals.

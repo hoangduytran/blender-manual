@@ -32,7 +32,7 @@ Relative Path
    Store the location of the image file relative to the blend-file.
 
 Start Frame
-   The :ref:`Start Frame <bpy.types.Sequence.frame_start>` to place the left handle of the strip.
+   The :ref:`Start Frame <bpy.types.Strip.frame_start>` to place the left handle of the strip.
 
 Channel
    The :doc:`Channel </editors/video_sequencer/sequencer/channels>` to place the strip.
@@ -45,20 +45,20 @@ Fit Method
    :ref:`Resolution <bpy.types.RenderSettings.resolution_x>` are scaled to fit inside the render area.
 
    :Scale to Fit:
-      Adjusts the strips :ref:`Scale Transforms <bpy.types.SequenceTransform.scale>` so the visual contents of
+      Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>` so the visual contents of
       the strip to fit exactly within the project's :ref:`Resolution <bpy.types.RenderSettings.resolution_x>`
       while maintaining the original aspect ratio.
 
       This may mean that the transparent areas may be added
       along the content's border to fit the content in the rendered area.
    :Scale to Fill:
-      Adjusts the strips :ref:`Scale Transforms <bpy.types.SequenceTransform.scale>`
+      Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
       so the visual contents of the strip to span the project's
       :ref:`Resolution <bpy.types.RenderSettings.resolution_x>` while maintaining the original aspect ratio.
 
       This may mean that portions of the original image no longer fit the content inside the rendered area.
    :Stretch to Fill:
-      Adjusts the strips :ref:`Scale Transforms <bpy.types.SequenceTransform.scale>` so the visual contents of
+      Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>` so the visual contents of
       the strip to fill the project's :ref:`Resolution <bpy.types.RenderSettings.resolution_x>`. Note, unlike
       the other two methods described above, *Stretch to Fill* does not maintaining the original aspect ratio.
 

@@ -90,7 +90,7 @@ Relative Path
    Store the location of the image file relative to the blend-file.
 
 Start Frame
-   The :ref:`Start Frame <bpy.types.Sequence.frame_start>` to place the left handle of the strip.
+   The :ref:`Start Frame <bpy.types.Strip.frame_start>` to place the left handle of the strip.
 
 Channel
    The :doc:`Channel </editors/video_sequencer/sequencer/channels>` to place the strip.
