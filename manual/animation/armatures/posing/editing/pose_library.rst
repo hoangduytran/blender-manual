@@ -34,14 +34,32 @@ Each pose in the library is stored in its own action data-block.
 This means that it can get its own name, its own preview image,
 and can be organized in :doc:`/files/asset_libraries/catalogs`.
 
+Since a pose asset is just an action, it can also contain
+:ref:`slots<action-slots>`. That means a single pose asset
+can contain a pose for more than one armature. When applying
+the pose, the best matching slot for the given armature will be chosen
+to read the pose from. If no good match can be found it will fall back
+to the first slot. For generic pose assets, it is recommended to use single-slot actions. 
+That way Blender always uses the first (and only) slot, regardless of which 
+character the pose is applied to. If a pose is specific to two
+or more characters, they can be stored in the same asset for convenience.
+For info on how to create such multi-character pose assets see `Pose Creation`_.
+
 
 .. _bpy.ops.poselib.create_pose_asset:
 
 Creating a Pose Library
 =======================
 
-A *pose library file* is typically a blend-file that is dedicated to poses.
-It can link in a character, props, etc., which can then not only be used to create the poses,
+A pose library is a bunch of actions that exist in blend-files of an 
+:ref:`Asset Library<what-is-asset-library>`. Such blend-files can either be
+created manually, or by exporting poses to a library.
+If a pose asset is created by exporting to a library, a :ref:`.asset.blend<asset-system-files>` 
+file will be created for it which will contain just that one asset, and which cannot be opened 
+as a normal blend file to modify it.
+Otherwise there is no restriction on how many pose assets can be contained
+in a blend-file. It is also possible to link in a character, props, etc., 
+which can then not only be used to create the poses,
 but also for :ref:`rendering previews <poselib-preview-images>`.
 
 .. figure:: /images/asset_browser-pose_library_ellie.png
@@ -49,69 +67,38 @@ but also for :ref:`rendering previews <poselib-preview-images>`.
    Example pose library of the Sprite Fright character Ellie.
 
 
-Pose Creation via Action Editor
--------------------------------
+Pose Creation
+-------------
 
 To create a pose in the library from the Action Editor, **pose the character,
-select the relevant bones**, and click the *Create Pose Asset* button.
-This will create the new pose Action, which will contain keys for the current value of
+select the relevant bones**, and click the *Create Pose Asset* button. The same option
+is available in the 3D Viewport while in Pose Mode under the *Pose* menu.
+This will create the new pose action, which will contain keys for the current value of
 each bone's location, rotation, scale, and Bendy Bone properties.
+It doesn't matter if the character is animated or not, so you can easily create pose assets
+from existing animation.
+You can even create a pose asset containing bones of two or more different armatures.
+To do so, put the armatures in pose mode and select the bones you want to add to the asset.
+Clicking the *Create Pose Asset* button will then still create a single action, 
+but with separate :ref:`slots<action-slots>` for each armature.
 
 .. figure:: /images/asset_browser-pose_library-create_from_action_editor.png
 
    To create a new pose asset, use the Create Pose Asset button in the Action editor.
 
-**The created Action is now assigned to the armature.**
-This makes it possible to inspect which bones are included and to tweak anything.
-In that respect, it's an Action like any other, and you can add or remove keys as usual.
-Just make sure that the keys are all on the same frame, in order to keep this a "pose"
-instead of an "animation snippet"; the latter isn't supported at the moment.
+If the "Current File" library is chosen, the action is created in the current blend file 
+and marked as an Asset. If another library is chosen, the pose is extracted
+and a new :ref:`.asset.blend<asset-system-files>` file is created containing the action.
 
-True to its name, the *Create Pose Asset* button automatically marks the Action as Asset.
-Not only does this make it available in the pose library, it will also act as a *fake user*
-to ensure the Action isn't lost after you unassign it from the armature.
-
-The pose asset can be renamed in the Asset Browser. There you can also right
-click on the thumbnail, then choose Assign Action to assign the Action to the
-active Object (see description above).
+In case the pose asset has been created in the current file, it can be renamed in the *Asset Browser*. 
+There you can also right click on the thumbnail, then choose 
+*Assign Action* to assign the action to the active Object (see description above).
 
 .. note::
 
-   The **Create Pose Asset** button creates a new Action. To make sure that this
+   The **Create Pose Asset** button creates a new asset. To make sure that this
    is actually visible in the user interface, so that you know that something happened,
-   it tries to make sure that the Asset Browser shows the newly created pose asset.
-   Because of this, it **requires that there is an Asset Browser visible,
-   and that it's set to show the Current File asset library**.
-
-   This is especially relevant to pose assets, compared to other assets.
-   You cannot mark an object as asset multiple times, but you can create ten pose assets
-   from the same character pose.
-
-
-.. _bpy.ops.poselib.restore_previous_action:
-
-Pose Creation from Existing Animation
--------------------------------------
-
-Animators eat and breathe time, so there is a fair chance that you already have
-some poses lined up on the timeline. Creating a pose asset from existing animation
-is pretty much the same as described above, with a few subtle differences:
-
-- Go to the frame with the pose you want to turn into an asset.
-- Select the relevant bones and click the **Create Pose Asset button** in the Action Editor.
-- This creates an Action as before, but this time
-  **it also includes any bone property that was keyed on the current frame**.
-  In other words: any bone property (regular and custom) that's displayed in
-  yellow in the user interface will be included in the pose asset.
-  This makes it possible to also include properties that control IK/FK switching,
-  for example. As with the pose, the current value is copied into the pose asset,
-  and not the keyed value.
-- Blender saves which action was previously assigned to the armature.
-- The new pose Action is assigned to the armature so you can give it a name and
-  inspect/adjust its contents.
-- Click the *Restore Previous Action* button (back arrow icon) that appeared
-  next to the Create Pose Asset button. This **reassigns the previous Action**,
-  so that you're back at the animation you had before.
+   it tries to make sure that the Asset Shelf is visible in the 3D Viewport.
 
 
 .. _bpy.ops.poselib.copy_as_asset:
@@ -120,8 +107,8 @@ Pose Creation by Copying from Other File
 ----------------------------------------
 
 As described in :ref:`asset-libraries-design-limitations`, Blender only writes
-data to the currently open blend-file. To copy a pose from some other file into
-a pose library file, see the following steps:
+data to the currently open blend-file or to an :ref:`.asset.blend<asset-system-files>` file. 
+To copy a pose from some other file into a pose library file, see the following steps:
 
 - Pose the character and select the relevant bones.
 - Click the **Copy Pose as Asset button**, which is available in the Action Editor. This will create the pose asset
@@ -138,20 +125,6 @@ a pose library file, see the following steps:
 - **Save the file and quit Blender**.
 - The original Blender is still running in the background and notices that the new Blender has quit.
   It **automatically refreshes the Asset Browser** to show the newly added pose.
-
-
-Automatically Assigned Catalog
-------------------------------
-
-When you create a pose asset, Blender may automatically assign it to an asset catalog.
-This only works if there is an Asset Browser visible;
-Blender then assigns the pose asset to its active asset catalog.
-If there are multiple Asset Browsers open, it performs the following steps:
-
-- If the current window has one Asset Browser, it uses that one.
-- If the current window has multiple Asset Browsers, it uses the biggest one.
-- Otherwise Blender goes over the other windows (if there are any), and do a similar search.
-  The first window it sees that has an Asset Browser wins.
 
 
 .. _poselib-preview-images:
@@ -174,29 +147,43 @@ You can also animate settings such as MatCap rendering, light positions, and int
 Use this to your advantage!
 
 
-Scene Animation for Preview Images
-----------------------------------
+Modifying a Pose Asset
+======================
 
-Sometimes it's handy to have a few different background colors or camera angles
-for your poses. Many facial poses are made with a specific camera angle in mind.
+A pose asset can be modified after it has been created.
+This is only possible for pose assets in the current file or that have been exported into
+an `.asset.blend` file.
+For that, an operator has been created which can be accessed by right clicking a pose asset.
+That operator works on the active object, so updating the asset from selected bones
+of multiple armatures won't work. It will find the best matching slot, falling back to
+the first one.
+There are 4 modes.
 
-- Background color can be animated by placing a plane behind the character and animating its material.
-  In this case just for fun, but for more serious applications
-  this could be used to indicate a certain character, or a mood, or anything else.
-- The active camera can be switched by using :ref:`camera markers <bpy.ops.marker.camera_bind>`.
+.. _bpy.ops.poselib.modify_pose_asset:
 
-Both make it possible to choose a specific frame to pick the background color and camera angle.
-Pose the character, click the *Create Pose Asset* button,
-and the pose action will be keyed on the current frame.
-This means it's easy to edit the pose and refresh its preview image,
-because you know exactly which frame it was originally created on.
+Adjust Pose
+  Update existing channels in the pose asset from the selected bones,
+  but don't remove or add any channels.
+
+Replace
+  Completely replace all channels in the pose asset with the channels of the selected bones.
+
+Add
+  Add channels of the selected bones to the pose asset. Existing channels will be updated.
+
+Remove
+  Remove channels of the selected bones from the pose asset.
 
 
 Using the Pose Library
 ======================
 
-The pose library can be used to pose a character in a few different ways.
-In short, you can fully apply a pose or blend it into the character's current pose interactively.
+The pose library can be used to pose one or more characters.
+The current bone selection will be used to determine which bones are modified.
+When editing multiple armatures at once, a matching :ref:`slot<action-slots>` 
+of the pose asset is determined for each armature.
+It is possible to either fully apply a pose or blend it into 
+the character's current pose interactively.
 How exactly these operations work depends on where you use them.
 This section will explain the use from both the Asset Browser and the 3D Viewport.
 
@@ -289,11 +276,11 @@ Converting Old Pose Libraries
 
 Old-style pose libraries can be converted to pose assets in the following way:
 
-- In the Action Editor, select the Action containing the pose library you want to convert.
+- In the Action Editor, select the action containing the pose library you want to convert.
 - Make sure the scene camera is set up correctly for rendering preview images.
 - In the Action Editor's Pose Library panel, click the "Convert Old-Style Pose Library" button.
 - Open the Asset Browser, and see the poses have been converted.
-- If you're happy with the result, remove the old pose library Action.
+- If you're happy with the result, remove the old pose library action.
 - Save the blend-file.
 
 As usual, the blend-file should be saved to a directory marked as asset library

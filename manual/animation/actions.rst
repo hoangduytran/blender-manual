@@ -23,6 +23,9 @@ building a library of animations (run cycles, jumps, idling, etc.), each
 animation can go into its own action, which can then be conveniently linked or
 exported as a distinct animation.
 
+
+.. _action-slots:
+
 Action Slots
 ============
 
