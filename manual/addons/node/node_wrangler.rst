@@ -299,15 +299,15 @@ You can cycle through the available outputs by clicking it again while holding t
    It also works in all node editors.
 
 
-Frame Selected
---------------
+Join Nodes
+----------
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Frame Selected`
+   :Menu:   :menuselection:`Node Wrangler --> Join Nodes`
    :Shortcut:  :kbd:`Shift-P`
 
-Insert the selected nodes into a Frame node.
+See :ref:`bpy.ops.node.join`.
 
 
 Reload Images

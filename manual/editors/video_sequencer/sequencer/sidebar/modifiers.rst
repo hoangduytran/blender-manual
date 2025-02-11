@@ -1,7 +1,7 @@
 .. index:: Modifiers; Video Sequencer Modifiers
 .. index:: Video Sequencer Modifiers
 
-.. _bpy.types.SequenceModifier:
+.. _bpy.types.StripModifier:
 
 *********
 Modifiers
@@ -21,7 +21,7 @@ You can add these modifiers directly to a media strip,
 or you can use them within an :doc:`Adjustment Layer </video_editing/edit/montage/strips/adjustment>`
 strip, making them apply to several media strips in one go.
 
-.. _bpy.types.Sequence.use_linear_modifiers:
+.. _bpy.types.Strip.use_linear_modifiers:
 
 Linear Modifiers
    Calculates modifiers in :ref:`linear color space <color-management-linear-space>` instead of the
@@ -155,7 +155,7 @@ Mask Modifier
 
 The mask modifier is used to affect the :term:`Alpha Channel` of the current strip.
 
-.. _bpy.types.SequenceModifier.input_mask_type:
+.. _bpy.types.StripModifier.input_mask_type:
 
 Mask Input Type
    Type of input data used for the mask.
@@ -165,13 +165,13 @@ Mask Input Type
    :Mask:
       Use a mask data-block to affect the alpha of the current strip.
 
-.. _bpy.types.SequenceModifier.input_mask_id:
-.. _bpy.types.SequenceModifier.input_mask_strip:
+.. _bpy.types.StripModifier.input_mask_id:
+.. _bpy.types.StripModifier.input_mask_strip:
 
 Mask
    The Strip or Mask data-block to use.
 
-.. _bpy.types.SequenceModifier.mask_time:
+.. _bpy.types.StripModifier.mask_time:
 
 Mask Time :guilabel:`Mask Input Only`
    How the start frame of the mask is calculated.

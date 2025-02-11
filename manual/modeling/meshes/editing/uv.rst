@@ -6,6 +6,7 @@ UV Operators
 Blender offers several ways of mapping UVs, going from simple ones that merely project the
 mesh's vertices onto a plane to more advanced ones.
 
+
 .. _bpy.ops.uv.unwrap:
 
 Unwrap
@@ -13,9 +14,16 @@ Unwrap
 
 .. reference::
 
-   :Editor:    3D Viewport, UV Editor
+   :Editor:    3D Viewport
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> Unwrap --> Angle Based, Conformal, Minimum Stretch`
+   :Menu:      :menuselection:`UV --> Unwrap Angle Based, Unwrap Conformal, Unwrap Minimum Stretch`
+   :Shortcut:  :kbd:`U`
+
+.. reference::
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Unwrap --> Unwrap Angle Based, Unwrap Conformal, Unwrap Minimum Stretch`
    :Shortcut:  :kbd:`U`
 
 Cuts the selected faces along their :doc:`seams </modeling/meshes/uv/unwrapping/seams>`,
@@ -34,12 +42,12 @@ Options
 The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh is unwrapped:
 
 Method
-   Angle Based
+   :Angle Based:
       Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh.
-   Conformal
+   :Conformal:
       Uses Least Squares Conformal Mapping (LSCM).
       This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects.
-   Minimum Stretch
+   :Minimum Stretch:
       Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.
 Fill Holes
    Virtually fill holes in the mesh before unwrapping, to better avoid overlaps and preserve symmetry.

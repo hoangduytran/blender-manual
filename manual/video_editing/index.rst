@@ -1,4 +1,4 @@
-.. _bpy.types.Sequence:
+.. _bpy.types.Strip:
 .. _bpy.ops.sequencer:
 
 #################

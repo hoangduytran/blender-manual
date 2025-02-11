@@ -12,6 +12,13 @@ RGB Node
    :align: right
    :alt: RGB Node.
 
+The *RGB* node outputs the color value chosen with the color picker widget.
+
+.. tip::
+
+   Dragging colors from a color picker button into a node editor creates a RGB node.
+   Alpha values are preserved, if the source color has no alpha, a value of 1.0 is used.
+
 
 Inputs
 ======

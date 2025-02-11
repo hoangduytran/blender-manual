@@ -575,6 +575,7 @@ Copy UVs
    :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Copy UVs`
+   :Shortcut:  :kbd:`Ctrl-C`
 
 For each selected UV island, the *Copy UVs* tool will copy it's topology and UV coordinates into a temporary clipboard
 for later use with the *Paste UVs* tool.
@@ -594,6 +595,7 @@ Paste UVs
    :Editor:    UV Editor
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Paste UVs`
+   :Shortcut:  :kbd:`Ctrl-V`
 
 For each selected UV island, the *Paste UVs* tool will attempt to match the topology of an island stored in the
 internal clipboard. If a match is found, the UVs stored in the clipboard for the original island will be pasted

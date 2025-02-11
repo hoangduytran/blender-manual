@@ -9,7 +9,7 @@ Header
 Type
    Strip type, represented by an icon.
 
-.. _bpy.types.Sequence.name:
+.. _bpy.types.Strip.name:
 
 Name
    A text field to adjust the name of the strip, which is shown on the strip in the timeline.
@@ -42,7 +42,7 @@ Opacity
    This can be hidden by disabling the :ref:`F-Curves <bpy.types.SequencerTimelineOverlay.show_fcurves>`.
 
 
-.. _bpy.types.SequenceTransform:
+.. _bpy.types.StripTransform:
 
 Transform
 =========
@@ -51,7 +51,7 @@ Transform
 
    :Panel:     :menuselection:`Sidebar --> Strip --> Transform`
 
-.. _bpy.types.SequenceTransform.filter:
+.. _bpy.types.StripTransform.filter:
 
 Filter
    The technique used to estimate the values of pixels at non-integer coordinates within the image.
@@ -69,17 +69,17 @@ Filter
    :Cubic B-Spline: Cubic B-Spline filter (blurry but no ringing) on 4×4 samples.
    :Box: Averages source image samples that fall under destination pixel.
 
-.. _bpy.types.SequenceTransform.offset:
+.. _bpy.types.StripTransform.offset:
 
 Position X, Y
    Used to move the frames along the X and Y axis.
 
-.. _bpy.types.SequenceTransform.scale:
+.. _bpy.types.StripTransform.scale:
 
 Scale X, Y
    Scale the image on the X and Y axis.
 
-.. _bpy.types.SequenceTransform.rotation:
+.. _bpy.types.StripTransform.rotation:
 
 Rotation
    Rotates the input two-dimensionally along the Z axis.
@@ -221,22 +221,22 @@ The Time panel is used to control source and timeline position of the strip.
 Lock (padlock icon in panel header)
    Prevents the strip from being moved.
 
-.. _bpy.types.Sequence.show_retiming_keys:
+.. _bpy.types.Strip.show_retiming_keys:
 
 Show Retiming Keys
    Toggle visibility and selectability of :ref:`sequencer-editing-retiming`.
 
-.. _bpy.types.Sequence.channel:
+.. _bpy.types.Strip.channel:
 
 Channel
    Changes the channel number, or row, of the strip.
 
-.. _bpy.types.Sequence.frame_start:
+.. _bpy.types.Strip.frame_start:
 
 Start
    Changes the starting frame of the strip, which is the same as selecting and moving the strip.
 
-.. _bpy.types.Sequence.frame_final_duration:
+.. _bpy.types.Strip.frame_final_duration:
 
 Duration
    Changes the length (in frames) of the strip. This works by changing the end frame,
@@ -244,8 +244,8 @@ Duration
 End
    Shows the ending time and frame of the strip.
 
-.. _bpy.types.Sequence.frame_offset_start:
-.. _bpy.types.Sequence.frame_offset_end:
+.. _bpy.types.Strip.frame_offset_start:
+.. _bpy.types.Strip.frame_offset_end:
 
 Strip Offset Start/End
    Positive values will move the strip's handles inwards, making it start later than the start

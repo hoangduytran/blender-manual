@@ -50,7 +50,7 @@ Move :kbd:`G`
 
    The header shows how far the image has moved, including the offset along each axis.
 
-   Instead of using this tool, you can also adjust the :ref:`Position <bpy.types.SequenceTransform.offset>`
+   Instead of using this tool, you can also adjust the :ref:`Position <bpy.types.StripTransform.offset>`
    in the Sidebar's *Strip* tab (only available in the *Sequencer* and *Sequencer & Preview* modes).
 
 Rotate :kbd:`R`
@@ -70,7 +70,7 @@ Rotate :kbd:`R`
 
    The header shows how much the image has rotated.
 
-   Instead of using this tool, you can also adjust the :ref:`Rotation <bpy.types.SequenceTransform.rotation>`
+   Instead of using this tool, you can also adjust the :ref:`Rotation <bpy.types.StripTransform.rotation>`
    in the Sidebar's *Strip* tab (only available in the *Sequencer* and *Sequencer & Preview* modes).
 
 Scale :kbd:`S`
@@ -98,7 +98,7 @@ Scale :kbd:`S`
 
    The header shows the current scale factor.
 
-   Instead of using this tool, you can also adjust the :ref:`Scale <bpy.types.SequenceTransform.scale>`
+   Instead of using this tool, you can also adjust the :ref:`Scale <bpy.types.StripTransform.scale>`
    in the Sidebar's *Strip* tab (only available in the *Sequencer* and *Sequencer & Preview* modes).
 
 Transform
