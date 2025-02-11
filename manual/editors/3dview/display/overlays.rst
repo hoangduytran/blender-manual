@@ -228,6 +228,11 @@ Bevel
 Seams
    Display the :doc:`UV unwrapping seams </modeling/meshes/uv/unwrapping/seams>`.
 
+.. _bpy.types.View3DOverlay.show_extra_indices:
+
+Indices
+   Display the indices of selected vertices, edges, and faces.
+
 
 Shading
 -------
@@ -294,7 +299,6 @@ Face Angle
    These values respect the :ref:`Transform Space <modeling-mesh-transform-panel>`
    in the Sidebar. Use *Global* if you want the object's scale to be applied to the measurements.
 
-
 .. seealso::
 
    The :doc:`Measure </editors/3dview/toolbar/measure>` tool for measuring
@@ -317,16 +321,6 @@ Size
 
    Constant Screen Size Normals
       Keep the size of normals constant in relation to the zoom level.
-
-
-Developer
----------
-
-These overlays are only available if *Developer Extras* is enabled
-in the :doc:`Interface Preferences </editors/preferences/interface>`.
-
-Indices
-   Display the indices of selected vertices, edges, and faces.
 
 
 Freestyle
