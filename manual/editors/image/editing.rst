@@ -196,7 +196,16 @@ Resize
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Resize`
 
-Adjust the image size in pixels.
+Adjusts the image dimensions by scaling its pixel resolution. This is useful for various tasks, such as:
+
+- Reducing texture resolution to optimize performance and memory usage.
+- Increasing image resolution for more detailed painting or editing.
+
+Size X, Y
+   Defines the new width and height of the image in pixels.
+
+All UDIM Tiles
+   Applies the resizing operation to all UDIM tiles in the image.
 
 
 Transform
