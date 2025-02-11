@@ -1,3 +1,5 @@
+:orphan:
+
 .. _linux-windowing-environment:
 
 ***************************
