@@ -44,8 +44,6 @@ these are more visible for bump maps than other types of textures.
 Displacement Only
 =================
 
-:guilabel:`Cycles Only`
-
 The most accurate and memory intensive displacement method is to apply true displacement to
 the mesh surface.
 
@@ -61,6 +59,9 @@ as 8-bit images often can not represent all the necessary detail.
 
    The :doc:`Displace Modifier </modeling/modifiers/deform/displace>` can also be used to displace a mesh.
 
+.. note::
+
+   Cycles does not support unique displacement per instance.
 
 Displacement and Bump
 =====================
