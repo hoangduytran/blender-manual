@@ -24,7 +24,7 @@ animation can go into its own action, which can then be conveniently linked or
 exported as a distinct animation.
 
 
-.. _action-slots:
+.. _animation-actions-slots:
 
 Action Slots
 ============
@@ -81,6 +81,7 @@ and don't have any intrinsic attachment to anything in the scene.
    to be aware of this when writing scripts and addons that work with actions.
    See the Python API documentation for more details.
 
+
 Slot Names and Associated Types
 -------------------------------
 
@@ -117,6 +118,7 @@ familiar approach and name them "Cube" and "Cube.001".
    that slot are unlikely to match any properties on the mismatched data-block,
    and therefore won't animate anything.
 
+
 F-Curves & Channels
 ===================
 
@@ -145,6 +147,7 @@ Channels also support a limited form of organization called "channel groups".
 For example, by default Blender creates a channel group for the channels of each
 bone. There are a few features in Blender that rely on the groups, but mostly
 they are just for your convenience.
+
 
 .. _working_with_actions:
 
@@ -177,6 +180,8 @@ node trees, and meshes and their shape key data.
    considered closely related.
 
 
+.. _animation-actions-slots-manual-assign:
+
 Manually Assigning Actions and Slots
 ------------------------------------
 
@@ -204,6 +209,10 @@ Editor's header.
    The action and slot selector for the active object (in this case a camera object) in the
    :doc:`Action Editor </editors/dope_sheet/modes/action>`.
 
+.. seealso::
+
+   - :ref:`Scene Animation Panel <scene-properties-animation>`
+
 .. note::
 
    When selecting a slot for a data-block, you won't necessarily see all the
@@ -219,12 +228,14 @@ new one, or just start keying and let Blender automatically create a new slot
 for you. If Blender assigns a slot you didn't want, you can select another slot
 manually or simply clear the slot selection.
 
+
 NLA
 ---
 
 Actions can also be assigned to NLA strips within a data-block's NLA system.
 Please see the documentation for the :doc:`NLA Editor </editors/nla/introduction>`
 for how to animate data-blocks via the NLA system.
+
 
 .. _actions-properties:
 
@@ -269,6 +280,7 @@ Cyclic Animation
       if :ref:`Cycle-Aware Keying <bpy.types.ToolSettings.use_keyframe_cycle_aware>` is enabled,
       it will automatically enable cyclic extrapolation and set up the loop period for curves
       newly added to the action.
+
 
 Slot
 ----
