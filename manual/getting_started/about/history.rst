@@ -10,24 +10,24 @@ Blender was created by Ton Roosendaal, a Dutch art director and self-taught soft
 things technical and creative, Roosendaal began a degree in Industrial Design, but dropped out in order to start his
 own 3D animation studio, NeoGeo, in 1989 (the video game console of the same name appeared a year later). Initially
 based in Roosendaal's attic, NeoGeo grew rapidly, garnering awards and becoming the biggest company of its type in the
-Netherlands. 
+Netherlands.
 
 Roosendaal wrote the first source files titled "Blender" on the 2nd of January, 1994, still considered Blender's
 official birthday. Originally, Blender was planned as an in-house application for NeoGeo; it grew from a series of
 pre-existing tools, including a ray-tracer built for the Amiga. This early version of Blender was intended to address
 a perennial frustration among creatives: when a difficult client requires multiple changes to a project, how do you
 implement those changes painlessly? Thanks to its highly configurable approach, Blender aimed at providing an answer.
-(As an aside: the name refers to a song by a Swiss electronic band, Yello).   
+(As an aside: the name refers to a song by a Swiss electronic band, Yello).
 
 Roosendaal invested his savings in a Silicon Graphics workstation. Costing the equivalent of thirty thousand US
 dollars, this computer led to Blender 1.0. Launched in January 1995, this first iteration of Blender proper
-incorporated then innovative ideas, including a single window which could be subdivided as the user saw fit. 
+incorporated then innovative ideas, including a single window which could be subdivided as the user saw fit.
 
 At the time, 3D was considered commercially uninteresting. However, Roosendaal had fallen in love with what he
 describes as its "magical ability to create a whole world in a computer." So when NeoGeo closed, he and partner Frank
 van Beek founded a new company focused on further developing and marketing Blender. Not a Number (NaN) opened its
 doors in June 1998, distributing Blender under a freemium pricing strategy: the software was free to download, with
-NaN selling keys to unlock more advanced features.    
+NaN selling keys to unlock more advanced features.
 
 Blender Goes Open Source
 ========================
@@ -36,85 +36,86 @@ Thanks to this business model, NaN was able to fund a booth at a renowned comput
 SIGGRAPH (Special Interest Group on Computer Graphics and Interactive Techniques). As a consequence, Blender attracted
 two rounds of funding totalling some five and a half million US dollars. Despite this investment, a harsh economic
 climate, excess spending, and troubled relations between NaN and its investors meant that the company closed in early
-2002. 
+2002.
 
 With NaN's demise, Blender's development ceased. Unable to buy the rights from NaN's backers, Roosendaal opted for a
 novel plan. In May of 2002, he started a non-profit, the Blender Foundation, with the intention of making Blender
-`open-source <https://opensource.org/>`__. His hope was to create a public monument to Blender, and give everyone who had worked on the Blender
-project the chance to use it for their portfolios. In July of the same year, he launched the first-ever crowdfunding
-campaign: Free Blender. Thanks to Blender's community of 250,000 users, the Blender Foundation was able to raise one
-hundred and ten thousand euros in just seven weeks — sufficient to regain Blender from its investors.             
+`open-source <https://opensource.org/>`__. His hope was to create a public monument to Blender, and give everyone who
+had worked on the Blender project the chance to use it for their portfolios. In July of the same year, he launched the
+first-ever crowdfunding campaign: Free Blender. Thanks to Blender's community of 250,000 users, the Blender Foundation
+was able to raise one hundred and ten thousand euros in just seven weeks — sufficient to regain Blender from its
+investors.
 
 On Sunday, October 13th, 2002, Blender was released under the terms of the `GNU General Public License
 <https://www.gnu.org/licenses/gpl.html>`__, the strictest possible open-source contract. Not only would Blender be
-free, but its source code would remain free, forever, to be used for any purpose whatsoever. 
+free, but its source code would remain free, forever, to be used for any purpose whatsoever.
 
 The success of Free Blender cleared the way for a style of development that has become Blender's defining strength.
 While Blender's evolution is partly driven by grant-funded developers and guided by a core team at the Blender
 Foundation, Amsterdam, its greatest advantage is a global community of dedicated volunteers. Thanks to their efforts,
 Blender is able to iterate rapidly and respond to the needs of artists and makers. Such nimbleness and creativity
-would be much harder within the confines of a traditional business model. 
+would be much harder within the confines of a traditional business model.
 
 Blender Makes Open Movies
 =========================
 
 As a way to stress-test Blender's increasing power, the Blender Foundation challenged its community's most talented
 artists to make an animated 3D short film. The only criterion was that they had to use open source tools, with Blender
-prime among them.   
+prime among them.
 
 Under the codename "Project Orange," this project began in 2005, resulting in Elephants Dream, a surreal adventure
-through a gigantic machine. The film and all its assets were made freely available under a Creative Commons licence.  
+through a gigantic machine. The film and all its assets were made freely available under a Creative Commons licence.
 
 After the success of Elephants Dream, the Blender Institute was established in the summer of 2007. As well as helping
 to define the Blender Foundation's goals, the Blender Institute comprised a permanent office and studio, with the
 express intention of generating Open Projects related to 3D movies, games or visual effects. As part of its output,
 the Blender Institute has created a series of Open Movies in collaboration with leading artists. They include the
 comedy Big Buck Bunny (2008), science fiction thriller Tears of Steel (2012), a poetic fantasy Spring (2019), and
-horror-comedy Sprite Fright (2021). 
+horror-comedy Sprite Fright (2021).
 
 Blender Landmarks
 =================
 
 Each Open Project places new demands on Blender as a 3D creation suite, which in turn leads to further upgrades. While
-a complete list of updates is beyond the scope of this article, some milestones are worth noting.  
+a complete list of updates is beyond the scope of this article, some milestones are worth noting.
 
 Early 2008 saw the start of the Blender 2.5 project. This combined a major User Interface overhaul, with new tool
 definitions, a data access system, event handling, and a new animation system. For 2.5, the primary goal was to bring
-the interface standards and input methods up to date.  
+the interface standards and input methods up to date.
 
 Cycles is Blender's production-capable path-tracing render engine, first incorporated into release 2.61, back in 2011.
 Over the years, Cycles has introduced support for a wide range of rendering possibilities, including AMD and NVIDIA.
 Similarly, it's grown to include support for many features including hair, motion blur, smoke and fire, major shaders
-and materials, adaptive subdivisions, and much more.     
+and materials, adaptive subdivisions, and much more.
 
 With its watershed 2.8 release in July, 2019, Blender broke into the 3D mainstream. Starting with a drastically
 revamped User Interface, the 2.8 series included a multitude of innovations, from EEVEE (a real-time render engine),
 to new remeshing options for sculptors, to the integration of Mantaflow, to a fully functioning 2D animation workspace
-that also offered the possibility of a 2D/3D hybrid workflow. 
+that also offered the possibility of a 2D/3D hybrid workflow.
 
 Although industry recognition for Blender had grown over the decades, 2.8 marked the moment when it was widely
 accepted as a legitimate alternative to paid competitors. As well as using Blender in their own projects, some of the
 world's largest and most recognized companies became regular contributors to the Blender Development Fund, ensuring
-that Blender can continue to innovate. 
+that Blender can continue to innovate.
 
 As well as Blender and Open Projects made with Blender, there's Blender Cloud. This subscription-based Open Production
 platform provides rolling updates on current Open Movie projects, as well as an archive of film assets in .blend file
 form, animation and shot breakdowns, shaders and textures, and comprehensive training videos from professional artists
-and developers, often those employed at Blender HQ in Amsterdam.   
+and developers, often those employed at Blender HQ in Amsterdam.
 
 Blender: Present And Future
 ===========================
 
 In total, the Blender organization numbers some twenty-eight employees, working from Amsterdam, remotely, and on a
 grant basis. For Blender, this team represents only a small part of a much wider community, which it defines as
-everyone who contributes to Blender's development, earns their living from Blender, or simply downloads it.              
+everyone who contributes to Blender's development, earns their living from Blender, or simply downloads it.
 
 The Blender mission can be summed up as "get the world's best 3d technology in the hands of artists as open-source,
 and make amazing things with it."
 
 Going forward, Blender hopes to become a sustainable, future proof organization, dedicated to furthering its
 open-source philosophy, its values of curiosity and innovation, a commitment to technical excellence, and increasingly
-ambitious creative goals. 
+ambitious creative goals.
 
 
 Version/Revision Milestones
@@ -210,11 +211,12 @@ Version/Revision Milestones
 .. rubric:: Blender 2.5x -- The Recode!
 
 `2.5x <https://www.blender.org/download/releases/#25-series-2009-2011>`__ -- From 2009 to August 2011:
-   This series released four `pre-version <https://archive.blender.org/www/development/release-logs/blender-256-beta>`__
-   (from Alpha 0 in November 2009 to Beta in July 2010) and three stable versions (from 2.57 - April 2011 to 2.59 -
-   August 2011). It was one of the most important development projects, with a total refactor of the software with new
-   functions, redesign of the internal window manager and event/tool/data handling system, and new Python API. The
-   final version of this project was Blender 2.59 in August 2011.
+   This series released four `pre-version
+   <https://archive.blender.org/www/development/release-logs/blender-256-beta>`__ (from Alpha 0 in November 2009 to
+   Beta in July 2010) and three stable versions (from 2.57 - April 2011 to 2.59 - August 2011). It was one of the most
+   important development projects, with a total refactor of the software with new functions, redesign of the internal
+   window manager and event/tool/data handling system, and new Python API. The final version of this project was
+   Blender 2.59 in August 2011.
 
 
 .. rubric:: Blender 2.6x to 2.7x -- Improvements & Stabilizing
@@ -382,4 +384,3 @@ Version/Revision Milestones
    compositor, minimum stretch (SLIM) UV unwrapping, numerous Geometry Nodes updates including for...each zone,
    physics nodes, Grease Pencil engine rewritten for speed and features, over 100 default brushes now included for
    painting and sculpting, UI area docking.
-

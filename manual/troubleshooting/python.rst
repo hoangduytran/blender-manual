@@ -26,8 +26,8 @@ Mixed Python Libraries (DLLs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If Python is raising errors or you have an add-on that just fails when enabled with an error -- e.g: ``... is not a
-valid Win32 application.`` -- this may be caused by some inconsistency in the Python libraries. While Blender comes with
-its own bundled Python interpreter, duplicate, incompatible libraries can cause problems.
+valid Win32 application.`` -- this may be caused by some inconsistency in the Python libraries. While Blender comes
+with its own bundled Python interpreter, duplicate, incompatible libraries can cause problems.
 
 .. figure:: /images/troubleshooting_python_traceback.png
 

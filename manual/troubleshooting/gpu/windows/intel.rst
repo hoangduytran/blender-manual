@@ -32,8 +32,8 @@ Compatibility` and enable :menuselection:`Run this program in compatibility mode
 Legacy Intel HD 4000/5000
 =========================
 
-When running on Intel 3rd, 4th or 5th gen iGPUs, the latest Intel driver will crash on startup. In order to start Blender
-try to install a previous version of the driver. Drivers that are known to work are:
+When running on Intel 3rd, 4th or 5th gen iGPUs, the latest Intel driver will crash on startup. In order to start
+Blender try to install a previous version of the driver. Drivers that are known to work are:
 
 - 20.19.15.4835
 - 20.19.15.4963

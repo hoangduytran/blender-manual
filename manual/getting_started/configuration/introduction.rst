@@ -5,7 +5,7 @@ Introduction
 
 Here are some preferences that you may wish to set initially. See the section
 :doc:`Preferences </editors/preferences/index>` for the complete list of available settings. The shortcut
-:kbd:`Ctrl+,` can be used to quickly open the Preferences editor.
+:kbd:`Ctrl-Comma` can be used to quickly open the Preferences editor.
 
 
 .. _autosave-preferences:
@@ -19,8 +19,8 @@ change you have made. To disable this behavior, perform these steps:
 1. Open the Preferences dialog
 2. Click on the small menu at the lower left (shown by 3 lines)
 3. Uncheck the box next to "*Auto-Save Preferences*"
-4. Click the "*Save Preferences*" button that will appear in the lower left of the dialog. **Don't forget this step, as
-   the change will not be saved otherwise.**
+4. Click the "*Save Preferences*" button that will appear in the lower left of the dialog. **Don't forget this step,
+   as the change will not be saved otherwise.**
 
 To enable auto-save once again, simply follow steps 1-3 above and check the box in step 3.
 
