@@ -274,3 +274,25 @@ The *Rigid Body World* is a group of rigid body objects,
 which holds settings that apply to all rigid bodies in this simulation.
 
 See :doc:`Rigid Body World </physics/rigid_body/world>` for more information.
+
+
+.. _scene-properties-animation:
+
+Animation
+=========
+
+.. reference::
+
+   :Panel:     :menuselection:`Properties --> Scene --> Animation`
+
+Controls animation data for scene-level properties, including active :doc:`Actions </animation/actions>`
+and their assigned :ref:`Slot <animation-actions-slots>`.
+
+See :ref:`animation-actions-slots-manual-assign` for more information.
+
+Scene
+   Specifies the action and slot where animation data for scene properties is stored/retrieved.
+
+Compositing Node Tree
+   Specifies the action and slot where animation data for
+   :doc:`Compositing Nodes </compositing/index>` is stored/retrieved.
