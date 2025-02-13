@@ -42,6 +42,8 @@ Is Reflection Ray :guilabel:`Cycles Only`
    1.0 if shading is executed for a reflection ray, otherwise 0.0.
 Is Transmission Ray :guilabel:`Cycles Only`
    1.0 if shading is executed for a transmission ray, otherwise 0.0.
+Is Volume Scatter Ray :guilabel:`Cycles Only`
+   1.0 if shading is executed for a volume scatter ray, otherwise 0.0.
 Ray Length :guilabel:`Cycles Only`
    Distance traveled by the light ray from the last bounce or camera.
 Ray Depth
