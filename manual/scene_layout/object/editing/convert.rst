@@ -44,27 +44,18 @@ Grease Pencil
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Convert --> Grease Pencil`
 
-Converts the selected curve, mesh or text object to a Grease Pencil object
-with strokes matching the curve, mesh, or text; basic materials are also added.
-When multiple curves, meshes, or texts are selected, they are all converted into
-the same Grease Pencil object.
-
-
-Options
--------
+Converts the selected curve, mesh, or text object to a Grease Pencil object, generating strokes
+that follow the original shape. Basic materials are also created.
+When multiple objects are selected, they are combined into a single Grease Pencil object.
 
 Keep Original
-   Duplicates the original object before converting it.
+   Keeps the original object by creating a duplicate before conversion.
 Thickness
-   Strokes thickness.
-Threshold Angle
-   Threshold value that determines the strokes end.
+   Defines the stroke thickness.
 Stroke Offset
-   Sets offset to separate strokes from filled strokes.
-Only Seam Edges
-   Convert only edges marked as seam.
+   Adjusts the offset to separate strokes from filled areas.
 Export Faces
-   Convert faces as filled strokes.
+   Converts mesh faces into filled strokes.
 
 
 Trace Image to Grease Pencil
