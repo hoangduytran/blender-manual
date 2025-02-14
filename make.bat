@@ -83,8 +83,8 @@ if "%1" == "help" (
 
 if "%1" == "setup" (
 	python -m venv ".venv"
-	".venv/Scripts/pip" install pip --upgrade
-	".venv/Scripts/pip" install -r "requirements.txt" --upgrade
+	".venv\Scripts\pip" install pip --upgrade
+	".venv\Scripts\pip" install -r "requirements.txt" --upgrade
 	goto EOF
 )
 
@@ -116,7 +116,7 @@ if "%1" == "checkout_locale" (
 )
 
 if "%1" == "update_po" (
-	python tools/utils_maintenance\update_po.py
+	python tools\translations\update_po.py
 	goto EOF
 )
 
