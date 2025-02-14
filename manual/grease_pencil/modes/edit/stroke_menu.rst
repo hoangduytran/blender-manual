@@ -289,6 +289,8 @@ Type
    :Close All: Close all open selected strokes.
    :Open All: Open all closed selected strokes.
    :Toggle: Close or Open selected strokes as required.
+Match Point Density
+   Add point in the new segment to keep the same density.
 
 
 Toggle Cyclic
@@ -305,6 +307,8 @@ Type
    :Close All: Close all open selected strokes.
    :Open All: Open all closed selected strokes.
    :Toggle: Close or Open selected strokes as required.
+Match Point Density
+   Add point in the new segment to keep the same density.
 
 
 .. _bpy.ops.grease_pencil.caps_set:
@@ -361,7 +365,7 @@ Switch Direction
 
 The *Switch Direction* operator reverses the direction of the selected Grease Pencil stroke. This means the starting
 point of the stroke becomes the endpoint, and vice versa. While this operation does not alter the visual appearance
-of the stroke, but affects behaviors that rely on the point order, such as the 
+of the stroke, but affects behaviors that rely on the point order, such as the
 :doc:`Build Modifier </grease_pencil/modifiers/generate/build>`.
 
 
