@@ -34,7 +34,7 @@ Blender Goes Open Source
 
 Thanks to this business model, NaN was able to fund a booth at a renowned computer graphics conference in Los Angeles,
 SIGGRAPH (Special Interest Group on Computer Graphics and Interactive Techniques). As a consequence, Blender attracted
-two rounds of funding totalling some five and a half million US dollars. Despite this investment, a harsh economic
+two rounds of funding totaling some five and a half million US dollars. Despite this investment, a harsh economic
 climate, excess spending, and troubled relations between NaN and its investors meant that the company closed in early
 2002.
 
@@ -64,7 +64,7 @@ artists to make an animated 3D short film. The only criterion was that they had 
 prime among them.
 
 Under the codename "Project Orange," this project began in 2005, resulting in Elephants Dream, a surreal adventure
-through a gigantic machine. The film and all its assets were made freely available under a Creative Commons licence.
+through a gigantic machine. The film and all its assets were made freely available under a Creative Commons license.
 
 After the success of Elephants Dream, the Blender Institute was established in the summer of 2007. As well as helping
 to define the Blender Foundation's goals, the Blender Institute comprised a permanent office and studio, with the
@@ -306,7 +306,7 @@ Version/Revision Milestones
    more.
 `2.83 LTS <https://www.blender.org/download/releases/2-83/>`__ -- June 2020:
    3D Viewport virtual reality scene inspection, new volume object type, Cycles adaptive sampling, Cycles viewport
-   denoising, sculpting improvements, and much more. **First LTS release intended to support studio and long-lifecycle
+   denoising, sculpting improvements, and much more. **First LTS release intended to support studio and long lifecycle
    project use.**
 
 

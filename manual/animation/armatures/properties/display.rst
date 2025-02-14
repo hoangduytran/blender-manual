@@ -135,4 +135,4 @@ Axis
 Relations
    Whether the :ref:`Relationship Lines <bpy.types.View3DOverlay.show_relationship_lines>`
    overlay should be drawn from each parent's tail or head.
-   The lines are always drawn towards the childrens' heads.
+   The lines are always drawn towards the children's heads.

@@ -12,7 +12,7 @@ limbs.simple_tentacle
 =====================
 
 Will create a simple bendy and stretchy b-bones tentacle chain, which can optionally replicate local rotation
-from preceeding bones to the subsequent ones for use in cases like fingers.
+from preceding bones to the subsequent ones for use in cases like fingers.
 
 Requirement: A chain of at least two connected bones.
 

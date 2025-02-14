@@ -32,7 +32,7 @@ Blender build.
 To initiate a bug report:
 
 - Select :menuselection:`Topbar --> Help --> Report a Bug` from the menu.  This will open your default web browser to
-  the bug reporting page on blender.org with some of your information pre-populated.
+  the bug reporting page on blender.org with some of your information prepopulated.
 - Give the bug a clear, easy-to-understand title - try to avoid long run-on sentences.
 - Enter details about the steps to reproduce the bug. Bugs that are not consistently reproducible may be more
   difficult to track down, so provide any additional information that you can.  Make sure to fill in the **Short

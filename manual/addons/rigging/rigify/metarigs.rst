@@ -4,7 +4,7 @@ Creating Meta-rigs
 ******************
 
 #. Add a single bone from the :menuselection:`Add --> Armature` menu.
-#. Go in armature Edit Mode and build the meta rig by samples or Rigify-types.
+#. Go in armature Edit Mode and build the meta rig by samples or Rigify types.
 #. Define the :ref:`Rigify bone collection UI <bpy.types.BoneCollection.rigify_ui_row>`,
    :ref:`color sets <bpy.types.Armature.rigify_colors>`, and selection sets.
 #. In the armature properties click on the *Generate* button to generate the rig.
