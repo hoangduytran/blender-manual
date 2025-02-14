@@ -6,8 +6,6 @@ REM Use virtual environment if it exists.
 set SPHINX_BIN_PATH=.venv\Scripts\
 if exist "%SPHINX_BIN_PATH%" (
   REM This ensures the virtual environment is activated - just running scripts from that folder may fail
-  echo Activating Python virtual environment .venv - to deactivate, run .venv\Scripts\deactivate.bat
-  echo.
   call .venv\Scripts\activate.bat
 )
 if not exist "%SPHINX_BIN_PATH%" (
@@ -56,6 +54,8 @@ if "%1" == "" (
 )
 
 if "%1" == "help" (
+    echo.
+    echo This will activate the Python virtual environment .venv - to deactivate, run .venv\Scripts\deactivate.bat
 	echo.
 	echo Sphinx
 	echo ======

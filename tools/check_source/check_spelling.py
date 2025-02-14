@@ -160,9 +160,14 @@ RST_DIR = find_vcs_root(CURRENT_DIR)
 
 def rst_files(path):
     for dirpath, dirnames, filenames in os.walk(path):
-        if dirpath.startswith("."):
+        # Filter out directories that start with "."
+        dirnames[:] = [d for d in dirnames if not d.startswith(".")]
+
+        # Skip processing files if the current directory starts with "."
+        if any(part.startswith(".") for part in dirpath.split(os.sep)):
             continue
         for filename in filenames:
+            # Skip files that start with "."
             if filename.startswith("."):
                 continue
             ext = os.path.splitext(filename)[1]
