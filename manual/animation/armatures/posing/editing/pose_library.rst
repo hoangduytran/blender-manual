@@ -35,7 +35,7 @@ This means that it can get its own name, its own preview image,
 and can be organized in :doc:`/files/asset_libraries/catalogs`.
 
 Since a pose asset is just an action, it can also contain
-:ref:`slots<action-slots>`. That means a single pose asset
+:ref:`slots<animation-actions-slots>`. That means a single pose asset
 can contain a pose for more than one armature. When applying
 the pose, the best matching slot for the given armature will be chosen
 to read the pose from. If no good match can be found it will fall back
@@ -80,7 +80,7 @@ from existing animation.
 You can even create a pose asset containing bones of two or more different armatures.
 To do so, put the armatures in pose mode and select the bones you want to add to the asset.
 Clicking the *Create Pose Asset* button will then still create a single action, 
-but with separate :ref:`slots<action-slots>` for each armature.
+but with separate :ref:`slots<animation-actions-slots>` for each armature.
 
 .. figure:: /images/asset_browser-pose_library-create_from_action_editor.png
 
@@ -180,7 +180,7 @@ Using the Pose Library
 
 The pose library can be used to pose one or more characters.
 The current bone selection will be used to determine which bones are modified.
-When editing multiple armatures at once, a matching :ref:`slot<action-slots>` 
+When editing multiple armatures at once, a matching :ref:`slot<animation-actions-slots>` 
 of the pose asset is determined for each armature.
 It is possible to either fully apply a pose or blend it into 
 the character's current pose interactively.
