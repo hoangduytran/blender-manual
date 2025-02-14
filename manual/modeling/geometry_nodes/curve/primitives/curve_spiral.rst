@@ -1,15 +1,15 @@
-.. index:: Geometry Nodes; Curve Spiral
+.. index:: Geometry Nodes; Spiral
 .. _bpy.types.GeometryNodeCurveSpiral:
 
-*****************
-Curve Spiral Node
-*****************
+***********
+Spiral Node
+***********
 
 .. figure:: /images/node-types_GeometryNodeCurveSpiral.webp
    :align: right
-   :alt: Curve Spiral Node.
+   :alt: Spiral node.
 
-The *Curve Spiral* node generates a poly spline in a spiral shape.
+The *Spiral* node generates a poly spline in a spiral shape.
 It can be used to create springs or other similar objects.
 By default the spiral twists in a clockwise fashion.
 
