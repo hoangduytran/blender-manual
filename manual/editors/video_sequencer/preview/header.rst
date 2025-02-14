@@ -22,8 +22,10 @@ Tool Settings
 
 ----------
 
+.. _bpy.types.SpaceSequenceEditor.show_transform_preview:
+
 Preview During Transform
-   When enabled, previews the strip's new first/last frame while dragging its left/right handle.
+   Show a preview of the start or end frame of a strip while transforming its respective handle.
 
 ----------
 
