@@ -9,8 +9,8 @@ Glare Node
    :align: right
    :alt: Glare Node.
 
-The *Glare node* is used to add lens flares, fog,
-glows around bright parts of an image.
+The *Glare Node* enhances bright areas of an image by adding effects such as lens flares, bloom, and fog glow.
+It simulates the way light interacts with lenses, creating realistic or artistic highlights and reflections.
 
 
 Inputs
@@ -20,70 +20,104 @@ Image
    Standard color input.
 
 
+Highlights
+----------
+
+Threshold
+   Defines the minimum luminance required for an area to contribute to the glare effect.
+   Lower values include more areas, while higher values restrict glare to the brightest regions.
+
+Smoothness
+   Controls how gradually pixels transition into the glare effect.
+   Higher values create a smoother highlight extraction.
+
+Maximum
+   Clamps the intensity of the highlights to this value.
+   A value of zero disables suppression, allowing the full brightness range.
+
+   This can help create a more consistent looking bloom effect when there is a large variations in luminance.
+
+
+Adjust
+------
+
+Strength
+   Adjusts the overall intensity of the glare effect.
+   Values greater than 1 boost the luminance of the glare,
+   while values less than 1 blends the glare with the original image.
+
+Saturation
+   Modifies the color saturation of the glare effect.
+
+Tint
+   Tints the glare effect, allowing for colored highlights.
+
+
+Glare
+-----
+
+Size :guilabel:`Bloom` :guilabel:`Fog Glow`
+   Defines the relative spread of the glare across the image.
+   A value of 1 makes the glare cover the full image, while 0.5 restricts it to half, and so on.
+
+Streaks :guilabel:`Streaks`
+   The number of streaks radiating from highlights.
+
+Steaks Angle :guilabel:`Streaks`
+   The angle that the first streak makes with the horizontal axis.
+
+Iterations :guilabel:`Ghosts` :guilabel:`Streaks` :guilabel:`Simple Star`
+   The number of ghosts for *Ghost* glare or the quality and
+   spread of glare for *Streaks* and *Simple Star* glare types.
+
+Color Modulation :guilabel:`Ghosts` :guilabel:`Streaks`
+   Introduces subtle color variations, simulating chromatic dispersion effects.
+
+Fade :guilabel:`Streaks` :guilabel:`Simple Star`
+   The fade-out intensity of the streaks.
+
+Rotate 45 :guilabel:`Simple Star`
+   Rotates the *Simple Star* streaks by 45° for an alternate pattern.
+
+
 Properties
 ==========
 
 Glare Type
+   Defines the type of glare effect applied to the image.
+
    :Bloom:
-      Simulates the glow around bright objects caused by light scattering in eyes and cameras.
-
-      Size
-         Scale of the glow relative to the size of the image. 9 means the glow can cover the
-         entire image, 8 means it can only cover half the image, 7 means it can only cover quarter
-         of the image, and so on.
+      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
    :Ghosts:
-      Creates a haze over the image.
+      Creates multiple overlapping glare artifacts resembling lens reflections or a hazy glow.
    :Streaks:
-      Creates bright streaks used to simulate lens flares.
-
-      Streaks
-         Total number of streaks.
-      Angle Offset
-         The rotation offset factor of the streaks.
-      Fade
-         Fade out factor for the streaks.
+      Produces bright streaks radiating from highlights, commonly used to simulate lens flares.
    :Fog Glow:
-      Simulates the glow around bright objects caused by light scattering in eyes and cameras.
-      This is similar to the *Bloom* mode, but is more physically accurate, at the cost of much
-      slower computation time.
-
-      Size
-         Scale of the glow relative to the size of the image. 9 means the glow will cover the
-         entire image, 8 means it will cover half the image, 7 means it will cover quarter of the
-         image, and so on.
+      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
+      This glare is a more physically accurate version of *Bloom*, creating a softer,
+      more realistic glow at the cost of increased computation time.
    :Simple Star:
-      Works similar to *Streaks* but gives a simpler shape looking like a star.
-
-      Fade
-         Fade out factor for the streaks.
-      Rotate 45
-         Rotate the streaks by 45°.
+      Similar to *Streaks*, but produces a simpler star-shaped glare effect.
 
 Quality
-   If not set to something other the *High*,
-   then the glare effect will only be applied to a low resolution copy of the image.
+   Controls the resolution at which the glare effect is processed.
    This can be helpful to save render times while only doing preview renders.
 
-Iterations
-   The number of times to run through the filter algorithm.
-   Higher values will give more accurate results but will take longer to compute.
-   Note that, this is not available for *Fog Glow* as it does not use an iterative-based algorithm.
-
-Color Modulation
-   Used for *Streaks* and *Ghosts* to create a special dispersion effect.
-
-   Johannes Itten describes this effect, Color Modulation, as subtle variations in tones and chroma.
-
-Mix
-   Value to control how much of the effect is added on to the image.
-   A value of -1 would give just the original image, 0 gives a 50/50 mix, and 1 gives just the effect.
-
-Threshold
-   Pixels brighter than this value will be affected by the glare filter.
+   :High: Full-resolution processing for best quality.
+   :Medium: Uses a lower resolution to reduce computation time.
+   :Low: Fastest processing but with lower detail.
 
 
 Outputs
 =======
 
 Image
-   Standard color output.
+   The final image with the generated glare added.
+
+Glare
+   The generated glare effect isolated from the input image.
+   Useful for further compositing or adjustments.
+
+Highlights
+   The extracted bright areas used to generate the glare effect.
+   Can be used to fine-tune the glare or as a base for custom effects.
