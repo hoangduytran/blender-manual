@@ -212,6 +212,7 @@ Editor's header.
 .. seealso::
 
    - :ref:`Scene Animation Panel <scene-properties-animation>`
+   - :ref:`Speaker Animation Panel <object-speaker-properties-animation>`
 
 .. note::
 
