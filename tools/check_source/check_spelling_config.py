@@ -24,15 +24,18 @@ dict_custom = {
     "merchantability",
     "natively",
     "preceding",
+    "prepopulated",
     "probabilistically",
     "quickstart",
     "selectability",
+    "spatialization",
     "stylization",
     "subclass",
     "subclasses",
     "subclassing",
     "subdirectory",
     "unbeveled",
+    "unbunch",
     "unintuitive",
     "unmarks",
     "unsmoothed",
@@ -515,6 +518,7 @@ dict_custom = {
 }
 
 # Incorrect spelling but ignore anyway.
+#   TODO: make sure entries are in the dict_custom vs dict_ignore list - this needs some rework.
 dict_ignore = {
     # Intentional misspellings or word fragments being detected. This includes names/abbreviations in
     #   the program that should probably be corrected such as "filepath" instead of "file path" or "path".
@@ -523,6 +527,7 @@ dict_ignore = {
     "arg",
     "args",
     "bool",
+    "degr",
     "determinator",
     "dirpath",
     "dof",
@@ -669,6 +674,7 @@ dict_ignore = {
     "ramer",
     "reddit",
     "roosendaal",
+    "roosendaal's",
     "rossi",
     "runge",
     "rylan",
