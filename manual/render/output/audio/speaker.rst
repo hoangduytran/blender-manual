@@ -24,6 +24,7 @@ using :ref:`bpy.ops.nla.soundclip_add`:
 - Sound strips in the NLA editor define when playback starts.
 - Newly added speaker objects automatically receive a sound strip at the current frame.
 - Multiple sound strips can be used to replay the same speaker at different times.
+- Playback continues the length of audio file and does not take into account the length of the sound strip.
 
 
 Data Properties

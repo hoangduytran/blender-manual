@@ -45,7 +45,8 @@ Select them and click :menuselection:`Add --> Transition`.
 Sound Strips
 ============
 
-These strips control when a :doc:`/render/output/audio/speaker` plays its sound clip.
+These strips control when a :doc:`/render/output/audio/speaker` starts to playback the audio.
+Playback continues the length of audio file and does not take into account the length of the sound strip.
 
 
 Meta Strips
