@@ -55,10 +55,11 @@ Use Subdivision Surface
    Use the new vertex positions that were calculated by the :doc:`/modeling/modifiers/generate/subdivision_surface`
    (rather than the original positions from before any modifiers are run).
 Correct Aspect
-   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
-   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
-   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
-   in the :doc:`/editors/shader_editor`.
+   Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
+   This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
+
+   For this option to work, the mesh must have a material with an :doc:`Image Texture node </render/shader_nodes/textures/image>`,
+   and this node must be selected in the :doc:`Shader Editor </editors/shader_editor>`.
 Iterations :guilabel:`Minimum Stretch`
    Number of iterations for the *Minimum Stretch* method, where each iteration reduces the distortion further.
 No Flip :guilabel:`Minimum Stretch`
@@ -147,10 +148,11 @@ Area Weight
    With a value of 0, the projection vector of each face group is simply the average of its face normals.
    With a value of 1, it's an average that's weighted using the faces' areas. Other values blend between the two.
 Correct Aspect
-   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
-   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
-   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
-   in the :doc:`/editors/shader_editor`.
+   Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
+   This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
+
+   For this option to work, the mesh must have a material with an :doc:`Image Texture node </render/shader_nodes/textures/image>`,
+   and this node must be selected in the :doc:`Shader Editor </editors/shader_editor>`.
 Scale to Bounds
    Stretches the resulting UV map to fill the complete texture.
 
@@ -266,10 +268,11 @@ The :ref:`bpy.ops.screen.redo_last` panel allows fine control over how the mesh 
 Cube Size
    The size of the cube to project onto.
 Correct Aspect
-   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
-   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
-   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
-   in the :doc:`/editors/shader_editor`.
+   Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
+   This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
+
+   For this option to work, the mesh must have a material with an :doc:`Image Texture node </render/shader_nodes/textures/image>`,
+   and this node must be selected in the :doc:`Shader Editor </editors/shader_editor>`.
 Clip to Bounds
    Moves any out-of-bounds UVs to the nearest border.
 Scale to Bounds
@@ -342,10 +345,11 @@ Radius
    Half the height of the cylinder (i.e. *not* its radius; we're only using the cylinder
    for projection, so its radius doesn't matter).
 Correct Aspect
-   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
-   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
-   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
-   in the :doc:`/editors/shader_editor`.
+   Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
+   This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
+
+   For this option to work, the mesh must have a material with an :doc:`Image Texture node </render/shader_nodes/textures/image>`,
+   and this node must be selected in the :doc:`Shader Editor </editors/shader_editor>`.
 Clip to Bounds
    Moves any out-of-bounds UVs to the nearest border.
 Scale to Bounds
@@ -407,10 +411,11 @@ Pole
 Preserve Seams
    Cut the mesh along its seams before projecting.
 Correct Aspect
-   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
-   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
-   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
-   in the :doc:`/editors/shader_editor`.
+   Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
+   This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
+
+   For this option to work, the mesh must have a material with an :doc:`Image Texture node </render/shader_nodes/textures/image>`,
+   and this node must be selected in the :doc:`Shader Editor </editors/shader_editor>`.
 Clip to Bounds
    Moves any out-of-bounds UVs to the nearest border.
 Scale to Bounds
@@ -446,10 +451,11 @@ Camera Bounds
    This option only has an effect when viewing the scene through the camera;
    see :ref:`bpy.ops.view3d.view_camera`.
 Correct Aspect
-   By default, when you unwrap a square face onto a non-square texture, the face will appear stretched.
-   You can enable *Correct Aspect* to prevent this. Note that for this to work, the mesh should have
-   a material with an :doc:`/render/shader_nodes/textures/image`, and this node should be selected
-   in the :doc:`/editors/shader_editor`.
+   Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
+   This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
+
+   For this option to work, the mesh must have a material with an :doc:`Image Texture node </render/shader_nodes/textures/image>`,
+   and this node must be selected in the :doc:`Shader Editor </editors/shader_editor>`.
 Clip to Bounds
    Moves any out-of-bounds UVs to the nearest border.
 Scale to Bounds
