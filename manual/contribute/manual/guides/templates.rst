@@ -13,8 +13,7 @@ Operator Menus
 Each operator should receive its own heading or page based on the length of the content. At the start should be a
 reference admonition documenting the context of the operator::
 
-   .. admonition:: Reference
-      :class: refbox
+   .. reference::
 
       :Mode:      Edit Mode
       :Menu:      :menuselection:`Curve --> Snap`
