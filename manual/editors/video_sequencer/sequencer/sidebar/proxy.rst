@@ -96,7 +96,11 @@ Overwrite
 .. _bpy.types.StripProxy.quality:
 
 Quality
-   The video/image quality for proxies.
+   Controls the level of lossy compression applied to the image, expressed as a percentage.
+   Lossy compression reduces file size by discarding some image data, which may result in a loss of detail.
+
+   - **0%**: Maximum compression, producing the smallest file size but the most noticeable quality loss.
+   - **100%**: No compression, preserving full image quality at the cost of a larger file size.
 
 .. _bpy.types.StripProxy.timecode:
 

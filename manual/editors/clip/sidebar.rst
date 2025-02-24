@@ -26,7 +26,11 @@ Build Undistorted
    (that is, with the :ref:`Lens settings <bpy.types.MovieTrackingCamera.lens>` applied
    to undo the distortion in the recording).
 Quality
-   The image quality for the proxies.
+   Controls the level of lossy compression applied to the image, expressed as a percentage.
+   Lossy compression reduces file size by discarding some image data, which may result in a loss of detail.
+
+   - **0%**: Maximum compression, producing the smallest file size but the most noticeable quality loss.
+   - **100%**: No compression, preserving full image quality at the cost of a larger file size.
 Proxy Custom Directory
    By default, proxies are stored to a ``BL_proxy`` subfolder next to the original file.
    Use this option to specify a different location.

@@ -203,9 +203,15 @@ Color Depth
 Compression
    Used to reduce the size of the image file.
    How this is done may vary depending on the file format and settings used.
+
+.. _bpy.types.ImageFormatSettings.quality:
+
 Quality
-   Similar to *Compression* but is used for JPEG based file formats.
-   The quality is a percentage, 0% being the maximum amount of compression and 100% is no compression.
+   Controls the level of lossy compression applied to the image, expressed as a percentage.
+   Lossy compression reduces file size by discarding some image data, which may result in a loss of detail.
+
+   - **0%**: Maximum compression, producing the smallest file size but the most noticeable quality loss.
+   - **100%**: No compression, preserving full image quality at the cost of a larger file size.
 Save As Render
    Save image with render :doc:`color management </render/color_management>`.
    For display image formats like PNG, apply view and display transform.
@@ -295,6 +301,13 @@ Codec
    :B44A (lossy):
       Lossy compression for 16 bit float images, at fixed 2.3:1 ratio
       with further compression on areas of flat color are further compressed, such as alpha channels.
+
+Quality :guilabel:`DWAA (lossy)` :guilabel:`DWAB (lossy)`
+   Controls the level of lossy compression applied to the image, expressed as a percentage.
+   Lossy compression reduces file size by discarding some image data, which may result in a loss of detail.
+
+   - **0%**: Maximum compression, producing the smallest file size but the most noticeable quality loss.
+   - **100%**: No compression, preserving full image quality at the cost of a larger file size.
 
 .. _bpy.types.ImageFormatSettings.use_preview:
 
