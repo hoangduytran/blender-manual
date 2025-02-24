@@ -218,10 +218,27 @@ Rotation
    :Turntable: Rotates the view keeping the horizon horizontal.
    :Trackball: Is less restrictive, allowing any orientation.
 
-.. _bpy.types.PreferencesInput.ndof_show_guide:
+.. _bpy.types.PreferencesInput.ndof_show_guide_orbit_axis:
 
-Show Navigation Guide
-   Display the pivot point and axis during rotation.
+Show Guides -- Orbit Axis
+   Display the center and axis during rotation.
+
+.. _bpy.types.PreferencesInput.ndof_show_guide_orbit_center:
+
+Show Guides -- Orbit Center
+   Display the orbit center during rotation.
+
+.. _bpy.types.PreferencesInput.ndof_orbit_center_auto:
+
+Orbit Center -- Auto
+   Auto sets the orbit center dynamically.
+   When the complete model is in view, the center of volume of the whole model is used as the rotation point.
+   When you move closer, the orbit center will be set on an object close to your center of the view.
+
+.. _bpy.types.PreferencesInput.ndof_orbit_center_selected:
+
+Orbit Center -- Use Selected Items
+   Forces the orbit center to only take the currently selected objects into account.
 
 .. _bpy.types.PreferencesInput.ndof_zoom_invert:
 
