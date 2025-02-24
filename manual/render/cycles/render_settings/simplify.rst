@@ -41,7 +41,8 @@ Volume Resolution
 .. _bpy.types.RenderSettings.use_simplify_normals:
 
 Normals
-   Skip computing custom normals and face corner normals for displaying meshes in the viewport.
+   Skip computing :ref:`custom normals <modeling_meshes_normals_custom>`
+   and face corner normals for displaying meshes in the viewport.
 
 
 Render
