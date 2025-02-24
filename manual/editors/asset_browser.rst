@@ -30,6 +30,21 @@ Interface
 
    Asset Browser, showing materials in an asset library.
 
+Header
+------
+
+Display Settings
+   Adjusts how assets are displayed in the asset list.
+
+   Size
+      Changes the size of the preview thumbnails.
+   Sort By
+      :Name: Sort the asset list alphabetically.
+      :Asset Catalog:
+         Sort the asset list so that assets in the same catalog are kept together.
+         Within a single catalog, assets are ordered by name.
+         The catalogs are in order of the flattened catalog hierarchy.
+
 
 Main Region
 -----------
@@ -166,9 +181,9 @@ Preview
       Generates a preview based on the 3D Viewport's :term:`Active` object.
       This is useful for node groups,
       which cannot automatically generate their own preview.
-      
+
    .. _bpy.ops.ed.lib_id_remove_preview:
-      
+
    Remove Preview
       Remove the preview of the asset.
 
