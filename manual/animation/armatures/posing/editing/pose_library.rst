@@ -35,12 +35,12 @@ This means that it can get its own name, its own preview image,
 and can be organized in :doc:`/files/asset_libraries/catalogs`.
 
 Since a pose asset is just an action, it can also contain
-:ref:`slots<animation-actions-slots>`. That means a single pose asset
+:ref:`slots <animation-actions-slots>`. That means a single pose asset
 can contain a pose for more than one armature. When applying
 the pose, the best matching slot for the given armature will be chosen
 to read the pose from. If no good match can be found it will fall back
-to the first slot. For generic pose assets, it is recommended to use single-slot actions. 
-That way Blender always uses the first (and only) slot, regardless of which 
+to the first slot. For generic pose assets, it is recommended to use single-slot actions.
+That way Blender always uses the first (and only) slot, regardless of which
 character the pose is applied to. If a pose is specific to two
 or more characters, they can be stored in the same asset for convenience.
 For info on how to create such multi-character pose assets see `Pose Creation`_.
@@ -51,14 +51,14 @@ For info on how to create such multi-character pose assets see `Pose Creation`_.
 Creating a Pose Library
 =======================
 
-A pose library is a bunch of actions that exist in blend-files of an 
+A pose library is a bunch of actions that exist in blend-files of an
 :ref:`Asset Library<what-is-asset-library>`. Such blend-files can either be
 created manually, or by exporting poses to a library.
-If a pose asset is created by exporting to a library, a :ref:`.asset.blend<asset-system-files>` 
-file will be created for it which will contain just that one asset, and which cannot be opened 
+If a pose asset is created by exporting to a library, a :ref:`.asset.blend<asset-system-files>`
+file will be created for it which will contain just that one asset, and which cannot be opened
 as a normal blend file to modify it.
 Otherwise there is no restriction on how many pose assets can be contained
-in a blend-file. It is also possible to link in a character, props, etc., 
+in a blend-file. It is also possible to link in a character, props, etc.,
 which can then not only be used to create the poses,
 but also for :ref:`rendering previews <poselib-preview-images>`.
 
@@ -79,19 +79,19 @@ It doesn't matter if the character is animated or not, so you can easily create 
 from existing animation.
 You can even create a pose asset containing bones of two or more different armatures.
 To do so, put the armatures in pose mode and select the bones you want to add to the asset.
-Clicking the *Create Pose Asset* button will then still create a single action, 
-but with separate :ref:`slots<animation-actions-slots>` for each armature.
+Clicking the *Create Pose Asset* button will then still create a single action,
+but with separate :ref:`slots <animation-actions-slots>` for each armature.
 
 .. figure:: /images/asset_browser-pose_library-create_from_action_editor.png
 
    To create a new pose asset, use the Create Pose Asset button in the Action editor.
 
-If the "Current File" library is chosen, the action is created in the current blend file 
+If the "Current File" library is chosen, the action is created in the current blend file
 and marked as an Asset. If another library is chosen, the pose is extracted
 and a new :ref:`.asset.blend<asset-system-files>` file is created containing the action.
 
-In case the pose asset has been created in the current file, it can be renamed in the *Asset Browser*. 
-There you can also right click on the thumbnail, then choose 
+In case the pose asset has been created in the current file, it can be renamed in the *Asset Browser*.
+There you can also right click on the thumbnail, then choose
 *Assign Action* to assign the action to the active Object (see description above).
 
 .. note::
@@ -107,7 +107,7 @@ Pose Creation by Copying from Other File
 ----------------------------------------
 
 As described in :ref:`asset-libraries-design-limitations`, Blender only writes
-data to the currently open blend-file or to an :ref:`.asset.blend<asset-system-files>` file. 
+data to the currently open blend-file or to an :ref:`.asset.blend<asset-system-files>` file.
 To copy a pose from some other file into a pose library file, see the following steps:
 
 - Pose the character and select the relevant bones.
@@ -180,9 +180,9 @@ Using the Pose Library
 
 The pose library can be used to pose one or more characters.
 The current bone selection will be used to determine which bones are modified.
-When editing multiple armatures at once, a matching :ref:`slot<animation-actions-slots>` 
+When editing multiple armatures at once, a matching :ref:`slot <animation-actions-slots>`
 of the pose asset is determined for each armature.
-It is possible to either fully apply a pose or blend it into 
+It is possible to either fully apply a pose or blend it into
 the character's current pose interactively.
 How exactly these operations work depends on where you use them.
 This section will explain the use from both the Asset Browser and the 3D Viewport.

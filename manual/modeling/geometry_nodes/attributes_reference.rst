@@ -391,10 +391,10 @@ However, the attributes might be expected by Blender to have a certain type.
      - *Point*
      - Used by the :ref:`Sculpt Masking Feature <sculpt-masks>`.
 
-   * - ``sculpt_face_set``
-     - *Integer*
-     - *Face*
-     - Used by the :ref:`Sculpt Face Sets Feature <face_sets>`.
+   * - ``custom_normal``
+     - *2D 16-Bit Integer Array*
+     - *Face Corner*
+     - Used by :ref:`modeling_meshes_normals_custom` for mesh objects.
 
 
 Custom Attributes
