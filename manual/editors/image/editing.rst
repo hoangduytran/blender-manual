@@ -27,7 +27,23 @@ Open
    :Menu:      :menuselection:`Image --> Open`
    :Shortcut:  :kbd:`Alt-O`
 
-Load an image from a file.
+Opens a file browser to select an image for loading into the editor.
+Images can also be opened by dragging and dropping them directly into the editor.
+
+When opening an image, the following options are available:
+
+Relative Path
+   Sets the file path to be relative to the currently opened blend-file.
+
+   See :ref:`files-blend-relative_paths`.
+Detect Sequences
+   Automatically looks for image sequences in the selected images (based on the file name).
+   Disable this when you do want to get single images that are part of a sequence.
+   See :ref:`image-formats-open-sequence` for more information.
+Detect UDIMs
+   Automatically looks for :doc:`UDIM </modeling/meshes/uv/workflows/udims>`
+   tiles in the directory of the selected image; if matches are found they are loaded into Blender as UDIMs.
+   This works by detecting if the filename has a ``.xxxx`` (four digit number) before the file extension.
 
 
 .. _bpy.ops.image.read_viewlayers:
@@ -102,12 +118,14 @@ Copy/Paste
    :Mode:      All Modes
    :Menu:      :menuselection:`Image --> Copy/Paste`
 
-Copy and pastes images to/from a computers operating system.
+Allows copying and pasting images between Blender and the operating system's clipboard.
 
-Currently, only PNG files are supported and Linux support requires Wayland.
+Note, only PNG files are supported for direct clipboard copying and pasting.
 
-On Windows, images can be pasted into Blender using only the file path to the image
-(with this method, all image formats are supported).
+Platform specific behavior:
+
+- Windows: Supports pasting images by copying the image's file path. This method allows all supported image formats.
+- Linux: Requires Wayland for clipboard image support.
 
 
 .. _bpy.ops.image.save:
