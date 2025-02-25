@@ -47,8 +47,8 @@ Assuming snap is already installed, Blender can be installed through snap with::
 
    snap install blender --classic
 
-Installing from this method has a benefit that updates to Blender are automatically installed. Blender from Snap
-should have a more consistent distribution then individual package managers.
+Installing from this method has a benefit that updates to Blender are automatically installed.
+Blender from Snap should have a more consistent distribution than individual package managers.
 
 
 Running from the Terminal
@@ -121,5 +121,5 @@ Known Limitations
 Archive Extraction
 ------------------
 
-Extracting Blender's archive using **7-zip** is not supported. TAR must be used instead. For more details, see issue 
+Extracting Blender's archive using **7-zip** is not supported. TAR must be used instead. For more details, see issue
 `#104070 <https://projects.blender.org/blender/blender/issues/104070#issuecomment-1276521>`__.
