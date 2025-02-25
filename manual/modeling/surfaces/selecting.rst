@@ -26,7 +26,7 @@ All :kbd:`A`
    Select all.
 None :kbd:`Alt-A`
    Select none.
-Inverse :kbd:`Ctrl-I`
+Invert :kbd:`Ctrl-I`
    Selects all the geometry that is not selected, and deselect currently selected components.
 
 ----
@@ -60,7 +60,7 @@ Inverse :kbd:`Ctrl-I`
 ----
 
 `Select More/Less`_
-   Select objects based on their parent child relationships.
+   Select/Deselect control points at the boundary of each selection region.
 
 
 Select Random
