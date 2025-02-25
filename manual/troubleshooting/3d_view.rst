@@ -135,7 +135,7 @@ Solutions
 - Use :ref:`Walk/Fly Navigation <3dview-fly-walk>`.
 - Use :ref:`Auto Depth <bpy.types.PreferencesInput.use_mouse_depth_navigate>` and :ref:`Zoom to Mouse Position
   <bpy.types.PreferencesInput.use_zoom_to_mouse>`. These tools will make sure the distance is always the value under
-  the mouse cursor,
+  the mouse cursor.
 - Use :ref:`bpy.ops.view3d.zoom_border` as it also resets the center point when zooming.
 - Center the view around the mouse cursor :kbd:`Alt-MMB`. This will take the position under the cursor and make it
   your viewpoint center.

@@ -126,6 +126,7 @@ Relative Path
 Detect Sequences
    Automatically looks for image sequences in the selected images (based on the file name).
    Disable this when you do want to get single images that are part of a sequence.
+   See :ref:`image-formats-open-sequence` for more information.
 Detect UDIMs
    Automatically looks for :doc:`UDIM </modeling/meshes/uv/workflows/udims>`
    tiles in the directory of the selected image; if matches are found they are loaded into Blender as UDIMs.

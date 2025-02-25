@@ -63,7 +63,7 @@ Size :guilabel:`Bloom` :guilabel:`Fog Glow`
 Streaks :guilabel:`Streaks`
    The number of streaks radiating from highlights.
 
-Steaks Angle :guilabel:`Streaks`
+Streaks Angle :guilabel:`Streaks`
    The angle that the first streak makes with the horizontal axis.
 
 Iterations :guilabel:`Ghosts` :guilabel:`Streaks` :guilabel:`Simple Star`

@@ -27,10 +27,11 @@ Install from Zip
 When choosing the zip-file, you have to manually extract Blender to the desired folder, where you can double-click the
 executable to run Blender.
 
-No start menu item will be created and no blend-file association will be registered, but there is also no need for
-administrator rights. You can register the file association manually by clicking *Make Default* on the System tab of
-the :doc:`Preferences </editors/preferences/system>`. Alternatively, you can run ``blender -r`` from the 
-:doc:`Command Line </advanced/command_line/arguments>`.
+No start menu item will be created and no blend-file association will be registered,
+but there is also no need for administrator rights. You can register the file association
+manually by clicking :ref:`Register <prefs-system-register>` on the System tab of the
+:doc:`Preferences </editors/preferences/system>`. Alternatively, you can run ``blender -r``
+from the :doc:`Command Line </advanced/command_line/arguments>`.
 
 To make the installation and configuration fully self-contained, set up a
 :ref:`Portable Installation <portable-installation>`.
@@ -53,7 +54,7 @@ On Windows there are a few ways to update Blender. This section covers the most 
 Updating from a Windows Installer File
 --------------------------------------
 
-When an update for Blender is released, it can be downloaded directly from the 
+When an update for Blender is released, it can be downloaded directly from the
 `Blender website <https://www.blender.org/download/>`__. The Windows installer can then be run to install the updated
 version of Blender. To remove a previously installed version of Blender, use Windows settings or control panel to
 uninstall the desired version.
