@@ -23,7 +23,7 @@ Move, Rotate, Scale
    Like other elements in Blender, control points can be
    moved, rotated, or scaled as described in
    :doc:`Basic Transformations </scene_layout/object/editing/transform/introduction>`.
-To Sphere, Shear, Warp, Bend, Push/Pull, Warp, Randomize
+To Sphere, Shear, Bend, Push/Pull, Warp, Randomize
    These transform tools are described in
    the :doc:`Transformations </modeling/meshes/editing/mesh/transform/index>` sections.
 Move/Scale Texture Space
@@ -193,13 +193,13 @@ in which case the surface is fully hidden.
    See :ref:`object-show-hide` in *Object Mode*.
 
 
-Cleanup
-=======
+Clean Up
+========
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Surface --> Cleanup`
+   :Menu:      :menuselection:`Surface --> Clean Up`
 
 This feature only works for :doc:`Curves </modeling/curves/index>`.
 
