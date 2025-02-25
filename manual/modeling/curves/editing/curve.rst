@@ -237,8 +237,8 @@ See :ref:`object-show-hide` in *Object Mode*.
 See also the :doc:`/modeling/curves/curve_display` panel.
 
 
-Cleanup
-=======
+Clean Up
+========
 
 .. _bpy.ops.curve.decimate:
 
