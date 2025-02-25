@@ -50,7 +50,7 @@ Assuming snap is already installed, Blender can be installed through snap with::
    snap install blender --classic
 
 Installing from this method has a benefit that updates to Blender are automatically installed.
-Blender from Snap should have a more consistent distribution then individual package managers.
+Blender from Snap should have a more consistent distribution than individual package managers.
 
 
 Running from the Terminal
