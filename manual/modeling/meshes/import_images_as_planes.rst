@@ -1,91 +1,90 @@
 .. _bpy.ops.image.import_as_mesh_planes:
 
-***********************
-Import Images as Planes
-***********************
+**********
+Mesh Plane
+**********
 
 .. reference::
 
    :Menu:      :menuselection:`3D Viewport --> Add --> Image --> Mesh Plane`
 
-Imports images and creates planes with them as textures.
-It automates the process of creating a plane, resizing it to fit the dimensions of the image,
-and creating a material with the image texture to it.
-The name of the plane, material, and texture will be derived from the name of the image file.
+The *Mesh Plane* operator automates the process of creating a plane,
+sizing it to match the aspect ratio of the selected image, and applying a material with the image as a texture.
+The plane, material, and texture are named based on the image filename.
 
-You can import a single image, multiple images, or an image sequence/movie clip.
-If you choose a single image, it creates one plane; if you choose multiple images,
-it creates as many planes as the number of images you selected, either stacked on top of each other or spaced apart.
-Selecting a movie clip or an image sequence will create a single plane with an animation.
+This tool supports importing single images, multiple images, or image sequences/movie clips:
+
+- **Single Image**: Creates one plane with the image applied as a texture.
+- **Multiple Images**: Generates multiple planes, either stacked or spaced apart.
+- **Image Sequence/Movie Clip**: Creates a single plane with the animated sequence applied.
 
 
 Properties
 ==========
 
-You can save the current import settings as an :ref:`Operator Preset <ui-presets>`.
+The current import settings can be saved as an :ref:`Operator Preset <ui-presets>`.
 
 
 Options
 -------
 
-Relative Path
-   Set link to the image file using a :ref:`relative file path <files-blend-relative_paths>`.
+Relative Paths
+   Stores the image file path relative to the currently open blend-file.
+   See :ref:`files-blend-relative_paths`.
 
 Force Reload
-   Reload the image file if it already exists as an image data-block.
+   Reloads the image file if it already exists as an image data-block.
 
-Animate Image Sequences
-   Import sequentially numbered images as
-   an animated :doc:`image sequence </video_editing/edit/montage/strips/image>` instead of separate planes.
-   They will be imported as a *Clip* texture on a single plane.
-   The frame range will be automatically set but can be changed later.
+Detect Image Sequences
+   Imports sequentially numbered images as an animated
+   :ref:`image sequence <image-sequence>` instead of separate planes.
+   The frame range of the sequence is automatically set (which can be adjusted later).
 
 
 Material
 --------
 
-Images as Planes sets up a material to display the image. You can set the type of material and related settings
-before the import.
+A material is automatically created for the plane to display the imported image. The following shader options are available:
 
 Shader
+   The type of node shader to use.
+
    :Principled:
-      The material will have a :doc:`Principled BSDF </render/shader_nodes/shader/principled>` shader node
-      with default settings as its main component.
-      An Image Texture node linked to the imported image will be connected to the Base Color of the Principled
-      BSDF node.
+      Uses a :doc:`Principled BSDF </render/shader_nodes/shader/principled>` shader.
+      The imported image is linked to the *Base Color* input.
    :Shadeless:
-      A shadeless material is a material that does not respond to light from other objects and always has the same
-      color in any lighting environment.
-      This option creates a material with a node group of a mix between a Diffuse and an Emission shader controlled
-      by a Light Path node.
-   :Emit:
-      The material will have a Principled BSDF shader node as its main component, but the Color output from
-      the Image Texture node will be linked to the Emission input instead of the Base Color.
+      Creates a material that does not respond to lighting.
+      Uses a mix of Diffuse and Emission shaders controlled by a Light Path node.
+   :Emission:
+      Similar to *Principled*, but links the image texture to the *Emission* input instead of *Base Color*.
 
-      Strength
-         Set the strength of the emission.
+      Emission Strength
+         Adjusts the intensity of emission.
 
-.. note::
+Render Method
+   Controls the blending and the compatibility with certain features.
+   See :ref:`Material Settings <bpy.types.Material.surface_render_method>` for more information.
 
-   *Blend Mode* and *Shadow Mode* options are specific to the EEVEE renderer.
-   For a detailed explanation of each option, see :doc:`Material Settings </render/eevee/material_settings>`.
+   :Dithered:
+      Allows for grayscale hashed transparency, and compatible with render passes and raytracing.
+      Also know as deferred rendering.
 
-Blend Mode
-   Set the alpha blend mode of the material.
+      When using *Dithered* render method, the materials are rendered in layers.
+      Each layer can only transmit (e.g. refract) light emitted from previous layers.
+      If no intersection with the layers below exists, the transmissive BSDFs will fallback to light probes.
+   :Blended:
+      Allows the colored transparency, but incompatible with render passes and raytracing.
+      Also known as forward rendering.
 
-Shadow Mode
-   Set the shadow mode of the material.
-
-Show Backface
-   Show backside of the transparent part.
+      Show Backface
+         Displays the backface of transparent areas.
 
 Backface Culling
-   Hide backside of the plane.
+   Hides the plane's backface.
 
 Overwrite Material
-   By default, the name of the new material from the name of the imported image. However, if there is already
-   a material with the same name, Blender will append a number to the name of the material to avoid conflict.
-   This *Override Material* option makes it overwrite the existing material of the same name in that case.
+   If an imported image shares a name with an existing material, Blender appends a number to differentiate it.
+   Enabling this option forces the new material to overwrite the existing one.
 
 
 Texture
@@ -96,83 +95,76 @@ Texture
    For a detailed explanation of each option, see :doc:`Image Texture Node </render/shader_nodes/textures/image>`.
 
 Interpolation
-   Set the method to scale the image.
+   Defines how the image is scaled when displayed on the plane.
 
 Extension
-   Set how the image is extrapolated past the original bounds.
+   Determines how the image is extrapolated beyond its original boundaries.
 
 Alpha
-   Use the alpha channel of the image for transparency.
+   Enables transparency using the image's alpha channel.
 
 Auto Refresh
-   Automatically refresh the images in the viewport on frame changes.
+   Automatically updates images in the viewport when the frame changes.
 
 
 Transform
 ---------
 
-Images as Planes creates the plane at the 3D Cursor's location. With *Offset Planes*, multiple planes will be
-placed with distance intervals set in *Offset*, along the axis set in *Local Axis*, beginning at the 3D Cursor's
-location.
+Imported planes are positioned at the 3D Cursor's location. Multiple planes can be offset using the *Offset Planes* option.
 
 Size Mode
-   Set how the plane's size will be determined.
+   Determines how the plane's size is set:
 
    :Absolute:
-      The size of the plane will be set based on the height value set in *Height*. The width will be set in direct
-      ratio to the height value. For example, with the default height value of 1 m, an image of 800 × 600 pixels
-      will have a width of 1 / 600 × 800 or 1.33 m.
+      The plane's height is explicitly defined in *Height*, with width adjusted to maintain aspect ratio.
+      Example: An image of 800 × 600 pixels with a height of 1 m results in a width of 1.33 m.
 
       Height
-         Set the height of the plane.
+         Sets the height of the plane.
 
-   :Camera Relative:
-      The size of the plane will be set to fit or fill the camera frame. This will automatically set the *Align*
-      option to *Face Camera*. Make sure to have an active camera in the scene before the import.
+   :Scale to Camera Frame:
+      The plane is sized relative to the active camera.
 
-      :Fit:
-         Scale the plane to fit inside the camera frame while preserving the aspect ratio.
-      :Fill:
-         Scale the plane so that it fills the entire camera view while preserving the aspect ratio, but some part of
-         the image can spill outside the camera frame.
+      Scale
+         Method to scale the plane with the camera frame.
 
-   ::abbr:`DPI (Dots per inch)`:
-      The size of the plane will be set based on the pixels per inch value set in *Definition*. With the *Unit System*
-      set to *Metric* and the default definition of 600 DPI, an image of 800 × 600 pixels will have a size of
-      0.0339 × 0.0254 units since 600 pixels are defined as 1 inch (0.0254 m).
+         :Fit:
+            Scales the plane to fit inside the camera frame while preserving aspect ratio.
+         :Fill:
+            Scales the plane to fill the entire camera frame, possibly cropping some areas.
 
-      Definition
-         Set the number of pixels to fit in 1 inch.
-
-   :Dots/BU:
-      The size of the plane will be set based on the pixels per Blender Unit set in *Definition*. With the default
-      definition value of 600, an image of 800 × 600 pixels will have a size of 1.33 × 1 units.
+   :Pixels per Inch:
+      Determines the plane's size using the *Definition* value, measured in pixels per inch.
+      Example: With a 600 DPI setting, an 800 × 600 px image results in a plane size of ~0.0339 × 0.0254 m.
 
       Definition
-         Set the number of pixels to fit in 1 Blender Unit.
+         Sets the number of pixels per inch.
+
+   :Pixels per Blender Unit:
+      Uses *Definition* to define pixels per Blender Unit.
+      Example: With a setting of 600, an 800 × 600 px image results in a plane size of 1.33 × 1 BU.
+
+      Definition
+         Sets pixels per Blender Unit.
 
 Align
-   Set the rotation of the plane.
+   Specifies the plane's rotation upon import.
 
-   :Main Axis:
-      The plane will be aligned to a major axis that is best to face the camera's view direction.
-      If there is no camera in the scene, the plane will face toward Z+ (Up) axis.
-   :Face Camera:
-      Similar to the *Main Axis* but the plane will be rotated to directly face the camera's view direction.
    :Z- (Down), Y-, X-, Z+ (Up), Y+, X+:
-      The plane will be rotated to face toward the selected axis.
+      Rotates the plane to align with the selected axis.
+   :Face Camera:
+      Directly faces the camera.
+   :Camera's Main Axis:
+      Aligns the plane to a major axis facing the camera view direction.
 
-Track Camera
-   Add a :doc:`Locked Track </animation/constraints/tracking/locked_track>` constraint to make the plane always
-   face the camera, even if the camera moves. This option is only available when *Main Axis* or *Face Camera*
-   option is selected in the *Align* menu.
-
+Track Camera :guilabel:`Face Camera` :guilabel:`Camera's Main Axis`
+   Adds a :doc:`Locked Track </animation/constraints/tracking/locked_track>` constraint,
+   ensuring the plane always faces the camera.
 Offset Planes
-   Place multiple planes with an offset. If disabled, all planes will be created at the same location.
+   Offsets multiple planes instead of stacking them.
 
 Offset Direction
-   Choose a local axis (not the global axis) to offset the planes. For example, if you choose *X+*, the planes
-   will be placed along the positive direction of the plane's local X axis.
+   Specifies the axis along which multiple planes are spaced.
 
 Distance
-   Set a distance between each plane.
+   Defines the spacing between planes.

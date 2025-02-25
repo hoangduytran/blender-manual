@@ -50,7 +50,7 @@ Objects that can be created with planes include floors, tabletops, or mirrors.
 
 .. seealso::
 
-   :ref:`Import Images as Planes <bpy.ops.image.import_as_mesh_planes>`
+   :ref:`Mesh Plane <bpy.ops.image.import_as_mesh_planes>`
    adds a mesh plane with materials and texture from an image file.
    The dimensions of the plane are calculated to match the aspect of the image file.
 
