@@ -161,7 +161,7 @@ Selected Channels at Cursor
 Copy/Paste
 ==========
 
-.. admonition:: Reference
+.. reference::
 
    :Menu:      :menuselection:`Key --> Copy`, :menuselection:`Key --> Paste`
    :Shortcut:  :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
