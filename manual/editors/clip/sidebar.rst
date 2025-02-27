@@ -81,7 +81,7 @@ See :doc:`/editors/image/image_settings`.
 Animation
 ---------
 
-Controls animation data for clip properties, including active :doc:`Actions </animation/actions>`
+Controls animation data for movie clip properties, including active :doc:`Actions </animation/actions>`
 and their assigned :ref:`Slot <animation-actions-slots>`.
 
 See :ref:`animation-actions-slots-manual-assign` for more information.

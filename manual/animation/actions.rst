@@ -214,6 +214,7 @@ Editor's header.
    - :ref:`Scene Animation Panel <scene-properties-animation>`
    - :ref:`Speaker Animation Panel <object-speaker-properties-animation>`
    - :ref:`Movie Clip Animation Panel <clip-properties-animation>`
+   - :ref:`Mask Animation Panel <mask-properties-animation>`
 
 .. note::
 

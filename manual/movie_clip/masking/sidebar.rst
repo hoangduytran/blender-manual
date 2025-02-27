@@ -131,3 +131,14 @@ Object
    :ref:`Object <movie-clip-tracking-properties-object>` to parent to.
 Track
    Name of individual tracks.
+
+
+.. _mask-properties-animation:
+
+Animation
+---------
+
+Controls animation data for mask properties, including active :doc:`Actions </animation/actions>`
+and their assigned :ref:`Slot <animation-actions-slots>`.
+
+See :ref:`animation-actions-slots-manual-assign` for more information.
