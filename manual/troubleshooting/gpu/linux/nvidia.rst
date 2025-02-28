@@ -16,6 +16,8 @@ NVIDIA's website, however in most cases the ones from your Linux distribution ar
 Manually downloading drivers is mostly useful to get the very latest version, for example for a GPU that was only
 recently released.
 
+Note, drivers before 550 do not support Vulkan!
+
 `NVIDIA Website <https://www.nvidia.com/Download/index.aspx>`__
 
 .. include:: ../common/laptops.rst

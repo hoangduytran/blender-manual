@@ -54,6 +54,8 @@ Validate Meshes
    Check the imported mesh for corrupt data and fix it if necessary.
    When disabled, erroneous data may cause crashes displaying or editing the meshes.
    This option will make the importing slower but is recommended, as data errors are not always obvious.
+Detect Cyclic Curves
+   Joins curve endpoints if overlapping control points are detected (if disabled, no curves will be cyclic).
 Path Separator
    Character used to separate an object's name into a hierarchical
    structure using :doc:`/scene_layout/collections/index`.

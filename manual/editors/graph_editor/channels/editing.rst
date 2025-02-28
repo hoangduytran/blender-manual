@@ -161,7 +161,7 @@ Move
 
    :Menu:      :menuselection:`Channel --> Move...`
 
-Lets you reorder the selected channels in the list:
+Lets you reorder the selected channels or slots in the list:
 
 - To the top :kbd:`Shift-PageUp`
 - Up one line :kbd:`PageUp`

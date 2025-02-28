@@ -77,8 +77,9 @@ Typical Usage
    in the mask. Repeat for any other objects.
 #. Use the *Matte* output of the Cryptomatte node to retrieve a mask for the selected object(s).
    Alternatively, connect the *Image* output of the Render Layers node to the *Image* input
-   of the Cryptomatte node, then use the *Image* output of the Cryptomatte note to retrieve
+   of the Cryptomatte node, then use the *Image* output of the Cryptomatte node to retrieve
    a masked version of the render.
+
 
 Example
 =======
