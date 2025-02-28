@@ -977,6 +977,9 @@ Use Vertex Color
    :Active:
       Export active vertex colors, even if not used in material node tree.
       A fully compliant glTF viewer should display this VC as Base Color multiplier.
+   :Name:
+      Export vertex color with the given name.
+      A fully compliant glTF viewer should display this VC as Base Color multiplier.
    :None:
       Do not export vertex color.
 Export all vertex colors
@@ -1090,7 +1093,7 @@ Animation
 ^^^^^^^^^
 
 Animation mode
-   Animation mode used for export (See `Animations`_
+   Animation mode used for export (See `Animations`_)
 
 
 Animation - Bake & Merge
@@ -1178,6 +1181,7 @@ Here are the options & specificity for collection export:
 
 - Include part of options are not available for collection exporter (like every other exporter).
 - Option to export at collection center (at center of mass of all root objects of the collection).
+- Custom Properties of the collection are exported as Scene glTF extras.
 
 
 Contributing
