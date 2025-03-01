@@ -44,7 +44,8 @@ Detect Image Sequences
 Material
 --------
 
-A material is automatically created for the plane to display the imported image. The following shader options are available:
+A material is automatically created for the plane to display the imported image. The following shader options are
+available:
 
 Shader
    The type of node shader to use.
@@ -110,7 +111,8 @@ Auto Refresh
 Transform
 ---------
 
-Imported planes are positioned at the 3D Cursor's location. Multiple planes can be offset using the *Offset Planes* option.
+Imported planes are positioned at the 3D Cursor's location. Multiple planes can be offset using the *Offset Planes*
+option.
 
 Size Mode
    Determines how the plane's size is set:

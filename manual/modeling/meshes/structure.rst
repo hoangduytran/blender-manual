@@ -121,8 +121,8 @@ Blender supports custom normals on a 'smooth fan' base, defined as a set of neig
 sharing the same vertex and 'linked' by smooth edges. This means you can have normals per face corners,
 per a set of neighbor face corners, or per vertex.
 
-Custom split normal data is stored as the ``custom_normal`` :doc:`Attribute </modeling/geometry_nodes/attributes_reference>`
-on the face corner :ref:`Domain <attribute-domains>`.
+Custom split normal data is stored as the ``custom_normal`` 
+:doc:`Attribute </modeling/geometry_nodes/attributes_reference>` on the face corner :ref:`Domain <attribute-domains>`.
 
 .. tip::
 
