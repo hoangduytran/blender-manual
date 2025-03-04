@@ -7,7 +7,7 @@ But there is also a lot of overlap or similar settings.
 This page explains general and mode specific settings that are used across various brushes in more detail.
 
 Changes to the settings of a brush asset are temporary and will be discarded when Blender is closed. To preserve
-settings, save them to the currently active brush asset using *Save Changes to Asset*, or create a new brush asset 
+settings, save them to the currently active brush asset using *Save Changes to Asset*, or create a new brush asset
 using *Duplicate Asset*, see :ref:`Asset Operators <brush-management-utility-operators>`. Loading a different file
 while Blender remains open does not discard the settings.
 
@@ -250,20 +250,34 @@ Original :guilabel:`Sculpt Mode`
 Color Picker
 ============
 
+.. _bpy.types.UnifiedPaintSettings.secondary_color:
+.. _bpy.types.UnifiedPaintSettings.color:
+.. _bpy.types.Brush.secondary_color:
+.. _bpy.types.Brush.color:
+
 Color
 -----
 
-The color of the brush. See :ref:`ui-color-picker`.
+Brushes have two colors that can be set using the :ref:`ui-color-picker`:
 
-Press :kbd:`Shift-X` on any part of the image to sample that color and set it as the brush color.
-In Texture Paint, :kbd:`Shift-Ctrl-X` will sample the merged viewport color, while :kbd:`Shift-X`
-only samples the currently active texture.
-Hold :kbd:`Ctrl` while painting to temporally paint with the secondary color.
+- **Primary Color**: The active color used for painting by default.
+- **Secondary Color**: An alternate color that can be quickly accessed.
+
+By default, painting uses the primary color. The secondary color can be used temporarily by holding :kbd:`Ctrl` while painting.
+The two colors can also be swapped at any time using :ref:`Swap Colors <bpy.ops.paint.brush_colors_flip>`.
+
+.. tip::
+
+   - Press :kbd:`Shift-X` to sample a color from the image and set it as the primary brush color.
+   - In **Texture Paint**, :kbd:`Shift-Ctrl-X` samples the **merged viewport color**, while :kbd:`Shift-X`
+     samples only the currently active texture.
 
 .. _bpy.ops.paint.brush_colors_flip:
 
-Swap Colors (cycle icon) :kbd:`X`
+:bl-icon:`file_refresh` (Swap Colors) :kbd:`X`
    Swaps the primary and secondary colors.
+
+.. _bpy.types.UnifiedPaintSettings.use_unified_color:
 
 :bl-icon:`brushes_all` (Use Unified Color)
    Use the same brush color across all brushes.
