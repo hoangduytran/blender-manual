@@ -134,6 +134,8 @@ Group Sockets
 
 This panel is used to add, remove, reorder, and edit the input/output sockets of the node group.
 
+Input values that do not affect the output will be greyed out.
+
 You can also add panels to organize sockets within a node group,
 structuring and categorizing inputs for improved clarity and usability.
 This is particularly helpful in complex node setups.

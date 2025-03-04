@@ -65,7 +65,7 @@ Device
    :CPU: Use the CPU for compositing.
    :GPU: Use the GPU for compositing.
 
-Precision
+Precision :guilabel:`GPU`
    The precision of compositor intermediate result.
 
    :Auto: Use full precision for final renders, half precision otherwise.
