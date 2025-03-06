@@ -276,13 +276,13 @@ Removes any duplicate keyframes.
 
 .. _bpy.ops.grease_pencil.stroke_merge_by_distance:
 
-Simplify Strokes by Distance
+Merge by Distance
 -----------------
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Simplify Strokes by Distance`
+   :Menu:      :menuselection:`Grease Pencil --> Clean Up --> Merge by Distance`
 
 Simplifies a stroke by merging the selected points that are closer than a specified distance to each other.
 Note, unless using *Unselected*, selected points must be contiguous, else they will not be merged.
@@ -290,7 +290,7 @@ Note, unless using *Unselected*, selected points must be contiguous, else they w
 Merge Distance
    Sets the distance threshold for merging points.
 Unselected
-   Allows points in selection to be merged with unselected points within the same stroke.
+   Allows points in selection to be merged with unselected points.
    When disabled, selected points will only be merged with other selected ones.
 
 
