@@ -1,12 +1,8 @@
-.. _realtime-compositor:
+.. _compositor-system:
 
-**************
-GPU Compositor
-**************
-
-The new GPU accelerated compositor introduced in Blender 3.5 and is currently used for
-:ref:`viewport compositing <viewport-compositing>`.
-
+******************
+Compositor System
+******************
 
 Data
 ====
@@ -73,7 +69,7 @@ conversions are performed:
 +---------+---------+-------------------------------------+
 | Vector  | Color   | (x, y, z, w) => Color(x, y, z, 1)   |
 +---------+---------+-------------------------------------+
-| Color   | Float   | (r, g, b, a) => Average(r, g, b)    |
+| Color   | Float   | (r, g, b, a) => Luminance(r, g, b)  |
 +---------+---------+-------------------------------------+
 | Color   | Vector  | (r, g, b, a) => Vector(r, g, b, 0)  |
 +---------+---------+-------------------------------------+
@@ -285,15 +281,16 @@ input in the *Mix* node has the highest domain priority, as shown in the followi
 Output
 ======
 
-The GPU compositor only supports a single active output target, that is, only one of the
+The compositor only supports a single active output target, that is, only one of the
 :ref:`Composite nodes <bpy.types.CompositorNodeComposite>` or :ref:`Viewer nodes
 <bpy.types.CompositorNodeViewer>` in the node tree will be considered active and the rest will be
 ignored. In particular, the compositor searches the *Active Node Tree Context* and falls back to the
 *Root Node Tree Context* if no active output was found in the active node tree context. The active
-node tree context is the node tree of an expanded node group, that is, when the users selects a node
+node tree context is the node tree of an expanded node group, that is, when the user selects a node
 group node and edits its underlying tree, while the root node tree context is the top level node
-tree without any expanded node groups. The compositor searches for the active *Composite* node, if
-non was found, it searches for the active *Viewer* node, be it a *Viewer* or a *Split Viewer* node,
-if non was found, the compositor doesn't run altogether. Consequently, note that adding a *Viewer*
-node will have no effect if there is a *Composite* node, since the priority is given to *Composite*
-nodes.
+tree without any expanded node groups.
+
+The compositor searches for the active *Composite* node, if none was found, it searches for the
+active *Viewer* node. If none was found, the compositor doesn't run altogether.
+Consequently, note that adding a *Viewer* node will have no effect on the viewport render if there
+is a *Composite* node, since the priority is given to *Composite* nodes.

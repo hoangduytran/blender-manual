@@ -10,7 +10,7 @@
 
    introduction.rst
    sidebar.rst
-   realtime_compositor.rst
+   compositor_system.rst
 
 .. index:: Compositor Nodes
 
@@ -20,7 +20,7 @@ Node Types
 ==========
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    types/input/index.rst
    types/output/index.rst
@@ -28,7 +28,7 @@ Node Types
 ----------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    types/color/index.rst
    types/filter/index.rst
@@ -36,7 +36,7 @@ Node Types
 ----------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    types/keying/index.rst
    types/mask/index.rst
@@ -44,14 +44,14 @@ Node Types
 ----------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    types/tracking/index.rst
 
 ----------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    types/transform/index.rst
    types/utilities/index.rst
@@ -60,7 +60,7 @@ Node Types
 ----------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    types/groups.rst
    types/layout/index.rst
