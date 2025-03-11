@@ -46,6 +46,24 @@ This node has no output sockets.
    (last selected, indicated by a red header) will be shown on the backdrop or in the Image editor.
 
 
+.. _bpy.ops.node.viewer_shortcut_set:
+.. _bpy.ops.node.viewer_shortcut_get:
+
+Keyboard Shortcuts
+==================
+
+Viewer node provide a quick way to toggle between different viewer nodes while compositing using keyboard shortcuts,
+improving workflow efficiency when comparing outputs.
+
+- **Assign Shortcut** (:kbd:`Ctrl-1`, :kbd:`Ctrl-2`, etc.):
+  Select a node and press a shortcut to assign it. If no Viewer node is attached, one is created and activated.
+  The number will be shown in the upper right part of the node to identify which shortcut is assigned.
+- **Activate Node** (:kbd:`1`, :kbd:`2`, etc.):
+  Press the assigned number key to activate the node's Viewer output.
+
+.. note:: This feature is exclusive to the Compositor and only supports number keys (`1-9`).
+
+
 Using the Image Editor
 ======================
 
