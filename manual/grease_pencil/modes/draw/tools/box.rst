@@ -55,6 +55,8 @@ or use :kbd:`Alt` to create the box from a center point.
 :kbd:`NumpadPlus` and :kbd:`NumpadMinus` or using the mouse :kbd:`Wheel`
 will increase or decrease the amount of points in the final box.
 
+:kbd:`F` will adjust the line thickness and :kbd:`Shift-F` will adjust the opacity of the strokes.
+
 .. list-table::
 
    * - .. figure:: /images/grease-pencil_modes_draw_tools_box_example-01.png
