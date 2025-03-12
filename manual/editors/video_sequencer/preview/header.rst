@@ -117,7 +117,29 @@ See :doc:`/video_editing/edit/montage/selecting`.
 Strip Menu
 ==========
 
-See :doc:`/video_editing/edit/montage/editing`.
+See :doc:`/video_editing/edit/montage/editing` for more information.
+
+
+.. _bpy.ops.sequencer.preview_duplicate_move:
+
+Duplicate
+---------
+
+.. reference::
+
+   :View Type:   Preview
+   :Menu:        :menuselection:`Strip --> Duplicate`
+   :Shortcut:    :kbd:`Shift-D`
+
+The *Duplicate* operator creates a copy of the selected strip(s)
+and places them in the nearest available channel above the original.
+
+The duplicated content remain selected, allowing immediate repositioning.
+
+.. seealso::
+
+   :ref:`bpy.ops.sequencer.duplicate_move`
+
 
 Image Menu
 ==========
