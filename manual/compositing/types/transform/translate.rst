@@ -28,11 +28,11 @@ Properties
 
 Relative
    Percentage translation values relative to the input image size.
-Wrapping
+Repeat
    Repeat pixels on the other side when they extend over the image dimensions, making endless translating possible.
 
    None, X Axis, Y Axis, Both Axis
-Filter
+Interpolation
    Interpolation Methods.
 
    :Nearest: No interpolation, uses nearest neighboring pixel.

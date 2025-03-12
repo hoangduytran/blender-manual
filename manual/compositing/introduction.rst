@@ -68,28 +68,6 @@ You can change the mood of an image:
 - Dust and airborne dirt are often added as a cloud texture over the image to give a little more realism.
 
 
-Image Size
-==========
-
-It is recommended to pay attention to image resolution and color depth when mixing and
-matching images. :term:`Aliasing`, color *flatness*,
-or distorted images can all be traced to mixing inappropriate resolutions and color depths.
-
-The Compositor can mix images with any size,
-and will only perform operations on pixels where images have an overlap.
-When nodes receive inputs with differently sized Images, these rules apply:
-
-- The first/top Image input socket defines the output size.
-- The composite is centered by default,
-  unless a translation has been assigned to a buffer using a *Translate* node.
-
-So each node in a composite can operate on different sized images as defined by its inputs.
-Only the *Composite* output node has a fixed size,
-as defined by the :doc:`Format Output Properties </render/output/properties/format>`
-The *Viewer* node always shows the size from its input, but when not linked
-(or linked to a value) it shows a small 320×256 pixel image.
-
-
 Saving your Composite Image
 ===========================
 

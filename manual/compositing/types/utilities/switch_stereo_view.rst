@@ -48,7 +48,7 @@ Example
 
 .. figure:: /images/render_output_properties_stereoscopy_usage_compositor.png
 
-   Compositor, Backdrop and Split Viewer Node.
+   Render result, left and right views.
 
 The views to render are defined in the current scene views,
 in a similar way as you define the composite output resolution in the current scene render panel,

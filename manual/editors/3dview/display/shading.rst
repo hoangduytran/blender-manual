@@ -248,7 +248,6 @@ Render Pass
 
 Compositor
    When to preview the result of :doc:`compositing </compositing/introduction>` in the 3D Viewport.
-   This is done using the :doc:`/compositing/realtime_compositor`.
 
    :Disabled: Never show the compositing output.
    :Camera: Only show the compositing output when in :doc:`Camera View </editors/3dview/navigate/camera_view>`,
