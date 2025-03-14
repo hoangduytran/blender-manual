@@ -1,4 +1,4 @@
-.. _bpy.ops.object.gpencil_add:
+.. _bpy.ops.object.grease_pencil_add:
 
 **********
 Primitives
