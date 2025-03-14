@@ -6,7 +6,6 @@ Modifiers
 Operators for working with an object's :doc:`/modeling/modifiers/index`.
 
 
-.. _bpy.ops.object.gpencil_modifier_add:
 .. _bpy.ops.object.modifier_add:
 
 Add Modifier

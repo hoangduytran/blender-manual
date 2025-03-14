@@ -251,7 +251,7 @@ Import Method
       used by modifiers, constraints, or drivers.
 
       Since the file now has its own copy of the asset, later changes to
-      the asset file will not be reflected in the file it's appended to.
+      the asset file will not be reflected in the file it's appended from.
    Append (Reuse Data)
       *Specific to the Asset Browser*.
 
@@ -264,7 +264,7 @@ Import Method
       but all copies will share their mesh data, materials, etc.
 
       Since the file now has its own copy of the asset, later changes to
-      the asset file will not be reflected in the file it's appended to.
+      the asset file will not be reflected in the file it's appended from.
 
       .. tip::
 

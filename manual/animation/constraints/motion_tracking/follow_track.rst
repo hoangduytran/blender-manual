@@ -23,7 +23,7 @@ Active Clip
 3D Position
    Use the 3D position of the track to parent to.
 
-Undistorted
+Undistort
    Parent to the undistorted position of the 2D track.
 
 Frame Method

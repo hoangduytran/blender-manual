@@ -39,15 +39,12 @@ Distance
       the owner and its target (i.e. the distance before this constraint is applied).
 
 Clamp Region
-   The *Limit Mode* select menu allows you to choose how to use the sphere
-   defined by the *Distance* setting and target's origin:
+   Defines how the owner is constrained relative to the spherical boundary,
+   determined by the *Distance* setting and the target's origin:
 
-   Inside
-      The owner is constrained *inside* the sphere.
-   Outside
-      The owner is constrained *outside* the sphere.
-   Surface
-      The owner is constrained *on the surface* of the sphere.
+   :Inside: Restricts the owner to remain within the sphere.
+   :Outside: Prevents the owner from entering the sphere.
+   :On Surface: Constrains the owner to the sphere's radius.
 
 Affect Transform
    Transform operators will take the constraint into account to immediately restrict

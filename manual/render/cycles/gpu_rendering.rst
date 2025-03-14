@@ -51,19 +51,19 @@ AMD graphics card with the RDNA1 architecture or newer. Both discrete GPUs and A
 
 Supported GPUs include:
 
- - Radeon RX 5000 Series
- - Radeon RX 6000 Series
- - Radeon RX 7000 Series
- - Radeon RX 9000 series
- - Radeon Pro W6000 Series
- - Radeon Pro W7000 Series
+- Radeon RX 5000 Series
+- Radeon RX 6000 Series
+- Radeon RX 7000 Series
+- Radeon RX 9000 series
+- Radeon Pro W6000 Series
+- Radeon Pro W7000 Series
 
 Minimum driver versions:
 
- - Windows: Radeon Software 24.6.1 or Radeon PRO Software 24.Q2
- - Linux: Radeon Software 23.40 or ROCm 6.0
+- Windows: Radeon Software 24.6.1 or Radeon PRO Software 24.Q2
+- Linux: Radeon Software 23.40 or ROCm 6.0
 
-Please refer to `AMD's website <https://www.amd.com/en/products/specifications>`__ for more
+Please refer to `AMD's website <https://www.amd.com/en/products/specifications.html>`__ for more
 information about AMD graphics cards and their architectures.
 
 Hardware ray-tracing support is available with the most recent drivers.
@@ -82,14 +82,14 @@ Hardware acceleration for ray-tracing and denoising is supported.
 
 Supported GPUs include:
 
- - Intel® Arc™ A-Series
- - Intel® Arc™ B-Series
+- Intel® Arc™ A-Series
+- Intel® Arc™ B-Series
 
 Minimum driver versions:
 
- - Windows: Intel Graphics Driver XX.X.101.5518
- - Linux: ``intel-level-zero-gpu`` package 1.3.27642,
-   typically available through the ``intel-compute-runtime`` package XX.XX.27642.38
+- Windows: Intel Graphics Driver XX.X.101.5518
+- Linux: ``intel-level-zero-gpu`` package 1.3.27642,
+  typically available through the ``intel-compute-runtime`` package XX.XX.27642.38
 
 Please refer to `Intel's website <https://www.intel.com/content/www/us/en/products/details/discrete-gpus.html>`__
 for more information about Intel graphics cards and their architectures.
@@ -109,8 +109,8 @@ GPU accelerated denoising is available on Apple Silicon.
 Limitations
 ===========
 
- - :ref:`Path Guiding <bpy.types.CyclesRenderSettings.use_guiding>` is not supported on any GPU.
- - :doc:`/render/shader_nodes/osl` is only supported for OptiX, with some limitations listed in the documentation.
+- :ref:`Path Guiding <bpy.types.CyclesRenderSettings.use_guiding>` is not supported on any GPU.
+- :doc:`/render/shader_nodes/osl` is only supported for OptiX, with some limitations listed in the documentation.
 
 
 Frequently Asked Questions
