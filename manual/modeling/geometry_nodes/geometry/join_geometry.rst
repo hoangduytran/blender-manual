@@ -23,23 +23,21 @@ When multiple mesh inputs contain different materials, the material slots from e
 are merged so that the output mesh will contain all the input materials.
 
 
+.. editors note: keep up to date with :doc:`/modeling/geometry_nodes/instances/realize_instances`
+
 Attributes
 ==========
 
 When merging attributes from multiple geometry inputs, the highest complexity data type is chosen
-for the output attribute. In other words, if a ``weight`` attribute has a Boolean type on one geometry input
-and a vector data type on another geometry, the ``weight`` attribute on the output geometry will have
-a vector data type. The same heuristic is used for attribute domains, the domain with the most information
-will be used for the output.
+for the output attribute. For example, if a ``weight`` attribute is a Boolean on one geometry input
+and a vector on another, the ``weight`` attribute on the output geometry will use the vector data type.
 
-.. warning::
+.. note::
 
-   Like other geometry nodes, this node always outputs generic typed attributes. So instead of a
-   :term:`Vertex Group` attribute, it will create a "Float" attribute on the result, and it will
-   create a generic 2D vector attribute instead of a special "UV Map" attribute. Some other areas
-   of Blender don't properly handle generic attributes in version 3.0.
+   Vertex groups are preserved when realizing instances or joining geometries.
+   If the domain and type propagation rules above result with the vertex domain and float type,
+   then an attribute will be a vertex group on the output mesh.
 
-   Custom face corner normals are also not transferred currently.
 
 Inputs
 ======

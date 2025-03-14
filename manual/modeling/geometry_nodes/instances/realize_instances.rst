@@ -21,30 +21,27 @@ when procedurally processing geometry.
    If the input contains multiple volume instances, only the first volume component is moved to the output.
 
 
+.. editors note: keep up to date with :doc:`/modeling/geometry_nodes/geometry/join_geometry`
+
 Attributes
 ==========
 
 When merging attributes from multiple geometry inputs, the highest complexity data type is chosen
-for the output attribute. In other words, if a ``weight`` attribute has a Boolean type on one geometry input
-and a vector data type on another geometry, the ``weight`` attribute on the output geometry will have
-a vector data type.
+for the output attribute. For example, if a ``weight`` attribute is a Boolean on one geometry input
+and a vector on another, the ``weight`` attribute on the output geometry will use the vector data type.
 
 Named and anonymous attributes are propagated from the :ref:`instance domain <attribute-domains>`
-to the realized geometry. If the same attribute exists on the geometry and on an instance,
-the attribute values from the geometry has precedence over the values on the instances.
+to the realized geometry. If an attribute exists both on the base geometry and on an instance,
+the attribute values from the base geometry take precedence.
 
-In order to avoid creating duplicate values, the ``id`` attribute has special handling.
-The ``id`` values or indices of each instance are combined with id values from the points on
-geometry data.
+.. note::
 
-.. warning::
+   - The ``id`` attribute receives special handling to prevent duplicate values. ``id`` values or indices
+     of each instance are combined with ``id`` values from the geometry data points.
+   - Vertex groups are preserved when realizing instances or joining geometries.
+     If the domain and type propagation rules above result with the vertex domain and float type,
+     then an attribute will be a vertex group on the output mesh.
 
-   Like other geometry nodes, this node always outputs generic typed attributes. So instead of a
-   :term:`Vertex Group` attribute, it will create a "Float" attribute on the result, and it will
-   create a generic 2D vector attribute instead of a special "UV Map" attribute. Some other areas
-   of Blender don't properly handle generic attributes in version 3.0.
-
-   Custom face corner normals are also not transferred currently.
 
 Inputs
 ======
