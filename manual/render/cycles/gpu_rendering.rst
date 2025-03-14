@@ -63,7 +63,7 @@ Minimum driver versions:
 - Windows: Radeon Software 24.6.1 or Radeon PRO Software 24.Q2
 - Linux: Radeon Software 23.40 or ROCm 6.0
 
-Please refer to `AMD's website <https://www.amd.com/en/products/specifications>`__ for more
+Please refer to `AMD's website <https://www.amd.com/en/products/specifications.html>`__ for more
 information about AMD graphics cards and their architectures.
 
 Hardware ray-tracing support is available with the most recent drivers.
