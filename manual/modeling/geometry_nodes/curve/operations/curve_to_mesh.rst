@@ -11,8 +11,6 @@ Curve to Mesh Node
 
 The Curve to Mesh node converts all splines of a curve to a mesh.
 Optionally, a profile curve can be provided to give the curve a custom shape.
-This profile curve is scaled by the radius at each control point;
-see the :doc:`/modeling/geometry_nodes/curve/write/set_curve_radius`.
 
 The node transfers attributes to the result. Attributes that are built-in on meshes but not curves,
 like ``sharp_face``, will be transferred to the correct domain as well.
@@ -32,15 +30,12 @@ Curve
    Standard geometry input.
    All non-curve components are ignored.
 
-.. note::
-
-   If no radius attribute exists on the curve, the profile will not be scaled.
-   This is inconsistent with elsewhere in Blender where the default radius of 0.01m
-   is used when the attribute does not exist.
-
 Profile Curve
    If a profile curve is provided, it will be extruded along all splines.
    Otherwise the generated mesh will just be a chain of edges.
+
+Scale
+   The scale used at each control point of the input curve to scale the profile curve.
 
 Fill Caps
    If the profile spline is cyclic, fill the ends of the generated mesh with n-gons.
