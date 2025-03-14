@@ -66,9 +66,8 @@ Minimum driver versions:
 Please refer to `AMD's website <https://www.amd.com/en/products/specifications>`__ for more
 information about AMD graphics cards and their architectures.
 
-Experimental hardware ray-tracing support is available with the most recent drivers.
+Hardware ray-tracing support is available with the most recent drivers.
 This can be enabled in the preferences, and is supported on Radeon RX 6000 and newer.
-However there are currently known issues regarding motion blur and hair.
 
 GPU accelerated denoising is available on discrete Radeon RX 6000 and Radeon RX 7000 GPUs.
 
