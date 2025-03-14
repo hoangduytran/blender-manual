@@ -46,7 +46,7 @@ Plane
 The standard plane is a single quad face, which is composed of four vertices, four edges, and one face.
 It is like a piece of paper lying on a table;
 it is not a three-dimensional object because it is flat and has no thickness.
-Objects that can be created with planes include floors, tabletops, or mirrors.
+Real world objects that can be created with planes include floors, tabletops, or mirrors.
 
 .. seealso::
 
