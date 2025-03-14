@@ -4,7 +4,7 @@
 Soft Body Modifier
 ******************
 
-The Soft Body modifier is a container for a :doc:`Soft Body Physics </physics/fluid/index>` simulation.
+The Soft Body modifier is a container for a :doc:`Soft Body Physics </physics/soft_body/index>` simulation.
 
 
 Options
