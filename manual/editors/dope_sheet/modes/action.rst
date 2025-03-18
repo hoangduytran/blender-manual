@@ -44,6 +44,12 @@ Slot Display Name
 Action Menu
 ===========
 
+.. note::
+
+   The "Merge Animation" and "Separate Slots" operators will only work with
+   :ref:`directly-assigned actions <working_with_actions>`,
+   and will ignore actions referenced by NLA strips.
+
 
 .. _bpy.ops.anim.merge_animation:
 
