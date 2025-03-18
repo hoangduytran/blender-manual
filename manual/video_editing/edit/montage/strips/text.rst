@@ -144,8 +144,8 @@ Navigation
 - :kbd:`End` -- Move the cursor to the end of the current line.
 - :kbd:`Ctrl-Left` -- Move the cursor one word left.
 - :kbd:`Ctrl-Right` -- Move the cursor one word right.
-- :kbd:`Page Up` -- Move the cursor to the start of the text.
-- :kbd:`Page Down` -- Move the cursor to the end of the text.
+- :kbd:`PageUp` -- Move the cursor to the start of the text.
+- :kbd:`PageDown` -- Move the cursor to the end of the text.
 
 
 Text Selection
@@ -161,5 +161,5 @@ Holding :kbd:`Shift` while pressing a navigation key enables text selection.
 - :kbd:`Shift-End` -- Select from the cursor to the end of the line.
 - :kbd:`Shift-Ctrl-Left` -- Select the previous word.
 - :kbd:`Shift-Ctrl-Right` -- Select the next word.
-- :kbd:`Shift-Page Up` -- Select from the cursor to the start of the text.
-- :kbd:`Shift-Page Down` -- Select from the cursor to the end of the text.
+- :kbd:`Shift-PageUp` -- Select from the cursor to the start of the text.
+- :kbd:`Shift-PageDown` -- Select from the cursor to the end of the text.
