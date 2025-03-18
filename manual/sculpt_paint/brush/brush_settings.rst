@@ -263,8 +263,9 @@ Brushes have two colors that can be set using the :ref:`ui-color-picker`:
 - **Primary Color**: The active color used for painting by default.
 - **Secondary Color**: An alternate color that can be quickly accessed.
 
-By default, painting uses the primary color. The secondary color can be used temporarily by holding :kbd:`Ctrl` while painting.
-The two colors can also be swapped at any time using :ref:`Swap Colors <bpy.ops.paint.brush_colors_flip>`.
+By default, painting uses the primary color. The secondary color can be used temporarily by holding :kbd:`Ctrl` while
+painting. The two colors can also be swapped at any time using 
+:ref:`Swap Colors <bpy.ops.paint.brush_colors_flip>`.
 
 .. tip::
 
