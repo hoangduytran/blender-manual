@@ -17,6 +17,12 @@ This will show in the *Thumbnail* view of the :doc:`File Browser </editors/file_
 During its installation, Blender also adds a small tool to your OS,
 that will allow your system file browser to show those previews as file thumbnails as well.
 
+macOS
+-----
+
+The Blender Thumbnail extension can be disabled in the System Settings under "Login Items & Extensions",
+within the Quick Look category.
+
 
 Data-Blocks Previews
 ====================
