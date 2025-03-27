@@ -39,6 +39,10 @@ Install from Blender
    Any installed extension can be removed. This is a permanent change, though.
    To stop an extension temporarily, it is better to Disable it instead.
 
+.. hint::
+
+   See :doc:`network troubleshooting </troubleshooting/network>` for issues connecting to remote repositories.
+
 
 Updating Extensions
 ===================
