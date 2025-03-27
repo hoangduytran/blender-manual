@@ -105,6 +105,7 @@ Filter by Type
 
 Or show only extensions of a single type:
 
+:All: Show all extensions.
 :Add-ons: Only show add-ons.
 :Themes: Only show themes.
 
