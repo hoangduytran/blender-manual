@@ -74,7 +74,7 @@ Merge Distance
 
 
 Limited Dissolve
-===================
+================
 
 .. reference::
 

@@ -534,7 +534,7 @@ Environment Variables
 
 :BLENDER_CUSTOM_SPLASH:        Full path to an image that replaces the splash screen.
 :BLENDER_CUSTOM_SPLASH_BANNER: Full path to an image to overlay on the splash screen.
-      
+
 :OCIO:                      Path to override the OpenColorIO configuration file.
 :TEMP:                      Store temporary files here (MS-Windows).
 :TMPDIR:                    Store temporary files here (UNIX Systems).

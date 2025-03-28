@@ -13,7 +13,7 @@ This guide will walk you through the process of documenting these changes using 
 
 
 Using Release Issues to Track Changes
---------------------------------------
+-------------------------------------
 
 Each Blender release has an associated issue in the documentation project's
 `Upcoming Releases Project <https://projects.blender.org/blender/blender-manual/projects/28>`__. These issues contains

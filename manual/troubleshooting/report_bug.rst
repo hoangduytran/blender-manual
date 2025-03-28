@@ -10,7 +10,7 @@ Before Reporting
 
 Before reporting a bug, some basic steps should be taken to ensure that you are reporting a real issue.
 
-- Ensure you have installed Blender according to the guidance in this manual under 
+- Ensure you have installed Blender according to the guidance in this manual under
   :doc:`/getting_started/installing/index`.
 - Follow the steps in this Troubleshooting section first, starting with loading factory settings. Many crashes and
   errors may be caused by bad settings or add-ons that have not been updated to work with the newest release of

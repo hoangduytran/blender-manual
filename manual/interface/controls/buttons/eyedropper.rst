@@ -30,7 +30,7 @@ Bones
    to the armature that was chosen as a target can be picked.
 
    .. note::
-      
+
       In the 3D Viewport, bones can only be picked if the armature is in Pose Mode or in Edit Mode.
 
 Camera Depth

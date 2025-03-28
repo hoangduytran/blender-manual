@@ -70,12 +70,12 @@ MetalRT
 Display Graphics
 ================
 
-Changes how display graphics are drawn. 
+Changes how display graphics are drawn.
 
 Backend
    :OpenGL:
      Use OpenGL to draw display graphics.
-     
+
    :Vulkan:
      Use Vulkan to draw display graphics. Vulkan is an experimental option
 

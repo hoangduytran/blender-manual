@@ -214,7 +214,6 @@ Handles
 
 
 
-
 .. _bpy.ops.curve.reveal:
 .. _bpy.ops.curve.hide:
 .. _curves-show-hide:

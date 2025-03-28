@@ -301,7 +301,7 @@ Sample Subset
    Only render a subset of the samples. Multiple subset renders can be combined into a full
    one by running the following in the :doc:`Python Console </editors/python_console>`:
 
-   ``bpy.ops.cycles.merge_images(input_filepath1=r"1.exr", input_filepath2=r"2.exr", 
+   ``bpy.ops.cycles.merge_images(input_filepath1=r"1.exr", input_filepath2=r"2.exr",
    output_filepath=r"combined.exr")``
 
    A typical use case is to distribute the rendering of a single frame over multiple machines.

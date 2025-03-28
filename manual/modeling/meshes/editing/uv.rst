@@ -58,8 +58,8 @@ Correct Aspect
    Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
    This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
 
-   For this option to work, the mesh must have a material with an 
-   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the 
+   For this option to work, the mesh must have a material with an
+   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the
    :doc:`Shader Editor </editors/shader_editor>`.
 Iterations :guilabel:`Minimum Stretch`
    Number of iterations for the *Minimum Stretch* method, where each iteration reduces the distortion further.
@@ -152,8 +152,8 @@ Correct Aspect
    Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
    This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
 
-   For this option to work, the mesh must have a material with an 
-   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the 
+   For this option to work, the mesh must have a material with an
+   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the
    :doc:`Shader Editor </editors/shader_editor>`.
 Scale to Bounds
    Stretches the resulting UV map to fill the complete texture.
@@ -273,8 +273,8 @@ Correct Aspect
    Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
    This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
 
-   For this option to work, the mesh must have a material with an 
-   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the 
+   For this option to work, the mesh must have a material with an
+   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the
    :doc:`Shader Editor </editors/shader_editor>`.
 Clip to Bounds
    Moves any out-of-bounds UVs to the nearest border.
@@ -351,8 +351,8 @@ Correct Aspect
    Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
    This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
 
-   For this option to work, the mesh must have a material with an 
-   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the 
+   For this option to work, the mesh must have a material with an
+   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the
    :doc:`Shader Editor </editors/shader_editor>`.
 Clip to Bounds
    Moves any out-of-bounds UVs to the nearest border.
@@ -418,8 +418,8 @@ Correct Aspect
    Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
    This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
 
-   For this option to work, the mesh must have a material with an 
-   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the 
+   For this option to work, the mesh must have a material with an
+   :doc:`Image Texture node </render/shader_nodes/textures/image>`, and this node must be selected in the
    :doc:`Shader Editor </editors/shader_editor>`.
 Clip to Bounds
    Moves any out-of-bounds UVs to the nearest border.

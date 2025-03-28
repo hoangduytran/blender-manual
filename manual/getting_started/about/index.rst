@@ -5,7 +5,7 @@
 #################
 
 Blender is the free and open-source 3D creation suite. It supports the entirety of the 3D pipeline: modeling, rigging,
-animation, simulation, rendering, compositing, motion tracking and video editing. 
+animation, simulation, rendering, compositing, motion tracking and video editing.
 
 Blender provides a consistent experience across Linux, macOS, and Windows operating systems via OpenGL.
 

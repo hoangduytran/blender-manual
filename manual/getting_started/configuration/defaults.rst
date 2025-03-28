@@ -4,7 +4,7 @@
 Defaults
 ********
 
-When you start Blender for the first time or update to a new version, the interactive region of 
+When you start Blender for the first time or update to a new version, the interactive region of
 the :doc:`Splash Screen </interface/window_system/splash>` is replaced with a few initial preferences to configure
 how you interact with Blender.
 
@@ -46,7 +46,7 @@ Language
    :ref:`Translation Preferences <prefs-interface-translation>`.
 
 Theme
-   Choose between a light or dark theme for Blender. Themes can be customized more in the 
+   Choose between a light or dark theme for Blender. Themes can be customized more in the
    :doc:`Preferences </editors/preferences/themes>`. Additional themes can be installed by visiting the
    `Blender Extensions Platform <https://extensions.blender.org/>`__. This is optional, and will require internet
    access.

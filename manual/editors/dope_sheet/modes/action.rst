@@ -23,7 +23,7 @@ Header
 .. note::
 
    The Previous/Next Layer (down/up arrows) operators have been removed from the UI in 4.4
-   and are slated to be removed completely in 5.0. 
+   and are slated to be removed completely in 5.0.
    See `#119626 <https://projects.blender.org/blender/blender/issues/119626>`_.
 
 
@@ -54,10 +54,10 @@ Action Menu
 .. _bpy.ops.anim.merge_animation:
 
 Merge Animation
-   This operator merges the animation of all selected objects into the animation of the 
+   This operator merges the animation of all selected objects into the animation of the
    active object. Since the data is moved and not copied, the source Actions might end up
    empty and without users.
-   Note that this will not only merge the object level Action, but Actions on related data-blocks 
+   Note that this will not only merge the object level Action, but Actions on related data-blocks
    as well (See :ref:`Related data-blocks <working_with_actions>`). As a result of that
    this operator can also be used to merge Actions of one Object. For example
    Translation & Rotation and animation on Shape Keys.
@@ -69,14 +69,14 @@ Separate Slots
    This splits all Slots of the Action on the active Object into separate Actions.
    All users of those Slots will be re-assigned to their respective Action and
    the newly created Actions are named after the Slot.
-   The source Action will not be deleted, but might end up with 0 users if no 
+   The source Action will not be deleted, but might end up with 0 users if no
    :ref:`Fake User <data-system-datablock-fake-user>` is set.
 
 
 .. _bpy.ops.anim.slot_channels_move_to_new_action:
 
 Move Slots to new Action
-   This moves Slots selected in the :ref:`Channels Region <editors-graph_editor-channels_region>` 
+   This moves Slots selected in the :ref:`Channels Region <editors-graph_editor-channels_region>`
    to a newly created Action. All users of those Slots are re-assigned to the new Action.
    If more than one Slot is selected, all Slots are moved into a single Action.
 

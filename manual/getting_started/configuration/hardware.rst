@@ -65,7 +65,7 @@ Keyboard
 --------
 
 A number of Blender interactions utilize the keyboard's number pad (or numpad).  This is the set of 10 numeric keys
-plus mathematical functions that appears on the right side of a 
+plus mathematical functions that appears on the right side of a
 `traditional 104-key full-sized keyboard <https://en.wikipedia.org/wiki/Keyboard_layout#/media/File:Qwerty.svg>`__.
 This will allow for the most efficient workflow within all of Blender's modules.
 
@@ -114,7 +114,7 @@ Touchpad
 --------
 
 Touchpad controls are available on Windows, macOS and Linux with Wayland. If you are working from a laptop without a
-mouse, you can emulate controls using multi-touch gestures with the trackpad from 
+mouse, you can emulate controls using multi-touch gestures with the trackpad from
 :doc:`Preferences </editors/preferences/input>`.
 
 .. list-table:: Supported multi-touch gestures
@@ -232,7 +232,7 @@ Linux. It is not yet ready for production usage and should only be used for test
     `sid <https://packages.debian.org/sid/libopenxr1-monado>`__)
 
   For other systems, it has to be compiled from source, which in this case is not recommended for people with little
-  experience in compiling software. Follow the 
+  experience in compiling software. Follow the
   `Getting Started Guides <https://gitlab.freedesktop.org/monado/monado/-/blob/main/README.md>`__ from Monado to do so
   nevertheless.
 - Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.

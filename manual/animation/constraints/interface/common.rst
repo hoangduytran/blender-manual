@@ -92,8 +92,8 @@ World Space
 Local Space
    This space excludes all effects of the parent objects or bones, as well as the rest position
    and orientation of the bone itself. Only transformations applied to the object or bone itself
-   are taken into account. It does include the effects of constraints though, for example the 
-   :doc:`Child Of </animation/constraints/relationship/child_of>` constraint 
+   are taken into account. It does include the effects of constraints though, for example the
+   :doc:`Child Of </animation/constraints/relationship/child_of>` constraint
    or the :doc:`Copy Transforms </animation/constraints/transform/copy_transforms>` constraint.
 
    .. warning::

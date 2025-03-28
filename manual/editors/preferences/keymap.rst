@@ -251,7 +251,6 @@ The Keymap editor lets you change the default hotkeys for each of Blender's edit
    Keymap editor.
 
 
-
 .. rubric:: Usage
 
 #. Find the operation whose shortcut you want to change. Filtering can help with this.

@@ -78,7 +78,6 @@ certain functions of the add-on. Sometimes these might even all default to off.
 So it is important to check if the enabled add-on has any particular preferences.
 
 
-
 .. _prefs-extensions-install_legacy_addon:
 
 Installing Legacy Add-ons

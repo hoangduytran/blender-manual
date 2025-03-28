@@ -62,15 +62,15 @@ Advanced
 .. _bpy.types.Brush.spacing:
 
 Spacing
-   Controls the minimum spacing between points in the stroke as a percentage of 
+   Controls the minimum spacing between points in the stroke as a percentage of
    the brush size.
 
    A lower spacing is useful when doing fast movements. Normally this would generate
    less samples and lead to a larger spacing between points. When the spacing percentage
    is lowered, more points are generated to ensure the minimum spacing.
 
-   When drawing slowly, the point density is usually already high. In this case the 
-   spacing setting doesn't add new points. It only ensures a minimum spacing and won't 
+   When drawing slowly, the point density is usually already high. In this case the
+   spacing setting doesn't add new points. It only ensures a minimum spacing and won't
    remove points.
 
 .. _bpy.types.BrushGpencilSettings.active_smooth_factor:

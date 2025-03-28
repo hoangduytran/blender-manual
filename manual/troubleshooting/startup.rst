@@ -23,7 +23,7 @@ Common Startup Messages
    If you launch Blender from an icon within your graphical desktop environment, you may not see the console window.
    To ensure you can see any error messages that appear at launch, open a command-line window and navigate to the
    location where the Blender executable is, and run blender from that location.
-   
+
    The specifics of this will vary by operating system. See :doc:`command line </advanced/command_line/index>`.
 
 The *Blender Console Window* can display many different types of status and error messages. Some messages simply
