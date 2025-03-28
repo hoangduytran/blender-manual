@@ -64,3 +64,10 @@ Node Types
 
    types/groups.rst
    types/layout/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   limitations.rst
