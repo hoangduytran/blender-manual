@@ -22,6 +22,15 @@ F-Keys (:kbd:`F5` - :kbd:`F8`)
 
    *macOS* is an exception, where :kbd:`Cmd` replaces :kbd:`Ctrl`
    except in cases it would conflict with the system's key bindings.
+:kbd:`Hyper` is a modifier available on Wayland and X11
+   Blender doesn't use this key for any bindings.
+
+   Note that this modifier typically needs to be configured,
+   see: `!136340 <https://projects.blender.org/blender/blender/pulls/136340>`__ for details.
+
+   .. NOTE(@ideasman42) Linking to a PR isn't great but it's out of the scope for the user manual
+      to be documenting how to configure the Hyper key on every system.
+
 Modifier Double Click
    Binding modifier keys as primary keys is supported,
    to avoid conflicts with regular usage you can bind them to double click.
