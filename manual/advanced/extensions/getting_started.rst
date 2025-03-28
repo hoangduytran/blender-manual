@@ -73,7 +73,7 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    version = "1.0.0"
    name = "My Example Extension"
    tagline = "This is another extension"
-   maintainer = "Developer name <email@address.com>"
+   maintainer = "Developer name"
    # Supported types: "add-on", "theme"
    type = "add-on"
 
