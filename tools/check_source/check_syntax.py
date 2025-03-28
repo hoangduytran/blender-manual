@@ -117,7 +117,7 @@ def compile_valid_kbd():
     pattern_str = ''.join((
         # Keyboard
         # Modifier
-        r"\A(", r"(?:-|\Z))?(".join(("Shift", "Ctrl", "Alt", r"(?:Cmd|OSKey)", "Fn")), r"(?:-|\Z))?",
+        r"\A(", r"(?:-|\Z))?(".join(("Shift", "Ctrl", "Alt", r"(?:Cmd|OSKey)", "Hyper", "Fn")), r"(?:-|\Z))?",
 
         # Note, shifted keys such as '!?:<>"' should not be included.
         r"((?:",
