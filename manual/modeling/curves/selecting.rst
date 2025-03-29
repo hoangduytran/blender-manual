@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+************************
+Selecting Curve Elements
+************************
 
 This page discusses specific selecting tools for curve objects in Edit Mode.
 The Curve Edit more also uses the general select tools used which are described

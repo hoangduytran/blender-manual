@@ -1,7 +1,7 @@
 
-************
-macOS -- AMD
-************
+****************************
+Troubleshooting macOS -- AMD
+****************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

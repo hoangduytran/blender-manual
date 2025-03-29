@@ -11,7 +11,7 @@
 
    introduction.rst
    toolbar/index.rst
-   structure.rst
-   primitives.rst
-   editing.rst
-   properties.rst
+   Structure <structure.rst>
+   Primitives <primitives.rst>
+   Editing <editing.rst>
+   Properties <properties.rst>

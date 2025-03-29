@@ -1,7 +1,7 @@
 
-###########
-  Editing
-###########
+#########################
+  Editing Curve Objects
+#########################
 
 The curves can be edited via :doc:`sculpting </sculpt_paint/curves_sculpting/introduction>`.
 

@@ -11,6 +11,6 @@
    :maxdepth: 2
 
    introduction.rst
-   selecting.rst
-   editing.rst
-   properties.rst
+   Selecting <selecting.rst>
+   Editing <editing.rst>
+   Properties <properties.rst>

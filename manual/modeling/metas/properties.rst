@@ -1,9 +1,9 @@
 
-**********
-Properties
-**********
+*******************
+Metaball Properties
+*******************
 
-All meta objects of a same :ref:`family <meta-ball-object-families>` in a scene interact with each other.
+All metaball objects of a same :ref:`family <meta-ball-object-families>` in a scene interact with each other.
 The settings in the *Metaball* section apply to all meta objects of the active family. In Edit Mode,
 the *Active Element* panel is shown for :ref:`editing <meta-ball-editing>` individual metaball elements.
 

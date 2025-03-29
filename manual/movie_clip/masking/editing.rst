@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+*************
+Editing Masks
+*************
 
 The tools and panels available to edit masks are the same in both editors.
 Editing of mask splines happens in a way similar to editing Bézier curves or paths in GIMP or other curve editors.

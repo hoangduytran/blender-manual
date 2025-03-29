@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+***************************
+Editing Vertex Paint Colors
+***************************
 
 .. _bpy.ops.grease_pencil.vertex_color_set:
 

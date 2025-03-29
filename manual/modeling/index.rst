@@ -17,6 +17,6 @@
    texts/index.rst
    volumes/index.rst
    empties.rst
-   modifiers/index.rst
+   Modifiers <modifiers/index.rst>
    geometry_nodes/index.rst
    transform/index.rst

@@ -1,10 +1,10 @@
 
-###########
-  Editing
-###########
+###############
+  NLA Editing
+###############
 
 .. toctree::
    :maxdepth: 2
 
    track.rst
-   strip.rst
+   Strip <strip.rst>

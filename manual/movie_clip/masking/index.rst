@@ -10,6 +10,6 @@
 
    introduction.rst
    scurve.rst
-   selecting.rst
-   editing.rst
+   Selecting <selecting.rst>
+   Editing <editing.rst>
    sidebar.rst

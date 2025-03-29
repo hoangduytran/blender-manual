@@ -10,6 +10,6 @@
    introduction.rst
    navigating.rst
    sidebar.rst
-   overlays.rst
+   Overlays <overlays.rst>
    image_settings.rst
-   editing.rst
+   Editing <editing.rst>

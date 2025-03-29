@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+*****************
+Selecting Objects
+*****************
 
 Selection determines which elements will be the target of our actions.
 Selections work on the current scene visible objects.

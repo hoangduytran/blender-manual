@@ -152,7 +152,6 @@ Split
 .. reference::
 
    :Mode:      Edit Mode
-   .. :Menu:      :menuselection:`Curves --> Split`
    :Shortcut:  :kbd:`Y`
 
 The *Split* operator separates the selected portion of a curve from the rest,

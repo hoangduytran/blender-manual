@@ -1,9 +1,9 @@
 .. _bpy.ops.mask.select_more:
 .. _bpy.ops.mask.select_less:
 
-*********
-Selecting
-*********
+***********************
+Selecting Mask Elements
+***********************
 
 .. _bpy.ops.mask.select_all:
 

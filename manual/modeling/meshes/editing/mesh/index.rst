@@ -19,7 +19,7 @@
    convex_hull.rst
    symmetrize.rst
    snap_symmetry.rst
-   normals.rst
+   Normals <normals.rst>
    shading.rst
    set_attribute.rst
    sort_elements.rst

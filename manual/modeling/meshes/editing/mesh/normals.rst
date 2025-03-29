@@ -1,9 +1,9 @@
 .. _bpy.ops.mesh.normals_tools:
 .. _modeling-meshes-editing-normals-editing:
 
-*******
-Normals
-*******
+***************
+Editing Normals
+***************
 
 .. todo put in ref to weighted normals modifier and bevel tool and modifier.
 

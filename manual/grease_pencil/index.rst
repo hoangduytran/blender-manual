@@ -9,9 +9,9 @@
    :maxdepth: 2
 
    introduction.rst
-   structure.rst
-   primitives.rst
-   properties/index.rst
+   Structure <structure.rst>
+   Primitives <primitives.rst>
+   Properties <properties/index.rst>
    Modifiers <modifiers/index.rst>
    visual_effects/index.rst
    Materials <materials/index.rst>

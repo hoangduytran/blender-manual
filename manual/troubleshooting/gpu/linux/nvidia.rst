@@ -1,7 +1,7 @@
 
-***************
-Linux -- NVIDIA
-***************
+*******************************
+Troubleshooting Linux -- NVIDIA
+*******************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

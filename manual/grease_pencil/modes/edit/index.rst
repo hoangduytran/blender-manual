@@ -7,7 +7,7 @@
    :maxdepth: 2
 
    introduction.rst
-   selecting.rst
+   Selecting <selecting.rst>
    tools.rst
    grease_pencil_menu.rst
    stroke_menu.rst

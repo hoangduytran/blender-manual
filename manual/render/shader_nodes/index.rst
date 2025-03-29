@@ -8,12 +8,12 @@
    :maxdepth: 2
 
    introduction.rst
-   input/index.rst
-   output/index.rst
-   shader/index.rst
-   textures/index.rst
-   color/index.rst
-   vector/index.rst
-   converter/index.rst
+   Input <input/index.rst>
+   Output <output/index.rst>
+   Shader <shader/index.rst>
+   Texture <textures/index.rst>
+   Color <color/index.rst>
+   Vector <vector/index.rst>
+   Converter <converter/index.rst>
    groups.rst
    osl.rst

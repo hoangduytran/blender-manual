@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+*********************
+Editing Outliner Data
+*********************
 
 .. _editors-outliner-editing-context_menu:
 

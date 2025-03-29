@@ -1,7 +1,7 @@
 
-###########
-  Editing
-###########
+###################
+  Editing Objects
+###################
 
 .. toctree::
    :maxdepth: 2
@@ -17,7 +17,7 @@
    join.rst
    asset.rst
    parent.rst
-   modifiers.rst
+   Modifiers <modifiers.rst>
    constraints.rst
    track.rst
    relations/index.rst

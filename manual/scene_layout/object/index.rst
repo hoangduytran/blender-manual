@@ -12,7 +12,7 @@
    introduction.rst
    types.rst
    origin.rst
-   selecting.rst
-   editing/index.rst
+   Selecting <selecting.rst>
+   Editing <editing/index.rst>
    properties/index.rst
    tools/index.rst

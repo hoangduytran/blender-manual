@@ -3,9 +3,9 @@
 
 .. _bpy.types.StripModifier:
 
-*********
-Modifiers
-*********
+***************
+Strip Modifiers
+***************
 
 .. reference::
 

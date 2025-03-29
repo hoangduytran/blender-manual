@@ -1,7 +1,7 @@
 
-**********
-Properties
-**********
+*****************
+Volume Properties
+*****************
 
 .. _bpy.types.VolumeGrids:
 

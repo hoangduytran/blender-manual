@@ -1,7 +1,7 @@
 
-***************
-macOS -- NVIDIA
-***************
+*******************************
+Troubleshooting macOS -- NVIDIA
+*******************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

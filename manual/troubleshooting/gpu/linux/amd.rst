@@ -1,7 +1,7 @@
 
-************
-Linux -- AMD
-************
+****************************
+Troubleshooting Linux -- AMD
+****************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

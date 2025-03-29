@@ -1,7 +1,7 @@
 
-**************
-Linux -- Intel
-**************
+******************************
+Troubleshooting Linux -- Intel
+******************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

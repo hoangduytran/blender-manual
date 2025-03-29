@@ -1,7 +1,7 @@
 
-******************
-Linux -- Other GPU
-******************
+**********************************
+Troubleshooting Linux -- Other GPU
+**********************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

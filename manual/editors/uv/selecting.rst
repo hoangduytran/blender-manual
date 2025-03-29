@@ -1,8 +1,8 @@
 .. _bpy.ops.uv.select:
 
-*********
-Selecting
-*********
+*************
+Selecting UVs
+*************
 
 Much like the 3D Viewport, the UV Editor has selection mode buttons in the header,
 as well as a *Select* menu.

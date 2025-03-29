@@ -6,10 +6,10 @@
 .. toctree::
    :maxdepth: 2
 
-   structure.rst
-   primitives.rst
+   Structure <structure.rst>
+   Primitives <primitives.rst>
    tools/index.rst
-   selecting.rst
-   editing/index.rst
-   properties.rst
+   Selecting <selecting.rst>
+   Editing <editing/index.rst>
+   Properties <properties.rst>
    curve_display.rst

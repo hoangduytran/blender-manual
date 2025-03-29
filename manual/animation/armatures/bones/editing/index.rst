@@ -1,9 +1,9 @@
 .. _bpy.types.EditBone:
 .. _bpy.types.ArmatureEditBones:
 
-###########
-  Editing
-###########
+#################
+  Editing Bones
+#################
 
 .. toctree::
    :maxdepth: 2

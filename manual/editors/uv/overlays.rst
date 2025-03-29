@@ -1,7 +1,7 @@
 
-********
-Overlays
-********
+***********
+UV Overlays
+***********
 
 .. figure:: /images/editors_uv_overlays.png
    :align: right

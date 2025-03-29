@@ -1,8 +1,8 @@
 .. _bpy.ops.curves.add:
 
-**********
-Primitives
-**********
+****************
+Curve Primitives
+****************
 
 .. _bpy.ops.object.curves_empty_hair_add:
 

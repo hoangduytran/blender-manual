@@ -8,6 +8,6 @@ Montage
 
    introduction.rst
    strips/index.rst
-   selecting.rst
-   editing.rst
+   Selecting <selecting.rst>
+   Editing <editing.rst>
    meta.rst

@@ -1,7 +1,7 @@
 
-********************
-Windows -- Other GPU
-********************
+************************************
+Troubleshooting Windows -- Other GPU
+************************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

@@ -1,7 +1,7 @@
 
-**********
-Properties
-**********
+****************
+Curve Properties
+****************
 
 Hair Curves have different properties than regular Curve objects;
 these properties are documented below.

@@ -1,8 +1,8 @@
 .. _bpy.ops.view3d.select:
 
-*********
-Selecting
-*********
+*****************
+Selecting Objects
+*****************
 
 This page discusses selection tools that are specific to the 3D Viewport.
 The generic selection tools are described in the
@@ -20,6 +20,7 @@ Selection Menu :kbd:`Alt`
 These keys can be combined to get a selection menu based on object origins.
 
 The mode-specific selection pages are listed below.
+
 
 Object Mode
 ===========

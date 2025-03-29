@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+********************
+Editing Weight Paint
+********************
 
 .. reference::
 

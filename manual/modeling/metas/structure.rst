@@ -1,7 +1,7 @@
 
-*********
-Structure
-*********
+******************
+Metaball Structure
+******************
 
 Technical Details
 =================

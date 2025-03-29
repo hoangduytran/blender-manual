@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+***************************
+Editing Vertex Paint Colors
+***************************
 
 .. _bpy.ops.paint.vertex_color_smooth:
 

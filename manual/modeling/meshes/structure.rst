@@ -1,9 +1,9 @@
 
-*********
-Structure
-*********
+**************
+Mesh Structure
+**************
 
-With meshes, everything is built from three basic structures:
+With meshes, everything is built from three basic elements:
 *vertices*, *edges* and *faces*.
 
 .. figure:: /images/modeling_meshes_structure_example.svg

@@ -1,8 +1,8 @@
 .. _modeling-curves-editing-index:
 
-###########
-  Editing
-###########
+#########################
+  Editing Curve Objects
+#########################
 
 .. toctree::
    :maxdepth: 2

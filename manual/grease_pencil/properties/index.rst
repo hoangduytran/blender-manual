@@ -1,8 +1,8 @@
 .. _bpy.types.GPencilSculptSettings:
 
-##############
-  Properties
-##############
+############################
+  Grease Pencil Properties
+############################
 
 .. toctree::
    :maxdepth: 2

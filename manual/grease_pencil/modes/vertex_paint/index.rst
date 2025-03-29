@@ -10,4 +10,4 @@
    brushes.rst
    tools.rst
    tool_settings/brush.rst
-   editing.rst
+   Editing <editing.rst>

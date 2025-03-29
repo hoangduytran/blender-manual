@@ -1,8 +1,8 @@
 .. _meta-ball-editing:
 
-*******
-Editing
-*******
+********************
+Editing Meta Objects
+********************
 
 In addition to having several meta objects in a same family,
 you can also have several meta primitives in a single object (just add some more while in Edit Mode).

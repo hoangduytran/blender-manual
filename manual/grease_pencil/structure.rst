@@ -1,7 +1,7 @@
 
-*********
-Structure
-*********
+***********************
+Grease Pencil Structure
+***********************
 
 Grease Pencil object has three main basic components: *points*, *edit lines* and *strokes*.
 

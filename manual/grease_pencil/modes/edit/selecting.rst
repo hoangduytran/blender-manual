@@ -1,8 +1,8 @@
 .. _bpy.ops.grease_pencil.select:
 
-*********
-Selecting
-*********
+********************************
+Selecting Grease Pencil Elements
+********************************
 
 .. _bpy.ops.grease_pencil.set_selection_mode:
 .. _bpy.types.ToolSettings.gpencil_selectmode_edit:

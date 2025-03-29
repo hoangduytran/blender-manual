@@ -1,7 +1,7 @@
 
-********
-Overlays
-********
+**************
+Image Overlays
+**************
 
 The Overlays pop-over configures the overlays that are displayed on top of images.
 In the header, there is a button to turn off all overlays for the Image Editor.

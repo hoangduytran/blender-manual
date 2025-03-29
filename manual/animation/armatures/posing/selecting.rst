@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+***************
+Selecting Bones
+***************
 
 Selection in *Pose Mode* is very similar to the one in :doc:`Edit Mode </animation/armatures/bones/selecting>`,
 with a few deviations:

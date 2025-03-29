@@ -1,7 +1,7 @@
 
-*********
-Modifiers
-*********
+*****************
+Editing Modifiers
+*****************
 
 Operators for working with an object's :doc:`/modeling/modifiers/index`.
 

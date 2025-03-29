@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+*************
+Editing Nodes
+*************
 
 .. _nodes-editing-transform:
 

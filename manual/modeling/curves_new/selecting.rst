@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+************************
+Selecting Curve Elements
+************************
 
 Hair curves, while similar to regular curves are a bit different and have their own selection tools.
 Many of these match their regular curve tools but are implemented differently

@@ -1,7 +1,7 @@
 
-**********
-Primitives
-**********
+*******************
+Metaball Primitives
+*******************
 
 .. reference::
 

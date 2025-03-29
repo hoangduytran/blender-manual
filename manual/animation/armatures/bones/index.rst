@@ -10,8 +10,8 @@
 
    introduction.rst
    bone_collections.rst
-   structure.rst
+   Structure <structure.rst>
    tools/index.rst
-   selecting.rst
-   editing/index.rst
-   properties/index.rst
+   Selecting <selecting.rst>
+   Editing <editing/index.rst>
+   Properties <properties/index.rst>

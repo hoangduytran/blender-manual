@@ -1,9 +1,9 @@
 .. _bpy.ops.font.move_select:
 .. _bpy.ops.font.select_all:
 
-*********
-Selecting
-*********
+**************
+Selecting Text
+**************
 
 .. figure:: /images/modeling_texts_selecting_cursor.png
    :width: 340px

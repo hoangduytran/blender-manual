@@ -8,5 +8,5 @@
    :maxdepth: 2
 
    introduction.rst
-   editing.rst
+   Editing <editing.rst>
    keying_sets.rst

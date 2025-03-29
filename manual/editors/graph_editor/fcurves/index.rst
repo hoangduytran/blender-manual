@@ -8,6 +8,6 @@
    :maxdepth: 2
 
    introduction.rst
-   editing.rst
-   properties.rst
+   Editing <editing.rst>
+   Properties <properties.rst>
    modifiers.rst

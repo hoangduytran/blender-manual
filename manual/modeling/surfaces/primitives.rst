@@ -1,8 +1,8 @@
 .. _bpy.ops.surface.primitive*add:
 
-**********
-Primitives
-**********
+******************
+Surface Primitives
+******************
 
 .. reference::
 

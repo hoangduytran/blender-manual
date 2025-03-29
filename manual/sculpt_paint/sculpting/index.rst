@@ -15,4 +15,4 @@
    tools/index.rst
    tool_settings/index.rst
    controls.rst
-   editing/index.rst
+   Editing <editing/index.rst>

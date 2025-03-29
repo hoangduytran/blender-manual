@@ -1,8 +1,8 @@
 .. _bpy.ops.curve.primitive*add:
 
-**********
-Primitives
-**********
+****************
+Curve Primitives
+****************
 
 .. reference::
 

@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+***************
+Selecting Nodes
+***************
 
 .. _bpy.ops.node.select_all:
 

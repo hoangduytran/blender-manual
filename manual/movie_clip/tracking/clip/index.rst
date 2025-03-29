@@ -9,6 +9,6 @@
    introduction.rst
    marker.rst
    toolbar/index.rst
-   selecting.rst
-   editing/index.rst
+   Selecting <selecting.rst>
+   Editing <editing/index.rst>
    sidebar/index.rst

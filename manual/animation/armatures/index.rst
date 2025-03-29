@@ -12,7 +12,7 @@
 
    introduction.rst
    bones/index.rst
-   properties/index.rst
-   structure.rst
+   Properties <properties/index.rst>
+   Structure <structure.rst>
    skinning/index.rst
    posing/index.rst

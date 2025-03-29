@@ -11,9 +11,9 @@
 
    introduction.rst
    parts.rst
-   selecting.rst
+   Selecting <selecting.rst>
    arranging.rst
-   editing.rst
+   Editing <editing.rst>
    sidebar.rst
    groups.rst
    frame.rst

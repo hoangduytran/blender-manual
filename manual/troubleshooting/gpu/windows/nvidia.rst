@@ -1,7 +1,7 @@
 
-*****************
-Windows -- NVIDIA
-*****************
+*********************************
+Troubleshooting Windows -- NVIDIA
+*********************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

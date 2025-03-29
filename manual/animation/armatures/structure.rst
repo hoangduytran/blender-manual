@@ -1,7 +1,7 @@
 
-*********
-Structure
-*********
+******************
+Armature Structure
+******************
 
 .. figure:: /images/animation_armatures_structure_armature-example.png
    :align: right

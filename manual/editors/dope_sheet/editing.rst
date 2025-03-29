@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+**********************
+Editing Dopesheet Data
+**********************
 
 .. _dopesheet-select-menu:
 

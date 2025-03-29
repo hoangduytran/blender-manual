@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+**************************
+Selecting Surface Elements
+**************************
 
 This page discusses specific selecting tools for surface objects in Edit Mode.
 The Surface Edit also uses the general select tools used which are described

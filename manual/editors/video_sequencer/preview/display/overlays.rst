@@ -1,9 +1,9 @@
 .. _bpy.types.SequencerPreviewOverlay:
 .. |overlays-icon| image:: /images/editors_3dview_display_overlays.png
 
-********
-Overlays
-********
+**************************
+Sequencer Preview Overlays
+**************************
 
 .. reference::
 

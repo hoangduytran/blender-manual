@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+***************
+Selecting Bones
+***************
 
 You can select and edit bones of armatures in *Edit Mode* and in *Pose Mode*.
 Here, we will see how to select bones in *Edit Mode*.

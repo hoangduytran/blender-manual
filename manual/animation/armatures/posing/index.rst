@@ -10,7 +10,7 @@
    :maxdepth: 2
 
    introduction.rst
-   selecting.rst
-   editing/index.rst
+   Selecting <selecting.rst>
+   Editing <editing/index.rst>
    tool_settings.rst
    bone_constraints/index.rst

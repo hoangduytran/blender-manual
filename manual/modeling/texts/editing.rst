@@ -19,9 +19,9 @@
 .. |division| unicode:: U+000F7
 .. |plusminus| unicode:: U+000B1
 
-*******
-Editing
-*******
+********************
+Editing Text Objects
+********************
 
 Editing text is quite different from other object types in Blender, and happens mainly in two areas.
 First, the 3D Viewport, where you type your text, and have a few shortcuts, e.g. for applying

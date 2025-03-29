@@ -1,8 +1,8 @@
 .. _bpy.ops.object.grease_pencil_add:
 
-**********
-Primitives
-**********
+************************
+Grease Pencil Primitives
+************************
 
 .. reference::
 

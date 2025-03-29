@@ -1,7 +1,7 @@
 
-**************
-Windows -- AMD
-**************
+******************************
+Troubleshooting Windows -- AMD
+******************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

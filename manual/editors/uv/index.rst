@@ -10,7 +10,7 @@
 
    introduction.rst
    navigating.rst
-   overlays.rst
+   Overlays <overlays.rst>
    sidebar.rst
    selecting.rst
    controls/snapping.rst

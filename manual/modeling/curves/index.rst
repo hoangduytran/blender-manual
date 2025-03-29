@@ -10,10 +10,10 @@
    :maxdepth: 2
 
    introduction.rst
-   structure.rst
-   primitives.rst
+   Structure <structure.rst>
+   Primitives <primitives.rst>
    tools/index.rst
-   selecting.rst
-   editing/index.rst
-   properties/index.rst
+   Selecting <selecting.rst>
+   Editing <editing/index.rst>
+   Properties <properties/index.rst>
    curve_display.rst

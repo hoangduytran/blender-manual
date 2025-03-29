@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+****************
+Editing Channels
+****************
 
 .. _bpy.ops.anim.channels_delete:
 

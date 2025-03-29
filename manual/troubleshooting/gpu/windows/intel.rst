@@ -1,7 +1,7 @@
 
-****************
-Windows -- Intel
-****************
+********************************
+Troubleshooting Windows -- Intel
+********************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

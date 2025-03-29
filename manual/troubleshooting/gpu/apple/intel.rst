@@ -1,7 +1,7 @@
 
-**************
-macOS -- Intel
-**************
+******************************
+Troubleshooting macOS -- Intel
+******************************
 
 .. include:: ../common/introduction.rst
    :start-line: 1

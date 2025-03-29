@@ -11,4 +11,4 @@
    introduction.rst
    brushes.rst
    tool_settings/index.rst
-   editing.rst
+   Editing <editing.rst>

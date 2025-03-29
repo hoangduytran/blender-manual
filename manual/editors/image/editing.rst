@@ -1,6 +1,6 @@
-*******
-Editing
-*******
+**************
+Editing Images
+**************
 
 .. _bpy.ops.image.new:
 

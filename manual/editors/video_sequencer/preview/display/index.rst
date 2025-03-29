@@ -8,4 +8,4 @@
 
    display_mode.rst
    gizmos.rst
-   overlays.rst
+   Overlays <overlays.rst>

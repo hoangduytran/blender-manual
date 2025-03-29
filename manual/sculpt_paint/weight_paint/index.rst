@@ -12,4 +12,4 @@
    tools.rst
    tool_settings/index.rst
    usage.rst
-   editing.rst
+   Editing <editing.rst>

@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+****************
+Selecting Strips
+****************
 
 The active sequence strip is displayed with a light outline.
 The *entire* strip could be selected by clicking :kbd:`LMB` in the middle of the strip.

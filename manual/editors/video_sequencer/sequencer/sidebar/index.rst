@@ -7,6 +7,6 @@
    :maxdepth: 2
 
    strip.rst
-   modifiers.rst
+   Modifiers <modifiers.rst>
    cache.rst
    proxy.rst

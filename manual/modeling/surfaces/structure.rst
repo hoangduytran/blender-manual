@@ -1,7 +1,7 @@
 
-*********
-Structure
-*********
+*****************
+Surface Structure
+*****************
 
 Many of the concepts from :doc:`curves </modeling/curves/introduction>`,
 especially :ref:`NURBS <curve-nurbs>` ones,

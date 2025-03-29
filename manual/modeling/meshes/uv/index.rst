@@ -9,6 +9,6 @@
    uv_texture_spaces.rst
    unwrapping/index.rst
    tools/index.rst
-   editing.rst
+   Editing <editing.rst>
    workflows/index.rst
    applying_image.rst

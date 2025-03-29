@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+************************
+Selecting Outliner Items
+************************
 
 .. figure:: /images/editors_outliner_selecting_example.png
    :align: right

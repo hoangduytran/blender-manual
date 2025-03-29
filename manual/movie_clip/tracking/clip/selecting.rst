@@ -1,7 +1,7 @@
 
-*********
-Selecting
-*********
+****************
+Selecting Tracks
+****************
 
 .. _bpy.ops.clip.select_all:
 

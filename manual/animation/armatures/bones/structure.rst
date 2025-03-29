@@ -1,7 +1,7 @@
 
-*********
-Structure
-*********
+**************
+Bone Structure
+**************
 
 .. figure:: /images/animation_armatures_bones_structure_bones-elements.png
    :align: right

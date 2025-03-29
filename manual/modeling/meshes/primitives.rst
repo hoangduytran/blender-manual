@@ -1,7 +1,7 @@
 
-**********
-Primitives
-**********
+***************
+Mesh Primitives
+***************
 
 .. reference::
 

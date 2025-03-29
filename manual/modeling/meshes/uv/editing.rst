@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+***********
+Editing UVs
+***********
 
 After unwrap, you will likely need to arrange the UV maps,
 so that they can be used in texturing or painting. Your goals for editing are:

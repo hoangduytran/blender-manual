@@ -10,8 +10,8 @@
 
    introduction.rst
    toolbar/index.rst
-   structure.rst
-   primitives.rst
-   selecting.rst
-   editing/index.rst
-   properties/index.rst
+   Structure <structure.rst>
+   Primitives <primitives.rst>
+   Selecting <selecting.rst>
+   Editing <editing/index.rst>
+   Properties <properties/index.rst>

@@ -10,6 +10,6 @@
 
    introduction.rst
    interface.rst
-   selecting.rst
-   editing.rst
+   Selecting <selecting.rst>
+   Editing <editing.rst>
    usage.rst

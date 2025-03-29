@@ -1,7 +1,7 @@
 
-##############
-  Properties
-##############
+#######################
+  Armature Properties
+#######################
 
 .. toctree::
    :maxdepth: 2

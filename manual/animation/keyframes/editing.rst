@@ -1,7 +1,7 @@
 
-*******
-Editing
-*******
+*****************
+Editing Keyframes
+*****************
 
 .. _bpy.ops.anim.keyframe_insert:
 

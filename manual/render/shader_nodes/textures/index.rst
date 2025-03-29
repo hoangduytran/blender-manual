@@ -1,8 +1,8 @@
 .. _textures:
 
-###########
-  Texture
-###########
+#################
+  Texture Nodes
+#################
 
 .. toctree::
    :maxdepth: 1

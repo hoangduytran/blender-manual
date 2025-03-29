@@ -1,7 +1,7 @@
 
-**********
-Navigation
-**********
+*************************
+Navigating in Paint Modes
+*************************
 
 There are different preferences for navigating the 3D Viewport in Blender.
 For painting and sculpting specific workflows it is recommended to use any of the following methods.
