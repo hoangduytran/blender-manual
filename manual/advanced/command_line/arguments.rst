@@ -380,6 +380,10 @@ GPU Options
 ``--gpu-compilation-subprocesses``
    Override the Max Compilation Subprocesses setting (OpenGL only).
 
+``--profile-gpu``
+   Enable CPU & GPU performance profiling for GPU debug groups
+   (Outputs a profile.json file in the Trace Event Format to the current directory)
+
 
 .. _command-line-args-misc-options:
 
@@ -474,6 +478,9 @@ Other Options
 
    NOTE: this is an alternative way to get the same effect as when setting the
    `No Override Auto Resync` User Preferences Debug option.
+
+``--debug-gpu-vulkan-local-read``
+   Force Vulkan dynamic rendering local read when supported by device.
 
 
 .. _command-line-args-argument-parsing:
