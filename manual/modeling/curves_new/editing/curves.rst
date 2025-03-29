@@ -142,3 +142,24 @@ Type
 
 Handles
    Includes handle information during the conversion process.
+
+
+.. _bpy.ops.curves.split:
+
+Split
+=====
+
+.. reference::
+
+   :Mode:      Edit Mode
+   .. :Menu:      :menuselection:`Curves --> Split`
+   :Shortcut:  :kbd:`Y`
+
+The *Split* operator separates the selected portion of a curve from the rest,
+creating a new, independent curve segment.
+This curve can then be moved or altered without affecting the other curve.
+
+- If a segment of the curve is selected, it will be split off
+  as a new curve that can be moved or edited independently.
+- If only a single control point is selected, it will be duplicated as a loose control point,
+  while the original remains attached to the rest of the curve.
