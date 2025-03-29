@@ -693,7 +693,7 @@ dict_ignore = {
     "wlroots",
     "worley",
     "zaal",
-    
+
     # Generic manual terminology or Sphinx keywords not covered above.
     "bvh-file",
     "bvh-files",

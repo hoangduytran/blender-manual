@@ -13,6 +13,7 @@ GEO_NODES_PASS = [
     "GeometryNodeSimulationOutput"
 ]
 
+
 @dataclass
 class Rectangle:
     x: float

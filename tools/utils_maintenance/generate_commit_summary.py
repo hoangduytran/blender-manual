@@ -41,6 +41,7 @@ def print_summary(repo, commits):
     for title, url in commit_details:
         print(f"| [{title}]({url}) |||")
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         usage=__doc__

@@ -44,12 +44,15 @@ def find_vcs_root(test, dirs=(".svn", ".git", ".hg"), default=None):
     return default
 
 # Performs checks of words, first using the word cache
+
+
 def check_word_cached(w):
     if w in word_cache:
         return word_cache[w]
     result = dict_spelling.check(w)
     word_cache[w] = result
     return result
+
 
 def check_word(w):
     if not w:
@@ -178,12 +181,12 @@ def rst_files(path):
 def main():
     # Collect all RST files
     files = list(rst_files(RST_DIR))
-    
+
     # Use ThreadPoolExecutor for multithreading - only tested on Windows but should not be OS-specific
     with concurrent.futures.ThreadPoolExecutor() as executor:
         # Submit each file to be processed in a separate thread
         futures = [executor.submit(check_spelling, fn) for fn in files]
-        
+
         # Wait for all threads to complete - not strictly required, but doesn't add much overhead and
         #   does allow us to catch and display errors
         for future in concurrent.futures.as_completed(futures):
