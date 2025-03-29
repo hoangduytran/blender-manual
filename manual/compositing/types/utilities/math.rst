@@ -68,30 +68,3 @@ with min() and max() enabled to clamp the output to valid values.
 With this approach, you could use a logarithmic function to make a high dynamic range image.
 For this particular example,
 there is also a *Brightness/Contrast node* that might give simpler control over brightness.
-
-
-Restrict Color Selection (Posterization)
-----------------------------------------
-
-.. figure:: /images/compositing_types_converter_math_posterization.png
-
-   Posterization example.
-
-In this example, we restrict the color values to be one of the six values: 0, 0.2, 0.4, 0.6, 0.8, 1.
-
-To split up a continuous range of values between 0 and 1 to certain set of values,
-the following function is used: :math:`round(x × n - 0.5) / (n - 1)`,
-where "n" is the number of possible output values, and "x" is the input pixel color.
-`Read more about this function
-<https://archive.blender.org/wiki/2015/index.php/Doc:2.4/Manual/Composite_Nodes/Types/Convertor/#Quantize.2FRestrict_Color_Selection>`__.
-
-To implement this function in Blender, consider the node setup above.
-We string the Math nodes into a function that takes each color (values from 0 to 1),
-multiplies it up by six, the desired number of divisions (values become from 0 to 6),
-offsets it by 0.5 (-0.5 to 5.5),
-rounds the value to the nearest whole number (produces 0, 1, 2, 3, 4, 5),
-and then divides the image pixel color by five (0.0, 0.2, 0.4, 0.6, 0.8, 1.0).
-
-In the case of a color image,
-you need to split it into separate RGB channels using *Separate/Combine Color* nodes
-and perform this operation on each channel independently.
