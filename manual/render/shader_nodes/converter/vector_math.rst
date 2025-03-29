@@ -1,6 +1,7 @@
 .. _bpy.types.ShaderNodeVectorMath:
 .. Editor's Note: This page gets copied into:
-.. - :doc:`</modeling/nodes/vector/vector_math>`
+.. - :doc:`</compositing/types/vector/vector_math>`
+.. - :doc:`</modeling/geometry_nodes/vector/vector_math>`
 
 .. --- copy below this line ---
 

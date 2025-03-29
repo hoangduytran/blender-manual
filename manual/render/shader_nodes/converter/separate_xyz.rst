@@ -1,11 +1,16 @@
 .. _bpy.types.ShaderNodeSeparateXYZ:
 .. index:: Shader Nodes; Separate XYZ
 
+.. Editor's Note: This page gets copied into:
+
+.. - :doc:`</compositing/types/vector/separate_xyz>`
+.. --- copy below this line ---
+
 *****************
 Separate XYZ Node
 *****************
 
-.. figure:: /images/node-types_CompositorNodeSeparateXYZ.webp
+.. figure:: /images/node-types_ShaderNodeSeparateXYZ.webp
    :align: right
    :alt: Separate XYZ Node.
 

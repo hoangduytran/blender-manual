@@ -16,5 +16,8 @@ These nodes can be used to manipulate various types of vectors, such as surface 
 .. toctree::
    :maxdepth: 1
 
+   vector_math.rst
+   vector_rotate.rst
+   mix_vector.rst
    normal.rst
    vector_curves.rst

@@ -1,8 +1,8 @@
 .. _bpy.types.ShaderNodeVectorRotate:
 
 .. Editor's Note: This page gets copied into:
+.. - :doc:`<//compositing/types/vector/vector_rotate>`
 .. - :doc:`</modeling/geometry_nodes/utilities/vector/vector_rotate>`
-
 .. --- copy below this line ---
 
 ******************

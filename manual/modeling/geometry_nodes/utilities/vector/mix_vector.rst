@@ -1,5 +1,7 @@
 .. index:: Geometry Nodes; Mix Vector
-.. DO NOT EDIT FILE. This is simply a stub which copies everything from the link below.
+.. Editor's Note: This page gets copied into:
+.. - :doc:`</compositing/types/vector/mix_vector>`
+.. --- copy below this line ---
 
 ***************
 Mix Vector Node

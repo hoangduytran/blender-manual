@@ -47,8 +47,8 @@ Factor
 
 .. hint::
 
-   The :doc:`Map Value </compositing/types/utilities/map_value>`
-   node can be used to map the output to a more appropriate value.
+   The :doc:`/compositing/types/utilities/map_range`
+   can be used to map the output to a more appropriate value.
    With some curves, it is possible that the Time Curve node
    may output a number larger than one or less than zero.
    To be safe, use the Min/Max clamping function of the Map Value node to limit output.

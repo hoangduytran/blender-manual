@@ -7,8 +7,9 @@
    :maxdepth: 1
 
    map_range.rst
-   map_value.rst
    math.rst
+   clamp.rst
+   float_curve.rst
 
 ----------
 

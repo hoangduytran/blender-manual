@@ -55,6 +55,7 @@ Clamp Factor
 Clamp Result (Color only)
    Limit the Result to the range between 0.0 and 1.0.
 
+
 Outputs
 =======
 
@@ -65,6 +66,4 @@ Result
 Examples
 ========
 
-See the Color > Mix page for additional examples:
-:doc:`Mix Color Node </render/shader_nodes/color/mix>`
-
+See the :doc:`Mix Color Node </render/shader_nodes/color/mix>` for additional examples.

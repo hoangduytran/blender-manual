@@ -1,7 +1,7 @@
 .. _bpy.types.ShaderNodeClamp:
 .. Editor's Note: This page gets copied into:
-.. - :doc:`</modeling/nodes/utilities/clamp>`
-
+.. - :doc:`</compositing/types/utilities/clamp>`
+.. - :doc:`</modeling/geometry_nodes/utilities/clamp>`
 .. --- copy below this line ---
 
 **********

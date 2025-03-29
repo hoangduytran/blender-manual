@@ -1,33 +1,3 @@
 .. index:: Compositor Nodes; Separate XYZ
-.. _bpy.types.CompositorNodeSeparateXYZ:
-
-*****************
-Separate XYZ Node
-*****************
-
-.. figure:: /images/node-types_CompositorNodeSeparateXYZ.webp
-   :align: right
-   :alt: Separate XYZ Node.
-
-The *Separate XYZ Node* splits a vector into its individual components.
-
-
-Input
-=====
-
-Vector
-   Standard vector input.
-
-
-Properties
-==========
-
-This node has no properties.
-
-
-Outputs
-=======
-
-- X
-- Y
-- Z
+.. include:: /render/shader_nodes/converter/separate_xyz.rst
+   :start-after: .. --- copy below this line ---

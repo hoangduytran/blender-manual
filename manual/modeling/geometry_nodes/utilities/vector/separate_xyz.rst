@@ -4,7 +4,7 @@
 Separate XYZ Node
 *****************
 
-.. figure:: /images/node-types_CompositorNodeSeparateXYZ.webp
+.. figure:: /images/node-types_ShaderNodeSeparateXYZ.webp
    :align: right
    :alt: Separate XYZ Node.
 

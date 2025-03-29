@@ -1,6 +1,6 @@
 .. _bpy.types.ShaderNodeValue:
 .. Editor's Note: This page gets copied into:
-.. - :doc:`<//compositing/types/input/constant/value>`
+.. - :doc:`</compositing/types/input/constant/value>`
 .. - :doc:`</modeling/modifiers/nodes/input/value>`
 
 .. --- copy below this line ---

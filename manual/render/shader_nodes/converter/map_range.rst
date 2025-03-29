@@ -1,7 +1,8 @@
 .. _bpy.types.ShaderNodeMapRange:
 .. Editor's Note: This page gets copied into:
-.. - :doc:`</modeling/geometry_nodes/utilities/math/map_range>`
 
+.. - :doc:`</compositing/types/utilities/map_range>`
+.. - :doc:`</modeling/geometry_nodes/utilities/math/map_range>`
 .. --- copy below this line ---
 
 **************

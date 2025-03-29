@@ -1,4 +1,9 @@
 .. _bpy.types.ShaderNodeFloatCurve:
+
+.. Editor's Note: This page gets copied into:
+
+.. - :doc:`</compositing/types/utilities/float_curve>`
+.. - :doc:`</modeling/geometry_nodes/utilities/math/float_curve>`
 .. --- copy below this line ---
 
 ***********

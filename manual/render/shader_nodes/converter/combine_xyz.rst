@@ -1,11 +1,16 @@
 .. _bpy.types.ShaderNodeCombineXYZ:
 .. index:: Shader Nodes; Combine XYZ
 
+.. Editor's Note: This page gets copied into:
+
+.. - :doc:`</compositing/types/vector/combine_xyz>`
+.. --- copy below this line ---
+
 ****************
 Combine XYZ Node
 ****************
 
-.. figure:: /images/node-types_CompositorNodeCombineXYZ.webp
+.. figure:: /images/node-types_ShaderNodeCombineXYZ.webp
    :align: right
    :alt: Combine XYZ Node.
 
