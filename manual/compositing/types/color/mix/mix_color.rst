@@ -1,9 +1,5 @@
 .. index:: Compositor Nodes; Mix
 .. _bpy.types.CompositorNodeMixRGB:
-.. Editor's Note: This page gets copied into:
-.. - :doc:`</editors/texture_node/types/color/mix_rgb>`
-
-.. --- copy below this line ---
 
 ********
 Mix Node
