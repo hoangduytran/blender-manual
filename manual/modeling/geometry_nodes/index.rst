@@ -46,6 +46,7 @@ Node Types
    :titlesonly:
 
    curve/index.rst
+   grease_pencil/index.rst
    instances/index.rst
    mesh/index.rst
    point/index.rst
