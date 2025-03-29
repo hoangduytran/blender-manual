@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeTexVoronoi:
+.. --- copy below this line ---
 
 ********************
 Voronoi Texture Node

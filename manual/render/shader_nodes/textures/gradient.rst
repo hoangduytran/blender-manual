@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeTexGradient:
+.. --- copy below this line ---
 
 *********************
 Gradient Texture Node

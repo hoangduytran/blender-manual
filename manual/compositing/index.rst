@@ -54,6 +54,7 @@ Node Types
    :maxdepth: 2
 
    types/transform/index.rst
+   types/texture/index.rst
    types/utilities/index.rst
    types/vector/index.rst
 

@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeTexMagic:
+.. --- copy below this line ---
 
 ******************
 Magic Texture Node

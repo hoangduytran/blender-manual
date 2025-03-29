@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeTexBrick:
+.. --- copy below this line ---
 
 ******************
 Brick Texture Node

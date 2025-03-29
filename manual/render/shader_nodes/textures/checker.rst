@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeTexChecker:
+.. --- copy below this line ---
 
 ********************
 Checker Texture Node

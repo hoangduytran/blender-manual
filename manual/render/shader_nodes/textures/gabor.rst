@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeTexGabor:
+.. --- copy below this line ---
 .. section-title
 
 ******************

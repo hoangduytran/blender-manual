@@ -1,4 +1,5 @@
 .. _bpy.types.ShaderNodeTexWave:
+.. --- copy below this line ---
 
 *****************
 Wave Texture Node
