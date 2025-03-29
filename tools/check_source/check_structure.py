@@ -54,15 +54,15 @@ def find_rst_titles(root_dir):
                     match = title_pattern.search(content)
                     if match:
                         title = match.group('title').strip()
-                        titles[title].append(file_path)
+                        titles[title].append(os.path.relpath(file_path, root_dir))
 
-    # Report duplicates
+    # Report duplicates, sorted alphabetically
     duplicates = {t: paths for t, paths in titles.items() if len(paths) > 1}
     if duplicates:
         print("Duplicate titles found:")
-        for title, files in duplicates.items():
+        for title in sorted(duplicates):
             print(f'\nTitle: "{title}"')
-            for f in files:
+            for f in sorted(duplicates[title]):
                 print(f' - {f}')
     else:
         print("All .rst titles with * or # overline/underline are unique.")
