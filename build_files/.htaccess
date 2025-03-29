@@ -282,3 +282,6 @@ RedirectMatch "^/manual/{lang}/{version}/grease_pencil/object.html" "/manual/{la
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/cutter.html" "/manual/{lang}/{version}/grease_pencil/modes/draw/tools/trim.html"
 
 RedirectMatch "^/manual/{lang}/{version}/contribute/translations/contribute/" "/manual/{lang}/{version}/contribute/translate_manual//$1"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/grease_pencil_to_curves.html" "/manual/{lang}/{version}/modeling/geometry_nodes/grease_pencil/operations/grease_pencil_to_curves.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/merge_layers.html" "/manual/{lang}/{version}/modeling/geometry_nodes/grease_pencil/operations/merge_layers.html"
