@@ -49,3 +49,21 @@ Blender 2.7x
 ============
 
 - `Blender 2.79 <https://docs.blender.org/manual/en/2.79/>`__
+
+
+Blender 2.6x
+============
+
+- `Blender 2.6x <https://archive.blender.org/wiki/2015/index.php/Doc:2.6/Manual/>`__
+
+
+Blender 2.5x
+============
+
+- `Blender 2.5x <https://archive.blender.org/wiki/2015/index.php/Doc:2.5/Manual/>`__
+
+
+Blender 2.4x
+============
+
+- `Blender 2.4x <https://archive.blender.org/wiki/2015/index.php/Doc:2.4/Manual/>`__
