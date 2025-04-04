@@ -14,9 +14,12 @@ The following overlay categories are available:
 Geometry
 ========
 
-Display Texture Paint UVs
-   Display the active object's UVs. The Image Editor must be in Paint mode, and the active object
-   must be in Texture Paint Mode or Edit Mode for the UVs to be visible.
+Display UVs
+   Display selected and active object's UVs.
+
+UV Face Opacity
+   Opacity of faces. Useful to differentiate between UV islands. Can also be reduced when
+   texture painting to prevent faces from tinting the texture's colors.
 
 
 Image

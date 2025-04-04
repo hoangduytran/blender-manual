@@ -41,8 +41,6 @@ Update Automatically
 Show Metadata
    Displays metadata about the selected Render Result. See the Output tab's
    :doc:`/render/output/properties/metadata` panel to change what metadata to include.
-Display Texture Paint UVs
-   Toggles UVs in Paint Mode. The object must be in Texture Paint Mode or Edit Mode for the UVs to be visible.
 
 Zoom
    Menu with convenient zoom levels and operations.
