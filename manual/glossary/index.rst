@@ -35,7 +35,7 @@ This page lists definitions for terms used in Blender and this manual.
          Method where RGBA channels are stored as (R, G, B, A)
          channels, with the RGB channels unaffected by the alpha channel.
          This is the alpha type used by paint programs such as Photoshop or Gimp,
-         and used in common file formats like PNG, BMP or Targa.
+         and used in common file formats like PNG, BMP or TARGA.
          So, image textures or output for the web are usually straight alpha.
 
       Premultiplied Alpha
@@ -131,7 +131,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    Bone Collection
       Collection of :term:`bones <Bone>` of an :term:`Armature`, identified by
-      its name. Bone collections can be used to organise bones and toggle their
+      its name. Bone collections can be used to organize bones and toggle their
       visibility. See :ref:`bone-collections`.
 
    Boolean
@@ -298,7 +298,7 @@ This page lists definitions for terms used in Blender and this manual.
       - :ref:`Pixel Density support for render output <render-output-pixel-density-panel>`
 
    Dielectric Material
-      A material for real world objects that are electrical insulators such as plastics, wood, glass, ect.
+      A material for real world objects that are electrical insulators such as plastics, wood, glass, etc.
       Essentially this summarizes any material that is solid and non metallic.
 
    Diffuse Light
@@ -608,7 +608,7 @@ This page lists definitions for terms used in Blender and this manual.
 
       See also: :ref:`Select Non-Manifold <bpy.ops.mesh.select_non_manifold>` tool.
 
-      .. todo: Images would be useful here.
+      .. TODO: Images would be useful here.
 
    Normal
       The normalized vector perpendicular to a surface.
@@ -629,7 +629,7 @@ This page lists definitions for terms used in Blender and this manual.
       A computer graphics technique for generating and representing curves and surfaces.
 
    Object
-      Container for a type (mesh, curve, surface, metaball, text, armature,
+      Container for a type (mesh, curve, surface, meta-ball, text, armature,
       lattice, empty, camera, light) and basic 3D transform data (:term:`Object Origin`).
 
    Object Center
