@@ -24,7 +24,7 @@ you may build very complex animations while keeping great control and keeping th
 
 To make particles point in the direction of the curve, you need to set their *Orientation Axis*
 to *Velocity / Hair*, enable *Dynamic*, and set their *Angular Velocity Axis* to *Velocity*,
-all in the the :doc:`/physics/particles/emitter/rotation` settings of the particle system.
+all in the :doc:`/physics/particles/emitter/rotation` settings of the particle system.
 The :doc:`/animation/constraints/relationship/follow_path` and the curve's legacy
 :ref:`Follow <bpy.types.Curve.use_path_follow>` option won't work for this.
 

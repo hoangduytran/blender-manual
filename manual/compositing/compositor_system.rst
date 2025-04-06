@@ -231,18 +231,18 @@ node is the domain of the non single value input with the highest domain priorit
 the :ref:`Filter node <bpy.types.CompositorNodeFilter>` has two inputs, the domain priority of the
 *Image* input is higher than that of the *Factor* input, and there are four possible configurations:
 
-* Both the *Image* and factor inputs are connected to images. In this case, the *Image* input is the
+- Both the *Image* and factor inputs are connected to images. In this case, the *Image* input is the
   domain input because it has the highest priority and is connected to an image.
 
-* The *Image* input is connected to an image, but the *Factor* input isn't. In this case, the
-  *Image* input is the domain input because it it is the only input connected to an image regardless
+- The *Image* input is connected to an image, but the *Factor* input isn't. In this case, the
+  *Image* input is the domain input because it is the only input connected to an image regardless
   of its priority.
 
-* The *Image* input is not connected to an image but the *Factor* input is. In this case, the
+- The *Image* input is not connected to an image but the *Factor* input is. In this case, the
   *Factor* input is the domain input because it is the only input connected to an image regardless
   of its priority.
 
-* Neither the *Image* nor the *Factor* inputs are connected to images, in this case, there isn't
+- Neither the *Image* nor the *Factor* inputs are connected to images, in this case, there isn't
   a domain input because the node is evaluated on single values.
 
 

@@ -40,7 +40,7 @@ Unique
 
 Height
    The fixed height of each stroke. This is measured using the :ref:`scene scale <bpy.types.UnitSettings.system>`,
-   so it is consistent no matter the amount of zoom or or object size.
+   so it is consistent no matter the amount of zoom or object size.
 
 .. _bpy.types.Brush.use_persistent:
 

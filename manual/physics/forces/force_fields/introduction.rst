@@ -39,15 +39,15 @@ This method creates an empty with the force field attached.
 
    * - .. figure:: /images/physics_forces_force-fields_types_vortex_visualzation.png
 
-          Vortex force field.
+          Vortex: force field.
 
      - .. figure:: /images/physics_forces_force-fields_types_wind_visualzation.png
 
-          Wind force field.
+          Wind: force field.
 
      - .. figure:: /images/physics_forces_force-fields_types_force_visualzation.png
 
-          Force force field.
+          Force: force field.
 
 To create a field from an existing object you have to select the object and
 change to the *Physics* tab. Select the field type in the *Fields* menu.

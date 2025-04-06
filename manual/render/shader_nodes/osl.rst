@@ -291,7 +291,7 @@ Metadata on parameters controls their display in the user interface. The followi
 metadata is supported:
 
 ``[[ string label = "My Label" ]]``
-  Name of parameter in in the user interface
+  Name of parameter in the user interface
 ``[[ string widget = "null" ]]``
   Hide parameter in the user interface.
 ``[[ string widget = "boolean" ]]`` and ``[[ string widget = "checkbox" ]]``

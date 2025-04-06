@@ -22,7 +22,7 @@ Link Materials To
    Almost everything in Blender is organized in a hierarchy of data-blocks.
    A data-block can be thought of as containers for certain pieces of information. For example,
    the Object data-block contains information about the Object's location, rotation, and scale
-   while the associated linked Object Data data-block contains information about the mesh.
+   while the associated linked Object Data's data-block contains information about the mesh.
 
    .. figure:: /images/editors_preferences_editing_data-blocks-hierarchy.png
 
@@ -31,9 +31,9 @@ Link Materials To
    A material may be linked in two different ways:
 
    :Object Data:
-      Any created material will be created as part of the Object Data data-block.
+      Any created material will be created as part of the Object Data's data-block.
    :Object:
-      Any created material will be created as part of the Object data-block.
+      Any created material will be created as part of the Object's data-block.
 
    .. figure:: /images/editors_preferences_editing_data-blocks-link.png
 

@@ -104,7 +104,7 @@ by a constant value will yield the very same rotation.
 This mode is ideal for interpolating between **any** pair of orientations.
 It doesn't suffer from gimbal lock or any interpolation undesired effect.
 The only drawback is that you cannot interpolate between two orientations
-that are at a distance greater than than 180°, as the animation will take
+that are at a distance greater than 180°, as the animation will take
 the shortest path between them. Thus to animate a revolving element
 you must set up many intermediate keyframes, 180° from each other at most.
 

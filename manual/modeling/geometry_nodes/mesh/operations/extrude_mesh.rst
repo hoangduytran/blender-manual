@@ -163,7 +163,7 @@ Face Mode
   (*Propagation rules are shown in the figure above*.)
 * Horizontal duplicate **edges** have copied values from their original edges.
 * New **faces** have copied values from the corresponding extruded faces.
-* New **face corners** have copied values from the corresponding corresponding corners of extruded faces.
+* New **face corners** have copied values from the corresponding corners of extruded faces.
 
 Individual Face Mode
 --------------------

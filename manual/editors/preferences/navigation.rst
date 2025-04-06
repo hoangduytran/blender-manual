@@ -45,7 +45,7 @@ Orbit Around Selection
    The selection center becomes the rotation center of the viewport.
    When there is no selection the last selection will be used.
 
-   The method used to calculate the center depends on the the current mode:
+   The method used to calculate the center depends on the current mode:
 
    - Object mode uses the selections bounding box center.
    - Edit & pose mode use the selected elements center.

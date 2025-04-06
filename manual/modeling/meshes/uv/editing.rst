@@ -377,7 +377,7 @@ Scale
 Rotate
    Allows the rotation of islands, as well as translation and scaling, to optimize texture usage.
 Rotation Method
-   The allowable rotations to use for each each island.
+   The allowable rotations to use for each island.
 
    :Any:
       Any rotation which improves the packing is allowed.

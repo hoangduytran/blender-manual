@@ -350,7 +350,7 @@ Symmetrical
    be enabled to automatically apply symmetry.
 
    When enabled, left-side bones keyframed in the action will be controlled by the left-side control, and right-side
-   bones by the right side control. Bones that don't have a a side suffix are assumed to belong to the center of the
+   bones by the right side control. Bones that don't have a side suffix are assumed to belong to the center of the
    character. They are rigged with two Action constraints with influence 0.5 that are controlled by each of the
    control bones.
 Frame Start & End
