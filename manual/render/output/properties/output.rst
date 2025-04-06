@@ -100,6 +100,26 @@ For a detailed description of color management properties,
 see the :ref:`Color Management <render-post-color-management>` page.
 
 
+.. _render-output-pixel-density-panel:
+.. _bpy.types.RenderSettings.ppm_base:
+.. _bpy.types.RenderSettings.ppm_factor:
+
+Pixel Density
+=============
+
+The pixel density (often called :term:`PPI` or :term:`DPI`) controls the intended physical size for an image.
+This is often used for printing or the physical size when loaded into desktop publishing software.
+
+The X/Y density is calculated using the render X/Y aspect,
+making these values useful for storing the aspect ratio of non-square pixels.
+
+The pixel-density is meta-data which doesn't impact the quality of the image.
+
+.. seealso::
+
+   :ref:`Pixel Density support for image formats <files-media-image_formats>`
+
+
 .. _render-output-video-encoding-panel:
 .. _bpy.types.FFmpegSettings:
 

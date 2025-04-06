@@ -286,6 +286,17 @@ This page lists definitions for terms used in Blender and this manual.
       the point of focus than it is in front, as the angle of the light rays change more rapidly;
       they approach being parallel with increasing distance.
 
+   DPI
+   Dots Per Inch
+      A physical measurement for the number of individual dots that can be placed in a line span of one inch.
+
+      This term typically applies to printing however it is often used loosely to mean :term:`PPI`.
+
+      See also:
+
+      - :ref:`Pixel Density support for image formats <files-media-image_formats>`
+      - :ref:`Pixel Density support for render output <render-output-pixel-density-panel>`
+
    Dielectric Material
       A material for real world objects that are electrical insulators such as plastics, wood, glass, ect.
       Essentially this summarizes any material that is solid and non metallic.
@@ -702,6 +713,17 @@ This page lists definitions for terms used in Blender and this manual.
       Moving, Rotating and Scaling the :term:`Pose Bones <Pose Bone>` of an
       :term:`Armature` to achieve an aesthetically pleasing pose for a
       character.
+
+   PPI
+   Pixels Per Inch
+      A physical measurement for the number of individual pixels that can be placed in a line span of one inch.
+
+      This term is sometimes used interchangeably with :term:`DPI`.
+
+      .. seealso::
+
+         - :ref:`Pixel Density support for image formats <files-media-image_formats>`
+         - :ref:`Pixel Density support for render output <render-output-pixel-density-panel>`
 
    Premultiplied Alpha
       See :term:`Alpha Channel`.

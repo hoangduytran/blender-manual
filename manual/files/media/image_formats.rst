@@ -23,7 +23,7 @@ This is the list of image file formats supported internally by Blender:
      - Channel Depth
      - Alpha
      - :doc:`Metadata </render/output/properties/metadata>`
-     - DPI
+     - :term:`DPI`
      - Extensions
    * - BMP
      - 8bit
