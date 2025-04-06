@@ -13,8 +13,8 @@ Creating an extension takes only a few steps:
 
 How to publish to the `Blender Extensions Platform <https://extensions.blender.org>`__:
 
-* :ref:`Install from Disk <prefs-extensions-install>` to test if everything is working well.
-* `Upload the .zip file <https://extensions.blender.org/submit/>`__ (this step requires Blender ID).
+- :ref:`Install from Disk <prefs-extensions-install>` to test if everything is working well.
+- `Upload the .zip file <https://extensions.blender.org/submit/>`__ (this step requires Blender ID).
 
 The extension will be held for `review <https://extensions.blender.org/approval-queue/>`__,
 and published once the moderation team approves it.

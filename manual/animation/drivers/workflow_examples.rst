@@ -120,12 +120,12 @@ emulated via fallback values and a conditional expression (conditions are
 
 For an attribute named ``attr``, the node tries the following six RNA path lookups in order:
 
-* ``["attr"]`` in the active View Layer (custom property).
-* ``attr`` in the active View Layer (built-in property).
-* ``["attr"]`` in the active Scene.
-* ``attr`` in the active Scene.
-* ``world["attr"]`` in the active Scene.
-* ``world.attr`` in the active Scene.
+- ``["attr"]`` in the active View Layer (custom property).
+- ``attr`` in the active View Layer (built-in property).
+- ``["attr"]`` in the active Scene.
+- ``attr`` in the active Scene.
+- ``world["attr"]`` in the active Scene.
+- ``world.attr`` in the active Scene.
 
 Depending on the specific property it may be sufficient to check only a subset of these locations.
 For example, the image on the right shows how to access an attribute that is known to definitely be

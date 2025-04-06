@@ -45,9 +45,9 @@ files on the same drive to take with you.
 
 To enable this, create a folder named ``portable`` at the following locations:
 
-* Windows: Next to the Blender executable, in the unzipped folder
-* Linux: Next to the Blender executable, in the unzipped folder
-* macOS: Inside the application bundle at ``Blender.app/Contents/Resources``
+- Windows: Next to the Blender executable, in the unzipped folder
+- Linux: Next to the Blender executable, in the unzipped folder
+- macOS: Inside the application bundle at ``Blender.app/Contents/Resources``
 
 This folder will then store preferences, startup file, installed extensions
 and presets.

@@ -127,9 +127,9 @@ Switching is controlled by a slider in *Rig Main Properties*, usually blending b
 Snapping one type of controls to the shape of the other is done via buttons, which form a group of three
 in their complete set:
 
-* The main button will snap on the current frame, and auto-key the result if enabled.
-* The *Action* button will bake the change on multiple keyframes, according to *Rig Bake Settings*.
-* The *Clear* button will delete keyframes on the corresponding controls within the bake interval.
+- The main button will snap on the current frame, and auto-key the result if enabled.
+- The *Action* button will bake the change on multiple keyframes, according to *Rig Bake Settings*.
+- The *Clear* button will delete keyframes on the corresponding controls within the bake interval.
 
 Parent Switching
 ^^^^^^^^^^^^^^^^
@@ -143,11 +143,11 @@ between a set of choices, including the root bone, or none at all.
 
 This mechanism is exposed in the *Rig Main Properties* panel through a row with three controls:
 
-* A button that presents a dropdown menu, which allows switching the parent on the current frame while
+- A button that presents a dropdown menu, which allows switching the parent on the current frame while
   preserving the bone position and orientation in the world space.
-* A dropdown input field that directly exposes the switch property for keyframing and direct manipulation.
+- A dropdown input field that directly exposes the switch property for keyframing and direct manipulation.
   Changing the value can cause the bone position to jump.
-* A button to apply the position preserving parent switch over the bake range of keyframes.
+- A button to apply the position preserving parent switch over the bake range of keyframes.
 
 .. note::
    When manually placing a Child Of constraint on the control bone, the built-in parent should be switched to none.
@@ -349,9 +349,9 @@ IK End
 IK End Twist :guilabel:`Optional`
    This control is visually attached to the last bone of the chain, and must use Euler rotation.
 
-   * *Stretch To Fit*: it controls the twist of the tip of the tentacle, interpolated to nothing at the base.
-   * *Manual Squash & Stretch*: it also controls the scaling of the tip of the tentacle.
-   * *Direct Tip Control*: the control does not exist.
+   - *Stretch To Fit*: it controls the twist of the tip of the tentacle, interpolated to nothing at the base.
+   - *Manual Squash & Stretch*: it also controls the scaling of the tip of the tentacle.
+   - *Direct Tip Control*: the control does not exist.
 FK Chain :guilabel:`Optional`
    If enabled, the rig has an alternative fully FK control chain.
 

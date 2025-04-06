@@ -18,11 +18,11 @@ and pass an output to the *Group Output* node, where it will be passed to the ne
 
 Geometry nodes can modify different types of geometry:
 
-* :doc:`Meshes </modeling/meshes/introduction>`
-* :doc:`Curves </modeling/curves/introduction>`
-* :doc:`Point Clouds </modeling/point_cloud>`
-* :doc:`Volumes </modeling/volumes/introduction>`
-* :doc:`Instances </modeling/geometry_nodes/instances>`
+- :doc:`Meshes </modeling/meshes/introduction>`
+- :doc:`Curves </modeling/curves/introduction>`
+- :doc:`Point Clouds </modeling/point_cloud>`
+- :doc:`Volumes </modeling/volumes/introduction>`
+- :doc:`Instances </modeling/geometry_nodes/instances>`
 
 The interface of the modifier is described in the
 :doc:`Modifier </modeling/modifiers/generate/geometry_nodes>` page.

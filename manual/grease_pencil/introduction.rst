@@ -46,12 +46,12 @@ project template use: :menuselection:`File --> New --> 2D Animation`.
 
 Note the following pre-configured setup for the 2D Animation template:
 
-* 2D Animation is the default active workspace.
-* :menuselection:`World Properties --> Surface (Background) --> Color` is set to white.
-* :menuselection:`Render Properties --> Color Management` is set to Standard.
-* The :doc:`drawing plane <./modes/draw/drawing_planes>` is set to Front (X-Z).
-* Line and Fill layers, along with some stroke materials, are configured for Grease Pencil.
-* The animation timeline will automatically create a new keyframe when Grease Pencil is used on empty frames.
+- 2D Animation is the default active workspace.
+- :menuselection:`World Properties --> Surface (Background) --> Color` is set to white.
+- :menuselection:`Render Properties --> Color Management` is set to Standard.
+- The :doc:`drawing plane <./modes/draw/drawing_planes>` is set to Front (X-Z).
+- Line and Fill layers, along with some stroke materials, are configured for Grease Pencil.
+- The animation timeline will automatically create a new keyframe when Grease Pencil is used on empty frames.
 
 .. tip::
 

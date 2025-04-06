@@ -119,8 +119,8 @@ Vertex Mode
 
    The new edges created in vertex mode use the average value of all connected edges.
 
-* New **vertices** have copied values from their original vertices.
-* New **edges** have the average value of any connected original edges.
+- New **vertices** have copied values from their original vertices.
+- New **edges** have the average value of any connected original edges.
   For boolean attributes, edges are selected if any connected edges were selected.
 
 Edge Mode
@@ -134,14 +134,14 @@ Edge Mode
    The final value is a mix of the values from the two middle blue edges.
    The darker maroon edges lower on the image are not used.
 
-* New **vertices** have copied values from their original vertices.
-* Vertical connecting **edges** get the average value
+- New **vertices** have copied values from their original vertices.
+- Vertical connecting **edges** get the average value
   from any connected extruded edges. For booleans, the edges are selected if any connected extruded
   edges were selected. (*Propagation rules are shown in the figure above*.)
-* Horizontal duplicate **edges** have copied values from their original edges.
-* New **faces** get the average values of all faces connected to the selected edge.
+- Horizontal duplicate **edges** have copied values from their original edges.
+- New **faces** get the average values of all faces connected to the selected edge.
   For booleans, faces are selected if any connected original faces were selected.
-* New **face corners** get the averaged value of corresponding corners in all faces connected to selected edges.
+- New **face corners** get the averaged value of corresponding corners in all faces connected to selected edges.
   For booleans, corners are selected if one of those corners are selected.
 
 Face Mode
@@ -156,14 +156,14 @@ Face Mode
    The values from the darker maroon edges between unselected faces and
    on top of the extruded region are not used.
 
-* New **vertices** have copied values from their original vertices.
-* Vertical connecting **edges** get the average value from any connected extruded edges,
+- New **vertices** have copied values from their original vertices.
+- Vertical connecting **edges** get the average value from any connected extruded edges,
   not including the edges "on top" of extruded regions. For booleans,
   the edges are selected if any of those connected edges were selected.
   (*Propagation rules are shown in the figure above*.)
-* Horizontal duplicate **edges** have copied values from their original edges.
-* New **faces** have copied values from the corresponding extruded faces.
-* New **face corners** have copied values from the corresponding corners of extruded faces.
+- Horizontal duplicate **edges** have copied values from their original edges.
+- New **faces** have copied values from the corresponding extruded faces.
+- New **face corners** have copied values from the corresponding corners of extruded faces.
 
 Individual Face Mode
 --------------------
@@ -175,9 +175,9 @@ Individual Face Mode
    Attribute propagation for new connecting edge. Each edge uses the average values of the two neighboring
    edges on its extruded face.
 
-* New **vertices** have copied values from their original vertices.
-* Vertical connecting **edges** get the average value of the two neighboring edges on each extruded face.
+- New **vertices** have copied values from their original vertices.
+- Vertical connecting **edges** get the average value of the two neighboring edges on each extruded face.
   For booleans, the edges are selected when at least one neighbor on the extruded face was selected.
-* Horizontal duplicate **edges** have copied values from their original edges.
-* New side **faces** have copied values from their corresponding selected face.
-* New **face corners** have copied values from the corresponding corners of selected faces.
+- Horizontal duplicate **edges** have copied values from their original edges.
+- New side **faces** have copied values from their corresponding selected face.
+- New **face corners** have copied values from the corresponding corners of selected faces.

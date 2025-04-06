@@ -19,11 +19,11 @@ where you can select a type from a list and not much more.
 
    Today, the use of Textures is limited to:
 
-   * :doc:`Brushes </sculpt_paint/brush/texture>`.
-   * The :doc:`/modeling/modifiers/deform/displace`.
-   * Influencing size, density etc. of :doc:`particle systems </physics/particles/texture_influence>`.
-   * Influencing emission locations of :ref:`fire/smoke simulations <bpy.types.FluidFlowSettings.use_texture>`.
-   * :doc:`Compositing </compositing/types/input/texture>`.
+   - :doc:`Brushes </sculpt_paint/brush/texture>`.
+   - The :doc:`/modeling/modifiers/deform/displace`.
+   - Influencing size, density etc. of :doc:`particle systems </physics/particles/texture_influence>`.
+   - Influencing emission locations of :ref:`fire/smoke simulations <bpy.types.FluidFlowSettings.use_texture>`.
+   - :doc:`Compositing </compositing/types/input/texture>`.
 
    In addition, the Displace modifier and fire/smoke simulations don't support
    node-based textures, instead only working with the built-in ones.
@@ -62,4 +62,3 @@ Texture Type
    Line Style
       Deprecated -- :doc:`Line Styles </render/freestyle/view_layer/line_style/introduction>`
       for the Freestyle renderer are now defined using Materials rather than Textures.
-

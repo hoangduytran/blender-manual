@@ -119,10 +119,10 @@ Some rig types that generate many control bones have options that reference
 :ref:`Bone Collections <bpy.types.BoneCollection.rigify_ui_row>`. These reference lists have a standard UI with
 the following features:
 
-* A checkbox controlling whether the reference should be used.
-* A button to copy the reference list contents from the active to all selected bones.
-* A plus button to add a new reference to the list.
-* A list of references, each entry with a field to specify the target collection,
+- A checkbox controlling whether the reference should be used.
+- A button to copy the reference list contents from the active to all selected bones.
+- A plus button to add a new reference to the list.
+- A list of references, each entry with a field to specify the target collection,
   and a button to remove the entry from the list.
 
 .. note::
@@ -387,11 +387,12 @@ Corrective actions must be below their triggers in the list, which is enforced v
 violated.
 
 .. tip::
+
    Corrective actions behave in the most intuitive way when both triggers have the Default Frame equal to Start Frame.
    To create a corrective action in such case:
 
-   * Create the two trigger actions, add them to the panel and generate the rig.
-   * Pose your controls so that both trigger actions are fully activated to the end frame.
-   * Pose and keyframe the necessary corrections in the end frame of the new action, while keying the start
+   - Create the two trigger actions, add them to the panel and generate the rig.
+   - Pose your controls so that both trigger actions are fully activated to the end frame.
+   - Pose and keyframe the necessary corrections in the end frame of the new action, while keying the start
      frame to the neutral values.
-   * Add the newly created action to the end of the list in the panel and configure its settings.
+   - Add the newly created action to the end of the list in the panel and configure its settings.

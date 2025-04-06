@@ -232,10 +232,10 @@ Variable Type
          and constraints currently requires using ``camera.matrix_world``. This property can be understood
          easily by viewing the matrix as an array of four vectors in *World* space:
 
-         * ``matrix_world[0][0/1/2]`` is the *Screen Right* direction vector (camera local X).
-         * ``matrix_world[1][0/1/2]`` is the *Screen Up* direction vector (camera local Y).
-         * ``matrix_world[2][0/1/2]`` is the **opposite** of the direction the camera is pointing.
-         * ``matrix_world[3][0/1/2]`` is the *location* of the camera.
+         - ``matrix_world[0][0/1/2]`` is the *Screen Right* direction vector (camera local X).
+         - ``matrix_world[1][0/1/2]`` is the *Screen Up* direction vector (camera local Y).
+         - ``matrix_world[2][0/1/2]`` is the **opposite** of the direction the camera is pointing.
+         - ``matrix_world[3][0/1/2]`` is the *location* of the camera.
 
 Value
    Shows the value of the variable.

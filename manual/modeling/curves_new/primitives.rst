@@ -11,9 +11,9 @@ Empty Hair
 
 Adds an empty high-performance curves object and automatically:
 
-* Assigns the active object as the :doc:`Surface </sculpt_paint/curves_sculpting/introduction>`.
-* Set the surface object as the parent of the new object.
-* Adds a Geometry Nodes modifier to deform the curves on the surface.
+- Assigns the active object as the :doc:`Surface </sculpt_paint/curves_sculpting/introduction>`.
+- Set the surface object as the parent of the new object.
+- Adds a Geometry Nodes modifier to deform the curves on the surface.
 
 
 Fur

@@ -38,9 +38,9 @@ Then, for each item in the context domain, it will:
 
    A graphic for which corners are returned for a given edge
 
-* Red: selected edge.
-* Blue: the corners whose index can be retrieved using this node.
-* Purple: the corners that can be retrieved by offsetting the blue corner indices using
+- Red: selected edge.
+- Blue: the corners whose index can be retrieved using this node.
+- Purple: the corners that can be retrieved by offsetting the blue corner indices using
   the :doc:`/modeling/geometry_nodes/mesh/topology/offset_corner_in_face`.
 
 Inputs

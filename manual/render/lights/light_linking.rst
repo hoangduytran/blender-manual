@@ -15,11 +15,11 @@ not blocked by any objects in the scene (shadow linking).
 Setup
 =====
 
-* Select the light or emissive mesh object and go to the
+- Select the light or emissive mesh object and go to the
   :ref:`Cycles Shading panel <render-cycles-object-light-linking-settings>` or
   :ref:`EEVEE Shading panel <render-eevee-object-light-linking-settings>`.
-* Create a new light/shadow linking collection.
-* Drag & drop objects or collections from the :doc:`Outliner </editors/outliner/introduction>`
+- Create a new light/shadow linking collection.
+- Drag & drop objects or collections from the :doc:`Outliner </editors/outliner/introduction>`
   onto the list.
 
 You can also use the :doc:`/scene_layout/object/editing/link_transfer/link_data` menu for this:
@@ -42,9 +42,9 @@ Include & Exclude
 Light receiver/blocker objects can be set to be either included or excluded.
 The behavior is as follows:
 
-* If only included objects are specified, the light only affects those objects.
-* If only excluded objects are specified, the light affects all objects in the scene except those specified.
-* If both included and excluded objects are specified, the light affects only included objects minus the excluded
+- If only included objects are specified, the light only affects those objects.
+- If only excluded objects are specified, the light affects all objects in the scene except those specified.
+- If both included and excluded objects are specified, the light affects only included objects minus the excluded
   objects. This can be used to for example set a character collection to be included, and then exclude specific
   objects part of the character.
 

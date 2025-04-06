@@ -64,9 +64,9 @@ Example
 
 In the image below, notice that:
 
-* The light gray disk has turned white and the dark gray rectangle has turned black
+- The light gray disk has turned white and the dark gray rectangle has turned black
   because of the *Threshold* mode.
-* The shapes have become thicker -- dilated because of the positive *Distance*.
-* The shapes appear blurred because of the positive *Edge*.
+- The shapes have become thicker -- dilated because of the positive *Distance*.
+- The shapes appear blurred because of the positive *Edge*.
 
 .. figure:: /images/compositing_types_filter_dilate-erode_example.png

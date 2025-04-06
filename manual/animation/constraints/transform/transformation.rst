@@ -146,14 +146,14 @@ Y position of a rail:
 
 - Map From: Location
 
-  * Y Min: -3m
-  * Y Max: 3m
+  - Y Min: -3m
+  - Y Max: 3m
 
 - Map To: Rotation
 
-  * X Source Axis: Y
-  * X Min: 0°
-  * X Max: 180°
+  - X Source Axis: Y
+  - X Min: 0°
+  - X Max: 180°
 
 .. figure:: /images/animation_constraints_transform_example_before.png
 

@@ -191,13 +191,13 @@ ______
 
 The selected objects will be considered as selected.
 
-When a selected object is a local *Empty* instantiating a linked collection,
-the following will happen:
-* The *Empty* object will be removed.
-* Its linked collection will be overridden, and that override will be instanced
-in the same collection in the current *View Layer*.
-* If the collection contains *Armature* objects, they will be user-editable.
-Otherwise, no created override will be defined as user-editable.
+When a selected object is a local *Empty* instantiating a linked collection, the following will happen:
+
+- The *Empty* object will be removed.
+- Its linked collection will be overridden, and that override will be instanced
+  in the same collection in the current *View Layer*.
+- If the collection contains *Armature* objects, they will be user-editable.
+  Otherwise, no created override will be defined as user-editable.
 
 Outliner
 ________

@@ -183,12 +183,12 @@ Playhead
 The Playhead is the blue vertical line with the current time at the top. It can be moved
 in the following ways:
 
-* Jump or scrub: click or drag :kbd:`LMB` in the scrubbing area at the top of the timeline.
-* Jump or scrub (alternative): click or drag :kbd:`Shift-RMB` anywhere in the timeline.
+- Jump or scrub: click or drag :kbd:`LMB` in the scrubbing area at the top of the timeline.
+- Jump or scrub (alternative): click or drag :kbd:`Shift-RMB` anywhere in the timeline.
   If you start dragging on a strip, that strip will be highlighted and displayed *solo* in the preview
   (all other strips are temporarily muted).
-* Move in single-frame increments: :kbd:`Left`, :kbd:`Right`, or :kbd:`Alt-Wheel`.
-* Jump to the start or end frame of the scene (or :ref:`preview range <bpy.ops.sequencer.previewrange_set>`,
+- Move in single-frame increments: :kbd:`Left`, :kbd:`Right`, or :kbd:`Alt-Wheel`.
+- Jump to the start or end frame of the scene (or :ref:`preview range <bpy.ops.sequencer.previewrange_set>`,
   if active): :kbd:`Shift-Left` or :kbd:`Shift-Right`.
 
 While dragging with :kbd:`LMB` or :kbd:`Shift-RMB`, you can additionally hold :kbd:`Ctrl`
