@@ -27,7 +27,7 @@ This is the list of image file formats supported internally by Blender:
      - Extensions
    * - BMP
      - 8bit
-     - |cross|
+     - |tick|
      - |cross|
      - |tick|
      - ``.bmp``
