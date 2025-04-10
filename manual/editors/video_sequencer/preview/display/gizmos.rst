@@ -1,5 +1,3 @@
-.. |gizmo-icon| image:: /images/editors_3dview_display_gizmo_header.png
-.. _bpy.types.SpaceSequenceEditor.show_gizmo:
 
 ******
 Gizmos
@@ -7,9 +5,11 @@ Gizmos
 
 .. reference::
 
-   :Header:    |gizmo-icon| :menuselection:`Gizmos`
+   :Location:  :menuselection:`Header --> Gizmos`
 
-Clicking the icon toggles all gizmos in the Video Sequencer.
+.. _bpy.types.SpaceSequenceEditor.show_gizmo:
+
+Clicking :bl-icon:`gizmo` (Show Gizmo) toggles all gizmos in the Video Sequencer.
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 

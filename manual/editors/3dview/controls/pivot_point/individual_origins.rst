@@ -1,4 +1,3 @@
-.. |pivot-icon| image:: /images/editors_3dview_controls_pivot-point_menu.png
 
 ******************
 Individual Origins
@@ -7,7 +6,7 @@ Individual Origins
 .. reference::
 
    :Mode:      Object Mode and Edit Mode
-   :Header:    |pivot-icon| :menuselection:`Pivot Point --> Individual Origins`
+   :Location:  :menuselection:`Header --> Transform Pivot Point --> Individual Origins` (:bl-icon:`pivot_individual`)
    :Shortcut:  :kbd:`Period`
 
 While the other pivot point modes transform the whole selection around one point,

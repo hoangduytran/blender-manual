@@ -1,4 +1,3 @@
-.. |pivot-icon| image:: /images/editors_3dview_controls_pivot-point_menu.png
 
 *********
 3D Cursor
@@ -7,7 +6,7 @@
 .. reference::
 
    :Mode:      Object Mode and Edit Mode
-   :Header:    |pivot-icon| :menuselection:`Pivot Point --> 3D Cursor`
+   :Location:  :menuselection:`Header --> Transform Pivot Point --> 3D Cursor` (:bl-icon:`pivot_cursor`)
    :Shortcut:  :kbd:`Period`
 
 Places the pivot point at the location of the

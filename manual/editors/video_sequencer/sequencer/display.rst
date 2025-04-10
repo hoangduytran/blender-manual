@@ -1,4 +1,3 @@
-.. |overlays-icon| image:: /images/editors_3dview_display_overlays.png
 
 *******
 Display
@@ -12,13 +11,13 @@ Sequencer Overlays
 
 .. reference::
 
-   :Header:    |overlays-icon| :menuselection:`Overlays`
+   :Location:    :menuselection:`Header --> Overlays`
 
 .. figure:: /images/editors-video_sequencer-sequencer-overlays.png
 
 Overlays are information that is displayed on top of the sequencer region.
-The icon toggles all overlays in one go, while the drop-down button shows
-a pop-over where you can toggle individual ones:
+Clicking :bl-icon:`overlay` (Show Overlays) toggles all overlays in one go,
+while the drop-down button shows a pop-over where you can toggle individual ones:
 
 .. _bpy.types.SequencerTimelineOverlay.show_grid:
 

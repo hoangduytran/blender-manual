@@ -123,7 +123,7 @@ Image Pin
 
    This can be useful to enable when an image is used as a reference.
 
-Show Gizmo
+:bl-icon:`gizmo` (Show Gizmo)
    Lets you show/hide all gizmos using the toggle button, or specific gizmos using
    the drop-down arrow.
 

@@ -1,16 +1,14 @@
 .. _bpy.types.ToolSettings.transform_pivot_point:
-.. |pivot-icon| image:: /images/editors_3dview_controls_pivot-point_menu.png
-
 .. _pivot-point-index:
 
-###############
-  Pivot Point
-###############
+#########################
+  Transform Pivot Point
+#########################
 
 .. reference::
 
    :Mode:      Object Mode and Edit Mode
-   :Header:    |pivot-icon| :menuselection:`Pivot Point`
+   :Location:  :menuselection:`Header --> Transform Pivot Point`
    :Shortcut:  :kbd:`Period`
 
 The *Pivot Point* determines the location of the

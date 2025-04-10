@@ -1,5 +1,4 @@
 .. _bpy.types.SequencerPreviewOverlay:
-.. |overlays-icon| image:: /images/editors_3dview_display_overlays.png
 
 **************************
 Sequencer Preview Overlays
@@ -7,9 +6,9 @@ Sequencer Preview Overlays
 
 .. reference::
 
-   :Header:    |overlays-icon| :menuselection:`Overlays`
+   :Location:    :menuselection:`Header --> Overlays`
 
-Clicking the icon toggles all overlays in the Video Sequencer.
+Clicking :bl-icon:`overlay` (Show Overlays) toggles all overlays in the Video Sequencer.
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 

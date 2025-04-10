@@ -22,16 +22,16 @@ The list below shows the different types of nodes and where they're documented.
    * - Icon
      - Name
      - Description
-   * - .. figure:: /images/interface_controls_nodes_introduction_icons-geometry.png
+   * - .. rubric:: :bl-icon:`geometry_nodes`
      - :doc:`Geometry Nodes </modeling/geometry_nodes/index>`
      - Used for procedural modeling.
-   * - .. figure:: /images/interface_controls_nodes_introduction_icons-material.png
+   * - .. rubric:: :bl-icon:`node_material`
      - :doc:`Shader Nodes </render/shader_nodes/index>`
      - Used to create materials for objects.
-   * - .. figure:: /images/interface_controls_nodes_introduction_icons-render-layers.png
+   * - .. rubric:: :bl-icon:`node_compositing`
      - :doc:`Composite Nodes </compositing/index>`
      - Used to edit rendered images.
-   * - .. figure:: /images/interface_controls_nodes_introduction_icons-texture.png
+   * - .. rubric:: :bl-icon:`node_texture`
      - :doc:`Texture Nodes </editors/texture_node/introduction>`
      - Used to create custom textures.
 

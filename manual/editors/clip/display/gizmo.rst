@@ -1,5 +1,3 @@
-.. |gizmo-icon| image:: /images/editors_3dview_display_gizmo_header.png
-.. _bpy.types.SpaceClipEditor.show_gizmo:
 
 ***************
 Viewport Gizmos
@@ -8,9 +6,11 @@ Viewport Gizmos
 .. reference::
 
    :Mode:      All Modes
-   :Header:    |gizmo-icon| :menuselection:`Gizmos`
+   :Location:  :menuselection:`Header --> Gizmos`
 
-Clicking the icon toggles all the gizmos in the Movie Clip Editor.
+.. _bpy.types.SpaceClipEditor.show_gizmo:
+
+Clicking :bl-icon:`gizmo` (Show Gizmo) toggles all the gizmos in the Movie Clip Editor.
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 

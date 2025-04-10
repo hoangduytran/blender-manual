@@ -1,5 +1,3 @@
-.. |gizmo-icon| image:: /images/editors_3dview_display_gizmo_header.png
-.. _bpy.types.SpaceView3D.show_gizmo:
 
 ***************
 Viewport Gizmos
@@ -8,9 +6,11 @@ Viewport Gizmos
 .. reference::
 
    :Mode:      All Modes
-   :Header:    |gizmo-icon| :menuselection:`Gizmos`
+   :Location:  :menuselection:`Header --> Gizmos`
 
-Clicking the icon toggles all gizmos in the 3D Viewport.
+.. _bpy.types.SpaceView3D.show_gizmo:
+
+Clicking :bl-icon:`gizmo` (Show Gizmos) toggles all gizmos in the 3D Viewport.
 The drop-down button displays a popover with more detailed settings,
 which are described below.
 

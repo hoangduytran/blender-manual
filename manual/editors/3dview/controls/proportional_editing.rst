@@ -1,7 +1,5 @@
 .. _bpy.types.ToolSettings.use_proportional_edit_objects:
 .. _bpy.types.ToolSettings.use_proportional_edit:
-.. |prop-edit-icon| image::
-   /images/editors_3dview_object_editing_transform_control_proportional-edit_header.png
 
 ********************
 Proportional Editing
@@ -10,7 +8,7 @@ Proportional Editing
 .. reference::
 
    :Mode:      Object and Edit Mode
-   :Header:    |prop-edit-icon| :menuselection:`Proportional Editing`
+   :Location:  :menuselection:`Header --> Proportional Editing`
    :Shortcut:  :kbd:`O`
 
 .. figure:: /images/editors_3dview_controls_proportional-editing_tool.png

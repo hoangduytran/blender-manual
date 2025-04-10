@@ -1,4 +1,3 @@
-.. |pivot-icon| image:: /images/editors_3dview_controls_pivot-point_menu.png
 
 **************
 Active Element
@@ -7,7 +6,7 @@ Active Element
 .. reference::
 
    :Mode:      Object Mode and Edit Mode
-   :Header:    |pivot-icon| :menuselection:`Pivot Point --> Active Element`
+   :Location:  :menuselection:`Header --> Transform Pivot Point --> Active Element` (:bl-icon:`pivot_active`)
    :Shortcut:  :kbd:`Period`
 
 Places the pivot point at the active element, which is the element that was selected most recently.

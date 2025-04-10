@@ -1,4 +1,3 @@
-.. |pivot-icon| image:: /images/editors_3dview_controls_pivot-point_menu.png
 
 *******************
 Bounding Box Center
@@ -7,7 +6,7 @@ Bounding Box Center
 .. reference::
 
    :Mode:      Object Mode and Edit Mode
-   :Header:    |pivot-icon| :menuselection:`Pivot Point --> Bounding Box Center`
+   :Location:  :menuselection:`Header --> Transform Pivot Point --> Bounding Box Center` (:bl-icon:`pivot_boundbox`)
    :Shortcut:  :kbd:`Period`
 
 In this mode, the pivot point lies at the center of the bounding box, which is a box that's

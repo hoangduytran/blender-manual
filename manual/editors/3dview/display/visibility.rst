@@ -1,8 +1,6 @@
 .. _bpy.types.SpaceView3D.show_object_viewport:
 .. _bpy.types.SpaceView3D.show_object_select:
 
-.. |visibility-icon| image:: /images/editors_3dview_display_visibility.png
-
 **********************
 Object Type Visibility
 **********************
@@ -10,7 +8,7 @@ Object Type Visibility
 .. reference::
 
    :Mode:      All Modes
-   :Header:    |visibility-icon| :menuselection:`View Object Types`
+   :Location:  :menuselection:`Header --> Selectability & Visibility` (:bl-icon:`vis_sel_11`)
 
 This popover lets you control the visibility and selectability of the various object types.
 For example, you can hide all the Lights in the scene with one click.

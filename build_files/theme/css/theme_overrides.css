@@ -44,6 +44,16 @@ h6,
 	font-size: 1.125em;
 }
 
+/* Fix alignment of icons. */
+[class^="bl-icons-"], [class*=" bl-icons-"] {
+	vertical-align: text-bottom;
+}
+
+/* Increase the size of icons inside rubrics. */
+.rubric > [class^="bl-icons-"] {
+	font-size: xx-large;
+}
+
 /* Reduce the margins on top/bottom of horizontal lines. */
 hr.docutils {
 	margin: 1rem 0;

@@ -50,51 +50,51 @@ Object Mode List
 .. list-table:: Blender's Modes
    :header-rows: 1
    :class: valign
-   :widths: 10 24 50
+   :widths: 5 24 50
 
    * - Icon
      - Name
      - Details
-   * - .. figure:: /images/editors_3dview_modes_icons-object-mode.png
+   * - .. rubric:: :bl-icon:`object_datamode`
      - :doc:`Object Mode </scene_layout/object/index>`
      - The default mode, available for all object types.
        Allows editing position, rotation and scale, duplicating objects, and so on.
-   * - .. figure:: /images/editors_3dview_modes_icons-edit-mode.png
+   * - .. rubric:: :bl-icon:`editmode_hlt`
      - :doc:`Edit Mode </modeling/index>`
      - A mode for editing an object's shape
        (vertices/edges/faces for meshes, control points for curves/surfaces,
        points/strokes for Grease Pencil, etc.).
-   * - .. figure:: /images/editors_3dview_modes_icons-sculpt-mode.png
+   * - .. rubric:: :bl-icon:`sculptmode_hlt`
      - :doc:`Sculpt Mode </sculpt_paint/sculpting/index>`
      - Provides an alternative toolset for editing an object's shape (only for meshes).
-   * - .. figure:: /images/editors_3dview_modes_icons-vertex-paint.png
+   * - .. rubric:: :bl-icon:`vpaint_hlt`
      - :doc:`Vertex Paint Mode </sculpt_paint/vertex_paint/index>`
      - A mesh-only mode that allows you to set your mesh's vertex colors (i.e. to "paint" them).
-   * - .. figure:: /images/editors_3dview_modes_icons-weight-paint.png
+   * - .. rubric:: :bl-icon:`wpaint_hlt`
      - :doc:`Weight Paint Mode </sculpt_paint/weight_paint/index>`
      - A mesh-only mode, dedicated to vertex group weighting.
-   * - .. figure:: /images/editors_3dview_modes_icons-texture-paint.png
+   * - .. rubric:: :bl-icon:`tpaint_hlt`
      - :doc:`Texture Paint Mode </sculpt_paint/texture_paint/index>`
      - A mesh-only mode that allows you to paint a texture directly on the model, in the 3D Viewport.
-   * - .. figure:: /images/editors_3dview_modes_icons-particle-edit.png
+   * - .. rubric:: :bl-icon:`particlemode`
      - :doc:`Particle Edit Mode </physics/particles/mode>`
      - A mesh-only mode dedicated to particle systems, useful for editable systems (hair).
-   * - .. figure:: /images/editors_3dview_modes_icons-pose-mode.png
+   * - .. rubric:: :bl-icon:`pose_hlt`
      - :doc:`Pose Mode </animation/armatures/posing/index>`
      - An armature-only mode, dedicated to posing.
-   * - .. figure:: /images/editors_3dview_modes_icons-grease-pencil.png
+   * - .. rubric:: :bl-icon:`greasepencil`
      - :doc:`Draw Mode </grease_pencil/modes/draw/index>`
      - A Grease Pencil-only mode, dedicated to creating Grease Pencil strokes.
-   * - .. figure:: /images/editors_3dview_modes_icons-sculpt-mode.png
+   * - .. rubric:: :bl-icon:`sculptmode_hlt`
      - :doc:`Sculpt Mode (Grease Pencil) </grease_pencil/modes/sculpting/index>`
      - A Grease Pencil-only mode, used to deform and shape existing strokes more organically.
-   * - .. figure:: /images/editors_3dview_modes_icons-edit-mode.png
+   * - .. rubric:: :bl-icon:`editmode_hlt`
      - :doc:`Edit Mode (Grease Pencil) </grease_pencil/modes/edit/index>`
      - A Grease Pencil-only mode, dedicated to modifying individual strokes and points of Grease Pencil objects.
-   * - .. figure:: /images/editors_3dview_modes_icons-vertex-paint.png
+   * - .. rubric:: :bl-icon:`vpaint_hlt`
      - :doc:`Vertex Paint Mode (Grease Pencil) </grease_pencil/modes/vertex_paint/index>`
      - A Grease Pencil-only mode, dedicated to adding color the vertices of strokes directly.
-   * - .. figure:: /images/editors_3dview_modes_icons-weight-paint.png
+   * - .. rubric:: :bl-icon:`wpaint_hlt`
      - :doc:`Weight Paint Mode (Grease Pencil) </grease_pencil/modes/weight_paint/index>`
      - A Grease Pencil-only mode, dedicated to assigning vertex weights to stroke.
 

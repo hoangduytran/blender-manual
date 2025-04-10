@@ -1,4 +1,3 @@
-.. |shading-icon| image:: /images/editors_3dview_display_shading.png
 .. _bpy.types.View3DShading.type:
 .. _view3d-viewport-shading:
 
@@ -9,7 +8,7 @@ Viewport Shading
 .. reference::
 
    :Mode:      All Modes
-   :Header:    |shading-icon| :menuselection:`Viewport Shading`
+   :Location:  :menuselection:`Header --> Viewport Shading`
    :Shortcut:  :kbd:`Z` :kbd:`Shift-Z`
 
 Blender offers different shading modes for helping with different tasks.
@@ -21,6 +20,14 @@ opens a popover with additional options described below.
 
 Pressing :kbd:`Z` opens a pie menu for changing the shading mode.
 Pressing :kbd:`Shift-Z` switches between the current shading mode and Wireframe.
+
+
+.. _3dview-shading-rendered:
+
+:bl-icon:`shading_wire` -- Wireframe
+====================================
+
+Only displays the edges (wireframes) of the objects in the scene.
 
 .. _bpy.types.View3DShading.wireframe_color_type:
 
@@ -35,14 +42,6 @@ Wire Color
       :ref:`Viewport Display <properties-object-viewport-display>` settings.
    :Random:
       Each object gets displayed in a random color.
-
-
-.. _3dview-shading-rendered:
-
-Wireframe
-=========
-
-Only displays the edges (wireframes) of the objects in the scene.
 
 .. _bpy.types.View3DShading.background_type:
 
@@ -72,8 +71,8 @@ Options
 
 .. _3dview-shading-solid:
 
-Solid
-=====
+:bl-icon:`shading_solid` -- Solid
+=================================
 
 This mode utilizes the :doc:`Workbench Render Engine </render/workbench/introduction>` to render the 3D Viewport.
 It shows solid geometry but uses simplified shading and lighting without the use of shader nodes.
@@ -199,8 +198,8 @@ Specular Highlighting
 
 .. _3dview-material-preview:
 
-Material Preview
-================
+:bl-icon:`shading_texture` -- Material Preview
+==============================================
 
 Render the 3D Viewport with :doc:`EEVEE </render/eevee/introduction>` and an HDRI environment.
 This mode is particularly suited for previewing materials and painting textures.
@@ -257,8 +256,8 @@ Compositor
 
 .. _3dview-rendered:
 
-Rendered
-========
+:bl-icon:`shading_rendered` -- Rendered
+=======================================
 
 Render the 3D Viewport using the scene's *Render Engine*, for interactive rendering.
 This gives a preview of the final result before compositing, including scene lighting effects.

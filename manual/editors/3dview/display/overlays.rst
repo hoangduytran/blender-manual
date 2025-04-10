@@ -1,5 +1,4 @@
 .. _bpy.types.View3DOverlay:
-.. |overlays-icon| image:: /images/editors_3dview_display_overlays.png
 
 *****************
 Viewport Overlays
@@ -8,9 +7,9 @@ Viewport Overlays
 .. reference::
 
    :Mode:      All Modes
-   :Header:    |overlays-icon| :menuselection:`Overlays`
+   :Location:  :menuselection:`Header --> Overlays`
 
-Clicking the icon toggles all overlays in the 3D Viewport.
+Clicking :bl-icon:`overlay` (Show Overlays) toggles all overlays in the 3D Viewport.
 
 .. note::
 

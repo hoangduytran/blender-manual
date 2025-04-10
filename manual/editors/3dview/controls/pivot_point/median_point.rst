@@ -1,4 +1,3 @@
-.. |pivot-icon| image:: /images/editors_3dview_controls_pivot-point_menu.png
 
 ************
 Median Point
@@ -7,7 +6,7 @@ Median Point
 .. reference::
 
    :Mode:      Object Mode and Edit Mode
-   :Header:    |pivot-icon| :menuselection:`Pivot Point --> Median Point`
+   :Location:  :menuselection:`Header --> Transform Pivot Point --> Median Point` (:bl-icon:`pivot_median`)
    :Shortcut:  :kbd:`Period`
 
 Places the pivot point at the averaged-out position of the selected items.
