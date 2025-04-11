@@ -228,7 +228,7 @@ Remove Gaps (All)
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Transform --> Insert Gaps (All)`
+   :Menu:      :menuselection:`Strip --> Transform --> Remove Gaps (All)`
 
 Same as :ref:`bpy.ops.sequencer.gap_remove` but with *All Gaps* enabled.
 
@@ -241,7 +241,7 @@ Insert Gaps
 .. reference::
 
    :Menu:      :menuselection:`Strip --> Transform --> Insert Gaps`
-   :Shortcut:  :kbd:`Equals`
+   :Shortcut:  :kbd:`Shift-Equals`
 
 Insert blank frames between the current frame and the first strips to the right,
 independent of selection or locked state of strips.
@@ -479,7 +479,7 @@ Change Effect Input
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Effect Strip --> Change Effect Type`
+   :Menu:      :menuselection:`Strip --> Effect Strip --> Change Effect Input`
 
 Swaps which strips are the input for the effect strip.
 
@@ -530,9 +530,9 @@ Swaps the first two inputs for the effect strip.
 Lock/Unlock
 ===========
 
-Lock Strips :kbd:`Shift-L`
+Lock Strips :kbd:`Ctrl-H`
    Disables the strip from being transformed.
-Unlock Strips :kbd:`Shift-Alt-L`
+Unlock Strips :kbd:`Ctrl-Alt-H`
    Enables disabled strips allowing them to be transformed.
 
 
@@ -544,7 +544,7 @@ Mute/Unmute
 
 Mute/Unmute Strips :kbd:`H`, :kbd:`Alt-H`
    Mute or unmute the selected strips.
-Mute/Unmute Deselected Strips :kbd:`Shift-H`, :kbd:`Ctrl-Alt-H`
+Mute/Unmute Deselected Strips :kbd:`Shift-H`, :kbd:`Shift-Alt-H`
    Mute or unmute all strips but the selected.
 
 
