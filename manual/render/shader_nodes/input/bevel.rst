@@ -62,7 +62,7 @@ Normal
 Examples
 ========
 
-.. figure:: /images/render_shader-nodes_input_bevel_example_setup.jpg
+.. figure:: /images/render_shader-nodes_input_bevel_example_setup.png
 
    A minimal node setup for working with the Bevel node.
 
