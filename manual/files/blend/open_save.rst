@@ -197,7 +197,7 @@ Compress
       Prior to this version, the compression algorithm used was Gzip.
       This means to open newer blend-files in versions prior to 3.0,
       blend-files must first be saved without compression in a newer version of Blender
-      or decompressed using an external Gzip tool.
+      or decompressed using an external Zstandard tool.
 
 Remap Relative
    This option remaps :ref:`files-blend-relative_paths`
