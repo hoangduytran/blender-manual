@@ -212,7 +212,7 @@ Output Nodes
 
 The operation domain of output nodes like the :ref:`Viewer node <bpy.types.CompositorNodeViewer>` is
 a domain with an identity transformation and the same size as the final compositor output. For
-:ref:`viewport compositing <viewport-compositing>`, that size would be the viewport size, and for
+:ref:`viewport compositing <bpy.types.View3DShading.use_compositor>`, that size would be the viewport size, and for
 final render compositing, that size would be the scene render size.
 
 

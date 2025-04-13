@@ -30,22 +30,6 @@ Shadow
    Shadow Focus
       Controls the falloff near the edge of the shadow.
 
-Cavity
-   Highlight ridges and valleys in the scene geometry.
-
-   Type
-      How to calculate cavities.
-
-      :World: More precise but is slower to calculate.
-      :Screen: Fast but does not take the size of the ridges and valleys into account.
-      :Both: Use both methods.
-
-   Ridge
-      Control the visibility of ridges.
-
-   Valley
-      Control the visibility of valleys.
-
 Depth of Field
    Use the Depth of Field settings of the active camera in the viewport.
    Only visible when looking through the camera.
@@ -62,3 +46,19 @@ Specular Highlighting
 
       Only available when Lighting is set to *Studio* lighting or when a MatCap
       has been selected that contains a specular pass.
+
+Cavity
+   Highlight ridges and valleys in the scene geometry.
+
+   Type
+      How to calculate cavities.
+
+      :World: More precise but is slower to calculate.
+      :Screen: Fast but does not take the size of the ridges and valleys into account.
+      :Both: Use both methods.
+
+   Ridge
+      Control the visibility of ridges.
+
+   Valley
+      Control the visibility of valleys.

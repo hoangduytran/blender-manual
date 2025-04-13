@@ -162,22 +162,6 @@ Shadow
    Shadow Focus
       Controls the falloff near the edge of the shadow.
 
-Cavity
-   Highlight ridges and valleys in the scene geometry.
-
-   Type
-      Method how to calculate the cavity.
-
-      :World: More precise but is slower to calculate.
-      :Screen: Fast but does not take the size of the ridges and valleys into account.
-      :Both: Both will use both methods.
-
-   Ridge
-      Control the visibility of ridges.
-
-   Valley
-      Control the visibility of valleys.
-
 Depth of Field
    Use the Depth of Field settings of the active camera in the viewport.
    Only visible when looking through the camera.
@@ -195,6 +179,22 @@ Specular Highlighting
       Only available when Lighting is set to *Studio* lighting or when a MatCap
       has been selected that contains a specular pass.
 
+Cavity
+   Highlight ridges and valleys in the scene geometry.
+
+   Type
+      Method how to calculate the cavity.
+
+      :World: More precise but is slower to calculate.
+      :Screen: Fast but does not take the size of the ridges and valleys into account.
+      :Both: Both will use both methods.
+
+   Ridge
+      Control the visibility of ridges.
+
+   Valley
+      Control the visibility of valleys.
+
 
 .. _3dview-material-preview:
 
@@ -210,40 +210,43 @@ You can select different lighting conditions to test your materials.
    The Material Preview shading mode is not available when the scene's render engine
    is set to :doc:`Workbench </render/workbench/introduction>`.
 
+
 Lighting
-   Scene Lights
-      Use the lights in the scene. When disabled (or when the scene contains no lights),
-      a virtual light is used instead.
+--------
 
-   .. _bpy.types.View3DShading.use_scene_world:
+Scene Lights
+   Use the lights in the scene. When disabled (or when the scene contains no lights),
+   a virtual light is used instead.
 
-   Scene World
-      Use the World of the scene.
-      When disabled, a world will be constructed with the following options:
+.. _bpy.types.View3DShading.use_scene_world:
 
-      HDRI Environment
-         The environment map used to light the scene.
-      Rotation
-         The rotation of the environment on the Z axis.
+Scene World
+   Use the World of the scene.
+   When disabled, a world will be constructed with the following options:
 
-         World Space Lighting
-            Makes the lighting rotation fixed and not follow the camera.
+   HDRI Environment
+      The environment map used to light the scene.
+   Rotation
+      The rotation of the environment on the Z axis.
 
-      Strength
-         Light intensity of the environment.
-      World Opacity
-         Opacity of the HDRI as a background image in the viewport.
-      Blur
-         Factor to unfocus the HDRI.
-         Note that this does not change the diffusion of the lighting,
-         only the appearance of the background.
+      World Space Lighting
+         Makes the lighting rotation fixed and not follow the camera.
+
+   Strength
+      Light intensity of the environment.
+   World Opacity
+      Opacity of the HDRI as a background image in the viewport.
+   Blur
+      Factor to unfocus the HDRI.
+      Note that this does not change the diffusion of the lighting,
+      only the appearance of the background.
 
 Render Pass
    Instead of the combined render, show a specific
    :doc:`render pass </render/layers/passes>`.
    Useful to analyze and debug geometry, materials and lighting.
 
-.. _viewport-compositing:
+.. _bpy.types.View3DShading.use_compositor:
 
 Compositor
    When to preview the result of :doc:`compositing </compositing/introduction>` in the 3D Viewport.
