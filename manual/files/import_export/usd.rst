@@ -172,7 +172,7 @@ Meshes
 Volumes
    Import ``UsdVolVolume`` OpenVDB assets as :doc:`Volume Objects </modeling/volumes/index>`.
 Point Clouds
-   Import ``UsdGeomPoints`` primitives as :doc:`Point Cloud Objects </modeling/point_cloud>`.
+   Import ``UsdGeomPoints`` primitives as :doc:`Point Cloud Objects </modeling/point_cloud/index>`.
 USD Shapes
    Import USD primitive shapes as Blender meshes.
    ``UsdGeomCapsule``, ``UsdGeomCylinder``, ``UsdGeomCone``, ``UsdGeomCube``, and ``UsdGeomSphere`` are supported.
@@ -417,7 +417,7 @@ Cameras
 Curves
    Exports :doc:`Curve Objects </modeling/curves/index>`
 Point Clouds
-   Exports :doc:`Point Cloud Objects </modeling/point_cloud>`
+   Exports :doc:`Point Cloud Objects </modeling/point_cloud/index>`
 Volumes
    Exports :doc:`Volume Objects </modeling/volumes/index>`
 Hair

@@ -20,7 +20,7 @@ Geometry nodes can modify different types of geometry:
 
 - :doc:`Meshes </modeling/meshes/introduction>`
 - :doc:`Curves </modeling/curves/introduction>`
-- :doc:`Point Clouds </modeling/point_cloud>`
+- :doc:`Point Clouds </modeling/point_cloud/index>`
 - :doc:`Volumes </modeling/volumes/introduction>`
 - :doc:`Instances </modeling/geometry_nodes/instances>`
 
