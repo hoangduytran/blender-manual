@@ -144,8 +144,8 @@ Localize All
 
 .. _bpy.ops.outliner.lib_operation:
 
-Reload
-======
+Reload Library
+==============
 
 .. reference::
 
@@ -157,8 +157,8 @@ you can right-click a linked blend-file and choose *Reload* to immediately updat
 the current blend-file with the latest version of the linked data-blocks,
 without having to reopen the file.
 
-Relocate
-========
+Relocate Library
+================
 
 .. reference::
 
@@ -166,9 +166,10 @@ Relocate
    :Menu:      :menuselection:`Context menu --> Relocate`
 
 When the Outliner is in the *Blender File* :ref:`bpy.types.SpaceOutliner.display_mode`,
-you can right-click a linked blend-file and choose *Relocate* to replace it by a different file.
-This can be used to either fix a broken linked library (e.g. because the file was moved or renamed),
-or to switch to a variation of the same data in a different file.
+a right-click on a library (a linked blend-file) will show the *Relocate* option.
+It allows to replace it by a different file.
+This can be used to either fix a broken linked library (e.g. because the file was moved
+or renamed), or to switch to a variation of the same data in a different file.
 
 
 Broken Libraries
@@ -178,6 +179,25 @@ If Blender cannot find a library while loading a blend-file,
 it will create placeholder data-blocks to replace missing linked ones.
 That way, references to the missing data are not lost, and by relocating the missing library,
 the lost data can be automatically restored.
+
+
+Relocate Linked ID
+==================
+
+.. reference::
+
+   :Editor:    Outliner
+   :Menu:      :menuselection:`Context menu --> ID Data --> Relocate`
+
+A right-click a linked ID will show the *Relocate* option in the *ID Data* sub-menu. It allows to
+relocate a directly linked ID by another one, from the same library or from a different one.
+This can be used to either fix a broken linked data-block (e.g. because the ID was renamed),
+or to switch to a variation of the same data.
+
+.. note::
+
+   This operation is only available on data-blocks that are directly linked, and are not
+   a dependency of any other linked data.
 
 
 .. _bpy.ops.object.make_local:
