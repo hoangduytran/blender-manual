@@ -15,7 +15,7 @@ Vertex groups are maintained within the *Object Data* tab (1) in the Properties.
 As long as no vertex groups are defined (the default for new mesh objects),
 the panel is empty (2).
 
-You create a vertex group by :kbd:`LMB` on the *Add* button ``+`` on the right panel border (3).
+You create a vertex group by :kbd:`LMB` on the :bl-icon:`add` button on the right panel border (3).
 Initially the group is named "Group" (or "Group.nnn" when the name already exists) and
 gets displayed in the panel (2) (see next image).
 
@@ -68,7 +68,7 @@ Deleting Vertex Groups
 
 You delete a vertex group by first making it the active group
 (select it in the panel) and then :kbd:`LMB`
-the *Remove* button ``-`` at the right panel border.
+the :bl-icon:`remove` button at the right panel border.
 
 Deleting a vertex group only deletes the vertex assignments to the group.
 The vertices themselves are not deleted.

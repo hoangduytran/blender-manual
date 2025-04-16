@@ -70,7 +70,7 @@ Vertex Group
    Vertices with null weight will be treated like those which do not belong to the group at all,
    and explode normally.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

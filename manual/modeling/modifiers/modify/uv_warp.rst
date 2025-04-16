@@ -33,7 +33,7 @@ Object From, To
 Vertex Group
    The vertex group can be used to scale the influence of the transformation per vertex.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

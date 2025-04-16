@@ -212,7 +212,7 @@ Selected/Active Colors
    The colors can be customized by clicking on the relevant color field.
    To reset them to the Blender current theme value just click on the button with the update icon.
 
-Color Sets can be added and deleted by clicking on the ``+`` or ``-`` buttons.
+Color Sets can be added and deleted by clicking on :bl-icon:`add` or :bl-icon:`remove`.
 All color sets can be deleted at once by clicking on the Specials menu.
 
 To add the colors from the predefined Rigify default color scheme (as shown in the image) to the list click

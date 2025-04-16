@@ -34,7 +34,7 @@ Only Loose Edges :guilabel:`Connected Mode`
 Vertex Group
    When the *Vertex Group* option is selected, only vertices with weight above zero will be affected by the modifier.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be merged by the modifier.
 

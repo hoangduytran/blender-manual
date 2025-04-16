@@ -102,7 +102,7 @@ Limit Method
       An edge is only beveled if both of its vertices are in the vertex group.
       See :doc:`here </modeling/meshes/properties/vertex_groups/vertex_groups>` about adjusting vertex group weights.
 
-      Invert ``<->``
+      :bl-icon:`arrow_leftright` Invert
          Inverts the influence of the selected vertex group, meaning that the group
          now represents vertices that will not be deformed by the modifier.
 

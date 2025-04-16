@@ -17,13 +17,13 @@ interpolation method.
 Controls
 ========
 
-Add ``+``
+:bl-icon:`add`
    Adds a new stop between the selected stop and the one before it.
 
-Delete ``-``
+:bl-icon:`remove`
    Deletes the selected color stop.
 
-Specials ``v``
+:bl-icon:`downarrow_hlt` Tools
    Contains more operators for the color ramp.
 
    Flip Color Ramp

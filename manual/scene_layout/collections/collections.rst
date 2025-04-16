@@ -81,9 +81,14 @@ Exporter List
    The selecting an exporter from the list will show it's options in a sub panel below.
 
 .. _bpy.ops.collection.exporter_add:
+
+:bl-icon:`add` (Add Exporter)
+   Opens a menu to choose an exporter to add.
+
 .. _bpy.ops.collection.exporter_remove:
 
-Exporters can be added/removed through the ``+`` and ``-`` icons to right of the Exporter list.
+:bl-icon:`Remove` (Remove Exporter)
+   Removes the selected exporter.
 
 .. _bpy.ops.collection.export_all:
 
@@ -199,22 +204,23 @@ All collections that an object has been assigned to are listed in the Properties
 Add to Collection
    Adds the selected object to a collection.
    A pop-up lets you specify the collection to add to.
-New ``+``
+:bl-icon:`add` (Add to Collection)
    Creates a new collection and adds the selected object to it.
+
 Name
    To rename a collection, simply click in the collections name field.
 :bl-icon:`x` (Remove Collection)
    Removes the object from the specified collection.
-Specials
+:bl-icon:`downarrow_hlt` (Collection Specials)
    Unlink Collection, Select Collection, Set Offset from Cursor
-Offset
+X, Y, Z
    Applies a spatial offset of the instanced collections from the original object's origin.
 
 .. seealso:: Appending or Linking Collections
 
    To append a collection from another blend-file,
    consult :doc:`this page </files/linked_libraries/index>`.
-   In summary, :menuselection:`File --> Link/Append Link` Select a blend-file and then the collection.
+   In summary, :menuselection:`File --> Link/Append Link`, Select a blend-file, and then the collection.
 
 .. tip:: Selecting Collections
 

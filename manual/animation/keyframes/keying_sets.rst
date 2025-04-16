@@ -39,12 +39,12 @@ Active Keying Set
 
    .. -bpy.ops.anim.keying_set_add:
 
-   Add ``+``
+   :bl-icon:`add` Add Empty Keying Set
       Adds an empty Keying Set.
 
    .. _bpy.ops.anim.keying_set_remove:
 
-   Remove ``-``
+   :bl-icon:`remove` Remove Active Keying Set
       Removes the active keying set.
 
 .. _bpy.types.KeyingSet.bl_description:
@@ -83,12 +83,12 @@ Paths
 
    .. _bpy.ops.anim.keying_set_path_add:
 
-   Add ``+``
+   :bl-icon:`add` Add Empty Keying Set Path
       Adds an empty path.
 
    .. _bpy.ops.anim.keying_set_path_remove:
 
-   Remove ``-``
+   :bl-icon:`remove` Remove Active Keying Set Path
       Removes the selected path.
 
 .. _bpy.types.KeyingSetPath.id_type:

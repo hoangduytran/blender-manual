@@ -63,7 +63,7 @@ Vertex Group
    If set, restrict the effect to the only vertices in that vertex group.
    This allows selective, real-time casting, by painting vertex weights.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

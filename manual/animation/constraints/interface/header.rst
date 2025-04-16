@@ -74,7 +74,7 @@ Extras
    The settings will be lost.
    The constraint will no longer affect the final outcome of the stack.
 
-Move ``::::``
+:bl-icon:`grip` (Move)
    Move a constraint up or down in the :doc:`constraint stack </animation/constraints/interface/stack>`.
    Since the stack is evaluated from top to bottom,
    moving a constraint in the stack can significantly affect the final outcome of the stack.

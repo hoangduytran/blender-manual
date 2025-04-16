@@ -34,10 +34,10 @@ Active Render
    Use the :doc:`/render/shader_nodes/input/uv_map` to access any other UV
    maps in shaders.
 
-Add ``+``
+:bl-icon:`add` Add UV Map
    Duplicates the selected UV map, or creates a new one if the list is empty.
 
-Remove ``-``
+:bl-icon:`remove` Remove UV Map
    Removes the selected UV map.
 
 

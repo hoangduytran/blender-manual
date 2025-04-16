@@ -90,7 +90,7 @@ UDIM Tile List
    List all UDIM tiles associated with the main index (``1000`` tile).
    Double clicking on the tile name allows you to alter the tiles *Label*.
 
-Add Tile ``+``
+:bl-icon:`add` Add Tile
    Adds new UDIM tiles to the group.
 
    Number
@@ -104,7 +104,7 @@ Add Tile ``+``
    Fill
       Occupy the UDIM tile with a generated image; see *Fill Tile* below.
 
-Remove Tile ``-``
+:bl-icon:`remove` Remove Tile
    Deletes the selected UDIM tile from the group.
    If this tile is not saved and contains data, that data will be lost.
 

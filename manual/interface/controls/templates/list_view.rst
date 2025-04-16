@@ -30,7 +30,7 @@ Filter
 
    Search :kbd:`Ctrl-F`
       Filters the list to only show items containing a certain term.
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Toggle between including items that match the search term and those that do not contain the search term.
 
    Sort by Name
@@ -40,11 +40,11 @@ Filter
 
 On the right of the list view are list modification buttons:
 
-Add ``+``
+:bl-icon:`add` (Add)
    Adds a new item.
-Remove ``-``
+:bl-icon:`remove` (Remove)
    Removes the selected item.
-Specials ``v``
+:bl-icon:`downarrow_hlt` (Specials)
    A :ref:`Specials <ui-specials-menu>` menu with operators to edit list entries.
 Move (up/down arrow icon)
    Moves the selected item up/down one position.

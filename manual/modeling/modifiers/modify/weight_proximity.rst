@@ -87,7 +87,7 @@ Type
    Median Step
       Creates binary weights (0.0 or 1.0), with 0.5 as cutting value.
 
-Invert ``<-->``
+:bl-icon:`arrow_leftright` Invert
    Inverts the falloff.
 
 

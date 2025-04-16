@@ -31,7 +31,7 @@ Vertex Group
    will be affected by this modifier.
    Vertices not in this group will not be deformed.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

@@ -148,7 +148,11 @@ Use Count
 
 Use objects multiple times in the same groups.
 Specify the order and number of times to repeat each object with the :ref:`list view <ui-list-view>` that appears.
-You can duplicate an object in the list with the ``+`` button, or remove a duplicate with the ``-`` button.
+
+:bl-icon:`add` Copy Particle Instance Object
+   Duplicates the selected object in the list.
+:bl-icon:`remove` Remove Particle Instance Object
+   Removes the selected object from the list.
 
 
 Extra

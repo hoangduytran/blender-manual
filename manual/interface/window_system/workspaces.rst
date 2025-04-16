@@ -30,7 +30,7 @@ Tabs
 
 .. _bpy.ops.workspace.add:
 
-Add ``+``
+:bl-icon:`add` Add Workspace
    Click on the *Add* button to add a new workspace.
 Context menu :kbd:`RMB`
    The context menu contains options to duplicate, delete and reorder workspaces.

@@ -1,11 +1,11 @@
 @font-face {
   font-family: "bl-icons";
-  src: url('bl-icons.eot?t=1743653527652'); /* IE9*/
-  src: url('bl-icons.eot?t=1743653527652#iefix') format('embedded-opentype') /* IE6-IE8 */,
-  url('bl-icons.woff2?t=1743653527652') format('woff2'),
-  url('bl-icons.woff?t=1743653527652') format('woff'),
-  url('bl-icons.ttf?t=1743653527652') format('truetype'),
-  url('bl-icons.svg?t=1743653527652') format('svg');
+  src: url('bl-icons.eot?t=1744579905951'); /* IE9*/
+  src: url('bl-icons.eot?t=1744579905951#iefix') format('embedded-opentype') /* IE6-IE8 */,
+  url('bl-icons.woff2?t=1744579905951') format('woff2'),
+  url('bl-icons.woff?t=1744579905951') format('woff'),
+  url('bl-icons.ttf?t=1744579905951') format('truetype'),
+  url('bl-icons.svg?t=1744579905951') format('svg');
 }
 
 [class^="bl-icons-"], [class*=" bl-icons-"] {

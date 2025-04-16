@@ -39,7 +39,7 @@ Vertex Group
    Only meaningful when having at least two of these modifiers on the same object,
    with *Multi Modifier* activated.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence set by the vertex group defined in previous setting
       (i.e. reverses the weight values of this group).
 

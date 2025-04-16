@@ -48,7 +48,7 @@ to leave the creation of shape keys for when the mesh is finished or its topolog
 Adding Shape Keys
 -----------------
 
-When adding a new shape key with the ``+`` button next to the list,
+When adding a new shape key with the :bl-icon:`add` button next to the list,
 the new shape will be a copy of the Basis shape,
 independently of the current result visible in the 3D Viewport.
 

@@ -61,7 +61,7 @@ Shape Key Specials
 
    New Shape from Mix
       Add a new shape key with the current deformed shape of the object.
-      This differs from the ``+`` button of the list, as that one always copies
+      This differs from the :bl-icon:`add` button of the list, as that one always copies
       the Basis shape independently of the current mix.
 
    .. _bpy.ops.object.shape_key_mirror:

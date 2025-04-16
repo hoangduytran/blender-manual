@@ -90,40 +90,42 @@ In addition, a base viewer reference scale can be set for landmarks of types Cus
    :align: right
    :width: 220px
 
-Landmark
+Landmark List
    A :ref:`list view <ui-list-view>`.
 
-   Selected Landmark
-      Defines which landmark's settings are shown below the list.
-      Changing the selected landmark does not have an influence on the VR view.
-   Activate ``〇``
+   The selected landmark defines which landmark's settings are shown below the list.
+   Changing the selected landmark does not have an influence on the VR view.
+
+   :bl-icon:`radiobut_on` Activate VR Landmark
       Activates a landmark, making it change the base pose of the VR view.
-   Add ``+``
-      Create a landmark.
-   Remove ``-``
-      Delete the selected landmark.
-   Add from Session ``⊕``
-      Create a landmark from the viewer pose of the running VR session.
-   Landmark Controls ``v``
-      Add Camera and VR Landmark from Session
-         Create a new camera and landmark from the viewer pose of the running VR session.
-      Add Landmark from Camera
-         Add a new landmark from the active camera object.
-      Update Custom Landmark
-         Update the selected landmark from the current VR viewer pose.
-      Cursor to Landmark
-         Move the 3D Cursor to the selected landmark.
-      Scene Camera to Landmark
-         Position the scene camera at the selected landmark.
-      Camera from Landmark
-         Create a new camera from the selected landmark.
+
+:bl-icon:`add` Add VR Landmark
+   Create a landmark.
+:bl-icon:`remove` Remove VR Landmark
+   Delete the selected landmark.
+:bl-icon:`plus` Add from Session
+   Create a landmark from the viewer pose of the running VR session.
+:bl-icon:`downarrow_hlt` Landmark Controls
+   Add Camera and VR Landmark from Session
+      Create a new camera and landmark from the viewer pose of the running VR session.
+   Add Landmark from Camera
+      Add a new landmark from the active camera object.
+   Update Custom Landmark
+      Update the selected landmark from the current VR viewer pose.
+   Cursor to Landmark
+      Move the 3D Cursor to the selected landmark.
+   Scene Camera to Landmark
+      Position the scene camera at the selected landmark.
+   Camera from Landmark
+      Create a new camera from the selected landmark.
+
 Type
-   Scene Camera
+   :Scene Camera:
       Follow the scene's :ref:`active camera <bpy.types.Scene.camera>`
       to define the base pose of the viewer.
-   Custom Object
+   :Custom Object:
       Set an arbitrary object to define the base pose of the viewer.
-   Custom Pose
+   :Custom Pose:
       Manually define a position and rotation to use as the base pose of the viewer.
 
 

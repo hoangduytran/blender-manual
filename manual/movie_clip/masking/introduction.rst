@@ -59,7 +59,5 @@ Mask
    Once set to Mask mode, a mask data-block can be added with a :ref:`data-block menu <ui-data-block>`.
    Any image, movie clip, render or compositing result can be used as a backdrop to display masks over.
 
-   New ``+`` :kbd:`Alt-N`
-
 Mask Display
    See :doc:`/editors/clip/display/mask_display`.

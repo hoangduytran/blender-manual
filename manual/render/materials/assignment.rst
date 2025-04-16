@@ -35,27 +35,30 @@ The object's material slots and active material displayed in a :ref:`List View <
 
 .. _bpy.ops.material.new:
 
-Add Material Slot
+:bl-icon:`add` (Add Material Slot)
    Add a new material slot on the object.
 
-Remove Material Slot
+.. _bpy.ops.object.material_slot_remove:
+
+:bl-icon:`remove` (Remove Material Slot)
    Remove a material slot from the object.
 
 .. _bpy.ops.material.copy:
 
-Copy Material
-   Copy material shader nodes and settings to clipboard.
+:bl-icon:`downarrow_hlt` (Material Specials)
+   Copy Material
+      Copy material shader nodes and settings to clipboard.
 
-.. _bpy.ops.material.paste:
+   .. _bpy.ops.material.paste:
 
-Paste Material
-   Paste material shader nodes and settings from clipboard.
+   Paste Material
+      Paste material shader nodes and settings from clipboard.
 
-Copy Material to Selected
-   Copy the same material assignment from the active to other selected objects.
+   Copy Material to Selected
+      Copy the same material assignment from the active to other selected objects.
 
-Remove Unused Slots
-   Removes all material slots not assigned to the object.
+   Remove Unused Slots
+      Removes all material slots not assigned to the object.
 
 
 Data-Block
@@ -181,5 +184,5 @@ a base material is as follows:
 #. Go into Edit Mode and Face Select (a new list will appear below
    the Active Material list with *Assign*, *Select*, *Deselect* buttons).
 #. Select the faces to be colored with the second material.
-#. In the Object Material Slots list, click the ``+`` button to create a new slot or select an existing material.
+#. In the Object Material Slots list, :ref:`create a new slot <bpy.ops.material.new>` or select an existing material.
 #. Click the *Assign* button, and the material will appear on the selected object faces.

@@ -73,7 +73,7 @@ Typical Usage
    (or the *Pick* output of the Cryptomatte node) to the *Image* input of the Viewer node.
 #. At this point, the rendered scene (or the Cryptomatte) appears in the Compositor background.
    If it doesn't, make sure the *Backdrop* option in the header is enabled.
-#. Click the ``+`` button in the Cryptomatte node, then click the object you want to include
+#. Click the :bl-icon:`add` button in the Cryptomatte node, then click the object you want to include
    in the mask. Repeat for any other objects.
 #. Use the *Matte* output of the Cryptomatte node to retrieve a mask for the selected object(s).
    Alternatively, connect the *Image* output of the Render Layers node to the *Image* input

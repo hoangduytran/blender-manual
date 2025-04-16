@@ -25,7 +25,7 @@ Options
 Vertex Group
    The vertex group to affect.
 
-   Invert ``<-->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group. The setting reverses the weight values of the group.
 
 Angle

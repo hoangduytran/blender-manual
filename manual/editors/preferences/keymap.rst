@@ -28,13 +28,15 @@ Keymap Presets
    - :doc:`Industry Compatible </interface/keymap/industry_compatible>`: a keymap
      which more closely matches other 3D editing applications.
 
-   .. _bpy.ops.wm.keyconfig_preset_add:
+.. _bpy.ops.wm.keyconfig_preset_add:
 
-   You add a custom keymap configuration using the *Add* button ``+``.
+:bl-icon:`add` Add Custom Keymap Configuration
+   Add a custom keymap configuration.
 
-   .. _bpy.ops.wm.keyconfig_preset_remove:
+.. _bpy.ops.wm.keyconfig_preset_remove:
 
-   You remove a custom keymap configuration using the *Remove* button ``-``.
+:bl-icon:`remove` Remove Keymap Configuration
+   Remove a custom keymap configuration.
 
 .. _bpy.ops.preferences.keyconfig_import:
 

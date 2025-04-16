@@ -104,11 +104,11 @@ Presets
 
 Selector
    A list of available presets. A selection will override the included properties.
-Add ``+``
+:bl-icon:`add` (Add)
    New presets can be added based on the currently applied set of properties, which will be saved for later reuse.
    A pop-up opens where you can set a name, after which you can select it from the list and
    in some cases additional settings.
-Remove ``-``
+:bl-icon:`remove` (Remove)
    Deletes the selected preset.
 
 .. saving preset: data-system?

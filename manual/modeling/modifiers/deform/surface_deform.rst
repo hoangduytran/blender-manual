@@ -50,7 +50,7 @@ Strength
 Vertex Group
    Allows you to define the influence per vertex.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

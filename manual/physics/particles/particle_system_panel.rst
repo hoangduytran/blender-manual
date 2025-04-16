@@ -77,7 +77,7 @@ Creating a Particle System
       Adding a particle system.
 
 To add a new particle system to an object, go to the *Particles* tab of the Properties
-editor and click the small ``+`` button. An object can have many Particle Systems.
+editor and click the :bl-icon:`add` button. An object can have many Particle Systems.
 
 Each particle system has separate settings attached to it.
 These settings can be shared among different particle systems, so one does not have to copy

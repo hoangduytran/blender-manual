@@ -194,7 +194,7 @@ File Name
    Text field to edit the file name and extension. Turns red to warn you about overwriting an existing file.
    :kbd:`Tab` will auto-complete to existing names in the current directory.
 
-   Increase/Decrease Number ``+``, ``-``
+   :bl-icon:`remove`/:bl-icon:`add` (Increment Number in Filename)
       Adds/increases or removes/decreases a trailing number in your file name
       (used e.g. to store different versions of a file).
 

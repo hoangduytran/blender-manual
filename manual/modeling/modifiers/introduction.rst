@@ -197,7 +197,7 @@ Extras
 Delete :kbd:`X`, :kbd:`Delete`
    Delete the modifier.
 
-Move ``::::``
+:bl-icon:`grip` (Move)
    Move the modifier up/down in the :ref:`stack <modifier-stack>`,
    changing the evaluation order of the modifiers.
 
@@ -224,7 +224,7 @@ This kind of functionality is often referred to as a "modifier stack"
 and is also found in several other 3D applications.
 
 In a modifier stack, the order in which modifiers are applied has an effect on the result.
-Therefore the modifiers can be re-arranged by clicking the grab widget (``::::``) in the top right,
+Therefore the modifiers can be re-arranged by clicking :bl-icon:`grip` (grip icon) in the top right,
 and moving the selected modifier up or down.
 For example, the image below shows :doc:`Subdivision Surface </modeling/modifiers/generate/subdivision_surface>`
 and :doc:`Mirror </modeling/modifiers/generate/mirror>` modifiers that have switched places.

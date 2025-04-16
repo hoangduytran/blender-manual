@@ -31,7 +31,7 @@ Object
 Vertex Group
    An optional vertex group name which lets you limit the modifier's effect to a part of the base mesh.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

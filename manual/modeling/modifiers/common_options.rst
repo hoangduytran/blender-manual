@@ -36,7 +36,7 @@ Vertex Group
       will be lost by all modifiers using it (their field will turn red),
       and you'll have to select the proper group again in all of them.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

@@ -85,7 +85,7 @@ Anchor Weights
    The weight of each vertex does not affect the behavior of the modifier,
    the method only takes into account vertices with weight greater than 0.
 
-   Invert ``<->``
+   :bl-icon:`arrow_leftright` Invert
       Inverts the influence of the selected vertex group, meaning that the group
       now represents vertices that will not be deformed by the modifier.
 

@@ -34,14 +34,14 @@ Controls
 
 Above the curve graph is a row of controls. These are:
 
-Zoom In (plus magnifying glass icon)
+:bl-icon:`zoom_in` Zoom In
    Zoom into the center of the graph to show more details and provide more accurate control.
    To navigate around the curve while zoomed in, click and drag in an empty part of the graph.
-Zoom Out (minus magnifying glass icon)
+:bl-icon:`zoom_out` Zoom Out
    Zoom out of the graph to show fewer details and view the graph as a whole.
    You cannot zoom out further than the clipping region (see *Clipping* below).
 
-Specials ``v``
+:bl-icon:`downarrow_hlt` Specials
    A :ref:`Specials <ui-specials-menu>` menu with operators to edit control points or to set properties.
 
    Reset View
@@ -68,7 +68,7 @@ Specials ``v``
 
    Reset Curve
       Resets the curve to default (removes all points added to the curve).
-Clipping Options (dot icon)
+:bl-icon:`clipuv_hlt` Clipping Options
    Use Clipping
       Forces curve points to stay between specified values.
    Min X/Y and Max X/Y
