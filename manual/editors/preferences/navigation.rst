@@ -16,7 +16,7 @@ Orbit & Pan
 .. _bpy.types.PreferencesInput.view_rotate_method:
 
 Orbit Method
-   Choose you are preferred method of interactively rotating the 3D Viewport.
+   Choose your preferred method of interactively rotating the 3D Viewport.
 
    :Turntable:
       Rotates the view keeping the horizon horizontal.
