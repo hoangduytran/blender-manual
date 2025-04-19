@@ -49,11 +49,10 @@ Distribute Memory Across Devices
 Embree on GPU
    Enables the use of hardware ray tracing on Intel GPUs, providing better overall performance.
 
-   Only supported with oneAPI rendering devices..
+   Only supported with oneAPI rendering devices.
 
-HIP RT (Experimental)
-   Speeds up rendering by enabling AMD hardware ray tracing on RDNA2 and above, with shader fallback on older cards.
-   This feature is experimental and some scenes may render incorrectly.
+HIP RT
+   Speeds up rendering by enabling AMD hardware ray tracing on RDNA2 and above.
 
    This feature is only available when using a *HIP* render device.
 
