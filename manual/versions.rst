@@ -7,10 +7,10 @@ Manual Versions
 Blender 4
 =========
 
-- `Blender 4.5 <https://docs.blender.org/manual/en/4.5/>`__
+- `Blender 4.5 (LTS) <https://docs.blender.org/manual/en/4.5/>`__
 - `Blender 4.4 <https://docs.blender.org/manual/en/4.4/>`__
-- `Blender 4.3 (LTS) <https://docs.blender.org/manual/en/4.3/>`__
-- `Blender 4.2 <https://docs.blender.org/manual/en/4.2/>`__
+- `Blender 4.3 <https://docs.blender.org/manual/en/4.3/>`__
+- `Blender 4.2 (LTS) <https://docs.blender.org/manual/en/4.2/>`__
 - `Blender 4.1 <https://docs.blender.org/manual/en/4.1/>`__
 - `Blender 4.0 <https://docs.blender.org/manual/en/4.0/>`__
 
