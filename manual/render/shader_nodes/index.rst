@@ -15,5 +15,5 @@
    Color <color/index.rst>
    Vector <vector/index.rst>
    Converter <converter/index.rst>
+   script.rst
    groups.rst
-   osl.rst

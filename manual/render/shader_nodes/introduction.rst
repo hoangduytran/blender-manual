@@ -78,4 +78,4 @@ In Cycles, custom nodes can be written using the Open Shading Language.
 
 .. seealso::
 
-   :doc:`Open Shading Language </render/shader_nodes/osl>`
+   :doc:`Open Shading Language </render/cycles/osl/index>`

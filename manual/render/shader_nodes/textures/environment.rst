@@ -46,7 +46,7 @@ Texture Interpolation
    :Closest: No interpolation, use closest pixel.
    :Cubic: Smoother, better quality interpolation.
    :Smart: Bicubic when magnifying, otherwise Bilinear is used.
-      This is only available for :doc:`OSL </render/shader_nodes/osl>`.
+      This is only available for :doc:`OSL </render/cycles/osl/index>`.
 
 Projection Method
    Allows you to use different types of environmental maps. The following methods are supported:

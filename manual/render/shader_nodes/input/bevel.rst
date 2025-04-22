@@ -30,7 +30,7 @@ but sometimes fails on complex or messy geometry.
       contains an active :ref:`Caustic caster <bpy.types.CyclesObjectSettings.is_caustics_caster>`,
       :ref:`Caustic receiver <bpy.types.CyclesObjectSettings.is_caustics_receiver>`, and
       :ref:`Shadow Caustic Light <bpy.types.CyclesLightSettings.is_caustics_light>`.
-   - :doc:`/render/shader_nodes/osl` is active while using the OptiX rendering backend.
+   - :doc:`/render/cycles/osl/index` is active while using the OptiX rendering backend.
 
 
 Inputs

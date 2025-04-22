@@ -3,68 +3,54 @@
 Open Shading Language
 *********************
 
-:guilabel:`Cycles Only`
+`Open Shading Language (OSL) <https://github.com/AcademySoftwareFoundation/OpenShadingLanguage>`__
+is a programmable shading system developed for advanced rendering engines.
+It allows technical artists and developers to write custom shader code using a C-like scripting language.
 
-It is also possible to create your own nodes using
-`Open Shading Language <https://github.com/AcademySoftwareFoundation/OpenShadingLanguage>`__ (OSL).
-These nodes will only work with the CPU and OptiX rendering backend.
+In Blender, OSL can be used within Cycles to define custom surface, volume, and displacement shaders.
+This gives users full control over shading behavior, enabling procedural effects, advanced lighting models,
+and custom geometry-based material logic that may not be possible with built-in shader nodes alone.
 
-To enable it, select *Open Shading Language* as the shading system in the render settings.
-
-.. note::
-
-   Some OSL features are not available when using the OptiX backend. Examples include:
-
-   - Memory usage reductions offered by features like on-demand texture loading and
-     mip-mapping are not available.
-   - Texture lookups require OSL to be able to determine a constant image file path for each
-     texture call.
-   - Some noise functions are not available. Examples include *Cell*, *Simplex*, and *Gabor*.
-   - The :ref:`trace <render-shader-nodes-osl-trace>` function is not functional.
-     As a result of this, the :ref:`Ambient Occlusion <bpy.types.ShaderNodeAmbientOcclusion>`
-     and :ref:`Bevel <bpy.types.ShaderNodeBevel>` nodes do not work.
-
-
-.. _bpy.types.ShaderNodeScript:
-
-Script Node
-===========
-
-.. figure:: /images/node-types_ShaderNodeScript.webp
-   :align: right
-   :alt: Script Node.
-
-OSL was designed for node-based shading,
-and *each* OSL shader corresponds to *one* node in a node setup.
-To add an OSL shader, add a script node and link it to a text data-block or an external file.
-Input and output sockets will be created from the shader parameters on
-clicking the update button in the Node or the Text editor.
-
-OSL shaders can be linked to the node in a few different ways. With the *Internal* mode,
-a text data-block is used to store the OSL shader, and the OSO bytecode is stored in the node itself.
-This is useful for distributing a blend-file with everything packed into it.
-
-The *External* mode can be used to specify a ``.osl`` file from a drive,
-and this will then be automatically compiled into a ``.oso`` file in the same directory.
-It is also possible to specify a path to a ``.oso`` file, which will then be used directly,
-with compilation done manually by the user. The third option is to specify just the module name,
-which will be looked up in the shader search path.
-
-The shader search path is located in the same place as the scripts or configuration path, under:
-
-Linux
-   .. parsed-literal:: $HOME/.config/blender/|BLENDER_VERSION|/shaders/
-Windows
-   .. parsed-literal:: C:\\Users\\$user\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\shaders\\
-macOS
-   .. parsed-literal:: /Users/$USER/Library/Application Support/Blender/|BLENDER_VERSION|/shaders/
+Unlike node-based materials, OSL shaders are authored as text scripts using Blender's internal
+:doc:`Text Editor </editors/text_editor>` or loaded from external `.osl` or `.oso` files.
+These scripts are then compiled and used in the Shader Editor
+through the :doc:`Script Node </render/shader_nodes/script>`.
 
 .. tip::
 
-   For use in production, we suggest to use a node group to wrap shader script nodes,
-   and link that into other blend-files.
-   This makes it easier to make changes to the node afterwards as sockets are added or removed,
-   without having to update the script nodes in all files.
+   OSL is especially useful for generating procedural textures, custom BRDFs, or implementing research prototypes.
+   It also allows sharing shaders across compatible rendering applications that support the OSL standard.
+
+
+.. _osl-usage:
+
+Usage
+=====
+
+To use Open Shading Language (OSL) in Blender, follow these steps:
+
+#. **Enable OSL Rendering**
+
+   In the :menuselection:`Render Properties` enable *Open Shading Language*.
+
+#. **Add a Script Node**
+
+   In the Shader Editor add :doc:`Script Node </render/shader_nodes/script>` then in the node's properties:
+
+   - Set the *Mode* to *Internal* to use a Blender text data-block, or
+   - Set it to *External* to load a shader file from disk (either `.osl` or compiled `.oso`).
+
+   For the internal mode, create a new text data-block in the Text Editor,
+   then write or paste your OSL code there.
+
+   Blender will compile the OSL source file automatically.
+   If the source is `.osl`, it will be compiled into `.oso` bytecode.
+   Compilation errors will be shown in the system console.
+
+#. **Use Shader Outputs**
+
+   Once compiled, the node's outputs will reflect the ``output`` parameters defined in the OSL code.
+   These outputs can be connected to any part of the material node tree.
 
 
 Writing Shaders
@@ -296,3 +282,22 @@ metadata is supported:
   Hide parameter in the user interface.
 ``[[ string widget = "boolean" ]]`` and ``[[ string widget = "checkbox" ]]``
   Display integer parameter as a boolean checkbox.
+
+
+Limitations
+===========
+
+.. important::
+
+   OSL is not supported with GPU rendering unless using the OptiX backend.
+
+Some OSL features are not available when using the OptiX backend. Examples include:
+
+- Memory usage reductions offered by features like on-demand texture loading and
+   mip-mapping are not available.
+- Texture lookups require OSL to be able to determine a constant image file path for each
+   texture call.
+- Some noise functions are not available. Examples include *Cell*, *Simplex*, and *Gabor*.
+- The :ref:`trace <render-shader-nodes-osl-trace>` function is not functional.
+   As a result of this, the :ref:`Ambient Occlusion <bpy.types.ShaderNodeAmbientOcclusion>`
+   and :ref:`Bevel <bpy.types.ShaderNodeBevel>` nodes do not work.

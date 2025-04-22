@@ -110,7 +110,7 @@ Limitations
 ===========
 
 - :ref:`Path Guiding <bpy.types.CyclesRenderSettings.use_guiding>` is not supported on any GPU.
-- :doc:`/render/shader_nodes/osl` is only supported for OptiX, with some limitations listed in the documentation.
+- :doc:`/render/cycles/osl/index` is only supported for OptiX, with some limitations listed in the documentation.
 
 
 Frequently Asked Questions
