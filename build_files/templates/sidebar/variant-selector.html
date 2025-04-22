@@ -1,3 +1,5 @@
+{%- set lang_code = language if language is not none else 'en' -%}
+
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Document versions">
   <ul id="versionwrap" role="presentation">
     <li role="presentation">
@@ -9,13 +11,19 @@
         <div class="version-title" aria-role="heading">Versions</div>
         <ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover" aria-hidden="true">
           <li role="presentation">Loading...</li>
+          <li role="presentation">
+            <a role="menuitem" tabindex="-1"
+               href="https://docs.blender.org/manual/{{ lang_code }}/latest/versions.html">
+               {{ _('Older Versions') }}
+            </a>
+          </li>
         </ul>
       </div>
     </li>
     <li role="presentation">
       <button id="lang-popover" class="version-btn" tabindex="0" type="button" aria-label="Language selector"
         aria-haspopup="true" aria-owns="version-langlist">
-        {% if language is not none %} {{ language }} {% else %} en {% endif %}
+        {{ lang_code }}
       </button>
       <div class="version-dialog" aria-hidden="true">
         <div class="version-title" aria-role="heading">Languages</div>
