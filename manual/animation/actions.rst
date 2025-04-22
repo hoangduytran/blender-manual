@@ -45,7 +45,7 @@ that changes its color on each bounce, and that involves two data-blocks: the
 object and its material. Slots allow you to put both the object's animation and
 the material's animation in the same action by having a different slot for each.
 
-.. figure:: /images/animation_actions_slots_diagram_object_and_material.png
+.. figure:: /images/animation_actions_slots_diagram_object_and_material.svg
 
    Visualization of a ball and its material connected to different slots in an
    action.
@@ -55,7 +55,7 @@ you can have as many slots as you like for as many objects, materials, lights,
 etc. as you like. If you're baking down a simulation of 100 bouncing balls, you
 could store that animation in single action with 100 slots.
 
-.. figure:: /images/animation_actions_slots_diagram_many_objects.png
+.. figure:: /images/animation_actions_slots_diagram_many_objects.svg
 
    Visualization of many balls all connected to different slots in an action.
 
