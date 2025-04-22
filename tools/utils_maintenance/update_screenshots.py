@@ -20,7 +20,7 @@ If the images are acceptable, run:
 Example Usage
 =============
 
-   env BLENDER_BIN=/src/blender/blender.bin ./tools_maintenance/update_screenshots.py
+   env BLENDER_BIN=/src/blender/blender.bin ./tools/utils_maintenance/update_screenshots.py
 """
 
 
@@ -63,7 +63,7 @@ if "bpy" not in sys.modules:
 # -----------
 # Setup Paths
 
-ROOT_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), ".."))
+ROOT_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 IMAGE_DIR_FINAL = os.path.join(ROOT_DIR, "manual", "images")
 IMAGE_DIR_PREVIEW = os.path.join(ROOT_DIR, "manual_images_preview")
