@@ -74,7 +74,8 @@ class Popover {
             .catch(() => {
               console.error(
                   'Version Switch Error: versions.json could not be loaded.');
-              this.btn.classList.remove('disabled');
+              this.btn.classList.add('disabled');
+              this.btn.setAttribute('aria-disabled', true);
             });
       } else {
         resolve();
