@@ -198,7 +198,7 @@ class Popover {
         const m = title.match(/\d\.\d[\w\d\.]*/)[0];
         if (parseFloat(m) == v) {
           v = ix;
-          return false;
+          break;
         }
       }
     }
