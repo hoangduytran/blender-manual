@@ -111,6 +111,7 @@ class Popover {
       this.btn.addEventListener('keydown', function(e) {
         if (that.btnKeyFilter(e)) {
           that.btnOpenHandler();
+          e.preventDefault();
         }
       });
     });
