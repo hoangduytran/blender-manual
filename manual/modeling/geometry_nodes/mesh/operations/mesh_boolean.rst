@@ -53,7 +53,7 @@ Solver
       however, this solver is much slower.
    :Manifold:
       Uses a solver that is usually fastest but only works on manifold meshes,
-      (plus the case special case of Difference with a plane).
+      (plus the special case of Difference with a plane).
 
 
 Output
