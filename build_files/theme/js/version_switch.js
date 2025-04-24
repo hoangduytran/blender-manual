@@ -333,14 +333,14 @@ class Popover {
     e.stopPropagation();
   }
   listPrev(nw) {
-    if (nw.parentNode.previousElementSibling.length !== 0) {
+    if (nw.parentNode.previousElementSibling) {
       return nw.parentNode.previousElementSibling.firstElementChild;
     } else {
       return this.listLast();
     }
   }
   listNext(nw) {
-    if (nw.parentNode.nextElementSibling.length !== 0) {
+    if (nw.parentNode.nextElementSibling) {
       return nw.parentNode.nextElementSibling.firstElementChild;
     } else {
       return this.listFirst();
