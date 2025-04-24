@@ -17,6 +17,7 @@ The *Boolean* modifier combines multiple meshes using a Boolean operation.
    Only :term:`Manifold` meshes are guaranteed to give proper results.
    :term:`Non-manifold` ones (especially meshes with holes) will usually work well,
    but might give odd glitches and artifacts.
+   However, the :guilabel:`Manifold Solver` will not work at all on non-manifold meshes.
 
 .. tip::
 
@@ -66,12 +67,15 @@ Solver
    Algorithm used to perform the Boolean operation.
 
    :Fast:
-      Uses a mathematically simple solver which offers the best performance;
+      Uses a mathematically simple solver which offers the good performance;
       however, this solver lacks support for overlapping geometry.
    :Exact:
       Uses a mathematically complex solver which offers the best results
-      and has full support for overlapping geometry;
-      however, this solver is much slower than the *Fast* solver.
+      when there are coplanar faces or other overlapping geometry;
+      however, this solver is much slower.
+   :Manifold:
+      Uses a solver that is usually fastest but only works on manifold meshes,
+      (plus the case special case of Difference with a plane).
 
 
 Solver Options

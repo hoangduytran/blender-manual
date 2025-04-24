@@ -19,11 +19,11 @@ Inputs
 Mesh 1/2
    Standard geometry input.
 
-Self Intersection
+Self Intersection :guilabel:`Exact Solver`
    Correctly calculates cases when one or both operands have self-intersections.
    This involves more calculations making the node slower.
 
-Hole Tolerant
+Hole Tolerant :guilabel:`Exact Solver`
    Optimizes the Boolean output for :term:`Non-manifold` geometry
    at the cost of increased computational time.
    Because of the performance impact, this option should only be enabled
@@ -45,12 +45,15 @@ Solver
    Algorithm used to calculate the Boolean intersections.
 
    :Float:
-      Uses a mathematically simple solver which offers the best performance;
+      Uses a mathematically simple solver which offers the good performance;
       however, this solver lacks support for overlapping geometry.
    :Exact:
       Uses a mathematically complex solver which offers the best results
-      and has full support for overlapping geometry;
-      however, this solver is much slower than the *Float Solver*.
+      when there are coplanar faces or other overlapping geometry;
+      however, this solver is much slower.
+   :Manifold:
+      Uses a solver that is usually fastest but only works on manifold meshes,
+      (plus the case special case of Difference with a plane).
 
 
 Output
