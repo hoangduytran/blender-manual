@@ -1,7 +1,7 @@
 (function() {  // switch: v1.5
 'use strict';
 
-var versionsFileUrl = 'https://docs.blender.org/versions.json'
+var versionsFileUrl = 'https://docs.blender.org/versions.json';
 
 var all_versions;
 var all_langs = {
@@ -106,7 +106,7 @@ class Popover {
       this.btnOpenHandler();
       this.btn.addEventListener('mousedown', function(e) {
         that.btnOpenHandler();
-        e.preventDefault()
+        e.preventDefault();
       });
       this.btn.addEventListener('keydown', function(e) {
         if (that.btnKeyFilter(e)) {
@@ -115,13 +115,14 @@ class Popover {
       });
     });
   }
+
   warnOld(release, all_versions) {
     // Note this is effectively disabled now, two issues must fixed:
     // * versions.js does not contain a current entry, because that leads to
     //   duplicate version numbers in the menu. These need to be deduplicated.
     // * It only shows the warning after opening the menu to switch version
     //   or language, when versions.js is loaded. This is too late to be useful.
-    let current = all_versions.current
+    let current = all_versions.current;
     if (!current) {
       // console.log("Version Switch Error: no 'current' in version.json.");
       return;
@@ -145,6 +146,7 @@ class Popover {
       body.prepend(warning);
     }
   }
+
   buildList(v, l) {
     const url = new URL(window.location.href);
     let pathSplit = ['', 'manual', l, v];
@@ -185,9 +187,10 @@ class Popover {
         link.setAttribute('lang', !that.type ? ix : 'en');
       }
       that.list.append(clone);
-    };
+    }
     return this.list;
   }
+
   getNamed(v) {
     for (let [ix, title] of Object.entries(all_versions)) {
       if (ix === 'dev' || ix === 'latest') {
@@ -197,9 +200,10 @@ class Popover {
           return false;
         }
       }
-    };
+    }
     return v;
   }
+
   dialogToggle(speed) {
     speed = window.matchMedia('(prefers-reduced-motion: reduce)').matches ?
         0 :
@@ -267,9 +271,11 @@ class Popover {
       }
     }
   }
+
   btnOpenHandler() {
     this.dialogToggle(300);
   }
+
   focusoutHandler() {
     const list = this.list;
     const that = this;
@@ -279,9 +285,11 @@ class Popover {
       }
     }, 200);
   }
+
   mouseoutHandler() {
     this.dialogToggle(200);
   }
+
   btnKeyFilter(e) {
     if (e.ctrlKey || e.shiftKey) {
       return false;
@@ -293,6 +301,7 @@ class Popover {
     }
     return false;
   }
+
   keyMove(e) {
     if (e.ctrlKey || e.shiftKey) {
       return true;
@@ -312,11 +321,7 @@ class Popover {
         nw = this.listLast();
         break;
       case 'Escape':
-        nw = this.listExit();
-        break;
       case 'ArrowLeft':
-        nw = this.listExit();
-        break;
       case 'ArrowRight':
         nw = this.listExit();
         break;
@@ -332,6 +337,7 @@ class Popover {
     e.preventDefault();
     e.stopPropagation();
   }
+
   listPrev(nw) {
     if (nw.parentNode.previousElementSibling) {
       return nw.parentNode.previousElementSibling.firstElementChild;
@@ -339,6 +345,7 @@ class Popover {
       return this.listLast();
     }
   }
+
   listNext(nw) {
     if (nw.parentNode.nextElementSibling) {
       return nw.parentNode.nextElementSibling.firstElementChild;
@@ -346,16 +353,20 @@ class Popover {
       return this.listFirst();
     }
   }
+
   listFirst() {
     return this.list.firstElementChild.firstElementChild;
   }
+
   listLast() {
     return this.list.lastElementChild.firstElementChild;
   }
+
   listExit() {
     this.mouseoutHandler();
     return this.btn;
   }
+
   listEnter() {
     return this.list.firstElementChild.firstElementChild;
   }
