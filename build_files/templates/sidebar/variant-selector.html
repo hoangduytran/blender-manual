@@ -8,9 +8,9 @@
         {{ release }}
       </button>
       <div class="version-dialog" aria-hidden="true">
-        <div class="version-title" aria-role="heading">Versions</div>
+        <div class="version-title" aria-role="heading">{{ _('Versions') }}</div>
         <ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover" aria-hidden="true">
-          <li role="presentation">Loading...</li>
+          <li role="presentation">{{ _('Loading...) }}</li>
           <li role="presentation">
             <a role="menuitem" tabindex="-1"
                href="https://docs.blender.org/manual/{{ lang_code }}/latest/versions.html">
@@ -26,9 +26,9 @@
         {{ lang_code }}
       </button>
       <div class="version-dialog" aria-hidden="true">
-        <div class="version-title" aria-role="heading">Languages</div>
+        <div class="version-title" aria-role="heading">{{ _('Languages') }}</div>
         <ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover" aria-hidden="true">
-          <li role="presentation">Loading...</li>
+          <li role="presentation">{{ _('Loading...') }}</li>
         </ul>
       </div>
     </li>
@@ -41,8 +41,8 @@
     <div class="admonition warning">
       <p class="first admonition-title">Note</p>
       <p class="last">
-        You are not using the most up to date version of the documentation.
-        <a href="#"></a> is the newest version.
+        {{ _('You are not using the most up to date version of the documentation.') }}
+        <a href="#"></a> {{ _('is the newest version.') }}
       </p>
     </div>
   </template>
