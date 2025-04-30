@@ -37,5 +37,5 @@ Notes
 
 .. seealso::
 
-   - :doc:`modeling-objects-parenting </scene_layout/object/editing/parent>` -- Parenting overview.
+   - :doc:`/scene_layout/object/editing/parent` -- Parenting overview.
    - :ref:`bpy.ops.object.parent_set` -- General object parenting.

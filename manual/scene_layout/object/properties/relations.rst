@@ -17,11 +17,21 @@ Parent Type
    The type of parenting used. See :doc:`parenting </scene_layout/object/editing/parent>`
    for information on the different types.
 
+.. _bpy.types.Object.use_parent_final_indices:
+
+Use Final Indices :guilabel:`Vertex` :guilabel:`3 Vertices`
+   Use the final evaluated indices rather than the original mesh indices.
+
 .. _bpy.types.Object.use_camera_lock_parent:
 
 Camera Parent Lock
    When the camera is locked to the view, the root parent is transformed rather than the camera.
    This is useful for camera rigs where you don't want to animate the camera directly.
+
+.. _bpy.types.Object.parent_vertices:
+
+Parent Vertex/Vertices
+   Indices of vertices in case of a vertex parenting relation.
 
 .. _bpy.types.Object.track_axis:
 
