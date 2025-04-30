@@ -60,8 +60,8 @@ Type
    - :ref:`Follow Path <curve-path-animation>`
    - :doc:`Path Constraint </animation/constraints/relationship/follow_path>`
    - :doc:`Lattice Deform </modeling/modifiers/deform/lattice>`
-   - Vertex
-   - Vertex (Triangle)
+   - :doc:`Vertex </modeling/meshes/editing/vertex/make_vertex_parent>`
+   - :doc:`Vertex (Triangle) </modeling/meshes/editing/vertex/make_vertex_parent>`
 
 Keep Transform
    The object's current world transform (so its absolute location, rotation and scale in the world) is computed.
