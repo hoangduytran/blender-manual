@@ -121,9 +121,6 @@ Change Case
 *Change Case* modifies the case of names to be one of the following:
 
 Convert To
-   Upper Case
-      Changes all text to be in upper case, e.g. ``cube.001`` becomes ``CUBE.001``.
-   Lower Case
-      Changes all text to be in lower case, e.g. ``CUBE.001`` becomes ``cube.001``.
-   Title Caps
-      Changes all text to be in title case, e.g. ``living room`` becomes ``Living Room``.
+   :Upper Case: Changes all text to be in upper case, e.g. ``cube.001`` becomes ``CUBE.001``.
+   :Lower Case: Changes all text to be in lower case, e.g. ``CUBE.001`` becomes ``cube.001``.
+   :Title Case: Changes all text to be in title case, e.g. ``living room`` becomes ``Living Room``.
