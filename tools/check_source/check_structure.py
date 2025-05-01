@@ -18,6 +18,7 @@ SUBDIR = ""
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 ROOT_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", ".."))
 RST_DIR = os.path.join(ROOT_DIR, "manual", SUBDIR)
+HTACCESS_PATH = os.path.join(ROOT_DIR, "build_files", ".htaccess")
 
 
 def print_title(title, underline="="):
@@ -68,6 +69,39 @@ def find_rst_titles(root_dir):
         print("All .rst titles with * or # overline/underline are unique.")
 
 
+def check_htaccess_redirects():
+    """
+    Check .htaccess redirects to ensure the destination .rst file exists.
+    """
+    if not os.path.exists(HTACCESS_PATH):
+        return f"Error: {HTACCESS_PATH} does not exist."
+
+    redirect_pattern = re.compile(r'^RedirectMatch\s+"[^"]+"\s+"(/manual/[^"]+\.html)"')
+    missing_files = []
+
+    with open(HTACCESS_PATH, "r", encoding="utf-8") as file:
+        for line in file:
+            match = redirect_pattern.search(line)
+            if match:
+                html_path = match.group(1)
+                # Normalize and strip lang/version parts
+                parts = html_path.split('/')
+                if len(parts) >= 5:
+                    relative_rst_path = os.path.join(*parts[4:])  # skip /manual/{lang}/{version}
+                    relative_rst_path = os.path.splitext(relative_rst_path)[0] + ".rst"
+                    full_rst_path = os.path.join(RST_DIR, relative_rst_path)
+                    if not os.path.isfile(full_rst_path):
+                        missing_files.append((html_path, relative_rst_path))
+
+    if missing_files:
+        return "\n".join(
+            [f"Missing redirect targets:"] +
+            [f"- {html} -> {rst} (not found)" for html, rst in missing_files]
+        )
+
+    return "All .htaccess redirect targets are valid .rst files."
+
+
 def main():
     if "--help" in sys.argv:
         print(__doc__)
@@ -75,7 +109,7 @@ def main():
 
     find_subdirs_without_index(RST_DIR)
     find_rst_titles(RST_DIR)
-
+    print(check_htaccess_redirects())
 
 if __name__ == "__main__":
     main()
