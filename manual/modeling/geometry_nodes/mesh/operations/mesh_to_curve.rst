@@ -9,8 +9,14 @@ Mesh to Curve Node
    :align: right
    :alt: Mesh to Curve node.
 
-The *Mesh to Curve* node turns each string of connected mesh edges into a poly spline.
-Whenever two or more strings cross each other, the splines will be split.
+The *Mesh to Curve* node converts a mesh into one or more curve splines.
+
+Two different conversion modes are supported, depending on the desired output:
+
+- **Edges**: Turns each string of connected mesh edges into a poly spline.
+  Whenever two or more edge strings intersect, they will be split into separate splines.
+- **Faces**: Creates a cyclic spline from each mesh face. This mode is generally much faster than *Edges*,
+  as it parallelizes easily and can share face and corner attributes without needing to copy them.
 
 Loose vertices are ignored -- they will not be turned into single-point splines.
 
@@ -37,8 +43,11 @@ Selection
 Properties
 ==========
 
-This node has no properties.
+Mode
+   Determines how the mesh is converted to curves:
 
+   :Edges: Converts connected edge chains into poly splines.
+   :Faces: Converts each face into a cyclic spline.
 
 Outputs
 =======
