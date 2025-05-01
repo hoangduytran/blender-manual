@@ -206,7 +206,18 @@ Geometry
 ^^^^^^^^
 
 Smoothing
-   .. todo:: Add this information.
+   Export smoothing information.
+
+   If the importer supports custom split normals, using *Normals Only* is generally the most accurate.
+
+   :Normals Only: Export only custom split normals, without writing any face or edge smoothing flags.
+   :Face: Export smoothing using the face smoothing flags (Blender's "smooth" shading per face).
+   :Edge: Export smoothing using edge sharpness. Sharp edges are used to define smoothing boundaries.
+   :Smoothing Groups:
+      Write face smoothing groups,
+      which defines shading by grouping faces together—faces in the same group are shaded smoothly,
+      while faces in different groups create hard edges.
+      Useful for preserving shading in applications that rely on this method.
 Export Subdivision Surface
    .. todo:: Add this information.
 Apply Modifiers
