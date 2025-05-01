@@ -182,7 +182,8 @@ Add Selected to Active Objects Collection :kbd:`Shift-Ctrl-G`
    to ensure selected objects are included in the same collections as the active object.
 Remove Selected from Active Collection :kbd:`Shift-Alt-G`
    Causes the selected objects to be removed from the collections to which the active object belongs.
-
+Hide Other Collections :kbm:`Ctrl-H`
+   Hides collections which were not selected.
 
 .. _scene-layout_collections_collections_panel:
 
