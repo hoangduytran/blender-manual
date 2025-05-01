@@ -287,3 +287,5 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/operation
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/operations/merge_layers.html" "/manual/{lang}/{version}/modeling/geometry_nodes/grease_pencil/operations/merge_layers.html"
 
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/osl.html" "/manual/{lang}/{version}/render/cycles/osl/index.html"
+
+RedirectMatch "^/manual/{lang}/{version}/video_editing/edit/montage/strips/effects/alpha_over_under_overdrop.html" "/manual/{lang}/{version}/video_editing/edit/montage/strips/effects/alpha_over_under.html"

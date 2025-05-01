@@ -10,7 +10,7 @@
    add.rst
    subtract.rst
    multiply.rst
-   alpha_over_under_overdrop.rst
+   alpha_over_under.rst
    color_mix.rst
    multicam.rst
    transform.rst
