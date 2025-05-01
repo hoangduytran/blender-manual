@@ -125,6 +125,36 @@ This is a way to freeze all object data into static meshes, as well as converts 
 For details, see the :ref:`object-convert-to` mesh.
 
 
+.. _bpy.ops.object.visual_geometry_to_objects:
+
+Visual Geometry to Objects
+==========================
+
+.. reference::
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Object --> Apply --> Visual Geometry to Objects`
+
+Creates new objects from the evaluated geometry of the active object,
+including the effects of all modifiers, constraints, and instancing.
+
+This operator is similar to :ref:`Make Instances Real <bpy.ops.object.duplicates_make_real>`,
+but with several key differences:
+
+- Instanced geometry is **not** realized. Instead, shared data is preserved between objects that use it.
+- The original object is **not removed or modified**,
+  avoiding unintended disruptions to relationships with other objects.
+- Instancing hierarchies are preserved by creating new objects
+  and collections that reflect the evaluated structure.
+
+This operator is useful for extracting visible results of geometry nodes, modifiers, or instancing setups
+without permanently modifying the original scene structure.
+
+.. note::
+
+   Instance attributes (e.g. custom per-instance data) are currently **not** preserved.
+
+
 .. _bpy.ops.object.duplicates_make_real:
 
 Make Instances Real
