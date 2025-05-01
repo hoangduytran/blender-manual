@@ -54,6 +54,11 @@ h6,
 	font-size: xx-large;
 }
 
+/* Option to make huge icons */
+.huge-icons [class^="bl-icons-"], [class*=" bl-icons-"] {
+	font-size: 5em;
+}
+
 /* Reduce the margins on top/bottom of horizontal lines. */
 hr.docutils {
 	margin: 1rem 0;

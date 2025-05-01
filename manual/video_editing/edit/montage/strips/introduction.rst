@@ -59,7 +59,7 @@ it will be placed at the position of the frame indicator.
    you may not be able to move it; you have to move the source strips in order to affect the effect strip.
 
 With some effects, like the
-:doc:`Alpha Over </video_editing/edit/montage/strips/effects/alpha_over_under_overdrop>`,
+:doc:`Alpha Over </video_editing/edit/montage/strips/effects/alpha_over_under>`,
 the order in which you select the strips is important.
 You can also use one effect strip as the input or source strip with another strip,
 thus layering effects on top of one another.

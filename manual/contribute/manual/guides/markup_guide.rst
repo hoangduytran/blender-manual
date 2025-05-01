@@ -282,6 +282,13 @@ Blender's icons can be included as inline text using::
 
    `:bl-icon:`<icon_name>`
 
+See :doc:`/contribute/manual/guides/icons` for a full list of supported icons.
+
+.. toctree::
+   :hidden:
+
+   icons.rst
+
 
 Further Reading
 ===============
