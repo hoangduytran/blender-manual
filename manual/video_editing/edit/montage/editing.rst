@@ -30,16 +30,20 @@ Expand
 Snapping
 ^^^^^^^^
 
-The icon toggles snapping; you can also do this temporarily by holding :kbd:`Ctrl` after
-starting to drag a strip.
+Snapping can be toggled by clicking :bl-icon:`snap_off` (Snap Off) / :bl-icon:`snap_on` (Snap On)
+in the 3D Viewport's header, or temporarily by holding :kbd:`Ctrl` after starting to drag a strip.
 
 The drop-down arrow offers the following options:
 
+.. _bpy.types.SequencerToolSettings.snap_to_frame_range:
 .. _bpy.types.SequencerToolSettings.snap_to_current_frame:
 .. _bpy.types.SequencerToolSettings.snap_to_hold_offset:
 .. _bpy.types.SequencerToolSettings.snap_to_markers:
+.. _bpy.types.SequencerToolSettings.snap_to_retiming_keys:
 
 Snap to
+   Frame Range
+      Snap to preview or scene start and end frame.
    Current Frame
       Snaps the transformed selection to the Playhead.
    Hold Offset
