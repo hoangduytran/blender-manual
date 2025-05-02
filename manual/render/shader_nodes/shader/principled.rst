@@ -99,10 +99,11 @@ Diffuse
 Roughness :guilabel:`Cycles Only`
    Surface roughness; 0.0 gives standard Lambertian reflection, higher values activate the Oren-Nayar BSDF.
 
-   .. .. figure:: /images/render_shader-nodes_shader_principled-diffuse-roughness.webp
-   ..    :align: center
 
-   ..    Roughness from 0.0 to 1.0
+   .. figure:: /images/render_shader-nodes_shader_principled-diffuse-roughness.webp
+      :align: center
+
+      Roughness from 0.0 to 1.0
 
 
 Subsurface
@@ -379,6 +380,13 @@ Thickness
    The interference effect is strongest between roughly 100 and 1000 nanometers, since this is
    near the wavelengths of visible light.
 
+
+   .. figure:: /images/render_shader-nodes_shader_principled-thin-film-thickness.webp
+      :align: center
+
+      Thickness from 400 to 800 nanometers
+
+
 IOR
    Index of refraction (:term:`IOR`) of the thin film.
    The common range for this value is between 1.0 (vacuum and air) and roughly 2.0,
@@ -386,6 +394,12 @@ IOR
    The default value of 1.33 is a good approximation for water.
    Note that when the value is set to 1.0 or to the main IOR of the material, the thin film
    effect disappears since the film optically blends into the air or the material.
+
+
+   .. figure:: /images/render_shader-nodes_shader_principled-thin-film-ior.webp
+      :align: center
+
+      IOR from 1.0 to 1.5
 
 
 Outputs
