@@ -17,6 +17,7 @@ Other third party sites can also be supported, as long as they follow the Extens
    Getting started <getting_started.rst>
    Compatible licenses <licenses.rst>
    Supported tags <tags.rst>
+   Version Number Guidelines <version_number_guidelines.rst>
    Add-ons <addons.rst>
    Python Wheels <python_wheels.rst>
    Creating a Repository <creating_repository/index.rst>
