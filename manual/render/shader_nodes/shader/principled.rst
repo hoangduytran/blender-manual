@@ -313,7 +313,7 @@ For cloth this adds a soft velvet like reflection near edges.
 It can also be used to simulate dust on arbitrary materials.
 
 Weight
-   Controls in the intensity of the sheen layer.
+   Controls the intensity of the sheen layer.
 
    .. figure:: /images/render_shader-nodes_shader_principled-sheen-weight.webp
       :align: center
