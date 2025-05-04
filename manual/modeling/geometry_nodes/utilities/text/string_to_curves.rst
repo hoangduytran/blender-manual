@@ -9,8 +9,8 @@ String to Curves Node
    :align: right
    :alt: String to Curves node.
 
-The *String to Curves* converts a string to curve instances. Each unique character used in the string
-is converted to a curve once, and further uses of that character are more instances of the same geometry.
+The *String to Curves* node converts a string to curve instances. Each unique character used in the string
+is converted to a curve once, and further uses of that character are instances of the same geometry.
 
 This makes processing the output geometry very efficient, because each unique character
 only has to be processed once. However, it means that the result will be the same
@@ -114,5 +114,5 @@ Examples
    :align: center
 
 The node can be used to make overflowing text boxes. Here, the text that does not fit into
-the first node's fix-sized text box is passed to a separate *String to Curves* node.
-And finally added with a *Scale to Fit* node.
+the first node's fixed-size text box is passed to a separate *String to Curves* node,
+then scaled with a *Scale to Fit* node.
