@@ -28,16 +28,25 @@ Collection properties tab allows convenient access to properties for the active 
 
    Collection properties.
 
-Restrictions
-------------
+
+Visibility
+----------
 
 Selectable
    Toggles the ability to select the objects from the 3D Viewport.
    This is useful for if you have placed something in the scene and
    do not want to accidentally select it when working on something else.
 
-Disable in Renders
+Show In -- Renders
    Enables/disables visibility of the collection in renders.
+
+
+View Layer
+^^^^^^^^^^
+
+Include
+   Uncheck to disable the collection for the current :doc:`View Layer </scene_layout/view_layers/index>`.
+   Its contents will be hidden in the 3D Viewport, the render, and even the Outliner.
 
 Holdout
    Objects inside this collection will generate a holdout/mask in the active view layer.
