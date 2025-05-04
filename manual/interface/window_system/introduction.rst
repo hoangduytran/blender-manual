@@ -15,7 +15,7 @@ Blender's interface is separated into three main parts:
 
 - The :doc:`Topbar </interface/window_system/topbar>` at the very top, consists of the main menu,
   which is used for saving, importing and exporting files, configuring settings, and rendering among other functions.
-- :doc:`Areas </interface/window_system/areas>` in the middle, which is the main workspace
+- :doc:`Areas </interface/window_system/areas>` in the middle, which is the main workspace.
 - The :doc:`Status Bar </interface/window_system/status_bar>` at the bottom,
   which displays shortcut suggestions and relevant statistics.
 
