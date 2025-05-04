@@ -11,6 +11,7 @@ String to Curves Node
 
 The *String to Curves* node converts a string to curve instances. Each unique character used in the string
 is converted to a curve once, and further uses of that character are instances of the same geometry.
+The name of each instance geometry is the character it represents.
 
 This makes processing the output geometry very efficient, because each unique character
 only has to be processed once. However, it means that the result will be the same
