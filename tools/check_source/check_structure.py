@@ -71,35 +71,42 @@ def find_rst_titles(root_dir):
 
 def check_htaccess_redirects():
     """
-    Check .htaccess redirects to ensure the destination .rst file exists.
+    Check .htaccess redirects to ensure the destination exists.
     """
     if not os.path.exists(HTACCESS_PATH):
         return f"Error: {HTACCESS_PATH} does not exist."
 
-    redirect_pattern = re.compile(r'^RedirectMatch\s+"[^"]+"\s+"(/manual/[^"]+\.html)"')
-    missing_files = []
+    redirect_pattern = re.compile(r'^RedirectMatch\s+"[^"]+"\s+"(/manual/[^"]+?)"')
+    missing_targets = []
 
     with open(HTACCESS_PATH, "r", encoding="utf-8") as file:
         for line in file:
             match = redirect_pattern.search(line)
             if match:
                 html_path = match.group(1)
-                # Normalize and strip lang/version parts
                 parts = html_path.split('/')
-                if len(parts) >= 5:
-                    relative_rst_path = os.path.join(*parts[4:])  # skip /manual/{lang}/{version}
-                    relative_rst_path = os.path.splitext(relative_rst_path)[0] + ".rst"
-                    full_rst_path = os.path.join(RST_DIR, relative_rst_path)
-                    if not os.path.isfile(full_rst_path):
-                        missing_files.append((html_path, relative_rst_path))
+                if len(parts) >= 4:
+                    relative_path = os.path.join(*parts[4:])  # skip /manual/{lang}/{version}
 
-    if missing_files:
+                    if '$' in relative_path:
+                        # Match like: some/path/$1 → just check that directory exists
+                        target_dir = os.path.join(RST_DIR, relative_path.split('$')[0].rstrip('/'))
+                        if not os.path.isdir(target_dir):
+                            missing_targets.append((html_path, target_dir))
+                    else:
+                        # Normal file check (e.g. something.html → something.rst)
+                        relative_rst_path = os.path.splitext(relative_path)[0] + ".rst"
+                        full_rst_path = os.path.join(RST_DIR, relative_rst_path)
+                        if not os.path.isfile(full_rst_path):
+                            missing_targets.append((html_path, full_rst_path))
+
+    if missing_targets:
         return "\n".join(
             [f"Missing redirect targets:"] +
-            [f"- {html} -> {rst} (not found)" for html, rst in missing_files]
+            [f"- {html} -> {target} (not found)" for html, target in missing_targets]
         )
 
-    return "All .htaccess redirect targets are valid .rst files."
+    return "All .htaccess redirect targets are valid."
 
 
 def main():
