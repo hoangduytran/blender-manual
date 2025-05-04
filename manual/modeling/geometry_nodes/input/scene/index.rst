@@ -8,6 +8,7 @@
 
    3d_cursor.rst
    active_camera.rst
+   camera_info.rst
    collection_info.rst
    image_info.rst
    is_viewport.rst
