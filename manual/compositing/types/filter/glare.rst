@@ -31,11 +31,16 @@ Smoothness
    Controls how gradually pixels transition into the glare effect.
    Higher values create a smoother highlight extraction.
 
+
+Suppress
+^^^^^^^^
+
+Suppress bright highlights defined by the *Maximum* input.
+
+This can help create a more consistent looking bloom effect when there is a large variations in luminance.
+
 Maximum
    Clamps the intensity of the highlights to this value.
-   A value of zero disables suppression, allowing the full brightness range.
-
-   This can help create a more consistent looking bloom effect when there is a large variations in luminance.
 
 
 Adjust
