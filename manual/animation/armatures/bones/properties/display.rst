@@ -89,14 +89,14 @@ You can temporarily disable these shapes by unchecking
 Custom Object
    Object that defines the custom shape of the selected bone.
 
-Scale X, Y, Z
-   Additional scaling factor to apply to the custom shape.
-
 Translation X, Y, Z
    Additional translation to apply to the custom shape.
 
 Rotation X, Y, Z
    Additional rotation to apply to the custom shape.
+
+Scale X, Y, Z
+   Additional scaling factor to apply to the custom shape.
 
 Override Transform
    Bone that defines the display transform of the custom shape.
