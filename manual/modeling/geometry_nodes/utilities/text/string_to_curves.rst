@@ -55,6 +55,8 @@ Font
    Font glyph used to generate the curve.
 
 Overflow
+   Controls how the text fits inside the text box.
+
    :Overflow:
       Wraps the text at the *Text Box Width*.
    :Scale To Fit:
@@ -64,6 +66,8 @@ Overflow
       Any part of the string that did not fit is moved to the *Remainder* output.
 
 Alignment
+   Controls horizontal alignment of text on each line.
+
    :Left: Aligns the text to the left.
    :Center: Aligns the text to the center.
    :Right: Aligns the text to the right.
@@ -71,6 +75,8 @@ Alignment
    :Flush: Aligns the text to the left and right with equal character spacing.
 
 Align Y
+   Controls vertical alignment of the block of text.
+
    :Top: Aligns the text to the top.
    :Top Baseline: Aligns the text to the top baseline.
    :Middle: Aligns the text to the middle.
@@ -93,7 +99,7 @@ Outputs
 =======
 
 Curve Instances
-   Curve instances geometry.
+   Geometry output containing one instance per character.
 
 Remainder
    The part of the text that did not fit in the box described by the *Text Box Height* and
