@@ -101,7 +101,6 @@ Lock -- Camera to View
 .. _bpy.types.RegionView3D.lock_rotation:
 
 Lock -- Rotation
-
    Prevent changes to the orientation and perspective of the 3D Viewport.
 
 .. hint::
