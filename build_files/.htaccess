@@ -2,8 +2,8 @@
 ErrorDocument 404 /manual/{lang}/{version}/404.html
 
 RedirectMatch "^/manual/{lang}/{version}/addons/import_export/io_(.*)" "/manual/{lang}/{version}/addons/import_export/$1"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_parameter.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/spline_parameter.html" 
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/compare_floats.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/compare.html" 
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_parameter.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/spline_parameter.html" 
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/compare_floats.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/compare.html" 
 RedirectMatch "^/manual/{lang}/{version}/about/contribute/" "/manual/{lang}/{version}/contribute/$1"
 RedirectMatch "^/manual/{lang}/{version}/about/index.html" "/manual/{lang}/{version}/contribute/index.html"
 
@@ -47,7 +47,7 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/raycas
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample_index.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample/sample_index.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample_nearest.html" "/manual/{lang}/{version}/modeling/geometry_nodes/geometry/sample/sample_nearest.html"
 
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_handle_position.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_handle_position.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_handle_positions.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_handle_positions.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_length.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_length.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_tangent.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_tangent.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/curve_tilt.html" "/manual/{lang}/{version}/modeling/geometry_nodes/curve/read/curve_tilt.html"
@@ -90,7 +90,7 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_area.
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_neighbors.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_neighbors.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_set_boundaries.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_group_boundaries.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/face_is_planar.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/face_is_planar.html"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/is_shade_smooth.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_shade_smooth.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/is_shade_smooth.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_face_smooth.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_island.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/mesh_island.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/shortest_edge_paths.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/shortest_edge_paths.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/vertex_neighbors.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/vertex_neighbors.html"
@@ -112,7 +112,7 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/mesh_to_vo
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/scale_elements.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/scale_elements.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/split_edges.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/split_edges.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/subdivide_mesh.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/subdivide_mesh.html"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/subdivision_surface.html" "/manual/{lang}/{version}/modeling/geometry_nodes/operations/mesh/subdivision_surface.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/subdivision_surface.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/subdivision_surface.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/triangulate.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/triangulate.html"
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh_primitives/" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/primitives/$1"
@@ -140,8 +140,8 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/map_r
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/math.html"
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/mix.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/math/mix.html"
 
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/align_euler_to_vector.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/align_euler_to_vector.html"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotate_euler.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/rotate_euler.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/align_euler_to_vector.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotation/align_rotation_to_vector.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/utilities/rotate_euler.html" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/deprecated/rotate_euler.html"
 
 RedirectMatch "^/manual/{lang}/{version}/editors/graph_editor/channels.html" "/manual/{lang}/{version}/editors/graph_editor/channels/index.html"
 
@@ -160,8 +160,8 @@ RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/rgb_curves.html
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/tone_map.html" "/manual/{lang}/{version}/compositing/types/color/adjust/tone_map.html"
 
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/alpha_over.html" "/manual/{lang}/{version}/compositing/types/color/mix/alpha_over.html"
-RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/combine_color.html" "/manual/{lang}/{version}/compositing/types/color/mix/compine_color.html"
-RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/seperate_color.html" "/manual/{lang}/{version}/compositing/types/color/mix/seperate_color.html"
+RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/combine_color.html" "/manual/{lang}/{version}/compositing/types/color/mix/combine_color.html"
+RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/separate_color.html" "/manual/{lang}/{version}/compositing/types/color/mix/separate_color.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/mix.html" "/manual/{lang}/{version}/compositing/types/color/mix/mix_color.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/z_combine.html" "/manual/{lang}/{version}/compositing/types/color/mix/z_combine.html"
 
@@ -224,21 +224,21 @@ RedirectMatch "^/manual/{lang}/{version}/compositing/types/destort/translate.htm
 
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/output/levels.html" "/manual/{lang}/{version}/compositing/types/utilities/levels.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/vector/map_range.html" "/manual/{lang}/{version}/compositing/types/utilities/map_range.html"
-RedirectMatch "^/manual/{lang}/{version}/compositing/types/vector/map_value.html" "/manual/{lang}/{version}/compositing/types/utilities/map_value.html"
+RedirectMatch "^/manual/{lang}/{version}/compositing/types/vector/map_value.html" "/manual/{lang}/{version}/compositing/types/utilities/map_range.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/math.html" "/manual/{lang}/{version}/compositing/types/utilities/math.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/vector/normalize.html" "/manual/{lang}/{version}/compositing/types/utilities/normalize.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/switch_view.html" "/manual/{lang}/{version}/compositing/types/utilities/switch_stereo_view.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/layout/switch.html" "/manual/{lang}/{version}/compositing/types/utilities/switch.html"
 
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/combine_xyz.html" "/manual/{lang}/{version}/compositing/types/vector/combine_xyz.html"
-RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/seperate_xyz.html" "/manual/{lang}/{version}/compositing/types/vector/seperate_xyz.html"
+RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/separate_xyz.html" "/manual/{lang}/{version}/compositing/types/vector/separate_xyz.html"
 
 RedirectMatch "^/manual/{lang}/{version}/compositing/realtime_compositor.html" "/manual/{lang}/{version}/compositing/compositor_system.html"
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_shade_smooth.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/read/is_face_smooth.html"
 
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_to_mesh.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/operations/volume_to_mesh.html"
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_cube.html" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/primatives/volume_cube.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_to_mesh.html" "/manual/{lang}/{version}/modeling/geometry_nodes/volume/operations/volume_to_mesh.html"
+RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/volume/volume_cube.html" "/manual/{lang}/{version}/modeling/geometry_nodes/volume/primitives/volume_cube.html"
 
 RedirectMatch "^/manual/{lang}/{version}/editors/nla/editing.html" "/manual/{lang}/{version}/editors/nla/editing/index.html"
 
@@ -258,23 +258,23 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/modifiers/modify/normal_edit.h
 RedirectMatch "^/manual/{lang}/{version}/modeling/modifiers/modify/weighted_normal.html" "/manual/{lang}/{version}/modeling/modifiers/normals/weighted_normal.html"
 
 RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/brush/brush.html" "/manual/{lang}/{version}/sculpt_paint/brush/introduction.html"
-RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/rotate.html" "/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/twist.html"
-RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/simplify.html" "/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/density.html"
+RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/rotate.html" "/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/rotate.html"
+RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/simplify.html" "/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/simplify.html"
 # Mesh sculpting tools converted to asset
 RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/tools/(blob|boundary|clay|clay_strips|clay_thumb|cloth|crease|draw|draw_facesets|draw_sharp|elastic_deform|fill|flatten|grab|inflate|layer|mask|multiplane_scrape|multires_displacement_eraser|multires_displacement_smear|nudge|paint|pinch|pose|scrape|slide_relax|smear|smooth|snake_hook|thumb).html" "/manual/{lang}/{version}/sculpt_paint/sculpting/brushes/$1.html"
 # Curve sculpting tools converted to asset
 RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/curves_sculpting/tools/(index|add_curves|comb_curves|delete_curves|density_curves|grow_shrink_curves|pinch_curves|puff_curves|selection_paint|slide_curves|smooth_curves|snake_hook_curves).html" "/manual/{lang}/{version}/sculpt_paint/curves_sculpting/brushes/$1.html"
 # Grease pencil draw tools
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/draw.html" "/manual/{lang}/{version}/grease_pencil/modes/draw/tools/brush.html"
-RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/tint.html" "/manual/{lang}/{version}/grease_pencil/modes/draw/brushes/tint.rst.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modes/draw/tools/tint.html" "/manual/{lang}/{version}/grease_pencil/modes/draw/brushes/tint.html"
 # Texture paint tools converted to asset
 RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/texture_paint/tools.html" "/manual/{lang}/{version}/sculpt_paint/texture_paint/brushes.html"
 
-RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/index.html" "/manual/{lang}/{version}/grease_pencil/edit/index.html"
-RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/texture_mapping.html" "/manual/{lang}/{version}/grease_pencil/edit/texture_mapping.html"
-RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/time_offset.html" "/manual/{lang}/{version}/grease_pencil/edit/time_offset.html"
-RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/weight_angle.html" "/manual/{lang}/{version}/grease_pencil/edit/weight_angle.html"
-RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/weight_proximity.html" "/manual/{lang}/{version}/grease_pencil/edit/weight_proximity.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/modify/index.html" "/manual/{lang}/{version}/grease_pencil/modifiers/edit/index.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/modify/texture_mapping.html" "/manual/{lang}/{version}/grease_pencil/modifiers/edit/texture_mapping.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/modify/time_offset.html" "/manual/{lang}/{version}/grease_pencil/modifiers/edit/time_offset.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/modify/weight_angle.html" "/manual/{lang}/{version}/grease_pencil/modifiers/edit/weight_angle.html"
+RedirectMatch "^/manual/{lang}/{version}/grease_pencil/modifiers/modify/weight_proximity.html" "/manual/{lang}/{version}/grease_pencil/modifiers/edit/weight_proximity.html"
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/materials/introduction.html" "/manual/{lang}/{version}/grease_pencil/materials/index.html"
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/selecting.html" "/manual/{lang}/{version}/grease_pencil/modes/edit/selecting.html"
 RedirectMatch "^/manual/{lang}/{version}/grease_pencil/object.html" "/manual/{lang}/{version}/grease_pencil/properties/object.html"
