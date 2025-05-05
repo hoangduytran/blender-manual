@@ -24,18 +24,33 @@ X, Y
 Properties
 ==========
 
+Interpolation
+   Determines how pixel values are interpolated when scaling or transforming images.
+
+   :Nearest:
+      Uses the value of the closest pixel with no smoothing.
+      This is the fastest method and is well-suited for pixel art or low-resolution images
+      where sharp, blocky edges are desirable.
+      In animations, motion appears in single-pixel steps, which can cause visible jittering.
+   :Bilinear:
+      Averages the values of surrounding pixels to create a smoother result than *Nearest*.
+      Provides a good balance between performance and visual quality.
+   :Bicubic:
+      Computes a weighted average of a larger neighborhood of pixels for even smoother results.
+      Ideal for photographic images or gradients where preserving fine detail is important.
+
 Space
    Coordinate Space to scale relative to.
 
-   Relative
+   :Relative:
       Percentage values relative to the dimensions of the image input.
-   Absolute
+   :Absolute:
       Size of an image by using absolute pixel values.
-   Scene Size
+   :Scene Size:
       Sizes an image to the size of the final render resolution for the scene.
       For example, rendering a scene at the standard 1080p resolution but setting the render percentage at 50%,
       will produce a 1080p image with the scene scaled down 50% and leaving the rest of the image as alpha.
-   Render Size
+   :Render Size:
       Image dimensions set in the Render panel.
 
       Stretch, Fit, Crop
