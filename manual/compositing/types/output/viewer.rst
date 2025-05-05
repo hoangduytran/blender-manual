@@ -9,41 +9,31 @@ Viewer Node
    :align: right
    :alt: Viewer Node.
 
-The *Viewer* node allows temporarily visualizing data from inside a node graph.
-It can be plugged in anywhere to inspect an image or value map in your node tree.
+The *Viewer* node is used to preview image data or value maps anywhere within a compositor node graph.
+It is a diagnostic tool that allows users to inspect intermediate results without affecting the final output.
 
-Select a view node with :kbd:`LMB` to switch between multiple viewer nodes.
-It is possible to automatically plug any other node into a Viewer node
-by pressing :kbd:`Shift-Ctrl-LMB` on it.
+You can quickly assign a node to a Viewer by pressing :kbd:`Shift-Ctrl-LMB` on the desired node.
+To switch between multiple Viewer nodes, simply select one with :kbd:`LMB`.
+Only the active Viewer node (highlighted with a red header) will be displayed in the backdrop or Image Editor.
 
 
 Inputs
 ======
 
 Image
-   RGB image. The default is black, so leaving this node unconnected will result in a black image.
-Alpha
-   Alpha channel.
+   Outputs the result of this input directly to the viewer result.
+   If this socket is left unconnected, the output will be a black image.
 
 
 Properties
 ==========
 
-Use Alpha
-   Used alpha channel, colors are treated alpha *premultiplied*.
-   If disabled, alpha channel gets set to 1,
-   and colors are treated as alpha *straight*, i.e. color channels does not change.
-
+This node has no properties.
 
 Outputs
 =======
 
 This node has no output sockets.
-
-.. note::
-
-   It is possible to add multiple Viewer nodes, though only the active one
-   (last selected, indicated by a red header) will be shown on the backdrop or in the Image editor.
 
 
 .. _bpy.ops.node.viewer_shortcut_set:

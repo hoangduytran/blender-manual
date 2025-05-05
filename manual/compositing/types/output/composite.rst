@@ -9,39 +9,31 @@ Composite Node
    :align: right
    :alt: Composite Node.
 
-The Composite node is where the actual output from the Compositor
-is connected to the renderer.
-This node is updated after each render, but also reflects changes in the node tree
-(provided at least one finished input node is connected).
+The *Composite* node defines the final output of the Compositor.
+It is the node where the image result is sent to the renderer or image output after rendering.
+
+This node is updated automatically after each render and will also update interactively
+if changes occur in the connected node tree—provided that the inputs are fully evaluated/rendered.
+
+.. note::
+
+   If multiple Composite nodes are present in the node tree, only the *active* one is used.
+   The active Composite node is highlighted with a red header and is the last selected among them.
 
 
 Inputs
 ======
 
-Connecting a node to the Composite node will output the result of the prior
-tree of that node to the Compositor.
-
 Image
-   RGB image. The default is black, so leaving this node unconnected will result in a black image.
-Alpha
-   Alpha channel.
-
+   Outputs the result of this input directly to the render result.
+   If this socket is left unconnected, the output will be a black image.
 
 Properties
 ==========
 
-Use Alpha
-   Used alpha channel, colors are treated alpha *premultiplied*.
-   If disabled, alpha channel gets set to 1,
-   and colors are treated as alpha *straight*, i.e. color channels does not change.
-
+This node has no properties.
 
 Outputs
 =======
 
 This node has no output sockets.
-
-.. note::
-
-   If multiple Composite nodes are added, only the active one
-   (last selected, indicated by a red header) will be used.
