@@ -25,9 +25,8 @@ Image
 Bokeh
    This is an input for the :doc:`Bokeh Image </compositing/types/input/bokeh_image>` node.
 Size
-   Size controls the amount of blur. Size can either be a single value across the entire image or a variable value
-   controlled by an input image. In order to use the latter, the Variable Size option must be selected.
-   See the examples section below for more on how to use this.
+   Size controls the amount of blur.
+   Size can either be a single value across the entire image or a variable value controlled by an input image.
 Bounding Box
    This can be used with a :doc:`Box Mask </compositing/types/mask/box_mask>`
    matte node or with a :doc:`Mask </compositing/types/input/mask>`
@@ -39,8 +38,6 @@ Bounding Box
 Properties
 ==========
 
-Variable Size
-   Allows a variable blur radius, if the Size input is an image.
 Max Blur
    Max Blur is intended to act as an optimization tool by
    limiting the number of pixels across which the blur is calculated.
