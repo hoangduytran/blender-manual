@@ -48,17 +48,6 @@ Max Blur
    This value limits the amount of blur by setting a maximum blur radius.
    Can be used to optimize the performance.
    The default value of 0 means no limit.
-Threshold :guilabel:`CPU Compositor Only`
-   Some artifacts, like edge bleed, may occur, if the blur difference between pixels is large.
-   This value controls how large that blur difference considered to be safe.
-
-   .. tip::
-
-      Only change this value, if there is an occurring problem with an in-focus object.
-
-Preview :guilabel:`CPU Compositor Only`
-   If enabled a limited amount of (quasi-)random samples are used to render the preview.
-   This way of sampling introduces additional noise, which will not show up in the final render.
 Scene
    To select the linked scene.
 No Z-buffer
@@ -137,9 +126,6 @@ the focal point is then visible as a yellow cross along the view direction of th
 Hints
 -----
 
-Preview
-   In general, use preview mode, change parameters to your liking,
-   only then disable preview mode for the final render.
 Edge Artifacts
    For minimum artifacts, try to setup your scene such that differences in distances between two objects that may
    visibly overlap at some point are not too large.
