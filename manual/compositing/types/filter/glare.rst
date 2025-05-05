@@ -81,7 +81,7 @@ Color Modulation :guilabel:`Ghosts` :guilabel:`Streaks`
 Fade :guilabel:`Streaks` :guilabel:`Simple Star`
    The fade-out intensity of the streaks.
 
-Rotate 45° :guilabel:`Simple Star`
+Diagonal :guilabel:`Simple Star`
    Rotates the *Simple Star* streaks by 45° for an alternate pattern.
 
 
