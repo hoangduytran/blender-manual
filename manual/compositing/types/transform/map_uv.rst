@@ -34,11 +34,17 @@ Properties
 ==========
 
 Filter Type
-   Interpolation method.
+   Determines how pixel values are interpolated when scaling or transforming images.
 
+   :Nearest:
+      Uses the value of the closest pixel with no smoothing.
+      This is the fastest method and is well-suited for pixel art or low-resolution images
+      where sharp, blocky edges are desirable.
+      In animations, motion appears in single-pixel steps, which can cause visible jittering.
    :Anisotropic:
-      Enhances the clarity of textures viewed at oblique angles, addressing issues like blurring and distortion.
-   :Nearest: No interpolation, uses nearest neighboring pixel.
+      Adjusts interpolation based on the direction and scale of the transformation.
+      Helps reduce blurring or aliasing when scaling at steep angles or uneven resolutions,
+      especially useful in textures viewed at oblique angles or in detailed 3D projections.
 
 
 Outputs
