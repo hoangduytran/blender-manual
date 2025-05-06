@@ -86,14 +86,12 @@ on a shared layer (particles, soft bodies, and cloth).
    so the cloth simulation must be inputted the "true" shape of that mesh object at that frame.
    This true shape is the basis shape as modified by shape keys or armatures. Therefore,
    the Collision Modifier must be **after** any of those.
-   The image to the right shows the *Modifiers* panel for the Character mesh object
+   The image below shows the *Modifiers* panel for the Character mesh object
    (not the cloth object).
 
-   .. todo:: Update image
+.. figure:: /images/physics_collision_stack.png
 
-      .. figure:: /images/physics_collision_stack.png
-
-         Collision stack.
+   Collision stack.
 
 Damping
    Damping during a collision.
