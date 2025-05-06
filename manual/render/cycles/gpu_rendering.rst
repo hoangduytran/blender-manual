@@ -152,7 +152,7 @@ Would multiple GPUs increase available memory?
 Typically, no, each GPU can only access its own memory.
 
 The exception is NVIDIA GPUs connected with NVLink, where multiple GPUs can share memory at a small performance cost.
-This is can be enabled with :ref:`Distributed Memory Across Devices <prefs-system-cycles-distributive-memory>`
+This can be enabled with :ref:`Distributed Memory Across Devices <prefs-system-cycles-distributive-memory>`
 in the preferences.
 
 
