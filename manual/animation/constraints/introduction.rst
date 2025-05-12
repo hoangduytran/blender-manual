@@ -60,7 +60,7 @@ To copy constraints from one object to another use :ref:`bpy.ops.object.constrai
 
 Any single constraint can be removed by clicking on the "X" button
 in the constraint's :doc:`header </animation/constraints/interface/header>`.
-To remove all constants from an object use :ref:`bpy.ops.object.constraints_clear`.
+To remove all constraints from an object use :ref:`bpy.ops.object.constraints_clear`.
 
 .. tip::
 
