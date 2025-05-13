@@ -76,7 +76,7 @@ Backend
      Use OpenGL to draw display graphics.
 
    :Vulkan:
-     Use Vulkan to draw display graphics. Vulkan is an experimental option
+     Use Vulkan to draw display graphics.
 
 Device
    Select GPU device to use to draw the display graphics.
