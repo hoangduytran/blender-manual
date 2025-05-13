@@ -25,3 +25,6 @@ sphinx-autobuild==2024.9.19
 pyenchant
 # Required for `generate_commit_summary.py`
 GitPython
+
+# Needed until workers have updated Python versions
+click<8.2.0
