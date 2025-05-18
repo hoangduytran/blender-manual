@@ -54,6 +54,7 @@ Compositor
 
 .. _bpy.types.RenderSettings.compositor_device:
 .. _bpy.types.RenderSettings.compositor_precision:
+.. _bpy.types.RenderSettings.compositor_denoise_device:
 .. _bpy.types.RenderSettings.compositor_denoise_preview_quality:
 .. _bpy.types.RenderSettings.compositor_denoise_final_quality:
 
@@ -75,6 +76,13 @@ Precision :guilabel:`GPU`
 
 Denoise Nodes
 ^^^^^^^^^^^^^
+
+Denoising Device
+   The device to use to process :doc:`Denoise nodes </compositing/types/filter/denoise>` in the compositor.
+
+   :Auto: Use the same device used by the compositor to process the denoise node.
+   :CPU: Use the CPU to process the denoise node.
+   :GPU: Use the GPU to process the denoise node if available, otherwise fallback to CPU.
 
 Preview Quality
    The quality used by :doc:`Denoise nodes </compositing/types/filter/denoise>` during viewport
