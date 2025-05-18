@@ -354,6 +354,7 @@ Stencil Mask Opacity
 Show Wire
    Display mesh edges in white (unlike the *Wireframe* overlay which shows them in black).
 
+.. _3dview-overlay-weight-paint:
 
 Weight Paint Overlays
 =====================
