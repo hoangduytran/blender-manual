@@ -1,5 +1,4 @@
 .. _bpy.ops.mesh.tris_convert_to_quads:
-.. _mesh-faces-tristoquads:
 
 ******************
 Triangles to Quads
@@ -28,12 +27,12 @@ most even rectangular quads, so some triangles may remain.
    * - .. figure:: /images/modeling_meshes_editing_face_triangles-quads_before.png
           :width: 320px
 
-          Before converting tris to quads.
+          Before converting triangles to quads.
 
      - .. figure:: /images/modeling_meshes_editing_face_triangles-quads_after.png
           :width: 320px
 
-          After converting tris to quads.
+          After converting triangles to quads.
 
 Max Angle
    Controls the threshold for this operator to work on adjacent triangles, with values between 0

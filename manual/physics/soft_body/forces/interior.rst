@@ -50,7 +50,7 @@ Stiffness
 
 To show the effect of the Stiffness setting, we will drop two cubes onto a plane
 (see :doc:`Collisions </physics/soft_body/collision>`). The blue cube uses quads,
-while the red one uses tris. Both cubes have their Goal setting disabled.
+while the red one uses triangles. Both cubes have their Goal setting disabled.
 
 If *Stiffness* is disabled, the quad-only cube will collapse completely,
 while the tri cube only temporarily deforms from the impact:

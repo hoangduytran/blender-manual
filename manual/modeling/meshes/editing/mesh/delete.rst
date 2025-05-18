@@ -239,5 +239,5 @@ there would be an empty band of deleted faces all the way around the sphere inst
 .. seealso::
 
    - :ref:`Vertex merging <vertex-merging>`.
-   - :ref:`mesh-faces-tristoquads`.
+   - :ref:`bpy.ops.mesh.tris_convert_to_quads`.
    - :ref:`mesh-unsubdivide`.
