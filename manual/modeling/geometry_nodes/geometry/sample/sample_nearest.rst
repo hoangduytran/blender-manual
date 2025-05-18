@@ -48,7 +48,7 @@ Outputs
 
 Index
    The :doc:`index </modeling/geometry_nodes/geometry/read/input_index>` of the closest geometry element of the
-   chosen domain.
+   chosen domain. For the *Face Corner* domain this is defined to be the closest corner on the closest face.
 
 
 Examples
