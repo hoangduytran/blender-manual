@@ -1,10 +1,5 @@
 .. index:: Compositor Nodes; Invert Color
 .. _bpy.types.CompositorNodeInvert:
-.. Editor's Note: This page gets copied into:
-.. - :doc:`</render/shader_nodes/color/invert_color>`
-.. - :doc:`</editors/texture_node/types/color/invert_color>`
-
-.. --- copy below this line ---
 
 *****************
 Invert Color Node
