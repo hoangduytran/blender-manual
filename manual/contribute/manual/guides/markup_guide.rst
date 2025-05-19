@@ -19,25 +19,25 @@ Markup Style Guide
    so please avoid making this page into a wall-of-text,
    many conventions can be noticed along the way by reading existing text.
 
-This page covers the conventions for writing and use of the reStructuredText (RST) markup syntax.
+This page covers conventions for writing Blender's documentation using reStructuredText (RST) markup syntax.
+Following these conventions ensures clarity, consistency, and ease of maintenance.
 
 
-Conventions
-===========
+General Conventions
+===================
 
-- Three space indentation.
-- Lines should be less than 120 characters long.
-- Use italics for button/menu names.
-
-Other loose conventions:
-
-- Avoid Unicode characters.
-- Avoid heavily wrapped text
-  (i.e. sentences can have their own lines).
+- Use a three-space indentation.
+- Limit line length to 120 characters.
+- Use italics for button and menu names.
+- Avoid using Unicode characters unless strictly necessary.
+- Prefer simple sentence structures for clarity.
+- Avoid heavily wrapped text (shorter paragraphs and clear sentences are recommended).
 
 
 Headings
 ========
+
+Use the following hierarchy for headings:
 
 .. code-block:: rst
 
@@ -61,228 +61,72 @@ Headings
    Document Paragraph
    """"""""""""""""""
 
-.. note:: *Parts* should only be used for contents or index pages.
+.. note::
 
-.. note:: Each ``.rst`` file should only have one chapter heading (``*``) per file.
+   - Each ``.rst`` file should only have one chapter heading (``*``).
+   - *Parts* should only be used on contents or index pages.
 
 
-Text Styling
-============
+Basic Text Styling
+==================
 
-See the `overview on ReStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__
-for more information on how to style the various elements of the documentation and on how to add lists, tables,
-pictures and code blocks.
-The `Sphinx reference <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`__ provides more
-insight additional constructs.
+Common text styles used throughout the documentation:
 
-The following are useful markups for text styling::
+.. code-block:: rst
 
-   *italic*
-   **bold**
-   ``literal``
+   *italic text*
+   **bold text**
+   ``literal text`` (e.g., filenames, Python code snippets)
 
 
 Interface Elements
 ==================
 
+Standard markup for interface elements:
+
 - ``:kbd:`LMB``` -- keyboard and mouse shortcuts.
-- ``*Mirror*`` -- interface labels.
-- ``:menuselection:`3D Viewport --> Add --> Mesh --> Monkey``` -- menus.
+- ``*Mirror*`` -- interface labels (buttons, panels, etc.).
+- ``:menuselection:`3D Viewport --> Add --> Mesh --> Monkey``` -- navigation paths through menus.
 
 
-Code Samples
-============
+Lists
+=====
 
-There is support for syntax highlighting if the programming language is provided, and line numbers can be optionally
-shown with the ``:linenos:`` option::
+Lists are used to clearly present sequential or grouped items:
 
-   .. code-block:: python
-      :linenos:
+Bullet List
 
-      import bpy
-      def some_function():
-          ...
+.. code-block:: rst
 
+   - First item
+   - Second item
+   - Third item
 
-Placeholders
-============
+Numbered List:
 
-If information needs to be added in the future, do not simply add a paragraph saying "to-do" or "will add later."
-Instead, use proper markup with the keyword. This will be visible to the end-user in a special block::
+.. code-block:: rst
 
-   .. todo:: message goes here
+   #. First step
+   #. Second step
+   #. Third step
 
-If you intend to add a placeholder that should NOT be visible to the end user, use the syntax::
+Definition List:
 
-   .. TODO internal developer message goes here
+.. code-block:: rst
 
-Note that **the lowercase keyword with 2 colons will render** in the page while **the uppercase keyword without colons
-will not.**
-
-Images
-======
-
-Figures should be used to place images::
-
-   .. figure:: /images/interface_window-system_splash_current.png
-
-      Image caption.
-
-For consistency, and since it would be good to ensure screenshots are all a similar size when floated next to text,
-writers should take screenshots in the following manner:
-
-#. Prepare the area you would like to capture making sure to use the default theme and setting.
-   (In some cases you may not want to use the default settings e.g. if some options are hidden behind a checkbox.)
-#. Zoom to the maximum zoom level (hold :kbd:`NumpadPlus` or :kbd:`Ctrl-MMB` or similar).
-#. Zoom out eight zoom levels (:kbd:`NumpadMinus` -- eight times).
-#. In some cases you will want to leave a small margin around the thing you are trying to capture. This should be
-   around 30px but does not have to be exact.
-
-This can be applied to several parts of the interface but might not work for all cases.
-
-
-Files
------
-
-No Caps, No Gaps
-   Lower case filenames underscore between words.
-Sort Usefully
-   Order naming with specific identifiers at the end.
-Format
-   Use ``.png`` for images that have solid colors such as screenshots of the Blender interface,
-   and ``.jpg`` for images with a high amount of color variance, such as sample renders and photographs.
-
-   Do not use animated ``.gif`` files, these are hard to maintain, can be distracting
-   and are usually large in file size. Instead use a video if needed (see `Videos`_ below).
-Location
-   Place the image in the ``manual/images`` folder. Use no other subfolders.
-Naming
-   For naming files use underscores to separate chapters and sections,
-   and use dashes to separate sections that are two or more words.
-   So for image files should look like: ``chapter_subsection_sub-subsection_id.png``, e.g:
-
-   - ``interface_splash_current.png``
-   - ``interface_undo-redo_last.png``
-   - ``interface_undo-redo_repeat-history-menu.png``
-
-   Do not use special characters or spaces!
-
-
-Usage Guides
-------------
-
-- Avoid specifying the resolution of the image, so that the theme can handle the images consistently and provide the
-  best layout across different screen sizes.
-- When documenting a panel or section of the UI, it is better to use a single image that shows all of the relevant
-  areas (rather than multiple images for each icon or button) placed at the top of the section you are writing, and
-  then explain the features in the order that they appear in the image.
-
-  .. note::
-
-     It is important that the manual can be maintained long term, UI and tool options change so try to avoid having a
-     lot of images (when they are not especially necessary). Otherwise, this becomes too much of a maintenance burden.
-
-
-Videos
-======
-
-Videos can be embedded from Blender's self-hosted `PeerTube <https://joinpeertube.org/>`__ instance which can be found
-at `video.blender.org <https://video.blender.org/>`__. To embed a video using the following directive::
-
-   .. peertube:: ID
-
-The ``ID`` is found in the video's URL, e.g:
-
-The ID for ``https://video.blender.org/videos/watch/47448bc1-0cc0-4bd1-b6c8-9115d8f7e08c``
-is ``47448bc1-0cc0-4bd1-b6c8-9115d8f7e08c``.
-
-To get a new video uploaded, contact
-a `Documentation Project Administrator <https://projects.blender.org/blender/documentation>`__ or
-include the uploaded video in your :doc:`Pull Request </contribute/manual/getting_started/pull_requests>` description.
-
-
-Usage Guides
-------------
-
-- Avoid adding videos that rely on voice or words, as this is difficult to translate.
-- Do not embed video tutorials as a means of explaining a feature, the writing itself should explain it adequately.
-  (Though you may include a link to the video at the bottom of the page under the heading ``Tutorials``).
+   Term
+      Definition text here.
 
 
 Useful Constructs
 =================
 
-- ``|BLENDER_VERSION|`` -- Resolves to the current Blender version.
-- ``:abbr:`SSAO (Screen Space Ambient Occlusion)``` --
-  Abbreviations display the full text as a tooltip for the reader.
-- ``:term:`Manifold``` -- Links to an entry in the :doc:`Glossary </glossary/index>`.
-
-
-Cross References and Linkage
-============================
-
-You can link to another document in the manual with::
-
-   :doc:`The Title </section/path/to/file>`
-
-To link to a specific section in another document (or the same one), explicit labels are available::
-
-   .. _sample-label:
-
-   [section or image to reference]
-
-   Some text :ref:`Optional Title <sample-label>`
-
-Linking to a title in the same file::
-
-   Titles are Targets
-   ==================
-
-   Body text.
-
-   Implicit references, like `Titles are Targets`_
-
-Linking to the outside world::
-
-   `Blender Website <https://www.blender.org>`__
-
-
-Context Sensitive Manual Access
--------------------------------
-
-It is possible to link to a specific part of the manual from in Blender by opening the context menu (right click) of a
-property or operator and selecting *Online Manual*. In order for this to work, this needs to be accounted for in the
-documentation. To link a property or operator to a specific part of the manual you need to add an external reference
-link tag whose ID matches Blender's RNA tag. The easiest way to find out what the tag for a property is to open the
-context menu of the property/operator and select *Online Python Reference* to extract the tag from the URL.
-Some examples of how this looks in the RST document are given below::
-
-   .. _bpy.types.FluidDomainSettings.use_fractions:
-
-   Fractional Obstacles
-      Enables finer resolution in fluid / obstacle regions (second order obstacles)...
-
-      .. _bpy.types.FluidDomainSettings.fractions_distance:
-
-      Obstacle Distance
-         Determines how far apart fluid and obstacles are...
-
-For an operator::
-
-   .. _bpy.ops.curve.subdivide:
-
-   Subdivide
-   =========
-
-
-Icons
-=====
-
-Blender's icons can be included as inline text using::
-
-   `:bl-icon:`<icon_name>`
-
-See :doc:`/contribute/manual/guides/icons` for a full list of supported icons.
+- ``|BLENDER_VERSION|``: Inserts the current Blender version automatically.
+- ``:abbr:`SSAO (Screen Space Ambient Occlusion)```:
+  Abbreviation displays the full text on hover.
+- ``:term:`Manifold```:
+  Links to the corresponding entry in the :doc:`Glossary </glossary/index>`.
+- ``:bl-icon:`icon_name```: Include Blender icons as inline text, see the full list at :doc:`/contribute/manual/guides/icons`.
 
 .. toctree::
    :hidden:
@@ -290,12 +134,196 @@ See :doc:`/contribute/manual/guides/icons` for a full list of supported icons.
    icons.rst
 
 
+Cross References and Links
+==========================
+
+Internal document links:
+
+.. code-block:: rst
+
+   :doc:`Link Title </section/path/to/file>`
+
+Link to a specific section using explicit labels:
+
+.. code-block:: rst
+
+   .. _my-section-label:
+
+   Section Title
+   =============
+
+   Reference this section later with :ref:`Optional Title <my-section-label>`
+
+Implicit references within the same document:
+
+.. code-block:: rst
+
+   Section Title
+   =============
+
+   Reference it implicitly later using `Section Title`_
+
+External website links:
+
+.. code-block:: rst
+
+   `Blender's Official Website <https://www.blender.org>`__
+
+
+Context-Sensitive Manual Access
+-------------------------------
+
+To link Blender UI properties and operators directly to manual entries:
+
+#. Right-click the property/operator in Blender and select *Online Python Reference* to get the RNA tag (shown in the OS console).
+#. In the documentation, use an external reference matching Blender's RNA tag:
+
+.. code-block:: rst
+
+   .. _bpy.types.FluidDomainSettings.use_fractions:
+
+   Fractional Obstacles
+      Enables finer resolution in fluid/obstacle regions.
+
+For operators:
+
+.. code-block:: rst
+
+   .. _bpy.ops.curve.subdivide:
+
+   Subdivide
+   =========
+
+Blender uses these tags to link UI elements directly to documentation entries via the "Online Manual" option.
+
+
+Admonitions
+===========
+
+Admonitions are special blocks used to highlight important notes, warnings, or additional information in the documentation.
+
+Common admonition types include:
+
+- ``note``
+- ``tip``
+- ``important``
+- ``warning``
+- ``caution``
+- ``seealso``
+
+
+Admonitions are created using the following markup:
+
+.. code-block:: rst
+
+   .. note::
+
+      This is a note for general information.
+
+Other types can be rendered by replacing ``note`` with the desired type from the list above.
+
+
+Images
+======
+
+Use the figure directive for embedding images with captions:
+
+.. code-block:: rst
+
+   .. figure:: /images/interface_splash_current.png
+
+      Splash screen of Blender.
+
+
+Screenshots Guidelines
+----------------------
+
+To ensure consistency across screenshots:
+
+#. Use Blender's default theme and settings.
+#. Zoom to the maximum level (:kbd:`Ctrl-MMB` or :kbd:`NumpadPlus`).
+#. Zoom out exactly eight steps (:kbd:`NumpadMinus`, pressed eight times).
+#. Leave around a 30-pixel margin around the content, if applicable.
+
+File Naming
+-----------
+
+Follow these guidelines for naming image files:
+
+- Use lowercase letters, no spaces, underscores between sections, and dashes within multi-word sections.
+- Place images only in the ``manual/images`` directory (no subfolders).
+
+Examples:
+
+- ``interface_splash_current.png``
+- ``modeling_meshes_edit-mode.png``
+
+Image Formats
+-------------
+
+- ``.png``: For interface screenshots or solid-color images.
+- ``.jpg``: For photographic images or renders with high color variation.
+- Avoid ``.gif``; use embedded videos for animations instead.
+
+
+Videos
+======
+
+Embed videos hosted on Blender's PeerTube at `video.blender.org <https://video.blender.org/>`__.
+
+.. code-block:: rst
+
+   .. peertube:: ID
+
+The ``ID`` is extracted from the video URL, e.g.:
+
+``https://video.blender.org/videos/watch/47448bc1-0cc0-4bd1-b6c8-9115d8f7e08c``
+The ID is: ``47448bc1-0cc0-4bd1-b6c8-9115d8f7e08c``.
+
+
+Guidelines for Videos
+---------------------
+
+- Prefer videos without spoken or textual explanations for easier translation.
+- Do not rely solely on videos to explain features. The manual text itself should clearly document the process.
+
+
+Code Samples
+============
+
+Code snippets should use syntax highlighting and optional line numbering:
+
+.. code-block:: rst
+
+   .. code-block:: python
+      :linenos:
+
+      import bpy
+
+      def example_function():
+          print("Hello Blender")
+
+
+Placeholders & Editor Notes
+===========================
+
+For content that needs future updates or completion:
+
+Visible to readers:
+
+.. code-block:: rst
+
+   .. todo:: Complete this section when feature is finalized.
+
+Internal notes (not visible to readers):
+
+.. code-block:: rst
+
+   .. Internal developer reminder goes here
+
+
 Further Reading
 ===============
 
-To learn more about reStructuredText, see:
-
-`Sphinx RST Primer <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__
-   Good basic introduction.
-`Docutils reStructuredText Reference <https://docutils.sourceforge.io/rst.html>`__
-   Links to reference and user documentation.
+- `Sphinx RST Primer <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__: Introduction to RST syntax.
+- `Docutils reStructuredText Reference <https://docutils.sourceforge.io/rst.html>`__: Comprehensive documentation on RST markup.
