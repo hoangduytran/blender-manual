@@ -23,15 +23,16 @@ Z
 Speed
    Input for the "Vector" render pass.
    See :doc:`Cycles render passes </render/layers/passes>`.
+Samples
+   Quality factor.
+Shutter
+   Duration of the motion blur in seconds, corresponding to the exposure time simulated for each frame.
 
 
 Properties
 ==========
 
-Samples
-   Quality factor.
-Blur
-   Scaling factor for the motion vector (actually the "shutter speed" in frames).
+This node has no properties.
 
 
 Outputs
