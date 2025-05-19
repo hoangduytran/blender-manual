@@ -23,11 +23,6 @@ Image
    Standard color input.
 Key Color
    The color that is to be keyed.
-
-
-Properties
-==========
-
 Tolerance
    A threshold what the node considers a match between the key color and the foreground pixel.
    The tolerance affects how close a pixel needs to be to the background pixel
@@ -38,6 +33,11 @@ Falloff
    (but still considered close enough to be keyed).
    When the Falloff value is low, it does not matter how close
    the pixel color (Image) is to the Key Color, it is transparent.
+
+
+Properties
+==========
+
 Color Space
    It is also possible to work with YCbCr color space,
    but only the Cb and Cr channels are taken into consideration
