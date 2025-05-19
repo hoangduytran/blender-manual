@@ -71,7 +71,7 @@ This can be enabled in the preferences, and is supported on Radeon RX 6000 and n
 
 GPU accelerated denoising is available on discrete Radeon RX 6000 and Radeon RX 7000 GPUs.
 
-Shadow caustics are not supported on Radeon RX 5000 or Radeon RX 9000 GPUs.
+Shadow caustics are not supported with HIP.
 
 oneAPI -- Intel
 ---------------
