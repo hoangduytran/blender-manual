@@ -19,17 +19,16 @@ Factor
    The amount of influence the node exerts on the image.
 Color
    Standard color input.
+Invert Color
+   Invert the color channels.
+Invert Alpha
+   Invert the alpha channel.
 
 
 Properties
 ==========
 
-In the compositing context, this node has the following properties:
-
-RGB
-   Invert the color channels.
-Alpha
-   Invert the alpha channel.
+This node has no properties.
 
 
 Outputs
