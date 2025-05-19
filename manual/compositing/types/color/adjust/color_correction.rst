@@ -12,15 +12,19 @@ The Color Correction node adjusts the color of an image, separately in several t
 (highlights, midtones and shadows).
 
 
-Properties
-==========
+Inputs
+======
 
-Red, Green, Blue
-   Specifies which RGB channels will be affected by the correction.
+Image
+   Standard color input.
+Mask
+   Controls the amount of influence the node exerts on the output image.
 
 
-Correction Tools (Columns)
---------------------------
+Master
+------
+
+These settings target the entire tonal range.
 
 Saturation
    Adjusts the image's saturation.
@@ -35,17 +39,16 @@ Lift
    (Works like *Offset* in the Color Balance node.)
 
 
-Tonal Ranges (Rows)
--------------------
+Highlights / Midtones / Shadows
+-------------------------------
 
-Master
-   These sliders affect the entire tonal range.
-Highlights
-   These sliders only affect the highlights.
-Midtones
-   These sliders only affect the midtones.
-Shadows
-   Affects the dark tones of an image often affecting the shadows.
+These settings target specific brightness ranges of the image.
+
+Each tonal range (Highlights, Midtones, Shadows) supports the same controls as Master.
+
+
+Tonal Ranges
+------------
 
 Midtones Start, Midtones End
    Defines the start and the end of midtones range, i.e.
@@ -53,13 +56,17 @@ Midtones Start, Midtones End
    (there is also a smooth transition between the ranges of width 0.2 units).
 
 
-Inputs
-======
+Channels
+--------
 
-Image
-   Standard color input.
-Mask
-   Controls the amount of influence the node exerts on the output image.
+Red, Green, Blue
+   Specifies which RGB channels will be affected by the correction.
+
+
+Properties
+==========
+
+This node has no properties.
 
 
 Outputs
