@@ -16,6 +16,8 @@ used in combination with the :doc:`Viewer Node </compositing/types/output/viewer
 Inputs
 ======
 
+Factor
+   Percentage factor setting the space distribution between the two images.
 Image
    Shown on the right or top half set by the axis.
 Image
@@ -27,8 +29,6 @@ Properties
 
 Axis
    X or Y used as the split axis.
-Factor
-   Percentage factor setting the space distribution between the two images.
 
 
 Outputs
