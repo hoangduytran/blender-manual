@@ -30,6 +30,8 @@ Albedo
    Optional albedo render pass to better preserve detail.
    For Cycles, it is recommended to use the Denoising Albedo render pass,
    which is available when enabling the Denoising Data passes.
+HDR
+   Preserve colors outside the 0 to 1 range.
 
 
 Properties
@@ -56,8 +58,6 @@ Quality
       while retaining most of the quality.
    :Fast:
       Produces an output quickly at a noticeable cost of quality.
-HDR
-   Preserve colors outside the 0 to 1 range.
 
 
 Outputs
