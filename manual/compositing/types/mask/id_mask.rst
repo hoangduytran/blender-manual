@@ -26,11 +26,6 @@ ID Value
    Input for the *Object Index* or *Material Index* render pass.
    Once a pass is enabled, it can be accessed through the *IndexOB* or *IndexMA* slot of the
    :doc:`/compositing/types/input/scene/render_layers`.
-
-
-Properties
-==========
-
 Index
    The index for which to create a mask. This index can be configured for objects at
    :menuselection:`Properties --> Object --> Relations --> Pass Index`,
@@ -44,11 +39,18 @@ Index
    Whether to smooth the mask edges.
 
 
+Properties
+==========
+
+This node has no properties.
+
+
 Outputs
 =======
 
 Alpha
    A grayscale image that's white where the object exists and black where it does not.
+
 
 Example
 =======
