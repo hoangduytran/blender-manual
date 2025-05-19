@@ -23,15 +23,16 @@ Inputs
 
 Image
    Standard color input.
+Source
+   Source point of the rays as a factor of the image dimensions.
+Length
+   Length of the rays as a factor of the image size.
 
 
 Properties
 ==========
 
-Source Width, Height
-   Source point of the rays as a factor of the image dimensions.
-Ray Length
-   Length of the rays as a factor of the image size.
+This node has no properties.
 
 
 Outputs
