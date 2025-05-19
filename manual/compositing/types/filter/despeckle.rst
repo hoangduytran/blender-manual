@@ -20,19 +20,20 @@ If the complexity is lower than the threshold then the area is smoothed using a 
 Inputs
 ======
 
-Factor
+Fac
    Controls the amount the filter effects the image.
 Image
    Standard color input.
+Color Threshold
+   The threshold to control high/low complexity.
+Neighbor Threshold
+   The threshold to control the number of pixels that must match.
 
 
 Properties
 ==========
 
-Threshold
-   The threshold to control high/low complexity.
-Neighbor
-   The threshold to control the number of pixels that must match.
+This node has no properties.
 
 
 Outputs
