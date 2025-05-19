@@ -20,6 +20,9 @@ Inputs
 
 Image
    Standard color input.
+Invert
+   Invert the stabilization. If the stabilization calculated is to move the movie clip up by 5 units,
+   this will move the movie clip down by 5 units.
 
 
 Properties
@@ -35,10 +38,6 @@ Interpolation
    For technical details on their difference,
    `see this <https://www.mathworks.com/help/curvefit/interpolation-methods.html>`__.
    But for most purposes, default of Bilinear should suffice.
-
-Invert
-   Invert the stabilization. If the stabilization calculated is to move the movie clip up by 5 units,
-   this will move the movie clip down by 5 units.
 
 
 Outputs
