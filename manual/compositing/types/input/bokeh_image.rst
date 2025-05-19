@@ -19,26 +19,25 @@ such as aperture shape and lens distortions which have important impacts on boke
 Inputs
 ======
 
-This node has no input sockets.
-
-
-Properties
-==========
-
 The first three settings simulate the aperture of the camera.
 
 Flaps
    Sets an integer number of blades for the cameras iris diaphragm.
 Angle
    Gives these blades an angular offset relative to the image plane.
-Rounding
+Roundness
    Sets the curvature of the blades with (0 to 1) from straight to bringing them to a perfect circle.
-
-Catadioptric
+Catadioptric Size
    Provides a type of distortion found in mirror lenses and some telescopes.
    This can be useful to produce a visual complex bokeh.
-Lens Shift
+Color Shift
    Introduces chromatic aberration into the blur such as would be caused by a tilt-shift lens.
+
+
+Properties
+==========
+
+This node has no properties.
 
 
 Outputs
