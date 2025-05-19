@@ -44,23 +44,6 @@ Size
 
              Size: 9.
 
-
-Properties
-==========
-
-Type
-   :Classic: A simple smoothing method that averages the local square
-      neighborhood of the image while preserving edges. Produces blocky results
-      due to the square neighborhood and provides no tuning parameters, but is
-      faster to compute.
-   :Anisotropic: A complex smoothing method that averages the local
-      neighborhood of the image in the direction of the flow of the edges,
-      thus preserving the edges in the output. Produces painterly-like results
-      and provides multiple turning parameters, while being slower to compute.
-
-High Precision
-   Uses a more precise but slower method. Use if the output contains undesirable noise.
-
 Uniformity
    Controls the uniformity of the directions of the edges of the image. Non
    uniform directions are nearly never desirable, so this should typically be
@@ -111,6 +94,23 @@ Eccentricity
         - .. figure:: /images/compositing_types_filter_kuwahara-node_eccentricity2.webp
 
              Eccentricity: 2.
+
+High Precision :guilabel:`Classic`
+   Uses a more precise but slower method. Use if the output contains undesirable noise.
+
+
+Properties
+==========
+
+Variation
+   :Classic: A simple smoothing method that averages the local square
+      neighborhood of the image while preserving edges. Produces blocky results
+      due to the square neighborhood and provides no tuning parameters, but is
+      faster to compute.
+   :Anisotropic: A complex smoothing method that averages the local
+      neighborhood of the image in the direction of the flow of the edges,
+      thus preserving the edges in the output. Produces painterly-like results
+      and provides multiple turning parameters, while being slower to compute.
 
 
 Outputs
