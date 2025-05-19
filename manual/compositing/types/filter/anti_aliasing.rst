@@ -18,10 +18,6 @@ Inputs
 Image
    Standard color input.
 
-
-Properties
-==========
-
 Threshold
    Controls edge detection sensitivity across the whole image.
 
@@ -37,6 +33,12 @@ Corner Rounding
    Detect corners to help preserve the original shape.
    Setting *Corner Rounding* to 0 means no corner detection and no corner rounding will take place.
    The higher the value the better corners will be preserved, i.e. resemble original image.
+
+
+Properties
+==========
+
+This node has no properties.
 
 
 Outputs
