@@ -19,20 +19,18 @@ Mask
    An optional mask to use as the base for mask operations.
 Value
    Intensity of the generated mask.
+Position
+   Position of the center of the box as a fraction of the total width or height.
+   (0.5, 0.5 creates a centered box; 0.0, 0.0 creates a box in the lower left.)
+Size
+   Width/height of the box as a fraction of the total image width.
+Rotation
+   Rotation of the box around its center point.
 
 
 Properties
 ==========
 
-X, Y
-   Position of the center of the box as a fraction of the total width or height.
-   (0.5, 0.5 creates a centered box; 0.0, 0.0 creates a box in the lower left.)
-Width
-   Width of the box as a fraction of the total image width.
-Height
-   Height of the box as a fraction of the total image *width*, not height.
-Rotation
-   Rotation of the box around its center point.
 Mask Type
    Operation to use against the input mask.
 
