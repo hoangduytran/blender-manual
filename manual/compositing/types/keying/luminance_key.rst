@@ -30,23 +30,23 @@ Inputs
 
 Image
    Standard color input.
+Minimum
+   Determines the lowest values that are considered foreground.
+   (Which is supposed to be -- relatively -- light: from this value to 1.0.)
+Maximum
+   Determines the highest values that are considered to be background objects.
+   (Which is supposed to be -- relatively -- dark: from 0.0 to this value.)
+
+.. note::
+
+   Brightness levels between the minimum and maximum form a gradient of transparency
+   between foreground and background objects.
 
 
 Properties
 ==========
 
-Limit
-   High
-      Determines the lowest values that are considered foreground.
-      (Which is supposed to be -- relatively -- light: from this value to 1.0.)
-   Low
-      Determines the highest values that are considered to be background objects.
-      (Which is supposed to be -- relatively -- dark: from 0.0 to this value.)
-
-.. note::
-
-   Brightness levels between the two values form a gradient of transparency
-   between foreground and background objects.
+This node has no properties.
 
 
 Outputs
