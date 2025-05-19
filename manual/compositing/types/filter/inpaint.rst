@@ -18,13 +18,14 @@ Inputs
 
 Image
    Standard color input.
+Size
+   The number of times to extend the image.
 
 
 Properties
 ==========
 
-Distance
-   The number of times to extend the image.
+This node has no properties.
 
 
 Outputs
