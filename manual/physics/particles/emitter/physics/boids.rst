@@ -10,11 +10,9 @@ Boids
    :Panel:     :menuselection:`Particle System --> Physics`
    :Type:      Boids
 
-.. todo:: Update image
+.. figure:: /images/physics_particles_emitter_physics_boids_panel.png
 
-   .. figure:: /images/physics_particles_emitter_physics_boids_panel.png
-
-      Boid Physics settings.
+   Boid Physics settings.
 
 Boids particle systems are controlled by a limited artificial intelligence,
 which can be programmed to follow basic rules and behaviors.
@@ -32,6 +30,11 @@ Movement
 .. reference::
 
    :Panel:     :menuselection:`Particle System --> Physics --> Movement`
+
+
+.. figure:: /images/physics_particles_emitter_physics_boids_movement.png
+
+   Boid Movement settings.
 
 Boids avoid objects with Collision enabled, move toward goals, and flee from "predators" based on the *Boid Brain*.
 Their behavior changes depending on whether they are in the air or on land.

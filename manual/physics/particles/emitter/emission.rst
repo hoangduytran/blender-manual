@@ -15,11 +15,9 @@ but you may also render this kind of particles as objects
 (depending on the particle system's render settings,
 see :doc:`Visualization </physics/particles/emitter/render>`).
 
-.. todo:: Update image
+.. figure:: /images/physics_particles_emitter_emission_settings.png
 
-   .. figure:: /images/physics_particles_emitter_emission_settings.png
-
-      Particle Emission settings.
+   Particle Emission settings.
 
 The buttons in the *Emission* panel control the way particles are emitted over time:
 
