@@ -24,21 +24,20 @@ Image
    Standard color input.
    If only the image input is connected, the node blurs the image depending on the edges present in the source image.
 Determinator
-   Which is optional and if the Determinator is connected, it serves as the source for defining edges/borders for the
-   blur in the image. This has great advantage in case the source image is too noisy, but normals in combination with
-   Z-buffer can still define exact borders/edges of objects.
+   If connected, it serves as the source for defining edges/borders for the blur in the image.
+   This has great advantage in case the source image is too noisy,
+   but normals in combination with Z-buffer can still define exact borders/edges of objects.
+Size
+   The size of the blur in pixels.
+Threshold
+   Pixels are considered in the blur area if the average difference between their
+   determinator and the determinator of the center pixel is less than this threshold.
 
 
 Properties
 ==========
 
-Iterations
-   Defines how many times the filter should perform the operation on the image.
-   It practically defines the radius of blur.
-Color Sigma
-   Defines the threshold for which color differences in the image should be taken as edges.
-Space Sigma
-   A fine-tuning variable for blur radius.
+This node has no properties.
 
 
 Outputs
