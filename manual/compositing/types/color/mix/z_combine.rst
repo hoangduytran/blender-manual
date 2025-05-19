@@ -25,18 +25,19 @@ Image
    The foreground image.
 Z
    Z depth of the foreground image.
-
-
-Properties
-==========
-
 Use Alpha
    The chosen Image pixel alpha channel is also carried over.
    If a pixel is partially or totally transparent,
    the result of the Z Combine will also be partially transparent;
    in which case the background image will show through the foreground (chosen) pixel.
-Anti-Alias Z
+Anti-Alias
    Applies :term:`Anti-Aliasing` to avoid artifacts at sharp edges or areas with a high contrast.
+
+
+Properties
+==========
+
+This node has no properties.
 
 
 Outputs
