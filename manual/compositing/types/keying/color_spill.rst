@@ -9,44 +9,59 @@ Color Spill Node
    :align: right
    :alt: Color Spill Node.
 
-The *Color Spill* node reduces one of the RGB channels so that it is not greater
-than any of the others.
+The *Color Spill* node is used to suppress unwanted color casts—typically green or blue;
+caused by light reflecting from a chroma key (green or blue screen) onto the subject.
 
-This is common when compositing images that were shot in front of a green or blue screen.
-In some cases, if the foreground object is reflective, it will show the green or blue color;
-that color has "spilled" onto the foreground object. If there is light from the side or back,
-and the foreground actor is wearing white, it is possible to get "spill" green (or blue)
-light from the background onto the foreground objects,
-coloring them with a tinge of green or blue. To remove the green (or blue) light,
-you use this fancy node.
+This "spill" is common in compositing workflows and can give a subject an unnatural colored tint.
+The node reduces the influence of the selected color channel,
+removing the excess and restoring a more natural appearance.
 
 
 Inputs
 ======
 
 Image
-   Standard color input.
-Factor
-   Standard Factor.
+   The input RGBA image to be processed.
+
+Fac
+   Blend factor for how strongly the node affects the image. A value of 1.0 fully applies the effect; lower values blend with the original.
+
+Limit Strength
+   Specifies the limiting strength of the limit channel.
+
+
+Spill Strength
+--------------
+
+If enabled, the spill strength for each color channel can be specified.
+If disabled, the spill channel will have a unit scale, while other channels will be zero.
+
+Strength
+   Specifics the spilling strength of each color channel.
 
 
 Properties
 ==========
 
 Despill Channel
-   R, G, B
-Algorithm
-   Simple, Average
-Limiting Channel
-   R, G, B
-Ratio
-   Scale limit by value.
-Unspill
-   Allows you to reduce the selected channel's input to the image
-   greater than the color spill algorithm normally allows.
-   This is useful for exceptionally high amounts of the color spill.
+   Selects which channel to reduce:
 
-   R, G, B
+   :R: Suppress red spill.
+   :G: Suppress green spill (common for green screens).
+   :B: Suppress blue spill (common for blue screens).
+
+Algorithm
+   Chooses the method for spill reduction:
+
+   :Simple: Compares the *Limiting Channel* channel to the others and reduces it if it is higher.
+   :Average: Uses the average of the other two channels to set the limit for the despill channel.
+
+Limiting Channel :guilabel:`Simple`
+   When using the *Simple* algorithm, you can choose which channel(s) to use as a reference for limiting:
+
+   :R: Use red as the reference.
+   :G: Use green as the reference.
+   :B: Use blue as the reference.
 
 
 Outputs
