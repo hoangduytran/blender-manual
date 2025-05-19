@@ -9,7 +9,9 @@ Color Key Node
    :align: right
    :alt: Color Key node.
 
-The Color Key node creates a matte based on a specified color of the input image.
+The *Color Key* node is used for chroma keying—removing parts of an image based on color.
+It is commonly used to remove backgrounds like green screens or blue screens from footage,
+creating a matte where selected colors become transparent.
 
 
 Inputs
@@ -17,17 +19,24 @@ Inputs
 
 Image
    Standard color input.
+Key Color
+   The target color to be keyed out (made transparent).
+   This is typically the background color, such as pure green or blue.
+Hue
+   The tolerance for hue difference from the key color.
+   A wider range will key out more colors with similar hues.
+Saturation
+   The tolerance for saturation difference from the key color.
+   Helps avoid removing unintended desaturated areas like skin tones or clothing.
+Value
+   The tolerance for brightness difference from the key color.
+   Useful when lighting is uneven or background luminance varies.
 
 
 Properties
 ==========
 
-Color
-   The sliders represent threshold values.
-   Higher values in this node's context mean a wider range of colors from
-   the specified will be added to the matte.
-
-   Hue, Saturation, Value
+This node has no properties.
 
 
 Outputs
