@@ -17,7 +17,8 @@ It can be used to deal with uneven colors of green screens.
 Inputs
 ======
 
-This node has no input sockets.
+Smoothness
+   Specifies the smoothness of the keying screen.
 
 
 Properties
