@@ -22,6 +22,17 @@ Inputs
 
 Image
    Standard color input.
+Minimum
+   Determines the lowest values that are considered foreground.
+   (Which is supposed to be -- relatively -- high values: from this value to 1.0.)
+Maximum
+   Determines the highest values that are considered to be background objects.
+   (Which is supposed to be -- relatively -- low values: from 0.0 to this value.)
+
+.. tip::
+
+   It is possible to have a separation between the *Minimum* and *Maximum* values to allow
+   for a gradient of transparency between foreground and background objects.
 
 
 Properties
@@ -45,19 +56,6 @@ Algorithm
 
       Limiting Channel
          The channel to use when computing the maximum, the options are defined by the *Color Space*.
-
-High
-   Determines the lowest values that are considered foreground.
-   (Which is supposed to be -- relatively -- high values: from this value to 1.0.)
-
-Low
-   Determines the highest values that are considered to be background objects.
-   (Which is supposed to be -- relatively -- low values: from 0.0 to this value.)
-
-.. tip::
-
-   It is possible to have a separation between the *High* and *Low* values to allow
-   for a gradient of transparency between foreground and background objects.
 
 
 Outputs
