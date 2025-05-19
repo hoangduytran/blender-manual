@@ -18,7 +18,10 @@ between the scene start and end time, using a curve mapping.
 Inputs
 ======
 
-This node has no inputs.
+Start/End Frame
+   Start frame and End frame of the range of time specifying the values
+   the output should last. This range becomes the X axis of the graph.
+   The time input could be reversed by specifying a start frame greater than the end frame.
 
 
 Properties
@@ -32,11 +35,6 @@ Curve
 
       Flipping the curve around reverses the time input, but
       doing so is easily overlooked in the node setup.
-
-Start, End
-   Start frame and End frame of the range of time specifying the values
-   the output should last. This range becomes the X axis of the graph.
-   The time input could be reversed by specifying a start frame greater than the end frame.
 
 
 Outputs
