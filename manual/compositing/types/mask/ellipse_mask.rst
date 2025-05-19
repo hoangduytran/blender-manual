@@ -19,21 +19,19 @@ Mask
    An optional mask to use as the base for mask operations.
 Value
    Intensity of the generated mask.
+Position
+   Position of the center of the ellipse as a fraction of the total width or height.
+   (0.5, 0.5 creates a centered ellipse; 0.0, 0.0 creates an ellipse with its center in the lower left.)
+Size
+   Width/Height of the ellipse as a fraction of the total image *width*, not height.
+   Equal *Width* and *Height* values with produce a circle.
+Rotation
+   Rotation of the ellipse around its center point.
 
 
 Properties
 ==========
 
-X, Y
-   Position of the center of the ellipse as a fraction of the total width or height.
-   (0.5, 0.5 creates a centered ellipse; 0.0, 0.0 creates an ellipse with its center in the lower left.)
-Width
-   Width of the ellipse as a fraction of the total image width.
-Height
-   Height of the ellipse as a fraction of the total image *width*, not height.
-   Equal *Width* and *Height* values with produce a circle.
-Rotation
-   Rotation of the ellipse around its center point.
 Mask Type
    Operation to use against the input mask.
 
