@@ -15,19 +15,20 @@ This node produces a matte that isolates foreground content by comparing it with
 Inputs
 ======
 
-Image
+Image 1
    Contains foreground content against the background that is to be removed.
-Image
+Image 2
    The reference background image.
+Tolerance
+   Where pixels match the reference background to within the specified threshold, the matte is made transparent.
+Falloff
+   Increase to make nearby pixels partially transparent producing a smoother blend along the edges.
 
 
 Properties
 ==========
 
-Tolerance
-   Where pixels match the reference background to within the specified threshold, the matte is made transparent.
-Falloff
-   Increase to make nearby pixels partially transparent producing a smoother blend along the edges.
+This node has no properties.
 
 
 Outputs
