@@ -19,13 +19,14 @@ Inputs
 
 Color
    Standard color input.
+Size
+   The size of the pixels in the output image, measured in pixels.
 
 
 Properties
 ==========
 
-Pixel Size
-   The size of the pixels in the output image, measured in pixels.
+This node has no properties.
 
 
 Outputs
