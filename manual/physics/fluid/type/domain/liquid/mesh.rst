@@ -41,7 +41,7 @@ Particle Radius
 
 .. _bpy.types.FluidDomainSettings.use_speed_vectors:
 
-Use Speed Vectors
+Speed Vectors
    Creates a ``velocity`` :doc:`Attribute </modeling/geometry_nodes/attributes_reference>`
    which records the velocity of each vertex per frame.
    These will be used (automatically) when rendering with motion blur enabled.

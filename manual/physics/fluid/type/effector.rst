@@ -69,7 +69,7 @@ Effector Type
 
 .. _bpy.types.FluidEffectorSettings.subframes:
 
-Effector Substeps
+Sampling Substeps
    Number of substeps used to reduce gaps in collision of fluid from fast-moving effectors.
 
 .. _bpy.types.FluidEffectorSettings.surface_distance:

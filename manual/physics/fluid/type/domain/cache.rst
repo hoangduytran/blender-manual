@@ -31,6 +31,28 @@ Cache Directory
    Directory to store baked simulation files in. Inside this directory each simulation type
    (i.e. mesh, particles, noise) will have its own directory containing the simulation data.
 
+.. _bpy.types.FluidDomainSettings.cache_frame_start:
+
+Frame Start
+   The simulation starts on this frame, and this is the first one that is baked.
+
+.. _bpy.types.FluidDomainSettings.cache_frame_end:
+
+End
+   The simulation ends on this frame, and this is the last one to be baked.
+
+   .. note::
+
+      The simulation is only calculated for positive frames between the *Start* and *End* frames
+      of the *Cache* panel. So if you want a simulation that is longer than the default frame range
+      you have to change the *End* frame.
+
+.. _bpy.types.FluidDomainSettings.cache_frame_offset:
+
+Offset
+   Frame offset that is used when loading the simulation from the cache.
+   It is not considered when baking the simulation, only when loading it.
+
 .. _bpy.types.FluidDomainSettings.cache_type:
 
 Type
@@ -52,58 +74,11 @@ Type
       "Replay" only works when the :ref:`Playback Sync mode <bpy.types.Scene.sync_mode>` is set to "Play Every Frame".
       If you need to use "Frame Dropping" or "Sync to Audio", consider using the "Modular" or "All" options below.
 
-
-.. _bpy.types.FluidDomainSettings.cache_frame_start:
-
-Start
-   Frame on which to start the simulation. This is the first frame that will be baked.
-
-.. _bpy.types.FluidDomainSettings.cache_frame_end:
-
-End
-   Frame on which to stop the simulation. This is the last frame that will be baked.
-
-   .. note::
-
-      The simulation is only calculated for positive frames between the *Start* and *End* frames
-      of the *Cache* panel. So if you want a simulation that is longer than the default frame range
-      you have to change the *End* frame.
-
-.. _bpy.types.FluidDomainSettings.cache_frame_offset:
-
-Offset
-   Frame offset that is used when loading the simulation from the cache.
-   It is not considered when baking the simulation, only when loading it.
-
 .. _bpy.types.FluidDomainSettings.use_resumable_cache:
 
-Use Resumable Cache
+Resumable
    Extra data will be saved so that you can resumed baking after pausing. Since more data will be written
    to drive it is recommended to avoid enabling this option when baking at high resolutions.
-
-.. _bpy.types.FluidDomainSettings.cache_data_format:
-
-Volume File Format
-   File format for volume based simulation data (i.e. grids and particles).
-
-   Uni Cache
-      Blender's own caching format with some compression.
-      Each simulation object is stored in its own ``.uni`` cache file.
-
-   OpenVDB
-      Advanced and efficient storage format.
-      All simulation objects (i.e. grids and particles) are stored in a single ``.vdb`` file per frame.
-
-.. _bpy.types.FluidDomainSettings.cache_mesh_format:
-
-Mesh File Format :guilabel:`Liquids Only`
-   File format for the mesh cache files.
-
-   Binary Object
-      Mesh data files with some compression.
-
-   Object
-      Simple, standard data format for mesh data.
 
 .. _bpy.ops.fluid.bake_all:
 .. _bpy.ops.fluid.free_all:
@@ -121,16 +96,26 @@ Bake All, Free All
    only the most essential cache files are stored on drive.
 
 
-Advanced
-========
+Volumetric Data
+===============
+
+.. _bpy.types.FluidDomainSettings.cache_data_format:
+
+Format
+   File format for volume based simulation data (i.e. grids and particles).
+
+   Uni Cache
+      Blender's own caching format with some compression.
+      Each simulation object is stored in its own ``.uni`` cache file.
+
+   OpenVDB
+      Advanced and efficient storage format.
+      All simulation objects (i.e. grids and particles) are stored in a single ``.vdb`` file per frame.
 
 .. _bpy.types.FluidDomainSettings.openvdb_cache_compress_type:
 
-Compression Volumes :guilabel:`OpenVDB Only`
+Compression :guilabel:`OpenVDB Only`
    Compression method that is used when writing OpenVDB cache files.
-
-   None
-      Cache files will be written without any compression.
 
    Zip
       Cache files will be written with ``Zip`` compression. Effective but slower than ``Blosc``.
@@ -139,9 +124,12 @@ Compression Volumes :guilabel:`OpenVDB Only`
       Cache files will be written with ``Blosc`` compression. Multithreaded compression,
       similar in size and quality to ``Zip`` compression.
 
+   None
+      Cache files will be written without any compression.
+
 .. _bpy.types.FluidDomainSettings.openvdb_data_depth:
 
-Precision Volumes :guilabel:`OpenVDB Only`
+Precision :guilabel:`OpenVDB Only`
    Precision level that is used when writing OpenVDB cache files.
 
    Full
@@ -153,6 +141,17 @@ Precision Volumes :guilabel:`OpenVDB Only`
    Mini
       Volumetric data (e.g. grids, particles) will be written with mini float precision (8-bit) where possible.
       For cache data where this is not possible, 16-bit floats will be used instead.
+
+.. _bpy.types.FluidDomainSettings.cache_mesh_format:
+
+Meshes :guilabel:`Liquids Only`
+   File format for the mesh cache files.
+
+   Binary Object
+      Mesh data files with some compression.
+
+   Object
+      Simple, standard data format for mesh data.
 
 .. _bpy.types.FluidDomainSettings.export_manta_script:
 
