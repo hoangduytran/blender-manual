@@ -37,3 +37,14 @@ Outputs
 
 Grease Pencil
    Standard Grease Pencil geometry.
+
+
+Examples
+========
+
+.. figure:: /images/node-types_curves_to_grease_pencil_set_radius_example.jpeg
+
+   This example shows how to use the *Curves to Grease Pencil* node to create a Grease Pencil layer from a curve.
+
+   The *Set Curve Radius* node is used to set the radius of the Grease Pencil strokes.
+
