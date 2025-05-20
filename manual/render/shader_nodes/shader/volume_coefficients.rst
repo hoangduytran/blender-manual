@@ -1,28 +1,28 @@
-.. _bpy.types.ShaderNodeVolumeScatter:
+.. _bpy.types.ShaderNodeVolumeCoefficients:
 
-**************
-Volume Scatter
-**************
+*******************
+Volume Coefficients
+*******************
 
-.. figure:: /images/node-types_ShaderNodeVolumeScatter.png
+.. figure:: /images/node-types_ShaderNodeVolumeCoefficients.png
    :align: right
-   :alt: Volume Scatter node.
+   :alt: Volume Coefficients node.
 
-The *Volume Scatter* node allows light to be scattered as it passes through the volume.
-Typical usage would be to add fog to a scene. It can also be used with
-the :doc:`Volume Absorption </render/shader_nodes/shader/volume_absorption>` node to create smoke.
-
+The *Volume Coefficients* node models three physical processes in a volume: Absorption, Scattering and Emission, represented by their coefficients.
+Typical usage is to plug in values from real-world measurements.
 
 Inputs
 ======
 
-Color
-   Scattering coefficients per color channel.
-Density
-   The density of the scatter effect.
+Absorption
+----------
+Coefficients
+   Probability density per color channel that light is absorbed per unit distance traveled in the medium. It is equivalent to :math:`(1-\text{Color}) \times \text{Density}` in :ref:`Volume Absorption <bpy.types.ShaderNodeVolumeAbsorption>`.
 
-.. _bpy.types.ShaderNodeVolumeScatter.density:
-
+Scatter
+-------
+Coefficients
+   Probability density per color channel of an out-scattering event occurring per unit distance traveled in the medium. It is equivalent to :math:`\text{Color} \times \text{Density}` in :ref:`Volume Scatter <bpy.types.ShaderNodeVolumeScatter>`.
 Anisotropy :guilabel:`Henyey-Greenstein` :guilabel:`Draine`
    Controls the relative amount of backward and forward scattering.
 IOR :guilabel:`Fournier-Forand`
@@ -38,14 +38,18 @@ Alpha :guilabel:`Draine`
    and Cornette & Shanks (:math:`\alpha = 1`) phase functions.
 Diameter :guilabel:`Mie`
    Diameter of the scattering particles in µm.
-
+.. note:: Above inputs are the same in :ref:`Volume Scatter <bpy.types.ShaderNodeVolumeScatter.density>`.
+Emission
+--------
+Coefficients
+   Emitted radiance per color channel that is added to a ray per unit distance. It is equivalent to :math:`\text{Color} \times \text{Strength}` in :ref:`Emission <bpy.types.ShaderNodeEmission>`.
 
 Properties
 ==========
 
-.. _bpy.types.ShaderNodeVolumeScatter.phase:
-
 Phase
+  .. note:: Same as :ref:`Phase <bpy.types.ShaderNodeVolumeScatter.phase>` in Volume Scatter.
+
   Volume scattering phase function.
 
   :Henyey-Greenstein:
@@ -64,15 +68,6 @@ Phase
      :guilabel:`Cycles Only`
      Describes the scattering by particles with a size larger than the wavelength of light, such as cloud and fog.
 
-  .. tip::
-      These phase functions can be combined using a :doc:`/render/shader_nodes/shader/mix`.
-
-.. figure:: /images/render_shader-nodes_shader_volume-scatter_phase.svg
-   :align: center
-   :alt: Volume Scattering Function in logarithmic scale.
-
-   Volume scattering phase as a function of angles between the incoming and the outgoing direction,
-   in logarithmic scale. Light comes from the left side.
 
 Outputs
 =======
@@ -81,11 +76,3 @@ Volume
    The Volume Shader output must be plugged into the *Volume Input*
    of the :doc:`Material </render/shader_nodes/output/material>`
    or :doc:`World </render/shader_nodes/output/world>` Output node.
-
-
-Examples
-========
-
-.. figure:: /images/render_shader-nodes_shader_volume-scatter_example.png
-
-   Example of Volume Scatter.

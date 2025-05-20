@@ -30,3 +30,4 @@
    sheen.rst
    volume_absorption.rst
    volume_scatter.rst
+   volume_coefficients.rst
