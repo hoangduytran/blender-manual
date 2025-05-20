@@ -108,6 +108,12 @@ Area Radius
    The ratio between the brush radius and
    the radius that is going to be used to sample the area plane depth.
 
+.. _bpy.types.Brush.tilt_strength_factor:
+
+Tilt Strength :guilabel:`Sculpt Mode`
+   Determines how much the tilt of the user's tablet pen affects the brush normal.
+   Negative values correspond to inverting the direction of the tilt.
+
 .. _bpy.types.Brush.hardness:
 
 Hardness :guilabel:`Sculpt Mode`
