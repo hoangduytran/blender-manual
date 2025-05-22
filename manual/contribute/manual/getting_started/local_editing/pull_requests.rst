@@ -20,7 +20,7 @@ One Time Setup
 ==============
 
 This assumes you have the Blender manual repository already checked out on your computer, following the :doc:`install
-instructions </contribute/manual/getting_started/install/index>`.
+instructions </contribute/manual/getting_started/local_editing/install/index>`.
 
 
 Fork
