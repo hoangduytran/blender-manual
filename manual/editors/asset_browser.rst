@@ -35,67 +35,72 @@ Header
 ------
 
 Import Settings
-   .. _bpy.types.FileAssetSelectParams.import_method:
+^^^^^^^^^^^^^^^
 
-   Import Method
-      Determines how data is managed when an asset is imported.
-      This option can be found in the center of the Asset Browser header
-      (when an asset library other than *Current File* or *Essentials* is selected):
+.. _bpy.types.FileAssetSelectParams.import_method:
 
-      :Follow Preferences:
-         Use the import method set in the :ref:`File Path Preferences <bpy.types.UserAssetLibrary.import_method>`.
-      :Link:
-         The asset will be :ref:`linked <bpy.ops.wm.link>` to the current blend-file, and thus be read-only.
-         Later changes to the asset file will be reflected in all files that link it.
-      :Append:
-         The asset and all its dependencies will be :ref:`Appended <bpy.ops.wm.append>` (copied) into the current file.
-         Dragging a material into the scene three times will result in three independent copies.
-         Dragging an object into the scene three times will also result in three independent copies.
+Import Method
+   Determines how data is managed when an asset is imported.
+   This option can be found in the center of the Asset Browser header
+   (when an asset library other than *Current File* or *Essentials* is selected):
 
-         "Dependencies" in this case means everything the asset refers to.
-         For an object, this can be its mesh and materials, but also other objects
-         used by modifiers, constraints, or drivers.
+   :Follow Preferences:
+      Use the import method set in the :ref:`File Path Preferences <bpy.types.UserAssetLibrary.import_method>`.
+   :Link:
+      The asset will be :ref:`linked <bpy.ops.wm.link>` to the current blend-file, and thus be read-only.
+      Later changes to the asset file will be reflected in all files that link it.
+   :Append:
+      The asset and all its dependencies will be :ref:`Appended <bpy.ops.wm.append>` (copied) into the current file.
+      Dragging a material into the scene three times will result in three independent copies.
+      Dragging an object into the scene three times will also result in three independent copies.
 
-         Since the file now has its own copy of the asset, later changes to
-         the asset file will not be reflected in the file it's appended from.
-      :Append (Reuse Data):
-         *Specific to the Asset Browser*.
+      "Dependencies" in this case means everything the asset refers to.
+      For an object, this can be its mesh and materials, but also other objects
+      used by modifiers, constraints, or drivers.
 
-         The first time an asset is used, it will be appended, including its dependencies,
-         just as described previously. However, Blender will keep track of where it originated,
-         and the next time the asset is used, as much data as possible will be reused.
-         Dragging a material into the scene three times will only load it once,
-         and just assign the same material three times.
-         Dragging an object into the scene three times will create three copies of the object,
-         but all copies will share their mesh data, materials, etc.
+      Since the file now has its own copy of the asset, later changes to
+      the asset file will not be reflected in the file it's appended from.
+   :Append (Reuse Data):
+      *Specific to the Asset Browser*.
 
-         Since the file now has its own copy of the asset, later changes to
-         the asset file will not be reflected in the file it's appended from.
+      The first time an asset is used, it will be appended, including its dependencies,
+      just as described previously. However, Blender will keep track of where it originated,
+      and the next time the asset is used, as much data as possible will be reused.
+      Dragging a material into the scene three times will only load it once,
+      and just assign the same material three times.
+      Dragging an object into the scene three times will create three copies of the object,
+      but all copies will share their mesh data, materials, etc.
 
-         .. tip::
+      Since the file now has its own copy of the asset, later changes to
+      the asset file will not be reflected in the file it's appended from.
 
-            **Instancing Collections**
+.. _bpy.types.FileAssetSelectParams.instance_collections_on_link:
+.. _bpy.types.FileAssetSelectParams.instance_collections_on_append:
 
-            *Mimics the Instance Collections option when* :ref:`appending from the file browser <bpy.ops.wm.append>`
+Instance Collections -- When Linking/Appending
+   *Mimics the Instance Collections option when* :ref:`appending from the file browser <bpy.ops.wm.append>`
 
-            Some asset types such as collections can be created as an instanced collection.
-            This is done by enabling the *Instance* option after dragging collection assets into the 3D Viewport.
-            By enabling this option, an empty object is added that uses an instance of the collection.
-            If this option is disabled, the full collection hierarchy will be added to the scene.
+   Some asset types such as collections can be created as an instanced collection.
+   This is done by enabling the *Instance* option after dragging collection assets into the 3D Viewport.
+   By enabling these options, an empty object is added that uses an instance of the collection.
+   If these option is disabled, the full collection hierarchy will be added to the scene.
 
-            Collection Assets from the current file will always be instanced.
+   Collection Assets from the current file will always be instanced.
+
 
 Display Settings
-   Adjusts how assets are displayed in the asset list.
+^^^^^^^^^^^^^^^^
 
-   Size
-      Changes the size of the preview thumbnails.
-   Sort By
-      :Name: Sort the asset list alphabetically.
-      :Asset Catalog:
-         Sort the asset list so that assets in the same catalog are kept together.
-         Within a single catalog, assets are ordered by name.
-         The catalogs are in order of the flattened catalog hierarchy.
+Adjusts how assets are displayed in the asset list.
+
+Size
+   Changes the size of the preview thumbnails.
+Sort By
+   :Name: Sort the asset list alphabetically.
+   :Asset Catalog:
+      Sort the asset list so that assets in the same catalog are kept together.
+      Within a single catalog, assets are ordered by name.
+      The catalogs are in order of the flattened catalog hierarchy.
 
 
 Main Region
@@ -119,6 +124,7 @@ Open Blend File
    Opens the blend-file containing the asset.
 Display Size
    Changes the size of the preview thumbnails.
+
 
 Asset Library Region
 --------------------
