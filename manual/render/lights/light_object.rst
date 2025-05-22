@@ -1,4 +1,3 @@
-
 *************
 Light Objects
 *************
@@ -15,9 +14,27 @@ Common Settings
 
 Type
    Defines the type of light.
+
+.. _bpy.types.Light.use_temperature:
+.. _bpy.types.Light.temperature:
+   
+Temperature
+   Blackbody temperature in Kelvin, for natural light emission colors.
+   
+.. _bpy.types.Light.color:
+
 Color
    Color tint of the emitted light.
 
+.. _bpy.types.Light.exposure:
+
+Exposure
+   Multiply the light intensity by :math:`2^{exposure}`. This makes it easy to control a large range of intensities with a single slider. 
+   
+.. _bpy.types.Light.normalize:
+   
+Normalize
+   By default, the total power of the light remains the same when the light size and shape changes. By disabling this option, more light will be emitted when making the light bigger.
 
 Renderer Settings
 =================
@@ -51,13 +68,8 @@ surfaces that are further away will be rendered darker.
 .. _bpy.types.PointLight.energy:
 
 Power
-   Power of the light in Watts. Higher values increase the intensity of the light.
+   Power of the light. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
-
-.. _bpy.types.PointLight.use_soft_falloff:
-
-Soft Falloff
-   Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
 
 .. _bpy.types.PointLight.shadow_soft_size:
 
@@ -66,6 +78,10 @@ Radius
    Lights with larger size have softer shadows and specular highlights, and they will also appear dimmer
    because their power is distributed over a larger area.
 
+.. _bpy.types.PointLight.use_soft_falloff:
+
+Soft Falloff
+   Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
 
 .. _bpy.types.SpotLight:
 
@@ -78,19 +94,19 @@ in a given direction.
 .. _bpy.types.SpotLight.energy:
 
 Power
-   Power of the light in Watts. Higher values increase the intensity of the light.
+   Power of the light. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
-
-.. _bpy.types.SpotLight.use_soft_falloff:
-
-Soft Falloff
-   Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
 
 .. _bpy.types.SpotLight.shadow_soft_size:
 
 Radius
    When larger than zero, light will be emitted from a spherical surfaces with the specified radius.
    Lights with larger size have softer shadows and specular highlights.
+
+.. _bpy.types.SpotLight.use_soft_falloff:
+
+Soft Falloff
+   Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
 
 
 Beam/Spot Shape
@@ -169,7 +185,7 @@ This is in direct contrast to point-like artificial lights which produce sharp b
 .. _bpy.types.AreaLight.energy:
 
 Power
-   Power of the light in Watts. Higher values increase the intensity of the light.
+   Power of the light. Higher values increase the intensity of the light.
    Negative values can be set, but should be avoided for predictable and physically based result.
 
 .. _bpy.types.AreaLight.shape:
@@ -219,9 +235,7 @@ plus a dashed line indicating the direction of the light.
 .. _bpy.types.SunLight.energy:
 
 Strength
-   Strength of the lights in Watts per square meter. Typical values are
-   around 250 for an overcast day and 1000 or more for direct sunlight.
-   See more details at `Power of Lights`_.
+   Strength of the lights. See more details at `Power of Lights`_.
 
 .. _bpy.types.SunLight.angle:
 
@@ -234,8 +248,8 @@ Angle
 Power of Lights
 ===============
 
-The power of sun lights is specified in Watts per square meter.
-The power of point lights, spot lights, and area lights is specified in Watts.
+When Normalize is enabled, the power of sun lights is specified in Watts per square meter. The power of point lights, spot lights, and area lights is specified in Watts.
+
 But this is not the electrical Watts that consumer light bulbs are rated at.
 It is `Radiant Flux or Radiant Power <https://en.wikipedia.org/wiki/Radiant_flux>`__ which is also measured in Watts.
 It is the energy radiated from the light in the form of visible light.
@@ -271,7 +285,7 @@ Overcast sky  200 W/m\ :sup:`2`
 Moonlight     0.001 W/m\ :sup:`2`
 ============  =====================
 
-These values will likely produce much brighter or dimmer lights than you would expect,
+These values will  produce much brighter or dimmer lights than you would expect,
 because our eyes adapt while a render engine does not. So to compensate,
 adjust the *Exposure* in :menuselection:`Render --> Film`.
 
