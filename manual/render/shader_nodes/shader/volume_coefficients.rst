@@ -11,6 +11,7 @@ Volume Coefficients
 The *Volume Coefficients* node models three physical processes in a volume: Absorption, Scattering and Emission, represented by their coefficients.
 Typical usage is to plug in values from real-world measurements.
 
+
 Inputs
 ======
 
@@ -38,11 +39,18 @@ Alpha :guilabel:`Draine`
    and Cornette & Shanks (:math:`\alpha = 1`) phase functions.
 Diameter :guilabel:`Mie`
    Diameter of the scattering particles in µm.
-.. note:: Above inputs are the same in :ref:`Volume Scatter <bpy.types.ShaderNodeVolumeScatter.density>`.
+
+.. note::
+
+   Above inputs are the same in :ref:`Volume Scatter <bpy.types.ShaderNodeVolumeScatter.density>`.
+
+
 Emission
 --------
+
 Coefficients
    Emitted radiance per color channel that is added to a ray per unit distance. It is equivalent to :math:`\text{Color} \times \text{Strength}` in :ref:`Emission <bpy.types.ShaderNodeEmission>`.
+
 
 Properties
 ==========

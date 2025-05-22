@@ -33,7 +33,7 @@ Make Holes
 
 Join Triangles
    Joins adjacent triangles into quads.
-   Has all the same properties as the :ref:`_bpy.ops.mesh.tris_convert_to_quads`
+   Has all the same properties as the :ref:`bpy.ops.mesh.tris_convert_to_quads`
    operator (angle limit, compare UVs, etc.).
 Max Face Angle, Max Shape Angle, Compare
    See :ref:`bpy.ops.mesh.tris_convert_to_quads`.
