@@ -37,10 +37,14 @@ Object Path
    The path to the Alembic or USD object inside the archive or stage.
 
 Read Data
-   Type of data to read for a mesh object, respectively: vertices,
-   polygons, UV maps, and Color Attributes.
+   Controls which mesh data is imported from the cache file.
+   You can selectively enable or disable the following:
 
-   Vertices, Faces, UV, Color
+   :Vertices: Reads vertex positions and (if animated) deformations for each frame.
+   :Faces: Imports the mesh's face topology and structure.
+   :UV: Loads UVs (texture coordinates) from the cache file.
+   :Color: Imports vertex color attributes from the cache file, if present.
+   :Attributes: Loads custom attributes (e.g., other data such as creases, custom normals, or generic attributes).
 
 
 Time
