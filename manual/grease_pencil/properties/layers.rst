@@ -124,6 +124,11 @@ Layer Specials
    Merge All
       Combine all layers into the active layer.
 
+   .. _bpy.ops.grease_pencil.relative_layer_mask_add:
+
+   Mask with Layer Above/Below
+      Adds a mask to the active layer with layer above or below.
+
    Copy Layer to Selected
       Copy the active layer to the selected Grease Pencil object.
 
