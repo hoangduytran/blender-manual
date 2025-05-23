@@ -37,7 +37,7 @@ Toggle Selection
    Selects all entries if there are currently no selected ones,
    and deselects them otherwise.
 Box Select :kbd:`B`
-   Lets you drag a box and adds the entries  that overlap it to the selection.
+   Lets you drag a box and adds the entries that overlap it to the selection.
 Delete :kbd:`X`, :kbd:`Delete`
    Removes the selected entries from the log.
 Copy :kbd:`Ctrl-C`

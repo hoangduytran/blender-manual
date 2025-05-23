@@ -12,7 +12,7 @@ Instances
 In addition to storing real data like a mesh or a curve, objects can store instances,
 which themselves can reference more geometry, an object, or a collection. The purpose
 of instancing is to allow duplicating geometry and storing it in an object, without duplicating
-the actual data. This optimization allows render engines  like :doc:`Cycles </render/cycles/index>`
+the actual data. This optimization allows render engines like :doc:`Cycles </render/cycles/index>`
 to handle the same geometry data in many different locations better than when the data is duplicated.
 
 Each instance keeps track of which geometry it corresponds to

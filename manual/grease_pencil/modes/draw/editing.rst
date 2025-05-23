@@ -47,7 +47,7 @@ Erase Lasso
    :Mode:      Draw Mode
    :Shortcut:  :kbd:`Ctrl-Alt-RMB`
 
-The *Erase Lasso* operator erases all  Grease Pencil strokes within a freeform selection.
+The *Erase Lasso* operator erases all Grease Pencil strokes within a freeform selection.
 
 - Press and hold :kbd:`Ctrl-Alt-RMB`, then draw a lasso shape around the area you want to erase.
 - Release the mouse button to apply the eraser.

@@ -9,7 +9,7 @@ Quaternion to Rotation Node
    :align: right
    :alt: Quaternion to Rotation node.
 
-The *Quaternion to Rotation* node converts a :ref:`quaternion rotation <quaternion mode>` to  a standard rotation.
+The *Quaternion to Rotation* node converts a :ref:`quaternion rotation <quaternion mode>` to a standard rotation.
 
 Inputs
 ======

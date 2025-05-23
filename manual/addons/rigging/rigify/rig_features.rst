@@ -218,7 +218,7 @@ Legs
    :width: 200px
 
 IK & FK Toe :guilabel:`Optional`
-   Two separate IK and FK controls for the toe (this is  on by default in the bundled metarigs,
+   Two separate IK and FK controls for the toe (this is on by default in the bundled metarigs,
    and is recommended for stable IK<->FK snapping).
 IK Heel
    A heel control which can be rotated to command forward or backward roll, sideways rock, or yaw of the heel.

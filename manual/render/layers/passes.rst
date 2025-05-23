@@ -326,7 +326,7 @@ Asset
 
 Levels
    The maximum number of objects to be distinguished per pixel.
-   The Render Layers node will output half this  many Cryptomatte images,
+   The Render Layers node will output half this many Cryptomatte images,
    named (for example) *CryptoObject00*, *CryptoObject01* and so on --
    the reason being that one Cryptomatte image can reference two objects per pixel.
 

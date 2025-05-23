@@ -17,10 +17,10 @@ Type
 
 .. _bpy.types.Light.use_temperature:
 .. _bpy.types.Light.temperature:
-   
+
 Temperature
    Blackbody temperature in Kelvin, for natural light emission colors.
-   
+
 .. _bpy.types.Light.color:
 
 Color
@@ -29,10 +29,10 @@ Color
 .. _bpy.types.Light.exposure:
 
 Exposure
-   Multiply the light intensity by :math:`2^{exposure}`. This makes it easy to control a large range of intensities with a single slider. 
-   
+   Multiply the light intensity by :math:`2^{exposure}`. This makes it easy to control a large range of intensities with a single slider.
+
 .. _bpy.types.Light.normalize:
-   
+
 Normalize
    By default, the total power of the light remains the same when the light size and shape changes. By disabling this option, more light will be emitted when making the light bigger.
 
@@ -285,7 +285,7 @@ Overcast sky  200 W/m\ :sup:`2`
 Moonlight     0.001 W/m\ :sup:`2`
 ============  =====================
 
-These values will  produce much brighter or dimmer lights than you would expect,
+These values will produce much brighter or dimmer lights than you would expect,
 because our eyes adapt while a render engine does not. So to compensate,
 adjust the *Exposure* in :menuselection:`Render --> Film`.
 

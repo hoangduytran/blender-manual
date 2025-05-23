@@ -4,7 +4,7 @@
 Smooth Hair Curves
 ******************
 
-Smooths the shape of  hair curves.
+Smooths the shape of hair curves.
 
 .. peertube:: 7fpUB2eRT6zjMyHRzJ2ZoJ
 

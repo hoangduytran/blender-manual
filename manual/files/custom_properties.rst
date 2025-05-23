@@ -61,7 +61,7 @@ Type
    :Integer: A numeric value without any decimals e.g. 1, 2, 3, or 4.
    :Integer Array: A collection of multiple integer data types e.g. ``[1, 2, 3, 4]`` .
    :Boolean: A data type that has two possible values e.g. ``True`` or ``False``.
-   :Boolean Array: A collection of boolean values  e.g. ``[True, False, True]``
+   :Boolean Array: A collection of boolean values e.g. ``[True, False, True]``
    :String: A sequence of characters such as "Some Text".
    :Data-Block: A reference to a Blender object, see :doc:`/files/data_blocks`.
    :Python: Edit a Python data type directly, used for unsupported data types.
