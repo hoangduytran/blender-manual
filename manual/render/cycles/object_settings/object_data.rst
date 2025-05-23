@@ -146,8 +146,6 @@ Shading
 Shadow Terminator
 -----------------
 
-.. _bpy.types.CyclesObjectSettings.shadow_terminator_geometry_offset:
-
 Geometry Offset
    Offset rays from the surface to reduce shadow terminator artifacts on low-poly geometry.
    Higher values affect more triangles, a value of one affecting all triangles and zero having no affect.
@@ -156,7 +154,7 @@ Geometry Offset
    Unlike the *Shading Offset*, this option has little affect on the lighting
    making it the preferable method to handle shadow terminator artifacts.
 
-.. _bpy.types.CyclesObjectSettings.shadow_terminator_offset:
+.. _bpy.types.Object.shadow_terminator_shading_offset:
 
 Shading Offset
    Pushes the shadow terminator (the line that divides the light and dark) towards the light

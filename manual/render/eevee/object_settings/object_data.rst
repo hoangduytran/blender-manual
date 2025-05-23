@@ -30,6 +30,31 @@ Shadow Blocker Collection
    Collection of objects that will act as shadow blockers for light emitted from the object.
 
 
+Shadow Terminator
+-----------------
+
+The Shadow Terminator settings help reduce artifacts that appear along the edges
+of low-poly or smoothly shaded objects, especially when using bump mapping.
+These artifacts occur when shading normals deviate from the actual geometry,
+causing abrupt shadow breaks.
+
+.. _bpy.types.Object.shadow_terminator_normal_offset:
+
+Normal Offset
+   Shifts the shadow position along the shading normal to minimize visible artifacts.
+   The offset is measured in object space and is strongest at glancing angles to the light.
+   A value of zero disables the bias.
+   Increase this value if shadow breaks are visible, but avoid excessive values to prevent light leaks.
+   The amount of faces affected by the bias is controlled by the *Geometry Offset*:
+
+.. _bpy.types.Object.shadow_terminator_geometry_offset:
+
+Geometry Offset
+   Controls how many faces are affected by the normal offset.
+   A value of zero only affects faces at grazing angles; 1.0 affects all faces.
+   Use higher values if artifacts persist, but too much offset can distort shadows, especially with bump mapping.
+
+
 Visibility
 ==========
 
