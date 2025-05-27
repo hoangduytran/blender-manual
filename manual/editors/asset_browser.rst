@@ -245,6 +245,12 @@ Preview
    Remove Preview
       Remove the preview of the asset.
 
+   .. _bpy.ops.asset.screenshot_preview:
+
+   Capture Screenshot Preview
+      Drag-select a rectangle over an area of Blender to capture it as the preview 
+      image of the asset. See :ref:`screenshot-preview`.
+
 
 .. _bpy.ops.asset.tag_add:
 .. _bpy.ops.asset.tag_remove:
@@ -313,6 +319,30 @@ Preview images are typically generated automatically when you :ref:`mark a data-
 If the auto-generated preview image isn't sufficient, you can replace it by a custom one.
 
 For previews of pose assets, see :ref:`poselib-preview-images`.
+
+.. _screenshot-preview:
+
+Screenshot Capture for Previews
+-------------------------------
+
+In case a specific preview is needed, a fast way to create it is with a screenshot.
+The operator to do so is located under the Preview popover, see :ref:`bpy.ops.asset.screenshot_preview`.
+It is only possible to take screenshots for editable assets, so assets in the :ref:`Current File<asset-library-current-file>`
+and :ref:`Asset System Files<asset-system-files>`.
+
+Once started, you can click and drag a rectangular area over any part of Blender to capture a preview image.
+During dragging it is possible to move the whole capture area or to unlock the aspect ratio.
+See the shortcut help in the status bar for information on which keys to press.
+
+On a re-run of the operator, the previously captured area will be remembered.
+Simply clicking allows you to easily take the same screenshot again.
+
+
+.. note::
+
+   Selecting an area that is completely within a single 3D viewport will actually do a background
+   render of that section. This allows the background to be transparent, but also means that UI 
+   elements *can not* be captured.
 
 
 .. _asset-bundles:
