@@ -15,15 +15,15 @@ Inputs
 **Geometry**
 
 Guide Index
-   Guide index map witch describes which curve to use as the center of each braid group.
-   If this input is provided, it priority over an existing map in the ``guide_curve_index``
+   Guide index map which describes which curve to use as the center of each braid group.
+   If this input is provided, it takes priority over an existing map in the ``guide_curve_index``
    attribute, and the *Guide Distance* and *Guide Mask* attribute will be unused.
 
 Guide Distance
    Minimum distance between two guides for new guide map.
 
 Guide Mask
-   Mask for which curve are eligible to be selected as guides.
+   Mask for which curves are eligible to be selected as guides.
 
 Existing Guide Map
    Use the existing guide map attribute if available. If this is false, and the *Guide Index*
@@ -32,7 +32,7 @@ Existing Guide Map
    Creating the guide map in a separate node or modifier gives more complete control over its creation.
 
 Factor
-   Factor to blend overall effect.
+   Factor by which to blend the overall effect.
 
 Subdivision
    Subdivision level applied before deformation.
