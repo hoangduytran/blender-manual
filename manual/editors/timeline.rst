@@ -33,6 +33,7 @@ or pressing :kbd:`NumpadMinus`/:kbd:`NumpadPlus`.
 
 You can also use the scrollbars located at the bottom and the right of the editor.
 
+.. _playhead:
 
 Playhead
 --------
@@ -45,10 +46,29 @@ Playhead
 The *Playhead* is the blue vertical line showing the current frame number.
 
 It can be moved to a new position by clicking or
-dragging :kbd:`LMB` in the scrubbing area at the top.
+dragging :kbd:`LMB` in the scrubbing area at the top or by 
+click and drag :kbd:`Shift-RMB` anywhere in the timeline.
 
-You can also move it in single-frame increments by pressing :kbd:`Left` or :kbd:`Right`,
-or jump to the beginning or end frame by pressing :kbd:`Shift-Left` or :kbd:`Shift-Right`.
+While dragging it can snap to elements of the editor in which it is dragged.
+- Seconds
+- Frames
+- Markers
+- Strips
+- Keys
+
+It is only possible to snap to elements that are visible in the editor in which the playhead is dragged.
+For example having "Strips" enabled but dragging in the Graph Editor will do nothing.
+Snapping can be toggled during scrubbing by holding down :kbd:`Ctrl`.
+
+Snapping to seconds or frames can have a custom increment for example snapping to every third frame.
+This is always relative to the first frame of the scene and ignores the preview range.
+In contrast to the other snapping options, seconds and frames will always snap to the closest position, 
+regardless of the snap distance set. When mixing options, the system will first try to snap to
+elements that are snapped by distance. Only if no element is close enough will it snap to seconds or frames.
+
+You can also move it in single-frame increments by pressing :kbd:`Left` or :kbd:`Right` or :kbd:`Alt-Wheel`.
+To jump to the beginning or end frame (of the ends of the preview range if that is active) 
+press :kbd:`Shift-Left` or :kbd:`Shift-Right`.
 
 
 Frame Range
