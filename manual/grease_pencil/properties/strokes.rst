@@ -10,7 +10,7 @@ General settings for Grease Pencil strokes.
 
    Settings panel.
 
-.. _bpy.types.GreasePencil.stroke_depth_order:
+.. _bpy.types.GreasePencilv3.stroke_depth_order:
 
 Stroke Depth Order
    Defines how the strokes are ordered in 3D space (for objects not displayed *In Front*).
