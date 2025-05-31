@@ -5,7 +5,7 @@
 
 Nodes that provide access to grease pencil data.
 
-.. .. toctree::
-..    :maxdepth: 1
+.. toctree::
+   :maxdepth: 1
 
-..    named_layer_selection.rst
+   named_layer_selection.rst
