@@ -98,7 +98,8 @@ Once you've drafted the documentation:
 
 #. **Submit Your Contribution**:
 
-   - :doc:`Open a pull request </contribute/manual/getting_started/local_editing/pull_requests>` in the documentation project.
+   - :doc:`Open a pull request </contribute/manual/getting_started/local_editing/pull_requests>`
+     in the documentation project.
    - Reference the release issue and the commit in your PR description.
    - Include any screenshots, diagrams, or examples you've created.
 

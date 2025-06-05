@@ -65,7 +65,13 @@ def help_text_make_args_literal(text: str) -> str:
 def help_text_make_single_quotes_literal(text: str) -> str:
     re_table = (
         (
-            re.compile(r"(\s+)'([^\']+)'"),
+            re.compile(
+                # Be fairly relaxed about what is accepted before a `'`
+                # Space or open brackets is sufficient at the moment,
+                # other characters can be added if needed.
+                r"([\s\(\[\{]+)"
+                r"'([^\']+)'"
+            ),
             lambda x: x.group(1) + "``" + x.group(2) + "``",
         ),
         (
@@ -161,7 +167,7 @@ def help_text_make_environment_variables(text: str) -> str:
         return "``" + x.group(1) + "``"
 
     # Now literal quote all environment variables.
-    re_env_var_quote = re.compile(r"\b({:s}\b)".format("|".join(env_vars)))
+    re_env_var_quote = re.compile(r"\b({:s})\b".format("|".join(env_vars)))
     text = re.sub(re_env_var_quote, re_env_var_quote_fn, text)
     return text
 

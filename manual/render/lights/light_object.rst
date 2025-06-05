@@ -29,12 +29,14 @@ Color
 .. _bpy.types.Light.exposure:
 
 Exposure
-   Multiply the light intensity by :math:`2^{exposure}`. This makes it easy to control a large range of intensities with a single slider.
+   Multiply the light intensity by :math:`2^{exposure}`.
+   This makes it easy to control a large range of intensities with a single slider.
 
 .. _bpy.types.Light.normalize:
 
 Normalize
-   By default, the total power of the light remains the same when the light size and shape changes. By disabling this option, more light will be emitted when making the light bigger.
+   By default, the total power of the light remains the same when the light size and shape changes.
+   By disabling this option, more light will be emitted when making the light bigger.
 
 Renderer Settings
 =================
@@ -248,7 +250,8 @@ Angle
 Power of Lights
 ===============
 
-When Normalize is enabled, the power of sun lights is specified in Watts per square meter. The power of point lights, spot lights, and area lights is specified in Watts.
+When Normalize is enabled, the power of sun lights is specified in Watts per square meter.
+The power of point lights, spot lights, and area lights is specified in Watts.
 
 But this is not the electrical Watts that consumer light bulbs are rated at.
 It is `Radiant Flux or Radiant Power <https://en.wikipedia.org/wiki/Radiant_flux>`__ which is also measured in Watts.

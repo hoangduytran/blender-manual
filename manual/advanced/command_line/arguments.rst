@@ -50,6 +50,9 @@ Render Options
    Set the render path and file name.
    Use ``//`` at the start of the path to render relative to the blend-file.
 
+   You can use path templating features such as ``{blend_name}`` in the path.
+   See Blender's documentation on path templates for more details.
+
    The ``#`` characters are replaced by the frame number, and used to define zero padding.
 
    * ``animation_##_test.png`` becomes ``animation_01_test.png``
@@ -375,7 +378,7 @@ GPU Options
 ===========
 
 ``--gpu-backend``
-   Force to use a specific GPU backend. Valid options: ``vulkan`` (experimental),  ``metal``,  ``opengl``.
+   Force to use a specific GPU backend. Valid options: ``vulkan``,  ``metal``,  ``opengl``.
 
 ``--gpu-compilation-subprocesses``
    Override the Max Compilation Subprocesses setting (OpenGL only).
@@ -463,21 +466,21 @@ Other Options
 =============
 
 ``--disable-depsgraph-on-file-load``
-   Backround mode: Do not systematically build and evaluate ViewLayers' dependency graphs
-   when loading a blendfile in background mode (`-b` or `-c` options).
+   Background mode: Do not systematically build and evaluate ViewLayers' dependency graphs
+   when loading a blend-file in background mode (``-b`` or ``-c`` options).
 
    Scripts requiring evaluated data then need to explicitly ensure that
    an evaluated depsgraph is available
-   (e.g. by calling `depsgraph = context.evaluated_depsgraph_get()`).
+   (e.g. by calling ``depsgraph = context.evaluated_depsgraph_get()``).
 
    NOTE: this is a temporary option, in the future depsgraph will never be
    automatically generated on file load in background mode.
 
 ``--disable-liboverride-auto-resync``
-   Do not perform library override automatic resync when loading a new blendfile.
+   Do not perform library override automatic resync when loading a new blend-file.
 
    NOTE: this is an alternative way to get the same effect as when setting the
-   `No Override Auto Resync` User Preferences Debug option.
+   ``No Override Auto Resync`` User Preferences Debug option.
 
 ``--debug-gpu-vulkan-local-read``
    Force Vulkan dynamic rendering local read when supported by device.
@@ -527,7 +530,7 @@ Environment Variables
 =====================
 
 :BLENDER_USER_RESOURCES:  Replace default directory of all user files.
-                          Other ``BLENDER_USER_*`` variables override when set.
+                         Other ``BLENDER_USER_*`` variables override when set.
 :BLENDER_USER_CONFIG:     Directory for user configuration files.
 :BLENDER_USER_SCRIPTS:    Directory for user scripts.
 :BLENDER_USER_EXTENSIONS: Directory for user extensions.
@@ -538,10 +541,8 @@ Environment Variables
 :BLENDER_SYSTEM_EXTENSIONS: Directory for system extensions repository.
 :BLENDER_SYSTEM_DATAFILES:  Directory to replace bundled datafiles.
 :BLENDER_SYSTEM_PYTHON:     Directory to replace bundled Python libraries.
-
-:BLENDER_CUSTOM_SPLASH:        Full path to an image that replaces the splash screen.
+:BLENDER_CUSTOM_SPLASH:     Full path to an image that replaces the splash screen.
 :BLENDER_CUSTOM_SPLASH_BANNER: Full path to an image to overlay on the splash screen.
-
 :OCIO:                      Path to override the OpenColorIO configuration file.
 :TEMP:                      Store temporary files here (MS-Windows).
 :TMPDIR:                    Store temporary files here (UNIX Systems).

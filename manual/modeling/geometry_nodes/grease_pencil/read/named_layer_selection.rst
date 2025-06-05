@@ -10,7 +10,7 @@ Named Layer Selection Node
    :alt: Named Layer Selection Node.
 
 The *Named Layer Selection* node outputs a Boolean field whose index value is true
-for :doc:`Grease Pencil layers </grease_pencil/properties/layers> whose name matches a string input.
+for :doc:`Grease Pencil layers </grease_pencil/properties/layers>` whose name matches a string input.
 
 .. note::
 

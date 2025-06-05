@@ -270,7 +270,8 @@ the :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>`, the output will 
 The :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>` currently does not support changing
 the domain priority for its inputs, so as a workaround,
 one can use a :doc:`Mix node </compositing/types/color/mix/mix_color>` to achieved the desired behavior,
-noting that the first *Image* input in the *Mix* node has the highest domain priority, as shown in the following figure.
+noting that the first *Image* input in the *Mix* node has the highest domain priority,
+as shown in the following figure.
 
 .. figure:: /images/compositing_realtime-compositor_compositing-space_operation-domain_considerations_clipping-solution.png
 

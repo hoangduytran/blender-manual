@@ -39,7 +39,7 @@ Scene Options
 -------------
 
 Object
-   Determine which objects include in the export.
+   Determine which objects will be included in the export.
 
    :Active: Export only the active Grease Pencil object.
    :Selected: Export all selected Grease Pencil objects.
@@ -49,14 +49,26 @@ Object
 Export Options
 --------------
 
+Frame
+   Determine which frames will be included in the export.
+
+   :Active: Export only the active keyframe.
+   :Selected: Export all selected keyframes as SVG animation.
+   :Scene: Export all frames as SVG animation.
+
+.. note:: To enable multi-keyframe selection you must enable Multiframe Editing.
+   See :doc:`Multiframe Editing </grease_pencil/multiframe>` for more information.
+
 Sampling
    Precision for the stroke sampling. Low values mean a more accurate result.
 
 Fill
-   When enabled, Export the Grease Pencil strokes fill.
+   When enabled, export the Grease Pencil strokes fill.
 
 Uniform Width
-   When enabled, Export strokes with constant thickness.
+   When enabled, export strokes with constant thickness.
 
 Clip Camera
-   When enabled, and camera view is active export only the strokes clipped from camera view.
+   When enabled and camera view is active, export only the strokes clipped from camera view.
+
+.. note:: The export of the Grease Pencil strokes is always from camera view.

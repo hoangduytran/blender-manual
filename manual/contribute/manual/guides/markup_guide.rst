@@ -121,12 +121,14 @@ Definition List:
 Useful Constructs
 =================
 
-- ``|BLENDER_VERSION|``: Inserts the current Blender version automatically.
+- ``|BLENDER_VERSION|``:
+  Inserts the current Blender version automatically.
 - ``:abbr:`SSAO (Screen Space Ambient Occlusion)```:
   Abbreviation displays the full text on hover.
 - ``:term:`Manifold```:
   Links to the corresponding entry in the :doc:`Glossary </glossary/index>`.
-- ``:bl-icon:`icon_name```: Include Blender icons as inline text, see the full list at :doc:`/contribute/manual/guides/icons`.
+- ``:bl-icon:`icon_name```:
+  Include Blender icons as inline text, see the full list at :doc:`/contribute/manual/guides/icons`.
 
 .. toctree::
    :hidden:
@@ -175,7 +177,8 @@ Context-Sensitive Manual Access
 
 To link Blender UI properties and operators directly to manual entries:
 
-#. Right-click the property/operator in Blender and select *Online Python Reference* to get the RNA tag (shown in the OS console).
+#. Right-click the property/operator in Blender and select *Online Python Reference*
+   to get the RNA tag (shown in the OS console).
 #. In the documentation, use an external reference matching Blender's RNA tag:
 
 .. code-block:: rst
@@ -200,7 +203,8 @@ Blender uses these tags to link UI elements directly to documentation entries vi
 Admonitions
 ===========
 
-Admonitions are special blocks used to highlight important notes, warnings, or additional information in the documentation.
+Admonitions are special blocks used to highlight important notes, warnings,
+or additional information in the documentation.
 
 Common admonition types include:
 
@@ -325,5 +329,7 @@ Internal notes (not visible to readers):
 Further Reading
 ===============
 
-- `Sphinx RST Primer <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__: Introduction to RST syntax.
-- `Docutils reStructuredText Reference <https://docutils.sourceforge.io/rst.html>`__: Comprehensive documentation on RST markup.
+- `Sphinx RST Primer <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__:
+  Introduction to RST syntax.
+- `Docutils reStructuredText Reference <https://docutils.sourceforge.io/rst.html>`__:
+  Comprehensive documentation on RST markup.
