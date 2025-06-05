@@ -8,7 +8,8 @@ Volume Coefficients
    :align: right
    :alt: Volume Coefficients node.
 
-The *Volume Coefficients* node models three physical processes in a volume: Absorption, Scattering and Emission, represented by their coefficients.
+The *Volume Coefficients* node models three physical processes in a volume:
+Absorption, Scattering and Emission, represented by their coefficients.
 Typical usage is to plug in values from real-world measurements.
 
 
@@ -17,13 +18,19 @@ Inputs
 
 Absorption
 ----------
+
 Coefficients
-   Probability density per color channel that light is absorbed per unit distance traveled in the medium. It is equivalent to :math:`(1-\text{Color}) \times \text{Density}` in :ref:`Volume Absorption <bpy.types.ShaderNodeVolumeAbsorption>`.
+   Probability density per color channel that light is absorbed per unit distance traveled in the medium.
+   It is equivalent to :math:`(1-\text{Color}) \times \text{Density}` in
+   :ref:`Volume Absorption <bpy.types.ShaderNodeVolumeAbsorption>`.
 
 Scatter
 -------
+
 Coefficients
-   Probability density per color channel of an out-scattering event occurring per unit distance traveled in the medium. It is equivalent to :math:`\text{Color} \times \text{Density}` in :ref:`Volume Scatter <bpy.types.ShaderNodeVolumeScatter>`.
+   Probability density per color channel of an out-scattering event occurring per unit distance traveled in the medium.
+   It is equivalent to :math:`\text{Color} \times \text{Density}` in
+   :ref:`Volume Scatter <bpy.types.ShaderNodeVolumeScatter>`.
 Anisotropy :guilabel:`Henyey-Greenstein` :guilabel:`Draine`
    Controls the relative amount of backward and forward scattering.
 IOR :guilabel:`Fournier-Forand`
@@ -49,7 +56,8 @@ Emission
 --------
 
 Coefficients
-   Emitted radiance per color channel that is added to a ray per unit distance. It is equivalent to :math:`\text{Color} \times \text{Strength}` in :ref:`Emission <bpy.types.ShaderNodeEmission>`.
+   Emitted radiance per color channel that is added to a ray per unit distance.
+   It is equivalent to :math:`\text{Color} \times \text{Strength}` in :ref:`Emission <bpy.types.ShaderNodeEmission>`.
 
 
 Properties

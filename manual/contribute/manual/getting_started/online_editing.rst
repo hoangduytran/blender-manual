@@ -3,7 +3,8 @@
 Online Editing
 **************
 
-Welcome! This page explains the process for contributing to Blender's documentation through our online editing workflow.
+Welcome!
+This page explains the process for contributing to Blender's documentation through our online editing workflow.
 Whether you're fixing typos or adding entirely new sections, your contributions are valuable.
 
 Below is an overview of the online editing process.

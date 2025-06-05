@@ -248,7 +248,7 @@ Preview
    .. _bpy.ops.asset.screenshot_preview:
 
    Capture Screenshot Preview
-      Drag-select a rectangle over an area of Blender to capture it as the preview 
+      Drag-select a rectangle over an area of Blender to capture it as the preview
       image of the asset. See :ref:`screenshot-preview`.
 
 
@@ -327,7 +327,8 @@ Screenshot Capture for Previews
 
 In case a specific preview is needed, a fast way to create it is with a screenshot.
 The operator to do so is located under the Preview popover, see :ref:`bpy.ops.asset.screenshot_preview`.
-It is only possible to take screenshots for editable assets, so assets in the :ref:`Current File<asset-library-current-file>`
+It is only possible to take screenshots for editable assets,
+so assets in the :ref:`Current File<asset-library-current-file>`
 and :ref:`Asset System Files<asset-system-files>`.
 
 Once started, you can click and drag a rectangular area over any part of Blender to capture a preview image.
@@ -341,7 +342,7 @@ Simply clicking allows you to easily take the same screenshot again.
 .. note::
 
    Selecting an area that is completely within a single 3D viewport will actually do a background
-   render of that section. This allows the background to be transparent, but also means that UI 
+   render of that section. This allows the background to be transparent, but also means that UI
    elements *can not* be captured.
 
 

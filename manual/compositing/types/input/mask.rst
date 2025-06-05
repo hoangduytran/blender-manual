@@ -26,7 +26,8 @@ Motion Blur
 For animated masks, creating a motion blurred mask from the surrounding frames.
 
 Samples
-   Number of motion blur samples. Higher values result in smoother and more accurate blur, but increase processing time.
+   Number of motion blur samples.
+   Higher values result in smoother and more accurate blur, but increase processing time.
 Shutter
    Duration of the motion blur in seconds, corresponding to the exposure time simulated for each frame.
 
@@ -40,9 +41,12 @@ Size Source
    Where to get the mask size from for aspect/size information.
 
    :Scene Size:
-      Will give an image the size of the render resolution for the scene, scaling along when rendering with different resolutions.
-   :Fixed: gives a fixed size in pixels.
-   :Fixed/Scene: gives a size in pixels that still scales along when changing the render resolution percentage in the scene.
+      Will give an image the size of the render resolution for the scene,
+      scaling along when rendering with different resolutions.
+   :Fixed:
+      Gives a fixed size in pixels.
+   :Fixed/Scene:
+      Gives a size in pixels that still scales along when changing the render resolution percentage in the scene.
 
 
 Outputs

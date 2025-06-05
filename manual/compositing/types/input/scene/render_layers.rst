@@ -47,5 +47,6 @@ Render pass sockets
 
 .. note::
 
-   The :ref:`viewport compositor <bpy.types.View3DShading.use_compositor>` only supports render passes when using EEVEE.
+   The :ref:`viewport compositor <bpy.types.View3DShading.use_compositor>`
+   only supports render passes when using EEVEE.
    For other engines, the passes will be empty.

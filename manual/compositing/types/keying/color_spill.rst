@@ -24,7 +24,8 @@ Image
    The input RGBA image to be processed.
 
 Fac
-   Blend factor for how strongly the node affects the image. A value of 1.0 fully applies the effect; lower values blend with the original.
+   Blend factor for how strongly the node affects the image.
+   A value of 1.0 fully applies the effect; lower values blend with the original.
 
 Limit Strength
    Specifies the limiting strength of the limit channel.
