@@ -161,7 +161,7 @@ def help_text_make_environment_variables(text: str) -> str:
         return "``" + x.group(1) + "``"
 
     # Now literal quote all environment variables.
-    re_env_var_quote = re.compile(r"\b({:s}\b)".format("|".join(env_vars)))
+    re_env_var_quote = re.compile(r"\b({:s})\b".format("|".join(env_vars)))
     text = re.sub(re_env_var_quote, re_env_var_quote_fn, text)
     return text
 
