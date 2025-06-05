@@ -65,7 +65,13 @@ def help_text_make_args_literal(text: str) -> str:
 def help_text_make_single_quotes_literal(text: str) -> str:
     re_table = (
         (
-            re.compile(r"(\s+)'([^\']+)'"),
+            re.compile(
+                # Be fairly relaxed about what is accepted before a `'`
+                # Space or open brackets is sufficient at the moment,
+                # other characters can be added if needed.
+                r"([\s\(\[\{]+)"
+                r"'([^\']+)'"
+            ),
             lambda x: x.group(1) + "``" + x.group(2) + "``",
         ),
         (
