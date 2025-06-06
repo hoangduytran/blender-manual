@@ -453,7 +453,6 @@ dict_custom = {
     "bullseye",
     "cinema4d",
     "cineon",
-    "collada",
     "cuda",
     "exiftool",
     "ffmpeg",

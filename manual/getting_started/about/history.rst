@@ -239,8 +239,8 @@ Version/Revision Milestones
    fixes.
 `2.64 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.64>`__ -- October 2012:
    A mask editor was added, along with an improved motion tracker, OpenColorIO, Cycles improvements, Sequencer
-   improvements, better mesh tools (Inset and Bevel were improved), new keying nodes, sculpt masking, Collada
-   improvements, a new Skin modifier, a new compositing nodes backend, and the fixing of many bugs.
+   improvements, better mesh tools (Inset and Bevel were improved), new keying nodes, sculpt masking,
+   COLLADA improvements, a new Skin modifier, a new compositing nodes backend, and the fixing of many bugs.
 `2.65 <https://archive.blender.org/wiki/2015/index.php/Dev:Ref/Release_Notes/2.65>`__ -- December 2012:
    Fire and smoke improvements, anisotropic shader for Cycles, modifier improvements, the Bevel tool now includes
    rounding, new add-ons, and over 200 bug fixes.

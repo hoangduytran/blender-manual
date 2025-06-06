@@ -21,7 +21,6 @@ these can be enabled in the Preferences through the use of :doc:`Add-ons </edito
    :maxdepth: 1
 
    alembic.rst
-   collada.rst
    usd.rst
    obj.rst
    ply.rst

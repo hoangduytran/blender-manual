@@ -347,7 +347,7 @@ Debug Options
    Enable all debug messages.
 
 ``--debug-io``
-   Enable debug messages for I/O (Collada, ...).
+   Enable debug messages for I/O.
 
 
 ``--debug-fpe``
