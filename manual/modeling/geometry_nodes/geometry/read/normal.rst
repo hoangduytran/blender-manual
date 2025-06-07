@@ -59,3 +59,6 @@ Outputs
 
 Normal
    Vector indicating the normal of each geometry element.
+
+True Normal
+   For meshes, outputs normals without :ref:`custom normals <modeling_meshes_normals_custom>` attributes taken into account.

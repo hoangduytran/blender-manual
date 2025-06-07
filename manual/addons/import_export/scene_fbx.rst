@@ -76,11 +76,11 @@ Include
 Import Normals
    .. todo:: Add this information.
 Import Subdivision Surface
-   .. todo:: Add this information.
+   Import FBX subdivision information as subdivision surface modifiers.
 Import User Properties
-   .. todo:: Add this information.
+   Import user properties as custom properties.
 Import Enums as Strings
-   .. todo:: Add this information.
+   Store custom property enumeration values as strings.
 Image Search
    .. todo:: Add this information.
 
@@ -89,12 +89,12 @@ Transform
 ^^^^^^^^^
 
 Scale
-   .. todo:: Add this information.
+   Value by which to scale the imported objects in relation to the world's origin.
 Decal Offset
    .. todo:: Add this information.
 Manual Orientation
    .. todo:: Add this information.
-Forward / Up Axis
+Forward / Up Axis.. todo:: Add this information.
    Since many applications use a different axis for 'Up', these are axis conversion for these settings,
    Forward and Up axes -- By mapping these to different axes you can convert rotations
    between applications default up and forward axes.
@@ -111,17 +111,15 @@ Use Pre/Post Rotation
 Animation
 ^^^^^^^^^
 
-.. todo:: Add this information.
-
 Animation Offset
-   .. todo:: Add this information.
+   Offset to apply to animation timestamps, in frames.
 
 
 Armature
 ^^^^^^^^
 
 Ignore Leaf Bones
-   .. todo:: Add this information.
+   Ignore the last bone at the end of each chain (used to mark the length of the previous bone).
 Force Connect Children
    .. todo:: Add this information.
 Automatic Bone Orientation

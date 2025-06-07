@@ -5,7 +5,7 @@
 Set Grease Pencil Depth Node
 ****************************
 
-.. figure:: /images/node-GeometryNodeSetGreasePencilDepth.webp
+.. figure:: /images/node-types_GeometryNodeSetGreasePencilDepth.webp
    :align: right
    :alt: Set Grease Pencil Depth Node.
 

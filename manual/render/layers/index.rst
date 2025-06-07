@@ -9,3 +9,4 @@
    introduction.rst
    view_layer.rst
    passes.rst
+   filter.rst

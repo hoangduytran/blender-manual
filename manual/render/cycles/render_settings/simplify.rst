@@ -102,4 +102,4 @@ Layer Tinting
 
 Anti-Aliasing
    Use :term:`Anti-Aliasing` to smooth stroke edges. The amount of anti-aliasing can be adjusted by
-   the :ref:`Anti-Aliasing Threshold <bpy.types.SceneGpencil.antialias_threshold>`.
+   the :ref:`SMAA Threshold <bpy.types.SceneGpencil.antialias_threshold>`.

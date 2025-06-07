@@ -5,7 +5,7 @@
 Set Grease Pencil Color Node
 ****************************
 
-.. figure:: /images/node-GeometryNodeSetGreasePencilColor.webp
+.. figure:: /images/node-types_GeometryNodeSetGreasePencilColor.webp
    :align: right
    :alt: Set Grease Pencil Color Node.
 

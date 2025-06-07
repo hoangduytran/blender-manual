@@ -19,6 +19,7 @@ Selection to Grid
    Snaps the currently selected object(s) to the nearest grid point.
 Selection to Cursor
    Moves each one of the currently selected object(s) to the cursor location.
+   Optionally, the selection can be rotated to match the cursor.
 Selection to Cursor (Offset)
    Places the selection at the position of the 3D cursor.
    If there are multiple objects selected, they are not moved individually at the cursor position;

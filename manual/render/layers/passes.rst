@@ -16,23 +16,21 @@ the depth map, and the normal map.
 These images can be accessed using the :doc:`/compositing/types/input/scene/render_layers`
 in the :doc:`/editors/compositor` and combined in a custom way that replaces the standard one.
 
+
 .. _render_layers_passes_data:
 
 Data
 ====
 
-Cycles
-------
-
 Include
    .. _bpy.types.ViewLayer.use_pass_combined:
 
-   Combined
+   Combined :guilabel:`Cycles`, :guilabel:`EEVEE`, :guilabel:`Workbench`
       The render output before any compositing is applied.
 
    .. _bpy.types.ViewLayer.use_pass_z:
 
-   Z
+   Z :guilabel:`Cycles`, :guilabel:`EEVEE`, :guilabel:`Workbench`
       Distance to the nearest visible surface.
       Can be used with the :doc:`/compositing/types/filter/blur/defocus`
       for a fake :term:`Depth of Field` effect.
@@ -44,7 +42,7 @@ Include
 
    .. _bpy.types.ViewLayer.use_pass_mist:
 
-   Mist
+   Mist :guilabel:`Cycles`, :guilabel:`EEVEE`
       Distance to the nearest visible surface, mapped to the 0.0 - 1.0 range.
       When enabled, settings become available in the
       :ref:`World tab <bpy.types.WorldMistSettings>`.
@@ -55,34 +53,49 @@ Include
 
    .. _bpy.types.ViewLayer.use_pass_position:
 
-   Position
+   Position :guilabel:`Cycles`, :guilabel:`EEVEE`
       Positions in world space.
 
    .. _bpy.types.ViewLayer.use_pass_normal:
 
-   Normal
+   Normal :guilabel:`Cycles`, :guilabel:`EEVEE`
       Surface normals in world space.
 
    .. _bpy.types.ViewLayer.use_pass_vector:
 
-   Vector
+   Vector :guilabel:`Cycles`, :guilabel:`EEVEE`
       Motion vectors for the :doc:`/compositing/types/filter/blur/vector_blur`.
       The four components consist of 2D vectors giving the screen-space motion
       based on the next and previous frames.
 
-      This pass is disabled when :doc:`/render/cycles/render_settings/motion_blur`
-      is enabled in the render settings.
+      This pass is disabled when :ref:`Motion Blur <bpy.types.RenderSettings.use_motion_blur>` is enabled.
 
    .. _bpy.types.ViewLayer.use_pass_uv:
 
-   UV
+   UV :guilabel:`Cycles`
       The UV coordinates within each object's
       :ref:`active UV map <bpy.types.MeshUVLoopLayer.active_render>`,
       represented through the red and green channels of the image.
       (The blue channel stores a constant value of 1 and does not hold any information.)
       Can be used with the :doc:`/compositing/types/transform/map_uv`.
 
-   Denoising Data
+   .. _bpy.types.ViewLayer.use_pass_grease_pencil:
+
+   Grease Pencil :guilabel:`Cycles`, :guilabel:`EEVEE`, :guilabel:`Workbench`
+      Outputs only the visible (non-occluded) strokes and fills from the
+      :doc:`Grease Pencil </grease_pencil/index>` engine into a separate image layer.
+
+      This pass is useful for compositing workflows where you want to isolate, enhance, or apply
+      effects to Grease Pencil elements separately from the rest of the render.
+
+      .. note::
+
+         For most scenes, blending this pass over the rest of the image
+         using an *Alpha Over* node will reproduce the *Combined* render result.
+         However, some blending modes in Grease Pencil can modify the chromaticity of the alpha channel.
+         In these cases, compositing the *Grease Pencil* pass separately can produce different results.
+
+   Denoising Data :guilabel:`Cycles`
       Includes *Denoising Albedo*, *Denoising Normal*, and the combined image
       before denoising. Can be used with the :doc:`/compositing/types/filter/denoise`
       as a replacement for :ref:`automatic denoising <render-cycles-settings-viewport-denoising>`.
@@ -90,14 +103,14 @@ Include
 Indexes
    .. _bpy.types.ViewLayer.use_pass_object_index:
 
-   Object Index
+   Object Index :guilabel:`Cycles`
       A map where each pixel stores the user-defined ID of the object at that pixel.
       This map can be converted into a mask for a particular object using the
       :doc:`/compositing/types/mask/id_mask`.
 
    .. _bpy.types.ViewLayer.use_pass_material_index:
 
-   Material Index
+   Material Index :guilabel:`Cycles`
       A map where each pixel stores the user-defined ID of the material at that pixel.
       This map can be converted into a mask for a particular material using the
       ID Mask Node.
@@ -105,47 +118,17 @@ Indexes
 .. note:: The Z, Position, Object Index, and Material Index passes are not anti-aliased.
 
 Debug
-   Sample Count
+   Sample Count :guilabel:`Cycles`
       Number of samples calculated for each pixel, divided by the maximum number of samples.
       Used to analyze :ref:`adaptive sampling <bpy.types.CyclesRenderSettings.use_adaptive_sampling>`.
 
 .. _bpy.types.ViewLayer.pass_alpha_threshold:
 
-Alpha Threshold
+Alpha Threshold :guilabel:`Cycles`
    The Z, Position, Normal, Vector, UV, and Index passes are only affected by surfaces with an opacity
    equal to or higher than this threshold. With value 0.0, the first surface hit will always write to these passes
    regardless of opacity. With higher values, surfaces that are mostly transparent will be skipped until
    an opaque surface is encountered.
-
-
-EEVEE
------
-
-Include
-   Combined
-      The render output before any compositing is applied.
-   Z
-      Distance to the nearest visible surface.
-      Can be used with the :doc:`/compositing/types/filter/blur/defocus`
-      for a fake :term:`Depth of Field` effect.
-   Mist
-      Distance to the nearest visible surface, mapped to the 0.0 - 1.0 range.
-      When enabled, settings are in the :ref:`World tab <bpy.types.WorldMistSettings>`.
-
-      This pass can be used to fade out objects that are farther away.
-      An alternative is using the *Volume* slot of the
-      :doc:`World Output </render/shader_nodes/output/world>` shading node.
-   Normal
-      Surface normal in world space.
-   Position
-      Position in world space.
-   Vector
-      Motion vectors for the :doc:`/compositing/types/filter/blur/vector_blur`.
-      The four components consist of 2D vectors giving the screen-space motion
-      based on the next and previous frames.
-
-      This pass is disabled when :doc:`/render/eevee/render_settings/motion_blur`
-      is enabled in the render settings.
 
 
 Light
