@@ -82,7 +82,23 @@ Include
       (The blue channel stores a constant value of 1 and does not hold any information.)
       Can be used with the :doc:`/compositing/types/transform/map_uv`.
 
-   Denoising Data
+   .. _bpy.types.ViewLayer.use_pass_grease_pencil:
+
+   Grease Pencil :guilabel:`Cycles`, :guilabel:`EEVEE`, :guilabel:`Workbench`
+      Outputs only the visible (non-occluded) strokes and fills from the
+      :doc:`Grease Pencil </grease_pencil/index>` engine into a separate image layer.
+
+      This pass is useful for compositing workflows where you want to isolate, enhance, or apply
+      effects to Grease Pencil elements separately from the rest of the render.
+
+      .. note::
+
+         For most scenes, blending this pass over the rest of the image
+         using an *Alpha Over* node will reproduce the *Combined* render result.
+         However, some blending modes in Grease Pencil can modify the chromaticity of the alpha channel.
+         In these cases, compositing the *Grease Pencil* pass separately can produce different results.
+
+   Denoising Data :guilabel:`Cycles`
       Includes *Denoising Albedo*, *Denoising Normal*, and the combined image
       before denoising. Can be used with the :doc:`/compositing/types/filter/denoise`
       as a replacement for :ref:`automatic denoising <render-cycles-settings-viewport-denoising>`.
