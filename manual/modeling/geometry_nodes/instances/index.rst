@@ -27,6 +27,7 @@ Nodes that only operate on instances.
 .. toctree::
    :maxdepth: 1
 
+   instance_bounds.rst
    instance_transform.rst
    instance_rotation.rst
    instance_scale.rst
