@@ -130,6 +130,25 @@ Custom split normal data is stored as the ``custom_normal``
    This option can be found in the :ref:`Simplify Rendering Settings <bpy.types.RenderSettings.use_simplify_normals>`.
 
 
+Free Normals
+^^^^^^^^^^^^
+
+Free normals are a type of custom normal stored directly as direction vectors in object space.
+Unlike traditional custom normals, which are defined relative to the surrounding geometry
+(known as tangent or corner fan space),
+free normals are independent of mesh topology and do not rely on smooth groups or edge connectivity.
+
+Because they are simple vectors, free normals are:
+
+- Efficient: Fast to evaluate, significantly improving viewport performance compared to tangent space normals.
+- Lightweight: Require less memory, especially beneficial for dense or heavily instanced meshes.
+- Static: They do not automatically update when the mesh is deformed (e.g. through modifiers or animations),
+  so they are best suited for static geometry or cases where performance is critical.
+
+Free normals can be assigned using the :doc:`/modeling/geometry_nodes/mesh/write/set_mesh_normal` in Free mode,
+and stored on the vertex, face, or face corner domain depending on the desired granularity.
+
+
 Editing Custom Split Normals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
