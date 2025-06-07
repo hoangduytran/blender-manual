@@ -7,10 +7,30 @@ Grease Pencil
 
    :Panel:     :menuselection:`Render --> Grease Pencil`
 
-This panel is comprised of settings to control the rendering of :doc:`Grease Pencil Lines </grease_pencil/index>`.
+This panel contains settings that control the rendering of :doc:`Grease Pencil lines </grease_pencil/index>`.
+
+
+Viewport
+========
 
 .. _bpy.types.SceneGpencil.antialias_threshold:
 
-Anti-Aliasing Threshold
-   Threshold for the edge detection algorithm used to correct aliasing,
-   higher values might over blur some part of the image.
+SMAA Threshold
+   Threshold for the edge detection algorithm used to correct aliasing for the 3D Viewport,
+   Higher values may result in loss of detail due to excessive blurring.
+
+
+Render
+======
+
+.. _bpy.types.SceneGpencil.antialias_threshold_render:
+
+SMAA Threshold
+   Threshold for the edge detection algorithm used to correct aliasing for the final render,
+   Higher values may result in loss of detail due to excessive blurring.
+
+.. _bpy.types.SceneGpencil.aa_samples:
+
+SMAA Samples
+   Number of samples used for super-sampling anti-aliasing in the final render.
+   Higher values produce smoother lines but increase render time.
