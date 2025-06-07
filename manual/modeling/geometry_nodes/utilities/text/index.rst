@@ -9,6 +9,7 @@ Nodes to manipulate strings.
    :maxdepth: 1
 
    join_strings.rst
+   match_string.rst
    replace_string.rst
    slice_string.rst
    special_characters.rst
