@@ -215,7 +215,7 @@ Included in this library are:
 
 .. _asset-system-files:
 
-Asset System Files (`.asset.blend` Extention)
+Asset System Files (`.asset.blend` Extension)
 =============================================
 
 Some types of assets can be edited without having to open a blend-file inside of an asset library.
