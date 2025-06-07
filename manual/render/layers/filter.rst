@@ -26,9 +26,14 @@ Include
    Volume :guilabel:`Cycles`, :guilabel:`EEVEE`
       Disables rendering :doc:`Volumes </modeling/volumes/index>` in the final render.
 
+   .. _bpy.types.ViewLayer.use_grease_pencil:
+
+   Grease Pencil :guilabel:`Cycles`, :guilabel:`EEVEE`
+      Render Grease Pencil objects on current layer
+
 .. _bpy.types.ViewLayer.use_motion_blur:
 
 Use
    Motion Blur :guilabel:`Cycles`, :guilabel:`EEVEE`
-      Render motion blur for this Layer,
+      Render motion blur for current layer,
       if enabled in the :ref:`Render Settings <bpy.types.RenderSettings.use_motion_blur>`.
