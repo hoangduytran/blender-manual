@@ -163,7 +163,7 @@ Lights
    Import lights as :doc:`Light Objects </render/lights/index>`. Does not currently include cylinder or geometry
    lights.
 World Dome Light
-   Converts the first discovered ``UsdLuxDomeLight`` dome light to a
+   Converts the first discovered ``UsdLuxDomeLight`` or ``UsdLuxDomeLight_1`` dome light into a
    :doc:`world background shader </render/lights/world>`.
 Materials
    Import `UsdPreviewSurface <https://openusd.org/release/spec_usdpreviewsurface.html>`__ materials.
@@ -175,7 +175,8 @@ Point Clouds
    Import ``UsdGeomPoints`` primitives as :doc:`Point Cloud Objects </modeling/point_cloud/index>`.
 USD Shapes
    Import USD primitive shapes as Blender meshes.
-   ``UsdGeomCapsule``, ``UsdGeomCylinder``, ``UsdGeomCone``, ``UsdGeomCube``, and ``UsdGeomSphere`` are supported.
+   ``UsdGeomCapsule``, ``UsdGeomCapsule_1``, ``UsdGeomCone``, ``UsdGeomCube``, ``UsdGeomCylinder``,
+   ``UsdGeomCylinder_1``, ``UsdGeomPlane``, and ``UsdGeomSphere`` are supported.
 
 `Display Purpose <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Purpose>`__
    Render
@@ -599,11 +600,23 @@ Particles
    Objects instanced by particle system are exported by suffixing the object name with
    the particle's persistent ID, giving each particle transform a unique name.
 
+Geometry Node Modifiers
+   When using Geometry Nodes, the node graph must output only the geometry components matching the
+   original object type. For example, to correctly export a Mesh that uses a geometry nodes
+   modifier, the output of the modifier must only contain Mesh data. Similarly, a Curves object
+   must only output Curves data and so on. If the output contains any non-matching component types
+   then an incorrect export will result. Using the
+   :doc:`/modeling/geometry_nodes/geometry/operations/separate_components` is one way to ensure
+   that only the components you want are exported.
+
 Instancing/Referencing
-   This is still an experimental feature that can be enabled when exporting to USD.
-   When enabled, instanced object meshes are written to USD as references to the original mesh.
-   The first copy of the mesh is written for real, and the following copies are referencing the first.
-   Which mesh is considered 'the first' is chosen more or less arbitrarily.
+   Point instancing, created with Geometry Nodes, is not supported. Consider using a
+   :doc:`/modeling/geometry_nodes/instances/realize_instances` if possible.
+
+   Scene instancing, created with instanced Collections or Objects, is supported as an experimental
+   feature that can be enabled when exporting to USD. When enabled, instanced object data is
+   written to USD as references to the original. Supported object types include Mesh, Curves, and
+   Point Clouds.
 
 USDZ
    Due to a current limitation in the USD library, UDIM textures cannot be include in the USDZ archive.
