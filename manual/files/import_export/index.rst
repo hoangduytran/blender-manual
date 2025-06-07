@@ -26,6 +26,7 @@ these can be enabled in the Preferences through the use of :doc:`Add-ons </edito
    obj.rst
    ply.rst
    stl.rst
+   fbx.rst
    grease_pencil_svg.rst
    grease_pencil_pdf.rst
 
