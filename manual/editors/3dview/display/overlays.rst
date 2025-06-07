@@ -412,6 +412,11 @@ Onion Skin
    ghosts of the selected keyframes are shown instead.
    See :doc:`/grease_pencil/properties/onion_skinning`.
 
+.. _bpy.types.View3DOverlay.use_gpencil_onion_skin_active_object:
+
+Active Object Only
+   Show only the onion skins of the active object.
+
 .. _bpy.types.View3DOverlay.use_gpencil_fade_layers:
 .. _bpy.types.View3DOverlay.gpencil_fade_layer:
 
