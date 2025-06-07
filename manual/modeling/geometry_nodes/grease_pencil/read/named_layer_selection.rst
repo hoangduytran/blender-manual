@@ -5,7 +5,7 @@
 Named Layer Selection Node
 **************************
 
-.. figure:: /images/node-GeometryNodeInputNamedLayerSelection.webp
+.. figure:: /images/node-types_GeometryNodeInputNamedLayerSelection.webp
    :align: right
    :alt: Named Layer Selection Node.
 
