@@ -5,7 +5,7 @@
 Match String Node
 *****************
 
-.. figure:: /images/node-types_GeometryNodeMatchString.webp
+.. figure:: /images/node-types_FunctionNodeMatchString.webp
    :align: center
    :alt: Match String node.
 
