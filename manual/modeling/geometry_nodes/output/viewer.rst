@@ -30,7 +30,7 @@ Using :kbd:`Shift-Ctrl-LMB` on any node or socket connects it to the viewer and 
 Using the same shortcut on empty space in the node editor makes deactivates the active viewer.
 When the active viewer is not visible anymore (e.g. another object is selected, or the current
 node group is exited), it is deactivated. The icon in the viewer node header can also be used
-to activate and deactivate it.
+to :bl-icon:`restrict_view_off` activate and :bl-icon:`restrict_view_on` deactivate it.
 
 .. _bpy.types.SpaceView3D.show_viewer:
 
