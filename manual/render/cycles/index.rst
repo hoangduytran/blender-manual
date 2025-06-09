@@ -20,3 +20,4 @@
    baking.rst
    optimizations/index.rst
    osl/index.rst
+   osl/camera.rst

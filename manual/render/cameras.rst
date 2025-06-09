@@ -93,8 +93,16 @@ Orthographic
          :width: 50%
 
 Panoramic
-   Panoramic cameras only work in Cycles. See the Cycles
-   :ref:`panoramic camera <bpy.types.Camera.panorama_type>` settings for more information.
+   :guilabel:`Cycles Only`
+
+   This type covers a variety of panoramic projections.
+   See the Cycles :ref:`panoramic camera <bpy.types.Camera.panorama_type>` settings for more information.
+
+Custom
+   :guilabel:`Cycles Only`
+
+   Custom cameras enable user-defined behavior through the use of OSL code.
+   See the :doc:`Cycles custom camera documentation </render/cycles/osl/camera>` for more information.
 
 Shift
    Allows for the adjustment of *vanishing points*.
