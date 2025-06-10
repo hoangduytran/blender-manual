@@ -1,4 +1,3 @@
-.. |specials-button| image:: /images/interface_controls_buttons_menus_specials.png
 .. _bpy.types.RenderLayer:
 
 ******
@@ -378,7 +377,7 @@ Name
 Light Group Sync
 ----------------
 
-These operators are available from the |specials-button| button to the right of the
+These operators are available from the :bl-icon:`downarrow_hlt` button to the right of the
 Light Group list.
 
 .. _bpy.ops.scene.view_layer_add_used_lightgroups:

@@ -185,14 +185,13 @@ Edit Translation
    For UI development -- Points at the translation code line.
 
 
-.. |specials-button| image:: /images/interface_controls_buttons_menus_specials.png
 .. _ui-specials-menu:
 
 Specials Menu
 =============
 
 The Specials pop-up menu is similar to a context menu, but is opened
-using a button consisting of a down arrow on a dark background |specials-button|.
+using the :bl-icon:`downarrow_hlt` button.
 
 
 .. _bpy.types.UIPieMenu:
