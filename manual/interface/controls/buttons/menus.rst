@@ -185,15 +185,6 @@ Edit Translation
    For UI development -- Points at the translation code line.
 
 
-.. _ui-specials-menu:
-
-Specials Menu
-=============
-
-The Specials pop-up menu is similar to a context menu, but is opened
-using the :bl-icon:`downarrow_hlt` button.
-
-
 .. _bpy.types.UIPieMenu:
 
 Pie Menus

@@ -42,7 +42,7 @@ Above the curve graph is a row of controls. These are:
    You cannot zoom out further than the clipping region (see *Clipping* below).
 
 :bl-icon:`downarrow_hlt` Specials
-   A :ref:`Specials <ui-specials-menu>` menu with operators to edit control points or to set properties.
+   A menu with operators to edit control points or to set properties.
 
    Reset View
       Resets the view of the curve.
