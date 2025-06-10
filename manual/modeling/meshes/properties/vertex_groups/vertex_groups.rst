@@ -104,5 +104,10 @@ Select
 Deselect
    To deselect all vertices contained in the group.
 
+.. _bpy.types.ToolSettings.vertex_group_weight:
+
 Weight
    The weight value that gets assigned to the selected vertices.
+
+Auto Normalize
+   Ensure all bone-deforming vertex groups add up to 1.0 while weight painting or assigning to vertices.
