@@ -106,6 +106,3 @@ Deselect
 
 Weight
    The weight value that gets assigned to the selected vertices.
-
-Set Active Group
-   Lets you select the group that will become the active one (menu only).
