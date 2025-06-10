@@ -146,6 +146,13 @@ These options are not available with all :ref:`Containers <files-video-container
    See :ref:`Containers <files-video-containers>`.
 :`MPEG-4(DivX) <https://en.wikipedia.org/wiki/MPEG-4>`__:
    Inherits many of the features of MPEG-1, MPEG-2 and other related standards, but also adds new features.
+:`ProRes <https://en.wikipedia.org/wiki/Apple_ProRes>`__:
+   A high-quality, visually lossless video codec developed by Apple Inc.
+   It is commonly used in professional post-production workflows.
+
+   ProRes output supports a configurable :ref:`Profile <bpy.types.FFmpegSettings.ffmpeg_prores_profile>`
+   to control the quality, compression level, and data rate of the encoded video.
+
 :`PNG <https://en.wikipedia.org/wiki/Portable_Network_Graphics>`__:
    Lossless, this stores each frame as an independent image in the video stream.
    Compression will be poor, but as every frame is fully self-contained, scrubbing and editing can be simpler.
