@@ -65,14 +65,24 @@ Display Stretch
 Geometry
 ========
 
+.. _bpy.types.SpaceUVEditor.show_uv:
+
+Display UVs
+   Show the active UV map as an overlay in the UV Editor.
+
+.. _bpy.types.SpaceUVEditor.uv_face_opacity:
+
+UV Face Opacity
+   Adjust the opacity of face fill colors in UV overlays.
+
 .. _bpy.types.SpaceUVEditor.uv_opacity:
 
-UV Opacity
+UV Opacity :guilabel:`Edit Mode`
    Opacity of edges and faces.
 
 .. _bpy.types.SpaceUVEditor.edge_display_type:
 
-Display As
+Display As :guilabel:`Edit Mode`
    Control how edges are shown.
 
    :Outline: Display edges in gray with a black outline.
@@ -82,12 +92,12 @@ Display As
 
 .. _bpy.types.SpaceUVEditor.show_modified_edges:
 
-Modified Edges
+Modified Edges :guilabel:`Edit Mode`
    Additionally show the edges as they look after applying modifiers (in gray).
 
 .. _bpy.types.SpaceUVEditor.show_faces:
 
-Faces
+Faces :guilabel:`Edit Mode`
    Display faces over the image.
 
 

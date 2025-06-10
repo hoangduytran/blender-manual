@@ -45,6 +45,6 @@ On the right of the list view are list modification buttons:
 :bl-icon:`remove` (Remove)
    Removes the selected item.
 :bl-icon:`downarrow_hlt` (Specials)
-   A :ref:`Specials <ui-specials-menu>` menu with operators to edit list entries.
+   A menu with operators to edit list entries.
 Move (up/down arrow icon)
    Moves the selected item up/down one position.

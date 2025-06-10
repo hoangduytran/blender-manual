@@ -74,7 +74,7 @@ Solver
       when there are coplanar faces or other overlapping geometry;
       however, this solver is much slower.
    :Manifold:
-      Uses a solver that is usually fastest but only works on manifold meshes,
+      Uses a solver that is usually fastest but only works on :term:`Manifold` meshes,
       (plus the special case of Difference with a plane).
 
 
