@@ -113,6 +113,9 @@ Solver
       Uses a mathematically complex solver which offers the best results and has full
       support for overlapping geometry; however, this solver is much slower than the
       *Fast Solver*.
+   :Manifold:
+      Uses a solver that is usually fastest but only works on :term:`Manifold` meshes,
+      (plus the special case of Difference with a plane).
 
 Trim Mode
    Geometry can be either added or removed by choosing one of these modes.
