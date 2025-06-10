@@ -194,6 +194,30 @@ Color Depth
 
       *Available for H.265 and AV1 codecs.*
 
+.. _bpy.types.FFmpegSettings.ffmpeg_prores_profile:
+
+Profile :guilabel:`ProRes`
+   Determines the quality, compression, and data rate of the encoded video.
+
+   :ProRes 422 Proxy:
+      Lowest data rate and quality.
+      Useful for offline editing or situations where storage and speed are critical.
+   :ProRes 422 LT:
+      Lower data rate than standard ProRes 422 with reasonable quality.
+      Suitable for editing and draft reviews.
+   :ProRes 422:
+      Standard quality with good balance between image fidelity and file size.
+      Recommended for general workflows.
+   :ProRes 422 HQ:
+      Higher quality and data rate than standard ProRes 422.
+      Preferred for broadcast and high-end post-production.
+   :ProRes 4444:
+      Supports full-resolution RGB and alpha channels.
+      Suitable for compositing and visual effects pipelines.
+   :ProRes 4444 XQ:
+      Highest quality ProRes format.
+      Maintains maximum color detail and dynamic range, ideal for color grading and VFX.
+
 .. _bpy.types.FFmpegSettings.constant_rate_factor:
 
 Output Quality
