@@ -25,8 +25,8 @@ Separate Mode
 Solver
    Algorithm used to calculate the intersections.
 
-   :Fast:
-      Uses a mathematically simple solver which offers the best performance;
+   :Float:
+      Uses a simple solver which offers the good performance;
       however, this solver lacks support for overlapping geometry.
 
       Merge Threshold
@@ -40,6 +40,5 @@ Solver
             in general keep this value small.
 
    :Exact:
-      Uses a mathematically complex solver which offers the best results
-      and has full support for overlapping geometry;
-      however, this solver is much slower than the *Fast Solver*.
+      Uses a complex solver which offers the best results and has full
+      support for overlapping geometry; however, this solver is much slower.

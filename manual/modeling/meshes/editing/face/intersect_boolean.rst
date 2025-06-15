@@ -39,8 +39,8 @@ Boolean Operation
 Solver
    Algorithm used to perform the Boolean operation.
 
-   :Fast:
-      Uses a mathematically simple solver which offers the best performance;
+   :Float:
+      Uses a simple solver which offers the good performance;
       however, this solver lacks support for overlapping geometry.
 
       Merge Threshold
@@ -54,9 +54,8 @@ Solver
             In general, keep this value small.
 
    :Exact:
-      Uses a mathematically complex solver which offers the best results
-      and has full support for overlapping geometry;
-      however, this solver is much slower than the *Fast* solver.
+      Uses a complex solver which offers the best results and has full
+      support for overlapping geometry; however, this solver is much slower.
 
 Swap
    When using *Difference*, cut the unselected geometry out of the selected geometry instead
