@@ -11,7 +11,7 @@ Clay
 Similar to the :doc:`Draw </sculpt_paint/sculpting/brushes/draw>` brush,
 but includes settings to adjust the :ref:`sculpt plane <bpy.types.Brush.sculpt_plane>`
 on which the brush acts. That's because it behaves like a combination of the
-:doc:`Flatten </sculpt_paint/sculpting/brushes/flatten>` and *Draw* brushes.
+:doc:`Plane </sculpt_paint/sculpting/brushes/plane>` and *Draw* brushes.
 
 This brush is useful for building and removing volumes and shapes like real clay,
 because it flattens details as you add/subtract from the surfaces.

@@ -17,7 +17,7 @@ The inner ring of the brush cursor is used to visualize the strength of the brus
     How closely the cursor follows the curvature of the mesh can be changed in
     the :doc:`Brush Settings </sculpt_paint/sculpting/tool_settings/brush_settings>` with "Normal Radius".
     This can make hard surface sculpting easier, for example with the
-    :doc:`Scrape </sculpt_paint/sculpting/brushes/scrape>` brush.
+    :doc:`Plane </sculpt_paint/sculpting/brushes/plane>` brush.
 
 The brush is also used for other :doc:`tools </sculpt_paint/sculpting/tools/index>` in the toolbar
 to better display how that tool works. For example, the :ref:`Box Trim <tool-box-trim>`
@@ -47,7 +47,7 @@ More information on sculpting brushes in the :doc:`Toolbar </sculpt_paint/sculpt
     Generic adding and subtracting on surfaces.
     This brush is often customized with different stroke methods and textures for various effects.
 
-:doc:`Scrape </sculpt_paint/sculpting/brushes/scrape>`
+:doc:`Plane </sculpt_paint/sculpting/brushes/plane>`
     Scrape and fill surfaces either for hard surface sculpting or more aggressive smoothing.
 
 :doc:`Inflate </sculpt_paint/sculpting/brushes/inflate>`
