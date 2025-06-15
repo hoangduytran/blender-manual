@@ -64,6 +64,11 @@ Shape Key Specials
       This differs from the :bl-icon:`add` button of the list, as that one always copies
       the Basis shape independently of the current mix.
 
+   .. _bpy.ops.object.shape_key_copy:
+
+   Duplicate Shape Key
+      Creates a copy of the active shape key.
+
    .. _bpy.ops.object.shape_key_mirror:
 
    Mirror Shape Key

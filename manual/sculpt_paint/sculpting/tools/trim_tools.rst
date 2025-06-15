@@ -106,13 +106,12 @@ Tool Settings
 Solver
    Algorithm used to calculate the Boolean intersections.
 
-   :Fast:
-      Uses a mathematically simple solver which offers the best performance;
-      however, this solver lacks support for overlapping geometry.
    :Exact:
-      Uses a mathematically complex solver which offers the best results and has full
-      support for overlapping geometry; however, this solver is much slower than the
-      *Fast Solver*.
+      Uses a complex solver which offers the best results and has full
+      support for overlapping geometry; however, this solver is much slower.
+   :Float:
+      Uses a simple solver which offers the good performance;
+      however, this solver lacks support for overlapping geometry.
    :Manifold:
       Uses a solver that is usually fastest but only works on :term:`Manifold` meshes,
       (plus the special case of Difference with a plane).

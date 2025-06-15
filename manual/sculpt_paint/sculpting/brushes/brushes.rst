@@ -91,31 +91,31 @@ Smooth
    An essential brush that is frequently used.
 
 Flatten/Contrast
-   Brush Type: :doc:`flatten`
+   Brush Type: :doc:`plane`
 
    Pushes vertices to an average height to create a flat surfaces. Alternatively pushes them away from the center for
    more contrast.
 
 Plateau
-   Brush Type: :doc:`flatten`
+   Brush Type: :doc:`plane`
 
    Similar to Flatten but with a locked orientation and depth to create a consistently flat surface.
 
 Fill/Deepen
-   Brush Type: :doc:`fill`
+   Brush Type: :doc:`plane`
 
    Pushes surfaces upwards towards a flat plane. Useful for filling in holes and crevices. Alternatively deepens
    existing holes when holding 'Ctrl'.
 
 Scrape/Fill
-   | Brush Type: :doc:`scrape`
+   | Brush Type: :doc:`plane`
    | Shortcut:  :kbd:`Shift T`
 
    Pushes surfaces inwards. Alternatively fills surfaces while holding 'Ctrl'. This is the most common brush for
    flattening meshes.
 
 Trim
-   Brush Type: :doc:`scrape`
+   Brush Type: :doc:`plane`
 
    Pushes surfaces inwards toward a locked direction. The depth can be defined by going deeper towards surfaces along
    the stroke.

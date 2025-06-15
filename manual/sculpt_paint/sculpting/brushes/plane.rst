@@ -8,12 +8,13 @@ Plane
    :Mode:      Sculpt Mode
    :Brush:     :menuselection:`Sidebar --> Tool --> Brush Settings --> Advanced --> Brush Type`
 
-Moves vertices toward the brush plane, along the plane normal.
-Generalizes the functionality of the :doc:`/sculpt_paint/sculpting/brushes/flatten`,
-:doc:`/sculpt_paint/sculpting/brushes/fill`,
-and :doc:`/sculpt_paint/sculpting/brushes/scrape` brush types,
-allowing control of the range of influence above and below the brush plane through the *Height* and
-*Depth* parameters.
+Moves vertices toward or away from the brush plane along its normal direction.
+
+The *Plane* brush flattens geometry to a virtual plane
+or raises the surface relative to it, depending on brush settings.
+The *Height* and *Depth* parameters control the range of influence above and below the plane,
+allowing precise shaping of flat surfaces or plateaus.
+
 
 Brush Settings
 ==============

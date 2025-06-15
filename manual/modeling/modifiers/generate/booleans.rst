@@ -66,13 +66,12 @@ Collection
 Solver
    Algorithm used to perform the Boolean operation.
 
-   :Fast:
-      Uses a mathematically simple solver which offers the good performance;
+   :Float:
+      Uses a simple solver which offers the good performance;
       however, this solver lacks support for overlapping geometry.
    :Exact:
-      Uses a mathematically complex solver which offers the best results
-      when there are coplanar faces or other overlapping geometry;
-      however, this solver is much slower.
+      Uses a complex solver which offers the best results and has full
+      support for overlapping geometry; however, this solver is much slower.
    :Manifold:
       Uses a solver that is usually fastest but only works on :term:`Manifold` meshes,
       (plus the special case of Difference with a plane).
