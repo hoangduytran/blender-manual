@@ -19,7 +19,7 @@ Enabling Add-on
 This add-on is enabled by default, in case it is not:
 
 #. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "BioVision Motion Capture (BVH) format" and check the *Enable Extension* checkbox.
+#. Search "BioVision Motion Capture (BVH) format" and check the *Enable Add-on* checkbox.
 
 
 Properties

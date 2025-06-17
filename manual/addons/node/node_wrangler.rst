@@ -16,7 +16,7 @@ Enabling Add-on
 ===============
 
 #. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "Node Wrangler" and check the *Enable Extension* checkbox.
+#. Search "Node Wrangler" and check the *Enable Add-on* checkbox.
 
 
 Usage

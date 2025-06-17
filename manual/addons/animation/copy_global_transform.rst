@@ -17,7 +17,7 @@ Enabling Add-on
 ===============
 
 #. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "Copy Global Transform" and check the *Enable Extension* checkbox.
+#. Search "Copy Global Transform" and check the *Enable Add-on* checkbox.
 
 
 Interface

@@ -16,7 +16,7 @@ Enabling Add-on
 ===============
 
 #. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "VR Scene Inspection" and check the *Enable Extension* checkbox.
+#. Search "VR Scene Inspection" and check the *Enable Add-on* checkbox.
 
 
 Interface

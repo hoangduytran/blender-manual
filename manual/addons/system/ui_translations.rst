@@ -10,7 +10,7 @@ Enabling Add-on
 ===============
 
 #. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "Manage UI Translations" and check the *Enable Extension* checkbox.
+#. Search "Manage UI Translations" and check the *Enable Add-on* checkbox.
 
 
 Description
