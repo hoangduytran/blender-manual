@@ -526,14 +526,6 @@ Add Multiple Images
 Select multiple images and add a node for each image.
 (Useful for importing multiple render passes or renders for image stacking.)
 
-
-.. seealso::
-
-   Please see the
-   `old Wiki <https://archive.blender.org/wiki/2015/index.php/Extensions:2.6/Py/Scripts/Nodes/Nodes_Efficiency_Tools/>`__
-   for the archived original docs.
-
-
 .. reference::
 
    :Category: Node
