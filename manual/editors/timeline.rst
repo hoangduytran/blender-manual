@@ -46,7 +46,7 @@ Playhead
 The *Playhead* is the blue vertical line showing the current frame number.
 
 It can be moved to a new position by clicking or
-dragging :kbd:`LMB` in the scrubbing area at the top or by 
+dragging :kbd:`LMB` in the scrubbing area at the top or by
 click and drag :kbd:`Shift-RMB` anywhere in the timeline.
 
 While dragging it can snap to elements of the editor in which it is dragged.
@@ -62,12 +62,12 @@ Snapping can be toggled during scrubbing by holding down :kbd:`Ctrl`.
 
 Snapping to seconds or frames can have a custom increment for example snapping to every third frame.
 This is always relative to the first frame of the scene and ignores the preview range.
-In contrast to the other snapping options, seconds and frames will always snap to the closest position, 
+In contrast to the other snapping options, seconds and frames will always snap to the closest position,
 regardless of the snap distance set. When mixing options, the system will first try to snap to
 elements that are snapped by distance. Only if no element is close enough will it snap to seconds or frames.
 
 You can also move it in single-frame increments by pressing :kbd:`Left` or :kbd:`Right` or :kbd:`Alt-Wheel`.
-To jump to the beginning or end frame (of the ends of the preview range if that is active) 
+To jump to the beginning or end frame (of the ends of the preview range if that is active)
 press :kbd:`Shift-Left` or :kbd:`Shift-Right`.
 
 
@@ -366,6 +366,10 @@ within an animation. Like in most animation editors, they're shown at the bottom
 For descriptions of the different marker tools, see :ref:`Editing Markers <animation-markers-editing>`.
 
 
+.. _bpy.ops.screen.frame_jump:
+.. _bpy.ops.screen.keyframe_jump:
+.. _bpy.ops.screen.animation_play:
+
 Transport Controls
 ------------------
 
@@ -395,9 +399,14 @@ Pause :bl-icon:`pause` :kbd:`Spacebar`
 Frame Controls
 --------------
 
+.. _bpy.types.Scene.frame_current:
+
 Current Frame :kbd:`Alt-Wheel`
    The number of the frame that's currently being displayed in the 3D Viewport.
    This is also the location of the Playhead.
+
+.. _bpy.types.Scene.use_preview_range:
+
 Use Preview Range :bl-icon:`preview_range`
    The Preview Range is an alternative Frame Range that you can use for focusing on a
    particular part of the animation. It lets you repeatedly play a short segment without
@@ -408,5 +417,9 @@ Use Preview Range :bl-icon:`preview_range`
    The boundaries of the Preview Range are shown in dark orange. You can quickly configure
    and enable it by pressing :kbd:`P` and dragging a box. To disable it,
    you can press :kbd:`Alt-P`.
-Start/End Frame
+
+.. _bpy.types.Scene.frame_start:
+.. _bpy.types.Scene.frame_end:
+
+Start, End
    The start/end frame of the scene (or the preview range, if active).
