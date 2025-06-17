@@ -32,6 +32,11 @@ which are geared towards particular tasks (modeling, animating and so on).
    while the cursor is still in the Outliner, nothing would happen as the shortcut isn't valid there;
    you first need to move your cursor to the 3D Viewport.
 
+.. tip::
+
+   The size of the border around areas can be adjusted in the
+   user preferences with :ref:`Border Width <bpy.types.PreferencesView.border_width>`.
+
 
 .. _bpy.ops.screen.area_move:
 
@@ -46,10 +51,7 @@ Resizing
 You can resize areas by dragging their borders with :kbd:`LMB`.
 Move your mouse cursor over the border between two areas,
 so that the cursor changes to a double-headed arrow, and then click and drag.
-
-.. tip::
-
-   Hold :kbd:`Ctrl` to snap the size of areas to convenient sizes.
+Hold :kbd:`Ctrl` to snap the size of areas to convenient sizes.
 
 
 Docking

@@ -73,6 +73,7 @@ Shape Key Specials
 
    Mirror Shape Key
       If your mesh is symmetrical, in *Object Mode*, you can mirror the shape keys on the X axis.
+
       This will not work unless the mesh vertices are perfectly symmetrical.
       Use the :menuselection:`Mesh --> Symmetrize` tool in *Edit Mode*.
 
@@ -82,22 +83,25 @@ Shape Key Specials
 
    .. _bpy.ops.object.join_shapes:
 
-   Join as Shapes (Transfer Mix)
-      Transfer the current resulting shape from a different object.
+   Join as Shapes
+      Add the vertex positions of selected objects as shape keys
+      or update existing shape keys with matching names.
 
-      Select the object to copy, then the object to copy into.
-      Use this action and a new shape key will be added to the active object
-      with the current mix of the first object.
+      To use, select the object to join from, then the object to join into, then perform the operation.
+
+   .. _bpy.ops.object.update_shapes:
+
+   Update from Objects
+      Update existing shape keys with the vertex positions of selected objects with matching names.
+
+      To use, select the object to update from, then the object to update into, then perform the operation.
 
    .. _bpy.ops.object.shape_key_transfer:
 
    Transfer Shape Key
-      Transfer the active shape key from a different object
-      regardless of its current influence.
+      Transfer the active shape key from a different object regardless of its current influence.
 
-      Select the object to copy, then the object to copy into.
-      Use this action and a new shape key will be added to the active object
-      with the active shape of the first object.
+      To use, select the object to copy from, then the object to copy into, then perform the operation.
 
    .. _bpy.ops.object.shape_key_remove:
 

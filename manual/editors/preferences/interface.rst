@@ -91,6 +91,14 @@ Navigation Controls
 
       If you are familiar with navigation key shortcuts, this can be disabled.
 
+.. _bpy.types.PreferencesView.border_width:
+
+Border Width
+   Sets the padding around each editor area.
+   A larger value increases the hit zone for :doc:`area controls </interface/window_system/areas>`,
+   which can improve usability on pen tablets, touch screens,
+   or for users with visual or physical accessibility issues.
+
 .. _bpy.types.PreferencesView.color_picker_type:
 
 Color Picker Type

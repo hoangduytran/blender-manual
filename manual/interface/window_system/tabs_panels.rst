@@ -24,7 +24,9 @@ Switching/Cycling
 Vertical tabs can be switched with :kbd:`Ctrl-Wheel` from anywhere in the tab.
 You can also cycle through tabs with :kbd:`Ctrl-Tab` and
 :kbd:`Shift-Ctrl-Tab`, or press down :kbd:`LMB` and move the mouse over the tab header icons.
-(This does not apply to Workspace tabs; see :ref:`Workspace controls <workspaces-controls>`.)
+Pressing :kbd:`NumpadPeriod` scrolls to the active tab in case it is out of view.
+
+Note, these shortcuts does not apply to Workspace tabs; see :ref:`Workspace controls <workspaces-controls>`.
 
 .. container:: lead
 

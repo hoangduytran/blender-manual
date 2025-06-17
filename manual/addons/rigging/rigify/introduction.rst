@@ -53,4 +53,4 @@ Enabling Add-on
 ===============
 
 #. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "Rigify" and check the *Enable Extension* checkbox.
+#. Search "Rigify" and check the *Enable Add-on* checkbox.
