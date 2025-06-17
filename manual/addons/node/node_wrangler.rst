@@ -498,6 +498,24 @@ Material Output or World Output in Shader, the final Group Output in Geometry No
 or, if the node is inside a group, to the Group Output.
 
 
+.. _bpy.ops.node.add_image:
+
+Add Multiple Images
+-------------------
+
+:guilabel:`Compositor` :guilabel:`Shader`
+
+.. reference::
+
+   :Menu:      :menuselection:`Add --> Input` for :guilabel:`Compositor`,
+               or :menuselection:`Add --> Texture` for :guilabel:`Shader`
+
+Select multiple images and add a node for each image.
+(Useful for importing multiple render passes or renders for image stacking.)
+
+
+.. _bpy.ops.node.nw_add_sequence:
+
 Add Image Sequence
 ------------------
 
@@ -510,21 +528,6 @@ Add Image Sequence
 
 Add an Image Sequence by only selecting one image from a sequence of image files. It will automatically detect
 the length of the sequence and set the node appropriately.
-
-
-Add Multiple Images
--------------------
-
-:guilabel:`Compositor` :guilabel:`Shader`
-
-.. reference::
-
-
-   :Menu:      :menuselection:`Add --> Input` for :guilabel:`Compositor`,
-               or :menuselection:`Add --> Texture` for :guilabel:`Shader`
-
-Select multiple images and add a node for each image.
-(Useful for importing multiple render passes or renders for image stacking.)
 
 .. reference::
 
