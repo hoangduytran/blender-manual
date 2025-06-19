@@ -143,6 +143,19 @@ Type
 Handles
    Includes handle information during the conversion process.
 
+.. _bpy.ops.curves.separate:
+
+Separate
+========
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curves --> Separate`
+   :Shortcut:  :kbd:`P`
+
+Separates the selected curve geometry into their own curve object.
+
 
 .. _bpy.ops.curves.split:
 
