@@ -106,6 +106,23 @@ Remember that when a 2D curve is closed, it creates a renderable flat face.
    Open and Closed curves.
 
 
+.. _bpy.ops.curves.attribute_set:
+
+Set Attribute
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curves --> Set Attribute`
+
+Opens a pop-up window showing the name of the :term:`active` :term:`attribute`
+as well as the value of that attribute for the selected points
+From there, you assign a new value to a selected attribute across all selected points.
+
+This operator is useful for uniformly setting attribute values.
+
+
 .. _bpy.ops.curves.spline_type_set:
 
 Set Curve Type

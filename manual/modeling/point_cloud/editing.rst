@@ -52,7 +52,6 @@ Set Attribute
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Point Cloud --> Set Attribute`
 
-
 Opens a pop-up window showing the name of the :term:`active` :term:`attribute`
 as well as the value of that attribute for the selected points
 From there, you assign a new value to a selected attribute across all selected points.
