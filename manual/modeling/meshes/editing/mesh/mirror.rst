@@ -3,85 +3,115 @@
 Mirror
 ******
 
+Interactive Mirror
+==================
+
 .. reference::
 
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Mesh --> Mirror`
+   :Mode:      Object and Edit Modes
+   :Menu:      :menuselection:`Object/Mesh/Curves --> Mirror --> Interactive Mirror`
    :Shortcut:  :kbd:`Ctrl-M`
 
-The Mirror tool mirrors a selection across a selected axis.
+The *Mirror* operator flips the selected elements across a chosen axis.
+Mirroring is equivalent to scaling the selection by -1 along the selected axis,
+but it offers a faster and more direct workflow.
 
-The Mirror tool in *Edit Mode* is similar to
-:doc:`Mirroring in Object Mode </scene_layout/object/editing/mirror>`.
-It is exactly equivalent to scaling vertices by -1 around one chosen pivot point
-and in the direction of one chosen axis, only it is faster/handier.
+The mirror is relative to the :doc:`Transformation Orientation </editors/3dview/controls/orientation>`
+and :doc:`Pivot Point </editors/3dview/controls/pivot_point/index>`
+This gives full control over how and where the mirroring occurs, for example:
 
-After this tool becomes active, select an axis to mirror the selection
-by pressing :kbd:`X`, :kbd:`Y`, or :kbd:`Z`.
+- Position the pivot point wherever you want the center of symmetry.
+- Choose a transformation orientation (e.g. *Global*, *Local*, *Normal*).
+- Select an axis (X, Y, or Z) along which to mirror.
 
-You can also interactively mirror the geometry by holding the :kbd:`MMB` and dragging in
-the desired mirror direction.
+.. tip::
 
-
-Axis of Symmetry
-================
-
-For each transformation orientation,
-you can choose one of its axes along which the mirroring will occur.
-
-As you can see, the possibilities are infinite and the freedom complete:
-You can position the pivot point at any location around which we want the mirroring to occur,
-choose one transformation orientation and then one axis on it.
+   To mirror non-destructively, use the :doc:`Mirror Modifier </modeling/modifiers/generate/mirror>`.
 
 
-Pivot Point
+Usage
+-----
+
+To mirror along a specific axis:
+
+- Press :kbd:`Ctrl-M`, then :kbd:`X`, :kbd:`Y`, or :kbd:`Z` to select an axis.
+- Pressing the same key again toggles the orientation between the active
+  :doc:`Transform Orientation </editors/3dview/controls/orientation>` and the global orientation.
+- Hold :kbd:`MMB` and drag to mirror interactively in the desired direction.
+
+
+Properties
+----------
+
+Orientation
+   The :doc:`Transform Orientation </editors/3dview/controls/orientation>` used to align the X, Y, and Z axes.
+
+Constraint Axis
+   The axis (or axes) to mirror across.
+   For example, mirroring across the X axis flips the selection horizontally.
+
+
+X/Y/Z Global
+============
+
+.. reference::
+
+   :Mode:      Object and Edit Modes
+   :Menu:      :menuselection:`Object/Mesh/Curves --> Mirror --> X/Y/Z Global`
+
+These operations perform a non-interactive mirror along the global X, Y, or Z axis.
+
+X Global
+   Mirrors the selection along the global X axis.
+Y Global
+   Mirrors the selection along the global Y axis.
+Z Global
+   Mirrors the selection along the global Z axis.
+
+
+X/Y/Z Local
 ===========
 
-:doc:`Pivot points </editors/3dview/controls/pivot_point/index>` must be set first.
-Pivot points will become the center of symmetry.
-If the widget is turned on it will always show where the pivot point is.
+.. reference::
 
-In Fig. :ref:`fig-mesh-deform-mirror-origins` the pivot point default to
-median point of the selection of vertices in *Edit Mode*.
-This is a special case of the *Edit Mode* as explained on
-the :doc:`pivot point page </editors/3dview/controls/pivot_point/index>`.
+   :Mode:      Object and Edit Modes
+   :Menu:      :menuselection:`Object/Mesh/Curves --> Mirror --> X/Y/Z Local`
 
-.. _fig-mesh-deform-mirror-origins:
+These operations perform a non-interactive mirror along the object's local axes.
+
+X Local
+   Mirrors the selection along the object's local X axis.
+Y Local
+   Mirrors the selection along the object's local Y axis.
+Z Local
+   Mirrors the selection along the object's local Z axis.
+
+
+Examples
+========
 
 .. list-table:: Mirror around the individual origins.
 
    * - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-before.png
           :width: 320px
 
-          Mesh before mirror.
+          Mesh before mirroring.
 
      - .. figure:: /images/modeling_meshes_editing_mesh_mirror_individual-after.png
           :width: 320px
 
-          Mesh after mirrored along X axis.
+          Mesh after mirroring along the X axis.
 
-In Fig. :ref:`fig-mesh-deform-mirror-cursor` the pivot point is the *3D Cursor*,
-the transformation orientation is *Local*, a.k.a. the object space,
-and the axis of transformation is X.
-
-.. _fig-mesh-deform-mirror-cursor:
+The next example shows mirroring around the *3D Cursor*, with the orientation set to *Local*:
 
 .. list-table:: Mirror around the 3D Cursor.
 
    * - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-before.png
           :width: 320px
 
-          Mesh before mirror.
+          Mesh before mirroring.
 
      - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-after.png
           :width: 320px
 
-          Mesh after mirrored along X axis using the 3D cursor as a pivot point.
-
-
-Transformation Orientations
-===========================
-
-:doc:`Transformation Orientations </editors/3dview/controls/orientation>`
-are found on the 3D Viewport header, next to the *Widget* buttons.
-They decide which coordinate system will rule the mirroring.
+          Mesh after mirroring along the X axis using the 3D Cursor as the pivot point.
