@@ -4,47 +4,115 @@
 Mirror
 ******
 
+Interactive Mirror
+==================
+
 .. reference::
 
    :Mode:      Object and Edit Modes
-   :Menu:      :menuselection:`Object/Mesh --> Mirror`
+   :Menu:      :menuselection:`Object/Mesh/Curves --> Mirror --> Interactive Mirror`
    :Shortcut:  :kbd:`Ctrl-M`
 
-Mirroring an object or mesh selection will create a reversed version of the selection.
-The position of the mirrored version of the selection is determined by
-the :doc:`Pivot Point </editors/3dview/controls/pivot_point/index>`.
-A common use of mirroring is to model half an object, duplicate it and then use
-the mirror transform to create a reversed version to complete the model.
+The *Mirror* operator flips the selected elements across a chosen axis.
+Mirroring is equivalent to scaling the selection by -1 along the selected axis,
+but it offers a faster and more direct workflow.
 
-.. note::
+The mirror is relative to the :doc:`Transformation Orientation </editors/3dview/controls/orientation>`
+and :doc:`Pivot Point </editors/3dview/controls/pivot_point/index>`
+This gives full control over how and where the mirroring occurs, for example:
 
-   Mirrored duplicates can also be created with a :doc:`Mirror Modifier </modeling/modifiers/generate/mirror>`.
+- Position the pivot point wherever you want the center of symmetry.
+- Choose a transformation orientation (e.g. *Global*, *Local*, *Normal*).
+- Select an axis (X, Y, or Z) along which to mirror.
 
-.. _fig-mesh-duplicating-mirror-selection:
+.. tip::
 
-.. figure:: /images/scene-layout_object_editing_mirror_example.png
-
-   Mirroring a selection.
+   To mirror non-destructively, use the :doc:`Mirror Modifier </modeling/modifiers/generate/mirror>`.
 
 
 Usage
-=====
+-----
 
-To mirror a selection along a particular global axis, press:
-:kbd:`Ctrl-M`, followed by :kbd:`X`, :kbd:`Y` or :kbd:`Z`.
-The image :ref:`Mirroring a Selection <fig-mesh-duplicating-mirror-selection>`
-shows the results of this action after a mesh element has been duplicated.
+To mirror along a specific axis:
 
-In mesh mode, you can mirror the selection on the currently selected
-:doc:`Transform Orientations </editors/3dview/controls/orientation>`
-by pressing the appropriate axis key a second time. For example,
-if the Transform Orientation is set to *Normal*, pressing:
-:kbd:`Ctrl-M`, followed by :kbd:`X` and then :kbd:`X` again
-will mirror the selection along the X axis of the *Normal Orientation*.
+- Press :kbd:`Ctrl-M`, then :kbd:`X`, :kbd:`Y`, or :kbd:`Z` to select an axis.
+- Pressing the same key again toggles the orientation between the active
+  :doc:`Transform Orientation </editors/3dview/controls/orientation>` and the global orientation.
+- Hold :kbd:`MMB` and drag to mirror interactively in the desired direction.
 
-.. figure:: /images/scene-layout_object_editing_mirror_panel.png
 
-   Mirror :ref:`bpy.ops.screen.redo_last` panel.
+Properties
+----------
 
-You can alternatively hold the :kbd:`MMB` to interactively mirror the object by moving
-the mouse in the direction of the mirror axis.
+Orientation
+   The :doc:`Transform Orientation </editors/3dview/controls/orientation>` used to align the X, Y, and Z axes.
+
+Constraint Axis
+   The axis (or axes) to mirror across.
+   For example, mirroring across the X axis flips the selection horizontally.
+
+
+X/Y/Z Global
+============
+
+.. reference::
+
+   :Mode:      Object and Edit Modes
+   :Menu:      :menuselection:`Object/Mesh/Curves --> Mirror --> X/Y/Z Global`
+
+These operations perform a non-interactive mirror along the global X, Y, or Z axis.
+
+X Global
+   Mirrors the selection along the global X axis.
+Y Global
+   Mirrors the selection along the global Y axis.
+Z Global
+   Mirrors the selection along the global Z axis.
+
+
+X/Y/Z Local
+===========
+
+.. reference::
+
+   :Mode:      Object and Edit Modes
+   :Menu:      :menuselection:`Object/Mesh/Curves --> Mirror --> X/Y/Z Local`
+
+These operations perform a non-interactive mirror along the object's local axes.
+
+X Local
+   Mirrors the selection along the object's local X axis.
+Y Local
+   Mirrors the selection along the object's local Y axis.
+Z Local
+   Mirrors the selection along the object's local Z axis.
+
+
+Examples
+========
+
+.. list-table:: Mirror around the individual origins.
+
+   * - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-before.png
+          :width: 320px
+
+          Mesh before mirroring.
+
+     - .. figure:: /images/modeling_meshes_editing_mesh_mirror_individual-after.png
+          :width: 320px
+
+          Mesh after mirroring along the X axis.
+
+The next example shows mirroring around the *3D Cursor*, with the orientation set to *Local*:
+
+.. list-table:: Mirror around the 3D Cursor.
+
+   * - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-before.png
+          :width: 320px
+
+          Mesh before mirroring.
+
+     - .. figure:: /images/modeling_meshes_editing_mesh_mirror_cursor-after.png
+          :width: 320px
+
+          Mesh after mirroring along the X axis using the 3D Cursor as the pivot point.
