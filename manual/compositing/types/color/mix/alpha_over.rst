@@ -21,25 +21,18 @@ Image
    The background image.
 Image
    The foreground image.
+Convert Premultiplied
+   Defines whether the foreground is in straight alpha form,
+   which is necessary to know for proper alpha compositing.
+   Images in the compositor are in premultiplied alpha form by default,
+   so this should be false in most cases. But if, and only if,
+   the foreground was converted to straight alpha form for some reason, this should be set to true.
 
 
 Properties
 ==========
 
-Convert Premultiplied
-   The *Alpha Over* node expects the foreground image to use :term:`Premultiplied Alpha`.
-   If it uses :term:`Straight Alpha` instead, you can enable this checkbox to convert it.
-
-Premultiplied
-   Interpolate between :term:`Premultiplied Alpha` and :term:`Straight Alpha`.
-
-   When set to 1, the foreground color values will be multiplied by the alpha;
-   this is equivalent to enabling *Convert Premultiplied*.
-   When set to 0, the color values do not change.
-
-   If *Premultiplied* is not zero, *Convert Premultiplied* will be ignored.
-
-   .. note:: This is a legacy option.
+This node has no properties.
 
 
 Outputs
