@@ -15,5 +15,5 @@ the corresponding import node is added automatically and configured with the fil
 .. toctree::
    :maxdepth: 1
 
-   csv.rst
-   txt.rst
+   CSV (.csv) <csv.rst>
+   Text (.txt) <txt.rst>
