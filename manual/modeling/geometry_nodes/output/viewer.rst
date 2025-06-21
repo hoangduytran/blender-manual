@@ -27,23 +27,24 @@ Activation and Deactivation
 ---------------------------
 
 Using :kbd:`Shift-Ctrl-LMB` on any node or socket connects it to the viewer and makes it active.
-Using the same shortcut on empty space in the node editor makes deactivates the active viewer.
+Using the same shortcut on empty space in the node editor deactivates the active viewer.
 When the active viewer is not visible anymore (e.g. another object is selected, or the current
 node group is exited), it is deactivated. The icon in the viewer node header can also be used
 to :bl-icon:`restrict_view_off` activate and :bl-icon:`restrict_view_on` deactivate it.
 
 .. _bpy.types.SpaceView3D.show_viewer:
 
-In the viewport, the *Show Viewer* option can turn off the viewer node visualization completely
-in order to see the final output of the object's evaluation instead.
+In the viewport *View* menu, the *Viewer Node* option can turn off any viewer node 
+visualization completely in order to see the final output of the object's evaluation 
+instead.
 
 
 Attribute Visualization
 -----------------------
 
 When the viewer has a geometry and a separate value input connected, the values can be visualized
-with a :ref:`viewport overlays <3dview-overlays-view_node>`. When possible, the
-:ref:`attribute domain <attribute-domains>` is used to visualize the data is determined automatically.
+with a :ref:`viewport overlay <3dview-overlays-view_node>`. When possible, the
+:ref:`attribute domain <attribute-domains>` used to visualize the data is determined automatically.
 Otherwise, the viewer node falls back to the face corner domain on meshes and the point domain
 on curves. When necessary, the domain can be chosen manually.
 
