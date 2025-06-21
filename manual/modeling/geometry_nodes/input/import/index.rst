@@ -16,3 +16,4 @@ the corresponding import node is added automatically and configured with the fil
    :maxdepth: 1
 
    csv.rst
+   txt.rst
