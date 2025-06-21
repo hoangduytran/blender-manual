@@ -32,10 +32,10 @@ Smoothness
    Higher values create a smoother highlight extraction.
 
 
-Suppress
-^^^^^^^^
+Clamp
+^^^^^
 
-Suppress bright highlights defined by the *Maximum* input.
+Clamp bright highlights defined by the *Maximum* input.
 
 This can help create a more consistent looking bloom effect when there is a large variations in luminance.
 
