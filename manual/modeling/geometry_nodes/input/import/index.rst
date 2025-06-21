@@ -16,5 +16,8 @@ the corresponding import node is added automatically and configured with the fil
    :maxdepth: 1
 
    CSV (.csv) <csv.rst>
+   Wavefront (.obj) <obj.rst>
+   Stanford PLY (.ply) <ply.rst>
+   STL (.stl) <stl.rst>
    Text (.txt) <txt.rst>
    OpenVDB (.vdb) <vdb.rst>
