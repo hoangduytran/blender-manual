@@ -9,30 +9,31 @@ Flip Node
    :align: right
    :alt: Flip Node.
 
-This node flips an image along a defined axis.
+The *Flip* node flips the input image horizontally, vertically, or both, based on the inputs provided.
 
-You can use this node to just flip or use it as a part of mirror setting.
-Mix half of the image to be mirrored with its flipped version to produce mirrored image.
+This node can be used to mirror an image or as part of a compositing setup that blends the original
+image with a flipped version to achieve symmetry effects.
 
 
 Inputs
 ======
 
 Image
-   Standard color input.
+   Standard color input to be flipped.
+Flip X
+   Flips the image horizontally (left to right).
+Flip Y
+   Flips the image vertically (top to bottom).
 
 
 Properties
 ==========
 
-Axis
-   This can be either X or Y. Also, flipping can be done on both X and Y axis simultaneously.
-
-   Flip X, Flip Y, Flip X & Y
+This node has no properties.
 
 
 Outputs
 =======
 
 Image
-   Standard color output.
+   The resulting flipped image.

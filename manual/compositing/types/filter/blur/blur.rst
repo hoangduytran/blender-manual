@@ -21,6 +21,10 @@ Size
    The optional Size input will be multiplied with the X and Y blur radius values.
    It also accepts a value image, to control the blur radius with a mask.
    The values should be mapped between (0 to 1) for an optimal effect.
+Extend Bounds
+   Allows the image, that is being blurred, to extend past its original dimension.
+Separable
+   Use faster approximation by blurring along the horizontal and vertical directions independently.
 
 
 Properties
@@ -38,19 +42,6 @@ Type
    :Fast Gaussian: An approximation of the Gaussian.
    :Catmull-Rom: Catmull-Rom keeps sharp contrast edges crisp.
    :Mitch: Preserve the highs, but give an almost out-of-focus blur while smoothing sharp edges.
-
-Bokeh
-   The Bokeh button will force the Blur node to use a circular blur filter.
-   This gives higher quality results, but is slower than using a normal filter.
-Relative
-   Percentage Value of the blur radius relative to the image size.
-
-   Aspect Correction
-      None, Y, X
-X, Y
-   Values set the ellipsoid radius in numbers of pixels over which to spread the blur effect.
-Extend Bounds
-   Allows the image, that is being blurred, to extend past its original dimension.
 
 
 Outputs
