@@ -57,8 +57,6 @@ Space
          Stretch distorts the image so that it fits into the render size.
          Fit scales the image until the bigger axis "fits" into the render size.
          Crop cuts the image so that it is the same aspect ratio as the render size.
-      X, Y
-         Offset factor for the final scaled image.
 
 
 Outputs
