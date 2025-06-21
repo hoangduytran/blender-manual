@@ -213,30 +213,6 @@ Memory Cache Limit
    Upper limit of the Video Sequencer and Movie Clip Editor memory cache (in megabytes).
    For an optimal Clip editor and Sequencer performance, high values are recommended.
 
-.. _bpy.types.PreferencesSystem.use_sequencer_disk_cache:
-
-Disk Cache
-   Writes cached strips to disk which can store a lot more than RAM.
-   To use the Disk Cache, this option must be enabled,
-   the *Disk Cache Directory* and *Disk Cache Limit* set, then save or reopen the existing blend-file.
-
-.. _bpy.types.PreferencesSystem.sequencer_disk_cache_dir:
-
-Directory
-   The location on disk to store the cache.
-
-.. _bpy.types.PreferencesSystem.sequencer_disk_cache_size_limit:
-
-Cache Limit
-   Upper limit of the Video Sequencer's disk cache (in gigabytes), setting to zero disables disk cache.
-
-.. _bpy.types.PreferencesSystem.sequencer_disk_cache_compression:
-
-Compression
-   The level of compression to compress image in the disk cache.
-   This has a trade off between saving disk space and requiring more processing.
-   The more compression used requires faster disk write/read speeds and more CPU usage.
-
 .. _bpy.types.PreferencesSystem.sequencer_proxy_setup:
 
 Proxy Setup
