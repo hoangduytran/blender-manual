@@ -36,8 +36,6 @@ Angle
    This slider is deactivated, if the Bokeh Type is set to Disk.
    It can be used to add a rotation offset to the Bokeh shape.
    The value is the angle in degrees.
-Gamma Correction
-   Applies a gamma correction on the image before and after blurring it.
 F-Stop
    This option controls the amount of focal blur in the same way as a real camera.
    It simulates the aperture *f* of a real lens' iris, without modifying the luminosity of the picture.
