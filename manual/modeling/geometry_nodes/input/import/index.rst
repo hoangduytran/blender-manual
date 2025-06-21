@@ -17,3 +17,4 @@ the corresponding import node is added automatically and configured with the fil
 
    CSV (.csv) <csv.rst>
    Text (.txt) <txt.rst>
+   OpenVDB (.vdb) <vdb.rst>
