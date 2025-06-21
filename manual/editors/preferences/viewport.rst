@@ -139,18 +139,6 @@ Image Display Method
       Fastest method using GLSL for display transform and render images as a 2D texture.
 
 
-Selection
-=========
-
-.. _bpy.types.PreferencesSystem.use_select_pick_depth:
-
-GPU Depth Picking
-   This option uses an alternative method of picking which uses depth information to select the front-most elements.
-   It is only used for selecting with the cursor (not box select, lasso, circle select, etc.).
-
-   Performance varies depending on your OpenGL hardware and drivers.
-
-
 Subdivision
 ===========
 

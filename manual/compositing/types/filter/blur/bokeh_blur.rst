@@ -38,9 +38,7 @@ Bounding Box
 Properties
 ==========
 
-Max Blur
-   Max Blur is intended to act as an optimization tool by
-   limiting the number of pixels across which the blur is calculated.
+This node has no properties.
 
 
 Outputs

@@ -42,8 +42,6 @@ Type
 Bokeh
    The Bokeh button will force the Blur node to use a circular blur filter.
    This gives higher quality results, but is slower than using a normal filter.
-Gamma
-   The Gamma button applies a gamma correction on the image before blurring it.
 Relative
    Percentage Value of the blur radius relative to the image size.
 

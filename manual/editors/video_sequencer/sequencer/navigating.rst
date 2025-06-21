@@ -33,11 +33,6 @@ Channels
 
 ----------
 
-Preview as Backdrop
-   Display the current frame in the background.
-
-----------
-
 .. _bpy.ops.sequencer.refresh_all:
 
 Refresh All :kbd:`Ctrl-E`
@@ -180,9 +175,9 @@ Use these shortcuts to adjust the view:
 Playhead
 --------
 
-The Playhead is the blue vertical line with the current time at the top. To see how to interact with it 
+The Playhead is the blue vertical line with the current time at the top. To see how to interact with it
 see the :ref:`Playhead <playhead>` documentation. In addition to that, the Video
-Sequencer has a special case where if you start dragging on a strip, that strip will be highlighted 
+Sequencer has a special case where if you start dragging on a strip, that strip will be highlighted
 and displayed *solo* in the preview (all other strips are temporarily muted).
 
 If scrubbing (or regular playback) performs poorly, you can speed it up by creating
