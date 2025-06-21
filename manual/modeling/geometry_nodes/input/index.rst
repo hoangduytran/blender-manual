@@ -10,4 +10,5 @@ Nodes used mainly as input to other nodes.
 
    Constant <constant/index.rst>
    Gizmo <gizmo/index.rst>
+   Import <import/index.rst>
    Scene <scene/index.rst>
