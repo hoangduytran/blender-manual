@@ -30,11 +30,7 @@ Contrast
 Properties
 ==========
 
-Convert Premultiplied
-   By default, it is supposed to work in *premultiplied* alpha.
-   If the *Convert Premul* checkbox is not enabled, it is supposed to work in *straight* alpha.
-
-   See :term:`Alpha Channel`.
+This node has no properties.
 
 
 Outputs
