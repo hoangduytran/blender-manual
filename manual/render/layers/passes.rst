@@ -269,9 +269,9 @@ Other
       This pass only supports grayscale opacity.
       Colored opacity will show differently than in the Combined pass.
 
-.. _bpy.types.SceneEEVEE.gtao_distance:
+.. _bpy.types.ViewLayerEEVEE.ambient_occlusion_distance:
 
-Occlusions Distance
+Occlusion Distance
    Maximum distance for objects to contribute to the Ambient Occlusion pass.
 
 .. _render_layers_passes_cryptomatte:
