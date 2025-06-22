@@ -104,6 +104,10 @@ Ignore Transparent
 Limit to Viewport
    When enabled, fill only visible areas in the viewport.
 
+.. _bpy.types.BrushGpencilSettings.use_auto_remove_fill_guides:
+
+Auto-Remove Fill Guides
+   When enabled, after creating a fill, automatically remove the fill guide strokes.
 
 Gap Closure
 """""""""""
@@ -174,12 +178,12 @@ the boundary and create a new closed stroke filled with the material selected.
           Final filled drawing.
 
 
-Boundary Strokes
-----------------
+Fill Guides
+-----------
 
 If you have a large gap in an area that you want fill,
-you can add boundary strokes manually, a temporary auxiliary lines for closing open shapes.
-To create a boundary stroke use :kbd:`Alt-LMB` and draw a line to close the desired area.
+you can add fill guides manually, a temporary auxiliary lines for closing open shapes.
+To create a fill guide stroke use :kbd:`Alt-LMB` and draw a line to close the desired area.
 
 .. list-table::
 
@@ -191,14 +195,14 @@ To create a boundary stroke use :kbd:`Alt-LMB` and draw a line to close the desi
      - .. figure:: /images/grease-pencil_modes_draw_tools_fill_boundary-strokes-02.png
           :width: 200px
 
-          Add boundary strokes to close open areas (red lines).
+          Add fill guide to close open areas (red lines).
 
      - .. figure:: /images/grease-pencil_modes_draw_tools_fill_boundary-strokes-03.png
           :width: 200px
 
           Use the Fill tool to leak material on the new closed area.
 
-When you are satisfied with the fill result you can delete the boundary strokes using
+When you are satisfied with the fill result you can delete the fill guide using
 the *Clean Up* tool in the :doc:`Grease Pencil Menu </grease_pencil/modes/edit/grease_pencil_menu>` in Edit Mode.
 
 
