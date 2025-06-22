@@ -69,13 +69,6 @@ Use Proxies
    Proxies can be configured in the *Proxy* tab of the Sidebar, which is however
    only visible in the *Sequencer* and *Sequencer & Preview* modes.
 
-.. _bpy.types.SequenceEditor.use_prefetch:
-
-Prefetch Frames
-   Automatically fill the cache with frames after the current frame in the background.
-   Use this to achieve a more consistent playback speed.
-   This feature currently doesn't support rendering Scene strips.
-
 .. _bpy.types.SpaceSequenceEditor.display_channel:
 
 Channel

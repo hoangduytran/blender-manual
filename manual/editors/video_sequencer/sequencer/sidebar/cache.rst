@@ -3,14 +3,17 @@
 Cache
 *****
 
-The Cache is used to save preview frames in memory,
-so they can later be displayed much faster than if they were rendered from scratch.
-Cache capacity can be set in the :doc:`System tab </editors/preferences/system>` of the Preferences.
+The *Cache* is used to store preview frames in memory so they can be displayed much faster
+during playback, rather than being re-rendered for each frame. This is especially useful for
+maintaining smooth performance when editing or scrubbing through a sequence.
+
+The total cache memory limit can be configured in the :doc:`System tab </editors/preferences/system>`
+of the Preferences.
 
 .. seealso::
 
    Which frames are cached can be visualized by enabling
-   :ref:`Show Cache <bpy.types.SequencerCacheOverlay.show_cache>`.
+   :ref:`Show Cache <bpy.types.SequencerCacheOverlay.show_cache>` in the Timeline overlay settings.
 
 
 Cache Settings
@@ -20,55 +23,46 @@ Cache Settings
 
    :Panel:     :menuselection:`Sidebar --> Cache --> Cache Settings`
 
-In this panel, you can select the preview rendering stages at which strip images should be cached.
-These settings apply to all strips.
+This panel allows configuration of how and when image data is cached during editing.
+These settings apply globally to all strips in the Video Sequence Editor.
+
+.. _bpy.types.SequenceEditor.use_prefetch:
+
+Prefetch Frames
+   When enabled, Blender will automatically prefetch and cache frames after the current frame
+   in the background. This can result in smoother playback performance.
+
+   Note: prefetching is not currently supported for Scene strips.
+
+.. _bpy.types.SequenceEditor.use_cache_raw:
+.. _bpy.types.SequenceEditor.use_cache_final:
 
 Cache
    Raw
-      Cache raw images right after they're read from the drive, for faster tweaking of strip parameters
-      at the cost of memory usage.
-   Pre-processed
-      Cache strip images after applying cropping, scaling, saturation and so on,
-      for faster tweaking of effects at the cost of memory usage.
-   Composite
-      Cache strip images after blending with lower channels and applying effects,
-      for faster tweaking of stacked strips at the cost of memory usage.
+      Caches raw image data immediately after it is read from disk.
+      This speeds up adjustments to strip parameters such as color correction,
+      but increases memory usage.
    Final
-      Cache the final rendered frame.
+      Caches the final composited image for each frame,
+      allowing faster playback of fully processed strips.
 
 
 Display
 -------
 
-Visualize cached images on the timeline.
+Visual indicators in the Timeline showing which frames are cached.
 
-.. _bpy.types.SequencerCacheOverlay.show_cache_:
+.. _bpy.types.SequencerCacheOverlay.show_cache_raw:
+.. _bpy.types.SequencerCacheOverlay.show_cache_final:
 
 Cache
    Raw
-      Visualize cached raw images on the timeline.
-   Pre-processed
-      Visualize cached pre-processed images on the timeline.
-   Composite
-      Visualize cached composite images on the timeline.
+      Displays a red bar in the Timeline below frames cached in their raw state.
    Final
-      Visualize cached final images on the timeline.
+      Displays a blue bar at the top of Timeline for frames cached in their final composited state.
 
+A readout at the bottom of the panel shows real-time statistics about cache usage:
 
-Strip Cache
-===========
-
-.. reference::
-
-   :Panel:     :menuselection:`Sidebar --> Cache --> Cache Settings`
-
-This panel sets the types of images that will be cached for the active strip.
-When enabled, these properties override the above `Cache Settings`_.
-
-Cache
-   Raw
-      Cache raw images read from drive, for faster tweaking of strip parameters at the cost of memory usage.
-   Preprocessed
-      Cache preprocessed images, for faster tweaking of effects at the cost of memory usage.
-   Composite
-      Cache intermediate composited images, for faster tweaking of stacked strips at the cost of memory usage.
+- **Current Cache Size**: Total amount of memory currently used by the cache system.
+- **Raw**: Memory usage by raw image cache.
+- **Final**: Memory usage by final rendered frame cache.
