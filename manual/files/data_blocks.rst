@@ -297,13 +297,13 @@ This means that there can be for example an Object and a Mesh named the same, bu
 named the same in a blendfile. However, it is possible to have one local and several linked Objects sharing the same
 name.
 
-Data-block names have a fixed length of 63 bytes, i.e. 63 basic ASCII characters, or less when using diacritics or
-non-latin glyphs (the UTF8 encoding will then typically use more than a byte per character).
+Data-block names have a fixed length of 255 bytes, i.e. 255 basic ASCII characters, or less when using diacritics or
+non-latin glyphs (the UTF8 encoding will then typically use more than one byte per character).
 
 When Blender has to name a new data-block, or rename an existing one, it will check for name collisions. If a
 data-block with the same name already exists, the (re)named data-block will get a numeric extension added as a
 post-fix to its 'root name', like e.g. `.001`. The first available index is used (up to the `999` value, after that
-the postfix index values are simply incremented until no collision happen anymore).
+the postfix index values are simply incremented until no collision happens anymore).
 
 In case adding the numeric suffix would make the data-block name too long, the root name part will be shortened as
 needed.
