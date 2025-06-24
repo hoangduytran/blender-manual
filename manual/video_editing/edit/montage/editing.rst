@@ -166,7 +166,18 @@ Slip Strip Contents
    :Menu:      :menuselection:`Strip --> Transform --> Slip Strip Contents`
    :Shortcut:  :kbd:`S`
 
-The Slip tool allows you to change the position of the contents of a strip without moving the strip itself.
+The *Slip Strip Contents* operator adjusts the start point of the source media inside a strip,
+without changing the strip's position or length on the timeline.
+This is useful for fine-tuning what portion of the media is shown.
+
+It is commonly used when you want to preserve the strip's timing in the sequence
+but choose a different part of the source to display.
+
+Offset
+   Number of frames to shift the content forward (positive) or backward (negative) in time.
+Slip Keyframes
+   If enabled, keyframes on the strip's properties (e.g. opacity, transform) will be moved along
+   with the content. Disable this to keep keyframes fixed at their original timeline positions.
 
 
 .. _bpy.ops.sequencer.snap:

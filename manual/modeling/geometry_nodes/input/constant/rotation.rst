@@ -28,5 +28,5 @@ X, Y, Z
 Output
 ======
 
-Vector
+Rotation
    Standard rotation output.
