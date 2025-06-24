@@ -12,9 +12,8 @@ Bone Collections
 
 .. reference::
 
-   :Mode:      Pose & Armature Edit Modes
+   :Mode:      Object, Pose, and Edit Modes
    :Panel:     :menuselection:`Properties --> Armature --> Bone Collections`
-   :Menu:      :menuselection:`Pose --> Bone Collections --> ...`
 
 .. figure:: /images/animation_armatures_properties_bonecollections_panel.png
 
@@ -67,6 +66,12 @@ Remove Unused
 
 Assign & Select
 ===============
+
+.. reference::
+
+   :Mode:      Pose, and Edit Modes
+   :Panel:     :menuselection:`Properties --> Armature --> Bone Collections`
+   :Menu:      :menuselection:`Pose --> Bone Collections --> ...`
 
 .. _bpy.ops.armature.collection_assign:
 
