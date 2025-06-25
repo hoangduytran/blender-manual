@@ -55,6 +55,8 @@ Mix
    These modes are the same as in the :doc:`Copy Transforms </animation/constraints/transform/copy_transforms>`
    constraint.
 
+   Replace
+      Replace the original transformation with the action channels.
    Before/After Original (Full)
       The keyframed transformation is added before/after the existing transformation, as if it was
       applied to an imaginary parent/child of the constraint owner. Scale is handled like in
