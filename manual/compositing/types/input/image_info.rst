@@ -11,7 +11,7 @@ Image Info Node
 
 The *Image Info* node outputs spatial and transformation information about an image in the compositor.
 
-This node is useful for generating procedural effects that depend on image size, position, or pixel coordinates.
+This node is useful for generating procedural effects that depend on image size or position.
 It enables workflows such as vignette creation using math nodes,
 or dynamic scaling of effects relative to image dimensions.
 
@@ -32,13 +32,8 @@ This node has no properties.
 Outputs
 =======
 
-Pixel Coordinates
-   Coordinates representing the center of each pixel in the image.
-   These are integer coordinates with a half-pixel offset applied.
-
-Texture Coordinates
-   Normalized coordinates centered at zero, scaled based on the image's largest dimension.
-   These are useful for general-purpose procedural generation, similar to *Object* coordinates in shader nodes.
+Dimensions
+   The dimensions of the image in pixels with transformations applied.
 
 Resolution
    The width and height of the image in pixels.

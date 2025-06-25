@@ -28,6 +28,7 @@ As such, they have no input sockets; only outputs.
    bokeh_image.rst
    image.rst
    image_info.rst
+   image_coordinates.rst
    mask.rst
    movie_clip.rst
 

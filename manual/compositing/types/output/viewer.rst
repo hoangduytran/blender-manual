@@ -36,11 +36,14 @@ Outputs
 This node has no output sockets.
 
 
+Usage
+=====
+
 .. _bpy.ops.node.viewer_shortcut_set:
 .. _bpy.ops.node.viewer_shortcut_get:
 
 Keyboard Shortcuts
-==================
+------------------
 
 Viewer node provide a quick way to toggle between different viewer nodes while compositing using keyboard shortcuts,
 improving workflow efficiency when comparing outputs.
@@ -51,11 +54,11 @@ improving workflow efficiency when comparing outputs.
 - **Activate Node** (:kbd:`1`, :kbd:`2`, etc.):
   Press the assigned number key to activate the node's Viewer output.
 
-.. note:: This feature is exclusive to the Compositor and only supports number keys (`1-9`).
+.. note:: Only number keys (`1-9`) are supported.
 
 
 Using the Image Editor
-======================
+----------------------
 
 The Viewer node allows results to be displayed in the Image Editor.
 The image is facilitated in the header by selecting *Viewer Node* in the linked *Image* data-block menu.

@@ -131,6 +131,14 @@ Color
    Selects all bones that have the same color as the active bone.
 Keying Set
    All bones affected by active :doc:`Keying Set </animation/keyframes/keying_sets>`
+Children
+   Select all children of currently selected bones.
+Immediate Children
+   Select direct children of currently selected bones.
+Parents
+   Select the parents of currently selected bones.
+Siblings
+   Select all bones that have the same parent as currently selected bones.
 
 
 .. _bpy.ops.pose.select_linked:
