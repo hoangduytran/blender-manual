@@ -34,9 +34,24 @@ to :bl-icon:`restrict_view_off` activate and :bl-icon:`restrict_view_on` deactiv
 
 .. _bpy.types.SpaceView3D.show_viewer:
 
-In the viewport *View* menu, the *Viewer Node* option can turn off any viewer node 
-visualization completely in order to see the final output of the object's evaluation 
+In the viewport *View* menu, the *Viewer Node* option can turn off any viewer node
+visualization completely in order to see the final output of the object's evaluation
 instead.
+
+
+Keyboard Shortcuts
+-----------------
+
+Viewer node provide a quick way to toggle between different viewer nodes using keyboard shortcuts,
+improving workflow efficiency when comparing outputs.
+
+- **Assign Shortcut** (:kbd:`Ctrl-1`, :kbd:`Ctrl-2`, etc.):
+  Select a node and press a shortcut to assign it. If no Viewer node is attached, one is created and activated.
+  The number will be shown in the upper right part of the node to identify which shortcut is assigned.
+- **Activate Node** (:kbd:`1`, :kbd:`2`, etc.):
+  Press the assigned number key to activate the node's Viewer output.
+
+.. note:: Only number keys (`1-9`) are supported.
 
 
 Attribute Visualization
