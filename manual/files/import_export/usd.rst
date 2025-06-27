@@ -610,13 +610,18 @@ Geometry Node Modifiers
    that only the components you want are exported.
 
 Instancing/Referencing
-   Point instancing, created with Geometry Nodes, is not supported. Consider using a
-   :doc:`/modeling/geometry_nodes/instances/realize_instances` if possible.
+   Exporting instanced objects and collections is supported through an experimental option available during USD export.
 
-   Scene instancing, created with instanced Collections or Objects, is supported as an experimental
-   feature that can be enabled when exporting to USD. When enabled, instanced object data is
-   written to USD as references to the original. Supported object types include Mesh, Curves, and
-   Point Clouds.
+   Point instances, created with Geometry Nodes, are partially supported and will be exported using the
+   ``UsdGeomPointInstancer`` prim type. Simple instancing scenarios using either the
+   :doc:`/modeling/geometry_nodes/input/scene/object_info` or the
+   :doc:`/modeling/geometry_nodes/input/scene/collection_info` will work. More complex scenarios involving excluded
+   collections, nested collections, or collections inside different Scenes may yield incorrect results. Consider
+   using the :doc:`/modeling/geometry_nodes/instances/realize_instances` for situations where incorrect instances
+   are exported.
+
+   Scene instances, created by directly instancing collections or objects, will be written to USD as references to the
+   original. Supported object types include Mesh, Curves, and Point Clouds.
 
 USDZ
    Due to a current limitation in the USD library, UDIM textures cannot be include in the USDZ archive.
