@@ -3,32 +3,26 @@
 Editing Strips
 **************
 
-Transform
-=========
-
-Options
--------
+Controls
+========
 
 .. _bpy.types.SequencerToolSettings.overlap_mode:
 
 Overlap Mode
-^^^^^^^^^^^^
+------------
 
 Overlap Mode defines the result of transforming a strip so that it overlaps another strip.
 
-Shuffle
-   The overlapping strip will be moved to the nearest free space so that it does not overlap.
-Overwrite
-   The overlapped strip will be overwritten, trimmed or split by the overlapping strip.
-Expand
-   All strips on the right side of (each) transformed will be shifted forward to accommodate
-   the overlapping strip.
+:Expand:
+   All strips on the right side of (each) transformed will be shifted forward to accommodate the overlapping strip.
+:Overwrite: The overlapped strip will be overwritten, trimmed or split by the overlapping strip.
+:Shuffle: The overlapping strip will be moved to the nearest free space so that it does not overlap.
 
 
 .. _bpy.types.ToolSettings.use_snap_sequencer:
 
 Snapping
-^^^^^^^^
+--------
 
 Snapping can be toggled by clicking :bl-icon:`snap_off` (Snap Off) / :bl-icon:`snap_on` (Snap On)
 in the 3D Viewport's header, or temporarily by holding :kbd:`Ctrl` after starting to drag a strip.
@@ -67,6 +61,11 @@ Ignore
 Current Frame
    Snap to Strips
       Snaps the Playhead to all strips.
+
+
+
+Transform
+=========
 
 .. _bpy.ops.transform.seq_slide:
 
@@ -195,12 +194,12 @@ Moves the strip or control point to the current frame.
 
 .. _bpy.ops.sequencer.offset_clear:
 
-Clear Strips Offset
--------------------
+Clear Strip Offset
+------------------
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Transform --> Clear Strips Offset`
+   :Menu:      :menuselection:`Strip --> Transform --> Clear Strip Offset`
    :Shortcut:  :kbd:`Alt-O`
 
 To reset the (soft) start/end frame handles.
@@ -208,12 +207,12 @@ To reset the (soft) start/end frame handles.
 
 .. _bpy.ops.sequencer.swap:
 
-Swap Strips
------------
+Swap Strip
+----------
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Transform --> Swap Strips`
+   :Menu:      :menuselection:`Strip --> Transform --> Swap Strip`
 
 Left :kbd:`Alt-Left`
    Swaps the active strip with the strip to the left.
@@ -262,98 +261,165 @@ Insert blank frames between the current frame and the first strips to the right,
 independent of selection or locked state of strips.
 
 
-Image Transform
-===============
+.. _sequencer-editing-retiming:
 
-.. _bpy.ops.sequencer.strip_transform_fit:
+Retiming Keys
+=============
 
-Scale to Fit
-------------
+.. figure:: /images/video-editing-retiming.png
+
+Strips can be sped up or, slowed down by adding and moving retiming keys. Retiming controls can be activated for
+individual strips, after which keys can be selected and moved.
+
+.. note::
+
+   - Only strip content is retimed, existing animation is not handled by the tool.
+   - Effect strips can not be retimed.
+
+.. hint::
+
+   To quickly change selected strip speed, press :kbd:`R` and enter desired speed.
+
+
+.. rubric:: Selecting Retiming Keys
+
+Retiming keys are always shown on strip as inactive by default.
+In order to select retiming keys, :ref:`Show Retiming Keys <bpy.types.Strip.show_retiming_keys>` must be enabled.
+This property can also be enabled using :ref:`bpy.ops.sequencer.retiming_show`.
+
+Multiple keys can be selected at once with box selection. Box select will select keys, only if a key is already
+selected. Otherwise it will select strips only.
+
+Use :kbd:`Ctrl-LMB` to select all keys to the right of the selected key.
+
+
+.. rubric:: Moving Retiming Keys
+
+Retiming key can be moved by dragging it with mouse, or by pressing :kbd:`G`. The key is mapped to particular frame
+of strip content, so moving it effectively means moving a frame to a new position and therefore stretching, or
+contracting time flow.
+
+When a key is moved, this does not affect position of other keys inside of the strip. If strip has more keys inside,
+multiple keys have to be selected, if only 1 segment has to be retimed. However if there are retiming keys outside
+of strip boundary, these will be moved along with first or last key in strip in order to preserve
+existing retiming, that is not visible.
+
+
+.. _bpy.ops.sequencer.retiming_key_add:
+
+Add Retiming Keys
+-----------------
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Image Transform --> Scale to Fit`
+   :Editor:    Video Sequencer
+   :Menu:      :menuselection:`Strip --> Retiming --> Add Retiming Key`
 
-Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
-so the visual contents of the strip to fit exactly within the project's
-:ref:`Resolution <bpy.types.RenderSettings.resolution_x>`
-while maintaining the original aspect ratio.
+Retiming key can be added to selected strips from retiming menu
+or by pressing :kbd:`I` and choosing Add Retiming Key option. This adds a key to current frame.
+This operation will also create keys at strip start and end point, since these keys must be always present.
 
-This may mean that the transparent areas may be added
-along the content's border to fit the content in the rendered area.
-
-
-Scale to Fill
--------------
-
-.. reference::
-
-   :Menu:      :menuselection:`Strip --> Image Transform --> Scale to Fill`
-
-Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
-so the visual contents of the strip to span the project's
-:ref:`Resolution <bpy.types.RenderSettings.resolution_x>`
-while maintaining the original aspect ratio.
-
-This may mean that portions of the original image no longer fit the content inside the rendered area.
+When keys are selected, strips are deselected, but it is still possible to add new keys.
+In this case keys will be added to strips where any key is selected.
 
 
-Stretch to Fill
----------------
+.. _bpy.ops.sequencer.retiming_add_freeze_frame_slide:
+
+Add Freeze Frame and Slide
+--------------------------
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Image Transform --> Stretch to Fill`
+   :Editor:    Video Sequencer
+   :Menu:      :menuselection:`Strip --> Retiming --> Add Freeze Frame and Slide`
 
-Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
-so the visual contents of the strip to fill the project's
-:ref:`Resolution <bpy.types.RenderSettings.resolution_x>`.
-Note, unlike the other two methods described above, *Stretch to Fill* does not maintaining the original aspect ratio.
+Freeze frame is used to stop strip playback at particular frame for any duration.
+Freeze frame can be added from strip retiming menu or context menu.
 
-This may mean that the original image becomes distorted to fit the content inside the rendered area.
+.. note::
+
+   It is not possible to make smooth transition into or from freeze frame.
 
 
-.. _bpy.ops.sequencer.strip_transform_clear:
+.. _bpy.ops.sequencer.retiming_add_transition_slide:
 
-Clear Position
+Add Speed Transition and Slide
+------------------------------
+
+.. reference::
+
+   :Editor:    Video Sequencer
+   :Menu:      :menuselection:`Strip --> Retiming --> Add Speed Transition and Slide`
+
+It is possible to create smooth transition from one speed to another speed.
+This can be done by selecting retiming key between 2 segments of different speeds,
+and choosing Add Speed Transition either from strip retiming menu or context menu.
+This will create 2 keys, that are linked and always move in opposite direction.
+If both keys are moved at once, this changes where transition starts and ends.
+
+
+Delete Retiming Keys
+--------------------
+
+.. reference::
+
+   :Editor:    Video Sequencer
+   :Menu:      :menuselection:`Strip --> Retiming --> Delete Retiming Keys`
+
+Retiming key can be deleted by selecting and pressing :kbd:`Delete` or :kbd:`X`.
+When handle is deleted, strip size will not change,
+therefore speed will change to average between 2 retimed segments.
+
+.. note::
+
+   When transition key is removed, it will re-create simple retiming key from which transition was created.
+
+
+.. _bpy.ops.sequencer.retiming_reset:
+
+Reset Retiming
 --------------
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Image Transform --> Clear Position`
+   :Editor:    Video Sequencer
+   :Menu:      :menuselection:`Strip --> Retiming --> Reset Retiming`
 
-Resets the strips :ref:`Position Transforms <bpy.types.StripTransform.rotation>` to a value of zero.
-
-
-Clear Scale
------------
-
-.. reference::
-
-   :Menu:      :menuselection:`Strip --> Image Transform --> Clear Scale`
-
-Resets the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>` to a value of one.
+Reverts all timing to the original strip.
 
 
-Clear Rotation
---------------
+.. _bpy.ops.sequencer.retiming_segment_speed_set:
 
-.. reference::
-
-   :Menu:      :menuselection:`Strip --> Image Transform --> Clear Rotation`
-
-Resets the strips :ref:`Rotation Transform <bpy.types.StripTransform.rotation>` to a value of zero.
-
-
-Clear All
+Set Speed
 ---------
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Image Transform --> Clear All`
+   :Editor:    Video Sequencer
+   :Menu:      :menuselection:`Strip --> Retiming --> Set Speed`
 
-Resets the strips position, scale, and rotation :ref:`Transforms <bpy.types.StripTransform>` to
-their default values.
+Sets the speed of a retimed segment.
+
+Speed
+   The rate compared to the original time.
+Preserve Current retiming
+   Keeps the speed of the other retiming segments unchanged by adjusting the
+   :ref:`Duration <bpy.types.Strip.frame_final_duration>` of the strip instead.
+
+
+.. _bpy.ops.sequencer.retiming_show:
+
+Toggle Retiming Keys
+--------------------
+
+.. reference::
+
+   :Editor:    Video Sequencer
+   :Menu:      :menuselection:`Strip --> Retiming --> Toggle Retiming Keys`
+   :Shortcut:  :kbd:`Ctrl-R`
+
+Enables the :ref:`Show Retiming Keys <bpy.types.Strip.show_retiming_keys>` strip property.
+This allows retiming keys to be shown for the first time and enables interacting with them.
 
 
 .. _bpy.ops.sequencer.split:
@@ -532,26 +598,25 @@ Swap Inputs
 Swaps the first two inputs for the effect strip.
 
 
-.. _bpy.ops.sequencer.lock:
-.. _bpy.ops.sequencer.unlock:
+Lock/Mute
+=========
 
-Lock/Unlock
-===========
+.. _bpy.ops.sequencer.lock:
 
 Lock Strips :kbd:`Ctrl-H`
    Disables the strip from being transformed.
+
+.. _bpy.ops.sequencer.unlock:
+
 Unlock Strips :kbd:`Ctrl-Alt-H`
    Enables disabled strips allowing them to be transformed.
-
 
 .. _bpy.ops.sequencer.mute:
 .. _bpy.ops.sequencer.unmute:
 
-Mute/Unmute
-===========
-
 Mute/Unmute Strips :kbd:`H`, :kbd:`Alt-H`
    Mute or unmute the selected strips.
+
 Mute/Unmute Deselected Strips :kbd:`Shift-H`, :kbd:`Shift-Alt-H`
    Mute or unmute all strips but the selected.
 
@@ -575,6 +640,106 @@ Change Path/Files
 
 Swap Data
    Swaps two sequence strips.
+
+
+Image Menu
+==========
+
+.. _bpy.ops.sequencer.strip_transform_clear:
+
+Clear
+-----
+
+Position
+^^^^^^^^
+
+.. reference::
+
+   :Menu:      :menuselection:`Image --> Clear --> Position`
+
+Resets the strips :ref:`Position Transforms <bpy.types.StripTransform.rotation>` to a value of zero.
+
+
+Scale
+^^^^^
+
+.. reference::
+
+   :Menu:      :menuselection:`Image --> Clear --> Scale`
+
+Resets the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>` to a value of one.
+
+
+Rotation
+^^^^^^^^
+
+.. reference::
+
+   :Menu:      :menuselection:`Image --> Clear --> Rotation`
+
+Resets the strips :ref:`Rotation Transform <bpy.types.StripTransform.rotation>` to a value of zero.
+
+
+All Transforms
+^^^^^^^^^^^^^^
+
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Image Transform --> Clear All`
+
+Resets the strips position, scale, and rotation :ref:`Transforms <bpy.types.StripTransform>` to
+their default values.
+
+
+.. _bpy.ops.sequencer.strip_transform_fit:
+
+Apply
+-----
+
+Scale to Fit
+^^^^^^^^^^^^
+
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Image Transform --> Scale to Fit`
+
+Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
+so the visual contents of the strip to fit exactly within the project's
+:ref:`Resolution <bpy.types.RenderSettings.resolution_x>`
+while maintaining the original aspect ratio.
+
+This may mean that the transparent areas may be added
+along the content's border to fit the content in the rendered area.
+
+
+Scale to Fill
+^^^^^^^^^^^^^
+
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Image Transform --> Scale to Fill`
+
+Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
+so the visual contents of the strip to span the project's
+:ref:`Resolution <bpy.types.RenderSettings.resolution_x>`
+while maintaining the original aspect ratio.
+
+This may mean that portions of the original image no longer fit the content inside the rendered area.
+
+
+Stretch to Fill
+^^^^^^^^^^^^^^^
+
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Image Transform --> Stretch to Fill`
+
+Adjusts the strips :ref:`Scale Transforms <bpy.types.StripTransform.scale>`
+so the visual contents of the strip to fill the project's
+:ref:`Resolution <bpy.types.RenderSettings.resolution_x>`.
+Note, unlike the other two methods described above, *Stretch to Fill* does not maintaining the original aspect ratio.
+
+This may mean that the original image becomes distorted to fit the content inside the rendered area.
 
 
 Context Menu
@@ -606,164 +771,3 @@ From Current Frame
    Fade from the current frame to the end of overlapping sequences.
 To Current Frame
    Fade from the start of sequences under the Playhead to the current frame.
-
-
-.. _sequencer-editing-retiming:
-
-Retiming Keys
-=============
-
-.. figure:: /images/video-editing-retiming.png
-
-Strips can be sped up or, slowed down by adding and moving retiming keys. Retiming controls can be activated for
-individual strips, after which keys can be selected and moved.
-
-.. note::
-
-   - Only strip content is retimed, existing animation is not handled by the tool.
-   - Effect strips can not be retimed.
-
-.. hint::
-
-   To quickly change selected strip speed, press :kbd:`R` and enter desired speed.
-
-
-.. rubric:: Selecting Retiming Keys
-
-Retiming keys are always shown on strip as inactive by default.
-In order to select retiming keys, :ref:`Show Retiming Keys <bpy.types.Strip.show_retiming_keys>` must be enabled.
-This property can also be enabled using :ref:`bpy.ops.sequencer.retiming_show`.
-
-Multiple keys can be selected at once with box selection. Box select will select keys, only if a key is already
-selected. Otherwise it will select strips only.
-
-Use :kbd:`Ctrl-LMB` to select all keys to the right of the selected key.
-
-
-.. rubric:: Moving Retiming Keys
-
-Retiming key can be moved by dragging it with mouse, or by pressing :kbd:`G`. The key is mapped to particular frame
-of strip content, so moving it effectively means moving a frame to a new position and therefore stretching, or
-contracting time flow.
-
-When a key is moved, this does not affect position of other keys inside of the strip. If strip has more keys inside,
-multiple keys have to be selected, if only 1 segment has to be retimed. However if there are retiming keys outside
-of strip boundary, these will be moved along with first or last key in strip in order to preserve
-existing retiming, that is not visible.
-
-
-.. _bpy.ops.sequencer.retiming_key_add:
-
-Add Retiming Keys
------------------
-
-.. reference::
-
-   :Editor:    Video Sequencer
-   :Menu:      :menuselection:`Strip --> Retiming --> Add Retiming Key`
-
-Retiming key can be added to selected strips from retiming menu
-or by pressing :kbd:`I` and choosing Add Retiming Key option. This adds a key to current frame.
-This operation will also create keys at strip start and end point, since these keys must be always present.
-
-When keys are selected, strips are deselected, but it is still possible to add new keys.
-In this case keys will be added to strips where any key is selected.
-
-
-.. _bpy.ops.sequencer.retiming_add_freeze_frame_slide:
-
-Add Freeze Frame and Slide
---------------------------
-
-.. reference::
-
-   :Editor:    Video Sequencer
-   :Menu:      :menuselection:`Strip --> Retiming --> Add Freeze Frame and Slide`
-
-Freeze frame is used to stop strip playback at particular frame for any duration.
-Freeze frame can be added from strip retiming menu or context menu.
-
-.. note::
-
-   It is not possible to make smooth transition into or from freeze frame.
-
-
-.. _bpy.ops.sequencer.retiming_add_transition_slide:
-
-Add Speed Transition and Slide
-------------------------------
-
-.. reference::
-
-   :Editor:    Video Sequencer
-   :Menu:      :menuselection:`Strip --> Retiming --> Add Speed Transition and Slide`
-
-It is possible to create smooth transition from one speed to another speed.
-This can be done by selecting retiming key between 2 segments of different speeds,
-and choosing Add Speed Transition either from strip retiming menu or context menu.
-This will create 2 keys, that are linked and always move in opposite direction.
-If both keys are moved at once, this changes where transition starts and ends.
-
-
-Delete Retiming Keys
---------------------
-
-.. reference::
-
-   :Editor:    Video Sequencer
-   :Menu:      :menuselection:`Strip --> Retiming --> Delete Retiming Keys`
-
-Retiming key can be deleted by selecting and pressing :kbd:`Delete` or :kbd:`X`.
-When handle is deleted, strip size will not change,
-therefore speed will change to average between 2 retimed segments.
-
-.. note::
-
-   When transition key is removed, it will re-create simple retiming key from which transition was created.
-
-
-.. _bpy.ops.sequencer.retiming_reset:
-
-Reset Retiming
---------------
-
-.. reference::
-
-   :Editor:    Video Sequencer
-   :Menu:      :menuselection:`Strip --> Retiming --> Reset Retiming`
-
-Reverts all timing to the original strip.
-
-
-.. _bpy.ops.sequencer.retiming_segment_speed_set:
-
-Set Speed
----------
-
-.. reference::
-
-   :Editor:    Video Sequencer
-   :Menu:      :menuselection:`Strip --> Retiming --> Set Speed`
-
-Sets the speed of a retimed segment.
-
-Speed
-   The rate compared to the original time.
-Preserve Current retiming
-   Keeps the speed of the other retiming segments unchanged by adjusting the
-   :ref:`Duration <bpy.types.Strip.frame_final_duration>` of the strip instead.
-
-
-.. _bpy.ops.sequencer.retiming_show:
-
-Toggle Retiming Keys
---------------------
-
-.. reference::
-
-   :Editor:    Video Sequencer
-   :Menu:      :menuselection:`Strip --> Retiming --> Toggle Retiming Keys`
-   :Shortcut:  :kbd:`Ctrl-R`
-
-Enables the :ref:`Show Retiming Keys <bpy.types.Strip.show_retiming_keys>` strip property.
-This allows retiming keys to be shown for the first time and enables interacting with them.
