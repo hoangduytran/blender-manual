@@ -19,35 +19,9 @@ typically in order to debug :doc:`geometry nodes </modeling/geometry_nodes/intro
 Header
 ======
 
-.. _bpy.types.SpaceSpreadsheet.object_eval_state:
-
-Object Evaluation State
-   The state for which to display data.
-
-   :Evaluated: Display data from the object with all modifiers applied.
-   :Original: Display data from the original object without any modifiers applied.
-   :Viewer Node: Display the data that's fed into the active :doc:`/modeling/geometry_nodes/output/viewer`.
-
-   You can also toggle between *Evaluated* and *Viewer Node* by clicking the eye icon in the
-   Viewer node's header.
-
-.. _bpy.types.SpaceSpreadsheet.display_context_path_collapsed:
-
-Breadcrumbs
-   Shows the name of the active object, and (if *Object Evaluation State* is set to *Viewer Node*)
-   the name of the Geometry Nodes modifier and the active Viewer node.
-
-   You can click one of the arrows between the names to hide the modifier.
-
-.. _bpy.ops.spreadsheet.toggle_pin:
-
-Toggle Pin
-   Click to "lock" the editor to the currently active object, and have it keep displaying that
-   object's data even if another object becomes active. Click again to unlock.
-
 .. _bpy.types.SpaceSpreadsheet.show_only_selected:
 
-Selected Only
+Show Only Selected
    This option is only available if the object is in Edit Mode.
    When checked, only data for the selected geometry elements is shown.
 
@@ -55,6 +29,7 @@ Selected Only
 
 Use Filter
    Whether to use the filters that are defined in the Sidebar (see below).
+
 
 Main Region
 ===========
@@ -70,17 +45,82 @@ Column names and row indices remain visible when scrolling down or to the side.
    and *Matrix* attribute values are only displayed in tooltips.
 
 
-.. _bpy.types.SpaceSpreadsheet.geometry_component_type:
-.. _bpy.types.SpaceSpreadsheet.attribute_domain:
+View Menu
+---------
+
+.. _bpy.types.SpaceSpreadsheet.show_region_toolbar:
+
+Toolbar :kbd:`T`
+   Show or hide the tab panel on the left for creating and manipulating markers and masks.
+
+.. _bpy.types.SpaceSpreadsheet.show_region_ui:
+
+Sidebar :kbd:`N`
+   Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
+
+----------
+
+Area
+   Area controls. See the :doc:`user interface </interface/window_system/areas>`
+   documentation for more information.
+
 
 Data Set Region
 ===============
 
-With region on the left, you can choose what to display data for.
-The top tree lets you pick from the hierarchy of geometries, such as a mesh inside an instance.
-The bottom tree lets you pick a domain, such as mesh vertices or curve splines.
+Located on the left, this region controls which data is displayed in the spreadsheet.
 
-Each tree item shows the number of elements inside.
+
+Context Path
+------------
+
+Displays the active object name in the panel header.
+
+Clicking one of the arrows between the names to hide the modifier.
+
+.. _bpy.ops.spreadsheet.toggle_pin:
+
+Clicking the :bl-icon:`unpinned` icon locks the Spreadsheet editor to the currently active object and data path,
+keeping it visible even if you select another object. Click again to unlock.
+
+.. _bpy.types.SpaceSpreadsheet.object_eval_state:
+
+Object Evaluation State
+   Defines which state of the object's data is displayed:
+
+   :Evaluated: Shows data with all modifiers applied.
+   :Original: Shows the original object data, without modifiers.
+   :Viewer Node: Displays data from the active :doc:`Viewer Node </modeling/geometry_nodes/output/viewer>` in Geometry Nodes.
+
+   You can also toggle between *Evaluated* and *Viewer Node* by clicking the
+   :bl-icon:`restrict_view_off` / :bl-icon:`restrict_view_on` icon in the Viewer node's header.
+
+
+Viewer Path
+^^^^^^^^^^^
+
+Visible when *Object Evaluation State* is set to *Viewer Node*.
+
+Shows the path from the modifier to the active viewer node.
+If the viewer node is nested inside group nodes, each group will appear in the path.
+
+
+.. _bpy.types.SpaceSpreadsheet.geometry_component_type:
+
+Geometry
+--------
+
+Lets you browse nested geometries (e.g., a mesh inside an instance or a geometry collection).
+
+
+.. _bpy.types.SpaceSpreadsheet.attribute_domain:
+
+Domain
+------
+
+Lets you choose the attribute domain to display, such as mesh vertices or curve splines.
+
+The number of elements in each domain is shown next to its entry.
 
 
 Sidebar
