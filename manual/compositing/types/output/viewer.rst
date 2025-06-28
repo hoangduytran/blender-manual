@@ -70,3 +70,8 @@ use :menuselection:`Image --> Save As...`, :kbd:`Alt-S` to save the image to a f
 The Image Editor also has three additional options in its header to view Images with or
 without Alpha, or to view the Alpha or Z itself.
 Click and holding the mouse in the Image displayed allows you to sample the values.
+
+.. seealso::
+
+   For overlays specific to the Viewer node (such as text info and render guides),
+   see :ref:`Guides Overlays <editors-image-overlays-guides>`.

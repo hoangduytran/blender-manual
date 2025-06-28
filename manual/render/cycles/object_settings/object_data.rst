@@ -227,6 +227,8 @@ to selectively speed up caustic rendering of objects in your scene.
 
    - Bump and normal maps are ignored when calculating caustics.
 
+   - GPU rendering using *HIP* devices is not supported.
+
 .. _bpy.types.CyclesObjectSettings.is_caustics_caster:
 
 Cast Shadow Caustics
