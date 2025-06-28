@@ -81,11 +81,13 @@ Viewport Gizmos
 Viewport Overlays
    Change how :doc:`overlays </editors/3dview/display/overlays>` are
    displayed in the 3D Viewport.
-X-Ray :kbd:`Alt-Z`
-   Make the whole scene transparent, allowing you to see and select items that
-   would otherwise be occluded.
-   This is a shortcut to the X-Ray option inside the
-   :ref:`Viewport Shading <3dview-shading-xray>` popover.
+
+.. _bpy.ops.view3d.toggle_xray:
+
+Toggle X-Ray :kbd:`Alt-Z`
+   Make the whole scene transparent, allowing you to see and select items that would otherwise be occluded.
+   This is a shortcut to the :ref:`X-Ray <bpy.types.View3DShading.show_xray>`
+   option which can be found inside the Viewport Shading popover (see below).
 
    In Pose Mode, this same button controls a different setting with its own separate on/off state.
    Rather than making the scene transparent, it shows the armature in front of any geometry.

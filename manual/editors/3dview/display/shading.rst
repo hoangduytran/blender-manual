@@ -31,7 +31,7 @@ Only displays the edges (wireframes) of the objects in the scene.
 
 .. _bpy.types.View3DShading.wireframe_color_type:
 
-Wire Color
+Wireframe Color
    How wireframes are colored. This affects the Wireframe shading mode and overlay.
 
    :Theme:
@@ -54,19 +54,18 @@ Background
       under :menuselection:`3D Viewport --> Theme Space --> Gradient Colors`.
    :World:
       Use the color from the :doc:`World </render/lights/world>`'s Viewport Display options.
-   :Viewport:
+   :Custom:
       Select a custom color for the background of the 3D Viewport.
 
 Options
-   .. _3dview-shading-xray:
+-------
 
-   X-Ray :kbd:`Alt-Z`
-      Make objects transparent, allowing you to see and select
-      items that would otherwise be occluded. The slider controls
-      object opacity.
+X-Ray :kbd:`Alt-Z`
+   Make objects transparent, allowing you to see and select items that would otherwise be occluded.
+   The slider controls object opacity.
 
-   Outline
-      Draw an outline around objects. The color of the outline can be adjusted.
+Outline
+   Draw an outline around objects. The color of the outline can be adjusted.
 
 
 .. _3dview-shading-solid:
@@ -101,7 +100,7 @@ Lighting
 
 .. _viewport_shading_solid_color:
 
-Color
+Object Color
    The source to compute the color for objects in the viewport.
 
    :Material:
@@ -110,18 +109,18 @@ Color
    :Object:
       Use the color that can be set per object
       in the Viewport Display :ref:`properties-object-viewport-display` panel.
+   :Random:
+      A random color will be selected for every object in the scene.
    :Attribute:
       Display the active :ref:`Color Attribute <modeling-meshes-properties-object_data-color-attributes>`
       of an object. When an object has no active Color Attribute it will be rendered in the color set
       in the Viewport Display :ref:`properties-object-viewport-display` panel.
-   :Single:
-      Render the whole scene using a single color. The color can be chosen.
-   :Random:
-      A random color will be selected for every object in the scene.
    :Texture:
       Show the texture from the active image texture node using the active UV map coordinates
       When an object has no active texture the object will be rendered with the settings
       in the Viewport Display :ref:`properties-material-viewport-display` panel.
+   :Custom:
+      Render the whole scene using a single color. The color can be chosen.
 
 Background
    How the background is displayed in the 3D Viewport.
@@ -132,7 +131,7 @@ Background
       under :menuselection:`3D Viewport --> Theme Space --> Gradient Colors`.
    :World:
       Use the color from the :doc:`World </render/lights/world>`'s Viewport Display options.
-   :Viewport:
+   :Custom:
       Select a custom color for the background of the 3D Viewport.
 
 
@@ -141,32 +140,6 @@ Options
 
 Backface Culling
    Use backface culling to hide backsides of faces.
-
-X-Ray
-   Render the scene transparent. With the slider you can control how
-   transparent the scene should appear.
-
-Shadow
-   Renders a sharp shadow in the scene.
-
-   Darkness
-      Defines how dark the shadow should be rendered. This slider can be adjusted
-      between 0 (shadow not visible) and 1 (shadow is black).
-
-   Light Direction
-      Controls the direction of the light source that casts the shadows.
-
-   Shadow Shift
-      Controls the Shadow termination angle. It can be used to limit self shadowing artifacts.
-
-   Shadow Focus
-      Controls the falloff near the edge of the shadow.
-
-Depth of Field
-   Use the Depth of Field settings of the active camera in the viewport.
-   Only visible when looking through the camera.
-
-   The settings are located on :menuselection:`Properties --> Camera --> Depth of Field` panel.
 
 Outline
    Render the outline of objects in the viewport. The color of the outline can be adjusted.
@@ -179,21 +152,53 @@ Specular Highlighting
       Only available when Lighting is set to *Studio* lighting or when a MatCap
       has been selected that contains a specular pass.
 
+.. _bpy.types.View3DShading.show_xray:
+
+X-Ray :kbd:`Alt-Z`
+   Render the scene transparent.
+   With the slider you can control how transparent the scene should appear.
+
+Shadow
+   Renders a sharp shadow in the scene.
+
+   Darkness
+      Defines how dark the shadow should be rendered. This slider can be adjusted
+      between 0 (shadow not visible) and 1 (shadow is black).
+
+   Shadow Settings
+      Direction
+         Controls the direction of the light source that casts the shadows.
+
+      Offset
+         Controls the Shadow termination angle. It can be used to limit self shadowing artifacts.
+
+      Focus
+         Controls the falloff near the edge of the shadow.
+
+Depth of Field
+   Use the Depth of Field settings of the active camera in the viewport.
+   Only visible when looking through the camera.
+
+   The settings are located on :menuselection:`Properties --> Camera --> Depth of Field` panel.
+
+
 Cavity
-   Highlight ridges and valleys in the scene geometry.
+^^^^^^
 
-   Type
-      Method how to calculate the cavity.
+Highlight ridges and valleys in the scene geometry.
 
-      :World: More precise but is slower to calculate.
-      :Screen: Fast but does not take the size of the ridges and valleys into account.
-      :Both: Both will use both methods.
+Type
+   Method how to calculate the cavity.
 
-   Ridge
-      Control the visibility of ridges.
+   :World: More precise but is slower to calculate.
+   :Screen: Fast but does not take the size of the ridges and valleys into account.
+   :Both: Both will use both methods.
 
-   Valley
-      Control the visibility of valleys.
+Ridge
+   Control the visibility of ridges.
+
+Valley
+   Control the visibility of valleys.
 
 
 .. _3dview-material-preview:
