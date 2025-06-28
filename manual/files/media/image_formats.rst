@@ -175,32 +175,33 @@ Color
 .. _bpy.types.ImageFormatSettings.color_depth:
 
 Color Depth
-   The exponent value (with base two) for how many colors can be represented within a single color channel.
-   A higher bit depth will allow more possible colors, reducing banding, and increasing precision.
-   Yet a higher bit depth will increase memory usage exponentially.
+   Defines the bit depth per color channel, determining how many color values can be represented.
 
-   Note, not all file formats support every color depth configuration.
-   Below is a list of commonly used depths:
+   Higher bit depths reduce color banding and improve precision but also increase file size and memory usage.
+   Note, not all file formats support all color depths.
 
-   :8-bit:
-      Most common for on-screen graphics and video.
-   :10, 12, 16-bit:
-      Used for some formats focusing on photography and digital films
-      (such as DPX and JPEG 2000).
-   :16-bit Half Float:
-      Since full 32bit float is often more than enough precision,
-      half float can save drive space while still providing a high dynamic range.
-   :32-bit Float:
-      Highest quality color depth.
+   :8:
+      Most common for on-screen graphics, web, and standard video. Suitable for general-purpose use.
+   :10, 12, 16:
+      Used by formats focused on photography and digital cinema (e.g., DPX, JPEG 2000).
+      Provides more tonal range and color detail than 8-bit.
+   :32:
+      32-bit floating point per channel. Provides the highest precision and dynamic range.
+      Highest possible color depth, primarily used with OpenEXR for visual effects and compositing workflows.
+   :Float (Half):
+      16-bit floating point per channel. Offers high dynamic range with lower memory and storage usage.
+      Only supported for OpenEXR files.
+   :Float (Full):
+      32-bit floating point per channel. Provides the highest precision and dynamic range.
+      Only supported for OpenEXR files.
 
    .. note::
 
-      Internally Blender's image system supports either:
+      Internally, Blender only operates in either 8-bit or 32-bit.
 
-      - 8 bits per channel (4 × 8 bits).
-      - 32 bits float per channel (4 × 32 bits) -- *using 4 times as much memory.*
+      Images with higher than 8-bit precision (e.g., 10-bit, 12-bit, 16-bit)
+      are converted to 32-bit float when loaded into Blender.
 
-      Images higher than 8 bits per channel will be converted into a float on loading into Blender.
 Compression
    Used to reduce the size of the image file.
    How this is done may vary depending on the file format and settings used.
