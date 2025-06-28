@@ -685,7 +685,7 @@ All Transforms
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Image Transform --> Clear All`
+   :Menu:      :menuselection:`Strip --> Clear --> All Transforms`
 
 Resets the strips position, scale, and rotation :ref:`Transforms <bpy.types.StripTransform>` to
 their default values.
