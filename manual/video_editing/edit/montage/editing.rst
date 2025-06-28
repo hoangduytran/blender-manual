@@ -487,18 +487,6 @@ Converts interlaced video into progressive video.
 Effect Strip
 ============
 
-.. _bpy.ops.sequencer.change_effect_input:
-
-Change Effect Input
--------------------
-
-.. reference::
-
-   :Menu:      :menuselection:`Strip --> Effect Strip --> Change Effect Input`
-
-Swaps which strips are the input for the effect strip.
-
-
 .. _bpy.ops.sequencer.change_effect_type:
 
 Change Effect Type
