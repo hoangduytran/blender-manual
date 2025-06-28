@@ -31,6 +31,34 @@ Use Filter
    Whether to use the filters that are defined in the Sidebar (see below).
 
 
+View Menu
+---------
+
+.. _bpy.types.SpaceSpreadsheet.show_region_toolbar:
+
+Toolbar :kbd:`T`
+   Show or hide the tab panel on the left for creating and manipulating markers and masks.
+
+.. _bpy.types.SpaceSpreadsheet.show_region_ui:
+
+Sidebar :kbd:`N`
+   Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
+
+----------
+
+.. _bpy.types.SpaceSpreadsheet.show_internal_attributes:
+
+Internal Attributes
+   Display attributes with names starting with a period that are meant for internal use.
+
+----------
+
+Area
+   Area controls. See the :doc:`user interface </interface/window_system/areas>`
+   documentation for more information.
+
+
+
 Main Region
 ===========
 
@@ -54,26 +82,6 @@ Column names and row indices remain visible while scrolling both vertically and 
    For example, *Byte Color* attributes are displayed as scene linear floats,
    but the actual integer values are displayed when hovering over the float values,
    and *Matrix* attribute values are only displayed in tooltips.
-
-
-View Menu
----------
-
-.. _bpy.types.SpaceSpreadsheet.show_region_toolbar:
-
-Toolbar :kbd:`T`
-   Show or hide the tab panel on the left for creating and manipulating markers and masks.
-
-.. _bpy.types.SpaceSpreadsheet.show_region_ui:
-
-Sidebar :kbd:`N`
-   Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
-
-----------
-
-Area
-   Area controls. See the :doc:`user interface </interface/window_system/areas>`
-   documentation for more information.
 
 
 Data Set Region
