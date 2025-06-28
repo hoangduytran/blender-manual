@@ -24,12 +24,13 @@ The *Boolean* modifier combines multiple meshes using a Boolean operation.
    If you have marked your objects to show the edges
    (in :menuselection:`Properties --> Object --> Viewport Display`, enable *Wireframe*),
    you will see the edge creation process while you are moving your objects around.
-   You can also enable :ref:`X-Ray <3dview-shading-xray>` to see inside the objects.
+   You can also enable :ref:`X-Ray <bpy.types.View3DShading.show_xray>` to see inside the objects.
 
 .. seealso::
 
    :doc:`/modeling/meshes/editing/face/intersect_boolean` for performing one-off
    Boolean operations inside a mesh in Edit Mode.
+
 
 Options
 =======

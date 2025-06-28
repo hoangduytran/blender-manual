@@ -136,12 +136,10 @@ Or contracting the selection when switching to a lower mode.
           Expanding to Edge mode.
 
 
-.. _bpy.ops.view3d.toggle_xray:
-
 X-Ray
 =====
 
-The :ref:`X-Ray <3dview-shading-xray>` setting is not just for shading, it impacts selection too.
+The :ref:`X-Ray <bpy.types.View3DShading.show_xray>` setting is not just for shading, it impacts selection too.
 When enabled, selection isn't occluded by the objects geometry (as if the object was solid).
 
 .. list-table::

@@ -14,7 +14,8 @@ It is a diagnostic tool that allows users to inspect intermediate results withou
 
 You can quickly assign a node to a Viewer by pressing :kbd:`Shift-Ctrl-LMB` on the desired node.
 To switch between multiple Viewer nodes, simply select one with :kbd:`LMB`.
-Only the active Viewer node (highlighted with a red header) will be displayed in the backdrop or Image Editor.
+Only the active Viewer node (with the :bl-icon:`restrict_view_off` icon in the header)
+will be displayed in the backdrop or Image Editor.
 
 
 Inputs

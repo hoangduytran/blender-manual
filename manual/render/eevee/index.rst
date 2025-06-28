@@ -14,6 +14,6 @@
    world_settings.rst
    object_settings/index.rst
    material_settings.rst
-   light_settings.rst
+   Light Settings <light_settings.rst>
    light_probes/index.rst
    limitations/index.rst

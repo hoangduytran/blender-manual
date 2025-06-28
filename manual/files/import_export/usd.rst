@@ -297,9 +297,11 @@ The following objects can be exported to USD:
 - Meshes (of different kinds, see below).
 - Cameras (perspective cameras only at the moment, not orthogonal ones).
 - Curves
+- Text (exported as meshes).
 - Lights
 - Hair (exported as curves, and limited to parent strands).
 - Point Clouds
+- Metaballs (exported as animated meshes).
 - Volumes
 - Armatures
 
@@ -312,7 +314,6 @@ This means that the following meshes can be exported:
   bouncing (but not cracking) objects.
 - Arbitrarily animated meshes; here the topology does change.
   An example is the result of a fluid simulation, where splashes of fluid can break off the main body.
-- Metaballs are exported as animated meshes.
 
 .. note::
 

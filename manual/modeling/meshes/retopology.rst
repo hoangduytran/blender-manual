@@ -169,7 +169,7 @@ then adjust it until it fully covers the original mesh and matches its shape.
 - The :ref:`bpy.types.View3DOverlay.show_retopology` overlay of the 3D Viewport is useful here,
   as it lets you see the original mesh through the retopologized one and vice versa --
   without getting distracted by geometry on the other side as would be the case with
-  :ref:`X-Ray <3dview-shading-xray>`.
+  :ref:`X-Ray <bpy.types.View3DShading.show_xray>`.
 - You can use the :doc:`/modeling/meshes/tools/poly_build` tool to quickly add, change,
   and remove faces.
 - Use :doc:`/editors/3dview/controls/snapping` to align new vertices to the original mesh.
