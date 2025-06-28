@@ -34,8 +34,19 @@ Use Filter
 Main Region
 ===========
 
-The main view shows the actual spreadsheet.
-Column names and row indices remain visible when scrolling down or to the side.
+The main region displays the attribute data in a spreadsheet format.
+Each column corresponds to an attribute or data property,
+and each row represents an element such as a vertex, face, spline, or instance.
+
+Column names and row indices remain visible while scrolling both vertically and horizontally.
+
+.. _bpy.ops.spreadsheet.resize_column:
+.. _bpy.ops.spreadsheet.fit_column:
+.. _bpy.ops.spreadsheet.reorder_columns:
+
+- Columns can be resized by clicking and dragging the vertical line between columns.
+- Double clicking the vertical line automatically sizes the column to fit the content.
+- Columns can be reordered by clicking and dragging the column header.
 
 .. note::
 
