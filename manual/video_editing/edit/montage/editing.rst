@@ -496,7 +496,12 @@ Change Effect Type
 
    :Menu:      :menuselection:`Strip --> Effect Strip --> Change Effect Type`
 
-Switch the effects on a selected Effect strip.
+Replaces the selected effect strip with another effect type that requires the same number of inputs.
+
+This operator preserves existing input strips and settings where possible,
+making it quicker to experiment with different effects without manually recreating the setup.
+
+For example, you can switch between effects like *Cross*, *Gamma Cross*, and *Wipe*, since they all use two inputs.
 
 
 .. _bpy.ops.sequencer.reassign_inputs:
