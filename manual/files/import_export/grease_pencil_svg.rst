@@ -1,10 +1,9 @@
-
 **********************************
 Import/Export SVG as Grease Pencil
 **********************************
 
-The Scalable Vector Graphics (SVG) format is use for interchanging vector based illustrations between applications
-and is supported by vector graphics editors such as Inkscape, and modern browsers among others.
+The Scalable Vector Graphics (SVG) format is used for interchanging vector-based illustrations between applications
+and is supported by vector graphics editors such as Inkscape and modern browsers, among others.
 
 .. warning:: The exporter only works in Object Mode.
 
@@ -56,9 +55,6 @@ Frame
    :Selected: Export all selected keyframes as SVG animation.
    :Scene: Export all frames as SVG animation.
 
-.. note:: To enable multi-keyframe selection you must enable Multiframe Editing.
-   See :doc:`Multiframe Editing </grease_pencil/multiframe>` for more information.
-
 Sampling
    Precision for the stroke sampling. Low values mean a more accurate result.
 
@@ -71,4 +67,4 @@ Uniform Width
 Clip Camera
    When enabled and camera view is active, export only the strokes clipped from camera view.
 
-.. note:: The export of the Grease Pencil strokes is always from camera view.
+.. note:: The export of the Grease Pencil strokes is always from the view of the largest 3D Viewport in the current workspace.
