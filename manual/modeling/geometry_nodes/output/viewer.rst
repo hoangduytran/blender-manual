@@ -40,7 +40,7 @@ instead.
 
 
 Keyboard Shortcuts
------------------
+------------------
 
 Viewer node provide a quick way to toggle between different viewer nodes using keyboard shortcuts,
 improving workflow efficiency when comparing outputs.

@@ -28,7 +28,7 @@ without affecting surrounding geometry.
 .. note::
 
    The *Rip* tool is not compatible with
-   :doc:`Sync Selection <bpy.types.ToolSettings.use_uv_select_sync>`.
+   :ref:`Sync Selection <bpy.types.ToolSettings.use_uv_select_sync>`.
    To use this tool, make sure Sync Selection is disabled in the UV Editor.
 
 .. seealso::
