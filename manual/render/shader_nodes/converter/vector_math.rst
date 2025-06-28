@@ -67,6 +67,10 @@ Operation
    :Normalize: The result of normalizing A. The result vector points to the same direction as A and
       has a length of 1. If A is (0, 0, 0), the result is (0, 0, 0) as well.
    :Absolute: The entrywise absolute value of A.
+   :Power: The entrywise power operator where the *Base* raised to the power of *Exponent*.
+   :Sign:
+      Extracts the sign of the input value. All positive numbers will output 1.0.
+      All negative numbers will output -1.0. And 0.0 will output 0.0.
    :Minimum: The entrywise minimum value from A and B.
    :Maximum: The entrywise maximum value from A and B.
    :Floor: Rounds the input value entrywise down to the nearest integer.
