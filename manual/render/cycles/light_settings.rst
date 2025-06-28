@@ -1,12 +1,12 @@
 
-**************
-Light Settings
-**************
+***********************
+Light Settings (Cycles)
+***********************
 
 .. reference::
 
-   :Panel:     :menuselection:`Properties --> Light` and :menuselection:`Shader Editor --> Sidebar --> Options -->
-        Light`
+   :Panel:     :menuselection:`Properties --> Object Data`
+               and :menuselection:`Shader Editor --> Sidebar --> Options`
 
 Next to lighting from the background and any object with an emission shader,
 lights are another way to add light into the scene.
@@ -14,14 +14,28 @@ The difference is that they are not directly visible in the rendered image,
 and can be more easily managed as objects of their own type.
 
 
-Common
-======
+Light
+=====
 
 :doc:`Light settings </render/lights/light_object>` for all renderers.
 
+Beam Shape
+----------
 
-Cycles
-======
+.. _bpy.types.AreaLight.spread:
+
+Spread :guilabel:`Area Lights`
+   How wide the emitted light fans out controlling how diffused the area light is.
+   Larger values create soft shadows while smaller values create sharper light
+   simulating a `gridded softbox <https://en.wikipedia.org/wiki/Softbox>`__.
+
+   .. figure:: /images/render_lights_light-object-area-spread.png
+
+      Example of Spread at different angles.
+
+
+Settings
+========
 
 .. _bpy.types.CyclesLightSettings.max_bounces:
 
@@ -49,13 +63,9 @@ Shadow Caustics
    :ref:`Cast and Receive caustics object settings <bpy.types.CyclesObjectSettings.is_caustics_caster>`
    to selectively speed up refractive caustic rendering of select objects.
 
-
-Area Lights
-===========
-
 .. _render-cycles-lights-area-portals:
 
-Portals
+Portals :guilabel:`Area Lights`
    Area lights can also function as light portals to help sample the environment light,
    and significantly reduce noise in interior scenes.
    Note that rendering with portals is usually slower, but as it converges more quickly, less samples are required.
@@ -70,18 +80,3 @@ Portals
    .. figure:: /images/render_cycles_light-settings_portals.jpg
 
       White Room model by Jay Hardy.
-
-
-Beam Shape
-----------
-
-.. _bpy.types.AreaLight.spread:
-
-Spread
-   How wide the emitted light fans out controlling how diffused the light is.
-   Larger values create soft shadows while smaller values create sharper light
-   simulating a `gridded softbox <https://en.wikipedia.org/wiki/Softbox>`__.
-
-   .. figure:: /images/render_lights_light-object-area-spread.png
-
-      Example of Spread at different angles.

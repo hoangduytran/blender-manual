@@ -1,12 +1,12 @@
 
-**************
-Light Settings
-**************
+**********************
+Light Settings (EEVEE)
+**********************
 
 .. reference::
 
-   :Panel:     :menuselection:`Properties --> Light`
-               :menuselection:`Shader Editor --> Sidebar --> Options`
+   :Panel:     :menuselection:`Properties --> Object Data`
+               and :menuselection:`Shader Editor --> Sidebar --> Options`
 
 Besides lighting from the background and materials with emission shaders,
 lights are another way to add light into the scene.
@@ -14,6 +14,7 @@ The difference is that they are not directly visible in the rendered image,
 and can be more easily managed as objects of their own type.
 
 See :doc:`Light settings </render/lights/light_object>` for settings common to all renderers.
+
 
 .. _bpy.types.Light.shadow:
 
@@ -27,6 +28,7 @@ This technique offers better performance than ray tracing and is compatible
 with any :ref:`Render Method <bpy.types.Material.surface_render_method>`.
 
 .. tip::
+
    - The error message *Shadow buffer full* means that the system cannot allocate enough shadow memory.
      Increasing the :ref:`Shadow Pool Size <bpy.types.SceneEEVEE.shadow_pool_size>` or
      the :ref:`Resolution Limit <bpy.types.Light.shadow_maximum_resolution>` on some lights

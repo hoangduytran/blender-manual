@@ -1,10 +1,13 @@
+.. _bpy.types.Light:
+
 *************
 Light Objects
 *************
 
 .. reference::
 
-   :Panel:     :menuselection:`Properties --> Light` and :menuselection:`Shader Editor --> Sidebar --> Settings`
+   :Panel:     :menuselection:`Properties --> Object Data`
+               and :menuselection:`Shader Editor --> Sidebar --> Options`
 
 
 Common Settings
@@ -37,6 +40,7 @@ Exposure
 Normalize
    By default, the total power of the light remains the same when the light size and shape changes.
    By disabling this option, more light will be emitted when making the light bigger.
+
 
 Renderer Settings
 =================
@@ -84,6 +88,7 @@ Radius
 
 Soft Falloff
    Apply falloff to avoid sharp edges when the light geometry intersects with other objects.
+
 
 .. _bpy.types.SpotLight:
 
