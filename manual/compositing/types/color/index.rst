@@ -25,6 +25,7 @@ overlaying another image, etc.
    :maxdepth: 1
 
    alpha_convert.rst
+   blackbody.rst
    color_ramp.rst
    convert_colorspace.rst
    set_alpha.rst
