@@ -41,9 +41,6 @@ Active Render
    Removes the selected UV map.
 
 
-.. _bpy.types.*texspace:
-.. _bpy.types.Mesh.texture_mesh:
-.. _bpy.ops.curve.match_texture_space:
 .. _properties-texture-space:
 
 Texture Space
@@ -59,16 +56,25 @@ used for generating texture coordinates without the use of a UV map.
 You can visualize the texture space using the option in the
 :doc:`/scene_layout/object/properties/display` panel.
 
-Auto Texture Space
-   Calculates the texture space automatically.
-
-   Location, Size
-      Lets you define the texture space manually, relative to the object.
-      Note that you can also edit it in the 3D Viewport -- see `Editing`_ below.
+.. _bpy.types.Mesh.texture_mesh:
 
 Texture Mesh :guilabel:`Mesh objects`
    Use another mesh for texture indices. The vertices of the two objects must be perfectly aligned
    or the UV map will be distorted.
+
+.. _bpy.types.Mesh.use_auto_texspace:
+
+Auto Texture Space
+   Calculates the texture space automatically.
+
+.. _bpy.types.Mesh.texspace_location:
+.. _bpy.types.Mesh.texspace_size:
+
+Location X, Y, Z, Size X, Y, Z
+   Lets you define the texture space manually, relative to the object.
+   Note that you can also edit it in the 3D Viewport -- see `Editing`_ below.
+
+.. _bpy.ops.curve.match_texture_space:
 
 Match Texture Space :guilabel:`Curve objects`
    Modifies the *Location* and *Size* to match the object's bounding box.
