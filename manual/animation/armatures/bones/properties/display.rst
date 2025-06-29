@@ -30,6 +30,41 @@ Hide
    Hides the bone in the 3D Viewport. When this is unchecked, the bone's
    visibility is determined by the visibility of its :ref:`bone collections <bpy.types.Bone.collections>`.
 
+.. _bpy.types.Bone.display_type:
+
+Display As
+   This controls the way the selected bones appear in the 3D Viewport.
+   This overrides the :ref:`Display Type <bpy.types.Armature.display_type>` of the armature.
+
+   .. list-table::
+
+      * - .. figure:: /images/animation_armatures_properties_display_octahedral.png
+             :width: 320px
+
+             Octahedral bone display.
+
+        - .. figure:: /images/animation_armatures_properties_display_stick.png
+             :width: 320px
+
+             Stick bone display.
+
+      * - .. figure:: /images/animation_armatures_properties_display_b-bone.png
+             :width: 320px
+
+             B-Bone bone display.
+
+        - .. figure:: /images/animation_armatures_properties_display_envelope.png
+             :width: 320px
+
+             Envelope bone display.
+
+   :Armature Defined: Use display mode from armature.
+   :Octahedral: Display bones as octahedral shape.
+   :Stick: Display bones as simple 2D lines with dots.
+   :B-Bone: Display bones as boxes, showing subdivision and B-Splines.
+   :Envelope: Display bones as extruded spheres, showing deformation influence volume.
+   :Wire: Display bones as thin wires, showing subdivision and B-Splines.
+
 .. _bpy.types.BoneColor.palette:
 .. _bpy.types.BoneColor:
 .. _bpy.types.ThemeBoneColorSet:
