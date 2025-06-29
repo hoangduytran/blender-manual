@@ -127,8 +127,18 @@ Mesh
 
 .. _bpy.types.GeometryNodeTree.is_type_curve:
 
-Curves
+Hair Curves
    The node tree supports :doc:`Curve Objects </modeling/curves/index>`.
+
+.. _bpy.types.GeometryNodeTree.is_type_grease_pencil:
+
+Grease Pencil
+   The node tree supports :doc:`Grease Pencil Objects </grease_pencil/index>`.
+
+.. _bpy.types.GeometryNodeTree.is_type_pointcloud:
+
+Point Cloud
+   The node tree supports :doc:`Point Cloud Objects </modeling/point_cloud/index>`.
 
 
 Modes
@@ -150,6 +160,11 @@ Edit Mode
 
 Sculpt Mode
    The node group can be used in :doc:`Sculpt Mode </sculpt_paint/sculpting/index>`.
+
+.. _bpy.types.GeometryNodeTree.is_mode_paint:
+
+Draw Mode :guilabel:`Grease Pencil`
+   The node group can be used in Grease Pencil :doc:`Draw Mode </grease_pencil/modes/draw/index>`.
 
 
 Options

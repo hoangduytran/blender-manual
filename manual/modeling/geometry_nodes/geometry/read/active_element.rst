@@ -9,7 +9,7 @@ Active Element Node
    :align: right
    :alt: Active Element node.
 
-The *Active Element* node outputs the index of the :term:`Active` vertex, edge, or face.
+The *Active Element* node outputs the index of the :term:`Active` point, edge, face, or layer.
 
 .. note::
 
