@@ -418,8 +418,5 @@ Use Preview Range :bl-icon:`preview_range`
    and enable it by pressing :kbd:`P` and dragging a box. To disable it,
    you can press :kbd:`Alt-P`.
 
-.. _bpy.types.Scene.frame_start:
-.. _bpy.types.Scene.frame_end:
-
 Start, End
    The start/end frame of the scene (or the preview range, if active).

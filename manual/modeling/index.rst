@@ -15,6 +15,7 @@
    surfaces/index.rst
    metas/index.rst
    texts/index.rst
+   point_cloud/index.rst
    volumes/index.rst
    empties.rst
    Modifiers <modifiers/index.rst>
