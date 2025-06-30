@@ -98,8 +98,9 @@ These filters restrict the modifier's effect to specific layers, materials, or g
 For each filter, you can invert the selection by clicking
 the :bl-icon:`arrow_leftright` (Invert) icon next to the control.
 
-Layer
+Layer / Group
    Restricts the effect to points or strokes of the specified :doc:`layer </grease_pencil/properties/layers>`.
+   Alternatively, to filter by layer groups, click the :bl-icon:`greasepencil_layer_group` icon.
 
 Layer Pass
    Restricts the effect to points or strokes in layers with a matching
