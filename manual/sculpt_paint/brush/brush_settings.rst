@@ -261,8 +261,7 @@ Color Picker
 .. _bpy.types.Brush.secondary_color:
 .. _bpy.types.Brush.color:
 
-Color
------
+.. rubric:: Color
 
 Brushes have two colors that can be set using the :ref:`ui-color-picker`:
 
@@ -295,9 +294,7 @@ painting. The two colors can also be swapped at any time using
    the RGB representation of the same colors will be different between the paint
    tools and the materials that are in linear space.
 
-
-Gradient
---------
+.. rubric:: Gradient
 
 A gradient can be used as a color source.
 
@@ -312,6 +309,51 @@ Mode
    :Repeat:
       Similar to *Clamp*. After the last color it resets the color to the first color in the color ramp and
       repeats the pattern.
+
+
+.. _bpy.types.UnifiedPaintSettings.use_color_jitter:
+
+Randomize Color
+---------------
+
+Applies random variation to the brush color for more natural and varied strokes.
+Useful for hand-painting textures or adding subtle irregularities.
+
+.. _bpy.types.UnifiedPaintSettings.use_stroke_random*:
+.. _bpy.types.UnifiedPaintSettings.use_random_press*:
+
+The randomness can affect hue, saturation, and value independently.
+Each channel also supports pressure sensitivity and stroke-based randomness.
+
+.. _bpy.types.UnifiedPaintSettings.hue_jitter:
+
+Hue
+   Amount of random variation applied to the hue of the brush color.
+
+   :bl-icon:`gp_select_strokes` (Stroke Random)
+      Apply a single random hue per stroke instead of varying continuously during the stroke.
+   :bl-icon:`stylus_pressure` (Use Pressure)
+      Modulate hue variation based on pen pressure.
+
+.. _bpy.types.UnifiedPaintSettings.saturation_jitter:
+
+Saturation
+   Amount of random variation applied to the saturation of the brush color.
+
+   :bl-icon:`gp_select_strokes` (Stroke Random)
+      Apply a single random saturation per stroke instead of varying continuously during the stroke.
+   :bl-icon:`stylus_pressure` (Use Pressure)
+      Modulate saturation variation based on pen pressure.
+
+.. _bpy.types.UnifiedPaintSettings.value_jitter:
+
+Value
+   Amount of random variation applied to the value (brightness) of the brush color.
+
+   :bl-icon:`gp_select_strokes` (Stroke Random)
+      Apply a single random value per stroke instead of varying continuously during the stroke.
+   :bl-icon:`stylus_pressure` (Use Pressure)
+      Modulate value variation based on pen pressure.
 
 
 Color Palette
