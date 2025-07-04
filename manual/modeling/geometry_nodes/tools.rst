@@ -19,6 +19,7 @@ them into an asset as described below.
 
    Node group tools integrated in the Curves menu.
 
+
 .. _tool_context:
 
 Tool Context
@@ -42,6 +43,7 @@ header will only show the node groups that have the
 
    The :doc:`inspection </modeling/geometry_nodes/inspection>`
    features are not supported in the *Tool* context.
+
 
 Asset
 =====

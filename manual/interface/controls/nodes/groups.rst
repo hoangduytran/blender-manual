@@ -200,6 +200,17 @@ Single Value
    Only allow single value inputs rather than :doc:`/modeling/geometry_nodes/fields`.
 
 
+.. _node-group-properties-animation:
+
+Animation
+---------
+
+Controls animation data for node group properties, including active :doc:`Actions </animation/actions>`
+and their assigned :ref:`Slot <animation-actions-slots>`.
+
+See :ref:`animation-actions-slots-manual-assign` for more information.
+
+
 .. _bpy.ops.node.group_make:
 
 Make Group

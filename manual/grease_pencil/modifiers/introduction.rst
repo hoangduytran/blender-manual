@@ -92,21 +92,35 @@ Apply (All Keyframes)
 Influence Filters
 -----------------
 
-Most of the modifiers share some special properties that restrict the effect only to certain items.
+Most Grease Pencil modifiers share a set of options that control where the modifier is applied.
+These filters restrict the modifier's effect to specific layers, materials, or geometry components.
 
-Layer
-   Restricts the effect only to one layer or to any layers that share the same
-   material :ref:`Pass Index <bpy.types.MaterialGPencilStyle.pass_index>`.
+For each filter, you can invert the selection by clicking
+the :bl-icon:`arrow_leftright` (Invert) icon next to the control.
+
+Layer / Group
+   Restricts the effect to points or strokes of the specified :doc:`layer </grease_pencil/properties/layers>`.
+   Alternatively, to filter by layer groups, click the :bl-icon:`greasepencil_layer_group` icon.
+
+Layer Pass
+   Restricts the effect to points or strokes in layers with a matching
+   :ref:`Pass Index <bpy.types.GreasePencilLayer.pass_index>`.
 
 Material
-   Restricts the effect only to material that share the same material or
-   material :ref:`Pass Index <bpy.types.MaterialGPencilStyle.pass_index>`.
+   Restricts the effect to points or strokes using the specified material.
+
+Material Pass
+   Restricts the effect to points or strokes whose material has a matching
+   :ref:`Pass Index <bpy.types.MaterialGPencilStyle.pass_index>`.
 
 Vertex Group
-   Restricts the effect only to a vertex group.
+   Restricts the effect to points or strokes assigned to a specific vertex group.
 
 Custom Curve
-   When enabled, use a custom curve to shape the effect along the strokes
-   from start to end points.
+   When enabled, applies a custom falloff curve to control how the modifier's influence varies
+   along each stroke from start to end.
 
-The Invert toggle ``<->`` allows you to reverse the filters behavior.
+.. note::
+
+   The availability of each filter depends on the specific modifier.
+   Not all modifiers support all filters.

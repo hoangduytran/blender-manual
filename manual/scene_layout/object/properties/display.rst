@@ -27,8 +27,13 @@ Show
       Displays all wireframe edges. This overrides the
       :ref:`wireframe threshold <bpy.types.View3DOverlay.wireframe_threshold>`
       that you can set in the 3D Viewport's overlay settings.
+
+   .. _bpy.types.Object.show_texture_space:
+
    Texture Space
-      Displays the object's :term:`Texture Space`.
+      Displays the object's :term:`Texture Space` in the 3D Viewport..
+      The texture space overlay can be disabled for all objects using the
+      :ref:`Extras Overlay <bpy.types.View3DOverlay.show_extras>`.
    Shadow
       Allows the object to cast shadows in the viewport.
 

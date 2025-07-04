@@ -96,8 +96,15 @@ Annotations
 Objects
 -------
 
+.. _bpy.types.View3DOverlay.show_extras:
+
 Extras
    Show objects that don't have geometry (such as empties, cameras and lights).
+
+   This also influences the display of:
+
+   - Rigid Body :ref:`Collision Shape <bpy.types.RigidBodyObject.collision_shape>`
+   - Object :ref:`Texture Space <bpy.types.Object.show_texture_space>`
 
 .. _bpy.types.View3DOverlay.show_light_colors:
 

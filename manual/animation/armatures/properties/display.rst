@@ -17,7 +17,8 @@ Viewport Display
 .. _bpy.types.Armature.display_type:
 
 Display As
-   This controls the way the bones appear in the 3D Viewport.
+   This controls the way the all the bones of the armature appear in the 3D Viewport.
+   Individual bones can also can override this using bone :ref:`Display Type <bpy.types.Bone.display_type>`.
 
    .. list-table::
 

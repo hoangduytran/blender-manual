@@ -22,9 +22,10 @@ Shape
    Primitive shapes (*Box*, *Sphere*, *Capsule*, *Cylinder*, and *Cone*)
    are best in terms of memory and performance but do not
    necessarily reflect the actual shape of the object.
-   They are calculated based on the object's bounding box.
+   The size of the shape is calculated based on the object's bounding box.
    The center of gravity is always in the geometric center of the shape.
-   Primitive shapes can be shown in the 3D Viewport by enabling :ref:`Bounds <bpy.types.Object.show_bounds>`.
+   Primitive shapes can be shown in the 3D Viewport by enabling
+   :ref:`Extras Overlay <bpy.types.View3DOverlay.show_extras>`.
 
    Mesh based shapes (*Convex Hull* and *Mesh*) are calculated based on the geometry of the object
    so they are a better representation of the object.
