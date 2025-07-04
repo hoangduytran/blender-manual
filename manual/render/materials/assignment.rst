@@ -60,6 +60,12 @@ The object's material slots and active material displayed in a :ref:`List View <
    Remove Unused Slots
       Removes all material slots not assigned to the object.
 
+   .. _bpy.ops.object.material_slot_remove_all:
+
+   Remove All Materials
+      Clears all material slots from the active object.
+      The material data-blocks remain available in the blend file but are no longer assigned.
+
 
 Data-Block
 ----------
