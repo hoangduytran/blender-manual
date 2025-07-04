@@ -189,11 +189,6 @@ Socket List
 Description
    The message displayed when hovering over socket properties.
 
-.. _bpy.types.NodeTreeInterfacePanel.default_closed:
-
-Closed by Default :guilabel:`Panels`
-   Panel is closed by default on new nodes.
-
 .. _bpy.types.NodeTreeInterfaceSocket*.default_value:
 
 Default
@@ -206,6 +201,19 @@ Min, Max
    The minimum and maximum value for the UI button shown in the node interface.
    Note, this is not a minimum or maximum for the data that can pass through the node.
    If a socket passes a higher value than the maximum, it will still pass into the node unchanged.
+
+.. _bpy.types.NodeTreeInterfaceSocket.menu_expanded:
+
+Expanded :guilabel:`Menu Socket`
+   Displays the menu in an expanded layout, showing all available options at once.
+
+   In node editors, only the expanded menu is shown, without the label.
+   In modifier and operator panels, the label is displayed.
+
+.. _bpy.types.NodeTreeInterfacePanel.default_closed:
+
+Closed by Default :guilabel:`Panels`
+   Panel is closed by default on new nodes.
 
 .. rubric:: Geometry Nodes
 
