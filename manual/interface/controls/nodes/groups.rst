@@ -258,10 +258,15 @@ Make Group
 Creates a new node group that contains all selected nodes.
 
 *Group Input* and *Group Output* nodes will be created to represent connections to unselected nodes outside the group.
-Inputs will be routed to *Group Input*  and outputs routed to the *Group Output*.
+Inputs will be routed to the *Group Input* and outputs routed to the *Group Output*.
 
-Default naming for the node group is "NodeGroup", "NodeGroup.001", etc.
-You can rename the group using the name field at the top of the group node or in the Sidebar.
+When grouping a **single node**, the resulting node group will:
+
+- Preserve the interface of the original node, including panels and default values.
+- Inherit the name of the original node
+
+When grouping **multiple nodes**, the group is created with inputs and outputs sockets generated from the connections.
+In this case, a generic name such as "NodeGroup", "NodeGroup.001", etc. is used.
 
 
 .. _bpy.ops.node.group_insert:
