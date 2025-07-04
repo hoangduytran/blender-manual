@@ -299,12 +299,17 @@ You can also drag and drop a file or directory from your file manager into the B
 This will navigate to the item and select it.
 
 
+.. _bpy.ops.file.select_all:
+
 Selecting
 =========
 
 Select
    Click :kbd:`LMB` to select a single item. Additionally hold :kbd:`Ctrl` to add/remove that item
    to/from the selection, or :kbd:`Shift` to select a range of items.
+
+.. _bpy.ops.file.select_box:
+
 Dragging
    Dragging with :kbd:`LMB` starts a :ref:`box selection <tool-select-box>`.
 
