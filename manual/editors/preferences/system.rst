@@ -135,6 +135,7 @@ Connection Limit
 
    Do not limit the number of connections when zero.
 
+
 .. _prefs-system-memory-and-limits:
 
 Memory & Limits
@@ -195,12 +196,33 @@ VBO Time Out
    Garbage Collection Rate
       Number of seconds between each run of the GL vertex buffer object garbage collector.
 
-.. _bpy.types.PreferencesSystem.max_shader_compilation_subprocesses:
+.. _bpy.types.PreferencesSystem.shader_compilation_method:
 
-Max Shader Compilation Subprocesses
-   Max number of parallel shader compilation subprocesses used by the OpenGL backend,
-   clamped at the max threads supported by the CPU (requires restarting Blender for changes to take effect).
-   Setting it to 0 disables subprocess shader compilation.
+Shader Compilation Method
+   Defines the method used for compiling GPU shaders in parallel.
+
+   - This option is not available on macOS and requires using OpenGL backend.
+   - Changing this setting requires restarting Blender to take effect.
+
+   :Thread:
+      Uses multiple threads within a single process to compile shaders concurrently.
+      This method is more memory-efficient but may be slower on some systems.
+   :Subprocess:
+      Uses multiple separate subprocesses to compile shaders in parallel.
+      This can be faster, especially on systems with high core counts, but consumes significantly more RAM.
+
+.. _bpy.types.PreferencesSystem.gpu_shader_workers:
+
+Threads / Subprocesses
+   The number of shader compilation threads or subprocesses to use.
+   The maximum value is limited by the number of logical CPU cores on the system.
+
+   Increasing the number can reduce shader compilation time at the cost of higher memory usage.
+   A value of 0 lets Blender automatically choose a suitable number based on the system configuration.
+
+   - This option is not available on macOS and requires using OpenGL backend.
+   - Changing this setting requires restarting Blender to take effect.
+
 
 .. _prefs-system-video-sequencer:
 
