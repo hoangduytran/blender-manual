@@ -33,7 +33,7 @@ Slot List
 
 The object's material slots and active material displayed in a :ref:`List View <ui-list-view>`.
 
-.. _bpy.ops.material.new:
+.. _bpy.ops.object.material_slot_add:
 
 :bl-icon:`add` (Add Material Slot)
    Add a new material slot on the object.
@@ -63,6 +63,8 @@ The object's material slots and active material displayed in a :ref:`List View <
 
 Data-Block
 ----------
+
+.. _bpy.ops.material.new:
 
 Material
    The Material :ref:`Data-Block Menu <ui-data-block>` for the selected material slot.
