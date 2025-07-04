@@ -43,26 +43,6 @@ Dragging
 
 To change many values at once on or off, you can press down
 :kbd:`LMB` and drag over multiple buttons.
-This works for checkboxes, toggles and to select a radio button value.
-
-
-Radio Buttons
-=============
-
-.. figure:: /images/interface_controls_buttons_buttons_radio.png
-   :align: right
-
-   Radio buttons.
-
-Radio buttons are used to choose one option from a selection of options.
-The active button is indicated by a colored background.
-
-
-Cycling
--------
-
-Use :kbd:`Ctrl-Wheel` while hovering the mouse over radio
-buttons to cycle between the options.
 
 
 .. _ui-direction-button:

@@ -39,6 +39,7 @@ Popup Menus
 
 .. figure:: /images/interface_controls_buttons_menus_menu-button.png
    :align: right
+   :figwidth: 200px
 
    Image menu in the Header of the Image editor.
 
@@ -82,15 +83,28 @@ Select Menus
 
    The 3D Viewport Mode Select menu.
 
-A Select menu (or "selector" for short) lets you choose between a set of options.
-It appears as an icon and/or text with a down arrow on the right side.
-To use it, click the button with :kbd:`LMB` to show the available options,
-then click the desired option (once selected, it'll appear inside the button).
-You can also use :kbd:`Ctrl-Wheel` to cycle through the options without opening the menu.
+A *Select Menu* (or "selector") allows you to choose from a predefined list of options.
+It appears as a text label and/or icon with a down arrow on the right.
 
-.. container:: lead
+Click with :kbd:`LMB` to open the menu and choose an option.
+The selected option will then appear inside the button.
+You can also cycle through options without opening the menu
+by scrolling on top of the button with :kbd:`Ctrl-Wheel`.
 
-   .. clear
+
+Expanded View
+-------------
+
+.. figure:: /images/interface_controls_buttons_buttons_radio.png
+   :align: right
+   :figwidth: 150px
+
+   Expanded menu view.
+
+Some select menus use an expanded layout to show all available options at once.
+In this view, the active option is highlighted with a colored background.
+
+In certain cases, you can select multiple options by holding :kbd:`Shift` and clicking with :kbd:`LMB`.
 
 
 .. _bpy.types.UIPopover:
@@ -100,11 +114,17 @@ Popover Menus
 
 .. figure:: /images/interface_controls_buttons_menus_popup-menu.png
    :align: right
+   :figwidth: 200px
 
    The Transform Orientations popover menu.
 
 Popover menus are similar to Select Menus, but can show more varied content
 such as a title, buttons, sliders, etc.
+
+
+.. container:: lead
+
+   .. clear
 
 
 .. _bpy.ops.buttons.context_menu:
