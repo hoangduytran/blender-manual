@@ -59,6 +59,8 @@ Shader (bright green)
    Used for shaders in :doc:`Cycles </render/cycles/index>` and :doc:`EEVEE </render/eevee/index>`.
 Geometry (turquoise)
    Used in :doc:`Geometry Nodes </modeling/geometry_nodes/index>`.
+Menu (Dark Grey)
+   Used for enum-like inputs that show a dropdown menu or radio button in the UI.
 
 .. rubric:: Data
 
@@ -67,7 +69,7 @@ Boolean (light pink)
 Color (yellow)
    Indicates that the socket accepts/produces color information.
    The colors may or may not have an alpha component depending on the node tree type.
-Float (gray)
+Float (light gray)
    Indicates that the socket accepts/produces floating-point numbers.
    It can either be a single value or a so-called "value map".
    (You can think of a value map as a grayscale image where the brightness of a pixel represents its value.)
