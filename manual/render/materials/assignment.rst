@@ -33,7 +33,7 @@ Slot List
 
 The object's material slots and active material displayed in a :ref:`List View <ui-list-view>`.
 
-.. _bpy.ops.material.new:
+.. _bpy.ops.object.material_slot_add:
 
 :bl-icon:`add` (Add Material Slot)
    Add a new material slot on the object.
@@ -60,9 +60,17 @@ The object's material slots and active material displayed in a :ref:`List View <
    Remove Unused Slots
       Removes all material slots not assigned to the object.
 
+   .. _bpy.ops.object.material_slot_remove_all:
+
+   Remove All Materials
+      Clears all material slots from the active object.
+      The material data-blocks remain available in the blend file but are no longer assigned.
+
 
 Data-Block
 ----------
+
+.. _bpy.ops.material.new:
 
 Material
    The Material :ref:`Data-Block Menu <ui-data-block>` for the selected material slot.
