@@ -9,45 +9,78 @@ Node Groups
 
    Example of a node group.
 
-Grouping nodes can simplify a node tree by hiding away complexity and reusing repetitive parts.
+Grouping nodes can simplify a node tree by hiding complexity and reusing common functionality.
+A node group is visually identified by its green title bar.
 
-Conceptually, node groups allow you to treat a *set* of nodes as though it were just one node.
-They're similar to functions in programming:
-they can be reused (even in different node trees) and can be customized by changing their "parameters."
+Conceptually, node groups allow you to treat a *set* of nodes as a single unit.
+They are similar to functions in programming: reusable, composable, and parameterizable.
 
-As an example, say you created a "Wood" material that you would like to have in different colors.
-One way of doing this would be to duplicate the entire material for every color, but if you did that,
-you'd have to go over all those copies again if you later wanted to change the density of the grain lines.
-Instead, it would be better to move the nodes that define the wood look into a node group.
-Each material can then reuse this node group and just supply it with a color.
-If you then later want to change the grain line density, you only have to do it once inside the node group,
-rather than for every material.
+For example, suppose you create a "Wood" material and want to use it in multiple colors.
+You could duplicate the entire node setup for each color, but maintaining those duplicates
+would be tedious if you later decide to change the wood grain detail.
+Instead, you can move the nodes that generate the wood pattern into a node group.
+Each material can then reuse this group and supply a custom color as input.
+Any updates to the grain detail need to be made only once—inside the node group.
 
-Node groups can be nested (that is, node groups can contain other node groups).
+Node groups can be nested; that is, a group can contain other groups.
 
 .. note::
 
-   Recursive node groups are prohibited for all the current node systems to prevent infinite recursion.
-   A node group can never contain itself (or another group that contains it).
+   Recursive node groups are prohibited to avoid infinite recursion.
+   A group cannot contain itself, directly or indirectly.
 
 .. tip::
 
-   Like all data-blocks, node groups with names that start with ``.`` are normally hidden from
-   :ref:`lists and menus <ui-data-block>` and can only be accessed through search.
-   This can be useful for node asset authors to hide their internal sub-groups from the final user.
+   Like other data-blocks, node groups with names that start with ``.`` are hidden
+   from :ref:`menus and lists <ui-data-block>` and can only be accessed via search.
+   This is useful for node asset authors who want to hide internal utility groups from end users.
 
-When a node group is created, new *Group Input* and *Group Output* nodes are generated
-to represent the data flow into and out of the group. Furthermore connections to input sockets coming
-from unselected nodes will become attached to new sockets on the *Group Input* node.
-Similarly, outgoing connections to input sockets of unselected nodes will become attached to
-the new *Group Output* node.
+*Group Input* and *Group Output* nodes are used to represent data flowing into and out of the group.
 
-If you want to pass an additional parameter into the group,
-a socket must be added to the *Group Input* node.
-To do this, drag a connection from the hollow socket on the right side of the *Group Input* node
-to the desired input socket on the node requiring an input.
-The process is similar for the *Group Output* regarding data
-you want to be made available outside the group.
+The *Group Input* node provides access to the group's input sockets from within the node group.
+These sockets act as parameters that control the behavior of the group from the outside.
+You can connect them to internal nodes to drive values such as factors, colors, or geometry inputs.
+
+The *Group Output* node defines the data that is passed out of the node group.
+Only sockets connected to this node will be available as outputs on the group itself.
+
+.. important::
+
+   Avoid using nodes output nodes such as Material Output or Composite inside node groups.
+   These should be used on the top level node tree to improve re-usability of node groups.
+
+   Use *Group Output* to pass data out of a node group.
+
+
+Usage
+=====
+
+Managing Inputs/Outputs
+-----------------------
+
+You can add, remove, and reorder input and output sockets in the *Group* panel in the Sidebar.
+New sockets can also be created directly by dragging a link to or from the hollow socket
+on the *Group Input* or *Group Output* node to another socket in the node editor.
+
+
+Reusing Node Groups
+-------------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Add --> Group`
+   :Shortcut:  :kbd:`Shift-A`
+
+Existing node groups can be placed again after they're initially defined, be it in the same
+node tree or a different one. It's also possible to import node groups from a different blend-file
+using :menuselection:`File --> Link/Append`.
+
+.. tip::
+
+   When appending node groups from another blend-file,
+   Blender does not distinguish between types such as material or compositing groups.
+   To avoid confusion, it is recommended to adopt a naming convention, like using prefixes
+   (`Mat_`, `Comp_`, `Geo_`, etc.), to indicate the group's context.
 
 
 Properties
@@ -115,6 +148,7 @@ only lists the node groups whose Usage matches the current :ref:`bpy.types.Space
    data-block menu anymore. To make it accessible again, you can add it as a node to a different node
    group (:menuselection:`Add --> Group`), select that node, and press :kbd:`Tab` to enter it.
    From there, you can enable one of the Usages again.
+
 
 .. _bpy.ops.node.tree_socket_add:
 .. _bpy.ops.node.tree_socket_remove:
@@ -221,22 +255,13 @@ Make Group
    :Menu:      :menuselection:`Node --> Make Group`
    :Shortcut:  :kbd:`Ctrl-G`
 
-To create a node group, select the nodes you want to include, then
-press :kbd:`Ctrl-G` or click :menuselection:`Group --> Make Group`.
-A node group will have a green title bar. All selected nodes will now be contained within the node group.
-Default naming for the node group is "NodeGroup", "NodeGroup.001" etc.
-There is a name field in the node group you can click into to change the name of the group.
-Change the name of the node group to something meaningful.
+Creates a new node group that contains all selected nodes.
 
-When appending node groups from one blend-file to another,
-Blender does not make a distinction between material node groups or composite node groups.
-So it is recommended to use some naming convention that will allow you to distinguish between the two types.
+*Group Input* and *Group Output* nodes will be created to represent connections to unselected nodes outside the group.
+Inputs will be routed to *Group Input*  and outputs routed to the *Group Output*.
 
-.. tip::
-
-   The "Add" menu of each node editor contains an "Output" category with node types such as "Material Output."
-   These node types should not be confused with the "Group Output" node found in node groups,
-   and should not be used in node groups either (only in the top-level node tree).
+Default naming for the node group is "NodeGroup", "NodeGroup.001", etc.
+You can rename the group using the name field at the top of the group node or in the Sidebar.
 
 
 .. _bpy.ops.node.group_insert:
@@ -301,16 +326,3 @@ Separate :kbd:`P`
       Copy to parent node tree, keep group intact.
    Move
       Move to parent node tree, remove from group.
-
-
-Reusing Node Groups
-===================
-
-.. reference::
-
-   :Menu:      :menuselection:`Add --> Group`
-   :Shortcut:  :kbd:`Shift-A`
-
-Existing node groups can be placed again after they're initially defined, be it in the same
-node tree or a different one. It's also possible to import node groups from a different blend-file
-using :menuselection:`File --> Link/Append`.
