@@ -70,22 +70,35 @@ MetalRT
 Display Graphics
 ================
 
-Changes how display graphics are drawn.
+Settings that control how Blender draws its user interface and other display graphics.
+These options can influence performance and compatibility.
 
 .. _bpy.types.PreferencesSystem.gpu_backend:
 
 Backend
+   Selects the graphics API used for drawing the interface and rendering display content.
+
+   Changing the backend requires restarting Blender for the change to take effect.
+
    :OpenGL:
-     Use OpenGL to draw display graphics.
+      Uses the OpenGL backend.
+      This is the traditional backend, compatible with a wide range of systems.
    :Vulkan:
-     Use Vulkan to draw display graphics.
+      Uses the Vulkan backend. Vulkan may offer improved performance and better support for modern GPU features,
+      but compatibility may vary depending on the system and drivers.
 
 .. _bpy.types.PreferencesSystem.gpu_preferred_device:
 
-Device
-   Select GPU device to use to draw the display graphics.
-   The Auto option will select the best matching GPU.
-   Device selection is only available when the Vulkan backend is active.
+Device :guilabel:`Vulkan`
+   Specifies which GPU device to use for display drawing operations.
+
+   This setting is useful for systems with multiple GPUs (e.g., integrated + discrete)
+   where you want to force Blender to use a specific GPU for UI rendering.
+
+   Changing the backend requires restarting Blender for the change to take effect.
+
+   :Auto:
+      Automatically selects the most appropriate GPU based on system configuration and driver support.
 
 
 Operating System Settings
