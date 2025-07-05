@@ -64,6 +64,7 @@ MetalRT
    :On: Enable MetalRT for intersection queries.
    :Auto: Automatically pick the fastest intersection method.
 
+
 .. _editors_preferences_display_graphics:
 
 Display Graphics
@@ -71,12 +72,15 @@ Display Graphics
 
 Changes how display graphics are drawn.
 
+.. _bpy.types.PreferencesSystem.gpu_backend:
+
 Backend
    :OpenGL:
      Use OpenGL to draw display graphics.
-
    :Vulkan:
      Use Vulkan to draw display graphics.
+
+.. _bpy.types.PreferencesSystem.gpu_preferred_device:
 
 Device
    Select GPU device to use to draw the display graphics.
@@ -92,17 +96,21 @@ Make this installation your default Blender (MS-Windows & Linux only).
 On Linux, if Blender is installed from a package manager such as Snap,
 file association is handled by the package manager.
 
-.. _prefs-system-register:
+.. _bpy.ops.preferences.associate_blend:
 
 Register
    Make the currently in use Blender installation the default
    for generating thumbnails and the default for opening blend-files.
+
+.. _bpy.ops.preferences.unassociate_blend:
+
 Unregister
    Remove file association & thumbnailer.
 
+.. _bpy.types.PreferencesSystem.register_all_users:
+
 For All Users
    Register Blender for all users, requires escalated privileges.
-
 
 .. admonition:: Linux Registration
    :class: note
@@ -125,10 +133,14 @@ Allow Online Access
    Add-ons that follow this setting will only connect to the internet if enabled.
    However, Blender cannot prevent third-party add-ons from violating this rule.
 
+.. _bpy.types.PreferencesSystem.network_timeout:
+
 Time Out
    The time (in seconds) that online operations may wait before timing out.
 
    Use the systems default when zero.
+
+.. _bpy.types.PreferencesSystem.network_connection_limit:
 
 Connection Limit
    The maximum number of simultaneous connections an online operation may make.
