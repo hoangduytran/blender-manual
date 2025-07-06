@@ -202,6 +202,16 @@ Min, Max
    Note, this is not a minimum or maximum for the data that can pass through the node.
    If a socket passes a higher value than the maximum, it will still pass into the node unchanged.
 
+.. _bpy.types.NodeTreeInterfaceSocketVector.dimensions:
+
+Dimensions :guilabel:`Vector Socket`
+   Sets the number of components for the vector socket: 2, 3, or 4.
+   Changing the dimension affects how the socket is drawn in the interface and how data is passed through the socket.
+
+   - **2D**: Shows and uses only X and Y components.
+   - **3D**: Includes X, Y, and Z components.
+   - **4D**: Includes X, Y, Z, and W components.
+
 .. _bpy.types.NodeTreeInterfaceSocket.menu_expanded:
 
 Expanded :guilabel:`Menu Socket`
