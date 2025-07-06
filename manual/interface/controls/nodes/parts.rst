@@ -79,7 +79,11 @@ Integer (lime green)
 String (light blue)
    Used to pass a text value.
 Vector (dark blue)
-   Indicates vector, coordinate and normal information.
+   Represents vector data such as coordinates and normals. Vectors can have 2, 3, or 4 components:
+
+   - **2D**: Shows and uses only X and Y components.
+   - **3D**: Includes X, Y, and Z components.
+   - **4D**: Includes X, Y, Z, and W components.
 Rotation (pink)
    Indicates a rotation/quaternion.
 Matrix (dark pink)
