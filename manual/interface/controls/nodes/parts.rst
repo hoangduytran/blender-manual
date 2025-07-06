@@ -71,9 +71,6 @@ Color (yellow)
    The colors may or may not have an alpha component depending on the node tree type.
 Float (light gray)
    Indicates that the socket accepts/produces floating-point numbers.
-   It can either be a single value or a so-called "value map".
-   (You can think of a value map as a grayscale image where the brightness of a pixel represents its value.)
-   If a single value is used as an input for a "value map" socket, all points of the map are set to this same value.
 Integer (lime green)
    Used to pass an integer value (a number without a fractional component).
 String (light blue)
@@ -101,6 +98,37 @@ Texture (pink)
    Used to pass a texture data-block.
 Image (apricot)
    Used to pass an image data-block.
+
+
+Socket Structure
+----------------
+
+Data sockets can have different structure types, indicating how values are passed and interpreted.
+More complex structures allow passing multiple values through a single connection.
+
+Single (Circle)
+   These sockets expects a single value, they are represented by a circular socket shape.
+Fields (Diamond)
+   Represents a value that can vary per element (e.g. per point, edge, or face).
+   You can think of a field as a "value map", similar to how the brightness of pixels
+   in a grayscale image represents varying values across space.
+
+   If a single value is connected to a field socket,
+   it is implicitly broadcast all elements receive the same value.
+
+   Fields can have the following appearance:
+
+   - **Diamond**: The socket can accept a field input, or it outputs a field. A constant single
+     value can be connected to these sockets, but then the output will often not  vary per element.
+
+   - **Diamond with Dot** : The socket can be a field, but it is currently a single value.
+     This is helpful because it allows tracking where single values are calculated,
+     instead of a field with many different results.
+     It also means that :ref:`socket-inspection` will show the value instead of field input names.
+
+   .. seealso::
+
+      :doc:`Geometry Nodes Fields Documentation </modeling/geometry_nodes/fields>`
 
 
 Inputs

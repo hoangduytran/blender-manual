@@ -246,10 +246,13 @@ Hide in Modifier
 
    This option is only available for geometry nodes and only for input sockets.
 
-.. _bpy.types.NodeTreeInterfaceSocket.force_non_field:
+.. _bpy.types.NodeTreeInterfaceSocket.structure_type:
 
-Single Value
-   Only allow single value inputs rather than :doc:`/modeling/geometry_nodes/fields`.
+Structure Type
+   What kind of higher order types are expected to flow through this socket.
+
+   :Auto: Automatically detect a good structure type based on how the socket is used.
+   :Single: Only allow single value inputs rather than :doc:`/modeling/geometry_nodes/fields`.
 
 
 .. _node-group-properties-animation:
