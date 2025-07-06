@@ -7,6 +7,7 @@ Selecting UVs
 Much like the 3D Viewport, the UV Editor has selection mode buttons in the header,
 as well as a *Select* menu.
 
+
 .. _bpy.types.ToolSettings.use_uv_select_sync:
 
 Sync Selection
@@ -21,6 +22,7 @@ If turned on, the UV Editor always shows all faces. Selecting an item in one edi
 selects it in the other. If one 3D vertex/edge corresponds to multiple UV vertices/edges,
 you can't select those individually (you can only select all of them).
 
+
 .. _bpy.ops.uv.select_mode:
 .. _bpy.types.ToolSettings.uv_select_mode:
 
@@ -30,7 +32,6 @@ Selection Mode
 :Vertex: :kbd:`1` Select vertices.
 :Edge: :kbd:`2` Select edges.
 :Face: :kbd:`3` Select faces.
-:Island: :kbd:`4` Select contiguous groups of faces. Only available if *Sync Selection* is disabled.
 
 If *Sync Selection* is enabled, you can hold :kbd:`Shift` while clicking a selection mode to
 activate multiple ones at the same time, or :kbd:`Ctrl` to expand/contract the selection.
@@ -40,12 +41,28 @@ activate multiple ones at the same time, or :kbd:`Ctrl` to expand/contract the s
    :doc:`Mesh Selection </modeling/meshes/selecting/introduction>`
 
 
+.. _bpy.types.ToolSettings.use_uv_select_island:
+
+UV Island Selection
+===================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Header --> UV Island Selection`
+   :Shortcut:  :kbd:`4`
+
+Select contiguous groups of faces that are connected in the UV map.
+Only available for *Face* select mode or if *Sync Selection* is disabled.
+
+
 .. _bpy.types.ToolSettings.uv_sticky_select_mode:
 
 Sticky Selection Mode
 =====================
 
-Options for automatically selecting additional UV vertices. Only available if *Sync Selection* is disabled.
+Options for automatically selecting additional UV vertices.
+Only available for *Face* select mode or if *Sync Selection* is disabled.
 
 Disabled
    Each UV vertex can be selected independently of the others.
@@ -57,6 +74,7 @@ Shared Vertex
    Automatically select UV vertices that correspond to the same mesh vertex,
    even if they have different UV coordinates.
    This is also the behavior when *Sync Selection* is enabled.
+
 
 Select Menu
 ===========

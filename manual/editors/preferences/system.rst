@@ -64,24 +64,41 @@ MetalRT
    :On: Enable MetalRT for intersection queries.
    :Auto: Automatically pick the fastest intersection method.
 
+
 .. _editors_preferences_display_graphics:
 
 Display Graphics
 ================
 
-Changes how display graphics are drawn.
+Settings that control how Blender draws its user interface and other display graphics.
+These options can influence performance and compatibility.
+
+.. _bpy.types.PreferencesSystem.gpu_backend:
 
 Backend
+   Selects the graphics API used for drawing the interface and rendering display content.
+
+   Changing the backend requires restarting Blender for the change to take effect.
+
    :OpenGL:
-     Use OpenGL to draw display graphics.
-
+      Uses the OpenGL backend.
+      This is the traditional backend, compatible with a wide range of systems.
    :Vulkan:
-     Use Vulkan to draw display graphics.
+      Uses the Vulkan backend. Vulkan may offer improved performance and better support for modern GPU features,
+      but compatibility may vary depending on the system and drivers.
 
-Device
-   Select GPU device to use to draw the display graphics.
-   The Auto option will select the best matching GPU.
-   Device selection is only available when the Vulkan backend is active.
+.. _bpy.types.PreferencesSystem.gpu_preferred_device:
+
+Device :guilabel:`Vulkan`
+   Specifies which GPU device to use for display drawing operations.
+
+   This setting is useful for systems with multiple GPUs (e.g., integrated + discrete)
+   where you want to force Blender to use a specific GPU for UI rendering.
+
+   Changing the backend requires restarting Blender for the change to take effect.
+
+   :Auto:
+      Automatically selects the most appropriate GPU based on system configuration and driver support.
 
 
 Operating System Settings
@@ -92,17 +109,21 @@ Make this installation your default Blender (MS-Windows & Linux only).
 On Linux, if Blender is installed from a package manager such as Snap,
 file association is handled by the package manager.
 
-.. _prefs-system-register:
+.. _bpy.ops.preferences.associate_blend:
 
 Register
    Make the currently in use Blender installation the default
    for generating thumbnails and the default for opening blend-files.
+
+.. _bpy.ops.preferences.unassociate_blend:
+
 Unregister
    Remove file association & thumbnailer.
 
+.. _bpy.types.PreferencesSystem.register_all_users:
+
 For All Users
    Register Blender for all users, requires escalated privileges.
-
 
 .. admonition:: Linux Registration
    :class: note
@@ -125,10 +146,14 @@ Allow Online Access
    Add-ons that follow this setting will only connect to the internet if enabled.
    However, Blender cannot prevent third-party add-ons from violating this rule.
 
+.. _bpy.types.PreferencesSystem.network_timeout:
+
 Time Out
    The time (in seconds) that online operations may wait before timing out.
 
    Use the systems default when zero.
+
+.. _bpy.types.PreferencesSystem.network_connection_limit:
 
 Connection Limit
    The maximum number of simultaneous connections an online operation may make.

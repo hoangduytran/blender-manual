@@ -178,6 +178,17 @@ Slip Keyframes
    If enabled, keyframes on the strip's properties (e.g. opacity, transform) will be moved along
    with the content. Disable this to keep keyframes fixed at their original timeline positions.
 
+.. rubric:: Usage
+
+Move the mouse left or right to shift the strip's content, then confirm the operation.
+Additional options are available during the operation:
+
+- **Confirm**: :kbd:`LMB`, :kbd:`Enter`, :kbd:`Spacebar`
+- **Cancel**: :kbd:`Esc`, :kbd:`RMB`
+- **Precision Mode**: Hold :kbd:`Shift` to enable subframe slipping which slips the audio.
+  The subframe amount is shown in the header as *Sound Offset*.
+- **Clamp**: Press :kbd:`C` to clamp the slip range to the strip's start and end bounds.
+
 
 .. _bpy.ops.sequencer.snap:
 

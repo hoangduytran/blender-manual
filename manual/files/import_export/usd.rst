@@ -155,7 +155,23 @@ Object Types
 ------------
 
 Cameras
-   Import ``UsdGeomCamera`` primitives as :doc:`Camera Objects </render/cameras>` (perspective and orthographic).
+   Import ``UsdGeomCamera`` primitives as :doc:`Camera Objects </render/cameras>`.
+
+   Supported camera attributes include:
+
+   - Projection type (perspective and orthographic)
+   - Focal length.
+   - Depth of field distance.
+   - F-stop (aperture).
+   - Clipping start and end.
+   - Sensor shift (tilt) X and Y.
+   - Sensor size (aperture width and height).
+
+   .. note::
+
+      Most properties support animation. However, aperture size import is limited due to differences
+      between USD and Blender in how sensor dimensions are interpreted. When aperture sizes are animated,
+      corresponding shift values are also animated to maintain consistency.
 Curves
    Import ``UsdGeomBasisCurves`` primitives as :doc:`Curves </modeling/curves_new/index>` and ``UsdGeomNurbsCurves``
    as Blender meshes.
