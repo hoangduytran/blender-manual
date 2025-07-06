@@ -1,7 +1,9 @@
+
 **********
 File Paths
 **********
 
+.. _files-path_templates:
 
 Path Templates
 ==============
@@ -58,9 +60,15 @@ A basic template expression simply wraps a variable name with curly braces:
 
    dance_{fps}.png
 
-Template expressions can also include a format specifier. Format specifiers
-instruct Blender how to format the substituted value. They are written after a
-separating colon, like this:
+
+.. _files-path_templates-specifiers:
+
+Format Specifiers
+^^^^^^^^^^^^^^^^^
+
+Template expressions can also include a format specifier.
+Format specifiers instruct Blender how to format the substituted value.
+They are written after a separating colon, like this:
 
 .. code-block:: text
 

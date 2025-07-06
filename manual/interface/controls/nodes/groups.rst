@@ -202,6 +202,16 @@ Min, Max
    Note, this is not a minimum or maximum for the data that can pass through the node.
    If a socket passes a higher value than the maximum, it will still pass into the node unchanged.
 
+.. _bpy.types.NodeTreeInterfaceSocketVector.dimensions:
+
+Dimensions :guilabel:`Vector Socket`
+   Sets the number of components for the vector socket: 2, 3, or 4.
+   Changing the dimension affects how the socket is drawn in the interface and how data is passed through the socket.
+
+   - **2D**: Shows and uses only X and Y components.
+   - **3D**: Includes X, Y, and Z components.
+   - **4D**: Includes X, Y, Z, and W components.
+
 .. _bpy.types.NodeTreeInterfaceSocket.menu_expanded:
 
 Expanded :guilabel:`Menu Socket`
@@ -236,10 +246,13 @@ Hide in Modifier
 
    This option is only available for geometry nodes and only for input sockets.
 
-.. _bpy.types.NodeTreeInterfaceSocket.force_non_field:
+.. _bpy.types.NodeTreeInterfaceSocket.structure_type:
 
-Single Value
-   Only allow single value inputs rather than :doc:`/modeling/geometry_nodes/fields`.
+Structure Type
+   What kind of higher order types are expected to flow through this socket.
+
+   :Auto: Automatically detect a good structure type based on how the socket is used.
+   :Single: Only allow single value inputs rather than :doc:`/modeling/geometry_nodes/fields`.
 
 
 .. _node-group-properties-animation:
