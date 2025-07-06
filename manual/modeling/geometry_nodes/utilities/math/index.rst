@@ -6,6 +6,7 @@
 .. toctree::
    :maxdepth: 1
 
+   bit_math.rst
    boolean_math.rst
    clamp.rst
    compare.rst
