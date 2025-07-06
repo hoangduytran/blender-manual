@@ -8,6 +8,7 @@ Nodes to manipulate strings.
 .. toctree::
    :maxdepth: 1
 
+   format_string.rst
    join_strings.rst
    match_string.rst
    replace_string.rst
