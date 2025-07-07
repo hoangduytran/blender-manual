@@ -122,7 +122,9 @@ Useful Constructs
 =================
 
 - ``|BLENDER_VERSION|``:
-  Inserts the current Blender version automatically.
+  Inserts the current Blender version number automatically. e.g. "4.5".
+- ``|BLENDER_VERSION_LABEL|``:
+  Inserts the current Blender version label automatically. e.g. "4.5 LTS".
 - ``:abbr:`SSAO (Screen Space Ambient Occlusion)```:
   Abbreviation displays the full text on hover.
 - ``:term:`Manifold```:
