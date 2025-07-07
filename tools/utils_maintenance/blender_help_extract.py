@@ -28,7 +28,7 @@ def help_text_make_version_and_usage_substitution(text: str) -> str:
     text = re.sub(
         re.compile(r"^(Blender) +\d.*\n(Usage:) +(.*)$", flags=re.MULTILINE),
         lambda x: (
-            "| {:s} |BLENDER_VERSION|\n"
+            "| {:s} |BLENDER_VERSION_LABEL|\n"
             "| {:s} ``{:s}``"
         ).format(x.group(1), x.group(2), x.group(3)),
         text,
