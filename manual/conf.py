@@ -26,12 +26,15 @@ sys.setrecursionlimit(2000)
 
 # Not used directly by Sphinx, but used by this file and the buildbot.
 
+# Version number. Used to build paths and links.
 blender_version = "5.0"
-
+# Version label. Used only for display.
+# Usually the same as blender_version, except for LTS.
+blender_version_label = "5.0"
 
 # -- Project information -----------------------------------------------------
 
-project = "Blender {:s} Manual".format(blender_version)
+project = "Blender {:s} Manual".format(blender_version_label)
 copyright = ": This page is licensed under a CC-BY-SA 4.0 Int. License"
 author = "Blender Documentation Team"
 
@@ -79,8 +82,9 @@ templates_path = ["../build_files/templates"]
 # that should be available in every file.
 rst_epilog = """
 .. |BLENDER_VERSION| replace:: {:s}
+.. |BLENDER_VERSION_LABEL| replace:: {:s}
 .. |TODO| replace:: The documentation here is incomplete, you can help by :doc:`contributing </contribute/manual/index>`.
-""".format(blender_version)
+""".format(blender_version, blender_version_label)
 
 # Quit warnings about missing download file
 # suppress_warnings = ["download.not_readable"]
@@ -158,7 +162,7 @@ if html_theme == "furo":
 # The "title" for HTML documentation generated with Sphinx"s own templates.
 # This is appended to the <title> tag of individual pages, and
 # used in the navigation bar as the "topmost" element.
-html_title = "Blender {:s} Manual".format(blender_version)
+html_title = "Blender {:s} Manual".format(blender_version_label)
 
 # The base URL which points to the root of the HTML documentation.
 # It is used to indicate the location of document using

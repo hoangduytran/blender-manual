@@ -9,7 +9,7 @@
 Command Line Arguments
 **********************
 
-| Blender |BLENDER_VERSION|
+| Blender |BLENDER_VERSION_LABEL|
 | Usage: ``blender [args ...] [file] [args ...]``
 
 .. _command-line-args-render-options:
