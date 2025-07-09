@@ -4,10 +4,25 @@
 Frame Node
 **********
 
-The Frame node is useful for organizing nodes by collecting related nodes together in a common area.
-Frames are useful when a node setup becomes large and confusing yet the re-usability of a Node Group is not required.
+The *Frame* node is used to organize and group other nodes within the editor.
+It helps manage complex node trees by visually grouping related nodes together.
+
+Frames are particularly useful when the setup is too large to view easily at once,
+or when you want to separate logical sections of a node tree without creating a reusable Node Group.
 
 .. figure:: /images/interface_controls_nodes_frame_example.png
+   :alt: Example of a Frame node.
+
+   Example of a Frame node used to organize nodes.
+
+
+Usage
+=====
+
+- Nodes can be added to a frame by dragging them inside it.
+- Moving the frame also moves all contained nodes.
+- Frames can be resized by dragging the corners or edges.
+- The frame can display a custom label, useful for naming sections of your node setup.
 
 
 Properties
