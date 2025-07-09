@@ -112,9 +112,8 @@ Interpolate Sequence
 Interpolate strokes between the previous and next keyframe by adding *multiple* keyframes.
 A breakdown keyframe will be added on every frame between the previous and next keyframe.
 
-
 Step
-   umber of frames between generated interpolated frames.
+   Number of frames between generated interpolated frames.
 Layer
     Layers included in the interpolation.
 Exclude Break Downs
