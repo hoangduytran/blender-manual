@@ -146,6 +146,14 @@ Sync with Outliner
    Whether to switch to the relevant tab when clicking an icon (not a name) in the
    :doc:`Outliner </editors/outliner/introduction>`.
 
-   :Always: Always switch.
-   :Never: Never switch.
-   :Auto: Switch if the Properties editor shares a border with an Outliner.
+
+.. _bpy.types.SpaceProperties.show_properties:
+
+Visible Tabs
+   Allows hiding specific tabs in the Properties editor.
+
+   This is especially useful for tailoring the editor to specific workflows. For example:
+   - In the *Video Editing* workspace, you may hide object and shading tabs to reduce clutter.
+   - In the *Modeling* workspace, you may hide strip-related tabs that are not relevant.
+
+   Hidden tabs can be restored at any time using this filter list.
