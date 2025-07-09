@@ -10,13 +10,15 @@ Properties Editor
 
    The Properties editor.
 
-The Properties editor shows, and lets you edit, the properties of the active scene, object, material, and so on.
+The Properties editor displays settings for the active scene, object, material, and other data types.
+It provides access to a wide range of context-sensitive properties used throughout Blender.
 
 
 Tabs
 ====
 
-The properties are grouped into tabs (the vertical list of icons on the left) which are described below.
+Properties are grouped into tabs, shown as a vertical list of icons on the left side of the editor.
+
 
 .. _properties-tool-tab:
 
@@ -30,13 +32,13 @@ and the current :doc:`workspace </interface/window_system/workspaces>`.
 Scene
 -----
 
-These tabs contain settings for the active scene.
+Tabs related to the active scene:
 
 .. _properties-render-tab:
 
 - Render: :doc:`EEVEE </render/eevee/index>`,
-  :doc:`Cycles </render/cycles/render_settings/index>` or
-  :doc:`Workbench </render/workbench/index>` settings
+  :doc:`Cycles </render/cycles/render_settings/index>`, or
+  :doc:`Workbench </render/workbench/index>` settings.
 - :doc:`Output </render/output/index>`
 - :doc:`View Layer </scene_layout/view_layers/index>`
 - :doc:`Scene </scene_layout/scene/properties>`
@@ -46,7 +48,7 @@ These tabs contain settings for the active scene.
 Collection
 ----------
 
-This tab contains settings for the active :ref:`Collection <scene-layout_collections_collections_tab>`.
+Settings for the active :ref:`Collection <scene-layout_collections_collections_tab>`.
 
 
 .. _properties-data-tabs:
@@ -54,7 +56,7 @@ This tab contains settings for the active :ref:`Collection <scene-layout_collect
 Object
 ------
 
-These tabs are related to the active object. Some of them are only visible for certain types of objects.
+Tabs related to the active object. Some are only shown for certain object types.
 
 - :doc:`Object </scene_layout/object/properties/index>`
 - :doc:`Modifiers </modeling/modifiers/index>` (or :doc:`Grease Pencil Modifiers </grease_pencil/modifiers/index>`)
@@ -67,11 +69,9 @@ These tabs are related to the active object. Some of them are only visible for c
 Object Data
 -----------
 
-The main tab of this category (often the only one) always has the same name, *Object Data*,
-but its icon will change based on the type of the object.
+The *Object Data* tab name remains constant, but its icon changes depending on the object type.
 
-
-.. rubric:: Geometry Objects:
+.. rubric:: Geometry Objects
 
 - :doc:`Mesh </modeling/meshes/properties/object_data>`
 - :doc:`Curve </modeling/curves/properties/index>`
@@ -80,8 +80,7 @@ but its icon will change based on the type of the object.
 - :doc:`Metaball </modeling/metas/properties>`
 - :doc:`Grease Pencil </grease_pencil/properties/index>`
 
-
-.. rubric:: Rigging and Deformation Objects:
+.. rubric:: Rigging and Deformation Objects
 
 - :doc:`Armature </animation/armatures/properties/index>`
 
@@ -90,8 +89,7 @@ but its icon will change based on the type of the object.
 
 - :doc:`Lattice </animation/lattice>`
 
-
-.. rubric:: Other Types of Objects:
+.. rubric:: Other Object Types
 
 - :doc:`Empty </modeling/empties>`
 - :doc:`Speaker </render/output/audio/speaker>`
@@ -103,7 +101,7 @@ but its icon will change based on the type of the object.
 Object Shading
 --------------
 
-Tabs related to the appearance of the active object. Only visible for certain types of objects.
+Tabs related to an object's visual appearance. Shown only when relevant.
 
 - :doc:`Material </render/materials/index>`
 - :doc:`Texture </render/materials/legacy_textures/index>`
@@ -119,33 +117,36 @@ Header
 .. _bpy.types.SpaceProperties.search_filter:
 
 Display Filter :kbd:`Ctrl-F`
-   Lets you search for a property by typing its name. The editor jumps to the first result and grays out
-   all the properties and tabs that don't match the search term.
+   Use this to search for properties by name. Matching properties remain visible; others are greyed out.
+   The editor also highlights the first match and switches to the relevant tab automatically.
 
-   You can start a search with :kbd:`Ctrl-F` and clear it with :kbd:`Alt-F`.
+   Start a search with :kbd:`Ctrl-F`, and clear it with :kbd:`Alt-F`.
 
-Data Context
-   Below the filter textbox, the editor shows the icon and name of the item whose properties it's displaying.
-   In the example above, it's displaying the properties of the material "Black" which is used by the object "Suzanne".
+Data Context Path
+   Displays the name and icon of the current data-block (e.g. Object, Material, Scene),
+   along with its hierarchical path within the data structure.
+   Example: *Cube* (Object) --> *Mesh* --> *Material*
 
 .. _bpy.ops.buttons.toggle_pin:
 
 Toggle Pin ID
-   You can click the pin icon to "lock in" the current item and keep displaying its properties regardless
-   of the selection in the 3D Viewport/Outliner. Click again to unlock.
+   Click the pin icon to lock the editor to the current data-block, preventing it from changing when the selection updates.
+   Click again to unlock and return to context-based display.
 
 
 Options
 -------
 
-These options are accessible through the dropdown button in the top right corner of the editor.
+These options are accessible from the :menuselection:`Options` popover in the top-right corner of the editor.
 
 .. _bpy.types.SpaceProperties.outliner_sync:
 
 Sync with Outliner
-   Whether to switch to the relevant tab when clicking an icon (not a name) in the
-   :doc:`Outliner </editors/outliner/introduction>`.
+   Controls whether clicking icons in the :doc:`Outliner </editors/outliner/introduction>` changes the active tab.
 
+   :Always: Always follow the clicked Outliner icon.
+   :Never: Ignore Outliner interaction.
+   :Auto: Only follow when the Properties editor shares a border with the Outliner.
 
 .. _bpy.types.SpaceProperties.show_properties:
 
