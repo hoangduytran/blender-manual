@@ -41,6 +41,10 @@ The *Group Input* node provides access to the group's input sockets from within 
 These sockets act as parameters that control the behavior of the group from the outside.
 You can connect them to internal nodes to drive values such as factors, colors, or geometry inputs.
 
+.. note::
+
+   Input values that do not affect the output will be greyed out.
+
 The *Group Output* node defines the data that is passed out of the node group.
 Only sockets connected to this node will be available as outputs on the group itself.
 
@@ -150,9 +154,8 @@ only lists the node groups whose Usage matches the current :ref:`bpy.types.Space
    From there, you can enable one of the Usages again.
 
 
-.. _bpy.ops.node.tree_socket_add:
-.. _bpy.ops.node.tree_socket_remove:
-.. _bpy.ops.node.tree_socket_move:
+.. _bpy.ops.node.interface_item_new:
+.. _bpy.ops.node.interface_item_remove:
 
 Group Sockets
 -------------
@@ -166,23 +169,56 @@ Group Sockets
 
    The *Group Sockets* panel.
 
-This panel is used to add, remove, reorder, and edit the input/output sockets of the node group.
+This panel is used to add, remove, reorder, and edit the user interface elements of a node group.
+It defines how sockets appear on the group node and organizes them for clarity and usability.
 
-Input values that do not affect the output will be greyed out.
+Available item types include:
 
-You can also add panels to organize sockets within a node group,
-structuring and categorizing inputs for improved clarity and usability.
-This is particularly helpful in complex node setups.
+- **Inputs**: Define input sockets for the node group.
+- **Outputs**: Define output sockets for the node group.
+- **Panels**:
+   Group and organize related sockets together. Useful for structuring complex node setups.
+   Panels always appear at the bottom of the node interface. They can be nested by dragging one panel
+   on top of another in the interface item list.
+- **Panel Toggle**:
+   Adds a boolean checkbox to a panel's header, allowing control over its contents.
+   This option is only available when a panel is selected in the interface item list.
 
-Note, panels are always at the bottom of nodes.
-Panels can be nested by dragging a panel in the UI list on top of another panel.
+   Panel toggles have their own options under the *Panel Toggle* subpanel.
+   Note that toggle sockets are **not** listed directly in the interface list—panels with toggles
+   instead show a boolean socket icon next to their name. To make the toggle socket visible again,
+   it must be :ref:`unlinked <bpy.ops.node.interface_item_unlink_panel_toggle>` from the panel.
+
+   .. note::
+
+      A panel toggle does not automatically disable or grey out its sockets.
+      To visually and functionally disable sockets, use a :doc:`Switch Node </modeling/geometry_nodes/utilities/switch>`
+      or similar logic and disconnect the socket manually.
 
 .. _bpy.types.NodeTreeInterfaceSocket.name:
 
-Socket List
-   A :ref:`ui-list-view` of all inputs, outputs, and panels.
+Interface Item List
+   A :ref:`UI list view <ui-list-view>` showing all input/output sockets and panels.
+   Each item can be renamed and configured individually. The name appears in the node's user interface.
 
-   Here you can name the socket which is displayed in the node's interface.
+   .. rubric:: Specials
+
+   .. _bpy.ops.node.interface_item_duplicate:
+
+   Duplicate Item
+      Duplicates the selected socket or panel.
+
+   .. _bpy.ops.node.interface_item_make_panel_toggle:
+
+   Make Panel Toggle
+      Converts the selected boolean input into a toggle for its parent panel.
+      Only available when a panel is selected and the active item is a boolean socket.
+
+   .. _bpy.ops.node.interface_item_unlink_panel_toggle:
+
+   Unlink Panel Toggle
+      Removes the toggle relationship between a boolean socket and a panel,
+      making it a regular stand-alone input again.
 
 .. _bpy.types.NodeTreeInterfaceSocket.description:
 
