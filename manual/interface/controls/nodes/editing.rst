@@ -53,11 +53,11 @@ by just move the node over the link and release when the link is highlighted.
 
 .. _bpy.ops.node.link_make:
 
-Make Links :kbd:`F`
+Make Links :kbd:`J`
    Select multiple nodes with open sockets, then use the Make Links to create links between them.
    Use Make Links again if there are other nodes which can be connected.
 
-Make and Replace Links :kbd:`Shift-F`
+Make and Replace Links :kbd:`Shift-J`
    *Make and Replace Links* works similarly to *Make Links*, but it will replace existing links if any exist.
 
 

@@ -39,9 +39,15 @@ Join in New Frame
 .. reference::
 
    :Menu:      :menuselection:`Node --> Join in new Frame`
-   :Shortcut:  :kbd:`Ctrl-J`
+   :Shortcut:  :kbd:`F`
 
-Make a new frame including the selected nodes.
+Creates a new *Frame* node around the selected nodes.
+
+.. _bpy.ops.node.join_named:
+
+When called using the shortcut :kbd:`F`, a popup appears allowing you to assign a custom
+:ref:`Label <bpy.types.Node.label>` to the new frame node.
+This label is shown as the title of the frame and can be used to describe its contents.
 
 
 .. _bpy.ops.node.parent_set:
