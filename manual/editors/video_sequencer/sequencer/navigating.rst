@@ -157,6 +157,15 @@ within an animation. Like with most animation editors, markers are shown at the 
 See :ref:`Editing Markers <animation-markers-editing>` for details.
 
 
+Playhead
+--------
+
+Options for playhead snapping which helps you position the playhead precisely when scrubbing
+by snapping it to specific elements like frames, markers, or keyframes.
+
+See :ref:`Playhead Snapping <playhead-snapping>` for more information.
+
+
 Main View
 =========
 

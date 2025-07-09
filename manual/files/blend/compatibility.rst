@@ -54,5 +54,5 @@ message stating which minimal version is needed to open it.
 In such cases, the last LTS release of the previous release cycle will be kept compatible with the newer
 file format version, and will be usable as converter between both versions.
 
-For example, Blender 3.6LTS can open files from Blender 4.x, and will perform the necessary conversion
+For example, Blender 3.6 LTS can open files from Blender 4.x, and will perform the necessary conversion
 such that when re-saved from 3.6, the files become compatible with all 3.x Blender versions.

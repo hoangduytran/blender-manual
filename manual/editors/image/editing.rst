@@ -284,16 +284,3 @@ Extract Palette
    :Menu:      :menuselection:`Image --> Extract Palette`
 
 Extract a :ref:`Color Palette <bpy.types.PaletteColor>` from the image for use by painting tools.
-
-
-.. _bpy.ops.gpencil.image_to_grease_pencil:
-
-Generate Grease Pencil
-======================
-
-.. reference::
-
-   :Mode:      All Modes
-   :Menu:      :menuselection:`Image --> Generate Grease Pencil`
-
-Create a :doc:`Grease Pencil </grease_pencil/index>` object using the currently selected image as a source.

@@ -13,23 +13,27 @@ Transform
    :Menu:      :menuselection:`Node --> Move, Rotate, Resize`
    :Shortcut:  :kbd:`G`, :kbd:`R`, :kbd:`S`
 
-You can move the selected node(s) by simply clicking and dragging any empty part on them.
-Alternatively, you can press :kbd:`G`, move the mouse, and click :kbd:`LMB` to confirm.
+You can move the selected node(s) by clicking and dragging any empty part of them.
+Alternatively, press :kbd:`G`, move the mouse, and click :kbd:`LMB` to confirm.
 
 Dragging a node on top of an existing link will intelligently insert the selected node into the link path.
-This generally works by using the first socket that matches the link type.
+This generally uses the first socket that matches the link type.
 The automatic node attachment feature can be toggled with :kbd:`Alt`.
-When a node is automatically attached the surrounding nodes
-will be shifted to the right or left depending on the :kbd:`T` toggle;
-see :ref:`editors-nodes-usage-auto-offset` for more information on this feature.
+When a node is automatically attached, the surrounding nodes
+will be offset to the right or left depending on the :kbd:`T` toggle;
+see :ref:`editors-nodes-usage-auto-offset` for more information.
 
-In general it is recommended to arrange your nodes within the view
-such that the data flows from left to right, top to bottom.
+While dragging nodes, you can press :kbd:`F` to toggle their parent :doc:`Frame </interface/controls/nodes/frame>`:
+
+- If the nodes are inside a frame, they will be detached from it.
+- If the nodes are not inside a frame and there is a frame under the cursor, they will be attached to that frame.
+
+In general, it is recommended to arrange your nodes so that data flows from left to right, top to bottom.
 
 The width of a node can be changed by dragging its left or right border.
 
-Rotating (:kbd:`R`) and scaling (:kbd:`S`) only apply when you have multiple nodes selected
-and only affect the nodes' positions.
+Rotating (:kbd:`R`) and scaling (:kbd:`S`) only apply when multiple nodes are selected,
+and only affect their positions.
 
 
 Connecting Sockets
@@ -53,11 +57,11 @@ by just move the node over the link and release when the link is highlighted.
 
 .. _bpy.ops.node.link_make:
 
-Make Links :kbd:`F`
+Make Links :kbd:`J`
    Select multiple nodes with open sockets, then use the Make Links to create links between them.
    Use Make Links again if there are other nodes which can be connected.
 
-Make and Replace Links :kbd:`Shift-F`
+Make and Replace Links :kbd:`Shift-J`
    *Make and Replace Links* works similarly to *Make Links*, but it will replace existing links if any exist.
 
 

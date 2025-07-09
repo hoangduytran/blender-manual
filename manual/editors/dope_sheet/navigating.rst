@@ -170,3 +170,12 @@ Sort Data-Blocks
    If your playback speed suffers because of this
    (should only really be an issue when working with lots of objects),
    you can turn it off.
+
+
+Playhead
+========
+
+Options for playhead snapping which helps you position the playhead precisely when scrubbing
+by snapping it to specific elements like frames, markers, or keyframes.
+
+See :ref:`Playhead Snapping <playhead-snapping>` for more information.

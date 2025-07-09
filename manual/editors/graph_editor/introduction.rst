@@ -396,6 +396,13 @@ Snap
       Taking the above example, the keyframe would snap to 0:07+0,
       removing the subsecond offset.
 
+
+Playhead
+   Options for playhead snapping which helps you position the playhead precisely when scrubbing
+   by snapping it to specific elements like frames, markers, or keyframes.
+
+   See :ref:`Playhead Snapping <playhead-snapping>` for more information.
+
 Proportional Editing :kbd:`O`
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
 

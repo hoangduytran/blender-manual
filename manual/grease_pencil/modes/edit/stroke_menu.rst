@@ -77,8 +77,6 @@ and preparing drawings for further editing or animation.
 There are multiple modes; described below:
 
 
-.. _bpy.ops.gpencil.stroke_simplify_fixed:
-
 Fixed
 -----
 
@@ -92,8 +90,6 @@ Deletes alternated points in the strokes, except the start and end points.
 Steps
    The number of times to repeat the procedure.
 
-
-.. _bpy.ops.gpencil.stroke_simplify:
 
 Adaptive
 --------
@@ -109,8 +105,6 @@ The algorithm tries to obtain a similar line shape with fewer points.
 Factor
    Controls the amount of recursively simplifications applied by the algorithm.
 
-
-.. _bpy.ops.gpencil.stroke_sample:
 
 Sample
 ------
@@ -142,7 +136,52 @@ Distance
    The maximum distance between vertices to determine which ones will be merged.
 
 
-.. _bpy.ops.gpencil.stroke_trim:
+Outline
+=======
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Outline`
+
+The *Outline* operator converts selected Grease Pencil strokes into closed perimeter shapes.
+It creates new strokes around the outer boundary of the original stroke,
+effectively generating a filled outline with adjustable thickness.
+
+View
+   Defines the projection method used to generate the outline:
+
+   :View: Use the current viewport perspective as the projection plane.
+   :Front: Use the X-Z axes as the projection plane (front view).
+   :Side: Use the Y-Z axes as the projection plane (side view).
+   :Top: Use the X-Y axes as the projection plane (top view).
+   :Camera: Use the active camera's perspective as the projection plane.
+Radius
+   Sets the thickness of the outline on both sides of the original stroke.
+   Higher values result in a wider perimeter.
+Offset Factor
+   Scales the stroke outline inward or outward.
+   - Positive values push the perimeter outward.
+   - Negative values pull it inward.
+   - A value of 0 centers the perimeter on the original stroke.
+Corner Subdivisions
+   Number of subdivisions used to smooth corners at stroke endpoints and joints.
+   Higher values result in smoother corners but increase stroke complexity.
+
+.. list-table::
+
+   * - .. figure:: /images/grease-pencil_modes_edit_stroke-menu_outline-1.png
+          :width: 320px
+
+          Original stroke.
+
+     - .. figure:: /images/grease-pencil_modes_edit_stroke-menu_outline-2.png
+          :width: 320px
+
+          Stroke after applying the *Outline* operator.
+
+
+.. _bpy.ops.grease_pencil.stroke_trim:
 
 Trim
 ====

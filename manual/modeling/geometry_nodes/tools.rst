@@ -66,7 +66,7 @@ Tool Settings
 =============
 
 If your tool requires any input from the user apart from the geometry to transform,
-you can :ref:`add sockets <bpy.ops.node.tree_socket_add>` to the *Group Input* node.
+you can :ref:`add sockets <bpy.ops.node.interface_item_new>` to the *Group Input* node.
 These will be exposed in the :ref:`bpy.ops.screen.redo_last` panel when running the tool.
 
 

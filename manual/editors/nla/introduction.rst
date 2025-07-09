@@ -228,3 +228,12 @@ Absolute Time Snap
    When enabled, strips will snap to multiples of *Snap To*.
    Taking the above example, the strip would snap to 0:07+0,
    removing the subsecond offset.
+
+
+Playhead
+--------
+
+Options for playhead snapping which helps you position the playhead precisely when scrubbing
+by snapping it to specific elements like frames, markers, or keyframes.
+
+See :ref:`Playhead Snapping <playhead-snapping>` for more information.
