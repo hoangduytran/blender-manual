@@ -77,8 +77,6 @@ and preparing drawings for further editing or animation.
 There are multiple modes; described below:
 
 
-.. _bpy.ops.gpencil.stroke_simplify_fixed:
-
 Fixed
 -----
 
@@ -92,8 +90,6 @@ Deletes alternated points in the strokes, except the start and end points.
 Steps
    The number of times to repeat the procedure.
 
-
-.. _bpy.ops.gpencil.stroke_simplify:
 
 Adaptive
 --------
@@ -109,8 +105,6 @@ The algorithm tries to obtain a similar line shape with fewer points.
 Factor
    Controls the amount of recursively simplifications applied by the algorithm.
 
-
-.. _bpy.ops.gpencil.stroke_sample:
 
 Sample
 ------
@@ -187,7 +181,7 @@ Corner Subdivisions
           Stroke after applying the *Outline* operator.
 
 
-.. _bpy.ops.gpencil.stroke_trim:
+.. _bpy.ops.grease_pencil.stroke_trim:
 
 Trim
 ====

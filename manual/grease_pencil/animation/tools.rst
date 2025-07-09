@@ -129,7 +129,7 @@ Type
    Interpolation method to use the next time *Interpolate Sequence* is run.
 
 
-.. _bpy.ops.gpencil.bake_mesh_animation:
+.. _bpy.ops.grease_pencil.bake_grease_pencil_animation:
 
 Bake Mesh to Grease Pencil
 ==========================
