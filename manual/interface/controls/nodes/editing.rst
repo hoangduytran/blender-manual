@@ -13,23 +13,22 @@ Transform
    :Menu:      :menuselection:`Node --> Move, Rotate, Resize`
    :Shortcut:  :kbd:`G`, :kbd:`R`, :kbd:`S`
 
-You can move the selected node(s) by simply clicking and dragging any empty part on them.
-Alternatively, you can press :kbd:`G`, move the mouse, and click :kbd:`LMB` to confirm.
+You can move the selected node(s) by clicking and dragging any empty part of them.
+Alternatively, press :kbd:`G`, move the mouse, and click :kbd:`LMB` to confirm.
 
 Dragging a node on top of an existing link will intelligently insert the selected node into the link path.
-This generally works by using the first socket that matches the link type.
+This generally uses the first socket that matches the link type.
 The automatic node attachment feature can be toggled with :kbd:`Alt`.
-When a node is automatically attached the surrounding nodes
-will be shifted to the right or left depending on the :kbd:`T` toggle;
-see :ref:`editors-nodes-usage-auto-offset` for more information on this feature.
+When a node is automatically attached, the surrounding nodes
+will be offset to the right or left depending on the :kbd:`T` toggle;
+see :ref:`editors-nodes-usage-auto-offset` for more information.
 
-In general it is recommended to arrange your nodes within the view
-such that the data flows from left to right, top to bottom.
+In general, it is recommended to arrange your nodes so that data flows from left to right, top to bottom.
 
 The width of a node can be changed by dragging its left or right border.
 
-Rotating (:kbd:`R`) and scaling (:kbd:`S`) only apply when you have multiple nodes selected
-and only affect the nodes' positions.
+Rotating (:kbd:`R`) and scaling (:kbd:`S`) only apply when multiple nodes are selected,
+and only affect their positions.
 
 
 Connecting Sockets
