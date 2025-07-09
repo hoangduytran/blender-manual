@@ -93,8 +93,25 @@ Display Settings
 
 Adjusts how assets are displayed in the asset list.
 
-Size
+Display Mode
+   Control how files are displayed.
+
+   :Horizontal List: Displays files and folders in a horizontal list.
+   :Thumbnails: Shows :ref:`previews <file_browser-previews>`.
+
+Size :guilabel:`Horizontal List`
    Changes the size of the preview thumbnails.
+
+.. _bpy.types.FileSelectParams.list_display_size:
+
+Preview Size :guilabel:`Thumbnails`
+   Change the size of thumbnails in list views.
+
+.. _bpy.types.FileSelectParams.list_column_size:
+
+Column Size :guilabel:`Thumbnails`
+   The width of columns in horizontal list views.
+
 Sort By
    :Name: Sort the asset list alphabetically.
    :Asset Catalog:
