@@ -71,6 +71,50 @@ To jump to the beginning or end frame (of the ends of the preview range if that 
 press :kbd:`Shift-Left` or :kbd:`Shift-Right`.
 
 
+.. _playhead-snapping:
+
+Snapping
+^^^^^^^^
+
+.. reference::
+
+   :Menu:      :menuselection:`Header --> Playhead Snapping`
+
+Playhead snapping helps you position the playhead precisely when scrubbing the timeline
+by snapping it to specific elements like frames, markers, or keyframes.
+
+.. _bpy.types.ToolSettings.use_snap_playhead:
+
+Use Snapping
+   Enables or disables snapping behavior when moving the playhead.
+
+.. _bpy.types.ToolSettings.playhead_snap_distance:
+
+Snap Distance
+   The maximum distance (in pixels) the playhead can be from a target before snapping to it.
+
+.. _bpy.types.ToolSettings.snap_playhead_element:
+
+Snap Target
+   Specifies which elements the playhead can snap to:
+
+   :Frames: Snap to frame intervals.
+   :Seconds: Snap to second intervals.
+   :Markers: Snap to timeline markers.
+   :Keyframes: Snap to animation keyframes.
+   :Strips: Snap to the start and end points of strips (e.g. in the Video Sequencer).
+
+.. _bpy.types.ToolSettings.snap_playhead_frame_step:
+
+Frame Step :guilabel:`Frames`
+   The interval in frames between each snap point when using the *Frames* target.
+
+.. _bpy.types.ToolSettings.snap_playhead_second_step:
+
+Second Step :guilabel:`Seconds`
+   The interval in seconds between each snap point when using the *Seconds* target.
+
+
 Frame Range
 -----------
 

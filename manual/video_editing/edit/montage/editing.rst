@@ -56,13 +56,6 @@ Ignore
    Sound Strips
       Sound Strips are not considered as snap targets.
 
-.. _bpy.types.SequencerToolSettings.use_snap_current_frame_to_strips:
-
-Current Frame
-   Snap to Strips
-      Snaps the Playhead to all strips.
-
-
 
 Transform
 =========
