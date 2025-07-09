@@ -131,48 +131,6 @@ Type
 
 .. _bpy.ops.grease_pencil.bake_grease_pencil_animation:
 
-Bake Mesh to Grease Pencil
-==========================
-
-.. reference::
-
-   :Editor:    3D Viewport
-   :Mode:      Object Mode
-   :Menu:      :menuselection:`Object --> Animation --> Bake Mesh to Grease Pencil...`
-
-Converts each frame of a mesh animation within a selected frame range to
-a Grease Pencil object keyframed strokes. The *Bake Action* operator computes the final animation of
-the selected objects with all those modifiers, drivers, and constraints applied, and keyframes the result.
-
-Target Object
-   Determines if the image empty is kept or replaced.
-
-   New Object: Creates a new Grease Pencil object and keeps the image empty
-   Selected Object: Replaces the image empty with the Grease Pencil object.
-Start Frame, End Frame
-   Start/End frame for the baking process.
-Step
-   Frame steps for the baking process
-Thickness
-   Strokes thickness.
-Threshold Angle
-   Threshold value that determine the strokes end.
-Stroke Offset
-   Sets offset to separate strokes from filled strokes.
-Only Seam Edges
-   Convert only edges marked as seam.
-Export Faces
-   Convert faces as filled strokes.
-Only Selected Keyframes
-   Convert only the selected keyframes.
-Target Frame
-   Target destination frame for the baked animation.
-Projection Type
-   Sets the projection type to use for the converted strokes.
-
-
-.. _bpy.ops.grease_pencil.bake_grease_pencil_animation:
-
 Bake Object Transform to Grease Pencil
 ======================================
 
