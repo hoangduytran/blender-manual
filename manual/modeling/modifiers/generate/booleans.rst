@@ -54,7 +54,7 @@ Operand Type
 
    :Collection:
       The source is a collection of any number of mesh objects.
-      If the *Solver* is *Fast*, the *Intersect* operation is not allowed.
+      If the *Solver* is *Float*, the *Intersect* operation is not allowed.
 
 Object
    The source mesh object.
@@ -102,7 +102,7 @@ Hole Tolerant :guilabel:`Exact Solver`
    Because of the performance impact, this option should only be enabled
    when the *Exact* solver demonstrates errors with non-manifold geometry.
 
-Overlap Threshold :guilabel:`Fast Solver`
+Overlap Threshold :guilabel:`Float Solver`
    Maximum distance between two faces to consider them as overlapping.
    This helps solve the limitation of this solver.
    If the result is still not as expected, try using the *Exact* solver.
