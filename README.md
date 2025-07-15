@@ -12,16 +12,16 @@ If you're interested in contributing, follow the instructions below.
 
 Before making changes, please review the style guides to ensure consistency:
 
-- [Markup Style Guide](https://docs.blender.org/manual/en/dev/contribute/manual/guides/writing_guide.html)
 - [Writing Style Guide](https://docs.blender.org/manual/en/dev/contribute/manual/guides/writing_guide.html)
+- [Markup Style Guide](https://docs.blender.org/manual/en/dev/contribute/manual/guides/markup_guide.html)
 
 Once you're familiar with the guidelines, follow these steps to get set up, edit, and submit your changes:
 
-1. **[Install](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/install/index.html)** - Set up the documentation environment.
-2. **[Build](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/build.html)** - Compile the manual to see changes locally.
-3. **[Edit](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/editing.html)** - Make your changes.
-4. **[Rebuild](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/build.html)** - Verify that your changes appear correctly.
-5. **[Submit a Pull Request](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/pull_requests.html)** - Share your contributions with the community.
+1. **[Install Dependencies](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/local_editing/install/index.html)** - Set up the documentation environment.
+2. **[Building the Manual](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/local_editing/build.html)** - Compile the manual to see changes locally.
+3. **[Editing the Manual](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/local_editing/editing.html)** - Make your changes.
+4. **[Rebuild](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/local_editing/build.html)** - Verify that your changes appear correctly.
+5. **[Submit a Pull Request](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/local_editing/pull_requests.html)** - Share your contributions with the community.
 
 💡 *New to Git?*  
 If you're unfamiliar with Git or pull requests, you can submit your modified file as an
