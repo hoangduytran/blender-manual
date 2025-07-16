@@ -1,4 +1,3 @@
-
 ********
 Clamping
 ********
@@ -23,6 +22,7 @@ Direct Light
 
 Indirect Light
    Similar to **Direct Light** but limits the maximum light intensity reflected using ray-tracing and light-probes.
+   This also limits the intensity of the world lighting since it is considered as indirect light.
 
 .. note::
 
