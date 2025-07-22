@@ -44,6 +44,34 @@ The *Radius* of the points is set using the *Radius* transform tool. Or in the S
    One control point radius set to zero.
 
 
+Mirror
+======
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curves --> Mirror`
+   :Shortcut:  :kbd:`Ctrl-M`
+
+The *Mirror* tool is also available, behaving exactly as with
+:doc:`mesh vertices </modeling/meshes/editing/mesh/mirror>`.
+
+
+Snap
+====
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curves --> Snap`
+   :Shortcut:  :kbd:`Shift-S`
+
+:doc:`Mesh snapping </editors/3dview/controls/snapping>` also works with curve components.
+Both control points and their handles will be affected by snapping,
+except for within itself (other components of the active curve).
+Snapping works with 2D curves but points will be constrained to the local XY axes.
+
+
 .. _bpy.ops.curves.duplicate_move:
 
 Duplicate
@@ -61,49 +89,19 @@ along with the curve segments implicitly selected (if any).
 The copy is selected so you can move it to another place.
 
 
-.. _bpy.ops.curves.delete:
+.. _bpy.ops.curves.extrude_move:
 
-Delete
-======
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Curves --> Delete`
-   :Shortcut:  :kbd:`X`
-
-The Delete operator can remove Control Points or Segments.
-Deleting can be used to make curves shorter or simplify
-segments by deleting control points in the mid section of a segment.
-
-
-Toggle Cyclic
-=============
+Extrude Curve and Move
+======================
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Curves --> Toggle Cyclic`
-   :Shortcut:  :kbd:`Alt-C`
+   :Menu:      :menuselection:`Curves --> Extrude Curve and Move`
+   :Shortcut:  :kbd:`E`
 
-Toggles between an open curve and closed curve (Cyclic).
-Only curves with at least one selected control point will be closed/open.
-The shape of the closing segment is based on the start and end handles for Bézier curves,
-and as usual on adjacent control points for NURBS.
-The only time a handle is adjusted after closing is if the handle is an *Auto* one.
-Fig. :ref:`fig-curves-editing-open-close` is the same Bézier curve open and closed.
-
-This action only works on the original starting control point or the last control point added.
-Deleting a segment(s) does not change how the action applies;
-it still operates only on the starting and last control points. This means that
-:kbd:`Alt-C` may actually join two curves instead of closing a single curve!
-Remember that when a 2D curve is closed, it creates a renderable flat face.
-
-.. _fig-curves-editing-open-close:
-
-.. figure:: /images/modeling_curves_editing_curve_open-closed-cyclic.png
-
-   Open and Closed curves.
+Extrudes points by duplicating the selected points, which then can be moved,
+and connecting those points back to the original curve creating a continuous curve.
 
 
 .. _bpy.ops.curves.attribute_set:
@@ -160,6 +158,36 @@ Type
 Handles
    Includes handle information during the conversion process.
 
+
+Toggle Cyclic
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curves --> Toggle Cyclic`
+   :Shortcut:  :kbd:`Alt-C`
+
+Toggles between an open curve and closed curve (Cyclic).
+Only curves with at least one selected control point will be closed/open.
+The shape of the closing segment is based on the start and end handles for Bézier curves,
+and as usual on adjacent control points for NURBS.
+The only time a handle is adjusted after closing is if the handle is an *Auto* one.
+Fig. :ref:`fig-curves-editing-open-close` is the same Bézier curve open and closed.
+
+This action only works on the original starting control point or the last control point added.
+Deleting a segment(s) does not change how the action applies;
+it still operates only on the starting and last control points. This means that
+:kbd:`Alt-C` may actually join two curves instead of closing a single curve!
+Remember that when a 2D curve is closed, it creates a renderable flat face.
+
+.. _fig-curves-editing-open-close:
+
+.. figure:: /images/modeling_curves_editing_curve_open-closed-cyclic.png
+
+   Open and Closed curves.
+
+
 .. _bpy.ops.curves.separate:
 
 Separate
@@ -172,6 +200,22 @@ Separate
    :Shortcut:  :kbd:`P`
 
 Separates the selected curve geometry into their own curve object.
+
+
+.. _bpy.ops.curves.delete:
+
+Delete
+======
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Curves --> Delete`
+   :Shortcut:  :kbd:`X`
+
+The Delete operator can remove Control Points or Segments.
+Deleting can be used to make curves shorter or simplify
+segments by deleting control points in the mid section of a segment.
 
 
 .. _bpy.ops.curves.split:
