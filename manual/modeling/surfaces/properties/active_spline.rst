@@ -5,8 +5,9 @@ Active Spline
 
 .. reference::
 
+   :Editor:    3D Viewport
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Properties --> Curve --> Active Spline`
+   :Menu:      :menuselection:`Sidebar --> Item --> Active Spline`
 
 .. seealso::
 
