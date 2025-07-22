@@ -57,7 +57,8 @@ Text Info
      You can change this behavior in the Playback popover of the :doc:`Timeline </editors/timeline>`.
    - **Object Info** --
      Shows the current frame in parentheses, followed by the names of the selected
-     :doc:`Collection </scene_layout/collections/index>` and the :ref:`active object <object-active>`.
+     :doc:`Collection </scene_layout/collections/index>`,
+     the :ref:`active object <object-active>`, and the active data-block's name.
      When applicable, also shows the selected :doc:`Shape Key </animation/shape_keys/introduction>`
      and (in angle brackets) the :doc:`Marker </animation/markers>` on the current frame.
      If the object has a keyframe on the current frame, the Object Info is displayed in yellow.
