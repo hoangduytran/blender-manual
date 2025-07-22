@@ -31,4 +31,4 @@ Weight
 Radius
    Surface objects do not have a *Radius* property, this value has no effect.
 Tilt
-   Surface objects do not have a *Radius* property, this value has no effect.
+   Surface objects do not have a *Tilt* property, this value has no effect.
