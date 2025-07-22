@@ -146,7 +146,7 @@ Notice this tool can run multiple times to continue creating faces.
    For other ways to create faces see:
 
    - :ref:`Fill <modeling-meshes-editing-fill>`
-   - :ref:`Grid Fill <modeling-meshes-editing-grid-fill>`
+   - :ref:`Grid Fill <bpy.ops.mesh.fill_grid>`
    - :ref:`Bridge Edge Loops <modeling-meshes-editing-bridge-edge-loops>`
 
 

@@ -259,6 +259,11 @@ for HDR image files, especially because of its flexible and expandable structure
 An OpenEXR file can store multiple layers and passes.
 This means OpenEXR images can be loaded into a Compositor keeping render layers and passes intact.
 
+.. note::
+
+   When opening OpenEXR images, Blender will automatically set the
+   :ref:`Color Space <ocio-config-default-color-spaces>` if it is detected as *Linear CIE-XYZ E* or *ACES2065-1*.
+
 
 Output Options
 ^^^^^^^^^^^^^^

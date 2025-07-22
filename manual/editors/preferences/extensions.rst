@@ -70,7 +70,7 @@ Extension Settings
 ==================
 
 Visit Extensions Platform
-   Opens `extensions.blender.org <https://extensions.blender.org/>` in a web browser.
+   Opens `extensions.blender.org <https://extensions.blender.org/>`__ in a web browser.
 
 .. _bpy.ops.extensions.repo_sync_all:
 
@@ -81,7 +81,7 @@ Refresh Remote
 
 Refresh Local
    Scan extension & legacy add-ons for changes to modules & meta-data
-   (similar to restarting). Any issues are reported as warnings
+   (similar to restarting). Any issues are reported as warnings.
 
 .. _bpy.ops.extensions.package_upgrade_all:
 
