@@ -97,20 +97,27 @@ and selecting *Pin*, or by pressing :kbd:`Shift-LMB`.
 Presets
 -------
 
+Panels in Blender provide a **Presets** menu (:bl-icon:`preset`) for quickly reusing common settings.
+Presets can save time by storing frequently used configurations, which can then be reapplied with a single click.
+
 .. figure:: /images/interface_controls_templates_list-presets_preset.png
-   :align: right
+   :align: center
 
    Example Presets menu.
 
-.. Share between properties. i.e. different nodes color presets.
 
-Selector
-   A list of available presets. A selection will override the included properties.
-:bl-icon:`add` (Add)
-   New presets can be added based on the currently applied set of properties, which will be saved for later reuse.
-   A pop-up opens where you can set a name, after which you can select it from the list and
-   in some cases additional settings.
-:bl-icon:`remove` (Remove)
-   Deletes the selected preset.
+Selector :bl-icon:`preset`
+   A list of available presets. Selecting one will apply the stored values to the relevant properties.
 
-.. saving preset: data-system?
+   .. _bpy.types.WindowManager.preset_name:
+
+   Preset Name
+      The name to use when adding a new preset.
+   :bl-icon:`add` (Add)
+      Create a new preset using the current settings,
+      the preset is then saved and appears in the list for future reuse.
+   :bl-icon:`remove` (Remove)
+      Deletes the selected preset.
+
+Presets are stored as Python files in Blender's :ref:`configuration directory <blender-directory-path-layout>`.
+Advanced users can edit these preset files directly to fine-tune settings or copy them to other systems.
