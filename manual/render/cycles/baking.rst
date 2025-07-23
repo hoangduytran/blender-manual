@@ -43,7 +43,18 @@ Bake
 .. _bpy.types.RenderSettings.use_bake_multires:
 
 Bake from Multires
-   Bake directly from multires object.
+   Bake a normal or displacement map directly from a mesh with a
+   :ref:`/modeling/modifiers/generate/multiresolution`.
+
+   This method compares two the resolution levels of the modifier:
+
+   - *Viewport Levels* is treated as the low-resolution base mesh.
+   - *Render Levels* is treated as the high-resolution detail mesh.
+
+   The resulting normal or displacement map represents the difference between these two levels.
+
+.. _bpy.types.CyclesRenderSettings.bake_type:
+.. _bpy.types.RenderSettings.bake_type:
 
 Bake Type
    Type of pass to bake.
