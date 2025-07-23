@@ -63,6 +63,9 @@ Show Tool Settings
    Toggles the visibility of the `Tool Settings`_.
 Show Menus
    Toggles whether the :ref:`Menus <bpy.types.UIPopupMenu>` are collapsed or not.
+
+.. _bpy.ops.screen.region_flip:
+
 Flip to Bottom/Top
    Toggles whether the header or Tool Settings appear on the top or bottom of the editor.
 Vertical/Horizontal Split
@@ -147,8 +150,8 @@ You can also quickly adjust both the horizontal and vertical range by dragging i
 
 .. _bpy.ops.screen.region_blend:
 
-Changing the Size and Hiding
-----------------------------
+Changing the Size and Hiding Regions
+------------------------------------
 
 Resizing regions works by dragging their border, the same way as
 :doc:`/interface/window_system/areas`.

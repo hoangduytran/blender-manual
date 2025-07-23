@@ -14,10 +14,16 @@ The Properties editor displays settings for the active scene, object, material, 
 It provides access to a wide range of context-sensitive properties used throughout Blender.
 
 
-Tabs
-====
+Navigation Bar
+==============
 
-Properties are grouped into tabs, shown as a vertical list of icons on the left side of the editor.
+Properties are grouped into tabs, shown as a vertical list of icons in the Navigation Bar region the editor.
+
+The Navigation Bar can be flipped to the left or right of the editor by :kbd:`RMB` on the region and selecting
+:menuselection:`Navigation Bar --> Flip to Left/Right`.
+
+To hide the Navigation Bar, :kbd:`RMB` on the region and select :menuselection:`Navigation Bar --> Hide`.
+Use the region toggle icon as described in :ref:`bpy.ops.screen.region_blend`.
 
 
 .. _properties-tool-tab:
