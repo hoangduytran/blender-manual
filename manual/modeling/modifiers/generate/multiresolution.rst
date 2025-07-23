@@ -146,3 +146,43 @@ Use Creases
 
 Use Custom Normals
    Interpolates existing :ref:`modeling_meshes_normals_custom` of the resulting mesh.
+
+
+Usage
+=====
+
+Baking
+------
+
+Baking converts high-resolution geometry details such
+as sculpted displacement or surface normals into a 2D texture map.
+These textures can then be used on a lower-resolution version of the mesh to simulate
+high-detail geometry without the performance cost of actually subdividing the mesh at runtime.
+
+This is an essential step in workflows where high-resolution details are baked
+into textures for use on a lower-resolution base mesh, such as in real-time rendering or game engines.
+
+To generate a displacement or normal map, use the
+:ref:`Bake from Multires <bpy.types.RenderSettings.use_bake_multires>` render feature.
+This feature compares two resolution levels of the modifier:
+
+- Viewport Level is treated as the low-resolution base mesh.
+- Render Level is treated as the high-resolution detail mesh.
+
+The resulting normal or displacement map represents the difference between these two levels.
+
+.. important::
+
+   To bake correctly, the Viewport Levels of the Multiresolution modifier must be set to 0.
+   This ensures the bake uses the original base mesh as the low-resolution target.
+   Sculpted details are taken from the Render Levels.
+
+   If the Viewport Level is higher than 0, the bake may not produce correct results,
+   as the low-resolution geometry will already include some displacement.
+
+.. tip::
+
+   Make sure the object has proper UV unwrapping before baking,
+   and that the correct image node is selected in the Shader Editor.
+
+For more details on the general baking process, see: :doc:`/render/cycles/baking`.
