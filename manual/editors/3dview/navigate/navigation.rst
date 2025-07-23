@@ -61,6 +61,7 @@ using :kbd:`Numpad3`, then orbit to get back to the regular perspective view.
 
 :kbd:`RMB` cancels the roll operation.
 
+
 .. _bpy.ops.view3d.view_pan:
 
 Pan
@@ -73,12 +74,15 @@ Pan
    :Shortcut:  :kbd:`Shift-MMB`, :kbd:`Ctrl-Numpad2`, :kbd:`Ctrl-Numpad4`,
                :kbd:`Ctrl-Numpad6`, :kbd:`Ctrl-Numpad8`
 
-Moves the view up, down, left and right.
-To pan the view, hold down :kbd:`Shift` and drag :kbd:`MMB` in the 3D Viewport.
-For discrete steps, use the hotkeys :kbd:`Ctrl-Numpad8`, :kbd:`Ctrl-Numpad2`,
-:kbd:`Ctrl-Numpad4` and :kbd:`Ctrl-Numpad6` as with orbiting.
+Pans the 3D Viewport by moving the view left, right, up, or down without rotating it.
+This is useful for repositioning your view without changing orientation.
 
-:kbd:`RMB` cancels the orbit operation.
+- :kbd:`Shift-MMB` -- Pan the view freely by dragging the mouse.
+- :kbd:`Shift-Wheel` -- Pan the view vertically.
+- :kbd:`Shift-HorizontalWheel` -- Pan the view horizontally.
+- :kbd:`Ctrl-Numpad8`/:kbd:`Ctrl-Numpad2` -- Pan the view up/down in fixed steps.
+- :kbd:`Ctrl-Numpad4`/:kbd:`Ctrl-Numpad6` -- Pan the view left/right in fixed steps.
+
 
 .. _bpy.ops.view3d.zoom:
 
