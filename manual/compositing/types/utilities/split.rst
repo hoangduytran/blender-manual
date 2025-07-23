@@ -42,6 +42,16 @@ This node has no output sockets.
    with the start frame of another to make sure they align.
 
 
+Usage
+=====
+
+The Split node supports an interactive gizmo in the node editor.
+To enable it, make sure :ref:`Active Node <bpy.types.SpaceNodeEditor.show_gizmo_active_node>`  gizmo is enabled,
+and select the Split node in the Compositor.
+
+The gizmo allows direct manipulation of the split *Factor* by dragging the line horizontally/vertically:
+
+
 Examples
 ========
 
