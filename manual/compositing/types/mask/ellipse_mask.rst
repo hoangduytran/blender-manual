@@ -62,3 +62,19 @@ Mask
 
    For soft edges, pass the output mask through a slight :doc:`Blur node </compositing/types/filter/blur/blur>`.
    For a vignette, pass the output of this through a heavy blur.
+
+
+Usage
+=====
+
+The Ellipse Mask node supports an interactive gizmo in the node editor.
+To enable it, make sure :ref:`Active Node <bpy.types.SpaceNodeEditor.show_gizmo_active_node>`  gizmo is enabled,
+and select the Ellipse Mask node in the Compositor.
+
+The gizmo allows direct manipulation of the mask shape:
+
+- Drag edges to adjust the width or height individually.
+- Drag corners to adjust width and height simultaneously.
+- Drag the center cross (X) to move the mask's position.
+- Drag the center dot to rotate the mask.
+- Hold :kbd:Shift while dragging edges or corners to preserve the current aspect ratio.
