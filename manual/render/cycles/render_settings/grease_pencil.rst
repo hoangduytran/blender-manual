@@ -31,6 +31,6 @@ SMAA Threshold
 
 .. _bpy.types.SceneGpencil.aa_samples:
 
-SMAA Samples
+SSAA Samples
    Number of samples used for super-sampling anti-aliasing in the final render.
    Higher values produce smoother lines but increase render time.

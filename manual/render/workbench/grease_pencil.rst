@@ -25,6 +25,6 @@ SMAA Threshold
    Threshold for the edge detection algorithm used to correct aliasing for the final render,
    Higher values may result in loss of detail due to excessive blurring.
 
-SMAA Samples
+SSAA Samples
    Number of samples used for super-sampling anti-aliasing in the final render.
    Higher values produce smoother lines but increase render time.
