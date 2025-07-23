@@ -23,9 +23,9 @@ Undo Legacy
 
 .. _bpy.types.PreferencesExperimental.override_auto_resync:
 
-Override Auto Resync
-   Enables library overrides automatic resync detection and process on file load.
-   Disable when dealing with older blend-files that need manual Resync (Enforce) handling.
+No Override Auto Resync
+   Disables library overrides automatic resync detection and process on file load.
+   Enable when dealing with older blend-files that need manual Resync (Enforce) handling.
 
 .. _bpy.types.PreferencesExperimental.use_cycles_debug:
 
