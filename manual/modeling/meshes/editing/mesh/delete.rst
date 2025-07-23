@@ -91,7 +91,13 @@ Dissolve Edges
 
 Removes edges sharing two faces (joining those faces).
 
-The options are the same as for the `Dissolve Vertices`_ tool.
+Face Split
+   When dissolving vertices into surrounding faces, you can often end up with very large, uneven n-gons.
+   The face split option limits dissolve to only use the corners of the faces connected to the vertex.
+Angle Threshold
+   Remaining vertices which separate edge pairs are preserved if their edge angle exceeds this threshold.
+Tear Boundaries
+   Split off face corners instead of merging faces.
 
 
 .. _bpy.ops.mesh.dissolve_faces:
