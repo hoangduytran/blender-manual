@@ -141,6 +141,17 @@ The duplicated content remain selected, allowing immediate repositioning.
    :ref:`bpy.ops.sequencer.duplicate_move`
 
 
+Show/Hide
+---------
+
+Show Hidden Strips :kbd:`Alt-H`
+   Reveals all hidden/muted strips.
+Hide Selected :kbd:`H`
+   Mutes the selected strips.
+Hide Unselected :kbd:`Shift-H`
+   Mutes all strips except for the currently selected strips.
+
+
 Image Menu
 ==========
 
