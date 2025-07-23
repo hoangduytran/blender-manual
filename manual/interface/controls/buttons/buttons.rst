@@ -37,6 +37,8 @@ Use :kbd:`LMB` to change their state. A tick is shown on checkboxes when
 the option is activated. Active status on toggle buttons is indicated
 either by color on the icon background, or a change in icon graphics.
 
+Use :kbd:`Ctrl-Wheel` to cycle through on/off states.
+
 
 Dragging
 --------
