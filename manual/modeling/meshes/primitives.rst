@@ -291,9 +291,9 @@ Size
 Monkey
 ======
 
-Adds a stylized monkey head mesh named *Suzanne*.
-Suzanne is a gift from old NaN to the community
-It remains a playful "Easter egg" and is widely recognized as Blender's mascot.
+Adds a stylized monkey head mesh named "Suzanne".
+Suzanne is a gift from old NaN to the community and
+remains in Blender as a playful "Easter egg" and is widely recognized as Blender's mascot.
 
 This primitive is commonly used for testing materials, lighting setups, and modifiers such as
 :term:`Subdivision Surface`.
