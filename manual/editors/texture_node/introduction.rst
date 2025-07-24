@@ -23,7 +23,6 @@ where you can select a type from a list and not much more.
    - The :doc:`/modeling/modifiers/deform/displace`.
    - Influencing size, density etc. of :doc:`particle systems </physics/particles/texture_influence>`.
    - Influencing emission locations of :ref:`fire/smoke simulations <bpy.types.FluidFlowSettings.use_texture>`.
-   - :doc:`Compositing </compositing/types/input/texture>`.
 
    In addition, the Displace modifier and fire/smoke simulations don't support
    node-based textures, instead only working with the built-in ones.
