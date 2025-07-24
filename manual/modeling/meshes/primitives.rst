@@ -17,11 +17,16 @@ You can also add primitives in Edit Mode at the 3D cursor.
 
    Blender's standard primitives.
 
-.. note:: Planar Primitives
+.. tip::
 
    You can make a planar mesh three-dimensional by moving one or more of the vertices out of its plane
    (applies to *Plane*, *Circle* and *Grid*).
    A simple circle is often used as a starting point to create even the most complex of meshes.
+
+.. note::
+
+   Additional primitives can be enabled through add-on extensions.
+   See :doc:`Get Extensions </editors/preferences/extensions>` for more information.
 
 
 Common Options
@@ -185,19 +190,20 @@ Minor Segments
 Dimensions Mode
    Change the way the torus is defined.
 
-   Major/Minor, Exterior/Interior
+   :Major/Minor: Todo.
+   :Exterior/Interior: Todo.
 
-   Major Radius
-      Radius from the origin to the center of the cross sections.
-   Minor Radius
-      Radius of the torus' cross section.
+Major Radius :guilabel:`Major/Minor`
+   Radius from the origin to the center of the cross sections.
+Minor Radius :guilabel:`Major/Minor`
+   Radius of the torus' cross section.
 
-   Exterior Radius
-      If viewed along the major axis,
-      this is the radius from the center to the outer edge.
-   Interior Radius
-      If viewed along the major axis,
-      this is the radius of the hole in the center.
+Exterior Radius :guilabel:`Exterior/Interior`
+   If viewed along the major axis,
+   this is the radius from the center to the outer edge.
+Interior Radius :guilabel:`Exterior/Interior`
+   If viewed along the major axis,
+   this is the radius of the hole in the center.
 
 
 .. _bpy.ops.mesh.primitive_grid_add:
@@ -234,8 +240,3 @@ This is intended as a test mesh, similar to:
    This is a gift from old NaN to the community and is seen as a programmer's joke or
    "Easter Egg". It creates a monkey's head once you press the *Monkey* button.
    The Monkey's name is "Suzanne" and is Blender's mascot.
-
-.. note::
-
-   In addition to the basic geometric primitives can be added via extensions
-   These are available from the :doc:`Preferences </editors/preferences/extensions>`.
