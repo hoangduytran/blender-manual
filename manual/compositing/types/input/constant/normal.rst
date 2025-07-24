@@ -1,8 +1,5 @@
 .. index:: Compositor Nodes; Normal
 .. _bpy.types.CompositorNodeNormal:
-.. Editor's Note: This page gets copied into :doc:`</render/cycles/nodes/types/vector/normal>`
-
-.. --- copy below this line ---
 
 ***********
 Normal Node
@@ -12,7 +9,7 @@ Normal Node
    :align: right
    :alt: Normal Node.
 
-The Normal node generates a normal vector and a dot product.
+The Normal node generates a normal vector.
 
 
 Inputs
@@ -36,9 +33,3 @@ Outputs
 
 Normal
    Normal vector output.
-Dot
-   Dot product output. The dot product is a scalar value.
-
-   - If two normals are pointing in the same direction the dot product is 1.
-   - If they are perpendicular the dot product is zero (0).
-   - If they are antiparallel (facing directly away from each other) the dot product is -1.

@@ -1,5 +1,4 @@
 
-
 ############
   Constant
 ############
@@ -9,3 +8,4 @@
 
    rgb.rst
    value.rst
+   normal.rst

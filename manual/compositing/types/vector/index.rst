@@ -17,7 +17,6 @@ These nodes can be used to manipulate various types of vectors, such as surface 
    :maxdepth: 1
 
    mix_vector.rst
-   normal.rst
    vector_curves.rst
    vector_math.rst
    vector_rotate.rst

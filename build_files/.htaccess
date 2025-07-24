@@ -289,3 +289,5 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/curve/operation
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/osl.html" "/manual/{lang}/{version}/render/cycles/osl/index.html"
 
 RedirectMatch "^/manual/{lang}/{version}/video_editing/edit/montage/strips/effects/alpha_over_under_overdrop.html" "/manual/{lang}/{version}/video_editing/edit/montage/strips/effects/alpha_over_under.html"
+
+RedirectMatch "^/manual/{lang}/{version}/compositing/types/vector/normal.html" "/manual/{lang}/{version}/compositing/types/input/constant/normal.html"
