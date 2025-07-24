@@ -95,6 +95,8 @@ Determines the target which the selection will be snapped to.
    Snaps to the vertex that's closest to the mouse cursor.
 :Edge:
    Snaps to the edge that's closest to the mouse cursor.
+:Face:
+   Snaps to the surfaces of faces in mesh objects; This is useful for retopologizing.
 :Volume:
    Snaps the selection to a depth that's centered *inside* the object under the cursor.
    This is useful for positioning an :doc:`Armature </animation/armatures/introduction>`
