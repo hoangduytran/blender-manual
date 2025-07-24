@@ -44,7 +44,7 @@ Bake
 
 Bake from Multires
    Bake a normal or displacement map directly from a mesh with a
-   :ref:`/modeling/modifiers/generate/multiresolution`.
+   :doc:`/modeling/modifiers/generate/multiresolution`.
 
    This method compares two the resolution levels of the modifier:
 
