@@ -292,7 +292,3 @@ See :ref:`animation-actions-slots-manual-assign` for more information.
 
 Scene
    Specifies the action and slot where animation data for scene properties is stored/retrieved.
-
-Compositing Node Tree
-   Specifies the action and slot where animation data for
-   :doc:`Compositing Nodes </compositing/index>` is stored/retrieved.
