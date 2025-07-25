@@ -83,11 +83,12 @@ Camera Guides
    (:ref:`Safe Areas <bpy.ops.safe_areas>` & :ref:`Composition Guides <bpy.types.Camera.show_composition>`),
    only available in :ref:`camera view <bpy.ops.view3d.view_camera>`.
 
-HDRI Preview
-   Show two spheres, one glossy and one diffuse, to preview the HDRI that's being used for world lighting.
-   While HDRIs can be used in both the *Material Preview* and *Rendered*
-   :doc:`shading modes </editors/3dview/display/shading>`, the HDRI Preview overlay
-   is only available in the former.
+.. _bpy.types.View3DOverlay.show_look_dev:
+
+Reference Spheres
+   Show two spheres, one glossy and one diffuse, that react to lighting to assist in look development.
+   Only available in *Material Preview* shading :doc:`Shading Mode </editors/3dview/display/shading>`.
+   The size of the spheres can be adjusted in the :ref:`Viewport Preferences </editors/preferences/viewport>`.
 3D Cursor
    Show the :doc:`3D Cursor </editors/3dview/3d_cursor>`.
 Annotations
