@@ -9,7 +9,7 @@ Rotate Node
    :align: right
    :alt: Rotate Node.
 
-This node rotates an image.
+The *Rotate* node rotates the input image around its center based on the specified angle.
 
 
 Inputs
@@ -17,8 +17,8 @@ Inputs
 
 Image
    Standard color input.
-Degr
-   Rotation angle in degree. Positive values rotate clockwise and negative ones counterclockwise.
+Angle
+   The amount of rotation. Positive values rotate clockwise and negative ones counterclockwise.
 
 
 Properties
