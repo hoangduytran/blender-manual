@@ -29,7 +29,7 @@ Include
 
    .. _bpy.types.ViewLayer.use_pass_z:
 
-   Z :guilabel:`Cycles`, :guilabel:`EEVEE`, :guilabel:`Workbench`
+   Depth :guilabel:`Cycles`, :guilabel:`EEVEE`, :guilabel:`Workbench`
       Distance to the nearest visible surface.
       Can be used with the :doc:`/compositing/types/filter/blur/defocus`
       for a fake :term:`Depth of Field` effect.
@@ -114,7 +114,7 @@ Indexes
       This map can be converted into a mask for a particular material using the
       ID Mask Node.
 
-.. note:: The Z, Position, Object Index, and Material Index passes are not anti-aliased.
+.. note:: The Depth, Position, Object Index, and Material Index passes are not anti-aliased.
 
 Debug
    Sample Count :guilabel:`Cycles`
@@ -124,7 +124,7 @@ Debug
 .. _bpy.types.ViewLayer.pass_alpha_threshold:
 
 Alpha Threshold :guilabel:`Cycles`
-   The Z, Position, Normal, Vector, UV, and Index passes are only affected by surfaces with an opacity
+   The Depth, Position, Normal, Vector, UV, and Index passes are only affected by surfaces with an opacity
    equal to or higher than this threshold. With value 0.0, the first surface hit will always write to these passes
    regardless of opacity. With higher values, surfaces that are mostly transparent will be skipped until
    an opaque surface is encountered.
