@@ -1,6 +1,5 @@
 .. _bpy.ops.scene.view_layer:
 .. _bpy.types.ViewLayer:
-.. _render-layers:
 
 ************
 Introduction
@@ -100,34 +99,3 @@ Set Indirect Only :guilabel:`Cycles Only`
 
 Clear Indirect Only :guilabel:`Cycles Only`
    Clear the *Indirect Only* flag. Objects inside this collection will contribute normally to the final image.
-
-
-Cycles
-======
-
-.. reference::
-
-   :Panel:     :menuselection:`View Layers --> Layer`
-
-This section covers only the Render Layer settings appropriate for the Cycles renderer.
-For the engine-independent settings, see :ref:`this section <render-layers>`.
-
-
-Override
---------
-
-.. _bpy.types.ViewLayer.material_override:
-
-Material Override
-   Overrides all materials in the render layer.
-
-.. _bpy.types.ViewLayer.world_override:
-
-World Override
-   Overrides world background in the render layer.
-
-.. _bpy.types.ViewLayer.samples:
-
-Samples
-   View layer samples to override the scene samples.
-   Controlled by the :ref:`layer samples <bpy.types.CyclesRenderSettings.use_layer_samples>` in the Sampling panel.
