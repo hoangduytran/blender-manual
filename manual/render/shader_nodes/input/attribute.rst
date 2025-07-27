@@ -64,7 +64,7 @@ Attribute Type
 
          Currently only up to 4 layers of Geometry Node instancing are searched.
    :View Layer:
-      The attribute is looked up in the current :doc:`View Layer </scene_layout/view_layers/introduction>`,
+      The attribute is looked up in the current :doc:`View Layer </render/layers/introduction>`,
       :doc:`Scene </scene_layout/scene/introduction>` and :doc:`World </render/lights/world>`, using the same lookup
       logic as *Object*, and likewise producing all zero outputs including *Alpha* if not found. Attributes of this
       type have the same uniform value throughout the whole Render Layer.

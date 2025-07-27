@@ -14,7 +14,7 @@ Display Mode
 This header dropdown lets you choose what the Outliner should show.
 
 :Scenes:
-   Shows the :doc:`view layers </scene_layout/view_layers/introduction>`,
+   Shows the :doc:`view layers </render/layers/introduction>`,
    :doc:`collections </scene_layout/collections/introduction>`,
    and objects across all scenes.
 :View Layer:
@@ -114,7 +114,7 @@ Case Sensitive
 .. _bpy.types.SpaceOutliner.use_filter_view_layers:
 
 All View Layers
-   Show all the :doc:`view layers </scene_layout/view_layers/index>` in the scene instead of only the active one.
+   Show all the :doc:`view layers </render/layers/index>` in the scene instead of only the active one.
    Combined with disabling the *Objects* filter, this gives a compact overview of all the collections in relation
    to the view layers.
 
@@ -260,18 +260,23 @@ Clicking an icon with :kbd:`Shift-LMB` toggles it for the item and all its child
 Clicking a collection's icon with :kbd:`Ctrl-LMB` enables it for the collection (and its
 parent/child collections) and disables it for all others. Clicking again enables it for the others again.
 
-.. _bpy.types.LayerCollection.exclude:
-
 Exclude from View Layer (checkbox) :guilabel:`Collections`
-   Uncheck to disable the collection for the current :doc:`View Layer </scene_layout/view_layers/index>`.
-   Its contents will be hidden in the 3D Viewport, the render, and even the Outliner.
+   Toggles the collections inclusion in the current :doc:`View Layer </render/layers/index>`.
+   When excluded, contents will be hidden in the 3D Viewport, the render, and the Outliner.
+   See :ref:`bpy.types.LayerCollection.exclude` for more information.
 
-.. _bpy.types.Collection.hide_select:
+.. _bpy.types.ObjectBase.select:
 
 Disable Selection (mouse cursor icon)
-   Toggles whether the object can be selected in the 3D Viewport. This can be useful for, say,
-   references images that you only want to display and never select/move.
+   Toggles whether the object or collection can be selected in the 3D Viewport.
+   This can be useful for, say, references images that you only want to display and never select/move.
 
+   See more information for:
+
+   - :ref:`Collections <bpy.types.Collection.hide_select>`
+   - :ref:`Objects <bpy.types.Object.hide_select>`
+
+.. _bpy.types.ObjectBase.hide_viewport:
 .. _bpy.types.LayerCollection.hide_viewport:
 
 Hide in Viewports (eye icon)
@@ -308,8 +313,6 @@ Disable in Viewports (screen icon)
    Objects hidden this way are no longer part of the view layer,
    so they no longer get evaluated and don't affect playback performance.
 
-.. _bpy.types.Collection.hide_render:
-
 Disable in Renders (camera icon)
    Toggles the visibility of the object or collection in (only) the render,
    for all view layers. The 3D Viewport is not affected.
@@ -317,16 +320,10 @@ Disable in Renders (camera icon)
    This is typically used for supporting objects that help modeling and animation
    yet don't belong in the final image.
 
-.. _bpy.types.LayerCollection.holdout:
-
 Holdout :guilabel:`Collections`
-   Makes the objects in the collection cut a fully transparent hole into the
-   render output of the view layer.
-
-   .. seealso::
-      :doc:`Holdout Shader Node </render/shader_nodes/shader/holdout>`
-
-.. _bpy.types.LayerCollection.indirect_only:
+   Toggles the collection's :ref:`Holdout <bpy.types.LayerCollection.holdout>` property,
+   which makes the objects in the collection cut a fully transparent hole into the render output of the view layer.
 
 Indirect Only :guilabel:`Collections` :guilabel:`Cycles`
-   Objects in the collection only contribute to indirect light.
+   Toggles the collection's :ref:`Indirect Only <bpy.types.LayerCollection.indirect_only>` property,
+   Objects inside this collection will only contribute to the final image indirectly through shadows and reflections.

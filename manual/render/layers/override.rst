@@ -3,6 +3,10 @@
 View Layer Override
 *******************
 
+.. reference::
+
+   :Panel:     :menuselection:`Properties --> View Layer --> Override`
+
 View Layer overrides allow selectively replacing certain scene-level settings for a specific view layer.
 This is useful for rendering multiple versions of a scene, for example, with different materials, lighting,
 or sampling settings, without modifying the original scene data.

@@ -32,32 +32,64 @@ Collection properties tab allows convenient access to properties for the active 
 Visibility
 ----------
 
+.. _bpy.types.Collection.hide_select:
+
 Selectable
-   Toggles the ability to select the objects from the 3D Viewport.
+   Toggles the ability to select the objects of this collection in the 3D Viewport.
+
    This is useful for if you have placed something in the scene and
-   do not want to accidentally select it when working on something else.
+   do not want to accidentally select it when working on something else for example references images.
+
+.. _bpy.types.Collection.hide_render:
 
 Show In -- Renders
    Enables/disables visibility of the collection in renders.
 
 
+.. _bpy.types.LayerCollection:
+
 View Layer
 ^^^^^^^^^^
 
+Each collection in a scene can be configured per :doc:`View Layer </render/layers/index>`
+to control how its contents appear in the render.
+These settings allow for flexible render setups by including or excluding specific collections,
+masking objects, or limiting their contribution to indirect effects.
+
+.. _bpy.types.LayerCollection.exclude:
+
 Include
-   Uncheck to disable the collection for the current :doc:`View Layer </scene_layout/view_layers/index>`.
-   Its contents will be hidden in the 3D Viewport, the render, and even the Outliner.
+   Includes this collection in the active View Layer.
+   When disabled, all objects in the collection will be excluded from the render, the 3D Viewport, and the Outliner
+   for the current view layer.
+
+   This is useful for rendering alternate versions of a scene or isolating elements for compositing.
+
+.. _bpy.types.LayerCollection.holdout:
 
 Holdout
-   Objects inside this collection will generate a holdout/mask in the active view layer.
+   Marks all objects in this collection as holdouts in the active view layer.
 
-Indirect Only
-   Objects inside this collection will only contribute to the final image
-   indirectly through shadows and reflections.
+   Holdouts render as transparent regions in the final image, effectively masking out anything behind them.
+   This is typically used in compositing workflows to create cutouts or to separate foreground and background elements.
+
+   .. seealso::
+
+      :doc:`Holdout Shader Node </render/shader_nodes/shader/holdout>`
+
+.. _bpy.types.LayerCollection.indirect_only:
+
+Indirect Only :guilabel:`Cycles Only`
+   Objects in this collection will not appear directly in the rendered image,
+   but they will still contribute indirectly through lighting, shadows, and reflections.
+
+   This is useful for rendering clean product shots while preserving realistic environmental lighting or reflections.
 
 
 Instancing
 ----------
+
+.. _bpy.types.Collection.instance_offset:
 
 Instance Offset X, Y Z
    Applies a spatial offset of the instanced collections from the original object's origin.

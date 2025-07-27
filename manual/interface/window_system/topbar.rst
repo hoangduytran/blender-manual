@@ -339,4 +339,4 @@ Scenes & Layers
    :align: center
 
 These :ref:`data-block menus <ui-data-block>` are used to select
-the current :doc:`Scene </scene_layout/scene/index>` and :doc:`View Layer </scene_layout/view_layers/index>`.
+the current :doc:`Scene </scene_layout/scene/index>` and :doc:`View Layer </render/layers/index>`.

@@ -292,3 +292,6 @@ RedirectMatch "^/manual/{lang}/{version}/video_editing/edit/montage/strips/effec
 
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/vector/normal.html" "/manual/{lang}/{version}/compositing/types/input/constant/normal.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/mix/z_combine.html" "/manual/{lang}/{version}/compositing/types/color/mix/depth_combine.html"
+
+RedirectMatch "^/manual/{lang}/{version}/scene_layout/view_layers/index.html" "/manual/{lang}/{version}/render/layers/introduction.html"
+RedirectMatch "^/manual/{lang}/{version}/scene_layout/view_layers/introduction.html" "/manual/{lang}/{version}/render/layers/introduction.html"
