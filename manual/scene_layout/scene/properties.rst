@@ -292,3 +292,10 @@ See :ref:`animation-actions-slots-manual-assign` for more information.
 
 Scene
    Specifies the action and slot where animation data for scene properties is stored/retrieved.
+
+
+Custom Properties
+=================
+
+Create and manage your own properties to store data in the scene's data block.
+See the :ref:`Custom Properties <files-data_blocks-custom-properties>` page for more information.
