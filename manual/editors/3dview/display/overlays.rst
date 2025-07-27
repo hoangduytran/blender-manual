@@ -88,7 +88,7 @@ Camera Guides
 Reference Spheres
    Show two spheres, one glossy and one diffuse, that react to lighting to assist in look development.
    Only available in *Material Preview* shading :doc:`Shading Mode </editors/3dview/display/shading>`.
-   The size of the spheres can be adjusted in the :ref:`Viewport Preferences </editors/preferences/viewport>`.
+   The size of the spheres can be adjusted in the :doc:`Viewport Preferences </editors/preferences/viewport>`.
 3D Cursor
    Show the :doc:`3D Cursor </editors/3dview/3d_cursor>`.
 Annotations
