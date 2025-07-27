@@ -32,17 +32,32 @@ Some of the overlays can be customized in the
 Guides
 ------
 
+.. _bpy.types.View3DOverlay.show_ortho_grid:
+
 Grid
    Show grid in orthographic side view.
+
+.. _bpy.types.View3DOverlay.show_floor:
+
 Floor
    Show the ground plane in perspective view.
+
+.. _bpy.types.View3DOverlay.show_axis:
+
 Axes
    Show the X, Y and/or Z axis lines.
 
+.. _bpy.types.View3DOverlay.grid_scale:
+
 Scale
    The distance between lines in the grid/floor.
+
+.. _bpy.types.View3DOverlay.grid_subdivisions:
+
 Subdivisions
    The number of subdivisions between grid lines.
+
+.. _bpy.types.View3DOverlay.show_text:
 
 Text Info
    Show various bits of information in the top left corner of the viewport.
@@ -66,6 +81,8 @@ Text Info
      When the view is aligned to a world axis (see :doc:`/editors/3dview/navigate/viewpoint`),
      the Text Info additionally shows the smallest distance between two parallel grid lines.
 
+.. _bpy.types.View3DOverlay.show_stats:
+
 Statistics
    Show information about the amount of objects and geometry.
    Note that the counters depend on the current selection.
@@ -75,6 +92,16 @@ Statistics
    - **Objects** -- Number of the selected objects and the total count.
    - **Geometry** -- Displays information about the current scene depending on the mode and object type.
      This can be the number of vertices, faces, triangles, or bones.
+
+.. _bpy.types.View3DOverlay.show_cursor:
+
+3D Cursor
+   Show the :doc:`3D Cursor </editors/3dview/3d_cursor>`.
+
+.. _bpy.types.View3DOverlay.show_annotation:
+
+Annotations
+   Show :doc:`annotations </interface/annotate_tool>`.
 
 .. _bpy.types.View3DOverlay.show_camera_guides:
 
@@ -89,10 +116,6 @@ Reference Spheres
    Show two spheres, one glossy and one diffuse, that react to lighting to assist in look development.
    Only available in *Material Preview* shading :doc:`Shading Mode </editors/3dview/display/shading>`.
    The size of the spheres can be adjusted in the :doc:`Viewport Preferences </editors/preferences/viewport>`.
-3D Cursor
-   Show the :doc:`3D Cursor </editors/3dview/3d_cursor>`.
-Annotations
-   Show :doc:`annotations </interface/annotate_tool>`.
 
 
 Objects
@@ -117,14 +140,29 @@ Light Colors
 
 Relationship Lines
    Show dashed lines indicating parent or constraint relationships.
+
+.. _bpy.types.View3DOverlay.show_outline_selected:
+
 Outline Selected
    Show an outline around selected objects.
+
+.. _bpy.types.View3DOverlay.show_bones:
+
 Bones
    Show Bones.
+
+.. _bpy.types.View3DOverlay.show_motion_paths:
+
 Motion Paths
    Show the :doc:`motion path </animation/motion_paths>` overlay.
+
+.. _bpy.types.View3DOverlay.show_object_origins:
+
 Origin
    Show the :doc:`origins </scene_layout/object/origin>` of the selected objects.
+
+.. _bpy.types.View3DOverlay.show_object_origins_all:
+
 Origin (All)
    Show the origins of all objects.
 
@@ -200,14 +238,23 @@ Motion Tracking
 
 Show the :doc:`motion tracking </movie_clip/tracking/introduction>` overlay.
 
+.. _bpy.types.SpaceView3D.show_camera_path:
+
 Camera Path
    Show the reconstructed camera path.
+
+.. _bpy.types.SpaceView3D.show_bundle_names:
+
 Marker Names
    Show the names for reconstructed track objects.
+
+.. _bpy.types.SpaceView3D.tracks_display_type:
 
 Tracks
    Change the display of the reconstructed tracks:
    plain axes, arrows and so on.
+
+.. _bpy.types.SpaceView3D.tracks_display_size:
 
 Size
    Change the display size of the reconstructed tracks.
@@ -220,19 +267,36 @@ Mesh Edit Mode Overlays
 
 The following options are available when in Mesh Edit Mode.
 
+.. _bpy.types.View3DOverlay.show_faces:
+
 Faces
    Highlight selected faces. Affects all selection modes.
+
+.. _bpy.types.View3DOverlay.show_face_center:
+
 Center
    Show face center points in solid shading modes. (They're always shown in wireframe shading mode.)
 
    Only affects face selection mode.
+
+.. _bpy.types.View3DOverlay.show_edge_crease:
+
 Creases
    Display edges marked with a crease
    for the :doc:`Subdivision Surface Modifier </modeling/modifiers/generate/subdivision_surface>`.
+
+.. _bpy.types.View3DOverlay.show_edge_sharp:
+
 Sharp
    Display sharp edges, used with the :doc:`Edge Split modifier </modeling/modifiers/generate/edge_split>`.
+
+.. _bpy.types.View3DOverlay.show_edge_bevel_weight:
+
 Bevel
    Display weights created for the :doc:`Bevel Modifier </modeling/modifiers/generate/bevel>`.
+
+.. _bpy.types.View3DOverlay.show_edge_seams:
+
 Seams
    Display the :doc:`UV unwrapping seams </modeling/meshes/uv/unwrapping/seams>`.
 
@@ -288,12 +352,23 @@ Measurement
 Show numerical measures of the selected elements.
 The :ref:`bpy.types.UnitSettings` can be set in the Scene properties.
 
+.. _bpy.types.View3DOverlay.show_extra_edge_length:
+
 Edge Length
    Show the length of selected edges.
+
+.. _bpy.types.View3DOverlay.show_extra_edge_angle:
+
 Edge Angle
    Show the angle of selected edges between two faces.
+
+.. _bpy.types.View3DOverlay.show_extra_face_area:
+
 Face Area
    Show the area of selected faces.
+
+.. _bpy.types.View3DOverlay.show_extra_face_angle:
+
 Face Angle
    Show the angle of selected face corners.
 
@@ -318,9 +393,15 @@ Face Angle
 Normals
 -------
 
+.. _bpy.types.View3DOverlay.show_vertex_normals:
+.. _bpy.types.View3DOverlay.show_split_normals:
+.. _bpy.types.View3DOverlay.show_face_normals:
+
 - Display vertex normals
 - Display face normals at vertices (split normals)
 - Display face normals
+
+.. _bpy.types.View3DOverlay.normals_length:
 
 Size
    The size to show the selected normals.
@@ -337,8 +418,13 @@ Freestyle
 These settings apply to the :doc:`Freestyle </render/freestyle/introduction>`
 Line Art renderer.
 
+.. _bpy.types.View3DOverlay.show_freestyle_edge_marks:
+
 Edge Marks
    Display Freestyle edge marks.
+
+.. _bpy.types.View3DOverlay.show_freestyle_face_marks:
+
 Face Marks
    Display Freestyle face marks.
 
@@ -346,8 +432,15 @@ Face Marks
 Sculpt Mode Overlays
 ====================
 
+.. _bpy.types.View3DOverlay.show_sculpt_mask:
+.. _bpy.types.View3DOverlay.sculpt_mode_mask_opacity:
+
 Mask
    Show :ref:`Masks <sculpt-mask-menu>` as overlays on an object. The opacity of the overlay can be adjusted.
+
+.. _bpy.types.View3DOverlay.show_sculpt_face_sets:
+.. _bpy.types.View3DOverlay.sculpt_mode_face_sets_opacity:
+
 Face Sets
    Show :ref:`Face Sets <sculpting-editing-facesets>` as overlays on an object.
    The opacity of the overlay can be adjusted.
@@ -360,16 +453,23 @@ Vertex Paint Overlays
 
 Stencil Mask Opacity
    Does nothing. (Stencil masks are only available for texture painting.)
+
+.. _bpy.types.View3DOverlay.show_paint_wire:
+
 Show Wire
    Display mesh edges in white (unlike the *Wireframe* overlay which shows them in black).
+
 
 .. _3dview-overlay-weight-paint:
 
 Weight Paint Overlays
 =====================
 
+.. _bpy.types.View3DOverlay.weight_paint_mode_opacity:
+
 Opacity
    The opacity of the overlay.
+
 Zero Weights
    Display unreferenced and zero-weighted areas in black.
    This helps to identify areas with very low weights that have been painted onto.
@@ -377,6 +477,8 @@ Zero Weights
    :None: Vertices are displayed in the usual way.
    :Active: Vertices are shown in black if they have no weight in the active vertex group.
    :All: Vertices are shown in black if they have no weight in any vertex group.
+
+.. _bpy.types.View3DOverlay.show_wpaint_contours:
 
 Show Weight Contours
    Show contour lines formed by points with the same interpolated weight.
@@ -399,6 +501,9 @@ Stencil Mask Opacity
 
 Pose Mode Overlays
 ==================
+
+.. _bpy.types.View3DOverlay.show_xray_bone:
+.. _bpy.types.View3DOverlay.xray_alpha_bone:
 
 Fade Geometry
    Show the bones on top and face other geometry to the back.

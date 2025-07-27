@@ -23,7 +23,5 @@ Handles
 Normals
    Toggles the display of the curve normals.
 
-   .. _bpy.types.View3DOverlay.normals_length:
-
    Normal Size
       Length of the axis that points the direction of the normal.

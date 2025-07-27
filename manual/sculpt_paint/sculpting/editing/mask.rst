@@ -331,8 +331,6 @@ Per Loose Mask
    Assigns a random mask value for each disjoint part of the mesh.
 
 
-.. _bpy.types.Sculpt.show_mask:
-.. _bpy.types.View3DOverlay.sculpt_mode_mask_opacity:
 .. _Mask Display Settings:
 
 Display Settings
