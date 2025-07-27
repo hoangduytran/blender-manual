@@ -89,17 +89,19 @@ Use Library Path
    When this option is enabled, linked versions of the object will reference the same disk cache.
    Otherwise linked versions of the object will use independent caches.
 
-Compression
-   The compression level for cache files. Some physics caches can be very large,
-   Blender can compress these caches in order to save space.
+.. _bpy.types.PointCache.compression:
 
-   None
-      Do not compress the cache.
-   Light
-      Compression will optimize the speed of compressing/decompressing operations over file size.
-   Heavy
-      Compression will result in smaller cache files more than *Light*,
-      however, requires more CPU time to compress/decompress.
+Compression
+   Sets the compression level used for cache files.
+   Some physics simulations can generate large caches, and compression helps reduce disk usage.
+
+   :None: No compression is applied.
+   :Fast:
+      Prioritizes compression and decompression speed over file size.
+      Suitable for workflows where performance is more important than minimizing storage.
+   :Slow:
+      Prioritizes compression and decompression speed over compression and decompression speed.
+      Suitable for workflows where minimal storage is more important than performance.
 
 Start
    Frame on which to start the simulation.
