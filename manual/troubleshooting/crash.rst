@@ -9,7 +9,7 @@ The most common causes of Blender crashes:
 - Issues with graphics hardware or drivers.
 - Bugs in Blender.
 
-Firstly, you may be able to recover your work with :menuselection:`File --> Recover --> Auto Save...`.
+Firstly, you may be able to recover your work with :ref:`Auto Save <troubleshooting-file_recovery-auto_save>`.
 
 To prevent the problem from happening again, you can check that the graphics drivers are up to date
 (:ref:`troubleshooting-gpu-index`), upgrade your machine's hardware (the RAM or graphics card), and disable some

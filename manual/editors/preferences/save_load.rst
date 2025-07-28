@@ -42,15 +42,17 @@ Recent Files
 .. _bpy.types.PreferencesFilePaths.use_auto_save_temporary_files:
 
 Auto Save
-   Enables :doc:`Auto Save </troubleshooting/recover>`.
-   Tells Blender to *automatically* save a backup copy of your work-in-progress files to the :ref:`temp-dir`.
+   Enables Blender's :ref:`Auto Save <bpy.ops.wm.recover_auto_save>` feature,
+   which periodically saves a temporary backup of the current file to the :ref:`temp-dir`.
+
+   This is useful for recovering work after a crash or unexpected shutdown.
 
    .. _bpy.types.PreferencesFilePaths.auto_save_time:
 
    Timer (Minutes)
-      This specifies the number of minutes to wait between each :doc:`Auto Save </troubleshooting/recover>`.
-      The default value of the Blender installation is 2 minutes.
-      The minimum is 1, and the Maximum is 60 (save every hour).
+      Specifies the interval, in minutes, between automatic saves.
+      Shorter intervals provide better protection but may increase disk writes slightly,
+      which could cause performance issues for larger files.
 
 .. _bpy.types.PreferencesFilePaths.file_preview_type:
 

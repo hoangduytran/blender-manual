@@ -23,21 +23,16 @@ There are three options to help prevent accidental data loss:
 Recovering Save Versions
 ========================
 
-By default Blender keeps an additional backup when saving files. So saving renames the previously saved file with a
-``.blend1`` extension instead of overwriting it.
+By default Blender keeps an additional backup when saving files.
+So saving renames the previously saved file with a ``.blend1`` extension instead of overwriting it.
 
 This file can be used to revert to a previous state.
 
 See :ref:`Save Versions <bpy.types.PreferencesFilePaths.save_version>` to configure the number of versions kept.
 
 
-.. _troubleshooting-file_recovery-auto_save:
-
-Recovering Auto Saves
-=====================
-
-Last Session
-------------
+Recovering The Last Session
+===========================
 
 .. reference::
 
@@ -48,29 +43,24 @@ Blender under normal operation (see :term:`Blender Session`). Note that files in
 deleted when you reboot your computer (depending on your system configuration) or by scheduled disk cleanup tools or
 scripts.
 
+.. _troubleshooting-file_recovery-auto_save:
 
-Auto Save
----------
+Recovering an Auto Save
+=======================
 
-.. reference::
+Blender automatically saves temporary backups of your work at regular intervals.
+If Blender crashes or you close it without saving, you may be able to recover your work using the autosave.
 
-   :Menu:      :menuselection:`File --> Recover --> Auto Save`
+Follow these steps to recover an autosave:
 
-The *Recover Auto Save* allows you to open the *Auto Saved* file. You will have to navigate to your :ref:`temp-dir`.
-The *Auto Saved* files are named using a random number and have a blend extension.
-
-See :ref:`Auto Save Preferences <bpy.types.PreferencesFilePaths.use_auto_save_temporary_files>` to configure
-auto-save.
-
-Trusted Source
-   .. note::
-
-      To view this option, press :kbd:`N` to open the settings panel at the right.
-
-   When enabled, Python scripts and drivers that may be included in the file will be run automatically. Enable this
-   only if you created the file yourself, or you trust that the person who gave it to you did not include any
-   malicious code with it. See :doc:`Python Security </advanced/scripting/security>` to configure default trust
-   options. **Exercise caution when using this option since any scripts present in the file will be executed.**
+#. Open Blender.
+#. Go to the top-left menu bar and select: :ref:`File --> Recover --> Auto Save <bpy.ops.wm.recover_auto_save>`.
+#. In the file browser that appears, find the desired auto save.
+   The files are named like: :file:`<filename>_autosave.blend`
+   Note, these files are timestamped to help identify the correct one.
+#. Select the autosave file and click *Open*.
+#. Once opened, immediately save the file manually using
+   :ref:`Save As <bpy.ops.wm.save_as_mainfile>` to avoid overwriting the autosave.
 
 .. tip::
 
@@ -80,8 +70,6 @@ Trusted Source
 
       File Browser displaying a vertical list.
 
-.. warning::
+.. seealso::
 
-   When recovering an *Auto Saved* file, any changes made since the last *Auto Save* will be lost. Only one *Auto
-   Saved* file exists for each ``.blend`` file, i.e. Blender does not keep older versions. Therefore, you will only be
-   able to restore the most recent *Auto Save* file.
+   :ref:`Auto Save Interval Preference <bpy.types.PreferencesFilePaths.auto_save_time>`

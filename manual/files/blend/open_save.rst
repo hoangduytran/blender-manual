@@ -113,13 +113,23 @@ Auto Save
 
 .. reference::
 
-   :Menu:      :menuselection:`File --> Recover --> Auto Save`
+   :Menu: :menuselection:`File --> Recover --> Auto Save`
 
-This will allow you to open an automatically saved file to recover it.
+The *Auto Save* option allows you to recover the most recent automatically saved version of your file.
+This is useful in the event of a crash or if you closed Blender without saving.
 
-.. seealso::
+Selecting this option opens a file browser pointed to your system's :ref:`temp-dir`.
+Auto-saved files typically have a name such as ``<filename>_autosave.blend`` or a random identifier,
+and use the ``.blend`` extension.
 
-   :ref:`Auto Save <troubleshooting-file_recovery-auto_save>`
+You can configure the autosave interval and behavior in the
+:ref:`Auto Save Preferences <bpy.types.PreferencesFilePaths.use_auto_save_temporary_files>`.
+
+.. warning::
+
+   Only one auto-saved file is kept per project.
+   When recovering from an auto save, any changes made after the last save will be lost.
+   Older auto saves are not retained.
 
 
 .. _bpy.ops.wm.save_mainfile:

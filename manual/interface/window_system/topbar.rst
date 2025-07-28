@@ -60,13 +60,10 @@ Open Recent :kbd:`Shift-Ctrl-O`
 Revert
    Reopens the current file to its last saved version.
 Recover
-   Recover Last Session
-      This will load a blend-file that Blender automatically saves just before exiting.
-      So this option enables you to :doc:`recover </troubleshooting/recover>`
-      your last work :term:`session`, e.g. if you closed Blender by accident.
-   Recover Auto Save
-      This will open an automatically saved file
-      to :doc:`recover </troubleshooting/recover>` it.
+   Options to recover a blend-file from the accidentally closing Blender or a crash. See:
+
+   - :ref:`bpy.ops.wm.recover_last_session`
+   - :ref:`bpy.ops.wm.recover_auto_save`
 
 -----
 
