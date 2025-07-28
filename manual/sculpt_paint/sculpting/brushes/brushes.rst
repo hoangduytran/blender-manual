@@ -1,5 +1,4 @@
 
-
 *******
 Brushes
 *******
@@ -201,7 +200,7 @@ Nudge
 Twist
    Brush Type: :doc:`rotate`
 
-   Rotates vertices within the brush in the direction mouse.
+   Rotates vertices within the brush in the direction the cursor is moved.
 
 Relax Slide
    Brush Type: :doc:`slide_relax`
