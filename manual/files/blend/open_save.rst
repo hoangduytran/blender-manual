@@ -127,6 +127,10 @@ You can configure the autosave interval and behavior in the
 
 .. warning::
 
+   Auto save has some limitations, notably it will not save changes in Sculpt, Texture Paint, and Edit mode.
+
+.. important::
+
    Only one auto-saved file is kept per project.
    When recovering from an auto save, any changes made after the last save will be lost.
    Older auto saves are not retained.
