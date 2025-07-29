@@ -5,7 +5,7 @@
 Object Node
 ***********
 
-.. figure:: /images/node-types_GeometryNodeInputObject.png
+.. figure:: /images/node-types_GeometryNodeInputObject.webp
    :align: right
    :width: 300px
    :alt: Object Input Node.
