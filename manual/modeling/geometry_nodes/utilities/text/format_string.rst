@@ -97,6 +97,10 @@ This node uses special logic to automatically assign names to new inputs:
 Examples
 ========
 
+.. figure:: /images/importing_csv.jpeg
+   :align: center
+   :alt: Format String node example with CSV data import.
+
 Basic
 -----
 
