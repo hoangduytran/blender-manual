@@ -206,7 +206,7 @@ Output Vertex Groups
 Shell
    Vertex group that the generated shell geometry will be weighted to.
    This allows you to use other modifiers to only affect the shell geometry
-   by using a that modifier's vertex group influence control.
+   by using that modifier's vertex group influence control.
 
 Rim
    Same as *Shell Vertex Group*, but for the generated rim geometry.

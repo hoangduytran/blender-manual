@@ -22,7 +22,7 @@ Inputs
 ======
 
 Factor
-   Controls the amount of mixing between the A and B inputs.
+   Controls the amount of mixing between the ``A`` and ``B`` inputs.
 A/B
    The two inputs that are mixed together.
 

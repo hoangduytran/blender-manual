@@ -22,7 +22,7 @@ Image
    Standard color input.
 Vector
    Input of the displacement map.
-   If the a color output is implicitly converted in the vector input,
+   If the input is color it's implicitly converted in the vector input,
    the first channel (red) value determines displacement along X axis.
    The second channel (green) the displacement along Y axis.
    If the input is a grayscale image, where both the channel values are equal,
