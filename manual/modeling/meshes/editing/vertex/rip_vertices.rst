@@ -56,8 +56,8 @@ Examples
 Limitations
 ===========
 
-Rip will only work when edges and/or vertices are selected.
-Using the tool when a face is selected (explicitly or implicitly), will return an error
-message *"Cannot perform ripping with faces selected this way"*.
-If your selection includes edges or vertices that are not "between" two faces :term:`Manifold`,
-it will also fail with the message *"No proper selection or faces include"*.
+The following selections are not supported by the rip operator and will give an error message:
+
+- Face(s), including when selecting vertices or edges that form up a face.
+- Edges or vertices that are not "between" two faces (non :term:`Manifold`).
+- Two vertices that aren't connected to each other.
