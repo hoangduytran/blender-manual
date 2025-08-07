@@ -60,7 +60,7 @@ Shader (bright green)
 Geometry (turquoise)
    Used in :doc:`Geometry Nodes </modeling/geometry_nodes/index>`.
 Menu (Dark Grey)
-   Used for enum-like inputs that show a dropdown menu or radio button in the UI.
+   Used for enum style inputs that show a dropdown menu or radio button in the UI.
 
 .. rubric:: Data
 

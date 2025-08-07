@@ -38,7 +38,7 @@ darkening it and increasing contrast.
 The top :doc:`/compositing/types/color/adjust/rgb_curves` darkens the image by linearly scaling each
 color value to a smaller one.
 
-The bottom curve node increases constract by making small values smaller and large values larger.
+The bottom curve node increases contrast by making small values smaller and large values larger.
 
 Finally, the Mix node blends the two together.
 
@@ -92,7 +92,7 @@ Decoding an Image for your Watermark
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you see an image that you think might be yours,
-use the node tree below to compare it to your stock image (pre-watermarked original).
+use the node tree below to compare it to your stock image (non-watermarked original).
 In this tree, the *Mix* node is set to Difference,
 and the *Map Value* node amplifies any difference.
 You can see how the original mark clearly stands out.

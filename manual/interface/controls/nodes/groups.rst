@@ -13,7 +13,7 @@ Grouping nodes can simplify a node tree by hiding complexity and reusing common 
 A node group is visually identified by its green title bar.
 
 Conceptually, node groups allow you to treat a *set* of nodes as a single unit.
-They are similar to functions in programming: reusable, composable, and parameterizable.
+They are similar to functions in programming: reusable, composable, and parametrizable.
 
 For example, suppose you create a "Wood" material and want to use it in multiple colors.
 You could duplicate the entire node setup for each color, but maintaining those duplicates
@@ -43,7 +43,7 @@ You can connect them to internal nodes to drive values such as factors, colors, 
 
 .. note::
 
-   Input values that do not affect the output will be greyed out.
+   Input values that do not affect the output will be grayed out.
 
 The *Group Output* node defines the data that is passed out of the node group.
 Only sockets connected to this node will be available as outputs on the group itself.

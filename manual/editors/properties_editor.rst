@@ -123,7 +123,7 @@ Header
 .. _bpy.types.SpaceProperties.search_filter:
 
 Display Filter :kbd:`Ctrl-F`
-   Use this to search for properties by name. Matching properties remain visible; others are greyed out.
+   Use this to search for properties by name. Matching properties remain visible; others are grayed out.
    The editor also highlights the first match and switches to the relevant tab automatically.
 
    Start a search with :kbd:`Ctrl-F`, and clear it with :kbd:`Alt-F`.

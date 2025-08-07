@@ -28,6 +28,6 @@ Depth
    The depth of the *Clouds* calculation.
    A higher number results in a long calculation time, but also in finer details.
 Nabla 
-   Size of the derivitive offset used for calculating surface normals.
+   Size of the derivative offset used for calculating surface normals.
    Smaller values give more precision, larger values are smoother/faster.
    This is mostly relevant when the texture is used in displacement or bump channels.

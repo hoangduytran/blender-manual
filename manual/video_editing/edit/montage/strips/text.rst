@@ -125,7 +125,7 @@ Cut Text :kbd:`Ctrl-X`
    Cut the selected text.
 Delete Character :kbd:`Backspace`
    Delete the character before the cursor.
-Insert Linebreak :kbd:`Return`
+Insert Line Break :kbd:`Return`
    Insert a new line.
 Select All :kbd:`Ctrl-A`
    Select all the text.
