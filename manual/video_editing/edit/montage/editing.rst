@@ -176,7 +176,7 @@ Slip Keyframes
 Move the mouse left or right to shift the strip's content, then confirm the operation.
 Additional options are available during the operation:
 
-- **Confirm**: :kbd:`LMB`, :kbd:`Enter`, :kbd:`Spacebar`
+- **Confirm**: :kbd:`LMB`, :kbd:`Return`, :kbd:`Spacebar`
 - **Cancel**: :kbd:`Esc`, :kbd:`RMB`
 - **Precision Mode**: Hold :kbd:`Shift` to enable subframe slipping which slips the audio.
   The subframe amount is shown in the header as *Sound Offset*.
