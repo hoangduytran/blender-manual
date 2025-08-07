@@ -109,7 +109,8 @@ Object Evaluation State
 
    :Evaluated: Shows data with all modifiers applied.
    :Original: Shows the original object data, without modifiers.
-   :Viewer Node: Displays data from the active :doc:`Viewer Node </modeling/geometry_nodes/output/viewer>` in Geometry Nodes.
+   :Viewer Node: Displays data from the active :doc:`Viewer Node </modeling/geometry_nodes/output/viewer>` in Geometry
+    Nodes.
 
    You can also toggle between *Evaluated* and *Viewer Node* by clicking the
    :bl-icon:`restrict_view_off` / :bl-icon:`restrict_view_on` icon in the Viewer node's header.

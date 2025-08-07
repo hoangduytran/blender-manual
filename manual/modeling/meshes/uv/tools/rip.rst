@@ -9,8 +9,8 @@ Rip
    :Tool:      :menuselection:`Toolbar --> Rip`
 
 The *Rip* tool interactively separates selected UV elements (vertices, edges, or faces) from connected components,
-creating a "rip" in the UV map. After the separation, the selection can be moved in the direction of the mouse pointer,
-allowing the detached elements to be repositioned interactively.
+creating a "rip" in the UV map. After the separation, the selection can be moved in the direction of the mouse
+pointer, allowing the detached elements to be repositioned interactively.
 
 This is useful for isolating UV islands or unwrapping overlapping elements
 without affecting surrounding geometry.

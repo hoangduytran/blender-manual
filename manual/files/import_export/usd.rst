@@ -627,7 +627,8 @@ Geometry Node Modifiers
    that only the components you want are exported.
 
 Instancing/Referencing
-   Exporting instanced objects and collections is supported through an experimental option available during USD export.
+   Exporting instanced objects and collections is supported through an experimental option available during USD
+   export.
 
    Point instances, created with Geometry Nodes, are partially supported and will be exported using the
    ``UsdGeomPointInstancer`` prim type. Simple instancing scenarios using either the

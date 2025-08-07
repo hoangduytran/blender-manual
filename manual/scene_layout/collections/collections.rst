@@ -70,8 +70,8 @@ Include
 Holdout
    Marks all objects in this collection as holdouts in the active view layer.
 
-   Holdouts render as transparent regions in the final image, effectively masking out anything behind them.
-   This is typically used in compositing workflows to create cutouts or to separate foreground and background elements.
+   Holdouts render as transparent regions in the final image, effectively masking out anything behind them. This is
+   typically used in compositing workflows to create cutouts or to separate foreground and background elements.
 
    .. seealso::
 

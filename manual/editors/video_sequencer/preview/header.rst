@@ -159,9 +159,9 @@ Transform
    Move Origin :kbd:`Ctrl-Period`
       Moves the origin of the image strip without changing the strip's content position.
 
-      This is useful for adjusting the reference point for transformations like rotation, scaling, or further positioning.
-      For example, shifting the origin to a corner of the image allows rotations to pivot around that corner,
-      rather than the default center.
+      This is useful for adjusting the reference point for transformations like rotation, scaling, or further
+      positioning. For example, shifting the origin to a corner of the image allows rotations to pivot around that
+      corner, rather than the default center.
 
 Clear
    Resets the position, rotation, or scale of the selected images.

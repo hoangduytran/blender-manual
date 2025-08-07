@@ -72,8 +72,8 @@ Collections can be enabled or disabled per View Layer, allowing you to control w
 
 This makes it easy to separate lighting, characters, props, or effects into their own passes.
 
-Collection visibility for each View Layer can be adjusted in the :ref:`Outliner <editors-outliner-editing-collections>`
-or :ref:`Collection View Layer Properties <bpy.types.LayerCollection>`.
+Collection visibility for each View Layer can be adjusted in the :ref:`Outliner
+<editors-outliner-editing-collections>` or :ref:`Collection View Layer Properties <bpy.types.LayerCollection>`.
 
 .. figure:: /images/scene-layout_view-layers_introduction_outliner.png
 

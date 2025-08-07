@@ -4,8 +4,9 @@
 Export Grease Pencil as PDF
 *****************************
 
-The Portable Document Format (PDF) is used to exchange documents that can be viewed with many applications, such as PDF readers and modern browsers.
-Exporting Grease Pencil animations will create a separate page in the PDF document for each frame selected.
+The Portable Document Format (PDF) is used to exchange documents that can be viewed with many applications, such as
+PDF readers and modern browsers. Exporting Grease Pencil animations will create a separate page in the PDF document
+for each frame selected.
 
 .. warning:: The exporter only works in Object Mode.
 
@@ -40,4 +41,5 @@ Fill
 Uniform Width
    When enabled, export strokes with constant thickness.
 
-.. note:: The export of the Grease Pencil strokes is always from the view of the largest 3D Viewport in the current workspace.
+.. note:: The export of the Grease Pencil strokes is always from the view of the largest 3D Viewport in the current 
+    workspace.

@@ -129,15 +129,15 @@ Display Filter :kbd:`Ctrl-F`
    Start a search with :kbd:`Ctrl-F`, and clear it with :kbd:`Alt-F`.
 
 Data Context Path
-   Displays the name and icon of the current data-block (e.g. Object, Material, Scene),
-   along with its hierarchical path within the data structure.
+   Displays the name and icon of the current data-block (e.g. Object, Material, Scene), along with its hierarchical
+   path within the data structure.
    Example: *Cube* (Object) --> *Mesh* --> *Material*
 
 .. _bpy.ops.buttons.toggle_pin:
 
 Toggle Pin ID
-   Click the pin icon to lock the editor to the current data-block, preventing it from changing when the selection updates.
-   Click again to unlock and return to context-based display.
+   Click the pin icon to lock the editor to the current data-block, preventing it from changing when the selection
+   updates. Click again to unlock and return to context-based display.
 
 
 Options
