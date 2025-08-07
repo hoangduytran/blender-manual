@@ -150,7 +150,7 @@ def compile_valid_kbd():
         r"(",
         # Mouse
         # Wheel
-        r"(?:Wheel(Up|Down|In|Out)?)",
+        r"(?:Wheel(Up|Down|Left|Right)?)",
         # Buttons
         r"|(?:[LMR]MB)",
         r"|(?:Mouse[4-9]?)",
