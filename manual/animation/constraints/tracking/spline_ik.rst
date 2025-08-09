@@ -20,7 +20,7 @@ connected bones and a curve to constrain these bones to:
 - Set the 'Chain Length' setting to the number of bones in the chain
   (starting from and including the selected bone)
   that should be influenced by the curve.
-- Finally, set *Target* to the curve that should control the curve.
+- Finally, set *Target* to the curve that should control the bones.
 
 .. note::
 
@@ -53,7 +53,7 @@ Fitting
 Chain Length
    How many bones are included in the chain.
 
-Even Division
+Even Divisions
    Ignore the relative length of the bones when fitting to the curve.
 
 Chain Offset

@@ -77,4 +77,4 @@ The gizmo allows direct manipulation of the mask shape:
 - Drag corners to adjust width and height simultaneously.
 - Drag the center cross (X) to move the mask's position.
 - Drag the center dot to rotate the mask.
-- Hold :kbd:Shift while dragging edges or corners to preserve the current aspect ratio.
+- Hold :kbd:`Shift` while dragging edges or corners to preserve the current aspect ratio.

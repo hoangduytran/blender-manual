@@ -49,7 +49,7 @@ Up
 Target Z
    By default, the owner's *Up* axis is (as much as possible) aligned with the global Z axis,
    during the tracking rotations. When this button is enabled, the *Up* axis will be (as much as possible)
-   aligned with the target's local Z axis?
+   aligned with the target's local Z axis.
 
 Target/Owner
    Standard conversion between spaces.

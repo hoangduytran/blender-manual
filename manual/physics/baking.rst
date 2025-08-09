@@ -100,7 +100,7 @@ Compression
       Prioritizes compression and decompression speed over file size.
       Suitable for workflows where performance is more important than minimizing storage.
    :Slow:
-      Prioritizes compression and decompression speed over compression and decompression speed.
+      Prioritizes file size over compression and decompression speed.
       Suitable for workflows where minimal storage is more important than performance.
 
 Start

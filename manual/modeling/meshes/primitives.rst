@@ -136,7 +136,7 @@ Rings
 
       Rings correspond to face loops, not edge loops, so the actual number of visible edge loops is one less.
 
-Size
+Radius
    Distance from the center to the outer surface of the sphere.
 
 .. tip::

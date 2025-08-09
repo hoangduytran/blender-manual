@@ -128,7 +128,7 @@ Exporter List
 
 .. _bpy.ops.collection.exporter_remove:
 
-:bl-icon:`Remove` (Remove Exporter)
+:bl-icon:`remove` (Remove Exporter)
    Removes the selected exporter.
 
 .. _bpy.ops.collection.export_all:
@@ -254,7 +254,7 @@ Name
 :bl-icon:`x` (Remove Collection)
    Removes the object from the specified collection.
 :bl-icon:`downarrow_hlt` (Collection Specials)
-   Unlink Collection, Select Collection, Set Offset from Cursor
+   Unlink Collection, Select Objects in Collection, Set Offset from Cursor
 X, Y, Z
    Applies a spatial offset of the instanced collections from the original object's origin.
 

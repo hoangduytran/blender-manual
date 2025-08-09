@@ -43,7 +43,7 @@ This node has no properties.
 Outputs
 =======
 
-Image
+Result
    If both depth values are equal, it will use the foreground image.
    Whichever depth value is less decides which image pixel is used.
    See :term:`Z-buffer`.
