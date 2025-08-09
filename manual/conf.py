@@ -22,6 +22,17 @@ sys.path.insert(0, os.path.abspath(os.path.join("..", "build_files", "extensions
 sys.setrecursionlimit(2000)
 
 
+def has_module(module_name):
+    found = False
+    try:
+        __import__(module_name)
+        found = True
+    except ModuleNotFoundError as ex:
+        if ex.name != module_name:
+            raise ex
+    return found
+
+
 # -- Local Vars --------------------------------------------------------------
 
 # Not used directly by Sphinx, but used by this file and the buildbot.
@@ -58,6 +69,13 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
 ]
+
+# Provides copy button next to code-blocks (nice to have but not essential).
+if has_module("sphinx_copybutton"):
+    extensions.append("sphinx_copybutton")
+
+    # Exclude line numbers, prompts, and console text.
+    copybutton_exclude = ".linenos, .gp, .go"
 
 # This sometimes raises exceptions & performs online-access, make optional.
 if not os.environ.get("NO_INTERSPHINX", "").strip("0"):
@@ -123,12 +141,9 @@ gettext_allow_fuzzy_translations = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = "basic"
-try:
-    import furo
+
+if has_module("furo"):
     html_theme = "furo"
-    del furo
-except ModuleNotFoundError:
-    pass
 
 # A dictionary of options that influence the look and feel of
 # the selected theme. These are theme-specific.
