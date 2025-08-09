@@ -295,3 +295,5 @@ RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/mix/z_combine.h
 
 RedirectMatch "^/manual/{lang}/{version}/scene_layout/view_layers/index.html" "/manual/{lang}/{version}/render/layers/introduction.html"
 RedirectMatch "^/manual/{lang}/{version}/scene_layout/view_layers/introduction.html" "/manual/{lang}/{version}/render/layers/introduction.html"
+
+RedirectMatch "^/manual/{lang}/{version}/render/freestyle/view_layer/line_style/introduction.html" "/manual/{lang}/{version}/render/freestyle/view_layer/line_style/index.html"

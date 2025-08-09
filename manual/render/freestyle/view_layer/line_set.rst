@@ -11,7 +11,7 @@ Line Set
 
 A line set selects, among the lines (edges) detected by Freestyle,
 which ones will be rendered using its attached
-:doc:`line style </render/freestyle/view_layer/line_style/introduction>`, through various methods.
+:doc:`line style </render/freestyle/view_layer/line_style/index>`, through various methods.
 
 .. figure:: /images/render_freestyle_parameter-editor_line-set_panel.png
 

@@ -59,5 +59,5 @@ Texture Type
       Show brush Textures in the data-block menu. Because the other two types are deprecated,
       this effectively shows all Textures.
    Line Style
-      Deprecated -- :doc:`Line Styles </render/freestyle/view_layer/line_style/introduction>`
+      Deprecated -- :doc:`Line Styles </render/freestyle/view_layer/line_style/index>`
       for the Freestyle renderer are now defined using Materials rather than Textures.
