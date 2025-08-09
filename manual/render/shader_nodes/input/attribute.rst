@@ -88,7 +88,7 @@ Attribute Type
          possibly with a :ref:`manually emulated <driver-attribute-node-emulation>` lookup fallback chain.
 
 Name
-   Name of the attribute.
+   The name of the attribute to retrieve.
 
 
 Outputs
