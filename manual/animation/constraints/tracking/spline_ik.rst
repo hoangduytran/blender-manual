@@ -71,24 +71,17 @@ Y Scale Mode
    Specifies how the length of a bone is scaled when it is fitted to the curve,
    in addition to the effects of target curve object scale and curvature.
 
-   None
-      The bone is reset to its rest pose length.
-   Fit Curve
-      The bones are stretched to cover the entire length of the curve.
-   Bone Original
-      The original Y axis scale of the bone is used.
+   :None: The bone is reset to its rest pose length.
+   :Fit Curve: The bones are stretched to cover the entire length of the curve.
+   :Bone Original: The original Y axis scale of the bone is used.
 
 XZ Scale Mode
    Scaling that a bone undergoes in the other two directions.
 
-   None
-      Do not scale the X and Z axes.
-   Bone Original
-      Use the original scaling of the bones.
-   Inverse Scale
-      Scale of the X and Z axes is the inverse of the Y scale.
-   Volume Preservation
-      Similar to the :ref:`Stretch To <constraints-stretch-to-volume-preservation>` constraint.
+   :None: Do not scale the X and Z axes.
+   :Bone Original: Use the original scaling of the bones.
+   :Inverse Scale: Scale of the X and Z axes is the inverse of the Y scale.
+   :Volume Preservation: Similar to the :ref:`Stretch To <constraints-stretch-to-volume-preservation>` constraint.
 
 Use Original Scale
    Specifies that *Inverse Scale* or *Volume Preservation* should be applied on top of
