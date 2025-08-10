@@ -1,3 +1,4 @@
+.. _bpy.types.RenderSettings.use_simplify:
 
 ********
 Simplify
