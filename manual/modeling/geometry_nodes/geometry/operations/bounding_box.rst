@@ -24,6 +24,10 @@ Inputs
 Geometry
    Standard geometry input.
 
+Use Radius
+   For curves, point clouds, and Grease Pencil objects,
+   include the ``radius`` attribute when calculating the bounds.
+
 
 Properties
 ==========
