@@ -110,6 +110,8 @@ Workspace Settings
    :Editor:    :doc:`/editors/properties_editor`
    :Panel:     :menuselection:`Tool tab --> Workspace`
 
+.. _bpy.types.WorkSpace.use_pin_scene:
+
 Pin Scene
    When enabled, the current workspace will remember the currently selected scene.
    Then, whenever you activate the workspace, it'll automatically switch back to that scene.
