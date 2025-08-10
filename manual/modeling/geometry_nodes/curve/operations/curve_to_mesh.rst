@@ -6,7 +6,7 @@ Curve to Mesh Node
 ******************
 
 .. figure:: /images/node-types_GeometryNodeCurveToMesh.webp
-   :align: center
+   :align: right
    :alt: The Curve to Mesh node.
 
 The Curve to Mesh node converts all splines of a curve to a mesh.
