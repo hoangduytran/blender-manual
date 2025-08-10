@@ -101,3 +101,17 @@ Outputs
 =======
 
 This node has no outputs.
+
+
+Examples
+========
+
+.. figure:: /images/modeling_geometry-nodes_viewer_example-1.jpg
+   :align: center
+
+   Visualizing the Noise Texture Factor on the default cube.
+
+.. figure:: /images/modeling_geometry-nodes_viewer_example-2.jpg
+   :align: center
+
+   Visualizing the Index Attribute as text on the default cube.
