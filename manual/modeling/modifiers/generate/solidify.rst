@@ -98,16 +98,11 @@ Merge Threshold :guilabel:`Complex Mode`
    Distance within which degenerated geometry is merged.
 
 Rim -- Fill
-   Fills the gap between the inner and outer edges.
+   Creates edge loops and faces between the inner and outer surfaces on face edges (slow, disable when not needed).
+
 Only Rim
-   - *Simple Mode*: Will not extrude surfaces parallel to the original one,
-     but instead will only add the perpendicular rim.
-   - *Complex Mode*: Will only leave the generated perpendicular rim.
-
-.. note::
-
-   *Fill* and *Only Rim* only make a difference on :term:`Non-manifold` objects,
-   since the rims are generated from the borders of the original geometry.
+   - *Simple Mode*: Only leaves the extruded surface and the generated perpendicular rim.
+   - *Complex Mode*: Only leaves the generated perpendicular rim.
 
 Vertex Group
    The weights of the selected vertex group are multiplied onto the *Thickness*,
