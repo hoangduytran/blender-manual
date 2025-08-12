@@ -74,8 +74,4 @@ layering shaders and non-physically-based tricks can be found in:
 Open Shading Language
 =====================
 
-In Cycles, custom nodes can be written using the Open Shading Language.
-
-.. seealso::
-
-   :doc:`Open Shading Language </render/cycles/osl/index>`
+In Cycles, custom nodes can be written using the :doc:`Open Shading Language </render/cycles/osl/index>`
