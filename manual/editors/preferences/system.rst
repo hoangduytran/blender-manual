@@ -16,8 +16,8 @@ then they will either not be displayed or be corrected on startup.
 
 .. _editors_preferences_cycles:
 
-Cycles Render Device
-====================
+Cycles Render Devices
+=====================
 
 Changes the computing device the :doc:`Cycles </render/cycles/index>` render engine uses to render images.
 Cycles can use either the CPU or certain GPUs to render images,
