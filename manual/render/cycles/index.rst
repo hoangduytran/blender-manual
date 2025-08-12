@@ -16,7 +16,6 @@
    material_settings.rst
    Light Settings <light_settings.rst>
    gpu_rendering.rst
-   features.rst
    baking.rst
    optimizations/index.rst
    osl/index.rst

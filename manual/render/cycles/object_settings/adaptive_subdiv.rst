@@ -8,9 +8,10 @@ Adaptive Subdivision
 
    :Panel:     :menuselection:`Modifier --> Subdivision Surface`
 
-.. note::
+.. important::
 
-   Implementation not finished yet, marked as an :ref:`Experimental Feature Set <cycles-experimental-features>`.
+   Implementation not finished yet, marked as an *Experimental*
+   :ref:`Feature Set <bpy.types.CyclesRenderSettings.feature_set>`.
 
 When using the *Experimental Feature Set*
 the :doc:`Subdivision Surface Modifier </modeling/modifiers/generate/subdivision_surface>`

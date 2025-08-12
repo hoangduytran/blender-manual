@@ -7,9 +7,10 @@ Subdivision
 
    :Panel:     :menuselection:`Render --> Subdivision`
 
-.. note::
+.. important::
 
-   These settings are only available if :ref:`Experimental Feature Set <cycles-experimental-features>` is turned on.
+   These settings are only available if *Experimental*
+   :ref:`Feature Set <bpy.types.CyclesRenderSettings.feature_set>` is enabled.
 
 These settings are used to control :doc:`Adaptive Subdivision </render/cycles/object_settings/adaptive_subdiv>`.
 
