@@ -1,6 +1,8 @@
 .. |tick|  unicode:: U+2714
 .. |cross| unicode:: U+2717
 
+.. _bpy.types.CyclesRenderSettings.feature_set:
+
 *********************
 Experimental Features
 *********************
