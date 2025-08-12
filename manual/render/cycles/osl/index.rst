@@ -300,5 +300,5 @@ Some OSL features are not available when using the OptiX backend. Examples inclu
    texture call.
 - Some noise functions are not available. Examples include *Cell*, *Simplex*, and *Gabor*.
 - The :ref:`trace <render-shader-nodes-osl-trace>` function is not functional.
-   As a result of this, the :ref:`Ambient Occlusion <bpy.types.ShaderNodeAmbientOcclusion>`
-   and :ref:`Bevel <bpy.types.ShaderNodeBevel>` nodes do not work.
+  As a result of this, the :ref:`Ambient Occlusion <bpy.types.ShaderNodeAmbientOcclusion>`
+  and :ref:`Bevel <bpy.types.ShaderNodeBevel>` nodes do not work.
