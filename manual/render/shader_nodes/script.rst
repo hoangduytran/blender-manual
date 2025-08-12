@@ -23,8 +23,8 @@ who need fine-grained control over shading behavior beyond what the standard sha
 
 .. note::
 
-   The Script node is only available when *Open Shading Language* is enabled in the Cycles render settings.
-   This feature requires rendering with the CPU or OptiX backend.
+   The Script node is only evaluated if
+   :ref:`Open Shading Language <bpy.types.CyclesRenderSettings.shading_system>` is enabled.
 
 .. tip::
 

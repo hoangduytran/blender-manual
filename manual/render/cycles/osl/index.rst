@@ -31,7 +31,8 @@ To use Open Shading Language (OSL) in Blender, follow these steps:
 
 #. **Enable OSL Rendering**
 
-   In the :menuselection:`Render Properties` enable *Open Shading Language*.
+   In the :menuselection:`Render Properties` enable
+   :ref:`Open Shading Language <bpy.types.CyclesRenderSettings.shading_system>`.
 
 #. **Add a Script Node**
 
