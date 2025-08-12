@@ -8,9 +8,12 @@ because modern GPUs are designed to do quite a lot of number crunching.
 On the other hand, they also have some limitations in rendering complex scenes, due to more limited memory,
 and issues with interactivity when using the same graphics card for display and rendering.
 
-To enable GPU rendering, go into the :menuselection:`Preferences --> System --> Cycles Render Devices`,
-and select either *CUDA*, *OptiX*, *HIP*, *oneAPI*, or *Metal*. Next, you must configure each scene to
-use GPU rendering in :menuselection:`Properties --> Render --> Device`.
+To enable GPU rendering:
+
+#. Select either *CUDA*, *OptiX*, *HIP*, *oneAPI*, or *Metal*
+   in the :ref:`Cycles Render Devices <editors_preferences_cycles>` user preference.
+#. Enable the available devices for the chosen backend.
+#. Configure each scene to use the *GPU Compute* :ref:`Device <bpy.types.CyclesRenderSettings.device>.
 
 
 Rendering Technologies

@@ -22,6 +22,33 @@ Feature Set
 
       Currently, :doc:`/render/cycles/object_settings/adaptive_subdiv` is the only experimental feature.
 
+.. _bpy.types.CyclesRenderSettings.device:
+
+Device
+   Specifies the compute device used for rendering in Cycles.
+   The choice of device can significantly affect render performance, *GPU Compute* is often faster .
+
+   :CPU:
+      Render using the system's central processing unit. This mode is compatible with all Cycles features.
+      The number of CPU threads used can be changed in the
+      :ref:`Performance Properties </render/cycles/render_settings/performance>`.
+   :GPU Compute:
+      Render using one or more graphics processing units (GPUs) through the compute backend
+      and devices selected in the :ref:`editors_preferences_cycles`.
+      Depending on the backend, it may be possible to use both CPU and GPU devices simultaneously.
+
+      For more details, including setup instructions, device compatibility, and known limitations,
+      see :doc:`/render/cycles/gpu_rendering`.
+
+   .. note::
+
+      GPU rendering may have limitations compared to CPU rendering, depending on the backend.
+
+   .. seealso::
+
+      :ref:`Denoising <bpy.types.cyclesrendersettings.denoising_use_gpu>`
+      and :ref:`Compositing <bpy.types.RenderSettings.compositor_device>` have their own device selection.
+
 .. _bpy.types.CyclesRenderSettings.shading_system:
 
 Open Shading Language
