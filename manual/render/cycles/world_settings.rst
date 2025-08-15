@@ -163,19 +163,6 @@ Interpolation
    :Linear: Simple interpolation which gives good results for thin volumes.
    :Cubic: Smoothed high-quality interpolation needed for more dense volumes, but slower.
 
-.. _bpy.types.CyclesWorldSettings.homogeneous_volume:
-
-Homogeneous
-   Assume volume has the same density everywhere (not using any textures), for faster rendering.
-   Usually this is automatically determined by the renderer.
-   This settings provides a manual control for cases where it is not detected.
-
-.. _bpy.types.CyclesWorldSettings.volume_step_size:
-
-Step Size
-   Distance between volume shader samples for world volume shaders.
-   See :doc:`Volume Render Settings </render/cycles/render_settings/volumes>` for more information.
-
 
 Light Group
 -----------
