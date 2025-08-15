@@ -31,7 +31,7 @@ Device
    :CPU:
       Render using the system's central processing unit. This mode is compatible with all Cycles features.
       The number of CPU threads used can be changed in the
-      :ref:`Performance Properties </render/cycles/render_settings/performance>`.
+      :doc:`Performance Properties </render/cycles/render_settings/performance>`.
    :GPU Compute:
       Render using one or more graphics processing units (GPUs) through the compute backend
       and devices selected in the :ref:`editors_preferences_cycles`.

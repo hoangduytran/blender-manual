@@ -13,7 +13,7 @@ To enable GPU rendering:
 #. Select either *CUDA*, *OptiX*, *HIP*, *oneAPI*, or *Metal*
    in the :ref:`Cycles Render Devices <editors_preferences_cycles>` user preference.
 #. Enable the available devices for the chosen backend.
-#. Configure each scene to use the *GPU Compute* :ref:`Device <bpy.types.CyclesRenderSettings.device>.
+#. Configure each scene to use the *GPU Compute* :ref:`Device <bpy.types.CyclesRenderSettings.device>`.
 
 
 Rendering Technologies
