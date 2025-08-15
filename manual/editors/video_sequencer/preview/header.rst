@@ -140,6 +140,30 @@ The duplicated content remain selected, allowing immediate repositioning.
 
    :ref:`bpy.ops.sequencer.duplicate_move`
 
+Animation
+---------
+.. reference::
+
+   :View Type:   Preview
+   :Menu:        :menuselection:`Strip --> Animation`
+
+Insert Keyframe :kbd:`I`
+   See :ref:`Insert Keyframe <bpy.ops.anim.keyframe_insert>`.
+
+Insert Keyframe with Keying Set :kbd:`K`
+   See :ref:`Insert Keyframe with Keying Set <bpy.ops.anim.keyframe_insert_menu>`.
+
+Set Active Keying Set :kbd:`Shift-K`
+   See :ref:`Set Active Keying Set <bpy.ops.anim.keying_set_active_set>`.
+
+Delete Keyframes :kbd:`Alt-I`
+   See :ref:`Delete Keyframes <bpy.ops.anim.keyframe_delete>`.
+
+Clear Keyframes :kbd:`Shift-Alt-I`
+   See :ref:`Clear Keyframes <bpy.ops.anim.keyframe_clear>`.
+
+.. seealso::
+   :doc:`Editing Keyframes </animation/keyframes/editing>`
 
 Show/Hide
 ---------
