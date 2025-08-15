@@ -1,3 +1,4 @@
+.. _bpy.types.LightProbePlane:
 
 *****************
 Light Probe Plane
@@ -48,8 +49,6 @@ Distance
 
 Capture
 -------
-
-.. _bpy.types.LightProbe.clip_start:
 
 Clipping Offset
    Define how far below the plane the near clip is when capturing the scene.
