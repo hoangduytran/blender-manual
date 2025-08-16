@@ -106,9 +106,9 @@ Annotations
 .. _bpy.types.View3DOverlay.show_camera_guides:
 
 Camera Guides
-   Show Camera guides
-   (:ref:`Safe Areas <bpy.ops.safe_areas>` & :ref:`Composition Guides <bpy.types.Camera.show_composition>`),
-   only available in :ref:`camera view <bpy.ops.view3d.view_camera>`.
+   Show camera guides
+   (:ref:`Safe Areas <bpy.ops.safe_areas>` & :ref:`Composition Guides <bpy.types.Camera.show_composition>`).
+   Only available in :ref:`camera view <bpy.ops.view3d.view_camera>`.
 
 .. _bpy.types.View3DOverlay.show_look_dev:
 
@@ -201,10 +201,12 @@ Fade Inactive Geometry
 .. _bpy.types.View3DOverlay.show_face_orientation:
 
 Face Orientation
-   Show faces whose normal is pointing towards the camera in blue,
-   and faces whose normal is pointing away from the camera in red.
-   This lets you quickly check for faces that are oriented incorrectly:
-   the outside surface of an object should typically be all blue.
+   Highlights the backside of faces in red. In general, if a face is shown in red
+   on the outside of a mesh, it's most likely oriented incorrectly and needs
+   to have its normal flipped. This can be done with the :ref:`bpy.ops.mesh.flip_normals`
+   or :ref:`bpy.ops.mesh.normals_make_consistent` operators for meshes,
+   and with the :ref:`modeling_surfaces_editing_segments_switch-direction` operator
+   for Surface objects.
 
 
 .. _3dview-overlays-view_node:

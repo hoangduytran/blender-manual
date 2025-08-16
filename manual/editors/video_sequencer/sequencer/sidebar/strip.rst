@@ -291,8 +291,8 @@ Directory
 .. _bpy.types.StripElement.filename:
 
 Filename
-   The full name of the source file.
-   Note that file names are limited to 256
+   The name of the source file.
+   Note that file names are limited to 256 characters.
 Color Space
    The color space of the source file.
 

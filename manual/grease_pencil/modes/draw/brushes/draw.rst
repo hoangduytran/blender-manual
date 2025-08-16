@@ -59,8 +59,6 @@ Caps Type
 Advanced
 --------
 
-.. _bpy.types.Brush.spacing:
-
 Spacing
    Controls the minimum spacing between points in the stroke as a percentage of
    the brush size.

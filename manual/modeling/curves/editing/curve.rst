@@ -188,7 +188,7 @@ Set Spline Type
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Curves --> Set Spline Type`
+   :Menu:      :menuselection:`Curve --> Set Spline Type`
    :Shortcut:  :kbd:`V`
 
 Converts splines in a curve object between Bézier, NURBS, Poly, and Catmull Rom types.
