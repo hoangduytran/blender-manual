@@ -18,7 +18,7 @@ This means you can select the entire mesh to convert triangles that already form
 without worrying about individual faces. Alternatively, manually select pairs of faces to guide the
 operator to join them as desired (see hint below for more joining options).
 
-To create a quad, the operator requires at least two adjacent triangles. If you have an even number
+To create a quad, the operator requires at least two adjacent triangles. If you have an odd number
 of selected triangles, not all triangles may be converted to quads. The operator aims to create the
 most even rectangular quads, so some triangles may remain.
 
