@@ -117,4 +117,5 @@ Normal Falloff / Front-Face Falloff
    .. _bpy.types.ImagePaint.normal_angle:
 
    Angle
-      The angle at which the falloff begins.
+      The minimum angle between the face normal and the viewing direction for the
+      falloff to start.
