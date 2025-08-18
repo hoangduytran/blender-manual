@@ -42,7 +42,7 @@ if "bpy" not in sys.modules:
         "--no-native-pixels",
         # For preferences this wont matter, for other screen-shots it may.
         # Size is odd, this is based on the screenshot in the manual.
-        "--window-geometry", "0", "0", "1442", "767",
+        "--window-geometry", "0", "0", "1440", "900",
         "--enable-event-simulate",
         "--python", __file__,
     ]
