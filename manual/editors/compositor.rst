@@ -20,6 +20,18 @@ Interface
 Header
 ------
 
+.. _bpy.ops.node.new_compositing_node_group:
+
+Node Tree
+   Chooses which node group (compositor node tree) to display and edit.
+   Each :doc:`Scene </scene_layout/scene/index>` can have its own compositor node tree.
+   You can also create and switch to custom node groups for reuse.
+
+:bl-icon:`pinned` Pinned
+   When enabled, the editor always displays the selected node tree, regardless of the active scene.
+   This is useful when working with multiple scenes but wanting to keep the compositor focused on one node tree.
+
+
 .. _bpy.types.SpaceNodeEditor.show_gizmo:
 
 Gizmos

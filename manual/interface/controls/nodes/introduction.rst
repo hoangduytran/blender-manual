@@ -36,6 +36,8 @@ The list below shows the different types of nodes and where they're documented.
      - Used to create custom textures.
 
 
+.. _bpy.types.SpaceNodeEditor:
+
 Editor Interface
 ================
 
@@ -57,12 +59,19 @@ Add
 Node
    This menu allows you to do things with selected nodes.
 Use Nodes
-   Tells the render engine to use the node tree when computing the material color or rendering the final image,
-   or not. If not, the tree is ignored. For materials, this is mostly a legacy option, because in the past
-   materials could not be created with node trees.
-Pin
-   When enabled, the editor will retain the material or texture, even when the user selects a different object.
-   A node tree can then be edited independent of the object selection in the 3D Viewport.
+   Tells the render engine to use the node tree when computing the material color.
+   If disabled, the tree is ignored. For materials, this is mostly a legacy option,
+   because in the past materials could not be created with node trees.
+
+.. _bpy.types.SpaceNodeEditor.pin:
+
+:bl-icon:`pinned` Pinned
+   When enabled, the editor always displays the currently selected node tree,
+   regardless of changes in the active object or scene.
+   This allows you to edit a material, texture, or compositor node tree independently
+   of what is selected in the 3D Viewport or which scene is active.
+   Useful when working across multiple objects or scenes but wanting to keep the editor
+   focused on one specific node tree.
 Parent Node Tree
    Leaves the current :doc:`node group </interface/controls/nodes/groups>` and returns to the parent node group/tree.
 Snapping
