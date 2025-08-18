@@ -157,5 +157,5 @@ Only Show Selected F-Curve Keyframes
 
 .. _bpy.types.PreferencesEdit.use_fcurve_high_quality_drawing:
 
-Use High Quality Display
+F-Curve High Quality Drawing
    Display F-Curves using :term:`Anti-Aliasing` and other effects (disable for a better performance).
