@@ -480,7 +480,7 @@ peertube_instance = "https://video.blender.org/"
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 # if not release.endswith("release"):
-todo_include_todos = True
+todo_include_todos = False
 # todo_link_only = True
 
 
