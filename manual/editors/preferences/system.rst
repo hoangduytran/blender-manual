@@ -9,7 +9,7 @@ The *System* section allows you to set graphics card options, memory limits & so
 If your hardware does not support some of the options described on this page,
 then they will either not be displayed or be corrected on startup.
 
-.. figure:: /images/editors_preferences_section_system.png
+.. figure:: /images/editors_preferences_section_system.webp
 
    Preferences System section.
 

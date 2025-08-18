@@ -10,7 +10,7 @@ Get Extensions
 
 The *Get Extensions* section lets you install and manage extensions preferences.
 
-.. figure:: /images/editors_preferences_section_extensions.png
+.. figure:: /images/editors_preferences_section_extensions.webp
 
    Blender Preferences Extensions section.
 

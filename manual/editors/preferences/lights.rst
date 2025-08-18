@@ -4,7 +4,7 @@
 Lights
 ******
 
-.. figure:: /images/editors_preferences_section_lights.png
+.. figure:: /images/editors_preferences_section_lights.webp
 
    Blender Preferences Lights section.
 

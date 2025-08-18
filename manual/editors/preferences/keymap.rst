@@ -6,7 +6,7 @@ Keymap
 
 On this screen, you can configure keyboard and mouse shortcuts.
 
-.. figure:: /images/editors_preferences_section_keymap.png
+.. figure:: /images/editors_preferences_section_keymap.webp
 
    Blender Preferences Keymap section.
 

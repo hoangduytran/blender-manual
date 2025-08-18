@@ -3,7 +3,7 @@
 Viewport
 ********
 
-.. figure:: /images/editors_preferences_section_viewport.png
+.. figure:: /images/editors_preferences_section_viewport.webp
 
    Blender Preferences Viewport section.
 

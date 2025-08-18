@@ -8,7 +8,7 @@ These preferences are reserved for features that are currently being worked on a
 This category can be enabled by enabling :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>`.
 Most experimental features are only available in `Daily Builds <https://builder.blender.org/download/daily/>`__.
 
-.. figure:: /images/editors_preferences_section_experimental.png
+.. figure:: /images/editors_preferences_section_experimental.webp
 
    Blender Preferences Experimental section.
 

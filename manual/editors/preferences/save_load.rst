@@ -4,7 +4,7 @@
 Save & Load
 ***********
 
-.. figure:: /images/editors_preferences_section_save-load.png
+.. figure:: /images/editors_preferences_section_save-load.webp
 
    Preferences Save/Load section.
 

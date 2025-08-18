@@ -8,6 +8,10 @@ Most of the time you can get add-ons as part of the :ref:`Extensions <extensions
 
 In this section you can search, install, enable and disable Add-ons.
 
+.. figure:: /images/editors_preferences_section_addons.webp
+
+   Blender Preferences Add-ons section.
+
 .. tip::
 
    If the Add-on does not activate when enabled,
