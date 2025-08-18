@@ -26,8 +26,9 @@ Example Usage
 
 import sys
 import os
+import subprocess
+from pathlib import Path
 if "bpy" not in sys.modules:
-    import subprocess
     import tempfile
 
     blender = os.environ.get("BLENDER_BIN", "blender")
@@ -180,6 +181,39 @@ def crop(filepath, size_dst):
     imbuf.write(ibuf, filepath=filepath)
 
 
+def convert_png_to_webp(filepath_png):
+    """
+    Convert a PNG at `filepath_png` to WebP next to it, e.g. foo.png -> foo.webp.
+    """
+    if not filepath_png.lower().endswith(".png"):
+        # Only convert PNG outputs from our screenshots/crop step.
+        return filepath_png
+
+    filepath_webp = os.path.splitext(filepath_png)[0] + ".webp"
+
+    try:
+        # Ensure cwebp is available on the system path
+        subprocess.run(['cwebp', '-lossless', filepath_png, '-o', filepath_webp], check=True)
+        print(f"Converted {filepath_png} to {filepath_webp}")
+    except subprocess.CalledProcessError as e:
+        print(f"Error during WebP conversion: {e}")
+
+    Path(filepath_png).unlink()
+
+    return filepath_webp
+
+
+def format_size(num_bytes: int) -> str:
+    """Return a human-readable size like '823 B', '15.2 KB', '3.1 MB'."""
+    units = ["B", "KB", "MB", "GB", "TB"]
+    size = float(num_bytes)
+    for u in units:
+        if size < 1024.0 or u == units[-1]:
+            if u == "B":
+                return f"{int(size)} {u}"
+            return f"{size:.1f} {u}"
+        size /= 1024.0
+
 # ----------------------------------------------------------------------
 # Screenshot Startup
 
@@ -195,6 +229,8 @@ def screenshot_startup(window):
         window=window,
         filepath=filepath,
     )
+
+    convert_png_to_webp(filepath)
 
 
 # ----------------------------------------------------------------------
@@ -237,6 +273,7 @@ def screenshot_splash_screen(window):
     yield from window_tap_key(window=window, type='ESC')
 
     crop(filepath, [520, 487])
+    convert_png_to_webp(filepath)
 
 
 # ----------------------------------------------------------------------
@@ -276,6 +313,8 @@ def screenshot_preferences(window):
         if section == 'EXPERIMENTAL':
             prefs.view.show_developer_ui = False
 
+        convert_png_to_webp(filepath)
+
     with context.temp_override(window=prefs_window):
         bpy.ops.wm.window_close()
 
@@ -288,31 +327,79 @@ def screenshot_preferences(window):
 #
 # Run this after all other operations.
 
+def find_old_file(stem: str) -> str | None:
+    """
+    Look for an existing file in IMAGE_DIR_FINAL with the given stem,
+    regardless of extension. Return absolute path or None if not found.
+    """
+    for ext in (".webp", ".png", ".jpg", ".jpeg"):
+        candidate = os.path.join(IMAGE_DIR_FINAL, stem + ext)
+        if os.path.exists(candidate):
+            return candidate
+    return None
+
+
 def generate_preview_html():
-    with open(os.path.join(ROOT_DIR, "manual_images_preview.html"), 'w', encoding='utf-8') as fh:
+    """
+    Compare OLD (any image type in manual/images) vs NEW (WebP in manual_images_preview).
+    Show each image with a caption including file size.
+    """
+    html_path = os.path.join(ROOT_DIR, "manual_images_preview.html")
+    with open(html_path, 'w', encoding='utf-8') as fh:
         fw = fh.write
         fw('<!DOCTYPE html>\n')
         fw('<html>\n')
+        fw('<head>\n')
+        fw('<meta charset="utf-8">\n')
+        fw('<style>\n')
+        fw('  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;margin:16px}\n')
+        fw('  table{table-layout:fixed;width:100%;border-collapse:collapse}\n')
+        fw('  td,th{border:1px solid #ccc;vertical-align:top;padding:8px}\n')
+        fw('  .cap{font:12px ui-monospace,Menlo,Consolas,monospace;color:#555;margin-top:6px}\n')
+        fw('</style>\n')
+        fw('</head>\n')
         fw('<body>\n')
 
-        fw('<table style="table-layout: fixed;width: 100%;" border="1">\n')
+        fw('<table>\n')
         fw('  <tr>\n')
-        fw('    <td><h1>Old Images</h1></td>\n')
-        fw('    <td><h1>New Images</h1></td>\n')
+        fw('    <th>Old Images</th>\n')
+        fw('    <th>New Images (WebP)</th>\n')
         fw('  </tr>\n')
 
-        for filename in os.listdir(IMAGE_DIR_PREVIEW):
+        for filename in sorted(os.listdir(IMAGE_DIR_PREVIEW)):
+            if not filename.lower().endswith(".webp"):
+                continue
 
-            file_old = os.path.relpath(os.path.join(IMAGE_DIR_FINAL, filename), ROOT_DIR)
-            file_new = os.path.relpath(os.path.join(IMAGE_DIR_PREVIEW, filename), ROOT_DIR)
+            stem = os.path.splitext(filename)[0]
+            old_abs = find_old_file(stem)
+            new_abs = os.path.join(IMAGE_DIR_PREVIEW, filename)
+
+            new_rel = os.path.relpath(new_abs, ROOT_DIR)
+            new_size = format_size(os.path.getsize(new_abs)) if os.path.exists(new_abs) else "—"
 
             fw('  <tr>\n')
-            fw('    <td><img src="{:s}" style="width: 100%"></td>\n'.format(file_old))
-            fw('    <td><img src="{:s}" style="width: 100%"></td>\n'.format(file_new))
+
+            # Old
+            fw('    <td>\n')
+            if old_abs:
+                old_rel = os.path.relpath(old_abs, ROOT_DIR)
+                old_size = format_size(os.path.getsize(old_abs))
+                old_name = os.path.basename(old_abs)
+                fw(f'      <img src="{old_rel}" style="width:100%">\n')
+                fw(f'      <div class="cap">{old_name} — {old_size}</div>\n')
+            else:
+                fw(f'      <div class="cap">Missing old file for: {stem}</div>\n')
+            fw('    </td>\n')
+
+            # New
+            fw('    <td>\n')
+            fw(f'      <img src="{new_rel}" style="width:100%">\n')
+            fw(f'      <div class="cap">{filename} — {new_size}</div>\n')
+            fw('    </td>\n')
+
             fw('  </tr>\n')
 
         fw('</table>\n')
-
         fw('</body>\n')
         fw('</html>\n')
 
