@@ -118,14 +118,26 @@ def run_iter_from_timer(event_iter):
 # ----------------------------------------------------------------------
 # Blender Helpers
 
-def window_tap_key(*, window, type, unicode=None):
+def window_tap_key(*, window, type, unicode=None, shift=False, ctrl=False, alt=False, oskey=False):
+    """
+    Simulate pressing a key with modifier flags.
+    """
     kw = {}
     if unicode is not None:
         kw["unicode"] = unicode
+    if shift:
+        kw["shift"] = True
+    if ctrl:
+        kw["ctrl"] = True
+    if alt:
+        kw["alt"] = True
+    if oskey:
+        kw["oskey"] = True
+
     yield
     window.event_simulate(type=type, value='PRESS', **kw)
     yield
-    window.event_simulate(type=type, value='RELEASE')
+    window.event_simulate(type=type, value='RELEASE', **kw)
     yield
 
 
@@ -286,8 +298,7 @@ def screenshot_preferences(window):
 
     # We can't open preferences from a timer, use the shortcut.
     # bpy.ops.screen.userpref_show({"window": window, "screen": window.screen}, 'INVOKE_DEFAULT')
-    yield from window_tap_key(window=window, type='F4')
-    yield from window_tap_key(window=window, type='P')
+    yield from window_tap_key(window=window, ctrl=True, type='COMMA')
 
     prefs_window = next(
         iter([w for w in context.window_manager.windows if w.screen.is_temporary]))
