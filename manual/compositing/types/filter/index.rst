@@ -38,4 +38,3 @@ post-processing effect on the image.
    kuwahara.rst
    pixelate.rst
    posterize.rst
-   sun_beams.rst

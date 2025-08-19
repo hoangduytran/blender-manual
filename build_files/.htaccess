@@ -299,3 +299,5 @@ RedirectMatch "^/manual/{lang}/{version}/scene_layout/view_layers/introduction.h
 RedirectMatch "^/manual/{lang}/{version}/render/freestyle/view_layer/line_style/introduction.html" "/manual/{lang}/{version}/render/freestyle/view_layer/line_style/index.html"
 
 RedirectMatch "^/manual/{lang}/{version}/render/cycles/features.html" "/manual/{lang}/{version}/render/cycles/render_settings/index.html"
+
+RedirectMatch "^/manual/{lang}/{version}/compositing/types/filter/sun_beams.html" "/manual/{lang}/{version}/compositing/types/filter/glare.html"
