@@ -127,11 +127,6 @@ Contributions
    Transmission
       Add transmission contribution.
 
-   .. _bpy.types.BakeSettings.use_pass_ambient_occlusion:
-
-   Ambient Occlusion
-      Add ambient occlusion contribution.
-
    .. _bpy.types.BakeSettings.use_pass_emit:
 
    Emit

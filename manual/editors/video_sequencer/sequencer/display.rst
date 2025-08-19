@@ -3,7 +3,7 @@
 Display
 *******
 
-.. _bpy.types.SpaceSequenceEditor.show_strip_overlay:
+.. _bpy.types.SpaceSequenceEditor.show_overlays:
 .. _bpy.types.SequencerTimelineOverlay:
 
 Sequencer Overlays

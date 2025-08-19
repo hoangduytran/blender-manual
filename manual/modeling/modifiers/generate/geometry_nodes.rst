@@ -81,7 +81,7 @@ Bake Target
    :Disk:
       The baked data is stored in a separate directory on disk.
 
-.. _bpy.types.NodesModifier.simulation_bake_directory:
+.. _bpy.types.NodesModifier.bake_directory:
 
 Bake Path
    Location on disk where the baked data for

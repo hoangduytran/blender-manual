@@ -137,11 +137,6 @@ Visual Aids
 Strokes Collision :kbd:`D`
    Check if extend lines collide with strokes, stopping the extension if a collision is detected.
 
-.. _bpy.types.BrushGpencilSettings.use_collide_only:
-
-Only Collide Lines
-   Use for closing gaps only if the extend strokes collide.
-
 
 Usage
 =====

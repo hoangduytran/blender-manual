@@ -74,27 +74,27 @@ Distance Cull
 Grease Pencil
 =============
 
-.. _bpy.types.RenderSettings_simplify_gpencil_onplay:
+.. _bpy.types.RenderSettings.simplify_gpencil_onplay:
 
 Playback Only
    Activates the simplification process only during animation playback.
 
-.. _bpy.types.RenderSettings_simplify_gpencil_view_fill:
+.. _bpy.types.RenderSettings.simplify_gpencil_view_fill:
 
 Fill
    Shows the fill component in Grease Pencil materials.
 
-.. _bpy.types.RenderSettings_simplify_gpencil_view_modifier:
+.. _bpy.types.RenderSettings.simplify_gpencil_view_modifier:
 
 Modifiers
    Shows Grease Pencil :doc:`modifiers </grease_pencil/modifiers/index>`.
 
-.. _bpy.types.RenderSettings_simplify_gpencil_shader_fx:
+.. _bpy.types.RenderSettings.simplify_gpencil_shader_fx:
 
 Shader Effects
    Shows Grease Pencil :doc:`visual effects </grease_pencil/modifiers/index>`.
 
-.. _bpy.types.RenderSettings_simplify_gpencil_tint:
+.. _bpy.types.RenderSettings.simplify_gpencil_tint:
 
 Layer Tinting
    Shows layers tint overrides.

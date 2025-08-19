@@ -58,12 +58,12 @@ Settings
 Enabled
    Specifies whether the constraint is active during the simulation.
 
-.. _RigidBodyConstraint.disable_collisions:
+.. _bpy.types.RigidBodyConstraint.disable_collisions:
 
 Disable Collisions
    Allows constrained objects to pass through one another.
 
-.. _bpy.types.RigidBodyConstraint.RigidBodyConstraint.use_breaking:
+.. _bpy.types.RigidBodyConstraint.use_breaking:
 
 Breakable
    Allows constraint to break during simulation. Disabled for the *Motor* constraint.

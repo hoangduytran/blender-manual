@@ -49,8 +49,6 @@ Emission Sampling
    :Front and Back:
       Treat surface as a light for sampling, emitting from both the front and back side.
 
-.. _bpy.types.CyclesMaterialSettings.use_transparent_shadow:
-
 Transparent Shadows
    Use transparent shadows if it contains a :doc:`Transparent BSDF </render/shader_nodes/shader/transparent>`,
    disabling will render faster but will not give accurate shadows.

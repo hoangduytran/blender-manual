@@ -252,7 +252,7 @@ Scrambling Distance
    A technique that reduces the randomness between pixels in an attempt to improve GPU rendering performance,
    at the cost of potential artifacts. Not compatible with the *Blue-Noise* sampling pattern.
 
-   .. _bpy.types.CyclesRenderSettings.adaptive_scrambling_distance:
+   .. _bpy.types.CyclesRenderSettings.auto_scrambling_distance:
 
    Automatic
       Adapts the scrambling distance based on the sample count.

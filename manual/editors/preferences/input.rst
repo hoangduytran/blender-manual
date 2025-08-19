@@ -233,7 +233,7 @@ Advanced
 Pan Sensitivity
    Controls how quickly the view pans in response to NDOF input.
 
-.. _bpy.types.PreferencesInput.ndof_orbit_sensitivity:
+.. _bpy.types.PreferencesInput.ndof_rotation_sensitivity:
 
 Orbit Sensitivity
    Controls how quickly the view orbits in response to NDOF input.

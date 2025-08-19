@@ -74,7 +74,7 @@ Type
       "Replay" only works when the :ref:`Playback Sync mode <bpy.types.Scene.sync_mode>` is set to "Play Every Frame".
       If you need to use "Frame Dropping" or "Sync to Audio", consider using the "Modular" or "All" options below.
 
-.. _bpy.types.FluidDomainSettings.use_resumable_cache:
+.. _bpy.types.FluidDomainSettings.cache_resumable:
 
 Resumable
    Extra data will be saved so that you can resumed baking after pausing. Since more data will be written
