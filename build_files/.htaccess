@@ -163,7 +163,7 @@ RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/alpha_over.html
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/combine_color.html" "/manual/{lang}/{version}/compositing/types/color/mix/combine_color.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/separate_color.html" "/manual/{lang}/{version}/compositing/types/color/mix/separate_color.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/mix.html" "/manual/{lang}/{version}/compositing/types/color/mix/mix_color.html"
-RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/z_combine.html" "/manual/{lang}/{version}/compositing/types/color/mix/z_combine.html"
+RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/z_combine.html" "/manual/{lang}/{version}/compositing/types/color/mix/depth_combine.html"
 
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/alpha_convert.html" "/manual/{lang}/{version}/compositing/types/color/alpha_convert.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/color_ramp.html" "/manual/{lang}/{version}/compositing/types/color/color_ramp.html"
