@@ -820,6 +820,11 @@ This page lists definitions for terms used in Blender and this manual.
    Resource
       External files such as images, sounds, fonts and volumes files that can be packed into a blend-file.
 
+   Rest Pose
+      The initial transformations of a bone or whole Armature. Can also be called a default pose.
+      Defined in Armature Edit Mode by the head, tail, and roll of each bone.
+      Any constraint or driver-induced transformation is NOT part of the rest pose.
+
    RGB
       A color model based on the traditional primary colors, Red/Green/Blue.
       RGB colors are also directly broadcasted to most computer monitors.

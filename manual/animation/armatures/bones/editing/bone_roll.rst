@@ -4,12 +4,8 @@
 Bone Roll
 *********
 
-In *Edit Mode*, you can control the bone roll
-(i.e. the rotation around the Y axis of the bone).
-
-However, after editing the armature, or when using :term:`Euler Rotation`,
-you may want to set the bone roll.
-
+The bone roll is a part of a bone's :term:`rest pose` defining its default rotation around the bone's length. 
+You can control the bone roll in *Edit Mode*.
 
 .. _bpy.ops.armature.calculate_roll:
 
@@ -22,28 +18,30 @@ Recalculate Roll
    :Menu:      :menuselection:`Armature --> Bone Roll --> Recalculate Roll`
    :Shortcut:  :kbd:`Shift-N`
 
+Automatically align the roll of all selected bones to various points of reference.
+
 Axis Orientation
-   Local Tangent
-      Align roll relative to the axis defined by the bone and its parent.
+   Local (X, Z, -X, -Z) Tangent
+      Align the roll of the selected bones relative to the axis defined by the bones and their parent.
+      If a bone has no parent, use the first child as a point of reference instead, 
+      even if that child is not connected and another one is.
+      For bones with no parent and no children, this option does nothing.
 
-      X, Z
-   Global Axis
-      Align roll to global X, Y, Z axis.
-
-      X, Y, Z
+   Global (X, Y, Z, -X, -Y, -Z) Axis
+      Align the roll of the selected bones such that their Z axis points towards the chosen global axis.
    Active Bone
-      Follow the rotation of the active bone.
+      Align the roll of the selected bones such that their Z axis points where the active bone's Z axis is currently pointing.
    View Axis
-      Set the roll to align with the viewport.
+      Align the roll of the selected bones such that their Z axis points at the viewport's forward/backward axis, basically the user's eyes.
    Cursor
-      Set the roll towards the 3D cursor.
+      Align the roll of the selected bones such that their Z axis points at the 3D cursor.
 Flip Axis
-   Reverse the axis direction.
+   Change the result by 180°.
 Shortest Rotation
-   Avoids rolling the bone over 90 degrees from its current value.
+   Change the result by 180° when needed in order to force the absolute roll value below 90°.
+   For example, for an initial result of 160°, this option will instead flip that to -20°.
 
-
-.. _tool-bone-role:
+.. _tool-bone-roll:
 
 Set Roll
 ========
@@ -54,4 +52,17 @@ Set Roll
    :Menu:      :menuselection:`Armature --> Bone Roll --> Set Roll`
    :Shortcut:  :kbd:`Ctrl-R`
 
-This is a transform mode where you can edit the roll of all selected bones.
+Tweak the roll of all selected bones.
+
+.. _bpy.ops.armature.roll_clear:
+
+Clear Roll
+==========
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Armature --> Bone Roll --> Clear Roll`
+   :Shortcut:  :kbd:`Alt-R`
+
+Set the roll of all selected bones to 0°.
