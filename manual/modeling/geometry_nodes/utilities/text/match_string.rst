@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Match String
-.. _bpy.types.GeometryNodeMatchString:
+.. _bpy.types.FunctionNodeMatchString:
 
 *****************
 Match String Node
