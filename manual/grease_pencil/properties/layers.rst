@@ -46,7 +46,7 @@ Layer Tree
    Use Mask (mask icon)
       Toggle the affect of :ref:`Masks <bpy.types.GreasePencilLayer.use_masks>` on the layer.
 
-   .. _bpy.types.GreasePencilLayer.use_onion_skinning:
+   .. _bpy.types.GreasePencilTreeNode.use_onion_skinning:
 
    Onion Skinning (onion skin icon)
       Toggle using the layer for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
@@ -109,11 +109,10 @@ Layer Specials
       Automatically locks the editing of every layer in the list except the active one. This way you avoid making
       unwanted changes in other layers without the need to lock them every time.
 
-   .. _bpy.types.GreasePencilLayer.use_locked_material:
+   .. _bpy.types.GreasePencilLayer.ignore_locked_materials:
 
-   Use Locked Materials Editing
-      Avoids editing locked materials in the layer. When disabled,
-      any material can be edited even if they are locked in the material list.
+   Ignore Material Locking
+      Allow editing strokes even if they use locked materials.
 
    .. _bpy.ops.grease_pencil.layer_merge:
 
@@ -277,7 +276,7 @@ Use Masks in Render
 Display
 =======
 
-.. _bpy.types.GreasePencilLayer.channel_color:
+.. _bpy.types.GreasePencilTreeNode.channel_color:
 
 Channel Color
    Sets the color to use in the channel region of the :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>`.
