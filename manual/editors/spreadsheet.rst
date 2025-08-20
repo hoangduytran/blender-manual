@@ -143,20 +143,23 @@ Lets you choose the attribute domain to display, such as mesh vertices or curve 
 The number of elements in each domain is shown next to its entry.
 
 
+.. _bpy.types.SpreadsheetRowFilter:
+
 Sidebar
 =======
 
 .. _bpy.ops.spreadsheet.add_row_filter_rule:
+.. _bpy.ops.spreadsheet.remove_row_filter_rule:
 
 In the Sidebar, you can define filters so that only the rows matching these filters
 are displayed. Click *Add Row Filter* and set up the properties described below.
 
-.. _bpy.types.SpaceSpreadsheetRowFilter.enabled:
+.. _bpy.types.SpreadsheetRowFilter.enabled:
 
 Enabled
    Uncheck to temporarily disable the filter.
 
-.. _bpy.types.SpaceSpreadsheetRowFilter.column_name:
+.. _bpy.types.SpreadsheetRowFilter.column_name:
 
 Column
    The name of the column to filter on. If there is no column with the specified name,
@@ -166,7 +169,7 @@ Column
    :doc:`/modeling/geometry_nodes/attribute/store_named_attribute` to create a copy
    that's converted to the current domain, then filter on that.
 
-.. _bpy.types.SpaceSpreadsheetRowFilter.operation:
+.. _bpy.types.SpreadsheetRowFilter.operation:
 
 Operation
    For numerical columns, you can select one of the following comparison operators.
@@ -180,7 +183,7 @@ Operation
 Value
    The filter value to compare the row value to.
 
-.. _bpy.types.SpaceSpreadsheetRowFilter.threshold:
+.. _bpy.types.SpreadsheetRowFilter.threshold:
 
 Threshold
    How much the row's value is allowed to deviate from the filter value before it is excluded.
