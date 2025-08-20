@@ -133,7 +133,7 @@ Variable Type
       Fallback
          If enabled, allows specifying a fallback value to use as the variable value if the RNA Path cannot
          be resolved, instead of causing a driver evaluation failure. For more info see
-         :ref:`Context Property <bpy.types.DriverVariable.type.CONTEXT_PROP>` below.
+         :ref:`Context Property <bpy.types.DriverVariable.type>` below.
 
       .. tip::
 
@@ -188,8 +188,6 @@ Variable Type
 
       Space
          World Space, Transform Space, Local Space.
-
-   .. _bpy.types.DriverVariable.type.CONTEXT_PROP:
 
    Context Property
       .. figure:: /images/animation_drivers_drivers-panel_context-property.png

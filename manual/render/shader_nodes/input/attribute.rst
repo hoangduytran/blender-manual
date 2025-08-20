@@ -84,7 +84,7 @@ Attribute Type
       .. seealso::
 
          An alternative method to access the same set of properties is to use driver
-         :ref:`Context Properties <bpy.types.DriverVariable.type.CONTEXT_PROP>`,
+         :ref:`Context Properties <bpy.types.DriverVariable.type>`,
          possibly with a :ref:`manually emulated <driver-attribute-node-emulation>` lookup fallback chain.
 
 Name
