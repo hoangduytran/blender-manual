@@ -58,12 +58,6 @@ Flow Behavior
       Also make sure that the surface normals are pointing outwards or else they will not simulate
       properly. In contrast to domain objects, the actual mesh geometry is used for fluid objects.
 
-.. _bpy.types.FluidFlowSettings.use_flow:
-
-Use Flow
-   Enables or disables the flow of fluid, this property is useful for animations to selectively enable and
-   disable when fluid is being added to or removed from the domain.
-
 .. _bpy.types.FluidFlowSettings.subframes:
 
 Sampling Substeps
