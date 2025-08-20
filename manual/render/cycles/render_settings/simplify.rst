@@ -84,7 +84,7 @@ Playback Only
 Fill
    Shows the fill component in Grease Pencil materials.
 
-.. _bpy.types.RenderSettings.simplify_gpencil_view_modifier:
+.. _bpy.types.RenderSettings.simplify_gpencil_modifier:
 
 Modifiers
    Shows Grease Pencil :doc:`modifiers </grease_pencil/modifiers/index>`.
