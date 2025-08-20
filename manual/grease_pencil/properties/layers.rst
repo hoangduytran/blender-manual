@@ -30,7 +30,7 @@ Layers can also be used together with Modifiers to only affects part of your dra
 See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more information.
 
 Layers can mask other layers by enabling Use Mask (mask icon) or using the checkbox in the Masks panel header. See
-:ref:`bpy.types.GreasePencilLayer.use_masks` for more information.
+:ref:`bpy.types.GreasePencilTreeNode.use_masks` for more information.
 
 .. tip::
 
@@ -44,14 +44,14 @@ Layer Tree
    Next to the layer name there are four icons buttons that control common properties of the layer:
 
    Use Mask (mask icon)
-      Toggle the affect of :ref:`Masks <bpy.types.GreasePencilLayer.use_masks>` on the layer.
+      Toggle the affect of :ref:`Masks <bpy.types.GreasePencilTreeNode.use_masks>` on the layer.
 
    .. _bpy.types.GreasePencilTreeNode.use_onion_skinning:
 
    Onion Skinning (onion skin icon)
       Toggle using the layer for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
 
-   .. _bpy.types.GreasePencilLayer.hide:
+   .. _bpy.types.GreasePencilTreeNode.hide:
 
    Hide (eye icon)
       Toggle layer visibility in the viewport and in render.
@@ -157,7 +157,7 @@ Lights
    When enabled, the layer is affected by lights.
 
 
-.. _bpy.types.GreasePencilLayer.use_masks:
+.. _bpy.types.GreasePencilTreeNode.use_masks:
 
 Masks
 =====
@@ -207,7 +207,7 @@ Viewport/Render Visibility (eye icon)
           Blend: Regular, Opacity: 1.
 
 
-.. _bpy.types.GreasePencilLayer.location:
+.. _bpy.types.GreasePencilLayer.translation:
 .. _bpy.types.GreasePencilLayer.rotation:
 .. _bpy.types.GreasePencilLayer.scale:
 
