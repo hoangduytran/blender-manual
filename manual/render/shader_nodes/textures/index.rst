@@ -15,7 +15,6 @@
    ies.rst
    image.rst
    magic.rst
-   musgrave.rst
    noise.rst
    sky.rst
    voronoi.rst
