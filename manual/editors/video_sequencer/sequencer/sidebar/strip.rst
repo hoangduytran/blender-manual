@@ -90,7 +90,7 @@ Mirror
    Mirrors the image along the X axis (left to right) or the Y axis (top to bottom).
 
 
-.. _bpy.types.SequenceCrop:
+.. _bpy.types.StripCrop:
 
 Crop
 ====
