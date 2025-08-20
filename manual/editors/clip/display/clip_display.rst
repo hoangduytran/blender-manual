@@ -34,7 +34,7 @@ Mute (eye icon) :kbd:`M`
 .. _bpy.types.MovieClipUser.use_render_undistorted:
 
 Render Undistorted
-   Applies the :ref:`Lens settings <bpy.types.MovieTrackingCamera.lens>` to the
+   Applies the :ref:`Lens settings <motion_tracking-camera-lens>` to the
    video preview to undo lens distortion. Does not change the footage itself.
 
 .. _bpy.types.SpaceClipEditor.show_stable:

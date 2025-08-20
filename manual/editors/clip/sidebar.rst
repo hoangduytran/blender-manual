@@ -23,7 +23,7 @@ Build Original
    The proxy resolution(s) to generate based on the original, distorted footage.
 Build Undistorted
    The proxy resolution(s) to generate based on the undistorted footage
-   (that is, with the :ref:`Lens settings <bpy.types.MovieTrackingCamera.lens>` applied
+   (that is, with the :ref:`Lens settings <motion_tracking-camera-lens>` applied
    to undo the distortion in the recording).
 Quality
    Controls the level of lossy compression applied to the image, expressed as a percentage.
