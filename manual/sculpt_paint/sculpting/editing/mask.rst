@@ -260,7 +260,7 @@ Propagation Steps
    Same as :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
 
 
-.. _bpy.ops.sculpt.mask_from_face_sets_boundary:
+.. _bpy.ops.sculpt.mask_from_boundary:
 
 Mask From Face Sets Boundary
 ============================

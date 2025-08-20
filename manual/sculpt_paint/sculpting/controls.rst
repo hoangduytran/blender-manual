@@ -73,7 +73,7 @@ Face Sets Boundary
    Propagation Steps are shared with Mesh Boundary auto-masking.
 
    Create Mask
-      This will execute the :ref:`bpy.ops.sculpt.mask_from_face_sets_boundary` operator with the current auto-masking
+      This will execute the :ref:`bpy.ops.sculpt.mask_from_boundary` operator with the current auto-masking
       settings. This is very useful to visualize the current auto-mask, or to edit the mask further manually.
 
 .. _bpy.types.Sculpt.use_automasking_cavity:
