@@ -49,7 +49,7 @@ Diameter :guilabel:`Mie`
 
 .. note::
 
-   Above inputs are the same in :ref:`Volume Scatter <bpy.types.ShaderNodeVolumeScatter.density>`.
+   Above inputs are the same in :ref:`Volume Scatter <bpy.types.ShaderNodeVolumeScatter>`.
 
 
 Emission
