@@ -1,4 +1,4 @@
-.. _bpy.types.SoundSequence:
+.. _bpy.types.SoundStrip:
 
 ***********
 Sound Strip

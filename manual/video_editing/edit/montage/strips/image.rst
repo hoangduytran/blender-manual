@@ -1,4 +1,4 @@
-.. _bpy.types.ImageSequence:
+.. _bpy.types.ImageStrip:
 
 ********************
 Image/Sequence Strip

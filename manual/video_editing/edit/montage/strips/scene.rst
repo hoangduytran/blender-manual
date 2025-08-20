@@ -1,4 +1,4 @@
-.. _bpy.types.SceneSequence:
+.. _bpy.types.SceneStrip:
 
 ***********
 Scene Strip
@@ -76,7 +76,7 @@ Show
 Sound
 -----
 
-.. _bpy.types.SceneSequence.volume:
+.. _bpy.types.SceneStrip.volume:
 
 Strip Volume
    Volume of the audio taken from the chosen scene.

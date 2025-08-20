@@ -1,4 +1,4 @@
-.. _bpy.types.MovieClipSequence:
+.. _bpy.types.MovieClipStrip:
 
 **********
 Clip Strip
@@ -14,17 +14,17 @@ Options
 
    :Panel:     :menuselection:`Sidebar region --> Strip --> Movie Clip`
 
-.. _bpy.types.MovieClipSequence.clip:
+.. _bpy.types.MovieClipStrip.clip:
 
 Movie Clip
    Used to select the movie clip. For controls see :ref:`ui-data-block`.
 
-.. _bpy.types.MovieClipSequence.stabilize2d:
+.. _bpy.types.MovieClipStrip.stabilize2d:
 
 Use: 2D Stabilized Clip
    Use the 2D stabilized version of the clip.
 
-.. _bpy.types.MovieClipSequence.undistort:
+.. _bpy.types.MovieClipStrip.undistort:
 
 Use: Undistorted Clip
    Use the undistorted version of the clip.

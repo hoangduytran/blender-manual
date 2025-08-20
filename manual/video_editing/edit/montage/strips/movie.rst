@@ -1,4 +1,4 @@
-.. _bpy.types.MovieSequence:
+.. _bpy.types.MovieStrip:
 
 ***********
 Movie Strip

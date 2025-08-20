@@ -88,7 +88,7 @@ Type
 
    :On: Enable waveforms for all strips.
    :Strip:
-      Use the :ref:`Display Waveform <bpy.types.SoundSequence.show_waveform>`
+      Use the :ref:`Display Waveform <bpy.types.SoundStrip.show_waveform>`
       option of each individual strip.
    :Off: Disable waveforms for all strips.
 

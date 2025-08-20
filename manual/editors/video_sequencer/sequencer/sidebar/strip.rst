@@ -84,7 +84,7 @@ Scale X, Y
 Rotation
    Rotates the input two-dimensionally along the Z axis.
 
-.. _bpy.types.ImageSequence.use_flip:
+.. _bpy.types.ImageStrip.use_flip:
 
 Mirror
    Mirrors the image along the X axis (left to right) or the Y axis (top to bottom).
@@ -147,9 +147,9 @@ Sound
 
    :Panel:     :menuselection:`Sidebar --> Strip --> Sound`
 
-Working with sound is documented further at :ref:`bpy.types.SoundSequence`.
+Working with sound is documented further at :ref:`bpy.types.SoundStrip`.
 
-.. _bpy.types.SoundSequence.volume:
+.. _bpy.types.SoundStrip.volume:
 
 Volume
    Adjusts the perceived loudness or intensity of the sound.
@@ -159,7 +159,7 @@ Volume
    This can be hidden by disabling the :ref:`F-Curves <bpy.types.SequencerTimelineOverlay.show_fcurves>`.
    The value is also reflected in the waveform.
 
-.. _bpy.types.SoundSequence.sound_offset:
+.. _bpy.types.SoundStrip.sound_offset:
 
 Offset
    Offset of the sound from the beginning of the strip, expressed in seconds.
@@ -173,7 +173,7 @@ Mono
    :align: right
    :width: 220px
 
-.. _bpy.types.SoundSequence.pan:
+.. _bpy.types.SoundStrip.pan:
 
 Pan
    Used to pan the audio between speakers in multichannel audio.
@@ -197,7 +197,7 @@ Pan
       The number of audio channels can be configured in the
       :ref:`Audio Output <render-output-video-encoding-audio>` settings.
 
-.. _bpy.types.SoundSequence.show_waveform:
+.. _bpy.types.SoundStrip.show_waveform:
 
 Display Waveform
    Display an approximate waveform of the sound file inside of the Sound strip.
@@ -260,8 +260,8 @@ Strip Offset Start/End
 
    Instead of adjusting these offsets in the Sidebar, you can also drag the strip's handles.
 
-.. _bpy.types.MovieSequence.animation_offset_start:
-.. _bpy.types.MovieSequence.animation_offset_end:
+.. _bpy.types.MovieStrip.animation_offset_start:
+.. _bpy.types.MovieStrip.animation_offset_end:
 .. _sequencer-duration-hard:
 
 Hold Offset Start/End

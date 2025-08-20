@@ -60,7 +60,7 @@ Rebuild Proxy and Timecode Indices
    this is instead done through the menu :menuselection:`View --> Proxy --> Rebuild`.
 
 .. _bpy.types.StripProxy:
-.. _bpy.types.MovieSequence.use_proxy:
+.. _bpy.types.MovieStrip.use_proxy:
 
 Strip Proxy & Timecode
 ======================

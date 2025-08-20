@@ -1,4 +1,4 @@
-.. _bpy.types.WipeSequence:
+.. _bpy.types.WipeStrip:
 
 **********
 Wipe Strip
