@@ -228,7 +228,7 @@ Show -- Orbit Center
 Advanced
 --------
 
-.. _bpy.types.PreferencesInput.ndof_sensitivity:
+.. _bpy.types.PreferencesInput.ndof_translation_sensitivity:
 
 Pan Sensitivity
    Controls how quickly the view pans in response to NDOF input.
