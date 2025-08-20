@@ -232,7 +232,7 @@ Size / Width, Height
    e.g. for :doc:`motion tracking </movie_clip/index>`.
 
 
-.. _bpy.ops.safe_areas:
+.. _bpy.ops.camera.safe_areas:
 .. _bpy.types.DisplaySafeAreas:
 
 Safe Areas
