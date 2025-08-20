@@ -43,8 +43,6 @@ Max Bounces
    Maximum number of times light from the light is allowed to :term:`Bounce <Light Bounces>`.
    Limited by :ref:`scene-wide bounce settings <bpy.types.CyclesRenderSettings.max_bounces>`.
 
-.. _bpy.types.CyclesLightSettings.cast_shadow:
-
 Cast Shadow
    By disabling this option, light from lights will not be blocked by objects in between.
    This can speed up rendering by not having to trace rays to the light source.
