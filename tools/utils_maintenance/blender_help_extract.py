@@ -40,23 +40,37 @@ def help_text_make_args_literal(text: str) -> str:
 
     re_content_table = (
         (
-            re.compile(r"(\-+[A-Za-z\-]+)"),
-            lambda x: "``" + x.group(1) + "``",
+            # The space at the start is important so `sub-string`
+            # doesn't detect the `-string` as an argument.
+            re.compile(r"(^|\s+)(\-+[A-Za-z\-]+)"),
+            lambda x: "{:s}``{:s}``".format(x.group(1), x.group(2)),
         ),
     )
 
     re_argument_line = re.compile(r"^(\s*)(\-+[A-Za-z\-]+.*)$", flags=re.MULTILINE)
 
+    # Special case:
+    # --log "abc": Logging.
+    # Becomes:
+    # ``--log "abc"`: Logging.
+    re_argument_line_leading_example = re.compile(r"^(\-+[A-Za-z\-]+\s.*)(: +)", flags=re.MULTILINE)
+
     def re_argument_line_fn(x: re.Match[str]) -> str:
         indent = x.group(1)
         content = x.group(2)
+
+        content_prefix = ""
+        match_arg_example = re_argument_line_leading_example.match(content)
+        if match_arg_example is not None:
+            content_prefix = "``{:s}``{:s}".format(match_arg_example.group(1), match_arg_example.group(2))
+            content = content[len(content_prefix):]
 
         for re_expr, re_fn in re_content_table:
             content = re.sub(re_expr, re_fn, content)
 
         # Weak but works to replace or's with commas.
         content = content.replace("`` or ``-", "``, ``-", 1)
-        return indent + content
+        return indent + content_prefix + content
 
     text = re.sub(re_argument_line, re_argument_line_fn, text)
     return text
