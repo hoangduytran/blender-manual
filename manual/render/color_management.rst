@@ -358,7 +358,7 @@ These guidelines help ensure a configuration works well:
   with correct colorspace information.
   For OpenColorIO 2.5, use the native interop ID support. In earlier versions, add the interop ID
   as the first alias of the colorspace.
-* Mark HDR displays by settings `encoding: hdr-video`
+* Mark HDR displays by setting ``encoding: hdr-video`` on the corresponding colorspace.
 
 
 ACES
