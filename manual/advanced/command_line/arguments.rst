@@ -106,7 +106,7 @@ Format Options
 ``-F``, ``--render-format`` ``<format>``
    Set the render format.
    Valid options are:
-   ``TGA`` ``RAWTGA`` ``JPEG`` ``IRIS`` ``AVIRAW`` ``AVIJPEG`` ``PNG`` ``BMP`` ``HDR`` ``TIFF``.
+   ``TGA`` ``RAWTGA`` ``JPEG`` ``IRIS`` ``PNG`` ``BMP`` ``HDR`` ``TIFF``.
 
    Formats that can be compiled into Blender, not available on all systems:
    ``OPEN_EXR`` ``OPEN_EXR_MULTILAYER`` ``FFMPEG`` ``CINEON`` ``DPX`` ``JP2`` ``WEBP``.
@@ -224,25 +224,31 @@ Logging Options
 
 ``--log`` ``<match>``
    Enable logging categories, taking a single comma separated argument.
-   Multiple categories can be matched using a ``.*`` suffix,
-   so ``--log "wm.*"`` logs every kind of window-manager message.
-   Sub-string can be matched using a ``*`` prefix and suffix,
-   so ``--log "*undo*"`` logs every kind of undo-related message.
-   Use "^" prefix to ignore, so ``--log "*,^wm.operator.*"`` logs all except for ``wm.operators.*``
-   Use "*" to log everything.
+
+   ``--log "*"``: everything
+   ``--log "event"``:  every category starting with ``event``.
+   ``--log "render,cycles"``: both render and cycles messages.
+   ``--log "*mesh*"``: every category containing ``mesh`` sub-string.
+   ``--log "*,^operator"``: everything except operators, with ``^prefix`` to exclude.
 
 ``--log-level`` ``<level>``
-   Set the logging verbosity level (higher for more details) defaults to 1,
-   use -1 to log all levels.
+   Set the logging verbosity level.
 
-``--log-show-basename``
-   Only show file name in output (not the leading path).
+   fatal: Fatal errors only
+   error: Errors only
+   warning: Warnings
+   info: Information about devices, files, configuration, operations
+   debug: Verbose messages for developers
+   trace: Very verbose code execution tracing
+
+``--log-show-memory``
+   Show memory usage for each log message.
+
+``--log-show-source``
+   Show source file and function name in output.
 
 ``--log-show-backtrace``
    Show a back trace for each log message (debug builds only).
-
-``--log-show-timestamp``
-   Show a timestamp for each log message in seconds since start.
 
 ``--log-file`` ``<filepath>``
    Set a file to output the log to.
@@ -267,17 +273,11 @@ Debug Options
 ``--debug-events``
    Enable debug messages for the event system.
 
-``--debug-ffmpeg``
-   Enable debug messages from FFmpeg library.
-
 ``--debug-handlers``
    Enable debug messages for event handling.
 
 ``--debug-libmv``
    Enable debug messages from libmv library.
-
-``--debug-cycles``
-   Enable debug messages from Cycles.
 
 ``--debug-memory``
    Enable fully guarded memory allocation and debugging.
@@ -327,11 +327,17 @@ Debug Options
 ``--debug-gpu-compile-shaders``
    Compile all statically defined shaders to test platform compatibility.
 
+``--debug-gpu-shader-debug-info``
+   Enable shader debug info generation (Vulkan only).
+
 ``--debug-gpu-scope-capture``
    Capture the GPU commands issued inside the give scope name.
 
 ``--debug-gpu-renderdoc``
    Enable RenderDoc integration for GPU frame grabbing and debugging.
+
+``--debug-gpu-vulkan-local-read``
+   Force Vulkan dynamic rendering local read when supported by device.
 
 ``--debug-wm``
    Enable debug messages for the window manager, shows all operators in search, shows keymap errors.
@@ -379,6 +385,14 @@ GPU Options
 
 ``--gpu-backend``
    Force to use a specific GPU backend. Valid options: ``vulkan``,  ``metal``,  ``opengl``.
+
+``--gpu-vsync``
+   Set the VSync.
+   Valid options are: ``on``, ``off`` & ``auto`` for adaptive sync.
+
+   * The default settings depend on the GPU driver.
+   * Disabling VSync can be useful for testing performance.
+   * ``auto`` is only supported by the OpenGL backend.
 
 ``--gpu-compilation-subprocesses``
    Override the Max Compilation Subprocesses setting (OpenGL only).
@@ -482,8 +496,11 @@ Other Options
    NOTE: this is an alternative way to get the same effect as when setting the
    ``No Override Auto Resync`` User Preferences Debug option.
 
-``--debug-gpu-vulkan-local-read``
-   Force Vulkan dynamic rendering local read when supported by device.
+``--debug-ffmpeg``
+   Enable debug messages from FFmpeg video input and output.
+
+``--debug-cycles``
+   Enable debug messages from Cycles.
 
 
 .. _command-line-args-argument-parsing:
