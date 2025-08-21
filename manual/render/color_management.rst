@@ -116,19 +116,18 @@ this behavior can be set in the :ref:`Output Color Management Properties <render
 .. _bpy.types.ColorManagedDisplaySettings.display_device:
 
 Display Device
-   The color space for the display that Blender is being viewed on.
+   The color space of the display that images and video are being created for.
 
-   Most displays are sRGB by default with some newer displays having the option to use Rec. 2020.
-   These displays have a wider color gamut and can display high dynamic range content.
-   If you have an Apple display you probably will want to use Display P3.
+   Regular compute displays support sRGB, and most images and videos are
+   stored in this color space. However moderns displays often support a wider
+   gamut and high dynamic range content.
 
-   It is important to check your OS and display setting to make sure
-   they all match the display in use to view the most accurate image.
+   :sRGB: Basic display supported everywhere.
+   :Display P3: Wide gamut for Apple devices and other modern displays.
+   :Rec.1886: Used by many older TVs.
+   :Rec.2020: Even wider gamut than P3 supported by some displays.
+   :Rec.2100 PQ: For high dynamic range displays with Rec.2020 (or P3) wide gamut.
 
-   :sRGB: Used by most displays.
-   :Display P3: Used by most Apple devices.
-   :Rec. 1886: Used by many older TVs.
-   :Rec. 2020: Used for newer wide gamut HDR displays.
 
 .. _bpy.types.ColorManagedViewSettings.view_transform:
 
@@ -139,6 +138,10 @@ View Transform
       Does no extra conversion besides the conversion for the display device. Often used for
       non-photorealistic results or video editing where a specific look is already baked into
       the input video.
+   :ACES 2.0:
+      Version 2.0 of the `ACES <https://www.oscars.org/science-technology/sci-tech-projects/aces>`__
+      view transform, a widely standard in film and TV production. Suitable for photorealistic
+      results.
    :Khronos PBR Neutral:
       A tone mapping transform designed specifically for PBR color accuracy,
       to get sRGB colors in the output render that match as faithfully as possible
@@ -223,15 +226,16 @@ Sequencer
    :ref:`Default OpenColorIO Configuration <ocio-config-default-color-spaces>`
 
 
-Display
--------
-
 High Dynamic Range
-   Enable high dynamic range display in rendered viewport, uncapping display brightness.
-   This requires a monitor with HDR support and a view transform designed for HDR
-   (Filmic does not generate HDR colors).
+------------------
 
-   This feature is currently only supported on macOS.
+Select the "Rec.2100 PQ" display to view high dynamic range (HDR) colors.
+
+With standard dynamic range (SDR), view transforms must significantly lower bright colors to fit within the range. With high dynamic range it is possible to go beyond and more accurately display the scene. HDR displays have limits too, and there are separate view transform for 500, 1000, 2000 and 4000 nits to target displays with different maximum luminance.
+
+In Blender, HDR content automatically scales up and down along with display brightness. Seeing the full range often requires lowering the display brightness, to make enough headroom above SDR white.
+
+This feature is currently only supported on macOS, and Linux with Vulkan and Wayland.
 
 
 .. _bpy.types.ColorManagedViewSettings.use_curve_mapping:
@@ -318,7 +322,8 @@ Blender will use the standard OCIO environment variable to read an OpenColorIO c
 other than the default Blender one. More information about how to set up such a workflow
 can be found on the `OpenColorIO website <https://opencolorio.org/>`__.
 
-Blender currently use the following color space rules:
+Roles
+-----
 
 ``scene_linear``
    Color space used for rendering, compositing, and storing all float precision images in memory.
@@ -338,14 +343,34 @@ Blender currently use the following color space rules:
 ``default_float``
    Default color space for float precision images and files, *scene_linear* if not specified.
 
+Writing Configurations for Blender
+----------------------------------
+
+OpenColorIO configurations do not strictly specify all information needed for Blender to work optimally.
+These guidelines help ensure a configuration works well:
+
+* For every display, include a view transform without tone mapping. This is important to display
+  the viewport in solid mode and to show colors in color pickers. Blender will look for a view
+  transform named ``Standard`` or ``Un-tone-mapped`` or the config wide ``default_view_transform``.
+  If not found, the first view transform of the display will be used.
+* Include the interop ID from the `Color Interop Forum <https://github.com/AcademySoftwareFoundation/ColorInterop>`__
+  for every color space and display color space that you can. This helps save image and video
+  with correct colorspace information.
+  For OpenColorIO 2.5, use the native interop ID support. In earlier versions, add the interop ID
+  as the first alias of the colorspace.
+* Mark HDR displays by settings `encoding: hdr-video`
+
+
+ACES
+-----
+
 The standard Blender configuration includes support for saving and loading images in
 `ACES <https://www.oscars.org/science-technology/sci-tech-projects/aces>`__
 (`code and documentation <https://github.com/ampas/aces-dev>`__) color spaces.
 However, the ACES gamut is larger than the Rec. 709 gamut, so for best results,
-an ACES specific configuration file should be used. OpenColorIO provides
-an `ACES configuration <https://opencolorio.readthedocs.io/en/latest/configurations/_index.html>`__ file,
-though it may need a few more tweaks to be usable in production.
-
+an ACES specific configuration file should be used. There are
+`official ACES configurations <https://github.com/AcademySoftwareFoundation/OpenColorIO-Config-ACES/releases>`__
+however they may need a few more tweaks to work optimally in Blender.
 
 Default OpenColorIO Configuration
 =================================
