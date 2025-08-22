@@ -192,7 +192,7 @@ Vertices
    Deletes the selected control points. The resulting gap is bridged with new grid lines so that the surface
    stays contiguous.
 
-Segment
+Segments
    Deletes the lines and control points that lie between the outermost selected control points.
    The resulting gap is not bridged.
 

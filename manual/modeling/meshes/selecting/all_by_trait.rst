@@ -107,10 +107,10 @@ Pole Count
 Type
    Defines the comparison method for determining poles:
 
-   :Equal: Find vertices that have exactly *Pole Count* edges.
-   :Not Equal: Find vertices that have more or fewer edges than *Pole Count*.
-   :Greater Than: Find vertices that have more edges than *Pole Count*.
    :Less Than: Find vertices that have fewer edges than *Pole Count*.
+   :Equal To: Find vertices that have exactly *Pole Count* edges.
+   :Greater Than: Find vertices that have more edges than *Pole Count*.
+   :Not Equal To: Find vertices that have more or fewer edges than *Pole Count*.
 
 Extend
    Adds to the existing selection rather than replacing it.
