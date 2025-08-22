@@ -137,7 +137,7 @@ def window_tap_key(*, window, type, unicode=None, shift=False, ctrl=False, alt=F
     yield
     window.event_simulate(type=type, value='PRESS', **kw)
     yield
-    window.event_simulate(type=type, value='RELEASE', **kw)
+    window.event_simulate(type=type, value='RELEASE')
     yield
 
 
