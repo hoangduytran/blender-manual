@@ -265,10 +265,11 @@ The fluid simulation will make use of all the fields without an attached particl
 Simulation Method
    Determines the liquid particle simulation method.
 
-   FLIP (FLuid Implicit Particle)
+   :FLIP:
+      (FLuid Implicit Particle)
       Produces a very splashy simulation with lots of particles dispersed in the air.
-
-   APIC (Affine Particle-In-Cell)
+   :APIC:
+      (Affine Particle-In-Cell)
       Produces a very energetic but also more stable simulation.
       Vortices within the liquid will be preserved better than with *FLIP*.
 
