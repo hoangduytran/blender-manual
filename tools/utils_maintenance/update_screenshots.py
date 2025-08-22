@@ -118,6 +118,10 @@ def run_iter_from_timer(event_iter):
 # ----------------------------------------------------------------------
 # Blender Helpers
 
+def set_developer_ui(preferences, state):
+    preferences.view.show_developer_ui = state
+
+
 def window_tap_key(*, window, type, unicode=None, shift=False, ctrl=False, alt=False, oskey=False):
     """
     Simulate pressing a key with modifier flags.
@@ -144,7 +148,9 @@ def window_tap_key(*, window, type, unicode=None, shift=False, ctrl=False, alt=F
 def window_type_keys(*, window, text):
     yield
     for c in text:
-        if c == ' ':
+        if c == '.':
+            c_upper = 'PERIOD'
+        elif c == ' ':
             c_upper = 'SPACE'
         else:
             c_upper = c.upper()
@@ -155,12 +161,19 @@ def window_type_keys(*, window, text):
 
 
 def window_run_operator_from_search(*, window, operator_name):
+    from bpy import context
+
+    # Enables access to operator search
+    set_developer_ui(context.preferences, True)
+
     yield
     yield from window_tap_key(window=window, type='F3')
     yield
     yield from window_type_keys(window=window, text=operator_name)
     yield from window_tap_key(window=window, type='RET')
     yield
+
+    set_developer_ui(context.preferences, False)
 
 
 def window_screenshot_to_filepath(*, window, filepath):
@@ -272,7 +285,7 @@ def screenshot_splash_screen(window):
 
     yield from window_run_operator_from_search(
         window=window,
-        operator_name="splash screen",
+        operator_name="wm.splash",
     )
 
     yield from window_screenshot_to_filepath(
@@ -315,14 +328,14 @@ def screenshot_preferences(window):
             "editors_preferences_section_" + section.lower().replace("_", "-") + ".png",
         )
         if section == 'EXPERIMENTAL':
-            prefs.view.show_developer_ui = True
+            set_developer_ui(prefs, True)
 
         setattr(prefs, "active_section", section)
 
         yield from window_screenshot_to_filepath(window=prefs_window, filepath=filepath)
 
         if section == 'EXPERIMENTAL':
-            prefs.view.show_developer_ui = False
+            set_developer_ui(prefs, False)
 
         convert_png_to_webp(filepath)
 
