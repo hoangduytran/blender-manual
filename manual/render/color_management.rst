@@ -126,7 +126,8 @@ Display Device
    :Display P3: Wide gamut for Apple devices and other modern displays.
    :Rec.1886: Used by many older TVs.
    :Rec.2020: Even wider gamut than P3 supported by some displays.
-   :Rec.2100 PQ: For high dynamic range displays with Rec.2020 (or P3) wide gamut.
+   :Rec.2100 PQ: For high dynamic range displays with Rec.2020 wide gamut, up to 10000 nits.
+   :Rec.2100 HLG: For high dynamic range TVs with Rec.2020 wide gamut, up to 1000 nits.
 
 
 .. _bpy.types.ColorManagedViewSettings.view_transform:
@@ -235,8 +236,12 @@ With standard dynamic range (SDR), view transforms must significantly lower brig
 
 In Blender, HDR content automatically scales up and down along with display brightness. Seeing the full range often requires lowering the display brightness, to make enough headroom above SDR white.
 
-This feature is currently only supported on macOS, and Linux with Vulkan and Wayland.
+Requirements:
 
+* A HDR or wide gamut capable monitor.
+* macOS: Any Apple Silicon device.
+* Linux: Use Wayland, and set the Vulkan backend in the Blender system preferences.
+* Windows: Enable HDR mode in the Windows display settings, and set the Vulkan backend in the Blender system preferences. 
 
 .. _bpy.types.ColorManagedViewSettings.use_curve_mapping:
 
