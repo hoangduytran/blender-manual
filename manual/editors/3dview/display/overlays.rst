@@ -107,7 +107,7 @@ Annotations
 
 Camera Guides
    Show camera guides
-   (:ref:`Safe Areas <bpy.types.DisplaySafeAreas` & :ref:`Composition Guides <bpy.types.Camera.show_composition>`).
+   (:ref:`Safe Areas <bpy.types.DisplaySafeAreas>` & :ref:`Composition Guides <bpy.types.Camera.show_composition>`).
    Only available in :ref:`camera view <bpy.ops.view3d.view_camera>`.
 
 .. _bpy.types.View3DOverlay.show_look_dev:
