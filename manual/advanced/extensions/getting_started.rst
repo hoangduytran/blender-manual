@@ -19,11 +19,13 @@ How to publish to the `Blender Extensions Platform <https://extensions.blender.o
 The extension will be held for `review <https://extensions.blender.org/approval-queue/>`__,
 and published once the moderation team approves it.
 
+
 Extension files
 ===============
 
 An extension is shared as a ``.zip`` archive containing a manifest file and other files.
 The expected files depend on the extension type.
+
 
 Add-on extension
 ----------------
@@ -37,6 +39,7 @@ while more complex add-ons have a few different .py files or wheels together.
    ├─ __init__.py
    ├─ blender_manifest.toml
    └─ (...)
+
 
 Theme extension
 ---------------
@@ -142,7 +145,6 @@ This example is a good starting point to the ``blender_manifest.toml`` that shou
    # ]
 
 Required values:
-
    :blender_version_min: Minimum supported Blender version - use at least ``4.2.0``.
    :id: Unique identifier for the extension.
    :license: List of :ref:`licenses <extensions-licenses>`,
@@ -155,7 +157,6 @@ Required values:
    :version: Version of the extension - must follow `semantic versioning <https://semver.org/>`__.
 
 Optional values:
-
    :blender_version_max: Blender version that the extension does not support, earlier versions are supported.
    :website: Website for the extension.
    :copyright: Some licenses require a copyright, copyrights must be "Year Name" or "Year-Year Name".
@@ -172,7 +173,6 @@ Optional values:
       punctuation).
 
 Optional values for "build":
-
    These values are only used by the :ref:`build <command-line-args-extension-build>` sub-command.
 
    :paths:
@@ -208,6 +208,7 @@ Reserved:
    (i.e., cannot be empty, nor text ``""``, nor list ``[]``).
 
    If you don't want to set one of the optional values just exclude it from the manifest altogether.
+
 
 Command-line
 ============
