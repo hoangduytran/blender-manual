@@ -28,9 +28,8 @@ Settings
 .. _bpy.types.FluidEffectorSettings.effector_type:
 
 Effector Type
-   Collision
+   :Collision:
       Objects of this type will collide with fluid.
-
    :Guide:
       The velocity of objects of this type will be used when baking the guiding.
       So fluid guiding objects should move and have some velocity.
