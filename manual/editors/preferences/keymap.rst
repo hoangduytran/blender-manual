@@ -12,7 +12,8 @@ On this screen, you can configure keyboard and mouse shortcuts.
 
 .. seealso::
 
-   :doc:`/interface/keymap/introduction`
+   :doc:`/interface/keymap/index`
+
 
 Presets
 =======

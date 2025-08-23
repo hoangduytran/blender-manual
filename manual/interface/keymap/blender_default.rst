@@ -10,8 +10,19 @@ this page shows common keys used in Blender's default keymap.
    it could be expanded.
 
 
-Global Keys
-===========
+Selecting
+=========
+
+Blender has two main selection modes: left-click select and right-click select.
+See the :ref:`Select with Mouse Button <keymap-blender_default-prefs-select_with>` preference.
+
+While left-click select is the default as it's the most common in other applications,
+right-click select does have its advantages.
+See: `Learn the benefits of right-click select <https://vimeo.com/76335056>`__.
+
+
+General
+=======
 
 .. list-table::
    :align: left
@@ -130,6 +141,51 @@ These keys are shared across editors such as the 3D Viewport, UV and Graph edito
      - Toggle gizmos.
    * - :kbd:`Shift-AccentGrave`
      - Start :ref:`Fly/Walk Navigation <3dview-fly-walk>`.
+
+
+Animation
+=========
+
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`I`
+     - Insert a :doc:`keyframe </animation/keyframes/introduction>`.
+   * - :kbd:`Alt-I`
+     - Clear the keyframe.
+   * - :kbd:`Shift-Alt-I`
+     - Clear all keyframes.
+   * - :kbd:`Ctrl-D`
+     - Assign a :doc:`driver </animation/drivers/introduction>`.
+   * - :kbd:`Ctrl-Alt-D`
+     - Clear the driver.
+   * - :kbd:`K`
+     - Add the property to the current
+       :doc:`keying set </animation/keyframes/keying_sets>`.
+   * - :kbd:`Alt-K`
+     - Remove the property from the current keying set.
+
+
+Python Scripting
+================
+
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`Ctrl-C`
+     - When pressed while hovering over an :ref:`operator button <ui-operator-buttons>`,
+       copies its Python command to the clipboard. This command can then be used in the
+       :doc:`Python Console </editors/python_console>` or in the :doc:`Text Editor </editors/text_editor>`
+       when writing scripts.
+   * - :kbd:`Shift-Ctrl-C`
+     - When pressed while hovering over a field, copies its relative data path (also available from
+       the context menu). Useful when writing drivers or scripts.
+   * - :kbd:`Shift-Ctrl-Alt-C`
+     - When pressed while hovering over a field, copies its full data path.
 
 
 Platform Specific Keys

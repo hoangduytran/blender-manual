@@ -15,8 +15,35 @@ Text & Search Fields
    A text and a search field.
 
 Text fields show a rounded rectangular border, and optionally an icon and/or text inside the border.
-Text fields store text strings, and provide the means to edit text
-by :doc:`standard text editing shortcuts </interface/keymap/introduction>`.
+Text fields store text strings, and provide the means to edit text by standard text editing shortcuts:
+
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`Home`
+     - Go to the start of the line.
+   * - :kbd:`End`
+     - Go to the end of the line.
+   * - :kbd:`Left`, :kbd:`Right`
+     - Move the cursor a single character.
+   * - :kbd:`Ctrl-Left`, :kbd:`Ctrl-Right`
+     - Move the cursor an entire word.
+   * - :kbd:`Backspace`, :kbd:`Delete`
+     - Delete characters.
+   * - :kbd:`Ctrl-Backspace`, :kbd:`Ctrl-Delete`
+     - Delete words.
+   * - :kbd:`Shift`
+     - Select while holding the key and moving the cursor.
+   * - :kbd:`Ctrl-A`
+     - Select all text.
+   * - :kbd:`Ctrl-C`
+     - Copy the selected text.
+   * - :kbd:`Ctrl-X`
+     - Cut the selected text.
+   * - :kbd:`Ctrl-V`
+     - Paste text at the cursor position.
 
 For text fields with an icon and pop-ups, see :ref:`ui-data-id`.
 
