@@ -21,6 +21,70 @@ right-click select does have its advantages.
 See: `Learn the benefits of right-click select <https://vimeo.com/76335056>`__.
 
 
+Hovering
+========
+
+The following shortcuts can be pressed while hovering the mouse cursor
+over an editable field.
+
+
+.. _keymap-common-properties:
+
+Properties
+----------
+
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`Ctrl-C`
+     - Copy the (single) value of the field.
+   * - :kbd:`Ctrl-V`
+     - Paste the (single) value of the field.
+   * - :kbd:`Ctrl-Alt-C`
+     - Copy the entire vector or color of the field.
+   * - :kbd:`Ctrl-Alt-V`
+     - Paste the entire vector or color of the field.
+   * - :kbd:`RMB`
+     - Open the context menu.
+   * - :kbd:`Backspace`
+     - Reset the value to its default.
+   * - :kbd:`Minus`
+     - Invert the value's sign (multiply by -1.0).
+   * - :kbd:`Ctrl-Wheel`
+     - Change the value in incremental steps.
+
+       For fields with a pop-up list of values, this cycles the value.
+   * - :kbd:`Return`
+     - Activates menus and toggles checkboxes.
+   * - :kbd:`Alt`
+     - Hold while editing values to apply the change to all selected items
+       (objects, bones, sequence-strips).
+
+       This can be used for number fields and toggles.
+
+
+Dragging
+========
+
+The following shortcuts can be used while moving/rotating/scaling an object in the 3D Viewport,
+dragging the slider of a value, and so on. Note that they should be pressed after starting
+the drag, not before.
+
+.. list-table::
+   :align: left
+   :width: 95%
+   :widths: 20 80
+
+   * - :kbd:`Ctrl`
+     - Snap to coarse increments, making it easier to (say) rotate an object by exactly 90°.
+   * - :kbd:`Shift`
+     - Make the value change more slowly in response to mouse movement, giving you more precision.
+   * - :kbd:`Shift-Ctrl`
+     - Snap to fine increments.
+
+
 General
 =======
 
