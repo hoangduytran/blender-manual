@@ -491,7 +491,9 @@ def screenshot_all(window):
 
     yield
     yield from screenshot_startup(window)
-    yield from screenshot_splash_screen(window)
+    # Currently not reliable for translations.
+    if LANG=="en":
+        yield from screenshot_splash_screen(window)
     yield from screenshot_preferences(window)
 
     bpy.app.use_event_simulate = False
