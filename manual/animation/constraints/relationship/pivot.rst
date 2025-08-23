@@ -23,16 +23,17 @@ Target
 
 Use Relative Offset
    Offset will be an absolute point in space instead of relative to the target.
+   This option is only available if a *Target* object is not selected.
 
-Pivot Point X, Y, Z
-   Offset of pivot from target.
+Pivot Point/Offset X, Y, Z
+   The point in space to pivot about.
+   If a *Target* object is set, this offsets the pivot point relative to the target.
 
 Rotation Range
    Rotation range on which pivoting should occur.
 
-   Always
-      Use the pivot point in every rotation.
-   -X/-Y/-Z/X/Y/Z Rotation
+   :Always: Use the pivot point in every rotation.
+   :-X/-Y/-Z/X/Y/Z Rotation:
       Use the pivot point in the corresponding direction around the corresponding axis.
 
 Influence
