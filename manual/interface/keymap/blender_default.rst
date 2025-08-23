@@ -187,6 +187,12 @@ These keys are shared across editors such as the 3D Viewport, UV and Graph edito
    :width: 95%
    :widths: 20 80
 
+   * - :kbd:`MMB`
+     - Orbit View
+   * - :kbd:`Shift-MMB`
+     - Pan View
+   * - :kbd:`Ctrl-MMB`
+     - Zoom View
    * - :kbd:`Tab`
      - Toggle Edit mode.
    * - :kbd:`Ctrl-Tab`
@@ -205,6 +211,8 @@ These keys are shared across editors such as the 3D Viewport, UV and Graph edito
      - Toggle gizmos.
    * - :kbd:`Shift-AccentGrave`
      - Start :ref:`Fly/Walk Navigation <3dview-fly-walk>`.
+
+.. seealso:: :doc:`3D Viewport Navigation </editors/3dview/navigate/navigation>`
 
 
 Animation
