@@ -20,7 +20,7 @@ If the images are acceptable, run:
 Example Usage
 =============
 
-   env BLENDER_BIN=/src/blender/blender.bin ./tools/utils_maintenance/update_screenshots.py
+   env BLENDER_BIN=/src/blender/blender.bin BF_LANG=en ./tools/utils_maintenance/update_screenshots.py
 """
 
 
@@ -65,12 +65,44 @@ if "bpy" not in sys.modules:
 # Setup Paths
 
 ROOT_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", ".."))
+LOCALE_DIR = os.path.join(ROOT_DIR, "locale")
 
-IMAGE_DIR_FINAL = os.path.join(ROOT_DIR, "manual", "images")
-IMAGE_DIR_PREVIEW = os.path.join(ROOT_DIR, "manual_images_preview")
+LANG = os.environ.get("BF_LANG", "en")
+
+if (LANG == "en"):
+    IMAGE_DIR_FINAL = os.path.join(ROOT_DIR, "manual", "images")
+    IMAGE_DIR_PREVIEW = os.path.join(ROOT_DIR, "manual_images_preview")
+else:
+    IMAGE_DIR_FINAL = os.path.join(ROOT_DIR, "LOCALE_DIR", LANG, "images")
+    IMAGE_DIR_PREVIEW = os.path.join(ROOT_DIR, "manual_images_preview", LANG)
 
 if not os.path.exists(IMAGE_DIR_PREVIEW):
     os.mkdir(IMAGE_DIR_PREVIEW)
+
+manual_language_codes = {
+    "en": "en_US",
+    "ar": "ar_EG",
+    "ca": "ca_AD",
+    "de": "de_DE",
+    "el": "el_GR",
+    "es": "es",
+    "fi": "fi_FI",
+    "fr": "fr_FR",
+    "id": "id_ID",
+    "it": "it_IT",
+    "ja": "ja_JP",
+    "ko": "ko_KR",
+    "nl": "nl_NL",
+    "pt": "pt_PT",
+    "ru": "ru_RU",
+    "sk": "sk_SK",
+    "sr": "sr_RS",
+    "th": "th_TH",
+    "uk": "uk_UA",
+    "vi": "vi_VN",
+    "zh-hans": "zh_HANS",
+    "zh-hant": "zh_HANT",
+}
 
 
 # -------------
@@ -91,6 +123,8 @@ def setup_default_preferences(preferences):
     preferences.view.smooth_view = 0
     # preferences.view.use_quit_dialog = False
     preferences.filepaths.use_auto_save_temporary_files = False
+
+    preferences.view.language = manual_language_codes.get(LANG, "en_US")
 
     bpy.app.use_userpref_skip_save_on_exit = False
 
