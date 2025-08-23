@@ -153,7 +153,7 @@ Insert Keyframe :kbd:`I`
 Insert Keyframe with Keying Set :kbd:`K`
    See :ref:`Insert Keyframe with Keying Set <bpy.ops.anim.keyframe_insert_menu>`.
 
-Set Active Keying Set :kbd:`Shift-K`
+Change Keying Set :kbd:`Shift-K`
    See :ref:`Set Active Keying Set <bpy.ops.anim.keying_set_active_set>`.
 
 Delete Keyframes :kbd:`Alt-I`
