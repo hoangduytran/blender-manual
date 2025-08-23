@@ -10,11 +10,7 @@ This utility is intended to update screenshots, currently it covers:
 
 Once this command has finished, review:
 
-   manual_images_preview.html
-
-If the images are acceptable, run:
-
-   mv manual_images_preview/* manual/images/
+   build/old_screenshots/index.html
 
 
 Example Usage
@@ -69,15 +65,16 @@ LOCALE_DIR = os.path.join(ROOT_DIR, "locale")
 
 LANG = os.environ.get("BF_LANG", "en")
 
-if (LANG == "en"):
+if LANG == "en":
     IMAGE_DIR_FINAL = os.path.join(ROOT_DIR, "manual", "images")
-    IMAGE_DIR_PREVIEW = os.path.join(ROOT_DIR, "manual_images_preview")
+    IMAGE_DIR_PREVIEW = os.path.join(ROOT_DIR, "build", "old_screenshots")
 else:
-    IMAGE_DIR_FINAL = os.path.join(ROOT_DIR, "LOCALE_DIR", LANG, "images")
-    IMAGE_DIR_PREVIEW = os.path.join(ROOT_DIR, "manual_images_preview", LANG)
+    IMAGE_DIR_FINAL = os.path.join(LOCALE_DIR, LANG, "images")
+    IMAGE_DIR_PREVIEW = os.path.join(ROOT_DIR, "build", "old_screenshots", LANG)
 
-if not os.path.exists(IMAGE_DIR_PREVIEW):
-    os.mkdir(IMAGE_DIR_PREVIEW)
+# Ensure both destinations exist
+os.makedirs(IMAGE_DIR_FINAL, exist_ok=True)
+os.makedirs(IMAGE_DIR_PREVIEW, exist_ok=True)
 
 manual_language_codes = {
     "en": "en_US",
@@ -273,15 +270,53 @@ def format_size(num_bytes: int) -> str:
             return f"{size:.1f} {u}"
         size /= 1024.0
 
+CAPTURED_STEMS: list[str] = []
+
+# New helpers to relocate old files before writing new ones
+def find_file_in_dir(directory: str, stem: str) -> str | None:
+    for ext in (".webp", ".png", ".jpg", ".jpeg"):
+        candidate = os.path.join(directory, stem + ext)
+        if os.path.exists(candidate):
+            return candidate
+    return None
+
+def move_old_to_preview(stem: str) -> None:
+    """
+    If a file with this stem exists in IMAGE_DIR_FINAL (any supported extension),
+    move it to IMAGE_DIR_PREVIEW (preserving file name).
+    """
+
+    if stem not in CAPTURED_STEMS:
+        CAPTURED_STEMS.append(stem)
+
+    old_path = find_file_in_dir(IMAGE_DIR_FINAL, stem)
+    if not old_path:
+        return
+    dest_path = os.path.join(IMAGE_DIR_PREVIEW, os.path.basename(old_path))
+    # Ensure preview dir exists
+    os.makedirs(IMAGE_DIR_PREVIEW, exist_ok=True)
+    # If a previous preview exists, replace it
+    if os.path.abspath(old_path) == os.path.abspath(dest_path):
+        return
+    try:
+        Path(dest_path).unlink(missing_ok=True)
+    except Exception:
+        pass
+    Path(old_path).rename(dest_path)
+    print(f"Moved old screenshot to preview: {old_path} -> {dest_path}")
+
+
 # ----------------------------------------------------------------------
 # Screenshot Startup
 
 def screenshot_startup(window):
     from bpy import context
 
+    stem = "interface_window-system_introduction_default-startup"
+    move_old_to_preview(stem)
     filepath = os.path.join(
-        IMAGE_DIR_PREVIEW,
-        "interface_window-system_introduction_default-startup.png",
+        IMAGE_DIR_FINAL,
+        stem + ".png",
     )
 
     yield from window_screenshot_to_filepath(
@@ -312,10 +347,9 @@ def screenshot_splash_screen(window):
     with open(filepath_userpref, 'wb') as fh:
         pass
 
-    filepath = os.path.join(
-        IMAGE_DIR_PREVIEW,
-        "interface_splash_current.png"
-    )
+    stem = "interface_splash_current"
+    move_old_to_preview(stem)
+    filepath = os.path.join(IMAGE_DIR_FINAL, stem + ".png")
 
     yield from window_run_operator_from_search(
         window=window,
@@ -357,10 +391,10 @@ def screenshot_preferences(window):
     )
 
     for section in prefs_sections:
-        filepath = os.path.join(
-            IMAGE_DIR_PREVIEW,
-            "editors_preferences_section_" + section.lower().replace("_", "-") + ".png",
-        )
+        stem = "editors_preferences_section_" + section.lower().replace("_", "-")
+        move_old_to_preview(stem)
+        filepath = os.path.join(IMAGE_DIR_FINAL, stem + ".png")
+
         if section == 'EXPERIMENTAL':
             set_developer_ui(prefs, True)
 
@@ -385,24 +419,12 @@ def screenshot_preferences(window):
 #
 # Run this after all other operations.
 
-def find_old_file(stem: str) -> str | None:
-    """
-    Look for an existing file in IMAGE_DIR_FINAL with the given stem,
-    regardless of extension. Return absolute path or None if not found.
-    """
-    for ext in (".webp", ".png", ".jpg", ".jpeg"):
-        candidate = os.path.join(IMAGE_DIR_FINAL, stem + ext)
-        if os.path.exists(candidate):
-            return candidate
-    return None
-
-
 def generate_preview_html():
     """
-    Compare OLD (any image type in manual/images) vs NEW (WebP in manual_images_preview).
-    Show each image with a caption including file size.
+    Compare OLD (moved to IMAGE_DIR_PREVIEW) vs NEW (in IMAGE_DIR_FINAL),
+    but only for stems captured in this run.
     """
-    html_path = os.path.join(ROOT_DIR, "manual_images_preview.html")
+    html_path = os.path.join(IMAGE_DIR_PREVIEW, "index.html")
     with open(html_path, 'w', encoding='utf-8') as fh:
         fw = fh.write
         fw('<!DOCTYPE html>\n')
@@ -424,23 +446,19 @@ def generate_preview_html():
         fw('    <th>New Images (WebP)</th>\n')
         fw('  </tr>\n')
 
-        for filename in sorted(os.listdir(IMAGE_DIR_PREVIEW)):
-            if not filename.lower().endswith(".webp"):
-                continue
+        if not CAPTURED_STEMS:
+            fw('<tr><td colspan="2">No screenshots captured in this run.</td></tr>\n')
 
-            stem = os.path.splitext(filename)[0]
-            old_abs = find_old_file(stem)
-            new_abs = os.path.join(IMAGE_DIR_PREVIEW, filename)
-
-            new_rel = os.path.relpath(new_abs, ROOT_DIR)
-            new_size = format_size(os.path.getsize(new_abs)) if os.path.exists(new_abs) else "—"
+        for stem in CAPTURED_STEMS:
+            old_abs = find_file_in_dir(IMAGE_DIR_PREVIEW, stem)
+            new_abs = find_file_in_dir(IMAGE_DIR_FINAL, stem)
 
             fw('  <tr>\n')
 
             # Old
             fw('    <td>\n')
             if old_abs:
-                old_rel = os.path.relpath(old_abs, ROOT_DIR)
+                old_rel = os.path.relpath(old_abs, IMAGE_DIR_PREVIEW)
                 old_size = format_size(os.path.getsize(old_abs))
                 old_name = os.path.basename(old_abs)
                 fw(f'      <img src="{old_rel}" style="width:100%">\n')
@@ -451,8 +469,14 @@ def generate_preview_html():
 
             # New
             fw('    <td>\n')
-            fw(f'      <img src="{new_rel}" style="width:100%">\n')
-            fw(f'      <div class="cap">{filename} — {new_size}</div>\n')
+            if new_abs:
+                new_rel = os.path.relpath(new_abs, IMAGE_DIR_PREVIEW)
+                new_size = format_size(os.path.getsize(new_abs))
+                new_name = os.path.basename(new_abs)
+                fw(f'      <img src="{new_rel}" style="width:100%">\n')
+                fw(f'      <div class="cap">{new_name} — {new_size}</div>\n')
+            else:
+                fw(f'      <div class="cap">No new image for: {stem}</div>\n')
             fw('    </td>\n')
 
             fw('  </tr>\n')
