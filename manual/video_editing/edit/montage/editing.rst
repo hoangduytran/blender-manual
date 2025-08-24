@@ -445,8 +445,6 @@ This will result in two strips which use the same source, fitting the original s
    adjusting the start/end frames to form two non-overlapping strips showing the same content as before.
 
 
-.. _bpy.ops.sequencer.hold_split:
-
 Hold Split
 ==========
 
