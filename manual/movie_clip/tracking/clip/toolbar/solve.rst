@@ -55,7 +55,7 @@ Refine
    .. _bpy.types.MovieTrackingSettings.refine_intrinsics_principal_point:
 
    Optical Center
-      Refine the camera's :ref:`Optical Center <bpy.types.MovieTrackingCamera.principal>`.
+      Refine the camera's :ref:`Optical Center <bpy.types.MovieTrackingCamera.principal_point>`.
 
    .. _bpy.types.MovieTrackingSettings.refine_intrinsics_radial_distortion:
 

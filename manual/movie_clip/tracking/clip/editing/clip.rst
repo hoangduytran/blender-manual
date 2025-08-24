@@ -30,19 +30,6 @@ Set Scene Frames
 Sets end scene frame to match current clip duration.
 
 
-.. _bpy.ops.clip.set_center_principal:
-
-Set Principal to Center
-=======================
-
-.. reference::
-
-   :Mode:      Tracking
-   :Menu:      :menuselection:`Clip --> Set Principal to Center`
-
-Changes the :ref:`Optical Center <bpy.types.MovieTrackingCamera.principal>` values to the center of image.
-
-
 .. _bpy.ops.clip.prefetch:
 
 Prefetch
