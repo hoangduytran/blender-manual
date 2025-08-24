@@ -153,7 +153,7 @@ Jitter Unit
       The *Jitter* is measured relative to all three dimensions of the scene.
       The unit type and scaling can be configured in the :ref:`Scene Units <bpy.types.UnitSettings>`.
 
-.. _bpy.types.Paint.input_samples:
+.. _bpy.types.Brush.input_samples:
 
 Input Samples
    Recent mouse locations (input samples) are averaged together to smooth brush strokes.
