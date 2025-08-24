@@ -1,4 +1,3 @@
-.. _bpy.ops.mesh.face_shading:
 
 *******************
 Shade Smooth & Flat
