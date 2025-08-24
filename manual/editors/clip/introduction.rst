@@ -51,7 +51,7 @@ Frame Selected :kbd:`NumpadPeriod`
 Frame All :kbd:`Home`
    Zooms and pans the view so that the whole video is visible.
 Center View to Cursor :guilabel:`Mask Mode`
-   Pans the view so that the :ref:`2D Cursor <bpy.types.SpaceClipEditor.cursor>` is in the center.
+   Pans the view so that the :ref:`2D Cursor <editors-clip-2d_cursor>` is in the center.
 Zoom
    Menu with convenient zoom levels and operations.
    The zoom levels are calculated based on the images resolution compared to the screen resolution.

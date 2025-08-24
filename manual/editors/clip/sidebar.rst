@@ -102,7 +102,7 @@ See :doc:`/movie_clip/tracking/clip/sidebar/stabilization/index`.
 View
 ====
 
-.. _bpy.types.SpaceClipEditor.cursor:
+.. _editors-clip-2d_cursor:
 
 2D Cursor
 ---------
