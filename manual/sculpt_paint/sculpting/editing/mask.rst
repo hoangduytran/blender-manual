@@ -174,7 +174,7 @@ Extract as Solid
    Adds a :doc:`Solidify Modifier </modeling/modifiers/generate/solidify>` to the newly created mesh object.
 
 
-.. _bpy.ops.mesh.paint_mask_slice:
+.. _bpy.ops.sculpt.paint_mask_slice:
 
 Mask Slice
 ==========
