@@ -121,7 +121,7 @@ From there, you assign a new value to a selected attribute across all selected p
 This operator is useful for uniformly setting attribute values.
 
 
-.. _bpy.ops.curves.spline_type_set:
+.. _bpy.ops.curves.curve_type_set:
 
 Set Curve Type
 ==============
