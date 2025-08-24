@@ -85,7 +85,6 @@ the entire face.
 
 
 .. _modeling-meshes-selecting-edge-rings:
-.. _bpy.ops.mesh.select_edge_ring:
 
 Select Edge Rings
 =================

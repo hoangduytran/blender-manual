@@ -244,4 +244,4 @@ You can additionally hold :kbd:`Shift` to extend the current selection rather th
 
 .. seealso::
 
-   Mesh edit :ref:`Select Edge Rings <bpy.ops.mesh.select_edge_ring>`.
+   Mesh edit :ref:`Select Edge Rings <modeling-meshes-selecting-edge-rings>`.

@@ -239,7 +239,7 @@ Edge Length Mode
       Give each new UV edge a length that's proportional to its length on the mesh.
    Length Average
       Give each new UV edge a length that's proportional to the average edge length
-      in its :ref:`edge ring <bpy.ops.mesh.select_edge_ring>` on the mesh.
+      in its :ref:`edge ring <modeling-meshes-selecting-edge-rings>` on the mesh.
 
 
 .. _bpy.ops.uv.cube_project:
