@@ -82,7 +82,7 @@ Backface Culling
       Use back face culling when baking :doc:`Light Probe Volumes </render/eevee/light_probes/volume>`.
       Additionally helps rejecting capture point inside the object to avoid light leaking
 
-.. _bpy.types.Material.displacement:
+.. _bpy.types.Material.displacement_method:
 
 Displacement
    Controls how the displacement output from the shader node tree is used.

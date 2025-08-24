@@ -124,7 +124,7 @@ Shader Nodes
 - Certain combinations of BSDF's will result in more noise than others.
   This is the case when mixing Diffuse BSDF and Refraction BSDF.
 - Displacement of flat shaded surfaces will split the mesh into triangles.
-  See :ref:`Displacement <bpy.types.Material.displacement>` for a workaround.
+  See :ref:`Displacement <bpy.types.Material.displacement_method>` for a workaround.
 
 .. seealso::
 
