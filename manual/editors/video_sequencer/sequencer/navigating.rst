@@ -87,8 +87,6 @@ Navigation
    Jump to Next Strip (Center) :kbd:`Alt-PageUp`
       Moves the playhead to the nearest strip center that's after the current frame.
 
-.. _bpy.ops.sequencer.previewrange_set:
-
 Range
    Set Preview Range :kbd:`P`
       Interactively define the frame range used for preview playback/rendering.
@@ -96,6 +94,9 @@ Range
       As long as this range is active, playback will be limited to it, letting you repeatedly view a
       segment of the video without having to manually rewind each time. It also limits the range
       that gets rendered by *Sequence Render Animation* (see below).
+
+   .. _bpy.ops.sequencer.set_range_to_strips:
+
    Set Preview Range to Strips
       Apply a preview range that encompasses the selected strips.
    Clear Preview Range :kbd:`Alt-P`

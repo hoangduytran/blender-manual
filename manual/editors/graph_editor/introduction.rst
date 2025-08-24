@@ -166,6 +166,7 @@ Only Selected Keyframes Handles
 ----------
 
 .. _graph-preview-range:
+.. _bpy.ops.anim.previewrange_set:
 
 Set Preview Range :kbd:`P`
    Lets you drag a box to define a time range for previewing. As long as this range is active,
