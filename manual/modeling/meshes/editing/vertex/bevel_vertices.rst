@@ -1,4 +1,3 @@
-.. _bpy.ops.mesh.bevel.vertex:
 
 **************
 Bevel Vertices
