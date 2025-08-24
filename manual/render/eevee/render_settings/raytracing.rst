@@ -1,4 +1,3 @@
-.. _bpy.types.SceneEEVEE.raytracing:
 .. _bpy.types.RaytraceEEVEE:
 .. _bpy.types.SceneEEVEE.use_raytracing:
 
