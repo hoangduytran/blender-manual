@@ -91,7 +91,6 @@ Text Files -- Tabs as Spaces
    instead of using characters.
 
 
-.. _bpy.ops.preferences.autoexec:
 .. _bpy.ops.preferences.autoexec_path:
 .. _bpy.types.PreferencesFilePaths.use_scripts_auto_execute:
 
