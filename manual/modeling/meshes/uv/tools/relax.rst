@@ -105,8 +105,6 @@ Options
       To edit all islands and not only the island nearest to the brush center
       when the sculpt stroke was started.
 
-.. _bpy.types.ToolSettings.uv_relax_method:
-
 Method
    How to determine the edge weighting:
 

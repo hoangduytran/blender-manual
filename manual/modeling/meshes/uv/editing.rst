@@ -509,8 +509,7 @@ Minimize Stretch
 The *Minimize Stretch* tool, reduces UV stretch by minimizing the difference between
 the angles in 3D and the angles in UV space.
 This operation is similar to the :doc:`/modeling/meshes/uv/tools/relax`
-tool with the *Geometry* :ref:`Relaxation Method <bpy.types.ToolSettings.uv_relax_method>`,
-but uses a different algorithm.
+tool with the *Geometry* *Method*, but uses a different algorithm.
 
 Fill Holes
    Just during *minimize stretch*, internal holes will be filled with temporary polygons
