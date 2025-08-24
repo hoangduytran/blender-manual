@@ -1,4 +1,3 @@
-.. _bpy.ops.grease_pencil.select:
 
 ********************************
 Selecting Grease Pencil Elements
