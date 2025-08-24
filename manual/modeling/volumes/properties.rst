@@ -148,12 +148,6 @@ Space
    :World:
       Specify *Step Size* and *Density* in world space.
 
-.. _bpy.types.Volume.step_size:
-
-Step Size :guilabel:`Cycles Only`
-   Distance between volume samples. Lower values render more detail at the cost of performance.
-   If set to zero, the step size is automatically determined based on voxel size.
-
 .. _bpy.types.VolumeRender.clipping:
 
 Clipping :guilabel:`Cycles Only`
