@@ -88,12 +88,9 @@ Error
 Type
    Several actions can be performed for bad tracks:
 
-   Select
-      They can simply be selected.
-   Delete Track
-      The whole track can be deleted.
-   Delete Segments
-      Bad segments of tracked sequence can be removed.
+   :Select: They can simply be selected.
+   :Delete Track: The whole track can be deleted.
+   :Delete Segments: Bad segments of tracked sequence can be removed.
 
 Clean Tracks
    See :ref:`bpy.ops.clip.clean_tracks`.
