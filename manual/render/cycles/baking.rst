@@ -54,7 +54,6 @@ Bake from Multires
    The resulting normal or displacement map represents the difference between these two levels.
 
 .. _bpy.types.CyclesRenderSettings.bake_type:
-.. _bpy.types.RenderSettings.bake_type:
 
 Bake Type
    Type of pass to bake.
