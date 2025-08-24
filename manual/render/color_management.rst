@@ -232,16 +232,21 @@ High Dynamic Range
 
 Select the "Rec.2100 PQ" display to view high dynamic range (HDR) colors.
 
-With standard dynamic range (SDR), view transforms must significantly lower bright colors to fit within the range. With high dynamic range it is possible to go beyond and more accurately display the scene. HDR displays have limits too, and there are separate view transform for 500, 1000, 2000 and 4000 nits to target displays with different maximum luminance.
+With standard dynamic range (SDR), view transforms must significantly lower bright colors to fit within the range.
+With high dynamic range it is possible to go beyond and more accurately display the scene. HDR displays have limits
+too, and there are separate view transform for 500, 1000, 2000 and 4000 nits to target displays with different maximum
+luminance.
 
-In Blender, HDR content automatically scales up and down along with display brightness. Seeing the full range often requires lowering the display brightness, to make enough headroom above SDR white.
+In Blender, HDR content automatically scales up and down along with display brightness. Seeing the full range often
+requires lowering the display brightness, to make enough headroom above SDR white.
 
 Requirements:
 
 * A HDR or wide gamut capable monitor.
 * macOS: Any Apple Silicon device.
 * Linux: Use Wayland, and set the Vulkan backend in the Blender system preferences.
-* Windows: Enable HDR mode in the Windows display settings, and set the Vulkan backend in the Blender system preferences. 
+* Windows: Enable HDR mode in the Windows display settings, and set the Vulkan backend in the Blender system
+  preferences. 
 
 .. _bpy.types.ColorManagedViewSettings.use_curve_mapping:
 
