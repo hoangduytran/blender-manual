@@ -1,5 +1,4 @@
 .. index:: Editors; Timeline
-.. _bpy.types.SpaceTimeline:
 .. _bpy.ops.time:
 
 ********
