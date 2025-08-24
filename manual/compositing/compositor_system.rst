@@ -75,7 +75,7 @@ conversions are performed:
 +---------+---------+-------------------------------------+
 
 The following example demonstrates implicit conversion between a color type and a float type, since
-the :ref:`Math node <bpy.types.CompositorNodeMath>` expect float inputs.
+the :doc:`Math Node </compositing/types/utilities/math>` expect float inputs.
 
 .. figure:: /images/compositing_realtime-compositor_compositing-space_data_type_implicit_conversion.png
 

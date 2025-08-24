@@ -1,6 +1,4 @@
 .. index:: Compositor Nodes; Math
-.. _bpy.types.CompositorNodeMath:
-
 .. include:: /render/shader_nodes/converter/math.rst
    :start-after: .. --- copy below this line ---
 
