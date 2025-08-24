@@ -205,7 +205,8 @@ Dashed Line Options
 
    Mesh edit :ref:`Select Shortest Path <bpy.ops.mesh.shortest_path_select>`.
 
-.. _bpy.ops.uv.select_edge_loop:
+
+.. _bpy.ops.uv.select_loop:
 
 Select Edge Loop
 ================
@@ -225,8 +226,6 @@ You can additionally hold :kbd:`Shift` to extend the current selection rather th
 
    Mesh edit :ref:`Select Edge Loops <bpy.ops.mesh.loop_select>`.
 
-
-.. _bpy.ops.uv.select_edge_ring:
 
 Select Edge Ring
 ================
