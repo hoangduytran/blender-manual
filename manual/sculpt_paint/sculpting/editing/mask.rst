@@ -236,7 +236,7 @@ Custom Curve
    Same as :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
 
 
-.. _bpy.ops.sculpt.mask_from_mesh_boundary:
+.. _sculpt-mask_from_mesh_boundary:
 
 Mask From Mesh Boundary
 =======================

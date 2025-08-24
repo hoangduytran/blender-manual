@@ -62,7 +62,7 @@ Mesh Boundary
       This setting is used for both Mesh Boundary and Face Sets Boundary.
 
    Create Mask
-      This will execute the :ref:`bpy.ops.sculpt.mask_from_mesh_boundary` operator with the current auto-masking
+      This will execute the :ref:`sculpt-mask_from_mesh_boundary` operator with the current auto-masking
       settings. This is very useful to visualize the current auto-mask, or to edit the mask further manually.
 
 .. _bpy.types.Sculpt.use_automasking_boundary_face_sets:
