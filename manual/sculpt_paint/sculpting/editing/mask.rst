@@ -137,14 +137,15 @@ Auto Iteration Count
    via the shortcut :kbd:`Shift-R`.
 
 
-.. _bpy.ops.mesh.paint_mask_extract:
-
 Expand Mask
 ===========
 
 .. note::
 
    More info on Mask Expand along Topology at the :ref:`Expand page <bpy.ops.sculpt.expand>`.
+
+
+.. _bpy.ops.sculpt.paint_mask_extract:
 
 Mask Extract
 ============
