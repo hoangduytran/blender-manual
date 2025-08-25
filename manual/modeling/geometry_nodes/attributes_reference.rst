@@ -68,8 +68,7 @@ Attribute Data Types
 The type of an attribute is the kind of data stored at each element.
 
 :Float:
-   Single floating-point value, commo.. _bpy.ops.object.attribute_add:
-.. _bpy.ops.object.attribute_remove:nly used for weights or intensity values.
+   Single floating-point value, commonly used for weights or intensity values.
 :Boolean:
    True or false value for binary conditions.
 :Integer:
