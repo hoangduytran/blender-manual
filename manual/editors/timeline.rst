@@ -1,5 +1,4 @@
 .. index:: Editors; Timeline
-.. _bpy.ops.time:
 
 ********
 Timeline
