@@ -58,6 +58,13 @@ Space
          Fit scales the image until the bigger axis "fits" into the render size.
          Crop cuts the image so that it is the same aspect ratio as the render size.
 
+X/Y Extension Mode
+   The extension mode applied to the X axis.
+
+   :Clip: Areas outside of the image are filled with transparency.
+   :Extend: Areas outside of the image are filled with the closest boundary pixel in the image.
+   :Repeat: Areas outside of the image are filled with repetitions of the image.
+
 
 Outputs
 =======
