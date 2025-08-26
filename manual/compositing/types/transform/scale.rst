@@ -24,25 +24,6 @@ X, Y
 Properties
 ==========
 
-Interpolation
-   Determines how pixel values are interpolated when scaling or transforming images.
-
-   :Nearest:
-      Uses the value of the closest pixel with no smoothing.
-      This is the fastest method and is well-suited for pixel art or low-resolution images
-      where sharp, blocky edges are desirable.
-      In animations, motion appears in single-pixel steps, which can cause visible jittering.
-   :Bilinear:
-      Averages the values of surrounding pixels to create a smoother result than *Nearest*.
-      Provides a good balance between performance and visual quality.
-   :Bicubic:
-      Computes a weighted average of a larger neighborhood of pixels for even smoother results.
-      Ideal for photographic images or gradients where preserving fine detail is important.
-   :Anisotropic:
-      Adjusts interpolation based on the direction and scale of the transformation.
-      Helps reduce blurring or aliasing when scaling at steep angles or uneven resolutions,
-      especially useful in textures viewed at oblique angles or in detailed 3D projections.
-
 Space
    Coordinate Space to scale relative to.
 
@@ -61,6 +42,25 @@ Space
          Stretch distorts the image so that it fits into the render size.
          Fit scales the image until the bigger axis "fits" into the render size.
          Crop cuts the image so that it is the same aspect ratio as the render size.
+
+Interpolation
+   Determines how pixel values are interpolated when scaling or transforming images.
+
+   :Nearest:
+      Uses the value of the closest pixel with no smoothing.
+      This is the fastest method and is well-suited for pixel art or low-resolution images
+      where sharp, blocky edges are desirable.
+      In animations, motion appears in single-pixel steps, which can cause visible jittering.
+   :Bilinear:
+      Averages the values of surrounding pixels to create a smoother result than *Nearest*.
+      Provides a good balance between performance and visual quality.
+   :Bicubic:
+      Computes a weighted average of a larger neighborhood of pixels for even smoother results.
+      Ideal for photographic images or gradients where preserving fine detail is important.
+   :Anisotropic:
+      Adjusts interpolation based on the direction and scale of the transformation.
+      Helps reduce blurring or aliasing when scaling at steep angles or uneven resolutions,
+      especially useful in textures viewed at oblique angles or in detailed 3D projections.
 
 X/Y Extension Mode
    The extension mode applied to the X axis.
