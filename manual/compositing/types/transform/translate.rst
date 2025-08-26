@@ -26,16 +26,19 @@ X, Y
 Properties
 ==========
 
-Repeat
-   Repeat pixels on the other side when they extend over the image dimensions, making endless translating possible.
-
-   None, X Axis, Y Axis, Both Axis
 Interpolation
    Interpolation Methods.
 
    :Nearest: No interpolation, uses nearest neighboring pixel.
    :Bilinear: Simple interpolation between adjacent pixels.
    :Bicubic: Highest quality interpolation.
+
+X/Y Extension Mode
+   The extension mode applied to the X axis.
+
+   :Clip: Areas outside of the image are filled with transparency.
+   :Extend: Areas outside of the image are filled with the closest boundary pixel in the image.
+   :Repeat: Areas outside of the image are filled with repetitions of the image.
 
 
 Outputs
