@@ -46,6 +46,17 @@ Filter Type
       Helps reduce blurring or aliasing when scaling at steep angles or uneven resolutions,
       especially useful in textures viewed at oblique angles or in detailed 3D projections.
 
+X/Y Extension Mode
+   The extension mode applied to the X axis.
+
+   :Clip: Areas outside of the image are filled with transparency.
+   :Extend: Areas outside of the image are filled with the closest boundary pixel in the image.
+   :Repeat: Areas outside of the image are filled with repetitions of the image.
+
+   .. note::
+
+      This option is not available for the *Anisotropic* *Interpolation* mode.
+
 
 Outputs
 =======
