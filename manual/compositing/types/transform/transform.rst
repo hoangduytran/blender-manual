@@ -47,6 +47,13 @@ Filter
       Computes a weighted average of a larger neighborhood of pixels for even smoother results.
       Ideal for photographic images or gradients where preserving fine detail is important.
 
+X/Y Extension Mode
+   The extension mode applied to the X axis.
+
+   :Clip: Areas outside of the image are filled with transparency.
+   :Extend: Areas outside of the image are filled with the closest boundary pixel in the image.
+   :Repeat: Areas outside of the image are filled with repetitions of the image.
+
 
 Outputs
 =======
