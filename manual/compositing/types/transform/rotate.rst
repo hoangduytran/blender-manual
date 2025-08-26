@@ -50,6 +50,17 @@ X/Y Extension Mode
    :Extend: Areas outside of the image are filled with the closest boundary pixel in the image.
    :Repeat: Areas outside of the image are filled with repetitions of the image.
 
+X/Y Extension Mode
+   The extension mode applied to the X axis.
+
+   :Clip: Areas outside of the image are filled with transparency.
+   :Extend: Areas outside of the image are filled with the closest boundary pixel in the image.
+   :Repeat: Areas outside of the image are filled with repetitions of the image.
+
+   .. note::
+
+      This option is not available for the *Anisotropic* *Interpolation* mode.
+
 
 Outputs
 =======
