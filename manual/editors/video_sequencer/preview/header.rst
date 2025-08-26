@@ -122,6 +122,20 @@ See :doc:`/video_editing/edit/montage/editing` for more information.
 
 .. _bpy.ops.sequencer.preview_duplicate_move:
 
+Mirror
+------
+
+.. reference::
+
+   :View Type:   Preview
+   :Menu:        :menuselection:`Strip --> Mirror`
+   :Shortcut:    :kbd:`Ctrl-M`
+
+Mirror selected strip(s) along the global or local X or Y axis. Mirroring strips activates or deactivates the strips
+:ref:`mirror values <bpy.types.ImageStrip.use_flip>` instead of scaling them by -1. The position and rotation of the
+strip is adjusted to achieve the same behavior as when :ref:`mirroring objects <bpy.ops.transform.mirror>`.
+
+
 Duplicate
 ---------
 

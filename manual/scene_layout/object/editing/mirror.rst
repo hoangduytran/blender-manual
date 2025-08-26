@@ -9,7 +9,7 @@ Interactive Mirror
 
 .. reference::
 
-   :Mode:      Object and Edit Modes
+   :Mode:      Object and Edit Modes, Video Sequencer Preview
    :Menu:      :menuselection:`Object/Mesh/Curves --> Mirror --> Interactive Mirror`
    :Shortcut:  :kbd:`Ctrl-M`
 
