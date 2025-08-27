@@ -250,6 +250,8 @@ DPX as well as Cineon only stores and converts the "visible" color range of valu
 and 1.0 (as a result of rendering or composite).
 
 
+.. _files-images-openexr:
+
 OpenEXR
 -------
 
