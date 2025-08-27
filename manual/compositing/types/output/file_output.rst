@@ -74,8 +74,6 @@ This panel controls file format and encoding options, depending on the *Media Ty
 
 .. _bpy.ops.node.file_output_item:
 
-.. _bpy.ops.node.file_output_item:
-
 Images/Layers
 -------------
 
