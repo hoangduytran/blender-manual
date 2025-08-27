@@ -96,7 +96,12 @@ Reshape
 .. _bpy.ops.object.multires_base_apply:
 
 Apply Base
-   Modifies the original unsubdivided mesh to match the form of the subdivided mesh.
+   Modifies the original unsubdivided mesh to match the form of the subdivided mesh. This operation applies
+   a heuristic to the base mesh vertices that assumes that a Subdivision Surface modifier will be added to the mesh. 
+
+Conform Base
+   Modifies the original unsubdivided mesh to match the form of the subdivided mesh. The resulting positions of the
+   base mesh vertices will match their subdivided positions.
 
 
 Generate
