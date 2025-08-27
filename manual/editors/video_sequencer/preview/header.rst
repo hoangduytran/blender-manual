@@ -129,11 +129,15 @@ Mirror
 
    :View Type:   Preview
    :Menu:        :menuselection:`Strip --> Mirror`
-   :Shortcut:    :kbd:`Ctrl-M`
 
-Mirror selected strip(s) along the global or local X or Y axis. Mirroring strips activates or deactivates the strips
-:ref:`mirror values <bpy.types.ImageStrip.use_flip>` instead of scaling them by -1. The position and rotation of the
-strip is adjusted to achieve the same behavior as when :ref:`mirroring objects <bpy.ops.transform.mirror>`.
+Interactive Mirror :kbd:`Ctrl-M`
+   See :ref:`Interactive Mirror <bpy.ops.transform.mirror-interactive>`.
+
+Global
+   See :ref:`X/Y Global <bpy.ops.transform.mirror-global>`.
+
+Local
+   See :ref:`X/Y Global <bpy.ops.transform.mirror-local>`.
 
 
 Duplicate
