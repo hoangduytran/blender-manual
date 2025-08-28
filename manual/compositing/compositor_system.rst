@@ -283,7 +283,7 @@ Output
 ======
 
 The compositor only supports a single active output target, that is, only one of the
-:ref:`Composite nodes <bpy.types.CompositorNodeComposite>` or :ref:`Viewer nodes
+:doc:`Group Output nodes </compositing/types/output/group_output>` or :ref:`Viewer nodes
 <bpy.types.CompositorNodeViewer>` in the node tree will be considered active and the rest will be
 ignored. In particular, the compositor searches the *Active Node Tree Context* and falls back to the
 *Root Node Tree Context* if no active output was found in the active node tree context. The active
@@ -291,7 +291,7 @@ node tree context is the node tree of an expanded node group, that is, when the 
 group node and edits its underlying tree, while the root node tree context is the top level node
 tree without any expanded node groups.
 
-The compositor searches for the active *Composite* node, if none was found, it searches for the
+The compositor searches for the active *Group Output* node, if none was found, it searches for the
 active *Viewer* node. If none was found, the compositor doesn't run altogether.
 Consequently, note that adding a *Viewer* node will have no effect on the viewport render if there
-is a *Composite* node, since the priority is given to *Composite* nodes.
+is a *Group Output* node, since the priority is given to *Group Output* nodes.

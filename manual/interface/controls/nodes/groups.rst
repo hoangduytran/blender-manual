@@ -50,7 +50,7 @@ Only sockets connected to this node will be available as outputs on the group it
 
 .. important::
 
-   Avoid using nodes output nodes such as Material Output or Composite inside node groups.
+   Avoid using nodes output nodes such as Material Output inside node groups.
    These should be used on the top level node tree to improve re-usability of node groups.
 
    Use *Group Output* to pass data out of a node group.

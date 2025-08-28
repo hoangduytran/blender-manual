@@ -493,8 +493,9 @@ Connect to Output
    :Menu:   :menuselection:`Node Wrangler --> Connect to Output`
    :Shortcut:  :kbd:`O`
 
-Connect the output of the selected node to the final output of the node tree (Composite in Compositor,
-Material Output or World Output in Shader, the final Group Output in Geometry Nodes, Output in Texture Nodes),
+Connect the output of the selected node to the final output of the node tree
+(Material Output or World Output in Shader,
+the final Group Output in Geometry Nodes and Compositor, Output in Texture Nodes),
 or, if the node is inside a group, to the Group Output.
 
 
