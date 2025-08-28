@@ -16,7 +16,7 @@ Interactive Mirror
    :Shortcut:  :kbd:`Ctrl-M`
 
 The *Mirror* operator flips the selected elements across a chosen axis.
-Mirroring objects is equivalent to scaling the selection by -1 along the selected axis,
+Mirroring objects, geometry, or curves is equivalent to scaling the selection by -1 along the selected axis,
 but it offers a faster and more direct workflow.
 
 When mirroring VSE strips, the selected axis' :ref:`mirror value <bpy.types.ImageStrip.use_flip>` gets changed instead
