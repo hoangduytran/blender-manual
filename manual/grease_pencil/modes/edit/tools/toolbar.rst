@@ -1,4 +1,3 @@
-.. _gpencil_edit-toolbar-index:
 
 *************
 Editing Tools
