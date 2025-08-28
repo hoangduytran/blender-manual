@@ -30,7 +30,7 @@ Points
 Density
    Value of voxels inside the generated fog volume.
 
-Resolution
+Resolution Mode
    How the voxel size is specified.
 
    :Amount:
@@ -39,10 +39,10 @@ Resolution
       Specify the voxel side length. It is recommended to be careful when tweaking this value,
       because small changes can have a large effect on the processing time.
 
-Voxel Amount
+Voxel Amount :guilabel:`Amount`
    Specify the approximate number of voxels along the diagonal.
 
-Voxel Size
+Voxel Size :guilabel:`Size`
    Specify the voxel side length.
 
 Radius

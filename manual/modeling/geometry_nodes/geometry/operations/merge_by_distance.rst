@@ -31,18 +31,14 @@ Selection
       since searching for nearby points is a relatively expensive operation that gets even
       more expensive when more points are involved.
 
-Distance
-    The distance to use for searching for nearby points.
-
-
-Properties
-==========
-
 Mode
    Method for choosing which vertices are merged.
 
    :All: Merge includes all geometry including loose parts.
    :Connected: Merge only includes attached geometry i.e. the modifier will not merge loose parts together.
+
+Distance
+    The distance to use for searching for nearby points.
 
 
 Output

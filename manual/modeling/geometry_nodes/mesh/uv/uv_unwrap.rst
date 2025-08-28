@@ -37,10 +37,6 @@ Margin
 Fill Holes
    Virtually fill holes in mesh before unwrapping, to better avoid overlaps and preserve symmetry.
 
-
-Properties
-==========
-
 Method
    :Angle Based:
       This method gives a good 2D representation of a mesh.
