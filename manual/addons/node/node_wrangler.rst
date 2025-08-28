@@ -485,20 +485,6 @@ Detach Outputs
 Detach the selected node's outputs while leaving linked inputs intact.
 
 
-Connect to Output
------------------
-
-.. reference::
-
-   :Menu:   :menuselection:`Node Wrangler --> Connect to Output`
-   :Shortcut:  :kbd:`O`
-
-Connect the output of the selected node to the final output of the node tree
-(Material Output or World Output in Shader,
-the final Group Output in Geometry Nodes and Compositor, Output in Texture Nodes),
-or, if the node is inside a group, to the Group Output.
-
-
 .. _bpy.ops.node.add_image:
 
 Add Multiple Images
