@@ -132,6 +132,11 @@ Fields (Diamond)
    .. seealso::
 
       :doc:`Geometry Nodes Fields Documentation </modeling/geometry_nodes/fields>`
+Grid (Rectangle)
+   Represents a grid data structure, which stores values sampled across a **2D surface** or a **3D volume**.
+   Grids can represent data such as image pixels, voxel densities, or other sampled values in space.
+   They allow complex operations where values are distributed continuously across space,
+   rather than being attached to individual geometry elements.
 
 
 Inputs

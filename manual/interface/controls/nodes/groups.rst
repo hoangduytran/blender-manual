@@ -349,8 +349,20 @@ Shape :guilabel:`Geometry Nodes` -- :guilabel:`Input`
    Specifies what kind of higher-order data the socket accepts.
    See :ref:`interface-controls-nodes-socket_shape` for more information.
 
-   :Auto: Automatically detect the structure type based on how the socket is used.
-   :Single: Only allow single values instead of :doc:`/modeling/geometry_nodes/fields`.
+   :Auto:
+      Automatically detect the most appropriate shape based on how the socket is used.
+      This is the default option and works for most cases.
+   :Dynamic:
+      The socket can adapt to multiple shapes, making it flexible when used with different connections.
+      Useful for generic node groups intended to handle various data types.
+   :Single:
+      Only allows single values (constants) rather than structured data.
+      Fields or grids cannot be connected.
+   :Field:
+      The socket expects a :doc:`field </modeling/geometry_nodes/fields>`,
+      meaning the value can vary depending on the geometry element or context.
+   :Grid:
+      The socket expects a grid data structure, which stores values sampled across a volume or 2D space.
 
 .. rubric:: Panels
 
