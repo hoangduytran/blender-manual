@@ -345,8 +345,9 @@ Hide in Modifier :guilabel:`Geometry Nodes` -- :guilabel:`Input`
 
 .. _bpy.types.NodeTreeInterfaceSocket.structure_type:
 
-Structure Type :guilabel:`Geometry Nodes` -- :guilabel:`Input`
+Shape :guilabel:`Geometry Nodes` -- :guilabel:`Input`
    Specifies what kind of higher-order data the socket accepts.
+   See :ref:`interface-controls-nodes-socket_shape` for more information.
 
    :Auto: Automatically detect the structure type based on how the socket is used.
    :Single: Only allow single values instead of :doc:`/modeling/geometry_nodes/fields`.

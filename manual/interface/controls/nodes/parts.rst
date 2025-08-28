@@ -100,10 +100,13 @@ Image (apricot)
    Used to pass an image data-block.
 
 
-Socket Structure
-----------------
+.. _interface-controls-nodes-socket_shape:
 
-Data sockets can have different structure types, indicating how values are passed and interpreted.
+Socket Shape
+------------
+
+Data sockets can have different shapes, indicating the data structure use to transport data.
+The data structure determines how values are passed and interpreted.
 More complex structures allow passing multiple values through a single connection.
 
 Single (Circle)
