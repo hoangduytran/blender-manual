@@ -57,12 +57,6 @@ Preserve Length
    Preserve each curve's length during deformation.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

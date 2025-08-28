@@ -41,12 +41,6 @@ Surface Normal Displacement
    Amount of displacement along the surface normal.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

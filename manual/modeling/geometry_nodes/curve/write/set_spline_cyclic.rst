@@ -30,12 +30,6 @@ Cyclic
    Whether to connect the first and last control points of each spline.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

@@ -43,12 +43,6 @@ Fill Caps
    simply connected to existing edges.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

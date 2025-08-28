@@ -30,12 +30,6 @@ Factor Max
    Factor of the radius at the maximum.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

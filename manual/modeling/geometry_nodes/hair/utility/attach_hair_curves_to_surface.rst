@@ -52,12 +52,6 @@ Blend along Curve
    Blend deformation along each curve from the root.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

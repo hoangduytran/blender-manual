@@ -25,12 +25,6 @@ Replace
    A string segment which replaces occurrences of the *Find* substring.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

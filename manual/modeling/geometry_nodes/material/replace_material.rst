@@ -33,12 +33,6 @@ New
    Material that is replacing the old material.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

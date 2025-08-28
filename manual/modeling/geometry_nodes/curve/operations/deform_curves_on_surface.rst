@@ -47,12 +47,6 @@ Curves
    Standard curves input.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

@@ -17,12 +17,6 @@ Surface UV Map
    Surface UV map stored on the mesh used for finding curve attachment locations.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

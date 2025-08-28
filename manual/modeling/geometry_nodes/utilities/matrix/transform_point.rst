@@ -21,12 +21,6 @@ Transformation
    The transformation matrix.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

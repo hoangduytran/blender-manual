@@ -19,12 +19,6 @@ Matrix
    The matrix to split into individual values.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

@@ -36,12 +36,6 @@ Selection
    in these cases a field input will be ignored.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

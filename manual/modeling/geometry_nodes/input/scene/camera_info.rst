@@ -24,12 +24,6 @@ Camera
    To get the active camera, use the :doc:`/modeling/geometry_nodes/input/scene/active_camera`.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

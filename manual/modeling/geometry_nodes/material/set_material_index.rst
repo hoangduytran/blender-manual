@@ -28,12 +28,6 @@ Material Index
    The new material index.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

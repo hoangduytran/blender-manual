@@ -42,12 +42,6 @@ Preserve Length
    Preserve the length of the Curves on a segment basis.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

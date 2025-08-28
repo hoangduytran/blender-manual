@@ -41,12 +41,6 @@ Resolution X,Y,Z
       will give 1 million evaluations, and 1000 would give 1 billion.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

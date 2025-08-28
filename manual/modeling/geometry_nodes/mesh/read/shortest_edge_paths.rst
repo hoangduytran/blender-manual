@@ -45,12 +45,6 @@ Edge Cost
    The weight for each edge, used to determine the meaning of "shortest."
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

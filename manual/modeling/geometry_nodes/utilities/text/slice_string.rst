@@ -26,12 +26,6 @@ Length
    Integer value used to determine how many characters are extracted from the input string.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

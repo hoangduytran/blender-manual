@@ -81,12 +81,6 @@ Hair Tie Scale
    Scale of the hair tie instance.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

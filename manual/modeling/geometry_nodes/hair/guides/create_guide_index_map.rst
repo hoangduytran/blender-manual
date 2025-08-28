@@ -33,12 +33,6 @@ Group ID
    Curves will only choose a guide with the same ID value.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

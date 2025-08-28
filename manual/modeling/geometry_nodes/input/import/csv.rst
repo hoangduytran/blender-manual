@@ -41,12 +41,6 @@ Delimiter
       Tab characters can be inserted using the :doc:`/modeling/geometry_nodes/utilities/text/special_characters`.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

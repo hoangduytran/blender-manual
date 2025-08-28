@@ -23,12 +23,6 @@ Matrix
    The second multiplication.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

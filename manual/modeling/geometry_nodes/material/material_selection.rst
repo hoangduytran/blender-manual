@@ -22,12 +22,6 @@ Material
    Standard material input.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

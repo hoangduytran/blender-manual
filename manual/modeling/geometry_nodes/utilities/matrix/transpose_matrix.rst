@@ -23,12 +23,6 @@ Matrix
    The matrix to be transposed.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

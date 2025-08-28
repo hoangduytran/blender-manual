@@ -27,12 +27,6 @@ Pin at Parameter
    Pin each curve at a certain point for the operation.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

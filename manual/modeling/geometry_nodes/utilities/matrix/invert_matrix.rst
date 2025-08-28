@@ -19,12 +19,6 @@ Matrix
    The matrix to invert.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

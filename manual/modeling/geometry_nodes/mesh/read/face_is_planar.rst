@@ -25,12 +25,6 @@ Threshold
     considered planar.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

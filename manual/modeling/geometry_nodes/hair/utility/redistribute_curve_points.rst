@@ -21,12 +21,6 @@ Feature Awareness
    Use simple feature awareness to keep feature definition.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

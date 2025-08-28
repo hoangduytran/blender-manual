@@ -36,12 +36,6 @@ Lock Roots
    Lock the position of root points.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 
