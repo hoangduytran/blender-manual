@@ -63,12 +63,6 @@ Red, Green, Blue
    Specifies which RGB channels will be affected by the correction.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

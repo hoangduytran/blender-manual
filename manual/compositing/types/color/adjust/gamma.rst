@@ -26,12 +26,6 @@ Gamma
    An exponential brightness factor, applied as :math:`output\_value = input\_value ^ {\gamma}`
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

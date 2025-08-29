@@ -25,12 +25,6 @@ Invert Alpha
    Invert the alpha channel.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

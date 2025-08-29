@@ -29,12 +29,6 @@ Convert Premultiplied
    the foreground was converted to straight alpha form for some reason, this should be set to true.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

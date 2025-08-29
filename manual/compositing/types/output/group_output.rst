@@ -40,12 +40,6 @@ Each input corresponds to a group output socket that can be exposed to the paren
    Any additional sockets will be ignored.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

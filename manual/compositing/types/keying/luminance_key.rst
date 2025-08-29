@@ -43,12 +43,6 @@ Maximum
    between foreground and background objects.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

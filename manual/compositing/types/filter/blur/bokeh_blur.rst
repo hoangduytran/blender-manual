@@ -35,12 +35,6 @@ Bounding Box
    thus saving composite time each time adjustments are made.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

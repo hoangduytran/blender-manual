@@ -30,12 +30,6 @@ Neighbor Threshold
    The threshold to control the number of pixels that must match.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

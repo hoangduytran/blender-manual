@@ -23,12 +23,6 @@ Size
    The size of the pixels in the output image, measured in pixels.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

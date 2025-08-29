@@ -29,12 +29,6 @@ Image
    Color image input.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

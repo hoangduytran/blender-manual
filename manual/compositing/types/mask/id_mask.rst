@@ -39,12 +39,6 @@ Index
    Whether to smooth the mask edges.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

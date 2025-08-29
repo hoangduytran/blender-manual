@@ -34,12 +34,6 @@ Anti-Alias
    Applies :term:`Anti-Aliasing` to avoid artifacts at sharp edges or areas with a high contrast.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

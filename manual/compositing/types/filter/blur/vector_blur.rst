@@ -29,12 +29,6 @@ Shutter
    Duration of the motion blur in seconds, corresponding to the exposure time simulated for each frame.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

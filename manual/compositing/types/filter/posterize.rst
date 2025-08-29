@@ -24,12 +24,6 @@ Steps
    A value of 8 will result in :math:`8^3 = 512` total colors.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 
