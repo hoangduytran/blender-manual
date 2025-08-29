@@ -25,11 +25,8 @@ Invert
    this will move the movie clip down by 5 units.
 
 
-Properties
-==========
-
-Movie Clip
-   The movie clip whose stabilization to use.
+Sampling
+--------
 
 Filter
    Determines how pixel values are interpolated when scaling or transforming images.
@@ -49,6 +46,13 @@ Filter
       Adjusts interpolation based on the direction and scale of the transformation.
       Helps reduce blurring or aliasing when scaling at steep angles or uneven resolutions,
       especially useful in textures viewed at oblique angles or in detailed 3D projections.
+
+
+Properties
+==========
+
+Movie Clip
+   The movie clip whose stabilization to use.
 
 
 Outputs

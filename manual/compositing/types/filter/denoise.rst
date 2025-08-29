@@ -32,11 +32,6 @@ Albedo
    which is available when enabling the Denoising Data passes.
 HDR
    Preserve colors outside the 0 to 1 range.
-
-
-Properties
-==========
-
 Prefilter
    :None:
       Does not apply any prefiltering to the input passes. This option retains the most detail and

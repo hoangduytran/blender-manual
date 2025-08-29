@@ -17,13 +17,6 @@ Inputs
 
 Image
    Standard color input.
-X, Y
-   Scale in the axis directions, only available if *Space* is set to *Relative* or *Absolute*.
-
-
-Properties
-==========
-
 Space
    Coordinate Space to scale relative to.
 
@@ -37,11 +30,18 @@ Space
       will produce a 1080p image with the scene scaled down 50% and leaving the rest of the image as alpha.
    :Render Size:
       Image dimensions set in the Render panel.
+Frame Type :guilabel:`Render Size`
+   How the image fits in the camera frame.
 
-      Stretch, Fit, Crop
-         Stretch distorts the image so that it fits into the render size.
-         Fit scales the image until the bigger axis "fits" into the render size.
-         Crop cuts the image so that it is the same aspect ratio as the render size.
+   :Stretch: Distorts the image so that it fits into the render size.
+   :Fit: Scales the image until the bigger axis "fits" into the render size.
+   :Crop: Cuts the image so that it is the same aspect ratio as the render size.
+X, Y
+   Scale in the axis directions, only available if *Space* is set to *Relative* or *Absolute*.
+
+
+Sampling
+--------
 
 Interpolation
    Determines how pixel values are interpolated when scaling or transforming images.
@@ -62,7 +62,7 @@ Interpolation
       Helps reduce blurring or aliasing when scaling at steep angles or uneven resolutions,
       especially useful in textures viewed at oblique angles or in detailed 3D projections.
 
-X/Y Extension Mode
+Extension X/Y
    The extension mode applied to the X axis.
 
    :Clip: Areas outside of the image are filled with transparency.

@@ -19,6 +19,35 @@ Inputs
 Image
    Standard color input.
 
+Glare Type
+   Defines the type of glare effect applied to the image.
+
+   :Bloom:
+      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
+   :Ghosts:
+      Creates multiple overlapping glare artifacts resembling lens reflections or a hazy glow.
+   :Streaks:
+      Produces bright streaks radiating from highlights, commonly used to simulate lens flares.
+   :Fog Glow:
+      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
+      This glare is a more physically accurate version of *Bloom*, creating a softer,
+      more realistic glow at the cost of increased computation time.
+   :Simple Star:
+      Similar to *Streaks*, but produces a simpler star-shaped glare effect.
+   :Sun Beams:
+      Simulates the effect of bright light getting scattered in a medium
+      `(Crepuscular Rays) <https://en.wikipedia.org/wiki/Crepuscular_rays>`__.
+      This phenomenon can be created by renderers, but full volumetric lighting is
+      a rather arduous approach and takes a long time to render.
+
+Quality
+   Controls the resolution at which the glare effect is processed.
+   This can be helpful to save render times while only doing preview renders.
+
+   :High: Full-resolution processing for best quality.
+   :Medium: Uses a lower resolution to reduce computation time.
+   :Low: Fastest processing but with lower detail.
+
 
 Highlights
 ----------
@@ -86,40 +115,6 @@ Diagonal :guilabel:`Simple Star`
 
 Sun Position :guilabel:`Sun Beams`
    Source point of the rays as a factor of the image dimensions.
-
-
-
-Properties
-==========
-
-Glare Type
-   Defines the type of glare effect applied to the image.
-
-   :Bloom:
-      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
-   :Ghosts:
-      Creates multiple overlapping glare artifacts resembling lens reflections or a hazy glow.
-   :Streaks:
-      Produces bright streaks radiating from highlights, commonly used to simulate lens flares.
-   :Fog Glow:
-      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
-      This glare is a more physically accurate version of *Bloom*, creating a softer,
-      more realistic glow at the cost of increased computation time.
-   :Simple Star:
-      Similar to *Streaks*, but produces a simpler star-shaped glare effect.
-   :Sun Beams:
-      Simulates the effect of bright light getting scattered in a medium
-      `(Crepuscular Rays) <https://en.wikipedia.org/wiki/Crepuscular_rays>`__.
-      This phenomenon can be created by renderers, but full volumetric lighting is
-      a rather arduous approach and takes a long time to render.
-
-Quality
-   Controls the resolution at which the glare effect is processed.
-   This can be helpful to save render times while only doing preview renders.
-
-   :High: Full-resolution processing for best quality.
-   :Medium: Uses a lower resolution to reduce computation time.
-   :Low: Fastest processing but with lower detail.
 
 
 Outputs

@@ -33,8 +33,8 @@ Scale X, Y
    the displacement along their respective axes.
 
 
-Properties
-==========
+Sampling
+--------
 
 Interpolation
    Determines how pixel values are interpolated when scaling or transforming images.
@@ -55,7 +55,7 @@ Interpolation
       Helps reduce blurring or aliasing when scaling at steep angles or uneven resolutions,
       especially useful in textures viewed at oblique angles or in detailed 3D projections.
 
-X/Y Extension Mode
+Extension X/Y
    The extension mode applied to the X axis.
 
    :Clip: Areas outside of the image are filled with transparency.
