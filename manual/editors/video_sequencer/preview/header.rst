@@ -142,6 +142,7 @@ The duplicated content remain selected, allowing immediate repositioning.
 
 Animation
 ---------
+
 .. reference::
 
    :View Type:   Preview

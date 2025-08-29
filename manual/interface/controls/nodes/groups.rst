@@ -259,27 +259,46 @@ Subtype :guilabel:`Integer` :guilabel:`Float` :guilabel:`Vector` :guilabel:`Stri
       :Factor: A percentage or factor between a lower and upper bound.
 
    Floats
-      :None: Standard floating-point values.
-      :Percentage: Displayed as a percentage. Typically, *Min* and *Max* values are set to 0 and 100.
-      :Factor: A percentage or factor between a lower and upper bound.
-      :Angle: A measurement in degrees or radians, depending on scene units.
-      :Time (Scene Relative): Time in frames, converted to seconds based on the scene frame rate.
+      :None:
+         Standard floating-point values.
+      :Percentage:
+         Displayed as a percentage. Typically, *Min* and *Max* values are set to 0 and 100.
+      :Factor:
+         A percentage or factor between a lower and upper bound.
+      :Angle:
+         A measurement in degrees or radians, depending on scene units.
+      :Time (Scene Relative):
+         Time in frames, converted to seconds based on the scene frame rate.
       :Time (Absolute): Time in seconds.
-      :Distance: A spatial distance measurement.
-      :Wavelength: The distance between wave cycles, measured in millimeters (mm), micrometers (µm), nanometers (nm), or picometers (pm).
-      :Color Temperature: A temperature value (Kelvin) corresponding to the perceived color of a light source.
-      :Frequency: A rate of repetition per second (hertz).
+      :Distance:
+         A spatial distance measurement.
+      :Wavelength:
+         The distance between wave cycles,
+         measured in millimeters (mm), micrometers (µm), nanometers (nm), or picometers (pm).
+      :Color Temperature:
+         A temperature value (Kelvin) corresponding to the perceived color of a light source.
+      :Frequency:
+         A rate of repetition per second (hertz).
 
    Vectors
-      :None: Standard vector values.
-      :Percentage: Displayed as a percentage.
-      :Factor: A factor between a lower and upper bound.
-      :Translation: A displacement vector.
-      :Direction: A geometric direction vector.
-      :Velocity: Vector representing speed and direction of motion.
-      :Acceleration: Vector representing the change in velocity.
-      :Euler Angles: :term:`Euler Rotation` angles.
-      :XYZ: Cartesian coordinates. A fourth component (W) may also be supported.
+      :None:
+         Standard vector values.
+      :Percentage:
+         Displayed as a percentage.
+      :Factor:
+         A factor between a lower and upper bound.
+      :Translation:
+         A displacement vector.
+      :Direction:
+         A geometric direction vector.
+      :Velocity:
+         Vector representing speed and direction of motion.
+      :Acceleration:
+         Vector representing the change in velocity.
+      :Euler Angles:
+         :term:`Euler Rotation` angles.
+      :XYZ:
+         Cartesian coordinates. A fourth component (W) may also be supported.
 
    Strings:
       :None: Standard text string.

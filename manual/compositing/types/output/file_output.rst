@@ -23,7 +23,8 @@ This node can be used to:
 .. tip::
 
    - Use the *File Output* node to save raw passes or intermediate steps without overwriting the main render result.
-   - Combine with the :doc:`/compositing/types/mask/cryptomatte` or other utility passes to export custom data for compositing pipelines.
+   - Combine with the :doc:`/compositing/types/mask/cryptomatte`
+     or other utility passes to export custom data for compositing pipelines.
    - Particularly useful in production pipelines where multiple outputs are needed per render.
 
 

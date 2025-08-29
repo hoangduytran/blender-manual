@@ -246,7 +246,7 @@ Requirements:
 * macOS: Any Apple Silicon device.
 * Linux: Use Wayland, and set the Vulkan backend in the Blender system preferences.
 * Windows: Enable HDR mode in the Windows display settings, and set the Vulkan backend in the Blender system
-  preferences. 
+  preferences.
 
 .. _bpy.types.ColorManagedViewSettings.use_curve_mapping:
 
@@ -372,7 +372,7 @@ These guidelines help ensure a configuration works well:
 
 
 ACES
------
+----
 
 The standard Blender configuration includes support for saving and loading images in
 `ACES <https://www.oscars.org/science-technology/sci-tech-projects/aces>`__

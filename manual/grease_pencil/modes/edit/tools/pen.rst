@@ -1,8 +1,8 @@
 .. _tool-grease-pencil-edit-pen:
 
-***********
+***
 Pen
-***********
+***
 
 .. reference::
 
@@ -15,7 +15,7 @@ Usage
 =====
 
 Extrude Point
-   :kbd:`LMB` click to add a new point connected to the currently selected point. 
+   :kbd:`LMB` click to add a new point connected to the currently selected point.
    The new point will have :ref:`handle type <curve-bezier-handle-type>` of *Vector*.
    :kbd:`Shift-LMB` click will add point as type *Auto*.
    However, the handle type switches to *Align* when handles are moved (See *Move Point*).
