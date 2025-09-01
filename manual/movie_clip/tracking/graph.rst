@@ -3,14 +3,6 @@
 Graph View
 **********
 
-.. figure:: /images/movie-clip_tracking_graph_example.png
-
-   Graph View.
-
-
-Introduction
-============
-
 The graph or curves view has numerous purposes based on the color of the lines.
 The red and green lines on the graph show you the speed of the trackers at a given frame.
 Green is vertical movement, Red is horizontal. Therefore the first frames will always be at zero.
@@ -21,6 +13,10 @@ This is the one line that you want to be as flat as possible and as closer to ze
 The high points will show you where in your shot you are having inaccurate tracking.
 
 Frames outside of scene frame range are darkened.
+
+.. figure:: /images/movie-clip_tracking_graph_example.png
+
+   Graph View.
 
 
 Header
