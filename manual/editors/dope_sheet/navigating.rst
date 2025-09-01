@@ -120,6 +120,20 @@ Toggle Graph Editor :kbd:`Ctrl-Tab`
 
 ----------
 
+.. _bpy.types.SpaceDopeSheetEditor.show_cache:
+
+Cache
+   Which simulation caches to show on the timeline.
+
+   Baked simulations will be shown as fully opaque, cached simulations will be slightly transparent,
+   and invalid caches will be slightly transparent with dark diagonal stripes.
+
+   .. figure:: /images/editors_timeline_cache.png
+
+      Timeline Cache.
+
+----------
+
 Area
    Area controls. See the :doc:`user interface </interface/window_system/areas>`
    documentation for more information.
