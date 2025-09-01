@@ -48,7 +48,7 @@ before you can add nodes.
 Header
 ======
 
-See :doc:`Nodes </interface/controls/nodes/introduction>` for the header items common to
+See :doc:`Nodes </interface/controls/nodes/index>` for the header items common to
 all node editors.
 
 Texture Type

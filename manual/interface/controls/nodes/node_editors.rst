@@ -1,48 +1,11 @@
-.. index:: Nodes
-
-************
-Introduction
-************
-
-Blender contains different node-based editors with different purposes,
-so this section only explains how to work with nodes in general.
-The list below shows the different types of nodes and where they're documented.
-
-.. figure:: /images/interface_controls_nodes_introduction_example.jpg
-
-   Example of a node editor.
-
-.. _tab-node-tree-types:
-
-.. list-table::
-   :header-rows: 1
-   :class: valign
-   :widths: 10 30 60
-
-   * - Icon
-     - Name
-     - Description
-   * - .. rubric:: :bl-icon:`geometry_nodes`
-     - :doc:`Geometry Nodes </modeling/geometry_nodes/index>`
-     - Used for procedural modeling.
-   * - .. rubric:: :bl-icon:`node_material`
-     - :doc:`Shader Nodes </render/shader_nodes/index>`
-     - Used to create materials for objects.
-   * - .. rubric:: :bl-icon:`node_compositing`
-     - :doc:`Composite Nodes </compositing/index>`
-     - Used to edit rendered images.
-   * - .. rubric:: :bl-icon:`node_texture`
-     - :doc:`Texture Nodes </editors/texture_node/introduction>`
-     - Used to create custom textures.
-
-
 .. _bpy.types.SpaceNodeEditor:
 
-Editor Interface
-================
+************
+Node Editors
+************
 
 Header
-------
+======
 
 The *Header* contains various menus, buttons and options, partially based on the current node tree type.
 
@@ -82,7 +45,7 @@ Snapping
 .. _bpy.types.SpaceNodeOverlay.show_overlays:
 
 Overlays
-^^^^^^^^
+========
 
 Overlays are information that is displayed on top of the nodes and node trees.
 There is a toggle to show or hide all overlays for the node editor next to the overlay popover.
@@ -124,16 +87,109 @@ Timings
 
 
 Toolbar
--------
+=======
 
 The *Toolbar* contains a set of tools that can be used in the node editor.
 
 
 Sidebar
--------
+=======
 
-The :doc:`Sidebar </interface/controls/nodes/sidebar>` region contains properties for
+The Sidebar region contains properties for
 the currently selected node as well as node editor-specific settings.
+
+
+Node
+----
+
+.. reference::
+
+   :Panel:     :menuselection:`Sidebar --> Node`
+
+.. figure:: /images/interface_controls_nodes_sidebar_item.png
+   :align: center
+
+   Node tab with a compositing Render Layers node selected.
+
+
+Node
+^^^^
+
+.. _bpy.types.Node.name:
+
+Name
+   A unique node identifier inside this node tree.
+
+.. _bpy.types.Node.label:
+
+Label
+   Nodes can be given a title by modifying the text field.
+
+.. _bpy.types.Node.warning_propagation:
+
+Warning Propagation
+   Controls which warnings in this node will be propagated to the parent node group or modifier.
+   This only exists for Geometry Nodes.
+
+.. _bpy.types.Node.use_custom_color:
+
+Color
+"""""
+
+By default, the node's background color is defined by the user theme.
+This color can be overridden by selecting a custom color in this panel.
+Custom node colors can be used to provide a visual cue to help distinguish some nodes from others.
+The button to the right of the checkbox lets you save colors as presets
+for reusing later on (much like a palette).
+
+.. _bpy.types.Node.color:
+
+Color
+   Color of the node background.
+
+   Node Color Specials
+      This menu contains :doc:`/interface/operators` for working with nodes with custom colors.
+
+      .. _bpy.ops.node.node_copy_color:
+
+      Copy Color
+         Copies the color of the :term:`Active` node and applies it to all selected nodes.
+
+
+Properties
+^^^^^^^^^^
+
+The properties that are shown depend on the type of node selected,
+e.g. a Mix node has different properties than a Mask node.
+
+
+Tool
+----
+
+.. reference::
+
+   :Panel:     :menuselection:`Sidebar region --> Tool`
+
+
+Active Tool
+^^^^^^^^^^^
+
+The info in this panel changes with the selected tool.
+
+
+View
+----
+
+.. reference::
+
+   :Panel:     :menuselection:`Sidebar region --> View`
+
+
+Annotations
+^^^^^^^^^^^
+
+You can select the Annotate tool in the Toolbar to make annotations in the node editor.
+See :doc:`Annotate Tool </interface/annotate_tool>` for more info.
 
 
 Navigating

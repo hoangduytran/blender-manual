@@ -22,15 +22,13 @@ Select Linked From :kbd:`L`
 Select Linked To :kbd:`Shift-L`
    Expand the selection to nodes which are linked to the outputs of the currently selected nodes.
 Select Grouped :kbd:`Shift-G`
-   Selects nodes that have similar :doc:`properties </interface/controls/nodes/sidebar>`
-   as the active node.
+   Selects nodes that have similar properties as the active node.
 
    Type
       The node type, e.g. all Math nodes.
    Color
-      The node color. (Nodes can be given a custom color to visually organize them in the editor;
-      this is not related to any color information they might consume or produce as part of their function.
-      The color can be set in the :doc:`Sidebar </interface/controls/nodes/sidebar>`.)
+      The node :ref:`color <bpy.types.Node.color>`. (Nodes can be given a custom color to visually organize them in the editor;
+      this is not related to any color information they might consume or produce as part of their function).
    Prefix, Suffix
       Matches the name property from start/end of the text.
 Activate Same Type Previous/Next :kbd:`Shift-]`/:kbd:`Shift-[`
