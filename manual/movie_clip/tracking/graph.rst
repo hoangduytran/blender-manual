@@ -27,11 +27,11 @@ Header
 :bl-icon:`ghost_enabled` Display Hidden
    Displays channels from objects that are hidden.
 :bl-icon:`sequence` Show Frames
-      Visualizes per-frame average reprojection error of all tracks in the active tracking object.
+   Visualizes per-frame average reprojection error of all tracks in the active tracking object.
 :bl-icon:`graph` Show Tracks Motion
-      Shows curves for X and Y speed of tracks.
+   Shows curves for X and Y speed of tracks.
 :bl-icon:`anim` Show Tracks Error
-      Per-frame reprojection error of tracks.
+   Per-frame reprojection error of tracks.
 
 
 Usage
