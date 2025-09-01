@@ -101,7 +101,13 @@ Forward / Up Axis.. todo:: Add this information.
    For example, its common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
 
 Apply Transform
-   .. todo:: Add this information.
+   Bake space transform into object data, avoids getting unwanted rotations
+   to objects when target space is not aligned with Blender's space.
+
+   .. warning::
+
+      Experimental option, use at own risk, known to be broken with armatures/animations.
+
 Use Pre/Post Rotation
    .. todo:: Add this information.
 
@@ -201,7 +207,9 @@ Forward / Up
 Apply Unit
    .. todo:: Add this information.
 Apply Transform
-   .. todo:: Add this information.
+   Applies object *Location*, *Rotation*, and *Scale* to the mesh before export, writing vertices in world space.
+   When disabled, vertices are exported in local object space without applying transforms.
+   See :ref:`bpy.ops.object.transform_apply` for more information on applying transforms.
 
 
 Geometry
