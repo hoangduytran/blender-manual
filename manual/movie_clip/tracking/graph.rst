@@ -22,19 +22,15 @@ Frames outside of scene frame range are darkened.
 Header
 ======
 
-Show Selected (mouse cursor icon)
+:bl-icon:`restrict_select_off` Only Show Selected
    Displays the graph for only selected trackers.
-
-Display Hidden (ghost icon)
+:bl-icon:`ghost_enabled` Display Hidden
    Displays channels from objects that are hidden.
-Filter
-   Display options, defines what curves are visible.
-
-   Frames
+:bl-icon:`sequence` Show Frames
       Visualizes per-frame average reprojection error of all tracks in the active tracking object.
-   Motion
+:bl-icon:`graph` Show Tracks Motion
       Shows curves for X and Y speed of tracks.
-   Error
+:bl-icon:`anim` Show Tracks Error
       Per-frame reprojection error of tracks.
 
 

@@ -44,7 +44,7 @@ Node
 
 Geometry Node Group
    :doc:`/interface/controls/templates/data_block` for creating and selecting node groups.
-Pin (pin icon)
+:bl-icon:`unpinned` / :bl-icon:`pinned` Pinned
    The pin button will keep the current node group selection fixed,
    instead of using the :ref:`Active Modifier <modifier-stack-active>`.
    When a node group is pinned, it will remain visible in the Geometry Node editor

@@ -27,7 +27,7 @@ Grayscale Preview (B/W)
 
 .. _bpy.types.SpaceClipEditor.use_mute_footage:
 
-Mute (eye icon) :kbd:`M`
+:bl-icon:`hide_off` Mute Footage :kbd:`M`
    Hides the movie clip and displays a black image instead.
    This helps to find markers that are tracked inaccurately or not at all.
 

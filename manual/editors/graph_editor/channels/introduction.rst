@@ -33,20 +33,20 @@ Search :kbd:`Ctrl-F`
    show channels that *don't* include the search text.
 
 
-Controls
+Channels
 --------
 
 The headers contain the following toggle buttons:
 
-Pin (pin icon)
+:bl-icon:`unpinned` / :bl-icon:`pinned` Pin
    Keep the row and its children visible even when selecting a different object.
-Hide (eye icon)
+:bl-icon:`hide_off` / :bl-icon:`hide_on` Hide
    Hides the keyframes and curve associated with the channel.
-Modifiers (wrench icon)
+:bl-icon:`modifier_on` / :bl-icon:`modifier_off` Modifiers
    Deactivates the modifiers of the curve.
-Mute (checkbox)
+:bl-icon:`checkbox_hlt` / :bl-icon:`:bl-icon:`checkbox_dehlt` Mute
    Deactivates the curve, making the animation behave as though it doesn't exist.
-Lock :kbd:`Tab` (padlock icon)
+:bl-icon:`unlock` / :bl-icon:`locked` Lock :kbd:`Tab`
    Prevent the curve from being edited.
 
    .. note::

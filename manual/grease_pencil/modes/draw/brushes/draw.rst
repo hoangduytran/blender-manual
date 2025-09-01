@@ -197,10 +197,10 @@ Jitter
 
 .. rubric:: Common Options
 
-Stroke Random (stroke icon)
+:bl-icon:`gp_select_strokes` Stroke Random
    Use randomness only at stroke level.
 
-:bl-icon:`stylus_pressure` (Use Pressure)
+:bl-icon:`stylus_pressure` Use Pressure
    Uses the stylus pressure to control how strong the effect is.
    The gradient of the pressure can be customized using
    the :doc:`curve widget </interface/controls/templates/curve>`.

@@ -41,11 +41,11 @@ Common Options
 
 Each modifier has several buttons at its top:
 
-Mute (eye icon)
+:bl-icon:`hide_off` / :bl-icon:`hide_on`  Mute
    Disables the modifier. Useful to compare the image with or without modifications.
-Move (up/down arrow icon)
+:bl-icon:`tria_up` / :bl-icon:`tria_down` Move Strip Modifier
    These two buttons change the modifier's position in the stack which affects its computation order.
-:bl-icon:`x` (Remove Strip Modifier)
+:bl-icon:`x` Remove Strip Modifier
    Deletes the modifier from the stack.
 
 

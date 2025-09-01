@@ -24,9 +24,8 @@ Slot
    The *Slot* menu can be used to select
    the active :ref:`material slot <bpy.types.MaterialSlot>` on the active object.
    The material selector to the right of it can change the material that is in the selected slot.
-Pin (pin icon)
-   The pin button will keep the current material selection fixed.
-   When a material is pinned, it will remain visible in the Shader editor
+:bl-icon:`unpinned` / :bl-icon:`pinned` Pinned
+   Keeps the current material selection visible in the Shader editor
    even when another object or material is selected elsewhere.
 
 
