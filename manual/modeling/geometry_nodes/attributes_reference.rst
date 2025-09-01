@@ -333,41 +333,6 @@ However, the attributes might be expected by Blender to have a certain type.
      - Domain
      - Notes
 
-   * - ``velocity``
-     - *Vector*
-     - *Point*
-     - Used to create motion blur when rendering animations.
-
-   * - ``rest_position``
-     - *Vector*
-     - *Point*
-     - Holds the position of points or vertices from before a geometry is deformed procedurally.
-       Can be created automatically before :doc:`Shape Keys </animation/shape_keys/index>` and
-       :doc:`Modifiers </modeling/modifiers/introduction>` are evaluated with the
-       :ref:`Add Rest Position <bpy.types.Object.add_rest_position_attribute>` option.
-
-   * - ``surface_uv_coordinate``
-     - *2D Vector*
-     - *Curve*
-     - Used to describe curve attachment locations on a mesh surface, typically used for the hair system.
-
-   * - ``crease_vert``
-     - *Float*
-     - *Point*
-     - Vertex attribute used by the Subdivision Surface modifier.
-       The values are expected to be in a range of 0 and 1.
-
-   * - ``crease_edge``
-     - *Float*
-     - *Edge*
-     - Edge attribute used by the Subdivision Surface modifier.
-       The values are expected to be in a range of 0 and 1.
-
-   * - ``uv_seam``
-     - *Boolean*
-     - *Edge*
-     - True if an edge is considered a boundary between UV islands when unwrapping.
-
    * - ``bevel_weight_vert``
      - *Float*
      - *Point*
@@ -377,6 +342,31 @@ However, the attributes might be expected by Blender to have a certain type.
      - *Float*
      - *Edge*
      - Used as edge control for the bevel modifier.
+
+   * - ``crease_edge``
+     - *Float*
+     - *Edge*
+     - Edge attribute used by the Subdivision Surface modifier.
+       The values are expected to be in a range of 0 and 1.
+
+   * - ``crease_vert``
+     - *Float*
+     - *Point*
+     - Vertex attribute used by the Subdivision Surface modifier.
+       The values are expected to be in a range of 0 and 1.
+
+   * - ``custom_normal``
+     - *2D 16-Bit Integer Array*
+     - *Face Corner*
+     - Used by :ref:`modeling_meshes_normals_custom` for mesh objects.
+
+   * - ``rest_position``
+     - *Vector*
+     - *Point*
+     - Holds the position of points or vertices from before a geometry is deformed procedurally.
+       Can be created automatically before :doc:`Shape Keys </animation/shape_keys/index>` and
+       :doc:`Modifiers </modeling/modifiers/introduction>` are evaluated with the
+       :ref:`Add Rest Position <bpy.types.Object.add_rest_position_attribute>` option.
 
    * - ``sculpt_face_set``
      - *Integer*
@@ -388,10 +378,20 @@ However, the attributes might be expected by Blender to have a certain type.
      - *Point*
      - Used by the :ref:`Sculpt Masking Feature <sculpt-masks>`.
 
-   * - ``custom_normal``
-     - *2D 16-Bit Integer Array*
-     - *Face Corner*
-     - Used by :ref:`modeling_meshes_normals_custom` for mesh objects.
+   * - ``surface_uv_coordinate``
+     - *2D Vector*
+     - *Curve*
+     - Used to describe curve attachment locations on a mesh surface, typically used for the hair system.
+
+   * - ``uv_seam``
+     - *Boolean*
+     - *Edge*
+     - True if an edge is considered a boundary between UV islands when unwrapping.
+
+   * - ``velocity``
+     - *Vector*
+     - *Point*
+     - Used to create motion blur when rendering animations.
 
 
 Custom Attributes
