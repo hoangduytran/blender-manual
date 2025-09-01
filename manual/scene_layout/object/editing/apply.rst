@@ -64,7 +64,6 @@ Apply Properties
 
 
 .. _bpy.ops.object.transforms_to_deltas:
-.. _bpy.ops.object.anim_transforms_to_deltas:
 
 Transforms to Deltas
 ====================
@@ -75,18 +74,19 @@ Transforms to Deltas
    :Menu:      :menuselection:`Object --> Apply --> Location / Rotation / Scale to Deltas`
    :Shortcut:  :kbd:`Ctrl-A`
 
-Converts primary object transformations to :ref:`delta transforms <bpy.types.Object.delta>`,
-any existing delta transforms will be included as well.
+Converts the object's primary transforms (*Location*, *Rotation*, *Scale*) into
+:ref:`Delta Transforms <bpy.types.Object.delta>`.
+Any existing delta transforms will be added to the new values.
 
-- Location to Deltas
-- Rotation to Deltas
-- Scale to Deltas
+This allows you to "bake" the current transforms into the delta channels, while leaving the primary
+transform channels free for new adjustments or keyframes.
 
-All Transforms to Deltas
-   Converts all primary transformations to delta transforms.
-Animated Transform to Deltas
-   Converts the primary transformation animations
-   (of the translation, scale, and, rotation values) to delta transforms.
+Available options:
+
+- **Location to Deltas** -- Converts the object's location to *Delta Location*.
+- **Rotation to Deltas** -- Converts the object's rotation to *Delta Rotation*.
+- **Scale to Deltas** -- Converts the object's scale to *Delta Scale*.
+- **All Transforms to Deltas** -- Converts all three at once.
 
 
 Options
@@ -94,6 +94,28 @@ Options
 
 Reset Values
    Clear primary transform values after transferring to deltas.
+
+   Clears the primary transform values after transferring them to deltas.
+   When enabled, the object's main *Location*, *Rotation*, and *Scale* are reset
+   (e.g. to 0 for location/rotation and 1 for scale), while the appearance remains unchanged
+   because the deltas now contain the previous values.
+
+
+.. _bpy.ops.object.anim_transforms_to_deltas:
+
+Animated Transform to Deltas
+============================
+
+.. reference::
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Object --> Apply --> Animated Transform to Deltas`
+
+Converts existing animation keyframes from the object's primary transforms
+(*Location*, *Rotation*, *Scale*) into :ref:`Delta Transforms <bpy.types.Object.delta>`.
+
+This means that the animation data is moved from the main transform channels
+to the corresponding delta channels, leaving the main transforms unchanged at their current values.
 
 
 .. _bpy.ops.object.visual_transform_apply:
