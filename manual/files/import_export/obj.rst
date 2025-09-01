@@ -61,6 +61,16 @@ Path Separator
    structure using :doc:`/scene_layout/collections/index`.
 
 
+Materials
+---------
+
+Material Name Collision
+   Behavior when the name of an imported material conflicts with an existing material.
+
+   :Make Unique: Import each USD material as a unique Blender material.
+   :Reference Existing: If a material with the same name already exists, reference that instead of importing.
+
+
 .. _bpy.ops.wm.obj_export:
 
 Exporting
