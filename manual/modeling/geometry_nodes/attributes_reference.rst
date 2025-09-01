@@ -360,6 +360,16 @@ However, the attributes might be expected by Blender to have a certain type.
      - *Face Corner*
      - Used by :ref:`modeling_meshes_normals_custom` for mesh objects.
 
+   * - ``freestyle_edge``
+     - *Boolean*
+     - *Edge*
+     - Used by :ref:`freestyle-edge-marks` for mesh objects.
+
+   * - ``freestyle_face``
+     - *Boolean*
+     - *Edge*
+     - Used by :ref:`freestyle-face-marks` for mesh objects.
+
    * - ``rest_position``
      - *Vector*
      - *Point*
