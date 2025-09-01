@@ -3,27 +3,9 @@
 FBX
 ***
 
-.. reference::
-
-   :Category:  Import-Export
-   :Menu:      :menuselection:`File --> Import/Export --> FBX (.fbx)`
-
-
-Enabling Add-on
-===============
-
-This add-on is enabled by default, in case it is not:
-
-#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "FBX" and check the *Enable Add-on* checkbox.
-
-
-Usage
-=====
-
-This format is mainly use for interchanging character animations between applications
-and is supported by applications such as Cinema4D, Maya, Autodesk 3ds Max, Wings3D and
-engines such as Unity3D, Unreal Engine 3/UDK and Unreal Engine 4.
+The *FBX* (Filmbox) format is widely used for exchanging 3D data between applications,
+especially for animated characters and complex scene data. It is supported by software
+such as Autodesk Maya, 3ds Max, Cinema 4D, and game engines like Unity and Unreal Engine.
 
 The exporter can bake mesh modifiers and animation into the FBX so the final result looks the same as in Blender.
 
@@ -60,18 +42,34 @@ The exporter can bake mesh modifiers and animation into the FBX so the final res
 
 .. note::
 
-   Blender now only supports complex node-based shading. FBX having a fixed pipeline-like support of materials,
-   this add-on converts between them.
+   Blender now only supports complex node-based shading.
+   FBX having a fixed pipeline-like support of materials, this add-on converts between them.
 
 
-Properties
-==========
+Enabling Add-on
+===============
 
-Import
-------
+This add-on is enabled by default, in case it is not:
+
+#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
+#. Search "FBX" and check the *Enable Add-on* checkbox.
+
+
+Import (Legacy)
+===============
+
+.. reference::
+
+   :Menu:      :menuselection:`File --> Import --> FBX (.fbx) (Legacy)`
+
+.. important::
+
+   The importing functionality of add-on is deprecated,
+   use the official :ref:`FBX Importer <bpy.ops.wm.fbx_import>` instead.
+
 
 Include
-^^^^^^^
+-------
 
 Import Normals
    .. todo:: Add this information.
@@ -86,7 +84,7 @@ Image Search
 
 
 Transform
-^^^^^^^^^
+---------
 
 Scale
    Value by which to scale the imported objects in relation to the world's origin.
@@ -109,14 +107,14 @@ Use Pre/Post Rotation
 
 
 Animation
-^^^^^^^^^
+---------
 
 Animation Offset
    Offset to apply to animation timestamps, in frames.
 
 
 Armature
-^^^^^^^^
+--------
 
 Ignore Leaf Bones
    Ignore the last bone at the end of each chain (used to mark the length of the previous bone).
@@ -128,8 +126,14 @@ Primary/Secondary Bone Axis
    .. todo:: Add this information.
 
 
+.. _bpy.ops.export_scene.fbx:
+
 Export
-------
+======
+
+.. reference::
+
+   :Menu:      :menuselection:`File --> Export --> FBX (.fbx)`
 
 Path Mode
    When referencing paths in exported files you may want some control as to the method used since absolute paths
@@ -166,7 +170,7 @@ Batch Mode
 
 
 Include
-^^^^^^^
+-------
 
 Selected Objects
    Only export the selected objects. Otherwise export all objects in the scene.
@@ -180,7 +184,7 @@ Custom Properties
 
 
 Transform
-^^^^^^^^^
+---------
 
 Scale
    Scale the exported data by this value. 10 is the default
@@ -201,7 +205,7 @@ Apply Transform
 
 
 Geometry
-^^^^^^^^
+--------
 
 Smoothing
    Export smoothing information.
@@ -228,7 +232,7 @@ Tangent Space
 
 
 Armatures
-^^^^^^^^^
+---------
 
 Primary/Secondary Bone Axis
    .. todo:: Add this information.
@@ -241,7 +245,7 @@ Add Leaf Bones
 
 
 Bake Animation
-^^^^^^^^^^^^^^
+--------------
 
 .. todo:: Add this information.
 
