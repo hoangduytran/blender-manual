@@ -71,7 +71,7 @@ Operation
       :Add: The sum of the two values.
       :Subtract: The difference between the two values.
       :Multiply: The product of the two values.
-      :Divide: The division of the first value by the second value.
+      :Divide: The division of the first value by the second value. Division by zero results in zero.
       :Multiply Add: The sum of the product of the two values with *Addend*.
       :Power: The *Base* raised to the power of *Exponent*.
       :Logarithm: The log of the value with a *Base* as its base.
