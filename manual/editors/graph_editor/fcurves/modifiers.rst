@@ -192,8 +192,8 @@ changed from their defaults, it defines a simple infinite cycle.
 This special case receives some additional support from other areas of Blender:
 
 - Automatic Bézier handle placement is aware of the cycle and adjusts to achieve a smooth transition.
-- The :ref:`Cycle-Aware Keying <timeline-keying>` option can be enabled to take
-  the cycle into account when inserting new keyframes.
+- The :ref:`Cycle-Aware Keying <bpy.types.ToolSettings.use_keyframe_cycle_aware>`
+  option can be enabled to take the cycle into account when inserting new keyframes.
 
 
 .. index:: F-Curve Modifiers; Noise Modifier
