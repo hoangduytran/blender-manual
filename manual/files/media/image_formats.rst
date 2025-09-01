@@ -1,10 +1,11 @@
 .. _bpy.types.Image:
 .. _bpy.ops.image:
-.. _files-media-image_formats:
 
 **************************
 Supported Graphics Formats
 **************************
+
+.. _files-media-image_formats:
 
 Image Formats
 =============
@@ -25,72 +26,84 @@ This is the list of image file formats supported internally by Blender:
      - :doc:`Metadata </render/output/properties/metadata>`
      - :term:`DPI`
      - Extensions
-   * - BMP
-     - 8bit
-     - |tick|
-     - |cross|
-     - |tick|
-     - ``.bmp``
-   * - Iris
-     - 8, 16bit
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.sgi`` ``.rgb`` ``.bw``
-   * - PNG
-     - 8, 16bit
-     - |tick|
-     - |tick|
-     - |tick|
-     - ``.png``
    * - JPEG
      - 8bit
      - |cross|
      - |tick|
      - |tick|
      - ``.jpg`` ``.jpeg``
-   * - JPEG 2000
-     - 8, 12, 16bit
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.jp2`` ``.jp2`` ``.j2c``
-   * - Targa
-     - 8bit
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.tga``
-   * - `Cineon & DPX`_
-     - 8, 10, 12, 16bit
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.cin`` ``.dpx``
    * - `OpenEXR`_
      - float 16, 32bit
      - |tick|
      - |tick|
      - |tick|
      - ``.exr``
-   * - `Radiance HDR`_
-     - float
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.hdr``
-   * - TIFF
+   * - PNG
      - 8, 16bit
      - |tick|
-     - |cross|
      - |tick|
-     - ``.tif`` ``.tiff``
+     - |tick|
+     - ``.png``
    * - WebP
      - 8bit
      - |tick|
      - |tick|
      - |cross|
      - ``.webp``
+   * - BMP
+     - 8bit
+     - |tick|
+     - |cross|
+     - |tick|
+     - ``.bmp``
+   * - `Cineon`_
+     - 8, 10, 12, 16bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.cin``
+   * - `DPX`_
+     - 8, 10, 12, 16bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.dpx``
+   * - Iris
+     - 8, 16bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.sgi`` ``.rgb`` ``.bw``
+   * - JPEG 2000
+     - 8, 12, 16bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.jp2`` ``.jp2`` ``.j2c``
+   * - `Radiance HDR`_
+     - float
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.hdr``
+   * - Targa
+     - 8bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.tga``
+   * - Targa Raw
+     - 8bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.tga``
+   * - TIFF
+     - 8, 16bit
+     - |tick|
+     - |cross|
+     - |tick|
+     - ``.tif`` ``.tiff``
 
 .. hint::
 
@@ -161,7 +174,8 @@ Saving Images
 =============
 
 File Format
-   Choose what format to save the image as.
+   Choose the image file format to save to. Based on which format is used,
+   other options such as channels, bit depth and compression level are available.
 
 Color
    The color format to save the image or video to.
