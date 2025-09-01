@@ -18,22 +18,45 @@ multiple Workspaces while working on a project.
 
 
 .. _workspaces-controls:
-.. _bpy.ops.screen.workspace_cycle:
 
 Controls
 ========
 
 Tabs
-   Click on the tabs to switch between the workspaces.
-   You can also use the keyboard shortcuts :kbd:`Ctrl-PageUp` and :kbd:`Ctrl-PageDown`.
+   Click on the tabs to switch between workspaces.
    Double-click a tab to rename the workspace.
 
 .. _bpy.ops.workspace.add:
 
 :bl-icon:`add` Add Workspace
-   Click on the *Add* button to add a new workspace.
-Context menu :kbd:`RMB`
-   The context menu contains options to duplicate, delete and reorder workspaces.
+   Adds a new workspace from a predefined template (e.g. *Modeling*, *Sculpting*, *Compositing*).
+
+.. rubric:: Context Menu :kbd:`RMB`
+
+.. _bpy.ops.workspace.duplicate:
+
+Duplicate
+   Makes a copy of the selected workspace, including its screen layout and editors.
+
+.. _bpy.ops.workspace.delete:
+
+Delete
+   Deletes the selected workspace.
+   If it is the last workspace, it cannot be removed.
+
+.. _bpy.ops.workspace.reorder_to_front:
+.. _bpy.ops.workspace.reorder_to_back:
+
+Reorder to Front/Back
+   Moves the workspace tab to the first (front) or last (back) position in the tab list.
+
+.. _bpy.ops.screen.workspace_cycle:
+
+Previous Workspace :kbd:`Ctrl-PageUp`
+   Activates the workspace immediately to the left of the current one.
+
+Next Workspace :kbd:`Ctrl-PageDown`
+   Activates the workspace immediately to the right of the current one.
 
 
 Default Workspaces
