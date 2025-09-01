@@ -24,25 +24,32 @@ Transforms
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Apply --> Location / Rotation / Scale / Rotation & Scale`
 
-Applying transform values essentially resets the values of object's location, rotation or scale,
-while visually keeping the object data in-place.
-The object origin point is moved to the global origin, the rotation is cleared and scale values are set to 1.
+Applying transforms resets an object's *Location*, *Rotation*, or *Scale* values
+while visually keeping the object in place.
+In practice, this means:
 
-For simple cases you won't notice any difference the 3D Viewport or rendered output,
-yet modifiers and constraints may depend on object transformation.
+- The object's origin is moved to the global origin (for location).
+- Rotation values are cleared to zero.
+- Scale values are reset to 1.0.
+
+The geometry itself is adjusted so that the object continues to appear unchanged in the 3D Viewport
+and final render.
+
+For simple cases you may not notice a difference,
+but applying transforms can affect how modifiers, constraints, and parenting behave,
+since they often depend on an object's transform values.
 
 .. warning:: Armature Objects
 
-   While applying transformations to armatures is supported,
-   this does **not** apply to their pose location, animation curves or constraints.
-   This tool should be used before rigging and animation.
+   Applying transforms to armatures is supported, but it does **not** affect pose locations,
+   animation curves, or constraints.
+   It is recommended to apply transforms before rigging and animation.
 
-When applying transforms to an object that shares Object Data between multiple objects,
-the object must first be made a :ref:`Single User <data-system-datablock-make-single-user>`
-which can be performed by confirming the pop-up message.
+.. important::
 
-When running *Apply Transform*, the :ref:`bpy.ops.screen.redo_last` panel lets you choose
-the combination of transformations to apply.
+   When applying transforms to an object that shares Object Data with other objects,
+   the data must first be made a :ref:`Single User <data-system-datablock-make-single-user>`.
+   Blender will prompt you to confirm this action.
 
 
 Options
@@ -61,7 +68,7 @@ Scale
    Apply (set) the scale of the selection.
    This will make Blender consider the current scale to be equivalent to 0 in each plane
    i.e. the selection will not scaled, the current scale will be considered to be the "default scale".
-Rotation and Scale
+Rotation & Scale
    Apply (set) the rotation and scale of the selection. Do the above two applications simultaneously.
 Apply Properties
    Modify properties such as curve vertex radius, font size and bone envelope
