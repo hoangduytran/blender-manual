@@ -3,6 +3,12 @@
 Apply
 *****
 
+.. reference::
+
+   :Mode:      Object Mode
+   :Menu:      :menuselection:`Object --> Apply`
+   :Shortcut:  :kbd:`Ctrl-A`
+
 These operations lets you apply several transformations to the selected objects.
 The object transformation coordinates are transferred to the object data.
 If the objects have hierarchical descendants, it also applies those transformations to their children.
@@ -17,7 +23,6 @@ Transforms
 
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Apply --> Location / Rotation / Scale / Rotation & Scale`
-   :Shortcut:  :kbd:`Ctrl-A`
 
 Applying transform values essentially resets the values of object's location, rotation or scale,
 while visually keeping the object data in-place.
@@ -72,7 +77,6 @@ Transforms to Deltas
 
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Apply --> Location / Rotation / Scale to Deltas`
-   :Shortcut:  :kbd:`Ctrl-A`
 
 Converts the object's primary transforms (*Location*, *Rotation*, *Scale*) into
 :ref:`Delta Transforms <bpy.types.Object.delta>`.
@@ -127,7 +131,6 @@ Visual Transform
 
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Apply --> Visual Transform`
-   :Shortcut:  :kbd:`Ctrl-A`
 
 Apply (set) the result of a constraint and apply this back to the object's location, rotation and scale.
 
@@ -139,7 +142,6 @@ Visual Geometry as Mesh
 
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Apply --> Visual Geometry to Mesh`
-   :Shortcut:  :kbd:`Ctrl-A`
 
 Apply the visual state of all selected objects (modifiers, shape keys, hooks, etc.) to object data.
 This is a way to freeze all object data into static meshes, as well as converts non-mesh types to mesh.
