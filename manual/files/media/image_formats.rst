@@ -56,13 +56,13 @@ This is the list of image file formats supported internally by Blender:
      - |cross|
      - |tick|
      - ``.bmp``
-   * - `Cineon`_
+   * - :ref:`Cineon <file-media-cineon_dpx>`
      - 8, 10, 12, 16bit
      - |tick|
      - |cross|
      - |cross|
      - ``.cin``
-   * - `DPX`_
+   * - :ref:`DPX <file-media-cineon_dpx>`
      - 8, 10, 12, 16bit
      - |tick|
      - |cross|
@@ -251,6 +251,8 @@ Color Space
 
 Format Details
 ==============
+
+.. _file-media-cineon_dpx:
 
 Cineon & DPX
 ------------
