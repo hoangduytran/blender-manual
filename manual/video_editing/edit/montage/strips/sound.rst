@@ -30,7 +30,7 @@ and Foley sound effects on channel 7.
 
 .. seealso::
 
-   In the :ref:`timeline-playback` menu of the Timeline you will find some options
+   In the :ref:`animation-editors-playback` menu of the Timeline you will find some options
    concerning audio playback behavior.
 
 

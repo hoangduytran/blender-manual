@@ -98,7 +98,7 @@ Set Preview Range :kbd:`P`
    having to manually rewind each time.
 
    You can change the start or end frame using the corresponding button in the
-   Timeline editor's :ref:`Playback <timeline-playback>` popover.
+   Timeline editor's :ref:`Playback <animation-editors-playback>` popover.
    Alternatively, you can simply run *Set Preview Range* again.
 Clear Preview Range :kbd:`Alt-P`
    Clears the preview range.

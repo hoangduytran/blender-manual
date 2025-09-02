@@ -168,7 +168,7 @@ There are several ways to designate the active keying set:
 
 - Press :kbd:`Shift-K` in the 3D Viewport.
 - Select a keying set in the :ref:`Keying Set <bpy.types.KeyingSets>` panel.
-- Select a keying set in the :ref:`Keying popover <timeline-keying>` in the Timeline header,
+- Select a keying set in the :ref:`Keying popover <animation-editors-keying>` in the Timeline header,
 
 
 .. _whole-character-keying-set:
