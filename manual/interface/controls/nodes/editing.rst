@@ -295,16 +295,20 @@ Applies both the :ref:`bpy.ops.node.hide_socket_toggle` and :ref:`bpy.ops.node.h
 
 .. _bpy.ops.node.read_viewlayers:
 
-Layers
-======
+Read View Layers
+================
 
-Read Render Layers :kbd:`Ctrl-R`
-   Reads all the current scene's render layers from cache, as needed.
-   This can be used to save RAM while rendering because the render layers do not have to be saved in RAM.
-   And also for recovering some information from a failed render.
-   For this to work, :ref:`Cache Result <bpy.types.RenderSettings.use_render_cache>` must be enabled.
+.. reference::
 
-   .. note:: This operator are only available in the :doc:`Compositor </compositing/index>`.
+   :Menu:      :menuselection:`Node --> Read View Layers`
+   :Shortcut:  :kbd:`Ctrl-R`
+
+Reads all the current scene's render layers from cache, as needed.
+This can be used to save RAM while rendering because the render layers do not have to be saved in RAM.
+And also for recovering some information from a failed render.
+For this to work, :ref:`Cache Result <bpy.types.RenderSettings.use_render_cache>` must be enabled.
+
+.. note:: This operator are only available in the :doc:`Compositor </compositing/index>`.
 
 
 .. _bpy.ops.node.connect_to_output:
