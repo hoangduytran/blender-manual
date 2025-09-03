@@ -180,19 +180,19 @@ icon in the top-right corner of the editor (visible only when hovering over the 
 
 .. _bpy.ops.screen.area_dupli:
 
-Duplicate Area into new Window
+Duplicate Area into New Window
 ==============================
 
 .. reference::
 
-   :Menu:      :menuselection:`View --> Area --> Duplicate Area into new Window`
+   :Menu:      :menuselection:`View --> Area --> Duplicate Area into New Window`
 
-A new floating window containing an area can be created from
-:menuselection:`View --> Area --> Duplicate Area into new Window`. (Not available in some editors.)
+Creates a new floating window containing a duplicate of the current editor area.
+The new window is fully functional and part of the same Blender instance.
 
-The new window is a fully functional window, which is part of the same instance of Blender.
-This can be useful, e.g. if you have multiple monitors.
+This is especially useful when working with multiple monitors.
 
-You can also create a new window from an existing area by pressing :kbd:`Shift-LMB`
-on an area corner, then dragging outward slightly.
+.. tip::
 
+   You can also create a new window by holding :kbd:`Shift-LMB` on an area corner
+   and dragging outward slightly.
