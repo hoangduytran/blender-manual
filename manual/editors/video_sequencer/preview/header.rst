@@ -19,6 +19,8 @@ Sidebar :kbd:`N`
    Show or hide the :ref:`Sidebar <ui-region-sidebar>`.
 Tool Settings
    Show or hide the settings for the currently selected tool.
+Footer
+   Show or hide the :ref:`Sidebar <ui-region-footer>`.
 
 ----------
 

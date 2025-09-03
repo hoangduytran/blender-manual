@@ -115,11 +115,27 @@ with settings of objects within the editor and the editor itself.
 :kbd:`N` toggles the visibility of the Sidebar.
 
 
+.. _ui-region-footer:
+
 Footer
 ======
 
 Some editors show a bar (on top/bottom of the editor area)
 that displays information about for example the active tool or operator.
+
+In animation editors, the footer contains controls and options related to playback, keying, auto keyframing, and transport.
+
+These settings allow you to:
+
+- Control how animations are previewed and synchronized with audio.
+- Insert and manage keyframes through keying sets and auto keying.
+- Navigate the timeline using playback and transport controls.
+- Adjust frame ranges and preview specific segments of the animation.
+
+.. seealso::
+
+   For a detailed description of all properties and controls commonly found in the footer,
+   see the :ref:`Animation Editors Footer <animation-editors-foot
 
 
 Arranging

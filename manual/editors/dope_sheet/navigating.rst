@@ -10,6 +10,7 @@ As with most editors, you can:
 
 You can also use the scrollbars for this.
 
+
 .. _dope-sheet-view-menu:
 
 View Menu
@@ -22,6 +23,8 @@ Adjust Last Operation
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
    Shows or hides the Channels region (the list of animated property names on the left).
+Footer
+   Show or hide the :ref:`Sidebar <ui-region-footer>`.
 
 ----------
 
@@ -193,3 +196,21 @@ Options for playhead snapping which helps you position the playhead precisely wh
 by snapping it to specific elements like frames, markers, or keyframes.
 
 See :ref:`Playhead Snapping <playhead-snapping>` for more information.
+
+
+Footer
+======
+
+The footer contains controls and options related to playback, keying, auto keyframing, and transport.
+
+These settings allow you to:
+
+- Control how animations are previewed and synchronized with audio.
+- Insert and manage keyframes through keying sets and auto keying.
+- Navigate the timeline using playback and transport controls.
+- Adjust frame ranges and preview specific segments of the animation.
+
+.. seealso::
+
+   For a detailed description of all properties and controls commonly found in the footer,
+   see the :ref:`Animation Editors Footer <animation-editors-foot

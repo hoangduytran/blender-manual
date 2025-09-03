@@ -101,6 +101,8 @@ Adjust Last Operation
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
    Shows or hides the :ref:`Channels Region <editors-graph_editor-channels_region>`.
+Footer
+   Show or hide the :ref:`Sidebar <ui-region-footer>`.
 
 ----------
 
@@ -406,6 +408,24 @@ Playhead
 
 Proportional Editing :kbd:`O`
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
+
+
+Footer
+======
+
+The footer contains controls and options related to playback, keying, auto keyframing, and transport.
+
+These settings allow you to:
+
+- Control how animations are previewed and synchronized with audio.
+- Insert and manage keyframes through keying sets and auto keying.
+- Navigate the timeline using playback and transport controls.
+- Adjust frame ranges and preview specific segments of the animation.
+
+.. seealso::
+
+   For a detailed description of all properties and controls commonly found in the footer,
+   see the :ref:`Animation Editors Footer <animation-editors-foot
 
 
 Sidebar Region
