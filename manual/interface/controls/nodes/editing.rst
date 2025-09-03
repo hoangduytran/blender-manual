@@ -190,14 +190,17 @@ Delete with Reconnect :kbd:`Ctrl-X`
    to their former output nodes.
 
 
+Show/Hide
+=========
+
 .. _bpy.ops.node.mute_toggle:
 
 Mute
-====
+----
 
 .. reference::
 
-   :Menu:      :menuselection:`Node --> Toggle Node Mute`
+   :Menu:      :menuselection:`Node --> Show/Hide --> Mute`
    :Shortcut:  :kbd:`M`
 
 Muting a node removes its contribution to the node tree,
@@ -209,38 +212,73 @@ Links will appear red as an indicator of passing through the muted node.
    Individual node links can be muted with :ref:`bpy.ops.node.links_mute`.
 
 
-Show/Hide
-=========
-
-.. _bpy.ops.node.hide_toggle:
-
-Hide :kbd:`H`
-   Collapses the node so only the node header is visible.
-   This can also be toggled by clicking the triangle on the left of the node header.
-
 .. _bpy.ops.node.preview_toggle:
 
-Toggle Node Preview :kbd:`Shift-H`
-   Shows/Hides a preview region on the node that displays the frame
-   after that node's operation has been applied. This can also be toggled
-   by clicking the material ball icon in the node header.
+Node Preview
+------------
 
-   .. note:: This operator are only available in the :doc:`Compositor </compositing/index>`.
+.. reference::
 
-.. _bpy.ops.node.hide_socket_toggle:
+   :Menu:      :menuselection:`Node --> Show/Hide --> Node Preview`
+   :Shortcut:  :kbd:`Shift-H`
 
-Toggle Hidden Node Sockets :kbd:`Ctrl-H`
-   Collapses/Expands any input or output sockets that have no other nodes connected to them.
+Shows/Hides a preview region on the node that displays the frame
+after that node's operation has been applied. This can also be toggled
+by clicking the material ball icon in the node header.
+
+.. note:: This operator are only available in the :doc:`Compositor </compositing/index>`.
+
 
 .. _bpy.ops.node.options_toggle:
 
-Toggle Node Options
-   Shows/Hides all node properties.
+Node Options
+------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Show/Hide --> Node Options`
+
+Shows/Hides all node properties.
+
+
+.. _bpy.ops.node.hide_socket_toggle:
+
+Unconnected Sockets
+-------------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Show/Hide --> Unconnected Sockets`
+   :Shortcut:  :kbd:`Ctrl-H`
+
+Collapses/Expands any input or output sockets that have no other nodes connected to them.
+
+
+.. _bpy.ops.node.hide_toggle:
+
+Collapse
+--------
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Show/Hide --> Unconnected Sockets`
+   :Shortcut:  :kbd:`H`
+
+Collapses the node so only the node header is visible.
+This can also be toggled by clicking the triangle on the left of the node header.
+
 
 .. _bpy.ops.node.collapse_hide_unused_toggle:
 
 Collapse and Hide Unused Sockets
-   Applies both the *Toggle Hidden Node Sockets* and *Hide* operations.
+--------------------------------
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Show/Hide --> Unconnected Sockets`
+   :Shortcut:  :kbd:`H`
+
+Applies both the :ref:`bpy.ops.node.hide_socket_toggle` and :ref:`bpy.ops.node.hide_toggle` operations.
 
 
 .. _bpy.ops.node.read_viewlayers:
