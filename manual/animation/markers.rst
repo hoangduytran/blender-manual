@@ -296,12 +296,11 @@ Bind Camera to Markers
 
 .. reference::
 
-   :Editor:    Timeline
+   :Mode:      All modes
    :Menu:      :menuselection:`Marker --> Bind Camera to Markers`
    :Shortcut:  :kbd:`Ctrl-B`
 
-*Bind Camera to Markers* is a special operator only available in the *Timeline*.
-The operator allows markers to be used to set the active object as the active camera.
+*Bind Camera to Markers* allows markers to be used to set the active object as the active camera.
 
 To use this operator, select the object to become the active camera
 and select a marker to bind the active camera to.
