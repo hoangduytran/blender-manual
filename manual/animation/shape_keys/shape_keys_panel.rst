@@ -38,13 +38,13 @@ Active Shape Key Index
 
    .. _bpy.types.ShapeKey.mute:
 
-   Mute (check mark)
+   :bl-icon:`checkbox_hlt` / :bl-icon:`:bl-icon:`checkbox_dehlt` Mute
       If unchecked, the shape key will not be taken into consideration when
       mixing the shape key stack into the result visible in the 3D Viewport.
 
    .. _bpy.types.ShapeKey.lock_shape:
 
-   Lock Shape (lock icon)
+   :bl-icon:`unlocked` / :bl-icon:`locked` Lock Shape
       Shape keys can be locked to protect them from accidental modification due to inadvertently
       selecting the wrong key for editing in the list. Most common sculpt and edit mode operators
       and tools that move vertices abort with an error if the active shape key is locked.
