@@ -129,6 +129,55 @@ and releasing the mouse there. The two areas do not need to be side-by-side,
 though they must be inside the same window.
 
 
+.. _bpy.ops.screen.screen_full_area:
+
+Maximize Area
+=============
+
+.. reference::
+
+   :Menu:      :menuselection:`View --> Area --> Toggle Maximize Area`
+   :Shortcut:  :kbd:`Ctrl-Spacebar`
+
+Expands the editor area so it fills the whole window, while keeping the Topbar and Status Bar visible.
+This is useful for focusing on a single editor (e.g. 3D Viewport, Shader Editor) without changing your workspace layout.
+
+To return to normal size, use the shortcut again or click the *Back to Previous* button in the Topbar.
+
+
+.. _bpy.ops.screen.back_to_previous:
+
+Restore Area
+============
+
+.. reference::
+
+   :Menu:      :menuselection:`View --> Area --> Restore Area`
+   :Shortcut:  :kbd:`Ctrl-Spacebar`
+
+Returns the maximized area back to its original size and restores the previous screen layout.
+
+
+Focus Mode
+==========
+
+.. reference::
+
+   :Menu:      :menuselection:`View --> Area --> Focus Mode`
+   :Shortcut:  :kbd:`Ctrl-Alt-Spacebar`
+
+Expands the editor area so it fills the entire window, hiding:
+
+- The Topbar
+- The Status Bar
+- Secondary :doc:`regions </interface/window_system/regions>` (such as toolbars, sidebars, headers, etc.) of the editor itself.
+
+This mode gives the maximum possible screen space for the active editor.
+
+To return to normal size, use the shortcut again or click the :bl-icon:`fullscreen_exit`
+icon in the top-right corner of the editor (visible only when hovering over the area).
+
+
 .. _bpy.ops.screen.area_dupli:
 
 Duplicate Area into new Window
@@ -147,30 +196,3 @@ This can be useful, e.g. if you have multiple monitors.
 You can also create a new window from an existing area by pressing :kbd:`Shift-LMB`
 on an area corner, then dragging outward slightly.
 
-
-.. _bpy.ops.screen.screen_full_area:
-
-Toggle Maximize Area
-====================
-
-.. reference::
-
-   :Menu:      :menuselection:`View --> Area --> Toggle Maximize Area`
-   :Shortcut:  :kbd:`Ctrl-Spacebar`
-
-Expands the Area so it fills the whole window (while keeping the Topbar and Status Bar visible).
-To return to normal size, use the keyboard shortcut again or click the *Back to Previous* button in the Topbar.
-
-
-Toggle Fullscreen Area
-======================
-
-.. reference::
-
-   :Menu:      :menuselection:`View --> Area --> Toggle Fullscreen Area`
-   :Shortcut:  :kbd:`Ctrl-Alt-Spacebar`
-
-Expands the Area so it fills the whole window, hiding the Topbar, Status Bar, and even the
-secondary :doc:`regions </interface/window_system/regions>` (toolbars etc.) of the Area's own editor.
-To return to normal size, use the keyboard shortcut again or click the icon in the Area's top right corner
-(only becomes visible when hovering).
