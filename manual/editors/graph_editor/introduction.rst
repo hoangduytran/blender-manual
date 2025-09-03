@@ -380,12 +380,9 @@ Snap
    Snap To
       Type of element to snap to.
 
-      Frame
-         Snap to full frames.
-      Second
-         Snap to seconds.
-      Nearest Marker
-         Snap to the nearest :doc:`Marker </animation/markers>`.
+      :Frame: Snap to full frames.
+      :Second: Snap to seconds.
+      :Nearest Marker: Snap to the nearest :doc:`Marker </animation/markers>`.
 
    .. _bpy.types.ToolSettings.use_snap_time_absolute:
 
