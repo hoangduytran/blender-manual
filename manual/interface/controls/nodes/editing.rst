@@ -180,14 +180,26 @@ Duplicate selected nodes, but not their node trees (in the case of group nodes),
 Delete
 ======
 
-Delete :kbd:`X`, :kbd:`Delete`
-   Deletes the selected node(s).
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Delete`
+   :Shortcut:  :kbd:`X`, :kbd:`Delete`
+
+Deletes the selected node(s).
+
 
 .. _bpy.ops.node.delete_reconnect:
 
-Delete with Reconnect :kbd:`Ctrl-X`
-   Deletes the selected node(s), then creates new links connecting their former input nodes
-   to their former output nodes.
+Delete with Reconnect
+=====================
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Delete`
+   :Shortcut:  :kbd:`Ctrl-X`
+
+Deletes the selected node(s), then creates new links connecting their former input nodes
+to their former output nodes.
 
 
 Show/Hide
