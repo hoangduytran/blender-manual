@@ -114,8 +114,23 @@ Second Step :guilabel:`Seconds`
 
 
 
+.. _animation-editors-footer:
+
 Footer
 ======
+
+The footer of the animation editors (such as the Timeline, Dope Sheet, Graph Editor, and NLA Editor)
+contains controls and options related to playback, keying, auto keyframing, and transport.
+
+These settings allow you to:
+
+- Control how animations are previewed and synchronized with audio.
+- Insert and manage keyframes through keying sets and auto keying.
+- Navigate the timeline using playback and transport controls.
+- Adjust frame ranges and preview specific segments of the animation.
+
+The footer is shared across animation editors to provide a consistent workflow for animators,
+whether they are editing keyframes, adjusting curves, or sequencing actions.
 
 .. _animation-editors-playback:
 
