@@ -114,6 +114,13 @@ dl.field-list > dd > p:last-child {
 
 /* TABLE & FIGURE */
 
+/* Limit figure size on mobile to leave room for content. */
+@media (max-width: 63em) {
+	figure.align-right, figure.align-left {
+		max-width: 40%;
+	}
+}
+
 /* Cell's vertical align. */
 /* use "valign" class for middle align */
 table.docutils:not(.valign) td {
