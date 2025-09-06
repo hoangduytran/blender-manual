@@ -123,7 +123,8 @@ Footer
 Some editors show a bar (on top/bottom of the editor area)
 that displays information about for example the active tool or operator.
 
-In animation editors, the footer contains controls and options related to playback, keying, auto keyframing, and transport.
+In animation editors, the footer contains controls and options related to playback, keying, auto keyframing, and
+transport.
 
 These settings allow you to:
 

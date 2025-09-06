@@ -140,7 +140,8 @@ Maximize Area
    :Shortcut:  :kbd:`Ctrl-Spacebar`
 
 Expands the editor area so it fills the whole window, while keeping the Topbar and Status Bar visible.
-This is useful for focusing on a single editor (e.g. 3D Viewport, Shader Editor) without changing your workspace layout.
+This is useful for focusing on a single editor (e.g. 3D Viewport, Shader Editor) without changing your workspace
+layout.
 
 To return to normal size, use the shortcut again or click the *Back to Previous* button in the Topbar.
 
@@ -170,7 +171,8 @@ Expands the editor area so it fills the entire window, hiding:
 
 - The Topbar
 - The Status Bar
-- Secondary :doc:`regions </interface/window_system/regions>` (such as toolbars, sidebars, headers, etc.) of the editor itself.
+- Secondary :doc:`regions </interface/window_system/regions>` (such as toolbars, sidebars, headers, etc.) of the
+  editor itself.
 
 This mode gives the maximum possible screen space for the active editor.
 
