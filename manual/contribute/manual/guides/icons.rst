@@ -2270,3 +2270,4 @@ Below is a list of available icons:
      - .. rubric:: :bl-icon:`zoom_selected`
 
        ``:bl-icon:`zoom_selected```
+     - 
