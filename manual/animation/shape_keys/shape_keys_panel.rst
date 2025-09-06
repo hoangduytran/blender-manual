@@ -38,7 +38,7 @@ Active Shape Key Index
 
    .. _bpy.types.ShapeKey.mute:
 
-   :bl-icon:`checkbox_hlt` / :bl-icon:`:bl-icon:`checkbox_dehlt` Mute
+   :bl-icon:`checkbox_hlt` / :bl-icon:`checkbox_dehlt` Mute
       If unchecked, the shape key will not be taken into consideration when
       mixing the shape key stack into the result visible in the 3D Viewport.
 

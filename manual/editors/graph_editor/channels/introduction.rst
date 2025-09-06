@@ -44,7 +44,7 @@ The headers contain the following toggle buttons:
    Hides the keyframes and curve associated with the channel.
 :bl-icon:`modifier_on` / :bl-icon:`modifier_off` Modifiers
    Deactivates the modifiers of the curve.
-:bl-icon:`checkbox_hlt` / :bl-icon:`:bl-icon:`checkbox_dehlt` Mute
+:bl-icon:`checkbox_hlt` / :bl-icon:`checkbox_dehlt` Mute
    Deactivates the curve, making the animation behave as though it doesn't exist.
 :bl-icon:`unlock` / :bl-icon:`locked` Lock :kbd:`Tab`
    Prevent the curve from being edited.
