@@ -88,5 +88,5 @@ Absolute Shape Keys
 
 .. seealso::
 
-   Shape key operators are available in :ref:`Edit Mode <modeling-meshes-editing-vertices-shape-keys>`,
+   Shape key operators are available in :ref:`Edit Mode <bpy.ops.mesh.blend_from_shape>`,
    which provide additional modeling tools for controlling shape keys.
