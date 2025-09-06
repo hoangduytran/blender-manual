@@ -75,16 +75,18 @@ Sets the handle type for the points on the Bézier curve that are in the selecti
 Type
    The handle type to switch to.
 
-   :Free:
-      The handles are independent of each other.
    :Auto:
       This handle has a completely automatic length and direction
       which is set by Blender to ensure the smoothest result.
-      These handles convert to *Aligned* handles when moved.
+      These handles convert to *Align* handles when moved.
    :Vector:
       Both parts of a handle always point to the previous handle or the next handle which allows
       you to create curves or sections thereof made of straight lines or with sharp corners.
       Vector handles convert to *Free* handles when moved.
-   :Aligned:
+   :Align:
       These handles always lie in a straight line,
       and give a continuous curve without sharp angles.
+   :Free:
+      The handles are independent of each other.
+   :Toggle Free/Align:
+      Replaces Free handles with Align, and all Align with Free handles.
