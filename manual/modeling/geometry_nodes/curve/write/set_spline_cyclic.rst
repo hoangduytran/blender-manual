@@ -19,7 +19,7 @@ to read this property.
 Inputs
 ======
 
-Geometry
+Curve
    Standard geometry input.
 
 Selection
@@ -33,5 +33,5 @@ Cyclic
 Outputs
 =======
 
-Geometry
+Curve
    Standard geometry output.
