@@ -32,7 +32,7 @@ Shader Type
 
 .. _bpy.types.Material.use_nodes:
 
-Use Nodes
+Use Nodes :guilabel:`Object` :guilabel:`Line Style`
    The Use Nodes setting is mostly a legacy setting and should always be checked for materials.
 Slot
    The *Slot* menu can be used to select
