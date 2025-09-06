@@ -163,6 +163,13 @@ The properties that are shown depend on the type of node selected,
 e.g. a Mix node has different properties than a Mask node.
 
 
+Custom Properties
+^^^^^^^^^^^^^^^^^
+
+Create and manage your own properties to store data in the active node.
+See the :ref:`Custom Properties <files-data_blocks-custom-properties>` page for more information.
+
+
 Tool
 ----
 
