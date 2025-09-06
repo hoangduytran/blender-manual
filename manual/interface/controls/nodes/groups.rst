@@ -144,7 +144,7 @@ Tool
    The node group is intended to be used as a :doc:`tool </modeling/geometry_nodes/tools>`.
 
 The :ref:`data-block menu <ui-data-block>` in the header of the Geometry Node Editor
-only lists the node groups whose Usage matches the current :ref:`bpy.types.SpaceNodeEditor.geometry_nodes_type`.
+only lists the node groups whose Usage matches the current :ref:`bpy.types.SpaceNodeEditor.node_tree_sub_type`.
 
 .. tip::
 

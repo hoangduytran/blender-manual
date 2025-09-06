@@ -22,9 +22,9 @@ Interface
 Header
 ------
 
-.. _bpy.types.SpaceNodeEditor.geometry_nodes_type:
+.. _bpy.types.SpaceNodeEditor.node_tree_sub_type:
 
-Geometry Nodes Type
+Node Tree Sub-Type
    Geometry Nodes can have multiple contexts depending on the intended function of the node group.
    Changing the context adjusts the user interface to best fit the needs of the selected context.
 
