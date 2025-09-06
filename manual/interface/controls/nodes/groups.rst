@@ -484,10 +484,27 @@ Ungroup
 Removes the group and places the individual nodes into your editor workspace.
 No internal connections are lost, and now you can link internal nodes to other nodes in your workspace.
 
-Separate :kbd:`P`
-   Separate selected nodes from the node group.
 
-   Copy
-      Copy to parent node tree, keep group intact.
-   Move
-      Move to parent node tree, remove from group.
+.. _bpy.ops.node.group_separate:
+
+Separate
+========
+
+.. reference::
+
+   :Shortcut:  :kbd:`P`
+
+The *Separate* operator removes the selected nodes from a node group
+and places them in the parent node tree.
+This is useful when nodes need to be edited outside of a group for clarity or reuse.
+
+Copy
+   Duplicates the selected nodes into the parent node tree,
+   while keeping the originals inside the group.
+   This is useful when you want to reuse nodes outside of the group
+   but still preserve the group definition.
+
+Move
+   Moves the selected nodes to the parent node tree,
+   removing them from the original group.
+   This is useful when simplifying a group or exposing its contents directly.
