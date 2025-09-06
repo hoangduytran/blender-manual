@@ -18,6 +18,20 @@ A list of all :doc:`shader nodes </render/shader_nodes/index>` is available in t
 Header
 ======
 
+.. _bpy.types.SpaceNodeEditor.shader_type:
+
+Shader Type
+   The type of data whose shader nodes are being edited:
+
+   :Object:
+      Edit shader nodes for the active object's :doc:`Material </render/materials/index>`.
+   :World:
+      Edit shader nodes for the :doc:`World background </render/lights/world>`.
+   :Line Style:
+      Edit shader nodes for Freestyle :doc:`Line Styles </render/freestyle/view_layer/line_style/index>`
+
+.. _bpy.types.Material.use_nodes:
+
 Use Nodes
    The Use Nodes setting is mostly a legacy setting and should always be checked for materials.
 Slot
