@@ -38,7 +38,7 @@ The shape can be further tweaked by changing the weight of individual control
 points in the :doc:`/modeling/surfaces/properties/transform_panel` found in the Sidebar.
 
 The property is called *W*; while there is also one called *Weight*,
-this is the :ref:`Goal Weight <surface-goal-weight>` for softbody simulations.
+this is the :ref:`Goal Weight <surface-goal-weight>` for soft body simulations.
 
 .. _fig-surface-intro-weight:
 
