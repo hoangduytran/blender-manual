@@ -214,6 +214,22 @@ Gamma
    Note that the default display transforms already perform the appropriate conversion,
    so this mainly acts as an additional effect for artistic tweaks.
 
+Working Space
+-------------
+
+File
+  Color space used for all scene linear colors in this file, and for compositing, shader and geometry
+  nodes processing. The default is Linear Rec.709, while Linear Rec.2020 and ACEScg are available for
+  working with a wider gamut of colors and compatibility with ACES workflows.
+  
+  The working space affects the colors of all data-blocks in a file, and has a significant effect on
+  rendering and compositing results. Generally the working space should be chosen at the start of a
+  project and used for all blend files.
+
+  Blender can convert between different working spaces, however this is only an approximation and
+  manual fix-ups are typically needed. When linking and appending data-blocks, colors are
+  automatically converted to match the current file.
+  
 .. _bpy.types.ColorManagedSequencerColorspaceSettings.name:
 
 Sequencer
