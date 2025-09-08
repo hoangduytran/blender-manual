@@ -383,9 +383,10 @@ These guidelines help ensure a configuration works well:
   for every color space and display color space that you can. This helps save image and video
   with correct colorspace information.
   For OpenColorIO 2.5, use the native interop ID support. In earlier versions, add the interop ID
-  as the first alias of the colorspace.
+  as an alias of the colorspace.
 * Mark HDR displays by setting ``encoding: hdr-video`` on the corresponding colorspace.
-
+* For HDR view transforms, use ``HDR 500 nits``, ``HDR 1000 nits``, ``HDR 2000 nits`` or ``HDR 4000 nits``
+  as part of the name to automatically determine maximum luminance for mastering display metadata.
 
 ACES
 ----
