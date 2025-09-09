@@ -50,10 +50,15 @@ Sidebar :kbd:`N`
 
 ----------
 
-Frame Selected :kbd:`NumpadPeriod`
-   Zooms and pans the view to focus on the selected items.
+Show Metadata
+   Displays metadata encoded in the video, if available.
+
+----------
+
 Frame All :kbd:`Home`
    Zooms and pans the view so that the whole video is visible.
+Frame Selected :kbd:`NumpadPeriod`
+   Zooms and pans the view to focus on the selected items.
 Center View to Cursor :guilabel:`Mask Mode`
    Pans the view so that the :ref:`2D Cursor <editors-clip-2d_cursor>` is in the center.
 Zoom
@@ -72,11 +77,6 @@ Zoom
       Zooms the view in or out.
    Zoom to Fit :kbd:`F`
       Like *Frame All*, but uses as much space in the editor as possible.
-
-----------
-
-Show Metadata
-   Displays metadata encoded in the video, if available.
 
 ----------
 

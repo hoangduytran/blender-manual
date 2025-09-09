@@ -1,7 +1,8 @@
+.. _bone-constraints-inverse-kinematics:
 
-************
-Introduction
-************
+******************
+Inverse Kinematics
+******************
 
 Inverse Kinematics (IK) simplifies the animation process,
 and makes it possible to make more advanced animations with lesser effort.
@@ -22,8 +23,8 @@ a simple :ref:`bpy.types.Pose.use_auto_ik` feature in Pose Mode.
 They work by the same method but the constraints offer more options and control.
 Please refer to the following pages for details about these constraints:
 
-- :doc:`IK Solver </animation/constraints/tracking/ik_solver>`
-- :doc:`Spline IK </animation/constraints/tracking/spline_ik>`
+- :doc:`/animation/constraints/tracking/ik_solver`
+- :doc:`/animation/constraints/tracking/spline_ik`
 
 
 Armature IK Panel
@@ -203,8 +204,15 @@ This panel is used to control how the *Pose Bones* work in the IK chain.
 
       The bone IK panel.
 
+.. _bpy.types.PoseBone.ik_stretch:
+
 IK Stretch
    Stretch influence to IK target.
+
+.. _bpy.types.PoseBone.lock_ik_x:
+.. _bpy.types.PoseBone.lock_ik_y:
+.. _bpy.types.PoseBone.lock_ik_z:
+
 Lock
    Disallow movement around the axis.
 Stiffness

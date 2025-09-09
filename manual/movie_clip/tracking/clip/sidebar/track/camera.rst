@@ -31,17 +31,17 @@ Lens
 .. _bpy.types.MovieTrackingCamera.focal_length:
 
 Focal Length
-   Is self-explanatory; it is the focal length with which the movie was shot.
+   The focal length with which the movie was shot.
    It can be set in millimeters or pixels.
 
 .. _bpy.types.MovieTrackingCamera.principal_point:
 
 Optical Center
-Defines the optical center (also known as the *principal point*) of the lens used by the camera.
-In most cases this coincides with the center of the image, but certain lenses may have
-an offset optical center. Refer to the specifications of camera or lens used if needed.
+   Defines the optical center (also known as the *principal point*) of the lens used by the camera.
+   In most cases this coincides with the center of the image, but certain lenses may have
+   an offset optical center. Refer to the specifications of camera or lens used if needed.
 
-The values are given in normalized image coordinates.
+   The values are given in normalized image coordinates.
 
 .. _bpy.types.MovieTrackingCamera.distortion_model:
 

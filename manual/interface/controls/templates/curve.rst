@@ -11,10 +11,10 @@ Curve Widget
 
 This widget is used to edit two types of curves:
 
-- *Shape* curves that simply describe a two-dimensional shape.
+- *Profile* curves that simply describe a two-dimensional shape.
 - *Mapping* curves that map an input value on the X axis to an output value on the Y axis.
 
-The available options are slightly different depending on this type. Also, unlike shape curves,
+The available options are slightly different depending on this type. Also, unlike profile curves,
 mapping curves can't have overhang: each X value must correspond to exactly one Y value.
 
 Control Points
@@ -41,7 +41,7 @@ Controls
    Zoom out to show fewer details and view the curve as a whole.
    You cannot zoom out further than the clipping region (see *Clipping* below).
 
-:bl-icon:`arrow_leftright` Reverse Path :guilabel:`Shape Curves`
+:bl-icon:`arrow_leftright` Reverse Path :guilabel:`Profile Curves`
    Mirror the curve around the diagonal.
 
 :bl-icon:`clipuv_hlt` Clipping Options :guilabel:`Mapping Curves`
@@ -86,10 +86,10 @@ Handle Type
       Results in a smooth curve without the need to manually set up handles.
    :bl-icon:`handle_vector` Vector Handle
       Results in straight lines and a sharp corner.
-   :bl-icon:`handle_free` Free Handle :guilabel:`Shape Curves`
+   :bl-icon:`handle_free` Free Handle :guilabel:`Profile Curves`
       Shows freely movable Bézier handles that are independent of each other.
       This can result in a sharp corner at the control point.
-   :bl-icon:`handle_aligned` Aligned Free Handles :guilabel:`Shape Curves`
+   :bl-icon:`handle_aligned` Aligned Free Handles :guilabel:`Profile Curves`
       Shows freely movable Bézier handles that are locked together to always point in opposite directions.
       This ensures the curve is always smooth at the control point.
    :bl-icon:`handle_autoclamped` Auto Clamped Handle :guilabel:`Mapping Curves`

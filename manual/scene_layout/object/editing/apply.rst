@@ -139,7 +139,9 @@ Visual Transform
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Apply --> Visual Transform`
 
-Apply (set) the result of a constraint and apply this back to the object's location, rotation and scale.
+Apply the result of each selected object's constraints to that object's own transformation.
+This will make the objects keep their location, rotation, and scale even if their
+constraints are disabled or deleted.
 
 
 Visual Geometry as Mesh

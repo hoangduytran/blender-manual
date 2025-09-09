@@ -248,18 +248,18 @@ Camera Path
 .. _bpy.types.SpaceView3D.show_bundle_names:
 
 Marker Names
-   Show the names for reconstructed track objects.
+   Show the names of the reconstructed tracking markers.
 
 .. _bpy.types.SpaceView3D.tracks_display_type:
 
 Tracks
-   Change the display of the reconstructed tracks:
+   Change the display of the tracking markers:
    plain axes, arrows and so on.
 
 .. _bpy.types.SpaceView3D.tracks_display_size:
 
 Size
-   Change the display size of the reconstructed tracks.
+   Change the display size of the tracking markers.
 
 
 .. _3dview-overlay-mesh_edit_mode:

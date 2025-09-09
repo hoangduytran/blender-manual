@@ -17,7 +17,7 @@ It provides access to a wide range of context-sensitive properties used througho
 Navigation Bar
 ==============
 
-Properties are grouped into tabs, shown as a vertical list of icons in the Navigation Bar region the editor.
+Properties are grouped into tabs, shown as a vertical list of icons in the Navigation Bar region of the editor.
 
 The Navigation Bar can be flipped to the left or right of the editor by :kbd:`RMB` on the region and selecting
 :menuselection:`Navigation Bar --> Flip to Left/Right`.
