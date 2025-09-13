@@ -122,21 +122,20 @@ Color space for non-color data like normal maps or displacement maps.
 
 :Non-Color: Generic data that is not color, will not apply any color transform (e.g. normal maps).
 
-View Transforms
----------------
-
-When using a view transforms, it may sometimes still be useful to insert an image in the
-background or foreground without being affected by the view transform.
-
-For this purpose, one of the view transform color spaces can be select for an image.
-
-:ACES 2.0 sRGB
-:AgX Base sRGB
-:Filmic sRGB
-:Khronos PBR Neutral sRGB
-
 Log
 ---
 
 :Filmic Log: Intermediate log color space of Filmic view transform.
 :AgX Log: Intermediate log color space of AgX view transform.
+
+Utilities
+---------
+
+Color spaces corresponding to view transforms. These color spaces can
+be used for background images that should not be affected by the view
+transform, while everything else in the scene is affected.
+
+:ACES 2.0 sRGB: ACES 2.0 view transform
+:AgX Base sRGB: AgX view transform
+:Filmic sRGB: Filmic view transform
+:Khronos PBR Neutral sRGB: Khronos PBR Neutral view transform
