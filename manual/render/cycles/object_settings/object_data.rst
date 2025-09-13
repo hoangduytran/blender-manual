@@ -147,7 +147,7 @@ Shadow Terminator
 
 Geometry Offset
    Offset rays from the surface to reduce shadow terminator artifacts on low-poly geometry.
-   Higher values affect more triangles, a value of one affecting all triangles and zero having no affect.
+   Higher values affect more triangles, a value of one affecting all triangles and zero having no effect.
    The default value only affects triangles at grazing angles to light and should eliminate most artifacts.
 
    Unlike the *Shading Offset*, this option has little affect on the lighting
