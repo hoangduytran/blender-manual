@@ -138,6 +138,8 @@ You can also use the hotkeys :kbd:`X` or :kbd:`Y`,
 or hold the :kbd:`MMB` and drag in the mirror direction.
 
 
+.. _bpy.ops.uv.copy_mirrored_faces:
+
 Copy Mirrored UV Coordinates
 ----------------------------
 
