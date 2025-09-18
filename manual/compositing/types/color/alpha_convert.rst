@@ -28,12 +28,7 @@ Inputs
 
 Image
    Standard color input.
-
-
-Properties
-==========
-
-Mapping
+Type
    The direction of convert alpha.
    For details on the difference between both ways to store alpha values see :term:`Alpha Channel`.
 
