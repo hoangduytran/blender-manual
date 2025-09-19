@@ -94,7 +94,7 @@ Show Markers
    Shows the marker region (provided any markers have been defined).
    When disabled, the :ref:`Marker menu <dopesheet-marker-menu>` is also hidden and marker operators are
    not available in this editor.
-Show Seconds :kbd:`Ctrl-T`
+Use Timecode :kbd:`Ctrl-T`
    Shows timing in seconds instead of frames.
 Sync Visible Range
    Synchronizes the horizontal panning and scale of the editor

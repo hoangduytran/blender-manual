@@ -66,7 +66,7 @@ Limit View to Contents
 Show Markers
    Shows the marker region. When disabled, the *Marker* menu is also hidden
    and marker operators are not available in this editor.
-Show Seconds :kbd:`Ctrl-T`
+Use Timecode :kbd:`Ctrl-T`
    Shows seconds instead of frames on the time axis.
 Sync Visible Range
    Synchronizes the horizontal panning and scale of the editor

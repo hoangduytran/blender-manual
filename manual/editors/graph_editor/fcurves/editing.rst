@@ -54,9 +54,9 @@ Selection to Cursor Value
 Selection to Nearest Frame
    Round the time of each keyframe to the nearest frame.
 Selection to Nearest Second
-   Round the time of each keyframe to the nearest second. You can use
-   :menuselection:`View --> Show Seconds` to show seconds instead of frames
-   at the top of the editor.
+   Round the time of each keyframe to the nearest second.
+   You can use :ref:`Use Timecode <bpy.types.SpaceGraphEditor.show_seconds>`
+   to show seconds instead of frames at the top of the editor.
 Selection to Nearest Marker
    Set the time of each keyframe to that of the nearest :doc:`marker </animation/markers>`.
 Flatten Handles

@@ -145,9 +145,12 @@ Show Markers
    and marker operators are not available in this editor.
 Show Cursor
    Toggles the visibility of the horizontal blue line (see `Playhead & 2D Cursor`_).
-Show Seconds :kbd:`Ctrl-T`
-   Show timing in seconds instead of frames. As an example, the timestamp ``01:03+02``
-   means "1 minute, 3 seconds, 2 frames."
+
+.. _bpy.types.SpaceGraphEditor.show_seconds:
+
+Use Timecode :kbd:`Ctrl-T`
+   Show timing in seconds instead of frames.
+   As an example, the timestamp ``01:03+02`` means "1 minute, 3 seconds, 2 frames."
 Sync Visible Range
    Synchronizes the horizontal panning and scale of the editor
    with other time-based editors that also have this option enabled.

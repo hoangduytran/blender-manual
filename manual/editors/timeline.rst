@@ -104,7 +104,7 @@ Show Markers
    Shows the Markers region (if any markers are defined).
    When disabled, the `Marker Menu`_ is also hidden and marker operators are not
    available in this editor.
-Show Seconds :kbd:`Ctrl-T`
+Use Timecode :kbd:`Ctrl-T`
    Shows the time on the X axis and the *Playhead* as timestamps instead of frame numbers.
    A timestamp such as ``01:03+02`` means "1 minute, 3 seconds, 2 frames."
 Sync Visible Range
