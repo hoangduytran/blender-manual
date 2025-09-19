@@ -33,7 +33,7 @@ Getting Started
 
 To begin compositing, open the *Compositor* and create a new node tree
 by clicking the :ref:`New <bpy.ops.node.new_compositing_node_group>` button in the header.
-This adds a compositing node tree datablock to the scene, which can then be reused
+This adds a compositing node tree data block to the scene, which can then be reused
 across different scenes or linked/appended from other blend-files.
 
 .. important::
