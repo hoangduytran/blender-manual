@@ -309,7 +309,7 @@ These buttons are used to set the current frame and control playback.
 
 :bl-icon:`rew` Jump to Start :kbd:`Shift-Left`
    Sets the Playhead to the start of the frame range.
-:bl-icon:`prev_keyframe` Jump to Previous Keyframe :kbd:`Down`
+:bl-icon:`prev_keyframe` Jump to Previous Keyframe :kbd:`Up`
    Moves the Playhead to the previous keyframe.
 :bl-icon:`play_reverse`  Rewind :kbd:`Shift-Ctrl-Spacebar`
    Starts playing the animation in reverse.
@@ -317,7 +317,7 @@ These buttons are used to set the current frame and control playback.
    Starts playing the animation.
 :bl-icon:`pause` Pause :kbd:`Spacebar`
    Stops playing the animation.
-:bl-icon:`next_keyframe` Jump to Next Keyframe :kbd:`Up`
+:bl-icon:`next_keyframe` Jump to Next Keyframe :kbd:`Down`
    Moves the Playhead to the next keyframe.
 :bl-icon:`ff` Jump to End :kbd:`Shift-Right`
    Sets the Playhead to the end of the frame range.
