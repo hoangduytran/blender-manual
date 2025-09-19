@@ -82,10 +82,12 @@ Requirements:
 * Windows: Enable "Use HDR" in the Windows display settings, and set the Vulkan backend in the Blender system
   preferences.
 
-Views
-=====
 
 .. _bpy.types.ColorManagedViewSettings.view_transform:
+
+View Transform
+==============
+
 
 These are different ways to view the image on the same display device.
 

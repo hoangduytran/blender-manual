@@ -103,12 +103,12 @@ for the selected output image.
 See :ref:`bpy.types.ImageFormatSettings` for details.
 
 
-Output Path
------------
+Output Paths
+------------
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar --> Node --> Properties --> Output Path`
+   :Panel:     :menuselection:`Sidebar --> Node --> Properties --> Output Paths`
 
 Displays the final file path and extension for each input/layer, based on current settings.
 This helps verify that outputs are named and organized correctly.

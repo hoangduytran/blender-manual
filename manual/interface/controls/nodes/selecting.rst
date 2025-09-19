@@ -88,12 +88,12 @@ See :ref:`Lasso Select <bpy.ops.*.select_lasso>`.
 
 .. _bpy.ops.node.select_linked_from:
 
-Select Linked From
-==================
+Linked From
+===========
 
 .. reference::
 
-   :Menu:      :menuselection:`Select --> Select Linked From`
+   :Menu:      :menuselection:`Select --> Linked From`
    :Shortcut:  :kbd:`L`
 
 Expands the selection to all nodes connected to the inputs of the selected nodes.
@@ -101,12 +101,12 @@ Expands the selection to all nodes connected to the inputs of the selected nodes
 
 .. _bpy.ops.node.select_linked_to:
 
-Select Linked To
-================
+Linked To
+=========
 
 .. reference::
 
-   :Menu:      :menuselection:`Select --> Select Linked To`
+   :Menu:      :menuselection:`Select --> Linked To`
    :Shortcut:  :kbd:`Shift-L`
 
 Expands the selection to all nodes connected from the outputs of the selected nodes.
