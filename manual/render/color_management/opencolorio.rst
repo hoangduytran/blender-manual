@@ -23,7 +23,8 @@ with the ACEScg working space, ACES 2.0 view transform and OpenEXR images saved 
 the ACES2065-1 and ACEScg color spaces.
 
 This covers most needs for working in an ACES pipeline. However for more complete
-support, the `official ACES configurations <https://github.com/AcademySoftwareFoundation/OpenColorIO-Config-ACES/releases>`_
+support, the 
+`official ACES configurations <https://github.com/AcademySoftwareFoundation/OpenColorIO-Config-ACES/releases>`_
 can be manually installed and set through the ``OCIO`` environment variable.
 
 Roles
