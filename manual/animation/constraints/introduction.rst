@@ -53,8 +53,8 @@ constraint.
 
 .. _constraint-visual-transform:
 
-Visual Tranform
-===============
+Visual Transform
+================
 
 Constraints give their owning object or bone a new location, rotation, and/or scale which together
 are called the *visual transform*. This transform is separate from the "base" transform found

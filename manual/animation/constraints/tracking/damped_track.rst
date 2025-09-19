@@ -9,7 +9,7 @@ The *Damped Track* constraint makes an object or bone point towards a certain ta
 It's typically called "Look At" or "Aim" in other 3D software.
 
 The word "damped" means that the constraint uses a pure :term:`swing` rotation
-to minimize rolling around the tracking axis. This is in constrast to the
+to minimize rolling around the tracking axis. This is in contrast to the
 :doc:`/animation/constraints/tracking/track_to` which applies an "Up" axis
 in addition to the tracking.
 
