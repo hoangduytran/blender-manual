@@ -9,7 +9,7 @@ Overview
 
 Transforming scene linear colors to display involves both technical and artistic choices.
 
-Correct display of renders requires a conversion to the display device color space.
+Correct display of renders requires a conversion to the display color space.
 A computer monitor works differently from a digital cinema projector or HDTV,
 and so needs a different conversion.
 
@@ -66,9 +66,9 @@ High Dynamic Range
 
 Select the "Rec.2100 PQ" or "Rec.21000 HLG" display to view high dynamic range (HDR) colors.
 
-With standard dynamic range (SDR), view transforms must significantly lower bright colors to fit within the range.
+With standard dynamic range (SDR), views must significantly lower bright colors to fit within the range.
 With high dynamic range it is possible to go beyond and more accurately display the scene. HDR displays have limits
-too, and there are separate view transform for 500, 1000, 2000 and 4000 nits to target displays with different maximum
+too, and there are separate views for 500, 1000, 2000 and 4000 nits to target displays with different maximum
 luminance.
 
 In Blender, HDR content automatically scales up and down along with display brightness. Seeing the full range often
@@ -85,14 +85,13 @@ Requirements:
 
 .. _bpy.types.ColorManagedViewSettings.view_transform:
 
-View Transform
-==============
+Views
+=====
 
-
-These are different ways to view the image on the same display device.
+These are different ways to view the image on the same display.
 
 :Standard:
-   Does no extra conversion besides the conversion for the display device. Often used for
+   Does no extra conversion besides the conversion for the display. Often used for
    non-photorealistic results or video editing where a specific look is already baked into
    the input video.
 :ACES 2.0:
@@ -214,7 +213,7 @@ Tint
 Images
 ======
 
-By default, only renders are displayed and saved with the render *View Transformation* applied.
+By default, only renders are displayed and saved with the render *View* applied.
 These images are the "Render Result" and "Viewer" image data-blocks,
 and the files saved directly to a drive with the Render Animation operator.
 However, when loading a render saved to an intermediate OpenEXR file,
@@ -224,11 +223,11 @@ We need to specify that this is a render and that we want the transformations ap
 with these two settings:
 
 View as Render
-   Display the image data-block (not only renders) with view transform, exposure, gamma, RGB curves applied.
+   Display the image data-block (not only renders) with view, exposure, gamma, RGB curves applied.
    Useful for viewing rendered frames in linear OpenEXR files the same as when rendering them directly.
 
 Save as Render
-   Option in the image save operator to apply the view transform, exposure, gamma, RGB curves.
+   Option in the image save operator to apply the view, exposure, gamma, RGB curves.
    This is useful for saving linear OpenEXR to e.g. PNG or JPEG files in display space.
 
 Video
