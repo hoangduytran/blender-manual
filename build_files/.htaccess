@@ -301,3 +301,5 @@ RedirectMatch "^/manual/{lang}/{version}/render/freestyle/view_layer/line_style/
 RedirectMatch "^/manual/{lang}/{version}/render/cycles/features.html" "/manual/{lang}/{version}/render/cycles/render_settings/index.html"
 
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/filter/sun_beams.html" "/manual/{lang}/{version}/compositing/types/filter/glare.html"
+
+RedirectMatch "^/manual/{lang}/{version}/render/color_management.html" "/manual/{lang}/{version}/render/color_management/index.html"
