@@ -59,6 +59,7 @@ Tooltips
       When enabled, a tooltip will appear when your mouse pointer is over a control.
       This tip explains the function of what is under the pointer,
       shows the associated hotkey (if any).
+      When disabled, you can still force the tooltip display by holding :kbd:`Alt` then hovering the control.
 
    .. _bpy.types.PreferencesView.show_tooltips_python:
 
