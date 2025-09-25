@@ -100,6 +100,9 @@ Linear
 
 Color spaces commonly used for OpenEXR files.
 
+:Working Space:
+   The linear working space of the current blend file,
+   that is used by default in compositing, shader and geometry nodes.
 :Linear Rec.709: Linear BT.709 chromaticities with illuminant D65 white point.
 :Linear Rec.2020: Linear BT.2020 with illuminant D65 white point.
 :ACEScg:
