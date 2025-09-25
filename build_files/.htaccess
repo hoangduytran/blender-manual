@@ -303,3 +303,4 @@ RedirectMatch "^/manual/{lang}/{version}/render/cycles/features.html" "/manual/{
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/filter/sun_beams.html" "/manual/{lang}/{version}/compositing/types/filter/glare.html"
 
 RedirectMatch "^/manual/{lang}/{version}/render/color_management.html" "/manual/{lang}/{version}/render/color_management/index.html"
+RedirectMatch "^/manual/{lang}/{version}/render/cycles/object_settings/adaptive_subdiv.html" "/manual/{lang}/{version}/modeling/modifiers/generate/subdivision_surface.html"
