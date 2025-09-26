@@ -163,6 +163,12 @@ Interpolation
    :Linear: Simple interpolation which gives good results for thin volumes.
    :Cubic: Smoothed high-quality interpolation needed for more dense volumes, but slower.
 
+.. _bpy.types.CyclesWorldSettings.volume_step_size:
+Step Size :guilabel:`Biased`
+   Distance between volume shader samples for world volume shaders.
+   Only enabled when :menuselection:`Render --> Volumes --> Biased` is enabled.
+   See :doc:`Volume Render Settings </render/cycles/render_settings/volumes>` for more information.
+
 
 Light Group
 -----------
