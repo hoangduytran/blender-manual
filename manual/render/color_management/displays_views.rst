@@ -110,10 +110,13 @@ These are different ways to view the image on the same display.
    Does no extra conversion besides the conversion for the display. Often used for
    non-photorealistic results or video editing where a specific look is already baked into
    the input video.
+:ACES 1.3:
+   `ACES <https://www.oscars.org/science-technology/sci-tech-projects/aces>`__ view transforms,
+   a widely used standard in film and TV production. Suitable for photorealistic results.
 :ACES 2.0:
-   Version 2.0 of the `ACES <https://www.oscars.org/science-technology/sci-tech-projects/aces>`__
-   view transform, a widely standard in film and TV production. Suitable for photorealistic
-   results.
+   Version 2.0 of the ACES view transform, with a more neutral look. It features a less
+   aggressive tone scale with reduced mid-tone contrast and gentler highlight rolloff,
+   and improve gamut mapping.
 :Khronos PBR Neutral:
    A tone mapping transform designed specifically for PBR color accuracy,
    to get sRGB colors in the output render that match as faithfully as possible
