@@ -229,7 +229,7 @@ Quality
    - **0%**: Maximum compression, producing the smallest file size but the most noticeable quality loss.
    - **100%**: No compression, preserving full image quality at the cost of a larger file size.
 Save As Render
-   Save image with render :doc:`color management </render/color_management>`.
+   Save image with render :doc:`color management </render/color_management/index>`.
    For display image formats like PNG, apply view and display transform.
    For intermediate image formats like OpenEXR, use the default render output color space.
 Copy

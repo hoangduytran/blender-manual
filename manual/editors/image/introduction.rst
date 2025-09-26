@@ -22,7 +22,7 @@ Sample
 
    - X and Y coordinates of the mouse cursor.
    - Color in RGBA.
-   - Color in RGB after :doc:`/render/color_management`.
+   - Color in RGB after :doc:`/render/color_management/index`.
    - Color in HSV.
    - Luminance.
 

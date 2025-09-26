@@ -121,7 +121,7 @@ Sample
 
    - The X and Y coordinates, in pixels relative to the top left corner.
    - The red, green, blue, and alpha components of the pixel, as decimal values between 0 and 1.
-   - The red, green, and blue components of the pixel with :doc:`/render/color_management` applied.
+   - The red, green, and blue components of the pixel with :doc:`/render/color_management/index` applied.
    - The hue, saturation, value, and luminance components of the pixel with Color Management applied.
 
    .. figure:: /images/editors_vse_preview_sample-tool.png

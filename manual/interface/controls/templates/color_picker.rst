@@ -30,7 +30,7 @@ Color Model
       and are therefore not :term:`Gamma` corrected.
       On the contrary, *Hex* are automatically :term:`Gamma` corrected
       for the :term:`sRGB Color Space <Color Space>`.
-      For more information, see :doc:`Color Management </render/color_management>`.
+      For more information, see :doc:`Color Management </render/color_management/index>`.
 Color Values
    Blender uses values from 0 to 1.0 to express the color mixing for RGB and HSV/HSL colors.
 

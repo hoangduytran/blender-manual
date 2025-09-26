@@ -95,7 +95,7 @@ Image Sequence -- Overwrite :guilabel:`Image` :guilabel:`Multi-Layer EXR`
 Color Management
 ================
 
-This panel controls how :doc:`/render/color_management` is applied when saving images.
+This panel controls how :doc:`/render/color_management/index` is applied when saving images.
 
 .. _bpy.types.ImageFormatSettings.color_management:
 
