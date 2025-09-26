@@ -82,6 +82,22 @@ Requirements:
 * Windows: Enable "Use HDR" in the Windows display settings, and set the Vulkan backend in the Blender system
   preferences.
 
+.. _bpy.types.ColorManagedDisplaySettings.emulation:
+
+Display Emulation
+-----------------
+
+:Automatic:
+   Display images consistent with most other applications, to preview images and video
+   for export. A best effort is made to emulate the chosen display on the actual
+   display device.
+:Off:
+   Directly output image as produced by OpenColorIO. This is not correct in general,
+   but may be used when the system configuration and actual display device is known
+   to match the chosen display.
+
+Emulation is not supported with older :ref:`OpenColorIO configurations <ocio-config>`.
+
 
 .. _bpy.types.ColorManagedViewSettings.view_transform:
 
