@@ -253,6 +253,10 @@ Logging Options
 ``--log-file`` ``<filepath>``
    Set a file to output the log to.
 
+``--log-list-categories``
+   List all available logging categories for ``--log``, and exit.
+
+
 
 .. _command-line-args-debug-options:
 
@@ -467,6 +471,13 @@ Misc Options
 ``--unregister-allusers``
    Unregister blend-file extension for all users, then exit (Windows & Linux only).
 
+``--qos`` ``<level>``
+   Set the Quality of Service (QoS) mode for hybrid CPU architectures (Windows only).
+
+   default: Uses the default behavior of the OS.
+   high: Always makes use of performance cores.
+   eco: Schedules Blender threads exclusively to efficiency cores.
+
 ``-v``, ``--version``
    Print Blender version and exit.
 
@@ -560,7 +571,8 @@ Environment Variables
 :BLENDER_SYSTEM_PYTHON:     Directory to replace bundled Python libraries.
 :BLENDER_CUSTOM_SPLASH:     Full path to an image that replaces the splash screen.
 :BLENDER_CUSTOM_SPLASH_BANNER: Full path to an image to overlay on the splash screen.
-:OCIO:                      Path to override the OpenColorIO configuration file.
+:BLENDER_OCIO:              Path to override the OpenColorIO configuration file.
+                           If not set, the ``OCIO`` environment variable is used.
 :TEMP:                      Store temporary files here (MS-Windows).
 :TMPDIR:                    Store temporary files here (UNIX Systems).
                            The path must reference an existing directory or it will be ignored.
