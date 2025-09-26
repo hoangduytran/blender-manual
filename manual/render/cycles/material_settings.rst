@@ -76,6 +76,7 @@ Interpolation
    :Cubic: Smoothed high-quality interpolation needed for more dense volumes, but slower.
 
 .. _bpy.types.CyclesMaterialSettings.volume_step_rate:
+
 Step Rate :guilabel:`Biased`
    Adjust distance between volume shader samples for volume shaders.
    This is typically used to reduce the step size for procedural shaders that add more detail
