@@ -37,6 +37,8 @@ Roles
 ``aces_interchange``
    ACES2065-1 color space. Used to derive chromaticities of the *scene_linear* color space, for
    effects such as blackbody emission.
+``cie_xyz_d65_interchange``
+   Intermediate display linear color space, to connected view transforms to display color spaces.
 ``color_picking``
    Defines the distribution of colors in color pickers. It is expected to
    be approximately perceptually linear, have the same gamut as the *scene_linear* color space,
