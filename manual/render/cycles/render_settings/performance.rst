@@ -39,17 +39,11 @@ Threads
 Memory
 ======
 
-.. _bpy.types.CyclesRenderSettings.use_auto_tile:
-
-Use Tiling
-   Render high resolution images in tiles to reduce memory usage.
-   Tiles are cached to disk while rendering to save memory.
-
 .. _bpy.types.CyclesRenderSettings.tile_size:
 
 Tile Size
-   This value is used to control the size of the tile used for rendering;
-   decreasing the size reduces memory usage.
+   Render high resolution images in tiles of this size, to reduce memory usage.
+   Tiles are cached to disk while rendering to save memory.
 
    .. note::
 
