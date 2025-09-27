@@ -4,8 +4,8 @@ Color Spaces
 
 .. _color-management-linear-space:
 
-Scene Linear
-============
+Linear Workflow
+===============
 
 Different :term:`Color Spaces <Color Space>`
 are needed for rendering, display and storage of images.
@@ -128,8 +128,10 @@ Color space for non-color data like normal maps or displacement maps.
 Log
 ---
 
-:Filmic Log: Intermediate log color space of Filmic view transform.
+:ACEScc: ACES color correction space, using AP1 primaries.
+:ACEScct: ACES color correction space with toe, using AP1 primaries.
 :AgX Log: Intermediate log color space of AgX view transform.
+:Filmic Log: Intermediate log color space of Filmic view transform.
 
 Utilities
 ---------
@@ -138,6 +140,7 @@ Color spaces corresponding to view transforms. These color spaces can
 be used for background images that should not be affected by the view
 transform, while everything else in the scene is affected.
 
+:ACES 1.3 sRGB: ACES 1.3 view transform
 :ACES 2.0 sRGB: ACES 2.0 view transform
 :AgX Base sRGB: AgX view transform
 :Filmic sRGB: Filmic view transform
