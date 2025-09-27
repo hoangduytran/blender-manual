@@ -232,31 +232,45 @@ Tint
 Images
 ======
 
+Display
+-------
+
 By default, only renders are displayed and saved with the render *View* applied.
 These images are the "Render Result" and "Viewer" image data-blocks,
 and the files saved directly to a drive with the Render Animation operator.
 However, when loading a render saved to an intermediate OpenEXR file,
 Blender cannot detect automatically that this is a render
 (it could be e.g. an image texture or displacement map).
-We need to specify that this is a render and that we want the transformations applied,
-with these two settings:
+We need to specify that this is a render and that we want the transformations
+applied, with the following settings.
 
 View as Render
    Display the image data-block (not only renders) with view, exposure, gamma, RGB curves applied.
    Useful for viewing rendered frames in linear OpenEXR files the same as when rendering them directly.
 
+Output
+------
+
+For file saving an equivalent option exists.
+
 Save as Render
    Option in the image save operator to apply the view, exposure, gamma, RGB curves.
    This is useful for saving linear OpenEXR to e.g. PNG or JPEG files in display space.
 
+Wide gamut images can be written in the following file formats: PNG, JPEG, WebP, TIFF and JPEG 2000.
+
+HDR images can only be written as PNG files. They are written with 203 nits diffuse
+white to match the convention in most browsers and image viewers.
+
 Video
 =====
+
+Output
+------
 
 Videos can be rendered with both wide gamut and HDR color spaces. They use the scene display
 by default, but can also be assigned a different color space by overriding the color management
 settings in the output properties.
-
-The default sRGB display will produce videos that can be played anywhere.
 
 Saving HDR videos has a few additional requirements:
 
@@ -266,3 +280,6 @@ Saving HDR videos has a few additional requirements:
 
 Video players and devices have different levels of support for HDR video.
 Bit depth 10 with PQ encoding is a good default choice to maximize compatibility.
+
+HDR videos are written with 100 nits diffuse white, to match the convention in most video
+players and browsers.
