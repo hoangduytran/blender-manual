@@ -34,8 +34,10 @@ which are geared towards particular tasks (modeling, animating and so on).
 
 .. tip::
 
-   The size of the border around areas can be adjusted in the
-   user preferences with :ref:`Border Width <bpy.types.PreferencesView.border_width>`.
+   - The size of the border around areas can be adjusted in the
+     user preferences with :ref:`Border Width <bpy.types.PreferencesView.border_width>`.
+   - Handles can be enabled to always remain visible, which can help with area management on touch-enabled
+     devices. See :ref:`bpy.types.PreferencesView.show_area_handle`.
 
 
 .. _bpy.ops.screen.area_move:

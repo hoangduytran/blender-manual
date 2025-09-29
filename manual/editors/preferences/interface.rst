@@ -82,6 +82,15 @@ Region Overlap
    This makes regions overlap the viewport. It means that the *Toolbar* and *Sidebar* regions,
    will be displayed overlapping the main area.
 
+.. _bpy.types.PreferencesView.show_area_handle:
+
+Show -- Corner Handles:
+   Displays small handles in the corners of each :doc:`/interface/window_system/areas`.
+   These can be used to split or join areas with a click-and-drag action.
+
+   This option is especially useful on touch-enabled devices,
+   where precise right-click or edge selection is more difficult.
+
 .. _bpy.types.PreferencesView.show_navigate_ui:
 
 Navigation Controls
