@@ -97,9 +97,15 @@ Name
 
    .. warning::
 
-      While it shows edited items in their final, modified positions, you are still actually editing original data.
-      This can lead to strong and unpredictable effects with some tools,
-      and should be disabled whenever you need to perform complex or precise editing on the mesh.
+      While it shows edited items in their final, modified positions, you are still editing original data.
+
+      In situations where the positions diverge it can lead to confusing behavior,
+      so you may wish to disable it in those cases.
+
+      It's also worth noting that some features don't use the cage positions including:
+
+      - Snap targets, such as snapping to vertex.
+      - The transform gizmo uses the original positions.
 
 .. _bpy.types.Modifier.use_apply_on_spline:
 
