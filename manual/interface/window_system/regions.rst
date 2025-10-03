@@ -71,7 +71,7 @@ Flip to Bottom/Top
 Vertical/Horizontal Split
    Shows an indicator line that lets you select the area and position where to split.
    :kbd:`Tab` switches between vertical/horizontal.
-Maximize/Full Screen Area
+Full Screen Area / Focus Mode
    See :ref:`bpy.ops.screen.screen_full_area`.
 Duplicate Area into New Window
    See :ref:`bpy.ops.screen.area_dupli`.

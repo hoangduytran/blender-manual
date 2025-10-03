@@ -145,6 +145,12 @@ Expands the editor area so it fills the whole window, while keeping the Topbar a
 This is useful for focusing on a single editor (e.g. 3D Viewport, Shader Editor) without changing your workspace
 layout.
 
+In the 3D Viewport, maximizing the area temporarily hides:
+
+- :ref:`Navigation Gizmos <navigation-gizmo>`
+- :ref:`bpy.types.View3DOverlay.show_text` overlay
+- :ref:`bpy.types.View3DOverlay.show_stats` overlay
+
 To return to normal size, use the shortcut again or click the *Back to Previous* button in the Topbar.
 
 
