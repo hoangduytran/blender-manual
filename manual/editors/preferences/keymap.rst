@@ -158,9 +158,6 @@ Region Toggle Pie
    :kbd:`N` opens a :ref:`pie menu <bpy.types.UIPieMenu>` to toggle :doc:`/interface/window_system/regions`
    rather than always toggling the Sidebar region.
 
-   This option is only available if the :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>`
-   are enabled.
-
 
 3D Viewport
 -----------
