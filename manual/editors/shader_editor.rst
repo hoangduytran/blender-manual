@@ -30,10 +30,9 @@ Shader Type
    :Line Style:
       Edit shader nodes for Freestyle :doc:`Line Styles </render/freestyle/view_layer/line_style/index>`
 
-.. _bpy.types.Material.use_nodes:
+Use Nodes :guilabel:`Line Style`
+   Use shader nodes to define the texture for the freestyle line style.
 
-Use Nodes :guilabel:`Object` :guilabel:`Line Style`
-   The Use Nodes setting is mostly a legacy setting and should always be checked for materials.
 Slot
    The *Slot* menu can be used to select
    the active :ref:`material slot <bpy.types.MaterialSlot>` on the active object.

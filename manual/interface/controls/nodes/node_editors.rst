@@ -21,10 +21,6 @@ Add
    This menu allows you to add nodes.
 Node
    This menu allows you to do things with selected nodes.
-Use Nodes
-   Tells the render engine to use the node tree when computing the material color.
-   If disabled, the tree is ignored. For materials, this is mostly a legacy option,
-   because in the past materials could not be created with node trees.
 
 .. _bpy.types.SpaceNodeEditor.pin:
 
