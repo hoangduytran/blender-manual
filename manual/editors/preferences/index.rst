@@ -53,4 +53,5 @@ Sections
 .. toctree::
    :maxdepth: 1
 
+   developer_tools.rst
    experimental.rst
