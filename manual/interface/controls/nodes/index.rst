@@ -49,3 +49,4 @@ The list below shows the different types of nodes and where they're documented.
    groups.rst
    frame.rst
    reroute.rst
+   bundles/index.rst
