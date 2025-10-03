@@ -91,6 +91,41 @@ Toolbar
 
 The *Toolbar* contains a set of tools that can be used in the node editor.
 
+:ref:`Select <tool-select-tweak>`
+   Select or move nodes and links.
+
+   :ref:`Select Box <tool-select-box>`
+      Select nodes or links by dragging a box around them.
+
+   :ref:`Select Circle <tool-select-circle>`
+      Select nodes or links by clicking or dragging with a circular brush.
+
+   :ref:`Select Lasso <tool-select-lasso>`
+      Select nodes or links by drawing a free-form lasso.
+
+:ref:`Annotate <tool-annotate-freehand>`
+   Draw free-hand annotation.
+
+   :ref:`Annotate Line <tool-annotate-line>`
+      Draw straight line annotation.
+   :ref:`Annotate Polygon <tool-annotate-polygon>`
+      Draw a polygon annotation.
+   :ref:`Annotate Eraser <tool-annotate-eraser>`
+      Erase previous drawn annotations.
+
+Link Cuts
+   Delete connections between nodes by drawing a line across the links.
+   See :ref:`bpy.ops.node.links_cut` for more information.
+
+Mute Links
+   Mute connections between nodes by drawing a line across the links.
+   Muted links are kept in place but ignored in evaluation.
+   See :ref:`bpy.ops.node.links_mute` for more information.
+
+Add Reroute
+   Insert a :doc:`/interface/controls/nodes/reroute` point on links by drawing a line across them.
+   Reroute nodes help organize complex node trees by redirecting connections.
+
 
 Sidebar
 =======
