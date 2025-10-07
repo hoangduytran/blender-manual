@@ -132,6 +132,8 @@ These settings allow you to:
 The footer is shared across animation editors to provide a consistent workflow for animators,
 whether they are editing keyframes, adjusting curves, or sequencing actions.
 
+.. figure:: /images/editiors_playback_controls.png
+
 .. _animation-editors-playback:
 
 Playback
