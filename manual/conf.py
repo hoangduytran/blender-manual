@@ -38,10 +38,10 @@ def has_module(module_name):
 # Not used directly by Sphinx, but used by this file and the buildbot.
 
 # Version number. Used to build paths and links.
-blender_version = "5.0"
+blender_version = "5.1"
 # Version label. Used only for display.
 # Usually the same as blender_version, except for LTS.
-blender_version_label = "5.0"
+blender_version_label = "5.1"
 
 # -- Project information -----------------------------------------------------
 
