@@ -9,8 +9,6 @@ video sequencing, and motion tracking as part of the animation pipeline.
 
 Each editor serves a different purpose:
 
-- The :doc:`Timeline </editors/timeline>` gives an overview of keyframes
-  and is used for playback and basic editing.
 - The :doc:`Dope Sheet </editors/dope_sheet/introduction>` organizes and manipulates keyframes
   across multiple objects and data-blocks.
 - The :doc:`Graph Editor </editors/graph_editor/introduction>` provides fine control over F-Curves

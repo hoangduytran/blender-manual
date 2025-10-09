@@ -14,8 +14,6 @@ This includes how editors look and also some different tools properties.
 Timeline
 ========
 
-These settings control things in the :doc:`Timeline </editors/timeline>`.
-
 .. _bpy.types.PreferencesEdit.use_negative_frames:
 
 Allow Negative Frame

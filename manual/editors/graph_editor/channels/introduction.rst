@@ -12,8 +12,8 @@ Channels Region
 
    The Channels region.
 
-This region is found on the left side of time-based editors like the :doc:`/editors/timeline`,
-the :doc:`Dope Sheet Editor </editors/dope_sheet/introduction>`, and the Graph Editor.
+This region is found on the left side of time-based editors like
+the :doc:`Dope Sheet Editor </editors/dope_sheet/introduction>` and the Graph Editor.
 It shows a tree of items (objects, bones...) and their animated properties,
 with the latter also being called "channels." Each channel has an associated F-curve
 describing how its value changes over time.

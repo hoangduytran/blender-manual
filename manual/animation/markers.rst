@@ -20,7 +20,6 @@ Markers can be created and edited in the following editors:
 - :doc:`Dope Sheet </editors/dope_sheet/introduction>`
 - :doc:`NLA Editor </editors/nla/index>`
 - :doc:`Video Sequence Editor </video_editing/index>`
-- :doc:`Timeline </editors/timeline>`
 
 .. note::
 

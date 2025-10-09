@@ -74,7 +74,7 @@ Playhead & 2D Cursor
    Graph Editor 2D Cursor.
 
 The current frame is represented by a vertical blue line called the *Playhead*.
-As in the :doc:`Timeline </editors/timeline>`,
+Like other :doc:`/animation/animation_editors`,
 you can move it by clicking or dragging with :kbd:`LMB` in the scrubbing area at the top.
 
 Combined with the horizontal blue line, the Playhead forms the *2D Cursor*

@@ -69,7 +69,7 @@ Text Info
      Displays the Frames Per Second at which the animation is playing.
      By default, Blender goes through every single frame, which may result in an FPS that's lower than
      intended (and the animation playing slower than realtime); the FPS turns red in this case.
-     You can change this behavior in the Playback popover of the :doc:`Timeline </editors/timeline>`.
+     You can change this behavior in the :ref:`Playback popover <animation-editors-playback>` within an editors playback controls.
    - **Object Info** --
      Shows the current frame in parentheses, followed by the names of the selected
      :doc:`Collection </scene_layout/collections/index>`,
