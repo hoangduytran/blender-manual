@@ -69,7 +69,7 @@ and contains the following Editors:
 - :doc:`3D Viewport </editors/3dview/introduction>` on top left.
 - :doc:`Outliner </editors/outliner/introduction>` on top right.
 - :doc:`Properties </editors/properties_editor>` on bottom right.
-- :doc:`Timeline </editors/timeline>` on bottom left.
+- :doc:`Dopesheet </editors/dope_sheet/index>` on bottom left.
 
 .. figure:: /images/interface_window-system_workspaces_layout.png
    :align: center

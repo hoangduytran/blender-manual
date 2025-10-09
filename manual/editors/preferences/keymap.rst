@@ -96,7 +96,7 @@ Spacebar Action
    Controls the action of :kbd:`Spacebar`.
 
    :Play:
-      Starts/stops playing through the :doc:`Timeline </editors/timeline>`.
+      Starts/stops :doc:`animation playback </animation/index>`.
       This option is good for animation or video editing work.
    :Tools:
       Opens the Toolbar underneath the cursor to quickly change the active tool.
