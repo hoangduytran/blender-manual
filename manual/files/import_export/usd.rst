@@ -361,9 +361,6 @@ Include
       When checked, only selected objects are exported.
       Instanced objects, for example collections that are instanced in the scene,
       are considered 'selected' when their instancer is selected.
-   Visible Only
-      Only exports objects that are not :doc:`hidden </scene_layout/object/editing/show_hide>`.
-      Invisible parents of exported objects are exported as empty transforms.
    Animation
       When checked, the entire scene frame range is exported.
       When unchecked, only the current scene frame is exported.
