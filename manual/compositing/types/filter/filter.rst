@@ -15,10 +15,10 @@ The Filter node implements various common image enhancement filters.
 Inputs
 ======
 
-Factor
-   Controls the amount of influence the node exerts on the output image.
 Image
    Standard color input.
+Factor
+   Controls the amount of influence the node exerts on the output image.
 Type
    The Soften, Laplace, Sobel, Prewitt and Kirsch all perform edge detection
    (in slightly different ways) based on vector calculus and set theory equations.
