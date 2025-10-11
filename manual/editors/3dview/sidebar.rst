@@ -114,14 +114,33 @@ Lock -- Rotation
 3D Cursor
 ---------
 
+.. _bpy.types.View3DCursor.location:
+
 Location
    The location of the 3D Cursor.
+
+.. _bpy.types.View3DCursor.rotation_quaternion:
+.. _bpy.types.View3DCursor.rotation_euler:
+.. _#bpy.types.View3DCursor.rotation_axis_angle:
 
 Rotation
    The rotation of the 3D Cursor.
 
+.. _bpy.types.View3DCursor.rotation_mode:
+
 Rotation Mode
-   The rotation mode of the 3D Cursor.
+   Method for calculating rotations, additional information can be found
+   in the :doc:`manual's appendix </advanced/appendices/rotations>`.
+
+   :Euler:
+      Coordinate axes are aligned to the :term:`Euler` axis,
+      allowing you to see the discreet XYZ axis underlying the Euler rotation,
+      as well as possible :term:`Gimbal Lock`.
+   :Axis Angle:
+      The X, Y, and Z coordinates define a point relative to the object origin.
+      This point and the origin define an axis around the W value defines the rotation.
+   :Quaternion:
+      X, Y, Z and W correspond to the :term:`Quaternion` components.
 
 
 .. _bpy.types.SpaceView3D.use_local_collections:
