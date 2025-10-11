@@ -304,3 +304,5 @@ RedirectMatch "^/manual/{lang}/{version}/compositing/types/filter/sun_beams.html
 
 RedirectMatch "^/manual/{lang}/{version}/render/color_management.html" "/manual/{lang}/{version}/render/color_management/index.html"
 RedirectMatch "^/manual/{lang}/{version}/render/cycles/object_settings/adaptive_subdiv.html" "/manual/{lang}/{version}/modeling/modifiers/generate/subdivision_surface.html"
+
+RedirectMatch "^/manual/{lang}/{version}/addons/animation/copy_global_transform.html" "/manual/{lang}/{version}/editors/3dview/animation/copy_global_transform.html"

@@ -166,3 +166,14 @@ Annotations
 -----------
 
 See :doc:`Annotations </interface/annotate_tool>` for more information.
+
+:doc:`Animation <animation/index>`
+==================================
+
+:doc:`Global Transform <animation/copy_global_transform>`
+---------------------------------------------------------
+
+.. toctree::
+   :hidden:
+
+   animation/index.rst
