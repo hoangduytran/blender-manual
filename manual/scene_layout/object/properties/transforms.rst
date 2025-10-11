@@ -98,3 +98,39 @@ Delta Transforms
 Delta Transforms are simply transformations that are applied on top of the transforms described above.
 Delta Transforms are particularly useful in animations. For example,
 you can animate an object with the primary transforms then move them around with Delta Transforms.
+
+
+Parent Inverse Transform
+========================
+
+.. reference::
+
+   :Mode:      Object Mode
+   :Panel:     :menuselection:`Properties --> Object Properties --> Transform --> Parent Inverse`
+   :Context:   Available when the selected object is parented by another object.
+
+The *Parent Inverse* transform defines how the child object's local space
+is offset relative to its parent. It ensures that when parenting is created,
+the child keeps its current world position, even though it now inherits
+transforms from the parent.
+
+The matrix is displayed decomposed into **Location**, **Rotation**, and **Scale** values.
+These represent the offset needed to maintain the child's position relative to its parent.
+The values are read-only and shown for inspection only.
+
+The *Rotation Mode* determines how the rotation component is displayed,
+and can be switched between systems such as *XYZ Euler*, *Axis Angle*, or *Quaternion*.
+This behaves identically to the :ref:`bpy.types.Object.rotation_mode` selector used in the main transform panel.
+
+
+Clear Parent Inverse Transform
+------------------------------
+
+Clears the *Parent Inverse* matrix from the selected objects. With an empty matrix,
+the location, rotation, and scale properties of the children are interpreted
+directly in the coordinate space of the parent.
+
+This effectively makes the child's transforms relative to the parent's origin,
+potentially moving the object in world space.
+
+See :ref:`bpy.ops.object.parent_clear` for additional methods to clear or manage parent-child relationships.
