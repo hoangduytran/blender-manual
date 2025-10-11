@@ -1,47 +1,35 @@
 
-*********************
-Copy Global Transform
-*********************
+****************
+Global Transform
+****************
 
 Copy and paste object and bone transforms with ease.
 
-When copying, the global (:term:`World Space`) transform is placed on the
-clipboard. This can then be pasted onto any object or bone, at the current frame
-or at another one.
+When copying, the global (:term:`World Space`) transform is placed on the clipboard.
+This can then be pasted onto any object or bone, at the current frame or at another one.
 
-Since the transform is placed on the clipboard as text, you can even copy-paste
-it into an instant messenger and send it to someone else.
+.. reference::
 
+   :Panel:     :menuselection:`3D Viewport --> Sidebar --> Animation --> Global Transform`
 
-Enabling Add-on
-===============
-
-#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "Copy Global Transform" and check the *Enable Add-on* checkbox.
-
-
-Interface
-=========
-
-.. figure:: copy_global_transform-main.webp
+.. figure:: /images/copy_global_transform-main.webp
    :align: right
-
-Located in :menuselection:`3D Viewport --> N-panel --> Animation tab`.
 
 The figure on the right shows the main functionality of the Copy Global
 Transform panel. The collapsed panels are described each in their own section
 below.
 
-Description
-===========
+.. _bpy.ops.object.copy_global_transform:
 
 Copy
    Inspects the active Object (in Object mode) or Bone (in Pose mode) and places
    its current global transform onto the clipboard as a matrix.
 
+.. _bpy.ops.object.paste_transform:
+
 Paste
-   Takes the copied global transform and applies it to the active Object or
-   Bone. This is done by **adjusting its location, rotation, and scale properties**.
+   Takes the copied global transform and applies it to the active Object or Bone.
+   This is done by **adjusting its location, rotation, and scale properties**.
 
 Mirrored
    Same as 'Paste' above, but then mirrored relative to some other object or
@@ -59,39 +47,65 @@ Paste and Bake
    selected keys, *Paste and Bake* will paste & auto-key on every frame between
    the first and last selected keys.
 
+
 .. _copy-global-transform-mirror-options:
 
-Mirror Options
-++++++++++++++
+Mirror
+------
 
-.. figure:: copy_global_transform-mirror_options.webp
+.. figure:: /images/copy_global_transform-mirror_options.webp
    :align: right
 
 The copied transform can be mirrored relative to an object or a :term:`Bone`.
 This requires choosing that object or bone first.
 
-Armature + Bone
+.. _bpy.types.ToolSettings.anim_mirror_object:
+
+Object
+   This will just mirror relative to the chosen object.
+
    Choosing an :term:`Armature` object as mirror object will show the bone
    selector. You can use that to pick the bone to use as mirror. This will
    always use the named bone on that specific armature object.
-Bone Only
+
+.. _bpy.types.ToolSettings.anim_mirror_bone:
+
+Bone
    When you choose *no mirror object* at all, you can still choose a *bone
    name*. This is used for mirroring against a bone in the *active armature*.
    This can be useful to mirror bone transforms relative to the 'chest' bone
    of the active character.
-Object Only
-   This will just mirror relative to the chosen object.
 
 After pasting with 'Paste Mirrored', the mirror axes can be chosen in the
 :ref:`redo panel <bpy.ops.screen.redo_last>`.
 
 
-.. _copy-global-transform-fix-to-camera:
+.. _bpy.ops.object.copy_relative_transform:
+
+Relative
+--------
+
+.. figure:: /images/copy_global_transform-relative.webp
+   :align: right
+
+The "Relative" panel has copy/paste buttons that work relative to a chosen
+object. When copying, the world-space transform is determined, and then adjusted
+to become relative to the world-space transform of the chosen object. When
+pasting, this happens in reverse.
+
+If no object is chosen, the copy/paste will happen relative to the active scene
+camera. What is the active scene camera is determined for every action, so when
+you paste it can be different from when you copied. This can help to keep an
+object visually in the same place when switching cameras, or when switching
+between scenes.
+
+
+.. _bpy.types.ToolSettings.anim_fix_to_cam:
 
 Fix to Camera
-+++++++++++++
+-------------
 
-.. figure:: copy_global_transform-fix_to_camera.webp
+.. figure:: /images/copy_global_transform-fix_to_camera.webp
    :align: right
 
 Also known as "bake to camera", this operator will ensure selected objects/bones
@@ -102,12 +116,12 @@ This is done by generating new keys. These keys will be of :ref:`type
 created, and which were generated. This way the tool can be re-run to
 re-generate the keys.
 
-1. Ensure your animation is keyed using constant interpolation. If this is not
+#. Ensure your animation is keyed using constant interpolation. If this is not
    the case yet, bake your animation (at least the transform channels). This
    tool does _not_ work with the :ref:`"Stepped" F-Curve modifier <bpy.types.FModifierStepped>`
-2. Choose which of the Location/Rotation/Scale channels you want to fix to the
+#. Choose which of the Location/Rotation/Scale channels you want to fix to the
    camera. When unsure, make sure they are all checked.
-3. Press the "Fix to Camera" button.
+#. Press the "Fix to Camera" button.
 
 To undo the effect of the "Fix to Camera" operator, click on the trash bin
 button. That will remove all the generated keys in either the scene range or the
@@ -123,24 +137,6 @@ when removing generated keys.
    overwrite them (or remove them, depending on which button you press).
 
 
-Relative Copy-Paste
-+++++++++++++++++++
-
-.. figure:: copy_global_transform-relative.webp
-   :align: right
-
-The "Relative" panel has copy/paste buttons that work relative to a chosen
-object. When copying, the world-space transform is determined, and then adjusted
-to become relative to the world-space transform of the chosen object. When
-pasting, this happens in reverse.
-
-If no object is chosen, the copy/paste will happen relative to the active scene
-camera. What is the active scene camera is determined for every action, so when
-you paste it can be different from when you copied. This can help to keep an
-object visually in the same place when switching cameras, or when switching
-between scenes.
-
-
 Limitations
 ===========
 
@@ -149,23 +145,9 @@ scale. This means that when copying a skewed transform, this skew is lost.
 
 If there are constraints on the Object/Bone, the resulting visual transformation
 may not be the same as the pasted one. To give a concrete example: if you have a
-constraint that adds a rotation, it will always add that rotation on top of the
-pasted transform.
-
+constraint that adds a rotation, it will always add that rotation on top of the pasted transform.
 
 .. seealso::
 
    :doc:`/animation/armatures/posing/editing/pose_library` for a way to manage
    and share entire poses.
-
-.. reference::
-
-   :Category: Animation
-   :Description: Simple add-on for copying world-space transforms.
-   :Location: :menuselection:`3D Viewport --> N-panel --> Animation tab`
-   :File: copy_global_transform.py
-   :Author: Sybren A. Stüvel
-   :Maintainer: Sybren A. Stüvel
-   :License: GPL 2+
-   :Support Level: Official
-   :Note: This add-on is bundled with Blender.
