@@ -9,6 +9,11 @@ Transform
    :Panel:     :menuselection:`Properties --> Object Properties --> Transform`
    :Panel:     :menuselection:`3D Viewport --> Sidebar --> Transform`
 
+.. figure:: /images/scene-layout_object_properties_transforms_panel.png
+   :align: right
+
+   Transform Properties.
+
 The *Transform* panel in the Sidebar region allows you to view and
 manually/numerically control the position, rotation, and other properties of an object, in *Object Mode*.
 Each object stores its position, orientation, and scale values.
@@ -22,10 +27,9 @@ Use this panel to either edit or display the object's transform properties such 
 rotation and/or scaling. These fields change the object's origin and then affect the aspect of
 all its *vertices* and faces.
 
-.. figure:: /images/scene-layout_object_properties_transforms_panel.png
-   :align: center
+.. container:: lead
 
-   Transform Properties.
+   .. clear
 
 .. _bpy.types.Object.location:
 
