@@ -18,11 +18,11 @@ Inputs
 
 Image
    Image input, to be linked to the "Combined" render pass.
-Z
-   Z depth, to be linked to the "Depth" render pass.
 Speed
    Input for the "Vector" render pass.
    See :doc:`Cycles render passes </render/layers/passes>`.
+Z
+   Z depth, to be linked to the "Depth" render pass.
 Samples
    Quality factor.
 Shutter

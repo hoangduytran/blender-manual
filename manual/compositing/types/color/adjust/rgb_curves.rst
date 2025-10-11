@@ -22,10 +22,10 @@ The *RGB Curves Node* performs level adjustments on each color channel.
 Inputs
 ======
 
-Factor
-   Controls the amount of influence the node exerts on the image.
 Image/Color
    Standard color input.
+Factor
+   Controls the amount of influence the node exerts on the image.
 Black Level :guilabel:`Compositor Only`
    Defines the input color that should be mapped to black.
 White Level :guilabel:`Compositor Only`

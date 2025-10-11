@@ -14,10 +14,10 @@ The Color Balance node adjusts the color and values of an image.
 Inputs
 ======
 
-Factor
-   Controls the amount of influence the node exerts on the output image.
 Image
    Standard color input.
+Factor
+   Controls the amount of influence the node exerts on the output image.
 Type
    The mathematical method to adjust the image's colors.
 

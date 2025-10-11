@@ -15,13 +15,13 @@ The *Alpha Over* node is used to layer an image on top of another with alpha ble
 Inputs
 ======
 
+Background
+   The background image.
+Foreground
+   The foreground image.
 Factor
    The alpha of the foreground image, going from 0 (fully transparent) to 1 (fully opaque).
-Image
-   The background image.
-Image
-   The foreground image.
-Convert Premultiplied
+Straight Alpha
    Defines whether the foreground is in straight alpha form,
    which is necessary to know for proper alpha compositing.
    Images in the compositor are in premultiplied alpha form by default,
