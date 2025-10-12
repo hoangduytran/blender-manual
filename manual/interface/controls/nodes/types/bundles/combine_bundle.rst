@@ -9,11 +9,11 @@ Combine Bundle Node
    :align: right
    :alt: Combine Bundle Node
 
-The *Combine Bundle* node creates a new :doc:`Bundle </interface/controls/nodes/bundles/index>`
+The *Combine Bundle* node creates a new :doc:`Bundle </interface/controls/nodes/types/bundles/index>`
 from multiple input values.
 Each input becomes an element of the bundle, identified by its socket name.
 Values can be accessed in other parts of the node tree using the
-:doc:`Separate Bundle </interface/controls/nodes/bundles/separate_bundle>`
+:doc:`Separate Bundle </interface/controls/nodes/types/bundles/separate_bundle>`
 
 
 Inputs
@@ -35,7 +35,7 @@ Properties
 Properties are available in the *Node* tab of the Sidebar.
 
 Sync Sockets
-   Update matching :doc:`Separate Bundle </interface/controls/nodes/bundles/separate_bundle>`
+   Update matching :doc:`Separate Bundle </interface/controls/nodes/types/bundles/separate_bundle>`
    nodes in the same node tree to reflect name and type changes. Use this after renaming or
    retargeting item types so downstream nodes stay in sync.
 

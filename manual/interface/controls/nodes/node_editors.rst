@@ -54,7 +54,7 @@ Wire Colors
 .. _bpy.types.SpaceNodeOverlay.show_reroute_auto_labels:
 
 Reroute Auto Labels
-   Label :doc:`Reroute Nodes </interface/controls/nodes/reroute>`
+   Label :doc:`Reroute Nodes </interface/controls/nodes/types/layout/reroute>`
    based on the label of connected reroute nodes.
 
 .. _bpy.types.SpaceNodeOverlay.show_context_path:
@@ -119,7 +119,8 @@ Mute Links
    See :ref:`bpy.ops.node.links_mute` for more information.
 
 Add Reroute
-   Insert a :doc:`/interface/controls/nodes/reroute` point on links by drawing a line across them.
+   Insert a :doc:`/interface/controls/nodes/types/layout/reroute`
+   point on links by drawing a line across them.
    Reroute nodes help organize complex node trees by redirecting connections.
 
 
