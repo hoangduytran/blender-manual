@@ -344,6 +344,12 @@ Default Input :guilabel:`Geometry Nodes` -- :guilabel:`Input` -- :guilabel:`Inte
    The value used when the socket is unconnected.
    Requires *Hide Value* to be enabled.
 
+.. _bpy.types.NodeTreeInterfaceSocket.optional_label:
+
+Optional Label :guilabel:`Input`
+   Indicate that the label of this socket is not necessary to understand its meaning.
+   This may result in the label being skipped in some cases.
+
 .. _bpy.types.NodeTreeInterfaceSocket.hide_value:
 
 Hide Value
