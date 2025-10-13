@@ -42,13 +42,13 @@ Undistort
 Frame Method
    How to handle a difference in aspect ratio between the tracked video footage and the rendered image.
 
-   Stretch
+   :Stretch:
       The object is positioned as though the video were stretched to exactly match the size of the
       rendered image.
-   Fit
+   :Fit:
       The object is positioned as though the video were made as large as possible while still keeping
       its original aspect ratio and fitting inside the rendered image along both axes.
-   Crop
+   :Crop:
       The object is positioned as though the video were made as large as possible while still keeping
       its original aspect ratio and fitting inside the rendered image along one axis.
 

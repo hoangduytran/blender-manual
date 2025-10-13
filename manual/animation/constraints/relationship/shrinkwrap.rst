@@ -30,14 +30,14 @@ Distance
 Mode
    How to find the point to snap to.
 
-   Nearest Surface Point
+   :Nearest Surface Point:
       Snap to the surface point that's closest to the constraint owner's original location.
-   Project
+   :Project:
       Project the owner's original location along a certain axis and snap to the first
       intersection with the target surface. See `Project Mode Settings`_.
-   Nearest Vertex
+   :Nearest Vertex:
       Snap to the mesh vertex that's closest to the owner's original location.
-   Target Normal Project
+   :Target Normal Project:
       Snap to the nearest surface point that, if projected along its normal, intersects
       the constraint owner's original location.
 
@@ -48,25 +48,21 @@ Mode
 Snap Mode
    Determines how the *Distance* offset is applied.
 
-   On Surface
+   :On Surface:
       Snap to the point that's *Distance* away from the surface and is on the same side
       as the owner's original location: if the owner was previously outside the mesh,
       it stays outside, and if it was inside, it stays inside.
-
-   Outside Surface
+   :Outside Surface:
       Snap to the point that's *Distance* away from the surface and is on the outside,
       regardless of where the owner was originally.
-
-   Above Surface
+   :Above Surface:
       Like *Outside Surface*, but applies the offset along the interpolated surface normal.
       (The other modes apply it along the line between the constraint owner's original location
       and the snapping point on the target surface).
-
-   Inside
+   :Inside:
       "Shrinks" the mesh by *Distance* and traps the owner inside it. (If the owner was already
       inside the shrunk volume, the constraint does nothing.)
-
-   Outside
+   :Outside:
       "Inflates" the mesh by *Distance* and pushes the owner out of it. (If the owner was already
       outside the inflated volume, the constraint does nothing.)
 
@@ -105,17 +101,17 @@ Project Opposite
    Also project in the opposite direction (along the same axis).
 
 Face Cull
-   Off
+   :Off:
       Snap to the first encountered face regardless of its normal.
-   Front
+   :Front:
       Don't snap if the projection hit the front side of a face (specifically, if the normal of
       the face points towards the constraint owner). In general, this means the owner will
       get snapped to the surface if it's inside the target mesh, and keep its original location otherwise.
-   Back
+   :Back:
       Don't snap if the projection hit the back side of a face (specifically, if the normal of
       the face points away from the constraint owner). In general, this means the owner will get
       snapped to the surface if it's outside the target mesh, and keep its original location otherwise.
-   Invert Cull
+   :Invert Cull:
       If *Project Opposite* is enabled and an intersection is found in this opposite direction,
       use the opposite *Face Cull* option (so *Back* if *Front* was chosen and vice versa).
 

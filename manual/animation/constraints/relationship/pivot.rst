@@ -32,13 +32,11 @@ Pivot Point X, Y, Z
 Rotation Range
    Euler axis and direction for which the constraint should be active.
 
-   Always
+   :Always:
       Apply pivoting for every possible owner rotation.
-
-   -X/-Y/-Z Rotation
+   :-X/-Y/-Z Rotation:
       Only apply pivoting if the owner's X/Y/Z rotation is negative or zero.
-
-   X/Y/Z Rotation
+   :X/Y/Z Rotation:
       Only apply pivoting if the owner's X/Y/Z rotation is positive or zero.
 
 :ref:`bpy.types.constraint.influence`

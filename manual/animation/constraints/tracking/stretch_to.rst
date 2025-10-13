@@ -15,6 +15,7 @@ and squashing of stylized characters, for example. However, because it simply
 adjusts the X and Z scales according to the Y scale, it works for any type of object,
 not just meshes.
 
+
 Options
 =======
 
@@ -69,11 +70,9 @@ Maintain Volume
 Rotation
    How the owner should be rotated to track the target with its Y axis.
 
-   XZ
-      Tries to keep the local X axis close to its original orientation.
-   ZX
-      Tries to keep the local Z axis close to its original orientation.
-   Swing
+   :XZ: Tries to keep the local X axis close to its original orientation.
+   :ZX: Tries to keep the local Z axis close to its original orientation.
+   :Swing:
       Uses a :term:`swing` rotation, much like the :doc:`/animation/constraints/tracking/damped_track`.
 
 :ref:`bpy.types.constraint.influence`

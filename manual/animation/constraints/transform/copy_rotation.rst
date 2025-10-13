@@ -33,17 +33,17 @@ Mix
    Specifies how the target's current rotation (from all its constraints)
    is combined with the owner's original rotation (from its preceding constraints).
 
-   Replace
+   :Replace:
       The target's angles replace the owner's.
-   Add
+   :Add:
       The target angles are added to the owner's.
-   Before Original
+   :Before Original:
       The target's rotation is applied before the owner's. The result is the same as
       the owner's rotation if it were a child of the target and there was no constraint.
-   After Original
+   :After Original:
       The target's rotation is applied after the owner's. The result is the same as
       the target's rotation if it were a child of the owner and there was no constraint.
-   Offset (Legacy)
+   :Offset (Legacy):
       This replicates the behavior of the original Offset checkbox. It was intended
       to be similar to *Before Original*, but does not work correctly with multiple axes
       and is thus deprecated.
@@ -53,6 +53,7 @@ Mix
 
 :ref:`bpy.types.constraint.influence`
    How strongly the constraint affects the owner.
+
 
 Example
 =======

@@ -29,6 +29,7 @@ that animates properties of *other* constraints. The *Action* constraint will
 then apply these properties to the constraints that come after it, as long
 as their names match the ones in the Action.
 
+
 Options
 =======
 
@@ -52,28 +53,24 @@ Mix
    Specifies how the evaluated Action transformation is combined with the owner's original transformation
    (from its preceding constraints).
 
-   Replace
+   :Replace:
       The Action's transformation replaces the owner's.
-
-   Before Original (Full)
+   :Before Original (Full):
       The Action's transformation is applied before the owner's. The result is the same as
       the owner's transformation if it were a child of the Action and there was no constraint.
 
       If the "parent" is non-uniformly scaled and the "child" was originally rotated,
       the constraint will cause shearing, just like the default
       :ref:`Inherit Scale Full <bpy.types.EditBone.inherit_scale>` setting for bones.
-
-   Before Original (Aligned)
+   :Before Original (Aligned):
       Prevents shearing by scaling the "child" along its own axes instead of the axes of
       the "parent," just like the :ref:`Inherit Scale Aligned <bpy.types.EditBone.inherit_scale>`
       setting for bones.
-
-   Before Original (Split Channels)
+   :Before Original (Split Channels):
       Calculates each transform "channel" -- location, rotation, and scale -- separately
       from the others. The difference with *Before Original (Aligned)* is that the child's
       location is only affected by the parent's location, not by its rotation and scale.
-
-   After Original (Full/Aligned/Split Channels)
+   :After Original (Full/Aligned/Split Channels):
       Like *Before Original*, except the result is the transformation of the Action
       if it were a child of the owner.
 
@@ -135,6 +132,7 @@ Object Action :guilabel:`Bone constraint only`
 Frame Start/End
    The frames within the Action that correspond to *Range Min/Max*. *Frame End* is allowed
    to be less than *Frame Start* -- this will play the animation in reverse.
+
 
 Example
 =======
