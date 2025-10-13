@@ -14,11 +14,11 @@ Blends two images together, much like how an image editing program blends two la
 Inputs
 ======
 
-Fac
+Factor
    The opacity of the foreground image.
-Image
+A
    The background image. Determines the dimensions of the output.
-Image
+B
    The foreground image.
 
 Keep in mind that, unlike image editing programs where the foreground layer is on top,
