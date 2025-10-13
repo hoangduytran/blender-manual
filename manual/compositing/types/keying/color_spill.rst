@@ -23,7 +23,7 @@ Inputs
 Image
    The input RGBA image to be processed.
 
-Fac
+Factor
    Blend factor for how strongly the node affects the image.
    A value of 1.0 fully applies the effect; lower values blend with the original.
 
