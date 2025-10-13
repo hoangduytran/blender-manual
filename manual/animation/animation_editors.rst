@@ -130,7 +130,7 @@ These settings allow you to:
 The footer is shared across animation editors to provide a consistent workflow for animators,
 whether they are editing keyframes, adjusting curves, or sequencing actions.
 
-.. figure:: /images/editiors_playback_controls.png
+.. figure:: /images/editors_playback_controls.png
 
 .. _animation-editors-playback:
 
@@ -321,7 +321,14 @@ These buttons are used to set the current frame and control playback.
    Moves the Playhead to the next keyframe.
 :bl-icon:`ff` Jump to End :kbd:`Shift-Right`
    Sets the Playhead to the end of the frame range.
+:bl-icon:`frame_prev` Jump Backward by Delta :kbd:`Ctrl-Left`
+   Jumps the playhead backwards by a user-configured delta.
+:bl-icon:`frame_next` Jump Forward by Delta :kbd:`Ctrl-Right`
+   Jumps the playhead forward by a user-configured delta.
 
+Additionally, there is a menu accessible to the right of the Jump by Delta buttons where their delta can be set:
+
+.. figure:: /images/editors_timeline_player-jump_delta_panel.png
 
 .. _animation-editors-frame_controls:
 
