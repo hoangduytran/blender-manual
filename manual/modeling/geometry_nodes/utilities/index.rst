@@ -8,7 +8,7 @@ General purpose nodes for modifying data.
 .. toctree::
    :maxdepth: 2
 
-   Color <color/index.rst>
+   Math <math/index.rst>
    Text <text/index.rst>
    Vector <vector/index.rst>
 
@@ -18,7 +18,6 @@ General purpose nodes for modifying data.
    :maxdepth: 2
 
    Field <field/index.rst>
-   Math <math/index.rst>
    Matrix <matrix/index.rst>
    Rotation <rotation/index.rst>
    Deprecated <deprecated/index.rst>

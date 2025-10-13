@@ -20,7 +20,7 @@ Shader to RGB
 -------------
 
 EEVEE supports the conversion of BSDF outputs into color inputs to make a wide variety of custom shading.
-This is supported using the :doc:`Shader to RGB </render/shader_nodes/converter/shader_to_rgb>` node.
+This is supported using the :doc:`Shader to RGB </render/shader_nodes/color/shader_to_rgb>` node.
 This node evaluates the lighting of the BSDFs connected to it just like a *Blended* material and inherits
 its limitation.
 

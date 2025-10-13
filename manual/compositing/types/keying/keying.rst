@@ -140,7 +140,7 @@ Image
 Matte
    Output matte to use for checking the quality of the key, or to manually apply
    using a :doc:`Set Alpha Node </compositing/types/color/set_alpha>` or
-   :doc:`Mix Node </compositing/types/color/mix/mix_color>`.
+   :doc:`Mix Node </compositing/types/color/mix_color>`.
 Edges
    Shows what edges were detected on the matte.
    Useful for adjusting the *Edge* *Size* and *Tolerance*.

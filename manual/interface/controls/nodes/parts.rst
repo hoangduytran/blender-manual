@@ -184,9 +184,9 @@ Valid conversions:
 - Between rotations and matrices.
 
 Explicit conversion requires the use of a conversion node such as
-the :doc:`/render/shader_nodes/converter/shader_to_rgb`
-or the :doc:`/render/shader_nodes/converter/rgb_to_bw` node.
-The :doc:`/render/shader_nodes/converter/math` node also contains
+the :doc:`/render/shader_nodes/color/shader_to_rgb`
+or the :doc:`/render/shader_nodes/color/rgb_to_bw` node.
+The :doc:`/render/shader_nodes/utilities/math/math` node also contains
 some functions to convert between degrees and radians.
 
 

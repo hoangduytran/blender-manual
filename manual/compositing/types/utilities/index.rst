@@ -6,10 +6,8 @@
 .. toctree::
    :maxdepth: 1
 
-   map_range.rst
-   math.rst
-   clamp.rst
-   float_curve.rst
+   math/index.rst
+   vector/index.rst
 
 ----------
 
