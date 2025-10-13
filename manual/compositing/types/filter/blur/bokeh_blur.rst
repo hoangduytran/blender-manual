@@ -51,10 +51,10 @@ An :doc:`ID masked </compositing/types/mask/id_mask>`
 alpha image can be used so that a background is blurred while foreground objects remain in focus.
 To prevent strange edges the :doc:`Dilate Node </compositing/types/filter/dilate_erode>` should be used.
 
-The Z pass can be visualized using a :doc:`Map Range </compositing/types/utilities/map_range>` node
+The Z pass can be visualized using a :doc:`Map Range </compositing/types/utilities/math/map_range>` node
 and a :doc:`Color Ramp </compositing/types/color/color_ramp>` node
 as described in :doc:`Render Layers </compositing/types/input/scene/render_layers>`.
-A *multiply* :doc:`Math </compositing/types/utilities/math>` node can be used following the color ramp
+A *multiply* :doc:`Math </compositing/types/utilities/math/math>` node can be used following the color ramp
 so that a blur value greater than one is used for objects outside the focal range.
 
 .. figure:: /images/compositing_types_filter_bokeh-blur_example-1.png

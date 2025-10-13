@@ -203,7 +203,7 @@ Other
    Ambient Occlusion
       Ambient occlusion from directly visible surfaces. This is a grayscale pass with values that go
       from 0 (fully occluded) to 1 (fully exposed), making it suitable for multiplying with a color
-      image in the Compositor (see :doc:`/compositing/types/color/mix/mix_color`).
+      image in the Compositor (see :doc:`/compositing/types/color/mix_color`).
 
       As an alternative to this pass, it's also possible to use the
       :doc:`/render/shader_nodes/input/ao` in materials.
@@ -255,7 +255,7 @@ Other
    Ambient Occlusion
       Ambient occlusion from directly visible surfaces. This is a grayscale pass with values that go
       from 0 (fully occluded) to 1 (fully exposed), making it suitable for multiplying with a color
-      image in the Compositor (see :doc:`/compositing/types/color/mix/mix_color`).
+      image in the Compositor (see :doc:`/compositing/types/color/mix_color`).
 
       As an alternative to this pass, it's also possible to use the
       :doc:`/render/shader_nodes/input/ao` in materials.
@@ -359,7 +359,7 @@ Light Groups
 A Light Group provides a limited *Combined* render pass where the scene is only illuminated by
 certain lights. Multiple such passes can then be combined in compositing to construct a full render
 with all the lights. The most straightforward way is to simply *Add* them together using
-the :doc:`/compositing/types/color/mix/mix_color`, but by making more complex combinations,
+the :doc:`/compositing/types/color/mix_color`, but by making more complex combinations,
 it's possible to change the color and intensity of individual lights without having to re-render.
 
 To assign a Light object to a new or existing Light Group, use the panel
@@ -420,6 +420,6 @@ EEVEE Limitations
 - Transparent materials that have their :ref:`bpy.types.Material.surface_render_method`
   set to *Blended* are not rendered in passes other than *Combined* and *Transparent*.
   Use the *Dithered* method instead.
-- The :doc:`/render/shader_nodes/converter/shader_to_rgb` only works correctly
+- The :doc:`/render/shader_nodes/color/shader_to_rgb` only works correctly
   in the *Combined* pass as EEVEE excludes parts of the BSDF equation.
 - There is a maximum of 16 *Color* and 16 *Value* AOVs (custom render passes).

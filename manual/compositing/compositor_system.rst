@@ -39,7 +39,7 @@ Vector
   it. It can be treated as a 2D vector with the last two components ignored, for instance, the
   *Vector* input of the :ref:`Displace node <bpy.types.CompositorNodeDisplace>` is treated as a 2D
   vector. It can be treated as a 3D vector with the last component ignored, for instance, the
-  *Vector* input of the :Doc:`Seperate XYZ node </compositing/types/vector/separate_xyz>` is treated as
+  *Vector* input of the :Doc:`Seperate XYZ node </compositing/types/utilities/vector/separate_xyz>` is treated as
   a 3D vector. It can be treated as two consecutive 2D vectors. For instance the *Velocity Pass* as
   expected by the :ref:`Vector Blur node <bpy.types.CompositorNodeVecBlur>` is assumed to have the
   *2D Previous Velocity* in the X and Y components of the vector and the *2D Next Velocity* in the
@@ -75,7 +75,7 @@ conversions are performed:
 +---------+---------+-------------------------------------+
 
 The following example demonstrates implicit conversion between a color type and a float type, since
-the :doc:`Math Node </compositing/types/utilities/math>` expect float inputs.
+the :doc:`Math Node </compositing/types/utilities/math/math>` expect float inputs.
 
 .. figure:: /images/compositing_realtime-compositor_compositing-space_data_type_implicit_conversion.png
 
@@ -269,7 +269,7 @@ the :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>`, the output will 
 
 The :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>` currently does not support changing
 the domain priority for its inputs, so as a workaround,
-one can use a :doc:`Mix node </compositing/types/color/mix/mix_color>` to achieved the desired behavior,
+one can use a :doc:`Mix node </compositing/types/color/mix_color>` to achieved the desired behavior,
 noting that the first *Image* input in the *Mix* node has the highest domain priority,
 as shown in the following figure.
 

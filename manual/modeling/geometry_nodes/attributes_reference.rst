@@ -149,7 +149,7 @@ to determine the domains of attributes.
 
 Attributes are automatically interpolated to other domains. For example, when the
 :doc:`/modeling/geometry_nodes/geometry/read/position` is connected to the selection input of
-the :doc:`/modeling/geometry_nodes/material/set_material` node, the values are interpolated
+the :doc:`/modeling/geometry_nodes/geometry/material/set_material` node, the values are interpolated
 from the *Point* domain to the *Face* domain. Normally, domain conversions use simple averages
 for values, but *Boolean* data type attributes have special rules for interpolation:
 

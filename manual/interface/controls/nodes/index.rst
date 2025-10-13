@@ -46,7 +46,5 @@ The list below shows the different types of nodes and where they're documented.
    Selecting <selecting.rst>
    arranging.rst
    Editing <editing.rst>
+   types/index.rst
    groups.rst
-   frame.rst
-   reroute.rst
-   bundles/index.rst

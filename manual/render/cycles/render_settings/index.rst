@@ -41,7 +41,7 @@ Open Shading Language
    Enables the use of :doc:`/render/cycles/osl/index` which allows custom shading using shader scripts.
    When OSL is enabled, you can:
 
-   - Use OSL shader nodes in materials using the :doc:`Script Node </render/shader_nodes/script>`.
+   - Use OSL shader nodes in materials using the :doc:`Script Node </render/shader_nodes/utilities/script>`.
    - Write custom shading logic that is not possible with built-in Cycles nodes.
 
    Limitations:

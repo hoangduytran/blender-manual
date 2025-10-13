@@ -69,7 +69,7 @@ Outputs
 
 Image
    The distorted texture, which can then be overlaid on the render using e.g. the
-   :doc:`/compositing/types/color/mix/alpha_over`.
+   :doc:`/compositing/types/color/alpha_over`.
 
 
 Examples

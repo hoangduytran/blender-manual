@@ -23,7 +23,7 @@ When a node is automatically attached, the surrounding nodes
 will be offset to the right or left depending on the :kbd:`T` toggle;
 see :ref:`editors-nodes-usage-auto-offset` for more information.
 
-While dragging nodes, you can press :kbd:`F` to toggle their parent :doc:`Frame </interface/controls/nodes/frame>`:
+While dragging nodes, you can press :kbd:`F` to toggle their parent :doc:`Frame </interface/controls/nodes/types/layout/frame>`:
 
 - If the nodes are inside a frame, they will be detached from it.
 - If the nodes are not inside a frame and there is a frame under the cursor, they will be attached to that frame.
@@ -89,7 +89,7 @@ then draw a line across one or more links to mute/unmute them.
 A muted link acts as though it's no longer there; this also means the input fields
 for specifying fixed values become visible again.
 
-When muting links on the input side of a :doc:`reroute node </interface/controls/nodes/reroute>`,
+When muting links on the input side of a :doc:`reroute node </interface/controls/nodes/types/layout/reroute>`,
 the links on its output side will be muted too.
 
 .. figure:: /images/interface_controls_nodes_editing_mute_links.png

@@ -21,7 +21,7 @@ that aren't suitable for chroma keying.
 .. tip::
 
    When compositing footage of something that emits light and has a dark background,
-   like fire, a :doc:`Mix Node </compositing/types/color/mix/mix_color>` using a *Screen* or
+   like fire, a :doc:`Mix Node </compositing/types/color/mix_color>` using a *Screen* or
    *Add* operator will produce better results.
 
 
