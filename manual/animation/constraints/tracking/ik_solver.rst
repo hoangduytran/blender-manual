@@ -94,17 +94,17 @@ If the armature is configured to use the
 the constraint has the following additional parameters:
 
 IK Type
-   Copy Pose
+   :Copy Pose:
       Just as with the *Standard* IK solver, the chain tip matches the location and/or
       rotation of the *Target*.
 
       Axis Reference
          The meaning of the axes in the *Lock* settings below.
 
-         Bone
+         :Bone:
             The chain tip should be positioned (or rotated) so that the *Target* has an X/Y/Z
             coordinate (or angle) of 0 in the space of the bone.
-         Target
+         :Target:
             The chain tip should be positioned (or rotated) so that it has an X/Y/Z
             coordinate (or angle) of 0 in the space of the *Target*.
 
@@ -117,17 +117,14 @@ IK Type
             For that, see the :ref:`bpy.types.PoseBone.lock_ik_x` settings in the bones'
             *Inverse Kinematics* properties.
 
-   Distance
+  : Distance:
       The end of the chain stays inside, on the surface of, or outside a sphere centered
       on the *Target*.
 
       Limit Mode
-         Inside
-            The chain tip stays close to the target.
-         Outside
-            The chain tip stays away from the target.
-         On Surface
-            The chain tip stays at an exact distance from the target.
+         :Inside: The chain tip stays close to the target.
+         :Outside: The chain tip stays away from the target.
+         :On Surface: The chain tip stays at an exact distance from the target.
 
       Distance
          The distance to maintain.

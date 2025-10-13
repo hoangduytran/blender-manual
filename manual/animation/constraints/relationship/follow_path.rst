@@ -61,6 +61,7 @@ To have the owner perfectly positioned and aligned on the Curve, ensure its
 world position and rotation are both zero. This can be done by pressing :kbd:`Alt-G`
 and :kbd:`Alt-R` respectively.
 
+
 Options
 =======
 
@@ -119,6 +120,7 @@ Animate Path
 
 :ref:`bpy.types.constraint.influence`
    How strongly the constraint affects the owner.
+
 
 Example
 =======

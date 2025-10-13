@@ -53,9 +53,9 @@ Velocity Attribute
 Velocity Unit
    Defines how the velocity vectors are interpreted with regard to time.
 
-   Frame
+   :Frame:
       The velocity unit was encoded in frames and does not need to be scaled by scene FPS.
-   Second
+   :Second:
       The velocity unit was encoded in seconds and needs to be scaled by the scene FPS (1 / FPS).
 
    .. note:: The *Velocity Unit* option is currently for Alembic files only.

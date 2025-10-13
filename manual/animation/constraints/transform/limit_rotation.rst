@@ -17,6 +17,7 @@ This constraint doesn't work for bones that are affected by :doc:`Inverse Kinema
 Please use the *Limit* settings in the bone's :ref:`IK panel <bpy.types.PoseBone.ik>`
 instead.
 
+
 Options
 =======
 
