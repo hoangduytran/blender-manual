@@ -1,6 +1,8 @@
 .. index:: Nodes; Separate Bundle
 .. _bpy.types.NodeSeparateBundle:
 
+.. --- copy below this line ---
+
 ********************
 Separate Bundle Node
 ********************

@@ -17,6 +17,7 @@ General purpose nodes for modifying data.
 .. toctree::
    :maxdepth: 2
 
+   Bundle <bundle/index.rst>
    Field <field/index.rst>
    Matrix <matrix/index.rst>
    Rotation <rotation/index.rst>
