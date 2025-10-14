@@ -149,22 +149,25 @@ Window Options
 ==============
 
 ``-w``, ``--window-border``
-   Force opening with borders.
-
-``-W``, ``--window-fullscreen``
-   Force opening in full-screen mode.
-
-``-p``, ``--window-geometry`` ``<sx>`` ``<sy>`` ``<w>`` ``<h>``
-   Open with lower left corner at ``<sx>``, ``<sy>`` and width and height as ``<w>``, ``<h>``.
+   Force opening with borders, in a normal (non maximized) state.
 
 ``-M``, ``--window-maximized``
    Force opening maximized.
+
+``-W``, ``--window-fullscreen``
+   Force opening full-screen.
+
+``-p``, ``--window-geometry`` ``<sx>`` ``<sy>`` ``<w>`` ``<h>``
+   Open with lower left corner at ``<sx>``, ``<sy>`` and width and height as ``<w>``, ``<h>``.
 
 ``-con``, ``--start-console``
    Start with the console window open (ignored if ``-b`` is set), (Windows only).
 
 ``--no-native-pixels``
    Do not use native pixel size, for high resolution displays (MacBook ``Retina``).
+
+``--no-window-frame``
+   Disable all window decorations (Linux only).
 
 ``--no-window-focus``
    Open behind other windows and without taking focus.
@@ -333,6 +336,10 @@ Debug Options
 
 ``--debug-gpu-shader-debug-info``
    Enable shader debug info generation (Vulkan only).
+
+``--debug-gpu-shader-source``
+   Capture the GPU commands issued inside the give scope name.
+   Files are saved in the current working directory inside a directory named "Shaders".
 
 ``--debug-gpu-scope-capture``
    Capture the GPU commands issued inside the give scope name.
