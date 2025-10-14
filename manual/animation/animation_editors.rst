@@ -114,10 +114,10 @@ Second Step :guilabel:`Seconds`
 
 .. _animation-editors-footer:
 
-Footer
-======
+Playback Controls
+=================
 
-The footer of the animation editors (such as the Timeline, Dope Sheet, Graph Editor, and NLA Editor)
+The Playback Controls region of the animation editors (such as the Timeline, Dope Sheet, Graph Editor, and NLA Editor)
 contains controls and options related to playback, keying, auto keyframing, and transport.
 
 These settings allow you to:

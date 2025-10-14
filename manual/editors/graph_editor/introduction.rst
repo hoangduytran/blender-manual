@@ -101,8 +101,8 @@ Adjust Last Operation
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
    Shows or hides the :ref:`Channels Region <editors-graph_editor-channels_region>`.
-Footer
-   Show or hide the :ref:`Sidebar <ui-region-footer>`.
+Playback Controls
+   Show or hide the :ref:`Playback Controls <animation-editors-footer>`.
 
 ----------
 
@@ -356,6 +356,7 @@ Filter (funnel icon)
       (should only really be an issue when working with lots of objects),
       you can turn it off.
 
+
 Transform Controls
 ------------------
 
@@ -399,21 +400,15 @@ Snap
       Taking the above example, the keyframe would snap to 0:07+0,
       removing the subsecond offset.
 
-
-Playhead
-   Options for playhead snapping which helps you position the playhead precisely when scrubbing
-   by snapping it to specific elements like frames, markers, or keyframes.
-
-   See :ref:`Playhead Snapping <playhead-snapping>` for more information.
-
 Proportional Editing :kbd:`O`
    See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
 
 
-Footer
-======
+Playback Controls
+=================
 
-The footer contains controls and options related to playback, keying, auto keyframing, and transport.
+The Playback Controls region contains controls and options
+related to playback, keying, auto keyframing, and transport.
 
 These settings allow you to:
 
@@ -425,7 +420,7 @@ These settings allow you to:
 .. seealso::
 
    For a detailed description of all properties and controls commonly found in the footer,
-   see the :ref:`Animation Editors Footer <animation-editors-footer>`
+   see the :ref:`Playback Controls <animation-editors-footer>` documentation.
 
 
 Sidebar Region

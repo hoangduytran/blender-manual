@@ -30,8 +30,8 @@ Adjust Last Operation
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
    Show or hide the :ref:`bpy.types.SequenceTimelineChannel`.
-Footer
-   Show or hide the :ref:`Sidebar <ui-region-footer>`.
+Playback Controls
+   Show or hide the :ref:`Playback Controls <animation-editors-footer>`.
 
 ----------
 
@@ -160,19 +160,11 @@ within an animation. Like with most animation editors, markers are shown at the 
 See :ref:`Editing Markers <animation-markers-editing>` for details.
 
 
-Playhead
---------
+Playback Controls
+=================
 
-Options for playhead snapping which helps you position the playhead precisely when scrubbing
-by snapping it to specific elements like frames, markers, or keyframes.
-
-See :ref:`Playhead Snapping <playhead-snapping>` for more information.
-
-
-Footer
-======
-
-The footer contains controls and options related to playback, keying, auto keyframing, and transport.
+The Playback Controls region contains controls and options
+related to playback, keying, auto keyframing, and transport.
 
 These settings allow you to:
 
@@ -184,7 +176,7 @@ These settings allow you to:
 .. seealso::
 
    For a detailed description of all properties and controls commonly found in the footer,
-   see the :ref:`Animation Editors Footer <animation-editors-footer>`
+   see the :ref:`Playback Controls <animation-editors-footer>` documentation.
 
 
 Main View
