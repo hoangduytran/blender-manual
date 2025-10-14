@@ -23,8 +23,8 @@ Adjust Last Operation
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
    Shows or hides the Channels region (the list of animated property names on the left).
-Footer
-   Show or hide the :ref:`Sidebar <ui-region-footer>`.
+Playback Controls
+   Show or hide the :ref:`Playback Controls <animation-editors-footer>`.
 
 ----------
 
@@ -189,10 +189,11 @@ Sort Data-Blocks
    you can turn it off.
 
 
-Footer
-======
+Playback Controls
+=================
 
-The footer contains controls and options related to playback, keying, auto keyframing, and transport.
+The Playback Controls region contains controls and options
+related to playback, keying, auto keyframing, and transport.
 
 These settings allow you to:
 
@@ -204,4 +205,4 @@ These settings allow you to:
 .. seealso::
 
    For a detailed description of all properties and controls commonly found in the footer,
-   see the :ref:`Animation Editors Footer <animation-editors-footer>`
+   see the :ref:`Playback Controls <animation-editors-footer>` documentation.

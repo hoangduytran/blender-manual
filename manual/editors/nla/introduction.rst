@@ -49,8 +49,8 @@ Adjust Last Operation
    completed operation. See :ref:`bpy.ops.screen.redo_last`.
 Channels
    Shows or hides the Track Region.
-Footer
-   Show or hide the :ref:`Sidebar <ui-region-footer>`.
+Playback Controls
+   Show or hide the :ref:`Playback Controls <animation-editors-footer>`.
 
 ----------
 
@@ -172,6 +172,7 @@ Selected Objects
 
 See :doc:`/editors/nla/strips` for details on the various strip types.
 
+
 Track Menu
 ----------
 
@@ -184,6 +185,7 @@ Strip Menu
 
 Contains tools for working with NLA strips.
 See :doc:`Editing Strips </editors/nla/editing/strip>` for details.
+
 
 Filters
 -------
@@ -231,10 +233,11 @@ Absolute Time Snap
    removing the subsecond offset.
 
 
-Footer
-======
+Playback Controls
+=================
 
-The footer contains controls and options related to playback, keying, auto keyframing, and transport.
+The Playback Controls region contains controls and options
+related to playback, keying, auto keyframing, and transport.
 
 These settings allow you to:
 
@@ -246,4 +249,4 @@ These settings allow you to:
 .. seealso::
 
    For a detailed description of all properties and controls commonly found in the footer,
-   see the :ref:`Animation Editors Footer <animation-editors-footer>`
+   see the :ref:`Playback Controls <animation-editors-footer>` documentation.

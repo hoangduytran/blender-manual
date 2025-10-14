@@ -17,10 +17,11 @@ You can pan around the view with :kbd:`MMB` and zoom with :kbd:`Wheel` or :kbd:`
 Pressing :kbd:`Home` resets the view, maximizing the size of the preview within the editor's area.
 
 
-Footer
-======
+Playback Controls
+=================
 
-The footer contains controls and options related to playback, keying, auto keyframing, and transport.
+The Playback Controls region contains controls and options
+related to playback, keying, auto keyframing, and transport.
 
 These settings allow you to:
 
@@ -32,4 +33,4 @@ These settings allow you to:
 .. seealso::
 
    For a detailed description of all properties and controls commonly found in the footer,
-   see the :ref:`Animation Editors Footer <animation-editors-footer>`
+   see the :ref:`Playback Controls <animation-editors-footer>` documentation.
