@@ -1,6 +1,8 @@
 .. index:: Nodes; Combine Bundle Node
 .. _bpy.types.NodeCombineBundle:
 
+.. --- copy below this line ---
+
 *******************
 Combine Bundle Node
 *******************
