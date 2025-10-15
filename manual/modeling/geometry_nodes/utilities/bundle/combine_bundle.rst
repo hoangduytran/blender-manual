@@ -1,2 +1,2 @@
-.. include:: /interface/controls/nodes/types/bundles/combine_bundle.rst
+.. include:: /interface/controls/nodes/types/utilities/bundles/combine_bundle.rst
    :start-after: .. --- copy below this line ---

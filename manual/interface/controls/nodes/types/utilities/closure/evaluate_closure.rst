@@ -47,7 +47,7 @@ The *Evaluate Closure* node does not have functional properties, but its input a
 the *Node* tab of the Sidebar.
 
 Sync Sockets
-   Updates matching :doc:`Separate Bundle </interface/controls/nodes/types/bundles/separate_bundle>` nodes within the same
+   Updates matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>` nodes within the same
    node tree to reflect name and type changes. Use this after renaming or changing socket types so downstream nodes stay
    in sync.
 

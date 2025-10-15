@@ -11,5 +11,4 @@ These nodes are shared across different node tree types.
 
    Output <output/index.rst>
    Utilities <utilities/index.rst>
-   Bundle <bundles/index.rst>
    layout/index.rst
