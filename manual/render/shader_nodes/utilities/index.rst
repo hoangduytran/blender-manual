@@ -14,4 +14,21 @@
 .. toctree::
    :maxdepth: 1
 
+   repeat.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   closure.rst
+   evaluate_closure.rst
+   bundle/combine_bundle.rst
+   bundle/separate_bundle.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
    script.rst

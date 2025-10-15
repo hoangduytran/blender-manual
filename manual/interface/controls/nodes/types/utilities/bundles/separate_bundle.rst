@@ -12,11 +12,11 @@ Separate Bundle Node
    :alt: Separate Bundle Node
 
 The *Separate Bundle* node extracts individual values from a
-:doc:`Bundle </interface/controls/nodes/types/bundles/index>`.
+:doc:`Bundle </interface/controls/nodes/types/utilities/bundles/index>`.
 Each output corresponds to an element in the bundle, identified by its socket name.
 
 This node is the counterpart of the
-:doc:`Combine Bundle </interface/controls/nodes/types/bundles/combine_bundle>`
+:doc:`Combine Bundle </interface/controls/nodes/types/utilities/bundles/combine_bundle>`
 node and is typically used to retrieve structured data that was previously grouped together.
 
 
@@ -33,7 +33,7 @@ Properties
 Properties are available in the *Node* tab of the Sidebar.
 
 Sync Sockets
-   Update matching :doc:`Separate Bundle </interface/controls/nodes/types/bundles/separate_bundle>`
+   Update matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>`
    nodes in the same node tree to reflect name and type changes. Use this after renaming or
    retargeting item types so downstream nodes stay in sync.
 
