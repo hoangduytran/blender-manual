@@ -9,6 +9,7 @@ These nodes are shared across different node tree types.
    :maxdepth: 3
    :titlesonly:
 
-   output/index.rst
+   Output <output/index.rst>
+   Utilities <utilities/index.rst>
    Bundle <bundles/index.rst>
    layout/index.rst
