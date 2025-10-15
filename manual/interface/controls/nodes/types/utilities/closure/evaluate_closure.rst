@@ -10,16 +10,18 @@ Evaluate Closure
    :align: right
    :alt: Evaluate Closure Node
 
-The *Evaluate Closure* node executes a connected :doc:`Closure Zone </interface/controls/nodes/types/utilities/closure/closure>`.
+The *Evaluate Closure* node executes a connected 
+:doc:`Closure Zone </interface/controls/nodes/types/utilities/closure/closure>`.
 It acts as the *call site* of the closure, running its internal node graph and returning the resulting values.
 
-Closures enable dynamic and customizable node groups by allowing users to pass procedural logic into another node tree.
-When the *Evaluate Closure* node runs, the connected closure is evaluated within the current context, matching its input
-and output sockets by name.
+Closures enable dynamic and customizable node groups by allowing users to pass procedural logic into another node
+tree. When the *Evaluate Closure* node runs, the connected closure is evaluated within the current context, matching
+its input and output sockets by name.
 
 Common uses for the *Evaluate Closure* node include:
 
-- Allowing user-defined behaviors inside procedural systems (e.g. custom scattering, placement rules, or shading logic).
+- Allowing user-defined behaviors inside procedural systems (e.g. custom scattering, placement rules, or shading
+  logic).
 - Injecting logic into reusable node groups for advanced effects.
 - Providing optional customization inputs for high-level node-based tools.
 
@@ -29,7 +31,8 @@ Inputs
 
 Closure
    The closure to evaluate.
-   This input expects a connection from a :doc:`Closure Zone </interface/controls/nodes/types/utilities/closure/closure>`.
+   This input expects a connection from a 
+   :doc:`Closure Zone </interface/controls/nodes/types/utilities/closure/closure>`.
    If no closure is connected, the node operates in *pass-through mode* (see below).
 
 
@@ -47,13 +50,14 @@ The *Evaluate Closure* node does not have functional properties, but its input a
 the *Node* tab of the Sidebar.
 
 Sync Sockets
-   Updates matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>` nodes within the same
-   node tree to reflect name and type changes. Use this after renaming or changing socket types so downstream nodes stay
+   Updates matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>` nodes
+   within the same node tree to reflect name and type changes. Use this after renaming or changing socket types so
+   downstream nodes stay
    in sync.
 
 Define Signature
-   Marks the node as defining a closure signature to be used by other closure nodes. Ensures consistent input and output
-   definitions across related closures.
+   Marks the node as defining a closure signature to be used by other closure nodes. Ensures consistent input and
+   output definitions across related closures.
 
 
 Input Items
@@ -95,7 +99,8 @@ Outputs
 
 The outputs of the *Evaluate Closure* node depend on its current configuration:
 
-- **When a closure is connected** -- Each output corresponds to an output socket of the *Closure Zone* with the same name.
+- **When a closure is connected** -- Each output corresponds to an output socket of the *Closure Zone* with the same
+  name.
 - **When no closure is connected** -- Outputs are defined manually through the *Output Items* section of the Sidebar.
 
 

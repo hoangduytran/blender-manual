@@ -25,8 +25,8 @@ Inputs
 ======
 
 Closures define their own inputs, which act as parameters for the internal node logic.
-These inputs can be created by dragging the blank input socket into another socket or by adding sockets manually in the
-node's properties. Each input defines a parameter that the closure can receive when it is evaluated elsewhere.
+These inputs can be created by dragging the blank input socket into another socket or by adding sockets manually in
+the node's properties. Each input defines a parameter that the closure can receive when it is evaluated elsewhere.
 
 
 Properties
@@ -36,9 +36,9 @@ The *Closure* node does not have functional properties of its own, but its inter
 *Node* tab in the Sidebar. Inputs and outputs can be added, removed, and renamed to define the closure's signature.
 
 Sync Sockets
-   Updates matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>` nodes within the
-   same node tree to reflect name and type changes. Use this option after renaming or changing socket types so downstream
-   nodes remain in sync.
+   Updates matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>` nodes
+   within the same node tree to reflect name and type changes. Use this option after renaming or changing socket types
+   so downstream nodes remain in sync.
 
 Define Signature
    Marks the current zone as the source of a closure signature that other nodes can reference. This ensures consistent
@@ -92,8 +92,8 @@ adding sockets manually in the node's properties.
 Usage
 =====
 
-Closures define reusable logic that can be injected into another node tree. They are commonly used in procedural systems
-where part of the behavior should remain user-defined.
+Closures define reusable logic that can be injected into another node tree. They are commonly used in procedural
+systems where part of the behavior should remain user-defined.
 
 Typical use cases include:
 
@@ -105,8 +105,8 @@ Typical use cases include:
 Using External Values
 ---------------------
 
-Closures can *capture* values from outside their zone. A captured value is stored as part of the closure definition and
-remains available even when the closure is evaluated in a different context.
+Closures can *capture* values from outside their zone. A captured value is stored as part of the closure definition
+and remains available even when the closure is evaluated in a different context.
 
 Captured values make it possible to preserve external parameters—such as scale, density, or color—without creating
 explicit input sockets. This makes closures cleaner and easier to reuse in different node trees.
