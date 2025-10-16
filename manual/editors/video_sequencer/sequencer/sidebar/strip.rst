@@ -197,6 +197,17 @@ Pan
       The number of audio channels can be configured in the
       :ref:`Audio Output <render-output-video-encoding-audio>` settings.
 
+.. _bpy.types.SoundStrip.pitch_correction:
+
+Preserve Pitch
+   When enabled, this option maintains the original pitch of the
+   audio even when the playback speed of the strip is changed.
+   When disabled, adjusting the playback speed of a sound strip also
+   alters its pitch (for example, slowing down lowers the pitch, and speeding up raises it).
+
+   This option is useful when synchronizing audio to video edits or animations
+   that require timing adjustments without affecting tone or musical key.
+
 .. _bpy.types.SoundStrip.show_waveform:
 
 Display Waveform
