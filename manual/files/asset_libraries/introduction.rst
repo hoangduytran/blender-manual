@@ -83,6 +83,66 @@ In the future, the asset type definition will be expanded;
 see :ref:`asset-libraries-future-development` for more info.
 
 
+Supported Assets
+----------------
+
+
+.. list-table::
+   :header-rows: 1
+   :class: valign
+   :widths: 15 15 70
+
+   * - Asset
+     - Type
+     - Description
+
+   * - Material
+     - Primitive
+     - A :doc:`Material </render/materials/index>` data-block that can be applied to objects.
+       When dragged onto an object, it replaces the material slot.
+
+   * - Collection
+     - Primitive
+     - A :doc:`Collection </scene_layout/collections/index>` is a group of objects that
+       can be linked or appended into a scene. Collections maintain their internal hierarchy
+       and can be instanced or used for modular scene composition.
+
+   * - Object
+     - Primitive
+     - A standard :doc:`Object </scene_layout/object/index>` asset that can be dragged into the scene.
+       It may contain mesh, curve, light, or other data.
+
+   * - Brush
+     - Preset
+     - A :doc:`Brush </sculpt_paint/brush/index>` asset used for sculpting, texture painting, or vertex painting.
+       When activated, it becomes the current brush but is not stored permanently in the file.
+
+   * - Node Group
+     - Primitive
+     - A :doc:`Node Group </interface/controls/nodes/groups>` asset that can be dragged into compatible node editors
+       such as Geometry Nodes, Shader Editor, or Compositor. Acts as a reusable building block of node logic.
+
+   * - World
+     - Primitive
+     - A :doc:`World </render/lights/world>` asset defining ambient lighting and background.
+       When dragged into the viewport, it replaces the current world. It can also be appended as a data-block.
+
+   * - Scene
+     - Primitive
+     - A full :doc:`Scene </scene_layout/scene/index>` asset, including its cameras, lights, and linked objects.
+
+       * Scenes generate previews by rendering the active camera view in Solid mode.
+         This requires the scene to have an active camera.
+       * Dragging a scene asset into a window (except the Asset Browser itself)
+         imports or links the scene and makes it the active scene in that window.
+
+   * - Pose Action
+     - Preset
+     - A :doc:`Pose Asset </animation/armatures/posing/editing/pose_library>` based on an Action data-block.
+       Applying it loads the pose data and applies it to the selected or active armature, updating bone transforms
+       without permanently modifying the source action.
+
+
 .. _asset-library-current-file:
 
 The Current File Asset Library

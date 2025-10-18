@@ -321,6 +321,9 @@ These buttons are used to set the current frame and control playback.
    Moves the Playhead to the next keyframe.
 :bl-icon:`ff` Jump to End :kbd:`Shift-Right`
    Sets the Playhead to the end of the frame range.
+
+.. _bpy.ops.screen.time_jump:
+
 :bl-icon:`frame_prev` Jump Backward by Delta :kbd:`Ctrl-Left`
    Jumps the playhead backwards by a user-configured delta.
 :bl-icon:`frame_next` Jump Forward by Delta :kbd:`Ctrl-Right`

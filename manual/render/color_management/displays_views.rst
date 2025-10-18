@@ -38,12 +38,15 @@ Regular compute displays support sRGB, and most images and videos are
 stored in this color space. However moderns displays often support a wider
 gamut and high dynamic range content.
 
-:sRGB: Basic display supported everywhere.
-:Display P3: Wide gamut for Apple devices and other modern displays.
-:Rec.1886: Used by many older TVs.
-:Rec.2020: Even wider gamut than P3 supported by some displays.
-:Rec.2100 PQ: For high dynamic range displays with Rec.2020 wide gamut, up to 10000 nits.
-:Rec.2100 HLG: For high dynamic range TVs with Rec.2020 wide gamut, up to 1000 nits.
+SDR
+   :sRGB: Basic display supported everywhere.
+   :Display P3: Wide gamut for Apple devices and other modern displays.
+   :Rec.1886: Used by many older TVs.
+   :Rec.2020: Even wider gamut than P3 supported by some displays.
+HDR
+   :Rec.2100 PQ: For high dynamic range displays with Rec.2020 wide gamut, up to 10000 nits.
+   :Rec.2100 HLG: For high dynamic range TVs with Rec.2020 wide gamut, up to 1000 nits.
+
 
 Wide Gamut
 ----------
