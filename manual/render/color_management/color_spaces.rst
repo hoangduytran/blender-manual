@@ -26,6 +26,7 @@ work. Image files are also often stored in different color spaces.
 Correct conversion into and out of this scene linear color space is critical to a reliable
 color management workflow.
 
+
 Working Space
 =============
 
@@ -83,6 +84,7 @@ Built-in Color Spaces
 
 Blender's OCIO configuration file is equipped by default to read/write files in these color spaces
 
+
 Display
 -------
 
@@ -94,6 +96,7 @@ Color spaces for displays and image files.
 :Display P3: Apple's Display P3 with sRGB compound (piece-wise) encoding transfer function, common on Mac devices.
 :Rec.2100 PQ: For high dynamic range images and video with Rec.2020 wide gamut, up to 10000 nits.
 :Rec.2100 HLG: For high dynamic range images and video with Rec.2020 wide gamut, up to 1000 nits.
+
 
 Linear
 ------
@@ -118,12 +121,16 @@ Color spaces commonly used for OpenEXR files.
 :Linear CIE-XYZ E: 1931 CIE XYZ standard with assumed illuminant E white point.
 :Linear CIE-XYZ D65: 1931 CIE XYZ with adapted illuminant D65 white point.
 
-Data
-----
 
-Color space for non-color data like normal maps or displacement maps.
+Other
+-----
 
-:Non-Color: Generic data that is not color, will not apply any color transform (e.g. normal maps).
+:Non-Color:
+   Generic data that is not color, will not apply any color transform (e.g. normal maps or displacement maps).
+:Working Space:
+   Uses the :ref:`bpy.types.BlendFileColorspace.working_space`
+   color space defined in the scene's color management settings.
+
 
 Log
 ---
@@ -132,6 +139,7 @@ Log
 :ACEScct: ACES color correction space with toe, using AP1 primaries.
 :AgX Log: Intermediate log color space of AgX view transform.
 :Filmic Log: Intermediate log color space of Filmic view transform.
+
 
 Utilities
 ---------
