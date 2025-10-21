@@ -47,6 +47,7 @@ Animation
    :maxdepth: 1
 
    dope_sheet/index.rst
+   timeline.rst
    graph_editor/index.rst
    drivers_editor.rst
    nla/index.rst
