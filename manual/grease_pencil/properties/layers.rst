@@ -103,7 +103,7 @@ Layer Specials
    Unlock All
       Unlocks editing of all the layers in the list.
 
-   .. _bpy.types.GreasePencilv3.use_autolock_layers:
+   .. _bpy.types.GreasePencil.use_autolock_layers:
 
    Autolock Inactive Layer
       Automatically locks the editing of every layer in the list except the active one. This way you avoid making

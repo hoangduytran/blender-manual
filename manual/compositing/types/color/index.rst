@@ -45,6 +45,7 @@ overlaying another image, etc.
    blackbody.rst
    color_ramp.rst
    convert_colorspace.rst
+   convert_to_display.rst
 
 ----------
 
