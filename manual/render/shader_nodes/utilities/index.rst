@@ -31,4 +31,11 @@
 .. toctree::
    :maxdepth: 1
 
+   menu_switch.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
    script.rst
