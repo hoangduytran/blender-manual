@@ -1,5 +1,6 @@
 .. index:: Geometry Nodes; Menu Switch
 .. _bpy.types.GeometryNodeMenuSwitch:
+.. --- copy below this line ---
 
 ****************
 Menu Switch Node
