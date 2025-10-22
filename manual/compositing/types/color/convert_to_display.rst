@@ -27,7 +27,7 @@ the *Save As Render* option or the *Render View* display.
    These adjustments can be performed using dedicated compositor nodes:
 
    - :doc:`Exposure </compositing/types/color/adjust/exposure>`
-   - :doc:`Gamma </compositing/types/color/gamma>`
+   - :doc:`Gamma </compositing/types/color/adjust/gamma>`
    - :doc:`RGB Curves </compositing/types/color/adjust/rgb_curves>`
 
 
@@ -46,14 +46,14 @@ Properties
 
 Display
    The target display device as defined in the current OCIO configuration.
-   See :ref:`bpy.types.ColorManagedDisplaySettings.display_device` for an explanation of all options.
+   See :ref:`Display <bpy.types.ColorManagedDisplaySettings.display_device>` for an explanation of all options.
 View
    The view transform to apply for the selected display.
-   See :ref:`bpy.types.ColorManagedDisplaySettings.view_transform` for an explanation of all options.
+   See :ref:`View <bpy.types.ColorManagedViewSettings.view_transform>` for an explanation of all options.
 Look
    The look transform to apply.
    Optional, and may be *None* depending on the configuration.
-   See :ref:`bpy.types.ColorManagedDisplaySettings.look` for an explanation of all options.
+   See :ref:`Look <bpy.types.ColorManagedViewSettings.look>` for an explanation of all options.
 
 
 

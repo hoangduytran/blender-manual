@@ -19,4 +19,4 @@ Workflows
 .. toctree::
    :maxdepth: 2
 
-   story_boarding.rst
+   storyboarding/index.rst
