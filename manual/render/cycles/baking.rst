@@ -238,8 +238,9 @@ Target
    Where to output the baked map.
 
    :Image Textures:
-      Bake to the image data-block associated with the :term:`Active`
-      :doc:`Image Texture </render/shader_nodes/textures/image>` node.
+      Bake to the image data-block associated with the active and selected
+      :doc:`Image Texture </render/shader_nodes/textures/image>` node. If a material does not contain an active and
+      selected image texture node, nothing will be baked for this material.
 
       .. _bpy.types.BakeSettings.use_clear:
 
