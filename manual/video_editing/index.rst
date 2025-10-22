@@ -11,3 +11,12 @@
    introduction.rst
    setup/index.rst
    edit/index.rst
+
+
+Workflows
+=========
+
+.. toctree::
+   :maxdepth: 2
+
+   story_boarding.rst
