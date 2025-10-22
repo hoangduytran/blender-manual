@@ -26,11 +26,10 @@ e.g. as if they have been printed on real camera film.
    Conversion from linear to display device space.
 
 .. _bpy.types.ColorManagedDisplaySettings:
+.. _bpy.types.ColorManagedDisplaySettings.display_device:
 
 Displays
 ========
-
-.. _bpy.types.ColorManagedDisplaySettings.display_device:
 
 The color space of the display that images and video are being created for.
 

@@ -11,6 +11,7 @@
    introduction.rst
    sidebar.rst
    compositor_system.rst
+   image_kernels.rst
 
 .. index:: Compositor Nodes
 

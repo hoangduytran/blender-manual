@@ -17,6 +17,7 @@ post-processing effect on the image.
    :maxdepth: 1
 
    anti_aliasing.rst
+   convolve.rst
    denoise.rst
    despeckle.rst
 
