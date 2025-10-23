@@ -36,9 +36,19 @@ Use Cache
    in the same modifier stack and the modifier is not the first Line Art modifier in the stack.
 
 Source Type
-   What type of geometry source should Line Art be generated from.
+   Specifies the source from which Line Art generates strokes:
 
-   Scene, Collection, Object
+   :Scene: Uses all visible objects in the scene.
+   :Collection: Uses only the objects within the chosen collection.
+   :Object:
+      Generates strokes from a single specified object.
+      The following object types are supported:
+
+      - :doc:`Mesh </modeling/meshes/index>`
+      - :doc:`Text </modeling/texts/index>`
+      - :doc:`Curve </modeling/curves/index>`
+      - :doc:`Surface </modeling/surfaces/index>`
+      - :doc:`Curves </modeling/curves_new/index>`
 
 Object/Collection
    Based on the source type, collection or object can be selected as source geometry.
