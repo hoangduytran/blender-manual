@@ -127,6 +127,12 @@ Node Width
    :bl-icon:`node` (Set Default Node Width)
       Set the width based on the parent group node in the current context
 
+.. _bpy.types.GeometryNodeTree.show_modifier_manage_panel:
+
+Show Manage Panel :guilabel:`Geometry Nodes`
+   Enables displaying the :ref:`geometry_nodes-manage_panel` panel in Geometry Nodes modifiers
+   when creating a modifier from a node group asset.
+
 
 Usage :guilabel:`Geometry Nodes`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

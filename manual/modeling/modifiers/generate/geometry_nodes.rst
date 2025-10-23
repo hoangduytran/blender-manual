@@ -67,8 +67,23 @@ time is defined in the :doc:`node group outputs panel </interface/controls/nodes
 This panel is hidden unless output node has attribute sockets.
 
 
+.. _geometry_nodes-manage_panel:
+
 Manage
 ------
+
+Displays options for managing data within the node group,
+
+.. _bpy.types.NodesModifier.show_manage_panel:
+
+The *Manage* panel can be hidden by disabling *Show Manage Panel*
+in the modifier's header options.
+This controls whether the panel is shown for that specific modifier.
+
+To disable the panel by default for new modifiers created from a node group asset,
+toggle :ref:`bpy.types.GeometryNodeTree.show_modifier_manage_panel`
+in the node group's properties.
+
 
 Bake
 ^^^^
