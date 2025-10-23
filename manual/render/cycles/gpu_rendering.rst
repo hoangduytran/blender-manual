@@ -26,7 +26,7 @@ CUDA -- NVIDIA
 --------------
 
 :abbr:`CUDA (Compute Unified Device Architecture)` is supported on Windows and Linux and requires a
-NVIDIA graphics cards with compute capability 3.0 and higher. To make sure your GPU is supported,
+NVIDIA graphics cards with compute capability 5.0 and higher. To make sure your GPU is supported,
 see the `list of NVIDIA graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
 with the compute capabilities and supported graphics cards.
 
