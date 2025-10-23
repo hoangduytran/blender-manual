@@ -71,3 +71,6 @@ Outputs
 
 Output
    One of the inputs without any modifications.
+
+For each input, a Boolean output is created that is *true* when that corresponding item is selected.
+These outputs can be used to trigger other parts of a node network or control visibility.

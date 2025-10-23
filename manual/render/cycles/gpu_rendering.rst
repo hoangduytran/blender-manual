@@ -26,7 +26,7 @@ CUDA -- NVIDIA
 --------------
 
 :abbr:`CUDA (Compute Unified Device Architecture)` is supported on Windows and Linux and requires a
-NVIDIA graphics cards with compute capability 3.0 and higher. To make sure your GPU is supported,
+NVIDIA graphics cards with compute capability 5.0 and higher. To make sure your GPU is supported,
 see the `list of NVIDIA graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
 with the compute capabilities and supported graphics cards.
 
@@ -91,7 +91,7 @@ Minimum driver versions:
 
 - Windows: Intel Graphics Driver XX.X.101.5518
 - Linux: ``intel-level-zero-gpu`` package 1.3.27642,
-  typically available through the ``intel-compute-runtime`` package XX.XX.27642.38
+  typically available through the ``intel-compute-runtime`` package XX.XX.34666.3
 
 Please refer to `Intel's website <https://www.intel.com/content/www/us/en/products/details/discrete-gpus.html>`__
 for more information about Intel graphics cards and their architectures.
