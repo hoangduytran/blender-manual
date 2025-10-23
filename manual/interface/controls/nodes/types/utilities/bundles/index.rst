@@ -28,6 +28,7 @@ Two nodes are provided for working with bundles:
 
    combine_bundle.rst
    separate_bundle.rst
+   join_bundle.rst
 
 Both nodes allow adding or removing an arbitrary number of sockets,
 with flexible type support.
