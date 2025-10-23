@@ -35,5 +35,4 @@ Outputs
 Bundle
    The resulting bundle that contains all items from the input bundles.
 
-   Use :doc:`Separate Bundle </modeling/geometry_nodes/combination/separate_bundle>`
-   to access individual items from the combined bundle if needed.
+   Use the :doc:`separate_bundle` to access individual items from the combined bundle if needed.
