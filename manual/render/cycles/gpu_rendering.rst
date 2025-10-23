@@ -91,7 +91,7 @@ Minimum driver versions:
 
 - Windows: Intel Graphics Driver XX.X.101.5518
 - Linux: ``intel-level-zero-gpu`` package 1.3.27642,
-  typically available through the ``intel-compute-runtime`` package XX.XX.27642.38
+  typically available through the ``intel-compute-runtime`` package XX.XX.34666.3
 
 Please refer to `Intel's website <https://www.intel.com/content/www/us/en/products/details/discrete-gpus.html>`__
 for more information about Intel graphics cards and their architectures.
