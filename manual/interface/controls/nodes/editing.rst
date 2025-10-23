@@ -202,6 +202,23 @@ Deletes the selected node(s), then creates new links connecting their former inp
 to their former output nodes.
 
 
+.. _bpy.ops.node.swap_node:
+
+Swap
+====
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Swap`
+   :Shortcut:  :kbd:`Shift-S`
+
+The *Swap* operator replaces the selected node with another node type chosen from the menu.
+
+All existing links are automatically reconnected where possible,
+matching input and output sockets by name and type.
+If a connection cannot be matched, it is left unconnected.
+
+
 Show/Hide
 =========
 
