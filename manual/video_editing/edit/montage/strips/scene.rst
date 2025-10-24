@@ -18,7 +18,7 @@ Adding Scene Strips
 ===================
 
 Existing scenes strips can be added from the :menuselection:`Add --> Scene --> "Scene Name"`.
-New scenes can also be created directly from the add menu with :menuselection:`Add --> Scene --> New Scene`.
+New scenes can also be created directly from the add menu with :menuselection:`Add --> Scene --> Empty Scene`.
 
 .. rubric:: Options
 
