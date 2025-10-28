@@ -173,6 +173,10 @@ These settings allow you to:
 - Navigate the timeline using playback and transport controls.
 - Adjust frame ranges and preview specific segments of the animation.
 
+Sync Scene Time
+   Set the active scene and time based on the current scene strip.
+   See the :ref:`workspace settings <bpy.types.WorkSpace.use_scene_time_sync>`.
+
 .. seealso::
 
    For a detailed description of all properties and controls commonly found in the footer,
