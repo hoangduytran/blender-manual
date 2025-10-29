@@ -7,6 +7,7 @@ File Output Node
 
 .. figure:: /images/node-types_CompositorNodeOutputFile.webp
    :align: right
+   :width: 220px
    :alt: File Output Node.
 
 The *File Output* node writes one or more images to disk during rendering or compositing.
