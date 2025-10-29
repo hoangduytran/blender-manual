@@ -7,9 +7,10 @@ Map UV Node
 
 .. figure:: /images/node-types_CompositorNodeMapUV.webp
    :align: right
+   :width: 220px
    :alt: Map UV node.
 
-Distorts a texture so it can be composited onto the UV-mapped objects in the scene.
+Map a texture using UV coordinates, to apply a texture to objects in compositing.
 
 May be used in combination with the :doc:`Cryptomatte Node </compositing/types/mask/cryptomatte>`
 to only apply the texture to specific objects.
@@ -21,9 +22,9 @@ Inputs
 Image
    The texture to distort.
 UV
-   The UV coordinates at which to sample the texture. This slot is typically connected
-   to the UV render pass, which is only available with the Cycles renderer;
-   see :doc:`Cycles render passes </render/layers/passes>`.
+   The UV coordinates at which to sample the texture. The UV coordinates can either come directly from the UV render
+   pass (Cycles only, see :doc:`Cycles render passes </render/layers/passes>`), or from the image coordinates
+   in which case the Z component must be manually set to 1 (see example below).
 
 .. hint::
 
@@ -100,3 +101,12 @@ it's generally not a replacement for including the image during rendering.
    :width: 700px
 
    Overlaying a logo.
+
+The third example shows how an input image can be distorted using the Map UV node, where the image UV coordinates can
+be extracted from the :ref:`Image Coordinates node <bpy.types.CompositorNodeImageCoordinates>`.
+
+.. figure:: /images/compositing_types_distort_map-uv_example-3.png
+   :width: 700px
+
+   Procedural distortion.
+
