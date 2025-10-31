@@ -607,6 +607,51 @@ By comparison, in the *Geometry* method, the alignment will always be pointing u
 ignoring any previous orientation.
 
 
+.. _bpy.ops.uv.move_on_axis:
+
+Move on Axis
+============
+
+.. reference::
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Move on Axis`
+
+Moves selected UV coordinates along a chosen axis by a specified distance.
+This operator is designed for precise UV adjustments and supports multiple
+movement modes. It is especially useful when combined with the number pad keys
+for quick directional nudging.
+
+Use the following shortcuts to move UVs directly from the keyboard:
+
+- :kbd:`Numpad8` / :kbd:`Numpad2`: Move up or down.
+- :kbd:`Numpad4` / :kbd:`Numpad6`: Move left or right.
+
+Type
+   The movement unit type.
+
+   :Dynamic:
+      Move using the active grid size.
+      Holding :kbd:`Ctrl` while pressing a number pad key activates this mode.
+   :Pixel:
+      Move by pixel increments.
+      Holding :kbd:`Shift` while pressing a number pad key activates this mode.
+   :UDIM:
+      Move by full UV tiles (1.0 UV unit).
+      Using the number pad keys with no modifying keys uses this mode.
+
+Axis
+   The axis along which to move the UVs.
+
+   :X Axis: Move vertices horizontally.
+   :Y Axis: Move vertices vertically.
+
+Distance
+   The distance to move the UVs, measured in the selected unit type.
+
+
+
 .. _bpy.ops.uv.copy:
 
 Copy UVs
