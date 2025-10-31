@@ -563,6 +563,13 @@ Axis
    :Align Vertically: Positions UV vertices vertically along the line defined by the midpoint of the selection.
    :Align Horizontally: Positions UV vertices horizontally along the line defined by the midpoint of the selection.
 
+Position Mode :guilabel:`Align Vertically:` / :guilabel:`Align Horizontally:`
+   Determines how the final alignment line position is calculated.
+
+   :Mean: Aligns UVs along the average (mean) position of the selection.
+   :Minimum: Aligns UVs along the smallest coordinate value.
+   :Maximum: Aligns UVs along the largest coordinate value.
+
 
 .. _bpy.ops.uv.align_rotation:
 
