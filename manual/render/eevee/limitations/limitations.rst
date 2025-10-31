@@ -39,10 +39,12 @@ Light Probes
 - Active light probe volumes must fit inside the
   :ref:`Light Probes Volume Memory Pool <bpy.types.SceneEEVEE.gi_irradiance_pool_size>`.
 
+
 Indirect Lighting
 =================
 
 - Light probe capture does not support specular reflections. Specular energy is treated as diffuse.
+
 
 .. _eevee-limitations-shadows:
 
@@ -55,6 +57,7 @@ Shadows
 - Thin objects (e.g. walls without thickness) might have light leaking on the shadowed side.
   This can be mitigated by making the object have some thickness or lowering
   :ref:`Resolution Limit<bpy.types.Light.shadow_maximum_resolution>`.
+
 
 .. _eevee-limitations-volumetrics:
 
@@ -75,6 +78,7 @@ Depth of Field
 - Blended materials cannot be correctly handled by the post-processing blur,
   but will be correctly handled by the sample-based method. For this, you need to
   disable the post-process depth of field by setting the *Max Size* to 0.
+
 
 .. _eevee-limitations-screenspace:
 
@@ -129,6 +133,16 @@ Shader Nodes
 .. seealso::
 
    For a full list of unsupported nodes see :doc:`Nodes Support </render/eevee/limitations/nodes_support>`.
+
+
+Numerical Limitations
+=====================
+
+- EEVEE generally performs all calculations using half-precision (16-bit) floating point numbers.
+  The only exception to that is the evaluation of the shader node tree which is performed with
+  single-precision (32-bit) floating point numbers.
+- The render output subsequently also only has the precision of half-precision (16-bit) floating point numbers.
+- The Combined and Light data passes clamp negative output values to zero.
 
 
 Memory Management
