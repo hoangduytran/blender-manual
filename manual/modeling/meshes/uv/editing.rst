@@ -497,6 +497,57 @@ Shear
    Reduces average texture shearing within islands by shearing the U axis.
 
 
+.. _bpy.ops.uv.arrange_islands:
+
+Arrange/Align Islands
+=====================
+
+.. reference::
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Arrange/Align Islands`
+
+Arranges the selected UV islands along a straight line on the UV grid.
+This operator can align islands horizontally or vertically, with customizable
+starting positions, alignment reference, sorting order, and spacing.
+
+This is useful for organizing UV layouts, aligning modular texture pieces, or
+arranging UDIM tiles consistently.
+
+Initial Position
+   Determines the reference point used to calculate the initial alignment.
+
+   :Bounding Box: Uses the bounding boxes of the selected islands.
+   :UV Grid: Aligns islands relative to the UV grid origin (0-1 UV tile).
+   :Active UDIM: Aligns islands based on the active UDIM tile.
+   :2D Cursor: Uses the current position of the 2D cursor as the origin.
+
+Axis
+   The axis along which to arrange UV islands.
+
+   :X: Align UV islands horizontally.
+   :Y: Align UV islands vertically.
+
+Align
+   Determines how the islands are aligned relative to each other.
+
+   :Min: Aligns islands by their minimum boundary.
+   :Max: Aligns islands by their maximum boundary.
+   :Center: Aligns islands by the center of the largest island.
+   :None: Keeps each island's original offset and alignment.
+
+Order
+   Specifies how to order the islands along the chosen axis.
+
+   :Largest to Smallest: Sorts islands by area, from largest to smallest.
+   :Smallest to Largest: Sorts islands by area, from smallest to largest.
+   :Fixed: Keeps the current selection order.
+
+Margin
+   Defines the space between arranged islands, measured in UV units.
+
+
 .. _bpy.ops.uv.minimize_stretch:
 
 Minimize Stretch
