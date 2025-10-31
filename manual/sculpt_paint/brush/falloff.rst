@@ -11,7 +11,7 @@ a predefined one.
 
    Brush falloff example.
 
-.. _bpy.ops.brush.curve_preset:
+.. _bpy.ops.brush.curve_distance_falloff_preset:
 .. _bpy.types.Brush.curve:
 
 Curve Preset
