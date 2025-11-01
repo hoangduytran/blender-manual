@@ -59,57 +59,82 @@ Active Shape Key Index
 Shape Key Specials
    .. _bpy.ops.object.shape_key_add:
 
-   New Shape from Mix
+   New Combined
       Add a new shape key with the current deformed shape of the object.
       This differs from the :bl-icon:`add` button of the list, as that one always copies
       the Basis shape independently of the current mix.
 
    .. _bpy.ops.object.shape_key_copy:
 
-   Duplicate Shape Key
+   Duplicate
       Creates a copy of the active shape key.
+
+   .. _bpy.ops.object.join_shapes:
+
+   New from Objects
+      Add the vertex positions of selected objects as new shape keys,
+      or update existing shape keys with matching names.
+
+      To use, select the object(s) to copy shape data *from*,
+      then the target object to copy shape data *to*, and perform the operation.
+
+   New from Objects Flipped
+      Creates new shape keys from selected objects while mirroring the vertex positions
+      across the local X axis. This is typically used when creating symmetrical shape keys
+      (for example, generating a *Left Smile* from a *Right Smile* shape).
+
+      The operation requires the topology of all involved meshes to match.
+
+   .. _bpy.ops.object.update_shapes:
+
+   Update from Objects
+      Updates existing shape keys of the active object with the vertex positions of
+      selected objects that have shape keys with matching names.
+
+      To use, select the object(s) to update shape data *from*, then the target object to
+      update *into*, and perform the operation.
+
+   Update from Objects Flipped
+      Similar to *Update from Objects*, but applies a mirrored update across the local X axis.
+      This is useful for updating symmetrical shape keys when working with mirrored geometry
+      or pose-corrective shapes.
 
    .. _bpy.ops.object.shape_key_mirror:
 
-   Mirror Shape Key
+   Flip
       If your mesh is symmetrical, in *Object Mode*, you can mirror the shape keys on the X axis.
 
       This will not work unless the mesh vertices are perfectly symmetrical.
       Use the :menuselection:`Mesh --> Symmetrize` tool in *Edit Mode*.
 
-   Mirror Shape Key (Topology)
+   Flip (Topology)
       Same as *Mirror Shape Key* though it detects the mirrored vertices based on the topology of the mesh.
       The mesh vertices do not have to be perfectly symmetrical for this action to work.
 
-   .. _bpy.ops.object.join_shapes:
+  .. _bpy.ops.object.shape_key_make_basis:
 
-   Join as Shapes
-      Add the vertex positions of selected objects as shape keys
-      or update existing shape keys with matching names.
+   Make Basis
+      Makes the selected shape key the new *Basis* shape key. The vertex positions of the
+      active shape key are applied to the base mesh, and all other shape keys are adjusted
+      relative to this new basis.
 
-      To use, select the object to join from, then the object to join into, then perform the operation.
+      This operation is useful when a corrective or edited shape key should become the
+      default shape of the mesh instead of the original basis.
 
-   .. _bpy.ops.object.update_shapes:
-
-   Update from Objects
-      Update existing shape keys with the vertex positions of selected objects with matching names.
-
-      To use, select the object to update from, then the object to update into, then perform the operation.
-
-   .. _bpy.ops.object.shape_key_transfer:
-
-   Transfer Shape Key
-      Transfer the active shape key from a different object regardless of its current influence.
-
-      To use, select the object to copy from, then the object to copy into, then perform the operation.
+   Apply All
+      Saves the current visible shape to the mesh data and deletes all Shape Keys.
 
    .. _bpy.ops.object.shape_key_remove:
 
-   Delete All Shape Keys
+   Delete All
       Removes all Shape Keys and any effect that they had on the mesh.
 
-   Apply All Shape Keys
-      Saves the current visible shape to the mesh data and deletes all Shape Keys.
+   .. .. _bpy.ops.object.shape_key_transfer:
+
+   .. Transfer Shape Key
+   ..    Transfer the active shape key from a different object regardless of its current influence.
+
+   ..    To use, select the object to copy from, then the object to copy into, then perform the operation.
 
 .. _bpy.types.Key.use_relative:
 
