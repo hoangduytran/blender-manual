@@ -72,18 +72,32 @@ Shape Key Specials
    .. _bpy.ops.object.join_shapes:
 
    New from Objects
-      Add the vertex positions of selected objects as shape keys
+      Add the vertex positions of selected objects as new shape keys,
       or update existing shape keys with matching names.
 
-      To use, select the object to join from, then the object to join into, then perform the operation.
+      To use, select the object(s) to copy shape data *from*,
+      then the target object to copy shape data *to*, and perform the operation.
+
+   New from Objects Flipped
+      Creates new shape keys from selected objects while mirroring the vertex positions
+      across the local X axis. This is typically used when creating symmetrical shape keys
+      (for example, generating a *Left Smile* from a *Right Smile* shape).
+
+      The operation requires the topology of all involved meshes to match.
 
    .. _bpy.ops.object.update_shapes:
 
    Update from Objects
-      Update existing shape keys with the vertex positions of selected objects with matching names.
+      Updates existing shape keys of the active object with the vertex positions of
+      selected objects that have shape keys with matching names.
 
-      To use, select the object to update from, then the object to update into, then perform the operation.
+      To use, select the object(s) to update shape data *from*, then the target object to
+      update *into*, and perform the operation.
 
+   Update from Objects Flipped
+      Similar to *Update from Objects*, but applies a mirrored update across the local X axis.
+      This is useful for updating symmetrical shape keys when working with mirrored geometry
+      or pose-corrective shapes.
 
    .. _bpy.ops.object.shape_key_mirror:
 
