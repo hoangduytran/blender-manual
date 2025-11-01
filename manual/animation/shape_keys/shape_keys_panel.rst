@@ -97,6 +97,16 @@ Shape Key Specials
       Same as *Mirror Shape Key* though it detects the mirrored vertices based on the topology of the mesh.
       The mesh vertices do not have to be perfectly symmetrical for this action to work.
 
+  .. _bpy.ops.object.shape_key_make_basis:
+
+   Make Basis
+      Makes the selected shape key the new *Basis* shape key. The vertex positions of the
+      active shape key are applied to the base mesh, and all other shape keys are adjusted
+      relative to this new basis.
+
+      This operation is useful when a corrective or edited shape key should become the
+      default shape of the mesh instead of the original basis.
+
    Apply All
       Saves the current visible shape to the mesh data and deletes all Shape Keys.
 
