@@ -39,6 +39,11 @@ Glare Type
       `(Crepuscular Rays) <https://en.wikipedia.org/wiki/Crepuscular_rays>`__.
       This phenomenon can be created by renderers, but full volumetric lighting is
       a rather arduous approach and takes a long time to render.
+   :Kernel:
+      Applies a custom convolution filter using a :doc:`kernel </compositing/image_kernels>`
+      defined either numerically or from an image.
+      This mode allows the creation of user-defined glare or diffusion effects
+      by specifying the shape and intensity distribution of the kernel.
 
 Quality
    Controls the resolution at which the glare effect is processed.
@@ -115,6 +120,18 @@ Diagonal :guilabel:`Simple Star`
 
 Sun Position :guilabel:`Sun Beams`
    Source point of the rays as a factor of the image dimensions.
+
+Kernel Data Type :guilabel:`Kernel`
+   Determines how the kernel is defined:
+
+   :Float: A numeric kernel defined by the *Kernel* input socket.
+   :Image: A full image used as the kernel, allowing for more complex filtering patterns.
+
+Kernel :guilabel:`Kernel`
+   When the *Float* type is selected, this input defines the numeric
+   :doc:`kernel </compositing/image_kernels>` values.
+   When the *Image* type is selected, an image input can be connected
+   to provide a grayscale or color-based convolution kernel.
 
 
 Outputs
