@@ -142,7 +142,7 @@ This panel is only visible in the :doc:`Geometry Node Editor </editors/geometry_
 .. _bpy.types.GeometryNodeTree.is_modifier:
 
 Modifier
-   The node group is intended for use with the :doc:`/modeling/modifiers/generate/geometry_nodes`.
+   The node group is intended for use with the :doc:`/modeling/modifiers/geometry_nodes`.
 
 .. _bpy.types.GeometryNodeTree.is_tool:
 
@@ -520,3 +520,20 @@ Move
    Moves the selected nodes to the parent node tree,
    removing them from the original group.
    This is useful when simplifying a group or exposing its contents directly.
+
+
+.. _bpy.ops.node.join_nodes:
+
+Join Group Inputs
+=================
+
+.. reference::
+
+   :Menu:      :menuselection:`Node --> Join Group Inputs`
+   :Shortcut:  :kbd:`Ctrl-J`
+
+Merges multiple selected *Group Input* nodes into one consolidated *Group Input* node when possible.
+Existing links are preserved, and duplicate inputs are unified to reduce clutter and simplify the node tree.
+
+This operation is useful for cleaning up node groups that have become
+disorganized or contain redundant input nodes.

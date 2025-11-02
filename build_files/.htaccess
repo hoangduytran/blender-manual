@@ -354,3 +354,5 @@ RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/converter/separate_
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/vector/transform.html" "/manual/{lang}/{version}/render/shader_nodes/utilities/vector/transform.html"
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/converter/vector_math.html" "/manual/{lang}/{version}/render/shader_nodes/utilities/vector/vector_math.html"
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/vector/vector_rotate.html" "/manual/{lang}/{version}/render/shader_nodes/utilities/vector/vector_rotate.html"
+
+RedirectMatch "^/manual/{lang}/{version}/modeling/modifiers/generate/geometry_nodes.html" "/manual/{lang}/{version}/modeling/modifiers/generate/geometry_nodes.html"

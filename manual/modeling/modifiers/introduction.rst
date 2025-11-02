@@ -192,7 +192,7 @@ Extras
       Keeps the modifier at the end of the modifier stack.
       When a modifier is pinned, a pin icon will be displayed on the right side of the panel's header.
    Move to Nodes
-      Converts the existing :doc:`/modeling/modifiers/generate/geometry_nodes`
+      Converts the existing :doc:`/modeling/modifiers/geometry_nodes`
       node tree to a group node to be reused in other node trees.
       See :ref:`bpy.ops.object.geometry_nodes_move_to_nodes` for more information.
 

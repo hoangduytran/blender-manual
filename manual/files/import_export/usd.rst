@@ -56,7 +56,7 @@ USD provides a ``UsdGeomPointInstancer`` prim type,
 containing instances that are scattered on a primitive's points.
 
 These are imported into Blender as Point Clouds using a
-:doc:`/modeling/modifiers/generate/geometry_nodes`
+:doc:`/modeling/modifiers/geometry_nodes`
 and the :doc:`/modeling/geometry_nodes/instances/instance_on_points`.
 
 
