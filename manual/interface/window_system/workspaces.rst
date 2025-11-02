@@ -58,6 +58,11 @@ Previous Workspace :kbd:`Ctrl-PageUp`
 Next Workspace :kbd:`Ctrl-PageDown`
    Activates the workspace immediately to the right of the current one.
 
+.. _bpy.ops.workspace.delete_all_others:
+
+Delete Other Workspaces
+   Removes all workspaces except the one that was right-clicked on.
+
 
 Default Workspaces
 ==================
