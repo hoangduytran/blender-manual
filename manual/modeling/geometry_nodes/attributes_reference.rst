@@ -20,7 +20,7 @@ Named Attributes
 ================
 
 Named attributes are created and used in other areas of Blender like shaders, painting, and UV mapping.
-In the :doc:`modifier panel </modeling/modifiers/generate/geometry_nodes>`, a named attribute can
+In the :doc:`modifier panel </modeling/modifiers/geometry_nodes>`, a named attribute can
 be used for input by clicking the icon to the right of the value button.
 The string input allows you to search and choose existing attributes from the modifier's input geometry.
 

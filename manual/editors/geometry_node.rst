@@ -5,7 +5,7 @@ Geometry Node Editor
 ********************
 
 The Geometry Node editor is used to edit :doc:`Node Groups </interface/controls/nodes/groups>`
-which are used by the :doc:`Geometry Node Modifier </modeling/modifiers/generate/geometry_nodes>`.
+which are used by the :doc:`Geometry Node Modifier </modeling/modifiers/geometry_nodes>`.
 Such a node group can define many operations to modify an object's geometry.
 
 .. .. figure:: /images/editors_shader-editor_main.png
@@ -28,7 +28,7 @@ Node Tree Sub-Type
    Geometry Nodes can have multiple contexts depending on the intended function of the node group.
    Changing the context adjusts the user interface to best fit the needs of the selected context.
 
-   :Modifier: Used to create node groups that will be used by the :doc:`/modeling/modifiers/generate/geometry_nodes`.
+   :Modifier: Used to create node groups that will be used by the :doc:`/modeling/modifiers/geometry_nodes`.
    :Tool: Used to create node groups that will be used to create :doc:`/modeling/geometry_nodes/tools`.
 
 View
@@ -99,7 +99,7 @@ This tab allows you to edit the current node group's inputs and outputs.
 
 .. tip::
 
-   In the :doc:`Geometry Node Modifier </modeling/modifiers/generate/geometry_nodes>`,
+   In the :doc:`Geometry Node Modifier </modeling/modifiers/geometry_nodes>`,
    you can specify values for the root node group's inputs, as well as select destination
    :doc:`/modeling/geometry_nodes/attributes_reference` for its outputs.
 

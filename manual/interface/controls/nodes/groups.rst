@@ -142,7 +142,7 @@ This panel is only visible in the :doc:`Geometry Node Editor </editors/geometry_
 .. _bpy.types.GeometryNodeTree.is_modifier:
 
 Modifier
-   The node group is intended for use with the :doc:`/modeling/modifiers/generate/geometry_nodes`.
+   The node group is intended for use with the :doc:`/modeling/modifiers/geometry_nodes`.
 
 .. _bpy.types.GeometryNodeTree.is_tool:
 

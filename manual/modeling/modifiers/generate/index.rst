@@ -12,7 +12,6 @@
    build.rst
    decimate.rst
    edge_split.rst
-   geometry_nodes.rst
    mask.rst
    mesh_to_volume.rst
    mirror.rst
