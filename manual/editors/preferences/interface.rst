@@ -288,6 +288,12 @@ Mono-space Font
 Menus
 =====
 
+.. _bpy.types.PreferencesView.menu_close_leave:
+
+Close Menu on Leave
+   Close menus when the mouse is moved out of the region.
+
+
 .. _bpy.types.PreferencesView.use_mouse_over_open:
 
 Open on Mouse Over
