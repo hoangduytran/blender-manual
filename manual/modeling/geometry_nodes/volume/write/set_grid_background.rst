@@ -48,6 +48,6 @@ Grid
    The resulting grid with the updated background value applied.
 
    This grid can be passed to other nodes such as
-   :doc:`Sample Grid Index </modeling/geometry_nodes/geometry/sample_grid_index>`
-   or :doc:`Sample Grid </modeling/geometry_nodes/geometry/sample_grid>`
+   :doc:`Sample Grid Index </modeling/geometry_nodes/volume/sample/sample_grid_index>`
+   or :doc:`Sample Grid </modeling/geometry_nodes/volume/sample/sample_grid>`
    to ensure consistent results in areas where the grid has no stored voxels.

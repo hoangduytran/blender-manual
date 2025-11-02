@@ -27,8 +27,8 @@ Grid
 Transform
    The new transform from grid index space to object space.
    This determines how the voxel grid is positioned and oriented in 3D space.
-   Typically this input comes from a :doc:`Transform </modeling/geometry_nodes/utilities/transform>`
-   node or another grid.
+   Typically this input comes from a :term:`Transformation Matrix`/
+
 
 
 Properties

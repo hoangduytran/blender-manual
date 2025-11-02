@@ -14,7 +14,7 @@ uniform regions into coarser tiles or inner nodes, reducing memory usage and
 improving performance.
 
 This node performs the inverse operation of the
-:doc:`SDF Grid Voxelize </modeling/geometry_nodes/geometry/sdf_grid_voxelize>` node.
+:doc:`Voxelize Grid </modeling/geometry_nodes/volume/operations/voxelize_grid>` node.
 While voxelization expands sparse tiles into dense voxels, pruning
 detects large uniform areas and replaces them with more compact representations.
 This is especially useful after operations that create large

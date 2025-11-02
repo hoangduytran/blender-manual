@@ -121,8 +121,6 @@ RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/mesh_topology/"
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/uv/" "/manual/{lang}/{version}/modeling/geometry_nodes/mesh/uv/$1"
 
-RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/color/" "/manual/{lang}/{version}/modeling/geometry_nodes/color/$1"
-
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/text/" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/text/$1"
 
 RedirectMatch "^/manual/{lang}/{version}/modeling/geometry_nodes/vector/" "/manual/{lang}/{version}/modeling/geometry_nodes/utilities/vector/$1"
