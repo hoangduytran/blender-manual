@@ -15,7 +15,7 @@ median of its neighboring values, effectively removing noise and small
 artifacts while preserving sharp features and edges.
 
 Unlike :doc:`mean </modeling/geometry_nodes/volume/operations/sdf_grid_mean>`
-or :ref:`Laplacian </modeling/geometry_nodes/volume/operations/sdf_grid_laplacian>`
+or :doc:`Laplacian </modeling/geometry_nodes/volume/operations/sdf_grid_laplacian>`
 smoothing, the median filter is non-linear and
 better suited for cleaning up impulsive noise (isolated spikes or dips) in
 the grid. It maintains the overall structure and boundaries of the surface,

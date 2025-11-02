@@ -17,8 +17,9 @@ cell coordinates inside a voxel grid. This makes it possible to reason
 about neighboring voxels directly in index space, without converting
 through world or object space.
 
-This node can be combined with nodes such as :doc:`Integer Math </modeling/geometry_nodes/utilities/math>`
-and :doc:`Sample Grid Index </modeling/geometry_nodes/geometry/sample_grid_index>`
+This node can be combined with nodes such as
+:doc:`Integer Math </modeling/geometry_nodes/utilities/math/integer_math>`
+and :doc:`Sample Grid Index </modeling/geometry_nodes/volume/sample/sample_grid_index>`
 to sample values from nearby voxels by offsetting the indices.
 
 
@@ -42,7 +43,7 @@ X, Y, Z
 
    These values identify which voxel is being sampled by the field at this
    evaluation point. They can be offset (for example, add or subtract 1 on X)
-   and then passed to :doc:`Sample Grid Index </modeling/geometry_nodes/geometry/sample_grid_index>`
+   and then passed to :doc:`Sample Grid Index </modeling/geometry_nodes/volume/sample/sample_grid_index>`
    to read values from neighboring voxels.
 
 
