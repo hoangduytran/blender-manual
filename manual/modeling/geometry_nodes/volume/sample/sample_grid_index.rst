@@ -11,13 +11,13 @@ Sample Grid Index Node
 
 The *Sample Grid Index* node retrieves values directly from a voxel grid at
 specific voxel indices rather than at arbitrary spatial positions.
-Unlike the :doc:`Sample Grid </modeling/geometry_nodes/geometry/sample_grid>`
+Unlike the :doc:`Sample Grid </modeling/geometry_nodes/volume/sample/sample_grid>`
 node, which interpolates between voxels in object space, this node reads the
 exact stored value of the voxel located at the specified integer coordinates.
 
 This makes it useful for working in *index space*, for example when performing
 voxel neighborhood lookups, procedural filtering, or sampling based on values
-from the :doc:`Voxel Index </modeling/geometry_nodes/geometry/voxel_index>` node.
+from the :doc:`Voxel Index </modeling/geometry_nodes/volume/read/voxel_index>` node.
 
 
 Inputs
