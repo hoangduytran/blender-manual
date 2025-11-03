@@ -565,6 +565,13 @@ Only in Multiframe :kbd:`Shift-Alt-Q`
    strokes on those keyframes are displayed as just their edit lines -- the strokes themselves are hidden.
    Note that this does not affect Onion Skinning.
 
+Handles
+   Controls the visibility of Bézier curve handles in edit mode.
+
+   :None: Hides all Bézier curve handles, providing an unobstructed view of the curve.
+   :Selected: Displays the handles only for selected control points.
+   :All: Displays the handles for all control points in the curve.
+
 .. _bpy.types.View3DOverlay.use_gpencil_show_directions:
 
 Stroke Direction :guilabel:`Edit`

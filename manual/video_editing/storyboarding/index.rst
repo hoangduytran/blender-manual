@@ -25,3 +25,14 @@ where multiple artists contribute to shots, layout, and editorial in parallel.
 Blender's integrated design means that storyboards, timing edits, and scene data remain connected. Changes to a camera,
 pose, or Grease Pencil drawing automatically update in the edit—streamlining revisions and enabling rapid iteration
 from concept to final animation.
+
+
+Getting Started
+===============
+
+Blender includes a built-in *Storyboarding* app template designed to provide
+a quick and practical starting point for new storyboard projects.
+
+.. toctree::
+
+   app_template.rst

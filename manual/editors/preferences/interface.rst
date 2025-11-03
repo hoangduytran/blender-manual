@@ -242,6 +242,17 @@ Translate
       Translates the names of new data-blocks.
 
 
+Accessibility
+=============
+
+.. _bpy.types.PreferencesView.use_reduce_motion:
+
+Reduce Motion
+   Avoids interface animations and motion effects.
+   This option helps reduce visual distractions and can improve comfort for
+   users sensitive to motion or those who prefer a more static interface.
+
+
 Text Rendering
 ==============
 
@@ -276,6 +287,12 @@ Mono-space Font
 
 Menus
 =====
+
+.. _bpy.types.PreferencesView.menu_close_leave:
+
+Close Menu on Leave
+   Close menus when the mouse is moved out of the region.
+
 
 .. _bpy.types.PreferencesView.use_mouse_over_open:
 

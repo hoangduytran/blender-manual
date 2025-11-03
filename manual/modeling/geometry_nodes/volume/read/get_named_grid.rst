@@ -52,6 +52,6 @@ Volume
 Grid
    The extracted grid corresponding to the given *Name* and *Data Type*.
    This grid can be passed to other nodes such as
-   :doc:`Sample Grid </modeling/geometry_nodes/geometry/volume/sample/sample_grid>` or
-   :doc:`Grid to Mesh </modeling/geometry_nodes/geometry/volume/operations/grid_to_mesh>`
+   :doc:`Sample Grid </modeling/geometry_nodes/volume/sample/sample_grid>` or
+   :doc:`Grid to Mesh </modeling/geometry_nodes/volume/operations/grid_to_mesh>`
    for further manipulation or conversion.

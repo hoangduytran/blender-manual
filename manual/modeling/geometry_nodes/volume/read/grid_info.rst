@@ -42,11 +42,11 @@ Transform
    The transform matrix that converts from grid index space to object space.
    Defines how the grid's voxels are positioned, scaled, and oriented in 3D space.
    This can be passed to nodes such as
-   :doc:`Set Grid Transform </modeling/geometry_nodes/geometry/volume/write/set_grid_transform>`
+   :doc:`Set Grid Transform </modeling/geometry_nodes/volume/write/set_grid_transform>`
    or used to align other grids or geometry.
 
 Background Value
    The value assigned to inactive voxels in the grid.
    This represents the default or “empty” value used when sampling outside of active regions, as set by the
-   :doc:`Set Grid Background </modeling/geometry_nodes/geometry/volume/write/set_grid_background>`
+   :doc:`Set Grid Background </modeling/geometry_nodes/volume/write/set_grid_background>`
    node or similar operations.
