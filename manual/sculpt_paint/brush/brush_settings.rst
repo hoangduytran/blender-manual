@@ -19,7 +19,7 @@ General
 
 .. _bpy.types.Brush.size:
 
-Radius
+Size
    This option controls the size of the brush, measured in pixels.
    :kbd:`F` allows you to change the brush size interactively by
    dragging the mouse from left to right and then :kbd:`LMB` to accept.
@@ -29,18 +29,18 @@ Radius
    The size can be decreased/increased using :kbd:`[` and :kbd:`]` respectfully.
 
    :bl-icon:`stylus_pressure` (Size Pressure)
-      Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
-   :bl-icon:`brushes_all` (Use Unified Radius)
-      Use the same brush *Radius* across all brushes.
+      Adjusts the size based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
+   :bl-icon:`brushes_all` (Use Unified Size)
+      Use the same brush *Size* across all brushes.
 
-Radius Unit :guilabel:`Sculpt Mode`
-   Controls how the brush *Radius* is measured.
+Size Unit :guilabel:`Sculpt Mode`
+   Controls how the brush *Size* is measured.
 
    :View:
-      The *Radius* is measured based on how the cursor appears on the monitor i.e. "screen space".
+      The *Size* is measured based on how the cursor appears on the monitor i.e. "screen space".
    :Scene:
-      The *Radius* is measured based on real world units.
-      This means that the brush radius stays consistent, independently from zooming in and out in the viewport.
+      The *Size* is measured based on real world units.
+      This means that the brush size stays consistent, independently from zooming in and out in the viewport.
       The unit type and scaling can be configured in the :ref:`Scene Units <bpy.types.UnitSettings>`.
 
 .. _bpy.types.Brush.strength:

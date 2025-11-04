@@ -25,7 +25,7 @@ Brush Settings
 General
 -------
 
-Only Radius and Auto-Masking has an impact on the brush behavior for this brush.
+Only Size and Auto-Masking has an impact on the brush behavior for this brush.
 
 .. note::
 
