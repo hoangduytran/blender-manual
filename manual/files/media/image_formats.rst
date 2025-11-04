@@ -334,6 +334,12 @@ Quality :guilabel:`DWAA (lossy)` :guilabel:`DWAB (lossy)`
    - **0%**: Maximum compression, producing the smallest file size but the most noticeable quality loss.
    - **100%**: No compression, preserving full image quality at the cost of a larger file size.
 
+.. _bpy.types.ImageFormatSettings.use_exr_interleave:
+
+Interleave
+   Use legacy interleaved storage of views, layers and passes for compatibility with
+   applications that do not support more efficient multi-part OpenEXR files.
+
 .. _bpy.types.ImageFormatSettings.use_preview:
 
 Preview

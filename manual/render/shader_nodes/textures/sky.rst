@@ -26,11 +26,7 @@ Properties
 Sky Type
    Sky model to use.
 
-   Preetham
-      Based on the 1999 `paper <https://doi.org/10.1145/311535.311545>`__ by Preetham et al.
-   Hosek/Wilkie
-      Based on the 2012 `paper <https://cgg.mff.cuni.cz/projects/SkylightModelling/>`__ by Hosek and Wilkie.
-   Nishita
+   Multiple Scattering
       Improved version of the 1993
       `model <https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky/simulating-
       colors-of-the-sky.html>`__
@@ -38,6 +34,15 @@ Sky Type
 
       Note that this sky type is quite bright and makes the image look overexposed with the default scene settings.
       You can reduce the Exposure setting in :menuselection:`Properties --> Render --> Film` to fix this.
+   Single Scattering
+     Same algorithm as Multiple Scattering, with just a single light bounce.
+     This is legacy and may be removed in a future version.
+   Preetham
+      Based on the 1999 `paper <https://doi.org/10.1145/311535.311545>`__ by Preetham et al.
+      This is legacy and will be removed in a future version.
+   Hosek/Wilkie
+      Based on the 2012 `paper <https://cgg.mff.cuni.cz/projects/SkylightModelling/>`__ by Hosek and Wilkie.
+      This is legacy and will be removed in a future version.
 
 Sun Direction
    Sun direction vector.
@@ -77,26 +82,15 @@ Altitude
 
 Air
    Density of air molecules.
-
-   - 0 no air
-   - 1 clear day atmosphere
-   - 2 highly polluted day
-
-Dust
-   Density of dust and water droplets.
-
-   - 0 no dust
-   - 1 clear day atmosphere
-   - 5 city like atmosphere
-   - 10 hazy day
+   A value of 1 corresponds roughly to urban city air, while 0 is no air.
+   
+Aerosols
+   Density of dust, pollution and water droplets.
+   A value of 1 corresponds roughly to urban city aerosols, while 0 is no aerosols.
 
 Ozone
-   Density of ozone molecules;
-   useful to make the sky appear bluer.
-
-   - 0 no ozone
-   - 1 clear day atmosphere
-   - 2 city like atmosphere
+   Density of ozone molecules; useful to make the sky appear bluer.
+   A value of 1 corresponds roughly to urban city ozone, while 0 is no ozone.
 
 
 Outputs
