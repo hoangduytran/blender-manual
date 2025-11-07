@@ -61,6 +61,15 @@ that the modifier targets is added to the object's material.
 Known Limitations
 =================
 
+Perspective Projection on Low Poly Meshes
+-----------------------------------------
+
+Perspective UV projections onto low poly geometry (such as a plane) may cause noticeable artifacts.
+This is an inherent limitation since UV interpolation doesn't account for perspective projection.
+
+The issue can reduced by subdividing the geometry.
+
+
 Vertices Behind the Camera
 --------------------------
 
