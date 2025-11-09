@@ -53,7 +53,7 @@ If two closure nodes are connected but have mismatched signatures, Blender can o
 
 - Sync happens automatically when a node is connected for the first time.
 - Existing sockets are never changed automatically to avoid overwriting user data.
-- A *Sync Sockets* button appears on the node when a mismatch is detected, allowing manual synchronization.
+- A :bl-icon:`file_refresh` button (*Sync Sockets*) button appears in the node header when a mismatch is detected, allowing manual synchronization.
 
 
 Example
