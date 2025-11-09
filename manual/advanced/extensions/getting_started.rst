@@ -192,7 +192,7 @@ Optional values for "build":
       [build]
       paths_exclude_pattern = [
         "__pycache__/",
-        ".*",
+        ".git",
         "*.zip",
       ]
 
