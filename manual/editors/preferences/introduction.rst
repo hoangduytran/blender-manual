@@ -7,6 +7,8 @@
 Introduction
 ************
 
+.. _bpy.ops.screen.userpref_show:
+
 .. reference::
 
    :Menu:      :menuselection:`Edit --> Preferences...`

@@ -183,6 +183,14 @@ File Browser
    :Maximize Area: A new File Browser editor is opened as a temporary window in full screen mode.
    :New Window: A new File Browser editor is opened as a regularly sized temporary window.
 
+.. _bpy.types.PreferencesView.preferences_display_type:
+
+Preferences
+   Controls how the :ref:`User Preferences <bpy.ops.screen.userpref_show>` editor is displayed when opened.
+
+   :Maximize Area: Opens the Preferences as a temporary full-screen editor within the current window.
+   :New Window: Opens the Preferences in a new, separate window of regular size.
+
 
 .. _prefs-interface-status_bar:
 
