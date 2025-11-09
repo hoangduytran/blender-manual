@@ -121,6 +121,10 @@ Diagonal :guilabel:`Simple Star`
 Sun Position :guilabel:`Sun Beams`
    Source point of the rays as a factor of the image dimensions.
 
+Jitter :guilabel:`Sun Beams`
+   The amount of jitter to introduce while computing rays,
+   higher jitter can be faster but can produce grainy or noisy results.
+
 Kernel Data Type :guilabel:`Kernel`
    Determines how the kernel is defined:
 
