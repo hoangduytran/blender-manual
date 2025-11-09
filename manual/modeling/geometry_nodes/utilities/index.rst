@@ -23,7 +23,6 @@ General purpose nodes for modifying data.
    Field <field/index.rst>
    Matrix <matrix/index.rst>
    Rotation <rotation/index.rst>
-   Deprecated <deprecated/index.rst>
 
 -----
 
@@ -36,3 +35,17 @@ General purpose nodes for modifying data.
    random_value.rst
    repeat_zone.rst
    switch.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   random_rotation.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   Deprecated <deprecated/index.rst>
