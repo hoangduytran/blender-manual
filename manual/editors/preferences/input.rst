@@ -194,9 +194,14 @@ Navigation Mode
 
    :Object:
       Feels like holding the object in your hand. Moving the 3D mouse moves the object in that direction.
-   :Fly/Helicopter:
+   :Fly:
       Moves the camera through the scene, like flying or piloting a helicopter.
       For example, pushing the 3D mouse up moves the camera up.
+   :Drone:
+      Enables a Fly Mode navigation but pushing the cap forward
+      while looking down will not change the altitude of the camera.
+
+      "Lock Horizon" is always used in this mode.
 
 .. _bpy.types.PreferencesInput.ndof_lock_horizon:
 
