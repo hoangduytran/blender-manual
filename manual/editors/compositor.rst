@@ -61,7 +61,7 @@ Any node group marked as an asset will appear here automatically.
 
 Located at the bottom of the editor, the shelf offers a compact and easily accessible interface for
 inserting and organizing compositor assets. Compared to the
-:doc:`Asset Browser </editors/asset_browser/index>`, it integrates more seamlessly into the
+:doc:`Asset Browser </editors/asset_browser>`, it integrates more seamlessly into the
 compositing workflow and can be shown or hidden as needed.
 
 The Asset Shelf helps users:
