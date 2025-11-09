@@ -149,6 +149,16 @@ Highlights
    Can be used to fine-tune the glare or as a base for custom effects.
 
 
+Gizmos
+======
+
+The *Glare* node provides an interactive gizmo in the Node Editor.
+To use it, enable :ref:`Active Node Gizmo <bpy.types.SpaceNodeEditor.show_gizmo_active_node>` and
+select the *Glare* node.
+
+For the *Sun Beams* type, a cross-shaped gizmo appears in the image preview to set the *Sun Position*.
+
+
 Examples
 ========
 
