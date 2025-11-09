@@ -153,11 +153,13 @@ Mode
 
 Sequencer Scene
    The scene containing the edit that is used by the video sequence editor.
+   See :doc:`/video_editing/sequencer_scene`.
 
 .. _bpy.types.WorkSpace.use_scene_time_sync:
 
 Sync Scene Time
    Sync the active scene and time based on the current :ref:`scene strip <bpy.types.SceneStrip>` in the video sequence editor.
+   See :doc:`/video_editing/sequencer_scene`.
 
 .. _bpy.ops.wm.owner_enable:
 .. _bpy.ops.wm.owner_disable:

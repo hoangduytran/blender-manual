@@ -47,7 +47,7 @@ Recover Last Session
    Blender will try to recover the last :term:`session` based on temporary files. See
    :doc:`/troubleshooting/recover`.
 
-Donate
-   Open Blender's `Development Fund <https://fund.blender.org/>`__ website.
 What's New
    Open the latest release notes.
+Donate to Blender
+   Open Blender's `Development Fund <https://fund.blender.org/>`__ website.

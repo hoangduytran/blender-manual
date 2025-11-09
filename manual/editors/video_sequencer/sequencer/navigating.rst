@@ -160,6 +160,14 @@ within an animation. Like with most animation editors, markers are shown at the 
 See :ref:`Editing Markers <animation-markers-editing>` for details.
 
 
+Sequencer Scene
+---------------
+
+A :ref:`data-block menu <ui-data-block>` to select a scene.
+The :doc:`Sequencer Scene </video_editing/sequencer_scene>`
+is the scene that the edit shown in the Sequencer is contained in.
+
+
 Playback Controls
 =================
 

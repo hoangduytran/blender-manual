@@ -16,6 +16,8 @@ website if you need the latest version.
 
 `AMD Drivers and Support Website <https://www.amd.com/en/support>`__
 
+.. include:: ../common/mesa.rst
+   :start-line: 1
 .. include:: ../common/laptops.rst
    :start-line: 1
 .. include:: ../common/other.rst
