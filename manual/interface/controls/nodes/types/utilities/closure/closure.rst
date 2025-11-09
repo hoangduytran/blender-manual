@@ -36,9 +36,8 @@ The *Closure* node does not have functional properties of its own, but its inter
 *Node* tab in the Sidebar. Inputs and outputs can be added, removed, and renamed to define the closure's signature.
 
 Sync Sockets
-   Updates matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>` nodes within the
-   same node tree to reflect name and type changes. Use this option after renaming or changing socket types so downstream
-   nodes remain in sync.
+   Updates the current node to match the socket signature of the connected nodes.
+   Use this after renaming, adding, or removing sockets.
 
 Define Signature
    Marks the current zone as the source of a closure signature that other nodes can reference. This ensures consistent

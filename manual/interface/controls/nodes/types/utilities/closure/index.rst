@@ -43,6 +43,8 @@ Closures are created and evaluated with the following nodes:
    evaluate_closure.rst
 
 
+.. _bpy.ops.node.sockets_sync:
+
 Socket Syncing
 ==============
 
