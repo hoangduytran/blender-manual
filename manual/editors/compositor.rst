@@ -50,3 +50,24 @@ which are described below.
 Active Node
    Display a context-sensitive gizmo for the currently selected node.
    This may include transform controls or other visual aids depending on the node type.
+
+
+Asset Shelf
+-----------
+
+The *Asset Shelf* provides quick access to compositor node assets, allowing users to drag and drop
+predefined node setups directly into the compositor workspace.
+Any node group marked as an asset will appear here automatically.
+
+Located at the bottom of the editor, the shelf offers a compact and easily accessible interface for
+inserting and organizing compositor assets. Compared to the
+:doc:`Asset Browser </editors/asset_browser/index>`, it integrates more seamlessly into the
+compositing workflow and can be shown or hidden as needed.
+
+The Asset Shelf helps users:
+
+- Quickly build node setups using reusable assets.
+- Explore common compositing techniques and effects.
+- Work entirely within Blender for post-processing.
+
+The Asset Shelf can be toggled on or off from the compositor editor's header.
