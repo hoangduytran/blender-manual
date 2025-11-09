@@ -16,7 +16,8 @@ Shape Keys Panel
    Shape Keys panel.
 
 
-The Shape Keys panel is used for authoring shape keys.
+The *Shape Keys* panel is used to create, organize, and manage shape keys.
+It presents a tree view where shape keys can be reordered by click-dragging.
 
 .. container:: lead
 
@@ -24,8 +25,7 @@ The Shape Keys panel is used for authoring shape keys.
 
 .. _bpy.types.Object.active_shape_key_index:
 
-Active Shape Key Index
-   A :ref:`List View <ui-list-view>`.
+Shape Key element
 
    .. _bpy.types.ShapeKey.frame:
 
