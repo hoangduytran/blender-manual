@@ -1,4 +1,5 @@
 .. index:: Geometry Nodes; Separate Spherical
+.. --- copy below this line ---
 
 ***********************
 Separate Spherical Node

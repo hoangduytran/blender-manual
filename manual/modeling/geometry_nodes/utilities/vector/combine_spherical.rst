@@ -1,4 +1,5 @@
 .. index:: Geometry Nodes; Combine Spherical
+.. --- copy below this line ---
 
 **********************
 Combine Spherical Node
