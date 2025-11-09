@@ -121,6 +121,10 @@ Diagonal :guilabel:`Simple Star`
 Sun Position :guilabel:`Sun Beams`
    Source point of the rays as a factor of the image dimensions.
 
+Jitter :guilabel:`Sun Beams`
+   The amount of jitter to introduce while computing rays,
+   higher jitter can be faster but can produce grainy or noisy results.
+
 Kernel Data Type :guilabel:`Kernel`
    Determines how the kernel is defined:
 
@@ -147,6 +151,16 @@ Glare
 Highlights
    The extracted bright areas used to generate the glare effect.
    Can be used to fine-tune the glare or as a base for custom effects.
+
+
+Gizmos
+======
+
+The *Glare* node provides an interactive gizmo in the Node Editor.
+To use it, enable :ref:`Active Node Gizmo <bpy.types.SpaceNodeEditor.show_gizmo_active_node>` and
+select the *Glare* node.
+
+For the *Sun Beams* type, a cross-shaped gizmo appears in the image preview to set the *Sun Position*.
 
 
 Examples

@@ -65,6 +65,13 @@ Node Types
 .. toctree::
    :maxdepth: 2
 
+   types/camera_lens_effects/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 2
+
    types/groups.rst
    types/layout/index.rst
 
