@@ -20,3 +20,15 @@
    mesh_island.rst
    shortest_edge_paths.rst
    vertex_neighbors.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   edge_length.rst
+   face_corner_angle.rst
+   is_edge_boundary.rst
+   is_edge_loose.rst
+   is_edge_manifold.rst
+   is_uv_split.rst

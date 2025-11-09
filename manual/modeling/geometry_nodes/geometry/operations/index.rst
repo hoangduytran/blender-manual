@@ -23,3 +23,11 @@
 
    separate_components.rst
    separate_geometry.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   displace_geometry.rst
+   smooth_geometry.rst

@@ -20,3 +20,13 @@ Nodes for modifying vector quantities.
    combine_xyz.rst
    mix_vector.rst
    separate_xyz.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   combine_cylindrical.rst
+   combine_spherical.rst
+   separate_cylindrical.rst
+   separate_spherical.rst

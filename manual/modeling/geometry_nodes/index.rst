@@ -84,6 +84,7 @@ Node Types
    :maxdepth: 3
    :titlesonly:
 
+   generate/index.rst
    hair/index.rst
    normals/index.rst
 

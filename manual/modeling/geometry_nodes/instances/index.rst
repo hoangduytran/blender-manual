@@ -31,3 +31,11 @@ Nodes that only operate on instances.
    instance_transform.rst
    instance_rotation.rst
    instance_scale.rst
+
+----
+
+.. toctree::
+   :maxdepth: 1
+
+   instance_on_elements.rst
+   randomize_transforms.rst
