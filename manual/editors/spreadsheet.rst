@@ -143,6 +143,41 @@ Lets you choose the attribute domain to display, such as mesh vertices or curve 
 The number of elements in each domain is shown next to its entry.
 
 
+Volume Grids
+^^^^^^^^^^^^
+
+When the selected geometry component is a **Volume**, the Spreadsheet displays detailed
+information about each grid contained in the volume.
+Each grid represents a single data field, such as *density*, *color*, or *velocity*,
+and can be inspected individually to understand its structure and memory usage.
+
+The following information is shown for each grid:
+
+* **Grid Name** -- The name of the grid data, such as *density* or *temperature*.
+* **Data Type** -- The type of data stored in the grid, for example *Float*, *Vector*, or *Boolean*.
+* **Class** -- The grid class, describing its purpose or usage,
+  such as *Fog Volume*, *Level Set*, or *Level Set*.
+* **Extent** -- The grid's bounding box in voxel coordinates.
+  Shows the number of voxels in the X, Y, and Z directions.
+* **Voxels** -- The total number of active voxels in the grid.
+  This includes all voxels that are explicitly stored, even when contained in *tiles*
+  (e.g., a single leaf tile contains 512 voxels).
+* **Leaf Voxels** -- The number of active voxels stored in *leaf nodes*.
+  Unlike *Voxels*, this count excludes voxels that belong to higher-level tiles.
+* **Tiles** -- The number of active tiles in the grid.
+  Tiles are higher-level voxel containers used by sparse volume formats (like OpenVDB) to optimize storage.
+* **Size** -- The estimated memory size of the grid, including all voxel and tile data currently allocated.
+
+These statistics make it possible to analyze the complexity, density, and performance cost of
+volumetric data produced by Geometry Nodes or imported volume files.
+
+.. note::
+
+   Since volume grids use a sparse data structure, the *Extent* can be much larger than the actual
+   number of active voxels. Only active regions of the grid are stored in memory, which keeps
+   volume data efficient even for large domains.
+
+
 .. _bpy.types.SpreadsheetRowFilter:
 
 Sidebar
