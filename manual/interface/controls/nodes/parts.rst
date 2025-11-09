@@ -57,10 +57,18 @@ Each socket is color-coded depending on what type of data it handles.
 
 Shader (bright green)
    Used for shaders in :doc:`Cycles </render/cycles/index>` and :doc:`EEVEE </render/eevee/index>`.
-Geometry (turquoise)
+Geometry (Sea Green)
    Used in :doc:`Geometry Nodes </modeling/geometry_nodes/index>`.
 Menu (Dark Grey)
    Used for enum style inputs that show a dropdown menu or radio button in the UI.
+Bundle (dark turquoise)
+   Represents a generic bundle of multiple data types.
+   Bundles can contain several values (e.g., geometry, vectors, or colors) grouped together,
+   allowing compact data transfer between nodes.
+Closure (light brown)
+   Used in :doc:`Shader Nodes </render/shader_nodes/index>` and :doc:`Geometry Nodes </modeling/geometry_nodes/index>`
+   for logical or procedural encapsulation.
+   A closure can store and pass groups of node inputs and logic, enabling reusable "callable" node behaviors.
 
 .. rubric:: Data
 
@@ -109,7 +117,11 @@ Data sockets can have different shapes, indicating the data structure use to tra
 The data structure determines how values are passed and interpreted.
 More complex structures allow passing multiple values through a single connection.
 
-Single (Circle)
+Auto
+   Automatically detects a good structure type based on how the socket is used.
+Dynamic (Circle)
+   Socket can work with multiple types of structures.
+Single (Square)
    These sockets expects a single value, they are represented by a circular socket shape.
 Fields (Diamond)
    Represents a value that can vary per element (e.g. per point, edge, or face).
@@ -132,7 +144,7 @@ Fields (Diamond)
    .. seealso::
 
       :doc:`Geometry Nodes Fields Documentation </modeling/geometry_nodes/fields>`
-Grid (Rectangle)
+Grid (Four Squares)
    Represents a grid data structure, which stores values sampled across a **2D surface** or a **3D volume**.
    Grids can represent data such as image pixels, voxel densities, or other sampled values in space.
    They allow complex operations where values are distributed continuously across space,
