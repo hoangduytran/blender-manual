@@ -111,6 +111,12 @@ Import Method
 
       Since the file now has its own copy of the asset, later changes to
       the asset file will not be reflected in the file it's appended to.
+   Pack
+      Imports the asset as *linked* data and immediately packs it into the current blend-file.
+      This ensures that the asset remains available even if the original library data is modified
+      or becomes unavailable.
+
+      Useful for maintaining self-contained files that do not rely on external asset library paths.
 
 .. _bpy.types.UserAssetLibrary.use_relative_path:
 
