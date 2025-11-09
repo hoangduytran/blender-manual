@@ -91,9 +91,15 @@ Show -- Corner Handles:
    This option is especially useful on touch-enabled devices,
    where precise right-click or edge selection is more difficult.
 
+.. _bpy.types.PreferencesView.show_number_arrows:
+
+Show -- Numeric Input Arrows
+   - When enabled always display arrows in numeric input fields for increasing or decreasing values.
+   - When disabled, arrows are shown when hovering over the property.
+
 .. _bpy.types.PreferencesView.show_navigate_ui:
 
-Navigation Controls
+Show -- Navigation Controls
    Show navigation controls at top right of the area.
    This impacts the 3D Viewport as well as image spaces.
 
