@@ -19,6 +19,8 @@ Inputs
 Geometry
    The geometry to duplicate.
 
+.. section-inputs
+
 Shape
    The method used for arranging the duplicates.
 
@@ -144,6 +146,8 @@ Requires *Realize Instances* to be enabled.
 Distance
    The distance threshold within which points are merged.
 
+
+.. section-outputs
 
 Outputs
 =======

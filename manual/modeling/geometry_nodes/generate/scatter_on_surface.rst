@@ -21,6 +21,8 @@ Inputs
 Mesh
    The input surface geometry on which points or instances will be scattered.
 
+.. section-inputs
+
 Selection
    Determines which faces or parts of the mesh are used for scattering.
    Unselected areas will not receive any scattered elements.
@@ -116,6 +118,7 @@ Alignement Axis
 Scale
    Controls the uniform or per-axis scaling of instances.
 
+
 Randomize
 """""""""
 
@@ -155,6 +158,8 @@ Image Mask
 UV Map
    The UV map used to interpret the image mask for controlling distribution.
 
+
+.. section-outputs
 
 Outputs
 =======

@@ -37,9 +37,8 @@ Properties
 Properties are available in the *Node* tab of the Sidebar.
 
 Sync Sockets
-   Update matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>`
-   nodes in the same node tree to reflect name and type changes. Use this after renaming or
-   retargeting item types so downstream nodes stay in sync.
+   Updates the current node to match the socket signature of the connected nodes.
+   Use this after renaming, adding, or removing sockets.
 
 Define Signature
    Locks the current item list and types to stabilize interfaces when publishing node groups.

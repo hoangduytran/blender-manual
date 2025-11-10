@@ -10,7 +10,7 @@ Evaluate Closure
    :align: right
    :alt: Evaluate Closure Node
 
-The *Evaluate Closure* node executes a connected 
+The *Evaluate Closure* node executes a connected
 :doc:`Closure Zone </interface/controls/nodes/types/utilities/closure/closure>`.
 It acts as the *call site* of the closure, running its internal node graph and returning the resulting values.
 
@@ -31,7 +31,7 @@ Inputs
 
 Closure
    The closure to evaluate.
-   This input expects a connection from a 
+   This input expects a connection from a
    :doc:`Closure Zone </interface/controls/nodes/types/utilities/closure/closure>`.
    If no closure is connected, the node operates in *pass-through mode* (see below).
 
@@ -50,10 +50,8 @@ The *Evaluate Closure* node does not have functional properties, but its input a
 the *Node* tab of the Sidebar.
 
 Sync Sockets
-   Updates matching :doc:`Separate Bundle </interface/controls/nodes/types/utilities/bundles/separate_bundle>` nodes
-   within the same node tree to reflect name and type changes. Use this after renaming or changing socket types so
-   downstream nodes stay
-   in sync.
+   Updates the current node to match the socket signature of the connected nodes.
+   Use this after renaming, adding, or removing sockets.
 
 Define Signature
    Marks the node as defining a closure signature to be used by other closure nodes. Ensures consistent input and
