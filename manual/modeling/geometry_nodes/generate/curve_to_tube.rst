@@ -20,6 +20,8 @@ Inputs
 Curve
    The input curve to generate the tube along.
 
+.. section-inputs
+
 Scale
    Distance factor multiplied by the curve's radius attribute to define the resulting tube radius.
 
@@ -115,6 +117,8 @@ Parameter U/V
 Consider Curve Radius
    When enabled, the UV generation takes into account variations in the curve's radius.
 
+
+.. section-outputs
 
 Outputs
 =======
