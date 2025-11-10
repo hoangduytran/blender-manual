@@ -80,13 +80,13 @@ Navigation
       Start or stop animation playback. This will start playback in all editors.
    Go to Current Frame :kbd:`Numpad0`
       Scrolls the timeline so the current frame is in the center.
-   Jump to Previous Strip :kbd:`PageDown`
+   Jump to Previous Strip :kbd:`PageUp`
       Moves the playhead to the nearest strip border (start or end) that's before the current frame.
-   Jump to Next Strip :kbd:`PageUp`
+   Jump to Next Strip :kbd:`PageDown`
       Moves the playhead to the nearest strip border (start or end) that's after the current frame.
-   Jump to Previous Strip (Center) :kbd:`Alt-PageDown`
+   Jump to Previous Strip (Center) :kbd:`Alt-PageUp`
       Moves the playhead to the nearest strip center that's before the current frame.
-   Jump to Next Strip (Center) :kbd:`Alt-PageUp`
+   Jump to Next Strip (Center) :kbd:`Alt-PageDown`
       Moves the playhead to the nearest strip center that's after the current frame.
 
 Range
