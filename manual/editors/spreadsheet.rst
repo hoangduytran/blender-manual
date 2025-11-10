@@ -125,6 +125,25 @@ Shows the path from the modifier to the active viewer node.
 If the viewer node is nested inside group nodes, each group will appear in the path.
 
 
+Viewer Data
+^^^^^^^^^^^
+
+Visible when *Object Evaluation State* is set to *Viewer Node*.
+
+Specifies which :ref:`bpy.types.NodeGeometryViewerItem` from the active Viewer node
+is displayed in the :doc:`Spreadsheet Editor </editors/spreadsheet>`.
+
+When a Viewer node outputs multiple data sets (for example, geometry and one or more evaluated fields),
+each of these appears as a separate *Viewer Item*.
+This setting allows choosing which item to display, such as a specific attribute, value field,
+or geometry component, without changing the Viewer node connection itself.
+
+.. note::
+
+   The available viewer items depend on the currently active Viewer node and its connected inputs.
+   Changing the active viewer or modifying its connections will update this list automatically.
+
+
 .. _bpy.types.SpaceSpreadsheet.geometry_component_type:
 
 Geometry
