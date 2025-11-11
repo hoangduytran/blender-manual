@@ -12,6 +12,15 @@ using *Duplicate Asset*, see :ref:`Asset Operators <brush-management-utility-ope
 while Blender remains open does not discard the settings.
 
 
+Unified Settings
+================
+
+Some settings (e.g. size, strength, color), indicated with :bl-icon:`brushes_all`,
+allow for using a per-mode setting instead of the individual brush setting.
+These settings are shared across all brushes of a given mode (e.g. Sculpt Mode)
+but do not overwrite the individual brush value.
+
+
 .. _sculpt-tool-settings-brush-settings-general:
 
 General
