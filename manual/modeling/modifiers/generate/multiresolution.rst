@@ -204,6 +204,7 @@ The *Bake Type* determines what kind of surface information is extracted from th
 .. important::
 
    To ensure a correct bake:
+
    - Set the **Viewport Levels** of the Multiresolution modifier to **0**, so the base mesh is truly low-resolution.
    - Set the **Render Levels** to the highest sculpt level that contains the desired detail.
    - The object must have proper **UV unwrapping** and a selected **Image Texture** node in the Shader Editor
