@@ -71,6 +71,11 @@ Type
    The data type for the selected socket (e.g. Float, Vector, Geometry, Object, Bundle).
    For value types, a default value field appears and is used when the socket is unlinked.
 
+Shape
+   Defines the data structure supported by the input socket, such as a *Single* value, *Field*, or *Grid*.
+   The shape determines how the data is evaluated and passed through the node network.
+   See :ref:`interface-controls-nodes-socket_shape` for more information.
+
 
 Output Items
 ------------
