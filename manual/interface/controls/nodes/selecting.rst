@@ -154,5 +154,11 @@ Find Node
    :Menu:      :menuselection:`Select --> Find Node`
    :Shortcut:  :kbd:`Ctrl-F`
 
-Opens a search pop-up to quickly find and select a node by name.
-The view automatically pans to the selected node.
+Opens a search pop-up to quickly locate and select a node within the current node tree.
+Nodes can be searched by name, socket label, or certain socket values such as strings
+and data-block references.
+
+Once a match is selected, the editor view automatically pans and centers on the found node,
+highlighting it for easy access.
+
+This operator is especially useful in large node trees for navigating complex networks efficiently.
