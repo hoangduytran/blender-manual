@@ -324,6 +324,16 @@ Sharpen
 
    Pinches the colors inwards to create sharp edges or points.
 
+Paint Pixel Art
+   Brush Type: :doc:`paint`
+
+   Paint specific pixels (Only supported in the Image Editor).
+
+Erase Pixel Art
+   Brush Type: :doc:`paint`
+
+   Erase pixels in the alpha channel of the texture (Only supported in the Image Editor).
+
 
 Simulation Brushes
 ==================
