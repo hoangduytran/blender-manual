@@ -197,51 +197,78 @@ Below is a list of available icons:
    * - .. rubric:: :bl-icon:`collapsemenu`
 
        ``:bl-icon:`collapsemenu```
-     - .. rubric:: :bl-icon:`collection_new`
+     - .. rubric:: :bl-icon:`collection_color_01`
+
+       ``:bl-icon:`collection_color_01```
+     - .. rubric:: :bl-icon:`collection_color_02`
+
+       ``:bl-icon:`collection_color_02```
+   * - .. rubric:: :bl-icon:`collection_color_03`
+
+       ``:bl-icon:`collection_color_03```
+     - .. rubric:: :bl-icon:`collection_color_04`
+
+       ``:bl-icon:`collection_color_04```
+     - .. rubric:: :bl-icon:`collection_color_05`
+
+       ``:bl-icon:`collection_color_05```
+   * - .. rubric:: :bl-icon:`collection_color_06`
+
+       ``:bl-icon:`collection_color_06```
+     - .. rubric:: :bl-icon:`collection_color_07`
+
+       ``:bl-icon:`collection_color_07```
+     - .. rubric:: :bl-icon:`collection_color_08`
+
+       ``:bl-icon:`collection_color_08```
+   * - .. rubric:: :bl-icon:`collection_new`
 
        ``:bl-icon:`collection_new```
      - .. rubric:: :bl-icon:`color`
 
        ``:bl-icon:`color```
-   * - .. rubric:: :bl-icon:`color_blue`
+     - .. rubric:: :bl-icon:`color_blue`
 
        ``:bl-icon:`color_blue```
-     - .. rubric:: :bl-icon:`color_green`
+   * - .. rubric:: :bl-icon:`color_green`
 
        ``:bl-icon:`color_green```
      - .. rubric:: :bl-icon:`color_red`
 
        ``:bl-icon:`color_red```
-   * - .. rubric:: :bl-icon:`community`
+     - .. rubric:: :bl-icon:`community`
 
        ``:bl-icon:`community```
-     - .. rubric:: :bl-icon:`con_action`
+   * - .. rubric:: :bl-icon:`con_action`
 
        ``:bl-icon:`con_action```
      - .. rubric:: :bl-icon:`con_armature`
 
        ``:bl-icon:`con_armature```
-   * - .. rubric:: :bl-icon:`con_camerasolver`
+     - .. rubric:: :bl-icon:`con_camerasolver`
 
        ``:bl-icon:`con_camerasolver```
-     - .. rubric:: :bl-icon:`con_childof`
+   * - .. rubric:: :bl-icon:`con_childof`
 
        ``:bl-icon:`con_childof```
      - .. rubric:: :bl-icon:`con_clampto`
 
        ``:bl-icon:`con_clampto```
-   * - .. rubric:: :bl-icon:`con_distlimit`
+     - .. rubric:: :bl-icon:`con_distlimit`
 
        ``:bl-icon:`con_distlimit```
-     - .. rubric:: :bl-icon:`con_floor`
+   * - .. rubric:: :bl-icon:`con_floor`
 
        ``:bl-icon:`con_floor```
      - .. rubric:: :bl-icon:`con_followpath`
 
        ``:bl-icon:`con_followpath```
-   * - .. rubric:: :bl-icon:`con_followtrack`
+     - .. rubric:: :bl-icon:`con_followtrack`
 
        ``:bl-icon:`con_followtrack```
+   * - .. rubric:: :bl-icon:`con_geometryattribute`
+
+       ``:bl-icon:`con_geometryattribute```
      - .. rubric:: :bl-icon:`con_kinematic`
 
        ``:bl-icon:`con_kinematic```
@@ -1154,129 +1181,138 @@ Below is a list of available icons:
      - .. rubric:: :bl-icon:`mod_curve`
 
        ``:bl-icon:`mod_curve```
-     - .. rubric:: :bl-icon:`mod_dash`
+     - .. rubric:: :bl-icon:`mod_curves`
+
+       ``:bl-icon:`mod_curves```
+   * - .. rubric:: :bl-icon:`mod_dash`
 
        ``:bl-icon:`mod_dash```
-   * - .. rubric:: :bl-icon:`mod_data_transfer`
+     - .. rubric:: :bl-icon:`mod_data_transfer`
 
        ``:bl-icon:`mod_data_transfer```
      - .. rubric:: :bl-icon:`mod_decim`
 
        ``:bl-icon:`mod_decim```
-     - .. rubric:: :bl-icon:`mod_displace`
+   * - .. rubric:: :bl-icon:`mod_displace`
 
        ``:bl-icon:`mod_displace```
-   * - .. rubric:: :bl-icon:`mod_dynamicpaint`
+     - .. rubric:: :bl-icon:`mod_dynamicpaint`
 
        ``:bl-icon:`mod_dynamicpaint```
      - .. rubric:: :bl-icon:`mod_edgesplit`
 
        ``:bl-icon:`mod_edgesplit```
-     - .. rubric:: :bl-icon:`mod_envelope`
+   * - .. rubric:: :bl-icon:`mod_envelope`
 
        ``:bl-icon:`mod_envelope```
-   * - .. rubric:: :bl-icon:`mod_explode`
+     - .. rubric:: :bl-icon:`mod_explode`
 
        ``:bl-icon:`mod_explode```
      - .. rubric:: :bl-icon:`mod_fluid`
 
        ``:bl-icon:`mod_fluid```
-     - .. rubric:: :bl-icon:`mod_fluidsim`
+   * - .. rubric:: :bl-icon:`mod_fluidsim`
 
        ``:bl-icon:`mod_fluidsim```
-   * - .. rubric:: :bl-icon:`mod_hue_saturation`
+     - .. rubric:: :bl-icon:`mod_hue_correct`
+
+       ``:bl-icon:`mod_hue_correct```
+     - .. rubric:: :bl-icon:`mod_hue_saturation`
 
        ``:bl-icon:`mod_hue_saturation```
-     - .. rubric:: :bl-icon:`mod_instance`
+   * - .. rubric:: :bl-icon:`mod_instance`
 
        ``:bl-icon:`mod_instance```
      - .. rubric:: :bl-icon:`mod_lattice`
 
        ``:bl-icon:`mod_lattice```
-   * - .. rubric:: :bl-icon:`mod_length`
+     - .. rubric:: :bl-icon:`mod_length`
 
        ``:bl-icon:`mod_length```
-     - .. rubric:: :bl-icon:`mod_lineart`
+   * - .. rubric:: :bl-icon:`mod_lineart`
 
        ``:bl-icon:`mod_lineart```
      - .. rubric:: :bl-icon:`mod_mask`
 
        ``:bl-icon:`mod_mask```
-   * - .. rubric:: :bl-icon:`mod_meshdeform`
+     - .. rubric:: :bl-icon:`mod_meshdeform`
 
        ``:bl-icon:`mod_meshdeform```
-     - .. rubric:: :bl-icon:`mod_mirror`
+   * - .. rubric:: :bl-icon:`mod_mirror`
 
        ``:bl-icon:`mod_mirror```
      - .. rubric:: :bl-icon:`mod_multires`
 
        ``:bl-icon:`mod_multires```
-   * - .. rubric:: :bl-icon:`mod_noise`
+     - .. rubric:: :bl-icon:`mod_noise`
 
        ``:bl-icon:`mod_noise```
-     - .. rubric:: :bl-icon:`mod_normaledit`
+   * - .. rubric:: :bl-icon:`mod_normaledit`
 
        ``:bl-icon:`mod_normaledit```
      - .. rubric:: :bl-icon:`mod_ocean`
 
        ``:bl-icon:`mod_ocean```
-   * - .. rubric:: :bl-icon:`mod_offset`
+     - .. rubric:: :bl-icon:`mod_offset`
 
        ``:bl-icon:`mod_offset```
-     - .. rubric:: :bl-icon:`mod_opacity`
+   * - .. rubric:: :bl-icon:`mod_opacity`
 
        ``:bl-icon:`mod_opacity```
      - .. rubric:: :bl-icon:`mod_outline`
 
        ``:bl-icon:`mod_outline```
-   * - .. rubric:: :bl-icon:`mod_particle_instance`
+     - .. rubric:: :bl-icon:`mod_particle_instance`
 
        ``:bl-icon:`mod_particle_instance```
-     - .. rubric:: :bl-icon:`mod_particles`
+   * - .. rubric:: :bl-icon:`mod_particles`
 
        ``:bl-icon:`mod_particles```
      - .. rubric:: :bl-icon:`mod_physics`
 
        ``:bl-icon:`mod_physics```
-   * - .. rubric:: :bl-icon:`mod_remesh`
+     - .. rubric:: :bl-icon:`mod_remesh`
 
        ``:bl-icon:`mod_remesh```
-     - .. rubric:: :bl-icon:`mod_screw`
+   * - .. rubric:: :bl-icon:`mod_screw`
 
        ``:bl-icon:`mod_screw```
      - .. rubric:: :bl-icon:`mod_shrinkwrap`
 
        ``:bl-icon:`mod_shrinkwrap```
-   * - .. rubric:: :bl-icon:`mod_simpledeform`
+     - .. rubric:: :bl-icon:`mod_simpledeform`
 
        ``:bl-icon:`mod_simpledeform```
-     - .. rubric:: :bl-icon:`mod_simplify`
+   * - .. rubric:: :bl-icon:`mod_simplify`
 
        ``:bl-icon:`mod_simplify```
      - .. rubric:: :bl-icon:`mod_skin`
 
        ``:bl-icon:`mod_skin```
-   * - .. rubric:: :bl-icon:`mod_smooth`
+     - .. rubric:: :bl-icon:`mod_smooth`
 
        ``:bl-icon:`mod_smooth```
-     - .. rubric:: :bl-icon:`mod_soft`
+   * - .. rubric:: :bl-icon:`mod_soft`
 
        ``:bl-icon:`mod_soft```
      - .. rubric:: :bl-icon:`mod_solidify`
 
        ``:bl-icon:`mod_solidify```
-   * - .. rubric:: :bl-icon:`mod_subsurf`
+     - .. rubric:: :bl-icon:`mod_subsurf`
 
        ``:bl-icon:`mod_subsurf```
-     - .. rubric:: :bl-icon:`mod_thickness`
+   * - .. rubric:: :bl-icon:`mod_thickness`
 
        ``:bl-icon:`mod_thickness```
      - .. rubric:: :bl-icon:`mod_time`
 
        ``:bl-icon:`mod_time```
-   * - .. rubric:: :bl-icon:`mod_tint`
+     - .. rubric:: :bl-icon:`mod_tint`
 
        ``:bl-icon:`mod_tint```
+   * - .. rubric:: :bl-icon:`mod_tonemap`
+
+       ``:bl-icon:`mod_tonemap```
      - .. rubric:: :bl-icon:`mod_triangulate`
 
        ``:bl-icon:`mod_triangulate```
@@ -1292,360 +1328,369 @@ Below is a list of available icons:
      - .. rubric:: :bl-icon:`mod_wave`
 
        ``:bl-icon:`mod_wave```
-   * - .. rubric:: :bl-icon:`mod_wireframe`
+   * - .. rubric:: :bl-icon:`mod_white_balance`
+
+       ``:bl-icon:`mod_white_balance```
+     - .. rubric:: :bl-icon:`mod_wireframe`
 
        ``:bl-icon:`mod_wireframe```
      - .. rubric:: :bl-icon:`modifier`
 
        ``:bl-icon:`modifier```
-     - .. rubric:: :bl-icon:`modifier_data`
+   * - .. rubric:: :bl-icon:`modifier_data`
 
        ``:bl-icon:`modifier_data```
-   * - .. rubric:: :bl-icon:`modifier_off`
+     - .. rubric:: :bl-icon:`modifier_off`
 
        ``:bl-icon:`modifier_off```
      - .. rubric:: :bl-icon:`modifier_on`
 
        ``:bl-icon:`modifier_on```
-     - .. rubric:: :bl-icon:`monkey`
+   * - .. rubric:: :bl-icon:`monkey`
 
        ``:bl-icon:`monkey```
-   * - .. rubric:: :bl-icon:`mouse_lmb`
+     - .. rubric:: :bl-icon:`mouse_lmb`
 
        ``:bl-icon:`mouse_lmb```
      - .. rubric:: :bl-icon:`mouse_lmb_2x`
 
        ``:bl-icon:`mouse_lmb_2x```
-     - .. rubric:: :bl-icon:`mouse_lmb_drag`
+   * - .. rubric:: :bl-icon:`mouse_lmb_drag`
 
        ``:bl-icon:`mouse_lmb_drag```
-   * - .. rubric:: :bl-icon:`mouse_mmb`
+     - .. rubric:: :bl-icon:`mouse_mmb`
 
        ``:bl-icon:`mouse_mmb```
      - .. rubric:: :bl-icon:`mouse_mmb_drag`
 
        ``:bl-icon:`mouse_mmb_drag```
-     - .. rubric:: :bl-icon:`mouse_mmb_scroll`
+   * - .. rubric:: :bl-icon:`mouse_mmb_scroll`
 
        ``:bl-icon:`mouse_mmb_scroll```
-   * - .. rubric:: :bl-icon:`mouse_move`
+     - .. rubric:: :bl-icon:`mouse_move`
 
        ``:bl-icon:`mouse_move```
      - .. rubric:: :bl-icon:`mouse_rmb`
 
        ``:bl-icon:`mouse_rmb```
-     - .. rubric:: :bl-icon:`mouse_rmb_drag`
+   * - .. rubric:: :bl-icon:`mouse_rmb_drag`
 
        ``:bl-icon:`mouse_rmb_drag```
-   * - .. rubric:: :bl-icon:`mute_ipo_off`
+     - .. rubric:: :bl-icon:`mute_ipo_off`
 
        ``:bl-icon:`mute_ipo_off```
      - .. rubric:: :bl-icon:`mute_ipo_on`
 
        ``:bl-icon:`mute_ipo_on```
-     - .. rubric:: :bl-icon:`network_drive`
+   * - .. rubric:: :bl-icon:`network_drive`
 
        ``:bl-icon:`network_drive```
-   * - .. rubric:: :bl-icon:`network_drive_large`
+     - .. rubric:: :bl-icon:`network_drive_large`
 
        ``:bl-icon:`network_drive_large```
      - .. rubric:: :bl-icon:`newfolder`
 
        ``:bl-icon:`newfolder```
-     - .. rubric:: :bl-icon:`next_keyframe`
+   * - .. rubric:: :bl-icon:`next_keyframe`
 
        ``:bl-icon:`next_keyframe```
-   * - .. rubric:: :bl-icon:`nla`
+     - .. rubric:: :bl-icon:`nla`
 
        ``:bl-icon:`nla```
      - .. rubric:: :bl-icon:`nla_pushdown`
 
        ``:bl-icon:`nla_pushdown```
-     - .. rubric:: :bl-icon:`nocurve`
+   * - .. rubric:: :bl-icon:`nocurve`
 
        ``:bl-icon:`nocurve```
-   * - .. rubric:: :bl-icon:`node`
+     - .. rubric:: :bl-icon:`node`
 
        ``:bl-icon:`node```
      - .. rubric:: :bl-icon:`node_compositing`
 
        ``:bl-icon:`node_compositing```
-     - .. rubric:: :bl-icon:`node_corner`
+   * - .. rubric:: :bl-icon:`node_corner`
 
        ``:bl-icon:`node_corner```
-   * - .. rubric:: :bl-icon:`node_insert_off`
+     - .. rubric:: :bl-icon:`node_insert_off`
 
        ``:bl-icon:`node_insert_off```
      - .. rubric:: :bl-icon:`node_insert_on`
 
        ``:bl-icon:`node_insert_on```
-     - .. rubric:: :bl-icon:`node_material`
+   * - .. rubric:: :bl-icon:`node_material`
 
        ``:bl-icon:`node_material```
-   * - .. rubric:: :bl-icon:`node_sel`
+     - .. rubric:: :bl-icon:`node_sel`
 
        ``:bl-icon:`node_sel```
      - .. rubric:: :bl-icon:`node_side`
 
        ``:bl-icon:`node_side```
-     - .. rubric:: :bl-icon:`node_texture`
+   * - .. rubric:: :bl-icon:`node_texture`
 
        ``:bl-icon:`node_texture```
-   * - .. rubric:: :bl-icon:`node_top`
+     - .. rubric:: :bl-icon:`node_top`
 
        ``:bl-icon:`node_top```
      - .. rubric:: :bl-icon:`nodetree`
 
        ``:bl-icon:`nodetree```
-     - .. rubric:: :bl-icon:`none`
+   * - .. rubric:: :bl-icon:`none`
 
        ``:bl-icon:`none```
-   * - .. rubric:: :bl-icon:`normalize_fcurves`
+     - .. rubric:: :bl-icon:`normalize_fcurves`
 
        ``:bl-icon:`normalize_fcurves```
      - .. rubric:: :bl-icon:`normals_face`
 
        ``:bl-icon:`normals_face```
-     - .. rubric:: :bl-icon:`normals_vertex`
+   * - .. rubric:: :bl-icon:`normals_vertex`
 
        ``:bl-icon:`normals_vertex```
-   * - .. rubric:: :bl-icon:`normals_vertex_face`
+     - .. rubric:: :bl-icon:`normals_vertex_face`
 
        ``:bl-icon:`normals_vertex_face```
      - .. rubric:: :bl-icon:`not_found`
 
        ``:bl-icon:`not_found```
-     - .. rubric:: :bl-icon:`object_data`
+   * - .. rubric:: :bl-icon:`object_data`
 
        ``:bl-icon:`object_data```
-   * - .. rubric:: :bl-icon:`object_datamode`
+     - .. rubric:: :bl-icon:`object_datamode`
 
        ``:bl-icon:`object_datamode```
      - .. rubric:: :bl-icon:`object_hidden`
 
        ``:bl-icon:`object_hidden```
-     - .. rubric:: :bl-icon:`object_origin`
+   * - .. rubric:: :bl-icon:`object_origin`
 
        ``:bl-icon:`object_origin```
-   * - .. rubric:: :bl-icon:`onionskin_off`
+     - .. rubric:: :bl-icon:`onionskin_off`
 
        ``:bl-icon:`onionskin_off```
      - .. rubric:: :bl-icon:`onionskin_on`
 
        ``:bl-icon:`onionskin_on```
-     - .. rubric:: :bl-icon:`options`
+   * - .. rubric:: :bl-icon:`options`
 
        ``:bl-icon:`options```
-   * - .. rubric:: :bl-icon:`orientation_cursor`
+     - .. rubric:: :bl-icon:`orientation_cursor`
 
        ``:bl-icon:`orientation_cursor```
      - .. rubric:: :bl-icon:`orientation_gimbal`
 
        ``:bl-icon:`orientation_gimbal```
-     - .. rubric:: :bl-icon:`orientation_global`
+   * - .. rubric:: :bl-icon:`orientation_global`
 
        ``:bl-icon:`orientation_global```
-   * - .. rubric:: :bl-icon:`orientation_local`
+     - .. rubric:: :bl-icon:`orientation_local`
 
        ``:bl-icon:`orientation_local```
      - .. rubric:: :bl-icon:`orientation_normal`
 
        ``:bl-icon:`orientation_normal```
-     - .. rubric:: :bl-icon:`orientation_parent`
+   * - .. rubric:: :bl-icon:`orientation_parent`
 
        ``:bl-icon:`orientation_parent```
-   * - .. rubric:: :bl-icon:`orientation_view`
+     - .. rubric:: :bl-icon:`orientation_view`
 
        ``:bl-icon:`orientation_view```
      - .. rubric:: :bl-icon:`orphan_data`
 
        ``:bl-icon:`orphan_data```
-     - .. rubric:: :bl-icon:`outliner`
+   * - .. rubric:: :bl-icon:`outliner`
 
        ``:bl-icon:`outliner```
-   * - .. rubric:: :bl-icon:`outliner_collection`
+     - .. rubric:: :bl-icon:`outliner_collection`
 
        ``:bl-icon:`outliner_collection```
      - .. rubric:: :bl-icon:`outliner_data_armature`
 
        ``:bl-icon:`outliner_data_armature```
-     - .. rubric:: :bl-icon:`outliner_data_camera`
+   * - .. rubric:: :bl-icon:`outliner_data_camera`
 
        ``:bl-icon:`outliner_data_camera```
-   * - .. rubric:: :bl-icon:`outliner_data_curve`
+     - .. rubric:: :bl-icon:`outliner_data_curve`
 
        ``:bl-icon:`outliner_data_curve```
      - .. rubric:: :bl-icon:`outliner_data_curves`
 
        ``:bl-icon:`outliner_data_curves```
-     - .. rubric:: :bl-icon:`outliner_data_empty`
+   * - .. rubric:: :bl-icon:`outliner_data_empty`
 
        ``:bl-icon:`outliner_data_empty```
-   * - .. rubric:: :bl-icon:`outliner_data_font`
+     - .. rubric:: :bl-icon:`outliner_data_font`
 
        ``:bl-icon:`outliner_data_font```
      - .. rubric:: :bl-icon:`outliner_data_gp_layer`
 
        ``:bl-icon:`outliner_data_gp_layer```
-     - .. rubric:: :bl-icon:`outliner_data_greasepencil`
+   * - .. rubric:: :bl-icon:`outliner_data_greasepencil`
 
        ``:bl-icon:`outliner_data_greasepencil```
-   * - .. rubric:: :bl-icon:`outliner_data_lattice`
+     - .. rubric:: :bl-icon:`outliner_data_lattice`
 
        ``:bl-icon:`outliner_data_lattice```
      - .. rubric:: :bl-icon:`outliner_data_light`
 
        ``:bl-icon:`outliner_data_light```
-     - .. rubric:: :bl-icon:`outliner_data_lightprobe`
+   * - .. rubric:: :bl-icon:`outliner_data_lightprobe`
 
        ``:bl-icon:`outliner_data_lightprobe```
-   * - .. rubric:: :bl-icon:`outliner_data_mesh`
+     - .. rubric:: :bl-icon:`outliner_data_mesh`
 
        ``:bl-icon:`outliner_data_mesh```
      - .. rubric:: :bl-icon:`outliner_data_meta`
 
        ``:bl-icon:`outliner_data_meta```
-     - .. rubric:: :bl-icon:`outliner_data_pointcloud`
+   * - .. rubric:: :bl-icon:`outliner_data_pointcloud`
 
        ``:bl-icon:`outliner_data_pointcloud```
-   * - .. rubric:: :bl-icon:`outliner_data_speaker`
+     - .. rubric:: :bl-icon:`outliner_data_speaker`
 
        ``:bl-icon:`outliner_data_speaker```
      - .. rubric:: :bl-icon:`outliner_data_surface`
 
        ``:bl-icon:`outliner_data_surface```
-     - .. rubric:: :bl-icon:`outliner_data_volume`
+   * - .. rubric:: :bl-icon:`outliner_data_volume`
 
        ``:bl-icon:`outliner_data_volume```
-   * - .. rubric:: :bl-icon:`outliner_ob_armature`
+     - .. rubric:: :bl-icon:`outliner_ob_armature`
 
        ``:bl-icon:`outliner_ob_armature```
      - .. rubric:: :bl-icon:`outliner_ob_camera`
 
        ``:bl-icon:`outliner_ob_camera```
-     - .. rubric:: :bl-icon:`outliner_ob_curve`
+   * - .. rubric:: :bl-icon:`outliner_ob_curve`
 
        ``:bl-icon:`outliner_ob_curve```
-   * - .. rubric:: :bl-icon:`outliner_ob_curves`
+     - .. rubric:: :bl-icon:`outliner_ob_curves`
 
        ``:bl-icon:`outliner_ob_curves```
      - .. rubric:: :bl-icon:`outliner_ob_empty`
 
        ``:bl-icon:`outliner_ob_empty```
-     - .. rubric:: :bl-icon:`outliner_ob_font`
+   * - .. rubric:: :bl-icon:`outliner_ob_font`
 
        ``:bl-icon:`outliner_ob_font```
-   * - .. rubric:: :bl-icon:`outliner_ob_force_field`
+     - .. rubric:: :bl-icon:`outliner_ob_force_field`
 
        ``:bl-icon:`outliner_ob_force_field```
      - .. rubric:: :bl-icon:`outliner_ob_greasepencil`
 
        ``:bl-icon:`outliner_ob_greasepencil```
-     - .. rubric:: :bl-icon:`outliner_ob_group_instance`
+   * - .. rubric:: :bl-icon:`outliner_ob_group_instance`
 
        ``:bl-icon:`outliner_ob_group_instance```
-   * - .. rubric:: :bl-icon:`outliner_ob_image`
+     - .. rubric:: :bl-icon:`outliner_ob_image`
 
        ``:bl-icon:`outliner_ob_image```
      - .. rubric:: :bl-icon:`outliner_ob_lattice`
 
        ``:bl-icon:`outliner_ob_lattice```
-     - .. rubric:: :bl-icon:`outliner_ob_light`
+   * - .. rubric:: :bl-icon:`outliner_ob_light`
 
        ``:bl-icon:`outliner_ob_light```
-   * - .. rubric:: :bl-icon:`outliner_ob_lightprobe`
+     - .. rubric:: :bl-icon:`outliner_ob_lightprobe`
 
        ``:bl-icon:`outliner_ob_lightprobe```
      - .. rubric:: :bl-icon:`outliner_ob_mesh`
 
        ``:bl-icon:`outliner_ob_mesh```
-     - .. rubric:: :bl-icon:`outliner_ob_meta`
+   * - .. rubric:: :bl-icon:`outliner_ob_meta`
 
        ``:bl-icon:`outliner_ob_meta```
-   * - .. rubric:: :bl-icon:`outliner_ob_pointcloud`
+     - .. rubric:: :bl-icon:`outliner_ob_pointcloud`
 
        ``:bl-icon:`outliner_ob_pointcloud```
      - .. rubric:: :bl-icon:`outliner_ob_speaker`
 
        ``:bl-icon:`outliner_ob_speaker```
-     - .. rubric:: :bl-icon:`outliner_ob_surface`
+   * - .. rubric:: :bl-icon:`outliner_ob_surface`
 
        ``:bl-icon:`outliner_ob_surface```
-   * - .. rubric:: :bl-icon:`outliner_ob_volume`
+     - .. rubric:: :bl-icon:`outliner_ob_volume`
 
        ``:bl-icon:`outliner_ob_volume```
      - .. rubric:: :bl-icon:`output`
 
        ``:bl-icon:`output```
-     - .. rubric:: :bl-icon:`overlay`
+   * - .. rubric:: :bl-icon:`overlay`
 
        ``:bl-icon:`overlay```
-   * - .. rubric:: :bl-icon:`package`
+     - .. rubric:: :bl-icon:`package`
 
        ``:bl-icon:`package```
      - .. rubric:: :bl-icon:`panel_close`
 
        ``:bl-icon:`panel_close```
-     - .. rubric:: :bl-icon:`particle_data`
+   * - .. rubric:: :bl-icon:`particle_data`
 
        ``:bl-icon:`particle_data```
-   * - .. rubric:: :bl-icon:`particle_path`
+     - .. rubric:: :bl-icon:`particle_path`
 
        ``:bl-icon:`particle_path```
      - .. rubric:: :bl-icon:`particle_point`
 
        ``:bl-icon:`particle_point```
-     - .. rubric:: :bl-icon:`particle_tip`
+   * - .. rubric:: :bl-icon:`particle_tip`
 
        ``:bl-icon:`particle_tip```
-   * - .. rubric:: :bl-icon:`particlemode`
+     - .. rubric:: :bl-icon:`particlemode`
 
        ``:bl-icon:`particlemode```
      - .. rubric:: :bl-icon:`particles`
 
        ``:bl-icon:`particles```
-     - .. rubric:: :bl-icon:`pastedown`
+   * - .. rubric:: :bl-icon:`pastedown`
 
        ``:bl-icon:`pastedown```
-   * - .. rubric:: :bl-icon:`pasteflipdown`
+     - .. rubric:: :bl-icon:`pasteflipdown`
 
        ``:bl-icon:`pasteflipdown```
      - .. rubric:: :bl-icon:`pasteflipup`
 
        ``:bl-icon:`pasteflipup```
-     - .. rubric:: :bl-icon:`pause`
+   * - .. rubric:: :bl-icon:`pause`
 
        ``:bl-icon:`pause```
-   * - .. rubric:: :bl-icon:`physics`
+     - .. rubric:: :bl-icon:`physics`
 
        ``:bl-icon:`physics```
      - .. rubric:: :bl-icon:`pinned`
 
        ``:bl-icon:`pinned```
-     - .. rubric:: :bl-icon:`pivot_active`
+   * - .. rubric:: :bl-icon:`pivot_active`
 
        ``:bl-icon:`pivot_active```
-   * - .. rubric:: :bl-icon:`pivot_boundbox`
+     - .. rubric:: :bl-icon:`pivot_boundbox`
 
        ``:bl-icon:`pivot_boundbox```
      - .. rubric:: :bl-icon:`pivot_cursor`
 
        ``:bl-icon:`pivot_cursor```
-     - .. rubric:: :bl-icon:`pivot_individual`
+   * - .. rubric:: :bl-icon:`pivot_individual`
 
        ``:bl-icon:`pivot_individual```
-   * - .. rubric:: :bl-icon:`pivot_median`
+     - .. rubric:: :bl-icon:`pivot_median`
 
        ``:bl-icon:`pivot_median```
      - .. rubric:: :bl-icon:`play`
 
        ``:bl-icon:`play```
-     - .. rubric:: :bl-icon:`play_reverse`
+   * - .. rubric:: :bl-icon:`play_reverse`
 
        ``:bl-icon:`play_reverse```
-   * - .. rubric:: :bl-icon:`play_sound`
+     - .. rubric:: :bl-icon:`play_sound`
 
        ``:bl-icon:`play_sound```
+     - .. rubric:: :bl-icon:`playhead_snap_off`
+
+       ``:bl-icon:`playhead_snap_off```
+   * - .. rubric:: :bl-icon:`playhead_snap_on`
+
+       ``:bl-icon:`playhead_snap_on```
      - .. rubric:: :bl-icon:`plugin`
 
        ``:bl-icon:`plugin```
@@ -1859,415 +1904,417 @@ Below is a list of available icons:
      - .. rubric:: :bl-icon:`seq_strip_meta`
 
        ``:bl-icon:`seq_strip_meta```
-   * - .. rubric:: :bl-icon:`sequence`
+   * - .. rubric:: :bl-icon:`seq_strip_modifier`
+
+       ``:bl-icon:`seq_strip_modifier```
+     - .. rubric:: :bl-icon:`sequence`
 
        ``:bl-icon:`sequence```
      - .. rubric:: :bl-icon:`settings`
 
        ``:bl-icon:`settings```
-     - .. rubric:: :bl-icon:`shaderfx`
+   * - .. rubric:: :bl-icon:`shaderfx`
 
        ``:bl-icon:`shaderfx```
-   * - .. rubric:: :bl-icon:`shading_bbox`
+     - .. rubric:: :bl-icon:`shading_bbox`
 
        ``:bl-icon:`shading_bbox```
      - .. rubric:: :bl-icon:`shading_rendered`
 
        ``:bl-icon:`shading_rendered```
-     - .. rubric:: :bl-icon:`shading_solid`
+   * - .. rubric:: :bl-icon:`shading_solid`
 
        ``:bl-icon:`shading_solid```
-   * - .. rubric:: :bl-icon:`shading_texture`
+     - .. rubric:: :bl-icon:`shading_texture`
 
        ``:bl-icon:`shading_texture```
      - .. rubric:: :bl-icon:`shading_wire`
 
        ``:bl-icon:`shading_wire```
-     - .. rubric:: :bl-icon:`shapekey_data`
+   * - .. rubric:: :bl-icon:`shapekey_data`
 
        ``:bl-icon:`shapekey_data```
-   * - .. rubric:: :bl-icon:`sharpcurve`
+     - .. rubric:: :bl-icon:`sharpcurve`
 
        ``:bl-icon:`sharpcurve```
      - .. rubric:: :bl-icon:`shortdisplay`
 
        ``:bl-icon:`shortdisplay```
-     - .. rubric:: :bl-icon:`small_caps`
+   * - .. rubric:: :bl-icon:`small_caps`
 
        ``:bl-icon:`small_caps```
-   * - .. rubric:: :bl-icon:`smoothcurve`
+     - .. rubric:: :bl-icon:`smoothcurve`
 
        ``:bl-icon:`smoothcurve```
      - .. rubric:: :bl-icon:`snap_edge`
 
        ``:bl-icon:`snap_edge```
-     - .. rubric:: :bl-icon:`snap_face`
+   * - .. rubric:: :bl-icon:`snap_face`
 
        ``:bl-icon:`snap_face```
-   * - .. rubric:: :bl-icon:`snap_face_center`
+     - .. rubric:: :bl-icon:`snap_face_center`
 
        ``:bl-icon:`snap_face_center```
      - .. rubric:: :bl-icon:`snap_face_nearest`
 
        ``:bl-icon:`snap_face_nearest```
-     - .. rubric:: :bl-icon:`snap_grid`
+   * - .. rubric:: :bl-icon:`snap_grid`
 
        ``:bl-icon:`snap_grid```
-   * - .. rubric:: :bl-icon:`snap_increment`
+     - .. rubric:: :bl-icon:`snap_increment`
 
        ``:bl-icon:`snap_increment```
      - .. rubric:: :bl-icon:`snap_midpoint`
 
        ``:bl-icon:`snap_midpoint```
-     - .. rubric:: :bl-icon:`snap_normal`
+   * - .. rubric:: :bl-icon:`snap_normal`
 
        ``:bl-icon:`snap_normal```
-   * - .. rubric:: :bl-icon:`snap_off`
+     - .. rubric:: :bl-icon:`snap_off`
 
        ``:bl-icon:`snap_off```
      - .. rubric:: :bl-icon:`snap_on`
 
        ``:bl-icon:`snap_on```
-     - .. rubric:: :bl-icon:`snap_peel_object`
+   * - .. rubric:: :bl-icon:`snap_peel_object`
 
        ``:bl-icon:`snap_peel_object```
-   * - .. rubric:: :bl-icon:`snap_perpendicular`
+     - .. rubric:: :bl-icon:`snap_perpendicular`
 
        ``:bl-icon:`snap_perpendicular```
      - .. rubric:: :bl-icon:`snap_vertex`
 
        ``:bl-icon:`snap_vertex```
-     - .. rubric:: :bl-icon:`snap_volume`
+   * - .. rubric:: :bl-icon:`snap_volume`
 
        ``:bl-icon:`snap_volume```
-   * - .. rubric:: :bl-icon:`solo_off`
+     - .. rubric:: :bl-icon:`solo_off`
 
        ``:bl-icon:`solo_off```
      - .. rubric:: :bl-icon:`solo_on`
 
        ``:bl-icon:`solo_on```
-     - .. rubric:: :bl-icon:`sort_asc`
+   * - .. rubric:: :bl-icon:`sort_asc`
 
        ``:bl-icon:`sort_asc```
-   * - .. rubric:: :bl-icon:`sort_desc`
+     - .. rubric:: :bl-icon:`sort_desc`
 
        ``:bl-icon:`sort_desc```
      - .. rubric:: :bl-icon:`sortalpha`
 
        ``:bl-icon:`sortalpha```
-     - .. rubric:: :bl-icon:`sortbyext`
+   * - .. rubric:: :bl-icon:`sortbyext`
 
        ``:bl-icon:`sortbyext```
-   * - .. rubric:: :bl-icon:`sortsize`
+     - .. rubric:: :bl-icon:`sortsize`
 
        ``:bl-icon:`sortsize```
      - .. rubric:: :bl-icon:`sorttime`
 
        ``:bl-icon:`sorttime```
-     - .. rubric:: :bl-icon:`sound`
+   * - .. rubric:: :bl-icon:`sound`
 
        ``:bl-icon:`sound```
-   * - .. rubric:: :bl-icon:`speaker`
+     - .. rubric:: :bl-icon:`speaker`
 
        ``:bl-icon:`speaker```
      - .. rubric:: :bl-icon:`sphere`
 
        ``:bl-icon:`sphere```
-     - .. rubric:: :bl-icon:`spherecurve`
+   * - .. rubric:: :bl-icon:`spherecurve`
 
        ``:bl-icon:`spherecurve```
-   * - .. rubric:: :bl-icon:`split_horizontal`
+     - .. rubric:: :bl-icon:`split_horizontal`
 
        ``:bl-icon:`split_horizontal```
      - .. rubric:: :bl-icon:`split_vertical`
 
        ``:bl-icon:`split_vertical```
-     - .. rubric:: :bl-icon:`spreadsheet`
+   * - .. rubric:: :bl-icon:`spreadsheet`
 
        ``:bl-icon:`spreadsheet```
-   * - .. rubric:: :bl-icon:`statusbar`
+     - .. rubric:: :bl-icon:`statusbar`
 
        ``:bl-icon:`statusbar```
      - .. rubric:: :bl-icon:`sticky_uvs_disable`
 
        ``:bl-icon:`sticky_uvs_disable```
-     - .. rubric:: :bl-icon:`sticky_uvs_loc`
+   * - .. rubric:: :bl-icon:`sticky_uvs_loc`
 
        ``:bl-icon:`sticky_uvs_loc```
-   * - .. rubric:: :bl-icon:`sticky_uvs_vert`
+     - .. rubric:: :bl-icon:`sticky_uvs_vert`
 
        ``:bl-icon:`sticky_uvs_vert```
      - .. rubric:: :bl-icon:`strands`
 
        ``:bl-icon:`strands```
-     - .. rubric:: :bl-icon:`stroke`
+   * - .. rubric:: :bl-icon:`stroke`
 
        ``:bl-icon:`stroke```
-   * - .. rubric:: :bl-icon:`stylus_pressure`
+     - .. rubric:: :bl-icon:`stylus_pressure`
 
        ``:bl-icon:`stylus_pressure```
      - .. rubric:: :bl-icon:`surface_data`
 
        ``:bl-icon:`surface_data```
-     - .. rubric:: :bl-icon:`surface_ncircle`
+   * - .. rubric:: :bl-icon:`surface_ncircle`
 
        ``:bl-icon:`surface_ncircle```
-   * - .. rubric:: :bl-icon:`surface_ncurve`
+     - .. rubric:: :bl-icon:`surface_ncurve`
 
        ``:bl-icon:`surface_ncurve```
      - .. rubric:: :bl-icon:`surface_ncylinder`
 
        ``:bl-icon:`surface_ncylinder```
-     - .. rubric:: :bl-icon:`surface_nsphere`
+   * - .. rubric:: :bl-icon:`surface_nsphere`
 
        ``:bl-icon:`surface_nsphere```
-   * - .. rubric:: :bl-icon:`surface_nsurface`
+     - .. rubric:: :bl-icon:`surface_nsurface`
 
        ``:bl-icon:`surface_nsurface```
      - .. rubric:: :bl-icon:`surface_ntorus`
 
        ``:bl-icon:`surface_ntorus```
-     - .. rubric:: :bl-icon:`syntax_off`
+   * - .. rubric:: :bl-icon:`syntax_off`
 
        ``:bl-icon:`syntax_off```
-   * - .. rubric:: :bl-icon:`syntax_on`
+     - .. rubric:: :bl-icon:`syntax_on`
 
        ``:bl-icon:`syntax_on```
      - .. rubric:: :bl-icon:`system`
 
        ``:bl-icon:`system```
-     - .. rubric:: :bl-icon:`tag`
+   * - .. rubric:: :bl-icon:`tag`
 
        ``:bl-icon:`tag```
-   * - .. rubric:: :bl-icon:`temp`
+     - .. rubric:: :bl-icon:`temp`
 
        ``:bl-icon:`temp```
      - .. rubric:: :bl-icon:`text`
 
        ``:bl-icon:`text```
-     - .. rubric:: :bl-icon:`texture`
+   * - .. rubric:: :bl-icon:`texture`
 
        ``:bl-icon:`texture```
-   * - .. rubric:: :bl-icon:`texture_data`
+     - .. rubric:: :bl-icon:`texture_data`
 
        ``:bl-icon:`texture_data```
      - .. rubric:: :bl-icon:`three_dots`
 
        ``:bl-icon:`three_dots```
-     - .. rubric:: :bl-icon:`time`
+   * - .. rubric:: :bl-icon:`time`
 
        ``:bl-icon:`time```
-   * - .. rubric:: :bl-icon:`tool_settings`
+     - .. rubric:: :bl-icon:`tool_settings`
 
        ``:bl-icon:`tool_settings```
      - .. rubric:: :bl-icon:`topbar`
 
        ``:bl-icon:`topbar```
-     - .. rubric:: :bl-icon:`tpaint_hlt`
+   * - .. rubric:: :bl-icon:`tpaint_hlt`
 
        ``:bl-icon:`tpaint_hlt```
-   * - .. rubric:: :bl-icon:`tracker`
+     - .. rubric:: :bl-icon:`tracker`
 
        ``:bl-icon:`tracker```
      - .. rubric:: :bl-icon:`tracker_data`
 
        ``:bl-icon:`tracker_data```
-     - .. rubric:: :bl-icon:`tracking`
+   * - .. rubric:: :bl-icon:`tracking`
 
        ``:bl-icon:`tracking```
-   * - .. rubric:: :bl-icon:`tracking_backwards`
+     - .. rubric:: :bl-icon:`tracking_backwards`
 
        ``:bl-icon:`tracking_backwards```
      - .. rubric:: :bl-icon:`tracking_backwards_single`
 
        ``:bl-icon:`tracking_backwards_single```
-     - .. rubric:: :bl-icon:`tracking_clear_backwards`
+   * - .. rubric:: :bl-icon:`tracking_clear_backwards`
 
        ``:bl-icon:`tracking_clear_backwards```
-   * - .. rubric:: :bl-icon:`tracking_clear_forwards`
+     - .. rubric:: :bl-icon:`tracking_clear_forwards`
 
        ``:bl-icon:`tracking_clear_forwards```
      - .. rubric:: :bl-icon:`tracking_forwards`
 
        ``:bl-icon:`tracking_forwards```
-     - .. rubric:: :bl-icon:`tracking_forwards_single`
+   * - .. rubric:: :bl-icon:`tracking_forwards_single`
 
        ``:bl-icon:`tracking_forwards_single```
-   * - .. rubric:: :bl-icon:`tracking_refine_backwards`
+     - .. rubric:: :bl-icon:`tracking_refine_backwards`
 
        ``:bl-icon:`tracking_refine_backwards```
      - .. rubric:: :bl-icon:`tracking_refine_forwards`
 
        ``:bl-icon:`tracking_refine_forwards```
-     - .. rubric:: :bl-icon:`transform_origins`
+   * - .. rubric:: :bl-icon:`transform_origins`
 
        ``:bl-icon:`transform_origins```
-   * - .. rubric:: :bl-icon:`trash`
+     - .. rubric:: :bl-icon:`trash`
 
        ``:bl-icon:`trash```
      - .. rubric:: :bl-icon:`tria_down`
 
        ``:bl-icon:`tria_down```
-     - .. rubric:: :bl-icon:`tria_down_bar`
+   * - .. rubric:: :bl-icon:`tria_down_bar`
 
        ``:bl-icon:`tria_down_bar```
-   * - .. rubric:: :bl-icon:`tria_left`
+     - .. rubric:: :bl-icon:`tria_left`
 
        ``:bl-icon:`tria_left```
      - .. rubric:: :bl-icon:`tria_left_bar`
 
        ``:bl-icon:`tria_left_bar```
-     - .. rubric:: :bl-icon:`tria_right`
+   * - .. rubric:: :bl-icon:`tria_right`
 
        ``:bl-icon:`tria_right```
-   * - .. rubric:: :bl-icon:`tria_right_bar`
+     - .. rubric:: :bl-icon:`tria_right_bar`
 
        ``:bl-icon:`tria_right_bar```
      - .. rubric:: :bl-icon:`tria_up`
 
        ``:bl-icon:`tria_up```
-     - .. rubric:: :bl-icon:`tria_up_bar`
+   * - .. rubric:: :bl-icon:`tria_up_bar`
 
        ``:bl-icon:`tria_up_bar```
-   * - .. rubric:: :bl-icon:`uglypackage`
+     - .. rubric:: :bl-icon:`uglypackage`
 
        ``:bl-icon:`uglypackage```
      - .. rubric:: :bl-icon:`underline`
 
        ``:bl-icon:`underline```
-     - .. rubric:: :bl-icon:`unlinked`
+   * - .. rubric:: :bl-icon:`unlinked`
 
        ``:bl-icon:`unlinked```
-   * - .. rubric:: :bl-icon:`unlocked`
+     - .. rubric:: :bl-icon:`unlocked`
 
        ``:bl-icon:`unlocked```
      - .. rubric:: :bl-icon:`unpinned`
 
        ``:bl-icon:`unpinned```
-     - .. rubric:: :bl-icon:`url`
+   * - .. rubric:: :bl-icon:`url`
 
        ``:bl-icon:`url```
-   * - .. rubric:: :bl-icon:`user`
+     - .. rubric:: :bl-icon:`user`
 
        ``:bl-icon:`user```
      - .. rubric:: :bl-icon:`uv`
 
        ``:bl-icon:`uv```
-     - .. rubric:: :bl-icon:`uv_data`
+   * - .. rubric:: :bl-icon:`uv_data`
 
        ``:bl-icon:`uv_data```
-   * - .. rubric:: :bl-icon:`uv_edgesel`
+     - .. rubric:: :bl-icon:`uv_edgesel`
 
        ``:bl-icon:`uv_edgesel```
      - .. rubric:: :bl-icon:`uv_facesel`
 
        ``:bl-icon:`uv_facesel```
-     - .. rubric:: :bl-icon:`uv_islandsel`
+   * - .. rubric:: :bl-icon:`uv_islandsel`
 
        ``:bl-icon:`uv_islandsel```
-   * - .. rubric:: :bl-icon:`uv_sync_select`
+     - .. rubric:: :bl-icon:`uv_sync_select`
 
        ``:bl-icon:`uv_sync_select```
      - .. rubric:: :bl-icon:`uv_vertexsel`
 
        ``:bl-icon:`uv_vertexsel```
-     - .. rubric:: :bl-icon:`vertex_crease`
+   * - .. rubric:: :bl-icon:`vertex_crease`
 
        ``:bl-icon:`vertex_crease```
-   * - .. rubric:: :bl-icon:`vertexsel`
+     - .. rubric:: :bl-icon:`vertexsel`
 
        ``:bl-icon:`vertexsel```
      - .. rubric:: :bl-icon:`view3d`
 
        ``:bl-icon:`view3d```
-     - .. rubric:: :bl-icon:`view_camera`
+   * - .. rubric:: :bl-icon:`view_camera`
 
        ``:bl-icon:`view_camera```
-   * - .. rubric:: :bl-icon:`view_camera_unselected`
+     - .. rubric:: :bl-icon:`view_camera_unselected`
 
        ``:bl-icon:`view_camera_unselected```
      - .. rubric:: :bl-icon:`view_locked`
 
        ``:bl-icon:`view_locked```
-     - .. rubric:: :bl-icon:`view_ortho`
+   * - .. rubric:: :bl-icon:`view_ortho`
 
        ``:bl-icon:`view_ortho```
-   * - .. rubric:: :bl-icon:`view_pan`
+     - .. rubric:: :bl-icon:`view_pan`
 
        ``:bl-icon:`view_pan```
      - .. rubric:: :bl-icon:`view_perspective`
 
        ``:bl-icon:`view_perspective```
-     - .. rubric:: :bl-icon:`view_unlocked`
+   * - .. rubric:: :bl-icon:`view_unlocked`
 
        ``:bl-icon:`view_unlocked```
-   * - .. rubric:: :bl-icon:`view_zoom`
+     - .. rubric:: :bl-icon:`view_zoom`
 
        ``:bl-icon:`view_zoom```
      - .. rubric:: :bl-icon:`viewzoom`
 
        ``:bl-icon:`viewzoom```
-     - .. rubric:: :bl-icon:`vis_sel_00`
+   * - .. rubric:: :bl-icon:`vis_sel_00`
 
        ``:bl-icon:`vis_sel_00```
-   * - .. rubric:: :bl-icon:`vis_sel_01`
+     - .. rubric:: :bl-icon:`vis_sel_01`
 
        ``:bl-icon:`vis_sel_01```
      - .. rubric:: :bl-icon:`vis_sel_10`
 
        ``:bl-icon:`vis_sel_10```
-     - .. rubric:: :bl-icon:`vis_sel_11`
+   * - .. rubric:: :bl-icon:`vis_sel_11`
 
        ``:bl-icon:`vis_sel_11```
-   * - .. rubric:: :bl-icon:`volume_data`
+     - .. rubric:: :bl-icon:`volume_data`
 
        ``:bl-icon:`volume_data```
      - .. rubric:: :bl-icon:`vpaint_hlt`
 
        ``:bl-icon:`vpaint_hlt```
-     - .. rubric:: :bl-icon:`warning_large`
+   * - .. rubric:: :bl-icon:`warning_large`
 
        ``:bl-icon:`warning_large```
-   * - .. rubric:: :bl-icon:`window`
+     - .. rubric:: :bl-icon:`window`
 
        ``:bl-icon:`window```
      - .. rubric:: :bl-icon:`wordwrap_off`
 
        ``:bl-icon:`wordwrap_off```
-     - .. rubric:: :bl-icon:`wordwrap_on`
+   * - .. rubric:: :bl-icon:`wordwrap_on`
 
        ``:bl-icon:`wordwrap_on```
-   * - .. rubric:: :bl-icon:`workspace`
+     - .. rubric:: :bl-icon:`workspace`
 
        ``:bl-icon:`workspace```
      - .. rubric:: :bl-icon:`world`
 
        ``:bl-icon:`world```
-     - .. rubric:: :bl-icon:`world_data`
+   * - .. rubric:: :bl-icon:`world_data`
 
        ``:bl-icon:`world_data```
-   * - .. rubric:: :bl-icon:`wpaint_hlt`
+     - .. rubric:: :bl-icon:`wpaint_hlt`
 
        ``:bl-icon:`wpaint_hlt```
      - .. rubric:: :bl-icon:`x`
 
        ``:bl-icon:`x```
-     - .. rubric:: :bl-icon:`xray`
+   * - .. rubric:: :bl-icon:`xray`
 
        ``:bl-icon:`xray```
-   * - .. rubric:: :bl-icon:`zoom_all`
+     - .. rubric:: :bl-icon:`zoom_all`
 
        ``:bl-icon:`zoom_all```
      - .. rubric:: :bl-icon:`zoom_in`
 
        ``:bl-icon:`zoom_in```
-     - .. rubric:: :bl-icon:`zoom_out`
+   * - .. rubric:: :bl-icon:`zoom_out`
 
        ``:bl-icon:`zoom_out```
-   * - .. rubric:: :bl-icon:`zoom_previous`
+     - .. rubric:: :bl-icon:`zoom_previous`
 
        ``:bl-icon:`zoom_previous```
      - .. rubric:: :bl-icon:`zoom_selected`
 
        ``:bl-icon:`zoom_selected```
-     - 
