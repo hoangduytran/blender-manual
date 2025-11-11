@@ -20,33 +20,6 @@ Curve Preset
       The left side of the curve corresponds to the center of the brush while the right side
       corresponds to the edge.
 
-      The preset buttons below the widget load a built-in curve to serve as a base for tweaking.
-
-      .. list-table:: Custom Preset types.
-
-         * - .. figure:: /images/sculpt-paint_brush_falloff_custom-smooth.png
-
-                Smooth
-
-           - .. figure:: /images/sculpt-paint_brush_falloff_custom-sphere.png
-
-                Sphere
-
-           - .. figure:: /images/sculpt-paint_brush_falloff_custom-root.png
-
-                Root
-
-         * - .. figure:: /images/sculpt-paint_brush_falloff_custom-sharp.png
-
-                Sharp
-
-           - .. figure:: /images/sculpt-paint_brush_falloff_custom-linear.png
-
-                Linear
-
-           - .. figure:: /images/sculpt-paint_brush_falloff_custom-constant.png
-
-                Constant
 
    Predefined
       The predefined falloff curves look as follows:

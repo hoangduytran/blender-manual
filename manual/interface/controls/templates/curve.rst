@@ -116,3 +116,60 @@ X, Y
 Copy/Paste :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
    The whole curve can be copied from one Curve Widget to another by hovering over
    it and pressing :kbd:`Ctrl-C`, :kbd:`Ctrl-V`.
+
+Presets :guilabel:`Brush Curve Widgets Only`
+   A number of preset curves that the curve can be set to.
+   The exact shape depends on whether the default curve for the property has a positive
+   or negative slope.
+
+   .. list-table:: Custom Preset Types with Positive Slope.
+
+      * - .. figure:: /images/curve_smooth_positive_preset.png
+
+               Smooth
+
+        - .. figure:: /images/curve_round_positive_preset.png
+
+               Round
+
+        - .. figure:: /images/curve_root_positive_preset.png
+
+               Root
+
+      * - .. figure:: /images/curve_sharp_positive_preset.png
+
+               Sharp
+
+        - .. figure:: /images/curve_linear_positive_preset.png
+
+               Linear
+
+        - .. figure:: /images/curve_constant_preset.png
+
+               Constant
+
+   .. list-table:: Custom Preset Types with Negative Slope.
+
+      * - .. figure:: /images/curve_smooth_negative_preset.png
+
+               Smooth
+
+        - .. figure:: /images/curve_round_negative_preset.png
+
+               Round
+
+        - .. figure:: /images/curve_root_negative_preset.png
+
+               Root
+
+      * - .. figure:: /images/curve_sharp_negative_preset.png
+
+               Sharp
+
+        - .. figure:: /images/curve_linear_negative_preset.png
+
+               Linear
+
+        - .. figure:: /images/curve_constant_preset.png
+
+               Constant
