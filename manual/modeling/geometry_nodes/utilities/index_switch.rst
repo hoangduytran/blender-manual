@@ -33,6 +33,12 @@ Additional input sockets can be added by either:
 - Dragging a connection onto the empty socket at the bottom of the list.
 - Clicking the :bl-icon:`add` icon in the node header.
 
+.. tip::
+
+   When the *Index* input is connected to a :doc:`Menu Switch </modeling/geometry_nodes/utilities/menu_switch>` node
+   set to *Integer* *Type*, the corresponding menu labels will automatically be shown next to the index value.
+   This provides a clearer context for what each numeric index represents, making node networks more readable.
+
 
 Properties
 ==========
