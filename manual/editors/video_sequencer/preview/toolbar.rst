@@ -3,12 +3,17 @@
   Toolbar
 ###########
 
-Tweak :kbd:`W`
-   Lets you select images by clicking, and move them by dragging.
-   Press :kbd:`W` to cycle between this tool and *Select Box*.
-
+Selection tools
+   :ref:`Tweak <tool-select-tweak>`
+      Select or move.
    :ref:`Select Box <tool-select-box>`
-      Lets you select one image by clicking, or multiple images by dragging a rectangle.
+      Select images by dragging a box.
+      All images that intersect the box will be selected.
+   :ref:`Select Circle <tool-select-circle>`
+      Select images by dragging a circle. All images that intersect the path of
+      the circle will be selected.
+   :ref:`Select Lasso <tool-select-lasso>`
+      Select images by drawing a lasso.
 
 Cursor
    Lets you move the :ref:`editors_sequencer_preview_2d-cursor` by clicking or dragging with :kbd:`LMB`.
