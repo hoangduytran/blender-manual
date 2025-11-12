@@ -24,6 +24,12 @@ Inputs
 This node has no inputs.
 
 
+Properties
+==========
+
+See :ref:`nodes-groups-properties-sockets`.
+
+
 Outputs
 =======
 
