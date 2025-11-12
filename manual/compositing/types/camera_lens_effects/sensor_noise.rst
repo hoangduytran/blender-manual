@@ -12,10 +12,6 @@ The *Sensor Noise* node simulates the random noise patterns produced by digital 
 This can be used to match real footage, add realism to rendered images, or stylistically mimic
 the imperfections of digital imaging systems.
 
-Unlike the :doc:`Film Grain </compositing/types/camera_lens_effects/film_grain>` node,
-which emulates analog film texture, *Sensor Noise* replicates the characteristics of
-electronic sensor noise such as chroma and luminance variations.
-
 
 Inputs
 ======
