@@ -14,7 +14,8 @@ Single Image
 ============
 
 When you add a single still image (``*.jpg``, ``*.png``, etc.),
-Blender creates a 25 frames long strip which will show this image along the strips range.
+by default, Blender will create 25 frame long strip which renders the image throughout the strip's range in the timeline.
+This length can be adjusted by adding images through the "Add Image Strip" operator and changing the property in the sidebar.  
 
 
 Image Sequence
@@ -98,6 +99,12 @@ Set View Transform
    Automatically sets an appropriate :ref:`View Transform <bpy.types.ColorManagedViewSettings.view_transform>`
    based on the :term:`Color Space` of the imported media. In most cases, the *Standard* should be used;
    using the wrong transform could result in inaccurate colors or degraded rendering performance.
+   
+Detect Sequences
+   Determines whether or not Blender attempts to create image sequences from the selection. If this is disabled, 
+   all selected images from the File Browser will be imported as separate strips placed one after the other. If
+   this is enabled, single images will be imported as their own image strip, while images that belong to a sequence
+   (as determined by their filename pattern, see below for the frame naming scheme) will be combined into one.    
 
 Use Placeholders
    Image sequences can use placeholder files.
@@ -105,11 +112,11 @@ Use Placeholders
    The option detects the frame range of opened images using Blender's frame naming scheme
    (``filename + frame number + .extension``) and makes an image sequence
    with all files in between even if they are missing.
-   This allows you to render an image sequence with a few frames missing and
-   still the image strip will have the correct range to account for the missing frames displayed as black.
+   This allows you to render an image sequence with a few frames missing, while ensuring that the image sequence strip 
+   maintains the correct length. Placeholder frames are rendered in pink in the VSE preview.
 
-   When the missing frames are rendered or placed in the same folder,
+   When the missing frames are rendered out or placed into the folder with the rest of the image sequence,
    you can :ref:`refresh <bpy.ops.sequencer.refresh_all>`
-   the Sequencer and get the missing frames in the strip.
+   the Sequencer and the placeholder frames will be filled in. 
    The option is also available when using the *Change Data/File* operator and
    allows you to add more images to the range.
