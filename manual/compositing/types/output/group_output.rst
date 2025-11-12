@@ -40,6 +40,12 @@ Each input corresponds to a group output socket that can be exposed to the paren
    Any additional sockets will be ignored.
 
 
+Properties
+==========
+
+See :ref:`nodes-groups-properties-sockets`.
+
+
 Outputs
 =======
 

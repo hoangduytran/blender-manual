@@ -162,6 +162,7 @@ only lists the node groups whose Usage matches the current :ref:`bpy.types.Space
 
 .. _bpy.ops.node.interface_item_new:
 .. _bpy.ops.node.interface_item_remove:
+.. _nodes-groups-properties-sockets:
 
 Group Sockets
 -------------
@@ -207,6 +208,10 @@ Available item types include:
 Interface Item List
    A :ref:`UI list view <ui-list-view>` showing all input/output sockets and panels.
    Each item can be renamed and configured individually. The name appears in the node's user interface.
+
+   .. tip::
+
+      Selecting a socket label on the node itself will also select that socket in the *Interface Item List*.
 
    .. rubric:: Specials
 
