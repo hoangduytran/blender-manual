@@ -41,6 +41,14 @@ Size
       Adjusts the size based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
    :bl-icon:`brushes_all` (Use Unified Size)
       Use the same brush *Size* across all brushes.
+   :bl-icon:`rightarrow` / :bl-icon:`downarrow_hlt` (Expand/Collapse)
+      Show or hide the customizable pressure curve.
+
+      Custom Curve
+         By default this is a straight line with positive slope such that
+         increased pressure results in a larger brush size.
+
+         For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
 
 Size Unit :guilabel:`Sculpt Mode`
    Controls how the brush *Size* is measured.
@@ -71,6 +79,14 @@ Strength
       Adjusts the strength based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
    :bl-icon:`brushes_all` (Use Unified Strength)
       Use the same brush *Strength* across all brushes.
+   :bl-icon:`rightarrow` / :bl-icon:`downarrow_hlt` (Expand/Collapse)
+      Show or hide the customizable pressure curve.
+
+      Custom Curve
+         By default this is a straight line with positive slope such that
+         increased pressure results in a stronger brush deformation.
+
+         For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
 
 Blend
    Set the way the color or value is applied over the targeted Color Attribute, Vertex Group or Image Texture.
