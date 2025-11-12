@@ -52,8 +52,9 @@ Add Image Strip
 
    :Menu:      :menuselection:`Add --> Image/Sequence`
 
-Relative Path
-   Store the location of the image file relative to the blend-file.
+Move Strips
+   Use mouse to position strip in timeline immediately after adding. If this option is enabled, Start Frame, 
+   End Frame and Channel properties are not displayed.
 
 Start Frame
    The :ref:`Start Frame <bpy.types.Strip.frame_start>` to place the left handle of the strip.
@@ -67,6 +68,9 @@ Length
 
 Channel
    The :doc:`Channel </editors/video_sequencer/sequencer/channels>` to place the strip.
+
+Relative Path
+   Store the location of the image file relative to the blend-file.
 
 Replace Selection
    Previously selected strips will be deselected. Only added strips will be selected.
