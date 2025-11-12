@@ -58,8 +58,8 @@ Relative Path
 Start Frame
    The :ref:`Start Frame <bpy.types.Strip.frame_start>` to place the left handle of the strip.
 
-End Frame
-   The end frame to place the right handle of the strip.
+Length
+   Length of added strip. This value is overridden when Detect Sequences propery is enabled.
 
    .. tip::
 
@@ -105,6 +105,11 @@ Detect Sequences
    all selected images from the File Browser will be imported as separate strips placed one after the other. If
    this is enabled, single images will be imported as their own image strip, while images that belong to a sequence
    (as determined by their filename pattern, see below for the frame naming scheme) will be combined into one.    
+
+Detect Sequences
+   This option makes it possible to import multiple different image sequences at once, as well as support for
+   gaps in footage. Filenames must be numbered consecutively, see :ref:`image-formats-open-sequence`.
+   When this option is disabled, each selected file will be added as separate strip.
 
 Use Placeholders
    Image sequences can use placeholder files.
