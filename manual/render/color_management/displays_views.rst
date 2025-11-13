@@ -7,17 +7,23 @@ Displays and Views
 Overview
 ========
 
-Transforming scene linear colors to display involves both technical and artistic choices.
+To display an image, it must be converted from
+:ref:`scene linear <color-management-linear-space>` to a display color space.
+This involves both technical and artistic choices.
 
-Correct display of renders requires a conversion to the display color space.
-A computer monitor works differently from a digital cinema projector or HDTV,
-and so needs a different conversion.
+The technical choice of :ref:`display color space <bpy.types.ColorManagedDisplaySettings.display_device>`
+depends on the target display device and its capabilities. sRGB works for all
+computer displays, but different choices may be made for digital cinema, HD TVs,
+and computers with wide gamut or HDR support.
 
-There is also an artistic choice to be made.
-Partially that is because display devices cannot display the full spectrum of colors and
-only have limited brightness, which requires fitting colors to the gamut of the device.
-But it can also be useful to give the renders a particular look,
-e.g. as if they have been printed on real camera film.
+Because display devices cannot display the full spectrum of colors and only have
+limited brightness, colors must be fitted to the gamut of the device. Blender
+includes a choice of :ref:`views <bpy.types.ColorManagedViewSettings.view_transform>`,
+each resulting in a different look.
+
+Further artistic choices can be made with color management settings like exposure and
+white balance, and color grading in the compositor.
+.
 
 .. figure:: /images/render_color-management_linear-display-space.svg
    :width: 100%
@@ -37,14 +43,14 @@ Regular compute displays support sRGB, and most images and videos are
 stored in this color space. However moderns displays often support a wider
 gamut and high dynamic range content.
 
-SDR
+Standard Dynamic Range (SDR)
    :sRGB: Basic display supported everywhere.
    :Display P3: Wide gamut for Apple devices and other modern displays.
    :Rec.1886: Used by many older TVs.
    :Rec.2020: Even wider gamut than P3 supported by some displays.
-HDR
-   :Rec.2100 PQ: For high dynamic range displays with Rec.2020 wide gamut, up to 10000 nits.
-   :Rec.2100 HLG: For high dynamic range TVs with Rec.2020 wide gamut, up to 1000 nits.
+High Dynamic Range (HDR)
+   :Rec.2100 PQ: For HDR displays with Rec.2020 wide gamut, up to 10000 nits.
+   :Rec.2100 HLG: For HDR TVs with Rec.2020 wide gamut, up to 1000 nits.
 
 
 Wide Gamut
@@ -239,7 +245,7 @@ Display
 
 By default, only renders are displayed and saved with the render *View* applied.
 These images are the "Render Result" and "Viewer" image data-blocks,
-and the files saved directly to a drive with the Render Animation operator.
+and the files saved directly to disk with the Render Animation operator.
 However, when loading a render saved to an intermediate OpenEXR file,
 Blender cannot detect automatically that this is a render
 (it could be e.g. an image texture or displacement map).

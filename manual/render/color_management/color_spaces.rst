@@ -9,22 +9,23 @@ Linear Workflow
 
 Different :term:`Color Spaces <Color Space>`
 are needed for rendering, display and storage of images.
+
 Rendering and compositing is best done in a *scene linear* color space,
 which corresponds more closely to nature, and makes computations more physically accurate.
-
 Blender primarily works with scene linear colors for materials, lighting, geometry and
 compositing.
+
+However, these values do not directly correspond to human perception or the way display devices
+work. Image files are also often stored in different color spaces for more efficient compression.
+
+For a correct linear workflow, it is important to assign the correct color spaces for images
+and displays. Blender will then perform conversion to and from scene linear colors.
 
 .. figure:: /images/render_color-management_linear-workflow.svg
    :width: 100%
    :align: center
 
    An example of a linear workflow.
-
-However, these values do not directly correspond to human perception or the way display devices
-work. Image files are also often stored in different color spaces.
-Correct conversion into and out of this scene linear color space is critical to a reliable
-color management workflow.
 
 
 Working Space
@@ -38,7 +39,7 @@ Working Space
 .. _bpy.types.BlendFileColorspace.working_space:
 
 File
-  Color space used for all scene linear colors in this file, and for compositing, shader and geometry
+  Color space used for all scene linear colors in this file, and for shader, compositign and geometry
   nodes processing. The default is Linear Rec.709, while Linear Rec.2020 and ACEScg are available for
   working with a wider gamut of colors and compatibility with ACES workflows.
 
@@ -58,9 +59,8 @@ Sequencer
    but it can also be set to work in Linear space like the Compositing nodes, or another color space.
    Different color spaces will give different results for color correction, crossfades, and other operations.
 
-   The list of color spaces depends on the active :ref:`OCIO config <ocio-config>`.
-   The default supported color spaces are described in detail here:
-   :ref:`Built-in Color Spaces <ocio-config-default-color-spaces>`
+   The default supported color spaces are described in
+   :ref:`Built-in Color Spaces <ocio-config-default-color-spaces>`.
 
 Images and Video
 ================
@@ -68,12 +68,12 @@ Images and Video
 When working with image and video files, Blender will automatically try to guess the right color space.
 If this is not correct, the color space of the image file can be configured in the image settings.
 
-A common situation where manual changes are needed is when working with or baking normal maps or
-displacement maps, for example. Such maps do not actually store colors, just data encoded as colors.
+A common situation where manual changes are needed is when working with or baking normal maps and
+displacement maps. Such maps do not actually store colors, just data encoded as colors.
 Those images should be marked as *Non-Color Data*.
 
 For intermediate image files in production, it is recommended to use *OpenEXR* files.
-These are always stored in scene linear color spaces, without any data loss.
+These are always stored in scene linear color spaces, with high precision to avoid data loss.
 That makes them suitable to store renders that can later be composited, color graded and
 converted to different output formats.
 
