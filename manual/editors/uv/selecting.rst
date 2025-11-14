@@ -104,7 +104,7 @@ None :kbd:`Alt-A`
    Deselects all UV elements.
 Invert :kbd:`Ctrl-I`
    Inverts the current selection.
-Box Select :kbd:`B`
+Box Select :kbd:`Alt-B`
    See :ref:`Box Select <bpy.ops.*.select_box>`.
 Box Select Pinned :kbd:`Ctrl-B`
    Like *Box Select*, but only selects :ref:`pinned <bpy.ops.uv.pin>` UV vertices.

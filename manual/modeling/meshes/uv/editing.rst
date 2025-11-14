@@ -459,6 +459,12 @@ Pack To
        the UDIM grid tile where the 2D cursor is located.
    :Original bounding box: Find the original bounding box of the selection,
      packs the islands, and then moves them back inside the original box.
+   :Custom Region:
+      Packs islands into a user-defined custom region set with
+      :ref:`bpy.ops.uv.custom_region_set`.
+      This allows packing islands into arbitrary UV areas, such as reserved atlas regions,
+      trim sheet zones, or layout-specific texture slots.
+      Requires :ref:`bpy.types.ToolSettings.use_uv_custom_region` to be enabled.
 
 .. note::
 
@@ -546,6 +552,47 @@ Order
 
 Margin
    Defines the space between arranged islands, measured in UV units.
+
+
+.. _bpy.ops.uv.custom_region_set:
+
+Set User Region
+===============
+
+.. reference::
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Set User Region`
+   :Shortcut:  :kbd:`Ctrl-B`
+
+Defines a rectangular region in the UV Editor to be used as a *Custom Region*
+
+Once defined, this region can be selected as the *Pack To* target in the *Pack Islands* operator
+by choosing **Custom Region** and enabling :ref:`bpy.types.ToolSettings.use_uv_custom_region`.
+
+
+.. _bpy.types.ToolSettings.use_uv_custom_region:
+
+Custom Region
+=============
+
+.. reference::
+
+   :Editor:    UV Editor
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`UV --> Custom Region`
+   :Shortcut:  :kbd:`Ctrl-Alt-B`
+
+Enables or disables the use of a *Custom Region* for UV operations such as
+:ref:`Pack Islands <bpy.ops.uv.pack_islands>`.
+
+When enabled, the previously defined user region (created using
+:ref:`bpy.ops.uv.custom_region_set`) becomes active and visible in the UV Editor.
+This region defines the boundaries where UV islands are packed or manipulated.
+
+Disabling this option restores the default behavior, where UV operations apply to the
+standard unit square or the active UDIM tile.
 
 
 .. _bpy.ops.uv.minimize_stretch:
