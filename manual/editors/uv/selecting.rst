@@ -13,14 +13,32 @@ as well as a *Select* menu.
 Sync Selection
 ==============
 
-If turned off (the default), the UV Editor only shows the faces that are selected in the
-3D Viewport. Selecting an item in one editor does not automatically select it in the other.
-If one 3D vertex/edge corresponds to multiple UV vertices/edges, you can select each
-of those individually.
+When enabled (the default), the UV Editor and 3D Viewport share a synchronized selection state.
+Selecting components (vertices, edges, or faces) in one editor will automatically select the
+corresponding elements in the other.
 
-If turned on, the UV Editor always shows all faces. Selecting an item in one editor also
-selects it in the other. If one 3D vertex/edge corresponds to multiple UV vertices/edges,
-you can't select those individually (you can only select all of them).
+With *Sync Selection* enabled, all faces are visible in the UV Editor at all times. Selecting a
+vertex, edge, or face in the 3D Viewport selects its corresponding UV elements. However, when a
+single 3D vertex or edge corresponds to multiple UV vertices or edges (for example, along a UV seam),
+you cannot select them individually—selecting one selects all of them.
+
+When disabled, only the UVs belonging to the currently selected faces in the 3D Viewport are shown.
+Selections in the UV Editor are independent, allowing individual UV vertices and edges to be selected
+even if they correspond to the same mesh vertex or edge. Selecting in one editor no longer affects
+the other.
+
+.. note::
+
+   Currently, only some 3D Viewport selection operations preserve per-UV selection data, including
+   basic picking, box, circle, and lasso selection. Other operators, such as *Select Random* or
+   *Select Similar*, will reset the stored UV selection, causing all UVs connected to selected mesh
+   elements to become selected. Support for additional operators may be added later.
+
+.. hint::
+
+   Internally, UV selection data is stored per face corner and created on demand to avoid overhead.
+   Python scripts that modify mesh selections can use the API functions to synchronize or clear the
+   UV selection state as needed.
 
 
 .. _bpy.ops.uv.select_mode:
@@ -53,7 +71,6 @@ UV Island Selection
    :Shortcut:  :kbd:`4`
 
 Select contiguous groups of faces that are connected in the UV map.
-Only available for *Face* select mode or if *Sync Selection* is disabled.
 
 
 .. _bpy.types.ToolSettings.uv_sticky_select_mode:
@@ -87,7 +104,7 @@ None :kbd:`Alt-A`
    Deselects all UV elements.
 Invert :kbd:`Ctrl-I`
    Inverts the current selection.
-Box Select :kbd:`B`
+Box Select :kbd:`Alt-B`
    See :ref:`Box Select <bpy.ops.*.select_box>`.
 Box Select Pinned :kbd:`Ctrl-B`
    Like *Box Select*, but only selects :ref:`pinned <bpy.ops.uv.pin>` UV vertices.
