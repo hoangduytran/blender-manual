@@ -9,10 +9,11 @@ Strip Modifiers
 
 .. reference::
 
-   :Panel:     :menuselection:`Sidebar region --> Modifiers --> Modifiers`
+   :Panel:     :menuselection:`Properties Editor --> Strip Modifiers`
 
-.. figure:: /images/video-editing_sequencer_sidebar_modifiers_panel.png
+.. figure:: /images/video-editing_sequencer_strip_modifiers_panel.webp
    :align: right
+   :scale: 75%
 
 Modifiers are used to make adjustments to the image, like contrast,
 brightness, saturation, color balance and applying masks.
@@ -30,23 +31,18 @@ Linear Modifiers
    Calculating modifiers in linear space will match the image processing of the compositor.
    In most cases, this should be enabled; working in a non-linear workflow could have unpredictable results.
 
-.. _bpy.ops.sequencer.strip_modifier_copy:
-
-Copy to Selected Strips
-   Copies the modifiers to the selected strips, either replacing their current modifiers or appending to them.
-
 
 Common Options
 ==============
 
 Each modifier has several buttons at its top:
 
-:bl-icon:`hide_off` / :bl-icon:`hide_on`  Mute
-   Disables the modifier. Useful to compare the image with or without modifications.
-:bl-icon:`tria_up` / :bl-icon:`tria_down` Move Strip Modifier
-   These two buttons change the modifier's position in the stack which affects its computation order.
+:bl-icon:`restrict_render_on` / :bl-icon:`restrict_render_off`  Enable
+   Enables/Disables the modifier. Useful to compare the image with or without modifications.
 :bl-icon:`x` Remove Strip Modifier
    Deletes the modifier from the stack.
+:bl-icon:`grip` Move Strip Modifier
+   Dragging this button changes the modifier's position in the stack which affects its computation order.
 
 
 Masking
@@ -98,7 +94,7 @@ Color balance adjustments, either by the Lift/Gamma/Gain or the Offset/Power/Slo
 
 This modifier works similar to the :doc:`Color Balance Node </compositing/types/color/adjust/color_balance>`.
 
-.. figure:: /images/video-editing_sequencer_sidebar_color-balance-modifier.png
+.. figure:: /images/video-editing_sequencer_sidebar_color-balance-modifier.webp
    :align: right
 
 Depending on the selected method, the following operations can be applied to the color values in the
