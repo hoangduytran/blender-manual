@@ -39,7 +39,7 @@ Working Space
 .. _bpy.types.BlendFileColorspace.working_space:
 
 File
-  Color space used for all scene linear colors in this file, and for shader, compositign and geometry
+  Color space used for all scene linear colors in this file, and for shader, compositing and geometry
   nodes processing. The default is Linear Rec.709, while Linear Rec.2020 and ACEScg are available for
   working with a wider gamut of colors and compatibility with ACES workflows.
 
