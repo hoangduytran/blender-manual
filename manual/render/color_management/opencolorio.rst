@@ -11,9 +11,15 @@ contains a number of useful display devices and view transforms.
 However, OpenColorIO is also designed to give a consistent user experience across
 `multiple applications <https://opencolorio.org/#supported_apps>`__,
 and for this, a single shared configuration file can be used.
-Blender will use the standard OCIO environment variable to read an OpenColorIO configuration
+Blender will use the standard ``OCIO`` environment variable to read an OpenColorIO configuration
 other than the default Blender one. More information about how to set up such a workflow
 can be found on the `OpenColorIO website <https://opencolorio.org/>`__.
+
+There is also a ``BLENDER_OCIO`` environment variable to change the configuration
+for Blender only. It is recommended to use ``OCIO`` when possible for compatibility
+with other software and pipelines that may not be aware of ``BLENDER_OCIO``. However
+sometimes there are incompatibilities in configuration files that make it difficult
+to share them across applications.
 
 ACES
 ====
