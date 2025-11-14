@@ -113,6 +113,14 @@ Tabs related to an object's visual appearance. Shown only when relevant.
 - :doc:`Texture </render/materials/legacy_textures/index>`
 
 
+Strips
+------
+
+Tabs related to video editing strips. Shown only when relevant.
+
+- :doc:`Strip Modifiers </video_editing/edit/montage/strip_modifiers>`
+
+
 Header
 ======
 
