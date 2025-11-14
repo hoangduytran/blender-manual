@@ -8,6 +8,7 @@ Nodes for modifying vector quantities.
 .. toctree::
    :maxdepth: 1
 
+   radial_tiling.rst
    vector_curves.rst
    vector_math.rst
    vector_rotate.rst
