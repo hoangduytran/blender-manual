@@ -203,6 +203,10 @@ Keying
 
 The *Keying* popover contains options that affect keyframe insertion.
 
+.. note::
+
+   The name of this popover will change depending on the active keying set.
+
 .. figure:: /images/editors_timeline_keying.png
 
 .. _bpy.types.KeyingSetsAll.active:
