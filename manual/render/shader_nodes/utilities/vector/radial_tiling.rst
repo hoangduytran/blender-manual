@@ -166,9 +166,9 @@ The *Segment Rotation* output can be used to align the rotation of the segment c
 
              Node tree for the shader above. The value -1.571 is an arbitrarily chosen texture rotation value and can be tweaked to change the rotation of the textures.
 
-When working with textures that span the entire UV space there is always the issue of visible seams along segment borders even if the original texture is seamless.
-The *Normalize* option eliminates these visible seams by ensuring that the X-coordinates always only cover the entire 0 to range 1.
-This also introduces a zoom effect, which depending on whether or not it's desirable may need to be mitigated using additional nodes.
+When working with textures that span the entire UV space there is usually the issue of visible seams along segment borders even if the original texture is seamless.
+The *Normalize* option eliminates these visible seams by ensuring that the X-coordinates always only cover the entire 0 to 1 range.
+This also introduces a distortion effect, which depending on whether or not it's desirable may need to be mitigated using additional nodes.
 
 .. list-table::
    :widths: 50 50
