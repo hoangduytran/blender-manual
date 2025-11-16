@@ -26,6 +26,11 @@ Active Particle System
          The *Duplicate Settings* option (in the :ref:`bpy.ops.screen.redo_last` panel) will duplicate
          settings as well, so the new particle system uses its own settings.
 
+      .. _bpy.ops.particle.particle_system_remove_all:
+
+      Remove All Particle Systems
+         Remove all particle system within the active object.
+
 Particle Settings
    The :ref:`Data-Block menu <ui-data-block>` for settings.
 
