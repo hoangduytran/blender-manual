@@ -199,14 +199,27 @@ Collections Menu
 
    :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Collection`
-   :Shortcut:  :kbd:`M`, :kbd:`Shift-M`, :kbd:`Ctrl-G`, etc.
+
+The *Collections* menu provides tools for organizing and managing objects within collections.
+Collections are used to group objects for easier scene organization,
+visibility control, and rendering management.
+Objects can belong to one or multiple collections, allowing flexible structuring of complex scenes.
+
+.. _bpy.ops.object.move_to_collection:
 
 Move to Collection :kbd:`M`
-   Move selected objects to an existing or new collection.
+   Moves the selected objects to a different collection.
+   The menu allows choosing an existing collection, creating a new one,
+   or moving the objects to the *Scene Collection* (the root level of the scene).
+   Once moved, the objects are removed from their previous collection unless they are also linked elsewhere.
+
+.. _bpy.ops.object.link_to_collection:
+
 Link to Collection :kbd:`Shift-M`
-   Add selected objects to a collection, while keeping them in their current collection.
-   This way objects can appear in multiple collections.
-   A new collection can be created in the pop-up.
+   Links the selected objects to an additional collection without removing them from their existing collections.
+   This allows the same object to appear in multiple collections simultaneously,
+   useful for managing shared elements across different scene layers or views.
+   A new collection can also be created from the menu.
 Create New Collection :kbd:`Ctrl-G`
    Creates a new collection and adds the selected object(s) to it.
    The name of the new collection can be specified in
