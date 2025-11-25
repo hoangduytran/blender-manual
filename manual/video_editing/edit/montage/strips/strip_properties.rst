@@ -1,10 +1,7 @@
 
-*****
-Strip
-*****
-
-Header
-======
+****************
+Strip Properties
+****************
 
 Type
    Strip type, represented by an icon.

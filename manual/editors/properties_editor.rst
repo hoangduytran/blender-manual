@@ -119,6 +119,21 @@ Strips
 Tabs related to video editing strips. Shown only when relevant.
 
 - :doc:`Strip Modifiers </video_editing/edit/montage/strip_modifiers>`
+- :doc:`Strip Properties </video_editing/edit/montage/strips/strip_properties>`
+
+
+.. _bpy.types.SpaceProperties.show_properties:
+
+Visible Tabs
+------------
+
+Allows hiding specific tabs in the Properties editor.
+
+This is especially useful for tailoring the editor to specific workflows. For example:
+- In the *Video Editing* workspace, you may hide object and shading tabs to reduce clutter.
+- In the *Modeling* workspace, you may hide strip-related tabs that are not relevant.
+
+Hidden tabs can be restored at any time using this filter list.
 
 
 Header
@@ -161,14 +176,3 @@ Sync with Outliner
    :Always: Always follow the clicked Outliner icon.
    :Never: Ignore Outliner interaction.
    :Auto: Only follow when the Properties editor shares a border with the Outliner.
-
-.. _bpy.types.SpaceProperties.show_properties:
-
-Visible Tabs
-   Allows hiding specific tabs in the Properties editor.
-
-   This is especially useful for tailoring the editor to specific workflows. For example:
-   - In the *Video Editing* workspace, you may hide object and shading tabs to reduce clutter.
-   - In the *Modeling* workspace, you may hide strip-related tabs that are not relevant.
-
-   Hidden tabs can be restored at any time using this filter list.
