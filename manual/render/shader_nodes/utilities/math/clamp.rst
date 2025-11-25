@@ -33,7 +33,8 @@ Clamp Type
    Method to clamp.
 
    :Min Max:
-      Constrain values between Min and Max.
+      Constrain values between Min and Max. When Min is greater than Max,
+      Result always outputs Max, irrespective of the input value.
    :Range:
       Constrain values between Min and Max. When Min is greater than Max,
       constrain between Max and Min instead.
