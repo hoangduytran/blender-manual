@@ -31,6 +31,24 @@ the *Save As Render* option or the *Render View* display.
    - :doc:`RGB Curves </compositing/types/color/adjust/rgb_curves>`
 
 
+Workflow
+========
+
+This node is often used for additional control in color grading, replacing the
+display and view transform in the color management settings.
+
+To avoid doubling up transforms, it is recommended to:
+
+- Add a second Convert to Display node with the Standard view transform and
+  Inverse enabled, as the last node in the compositing node graph.
+- Set the view transform to Standard in the scene color management settings.
+
+The compositor will then output colors in the
+:ref:`working space <bpy.types.BlendFileColorspace.working_space>` as usual,
+but with color grading baked in. Unlike workflows using the Raw view
+transform, this works correctly with the video sequencer and OpenEXR output.
+
+
 Inputs
 ======
 
