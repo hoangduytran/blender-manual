@@ -14,7 +14,7 @@ Single Image
 ============
 
 When you add a single still image (``*.jpg``, ``*.png``, etc.),
-by default, Blender will create 25 frame long strip which renders the image throughout the strip's range in the timeline.
+by default, Blender will create a 25 frame long strip which renders the image throughout the strip's range in the timeline.
 This length can be adjusted by adding images through the "Add Image Strip" operator and changing the property in the sidebar.  
 
 
@@ -53,27 +53,19 @@ Add Image Strip
    :Menu:      :menuselection:`Add --> Image/Sequence`
 
 Move Strips
-   Use mouse to position strip in timeline immediately after adding. If this option is enabled, Start Frame, 
-   End Frame and Channel properties are not displayed.
+   Use the mouse to position the strip in the timeline immediately after adding it. If this option is enabled, Start Frame and Channel properties are not displayed since they are determined interactively.
 
 Start Frame
    The :ref:`Start Frame <bpy.types.Strip.frame_start>` to place the left handle of the strip.
 
-Length
-   Length of added strip. This value is overridden when Detect Sequences propery is enabled.
-
-   .. tip::
-
-      Subtract the *Start Frame* from the *End Frame* to get the strip's duration.
-
 Channel
    The :doc:`Channel </editors/video_sequencer/sequencer/channels>` to place the strip.
 
-Relative Path
-   Store the location of the image file relative to the blend-file.
-
 Replace Selection
    Previously selected strips will be deselected. Only added strips will be selected.
+
+Relative Path
+   Store the location of the image file relative to the blend-file.
 
 Fit Method
    Determines how images with an aspect ratio different than the scene's
@@ -104,16 +96,17 @@ Set View Transform
    based on the :term:`Color Space` of the imported media. In most cases, the *Standard* should be used;
    using the wrong transform could result in inaccurate colors or degraded rendering performance.
    
-Detect Sequences
-   Determines whether or not Blender attempts to create image sequences from the selection. If this is disabled, 
-   all selected images from the File Browser will be imported as separate strips placed one after the other. If
-   this is enabled, single images will be imported as their own image strip, while images that belong to a sequence
-   (as determined by their filename pattern, see below for the frame naming scheme) will be combined into one.    
+Import As
+   Determines the method for importing images. 
 
-Detect Sequences
-   This option makes it possible to import multiple different image sequences at once, as well as support for
-   gaps in footage. Filenames must be numbered consecutively, see :ref:`image-formats-open-sequence`.
-   When this option is disabled, each selected file will be added as separate strip.
+   :Auto Detect:
+      Filenames that are numbered consecutively (see :ref:`image-formats-open-sequence`) will be imported as a single image sequence with length equal to the number of images. Otherwise, files are imported as separate image strips with the given length. 
+   
+   :Image Sequence:
+      All images are imported as a single image sequence, no matter their extension or filename. Note that since these files do not have to be numbered, placeholders are not supported for this mode. 
+   
+   :Individual Images:
+      Each image is imported as a separate image strip with the given length, placed one after the other. 
 
 Use Placeholders
    Image sequences can use placeholder files.
@@ -129,3 +122,6 @@ Use Placeholders
    the Sequencer and the placeholder frames will be filled in. 
    The option is also available when using the *Change Data/File* operator and
    allows you to add more images to the range.
+
+Length
+   Length of added strip. This value is not used when importing image sequences, since their length in frames is determined by the number of images in the sequence.
