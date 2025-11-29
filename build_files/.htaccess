@@ -157,7 +157,6 @@ RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/hue_saturation.
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/rgb_curves.html" "/manual/{lang}/{version}/compositing/types/color/adjust/rgb_curves.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/tone_map.html" "/manual/{lang}/{version}/compositing/types/color/adjust/tone_map.html"
 
-RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/alpha_over.html" "/manual/{lang}/{version}/compositing/types/color/alpha_over.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/combine_color.html" "/manual/{lang}/{version}/compositing/types/color/combine_color.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/converter/separate_color.html" "/manual/{lang}/{version}/compositing/types/color/separate_color.html"
 RedirectMatch "^/manual/{lang}/{version}/compositing/types/color/mix.html" "/manual/{lang}/{version}/compositing/types/color/mix_color.html"
