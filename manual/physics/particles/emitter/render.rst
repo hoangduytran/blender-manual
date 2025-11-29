@@ -57,11 +57,9 @@ They are called *Halos* because you can see them, but they do not have any subst
 Path
 ----
 
-.. todo:: Update image
+.. figure:: /images/physics_particles_emitter_render_path.png
 
-   .. figure:: /images/physics_particles_emitter_render_path.png
-
-      The Visualization panel for Path visualization.
+   The Visualization panel for Path visualization.
 
 The *Path* visualization needs a :doc:`Hair </physics/particles/hair/index>` particle system or
 :doc:`Keyed </physics/particles/emitter/physics/keyed>` particles.

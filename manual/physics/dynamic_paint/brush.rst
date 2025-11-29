@@ -41,11 +41,9 @@ Source
    :Type:      Brush
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Source`
 
-.. todo:: Update image
+.. figure:: /images/physics_dynamic-paint_brush_source-panel.png
 
-   .. figure:: /images/physics_dynamic-paint_brush_source-panel.png
-
-      Paint source panel.
+   Paint source panel.
 
 *Paint* source setting lets you define how brush influence/intersection is defined.
 
@@ -163,11 +161,9 @@ Velocity
    :Type:      Brush
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Velocity`
 
-.. todo:: Update image
+.. figure:: /images/physics_dynamic-paint_brush_velocity-panel.png
 
-   .. figure:: /images/physics_dynamic-paint_brush_velocity-panel.png
-
-      Velocity panel.
+   Velocity panel.
 
 This panel shows brush options that are based on object velocity.
 
@@ -202,11 +198,9 @@ Waves
    :Type:      Brush
    :Panel:     :menuselection:`Physics --> Dynamic Paint --> Waves`
 
-.. todo:: Update image
+.. figure:: /images/physics_dynamic-paint_brush_waves-panel.png
 
-   .. figure:: /images/physics_dynamic-paint_brush_waves-panel.png
-
-      Brush Waves panel.
+   Brush Waves panel.
 
 This panel is used to adjust brush influence to "Wave" surfaces.
 
