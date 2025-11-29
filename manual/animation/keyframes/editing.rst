@@ -10,8 +10,8 @@ Insert Keyframe
 
 .. reference::
 
-   :Mode:      Object Mode, Video Sequencer Preview
-   :Menu:      :menuselection:`Object/Strip --> Animation --> Insert Keyframe`
+   :Mode:      Object Mode, Pose Mode, Video Sequencer Preview
+   :Menu:      :menuselection:`Object/Pose/Strip --> Animation --> Insert Keyframe`
    :Shortcut:  :kbd:`I`
 
 There are several methods of adding new keys. Namely:
@@ -46,8 +46,8 @@ Insert Keyframe with Keying Set
 
 .. reference::
 
-   :Mode:      Object Mode, Video Sequencer Preview
-   :Menu:      :menuselection:`Object/Strip --> Animation --> Insert Keyframe with Keying Set`
+   :Mode:      Object Mode, Pose Mode, Video Sequencer Preview
+   :Menu:      :menuselection:`Object/Pose/Strip --> Animation --> Insert Keyframe with Keying Set`
    :Shortcut:  :kbd:`K`
 
 Insert Keyframes for specified :doc:`Keying Set </animation/keyframes/keying_sets>`,
@@ -61,13 +61,13 @@ Delete Keyframes
 
 .. reference::
 
-   :Mode:      Object Mode, Video Sequencer Preview
-   :Menu:      :menuselection:`Object/Strip --> Animation --> Delete Keyframes...`
+   :Mode:      Object Mode, Pose Mode, Video Sequencer Preview
+   :Menu:      :menuselection:`Object/Pose/Strip --> Animation --> Delete Keyframes...`
    :Shortcut:  :kbd:`Alt-I`
 
 There are several methods of removing keyframes:
 
-- In the 3D Viewport or Video Sequencer Preview press :kbd:`Alt-I` to remove keys from selected objects or strips
+- In the 3D Viewport or Video Sequencer Preview press :kbd:`Alt-I` to remove keys from selected objects, bones or strips
   on the current frame.
 - When the mouse is over a value, press :kbd:`Alt-I`.
 - :kbd:`RMB` a value and choose *Delete Keyframe* from the menu.
@@ -80,11 +80,11 @@ Clear Keyframes
 
 .. reference::
 
-   :Mode:      Object Mode, Video Sequencer Preview
-   :Menu:      :menuselection:`Object/Strip --> Animation --> Clear Keyframes...`
+   :Mode:      Object Mode, Pose Mode, Video Sequencer Preview
+   :Menu:      :menuselection:`Object/Pose/Strip --> Animation --> Clear Keyframes...`
    :Shortcut:  :kbd:`Shift-Alt-I`
 
-Removes all keyframes from the selected object.
+Removes all keyframes from the selected object, bone or strip.
 
 
 Editing Keyframes
