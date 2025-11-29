@@ -24,6 +24,7 @@
 
    split.rst
    switch.rst
+   index_switch.rst
    menu_switch.rst
    switch_stereo_view.rst
 

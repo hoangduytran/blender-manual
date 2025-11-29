@@ -1,5 +1,6 @@
 .. index:: Geometry Nodes; Index Switch
 .. _bpy.types.GeometryNodeIndexSwitch:
+.. --- copy below this line ---
 
 *****************
 Index Switch Node
@@ -15,7 +16,7 @@ multiple data inputs efficiently.
 
 .. seealso::
 
-   The :doc:`Menu Switch </modeling/geometry_nodes/utilities/menu_switch>` node provides similar functionality,
+   The :doc:`Menu Switch <menu_switch>` node provides similar functionality,
    but exposes the selection as a user-friendly menu rather than an index.
 
 
@@ -35,7 +36,7 @@ Additional input sockets can be added by either:
 
 .. tip::
 
-   When the *Index* input is connected to a :doc:`Menu Switch </modeling/geometry_nodes/utilities/menu_switch>` node
+   When the *Index* input is connected to a :doc:`Menu Switch <menu_switch>` node
    set to *Integer* *Type*, the corresponding menu labels will automatically be shown next to the index value.
    This provides a clearer context for what each numeric index represents, making node networks more readable.
 
