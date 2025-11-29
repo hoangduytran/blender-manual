@@ -118,11 +118,11 @@ Indexes
 
 Debug
    Render Time :guilabel:`Cycles`
-      Number of samples calculated for each pixel, divided by the maximum number of samples.
-      Used to analyze :ref:`adaptive sampling <bpy.types.CyclesRenderSettings.use_adaptive_sampling>`.
-   Sample Count :guilabel:`Cycles`
       An estimate for how long in milliseconds each pixel took to render.
       Note, this pass is not supported on GPU rendering.
+   Sample Count :guilabel:`Cycles`
+      Number of samples calculated for each pixel, divided by the maximum number of samples.
+      Used to analyze :ref:`adaptive sampling <bpy.types.CyclesRenderSettings.use_adaptive_sampling>`.
 
 .. _bpy.types.ViewLayer.pass_alpha_threshold:
 
