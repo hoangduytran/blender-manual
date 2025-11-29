@@ -305,6 +305,9 @@ The following metadata entries are supported:
 ``[[ string unit = "m" ]]``
    Marks a float parameter as a distance input, displayed in meters.
 
+``[[ string unit = "mm" ]]``
+   Marks a float parameter as a distance input, displayed in millimeters.
+
 ``[[ string unit = "s" ]]`` or ``[[ string unit = "sec" ]]``
    Marks a float parameter as a time input, displayed in seconds.
 
