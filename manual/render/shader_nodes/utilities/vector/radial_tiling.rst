@@ -149,7 +149,7 @@ To avoid this clipping, the *Segment Width* output can be used to scale the text
              Node tree for the shader above. The value 0.725 is an arbitrarily chosen texture scaling value and can be tweaked to change the size of the textures.
 
 By default the segment coordinate systems are rotated to have their Y-axes intersect with the origin.
-The *Segment Rotation* output can be used to align the rotation of the segment coordinate systems along a glocal direction instead.
+The *Segment Rotation* output can be used to align the rotation of the segment coordinate systems along a global direction instead.
 
 .. list-table::
    :widths: 50 50
