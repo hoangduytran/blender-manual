@@ -27,7 +27,7 @@ Socket shapes are used to convey which sockets are fields and which are regular 
 There are three possible socket shapes, each visualizing its "field status":
 
 :Circle:
-   The socket requires a single real value, it cannot accept a field input.
+   The socket requires a single value, it cannot accept a field input.
    For output sockets, this means the node always outputs a single value.
 :Diamond:
    The socket can accept a field input, or it outputs a field. A constant single
