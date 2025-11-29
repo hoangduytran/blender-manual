@@ -57,6 +57,8 @@ Properties
 
 All UVs
    Export all UVs rather than only what is selected in the 3D View.
+Export Tiles
+   Choose whether to export only the [0,1] range, or all UV tiles
 Modified
    Export UVs from the mesh with all its modifiers evaluated.
 Format
