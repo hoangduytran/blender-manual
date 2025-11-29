@@ -129,12 +129,12 @@ Kernel Data Type :guilabel:`Kernel`
    Determines how the kernel is defined:
 
    :Float: A numeric kernel defined by the *Kernel* input socket.
-   :Image: A full image used as the kernel, allowing for more complex filtering patterns.
+   :Color: A full color image used as the kernel, allowing for more complex filtering patterns
 
 Kernel :guilabel:`Kernel`
    When the *Float* type is selected, this input defines the numeric
    :doc:`kernel </compositing/image_kernels>` values.
-   When the *Image* type is selected, an image input can be connected
+   When the *Color* type is selected, an image input can be connected
    to provide a grayscale or color-based convolution kernel.
 
 
