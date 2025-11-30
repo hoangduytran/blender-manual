@@ -21,7 +21,7 @@ or even nested bundles.
 Nodes
 =====
 
-Two nodes are provided for working with bundles:
+The following nodes are provided for working with bundles:
 
 .. toctree::
    :maxdepth: 1
