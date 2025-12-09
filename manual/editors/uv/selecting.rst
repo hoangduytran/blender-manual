@@ -162,6 +162,10 @@ Select Linked
       Selects all elements that are connected to the currently selected ones.
    Shortest Path
       Selects the path between two selected elements. (See below)
+Select Tile
+   Selects UV's faces inside a specified "tile" (intended for use with UDIM).
+   The initial tile is set based on the 2D cursor.
+
 Select Pinned :kbd:`Shift-P`
    Selects all pinned UVs.
 Select Split :kbd:`Y`
