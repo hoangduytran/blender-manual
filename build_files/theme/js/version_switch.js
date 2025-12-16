@@ -6,19 +6,19 @@ var versionsFileUrl = 'https://docs.blender.org/versions.json';
 var all_versions;
 var all_langs = {
   'en': 'English',
-  'ar':
-      '&#1575;&#1614;&#1604;&#1618;&#1593;&#1614;&#1585;&#1614;&#1576;&#1616;&#1610;&#1614;&#1617;&#1577;&#1615;',
+  // 'ar':
+  //     '&#1575;&#1614;&#1604;&#1618;&#1593;&#1614;&#1585;&#1614;&#1576;&#1616;&#1610;&#1614;&#1617;&#1577;&#1615;',
   'ca': 'Català',
   'de': 'Deutsch',
   'es': 'Espa&ntilde;ol',
-  'fi': 'Suomi',
+  // 'fi': 'Suomi',
   'fr': 'Fran&ccedil;ais',
   'id': 'Bahasa Indonesia',
   'it': 'Italiano',
   'ja': '&#x65E5;&#x672C;&#x8A9E;',
   'ka': '&#4325;&#4304;&#4320;&#4311;&#4323;&#4314;&#4312;',
   'ko': '&#xD55C;&#xAD6D;&#xC5B4;',
-  'nb': 'Norsk Bokm&#x00E5;l',
+  // 'nb': 'Norsk Bokm&#x00E5;l',
   'nl': 'Nederlands',
   'pt': 'Portugu&ecirc;s',
   'ru': '&#x3A1;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;',
