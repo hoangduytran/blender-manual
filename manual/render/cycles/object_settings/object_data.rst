@@ -147,7 +147,7 @@ Shadow Terminator
 
 Geometry Offset
    Offset rays from the surface to reduce shadow terminator artifacts on low-poly geometry.
-   Higher values affect more triangles, a value of one affecting all triangles and zero having no affect.
+   Higher values affect more triangles, a value of one affecting all triangles and zero having no effect.
    The default value only affects triangles at grazing angles to light and should eliminate most artifacts.
 
    Unlike the *Shading Offset*, this option has little affect on the lighting
@@ -217,7 +217,6 @@ to selectively speed up caustic rendering of objects in your scene.
    - MNEE Caustics only work if the caustic caster has smooth normals.
    - Volumetric materials are not considered when calculating MNEE caustics.
    - Bump and normal maps are ignored when calculating caustics.
-   - GPU rendering using *HIP* devices is not supported.
 
 .. _bpy.types.CyclesObjectSettings.is_caustics_caster:
 

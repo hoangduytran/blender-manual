@@ -22,6 +22,7 @@ Nodes to manipulate strings.
    find_in_string.rst
    string_length.rst
    string_to_curves.rst
+   string_to_value.rst
    value_to_string.rst
 
 -----

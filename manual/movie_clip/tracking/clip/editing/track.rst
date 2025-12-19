@@ -276,16 +276,18 @@ the :doc:`/compositing/types/tracking/plane_track_deform` compositing node.
 
 .. _bpy.ops.clip.solve_camera:
 
-Solve Solution
-==============
+Solve Camera/Object Motion
+==========================
 
 .. reference::
 
    :Mode:      Tracking
-   :Menu:      :menuselection:`Track --> Solve Solution`
+   :Menu:      :menuselection:`Track --> Solve Camera/Object Motion`
 
-The *Camera Motion* operator solves the motion of camera using all tracks placed
-on the footage and two keyframes specified on this panel. There are some requirements:
+The *Solve Camera/Object Motion* operator solves the motion of the camera or the
+selected :doc:`tracked object </movie_clip/tracking/clip/sidebar/track/objects>`,
+using all tracks placed on the footage and two keyframes specified on this panel.
+There are some requirements:
 
 - There should be at least eight common tracks on the both of the selected keyframes.
 - There should be noticeable parallax effects between these two keyframes.

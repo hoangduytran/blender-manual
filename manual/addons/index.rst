@@ -24,7 +24,6 @@ Add-ons Category Listings
    :maxdepth: 1
 
    3d_view/index.rst
-   animation/index.rst
    import_export/index.rst
    node/index.rst
    rigging/index.rst

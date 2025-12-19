@@ -26,11 +26,6 @@ Image
    If this socket is left unconnected, the output will be a black image.
 
 
-Properties
-==========
-
-This node has no properties.
-
 Outputs
 =======
 

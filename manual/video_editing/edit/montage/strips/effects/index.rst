@@ -13,7 +13,6 @@
    alpha_over_under.rst
    color_mix.rst
    multicam.rst
-   transform.rst
    speed_control.rst
    glow.rst
    blur.rst

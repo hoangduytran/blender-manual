@@ -22,21 +22,16 @@ Inputs
 
 Image
    Noisy image input.
-Normal
-   Optional normal render pass to better preserve detail.
-   For Cycles, it is recommended to use the Denoising Normal render pass,
-   which is available when enabling the Denoising Data passes.
 Albedo
    Optional albedo render pass to better preserve detail.
    For Cycles, it is recommended to use the Denoising Albedo render pass,
    which is available when enabling the Denoising Data passes.
+Normal
+   Optional normal render pass to better preserve detail.
+   For Cycles, it is recommended to use the Denoising Normal render pass,
+   which is available when enabling the Denoising Data passes.
 HDR
    Preserve colors outside the 0 to 1 range.
-
-
-Properties
-==========
-
 Prefilter
    :None:
       Does not apply any prefiltering to the input passes. This option retains the most detail and

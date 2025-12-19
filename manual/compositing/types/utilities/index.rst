@@ -6,10 +6,8 @@
 .. toctree::
    :maxdepth: 1
 
-   map_range.rst
-   math.rst
-   clamp.rst
-   float_curve.rst
+   math/index.rst
+   vector/index.rst
 
 ----------
 
@@ -26,6 +24,8 @@
 
    split.rst
    switch.rst
+   index_switch.rst
+   menu_switch.rst
    switch_stereo_view.rst
 
 ----------
@@ -34,3 +34,10 @@
    :maxdepth: 1
 
    relative_to_pixel.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   retime.rst

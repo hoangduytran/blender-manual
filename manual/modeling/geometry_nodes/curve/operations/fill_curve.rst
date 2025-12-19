@@ -23,17 +23,11 @@ Group ID
    Value used to group curves together.
    Curves with different Group ID are treated separately.
 
-
-Properties
-==========
-
 Mode
    The type of geometry the output consists of.
 
-   :Triangles:
-      The output is made up of triangles.
-   :N-gons:
-      The output is made up of n-gons.
+   :Triangles: The output is made up of triangles.
+   :N-gons: The output is made up of n-gons.
 
 
 Outputs

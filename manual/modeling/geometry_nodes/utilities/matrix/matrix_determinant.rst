@@ -20,12 +20,6 @@ Matrix
    The matrix to compute the determinant of.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

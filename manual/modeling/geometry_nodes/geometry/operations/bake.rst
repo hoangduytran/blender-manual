@@ -79,7 +79,7 @@ Bake
       Packs or unpacks already baked data. When unpacking, there are different options to control where the data will
       be stored. The options are the same as for the :ref:`Unpack Resources <bpy.ops.file.unpack_all>` operator.
 
-   Delete (Trash Icon)
+   :bl-icon:`trash` Delete Geometry Node Bake
       Deletes the bake data.
 
 Bake Target

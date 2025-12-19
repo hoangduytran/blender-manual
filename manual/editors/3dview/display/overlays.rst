@@ -69,7 +69,8 @@ Text Info
      Displays the Frames Per Second at which the animation is playing.
      By default, Blender goes through every single frame, which may result in an FPS that's lower than
      intended (and the animation playing slower than realtime); the FPS turns red in this case.
-     You can change this behavior in the Playback popover of the :doc:`Timeline </editors/timeline>`.
+     You can change this behavior in the :ref:`Playback popover <animation-editors-playback>` within an editors
+     playback controls.
    - **Object Info** --
      Shows the current frame in parentheses, followed by the names of the selected
      :doc:`Collection </scene_layout/collections/index>`,
@@ -248,18 +249,18 @@ Camera Path
 .. _bpy.types.SpaceView3D.show_bundle_names:
 
 Marker Names
-   Show the names for reconstructed track objects.
+   Show the names of the reconstructed tracking markers.
 
 .. _bpy.types.SpaceView3D.tracks_display_type:
 
 Tracks
-   Change the display of the reconstructed tracks:
+   Change the display of the tracking markers:
    plain axes, arrows and so on.
 
 .. _bpy.types.SpaceView3D.tracks_display_size:
 
 Size
-   Change the display size of the reconstructed tracks.
+   Change the display size of the tracking markers.
 
 
 .. _3dview-overlay-mesh_edit_mode:
@@ -563,6 +564,13 @@ Only in Multiframe :kbd:`Shift-Alt-Q`
    When Multiframe is enabled and keyframes other than the current frame are selected,
    strokes on those keyframes are displayed as just their edit lines -- the strokes themselves are hidden.
    Note that this does not affect Onion Skinning.
+
+Handles
+   Controls the visibility of Bézier curve handles in edit mode.
+
+   :None: Hides all Bézier curve handles, providing an unobstructed view of the curve.
+   :Selected: Displays the handles only for selected control points.
+   :All: Displays the handles for all control points in the curve.
 
 .. _bpy.types.View3DOverlay.use_gpencil_show_directions:
 

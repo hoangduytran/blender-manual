@@ -467,17 +467,35 @@ number fields in the *Strip Info* panel.
 
 .. _bpy.ops.sequencer.duplicate_move:
 
-Duplicate Strips
-================
+Duplicate
+=========
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Duplicate Strips`
+   :Menu:      :menuselection:`Strip --> Duplicate`
    :Shortcut:  :kbd:`Shift-D`
 
 Duplicate a strip to make an unlinked copy;
 drag it to a time and channel, and drop it by :kbd:`LMB` click.
 
+For strips that reference an ID, for example scene strips, this will
+duplicate the scene and use this new scene in the duplicated strip.
+
+.. _bpy.ops.sequencer.duplicate_move_linked:
+
+Duplicate Linked
+================
+
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Duplicate Linked`
+   :Shortcut:  :kbd:`Alt-D`
+
+Duplicate a strip to make a linked copy;
+drag it to a time and channel, and drop it by :kbd:`LMB` click.
+
+For strips that reference an ID, for example scene strips, this will
+use the same scene in the duplicated strip.
 
 .. _bpy.ops.sequencer.delete:
 

@@ -61,6 +61,16 @@ Path Separator
    structure using :doc:`/scene_layout/collections/index`.
 
 
+Materials
+---------
+
+Material Name Collision
+   Behavior when the name of an imported material conflicts with an existing material.
+
+   :Make Unique: Import each USD material as a unique Blender material.
+   :Reference Existing: If a material with the same name already exists, reference that instead of importing.
+
+
 .. _bpy.ops.wm.obj_export:
 
 Exporting
@@ -105,6 +115,10 @@ Triangulated Mesh
 Apply Modifiers
    Export objects using the evaluated mesh, meaning the resulting mesh after all
    :doc:`Modifiers </modeling/modifiers/index>` have been calculated.
+Apply Transform
+   Applies object *Location*, *Rotation*, and *Scale* to the mesh before export, writing vertices in world space.
+   When disabled, vertices are exported in local object space without applying transforms.
+   See :ref:`bpy.ops.object.transform_apply` for more information on applying transforms.
 Properties
    For properties that have different settings for the viewport/final render pick which is used for output.
    One example where this is important is the :doc:`/modeling/modifiers/generate/subdivision_surface`.

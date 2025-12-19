@@ -23,8 +23,8 @@ Corners
    Four vector inputs to define the plane warping. (Z component of vector inputs is ignored.)
 
 
-Properties
-==========
+Sampling
+--------
 
 Interpolation
    Determines how pixel values are interpolated when scaling or transforming images.

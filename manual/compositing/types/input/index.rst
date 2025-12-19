@@ -25,6 +25,7 @@ As such, they have no input sockets; only outputs.
 .. toctree::
    :maxdepth: 1
 
+   group_input.rst
    bokeh_image.rst
    image.rst
    image_info.rst

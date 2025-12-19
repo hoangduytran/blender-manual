@@ -44,7 +44,7 @@ Tools
    :Tool:      :menuselection:`Toolbar --> Bend/Shear`
 
 The *Bend*, *Shear*, *To Sphere*, *Extrude* and *Shrink Fatten* transform tools are described
-in the :doc:`Editing tools </grease_pencil/modes/edit/tools>` section.
+in the :doc:`Editing tools </grease_pencil/modes/edit/tools/index>` section.
 
 
 Mirror

@@ -141,6 +141,14 @@ Jitter
    :bl-icon:`stylus_pressure` (Jitter Pressure)
       Brush *Jitter* can be affected by enabling the pressure sensitivity icon,
       if you are using a :ref:`Graphics Tablet <hardware-tablet>`.
+   :bl-icon:`rightarrow` / :bl-icon:`downarrow_hlt` (Expand/Collapse)
+      Show or hide the customizable pressure curve.
+
+      Custom Curve
+         By default this is a straight line with positive slope such that
+         increased pressure results in more jitter of the brush positions.
+
+         For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
 
 .. _bpy.types.Brush.jitter_unit:
 

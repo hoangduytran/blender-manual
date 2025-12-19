@@ -126,6 +126,39 @@ Use Custom Normals
    Otherwise, new faces will have the overall normal orientation of that original face.
 
 
+.. _modifiers-generate-subsurf-adaptive-subdivision:
+
+Adaptive Subdivision
+====================
+
+:guilabel:`Cycles Only`
+
+Adaptive Subdivision
+   Subdivide objects based on their distance to the camera, automatically adding more or less
+   detail. Particularly useful for fine displacement detail.
+
+Adaptive Space
+   :Pixel:
+      Subdivide polygons to reach a specified pixel size on screen.
+   :Object:
+      Subdivide to reach a specified edge length in object space. This is required to use
+      adaptive subdivision for instanced meshes.
+
+Pixel Size
+   Target polygon pixel size for adaptive subdivision.
+
+Edge Length
+   Target object space edge length.
+
+Limitations
+-----------
+
+- Multi-view renders can have some inconsistencies between views.
+- Instancing does not work well with Pixel space subdivision. Subdivision will be
+  based on the original object position relative to the camera, and it is recommended
+  to use Object space instead.
+
+
 Keyboard Shortcuts
 ==================
 

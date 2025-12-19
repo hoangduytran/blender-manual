@@ -32,7 +32,7 @@ simple to transform all of them together.
 
 Opacity
    Used to set the opacity of the mask layer.
-Invert (black/white icon)
+:bl-icon:`image_alpha` Invert
    Inverts the values (colors) in the mask layer.
 Blend
    The layer blending operation to perform. See :term:`Color Blend Modes`.

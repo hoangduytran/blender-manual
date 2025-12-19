@@ -11,6 +11,7 @@
    introduction.rst
    sidebar.rst
    compositor_system.rst
+   image_kernels.rst
 
 .. index:: Compositor Nodes
 
@@ -30,7 +31,9 @@ Node Types
 .. toctree::
    :maxdepth: 2
 
+
    types/color/index.rst
+   types/creative/index.rst
    types/filter/index.rst
 
 ----------
@@ -56,7 +59,13 @@ Node Types
    types/texture/index.rst
    types/transform/index.rst
    types/utilities/index.rst
-   types/vector/index.rst
+
+----------
+
+.. toctree::
+   :maxdepth: 2
+
+   types/camera_lens_effects/index.rst
 
 ----------
 

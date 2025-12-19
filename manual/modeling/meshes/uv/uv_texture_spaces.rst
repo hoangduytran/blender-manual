@@ -108,5 +108,5 @@ node.
 .. tip::
 
    Texture spaces do not have rotation support. You can use a
-   :doc:`/render/shader_nodes/vector/mapping` to manually rotate the coordinate
+   :doc:`/render/shader_nodes/utilities/vector/mapping` to manually rotate the coordinate
    in the material shader instead.

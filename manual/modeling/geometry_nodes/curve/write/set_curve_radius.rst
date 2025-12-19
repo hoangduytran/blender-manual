@@ -30,12 +30,6 @@ Radius
    The radius value for each control point.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

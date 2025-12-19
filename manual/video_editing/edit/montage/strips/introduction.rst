@@ -67,6 +67,9 @@ thus layering effects on top of one another.
 If you picked the wrong effect from the menu,
 you can always exchange it using :ref:`sequencer-edit-change`.
 
+Some effects such as Brightness/Contrast and Hue/Saturation
+can be applied using :ref:`bpy.types.StripModifier`.
+
 
 .. _sequencer-strip-colors:
 

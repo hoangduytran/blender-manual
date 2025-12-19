@@ -22,12 +22,6 @@ Search
    The substring that will be searched for within the input string.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

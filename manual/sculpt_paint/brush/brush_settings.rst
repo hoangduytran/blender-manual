@@ -12,6 +12,15 @@ using *Duplicate Asset*, see :ref:`Asset Operators <brush-management-utility-ope
 while Blender remains open does not discard the settings.
 
 
+Unified Settings
+================
+
+Some settings (e.g. size, strength, color), indicated with :bl-icon:`brushes_all`,
+allow for using a per-mode setting instead of the individual brush setting.
+These settings are shared across all brushes of a given mode (e.g. Sculpt Mode)
+but do not overwrite the individual brush value.
+
+
 .. _sculpt-tool-settings-brush-settings-general:
 
 General
@@ -19,7 +28,7 @@ General
 
 .. _bpy.types.Brush.size:
 
-Radius
+Size
    This option controls the size of the brush, measured in pixels.
    :kbd:`F` allows you to change the brush size interactively by
    dragging the mouse from left to right and then :kbd:`LMB` to accept.
@@ -29,18 +38,26 @@ Radius
    The size can be decreased/increased using :kbd:`[` and :kbd:`]` respectfully.
 
    :bl-icon:`stylus_pressure` (Size Pressure)
-      Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
-   :bl-icon:`brushes_all` (Use Unified Radius)
-      Use the same brush *Radius* across all brushes.
+      Adjusts the size based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
+   :bl-icon:`brushes_all` (Use Unified Size)
+      Use the same brush *Size* across all brushes.
+   :bl-icon:`rightarrow` / :bl-icon:`downarrow_hlt` (Expand/Collapse)
+      Show or hide the customizable pressure curve.
 
-Radius Unit :guilabel:`Sculpt Mode`
-   Controls how the brush *Radius* is measured.
+      Custom Curve
+         By default this is a straight line with positive slope such that
+         increased pressure results in a larger brush size.
+
+         For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
+
+Size Unit :guilabel:`Sculpt Mode`
+   Controls how the brush *Size* is measured.
 
    :View:
-      The *Radius* is measured based on how the cursor appears on the monitor i.e. "screen space".
+      The *Size* is measured based on how the cursor appears on the monitor i.e. "screen space".
    :Scene:
-      The *Radius* is measured based on real world units.
-      This means that the brush radius stays consistent, independently from zooming in and out in the viewport.
+      The *Size* is measured based on real world units.
+      This means that the brush size stays consistent, independently from zooming in and out in the viewport.
       The unit type and scaling can be configured in the :ref:`Scene Units <bpy.types.UnitSettings>`.
 
 .. _bpy.types.Brush.strength:
@@ -62,6 +79,14 @@ Strength
       Adjusts the strength based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
    :bl-icon:`brushes_all` (Use Unified Strength)
       Use the same brush *Strength* across all brushes.
+   :bl-icon:`rightarrow` / :bl-icon:`downarrow_hlt` (Expand/Collapse)
+      Show or hide the customizable pressure curve.
+
+      Custom Curve
+         By default this is a straight line with positive slope such that
+         increased pressure results in a stronger brush deformation.
+
+         For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
 
 Blend
    Set the way the color or value is applied over the targeted Color Attribute, Vertex Group or Image Texture.

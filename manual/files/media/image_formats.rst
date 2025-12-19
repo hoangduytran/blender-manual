@@ -1,10 +1,11 @@
 .. _bpy.types.Image:
 .. _bpy.ops.image:
-.. _files-media-image_formats:
 
 **************************
 Supported Graphics Formats
 **************************
+
+.. _files-media-image_formats:
 
 Image Formats
 =============
@@ -25,72 +26,84 @@ This is the list of image file formats supported internally by Blender:
      - :doc:`Metadata </render/output/properties/metadata>`
      - :term:`DPI`
      - Extensions
-   * - BMP
-     - 8bit
-     - |tick|
-     - |cross|
-     - |tick|
-     - ``.bmp``
-   * - Iris
-     - 8, 16bit
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.sgi`` ``.rgb`` ``.bw``
-   * - PNG
-     - 8, 16bit
-     - |tick|
-     - |tick|
-     - |tick|
-     - ``.png``
    * - JPEG
      - 8bit
      - |cross|
      - |tick|
      - |tick|
      - ``.jpg`` ``.jpeg``
-   * - JPEG 2000
-     - 8, 12, 16bit
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.jp2`` ``.jp2`` ``.j2c``
-   * - Targa
-     - 8bit
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.tga``
-   * - `Cineon & DPX`_
-     - 8, 10, 12, 16bit
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.cin`` ``.dpx``
    * - `OpenEXR`_
      - float 16, 32bit
      - |tick|
      - |tick|
      - |tick|
      - ``.exr``
-   * - `Radiance HDR`_
-     - float
-     - |tick|
-     - |cross|
-     - |cross|
-     - ``.hdr``
-   * - TIFF
+   * - PNG
      - 8, 16bit
      - |tick|
-     - |cross|
      - |tick|
-     - ``.tif`` ``.tiff``
+     - |tick|
+     - ``.png``
    * - WebP
      - 8bit
      - |tick|
      - |tick|
      - |cross|
      - ``.webp``
+   * - BMP
+     - 8bit
+     - |tick|
+     - |cross|
+     - |tick|
+     - ``.bmp``
+   * - :ref:`Cineon <file-media-cineon_dpx>`
+     - 8, 10, 12, 16bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.cin``
+   * - :ref:`DPX <file-media-cineon_dpx>`
+     - 8, 10, 12, 16bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.dpx``
+   * - Iris
+     - 8, 16bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.sgi`` ``.rgb`` ``.bw``
+   * - JPEG 2000
+     - 8, 12, 16bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.jp2`` ``.jp2`` ``.j2c``
+   * - `Radiance HDR`_
+     - float
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.hdr``
+   * - Targa
+     - 8bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.tga``
+   * - Targa Raw
+     - 8bit
+     - |tick|
+     - |cross|
+     - |cross|
+     - ``.tga``
+   * - TIFF
+     - 8, 16bit
+     - |tick|
+     - |cross|
+     - |tick|
+     - ``.tif`` ``.tiff``
 
 .. hint::
 
@@ -161,7 +174,8 @@ Saving Images
 =============
 
 File Format
-   Choose what format to save the image as.
+   Choose the image file format to save to. Based on which format is used,
+   other options such as channels, bit depth and compression level are available.
 
 Color
    The color format to save the image or video to.
@@ -215,7 +229,7 @@ Quality
    - **0%**: Maximum compression, producing the smallest file size but the most noticeable quality loss.
    - **100%**: No compression, preserving full image quality at the cost of a larger file size.
 Save As Render
-   Save image with render :doc:`color management </render/color_management>`.
+   Save image with render :doc:`color management </render/color_management/index>`.
    For display image formats like PNG, apply view and display transform.
    For intermediate image formats like OpenEXR, use the default render output color space.
 Copy
@@ -238,6 +252,8 @@ Color Space
 Format Details
 ==============
 
+.. _file-media-cineon_dpx:
+
 Cineon & DPX
 ------------
 
@@ -249,6 +265,8 @@ DPX is currently a widely adopted standard used in the film hardware/software in
 DPX as well as Cineon only stores and converts the "visible" color range of values between 0.0
 and 1.0 (as a result of rendering or composite).
 
+
+.. _files-images-openexr:
 
 OpenEXR
 -------
@@ -315,6 +333,12 @@ Quality :guilabel:`DWAA (lossy)` :guilabel:`DWAB (lossy)`
 
    - **0%**: Maximum compression, producing the smallest file size but the most noticeable quality loss.
    - **100%**: No compression, preserving full image quality at the cost of a larger file size.
+
+.. _bpy.types.ImageFormatSettings.use_exr_interleave:
+
+Interleave
+   Use legacy interleaved storage of views, layers and passes for compatibility with
+   applications that do not support more efficient multi-part OpenEXR files.
 
 .. _bpy.types.ImageFormatSettings.use_preview:
 

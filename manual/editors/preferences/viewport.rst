@@ -1,4 +1,3 @@
-
 ********
 Viewport
 ********
@@ -148,5 +147,12 @@ GPU Subdivision
    Under certain circumstances, the GPU will be used to subdivide a mesh with a
    :doc:`Subdivision Surface modifier </modeling/modifiers/generate/subdivision_surface>`.
    This typically results in increased subdivision performance.
+   
+.. note::
+
+   When enabled, normals and tangents are interpolated instead of being recomputed after smoothing.
+   This can result in a change in shading compared to the CPU implementation.
+
+.. note::
 
    This feature is not supported on Qualcomm GPUs on Windows

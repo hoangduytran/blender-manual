@@ -8,20 +8,6 @@
 
    :Panel:     :menuselection:`Render`
 
-.. _bpy.types.CyclesRenderSettings.feature_set:
-
-Feature Set
-   Selects which Cycles rendering features are available.
-
-   :Supported:
-      Enables only fully supported and stable rendering features.
-   :Experimental:
-      Enables additional features that are still in development or not fully supported.
-      Selecting this option may expose extra settings in the user interface.
-      These features may be incomplete, unstable, or subject to change in future Blender versions.
-
-      Currently, :doc:`/render/cycles/object_settings/adaptive_subdiv` is the only experimental feature.
-
 .. _bpy.types.CyclesRenderSettings.device:
 
 Device
@@ -55,7 +41,7 @@ Open Shading Language
    Enables the use of :doc:`/render/cycles/osl/index` which allows custom shading using shader scripts.
    When OSL is enabled, you can:
 
-   - Use OSL shader nodes in materials using the :doc:`Script Node </render/shader_nodes/script>`.
+   - Use OSL shader nodes in materials using the :doc:`Script Node </render/shader_nodes/utilities/script>`.
    - Write custom shading logic that is not possible with built-in Cycles nodes.
 
    Limitations:

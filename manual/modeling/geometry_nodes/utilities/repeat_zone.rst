@@ -1,6 +1,7 @@
 .. index:: Geometry Nodes; Repeat
 .. _bpy.types.GeometryNodeRepeatInput:
 .. _bpy.types.GeometryNodeRepeatOutput:
+.. --- copy below this line ---
 
 ***********
 Repeat Zone
@@ -55,6 +56,7 @@ Inspection Index
    The number of the iteration to show in :ref:`socket inspection <socket-inspection>`
    and in the :doc:`/modeling/geometry_nodes/output/viewer`.
 
+.. --- copy until this line ---
 
 Example
 =======

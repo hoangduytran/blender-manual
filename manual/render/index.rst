@@ -18,7 +18,7 @@
    lights/index.rst
    materials/index.rst
    shader_nodes/index.rst
-   color_management.rst
+   color_management/index.rst
    freestyle/index.rst
    layers/index.rst
    output/index.rst

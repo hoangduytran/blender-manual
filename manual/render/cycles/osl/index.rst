@@ -14,7 +14,7 @@ and custom geometry-based material logic that may not be possible with built-in 
 Unlike node-based materials, OSL shaders are authored as text scripts using Blender's internal
 :doc:`Text Editor </editors/text_editor>` or loaded from external `.osl` or `.oso` files.
 These scripts are then compiled and used in the Shader Editor
-through the :doc:`Script Node </render/shader_nodes/script>`.
+through the :doc:`Script Node </render/shader_nodes/utilities/script>`.
 
 .. tip::
 
@@ -36,7 +36,7 @@ To use Open Shading Language (OSL) in Blender, follow these steps:
 
 #. **Add a Script Node**
 
-   In the Shader Editor add :doc:`Script Node </render/shader_nodes/script>` then in the node's properties:
+   In the Shader Editor add :doc:`Script Node </render/shader_nodes/utilities/script>` then in the node's properties:
 
    - Set the *Mode* to *Internal* to use a Blender text data-block, or
    - Set it to *External* to load a shader file from disk (either `.osl` or compiled `.oso`).
@@ -274,15 +274,42 @@ apply more "wear" to exposed geometry, or make other ambient occlusion-like effe
 Metadata
 ========
 
-Metadata on parameters controls their display in the user interface. The following
-metadata is supported:
+Metadata on parameters controls how they are displayed in the user interface.
+The following metadata entries are supported:
 
 ``[[ string label = "My Label" ]]``
-  Name of parameter in the user interface
+   Custom display name of the parameter in the user interface.
+
 ``[[ string widget = "null" ]]``
-  Hide parameter in the user interface.
-``[[ string widget = "boolean" ]]`` and ``[[ string widget = "checkbox" ]]``
-  Display integer parameter as a boolean checkbox.
+   Hides the parameter from the user interface.
+
+``[[ string widget = "boolean" ]]`` or ``[[ string widget = "checkbox" ]]``
+   Displays an integer parameter as a boolean checkbox.
+
+``[[ string widget = "filename" ]]``
+   Displays the parameter as a file path selector.
+
+``[[ string widget = "mapper", string options = "left:0|right:1" ]]``
+   Displays an integer parameter as an enumerated menu.
+   The *options* string defines a list of label-value pairs separated by ``|``.
+
+``[[ string vecsemantics = "POINT" ]]``
+   Marks a vector parameter as a translation input (position vector).
+
+``[[ string vecsemantics = "NORMAL" ]]``
+   Marks a vector parameter as a normal input (direction vector).
+
+``[[ string unit = "radians" ]]``
+   Marks a float parameter as an angle input, displayed in radians.
+
+``[[ string unit = "m" ]]``
+   Marks a float parameter as a distance input, displayed in meters.
+
+``[[ string unit = "mm" ]]``
+   Marks a float parameter as a distance input, displayed in millimeters.
+
+``[[ string unit = "s" ]]`` or ``[[ string unit = "sec" ]]``
+   Marks a float parameter as a time input, displayed in seconds.
 
 
 Limitations

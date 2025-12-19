@@ -21,8 +21,8 @@ Angle
    The amount of rotation. Positive values rotate clockwise and negative ones counterclockwise.
 
 
-Properties
-==========
+Sampling
+========
 
 Interpolation
    Determines how pixel values are interpolated when scaling or transforming images.
@@ -42,6 +42,13 @@ Interpolation
       Adjusts interpolation based on the direction and scale of the transformation.
       Helps reduce blurring or aliasing when scaling at steep angles or uneven resolutions,
       especially useful in textures viewed at oblique angles or in detailed 3D projections.
+
+Extension X/Y
+   The extension mode applied to the X axis.
+
+   :Clip: Areas outside of the image are filled with transparency.
+   :Extend: Areas outside of the image are filled with the closest boundary pixel in the image.
+   :Repeat: Areas outside of the image are filled with repetitions of the image.
 
 
 Outputs

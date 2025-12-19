@@ -20,7 +20,7 @@ Named Attributes
 ================
 
 Named attributes are created and used in other areas of Blender like shaders, painting, and UV mapping.
-In the :doc:`modifier panel </modeling/modifiers/generate/geometry_nodes>`, a named attribute can
+In the :doc:`modifier panel </modeling/modifiers/geometry_nodes>`, a named attribute can
 be used for input by clicking the icon to the right of the value button.
 The string input allows you to search and choose existing attributes from the modifier's input geometry.
 
@@ -76,9 +76,12 @@ The type of an attribute is the kind of data stored at each element.
 :Vector:
    3D vector with floating-point values, often representing directions or positions.
 :Color:
-   RGBA color with 32-bit floating-point values.
+   RGBA color with 32-bit floating-point values, stored in linear :term:`Color Space`
+   Suitable for high dynamic range and wide-gamut colors.
 :Byte Color:
    RGBA color with 8-bit positive integer values, useful for compact color storage.
+   These are always stored in the sRGB :term:`Color Space`.
+   For wide gamut or linear workflows, use the *Color* type instead.
 :String:
    Text string for storing names or labels.
 :2D Vector:
@@ -146,7 +149,7 @@ to determine the domains of attributes.
 
 Attributes are automatically interpolated to other domains. For example, when the
 :doc:`/modeling/geometry_nodes/geometry/read/position` is connected to the selection input of
-the :doc:`/modeling/geometry_nodes/material/set_material` node, the values are interpolated
+the :doc:`/modeling/geometry_nodes/geometry/material/set_material` node, the values are interpolated
 from the *Point* domain to the *Face* domain. Normally, domain conversions use simple averages
 for values, but *Boolean* data type attributes have special rules for interpolation:
 
@@ -333,41 +336,6 @@ However, the attributes might be expected by Blender to have a certain type.
      - Domain
      - Notes
 
-   * - ``velocity``
-     - *Vector*
-     - *Point*
-     - Used to create motion blur when rendering animations.
-
-   * - ``rest_position``
-     - *Vector*
-     - *Point*
-     - Holds the position of points or vertices from before a geometry is deformed procedurally.
-       Can be created automatically before :doc:`Shape Keys </animation/shape_keys/index>` and
-       :doc:`Modifiers </modeling/modifiers/introduction>` are evaluated with the
-       :ref:`Add Rest Position <bpy.types.Object.add_rest_position_attribute>` option.
-
-   * - ``surface_uv_coordinate``
-     - *2D Vector*
-     - *Curve*
-     - Used to describe curve attachment locations on a mesh surface, typically used for the hair system.
-
-   * - ``crease_vert``
-     - *Float*
-     - *Point*
-     - Vertex attribute used by the Subdivision Surface modifier.
-       The values are expected to be in a range of 0 and 1.
-
-   * - ``crease_edge``
-     - *Float*
-     - *Edge*
-     - Edge attribute used by the Subdivision Surface modifier.
-       The values are expected to be in a range of 0 and 1.
-
-   * - ``uv_seam``
-     - *Boolean*
-     - *Edge*
-     - True if an edge is considered a boundary between UV islands when unwrapping.
-
    * - ``bevel_weight_vert``
      - *Float*
      - *Point*
@@ -377,6 +345,41 @@ However, the attributes might be expected by Blender to have a certain type.
      - *Float*
      - *Edge*
      - Used as edge control for the bevel modifier.
+
+   * - ``crease_edge``
+     - *Float*
+     - *Edge*
+     - Edge attribute used by the Subdivision Surface modifier.
+       The values are expected to be in a range of 0 and 1.
+
+   * - ``crease_vert``
+     - *Float*
+     - *Point*
+     - Vertex attribute used by the Subdivision Surface modifier.
+       The values are expected to be in a range of 0 and 1.
+
+   * - ``custom_normal``
+     - *2D 16-Bit Integer Array*
+     - *Face Corner*
+     - Used by :ref:`modeling_meshes_normals_custom` for mesh objects.
+
+   * - ``freestyle_edge``
+     - *Boolean*
+     - *Edge*
+     - Used by :ref:`freestyle-edge-marks` for mesh objects.
+
+   * - ``freestyle_face``
+     - *Boolean*
+     - *Edge*
+     - Used by :ref:`freestyle-face-marks` for mesh objects.
+
+   * - ``rest_position``
+     - *Vector*
+     - *Point*
+     - Holds the position of points or vertices from before a geometry is deformed procedurally.
+       Can be created automatically before :doc:`Shape Keys </animation/shape_keys/index>` and
+       :doc:`Modifiers </modeling/modifiers/introduction>` are evaluated with the
+       :ref:`Add Rest Position <bpy.types.Object.add_rest_position_attribute>` option.
 
    * - ``sculpt_face_set``
      - *Integer*
@@ -388,10 +391,20 @@ However, the attributes might be expected by Blender to have a certain type.
      - *Point*
      - Used by the :ref:`Sculpt Masking Feature <sculpt-masks>`.
 
-   * - ``custom_normal``
-     - *2D 16-Bit Integer Array*
-     - *Face Corner*
-     - Used by :ref:`modeling_meshes_normals_custom` for mesh objects.
+   * - ``surface_uv_coordinate``
+     - *2D Vector*
+     - *Curve*
+     - Used to describe curve attachment locations on a mesh surface, typically used for the hair system.
+
+   * - ``uv_seam``
+     - *Boolean*
+     - *Edge*
+     - True if an edge is considered a boundary between UV islands when unwrapping.
+
+   * - ``velocity``
+     - *Vector*
+     - *Point*
+     - Used to create motion blur when rendering animations.
 
 
 Custom Attributes

@@ -38,20 +38,34 @@ Settings
 .. _bpy.ops.object.bake:
 
 Bake
-   Perform the baking operation.
+   Executes the bake operation using the current settings.
 
 .. _bpy.types.RenderSettings.use_bake_multires:
 
 Bake from Multires
-   Bake a normal or displacement map directly from a mesh with a
-   :doc:`/modeling/modifiers/generate/multiresolution`.
+   Bakes a *Normal* or *Displacement* map directly from a mesh that has a
+   :doc:`Multiresolution Modifier </modeling/modifiers/generate/multiresolution>`.
 
-   This method compares two the resolution levels of the modifier:
+   This method compares two resolution levels of the modifier:
 
-   - *Viewport Levels* is treated as the low-resolution base mesh.
-   - *Render Levels* is treated as the high-resolution detail mesh.
+   - *Viewport Levels* Used as the *low-resolution* base mesh.
+   - *Render Levels* Used as the *high-resolution* detailed mesh.
 
-   The resulting normal or displacement map represents the difference between these two levels.
+   The resulting bake represents the difference between these two levels, allowing detailed sculpted
+   information to be captured as a texture map.
+
+   .. _bpy.types.BakeSettings.type:
+
+   Bake Type
+      Determines what kind of surface information is extracted from the Multiresolution modifier.
+      See :ref:`multrires-bake-types` for more information.
+
+      :Normals:
+         Bakes surface normal direction differences between the two levels.
+      :Displacement:
+         Bakes height differences as a grayscale displacement map.
+      :Vector Displacement:
+         Bakes full 3D positional offsets as a vector displacement map.
 
 .. _bpy.types.CyclesRenderSettings.bake_type:
 
@@ -238,8 +252,9 @@ Target
    Where to output the baked map.
 
    :Image Textures:
-      Bake to the image data-block associated with the :term:`Active`
-      :doc:`Image Texture </render/shader_nodes/textures/image>` node.
+      Bake to the image data-block associated with the active and selected
+      :doc:`Image Texture </render/shader_nodes/textures/image>` node. If a material does not contain an active and
+      selected image texture node, nothing will be baked for this material.
 
       .. _bpy.types.BakeSettings.use_clear:
 

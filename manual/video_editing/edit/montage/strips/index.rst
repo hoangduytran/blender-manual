@@ -7,7 +7,7 @@
    :maxdepth: 2
 
    introduction.rst
-
+   strip_properties.rst
 
 Types
 =====

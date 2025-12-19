@@ -1,4 +1,3 @@
-.. _gpencil_edit-toolbar-index:
 
 *************
 Editing Tools
@@ -36,7 +35,7 @@ Transform
    Tool to adjust the objects translation, rotations and scale.
 
 :ref:`Pen <tool-grease-pencil-edit-pen>`
-   Tool for creating and modifrying :ref:`Bézier <curve-spline-types>` strokes.
+   Tool for creating and modifying :ref:`Bézier <curve-spline-types>` strokes.
 
 Radius :kbd:`Alt-S`
    Expand or contract the thickness radius of the selected points.

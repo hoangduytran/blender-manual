@@ -93,6 +93,21 @@ working with Blender.
    assumes you are using the default keymap.
 
 
+.. _hardware-touch:
+
+Touch Screens
+-------------
+
+Blender has several settings that can be enabled to improve the experience on touch-enabled devices.
+These options make it easier to manage areas, menus, and interactions without relying on precise
+mouse input.
+
+- Enable :ref:`Show Handles <bpy.types.PreferencesView.show_area_handle>`
+  to simplify resizing and rearranging :doc:`/interface/window_system/areas`.
+- Increase the :ref:`Border Width <bpy.types.PreferencesView.border_width>`
+  to make area edges easier to select with a finger.
+
+
 .. _hardware-tablet:
 
 Graphic Tablet

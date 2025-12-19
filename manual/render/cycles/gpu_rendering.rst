@@ -26,7 +26,7 @@ CUDA -- NVIDIA
 --------------
 
 :abbr:`CUDA (Compute Unified Device Architecture)` is supported on Windows and Linux and requires a
-NVIDIA graphics cards with compute capability 3.0 and higher. To make sure your GPU is supported,
+NVIDIA graphics cards with compute capability 5.0 and higher. To make sure your GPU is supported,
 see the `list of NVIDIA graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
 with the compute capabilities and supported graphics cards.
 
@@ -63,7 +63,7 @@ Supported GPUs include:
 
 Minimum driver versions:
 
-- Windows: Radeon Software 24.6.1 or Radeon PRO Software 24.Q2
+- Windows: Radeon Software 24.9.1 or Radeon PRO Software 24.Q4
 - Linux: Radeon Software 23.40 or ROCm 6.0
 
 Please refer to `AMD's website <https://www.amd.com/en/products/specifications.html>`__ for more
@@ -73,11 +73,6 @@ Hardware ray-tracing support is available with the most recent drivers.
 This can be enabled in the preferences, and is supported on Radeon RX 6000 and newer.
 
 GPU accelerated denoising is available on discrete Radeon RX 6000 and Radeon RX 7000 GPUs.
-
-.. admonition:: Limitations
-   :class: important
-
-   - Shadow caustics are not supported with HIP.
 
 
 oneAPI -- Intel
@@ -96,7 +91,7 @@ Minimum driver versions:
 
 - Windows: Intel Graphics Driver XX.X.101.5518
 - Linux: ``intel-level-zero-gpu`` package 1.3.27642,
-  typically available through the ``intel-compute-runtime`` package XX.XX.27642.38
+  typically available through the ``intel-compute-runtime`` package XX.XX.34666.3
 
 Please refer to `Intel's website <https://www.intel.com/content/www/us/en/products/details/discrete-gpus.html>`__
 for more information about Intel graphics cards and their architectures.

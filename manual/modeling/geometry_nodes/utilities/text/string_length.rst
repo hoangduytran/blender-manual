@@ -19,12 +19,6 @@ String
    String value to be evaluated.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

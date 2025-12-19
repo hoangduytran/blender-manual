@@ -149,22 +149,25 @@ Window Options
 ==============
 
 ``-w``, ``--window-border``
-   Force opening with borders.
-
-``-W``, ``--window-fullscreen``
-   Force opening in full-screen mode.
-
-``-p``, ``--window-geometry`` ``<sx>`` ``<sy>`` ``<w>`` ``<h>``
-   Open with lower left corner at ``<sx>``, ``<sy>`` and width and height as ``<w>``, ``<h>``.
+   Force opening with borders, in a normal (non maximized) state.
 
 ``-M``, ``--window-maximized``
    Force opening maximized.
+
+``-W``, ``--window-fullscreen``
+   Force opening full-screen.
+
+``-p``, ``--window-geometry`` ``<sx>`` ``<sy>`` ``<w>`` ``<h>``
+   Open with lower left corner at ``<sx>``, ``<sy>`` and width and height as ``<w>``, ``<h>``.
 
 ``-con``, ``--start-console``
    Start with the console window open (ignored if ``-b`` is set), (Windows only).
 
 ``--no-native-pixels``
    Do not use native pixel size, for high resolution displays (MacBook ``Retina``).
+
+``--no-window-frame``
+   Disable all window decorations (Linux only).
 
 ``--no-window-focus``
    Open behind other windows and without taking focus.
@@ -253,6 +256,10 @@ Logging Options
 ``--log-file`` ``<filepath>``
    Set a file to output the log to.
 
+``--log-list-categories``
+   List all available logging categories for ``--log``, and exit.
+
+
 
 .. _command-line-args-debug-options:
 
@@ -329,6 +336,10 @@ Debug Options
 
 ``--debug-gpu-shader-debug-info``
    Enable shader debug info generation (Vulkan only).
+
+``--debug-gpu-shader-source``
+   Capture the GPU commands issued inside the give scope name.
+   Files are saved in the current working directory inside a directory named "Shaders".
 
 ``--debug-gpu-scope-capture``
    Capture the GPU commands issued inside the give scope name.
@@ -467,6 +478,13 @@ Misc Options
 ``--unregister-allusers``
    Unregister blend-file extension for all users, then exit (Windows & Linux only).
 
+``--qos`` ``<level>``
+   Set the Quality of Service (QoS) mode for hybrid CPU architectures (Windows only).
+
+   default: Uses the default behavior of the OS.
+   high: Always makes use of performance cores.
+   eco: Schedules Blender threads exclusively to efficiency cores.
+
 ``-v``, ``--version``
    Print Blender version and exit.
 
@@ -560,7 +578,8 @@ Environment Variables
 :BLENDER_SYSTEM_PYTHON:     Directory to replace bundled Python libraries.
 :BLENDER_CUSTOM_SPLASH:     Full path to an image that replaces the splash screen.
 :BLENDER_CUSTOM_SPLASH_BANNER: Full path to an image to overlay on the splash screen.
-:OCIO:                      Path to override the OpenColorIO configuration file.
+:BLENDER_OCIO:              Path to override the OpenColorIO configuration file.
+                           If not set, the ``OCIO`` environment variable is used.
 :TEMP:                      Store temporary files here (MS-Windows).
 :TMPDIR:                    Store temporary files here (UNIX Systems).
                            The path must reference an existing directory or it will be ignored.

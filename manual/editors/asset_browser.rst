@@ -60,19 +60,12 @@ Import Method
 
       Since the file now has its own copy of the asset, later changes to
       the asset file will not be reflected in the file it's appended from.
-   :Append (Reuse Data):
-      *Specific to the Asset Browser*.
+   :Pack:
+      Imports the asset as *linked* data and immediately packs it into the current blend-file.
+      This ensures that the asset remains available even if the original library data is modified
+      or becomes unavailable.
 
-      The first time an asset is used, it will be appended, including its dependencies,
-      just as described previously. However, Blender will keep track of where it originated,
-      and the next time the asset is used, as much data as possible will be reused.
-      Dragging a material into the scene three times will only load it once,
-      and just assign the same material three times.
-      Dragging an object into the scene three times will create three copies of the object,
-      but all copies will share their mesh data, materials, etc.
-
-      Since the file now has its own copy of the asset, later changes to
-      the asset file will not be reflected in the file it's appended from.
+      Useful for maintaining self-contained files that do not rely on external asset library paths.
 
 .. _bpy.types.FileAssetSelectParams.instance_collections_on_link:
 .. _bpy.types.FileAssetSelectParams.instance_collections_on_append:
@@ -295,7 +288,7 @@ Using Assets
 As a general rule, **an asset can be used by dragging it from the Asset Browser to the desired location**.
 Objects and worlds can be dragged from the Asset Browser into the scene.
 Materials can be dragged onto the object that should use them.
-Geometry nodes can also be dragged onto objects to add a :doc:`/modeling/modifiers/generate/geometry_nodes`.
+Geometry nodes can also be dragged onto objects to add a :doc:`/modeling/modifiers/geometry_nodes`.
 The use of pose assets is different, and is described in :doc:`/animation/armatures/posing/editing/pose_library`.
 
 When you drag a collection, it will be added as an

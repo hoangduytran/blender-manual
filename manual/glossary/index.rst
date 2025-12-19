@@ -224,20 +224,32 @@ This page lists definitions for terms used in Blender and this manual.
          whose standards have been updated for HDTV and commonly referred to as the HDMI format for component video.
 
    Color Space
-      A coordinate system in which a vector represent a color value.
-      This way the color space defines three things:
+      A color space is a coordinate system in which a vector represents a color value.
+      The definition of a color space specifies three things:
 
-      - The exact color of each of the :term:`Primaries`
-      - The :term:`White Point`
-      - A transfer function
+      - The exact color of each of the :term:`Primaries`.
+      - The :term:`White Point`.
+      - A transfer function (also called a tone response curve).
 
-      The color spaces supported by Blender depend on the active :ref:`OCIO config <ocio-config>`.
-      The default supported color spaces are described in detail here:
-      :ref:`Default OpenColorIO Configuration <ocio-config-default-color-spaces>`
+      The color spaces available in Blender depend on the active :ref:`OCIO config <ocio-config>`.
+      The default supported color spaces are described in detail at
+      :ref:`Default OpenColorIO Configuration <ocio-config-default-color-spaces>`.
+
+      Linear
+         A linear color space means that the numerical values of the color channels are directly proportional
+         to light intensity. This is the most physically accurate representation of color and is used internally
+         for rendering, shading, and compositing to ensure correct blending and lighting calculations.
 
       sRGB
-         A color space that uses the Rec .709 :term:`Primaries` and a D65 white point,
-         and 2.2 gamma correction value as the transfer function.
+         A widely used display-referred color space that uses the Rec.709 :term:`Primaries` and a D65 white point.
+         It applies an approximate 2.2 gamma transfer function to better match human perception of brightness.
+         sRGB is the standard for monitors, images, and the web, making it the most common format for saving
+         or displaying images outside of Blender.
+
+      - Linear color space is recommended for internal work, such as rendering and compositing.
+      - sRGB is typically used for output images intended for screens and general distribution.
+      - Wide gamut and high dynamic range workflows may use other color spaces, such as ACES, depending on
+        the active OCIO configuration.
 
    Concave Face
       Face in which one vertex is inside a triangle formed by other vertices of the face.

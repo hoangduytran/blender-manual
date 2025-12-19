@@ -9,6 +9,7 @@
    :maxdepth: 2
 
    introduction.rst
+   animation_editors.rst
    keyframes/index.rst
    armatures/index.rst
    lattice.rst

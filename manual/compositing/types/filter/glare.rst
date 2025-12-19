@@ -19,6 +19,40 @@ Inputs
 Image
    Standard color input.
 
+Glare Type
+   Defines the type of glare effect applied to the image.
+
+   :Bloom:
+      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
+   :Ghosts:
+      Creates multiple overlapping glare artifacts resembling lens reflections or a hazy glow.
+   :Streaks:
+      Produces bright streaks radiating from highlights, commonly used to simulate lens flares.
+   :Fog Glow:
+      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
+      This glare is a more physically accurate version of *Bloom*, creating a softer,
+      more realistic glow at the cost of increased computation time.
+   :Simple Star:
+      Similar to *Streaks*, but produces a simpler star-shaped glare effect.
+   :Sun Beams:
+      Simulates the effect of bright light getting scattered in a medium
+      `(Crepuscular Rays) <https://en.wikipedia.org/wiki/Crepuscular_rays>`__.
+      This phenomenon can be created by renderers, but full volumetric lighting is
+      a rather arduous approach and takes a long time to render.
+   :Kernel:
+      Applies a custom convolution filter using a :doc:`kernel </compositing/image_kernels>`
+      defined either numerically or from an image.
+      This mode allows the creation of user-defined glare or diffusion effects
+      by specifying the shape and intensity distribution of the kernel.
+
+Quality
+   Controls the resolution at which the glare effect is processed.
+   This can be helpful to save render times while only doing preview renders.
+
+   :High: Full-resolution processing for best quality.
+   :Medium: Uses a lower resolution to reduce computation time.
+   :Low: Fastest processing but with lower detail.
+
 
 Highlights
 ----------
@@ -87,39 +121,21 @@ Diagonal :guilabel:`Simple Star`
 Sun Position :guilabel:`Sun Beams`
    Source point of the rays as a factor of the image dimensions.
 
+Jitter :guilabel:`Sun Beams`
+   The amount of jitter to introduce while computing rays,
+   higher jitter can be faster but can produce grainy or noisy results.
 
+Kernel Data Type :guilabel:`Kernel`
+   Determines how the kernel is defined:
 
-Properties
-==========
+   :Float: A numeric kernel defined by the *Kernel* input socket.
+   :Color: A full color image used as the kernel, allowing for more complex filtering patterns
 
-Glare Type
-   Defines the type of glare effect applied to the image.
-
-   :Bloom:
-      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
-   :Ghosts:
-      Creates multiple overlapping glare artifacts resembling lens reflections or a hazy glow.
-   :Streaks:
-      Produces bright streaks radiating from highlights, commonly used to simulate lens flares.
-   :Fog Glow:
-      Simulates the soft glow around bright areas due to light scattering in eyes and camera lenses.
-      This glare is a more physically accurate version of *Bloom*, creating a softer,
-      more realistic glow at the cost of increased computation time.
-   :Simple Star:
-      Similar to *Streaks*, but produces a simpler star-shaped glare effect.
-   :Sun Beams:
-      Simulates the effect of bright light getting scattered in a medium
-      `(Crepuscular Rays) <https://en.wikipedia.org/wiki/Crepuscular_rays>`__.
-      This phenomenon can be created by renderers, but full volumetric lighting is
-      a rather arduous approach and takes a long time to render.
-
-Quality
-   Controls the resolution at which the glare effect is processed.
-   This can be helpful to save render times while only doing preview renders.
-
-   :High: Full-resolution processing for best quality.
-   :Medium: Uses a lower resolution to reduce computation time.
-   :Low: Fastest processing but with lower detail.
+Kernel :guilabel:`Kernel`
+   When the *Float* type is selected, this input defines the numeric
+   :doc:`kernel </compositing/image_kernels>` values.
+   When the *Color* type is selected, an image input can be connected
+   to provide a grayscale or color-based convolution kernel.
 
 
 Outputs
@@ -135,6 +151,16 @@ Glare
 Highlights
    The extracted bright areas used to generate the glare effect.
    Can be used to fine-tune the glare or as a base for custom effects.
+
+
+Gizmos
+======
+
+The *Glare* node provides an interactive gizmo in the Node Editor.
+To use it, enable :ref:`Active Node Gizmo <bpy.types.SpaceNodeEditor.show_gizmo_active_node>` and
+select the *Glare* node.
+
+For the *Sun Beams* type, a cross-shaped gizmo appears in the image preview to set the *Sun Position*.
 
 
 Examples

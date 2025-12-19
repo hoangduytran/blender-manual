@@ -22,7 +22,7 @@ Sample
 
    - X and Y coordinates of the mouse cursor.
    - Color in RGBA.
-   - Color in RGB after :doc:`/render/color_management`.
+   - Color in RGB after :doc:`/render/color_management/index`.
    - Color in HSV.
    - Luminance.
 
@@ -76,6 +76,11 @@ Image Pin
    Prevents the Image Editor from automatically switching to the texture of
    the selected object. (This switching only happens if the 3D Viewport is
    in :doc:`Texture Paint </sculpt_paint/texture_paint/introduction>` mode).
+
+.. _bpy.types.SpaceImageEditor.show_sequencer_scene:
+
+Show Sequencer Scene
+   This toggle is only visible on the Render Result if a :doc:`Sequencer Scene </video_editing/sequencer_scene>` exists, and it differs from the active scene in the window. After rendering, its state is chosen automatically from the render type. 
 
 Slot
    The render slot to view (and render to). You can create new renders without

@@ -244,7 +244,7 @@ Seed
 
    .. _bpy.types.CyclesRenderSettings.use_animated_seed:
 
-   Use Animated Seed (clock icon)
+   :bl-icon:`time` Use Animated Seed
       Changes the seed for each frame. It is a good idea to enable this
       when rendering animations because a varying noise pattern is less noticeable.
 

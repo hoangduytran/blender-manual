@@ -192,7 +192,7 @@ Optional values for "build":
       [build]
       paths_exclude_pattern = [
         "__pycache__/",
-        ".*",
+        ".git",
         "*.zip",
       ]
 
@@ -215,6 +215,9 @@ Command-line
 
 Extensions can be built, validated & installed via command-line.
 
+Build
+-----
+
 To build the package defined in the current directory use the following commands:
 
 .. code:: bash
@@ -223,7 +226,8 @@ To build the package defined in the current directory use the following commands
 
 See :ref:`build <command-line-args-extension-build>` docs.
 
----
+Validate
+--------
 
 To validate the manifest without building the package:
 
@@ -242,6 +246,11 @@ See :ref:`validate <command-line-args-extension-validate>` docs.
 .. seealso::
 
    :ref:`command_line-args-extensions`.
+
+Publish
+-------
+
+To automate the publishing of updates on the Extension Platform check the `CI/CD documentation <https://developer.blender.org/docs/features/extensions/ci_cd/>`__.
 
 
 Third party extension sites

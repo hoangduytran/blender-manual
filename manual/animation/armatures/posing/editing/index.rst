@@ -13,5 +13,6 @@
    propagate.rst
    copy_paste.rst
    pose_library.rst
+   inverse_kinematics.rst
    flip_quats.rst
    show_hide.rst

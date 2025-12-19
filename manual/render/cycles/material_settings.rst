@@ -74,3 +74,12 @@ Interpolation
 
    :Linear: Simple interpolation which gives good results for thin volumes.
    :Cubic: Smoothed high-quality interpolation needed for more dense volumes, but slower.
+
+.. _bpy.types.CyclesMaterialSettings.volume_step_rate:
+
+Step Rate :guilabel:`Biased`
+   Adjust distance between volume shader samples for volume shaders.
+   This is typically used to reduce the step size for procedural shaders that add more detail
+   with procedural textures, when it is not captured by the default step size.
+   Only enabled when :menuselection:`Render --> Volumes --> Biased` is enabled.
+   See :doc:`Volume Render Settings </render/cycles/render_settings/volumes>` for more information.

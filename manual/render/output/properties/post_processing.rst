@@ -19,7 +19,7 @@ The Post Processing panel is used to control different options used to process y
 Pipeline -- Compositing
    Renders the output from the compositing node setup,
    and then applies the Composite node tree on all images,
-   displaying the image inputted in the Composite Output node.
+   displaying the image inputted in the Group Output node.
 
 .. _bpy.types.RenderSettings.use_sequencer:
 

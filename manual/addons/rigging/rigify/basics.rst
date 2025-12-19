@@ -217,7 +217,7 @@ Target Rig :guilabel:`auto`
       with a matching name already exists.
 
 Rig UI Script :guilabel:`auto`
-   This option specifies the generated script datablock to overwrite when re-generating, and
+   This option specifies the generated script data block to overwrite when re-generating, and
    works in the same manner as *Target Rig*.
 
    The script controls the UI in the 3D Viewport that allows conveniently switching visible

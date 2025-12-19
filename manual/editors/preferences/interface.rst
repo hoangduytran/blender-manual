@@ -59,6 +59,7 @@ Tooltips
       When enabled, a tooltip will appear when your mouse pointer is over a control.
       This tip explains the function of what is under the pointer,
       shows the associated hotkey (if any).
+      When disabled, you can still force the tooltip display by holding :kbd:`Alt` then hovering the control.
 
    .. _bpy.types.PreferencesView.show_tooltips_python:
 
@@ -81,9 +82,24 @@ Region Overlap
    This makes regions overlap the viewport. It means that the *Toolbar* and *Sidebar* regions,
    will be displayed overlapping the main area.
 
+.. _bpy.types.PreferencesView.show_area_handle:
+
+Show -- Corner Handles:
+   Displays small handles in the corners of each :doc:`/interface/window_system/areas`.
+   These can be used to split or join areas with a click-and-drag action.
+
+   This option is especially useful on touch-enabled devices,
+   where precise right-click or edge selection is more difficult.
+
+.. _bpy.types.PreferencesView.show_number_arrows:
+
+Show -- Numeric Input Arrows
+   - When enabled always display arrows in numeric input fields for increasing or decreasing values.
+   - When disabled, arrows are shown when hovering over the property.
+
 .. _bpy.types.PreferencesView.show_navigate_ui:
 
-Navigation Controls
+Show -- Navigation Controls
    Show navigation controls at top right of the area.
    This impacts the 3D Viewport as well as image spaces.
 
@@ -173,6 +189,14 @@ File Browser
    :Maximize Area: A new File Browser editor is opened as a temporary window in full screen mode.
    :New Window: A new File Browser editor is opened as a regularly sized temporary window.
 
+.. _bpy.types.PreferencesView.preferences_display_type:
+
+Preferences
+   Controls how the :ref:`User Preferences <bpy.ops.screen.userpref_show>` editor is displayed when opened.
+
+   :Maximize Area: Opens the Preferences as a temporary full-screen editor within the current window.
+   :New Window: Opens the Preferences in a new, separate window of regular size.
+
 
 .. _prefs-interface-status_bar:
 
@@ -232,6 +256,17 @@ Translate
       Translates the names of new data-blocks.
 
 
+Accessibility
+=============
+
+.. _bpy.types.PreferencesView.use_reduce_motion:
+
+Reduce Motion
+   Avoids interface animations and motion effects.
+   This option helps reduce visual distractions and can improve comfort for
+   users sensitive to motion or those who prefer a more static interface.
+
+
 Text Rendering
 ==============
 
@@ -266,6 +301,12 @@ Mono-space Font
 
 Menus
 =====
+
+.. _bpy.types.PreferencesView.menu_close_leave:
+
+Close Menu on Leave
+   Close menus when the mouse is moved out of the region.
+
 
 .. _bpy.types.PreferencesView.use_mouse_over_open:
 

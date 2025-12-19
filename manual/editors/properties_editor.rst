@@ -17,7 +17,7 @@ It provides access to a wide range of context-sensitive properties used througho
 Navigation Bar
 ==============
 
-Properties are grouped into tabs, shown as a vertical list of icons in the Navigation Bar region the editor.
+Properties are grouped into tabs, shown as a vertical list of icons in the Navigation Bar region of the editor.
 
 The Navigation Bar can be flipped to the left or right of the editor by :kbd:`RMB` on the region and selecting
 :menuselection:`Navigation Bar --> Flip to Left/Right`.
@@ -113,6 +113,29 @@ Tabs related to an object's visual appearance. Shown only when relevant.
 - :doc:`Texture </render/materials/legacy_textures/index>`
 
 
+Strips
+------
+
+Tabs related to video editing strips. Shown only when relevant.
+
+- :doc:`Strip Modifiers </video_editing/edit/montage/strip_modifiers>`
+- :doc:`Strip Properties </video_editing/edit/montage/strips/strip_properties>`
+
+
+.. _bpy.types.SpaceProperties.show_properties:
+
+Visible Tabs
+------------
+
+Allows hiding specific tabs in the Properties editor.
+
+This is especially useful for tailoring the editor to specific workflows. For example:
+- In the *Video Editing* workspace, you may hide object and shading tabs to reduce clutter.
+- In the *Modeling* workspace, you may hide strip-related tabs that are not relevant.
+
+Hidden tabs can be restored at any time using this filter list.
+
+
 Header
 ======
 
@@ -153,14 +176,3 @@ Sync with Outliner
    :Always: Always follow the clicked Outliner icon.
    :Never: Ignore Outliner interaction.
    :Auto: Only follow when the Properties editor shares a border with the Outliner.
-
-.. _bpy.types.SpaceProperties.show_properties:
-
-Visible Tabs
-   Allows hiding specific tabs in the Properties editor.
-
-   This is especially useful for tailoring the editor to specific workflows. For example:
-   - In the *Video Editing* workspace, you may hide object and shading tabs to reduce clutter.
-   - In the *Modeling* workspace, you may hide strip-related tabs that are not relevant.
-
-   Hidden tabs can be restored at any time using this filter list.

@@ -371,10 +371,6 @@ the material itself.
 This effect is commonly seen on e.g. oil films, soap bubbles or glass coatings. While its
 influence is more obvious in specular highlights, it also affects transmission.
 
-.. note::
-   Thin-film interference is currently only applied to dielectric materials. Support for
-   thin films on top of Metallic is planned in the future.
-
 Thickness
    The thickness of the film in nanometers. A value of 0 disables the simulation.
    The interference effect is strongest between roughly 100 and 1000 nanometers, since this is

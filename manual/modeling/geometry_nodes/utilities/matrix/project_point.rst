@@ -26,12 +26,6 @@ Transformation
    The projection matrix.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

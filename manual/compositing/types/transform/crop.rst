@@ -31,12 +31,6 @@ Alpha Crop
    Sets the areas outside of the crop region to be transparent instead of actually cropping the size of the image.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

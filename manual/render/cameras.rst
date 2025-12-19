@@ -408,6 +408,18 @@ Show
    Name
       Toggle name display on and off in camera view.
 
+.. _bpy.types.Camera.show_passepartout:
+.. _bpy.types.Camera.passepartout_alpha:
+
+Passepartout
+   This option darkens the area outside of the camera's field of view.
+   The opacity of the passepartout can be adjusted using the value slider.
+
+   .. tip::
+
+      If the Passepartout is fully opaque, Blender will make optimizations
+      to speed up the rendering of areas inside the camera view.
+
 
 .. _bpy.types.Camera.show_composition:
 
@@ -441,14 +453,8 @@ Harmony
    Triangle B
       Same as A, but with the opposite corners.
 
-.. _bpy.types.Camera.show_passepartout:
-.. _bpy.types.Camera.passepartout_alpha:
+.. _bpy.types.Camera.composition_guide_color:
 
-Passepartout
-   This option darkens the area outside of the camera's field of view.
-   The opacity of the passepartout can be adjusted using the value slider.
-
-   .. tip::
-
-      If the Passepartout is fully opaque, Blender will make optimizations
-      to speed up the rendering of areas inside the camera view.
+Color
+   Sets the display color and opacity (alpha) used for all composition guide overlays.
+   Useful for adjusting visibility depending on the brightness or contrast of the underlying shot.

@@ -20,7 +20,6 @@ Markers can be created and edited in the following editors:
 - :doc:`Dope Sheet </editors/dope_sheet/introduction>`
 - :doc:`NLA Editor </editors/nla/index>`
 - :doc:`Video Sequence Editor </video_editing/index>`
-- :doc:`Timeline </editors/timeline>`
 
 .. note::
 
@@ -108,8 +107,7 @@ and press :kbd:`M`.
 Pose Markers
 ------------
 
-If *Show Pose Markers* is checked, a pose marker and
-a new pose in the :ref:`Old Pose Library <pose-library-old>` are added.
+If :ref:`bpy.types.SpaceDopeSheetEditor.show_pose_markers` is enabled, a pose marker is added.
 
 
 .. _bpy.ops.marker.select:
@@ -296,12 +294,11 @@ Bind Camera to Markers
 
 .. reference::
 
-   :Editor:    Timeline
+   :Mode:      All modes
    :Menu:      :menuselection:`Marker --> Bind Camera to Markers`
    :Shortcut:  :kbd:`Ctrl-B`
 
-*Bind Camera to Markers* is a special operator only available in the *Timeline*.
-The operator allows markers to be used to set the active object as the active camera.
+*Bind Camera to Markers* allows markers to be used to set the active object as the active camera.
 
 To use this operator, select the object to become the active camera
 and select a marker to bind the active camera to.

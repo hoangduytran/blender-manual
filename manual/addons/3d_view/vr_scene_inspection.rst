@@ -78,6 +78,8 @@ Controller Style
    Preferred visualization of VR motion controllers.
 Clip Start/End
    Clipping values of the VR view, :ref:`as in the 3D Viewport <bpy.types.SpaceView3D.clip_start>`.
+Fly Speed
+   Movement speed of camera when flying around the scene.
 
 
 Landmarks
@@ -171,6 +173,28 @@ Show Landmarks
    Draw `landmark <Landmarks_>`_ indicators in the current 3D Viewport.
 Mirror VR Session
    Make the current 3D Viewport follow the perspective of the VR view.
+
+
+Preferences
+===========
+
+.. figure:: /images/addons_3d-view_vr-scene-inspection_preferences.jpg
+   :align: right
+   :width: 220px
+
+Located in :menuselection:`Preferences --> Navigation --> VR Navigation`, these preferences only appear
+when this add-on is enabled.
+
+Vignette Intensity
+   Adjusts the strength of the vignette effect applied during camera movement.
+Turn Speed
+   Controls how quickly the camera rotates during continuous turning.
+Turn Amount
+   Sets the rotation angle applied per step when using snap turning.
+Snap Turn
+   Toggles between smooth (continuous) and snap (discrete) camera turning.
+Invert Rotation
+   Reverses the direction of camera rotation controls.
 
 
 .. reference::

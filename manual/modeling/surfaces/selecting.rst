@@ -8,8 +8,8 @@ There are no edges, faces, or Bézier handles.
 
 .. seealso::
 
-   :doc:`/interface/selecting` for general information about selecting items
-   in Blender.
+   :doc:`/interface/selecting` for general information about selecting items in Blender.
+
 
 Select All
 ==========
@@ -162,6 +162,7 @@ surface as) a control point that's already selected.
 Alternatively, press :kbd:`L` to select the control point under the mouse cursor and all
 control points that are linked to it.
 
+
 Select Similar
 ==============
 
@@ -177,29 +178,25 @@ The :ref:`bpy.ops.screen.redo_last` panel provides options for this:
 Type
    Which property to compare for determining similarity.
 
-   Type
-      This option does not apply for Surfaces because, unlike Curves, they only support
-      one handle type.
-   Radius
+   :Type:
+      This option does not apply for Surfaces because, unlike Curves, they only support one handle type.
+   :Radius:
       Selects control points that have a similar Radius value.
       See :doc:`/modeling/surfaces/properties/transform_panel`.
-   Weight
+   :Weight:
       Selects control points that have a similar Weight value.
       See :doc:`/modeling/surfaces/properties/transform_panel`.
-   Direction
-      Selects control points that have a similar normal vector.
+   :Direction: Selects control points that have a similar normal vector.
 
 Compare
    How to compare unselected control points to selected ones.
 
-   Equal
+   :Equal:
       Select control points whose property is equal to that of a selected point.
-
-   Greater
+   :Greater:
       Select control points whose property is greater than or equal to the smallest property
       among the selected points.
-
-   Less
+   :Less:
       Select control points whose property is less than or equal to the greatest property
       among the selected points.
 Threshold

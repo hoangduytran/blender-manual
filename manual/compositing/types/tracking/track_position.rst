@@ -15,7 +15,13 @@ The *Track Position node* is used to return information about a tracking marker 
 Inputs
 ======
 
-This node has no inputs.
+Mode
+   Which marker position to use for output.
+
+   :Absolute: Outputs an absolute position of a marker.
+   :Relative Start: Outputs the positions of a marker relative to the first marker of a track.
+   :Relative Frame: Outputs the positions of a marker relative to the markers of the given *Frame*.
+   :Absolute Frame: Outputs the absolute positions of a marker at the given *Frame*.
 
 
 Properties
@@ -27,16 +33,8 @@ Movie Clip
 Tracking Object
    Camera object to get track information from.
 
-Track Name
+Track
    The name of the track to get track information from.
-
-Position
-   Which marker position to use for output.
-
-   :Absolute: Outputs an absolute position of a marker.
-   :Relative Start: Outputs the positions of a marker relative to the first marker of a track.
-   :Relative Frame: Outputs the positions of a marker relative to the markers of the given *Frame*.
-   :Absolute Frame: Outputs the absolute positions of a marker at the given *Frame*.
 
 
 Outputs

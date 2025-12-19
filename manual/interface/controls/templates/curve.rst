@@ -11,10 +11,10 @@ Curve Widget
 
 This widget is used to edit two types of curves:
 
-- *Shape* curves that simply describe a two-dimensional shape.
+- *Profile* curves that simply describe a two-dimensional shape.
 - *Mapping* curves that map an input value on the X axis to an output value on the Y axis.
 
-The available options are slightly different depending on this type. Also, unlike shape curves,
+The available options are slightly different depending on this type. Also, unlike profile curves,
 mapping curves can't have overhang: each X value must correspond to exactly one Y value.
 
 Control Points
@@ -41,7 +41,7 @@ Controls
    Zoom out to show fewer details and view the curve as a whole.
    You cannot zoom out further than the clipping region (see *Clipping* below).
 
-:bl-icon:`arrow_leftright` Reverse Path :guilabel:`Shape Curves`
+:bl-icon:`arrow_leftright` Reverse Path :guilabel:`Profile Curves`
    Mirror the curve around the diagonal.
 
 :bl-icon:`clipuv_hlt` Clipping Options :guilabel:`Mapping Curves`
@@ -86,10 +86,10 @@ Handle Type
       Results in a smooth curve without the need to manually set up handles.
    :bl-icon:`handle_vector` Vector Handle
       Results in straight lines and a sharp corner.
-   :bl-icon:`handle_free` Free Handle :guilabel:`Shape Curves`
+   :bl-icon:`handle_free` Free Handle :guilabel:`Profile Curves`
       Shows freely movable Bézier handles that are independent of each other.
       This can result in a sharp corner at the control point.
-   :bl-icon:`handle_aligned` Aligned Free Handles :guilabel:`Shape Curves`
+   :bl-icon:`handle_aligned` Aligned Free Handles :guilabel:`Profile Curves`
       Shows freely movable Bézier handles that are locked together to always point in opposite directions.
       This ensures the curve is always smooth at the control point.
    :bl-icon:`handle_autoclamped` Auto Clamped Handle :guilabel:`Mapping Curves`
@@ -116,3 +116,60 @@ X, Y
 Copy/Paste :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
    The whole curve can be copied from one Curve Widget to another by hovering over
    it and pressing :kbd:`Ctrl-C`, :kbd:`Ctrl-V`.
+
+Presets :guilabel:`Brush Curve Widgets Only`
+   A number of preset curves that the curve can be set to.
+   The exact shape depends on whether the default curve for the property has a positive
+   or negative slope.
+
+   .. list-table:: Custom Preset Types with Positive Slope.
+
+      * - .. figure:: /images/curve_smooth_positive_preset.png
+
+               Smooth
+
+        - .. figure:: /images/curve_round_positive_preset.png
+
+               Round
+
+        - .. figure:: /images/curve_root_positive_preset.png
+
+               Root
+
+      * - .. figure:: /images/curve_sharp_positive_preset.png
+
+               Sharp
+
+        - .. figure:: /images/curve_linear_positive_preset.png
+
+               Linear
+
+        - .. figure:: /images/curve_constant_preset.png
+
+               Constant
+
+   .. list-table:: Custom Preset Types with Negative Slope.
+
+      * - .. figure:: /images/curve_smooth_negative_preset.png
+
+               Smooth
+
+        - .. figure:: /images/curve_round_negative_preset.png
+
+               Round
+
+        - .. figure:: /images/curve_root_negative_preset.png
+
+               Root
+
+      * - .. figure:: /images/curve_sharp_negative_preset.png
+
+               Sharp
+
+        - .. figure:: /images/curve_linear_negative_preset.png
+
+               Linear
+
+        - .. figure:: /images/curve_constant_preset.png
+
+               Constant

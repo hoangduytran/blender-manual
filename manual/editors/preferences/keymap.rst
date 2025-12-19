@@ -96,7 +96,7 @@ Spacebar Action
    Controls the action of :kbd:`Spacebar`.
 
    :Play:
-      Starts/stops playing through the :doc:`Timeline </editors/timeline>`.
+      Starts/stops :doc:`animation playback </animation/index>`.
       This option is good for animation or video editing work.
    :Tools:
       Opens the Toolbar underneath the cursor to quickly change the active tool.
@@ -157,9 +157,6 @@ Select All Toggles
 Region Toggle Pie
    :kbd:`N` opens a :ref:`pie menu <bpy.types.UIPieMenu>` to toggle :doc:`/interface/window_system/regions`
    rather than always toggling the Sidebar region.
-
-   This option is only available if the :ref:`Developer Extras <bpy.types.PreferencesView.show_developer_ui>`
-   are enabled.
 
 
 3D Viewport

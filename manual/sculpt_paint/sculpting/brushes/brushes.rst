@@ -276,12 +276,12 @@ Paint Soft
 Paint Hard Pressure
    Brush Type: :doc:`paint`
 
-   A hard round falloff with pressure sensitivity for the brush radius.
+   A hard round falloff with pressure sensitivity for the brush size.
 
 Paint Soft Pressure
    Brush Type: :doc:`paint`
 
-   A soft round falloff with pressure sensitivity for both radius and strength.
+   A soft round falloff with pressure sensitivity for both size and strength.
 
 Paint Square
    Brush Type: :doc:`paint`
@@ -323,6 +323,16 @@ Sharpen
    Brush Type: :doc:`smear`
 
    Pinches the colors inwards to create sharp edges or points.
+
+Paint Pixel Art
+   Brush Type: :doc:`paint`
+
+   Paint specific pixels (Only supported in the Image Editor).
+
+Erase Pixel Art
+   Brush Type: :doc:`paint`
+
+   Erase pixels in the alpha channel of the texture (Only supported in the Image Editor).
 
 
 Simulation Brushes

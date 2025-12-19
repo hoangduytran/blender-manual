@@ -34,11 +34,15 @@ Margin
 Rotate
    Allow Rotating islands for best fit.
 
+Method
+   The method to use when considering the shape of each island.
 
-Properties
-==========
-
-This node has no properties.
+   :Bounding Box: Uses the simple bounding box of the island.
+   :Convex Hull):
+      Takes into account the boundary (Convex Hull) of the island.
+      This method will not place islands inside holes.
+   :Exact Shape:
+      Use the complete shape of the island, including filling any holes or concave regions around the island.
 
 
 Output

@@ -30,6 +30,11 @@ Inputs
 
 Image
    Standard color input.
+Type
+   :Undistort:
+      Used to undistort the image received, and is usually used for the raw distorted movie clip.
+   :Distort:
+      Used to distort the image received, and is usually used for rendered images.
 
 
 Properties
@@ -39,11 +44,6 @@ Movie Clip
    Used to select the movie clip whose distortion is to be used.
    This can be useful if more than one movie clips are present, each having a different distortion setting.
    For controls see :ref:`ui-data-block`.
-Distortion Method
-   :Undistort:
-      Used to undistort the image received, and is usually used for the raw distorted movie clip.
-   :Distort:
-      Used to distort the image received, and is usually used for rendered images.
 
 
 Outputs

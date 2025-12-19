@@ -27,7 +27,6 @@ Node Types
    :maxdepth: 3
    :titlesonly:
 
-   attribute/index.rst
    input/index.rst
    output/index.rst
 
@@ -37,6 +36,7 @@ Node Types
    :maxdepth: 3
    :titlesonly:
 
+   attribute/index.rst
    geometry/index.rst
 
 -----
@@ -66,7 +66,7 @@ Node Types
    :maxdepth: 3
    :titlesonly:
 
-   material/index.rst
+   color/index.rst
    texture/index.rst
    utilities/index.rst
 
@@ -84,6 +84,7 @@ Node Types
    :maxdepth: 3
    :titlesonly:
 
+   generate/index.rst
    hair/index.rst
    normals/index.rst
 

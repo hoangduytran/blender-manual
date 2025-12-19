@@ -18,11 +18,6 @@ Inputs
 
 Image
    Standard color input.
-
-
-Properties
-==========
-
 Channel
    Selects which color values are used to calculate analytics.
 

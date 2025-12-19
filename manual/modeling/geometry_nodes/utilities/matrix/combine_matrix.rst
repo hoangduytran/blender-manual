@@ -19,12 +19,6 @@ The inputs of this node are split into panels for each column of the matrix.
 Each panel, has four value inputs for the four rows of the matrix.
 
 
-Properties
-==========
-
-This node has no properties.
-
-
 Outputs
 =======
 

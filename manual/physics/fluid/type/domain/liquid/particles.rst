@@ -5,8 +5,10 @@ Particles
 
 .. note::
 
-   Enabling a secondary particle type will also create a particle system for that type of particles.
+   Enabling a secondary particle type will also create a particle system for that type of particle.
    Disabling a particle type will delete this particle system including its settings.
+   These particle systems are not part of the mesh generation.
+   They will need to have geometry assigned in order to be rendered.  
 
 .. _bpy.types.FluidDomainSettings.use_spray_particles:
 
