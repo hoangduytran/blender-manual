@@ -233,6 +233,15 @@ Profile :guilabel:`ProRes`
 Output Quality
    These are preset `Rate`_.
 
+.. _bpy.types.FFmpegSettings.custom_constant_rate_factor:
+
+CRF :guilabel:`Custom Quality`
+   Constant Rate Factor (CRF). A smaller CRF results in better video quality but larger file size.
+   The range of allowed CRF values is dependent on the codec.
+   They are: 0-51 for AV1, H.264 and H.265/HEVC; 0-63 for WebP/VP9 and 1-31 for MPEG-4/DivX.
+   CRF values outside the allowed range are clamped to the nearest allowed value.
+   A CRF value of 0 results in lossless encoding.
+
 .. _bpy.types.FFmpegSettings.ffmpeg_preset:
 
 Encoding Speed
