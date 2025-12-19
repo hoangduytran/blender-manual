@@ -28,7 +28,7 @@ Phi
    The azimuthal angle (horizontal rotation) around the Z axis.
 
 Theta
-   The polar angle (vertical inclination) from the Z axis.
+   The polar angle (vertical inclination) from the ground plane.
 
 
 Outputs
