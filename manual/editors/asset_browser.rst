@@ -60,19 +60,6 @@ Import Method
 
       Since the file now has its own copy of the asset, later changes to
       the asset file will not be reflected in the file it's appended from.
-   :Append (Reuse Data):
-      *Specific to the Asset Browser*.
-
-      The first time an asset is used, it will be appended, including its dependencies,
-      just as described previously. However, Blender will keep track of where it originated,
-      and the next time the asset is used, as much data as possible will be reused.
-      Dragging a material into the scene three times will only load it once,
-      and just assign the same material three times.
-      Dragging an object into the scene three times will create three copies of the object,
-      but all copies will share their mesh data, materials, etc.
-
-      Since the file now has its own copy of the asset, later changes to
-      the asset file will not be reflected in the file it's appended from.
    :Pack:
       Imports the asset as *linked* data and immediately packs it into the current blend-file.
       This ensures that the asset remains available even if the original library data is modified
