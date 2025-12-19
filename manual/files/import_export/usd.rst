@@ -574,6 +574,18 @@ USDZ Texture Downsampling
          The size in pixels of the *Custom* downsampling.
 
 
+Accessibility
+-------------
+
+Label
+   The accessibility label to use for the exported stage's default prim.
+
+Description
+   The accessibility description to use for the exported stage's default prim.
+
+See :ref:`USD UI Accessibility <usd-accessibility>` for further details.
+
+
 Experimental
 ------------
 
@@ -711,3 +723,33 @@ Only the types natively supported by Blender's
 .. note::
    The USD ``float4`` data type has no direct Blender equivalent and will not be treated as a Blender ``Color`` or
    ``Quaternion``.
+
+
+.. _usd-accessibility:
+
+USD UI Accessibility
+====================
+
+Blender supports authoring and loading the `UsdUIAccessibilityAPI schema <https://openusd.org/release/api/class_usd_u_i_accessibility_a_p_i.html#details>`__
+on all supported data-block types that allow :doc:`/files/custom_properties`.
+This API describes accessibility information for a USD primitive that may be surfaced to a given runtime's
+accessibility frameworks (if present).
+
+In addition to the accessibility export option described above that covers the root prim, per-object accessibility
+information can be set by following these steps:
+
+- Add the following new String Properties to the object data-block:
+
+  - Required: ``accessibility:<namespace>:label`` and ``accessibility:<namespace>:description``
+  - Optional: ``accessibility:<namespace>:priority``
+
+The ``<namespace>`` may be any valid USD primvar identifier including ``default``, which is the recommended namespace
+to use as a convention. The value of ``priority`` may be one of ``low, standard, high``.
+
+It is highly encouraged to set the root prim's accessibility fields for any long-lived USD document that might
+be served to a broad set of software and people. For example, when uploading to an asset marketplace etc.
+
+.. admonition:: Implementation Caveats
+   :class: important
+
+   Blender does not support time-varying accessibility schemas since custom String properties are non-animatable.
