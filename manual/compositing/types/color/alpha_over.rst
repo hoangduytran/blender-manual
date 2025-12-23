@@ -60,8 +60,7 @@ The example below shows how different alpha compositing types affect the blendin
 Four image layers are assembled using the *Disjoint*, *Conjoint*, and *Over* methods
 to create depth between overlapping elements.
 
-.. figure:: /images/compositing_types_converter_color-ramp_create-alpha-mask.png
-   :width: 600px
+.. figure:: /images/compositing_types_color_alpha-over_example2.webp
 
    Assembling a composite image using Alpha Over.
 
