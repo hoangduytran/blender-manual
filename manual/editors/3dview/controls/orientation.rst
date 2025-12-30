@@ -91,6 +91,7 @@ Examples
 --------
 
 .. list-table:: Cube with the rotation gizmo active in multiple transform orientations.
+   :widths: 1 1 1
 
    * - .. figure:: /images/editors_3dview_controls_orientation_manipulator-global-1.png
 

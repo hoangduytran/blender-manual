@@ -37,13 +37,13 @@ Edge Selection Mode:
       Selects all edges that have a similar :ref:`Crease <modeling-edges-crease-subdivision>`
       value as those already selected.
    Bevel
-      Selects all edges that have the same *Bevel Weight* as those already selected.
+      Selects all edges that have the same :ref:`Bevel Weight <modeling-edges-bevel-weight>`
+      as those already selected.
    Seam
-      Selects all edges that have the same *Seam* state as those already selected.
-      *Seam* is a mark used in :ref:`UV texturing <editors-uv-index>`.
+      Selects all edges that have the same :doc:`UV Seam </modeling/meshes/uv/unwrapping/seams>`
+      state as those already selected.
    Sharpness
-      Selects all edges that have the same *Sharp* state as those already selected.
-      *Sharp* is a mark used by the :doc:`Edge Split Modifier </modeling/modifiers/generate/edge_split>`.
+      Selects all edges that have the same :ref:`Sharp <bpy.ops.mesh.mark_sharp>` state as those already selected.
 
 Face Selection Mode:
    Material

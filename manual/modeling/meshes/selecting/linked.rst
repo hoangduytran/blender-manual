@@ -45,20 +45,20 @@ Selects all geometry along the shortest path from
 the active vertex, edge, or face to the one which was selected.
 
 Edge Tag (in Edge select mode only)
-   This select button indicates what should be done when selecting a vertex path with :kbd:`Ctrl-LMB`:
+   What to do with the selected edges:
 
    Select
-      Just selects all the edges in the path.
+      Simply select the edges.
    Tag Seam
-      Marks all edges in the path as seams for UV unwrapping.
+      Mark the edges as :doc:`UV Seams </modeling/meshes/uv/unwrapping/seams>`.
    Tag Sharp
-      Marks all edges in the path as sharp for the Edge Split Modifier.
+      Mark the edges as :ref:`Sharp <bpy.ops.mesh.mark_sharp>`.
    Tag Crease
-      Marks all edges in the path as creases for the Subdivision Surface Modifier, with weight 1.0.
+      Give the edges a :ref:`Crease <modeling-edges-crease-subdivision>` value of 1.0.
    Tag Bevel
-      Gives bevel weight 1.0 (for the Bevel Modifier) to all edges in the path.
+      Give the edges a :ref:`Bevel Weight <modeling-edges-bevel-weight>` of 1.0.
    Tag Freestyle Edge Mark
-      Marks all edges in the path as Freestyle edges.
+      Mark the edges as :ref:`Freestyle <freestyle-edge-marks>` edges.
 
 Face Stepping
    Supports diagonal paths for vertices and faces, and

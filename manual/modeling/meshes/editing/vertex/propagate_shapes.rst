@@ -9,8 +9,8 @@ Propagate to Shapes
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Vertex --> Propagate to Shapes`
 
-The *Propagate to Shapes* operator applies the current positions of the selected vertices
-to all other :doc:`shape keys </animation/shape_keys/index>` on the object.
+Applies the current positions of the selected vertices to all other
+:doc:`shape keys </animation/shape_keys/introduction>` on the object.
 This allows edits made in *Edit Mode* to be consistently transferred across every shape key.
 
 This is useful for:

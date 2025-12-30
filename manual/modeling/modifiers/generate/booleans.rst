@@ -68,13 +68,12 @@ Solver
    Algorithm used to perform the Boolean operation.
 
    :Float:
-      Uses a simple solver which offers the good performance;
-      however, this solver lacks support for overlapping geometry.
+      Uses a simple solver which offers good performance but lacks support for overlapping geometry.
    :Exact:
       Uses a complex solver which offers the best results and has full
-      support for overlapping geometry; however, this solver is much slower.
+      support for overlapping geometry, but is much slower.
    :Manifold:
-      Uses a solver that is usually fastest but only works on :term:`Manifold` meshes,
+      Uses a solver that is usually fastest but only works on :term:`Manifold` meshes
       (plus the special case of Difference with a plane).
 
 

@@ -15,3 +15,4 @@
    randomize.rst
    shrink-fatten.rst
    skin_resize.rst
+   texture_space.rst

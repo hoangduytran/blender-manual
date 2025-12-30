@@ -77,24 +77,21 @@ if you have the *Grave Accent / Tilde Action* in the
    *Scale* and *Transform* tools), the Move/Rotate/Scale checkboxes won't have any effect.
 
 .. list-table::
+   :widths: 1 1 1 1
 
    * - .. figure:: /images/editors_3dview_display_gizmo_options-translate.png
-          :width: 320px
 
           Move.
 
      - .. figure:: /images/editors_3dview_display_gizmo_options-rotate.png
-          :width: 320px
 
           Rotate.
 
      - .. figure:: /images/editors_3dview_display_gizmo_options-scale.png
-          :width: 320px
 
           Scale.
 
      - .. figure:: /images/editors_3dview_display_gizmo_options-all.png
-          :width: 320px
 
           Combination.
 
