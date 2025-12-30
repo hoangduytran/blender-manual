@@ -6,7 +6,7 @@ Copy Rotation Constraint
 ************************
 
 The *Copy Rotation* constraint forces an object or bone to match the rotation of a target.
-
+As a side effect, it also removes shearing.
 
 Options
 =======
@@ -16,8 +16,7 @@ Options
    Copy Rotation constraint.
 
 :ref:`Target <rigging-constraints-interface-common-target>`
-   The object or bone whose rotation to copy. If this target has a sheared transformation,
-   this is first undone.
+   The object or bone whose rotation to copy.
 
 Order
    The :term:`Euler` order to use during the copy operation.
