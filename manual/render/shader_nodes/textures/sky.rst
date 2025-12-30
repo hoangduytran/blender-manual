@@ -102,7 +102,6 @@ Color
 Examples
 ========
 
-.. figure:: /images/render_shader-nodes_textures_sky_example.jpg
-   :width: 200px
+.. figure:: /images/render_shader-nodes_textures_sky_example.webp
 
-   Example of Sky Texture.
+   Example of lighting with Sky Texture.
