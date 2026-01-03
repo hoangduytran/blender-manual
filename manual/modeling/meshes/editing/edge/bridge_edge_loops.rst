@@ -17,12 +17,6 @@ Deletes any selected faces, then creates new faces between two or more selected 
    In Blender terminology, an *edge loop* is any chain of connected edges --
    it doesn't have to be a closed loop. See :ref:`bpy.ops.mesh.loop_select`.
 
-.. seealso::
-
-   :doc:`/modeling/meshes/editing/face/grid_fill` offers manual control over the path of
-   the generated faces. However, unlike *Bridge Edge Loops* which can create both tubes
-   (from closed edge loops) and sheets (from open edge chains), *Grid Fill* can only create sheets.
-
 Options
 =======
 
@@ -83,7 +77,6 @@ Profile Shape
    How to vary the thickness of each tube segment from one original edge loop to the next.
    See the :ref:`Proportional Editing <bpy.types.ToolSettings.proportional_edit_falloff>` page
    for a description of each option.
-
 
 Examples
 ========
@@ -157,3 +150,7 @@ Using *Blend Surface* interpolation to connect textured surfaces:
           :width: 320px
 
           Bridge result.
+
+.. seealso::
+
+   :doc:`/modeling/meshes/editing/face/grid_fill`
