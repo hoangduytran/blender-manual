@@ -155,6 +155,7 @@ Seed
    Random :term:`Seed` to use with the solver;
    different seeds will cause the remesher to generate different quad layouts on the mesh.
 
+.. _modeling-meshes-remesh-retopology:
 
 Retopology
 ==========
