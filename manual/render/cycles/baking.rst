@@ -79,6 +79,9 @@ Bake Type
       Bakes ambient occlusion as specified in the World panels. Ignores all lights in the scene.
    :Shadow:
       Bakes shadows and lighting.
+   :Position:
+      Bakes world-space position data into RGB channels.
+      Each pixel encodes the XYZ position of the surface point in the scene, relative to the scene origin.
    :Normal:
       Bakes normals to an RGB image.
    :UV:
