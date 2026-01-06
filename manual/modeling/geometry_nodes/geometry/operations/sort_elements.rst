@@ -24,16 +24,15 @@ Selection
 
 Group ID
    Elements with the same group ID are sorted together.
-   If this is not a field, the node has no effect.
+   If the connected socket is not a field, this socket has no effect.
 
 Sort Weight
    The sorted values used to do the reordering.
-   If this is not a field, the node has no effect.
+   If the connected socket is is not a field, this socket has no effect.
 
 
 Properties
 ==========
-
 
 Domain
    The domain on which the selection and group ID fields are evaluated.
