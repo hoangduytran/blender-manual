@@ -112,8 +112,8 @@ Dissolve Vertices
 Angle Threshold
    If *Dissolve Vertices* is enabled, this option allows preserving vertices at corners,
    only dissolving the ones in flattish areas. Faces are considered to form a corner if
-   the angle between their *normals* exceeds the Angle Threshold -- that is, faces lying
-   in the same plane are considered to have an angle of 0°, not 180°.
+   the angle between their *normals* exceeds the Angle Threshold -- that is, coplanar faces
+   are considered to have an angle of 0°, not 180°.
 Face Split
    Split surrounding faces where possible so that only a triangle in their corner is merged instead of
    the whole face. This reduces the size of the final "hole-filling" faces and can make them less uneven.
@@ -174,8 +174,8 @@ Simplifies the selected geometry by dissolving vertices and edges in flattish ar
 
 Max Angle
    The maximum allowed angle between faces for the surface to be considered flat (and thus eligible
-   for dissolving). Specifically, the angle is measured between face normals, meaning that faces
-   lying in the same plane are considered to have an angle of 0°, not 180°.
+   for dissolving). Specifically, the angle is measured between face normals, meaning that coplanar
+   faces are considered to have an angle of 0°, not 180°.
 All Boundaries
    After dissolving the edges using *Max Angle*, dissolve all vertices at boundary corners --
    specifically, vertices that only have two neighboring edges.
@@ -249,8 +249,8 @@ Dissolves the selected edge loops. This is essentially the same as
 
 .. note::
 
-   In Blender terminology, an "edge loop" is any chain of connected edges.
-   It doesn't have to be a closed loop.
+   In Blender terminology, an *edge loop* is any chain of connected edges --
+   it doesn't have to be a closed loop. See :ref:`bpy.ops.mesh.loop_select`.
 
 .. seealso::
 

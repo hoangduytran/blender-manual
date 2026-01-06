@@ -30,8 +30,8 @@ Options
 =======
 
 Max Face Angle
-   The maximum allowed angle between triangle normals (that is, triangles that lie in the same plane
-   are considered to have an angle of 0°, not 180°). Triangle pairs that exceed this limit will not be merged.
+   The maximum allowed angle between triangle normals (that is, coplanar triangles are considered to have an
+   angle of 0°, not 180°). Triangle pairs that exceed this limit will not be merged.
 Max Shape Angle
    The maximum tolerance for non-rectangular quads. If this is set to 0°, only triangles that form a quad
    with perfect 90° corners will be merged. If set to 40°, corners between 50° and 130° are allowed, and so on.
@@ -46,7 +46,7 @@ Compare UVs
    Don't merge triangles that are disjoint in any UV map.
 Compare Color Attributes
    Don't merge triangles that, for any :ref:`Color Attribute <modeling-meshes-properties-object_data-color-attributes>`,
-   have different colors on the opposing sides of their shared edge.
+   have different colors at their shared edge.
 Compare Seam
    Don't dissolve edges that are marked as :doc:`UV Seams </modeling/meshes/uv/unwrapping/seams>`.
 Compare Sharp

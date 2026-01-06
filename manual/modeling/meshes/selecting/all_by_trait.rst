@@ -17,7 +17,8 @@ Selects the :term:`non-manifold` geometry of a mesh.
 This entry is only available in the *Vertex* and *Edge*
 :ref:`selection modes <bpy.types.ToolSettings.mesh_select_mode>`.
 
-The :ref:`bpy.ops.screen.redo_last` panel offers the following options:
+Options
+-------
 
 Extend
    Adds to the current selection instead of replacing it.
@@ -74,7 +75,7 @@ Faces by Sides
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Select --> Select All by Trait --> Faces by Sides`
 
-Selects all faces that have a certain number of vertices.
+Selects all faces that have a certain number of edges.
 The number can be specified in the :ref:`bpy.ops.screen.redo_last` panel.
 
 .. _bpy.ops.mesh.select_by_pole_count:
@@ -100,6 +101,9 @@ edges/faces connected to them (in edge/face selection mode).
      - .. figure:: /images/modeling_meshes_editing_face_select_by_pole_count_after.webp
 
           After selecting poles.
+
+Options
+-------
 
 Pole Count
    Specifies the number of edges a vertex must (not) have to be considered a pole.
@@ -134,5 +138,5 @@ Ungrouped Vertices
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Select --> Select All by Trait --> Ungrouped Vertices`
 
-Selects all vertices that are not part of
-a :doc:`vertex group </modeling/meshes/properties/vertex_groups/index>`.
+Selects all vertices that are not part of any
+:doc:`vertex group </modeling/meshes/properties/vertex_groups/introduction>`.

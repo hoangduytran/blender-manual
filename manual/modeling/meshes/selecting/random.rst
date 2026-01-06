@@ -9,8 +9,10 @@ Select Random
    :Mode:      Object Mode and Edit Mode
    :Menu:      :menuselection:`Select --> Select Random`
 
-Adds random items to the selection. The :ref:`bpy.ops.screen.redo_last`
-panel offers the following options:
+Adds random items to the selection.
+
+Options
+=======
 
 Ratio
    The ratio of items that should end up selected, e.g. 0.5 to select half of all items

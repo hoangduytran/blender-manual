@@ -16,9 +16,8 @@ Moves the selected edges across their neighboring faces.
 
 .. hint::
 
-   This operator is typically used with what Blender calls an *edge loop* --
-   a chain of connected edges that may or may not form a loop around the mesh.
-   See :ref:`bpy.ops.mesh.loop_select`.
+   Use :ref:`bpy.ops.mesh.loop_select` to quickly select a chain of edges
+   that goes around the mesh.
 
 Usage
 =====
