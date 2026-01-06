@@ -22,7 +22,8 @@ Moves the selected edges across their neighboring faces.
 Usage
 =====
 
-Select one or more edges, press :kbd:`G` twice, move the mouse, and click :kbd:`LMB` to confirm.
+Select one or more edges, press :kbd:`G` twice, move the mouse, and click :kbd:`LMB` to confirm
+(or :kbd:`RMB` to cancel).
 
 By default, the vertices on the selected edges all move by the same *percentage* towards their
 neighbor:
@@ -64,9 +65,11 @@ Factor
    Direction and amount to slide. Values of -1 and 1 move each selected edge fully towards
    one of its neighbors.
 Even :kbd:`E`
-   Makes the selected edges match the shape of their neighbors on one side.
+   By default, each vertex is moved by the same percentage along the length of its edge.
+   Use *Even* to instead move all vertices so they're at the same absolute distance from
+   a neighboring vertex. (The *Factor* input is still a relative number, however.)
 Flipped :kbd:`F`
-   Switches to matching the neighboring edges on the other side.
+   Use the other neighboring vertex when *Even* is active.
 Clamp :kbd:`Alt` or :kbd:`C`
    Prevents the edges from moving outside their neighboring faces.
 Mirror Editing
