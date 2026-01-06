@@ -74,3 +74,7 @@ Mirror Editing
    :ref:`Mesh Symmetry <modeling_meshes_tools-settings_mirror>` needs to be enabled for this to work.
 Correct UVs
    Corrects the UV coordinates of the moved vertices to avoid texture distortion.
+
+.. seealso::
+
+   :doc:`/modeling/meshes/editing/vertex/slide_vertices`
