@@ -4,8 +4,6 @@
 Mirror
 ******
 
-.. _bpy.ops.transform.mirror-interactive:
-
 Interactive Mirror
 ==================
 
@@ -56,7 +54,6 @@ Constraint Axis
    The axis (or axes) to mirror across.
    For example, mirroring across the X axis flips the selection horizontally.
 
-.. _bpy.ops.transform.mirror-global:
 
 X/Y/Z Global
 ============
@@ -75,7 +72,6 @@ Y Global
 Z Global
    Mirrors the selection along the global Z axis.
 
-.. _bpy.ops.transform.mirror-local:
 
 X/Y/Z Local
 ===========
