@@ -21,22 +21,49 @@ Blade
    Cuts a strip in two. Specifically, it first shortens the strip so it only shows the content
    up to the cut point, then adds a second strip that shows the content after the cut point.
 
-   Splitting be done in two different ways:
+   The Blade tool supports both point-based cuts and a box gesture for quickly removing
+   unwanted sections of strips.
+
+   Splitting can be done in the following ways:
 
    - Select the tool in the Toolbar and click a strip at the time point where you want to split it.
-   - Alternatively, select one or more strips, place the Playhead at the time point where you want to
-     split them, and press one of the keyboard shortcuts below.
+   - Click and drag to draw a box. All strip content inside the box is cut out and removed.
 
-   You can choose between the following split types:
+   When using the box gesture, all strip content inside the box area is deleted.
+   With *Remove Gaps* enabled, strips that follow the removed section are moved backward in time
+   to close the gap (ripple behavior).
 
-   Soft :kbd:`K`
-      After splitting, it's still possible to restore the cut content in the new strips
-      by dragging their handles.
+   When rippling, the behavior is applied to all channels that intersect the box area.
+   Channels that are not covered by the box remain unchanged, allowing other strips
+   to keep their relative timing if desired.
 
-   Hard :kbd:`Shift-K`
-      After splitting, it's not possible to restore the cut content by dragging handles.
-      However, you can still restore it by changing the :ref:`Hold Offset <sequencer-duration-hard>`
-      in the Sidebar.
+   If the box starts at the beginning or end of a strip, the amount of ripple is
+   determined by the distance from the strip handle to the time-side of the box.
+   When the box spans gaps between strips, those gaps can also be removed when
+   rippling is enabled.
+
+   .. rubric:: Tool Settings
+
+   Type
+      Split type for point-based cuts.
+
+      :Soft:
+         After splitting, it is still possible to restore the cut content in the new strips
+         by dragging their handles.
+      :Hard:
+         After splitting, it is not possible to restore the cut content by dragging handles.
+         However, the content can still be restored by adjusting the
+         :ref:`Hold Offset <sequencer-duration-hard>` in the Sidebar.
+
+   Remove Gaps
+      In box blade mode, close gaps between cut strips, rippling later strips backward in time.
+      Hold :kbd:`Shift` before dragging to temporarily disable this option and keep the gap.
+
+   Ignore Selection
+      In box blade mode, cut all strips inside the box, even if they are not selected.
+
+   Ignore Connections
+      Do not propagate the cut to connected strips, such as effect strips.
 
 .. _tool-slip:
 
