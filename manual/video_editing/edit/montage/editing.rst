@@ -37,7 +37,9 @@ The drop-down arrow offers the following options:
 
 Snap to
    Frame Range
-      Snap to preview or scene start and end frame.
+      Snaps to the start and end frames of the preview or scene range or
+      when inside a :doc:`Meta Strip </video_editing/edit/montage/meta>`
+      snaps the target to the meta strip's display range.
    Current Frame
       Snaps the transformed selection to the Playhead.
    Hold Offset
