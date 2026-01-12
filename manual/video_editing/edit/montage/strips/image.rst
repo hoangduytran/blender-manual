@@ -4,6 +4,15 @@
 Image/Sequence Strip
 ********************
 
+Image strips are used to add still images or numbered image sequences
+to the Video Sequencer. They are commonly used for slides, graphic overlays,
+background plates, rendered image sequences, or frame-by-frame animation.
+
+A single image strip displays one still image for a specified duration,
+while an image sequence strip plays a series of images over time, with each image
+representing a single frame. Both strip types support transforms, effects,
+color management, and compositing with other strips in the timeline.
+
 .. tip::
 
    Image strips can display thumbnails in the Sequencer overlaid on their strips
