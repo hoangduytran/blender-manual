@@ -14,8 +14,10 @@ Single Image
 ============
 
 When you add a single still image (``*.jpg``, ``*.png``, etc.),
-by default, Blender will create a 25 frame long strip which renders the image throughout the strip's range in the timeline.
-This length can be adjusted by adding images through the "Add Image Strip" operator and changing the property in the sidebar.  
+by default, Blender will create a 25 frame long strip which renders
+the image throughout the strip's range in the timeline.
+This length can be adjusted by adding images through the
+"Add Image Strip" operator and changing the property in the sidebar.
 
 
 Image Sequence
@@ -53,7 +55,8 @@ Add Image Strip
    :Menu:      :menuselection:`Add --> Image/Sequence`
 
 Move Strips
-   Use the mouse to position the strip in the timeline immediately after adding it. If this option is enabled, Start Frame and Channel properties are not displayed since they are determined interactively.
+   Use the mouse to position the strip in the timeline immediately after adding it. If this option is enabled,
+   Start Frame and Channel properties are not displayed since they are determined interactively.
 
 Start Frame
    The :ref:`Start Frame <bpy.types.Strip.frame_start>` to place the left handle of the strip.
@@ -95,18 +98,19 @@ Set View Transform
    Automatically sets an appropriate :ref:`View Transform <bpy.types.ColorManagedViewSettings.view_transform>`
    based on the :term:`Color Space` of the imported media. In most cases, the *Standard* should be used;
    using the wrong transform could result in inaccurate colors or degraded rendering performance.
-   
+
 Import As
-   Determines the method for importing images. 
+   Determines the method for importing images.
 
    :Auto Detect:
-      Filenames that are numbered consecutively (see :ref:`image-formats-open-sequence`) will be imported as a single image sequence with length equal to the number of images. Otherwise, files are imported as separate image strips with the given length. 
-   
+      Filenames that are numbered consecutively (see :ref:`image-formats-open-sequence`)
+      will be imported as a single image sequence with length equal to the number of images.
+      Otherwise, files are imported as separate image strips with the given length.
    :Image Sequence:
-      All images are imported as a single image sequence, no matter their extension or filename. Note that since these files do not have to be numbered, placeholders are not supported for this mode. 
-   
+      All images are imported as a single image sequence, no matter their extension or filename.
+      Note that since these files do not have to be numbered, placeholders are not supported for this mode.
    :Individual Images:
-      Each image is imported as a separate image strip with the given length, placed one after the other. 
+      Each image is imported as a separate image strip with the given length, placed one after the other.
 
 Use Placeholders
    Image sequences can use placeholder files.
@@ -114,14 +118,15 @@ Use Placeholders
    The option detects the frame range of opened images using Blender's frame naming scheme
    (``filename + frame number + .extension``) and makes an image sequence
    with all files in between even if they are missing.
-   This allows you to render an image sequence with a few frames missing, while ensuring that the image sequence strip 
+   This allows you to render an image sequence with a few frames missing, while ensuring that the image sequence strip
    maintains the correct length. Placeholder frames are rendered in pink in the VSE preview.
 
    When the missing frames are rendered out or placed into the folder with the rest of the image sequence,
    you can :ref:`refresh <bpy.ops.sequencer.refresh_all>`
-   the Sequencer and the placeholder frames will be filled in. 
+   the Sequencer and the placeholder frames will be filled in.
    The option is also available when using the *Change Data/File* operator and
    allows you to add more images to the range.
 
 Length
-   Length of added strip. This value is not used when importing image sequences, since their length in frames is determined by the number of images in the sequence.
+   Length of added strip. This value is not used when importing image sequences,
+   since their length in frames is determined by the number of images in the sequence.
