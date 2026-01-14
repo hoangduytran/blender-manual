@@ -316,8 +316,6 @@ This operator is useful for quickly identifying or modifying pinned regions,
 such as when refining UV layouts or controlling unwrap behavior.
 
 
-.. _bpy.ops.uv.select_split:
-
 Select Split
 ============
 

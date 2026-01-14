@@ -1,3 +1,4 @@
+.. _bpy.ops.node.sockets_sync:
 .. --- copy below this line ---
 
 *************
@@ -42,8 +43,6 @@ Closures are created and evaluated with the following nodes:
    closure.rst
    evaluate_closure.rst
 
-
-.. _bpy.ops.node.sockets_sync:
 
 Socket Syncing
 ==============

@@ -19,7 +19,7 @@ meshes (e.g. flat shapes, loose edges).
    :ref:`Select Non-Manifold <bpy.ops.mesh.select_non_manifold>` will highlight the cutting edges
    of mesh objects.
 
-Projection is done along the :ref:`viewing direction </editors/3dview/navigate/align>`.
+Projection is done along the :doc:`viewing direction </editors/3dview/navigate/align>`.
 
 Usage
 =====
