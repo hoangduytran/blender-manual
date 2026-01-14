@@ -30,7 +30,7 @@ Channels
    The color channels to display of the backdrop image.
 Zoom :kbd:`Alt-V` :kbd:`V`
    Sets the size of the backdrop image.
-Offset
+Offset X, Y
    Change the screen space position of the backdrop.
 Move :kbd:`Alt-MMB`
    Changes the position of the backdrop.
