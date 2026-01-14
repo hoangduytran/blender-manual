@@ -270,7 +270,7 @@ Quality
 
 
 .. index:: Video Sequencer Modifiers; Sound Echo Modifier
-.. _bpy.types.PitchEchoModifierModifier:
+.. _bpy.types.EchoModifierModifier:
 
 Echo
 ----
