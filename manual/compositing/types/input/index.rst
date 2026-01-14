@@ -32,6 +32,7 @@ As such, they have no input sockets; only outputs.
    image_coordinates.rst
    mask.rst
    movie_clip.rst
+   sequencer_strip_info.rst
 
 ----------
 
