@@ -155,8 +155,8 @@ Find Node
    :Shortcut:  :kbd:`Ctrl-F`
 
 Opens a search pop-up to quickly locate and select a node within the current node tree.
-Nodes can be searched by name, socket label, or certain socket values such as strings
-and data-block references.
+Nodes can be searched by name, socket label, :ref:`warning messages <bpy.types.GeometryNodeWarning>`,
+or certain socket values such as strings and data-block references.
 
 Once a match is selected, the editor view automatically pans and centers on the found node,
 highlighting it for easy access.
