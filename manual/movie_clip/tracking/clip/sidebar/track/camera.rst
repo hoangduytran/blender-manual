@@ -83,6 +83,7 @@ Coefficients
          Example of radial distortion for positive and negative K coefficients.
 
    .. _bpy.types.MovieTrackingCamera.brown_p:
+   .. _bpy.types.MovieTrackingCamera.nuke_p:
 
    Tangential Distortion Coefficients (P1, P2)
       Works independent and allow to compensate for situations when the sensor is not
