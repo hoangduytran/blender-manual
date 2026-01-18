@@ -297,11 +297,15 @@ By default, painting uses the primary color. The secondary color can be used tem
 painting. The two colors can also be swapped at any time using
 :ref:`Swap Colors <bpy.ops.paint.brush_colors_flip>`.
 
+.. _bpy.ops.paint.sample_color:
+
 .. tip::
 
-   - Press :kbd:`Shift-X` to sample a color from the image and set it as the primary brush color.
-   - In **Texture Paint**, :kbd:`Shift-Ctrl-X` samples the **merged viewport color**, while :kbd:`Shift-X`
-     samples only the currently active texture.
+   - Press :kbd:`Shift-X` to sample a color at the mouse cursor position.
+   - Press :kbd:`Shift-Ctrl-X` to sample the **merged viewport color**,
+     including lighting, shading, and all visible layers.
+
+   The sampled color becomes the primary color of the active Paint brush.
 
 .. _bpy.ops.paint.brush_colors_flip:
 
