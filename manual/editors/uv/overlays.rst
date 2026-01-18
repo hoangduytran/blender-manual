@@ -70,10 +70,15 @@ Geometry
 Display UVs
    Show the active UV map as an overlay in the UV Editor.
 
-.. _bpy.types.SpaceUVEditor.uv_face_opacity:
+   .. _bpy.types.SpaceUVEditor.uv_face_opacity:
 
-UV Face Opacity
-   Adjust the opacity of face fill colors in UV overlays.
+   Faces
+      Adjust the opacity of face fill colors in UV overlays.
+
+   .. _bpy.types.SpaceUVEditor.uv_edge_opacity:
+
+   Edges
+      Adjust the opacity of edge colors in UV overlays.
 
 .. _bpy.types.SpaceUVEditor.uv_opacity:
 
