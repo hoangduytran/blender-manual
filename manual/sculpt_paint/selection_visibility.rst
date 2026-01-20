@@ -40,9 +40,6 @@ The following standard selection operations are supported:
 - :kbd:`Ctrl-L` -- Select linked.
 - :kbd:`Ctrl-NumpadPlus` -- Extend Selection
 - :kbd:`Ctrl-NumpadMinus` -- Shrink Selection
-
-The following only work for face selection and with the selection tool active:
-
 - :kbd:`Alt-LMB` -- Loop Select
 
 
