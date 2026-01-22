@@ -3,7 +3,7 @@ GPU Rendering
 *************
 
 :abbr:`GPU (Graphics Processing Unit)` rendering makes it possible to use your
-graphics card for rendering, instead of the CPU. This can speed up rendering
+graphics card for rendering, instead of the :abbr:`CPU (Central Processing Unit)`. This can speed up rendering
 because modern GPUs are designed to do quite a lot of number crunching.
 On the other hand, they also have some limitations in rendering complex scenes, due to more limited memory,
 and issues with interactivity when using the same graphics card for display and rendering.
@@ -54,17 +54,15 @@ AMD graphics card with the RDNA1 architecture or newer. Both discrete GPUs and A
 
 Supported GPUs include:
 
-- Radeon RX 5000 Series
-- Radeon RX 6000 Series
-- Radeon RX 7000 Series
-- Radeon RX 9000 series
-- Radeon Pro W6000 Series
-- Radeon Pro W7000 Series
+- `Radeon RX 5000 Series <https://en.wikipedia.org/wiki/Radeon_RX_5000_series>`__
+- `Radeon RX 6000 Series <https://en.wikipedia.org/wiki/Radeon_RX_6000_series>`__ and `Radeon Pro W6000 Series <https://en.wikipedia.org/wiki/Radeon_Pro#Radeon_Pro_W6000/W6000M_series>`__
+- `Radeon RX 7000 Series <https://en.wikipedia.org/wiki/Radeon_RX_7000_series>`__ and `Radeon Pro W7000 Series <https://en.wikipedia.org/wiki/Radeon_Pro#Radeon_Pro_W7000_series>`__
+- `Radeon RX 9000 Series <https://en.wikipedia.org/wiki/Radeon_RX_9000_series>`__
 
 Minimum driver versions:
 
 - Windows: Radeon Software 24.9.1 or Radeon PRO Software 24.Q4
-- Linux: Radeon Software 23.40 or ROCm 6.0
+- Linux: Radeon Software 23.40 or `ROCm HIP Runtime 6.0 <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html>`__
 
 Please refer to `AMD's website <https://www.amd.com/en/products/specifications.html>`__ for more
 information about AMD graphics cards and their architectures.
@@ -72,14 +70,15 @@ information about AMD graphics cards and their architectures.
 Hardware ray-tracing support is available with the most recent drivers.
 This can be enabled in the preferences, and is supported on Radeon RX 6000 and newer.
 
-GPU accelerated denoising is available on discrete Radeon RX 6000 and Radeon RX 7000 GPUs.
+GPU accelerated denoising is available on discrete Radeon RX 6000 and newer.
 
 
 oneAPI -- Intel
 ---------------
 
-oneAPI is a computation library that is supported on Windows and Linux and requires a
-Intel® Arc™ graphics card with the Xe HPG architecture.
+oneAPI is a computation library that is supported on Windows and Linux and requires an
+`Intel® Arc™ graphics card <https://en.wikipedia.org/wiki/Intel_Arc>`__
+with the Xe HPG architecture.
 Hardware acceleration for ray-tracing and denoising is supported.
 
 Supported GPUs include:
@@ -102,10 +101,10 @@ GPU accelerated denoising is available on all supported GPUs.
 Metal -- Apple (macOS)
 ----------------------
 
-Metal is supported on Apple computers with Apple Silicon.
+Metal for GPU acceleration is supported on Apple computers with `Apple Silicon <https://en.wikipedia.org/wiki/Apple_silicon>`__.
 macOS 13.0 or newer is required to support all features.
 
-GPU accelerated denoising is available on Apple Silicon.
+GPU accelerated ray-tracing and denoising is available on Apple Silicon.
 
 
 Limitations
