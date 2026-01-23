@@ -1,4 +1,3 @@
-
 .. _properties_data_bone_relations:
 
 *********
@@ -34,7 +33,7 @@ Relative Parenting :guilabel:`Pose Mode Only`
 .. _bpy.types.EditBone.use_connect:
 
 Connected
-   The *Connected* checkbox set the head of the bone to be connected with its parent root.
+   The *Connected* checkbox set the head of the bone to be connected with its parent tail.
 
 
 Transformations
