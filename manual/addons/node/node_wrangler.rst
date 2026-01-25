@@ -510,11 +510,17 @@ Add Image Sequence
 
 .. reference::
 
-   :Menu:      :menuselection:`Add --> Input` for :guilabel:`Compositor`,
-               or :menuselection:`Add --> Texture` for :guilabel:`Shader`
+   :Menu:      :menuselection:`Add --> Input Add Image Sequence` for :guilabel:`Compositor`,
+               or :menuselection:`Add --> Texture Add Image Sequence` for :guilabel:`Shader`
 
 Add an Image Sequence by only selecting one image from a sequence of image files. It will automatically detect
 the length of the sequence and set the node appropriately.
+
+Relative Path
+   Sets the file path to be relative to the currently opened blend-file.
+   See :ref:`files-blend-relative_paths`.
+Start Frame
+   Global starting frame of the movie/sequence, assuming first picture has a #1.
 
 .. reference::
 
