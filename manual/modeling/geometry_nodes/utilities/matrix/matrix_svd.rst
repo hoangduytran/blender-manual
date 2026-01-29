@@ -1,5 +1,5 @@
 .. index:: Geometry Nodes; Matrix Singular Value Decomposition (SVD)
-.. _bpy.types.FunctionNodeMatrixDeterminant:
+.. _bpy.types.FunctionNodeMatrixSVD:
 
 ***********************
 Matrix SVD Node
