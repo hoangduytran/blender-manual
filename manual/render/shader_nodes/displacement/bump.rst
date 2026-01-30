@@ -23,7 +23,9 @@ Distance
 Filter Width
    Filter width in pixels, used to compute the bump mapping direction. For most textures
    the default value of 0.1 enables subpixel filtering for stable results. For stepwise
-   textures a larger filter width can be used to get a bevel like effect on edges
+   textures a larger filter width can be used to get a bevel like effect on edges.
+   
+   This input only supports a fixed value, it can not vary across the surface.
 Height
    Scalar value giving the height offset from the surface at the shading point; this is where you plug in textures.
 Normal
