@@ -42,7 +42,7 @@ Then enable the Sync Scene Time option in the Sequencer Playback Controls region
 This will update the active scene (and therefor what is visible in the 3D Viewport)
 with whatever scene the current scene strip in the Sequencer references.
 
-This setup allows to quicky switch between different scenes just by scrubbing/playing
+This setup allows for quick switching between different scenes just by scrubbing/playing
 the Sequencer timeline.
 
 

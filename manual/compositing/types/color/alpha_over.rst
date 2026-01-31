@@ -38,7 +38,7 @@ Type
       Similar to *Over*, but assumes the foreground overlaps or extends into the background.
       Useful when the foreground is more opaque but not fully opaque.
 Straight Alpha
-   Specifies whether the foreground uses *straight* alpha (unpremultiplied) instead of *premultiplied* alpha.
+   Specifies whether the foreground uses *straight* alpha (non-premultiplied) instead of *premultiplied* alpha.
    Most images in the compositor are premultiplied, so this should remain disabled in most cases.
    Enable it only if the foreground has been explicitly converted to straight alpha form.
 

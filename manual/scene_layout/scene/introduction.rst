@@ -23,7 +23,7 @@ Scenes as Assets
 Scenes can also be marked and used as :doc:`Assets </files/asset_libraries/index>`.
 This allows them to appear in the :doc:`Asset Browser </editors/asset_browser>` for reuse across projects.
 
-Scene assets are a convenient way to manage pre-built scene templates, lighting rigs, or shot setups.
+Scene assets are a convenient way to manage prebuilt scene templates, lighting rigs, or shot setups.
 They store all relevant data (such as cameras, lights, and render settings) and can be dragged into any open Blender
 file.
 
