@@ -104,14 +104,15 @@ Segment Width
    Relative width of each radial segment. May be used to scale textures to fit into each segment.
 
 Segment Rotation
-   Counterclockwise rotation of each segment coordinate system. May be used to align the rotation of the textures of each segment.
+   Counterclockwise rotation of each segment coordinate system. May be used to align the rotation of the textures of
+   each segment.
 
 
 Examples
 ========
 
-The coordinates provided by the *Segment Coordinates* output can be used to tile textures in a radially symmetric manner,
-which is demonstrated by radially tiling a heart texture in the following examples.
+The coordinates provided by the *Segment Coordinates* output can be used to tile textures in a radially symmetric
+manner, which is demonstrated by radially tiling a heart texture in the following examples.
 
 .. list-table::
    :widths: 50 50
@@ -128,10 +129,11 @@ which is demonstrated by radially tiling a heart texture in the following exampl
 
              Node tree for the shader above.
 
-With an increasing number of segments the relative width of each segment decreases, eventually causing the textures to overlap and clip,
-as seen on the example with *Sides* set to 6.5. Apart from that, the non-integer *Sides* value in that example
-results in even more significant clipping due to the irregular segment that is smaller than the regular segments.
-To avoid this clipping, the *Segment Width* output can be used to scale the textures according to the relative width of each segment.
+With an increasing number of segments the relative width of each segment decreases, eventually causing the textures to
+overlap and clip, as seen on the example with *Sides* set to 6.5. Apart from that, the non-integer *Sides* value in
+that example results in even more significant clipping due to the irregular segment that is smaller than the regular
+segments. To avoid this clipping, the *Segment Width* output can be used to scale the textures according to the
+relative width of each segment.
 
 .. list-table::
    :widths: 50 50
@@ -146,10 +148,11 @@ To avoid this clipping, the *Segment Width* output can be used to scale the text
 
 .. figure:: /images/render_shader-nodes_radial_tiling_example_segments-6_5-heart-scaled-nodetree.png
 
-             Node tree for the shader above. The value 0.725 is an arbitrarily chosen texture scaling value and can be tweaked to change the size of the textures.
+             Node tree for the shader above. The value 0.725 is an arbitrarily chosen texture scaling value and can be
+             tweaked to change the size of the textures.
 
-By default the segment coordinate systems are rotated to have their Y-axes intersect with the origin.
-The *Segment Rotation* output can be used to align the rotation of the segment coordinate systems along a global direction instead.
+By default the segment coordinate systems are rotated to have their Y-axes intersect with the origin. The *Segment
+Rotation* output can be used to align the rotation of the segment coordinate systems along a global direction instead.
 
 .. list-table::
    :widths: 50 50
@@ -164,11 +167,13 @@ The *Segment Rotation* output can be used to align the rotation of the segment c
 
 .. figure:: /images/render_shader-nodes_radial_tiling_example_segments-6_5-heart-scaled-rotated-nodetree.png
 
-             Node tree for the shader above. The value -1.571 is an arbitrarily chosen texture rotation value and can be tweaked to change the rotation of the textures.
+             Node tree for the shader above. The value -1.571 is an arbitrarily chosen texture rotation value and can
+             be tweaked to change the rotation of the textures.
 
-When working with textures that span the entire UV space there is usually the issue of visible seams along segment borders even if the original texture is seamless.
-The *Normalize* option eliminates these visible seams by ensuring that the X-coordinates always only cover the entire 0 to 1 range.
-This also introduces a distortion effect, which depending on whether or not it's desirable may need to be mitigated using additional nodes.
+When working with textures that span the entire UV space there is usually the issue of visible seams along segment
+borders even if the original texture is seamless. The *Normalize* option eliminates these visible seams by ensuring
+that the X-coordinates always only cover the entire 0 to 1 range. This also introduces a distortion effect, which
+depending on whether or not it's desirable may need to be mitigated using additional nodes.
 
 .. list-table::
    :widths: 50 50

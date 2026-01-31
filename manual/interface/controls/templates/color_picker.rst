@@ -124,6 +124,7 @@ Notes
 =====
 
 - Blender internally works in *linear color space*; conversions from sRGB or other spaces happen automatically.
-- The color picker displays the color as it appears in the current view transform, but the stored value remains linear.
+- The color picker displays the color as it appears in the current view transform, but the stored value remains
+  linear.
 - For consistent results across renders and display devices, see
   :doc:`Color Management </render/color_management/index>`.

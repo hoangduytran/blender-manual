@@ -67,7 +67,8 @@ Distribution Method
       Places points randomly on the surface.
    :Poisson Disk:
       Uses a Poisson disk distribution to ensure a minimum spacing between points.
-      See :doc:`Distribute Points on Faces </modeling/geometry_nodes/point/distribute_points_on_faces>` for more details.
+      See :doc:`Distribute Points on Faces </modeling/geometry_nodes/point/distribute_points_on_faces>` for more
+      details.
 
 Density
    Controls the number of generated hair curves per surface area.

@@ -67,8 +67,8 @@ Delete Keyframes
 
 There are several methods of removing keyframes:
 
-- In the 3D Viewport or Video Sequencer Preview press :kbd:`Alt-I` to remove keys from selected objects, bones or strips
-  on the current frame.
+- In the 3D Viewport or Video Sequencer Preview press :kbd:`Alt-I` to remove keys from selected objects, bones or
+  strips on the current frame.
 - When the mouse is over a value, press :kbd:`Alt-I`.
 - :kbd:`RMB` a value and choose *Delete Keyframe* from the menu.
 

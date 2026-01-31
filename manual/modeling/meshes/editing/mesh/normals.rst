@@ -179,8 +179,8 @@ Average
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Mesh --> Normals --> Average`
 
-For each selected vertex, divides the connected face corners into groups based on :ref:`Sharp <bpy.ops.mesh.mark_sharp>`
-edges, then sets the custom normals of the face corners in each group to a certain average.
+For each selected vertex, divides the connected face corners into groups based on :ref:`Sharp
+<bpy.ops.mesh.mark_sharp>` edges, then sets the custom normals of the face corners in each group to a certain average.
 The :ref:`bpy.ops.screen.redo_last` panel has the following options:
 
 Type

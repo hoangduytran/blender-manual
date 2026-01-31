@@ -5,8 +5,8 @@
 Cycles and EEVEE Differences
 ============================
 
-The number of iterations in *Cycles* must evaluate to a constant value.
-This means the number of iterations can't be driven by :doc:`/render/shader_nodes/input/index` or :doc:`/render/shader_nodes/textures/index`.
+The number of iterations in *Cycles* must evaluate to a constant value. This means the number of iterations can't be
+driven by :doc:`/render/shader_nodes/input/index` or :doc:`/render/shader_nodes/textures/index`.
 
 .. figure:: /images/repeat-zone-dynamic-iterations-not-supported.png
    

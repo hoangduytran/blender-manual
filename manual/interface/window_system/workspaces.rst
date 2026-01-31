@@ -158,7 +158,8 @@ Sequencer Scene
 .. _bpy.types.WorkSpace.use_scene_time_sync:
 
 Sync Scene Time
-   Sync the active scene and time based on the current :ref:`scene strip <bpy.types.SceneStrip>` in the video sequence editor.
+   Sync the active scene and time based on the current :ref:`scene strip <bpy.types.SceneStrip>` in the video sequence
+   editor.
    See :doc:`/video_editing/sequencer_scene`.
 
 .. _bpy.ops.wm.owner_enable:

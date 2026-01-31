@@ -32,7 +32,8 @@ Sky Type
       by Nishita et al, accounts for single bounces in the atmosphere.
       This is legacy and may be removed in a future version.
    Multiple Scattering
-      Based on `this <https://fgarlin.com/blog/spectral-sky/>`__ work by Fernando García Liñán, it is the most accurate model as it accounts for multiple bounces of light in the atmosphere.
+      Based on `this <https://fgarlin.com/blog/spectral-sky/>`__ work by Fernando García Liñán, it is the most
+      accurate model as it accounts for multiple bounces of light in the atmosphere.
    Preetham
       Based on the 1999 `paper <https://doi.org/10.1145/311535.311545>`__ by Preetham et al.
       This is legacy and will be removed in a future version.
@@ -43,7 +44,8 @@ Sky Type
 .. note::
 
    Single and Multiple Scattering skies are very bright by default (hence accurate).
-   You can lower the Exposure of the scene in :menuselection:`Properties --> Color Management --> Exposure` to fix this.
+   You can lower the Exposure of the scene in :menuselection:`Properties --> Color Management --> Exposure` to fix
+   this.
 
 Sun Direction
    Sun direction vector.

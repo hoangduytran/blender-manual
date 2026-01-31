@@ -80,7 +80,9 @@ Image Pin
 .. _bpy.types.SpaceImageEditor.show_sequencer_scene:
 
 Show Sequencer Scene
-   This toggle is only visible on the Render Result if a :doc:`Sequencer Scene </video_editing/sequencer_scene>` exists, and it differs from the active scene in the window. After rendering, its state is chosen automatically from the render type. 
+   This toggle is only visible on the Render Result if a :doc:`Sequencer Scene </video_editing/sequencer_scene>`
+   exists, and it differs from the active scene in the window. After rendering, its state is chosen automatically from
+   the render type. 
 
 Slot
    The render slot to view (and render to). You can create new renders without

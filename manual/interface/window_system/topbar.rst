@@ -255,12 +255,15 @@ Render Animation :kbd:`Ctrl-F12`
 
       - :doc:`Rendering Animations </render/output/animation>` for details.
 Render Sequencer Image :kbd:`Alt-F12`
-   If a :doc:`Sequencer Scene </video_editing/sequencer_scene>` exists that differs from the active scene, render that scene instead. 
+   If a :doc:`Sequencer Scene </video_editing/sequencer_scene>` exists that differs from the active scene, render that
+   scene instead. 
 Render Sequencer Animation :kbd:`Ctrl-Alt-F12`
    Render the animation of the :doc:`Sequencer Scene </video_editing/sequencer_scene>`.
 
    .. note:: 
-      Both of the sequencer render options automatically set the :ref:`Show Sequencer Scene <bpy.types.SpaceImageEditor.show_sequencer_scene>` toggle in the image editor Render Result after rendering.  
+      Both of the sequencer render options automatically set the 
+      :ref:`Show Sequencer Scene <bpy.types.SpaceImageEditor.show_sequencer_scene>` toggle in the image editor Render 
+      Result after rendering.  
 
 Render Audio
    Mix the scene's audio to a sound file.

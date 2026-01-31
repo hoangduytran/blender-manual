@@ -204,8 +204,8 @@ Select Loops
    Selects all the vertices that are (for example) to the right of the active vertex.
 
 :doc:`By Attribute </modeling/meshes/selecting/by_attribute>`
-   Selects the elements for which the currently active :doc:`attribute </modeling/geometry_nodes/attributes_reference>`
-   has a value of True.
+   Selects the elements for which the currently active :doc:`attribute
+   </modeling/geometry_nodes/attributes_reference>` has a value of True.
 
 Known Issues
 ============

@@ -9,15 +9,16 @@ Bone Info Node
    :align: right
    :alt: Bone Info node.
 
-The *Bone Info* node gets bone transform properties from an armature object.
-This can be used to control geometry node behavior with a rig or implement armature deformation using vertex group attributes.
+The *Bone Info* node gets bone transform properties from an armature object. This can be used to control geometry node
+behavior with a rig or implement armature deformation using vertex group attributes.
 
 .. note::
 
    A dependency cycle can occur if the *Bone Info* node uses one bone and another bone in the same armature in turn
    depends on the modified object, for example using a :doc:`/animation/constraints/relationship/geometry_attribute`.
-   Inside an armature each bone can be referenced individually, but the geometry modifier node can only add a dependency
-   on the entire armature. This is because the bone name is a generic string that does not generally point to a single bone.
+   Inside an armature each bone can be referenced individually, but the geometry modifier node can only add a
+   dependency on the entire armature. This is because the bone name is a generic string that does not generally point
+   to a single bone.
 
 
 Inputs

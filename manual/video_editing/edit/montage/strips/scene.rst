@@ -18,9 +18,10 @@ Adding Scene Strips
 ===================
 
 Existing scenes can be added from the :menuselection:`Add --> Scene --> "Scene Name"`.
-Additionally, any scene asset in the current file or in an :doc:`Asset Library </files/asset_libraries/introduction>` will also show up in the :menuselection:`Add --> Scene`.
-If a scene asset is assigned to a :doc:`Catalog </files/asset_libraries/catalogs>`, the catalog hierarchy will show up as a sub-menu.
-When adding a scene asset as a strip, the scene is always appended/duplicated.
+Additionally, any scene asset in the current file or in an :doc:`Asset Library </files/asset_libraries/introduction>`
+will also show up in the :menuselection:`Add --> Scene`. If a scene asset is assigned to a :doc:`Catalog
+</files/asset_libraries/catalogs>`, the catalog hierarchy will show up as a sub-menu. When adding a scene asset as a
+strip, the scene is always appended/duplicated.
 
 New scenes can also be created directly from the add menu with :menuselection:`Add --> Scene --> Empty Scene`.
 

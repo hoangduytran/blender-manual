@@ -28,8 +28,9 @@ This node can be used to:
      or other utility passes to export custom data for compositing pipelines.
    - Particularly useful in production pipelines where multiple outputs are needed per render.
    - Both the ``File Name`` and the ``Image`` names (when saving multiple images) can contain ``####`` to force the
-     frame number to appear in a specific place in the filename. This also has the effect that a single render
-     will have the frame number embedded. The frame number will be padded with zeros to fill the number of ``#`` characters.
+     frame number to appear in a specific place in the filename. This also has the effect that a single render will
+     have the frame number embedded. The frame number will be padded with zeros to fill the number of ``#``
+     characters.
 
 Inputs
 ======

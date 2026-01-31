@@ -45,8 +45,8 @@ Topology Influence
 Compare UVs
    Don't merge triangles that are disjoint in any UV map.
 Compare Color Attributes
-   Don't merge triangles that, for any :ref:`Color Attribute <modeling-meshes-properties-object_data-color-attributes>`,
-   have different colors at their shared edge.
+   Don't merge triangles that, for any :ref:`Color Attribute
+   <modeling-meshes-properties-object_data-color-attributes>`, have different colors at their shared edge.
 Compare Seam
    Don't dissolve edges that are marked as :doc:`UV Seams </modeling/meshes/uv/unwrapping/seams>`.
 Compare Sharp

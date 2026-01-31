@@ -16,8 +16,8 @@ such as generating texture atlases or preparing geometry for baking.
 
 .. tip::
 
-   Unlike the :ref:`UV Editor operator <bpy.ops.uv.pack_islands>`, this node works non-destructively and can be driven by
-   procedural inputs, making it suitable for automated or parametric UV generation.
+   Unlike the :ref:`UV Editor operator <bpy.ops.uv.pack_islands>`, this node works non-destructively and can be driven
+   by procedural inputs, making it suitable for automated or parametric UV generation.
 
 
 Inputs
