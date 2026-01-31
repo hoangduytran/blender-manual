@@ -48,7 +48,7 @@ The Viewer node system provides shortcuts to quickly assign and activate viewers
 
 .. note::
 
-   Only number keys (:kbd:`1–9`) are supported.
+   Only number keys (:kbd:`1` - :kbd:`9`) are supported.
 
 
 Viewing Single Socket Values
