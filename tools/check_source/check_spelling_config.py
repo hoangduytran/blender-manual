@@ -2,9 +2,11 @@
 
 # These must be all lower case for comparisons.
 
-# Custom dictionary.
+# Custom dictionary - broken into sections for ease of maintenance. If in doubt, place terms in
+#   the most generic list that makes sense.
 dict_custom = {
-    # Correct spelling.
+    # Correct spellings of common words - generic computer terms, specific graphics/science terms,
+    #   or proper names like people, projects, companies, or brands have separate sections below.
     "adaptively",
     "analytics",
     "auto-keyframing",
@@ -60,7 +62,6 @@ dict_custom = {
     "coord",
     "coords",
     "ctrl",
-    "kbd",
     "lookup",
     "lookups",
     "multi",
@@ -159,6 +160,8 @@ dict_custom = {
     "stdout",
     "subfolders",
     "submenu",
+    "submodule",
+    "submodules",
     "subpanel",
     "substring",
     "sudo",
@@ -213,13 +216,14 @@ dict_custom = {
     "wiki",
     "wintab",
 
-    # Specific computer graphics or science terms.
+    # Specific computer graphics or science terms - these should not be generic computer terms.
     "advect",
     "advected",
     "albedo",
     "anamorphic",
     "animatable",
     "animatic",
+    "animatics",
     "anisotropic",
     "anisotropy",
     "atomics",
@@ -269,6 +273,7 @@ dict_custom = {
     "despilling",
     "desynchronize",
     "dopesheet",
+    "downsampling",
     "downscaled",
     "dyntopo",
     "easings",
@@ -314,6 +319,8 @@ dict_custom = {
     "liquify",
     "lossy",
     "luma",
+    "matcap",
+    "matcaps",
     "maxima",
     "metaball",
     "metaballs",
@@ -349,6 +356,7 @@ dict_custom = {
     "ngon",
     "ngons",
     "nk",
+    "non-premultiplied",
     "non-renderable",
     "nondisruptive",
     "normals",
@@ -486,7 +494,7 @@ dict_custom = {
     "wireframes",
     "xform",
 
-    # Specific computer terms/brands.
+    # Specific projects/terms/brands - this should include proper nouns only.
     "3Dconnexion",
     "autocad",
     "autodesk",
@@ -531,40 +539,35 @@ dict_custom = {
     "xinerama",
     "yello",
 
-    # Blender specific terms
-    #   TODO: See if these can be normalized to proper English terms/compounds in the code and/or manual
+    # Blender-specific terms - these should be terms used strictly within Blender, such as EEVEE.
+    #   TODO: See if these can be normalized to proper English terms/compounds in the code and/or manual.
+    #       Also, some of these are not necessarily Blender-specific, and can move to other sections.
     "bfont",
     "breakdowner",
     "eevee",
-    "matcap",
-    "matcaps",
     "meta's",
     "metas",
     "passepartout",
     "playblast",
     "rigify",
     "sub-addons",
-    "submodule",
-    "submodules",
     "thumbnailer",
     "topbar",
     "tri-scale",
     "un-subdivide",
     "undistortion",
     "workboard",
-
-    # should have apostrophe but ignore for now
-    # unless we want to get really picky!
-    "indices",
-    "vertices",
 }
 
 # Incorrect spelling but ignore anyway.
-#   TODO: make sure entries are in the dict_custom vs dict_ignore list - this needs some rework.
+#   TODO: make sure entries are in the dict_custom vs dict_ignore list - this needs some rework. This is
+#       currently rather haphazard. There should be hard rules over what is considered an ignore versus a
+#       regular word in the dict_custom{} array above.
 dict_ignore = {
     # Intentional misspellings or word fragments being detected. This includes names/abbreviations in
     #   the program that should probably be corrected such as "filepath" instead of "file path" or "path".
-    #   TODO: clean these up in source code and/or manual
+    #   TODO: clean these up in source code and/or manual, or have a better spellchecker algorithm that
+    #       ignores partial fragments.
     "a-z",
     "arg",
     "args",
@@ -590,6 +593,7 @@ dict_ignore = {
     "node-trees",
     "postprocess",
     "pre-constraint",
+    "pre-deformation",
     "pre-deformed",
     "pre-distort",
     "pre-draped",
@@ -755,6 +759,7 @@ dict_ignore = {
     "dmg-file",
     "dmg-files",
     "guilabel",
+    "kbd",
     "menuselection",
     "numsp",
     "po-files",
