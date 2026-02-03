@@ -29,7 +29,7 @@ Interpolation
    How attributes of the target mesh are mapped to the attribute values on the result geometry.
 
    :Interpolated:
-      Vertex and corner attributes are interpolated smoothly, with a bilinear function.
+      Vertex and corner attributes are interpolated smoothly, with a barycentric function.
    :Nearest:
       Choose the value of the closest vertex without interpolating.
 
