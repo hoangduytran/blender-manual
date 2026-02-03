@@ -33,11 +33,11 @@ they contain the same menu switch node.
 
 .. list-table::
 
-   * - .. figure:: /images/node-types_GeometryNodeMenuSwitch_conflict.webp
+   * - .. figure:: /images/node-types_GeometryNodeMenuSwitch_conflict.png
 
           Conflict caused by connecting different menus.
 
-     - .. figure:: /images/node-types_GeometryNodeMenuSwitch_group_wrapper.webp
+     - .. figure:: /images/node-types_GeometryNodeMenuSwitch_group_wrapper.png
 
           Same node group can be connected without conflict.
 
