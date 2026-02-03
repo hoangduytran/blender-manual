@@ -233,6 +233,24 @@ for you. If Blender assigns a slot you didn't want, you can select another slot
 manually or simply clear the slot selection.
 
 
+Switching the Action on Multiple Data-Blocks
+--------------------------------------------
+
+When working with an action that animates multiple data-blocks, you may need
+to swap out that action to a different one. And do that on all those data-blocks
+simultaneously, so that animation that belongs together, is swapped together.
+For this there are two options.
+
+Replace Action
+   Looks at the action of the active object and swaps it on any object
+   that is directly animated by it. This excludes usage in NLA strips 
+   and action constraints. It can be found in the :ref:`Action Editor <bpy.ops.anim.replace_action>`.
+
+Remap Users
+   Right click the action in the outliner and choose :ref:`Remap Users <bpy.ops.outliner.id_operation>`. 
+   This will replace the usage on *all* users, including NLA strips and action constraints. Use with caution.
+
+
 NLA
 ---
 
