@@ -1,4 +1,3 @@
-
 ***********
 OpenColorIO
 ***********
@@ -75,8 +74,8 @@ These guidelines help ensure a configuration works well:
 * Include the interop ID from the `Color Interop Forum <https://github.com/AcademySoftwareFoundation/ColorInterop>`__
   for every color space and display color space that you can. This helps save image and video
   with correct colorspace information. Add the interop ID as an alias of the colorspace. For
-  OpenColor 2.5 configs, additionally set the native ``interop_id`` attribute but keep the alias
-  for compatibility with older software.
+  OpenColor 2.5 configs, additionally set the native ``interop_id`` attribute where possible.
+* The ``icc_profile_name`` interchange attribute is supported, to embed ICC profiles when saving images.
 * Mark HDR displays by setting ``encoding: hdr-video`` on the corresponding colorspace.
 * For HDR view transforms, use ``HDR 500 nits``, ``HDR 1000 nits``, ``HDR 2000 nits`` or ``HDR 4000 nits``
   as part of the name to automatically determine maximum luminance for mastering display metadata.
