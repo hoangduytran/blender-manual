@@ -37,6 +37,10 @@ Space
    Tangent space normal maps are the most common, as they support object transformation and mesh deformations.
    Object space normal maps keep sticking to the surface under object transformations,
    while World normal maps do not.
+Convention
+   Blender uses the OpenGL convention by default for rendering and baking, where the Y axis in
+   the green channel points up. The DirectX convention can be used for normal maps from other
+   software, that assumes the Y axis points down.
 UV Map
    Name of the UV map to derive normal mapping tangents from. When chained with an Image Texture node,
    this UV map should be the same as the UV map used to map the texture.
