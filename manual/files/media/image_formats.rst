@@ -50,6 +50,12 @@ This is the list of image file formats supported internally by Blender:
      - |tick|
      - |cross|
      - ``.webp``
+   * - AVIF
+     - 8, 10, 12bit
+     - |tick|
+     - |tick|
+     - |cross|
+     - ``.avif``
    * - BMP
      - 8bit
      - |tick|

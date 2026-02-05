@@ -265,9 +265,9 @@ Save as Render
    Option in the image save operator to apply the view, exposure, gamma, RGB curves.
    This is useful for saving linear OpenEXR to e.g. PNG or JPEG files in display space.
 
-Wide gamut images can be written in the following file formats: PNG, JPEG, WebP, TIFF and JPEG 2000.
+Wide gamut images can be written in the following file formats: PNG, JPEG, WebP, AVIF, TIFF and JPEG 2000.
 
-HDR images can only be written as PNG files. They are written with 203 nits diffuse
+HDR images can written as AVIF or PNG files. They are written with 203 nits diffuse
 white to match the convention in most browsers and image viewers.
 
 Video
