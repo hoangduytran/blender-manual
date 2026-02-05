@@ -99,7 +99,9 @@ Operation
       :Smooth Maximum: `Smooth Maximum <https://en.wikipedia.org/wiki/Smooth_maximum>`__.
 
    Rounding
-      :Round: Rounds the input value to the nearest integer.
+      :Round:
+         Rounds the input value entrywise to the nearest integer,
+         and upward if the fraction part is 0.5.
       :Floor: Rounds the input value down to the nearest integer.
       :Ceil: Rounds the input value up to the nearest integer.
       :Truncate: Outputs the integer part of the *value*.

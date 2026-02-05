@@ -73,6 +73,9 @@ Operation
       All negative numbers will output -1.0. And 0.0 will output 0.0.
    :Minimum: The entrywise minimum value from A and B.
    :Maximum: The entrywise maximum value from A and B.
+   :Round:
+      Rounds the input value entrywise to the nearest integer,
+      and upward if the fraction part is 0.5.
    :Floor: Rounds the input value entrywise down to the nearest integer.
    :Ceil: Rounds the input value entrywise up to the nearest integer.
    :Fraction: Returns the fractional part of the *value* entrywise.
