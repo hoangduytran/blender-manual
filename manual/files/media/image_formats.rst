@@ -313,6 +313,9 @@ Codec
       JPEG-like lossy compression on 32 row image blocks.
    :DWAB (lossy):
       JPEG-like lossy compression on 256 row image blocks.
+   :HTJ2K:
+      Lossless compression based on high throughput JPEG 2000 encoding. It produces smaller
+      files, but it is new and not widely supported by other software yet.
    :ZIPS:
       Lossless compression using Zlib, each image row compressed separately
    :RLE:
