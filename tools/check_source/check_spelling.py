@@ -72,8 +72,11 @@ def regex_key_raise(x):
 # This is used to clean up text from `docutils.nodes.NodeVisitor.visit_Text` which doesn't remove inline markup.
 # Note that in some cases the order matters, especially with include/excluding roles.
 
-RE_TEXT_REPLACE_ROLES_INCLUDE = ("menuselection", "guilabel")
-RE_TEXT_REPLACE_ROLES_EXCLUDE = ("kbd", "ref", "doc", "abbr")
+# RE_TEXT_REPLACE_ROLES_INCLUDE = roles whose inner text should be spellchecked
+# RE_TEXT_REPLACE_ROLES_EXCLUDE = roles whose inner text should be ignored
+
+RE_TEXT_REPLACE_ROLES_INCLUDE = ("menuselection", "guilabel", "file")
+RE_TEXT_REPLACE_ROLES_EXCLUDE = ("kbd", "ref", "doc", "abbr", "term")
 
 RE_TEXT_REPLACE_TABLE = (
     # Match HTML link: `Text <url>`__
@@ -307,6 +310,7 @@ def role_ignore_recursive(
 roles.register_canonical_role('abbr', role_ignore)
 roles.register_canonical_role('menuselection', role_ignore)
 roles.register_canonical_role('guilabel', role_ignore)
+roles.register_canonical_role('file', role_ignore)
 
 roles.register_canonical_role('class', role_ignore_recursive)
 roles.register_canonical_role('doc', role_ignore_recursive)
