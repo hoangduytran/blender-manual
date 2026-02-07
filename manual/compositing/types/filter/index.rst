@@ -27,6 +27,7 @@ post-processing effect on the image.
    :maxdepth: 1
 
    dilate_erode.rst
+   mask_to_sdf.rst
    inpaint.rst
 
 ----------
