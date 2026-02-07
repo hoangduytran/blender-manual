@@ -9,6 +9,7 @@
    :maxdepth: 2
 
    introduction.rst
+   compositing_workspace.rst
    sidebar.rst
    compositor_system.rst
    image_kernels.rst
