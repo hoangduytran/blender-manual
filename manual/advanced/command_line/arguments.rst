@@ -194,6 +194,9 @@ Python Options
 ``--python-expr`` ``<expression>``
    Run the given expression as a Python script.
 
+   The expression may be a complete multi-line script;
+   you are limited only by the platform's maximum argument length.
+
 ``--python-console``
    Run Blender with an interactive console.
 
@@ -337,12 +340,22 @@ Debug Options
 ``--debug-gpu-shader-debug-info``
    Enable shader debug info generation (Vulkan only).
 
-``--debug-gpu-shader-source``
-   Capture the GPU commands issued inside the give scope name.
-   Files are saved in the current working directory inside a directory named "Shaders".
-
 ``--debug-gpu-scope-capture``
    Capture the GPU commands issued inside the give scope name.
+
+``--debug-gpu-shader-source``
+   Save the compiled GPU shader source code for the given shader name.
+   The given name can contain leading or trailing wildcard "*" to match multiple shaders. Files are saved in the current working directory inside a directory named "Shaders".
+
+``--debug-gpu-shader-no-preprocessor``
+   Skip preprocessor pass and rely on driver or shader compiler preprocessor instead.
+   Also disable dead code elimination.
+
+``--debug-gpu-shader-no-dce``
+   Skip dead code elimination pass.
+
+``--debug-gpu-no-texture-pool``
+   Disable memory aliasing optimizations in the GPU texture pool.
 
 ``--debug-gpu-renderdoc``
    Enable RenderDoc integration for GPU frame grabbing and debugging.
@@ -580,6 +593,7 @@ Environment Variables
 :BLENDER_CUSTOM_SPLASH_BANNER: Full path to an image to overlay on the splash screen.
 :BLENDER_OCIO:              Path to override the OpenColorIO configuration file.
                            If not set, the ``OCIO`` environment variable is used.
+:SPNAV_SOCKET:              The socket path to connect to the 3D-mouse daemon (Unix only).
 :TEMP:                      Store temporary files here (MS-Windows).
 :TMPDIR:                    Store temporary files here (UNIX Systems).
                            The path must reference an existing directory or it will be ignored.
