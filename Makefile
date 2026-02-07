@@ -24,6 +24,7 @@ Checking
 - check_structure      to check the structure of all .rst files.
 - check_syntax         to check the syntax of all .rst files.
 - check_spelling       to check spelling for text in RST files.
+- check_spelling_new   to check spelling for text in RST files (experimental new script)
 
 Utilities
 ---------
@@ -137,6 +138,9 @@ check_structure:
 
 check_spelling:
 	@python3 tools/check_source/check_spelling.py
+
+check_spelling_new:
+	@python3 tools/check_source/check_spelling_new.py
 
 checkout_locale:
 	@python3 ./build_files/utils/checkout_locale.py
