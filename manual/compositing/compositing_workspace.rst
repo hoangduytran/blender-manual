@@ -36,7 +36,7 @@ render settings, color management, and output options.
 
 Relevant panels include:
 
-- :doc:`Color Management </render/color_management>`
+- :doc:`Color Management </render/color_management/index>`
 - :doc:`Output Properties </render/output/properties/index>`
 
 See :doc:`Properties Editor </editors/properties_editor>` for a full overview.
@@ -49,11 +49,10 @@ Below the Image Editor is the Compositor editor, where node trees are created
 and edited.
 See :doc:`Compositor </compositing/index>` for an introduction to node-based compositing.
 
-The Compositor includes an :doc:`Asset Shelf </interface/asset_browser/asset_shelf>`,
+The Compositor includes an :ref:`Asset Shelf <ui-region-asset_shelf>`,
 which allows compositing node group assets to be quickly dragged and dropped
 into the node tree.
-This makes it easy to reuse common effects, utilities, and production-ready
-node groups.
+This makes it easy to reuse common effects, utilities, and production-ready node groups.
 
 
 Timeline
