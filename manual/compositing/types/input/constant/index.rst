@@ -6,6 +6,9 @@
 .. toctree::
    :maxdepth: 1
 
+   boolean.rst
    rgb.rst
-   value.rst
+   integer.rst
    normal.rst
+   value.rst
+   vector.rst

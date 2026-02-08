@@ -28,6 +28,8 @@ The following nodes are provided for working with bundles:
 
    combine_bundle.rst
    separate_bundle.rst
+   get_bundle_item.rst
+   store_bundle_item.rst
    join_bundle.rst
 
 Both nodes allow adding or removing an arbitrary number of sockets,

@@ -79,11 +79,12 @@ This panel helps you tweak the performance of the Compositor.
    :start-after: .. --- copy below this line ---
    :end-before: .. --- end copy above this line - compositor sidebar ---
 
-.. _bpy.types.CompositorNodeTree.use_viewer_border:
+.. Currently removed from UI see https://projects.blender.org/blender/blender/commit/a079875ffe
+.. .. _bpy.types.CompositorNodeTree.use_viewer_border:
 
-Viewer Region
-   This allows to set an area of interest for the backdrop.
-   Press :kbd:`Ctrl-B` and select a rectangular area in the preview
-   which will become the next preview in the backdrop.
-   :kbd:`Ctrl-Alt-B` discards the region back to a full preview.
-   This is only a preview option, final compositing during a render ignores this region.
+.. Viewer Region
+..    This allows to set an area of interest for the backdrop.
+..    Press :kbd:`Ctrl-B` and select a rectangular area in the preview
+..    which will become the next preview in the backdrop.
+..    :kbd:`Ctrl-Alt-B` discards the region back to a full preview.
+..    This is only a preview option, final compositing during a render ignores this region.

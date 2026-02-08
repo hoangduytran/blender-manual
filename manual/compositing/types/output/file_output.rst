@@ -41,6 +41,16 @@ or by adding new inputs in the *Images/Layers* panel.
 
 Each input corresponds to an image that will be written to disk.
 
+When the *Media Type* is set to *Image*, input names are also used to construct
+subdirectories:
+
+- If an input name contains a slash character (``/`` or ``\``),
+  the path is interpreted as a directory hierarchy.
+- Any missing directories are created automatically during output.
+
+This allows organizing outputs into folders directly from the node setup,
+for example: ``passes/diffuse`` or ``masks/object_01``.
+
 
 Properties
 ==========

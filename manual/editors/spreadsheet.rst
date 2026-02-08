@@ -176,8 +176,11 @@ The following information is shown for each grid:
 * **Data Type** -- The type of data stored in the grid, for example *Float*, *Vector*, or *Boolean*.
 * **Class** -- The grid class, describing its purpose or usage,
   such as *Fog Volume*, *Level Set*, or *Level Set*.
-* **Extent** -- The grid's bounding box in voxel coordinates.
+* **Voxel Extent** -- The grid's bounding box in voxel coordinates.
   Shows the number of voxels in the X, Y, and Z directions.
+* **Min Voxels** -- The minimum voxel coordinates of the grid's bounding box.
+  This represents the lowest X, Y, and Z voxel indices occupied by the grid,
+  indicating where the grid begins in voxel space.
 * **Voxels** -- The total number of active voxels in the grid.
   This includes all voxels that are explicitly stored, even when contained in *tiles*
   (e.g., a single leaf tile contains 512 voxels).
