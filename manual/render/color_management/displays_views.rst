@@ -267,7 +267,7 @@ Save as Render
 
 Wide gamut images can be written in the following file formats: PNG, JPEG, WebP, AVIF, TIFF and JPEG 2000.
 
-HDR images can written as AVIF or PNG files. They are written with 203 nits diffuse
+HDR images can be written as AVIF or PNG files. They are written with 203 nits diffuse
 white to match the convention in most browsers and image viewers.
 
 Video
