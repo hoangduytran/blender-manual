@@ -18,6 +18,10 @@ that can be adjusted at any time and layered to create more complex effects.
 Modifiers are evaluated from top to bottom.
 You can change their order by dragging the dots in their top right corner.
 
+Some modifiers require being first and cannot be used together.
+These currently include the :ref:`Cycles <bpy.types.FModifierCycles>`
+and :ref:`Smooth (Gaussian) <bpy.types.FModifierSmooth>` modifiers.
+
 Interface
 =========
 
@@ -165,7 +169,11 @@ Makes the curve repeat itself.
 
 .. note::
 
-   The Cycles Modifier can only be the first modifier.
+   The Cycles Modifier has to be the first modifier in the list.
+
+   This modifier needs to know exactly where the keyframes are located,
+   which is not possible when other modifiers are processed first.
+   This means this modifier is not compatible with the `Smooth (Gaussian) Modifier`_.
 
 Before/After Mode
    No Cycles
@@ -261,3 +269,34 @@ Start Frame
    The frame where to start applying the effect.
 End Frame
    The frame where to stop applying the effect.
+
+Smooth (Gaussian) Modifier
+---------------------------
+
+Uses Gaussian smoothing to reduce detail and noise in the curve.
+It performs the same smoothing as the :ref:`Smoothing Operator <bpy.ops.graph.gaussian_smooth>`.
+
+This uses linear interpolation for subframes which can introduce issues related to motion blur.
+
+Note that this can be a resource-heavy modifier, and its effect on performance can become noticeable
+when used on many F-Curves.
+
+.. note::
+
+   The Smooth (Gaussian) modifier has to be the first modifier in the list.
+
+   This modifier needs to know exactly where the keyframes are located,
+   which is not possible when other modifiers are processed first.
+   This means this modifier is not compatible with the `Cycles Modifier`_.
+
+Sigma
+   The shape of the Gaussian distribution in frames.
+   Lower values will increase sharpness, reducing the smoothing effect.
+   Larger values will result in more smoothing, but are limited by the Filter Width (see below).
+Filter Width
+   The number of frames the filter "sees" around each keyframe.
+   Higher values allow more smoothing (larger Sigma can then smooth over more frames),
+   but this will decrease performance.
+
+.. index:: F-Curve Modifiers; Gaussian Smoothing
+.. _bpy.types.FModifierSmooth:
