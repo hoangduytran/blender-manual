@@ -18,6 +18,7 @@
    object_info.rst
    particle_info.rst
    point_info.rst
+   raycast.rst
    rgb.rst
    tangent.rst
    texture_coordinate.rst
