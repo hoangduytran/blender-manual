@@ -25,6 +25,7 @@
    evaluate_closure.rst
    bundle/combine_bundle.rst
    bundle/separate_bundle.rst
+   bundle/join_bundle.rst
 
 -----
 
