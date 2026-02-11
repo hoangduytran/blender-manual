@@ -1,9 +1,9 @@
 .. index:: Geometry Nodes; Matrix Singular Value Decomposition (SVD)
 .. _bpy.types.FunctionNodeMatrixSVD:
 
-***********************
+***************
 Matrix SVD Node
-***********************
+***************
 
 .. figure:: /images/node-types_FunctionNodeMatrixSVD.webp
    :align: right
