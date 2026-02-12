@@ -72,6 +72,16 @@ Search -- Sort by Most Recent
    Show most recently selected items at the top of search results,
    otherwise search results are sorted alphabetically.
 
+.. _bpy.types.Preferences.show_hidden_ids:
+
+Search -- Show Hidden
+   Display data-blocks with dot-prefixed names in search menus.
+   This affects search pop-ups and data-block selectors that use filtering.
+
+   By default, dot-prefixed names are hidden to prevent accidental use
+   of internal or helper data-blocks. See :ref:`data-system-datablock-name-hidden`
+   for more information about this naming convention.
+
 
 Editors
 =======

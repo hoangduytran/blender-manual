@@ -136,10 +136,13 @@ Defaults -- Filter Files
 .. _bpy.types.PreferencesFilePaths.show_hidden_files_datablocks:
 
 Defaults -- Show Hidden Files/Data-Blocks
-   Unhide files and data-blocks with names that start with ``.`` in File Browsers
-   and :ref:`data IDs <ui-data-block>`.
+   Display files and data-blocks whose names start with ``.`` in File Browsers.
 
-   .. hint::
+   By default, dot-prefixed data-block names are hidden to prevent accidental use
+   of internal or helper data-blocks. See :ref:`data-system-datablock-name-hidden`
+   for more information about this naming convention.
 
-      Data-blocks with names beginning with a ``.`` can be selected by typing in a search
-      string that also starts with the ``.`` character, even if this setting is disabled.
+   .. seealso::
+
+      Hidden data-blocks can also be shown in :ref:`Data-Block Menus <ui-data-block>`
+      by enabling :ref:`bpy.types.Preferences.show_hidden_ids`.
