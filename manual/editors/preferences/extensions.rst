@@ -45,8 +45,6 @@ Install from Blender
    See :doc:`network troubleshooting </troubleshooting/network>` for issues connecting to remote repositories.
 
 
-.. _bpy.ops.extensions.package_upgrade_all:
-
 Updating Extensions
 ===================
 
