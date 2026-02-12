@@ -1,10 +1,11 @@
 
-*******
-Brushes
-*******
+************************
+Mesh Sculpt Brush Assets
+************************
 
 This is a list of all provided 'Essentials' brush assets that come with Blender.
 These are based on various :ref:`Brush Types <sculpt-tool-settings-brush-type>` which are mentioned for each brush..
+
 
 Add/Subtract Brushes
 ====================
