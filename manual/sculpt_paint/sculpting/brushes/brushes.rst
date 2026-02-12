@@ -1,10 +1,11 @@
 
-*******
-Brushes
-*******
+************************
+Mesh Sculpt Brush Assets
+************************
 
 This is a list of all provided 'Essentials' brush assets that come with Blender.
 These are based on various :ref:`Brush Types <sculpt-tool-settings-brush-type>` which are mentioned for each brush..
+
 
 Add/Subtract Brushes
 ====================
@@ -323,16 +324,6 @@ Sharpen
    Brush Type: :doc:`smear`
 
    Pinches the colors inwards to create sharp edges or points.
-
-Paint Pixel Art
-   Brush Type: :doc:`paint`
-
-   Paint specific pixels (Only supported in the Image Editor).
-
-Erase Pixel Art
-   Brush Type: :doc:`paint`
-
-   Erase pixels in the alpha channel of the texture (Only supported in the Image Editor).
 
 
 Simulation Brushes

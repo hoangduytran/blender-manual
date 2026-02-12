@@ -300,6 +300,7 @@ but you can still manually remove it if needed.
 
    :ref:`Linked data <bpy.ops.wm.link>` cannot be protected that way.
 
+
 .. _data-system-datablock-name-and-rename:
 
 Name & Rename
@@ -340,6 +341,33 @@ Outliner view). When renamed from the UI, the behavior in case of name collision
 
   - E.g. assuming that there are three objects named `Sphere`, `Cube` and `Cube.001`, renaming `Cube.001` to `Cube`
     will rename the data-block to `Cube`, and the other data-block to `Cube.001`.
+
+
+.. _data-system-datablock-name-hidden:
+
+Dot-Prefixed Names (Hidden Data)
+--------------------------------
+
+Data-block names that begin with a dot (``.``) are considered *hidden*.
+
+Hidden data-blocks:
+
+- Are not shown in File Browsers by default.
+- Are hidden in most data-block selection menus.
+- Are commonly used for internal, temporary, or helper data.
+
+This naming convention is useful for marking implementation details
+that should not normally be selected or edited directly by users.
+
+Hidden data-blocks can be made visible through user preferences:
+
+- Enable :ref:`Defaults -- Show Hidden Files/Data-Blocks <bpy.types.PreferencesFilePaths.show_hidden_files_datablocks>`
+  to display dot-prefixed data-blocks in File Browsers and data ID selectors.
+- Enable :ref:`Search -- Show Hidden <bpy.types.Preferences.show_hidden_ids>`
+  to display dot-prefixed data-blocks in search menus.
+
+Even when hidden in the interface, dot-prefixed data-blocks behave like any other data-block
+in terms of linking, usage counting, and saving.
 
 
 Sharing

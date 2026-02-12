@@ -111,3 +111,20 @@ Mask
 
       A simpler alternative is to use the face selection mask.
       See :ref:`Face Selection Masking <bpy.types.Mesh.use_paint_mask>` for details.
+
+
+Brush Assets
+============
+
+Pixel Art Brushes
+-----------------
+
+Paint Pixel Art
+   Brush Type: Draw
+
+   Paint specific pixels (Only supported in the Image Editor).
+
+Erase Pixel Art
+   Brush Type: Draw
+
+   Erase pixels in the alpha channel of the texture (Only supported in the Image Editor).

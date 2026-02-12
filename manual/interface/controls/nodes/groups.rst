@@ -258,36 +258,55 @@ Attribute Domain :guilabel:`Geometry Nodes` -- :guilabel:`Output` -- :guilabel:`
 Default Attribute :guilabel:`Geometry Nodes` -- :guilabel:`Integer` :guilabel:`Color` :guilabel:`Vector` :guilabel:`Boolean` :guilabel:`Float`
    The attribute name used by default when the node group is used as a geometry nodes modifier.
 
-.. _bpy.types.NodeTreeInterfaceSocketInt.subtype:
+.. _bpy.types.NodeTreeInterfaceSocket*.subtype:
 
 Subtype :guilabel:`Integer` :guilabel:`Float` :guilabel:`Vector` :guilabel:`String`
-   Specifies how the data is interpreted and displayed in the user interface.
-   The unit or behavior often depends on the :ref:`Scene Units <bpy.types.UnitSettings>`.
+   Specifies how the data is interpreted, displayed, and sometimes constrained
+   in the user interface.
+   The visual representation, unit suffix, and input behavior often depend on
+   the :ref:`Scene Units <bpy.types.UnitSettings>`.
+
+   Changing the subtype does not change the underlying data type.
+   It only affects how the value is presented and edited.
 
    Integers
-      :None: Standard integer values.
-      :Percentage: Displayed as a percentage. Typically, *Min* and *Max* values are set to 0 and 100.
-      :Factor: A percentage or factor between a lower and upper bound.
+      :None:
+         Standard integer values with no special interpretation.
+      :Percentage:
+         Displayed as a percentage.
+         Typically used with *Min* and *Max* values set to 0 and 100.
+      :Factor:
+         Represents a normalized factor between a lower and upper bound,
+         often used in the 0.0-1.0 range.
 
    Floats
       :None:
-         Standard floating-point values.
+         Standard floating-point values with no special unit.
       :Percentage:
-         Displayed as a percentage. Typically, *Min* and *Max* values are set to 0 and 100.
+         Displayed as a percentage.
+         Typically used with *Min* and *Max* values set to 0 and 100.
       :Factor:
-         A percentage or factor between a lower and upper bound.
+         A normalized value between a lower and upper bound,
+         commonly in the 0.0-1.0 range.
+      :Mass:
+         A mass value using the scene's unit system.
       :Angle:
-         A measurement in degrees or radians, depending on scene units.
+         A rotational measurement displayed in degrees or radians,
+         depending on scene unit settings.
       :Time (Scene Relative):
-         Time in frames, converted to seconds based on the scene frame rate.
-      :Time (Absolute): Time in seconds.
+         Time in frames, automatically converted to seconds based on
+         the scene frame rate.
+      :Time (Absolute):
+         Time measured directly in seconds.
       :Distance:
-         A spatial distance measurement.
+         A spatial distance measurement using the scene's length units.
       :Wavelength:
-         The distance between wave cycles,
-         measured in millimeters (mm), micrometers (µm), nanometers (nm), or picometers (pm).
+         The distance between wave cycles.
+         Displayed in millimeters (mm), micrometers (µm),
+         nanometers (nm), or picometers (pm).
       :Color Temperature:
-         A temperature value (Kelvin) corresponding to the perceived color of a light source.
+         A temperature value (Kelvin) corresponding to the perceived
+         color of a light source.
       :Frequency:
          A rate of repetition per second (hertz).
 
@@ -295,25 +314,30 @@ Subtype :guilabel:`Integer` :guilabel:`Float` :guilabel:`Vector` :guilabel:`Stri
       :None:
          Standard vector values.
       :Percentage:
-         Displayed as a percentage.
+         Each component is displayed as a percentage.
       :Factor:
-         A factor between a lower and upper bound.
+         Each component is treated as a normalized factor.
       :Translation:
-         A displacement vector.
+         A displacement vector using scene length units.
       :Direction:
-         A geometric direction vector.
+         A geometric direction vector, typically normalized.
       :Velocity:
-         Vector representing speed and direction of motion.
+         A vector representing speed and direction of motion.
       :Acceleration:
-         Vector representing the change in velocity.
+         A vector representing the rate of change of velocity.
       :Euler Angles:
          :term:`Euler Rotation` angles.
       :XYZ:
-         Cartesian coordinates. A fourth component (W) may also be supported.
+         Cartesian coordinates.
+         A fourth component (W) may also be supported depending on context.
 
-   Strings:
-      :None: Standard text string.
-      :File Path: The string is interpreted as a path to a file.
+   Strings
+      :None:
+         Standard text string.
+      :File Path:
+         The string is interpreted as a path to a file,
+         enabling file selection dialogs in the user interface.
+
 
 .. _bpy.types.NodeTreeInterfaceSocketVector.dimensions:
 
