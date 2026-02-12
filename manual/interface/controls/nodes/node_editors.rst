@@ -159,9 +159,14 @@ Label
 
 .. _bpy.types.Node.warning_propagation:
 
-Warning Propagation
+Propagation :guilabel:`Geometry Nodes`
    Controls which warnings in this node will be propagated to the parent node group or modifier.
-   This only exists for Geometry Nodes.
+
+   :All Messages: Propagate every info, error, and warning message upstream.
+   :Errors and Warnings: Propagate only error and warning messages upstream.
+   :Errors: Propagate only error messages upstream.
+   :None: Do not propagate any messages upstream.
+
 
 .. _bpy.types.Node.use_custom_color:
 
