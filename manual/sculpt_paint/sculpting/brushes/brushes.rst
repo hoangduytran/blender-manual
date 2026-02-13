@@ -264,31 +264,6 @@ Painting Brushes
 Recognizable by their blue thumbnails.
 These brushes are used for painting color attributes within sculpt mode.
 
-Paint Hard
-   Brush Type: :doc:`paint`
-
-   A simple hard round falloff.
-
-Paint Soft
-   Brush Type: :doc:`paint`
-
-   A soft round falloff with pressure sensitivity for only the strength.
-
-Paint Hard Pressure
-   Brush Type: :doc:`paint`
-
-   A hard round falloff with pressure sensitivity for the brush size.
-
-Paint Soft Pressure
-   Brush Type: :doc:`paint`
-
-   A soft round falloff with pressure sensitivity for both size and strength.
-
-Paint Square
-   Brush Type: :doc:`paint`
-
-   A hard square brush falloff.
-
 Airbrush
    Brush Type: :doc:`paint`
 
@@ -309,21 +284,51 @@ Blend Square
 
    Same as Blend Hard but with a hard square falloff.
 
+Blur
+   Brush Type: :doc:`paint`
+
+   Smooths painted colors; softening transitions and reducing sharp color differences.
+
 Paint Blend
    Brush Type: :doc:`paint`
 
    A mix of a Paint and Blend brush. On low pen pressure the brush averages colors and with high pen pressure it
    paints colors.
 
-Smear
-   Brush Type: :doc:`smear`
+Paint Hard
+   Brush Type: :doc:`paint`
 
-   Smears colors along the stroke.
+   A simple hard round falloff.
+
+Paint Hard Pressure
+   Brush Type: :doc:`paint`
+
+   A hard round falloff with pressure sensitivity for the brush size.
+
+Paint Soft
+   Brush Type: :doc:`paint`
+
+   A soft round falloff with pressure sensitivity for only the strength.
+
+Paint Soft Pressure
+   Brush Type: :doc:`paint`
+
+   A soft round falloff with pressure sensitivity for both size and strength.
+
+Paint Square
+   Brush Type: :doc:`paint`
+
+   A hard square brush falloff.
 
 Sharpen
    Brush Type: :doc:`smear`
 
    Pinches the colors inwards to create sharp edges or points.
+
+Smear
+   Brush Type: :doc:`smear`
+
+   Smears colors along the stroke.
 
 
 Simulation Brushes

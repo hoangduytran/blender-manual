@@ -56,3 +56,4 @@ Sculpt Brush Types
    multires_displacement_smear.rst
    paint.rst
    smear.rst
+   blur.rst
