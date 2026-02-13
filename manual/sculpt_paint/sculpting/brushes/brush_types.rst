@@ -17,10 +17,22 @@ Sculpt Brush Types
    inflate.rst
    blob.rst
    crease.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 2
+
    smooth.rst
    plane.rst
    multiplane_scrape.rst
    pinch.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 2
+
    grab.rst
    elastic_deform.rst
    snake_hook.rst
@@ -30,6 +42,12 @@ Sculpt Brush Types
    rotate.rst
    slide_relax.rst
    boundary.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 2
+
    cloth.rst
    simplify.rst
    mask.rst
