@@ -33,40 +33,14 @@ String
 Size
    The size of each character. The values of the other inputs are scaled by this value.
 
-Character Spacing
-   A factor by which the space between each character (kerning) is scaled on the X axis.
-
-Word Spacing
-   A factor by which whitespace between words is scaled on the X axis.
-
-Line Spacing
-   The distance between separate lines in the output. Scaled by the *Size* input.
-
-Text Box Width
-   The maximum width of each line, though individual words will not be wrapped.
-
-Text Box Height
-   The maximum height for all the lines of the text.
-
-
-Properties
-==========
-
 Font
    Font glyph used to generate the curve.
 
-Overflow
-   Controls how the text fits inside the text box.
-
-   :Overflow:
-      Wraps the text at the *Text Box Width*.
-   :Scale To Fit:
-      Scales the text size to fit the *Text Box Width* and *Text Box Height*.
-   :Truncate:
-      Only outputs text characters that fit within the width and height, based on the *Size* input.
-      Any part of the string that did not fit is moved to the *Remainder* output.
 
 Alignment
+---------
+
+Align X
    Controls horizontal alignment of text on each line.
 
    :Left: Aligns the text to the left.
@@ -94,6 +68,41 @@ Pivot Point
    :Bottom Left: Place the pivot points at the bottom left of each character's bounds.
    :Bottom Center: Place the pivot points at the middle of bottom of each character's bounds.
    :Bottom Right: Place the pivot points at the bottom right of each character's bounds.
+
+
+Spacing
+-------
+
+
+Character Spacing
+   A factor by which the space between each character (kerning) is scaled on the X axis.
+
+Word Spacing
+   A factor by which whitespace between words is scaled on the X axis.
+
+Line Spacing
+   The distance between separate lines in the output. Scaled by the *Size* input.
+
+
+Text Box
+--------
+
+Overflow
+   Controls how the text fits inside the text box.
+
+   :Overflow:
+      Wraps the text at the *Text Box Width*.
+   :Scale To Fit:
+      Scales the text size to fit the *Text Box Width* and *Text Box Height*.
+   :Truncate:
+      Only outputs text characters that fit within the width and height, based on the *Size* input.
+      Any part of the string that did not fit is moved to the *Remainder* output.
+
+Text Box Width
+   The maximum width of each line, though individual words will not be wrapped.
+
+Text Box Height
+   The maximum height for all the lines of the text.
 
 
 Outputs

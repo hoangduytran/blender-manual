@@ -106,6 +106,8 @@ Texture (pink)
    Used to pass a texture data-block.
 Image (apricot)
    Used to pass an image data-block.
+Font (brown)
+   Used to pass an font data-block.
 
 
 .. _interface-controls-nodes-socket_shape:
