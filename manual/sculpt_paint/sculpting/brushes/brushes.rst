@@ -239,7 +239,8 @@ Mask
    | Shortcut:  :kbd:`M`
 
    Paints a selection on parts of the mesh to be unaffected by other brushes.
-   It is possible to temporarily toggle this brush with :kbd:`Alt-LMB`.
+   It is possible to temporarily toggle this brush with :kbd:`Alt-LMB`,
+   to temporarily toggle mask erasing use :kbd:`Ctrl-Alt-LMB`,
 
 Draw Face Sets
    Brush Type: :doc:`draw_facesets`
