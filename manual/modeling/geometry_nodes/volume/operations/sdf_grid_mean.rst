@@ -9,7 +9,7 @@ SDF Grid Mean Node
    :align: right
    :alt: SDF Grid Mean node.
 
-The *SDF Grid Mean* node applies mean (box) filter smoothing to amSigned Distance Field (SDF) grid.
+The *SDF Grid Mean* node applies mean (box) filter smoothing to a Signed Distance Field (SDF) grid.
 This operation averages voxel values within a local neighborhood to smooth
 out small variations and noise while preserving the overall shape of the field.
 
