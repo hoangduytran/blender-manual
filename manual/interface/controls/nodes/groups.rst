@@ -198,7 +198,7 @@ Available item types include:
 
    .. note::
 
-      A panel toggle does not automatically disable or grey out its sockets.
+      A panel toggle does not automatically disable or gray out its sockets.
       To visually and functionally disable sockets, use a
       :doc:`Switch Node </modeling/geometry_nodes/utilities/switch>` or similar logic and disconnect the socket
       manually.

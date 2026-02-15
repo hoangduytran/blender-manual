@@ -201,7 +201,7 @@ Rig Name
 
    - If the name contains ``META``, it is replaced with ``RIG``.
    - If the name contains ``metarig``, it is replaced with ``rig``.
-   - Otherwise, ``RIG-`` is prepended to the name.
+   - Otherwise, ``RIG-`` is prefixed to the name.
 
    When overwriting an existing rig object specified by the *Target Rig* option, its name is not changed,
    allowing it to be freely renamed without having to keep the value of this option in sync.

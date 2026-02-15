@@ -59,7 +59,7 @@ Shader (bright green)
    Used for shaders in :doc:`Cycles </render/cycles/index>` and :doc:`EEVEE </render/eevee/index>`.
 Geometry (Sea Green)
    Used in :doc:`Geometry Nodes </modeling/geometry_nodes/index>`.
-Menu (Dark Grey)
+Menu (Dark Gray)
    Used for enum style inputs that show a dropdown menu or radio button in the UI.
 Bundle (dark turquoise)
    Represents a generic bundle of multiple data types.
