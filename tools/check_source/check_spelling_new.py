@@ -13,6 +13,10 @@ with a series of improvements including the following:
 - Aggressively caches enchant lookups per process (for max performance from multiprocessing).
 - Properly checks bulleted lists which were ignored by the legacy script.
 - Properly ignores math sections but checks remainder of files containing them.
+- Forces custom spell check terms to lowercase to allow proper nouns to be capitalized in
+    the dictionary lists for easier maintenance and copy/pasting (this is done at the bottom of 
+    check_spelling_config.py). While it runs once per multi-process instance, it's very fast
+    and adds almost no overhead.
 
 - TODO: more comprehensive docs.
 - TODO: ensure no other elements are accidentally getting skipped in RstSpellingVisitor.
