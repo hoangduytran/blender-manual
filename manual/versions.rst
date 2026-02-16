@@ -7,6 +7,7 @@ Blender Manual Versions
 5 Series | 2025 -- 2027
 =======================
 
+- `Blender 5.1 <https://docs.blender.org/manual/en/5.1/>`__
 - `Blender 5.0 <https://docs.blender.org/manual/en/5.0/>`__
 
 
