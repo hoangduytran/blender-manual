@@ -1,52 +1,7 @@
 
-****************
-Curve Properties
-****************
-
-Hair Curves have different properties than regular Curve objects;
-these properties are documented below.
-
-
-Attributes
-==========
-
-The *Attributes* panel contains different hair characteristics such as the position and color of hair strands.
-
-Use the :ref:`List View <ui-list-view>` to manage attributes.
-
-.. seealso::
-
-   See the :doc:`Attribute Reference </modeling/geometry_nodes/attributes_reference>` for details on attributes.
-
-
-Surface
-=======
-
-.. _bpy.types.Curves.surface:
-
-Surface
-   The curve surface is an optional mesh that is used to anchor the curves, and behave as a scalp for hair grooming.
-   When adding a new Curves object via the **Add Menu** the active object is automatically set as the surface.
-active spline
-   To set a new surface press :kbd:`Ctrl-P` and select *Object (Attach Curves to Surface)*
-   in the *Set Parent To* pop-up menu. This option can be seen as part of the Curves settings in the Properties
-   Editor.
-
-   .. figure:: /images/sculpt-paint_sculpting_curves-surface.png
-
-.. _bpy.types.Curves.surface_uv_map:
-
-Surface UV Map
-   The name of the attribute on the surface mesh used to define the attachment of each curve.
-
-   .. note::
-
-      If the UV from the surface changed,
-      run :ref:`Snap to Nearest Surfaces <bpy.ops.curves.snap_curves_to_surface>` to re-attach the curves.
-
-
+**********
 Curve Data
-==========
+**********
 
 .. reference::
 
@@ -54,8 +9,9 @@ Curve Data
    :Mode:      Edit Mode
    :Menu:      :menuselection:`Sidebar --> Item --> Curve Data`
 
-The *Curve Data* panel in Edit Mode provides settings that affect the currently active spline.
-These options control how the spline is evaluated, displayed, and mathematically constructed.
+The *Curve Data* panel in Edit Mode provides settings that affect the
+currently active Grease Pencil curve.
+These options control how the stroke is evaluated, displayed, and rendered.
 
 Cyclic
    Closes the active spline by connecting the last control point back to the first.
@@ -112,9 +68,41 @@ Order :guilabel:`NURBS`
 
              NURBS curve with order 2.
 
+
 Resolution :guilabel:`NURBS` :guilabel:`Bézier` :guilabel:`Catmull Rom`
    Adjusts the resolution of each segment by changing
    the number of subdivisions used when evaluating the spline.
 
    Higher resolution values produce smoother curves but increase computational cost.
    Lower values reduce detail but improve performance.
+
+Fill Opacity
+   Controls the opacity of the fill area of the stroke.
+   A value of 0 makes the fill fully transparent,
+   while higher values increase its visibility.
+
+Start Cap
+   Defines the shape of the beginning of the stroke.
+
+   :Round: Adds a rounded cap at the start of the stroke.
+   :Flat: Ends the stroke with a flat edge.
+
+End Cap
+   Defines the shape of the end of the stroke.
+
+   :Round: Adds a rounded cap at the end of the stroke.
+   :Flat: Ends the stroke with a flat edge.
+
+Softness
+   Controls how smoothly the fill transitions toward the stroke boundary.
+   Higher values create a softer falloff near the edges.
+
+U Scale
+   Scales the stroke's texture coordinates along its length.
+   Useful for controlling how materials or texture patterns repeat
+   along the stroke.
+
+Aspect Ratio
+   Controls the scaling relationship between the stroke's width and height
+   when using certain material or texture effects.
+   Adjusting this value can stretch or compress fill and stroke patterns.

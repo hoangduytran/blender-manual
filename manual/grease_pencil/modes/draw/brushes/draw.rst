@@ -23,7 +23,7 @@ Brush Settings
 Material
    Data-block selector for the :doc:`material </grease_pencil/materials/index>`.
 
-Radius
+Size
    The radius of the brush in pixels.
 
    :kbd:`F` allows you to change the brush size interactively by dragging the pointer or
@@ -46,6 +46,21 @@ Strength
       Adjusts the strength based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
       The gradient of the pressure can be customized using
       the :doc:`curve widget </interface/controls/templates/curve>`.
+
+.. _bpy.types.BrushGpencilSettings.stroke_type:
+
+Stroke Mode
+   Defines which part of the Grease Pencil material is affected when drawing.
+
+   :Stroke:
+      Applies only the stroke (outline) component of the material.
+      The fill is not created or modified.
+   :Fill:
+      Applies only the fill component of the material.
+      No stroke outline is drawn.
+   :Both:
+      Applies both the stroke and fill components of the material
+      when creating or editing strokes.
 
 .. _bpy.types.BrushGpencilSettings.caps_type:
 
