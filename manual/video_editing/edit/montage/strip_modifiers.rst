@@ -250,7 +250,7 @@ Mode
          Factor by which the audio pitch is scaled.
          Values greater than 1 raise the pitch, values less than 1 lower it.
 
-Preserve Vocal Format
+Preserve Vocal Formants
    Preserve vocal formants when shifting pitch.
    This helps keep speech sounding more natural (for example, raising pitch without making the voice
    sound "chipmunk-like"), but may introduce additional processing artifacts depending on the audio.
