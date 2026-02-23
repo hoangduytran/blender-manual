@@ -23,7 +23,7 @@ When a node is automatically attached, the surrounding nodes
 will be offset to the right or left depending on the :kbd:`T` toggle;
 see :ref:`editors-nodes-usage-auto-offset` for more information.
 
-While dragging nodes, you can press :kbd:`F` to toggle their parent 
+While dragging nodes, you can press :kbd:`F` to toggle their parent
 :doc:`Frame </interface/controls/nodes/types/layout/frame>`:
 
 - If the nodes are inside a frame, they will be detached from it.
@@ -139,6 +139,12 @@ Not only the selected nodes but also the connections between them are copied to 
 
    The pasted node will be placed in the *same* position as when it was copied.
    Use the same cautions as when duplicating.
+
+.. tip::
+
+   Nodes can be copied and pasted between Blender instances.
+   This also works across different node editors, as long as the node
+   types are compatible with the destination editor.
 
 
 .. _bpy.ops.node.duplicate_move:
