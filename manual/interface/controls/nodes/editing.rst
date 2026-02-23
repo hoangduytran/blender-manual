@@ -133,18 +133,23 @@ Copy/Paste
    :Menu:      :menuselection:`Node --> Copy`, :menuselection:`Node --> Paste`
    :Shortcut:  :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
 
-Not only the selected nodes but also the connections between them are copied to the clipboard.
+Copies the selected nodes to the clipboard, including the connections between them.
+
+.. _bpy.ops.node.delete_copy_reconnect:
+
+Use :kbd:`Ctrl-X` to :ref:`bpy.ops.node.delete_reconnect`, which removes the selected
+nodes while reconnecting their links and placing the deleted nodes on the clipboard.
 
 .. note::
 
-   The pasted node will be placed in the *same* position as when it was copied.
-   Use the same cautions as when duplicating.
+   Pasted nodes are placed at the same coordinates as when they were copied.
+   The same considerations as duplicating nodes apply.
 
 .. tip::
 
    Nodes can be copied and pasted between Blender instances.
-   This also works across different node editors, as long as the node
-   types are compatible with the destination editor.
+   This also works across different node editors, provided the node
+   types are supported by the destination editor.
 
 
 .. _bpy.ops.node.duplicate_move:
@@ -203,7 +208,7 @@ Delete with Reconnect
 .. reference::
 
    :Menu:      :menuselection:`Node --> Delete`
-   :Shortcut:  :kbd:`Ctrl-X`
+   :Shortcut:  :kbd:`Ctrl-Delete`
 
 Deletes the selected node(s), then creates new links connecting their former input nodes
 to their former output nodes.
