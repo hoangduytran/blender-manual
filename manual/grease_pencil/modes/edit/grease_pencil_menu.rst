@@ -413,23 +413,46 @@ Delete
 
 Opens a pop-up menu with operators to remove geometry from the Grease Pencil object.
 
-Frames
-   Deletes all the strokes at the current frame and in the current layer/channel.
-
 
 .. _bpy.ops.grease_pencil.delete:
 
-Delete
-------
+Strokes
+-------
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Grease Pencil --> Delete --> Delete`
+   :Menu:      :menuselection:`Grease Pencil --> Delete --> Strokes`
 
 Deletes the selected points.
-When only one point remains, there is no more visible stroke,
-and when all points are deleted, the stroke itself is deleted.
+
+If deleting points leaves only a single point in a stroke,
+the stroke will no longer be visible.
+If all points of a stroke are removed, the entire stroke is deleted.
+
+
+Only Strokes
+------------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Delete --> Only Strokes`
+
+Deletes only the stroke (outline) component of the selected curves,
+preserving any associated fill geometry.
+
+
+Only Fills
+----------
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Grease Pencil --> Delete --> Only Fills`
+
+Deletes only the fill component of the selected curves,
+leaving the stroke (outline) intact.
 
 
 .. _bpy.ops.grease_pencil.dissolve:
