@@ -467,6 +467,18 @@ Align the selected nodes horizontally or vertically. The effect is similar to sc
 (:kbd:`S X 0` or :kbd:`S Y 0`), but it places the nodes at an even distance.
 
 
+.. _bpy.ops.node.nw_center_nodes:
+
+Center Nodes
+------------
+
+.. reference::
+
+   :Menu:   :menuselection:`Sidebar --> Node Wrangler --> Center Nodes`
+
+Move selected nodes to the center of the node editor.
+
+
 Select within Frame (Parent/Children)
 -------------------------------------
 

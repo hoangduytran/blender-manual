@@ -9,7 +9,7 @@ For instance, an input can be:
 
 - Taken directly from the active camera in a selected scene.
 - A static image.
-- A movie clip (such as an image sequence or video).
+- A :ref:`movie clip <bpy.types.MovieClip>` (such as an image sequence or video).
 - A color or value.
 
 These nodes generate the information that is passed to other nodes.

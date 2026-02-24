@@ -12,7 +12,7 @@ or first use the Compositor to do green-screen masking, matting, color correctio
 and so on to the images. That result is then fed to the Sequencer where the strips are cut and
 mixed and a final overlay is done.
 
-Finally you can render out from the Sequencer and compress the frames into a playable movie clip.
+Finally you can render out from the Sequencer and compress the frames into a video file.
 
 
 Workflow

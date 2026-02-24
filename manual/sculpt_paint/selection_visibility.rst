@@ -25,6 +25,8 @@ Selection masking has some advantages over the default paint mode:
 - You can select and deselect faces instead without the need to switch to Edit Mode.
 
 
+.. _bpy._paint.vert_select_loop:
+
 Details About Selecting
 -----------------------
 
@@ -40,7 +42,7 @@ The following standard selection operations are supported:
 - :kbd:`Ctrl-L` -- Select linked.
 - :kbd:`Ctrl-NumpadPlus` -- Extend Selection
 - :kbd:`Ctrl-NumpadMinus` -- Shrink Selection
-- :kbd:`Alt-LMB` -- Loop Select
+- :kbd:`Alt-LMB` -- Vertex Loop Select
 
 
 Vertex Selection Masking
