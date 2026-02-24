@@ -119,6 +119,10 @@ Line
    An attribute field containing the line index of each character
    (on the :ref:`instance domain <attribute-domains>`).
 
+Word
+   An attribute field containing the word index of each character
+   (on the :ref:`instance domain <attribute-domains>`).
+
 Pivot Point
    Outputs the position described by the *Pivot Point* drop-down in the local space of each instance.
 
