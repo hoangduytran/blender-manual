@@ -184,7 +184,7 @@ Pack
      - |none|
      - An isosurface in 3D space.
        Used as data of metaball objects.
-   * - :bl-icon:`tracker` :doc:`Movie Clip </editors/clip/introduction>`
+   * - :bl-icon:`tracker` :ref:`Movie Clip <bpy.types.MovieClip>`
      - |tick|
      - |cross|
      - Reference to an image sequence or video file.

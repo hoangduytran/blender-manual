@@ -29,7 +29,8 @@ Properties
 ==========
 
 Movie Clip
-   Used to select the movie clip. For controls see :ref:`ui-data-block`.
+   Used to select the :ref:`movie clip <bpy.types.MovieClip>`.
+   For controls see :ref:`ui-data-block`.
 
 
 Outputs

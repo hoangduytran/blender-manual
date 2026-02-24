@@ -52,7 +52,7 @@ Properties
 ==========
 
 Movie Clip
-   The movie clip whose stabilization to use.
+   The :ref:`movie clip <bpy.types.MovieClip>` whose stabilization to use.
 
 
 Outputs

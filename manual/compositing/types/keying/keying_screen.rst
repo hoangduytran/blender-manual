@@ -25,7 +25,7 @@ Properties
 ==========
 
 Movie Clip
-   The selectable clip data-block used as input for the gradient colors.
+   The selectable :ref:`movie clip <bpy.types.MovieClip>` used as input for the gradient colors.
 Tracking Object
    Tracking Object to generate the gradient.
    You will probably want to create new a tracking object
