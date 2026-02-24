@@ -80,9 +80,9 @@ and other more complex curves, depending on the values used.
 Mode
    Method used to represent the equation.
 
-   Expanded Polynomial
+   :Expanded Polynomial:
       Equation in the form :math:`y = A + Bx^1 + Cx^2 + ... + Dx^n`.
-   Factorized Polynomial
+   :Factorized Polynomial:
       Equation in the form :math:`y = (Ax + B)(Cx + D)`.
 
 Additive
@@ -91,7 +91,7 @@ Additive
 Order
    The highest power of ``x`` for this polynomial.
 
-Coefficient
+Constant
    The constants A, B, C... in the equation.
 
 
