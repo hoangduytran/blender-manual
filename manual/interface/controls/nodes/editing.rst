@@ -122,23 +122,32 @@ Detach Links :kbd:`Alt-LMB` drag
    and move the nodes to a new location.
 
 
-.. _bpy.ops.node.clipboard_copy:
-.. _bpy.ops.node.clipboard_paste:
-
-Copy/Paste
-==========
+Cut/Copy/Paste
+==============
 
 .. reference::
 
-   :Menu:      :menuselection:`Node --> Copy`, :menuselection:`Node --> Paste`
+   :Menu:      :menuselection:`Node --> Cut`, :menuselection:`Node --> Copy`, :menuselection:`Node --> Paste`
    :Shortcut:  :kbd:`Ctrl-C`, :kbd:`Ctrl-V`
 
-Copies the selected nodes to the clipboard, including the connections between them.
+These operators allow transferring nodes within a node tree,
+between different node trees, or even between Blender instances.
 
 .. _bpy.ops.node.delete_copy_reconnect:
 
-Use :kbd:`Ctrl-X` to :ref:`bpy.ops.node.delete_reconnect`, which removes the selected
-nodes while reconnecting their links and placing the deleted nodes on the clipboard.
+Cut
+   Removes the selected nodes and places them on the clipboard.
+   When possible, links are automatically reconnected to preserve the node flow.
+
+.. _bpy.ops.node.clipboard_copy:
+
+Copy :kbd:`Ctrl-C`
+   Copies the selected nodes to the clipboard, including the connections between them.
+
+.. _bpy.ops.node.clipboard_paste:
+
+Paste :kbd:`Ctrl-V`
+   Inserts the nodes from the clipboard into the node tree.
 
 .. note::
 
