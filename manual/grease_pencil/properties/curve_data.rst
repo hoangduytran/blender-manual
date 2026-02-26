@@ -31,7 +31,7 @@ Cyclic
 
 Knot Mode :guilabel:`NURBS`
    Controls how knots are generated along the NURBS spline,
-   which affects parameterization and shape behavior.
+   which affects parametrization and shape behavior.
 
    :Normal:
       Uses evenly spaced knots.
