@@ -212,3 +212,16 @@ Intersection
       Faces are considered as medium interface only when they have different consecutive facing.
       Gives correct results as long as the max ray depth is not exceeded. Has significant memory
       overhead compared to the fast method.
+
+
+Alpha Clip Setup
+================
+
+When using raytracing with material set to dithered render mode, this can lead to noisy renders around transparent
+areas. To make edges clean, it is necessary to quantize alpha value to either 0 or 1. This can be done using greater
+than math node.
+
+.. figure:: /images/render_eevee_alpha_clip.png
+   :align: center
+
+   Alpha clip setup
