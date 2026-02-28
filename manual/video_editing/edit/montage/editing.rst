@@ -195,7 +195,25 @@ Snap Strips to the Current Frame
    :Menu:      :menuselection:`Strip --> Transform --> Snap Strips to the Current Frame`
    :Shortcut:  :kbd:`Shift-S`
 
-Moves the strip or control point to the current frame.
+Moves the selected strips so that they align with the current frame.
+The active strip is used as the reference, and the mouse position
+relative to the playhead determines which side of the strip snaps
+to the current frame.
+
+When invoked from the menu, click with :kbd:`LMB` on either side
+of the playhead to choose which side to snap.
+
+Frame
+   The frame to which the selected strips will be snapped.
+
+Snap Side
+   Determines which side of the strip snaps to the frame when
+   no strip handles are selected.
+
+Keep Offset
+   If enabled, all selected strips are moved together,
+   preserving their relative timing.
+   If disabled, each strip snaps individually.
 
 
 .. _bpy.ops.sequencer.offset_clear:
