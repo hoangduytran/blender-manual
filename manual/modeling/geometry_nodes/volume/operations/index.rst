@@ -7,6 +7,7 @@
    :maxdepth: 1
 
    grid_to_mesh.rst
+   grid_to_points.rst
    volume_to_mesh.rst
 
 -----
