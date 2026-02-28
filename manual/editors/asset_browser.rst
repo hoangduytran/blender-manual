@@ -167,7 +167,7 @@ Copy Bundle to Asset Library
    become available as part of the library.
 
 Catalogs
-   Tree view that shows the :doc:`catalogs </files/asset_libraries/catalogs>` of the selected
+   :ref:`ui-tree-view` that shows the :doc:`catalogs </files/asset_libraries/catalogs>` of the selected
    asset library. A catalog is a group of assets; when you select one, only the assets in that
    catalog and its child catalogs will be listed.
 

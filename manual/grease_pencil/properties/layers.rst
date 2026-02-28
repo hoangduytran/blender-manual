@@ -39,7 +39,7 @@ Layers can mask other layers by enabling Use Mask (mask icon) or using the check
    overlay to control the opacity of the non-active layers.
 
 Layer Tree
-   Tree view of all layers and groups for the Grease Pencil object.
+   :ref:`ui-tree-view` of all layers and groups for the Grease Pencil object.
 
    Next to the layer name there are four icons buttons that control common properties of the layer:
 

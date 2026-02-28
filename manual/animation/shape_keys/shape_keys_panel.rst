@@ -17,7 +17,7 @@ Shape Keys Panel
 
 
 The *Shape Keys* panel is used to create, organize, and manage shape keys.
-It presents a tree view where shape keys can be reordered by click-dragging.
+It presents a :ref:`ui-tree-view` where shape keys can be reordered by click-dragging.
 
 .. container:: lead
 
