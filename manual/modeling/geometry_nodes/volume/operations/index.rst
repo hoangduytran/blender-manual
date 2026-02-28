@@ -29,6 +29,7 @@
    :maxdepth: 1
 
    field_to_grid.rst
+   clip_grid.rst
    grid_dilate_erode.rst
    grid_mean.rst
    grid_median.rst
