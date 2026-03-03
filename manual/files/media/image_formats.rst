@@ -365,3 +365,36 @@ this format is supported by many other software packages.
 
 Radiance ``.hdr`` files store colors still in 8 bits per component,
 but with an additional (shared) 8-bit exponent value, making it 32 bits per pixel.
+
+
+.. _files-image-metadata:
+
+Metadata
+========
+
+Metadata is additional information stored inside an image file
+that describes how the image was created or how it should be interpreted.
+
+Blender can write metadata into supported image formats
+when enabled in the :doc:`Output Properties </render/output/properties/metadata>`.
+
+
+Limitations
+-----------
+
+Not all formats support metadata,
+and some may only support a limited subset of fields.
+
+When using formats that do not support metadata,
+render information is not preserved in the saved file.
+
+
+Orientation Metadata
+^^^^^^^^^^^^^^^^^^^^
+
+EXIF orientation metadata (commonly found in JPEG images)
+is ignored when loading images into Blender.
+Images are displayed using their stored pixel data without automatic rotation.
+
+If an image appears incorrectly rotated,
+it can be adjusted manually using :ref:`bpy.ops.image.rotate_orthogonal`.
