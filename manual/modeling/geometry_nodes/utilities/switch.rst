@@ -14,7 +14,7 @@ The *Switch* node outputs one of two inputs depending on a condition.
 When the inputs are regular values, only the input that is passed through
 the node is evaluated. This means the unused input is not computed.
 
-When the inputs are :term:`fields <Field>`, both inputs may be evaluated
+When the inputs are :doc:`/modeling/geometry_nodes/fields`, both inputs may be evaluated
 before the switch is applied. The switch then selects which result is used
 for each element. Because of this, the node should not be relied on to avoid
 evaluating expensive field inputs.
