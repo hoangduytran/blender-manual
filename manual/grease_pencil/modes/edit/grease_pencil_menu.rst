@@ -63,7 +63,6 @@ The *Mirror* tool is also available, behaving exactly the same as with
 .. _bpy.ops.grease_pencil.snap_to_grid:
 .. _bpy.ops.grease_pencil.snap_to_cursor:
 .. _bpy.ops.grease_pencil.snap_cursor_to_selected:
-.. _bpy.ops.view3d.snap_cursor_to_center:
 
 Snap
 ====
