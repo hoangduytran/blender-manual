@@ -10,7 +10,7 @@ Movie Clip Node
    :alt: Movie Clip node.
 
 This node is a special node that uses some of the values taken from
-footage cameras and trackings and link them to the output.
+footage cameras and trackings and links them to the output.
 It is possible to load image sequences, but only Image and Alpha values
 will be available, because the other outputs will not have any values
 associated with them.

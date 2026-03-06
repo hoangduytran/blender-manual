@@ -41,7 +41,7 @@ Usage
 Keyboard Shortcuts
 ------------------
 
-Viewer node provide a quick way to toggle between different viewer nodes while compositing using keyboard shortcuts,
+Viewer nodes provide a quick way to toggle between different viewer nodes while compositing using keyboard shortcuts,
 improving workflow efficiency when comparing outputs.
 
 - **Assign Shortcut** (:kbd:`Ctrl-1`, :kbd:`Ctrl-2`, etc.):

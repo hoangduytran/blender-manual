@@ -55,7 +55,7 @@ and must be converted to meshes prior to export.
 GPU Instances
 -------------
 
-When the option is enable in Exporter, instances are exported using the ``EXT_mesh_gpu_instancing`` extension.
+When the option is enabled in Exporter, instances are exported using the ``EXT_mesh_gpu_instancing`` extension.
 There are some limitations, at export:
 
 - Instances must be meshes, and don't have any children themselves
@@ -730,7 +730,7 @@ The importer organizes actions so they will be exported correctly with this mode
 This mode is useful if you are exporting for game engine, with an animation library of a character.
 Each action must be on its own NLA track.
 
-Before Blender 4.4, tracks was merged regarding their name.
+Before Blender 4.4, tracks were merged regarding their name.
 With Blender 4.4, and the introduction of slotted actions, this default behavior has been changed.
 Now, tracks are merged by the action they are using, and not by their name.
 You can find more information about action slots in :doc:`Animation </animation/actions>`.
@@ -1028,7 +1028,7 @@ Image Quality
    When exporting jpeg or WebP files, the quality of the exported file.
 Create WebP
    Creates WebP textures for every textures, in addition to the existing texture.
-   For already WebP textures, nothing happen.
+   For already WebP textures, nothing happens.
 WebP fallback
    For all WebP textures, create a png fallback texture.
 Unused images
@@ -1052,7 +1052,7 @@ Data - Shape Keys - Optimize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use Sparse Accessor if better
-   Sparse Accessor will be used if it save space (if the exported file is smaller)
+   Sparse Accessor will be used if it saves space (if the exported file is smaller)
 Omitting Sparse Accessor if data is empty
    If data is empty, omit to export Sparse Accessor. Not all viewer managed it correctly, so this option is Off by
    default

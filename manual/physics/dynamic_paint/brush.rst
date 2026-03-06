@@ -210,7 +210,7 @@ Wave Type
    Select what effect the brush creates in the wave simulation.
 
    :Depth Change:
-      The brush create waves when the intersection depth with the surface is *changed* on that point.
+      The brush creates waves when the intersection depth with the surface is *changed* on that point.
       If the brush is not moved, it will have no effect.
 
       Using a negative "Factor" with this type can create a nice looking "wake" for moving objects like ships.

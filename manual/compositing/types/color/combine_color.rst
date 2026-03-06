@@ -17,7 +17,7 @@ The node can combine multiple :term:`Color Models <Color Model>` depending on th
 Inputs
 ======
 
-The outputs of this node depends on the Mode property (see below).
+The outputs of this node depend on the Mode property (see below).
 
 Alpha
    The color channel that is responsible for the image's transparency.

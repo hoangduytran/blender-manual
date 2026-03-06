@@ -17,7 +17,7 @@ Transform
    :Menu:      :menuselection:`Curve --> Transform`
 
 A Bézier curve can be edited by transforming the locations of both control points and handles.
-NURBS curve on the other hand have only control points.
+NURBS curve on the other hand has only control points.
 
 Move, Rotate, Scale
    Like other elements in Blender, curve control points and handles can be

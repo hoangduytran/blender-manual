@@ -15,7 +15,7 @@ unmodified properties of the overridden one will be updated accordingly.
    Automatic conversion from proxies to library overrides happens when loading a blend-file,
    but results on complex characters are not guaranteed and may need manual fixes.
 
-Library overrides supports:
+Library overrides support:
 
 - Multiple independent overrides of a same linked data
   (e.g. having the same character multiple times in the same scene).
@@ -78,7 +78,7 @@ change greatly depending on whether animation data was already defined in the li
 data-block. Animation data is created for a datablock if it gets animated by keyframes, or
 through drivers.
 
-In general, an overrides can do much more with its animation data if no animation data exists
+In general, an override can do much more with its animation data if no animation data exists
 in its linked reference data-block.
 
 **Keyframes (a.k.a. F-Curves)**
@@ -161,7 +161,7 @@ Make an Override
 
 Create overrides from the selected data-blocks.
 
-Blender automatically create overrides for all required data-blocks to ensure that
+Blender automatically creates overrides for all required data-blocks to ensure that
 valid override hierarchies are created.
 
 Only overrides created from selected items will be user-editable.

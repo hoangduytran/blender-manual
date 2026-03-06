@@ -139,7 +139,7 @@ Duplicate :kbd:`Shift-D`
    The *Duplicate* operator creates a copy of the selected strip(s)
    and places them in the nearest available channel above the original.
 
-   The duplicated content remain selected, allowing immediate repositioning.
+   The duplicated content remains selected, allowing immediate repositioning.
 
 .. seealso::
 

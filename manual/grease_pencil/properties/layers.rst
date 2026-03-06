@@ -23,10 +23,10 @@ layers in the viewport is top to bottom.
 Layers can be grouped using Layer Groups. A layer can only be in one group at a time. Layers can be moved into groups
 using drag-and-drop. Groups can be color coded with a color tag.
 
-Every layer correspond to a channel in the Dope Sheet editor (in Grease Pencil mode).
+Every layer corresponds to a channel in the Dope Sheet editor (in Grease Pencil mode).
 See :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>` for more information.
 
-Layers can also be used together with Modifiers to only affects part of your drawing.
+Layers can also be used together with Modifiers to only affect part of your drawing.
 See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more information.
 
 Layers can mask other layers by enabling Use Mask (mask icon) or using the checkbox in the Masks panel header. See

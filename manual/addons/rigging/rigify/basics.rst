@@ -158,7 +158,7 @@ To bind the geometry to the rig you can use your preferred tools. Just few thing
 - All the deforming bones are in the *DEF* bone collection.
 - Eyes and Teeth bones of the legacy face are not deforming. You are supposed to bind the eyes and
   teeth geometry through Child Of constraints.
-- Usually armature deform with automatic weights do a really good job out of the box
+- Usually armature deform with automatic weights does a really good job out of the box
   if you correctly place your bones (and there is enough topology to work with!).
 
 For more detailed information on bone collections, Armature modifier and weight painting refer to the Blender manual.

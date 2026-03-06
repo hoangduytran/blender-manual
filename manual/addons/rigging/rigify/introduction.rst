@@ -31,7 +31,7 @@ Nondisruptive re-rig
    you can re-generate your rig without losing your previously generated features and your animation data.
 
 Advanced and flexible feature set for character animation
-   The included rig samples (limbs, spines, tails, fingers, faces...) adds to all the stretchy FK/IK features
+   The included rig samples (limbs, spines, tails, fingers, faces...) add to all the stretchy FK/IK features
    a direct deformation secondary layer that lets you flex, bend and deform the character as you like
    through interactive Bendy Bones controls.
 

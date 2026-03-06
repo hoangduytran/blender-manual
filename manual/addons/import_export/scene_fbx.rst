@@ -12,7 +12,7 @@ The exporter can bake mesh modifiers and animation into the FBX so the final res
 .. note::
 
    - Bones would need to get a correction to their orientation
-     (FBX bones seems to be -X aligned, Blender's are Y aligned),
+     (FBX bones seem to be -X aligned, Blender's are Y aligned),
      this does not affect skinning or animation, but imported bones in other applications will look wrong.
    - Animations (FBX AnimStacks, Blender actions) **are not linked** to their object,
      because there is no real way to know which stack to use as 'active' action for a given object, mesh or bone.

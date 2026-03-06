@@ -152,7 +152,7 @@ Allow Online Access
 Time Out
    The time (in seconds) that online operations may wait before timing out.
 
-   Use the systems default when zero.
+   Use the system's default when zero.
 
 .. _bpy.types.PreferencesSystem.network_connection_limit:
 

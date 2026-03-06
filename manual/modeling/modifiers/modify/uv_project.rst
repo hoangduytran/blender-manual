@@ -32,9 +32,9 @@ UV Map
    Which UV map to modify. Defaults to the active rendering layer.
 
 Aspect X/Y
-   Changes the image's aspect ratio. Only apply when a camera is used as projector object.
+   Changes the image's aspect ratio. Only applies when a camera is used as projector object.
 Scale X/Y
-   Scales the image. Only apply when a camera is used as projector object.
+   Scales the image. Only applies when a camera is used as projector object.
 
 Projectors
    Up to ten projector objects are supported.

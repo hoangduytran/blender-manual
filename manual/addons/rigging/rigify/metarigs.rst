@@ -36,7 +36,7 @@ New meta-rigs are created assembling sub-rigs samples
 
       Cat meta-rig built by samples.
 
-All the mechanics, deformation bones and widget are created on a single click
+All the mechanics, deformation bones and widgets are created on a single click
    The meta-rig contains more information than the visualized bones.
    In fact at generation time Rigify will identify each sub-rig type and depending on
    the selected options will create all the sophisticated controls, switches, and

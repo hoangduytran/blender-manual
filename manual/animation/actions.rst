@@ -133,7 +133,7 @@ actions contain. Each F-Curve contains keyframes that define how a property
    F-Curves for three different properties.
 
 Blender's animation editors (such as the dopesheet, graph editor, etc.) have a
-**channel list** on their left side that display animated properties. For
+**channel list** on their left side that displays animated properties. For
 actions, these channels correspond to the F-Curves that animate those
 properties.
 

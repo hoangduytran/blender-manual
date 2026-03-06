@@ -23,7 +23,7 @@ Mask Layers
 
    Mask Layer panel.
 
-Mask layers consists of one or several splines and used to "grouped" operation on splines.
+Mask layers consist of one or several splines and used to "grouped" operation on splines.
 Layers can be used to create complex shapes and to define how the splines interact with each other.
 Splines belonging to the same layer can be animated together, for example by an item
 from motion tracker footage.

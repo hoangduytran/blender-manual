@@ -587,7 +587,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    NDOF
    3D Mouse
-      A general term used to describe a 3D mouse, or any input devices which supports
+      A general term used to describe a 3D mouse, or any input devices which support
       more degrees of freedom than a conventional 2D input device, see: :ref:`hardware-ndof`.
 
    Nonlinear Animation
@@ -853,7 +853,7 @@ This page lists definitions for terms used in Blender and this manual.
    Rolling Shutter
       In real CMOS cameras the sensor is read out with scanlines
       and hence different scanlines are sampled at a different moment in time.
-      This, for example, make vertical straight lines being curved when doing a horizontal camera pan.
+      This, for example, makes vertical straight lines being curved when doing a horizontal camera pan.
       See also `Rolling Shutter <https://en.wikipedia.org/wiki/Rolling_shutter>`__ on Wikipedia.
 
    Roughness Map
@@ -1008,7 +1008,7 @@ This page lists definitions for terms used in Blender and this manual.
 
       A white point is defined by a set of `CIE illuminates <https://en.wikipedia.org/wiki/Standard_illuminant>`__
       which correspond to a color temperature.
-      For example, D65 corresponds to 6500 K light and D70 corresponding to 7000 K.
+      For example, D65 corresponds to 6500 K light and D70 corresponds to 7000 K.
 
    World Space
       A 3D coordinate system that originates at a point at the origin of the world.

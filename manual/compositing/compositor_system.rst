@@ -75,7 +75,7 @@ conversions are performed:
 +---------+---------+-------------------------------------+
 
 The following example demonstrates implicit conversion between a color type and a float type, since
-the :doc:`Math Node </compositing/types/utilities/math/math>` expect float inputs.
+the :doc:`Math Node </compositing/types/utilities/math/math>` expects float inputs.
 
 .. figure:: /images/compositing_realtime-compositor_compositing-space_data_type_implicit_conversion.png
 
@@ -178,7 +178,7 @@ be a zero transparent color, which is convenient for the use case.
 Interpolation
 ^^^^^^^^^^^^^
 
-If an input image to a node is not perfectly aligned with the operation domain of the node or have a
+If an input image to a node is not perfectly aligned with the operation domain of the node or has a
 different size in pixels, the node would typically need to do a process called Interpolation, where
 the input image is read at the exact positions of the pixels of the operation domain. This can be
 done using different interpolation methods, including Nearest-Neighbor, Bilinear, and Bicubic
@@ -269,7 +269,7 @@ the :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>`, the output will 
 
 The :ref:`Alpha Over node <bpy.types.CompositorNodeAlphaOver>` currently does not support changing
 the domain priority for its inputs, so as a workaround,
-one can use a :doc:`Mix node </compositing/types/color/mix_color>` to achieved the desired behavior,
+one can use a :doc:`Mix node </compositing/types/color/mix_color>` to achieve the desired behavior,
 noting that the first *Image* input in the *Mix* node has the highest domain priority,
 as shown in the following figure.
 

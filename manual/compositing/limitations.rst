@@ -12,7 +12,7 @@ General hardware limitations apply when using the GPU compositor.
 See also :ref:`Troubleshooting Graphics Hardware <troubleshooting-gpu-index>`.
 
 Blender uses the same GPU resources for the UI as well as for the GPU compositor.
-This have a number of consequences, each of which is described in one of the following sections.
+This has a number of consequences, each of which is described in one of the following sections.
 
 UI Freezes
 ----------
