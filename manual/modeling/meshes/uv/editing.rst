@@ -769,7 +769,7 @@ Copy UVs
    :Menu:      :menuselection:`UV --> Copy UVs`
    :Shortcut:  :kbd:`Ctrl-C`
 
-For each selected UV island, the *Copy UVs* tool will copy it's topology and UV coordinates into a temporary clipboard
+For each selected UV island, the *Copy UVs* tool will copy its topology and UV coordinates into a temporary clipboard
 for later use with the *Paste UVs* tool.
 
 .. note::

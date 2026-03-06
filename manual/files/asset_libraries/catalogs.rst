@@ -52,7 +52,7 @@ Creating Catalogs
 
 New catalogs can be created in the :doc:`/editors/asset_browser`
 through :menuselection:`Header --> Catalog --> New Asset Catalog`.
-Once the catalog is created you can double :kbd:`LMB` on it's name in the
+Once the catalog is created you can double :kbd:`LMB` on its name in the
 *Source List* region of the editor to give the catalog a more descriptive name.
 Catalogs can also be created in this region by clicking the plus icon found at the top of the :ref:`ui-tree-view`.
 
@@ -80,7 +80,7 @@ Saving Catalogs
 Saving catalogs makes any edits to any catalogs permanent by writing the current set up to the asset library.
 Catalogs can be saved in the :doc:`/editors/asset_browser`
 through :menuselection:`Header --> Catalog --> Save Asset Catalog`.
-Once the catalog is created you can double :kbd:`LMB` on it's name
+Once the catalog is created you can double :kbd:`LMB` on its name
 Catalogs can also be saved in the *Source List* region of the editor
 by clicking the save icon found at the top of the :ref:`ui-tree-view`.
 

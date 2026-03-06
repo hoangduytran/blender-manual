@@ -102,7 +102,7 @@ Group
 
    The *Group* panel.
 
-This panel contains properties that relate the group node such as it's name and look.
+This panel contains properties that relate the group node such as its name and look.
 
 Name
    The name of node as displayed in the :ref:`interface-nodes-parts-title`.

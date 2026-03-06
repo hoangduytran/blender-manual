@@ -391,7 +391,7 @@ File References
 Convert Orientation
    Convert orientation axis to a different convention to match other applications.
    Blender uses Y Forward, Z Up (since the front view looks along the +Y direction).
-   For example, its common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
+   For example, it's common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
 
    Forward / Up Axis
       By mapping these to different axes you can convert rotations between applications default up and forward axes.

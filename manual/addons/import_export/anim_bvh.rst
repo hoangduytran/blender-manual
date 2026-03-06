@@ -48,7 +48,7 @@ Forward / Up
    between applications default up and forward axes.
 
    Blender uses Y forward, Z up (since the front view looks along the +Y direction).
-   For example, its common for applications to use Y as the up axis, in that case -Z forward, Y up is needed.
+   For example, it's common for applications to use Y as the up axis, in that case -Z forward, Y up is needed.
 
 
 Animation

@@ -98,7 +98,7 @@ Forward / Up Axis.. todo:: Add this information.
    between applications default up and forward axes.
 
    Blender uses Y Forward, Z Up (since the front view looks along the +Y direction).
-   For example, its common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
+   For example, it's common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
 
 Apply Transform
    Bake space transform into object data, avoids getting unwanted rotations
@@ -213,7 +213,7 @@ Forward / Up
    default up and forward axes.
 
    Blender uses Y Forward, Z Up (since the front view looks along the +Y direction).
-   For example, its common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
+   For example, it's common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed.
 Apply Unit
    .. todo:: Add this information.
 Apply Transform

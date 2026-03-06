@@ -271,7 +271,7 @@ Software Update.
    :class: note
 
    Currently, passthrough support over OpenXR is disabled by default in the Quest Link app, and must be manually
-   enabled in it's settings to use this feature.
+   enabled in its settings to use this feature.
 
    The performance of the passthrough render varies with the quality of the connection between the headset and the
    computer. For better results, connecting the headset directly through USB to the PC, or at least connecting the

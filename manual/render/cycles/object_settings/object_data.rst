@@ -197,7 +197,7 @@ to selectively speed up caustic rendering of objects in your scene.
 
    The rendering technique used to speed up the rendering of caustics is based on
    :abbr:`MNEE (Manifold Next Event Estimation)`. There are a number of limitations with this technique
-   and it's implementation in Cycles:
+   and its implementation in Cycles:
 
    - Only refractive caustics in the shadows of objects work. Caustics from reflections or caustics that
      fall outside shadows are not rendered with this technique.
