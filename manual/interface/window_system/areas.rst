@@ -64,7 +64,7 @@ the size and location of areas along with splitting an area into new areas.
 
 To start the interactive process, placing the mouse cursor
 in an area corner will change the cursor to a cross (+).
-Once the cursor is a cross, press and hold :kbd:`LMB` to preform any of the following actions:
+Once the cursor is a cross, press and hold :kbd:`LMB` to perform any of the following actions:
 
 If you press :kbd:`Esc` or :kbd:`RMB` before releasing the mouse, the operation will be canceled.
 

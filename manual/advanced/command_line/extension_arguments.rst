@@ -343,7 +343,7 @@ options:
                            id = "my_example_package"
                            reason = "Explanation for why this extension was blocked"
                            [[blocklist]]
-                           id = "other_extenison"
+                           id = "other_extension"
                            reason = "Another reason for why this is blocked"
 
   --html                Create a HTML file (``index.html``) as well as the repository JSON

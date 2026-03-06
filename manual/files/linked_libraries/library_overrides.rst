@@ -96,7 +96,7 @@ and no new F-Curve can be added.
 
 If the linked reference data has animation data, then its overrides only have
 limited possibilities to edit the existing :doc:`drivers </animation/drivers/introduction>`.
-For example, it will be possible to change the exisitng target of a driver,
+For example, it will be possible to change the existing target of a driver,
 but it won't be possible to add new drivers, or new targets to an existing driver.
 
 If the linked reference data has no animation data, then its overrides will create a new one

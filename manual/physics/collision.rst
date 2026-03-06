@@ -71,7 +71,7 @@ Friction
       Random variation of friction.
 
 
-.. _physics-collision-soft-bodt-cloth:
+.. _physics-collision-soft-body-cloth:
 
 Soft Body and Cloth
 -------------------

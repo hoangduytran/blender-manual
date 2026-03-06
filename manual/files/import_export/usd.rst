@@ -441,7 +441,7 @@ Hair
 
 .. note::
 
-   The corresponding USD schema type used during Export is analagous to the type read during
+   The corresponding USD schema type used during Export is analogous to the type read during
    Import. See the Import section for details.
 
 

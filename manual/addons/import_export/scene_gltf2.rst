@@ -326,7 +326,7 @@ Then, exporter will convert these texture into a glTF compatible texture.
 .. figure:: /images/addons_import-export_scene-gltf2_material_anisotropy-grayscale-texture.png
 
 Note that the *tangent* socket must be linked to a *tangent* node, with UVMap.
-The choosen UVMap must be the UVMap of the Normal Map.
+The chosen UVMap must be the UVMap of the Normal Map.
 
 
 Transmission
@@ -870,7 +870,7 @@ Bone Direction
    Otherwise this is purely aesthetic.
    The default value will not change axis, and is best for re-exporting from Blender.
    This default option will change display mode (adding shape and changing relationship line) to have a better view,
-   even if original bones axis are not the most accurate (estheticaly speaking)
+   even if original bones axis are not the most accurate (aesthetically speaking)
 Guess Original Bind Pose
    Determines the pose for bones (and consequently, skinned meshes) in Edit Mode.
    When on, attempts to guess the pose that was used to compute the inverse bind matrices.
@@ -955,7 +955,7 @@ GPU Instances
    Export using ``EXT_mesh_gpu_instancing`` extensions.
 
 Flatten Object Hierarchy
-   Useful in case of non-decomposable TRS matrix. Only skined meshes will stay children of armature.
+   Useful in case of non-decomposable TRS matrix. Only skinned meshes will stay children of armature.
 
 Full Collection Hierarchy
    Export collections as empty, keeping full hierarchy. If an object is in multiple collections,
@@ -1054,7 +1054,7 @@ Data - Shape Keys - Optimize
 Use Sparse Accessor if better
    Sparse Accessor will be used if it save space (if the exported file is smaller)
 Omitting Sparse Accessor if data is empty
-   If data is empty, omit to export SParce Accessor. Not all viewer managed it correctly, so this option is Off by
+   If data is empty, omit to export Sparse Accessor. Not all viewer managed it correctly, so this option is Off by
    default
 
 
@@ -1078,7 +1078,7 @@ Data - Skinning
 Export skinning data
 
 Bone influences
-   How many joint verex influences will be exported. Models may appear incorrectly in many viewers with value
+   How many joint vertex influences will be exported. Models may appear incorrectly in many viewers with value
    different to 4 or 8.
 
 Include All Bone Influences
@@ -1174,7 +1174,7 @@ Apply sampling to all animations. Do not sample animation can lead to wrong anim
 Sampling Rate
    How often to evaluate animated values (in frames).
 Sampling Interpolation Fallback
-   Interpolation choosen for properties that are not keyed (LINEAR or STEP/CONSTANT)
+   Interpolation chosen for properties that are not keyed (LINEAR or STEP/CONSTANT)
 
 
 Animation - Optimize

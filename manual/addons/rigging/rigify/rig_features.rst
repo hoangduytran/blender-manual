@@ -420,7 +420,7 @@ Head
 The :ref:`head <rigify.rigs.spines.super_head>` sub-rig attaches to the end of the spine, and provides
 rotational controls for the head and neck, as well as tweaks for fine control of the neck.
 
-If the neck is three or more bones long, an additonal tweak-like translational
+If the neck is three or more bones long, an additional tweak-like translational
 neck bend control is provided (the widget looks like a circle with arrows).
 
 The properties panel contains the following options:

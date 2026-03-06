@@ -39,7 +39,7 @@ Vector
   it. It can be treated as a 2D vector with the last two components ignored, for instance, the
   *Vector* input of the :ref:`Displace node <bpy.types.CompositorNodeDisplace>` is treated as a 2D
   vector. It can be treated as a 3D vector with the last component ignored, for instance, the
-  *Vector* input of the :Doc:`Seperate XYZ node </compositing/types/utilities/vector/separate_xyz>` is treated as
+  *Vector* input of the :Doc:`Separate XYZ node </compositing/types/utilities/vector/separate_xyz>` is treated as
   a 3D vector. It can be treated as two consecutive 2D vectors. For instance the *Velocity Pass* as
   expected by the :ref:`Vector Blur node <bpy.types.CompositorNodeVecBlur>` is assumed to have the
   *2D Previous Velocity* in the X and Y components of the vector and the *2D Next Velocity* in the
