@@ -65,11 +65,11 @@ which are the building blocks for animations.
 Default Key Channels
    Which channels to insert keys at when no keying set is active.
 
-   :Location: Inset keyframes for an object's :ref:`Location <bpy.types.Object.location>`.
-   :Rotation: Inset keyframes for an object's :ref:`Rotation <bpy.types.Object.rotation>`.
-   :Scale: Inset keyframes for an object's :ref:`Scale <bpy.types.Object.scale>`.
-   :Rotation Mode: Inset keyframes for an object's :ref:`Rotation Mode <bpy.types.Object.rotation_mode>`.
-   :Custom Properties: Inset keyframes for :doc:`/files/custom_properties`.
+   :Location: Insert keyframes for an object's :ref:`Location <bpy.types.Object.location>`.
+   :Rotation: Insert keyframes for an object's :ref:`Rotation <bpy.types.Object.rotation>`.
+   :Scale: Insert keyframes for an object's :ref:`Scale <bpy.types.Object.scale>`.
+   :Rotation Mode: Insert keyframes for an object's :ref:`Rotation Mode <bpy.types.Object.rotation_mode>`.
+   :Custom Properties: Insert keyframes for :doc:`/files/custom_properties`.
 
 .. _bpy.types.PreferencesEdit.use_keyframe_insert_needed:
 .. _bpy.types.PreferencesEdit.use_auto_keyframe_insert_needed:

@@ -20,7 +20,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    :doc:`Action </animation/actions>`
       Blender's container for animation data.  In Blender, animatable :term:`data-blocks <Data-Block>` do not store
-      their own animation data, but instead store their animation data an actions.
+      their own animation data, but instead store their animation data in actions.
 
    Action Safe
       Area of the screen visible on most devices. Place content inside it to ensure it does not get cut off.
@@ -668,7 +668,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    Panel
       A user interface element that contains buttons.
-      Panels are collapsible to hide there contents and can often be rearranged.
+      Panels are collapsible to hide their contents and can often be rearranged.
       See :ref:`bpy.types.Panel` as described in the user interface section.
 
    Parent

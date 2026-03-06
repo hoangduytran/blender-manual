@@ -70,7 +70,7 @@ Realizing Instances
 
 The term "realizing" instances refers to converting the instances into unique geometry.
 When instances are realized they will take up more memory and manipulation to geometry
-will have to be processed individually rather the once per instancing geometry.
+will have to be processed individually rather than once per instancing geometry.
 
 To realize instance use the :doc:`/modeling/geometry_nodes/instances/realize_instances`.
 

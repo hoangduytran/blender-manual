@@ -69,7 +69,7 @@ Render Method
 
    :Dithered:
       Allows for grayscale hashed transparency, and compatible with render passes and raytracing.
-      Also know as deferred rendering.
+      Also known as deferred rendering.
 
       When using *Dithered* render method, the materials are rendered in layers.
       Each layer can only transmit (e.g. refract) light emitted from previous layers.

@@ -35,7 +35,7 @@ Size
    Meanwhile the texture of the brush will be visible inside the circle.
    You can also enter the size numerically with the number keys.
 
-   The size can be decreased/increased using :kbd:`[` and :kbd:`]` respectfully.
+   The size can be decreased/increased using :kbd:`[` and :kbd:`]` respectively.
 
    :bl-icon:`stylus_pressure` (Size Pressure)
       Adjusts the size based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
@@ -394,13 +394,13 @@ This is useful when working with several colors at once.
 Palette
    A :ref:`ui-data-block` to select a palette.
 
-:bl-icon:`add` (New Pallet Color)
+:bl-icon:`add` (New Palette Color)
    Adds the current brush's primary *Color* to the palette.
 
-:bl-icon:`remove` (Delete Pallet Color)
+:bl-icon:`remove` (Delete Palette Color)
    Removes the currently selected color from the palette.
 
-:bl-icon:`tria_up`/:bl-icon:`tria_down` (Move Pallet Color)
+:bl-icon:`tria_up`/:bl-icon:`tria_down` (Move Palette Color)
    Moves the selected color up/down one position.
 
 :bl-icon:`sortsize` (Sort By)

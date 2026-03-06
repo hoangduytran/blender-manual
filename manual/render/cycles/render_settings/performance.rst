@@ -12,7 +12,7 @@ There are several presets available to help choose between different trade offs:
 
 :Default: Balances memory saving and faster rendering settings.
 :Faster Render: Uses settings to render faster at the cost of higher memory consumption.
-:Lower Memory: Uses settings to decrease memory considered at the cost of slower renders.
+:Lower Memory: Uses settings to decrease memory consumption at the cost of slower renders.
 
 
 Threads

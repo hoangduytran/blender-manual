@@ -82,7 +82,7 @@ Tolerance
    a :doc:`Viewer Node </compositing/types/output/viewer>` to the *Edges* output.
 
    Sharper detected edges (smaller *Size*, like 2 / larger *Tolerance*, like 0.4)
-   will create a sharper matte, but may loose some detail like stray hairs.
+   will create a sharper matte, but may lose some detail like stray hairs.
    A sharp matte is good, but disappearing or flickering hairs are distracting.
 
    Fat edges (larger *Size*, like 8 / smaller *Tolerance*, like 0.05)

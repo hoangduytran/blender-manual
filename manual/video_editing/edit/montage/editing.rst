@@ -117,7 +117,7 @@ The frame number label over the strip displays the end frame of the strip.
 
    You can select several (handles of) strips by :kbd:`Shift-LMB` clicking: when you press :kbd:`G`,
    everything that is selected will move with your mouse -- this means that,
-   for example, you can at the same time move a strip, shorten two others, and extend a forth one.
+   for example, you can at the same time move a strip, shorten two others, and extend a fourth one.
 
 
 Move/Extend from Current Frame

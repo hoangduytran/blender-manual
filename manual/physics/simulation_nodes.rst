@@ -4,7 +4,7 @@ Simulation Nodes
 ****************
 
 Through the use of :doc:`Simulation Zones </modeling/geometry_nodes/simulation/simulation_zone>`,
-:doc:`/modeling/geometry_nodes/index` can be used to create custom physic simulations through nodes.
+:doc:`/modeling/geometry_nodes/index` can be used to create custom physics simulations through nodes.
 Simulation zones allow the result of one frame to influence the next one.
 That way even a set of simple rules can lead to complex results, with the passing of time.
 The most common type of them is physics simulation, with specific solvers for physical phenomena.

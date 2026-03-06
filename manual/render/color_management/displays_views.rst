@@ -39,7 +39,7 @@ Displays
 
 The color space of the display that images and video are being created for.
 
-Regular compute displays support sRGB, and most images and videos are
+Regular computer displays support sRGB, and most images and videos are
 stored in this color space. However moderns displays often support a wider
 gamut and high dynamic range content.
 
@@ -72,7 +72,7 @@ Requirements:
 High Dynamic Range
 ------------------
 
-Select the "Rec.2100 PQ" or "Rec.21000 HLG" display to view high dynamic range (HDR) colors.
+Select the "Rec.2100 PQ" or "Rec.2100 HLG" display to view high dynamic range (HDR) colors.
 
 With standard dynamic range (SDR), views must significantly lower bright colors to fit within the range.
 With high dynamic range it is possible to go beyond and more accurately display the scene. HDR displays have limits

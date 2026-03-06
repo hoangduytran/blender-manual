@@ -14,7 +14,7 @@ The *Viewer* node allows viewing data from inside a geometry node group in both 
 
 Any geometry or attribute connected to the viewer can be visualized in the viewport,
 and its evaluated attribute values can be inspected in the spreadsheet.
-Other data can also be viewed and inspected such as scaler values and grids by showing them in the spreadsheet.
+Other data can also be viewed and inspected such as scalar values and grids by showing them in the spreadsheet.
 
 .. note::
 
