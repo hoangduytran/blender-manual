@@ -64,7 +64,7 @@ Import (Legacy)
 
 .. important::
 
-   The importing functionality of add-on is deprecated,
+   The importing functionality of this add-on is deprecated,
    use the official :ref:`FBX Importer <bpy.ops.wm.fbx_import>` instead.
 
 

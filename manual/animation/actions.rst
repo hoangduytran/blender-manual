@@ -53,7 +53,7 @@ the material's animation in the same action by having a different slot for each.
 In this example there is one slot for an object and one slot for a material, but
 you can have as many slots as you like for as many objects, materials, lights,
 etc. as you like. If you're baking down a simulation of 100 bouncing balls, you
-could store that animation in single action with 100 slots.
+could store that animation in a single action with 100 slots.
 
 .. figure:: /images/animation_actions_slots_diagram_many_objects.svg
 

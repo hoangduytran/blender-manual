@@ -88,7 +88,7 @@ Import Method
       The asset will be linked to the current blend-file, and thus be read-only.
       Later changes to the asset file will be reflected in all files that link it in.
    :ref:`Append <bpy.ops.wm.append>`
-      All of the asset and all its dependencies will be appended to the current file.
+      The asset and all its dependencies will be appended to the current file.
       Dragging a material into the scene three times will result in three independent copies.
       Dragging an object into the scene three times will also result in three independent copies.
 

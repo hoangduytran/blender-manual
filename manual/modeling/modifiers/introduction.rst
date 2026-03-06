@@ -116,7 +116,7 @@ Name
    .. note::
 
       By default, curves, texts and surfaces are always converted to mesh-like geometry
-      before that the modifier stack is evaluated on them.
+      before the modifier stack is evaluated on them.
 
 .. _bpy.types.Modifier.show_in_editmode:
 
@@ -225,7 +225,7 @@ The Modifier Stack
 ------------------
 
 Modifiers are a series of non-destructive operations which can be applied on top of an object's geometry.
-You can be apply them in almost any order.
+You can apply them in almost any order.
 This kind of functionality is often referred to as a "modifier stack"
 and is also found in several other 3D applications.
 
@@ -259,7 +259,7 @@ and then calculating the subdivision surface.
 Active Modifier
 ^^^^^^^^^^^^^^^
 
-A modifier in the stack can be selected to mark in as :term:`Active`,
+A modifier in the stack can be selected to mark it as :term:`Active`,
 the active modifier displays an outline around the modifier's panel.
 To set an active modifier, select an area of the modifier's panel background,
 the modifier's icon, or, select a modifier in the :doc:`/editors/outliner/index`.

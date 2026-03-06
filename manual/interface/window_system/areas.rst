@@ -101,7 +101,7 @@ to split the area horizontally drag up/down.
 
 You can split and join areas at once by dragging a split operation into a separate area.
 
-Dragging an area into the middle of an second area will replace the second area with the first area.
+Dragging an area into the middle of a second area will replace the second area with the first area.
 
 
 .. _bpy.ops.screen.area_options:

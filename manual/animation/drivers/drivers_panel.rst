@@ -307,7 +307,7 @@ Expression
 
 Use Self
    If this option is enabled, the variable ``self`` can be used for drivers to reference their own data.
-   Useful for objects and bones to avoid having creating a *Driver Variable* pointing to itself.
+   Useful for objects and bones to avoid having to create a *Driver Variable* pointing to itself.
 
    Example: ``self.location.x`` applied to the Y rotation property of the same object
    will make the object tumble when moving.

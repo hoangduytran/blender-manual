@@ -35,7 +35,7 @@ Only Faces
 Dissolve
 ========
 
-*Dissolving* is different from deleting in that keeps the surface closed
+*Dissolving* is different from deleting in that it keeps the surface closed
 rather than leaving a hole.
 
 

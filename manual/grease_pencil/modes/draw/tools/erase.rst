@@ -39,7 +39,7 @@ Radius
       Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
 
 Strength
-   Control how much will affect the eraser has on the stroke transparency (alpha).
+   Control how much effect the eraser has on the stroke transparency (alpha).
 
    You can change the brush strength interactively by pressing :kbd:`Shift-F`
    in the 3D Viewport and then moving the pointer and then :kbd:`LMB`.

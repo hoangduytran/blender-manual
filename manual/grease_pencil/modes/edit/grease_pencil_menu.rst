@@ -223,7 +223,7 @@ Hide Inactive Layers
    :Menu:      :menuselection:`Grease Pencil --> Show/Hide --> Hide Active Layer`
    :Shortcut:  :kbd:`Shift-H`
 
-Hides the all Grease Pencil :doc:`layers </grease_pencil/properties/layers>` except the active layer.
+Hides all Grease Pencil :doc:`layers </grease_pencil/properties/layers>` except the active layer.
 
 
 .. _bpy.ops.grease_pencil.separate:

@@ -959,7 +959,7 @@ Flatten Object Hierarchy
 
 Full Collection Hierarchy
    Export collections as empty, keeping full hierarchy. If an object is in multiple collections,
-   it will be exported it only once, in the first collection it is found.
+   it will be exported only once, in the first collection it is found.
 
 
 Data - Mesh

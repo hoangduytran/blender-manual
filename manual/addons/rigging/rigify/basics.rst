@@ -101,7 +101,7 @@ Scroll down to the display panel and enable X-ray and under *Maximum Draw Type* 
 This way the bones will always be drawn in wireframe on top of your geometry.
 
 Then, always in the Properties click on the Armatures tab and under display check the *Axis* checkbox.
-This way you the bones rotation axes will be displayed during the edit process.
+This way the bones rotation axes will be displayed during the edit process.
 
 For more detailed information on armature display modes please refer to
 the :doc:`Display panel page </animation/armatures/properties/display>`.
@@ -153,7 +153,7 @@ For information about additional generation options, see the `Advanced Rig Gener
 Binding the Geometry to the Rig
 -------------------------------
 
-To bind the geometry to the rig you can use your preferred tools. Just few things you have to know:
+To bind the geometry to the rig you can use your preferred tools. Just a few things you have to know:
 
 - All the deforming bones are in the *DEF* bone collection.
 - Eyes and Teeth bones of the legacy face are not deforming. You are supposed to bind the eyes and

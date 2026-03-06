@@ -188,7 +188,7 @@ Render In
 
    :Keep User Interface: The user interface does not change and the render is computed in the background.
    :Maximize Area: A new Image editor is opened as a temporary window in full screen mode.
-   :Image Editor: The area that is the largest on screen is replaced placed by a temporary Image editor.
+   :Image Editor: The area that is the largest on screen is replaced by a temporary Image editor.
    :New Window: A new Image editor is opened as a regularly sized temporary window.
 
 .. _bpy.types.PreferencesView.filebrowser_display_type:

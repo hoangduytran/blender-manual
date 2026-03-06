@@ -76,7 +76,7 @@ Instance Collections -- When Linking/Appending
    Some asset types such as collections can be created as an instanced collection.
    This is done by enabling the *Instance* option after dragging collection assets into the 3D Viewport.
    By enabling these options, an empty object is added that uses an instance of the collection.
-   If these option is disabled, the full collection hierarchy will be added to the scene.
+   If this option is disabled, the full collection hierarchy will be added to the scene.
 
    Collection Assets from the current file will always be instanced.
 

@@ -54,7 +54,7 @@ hold :kbd:`Ctrl` while dragging from an output socket.
 This works for single as well as for multiple outgoing links.
 
 Nodes that have no connections can be inserted on a link
-by just move the node over the link and release when the link is highlighted.
+by just moving the node over the link and release when the link is highlighted.
 
 .. _bpy.ops.node.link_make:
 

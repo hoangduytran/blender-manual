@@ -138,7 +138,7 @@ Rotation Mode
       as well as possible :term:`Gimbal Lock`.
    :Axis Angle:
       The X, Y, and Z coordinates define a point relative to the object origin.
-      This point and the origin define an axis around the W value defines the rotation.
+      This point and the origin define an axis around which the W value defines the rotation.
    :Quaternion:
       X, Y, Z and W correspond to the :term:`Quaternion` components.
 

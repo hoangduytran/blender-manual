@@ -89,7 +89,7 @@ Shading
 Surface normals play a fundamental role in determining how light interacts with 3D objects
 and thus greatly influence the shading of those objects. Normals can be shaded smooth or flat.
 
-When a mesh uses flat shading, the faces are rendered and displayed faces uniformly.
+When a mesh uses flat shading, the faces are rendered and displayed uniformly.
 This is usually desirable for objects with flat surfaces such as a cube or pyramid.
 
 When a mesh uses smooth shading, the normals are interpolated across the vertices of a polygonal mesh,

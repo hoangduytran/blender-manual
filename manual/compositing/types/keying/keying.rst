@@ -58,7 +58,7 @@ White Level
    This sets the threshold for what becomes fully opaque in the output (white in the matte).
    It should be set as high as possible. Colors close to green in the foreground
    may require reducing this value and/or adjusting the *Screen Balance*.
-   Particularly problematic parts can fixed with a *Core Matte* instead of a low *Clip White*.
+   Particularly problematic parts can be fixed with a *Core Matte* instead of a low *Clip White*.
 
    This value does not impact areas detected as edges to ensure edge detail is preserved.
 

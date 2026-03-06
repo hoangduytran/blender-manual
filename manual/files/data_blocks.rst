@@ -337,7 +337,7 @@ Outliner view). When renamed from the UI, the behavior in case of name collision
     rename the data-block to `Cube.002`.
 
 - If the original root name is the same as in the new requested name, the renamed data-block gets the requested name,
-  and the conflicting of data-block is renamed accordingly.
+  and the conflicting data-block is renamed accordingly.
 
   - E.g. assuming that there are three objects named `Sphere`, `Cube` and `Cube.001`, renaming `Cube.001` to `Cube`
     will rename the data-block to `Cube`, and the other data-block to `Cube.001`.

@@ -61,7 +61,7 @@ Geometry
 
 Delta Time
    The time in seconds between frames.
-   Essentially this the inverse of the render :ref:`Frame Rate <bpy.types.RenderSettings.fps>`.
+   Essentially this is the inverse of the render :ref:`Frame Rate <bpy.types.RenderSettings.fps>`.
 
    This delta is used to drive the simulation by connecting it node setups that depend on a rate.
    This will keep the simulation playback consistent when the frame rate changes.
