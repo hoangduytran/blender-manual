@@ -76,7 +76,7 @@ The type of an attribute is the kind of data stored at each element.
 :Vector:
    3D vector with floating-point values, often representing directions or positions.
 :Color:
-   RGBA color with 32-bit floating-point values, stored in linear :term:`Color Space`
+   RGBA color with 32-bit floating-point values, stored in linear :term:`Color Space`.
    Suitable for high dynamic range and wide-gamut colors.
 :Byte Color:
    RGBA color with 8-bit positive integer values, useful for compact color storage.
