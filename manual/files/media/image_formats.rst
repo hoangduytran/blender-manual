@@ -53,7 +53,7 @@ This is the list of image file formats supported internally by Blender:
    * - AVIF
      - 8, 10, 12bit
      - |tick|
-     - |tick|
+     - |cross|
      - |cross|
      - ``.avif``
    * - BMP
