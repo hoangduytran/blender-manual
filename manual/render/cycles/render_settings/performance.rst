@@ -76,6 +76,10 @@ BVH Time Steps
 Use Compact BVH
    Use a more compact BVH structure, which can reduce RAM usage but render slower.
 
+   .. note::
+
+      The *Acceleration Structure* panel will not be present when using an Optix compute device.
+
 
 Final Render
 ============
