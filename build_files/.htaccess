@@ -355,3 +355,6 @@ RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/vector/vector_rotat
 RedirectMatch "^/manual/{lang}/{version}/modeling/modifiers/generate/geometry_nodes.html" "/manual/{lang}/{version}/modeling/modifiers/generate/geometry_nodes.html"
 
 RedirectMatch "^/manual/{lang}/{version}/render/eevee/render_settings/clamping.html" "/manual/{lang}/{version}/render/eevee/render_settings/light_paths.html"
+
+RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/input/value.html" "/manual/{lang}/{version}/render/shader_nodes/input/constant/value.html"
+RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/input/rgb.html" "/manual/{lang}/{version}/render/shader_nodes/input/constant/color.html"
