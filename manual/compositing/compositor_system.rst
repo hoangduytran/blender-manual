@@ -128,7 +128,7 @@ Images can be transformed using nodes like the :ref:`Transform <bpy.types.Compos
 Operation Domain
 ----------------
 
-:ref:`Compositor Nodes <compositor-nodes>` operate on a specific rectangular area of the compositing
+:doc:`Compositor Nodes </compositing/types/index>` operate on a specific rectangular area of the compositing
 space called the *Operation Domain*. The nodes only consider the area of the input images that
 overlap the operation domain and ignores the rest of the images. If an input image doesn't
 completely overlap the operation domain, the rest of the operation domain for that input will be
