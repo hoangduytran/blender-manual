@@ -23,8 +23,6 @@ This node has no inputs.
 Properties
 ==========
 
-.. _bpy.types.FunctionNodeInputVector-dimensions:
-
 Dimensions
    The number of components in the vector. Valid values range from 2 to 4.
    Increasing the dimension adds additional components to the vector.

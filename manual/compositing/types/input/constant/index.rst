@@ -9,6 +9,7 @@
    boolean.rst
    rgb.rst
    integer.rst
+   menu.rst
    normal.rst
    value.rst
    vector.rst
