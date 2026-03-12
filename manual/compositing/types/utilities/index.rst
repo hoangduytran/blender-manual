@@ -22,6 +22,7 @@
 .. toctree::
    :maxdepth: 1
 
+   implicit_conversion.rst
    split.rst
    switch.rst
    index_switch.rst

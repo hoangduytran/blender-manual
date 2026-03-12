@@ -173,6 +173,8 @@ The outputs are located on the top right side of the node,
 and can be connected to the input of nodes further down the node tree.
 
 
+.. _nodes-sockets-conversion:
+
 Conversion
 ----------
 
@@ -197,11 +199,16 @@ Valid conversions:
 - Between float and boolean -- values greater than 0 are true, true maps to 1, and false maps to 0.
 - Between rotations and matrices.
 
-Explicit conversion requires the use of a conversion node such as
-the :doc:`/render/shader_nodes/color/shader_to_rgb`
-or the :doc:`/render/shader_nodes/color/rgb_to_bw` node.
-The :doc:`/render/shader_nodes/utilities/math/math` node also contains
-some functions to convert between degrees and radians.
+Explicit conversion requires the use of dedicated conversion nodes.
+Examples include:
+
+- :doc:`/render/shader_nodes/color/shader_to_rgb`
+- :doc:`/render/shader_nodes/color/rgb_to_bw`
+- :doc:`/interface/controls/nodes/types/utilities/implicit_conversion`
+
+Some nodes also provide conversion operations directly. For example,
+the :doc:`/render/shader_nodes/utilities/math/math` node includes
+functions to convert between degrees and radians.
 
 
 .. _bpy.types.NodeSetting:

@@ -29,6 +29,7 @@ General purpose nodes for modifying data.
 .. toctree::
    :maxdepth: 1
 
+   implicit_conversion.rst
    for_each_geometry_zone.rst
    index_switch.rst
    menu_switch.rst
