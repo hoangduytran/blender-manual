@@ -15,7 +15,7 @@ is disabled.
 Using Custom Cameras
 ====================
 
-In order to use a custom camera, set the :ref:`lens type <camera-lens-type>` to Custom.
+In order to use a custom camera, set the :ref:`Lens Type <bpy.types.Camera.type>` to *Custom*.
 
 This enables the selection of a text data-block or external file, similar to the
 :ref:`Script node <bpy.types.ShaderNodeScript>` in shaders.
