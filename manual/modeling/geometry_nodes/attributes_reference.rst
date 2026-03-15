@@ -85,7 +85,9 @@ The type of an attribute is the kind of data stored at each element.
 :String:
    Text string for storing names or labels.
 :2D Vector:
-   2D vector with floating-point values, often used for UV coordinates.
+   Two dimension vector with floating-point values, often used for UV coordinates.
+:4D Vector:
+   Four dimension vector with floating-point values, often used for rotation quaternions.
 :8-Bit Integer:
    Small integer with a range from -128 to 127.
 :2D 16-Bit Integer Vector:
