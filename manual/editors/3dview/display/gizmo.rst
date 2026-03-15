@@ -163,6 +163,6 @@ Lens
 .. _bpy.types.SpaceView3D.show_gizmo_camera_dof_distance:
 
 Focus Distance
-   Enable the gizmo for adjusting the focus distance. To see this gizmo,
-   you need to enable the :menuselection:`Viewport Display --> Limits` checkbox
-   in the camera's properties (green camera icon).
+   Enable the gizmo for adjusting the camera's :ref:`bpy.types.CameraDOFSettings.focus_distance`.
+   To see this gizmo, you must also enable :ref:`bpy.types.Camera.show_limits`
+   in the camera's viewport display properties.

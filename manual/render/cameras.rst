@@ -138,7 +138,7 @@ Clip Start, End
 
    .. tip::
 
-      When *Limits* in the *Viewport Display* panel is enabled,
+      When :ref:`bpy.types.Camera.show_limits` in the *Viewport Display* panel is enabled,
       the clip bounds will be visible as two yellow connected dots on the camera's line of sight.
 
    .. seealso::
@@ -166,10 +166,13 @@ or by using the distance between the camera and a chosen object:
 
 Focus Object
    Choose an object which will determine the focal point. Linking an object will deactivate the distance parameter.
-Focal Distance
+
+.. _bpy.types.CameraDOFSettings.focus_distance:
+
+Focus Distance
    Sets the distance to the focal point when no *Focus Object* is specified.
-   This distance can be visualized in the 3D Viewport by enabling *Limits* in the camera's
-   :ref:`Viewport Display <bpy.types.Camera.show>` panel.
+   This distance can be visualized in the 3D Viewport by enabling :ref:`bpy.types.Camera.show_limits`
+   in the :ref:`Viewport Display <bpy.types.Camera.show>` panel.
 
    .. hint::
 
@@ -370,7 +373,6 @@ Flip -- Y
 
 
 .. _bpy.types.Camera.show:
-.. _bpy.types.Camera.display_size:
 
 Viewport Display
 ----------------
@@ -381,10 +383,14 @@ Viewport Display
 
    Camera view displaying safe areas, sensor and name.
 
+.. _bpy.types.Camera.display_size:
+
 Size
    Size of the camera visualization in the 3D Viewport. This setting has **no** effect on
    the render output of a camera. The camera visualization can also be scaled using
    the standard Scale :kbd:`S` transform key.
+
+.. _bpy.types.Camera.show_limits:
 
 Show -- Limits
    Shows an orange line indicating the *Clip Start* and *End* values,
