@@ -174,6 +174,22 @@ Playback -- Limit to Frame Range
 Playback -- Follow Current Frame
    Automatically pan the view to catch up when the Playhead goes off screen.
 
+.. _bpy.types.Scene.playback_loop_mode:
+
+Loop
+   Defines what happens when playback reaches the last frame.
+
+   :Infinite:
+      After the last frame, playback jumps back to the first frame and continues playing indefinitely.
+   :Stop at End Frame:
+      Playback stops when the last frame is reached.
+   :Stop at Start Frame:
+      After reaching the last frame, playback jumps to the first frame and stops.
+   :Restore Frame:
+      After reaching the last frame, playback stops at the frame where playback originally started.
+   :Bounce:
+      When the last frame is reached, playback reverses direction.
+
 .. _bpy.types.Screen.use_play:
 
 Play In
