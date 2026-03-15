@@ -73,7 +73,7 @@ Rigify Human Alignment Tips
   The face master bone is placed in the same position of the head bone.
   To select it easily, hide all other bone collections.
 
-  For more tips, see the :doc:`Positioning Guide </addons/rigging/rigify/bone_positioning>`.
+  For more tips, see the :doc:`Positioning Guide </addons/rigify/bone_positioning>`.
 
 
 Pose Mode Matching (Basic)

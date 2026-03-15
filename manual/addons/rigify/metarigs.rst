@@ -88,7 +88,7 @@ To add a rig sample:
 #. Click on the *Add sample* button.
 #. Edit the bone positions to match your character.
 
-For the list of available samples, see the :doc:`Rig Types </addons/rigging/rigify/rig_types/index>` page.
+For the list of available samples, see the :doc:`Rig Types </addons/rigify/rig_types/index>` page.
 
 
 .. _bpy.types.PoseBone.rigify_type:
@@ -105,10 +105,10 @@ For full control, you can use the Rigify Type panel of bone properties in Pose M
 any Rigify sub-rig type to any bone, as well as change its options.
 
 For the list of available sub-rig types and their options, see the
-:doc:`Rig Types </addons/rigging/rigify/rig_types/index>` page.
+:doc:`Rig Types </addons/rigify/rig_types/index>` page.
 
 At the top of the panel you can find a field specifying the rig type for the active bone. The drop-down list
-can be optionally filtered by the :doc:`Feature Set </addons/rigging/rigify/feature_sets>` it belongs to.
+can be optionally filtered by the :doc:`Feature Set </addons/rigify/feature_sets>` it belongs to.
 
 Below that you can change options relevant to the selected rig type, if it has any.
 

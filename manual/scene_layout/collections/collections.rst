@@ -113,7 +113,7 @@ The following file formats are supported, see each for the documentation of expo
 - :doc:`/files/import_export/obj`
 - :doc:`/files/import_export/ply`
 - :doc:`/files/import_export/fbx_legacy`
-- :doc:`/addons/import_export/scene_gltf2`
+- :doc:`/addons/scene_gltf2`
 
 .. _bpy.types.Collection.active_exporter_index:
 

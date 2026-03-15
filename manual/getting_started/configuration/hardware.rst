@@ -220,7 +220,7 @@ targeted at developers and may lack features found in other platforms.
 
 - Follow the steps from the
   `Vive Developer Forums <https://forum.htc.com/topic/9046-vive-openxr-support-for-vive-cosmos/>`__.
-- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
+- Enable the :doc:`VR Scene Inspection add-on </addons/vr_scene_inspection>` in Blender.
 
 
 HTC Vive Focus 3
@@ -231,7 +231,7 @@ currently targeted at developers and may lack features found in other platforms.
 
 - Follow the steps from the
   `Vive Developer Forums <https://forum.htc.com/topic/9876-focus-3-openxr-support-status/page/3/>`__.
-- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
+- Enable the :doc:`VR Scene Inspection add-on </addons/vr_scene_inspection>` in Blender.
 
 
 Monado
@@ -250,7 +250,7 @@ Linux. It is not yet ready for production usage and should only be used for test
   experience in compiling software. Follow the
   `Getting Started Guides <https://gitlab.freedesktop.org/monado/monado/-/blob/main/README.md>`__ from Monado to do so
   nevertheless.
-- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
+- Enable the :doc:`VR Scene Inspection add-on </addons/vr_scene_inspection>` in Blender.
 
 
 Meta (formerly Oculus)
@@ -265,7 +265,7 @@ Software Update.
 .. figure:: /images/getting-started_configuration_hardware_xr_runtime_oculus.jpg
    :scale: 50 %
 
-- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
+- Enable the :doc:`VR Scene Inspection add-on </addons/vr_scene_inspection>` in Blender.
 
 .. admonition:: Passthrough Support
    :class: note
@@ -288,7 +288,7 @@ SteamVR
 .. figure:: /images/getting-started_configuration_hardware_xr_runtime_steamvr.jpg
    :scale: 50 %
 
-- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
+- Enable the :doc:`VR Scene Inspection add-on </addons/vr_scene_inspection>` in Blender.
 
 .. note::
 
@@ -300,7 +300,7 @@ Varjo
 
 `Varjo <https://varjo.com/>`__ includes full OpenXR support with its required Varjo Base software.
 
-- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
+- Enable the :doc:`VR Scene Inspection add-on </addons/vr_scene_inspection>` in Blender.
 
 
 Windows Mixed Reality
@@ -316,7 +316,7 @@ application.
   the `Microsoft Store <https://www.microsoft.com/en-us/p/mixed-reality-portal/9ng1h8b3zc7m>`__.
 - Launch the Mixed Reality Portal. Click the menu button ``...`` in the lower left corner. In the menu it opens,
   select the *Set up OpenXR*.
-- Enable the :doc:`VR Scene Inspection add-on </addons/3d_view/vr_scene_inspection>` in Blender.
+- Enable the :doc:`VR Scene Inspection add-on </addons/vr_scene_inspection>` in Blender.
 
 .. note::
 
