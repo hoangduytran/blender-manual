@@ -1,7 +1,7 @@
 
-******************************
-BioVision Motion Capture (BVH)
-******************************
+********************
+Motion Capture (BVH)
+********************
 
 .. reference::
 
@@ -13,20 +13,8 @@ or data of a skeleton (rig) including its animation.
 Useful for importing data from motion capture devices.
 
 
-Enabling Add-on
-===============
-
-This add-on is enabled by default, in case it is not:
-
-#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "BioVision Motion Capture (BVH) format" and check the *Enable Add-on* checkbox.
-
-
-Properties
-==========
-
 Import
-------
+======
 
 Target
    The motion capture data type.
@@ -36,7 +24,7 @@ Target
 
 
 Transform
-^^^^^^^^^
+---------
 
 Scale
    Factor to increase the physical size of the BVH.
@@ -52,7 +40,7 @@ Forward / Up
 
 
 Animation
-^^^^^^^^^
+---------
 
 Start Frame
    The start frame, in Blender, to start playback of the BVH animation.
@@ -68,10 +56,10 @@ Update Scene Duration
 
 
 Export
-------
+======
 
 Transform
-^^^^^^^^^
+---------
 
 Scale
    Factor to increase the physical size of the BVH.
@@ -82,7 +70,7 @@ Root Translation Only
 
 
 Animation
-^^^^^^^^^
+---------
 
 Start / End
    Sets the range of animation to export to the BVH file.

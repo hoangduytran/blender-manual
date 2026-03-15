@@ -358,3 +358,8 @@ RedirectMatch "^/manual/{lang}/{version}/render/eevee/render_settings/clamping.h
 
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/input/value.html" "/manual/{lang}/{version}/render/shader_nodes/input/constant/value.html"
 RedirectMatch "^/manual/{lang}/{version}/render/shader_nodes/input/rgb.html" "/manual/{lang}/{version}/render/shader_nodes/input/constant/color.html"
+
+RedirectMatch "^/manual/{lang}/{version}/addons/import_export/mesh_uv_layout.html" "/manual/{lang}/{version}/modeling/meshes/uv/editing.html#export-uv-layout"
+RedirectMatch "^/manual/{lang}/{version}/addons/import_export/scene_fbx.html" "/manual/{lang}/{version}/files/import_export/fbx_legacy.html"
+RedirectMatch "^/manual/{lang}/{version}/addons/import_export/curve_svg.html" "/manual/{lang}/{version}/files/import_export/svg_curve.html"
+RedirectMatch "^/manual/{lang}/{version}/addons/import_export/anim_bvh.html" "/manual/{lang}/{version}/files/import_export/bvh.html"

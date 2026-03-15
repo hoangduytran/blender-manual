@@ -21,11 +21,14 @@ these can be enabled in the Preferences through the use of :doc:`Add-ons </edito
    :maxdepth: 1
 
    alembic.rst
+   bvh.rst
    usd.rst
    obj.rst
    ply.rst
    stl.rst
    fbx.rst
+   fbx_legacy.rst
+   svg_curve.rst
    grease_pencil_svg.rst
    grease_pencil_pdf.rst
 

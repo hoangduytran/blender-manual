@@ -817,6 +817,8 @@ Show/Hide Faces
 - Hide Unselected :kbd:`Shift-H`
 
 
+.. _bpy.ops.uv.export_layout:
+
 Export UV Layout
 ================
 
@@ -826,11 +828,66 @@ Export UV Layout
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Export UV Layout`
 
-If you are using an external application, you need to know where on the mesh you are painting.
+When painting textures in an external application, it is often useful to have
+a reference image showing the UV layout of the mesh.
+The *Export UV Layout* operator saves the current UV map as an image that can
+be used as a guide while painting textures.
 
-.. note::
+The exported image contains lines representing the UV edges within the
+standard UV Editor grid (the ``0-1`` UV space).
+Edges outside this range will not appear in the exported image.
 
-   This is an :doc:`add-on </addons/import_export/mesh_uv_layout>` activated by default.
+By default, only UV faces selected in the *3D Viewport* are exported.
+Selections made only in the UV Editor are ignored.
+
+The exported image can be opened in a painting application and used as a
+transparent overlay while creating textures. Once the texture is finished,
+it can be imported back into Blender and used in a material.
+
+For more information on using images as textures, see
+:doc:`Image Textures </render/materials/legacy_textures/types/image_movie>`.
+
+.. list-table::
+
+   * - .. figure:: /images/addons_import-export_mesh-uv-layout_uv-editor.png
+          :width: 320px
+
+          A UV layout in the UV Editor.
+
+     - .. figure:: /images/addons_import-export_mesh-uv-layout_export.png
+          :width: 320px
+
+          The exported layout used as a guide in a painting application.
+
+
+Properties
+----------
+
+.. figure:: /images/addons_import-export_mesh-uv-layout_export-panel.png
+
+   Export options.
+
+All UVs
+   Export all UVs instead of only the faces selected in the 3D Viewport.
+
+Export Tiles
+   Controls which UV tiles are exported.
+
+   :None: Export only UVs in the [0, 1] range.
+   :UDIM: Export tiles in the UDIM numbering scheme: ``1001 + u_tile + 10*v_tile``.
+   :UVTILE: Export tiles in the UVTILE numbering scheme: ``u(u_tile + 1)_v(v_tile + 1)``.
+
+Modified
+   Export the UVs from the evaluated mesh with modifiers applied.
+
+Format
+   The file format used for the export: ``PNG``, ``EPS``, or ``SVG``.
+
+Size
+   The resolution of the exported image in pixels.
+
+Fill Opacity
+   Sets the opacity of the face fill in the exported image.
 
 
 Proportional Editing

@@ -1,7 +1,7 @@
 
-***
-FBX
-***
+************
+FBX (Legacy)
+************
 
 The *FBX* (Filmbox) format is widely used for exchanging 3D data between applications,
 especially for animated characters and complex scene data. It is supported by software
@@ -43,16 +43,7 @@ The exporter can bake mesh modifiers and animation into the FBX so the final res
 .. note::
 
    Blender now only supports complex node-based shading.
-   FBX having a fixed pipeline-like support of materials, this add-on converts between them.
-
-
-Enabling Add-on
-===============
-
-This add-on is enabled by default, in case it is not:
-
-#. Open Blender and go to :doc:`/editors/preferences/addons` section of the :doc:`/editors/preferences/index`.
-#. Search "FBX" and check the *Enable Add-on* checkbox.
+   FBX having a fixed pipeline-like support of materials, this importer / exporter converts between them.
 
 
 Import (Legacy)
@@ -64,8 +55,8 @@ Import (Legacy)
 
 .. important::
 
-   The importing functionality of this add-on is deprecated,
-   use the official :ref:`FBX Importer <bpy.ops.wm.fbx_import>` instead.
+   The functionality of this importer is deprecated,
+   use the new :ref:`FBX Importer <bpy.ops.wm.fbx_import>` instead.
 
 
 Include
