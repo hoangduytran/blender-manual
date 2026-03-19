@@ -516,13 +516,13 @@ Sets the number of points generated along each curve segment (between two handle
 
 .. _bpy.ops.grease_pencil.set_stroke_type:
 
-Set Curve Type
-==============
+Set Stroke Type
+===============
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Stroke --> Set Curve Type`
+   :Menu:      :menuselection:`Stroke --> Set Stroke Type`
 
 Changes the type of the selected curves.
 
@@ -534,8 +534,7 @@ Type
       Converts the selected curves to fill-only.
       The stroke outline is removed.
    :Both:
-      Enables both stroke and fill components
-      on the selected curves.
+      Enables both stroke and fill components on the selected curves.
 
 
 .. _bpy.ops.grease_pencil.reset_uvs:
