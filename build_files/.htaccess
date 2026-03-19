@@ -374,3 +374,5 @@ RedirectMatch "^/manual/{lang}/{version}/addons/node/node_wrangler.html" "/manua
 RedirectMatch "^/manual/{lang}/{version}/addons/import_export/scene_gltf2.html" "/manual/{lang}/{version}/addons/scene_gltf2.html"
 RedirectMatch "^/manual/{lang}/{version}/addons/rigging/rigify/(.*)" "/manual/{lang}/{version}/addons/rigify/$1"
 RedirectMatch "^/manual/{lang}/{version}/addons/system/ui_translations.html" "/manual/{lang}/{version}/addons/ui_translations.html"
+
+RedirectMatch "^/manual/{lang}/{version}/sculpt_paint/sculpting/introduction/general.html" "/manual/{lang}/{version}/sculpt_paint/sculpting/index.html"
