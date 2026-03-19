@@ -97,6 +97,13 @@ Color spaces for displays and image files.
 :Rec.2100 PQ: For high dynamic range images and video with Rec.2020 wide gamut, up to 10000 nits.
 :Rec.2100 HLG: For high dynamic range images and video with Rec.2020 wide gamut, up to 1000 nits.
 
+Input
+-----
+
+Color spaces to read images that are encoded in the native space of film cameras,
+without conversion in external software.
+
+Includes color spaces for Apple, ARRI, Blackmagic Design, Canon and Sony cameras.
 
 Linear
 ------
