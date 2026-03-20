@@ -5,12 +5,6 @@ Node Wrangler
 
 Node Wrangler provides various tools that help you to work with nodes quickly and efficiently.
 
-While many of this add-on's functions work in all supported node editors (Compositor, Shader, Geometry Nodes,
-and Texture Nodes) some functions only work in specific node editors, and some functions work differently per
-editor.
-Functions that only work in specific editors are marked with labels (:guilabel:`Compositor`, :guilabel:`Shader`,
-:guilabel:`Geometry Nodes`, :guilabel:`Texture Nodes`). Functions without labels should work for all node editors.
-
 
 Enabling Add-on
 ===============
@@ -22,19 +16,25 @@ Enabling Add-on
 Usage
 =====
 
-Use the panel in Sidebar of the node editor or press :kbd:`Shift-W` to bring up the quick access menu. You can also
-look up the shortcut list in the add-on preferences panel.
+Use the panel in Sidebar of the node editor or press :kbd:`Shift-W` to bring up the quick access menu.
+You can also look up the shortcut list in the add-on preferences panel.
 
 .. figure:: /images/addons_node_node-wrangler_menu.png
 
    You can access most functions from the sidebar panel or quick access menu.
 
+.. note::
 
-Description
-===========
+   While many of this add-on's functions work in all supported node editors
+   (Compositor, Shader, Geometry Nodes, and Texture Nodes) some functions only work in specific node editors,
+   and some functions work differently per editor.
+   Functions that only work in specific editors are marked with labels
+   (:guilabel:`Compositor`, :guilabel:`Shader`, :guilabel:`Geometry Nodes`, :guilabel:`Texture Nodes`).
+   Functions without labels should work for all node editors.
+
 
 Lazy Connect
-------------
+============
 
 .. reference::
 
@@ -59,7 +59,7 @@ frequently zooming in and out.
 
 
 Lazy Mix
---------
+========
 
 .. reference::
 
@@ -70,14 +70,14 @@ nodes and executing the *Mix* function from `Merge with Automatic Type Detection
 
 
 Merge
------
+=====
 
 .. reference::
 
    :Menu:   :menuselection:`Node Wrangler --> Merge Selected Nodes`
 
-Connect outputs of the selected nodes into a "mix" type of node (Mix, Math, Z-Combine, Alpha Over, Mix Shader, Add
-Shader, Join Geometry).
+Connect outputs of the selected nodes into a "mix" type of node
+(Mix, Math, Z-Combine, Alpha Over, Mix Shader, Add Shader, Join Geometry).
 
 .. note::
 
@@ -96,7 +96,7 @@ types of outputs and the "mix" node are not compatible.
 
 
 Merge with Automatic Type Detection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 The automatic merge functions determine the type of "mix" node to use based on the types of outputs to merge. If
 it has a Color output, it will use the Mix node. It will use the Math node if both outputs are of Value type.
@@ -118,7 +118,7 @@ Modes
 
 
 Merge Using Mix Node
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 .. reference::
 
@@ -134,7 +134,7 @@ You can quickly set some operations by using corresponding shortcuts.
 
 
 Merge Using Math Node
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 .. reference::
 
@@ -152,27 +152,26 @@ You can quickly set some operations by using corresponding shortcuts.
 
 
 Merge Using Z-Combine Node
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-:guilabel:`Compositor`
+--------------------------
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Merge Selected Nodes --> Use Z-Combine Nodes`
-   :Shortcut:  :kbd:`Ctrl-NumpadPeriod`
+   :Compatibility:   :guilabel:`Compositor`
+   :Menu:            :menuselection:`Node Wrangler --> Merge Selected Nodes --> Use Z-Combine Nodes`
+   :Shortcut:        :kbd:`Ctrl-NumpadPeriod`
 
 Use the Z-Combine nodes for merging. If possible, Image and Z-Depth outputs will be linked. If the current
 node editor is not Compositor, this will execute the *Mix* function from the automatic merge.
 
 
 Merge Using Alpha Over Node
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 :guilabel:`Compositor`
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Merge Selected Nodes --> Use Alpha Over Nodes`
+   :Menu:      :menuselection:`Node Wrangler --> Merge Selected Nodes --> Use Alpha Over Nodes`
    :Shortcut:  :kbd:`Ctrl-Alt-0`
 
 Use the Alpha Over nodes for merging. If the current node editor is not Compositor, this will execute the *Mix*
@@ -180,7 +179,7 @@ function from the automatic merge.
 
 
 Batch Change Blend Mode / Math Operation
-----------------------------------------
+========================================
 
 .. reference::
 
@@ -197,8 +196,9 @@ You can also quickly set some operations by using corresponding shortcuts.
 - Greater than: :kbd:`Alt-Comma`
 - Less than: :kbd:`Alt-Period`
 
+
 Change Mix Factor
------------------
+=================
 
 .. reference::
 
@@ -217,22 +217,22 @@ Change the Factor value of the selected Mix and Mix Shader nodes with shortcuts.
 
 
 Delete Unused Nodes
--------------------
+===================
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Delete Unused Nodes`
+   :Menu:      :menuselection:`Node Wrangler --> Delete Unused Nodes`
    :Shortcut:  :kbd:`Alt-X`
 
 Clean up your node tree. Delete all nodes that don't contribute to the final result.
 
 
 Swap Links
-----------
+==========
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Swap Links`
+   :Menu:      :menuselection:`Node Wrangler --> Swap Links`
    :Shortcut:  :kbd:`Alt-S`
 
 When two nodes are selected, this swaps each other's output link.
@@ -249,38 +249,36 @@ it swaps the two inputs with matching types (the Mix node's two Color inputs, fo
 
 
 Reset Backdrop
---------------
-
-:guilabel:`Compositor`
+==============
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Reset Backdrop`
-   :Shortcut:  :kbd:`Z`
+   :Compatibility:   :guilabel:`Compositor`
+   :Menu:            :menuselection:`Node Wrangler --> Reset Backdrop`
+   :Shortcut:        :kbd:`Z`
 
 Reset the position and scale of the backdrop.
 
 
 Add Attribute Node
-------------------
-
-:guilabel:`Shader`
+==================
 
 .. reference::
 
-   :Menu:      :menuselection:`Header --> Add --> Input --> Attributes`
+   :Compatibility:   :guilabel:`Shader`
+   :Menu:            :menuselection:`Header --> Add --> Input --> Attributes`
 
 Add an Attribute node with the selected attribute.
 
 
 Preview Node Output
--------------------
-
-:guilabel:`Shader` :guilabel:`Geometry Nodes`
+===================
 
 .. reference::
 
-   :Shortcut:  :kbd:`Shift-Ctrl-LMB` for :guilabel:`Shader`, :kbd:`Shift-Alt-LMB` for :guilabel:`Geometry Nodes`
+   :Compatibility:   :guilabel:`Shader` :guilabel:`Geometry Nodes`
+   :Shortcut:        :kbd:`Shift-Ctrl-LMB` for :guilabel:`Shader`,
+                     :kbd:`Shift-Alt-LMB` for :guilabel:`Geometry Nodes`
 
 Connect an output of the selected node to the final output of the node tree (the Material Output or World Output
 for Shader, the final Group Output for Geometry Nodes) to preview its output in the viewport.
@@ -300,42 +298,42 @@ You can cycle through the available outputs by clicking it again while holding t
 
 
 Join Nodes
-----------
+==========
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Join Nodes`
+   :Menu:      :menuselection:`Node Wrangler --> Join Nodes`
    :Shortcut:  :kbd:`Shift-P`
 
 See :ref:`bpy.ops.node.join`.
 
 
 Reload Images
--------------
-
-:guilabel:`Compositor` :guilabel:`Shader` :guilabel:`Texture Nodes`
+=============
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Reload Images`
-   :Shortcut:  :kbd:`Alt-R`
+   :Compatibility:   :guilabel:`Compositor` :guilabel:`Shader` :guilabel:`Texture Nodes`
+   :Menu:            :menuselection:`Node Wrangler --> Reload Images`
+   :Shortcut:        :kbd:`Alt-R`
 
-Reload all of the images used in the node tree. This lets you reload the images without using the Image Editor.
+Reload all of the images used in the node tree.
+This lets you reload the images without using the Image Editor.
 
 
 Copy Settings
--------------
+=============
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Copy to Selected --> Settings from Active`
+   :Menu:      :menuselection:`Node Wrangler --> Copy to Selected --> Settings from Active`
    :Shortcut:  :kbd:`Shift-C`
 
 Copy the settings of the active node to all selected nodes of the same type.
 
 
 Reset Nodes
------------
+===========
 
 .. reference::
 
@@ -345,11 +343,11 @@ Revert the settings of the selected nodes to default while maintaining connectio
 
 
 Copy Label
-----------
+==========
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Copy to Selected --> Copy Label`
+   :Menu:      :menuselection:`Node Wrangler --> Copy to Selected --> Copy Label`
    :Shortcut:  :kbd:`Shift-V`, :kbd:`Shift-C`
 
 Copy custom labels to all of the selected nodes. You can copy them from the active node (:kbd:`Shift-V`),
@@ -359,22 +357,22 @@ are linked to.
 
 
 Clear Label
------------
+===========
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Clear Label`
+   :Menu:      :menuselection:`Node Wrangler --> Clear Label`
    :Shortcut:  :kbd:`Alt-L`
 
 Clear the custom labels of selected nodes and revert them back to their default node names.
 
 
 Modify Labels
--------------
+=============
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Modify Labels`
+   :Menu:      :menuselection:`Node Wrangler --> Modify Labels`
    :Shortcut:  :kbd:`Shift-Alt-L`
 
 Batch rename the custom labels of selected nodes. You can add text to the beginning and the end and replace parts
@@ -382,14 +380,13 @@ of the text.
 
 
 Add Texture Setup
------------------
-
-:guilabel:`Shader`
+=================
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Add Texture Setup`
-   :Shortcut:  :kbd:`Ctrl-T`
+   :Compatibility:   :guilabel:`Shader`
+   :Menu:            :menuselection:`Node Wrangler --> Add Texture Setup`
+   :Shortcut:        :kbd:`Ctrl-T`
 
 Add a setup of a texture node, Texture Coordinate, and Mapping nodes to any shader node.
 If you select a texture node, it will only add the Texture Coordinate and Mapping nodes.
@@ -397,14 +394,15 @@ For a background shader it will add an Environment Texture node.
 
 
 Add Principled Texture Setup
-----------------------------
+============================
 
 :guilabel:`Shader`
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Add Principled Setup`
-   :Shortcut:  :kbd:`Shift-Ctrl-T`
+   :Compatibility:   :guilabel:`Shader`
+   :Menu:            :menuselection:`Node Wrangler --> Add Principled Setup`
+   :Shortcut:        :kbd:`Shift-Ctrl-T`
 
 Add a principled texture setup from the selected texture files. Select a Principled BSDF node,
 select *Add Principled Setup* from the quick access menu (or press :kbd:`Shift-Ctrl-T`), and select texture files.
@@ -421,22 +419,22 @@ process in the add-on preferences.
 
 
 Add Reroutes to Outputs
------------------------
+=======================
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Add Reroutes`
+   :Menu:      :menuselection:`Node Wrangler --> Add Reroutes`
    :Shortcut:  :kbd:`Slash`
 
 Add reroute nodes to each output of the selected nodes.
 
 
 Link Active to Selected
------------------------
+=======================
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Link Active to Selected`
+   :Menu:      :menuselection:`Node Wrangler --> Link Active to Selected`
    :Shortcut:  :kbd:`Backslash`
 
 Link the active node to the selected nodes based on various criteria.
@@ -456,11 +454,11 @@ Use Outputs Names
 
 
 Align Nodes
------------
+===========
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Align Nodes`
+   :Menu:      :menuselection:`Node Wrangler --> Align Nodes`
    :Shortcut:  :kbd:`Shift-=`
 
 Align the selected nodes horizontally or vertically. The effect is similar to scaling nodes on an axis
@@ -470,7 +468,7 @@ Align the selected nodes horizontally or vertically. The effect is similar to sc
 .. _bpy.ops.node.nw_center_nodes:
 
 Center Nodes
-------------
+============
 
 .. reference::
 
@@ -480,18 +478,18 @@ Move selected nodes to the center of the node editor.
 
 
 Select within Frame (Parent/Children)
--------------------------------------
+=====================================
 
 - :kbd:`]` -- Select all direct child nodes of the selected frame.
 - :kbd:`[` -- Select the direct parent frame node of the selected nodes.
 
 
 Detach Outputs
---------------
+==============
 
 .. reference::
 
-   :Menu:   :menuselection:`Node Wrangler --> Detach Outputs`
+   :Menu:      :menuselection:`Node Wrangler --> Detach Outputs`
    :Shortcut:  :kbd:`Shift-Alt-D`
 
 Detach the selected node's outputs while leaving linked inputs intact.
@@ -500,14 +498,13 @@ Detach the selected node's outputs while leaving linked inputs intact.
 .. _bpy.ops.node.add_image:
 
 Add Multiple Images
--------------------
-
-:guilabel:`Compositor` :guilabel:`Shader`
+===================
 
 .. reference::
 
-   :Menu:      :menuselection:`Add --> Input` for :guilabel:`Compositor`,
-               or :menuselection:`Add --> Texture` for :guilabel:`Shader`
+   :Compatibility:   :guilabel:`Compositor` :guilabel:`Shader`
+   :Menu:            :menuselection:`Add --> Input` for :guilabel:`Compositor`,
+                     or :menuselection:`Add --> Texture` for :guilabel:`Shader`
 
 Select multiple images and add a node for each image.
 (Useful for importing multiple render passes or renders for image stacking.)
@@ -516,30 +513,19 @@ Select multiple images and add a node for each image.
 .. _bpy.ops.node.nw_add_sequence:
 
 Add Image Sequence
-------------------
-
-:guilabel:`Compositor` :guilabel:`Shader`
+==================
 
 .. reference::
 
-   :Menu:      :menuselection:`Add --> Input Add Image Sequence` for :guilabel:`Compositor`,
-               or :menuselection:`Add --> Texture Add Image Sequence` for :guilabel:`Shader`
+   :Compatibility:   :guilabel:`Compositor` :guilabel:`Shader`
+   :Menu:            :menuselection:`Add --> Input Add Image Sequence` for :guilabel:`Compositor`,
+                     or :menuselection:`Add --> Texture Add Image Sequence` for :guilabel:`Shader`
 
-Add an Image Sequence by only selecting one image from a sequence of image files. It will automatically detect
-the length of the sequence and set the node appropriately.
+Add an Image Sequence by only selecting one image from a sequence of image files.
+It will automatically detect the length of the sequence and set the node appropriately.
 
 Relative Path
    Sets the file path to be relative to the currently opened blend-file.
    See :ref:`files-blend-relative_paths`.
 Start Frame
    Global starting frame of the movie/sequence, assuming first picture has a #1.
-
-.. reference::
-
-   :Category: Node
-   :Description: Various tools to enhance and speed up node-based workflow.
-   :Location: :menuselection:`Node editor --> Sidebar` or see the shortcuts of individual tools.
-   :File: node_wrangler.py
-   :Author: Bartek Skorupa, Greg Zaal, Sebastian Koenig, Christian Brinkmann, Florian Meyer
-   :License: GPL
-   :Note: This add-on is bundled with Blender.
