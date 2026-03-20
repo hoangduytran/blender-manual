@@ -31,15 +31,30 @@ Below is a list of available effect strip types:
    :maxdepth: 1
    :class: toc-list
 
+   multicam.rst
+
+-----
+
+
+.. toctree::
+   :maxdepth: 1
+   :class: toc-list
+
+   speed_control.rst
+   glow.rst
+   blur.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+   :class: toc-list
+
    add.rst
    subtract.rst
    multiply.rst
    alpha_over_under.rst
    color_mix.rst
-   multicam.rst
-   speed_control.rst
-   glow.rst
-   blur.rst
 
 
 .. _bpy.ops.sequencer.effect_strip_add:
