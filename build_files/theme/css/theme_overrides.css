@@ -365,6 +365,17 @@ a.external:not(figure > a.external) {
 
 /* End custom toctree. */
 
+/* Alternative Toc Tree style */
+.toc-list > ul {
+	list-style: revert;
+	padding-left: 1.2rem;
+
+	li > a {
+		font-size: revert !important;
+		font-weight: revert !important;
+	}
+}
+
 /* Start footer contribute link */
 .footer-contribute {
 	display: block;
