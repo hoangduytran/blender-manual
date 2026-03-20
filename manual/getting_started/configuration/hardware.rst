@@ -215,7 +215,7 @@ done, Blender will report an error when trying to start a virtual reality sessio
 HTC Vive Cosmos
 ^^^^^^^^^^^^^^^
 
-The dedicated platform for the `HTC Vive Cosmos <https://www.vive.com/eu/product/#cosmos%20series>`__ is currently
+The dedicated platform for the `HTC Vive Cosmos <https://www.vive.com/sea/product/#vive%20cosmos>`__ is currently
 targeted at developers and may lack features found in other platforms.
 
 - Follow the steps from the
@@ -281,7 +281,7 @@ Software Update.
 SteamVR
 ^^^^^^^
 
-`SteamVR <https://www.steamvr.com/>`__ provides full support for OpenXR as of SteamVR 1.16.
+`SteamVR <https://www.steamvr.com/en/>`__ provides full support for OpenXR as of SteamVR 1.16.
 
 - Set SteamVR as the active OpenXR runtime via the *Developer* tab in the SteamVR Settings.
 
@@ -313,7 +313,7 @@ application.
 
 - Make sure the Windows 10 May 2019 Update (1903) is installed.
 - If the system meets all requirements, the Mixed Reality Portal should already be installed. It is also available in
-  the `Microsoft Store <https://www.microsoft.com/en-us/p/mixed-reality-portal/9ng1h8b3zc7m>`__.
+  the `Microsoft Store <https://apps.microsoft.com/detail/9ng1h8b3zc7m>`__.
 - Launch the Mixed Reality Portal. Click the menu button ``...`` in the lower left corner. In the menu it opens,
   select the *Set up OpenXR*.
 - Enable the :doc:`VR Scene Inspection add-on </addons/vr_scene_inspection>` in Blender.

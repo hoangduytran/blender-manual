@@ -86,7 +86,7 @@ The complete list can be found in `Extensions`_ part of this documentation.
 .. figure:: /images/addons_import-export_scene-gltf2_material-channels.jpg
 
    An example of the various image maps available in the glTF 2.0 core format. This is
-   the `water bottle sample model <https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/WaterBottle>`__
+   the `water bottle sample model <https://github.com/KhronosGroup/glTF-Sample-Models/tree/main/2.0/WaterBottle>`__
    shown alongside slices of its various image maps.
 
 
@@ -672,7 +672,7 @@ To make the animation within that track visible, click Solo (star icon) next to 
 
 .. figure:: /images/addons_import-export_scene-gltf2_animation-solo-track.png
 
-   This is the `fox sample model <https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Fox>`__
+   This is the `fox sample model <https://github.com/KhronosGroup/glTF-Sample-Models/tree/main/2.0/Fox>`__
    showing its "Run" animation.
 
 If an animation affects multiple objects, it will be broken up into multiple parts.

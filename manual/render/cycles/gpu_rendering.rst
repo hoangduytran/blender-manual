@@ -27,7 +27,7 @@ CUDA -- NVIDIA
 
 :abbr:`CUDA (Compute Unified Device Architecture)` is supported on Windows and Linux and requires a
 NVIDIA graphics cards with compute capability 5.0 and higher. To make sure your GPU is supported,
-see the `list of NVIDIA graphics cards <https://developer.nvidia.com/cuda-gpus#compute>`__
+see the `list of NVIDIA graphics cards <https://developer.nvidia.com/cuda/gpus>`__
 with the compute capabilities and supported graphics cards.
 
 
@@ -243,7 +243,7 @@ In this case Blender may try to dynamically build a kernel for your graphics car
 In this case you can:
 
 #. Check if the latest Blender version
-   (official or `experimental builds <https://builder.blender.org/download/>`__)
+   (official or `daily builds <https://builder.blender.org/download/daily/>`__)
    supports your graphics card.
 #. If you build Blender yourself, try to download and install a newer CUDA developer toolkit.
 

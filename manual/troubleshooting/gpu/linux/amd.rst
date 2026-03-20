@@ -14,7 +14,7 @@ AMD drivers are open source, except for OpenCL support which is available as par
 packages through your Linux distribution is usually best. AMD also provides graphics drivers for download on their
 website if you need the latest version.
 
-`AMD Drivers and Support Website <https://www.amd.com/en/support>`__
+`AMD Drivers and Support Website <https://www.amd.com/en/support/download/drivers.html>`__
 
 .. include:: ../common/mesa.rst
    :start-line: 1

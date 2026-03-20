@@ -18,7 +18,7 @@ recently released.
 
 Note, drivers before 550 do not support Vulkan!
 
-`NVIDIA Website <https://www.nvidia.com/Download/index.aspx>`__
+`NVIDIA Website <https://www.nvidia.com/en-us/drivers/>`__
 
 .. include:: ../common/laptops.rst
    :start-line: 1

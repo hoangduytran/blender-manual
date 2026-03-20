@@ -7,7 +7,7 @@ Universal Scene Description
 Importing USD Files
 ===================
 
-`USD <https://graphics.pixar.com/usd/release/index.html>`__ files typically represent the scene as
+`USD <https://openusd.org/release/index.html>`__ files typically represent the scene as
 a hierarchy of primitives, or `prims <https://graphics.pixar.com/usd/release/glossary.html#USDGlossary-Prim>`__.
 Individual prims contain data to describe scene entities, such as geometry, lights, cameras and transform hierarchies.
 Blender's USD importer converts USD prims to a hierarchy of Blender objects. Like the USD exporter,
@@ -339,7 +339,7 @@ This means that the following meshes can be exported:
 
 .. figure:: /images/files_import-export_usd_example.png
 
-   Shot from `Spring <https://studio.blender.org/films/spring/>`__ exported to USD and opened in USDView.
+   Shot from `Spring <https://studio.blender.org/projects/spring/>`__ exported to USD and opened in USDView.
 
 
 .. _bpy.ops.wm.usd_export:
@@ -653,7 +653,7 @@ Instancing/Referencing
 USDZ
    Due to a current limitation in the USD library, UDIM textures cannot be include in the USDZ archive.
    This limitation will likely be addressed in a future version of USD.
-   (See `USD pull request #2133 <https://github.com/PixarAnimationStudios/USD/pull/2133>`__.)
+   (See `USD pull request #2133 <https://github.com/PixarAnimationStudios/OpenUSD/pull/2133>`__.)
 
 
 USD Primvar data types
