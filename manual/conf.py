@@ -467,6 +467,16 @@ texinfo_documents = [
 # containing entries for each sub-node in the document.
 # texinfo_no_detailmenu = False
 
+# -- Options for linkcheck output --------------------------------------------
+
+linkcheck_allowed_redirects = {
+    # All HTTP redirections from the source URI to
+    # the canonical URI will be treated as "working".
+    r'https://blender.stackexchange.com/questions/.*': r'https://blender.stackexchange.com/questions/.*/',
+    r'https://blender.stackexchange.com/a/.*': r'https://blender.stackexchange.com/questions/.*/',
+    r'https://blenderartists.org/t/.*': r'https://blenderartists.org/t/.*/'
+}
+
 
 # -- Extension configuration -------------------------------------------------
 
