@@ -16,7 +16,7 @@ e.g. in the Audio-Video Interleaved format (``*.avi`` file).
 .. tip::
 
    Movie strips can display thumbnails in the Sequencer overlaid on their strips
-   by enabling the :ref:`Thumbnails <bpy.types.SequencerTimelineOverlay.show_thumbnails>` overlay.
+   by enabling the :ref:`Thumbnails <bpy.types.SequencerTimelineOverlay.thumbnail_display_style>` overlay.
 
 
 .. _bpy.ops.sequencer.movie_strip_add:
@@ -31,7 +31,7 @@ Add Movie Strip
 Move Strips
    Use mouse to position strip in timeline immediately after adding. If this option is enabled, Start Frame and
    Channel properties are not displayed.
-   
+
 Start Frame
    The :ref:`Start Frame <bpy.types.Strip.frame_start>` to place the left handle of the strip.
 
