@@ -5,7 +5,7 @@ Sequencer Scene
 
 The video sequencer uses a separate scene data-block that contains the edit. This is the *Sequencer Scene*.
 
-Having a separated scene for the video sequencer has multiple benefits, like managing different 
+Having a separated scene for the video sequencer has multiple benefits, like managing different
 versions of an edit within the same file. Another important use-case is working with
 different scenes in the file and scene strips. See the section below about working with multiple scenes
 and scene strips.
