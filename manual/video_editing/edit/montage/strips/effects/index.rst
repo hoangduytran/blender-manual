@@ -4,8 +4,8 @@
   Effect Strips
 #################
 
-Effect Strips are special strips in the :doc:`/editors/video_sequencer/index` that generate or modify
-visual and audio output based on other strips in the timeline. Unlike regular media strips,
+Effect Strips are special strips in the :doc:`/editors/video_sequencer/index` that generate
+or modify the visual output based on other strips in the timeline. Unlike regular media strips,
 they do not represent source footage. Instead, they apply operations such as transitions,
 filters, compositing, or procedural generation.
 
