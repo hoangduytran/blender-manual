@@ -53,8 +53,8 @@ page.
 Chat
 ====
 
-For real-time discussion, we have `chat.blender.org <https://chat.blender.org>`__ which uses `Blender ID
-<https://id.blender.org>`__ for authentication.
+For real-time discussion, we have `chat.blender.org <https://chat.blender.org>`__
+which uses `Blender ID <https://id.blender.org>`__ for authentication.
 
 You can join these channels:
 
@@ -66,7 +66,7 @@ You can join these channels:
   For support for developers using the Python API.
 - `#docs <https://matrix.to/#/#docs:blender.org>`__
   For discussion related to Blender's documentation.
-- `#translations <https://matrix.to/#/#translations:blender.org`__
+- `#translations <https://matrix.to/#/#translations:blender.org>`__
   For discussion related to translating Blender and its documentation.
 
 
