@@ -3,7 +3,7 @@
 Troubleshooting Linux -- NVIDIA
 *******************************
 
-.. include:: ../common/introduction.rst
+.. include:: ../_common/introduction.rst
    :start-line: 1
 
 On Linux, graphics drivers are usually installed as a package by your Linux distribution. Installing the latest
@@ -20,7 +20,7 @@ Note, drivers before 550 do not support Vulkan!
 
 `NVIDIA Website <https://www.nvidia.com/en-us/drivers/>`__
 
-.. include:: ../common/laptops.rst
+.. include:: ../_common/laptops.rst
    :start-line: 1
-.. include:: ../common/other.rst
+.. include:: ../_common/other.rst
    :start-line: 1
