@@ -33,6 +33,10 @@ def find_subdirs_without_index(root_dir):
         if '/manual/images' in dirpath:
             continue
 
+        # Skip directories starting with '_'
+        if os.path.basename(dirpath).startswith("_"):
+            continue
+
         if 'index.rst' not in filenames:
             print(dirpath)
 
