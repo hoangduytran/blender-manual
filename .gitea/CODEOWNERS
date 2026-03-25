@@ -1,0 +1,56 @@
+# Definition of code owners for automatic assigment of reviewers.
+
+#Project Management
+# --------------------------------------------------
+.*                      @Blendify
+build_files/.*          @Blendify
+manual/contribute/.*    @Blendify
+manual/conf.py          @Blendify
+tools/.*                @Blendify
+
+# --------------------------------------------------
+# Animation & Rigging
+# manual/animation/.*
+# manual/editors/dope_sheet/.*
+# manual/editors/graph_editor/.*
+# manual/editors/nla/.*
+# manual/editors/drivers_editor.rst
+# manual/editors/timeline.rst
+
+# --------------------------------------------------
+# Compositing
+# manual/compositing/.*
+# manual/editors/compositor.rst
+
+# --------------------------------------------------
+# Grease Pencil
+# manual/grease_pencil/.*
+
+# --------------------------------------------------
+# Files / Assets
+# manual/files/.*
+# manual/editors/outliner/.*
+# manual/editors/file_browser.rst
+
+# --------------------------------------------------
+# Modeling
+# manual/modeling/.*
+# manual/editors/geometry_node.rst
+
+# --------------------------------------------------
+# Rendering
+# manual/render/.*
+# manual/render/cycles/.*
+# manual/render/eevee/.*
+# manual/render/workbench/.*
+
+# --------------------------------------------------
+# Sculpting & Painting
+# manual/sculpt_paint/.*
+
+# --------------------------------------------------
+# VFX
+# manual/editors/clip/.*
+# manual/editors/video_sequencer/.*
+# manual/movie_clip/.*
+# manual/video_editing/.*
