@@ -59,6 +59,13 @@ Render Output
 Render Cache
    The location where cached render images are stored.
 
+.. _bpy.types.PreferencesFilePaths.texture_cache_directory:
+
+Texture Cache
+   Directory to store ``.tx`` texture cache files, relative to the
+   source image file or as an absolute path.
+   Used by the Cycles :ref:`Texture Cache <bpy.types.RenderSettings.use_texture_cache>`.
+
 
 .. _bpy.types.UserAssetLibrary:
 
