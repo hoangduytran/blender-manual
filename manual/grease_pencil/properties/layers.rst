@@ -29,8 +29,9 @@ See :doc:`Dope Sheet </editors/dope_sheet/modes/grease_pencil>` for more informa
 Layers can also be used together with Modifiers to only affect part of your drawing.
 See :doc:`Modifiers </grease_pencil/modifiers/introduction>` for more information.
 
-Layers can mask other layers by enabling Use Mask (mask icon) or using the checkbox in the Masks panel header. See
-:ref:`bpy.types.GreasePencilTreeNode.use_masks` for more information.
+Layers can mask other layers by clicking :bl-icon:`clipuv_hlt` (*Use Mask*)
+or using the checkbox in the Masks panel header.
+See :ref:`bpy.types.GreasePencilTreeNode.use_masks` for more information.
 
 .. tip::
 
@@ -43,22 +44,22 @@ Layer Tree
 
    Next to the layer name there are four icons buttons that control common properties of the layer:
 
-   Use Mask (mask icon)
+   :bl-icon:`clipuv_hlt` / :bl-icon:`clipuv_dehlt` Use Mask
       Toggle the affect of :ref:`Masks <bpy.types.GreasePencilTreeNode.use_masks>` on the layer.
 
    .. _bpy.types.GreasePencilTreeNode.use_onion_skinning:
 
-   Onion Skinning (onion skin icon)
+   :bl-icon:`onionskin_on` / :bl-icon:`onionskin_off` Onion Skinning
       Toggle using the layer for :doc:`Onion Skinning </grease_pencil/properties/onion_skinning>`.
 
    .. _bpy.types.GreasePencilTreeNode.hide:
 
-   Hide (eye icon)
+   :bl-icon:`hide_off` / :bl-icon:`hide_on` Hide
       Toggle layer visibility in the viewport and in render.
 
    .. _bpy.types.GreasePencilLayer.lock:
 
-   Lock (padlock icon)
+   :bl-icon:`unlocked` / :bl-icon:`locked` Lock
       Toggle layer from being editable.
 
 .. _bpy.ops.grease_pencil.layer_add:
@@ -183,10 +184,10 @@ to the Mask :ref:`list view <ui-list-view>`.
 In the Masks list next to the layers name there are two icons buttons that control
 common properties of the layer mask:
 
-Invert (mask icon)
+:bl-icon:`select_intersect` / :bl-icon:`select_difference` Invert
    Inverts the mask.
 
-Viewport/Render Visibility (eye icon)
+:bl-icon:`hide_off` / :bl-icon:`hide_on` Hide
    Toggle layer visibility in the viewport and in render.
 
 .. list-table:: Mask (green circle) samples.

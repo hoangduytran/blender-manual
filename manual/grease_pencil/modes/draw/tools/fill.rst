@@ -70,7 +70,7 @@ Boundary
 
    .. _bpy.types.BrushGpencilSettings.show_fill_boundary:
 
-   Show Lines (eye icon)
+   :bl-icon:`hide_on` / :bl-icon:`hide_off` Show Lines
       Toggle show auxiliary lines to see the fill boundary.
 
 .. _bpy.types.BrushGpencilSettings.fill_layer_mode:

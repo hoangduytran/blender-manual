@@ -200,7 +200,7 @@ Bone Collections
 ================
 
 This list shows the :term:`bone collections <Bone Collection>` the bone is assigned to.
-Press the eye icon to show or hide the entire bone collection.
+Press the :bl-icon:`hide_off` / :bl-icon:`hide_on` icons to show or hide the entire bone collection.
 Press the star icon to show only this bone collection, and others also marked as 'solo'
 Press the X icon to remove the bone from that particular collection.
 

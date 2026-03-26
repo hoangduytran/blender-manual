@@ -155,7 +155,7 @@ If a collection contains objects, there is a circle to the left of its name.
 Local Collections
    Allows setting collection visibility per viewport rather than globally.
 
-Hide in Viewport (eye icon)
+:bl-icon:`hide_off` / :bl-icon:`hide_on` Hide in Viewport
    Shows or hides the collection.
 
 You can also "isolate" a collection by clicking its name. This will show the collection
