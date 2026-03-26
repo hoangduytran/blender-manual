@@ -8,7 +8,6 @@ on multiple display devices. It is used both to ensure all parts of the pipeline
 and to make artistic choices about the look.
 
 .. toctree::
-   :titlesonly:
    :maxdepth: 2
 
    color_spaces.rst
