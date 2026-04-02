@@ -1,6 +1,5 @@
 .. index:: Modifiers; Video Sequencer Modifiers
 .. index:: Video Sequencer Modifiers
-
 .. _bpy.types.StripModifier:
 
 ***************
@@ -21,15 +20,6 @@ brightness, saturation, color balance and applying masks.
 You can add these modifiers directly to a media strip,
 or you can use them within an :doc:`Adjustment Layer </video_editing/edit/montage/strips/adjustment>`
 strip, making them apply to several media strips in one go.
-
-.. _bpy.types.Strip.use_linear_modifiers:
-
-Linear Modifiers
-   Calculates modifiers in :ref:`linear color space <color-management-linear-space>` instead of the
-   :ref:`Sequencer color space <bpy.types.ColorManagedSequencerColorspaceSettings.name>`.
-
-   Calculating modifiers in linear space will match the image processing of the compositor.
-   In most cases, this should be enabled; working in a non-linear workflow could have unpredictable results.
 
 
 Common Options
