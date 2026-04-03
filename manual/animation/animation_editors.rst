@@ -171,6 +171,16 @@ Audio -- Play Audio
 Playback -- Limit to Frame Range
    Don't allow moving the Playhead outside of the Frame Range using the mouse.
 
+.. _bpy.types.Scene.allow_preroll:
+
+Playback -- Allow Preroll
+   Allows playback to continue before the *Start Frame*.
+
+   This is useful when starting playback from outside the scene frame range,
+   such as when scrubbing earlier frames or previewing motion that leads into the defined frame range.
+
+   This option is disabled when *Limit to Frame Range* is enabled.
+
 .. _bpy.types.Screen.use_follow:
 
 Playback -- Follow Current Frame
