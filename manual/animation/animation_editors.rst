@@ -166,6 +166,8 @@ Audio -- Scrubbing
 Audio -- Play Audio
    Uncheck to mute all sound.
 
+.. _bpy.types.Scene.lock_frame_selection_to_range:
+
 Playback -- Limit to Frame Range
    Don't allow moving the Playhead outside of the Frame Range using the mouse.
 
