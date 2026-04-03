@@ -39,3 +39,7 @@ Standard Deviation
    How much pixel values differ from the mean.
    A low standard deviation indicates that the pixel values tend to be very close to the mean.
    A high standard deviation indicates that the values are spread out over a large range of values.
+Minimum
+   The lowest pixel value in the selected channel.
+Maximum
+   The highest pixel value in the selected channel.
