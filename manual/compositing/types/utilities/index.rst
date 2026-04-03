@@ -8,6 +8,7 @@
 
    math/index.rst
    vector/index.rst
+   matrix/index.rst
 
 ----------
 
