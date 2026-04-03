@@ -11,5 +11,6 @@
    integer.rst
    menu.rst
    normal.rst
+   object.rst
    value.rst
    vector.rst
