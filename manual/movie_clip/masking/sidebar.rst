@@ -60,6 +60,18 @@ Holes
           The Holes option example.
 
 
+.. _bpy.ops.mask.move_to_layer:
+
+Move to Layer
+-------------
+
+.. reference::
+
+   :Shortcut:        :kbd:`M`
+
+Moves the active spline to a different layer or creates a new layer.
+
+
 Example
 -------
 
