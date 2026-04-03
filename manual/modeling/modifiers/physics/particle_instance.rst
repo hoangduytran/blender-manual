@@ -142,6 +142,10 @@ Index
 Value
    A Color Attribute for random per-particle values.
 
+.. note::
+
+   Index and Value attributes must be in face corner domain and use byte color data type.
+
 
 Examples
 ========
