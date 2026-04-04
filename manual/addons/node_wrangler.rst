@@ -332,11 +332,14 @@ Copy Settings
 Copy the settings of the active node to all selected nodes of the same type.
 
 
+.. _bpy.ops.node.nw_reset_nodes:
+
 Reset Nodes
 ===========
 
 .. reference::
 
+   :Menu:      :menuselection:`Node --> Reset Nodes`
    :Shortcut:  :kbd:`Backspace`
 
 Revert the settings of the selected nodes to default while maintaining connections.
