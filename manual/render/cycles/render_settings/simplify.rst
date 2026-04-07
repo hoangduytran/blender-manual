@@ -27,7 +27,7 @@ Texture Resolution
    Scale down image textures to reduce memory usage.
 
    With the :ref:`Texture Cache <bpy.types.RenderSettings.use_texture_cache>`
-   and viewport renderig of complex scenes, a lower resolution can help ensure
+   and viewport rendering of complex scenes, a lower resolution can help ensure
    all textures fit in memory for interactive updates.
 
 Viewport
