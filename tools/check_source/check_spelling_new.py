@@ -20,7 +20,7 @@ with a series of improvements including the following:
 
 - TODO: more comprehensive docs.
 - TODO: ensure no other elements are accidentally getting skipped in RstSpellingVisitor.
-- TODO: Add a more elegant way to skip certain objects like math literals or footnotes.
+- TODO: Add a more elegant way to skip certain objects like footnotes.
 """
 
 import concurrent.futures
@@ -33,7 +33,7 @@ import docutils.parsers.rst
 
 # for spelling
 import enchant
-from check_spelling_config import dict_custom, dict_ignore
+from check_spelling_config_new import dict_custom, dict_ignore
 from docutils.parsers.rst import directives, roles
 
 # -----------------------------------------------------------------------------
@@ -113,6 +113,9 @@ RE_TEXT_REPLACE_TABLE = (
         re.compile(r"\|[a-zA-Z0-9_]+\|"),
         lambda _: " ",
     ),
+    # Change n-gon to polygon
+    (re.compile(r"\bn-gon\b", re.IGNORECASE), lambda _: "polygon"),
+    (re.compile(r"\bn-gons\b", re.IGNORECASE), lambda _: "polygons"),
 )
 
 RE_WORDS = re.compile(
@@ -296,6 +299,8 @@ def check_file(filename):
         for re_match in RE_WORDS.finditer(text):
             w = re_match.group(0)
 
+            # Skip uppercase terms (almost always good, but these 2 lines should be commented out and re-run periodically 
+            #      to catch new all-uppercase misspellings and words that should be added to the ignore list).
             if w.isupper():
                 continue
 
@@ -432,7 +437,8 @@ directives.register_directive("peertube", directive_ignore_recursive)
 directives.register_directive("vimeo", directive_ignore_recursive)
 directives.register_directive("todolist", directive_ignore_recursive)
 directives.register_directive("include", directive_ignore_recursive)
-
+#directives.register_directive("figure", directive_ignore_recursive)
+#directives.register_directive("image", directive_ignore_recursive)
 
 class RoleIgnore(docutils.nodes.Inline, docutils.nodes.TextElement):
     pass
