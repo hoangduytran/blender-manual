@@ -18,6 +18,7 @@
    baking.rst
    tools.rst
    gizmos.rst
+   Performance <performance.rst>
 
 
 Node Types
