@@ -8,6 +8,7 @@
 
    basic.rst
    to_sphere.rst
+   to_circle.rst
    shear.rst
    bend.rst
    push_pull.rst
