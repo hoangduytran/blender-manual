@@ -206,6 +206,13 @@ class RstSpellingVisitor(docutils.nodes.NodeVisitor):
     def depart_math(self, node):
         self.skip_context &= ~RST_CONTEXT_FLAG_MATH
 
+    def visit_math_block(self, node):
+        self.skip_context |= RST_CONTEXT_FLAG_MATH
+        raise docutils.nodes.SkipNode
+
+    def depart_math_block(self, node):
+        self.skip_context &= ~RST_CONTEXT_FLAG_MATH
+
     def visit_literal(self, node):
         self.skip_context |= RST_CONTEXT_FLAG_LITERAL
         raise docutils.nodes.SkipNode
