@@ -11,6 +11,7 @@
    set_curve_tilt.rst
    set_handle_positions.rst
    set_handle_type.rst
+   set_nurbs_order.rst
    set_spline_cyclic.rst
    set_spline_resolution.rst
    set_spline_type.rst
