@@ -221,14 +221,14 @@ Tint
 
       Tint from white to orange
 
-Anisotropic :guilabel:`Cycles Only`
+Anisotropy :guilabel:`Cycles Only`
    Amount of anisotropy for specular reflection. Higher values give elongated highlights along the tangent direction;
    negative values give highlights shaped perpendicular to the tangent direction.
 
    .. figure:: /images/render_shader-nodes_shader_principled-specular-anisotropic.webp
       :align: center
 
-      Anisotropic from 0.0 to 1.0
+      Anisotropy from 0.0 to 1.0
 
 Anisotropic Rotation :guilabel:`Cycles Only`
    Rotates the direction of anisotropy, with 1.0 going full circle.
