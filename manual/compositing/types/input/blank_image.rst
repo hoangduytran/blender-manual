@@ -19,7 +19,7 @@ Inputs
 ======
 
 Color
-   The color of all pixels in the image
+   The color of all pixels in the image.
 Size
    The size of the image.
 
@@ -28,4 +28,4 @@ Outputs
 =======
 
 Image
-   The generated image of the given size and constant color
+   The generated image of the given size and constant color.
