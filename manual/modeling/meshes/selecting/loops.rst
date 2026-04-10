@@ -119,6 +119,49 @@ This shortcut also works in Vertex selection mode, but results in a face loop se
    (see :ref:`modeling_meshes_selecting_switch-mode_expand-contract`).
 
 
+.. _bpy.ops.mesh.select_boundary_loop_multi:
+
+Boundary Loops
+==============
+
+.. reference::
+
+   :Mode:      Edit Mode (Edge Select Mode)
+   :Menu:      :menuselection:`Select --> Select Loops --> Boundary Loops`
+
+Selects the entire boundary loop for each selected boundary edge.
+
+A boundary edge is an edge connected to only one face.
+This operator expands the selection to include all connected boundary edges,
+forming one or more continuous loops.
+
+.. figure:: /images/modeling_meshes_selecting_loops_boundary_loops.png
+   :width: 50%
+
+   Selecting Boundary Loops.
+
+.. note::
+
+   At least one boundary edge must be selected to start a boundary loop selection.
+
+.. rubric:: Options
+
+Extend
+   Adds the detected boundary loops to the existing selection
+   instead of replacing it.
+
+Delimit
+   Restricts how far the boundary loop selection can propagate.
+
+   :Seam: Stops the selection at edges marked as seams.
+   :Sharp: Stops the selection at edges marked as sharp.
+   :N-gons: Stops the selection when encountering faces with more than four sides.
+   :Inner Corners: Stops at vertices connected to more than three edges.
+   :Outer Corners:
+      Stops at vertices connected to exactly two edges
+      when those edges share a face that is not an n-gon.
+
+
 .. _bpy.ops.mesh.loop_to_region:
 
 Select Loop Inner-Region
@@ -162,13 +205,13 @@ Examples
 
 .. _bpy.ops.mesh.region_to_loop:
 
-Select Boundary Loop
-====================
+Boundary of Selection
+=====================
 
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Select Loops --> Select Boundary Loop`
+   :Menu:      :menuselection:`Select --> Select Loops --> Boundary of Selection`
 
 Replaces the current face selection by an edge selection going around the border of
 each face "island." This is essentially the opposite of :ref:`bpy.ops.mesh.loop_to_region`.
