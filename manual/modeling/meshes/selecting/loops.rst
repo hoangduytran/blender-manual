@@ -1,10 +1,11 @@
+.. _bpy.ops.mesh.loop_select:
+.. _bpy.ops.mesh.loop_multi_select:
 
 ************
 Select Loops
 ************
 
-.. _bpy.ops.mesh.loop_select:
-.. _bpy.ops.mesh.loop_multi_select:
+.. _bpy.ops.mesh.select_edge_loop_multi:
 
 Select Edge Loops
 =================
@@ -37,6 +38,7 @@ However, as shown below, this doesn't have to be the case.
    the :kbd:`Alt-LMB` shortcut won't work because it serves as a replacement for :kbd:`MMB`.
    To select edge loops in this case, double-click with :kbd:`LMB` instead.
 
+
 All Boundaries
 --------------
 
@@ -47,6 +49,7 @@ Running the edge loop selection on a boundary edge twice will select the whole b
    First and second edge loop selection.
 
 See also :ref:`bpy.ops.mesh.region_to_loop`.
+
 
 .. _modeling-meshes-selecting-face-loops:
 
@@ -71,7 +74,7 @@ However, as shown below, this doesn't have to be the case.
    Selecting face loops. The clicked edge is highlighted in green.
 
 In Vertex selection mode, the same can be achieved using
-:ref:`modeling-meshes-selecting-edge-rings`.
+:ref:`bpy.ops.mesh.select_edge_ring_multi`.
 
 .. note::
 
@@ -79,7 +82,8 @@ In Vertex selection mode, the same can be achieved using
    the :kbd:`Alt-LMB` shortcut won't work because it serves as a replacement for :kbd:`MMB`.
    To select face loops in this case, double-click the edge with :kbd:`LMB` instead.
 
-.. _modeling-meshes-selecting-edge-rings:
+
+.. _bpy.ops.mesh.select_edge_ring_multi:
 
 Select Edge Rings
 =================
@@ -132,11 +136,13 @@ results may be unexpected.
 Note that if the selected edges do not form a closed loop,
 all connected faces will be selected.
 
+
 Options
 -------
 
 Select Bigger
    Select the faces outside the edge loop instead of those inside it.
+
 
 Examples
 --------

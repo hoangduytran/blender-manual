@@ -403,4 +403,4 @@ rather than replacing it.
 
 .. seealso::
 
-   Mesh edit :ref:`Select Edge Rings <modeling-meshes-selecting-edge-rings>`.
+   Mesh edit :ref:`Select Edge Rings <bpy.ops.mesh.select_edge_ring_multi>`.
