@@ -37,20 +37,15 @@ Developer Extras
 
    - :ref:`Operator Search <bpy.ops.wm.search_operator>`
    - :doc:`Sequencer Cache Settings </editors/video_sequencer/sequencer/sidebar/cache>`
+   - :doc:`Preferences Developer Tools Tab </editors/preferences/developer_tools>`
+   - Shows the name of icons in the tooltip when hovering over icon buttons.
+   - Adds several option to the :kbd:`RMB` button context menu:
 
-   Button Context Menu
-      Online Python Reference
-         To open the Python reference manual.
-      Copy Python Command
-         To copy the expression used when pressing the button.
-      Edit Source
-         To edit Python source code that defines the button.
-      Edit Translation
-         The option to edit UI translations
-         (only available when the *Manage UI translations* add-on is also enabled).
-   Preferences
-      Experimental Tab
-         Work in progress features can be enabled here which are currently being tested.
+     - *Online Python Reference* -- To open the Python reference manual.
+     - *Copy Python Command* -- To copy the expression used when pressing the button.
+     - *Edit Source* -- To edit Python source code that defines the button.
+     - *Edit Translation* -- The option to edit UI translations
+       (only available when the *Manage UI translations* add-on is also enabled).
 
 .. _bpy.types.PreferencesView.show_tooltips:
 
