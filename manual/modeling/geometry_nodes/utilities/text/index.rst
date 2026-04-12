@@ -13,6 +13,7 @@ Nodes to manipulate strings.
    match_string.rst
    replace_string.rst
    slice_string.rst
+   trim_string.rst
 
 -----
 
