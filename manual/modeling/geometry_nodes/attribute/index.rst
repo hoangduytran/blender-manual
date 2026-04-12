@@ -19,4 +19,5 @@ Nodes for working with data stored per object element, e.g. vertex groups.
    blur_attribute.rst
    capture_attribute.rst
    remove_named_attribute.rst
+   rename_attribute.rst
    store_named_attribute.rst
