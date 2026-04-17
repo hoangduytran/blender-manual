@@ -137,7 +137,7 @@ Iterations
 
 .. _bpy.types.BrushGpencilSettings.pen_subdivision_steps:
 
-Subdivision Steps
+Subdivisions
    Number of subdivisions to apply to newly created strokes.
 
 .. _bpy.types.BrushGpencilSettings.simplify_factor:
@@ -151,6 +151,8 @@ Trim Strokes End
    Automatically trim intersection strokes ends.
 
 .. _bpy.types.BrushGpencilSettings.use_settings_outline:
+.. _bpy.types.BrushGpencilSettings.material_alt:
+.. _bpy.types.BrushGpencilSettings.outline_thickness_factor:
 
 Outline
    Activate the conversion of the newly created stroke to its outline.
