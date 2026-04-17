@@ -24,13 +24,13 @@ Material
    Data-block selector for the :doc:`material </grease_pencil/materials/index>`.
 
 Size
-   The radius of the brush in pixels.
+   The diameter of the brush in pixels.
 
    :kbd:`F` allows you to change the brush size interactively by dragging the pointer or
    by typing a number then confirm.
 
    :bl-icon:`stylus_pressure` (Size Pressure)
-      Adjusts the radius based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
+      Adjusts the brush size based on the stylus pressure when using a :ref:`Graphics Tablet <hardware-tablet>`.
       The gradient of the pressure can be customized using
       the :doc:`curve widget </interface/controls/templates/curve>`.
 

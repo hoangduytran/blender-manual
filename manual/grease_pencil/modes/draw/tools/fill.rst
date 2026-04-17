@@ -53,7 +53,7 @@ Dilate/Contract
    Size in pixels to expand or shrink the fill area from the strokes boundary.
 
 Thickness
-   The thickness radius of the boundary stroke in pixels.
+   The thickness diameter of the boundary stroke in pixels.
 
 
 Advanced
