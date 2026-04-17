@@ -190,6 +190,19 @@ Randomize
    Randomly moves vertices along the vertex normal.
    This filter works similar to the :ref:`Randomize Transform <bpy.ops.object.randomize_transform>`.
 
+.. _bpy.ops.sculpt.set_vertex_colors:
+
+Set Vertex Colors
+=================
+
+.. reference::
+
+   :Mode:      Sculpt Mode
+   :Menu:      :menuselection:`Sculpt --> Set Vertex Colors`
+   :Shortcut:  :kbd:`Ctrl-X`
+
+Applies a fill to the active color attribute across the entire mesh using the
+current primary color from the brush or unified paint settings.
 
 Sample Color
 ============
