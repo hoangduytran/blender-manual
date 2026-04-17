@@ -254,11 +254,15 @@ Move to Layer
    :Menu:      :menuselection:`Stroke --> Move to Layer`
    :Shortcut:  :kbd:`M`
 
-A pop-up menu to move the stroke to a different layer.
-You can choose the layer to move the selected strokes to
-from a list of layers of the current Grease Pencil object.
-You can also add a new layer to move the selected stroke to.
-When creating a new layer, there is another pop-up to type in the name of the new layer.
+Moves the selected strokes to a different layer.
+
+A pop-up menu lists all layers and layer groups in the active Grease Pencil object.
+Select a target to move the selected strokes.
+
+New Layer
+   Creates a new layer and moves the selected strokes to it.
+
+   After selecting this option, a prompt appears to enter the name of the new layer.
 
 
 .. _bpy.ops.grease_pencil.stroke_material_set:
