@@ -131,6 +131,9 @@ Method
       specular transmission with custom :term:`IOR`. This tends to retain
       greater surface detail and color and matches measured skin
       more closely.
+   :Random Walk (Legacy): :guilabel:`Cycles Only`
+      The same as Random Walk, but uses a different mapping from albedo to
+      scattering parameters. Will be deleted in the future.
 
 Weight
    Blend between diffuse surface and subsurface scattering.
@@ -172,13 +175,14 @@ IOR :guilabel:`Cycles Only`
 
 Anisotropy :guilabel:`Cycles Only`
    Directionality of volume scattering within the subsurface medium. Zero scatters uniformly
-   in all directions, with higher values scattering more strongly forward.
+   in all directions, positive values scatter more in the forward direction, and negative
+   values scatter more backwards.
    For example, skin has been measured to have an anisotropy of 0.8.
 
    .. figure:: /images/render_shader-nodes_shader_principled-subsurface-anisotropy.webp
       :align: center
 
-      Anisotropy from 0.0 to 1.0
+      Anisotropy from -0.9 to 0.9
 
 
 Specular
