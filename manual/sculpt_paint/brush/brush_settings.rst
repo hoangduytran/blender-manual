@@ -88,6 +88,8 @@ Strength
 
          For the curve controls see: :ref:`Curve widget <ui-curve-widget>`.
 
+.. _bpy.types.Brush.blend:
+
 Blend
    Set the way the color or value is applied over the targeted Color Attribute, Vertex Group or Image Texture.
    See :term:`Color Blend Modes`.

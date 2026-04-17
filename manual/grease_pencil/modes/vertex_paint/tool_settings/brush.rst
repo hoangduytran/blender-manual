@@ -10,6 +10,11 @@ Brush
    In the :ref:`Data-Block menu <ui-data-block>` you find predefined Brush presets.
    And you can create your own custom presets as needed.
 
+Blend
+   The blending mode used when applying the brush.
+
+   See :ref:`bpy.types.Brush.blend` for more information.
+
 Size
    This option controls the diameter of the brush, measured in pixels.
    :kbd:`F` allows you to change the brush size interactively by
