@@ -32,7 +32,7 @@ If you're unfamiliar with Git or pull requests, you can submit your modified fil
 - **Manual Docs:** [Contributing Guide](https://docs.blender.org/manual/en/4.4/contribute/manual/index.html)
 - **Source Files:** [Manual Repository](https://projects.blender.org/blender/blender-manual)
 - **Developer Forum:** [Documentation Category](https://devtalk.blender.org/c/documentation/12)
-- **Chat:** [#docs on chat.blender.org](hhttps://matrix.to/#/#docs:blender.org)
+- **Chat:** [#docs on chat.blender.org](https://matrix.to/#/#docs:blender.org)
 - **Administrators:** @blendify
 
 _The Documentation Administrators manage the project, infrastructure, and contributor coordination. Feel free to reach out!_
