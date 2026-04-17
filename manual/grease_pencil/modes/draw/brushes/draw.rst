@@ -162,6 +162,31 @@ Outline
    Thickness
       Thickness used for outline stroke.
 
+.. _bpy.types.BrushGpencilSettings.curve_type:
+
+Curve Type
+   The type of curve used to interpolate between stroke points when drawing.
+
+   :Catmull Rom:
+      Creates a smooth interpolating curve that passes through all points,
+      producing natural-looking strokes.
+   :Poly:
+      Connects points with straight line segments without smoothing.
+   :Bézier:
+      Generates a smooth curve using Bézier interpolation,
+      allowing for more controlled and rounded stroke shapes.
+   :NURBS:
+      Uses Non-Uniform Rational B-Splines for smooth curves,
+      suitable for precise and mathematically defined shapes.
+
+.. _bpy.types.BrushGpencilSettings.conversion_threshold:
+
+Threshold
+   The minimum distance between points required when converting strokes.
+
+   Points closer than this distance are merged or ignored during conversion,
+   reducing the number of points and simplifying the resulting curve.
+
 
 .. _bpy.types.BrushGpencilSettings.use_settings_random:
 
