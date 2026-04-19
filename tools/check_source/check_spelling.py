@@ -5,37 +5,31 @@
 Check spelling for all RST files in the repository.
 
 - TODO: more comprehensive docs.
-- TODO: some words get extracted that shouldn't.
 """
 
-import concurrent.futures
-from concurrent.futures import ProcessPoolExecutor
+import argparse
+import os
+import re
+import sys
+from concurrent.futures import ProcessPoolExecutor, as_completed
 
-import docutils.parsers.rst
-from docutils.parsers.rst import directives, roles
 import docutils
+import docutils.parsers.rst
+import enchant
+from docutils.parsers.rst import directives, roles
+
 from check_spelling_config import (
     dict_custom,
     dict_ignore,
 )
-import os
-import sys
-import re
 
-
-# for spelling
-import enchant
 dict_spelling = enchant.Dict("en_US")
 
-
-USE_ONCE = True
-once_words = set()
-bad_words = set()
-word_cache = {}         # Used to store validated words to prevent repeated lookups
+# Validated-word cache, keyed by raw (case-sensitive) word.
+word_cache = {}
 
 
 def find_vcs_root(test, dirs=(".svn", ".git", ".hg"), default=None):
-    import os
     prev, test = None, os.path.abspath(test)
     while prev != test:
         if any(os.path.isdir(os.path.join(test, d)) for d in dirs):
@@ -43,72 +37,99 @@ def find_vcs_root(test, dirs=(".svn", ".git", ".hg"), default=None):
         prev, test = test, os.path.abspath(os.path.join(test, os.pardir))
     return default
 
-# Performs checks of words, first using the word cache
 
-
-def check_word_cached(w):
+def check_word(w):
+    if not w:
+        return True
     if w in word_cache:
         return word_cache[w]
+    w_lower = w.lower()
+    if w_lower in dict_custom or w_lower in dict_ignore:
+        word_cache[w] = True
+        return True
     result = dict_spelling.check(w)
     word_cache[w] = result
     return result
 
 
-def check_word(w):
-    if not w:
-        return True
-    w_lower = w.lower()
-    if w_lower in dict_custom or w_lower in dict_ignore:
-        return True
-    return dict_spelling.check(w)
+def word_is_misspelled(w):
+    # Skip acronyms (XYZ, UDIM, API...).
+    if w.isupper():
+        return False
+    if check_word(w):
+        return False
+    # Hyphenated word: accept if all individual parts are valid.
+    if "-" in w and all(check_word(p) for p in w.split("-")):
+        return False
+    return True
 
 
-def regex_key_raise(x):
-    raise Exception("Unknown role! " + "".join(x.groups()))
+def regex_key_raise(m):
+    raise Exception("Unknown role! " + m.group(0))
 
 
-# A table of regex and their replacement functions.
-#
-# This is used to clean up text from `docutils.nodes.NodeVisitor.visit_Text` which doesn't remove inline markup.
-# Note that in some cases the order matters, especially with include/excluding roles.
+# Length-preserving wash. Each replacer returns a string of the same length
+# as the original match, padding removed markup with spaces. This keeps
+# offsets in washed text aligned with the raw text so positions reported
+# from washed matches are valid against the original.
+
+def _pad_keep(m, keep_idx):
+    """Keep `m.group(keep_idx)` in place; pad everything else with spaces."""
+    lead = m.start(keep_idx) - m.start()
+    trail = m.end() - m.end(keep_idx)
+    return " " * lead + m.group(keep_idx) + " " * trail
+
+
+def _pad_all(m):
+    return " " * len(m.group(0))
+
+
+# This is used to clean up text from `docutils.nodes.NodeVisitor.visit_Text`
+# which doesn't always remove inline markup. Order matters: some patterns
+# overlap and only the first match is rewritten.
 
 # RE_TEXT_REPLACE_ROLES_INCLUDE = roles whose inner text should be spellchecked
 # RE_TEXT_REPLACE_ROLES_EXCLUDE = roles whose inner text should be ignored
 
 RE_TEXT_REPLACE_ROLES_INCLUDE = ("menuselection", "guilabel", "file")
-RE_TEXT_REPLACE_ROLES_EXCLUDE = ("kbd", "ref", "doc", "abbr", "term")
+RE_TEXT_REPLACE_ROLES_EXCLUDE = (
+    "abbr", "class", "doc", "kbd", "math", "mod", "ref", "term",
+    # Python API reference.
+    "attr", "cmdoption", "data", "envvar", "exc", "func", "meth", "obj",
+    # Custom roles.
+    "bl-icon",
+)
 
 RE_TEXT_REPLACE_TABLE = (
-    # Match HTML link: `Text <url>`__
-    # A URL may span multiple lines.
+    # HTML link: `Text <url>`__ (URL may span multiple lines). Keep `Text`.
     (
-        re.compile(r"(`)([^`<]+)(<[^`>]+>)(`)(__)", re.MULTILINE),
-        lambda x: x.groups()[1].strip(),
+        re.compile(r"(`)([^`<]+)(<[^`>]+>)(`)(__)"),
+        lambda m: _pad_keep(m, 2),
     ),
-    # Roles with plain-text: :some_role:`Text <ref>`
+    # Role with plain-text target: `:some_role:`Text <ref>``. Keep `Text`.
     (
-        re.compile(r"(:[A-Za-z_]+:)(`)([^`<]+)(<[^`>]+>)(`)", flags=re.MULTILINE),
-        lambda x: x.groups()[2].strip(),
+        re.compile(r"(:[A-Za-z_]+:)(`)([^`<]+)(<[^`>]+>)(`)"),
+        lambda m: _pad_keep(m, 3),
     ),
-    # Roles to always include.
+    # Include roles: keep the inner text.
     (
-        re.compile(r"(:(" + ("|".join(RE_TEXT_REPLACE_ROLES_INCLUDE)) + r"):)(`)([^`]+)(`)", flags=re.MULTILINE),
-        lambda x: x.groups()[3].strip(),
+        re.compile(r"(:(?:" + "|".join(RE_TEXT_REPLACE_ROLES_INCLUDE) + r"):)(`)([^`]+)(`)"),
+        lambda m: _pad_keep(m, 3),
     ),
-    # Roles to always exclude.
+    # Exclude roles: drop the whole match.
     (
-        re.compile(r"(:(" + ("|".join(RE_TEXT_REPLACE_ROLES_EXCLUDE)) + r"):)(`)([^`]+)(`)", flags=re.MULTILINE),
-        lambda _: " ",
+        re.compile(r"(:(?:" + "|".join(RE_TEXT_REPLACE_ROLES_EXCLUDE) + r"):)(`)([^`]+)(`)"),
+        _pad_all,
     ),
-    # Ensure all roles are handled.
+    # Any remaining `:role:`...`` is unexpected - fail loudly.
     (
-        re.compile(r"(:[A-Za-z_]+:)(`)([^`]+)(`)", flags=re.MULTILINE),
+        re.compile(r"(:[A-Za-z_]+:)(`)([^`]+)(`)"),
         regex_key_raise,
     ),
-    # Match substitution for removal: `|identifier|`
+    # Substitution: `|identifier|`.
     (
         re.compile(r"\|[a-zA-Z0-9_]+\|"),
-        lambda _: " ",
+        _pad_all,
     ),
 )
 
@@ -122,49 +143,15 @@ RE_WORDS = re.compile(
 )
 
 
-def check_spelling_body(text):
-
-    # Wash text or inline RST.
-    for re_expr, re_replace_fn in RE_TEXT_REPLACE_TABLE:
-        text = re.sub(re_expr, re_replace_fn, text)
-
-    for re_match in RE_WORDS.finditer(text):
-        w = re_match.group(0)
-
-        # Skip entirely uppercase words.
-        # These are typically used for acronyms: XYZ, UDIM, API ... etc.
-        if w.isupper():
-            continue
-
-        w_lower = w.lower()
-
-        if USE_ONCE and w_lower in once_words:
-            continue
-
-        if check_word(w):
-            pass
-        elif "-" in w:
-            if check_word_cached(w):  # Check the whole hyphenated word first
-                pass
-            elif all(check_word_cached(w_split) for w_split in w.split("-")):  # Then check individual parts
-                pass
-            else:
-                bad_words.add(w)  # If neither is valid, mark the whole word as bad
-                if USE_ONCE:
-                    once_words.add(w_lower)
-        else:
-            bad_words.add(w)
-            # print(" %r" % w)
-
-            if USE_ONCE:
-                once_words.add(w_lower)
-
-
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 RST_DIR = find_vcs_root(CURRENT_DIR)
 
 
 def rst_files(path):
+    if os.path.isfile(path):
+        if path.lower().endswith(".rst"):
+            yield path
+        return
     for dirpath, dirnames, filenames in os.walk(path):
         # Filter out directories that start with "."
         dirnames[:] = [d for d in dirnames if not d.startswith(".")]
@@ -182,27 +169,47 @@ def rst_files(path):
 
 
 def main():
-    # Collect all RST files
-    files = list(rst_files(RST_DIR))
+    parser = argparse.ArgumentParser(description="Spell-check RST files.")
+    parser.add_argument(
+        "path",
+        nargs="?",
+        default=RST_DIR,
+        help="Directory or file to scan (defaults to the repository root).",
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        dest="emit_all",
+        help="Emit every occurrence of each bad word (default reports only the first one seen).",
+    )
+    args = parser.parse_args()
 
-    # Use ThreadPoolExecutor for multithreading - only tested on Windows but should not be OS-specific
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        # Submit each file to be processed in a separate thread
-        futures = [executor.submit(check_spelling, fn) for fn in files]
+    # Sort so file ordering is reproducible across runs.
+    files = sorted(rst_files(args.path))
 
-        # Wait for all threads to complete - not strictly required, but doesn't add much overhead and
-        #   does allow us to catch and display errors
-        for future in concurrent.futures.as_completed(futures):
+    all_results = []
+
+    # Use ProcessPoolExecutor: `enchant.Dict` is not thread-safe, and each worker
+    # process gets its own dict instance via module import. Worker state is reset
+    # per-file inside `check_spelling`, so task results are independent of scheduling.
+    with ProcessPoolExecutor() as executor:
+        futures = {executor.submit(check_spelling, fn): fn for fn in files}
+        for future in as_completed(futures):
             try:
-                # Check for exceptions raised during execution
-                future.result()
+                all_results.extend(future.result())
             except Exception as e:
-                print(f"Error processing file: {e}")
+                print(
+                    "Error processing {:s}: {:s}".format(futures[future], str(e)),
+                    file=sys.stderr,
+                )
 
-    # Print the sorted list of bad words
-    words_sorted = sorted(bad_words, key=lambda s: s.lower())
-    for w in words_sorted:
-        print(w)
+    emitted = set()
+    for fn, lineno, col, word in sorted(all_results):
+        if not args.emit_all:
+            if word in emitted:
+                continue
+            emitted.add(word)
+        print("{:s}:{:d}:{:d}: {:s}".format(os.path.relpath(fn), lineno, col, word))
 
 # -----------------------------------------------------------------------------
 # Register dummy directives
@@ -213,18 +220,11 @@ def directive_ignore(
         content_offset, block_text, state, state_machine,
 ):
     """
-    Used to explicitly mark as doctest blocks things that otherwise
-    wouldn't look like doctest blocks.
-
-    Note this doesn't ignore child nodes.
+    Wrap the directive's content as a `doctest_block` so docutils stops
+    parsing it as RST. The text still reaches `visit_Text` for spell-checking
+    (contrast with `directive_ignore_recursive`, which drops content entirely).
     """
     text = '\n'.join(content)
-    r'''
-    if re.match(r'.*\n\s*\n', block_text):
-        warning('doctest-ignore on line %d will not be ignored, '
-             'because there is\na blank line between ".. doctest-ignore::"'
-             ' and the doctest example.' % lineno)
-    '''
     return [docutils.nodes.doctest_block(text, text, codeblock=True)]
 
 
@@ -251,9 +251,6 @@ directives.register_directive('seealso', directive_ignore)
 directives.register_directive('only', directive_ignore)
 directives.register_directive('hlist', directive_ignore)
 directives.register_directive('versionchanged', directive_ignore)
-
-# Custom.
-directives.register_directive('peertube', directive_ignore)
 
 # directives.register_directive('glossary', directive_ignore)  # wash this data instead
 # Custom directives from extensions
@@ -304,7 +301,7 @@ def role_ignore_recursive(
         name, rawtext, text, lineno, inliner,
         options={}, content=[],
 ):
-    return [RoleIgnoreRecursive("", '', *(), **{})], []
+    return [RoleIgnoreRecursive("", "")], []
 
 
 roles.register_canonical_role('menuselection', role_ignore)
@@ -315,11 +312,19 @@ roles.register_canonical_role('abbr', role_ignore_recursive)
 roles.register_canonical_role('class', role_ignore_recursive)
 roles.register_canonical_role('doc', role_ignore_recursive)
 roles.register_canonical_role('kbd', role_ignore_recursive)
+roles.register_canonical_role('math', role_ignore_recursive)
 roles.register_canonical_role('mod', role_ignore_recursive)
 roles.register_canonical_role('ref', role_ignore_recursive)
 roles.register_canonical_role('term', role_ignore_recursive)
 # Python API reference.
 roles.register_canonical_role('meth', role_ignore_recursive)
+roles.register_canonical_role('func', role_ignore_recursive)
+roles.register_canonical_role('attr', role_ignore_recursive)
+roles.register_canonical_role('data', role_ignore_recursive)
+roles.register_canonical_role('exc', role_ignore_recursive)
+roles.register_canonical_role('obj', role_ignore_recursive)
+roles.register_canonical_role('cmdoption', role_ignore_recursive)
+roles.register_canonical_role('envvar', role_ignore_recursive)
 # Custom directives from extensions
 roles.register_canonical_role('bl-icon', role_ignore_recursive)
 
@@ -332,25 +337,29 @@ roles.register_canonical_role('bl-icon', role_ignore_recursive)
 
 def filedata_glossary_wash(filedata):
     """
-    Only list body of text.
+    Replace the glossary directive line and its term lines with blanks so
+    docutils parses only the body text. Line count and column positions are
+    preserved, so reported line/col numbers align with the raw file.
     """
     lines_src = filedata.splitlines()
     lines_dst = []
     in_glossary = False
-    for l in lines_src:
-        l_strip = l.lstrip()
-        if l_strip.startswith(".. glossary::"):
+    for line in lines_src:
+        line_lstrip = line.lstrip()
+        if line_lstrip.startswith(".. glossary::"):
             in_glossary = True
+            lines_dst.append("")
             continue
-        elif in_glossary is False:
-            lines_dst.append(l)
+        if not in_glossary:
+            lines_dst.append(line)
             continue
+        indent = len(line) - len(line_lstrip)
+        if indent <= 3 and line_lstrip:
+            # Term line - blank it so docutils ignores it.
+            lines_dst.append("")
         else:
-            indent = len(l) - len(l_strip)
-            if indent <= 3 and l_strip:
-                continue
-            elif indent >= 6 or not l_strip:
-                lines_dst.append(l[6:])
+            # Body or blank - keep verbatim so columns match the raw file.
+            lines_dst.append(line)
     return "\n".join(lines_dst)
 
 
@@ -359,7 +368,6 @@ def filedata_glossary_wash(filedata):
 
 def rst_to_doctree(filedata, filename):
     # filename only used as an ID
-    import docutils.parsers.rst
     parser = docutils.parsers.rst.Parser()
     doc = docutils.utils.new_document(filename)
     doc.settings.tab_width = 3
@@ -380,209 +388,138 @@ def check_spelling(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         filedata = f.read()
 
-        # special content handling
-        if filename.endswith(os.path.join("glossary", "index.rst")):
-            filedata = filedata_glossary_wash(filedata)
+    # special content handling
+    if filename.endswith(os.path.join("glossary", "index.rst")):
+        filedata_parsed = filedata_glossary_wash(filedata)
+    else:
+        filedata_parsed = filedata
 
-        doc = rst_to_doctree(filedata, filename)
-        # print(doc)
+    doc = rst_to_doctree(filedata_parsed, filename)
 
-    visitor = RstSpellingVisitor(doc)
+    visitor = RstSpellingVisitor(doc, filename, filedata)
     doc.walkabout(visitor)
-
-
-RST_CONTEXT_FLAG_LITERAL = 1 << 0
-RST_CONTEXT_FLAG_LITERAL_BLOCK = 1 << 1
-RST_CONTEXT_FLAG_MATH = 1 << 2
-RST_CONTEXT_FLAG_COMMENT = 1 << 3
+    return visitor.results
 
 
 class RstSpellingVisitor(docutils.nodes.NodeVisitor):
     __slots__ = (
-        "document",
-        "skip_context",
+        "filename",
+        "filedata",
+        "line_starts",
+        "buffer_cursor",
+        "results",
+        "current_line",
     )
 
-    def __init__(self, doc):
-        self.document = doc
-        self.skip_context = 0
+    def __init__(self, doc, filename, filedata):
+        super().__init__(doc)
+        self.filename = filename
+        self.filedata = filedata
+        # Offset of each source line's first character, indexed as
+        # `line_starts[line - 1]`. A trailing sentinel at EOF lets the same
+        # table bound a line's end via `line_starts[line]`.
+        line_starts = [0]
+        idx = 0
+        while (idx := filedata.find("\n", idx)) != -1:
+            idx += 1
+            line_starts.append(idx)
+        line_starts.append(len(filedata))
+        self.line_starts = line_starts
+        # Buffer offset past which the next `find` should search; advances as
+        # chunks are located so identical text on the same source line
+        # resolves to distinct positions (docutils traverses in source order).
+        self.buffer_cursor = 0
+        # Accumulates `(filename, line, col, word)` entries.
+        self.results = []
+        # Source line of the walk cursor. Any node visited with a `.line`
+        # attribute resets this (via `dispatch_visit`); `visit_Text` advances
+        # it by the text's newline count.
+        self.current_line = 1
+
+    def dispatch_visit(self, node):
+        line = getattr(node, "line", None)
+        if line:
+            self.current_line = line
+        return super().dispatch_visit(node)
 
     # -----------------------------
     # Visitors (docutils callbacks)
-
-    def visit_author(self, node):
-        print("AUTHOR", node[0])
-
-    # TODO
-    def visit_section(self, node):
-        pass
-
-    def depart_section(self, node):
-        pass
-
-    def visit_title(self, node):
-        # print("TITLE", node[0], self.section_level)
-        pass
-
-    def depart_title(self, node):
-        pass
-        # print("/TITLE", node[0])
-
-        '''
-        body, body_fmt = self.pop_body()
-        align = self.node_align(node)
-        elem = BElemText(body, body_fmt, align, self.indent, "style_head%d" % self.section_level)
-        self.bdoc.add_elem(elem)
-        '''
-
-        # import IPython
-        # IPython.embed()
-
-    def visit_list_item(self, node):
-        '''
-        align = self.node_align(node)
-        elem = BElemListItem(align, self.indent, "style_body",
-                             self.list_types[-1], self.list_count[-1])
-        self.bdoc.add_elem(elem)
-        '''
-        pass
-
-    def depart_list_item(self, node):
-        # self.list_count[-1] += 1
-        pass
-
-    def visit_bullet_list(self, node):
-        pass
-        '''
-        self.list_types.append(None)
-        self.list_count.append(0)
-        '''
-
-    def depart_bullet_list(self, node):
-        pass
-        '''
-        item = self.list_types.pop()
-        assert(item == None)
-        del self.list_count[-1]
-        '''
-
-    def visit_enumerated_list(self, node):
-        pass
-        '''
-        self.list_types.append(node["enumtype"])
-        self.list_count.append(0)
-        '''
-
-    def depart_enumerated_list(self, node):
-        pass
-        '''
-        item = self.list_types.pop()
-        assert(item == node["enumtype"])
-        del self.list_count[-1]
-        '''
-
-    def visit_paragraph(self, node):
-        pass
-
-    def depart_paragraph(self, node):
-        pass
-
-        # Just text for now
-        # text = node.astext()
-        # print(text)
-        # check_spelling_body(text)
+    #
+    # Every node type not listed below falls through to `unknown_visit` /
+    # `unknown_departure` (both no-ops), so container nodes (sections,
+    # paragraphs, list items, references, ...) need no explicit entries.
 
     def visit_Text(self, node):
-        # Visiting text in a sipped context (literal for example).
-        if self.skip_context:
-            return
         text = node.astext()
-        check_spelling_body(text)
+        raw_lines = text.splitlines()
 
-    def depart_Text(self, node):
-        pass
+        # Wash inline markup that docutils may have left behind (notably RST
+        # text wrapped in `doctest_block` by `directive_ignore`). Wash is
+        # length-preserving so offsets in `scan_lines` align with `raw_lines`,
+        # which lets us spell-check the washed form while locating chunks via
+        # the raw form. Every wash pattern requires one of `:`, `` ` ``, or
+        # `|` - if the chunk has none, reuse `raw_lines` directly.
+        if ":" in text or "`" in text or "|" in text:
+            washed = text
+            for re_expr, re_replace_fn in RE_TEXT_REPLACE_TABLE:
+                washed = re_expr.sub(re_replace_fn, washed)
+            scan_lines = washed.splitlines()
+        else:
+            scan_lines = raw_lines
 
-    def visit_strong(self, node):
-        self.is_strong = True
+        line_starts = self.line_starts
+        for line_idx, raw_line in enumerate(raw_lines):
+            stripped = raw_line.lstrip()
+            if not stripped:
+                continue
+            source_line = self.current_line + line_idx
+            if source_line >= len(line_starts):
+                break
+            line_start = line_starts[source_line - 1]
+            line_stop = line_starts[source_line]
+            buf_offset = self.filedata.find(
+                stripped, max(line_start, self.buffer_cursor), line_stop,
+            )
+            if buf_offset < 0:
+                continue
+            self.buffer_cursor = buf_offset + len(stripped)
+            # Column of `raw_line[0]` in the source file (1-based). Leading
+            # blank-space in the chunk and the source line need not agree, so
+            # anchor at `stripped` and back out the chunk's leading spaces.
+            col_base = (buf_offset - line_start) + 1 - (len(raw_line) - len(stripped))
+            for m in RE_WORDS.finditer(scan_lines[line_idx]):
+                w = m.group(0)
+                if word_is_misspelled(w):
+                    self.results.append(
+                        (self.filename, source_line, col_base + m.start(), w.lower()),
+                    )
 
-    def depart_strong(self, node):
-        self.is_strong = False
+        # Advance the walk cursor past this chunk.
+        self.current_line += text.count("\n")
 
-    def visit_emphasis(self, node):
-        self.is_emphasis = True
-
-    def depart_emphasis(self, node):
-        self.is_emphasis = False
+    # `SkipNode` prevents children from being visited AND skips the depart
+    # call, so no matching `depart_*` is needed here.
 
     def visit_math(self, node):
-        self.skip_context |= RST_CONTEXT_FLAG_MATH
         raise docutils.nodes.SkipNode
 
-    def depart_math(self, node):
-        self.skip_context &= ~RST_CONTEXT_FLAG_MATH
+    def visit_math_block(self, node):
+        raise docutils.nodes.SkipNode
 
     def visit_literal(self, node):
-        self.skip_context |= RST_CONTEXT_FLAG_LITERAL
         raise docutils.nodes.SkipNode
-
-    def depart_literal(self, node):
-        self.skip_context &= ~RST_CONTEXT_FLAG_LITERAL
 
     def visit_literal_block(self, node):
-        self.skip_context |= RST_CONTEXT_FLAG_LITERAL_BLOCK
         raise docutils.nodes.SkipNode
-
-    def depart_literal_block(self, node):
-        self.skip_context &= ~RST_CONTEXT_FLAG_LITERAL_BLOCK
-        pass
 
     def visit_code_block(self, node):
-        # No need to flag.
         raise docutils.nodes.SkipNode
-
-    def depart_code_block(self, node):
-        pass
-
-    def visit_reference(self, node):
-        pass
-
-    def depart_reference(self, node):
-        pass
-
-    def visit_title_reference(self, node):
-        pass
-
-    def depart_title_reference(self, node):
-        pass
-
-    def visit_download_reference(self, node):
-        pass
-
-    def depart_download_reference(self, node):
-        pass
-
-    def visit_date(self, node):
-        # date = datetime.date(*(
-        #    map(int, unicode(node[0]).split('-'))))
-        # metadata['creation_date'] = date
-        pass
-
-    # def visit_document(self, node):
-    #    print("TEXT:", node.astext())
-    #    # metadata['searchable_text'] = node.astext()
 
     def visit_comment(self, node):
-        self.skip_context |= RST_CONTEXT_FLAG_COMMENT
         raise docutils.nodes.SkipNode
-
-    def depart_comment(self, node):
-        self.skip_context &= ~RST_CONTEXT_FLAG_COMMENT
 
     def visit_raw(self, node):
         raise docutils.nodes.SkipNode
-
-    def depart_raw(self, node):
-        pass
 
     def unknown_visit(self, node):
         pass
