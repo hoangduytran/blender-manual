@@ -23,12 +23,14 @@ Stroke Depth Order
    .. note::
 
       This setting also affects how different Grease Pencil objects are composited together in the scene.
-      For objects that use 2D layer ordering, their depth in the scene is based on **the midpoint of the bounding box**.
+      For objects that use 2D layer ordering,
+      their depth in the scene is based on **the midpoint of the bounding box**.
       This midpoint defines a plane facing the camera which is the depth that object will be rendered at.
 
    .. tip::
 
-      *When using 2D ordering, try to keep the Grease Pencil object mostly flat to ensure it is correctly depth composited!*
+      When using 2D ordering, try to keep the Grease Pencil object mostly flat
+      to ensure it is correctly depth composited!
 
    :3D Location:
       The strokes drawing order is based on the stroke location in 3D space.

@@ -1,9 +1,9 @@
 .. index:: Geometry Nodes; Bone Info
 .. _bpy.types.GeometryNodeBoneInfo:
 
-****************
+**************
 Bone Info Node
-****************
+**************
 
 .. figure:: /images/node-types_GeometryNodeBoneInfo.webp
    :align: right

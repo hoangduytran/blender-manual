@@ -1,9 +1,9 @@
 .. index:: Geometry Nodes; Trim String
 .. _bpy.types.FunctionNodeTrimString:
 
-*****************
+****************
 Trim String Node
-*****************
+****************
 
 .. figure:: /images/node-types_FunctionNodeTrimString.webp
    :align: center

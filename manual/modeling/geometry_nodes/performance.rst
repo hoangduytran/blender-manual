@@ -1,8 +1,8 @@
 .. _geometry-nodes-performance:
 
-***************************
+**************************
 Geometry Nodes Performance
-***************************
+**************************
 
 Geometry Nodes can process large amounts of data efficiently, but performance depends heavily
 on how node trees are structured and how much geometry is evaluated.

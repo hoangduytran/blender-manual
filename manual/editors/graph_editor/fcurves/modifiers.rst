@@ -271,7 +271,7 @@ End Frame
    The frame where to stop applying the effect.
 
 Smooth (Gaussian) Modifier
----------------------------
+--------------------------
 
 Uses Gaussian smoothing to reduce detail and noise in the curve.
 It performs the same smoothing as the :ref:`Smoothing Operator <bpy.ops.graph.gaussian_smooth>`.

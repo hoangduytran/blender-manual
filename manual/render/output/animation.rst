@@ -12,8 +12,8 @@ By default, Blender automatically saves animation frames using the settings defi
 from the render buffer or by using a :doc:`Compositor File Output node </compositing/types/output/file_output>`.
 
 This behavior depends on the :ref:`Output <bpy.types.RenderSettings.save_output>` option in the Output properties.
-When enabled (default), animation renders are written automatically. When disabled, Blender will not save render output
-from the Output panel and instead relies on alternative output methods such as Compositor File Output nodes.
+When enabled (default), animation renders are written automatically. When disabled, Blender will not save render
+output from the Output panel and instead relies on alternative output methods such as Compositor File Output nodes.
 If no valid output method is available, rendering operations will report errors.
 
 
