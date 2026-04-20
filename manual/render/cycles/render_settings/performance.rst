@@ -1,4 +1,3 @@
-
 ***********
 Performance
 ***********
@@ -42,15 +41,15 @@ Memory
 .. _bpy.types.CyclesRenderSettings.tile_size:
 
 Tile Size
-   Render high resolution images in tiles of this size, to reduce memory usage.
-   Tiles are cached to disk while rendering to save memory.
+   Render high resolution images in tiles of this size, to reduce memory usage
+   of render passes. Tiles are cached to disk while rendering to save memory.
+   
+   Lowering the tile size also reduces texture cache memory usage, as only the
+   image textures needed by each tile will be loaded into memory.
 
-   .. note::
-
-      In some cases changing the *Tile Size* can result in increased performance.
-      For example when a small object renders slowly compared to other objects,
-      using a small *Tiles Size* can lead to an increase in performance.
-
+   Tile size has an impact on performance, and the default 2048 pixels provides
+   a good balance for most scenes. When running out of memory, lowering to 1024
+   or 512 pixels helps reduce memory usage, typically at a small performance cost.
 
 .. _bpy.types.RenderSettings.use_texture_cache:
 
