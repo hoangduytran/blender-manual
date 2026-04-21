@@ -18,10 +18,14 @@ Selecting components (vertices, edges, or faces) in one editor will automaticall
 corresponding elements in the other.
 
 With *Sync Selection* enabled, all faces are visible in the UV Editor at all times,
-since UV visibility follows mesh selection in the 3D Viewport. Selecting a vertex, edge,
-or face in the 3D Viewport selects its corresponding UV elements. However, when a single
-3D vertex or edge corresponds to multiple UV vertices or edges (for example, along a UV seam),
-you cannot select them individually—selecting one selects all of them.
+since UV visibility follows mesh selection in the 3D Viewport.
+
+Viewport Selection
+   Selecting a vertex, edge, or face in the 3D Viewport selects all its corresponding UV elements.
+UV Selection
+   Selecting a UV will select vertices, edges and faces in the 3D viewport.
+
+   With vertex & edge selection modes it is possible for only *some* of the UV's attached to a vertex to be selected.
 
 When disabled, only the UVs belonging to the currently selected faces in the 3D Viewport are shown.
 Selections in the UV Editor are independent, allowing individual UV vertices and edges to be selected
@@ -80,7 +84,6 @@ Sticky Selection Mode
 =====================
 
 Options for automatically selecting additional UV vertices.
-Only available when *Face* selection mode is active, or when *Sync Selection* is disabled.
 
 Disabled
    Each UV vertex can be selected independently of the others.
@@ -94,7 +97,6 @@ Shared Location
 Shared Vertex
    Automatically select UV vertices that correspond to the same mesh vertex,
    even if they have different UV coordinates.
-   This is also the behavior when *Sync Selection* is enabled.
 
 
 Select Menu
@@ -229,9 +231,6 @@ underlying mesh topology.
 This is useful for quickly selecting an entire UV island when only a portion
 of it is currently selected, such as when adjusting layout, packing, or applying
 transforms to a whole island.
-
-When *Sync Selection* is enabled, linked selection follows mesh connectivity
-instead of UV island connectivity.
 
 
 .. _bpy.ops.uv.shortest_path_select:
