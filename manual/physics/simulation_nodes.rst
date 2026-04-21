@@ -18,7 +18,7 @@ Baking
 ======
 
 The simulation is automatically cached during playback.
-The valid cache can be seen as a strong yellow line in the timeline editor.
+The valid cache can be seen as a strong purple line in the timeline editor.
 This allows for animators to quickly inspect all the previous frames of a simulation.
 
 .. figure:: /images/modeling_geometry-nodes_simulation_baking_timeline.png
