@@ -126,6 +126,16 @@ Lasso Select
 More/Less :kbd:`Ctrl-NumpadPlus`, :kbd:`Ctrl-NumpadMinus`
    Expands/contracts the selection to/from adjacent elements.
 
+All by Trait
+   Tile
+      See :ref:`bpy.ops.uv.select_tile`.
+   Pinned :kbd:`Shift-P`
+      See :ref:`bpy.ops.uv.select_pinned`.
+   Overlap
+      See :ref:`bpy.ops.uv.select_overlap`.
+   Winding
+      See :ref:`bpy.ops.uv.select_by_winding`.
+
 
 .. _bpy.ops.uv.select_similar:
 
@@ -273,49 +283,6 @@ Offset
    Mesh edit :ref:`Select Shortest Path <bpy.ops.mesh.shortest_path_select>`.
 
 
-.. _bpy.ops.uv.select_tile:
-
-Select Tile
-===========
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Select Tile`
-
-Selects UV faces that lie within a specific UV tile, primarily intended for use
-with :doc:`UDIM workflows </modeling/meshes/uv/workflows/udims>`.
-
-The initial tile is determined by the position of the 2D Cursor.
-All UV faces whose coordinates fall inside that tile are selected.
-
-This operator is useful when working with multi-tile UV layouts, allowing you to
-quickly isolate and operate on UVs assigned to a particular UDIM tile, such as for
-packing, transforming, or baking textures.
-
-To select a different tile, move the 2D Cursor to the desired tile location
-and run the operator again.
-
-
-.. _bpy.ops.uv.select_pinned:
-
-Select Pinned
-=============
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Select Pinned`
-   :Shortcut:  :kbd:`Shift-P`
-
-Selects all pinned UVs in the UV Editor.
-
-Pinned UVs are constrained during unwrapping and certain transform operations,
-allowing them to stay fixed while other UVs are adjusted.
-This operator is useful for quickly identifying or modifying pinned regions,
-such as when refining UV layouts or controlling unwrap behavior.
-
-
 Select Split
 ============
 
@@ -339,6 +306,49 @@ their neighbors.
    As an alternative to *Select Split*, you can set the *Sticky Selection Mode*
    to *Disabled*.
 
+.. _bpy.ops.uv.select_tile:
+
+Select Tile
+===========
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select All by Trait --> Tile`
+
+Selects UV faces that lie within a specific UV tile, primarily intended for use
+with :doc:`UDIM workflows </modeling/meshes/uv/workflows/udims>`.
+
+The initial tile is determined by the position of the 2D Cursor.
+All UV faces whose coordinates fall inside that tile are selected.
+
+This operator is useful when working with multi-tile UV layouts, allowing you to
+quickly isolate and operate on UVs assigned to a particular UDIM tile, such as for
+packing, transforming, or baking textures.
+
+To select a different tile, move the 2D Cursor to the desired tile location
+and run the operator again.
+
+
+.. _bpy.ops.uv.select_pinned:
+
+Select Pinned
+=============
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select All by Trait --> Pinned`
+
+   :Shortcut:  :kbd:`Shift-P`
+
+Selects all pinned UVs in the UV Editor.
+
+Pinned UVs are constrained during unwrapping and certain transform operations,
+allowing them to stay fixed while other UVs are adjusted.
+This operator is useful for quickly identifying or modifying pinned regions,
+such as when refining UV layouts or controlling unwrap behavior.
+
 
 .. _bpy.ops.uv.select_overlap:
 
@@ -348,7 +358,7 @@ Select Overlap
 .. reference::
 
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Select Overlap`
+   :Menu:      :menuselection:`Select --> Select All by Trait --> Overlap`
 
 Selects all UV faces that overlap with one another in the UV Editor.
 
@@ -360,6 +370,22 @@ It is commonly used when preparing UVs for texture baking, lightmaps,
 or game engine export, where overlapping UVs are often undesirable.
 Once selected, overlapping faces can be moved, scaled, or repacked
 to resolve the overlap.
+
+
+.. _bpy.ops.uv.select_by_winding:
+
+Select by Winding
+=================
+
+.. reference::
+
+   :Mode:      Edit Mode
+   :Menu:      :menuselection:`Select --> Select All by Trait --> Winding`
+
+Selects faces by their winding - positive or negative,
+where a negative winding would mirror the content of an image displayed on the mesh.
+
+This can be useful to detect problems when flipping the UV mapping isn't desired.
 
 
 .. _bpy.ops.uv.select_loop:
