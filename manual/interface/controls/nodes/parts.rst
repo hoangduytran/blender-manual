@@ -123,8 +123,8 @@ Auto
    Automatically detects a good structure type based on how the socket is used.
 Dynamic (Circle)
    Socket can work with multiple types of structures.
-Single (Square)
-   These sockets expects a single value, they are represented by a circular socket shape.
+Single (Rectangle)
+   These sockets expects a single value, they are represented by a tall rectangular shape.
 Fields (Diamond)
    Represents a value that can vary per element (e.g. per point, edge, or face).
    You can think of a field as a "value map", similar to how the brightness of pixels
@@ -132,16 +132,7 @@ Fields (Diamond)
 
    If a single value is connected to a field socket,
    it is implicitly broadcast all elements receive the same value.
-
-   Fields can have the following appearance:
-
-   - **Diamond**: The socket can accept a field input, or it outputs a field. A constant single
-     value can be connected to these sockets, but then the output will often not  vary per element.
-
-   - **Diamond with Dot** : The socket can be a field, but it is currently a single value.
-     This is helpful because it allows tracking where single values are calculated,
-     instead of a field with many different results.
-     It also means that :ref:`socket-inspection` will show the value instead of field input names.
+   It also means that :ref:`socket-inspection` will show the value instead of field input names.
 
    .. seealso::
 
