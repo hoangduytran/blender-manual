@@ -236,6 +236,10 @@ Apply Modifiers
    :doc:`Modifiers </modeling/modifiers/index>` have been calculated.
 Loose Edges
    .. todo:: Add this information.
+Triangulate Faces
+      Convert all faces to triangles.
+      This also causes shared meshes on linked objects to become independent copies.
+      Useful for applications that cannot handle non-triangle faces and/or shared meshes.
 Tangent Space
    .. todo:: Add this information.
 
