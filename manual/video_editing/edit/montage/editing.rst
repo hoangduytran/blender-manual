@@ -34,6 +34,7 @@ The drop-down arrow offers the following options:
 .. _bpy.types.SequencerToolSettings.snap_to_hold_offset:
 .. _bpy.types.SequencerToolSettings.snap_to_markers:
 .. _bpy.types.SequencerToolSettings.snap_to_retiming_keys:
+.. _bpy.types.SequencerToolSettings.snap_to_all_channels:
 
 Snap to
    Frame Range
@@ -48,6 +49,9 @@ Snap to
       Snaps the transformed selection to :doc:`/animation/markers`.
    Retiming Keys
       Snaps the transformed selection to :ref:`sequencer-editing-retiming`.
+   All Channels
+      Allows snapping to any strip channel.
+      If disabled, snapping only snaps to strips currently on the same channel as transformed strips.
 
 .. _bpy.types.SequencerToolSettings.snap_ignore_muted:
 .. _bpy.types.SequencerToolSettings.snap_ignore_sound:
