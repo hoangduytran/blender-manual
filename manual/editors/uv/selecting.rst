@@ -305,10 +305,14 @@ their neighbors.
    As an alternative to *Select Split*, you can set the *Sticky Selection Mode*
    to *Disabled*.
 
+
+Select All by Trait
+===================
+
 .. _bpy.ops.uv.select_tile:
 
 Select Tile
-===========
+-----------
 
 .. reference::
 
@@ -332,7 +336,7 @@ and run the operator again.
 .. _bpy.ops.uv.select_pinned:
 
 Select Pinned
-=============
+-------------
 
 .. reference::
 
@@ -352,7 +356,7 @@ such as when refining UV layouts or controlling unwrap behavior.
 .. _bpy.ops.uv.select_overlap:
 
 Select Overlap
-==============
+--------------
 
 .. reference::
 
@@ -374,7 +378,7 @@ to resolve the overlap.
 .. _bpy.ops.uv.select_by_winding:
 
 Select by Winding
-=================
+-----------------
 
 .. reference::
 
