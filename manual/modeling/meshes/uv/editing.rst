@@ -149,13 +149,34 @@ Copy Mirrored UV Coordinates
    :Mode:      Edit Mode
    :Menu:      :menuselection:`UV --> Copy Mirrored UV Coordinates`
 
-Copies UVs from one side of the mirrored mesh to the other.
-Affects only selected vertices (on both sides).
+Copies UV coordinates from one side of a symmetrical mesh to the mirrored side.
 
-Axis Direction
-   Positive/Negative
+The operator searches for mirrored vertices across the chosen mesh axis and copies
+their UV coordinates to the corresponding selected vertices. This is useful when
+working with symmetrical models where UVs only need to be edited on one side.
+
+Only selected vertices are affected.
+
+Mesh Axis
+   Defines the axis used to find mirrored vertices in the mesh.
+
+   :-X to +X: Copy UVs from the negative X side to the positive X side.
+   :-Y to +Y: Copy UVs from the negative Y side to the positive Y side.
+   :-Z to +Z: Copy UVs from the negative Z side to the positive Z side.
+   :+X to -X: Copy UVs from the positive X side to the negative X side.
+   :+Y to -Y: Copy UVs from the positive Y side to the negative Y side.
+   :+Z to -Z: Copy UVs from the positive Z side to the negative Z side.
+
+UV Axis
+   Defines the UV axis used when mirroring UV coordinates.
+
+   :X: Mirror UV coordinates across the horizontal UV axis.
+   :Y: Mirror UV coordinates across the vertical UV axis.
+
 Precision
-   Tolerance for finding vertex duplicates.
+   Tolerance used when searching for mirrored vertex pairs.
+
+   Higher values allow matching vertices that are slightly offset from perfect symmetry.
 
 
 .. _bpy.ops.uv.snap_selected:
