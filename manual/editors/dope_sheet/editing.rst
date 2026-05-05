@@ -44,6 +44,15 @@ Less :kbd:`Ctrl-NumpadMinus`
 Select Linked :kbd:`L`
    Select keys that are on the same channel as a key that's already selected.
 
+.. _bpy.ops.action.select_by_type:
+
+Select by Type
+   Selects all keyframes that share the same :ref:`Keyframe Type <keyframe-type>`
+   as the currently selected keyframes.
+
+   This is useful for isolating or editing specific categories of keyframes,
+   such as breakdowns, extremes, or moving holds, across the current animation data.
+
 ----------
 
 Columns on Selected Keys :kbd:`K`
