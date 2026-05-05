@@ -232,6 +232,13 @@ This is useful for quickly selecting an entire UV island when only a portion
 of it is currently selected, such as when adjusting layout, packing, or applying
 transforms to a whole island.
 
+Delimit
+   Restricts how linked UV selection expands.
+
+   :Seam: Stop selection across edges marked as seams.
+   :Sharp: Stop selection across sharp edges.
+   :Material: Stop selection across faces using different materials.
+
 
 .. _bpy.ops.uv.shortest_path_select:
 .. _bpy.ops.uv.shortest_path_pick:
