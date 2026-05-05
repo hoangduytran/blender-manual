@@ -67,9 +67,19 @@ with operators specific to that entry.
 Filtering and Sorting
 =====================
 
-Some Tree Views support filtering and sorting options,
-similar to the :ref:`List View <ui-list-view>`.
-Availability depends on the specific implementation.
+Tree Views support filtering and sorting options to help organize and locate items in large hierarchies.
+
+Search
+   Filters item names that match the search string.
+
+   :bl-icon:`arrow_leftright`
+      Inverts the search results to show items that do not match the search string.
+
+:bl-icon:`sortalpha`
+   Sorts items alphabetically.
+
+:bl-icon:`sort_desc`
+   Reverses the current sorting order.
 
 
 Modification Buttons
