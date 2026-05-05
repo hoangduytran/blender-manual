@@ -1,13 +1,13 @@
 .. _bpy.ops.import_curve.svg:
 
-******************************
-Scalable Vector Graphics (SVG)
-******************************
+***************************
+Import SVG as Curves (.svg)
+***************************
 
 .. reference::
 
    :Category:  Import-Export
-   :Menu:      :menuselection:`File --> Import --> Scalable Vector Graphics (.svg)`
+   :Menu:      :menuselection:`File --> Import --> SVG as Curves (.svg)`
 
 Imports a :abbr:`SVG (Scalable Vector Graphics)` file as one or more curve objects.
 
