@@ -253,17 +253,17 @@ Selection :kbd:`Y`
 
 .. _bpy.ops.uv.rip_move:
 
-UV Rip Move
+Rip Move UV
 ===========
 
 .. reference::
 
    :Editor:    UV Editor
    :Mode:      Edit Mode
-   :Menu:      :menuselection:`UV --> UV Rip Move`
+   :Menu:      :menuselection:`UV --> Rip Move UV`
    :Shortcut:  :kbd:`V`
 
-The *UV Rip Move* operator separates selected UV elements (vertices, edges, or faces) from connected components,
+The *Rip Move UV* operator separates selected UV elements (vertices, edges, or faces) from connected components,
 creating a "rip" in the UV map. After the separation, the selection enters move mode,
 allowing precise control over where and how the UV elements are pulled apart.
 
@@ -282,13 +282,13 @@ without affecting surrounding geometry.
 
 .. note::
 
-   The *UV Rip Move* operator is not compatible with
+   The *Rip Move UV* operator is not compatible with
    :ref:`Sync Selection <bpy.types.ToolSettings.use_uv_select_sync>`.
    To use this tool, make sure Sync Selection is disabled in the UV Editor.
 
 .. seealso::
 
-   - :doc:`UV Rip Tool </modeling/meshes/uv/tools/rip>` -- Modal version of the rip operator.
+   - :doc:`Rip Region Tool </modeling/meshes/uv/tools/rip>` -- Modal version of the rip operator.
    - Mesh editing :ref:`Rip <bpy.ops.mesh.rip_move>` -- Similar functionality for mesh editing in the 3D Viewport.
 
 
