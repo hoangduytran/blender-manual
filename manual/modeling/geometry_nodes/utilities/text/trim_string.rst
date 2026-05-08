@@ -1,5 +1,6 @@
 .. index:: Geometry Nodes; Trim String
 .. _bpy.types.FunctionNodeTrimString:
+.. --- copy below this line ---
 
 ****************
 Trim String Node
