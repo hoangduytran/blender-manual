@@ -272,6 +272,10 @@ Subtype :guilabel:`Integer` :guilabel:`Float` :guilabel:`Vector` :guilabel:`Stri
    Integers
       :None:
          Standard integer values with no special interpretation.
+      :Pixel:
+         Represents values in pixels, showing a "px" suffix.
+         Typically used for dimensions, resolutions, image sizes,
+         or other screen-space measurements.
       :Percentage:
          Displayed as a percentage.
          Typically used with *Min* and *Max* values set to 0 and 100.
@@ -282,6 +286,10 @@ Subtype :guilabel:`Integer` :guilabel:`Float` :guilabel:`Vector` :guilabel:`Stri
    Floats
       :None:
          Standard floating-point values with no special unit.
+      :Pixel:
+         Represents values in pixels, showing a "px" suffix.
+         Typically used for dimensions, resolutions, image sizes,
+         or other screen-space measurements.
       :Percentage:
          Displayed as a percentage.
          Typically used with *Min* and *Max* values set to 0 and 100.
@@ -313,6 +321,10 @@ Subtype :guilabel:`Integer` :guilabel:`Float` :guilabel:`Vector` :guilabel:`Stri
    Vectors
       :None:
          Standard vector values.
+      :Pixel:
+         Represents values in pixels, showing a "px" suffix.
+         Typically used for dimensions, resolutions, image sizes,
+         or other screen-space measurements.
       :Percentage:
          Each component is displayed as a percentage.
       :Factor:
