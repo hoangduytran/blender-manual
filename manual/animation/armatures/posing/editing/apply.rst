@@ -12,6 +12,19 @@ Apply
 The Apply menu contains operators for converting the current pose,
 constraint results, or custom property values into a new default state.
 
+.. note::
+
+   Applying a pose from a pose Library can still work correctly
+   even when the bone's rotation mode has changed since the pose was created.
+
+   Blender determines the stored rotation representation from the pose data's
+   RNA paths and converts the rotation internally before applying it to the
+   current bone rotation mode.
+
+   However, poses stored using Euler rotations may lose the original rotation
+   order information. In these cases Blender falls back to ``XYZ`` order,
+   which can result in slightly different rotations when applying the pose.
+
 
 Pose as Rest Pose
 =================
