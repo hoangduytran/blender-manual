@@ -181,8 +181,15 @@ Select Linked
    :Menu:      :menuselection:`Select --> Select Linked`
    :Shortcut:  :kbd:`L`
 
-Adds to the selection the cursor's nearest control point,
-and all the linked ones, i.e. all points belonging to the same stroke.
+Selects the stroke under the cursor along with all connected points belonging to the same stroke.
+
+This is useful for quickly selecting an entire stroke for editing, transforming,
+moving between layers, or applying material changes.
+
+Deselect Linked
+   Removes the linked stroke under the cursor from the selection.
+
+   Shortcut: :kbd:`Shift-L`
 
 
 .. _bpy.ops.grease_pencil.select_ends:
