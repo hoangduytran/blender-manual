@@ -5,12 +5,14 @@ System Configuration
 Blender Settings
 ================
 
-Blender by default will attempt to display images such that when you save and
-open them in image viewers, video players and browsers on the same computer,
-they will look the same as they did in Blender.
+By default, Blender integrates with automatic color management in operating
+systems and saves images and videos with color space metadata. This helps
+make image viewed in Blender look the same when saved and opened in other
+applications on the same computer. Particularly image viewers, video players
+and browsers that also use automatic color management.
 
-Blender integrates with automatic color management in operating systems.
-For more traditional behavior, display emulation can be turned off.
+Traditionally, VFX software has relied on more manual configuration. Turn
+off display emulation for more manual control.
 
 .. _bpy.types.ColorManagedDisplaySettings.emulation:
 
@@ -19,13 +21,14 @@ Display Emulation
 
 :Automatic:
    Display images consistent with most other applications, to preview images and video
-   for export. A best effort is made to emulate the chosen display on the actual
-   display device.
+   for export.
 
    The choice of display in Blender specifies the target display color space for
-   rendered images and video files, or exported game assets. Changing the display only
-   affects whether wide gamut or HDR colors will be clipped or preserved, within the
-   gamut and HDR range of the target display.
+   rendered images and video files (or game assets to export). Colors will be clipped
+   to the gamut and HDR range of the chosen target display.
+   
+   For example, if you have a P3 HDR monitor, you can preview what the image will
+   look like when saved as sRGB, Display P3 or HDR.
 
 :Off:
    Directly output image as produced by OpenColorIO. For accurate results, this requires
