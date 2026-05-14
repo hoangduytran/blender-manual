@@ -132,24 +132,24 @@ directly from the application to the monitor. Rather both the application and
 the monitor are matched to an absolute reference, and the operating system
 performs the appropriate conversions.
 
-Blender display emulation is designed to be consistent with other applications
-that also integrate with automatic color management. For accurate results, it
-is then the operating system and monitor that must be configured.
+Blender display emulation is designed to work with automatic color management.
+To control the accuracy, it is then the operating system and monitor that must
+be configured with the appropriate transfer function.
 
-For HDR, automatic color management is required. Each operating system has
-different behavior for HDR and gamma.
+HDR display requires automatic color management. Enabling HDR has an impact on
+gamma that is different on each operating system.
 
 * On Windows, enabling "Use HDR" makes the transfer functions cancel out. This
   means HDR content is displayed accurately, and may also be helpful for viewing
-  SDR content for TV or cinema. But it does mean the appearance of all applications
-  and images is changed.
+  SDR content for TV or cinema. It changes the appearance of all applications and
+  images.
 * On macOS, the default "XDR" display preset can display both SDR and HDR content.
-  However for accurately viewing HDR content the "HDR Video" display preset has to
-  be used, which will cancel out the transfer functions. Like HDR mode on Windows,
-  this changes the appearance of all applications.
-* On Linux, Wayland color management supports displaying both SDR and HDR content,
+  However, for accurately viewing HDR content there is a "HDR Video" display preset.
+  Like HDR mode on Windows, this cancels out the transfer functions and changes the
+  appearance of all applications and images.
+* On Linux, Wayland color management supports displaying both SDR and HDR content
   similar to macOS. Because Wayland does not have a distinct HDR mode, Blender
   automatically switches between sRGB and gamma 2.2 image encoding depending on
-  whether an SDR or HDR display was chosen, so that both can be accurate with the
+  whether an SDR or HDR display was chosen. This way both can be accurate with the
   same system configuration.
 
