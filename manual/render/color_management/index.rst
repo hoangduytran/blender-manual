@@ -13,3 +13,4 @@ and to make artistic choices about the look.
    color_spaces.rst
    displays_views.rst
    opencolorio.rst
+   system_configuration.rst

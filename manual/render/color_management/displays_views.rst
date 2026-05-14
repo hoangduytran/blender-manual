@@ -61,13 +61,8 @@ Select the "Display P3" or "Rec.2020" display to view wide gamut colors.
 This should be used in conjunction with the "ACEScg" or "Linear Rec.2020" working space
 for materials, lights, rendering and compositing.
 
-Requirements:
-
-* A P3 or Rec.2020 capable monitor.
-* macOS: Any Apple Silicon device.
-* Linux: Use Wayland, and set the Vulkan backend in the Blender system preferences.
-* Windows: Enable "Automatically manage color for apps" in the Windows display settings,
-  and set the Vulkan backend in the Blender system preferences.
+See :ref:`System Configuration <color-management-system-configuration>` for how to enable
+wide gamut colors on supported systems.
 
 High Dynamic Range
 ------------------
@@ -82,30 +77,14 @@ luminance.
 In Blender, HDR content automatically scales up and down along with display brightness. Seeing the full range often
 requires lowering the display brightness, to make enough headroom above SDR white.
 
-Requirements:
-
-* A HDR capable monitor.
-* macOS: Any Apple Silicon device.
-* Linux: Use Wayland, and set the Vulkan backend in the Blender system preferences.
-* Windows: Enable "Use HDR" in the Windows display settings, and set the Vulkan backend in the Blender system
-  preferences.
-
-.. _bpy.types.ColorManagedDisplaySettings.emulation:
+See :ref:`System Configuration <color-management-system-configuration>` for how to enable
+HDR colors on supported systems.
 
 Display Emulation
 -----------------
 
-:Automatic:
-   Display images consistent with most other applications, to preview images and video
-   for export. A best effort is made to emulate the chosen display on the actual
-   display device.
-:Off:
-   Directly output image as produced by OpenColorIO. This is not correct in general,
-   but may be used when the system configuration and actual display device is known
-   to match the chosen display.
-
-Emulation is not supported with older :ref:`OpenColorIO configurations <ocio-config>`.
-
+See :ref:`Display Emulation <bpy.types.ColorManagedDisplaySettings.emulation>` for
+details on how Blender interacts with operating systems color management.
 
 .. _bpy.types.ColorManagedViewSettings.view_transform:
 
