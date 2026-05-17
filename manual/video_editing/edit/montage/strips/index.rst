@@ -46,5 +46,6 @@ Types
    :titlesonly:
 
    adjustment.rst
+   compositor.rst
    effects/index.rst
    transitions/index.rst
