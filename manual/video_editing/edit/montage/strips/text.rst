@@ -22,8 +22,13 @@ Options
 =======
 
 Text
-   The actual text displayed.
-   Text is limited to 512 characters.
+   The actual text displayed by the strip.
+
+   The text can contain multiple lines and supports standard UTF-8 characters,
+   including accented characters, symbols, and many non-Latin writing systems.
+
+   Text can be edited directly in the text field or interactively in the
+   :ref:`Preview region <bpy.ops.sequencer.text_edit_mode_toggle>`.
 
 Wrap Width
    Wraps the text by the percentage of the frame width,
