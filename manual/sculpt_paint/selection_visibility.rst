@@ -73,7 +73,7 @@ Face Selection Masking
    :Header:    :menuselection:`Paint Mask`
    :Shortcut:  :kbd:`1`
 
-The *Face Selection masking* allows you to select faces and limit the paint
+The *Face Selection Masking* allows you to select faces and limit the paint
 tool to those faces, very similar to Vertex selection masking.
 
 .. figure:: /images/sculpt-paint_brush_introduction_face-select.png
@@ -89,13 +89,25 @@ tool to those faces, very similar to Vertex selection masking.
 Hide/Unhide Faces
 -----------------
 
+.. reference::
+
+   :Mode:      Texture, Vertex Paint, and Weight Paint Modes
+   :Menu:      :menuselection:`Select --> Reveal Hidden`,
+               :menuselection:`Select --> Hide Selected`,
+               :menuselection:`Select --> Hide Unselected`
+   :Shortcut:  :kbd:`Alt-H`, :kbd:`H`, :kbd:`Shift-H`
+
 .. figure:: /images/sculpt-paint_brush_introduction_face-select-hidden.png
 
    Hidden faces.
 
-You also can hide selected faces as in Edit Mode with the keyboard Shortcut :kbd:`H`,
-then paint on the remaining visible faces and finally unhide the hidden faces again by using
-:kbd:`Alt-H`.
+Faces can be temporarily hidden to limit painting to only the visible parts of the mesh.
+Hidden faces cannot be painted or selected until they are revealed again.
+This can be useful for isolating specific regions of a mesh while painting.
+
+- :kbd:`H` -- Hide the currently selected faces.
+- :kbd:`Shift-H` -- Hide all unselected faces, isolating the current selection.
+- :kbd:`Alt-H` -- Reveal all hidden faces.
 
 
 Hide/Unhide Vertices
