@@ -9,6 +9,7 @@ Apply
    :Mode:      Pose Mode
    :Menu:      :menuselection:`Pose --> Apply`
    :Shortcut:  :kbd:`Ctrl-A`
+
 The Apply menu contains operators for converting the current pose,
 constraint results, or custom property values into a new default state.
 

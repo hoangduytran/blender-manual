@@ -4,11 +4,6 @@
 Compositor Strip
 ****************
 
-.. figure:: /images/video-editing_sequencer_strips_compositor_example.png
-   :align: center
-
-   A compositor strip using a custom compositor node group.
-
 The *Compositor* strip applies a :doc:`Compositor </compositing/index>` node group
 directly inside the Video Sequence Editor.
 
