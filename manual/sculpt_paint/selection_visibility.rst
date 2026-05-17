@@ -82,6 +82,10 @@ tool to those faces, very similar to Vertex selection masking.
 
 .. The visual example needs to be updated. Ideally show hard edges on painted face corners.
 
+
+.. _bpy.ops.paint.face_vert_reveal:
+.. _bpy.ops.paint.face_select_hide:
+
 Hide/Unhide Faces
 -----------------
 
