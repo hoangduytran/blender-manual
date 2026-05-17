@@ -10,10 +10,10 @@ Shading
 
    :Panel:     :menuselection:`Properties --> Object Properties --> Shading`
 
+.. _render-eevee-object-light-linking-settings:
+
 Light Linking
 -------------
-
-.. _render-eevee-object-light-linking-settings:
 
 Limit light influence to specified objects, with :ref:`Light Linking <bpy.types.Object.light_linking>`.
 
