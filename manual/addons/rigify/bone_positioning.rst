@@ -32,7 +32,7 @@ The eyes-nose loop area is split in different parts identified by bone names. Fo
 
 .. tip:: Brow Placement
 
-   Keeping aligned the mid bones in "brow", "brow.b", "lid.t", "lid.t" and
+   Keeping aligned the mid bones in "brow", "brow.b", "lid.t", "lid.b" and
    cheek will give better results after rig generation.
 
 .. figure:: /images/addons_rigging_rigify_bone-positioning_face-jaw-ear-bones.png
