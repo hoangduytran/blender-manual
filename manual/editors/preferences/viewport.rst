@@ -124,19 +124,6 @@ Clip Alpha
    Clip alpha below this threshold in the 3D Viewport.
    Note that, the default is set to a low value to prevent issues on some GPUs.
 
-.. _bpy.types.PreferencesSystem.image_draw_method:
-
-Image Display Method
-   Method to render images; the following options are supported:
-
-   :Automatic:
-      Automatically use *GLSL* which runs on the GPU for performance but falls back to
-      the CPU for large images which might be slow when loaded with the GPU.
-   :2D Texture:
-      Uses CPU for display transform and render images as a 2D texture.
-   :GLSL:
-      Fastest method using GLSL for display transform and render images as a 2D texture.
-
 
 Subdivision
 ===========
@@ -147,7 +134,7 @@ GPU Subdivision
    Under certain circumstances, the GPU will be used to subdivide a mesh with a
    :doc:`Subdivision Surface modifier </modeling/modifiers/generate/subdivision_surface>`.
    This typically results in increased subdivision performance.
-   
+
 .. note::
 
    When enabled, normals and tangents are interpolated instead of being recomputed after smoothing.
