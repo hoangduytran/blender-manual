@@ -62,7 +62,7 @@ Supported GPUs include:
 Minimum driver versions:
 
 - Windows: Radeon Software 24.9.1 or Radeon PRO Software 24.Q4
-- Linux: Radeon Software 23.40 or `ROCm HIP Runtime 6.0 <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html>`__
+- Linux: Radeon Software 24.30 or `ROCm HIP Runtime 6.3 <https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html>`__
 
 Please refer to `AMD's website <https://www.amd.com/en/products/specifications.html>`__ for more
 information about AMD graphics cards and their architectures.
@@ -70,8 +70,12 @@ information about AMD graphics cards and their architectures.
 Hardware ray-tracing support is available with the most recent drivers.
 This can be enabled in the preferences, and is supported on Radeon RX 6000 and newer.
 
-GPU accelerated denoising is available on discrete Radeon RX 6000 and newer.
+GPU accelerated denoising is available on discrete Radeon RX 6000 and newer GPUs on Linux, and discrete Radeon RX 7000 and newer GPUs on Windows.
 
+.. admonition:: Limitations
+   :class: important
+
+   - Shadow caustics are not supported on Radeon RX 6000 GPUs on Windows.
 
 oneAPI -- Intel
 ---------------

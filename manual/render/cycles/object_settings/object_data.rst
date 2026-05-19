@@ -217,6 +217,7 @@ to selectively speed up caustic rendering of objects in your scene.
    - MNEE Caustics only work if the caustic caster has smooth normals.
    - Volumetric materials are not considered when calculating MNEE caustics.
    - Bump and normal maps are ignored when calculating caustics.
+   - GPU rendering using Radeon RX 6000 series *HIP* devices on Windows is not supported.
 
 .. _bpy.types.CyclesObjectSettings.is_caustics_caster:
 
