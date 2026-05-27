@@ -72,11 +72,6 @@ This can be enabled in the preferences, and is supported on Radeon RX 6000 and n
 
 GPU accelerated denoising is available on discrete Radeon RX 6000 and newer GPUs on Linux, and discrete Radeon RX 7000 and newer GPUs on Windows.
 
-.. admonition:: Limitations
-   :class: important
-
-   - Shadow caustics are not supported on Radeon RX 6000 GPUs on Windows.
-
 oneAPI -- Intel
 ---------------
 
