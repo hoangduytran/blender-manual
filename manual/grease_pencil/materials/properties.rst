@@ -163,6 +163,50 @@ Style
       UV Factor
          Controls texture scaling along the stroke length.
 
+.. _bpy.types.MaterialGPencilStyle.placement_mode:
+
+Placement :guilabel:`Dots` :guilabel:`Squares`
+   Defines how dots or squares are distributed along strokes.
+
+   :Count:
+      Places a fixed number of dots on each stroke segment.
+
+      This mode keeps the number of generated shapes consistent regardless
+      of the stroke length or thickness.
+
+      .. _bpy.types.MaterialGPencilStyle.placement_count:
+
+      Count
+         Number of dots to place on each stroke segment.
+
+   :Radius:
+      Places dots based on the stroke radius, adapting the spacing to the stroke thickness.
+
+      Larger stroke radii produce wider spacing between dots, while smaller
+      radii place them closer together.
+
+      .. _bpy.types.MaterialGPencilStyle.placement_radius_spacing:
+
+      Spacing
+         Distance between dots as a percentage of their diameter.
+
+         Lower values create overlapping or tightly packed dots,
+         while higher values increase the gap between each generated shape.
+
+   :Density:
+      Places dots based on the stroke length.
+
+      Longer strokes generate more dots while shorter strokes generate fewer,
+      maintaining a more uniform visual density along the stroke.
+
+      .. _bpy.types.MaterialGPencilStyle.placement_density:
+
+      Density
+         Number of dots generated along the stroke length.
+
+         Higher values create more densely packed dots.
+
+
 .. _bpy.types.MaterialGPencilStyle.color:
 
 Base Color
