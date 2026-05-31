@@ -8,6 +8,7 @@
 
    boolean.rst
    rgb.rst
+   font.rst
    integer.rst
    menu.rst
    normal.rst

@@ -34,6 +34,7 @@ As such, they have no input sockets; only outputs.
    mask.rst
    movie_clip.rst
    sequencer_strip_info.rst
+   string_to_image.rst
 
 ----------
 

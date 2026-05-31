@@ -73,7 +73,6 @@ Pivot Point
 Spacing
 -------
 
-
 Character Spacing
    A factor by which the space between each character (kerning) is scaled on the X axis.
 
