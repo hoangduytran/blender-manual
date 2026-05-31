@@ -256,6 +256,56 @@ Self Overlap
           Dot / Texture
 
 
+Randomize
+^^^^^^^^^
+
+Adds random variation to generated dots or squares to create a less uniform appearance.
+
+.. _bpy.types.MaterialGPencilStyle.random_size_factor:
+
+Size
+   Randomly varies the size of generated shapes.
+
+   Higher values increase the variation between larger and smaller dots.
+
+.. _bpy.types.MaterialGPencilStyle.random_strength_factor:
+
+Strength
+   Randomly varies the opacity of generated shapes.
+
+   This can create a more natural or textured appearance.
+
+.. _bpy.types.MaterialGPencilStyle.random_rotation_factor:
+
+Rotation
+   Randomly rotates generated shapes around their center.
+
+   This is most noticeable when using square shapes.
+
+.. _bpy.types.MaterialGPencilStyle.random_hue_factor:
+
+Hue
+   Randomly varies the hue of generated shapes.
+
+.. _bpy.types.MaterialGPencilStyle.random_saturation_factor:
+
+Saturation
+   Randomly varies the saturation of generated shapes.
+
+.. _bpy.types.MaterialGPencilStyle.random_value_factor:
+
+Value
+   Randomly varies the brightness of generated shapes.
+
+.. _bpy.types.MaterialGPencilStyle.random_noise_scale:
+
+Noise Scale
+   Controls the scale of the random noise pattern.
+
+   Lower values create smoother variation across the stroke, while higher
+   values produce more rapidly changing randomization.
+
+
 Fill
 ----
 
