@@ -24,6 +24,7 @@ General purpose nodes for modifying data.
    List <list/index>
    Matrix <matrix/index.rst>
    Rotation <rotation/index.rst>
+   Sound <sound/index>
 
 -----
 
