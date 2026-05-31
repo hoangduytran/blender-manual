@@ -35,6 +35,23 @@ This node has no output sockets.
 Usage
 =====
 
+Compositor Backdrop
+-------------------
+
+When a Viewer node is active and :ref:`bpy.types.SpaceNodeEditor.show_backdrop` is enabled,
+its image is displayed behind the node tree as a backdrop. This allows compositing operations
+to be evaluated directly while editing the node graph.
+
+When the active Viewer node is selected, an interactive gizmo is displayed in the backdrop
+if :ref:`show_gizmo_active_node` is enabled. The gizmo can be used to:
+
+- Move the backdrop image.
+- Scale the backdrop image.
+
+These adjustments only affect how the image is displayed in the Node Editor and do not
+modify the image itself or the compositor output.
+
+
 .. _bpy.ops.node.viewer_shortcut_set:
 .. _bpy.ops.node.viewer_shortcut_get:
 
