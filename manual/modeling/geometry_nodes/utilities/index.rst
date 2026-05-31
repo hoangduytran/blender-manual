@@ -21,6 +21,7 @@ General purpose nodes for modifying data.
    Bundle <bundle/index.rst>
    Closure <closure/index.rst>
    Field <field/index.rst>
+   List <list/index>
    Matrix <matrix/index.rst>
    Rotation <rotation/index.rst>
 

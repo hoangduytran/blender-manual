@@ -142,6 +142,12 @@ Grid (Four Squares)
    Grids can represent data such as image pixels, voxel densities, or other sampled values in space.
    They allow complex operations where values are distributed continuously across space,
    rather than being attached to individual geometry elements.
+Lists (Three Lines)
+   Represents an ordered collection of values.
+
+   Lists can contain any number of items of the same data type and allow multiple values
+   to be passed through a single socket. They are commonly used for operations that gather,
+   filter, sort, or process collections of values.
 
 
 Inputs
