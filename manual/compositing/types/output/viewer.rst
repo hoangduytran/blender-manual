@@ -43,7 +43,7 @@ its image is displayed behind the node tree as a backdrop. This allows compositi
 to be evaluated directly while editing the node graph.
 
 When the active Viewer node is selected, an interactive gizmo is displayed in the backdrop
-if :ref:`show_gizmo_active_node` is enabled. The gizmo can be used to:
+if :ref:`bpy.types.SpaceNodeEditor.show_gizmo_active_node` is enabled. The gizmo can be used to:
 
 - Move the backdrop image.
 - Scale the backdrop image.

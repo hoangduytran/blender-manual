@@ -33,7 +33,7 @@ Alpha Crop
    When enabled, the output image retains the same resolution as the input image,
    with pixels outside the crop region replaced by transparency.
 
-   When the node is active and :ref:`show_gizmo_active_node` is enabled,
+   When the node is active and :ref:`bpy.types.SpaceNodeEditor.show_gizmo_active_node` is enabled,
    the crop region can be adjusted interactively in the backdrop or Image editor.
 
 
