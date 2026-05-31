@@ -81,6 +81,18 @@ Timings
 
    In the context of geometry nodes, see :ref:`modeling-geometry_nodes-inspection-timings`.
 
+.. _bpy.types.SpaceNodeOverlay.show_render_size:
+
+Render Region
+   Displays a border showing the final render region defined in the scene.
+   Space outside the render region appear shaded for reference.
+
+.. _bpy.types.SpaceNodeOverlay.passepartout_alpha:
+
+Passepartout Alpha
+   Controls the opacity of the shaded area outside the render region.
+   Higher values darken the outside area more, making the render region stand out.
+
 
 Toolbar
 =======
