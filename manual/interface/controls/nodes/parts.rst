@@ -81,6 +81,8 @@ Float (light gray)
    Indicates that the socket accepts/produces floating-point numbers.
 Integer (lime green)
    Used to pass an integer value (a number without a fractional component).
+Integer Vector (slate blue)
+   A vector made of integer values which can be either two or three-dimensional.
 String (light blue)
    Used to pass a text value.
 Vector (dark blue)

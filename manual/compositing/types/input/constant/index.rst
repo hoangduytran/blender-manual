@@ -10,6 +10,7 @@
    rgb.rst
    font.rst
    integer.rst
+   integer_vector.rst
    menu.rst
    normal.rst
    object.rst
