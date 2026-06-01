@@ -39,7 +39,7 @@ This also allows sub-frame interpolation for motion blur.
 Clock
 =====
 
-The simulation is tied to the animation system, with support for sub-steps.
+The simulation is tied to the animation system.
 It will only be evaluated while the animation frame changes, and is cached like
 the existing physics simulations in Blender.
 
@@ -48,7 +48,6 @@ Properties
 ==========
 
 In the Node Editor the inputs can be renamed, shuffled and removed.
-This is also the place where sub-steps can be defined for a simulation.
 
 
 Inputs
