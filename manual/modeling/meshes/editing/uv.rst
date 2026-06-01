@@ -54,6 +54,8 @@ Fill Holes
 Use Subdivision Surface
    Use the new vertex positions that were calculated by the :doc:`/modeling/modifiers/generate/subdivision_surface`
    (rather than the original positions from before any modifiers are run).
+Original Bounds
+   Unwrap islands into their original bounds instead of re-packing.
 Correct Aspect
    Adjusts the UV mapping to account for the aspect ratio of the image associated with the material.
    This ensures that UVs are scaled correctly when unwrapping onto non-square textures.
