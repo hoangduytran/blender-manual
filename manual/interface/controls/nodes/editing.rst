@@ -31,7 +31,8 @@ While dragging nodes, you can press :kbd:`F` to toggle their parent
 
 In general, it is recommended to arrange your nodes so that data flows from left to right, top to bottom.
 
-The width of a node can be changed by dragging its left or right border.
+The width of a node can be adjusted by dragging its left or right border.
+When multiple nodes are selected, resizing one node affects all selected nodes.
 
 Rotating (:kbd:`R`) and scaling (:kbd:`S`) only apply when multiple nodes are selected,
 and only affect their positions.
