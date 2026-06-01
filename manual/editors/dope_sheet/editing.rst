@@ -7,7 +7,7 @@ Editing Dopesheet Data
 .. _bpy.ops.action.select:
 
 Select Menu
-^^^^^^^^^^^
+===========
 
 .. seealso::
    :doc:`/interface/selecting`.
@@ -83,10 +83,11 @@ After Current Frame :kbd:`]`
    Select the keys that lie after (or on) the current frame.
    You can also click :kbd:`Shift-Ctrl-LMB` anywhere to the right of the Playhead.
 
+
 .. _dopesheet-marker-menu:
 
 Marker Menu
-^^^^^^^^^^^
+===========
 
 :doc:`Markers </animation/markers>` are used to denote frames with key points or significant events
 within an animation. Like with most animation editors, they're shown at the bottom.
@@ -110,14 +111,15 @@ For information about the other marker tools, see :ref:`Editing Markers <animati
 
 
 Channel Menu
-^^^^^^^^^^^^
+============
 
 See :doc:`Graph Editor Channels </editors/graph_editor/channels/editing>`.
+
 
 .. _dopesheet-key-menu:
 
 Key Menu
-^^^^^^^^
+========
 
 Most items in this menu are documented on the Graph Editor's :doc:`/editors/graph_editor/fcurves/editing` page.
 One important difference is that scaling keyframes in the Dope Sheet Editor only moves them along the time axis
@@ -138,8 +140,9 @@ Slide :kbd:`Shift-T`
 Keyframe Type :kbd:`R`
    Sets the :ref:`type <keyframe-type>` of the selected keyframes.
 
+
 Snap
-^^^^
+====
 
 The toggle button enables/disables automatic keyframe snapping.
 The dropdown button shows a popover with the following options:
@@ -163,6 +166,6 @@ Absolute Time Snap
 
 
 Proportional Editing
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 See :doc:`Proportional Editing </editors/3dview/controls/proportional_editing>`.
