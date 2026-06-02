@@ -48,7 +48,7 @@ So, in the preceding example, selecting ``Characters/Ellie/Poses`` will also sho
 Using Catalogs to Extend Menus
 ==============================
 
-Some menus in Blender can be extended using assets. For example, the _Add Modifier_ menu, or the _Add_ menus
+Some menus in Blender can be extended using assets. For example, the *Add Modifier* menu, or the *Add* menus
 in the Geometry Nodes Editor and Compositor. The catalog hierarchy will be used to define which submenu the
 assets will go to. So a compositing asset placed in a *My Compositor Assets > Effects* catalog hierarchy
 means the asset will how up under *My Compositor Assets > Effects* in the *Add* menu of the Compositor, for
@@ -58,11 +58,11 @@ example.
 
    Contents of top-level catalogs named "Geometry Nodes" or "Compositing" will be placed into the
    corresponding menus directly, skipping this top-level sub-menu. For example, geometry nodes assets stored
-   in a _Geometry Nodes > Generate_ catalog will be displayed under _Generate_ in the _Add Modifier_ menu,
-   or the Geometry Node Editor's _Add_ menu.
+   in a *Geometry Nodes > Generate* catalog will be displayed under *Generate* in the *Add Modifier* menu,
+   or the Geometry Node Editor's *Add* menu.
 
-   Assets directly placed inside _Compositing_ or _Geometry Nodes_ catalogs will show up under
-   _Unassigned_ in the menus.
+   Assets directly placed inside *Compositing* or *Geometry Nodes* catalogs will show up under
+   *Unassigned* in the menus.
 
 
 .. _bpy.ops.asset.catalog_new:
