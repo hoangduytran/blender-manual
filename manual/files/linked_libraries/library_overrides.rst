@@ -1,4 +1,3 @@
-
 *****************
 Library Overrides
 *****************
@@ -319,6 +318,14 @@ Remove Overrides
 Remove the property from the overrides. The value of the linked in data-block will be used.
 For array properties all elements will be removed from the override.
 
+.. reference::
+
+   :Editor:    Outliner --> Library Overrides View
+   :Mode:      Object Mode
+   :Property:  :menuselection:`Context Menu --> Remove`
+
+Remove the selected (groups of) properties from the overrides, and all of their sub-items
+if any. The values from the linked-in data-block will be used.
 
 Remove Single Override
 ----------------------
