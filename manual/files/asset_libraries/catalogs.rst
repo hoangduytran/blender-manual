@@ -50,16 +50,18 @@ Using Catalogs to Extend Menus
 
 Some menus in Blender can be extended using assets. For example, the *Add Modifier* menu, or the *Add* menus
 in the Geometry Nodes Editor and Compositor. The catalog hierarchy will be used to define which submenu the
-assets will go to. So a compositing asset placed in a *My Compositor Assets > Effects* catalog hierarchy
-means the asset will how up under *My Compositor Assets > Effects* in the *Add* menu of the Compositor, for
-example.
+assets will go to.
+
+So a compositing asset placed in a :menuselection:`My Compositor Assets --> Effects` catalog hierarchy means
+the asset will show up under :menuselection:`My Compositor Assets --> Effects` in the *Add* menu of the
+Compositor, for example.
 
 .. tip::
 
    Contents of top-level catalogs named "Geometry Nodes" or "Compositing" will be placed into the
    corresponding menus directly, skipping this top-level sub-menu. For example, geometry nodes assets stored
-   in a *Geometry Nodes > Generate* catalog will be displayed under *Generate* in the *Add Modifier* menu,
-   or the Geometry Node Editor's *Add* menu.
+   in a  :menuselection:`Geometry Nodes --> Generate` catalog will be displayed under *Generate* in the
+   *Add Modifier* menu, or the Geometry Node Editor's *Add* menu.
 
    Assets directly placed inside *Compositing* or *Geometry Nodes* catalogs will show up under
    *Unassigned* in the menus.
