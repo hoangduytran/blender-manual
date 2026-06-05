@@ -50,10 +50,12 @@ Resizing
    :width: 250px
    :figwidth: 250px
 
-You can resize areas by dragging their borders with :kbd:`LMB`.
-Move your mouse cursor over the border between two areas,
-so that the cursor changes to a double-headed arrow, and then click and drag.
-Hold :kbd:`Ctrl` to snap the size of areas to convenient sizes.
+Areas can be resized by dragging their borders with :kbd:`LMB`.
+Move the cursor over the border between two areas so that the cursor changes to
+a double-headed arrow, then click and drag.
+
+- Hold :kbd:`Ctrl` to snap the size of areas to convenient sizes.
+- Hold :kbd:`Shift` to move nearby aligned borders together while resizing.
 
 
 Docking
@@ -83,6 +85,7 @@ Joining
 
 Dragging from an area corner into the space of a second area will *join* two areas.
 The areas that will be joined will be displayed brighter.
+
 
 
 .. _bpy.ops.screen.area_split:
