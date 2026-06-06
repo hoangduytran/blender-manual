@@ -42,6 +42,9 @@ For two-input compositor strips, the inputs can also be swapped.
 Properties
 ==========
 
+Node Group
+   The compositing node group to use.
+
 Input 1
    The first strip used as an input for the compositor effect.
 
@@ -76,7 +79,13 @@ The node group selector is available in the strip properties.
 Group Inputs
 ------------
 
-The available inputs in the node group depend on the compositor strip type.
+The available node group inputs depend on the compositor strip type.
+
+.. note::
+
+   - The first node group output socket must be a ``Color`` type.
+   - If the node group does not contain a ``Float`` input socket,
+     the strip Fade control has no effect.
 
 
 Zero-Input Effects
