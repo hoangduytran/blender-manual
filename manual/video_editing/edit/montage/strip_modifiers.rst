@@ -25,14 +25,19 @@ strip, making them apply to several media strips in one go.
 Common Options
 ==============
 
-Each modifier has several buttons at its top:
+Each modifier provides several controls in its header:
 
-:bl-icon:`restrict_render_on` / :bl-icon:`restrict_render_off`  Enable
-   Enables/Disables the modifier. Useful to compare the image with or without modifications.
+:bl-icon:`restrict_view_on` / :bl-icon:`restrict_view_off` Viewport
+   Toggles the modifier effect in the Preview region.
+:bl-icon:`restrict_render_on` / :bl-icon:`restrict_render_off` Render
+   Enables or disables the modifier during rendering and final output.
+   This can be useful for comparing the strip with and without the modifier applied.
 :bl-icon:`x` Remove Strip Modifier
-   Deletes the modifier from the stack.
+   Removes the modifier from the modifier stack.
 :bl-icon:`grip` Move Strip Modifier
-   Dragging this button changes the modifier's position in the stack which affects its computation order.
+   Drag to reorder modifiers in the stack.
+
+   Modifiers are evaluated from top to bottom, so changing their order affects the final result.
 
 
 Masking
