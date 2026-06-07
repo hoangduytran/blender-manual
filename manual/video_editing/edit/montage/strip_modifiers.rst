@@ -165,6 +165,10 @@ Node Group
    The selector can be hidden by toggling
    :ref:`bpy.types.SequencerCompositorModifierData.show_group_selector`.
 
+Compatible node group inputs are automatically exposed as modifier properties,
+allowing effects to be adjusted directly from the Sequencer without opening
+the node editor.
+
 
 .. _bpy.types.CurvesModifier:
 
