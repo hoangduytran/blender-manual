@@ -170,6 +170,62 @@ All
    Press :kbd:`A` to select/deselect all files in the directory.
 
 
+Saving Modified Images
+======================
+
+Images edited within Blender, such as painted textures, generated images,
+or compositor results, are stored separately from the blend-file itself.
+
+When closing Blender or saving a blend-file, modified images may need to be
+saved manually depending on the configured behavior in
+:ref:`Save Modified Images <bpy.types.PreferencesFilePaths.save_modified_images>`.
+
+Unsaved images are marked with an asterisk (``*``) in the Image Editor and
+other interface elements.
+
+
+Saving Blend-Files
+------------------
+
+When saving a blend-file, Blender can:
+
+- Ask whether modified images should be saved.
+- Automatically save modified images.
+- Ignore modified images.
+
+This behavior is controlled by the
+:ref:`Save Modified Images <bpy.types.PreferencesFilePaths.save_modified_images>`
+preference.
+
+
+Closing Blender
+---------------
+
+When closing Blender, modified images that have not been saved may trigger
+a confirmation dialog.
+
+If modified images are discarded without saving, all unsaved image changes
+will be permanently lost.
+
+.. tip::
+
+   To manually save images use:
+
+   - :ref:`bpy.ops.image.save`
+   - :ref:`bpy.ops.image.save_as`
+   - :ref:`bpy.ops.image.save_all_modified`
+
+.. warning::
+
+   Render Result images and Compositor Viewer node results are temporary and
+   are not automatically saved to disk when saving the blend-file or closing Blender.
+
+   These results must be manually saved if they should be preserved.
+
+   Failing to save these images before rendering again, loading a new file,
+   or closing Blender will cause the image data to be lost.
+
+
 .. _bpy.types.ImageFormatSettings:
 
 Images Settings
