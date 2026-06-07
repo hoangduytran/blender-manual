@@ -32,6 +32,23 @@ Each modifier provides several controls in its header:
 :bl-icon:`restrict_render_on` / :bl-icon:`restrict_render_off` Render
    Enables or disables the modifier during rendering and final output.
    This can be useful for comparing the strip with and without the modifier applied.
+
+.. _bpy.ops.sequencer.strip_modifier_duplicate:
+
+Extras
+   Duplicate :kbd:`Shift-D`
+      Creates a duplicate of the modifier just below current one in the stack.
+
+   .. _bpy.ops.sequencer.strip_modifier_copy:
+
+   Copy to Selected
+      Copies the modifier from the :term:`Active` strip to all selected strips.
+
+   .. _bpy.ops.sequencer.strip_modifier_move_to_index:
+
+   Move to First/Last
+      Moves the modifier to the first or last position in the modifier stack.
+
 :bl-icon:`x` Remove Strip Modifier
    Removes the modifier from the modifier stack.
 :bl-icon:`grip` Move Strip Modifier
