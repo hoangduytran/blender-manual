@@ -12,6 +12,7 @@
    compositing_workspace.rst
    sidebar.rst
    compositor_system.rst
+   usage.rst
    image_kernels.rst
    limitations.rst
 
