@@ -1,14 +1,10 @@
 .. _bpy.types.Image:
 .. _bpy.ops.image:
-
-**************************
-Supported Graphics Formats
-**************************
-
 .. _files-media-image_formats:
 
-Image Formats
-=============
+***********************
+Supported Image Formats
+***********************
 
 This is the list of image file formats supported internally by Blender:
 
@@ -176,8 +172,8 @@ All
 
 .. _bpy.types.ImageFormatSettings:
 
-Saving Images
-=============
+Images Settings
+===============
 
 File Format
    Choose the image file format to save to. Based on which format is used,
