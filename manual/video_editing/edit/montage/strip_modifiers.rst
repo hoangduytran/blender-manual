@@ -49,6 +49,12 @@ Extras
    Move to First/Last
       Moves the modifier to the first or last position in the modifier stack.
 
+   .. _bpy.types.SequencerCompositorModifierData.show_group_selector:
+
+   Show Node Group
+      For :ref:`Compositor Modifiers <bpy.types.SequencerCompositorModifierData>`,
+      shows or hides the node group selector.
+
 :bl-icon:`x` Remove Strip Modifier
    Removes the modifier from the modifier stack.
 :bl-icon:`grip` Move Strip Modifier
@@ -150,7 +156,16 @@ can be marked as :doc:`asset </files/asset_libraries/index>` and reused across m
 To learn more about how to use compositor, see :doc:`/compositing/index`
 
 
-.. index:: Video Sequencer Modifiers; Curves Modifier
+Options
+^^^^^^^
+
+Node Group
+   The compositor node group used by the modifier.
+
+   The selector can be hidden by toggling
+   :ref:`bpy.types.SequencerCompositorModifierData.show_group_selector`.
+
+
 .. _bpy.types.CurvesModifier:
 
 Curves Modifier
