@@ -14,11 +14,6 @@ This includes how editors look and also some different tools properties.
 Timeline
 ========
 
-.. _bpy.types.PreferencesEdit.use_negative_frames:
-
-Allow Negative Frame
-   Playback and animations can occur during negative frame ranges.
-
 .. _bpy.types.PreferencesView.view2d_grid_spacing_min:
 
 Minimum Grid Spacing
@@ -52,6 +47,19 @@ Zoom to Frame Type
       The number of seconds specified in the *Zoom Seconds* field will be shown around the cursor.
    :Keyframes:
       The number of animation keyframes defined in the *Zoom Keyframes* field will be shown around the cursor.
+
+
+Advanced
+--------
+
+.. _bpy.types.PreferencesEdit.use_negative_frames:
+
+Allow Negative Frame
+   Playback and animations can occur during negative frame ranges.
+
+   .. warning::
+
+      Negative frames can cause issues with audio playback and exporters.
 
 
 Keyframes
