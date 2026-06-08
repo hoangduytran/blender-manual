@@ -7,14 +7,25 @@
    :maxdepth: 1
 
    basic.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
    to_sphere.rst
-   to_circle.rst
-   flatten.rst
    shear.rst
    bend.rst
    push_pull.rst
-   warp.rst
-   randomize.rst
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   to_circle.rst
+   flatten.rst
    shrink-fatten.rst
    skin_resize.rst
-   texture_space.rst
+   warp.rst
+   randomize.rst
