@@ -13,5 +13,6 @@
    Structure <structure.rst>
    tools/index.rst
    Selecting <selecting.rst>
+   Adding Bones <add_bones.rst>
    Editing <editing/index.rst>
    Properties <properties/index.rst>
