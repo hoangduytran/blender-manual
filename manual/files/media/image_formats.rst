@@ -170,6 +170,8 @@ All
    Press :kbd:`A` to select/deselect all files in the directory.
 
 
+.. _files-images-saving-modified:
+
 Saving Modified Images
 ======================
 

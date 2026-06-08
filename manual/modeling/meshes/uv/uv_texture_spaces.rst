@@ -89,7 +89,7 @@ Editing
 
 .. reference::
 
-   :Mode:      Object Mode and Edit Mode
+   :Mode:      Object Mode
    :Menu:      :menuselection:`Object --> Transform --> Move/Scale Texture Space`
 
 Click one of these menu items, then move the mouse to adjust the texture space

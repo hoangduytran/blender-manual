@@ -25,14 +25,42 @@ strip, making them apply to several media strips in one go.
 Common Options
 ==============
 
-Each modifier has several buttons at its top:
+Each modifier provides several controls in its header:
 
-:bl-icon:`restrict_render_on` / :bl-icon:`restrict_render_off`  Enable
-   Enables/Disables the modifier. Useful to compare the image with or without modifications.
+:bl-icon:`restrict_view_on` / :bl-icon:`restrict_view_off` Viewport
+   Toggles the modifier effect in the Preview region.
+:bl-icon:`restrict_render_on` / :bl-icon:`restrict_render_off` Render
+   Enables or disables the modifier during rendering and final output.
+   This can be useful for comparing the strip with and without the modifier applied.
+
+.. _bpy.ops.sequencer.strip_modifier_duplicate:
+
+Extras
+   Duplicate :kbd:`Shift-D`
+      Creates a duplicate of the modifier just below current one in the stack.
+
+   .. _bpy.ops.sequencer.strip_modifier_copy:
+
+   Copy to Selected
+      Copies the modifier from the :term:`Active` strip to all selected strips.
+
+   .. _bpy.ops.sequencer.strip_modifier_move_to_index:
+
+   Move to First/Last
+      Moves the modifier to the first or last position in the modifier stack.
+
+   .. _bpy.types.SequencerCompositorModifierData.show_group_selector:
+
+   Show Node Group
+      For :ref:`Compositor Modifiers <bpy.types.SequencerCompositorModifierData>`,
+      shows or hides the node group selector.
+
 :bl-icon:`x` Remove Strip Modifier
-   Deletes the modifier from the stack.
+   Removes the modifier from the modifier stack.
 :bl-icon:`grip` Move Strip Modifier
-   Dragging this button changes the modifier's position in the stack which affects its computation order.
+   Drag to reorder modifiers in the stack.
+
+   Modifiers are evaluated from top to bottom, so changing their order affects the final result.
 
 
 Masking
@@ -128,7 +156,20 @@ can be marked as :doc:`asset </files/asset_libraries/index>` and reused across m
 To learn more about how to use compositor, see :doc:`/compositing/index`
 
 
-.. index:: Video Sequencer Modifiers; Curves Modifier
+Options
+^^^^^^^
+
+Node Group
+   The compositor node group used by the modifier.
+
+   The selector can be hidden by toggling
+   :ref:`bpy.types.SequencerCompositorModifierData.show_group_selector`.
+
+Compatible node group inputs are automatically exposed as modifier properties,
+allowing effects to be adjusted directly from the Sequencer without opening
+the node editor.
+
+
 .. _bpy.types.CurvesModifier:
 
 Curves Modifier
