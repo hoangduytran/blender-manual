@@ -147,6 +147,8 @@ This will make the objects keep their location, rotation, and scale even if thei
 constraints are disabled or deleted.
 
 
+.. _objects-apply-visual_geometry_as_mesh:
+
 Visual Geometry as Mesh
 =======================
 
