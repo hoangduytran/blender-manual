@@ -9,6 +9,7 @@
    math/index.rst
    vector/index.rst
    matrix/index.rst
+   rotation/index.rst
    text/index.rst
 
 ----------

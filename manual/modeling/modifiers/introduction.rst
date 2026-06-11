@@ -149,6 +149,9 @@ Extras
       the object must first be made a :ref:`Single User <data-system-datablock-make-single-user>`
       which can be performed by confirming the pop-up message.
 
+      Note, modifiers cannot be applied to :doc:`Empty </modeling/empties.rst>` object types,
+      use :ref:`objects-apply-visual_geometry_as_mesh` instead.
+
       .. warning::
 
          Applying a modifier that is not first in the stack will ignore the stack order

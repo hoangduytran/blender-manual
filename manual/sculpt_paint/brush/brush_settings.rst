@@ -224,12 +224,6 @@ Brush Type
    - :doc:`Weight Paint </sculpt_paint/weight_paint/brushes>`
    - :doc:`Texture Paint </sculpt_paint/texture_paint/brushes>`
 
-Accumulate
-   Causes stroke dabs to accumulate on top of each other.
-
-Front Faces Only
-   When enabled, the brush only affects vertices that are facing the viewer.
-
 Affect Alpha :guilabel:`2D Painting Only`
    When this is disabled, it prevents changes to the alpha channel while painting (Only in 3D Viewport).
 
@@ -237,22 +231,11 @@ Anti-Aliasing :guilabel:`2D Painting Only`
    Toggles :term:`Anti-Aliasing` around the brush,
    this is useful if you are working with pixel art or low resolution textures.
 
-.. _bpy.types.Brush.use_automasking_topology:
-.. _bpy.types.Brush.use_automasking_boundary_face_sets:
-.. _bpy.types.Brush.use_automasking_boundary_edges:
-.. _bpy.types.Brush.use_automasking_cavity:
-.. _bpy.types.Brush.use_automasking_cavity_inverted:
-.. _bpy.types.Brush.use_automasking_view_normal:
-.. _bpy.types.Brush.use_automasking_start_normal:
-.. _bpy.types.Brush.automasking:
+Accumulate
+   Causes stroke dabs to accumulate on top of each other.
 
-Auto-Masking :guilabel:`Sculpt Mode`
-   The auto-masking toggles in the brush settings are the same as the sculpt mode auto-masking settings.
-   The difference is that these toggles can be customized per brush to create specific brush behaviors.
-
-.. seealso::
-
-   For more information on the Auto-Masking toggles, see :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
+Front Faces Only
+   When enabled, the brush only affects vertices that are facing the viewer.
 
 .. _bpy.types.Brush.sculpt_plane:
 
@@ -269,15 +252,38 @@ Sculpt Plane :guilabel:`Sculpt Mode`
       The movement takes place in the positive direction of one of the global axes.
 
 .. _bpy.types.Brush.use_original_normal:
+
+Original -- Normal :guilabel:`Sculpt Mode`
+   When locked it keeps using the normal of the surface where stroke was initiated,
+   instead of the surface normal currently under the cursor.
+
 .. _bpy.types.Brush.use_original_plane:
 
-Original :guilabel:`Sculpt Mode`
-   Normal
-      When locked it keeps using the normal of the surface where stroke was initiated,
-      instead of the surface normal currently under the cursor.
-   Plane
-      When locked keep using the plane origin of surface where stroke was initiated,
-      instead of the surface plane currently under the cursor.
+Original -- Plane :guilabel:`Sculpt Mode`
+   When locked keep using the plane origin of surface where stroke was initiated,
+   instead of the surface plane currently under the cursor.
+
+
+.. _bpy.types.Brush.use_automasking_topology:
+.. _bpy.types.Brush.use_automasking_boundary_face_sets:
+.. _bpy.types.Brush.use_automasking_boundary_edges:
+.. _bpy.types.Brush.use_automasking_cavity:
+.. _bpy.types.Brush.use_automasking_cavity_inverted:
+.. _bpy.types.Brush.use_automasking_view_normal:
+.. _bpy.types.Brush.use_automasking_start_normal:
+.. _bpy.types.Brush.automasking:
+
+Auto-Masking
+------------
+
+:guilabel:`Sculpt Mode`
+
+The auto-masking toggles in the brush settings are the same as the sculpt mode auto-masking settings.
+The difference is that these toggles can be customized per brush to create specific brush behaviors.
+
+.. seealso::
+
+   For more information on the Auto-Masking toggles, see :doc:`Auto-Masking </sculpt_paint/sculpting/controls>`.
 
 
 Color Picker

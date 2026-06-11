@@ -170,6 +170,7 @@ allowing effects to be adjusted directly from the Sequencer without opening
 the node editor.
 
 
+.. index:: Video Sequencer Modifiers; Curves Modifier
 .. _bpy.types.CurvesModifier:
 
 Curves Modifier
