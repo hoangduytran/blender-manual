@@ -1,4 +1,4 @@
-nar reflections to be visible when using Light Probe raytracing method. (discussed this IRL with Clément)... _bpy.types.SceneEEVEE.motion_blur:
+.. _bpy.types.SceneEEVEE.motion_blur:
 
 ***********
 Motion Blur
