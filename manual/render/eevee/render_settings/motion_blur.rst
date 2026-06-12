@@ -1,4 +1,4 @@
-.. _bpy.types.SceneEEVEE.motion_blur:
+nar reflections to be visible when using Light Probe raytracing method. (discussed this IRL with Clément)... _bpy.types.SceneEEVEE.motion_blur:
 
 ***********
 Motion Blur
@@ -55,6 +55,11 @@ Steps
    Each step corresponds to a full scene re-evaluation and can add a lot of overhead to the render time.
    By adding more steps you can also reduce the *Max Blur* options because the post-process blur
    has to cover a smaller distance.
+
+   .. hint::
+
+      High velocity overlapping objects can result in cross pattern if the are not traveling in the same direction.
+      Increasing the amount of *Steps* can be used to reduce these artifacts.
 
 Shutter Curve
    Use a custom shutter curve.
