@@ -16,11 +16,21 @@ Single Bone
    :Menu:      :menuselection:`Add --> Single Bone`
    :Shortcut:  :kbd:`Shift-A`
 
-Adds a single bone at the 3D Cursor location.
+In the 3D Viewport, :kbd:`Shift-A` to add a new bone to your armature.
 
-The orientation, coordinate system, deform behavior, and size of the
-new bone can be configured in the Adjust Last Operation panel.
+By default this bone will be:
 
+- One unit in length.
+- Oriented towards the global Z axis.
+- With its root placed at the 3D cursor position.
+- Have no parent/child relationship with any other bone.
+- Have its :ref:`bpy.types.Bone.use_deform` option enabled
+
+It is also possible to edit the parameters of the bone in the :ref:`redo panel <bpy.ops.screen.redo_last>` when creating it.
+
+.. figure:: /images/animation_armatures_add_bone_redo_panel.png
+
+   Add Bone redo panel.
 
 Options
 =======
