@@ -64,6 +64,7 @@ release = blender_version
 extensions = [
     "404",
     "icons",
+    "i18n_shards",
     "peertube",
     "reference",
     "sphinx.ext.mathjax",
@@ -129,10 +130,32 @@ language = "en"
 
 # Directories in which to search for additional message catalogs,
 # relative to the source directory.
-locale_dirs = ["../locale/"]
-gettext_compact = "blender_manual"
+#
+# Sphinx evaluates conf.py BEFORE instantiating the builder, so the
+# automatically-added `format_<name>` / `builder_<name>` tags are NOT yet
+# in `tags` when this code runs. Any translator workflow that needs the
+# monolithic blender_manual.pot (sphinx-intl / Weblate) must therefore
+# pass `-t legacy_gettext` explicitly. The repo's `make gettext` target
+# and tools/translations/update_po.py both forward this tag; ad-hoc
+# `sphinx-build -b gettext` invocations need to add it manually.
+if tags.has("legacy_gettext"):  # noqa: F821 (`tags` is injected by Sphinx)
+    # Translator workflow: emit a monolithic blender_manual.pot.
+    locale_dirs = ["../locale/"]
+    gettext_compact = "blender_manual"
+else:
+    # Runtime build: shards win, canonical locale/ is a fallback.
+    # With gettext_compact = False, Sphinx's `docname_to_domain()` returns
+    # the doc slug verbatim, so each found doc depends only on its own
+    # shard .mo -- killing the global-.mo fan-out that the legacy
+    # `gettext_compact = "blender_manual"` setting caused.
+    locale_dirs = ["../build/.i18n_shards/locale", "../locale/"]
+    gettext_compact = False
 
-# If true, "fuzzy" messages in the message catalogs are used for translation.
+# Disable Sphinx's built-in .mo writer so `tools/translations/smart_mo_compile.py`
+# is the single writer of blender_manual.mo.
+gettext_auto_build = False
+
+# Strict policy: fuzzy translations are NOT installed.
 gettext_allow_fuzzy_translations = False
 
 
@@ -233,7 +256,19 @@ html_show_sourcelink = False
 # If nonempty, an OpenSearch description file will be output,
 # and all pages will contain a <link> tag referring to it.
 # Ed. Note: URL has to be adapted, when versioning is set up.
-html_use_opensearch = "https://docs.blender.org/manual/{:s}/latest".format(language)
+html_use_opensearch = "https://docs.blender.org/manual/{:s}/latest".format(
+    os.environ.get("BF_LANG", language)
+)
+
+# Variables available in Jinja2 templates.
+# 'available_langs': language codes built by 'make both'; empty in single-lang
+# builds.  'current_lang': mirrors BF_LANG / -D language passed by the
+# Makefile.  Used by tools/serve_docs.py to inject the local lang switcher,
+# and optionally by sidebar templates.
+html_context = {
+    "available_langs": os.environ.get("BF_LANGS", "").split(),
+    "current_lang": os.environ.get("BF_LANG", language),
+}
 
 # If true, "(C) Copyright …" is shown in the HTML footer.
 html_show_copyright = True
