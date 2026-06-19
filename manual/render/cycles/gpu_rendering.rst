@@ -111,6 +111,7 @@ Limitations
 
 - :ref:`Path Guiding <bpy.types.CyclesRenderSettings.use_guiding>` is not supported on any GPU.
 - :doc:`/render/cycles/osl/index` is only supported for OptiX, with some limitations listed in the documentation.
+- Shadow Caustics are not supported when using HIP without hardware ray-tracing.
 
 
 Frequently Asked Questions
