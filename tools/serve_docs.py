@@ -31,11 +31,12 @@ import webbrowser
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 # ---------------------------------------------------------------------------
-# Human-readable language names (subset; extend as needed)
+# Human-readable language names — full set from the Blender manual translations
+# repository (projects.blender.org/blender/blender-manual-translations).
+# Unknown codes fall back to the code itself in the switcher.
 # ---------------------------------------------------------------------------
 LANG_NAMES: dict[str, str] = {
     "en": "English",
-    "vi": "Tiếng Việt",
     "ca": "Català",
     "de": "Deutsch",
     "es": "Español",
@@ -43,13 +44,19 @@ LANG_NAMES: dict[str, str] = {
     "id": "Bahasa Indonesia",
     "it": "Italiano",
     "ja": "日本語",
+    "ka": "ქართული",
     "ko": "한국어",
     "nl": "Nederlands",
     "pt": "Português",
     "ru": "Русский",
+    "sk": "Slovenčina",
+    "sl": "Slovenščina",
+    "sr": "Српски",
     "sv": "Svenska",
+    "sw": "Kiswahili",
     "th": "ภาษาไทย",
     "uk": "Українська",
+    "vi": "Tiếng Việt",
     "zh-hans": "中文(简体)",
     "zh-hant": "中文(繁體)",
 }
@@ -182,7 +189,7 @@ class DocsHandler(BaseHTTPRequestHandler):
     build_dir: str = "build"
     lang_dirs: dict[str, str] = {}   # populated in main(); maps lang code → fs dir
     default_lang: str = "en"
-    available_langs: list[str] = ["en", "vi"]
+    available_langs: list[str] = ["en"]
     quiet: bool = False
 
     def log_message(self, format: str, *args: object) -> None:  # noqa: A002
@@ -339,8 +346,13 @@ def main() -> None:
     )
     ap.add_argument("--build-dir", default=os.path.join(project_root, "build"),
                     help="Directory produced by 'make both' (default: build/)")
-    ap.add_argument("--langs", default="en vi",
-                    help="Space-separated language codes (default: 'en vi')")
+    ap.add_argument("--langs", default=None,
+                    help=(
+                        "Space-separated language codes to serve. "
+                        "Defaults to auto-detection: all locale/<lang>/LC_MESSAGES/"
+                        "blender_manual.po entries found under the project root, "
+                        "with 'en' always first."
+                    ))
     ap.add_argument("--port", type=int, default=8000, help="TCP port (default: 8000)")
     ap.add_argument("--host", default="127.0.0.1", help="Bind address (default: 127.0.0.1)")
     ap.add_argument("--open", action="store_true", help="Open browser after starting")
@@ -352,8 +364,36 @@ def main() -> None:
                        help="Kill existing listener then start this server")
     args = ap.parse_args()
 
-    available = args.langs.split()
-    default_lang = available[0] if available else "en"
+    # Scan locale/ for all installed translation catalogs.
+    # English is the source language (no PO file needed) and is always first.
+    locale_root = os.path.join(project_root, "locale")
+    locale_langs: list[str] = []
+    if os.path.isdir(locale_root):
+        for entry in sorted(os.listdir(locale_root)):
+            po = os.path.join(locale_root, entry, "LC_MESSAGES", "blender_manual.po")
+            if os.path.isfile(po) and entry != "en":
+                locale_langs.append(entry)
+    all_locale_langs: list[str] = ["en"] + locale_langs
+
+    if args.langs is not None:
+        # Explicit --langs controls what routes are pre-built/served.
+        # All locale/ languages are added to the switcher on top so users can
+        # see every available language regardless of what was built this run.
+        built = args.langs.split()
+    else:
+        # No --langs: serve and show all locale languages.
+        built = all_locale_langs
+        if len(built) > 1:
+            logging.info("Auto-detected languages from locale/: %s", " ".join(built))
+        else:
+            logging.info("No translation catalogs found in locale/; serving English only.")
+
+    # Merge: built langs first (preserving order), then any extra locale langs.
+    seen: set[str] = set(built)
+    extra = [lg for lg in all_locale_langs if lg not in seen]
+    available = built + extra   # switcher shows all; routing 404s unbuilt ones
+
+    default_lang = "en" if "en" in available else (available[0] if available else "en")
 
     # Handle existing listeners
     existing = _find_pids(args.port)
