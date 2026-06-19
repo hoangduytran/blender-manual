@@ -12,7 +12,7 @@ Convenience targets provided for building docs.
 - livehtml             to auto build HTML on file changes on host on localhost.
 - livehtml-direct      to auto build one language to build/<lang>/ (use with 'make serve').
 - both                 to build all BF_LANGS to build/<lang>/ each.
-- liveboth             to live-rebuild all BF_LANGS and serve them (single command).
+- liveall              to live-rebuild all BF_LANGS and serve them (single command).
 - serve                to serve the build/ directory on localhost:8000.
 - epubpdf              to convert an epub file to PDF.
 
@@ -165,7 +165,7 @@ html: .SPHINXBUILD_EXISTS
 livehtml:
 	@if echo "$(BF_LANG)" | grep -q ' '; then \
 	    echo "Error: BF_LANG must be a single language code, e.g. 'make livehtml BF_LANG=vi'."; \
-	    echo "       To build multiple languages use 'make both' then 'make serve'."; \
+	    echo "       To build multiple languages use 'make liveall'."; \
 	    exit 1; \
 	fi
 	@watch_opt=""; \
@@ -203,8 +203,8 @@ livehtml-direct:
 	    -d "$(BUILDDIR)/.doctrees/$(BF_LANG)" $(O)
 
 # --- Live-rebuild all BF_LANGS + serve in one command ------------------------
-liveboth: ensure-lang-builds
-	@echo "Stopping existing liveboth listeners..."
+liveall: ensure-lang-builds
+	@echo "Stopping existing liveall listeners..."
 	@python3 tools/serve_docs.py --kill --quiet $(SERVE_OPTS)
 	@port=8081; \
 	for lang in $(BF_LANGS); do \
@@ -352,7 +352,7 @@ help:
 	@echo ""
 	@echo "$$HELP_TEXT"
 
-.PHONY: help html-direct livehtml-direct both liveboth ensure-lang-builds serve gettext Makefile
+.PHONY: help html-direct livehtml-direct both liveall ensure-lang-builds serve gettext Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option. $(O) is meant as a shortcut for $(SPHINXOPTS).
