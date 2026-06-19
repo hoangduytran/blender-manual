@@ -2,7 +2,7 @@
 """
 Serve the Blender manual locally with multi-language switching.
 
-After 'make both' builds each language into build/<lang>/, this server:
+After 'make build' builds each language into build/<lang>/, this server:
   - Routes  /          → redirect to the first BF_LANGS entry (usually /en/)
   - Routes  /<lang>/…  → serves build/<lang>/… as static files
   - Injects a small JS snippet into every HTML page that populates the
@@ -345,7 +345,7 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     ap.add_argument("--build-dir", default=os.path.join(project_root, "build"),
-                    help="Directory produced by 'make both' (default: build/)")
+                    help="Directory produced by 'make build' (default: build/)")
     ap.add_argument("--langs", default=None,
                     help=(
                         "Space-separated language codes to serve. "
@@ -423,7 +423,7 @@ def main() -> None:
 
     # Build per-language directory map, falling back to build/html/ for the
     # default language when its dedicated <lang>/ directory hasn't been built yet
-    # (e.g. after 'make html' but before 'make both').
+    # (e.g. after 'make html' but before 'make build').
     lang_dirs: dict[str, str] = {}
     html_fallback = os.path.join(args.build_dir, "html")
     truly_missing: list[str] = []
@@ -435,7 +435,7 @@ def main() -> None:
             lang_dirs[lang] = html_fallback
             logging.info(
                 "No build/%s/ found; falling back to build/html/ for /%s/"
-                " — run 'make both' for full multi-lang support.",
+                " — run 'make build' for full multi-lang support.",
                 lang, lang,
             )
         else:
@@ -443,7 +443,7 @@ def main() -> None:
             truly_missing.append(lang)
     if truly_missing:
         logging.warning(
-            "Missing build output for: %s — run 'make both' first.",
+            "Missing build output for: %s — run 'make build' first.",
             " ".join(truly_missing),
         )
 

@@ -11,7 +11,7 @@ Convenience targets provided for building docs.
 - html (default)       to build HTML documentation.
 - livehtml             to auto build HTML on file changes on host on localhost.
 - livehtml-direct      to auto build one language to build/<lang>/ (use with 'make serve').
-- both                 to build all BF_LANGS to build/<lang>/ each.
+- build                to build all BF_LANGS to build/<lang>/ each.
 - liveall              to live-rebuild all BF_LANGS and serve them (single command).
 - serve                to serve the build/ directory on localhost:8000.
 - epubpdf              to convert an epub file to PDF.
@@ -48,7 +48,7 @@ Environment Variables
   Passed to Sphinx as -D language=<code> and read by conf.py.
 
 - BF_LANGS
-  Space-separated list of language codes built by 'make both' (default: auto-detected from locale/).
+  Space-separated list of language codes built by 'make build' (default: auto-detected from locale/).
   Each language is built into build/<lang>/ and the sidebar language
   switcher will list exactly these codes as locally available.
 
@@ -260,7 +260,7 @@ ensure-lang-builds:
 	    $(MAKE) html-direct BF_LANG=$$lang || exit 1; \
 	done
 
-# --- Per-language HTML build for 'make both' --------------------------------
+# --- Per-language HTML build for 'make build' --------------------------------
 html-direct: .SPHINXBUILD_EXISTS
 	@python3 tools/translations/smart_mo_compile.py \
 	    --language=$(BF_LANG) \
@@ -272,7 +272,7 @@ html-direct: .SPHINXBUILD_EXISTS
 	    -d "$(BUILDDIR)/.doctrees/$(BF_LANG)" $(O)
 
 # --- Build every language in BF_LANGS to build/<lang>/ ----------------------
-both: .SPHINXBUILD_EXISTS
+build: .SPHINXBUILD_EXISTS
 	@echo "Building languages: $(BF_LANGS)"
 	@for lang in $(BF_LANGS); do \
 	    echo ""; \
@@ -352,7 +352,7 @@ help:
 	@echo ""
 	@echo "$$HELP_TEXT"
 
-.PHONY: help html-direct livehtml-direct both liveall ensure-lang-builds serve gettext Makefile
+.PHONY: help html-direct livehtml-direct build liveall ensure-lang-builds serve gettext Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option. $(O) is meant as a shortcut for $(SPHINXOPTS).
