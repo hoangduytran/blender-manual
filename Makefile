@@ -204,6 +204,8 @@ livehtml-direct:
 
 # --- Live-rebuild all BF_LANGS + serve in one command ------------------------
 liveall: ensure-lang-builds
+	@echo "Building search indexes (so search is live from the start)..."
+	@$(MAKE) search-index
 	@echo "Stopping existing liveall listeners..."
 	@python3 tools/serve_docs.py --kill --quiet $(SERVE_OPTS)
 	@port=8081; \
@@ -237,7 +239,7 @@ liveall: ensure-lang-builds
 	echo "Rebuilders running. Starting unified server at http://localhost:8000 ..."; \
 	echo "Live-reload is on: edited pages refresh automatically once a rebuild finishes."; \
 	echo "Press Ctrl-C to stop."; \
-	python3 tools/serve_docs.py --build-dir $(BUILDDIR) --langs "$(BF_LANGS)" --restart --open $(SERVE_OPTS); \
+	python3 tools/serve_docs.py --build-dir $(BUILDDIR) --langs "$(BF_LANGS)" --restart --open --no-search-html-rebuild $(SERVE_OPTS); \
 	for pid in $$pids; do kill "$$pid" 2>/dev/null; done; \
 	echo "Stopped."
 
@@ -271,6 +273,24 @@ html-direct: .SPHINXBUILD_EXISTS
 	    -j auto -D language='$(BF_LANG)' \
 	    -d "$(BUILDDIR)/.doctrees/$(BF_LANG)" $(O)
 
+# --- PO-based search index --------------------------------------------------
+# Builds build/<lang>/searchindex.pkl.gz for each language that has a .po file
+# and an existing build/<lang>/ directory.  Skips silently if either is absent.
+SEARCH_INDEX_SCRIPT := tools/search/index_builder.py
+
+search-index:
+	@for lang in $(BF_LANGS); do \
+	    po="locale/$$lang/LC_MESSAGES/blender_manual.po"; \
+	    [ -f "$$po" ] || { echo "  [search-index] No PO for $$lang, skipping."; continue; }; \
+	    [ -d "$(BUILDDIR)/$$lang" ] || { echo "  [search-index] No $(BUILDDIR)/$$lang/, skipping (run make build first)."; continue; }; \
+	    echo "  [search-index] Building search index: $$lang …"; \
+	    python3 $(SEARCH_INDEX_SCRIPT) \
+	        --po    $$po \
+	        --rst   manual/ \
+	        --build $(BUILDDIR)/$$lang/ \
+	        --lang  $$lang; \
+	done
+
 # --- Build every language in BF_LANGS to build/<lang>/ ----------------------
 build: .SPHINXBUILD_EXISTS
 	@echo "Building languages: $(BF_LANGS)"
@@ -280,6 +300,7 @@ build: .SPHINXBUILD_EXISTS
 	    BF_LANG=$$lang BF_LANGS="$(BF_LANGS)" \
 	    $(MAKE) html-direct BF_LANG=$$lang || exit 1; \
 	done
+	@$(MAKE) search-index
 	@echo ""
 	@echo "Done. Serve with: make serve"
 	@echo "Or open directly:"
@@ -367,7 +388,7 @@ help:
 	@echo ""
 	@echo "$$HELP_TEXT"
 
-.PHONY: help html-direct livehtml-direct build liveall ensure-lang-builds serve gettext Makefile
+.PHONY: help html-direct livehtml-direct build liveall ensure-lang-builds serve search-index gettext Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option. $(O) is meant as a shortcut for $(SPHINXOPTS).

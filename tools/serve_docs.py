@@ -8,13 +8,11 @@ After 'make build' builds each language into build/<lang>/, this server:
   - Injects a small JS snippet into every HTML page that populates the
     built-in sidebar language-switcher (#version-langlist) with local links
     and re-runs via MutationObserver if version_switch.js overwrites the list
-  - Injects a live-reload snippet that polls /__livereload and reloads the
-    page when its build/<lang>/… HTML file is rewritten (e.g. after a PO edit
-    triggers an incremental sphinx-autobuild rebuild). This gives the unified
-    multi-language server the same auto-refresh as the per-language
-    sphinx-autobuild instances, without a WebSocket.
+  - Injects a search overlay panel (keyboard shortcut: /) into every HTML page
+    that queries the PO-based search index via /api/search (SSE streaming)
   - Returns 404 for version_switch.js requests so the remote versions.json
     fetch is suppressed (avoids CORS noise in local development)
+  - Serves /api/search as an SSE endpoint powered by tools/search/
 
 Usage:
     make serve                               # default port 8000, opens browser
@@ -25,16 +23,61 @@ Usage:
 """
 
 import argparse
+import html as _html
+import json
 import logging
 import mimetypes
 import os
 import signal
 import subprocess
 import sys
+import threading
 import time
+import urllib.parse
 import webbrowser
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import parse_qs, urlparse
+from concurrent.futures import ThreadPoolExecutor
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from pathlib import Path
+
+# Add tools/ to sys.path so 'search' package is importable
+_TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
+if _TOOLS_DIR not in sys.path:
+    sys.path.insert(0, _TOOLS_DIR)
+
+from common.constants import (  # type: ignore[import-not-found]
+    DEFAULT_LANGUAGE,
+    HTML_BUILDER_NAME,
+    LC_MESSAGES,
+    LOCALE_DIR,
+    LOG_MAX_SIZE_MB,
+    LOG_TRIM_ENABLED,
+    PO_FILENAME,
+    SEARCH_INDEX_FILENAME,
+)
+from common.log_trimmer import ApplicationLogTrimmer  # type: ignore[import-not-found]
+
+# debug_log lives next to this file in tools/; fall back silently if absent.
+try:
+    from debug_log import debug_log, is_debug_mode  # type: ignore[import-not-found]
+except ImportError:
+    def is_debug_mode() -> bool:  # type: ignore[misc]
+        return os.getenv("DEBUG", "").lower() in {"true", "1", "yes", "on"}
+
+    def debug_log(message: str, *args: object, **_kw: object) -> None:  # type: ignore[misc]
+        if is_debug_mode():
+            logging.debug(message, *args)
+
+# PO-based search engine (tools/search/)
+try:
+    from search.index_loader import invalidate_cache, load_index_for, prewarm
+    from search.index_searcher import run_parallel_search, shutdown_pool
+    from search.po_watcher import MultiPOWatcher
+    from search.searchable_record import SearchRequest
+    _SEARCH_AVAILABLE = True
+except ImportError as _e:
+    logging.warning("PO search engine not available: %s", _e)
+    _SEARCH_AVAILABLE = False
+
 
 # ---------------------------------------------------------------------------
 # Human-readable language names — full set from the Blender manual translations
@@ -187,6 +230,263 @@ def _make_lang_switcher_js(current_lang: str, available: list[str]) -> str:
 """
 
 
+def _make_search_ui_snippet(lang: str) -> str:
+    """Return the search overlay HTML+CSS+JS injected before </body>.
+
+    Keyboard shortcut: press '/' to open.  Esc to close.
+
+    Three independent checkboxes below the input:
+      [x] Regex   [ ] Case Sensitive   [ ] Whole Word
+
+    Options are sent as ?regex=1&cs=0&ww=0 to /api/search.
+    Results stream in via SSE; each hit deep-links via Text Fragment URLs.
+    """
+    lang_js = json.dumps(lang)
+    return f"""
+<!-- PO search overlay — injected by tools/serve_docs.py -->
+<style>
+#ls-overlay{{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);
+  z-index:9999;align-items:flex-start;justify-content:center;padding-top:8vh
+}}
+#ls-panel{{
+  background:#fff;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.25);
+  width:min(680px,96vw);max-height:80vh;display:flex;flex-direction:column;
+  overflow:hidden
+}}
+#ls-head{{padding:.75rem 1rem .5rem;border-bottom:1px solid #e8e8e8}}
+#ls-row1{{display:flex;gap:.5rem;align-items:center}}
+#ls-input{{
+  flex:1;padding:.45rem .7rem;font-size:1rem;border:1px solid #ccc;
+  border-radius:5px;min-width:0;outline:none
+}}
+#ls-input:focus{{border-color:#2980b9;box-shadow:0 0 0 2px rgba(41,128,185,.2)}}
+#ls-close{{
+  background:none;border:none;font-size:1.3rem;cursor:pointer;
+  color:#888;padding:0 .3rem;line-height:1
+}}
+#ls-close:hover{{color:#333}}
+#ls-opts{{display:flex;gap:.75rem;margin-top:.5rem;flex-wrap:wrap;align-items:center}}
+.ls-opt{{
+  display:flex;align-items:center;gap:.25rem;font-size:.8rem;
+  color:#555;cursor:pointer;user-select:none
+}}
+.ls-opt input[type=checkbox]{{cursor:pointer;accent-color:#2980b9}}
+#ls-status{{
+  font-size:.8rem;color:#888;padding:.3rem 1rem .2rem;
+  border-bottom:1px solid #f0f0f0;min-height:1.6rem
+}}
+#ls-results{{overflow-y:auto;padding:.5rem 1rem 1rem;flex:1}}
+.ls-hit{{
+  border-bottom:1px solid #f0f0f0;padding:.6rem 0;display:flex;
+  flex-direction:column;gap:.2rem
+}}
+.ls-hit:last-child{{border-bottom:none}}
+.ls-hit a{{
+  color:#2980b9;text-decoration:none;font-size:.9rem;font-weight:500
+}}
+.ls-hit a:hover{{text-decoration:underline}}
+.ls-breadcrumb{{font-size:.75rem;color:#27ae60;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+.ls-snippet{{font-size:.85rem;color:#555;line-height:1.5}}
+.ls-snippet mark{{background:#fff176;color:inherit;padding:0 1px;border-radius:2px}}
+#ls-empty{{color:#888;font-size:.9rem;padding:.5rem 0}}
+</style>
+
+<div id="ls-overlay" role="dialog" aria-modal="true" aria-label="Search manual">
+  <div id="ls-panel">
+    <div id="ls-head">
+      <div id="ls-row1">
+        <input id="ls-input" type="search" placeholder="Search (Regex mode by default)…"
+               autocomplete="off" aria-label="Search manual" spellcheck="false">
+        <button id="ls-close" aria-label="Close search">✕</button>
+      </div>
+      <div id="ls-opts" role="group" aria-label="Search options">
+        <label class="ls-opt" title="Treat query as a regular expression">
+          <input type="checkbox" id="ls-regex" checked> Regex
+        </label>
+        <label class="ls-opt" title="Match uppercase and lowercase separately">
+          <input type="checkbox" id="ls-cs"> Case Sensitive
+        </label>
+        <label class="ls-opt" title="Only match whole words (not mid-word substrings)">
+          <input type="checkbox" id="ls-ww"> Whole Word
+        </label>
+      </div>
+    </div>
+    <div id="ls-status"></div>
+    <div id="ls-results" role="list"></div>
+  </div>
+</div>
+
+<script>
+(function(){{
+  var LANG = {lang_js};
+  var overlay  = document.getElementById('ls-overlay');
+  var panel    = document.getElementById('ls-panel');
+  var input    = document.getElementById('ls-input');
+  var closeBtn = document.getElementById('ls-close');
+  var status   = document.getElementById('ls-status');
+  var results  = document.getElementById('ls-results');
+  var cbRegex  = document.getElementById('ls-regex');
+  var cbCs     = document.getElementById('ls-cs');
+  var cbWw     = document.getElementById('ls-ww');
+
+  var currentES = null;
+  var debTimer  = null;
+  var total     = 0;
+
+  /* ---- option checkboxes: re-search on change ---- */
+  [cbRegex, cbCs, cbWw].forEach(function(cb){{
+    cb.addEventListener('change', function(){{ _doSearch(input.value.trim()); }});
+  }});
+
+  /* ---- open/close ---- */
+  function open(q){{
+    overlay.style.display = 'flex';
+    if (q !== undefined) input.value = q;
+    input.focus();
+    input.select();
+    if (q) _doSearch(q);
+  }}
+  function close(){{
+    overlay.style.display = 'none';
+    _cancel();
+  }}
+
+  // Global hook so search.html redirect and sidebar form can open us
+  window._lsOpen = open;
+
+  document.addEventListener('keydown', function(e){{
+    var tag = document.activeElement ? document.activeElement.tagName : '';
+    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA'){{
+      e.preventDefault();
+      open();
+    }}
+    if (e.key === 'Escape' && overlay.style.display !== 'none') close();
+  }});
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', function(e){{
+    if (!panel.contains(e.target)) close();
+  }});
+
+  /* ---- intercept Sphinx sidebar search form ---- */
+  function _interceptSphinxForms(){{
+    document.querySelectorAll('form[action*="search.html"]').forEach(function(form){{
+      form.addEventListener('submit', function(e){{
+        e.preventDefault();
+        var qf = form.querySelector('input[name="q"]');
+        if (qf) open(qf.value.trim());
+      }});
+    }});
+  }}
+  if (document.readyState === 'loading'){{
+    document.addEventListener('DOMContentLoaded', _interceptSphinxForms);
+  }} else {{
+    _interceptSphinxForms();
+  }}
+
+  /* ---- auto-open when URL has ?ls-q= (set by search.html redirect) ---- */
+  (function(){{
+    var params = new URLSearchParams(window.location.search);
+    var lsq = params.get('ls-q');
+    if (lsq){{
+      if (document.readyState === 'loading'){{
+        document.addEventListener('DOMContentLoaded', function(){{ open(lsq); }});
+      }} else {{
+        setTimeout(function(){{ open(lsq); }}, 0);
+      }}
+    }}
+  }})();
+
+  /* ---- search ---- */
+  input.addEventListener('input', function(){{
+    clearTimeout(debTimer);
+    debTimer = setTimeout(function(){{ _doSearch(input.value.trim()); }}, 300);
+  }});
+
+  function _cancel(){{
+    if (currentES){{ currentES.close(); currentES = null; }}
+    clearTimeout(debTimer);
+  }}
+
+  function _doSearch(q){{
+    _cancel();
+    results.innerHTML = '';
+    total = 0;
+    if (!q){{ status.textContent = ''; return; }}
+
+    status.textContent = 'Searching…';
+    var url = '/api/search?q=' + encodeURIComponent(q)
+            + '&lang='  + encodeURIComponent(LANG)
+            + '&regex=' + (cbRegex.checked ? '1' : '0')
+            + '&cs='    + (cbCs.checked    ? '1' : '0')
+            + '&ww='    + (cbWw.checked    ? '1' : '0');
+    var es = new EventSource(url);
+    currentES = es;
+
+    es.onmessage = function(evt){{
+      var d = JSON.parse(evt.data);
+      if (d.hits && d.hits.length){{
+        d.hits.forEach(function(h){{ _appendHit(h); }});
+      }}
+      if (d.done){{
+        status.textContent = total ? total + ' result' + (total !== 1 ? 's' : '') : 'No results';
+        if (!total) results.innerHTML = '<div id="ls-empty">No results for <strong>' + _esc(q) + '</strong></div>';
+        es.close(); currentES = null;
+      }}
+    }};
+
+    es.onerror = function(){{
+      status.textContent = 'Search error';
+      if (es){{ es.close(); currentES = null; }}
+    }};
+  }}
+
+  function _appendHit(h){{
+    total++;
+    var li = document.createElement('div');
+    li.className = 'ls-hit';
+    li.setAttribute('role', 'listitem');
+
+    // Deep-link: page + section anchor + Text Fragment (:~:text=…)
+    // Clicking opens the page, scrolls to #section, and the browser
+    // highlights the matched span automatically (Chrome/Edge/Safari/Firefox).
+    var href = h.fragment_url || (h.html_page + h.section_key);
+
+    // Section label: strip leading /<lang>/ from the page path, keep section
+    var pageLabel = (h.html_page || '').replace(/^\\/[^/]+\\//, '');
+    var secLabel  = (h.section_key || '').replace(/^#/, '').replace(/-/g, ' ');
+
+    var a = document.createElement('a');
+    a.href = href;
+    a.title = 'Open page and jump to section';
+    a.textContent = pageLabel + (secLabel ? ' › ' + secLabel : '');
+
+    // Breadcrumb: full URL path so the user can see exactly where it lives
+    var bc = document.createElement('div');
+    bc.className = 'ls-breadcrumb';
+    bc.textContent = href.split(':~:')[0];   // strip :~:text= for display
+
+    // Snippet with <mark>…</mark> around the matched span
+    var snip = document.createElement('div');
+    snip.className = 'ls-snippet';
+    snip.innerHTML = h.snippet || '';
+
+    li.appendChild(a);
+    li.appendChild(bc);
+    li.appendChild(snip);
+    results.appendChild(li);
+  }}
+
+  function _esc(s){{
+    return String(s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }}
+}})();
+</script>
+"""
+
+
 def _make_livereload_js(token: str) -> str:
     """Return the live-reload JS snippet injected just before </body>.
 
@@ -196,8 +496,8 @@ def _make_livereload_js(token: str) -> str:
     that exceeds `token`, the page reloads with the freshly built content.
 
     A PO edit rebuilds only the documents referencing the changed msgid (via
-    the incremental shard build + sphinx-autobuild), so only the affected
-    pages' mtimes advance and only those open tabs reload.
+    the incremental shard build + sphinx-autobuild under `make liveall`), so
+    only the affected pages' mtimes advance and only those open tabs reload.
     """
     return f"""
 <script>
@@ -235,12 +535,16 @@ class DocsHandler(BaseHTTPRequestHandler):
     default_lang: str = "en"
     available_langs: list[str] = ["en"]
     quiet: bool = False
+    # Search index constants from ConfigRecord / conf.py (set in main())
+    search_index_filename: str = SEARCH_INDEX_FILENAME
+    html_builder_name: str = HTML_BUILDER_NAME
+    default_language: str = DEFAULT_LANGUAGE
 
     def log_message(self, format: str, *args: object) -> None:  # noqa: A002
         if self.quiet:
             return
         # Suppress the once-a-second live-reload polls so the console stays
-        # readable; real page/asset requests are still logged.
+        # readable; real page/asset/search requests are still logged.
         if getattr(self, "path", "").startswith("/__livereload"):
             return
         super().log_message(format, *args)
@@ -277,7 +581,8 @@ class DocsHandler(BaseHTTPRequestHandler):
         return lang, os.path.join(base_dir, sub.lstrip("/"))
 
     def do_GET(self) -> None:
-        path = self.path.split("?")[0].split("#")[0]
+        parsed = urllib.parse.urlparse(self.path)
+        path = parsed.path
 
         # Redirect root to default language
         if path in ("", "/"):
@@ -286,7 +591,25 @@ class DocsHandler(BaseHTTPRequestHandler):
 
         # Live-reload poll endpoint (used by the injected JS snippet)
         if path == "/__livereload":
-            self._handle_livereload()
+            qs = urllib.parse.parse_qs(parsed.query)
+            self._handle_livereload(qs)
+            return
+
+        # PO-based search SSE endpoint — language-agnostic route
+        if path == "/api/search":
+            qs = urllib.parse.parse_qs(parsed.query)
+            self._handle_api_search(qs)
+            return
+
+        # Detect language from URL prefix
+        lang = None
+        for code in self.available_langs:
+            if path == f"/{code}" or path.startswith(f"/{code}/"):
+                lang = code
+                break
+
+        if lang is None:
+            self._send_404()
             return
 
         # Block version_switch.js so the remote versions.json fetch is skipped
@@ -294,11 +617,23 @@ class DocsHandler(BaseHTTPRequestHandler):
             self._send_404()
             return
 
-        lang, fs_path = self._url_to_fs(path)
-        if lang is None or fs_path is None:
-            # Unknown prefix — 404
-            self._send_404()
-            return
+        # Intercept Sphinx search.html → redirect to our overlay
+        if path.endswith("/search.html") and _SEARCH_AVAILABLE:
+            qs_dict = urllib.parse.parse_qs(parsed.query)
+            q = qs_dict.get("q", [""])[0].strip()
+            if q:
+                self._redirect(f"/{lang}/?ls-q={urllib.parse.quote(q)}")
+                return
+
+        # Map URL path to filesystem path (use per-lang dir, may differ from build_dir/lang)
+        sub = path[len(f"/{lang}"):]  # everything after /<lang>
+        if not sub or sub == "/":
+            sub = "/index.html"
+        if sub.endswith("/"):
+            sub += "index.html"
+
+        base_dir = self.lang_dirs.get(lang) or os.path.join(self.build_dir, lang)
+        fs_path = os.path.join(base_dir, sub.lstrip("/"))
 
         if not os.path.isfile(fs_path):
             self._send_404()
@@ -314,7 +649,7 @@ class DocsHandler(BaseHTTPRequestHandler):
             self._serve_static(fs_path, ctype)
 
     # ------------------------------------------------------------------
-    def _handle_livereload(self) -> None:
+    def _handle_livereload(self, qs: dict) -> None:
         """Reply with the current mtime of the page named in ?path=.
 
         The injected JS passes its own location.pathname; we resolve it to the
@@ -323,7 +658,6 @@ class DocsHandler(BaseHTTPRequestHandler):
         never triggers a spurious reload (the JS only reloads on a strict
         increase over the baseline baked into the page).
         """
-        qs = parse_qs(urlparse(self.path).query)
         target = qs.get("path", [""])[0].split("?")[0].split("#")[0]
         mtime = 0.0
         if target:
@@ -344,6 +678,97 @@ class DocsHandler(BaseHTTPRequestHandler):
             self.wfile.write(body)
         except (BrokenPipeError, ConnectionResetError):
             pass
+
+    # ------------------------------------------------------------------
+    def _handle_api_search(self, qs: dict) -> None:
+        """SSE endpoint: /api/search?q=…&lang=…&mode=…&field=…&limit=…
+
+        Streams ``data: {"hits":[…]}`` events as worker batches complete,
+        then a final ``data: {"done":true,"total":N}`` sentinel.
+        """
+        if not _SEARCH_AVAILABLE:
+            self.send_response(503)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(b'{"error":"search engine not available"}')
+            return
+
+        req = SearchRequest.from_qs(qs)
+        build_dir = Path(self.build_dir)
+
+        self.send_response(200)
+        self.send_header("Content-Type", "text/event-stream; charset=utf-8")
+        self.send_header("Cache-Control", "no-cache")
+        self.send_header("X-Accel-Buffering", "no")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+
+        def send(data: dict) -> bool:
+            try:
+                self.wfile.write(
+                    f"data: {json.dumps(data, ensure_ascii=False)}\n\n".encode("utf-8")
+                )
+                self.wfile.flush()
+                return True
+            except (BrokenPipeError, ConnectionResetError, OSError):
+                return False
+
+        if not req.query:
+            send({"done": True, "total": 0})
+            return
+
+        idx = load_index_for(
+            build_dir, req.lang,
+            self.search_index_filename,
+            self.html_builder_name,
+            self.default_language,
+        )
+        if idx is None:
+            send({"error": f"index not found for lang={req.lang}", "done": True, "total": 0})
+            return
+
+        debug_log("api/search query=%r lang=%s regex=%s cs=%s ww=%s",
+                  req.query, req.lang, req.regex, req.case_sensitive, req.whole_word)
+        total = 0
+        try:
+            # Collect all hits so we can sort by score (exact-phrase / msgstr first).
+            # Search is typically < 200 ms so collecting before sending is fine.
+            all_hits = []
+            for hits in run_parallel_search(idx, req):
+                all_hits.extend(hits)
+            all_hits.sort(key=lambda h: h.score, reverse=True)
+
+            # Deduplicate by fragment_url so the same page+section is not listed twice.
+            seen_urls: set[str] = set()
+            deduped = []
+            for h in all_hits:
+                key = h.fragment_url or (h.html_page + h.section_key)
+                if key not in seen_urls:
+                    seen_urls.add(key)
+                    deduped.append(h)
+
+            payload = [
+                {
+                    "msgid":       h.msgid,
+                    "msgstr":      h.msgstr,
+                    "html_page":   h.html_page,
+                    "section_key": h.section_key,
+                    "fragment_url":h.fragment_url,
+                    "snippet":     h.snippet,
+                    "match_field": h.match_field,
+                    "score":       h.score,
+                }
+                for h in deduped
+            ]
+            if payload and not send({"hits": payload}):
+                return
+            total = len(deduped)
+        except Exception as exc:
+            debug_log("api/search error: %s", exc)
+            send({"error": str(exc), "done": True, "total": total})
+            return
+
+        send({"done": True, "total": total})
 
     # ------------------------------------------------------------------
     def _redirect(self, location: str) -> None:
@@ -379,11 +804,12 @@ class DocsHandler(BaseHTTPRequestHandler):
         except OSError:
             token = 0.0
 
-        # Inject language switcher + live-reload JS before </body>
-        snippet = (
-            _make_lang_switcher_js(lang, self.available_langs)
-            + _make_livereload_js(f"{token:.6f}")
-        )
+        # Inject lang-switcher + search UI + live-reload before </body>
+        snippet = _make_lang_switcher_js(lang, self.available_langs)
+        if _SEARCH_AVAILABLE:
+            snippet += _make_search_ui_snippet(lang)
+        snippet += _make_livereload_js(f"{token:.6f}")
+
         idx = text.lower().rfind("</body>")
         if idx >= 0:
             text = text[:idx] + snippet + text[idx:]
@@ -399,6 +825,42 @@ class DocsHandler(BaseHTTPRequestHandler):
             self.wfile.write(data)
         except (BrokenPipeError, ConnectionResetError):
             pass
+
+
+# ---------------------------------------------------------------------------
+# Thread-pool HTTP server
+# ---------------------------------------------------------------------------
+
+class ThreadedHTTPServer(HTTPServer):
+    """HTTPServer that handles each request in a bounded thread pool."""
+
+    def __init__(
+        self,
+        server_address: tuple[str, int],
+        RequestHandlerClass: type,
+        max_workers: int = 2,
+    ) -> None:
+        super().__init__(server_address, RequestHandlerClass)
+        self._pool = ThreadPoolExecutor(max_workers=max_workers)
+
+    def process_request(self, request: object, client_address: object) -> None:  # type: ignore[override]
+        future = self._pool.submit(
+            self.finish_request, request, client_address,  # type: ignore[arg-type]
+        )
+        future.add_done_callback(
+            lambda f: self._on_request_done(f, request, client_address)
+        )
+
+    def _on_request_done(self, future: object, request: object, client_address: object) -> None:
+        from concurrent.futures import Future
+        exc = future.exception() if isinstance(future, Future) else None  # type: ignore[union-attr]
+        if exc:
+            self.handle_error(request, client_address)  # type: ignore[arg-type]
+        self.shutdown_request(request)  # type: ignore[arg-type]
+
+    def server_close(self) -> None:
+        self._pool.shutdown(wait=False)
+        super().server_close()
 
 
 # ---------------------------------------------------------------------------
@@ -461,31 +923,68 @@ def main() -> None:
     ap.add_argument("--host", default="127.0.0.1", help="Bind address (default: 127.0.0.1)")
     ap.add_argument("--open", action="store_true", help="Open browser after starting")
     ap.add_argument("--quiet", action="store_true", help="Suppress per-request logging")
+    ap.add_argument("--no-search-html-rebuild", action="store_true",
+                    help=(
+                        "When a PO file changes, rebuild only the search index, "
+                        "not HTML. Use under 'make liveall', where sphinx-autobuild "
+                        "already rebuilds HTML — this avoids a double build."
+                    ))
     group = ap.add_mutually_exclusive_group()
     group.add_argument("--kill", action="store_true",
                        help="Kill process(es) listening on host:port and exit")
     group.add_argument("--restart", action="store_true",
                        help="Kill existing listener then start this server")
+    group.add_argument("--resume", action="store_true",
+                       help=(
+                           "Read saved options from build/.serve_docs_opts and restart "
+                           "with the same --build-dir/--langs/--port/--host as last time. "
+                           "Works on all platforms — no shell grep/cut needed."
+                       ))
     args = ap.parse_args()
+
+    # --resume: load last-saved options from the state file, then restart.
+    if args.resume:
+        _default_state = os.path.join(
+            args.build_dir if args.build_dir else os.path.join(project_root, "build"),
+            ".serve_docs_opts",
+        )
+        if os.path.isfile(_default_state):
+            _saved: dict[str, str] = {}
+            with open(_default_state) as _sf:
+                for _line in _sf:
+                    _parts = _line.strip().split(None, 1)
+                    if len(_parts) == 2:
+                        _saved[_parts[0]] = _parts[1]
+            if "--build-dir" in _saved:
+                args.build_dir = _saved["--build-dir"]
+            if "--langs" in _saved:
+                args.langs = _saved["--langs"]
+            if "--port" in _saved:
+                try:
+                    args.port = int(_saved["--port"])
+                except ValueError:
+                    pass
+            if "--host" in _saved:
+                args.host = _saved["--host"]
+        else:
+            logging.warning("No state file found at %s; using current defaults.", _default_state)
+        args.restart = True
+        args.resume = False
 
     # Scan locale/ for all installed translation catalogs.
     # English is the source language (no PO file needed) and is always first.
-    locale_root = os.path.join(project_root, "locale")
+    locale_root = os.path.join(project_root, LOCALE_DIR)
     locale_langs: list[str] = []
     if os.path.isdir(locale_root):
         for entry in sorted(os.listdir(locale_root)):
-            po = os.path.join(locale_root, entry, "LC_MESSAGES", "blender_manual.po")
-            if os.path.isfile(po) and entry != "en":
+            po = os.path.join(locale_root, entry, LC_MESSAGES, PO_FILENAME)
+            if os.path.isfile(po) and entry != DEFAULT_LANGUAGE:
                 locale_langs.append(entry)
-    all_locale_langs: list[str] = ["en"] + locale_langs
+    all_locale_langs: list[str] = [DEFAULT_LANGUAGE] + locale_langs
 
     if args.langs is not None:
-        # Explicit --langs controls what routes are pre-built/served.
-        # All locale/ languages are added to the switcher on top so users can
-        # see every available language regardless of what was built this run.
         built = args.langs.split()
     else:
-        # No --langs: serve and show all locale languages.
         built = all_locale_langs
         if len(built) > 1:
             logging.info("Auto-detected languages from locale/: %s", " ".join(built))
@@ -497,7 +996,7 @@ def main() -> None:
     extra = [lg for lg in all_locale_langs if lg not in seen]
     available = built + extra   # switcher shows all; routing 404s unbuilt ones
 
-    default_lang = "en" if "en" in available else (available[0] if available else "en")
+    default_lang = DEFAULT_LANGUAGE if DEFAULT_LANGUAGE in available else (available[0] if available else DEFAULT_LANGUAGE)
 
     # Handle existing listeners
     existing = _find_pids(args.port)
@@ -525,11 +1024,9 @@ def main() -> None:
             logging.info("No process listening on %s:%s", args.host, args.port)
         sys.exit(0)
 
-    # Build per-language directory map, falling back to build/html/ for the
-    # default language when its dedicated <lang>/ directory hasn't been built yet
-    # (e.g. after 'make html' but before 'make build').
+    # Build per-language directory map
     lang_dirs: dict[str, str] = {}
-    html_fallback = os.path.join(args.build_dir, "html")
+    html_fallback = os.path.join(args.build_dir, HTML_BUILDER_NAME)
     truly_missing: list[str] = []
     for lang in available:
         dedicated = os.path.join(args.build_dir, lang)
@@ -558,19 +1055,98 @@ def main() -> None:
     DocsHandler.available_langs = available
     DocsHandler.quiet = args.quiet
 
+    workers = max(2, (os.cpu_count() or 4) - 2)
     try:
-        # Threading server: the injected live-reload snippet holds a poll
-        # request open ~once a second per tab, which must not block file
-        # serving on a single-threaded server.
-        server = ThreadingHTTPServer((args.host, args.port), DocsHandler)
+        server = ThreadedHTTPServer((args.host, args.port), DocsHandler,
+                                    max_workers=workers)
     except OSError as exc:
         logging.error("Cannot bind to %s:%s — %s", args.host, args.port, exc)
         sys.exit(1)
+    logging.info("Thread pool: %d workers (cpu_count - 2)", workers)
+
+    # Persist effective options so 'make restart' can replay them without
+    # the caller needing to repeat --langs / --port / --host / --build-dir.
+    _state_path = os.path.join(args.build_dir, ".serve_docs_opts")
+    try:
+        with open(_state_path, "w") as _sf:
+            _sf.write(
+                f"--build-dir {args.build_dir}\n"
+                f"--langs {' '.join(built)}\n"
+                f"--port {args.port}\n"
+                f"--host {args.host}\n"
+            )
+    except OSError:
+        pass  # non-fatal; restart will fall back to Makefile defaults
+
+    # Resolve project-level settings from ConfigRecord / manual/conf.py once.
+    # Used by both the search engine and the log trimmer below.
+    _search_index_filename = SEARCH_INDEX_FILENAME
+    _html_builder_name = HTML_BUILDER_NAME
+    _default_language = DEFAULT_LANGUAGE
+    _log_max_mb = LOG_MAX_SIZE_MB
+    _log_trim = LOG_TRIM_ENABLED
+    try:
+        from translations.smart_mo_compile import ConfigRecord as _CR
+        _pcfg = _CR.from_project(Path(project_root), DEFAULT_LANGUAGE)
+        _search_index_filename = _pcfg.search_index_filename
+        _html_builder_name = _pcfg.html_builder_name
+        _default_language = _pcfg.default_language
+        _log_max_mb = _pcfg.log_max_size_mb
+        _log_trim = _pcfg.log_trim_enabled
+    except (ImportError, SystemExit, Exception):
+        pass
+
+    # application.log size watcher — start unconditionally (not search-only).
+    _log_trimmer = None
+    if _log_trim:
+        _app_log = Path(_TOOLS_DIR).parent / "application.log"
+        _log_trimmer = ApplicationLogTrimmer(
+            log_path=_app_log,
+            max_size_bytes=_log_max_mb * 1024 * 1024,
+        )
+        _log_trimmer.start()
+        debug_log("ApplicationLogTrimmer started: max=%d MB path=%s", _log_max_mb, _app_log)
+
+    # Pre-warm the PO search index and start PO file watchers
+    if _SEARCH_AVAILABLE:
+        build_dir_path = Path(args.build_dir)
+
+        DocsHandler.search_index_filename = _search_index_filename
+        DocsHandler.html_builder_name = _html_builder_name
+        DocsHandler.default_language = _default_language
+
+        for lang in available:
+            # Pre-warm: load index into cache before first request
+            threading.Thread(
+                target=prewarm,
+                args=(build_dir_path, lang),
+                kwargs={
+                    "index_filename": _search_index_filename,
+                    "html_builder_name": _html_builder_name,
+                    "default_language": _default_language,
+                },
+                name=f"search-prewarm-{lang}",
+                daemon=True,
+            ).start()
+
+        # MultiPOWatcher: single thread watching ALL locale/<lang>/blender_manual.po
+        # rebuild_html=False under 'make liveall' — sphinx-autobuild already
+        # rebuilds HTML there, so the watcher only refreshes the search index.
+        MultiPOWatcher(
+            project_root=Path(project_root),
+            build_dir=build_dir_path,
+            invalidate=invalidate_cache,
+            rebuild_html=not args.no_search_html_rebuild,
+        ).start()
+        debug_log("MultiPOWatcher started (watching all languages, rebuild_html=%s)",
+                  not args.no_search_html_rebuild)
 
     base_url = f"http://{args.host}:{args.port}"
     logging.info("\nServing Blender manual at %s", base_url)
     for lang in available:
         logging.info("  %s  →  %s/%s/", LANG_NAMES.get(lang, lang), base_url, lang)
+    if _SEARCH_AVAILABLE:
+        logging.info("  Search: %s/api/search?q=…&lang=vi&mode=regex", base_url)
     logging.info("Live-reload on: edited pages refresh automatically after rebuild.")
     logging.info("Press Ctrl-C to stop.\n")
 
@@ -581,6 +1157,10 @@ def main() -> None:
         server.serve_forever()
     except KeyboardInterrupt:
         logging.info("\nShutting down.")
+        if _log_trimmer is not None:
+            _log_trimmer.stop()
+        if _SEARCH_AVAILABLE:
+            shutdown_pool()
         server.server_close()
 
 

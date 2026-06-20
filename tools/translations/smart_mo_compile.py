@@ -310,6 +310,57 @@ class ConfigRecord:
     # Suppress normal summary output; e.g. True for --quiet.
     quiet: bool
 
+    # --- Optional fields populated by from_project() or left at defaults ---
+
+    # Blender version string read from manual/conf.py; e.g. "5.3".
+    blender_version: str = field(default="")
+
+    # Path to manual/conf.py used to populate blender_version and domain;
+    # e.g. Path("/repo/manual/conf.py").
+    conf_py_path: Path | None = field(default=None)
+
+    # sphinx-build executable; absolute path when the project venv is used,
+    # bare "sphinx-build" as a PATH fallback.
+    sphinx_build_cmd: str = field(default="sphinx-build")
+
+    # sphinx-build -b argument; e.g. "html".
+    sphinx_builder: str = field(default="html")
+
+    # sphinx-build -j argument; e.g. "auto".
+    sphinx_jobs: str = field(default="auto")
+
+    # Absolute path to tools/translations/smart_mo_compile.py; None when the
+    # script cannot be located (e.g. inside a redistributed package).
+    smart_mo_script: Path | None = field(default=None)
+
+    # RST source file extension read from conf.py source_suffix; e.g. ".rst".
+    rst_suffix: str = field(default=".rst")
+
+    # HTML output page extension read from conf.py html_page_suffix; e.g. ".html".
+    html_page_suffix: str = field(default=".html")
+
+    # Search index pickle filename read from conf.py; e.g. "searchindex.pkl.gz".
+    search_index_filename: str = field(default="searchindex.pkl.gz")
+
+    # Sphinx builder name / fallback output subdirectory read from conf.py;
+    # e.g. "html" (the output dir used by 'make html' for English).
+    html_builder_name: str = field(default="html")
+
+    # Default/source language read from conf.py language setting; e.g. "en".
+    # Used by index_loader to identify which language falls back to html_builder_name/.
+    default_language: str = field(default="en")
+
+    # application.log maximum file size in megabytes (read from conf.py log_max_size_mb).
+    # ApplicationLogTrimmer in serve_docs.py triggers a FIFO trim when this threshold
+    # is exceeded.  Default matches the constant LOG_MAX_SIZE_MB in common/constants.py.
+    log_max_size_mb: int = field(default=10)
+
+    # Whether serve_docs.py should start ApplicationLogTrimmer on startup.
+    # Set log_trim_enabled = False in manual/conf.py to disable trimming entirely.
+    log_trim_enabled: bool = field(default=True)
+
+    # --- Derived paths (not __init__ parameters) ---
+
     # Directory containing the selected locale's source catalog;
     # e.g. Path("/repo/locale/vi/LC_MESSAGES").
     po_dir: Path = field(init=False)
@@ -353,6 +404,110 @@ class ConfigRecord:
         self.lock_path = self.cache_dir / f"{self.language}.lock"
         self.snapshot_path = self.cache_dir / f"{self.language}.po.snapshot"
         self.shard_lc_dir = self.shard_root / self.language / "LC_MESSAGES"
+
+    @staticmethod
+    def _read_conf_py(conf_py_path: Path) -> dict[str, str]:
+        """Extract key values from manual/conf.py without running Sphinx.
+
+        Uses regex so Sphinx-specific globals (``tags``, ``sphinx.version_info``)
+        are never evaluated.  Returns a dict with keys ``blender_version`` and
+        ``domain`` (the gettext catalog name).
+        """
+        import re
+        values: dict[str, str] = {}
+        try:
+            text = conf_py_path.read_text("utf-8")
+        except OSError:
+            return values
+        patterns = {
+            "blender_version": r'^blender_version\s*=\s*["\']([^"\']+)["\']',
+            # gettext_compact = "blender_manual" appears in the legacy_gettext branch
+            "domain": r'gettext_compact\s*=\s*["\']([^"\']+)["\']',
+            # source_suffix = [".rst"]  or  {".rst": "restructuredtext"}
+            "rst_suffix": r'^source_suffix\s*=\s*[\[{]\s*["\']([^"\']+)["\']',
+            "html_page_suffix": r'^html_page_suffix\s*=\s*["\']([^"\']+)["\']',
+            "search_index_filename": r'^search_index_filename\s*=\s*["\']([^"\']+)["\']',
+            "html_builder_name": r'^html_builder_name\s*=\s*["\']([^"\']+)["\']',
+            # language = "en"  (source/default language)
+            "default_language": r'^language\s*=\s*["\']([^"\']+)["\']',
+            # log_max_size_mb = 10
+            "log_max_size_mb": r'^log_max_size_mb\s*=\s*(\d+)',
+            # log_trim_enabled = True | False
+            "log_trim_enabled": r'^log_trim_enabled\s*=\s*(True|False)',
+        }
+        for key, pat in patterns.items():
+            m = re.search(pat, text, re.MULTILINE)
+            if m:
+                values[key] = m.group(1)
+        return values
+
+    @classmethod
+    def from_project(
+        cls,
+        project_root: Path,
+        lang: str,
+        *,
+        build_subdir: str = "build",
+        no_touch_rst: bool = True,
+        quiet: bool = True,
+    ) -> "ConfigRecord":
+        """Create a ConfigRecord from the project root and a language code.
+
+        Reads ``blender_version`` and the gettext domain from
+        ``manual/conf.py``, locates ``sphinx-build`` in the project venv,
+        and derives all build paths from *project_root* using the same
+        directory layout that the Makefile expects.
+
+        Parameters
+        ----------
+        project_root : absolute path to the repository root
+        lang         : language code, e.g. ``"vi"``
+        build_subdir : name of the top-level build directory (default ``"build"``)
+        no_touch_rst : passed through to ``smart_mo_compile --no-touch-rst``
+        quiet        : suppress summary lines in both smart_mo and sphinx
+        """
+        project_root = Path(project_root).resolve()
+        build_root = project_root / build_subdir
+        conf_path = project_root / "manual" / "conf.py"
+        conf_values = cls._read_conf_py(conf_path)
+
+        sphinx_cmd = "sphinx-build"
+        for candidate in [
+            project_root / ".venv" / "bin" / "sphinx-build",
+            project_root / ".venv" / "Scripts" / "sphinx-build.exe",
+        ]:
+            if candidate.exists():
+                sphinx_cmd = str(candidate)
+                break
+
+        smart_mo = project_root / "tools" / "translations" / "smart_mo_compile.py"
+
+        return cls(
+            language=lang,
+            srcdir=project_root / "manual",
+            locale_dir=project_root / "locale",
+            doctree_dir=build_root / ".doctrees" / lang,
+            domain=conf_values.get("domain", "blender_manual"),
+            cache_dir=build_root / ".translation_cache",
+            shard_root=build_root / ".i18n_shards" / "locale",
+            force_rebuild=False,
+            no_touch_rst=no_touch_rst,
+            verbose=False,
+            quiet=quiet,
+            blender_version=conf_values.get("blender_version", ""),
+            conf_py_path=conf_path,
+            sphinx_build_cmd=sphinx_cmd,
+            sphinx_builder=conf_values.get("html_builder_name", "html"),
+            sphinx_jobs="auto",
+            smart_mo_script=smart_mo if smart_mo.exists() else None,
+            rst_suffix=conf_values.get("rst_suffix", ".rst"),
+            html_page_suffix=conf_values.get("html_page_suffix", ".html"),
+            search_index_filename=conf_values.get("search_index_filename", "searchindex.pkl.gz"),
+            html_builder_name=conf_values.get("html_builder_name", "html"),
+            default_language=conf_values.get("default_language", "en"),
+            log_max_size_mb=int(conf_values.get("log_max_size_mb", "10")),
+            log_trim_enabled=conf_values.get("log_trim_enabled", "True") == "True",
+        )
 
 
 # All PO/MO I/O lives behind these two imports.
