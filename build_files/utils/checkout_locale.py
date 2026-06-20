@@ -1,8 +1,7 @@
 import argparse
-
+import re
 import sys
 import os
-import requests
 
 from pathlib import Path
 from make_utils import check_output
@@ -15,11 +14,16 @@ from typing import (
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--git-command", default="git")
+    parser.add_argument("languages", nargs="*")
     return parser.parse_args()
 
 
-repo_url_base = "https://projects.blender.org/blender/blender-manual-translations/"
-repo_url_browse = "src/branch/main/"
+def prompt_for_languages() -> List[str]:
+    print("Enter language code(s) to checkout (space or comma separated, e.g. fr ru zh-hans vi):")
+    raw = input().strip()
+    return [l for l in re.split(r"[\s,]+", raw) if l]
+
+
 repo_url_git = "https://projects.blender.org/blender/blender-manual-translations.git"
 
 
@@ -41,43 +45,45 @@ def locale_exists() -> bool:
     return False
 
 
-def get_lang_code():
-    print("Enter the language code for the language you would like to checkout:")
-    return str(input())
 
 
-def check_lang_exists(lang: str) -> bool:
-    url = repo_url_base + repo_url_browse + lang
-
-    url_status = requests.get(url).status_code
-
-    if url_status == 200:
-        return True
-
-    return False
-
-
-def partial_checkout(lang: str):
+def partial_checkout(languages: List[str]):
     manual_dir = get_manual_git_root()
     locale_dir = os.path.join(manual_dir, "locale")
 
-    print(run_git(manual_dir, ["clone", "--filter=blob:none", "--no-checkout", repo_url_git, locale_dir]))
+    print(run_git(manual_dir, [
+        "clone",
+        "--filter=blob:none",
+        "--no-checkout",
+        repo_url_git,
+        locale_dir,
+    ]))
+
     run_git(locale_dir, ["sparse-checkout", "set", "--cone"])
-    run_git(locale_dir, ["sparse-checkout", "add", lang])
     print(run_git(locale_dir, ["checkout", "main"]))
+
+    for lang in languages:
+        run_git(locale_dir, ["sparse-checkout", "add", lang])
 
 
 if __name__ == "__main__":
     args = parse_arguments()
 
+    # Flatten any comma-separated values passed on the command line
+    raw_langs = []
+    for item in args.languages:
+        raw_langs.extend(re.split(r"[\s,]+", item))
+    languages = [l for l in raw_langs if l]
+
+    if not languages:
+        languages = prompt_for_languages()
+
+    if not languages:
+        print("No language(s) specified.")
+        sys.exit(1)
+
     if locale_exists():
         print("locale directory already exists quitting")
         sys.exit(1)
 
-    lang = get_lang_code()
-
-    if not check_lang_exists(lang):
-        print("The translation files for that language do not exist")
-        sys.exit(1)
-
-    partial_checkout(lang)
+    partial_checkout(languages)

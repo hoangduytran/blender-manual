@@ -8,6 +8,11 @@ After 'make build' builds each language into build/<lang>/, this server:
   - Injects a small JS snippet into every HTML page that populates the
     built-in sidebar language-switcher (#version-langlist) with local links
     and re-runs via MutationObserver if version_switch.js overwrites the list
+  - Injects a live-reload snippet that polls /__livereload and reloads the
+    page when its build/<lang>/… HTML file is rewritten (e.g. after a PO edit
+    triggers an incremental sphinx-autobuild rebuild). This gives the unified
+    multi-language server the same auto-refresh as the per-language
+    sphinx-autobuild instances, without a WebSocket.
   - Returns 404 for version_switch.js requests so the remote versions.json
     fetch is suppressed (avoids CORS noise in local development)
 
@@ -28,7 +33,8 @@ import subprocess
 import sys
 import time
 import webbrowser
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from urllib.parse import parse_qs, urlparse
 
 # ---------------------------------------------------------------------------
 # Human-readable language names — full set from the Blender manual translations
@@ -181,6 +187,44 @@ def _make_lang_switcher_js(current_lang: str, available: list[str]) -> str:
 """
 
 
+def _make_livereload_js(token: str) -> str:
+    """Return the live-reload JS snippet injected just before </body>.
+
+    `token` is the page's HTML mtime at serve time, baked in as a float. The
+    snippet polls /__livereload?path=<this page> once a second; the server
+    replies with the current mtime of the matching build/<lang>/… file. When
+    that exceeds `token`, the page reloads with the freshly built content.
+
+    A PO edit rebuilds only the documents referencing the changed msgid (via
+    the incremental shard build + sphinx-autobuild), so only the affected
+    pages' mtimes advance and only those open tabs reload.
+    """
+    return f"""
+<script>
+/* live-reload injected by tools/serve_docs.py */
+(function () {{
+    var TOKEN = {token};
+    var PATH = location.pathname;
+    var DELAY = 1000;
+    function poll() {{
+        fetch('/__livereload?path=' + encodeURIComponent(PATH),
+              {{ cache: 'no-store' }})
+            .then(function (r) {{ return r.ok ? r.text() : null; }})
+            .then(function (t) {{
+                if (t !== null && parseFloat(t) > TOKEN) {{
+                    location.reload();
+                }} else {{
+                    setTimeout(poll, DELAY);
+                }}
+            }})
+            .catch(function () {{ setTimeout(poll, DELAY * 2); }});
+    }}
+    setTimeout(poll, DELAY);
+}})();
+</script>
+"""
+
+
 # ---------------------------------------------------------------------------
 # HTTP handler
 # ---------------------------------------------------------------------------
@@ -193,8 +237,13 @@ class DocsHandler(BaseHTTPRequestHandler):
     quiet: bool = False
 
     def log_message(self, format: str, *args: object) -> None:  # noqa: A002
-        if not self.quiet:
-            super().log_message(format, *args)
+        if self.quiet:
+            return
+        # Suppress the once-a-second live-reload polls so the console stays
+        # readable; real page/asset requests are still logged.
+        if getattr(self, "path", "").startswith("/__livereload"):
+            return
+        super().log_message(format, *args)
 
     def handle_one_request(self) -> None:
         try:
@@ -203,6 +252,30 @@ class DocsHandler(BaseHTTPRequestHandler):
             pass
 
     # ------------------------------------------------------------------
+    def _url_to_fs(self, path: str) -> tuple[str | None, str | None]:
+        """Map a /<lang>/… URL path to (lang, filesystem path).
+
+        Returns (None, None) when the path carries no known language prefix.
+        Shared by do_GET and the live-reload endpoint so both resolve files
+        identically (per-lang dir overrides, directory-index expansion).
+        """
+        lang = None
+        for code in self.available_langs:
+            if path == f"/{code}" or path.startswith(f"/{code}/"):
+                lang = code
+                break
+        if lang is None:
+            return None, None
+
+        sub = path[len(f"/{lang}"):]  # everything after /<lang>
+        if not sub or sub == "/":
+            sub = "/index.html"
+        if sub.endswith("/"):
+            sub += "index.html"
+
+        base_dir = self.lang_dirs.get(lang) or os.path.join(self.build_dir, lang)
+        return lang, os.path.join(base_dir, sub.lstrip("/"))
+
     def do_GET(self) -> None:
         path = self.path.split("?")[0].split("#")[0]
 
@@ -211,16 +284,9 @@ class DocsHandler(BaseHTTPRequestHandler):
             self._redirect(f"/{self.default_lang}/")
             return
 
-        # Detect language from URL prefix
-        lang = None
-        for code in self.available_langs:
-            if path == f"/{code}" or path.startswith(f"/{code}/"):
-                lang = code
-                break
-
-        if lang is None:
-            # Unknown prefix — 404
-            self._send_404()
+        # Live-reload poll endpoint (used by the injected JS snippet)
+        if path == "/__livereload":
+            self._handle_livereload()
             return
 
         # Block version_switch.js so the remote versions.json fetch is skipped
@@ -228,15 +294,11 @@ class DocsHandler(BaseHTTPRequestHandler):
             self._send_404()
             return
 
-        # Map URL path to filesystem path (use per-lang dir, may differ from build_dir/lang)
-        sub = path[len(f"/{lang}"):]  # everything after /<lang>
-        if not sub or sub == "/":
-            sub = "/index.html"
-        if sub.endswith("/"):
-            sub += "index.html"
-
-        base_dir = self.lang_dirs.get(lang) or os.path.join(self.build_dir, lang)
-        fs_path = os.path.join(base_dir, sub.lstrip("/"))
+        lang, fs_path = self._url_to_fs(path)
+        if lang is None or fs_path is None:
+            # Unknown prefix — 404
+            self._send_404()
+            return
 
         if not os.path.isfile(fs_path):
             self._send_404()
@@ -250,6 +312,38 @@ class DocsHandler(BaseHTTPRequestHandler):
             self._serve_html(fs_path, lang, ctype)
         else:
             self._serve_static(fs_path, ctype)
+
+    # ------------------------------------------------------------------
+    def _handle_livereload(self) -> None:
+        """Reply with the current mtime of the page named in ?path=.
+
+        The injected JS passes its own location.pathname; we resolve it to the
+        same build/<lang>/… file do_GET would serve and return that file's
+        mtime as plain text. A missing file yields 0 so a mid-rebuild blip
+        never triggers a spurious reload (the JS only reloads on a strict
+        increase over the baseline baked into the page).
+        """
+        qs = parse_qs(urlparse(self.path).query)
+        target = qs.get("path", [""])[0].split("?")[0].split("#")[0]
+        mtime = 0.0
+        if target:
+            _, fs_path = self._url_to_fs(target)
+            if fs_path and os.path.isfile(fs_path):
+                try:
+                    mtime = os.path.getmtime(fs_path)
+                except OSError:
+                    mtime = 0.0
+
+        body = f"{mtime:.6f}".encode()
+        self.send_response(200)
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        try:
+            self.wfile.write(body)
+        except (BrokenPipeError, ConnectionResetError):
+            pass
 
     # ------------------------------------------------------------------
     def _redirect(self, location: str) -> None:
@@ -278,8 +372,18 @@ class DocsHandler(BaseHTTPRequestHandler):
             raw = fh.read()
         text = raw.decode("utf-8", errors="replace")
 
-        # Inject language switcher JS before </body>
-        snippet = _make_lang_switcher_js(lang, self.available_langs)
+        # Baseline mtime baked into the live-reload snippet: the page reloads
+        # once the server reports a newer mtime for this same file.
+        try:
+            token = os.path.getmtime(fs_path)
+        except OSError:
+            token = 0.0
+
+        # Inject language switcher + live-reload JS before </body>
+        snippet = (
+            _make_lang_switcher_js(lang, self.available_langs)
+            + _make_livereload_js(f"{token:.6f}")
+        )
         idx = text.lower().rfind("</body>")
         if idx >= 0:
             text = text[:idx] + snippet + text[idx:]
@@ -455,7 +559,10 @@ def main() -> None:
     DocsHandler.quiet = args.quiet
 
     try:
-        server = HTTPServer((args.host, args.port), DocsHandler)
+        # Threading server: the injected live-reload snippet holds a poll
+        # request open ~once a second per tab, which must not block file
+        # serving on a single-threaded server.
+        server = ThreadingHTTPServer((args.host, args.port), DocsHandler)
     except OSError as exc:
         logging.error("Cannot bind to %s:%s — %s", args.host, args.port, exc)
         sys.exit(1)
@@ -464,6 +571,7 @@ def main() -> None:
     logging.info("\nServing Blender manual at %s", base_url)
     for lang in available:
         logging.info("  %s  →  %s/%s/", LANG_NAMES.get(lang, lang), base_url, lang)
+    logging.info("Live-reload on: edited pages refresh automatically after rebuild.")
     logging.info("Press Ctrl-C to stop.\n")
 
     if args.open:

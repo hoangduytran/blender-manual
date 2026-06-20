@@ -235,7 +235,7 @@ liveall: ensure-lang-builds
 	done; \
 	echo ""; \
 	echo "Rebuilders running. Starting unified server at http://localhost:8000 ..."; \
-	echo "Refresh the browser after a rebuild completes (F5)."; \
+	echo "Live-reload is on: edited pages refresh automatically once a rebuild finishes."; \
 	echo "Press Ctrl-C to stop."; \
 	python3 tools/serve_docs.py --build-dir $(BUILDDIR) --langs "$(BF_LANGS)" --restart --open $(SERVE_OPTS); \
 	for pid in $$pids; do kill "$$pid" 2>/dev/null; done; \
@@ -323,8 +323,23 @@ check_spelling:
 check_spelling_new:
 	@python3 tools/check_source/check_spelling_new.py
 
+# Extra language codes passed as make targets (e.g. make checkout_locale vi fr)
+# Only active when checkout_locale is actually being built.
+ifneq ($(filter checkout_locale,$(MAKECMDGOALS)),)
+_CHECKOUT_EXTRA := $(filter-out checkout_locale,$(MAKECMDGOALS))
+endif
+
 checkout_locale:
-	@python3 ./build_files/utils/checkout_locale.py
+	@python3 ./build_files/utils/checkout_locale.py $(_CHECKOUT_EXTRA) $(LANGUAGES)
+
+# Silently absorb extra language codes so make doesn't error on unknown targets.
+# Guard ensures this only fires during a checkout_locale invocation.
+ifneq ($(filter checkout_locale,$(MAKECMDGOALS)),)
+ifneq ($(_CHECKOUT_EXTRA),)
+$(_CHECKOUT_EXTRA):
+	@:
+endif
+endif
 
 update_po:
 	@python3 ./tools/translations/update_po.py
