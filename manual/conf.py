@@ -158,6 +158,37 @@ gettext_auto_build = False
 # Strict policy: fuzzy translations are NOT installed.
 gettext_allow_fuzzy_translations = False
 
+# -- Search-tool constants ---------------------------------------------------
+# These settings are read by tools/search/ (index_builder.py, index_loader.py)
+# via ConfigRecord._read_conf_py() so that no path strings are hard-coded in
+# the Python tools.  They also serve as explicit documentation of the project's
+# file-naming conventions.
+
+# RST source file suffix — mirrors Sphinx's built-in default and is used by
+# index_builder.py to strip the suffix when mapping RST paths to HTML URLs.
+source_suffix = [".rst"]
+
+# HTML output page suffix — used by index_builder.py to produce the correct
+# URL extension when converting RST locations to browsable HTML links.
+html_page_suffix = ".html"
+
+# Search index pickle filename — written by index_builder.py and read by
+# index_loader.py.  Change here to rename the file in both places at once.
+search_index_filename = "searchindex.pkl.gz"
+
+# Sphinx HTML builder name — determines the output subdirectory for 'make html'
+# (as opposed to 'make html-direct BF_LANG=<lang>').  Used by index_loader.py
+# as a fallback location when looking for the English search index.
+html_builder_name = "html"
+
+# application.log size management.
+# log_max_size_mb: trim application.log (FIFO, oldest entries first) when the
+#   file exceeds this size.  The trimmer keeps the most-recent ~50 % of content
+#   and writes a dated trim-marker where the removed block began.
+# log_trim_enabled: set to False to disable automatic trimming entirely.
+log_max_size_mb = 10
+log_trim_enabled = True
+
 
 # -- Options for HTML output -------------------------------------------------
 

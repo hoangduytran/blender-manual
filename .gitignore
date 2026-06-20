@@ -3,6 +3,7 @@
 
 # Editors
 .vscode/*
+.claude/*
 
 # Python virtual environment
 .venv/
