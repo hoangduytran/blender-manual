@@ -50,13 +50,12 @@ from repeatable_extract import (  # noqa: E402
     extract_repeatable_records,
     group_records_by_doc,
     is_repeatable_tag,
+    split_terminal_group,
 )
 
 from common.constants import (  # type: ignore[import-not-found]  # noqa: E402
     CONF_REPEATABLE_PICKLE_FILENAME,
     CONF_REPEATABLE_PO_FILENAME,
-    HINT_CLOSE_BRACKET,
-    HINT_OPEN_BRACKET,
     HintSide,
     HTML_SUFFIX,
     PILL_EN_CSS_CLASS,
@@ -128,27 +127,20 @@ _PILL_NODE_BY_SIDE = {
 # ---------------------------------------------------------------------------
 
 def split_terminal_leaf(leaf_text: str) -> "tuple[str, str, str] | None":
-    """Split a single Text leaf ``"<lead>[<bracket>]<trailing-ws>"``.
+    """Split a single Text leaf ``"<lead><open><bracket><close><trailing-ws>"``.
 
     Returns ``(lead, bracket, trailing)`` when the leaf ends (ignoring trailing
-    whitespace) with exactly one non-empty bracket pair; otherwise ``None`` (the
-    hint does not live wholly in this leaf).  Equality to the msgid is already
-    decided at the whole-node level by :func:`classify_terminal_hint`.
+    whitespace) with a non-empty terminal delimiter group (``[]`` or ``()``);
+    otherwise ``None`` (the hint does not live wholly in this leaf).  Equality to
+    the msgid is already decided at the whole-node level by
+    :func:`classify_terminal_hint`; this only locates the group to split.
     """
-    stripped = leaf_text.rstrip()
-    trailing = leaf_text[len(stripped):]
-    has_single_pair = (
-        stripped.endswith(HINT_CLOSE_BRACKET)
-        and stripped.count(HINT_OPEN_BRACKET) == 1
-        and stripped.count(HINT_CLOSE_BRACKET) == 1
-    )
-    if not has_single_pair:
+    split = split_terminal_group(leaf_text)
+    if split is None:
         return None
-    open_index = stripped.index(HINT_OPEN_BRACKET)
-    bracket = stripped[open_index + 1:-1]
-    if not bracket:
-        return None
-    return leaf_text[:open_index], bracket, trailing
+    lead, bracket = split
+    trailing = leaf_text[len(leaf_text.rstrip()):]
+    return lead, bracket, trailing
 
 
 def _replace_leaf_with_pill(

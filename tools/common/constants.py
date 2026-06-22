@@ -193,9 +193,21 @@ PILL_VI_CSS_CLASS: str = "i18n-vi-hint"
 # Backwards-compatible alias (the original single-class name).
 PILL_CSS_CLASS: str = PILL_EN_CSS_CLASS
 
-# English reading-hint syntax: a terminal ``<translation> [<English>]`` suffix.
+# English reading-hint syntax: a terminal ``<lead> <open><reading><close>``
+# suffix.  Different language teams use different delimiters -- vi uses square
+# brackets ("Màn Chắn Lọc [Mask]"), ru uses parentheses ("Аддоны (add-ons)") --
+# so both are recognised.  False positives are prevented not by the delimiter
+# but by requiring the bracketed text to equal the source msgid.
 HINT_OPEN_BRACKET: str = "["
 HINT_CLOSE_BRACKET: str = "]"
+HINT_OPEN_PAREN: str = "("
+HINT_CLOSE_PAREN: str = ")"
+
+# Ordered (open, close) delimiter pairs tried when locating a terminal hint.
+HINT_BRACKET_PAIRS: tuple[tuple[str, str], ...] = (
+    (HINT_OPEN_BRACKET, HINT_CLOSE_BRACKET),
+    (HINT_OPEN_PAREN, HINT_CLOSE_PAREN),
+)
 
 # Sentence-likeness test: a msgid ending in a period is prose and skipped, but
 # an ellipsis (an operator/menu label such as "Move...") is retained.

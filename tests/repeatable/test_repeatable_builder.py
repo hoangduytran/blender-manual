@@ -108,6 +108,26 @@ def test_classify_glossary_hint_lead_is_english():
     assert hint.side == HintSide.ENGLISH_LEAD
 
 
+def test_classify_paren_hint_ru_style():
+    # ru keeps the English in parentheses, often lower-cased.
+    hint = rx.classify_terminal_hint("Объединить (merge)", "Merge")
+    assert hint is not None
+    assert hint.bracket == "merge"
+    assert hint.side == HintSide.ENGLISH_BRACKET
+
+
+def test_classify_paren_picks_terminal_group():
+    # Earlier parenthetical aside is ignored; the terminal group is the hint.
+    hint = rx.classify_terminal_hint("Режим (старый) (mode)", "Mode")
+    assert hint is not None
+    assert hint.bracket == "mode"
+    assert hint.lead == "Режим (старый) "
+
+
+def test_split_terminal_leaf_handles_parens():
+    assert rb.split_terminal_leaf("Объединить (merge) ") == ("Объединить ", "merge", " ")
+
+
 def test_classify_matches_despite_case_drift():
     # Real data: source "Metallic and Roughness" vs translator "And".
     hint = rx.classify_terminal_hint(

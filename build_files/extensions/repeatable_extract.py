@@ -24,8 +24,7 @@ from repeatable_record import RepeatableRecord  # type: ignore[import-not-found]
 from common.constants import (  # type: ignore[import-not-found]
     ELLIPSIS_TERMINATOR,
     EMPTY_STRING,
-    HINT_CLOSE_BRACKET,
-    HINT_OPEN_BRACKET,
+    HINT_BRACKET_PAIRS,
     HintSide,
     PickleEnvelopeKey,
     PO_LOCATION_UP_PREFIX,
@@ -137,34 +136,49 @@ def node_msgstr(node: nodes.Element, msgid: str) -> str:
     return text
 
 
-def classify_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
-    """Classify a terminal ``<lead> [<bracket>]`` reading-hint against *msgid*.
+def split_terminal_group(text: str) -> "tuple[str, str] | None":
+    """Split *text* into ``(lead, bracket)`` at its terminal delimiter group.
 
-    The text must end with exactly one bracket pair and have non-empty lead and
-    bracket.  The bracket is the pilled secondary reading; the *side* is decided
-    by which part equals *msgid* (whitespace- and case-insensitive, see
-    :func:`matches_msgid`):
+    Tries each pair in :data:`HINT_BRACKET_PAIRS` (``[]`` then ``()``).  The
+    terminal group is the last ``<open>...<close>`` run at the end of the text
+    (ignoring trailing whitespace); its content must be non-nested (contain
+    neither delimiter of that pair) and both lead and bracket must be non-empty.
+    """
+    stripped = text.rstrip()
+    for open_char, close_char in HINT_BRACKET_PAIRS:
+        if not stripped.endswith(close_char):
+            continue
+        open_index = stripped.rfind(open_char)
+        if open_index == -1:
+            continue
+        bracket = stripped[open_index + 1:-1]
+        is_nested = open_char in bracket or close_char in bracket
+        lead = text[:open_index]
+        has_valid_parts = bool(bracket.strip()) and bool(lead.strip())
+        if is_nested or not has_valid_parts:
+            continue
+        return lead, bracket
+    return None
+
+
+def classify_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
+    """Classify a terminal ``<lead> <open><bracket><close>`` hint against *msgid*.
+
+    The text must end with a delimiter group (``[]`` or ``()``) whose content
+    and lead are non-empty.  The bracket is the pilled secondary reading; the
+    *side* is decided by which part equals *msgid* (whitespace- and
+    case-insensitive, see :func:`matches_msgid`):
 
     * bracket == msgid  -> :attr:`HintSide.ENGLISH_BRACKET` (body content).
     * lead == msgid     -> :attr:`HintSide.ENGLISH_LEAD` (glossary term).
 
-    Returns ``None`` for nested/empty/compound brackets or when neither side
+    Returns ``None`` for nested/empty/compound groups or when neither side
     matches the source msgid.
     """
-    stripped = text.rstrip()
-    has_single_pair = (
-        stripped.endswith(HINT_CLOSE_BRACKET)
-        and stripped.count(HINT_OPEN_BRACKET) == 1
-        and stripped.count(HINT_CLOSE_BRACKET) == 1
-    )
-    if not has_single_pair:
+    split = split_terminal_group(text)
+    if split is None:
         return None
-    open_index = stripped.index(HINT_OPEN_BRACKET)
-    bracket = stripped[open_index + 1:-1]
-    lead = text[:open_index]
-    has_valid_parts = bool(bracket.strip()) and bool(lead.strip())
-    if not has_valid_parts:
-        return None
+    lead, bracket = split
 
     if matches_msgid(bracket, msgid):
         return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_BRACKET)
