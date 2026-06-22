@@ -1,14 +1,21 @@
-(function () {  // en-hint: v1.0
+(function () {  // en-hint: v2.0 (navigation fallback only)
   'use strict';
 
-  // Wraps an English reading-hint such as "[Add-ons]" inside translated
-  // titles / navigation so CSS can render it as a small, muted pill.
+  // Navigation fallback for the English reading-hint pill.
   //
-  // The hint text lives verbatim inside translated `msgstr` strings (plain
-  // text, no markup), so there is nothing for CSS to select. This script
-  // creates the wrapper at runtime: it walks text nodes inside headings and
-  // navigation links, finds `[...]` runs, and wraps them in
-  // <span class="i18n-en-hint">…</span>.
+  // In-page headings, terms, rubrics, field names and captions are now pilled
+  // server-side by the `repeatable_builder` Sphinx extension (it splits the
+  // doctree leaf and emits <span class="i18n-en-hint">…</span> directly). This
+  // script only covers links that the HTML builder assembles from *other*
+  // documents' titles -- the toctrees, the left sidebar tree and the
+  // prev/next related-pages bar -- which are built after `doctree-resolved`
+  // and so are out of reach of the server-side renderer.
+  //
+  // The hint text lives verbatim inside translated link text (plain text, no
+  // markup), so there is nothing for CSS to select; this walks those links'
+  // text nodes, finds `[...]` runs, and wraps them in
+  // <span class="i18n-en-hint">…</span> -- the SAME class as the server-side
+  // pill, so styling is identical.
   //
   // Convention: only square brackets `[...]` are treated as hints. Parentheses
   // are intentionally NOT matched -- Vietnamese prose uses them for ordinary
@@ -22,10 +29,11 @@
     return;
   }
 
-  // Containers whose text may carry a hint. Scoped deliberately to titles and
-  // navigation -- NOT body paragraphs, where `[...]` is often code/indices.
+  // Navigation links assembled from other docs' titles -- the only place the
+  // server-side renderer cannot reach. Headings (h1-h6) are deliberately NOT
+  // listed: they are pilled server-side now. Body paragraphs are excluded too,
+  // where `[...]` is often code/indices.
   var SELECTORS = [
-    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
     '.sidebar-tree a',            // furo left navigation
     '.toctree-wrapper a',         // in-page toctrees (e.g. section landing pages)
     '.related-pages a',           // bottom prev/next links (a.prev-page / a.next-page)

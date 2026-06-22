@@ -155,3 +155,74 @@ ENCODING_ERROR_MODE: str = "replace"
 
 LOG_MAX_SIZE_MB: int = 10
 LOG_TRIM_ENABLED: bool = True
+
+# ---------------------------------------------------------------------------
+# Repeatable-record extension (build_files/extensions/repeatable_builder.py)
+#
+# The extension extracts allowlisted translated nodes as RepeatableRecord
+# values, writes a gzip-pickle inventory plus a PO catalogue, and renders the
+# terminal English reading-hint as an ``.i18n-en-hint`` pill.  Output filenames
+# are *configured in manual/conf.py* (``repeatable_pickle_filename`` /
+# ``repeatable_po_filename``); the values below are the registration defaults
+# mirrored here so tools and tests share one source of truth.
+# ---------------------------------------------------------------------------
+
+REPEATABLE_PICKLE_FILENAME: str = "repeatable.pkl.gz"
+REPEATABLE_PO_FILENAME: str = "repeatable.po"
+REPEATABLE_PO_DOMAIN: str = "repeatable"          # Babel Catalog domain
+REPEATABLE_SCHEMA_VERSION: int = 1                # pickle envelope schema
+REPEATABLE_NODE_COMMENT_PREFIX: str = "repeatable-node: "  # PO auto comment
+PO_WIDTH_UNWRAPPED: int = 4096                     # dump_po width: no wrapping
+PO_LOCATION_UP_PREFIX: str = "../../"             # locale/<lang>/LC_MESSAGES → repo root
+
+# Names of the conf.py config values that override the filename defaults above.
+CONF_REPEATABLE_PICKLE_FILENAME: str = "repeatable_pickle_filename"
+CONF_REPEATABLE_PO_FILENAME: str = "repeatable_po_filename"
+
+# CSS class shared by the server-side pill and the JS toctree/sidebar fallback
+# (see build_files/theme/css/theme_overrides.css and theme/js/en_hint.js).
+PILL_CSS_CLASS: str = "i18n-en-hint"
+
+# English reading-hint syntax: a terminal ``<translation> [<English>]`` suffix.
+HINT_OPEN_BRACKET: str = "["
+HINT_CLOSE_BRACKET: str = "]"
+
+# Sentence-likeness test: a msgid ending in a period is prose and skipped, but
+# an ellipsis (an operator/menu label such as "Move...") is retained.
+SENTENCE_TERMINATOR: str = "."
+ELLIPSIS_TERMINATOR: str = "..."
+
+# Sentinel line number for a node that carries no source line.
+SOURCE_LINE_UNKNOWN: int = -1
+
+
+class RepeatableTag(str, Enum):
+    """docutils ``node.tagname`` values eligible for repeatable extraction.
+
+    A closed set of inline/title-like nodes whose text is a short, reusable
+    label (a UI string, term, or heading) rather than running prose.  Being a
+    str-enum, members compare equal to their raw tagname so ``node.tagname in
+    REPEATABLE_NODE_TAGNAMES`` works directly.
+    """
+    INLINE = "inline"
+    EMPHASIS = "emphasis"
+    TITLE = "title"
+    TERM = "term"
+    RUBRIC = "rubric"
+    FIELD_NAME = "field_name"
+    REFERENCE = "reference"
+    STRONG = "strong"
+    CAPTION = "caption"
+    TOCTREE = "toctree"
+
+
+# Frozen membership set derived from the enum — the single allowlist used by
+# is_repeatable_tag().
+REPEATABLE_NODE_TAGNAMES: frozenset[str] = frozenset(tag.value for tag in RepeatableTag)
+
+
+class PickleEnvelopeKey(str, Enum):
+    """Top-level keys of the repeatable gzip-pickle envelope."""
+    SCHEMA_VERSION = "schema_version"
+    LANGUAGE = "language"
+    RECORDS_BY_DOC = "records_by_doc"

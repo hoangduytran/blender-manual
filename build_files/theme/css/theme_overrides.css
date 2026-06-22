@@ -414,10 +414,14 @@ a.external:not(figure > a.external) {
 /* End footer contribute link */
 
 /* Start English reading-hint pill.
-   The bracketed English hint inside translated titles/nav (e.g. "[Add-ons]")
-   is wrapped in <span class="i18n-en-hint"> by js/en_hint.js. The brackets are
-   stripped by the script; this rule re-adds discreet ones and renders the hint
-   smaller and muted so it stays present but unobtrusive. */
+   The bracketed English hint inside translated text (e.g. "[Add-ons]") is
+   wrapped in <span class="i18n-en-hint"> by two cooperating sources that share
+   this one class: the repeatable_builder Sphinx extension renders it
+   server-side for in-page content (headings, terms, captions, …), and
+   js/en_hint.js is the runtime fallback for navigation links (toctree, sidebar,
+   prev/next) assembled from other docs' titles. Both drop the brackets; this
+   rule re-adds discreet ones and renders the hint smaller and muted so it stays
+   present but unobtrusive. */
 .i18n-en-hint {
 	display: inline-block;
 	font-size: 0.72em;

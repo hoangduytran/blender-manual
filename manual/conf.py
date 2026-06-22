@@ -71,6 +71,11 @@ extensions = [
     # works on the English (source) build, which has no .po file. No-op for
     # translated builds (they index from their PO via the watcher).
     "search_index_builder",
+    # Translated-language counterpart of search_index_builder: extracts
+    # allowlisted translated nodes as RepeatableRecord values, writes
+    # build/<lang>/repeatable.{pkl.gz,po}, and renders the terminal English
+    # reading-hint as an .i18n-en-hint pill. No-op for the English/source build.
+    "repeatable_builder",
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
 ]
@@ -184,6 +189,13 @@ search_index_filename = "searchindex.pkl.gz"
 # (as opposed to 'make html-direct BF_LANG=<lang>').  Used by index_loader.py
 # as a fallback location when looking for the English search index.
 html_builder_name = "html"
+
+# Repeatable-record extension output filenames (build_files/extensions/
+# repeatable_builder.py).  The extension registers these as config values so
+# they are overridable here in one place; change a name and both the pickle
+# inventory and the PO catalogue follow.  Written to build/<lang>/.
+repeatable_pickle_filename = "repeatable.pkl.gz"
+repeatable_po_filename = "repeatable.po"
 
 # application.log size management.
 # log_max_size_mb: trim application.log (FIFO, oldest entries first) when the

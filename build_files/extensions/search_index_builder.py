@@ -42,7 +42,6 @@ language, so it never collides with the PO-based watcher that owns
 
 from __future__ import annotations
 
-import os
 import sys
 from pathlib import Path
 
@@ -60,11 +59,16 @@ if str(_TOOLS) not in sys.path:
 from common.constants import (  # type: ignore[import-not-found]  # noqa: E402
     DEFAULT_LANGUAGE,
     HTML_SUFFIX,
-    RST_SUFFIX,
     SEARCH_INDEX_FILENAME,
 )
 from search.index_builder import _strip_tones, write_index  # type: ignore[import]  # noqa: E402
 from search.searchable_record import SearchableRecord  # type: ignore[import]  # noqa: E402
+
+# Shared doctree helpers (anchor resolution + source-path mapping) live beside
+# this extension so the translated-language repeatable_builder reuses the exact
+# same logic. Re-exported here so existing callers/tests keep using
+# search_index_builder.nearest_section_id unchanged.
+from _doctree_extract import make_rel_source, nearest_section_id  # noqa: E402,F401
 
 logger = logging.getLogger(__name__)
 
@@ -79,24 +83,9 @@ Occurrence = tuple
 
 # ---------------------------------------------------------------------------
 # Pure helpers (unit-tested without a running Sphinx)
+#
+# nearest_section_id is imported from _doctree_extract and re-exported above.
 # ---------------------------------------------------------------------------
-
-def nearest_section_id(node: nodes.Node) -> str:
-    """Return the id of the nearest enclosing ``section`` (deep-link anchor).
-
-    Walks ancestors until a ``section`` with at least one id is found; returns
-    "" when the message is not inside any identified section (e.g. a stray
-    top-of-document node).
-    """
-    cur: nodes.Node | None = node
-    while cur is not None:
-        if isinstance(cur, nodes.section):
-            ids = cur.get("ids") or []
-            if ids:
-                return ids[0]
-        cur = cur.parent
-    return ""
-
 
 def _in_substitution_definition(node: nodes.Node) -> bool:
     """True if *node* lives inside a substitution definition.
@@ -217,20 +206,10 @@ def _rel_source_factory(app):
     """Return a callable mapping an abs source path → repo-relative RST path.
 
     Repo-relative means ``manual/<...>.rst`` — matching the PO/parser format
-    (which strips the ``../../`` prefix locale PO files carry).
+    (which strips the ``../../`` prefix locale PO files carry). Thin wrapper
+    over the shared :func:`make_rel_source` so both extensions agree.
     """
-    root = Path(app.srcdir).parent  # srcdir == manual/ → parent == repo root
-    src_name = Path(app.srcdir).name  # "manual"
-
-    def rel_source(source: str | None, docname: str) -> str:
-        if source:
-            try:
-                return Path(os.path.relpath(source, root)).as_posix()
-            except ValueError:
-                pass  # e.g. different drive on Windows
-        return f"{src_name}/{docname}{RST_SUFFIX}"
-
-    return rel_source
+    return make_rel_source(Path(app.srcdir))
 
 
 def on_doctree_read(app, doctree) -> None:
