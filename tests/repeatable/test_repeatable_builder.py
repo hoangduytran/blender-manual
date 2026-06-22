@@ -108,6 +108,17 @@ def test_classify_glossary_hint_lead_is_english():
     assert hint.side == HintSide.ENGLISH_LEAD
 
 
+def test_classify_matches_despite_case_drift():
+    # Real data: source "Metallic and Roughness" vs translator "And".
+    hint = rx.classify_terminal_hint(
+        "Kim Loại và Độ Ráp [Metallic And Roughness]", "Metallic and Roughness"
+    )
+    assert hint is not None
+    assert hint.side == HintSide.ENGLISH_BRACKET
+    # Pill keeps the translator's text as written.
+    assert hint.bracket == "Metallic And Roughness"
+
+
 def test_classify_rejects_nested_compound():
     assert rx.classify_terminal_hint(
         "Giao Cắt [Dao] (Intersect [Knife])", "Intersect (Knife)"

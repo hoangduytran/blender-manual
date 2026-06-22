@@ -81,6 +81,16 @@ def normalized(text: str) -> str:
     return " ".join(text.split())
 
 
+def matches_msgid(part: str, msgid: str) -> bool:
+    """True when *part* equals *msgid* ignoring whitespace runs and case.
+
+    Case is folded so translator capitalisation drift (e.g. ``Metallic And
+    Roughness`` vs the source ``Metallic and Roughness``) still matches; the
+    pill text itself is rendered as the translator wrote it.
+    """
+    return normalized(part).casefold() == normalized(msgid).casefold()
+
+
 def is_repeatable_tag(tagname: str) -> bool:
     """True when *tagname* is in the repeatable allowlist."""
     return tagname in REPEATABLE_NODE_TAGNAMES
@@ -132,7 +142,8 @@ def classify_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
 
     The text must end with exactly one bracket pair and have non-empty lead and
     bracket.  The bracket is the pilled secondary reading; the *side* is decided
-    by which part is whitespace-equal (case-sensitive) to *msgid*:
+    by which part equals *msgid* (whitespace- and case-insensitive, see
+    :func:`matches_msgid`):
 
     * bracket == msgid  -> :attr:`HintSide.ENGLISH_BRACKET` (body content).
     * lead == msgid     -> :attr:`HintSide.ENGLISH_LEAD` (glossary term).
@@ -155,10 +166,9 @@ def classify_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
     if not has_valid_parts:
         return None
 
-    normalized_msgid = normalized(msgid)
-    if normalized(bracket) == normalized_msgid:
+    if matches_msgid(bracket, msgid):
         return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_BRACKET)
-    if normalized(lead) == normalized_msgid:
+    if matches_msgid(lead, msgid):
         return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_LEAD)
     return None
 
