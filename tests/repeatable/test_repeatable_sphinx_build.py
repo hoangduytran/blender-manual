@@ -33,6 +33,7 @@ for _p in (_EXT_DIR, _TOOLS_DIR):
 
 PILL_SPAN_NODE_WRANGLER = '<span class="i18n-en-hint">Node Wrangler</span>'
 PILL_SPAN_MASK = '<span class="i18n-en-hint">Mask</span>'
+PILL_SPAN_MATERIALS_VI = '<span class="i18n-vi-hint">Nguyên Vật Liệu</span>'
 
 _INDEX_RST = dedent(
     """\
@@ -43,6 +44,11 @@ _INDEX_RST = dedent(
 
     Mask
         The mask description body.
+
+    .. glossary::
+
+       Materials
+          The surface appearance of an object.
     """
 )
 
@@ -74,6 +80,9 @@ _PO = dedent(
 
     msgid "Mask"
     msgstr "Màn Chắn Lọc [Mask]"
+
+    msgid "Materials"
+    msgstr "Materials [Nguyên Vật Liệu]"
     """
 )
 
@@ -151,6 +160,30 @@ def test_vi_html_renders_pills_server_side(project: Path):
     assert PILL_SPAN_MASK in html
     # The literal bracketed English must not survive in the term text.
     assert "[Mask]" not in html
+
+
+def test_vi_glossary_term_pills_translation_in_vi_class(project: Path):
+    outdir = _build(project, "vi", "vi")
+    html = (outdir / "index.html").read_text(encoding="utf-8")
+    # Glossary keeps the English term first; the Vietnamese is the muted pill.
+    assert PILL_SPAN_MATERIALS_VI in html
+    assert "[Nguyên Vật Liệu]" not in html
+    assert ">Materials\n" in html or ">Materials<" in html or "Materials " in html
+
+
+def test_vi_pickle_flags_glossary_records(project: Path):
+    outdir = _build(project, "vi", "vi")
+    with gzip.open(outdir / "repeatable.pkl.gz", "rb") as fh:
+        envelope = pickle.load(fh)
+    records = [
+        rec
+        for recs in envelope["records_by_doc"].values()
+        for rec in recs
+    ]
+    glossary = [r for r in records if r.is_glossary]
+    assert glossary and all(r.msgid == "Materials" for r in glossary)
+    # Non-glossary records (heading/term) are not flagged.
+    assert any(not r.is_glossary for r in records)
 
 
 # ---------------------------------------------------------------------------

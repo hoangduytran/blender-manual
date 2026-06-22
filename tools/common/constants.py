@@ -170,7 +170,7 @@ LOG_TRIM_ENABLED: bool = True
 REPEATABLE_PICKLE_FILENAME: str = "repeatable.pkl.gz"
 REPEATABLE_PO_FILENAME: str = "repeatable.po"
 REPEATABLE_PO_DOMAIN: str = "repeatable"          # Babel Catalog domain
-REPEATABLE_SCHEMA_VERSION: int = 1                # pickle envelope schema
+REPEATABLE_SCHEMA_VERSION: int = 2                # pickle envelope schema (2: +is_glossary)
 REPEATABLE_NODE_COMMENT_PREFIX: str = "repeatable-node: "  # PO auto comment
 PO_WIDTH_UNWRAPPED: int = 4096                     # dump_po width: no wrapping
 PO_LOCATION_UP_PREFIX: str = "../../"             # locale/<lang>/LC_MESSAGES â†’ repo root
@@ -179,9 +179,19 @@ PO_LOCATION_UP_PREFIX: str = "../../"             # locale/<lang>/LC_MESSAGES â†
 CONF_REPEATABLE_PICKLE_FILENAME: str = "repeatable_pickle_filename"
 CONF_REPEATABLE_PO_FILENAME: str = "repeatable_po_filename"
 
-# CSS class shared by the server-side pill and the JS toctree/sidebar fallback
-# (see build_files/theme/css/theme_overrides.css and theme/js/en_hint.js).
-PILL_CSS_CLASS: str = "i18n-en-hint"
+# CSS classes for the reading-hint pill.  The bracketed text is always the
+# muted "secondary reading"; which language sits in the bracket decides the
+# class (content-driven, see HintSide):
+#   * body content keeps the translation first and the English in brackets
+#     -> the bracket is English -> PILL_EN_CSS_CLASS.
+#   * glossary terms keep the English first and the translation in brackets
+#     -> the bracket is the translation -> PILL_VI_CSS_CLASS.
+# The EN class is also produced by the JS toctree/sidebar fallback.
+PILL_EN_CSS_CLASS: str = "i18n-en-hint"
+PILL_VI_CSS_CLASS: str = "i18n-vi-hint"
+
+# Backwards-compatible alias (the original single-class name).
+PILL_CSS_CLASS: str = PILL_EN_CSS_CLASS
 
 # English reading-hint syntax: a terminal ``<translation> [<English>]`` suffix.
 HINT_OPEN_BRACKET: str = "["
@@ -226,3 +236,19 @@ class PickleEnvelopeKey(str, Enum):
     SCHEMA_VERSION = "schema_version"
     LANGUAGE = "language"
     RECORDS_BY_DOC = "records_by_doc"
+
+
+class HintSide(str, Enum):
+    """Which side of a ``<lead> [<bracket>]`` reading-hint is the source msgid.
+
+    The bracket is always the pilled, muted secondary reading; this records
+    which language it holds so the renderer can pick the right pill class.
+
+    Members:
+        ENGLISH_BRACKET: the bracket equals the msgid (English-in-brackets,
+            i.e. body content) -> the bracket is English.
+        ENGLISH_LEAD: the lead equals the msgid (English-first, i.e. glossary
+            terms) -> the bracket is the translation.
+    """
+    ENGLISH_BRACKET = "english_bracket"
+    ENGLISH_LEAD = "english_lead"

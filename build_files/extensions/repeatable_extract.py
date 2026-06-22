@@ -26,6 +26,7 @@ from common.constants import (  # type: ignore[import-not-found]
     EMPTY_STRING,
     HINT_CLOSE_BRACKET,
     HINT_OPEN_BRACKET,
+    HintSide,
     PickleEnvelopeKey,
     PO_LOCATION_UP_PREFIX,
     REPEATABLE_NODE_COMMENT_PREFIX,
@@ -61,9 +62,14 @@ class ExtractionContext:
 
 @dataclass(frozen=True)
 class TerminalHint:
-    """A validated terminal ``<translation> [<English>]`` split of node text."""
-    prefix: str       # everything before the opening bracket (the translation)
-    english: str      # the bracketed English reading-hint (== msgid)
+    """A validated terminal ``<lead> [<bracket>]`` split of node text.
+
+    The bracket is always the pilled secondary reading; ``side`` records which
+    side carried the source msgid, so the renderer can pick the pill class.
+    """
+    lead: str          # text before the opening bracket
+    bracket: str       # the bracketed secondary reading (always pilled)
+    side: HintSide     # which side equals the source msgid
 
 
 # ---------------------------------------------------------------------------
@@ -121,13 +127,18 @@ def node_msgstr(node: nodes.Element, msgid: str) -> str:
     return text
 
 
-def find_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
-    """Validate that *text* ends with a single ``[<English>]`` equal to *msgid*.
+def classify_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
+    """Classify a terminal ``<lead> [<bracket>]`` reading-hint against *msgid*.
 
-    Returns the prefix/English split when the text has the canonical terminal
-    shape ``<non-empty translation> [<English>]`` with exactly one bracket pair
-    and ``<English>`` whitespace-equal (case-sensitive) to *msgid*; otherwise
-    ``None`` (no nested/empty/mismatched/compound brackets).
+    The text must end with exactly one bracket pair and have non-empty lead and
+    bracket.  The bracket is the pilled secondary reading; the *side* is decided
+    by which part is whitespace-equal (case-sensitive) to *msgid*:
+
+    * bracket == msgid  -> :attr:`HintSide.ENGLISH_BRACKET` (body content).
+    * lead == msgid     -> :attr:`HintSide.ENGLISH_LEAD` (glossary term).
+
+    Returns ``None`` for nested/empty/compound brackets or when neither side
+    matches the source msgid.
     """
     stripped = text.rstrip()
     has_single_pair = (
@@ -138,14 +149,18 @@ def find_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
     if not has_single_pair:
         return None
     open_index = stripped.index(HINT_OPEN_BRACKET)
-    english = stripped[open_index + 1:-1]
-    prefix = text[:open_index]
-    has_valid_parts = bool(english) and bool(prefix.strip())
+    bracket = stripped[open_index + 1:-1]
+    lead = text[:open_index]
+    has_valid_parts = bool(bracket.strip()) and bool(lead.strip())
     if not has_valid_parts:
         return None
-    if normalized(english) != normalized(msgid):
-        return None
-    return TerminalHint(prefix=prefix, english=english)
+
+    normalized_msgid = normalized(msgid)
+    if normalized(bracket) == normalized_msgid:
+        return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_BRACKET)
+    if normalized(lead) == normalized_msgid:
+        return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_LEAD)
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -157,12 +172,27 @@ def _node_line(node: nodes.Element) -> int:
     return node.line if node.line is not None else SOURCE_LINE_UNKNOWN
 
 
+def is_in_glossary(node: nodes.Node) -> bool:
+    """True when *node* is inside a ``.. glossary::`` directive.
+
+    The directive wraps its definition list in an ``addnodes.glossary`` node, so
+    every glossary term has one as an ancestor.
+    """
+    current: nodes.Node | None = node.parent
+    while current is not None:
+        if isinstance(current, addnodes.glossary):
+            return True
+        current = current.parent
+    return False
+
+
 def _make_record(
     node: nodes.Element,
     msgid: str,
     msgstr: str,
     tagname: str,
     context: ExtractionContext,
+    is_glossary: bool = False,
 ) -> RepeatableRecord:
     """Build a single record (ordinal is assigned later by the caller)."""
     return RepeatableRecord(
@@ -175,6 +205,7 @@ def _make_record(
         html_page=context.html_page,
         section_id=nearest_section_id(node),
         ordinal=0,
+        is_glossary=is_glossary,
     )
 
 
@@ -185,7 +216,8 @@ def _direct_node_drafts(
     for node, msgid in extract_messages(doctree):
         if is_repeatable_message(node, msgid):
             yield _make_record(
-                node, msgid, node_msgstr(node, msgid), node.tagname, context
+                node, msgid, node_msgstr(node, msgid), node.tagname, context,
+                is_glossary=is_in_glossary(node),
             )
 
 

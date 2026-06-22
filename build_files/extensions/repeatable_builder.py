@@ -46,11 +46,10 @@ from repeatable_extract import (  # noqa: E402
     ExtractionContext,
     build_catalog,
     build_envelope,
+    classify_terminal_hint,
     extract_repeatable_records,
-    find_terminal_hint,
     group_records_by_doc,
     is_repeatable_tag,
-    normalized,
 )
 
 from common.constants import (  # type: ignore[import-not-found]  # noqa: E402
@@ -58,8 +57,10 @@ from common.constants import (  # type: ignore[import-not-found]  # noqa: E402
     CONF_REPEATABLE_PO_FILENAME,
     HINT_CLOSE_BRACKET,
     HINT_OPEN_BRACKET,
+    HintSide,
     HTML_SUFFIX,
-    PILL_CSS_CLASS,
+    PILL_EN_CSS_CLASS,
+    PILL_VI_CSS_CLASS,
     PO_WIDTH_UNWRAPPED,
     REPEATABLE_PICKLE_FILENAME,
     REPEATABLE_PO_FILENAME,
@@ -86,31 +87,53 @@ _CONFIG_REBUILD_SCOPE = "env"
 class i18n_en_hint(nodes.inline):
     """Inline node rendered as ``<span class="i18n-en-hint">English</span>``.
 
-    Carries only a single :class:`docutils.nodes.Text` child; the HTML writer
-    escapes it, so no raw markup is ever emitted.
+    Used when the bracketed reading is English (body content). Carries only a
+    single :class:`docutils.nodes.Text` child; the HTML writer escapes it, so
+    no raw markup is ever emitted.
+    """
+
+
+class i18n_vi_hint(nodes.inline):
+    """Inline node rendered as ``<span class="i18n-vi-hint">translation</span>``.
+
+    Used when the bracketed reading is the translation (glossary terms, which
+    keep the English first). Same escaped-text guarantee as :class:`i18n_en_hint`.
     """
 
 
 def visit_i18n_en_hint_html(self, node: i18n_en_hint) -> None:
-    """HTML visitor: open the pill span with the canonical class."""
-    self.body.append(self.starttag(node, "span", "", CLASS=PILL_CSS_CLASS))
+    """HTML visitor: open the English pill span."""
+    self.body.append(self.starttag(node, "span", "", CLASS=PILL_EN_CSS_CLASS))
 
 
-def depart_i18n_en_hint_html(self, node: i18n_en_hint) -> None:
-    """HTML visitor: close the pill span."""
+def visit_i18n_vi_hint_html(self, node: i18n_vi_hint) -> None:
+    """HTML visitor: open the translation pill span."""
+    self.body.append(self.starttag(node, "span", "", CLASS=PILL_VI_CSS_CLASS))
+
+
+def depart_pill_html(self, node: nodes.Element) -> None:
+    """HTML visitor: close a pill span (shared by both pill node types)."""
     self.body.append("</span>")
+
+
+# Map the classified hint side to the pill node type that renders it.
+_PILL_NODE_BY_SIDE = {
+    HintSide.ENGLISH_BRACKET: i18n_en_hint,   # bracket is English (body)
+    HintSide.ENGLISH_LEAD: i18n_vi_hint,      # bracket is the translation (glossary)
+}
 
 
 # ---------------------------------------------------------------------------
 # Pill rendering (doctree-resolved, write phase)
 # ---------------------------------------------------------------------------
 
-def split_leaf_hint(leaf_text: str, msgid: str) -> "tuple[str, str, str] | None":
-    """Split a single Text leaf ``"<prefix>[<English>]<trailing-ws>"``.
+def split_terminal_leaf(leaf_text: str) -> "tuple[str, str, str] | None":
+    """Split a single Text leaf ``"<lead>[<bracket>]<trailing-ws>"``.
 
-    Returns ``(prefix, english, trailing)`` when the leaf ends (ignoring
-    trailing whitespace) with exactly one ``[<English>]`` equal to *msgid*;
-    otherwise ``None`` (the hint does not live wholly in this leaf).
+    Returns ``(lead, bracket, trailing)`` when the leaf ends (ignoring trailing
+    whitespace) with exactly one non-empty bracket pair; otherwise ``None`` (the
+    hint does not live wholly in this leaf).  Equality to the msgid is already
+    decided at the whole-node level by :func:`classify_terminal_hint`.
     """
     stripped = leaf_text.rstrip()
     trailing = leaf_text[len(stripped):]
@@ -122,52 +145,60 @@ def split_leaf_hint(leaf_text: str, msgid: str) -> "tuple[str, str, str] | None"
     if not has_single_pair:
         return None
     open_index = stripped.index(HINT_OPEN_BRACKET)
-    english = stripped[open_index + 1:-1]
-    if not english or normalized(english) != normalized(msgid):
+    bracket = stripped[open_index + 1:-1]
+    if not bracket:
         return None
-    return leaf_text[:open_index], english, trailing
+    return leaf_text[:open_index], bracket, trailing
 
 
 def _replace_leaf_with_pill(
-    leaf: nodes.Text, prefix: str, english: str, trailing: str
+    leaf: nodes.Text, lead: str, pill: nodes.Element, trailing: str
 ) -> None:
-    """Replace *leaf* with ``Text(prefix) + pill(english) [+ Text(trailing)]``."""
-    pill = i18n_en_hint()
-    pill += nodes.Text(english)
+    """Replace *leaf* with ``Text(lead) + pill [+ Text(trailing)]``."""
     replacement: list[nodes.Node] = []
-    if prefix:
-        replacement.append(nodes.Text(prefix))
+    if lead:
+        replacement.append(nodes.Text(lead))
     replacement.append(pill)
     if trailing:
         replacement.append(nodes.Text(trailing))
     leaf.parent.replace(leaf, replacement)
 
 
-def wrap_terminal_hint(node: nodes.Element, msgid: str) -> bool:
-    """Wrap the terminal English hint of *node* in a pill, in place.
+def _make_pill(side: HintSide, text: str) -> nodes.Element:
+    """Build the pill node for *side* containing *text*."""
+    pill = _PILL_NODE_BY_SIDE[side]()
+    pill += nodes.Text(text)
+    return pill
 
-    Validates the whole-node terminal shape, then mutates only the last Text
-    leaf — the Vietnamese prefix and the parent node are left byte-for-byte
-    unchanged.  Returns True when a pill was inserted.
+
+def wrap_terminal_hint(node: nodes.Element, msgid: str) -> bool:
+    """Wrap the terminal reading-hint of *node* in a pill, in place.
+
+    Classifies the whole-node terminal shape (deciding the pill class from which
+    side carries the msgid), then mutates only the last Text leaf — the lead
+    text and the parent node are left byte-for-byte unchanged.  Returns True
+    when a pill was inserted.
     """
     is_translated = node.get(_TRANSLATED_FLAG) is True
     if not is_translated:
         return False
-    if find_terminal_hint(node.astext(), msgid) is None:
+    classified = classify_terminal_hint(node.astext(), msgid)
+    if classified is None:
         return False
 
     text_leaves = list(node.findall(nodes.Text))
     if not text_leaves:
         return False
     last_leaf = text_leaves[-1]
-    split = split_leaf_hint(last_leaf.astext(), msgid)
+    split = split_terminal_leaf(last_leaf.astext())
     if split is None:
         logger.debug(
             "[repeatable_builder] hint for %r spans multiple text leaves; "
             "recorded but not pilled", msgid,
         )
         return False
-    _replace_leaf_with_pill(last_leaf, *split)
+    lead, bracket, trailing = split
+    _replace_leaf_with_pill(last_leaf, lead, _make_pill(classified.side, bracket), trailing)
     return True
 
 
@@ -325,17 +356,16 @@ def setup(app):
         CONF_REPEATABLE_PO_FILENAME, REPEATABLE_PO_FILENAME,
         _CONFIG_REBUILD_SCOPE, [str],
     )
-    app.add_node(
-        i18n_en_hint, html=(visit_i18n_en_hint_html, depart_i18n_en_hint_html)
-    )
+    app.add_node(i18n_en_hint, html=(visit_i18n_en_hint_html, depart_pill_html))
+    app.add_node(i18n_vi_hint, html=(visit_i18n_vi_hint_html, depart_pill_html))
     app.connect("doctree-read", on_doctree_read)
     app.connect("env-purge-doc", on_env_purge_doc)
     app.connect("env-merge-info", on_env_merge_info)
     app.connect("doctree-resolved", on_doctree_resolved)
     app.connect("build-finished", on_build_finished)
     return {
-        "version": "1.0",
-        "env_version": 1,
+        "version": "1.1",
+        "env_version": 2,  # bumped: RepeatableRecord gained is_glossary
         "parallel_read_safe": True,
         "parallel_write_safe": True,
     }

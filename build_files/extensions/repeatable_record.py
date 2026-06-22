@@ -29,6 +29,10 @@ class RepeatableRecord:
         section_id: Nearest enclosing section anchor (deep-link target), or ``""``.
         ordinal: Deterministic per-document traversal index; disambiguates two
             occurrences that share a source line.
+        is_glossary: True when the node is a ``.. glossary::`` term. Glossary
+            terms keep the English first and the translation in brackets (the
+            reverse of body content); the flag lets a glossary view filter the
+            shared inventory without a separate file.
 
     Notes:
         Stable identity is ``(docname, source_line, node_tagname, ordinal)``.
@@ -43,3 +47,4 @@ class RepeatableRecord:
     html_page: str
     section_id: str
     ordinal: int
+    is_glossary: bool = False

@@ -443,8 +443,28 @@ Deviations from the draft, all verified against Sphinx 9.1.0 source:
   paired with `caption`/`entries` (translated); records are emitted only when a
   raw source string exists, so no translated text is ever mis-stored as a msgid.
 
-Verified: `pytest tests/repeatable/ -q` (29 tests) green; existing
-`tests/search/` suite still green after the shared-helper refactor.
+### Glossary support (schema v2)
+
+`.. glossary::` terms keep the **English first** and the translation in
+brackets — `Materials [Nguyên Vật Liệu]` — the reverse of body content. Handled
+with one unified rule instead of a special case:
+
+- **Pill class is content-driven.** `classify_terminal_hint` checks which side
+  of `<lead> [<bracket>]` equals the source msgid; the bracket is always pilled.
+  - bracket == msgid → `HintSide.ENGLISH_BRACKET` → `i18n_en_hint`
+    (`.i18n-en-hint`), the body case.
+  - lead == msgid → `HintSide.ENGLISH_LEAD` → `i18n_vi_hint` (`.i18n-vi-hint`),
+    the glossary case (the Vietnamese is pilled).
+- **`is_glossary` is structure-driven.** `is_in_glossary(node)` walks ancestors
+  for `addnodes.glossary`; the flag rides on `RepeatableRecord` so a glossary
+  view filters the **shared** `repeatable.pkl.gz` — no separate file.
+- `.i18n-vi-hint` shares the pill base CSS with `.i18n-en-hint` (identical look,
+  independently targetable/toggleable). `RepeatableRecord` gained
+  `is_glossary: bool`; pickle `schema_version`→2 and extension `env_version`→2.
+
+Verified: `pytest tests/repeatable/ -q` (34 tests, incl. glossary unit +
+integration) green; existing `tests/search/` suite still green after the
+shared-helper refactor.
 
 ## Follow-ups
 

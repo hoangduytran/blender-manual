@@ -422,7 +422,13 @@ a.external:not(figure > a.external) {
    prev/next) assembled from other docs' titles. Both drop the brackets; this
    rule re-adds discreet ones and renders the hint smaller and muted so it stays
    present but unobtrusive. */
-.i18n-en-hint {
+/* .i18n-en-hint  -> English reading-hint in brackets (body content).
+   .i18n-vi-hint  -> translation reading-hint in brackets (glossary terms, which
+                     keep the English term first). Same pill look; separate
+                     classes so the two reading directions can be styled or
+                     toggled independently. */
+.i18n-en-hint,
+.i18n-vi-hint {
 	display: inline-block;
 	font-size: 0.72em;
 	font-weight: 400;
@@ -438,7 +444,8 @@ a.external:not(figure > a.external) {
 }
 
 /* Inside links, don't inherit the link underline/weight; keep it neutral. */
-a .i18n-en-hint {
+a .i18n-en-hint,
+a .i18n-vi-hint {
 	text-decoration: none;
 	font-weight: 400;
 }
@@ -454,14 +461,17 @@ a .i18n-en-hint {
 
 @media print {
 	/* In print, a pill reads oddly -- fall back to plain bracketed text. */
-	.i18n-en-hint {
+	.i18n-en-hint,
+	.i18n-vi-hint {
 		background: none;
 		border: none;
 		padding: 0;
 		font-size: 0.85em;
 	}
-	.i18n-en-hint::before { content: "["; }
-	.i18n-en-hint::after  { content: "]"; }
+	.i18n-en-hint::before,
+	.i18n-vi-hint::before { content: "["; }
+	.i18n-en-hint::after,
+	.i18n-vi-hint::after  { content: "]"; }
 }
 
 /* End English reading-hint pill. */

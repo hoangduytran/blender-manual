@@ -37,7 +37,8 @@ from _doctree_extract import make_rel_source, write_gzip_pickle  # noqa: E402
 from repeatable_record import RepeatableRecord  # noqa: E402
 
 from common.constants import (  # noqa: E402  # type: ignore[import-not-found]
-    PILL_CSS_CLASS,
+    HintSide,
+    PILL_EN_CSS_CLASS,
     PickleEnvelopeKey,
     REPEATABLE_SCHEMA_VERSION,
 )
@@ -92,28 +93,36 @@ def test_is_repeatable_message_combines_rules():
 # Hint validation
 # ---------------------------------------------------------------------------
 
-def test_find_terminal_hint_valid():
-    hint = rx.find_terminal_hint("Màn Chắn Lọc [Mask]", "Mask")
+def test_classify_body_hint_bracket_is_english():
+    hint = rx.classify_terminal_hint("Màn Chắn Lọc [Mask]", "Mask")
     assert hint is not None
-    assert hint.english == "Mask"
-    assert hint.prefix == "Màn Chắn Lọc "
+    assert hint.bracket == "Mask"
+    assert hint.lead == "Màn Chắn Lọc "
+    assert hint.side == HintSide.ENGLISH_BRACKET
 
 
-def test_find_terminal_hint_rejects_nested_compound():
-    assert rx.find_terminal_hint(
+def test_classify_glossary_hint_lead_is_english():
+    hint = rx.classify_terminal_hint("Materials [Nguyên Vật Liệu]", "Materials")
+    assert hint is not None
+    assert hint.bracket == "Nguyên Vật Liệu"  # the translation is pilled
+    assert hint.side == HintSide.ENGLISH_LEAD
+
+
+def test_classify_rejects_nested_compound():
+    assert rx.classify_terminal_hint(
         "Giao Cắt [Dao] (Intersect [Knife])", "Intersect (Knife)"
     ) is None
 
 
-def test_find_terminal_hint_rejects_mismatch_empty_and_no_prefix():
-    assert rx.find_terminal_hint("Foo [Bar]", "Baz") is None
-    assert rx.find_terminal_hint("Foo []", "") is None
-    assert rx.find_terminal_hint("[Mask]", "Mask") is None  # no translation prefix
+def test_classify_rejects_mismatch_empty_and_no_lead():
+    assert rx.classify_terminal_hint("Foo [Bar]", "Baz") is None  # neither side matches
+    assert rx.classify_terminal_hint("Foo []", "Foo") is None     # empty bracket
+    assert rx.classify_terminal_hint("[Mask]", "Mask") is None    # no lead
 
 
-def test_split_leaf_hint_keeps_trailing_whitespace():
-    assert rb.split_leaf_hint("Foo [Bar] ", "Bar") == ("Foo ", "Bar", " ")
-    assert rb.split_leaf_hint("Foo [Bar]", "Baz") is None
+def test_split_terminal_leaf_keeps_trailing_whitespace():
+    assert rb.split_terminal_leaf("Foo [Bar] ") == ("Foo ", "Bar", " ")
+    assert rb.split_terminal_leaf("Foo without bracket") is None
 
 
 # ---------------------------------------------------------------------------
@@ -205,6 +214,41 @@ def test_toctree_caption_and_entries_paired():
 
 
 # ---------------------------------------------------------------------------
+# Glossary detection
+# ---------------------------------------------------------------------------
+
+def test_is_in_glossary_true_inside_glossary_node():
+    term = nodes.term()
+    item = nodes.definition_list_item("", term)
+    dlist = nodes.definition_list("", item)
+    addnodes.glossary("", dlist)  # parents dlist under a glossary node
+    assert rx.is_in_glossary(term) is True
+
+
+def test_is_in_glossary_false_for_plain_term():
+    term = nodes.term()
+    nodes.definition_list_item("", term)
+    assert rx.is_in_glossary(term) is False
+
+
+def test_extract_sets_is_glossary_flag():
+    term = nodes.term()
+    term += nodes.Text("Materials")
+    term["translated"] = True
+    term.rawsource = "Materials"
+    term.source = "/repo/manual/glossary/index.rst"
+    term.line = 11
+    item = nodes.definition_list_item("", term, nodes.definition())
+    dlist = nodes.definition_list("", item)
+    document = new_document("glossary/index", get_default_settings())
+    document += addnodes.glossary("", dlist)
+
+    records = rx.extract_repeatable_records(document, _context("glossary/index"))
+    materials = [r for r in records if r.msgid == "Materials"]
+    assert materials and materials[0].is_glossary is True
+
+
+# ---------------------------------------------------------------------------
 # Pill mutation
 # ---------------------------------------------------------------------------
 
@@ -218,7 +262,18 @@ def test_wrap_terminal_hint_pills_only_english_suffix():
     # The Vietnamese prefix survives as a plain Text sibling, unwrapped.
     assert title.children[0].astext() == "Hai Mặt "
     # The parent title carries no pill class.
-    assert PILL_CSS_CLASS not in title.get("classes", [])
+    assert PILL_EN_CSS_CLASS not in title.get("classes", [])
+
+
+def test_wrap_glossary_hint_pills_translation_with_vi_node():
+    # Glossary term: English first, translation in brackets.
+    term = _translated_node(nodes.term, "Materials [Nguyên Vật Liệu]", "Materials")
+    assert rb.wrap_terminal_hint(term, "Materials") is True
+    vi_pills = list(term.findall(rb.i18n_vi_hint))
+    assert len(vi_pills) == 1
+    assert vi_pills[0].astext() == "Nguyên Vật Liệu"
+    assert not list(term.findall(rb.i18n_en_hint))   # not an English pill
+    assert term.children[0].astext() == "Materials "
 
 
 def test_wrap_terminal_hint_term_renders_pill():
