@@ -14,6 +14,7 @@ Convenience targets provided for building docs.
 - build                to build all BF_LANGS to build/<lang>/ each.
 - liveall              to live-rebuild all BF_LANGS and serve them (single command).
 - serve                to serve the build/ directory on localhost:8000.
+- stop                 to stop a running 'liveall'/'serve' (server + rebuilders).
 - epubpdf              to convert an epub file to PDF.
 
 Translations
@@ -312,6 +313,20 @@ build: .SPHINXBUILD_EXISTS
 serve: ensure-lang-builds
 	@python3 tools/serve_docs.py --build-dir $(BUILDDIR) --langs "$(BF_LANGS)" --open $(SERVE_OPTS)
 
+# --- Stop a running 'liveall'/'serve' (unified server + per-lang rebuilders) ---
+# Mirrors liveall's own startup kill: frees the unified server port and each
+# BF_LANGS rebuilder port (8081, 8082, ...). If liveall was started with a
+# non-default BF_LANGS, pass the same value, e.g. 'make stop BF_LANGS="en vi"'.
+stop:
+	@echo "Stopping liveall/serve listeners..."
+	@python3 tools/serve_docs.py --kill --quiet $(SERVE_OPTS)
+	@port=8081; \
+	for lang in $(BF_LANGS); do \
+	    python3 tools/serve_docs.py --port $$port --kill --quiet; \
+	    port=$$((port + 1)); \
+	done
+	@echo "Stopped."
+
 # --- Translator workflow: monolithic blender_manual.pot --------------------
 gettext: .SPHINXBUILD_EXISTS
 	$(SPHINXBUILD) -M gettext "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) -t legacy_gettext $(O)
@@ -388,7 +403,7 @@ help:
 	@echo ""
 	@echo "$$HELP_TEXT"
 
-.PHONY: help html-direct livehtml-direct build liveall ensure-lang-builds serve search-index gettext Makefile
+.PHONY: help html-direct livehtml-direct build liveall ensure-lang-builds serve stop search-index gettext Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option. $(O) is meant as a shortcut for $(SPHINXOPTS).

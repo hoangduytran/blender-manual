@@ -17,6 +17,7 @@ import pickle
 import threading
 from dataclasses import dataclass
 from pathlib import Path
+from typing import TypeGuard
 
 from .searchable_record import SearchableRecord
 from common.constants import (  # type: ignore[import-not-found]
@@ -42,6 +43,7 @@ class LoadedIndex:
     batches: list[list[SearchableRecord]]   # pre-split for Pool workers
     lang: str
     pkl_path: Path
+    mtime: float = 0.0   # st_mtime of pkl_path when loaded; used to auto-reload
 
 
 _cache: dict[str, LoadedIndex] = {}
@@ -57,12 +59,15 @@ def _make_batches(
     n: int,
 ) -> list[list[SearchableRecord]]:
     """Split records into *n* batches; last batch absorbs the remainder."""
-    if n <= 1 or not records:
+    wants_single_batch = n <= 1
+    has_no_records = not records
+    if wants_single_batch or has_no_records:
         return [records]
-    bs = max(1, len(records) // n)
-    batches = [records[i * bs : (i + 1) * bs] for i in range(n - 1)]
-    batches.append(records[(n - 1) * bs :])
-    return [b for b in batches if b]
+
+    batch_size = max(1, len(records) // n)
+    batches = [records[i * batch_size : (i + 1) * batch_size] for i in range(n - 1)]
+    batches.append(records[(n - 1) * batch_size :])
+    return [batch for batch in batches if batch]   # drop any empty trailing batch
 
 
 def _pkl_path_for(
@@ -78,10 +83,16 @@ def _pkl_path_for(
     """
     dedicated = build_dir / lang / index_filename
     fallback = build_dir / html_builder_name / index_filename
-    if dedicated.exists():
+
+    has_dedicated_index = dedicated.exists()
+    if has_dedicated_index:
         return dedicated
-    if lang == default_language and fallback.exists():
+
+    is_default_language = lang == default_language
+    has_fallback_index = fallback.exists()
+    if is_default_language and has_fallback_index:
         return fallback
+
     return dedicated   # caller handles FileNotFoundError
 
 
@@ -91,19 +102,40 @@ def load_index(pkl_path: Path, lang: str) -> LoadedIndex:
     Thread-safe: if two requests race for the same language, the second
     blocks until the first load completes, then reads from cache.
     Pre-partitions batches at load time so no slicing is needed at query time.
+
+    The cache is mtime-aware: if *pkl_path* has been rewritten since it was
+    cached (e.g. by the doctree extension for English, or a manual rebuild)
+    the index is reloaded automatically — no explicit invalidate or server
+    restart needed. The PO watcher's invalidate_cache() still works and is
+    complementary.
     """
-    if lang in _cache:
-        return _cache[lang]
+    try:
+        mtime = pkl_path.stat().st_mtime
+    except OSError:
+        mtime = 0.0
+
+    def is_cache_fresh(entry: LoadedIndex | None) -> TypeGuard[LoadedIndex]:
+        """True when *entry* is cached and matches the pickle on disk."""
+        return entry is not None and entry.mtime == mtime
+
+    # Fast path: serve from cache without locking when it is already fresh.
+    cached = _cache.get(lang)
+    if is_cache_fresh(cached):
+        return cached
+
+    # Slow path: re-check under the lock (another thread may have just loaded),
+    # then load from disk only if the cache is still stale.
     with _lock:
-        if lang not in _cache:
+        cached = _cache.get(lang)
+        if not is_cache_fresh(cached):
             with gzip.open(pkl_path, "rb") as fh:
                 records: list[SearchableRecord] = pickle.load(fh)
-            n = _n_workers()
             _cache[lang] = LoadedIndex(
                 records=records,
-                batches=_make_batches(records, n),
+                batches=_make_batches(records, _n_workers()),
                 lang=lang,
                 pkl_path=pkl_path,
+                mtime=mtime,
             )
     return _cache[lang]
 
@@ -122,7 +154,8 @@ def load_index_for(
     pkl_path = _pkl_path_for(
         build_dir, lang, index_filename, html_builder_name, default_language
     )
-    if not pkl_path.exists():
+    has_index_file = pkl_path.exists()
+    if not has_index_file:
         return None
     return load_index(pkl_path, lang)
 

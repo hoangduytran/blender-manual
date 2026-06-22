@@ -67,6 +67,10 @@ extensions = [
     "i18n_shards",
     "peertube",
     "reference",
+    # Builds build/en/searchindex.pkl.gz from the doctree so the search overlay
+    # works on the English (source) build, which has no .po file. No-op for
+    # translated builds (they index from their PO via the watcher).
+    "search_index_builder",
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
 ]
@@ -258,6 +262,10 @@ if html_theme == "furo":
     ]
     html_js_files = [
         "js/version_switch.js",
+        # Wraps the English reading-hint "[…]" in translated titles/nav so it
+        # can be styled as a small pill (see css/theme_overrides.css). No-op on
+        # the English build.
+        "js/en_hint.js",
     ]
 
 # Add any paths that contain custom static files (such as style sheets) here,

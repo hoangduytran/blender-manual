@@ -1,9 +1,20 @@
 #! /usr/bin/env python3
 
-"""
-Changes the shortcuts (:kbd:`...`) across all the translated PO files
-of a specific language, according to the provided JSON table.
-Language code must be provided.
+"""Bulk-rewrite keyboard shortcuts (:kbd:`...`) in translated PO files.
+
+For one language, applies a JSON-driven find/replace table to the shortcut
+keys inside ``:kbd:`` roles of every ``msgstr``, across all PO files under
+``locale/<lang>/``.
+
+Edits are **surgical**: only the changed ``msgstr`` byte ranges are rewritten
+and the rest of each file is copied through verbatim, so the diff shows exactly
+the shortcuts that changed (and nothing else). This is why the tool parses the
+raw PO text rather than round-tripping through ``sphinx_intl.catalog.dump_po``,
+which rewraps and reformats every entry.
+
+Usage::
+
+    python3 po_shortcuts.py <LANGUAGE>     # e.g. po_shortcuts.py es
 """
 
 import sys
@@ -14,143 +25,228 @@ import json
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 PO_DIR = os.path.normpath(os.path.join(CURRENT_DIR, "..", "..", "locale"))
 
+# The find/replace table lives next to this script, not in the caller's CWD.
+TABLE_FILE = os.path.join(CURRENT_DIR, "po_shortcuts_tables.json")
+
 ROLE = 'kbd'  # Change to any other role if needed
 
+# debug_log lives in tools/ (the parent of this directory): make it importable
+# so all output goes through the project's logging helpers — no ad-hoc logging,
+# no print().
+_TOOLS_DIR = os.path.dirname(CURRENT_DIR)
+if _TOOLS_DIR not in sys.path:
+    sys.path.insert(0, _TOOLS_DIR)
+from debug_log import debug_log, setup_logging_from_config  # type: ignore[import-not-found]  # noqa: E402
 
-def po_files(path):
+
+def po_files(path: str):
+    """Yield the path of every ``.po`` file under *path* (recursively).
+
+    Hidden directories and hidden files (leading dot) are skipped.
+
+    Args:
+        path: Directory to walk.
+
+    Yields:
+        str: Absolute path to each ``.po`` file found.
+    """
     for dirpath, dirnames, filenames in os.walk(path):
-        if dirpath.startswith("."):
-            continue
+        # Prune hidden directories in-place so os.walk does not descend them.
+        dirnames[:] = [d for d in dirnames if not d.startswith(".")]
         for filename in filenames:
-            if filename.startswith("."):
-                continue
-            ext = os.path.splitext(filename)[1]
-            if ext.lower() == ".po":
+            is_hidden = filename.startswith(".")
+            is_po = os.path.splitext(filename)[1].lower() == ".po"
+            if is_po and not is_hidden:
                 yield os.path.join(dirpath, filename)
 
 
-def parse_po(text):
-    """
-    Parse the given po text for msgstrs.
+def parse_po(text: str):
+    """Yield each raw ``msgstr`` block in *text* with its start offset.
 
-    :param text: the text of the po file.
-    :yield: text of the msgstr, start char position.
+    A "block" is the ``msgstr`` (or ``msgstr[N]`` plural) line plus its
+    continuation ``"..."`` lines, joined as they appear in the file — i.e. the
+    raw PO bytes, not a decoded string. Callers regex-edit the block and splice
+    it back at *start*, preserving the rest of the file verbatim.
+
+    Args:
+        text: Full text of a PO file.
+
+    Yields:
+        tuple[str, int]: ``(block_text, start_char_offset)`` for each msgstr,
+        including every ``msgstr[0]``, ``msgstr[1]``, ... of a plural entry.
+
+    Notes:
+        ``msgctxt``/``msgid`` are intentionally not yielded — shortcuts only
+        appear in translated ``msgstr`` text. The boundary line that ends a
+        block is re-examined, so back-to-back ``msgstr[N]`` plural lines are
+        each captured (the previous implementation dropped all but ``[0]``).
     """
-    msgstr = []
+    block: list[str] = []
+    start = 0
     pos = 0
     for line in text.splitlines(keepends=True):
-        if msgstr:
-            if line.startswith('"'):
-                msgstr.append(line)
-            else:
-                yield "".join(msgstr), start
-                msgstr = []
+        is_continuation = line.startswith('"')
+        is_msgstr_start = line.startswith("msgstr")
+
+        if block and is_continuation:
+            block.append(line)
         else:
-            if line.startswith('msgstr'):
-                msgstr.append(line)
+            if block:                       # current block just ended
+                yield "".join(block), start
+                block = []
+            if is_msgstr_start:             # this same line opens a new block
+                block = [line]
                 start = pos
 
         pos += len(line)
 
-    if msgstr:
-        yield "".join(msgstr), start
+    if block:
+        yield "".join(block), start
 
 
-def read_json(lang):
+def read_json(lang: str):
+    """Load the shortcut find/replace table for *lang* from :data:`TABLE_FILE`.
+
+    Args:
+        lang: Language code whose sub-table to extract.
+
+    Returns:
+        list[tuple[str, str]] | None: The ``(find, replace)`` pairs for *lang*,
+        or ``None`` if the file is missing/invalid or has no table for *lang*.
+    """
     def parse_json(obj):
-        """
-        Function used to parse the json file. Find table and search for duplicates.
+        """json ``object_pairs_hook``: at top level, return *lang*'s sub-table.
 
-        :param obj: tuple passed by 'json.load()'.
-        :return: if 'obj' is top level, it returns the table in a list of 2-tuples,
-                 or None if table not found, or duplicate elements present.
-                 If not on top level, it just returns the passed object.
+        Validates that the requested language table exists and has no duplicate
+        find-keys; raises ValueError otherwise. Non-top-level objects pass
+        through unchanged.
         """
         retval = obj
-        if isinstance(obj[0][1], list):  # top level?
+        is_top_level = isinstance(obj[0][1], list)
+        if is_top_level:
             retval = None  # language table not found so far
             for tpl in obj:
                 if tpl[0] == lang:  # table found?
                     retval = tpl[1]
                     break
             if retval:  # table was found?
-                # Check for duplicates:
                 test_set = set(entry[0] for entry in retval)
-                if len(test_set) < len(retval):  # duplicates?
+                has_duplicates = len(test_set) < len(retval)
+                if has_duplicates:
                     raise ValueError("table contains duplicate entries")
             else:
                 raise ValueError("table not found")
         return retval
 
-    filename = 'po_shortcuts_tables.json'
     try:
-        with open(filename, 'r', encoding="utf-8") as json_file:
+        with open(TABLE_FILE, "r", encoding="utf-8") as json_file:
             table = json.load(json_file, object_pairs_hook=parse_json)
-
     except (IOError, OSError) as err:
-        print("{0}: cannot read data file: {1}".format(filename, err))
+        debug_log("%s: cannot read data file: %s", TABLE_FILE, err)
         return None
-
     except json.JSONDecodeError as err:
-        print("{0}: cannot decode data file: {1}".format(filename, err))
+        debug_log("%s: cannot decode data file: %s", TABLE_FILE, err)
         return None
-
     except ValueError as err:
-        print("{0}: {1}".format(filename, err))
+        debug_log("%s: %s", TABLE_FILE, err)
         return None
 
+    debug_log("Loaded shortcut table for %s: %d entr(y/ies)", lang, len(table))
     return table
 
 
-def main(lang):
-    # todo all available langs for admins
+def _compile_table(table):
+    """Compile the ``(find, replace)`` table into ``:kbd:``-scoped regex rules.
 
+    Each rule matches *find* as a whole word inside a ``:kbd:`...`` role and
+    rewrites it to *replace*, leaving the surrounding role markup intact.
+
+    Args:
+        table: ``(find, replace)`` pairs from :func:`read_json`.
+
+    Returns:
+        list[tuple[re.Pattern, str]]: Compiled pattern and replacement template.
+    """
+    compiled = []
+    for key, value in table:
+        pattern_str = r'(\:' + ROLE + r'\:["\s]*?`[^`]*?)\b' + key + r'\b([^`]*?`)'
+        replace = r'\1' + value + r'\2'
+        compiled.append((re.compile(pattern_str, re.MULTILINE), replace))
+    return compiled
+
+
+def _apply_to_file(filename: str, table_compiled) -> int:
+    """Apply the compiled shortcut rules to one PO file in place.
+
+    Rewrites only the changed ``msgstr`` ranges (everything else is copied
+    verbatim) and writes the file back only when something actually changed.
+
+    Args:
+        filename: Path to the PO file.
+        table_compiled: Rules from :func:`_compile_table`.
+
+    Returns:
+        int: Number of substitutions made in this file (0 means untouched).
+    """
+    with open(filename, "r", encoding="utf-8") as f:
+        text_src = f.read()
+
+    text_dst: list[str] = []
+    last_end = 0
+    n_total = 0
+    for msgstr, start in parse_po(text_src):
+        text_dst.append(text_src[last_end:start])  # verbatim gap before block
+        last_end = start + len(msgstr)
+
+        for pattern, repl in table_compiled:
+            msgstr, n = re.subn(pattern, repl, msgstr)
+            n_total += n
+
+        text_dst.append(msgstr)
+
+    has_changes = n_total != 0
+    if has_changes:
+        if last_end != len(text_src):
+            text_dst.append(text_src[last_end:])  # verbatim tail after last block
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write("".join(text_dst))
+
+    return n_total
+
+
+def main(lang: str) -> None:
+    """Apply the shortcut table to every PO file of *lang*.
+
+    Args:
+        lang: Language code (e.g. ``"es"``); must have a ``locale/<lang>/``
+            folder and an entry in :data:`TABLE_FILE`.
+    """
     lang_dir = os.path.join(PO_DIR, lang)
     if not os.path.exists(lang_dir):
-        print("Language folder not found:", lang)
+        debug_log("Language folder not found: %s", lang)
         return
 
     table = read_json(lang)
     if not table:
         return
 
-    table_compiled = []
-    for key, value in table:
-        pattern_str = r'(\:' + ROLE + r'\:["\s]*?`[^`]*?)\b' + key + r'\b([^`]*?`)'
-        replace = r'\1' + value + r'\2'
-        table_compiled.append((re.compile(pattern_str, re.MULTILINE),
-                               replace))
+    table_compiled = _compile_table(table)
+    debug_log("Compiled %d shortcut pattern(s) for %s", len(table_compiled), lang)
 
     for filename in po_files(lang_dir):
-        with open(filename, 'r', encoding="utf-8") as f:
-            text_src = f.read()
-
-        text_dst = []
-        last_end = 0
-        n_total = 0
-        for msgstr, start in parse_po(text_src):
-            text_dst.append(text_src[last_end:start])
-            last_end = start + len(msgstr)
-
-            for pattern, repl in table_compiled:
-                msgstr, n = re.subn(pattern, repl, msgstr)
-                n_total += n
-
-            text_dst.append(msgstr)
-
-        if n_total != 0:
-            if last_end != len(text_src):
-                text_dst.append(text_src[last_end:])
-
-            with open(filename, 'w', encoding="utf-8") as f:
-                f.write("".join(text_dst))
-
-            print(filename[filename.find('LC_MESSAGES') + 11:] + ':', n_total, 'change(s).')
+        debug_log("Scanning %s", filename)
+        n_total = _apply_to_file(filename, table_compiled)
+        if n_total:
+            short_name = filename[filename.find("LC_MESSAGES") + 11:]
+            debug_log("%s: %d change(s).", short_name, n_total)
 
 
 if __name__ == "__main__":
+    setup_logging_from_config()
     if len(sys.argv) != 2:
-        print("\nUsage: {0} <LANGUAGE>\nExamples: {0} es"
-              .format(os.path.basename(__file__)))
-    else:
-        main(sys.argv[1])
+        debug_log(
+            "Usage: %s <LANGUAGE>   (example: %s es)",
+            os.path.basename(__file__), os.path.basename(__file__),
+        )
+        sys.exit(2)
+    main(sys.argv[1])

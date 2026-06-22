@@ -23,7 +23,7 @@ Usage:
 """
 
 import argparse
-import html as _html
+import dataclasses
 import json
 import logging
 import mimetypes
@@ -44,17 +44,15 @@ _TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
 if _TOOLS_DIR not in sys.path:
     sys.path.insert(0, _TOOLS_DIR)
 
-from common.constants import (  # type: ignore[import-not-found]
+from common.constants import (  # type: ignore[import-not-found]  # noqa: E402
     DEFAULT_LANGUAGE,
     HTML_BUILDER_NAME,
     LC_MESSAGES,
     LOCALE_DIR,
-    LOG_MAX_SIZE_MB,
-    LOG_TRIM_ENABLED,
     PO_FILENAME,
     SEARCH_INDEX_FILENAME,
+    SearchField,
 )
-from common.log_trimmer import ApplicationLogTrimmer  # type: ignore[import-not-found]
 
 # debug_log lives next to this file in tools/; fall back silently if absent.
 try:
@@ -694,6 +692,11 @@ class DocsHandler(BaseHTTPRequestHandler):
             return
 
         req = SearchRequest.from_qs(qs)
+        # Source language (English) has no translation: its index carries empty
+        # msgstr, so search must run on msgid only. (SearchRequest is frozen.)
+        is_source_language = req.lang == self.default_language
+        if is_source_language:
+            req = dataclasses.replace(req, field=SearchField.MSGID)
         build_dir = Path(self.build_dir)
 
         self.send_response(200)
@@ -1078,34 +1081,18 @@ def main() -> None:
     except OSError:
         pass  # non-fatal; restart will fall back to Makefile defaults
 
-    # Resolve project-level settings from ConfigRecord / manual/conf.py once.
-    # Used by both the search engine and the log trimmer below.
+    # Resolve project-level search settings from ConfigRecord / manual/conf.py.
     _search_index_filename = SEARCH_INDEX_FILENAME
     _html_builder_name = HTML_BUILDER_NAME
     _default_language = DEFAULT_LANGUAGE
-    _log_max_mb = LOG_MAX_SIZE_MB
-    _log_trim = LOG_TRIM_ENABLED
     try:
         from translations.smart_mo_compile import ConfigRecord as _CR
         _pcfg = _CR.from_project(Path(project_root), DEFAULT_LANGUAGE)
         _search_index_filename = _pcfg.search_index_filename
         _html_builder_name = _pcfg.html_builder_name
         _default_language = _pcfg.default_language
-        _log_max_mb = _pcfg.log_max_size_mb
-        _log_trim = _pcfg.log_trim_enabled
     except (ImportError, SystemExit, Exception):
         pass
-
-    # application.log size watcher — start unconditionally (not search-only).
-    _log_trimmer = None
-    if _log_trim:
-        _app_log = Path(_TOOLS_DIR).parent / "application.log"
-        _log_trimmer = ApplicationLogTrimmer(
-            log_path=_app_log,
-            max_size_bytes=_log_max_mb * 1024 * 1024,
-        )
-        _log_trimmer.start()
-        debug_log("ApplicationLogTrimmer started: max=%d MB path=%s", _log_max_mb, _app_log)
 
     # Pre-warm the PO search index and start PO file watchers
     if _SEARCH_AVAILABLE:
@@ -1157,8 +1144,6 @@ def main() -> None:
         server.serve_forever()
     except KeyboardInterrupt:
         logging.info("\nShutting down.")
-        if _log_trimmer is not None:
-            _log_trimmer.stop()
         if _SEARCH_AVAILABLE:
             shutdown_pool()
         server.server_close()

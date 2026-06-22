@@ -412,3 +412,52 @@ a.external:not(figure > a.external) {
 }
 
 /* End footer contribute link */
+
+/* Start English reading-hint pill.
+   The bracketed English hint inside translated titles/nav (e.g. "[Add-ons]")
+   is wrapped in <span class="i18n-en-hint"> by js/en_hint.js. The brackets are
+   stripped by the script; this rule re-adds discreet ones and renders the hint
+   smaller and muted so it stays present but unobtrusive. */
+.i18n-en-hint {
+	display: inline-block;
+	font-size: 0.72em;
+	font-weight: 400;
+	line-height: 1;
+	vertical-align: 0.12em;          /* nudge up to sit mid-cap-height */
+	margin-inline-start: 0.35em;
+	padding: 0.15em 0.5em;
+	border-radius: 999px;            /* pill */
+	color: var(--color-foreground-secondary);
+	background-color: var(--color-background-secondary);
+	border: 1px solid var(--color-background-border);
+	white-space: nowrap;
+}
+
+/* Inside links, don't inherit the link underline/weight; keep it neutral. */
+a .i18n-en-hint {
+	text-decoration: none;
+	font-weight: 400;
+}
+
+/* In the sidebar the font is already small -- shrink the gap, drop the border
+   so it doesn't crowd the narrow column. */
+.sidebar-tree .i18n-en-hint {
+	font-size: 0.85em;
+	padding: 0 0.35em;
+	margin-inline-start: 0.25em;
+	border: none;
+}
+
+@media print {
+	/* In print, a pill reads oddly -- fall back to plain bracketed text. */
+	.i18n-en-hint {
+		background: none;
+		border: none;
+		padding: 0;
+		font-size: 0.85em;
+	}
+	.i18n-en-hint::before { content: "["; }
+	.i18n-en-hint::after  { content: "]"; }
+}
+
+/* End English reading-hint pill. */

@@ -63,11 +63,26 @@ except ImportError:
     _read_po_file = None  # type: ignore[assignment]
     _HAS_PO_PARSER = False
 
+try:
+    from debug_log import (  # type: ignore[import-not-found]
+        log_check_interval_seconds as _log_check_interval_seconds,
+        maybe_trim_live_log as _maybe_trim_live_log,
+    )
+    _HAS_LOG_TRIM = True
+except ImportError:
+    _log_check_interval_seconds = None  # type: ignore[assignment]
+    _maybe_trim_live_log = None  # type: ignore[assignment]
+    _HAS_LOG_TRIM = False
+
 
 # ---------------------------------------------------------------------------
 # Type alias: {msgid: (msgstr, [rst_rel_path, ...])}
 # ---------------------------------------------------------------------------
 _Snapshot = dict[str, tuple[str, list[str]]]
+
+_LOG_CONFIG_RELATIVE_PATH = Path("tools/config/logging_config.ini")
+_DISABLED_LOG_CHECK_INTERVAL = 0.0
+_INITIAL_LOG_CHECK_DEADLINE = 0.0
 
 
 # ---------------------------------------------------------------------------
@@ -277,6 +292,9 @@ class MultiPOWatcher(threading.Thread):
         self.interval = interval
         self.rebuild_html = rebuild_html
         self.rst_root = project_root / _RST_SOURCE_DIR
+        self._log_config_path = project_root / _LOG_CONFIG_RELATIVE_PATH
+        self._log_check_interval = self._resolve_log_check_interval()
+        self._next_log_check = _INITIAL_LOG_CHECK_DEADLINE
 
         # Per-language state; populated by _sync_langs()
         self._langs: dict[str, _LangState] = {}
@@ -335,10 +353,29 @@ class MultiPOWatcher(threading.Thread):
         # First check fires immediately (no sleep) so startup-stale indexes
         # are rebuilt before the first user request, not up to `interval` s later.
         self._poll_all()
+        self._maybe_trim_log()
         while True:
             time.sleep(self.interval)
             self._sync_langs()   # pick up new languages added after startup
             self._poll_all()
+            self._maybe_trim_log()
+
+    def _resolve_log_check_interval(self) -> float:
+        if not _HAS_LOG_TRIM or _log_check_interval_seconds is None:
+            return _DISABLED_LOG_CHECK_INTERVAL
+        return _log_check_interval_seconds(self._log_config_path)
+
+    def _maybe_trim_log(self) -> None:
+        """Dispatch a live trim no more often than the configured cadence."""
+        if not _HAS_LOG_TRIM or _maybe_trim_live_log is None:
+            return
+        is_enabled = self._log_check_interval > _DISABLED_LOG_CHECK_INTERVAL
+        current_time = time.monotonic()
+        is_due = current_time >= self._next_log_check
+        if not (is_enabled and is_due):
+            return
+        self._next_log_check = current_time + self._log_check_interval
+        _maybe_trim_live_log(self._log_config_path)
 
     def _poll_all(self) -> None:
         """Check every tracked language for PO mtime changes."""
@@ -409,10 +446,27 @@ class MultiPOWatcher(threading.Thread):
 # ---------------------------------------------------------------------------
 
 class POWatcher(threading.Thread):
-    """Single-language daemon thread (delegates to the same helpers as MultiPOWatcher).
+    """Watch one language's PO file and rebuild its search index when it changes.
 
-    Prefer ``MultiPOWatcher`` for new code; this class is retained so existing
-    callers that construct one watcher per language continue to work.
+    A daemon thread that polls a single ``blender_manual.po`` every *interval*
+    seconds. On each detected change it (1) rebuilds that language's search
+    index synchronously, (2) evicts the in-memory cache via the *invalidate*
+    callback so the next query reads the fresh index, and (3) kicks off a
+    background Sphinx HTML rebuild — targeted to just the changed RST files when
+    they can be determined, otherwise a full rebuild.
+
+    Prefer :class:`MultiPOWatcher` for new code: a single thread there watches
+    every language and also auto-discovers languages added after startup. This
+    class is retained for existing callers that construct one watcher per
+    language, and delegates to the same module-level helpers
+    (``_rebuild_index``, ``_rebuild_html``, ``_load_po_snapshot``).
+
+    Notes:
+        - Runs as a ``daemon`` thread, so it does not block interpreter exit.
+        - The index rebuild is synchronous (blocks the poll loop briefly); the
+          HTML rebuild runs in its own short-lived thread so the watcher keeps
+          polling.
+        - Not thread-safe to share across threads; create one per language.
     """
 
     daemon = True
@@ -427,6 +481,28 @@ class POWatcher(threading.Thread):
         project_root: Path | None = None,
         interval: int = 5,
     ) -> None:
+        """Initialise the watcher and decide whether a startup rebuild is due.
+
+        Args:
+            po_path: Path to the language's ``blender_manual.po`` to watch.
+            rst_root: Root of the RST sources (``manual/``), used to resolve
+                section anchors during the index rebuild.
+            build_dir: This language's output directory (``build/<lang>/``);
+                the search index is written/read here.
+            lang: Language code (e.g. ``"vi"``).
+            invalidate: Callback ``(lang: str) -> None`` that evicts *lang* from
+                the in-memory index cache after a successful rebuild.
+            project_root: Repository root; defaults to ``po_path.parents[3]``
+                (``locale/<lang>/LC_MESSAGES/blender_manual.po`` → repo root).
+            interval: Poll interval in seconds (default 5).
+
+        Notes:
+            If the PO file is newer than the existing index (or the index is
+            missing), ``_last_mtime`` is set to ``0.0`` so the first
+            :meth:`run` poll fires an immediate rebuild instead of waiting for
+            the next edit. The PO snapshot is loaded eagerly only when no such
+            startup rebuild is queued, since a queued rebuild reloads it anyway.
+        """
         super().__init__(name=f"POWatcher-{lang}")
         self.po_path = po_path
         self.rst_root = rst_root
@@ -458,12 +534,27 @@ class POWatcher(threading.Thread):
         self._snapshot: _Snapshot = _load_po_snapshot(po_path) if self._last_mtime != 0.0 else {}
 
     def run(self) -> None:
+        """Poll loop: check once immediately, then every *interval* seconds.
+
+        The immediate first check lets a startup-stale index (see ``__init__``)
+        be rebuilt before the first user request rather than up to *interval*
+        seconds later. Runs until the process exits (daemon thread).
+        """
         self._check()
         while True:
             time.sleep(self.interval)
             self._check()
 
     def _check(self) -> None:
+        """Rebuild index + HTML if the PO file changed since the last check.
+
+        Returns early (no-op) when the PO file is missing or its mtime is
+        unchanged. On a real change it diffs the previous PO snapshot against
+        the current one to find which RST files were affected, rebuilds the
+        search index synchronously, invalidates the cache, then starts a
+        background HTML rebuild scoped to those RST files (or a full rebuild
+        when the changed set cannot be determined).
+        """
         try:
             mtime = self.po_path.stat().st_mtime
         except FileNotFoundError:
