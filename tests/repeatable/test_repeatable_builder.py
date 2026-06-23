@@ -67,6 +67,7 @@ def _translated_node(factory, text: str, msgid: str):
 # Predicates
 # ---------------------------------------------------------------------------
 
+
 def test_allowlisted_tags_accepted_and_others_rejected():
     assert rx.is_repeatable_tag("title")
     assert rx.is_repeatable_tag("term")
@@ -93,6 +94,7 @@ def test_is_repeatable_message_combines_rules():
 # Hint validation
 # ---------------------------------------------------------------------------
 
+
 def test_classify_body_hint_bracket_is_english():
     hint = rx.classify_terminal_hint("Màn Chắn Lọc [Mask]", "Mask")
     assert hint is not None
@@ -116,6 +118,14 @@ def test_classify_paren_hint_ru_style():
     assert hint.side == HintSide.ENGLISH_BRACKET
 
 
+def test_explicit_reference_label_extracts_visible_msgid() -> None:
+    """Explicit RST links expose their visible English source label."""
+    msgid = "`Stable Release <https://www.blender.org/download/>`__"
+
+    assert rx.explicit_reference_label(msgid) == "Stable Release"
+    assert rx.explicit_reference_label("Stable Release") is None
+
+
 def test_classify_paren_picks_terminal_group():
     # Earlier parenthetical aside is ignored; the terminal group is the hint.
     hint = rx.classify_terminal_hint("Режим (старый) (mode)", "Mode")
@@ -125,7 +135,11 @@ def test_classify_paren_picks_terminal_group():
 
 
 def test_split_terminal_leaf_handles_parens():
-    assert rb.split_terminal_leaf("Объединить (merge) ") == ("Объединить ", "merge", " ")
+    assert rb.split_terminal_leaf("Объединить (merge) ") == (
+        "Объединить ",
+        "merge",
+        " ",
+    )
 
 
 def test_classify_matches_despite_case_drift():
@@ -140,15 +154,65 @@ def test_classify_matches_despite_case_drift():
 
 
 def test_classify_rejects_nested_compound():
-    assert rx.classify_terminal_hint(
-        "Giao Cắt [Dao] (Intersect [Knife])", "Intersect (Knife)"
-    ) is None
+    assert (
+        rx.classify_terminal_hint(
+            "Giao Cắt [Dao] (Intersect [Knife])", "Intersect (Knife)"
+        )
+        is None
+    )
 
 
 def test_classify_rejects_mismatch_empty_and_no_lead():
     assert rx.classify_terminal_hint("Foo [Bar]", "Baz") is None  # neither side matches
-    assert rx.classify_terminal_hint("Foo []", "Foo") is None     # empty bracket
-    assert rx.classify_terminal_hint("[Mask]", "Mask") is None    # no lead
+    assert rx.classify_terminal_hint("Foo []", "Foo") is None  # empty bracket
+    assert rx.classify_terminal_hint("[Mask]", "Mask") is None  # no lead
+
+
+# --- near-miss reading-hints: pilled "as written", reported for the translator -
+
+
+# Real data: source "Install from a Package Manager" but the translator dropped
+# the article in the parenthetical.
+_NEAR_MISS_TEXT = "Cài Đặt từ Trình Quản Lý Gói Phần Mềm (Install from Package Manager)"
+_NEAR_MISS_MSGID = "Install from a Package Manager"
+
+
+def test_classify_accepts_near_miss_pilled_as_written():
+    hint = rx.classify_terminal_hint(_NEAR_MISS_TEXT, _NEAR_MISS_MSGID)
+    assert hint is not None
+    assert hint.side == HintSide.ENGLISH_BRACKET
+    # The pill keeps the translator's (imperfect) text, not the source.
+    assert hint.bracket == "Install from Package Manager"
+
+
+def test_classify_hint_mismatch_reports_near_miss_only():
+    # Near-miss -> a mismatch to report.
+    mismatch = rx.classify_hint_mismatch(_NEAR_MISS_TEXT, _NEAR_MISS_MSGID)
+    assert mismatch is not None
+    assert mismatch.msgid == _NEAR_MISS_MSGID
+    assert mismatch.observed == "Install from Package Manager"
+    assert mismatch.ratio >= 0.8
+    # Exact match -> nothing to report.
+    assert rx.classify_hint_mismatch("Màn Chắn Lọc [Mask]", "Mask") is None
+    # Far-off bracket -> not pilled, not reported.
+    assert rx.classify_hint_mismatch("Foo [Bar]", "Baz") is None
+
+
+def test_collect_and_format_mismatches():
+    doc = "getting_started/installing/linux"
+    records_by_doc = {
+        doc: (
+            _record(doc, _NEAR_MISS_MSGID, msgstr=_NEAR_MISS_TEXT, line=28),
+            _record(doc, "Mask", msgstr="Màn Chắn Lọc [Mask]", line=5),  # exact
+        )
+    }
+    pairs = rx.collect_hint_mismatches(records_by_doc)
+    assert len(pairs) == 1  # exact match excluded
+    report = rx.format_mismatch_report(pairs, "vi")
+    assert _NEAR_MISS_MSGID in report
+    assert "Install from Package Manager" in report
+    assert ":28" in report
+    assert "Mask" not in report
 
 
 def test_split_terminal_leaf_keeps_trailing_whitespace():
@@ -159,6 +223,7 @@ def test_split_terminal_leaf_keeps_trailing_whitespace():
 # ---------------------------------------------------------------------------
 # Translation state
 # ---------------------------------------------------------------------------
+
 
 def test_node_msgstr_untranslated_is_empty():
     node = nodes.title()
@@ -172,7 +237,9 @@ def test_node_msgstr_identical_source_is_empty():
 
 
 def test_node_msgstr_returns_translation():
-    node = _translated_node(nodes.title, "Trình Thao Tác Nút [Node Wrangler]", "Node Wrangler")
+    node = _translated_node(
+        nodes.title, "Trình Thao Tác Nút [Node Wrangler]", "Node Wrangler"
+    )
     assert rx.node_msgstr(node, "Node Wrangler") == "Trình Thao Tác Nút [Node Wrangler]"
 
 
@@ -221,6 +288,7 @@ def test_extract_assigns_distinct_ordinals_to_repeated_text():
 # Toctree extraction
 # ---------------------------------------------------------------------------
 
+
 def _doc_with_toctree(toctree) -> nodes.document:
     document = new_document("test", get_default_settings())
     document += toctree
@@ -236,7 +304,9 @@ def test_toctree_caption_and_entries_paired():
     toctree.source = "/repo/manual/index.rst"
     toctree.line = 1
 
-    records = rx.extract_repeatable_records(_doc_with_toctree(toctree), _context("index"))
+    records = rx.extract_repeatable_records(
+        _doc_with_toctree(toctree), _context("index")
+    )
     by_msgid = {r.msgid: r for r in records}
     assert by_msgid["Chapters"].msgstr == "Chương"
     assert by_msgid["Chapters"].node_tagname == "toctree"
@@ -247,6 +317,7 @@ def test_toctree_caption_and_entries_paired():
 # ---------------------------------------------------------------------------
 # Glossary detection
 # ---------------------------------------------------------------------------
+
 
 def test_is_in_glossary_true_inside_glossary_node():
     term = nodes.term()
@@ -283,6 +354,7 @@ def test_extract_sets_is_glossary_flag():
 # Pill mutation
 # ---------------------------------------------------------------------------
 
+
 def test_wrap_terminal_hint_pills_only_english_suffix():
     title = _translated_node(nodes.title, "Hai Mặt [Double-sided]", "Double-sided")
     assert rb.wrap_terminal_hint(title, "Double-sided") is True
@@ -296,14 +368,14 @@ def test_wrap_terminal_hint_pills_only_english_suffix():
     assert PILL_EN_CSS_CLASS not in title.get("classes", [])
 
 
-def test_wrap_glossary_hint_pills_translation_with_vi_node():
-    # Glossary term: English first, translation in brackets.
+def test_wrap_glossary_hint_pills_translation_with_native_node():
+    # Glossary term: English first, native translation in brackets.
     term = _translated_node(nodes.term, "Materials [Nguyên Vật Liệu]", "Materials")
     assert rb.wrap_terminal_hint(term, "Materials") is True
-    vi_pills = list(term.findall(rb.i18n_vi_hint))
-    assert len(vi_pills) == 1
-    assert vi_pills[0].astext() == "Nguyên Vật Liệu"
-    assert not list(term.findall(rb.i18n_en_hint))   # not an English pill
+    native_pills = list(term.findall(rb.i18n_native_hint))
+    assert len(native_pills) == 1
+    assert native_pills[0].astext() == "Nguyên Vật Liệu"
+    assert not list(term.findall(rb.i18n_en_hint))  # not an English pill
     assert term.children[0].astext() == "Materials "
 
 
@@ -331,11 +403,34 @@ def test_wrap_terminal_hint_preserves_reference_target():
     assert list(ref.findall(rb.i18n_en_hint))[0].astext() == "Docs"
 
 
+def test_wrap_repeatable_link_uses_visible_source_msgid() -> None:
+    """A repeatable RST link pills only its repeated visible English label."""
+    msgid = "`Stable Release <https://www.blender.org/download/>`__"
+    translated = "Bản Phát Hành Ổn Định (Stable Release)"
+    term = nodes.term(rawsource=msgid)
+    reference = nodes.reference(
+        rawsource=translated,
+        refuri="https://www.blender.org/download/",
+    )
+    reference += nodes.Text(translated)
+    term += reference
+    term["translated"] = True
+
+    assert rb.wrap_terminal_hint(term, msgid) is True
+    pill = list(term.findall(rb.i18n_en_hint))[0]
+    assert pill.astext() == "Stable Release"
+    assert pill["msgid"] == "Stable Release"
+    assert reference["refuri"] == "https://www.blender.org/download/"
+
+
 # ---------------------------------------------------------------------------
 # Grouping and envelope
 # ---------------------------------------------------------------------------
 
-def _record(docname, msgid, msgstr="", line=1, tag="title", ordinal=0) -> RepeatableRecord:
+
+def _record(
+    docname, msgid, msgstr="", line=1, tag="title", ordinal=0
+) -> RepeatableRecord:
     return RepeatableRecord(
         docname=docname,
         source_path=f"manual/{docname}.rst",
@@ -379,6 +474,7 @@ def test_gzip_pickle_round_trip(tmp_path):
 # ---------------------------------------------------------------------------
 # PO catalogue
 # ---------------------------------------------------------------------------
+
 
 def test_catalog_merges_locations_and_node_comments():
     records = [

@@ -10,11 +10,14 @@ live in ``repeatable_builder``.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, replace
+from difflib import SequenceMatcher
 from typing import Iterable, Iterator
 
 from babel.messages.catalog import Catalog
 from docutils import nodes
+from docutils.utils import unescape
 from sphinx import addnodes
 from sphinx.util.nodes import extract_messages
 
@@ -25,6 +28,7 @@ from common.constants import (  # type: ignore[import-not-found]
     ELLIPSIS_TERMINATOR,
     EMPTY_STRING,
     HINT_BRACKET_PAIRS,
+    HINT_NEAR_MISS_RATIO,
     HintSide,
     PickleEnvelopeKey,
     PO_LOCATION_UP_PREFIX,
@@ -43,6 +47,11 @@ TRANSLATED_FLAG = "translated"
 # Babel Catalog.add() uses None for "no message context".
 NO_MSGCTXT = None
 
+_EXPLICIT_REFERENCE_RE = re.compile(
+    r"^`(?P<label>[^`<>]+?)\s*<[^<>]+>`_{1,2}$",
+    re.DOTALL,
+)
+
 
 @dataclass(frozen=True)
 class ExtractionContext:
@@ -54,6 +63,7 @@ class ExtractionContext:
         rel_source: Maps a node's absolute source path to a repo-relative
             RST path (see :func:`_doctree_extract.make_rel_source`).
     """
+
     docname: str
     html_page: str
     rel_source: RelSource
@@ -66,18 +76,29 @@ class TerminalHint:
     The bracket is always the pilled secondary reading; ``side`` records which
     side carried the source msgid, so the renderer can pick the pill class.
     """
-    lead: str          # text before the opening bracket
-    bracket: str       # the bracketed secondary reading (always pilled)
-    side: HintSide     # which side equals the source msgid
+
+    lead: str  # text before the opening bracket
+    bracket: str  # the bracketed secondary reading (always pilled)
+    side: HintSide  # which side equals the source msgid
 
 
 # ---------------------------------------------------------------------------
 # Text predicates
 # ---------------------------------------------------------------------------
 
+
 def normalized(text: str) -> str:
     """Collapse all runs of whitespace to single spaces and strip the ends."""
     return " ".join(text.split())
+
+
+def explicit_reference_label(msgid: str) -> "str | None":
+    """Return the visible source label from one explicit RST link msgid."""
+    match = _EXPLICIT_REFERENCE_RE.fullmatch(msgid.strip())
+    if match is None:
+        return None
+    label = unescape(match.group("label")).strip()
+    return label or None
 
 
 def matches_msgid(part: str, msgid: str) -> bool:
@@ -88,6 +109,20 @@ def matches_msgid(part: str, msgid: str) -> bool:
     pill text itself is rendered as the translator wrote it.
     """
     return normalized(part).casefold() == normalized(msgid).casefold()
+
+
+def similarity(part: str, msgid: str) -> float:
+    """Similarity ratio of *part* to *msgid* in ``[0.0, 1.0]``.
+
+    Compares whitespace-normalised, case-folded text with
+    :class:`difflib.SequenceMatcher` so a near-miss reading-hint (a dropped
+    article, a stray space, minor punctuation drift) scores close to 1.0 while
+    genuinely different text scores low.  Used as the near-miss gate; an exact
+    match (see :func:`matches_msgid`) is handled separately and always wins.
+    """
+    return SequenceMatcher(
+        None, normalized(part).casefold(), normalized(msgid).casefold()
+    ).ratio()
 
 
 def is_repeatable_tag(tagname: str) -> bool:
@@ -117,6 +152,7 @@ def is_repeatable_message(node: nodes.Element, msgid: str) -> bool:
 # ---------------------------------------------------------------------------
 # Translation state and hint validation
 # ---------------------------------------------------------------------------
+
 
 def node_msgstr(node: nodes.Element, msgid: str) -> str:
     """Return the resolved translated text of *node*, or ``""`` if untranslated.
@@ -151,7 +187,7 @@ def split_terminal_group(text: str) -> "tuple[str, str] | None":
         open_index = stripped.rfind(open_char)
         if open_index == -1:
             continue
-        bracket = stripped[open_index + 1:-1]
+        bracket = stripped[open_index + 1 : -1]
         is_nested = open_char in bracket or close_char in bracket
         lead = text[:open_index]
         has_valid_parts = bool(bracket.strip()) and bool(lead.strip())
@@ -161,19 +197,37 @@ def split_terminal_group(text: str) -> "tuple[str, str] | None":
     return None
 
 
-def classify_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
+# Every delimiter character across all recognised bracket pairs.
+_HINT_DELIMITER_CHARS = frozenset(
+    char for pair in HINT_BRACKET_PAIRS for char in pair
+)
+
+
+def _contains_delimiter(text: str) -> bool:
+    """True when *text* contains any recognised bracket delimiter character."""
+    return any(char in text for char in _HINT_DELIMITER_CHARS)
+
+
+def classify_terminal_hint(
+    text: str, msgid: str, near_miss_ratio: float = HINT_NEAR_MISS_RATIO
+) -> "TerminalHint | None":
     """Classify a terminal ``<lead> <open><bracket><close>`` hint against *msgid*.
 
     The text must end with a delimiter group (``[]`` or ``()``) whose content
     and lead are non-empty.  The bracket is the pilled secondary reading; the
-    *side* is decided by which part equals *msgid* (whitespace- and
+    *side* is decided by which part carries *msgid* (whitespace- and
     case-insensitive, see :func:`matches_msgid`):
 
     * bracket == msgid  -> :attr:`HintSide.ENGLISH_BRACKET` (body content).
     * lead == msgid     -> :attr:`HintSide.ENGLISH_LEAD` (glossary term).
 
-    Returns ``None`` for nested/empty/compound groups or when neither side
-    matches the source msgid.
+    Exact matches win.  Failing that, a *near-miss* — a side whose similarity to
+    *msgid* is at least ``near_miss_ratio`` (see :func:`similarity`) — is still
+    accepted so a typo'd reading-hint (e.g. a dropped article) is pilled "as
+    written"; :func:`classify_hint_mismatch` reports these for the translator.
+
+    Returns ``None`` for nested/empty/compound groups, or when neither side
+    matches or comes close to the source msgid.
     """
     split = split_terminal_group(text)
     if split is None:
@@ -184,12 +238,68 @@ def classify_terminal_hint(text: str, msgid: str) -> "TerminalHint | None":
         return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_BRACKET)
     if matches_msgid(lead, msgid):
         return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_LEAD)
+
+    # Near-miss fallback: accept the side closest to msgid if it clears the bar.
+    # Only "clean" sides (no other delimiter characters) qualify, so ambiguous
+    # compound hints such as "Giao Cắt [Dao] (Intersect [Knife])" stay unpilled.
+    bracket_ratio = 0.0 if _contains_delimiter(bracket) else similarity(bracket, msgid)
+    lead_ratio = 0.0 if _contains_delimiter(lead) else similarity(lead, msgid)
+    if bracket_ratio >= lead_ratio and bracket_ratio >= near_miss_ratio:
+        return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_BRACKET)
+    if lead_ratio > bracket_ratio and lead_ratio >= near_miss_ratio:
+        return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_LEAD)
     return None
+
+
+def terminal_hint_is_exact(text: str, msgid: str) -> bool:
+    """True when *text* has a terminal hint whose carrying side equals *msgid*."""
+    split = split_terminal_group(text)
+    if split is None:
+        return False
+    lead, bracket = split
+    return matches_msgid(bracket, msgid) or matches_msgid(lead, msgid)
+
+
+@dataclass(frozen=True)
+class HintMismatch:
+    """A reading-hint that was pilled as a near-miss, not an exact match.
+
+    Attributes:
+        msgid: the faithful English source the hint should have repeated.
+        observed: the text the translator actually wrote on the carrying side.
+        side: which side carried the (near) match.
+        ratio: similarity of *observed* to *msgid* in ``[0.0, 1.0]``.
+    """
+
+    msgid: str
+    observed: str
+    side: HintSide
+    ratio: float
+
+
+def classify_hint_mismatch(
+    text: str, msgid: str, near_miss_ratio: float = HINT_NEAR_MISS_RATIO
+) -> "HintMismatch | None":
+    """Return a :class:`HintMismatch` when *text* pills only via the near-miss path.
+
+    ``None`` when there is no hint, or when the hint is an exact match (nothing
+    to report).  Mirrors :func:`classify_terminal_hint` so the report lists
+    exactly those hints that were pilled "as written" despite not matching.
+    """
+    hint = classify_terminal_hint(text, msgid, near_miss_ratio)
+    if hint is None or terminal_hint_is_exact(text, msgid):
+        return None
+    observed = hint.bracket if hint.side == HintSide.ENGLISH_BRACKET else hint.lead
+    observed = observed.strip()
+    return HintMismatch(
+        msgid=msgid, observed=observed, side=hint.side, ratio=similarity(observed, msgid)
+    )
 
 
 # ---------------------------------------------------------------------------
 # Record construction
 # ---------------------------------------------------------------------------
+
 
 def _node_line(node: nodes.Element) -> int:
     """Source line of *node*, or the unknown-line sentinel."""
@@ -240,7 +350,11 @@ def _direct_node_drafts(
     for node, msgid in extract_messages(doctree):
         if is_repeatable_message(node, msgid):
             yield _make_record(
-                node, msgid, node_msgstr(node, msgid), node.tagname, context,
+                node,
+                msgid,
+                node_msgstr(node, msgid),
+                node.tagname,
+                context,
                 is_glossary=is_in_glossary(node),
             )
 
@@ -267,7 +381,9 @@ def _toctree_caption_draft(
     if not (source and source.strip()) or is_sentence_like(source):
         return
     translated = toctree.get("caption") or EMPTY_STRING
-    msgstr = translated if normalized(translated) != normalized(source) else EMPTY_STRING
+    msgstr = (
+        translated if normalized(translated) != normalized(source) else EMPTY_STRING
+    )
     yield _make_record(toctree, source, msgstr, RepeatableTag.TOCTREE.value, context)
 
 
@@ -280,9 +396,13 @@ def _toctree_entry_drafts(
         if not (raw_title and raw_title.strip()) or is_sentence_like(raw_title):
             continue
         translated_title = _entry_title_at(entries, index)
-        is_translated = bool(translated_title) and normalized(translated_title) != normalized(raw_title)
+        is_translated = bool(translated_title) and normalized(
+            translated_title
+        ) != normalized(raw_title)
         msgstr = translated_title if is_translated else EMPTY_STRING
-        yield _make_record(toctree, raw_title, msgstr, RepeatableTag.TOCTREE.value, context)
+        yield _make_record(
+            toctree, raw_title, msgstr, RepeatableTag.TOCTREE.value, context
+        )
 
 
 def _entry_title_at(entries: list, index: int) -> str:
@@ -313,6 +433,7 @@ def extract_repeatable_records(
 # ---------------------------------------------------------------------------
 # Grouping and serialisation
 # ---------------------------------------------------------------------------
+
 
 def _record_sort_key(record: RepeatableRecord) -> tuple:
     """Deterministic ordering within a document."""
@@ -347,6 +468,7 @@ def build_envelope(
 # PO catalogue assembly
 # ---------------------------------------------------------------------------
 
+
 def _po_location(record: RepeatableRecord) -> tuple[str, int]:
     """PO location tuple ``("../../manual/<docname>.rst", line)``."""
     return (PO_LOCATION_UP_PREFIX + record.source_path, record.source_line)
@@ -378,6 +500,7 @@ def _merged_locations(records: list[RepeatableRecord]) -> list[tuple[str, int]]:
 @dataclass(frozen=True)
 class CatalogConflict:
     """One msgid with more than one distinct non-empty translation."""
+
     msgid: str
     values: tuple[str, ...]
 
@@ -423,3 +546,65 @@ def build_catalog(
             context=NO_MSGCTXT,
         )
     return catalog, conflicts
+
+
+# ---------------------------------------------------------------------------
+# Misaligned reading-hint report
+# ---------------------------------------------------------------------------
+
+
+def collect_hint_mismatches(
+    records_by_doc: dict[str, tuple[RepeatableRecord, ...]],
+) -> list[tuple[RepeatableRecord, HintMismatch]]:
+    """Find every translated record pilled via the near-miss path.
+
+    Returns ``(record, mismatch)`` pairs in deterministic order so the build
+    warnings and the text report are stable across runs.
+    """
+    found: list[tuple[RepeatableRecord, HintMismatch]] = []
+    for docname in sorted(records_by_doc):
+        for record in records_by_doc[docname]:
+            if not record.msgstr:
+                continue
+            mismatch = classify_hint_mismatch(record.msgstr, record.msgid)
+            if mismatch is not None:
+                found.append((record, mismatch))
+    return found
+
+
+def format_mismatch_report(
+    pairs: list[tuple[RepeatableRecord, HintMismatch]], language: str
+) -> str:
+    """Render the misaligned-hint pairs as a human-readable text report.
+
+    Grouped by source msgid, each with its merged locations and the distinct
+    bracket text the translator wrote, so a translator can find and fix every
+    near-miss the build pilled "as written".
+    """
+    by_msgid: dict[str, list[tuple[RepeatableRecord, HintMismatch]]] = {}
+    for record, mismatch in pairs:
+        by_msgid.setdefault(mismatch.msgid, []).append((record, mismatch))
+
+    lines = [
+        f"# Misaligned reading-hints — {language}",
+        "#",
+        "# The bracketed reading-hint below does not exactly match its English",
+        "# source. It was still pilled using your text, but please correct the",
+        "# bracket so it matches the source exactly (whitespace and case aside).",
+        "#",
+        f"# {len(pairs)} occurrence(s) across {len(by_msgid)} source string(s).",
+        "",
+    ]
+    for msgid in sorted(by_msgid):
+        group = by_msgid[msgid]
+        wrote = sorted({mismatch.observed for _, mismatch in group})
+        locations = sorted(
+            {(record.source_path, record.source_line) for record, _ in group}
+        )
+        lines.append(f"source : {msgid}")
+        for observed in wrote:
+            lines.append(f"wrote  : {observed}")
+        for path, line in locations:
+            lines.append(f"  at   : {path}:{line}")
+        lines.append("")
+    return "\n".join(lines)

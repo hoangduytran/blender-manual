@@ -6,9 +6,9 @@ translated HTML build it:
 1. **Extracts** allowlisted translatable nodes as :class:`RepeatableRecord`
    values at ``doctree-read`` (read phase), so records persist in
    ``environment.pickle`` and survive incremental rebuilds for free.
-2. **Renders** the terminal English reading-hint ``<translation> [<English>]``
-   as a ``.i18n-en-hint`` pill at ``doctree-resolved`` (a stateless per-document
-   DOM mutation).
+2. **Renders** validated terminal reading hints as fixed HTML pills: direct
+   nodes at ``doctree-resolved`` and generated navigation at
+   ``html-page-context``.
 3. **Writes** ``build/<lang>/repeatable.{pkl.gz,po}`` atomically at
    ``build-finished`` from the merged record snapshot.
 
@@ -44,23 +44,35 @@ from _doctree_extract import (  # noqa: E402
 )
 from repeatable_extract import (  # noqa: E402
     ExtractionContext,
+    TerminalHint,
     build_catalog,
     build_envelope,
     classify_terminal_hint,
+    collect_hint_mismatches,
+    explicit_reference_label,
     extract_repeatable_records,
+    format_mismatch_report,
     group_records_by_doc,
-    is_repeatable_tag,
+    is_repeatable_message,
     split_terminal_group,
+)
+from repeatable_html import (  # noqa: E402
+    build_navigation_hint_index,
+    rewrite_body_navigation,
+    rewrite_navigation_fragment,
 )
 
 from common.constants import (  # type: ignore[import-not-found]  # noqa: E402
+    CONF_REPEATABLE_MISMATCH_FILENAME,
     CONF_REPEATABLE_PICKLE_FILENAME,
     CONF_REPEATABLE_PO_FILENAME,
+    FILE_ENCODING,
     HintSide,
     HTML_SUFFIX,
     PILL_EN_CSS_CLASS,
-    PILL_VI_CSS_CLASS,
+    PILL_NATIVE_CSS_CLASS,
     PO_WIDTH_UNWRAPPED,
+    REPEATABLE_MISMATCH_FILENAME,
     REPEATABLE_PICKLE_FILENAME,
     REPEATABLE_PO_FILENAME,
     TEMP_SUFFIX,
@@ -83,6 +95,7 @@ _CONFIG_REBUILD_SCOPE = "env"
 # Custom inline node: the English reading-hint pill
 # ---------------------------------------------------------------------------
 
+
 class i18n_en_hint(nodes.inline):
     """Inline node rendered as ``<span class="i18n-en-hint">English</span>``.
 
@@ -92,22 +105,34 @@ class i18n_en_hint(nodes.inline):
     """
 
 
-class i18n_vi_hint(nodes.inline):
-    """Inline node rendered as ``<span class="i18n-vi-hint">translation</span>``.
+class i18n_native_hint(nodes.inline):
+    """Inline node rendered as ``<span class="i18n-native-hint">translation</span>``.
 
-    Used when the bracketed reading is the translation (glossary terms, which
-    keep the English first). Same escaped-text guarantee as :class:`i18n_en_hint`.
+    Used when the bracketed reading is the native translation (glossary terms,
+    which keep the English first). Language-neutral: the bracket holds whatever
+    the target language is (vi, ru, ...). Same escaped-text guarantee as
+    :class:`i18n_en_hint`.
     """
 
 
 def visit_i18n_en_hint_html(self, node: i18n_en_hint) -> None:
     """HTML visitor: open the English pill span."""
-    self.body.append(self.starttag(node, "span", "", CLASS=PILL_EN_CSS_CLASS))
+    self.body.append(_pill_starttag(self, node, PILL_EN_CSS_CLASS))
 
 
-def visit_i18n_vi_hint_html(self, node: i18n_vi_hint) -> None:
-    """HTML visitor: open the translation pill span."""
-    self.body.append(self.starttag(node, "span", "", CLASS=PILL_VI_CSS_CLASS))
+def visit_i18n_native_hint_html(self, node: i18n_native_hint) -> None:
+    """HTML visitor: open the native-translation pill span."""
+    self.body.append(_pill_starttag(self, node, PILL_NATIVE_CSS_CLASS))
+
+
+def _pill_starttag(self, node: nodes.Element, css_class: str) -> str:
+    """Return a pill start tag carrying repeatable provenance."""
+    attributes = {
+        "CLASS": css_class,
+        "data-repeatable": "true",
+        "data-msgid": node["msgid"],
+    }
+    return self.starttag(node, "span", "", **attributes)
 
 
 def depart_pill_html(self, node: nodes.Element) -> None:
@@ -117,14 +142,15 @@ def depart_pill_html(self, node: nodes.Element) -> None:
 
 # Map the classified hint side to the pill node type that renders it.
 _PILL_NODE_BY_SIDE = {
-    HintSide.ENGLISH_BRACKET: i18n_en_hint,   # bracket is English (body)
-    HintSide.ENGLISH_LEAD: i18n_vi_hint,      # bracket is the translation (glossary)
+    HintSide.ENGLISH_BRACKET: i18n_en_hint,  # bracket is English (body)
+    HintSide.ENGLISH_LEAD: i18n_native_hint,  # bracket is the translation (glossary)
 }
 
 
 # ---------------------------------------------------------------------------
 # Pill rendering (doctree-resolved, write phase)
 # ---------------------------------------------------------------------------
+
 
 def split_terminal_leaf(leaf_text: str) -> "tuple[str, str, str] | None":
     """Split a single Text leaf ``"<lead><open><bracket><close><trailing-ws>"``.
@@ -139,7 +165,7 @@ def split_terminal_leaf(leaf_text: str) -> "tuple[str, str, str] | None":
     if split is None:
         return None
     lead, bracket = split
-    trailing = leaf_text[len(leaf_text.rstrip()):]
+    trailing = leaf_text[len(leaf_text.rstrip()) :]
     return lead, bracket, trailing
 
 
@@ -156,11 +182,27 @@ def _replace_leaf_with_pill(
     leaf.parent.replace(leaf, replacement)
 
 
-def _make_pill(side: HintSide, text: str) -> nodes.Element:
+def _make_pill(side: HintSide, text: str, msgid: str) -> nodes.Element:
     """Build the pill node for *side* containing *text*."""
     pill = _PILL_NODE_BY_SIDE[side]()
+    pill["msgid"] = msgid
     pill += nodes.Text(text)
     return pill
+
+
+def _classify_repeated_text(
+    node: nodes.Element, msgid: str
+) -> "tuple[TerminalHint, str] | None":
+    """Classify repeated text using the catalog msgid or visible link label."""
+    classified = classify_terminal_hint(node.astext(), msgid)
+    if classified is not None:
+        return classified, msgid
+    has_reference = next(node.findall(nodes.reference), None) is not None
+    visible_msgid = explicit_reference_label(msgid) if has_reference else None
+    if visible_msgid is None:
+        return None
+    classified = classify_terminal_hint(node.astext(), visible_msgid)
+    return (classified, visible_msgid) if classified is not None else None
 
 
 def wrap_terminal_hint(node: nodes.Element, msgid: str) -> bool:
@@ -172,11 +214,12 @@ def wrap_terminal_hint(node: nodes.Element, msgid: str) -> bool:
     when a pill was inserted.
     """
     is_translated = node.get(_TRANSLATED_FLAG) is True
-    if not is_translated:
+    if not is_translated or not is_repeatable_message(node, msgid):
         return False
-    classified = classify_terminal_hint(node.astext(), msgid)
-    if classified is None:
+    repeated_text = _classify_repeated_text(node, msgid)
+    if repeated_text is None:
         return False
+    classified, visible_msgid = repeated_text
 
     text_leaves = list(node.findall(nodes.Text))
     if not text_leaves:
@@ -186,24 +229,26 @@ def wrap_terminal_hint(node: nodes.Element, msgid: str) -> bool:
     if split is None:
         logger.debug(
             "[repeatable_builder] hint for %r spans multiple text leaves; "
-            "recorded but not pilled", msgid,
+            "recorded but not pilled",
+            msgid,
         )
         return False
     lead, bracket, trailing = split
-    _replace_leaf_with_pill(last_leaf, lead, _make_pill(classified.side, bracket), trailing)
+    pill = _make_pill(classified.side, bracket, visible_msgid)
+    _replace_leaf_with_pill(last_leaf, lead, pill, trailing)
     return True
 
 
 def wrap_hints_in_doctree(doctree: nodes.document) -> None:
     """Pill every allowlisted node carrying a valid terminal English hint."""
     for node, msgid in extract_messages(doctree):
-        if is_repeatable_tag(node.tagname):
-            wrap_terminal_hint(node, msgid)
+        wrap_terminal_hint(node, msgid)
 
 
 # ---------------------------------------------------------------------------
 # Build gating and per-document context
 # ---------------------------------------------------------------------------
+
 
 def _is_repeatable_build(app) -> bool:
     """True only for a translated-language HTML build."""
@@ -233,6 +278,7 @@ def _records_store(env) -> dict:
 # ---------------------------------------------------------------------------
 # Lifecycle handlers
 # ---------------------------------------------------------------------------
+
 
 def on_doctree_read(app, doctree) -> None:
     """READ phase: extract this document's records onto the env."""
@@ -269,6 +315,53 @@ def on_doctree_resolved(app, doctree, docname) -> None:
     wrap_hints_in_doctree(doctree)
 
 
+def on_builder_inited(app) -> None:
+    """Initialize the per-build navigation-hint index cache."""
+    app.repeatable_navigation_hint_index = None
+
+
+def _navigation_hint_index(app) -> dict[str, tuple[str, ...]]:
+    """Return the validated repeatable navigation index for this build."""
+    if app.repeatable_navigation_hint_index is None:
+        store = getattr(app.env, _ENV_ATTR, None) or {}
+        records = (record for doc_records in store.values() for record in doc_records)
+        app.repeatable_navigation_hint_index = build_navigation_hint_index(records)
+    return app.repeatable_navigation_hint_index
+
+
+def _rewrite_relation_titles(context: dict, index: dict[str, tuple[str, ...]]) -> None:
+    """Write fixed pill markup into previous, next, and parent page titles."""
+    for relation_name in ("prev", "next"):
+        relation = context.get(relation_name)
+        if relation and relation.get("title"):
+            relation["title"] = rewrite_navigation_fragment(relation["title"], index)
+    for relation in context.get("parents") or []:
+        relation["title"] = rewrite_navigation_fragment(relation["title"], index)
+
+
+def on_html_page_context(app, _pagename, _templatename, context, _doctree) -> None:
+    """Write validated navigation pills into HTML before template rendering."""
+    if not _is_repeatable_build(app):
+        return
+    index = _navigation_hint_index(app)
+    context["body"] = rewrite_body_navigation(context.get("body", ""), index)
+    context["toc"] = rewrite_navigation_fragment(context.get("toc", ""), index)
+    if "furo_navigation_tree" in context:
+        context["furo_navigation_tree"] = rewrite_navigation_fragment(
+            context["furo_navigation_tree"], index
+        )
+    _rewrite_relation_titles(context, index)
+
+    original_toctree = context.get("toctree")
+    if callable(original_toctree):
+
+        def render_toctree(*args, **kwargs):
+            rendered = original_toctree(*args, **kwargs)
+            return rewrite_navigation_fragment(rendered, index)
+
+        context["toctree"] = render_toctree
+
+
 def on_build_finished(app, exception) -> None:
     """Flush the merged snapshot to pickle + PO once the build succeeds."""
     if exception is not None:
@@ -295,6 +388,7 @@ def _prune_absent_docs(store: dict, found_docs) -> None:
 # Artifact writing (atomic)
 # ---------------------------------------------------------------------------
 
+
 def _write_artifacts(app, records_by_doc: dict) -> None:
     """Write the gzip-pickle inventory and the PO catalogue atomically."""
     language = app.config.language
@@ -309,17 +403,68 @@ def _write_artifacts(app, records_by_doc: dict) -> None:
     for conflict in conflicts:
         logger.warning(
             "[repeatable_builder] msgid %r has conflicting translations %r; "
-            "kept the first", conflict.msgid, conflict.values,
+            "kept the first",
+            conflict.msgid,
+            conflict.values,
         )
 
     write_gzip_pickle(envelope, pickle_path)
     _write_catalog_atomic(catalog, po_path)
+    _report_hint_mismatches(app, records_by_doc)
 
     total_records = sum(len(records) for records in records_by_doc.values())
     logger.info(
         "[repeatable_builder] wrote %d records across %d docs → %s, %s",
-        total_records, len(records_by_doc), pickle_path.name, po_path.name,
+        total_records,
+        len(records_by_doc),
+        pickle_path.name,
+        po_path.name,
     )
+
+
+def _report_hint_mismatches(app, records_by_doc: dict) -> None:
+    """Warn per misaligned reading-hint and write the collected text report.
+
+    A misaligned hint is one pilled "as written" via the near-miss path: the
+    bracket text is close to the English source but not an exact match (usually a
+    translator typo). Each is logged so it shows in the build, and all are
+    written to the report file so the translator has a worklist. When there are
+    none, any stale report is removed so its absence means "all clean".
+    """
+    report_path = Path(app.outdir) / app.config.repeatable_mismatch_filename
+    pairs = collect_hint_mismatches(records_by_doc)
+    if not pairs:
+        report_path.unlink(missing_ok=True)
+        return
+
+    for record, mismatch in pairs:
+        logger.warning(
+            "[repeatable_builder] reading-hint mismatch: wrote %r but the English "
+            "source is %r; pilled as-written — please fix the bracket",
+            mismatch.observed,
+            mismatch.msgid,
+            location=(record.docname, record.source_line),
+        )
+
+    report = format_mismatch_report(pairs, app.config.language)
+    _write_text_atomic(report, report_path)
+    logger.info(
+        "[repeatable_builder] %d misaligned reading-hint(s) → %s",
+        len(pairs),
+        report_path.name,
+    )
+
+
+def _write_text_atomic(text: str, path: Path) -> None:
+    """Write *text* to *path* via a temp sibling + os.replace."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = path.parent / (path.name + TEMP_SUFFIX)
+    try:
+        tmp_path.write_text(text, encoding=FILE_ENCODING)
+        os.replace(tmp_path, path)
+    except Exception:
+        tmp_path.unlink(missing_ok=True)
+        raise
 
 
 def _write_catalog_atomic(catalog, po_path: Path) -> None:
@@ -338,25 +483,38 @@ def _write_catalog_atomic(catalog, po_path: Path) -> None:
 # Sphinx registration
 # ---------------------------------------------------------------------------
 
+
 def setup(app):
     """Register config values, the pill node, and the lifecycle handlers."""
     app.add_config_value(
-        CONF_REPEATABLE_PICKLE_FILENAME, REPEATABLE_PICKLE_FILENAME,
-        _CONFIG_REBUILD_SCOPE, [str],
+        CONF_REPEATABLE_PICKLE_FILENAME,
+        REPEATABLE_PICKLE_FILENAME,
+        _CONFIG_REBUILD_SCOPE,
+        [str],
     )
     app.add_config_value(
-        CONF_REPEATABLE_PO_FILENAME, REPEATABLE_PO_FILENAME,
-        _CONFIG_REBUILD_SCOPE, [str],
+        CONF_REPEATABLE_PO_FILENAME,
+        REPEATABLE_PO_FILENAME,
+        _CONFIG_REBUILD_SCOPE,
+        [str],
+    )
+    app.add_config_value(
+        CONF_REPEATABLE_MISMATCH_FILENAME,
+        REPEATABLE_MISMATCH_FILENAME,
+        _CONFIG_REBUILD_SCOPE,
+        [str],
     )
     app.add_node(i18n_en_hint, html=(visit_i18n_en_hint_html, depart_pill_html))
-    app.add_node(i18n_vi_hint, html=(visit_i18n_vi_hint_html, depart_pill_html))
+    app.add_node(i18n_native_hint, html=(visit_i18n_native_hint_html, depart_pill_html))
+    app.connect("builder-inited", on_builder_inited)
     app.connect("doctree-read", on_doctree_read)
     app.connect("env-purge-doc", on_env_purge_doc)
     app.connect("env-merge-info", on_env_merge_info)
     app.connect("doctree-resolved", on_doctree_resolved)
+    app.connect("html-page-context", on_html_page_context, priority=700)
     app.connect("build-finished", on_build_finished)
     return {
-        "version": "1.1",
+        "version": "1.2",
         "env_version": 2,  # bumped: RepeatableRecord gained is_glossary
         "parallel_read_safe": True,
         "parallel_write_safe": True,

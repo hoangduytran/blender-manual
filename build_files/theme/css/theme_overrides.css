@@ -415,63 +415,116 @@ a.external:not(figure > a.external) {
 
 /* Start English reading-hint pill.
    The bracketed English hint inside translated text (e.g. "[Add-ons]") is
-   wrapped in <span class="i18n-en-hint"> by two cooperating sources that share
-   this one class: the repeatable_builder Sphinx extension renders it
-   server-side for in-page content (headings, terms, captions, …), and
-   js/en_hint.js is the runtime fallback for navigation links (toctree, sidebar,
-   prev/next) assembled from other docs' titles. Both drop the brackets; this
-   rule re-adds discreet ones and renders the hint smaller and muted so it stays
-   present but unobtrusive. */
-/* .i18n-en-hint  -> English reading-hint in brackets (body content).
-   .i18n-vi-hint  -> translation reading-hint in brackets (glossary terms, which
-                     keep the English term first). Same pill look; separate
-                     classes so the two reading directions can be styled or
-                     toggled independently. */
+   wrapped in <span class="i18n-en-hint"> by repeatable_builder before each HTML
+   page is written. Direct nodes and generated navigation share this one class;
+   no browser-time JavaScript mutation is required. The wrapper drops the
+   delimiters; this rule renders the hint smaller and muted so it stays present
+   but unobtrusive. */
+/* .i18n-en-hint      -> English reading-hint in brackets (body content).
+   .i18n-native-hint  -> native-translation reading-hint in brackets (glossary
+                     terms, which keep the English term first). Language-neutral:
+                     the bracket holds whatever the target language is (vi, ru,
+                     ...). Same pill look; separate classes so the two reading
+                     directions can be styled or toggled independently.
+
+   Every pill value is exposed as a `--i18n-hint-*` custom property on :root so
+   the look can be adjusted *at run time* -- from devtools, a user stylesheet,
+   or a small JS toggle -- without rebuilding the docs. Restyle every pill at
+   once by overriding a variable on :root, e.g.:
+       document.documentElement.style.setProperty('--i18n-hint-font-size', '0.6em');
+   The context rules below (links, sidebar, card, print) only re-point the few
+   variables that differ in that context. */
+:root {
+	/* Shared pill appearance. */
+	--i18n-hint-font-size: 0.72em;
+	--i18n-hint-font-weight: 400;
+	--i18n-hint-line-height: 1;
+	--i18n-hint-vertical-align: 0.12em;   /* nudge up to sit mid-cap-height */
+	--i18n-hint-margin-start: 0.35em;
+	--i18n-hint-padding: 0.15em 0.5em;
+	--i18n-hint-radius: 999px;            /* pill */
+	--i18n-hint-border-width: 1px;
+	/* The colour tokens (--i18n-hint-color/-bg/-border-color) are intentionally
+	   NOT declared here. They would resolve to Furo's --color-* theme variables,
+	   which Furo declares on <body> (and body[data-theme=dark]), not on :root —
+	   so a `var(--color-background-secondary)` evaluated at :root computes to the
+	   guaranteed-invalid value and the pill loses its background/border. The pill
+	   rule below instead reads the Furo variables directly (resolved in <body>
+	   scope, so light/dark both work) via a var() fallback, while still letting
+	   you override a colour at runtime by setting --i18n-hint-bg etc. on :root. */
+
+	/* Sidebar context: already-small font, tighter gap, no border. */
+	--i18n-hint-sidebar-font-size: 0.85em;
+	--i18n-hint-sidebar-padding: 0 0.35em;
+	--i18n-hint-sidebar-margin-start: 0.25em;
+
+	/* Homepage card context: the card title forces 1.3em bold on its spans, so
+	   pull the pill back to ~half that size and the canonical (non-bold) weight. */
+	--i18n-hint-card-font-size: 0.65em;
+	--i18n-hint-card-font-weight: 400;
+
+	/* Print context: drop the pill chrome and restore literal brackets. */
+	--i18n-hint-print-font-size: 0.85em;
+}
+
 .i18n-en-hint,
-.i18n-vi-hint {
+.i18n-native-hint {
 	display: inline-block;
-	font-size: 0.72em;
-	font-weight: 400;
-	line-height: 1;
-	vertical-align: 0.12em;          /* nudge up to sit mid-cap-height */
-	margin-inline-start: 0.35em;
-	padding: 0.15em 0.5em;
-	border-radius: 999px;            /* pill */
-	color: var(--color-foreground-secondary);
-	background-color: var(--color-background-secondary);
-	border: 1px solid var(--color-background-border);
+	font-size: var(--i18n-hint-font-size);
+	font-weight: var(--i18n-hint-font-weight);
+	line-height: var(--i18n-hint-line-height);
+	vertical-align: var(--i18n-hint-vertical-align);
+	margin-inline-start: var(--i18n-hint-margin-start);
+	padding: var(--i18n-hint-padding);
+	border-radius: var(--i18n-hint-radius);
+	/* Fallback resolves the Furo theme variable in <body> scope (see :root note);
+	   set --i18n-hint-* on :root to override at runtime. */
+	color: var(--i18n-hint-color, var(--color-foreground-secondary));
+	background-color: var(--i18n-hint-bg, var(--color-background-secondary));
+	border: var(--i18n-hint-border-width) solid
+		var(--i18n-hint-border-color, var(--color-background-border));
 	white-space: nowrap;
 }
 
 /* Inside links, don't inherit the link underline/weight; keep it neutral. */
 a .i18n-en-hint,
-a .i18n-vi-hint {
+a .i18n-native-hint {
 	text-decoration: none;
-	font-weight: 400;
+	font-weight: var(--i18n-hint-font-weight);
 }
 
 /* In the sidebar the font is already small -- shrink the gap, drop the border
    so it doesn't crowd the narrow column. */
-.sidebar-tree .i18n-en-hint {
-	font-size: 0.85em;
-	padding: 0 0.35em;
-	margin-inline-start: 0.25em;
+.sidebar-tree .i18n-en-hint,
+.sidebar-tree .i18n-native-hint {
+	font-size: var(--i18n-hint-sidebar-font-size);
+	padding: var(--i18n-hint-sidebar-padding);
+	margin-inline-start: var(--i18n-hint-sidebar-margin-start);
 	border: none;
+}
+
+/* Homepage section cards force their title-link spans to 1.3em bold (see
+   `.card dl dt a span`), which also inflated the pill. This more-specific rule
+   pulls it back to a subtle hint via the card variables above. */
+.card .i18n-en-hint,
+.card .i18n-native-hint {
+	font-size: var(--i18n-hint-card-font-size);
+	font-weight: var(--i18n-hint-card-font-weight);
 }
 
 @media print {
 	/* In print, a pill reads oddly -- fall back to plain bracketed text. */
 	.i18n-en-hint,
-	.i18n-vi-hint {
+	.i18n-native-hint {
 		background: none;
 		border: none;
 		padding: 0;
-		font-size: 0.85em;
+		font-size: var(--i18n-hint-print-font-size);
 	}
 	.i18n-en-hint::before,
-	.i18n-vi-hint::before { content: "["; }
+	.i18n-native-hint::before { content: "["; }
 	.i18n-en-hint::after,
-	.i18n-vi-hint::after  { content: "]"; }
+	.i18n-native-hint::after  { content: "]"; }
 }
 
 /* End English reading-hint pill. */

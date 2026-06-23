@@ -31,12 +31,27 @@ for _p in (_EXT_DIR, _TOOLS_DIR):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
 
-PILL_SPAN_NODE_WRANGLER = '<span class="i18n-en-hint">Node Wrangler</span>'
-PILL_SPAN_MASK = '<span class="i18n-en-hint">Mask</span>'
-PILL_SPAN_MATERIALS_VI = '<span class="i18n-vi-hint">Nguyên Vật Liệu</span>'
+PILL_SPAN_NODE_WRANGLER = (
+    '<span class="i18n-en-hint" data-msgid="Node Wrangler" '
+    'data-repeatable="true">Node Wrangler</span>'
+)
+PILL_SPAN_MASK = (
+    '<span class="i18n-en-hint" data-msgid="Mask" ' 'data-repeatable="true">Mask</span>'
+)
+PILL_SPAN_MATERIALS_NATIVE = (
+    '<span class="i18n-native-hint" data-msgid="Materials" '
+    'data-repeatable="true">Nguyên Vật Liệu</span>'
+)
+PILL_SPAN_CHILD_PAGE = (
+    '<span class="i18n-en-hint" data-msgid="Child Page" '
+    'data-repeatable="true">Child Page</span>'
+)
+PILL_SPAN_STABLE_RELEASE = (
+    '<span class="i18n-en-hint" data-msgid="Stable Release" '
+    'data-repeatable="true">Stable Release</span>'
+)
 
-_INDEX_RST = dedent(
-    """\
+_INDEX_RST = dedent("""\
     Node Wrangler
     =============
 
@@ -49,11 +64,27 @@ _INDEX_RST = dedent(
 
        Materials
           The surface appearance of an object.
-    """
-)
 
-_CONF_PY = dedent(
-    f"""\
+    `Stable Release <https://www.blender.org/download/>`__
+        A stable package.
+
+    .. container:: toc-cards
+
+       .. container:: card
+
+          :doc:`child`
+
+    .. toctree::
+
+       Child Page <child>
+    """)
+
+_CHILD_RST = dedent("""\
+    Child Page
+    ==========
+    """)
+
+_CONF_PY = dedent(f"""\
     import sys
     sys.path.insert(0, {str(_EXT_DIR)!r})
     sys.path.insert(0, {str(_TOOLS_DIR)!r})
@@ -66,11 +97,9 @@ _CONF_PY = dedent(
     gettext_compact = "messages"
     repeatable_pickle_filename = "repeatable.pkl.gz"
     repeatable_po_filename = "repeatable.po"
-    """
-)
+    """)
 
-_PO = dedent(
-    """\
+_PO = dedent("""\
     msgid ""
     msgstr ""
     "Content-Type: text/plain; charset=UTF-8\\n"
@@ -83,14 +112,20 @@ _PO = dedent(
 
     msgid "Materials"
     msgstr "Materials [Nguyên Vật Liệu]"
-    """
-)
+
+    msgid "`Stable Release <https://www.blender.org/download/>`__"
+    msgstr "`Bản Phát Hành Ổn Định (Stable Release) <https://www.blender.org/download/>`__"
+
+    msgid "Child Page"
+    msgstr "Trang Con (Child Page)"
+    """)
 
 
 def _write_project(root: Path) -> None:
     """Lay out a minimal Sphinx project with a vi catalogue."""
     (root / "conf.py").write_text(_CONF_PY, encoding="utf-8")
     (root / "index.rst").write_text(_INDEX_RST, encoding="utf-8")
+    (root / "child.rst").write_text(_CHILD_RST, encoding="utf-8")
     lc_messages = root / "locale" / "vi" / "LC_MESSAGES"
     lc_messages.mkdir(parents=True, exist_ok=True)
     (lc_messages / "messages.po").write_text(_PO, encoding="utf-8")
@@ -124,6 +159,7 @@ def project(tmp_path: Path) -> Path:
 # Translated (vi) build
 # ---------------------------------------------------------------------------
 
+
 def test_vi_build_writes_both_artifacts(project: Path):
     outdir = _build(project, "vi", "vi")
     assert (outdir / "repeatable.pkl.gz").is_file()
@@ -137,9 +173,7 @@ def test_vi_pickle_round_trips_records(project: Path):
     assert envelope["language"] == "vi"
     assert envelope["records_by_doc"]  # at least one document captured
     msgids = {
-        rec.msgid
-        for records in envelope["records_by_doc"].values()
-        for rec in records
+        rec.msgid for records in envelope["records_by_doc"].values() for rec in records
     }
     assert {"Node Wrangler", "Mask"} <= msgids
 
@@ -162,11 +196,27 @@ def test_vi_html_renders_pills_server_side(project: Path):
     assert "[Mask]" not in html
 
 
-def test_vi_glossary_term_pills_translation_in_vi_class(project: Path):
+def test_vi_html_fixes_generated_toctree_pill_at_build_time(project: Path):
+    outdir = _build(project, "vi", "vi")
+    html = (outdir / "index.html").read_text(encoding="utf-8")
+
+    assert html.count(f"Trang Con {PILL_SPAN_CHILD_PAGE}") >= 2
+    assert ">Trang Con (Child Page)<" not in html
+
+
+def test_vi_html_pills_repeatable_external_link_at_resolve_time(project: Path):
+    outdir = _build(project, "vi", "vi")
+    html = (outdir / "index.html").read_text(encoding="utf-8")
+
+    assert f"Bản Phát Hành Ổn Định {PILL_SPAN_STABLE_RELEASE}" in html
+    assert 'href="https://www.blender.org/download/"' in html
+
+
+def test_vi_glossary_term_pills_translation_in_native_class(project: Path):
     outdir = _build(project, "vi", "vi")
     html = (outdir / "index.html").read_text(encoding="utf-8")
     # Glossary keeps the English term first; the Vietnamese is the muted pill.
-    assert PILL_SPAN_MATERIALS_VI in html
+    assert PILL_SPAN_MATERIALS_NATIVE in html
     assert "[Nguyên Vật Liệu]" not in html
     assert ">Materials\n" in html or ">Materials<" in html or "Materials " in html
 
@@ -175,11 +225,7 @@ def test_vi_pickle_flags_glossary_records(project: Path):
     outdir = _build(project, "vi", "vi")
     with gzip.open(outdir / "repeatable.pkl.gz", "rb") as fh:
         envelope = pickle.load(fh)
-    records = [
-        rec
-        for recs in envelope["records_by_doc"].values()
-        for rec in recs
-    ]
+    records = [rec for recs in envelope["records_by_doc"].values() for rec in recs]
     glossary = [r for r in records if r.is_glossary]
     assert glossary and all(r.msgid == "Materials" for r in glossary)
     # Non-glossary records (heading/term) are not flagged.
@@ -189,6 +235,7 @@ def test_vi_pickle_flags_glossary_records(project: Path):
 # ---------------------------------------------------------------------------
 # Source (English) build
 # ---------------------------------------------------------------------------
+
 
 def test_en_build_writes_no_artifacts_and_no_pill(project: Path):
     outdir = _build(project, "en", None)

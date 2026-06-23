@@ -5,6 +5,7 @@ everywhere.  All values must match the corresponding settings in
 ``manual/conf.py`` (which ConfigRecord reads at runtime).
 """
 
+import re
 from enum import Enum
 
 # ---------------------------------------------------------------------------
@@ -143,20 +144,6 @@ FILE_ENCODING: str = "utf-8"
 ENCODING_ERROR_MODE: str = "replace"
 
 # ---------------------------------------------------------------------------
-# application.log size management (ApplicationLogTrimmer)
-#
-# LOG_MAX_SIZE_MB — trim application.log when it reaches this many megabytes.
-#   The trimmer discards the oldest ~50 % (FIFO) so the file stays below the
-#   limit after each trim cycle.  Range: any positive integer; default 10 MB.
-#
-# LOG_TRIM_ENABLED — master switch.  Can be overridden by manual/conf.py
-#   (log_trim_enabled = False) to disable trimming entirely.
-# ---------------------------------------------------------------------------
-
-LOG_MAX_SIZE_MB: int = 10
-LOG_TRIM_ENABLED: bool = True
-
-# ---------------------------------------------------------------------------
 # Repeatable-record extension (build_files/extensions/repeatable_builder.py)
 #
 # The extension extracts allowlisted translated nodes as RepeatableRecord
@@ -175,20 +162,35 @@ REPEATABLE_NODE_COMMENT_PREFIX: str = "repeatable-node: "  # PO auto comment
 PO_WIDTH_UNWRAPPED: int = 4096                     # dump_po width: no wrapping
 PO_LOCATION_UP_PREFIX: str = "../../"             # locale/<lang>/LC_MESSAGES → repo root
 
+# Plain-text report of misaligned reading-hints (see HINT_NEAR_MISS_RATIO).
+REPEATABLE_MISMATCH_FILENAME: str = "repeatable_mismatch.txt"
+
 # Names of the conf.py config values that override the filename defaults above.
 CONF_REPEATABLE_PICKLE_FILENAME: str = "repeatable_pickle_filename"
 CONF_REPEATABLE_PO_FILENAME: str = "repeatable_po_filename"
+CONF_REPEATABLE_MISMATCH_FILENAME: str = "repeatable_mismatch_filename"
+
+# A terminal bracket whose text is not an exact match for the source msgid is
+# still pilled "as written" when its similarity to the msgid is at least this
+# ratio (difflib.SequenceMatcher on whitespace-normalised, case-folded text).
+# Such near-misses are almost always a typo'd reading-hint (e.g. a dropped
+# article: "Install from Package Manager" vs "Install from a Package Manager",
+# ratio ~0.96); they are pilled but reported so the translator can fix the
+# source.  Genuinely different bracketed text (e.g. "Bar" vs "Baz", ratio ~0.67)
+# stays below the bar and is left untouched.
+HINT_NEAR_MISS_RATIO: float = 0.8
 
 # CSS classes for the reading-hint pill.  The bracketed text is always the
 # muted "secondary reading"; which language sits in the bracket decides the
-# class (content-driven, see HintSide):
+# class (content-driven, see HintSide).  Both names are language-neutral: "en"
+# is always English (the source), and the other is the target translation
+# whatever it is (vi, ru, ...), so the class is "native", never "vi":
 #   * body content keeps the translation first and the English in brackets
 #     -> the bracket is English -> PILL_EN_CSS_CLASS.
 #   * glossary terms keep the English first and the translation in brackets
-#     -> the bracket is the translation -> PILL_VI_CSS_CLASS.
-# The EN class is also produced by the JS toctree/sidebar fallback.
+#     -> the bracket is the native translation -> PILL_NATIVE_CSS_CLASS.
 PILL_EN_CSS_CLASS: str = "i18n-en-hint"
-PILL_VI_CSS_CLASS: str = "i18n-vi-hint"
+PILL_NATIVE_CSS_CLASS: str = "i18n-native-hint"
 
 # Backwards-compatible alias (the original single-class name).
 PILL_CSS_CLASS: str = PILL_EN_CSS_CLASS
@@ -264,3 +266,82 @@ class HintSide(str, Enum):
     """
     ENGLISH_BRACKET = "english_bracket"
     ENGLISH_LEAD = "english_lead"
+
+
+# ---------------------------------------------------------------------------
+# Repeatable navigation HTML rewriting (build_files/extensions/repeatable_html.py)
+#
+# Furo builds its navigation tree (sidebar toctrees, homepage cards) as already
+# rendered HTML, after the doctree pill mutation has run.  To pill the terminal
+# English reading-hint inside that generated markup the extension does a
+# text-token rewrite over the raw HTML string, which needs three regexes.  They
+# are centralised here — together with the structural CSS class names they
+# target and their flags — so the patterns have a single source of truth and
+# can be reused by tools and tests.
+#
+# NOTE: these are shallow, non-nesting matchers tuned for the flat fragments
+# Furo emits; they are deliberately *not* a general-purpose HTML parser.
+# ---------------------------------------------------------------------------
+
+# Furo/Sphinx structural CSS class names whose ``<div>`` containers hold the
+# navigation text eligible for rewriting.  Each is matched with word boundaries
+# (``\b…\b``) so an alphanumeric/underscore-adjacent class such as "cards" or
+# "scorecard" is not matched.  A hyphen counts as a boundary, so "card-header"
+# *would* match — acceptable for these Furo containers.
+NAV_TOCTREE_WRAPPER_CSS_CLASS: str = "toctree-wrapper"
+NAV_TOC_CARD_CSS_CLASS: str = "card"
+
+# Group names shared between the patterns below and their consumers
+# (build_files/extensions/repeatable_html.py), so call sites reference groups by
+# name instead of brittle positional indices.
+HTML_TAG_GROUP: str = "tag"           # HTML_TAG_RE: one whole HTML tag
+NAV_OPEN_GROUP: str = "open"          # NAV_*_RE: the opening <div …> tag
+NAV_BODY_GROUP: str = "body"          # NAV_*_RE: the rewritable inner HTML
+NAV_CLOSE_GROUP: str = "close"        # NAV_*_RE: the matching </div> tag
+
+# Splits an HTML fragment into alternating text/tag tokens.  The single
+# (named) capturing group keeps the tags in ``re.split()`` output — odd indices
+# are tags, even indices are text.  The tag body tolerates a quoted ``>`` inside
+# attribute values (``"…"`` or ``'…'``) so an attribute value never terminates a
+# tag early.  Written verbose so each alternative is self-documenting.
+HTML_TAG_RE: re.Pattern[str] = re.compile(
+    rf"""
+    (?P<{HTML_TAG_GROUP}>        # one whole HTML tag (kept by re.split)
+        <                        #   opening angle bracket
+        (?:                      #   tag body — any run of:
+            [^>"']               #     a char that is not >, " or '
+            | "[^"]*"            #     or a "double-quoted" attribute value
+            | '[^']*'            #     or a 'single-quoted' attribute value
+        )*
+        >                        #   closing angle bracket
+    )
+    """,
+    re.VERBOSE,
+)
+
+
+# Template for a ``<div class="… CLASS …">BODY</div>`` container matcher.  The
+# three named groups (open / body / close) let the body be rewritten in place
+# while the surrounding ``<div>`` is preserved verbatim.  ``re.DOTALL`` lets the
+# body span newlines; the lazy ``.*?`` stops at the first ``</div>``.  Kept
+# private; use the compiled NAV_*_RE patterns below.
+def _nav_container_re(css_class: str) -> re.Pattern[str]:
+    """Compile a navigation-container matcher for one structural CSS class."""
+    return re.compile(
+        rf"""
+        (?P<{NAV_OPEN_GROUP}>                    # opening <div …> with the class
+            <div\s+class="
+            [^"]*\b{re.escape(css_class)}\b[^"]*
+            ">
+        )
+        (?P<{NAV_BODY_GROUP}>.*?)                 # inner HTML (lazy, may span lines)
+        (?P<{NAV_CLOSE_GROUP}></div>)            # matching closing tag
+        """,
+        re.DOTALL | re.VERBOSE,
+    )
+
+
+# In-page rendered toctrees emitted as ``<div class="toctree-wrapper …">``.
+NAV_TOCTREE_WRAPPER_RE: re.Pattern[str] = _nav_container_re(NAV_TOCTREE_WRAPPER_CSS_CLASS)
+# Homepage navigation cards emitted as ``<div class="card …">``.
+NAV_TOC_CARD_RE: re.Pattern[str] = _nav_container_re(NAV_TOC_CARD_CSS_CLASS)
