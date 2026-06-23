@@ -76,6 +76,11 @@ extensions = [
     # build/<lang>/repeatable.{pkl.gz,po}, and renders the terminal English
     # reading-hint as an .i18n-en-hint pill. No-op for the English/source build.
     "repeatable_builder",
+    # Centralises _static/_images under build/shared and references them per
+    # language via symlink, so the ~250 MB image set is copied once instead of
+    # per language. A language may override an asset by dropping a file under
+    # locale/<lang>/_images or locale/<lang>/_static. See shared_assets.py.
+    "shared_assets",
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
 ]
@@ -190,20 +195,23 @@ search_index_filename = "searchindex.pkl.gz"
 # as a fallback location when looking for the English search index.
 html_builder_name = "html"
 
+# Command that tools/translations/update_po.py invokes to merge the generated
+# .pot into each locale's .po.  Declared here so the tool name lives in one
+# place: if sphinx-intl is ever renamed, or you prefer the interpreter-pinned
+# module form, change it here (e.g. "python -m sphinx_intl") and update_po.py
+# follows.  The value is parsed with shlex, so multi-word commands work.
+sphinx_intl_command = "sphinx-intl"
+
 # Repeatable-record extension output filenames (build_files/extensions/
 # repeatable_builder.py).  The extension registers these as config values so
 # they are overridable here in one place; change a name and both the pickle
 # inventory and the PO catalogue follow.  Written to build/<lang>/.
 repeatable_pickle_filename = "repeatable.pkl.gz"
 repeatable_po_filename = "repeatable.po"
-
-# application.log size management.
-# log_max_size_mb: trim application.log (FIFO, oldest entries first) when the
-#   file exceeds this size.  The trimmer keeps the most-recent ~50 % of content
-#   and writes a dated trim-marker where the removed block began.
-# log_trim_enabled: set to False to disable automatic trimming entirely.
-log_max_size_mb = 10
-log_trim_enabled = True
+# Plain-text report of misaligned reading-hints: bracketed hints close to, but
+# not exactly matching, their English source.  They are pilled "as written" and
+# listed here (with build warnings) so the translator can fix the source.
+repeatable_mismatch_filename = "repeatable_mismatch.txt"
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -274,16 +282,30 @@ if html_theme == "furo":
     ]
     html_js_files = [
         "js/version_switch.js",
-        # Wraps the English reading-hint "[…]" in translated titles/nav so it
-        # can be styled as a small pill (see css/theme_overrides.css). No-op on
-        # the English build.
-        "js/en_hint.js",
     ]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["../build_files/theme"]
+
+# Shared-assets policy: image localization is handled by same-path files under
+# locale/<lang>/_images, not by Sphinx's foo.<lang>.png convention. This keeps
+# every language, including English, on the shared/_images link path unless an
+# explicit locale/<lang>/_images override materializes that one file locally.
+figure_language_filename = "{root}{ext}"
+
+# shared_assets extension: centralise _static/_images under build/shared and
+# reference them per language via symlink (the ~250 MB image set is copied once,
+# not per language). Defaults below; override per build with the BF_SHARED_* env
+# vars (kept consistent with the BF_LANG/BF_LANGS convention).
+shared_assets_enabled = os.environ.get("BF_SHARED_ASSETS", "1") != "0"
+shared_assets_subdirs = os.environ.get("BF_SHARED_SUBDIRS", "_images _static").split()
+shared_assets_link_mode = os.environ.get("BF_SHARED_LINK_MODE", "auto")
+shared_assets_copy_new = os.environ.get("BF_SHARED_COPY_NEW", "1") != "0"
+# Empty -> extension derives build/shared (sibling of outdir) and ../locale.
+shared_assets_root = os.environ.get("BF_SHARED_ROOT", "")
+shared_assets_override_root = os.environ.get("BF_SHARED_OVERRIDE_ROOT", "")
 
 # If this is not None, a "Last updated on:" timestamp is inserted at
 # every page bottom, using the given strftime() format.

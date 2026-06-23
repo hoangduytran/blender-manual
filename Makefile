@@ -12,6 +12,9 @@ Convenience targets provided for building docs.
 - livehtml             to auto build HTML on file changes on host on localhost.
 - livehtml-direct      to auto build one language to build/<lang>/ (use with 'make serve').
 - build                to build all BF_LANGS to build/<lang>/ each.
+- remake               to clean build/ and rebuild all BF_LANGS.
+- local                modifier: disable intersphinx for this make invocation
+                       (example: make remake local).
 - liveall              to live-rebuild all BF_LANGS and serve them (single command).
 - serve                to serve the build/ directory on localhost:8000.
 - stop                 to stop a running 'liveall'/'serve' (server + rebuilders).
@@ -50,6 +53,8 @@ Environment Variables
 
 - BF_LANGS
   Space-separated list of language codes built by 'make build' (default: auto-detected from locale/).
+  English is always prepended as the shared-asset seed language, so
+  BF_LANGS="vi ru" becomes "en vi ru".
   Each language is built into build/<lang>/ and the sidebar language
   switcher will list exactly these codes as locally available.
 
@@ -75,8 +80,16 @@ SPHINXBUILD     ?= $(SPHINX_BIN_PATH)sphinx-build
 SPHINXAUTOBUILD ?= $(SPHINX_BIN_PATH)sphinx-autobuild
 SOURCEDIR        = ./manual
 BUILDDIR        ?= build
+
+# Extra dirs (outside SOURCEDIR) whose edits must trigger a live rebuild. The
+# theme/_static (html_static_path), templates and Sphinx extensions all live
+# under build_files/, which sphinx-autobuild does not watch by default. Because
+# each rebuild runs in a fresh `python -m sphinx build` subprocess, edited
+# extension/conf code is re-imported automatically — no live-server restart
+# needed. Used by livehtml / livehtml-direct / liveall.
+LIVE_WATCH_DIRS  = --watch build_files
 BF_LANG         ?= en
-SPHINXOPTS      ?= -j auto -D language='$(BF_LANG)'
+SPHINXOPTS      ?= -v -j auto -D language='$(BF_LANG)'
 LATEXOPTS       ?= "-interaction nonstopmode"
 SERVE_OPTS      ?=
 
@@ -93,9 +106,21 @@ ifeq ($(origin BF_LANGS),undefined)
     BF_LANGS := en $(_DETECTED_LANGS)
 endif
 
+# Shared assets need English to seed build/shared first. Normalise every
+# invocation, including command-line BF_LANGS="vi ru", to start with one `en`.
+override BF_LANGS := en $(filter-out en,$(BF_LANGS))
+
 # Export BF_LANG so conf.py can read it via os.environ when sphinx-build runs.
 export BF_LANG
 export BF_LANGS
+
+# Modifier target: `make <target> local` means "run this target without
+# intersphinx's online inventory fetch". This is parsed before goals run, so it
+# also affects goals listed before `local`, such as `make remake local`.
+ifneq (,$(filter local,$(MAKECMDGOALS)))
+NO_INTERSPHINX := 1
+export NO_INTERSPHINX
+endif
 
 
 # -----------------------
@@ -174,6 +199,7 @@ livehtml:
 	$(SPHINXAUTOBUILD) \
 	    --pre-build "python3 tools/translations/smart_mo_compile.py $(SMART_MO_ARGS) --doctree-dir=$(BUILDDIR)/html/.doctrees $(SMART_MO_LIVE_EXTRA_ARGS)" \
 	    $$watch_opt \
+	    $(LIVE_WATCH_DIRS) \
 	    --ignore "*/LC_MESSAGES/*.mo" \
 	    --ignore "*/LC_MESSAGES/*.hash" \
 	    --ignore "*/LC_MESSAGES/*.lock" \
@@ -193,6 +219,7 @@ livehtml-direct:
 	$(SPHINXAUTOBUILD) \
 	    --pre-build "python3 tools/translations/smart_mo_compile.py --language=$(BF_LANG) --cache-dir=$(BUILDDIR)/.translation_cache --shard-root=$(BUILDDIR)/.i18n_shards/locale --doctree-dir=$(BUILDDIR)/.doctrees/$(BF_LANG) $(SMART_MO_LIVE_EXTRA_ARGS)" \
 	    $$watch_opt \
+	    $(LIVE_WATCH_DIRS) \
 	    --ignore "*/LC_MESSAGES/*.mo" \
 	    --ignore "*/LC_MESSAGES/*.hash" \
 	    --ignore "*/LC_MESSAGES/*.lock" \
@@ -200,7 +227,7 @@ livehtml-direct:
 	    --ignore "$(BUILDDIR)/.translation_cache/*" \
 	    --delay 0 \
 	    "$(SOURCEDIR)" "$(BUILDDIR)/$(BF_LANG)" \
-	    -j auto -D language='$(BF_LANG)' \
+	    -v -j auto -D language='$(BF_LANG)' \
 	    -d "$(BUILDDIR)/.doctrees/$(BF_LANG)" $(O)
 
 # --- Live-rebuild all BF_LANGS + serve in one command ------------------------
@@ -224,6 +251,7 @@ liveall: ensure-lang-builds
 	    BF_LANG=$$lang BF_LANGS="$(BF_LANGS)" $(SPHINXAUTOBUILD) \
 	        --pre-build "python3 tools/translations/smart_mo_compile.py --language=$$lang --cache-dir=$(BUILDDIR)/.translation_cache --shard-root=$(BUILDDIR)/.i18n_shards/locale --doctree-dir=$(BUILDDIR)/.doctrees/$$lang $(SMART_MO_LIVE_EXTRA_ARGS)" \
 	        $$watch_arg \
+	        $(LIVE_WATCH_DIRS) \
 	        --ignore "*/LC_MESSAGES/*.mo" \
 	        --ignore "*/LC_MESSAGES/*.hash" \
 	        --ignore "*/LC_MESSAGES/*.lock" \
@@ -231,7 +259,7 @@ liveall: ensure-lang-builds
 	        --ignore "$(BUILDDIR)/.translation_cache/*" \
 	        --host 127.0.0.1 --port $$port --delay 0 \
 	        "$(SOURCEDIR)" "$(BUILDDIR)/$$lang" \
-	        -j auto -D language="$$lang" \
+	        -v -j auto -D language="$$lang" \
 	        -d "$(BUILDDIR)/.doctrees/$$lang" & \
 	    pids="$$pids $$!"; \
 	    port=$$((port + 1)); \
@@ -271,7 +299,7 @@ html-direct: .SPHINXBUILD_EXISTS
 	    --shard-root=$(BUILDDIR)/.i18n_shards/locale \
 	    --doctree-dir=$(BUILDDIR)/.doctrees/$(BF_LANG)
 	$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/$(BF_LANG)" \
-	    -j auto -D language='$(BF_LANG)' \
+	    $(SPHINXOPTS) \
 	    -d "$(BUILDDIR)/.doctrees/$(BF_LANG)" $(O)
 
 # --- PO-based search index --------------------------------------------------
@@ -309,6 +337,15 @@ build: .SPHINXBUILD_EXISTS
 	    echo "  "$(OPEN_CMD) $(shell pwd)/$(BUILDDIR)/$$lang/index.html; \
 	done
 
+# --- Clean and rebuild every language in BF_LANGS ---------------------------
+remake:
+	@$(MAKE) clean
+	@$(MAKE) build
+
+# `local` is a modifier target handled near the top of the Makefile.
+local:
+	@:
+
 # --- Local HTTP server with language switching --------------------------------
 serve: ensure-lang-builds
 	@python3 tools/serve_docs.py --build-dir $(BUILDDIR) --langs "$(BF_LANGS)" --open $(SERVE_OPTS)
@@ -325,6 +362,18 @@ stop:
 	    python3 tools/serve_docs.py --port $$port --kill --quiet; \
 	    port=$$((port + 1)); \
 	done
+	@# Kill the live rebuilders AND their orphaned sphinx workers. sphinx-autobuild
+	@# spawns `python -m sphinx build <src> <build>/<lang>` (note: the space form,
+	@# distinct from the one-shot `sphinx-build` used by `make build`), whose -j
+	@# auto worker pool reparents to PID 1 when autobuild is killed. The [s] in the
+	@# pattern stops pkill from matching its own recipe shell. SIGTERM first, then
+	@# SIGKILL any stragglers a moment later.
+	@echo "Stopping live rebuilders (sphinx-autobuild) and sphinx workers..."
+	@pkill -TERM -f "[s]phinx-autobuild.*$(SOURCEDIR)" 2>/dev/null || true
+	@pkill -TERM -f "[s]phinx build $(SOURCEDIR) $(BUILDDIR)/" 2>/dev/null || true
+	@sleep 1; \
+	pkill -KILL -f "[s]phinx-autobuild.*$(SOURCEDIR)" 2>/dev/null || true; \
+	pkill -KILL -f "[s]phinx build $(SOURCEDIR) $(BUILDDIR)/" 2>/dev/null || true
 	@echo "Stopped."
 
 # --- Translator workflow: monolithic blender_manual.pot --------------------
@@ -403,7 +452,7 @@ help:
 	@echo ""
 	@echo "$$HELP_TEXT"
 
-.PHONY: help html-direct livehtml-direct build liveall ensure-lang-builds serve stop search-index gettext Makefile
+.PHONY: help html-direct livehtml-direct build remake local liveall ensure-lang-builds serve stop search-index gettext Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option. $(O) is meant as a shortcut for $(SPHINXOPTS).
