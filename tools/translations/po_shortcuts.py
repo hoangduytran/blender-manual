@@ -30,13 +30,32 @@ TABLE_FILE = os.path.join(CURRENT_DIR, "po_shortcuts_tables.json")
 
 ROLE = 'kbd'  # Change to any other role if needed
 
-# debug_log lives in tools/ (the parent of this directory): make it importable
-# so all output goes through the project's logging helpers — no ad-hoc logging,
-# no print().
-_TOOLS_DIR = os.path.dirname(CURRENT_DIR)
-if _TOOLS_DIR not in sys.path:
-    sys.path.insert(0, _TOOLS_DIR)
-from debug_log import debug_log, setup_logging_from_config  # type: ignore[import-not-found]  # noqa: E402
+
+class PoToken:
+    """Literal gettext-PO syntax fragments matched while scanning msgstr blocks.
+
+    Kept local to this standalone script (not in tools/common/constants.py)
+    because the translation CLIs in this directory do not share that package
+    path; mirror them there only if a non-standalone tool needs the same set.
+    """
+
+    MSGSTR = "msgstr"     # opens a translation block (also "msgstr[N]" plurals)
+    CONTINUATION = '"'    # wrapped continuation line of the previous msgstr
+
+
+# Path segment separating the locale subtree from the per-file report name;
+# report paths are sliced immediately after it (see main()).
+LC_MESSAGES = "LC_MESSAGES"
+
+# Logging goes through Sphinx's logging wrapper — no ad-hoc logging, no print().
+import logging  # noqa: E402
+from sphinx.util.logging import getLogger as _get_logger  # noqa: E402
+
+_logger = _get_logger(__name__)
+
+
+def debug_log(message: str, *args: object, **_kw: object) -> None:
+    _logger.debug(message, *args)
 
 
 def po_files(path: str):
@@ -85,8 +104,8 @@ def parse_po(text: str):
     start = 0
     pos = 0
     for line in text.splitlines(keepends=True):
-        is_continuation = line.startswith('"')
-        is_msgstr_start = line.startswith("msgstr")
+        is_continuation = line.startswith(PoToken.CONTINUATION)
+        is_msgstr_start = line.startswith(PoToken.MSGSTR)
 
         if block and is_continuation:
             block.append(line)
@@ -237,12 +256,14 @@ def main(lang: str) -> None:
         debug_log("Scanning %s", filename)
         n_total = _apply_to_file(filename, table_compiled)
         if n_total:
-            short_name = filename[filename.find("LC_MESSAGES") + 11:]
+            short_name = filename[filename.find(LC_MESSAGES) + len(LC_MESSAGES):]
             debug_log("%s: %d change(s).", short_name, n_total)
 
 
 if __name__ == "__main__":
-    setup_logging_from_config()
+    # Sphinx loggers propagate to the root logger; configure a console handler so
+    # this standalone script's output is visible.
+    logging.basicConfig(level=logging.DEBUG, format="%(message)s")
     if len(sys.argv) != 2:
         debug_log(
             "Usage: %s <LANGUAGE>   (example: %s es)",

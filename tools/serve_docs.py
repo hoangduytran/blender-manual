@@ -25,7 +25,6 @@ Usage:
 import argparse
 import dataclasses
 import json
-import logging
 import mimetypes
 import os
 import signal
@@ -54,16 +53,14 @@ from common.constants import (  # type: ignore[import-not-found]  # noqa: E402
     SearchField,
 )
 
-# debug_log lives next to this file in tools/; fall back silently if absent.
-try:
-    from debug_log import debug_log, is_debug_mode  # type: ignore[import-not-found]
-except ImportError:
-    def is_debug_mode() -> bool:  # type: ignore[misc]
-        return os.getenv("DEBUG", "").lower() in {"true", "1", "yes", "on"}
+# Logging goes through Sphinx's logging wrapper.
+from sphinx.util.logging import getLogger as _get_logger  # noqa: E402
 
-    def debug_log(message: str, *args: object, **_kw: object) -> None:  # type: ignore[misc]
-        if is_debug_mode():
-            logging.debug(message, *args)
+_logger = _get_logger(__name__)
+
+
+def debug_log(message: str, *args: object, **_kw: object) -> None:
+    _logger.debug(message, *args)
 
 # PO-based search engine (tools/search/)
 try:
@@ -73,7 +70,7 @@ try:
     from search.searchable_record import SearchRequest
     _SEARCH_AVAILABLE = True
 except ImportError as _e:
-    logging.warning("PO search engine not available: %s", _e)
+    debug_log("PO search engine not available: %s", _e)
     _SEARCH_AVAILABLE = False
 
 
@@ -885,7 +882,7 @@ def _kill_pids(pids: list[int]) -> None:
     for pid in pids:
         try:
             os.kill(pid, signal.SIGTERM)
-            logging.info("Terminated pid %s", pid)
+            debug_log("Terminated pid %s", pid)
         except ProcessLookupError:
             pass
 
@@ -904,8 +901,6 @@ def _wait_for_port_release(port: int) -> bool:
 # ---------------------------------------------------------------------------
 
 def main() -> None:
-    logging.basicConfig(level=logging.INFO, format="%(message)s")
-
     # Resolve project root (two levels up from this script: tools/ → project/)
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -970,7 +965,7 @@ def main() -> None:
             if "--host" in _saved:
                 args.host = _saved["--host"]
         else:
-            logging.warning("No state file found at %s; using current defaults.", _default_state)
+            debug_log("No state file found at %s; using current defaults.", _default_state)
         args.restart = True
         args.resume = False
 
@@ -990,9 +985,9 @@ def main() -> None:
     else:
         built = all_locale_langs
         if len(built) > 1:
-            logging.info("Auto-detected languages from locale/: %s", " ".join(built))
+            debug_log("Auto-detected languages from locale/: %s", " ".join(built))
         else:
-            logging.info("No translation catalogs found in locale/; serving English only.")
+            debug_log("No translation catalogs found in locale/; serving English only.")
 
     # Merge: built langs first (preserving order), then any extra locale langs.
     seen: set[str] = set(built)
@@ -1007,24 +1002,24 @@ def main() -> None:
         if args.kill:
             _kill_pids(existing)
             if not _wait_for_port_release(args.port):
-                logging.error("Port %s still in use; aborting.", args.port)
+                debug_log("Port %s still in use; aborting.", args.port)
                 sys.exit(1)
             if not args.quiet:
-                logging.info("Killed. Exiting.")
+                debug_log("Killed. Exiting.")
             sys.exit(0)
         if args.restart:
             _kill_pids(existing)
             if not _wait_for_port_release(args.port):
-                logging.error("Port %s still in use; aborting.", args.port)
+                debug_log("Port %s still in use; aborting.", args.port)
                 sys.exit(1)
         else:
-            logging.error(
+            debug_log(
                 "Port %s is already in use. Use --kill or --restart.", args.port
             )
             sys.exit(1)
     elif args.kill:
         if not args.quiet:
-            logging.info("No process listening on %s:%s", args.host, args.port)
+            debug_log("No process listening on %s:%s", args.host, args.port)
         sys.exit(0)
 
     # Build per-language directory map
@@ -1037,7 +1032,7 @@ def main() -> None:
             lang_dirs[lang] = dedicated
         elif lang == default_lang and os.path.isdir(html_fallback):
             lang_dirs[lang] = html_fallback
-            logging.info(
+            debug_log(
                 "No build/%s/ found; falling back to build/html/ for /%s/"
                 " — run 'make build' for full multi-lang support.",
                 lang, lang,
@@ -1046,7 +1041,7 @@ def main() -> None:
             lang_dirs[lang] = dedicated  # will 404; listed in warning below
             truly_missing.append(lang)
     if truly_missing:
-        logging.warning(
+        debug_log(
             "Missing build output for: %s — run 'make build' first.",
             " ".join(truly_missing),
         )
@@ -1063,9 +1058,9 @@ def main() -> None:
         server = ThreadedHTTPServer((args.host, args.port), DocsHandler,
                                     max_workers=workers)
     except OSError as exc:
-        logging.error("Cannot bind to %s:%s — %s", args.host, args.port, exc)
+        debug_log("Cannot bind to %s:%s — %s", args.host, args.port, exc)
         sys.exit(1)
-    logging.info("Thread pool: %d workers (cpu_count - 2)", workers)
+    debug_log("Thread pool: %d workers (cpu_count - 2)", workers)
 
     # Persist effective options so 'make restart' can replay them without
     # the caller needing to repeat --langs / --port / --host / --build-dir.
@@ -1129,13 +1124,13 @@ def main() -> None:
                   not args.no_search_html_rebuild)
 
     base_url = f"http://{args.host}:{args.port}"
-    logging.info("\nServing Blender manual at %s", base_url)
+    debug_log("\nServing Blender manual at %s", base_url)
     for lang in available:
-        logging.info("  %s  →  %s/%s/", LANG_NAMES.get(lang, lang), base_url, lang)
+        debug_log("  %s  →  %s/%s/", LANG_NAMES.get(lang, lang), base_url, lang)
     if _SEARCH_AVAILABLE:
-        logging.info("  Search: %s/api/search?q=…&lang=vi&mode=regex", base_url)
-    logging.info("Live-reload on: edited pages refresh automatically after rebuild.")
-    logging.info("Press Ctrl-C to stop.\n")
+        debug_log("  Search: %s/api/search?q=…&lang=vi&mode=regex", base_url)
+    debug_log("Live-reload on: edited pages refresh automatically after rebuild.")
+    debug_log("Press Ctrl-C to stop.\n")
 
     if args.open:
         webbrowser.open(f"{base_url}/{default_lang}/")
@@ -1143,7 +1138,7 @@ def main() -> None:
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        logging.info("\nShutting down.")
+        debug_log("\nShutting down.")
         if _SEARCH_AVAILABLE:
             shutdown_pool()
         server.server_close()

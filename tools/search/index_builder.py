@@ -17,20 +17,20 @@ from __future__ import annotations
 
 import argparse
 import gzip
-import logging
 import os
 import pickle
 import sys
 import unicodedata
 from pathlib import Path
 
-# debug_log lives next to this file in tools/; fall back silently if absent.
-try:
-    from debug_log import debug_log  # type: ignore[import-not-found]
-except ImportError:
-    def debug_log(message: str, *args: object, **_kw: object) -> None:  # type: ignore[misc]
-        if os.getenv("DEBUG", "").lower() in {"true", "1", "yes", "on"}:
-            logging.debug(message, *args)
+# Logging goes through Sphinx's logging wrapper.
+from sphinx.util.logging import getLogger as _get_logger  # noqa: E402
+
+_logger = _get_logger(__name__)
+
+
+def debug_log(message: str, *args: object, **_kw: object) -> None:
+    _logger.debug(message, *args)
 
 # Relative imports work when loaded as part of the package; when run as a
 # standalone script (__package__ is None) we fall back to absolute imports
@@ -226,8 +226,6 @@ def build_index(
 # ---------------------------------------------------------------------------
 
 def _main() -> None:
-    logging.basicConfig(level=logging.INFO, format="%(message)s")
-
     ap = argparse.ArgumentParser(
         description="Build PO-based search index (searchindex.pkl.gz).",
     )
@@ -252,10 +250,10 @@ def _main() -> None:
     out_path = Path(args.build) / args.index_filename
 
     if not po_path.is_file():
-        logging.error("PO file not found: %s", po_path)
+        debug_log("PO file not found: %s", po_path)
         sys.exit(1)
     if not rst_root.is_dir():
-        logging.error("RST root not found: %s", rst_root)
+        debug_log("RST root not found: %s", rst_root)
         sys.exit(1)
 
     build_index(

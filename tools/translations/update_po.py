@@ -11,18 +11,58 @@ import sys
 import shutil
 import subprocess
 import multiprocessing
-from shlex import quote
+from shlex import quote, split as shlex_split
 import re
+
+# Output goes through the logging module rather than print(). A plain stdlib
+# logger is used (not sphinx.util.logging.getLogger) deliberately: the Sphinx
+# wrapper inserts its own frame, so %(funcName)s/%(filename)s would always
+# resolve to "logging.py:log" instead of the real caller. __main__ installs the
+# console handler whose format includes the routine and file name.
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 VERBOSE = False
 USE_MULTI_PROCESS = True
 
+# Fallback if manual/conf.py cannot be read or omits the setting (see
+# read_sphinx_intl_command); mirrors the conf.py default.
+SPHINX_INTL_COMMAND_DEFAULT = "sphinx-intl"
+
+# Regex scraping `sphinx_intl_command = "..."` out of manual/conf.py.  Same
+# shape as smart_mo_compile.ConfPattern's conf.py scrapers: an anchored
+# assignment whose quoted value is captured in the named group `value`.
+SPHINX_INTL_COMMAND_RE = r'^sphinx_intl_command\s*=\s*["\'](?P<value>[^"\']+)["\']'
+
+
+def read_sphinx_intl_command(conf_py_path):
+    """Return the sphinx-intl invocation as an argv list, read from conf.py.
+
+    The command name lives in manual/conf.py (``sphinx_intl_command``) so a
+    rename — or a switch to the interpreter-pinned ``"python -m sphinx_intl"``
+    form — is a one-line edit there rather than three literals here. Scraped by
+    regex (not import) so Sphinx-only globals in conf.py are never evaluated,
+    matching how smart_mo_compile.py reads the same file. Falls back to
+    :data:`SPHINX_INTL_COMMAND_DEFAULT` when the file or setting is absent.
+    """
+    command = SPHINX_INTL_COMMAND_DEFAULT
+    try:
+        text = open(conf_py_path, encoding="utf-8").read()
+    except OSError:
+        text = ""
+    m = re.search(SPHINX_INTL_COMMAND_RE, text, re.MULTILINE)
+    if m:
+        command = m.group("value")
+    # shlex so multi-word forms like "python -m sphinx_intl" split correctly.
+    return shlex_split(command)
+
 
 def run_git(args, with_output=False):
     cmd = ["git", *args]
     if VERBOSE:
-        print(">>> ", cmd)
+        _logger.debug(">>>  %s", cmd)
 
     if not with_output:
         subprocess.check_call(
@@ -38,7 +78,7 @@ def run_multiprocess__single(arg_list):
     return_codes = [None] * len(arg_list)
     # Single process.
     for args_index, args in enumerate(arg_list):
-        proc = subprocess.Popen(["sphinx-intl", *args])
+        proc = subprocess.Popen([*SPHINX_INTL_CMD, *args])
         proc.wait()
         return_codes[args_index] = proc.returncode
 
@@ -71,7 +111,7 @@ def run_multiprocess__multi(arg_list, job_total=1):
         sys.stderr.flush()
 
         processes.append(
-            (args_index, subprocess.Popen(["sphinx-intl", *args])))
+            (args_index, subprocess.Popen([*SPHINX_INTL_CMD, *args])))
 
     while processes:
         processes_clear_finished()
@@ -96,18 +136,34 @@ if USE_MULTI_PROCESS:
 else:
     CPU_COUNT = 1
 
+# --- Environment, directory, and filename literals (declared once) ---
+LANG_ENV_VAR = "LANG"              # env var Python/gettext read for the locale
+UTF8_LOCALE = "en_US.UTF-8"        # value forced into LANG so output is utf-8
+PARENT_DIR = os.pardir             # ".." — portable parent-directory marker
+BUILD_SUBDIR = "build"             # top-level build output directory
+GETTEXT_SUBDIR = "gettext"         # 'make gettext' .pot output under build/
+LOCALE_SUBDIR = "locale"           # per-language .po tree at the repo root
+MANUAL_SUBDIR = "manual"           # RST source root (holds conf.py)
+CONF_PY_FILENAME = "conf.py"       # Sphinx config scraped for settings
+POT_FILENAME = "blender_manual.pot"  # gettext template merged into each .po
+
 # Python needs utf-8.
-os.environ["LANG"] = "en_US.UTF-8"
+os.environ[LANG_ENV_VAR] = UTF8_LOCALE
 
 # Ensure we're in the repo's base:
 ROOT_DIR = os.path.normpath(os.path.join(
-    os.path.abspath(os.path.dirname(__file__)), "..", ".."))
+    os.path.abspath(os.path.dirname(__file__)), PARENT_DIR, PARENT_DIR))
 os.chdir(ROOT_DIR)
-LOCALE_BUILD_DIR = os.path.join(ROOT_DIR, "build", "gettext")
+LOCALE_BUILD_DIR = os.path.join(ROOT_DIR, BUILD_SUBDIR, GETTEXT_SUBDIR)
 
-LOCALE_DIR = os.path.join(ROOT_DIR, "locale")
+LOCALE_DIR = os.path.join(ROOT_DIR, LOCALE_SUBDIR)
 
-POT_FILE = os.path.join(LOCALE_DIR, "blender_manual.pot")
+POT_FILE = os.path.join(LOCALE_DIR, POT_FILENAME)
+
+# sphinx-intl invocation as an argv list, sourced from manual/conf.py so the
+# tool name is declared in one place (see read_sphinx_intl_command).
+SPHINX_INTL_CMD = read_sphinx_intl_command(
+    os.path.join(ROOT_DIR, MANUAL_SUBDIR, CONF_PY_FILENAME))
 
 
 # -----------------------------------------------------------------------------
@@ -138,7 +194,7 @@ def main():
         "-b", "gettext",
         "-j", str(CPU_COUNT),
         # Source.
-        "manual",
+        MANUAL_SUBDIR,
         # Destination.
         LOCALE_BUILD_DIR,
     ])
@@ -147,7 +203,7 @@ def main():
     # Copy POT File
 
     shutil.copy(os.path.join(LOCALE_BUILD_DIR,
-                "blender_manual.pot"), LOCALE_DIR)
+                POT_FILENAME), LOCALE_DIR)
 
     # ---------------
     # Update PO Files
@@ -165,7 +221,7 @@ def main():
     sphinx_intl_arg_list = []
     for po_lang in po_lang_all:
         sphinx_intl_arg_list.append([
-            "--config=" + os.path.join("manual", "conf.py"),
+            "--config=" + os.path.join(MANUAL_SUBDIR, CONF_PY_FILENAME),
             "update",
             "--pot-dir=" + LOCALE_BUILD_DIR,
             "--language=" + po_lang,
@@ -177,12 +233,14 @@ def main():
     )
 
     if set(sphinx_intl_return_codes) - {0}:
-        print("Warning, the following commands returned non-zero exit codes:")
+        _logger.warning("Warning, the following commands returned non-zero exit codes:")
         for returncode, arg in zip(sphinx_intl_return_codes, sphinx_intl_arg_list):
             if returncode != 0:
-                print("returncode:", returncode,
-                      "from command:", "sphinx-intl", arg)
-        print("Some manual corrections might need to be done.")
+                _logger.warning(
+                    "returncode: %s from command: %s %s",
+                    returncode, " ".join(SPHINX_INTL_CMD), arg,
+                )
+        _logger.warning("Some manual corrections might need to be done.")
     del sphinx_intl_return_codes, sphinx_intl_arg_list
 
     # ---------------------
@@ -192,12 +250,19 @@ def main():
     revision = run_git(["-C", ROOT_DIR, "rev-parse",
                        "--short", "HEAD"], True).decode('utf8').strip()
     revision = revision if revision else "Unknown"
-    print("\nPo files updated, commit files using the following commands:")
-    print("cd locale")
-    print("git add -A")
-    print(
-        "git commit -m \"Update po-files ({:s})\"".format(revision))
+    _logger.info("\nPo files updated, commit files using the following commands:")
+    _logger.info("cd locale")
+    _logger.info("git add -A")
+    _logger.info("git commit -m \"Update po-files (%s)\"", revision)
 
 
 if __name__ == "__main__":
+    # Console handler for this standalone script. The format leads with the
+    # file name, routine, and line number so every line says where it came
+    # from; %(funcName)s/%(filename)s resolve to the real caller because
+    # _logger is a plain stdlib logger (see the import note above).
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format="%(filename)s:%(funcName)s:%(lineno)d %(levelname)s: %(message)s",
+    )
     main()

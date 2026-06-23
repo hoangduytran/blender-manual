@@ -242,11 +242,13 @@ bytes or the newly assembled payload, rather than an in-place partial pickle.
 from __future__ import annotations
 
 import argparse   # CLI argument parsing (--language, --srcdir, etc.).
+import enum        # ConfPattern enum groups the conf.py-scraping regexes.
 import fcntl      # POSIX advisory file lock (LOCK_EX) -- serialises concurrent runs.
 import hashlib    # blake2b for the semantic hash; sha256 for the raw-bytes tier.
 import io         # BytesIO for in-memory shard composition (byte-compare before write).
 import os         # os.utime (mtime stamping), os.replace (atomic rename), os.fdopen.
 import pickle     # tiered-cache file format (mtime + hashes + old_map).
+import re         # conf.py scalar extraction (see ConfPattern).
 import sys        # sys.stderr / sys.exit / __name__ entry point.
 import tempfile   # mkstemp / NamedTemporaryFile for atomic writes to .mo, .hash, .cache.
 import time       # tier-4 wall-time logging.
@@ -263,6 +265,72 @@ _CACHE_COMPAT_VERSIONS = {_CACHE_VERSION, 2}
 # Special slug for msgids with no resolvable `#:` location -- their shard is
 # loaded by Sphinx but referenced by no doc, so its mtime invalidates nothing.
 _ORPHAN_SLUG = "__orphan__"
+
+
+class CacheKey(str, enum.Enum):
+    """Field names of the per-language tier-cache pickle (`<cache_dir>/<lang>.pkl`).
+
+    A str-enum so members double as the dict keys themselves: `cache[CacheKey.VERSION]`
+    and `cache.get(CacheKey.VERSION)` need no `.value`, and because
+    `CacheKey.VERSION == "version"` (with an identical hash), a pickle written
+    with plain-string keys by an older build still validates and reads back
+    here unchanged. Grouping the keys also keeps the read, validate, refresh,
+    and write paths spelling every field the same way.
+    """
+
+    VERSION = "version"            # schema version int; gated by _CACHE_COMPAT_VERSIONS
+    PO_MTIME_NS = "po_mtime_ns"    # tier 1: PO st_mtime_ns
+    PO_SIZE = "po_size"            # tier 1: PO st_size
+    RAW_HASH = "raw_hash"          # tier 2: sha256 of raw PO bytes
+    SEMANTIC_HASH = "semantic_hash"  # tier 3: blake2b of effective msgid/msgstr pairs
+    LAYOUT_HASH = "layout_hash"    # tier 3: blake2b of msgid -> document routing (v3+)
+    OLD_MAP = "old_map"            # effective translation baseline for the next diff
+    MSGID_TO_DOCS = "msgid_to_docs"  # index: msgid -> document slugs
+    DOC_TO_MSGIDS = "doc_to_msgids"  # index: document slug -> msgids
+    DOC_HASHES = "doc_hashes"      # per-document emitted shard hashes
+
+# Named capture group shared by every ConfPattern below. Each regex captures
+# the quoted setting value under this name, so the scraper reads
+# `match.group(_CONF_VALUE)` instead of a positional `match.group(1)`.
+_CONF_VALUE = "value"
+
+
+class ConfPattern(enum.Enum):
+    """Line-regexes that scrape scalar settings out of ``manual/conf.py``.
+
+    These run via plain ``re.search`` (never ``exec``) so Sphinx-specific
+    globals such as ``tags`` or ``sphinx.version_info`` are never evaluated.
+
+    Each member's ``.name`` is the :class:`ConfigRecord` field the match
+    populates, and each ``.value`` is a regex with a single ``(?P<value>...)``
+    group capturing the quoted setting. :meth:`ConfPattern.scan` walks every
+    member, so adding a setting is one line here with no scraper changes.
+    """
+
+    # blender_version = "5.3"
+    blender_version = r'^blender_version\s*=\s*["\'](?P<value>[^"\']+)["\']'
+    # gettext_compact = "blender_manual" (appears in the legacy_gettext branch)
+    domain = r'gettext_compact\s*=\s*["\'](?P<value>[^"\']+)["\']'
+    # source_suffix = [".rst"]  or  {".rst": "restructuredtext"}
+    rst_suffix = r'^source_suffix\s*=\s*[\[{]\s*["\'](?P<value>[^"\']+)["\']'
+    # html_page_suffix = ".html"
+    html_page_suffix = r'^html_page_suffix\s*=\s*["\'](?P<value>[^"\']+)["\']'
+    # search_index_filename = "searchindex.pkl.gz"
+    search_index_filename = r'^search_index_filename\s*=\s*["\'](?P<value>[^"\']+)["\']'
+    # html_builder_name = "html"
+    html_builder_name = r'^html_builder_name\s*=\s*["\'](?P<value>[^"\']+)["\']'
+    # language = "en" (source/default language)
+    default_language = r'^language\s*=\s*["\'](?P<value>[^"\']+)["\']'
+
+    @classmethod
+    def scan(cls, text: str) -> dict[str, str]:
+        """Return ``{field name: captured value}`` for every member that matches."""
+        values: dict[str, str] = {}
+        for pattern in cls:
+            m = re.search(pattern.value, text, re.MULTILINE)
+            if m:
+                values[pattern.name] = m.group(_CONF_VALUE)
+        return values
 
 
 @dataclass
@@ -350,15 +418,6 @@ class ConfigRecord:
     # Used by index_loader to identify which language falls back to html_builder_name/.
     default_language: str = field(default="en")
 
-    # application.log maximum file size in megabytes (read from conf.py log_max_size_mb).
-    # ApplicationLogTrimmer in serve_docs.py triggers a FIFO trim when this threshold
-    # is exceeded.  Default matches the constant LOG_MAX_SIZE_MB in common/constants.py.
-    log_max_size_mb: int = field(default=10)
-
-    # Whether serve_docs.py should start ApplicationLogTrimmer on startup.
-    # Set log_trim_enabled = False in manual/conf.py to disable trimming entirely.
-    log_trim_enabled: bool = field(default=True)
-
     # --- Derived paths (not __init__ parameters) ---
 
     # Directory containing the selected locale's source catalog;
@@ -409,37 +468,16 @@ class ConfigRecord:
     def _read_conf_py(conf_py_path: Path) -> dict[str, str]:
         """Extract key values from manual/conf.py without running Sphinx.
 
-        Uses regex so Sphinx-specific globals (``tags``, ``sphinx.version_info``)
-        are never evaluated.  Returns a dict with keys ``blender_version`` and
-        ``domain`` (the gettext catalog name).
+        Delegates to :meth:`ConfPattern.scan`, which uses regex so
+        Sphinx-specific globals (``tags``, ``sphinx.version_info``) are never
+        evaluated. Returns a dict keyed by :class:`ConfigRecord` field name
+        (e.g. ``blender_version``, ``domain``) for every setting that matched.
         """
-        import re
-        values: dict[str, str] = {}
         try:
             text = conf_py_path.read_text("utf-8")
         except OSError:
-            return values
-        patterns = {
-            "blender_version": r'^blender_version\s*=\s*["\']([^"\']+)["\']',
-            # gettext_compact = "blender_manual" appears in the legacy_gettext branch
-            "domain": r'gettext_compact\s*=\s*["\']([^"\']+)["\']',
-            # source_suffix = [".rst"]  or  {".rst": "restructuredtext"}
-            "rst_suffix": r'^source_suffix\s*=\s*[\[{]\s*["\']([^"\']+)["\']',
-            "html_page_suffix": r'^html_page_suffix\s*=\s*["\']([^"\']+)["\']',
-            "search_index_filename": r'^search_index_filename\s*=\s*["\']([^"\']+)["\']',
-            "html_builder_name": r'^html_builder_name\s*=\s*["\']([^"\']+)["\']',
-            # language = "en"  (source/default language)
-            "default_language": r'^language\s*=\s*["\']([^"\']+)["\']',
-            # log_max_size_mb = 10
-            "log_max_size_mb": r'^log_max_size_mb\s*=\s*(\d+)',
-            # log_trim_enabled = True | False
-            "log_trim_enabled": r'^log_trim_enabled\s*=\s*(True|False)',
-        }
-        for key, pat in patterns.items():
-            m = re.search(pat, text, re.MULTILINE)
-            if m:
-                values[key] = m.group(1)
-        return values
+            return {}
+        return ConfPattern.scan(text)
 
     @classmethod
     def from_project(
@@ -505,8 +543,6 @@ class ConfigRecord:
             search_index_filename=conf_values.get("search_index_filename", "searchindex.pkl.gz"),
             html_builder_name=conf_values.get("html_builder_name", "html"),
             default_language=conf_values.get("default_language", "en"),
-            log_max_size_mb=int(conf_values.get("log_max_size_mb", "10")),
-            log_trim_enabled=conf_values.get("log_trim_enabled", "True") == "True",
         )
 
 
@@ -993,25 +1029,25 @@ def _read_cache(cache_path: Path) -> dict | None:
         return None
     if not isinstance(data, dict):
         return None
-    version = data.get("version")
+    version = data.get(CacheKey.VERSION)
     if version not in _CACHE_COMPAT_VERSIONS:
         # Schema mismatch (older or future version) -- treat as no cache.
         return None
     required = [
-        "po_mtime_ns",
-        "po_size",
-        "raw_hash",
-        "semantic_hash",
-        "old_map",
-        "msgid_to_docs",
-        "doc_to_msgids",
-        "doc_hashes",
+        CacheKey.PO_MTIME_NS,
+        CacheKey.PO_SIZE,
+        CacheKey.RAW_HASH,
+        CacheKey.SEMANTIC_HASH,
+        CacheKey.OLD_MAP,
+        CacheKey.MSGID_TO_DOCS,
+        CacheKey.DOC_TO_MSGIDS,
+        CacheKey.DOC_HASHES,
     ]
     if version >= 3:
-        required.append("layout_hash")
+        required.append(CacheKey.LAYOUT_HASH)
     if not all(k in data for k in required):
         return None
-    if not isinstance(data["old_map"], dict):
+    if not isinstance(data[CacheKey.OLD_MAP], dict):
         return None
     return data
 
@@ -1533,10 +1569,10 @@ def _partial_cache_inputs(
     """
     if cache is None:
         return None
-    old_map = _cache_str_map(cache, "old_map")
-    msgid_to_docs = _cache_str_set_map(cache, "msgid_to_docs")
-    doc_to_msgids = _cache_str_set_map(cache, "doc_to_msgids")
-    doc_hashes = _cache_str_map(cache, "doc_hashes")
+    old_map = _cache_str_map(cache, CacheKey.OLD_MAP)
+    msgid_to_docs = _cache_str_set_map(cache, CacheKey.MSGID_TO_DOCS)
+    doc_to_msgids = _cache_str_set_map(cache, CacheKey.DOC_TO_MSGIDS)
+    doc_hashes = _cache_str_map(cache, CacheKey.DOC_HASHES)
     if None in (old_map, msgid_to_docs, doc_to_msgids, doc_hashes):
         return None
     return old_map, msgid_to_docs, doc_to_msgids, doc_hashes
@@ -1622,7 +1658,7 @@ def _changed_doc_slugs_from_hashes(
     first run after cache deletion or schema upgrade. The caller can then rely
     on the environment-pickle purge to force a full read.
     """
-    old_doc_hashes = _cache_str_map(cache, "doc_hashes") if cache else None
+    old_doc_hashes = _cache_str_map(cache, CacheKey.DOC_HASHES) if cache else None
     if old_doc_hashes is None:
         return None
     changed = {
@@ -1655,47 +1691,70 @@ def _touch_rsts_for_doc_hash_diff(
     )
 
 
+@dataclass(frozen=True)
+class ShardWriteResult:
+    """Outcome of syncing one shard (a document shard or the orphan shard).
+
+    Replaces the former cryptic `(written, skipped, deleted, semantic_hash)`
+    4-tuple. At most one of the three counts is 1 and the rest are 0, so the
+    partial-run loop can add them straight into its running totals:
+
+      * ``written``  -- the shard's bytes changed and were atomically replaced;
+      * ``skipped``  -- the shard was byte-identical, so its mtime is untouched;
+      * ``deleted``  -- a stale shard with no remaining content was unlinked.
+
+    A run that finds nothing to delete reports all three as 0.
+
+    ``semantic_hash`` is the blake2b of the emitted sub-catalog, or ``None``
+    when no shard remains (deleted, or never existed). The caller stores the
+    hash under the slug, or drops the slug from its doc-hash index on ``None``.
+    """
+
+    written: int = 0
+    skipped: int = 0
+    deleted: int = 0
+    semantic_hash: str | None = None
+
+
 def _write_or_delete_doc_shard(
     *, catalog, slug: str, doc_msgids: set[str], msg_by_id: dict[str, object],
     config_record: ConfigRecord,
-) -> tuple[int, int, int, str | None]:
+) -> ShardWriteResult:
     """Bring one document shard into sync with the current catalog.
 
     A removed RST with no remaining msgids deletes its stale shard. Otherwise
     a header-only or translated shard is emitted and identical bytes preserve
-    the existing mtime. Returns `(written, skipped, deleted, semantic_hash)`;
-    the hash is None when no shard remains.
+    the existing mtime. See :class:`ShardWriteResult` for the returned fields.
     """
     target = _shard_target_path(config_record, slug)
     rst_exists = _rst_path_for_slug(config_record, slug).is_file()
     if not rst_exists and not doc_msgids:
         if _unlink_quiet(target):
-            return 0, 0, 1, None
-        return 0, 0, 0, None
+            return ShardWriteResult(deleted=1)
+        return ShardWriteResult()
 
     sub = _build_doc_shard(catalog, doc_msgids, msg_by_id)
     new_bytes = _serialize_catalog_to_bytes(sub)
     if _write_shard_if_changed(target, new_bytes):
-        return 1, 0, 0, _hash_sub_catalog(sub)
-    return 0, 1, 0, _hash_sub_catalog(sub)
+        return ShardWriteResult(written=1, semantic_hash=_hash_sub_catalog(sub))
+    return ShardWriteResult(skipped=1, semantic_hash=_hash_sub_catalog(sub))
 
 
 def _write_or_delete_orphan_shard(
     *, catalog, orphan_ids: set[str], msg_by_id: dict[str, object],
     config_record: ConfigRecord,
-) -> tuple[int, int, int, str | None]:
+) -> ShardWriteResult:
     """Bring `__orphan__.mo` into sync with unlocated effective msgids.
 
     Empty input removes the old orphan shard. Otherwise the function writes
-    or skips it using the same byte-identity rule as document shards. Returns
-    `(written, skipped, deleted, semantic_hash)`; no remaining shard means the
-    hash is None.
+    or skips it using the same byte-identity rule as document shards. See
+    :class:`ShardWriteResult` for the returned fields.
     """
     target = _shard_target_path(config_record, _ORPHAN_SLUG)
     if not orphan_ids:
         if _unlink_quiet(target):
-            return 0, 0, 1, None
-        return 0, 0, 0, None
+            return ShardWriteResult(deleted=1)
+        return ShardWriteResult()
     sub = _new_sub_catalog(catalog)
     for mid in sorted(orphan_ids):
         message = msg_by_id.get(mid)
@@ -1703,8 +1762,8 @@ def _write_or_delete_orphan_shard(
             _copy_message_into(sub, message)
     new_bytes = _serialize_catalog_to_bytes(sub)
     if _write_shard_if_changed(target, new_bytes):
-        return 1, 0, 0, _hash_sub_catalog(sub)
-    return 0, 1, 0, _hash_sub_catalog(sub)
+        return ShardWriteResult(written=1, semantic_hash=_hash_sub_catalog(sub))
+    return ShardWriteResult(skipped=1, semantic_hash=_hash_sub_catalog(sub))
 
 
 # ---------------------------------------------------------------------------
@@ -1792,7 +1851,7 @@ def _shard_tier1_hit(
     """
     if cache is None:
         return False
-    if cache.get("po_mtime_ns") != mtime_ns or cache.get("po_size") != size:
+    if cache.get(CacheKey.PO_MTIME_NS) != mtime_ns or cache.get(CacheKey.PO_SIZE) != size:
         return False
     return config_record.shard_lc_dir.is_dir()
 
@@ -1803,7 +1862,7 @@ def _shard_tier2_hit(
     """True iff the raw bytes hash matches the cache *and* shards exist."""
     if cache is None:
         return False
-    if cache.get("raw_hash") != raw_hash:
+    if cache.get(CacheKey.RAW_HASH) != raw_hash:
         return False
     return config_record.shard_lc_dir.is_dir()
 
@@ -1815,9 +1874,9 @@ def _shard_tier3_hit(
     """True iff semantic/layout hashes match the cache *and* shards exist."""
     if cache is None:
         return False
-    if cache.get("semantic_hash") != semantic_hash:
+    if cache.get(CacheKey.SEMANTIC_HASH) != semantic_hash:
         return False
-    if cache.get("layout_hash") != layout_hash:
+    if cache.get(CacheKey.LAYOUT_HASH) != layout_hash:
         return False
     return config_record.shard_lc_dir.is_dir()
 
@@ -1825,8 +1884,8 @@ def _shard_tier3_hit(
 def _refresh_cache_stats(cache: dict, mtime_ns: int, size: int) -> dict:
     """Return a copy of `cache` with refreshed tier-1 (mtime+size) fields."""
     out = dict(cache)
-    out["po_mtime_ns"] = mtime_ns
-    out["po_size"] = size
+    out[CacheKey.PO_MTIME_NS] = mtime_ns
+    out[CacheKey.PO_SIZE] = size
     return out
 
 
@@ -1845,16 +1904,16 @@ def _build_shard_cache_payload(
     after writing the snapshot so tier 1 represents the completed run.
     """
     return {
-        "version": _CACHE_VERSION,
-        "po_mtime_ns": po_mtime_ns,
-        "po_size": po_size,
-        "raw_hash": raw_hash,
-        "semantic_hash": semantic_hash,
-        "layout_hash": layout_hash,
-        "old_map": new_map,
-        "msgid_to_docs": msgid_to_docs,
-        "doc_to_msgids": doc_to_msgids,
-        "doc_hashes": doc_hashes,
+        CacheKey.VERSION: _CACHE_VERSION,
+        CacheKey.PO_MTIME_NS: po_mtime_ns,
+        CacheKey.PO_SIZE: po_size,
+        CacheKey.RAW_HASH: raw_hash,
+        CacheKey.SEMANTIC_HASH: semantic_hash,
+        CacheKey.LAYOUT_HASH: layout_hash,
+        CacheKey.OLD_MAP: new_map,
+        CacheKey.MSGID_TO_DOCS: msgid_to_docs,
+        CacheKey.DOC_TO_MSGIDS: doc_to_msgids,
+        CacheKey.DOC_HASHES: doc_hashes,
     }
 
 
@@ -1909,7 +1968,7 @@ def _shard_tier4_partial_run(
     cache_inputs = _partial_cache_inputs(cache)
     if cache_inputs is None:
         return False
-    if cache.get("layout_hash") != layout_hash:
+    if cache.get(CacheKey.LAYOUT_HASH) != layout_hash:
         return False
     if not config_record.shard_lc_dir.is_dir():
         return False
@@ -1945,39 +2004,39 @@ def _shard_tier4_partial_run(
     written = skipped = deleted = 0
     for slug in sorted(affected_docs):
         doc_msgids = set(new_doc_to_msgids.get(slug, set()))
-        w, s, d, new_hash = _write_or_delete_doc_shard(
+        result = _write_or_delete_doc_shard(
             catalog=catalog,
             slug=slug,
             doc_msgids=doc_msgids,
             msg_by_id=msg_by_id,
             config_record=config_record,
         )
-        written += w
-        skipped += s
-        deleted += d
-        if new_hash is None:
+        written += result.written
+        skipped += result.skipped
+        deleted += result.deleted
+        if result.semantic_hash is None:
             new_doc_hashes.pop(slug, None)
         else:
-            new_doc_hashes[slug] = new_hash
+            new_doc_hashes[slug] = result.semantic_hash
 
     orphan_ids = {
         mid for mid in current_map
         if mid not in new_msgid_to_docs
     }
     if orphan_changed:
-        w, s, d, new_hash = _write_or_delete_orphan_shard(
+        result = _write_or_delete_orphan_shard(
             catalog=catalog,
             orphan_ids=orphan_ids,
             msg_by_id=msg_by_id,
             config_record=config_record,
         )
-        written += w
-        skipped += s
-        deleted += d
-        if new_hash is None:
+        written += result.written
+        skipped += result.skipped
+        deleted += result.deleted
+        if result.semantic_hash is None:
             new_doc_hashes.pop(_ORPHAN_SLUG, None)
         else:
-            new_doc_hashes[_ORPHAN_SLUG] = new_hash
+            new_doc_hashes[_ORPHAN_SLUG] = result.semantic_hash
 
     _delete_stale_global_mo(config_record.legacy_mo_path)
     _write_po_snapshot(catalog, config_record.snapshot_path)
@@ -2150,8 +2209,8 @@ def _shard_locked_body(config_record: ConfigRecord) -> int:
             )):
         assert cache is not None  # narrowed by _shard_tier3_hit
         refreshed = _refresh_cache_stats(cache, po_mtime_ns, po_size)
-        refreshed["raw_hash"] = raw_hash
-        refreshed["layout_hash"] = layout_hash
+        refreshed[CacheKey.RAW_HASH] = raw_hash
+        refreshed[CacheKey.LAYOUT_HASH] = layout_hash
         _write_cache(config_record.cache_path, refreshed)
         if not config_record.quiet:
             print("smart_mo_compile: PO unchanged (tier 3: semantic/layout hash, shard)")

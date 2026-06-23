@@ -26,14 +26,14 @@ from common.constants import (  # type: ignore[import-not-found]
     SEARCH_INDEX_FILENAME,
 )
 
-# debug_log lives next to this file in tools/; fall back silently if absent.
-try:
-    from debug_log import debug_log  # type: ignore[import-not-found]
-except ImportError:
-    import logging as _logging
-    def debug_log(message: str, *args: object, **_kw: object) -> None:  # type: ignore[misc]
-        if os.getenv("DEBUG", "").lower() in {"true", "1", "yes", "on"}:
-            _logging.debug(message, *args)
+# Logging goes through Sphinx's logging wrapper.
+from sphinx.util.logging import getLogger as _get_logger  # noqa: E402
+
+_logger = _get_logger(__name__)
+
+
+def debug_log(message: str, *args: object, **_kw: object) -> None:
+    _logger.debug(message, *args)
 
 
 @dataclass
@@ -181,7 +181,6 @@ def prewarm(
 
     Intended to be called in a background daemon thread at server startup.
     """
-    import logging
     idx = load_index_for(build_dir, lang, index_filename, html_builder_name, default_language)
     if idx:
         debug_log(
@@ -189,4 +188,4 @@ def prewarm(
             lang, len(idx.records), len(idx.batches),
         )
     else:
-        logging.warning("Search index not found for lang=%s (run make search-index)", lang)
+        debug_log("Search index not found for lang=%s (run make search-index)", lang)

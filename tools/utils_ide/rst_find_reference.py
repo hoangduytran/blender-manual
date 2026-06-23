@@ -50,17 +50,32 @@ def find_rst_root(test, files=("index.rst", "index.txt", "contents.rst", "conten
     return test_found
 
 
-re_find_references = re.compile(r"(^[ \t]*\.\.\s+_)([a-zA-Z0-9_\-]+):", re.MULTILINE)
+# Matches an RST reference-target definition, e.g. ``.. _some-reference:``.
+# Group "prefix" captures the ``.. _`` lead-in (used to compute the column),
+# Group "label" captures the reference name itself.
+RE_REFERENCE_TARGET = re.compile(
+    r"(?P<prefix>^[ \t]*\.\.\s+_)(?P<label>[a-zA-Z0-9_\-]+):",
+    re.MULTILINE,
+)
+
+# Matches an RST role with an explicit target inside angle brackets, e.g.
+# ``:ref:`My Reference <some-reference>```. Group "role" is the role name
+# (``ref``, ``doc``, ...), group "target" is the bracketed reference.
+RE_ROLE_WITH_TARGET = re.compile(r":(?P<role>[a-zA-Z0-9_]+):`[^<]*<(?P<target>[^>]+)>`")
+
+# Matches a bare RST role with no angle brackets, e.g. ``:ref:`some-reference```.
+# Group "role" is the role name, group "target" is the inline reference text.
+RE_ROLE_BARE = re.compile(r":(?P<role>[a-zA-Z0-9_]+):`(?P<target>[^`]+)`")
 
 
 def find_references(fn, data, find_ref):
     """
     Use to find instances of the :ref: role.
     """
-    for g in re_find_references.finditer(data):
-        if g[2] == find_ref:
-            start = g.start()
-            return data.count('\n', 0, start), len(g[1])
+    for match in RE_REFERENCE_TARGET.finditer(data):
+        if match["label"] == find_ref:
+            start = match.start()
+            return data.count('\n', 0, start), len(match["prefix"])
     return None, None
 
 
@@ -104,7 +119,6 @@ def main(argv=None):
 
     import sys
     import os
-    import re
 
     if argv is None:
         argv = sys.argv[1:]
@@ -123,17 +137,15 @@ def main(argv=None):
     if not rst_root:
         return
 
-    re_role_match_brackets = r":([a-zA-Z0-9_]+):`[^<]*<([^>]+)>`"
-    re_role_match = r":([a-zA-Z0-9_]+):`([^`]+)`"
-    match = re.match(re_role_match_brackets, args.find)
+    match = RE_ROLE_WITH_TARGET.match(args.find)
     if match is None:
-        match = re.match(re_role_match, args.find)
+        match = RE_ROLE_BARE.match(args.find)
 
     if match is None:
-        print("Could not match:", re_role_match, file=sys.stderr)
+        print("Could not match:", RE_ROLE_BARE.pattern, file=sys.stderr)
         sys.exit(1)
 
-    role_id, role_data = match.groups()
+    role_id, role_data = match["role"], match["target"]
     del match
 
     line = col = None

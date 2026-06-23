@@ -21,7 +21,6 @@ watcher per language; it delegates to the same helpers.
 
 from __future__ import annotations
 
-import logging
 import subprocess
 import sys
 import threading
@@ -63,26 +62,20 @@ except ImportError:
     _read_po_file = None  # type: ignore[assignment]
     _HAS_PO_PARSER = False
 
-try:
-    from debug_log import (  # type: ignore[import-not-found]
-        log_check_interval_seconds as _log_check_interval_seconds,
-        maybe_trim_live_log as _maybe_trim_live_log,
-    )
-    _HAS_LOG_TRIM = True
-except ImportError:
-    _log_check_interval_seconds = None  # type: ignore[assignment]
-    _maybe_trim_live_log = None  # type: ignore[assignment]
-    _HAS_LOG_TRIM = False
+# Logging goes through Sphinx's logging wrapper.
+from sphinx.util.logging import getLogger as _get_logger  # noqa: E402
+
+_logger = _get_logger(__name__)
+
+
+def debug_log(message: str, *args: object, **_kw: object) -> None:
+    _logger.debug(message, *args)
 
 
 # ---------------------------------------------------------------------------
 # Type alias: {msgid: (msgstr, [rst_rel_path, ...])}
 # ---------------------------------------------------------------------------
 _Snapshot = dict[str, tuple[str, list[str]]]
-
-_LOG_CONFIG_RELATIVE_PATH = Path("tools/config/logging_config.ini")
-_DISABLED_LOG_CHECK_INTERVAL = 0.0
-_INITIAL_LOG_CHECK_DEADLINE = 0.0
 
 
 # ---------------------------------------------------------------------------
@@ -97,7 +90,7 @@ def _load_po_snapshot(po_path: Path) -> _Snapshot:
         entries = _read_po_file(po_path)
         return {e.msgid: (e.msgstr, [loc[0] for loc in e.locations]) for e in entries}
     except Exception as exc:
-        logging.debug("[POWatcher] snapshot load failed for %s: %s", po_path.name, exc)
+        debug_log("[POWatcher] snapshot load failed for %s: %s", po_path.name, exc)
         return {}
 
 
@@ -131,7 +124,7 @@ def _config_for(project_root: Path, lang: str):
     try:
         return _ConfigRecord.from_project(project_root, lang)
     except Exception as exc:
-        logging.debug("[POWatcher] ConfigRecord.from_project failed for %s: %s", lang, exc)
+        debug_log("[POWatcher] ConfigRecord.from_project failed for %s: %s", lang, exc)
         return None
 
 
@@ -185,13 +178,13 @@ def _rebuild_html(
         ``None`` or empty set → full incremental build.
     """
     if not po_path.exists():
-        logging.warning("[POWatcher] PO file missing, skipping HTML rebuild: %s", po_path)
+        debug_log("[POWatcher] PO file missing, skipping HTML rebuild: %s", po_path)
         return
 
     if cfg is None:
         cfg = _config_for(project_root, lang)
     if cfg is None:
-        logging.warning(
+        debug_log(
             "[POWatcher] ConfigRecord unavailable; skipping HTML rebuild for %s", lang,
         )
         return
@@ -230,7 +223,7 @@ def _rebuild_html(
                 resolved.append(str(full))
         if resolved:
             cmd += resolved
-            logging.info(
+            debug_log(
                 "[POWatcher] targeted HTML rebuild: %s",
                 ", ".join(Path(p).name for p in resolved),
             )
@@ -292,9 +285,6 @@ class MultiPOWatcher(threading.Thread):
         self.interval = interval
         self.rebuild_html = rebuild_html
         self.rst_root = project_root / _RST_SOURCE_DIR
-        self._log_config_path = project_root / _LOG_CONFIG_RELATIVE_PATH
-        self._log_check_interval = self._resolve_log_check_interval()
-        self._next_log_check = _INITIAL_LOG_CHECK_DEADLINE
 
         # Per-language state; populated by _sync_langs()
         self._langs: dict[str, _LangState] = {}
@@ -335,7 +325,7 @@ class MultiPOWatcher(threading.Thread):
             # first _poll() call fires an immediate rebuild (no sleep).
             if po_mtime > idx_mtime:
                 last_mtime = 0.0
-                logging.info(
+                debug_log(
                     "[MultiPOWatcher] %s/%s newer than index — "
                     "rebuild queued for startup",
                     lang, _PO_FILENAME,
@@ -346,36 +336,17 @@ class MultiPOWatcher(threading.Thread):
             # Load snapshot only when we won't rebuild immediately.
             snapshot = _load_po_snapshot(po_path) if last_mtime != 0.0 else {}
             self._langs[lang] = _LangState(po_path, last_mtime, snapshot)
-            logging.debug("[MultiPOWatcher] tracking %s", lang)
+            debug_log("[MultiPOWatcher] tracking %s", lang)
 
     # ------------------------------------------------------------------
     def run(self) -> None:
         # First check fires immediately (no sleep) so startup-stale indexes
         # are rebuilt before the first user request, not up to `interval` s later.
         self._poll_all()
-        self._maybe_trim_log()
         while True:
             time.sleep(self.interval)
             self._sync_langs()   # pick up new languages added after startup
             self._poll_all()
-            self._maybe_trim_log()
-
-    def _resolve_log_check_interval(self) -> float:
-        if not _HAS_LOG_TRIM or _log_check_interval_seconds is None:
-            return _DISABLED_LOG_CHECK_INTERVAL
-        return _log_check_interval_seconds(self._log_config_path)
-
-    def _maybe_trim_log(self) -> None:
-        """Dispatch a live trim no more often than the configured cadence."""
-        if not _HAS_LOG_TRIM or _maybe_trim_live_log is None:
-            return
-        is_enabled = self._log_check_interval > _DISABLED_LOG_CHECK_INTERVAL
-        current_time = time.monotonic()
-        is_due = current_time >= self._next_log_check
-        if not (is_enabled and is_due):
-            return
-        self._next_log_check = current_time + self._log_check_interval
-        _maybe_trim_live_log(self._log_config_path)
 
     def _poll_all(self) -> None:
         """Check every tracked language for PO mtime changes."""
@@ -400,13 +371,13 @@ class MultiPOWatcher(threading.Thread):
         state.snapshot = new_snapshot
 
         if changed_rst:
-            logging.info(
+            debug_log(
                 "[MultiPOWatcher] %s/%s — %d RST file(s) changed: %s",
                 lang, _PO_FILENAME, len(changed_rst),
                 ", ".join(sorted(changed_rst)[:3]) + ("…" if len(changed_rst) > 3 else ""),
             )
         else:
-            logging.info(
+            debug_log(
                 "[MultiPOWatcher] %s/%s changed (full rebuild)", lang, _PO_FILENAME,
             )
 
@@ -416,13 +387,13 @@ class MultiPOWatcher(threading.Thread):
             self.build_dir / lang, lang, cfg,
         )
         self.invalidate(lang)
-        logging.info("[MultiPOWatcher] search index hot-swapped for %s", lang)
+        debug_log("[MultiPOWatcher] search index hot-swapped for %s", lang)
 
         # 2. Rebuild HTML in background — targeted to changed RST files only.
         # Skipped when rebuild_html is False (e.g. under 'make liveall', where
         # sphinx-autobuild already owns HTML rebuilds for this build/<lang>/).
         if not self.rebuild_html:
-            logging.debug(
+            debug_log(
                 "[MultiPOWatcher] rebuild_html=False; leaving HTML to the live "
                 "builder for %s", lang,
             )
@@ -436,7 +407,7 @@ class MultiPOWatcher(threading.Thread):
             name=f"MultiPOWatcher-html-{lang}",
             daemon=True,
         ).start()
-        logging.info(
+        debug_log(
             "[MultiPOWatcher] HTML rebuild started in background for %s", lang,
         )
 
@@ -523,7 +494,7 @@ class POWatcher(threading.Thread):
             idx_mtime = 0.0
 
         if po_mtime > idx_mtime:
-            logging.info(
+            debug_log(
                 "[POWatcher] %s is newer than index — rebuild queued for startup",
                 po_path.name,
             )
@@ -571,17 +542,17 @@ class POWatcher(threading.Thread):
         self._snapshot = new_snapshot
 
         if changed_rst:
-            logging.info(
+            debug_log(
                 "[POWatcher] %s — %d RST file(s): %s",
                 self.po_path.name, len(changed_rst),
                 ", ".join(sorted(changed_rst)[:3]) + ("…" if len(changed_rst) > 3 else ""),
             )
         else:
-            logging.info("[POWatcher] %s changed (full rebuild)", self.po_path.name)
+            debug_log("[POWatcher] %s changed (full rebuild)", self.po_path.name)
 
         _rebuild_index(self.po_path, self.rst_root, self.build_dir, self.lang, cfg)
         self.invalidate(self.lang)
-        logging.info("[POWatcher] search index hot-swapped for %s", self.lang)
+        debug_log("[POWatcher] search index hot-swapped for %s", self.lang)
 
         threading.Thread(
             target=_rebuild_html,
@@ -590,4 +561,4 @@ class POWatcher(threading.Thread):
             name=f"POWatcher-html-{self.lang}",
             daemon=True,
         ).start()
-        logging.info("[POWatcher] HTML rebuild started in background for %s", self.lang)
+        debug_log("[POWatcher] HTML rebuild started in background for %s", self.lang)
