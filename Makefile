@@ -88,6 +88,14 @@ BUILDDIR        ?= build
 # extension/conf code is re-imported automatically — no live-server restart
 # needed. Used by livehtml / livehtml-direct / liveall.
 LIVE_WATCH_DIRS  = --watch build_files
+
+# Per-language asset-override subdirs (locale/<lang>/_images, locale/<lang>/_static)
+# that shared_assets.py applies at build-finished. sphinx-autobuild does not watch
+# them by default, so dropping/replacing an override image would not rebuild until
+# now. Each live target loops these and appends `--watch locale/<lang>/<subdir>`
+# for those that exist. A subdir created mid-session is only picked up after
+# restarting the live target.
+OVERRIDE_SUBDIRS = _images _static
 BF_LANG         ?= en
 SPHINXOPTS      ?= -v -j auto -D language='$(BF_LANG)'
 LATEXOPTS       ?= "-interaction nonstopmode"
@@ -196,6 +204,9 @@ livehtml:
 	fi
 	@watch_opt=""; \
 	if [ -d "locale/$(BF_LANG)/LC_MESSAGES" ]; then watch_opt="--watch locale/$(BF_LANG)/LC_MESSAGES"; fi; \
+	for ov in $(OVERRIDE_SUBDIRS); do \
+	    if [ -d "locale/$(BF_LANG)/$$ov" ]; then watch_opt="$$watch_opt --watch locale/$(BF_LANG)/$$ov"; fi; \
+	done; \
 	$(SPHINXAUTOBUILD) \
 	    --pre-build "python3 tools/translations/smart_mo_compile.py $(SMART_MO_ARGS) --doctree-dir=$(BUILDDIR)/html/.doctrees $(SMART_MO_LIVE_EXTRA_ARGS)" \
 	    $$watch_opt \
@@ -216,6 +227,9 @@ livehtml-direct:
 	fi
 	@watch_opt=""; \
 	if [ -d "locale/$(BF_LANG)/LC_MESSAGES" ]; then watch_opt="--watch locale/$(BF_LANG)/LC_MESSAGES"; fi; \
+	for ov in $(OVERRIDE_SUBDIRS); do \
+	    if [ -d "locale/$(BF_LANG)/$$ov" ]; then watch_opt="$$watch_opt --watch locale/$(BF_LANG)/$$ov"; fi; \
+	done; \
 	$(SPHINXAUTOBUILD) \
 	    --pre-build "python3 tools/translations/smart_mo_compile.py --language=$(BF_LANG) --cache-dir=$(BUILDDIR)/.translation_cache --shard-root=$(BUILDDIR)/.i18n_shards/locale --doctree-dir=$(BUILDDIR)/.doctrees/$(BF_LANG) $(SMART_MO_LIVE_EXTRA_ARGS)" \
 	    $$watch_opt \
@@ -248,6 +262,9 @@ liveall: ensure-lang-builds
 	    echo "  [$$lang] → $(BUILDDIR)/$$lang/ (autobuild on port $$port)"; \
 	    watch_arg=""; \
 	    if [ -d "locale/$$lang/LC_MESSAGES" ]; then watch_arg="--watch locale/$$lang/LC_MESSAGES"; fi; \
+	    for ov in $(OVERRIDE_SUBDIRS); do \
+	        if [ -d "locale/$$lang/$$ov" ]; then watch_arg="$$watch_arg --watch locale/$$lang/$$ov"; fi; \
+	    done; \
 	    BF_LANG=$$lang BF_LANGS="$(BF_LANGS)" $(SPHINXAUTOBUILD) \
 	        --pre-build "python3 tools/translations/smart_mo_compile.py --language=$$lang --cache-dir=$(BUILDDIR)/.translation_cache --shard-root=$(BUILDDIR)/.i18n_shards/locale --doctree-dir=$(BUILDDIR)/.doctrees/$$lang $(SMART_MO_LIVE_EXTRA_ARGS)" \
 	        $$watch_arg \
