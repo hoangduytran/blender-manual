@@ -289,6 +289,7 @@ if html_theme == "furo":
     html_js_files = [
         "js/version_switch.js",
         "js/sidebar_splitter.js",
+        "js/image_viewer.js",
     ]
 
 # Add any paths that contain custom static files (such as style sheets) here,
