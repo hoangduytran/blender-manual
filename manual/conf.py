@@ -81,6 +81,12 @@ extensions = [
     # per language. A language may override an asset by dropping a file under
     # locale/<lang>/_images or locale/<lang>/_static. See shared_assets.py.
     "shared_assets",
+    # Fixes Sphinx's over-eager :kbd: splitting for translated text. Sphinx
+    # splits on spaces, '-', '+', '^', which breaks Vietnamese key names like
+    # 'Dấu Cộng (+) Bàn Số (NumpadPlus)' into per-word blocks. This extension
+    # re-merges and re-splits at doctree-resolved using a smarter algorithm
+    # that only breaks on top-level separators (not inside parentheses).
+    "kbd_fix",
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
 ]
