@@ -528,3 +528,159 @@ a .i18n-native-hint {
 }
 
 /* End English reading-hint pill. */
+
+/* ===================================================================
+   Draggable sidebar splitters
+   Two handles injected by sidebar_splitter.js:
+     .sidebar-splitter--left   between .sidebar-drawer and .main
+     .sidebar-splitter--right  between .content and .toc-drawer (inside .main)
+   =================================================================== */
+
+.sidebar-splitter {
+  align-self: stretch;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 7px;
+  cursor: col-resize;
+  position: relative;
+  z-index: 10;
+  touch-action: none;
+  /* 3D raised ridge: bright left edge, dark right edge, raised center */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.12)  0%,
+    var(--color-background-secondary, #e8e8e8)  20%,
+    var(--color-background-primary,   #f8f8f8)  50%,
+    var(--color-background-secondary, #e8e8e8)  80%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+  box-shadow:
+    inset  1px 0 0 rgba(255, 255, 255, 0.55),  /* bright left bevel  */
+    inset -1px 0 0 rgba(0,   0,   0,   0.18),  /* dark  right bevel  */
+             1px 0 4px rgba(0,   0,   0,   0.08); /* soft cast shadow */
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+  /* Keep the handle out of the tab order */
+  user-select: none;
+}
+
+.sidebar-splitter[hidden] {
+  display: none !important;
+}
+
+.sidebar-splitter:hover {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.18) 0%,
+    var(--color-brand-primary, #f08030)  30%,
+    var(--color-brand-content, #e07020)  50%,
+    var(--color-brand-primary, #f08030)  70%,
+    rgba(0, 0, 0, 0.18) 100%
+  );
+  box-shadow:
+    inset  1px 0 0 rgba(255, 255, 255, 0.4),
+    inset -1px 0 0 rgba(0,   0,   0,   0.25),
+             2px 0 6px rgba(0,   0,   0,   0.15);
+}
+
+.sidebar-splitter.is-dragging {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.22) 0%,
+    var(--color-brand-content, #e07020)  30%,
+    var(--color-brand-primary, #f08030)  50%,
+    var(--color-brand-content, #e07020)  70%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+  box-shadow:
+    inset  1px 0 0 rgba(255, 255, 255, 0.3),
+    inset -1px 0 0 rgba(0,   0,   0,   0.3),
+             3px 0 8px rgba(0,   0,   0,   0.2);
+}
+
+/* Grip dots centred on the bar */
+.sidebar-splitter__grip {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 40px;
+  pointer-events: none;
+  /* Dotted column: repeating radial gradient */
+  background-image: radial-gradient(
+    circle,
+    var(--color-foreground-muted, rgba(0, 0, 0, 0.28)) 1px,
+    transparent 1px
+  );
+  background-size: 3px 7px;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, background-image 0.15s ease;
+}
+
+.sidebar-splitter:hover .sidebar-splitter__grip,
+.sidebar-splitter.is-dragging .sidebar-splitter__grip {
+  opacity: 1;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.95) 1px,
+    transparent 1px
+  );
+}
+
+/* Dark theme: invert the bevel direction subtly */
+body[data-theme="dark"] .sidebar-splitter {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.35)  0%,
+    var(--color-background-secondary, #2a2a2a)  20%,
+    var(--color-background-primary,   #1a1a1a)  50%,
+    var(--color-background-secondary, #2a2a2a)  80%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  box-shadow:
+    inset  1px 0 0 rgba(255, 255, 255, 0.08),
+    inset -1px 0 0 rgba(0,   0,   0,   0.45),
+             1px 0 4px rgba(0,   0,   0,   0.35);
+}
+
+/* Auto dark (system) */
+@media (prefers-color-scheme: dark) {
+  body[data-theme="auto"] .sidebar-splitter {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.35)  0%,
+      var(--color-background-secondary, #2a2a2a)  20%,
+      var(--color-background-primary,   #1a1a1a)  50%,
+      var(--color-background-secondary, #2a2a2a)  80%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+    box-shadow:
+      inset  1px 0 0 rgba(255, 255, 255, 0.08),
+      inset -1px 0 0 rgba(0,   0,   0,   0.45),
+               1px 0 4px rgba(0,   0,   0,   0.35);
+  }
+}
+
+/* Hide left splitter when sidebar is a slide-in drawer (≤ 63em) */
+@media (max-width: 63em) {
+  .sidebar-splitter--left {
+    display: none !important;
+  }
+}
+
+/* Hide right splitter when toc is a slide-in drawer (≤ 82em) */
+@media (max-width: 82em) {
+  .sidebar-splitter--right {
+    display: none !important;
+  }
+}
+
+/* In print, splitters are meaningless */
+@media print {
+  .sidebar-splitter {
+    display: none !important;
+  }
+}
+
+/* End draggable sidebar splitters. */
