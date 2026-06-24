@@ -171,6 +171,33 @@
     return (text || '').trim();
   }
 
+  function imageResolution(image) {
+    var width = image && (image.naturalWidth || image.width);
+    var height = image && (image.naturalHeight || image.height);
+
+    if (!width || !height) {
+      return '';
+    }
+    return Math.round(width) + 'x' + Math.round(height);
+  }
+
+  function imagePathLabel(src, sourceImage, loadedImage) {
+    var resolution = imageResolution(sourceImage) || imageResolution(loadedImage);
+    return resolution ? resolution + ': ' + src : src;
+  }
+
+  function updatePathLabel(sourceImage, loadedImage) {
+    var label;
+
+    if (!viewer || !state.src) {
+      return;
+    }
+
+    label = imagePathLabel(state.src, sourceImage, loadedImage);
+    viewer.path.textContent = label;
+    viewer.path.title = label;
+  }
+
   function ensureViewer() {
     if (viewer) {
       return viewer;
@@ -181,6 +208,7 @@
     var back = append(root, 'button', 'manual-image-viewer__back', '<');
     var frame = append(root, 'div', 'manual-image-viewer__frame');
     var toolbar = append(frame, 'div', 'manual-image-viewer__toolbar');
+    var path = append(toolbar, 'div', 'manual-image-viewer__path');
     var viewport = append(frame, 'div', 'manual-image-viewer__viewport');
     var image = append(viewport, 'img', 'manual-image-viewer__image');
     var caption = append(frame, 'div', 'manual-image-viewer__caption');
@@ -224,7 +252,10 @@
     viewport.addEventListener('dblclick', function () {
       setScale(state.scale === state.fitScale ? 1 : state.fitScale);
     });
-    image.addEventListener('load', resetView);
+    image.addEventListener('load', function () {
+      updatePathLabel(state.image, image);
+      resetView();
+    });
     document.addEventListener('keydown', onKeyDown);
     window.addEventListener('resize', function () {
       if (!root.hidden) {
@@ -238,6 +269,7 @@
       image: image,
       caption: caption,
       open: open,
+      path: path,
     };
     return viewer;
   }
@@ -345,6 +377,7 @@
     nextViewer.caption.hidden = !nextViewer.caption.textContent;
     nextViewer.open.href = src;
     nextViewer.image.alt = image.getAttribute('alt') || '';
+    updatePathLabel(image, nextViewer.image);
     setFullPage(!!fullPage);
 
     if (nextViewer.image.src === src && nextViewer.image.complete) {
