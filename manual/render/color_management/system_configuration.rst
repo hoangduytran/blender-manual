@@ -7,14 +7,13 @@ Blender Settings
 
 By default, Blender integrates with automatic color management in operating
 systems and saves images and videos with color space metadata. This means
-that usually, images viewed in Blender look the same when saved and opened in
-other applications (on the same computer). Particularly image viewers, video
-players and browsers that also use automatic color management.
+that usually, images viewed and saved in Blender look the same when opened in
+video players and browsers on the same computer.
 
-Traditionally, VFX software has relied on more manual configuration, though
-with wide gamut and HDR automatic color management is becoming more common.
-To use more traditional manual configuration Blender, turn off display
-emulation.
+Traditionally, VFX software has relied on more manual configuration for
+color management. This gives more control, but is also less likely to do the
+right thing by default. To use more traditional manual configuration Blender,
+turn off display emulation.
 
 .. _bpy.types.ColorManagedDisplaySettings.emulation:
 
@@ -28,7 +27,7 @@ Display Emulation
    The choice of display in Blender specifies the target display color space for
    rendered images and video files, or game assets to export. Colors will be clipped
    to the gamut and HDR range of the chosen target display.
-   
+
    For example, if you have a P3 HDR monitor, you can preview what the image will
    look like when saved as sRGB, Display P3 or HDR by switching the display.
 
@@ -60,11 +59,12 @@ Wide Gamut
 ==========
 
 On Windows and Linux, monitors are not always calibrated for accuracy by default.
-sRGB colors may be mapped to the P3 gamut of the monitor, which makes all colors
-more vibrant.
+For example, sRGB colors may be mapped to the P3 gamut of the monitor, which
+makes all colors more vibrant at the cost of accuracy.
 
 Enabling "Automatically manage color for apps" on Windows or using a good display
-profile can correct for this.
+profile can correct for this. On macOS, the default configuration is already set
+up for accurate color gamut.
 
 HDR & Tone Mapping
 ==================
@@ -76,8 +76,7 @@ into the available range. Blender does not currently perform automatic HDR tone
 mapping, and simply clips the colors.
 
 HLG and PQ standards are defined in absolute nits. This makes sense in a controlled
-cinema environment. On a computer monitor or TV, brightness can be adjusted, and
-this affects all SDR and HDR content viewed on the device.
+cinema environment. On a computer monitor or TV, brightness can be adjusted.
 
 In this context, the more important metric is the headroom above reference white.
 This is how much brighter a color can be compared to an SDR white color.
@@ -95,7 +94,7 @@ standard.
 Gamma Discrepancies
 ===================
 
-Transfer functions exist to efficiently store and display 8 bit colors.
+Transfer functions exist to efficiently store and display colors with few bits.
 Common transfer functions are sRGB, Gamma 2.2 and Gamma 2.4.
 
 Ideally, encoding and decoding of images would always use matching transfer
@@ -120,13 +119,13 @@ Manual Color Management
 Traditionally, for accurately viewing content for TV or cinema on a computer
 there are a few solutions.
 
-* Keep the monitor at Gamma 2.2, and use a Gamma 2.2 display in OpenColorIO.
-* Calibrate the monitor for sRGB, and keep using the default sRGB display in OpenColorIO.
-* Change both the monitor calibration and OpenColorIO display to Gamma 2.4.
+* Calibrate the monitor for sRGB, and keep using the default sRGB display in Blender.
+* Keep the monitor at Gamma 2.2, and use a Gamma 2.2 display in Blender with a custom OpenColorIO configuration.
+* Change both the monitor calibration and Blender display to Gamma 2.4.
 
-All involve carefully matching the OpenColorIO display to the monitor transfer
-function, so they cancel out exactly. In Blender, this involves turning off
-Display Emulation so the transfer function is used as-is.
+All involve carefully matching the Blender color management display to the
+monitor transfer function, so they cancel out exactly. This requires turning
+off Display Emulation so the transfer function is used as-is.
 
 Automatic Color Management
 --------------------------
@@ -143,7 +142,7 @@ be configured once with the appropriate transfer function.
 HDR
 ---
 
-HDR display requires automatic color management to be used. Enabling HDR
+HDR display requires automatic color management to be used. But enabling HDR
 in the operating system settings often affects gamma for all applications.
 
 * On Windows, enabling "Use HDR" makes the transfer functions cancel out. This
