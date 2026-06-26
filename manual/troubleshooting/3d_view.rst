@@ -98,8 +98,8 @@ Viewport Playback Frame Rate Limited
 ------------------------------------
 
 Having the viewport playback clamped to a maximum of 60 FPS is typically caused by the VSync (vertical sync) setting
-on your GPU, for higher frame rates you may have to disable VSync functionality although this may be of limited us
-since frames rendered may be more than your GPU and monitor are able to display.
+on your GPU, for higher frame rates you may have to disable VSync functionality.
+This may be of limited use since frames rendered may be more than your GPU and monitor are able to display.
 
 VSync is configured as part of your GPU driver options which vary depending on your system & GPU combination.
 
