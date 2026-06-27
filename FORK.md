@@ -1,3 +1,5 @@
+**Language / Ngôn ngữ:** English · [Tiếng Việt](FORK_VI.md)
+
 # Blender Manual — Multilingual Build Fork
 
 This repository is a **downstream fork** of the official

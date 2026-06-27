@@ -3,9 +3,10 @@
 <!-- FORK-NOTICE (bản fork phái sinh — xem FORK.md) -->
 > **Đây là một bản fork đa ngôn ngữ của Sổ tay Blender (Blender Manual).** Bản
 > fork này phản ánh trung thực nội dung của Blender và bổ sung công cụ để dựng,
-> tìm kiếm và đọc sổ tay ở nhiều ngôn ngữ cùng lúc. Xem **[FORK.md](FORK.md)**
-> để biết danh sách tính năng, hướng dẫn dựng tài liệu, và cách cập nhật những
-> thay đổi mới nhất từ Blender.
+> tìm kiếm và đọc sổ tay ở nhiều ngôn ngữ cùng lúc. Xem
+> **[FORK_VI.md](FORK_VI.md)** (phiên bản tiếng Việt — hoặc
+> [FORK.md](FORK.md) bản tiếng Anh) để biết danh sách tính năng, hướng dẫn dựng
+> tài liệu, và cách cập nhật những thay đổi mới nhất từ Blender.
 > Nguồn gốc (upstream): <https://projects.blender.org/blender/blender-manual>
 <!-- /FORK-NOTICE -->
 
@@ -35,7 +36,7 @@ flowchart TD
     B -->|"build/&lt;ngôn-ngữ&gt;/"| S["localhost:8000<br/>trang web đa ngôn ngữ"]
 ```
 
-Xem **[FORK.md](FORK.md)** để biết đầy đủ danh sách tính năng và quy trình đồng
+Xem **[FORK_VI.md](FORK_VI.md)** (phiên bản tiếng Việt) để biết đầy đủ danh sách tính năng và quy trình đồng
 bộ với Blender.
 
 ## ✍️ Cách Dựng & Biên Tập Tài Liệu
@@ -71,7 +72,8 @@ và một thành viên trong nhóm sẽ hỗ trợ bạn.
 
 > 📌 **Lưu ý cho bản fork này:** Để dựng và đọc sổ tay bằng tiếng Việt (hoặc các
 > ngôn ngữ khác) ngay tại máy bạn — gồm tìm kiếm đa ngôn ngữ, dựng trực tiếp
-> (live), và quy trình dịch thuật — hãy đọc **[FORK.md](FORK.md)**. Tóm tắt
+> (live), và quy trình dịch thuật — hãy đọc **[FORK_VI.md](FORK_VI.md)**
+> (phiên bản tiếng Việt). Tóm tắt
 > nhanh: lấy bản dịch bằng `make checkout_locale vi`, rồi chạy
 > `make liveall BF_LANGS="en vi"`.
 
