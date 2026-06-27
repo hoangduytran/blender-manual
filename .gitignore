@@ -1,6 +1,11 @@
 # generic files to ignore
 .*
 
+# Fork CI: the broad `.*` above hides .github; re-include the workflows.
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
+
 # Editors
 .vscode/*
 .claude/*

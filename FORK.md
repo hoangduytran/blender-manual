@@ -34,7 +34,9 @@ branch is kept as a clean mirror of Blender; all fork features live on
   - [8. Tooling & infrastructure](#8-tooling--infrastructure)
 - [Make targets reference](#make-targets-reference)
 - [Environment variables](#environment-variables)
+- [Choosing your languages](#choosing-your-languages)
 - [Quick start](#quick-start)
+- [Customizing images and styles](#customizing-images-and-styles)
 - [Staying in sync with Blender](#staying-in-sync-with-blender)
 - [Repository layout](#repository-layout)
 
@@ -176,6 +178,7 @@ fork:
 | `make search-index` | (Re)build `build/<lang>/searchindex.pkl.gz` for each language with a PO file. |
 | `make livehtml-direct` | Auto-build a single language into `build/<lang>/` (pair with `make serve`). |
 | `make html` | Stock single-language HTML build (upstream behaviour). |
+| `make checkout_locale <codes>` | Fetch translation catalogues (e.g. `make checkout_locale vi fr`) from Blender's translations repo into `locale/`. |
 | `make update_po` | Update PO message catalogs. |
 | `make report_po_progress` | Report translation progress / fuzzy strings. |
 | `make local` | Modifier: disable intersphinx for this invocation (e.g. `make remake local`). |
@@ -196,6 +199,25 @@ make liveall BF_LANGS="en vi"
 
 ---
 
+## Choosing your languages
+
+**This repository ships no translation data.** The `locale/` directory is not
+committed, so you are free to pull in whichever languages you want. Translations
+come from Blender's own
+[blender-manual-translations](https://projects.blender.org/blender/blender-manual-translations)
+project, fetched with:
+
+```bash
+make checkout_locale vi          # one language
+make checkout_locale vi fr ru    # several at once
+make checkout_locale             # interactive: prompts for codes
+```
+
+This sparse-checks-out `locale/<lang>/LC_MESSAGES/blender_manual.po` for each
+code. English needs no catalogue (it is the source language). After checking out
+a language it becomes available to every build/serve target; pass the codes you
+want via `BF_LANGS` (or rely on auto-detection from `locale/`).
+
 ## Quick start
 
 ```bash
@@ -206,7 +228,10 @@ cd blender-manual
 # 2. One-time environment setup (creates the Sphinx virtualenv)
 make setup
 
-# 3. Build + live-serve English and any languages you have under locale/
+# 3. Fetch the language(s) you want (skip for English-only)
+make checkout_locale vi
+
+# 4. Build + live-serve English plus your chosen languages
 make liveall BF_LANGS="en vi"
 # → open http://localhost:8000  (press '/' to search, language switcher in sidebar)
 
@@ -214,14 +239,94 @@ make liveall BF_LANGS="en vi"
 make stop
 ```
 
+English-only needs no `checkout_locale` step:
+
+```bash
+make liveall                 # just English
+```
+
 Building a static site without the live server:
 
 ```bash
+make checkout_locale vi
 make build BF_LANGS="en vi"
 make serve BF_LANGS="en vi"
 ```
 
 ---
+
+## Customizing images and styles
+
+There are three distinct ways to add your own assets, depending on whether you
+want to **replace a screenshot for one language**, **restyle the whole theme**,
+or **add new content images**.
+
+### A. Per-language image / static overrides (no code changes)
+
+Thanks to the [shared-assets](#5-shared-staticimage-assets) extension, any
+language can override or add an asset by dropping a file under
+`locale/<lang>/_images/` or `locale/<lang>/_static/`, **mirroring the same
+relative path** the manual uses. The override wins over the shared English copy;
+everything else keeps linking to the shared tree.
+
+```text
+# Replace one English screenshot with a Vietnamese one:
+locale/vi/_images/render/cycles/gpu_rendering.png   # same path as the EN image
+
+# Add a Vietnamese-only static file (e.g. a localized CSS tweak or font):
+locale/vi/_static/css/vi_overrides.css
+```
+
+- English can override its own shared assets the same way, via
+  `locale/en/_images/…` and `locale/en/_static/…`.
+- `make liveall` watches these override folders (`OVERRIDE_SUBDIRS = _images
+  _static`), so dropping or swapping a file triggers a rebuild and browser
+  refresh automatically.
+- No edits to `conf.py` or the Makefile are needed — overrides are resolved by
+  path at build time.
+
+### B. Theme-wide CSS / JavaScript (all languages)
+
+The theme's static assets live in **`build_files/theme/`** (registered as
+Sphinx's `html_static_path`). To add a site-wide stylesheet or script:
+
+1. Drop the file in the theme tree, e.g.
+   `build_files/theme/css/my_overrides.css` or
+   `build_files/theme/js/my_widget.js`.
+2. Register it in [manual/conf.py](manual/conf.py) under the `furo` block:
+
+   ```python
+   html_css_files = [
+       "css/theme_overrides.css",
+       "css/version_switch.css",
+       "fonts/bl-icons.css",
+       "css/my_overrides.css",   # ← your stylesheet
+   ]
+   html_js_files = [
+       "js/version_switch.js",
+       "js/sidebar_splitter.js",
+       "js/image_viewer.js",
+       "js/my_widget.js",        # ← your script
+   ]
+   ```
+
+This is exactly how the fork's own [image_viewer.js](build_files/theme/js/image_viewer.js)
+and [sidebar_splitter.js](build_files/theme/js/sidebar_splitter.js) are wired
+in, so follow those as working examples. Restyling existing elements is best
+done in `css/theme_overrides.css` (loaded after the Furo defaults, so your rules
+win).
+
+### C. New content images (referenced from `.rst`)
+
+For images that appear *in the manual text* (figures, screenshots you add to a
+page), follow upstream Blender's convention: put the file under `manual/images/`
+and reference it from the `.rst` with the normal `figure`/`image` directive.
+These are shared across all languages automatically; localize one only if needed
+via method **A** above.
+
+> Tip: keep fork-specific theme assets in `build_files/theme/` and content
+> images in `manual/images/`. That separation means upstream content syncs
+> (which touch `manual/`) rarely collide with your theme customizations.
 
 ## Staying in sync with Blender
 

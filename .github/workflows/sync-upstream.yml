@@ -1,0 +1,106 @@
+name: Sync with Blender upstream
+
+# Keeps this fork current with the official Blender manual while preserving the
+# fork's tooling. It:
+#   1. Fast-forwards `main` to match Blender's `main` (a clean mirror).
+#   2. Merges Blender's `main` into the fork branch on a temporary sync branch.
+#   3. Opens a PR with the result, or an issue if the merge conflicts.
+# The fork branch is never modified directly and nothing is force-pushed.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays 06:00 UTC
+  workflow_dispatch: {}    # allow manual runs from the Actions tab
+
+env:
+  UPSTREAM_URL: https://projects.blender.org/blender/blender-manual.git
+  FORK_BRANCH: feature/new_make_for_foreign_languages
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork (full history)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.FORK_BRANCH }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "upstream-sync-bot"
+          git config user.email "actions@github.com"
+
+      - name: Fetch Blender upstream
+        run: |
+          git remote add upstream "$UPSTREAM_URL"
+          git fetch upstream main --no-tags
+
+      - name: Fast-forward main mirror
+        run: |
+          git checkout main
+          if git merge --ff-only upstream/main; then
+            git push origin main
+          else
+            echo "::warning::main could not fast-forward (it has diverged from Blender). Skipping main update."
+          fi
+
+      - name: Attempt merge into a sync branch
+        id: merge
+        run: |
+          DATE=$(date -u +%Y%m%d)
+          SYNC_BRANCH="sync/upstream-${DATE}"
+          echo "sync_branch=${SYNC_BRANCH}" >> "$GITHUB_OUTPUT"
+
+          git checkout -B "$SYNC_BRANCH" "origin/${FORK_BRANCH}"
+
+          if [ -z "$(git rev-list "origin/${FORK_BRANCH}..upstream/main")" ]; then
+            echo "status=up-to-date" >> "$GITHUB_OUTPUT"
+            echo "Fork branch already contains all upstream commits. Nothing to do."
+            exit 0
+          fi
+
+          if git merge --no-edit upstream/main; then
+            echo "status=clean" >> "$GITHUB_OUTPUT"
+            git push --force-with-lease origin "$SYNC_BRANCH"
+          else
+            CONFLICTS=$(git diff --name-only --diff-filter=U | sed 's/^/- /')
+            git merge --abort
+            { echo "conflicts<<EOF"; echo "$CONFLICTS"; echo "EOF"; } >> "$GITHUB_OUTPUT"
+            echo "status=conflict" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open pull request (clean merge)
+        if: steps.merge.outputs.status == 'clean'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SYNC_BRANCH: ${{ steps.merge.outputs.sync_branch }}
+        run: |
+          if gh pr list --head "$SYNC_BRANCH" --json number --jq 'length' | grep -qv '^0$'; then
+            echo "PR for $SYNC_BRANCH already exists."
+            exit 0
+          fi
+          gh pr create \
+            --base "$FORK_BRANCH" \
+            --head "$SYNC_BRANCH" \
+            --title "Sync with Blender upstream ($(date -u +%Y-%m-%d))" \
+            --body "Automated merge of \`upstream/main\` (Blender) into \`$FORK_BRANCH\`. Merged cleanly. Review and merge to bring the fork up to date."
+
+      - name: Open issue (merge conflict)
+        if: steps.merge.outputs.status == 'conflict'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "Upstream sync needs manual merge ($(date -u +%Y-%m-%d))" \
+            --body "$(printf 'Merging \`upstream/main\` (Blender) into \`%s\` produced conflicts in:\n\n%s\n\nResolve locally:\n\n```\ngit fetch upstream\ngit checkout %s\ngit merge upstream/main\n# resolve, then:\ngit push origin %s\n```\n' "$FORK_BRANCH" "${{ steps.merge.outputs.conflicts }}" "$FORK_BRANCH" "$FORK_BRANCH")"
