@@ -1,3 +1,11 @@
+<!-- FORK-NOTICE (downstream fork — see FORK.md) -->
+> **This is a multilingual-build fork of the Blender Manual.** It mirrors
+> Blender's content and adds tooling to build, search and read the manual in
+> several languages at once. See **[FORK.md](FORK.md)** for the feature list,
+> build instructions, and how to pull in Blender's upstream updates.
+> Upstream: <https://projects.blender.org/blender/blender-manual>
+<!-- /FORK-NOTICE -->
+
 # Blender Manual
 
 Welcome to the Blender user manual project! We are always looking for contributors.
