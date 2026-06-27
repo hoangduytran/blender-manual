@@ -2,7 +2,8 @@ name: Sync with Blender upstream
 
 # Keeps this fork current with the official Blender manual while preserving the
 # fork's tooling. It:
-#   1. Fast-forwards `main` to match Blender's `main` (a clean mirror).
+#   1. Updates `main` by merging Blender's `main` (main also carries the
+#      nmake_locale.sh bootstrap script, so this is a normal merge).
 #   2. Merges Blender's `main` into the fork branch on a temporary sync branch.
 #   3. Opens a PR with the result, or an issue if the merge conflicts.
 # The fork branch is never modified directly and nothing is force-pushed.
@@ -46,13 +47,16 @@ jobs:
           git remote add upstream "$UPSTREAM_URL"
           git fetch upstream main --no-tags
 
-      - name: Fast-forward main mirror
+      - name: Update main mirror
         run: |
           git checkout main
-          if git merge --ff-only upstream/main; then
+          # Normal merge: main carries nmake_locale.sh on top of the Blender
+          # mirror, so it is intentionally a (tiny) step ahead of upstream.
+          if git merge --no-edit upstream/main; then
             git push origin main
           else
-            echo "::warning::main could not fast-forward (it has diverged from Blender). Skipping main update."
+            git merge --abort || true
+            echo "::warning::main could not merge cleanly with Blender. Skipping main update."
           fi
 
       - name: Attempt merge into a sync branch

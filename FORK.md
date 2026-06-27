@@ -397,7 +397,8 @@ via method **A** above.
 ## Staying in sync with Blender
 
 The whole point of the fork model: **keep Blender's content current while
-keeping these tooling changes.** `main` is a clean mirror of Blender; the fork
+keeping these tooling changes.** `main` mirrors Blender (plus the one
+`nmake_locale.sh` bootstrap script); the fork
 work lives on `feature/new_make_for_foreign_languages`, and you bring upstream
 changes *into* that branch by **merging** (never rebasing — merging means
 people who cloned the branch can `git pull` safely, no force-push).
@@ -416,9 +417,11 @@ git remote set-url --push upstream DISABLE   # safety: never push to Blender
 ```bash
 git fetch upstream
 
-# Keep main an exact mirror of Blender
+# Update main with Blender's changes (main also carries nmake_locale.sh,
+# so use a normal merge, not --ff-only — it stays clean since Blender
+# never touches the bootstrap script)
 git checkout main
-git merge --ff-only upstream/main
+git merge upstream/main
 git push origin main
 
 # Bring Blender's updates into the fork, keeping our tooling
@@ -434,8 +437,9 @@ upstream's version) rather than in the fork's `tools/`, `build_files/`, or
 ### Automated weekly sync
 
 [.github/workflows/sync-upstream.yml](.github/workflows/sync-upstream.yml) runs
-every Monday (and on demand via the Actions tab). It fast-forwards `main`,
-attempts to merge `upstream/main` into the fork branch, and then either:
+every Monday (and on demand via the Actions tab). It updates `main` (merging
+Blender's changes), attempts to merge `upstream/main` into the fork branch, and
+then either:
 
 - **opens a pull request** with the merged updates (clean merge), or
 - **opens an issue** listing the conflicting files (merge needs hands-on
