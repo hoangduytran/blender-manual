@@ -26,6 +26,12 @@ in faster renders.
        :ref:`Shadow Caustic Light <bpy.types.CyclesLightSettings.is_caustics_light>`.
      - :doc:`/render/cycles/osl/index` is active while using the OptiX rendering backend.
 
+.. note::
+
+   :guilabel:`EEVEE Only`
+    The Ambient Occlusion node uses a screen space implementation which inherits the same
+    :ref:`limitations <eevee-limitations-raytracing>` as the other screen space effects.
+
 .. seealso::
 
    The :ref:`bpy.types.ViewLayer.use_pass_ambient_occlusion` pass gives occlusion factors

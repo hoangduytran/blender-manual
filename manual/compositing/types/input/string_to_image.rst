@@ -61,4 +61,4 @@ Outputs
 =======
 
 Image
-   The rendered text as an image with transparency.
+   The rendered text as a grayscale image.
