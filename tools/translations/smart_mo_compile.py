@@ -737,16 +737,20 @@ def _resolve_location(
             return None
         return r if r.is_file() else None
 
-    # Primary candidate: srcdir-name-anchored. Scan from the right so that if
-    # the path happens to contain "manual" more than once (unlikely), the
-    # rightmost occurrence wins -- that is the actual srcdir marker.
+    # Primary candidates: srcdir-name-anchored. The genuine srcdir marker is the
+    # FIRST occurrence after the leading `..` segments, but a doc path may
+    # legitimately repeat srcdir_name (e.g. manual/contribute/manual/guides/...).
+    # Emit a candidate for every occurrence, left-to-right, so the true anchor
+    # (leftmost) is tried first; the resolution loop below keeps whichever
+    # candidate actually exists under srcdir. (A rightmost-wins + break here
+    # would pick the inner "manual", build a non-existent tail, and orphan every
+    # doc under manual/contribute/manual/.)
     candidates: list[Path] = []
-    for i in range(len(parts) - 1, -1, -1):
-        if parts[i] == srcdir_name:
+    for i, part in enumerate(parts):
+        if part == srcdir_name:
             tail = parts[i + 1:]                          # Components after the marker.
             if tail:
                 candidates.append(srcdir.joinpath(*tail))
-            break
 
     # Fallback candidates for unusual layouts (single .po hand-edited, etc.).
     candidates.append(po_dir / p)            # Naive: relative to .po file.
