@@ -20,7 +20,7 @@ Shader to RGB
 -------------
 
 EEVEE supports the conversion of BSDF outputs into color inputs to make a wide variety of custom shading.
-This is supported using the:doc:`Shader to RGB </render/shader_nodes/color/shader_to_rgb>` node.
+This is supported using the :doc:`Shader to RGB </render/shader_nodes/color/shader_to_rgb>` node.
 This node evaluates the lighting of the BSDFs connected to it similarly to a
 *Blended* material and inherits its limitations.
 
@@ -160,8 +160,8 @@ Light Path
 
    .. note::
 
-      *Is Glossy* does not work with Screen Space Reflections/Refractions
-      but does work with reflection planes (whether used with SSR or not).
+      *Is Glossy* and *Is Camera* do not work with Screen Space Reflections/Refractions
+      but do work with reflection planes (whether used with SSR or not).
 
 Particle Info
    Not supported.

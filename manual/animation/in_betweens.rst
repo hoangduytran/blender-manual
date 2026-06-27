@@ -8,12 +8,8 @@ In-Betweens
 
    In-Betweens Tools.
 
-There are several tools for editing poses in an animation.
-
-There are also in *Pose Mode* a bunch of armature-specific editing options/tools,
-like :ref:`auto-bones naming <armature-editing-naming-bones>`,
-:ref:`properties switching/enabling/disabling <armature-bone-properties>`, etc.,
-that were already described in the armature editing pages. See the links above...
+These tools create a new pose which is based on the keys surrounding the current frame.
+This can help to quickly build up in-betweens from already existing key poses.
 
 
 .. _bpy.ops.pose.blend_with_rest:
