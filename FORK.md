@@ -36,6 +36,7 @@ branch is kept as a clean mirror of Blender; all fork features live on
 - [Environment variables](#environment-variables)
 - [Choosing your languages](#choosing-your-languages)
 - [Quick start](#quick-start)
+- [Day-to-day authoring & translation workflow](#day-to-day-authoring--translation-workflow)
 - [Customizing images and styles](#customizing-images-and-styles)
 - [Staying in sync with Blender](#staying-in-sync-with-blender)
 - [Repository layout](#repository-layout)
@@ -254,6 +255,69 @@ make serve BF_LANGS="en vi"
 ```
 
 ---
+
+## Day-to-day authoring & translation workflow
+
+The `liveall` server is the hub for both jobs: it watches your English `.rst`
+sources **and** every language's PO catalogue, rebuilds only what changed, and
+refreshes the browser automatically. Start it once and leave it running:
+
+```bash
+make liveall BF_LANGS="en vi"     # English + Vietnamese, live, at :8000
+make stop                          # when you're done
+```
+
+What it watches (per language): `manual/**.rst`, `locale/<lang>/LC_MESSAGES`
+(the PO files), the per-language override folders, and `build_files/` (theme +
+extensions).
+
+### Writing / editing English content (RST)
+
+1. With `liveall` running, edit any page under `manual/**/*.rst`.
+2. On save, every built language rebuilds; the **English** page refreshes
+   immediately. Translated languages show the English text as a *fallback* for
+   any new or changed string until it is translated.
+3. When you have added or changed English strings, refresh the translators'
+   catalogues so the new message IDs reach them:
+
+   ```bash
+   make update_po
+   ```
+
+   This updates `locale/<lang>/LC_MESSAGES/blender_manual.po` for every language
+   with the new/changed `msgid`s (left untranslated or fuzzy for translators to
+   fill in). Run it whenever the English source text changes, not on every edit.
+
+### Translating into a foreign language (PO)
+
+1. Keep `liveall` running. Open `locale/<lang>/LC_MESSAGES/blender_manual.po`
+   and fill in `msgstr` entries (directly, or via the project's PO helpers in
+   [tools/translations/](tools/translations/)).
+2. On save:
+   - `smart_mo_compile.py` recompiles **only** the document shards whose
+     translations changed,
+   - that language rebuilds and the browser refreshes,
+   - the server's `MultiPOWatcher` rebuilds that language's **search index**,
+     so search reflects your new translations live too.
+3. Check coverage at any time:
+
+   ```bash
+   make report_po_progress           # translated / fuzzy / untranslated counts
+   ```
+
+### Lighter single-language alternatives
+
+When you only care about one language, these are cheaper than `liveall`:
+
+```bash
+make livehtml BF_LANG=vi            # one language, live, served at :8000
+# — or, build into build/<lang>/ and serve separately (two terminals):
+make livehtml-direct BF_LANG=vi     # terminal 1: rebuilder
+make serve BF_LANGS="en vi"         # terminal 2: unified server w/ switcher
+```
+
+> Reminder: `BF_LANGS` always builds English first (the shared-asset seed), so
+> `BF_LANGS="vi"` is treated as `"en vi"`.
 
 ## Customizing images and styles
 
