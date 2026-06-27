@@ -1,3 +1,5 @@
+**Language / Ngôn ngữ:** English · [Tiếng Việt](README_VI.md)
+
 <!-- FORK-NOTICE (downstream fork — see FORK.md) -->
 > **This is a multilingual-build fork of the Blender Manual.** It mirrors
 > Blender's content and adds tooling to build, search and read the manual in
@@ -16,6 +18,22 @@ You can view the latest version of the manual [here](https://docs.blender.org/ma
 
 If you're interested in contributing, follow the instructions below.
 
+### 🗺️ How this fork fits together
+
+```mermaid
+flowchart TD
+    U["Blender upstream<br/>(blender-manual)"] -->|fetch + merge| M["main<br/>(clean mirror)"]
+    U -->|merge into| F["feature branch<br/>(fork tooling)"]
+    M --> F
+    F -->|push| GH[("GitHub<br/>this fork")]
+    L["make checkout_locale vi"] -->|PO catalogues| LOC["locale/&lt;lang&gt;/"]
+    F --> B["make liveall"]
+    LOC --> B
+    B -->|"build/&lt;lang&gt;/"| S["localhost:8000<br/>multi-language site"]
+```
+
+See **[FORK.md](FORK.md)** for the full feature list and the upstream-sync workflow.
+
 ## ✍️ How to Build & Edit the Documentation
 
 Before making changes, please review the style guides to ensure consistency:
@@ -30,6 +48,15 @@ Once you're familiar with the guidelines, follow these steps to get set up, edit
 3. **[Editing the Manual](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/local_editing/editing.html)** - Make your changes.
 4. **[Rebuild](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/local_editing/build.html)** - Verify that your changes appear correctly.
 5. **[Submit a Pull Request](https://docs.blender.org/manual/en/dev/contribute/manual/getting_started/local_editing/pull_requests.html)** - Share your contributions with the community.
+
+```mermaid
+flowchart LR
+    A[Install dependencies] --> B[Build the manual]
+    B --> C[Edit RST pages]
+    C --> D[Rebuild & preview]
+    D -->|looks good| E[Submit Pull Request]
+    D -->|needs fixes| C
+```
 
 💡 _New to Git?_  
 If you're unfamiliar with Git or pull requests, you can submit your modified file as an
