@@ -10,6 +10,7 @@ from repeatable_extract import classify_terminal_hint, normalized
 from repeatable_record import RepeatableRecord
 
 from common.constants import (  # type: ignore[import-not-found]
+    HINT_BRACKET_PAIRS,
     HintSide,
     HTML_TAG_RE,
     NAV_BODY_GROUP,
@@ -24,6 +25,14 @@ from common.constants import (  # type: ignore[import-not-found]
 _NAVIGATION_TAGS = frozenset({RepeatableTag.TITLE.value, RepeatableTag.TOCTREE.value})
 
 
+def _hint_prefix_keys(lead: str, bracket: str) -> tuple[str, ...]:
+    """Return normalized text prefixes for every supported hint delimiter."""
+    return tuple(
+        normalized(f"{lead}{open_char}{bracket}{close_char}")
+        for open_char, close_char in HINT_BRACKET_PAIRS
+    )
+
+
 def build_navigation_hint_index(
     records: Iterable[RepeatableRecord],
 ) -> dict[str, tuple[str, ...]]:
@@ -33,7 +42,10 @@ def build_navigation_hint_index(
         hint = classify_terminal_hint(record.msgstr, record.msgid)
         is_english_hint = hint is not None and hint.side == HintSide.ENGLISH_BRACKET
         if record.node_tagname in _NAVIGATION_TAGS and is_english_hint:
-            indexed.setdefault(normalized(record.msgstr), set()).add(record.msgid)
+            source = hint.source or record.msgid
+            indexed.setdefault(normalized(record.msgstr), set()).add(source)
+            for key in _hint_prefix_keys(hint.lead, hint.bracket):
+                indexed.setdefault(key, set()).add(source)
     return {key: tuple(sorted(msgids)) for key, msgids in indexed.items()}
 
 
@@ -43,14 +55,13 @@ def _render_hint(text: str, msgids: tuple[str, ...]) -> str | None:
         hint = classify_terminal_hint(text, msgid)
         if hint is None or hint.side != HintSide.ENGLISH_BRACKET:
             continue
-        trailing = text[len(text.rstrip()) :]
         return (
             f"{html.escape(hint.lead, quote=False)}"
             f'<span class="{PILL_EN_CSS_CLASS}" '
-            f'data-msgid="{html.escape(msgid, quote=True)}" '
+            f'data-msgid="{html.escape(hint.source or msgid, quote=True)}" '
             f'data-repeatable="true">'
             f"{html.escape(hint.bracket, quote=False)}</span>"
-            f"{html.escape(trailing, quote=False)}"
+            f"{html.escape(hint.trailing, quote=False)}"
         )
     return None
 
@@ -58,7 +69,16 @@ def _render_hint(text: str, msgids: tuple[str, ...]) -> str | None:
 def _rewrite_text_token(token: str, index: dict[str, tuple[str, ...]]) -> str:
     """Rewrite a plain HTML text token only when it matches the repeatable index."""
     decoded = html.unescape(token)
-    rendered = _render_hint(decoded, index.get(normalized(decoded), ()))
+    key = normalized(decoded)
+    msgids = index.get(key, ())
+    if not msgids:
+        msgids = tuple(
+            msgid
+            for prefix, prefix_msgids in index.items()
+            if key.startswith(prefix)
+            for msgid in prefix_msgids
+        )
+    rendered = _render_hint(decoded, msgids)
     return rendered if rendered is not None else token
 
 

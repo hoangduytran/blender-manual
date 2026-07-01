@@ -54,6 +54,7 @@ from repeatable_extract import (  # noqa: E402
     format_mismatch_report,
     group_records_by_doc,
     is_repeatable_message,
+    split_hint_group,
     split_terminal_group,
 )
 from repeatable_html import (  # noqa: E402
@@ -169,6 +170,11 @@ def split_terminal_leaf(leaf_text: str) -> "tuple[str, str, str] | None":
     return lead, bracket, trailing
 
 
+def split_hint_leaf(leaf_text: str, bracket_text: str) -> "tuple[str, str, str] | None":
+    """Split a Text leaf around the classified reading-hint bracket."""
+    return split_hint_group(leaf_text, bracket_text)
+
+
 def _replace_leaf_with_pill(
     leaf: nodes.Text, lead: str, pill: nodes.Element, trailing: str
 ) -> None:
@@ -224,9 +230,20 @@ def wrap_terminal_hint(node: nodes.Element, msgid: str) -> bool:
     text_leaves = list(node.findall(nodes.Text))
     if not text_leaves:
         return False
-    last_leaf = text_leaves[-1]
-    split = split_terminal_leaf(last_leaf.astext())
-    if split is None:
+    hinted_leaf: nodes.Text | None = None
+    split: tuple[str, str, str] | None = None
+    hint_start = len(classified.lead)
+    offset = 0
+    for leaf in text_leaves:
+        leaf_text = leaf.astext()
+        next_offset = offset + len(leaf_text)
+        if offset <= hint_start < next_offset:
+            split = split_hint_leaf(leaf_text, classified.bracket)
+            if split is not None:
+                hinted_leaf = leaf
+            break
+        offset = next_offset
+    if hinted_leaf is None or split is None:
         logger.debug(
             "[repeatable_builder] hint for %r spans multiple text leaves; "
             "recorded but not pilled",
@@ -234,8 +251,8 @@ def wrap_terminal_hint(node: nodes.Element, msgid: str) -> bool:
         )
         return False
     lead, bracket, trailing = split
-    pill = _make_pill(classified.side, bracket, visible_msgid)
-    _replace_leaf_with_pill(last_leaf, lead, pill, trailing)
+    pill = _make_pill(classified.side, bracket, classified.source or visible_msgid)
+    _replace_leaf_with_pill(hinted_leaf, lead, pill, trailing)
     return True
 
 

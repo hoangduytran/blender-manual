@@ -121,6 +121,11 @@ máy chủ.
 - Nhận diện thuật ngữ tự điển (`.i18n-vi-hint`), gợi ý đặt trong ngoặc đơn (ví dụ
   tiếng Nga `Аддоны (add-ons)`), và báo cáo các trường hợp trùng-gần-đúng, với
   việc so khớp tiếng Anh không phân biệt hoa thường.
+- Gợi ý khi đọc không còn bắt buộc phải nằm ở cuối tiêu đề hoặc thuật ngữ. Bộ
+  kết xuất repeatable có thể biến một mảnh nguồn ở giữa markup hỗn hợp thành
+  thẻ pill, ví dụ `Cài Đặt Sở Thích Người Dùng [User Preferences] ``__package__```,
+  đồng thời giữ các mục điều hướng sinh ra/local TOC khớp với tiêu đề trong thân
+  trang.
 - Các extension: [build_files/extensions/](build_files/extensions/)
   (`repeatable_record.py`, `repeatable_extract.py`, `repeatable_html.py`,
   `repeatable_builder.py`).

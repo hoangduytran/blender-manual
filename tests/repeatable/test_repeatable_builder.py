@@ -134,6 +134,20 @@ def test_classify_paren_picks_terminal_group():
     assert hint.lead == "Режим (старый) "
 
 
+def test_classify_middle_hint_can_match_source_fragment():
+    text = (
+        "Cài Đặt Sở Thích Người Dùng [User Preferences] "
+        "__package__ (__gói_phần_mềm__)"
+    )
+    hint = rx.classify_terminal_hint(text, "User Preferences and __package__")
+
+    assert hint is not None
+    assert hint.bracket == "User Preferences"
+    assert hint.trailing == " __package__ (__gói_phần_mềm__)"
+    assert hint.source == "User Preferences"
+    assert hint.side == HintSide.ENGLISH_BRACKET
+
+
 def test_split_terminal_leaf_handles_parens():
     assert rb.split_terminal_leaf("Объединить (merge) ") == (
         "Объединить ",
@@ -218,6 +232,10 @@ def test_collect_and_format_mismatches():
 def test_split_terminal_leaf_keeps_trailing_whitespace():
     assert rb.split_terminal_leaf("Foo [Bar] ") == ("Foo ", "Bar", " ")
     assert rb.split_terminal_leaf("Foo without bracket") is None
+
+
+def test_split_hint_leaf_handles_middle_group():
+    assert rb.split_hint_leaf("Foo [Bar] baz", "Bar") == ("Foo ", "Bar", " baz")
 
 
 # ---------------------------------------------------------------------------
@@ -421,6 +439,25 @@ def test_wrap_repeatable_link_uses_visible_source_msgid() -> None:
     assert pill.astext() == "Stable Release"
     assert pill["msgid"] == "Stable Release"
     assert reference["refuri"] == "https://www.blender.org/download/"
+
+
+def test_wrap_middle_hint_before_inline_node() -> None:
+    """A heading can pill a source fragment before following inline markup."""
+    msgid = "User Preferences and __package__"
+    title = nodes.title(rawsource=msgid)
+    title += nodes.Text("Cài Đặt Sở Thích Người Dùng [User Preferences] ")
+    package = nodes.inline()
+    package += nodes.Text("__package__ (__gói_phần_mềm__)")
+    title += package
+    title["translated"] = True
+
+    assert rb.wrap_terminal_hint(title, msgid) is True
+    pill = list(title.findall(rb.i18n_en_hint))[0]
+    assert pill.astext() == "User Preferences"
+    assert pill["msgid"] == "User Preferences"
+    assert title.children[0].astext() == "Cài Đặt Sở Thích Người Dùng "
+    assert title.children[2].astext() == " "
+    assert title.children[3] is package
 
 
 # ---------------------------------------------------------------------------

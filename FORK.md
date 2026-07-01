@@ -117,6 +117,10 @@ glossary/near-miss information), rendered server-side.
 - Recognises glossary terms (`.i18n-vi-hint`), parenthesis-delimited hints
   (e.g. Russian `Аддоны (add-ons)`), and reports near-misses, with
   case-insensitive English matching.
+- Reading hints no longer have to be the final text in a title or term. The
+  repeatable renderer can pill a source fragment in the middle of mixed markup,
+  for example `Cài Đặt Sở Thích Người Dùng [User Preferences] ``__package__```,
+  and keeps generated navigation/local TOC entries in sync with the body title.
 - Extensions: [build_files/extensions/](build_files/extensions/)
   (`repeatable_record.py`, `repeatable_extract.py`, `repeatable_html.py`,
   `repeatable_builder.py`).

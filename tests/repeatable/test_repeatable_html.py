@@ -45,7 +45,11 @@ def test_index_requires_repeatable_navigation_record_and_original_msgid() -> Non
 
     index = build_navigation_hint_index(records)
 
-    assert index == {"Khởi Đầu (Getting Started)": ("Getting Started",)}
+    assert index["Khởi Đầu (Getting Started)"] == ("Getting Started",)
+    assert index["Khởi Đầu [Getting Started]"] == ("Getting Started",)
+    assert "Not This" not in {
+        msgid for msgids in index.values() for msgid in msgids
+    }
 
 
 def test_navigation_fragment_writes_fixed_repeatable_provenance() -> None:
@@ -65,6 +69,45 @@ def test_navigation_fragment_writes_fixed_repeatable_provenance() -> None:
         'data-msgid="Getting Started" data-repeatable="true">'
         "Getting Started</span>"
     ) in rendered
+
+
+def test_navigation_fragment_preserves_text_after_middle_hint() -> None:
+    """A middle source-fragment hint keeps the remaining navigation label."""
+    msgstr = "Cài Đặt Sở Thích Người Dùng [User Preferences] __package__"
+    index = build_navigation_hint_index(
+        [_record("User Preferences and __package__", msgstr)]
+    )
+    source = f'<a href="#">{msgstr}</a>'
+
+    rendered = rewrite_navigation_fragment(source, index)
+
+    assert (
+        'Cài Đặt Sở Thích Người Dùng <span class="i18n-en-hint" '
+        'data-msgid="User Preferences" data-repeatable="true">'
+        "User Preferences</span> __package__"
+    ) in rendered
+
+
+def test_navigation_fragment_rewrites_middle_hint_before_inline_html() -> None:
+    """Local TOC text can be split by rendered inline markup after the hint."""
+    msgstr = 'Cài Đặt Sở Thích Người Dùng [User Preferences] "__package__"'
+    index = build_navigation_hint_index(
+        [_record("User Preferences and ``__package__``", msgstr)]
+    )
+    source = (
+        '<a href="#user-preferences-and-package">'
+        'Cài Đặt Sở Thích Người Dùng [User Preferences] &quot;'
+        '<abbr title="__gói_phần_mềm__">__package__</abbr>&quot;</a>'
+    )
+
+    rendered = rewrite_navigation_fragment(source, index)
+
+    assert (
+        'Cài Đặt Sở Thích Người Dùng <span class="i18n-en-hint" '
+        'data-msgid="User Preferences" data-repeatable="true">'
+        'User Preferences</span> "'
+    ) in rendered
+    assert '<abbr title="__gói_phần_mềm__">__package__</abbr>&quot;' in rendered
 
 
 def test_navigation_fragment_rejects_unrecorded_parentheses() -> None:

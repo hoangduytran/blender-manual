@@ -71,7 +71,7 @@ class ExtractionContext:
 
 @dataclass(frozen=True)
 class TerminalHint:
-    """A validated terminal ``<lead> [<bracket>]`` split of node text.
+    """A validated ``<lead> [<bracket>] <trailing>`` split of node text.
 
     The bracket is always the pilled secondary reading; ``side`` records which
     side carried the source msgid, so the renderer can pick the pill class.
@@ -80,6 +80,20 @@ class TerminalHint:
     lead: str  # text before the opening bracket
     bracket: str  # the bracketed secondary reading (always pilled)
     side: HintSide  # which side equals the source msgid
+    trailing: str = EMPTY_STRING  # text after the closing bracket
+    source: str = EMPTY_STRING  # source text matched by the carrying side
+    exact: bool = True  # false only for accepted near-miss hints
+
+
+@dataclass(frozen=True)
+class _HintGroup:
+    """One non-empty, non-nested delimited group found in text."""
+
+    lead: str
+    bracket: str
+    trailing: str
+    start: int
+    end: int
 
 
 # ---------------------------------------------------------------------------
@@ -197,6 +211,55 @@ def split_terminal_group(text: str) -> "tuple[str, str] | None":
     return None
 
 
+def _is_inside_outer_group(text: str, start: int, end: int) -> bool:
+    """True when ``text[start:end]`` is enclosed by another hint delimiter pair."""
+    for open_char, close_char in HINT_BRACKET_PAIRS:
+        outer_open = text.rfind(open_char, 0, start)
+        outer_close = text.find(close_char, end)
+        if outer_open != -1 and outer_close != -1:
+            return True
+    return False
+
+
+def _iter_hint_groups(text: str) -> Iterator[_HintGroup]:
+    """Yield every valid ``<lead><open><bracket><close><trailing>`` group."""
+    groups: list[_HintGroup] = []
+    for open_char, close_char in HINT_BRACKET_PAIRS:
+        search_from = 0
+        while True:
+            open_index = text.find(open_char, search_from)
+            if open_index == -1:
+                break
+            close_index = text.find(close_char, open_index + 1)
+            if close_index == -1:
+                break
+            bracket = text[open_index + 1 : close_index]
+            is_nested = open_char in bracket or close_char in bracket
+            is_enclosed = _is_inside_outer_group(text, open_index, close_index + 1)
+            lead = text[:open_index]
+            has_valid_parts = bool(bracket.strip()) and bool(lead.strip())
+            if not is_nested and not is_enclosed and has_valid_parts:
+                groups.append(
+                    _HintGroup(
+                        lead=lead,
+                        bracket=bracket,
+                        trailing=text[close_index + 1 :],
+                        start=open_index,
+                        end=close_index + 1,
+                    )
+                )
+            search_from = close_index + 1
+    yield from sorted(groups, key=lambda group: group.start)
+
+
+def split_hint_group(text: str, bracket_text: str) -> "tuple[str, str, str] | None":
+    """Split *text* around the first delimited group matching *bracket_text*."""
+    for group in _iter_hint_groups(text):
+        if matches_msgid(group.bracket, bracket_text):
+            return group.lead, group.bracket, group.trailing
+    return None
+
+
 # Every delimiter character across all recognised bracket pairs.
 _HINT_DELIMITER_CHARS = frozenset(
     char for pair in HINT_BRACKET_PAIRS for char in pair
@@ -208,56 +271,145 @@ def _contains_delimiter(text: str) -> bool:
     return any(char in text for char in _HINT_DELIMITER_CHARS)
 
 
-def classify_terminal_hint(
-    text: str, msgid: str, near_miss_ratio: float = HINT_NEAR_MISS_RATIO
-) -> "TerminalHint | None":
-    """Classify a terminal ``<lead> <open><bracket><close>`` hint against *msgid*.
+def _msgid_fragment(part: str, msgid: str) -> "str | None":
+    """Return the source fragment matched by *part*, or ``None``.
 
-    The text must end with a delimiter group (``[]`` or ``()``) whose content
-    and lead are non-empty.  The bracket is the pilled secondary reading; the
-    *side* is decided by which part carries *msgid* (whitespace- and
-    case-insensitive, see :func:`matches_msgid`):
-
-    * bracket == msgid  -> :attr:`HintSide.ENGLISH_BRACKET` (body content).
-    * lead == msgid     -> :attr:`HintSide.ENGLISH_LEAD` (glossary term).
-
-    Exact matches win.  Failing that, a *near-miss* — a side whose similarity to
-    *msgid* is at least ``near_miss_ratio`` (see :func:`similarity`) — is still
-    accepted so a typo'd reading-hint (e.g. a dropped article) is pilled "as
-    written"; :func:`classify_hint_mismatch` reports these for the translator.
-
-    Returns ``None`` for nested/empty/compound groups, or when neither side
-    matches or comes close to the source msgid.
+    This supports mixed-content headings such as ``User Preferences and
+    __package__`` where the translation repeats only the natural-language part
+    as ``[User Preferences]`` before another inline node.
     """
+    part_norm = normalized(part)
+    if len(part_norm) < 4:
+        return None
+    msgid_norm = normalized(msgid)
+    words = part_norm.split()
+    pattern = r"(?<!\w)" + r"\s+".join(re.escape(word) for word in words) + r"(?!\w)"
+    match = re.search(pattern, msgid_norm, re.IGNORECASE)
+    if match is None:
+        return None
+    fragment = msgid_norm[match.start() : match.end()]
+    return fragment if normalized(fragment) != normalized(msgid) else None
+
+
+def _terminal_group(text: str) -> "_HintGroup | None":
+    """Return the terminal group as a rich object, preserving trailing space."""
     split = split_terminal_group(text)
     if split is None:
         return None
     lead, bracket = split
+    trailing = text[len(text.rstrip()) :]
+    return _HintGroup(
+        lead=lead,
+        bracket=bracket,
+        trailing=trailing,
+        start=len(lead),
+        end=len(text) - len(trailing),
+    )
 
-    if matches_msgid(bracket, msgid):
-        return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_BRACKET)
-    if matches_msgid(lead, msgid):
-        return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_LEAD)
 
-    # Near-miss fallback: accept the side closest to msgid if it clears the bar.
-    # Only "clean" sides (no other delimiter characters) qualify, so ambiguous
-    # compound hints such as "Giao Cắt [Dao] (Intersect [Knife])" stay unpilled.
-    bracket_ratio = 0.0 if _contains_delimiter(bracket) else similarity(bracket, msgid)
-    lead_ratio = 0.0 if _contains_delimiter(lead) else similarity(lead, msgid)
+def _exact_group_hint(group: _HintGroup, msgid: str) -> "TerminalHint | None":
+    """Classify exact full-source or source-fragment matches for one group."""
+    if matches_msgid(group.bracket, msgid):
+        return TerminalHint(
+            lead=group.lead,
+            bracket=group.bracket,
+            trailing=group.trailing,
+            side=HintSide.ENGLISH_BRACKET,
+            source=msgid,
+        )
+    if matches_msgid(group.lead, msgid):
+        return TerminalHint(
+            lead=group.lead,
+            bracket=group.bracket,
+            trailing=group.trailing,
+            side=HintSide.ENGLISH_LEAD,
+            source=msgid,
+        )
+    source_fragment = _msgid_fragment(group.bracket, msgid)
+    if source_fragment is not None and matches_msgid(group.bracket, source_fragment):
+        return TerminalHint(
+            lead=group.lead,
+            bracket=group.bracket,
+            trailing=group.trailing,
+            side=HintSide.ENGLISH_BRACKET,
+            source=source_fragment,
+        )
+    return None
+
+
+def _near_miss_group_hint(
+    group: _HintGroup, msgid: str, near_miss_ratio: float
+) -> "TerminalHint | None":
+    """Classify the accepted near-miss path for one group."""
+    bracket_ratio = (
+        0.0 if _contains_delimiter(group.bracket) else similarity(group.bracket, msgid)
+    )
+    lead_ratio = (
+        0.0 if _contains_delimiter(group.lead) else similarity(group.lead, msgid)
+    )
     if bracket_ratio >= lead_ratio and bracket_ratio >= near_miss_ratio:
-        return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_BRACKET)
+        return TerminalHint(
+            lead=group.lead,
+            bracket=group.bracket,
+            trailing=group.trailing,
+            side=HintSide.ENGLISH_BRACKET,
+            source=msgid,
+            exact=False,
+        )
     if lead_ratio > bracket_ratio and lead_ratio >= near_miss_ratio:
-        return TerminalHint(lead=lead, bracket=bracket, side=HintSide.ENGLISH_LEAD)
+        return TerminalHint(
+            lead=group.lead,
+            bracket=group.bracket,
+            trailing=group.trailing,
+            side=HintSide.ENGLISH_LEAD,
+            source=msgid,
+            exact=False,
+        )
+    return None
+
+
+def classify_terminal_hint(
+    text: str, msgid: str, near_miss_ratio: float = HINT_NEAR_MISS_RATIO
+) -> "TerminalHint | None":
+    """Classify a ``<lead> <open><bracket><close>`` hint against *msgid*.
+
+    The text must contain a delimiter group (``[]`` or ``()``) whose content and
+    lead are non-empty.  The bracket is the pilled secondary reading; the *side*
+    is decided by which part carries *msgid* (whitespace- and case-insensitive,
+    see :func:`matches_msgid`):
+
+    * bracket == msgid  -> :attr:`HintSide.ENGLISH_BRACKET` (body content).
+    * lead == msgid     -> :attr:`HintSide.ENGLISH_LEAD` (glossary term).
+
+    The bracket may also match a source fragment inside a mixed-content msgid,
+    for example ``User Preferences`` inside ``User Preferences and __package__``.
+    Exact matches win.  Failing that, a *near-miss* — a side whose similarity to
+    *msgid* is at least ``near_miss_ratio`` (see :func:`similarity`) — is still
+    accepted so a typo'd reading-hint (e.g. a dropped article) is pilled "as
+    written"; :func:`classify_hint_mismatch` reports these for the translator.
+    Near-miss matching remains terminal-only to avoid surprising middle-of-text
+    pills.
+
+    Returns ``None`` for nested/empty/compound groups, or when neither side
+    matches or comes close to the source msgid.
+    """
+    for group in _iter_hint_groups(text):
+        hint = _exact_group_hint(group, msgid)
+        if hint is not None:
+            return hint
+
+    # Near-miss fallback: keep this limited to the terminal group, preserving the
+    # original false-positive boundary for typo tolerance.
+    terminal = _terminal_group(text)
+    if terminal is not None:
+        return _near_miss_group_hint(terminal, msgid, near_miss_ratio)
     return None
 
 
 def terminal_hint_is_exact(text: str, msgid: str) -> bool:
-    """True when *text* has a terminal hint whose carrying side equals *msgid*."""
-    split = split_terminal_group(text)
-    if split is None:
-        return False
-    lead, bracket = split
-    return matches_msgid(bracket, msgid) or matches_msgid(lead, msgid)
+    """True when *text* has an exact hint match for *msgid* or its fragment."""
+    hint = classify_terminal_hint(text, msgid)
+    return hint is not None and hint.exact
 
 
 @dataclass(frozen=True)
@@ -287,12 +439,15 @@ def classify_hint_mismatch(
     exactly those hints that were pilled "as written" despite not matching.
     """
     hint = classify_terminal_hint(text, msgid, near_miss_ratio)
-    if hint is None or terminal_hint_is_exact(text, msgid):
+    if hint is None or hint.exact:
         return None
     observed = hint.bracket if hint.side == HintSide.ENGLISH_BRACKET else hint.lead
     observed = observed.strip()
     return HintMismatch(
-        msgid=msgid, observed=observed, side=hint.side, ratio=similarity(observed, msgid)
+        msgid=hint.source or msgid,
+        observed=observed,
+        side=hint.side,
+        ratio=similarity(observed, hint.source or msgid),
     )
 
 
